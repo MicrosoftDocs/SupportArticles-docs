@@ -1,5 +1,5 @@
 ---
-title: Advanced troubleshooting Windows boot problems with LiveRE tool
+title: Advanced troubleshooting Windows startup problems with LiveRE tool
 description: Learn to troubleshoot by using the LiveRE tool when Windows does't start.
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 ---
 # Use LiveRE to troubleshoot Windows startup problems
 
-The LiveRE tool creates an image that can be used to start a computer through a USB connection. This tool is helpful in troubleshooting "no boot" issues. It can also be used to provide remote access for support professionals to a non-starting computer through a jump server.
+The LiveRE tool creates an image that can be used to start a computer through a USB connection. This tool is helpful in troubleshooting "no boot" issues. It can also be used to provide remote access to a non-starting computer through a jump server for support professionals.
 
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals.
@@ -40,7 +40,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 - Processor: 1.4Ghz 64-bit processor
 - RAM: 512 MB
 - Disk Space: 32 GB
-- Network: Gigabit (10/100/1000baseT) Ethernet adapter (1Gbps connection is ideal)
+- Network: Gigabit (10/100/1000baseT) Ethernet adapter (a 1 Gbps connection is ideal)
 - Optical Storage: DVD drive (if installing the OS from DVD media)
 - USB 3.0 flash drive, 8 GB or greater
 - Video: Super VGA (1024x768) or higher resolution (optional)
@@ -51,7 +51,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 
 1. Download the [LiveRE image](https://download.microsoft.com/download/7/e/b/7ebcc4f5-e67f-45b1-b00f-48870d9350a5/LiveRE.wim).
 2. Connect a USB flash drive.
-3. Check whether the non-booting computer is set up for BIOS boot or UEFI boot. Format the USB drive accordingly:
+3. Check whether the nonstarting computer is set up for BIOS startup or UEFI startup. Format the USB drive accordingly:
 
    - For UEFI:
 
@@ -97,7 +97,7 @@ After the USB flash drive is ready, start the affected server from the flash dri
 
 The following steps help create a user to enable remote access through a jump server:
 
-1. Start the non-booting computer by using the USB flash drive. Accept the EULA to proceed to the Help console.
+1. Start the problem computer by using the USB flash drive. Accept the EULA to proceed to the Help console.
 2. Press Enter to access PowerShell.
 3. Run the following cmdlets:
 
@@ -109,17 +109,17 @@ The following steps help create a user to enable remote access through a jump se
    ```
 
    > [!NOTE]
-   > Enter Password after the first cmdlet.
+   > Enter the password after the first cmdlet.
 
-The computer is now set up for remote access through a jump server. The following screenshot shows a sample setup.
+The computer is now set up for remote access through a jump server. The following screenshot shows a sample cmdlet.
 
-:::image type="content" source="./media/live-re-troubleshoot-windows-boot/live-re-input-add-user.png" alt-text="Run cmdlet in LiveRE":::
+:::image type="content" source="./media/live-re-troubleshoot-windows-boot/live-re-input-add-user.png" alt-text="Running the 'new user account' cmdlet in LiveRE".:::
 
 ## Connect from the jump server
 
 1. Get the IP address from the LiveRE screen.
 
-   :::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-ip-address-from-live-re.png" alt-text="Get IP address":::
+   :::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-ip-address-from-live-re.png" alt-text="Getting the IP address.":::
 
 2. On a working computer in the same network as the nonstarting computer, open PowerShell ISE, and run the following script:
 
@@ -133,15 +133,15 @@ The computer is now set up for remote access through a jump server. The followin
 3. When prompted, enter the password.
 4. You will be connected to the broken computer through WinRM.
 
-   :::image type="content" source="./media/live-re-troubleshoot-windows-boot/connect-to-broken-computer-using-winrm.png" alt-text="Connect via WinRM":::
+   :::image type="content" source="./media/live-re-troubleshoot-windows-boot/connect-to-broken-computer-using-winrm.png" alt-text="Connecting through WinRM.":::
 
 If you experience issues when you connect through WinRM, check whether WinRM is enabled. If it isn't, run the `winrm qc` command to enable WinRM. 
 
-If you receive an error message that reassembles the following, this means the network connections is set to **Public**.
+If you receive an error message that reassembles the following message, this means that the network connections is set to **Public**.
 
-:::image type="content" source="./media/live-re-troubleshoot-windows-boot/run-winrm-qc-error-0x80338169.png" alt-text="0x80338169 error when enabling WinRM":::
+:::image type="content" source="./media/live-re-troubleshoot-windows-boot/run-winrm-qc-error-0x80338169.png" alt-text="0x80338169 error message when you enable WinRM.":::
 
-You can find which one using the following command:
+You can determine which connections are set to **Public** by running the following cmdlet:
   
 ```powershell
 Get-NetConnectionProfile | select InterfaceAlias, NetworkCategory
@@ -149,9 +149,9 @@ Get-NetConnectionProfile | select InterfaceAlias, NetworkCategory
 
 The following is a sample output:
 
-:::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-netconnectionprofile-output.png" alt-text="Output of Get-NetConnectionProfile cmdlet":::
+:::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-netconnectionprofile-output.png" alt-text="Output of Get-NetConnectionProfile cmdlet".:::
 
-You can either disable the ones that are showing public or change them to private after taking permission from customer. To do so, use this command:
+You can either disable the public connections or change them to private after you remove permissions from the customer. To do this, run the following cmdlet:
 
 ```powershell
 Set-NetConnectionProfile -interfacealias "vEthernet (Internal LAN)" -NetworkCategory Private
@@ -171,24 +171,24 @@ Set-NetConnectionProfile -interfacealias "vEthernet (Internal LAN)" -NetworkCate
 
 ## Disk configuration
 
-Since *Diskpart.exe* is not available in the LiveRE, use PowerShell to achieve similar results. Here are a few commands:
+Because *Diskpart.exe* is not available in LiveRE, use PowerShell to achieve similar results. Here are a few commands:
 
-1. Check Disk: `Get-Disk`.
-2. Check partitions in a disk: `Get-Partition -DiskNumber <number>`.
-3. Set a partition to active: `Set-Partition -DiskNumber <number> -PartitionNumber <number> -IsActive $true`.
-4. Check properties of a partition: `Get-Partition -DiskNumber <number> -PartitionNumber <number> |fl`.
+1. Check Disk: `Get-Disk`
+2. Check partitions in a disk: `Get-Partition -DiskNumber <number>`
+3. Set a partition to active: `Set-Partition -DiskNumber <number> -PartitionNumber <number> -IsActive $true`
+4. Check properties of a partition: `Get-Partition -DiskNumber <number> -PartitionNumber <number> |fl`
 
-For more information, see [Windows Storage Management-specific cmdlets](/powershell/module/storage/)
+For more information, see [Windows Storage Management-specific cmdlets](/powershell/module/storage/).
 
 ## Registry configuration
 
 There is no registry editor is Live OS. In order to change the registry, access the share for affected OS drive by using the *\\\\\<IP Address\>\\c$* path.
 
-Get the hives from *\\windows\\system32\\config*, make the changes to the hives, and then proceed with further steps.
+Get the hives from *\\windows\\system32\\config*, make the changes to the hives, and then continue to the next steps.
 
 ## Access shadow copies
 
-LiveRE allows access to shadow copies from disks of a machine which is not booting, this can be used to replace previous versions of files.
+LiveRE allows access to shadow copies from disks of a computer that is not starting, this can be used to replace previous versions of files.
 
 You can use the following steps to access previous versions of the files:
 
@@ -198,9 +198,9 @@ Get-Volume | select Driveletter,path to get the volume name association with Vol
 ```
 
 > [!NOTE]
-> The OS date and time has to be adjusted as per time zone to get the correct date and time, LiveOS uses Greenwich Mean Time (GMT) zone.
+> The OS date and time have to be adjusted per the correct time zone to remain accurate. LiveOS uses the Coordinated Universal Time (Greenwich Mean Time) time zone.
 
-Copy the DeviceObject for the shadow copy you want to access, and then run these commands:
+Copy the DeviceObject for the shadow copy that you want to access, and then run the following commands:
 
 ```console
 $sobj="<DeviceObject>" + "\"
@@ -209,18 +209,18 @@ cmd /c mklink /d c:\shadowcopy "$sobj"
 
 You can now access the previous versions of the file from PowerShell by browsing to *\\\\\<IP\>\\c$\\shadowcopy*.
 
-## Injecting Drivers
+## Injecting drivers
 
-If you have a Redundant Array of Independent Disk (RAID) disk setup, we need to install RAID drivers from Original Equipment Manufacturer (OEM) to make the volumes visible to OS.
+If you have a RAID-disk setup, you have to install RAID drivers from OEM media to make the volumes visible to the OS.
 
-In LiveRE, you can just extract the RAID drivers to the folder *\<USB\>:\\\<driver folder\>* folder.
+In LiveRE, you can extract the RAID drivers to the *\<USB\>:\\\<driver folder\>* folder.
 
-Then, when you are booted in LiveRE, press the 4 key to install the drivers.
+Then, after you start in LiveRE, press the 4 key to install the drivers.
 
-Another way to install drivers is:
+Another way to install drivers is to do the following:
 
-1. Download and extract the drivers in a folder in the LiveRE flash drive.
-2. Once connected to affected machine, run the command:
+1. Download and extract the drivers to a folder on the LiveRE flash drive.
+2. After you connect to the affected conputer, run the following cmdlet:
 
    ```powershell
    pnputil /add-driver <location of raid driver.inf>
