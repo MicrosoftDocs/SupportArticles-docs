@@ -1,6 +1,6 @@
 ---
 title: Advanced troubleshooting Windows boot problems with LiveRE tool
-description: Learn to troubleshoot when Windows can't boot with the help of LiveRE tool.
+description: Learn to troubleshoot by using the LiveRE tool when Windows does't start.
 author: Deland-Han
 ms.author: delhan
 ms.reviewer: visohra, kaushika
@@ -13,23 +13,23 @@ ms.topic: troubleshooting
 ms.date: 10/30/2021
 ms.localizationpriority: medium
 ---
-# Use LiveRE tool to troubleshoot Windows boot problems
+# Use LiveRE to troubleshoot Windows startup problems
 
-The LiveRE tool is an image that can be used to boot a machine from USB. This tool is helpful in troubleshooting No-Boot issues. It can also be used to allow remote access to support professionals, access to non-booting computer through a jump server.
+The LiveRE tool creates an image that can be used to start a computer through a USB connection. This tool is helpful in troubleshooting "no boot" issues. It can also be used to provide remote access for support professionals to a non-starting computer through a jump server.
 
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals.
 
 ## LiveRE to WinRE comparison
 
-Here is a comparison of Live RE to the existing Windows Recovery Environment that comes with Windows ISOs.
+Here is a comparison of Live RE to the existing Windows Recovery Environment that's included with Windows ISOs.
 
 | Feature | WinRE/WinPE | iDRAC/ILO | Live operating system (OS) |
 |---------|-------------|-----------|--------|
 | Availability | With DVD | Special hardware | Flash-drive |
 | Remote Access | No | Yes | Yes |
 | DISM | Yes | Via WinRE | Yes with capability to download missing payloads from internet |
-| DiskPart | Yes | Via WinRE | No but PowerShell equivalent works |
+| DiskPart | Yes | Via WinRE | No, but PowerShell equivalent works |
 | BitLocker | Yes | Via WinRE | Yes |
 | Copy/Paste to allow reduced research and log recording   | No | No | Yes |
 | Invoke PowerShell scripts | No | No | Yes |
@@ -40,10 +40,10 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 - Processor: 1.4Ghz 64-bit processor
 - RAM: 512 MB
 - Disk Space: 32 GB
-- Network: Gigabit (10/100/1000baseT) Ethernet adapter, 1Gbps connection is ideal.
+- Network: Gigabit (10/100/1000baseT) Ethernet adapter (1Gbps connection is ideal)
 - Optical Storage: DVD drive (if installing the OS from DVD media)
-- USB Flash Drive 3.0 8GB or more.
-- Video: Super VGA (1024 x 768) or higher-resolution (optional)
+- USB 3.0 flash drive, 8 GB or greater
+- Video: Super VGA (1024x768) or higher resolution (optional)
 - Input Devices: Keyboard and mouse (optional)
 - Internet: Broadband access (optional)
 
@@ -65,7 +65,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
      Exit
      ```
 
-     Format the Partition as FAT32 file system.
+     Format the partition for the FAT32 file system.
 
    - For MBR boot:
 
@@ -82,7 +82,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
      Exit
      ```
 
-     Format the partition as NTFS file system.
+     Format the partition for the NTFS file system.
 
 4. Run the following commands:
 
@@ -95,10 +95,10 @@ After the USB flash drive is ready, start the affected server from the flash dri
 
 ## Create user account for remote access
 
-The following steps help create a user to allow remote access through a jump server:
+The following steps help create a user to enable remote access through a jump server:
 
-1. Start the non-booting computer by using the USB flash drive. Accept EULA to get to the Help Console.
-2. Press Enter to get to PowerShell.
+1. Start the non-booting computer by using the USB flash drive. Accept the EULA to proceed to the Help console.
+2. Press Enter to access PowerShell.
 3. Run the following cmdlets:
 
    ```powershell
@@ -111,17 +111,17 @@ The following steps help create a user to allow remote access through a jump ser
    > [!NOTE]
    > Enter Password after the first cmdlet.
 
-The computer is now all set for remote access through a jump server. The following is a sample:
+The computer is now set up for remote access through a jump server. The following screenshot shows a sample setup.
 
 :::image type="content" source="./media/live-re-troubleshoot-windows-boot/live-re-input-add-user.png" alt-text="Run cmdlet in LiveRE":::
 
 ## Connect from the jump server
 
-1. Get the IP address from the LiveRE screen:
+1. Get the IP address from the LiveRE screen.
 
    :::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-ip-address-from-live-re.png" alt-text="Get IP address":::
 
-2. From a working machine in the same network as the non-booting computer, open PowerShell ISE and run the following script:
+2. On a working computer in the same network as the nonstarting computer, open PowerShell ISE, and run the following script:
 
    ```powershell
    $ip = "172.25.80.68"
@@ -131,11 +131,11 @@ The computer is now all set for remote access through a jump server. The followi
    ```
 
 3. When prompted, enter the password.
-4. You will be connected to the broken machine via WinRM.
+4. You will be connected to the broken computer through WinRM.
 
    :::image type="content" source="./media/live-re-troubleshoot-windows-boot/connect-to-broken-computer-using-winrm.png" alt-text="Connect via WinRM":::
 
-If you are experiencing issues connecting using WinRM, check whether WinRM is enabled. If not, you can use the command `winrm qc` to enable WinRM. 
+If you experience issues when you connect through WinRM, check whether WinRM is enabled. If it isn't, run the `winrm qc` command to enable WinRM. 
 
 If you receive an error message that reassembles the following, this means the network connections is set to **Public**.
 
