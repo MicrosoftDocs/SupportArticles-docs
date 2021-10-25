@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 11/22/2018
+ms.date: 10/25/2021
 ms.author: delhan
 
 ---
@@ -127,7 +127,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     > [!Note]
     > You don't have to restart the VM to apply the changes.
 
-4. Make sure that you add the inbound rule for RPD connection.
+4. Make sure that you add the inbound rule for RDP connection.
 5. Try again to access your VM through RDP.
 
 ### Offline Mitigations
