@@ -52,15 +52,14 @@ To resolve this problem, make sure that the Temporary Internet Files folder is v
    - If you do not see the `OutlookSecureTempFolder` entry, go to the next step.
    - If the folder does not exist on your computer, change the **OutlookSecureTempFolder** value to a valid folder path, for example **C:\temp0\**.
 
-   :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/change-the-outlooksecuretempfolder-value.png" alt-text="
-Screenshot of the value of OutlookSecureTempFolder registry key." border="false":::
+   :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/change-the-outlooksecuretempfolder-value.png" alt-text="Screenshot of the value of OutlookSecureTempFolder registry key." border="false":::
 
    :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/path.png" alt-text="Screenshot of the Windows Explorer.":::
 
 4. If the **OutlookSecureTempFolder** registry entry does not exist, you must create it manually. To do this, follow these steps:
    1. Right-click an empty area, point to **New**, and then select **String Value**.
 
-      :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/string-value.png" alt-text="Screenshot of the String Value option in the New menu.":::
+      :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/string-value.png" alt-text="Screenshot of the String Value option of the New menu.":::
 
    2. Double-click **OutlookSecureTempFolder**, and then enter a valid folder path, for example **C:\temp0\\**.
 
