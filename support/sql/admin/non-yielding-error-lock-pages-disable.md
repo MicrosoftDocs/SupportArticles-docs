@@ -22,12 +22,28 @@ Thread creation time: 13246605454359.
 Approx Thread CPU Used: kernel 70203 ms, user 0 ms. Process Utilization 69%. System Idle 76%. Interval: 70213 ms.
 ```
 
+Here is the top of stack:
+
+```output
+sqldk!SOS_MemoryBlockAllocator::CommitBlockAndCheckNumaLocality
+sqldk!SOS_MemoryBlockAllocator::AllocateBlock
+sqldk!SOS_MemoryWorkSpace::AllocatePage
+sqldk!MemoryNode::AllocateReservedPages
+sqldk!MemoryClerkInternal::AllocateReservedPages
+```
+
+## Cause
+
+This issue occurs if there are large size or a large number of allocations or deallocations. This issue will cause a hot workspace lock in the virtual memory manager (VMM) for Windows, which results in a long wait for those allocations and deallocations to complete.
+
 > [!NOTE]
 > In the entry, the kernel time is almost same as the interval time, which indicates a high amount of privileged CPU time.
 
 ## Resolution
 
-To fix this issue, [enable the Lock Pages in Memory option](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) for the SQL Server service account to keep data in physical memory. This operation will prevent the system from paging the data to virtual memory on disk. To enable the lock pages in memory option, follow the steps:
+To fix this issue, [enable the Lock Pages in Memory option](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) for the SQL Server service account to keep data in physical memory. After this operation, the system will use the [Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions) (AWE) API instead of the VMM.
+
+To enable the lock pages in memory option, follow the steps:
 
 1. Press Win+R, in the **Open** box, type *gpedit.msc*.
 1. On the Local Group Policy Editor console, expand **Computer Configuration** > **Windows Settings**.
