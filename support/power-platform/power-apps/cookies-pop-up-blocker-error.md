@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Power Apps
 
 ## Symptoms
 
-When you use Unified Interface apps, you may receive one of the following error messages about cookies and pop-up blocker:
+When you use Unified Interface apps, you receive one of the following error messages about cookies and pop-up blockers:
 
 - > Something has gone wrong. Check technical details for more details.  
   > Technical Details  
@@ -35,14 +35,14 @@ These issues occur because third-party cookies are blocked in the web browser.
 
 ## Resolution
 
-You can open this website ([WhatIsMyBrowser](https://www.whatismybrowser.com/)) to check the setting of the web browser. Then, enable third-party cookies and make sure the related sites are not blocked for cookies.
+To check the web browser settings, go to the following website: ([WhatIsMyBrowser](https://www.whatismybrowser.com/)). Then, enable third-party cookies, and make sure that the related sites are not blocked for cookies.
 
 ### Enable storage of third-party cookies and local data for Microsoft Edge
 
 1. Select **Settings** > **Cookies and site permissions**.
 1. Expand **Manage and delete cookies and site data**.
-1. Ensure the setting **Block third-party cookies** is disabled.
-1. If present, remove the following sites from the site-specific cookie configuration under **Block**, and **Clear on exit**:
+1. Make sure that the **Block third-party cookies** setting is disabled.
+1. If you find the following sites in the site-specific cookie configurations under **Block** and **Clear on exit**, remove them from the list:
     - `https://create.powerapps.com`
     - `https://*.create.powerapps.com`
     - `https://make.*.powerapps.com`
@@ -56,7 +56,7 @@ You can open this website ([WhatIsMyBrowser](https://www.whatismybrowser.com/)) 
 1. Select **Settings** > **Privacy and security**.
 1. Expand **Cookies and other site data**.
 1. Make sure that **Block third-party cookies** or **Block all cookies** isn't selected.
-1. If present, remove the following sites from the site-specific cookie configuration under **Sites that can always use cookies**, and **Always clear cookies when windows are closed**:
+1. If you find the following sites in the site-specific cookie configuration under **Sites that can always use cookies** and **Always clear cookies when windows are closed**, remove them from the lists:
     - `https://create.powerapps.com`
     - `https://*.create.powerapps.com`
     - `https://make.*.powerapps.com`
@@ -65,6 +65,6 @@ You can open this website ([WhatIsMyBrowser](https://www.whatismybrowser.com/)) 
     - `https://apps.*.powerapps.com`
     - `https://apps.powerapps.com`
 
-For more information about the instructions for other web browsers and iOS devices, see [troubleshooting startup issues for Power Apps](/powerapps/troubleshooting-startup-issues#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
+For instructions for other web browsers and iOS devices, see [troubleshooting startup issues for Power Apps](/powerapps/troubleshooting-startup-issues#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
