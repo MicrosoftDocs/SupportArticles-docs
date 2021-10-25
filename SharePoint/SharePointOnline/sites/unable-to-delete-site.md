@@ -1,7 +1,7 @@
 ---
 title: Unable to delete a SharePoint site 
-ms.author: v-matthamer
-author: prbalusu
+ms.author: prbalusu
+author: v-matthamer
 manager: dcscontentpm
 ms.date: 10/22/2021
 audience: Admin
