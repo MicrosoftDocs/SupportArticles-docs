@@ -49,33 +49,33 @@ To resolve this problem, follow these methods in order. Check whether the proble
 2. Select **Tools** > **Internet Options**.
 3. Select **Advanced** > **Reset**.
 
-   :::image type="content" source="media/hyperlinks-not-working-in-outlook/advanced-tab-on-internet-options.jpg" alt-text="the Advanced tab on Internet Options" border="false":::
+   :::image type="content" source="media/hyperlinks-not-working-in-outlook/advanced-tab-on-internet-options.png" alt-text="Screenshot of the Advanced tab on Internet Options." border="false":::
 
 4. In the **Reset Internet Explorer Settings** window, select **Delete personal settings** > **Reset**.
 
-   :::image type="content" source="media/hyperlinks-not-working-in-outlook/reset-internet-explorer-settings.jpg" alt-text="Reset Internet Explorer Settings" border="false":::
+   :::image type="content" source="media/hyperlinks-not-working-in-outlook/reset-internet-explorer-settings.png" alt-text="Screenshot of the Reset Internet Explorer Settings window." border="false":::
 
 5. Select **Close** when it is completed.
 
-   :::image type="content" source="media/hyperlinks-not-working-in-outlook/close.jpg" alt-text="Close the Reset Internet Explorer Settings window" border="false":::
+   :::image type="content" source="media/hyperlinks-not-working-in-outlook/close.png" alt-text="Screenshot of the close option on the Reset Internet Explorer Settings window." border="false":::
 
 6. Close and restart Internet Explorer.
 7. Select **Tools** > **Internet Options**.
 8. Select **Programs** > **Set programs**.
 
-   :::image type="content" source="media/hyperlinks-not-working-in-outlook/programs-tab-on-internet-options.jpg" alt-text="the Programs tab on the Internet Options" border="false":::
+   :::image type="content" source="media/hyperlinks-not-working-in-outlook/programs-tab-on-internet-options.png" alt-text="Screenshot of the Programs tab on the Internet Options." border="false":::
 
 9. Select **Set your default programs**.
 
-   :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-your-default-programs.jpg" alt-text="Set your default programs" border="false":::
+   :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-your-default-programs.png" alt-text="Screenshot of the Set your default programs option on the Default Programs window." border="false":::
 
 10. In the **Programs** list, select **Microsoft Outlook** > **Set this program as default**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-this-program-as-default.jpg" alt-text="Programs" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-this-program-as-default.png" alt-text="Screenshot of the Set Default Programs window when you select Microsoft Outlook in the programs list." border="false":::
 
 11. Scroll back up to the top of the default programs list and highlight **Internet Explorer** and select **Set this program as default**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-internet-explorer-as-default.jpg" alt-text="Set Internet Explorer as default" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-internet-explorer-as-default.png" alt-text="Screenshot of the Set Default Programs window when you select Internet Explorer in the programs list." border="false":::
 
 12. Select **OK**, and close the **Default Programs** dialog box.
 
@@ -85,31 +85,31 @@ To resolve this problem, follow these methods in order. Check whether the proble
 2. Select **Tools** > **Internet Options**.
 3. Select **Advanced** > **Reset**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/reset-button.png" alt-text="the Reset button on Advanced tab of Internet Options" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/reset-button.png" alt-text="Screenshot of the Reset button on Advanced tab of Internet Options." border="false":::
 
 4. In the **Reset Internet Explorer Settings** window, select the **Delete personal settings** > **Reset**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/reset-internet-explorer-settings.jpg" alt-text="Delete personal settings" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/reset-internet-explorer-settings-in-ie9.png" alt-text="Screenshot of the Delete personal option on the Reset Internet Settings window." border="false":::
 
 5. Select **Close** when it is completed.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/close-the-reset-window.png" alt-text="Close" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/close-the-reset-window.png" alt-text="Screenshot of the close option on the Reset Internet Explorer Settings window in IE9." border="false":::
 
 6. Restart Internet Explorer.
 7. Select **Tools** > **Internet Options**.
 8. Select **Programs** > **Set programs**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-programs.png" alt-text="Set programs" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-programs.png" alt-text="Screenshot of Set Programs option in Internet Options in IE9." border="false":::
 
 9. Select **Set your default programs**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-your-default-programs-option.png" alt-text="Set the default programs" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-your-default-programs-option.png" alt-text="Screenshot of the Set your default programs option." border="false":::
 
 10. In the **Programs** list, select **Microsoft Outlook** > **Set this program as default**.
 11. Select **OK**, and then close the **Default Programs** dialog box.
 12. In the **Internet Options** dialog box, select the **Programs** tab, and then select **Make default** under **Default web browser**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/make-default.png" alt-text="Internet Options" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/make-default.png" alt-text="Screenshot of Internet Options." border="false":::
 
 13. Select **OK**.
 
@@ -157,7 +157,7 @@ This section is intended for advanced computer users. For help with advanced tro
 3. Locate, and then select the registry subkey: `HKEY_LOCAL_MACHINE\Software\Classes\htmlfile\shell\open\command`.
 4. On the **File** or **Registry** menu (depending on your operating system), select **Export**.
 
-   :::image type="content" source="media/hyperlinks-not-working-in-outlook/export.png" alt-text="select Export":::
+   :::image type="content" source="media/hyperlinks-not-working-in-outlook/export.png" alt-text="Screenshot of the File menu in Registry Editor.":::
 
 5. Note the location where the file will be saved.
 6. Type a unique file name, and then select **Save**.
