@@ -82,6 +82,10 @@ For more information on general Azure built-in RBAC roles, see: [Azure built-in 
 
 :::image type="content" source="media/vm-inspector-azure-virtual-machines/azure-built-in-roles.png" alt-text="A list of built-in-roles for Azure, including Contributor, Owner, Reader, and User Access Administrator.":::
 
+### Register for the Preview Feature
+
+Please follow the steps in [Set up preview features in Azure subscription](azure/azure-resource-manager/management/preview-features?tabs=azure-portal) and select "VM Inspection" to register for the preview. After register in the portal, you will need to wait for around 30 minutes before trying out the feature.
+
 ## Run VM Inspector on your VM
 
 VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspector, follow these steps:
