@@ -46,7 +46,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top"> 
 <a href="#option1">
 
-![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png" border="false":::
 
 </a>
 </td><td>**<a href="#option1">Insert your document into another file</a>**
@@ -61,7 +61,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option2">
 
-![Option 2](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png" border="false":::
 
 </a>
 </td>
@@ -76,7 +76,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option3">
 
-![Option 3](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png" border="false":::
 
 </a>
 </td>
@@ -110,7 +110,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option4">
 
-![Option 4](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png" border="false":::
 
 </a>
 </td>
@@ -145,7 +145,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option5">
 
-![Option 5](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png" border="false":::
 
 </a>
 </td>
@@ -177,7 +177,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option6">
 
-![Option 6](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png" border="false":::
 
 </a>
 </td>
@@ -240,7 +240,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option7">
 
-![Option 7](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-7.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-7.png" border="false":::
 
 </a>
 </td>
@@ -273,7 +273,7 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 <td valign="top">
 <a href="#option8">
 
-![Option 8](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-8.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-8.png" border="false":::
 
 </a>
 </td>
