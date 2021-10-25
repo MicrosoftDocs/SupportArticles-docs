@@ -1,7 +1,7 @@
 ---
 title: Swap file is not re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
-ms.date: 7/27/2021
+ms.date: 10//2021
 ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.collection: linux
@@ -36,11 +36,11 @@ To resolve this problem, follow these steps:
 
     # Format if unformatted. If 'n', resource disk will not be mounted. 
     ResourceDisk.Format=n 
-    # Create and use swapfile on resource disk. 
+    # Create and use swapfile on resource disk.
     ResourceDisk.EnableSwap=n
     ```
 
-2. Make sure that the Azure Linux Agent is not trying to mount the ephemeral disk. This is because the task is typically handled by cloud-init. et the parameters as follows:
+2. Make sure that the Azure Linux Agent is not trying to mount the ephemeral disk. This is because the task is typically handled by cloud-init. Set the parameters as follows:
 
     ```
     #Mount point for the resource disk 
