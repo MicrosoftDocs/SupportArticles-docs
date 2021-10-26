@@ -2,6 +2,22 @@
 
 
 
+## Week of October 18, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/20/2021 | [Your organization has disabled this device when trying to activate Microsoft 365 Apps](/office365/troubleshoot/access-management/error-135011-activate-m365-apps) | modified |
+| 10/22/2021 | [User not seeing add-ins](/office365/troubleshoot/access-management/user-not-seeing-add-ins) | modified |
+| 10/22/2021 | [Troubleshoot directory synchronization errors with event 6941](/office365/troubleshoot/active-directory/duplicate-attributes-prevent-dirsync) | modified |
+| 10/22/2021 | [How to run the Fiddler Trace after installing SaRA](/office365/troubleshoot/diagnostic-logs/run-fiddler-trace) | modified |
+| 10/22/2021 | [Distribution group issues](/office365/troubleshoot/groups/distribution-list-issues) | modified |
+| 10/22/2021 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
+| 10/22/2021 | [Determine the license type of your Microsoft Office product](/office365/troubleshoot/licensing/determine-office-license-type) | modified |
+| 10/22/2021 | [Can't Verify Subscription or No Subscription Found in Office Mobile](/office365/troubleshoot/licensing/subscription-issue-in-office-mobile) | modified |
+| 10/22/2021 | [Automatic updating for Microsoft Office is not enabled](/office365/troubleshoot/updates/automatic-updates) | modified |
+
+
 ## Week of October 11, 2021
 
 
@@ -46,15 +62,3 @@
 | 9/21/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | modified |
 | 9/21/2021 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
 | 9/22/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
-
-
-## Week of September 13, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/13/2021 | [Set language and region settings for Office 365](/office365/troubleshoot/access-management/set-language-and-region) | modified |
-| 9/13/2021 | [Microsoft 365 reports show anonymous instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name) | modified |
-| 9/15/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | added |
-| 9/17/2021 | [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run) | modified |
-| 9/17/2021 | [Listing some issues for Microsoft 365 Administration](/office365/troubleshoot/o365-admin-welcome) | modified |

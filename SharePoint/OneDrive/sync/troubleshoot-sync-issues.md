@@ -43,7 +43,7 @@ Sometimes a conflict is detected between the local and server copies of files yo
 
 When a conflict is detected, you may see a sync error notification briefly. After that, the OneDrive for Business icon will display an error indicator in your system tray.
 
-:::image type="content" source="media/troubleshoot-sync-issues/error-indicator.png" alt-text="the screenshot of error indicator" border="false":::
+:::image type="content" source="media/troubleshoot-sync-issues/error-indicator.png" alt-text="Screenshot of the OneDrive for Business error indicator." border="false":::
 
 To resolve the conflict, right-click or press and hold the OneDrive for Business icon, and then choose **Resolve**. You will see the options available for your conflict.
 
@@ -63,7 +63,7 @@ If a conflict occurred with a non-Office file type, you should see the following
 
 In some cases, OneDrive for Business may not mark conflicts in a non-Office file as an error, but instead save both versions locally. This results from editing conflicts. Editing conflicts with Office files are reported as sync problems and you can fix them as described above. But editing conflicts with other types of files are not reported as sync problems. Instead, OneDrive for Business creates a new version of the file, and appends the device name to the file name. For example:
 
-:::image type="content" source="media/troubleshoot-sync-issues/new-version-of-file.jpg" alt-text="the screenshot of the new version of the file.":::
+:::image type="content" source="media/troubleshoot-sync-issues/new-version-of-file.png" alt-text="Screenshot of the new version of the example file.":::
 
 When you see this happen, it's up to you to decide how to treat these file versions. You might consider one of these actions:
 
@@ -85,7 +85,7 @@ Sometimes, the Microsoft Office Upload Center may affect the OneDrive for Busine
 
 Try clearing cached files from Upload Center. To do this, follow these steps:
 
-1. In the notification area of your task bar, find the Microsoft Office Upload Center icon, which is a white up-arrow in an orange circle. ![Microsoft Office Upload Center icon](./media/troubleshoot-sync-issues/white-up-arrow-in-an-orange-circle.png)(If there are two of these, use the darker one.)
+1. In the notification area of your task bar, find the Microsoft Office Upload Center icon :::image type="icon" source="media/troubleshoot-sync-issues/white-up-arrow-in-an-orange-circle.png":::, which is a white up-arrow in an orange circle. (If there are two of these, use the darker one.)
 2. Right-click the icon, and then choose **Settings**.
 3. Choose **Delete cached files**.
 4. Confirm by choosing **Delete cached information**.
