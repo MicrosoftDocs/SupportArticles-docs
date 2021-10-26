@@ -16,8 +16,8 @@ _Original KB number:_ &nbsp; 4460004
 
 **Option 1: To view and execute the steps directly in a notebook via Azure Data Studio**
 
-<!-- > [!div class="nextstepaction"]
-> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb) -->
+> [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb)
 
 [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)
 
