@@ -302,7 +302,7 @@ If the user should be a site owner, add the user to the Owners group for the sit
 
 If the Owners group is changed or removed from the **Access requests** list, you must add the Owners group permissions for the list. Also make sure that the affected user is included in the Owners list. To do so, follow these steps:
 
-1. As a user who has the **Manage Permissions Permission Level** on the affected site and who also has access to the **Access Requests** list (for example, a Site Collection administrator), browse to the **Access Requests** list in Internet Explorer.
+1. As a user who has the **Manage Permissions Permission Level** on the affected site and who also has access to the **Access Requests** list (for example, a site collection administrator), browse to the **Access Requests** list in Internet Explorer.
 1. Press F12 to open the Developer Tools window.
 1. Select the **Network** tab, and then press F5 to enable network traffic capturing.
 1. Refresh the Access Requests page. After the page has loaded, press Shift+F5 to stop capturing network traffic.
