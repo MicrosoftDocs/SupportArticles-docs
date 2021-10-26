@@ -20,7 +20,7 @@ On a SQL Server computer, assume that you perform one of the following actions:
 - You create a database snapshot on a mirror database.
 - You execute `DBCC CHECKDB` family of commands to check the consistency of a large database and you also perform a large number of data changes in that database.
 
-In this scenario, you notice the following errors reported in the SQL Server Error log depending on the environment SQL Server is running on.
+In this scenario, you notice the following errors reported in the SQL Server Error log depending on the environment SQL Server is running on. test
 
 **Windows Server 2003** Server
 
