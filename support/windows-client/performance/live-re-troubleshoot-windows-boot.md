@@ -113,7 +113,7 @@ The following steps help create a user to enable remote access through a jump se
 
 The computer is now set up for remote access through a jump server. The following screenshot shows a sample cmdlet.
 
-:::image type="content" source="./media/live-re-troubleshoot-windows-boot/live-re-input-add-user.png" alt-text="Running the \"new user account\" cmdlet in LiveRE.":::
+:::image type="content" source="./media/live-re-troubleshoot-windows-boot/live-re-input-add-user.png" alt-text="Running the 'new user account' cmdlet in LiveRE.":::
 
 ## Connect from the jump server
 
