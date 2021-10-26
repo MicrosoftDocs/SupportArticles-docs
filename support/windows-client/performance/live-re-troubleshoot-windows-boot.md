@@ -213,7 +213,7 @@ You can now access the previous versions of the file from PowerShell by browsing
 
 If you have a RAID-disk setup, you have to install RAID drivers from OEM media to make the volumes visible to the OS.
 
-In LiveRE, you can extract the RAID drivers to the *\<USB\>:\\\<driver folder\>* folder.
+In LiveRE, you can extract the RAID drivers to the *\<USB\>:\\CopyDriversHere* folder.
 
 Then, after you start in LiveRE, press the 4 key to install the drivers.
 
