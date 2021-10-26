@@ -45,8 +45,8 @@ This issue occurs for one of the following reasons:
 
 Cause 1: The source may have public folder that contains the @ character in the name.
 
-Cause 2: A public folder at the source may be larger than 100 gigabytes (GB).
+Cause 2: A public folder at the source may be larger than 25 gigabytes (GB).
 
 ## Resolution
 
-To fix this issue, use the [Source Side Validation script](https://aka.ms/ssv2) to perform check on source before starting the public folder migration. The script will scan any public folders that have the @ character in the name and public folders that are larger than 100 GB, and report issues along with action to fix the issues.
+To fix this issue, use the [Source Side Validation script](https://aka.ms/ssv2) to perform check on source before starting the public folder migration. The script will scan any public folders that have the @ character in the name and public folders that are larger than 25 GB, and report issues along with action to fix the issues.
