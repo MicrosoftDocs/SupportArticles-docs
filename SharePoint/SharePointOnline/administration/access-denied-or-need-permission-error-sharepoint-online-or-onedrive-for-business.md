@@ -1,5 +1,5 @@
 ---
-title: "Access Denied", "You need permission to access this site" errors
+title: "Access Denied" and "You need permission to access this site" errors
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
