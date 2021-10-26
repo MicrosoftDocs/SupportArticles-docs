@@ -37,11 +37,11 @@ If you have to reduce the size of your Outlook 2010 or Outlook 2013 .pst file, y
 1. Start Outlook 2010 or later with a profile that contains your original .pst file that is larger than 20 GB.
 2. On the **File** tab, select **Info**. (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/file-tab-info.png" alt-text="Screenshot to select Info on the File tab." border="false":::
+   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/file-tab-info.png" alt-text="Screenshot to select Info option on the File tab." border="false":::
 
 3. Select **Cleanup Tools**, and then select **Archive**. (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/cleanup-tool-archive.png" alt-text="Screenshot to select Archive after selecting Cleanup Tools." border="false":::
+   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/cleanup-tool-archive.png" alt-text="Screenshot to select Archive option after selecting Cleanup Tools." border="false":::
 
 4. In the **Archive** dialog box, make the following changes: (The screenshot for this step is listed below).
 

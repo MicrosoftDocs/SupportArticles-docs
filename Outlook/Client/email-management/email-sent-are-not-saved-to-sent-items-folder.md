@@ -43,7 +43,7 @@ In Outlook 2010 or later versions:
 2. In the **Outlook Options** dialog, select **Mail**.
 3. Under the **Save messages** section, enable the **Save copies of messages in the Sent Items folder** option.
 
-   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-messages-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder option under the Save messages section.":::
+   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-messages-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder option.":::
 
 4. Select **OK**.
 
@@ -53,7 +53,7 @@ In Outlook 2007:
 2. Under the **Preferences** tab, select **E-mail Options...**
 3. Enable the **Save copies of messages in Sent Items folder** option.
 
-   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-message-email-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder on the E-mail Option page." border="false":::
+   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-message-email-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder option." border="false":::
 
 4. Select **OK**.
 
@@ -65,19 +65,19 @@ The **Save copies of messages in Sent Items folder** option can be controlled us
 
   Policy Path: User Configuration/Administrative Templates/Classic Administrative Templates (ADM)/Microsoft Office Outlook 2007/Tools | Options.../Preferences/E-mail Options
 
-  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/outlook-2007-policy-option.png" alt-text="Screenshot to find policy setting in the policy path for Outlook 2007.":::
+  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/outlook-2007-policy-option.png" alt-text="Screenshot of policy option for Outlook 2007.":::
 
 - Outlook 2010:
 
   Policy Path: User Configuration/Administrative Templates/Classic Administrative Templates (ADM)/Microsoft Outlook 2010/Outlook Options/Preferences/E-mail Options
 
-  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/outlook-2010-policy-option.png" alt-text="Screenshot to find policy setting in the policy path for Outlook 2010.":::
+  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/outlook-2010-policy-option.png" alt-text="Screenshot of policy option for Outlook 2010.":::
 
 - Outlook 2013:
 
   Policy Path: User Configuration/Administrative Templates/Microsoft Outlook 2013/Outlook Options/Preferences/E-mail Options
 
-  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/outlook-2013-policy-option.png" alt-text="Screenshot to find policy setting in the policy path for Outlook 2013.":::
+  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/outlook-2013-policy-option.png" alt-text="Screenshot of policy option for Outlook 2013.":::
 
 - Outlook 2016:
 
@@ -85,7 +85,7 @@ The **Save copies of messages in Sent Items folder** option can be controlled us
 
   In the dialog box for the policy setting, select **Enabled** to enable the policy and select the **Save copies of messages in Save Items folder** option (The screenshot for this step is listed below).
 
-  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/message-handling.png" alt-text="Screenshot shows steps in the policy setting." border="false":::
+  :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/message-handling.png" alt-text="Screenshot shows steps in the policy setting dialog box." border="false":::
 
   The Registry keys associated with the **Save copies of messages in Sent Items folder** option are as follows:
 
