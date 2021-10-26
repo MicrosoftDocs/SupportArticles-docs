@@ -30,6 +30,7 @@ This document contains troubleshooting steps for common issues with syncing list
 <summary><b>Sync icon doesn't appear</b></summary>
 
 1. Open the Windows task manager and look for “Microsoft SharePoint (Microsoft.SharePoint.exe)” under **Processes** > **Background Processes**.
+
     :::image type="content" source="./media/common-sync-issues/background-processes.png" alt-text="Microsoft SharePoint shows as a background process.":::
 
     - If SharePoint is running, continue to step 2.
