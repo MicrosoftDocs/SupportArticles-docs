@@ -7,7 +7,7 @@
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
       href: ../administration/access-denied-to-pim-user-accounts.md
-    - name: "Access Denied" and "You need permission to access this site" errors
+    - name: '"Access Denied" and "You need permission to access this site" errors'
       href: ../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
     - name: '"API access" does not appear in the Modern admin center'
       href: ../administration/api-access-does-not-appear.md
