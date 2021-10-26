@@ -43,7 +43,7 @@ Select **Run Tests** below, which will populate the diagnostic in the Microsoft 
 > [!div class="nextstepaction"]
 > [Run Tests: Check SharePoint User Access](https://aka.ms/PillarCheckUserAccess)
 
-The diagnostic performs a large range of verifications for internal or external users who try to access SharePoint and OneDrive sites.
+The diagnostic performs a large range of verifications for internal users or guests who try to access SharePoint and OneDrive sites.
 
   > [!NOTE]
   > Microsoft is seeking to collect feedback on Microsoft 365 diagnostics. If you choose to run the Check User Access diagnostic, you can provide feedback through the following link:
@@ -101,7 +101,7 @@ If you can't restore the original user and are still in this state, create a sup
 </details>
 
 <details>
-<summary><b>When an external user is accessing a site</b></summary>
+<summary><b>When a guest is accessing a site</b></summary>
 
 1. Determine the [permission level](/sharepoint/understanding-permission-levels) that the user should have on the site (member, owner, and so on).
 1. Verify the permission by using the **Check Permissions** feature:
@@ -117,40 +117,39 @@ If you can't restore the original user and are still in this state, create a sup
 </details>
 
 <details>
-<summary><b>When an external user accepts a SharePoint Online invitation by using another account</b></summary>
+<summary><b>When a guest accepts a SharePoint Online invitation by using another account</b></summary>
 
 To fix this issue, determine which account accepted the invitation, remove the incorrect account if necessary, and then reinvite the user to the resource.
 
-### Step 1: Determine which account has access as an external user
+### Step 1: Determine which account has access as a guest
 
-If you can access the site as the incorrect external user, follow these steps:
+If you can access the site as the incorrect guest, follow these steps:
 
-1. Sign in as the external user account that you used to accept the invitation.
+1. Sign in as the guest account that you used to accept the invitation.
 2. Select the profile image in the upper right corner, and then select **My Settings**.
 3. In the **Account** field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com. In this example, JonDoe@contoso.com is the email account that accepted the invitation.
-4. If the address is incorrect, go to the "Remove the incorrect external user account" section.
+4. If the address is incorrect, go to the "Remove the incorrect guest account" section.
 
-If you can't access the site as the incorrect external user, follow these steps:
+If you can't access the site as the incorrect guest, follow these steps:
 
-1. As a SharePoint Online administrator, sign in to the site collection that was shared with the external user.
+1. As a SharePoint Online administrator, sign in to the site collection that was shared with the guest.
 2. Select the gear icon for the **Settings** menu, and then select **Site settings**.
 3. In the **Users and Permissions** section, select **People and groups**.
 4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=\<number\>** with **MembershipGroupId=0**, and then press Enter.
-5. In the list of users, locate the name of the external user. Right-click the user name, and copy the shortcut.
+5. In the list of users, locate the name of the guest. Right-click the user name, and copy the shortcut.
 6. In a new browser window or tab, paste the URL that's copied in step 5 into the address box. Add **&force=1** to the end of the URL, and then press Enter.
 7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe\@contoso.com**. In this example, **JonDoe\@contoso.com** is the email account that accepted the user invitation.
-8. If the address is incorrect, go to the "Remove the incorrect external user account" section.
+8. If the address is incorrect, go to the "Remove the incorrect guest account" section.
 
-### Step 2: Remove the incorrect external user account**
+### Step 2: Remove the incorrect guest account**
 
-External users are managed from a site collection by site collection basis. An external user account must be removed from each site collection to which the account was given access. You can do so from the SharePoint Online user interface, or through the SharePoint Online Management Shell, depending on your version of Office 365.
+External users are managed from a site collection by site collection basis. A guest account must be removed from each site collection to which the account was given access. You can do so from the SharePoint Online user interface, or through the SharePoint Online Management Shell, depending on your version of Office 365.
 
 For Office 365 Small Business subscriptions, use the SharePoint Online UI:
 
-1. Go to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
-2. In **service settings**, select **Manage Organization-wide settings**.
-3. Select **sites and document sharing** > **Remove individual external users**.
-4. Select the external user to be removed, and then select **Delete**.
+1. Go to **Admin** > **Service Settings** > **sites and document sharing**.
+2. Select **Remove individual external users**.
+3. Select the users you want to remove, and then select **Delete** (the trash can icon).
 
 All other subscriptions must use the SharePoint Online Management Shell:
 
@@ -237,7 +236,7 @@ The steps above remove the external user's access to SharePoint Online. However,
 
 Next, remove the account from Azure Active Directory:
 
-1. Download and install the [Azure Active Directory PowerShell Module]((/previous-versions/azure/jj151815(v=azure.100))) and its prerequisites.
+1. Download and install the [Azure Active Directory PowerShell Module](/previous-versions/azure/jj151815(v=azure.100)) and its prerequisites.
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 
    ```powershell
@@ -250,7 +249,7 @@ Next, remove the account from Azure Active Directory:
    Get-MsolUser -ReturnDeletedUsers -UnlicensedUsersOnly | ft -a
    ```
 
-3. Locate the external user that you deleted, and then confirm they're listed.
+3. Locate the user that you deleted, and then confirm they're listed.
 
    ```powershell
    Remove-MsolUser -RemoveFromRecycleBin -UserPrincipalName 'jondoe_contoso.com#EXT#@yourdomaint.onmicrosoft.com'
@@ -265,13 +264,13 @@ SharePoint Online uses browser caching in several scenarios, including in the Pe
 
 When you clear the cache, make sure that you also select the **Cookies and website data** option.
 
-### Step 4: Reinvite the external user
+### Step 4: Reinvite the guest
 
-After you follow the previous steps, reinvite the external user to the site by using the desired email address. To make sure that the end user accepts with the appropriate email address, it's a best practice to copy the link in the invitation and then paste it into an InPrivate Browsing session. It makes sure that no cached credentials are used to accept the invitation.
+After you follow the previous steps, reinvite the guest to the site by using the desired email address. To make sure that the end user accepts with the appropriate email address, it's a best practice to copy the link in the invitation and then paste it into an InPrivate Browsing session. It makes sure that no cached credentials are used to accept the invitation.
 
 ### More information
 
-An external user invitation doesn't require it to be accepted by the email address to which it was first sent. It's a one-time invite. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
+A guest invitation doesn't require it to be accepted by the email address to which it was first sent. It's a one-time invite. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
 
 For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user selects the link to accept the invite. However, based on the user's browser cookies, the user accidentally accepts the invite by using the incorrect identity.
 
