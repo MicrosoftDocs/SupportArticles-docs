@@ -680,6 +680,8 @@
       href: ./performance/tablet-device-creates-minidump-file.md
   - name: No Boot (not BugChecks)
     items:
+    - name: Advanced troubleshooting Windows boot problems with LiveRE tool
+      href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
     - name: Changing ATA drive setting causes reboot loop
