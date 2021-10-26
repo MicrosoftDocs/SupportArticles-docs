@@ -8,6 +8,7 @@ ms.date: 10/18/2021
 ---
 
 # An Overview of Topics and related options
+
 test file
 This is an introductory file that explains the different options and features of Visual Studio Code. You can create topics, add different elements to the topics, update topics, proofread topics, troubleshoot warnings, and so on.
 The following topics are covered in this section:
