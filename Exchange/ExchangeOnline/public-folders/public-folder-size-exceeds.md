@@ -37,16 +37,16 @@ When you move public folders from an on-premises Exchange server to Exchange Onl
 > WorkItem: InitializeCopyMessageStatistics  
 > Message: Source public folder size <394035557704> exceeds target Mailbox quota. Permissible target Mailbox quota is 128849018880. Original target Mailbox quota is 107374182400.
 
-Additionally, all public folders are migrated to the target primary public folder mailbox, regardless of the structure provided in the .csv mapping file.
+Additionally, all public folders are migrated to the target primary public folder mailbox, regardless of the structure provided in the `.csv` mapping file.
 
 ## Cause
 
 This issue occurs for one of the following reasons:
 
-Cause 1: The source may have public folder that contains the @ character in the name.
+Cause 1: The source may have public folder that contains the at sign (`@`) character in the name.
 
 Cause 2: A public folder at the source may be larger than 25 gigabytes (GB).
 
 ## Resolution
 
-To fix this issue, use the [Source Side Validation script](https://aka.ms/ssv2) to perform check on source before starting the public folder migration. The script will scan any public folders that have the @ character in the name and public folders that are larger than 25 GB, and report issues along with action to fix the issues.
+To fix this issue, use the [Source Side Validation script](https://aka.ms/ssv2) to perform check on source before starting the public folder migration. The script will scan any public folders that have the `@` character in the name and public folders that are larger than 25 GB, and report issues along with action to fix the issues.
