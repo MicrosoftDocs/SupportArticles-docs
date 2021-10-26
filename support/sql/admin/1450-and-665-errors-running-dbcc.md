@@ -9,7 +9,7 @@ ms.prod: sql
 
 This article helps you resolve the problem where OS errors 1450 and 665 are reported for database files during `DBCC CHECKDB` or Database Snapshot Creation.
 
-_Original product version:_ &nbsp; SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008  
+_Applies to:_ &nbsp; SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008  
 _Original KB number:_ &nbsp; 2002606
 
 ## Symptoms
