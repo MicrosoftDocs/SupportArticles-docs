@@ -1,7 +1,7 @@
----
+the---
 title: Can't run scripts in Azure Active Directory Module for Windows PowerShell
 description: Describes an issue in which you receive an error message when you try to run scripts in Azure Active Directory Module for Windows PowerShell. Provides a resolution.
-ms.date: 05/11/2020
+ms.date: 10/26/2021
 ms.prod-support-area-path: 
 ms.reviewer: willfid, willfid
 ---
@@ -24,14 +24,17 @@ When you try to run a script in Microsoft Azure Active Directory Module for Wind
 
 ## Cause
 
-This issue may occur if the execution policy is set to **Restricted**. Certain Windows PowerShell cmdlets can't run if the policy is too restricted.
+This issue may occur if one of the following factors is true:
+- The PowerShell version that you are using is higher than 5.1. The Azure Active Directory Module only works with PowerShell 3 to 5.1.
+- The execution policy is set to **Restricted**. Certain Windows PowerShell cmdlets can't run if the policy is too restricted.
 
 ## Resolution
 
 To resolve this issue, follow these steps:
 
+1. Identify the PowerShell version by running `$PSVersionTable`.
 1. Run the Azure Active Directory Module for Windows PowerShell as an administrator. To do it, select **Start**, select **All Programs**, select **Windows Azure Active Directory**, right-click **Windows Azure Active Directory Module for Windows PowerShell**, and then select **Run as administrator**.
-2. Set the execution policy to **Unrestricted**. To do it, type the following cmdlet, and then press Enter:
+1. Set the execution policy to **Unrestricted**. To do it, type the following cmdlet, and then press Enter:
 
     ```powershell
     Set-ExecutionPolicy Unrestricted
