@@ -43,7 +43,7 @@ In Outlook 2010 or later versions:
 2. In the **Outlook Options** dialog, select **Mail**.
 3. Under the **Save messages** section, enable the **Save copies of messages in the Sent Items folder** option.
 
-   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-messages-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder option.":::
+   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-messages-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder option in Outlook 2010 or later versions.":::
 
 4. Select **OK**.
 
@@ -53,7 +53,7 @@ In Outlook 2007:
 2. Under the **Preferences** tab, select **E-mail Options...**
 3. Enable the **Save copies of messages in Sent Items folder** option.
 
-   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-message-email-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder option." border="false":::
+   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/save-message-email-option.png" alt-text="Screenshot shows steps to enable the Save copies of messages in the Sent Items folder option in Outlook 2007." border="false":::
 
 4. Select **OK**.
 
