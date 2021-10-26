@@ -1,5 +1,5 @@
 ---
-title: "Access Denied" and "You need permission to access this site" errors
+title: Access Denied or You need permission to access this site
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -15,7 +15,7 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: 
-description: When you use SharePoint Online or OneDrive for Business, you may receive certain access or permission errors, such as   "Access Denied", "You need permission to access this site", or "User not found in the directory".
+description: When you use SharePoint Online or OneDrive for Business, you may receive certain access or permission errors, such as   Access Denied, You need permission to access this site, or User not found in the directory.
 appliesto:
 - SharePoint Online
 ---
