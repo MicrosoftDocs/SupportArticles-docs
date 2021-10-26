@@ -24,7 +24,7 @@ In this scenario, you notice the following errors reported in the SQL Server Err
 
 **Windows Server 2003** Server
 
-> The operating system returned error 1450 (Insufficient system resources exist to complete the requested service.) to SQL Server during a write at offset 0x00002a3ef96000 in file with handle 0x0000000000000D5C. This is usually a temporary condition and the SQL Server will keep retrying the operation. If the condition persists, then immediate action must be taken to correct it.
+> The operating system returned error 1450 (Insufficient system resources exist to complete the requested service.) to SQL Server during a write at offset 0x00002a3ef96000 in file with handle 0x0000000000000D5C. This is usually a temporary condition and the SQL Server will keep retrying the operation. If the condition persists, immediate action must be taken to correct it.
 
 **Windows Server 2008, Windows Vista, and later versions of server and client operating systems** 
 
