@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 8.1 & higher - all editions, Windows Server 2012 R2 & higher
 _Original KB number:_ &nbsp; 2709568
 
 ## Summary
@@ -62,7 +62,7 @@ Both the SMB client and SMB server must support SMB 3.0 to take advantage of the
 
 ### SMB Direct (SMB over Remote Direct Memory Access [RDMA])
 
-SMB Direct is available only on the Windows Server platform and was introduced in Windows Server 2012. SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
+SMB Direct is available in Windows Server 2012 (and higher) and Windows 10 (and higher; only for these editions: Pro for Workstation and Enterprise). SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
 
 ### SMB Encryption
 
@@ -78,7 +78,7 @@ Both the SMB client and SMB server must support SMB 3.0 to take advantage of the
 
 ### SMB PowerShell
 
-SMB PowerShell management cmdlets were introduced in Windows Server 2012 and in Windows 8. Older SMB clients and SMB servers will have to continue using down-level tools for management (for example, Net.exe) and APIs (for example, Win32 APIs).
+SMB PowerShell management cmdlets were introduced in Windows Server 2012 and in Windows 8. Older SMB clients and SMB servers will have to continue using down-level tools for management (for example, net.exe) and APIs (for example, Win32 APIs).
 
 ## References
 
