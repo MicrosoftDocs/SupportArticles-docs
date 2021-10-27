@@ -74,7 +74,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option3">
 
-:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/repair--word-program-files-option-3.png":::
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/repair-word-program-files-option-3.png":::
 
 </a>
 </td>
