@@ -1,6 +1,6 @@
 ---
 title: Chat issues in Teams meeting
-description: Fixes some chat issues when you join a Teams meeting. 
+description: Fixes some chat issues when you join a Teams meeting. For example, the Chat icon is missing and you can't access the chat history.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -30,27 +30,19 @@ You may experience one of the following chat issues when you join a Microsoft Te
 
 ## Cause
 
-These issues occur if one of the following conditions is true:
+These issues can occur due to one of the following causes.
 
-### Cause 1: Meeting policy
+Cause 1: The **Allow chat in meetings** meeting policy is disabled.
 
-The **Allow chat in meetings** meeting policy is disabled.
+Cause 2: The number of people in a meeting exceeds the maximum limit: 1000.
 
-### Cause 2: Meeting participants limit
-
-The number of people in a meeting exceeds the limit.
-
-### Cause 3: Meeting participant isn't added to a meeting
-
-Participants may be removed from a chat thread to secure the corporate data.
+Cause 3: Meeting participants who were added to a meeting via a meeting link (such as a meeting forward), and were not added to the original meeting invite will only have access to chats, files, notes, and other meeting content during the meeting, but lose access once the meeting ends. In addition, if this meeting is part of a recurrence, the user may not have access to the chat after the meeting.
 
 ## Resolution
 
-Leave the meeting and join the meeting again to work around these issues. If it doesn't work, check the potential causes, and try the following resolutions. You may need to try all the three resolutions until the issue is fixed.
+To ensure that this isn't a transient issue, leave the meeting and rejoin the meeting to see if the issue is fixed. If the issue still persists, check the following resolutions which correspond to the causes accordingly. You may need to try all the three resolutions before the issue is fixed.
 
-### Resolution for cause 1: Enable meeting policy
-
-You can change the policy setting in the admin center by following the steps:
+Resolution 1: Administrators can enabled and configure the policy setting in the Microsoft Teams admin center by following the steps:
 
 1. In **Microsoft Teams admin center**, select **Users**.
 1. Select the user, select **Policies** and then select the meeting policy assigned to the user.
@@ -63,14 +55,8 @@ To view other users that have been assigned this meeting policy:
 1. Select **Meeting policy** and the name of the policy that was changed above.
 1. Select **Apply**. A list of users with this policy is displayed.
 
-For Teams for Education users, you can refer to the [policy packages](/microsoftteams/policy-packages-edu) or the [Teams for Education policy wizard](/microsoftteams/easy-policy-setup-edu?tabs=students%2Cstudent-settings) to manage meeting policies.
+Teams for Education users, refer to the [policy packages](/microsoftteams/policy-packages-edu) or the [Teams for Education policy wizard](/microsoftteams/easy-policy-setup-edu?tabs=students%2Cstudent-settings) to manage meeting policies.
 
-### Resolution for cause 2: Limit the number of meeting participants
+Resolution 2: Make sure the number of people in a meeting is under the limit. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams#meetings-and-calls).
 
-Make sure the number of people in a meeting is under the [limit](/microsoftteams/limits-specifications-teams#meetings-and-calls).
-
-### Resolution for cause 3: Add participants to a meeting
-
-Participants may be removed from a chat thread to secure the corporate data. Meeting participants who were added to a meeting via a meeting link (such as a meeting forward), and were not added to the original meeting invite will only have access to chats, files, notes, and other meeting content during the meeting, but lose access once the meeting ends. In addition, if this meeting is part of a recurrence, the user may not have access to the chat after the meeting.
-
-To enable access to the chat, meeting organizer can invite the user to the meeting series.
+Resolution 3: To enable access to the chat, meeting organizer should invite the user to the meeting series.
