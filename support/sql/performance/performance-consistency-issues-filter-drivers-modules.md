@@ -36,7 +36,7 @@ These issues occur because of the following causes for modules and filter driver
 
 These issues occur because applications or other software that are installed on a server that is running SQL Server can load certain modules into the SQL Server process (Sqlservr.exe). This may be done to achieve a specific business logic requirement, an enhanced functionality, or intrusion monitoring. These modules might perform unsupported activities that include detouring important Win32 APIs and SQL Server routines, and calling risky APIs. Additionally, some intrinsic problems within these modules may cause corruption of various memory structures that are necessary for the SQL Server process to function correctly.
 
-### Causes for filter drivers
+### Filter drivers
 
 Filter drivers can be installed on a system as part of the Setup program of an application to provide a certain kind of functionality. Examples include antivirus protection, online backups, encryption services, and data compression or defragmentation facilities. These filter drivers insert themselves into the Windows driver stack to enhance or alter the behavior of requests that pass through the driver stack and that are intended for a device.
 
