@@ -48,7 +48,7 @@ In this situation, the returned value of SSRSVersion is empty.
 
 ## Cause
 
-The console tries to get the installed SQL Server Reporting Services (SSRS) version from the site database. This issue occurs if the reporting services point isn't correctly installed or reinstalled after the upgrade.
+This issue occurs because the console can't get the installed SQL Server Reporting Services (SSRS) version from the site database. This issue occurs if the reporting services point isn't correctly installed or reinstalled after the upgrade.
 
 ## Resolution
 
