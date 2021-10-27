@@ -1,29 +1,27 @@
 ---
 title: Resolve PAGELATCH_EX contention
 description: This article describes how to resolve last-page insert PAGELATCH_EX contention in SQL Server.
-ms.date: 02/17/2020
+ms.date: 10/27/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: PijoCoder
 ms.prod: sql
 ---
 # Resolve last-page insert PAGELATCH_EX contention in SQL Server
 
-This article introduces how to resolve last-page insert PAGELATCH_EX contention in SQL Server.
-
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 4460004
 
+**Option 1: Execute the steps directly in a notebook via Azure Data Studio**
 
-**Option 1: To view and execute the steps directly in a notebook via Azure Data Studio**
+> [!NOTE]
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb)
 
-[Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)
-
-
 **Option 2: Follow the step manually**
 
+This article introduces how to resolve last-page insert `PAGELATCH_EX` contention in SQL Server.
 
 ## Symptoms
 
@@ -198,9 +196,9 @@ For example, assume that you have the following table that was defined by using 
 USE testdb;
 
 CREATE TABLE Customers 
-( CustomerID bigint identity(1,1) not null Primary Key CLUSTERED, 
-CustomerLastName varchar (32) not null, 
-CustomerFirstName varchar(32) not null );
+( CustomerID BIGINT IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED, 
+CustomerLastName VARCHAR (32) NOT NULL, 
+CustomerFirstName VARCHAR(32) NOT NULL );
 ```
 
 To change this, you can remove the primary key index and redefine it.
@@ -212,8 +210,8 @@ ALTER TABLE Customers
 DROP CONSTRAINT PK__Customer__A4AE64B98819CFF6; 
 
 ALTER TABLE Customers 
-add constraint pk_Cust1 
-primary key NONCLUSTERED (CustomerID)
+ADD CONSTRAINT pk_Cust1 
+PRIMARY KEY NONCLUSTERED (CustomerID)
 ```
 
 ### Method 3: Make the leading key a non-sequential column
@@ -224,8 +222,8 @@ Reorder the clustered index definition in such a way that the leading column isn
 USE testdb;
 
 ALTER TABLE Customers 
-add constraint pk_Cust1 
-primary key clustered (CustomerLastName, CustomerID)
+ADD CONSTRAINT pk_Cust1 
+PRIMARY KEY CLUSTERED (CustomerLastName, CustomerID)
 ```
 
 ### Method 4: Add a non-sequential value as a leading key
@@ -236,13 +234,12 @@ Add a nonsequential hash value as the leading index key. This will also spread o
 USE testdb;
 
 CREATE TABLE Customers 
-( CustomerID bigint identity(1,1) not null, 
-CustomerLastName varchar (32) not null, 
-CustomerFirstName varchar(32) not null ) ;
+( CustomerID BIGINT IDENTITY(1,1) NOT NULL, 
+CustomerLastName VARCHAR (32) NOT NULL, 
+CustomerFirstName VARCHAR(32) NOT NULL );
 
 ALTER TABLE Customers 
-ADD [HashValue] AS (CONVERT([tinyint], abs([CustomerID])%16)) PERSISTED NOT NULL ;
-
+ADD [HashValue] AS (CONVERT([TINYINT], abs([CustomerID])%16)) PERSISTED NOT NULL;
 
 ALTER TABLE Customers 
 ADD CONSTRAINT pk_table1 
@@ -269,19 +266,19 @@ The following is an example in a system that has 16 CPUs.
 USE testdb;
 
 CREATE TABLE Customers 
-( CustomerID bigint identity(1,1) not null, 
-CustomerLastName varchar (32) not null, 
-CustomerFirstName varchar(32) not null ) ;
+( CustomerID BIGINT IDENTITY(1,1) NOT NULL, 
+CustomerLastName VARCHAR (32) NOT NULL, 
+CustomerFirstName VARCHAR(32) NOT NULL );
 
 ALTER TABLE Customers 
-ADD [HashID] AS CONVERT(tinyint, ABS(CustomerID % 16)) PERSISTED NOT NULL ;
+ADD [HashID] AS CONVERT(TINYINT, ABS(CustomerID % 16)) PERSISTED NOT NULL;
 
-CREATE PARTITION FUNCTION pf_hash (tinyint) AS RANGE LEFT FOR VALUES (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15) ;
+CREATE PARTITION FUNCTION pf_hash (TINYINT) AS RANGE LEFT FOR VALUES (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15) ;
 
-CREATE PARTITION SCHEME ps_hash AS PARTITION pf_hash ALL TO ([PRIMARY]) ;
+CREATE PARTITION SCHEME ps_hash AS PARTITION pf_hash ALL TO ([PRIMARY]);
 
 CREATE UNIQUE CLUSTERED INDEX CIX_Hash 
-ON Customers (CustomerID, HashID) ON ps_hash(HashID) ;
+ON Customers (CustomerID, HashID) ON ps_hash(HashID);
 ```
 
 ### Method 7: Switch to In-Memory OLTP
