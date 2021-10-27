@@ -26,7 +26,7 @@ If you're unable to use Apple CarPlay with Teams, your administrator must config
 
 ## Allow your device to use Siri
 
-To allow the device to use Siri, create and assign an iOS/iPadOS device restrictions configuration profile to the users or groups. If you have already created a profile, check the profile configurtion that is described in step 2.
+To allow the device to use Siri, create and assign an iOS/iPadOS device restrictions configuration profile to the users or groups.
 
 1. Navigate to **Devices** > **Configuration profiles**, create a device restrictions profile for iOS/iPadOS devices.
 
@@ -40,7 +40,7 @@ To allow the device to use Siri, create and assign an iOS/iPadOS device restrict
 
 ## Allow data transfer to and from any app on your device
 
-To allow data transfer on the device, create and assign an iOS/iPadOS app protection policy to the users or groups. If you have already created a policy, check the policy configurtion that is described in step 2.
+To allow data transfer on the device, create and assign an iOS/iPadOS app protection policy to the users or groups.
 
 1. Navigate to **Devices** > **Compliance polices**, create an app protection policy for iOS/iPadOS devices.
 
