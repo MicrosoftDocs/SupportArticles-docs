@@ -17,8 +17,8 @@ When you open the Configuration Manager console after you upgrade to [Configurat
 
 The following entries are logged in *SMSAdminUI.log*:
 
-> <Date> <Time>    15 (0xf)    Executing static method SMS_Identification.GetReportVersion()  
-> <Date> <Time>    15 (0xf)    System.ArgumentException  
+> \<Date\> \<Time\>    15 (0xf)    Executing static method SMS_Identification.GetReportVersion()  
+> \<Date\> \<Time\>    15 (0xf)    System.ArgumentException  
 > **Version string portion was too short or too long.**  
 > &nbsp;&nbsp;&nbsp; at System.Version.VersionResult.SetFailure(ParseFailureKind failure, String argument)  
 > &nbsp;&nbsp;&nbsp; at System.Version.TryParseVersion(String version, VersionResult& result)  
