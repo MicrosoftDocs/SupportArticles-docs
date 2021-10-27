@@ -52,7 +52,7 @@ If the stale entry appears in Outlook on the Web and Outlook online mode as well
     ```powershell
     Get-MailPublicFolder -ResultSize unlimited |foreach{Disable-MailPublicFolder $_.Guid.Guid}
     ```
-    You may get the following warning, which is expected if the public folder is not present:
+    You may get the following warning, which is expected if the public folder isn't present:
 
     > WARNING: Failed to locate the public folder \<name of public folder> because the following error occurred: Microsoft.Exchange.Data.StoreObjects.ObjectNotFoundException: No active public folder mailboxes were found. This happens when no public folder mailboxes are provisioned or they are provisioned in 'HoldForMigration' mode. If you're not currently performing a migration, create a public folder mailbox.
 
