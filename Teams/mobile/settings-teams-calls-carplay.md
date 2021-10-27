@@ -26,9 +26,11 @@ If you're unable to use Apple CarPlay with Teams, your administrator must config
 
 ## Allow your device to use Siri
 
+To allow the device to use Siri, create and assign an iOS/iPadOS device restrictions configuration profile to the users or groups. If you have already created a profile, check the profile configurtion that is described in step 2.
+
 1. Navigate to **Devices** > **Configuration profiles**, create a device restrictions profile for iOS/iPadOS devices.
 
-1. Under **Configuration settings** > **Built-in Apps**, set the **[Block Siri](/mem/intune/configuration/device-restrictions-ios#settings-apply-to-all-enrollment-types-1)** option to **Not configured**.
+1. Under **Configuration settings** > **Built-in Apps**, set the [Block Siri](/mem/intune/configuration/device-restrictions-ios#settings-apply-to-all-enrollment-types-1) option to **Not configured**.
 
 1. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 
@@ -37,6 +39,8 @@ If you're unable to use Apple CarPlay with Teams, your administrator must config
     :::image type="content" source="media/cannot-make-teams-calls-carplay/block-siri-setting.png" alt-text="Screenshot of configuring block Siri to not configured.":::
 
 ## Allow data transfer to and from any app on your device
+
+To allow data transfer on the device, create and assign an iOS/iPadOS app protection policy to the users or groups. If you have already created a policy, check the policy configurtion that is described in step 2.
 
 1. Navigate to **Devices** > **Compliance polices**, create an app protection policy for iOS/iPadOS devices.
 
