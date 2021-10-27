@@ -66,7 +66,7 @@ To work around the issue, run the following PowerShell cmdlet to uninstall the r
 Remove-CMSiteRole -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -RoleName "SMS SRS Reporting Point"
 ```
 
-Then, run the following PowerShell cmdlet to reinstall the reporting services point:
+After you fix the underlying SSRS issue, run the following PowerShell cmdlet to reinstall the reporting services point:
 
 ```powershell
 Add-CMReportingServicePoint -SiteCode "<SiteCode>" -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -UserName <Domain\ReportingUser>
