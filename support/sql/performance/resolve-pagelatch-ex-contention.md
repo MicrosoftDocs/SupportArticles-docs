@@ -11,16 +11,6 @@ ms.prod: sql
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 4460004
 
-**Option 1: Execute the steps directly in a notebook via Azure Data Studio**
-
-> [!NOTE]
-> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
-
-> [!div class="nextstepaction"]
-> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb)
-
-**Option 2: Follow the step manually**
-
 This article introduces how to resolve last-page insert `PAGELATCH_EX` contention in SQL Server.
 
 ## Symptoms
@@ -84,6 +74,18 @@ Page latches are common in every system because they ensure physical page protec
 For more information, see [Diagnosing and Resolving Latch Contention on SQL Server](/sql/relational-databases/diagnose-resolve-latch-contention).
 
 ## Resolution
+
+You can choose one of following two options to resolve the problem.
+
+### Option 1: Execute the steps directly in a notebook via Azure Data Studio
+
+> [!NOTE]
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+
+> [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb)
+
+### Option 2: Follow the steps manually
 
 To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.
 
