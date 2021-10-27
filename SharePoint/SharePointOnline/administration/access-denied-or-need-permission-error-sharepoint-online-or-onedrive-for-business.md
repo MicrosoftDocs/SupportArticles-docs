@@ -61,7 +61,7 @@ The diagnostic performs a large range of verifications for internal users or gue
 1. Determine the [permission level](/sharepoint/understanding-permission-levels) that the user should have on the site (member, owner, and so on).
 1. Verify the permission by using the **Check Permissions** feature:
 
-   1. On your site, select **Settings** > **Site permissions**.
+   1. On your site, select **Settings** :::image type="icon" source="./media/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business/settings-icon.png"::: > **Site permissions**.
    1. In the top ribbon, select **Check Permissions**.
    1. In the **User/Group** field, enter the user's name, and then select **Check Now**.
    1. Review the permissions the user has on the site, and through which security group (if applicable).
@@ -91,7 +91,7 @@ If you can't restore the original user and are still in this state, create a sup
 1. Determine the [permission level](/sharepoint/understanding-permission-levels) that the user should have on the site (member, owner, and so on).
 1. Verify the permissions by using the **Check Permissions** feature:
   
-   1. On your site, select **Settings** > **Site permissions**.
+   1. On your site, select **Settings** :::image type="icon" source="./media/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business/settings-icon.png"::: > **Site permissions**.
    1. In the top ribbon, select **Check Permissions**.
    1. In the **User/Group** field, enter the user's name, and then select **Check Now**.
    1. Review the permissions the user has on the site, and through which security group (if applicable).
@@ -106,7 +106,7 @@ If you can't restore the original user and are still in this state, create a sup
 1. Determine the [permission level](/sharepoint/understanding-permission-levels) that the user should have on the site (member, owner, and so on).
 1. Verify the permission by using the **Check Permissions** feature:
 
-   1. On your site, select **Settings** > **Site permissions**.
+   1. On your site, select **Settings** :::image type="icon" source="./media/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business/settings-icon.png"::: > **Site permissions**.
    1. In the top ribbon, select **Check Permissions**.
    1. In the **User/Group** field, enter the user's name, and then select **Check Now**.
    1. Review the permissions the user has on the site, and through which security group (if applicable).
@@ -133,7 +133,7 @@ If you can access the site as the incorrect guest, follow these steps:
 If you can't access the site as the incorrect guest, follow these steps:
 
 1. As a SharePoint Online administrator, sign in to the site collection that was shared with the guest.
-2. Select the gear icon for the **Settings** menu, and then select **Site settings**.
+2. Select **Settings** :::image type="icon" source="./media/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business/settings-icon.png"::: > **Site settings**.
 3. In the **Users and Permissions** section, select **People and groups**.
 4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=\<number\>** with **MembershipGroupId=0**, and then press Enter.
 5. In the list of users, locate the name of the guest. Right-click the user name, and copy the shortcut.
@@ -291,7 +291,7 @@ If an affected user should be a site collection administrator, see [Manage site 
 
 If the user should be a site owner, add the user to the Owners group for the site:
 
-1. As a user who can change site permissions, browse to the affected site or site collection. Select the gear icon for the **Settings** menu, and then select **Site settings**.
+1. As a user who can change site permissions, browse to the affected site or site collection. Select **Settings** :::image type="icon" source="./media/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business/settings-icon.png"::: > **Site settings**.
 1. Select **Site permissions**.
 1. Select the **Owners** group for the site.
 1. Select **New**.
