@@ -45,7 +45,7 @@ If the stale entry appears in Outlook on the Web and Outlook online mode as well
 4. If you see the stale public folder entry, run this cmdlet to remove the mail enabled public folders:
 
     ```powershell
-    Get-MailPublicFolder <name of stale public folder> | foreach{Disable-MailPublicFolder $_.guid.guid}
+    Get-MailPublicFolder <name of stale public folder> |foreach{Disable-MailPublicFolder $_.guid.guid}
     ```
     If you want to remove all mail enabled public folders at once, run the following cmdlet:
 
