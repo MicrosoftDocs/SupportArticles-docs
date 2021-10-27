@@ -17,17 +17,15 @@ When you open the Configuration Manager console after you upgrade to [Configurat
 
 The following entries are logged in *SMSAdminUI.log*:
 
-```output
-<Date> <Time>    15 (0xf)    Executing static method SMS_Identification.GetReportVersion()
-<Date> <Time>    15 (0xf)    System.ArgumentException
-Version string portion was too short or too long.
-   at System.Version.VersionResult.SetFailure(ParseFailureKind failure, String argument)
-   at System.Version.TryParseVersion(String version, VersionResult& result)
-   at System.Version.Parse(String input)
-   at System.Version..ctor(String version)
-   at Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine.WqlConnectionManager.Connect(String configMgrServerPath)
-   at Microsoft.ConfigurationManagement.AdminConsole.SmsSiteConnectionNode.GetConnectionManagerInstance(String connectionManagerInstance)
-```
+> <Date> <Time>    15 (0xf)    Executing static method SMS_Identification.GetReportVersion()  
+> <Date> <Time>    15 (0xf)    System.ArgumentException  
+> **Version string portion was too short or too long.**  
+> &nbsp;&nbsp;&nbsp; at System.Version.VersionResult.SetFailure(ParseFailureKind failure, String argument)  
+> &nbsp;&nbsp;&nbsp; at System.Version.TryParseVersion(String version, VersionResult& result)  
+> &nbsp;&nbsp;&nbsp; at System.Version.Parse(String input)  
+> &nbsp;&nbsp;&nbsp; at System.Version..ctor(String version)  
+> &nbsp;&nbsp;&nbsp; at Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine.WqlConnectionManager.Connect(String configMgrServerPath)  
+> &nbsp;&nbsp;&nbsp; at Microsoft.ConfigurationManagement.AdminConsole.SmsSiteConnectionNode.GetConnectionManagerInstance(String connectionManagerInstance)
 
 You run the following PowerShell cmdlet to call the SMS_Identification.GetReportVersion method:
 
@@ -59,3 +57,12 @@ To fix the issue, following these steps:
    - The Report Manager URL. For example, `https://<server>/Reports`.
    - The Report Server URL. For example, `https://<server>/ReportServer`.
 1. Use an older version of console to connect to the site, and reinstall the reporting services point.
+
+## Workaround
+
+To work around the issue, run the following PowerShell cmdlets to uninstall the reporting services point, and then reinstall it:
+
+```powershell
+Remove-CMSiteRole -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -RoleName "SMS SRS Reporting Point"
+Add-CMReportingServicePoint -SiteCode "<SiteCode>" -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -UserName <Domain\ReportingUser>
+```
