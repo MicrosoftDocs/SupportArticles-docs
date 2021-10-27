@@ -24,7 +24,7 @@ search.appverid:
 
 If you're unable to use Apple CarPlay with Teams, your administrator must configure the following settings in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/):
 
-## Allow your device to use Siri.
+## Allow your device to use Siri
 
 1. Navigate to **Devices** > **Configuration profiles**, create a device restrictions profile for iOS/iPadOS devices.
 
@@ -36,7 +36,7 @@ If you're unable to use Apple CarPlay with Teams, your administrator must config
 
     :::image type="content" source="media/cannot-make-teams-calls-carplay/block-siri-setting.png" alt-text="Screenshot of configuring block Siri to not configured.":::
 
-## Allow data transfer to and from any app on your device.
+## Allow data transfer to and from any app on your device
 
 1. Navigate to **Devices** > **Compliance polices**, create an app protection policy for iOS/iPadOS devices.
 
