@@ -30,7 +30,7 @@ You may experience one of the following chat issues when you join a Microsoft Te
 
 ## Cause
 
-These issues can occur due to one of the following causes.
+These issues may occur because of one of the following causes.
 
 Cause 1: The **Allow chat in meetings** meeting policy is disabled.
 
@@ -40,7 +40,7 @@ Cause 3: Meeting participants who were added to a meeting via a meeting link (su
 
 ## Resolution
 
-To ensure that this isn't a transient issue, leave the meeting and rejoin the meeting to see if the issue is fixed. If the issue still persists, check the following resolutions which correspond to the causes accordingly. You may need to try all the three resolutions before the issue is fixed.
+To ensure that it isn't a transient issue, leave the meeting and rejoin the meeting to see if the issue is fixed. If the issue still persists, check the following resolutions which correspond to the causes accordingly. You may need to try all the three resolutions before the issue is fixed.
 
 Resolution 1: Administrators can enabled and configure the policy setting in the Microsoft Teams admin center by following the steps:
 
