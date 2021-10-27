@@ -1,6 +1,6 @@
 ---
-title: Can't make Teams calls with Apple CarPlay on iOS device
-description: Describes an issue in which you can't make Teams calls with CarPlay. This issue occurs because the access to Siri or the app data transfer may be blocked.
+title: Settings for Teams calls with Apple CarPlay on iOS device
+description: Describes if you're unable to use Apple CarPlay with Teams, ask your administrator to configure settings for you.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -18,16 +18,23 @@ search.appverid:
 - MET150
 ---
 
-# Can't make Teams calls with Apple CarPlay
+# Settings for Teams calls with Apple CarPlay
 
-If you can't use a Microsoft Intune-managed iOS device to [place Teams calls with Apple CarPlay](https://support.microsoft.com/en-us/office/place-teams-calls-with-apple-carplay-a96c617f-0249-4e12-8c06-788638497679), the access to Siri or the app data transfer may be blocked on the device. In [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), administrators should configure the following settings:
+[Apple CarPlay](https://support.microsoft.com/en-us/office/place-teams-calls-with-apple-carplay-a96c617f-0249-4e12-8c06-788638497679) allows you to safely make Teams audio calls when you're on the road by using Siri voice commands. However, if you use a Microsoft Intune-managed iOS device to make the calls, Siri can be blocked from use by your administrator.  
 
-- Allow the device to use the Siri voice assistant. To do this, configure the **[Block Siri](/mem/intune/configuration/device-restrictions-ios#settings-apply-to-all-enrollment-types-1)** setting to **Not configured** (default) for built-in apps.
+If you're unable to use Apple CarPlay with Teams, your administrator must configure the following settings in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/):
 
-    :::image type="content" source="media/cannot-make-teams-calls-carplay/block-siri-setting.png" alt-text="Screenshot of configuring block Siri to not configured.":::
+- Allow your device to use Siri.
+    1. Navigate to Home > Devices > Device restrictions > Built-in Apps.
+    1. Set the **[Block Siri](/mem/intune/configuration/device-restrictions-ios#settings-apply-to-all-enrollment-types-1)** option to **Not configured**.
 
-- Allow the app data transfer from and to any app on the device. To do this, configure the two [app data protection settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection) **(Send Org data to other apps** and **Receive data from other apps**) to **All apps**. Then, the receiving app will have the ability to read and edit the data.
+        :::image type="content" source="media/cannot-make-teams-calls-carplay/block-siri-setting.png" alt-text="Screenshot of configuring block Siri to not configured.":::
 
-    :::image type="content" source="media/cannot-make-teams-calls-carplay/data-protection-setting .png" alt-text="Screenshot of configuring two settings: Send Org data to other apps and Receive data from other apps to All apps.":::
+- Allow data transfer to and from any app on your device.
+    1. Navigate to Dashboard > Client apps – App protection policies > Intune App Protection – Properties > Data protection.
+    1. Set **Send Org data to other apps** to All apps.
+    1. Set **Receive data from other apps** to All apps.
 
-For more information, see [Join a meeting in Teams with CarPlay](https://support.microsoft.com/en-us/office/join-a-meeting-in-teams-1613bb53-f3fa-431e-85a9-d6a91e3468c9#ID0EDBD=Mobile).
+        :::image type="content" source="media/cannot-make-teams-calls-carplay/data-protection-setting .png" alt-text="Screenshot of configuring two settings: Send Org data to other apps and Receive data from other apps to All apps.":::
+
+    For more information, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection).
