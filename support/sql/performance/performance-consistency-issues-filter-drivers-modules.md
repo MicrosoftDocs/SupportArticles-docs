@@ -32,7 +32,7 @@ In the scenarios, you may experience performance degradation and consistency iss
 
 These issues occur because of the following causes for modules and filter drivers.
 
-### Causes for modules
+### Modules (DLLs or EXEs)
 
 These issues occur because applications or other software that are installed on a server that is running SQL Server can load certain modules into the SQL Server process (Sqlservr.exe). This may be done to achieve a specific business logic requirement, an enhanced functionality, or intrusion monitoring. These modules might perform unsupported activities that include detouring important Win32 APIs and SQL Server routines, and calling risky APIs. Additionally, some intrinsic problems within these modules may cause corruption of various memory structures that are necessary for the SQL Server process to function correctly.
 
