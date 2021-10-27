@@ -15,7 +15,7 @@ appliesto:
 - Office 365
 ---
 
-# "Sorry! We can't process your request right now" error code 6031 message when you buy licenses in the Office 365 portal
+# "Sorry! We can't process your request right now" error code 6031 message when you buy licenses
 
 ## Symptoms
 
