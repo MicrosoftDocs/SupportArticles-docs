@@ -41,7 +41,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option1">
 
-![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/test-printing-other-documents-option-1.png":::
 
 </a>
 </td><td>**<a href="#option1">Test printing in other documents</a>**
@@ -57,7 +57,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option2">
 
-![Option 2](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/test-printing-other-programs-option-2.png":::
 
 </a>
 </td>
@@ -74,7 +74,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option3">
 
-![Option 3](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/repair--word-program-files-option-3.png":::
 
 </a>
 </td>
@@ -94,7 +94,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <td valign="top">
 <a href="#option4">
 
-![Option 4](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/test-problems-windows-option-4.png":::
 
 </a>
 </td>
@@ -116,7 +116,7 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 <td valign="top">
 <a href="#option5">
 
-![Option 5](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
+:::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/test-printing-different-print-drivers-option-5.png":::
 
 </a>
 </td>
@@ -324,4 +324,4 @@ If you receive an error message in Word when you print files that contain only t
 
 ## Need more help?
 
-Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
+Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.。。。。。。。。。
