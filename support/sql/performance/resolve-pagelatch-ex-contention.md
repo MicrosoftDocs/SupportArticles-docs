@@ -89,7 +89,7 @@ You can choose one of following two options to resolve the problem.
 
 To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.
 
-### 1. Confirm the contention on PAGELATCH_EX and identify the contention resource
+#### 1. Confirm the contention on PAGELATCH_EX and identify the contention resource
 
 This T-SQL script helps you discover if there are `PAGELATCH_EX` waits on the system with multiple sessions (5 or more) with significant wait time (10 ms or more). It also helps you discover which object and index the contention is on using [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [DBCC PAGE](https://techcommunity.microsoft.com/t5/sql-server/how-to-use-dbcc-page/ba-p/383094) or [sys.fn_PageResCracker](/sql/relational-databases/system-functions/sys-fn-pagerescracker-transact-sql) and [sys.dm_db_page_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql) (SQL Server 2019 only).
 
@@ -180,15 +180,15 @@ BEGIN
 END
 ```
 
-### 2. Choose a method to resolve the issue
+#### 2. Choose a method to resolve the issue
 
 One of the following methods will help you resolve the issue. Choose the one that best fits your circumstances.
 
-### Method 1: Use OPTIMIZE_FOR_SEQUENTIAL_KEY index option (SQL Server 2019 only)
+##### Method 1: Use OPTIMIZE_FOR_SEQUENTIAL_KEY index option (SQL Server 2019 only)
 
 In SQL Server 2019, a new index option (`OPTIMIZE_FOR_SEQUENTIAL_KEY`) was added that can help resolve this issue without using any of the following methods. See [Behind the Scenes on OPTIMIZE_FOR_SEQUENTIAL_KEY](https://techcommunity.microsoft.com/t5/SQL-Server/Behind-the-Scenes-on-OPTIMIZE-FOR-SEQUENTIAL-KEY/ba-p/806888) for more information.
 
-### Method 2: Move primary key off identity column
+##### Method 2: Move primary key off identity column
 
 Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This is the easiest method to follow, and it directly achieves the goal.
 
@@ -216,7 +216,7 @@ ADD CONSTRAINT pk_Cust1
 PRIMARY KEY NONCLUSTERED (CustomerID)
 ```
 
-### Method 3: Make the leading key a non-sequential column
+##### Method 3: Make the leading key a non-sequential column
 
 Reorder the clustered index definition in such a way that the leading column isn't the sequential column. This requires that the clustered index be a composite index. For example, in a customer table, you can make a **CustomerLastName** column be the leading column, followed by the **CustomerID**. We recommend that you thoroughly test this method to make sure that it meets performance requirements.
 
@@ -228,7 +228,7 @@ ADD CONSTRAINT pk_Cust1
 PRIMARY KEY CLUSTERED (CustomerLastName, CustomerID)
 ```
 
-### Method 4: Add a non-sequential value as a leading key
+##### Method 4: Add a non-sequential value as a leading key
 
 Add a nonsequential hash value as the leading index key. This will also spread out the inserts. A hash value is generated as a modulo that matches the number of CPUs on the system. For example, on a 16-CPU system, you can use a modulo of 16. This method spreads out the INSERT operations uniformly against multiple database pages.
 
@@ -248,14 +248,14 @@ ADD CONSTRAINT pk_table1
 PRIMARY KEY CLUSTERED (HashValue, CustomerID);
 ```
 
-### Method 5: Use a GUID as a leading key
+##### Method 5: Use a GUID as a leading key
 
 Use a GUID as the leading key column of an index to ensure the uniform distribution of inserts.
 
 > [!NOTE]
 > Although it achieves the goal, we don't recommend this method because it presents multiple challenges, including a large index key, frequent page splits, low page density, and so on.
 
-### Method 6: Use table partitioning and a computed column with a hash value
+##### Method 6: Use table partitioning and a computed column with a hash value
 
 Use table partitioning and a computed column that has a hash value to spread out the INSERT operations. Because this method uses table partitioning, it's usable only on Enterprise editions of SQL Server.
 
@@ -283,7 +283,7 @@ CREATE UNIQUE CLUSTERED INDEX CIX_Hash
 ON Customers (CustomerID, HashID) ON ps_hash(HashID);
 ```
 
-### Method 7: Switch to In-Memory OLTP
+##### Method 7: Switch to In-Memory OLTP
 
 Alternatively, use In-Memory OLTP particularly if the latch contention is high. This technology eliminates the latch contention overall. However, you have to redesign and migrate the specific table(s), where page latch contention is observed, to a memory-optimized table. You can use the [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor?view=sql-server-2017&preserve-view=true) and [Transaction Performance Analysis Report](/sql/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp?view=sql-server-2017&preserve-view=true) to determine whether migration is possible and the effort involved to do the migration. For more information about how In-Memory OLTP eliminates latch contention, download and review the document in [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).
 
