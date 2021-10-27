@@ -1,9 +1,9 @@
 ---
 title: Console crashes after upgrading to version 2107
-description: 
-ms.date: 09/02/2021
+description: The Configuration Manager console crashes after you update to Configuration Manager current branch version 2107. This issue occurs if the reporting services point isn't installed correctly.
+ms.date: 10/27/2021
 ms.prod-support-area-path: 
-ms.reviewer: buzb, lamosley
+ms.reviewer: payur
 author: helenclu
 ms.author: luche
 ---
@@ -13,9 +13,9 @@ ms.author: luche
 
 ## Symptoms
 
-When you open the the Configuration Manager console after you upgrade to [Configuration Manager current branch version 2107](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2107), the console crashes.
+When you open the Configuration Manager console after you upgrade to [Configuration Manager current branch version 2107](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2107), the console crashes.
 
-The following entries are logged in the SMSAdminUI.log file:
+The following entries are logged in *SMSAdminUI.log*:
 
 ```output
 <Date> <Time>    15 (0xf)    Executing static method SMS_Identification.GetReportVersion()
@@ -29,33 +29,33 @@ Version string portion was too short or too long.
    at Microsoft.ConfigurationManagement.AdminConsole.SmsSiteConnectionNode.GetConnectionManagerInstance(String connectionManagerInstance)
 ```
 
+You run the following PowerShell cmdlet to call the SMS_Identification.GetReportVersion method:
+
+```powershell
+PS <SiteCode>:\> Invoke-CMWmiMethod -ClassName SMS_Identification -MethodName GetReportVersion -parameter @{ Sitecode = '<SiteCode>' }
+```
+
+And you receive the following results:
+
+```output
+SmsProviderObjectPath : __PARAMETERS
+ReturnValue : 0
+ServerName : {<Site server that hosts the reporting services point>}
+SSRSVersion : {}
+```
+
+In this situation, the returned value of SSRSVersion is empty.
+
 ## Cause
 
-This issue occurs because the console tries to get the SSRS version installed from the site database. If SSRS Reporting Point was not properly (re)installed after the upgrade, the version will be empty, hence the exception.
+The console tries to get the installed SQL Server Reporting Services (SSRS) version from the site database. This issue occurs if the reporting services point isn't correctly installed or reinstalled after the upgrade.
 
+## Resolution
 
-Quick check is possible via ConfigMgr PowerShell:
+To fix the issue, following these steps:
 
-PS <SiteCode>:\> Invoke-CMWmiMethod -ClassName SMS_Identification -MethodName GetReportVersion -parameter @{ Sitecode = '<SiteCode>' }
+1. Fix any issues with SSRS, and make sure the following URLs are accessible:
 
-SmsProviderObjectPath : __PARAMETERS
-
-ReturnValue : 0
-
-ServerName : {SRS RP FQDN}
-
-SSRSVersion : {} Healthy SSRS should have version filled in there.
-
-Article Resolution
-Fix underlying issue with SRSS and make sure /Reports and /ReportServer URLs are accessible
-
-Then use older console build to connect the site and reinstall SRSRP role.
-
-
-To unblock the customer, you can uninstall the role via PowerShell:
-
-Remove-CMSiteRole -SiteSystemServerName "<put your SRS RP FQDN here>" -RoleName "SMS SRS Reporting Point"
-
-Later you may want to install SSRS back:
-
-Add-CMReportingServicePoint -SiteCode "<SiteCode>" -SiteSystemServerName "<put your SRS RP FQDN here>" -UserName <Domain\ReportingUser>
+   - The Report Manager URL. For example, `https://<server>/Reports`.
+   - The Report Server URL. For example, `https://<server>/ReportServer`.
+1. Use an older version of console to connect to the site, and reinstall the reporting services point.
