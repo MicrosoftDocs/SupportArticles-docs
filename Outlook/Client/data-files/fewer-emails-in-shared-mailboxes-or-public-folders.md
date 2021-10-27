@@ -47,7 +47,7 @@ At the bottom of the email message list, one of the following messages is displa
 > [!NOTE]
 > The number of days, weeks, or months that is displayed in the message depends on what you have configured for the **Mail to keep offline** setting in Outlook. For example, if you set this value to **1** (one) month, the message displays **Currently displaying all messages newer than 1 month**, as shown in the following screenshot.
 
-:::image type="content" source="media/fewer-emails-in-shared-mailboxes-or-public-folders/message-example.png" alt-text="Screenshot shows the message displayed if you have the Mail to keep offline setting set to 1 month.":::
+:::image type="content" source="media/fewer-emails-in-shared-mailboxes-or-public-folders/message-example.png" alt-text="Screenshot shows the message displayed if you have the Mail to keep offline setting set to one month.":::
 
 Also, when you search in a shared mailbox or public folder favorite, older items are missing from the search results.
 
