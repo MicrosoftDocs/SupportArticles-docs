@@ -50,7 +50,7 @@ To allow data transfer on the device, create and assign an iOS/iPadOS app protec
 
     1. Set **Receive data from other apps** to **All apps**.
 
-    :::image type="content" source="media/cannot-make-teams-calls-carplay/data-protection-setting .png" alt-text="Screenshot of configuring two settings: Send Org data to other apps and Receive data from other apps to All apps.":::
+    :::image type="content" source="media/cannot-make-teams-calls-carplay/data-protection-setting.png" alt-text="Screenshot of configuring two settings: Send Org data to other apps and Receive data from other apps to All apps.":::
 
 1. In **Assignments**, assign the app protection policy to the users or groups.
 
