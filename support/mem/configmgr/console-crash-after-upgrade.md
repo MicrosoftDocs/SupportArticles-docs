@@ -60,9 +60,14 @@ To fix the issue, following these steps:
 
 ## Workaround
 
-To work around the issue, run the following PowerShell cmdlets to uninstall the reporting services point, and then reinstall it:
+To work around the issue, run the following PowerShell cmdlet to uninstall the reporting services point:
 
 ```powershell
 Remove-CMSiteRole -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -RoleName "SMS SRS Reporting Point"
+```
+
+Then, run the following PowerShell cmdlet to reinstall the reporting services point:
+
+```powershell
 Add-CMReportingServicePoint -SiteCode "<SiteCode>" -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -UserName <Domain\ReportingUser>
 ```
