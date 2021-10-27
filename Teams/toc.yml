@@ -185,6 +185,8 @@
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
       href: ./known-issues/teams-for-surface-hub-wont-start-from-store.md
+    - name: Resolve sign-in errors
+      href: ./teams-sign-in/resolve-sign-in-errors.md
     - name: Sign-in error after password change
       href: ./known-issues/sign-in-error-after-password-change.md
     - name: Someone has already setup Teams for your organization
