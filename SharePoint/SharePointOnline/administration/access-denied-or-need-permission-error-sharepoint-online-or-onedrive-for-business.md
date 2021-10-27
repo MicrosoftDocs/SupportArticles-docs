@@ -91,7 +91,7 @@ If you can't restore the original user and are still in this state, create a sup
 1. Determine the [permission level](/sharepoint/understanding-permission-levels) that the user should have on the site (member, owner, and so on).
 1. Verify the permissions by using the **Check Permissions** feature:
   
-   1. On your site, select **Settings** :::image type="icon" source="./media/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business/settings-icon.png"::: > **Site permissions**.
+   1. On your site, select **Settings** :::image type="icon" source="./media/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business/settings-icon.png"::: > **Site Settings** > **Site permissions**.
    1. In the top ribbon, select **Check Permissions**.
    1. In the **User/Group** field, enter the user's name, and then select **Check Now**.
    1. Review the permissions the user has on the site, and through which security group (if applicable).
@@ -128,7 +128,7 @@ If you can access the site as the incorrect guest, follow these steps:
 1. Sign in as the guest account that you used to accept the invitation.
 2. Select the profile image in the upper right corner, and then select **My Settings**.
 3. In the **Account** field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com. In this example, JonDoe@contoso.com is the email account that accepted the invitation.
-4. If the address is incorrect, go to the "Remove the incorrect guest account" section.
+4. If the address is incorrect, go to **Step 2: Remove the incorrect guest account**.
 
 If you can't access the site as the incorrect guest, follow these steps:
 
@@ -139,9 +139,9 @@ If you can't access the site as the incorrect guest, follow these steps:
 5. In the list of users, locate the name of the guest. Right-click the user name, and copy the shortcut.
 6. In a new browser window or tab, paste the URL that's copied in step 5 into the address box. Add **&force=1** to the end of the URL, and then press Enter.
 7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe\@contoso.com**. In this example, **JonDoe\@contoso.com** is the email account that accepted the user invitation.
-8. If the address is incorrect, go to the "Remove the incorrect guest account" section.
+8. If the address is incorrect, go to **Step 2: Remove the incorrect guest account**.
 
-### Step 2: Remove the incorrect guest account**
+### Step 2: Remove the incorrect guest account
 
 External users are managed from a site collection by site collection basis. A guest account must be removed from each site collection to which the account was given access. You can do so from the SharePoint Online user interface, or through the SharePoint Online Management Shell, depending on your version of Office 365.
 
@@ -270,9 +270,9 @@ After you follow the previous steps, reinvite the guest to the site by using the
 
 ### More information
 
-A guest invitation doesn't require it to be accepted by the email address to which it was first sent. It's a one-time invite. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
+A guest invitation doesn't require it to be accepted by the email address to which it was first sent. It's a one-time invitation. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
 
-For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user selects the link to accept the invite. However, based on the user's browser cookies, the user accidentally accepts the invite by using the incorrect identity.
+For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user selects the link to accept the invitation. However, based on the user's browser cookies, the user accidentally accepts the invitation by using the incorrect identity.
 
 When the user signs in to the resource by using the user's external user account, the user receives the error that the user isn't found in the directory.
 
@@ -323,8 +323,8 @@ If the Owners group is changed or removed from the **Access requests** list, you
     > [!NOTE]
     > In this address, \<URL of affected site or site collection\> represents the URL for the site collection in which you want to change the access requests (for example, `https://contoso.sharepoint.com`). And \<{GUID}\> represents the GUID that you copied in step 8.
 1. On the **Settings** page, select **Permissions for this list**.
-1. Make sure that the Owners group for the site is included in the list of permissions for the Access Requests list. If the Owners group for the site collection does not exist, select **Grant Permissions**, enter the name of the Owners group for the site in the **Share** dialog box, and then select **Share**.
-1. Follow the steps in the "Add the user to the Owners group for the site" section to make sure that the user is included in the Owners group.
+1. Make sure that the Owners group for the site is included in the list of permissions for the Access Requests list. If the Owners group for the site collection doesn't exist, select **Grant Permissions**, enter the name of the Owners group for the site in the **Share** dialog box, and then select **Share**.
+1. Follow the steps in the **Add the user to the Owners group for the site** section to make sure that the user is included in the Owners group.
 
 ### More information
 
@@ -370,6 +370,6 @@ For more information about approval workflows, see [Understand approval workflow
 
 For more information about permission levels in SharePoint Online, see [Understanding permission levels](https://support.office.com/article/87ecbb0e-6550-491a-8826-c075e4859848).
 
-Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
-
 </details>
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
