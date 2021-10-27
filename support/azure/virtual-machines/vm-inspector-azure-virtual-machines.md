@@ -84,7 +84,7 @@ For more information on general Azure built-in RBAC roles, see: [Azure built-in 
 
 ### Register the preview feature
 
-To register the preview feature of VM Inspector, follow the steps that are described in [set up preview features in Azure subscription](azure/azure-resource-manager/management/preview-features?tabs=azure-portal) and select **VM Inspection**. After the register, you will need to wait for around 30 minutes before trying out the feature.
+To register the preview feature of VM Inspector, follow the steps that are described in [set up preview features in Azure subscription](azure/azure-resource-manager/management/preview-features?tabs=azure-portal) and select **VM Inspection**. After the registration, you will need to wait for around 30 minutes before trying out the feature.
 
 ## Run VM Inspector on your VM
 
