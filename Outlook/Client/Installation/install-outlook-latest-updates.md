@@ -46,7 +46,7 @@ The following updates apply only to Office clients that are installed by using a
 
 To determine whether you are using a Click-to-run version of Office, click the **File** tab in Outlook, and then click **Office Account**. If you see **Office Updates** under **Product Information**, as shown in the following figure, you are using a click-to-run installation of Office.
 
-:::image type="content" source="./media/install-outlook-latest-updates/office-updates.png" alt-text="Screenshot shows Office Updates for click-to-run version.":::
+:::image type="content" source="media/install-outlook-latest-updates/office-updates.png" alt-text="Screenshot shows Office Updates for click-to-run version.":::
 
 To see the latest version information for click-to-run installations, click **Update Options**, and then click **View Updates**.
 
@@ -267,4 +267,4 @@ After you install all the update, you should see the following versions of impo
 
 After you install all these updates, click the **Help** menu, and then click **About Microsoft Office Outlook**. The **About Microsoft Office Outlook** dialog box should show the following build number.
 
-:::image type="content" source="./media/install-outlook-latest-updates/office-build-number.png" alt-text="Screenshot shows the build number in the About Microsoft Office Outlook dialog box." border="false":::
+:::image type="content" source="media/install-outlook-latest-updates/office-build-number.png" alt-text="Screenshot shows the build number in the About Microsoft Office Outlook dialog box." border="false":::
