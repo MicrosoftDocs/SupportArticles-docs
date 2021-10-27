@@ -44,9 +44,9 @@ This section describes the two scenarios in which unexpected behavior can occur 
 
 Outlook 2010, Outlook 2013, and Outlook 2016, Outlook 2019, and Outlook for Office 365 let you add your delegate's account to your own profile and lets your delegate add your account to their profile. However, although there is no warning message or error, this profile configuration is not supported. For example, the following screenshot shows an Outlook 2010 profile that has two Exchange accounts.
 
-:::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/example-of-email-account-settings.png" alt-text="example":::
+:::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/example-of-email-account-settings.png" alt-text="Screenshot shows the two accounts under Email tab.":::
 
-In this example, the manager is Marcelo Santos. The delegate has added the mailbox account of Marcelo Santos to his own Outlook profile.
+In this example, the manager is Corey Gray. The delegate has added the mailbox account of Corey Gray to their own Outlook profile.
 
 If the manager and delegate mailboxes have to be accessed in the same Outlook profile, follow these steps:
 
@@ -55,7 +55,7 @@ If the manager and delegate mailboxes have to be accessed in the same Outlook pr
    2. Select **Account Settings**, and then select **Account Settings**.
    3. Select the account that you want to remove, and then select **Remove**.
 
-      :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/remove-email-account.png" alt-text="Remove":::
+      :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/remove-email-account.png" alt-text="Screenshot highlights the Remove button after selecting an Exchange account.":::
 
    4. Select **Yes** when you are prompted to confirm that you want to remove the account.
    5. In the **Account Settings** dialog box, select **Close**.
@@ -70,7 +70,7 @@ If the manager and delegate mailboxes have to be accessed in the same Outlook pr
 
       After you make this change, the additional mailbox is listed on the **Advanced** tab in the **Microsoft Exchange** dialog box.
 
-      :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/the-advanced-tab-in-the-microsoft-exchange.png" alt-text="Microsoft Exchange" border="false":::
+      :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/advanced-tab.png" alt-text="Screenshot shows the Advanced tab in Microsoft Exchange dialog." border="false":::
 
    7. In the **Microsoft Exchange** dialog box, select **OK**.
    8. In the **Change Account** dialog box, select **Next**.
