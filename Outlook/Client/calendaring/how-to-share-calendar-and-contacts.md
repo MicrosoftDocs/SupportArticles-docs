@@ -406,7 +406,7 @@ The calendar will display under PEOPLE'S CALENDARS.
 
 2. Type the name or email address of the person you want to share your calendar with in the **Share with** box. This box works just like the **To** box in an email message. You can add more than one person to share your calendar with.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/compose-shared-calendar.jpg" alt-text="compose a shared calendar message" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/compose-shared-calendar.png" alt-text="Screenshot that shows the page to compose a shared calendar message.":::
 
 3. After you've added who you want to share your calendar with, select how much information you want them to see. **Full details** will show the time, subject, location, and other details of all items in your calendar. **Limited** **details** will show the time, subject, and location, but no other information. **Availability** only will show only the time of items on your calendar.
 
@@ -491,7 +491,7 @@ You can share a contacts folder with people that are located in your organizatio
    - **Revoke or change access permissions** for everyone In the **Name** box, select **Default**. Under **Permissions**, in the **Permission Level** list, select **None** to revoke permissions or any of the other options to change permissions.
    - **Revoke or change access permissions** for one person In the **Name** box, select the name of the person whose access permissions you want to change. Under **Permissions**, in the **Permission Level** list, select None to revoke permissions or any of the other options to change permissions.
 
-     :::image type="content" source="media/how-to-share-calendar-and-contacts/contacts-properties.jpg" alt-text="Screenshot that shows the permissions tab in Contact Properties.":::
+     :::image type="content" source="media/how-to-share-calendar-and-contacts/contacts-properties.png" alt-text="Screenshot that shows the permissions tab in Contact Properties.":::
 4. select **OK**.
 
 **Did this solve your problem?**
@@ -511,7 +511,7 @@ You can share a contacts folder with people that are located in your organizatio
 
 3. In the **To** box, enter the name of the recipient for the sharing invitation message. If you want to, you can change the **Subject**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.jpg" alt-text="Screenshot that shows a sharing invitation message.":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.png" alt-text="Screenshot that shows a sharing invitation message.":::
 
 4. If you want to, request permission to view the recipient's default **People** folder. To do so, select the **Request permission to view recipient's Contacts** folder check box.
 
