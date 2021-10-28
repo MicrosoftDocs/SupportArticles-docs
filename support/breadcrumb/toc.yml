@@ -115,7 +115,7 @@
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
-        topicHref: /troubleshoot/azure/azure-kubernete/welcome-azure-kubernetes
+        topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
