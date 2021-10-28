@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you try to sign in to Microsof
 ms.reviewer: njohnson, svetter
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Cannot open database requested by the login error when you sign in to Microsoft Dynamics CRM
 

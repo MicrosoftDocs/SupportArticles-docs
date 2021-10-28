@@ -4,6 +4,7 @@ description: Email Server Error Code Crm.80042f09.UserNotAssignedRoles occurs af
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Email Server Error Code Crm.80042f09.UserNotAssignedRoles after selecting Test & Enable Mailbox on a mailbox record
 

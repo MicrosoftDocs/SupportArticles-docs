@@ -4,6 +4,7 @@ description: You can't use the Microsoft Dynamics 365 App for Outlook due to You
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # You don't have a license to use this app error occurs in Microsoft Dynamics 365 App for Outlook
 

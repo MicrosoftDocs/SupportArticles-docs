@@ -4,6 +4,7 @@ description: When you try to configure the Microsoft Dynamics CRM for Outlook cl
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "The server might be unavailable {1}{0}" error when trying to configure Microsoft Dynamics CRM for Outlook
 

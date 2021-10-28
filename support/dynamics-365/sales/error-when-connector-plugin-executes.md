@@ -4,6 +4,7 @@ description: After applying CRM 2011 updates, an error occurs when the Microsoft
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # After applying CRM 2011 updates, an error displays when the Microsoft Dynamics Connector plugin executes
 

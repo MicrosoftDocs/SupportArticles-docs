@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs after planned System Ma
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-program-softwaredev
 ---
 # The security token could not be authenticated or authorized error occurs after planned System Maintenance when authenticating using a custom application in Microsoft Dynamics CRM 2011 Online
 

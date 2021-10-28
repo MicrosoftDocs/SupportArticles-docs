@@ -4,6 +4,7 @@ description: Provides a solution to UnknownIncomingEmailIntegrationError that oc
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # UnknownIncomingEmailIntegrationError -2147220956 exception appears within Server-Side Synchronization alert in Microsoft Dynamics 365
 
