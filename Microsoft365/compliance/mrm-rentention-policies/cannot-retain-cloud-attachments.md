@@ -29,8 +29,8 @@ For information about how to retain cloud attachments that are shared in Outlook
 |:------------------- |:---------------:|
 |<u>Cloud attachments</u>: The Outlook client displays the file like a regular attachment, but it is only a reference to a stored file.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/stored-file.png" alt-text="Screenshot of a regular attachment, it's a reference to a stored file."::: |Yes        |
 |<u>Attached copy</u>: A separate copy of the original file. <br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/attached-copy.png" alt-text="Screenshot of a separate copy of the original file.":::    |No        |
-|<u>URLs</u>: HTTP references added into the email subject or body, or meeting text body that provides the address of a file that's stored online.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/http-references.png" alt-text="Screenshot of HTTP references added into the email subject or body, or meeting text body. ":::      |No        |
-|<u>Embedded Images</u>: Images pasted into the email body.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/embedded-image.png" alt-text="Screenshot of image pasted into the email body.":::     |No        |
+|<u>URLs</u>: HTTP references added into the email subject or body, or meeting text body that provides the address of a file that's stored online.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/http-reference.png" alt-text="Screenshot of HTTP references added into the email subject or body, or meeting text body.":::      |No        |
+|<u>Embedded Images</u>: Images pasted into the email body.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/embedded-images.png" alt-text="Screenshot of image pasted into the email body.":::     |No        |
 
 ### Cloud attachments in Teams
 
