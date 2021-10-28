@@ -39,23 +39,21 @@ To resolve this problem, use one of the following methods.
 
 1. Click **Start**, and then click **Run**. (The screen shot for this step is listed below).
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/select-start-and-then-select-run.png" alt-text="Select Start and then select Run to start the Msconfig tool.":::
+   ![Click Start, and then click Run. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/click-start-and-then-click-run.jpg)
+
+   :::image type="content" source="media/click-start-and-then-click-run.png" alt-text="Alt text here." border="false":::
 
 2. In the **Open** box, type msconfig, and then click **OK**. (The screen shot for this step is listed below).
-
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/type-msconfig-in-the-open-box.png" alt-text="Type msconfig in the Open box in the Run dialog box." border="false":::
+   ![In the Open box, type msconfig, and then click OK. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/in-the-open-box-type-msconfig-and-then-click-ok.jpg)
 
 3. On the **Services** tab, click to select the check box that is next to **Windows Installer**. (The screen shot for this step is listed below).
-
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/select-windows-installer-in-services-tab.png" alt-text="Select the Windows Installer option under the Services tab in the System Configuration Utility dialog box." border="false":::
-
+   ![On the Services tab, click to select the check box that is next to Windows Installer . (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/on-the-services-tab-click-to-select-the-check-box.jpg)
 4. Click **OK**, and then click **Restart** to restart the computer. (The screen shot for this step is listed below).
+   ![Click OK, and then click Restart to restart the computer. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/click-ok-and-then-click-restart.jpg)
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/restart-computer.png" alt-text="Select the Restart button on the System Configuration dialog box to restart the computer." border="false":::
-
-5. Install Office again. When you are prompted to enter the product key, type the product key, and then click **Next**.
-
-Office will be installed, and you will not be prompted for the product key when the programs start.
+5. Install Office again. When you are prompted to enter the product key, type the product key, and then click **Next**.    
+ 
+Office will be installed, and you will not be prompted for the product key when the programs start. 
 
 ### Method 2: Re-register Windows Installer
 
@@ -66,60 +64,59 @@ Office will be installed, and you will not be prompted for the product key when 
 
 To re-register Windows Installer, follow these steps.
 
-**Note** If you cannot complete the following steps, go to method 3.
-
-1. Click **Start**, and then click **Search**. (The screen shot for this step is listed below).
-
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/select-start-and-then-select-search.png" alt-text="Select Start and then select Search to open a window where you can pick search options and work with search results.":::
+**Note** If you cannot complete the following steps, go to method 3. 
+ 
+1. Click **Start**, and then click
+ **Search**. (The screen shot for this step is listed below).
+ 
+   ![Click Start, and then click](./media/windows-installer-service-not-be-accesse/click-start-and-then-click.jpg)
 
 2. Click **All files and folders**. (The screen shot for this step is listed below).
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/all-files-and-folders.png" alt-text="Select the All files and folders option after you select the Search." border="false":::
+   ![Click All files and folders. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/click-all-files-and-folders.jpg)
 
 3. In the **File name** box, type Msiexec.exe, and then click
  **Search**. (The screen shot for this step is listed below).
+ 
+   ![In the File name box, type Msiexec.exe, and then click Search. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/in-the-file-name-box-type-msiexec-exe.jpg)
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/in-the-file-name-box-type-msiexec-exe.png" alt-text="In the File name box, type Msiexec.exe, and then select Search." border="false":::
+4. After the search is complete, make a note of the location of the Msiexec.exe file. The location of the file should be similar to the following example: C:\Windows\System32 (The screen shot for this step is listed below). 
 
-4. After the search is complete, make a note of the location of the Msiexec.exe file. The location of the file should be similar to the following example: C:\Windows\System32 (The screen shot for this step is listed below).
-
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/location-of-msiexec-exe.png" alt-text="After the search is complete, make a note of the location of the Msiexec.exe file.":::
+   ![After the search is complete, make a note of the location of the Msiexec.exe file.](./media/windows-installer-service-not-be-accesse/after-the-search-is-complete-make-a-note.jpg)
 
 5. On the **File** menu, click **Close** to close the **Search** dialog box. (The screen shot for this step is listed below).
-
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/close-the-search-results-dialog-box.png" alt-text="On the File menu, select Close to close the Search Results dialog box.":::
+ 
+   ![On the File menu, click Close to close the Search dialog box.](./media/windows-installer-service-not-be-accesse/on-the-file-menu-click-close-to-close-the-search.jpg)
 
 6. Click **Start**, and then click **Run**. (The screen shot for this step is listed below).
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/select-start-and-then-select-run.png" alt-text="Select Start, and then select Run.":::
+   ![Click Start, and then click Run. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/click-start-and-run.jpg)
 
 7. In the **Open** box, type regedit, and then click **OK**. (The screen shot for this step is listed below).
 
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/type-regedit-in-the-open-box.png" alt-text="In the Open box, type regedit, and then select OK." border="false":::
+    ![In the Open box, type regedit, and then click OK. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/in-the-open-box-type-regedit-and-then-click-ok.jpg)
 
-8. Locate and then click the following registry key:
+8. Locate and then click the following registry key: ****HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSIServer****(The screen shot for this step is listed below).
 
-   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSIServer` (The screen shot for this step is listed below).
-
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/locate-and-then-select-the-msiserver-registry-key.png" alt-text="Locate and then select the MSIServer registry key.":::
-
+   ![Locate and then click the following registry key:](./media/windows-installer-service-not-be-accesse/locate-and-then-click-the-following-registry-key.jpg)     
 9. In the right pane of the Registry Editor window, double-click **ImagePath**. (The screen shot for this step is listed below).
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/imagepath.png" alt-text="In the right pane of the Registry Editor window, double-click Image Path.":::
+   ![In the right pane of the Registry Editor window, double-click ImagePath. (The screen shot for this step is listed below).](./media/windows-installer-service-not-be-accesse/in-the-right-pane-of-the-registry-editor-window.jpg)
 
 10. In the **Edit String** dialog box that appears, make sure that the string in the **Value data** box contains the correct path for the Msiexec.exe file that you determined in step 4.
 
-    **Note** The following is an example of the correct path, where **drive** is the drive where Windows is installed:
-
-    **drive**:\Windows\System32\msiexec.exe /V
+    **Note** The following is an example of the correct path, where
+ **drive** is the drive where Windows is installed: 
+ 
+    **drive**:\Windows\System32\msiexec.exe /V 
 
     If the **Value data** box does not contain the correct path, make changes to correct the path, and then click **OK** to close the **Edit String** dialog box. (The screen shot for this step is listed below).
-
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/set-value-data-for-imagepath.png" alt-text="If the Value data box doesn't contain the correct path, correct the path, and then select OK to close the Edit String dialog box." border="false":::
+ 
+    ![If the Value data box does not contain the correct path, make changes to correct the path, and then click OK to close the Edit String dialog box.](./media/windows-installer-service-not-be-accesse/if-the-value-data-box-does-not-contain-the-correct.jpg)
 
 11. On the **File** menu, click **Exit** to quit Registry Editor. (The screen shot for this step is listed below).
-
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/quit-registry-edit.png" alt-text="On the File menu, select Exit to quit Registry Editor.":::
+ 
+    ![On the File menu, click Exit to quit Registry Editor.](./media/windows-installer-service-not-be-accesse/on-the-file-menu-click-exit to-quit-registry-edit.jpg)
 
 12. Start your computer in Safe mode, and then register the Msiexec.exe file. To do this, follow these steps:  
     1. Shut down your computer, and then restart your computer.    
@@ -129,7 +126,7 @@ To re-register Windows Installer, follow these steps.
     5. Log on to the computer.    
     6. Click **Start**, click **Run**, type msiexec /regserver in the **Open** box, and then click **OK**. (The screen shot for this step is listed below).
 
-       :::image type="content" source="media/windows-installer-service-not-be-accessed/run-msiexec-regserver.png" alt-text="Select Start, select Run, and type msiexec /regserver in the Open box, and then select OK." border="false":::
+       ![Click Start, click Run, type msiexec /regserver in the Open box, and then click OK.](./media/windows-installer-service-not-be-accesse/click-start-click-run-type-msiexec-regserver.jpg)      
 
 13. Shut down your computer, and then restart your computer normally.    
  
@@ -146,51 +143,50 @@ Try the methods that are listed in the following Microsoft Knowledge Base articl
 **Note** This method applies to Microsoft Windows 95, Microsoft Windows 98, Microsoft Windows Millennium Edition (Me), and Microsoft Windows NT 4.0. For Microsoft Windows 2000, Microsoft Windows XP, and Microsoft Windows Server 2003, either reapply the latest service pack or repair the operating system.
 
 To reinstall the Windows Installer, follow these steps.
-
+ 
 1. Click **Start**, and then click **Run**. (The screen shot for this step is listed below).
 
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/select-start-and-then-select-run.png" alt-text="Select Start, and then select Run.":::
+   ![Click Start, and then click Run.](./media/windows-installer-service-not-be-accesse/click-start-and-then-click-run.jpg)
 
 2. In the **Open** box, type cmd, and then click **OK**. (The screen shot for this step is listed below).
+ ![In the Open box, type cmd, and then click OK](./media/windows-installer-service-not-be-accesse/in-the-open-box-type-cmd-and-then-click-ok.jpg)
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/run-cmd.png" alt-text="Select Start, and then select Run." border="false":::
+3. At the command prompt, type the following lines. Press ENTER after you type each line. 
 
-3. At the command prompt, type the following lines. Press ENTER after you type each line.
-
-   cd %windir%\system32
-
+   cd %windir%\system32 
+   
    (The screen shot for this step is listed below).
-
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/cd-windir-system32.png" alt-text="Run cd %windir%\system32 at the command prompt." border="false":::
+ 
+    ![cd %windir%\system32](./media/windows-installer-service-not-be-accesse/cd-windir-system32.jpg)
 
     ren msi.dll msi.old
-
+ 
     (The screen shot for this step is listed below).
-
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/ren-msi-dll-msi-old.png" alt-text="Run ren msi.dll msi.old at the command prompt." border="false":::
+ 
+    ![ren msi.dll msi.old](./media/windows-installer-service-not-be-accesse/ren-msi-dll-msi-old.jpg)
 
     ren msiexec.exe msiexec.old
-
+ 
     (The screen shot for this step is listed below).
-
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/ren-msiexec-exe-msiexec-old.png" alt-text="Run ren msiexec.exe msiexec.old at the command prompt." border="false":::
+ 
+    ![ren msiexec.exe msiexec.old](./media/windows-installer-service-not-be-accesse/ren-msiexec-exe-msiexec-old.jpg)
 
     ren msihnd.dll msihnd.old
-
+ 
     (The screen shot for this step is listed below).
-
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/ren-msihnddll-msihndold.png" alt-text="Run ren msihnd.dll msihnd.old at the command prompt." border="false":::
+ 
+    ![ren msihnd.dll msihnd.old](./media/windows-installer-service-not-be-accesse/ren-msihnddll-msihndold.jpg)
 
 4. At the command prompt, type exit, and then press ENTER.
  (The screen shot for this step is listed below).
+ 
+   ![At the command prompt, type exit, and then press ENTER](./media/windows-installer-service-not-be-accesse/at-the-command-prompt-type-exit-and-then-press.jpg)
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/exit-command-prompt.png" alt-text="At the command prompt, type exit, and then press ENTER." border="false":::
-
-5. Restart your computer.
+5. Restart your computer.    
 6. Update the Windows Installer files to the latest version. To do so, visit one of the following Microsoft Web sites, and then download and install Windows Installer 2.0.
 
-   **Note** Windows Installer 2.0 is included with Microsoft Windows XP. You do not have to perform this step if you are using Windows XP.
-7. After the installation of the Windows Installer is complete, shut down and restart your computer normally before you install Microsoft Office.
+   **Note** Windows Installer 2.0 is included with Microsoft Windows XP. You do not have to perform this step if you are using Windows XP.    
+7. After the installation of the Windows Installer is complete, shut down and restart your computer normally before you install Microsoft Office.    
   
 
 ## More Information

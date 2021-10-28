@@ -25,7 +25,7 @@ appliesto:
 
 After you enter a long number (such as a credit card number) in an Excel cell, the number is not displayed correctly in Excel. For example,
 
-![An example](./media/long-numbers-incorrectly-in-excel/example.png)
+:::image type="content" source="media/long-numbers-incorrectly-in-excel/example-for-long-number-not-showing-correctly-in-excel.png" alt-text="An example for a long number that's not shown correctly in Excel.":::
 
 > [!NOTE]
 > Default number format in Excel is General therefore you can display up to 11 digits in a cell.
@@ -40,20 +40,20 @@ To do this, follow these steps:
 
 1. Right-click target cell, and then click **Format Cells**.
 
-    ![Format Cells](./media/long-numbers-incorrectly-in-excel/format-cells.png)
+    :::image type="content" source="media/long-numbers-incorrectly-in-excel/format-cells.png" alt-text="Format a cell as text by selecting the Format Cells.":::
 
 2. On the **Number** tab, select **Text**, and then click **OK**.
 
-    ![Number image](./media/long-numbers-incorrectly-in-excel/number.png)
+    :::image type="content" source="media/long-numbers-incorrectly-in-excel/text-option-under-number.png" alt-text="Select the Text under the Number tab in the Format Cells dialog box." border="false":::
 
 3. Then type a long number. (Be sure to set the cell format before you type the number)
 
-    ![Type a long number](./media/long-numbers-incorrectly-in-excel/a-long-number.png)
+    :::image type="content" source="media/long-numbers-incorrectly-in-excel/a-long-number.png" alt-text="Type a long number.":::
 4. If you do not want to see the warning arrows, click the small arrow, and then click **Ignore Error**.
 
-    ![Warning arrows](./media/long-numbers-incorrectly-in-excel/warning-arrows.png)
+   :::image type="content" source="media/long-numbers-incorrectly-in-excel/ignore-error.png" alt-text="Select Ignore Error if you don't want to see the warning arrows.":::
 
-    ![Ignore Error](./media/long-numbers-incorrectly-in-excel/ignore-error.png)
+   :::image type="content" source="media/long-numbers-incorrectly-in-excel/result-of-method-1.png" alt-text="The result of method 1.":::
 
 ### Method 2: Use a single quotation mark
 
@@ -61,7 +61,7 @@ When you enter a long number, type a single quotation mark (**'**) first in the 
 
 For example, type **'1234567890123456789** and the quotation mark will not be displayed after you press ENTER.
 
-![Example](./media/long-numbers-incorrectly-in-excel/example-2.png)
+:::image type="content" source="media/long-numbers-incorrectly-in-excel/type-quotation-mark.png" alt-text="Add a single-quotation mark before tying a long number.":::
 
 ## Related articles
 
