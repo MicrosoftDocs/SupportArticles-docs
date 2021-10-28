@@ -22,7 +22,7 @@ Consider the following scenario:
 - Internet Explorer is configured to use a Proxy Auto Configuration (PAC) file or WPAD for proxy settings.
 - The PAC file contains several calls to the `isInNet()` function, which resemble the following:
 
-    ```csharp
+    ```js
     function FindProxyForURL(url, host)
     {
     
@@ -50,7 +50,7 @@ To prevent these additional calls to the DNS subsystem every time a host is pass
 
 To do this, modify the sample code in the [Symptoms](#symptoms) section as follows:
 
-```csharp
+```js
 function FindProxyForURL(url, host)
 {
     var resolved_IP = dnsResolve(host);
