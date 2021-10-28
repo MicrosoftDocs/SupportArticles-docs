@@ -449,7 +449,7 @@ After you do this, the **Open Shared Calendar** button on the ribbon is availabl
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="Screenshot that shows the Open this Calendar in the sharing invitation.":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-outlook-2013.png" alt-text="Screenshot that shows the Open this Calendar in the sharing invitation.":::
 
 **If you see something different, what problem do you encounter?**
 
@@ -465,7 +465,7 @@ To open a shared calendar from the Outlook sharing invitation, select **Open thi
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitaion.png" alt-text="Screenshot that shows the Open this Calendar in the sharing invitation.":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitation.png" alt-text="Screenshot that shows the Open this Calendar in the sharing invitation.":::
 
 **If you see something different, what problem do you encounter?**
 
