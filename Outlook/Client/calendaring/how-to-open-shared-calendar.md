@@ -81,11 +81,11 @@ If you do not find either Office Account or Help on the File menu, then follow t
 2. Select **File**, and then find either **Office Account** or **Help**, and follow the steps for which option you find. If you do not find either option, see the steps below.
    1. Select **Office Account**, and then select **About Outlook**.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/about-outlook.png" alt-text="select the About Outlook in Office Account" border="false":::
+      :::image type="content" source="media/how-to-open-shared-calendar/about-outlook.png" alt-text="Screenshot that shows the the About Outlook icon in the Office Account page being selected.":::
 
    2. The product version will be listed here.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/product-version.jpg" alt-text="find the product version 1":::
+      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-about-outlook-page.png" alt-text="Screenshot that shows the product version found in the About Outlook page.":::
 
    3. Select **OK**.
 
@@ -93,11 +93,11 @@ If you do not find either Office Account or Help on the File menu, then follow t
 
    1. Select **Help**, and then select **Additional Version and Copyright Information**.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/additional-version-and-copyright-information.png" alt-text="select the Additional Version and Copyright Information":::
+      :::image type="content" source="media/how-to-open-shared-calendar/additional-version-and-copyright-information.png" alt-text="Screenshot that shows the location of the Additional Version and Copyright Information tab in the Help page.":::
 
    2. The product version will be listed here.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/product-version-outlook-2010.png" alt-text="find the product version 2":::
+      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-help-page.png" alt-text="Screenshot that shows the product version found in the Additional Version and Copyright Information page.":::
 
    3. Select **OK**.
 
@@ -105,10 +105,10 @@ If you do not find either Office Account or Help on the File menu, then follow t
 
    1. On the **Help** menu, select **About Microsoft Office Outlook**.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/about-microsoft-office-outlook.png" alt-text="About Microsoft Office Outlook":::
+      :::image type="content" source="media/how-to-open-shared-calendar/about-microsoft-office-outlook.png" alt-text="Screenshot that shows the About Microsoft Office Outlook option selected from the Help tab.":::
 
    2. The product version will be listed here.
-      :::image type="content" source="media/how-to-open-shared-calendar/product-version-outlook-2007.png" alt-text="find the product version of Outlook 2007 1":::
+      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-about-microsoft-office-outlook.png" alt-text="Screenshot that shows the product version product version found in the About Microsoft Office Outlook page.":::
 
    3. Select **OK**.
 
@@ -117,23 +117,23 @@ If you do not find either Office Account or Help on the File menu, then follow t
 1. Start Outlook for Mac.
 2. On the **Outlook** menu, select **About Outlook**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/about-outlook-in-outlook-for-mac.png" alt-text="find the product version of Outlook 2007 2" border="false":::
+   :::image type="content" source="media/how-to-open-shared-calendar/about-outlook-in-outlook-for-mac.png" alt-text="Screenshot that shows the About Outlook option selected in the Outlook menu for Mac.":::
 
 3. The About Outlook window will appear similar to one of the following, depending on your version of Outlook for Mac.
 
     |Outlook 2016 for Mac|Outlook for Mac 2011|
     |---|---|
-    |![About Outlook window for Outlook 2016 for Mac](./media/how-to-open-shared-calendar/about-outlook-window-1.jpg)|![About Outlook window for Outlook for Mac 2011](./media/how-to-open-shared-calendar/about-outlook-window-2.png)|
+    |![Screenshot for the About Outlook window for Outlook 2016 for Mac.](./media/how-to-open-shared-calendar/about-outlook-window-for-outlook-2016.png)|![Screenshot for the About Outlook window for Outlook for Mac 2011.](./media/how-to-open-shared-calendar/about-outlook-window-for-outlook-2011.png)|
 
 #### For Outlook on the web or Outlook Web App
 
 If you are using browser to connect an Office 365 or Exchange mailbox, select **Outlook On the Web/Outlook Web App**.
 
-:::image type="content" source="media/how-to-open-shared-calendar/outlook-on-the-web.png" alt-text="Outlook On The Web" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/outlook-on-the-web.png" alt-text="Screenshot for the homepage of Outlook On The Web.":::
 
 Or
 
-:::image type="content" source="media/how-to-open-shared-calendar/outlook-web-app.png" alt-text="Outlook Web App" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/outlook-web-app.png" alt-text="Screenshot for the homepage of Outlook Web App.":::
 
 #### For Outlook app on mobile or tablets devices
 
@@ -146,7 +146,7 @@ If you are using Outlook App on mobile devices or tablets, including Windows Pho
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitaion.png" alt-text="Open this Calendar" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitation.png" alt-text="Screenshot that shows the Open this Calendar option in the sharing invitation.":::
 
 **If you see something different, what problem do you encounter?**
 
@@ -161,15 +161,15 @@ To open a shared calendar from the Outlook sharing invitation, select **Open thi
 
 The sharing invitation that you receive resembles the following screenshot. Notice that there's no option to open the shared calendar.
 
-:::image type="content" source="media/how-to-open-shared-calendar/no-option-to-open-shared-calendar.png" alt-text="there's no option to open the shared calendar" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/no-option-to-open-shared-calendar.png" alt-text="Screenshot that shows a sharing invitation page without the option to open the shared calendar.":::
 
 To open the shared calendar, follow these steps:
 
 1. On the **File** menu, point to **Open**, and then select **Other User's Folder**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/search-to-open-other-users-folder.png" alt-text="Other User's Folder" border="false":::
+   :::image type="content" source="media/how-to-open-shared-calendar/search-to-open-other-users-folder.png" alt-text="Screenshot of the Open Other User's Folder window.":::
 
-2. Select **Find User** ![Find User icon](./media/how-to-open-shared-calendar/find-user-icon.gif).
+2. Select **Find User**:::image type="icon" source="media/how-to-open-shared-calendar/find-user-icon.gif" alt-text="Screenshot of the Find User icon.":::.
 3. Type the name of the person who granted you access, select **Find**, select the person's name, and then select **OK**.
 4. On the **Type** menu, select **Calendar**, and then select **OK**.
 
@@ -191,7 +191,7 @@ To open the shared calendar, follow these steps:
 
 To open a shared calendar from the sharing invitation, select **Accept** to open the shared calendar, and then you will see the shared calendar in the left pane under **Other Calendar** and the events in the right pane.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="OWA Shared Calendar Invitation":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="Screenshot of the OWA Shared Calendar Invitation window.":::
 
 **If you see something different, what problem do you encounter?**
 
@@ -205,7 +205,6 @@ To work around this problem, open directly into the shared calendar.
 
 For example, assume that your Outlook on the Web (formerly known as Outlook Web App) URL is `https://yourdomain/owa`, and that a user (user@*yourdomain*.com) shared his or her calendar with you.
 
-:::image type="content" source="media/how-to-open-shared-calendar/your-domain-for-example.png" alt-text="OWA Shared calendar URL" border="false":::
 
 You can use the following URL to open the user's calendar:
 
@@ -222,7 +221,7 @@ This problem occurs when the person who shared the calendar with you is running 
 
 In the invitation, notice whether **Microsoft Exchange** appears before the shared calendar name, as in the following screenshot.
 
-:::image type="content" source="media/how-to-open-shared-calendar/microsoft-exchange-shows-before-shared-calendar-name.png" alt-text="Microsoft Exchange shown before the shared calendar name" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/microsoft-exchange-shows-before-shared-calendar-name.png" alt-text="Screenshot of a shared calendar content with Microsoft Exchange showing before the shared calendar name.":::
 
 #### If Microsoft Exchange appears before the shared calendar name
 
@@ -230,9 +229,10 @@ If **Microsoft Exchange** appears before the shared calendar name, this typicall
 
 1. On the **File** menu, point to **Open**, and then select **Other User's Folder**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/other-users-folder.png" alt-text="the Other User's Folder window" border="false":::
 
 2. In the **Open Other User's Folder** dialog box, type the name of the user who shares the calendar with you in the **Name** box. In the **Folder type** box, select the type of shared calendar, and then select **OK**.
+
+   :::image type="content" source="media/how-to-open-shared-calendar/other-users-folder.png" alt-text="Screenshot of the Open Other User's Folder window.":::
 
 #### If Microsoft Exchange does not appear before the shared calendar name
 
@@ -242,23 +242,23 @@ If **Microsoft Exchange** does not appear before the shared calendar name, this 
 
 2. In the **E-mail Accounts** dialog box, select the **E-mail** tab, select your Exchange Server account, and then select **Change**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/change-option-on-email-tab.png" alt-text="the Change option on the E-mail tab":::
+    :::image type="content" source="media/how-to-open-shared-calendar/change-option-on-email-tab.png" alt-text="Screenshot that shows the Change option on the E-mail tab.":::
 
 3. Select **More Settings**.
 
 4. In the **Microsoft Exchange** dialog box, select the **Advanced** tab, and then select **Add**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/advanced-tab.png" alt-text="select the Advanced tab on Microsoft Exchange":::
+    :::image type="content" source="media/how-to-open-shared-calendar/advanced-tab.png" alt-text="Screenshot that shows the Advanced tab and the Add option selected on the Microsoft Exchange dialog box.":::
 
 5. In the **Add Mailbox** dialog box, type the name of the person who shares the calendar with you, and then select **OK**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/add-mailbox.png" alt-text="add a mailbox" border="false":::
+    :::image type="content" source="media/how-to-open-shared-calendar/add-mailbox.png" alt-text="Screenshot that shows the Add Mailbox window.":::
 
 6. Select **OK** > **Next** > **Finish** > **Close**.
 
 7. In the navigation pane, expand **Mailbox - UserNameOfFolderOwner**, and then select the calendar that the user shared with you.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/expand-mailbox.png" alt-text="expand mailbox and select the shared calendar":::
+    :::image type="content" source="media/how-to-open-shared-calendar/expand-mailbox.png" alt-text="Screenshot that shows the target user's mailbox selected.":::
 
 > [!NOTE]
 > If you cannot expand the mailbox, see the [Cannot expand the mailbox of another person](#cannot-expand-the-mailbox-of-another-person) section of this guide for the workaround.
@@ -280,11 +280,11 @@ To work around this problem, ask the person who shared the calendar with you to 
 
     In Outlook 2007, right-click **Mailbox - UserName**, and then select **Change Sharing Permissions**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/change-sharing-permissions.png" alt-text="the Change Sharing Permissions option" border="false":::
+    :::image type="content" source="media/how-to-open-shared-calendar/change-sharing-permissions.png" alt-text="Screenshot that shows the Change Sharing Permissions option":::
 
     In Outlook 2010 or Outlook 2013, right-click your email address at the top of the folder list, and then select **Folder Permissions**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/folder-permissions.jpg" alt-text="the Folder Permissions option":::
+    :::image type="content" source="media/how-to-open-shared-calendar/folder-permissions.png" alt-text="Screenshot that shows the Folder Permissions option.":::
 
 2. Select the **Permissions** tab, and then select **Add**.
 3. In the **Add Users** dialog box, specify the user with whom you want to share the calendar, select **Add**, and then select **OK**.
@@ -305,11 +305,11 @@ Ask the person who shared the calendar with you to perform the following steps o
 
    In Outlook 2016, Outlook 2013 or Outlook 2010, right-click the calendar you want to share, select **Share**, and then select **Calendar Permissions**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/calendar-permissions.png" alt-text="select the Calendar Permissions option":::
+   :::image type="content" source="media/how-to-open-shared-calendar/calendar-permissions.png" alt-text="Screenshot that shows the Calendar Permissions option.":::
 
    In Outlook 2007, right-click the shared calendar, and then select **Change Sharing Permissions**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/change-sharing-permissions.png" alt-text="select the Change Sharing Permissions option":::
+   :::image type="content" source="media/how-to-open-shared-calendar/change-sharing-permissions.png" alt-text="Screenshot that shows the Change Sharing Permissions option":::
 
    > [!NOTE]
    > If the **Change Sharing Permissions** is grayed out or unavailable, you might be using an internet calendar managed by third-party services, such as Gmail, Yahoo or AOL. Although you can modify most Internet calendars, calendar permissions are not supported.
@@ -319,13 +319,13 @@ Ask the person who shared the calendar with you to perform the following steps o
 2. On the **Permissions** tab, select the user for whom you want to grant the permission.
 3. In the **Permission Level** list, select **Reviewer**, and then select **OK**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/reviewer.png" alt-text="select the Reviewer in the Permission Level list" border="false":::
+   :::image type="content" source="media/how-to-open-shared-calendar/reviewer.png" alt-text="Screenshot that shows the Change Sharing Permissions window opened with Reviewer setting as the Permission Level.":::
 
 **For Outlook on the Web or Outlook Web App:**
 
-In Outlook on the Web or Outlook Web App, select ![Outlook Calendar icon](./media/how-to-open-shared-calendar/outlook-calendar-icon.png) on the left top corner or the bottom in the left pane to open the calendar. Right-click the calendar you want to share to others, and then select **Sharing Permissions.** Next, follow the instructions in [Sharing your calendar in Outlook on the web](https://support.office.com/article/Share-your-calendar-in-Outlook-on-the-web-for-business-7ecef8ae-139c-40d9-bae2-a23977ee58d5).
+In Outlook on the Web or Outlook Web App, select :::image type="icon" source="media/how-to-open-shared-calendar/outlook-calendar-icon.png" alt-text="The Outlook Calendar icon."::: on the left top corner or the bottom in the left pane to open the calendar. Right-click the calendar you want to share to others, and then select **Sharing Permissions.** Next, follow the instructions in [Sharing your calendar in Outlook on the web](https://support.office.com/article/Share-your-calendar-in-Outlook-on-the-web-for-business-7ecef8ae-139c-40d9-bae2-a23977ee58d5).
 
-:::image type="content" source="media/how-to-open-shared-calendar/sharing-permissions.png" alt-text="OWA Calendar permission" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/sharing-permissions.png" alt-text="Screenshot that shows the OWA Calendar permission option selected from the Outlook calendar window.":::
 
 **Did this solve your problem?**
 
@@ -339,7 +339,7 @@ In Outlook on the Web or Outlook Web App, select ![Outlook Calendar icon](./medi
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="select Open this Calendar in the sharing invitation 1" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-outlook-2016.png" alt-text="Screenshot that shows the Open this Calendar option in the sharing invitation in Outlook 2016.":::
 
 **If you see something different, what problem do you encounter?**
 
@@ -355,23 +355,23 @@ To open a shared calendar from the Outlook sharing invitation, select **Open thi
 
 The sharing invitation that you receive resembles the following screenshot. Notice that there's no option to open the shared calendar.
 
-:::image type="content" source="media/how-to-open-shared-calendar/sharing-invitation.png" alt-text="sharing invitation":::
+:::image type="content" source="media/how-to-open-shared-calendar/sharing-invitation-in-outlook-2016-for-mac.png" alt-text="Screenshot that shows the sharing invitation in Outlook 2016 for Mac.":::
 
 To open the shared calendar, follow these steps:
 
 1. At the bottom of the navigation bar, select **Calendar**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/calendar-in-navigation-bar.png" alt-text="select Calendar at the bottom of the navigation bar" border="false":::
+    :::image type="content" source="media/how-to-open-shared-calendar/calendar-in-navigation-bar.png" alt-text="Screenshot that shows the Calendar option selected in the navigation bar.":::
 
 2. On the **Organize** tab, select **Open Shared Calendar**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-tab.png" alt-text="select Open Shared Calendar" border="false":::
+    :::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-tab.png" alt-text="Screenshot that shows the Open Shared Calendar option on the Organize tab.":::
 
     In the **Search** box, type the name of the person who has granted you access to their calendar, and press Enter.
 
 3. Select their name, and select **Open**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/open-by-searching-user.png" alt-text="search user name to open a shared calendar 1" border="false":::
+    :::image type="content" source="media/how-to-open-shared-calendar/open-by-searching-user.png" alt-text="Screenshot that shows the operation to open a shared calendar by searching the user name.":::
 
     > [!NOTE]
     > The shared calendar appears in the left navigation pane under the **Shared Calendar** heading, with the person's name who shared the calendar below it.
@@ -391,17 +391,17 @@ To open the shared calendar, follow these steps:
 
 When you open your Calendar in Microsoft Outlook 2016 for Mac or Outlook for Mac 2011, the **Open Shared Calendar** button on the ribbon is unavailable.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-button-on-home.png" alt-text= "Open Shared Calendar button is unavailable" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-button-on-home.png" alt-text= "Screenshot that shows the Open Shared Calendar button being unavailable in the Home tab.":::
 
 Additionally, when you point to **Open** on the **File** menu, the **Calendar** option is unavailable.
 
-:::image type="content" source="media/how-to-open-shared-calendar/calendar-option-not-available.png" alt-text="Calendar option is unavailable":::
+:::image type="content" source="media/how-to-open-shared-calendar/calendar-option-not-available.png" alt-text="Screenshot that shows the Calendar option being unavailable in the Open tab.":::
 
 #### Cause
 
 This issue occurs if the **Group similar folders, such as Inboxes, from different accounts** check box is selected and the **Hide On My Computer folders** check box is cleared in **General Preferences**.
 
-:::image type="content" source="media/how-to-open-shared-calendar/folder-list-optinos.png" alt-text="options are not selected correctly" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/folder-list-options.png" alt-text="Screenshot that shows the options are not selected correctly in the General Preferences.":::
 
 #### Workaround
 
@@ -413,7 +413,7 @@ To work around this issue, use one of the following methods:
 2. Expand **My Calendars** to display the Exchange mailbox calendar, the On My Computer calendar, and calendars that are associated with any other accounts that are open in Outlook for Mac.
 3. Select the **Exchange** check box.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/exchange-check-box.png" alt-text="search user name to open a shared calendar 2":::
+    :::image type="content" source="media/how-to-open-shared-calendar/exchange-check-box.png" alt-text="Screenshot that shows the Exchange check box selected.":::
 
 After you do this, the **Open Shared Calendar** button on the ribbon is available.
 
@@ -421,12 +421,12 @@ After you do this, the **Open Shared Calendar** button on the ribbon is availabl
 
 1. On the **File** menu, point to **Open**, and then select **Other Users Folder**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/other-users-folder-1.png" alt-text="select Other Users Folder":::
+    :::image type="content" source="media/how-to-open-shared-calendar/other-users-folder-for-mac.png" alt-text="Screenshot that shows the Other Users Folder option.":::
 
 2. Search for and then select the user whose calendar you want to open.
 3. In the Folder Type box, select Calendar.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/open-other-users-folder.png" alt-text="search user name to open other user's folder" border="false":::
+    :::image type="content" source="media/how-to-open-shared-calendar/open-other-users-folder.png" alt-text=""Screenshot that shows the operation to search user name to open other user's folder.":::
 
 4. Select **Open**.
 
@@ -449,7 +449,7 @@ After you do this, the **Open Shared Calendar** button on the ribbon is availabl
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="select Open this Calendar in the sharing invitation 2" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="Screenshot that shows the Open this Calendar in the sharing invitation.":::
 
 **If you see something different, what problem do you encounter?**
 
@@ -465,7 +465,7 @@ To open a shared calendar from the Outlook sharing invitation, select **Open thi
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitaion.png" alt-text="select Open this Calendar in the sharing invitation 3" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitaion.png" alt-text="Screenshot that shows the Open this Calendar in the sharing invitation.":::
 
 **If you see something different, what problem do you encounter?**
 
@@ -499,11 +499,11 @@ If you are using Outlook App on mobile or tablet devices, such as Windows Phone,
 
 To use Outlook on the web or Outlook Web App to open the shared calendar from an invitation, sign in with your exchange or office 365 account, you will see the share invitation like this:
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="OWA shared calendar invitation":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="Screenshot of a shared calendar invitation in Outlook Web App.":::
 
 Select **Accept** to open the shared calendar, and then you will see the shared calendar listed in the left pane under **Other Calendars** and the events on this calendar in the right pane.
 
-:::image type="content" source="media/how-to-open-shared-calendar/other-calendars.png" alt-text="OWA shared calendar list":::
+:::image type="content" source="media/how-to-open-shared-calendar/other-calendars.png" alt-text="Screenshot of a Outlook Web App shared calendar list.":::
 
 **Did this solve your problem?**
 
@@ -533,12 +533,12 @@ If the other solution doesn't work for you and you get a different error message
    1. Select the **File** tab.
    2. Select **Account Settings**, and then select **Account Settings**.
 
-        :::image type="content" source="media/how-to-open-shared-calendar/account-settings.png" alt-text="Account Settings" border="false":::
+        :::image type="content" source="media/how-to-open-shared-calendar/account-settings.png" alt-text="Screenshot that shows the Account Settings tab selected.":::
 
    3. On the **E-mail** tab, select the Exchange account, and then select **Change**.
    4. Select **More Settings**, select **Advanced** tab, select **Download shared folders**
 
-        :::image type="content" source="media/how-to-open-shared-calendar/download-shared-folders.png" alt-text="Download shared folders" border="false":::
+        :::image type="content" source="media/how-to-open-shared-calendar/download-shared-folders.png" alt-text="Screenshot that shows the steps to download shared folders." border="false":::
 
    5. Select **OK**, select **Next**, select **Finish**, and then select **Close** in the Account Settings window.
    6. Quit and restart Outlook.
@@ -551,12 +551,12 @@ If the other solution doesn't work for you and you get a different error message
     1. Select the **File** tab.
     2. Select **Account Settings**, and then select **Account Settings**.
 
-       :::image type="content" source="media/how-to-open-shared-calendar/account-settings.png" alt-text="Account Settings" border="false":::
+       :::image type="content" source="media/how-to-open-shared-calendar/account-settings.png" alt-text="Screenshot that shows the Account Settings tab selected." border="false":::
 
     3. On the **E-mail** tab, select the Exchange account, and then select **Change**.
     4. Under **Offline Settings**, clear the **Use Cached Exchange Mode** check box.
 
-        :::image type="content" source="media/how-to-open-shared-calendar/use-cached-exchange-mode.png" alt-text="clear the Use Cached Exchange Mode check box" border="false":::
+        :::image type="content" source="media/how-to-open-shared-calendar/use-cached-exchange-mode.png" alt-text="Screenshot that shows the Use Cached Exchange Mode check box selected.":::
 
     5. Quit and restart Outlook.
 
@@ -606,8 +606,8 @@ If you get other errors, try the following instruction for general troubleshooti
 
 2. Check the right bottom corner in Outlook to see if the status looks like below to make sure Outlook is connected to the network and able to receive mail successfully, and isn't too busy performing other tasks such as updating folders.
 
-    If you see ![Outlook 2013 Connected](./media/how-to-open-shared-calendar/connected-status.png), it indicates that the Outlook 2013 is connected to the network and Exchange server successfully.
-    If you see ![Outlook 2013 Disconnected](./media/how-to-open-shared-calendar/disconnected-status.png), it indicates that the Outlook 2013 isn't connected to the network or Exchange server, check your network cable connection or contact your Network Admin.
+    If you see :::image type="icon" source="./media/how-to-open-shared-calendar/connected-status.png" alt-text="Screenshot of the message that says Connected to: Microsoft Exchange.":::, it indicates that the Outlook 2013 is connected to the network and Exchange server successfully.
+    If you see :::image type="icon" source="./media/how-to-open-shared-calendar/disconnected-status.png" alt-text="Screenshot of the message that says disconnected.":::, it indicates that the Outlook 2013 isn't connected to the network or Exchange server, check your network cable connection or contact your Network Admin.
 
 3. Try again later to see if the shared calendar works.
 
@@ -650,7 +650,7 @@ In Outlook 2016 for Mac and Outlook for Mac 2011, you cannot open a shared Calen
 - Second Calendar
 - Third Calendar
 
-  :::image type="content" source="media/how-to-open-shared-calendar/third-calendar.png" alt-text="the Third calendar":::
+  :::image type="content" source="media/how-to-open-shared-calendar/third-calendar.png" alt-text="Screenshot that shows the Third calendar tab selected.":::
 
 In this example, the **Second Calendar** folder is a subcalendar of the user's shared default **Calendar** folder. Therefore, you can open the **Second Calendar** folder in Outlook for Mac. However, the **Third Calendar** folder is not a subcalendar under the default **Calendar** folder. Therefore, you cannot open this folder in Outlook for Mac. To resolve this issue, have the calendar owner create all shared calendars under the default **Calendar** folder.
 
@@ -665,7 +665,7 @@ We recommend using Outlook on the Web or Outlook Web App as a workaround to open
 
 Log in Outlook on the Web or Outlook Web App with your Exchange or Office 365 account in browser, select **Accept** in the invitation email, and then you will see the shared calendar in the left pane under **Other Calendar** and the events in the right pane.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="opening shared calendar on Mac system":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="Screenshot that shows a opening shared calendar on Outlook Web App with Mac.":::
 
 > [!NOTE]
 > If you don't know the Outlook web url, please contact your system admininistrator for help.
@@ -680,7 +680,7 @@ Log in Outlook on the Web or Outlook Web App with your Exchange or Office 365 ac
 
 To open a shared calendar from the Outlook sharing invitation, select the **Accept** button in the sharing invitation. The shared calendar will be added to your **Calendar** pane under the **Shared Calendars** section.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar.png" alt-text="A screenshot of opening a shared calendar in Outlook 2016 for O365 users":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar.png" alt-text="Screenshot of opening a shared calendar in Outlook 2016 for Office 365 users.":::
 
 **Did this solve your problem?**
 
@@ -691,7 +691,7 @@ To open a shared calendar from the Outlook sharing invitation, select the **Acce
 
 To open a shared calendar from the sharing invitation, select the **Accept** button in the sharing invitation. The shared calendar will be added to your **Calendar** pane under the **People's calendars**  section.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-outlook-on-the-web.png" alt-text="A screenshot of opening a shared calendar in Outlook on the web" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-outlook-on-the-web.png" alt-text="Screenshot of opening a shared calendar in Outlook on the web." border="false":::
 
 **Did this solve your problem?**
 
@@ -702,7 +702,7 @@ To open a shared calendar from the sharing invitation, select the **Accept** but
 
 To open a shared calendar from the Outlook sharing invitation, select **Accept** button in the sharing invitation. The **Accept** button will then change to **View** and you can then select it to view shared calendar. You can also locate the Calendar pane in your Outlook app to view a shared calendar by selecting the hamburger menu icon and then selecting that shared calendar from the list of calendars that is displayed in that menu.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-using-mobile-apps.png" alt-text="A screenshot of opening a shared calendar in Outlook mobile apps" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-using-mobile-apps.png" alt-text="Screenshot of opening a shared calendar in Outlook mobile app.":::
 
 **Did this solve your problem?**
 
