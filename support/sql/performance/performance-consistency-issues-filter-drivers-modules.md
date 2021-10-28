@@ -36,11 +36,18 @@ These issues occur because of the following causes for modules and filter driver
 
 These issues occur because applications or other software that are installed on a server that is running SQL Server can load certain modules into the SQL Server process (Sqlservr.exe). This may be done to achieve a specific business logic requirement, an enhanced functionality, or intrusion monitoring. These modules might perform unsupported activities that include detouring important Win32 APIs and SQL Server routines, and calling risky APIs. Additionally, some intrinsic problems within these modules may cause corruption of various memory structures that are necessary for the SQL Server process to function correctly.
 
+The list of modules (DLLs) loaded in a given process can be obtained through various tools, such as [ListDlls](/sysinternals/downloads/listdlls) or [Process Explorer](/sysinternals/downloads/process-explorer).
+
 ### Filter drivers
 
-Filter drivers can be installed on a system as part of the Setup program of an application to provide a certain kind of functionality. Examples include antivirus protection, online backups, encryption services, and data compression or defragmentation facilities. These filter drivers insert themselves into the Windows driver stack to enhance or alter the behavior of requests that pass through the driver stack and that are intended for a device.
+[Filter drivers](/windows-hardware/drivers/ifs/about-file-system-filter-drivers) can be installed on a system as part of the Setup program of an application to provide a certain kind of functionality. Examples include antivirus protection, online backups, encryption services, and data compression or defragmentation facilities. These filter drivers insert themselves into the Windows file I/O stack to enhance or alter the behavior of filesystems requests.
 
 Under some conditions, these requests may either take a long time to complete or consume excessive resources. Also, there might be some form of incompatibility between the different filter drivers that are present in the same driver stack.
+
+SQL Server typically emits a lot of filesystem I/Os (some of which are larger than the average). Therefore, compared with other running applications with less I/O intensity, the problem with filter drivers will have a more serious impact on SQL Server.
+
+> [!NOTE]
+> Unlike injected DLLs, filter drivers (typically with .sys extension) are not visible in user processes details because they are kernel entities. You can use tools like Windows built-in [fltmc.exe](/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command) to discover installed minifilters.
 
 ## Workaround
 
