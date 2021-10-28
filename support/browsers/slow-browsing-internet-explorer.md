@@ -26,10 +26,10 @@ Consider the following scenario:
     function FindProxyForURL(url, host)
     {
     
-        if (isInNet(host, "192.168.3.4","255.255.255.0")) ||
-        isInNet(host, "10.10.1.1", "255.255.255.0") ||
-        isInNet(host, "72.10.10.10", "255.240.0.0")) ||
-        isInNet(host, "172.16.0.0", "255.240.0.0"))
+        if (isInNet(host, "192.168.3.0","255.255.255.0")) ||
+        isInNet(host, "10.10.1.0", "255.255.255.0") ||
+        isInNet(host, "72.10.0.0", "255.255.0.0")) ||
+        isInNet(host, "172.16.0.0", "255.255.0.0"))
         {
         
             return PROXY <proxyname:PORT>;
@@ -54,10 +54,10 @@ To do this, modify the sample code in the [Symptoms](#symptoms) section as follo
 function FindProxyForURL(url, host)
 {
     var resolved_IP = dnsResolve(host);
-    if (isInNet(resolved_IP, "192.168.3.4","255.255.255.0")) ||
-    isInNet(resolved_IP, "10.10.1.1", "255.255.255.0") ||
-    isInNet(resolved_IP, "72.10.10.10", "255.240.0.0")) ||
-    isInNet(resolved_IP, "172.16.0.0", "255.240.0.0"))
+    if (isInNet(resolved_IP, "192.168.3.0","255.255.255.0")) ||
+    isInNet(resolved_IP, "10.10.1.0", "255.255.255.0") ||
+    isInNet(resolved_IP, "72.10.0.0", "255.255.0.0")) ||
+    isInNet(resolved_IP, "172.16.0.0", "255.255.0.0"))
     {
         return PROXY <proxyname:PORT>;
     }
