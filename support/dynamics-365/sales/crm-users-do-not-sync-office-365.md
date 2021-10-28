@@ -4,6 +4,7 @@ description: Provides a solution to an issue where Microsoft Dynamics CRM Online
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-access
 ---
 # Microsoft Dynamics CRM Online users don't sync from Office 365 after deleting O365 security group
 
