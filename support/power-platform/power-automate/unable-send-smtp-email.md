@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when  try to send mails
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Unable to send SMTP Email
 

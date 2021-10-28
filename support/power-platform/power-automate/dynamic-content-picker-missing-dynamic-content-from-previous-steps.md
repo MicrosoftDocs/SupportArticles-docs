@@ -4,6 +4,7 @@ description: No dynamic content available in dynamic content picker. Provides a 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Dynamic content picker missing dynamic content from previous steps
 

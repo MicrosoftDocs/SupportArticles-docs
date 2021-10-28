@@ -4,6 +4,7 @@ description: Defines some errors occur while creating connections in Flow or Pow
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Troubleshooting Flow Connections
 
