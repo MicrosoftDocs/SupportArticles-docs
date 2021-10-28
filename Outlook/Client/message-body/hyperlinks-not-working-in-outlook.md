@@ -109,7 +109,7 @@ To resolve this problem, follow these methods in order. Check whether the proble
 11. Select **OK**, and then close the **Default Programs** dialog box.
 12. In the **Internet Options** dialog box, select the **Programs** tab, and then select **Make default** under **Default web browser**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/make-default.png" alt-text="Screenshot of Internet Options." border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/make-default.png" alt-text="Screenshot of the Programs tab on Internet Options." border="false":::
 
 13. Select **OK**.
 

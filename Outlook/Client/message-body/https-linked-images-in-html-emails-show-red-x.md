@@ -31,7 +31,7 @@ When you are using Microsoft Outlook, images will display a red X instead of the
 
 This error is shown in the following figure.
 
-:::image type="content" source="media/https-linked-images-in-html-emails-show-red-x/error.png" alt-text="Screenshot of the error details." border="false":::
+:::image type="content" source="media/https-linked-images-in-html-emails-show-red-x/error.png" alt-text="Screenshot of the image display error details." border="false":::
 
 ## Cause
 
@@ -49,7 +49,7 @@ To resolve this problem, disable the Internet Explorer Security setting **Do not
 
 In the event you are unable to disable the **Do not save encrypted pages to disk** option, it is being managed by Group Policy. Contact your system administrator to determine the appropriate configuration for this setting.
 
-:::image type="content" source="media/https-linked-images-in-html-emails-show-red-x/group-policy.png" alt-text="Screenshot of the group policy.":::
+:::image type="content" source="media/https-linked-images-in-html-emails-show-red-x/group-policy.png" alt-text="Screenshot of the checkboxes for enabling the group policy options. Do not save encrypted pages to disk option is enabled and in grey.":::
 
 ## More information
 
