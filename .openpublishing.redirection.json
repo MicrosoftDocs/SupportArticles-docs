@@ -544,7 +544,17 @@
       "source_path": "support/mem/intune/lob-app-versioning.md",
       "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
       "redirect_document_id": false
-    },  
+    }, 
+    {
+      "source_path": "support/mem/intune/look-up-intune-licenses.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses-assign",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/deploy-windows-update-packages-as-win32-apps.md",
+      "redirect_url": "/mem/intune/apps/apps-win32-deploy-update-package",
+      "redirect_document_id": false
+    },     
     {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
