@@ -32,7 +32,7 @@ Here's how to see if AutoComplete is turned on:
 2. Select the **Mail** tab.
 3. Scroll roughly halfway down until you see Send messages. Ensure the Use AutoComplete List to suggest names when typing in the To, Cc, and Bcc lines box is checked.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/check-if-autocomplete-is-turned-on.jpg" alt-text="Send messages":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/check-if-autocomplete-is-turned-on.png" alt-text="Screenshot of the Send messages window, and the Use Auto-Complete List to suggest names when typing in the To, Cc, and Bcc lines box is checked.":::
 
 4. If it's already turned on, your first troubleshooting step should be to clear out the Auto-Complete list. Select the **Empty AutoComplete List** button.
 5. You'll see a confirmation window about clearing the AutoComplete list, select **Yes**.
@@ -52,15 +52,15 @@ If AutoComplete is enabled and still not working correctly, there may be a probl
 5. Next we need to find the Outlook folder.
 6. Select **Start**, type in or copy and paste %LOCALAPPDATA%\Microsoft\Outlook into **Search program and files**.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/search-program-and-files.jpg" alt-text="Search program and files" border="false":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/search-program-and-files.png" alt-text="Screenshot shows the path pasted in Search program and files.":::
 
 7. Select the Outlook folder listed at the top of the window.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/select-the-outlook-folder.jpg" alt-text="select the Outlook folder listed at the top of the window" border="false":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/select-the-outlook-folder.png" alt-text="Screenshot of the search result which the Outlook folder is listed at the top of the window.":::
 
 8. Right-click the RoamCache folder, select **Rename**, and change the folder name to *old_RoamCache*.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/change-the-roamcache-folder-name.jpg" alt-text="change the RoamCache folder name" border="false":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/change-the-roamcache-folder-name.png" alt-text="Screenshot of the selected RoamCache folder under the Outlook folder.":::
 
 9. When Outlook restarts, it will create a new RoamCache folder.
 10. Start Outlook.
@@ -96,15 +96,15 @@ If Auto-Complete is enabled and still not working correctly, there may be a prob
 6. Next we need to find the Outlook folder.
 7. Select **Start**, type in or Copy and Paste %LOCALAPPDATA%\Microsoft\Outlook into Search program and files.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/search-program-and-files.jpg" alt-text="Search program and files" border="false":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/search-program-and-files.png" alt-text="Screenshot shows the path pasted in Search program and files.":::
 
 8. Select on the Outlook folder listed at the top of the window.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/select-the-outlook-folder.jpg" alt-text="select the Outlook folder listed at the top of the window" border="false":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/select-the-outlook-folder.png" alt-text="Screenshot of the selected RoamCache folder under the Outlook folder.":::
 
 9. Right-click the RoamCache folder, select **Rename**, and change the folder name to *old_RoamCache*.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/change-the-roamcache-folder-name.jpg" alt-text="change the RoamCache folder name" border="false":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/change-the-roamcache-folder-name.png" alt-text="Screenshot of the selected RoamCache folder under the Outlook folder.":::
 
 10. When Outlook restarts, it will create a new RoamCache folder.
 11. Start Outlook.
