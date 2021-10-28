@@ -22,7 +22,7 @@ This article provides steps to resolve issues where the guest operating system (
 
 When you use [boot diagnostics](./boot-diagnostics.md) to view a screenshot of the VM output, you'll see that Windows needs to restart with either the "SYSTEM THREAD EXCEPTION NOT HANDLED" stop code or the "0x0000007E" error code.
 
-:::image type="content" source="media/windows-stop-error-system-thread-exception-not-handled/system-thread-exception-not-handled.png" alt-text="Screenshot shows "Your PC ran into a problem and needs to restart. We'll restart for you" message and "SYSTEM THREAD EXCEPTION NOT HANDLED" stop code." border="false":::
+:::image type="content" source="media/windows-stop-error-system-thread-exception-not-handled/system-thread-exception-not-handled.png" alt-text="Screenshot shows Your PC ran into a problem and needs to restart. We'll restart for you message and SYSTEM THREAD EXCEPTION NOT HANDLED stop code." border="false":::
 
 ## Cause
 

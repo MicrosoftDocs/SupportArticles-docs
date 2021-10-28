@@ -25,7 +25,7 @@ The VM is stuck waiting upon a user prompt and doesn't boot unless manually inst
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you'll see that the screenshot displays the Windows Boot Manager with the message *Choose an operating system to start, or press TAB to select a tool:*.
 
-:::image type="content" source="media/troubleshoot-guide-windows-boot-manager-menu/choose-os-to-start.png" alt-text="The Windows Boot Manager screen states "Choose an operating system to start, or press TAB to select a tool.":::
+:::image type="content" source="media/troubleshoot-guide-windows-boot-manager-menu/choose-os-to-start.png" alt-text="The Windows Boot Manager screen states Choose an operating system to start, or press TAB to select a tool.":::
 
 ## Cause
 

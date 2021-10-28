@@ -22,7 +22,7 @@ This article provides steps to resolve issues where the guest operating system (
 
 When you use [boot diagnostics](./boot-diagnostics.md) to view a screenshot of the VM's output, you'll see that the screenshot displays a prompt with a "Please wait for the Local Session Manager" message.
 
-:::image type="content" source="media/vm-unresponsive-wait-local-session-manager/wait-local-session-manager.png" alt-text="Screenshot shows the stuck guest OS in Windows Server 2012 R2, with a "Please wait for the Local Session Manager" message." border="false":::
+:::image type="content" source="media/vm-unresponsive-wait-local-session-manager/wait-local-session-manager.png" alt-text="Screenshot shows the stuck guest OS in Windows Server 2012 R2, with a Please wait for the Local Session Manager message." border="false":::
 
 ## Cause
 

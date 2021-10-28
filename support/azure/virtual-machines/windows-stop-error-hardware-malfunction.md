@@ -34,7 +34,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 #### Serial console
 
-:::image type="content" source="media/windows-stop-error-hardware-malfunction/hardware-malfunction-serial-console.png" alt-text="Screenshot shows the message "Hardware Malfunction" on the Serial Console feature if Serial Console has been enabled.":::
+:::image type="content" source="media/windows-stop-error-hardware-malfunction/hardware-malfunction-serial-console.png" alt-text="Screenshot shows the message Hardware Malfunction on the Serial Console feature if Serial Console has been enabled.":::
 
 ## Cause
 
