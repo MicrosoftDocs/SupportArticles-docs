@@ -32,7 +32,7 @@ This behavior is by design in AGPM 4.0 Service Pack 3 (SP3) and earlier versions
 
 To work around this issue, follow these steps:
 
-1. Install the [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628) on the AGPM server.
+1. Install the [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628) on the AGPM server. Download link: https://www.microsoft.com/en-us/download/details.aspx?id=54967
 2. Set the following registry key and values on the AGPM server.
 
     - Path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Agpm`
