@@ -44,6 +44,6 @@ For information about how to retain cloud attachments that are shared in Outlook
 |Reactions to messages.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/reaction-to-message.png" alt-text="Screenshot of Reactions to messages.":::     | No      |
 |Emojis shared on chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/emojis-shared-on-chat.png" alt-text="Screenshot of Emojis shared on chat.":::     | No      |
 |GIFs shared on chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/gifs-shared-on-chat.png" alt-text="Screenshot of GIFs shared on chat.":::    | No      |
-|Live components shared on chat.<br><br> Example: :::image type="content" source="media/cannot-retain-cloud-attachments/live-components-shared-on-chat.png" alt-text="Screenshot of live components shared on chat":::    | No      |
+|Live components shared on chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/live-components-shared-on-chat.png" alt-text="Screenshot of live components shared on chat":::    | No      |
 |Stickers shared on chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/stickers-shared-on-chat.png" alt-text="Screenshot of stickers shared on chat.":::    | No      |
 |Praise and approvals.   | No      |
