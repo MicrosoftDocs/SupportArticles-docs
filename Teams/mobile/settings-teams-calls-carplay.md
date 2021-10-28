@@ -42,6 +42,4 @@ If your admin has created an application protection policy that allows data tran
 
 1. Set **Send Org data to other apps** to **All apps**.
 
-    :::image type="content" source="media/cannot-make-teams-calls-carplay/data-protection-setting.png" alt-text="Screenshot of setting the option Send Org data to other apps to All apps.":::
-
 For more information, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection).
