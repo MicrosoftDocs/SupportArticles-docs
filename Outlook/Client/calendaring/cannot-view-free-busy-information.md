@@ -70,5 +70,5 @@ Add the missing registry entries.
 7. Select **FreeBusySupport**, select the **Edit** menu, point to **New**, and then select **String Value**.
 8. Set **Value name** to **SMTP**, and then double-click to edit the string.
 9. Type `{0006F049-0000-0000-C000-000000000046}` in the **Value data** box, and then select **OK**.
-    :::image type="content" source=".\media\cannot-view-free-busy-information\free-busy-registry-key.png" alt-text="Value data.":::
+    :::image type="content" source=".\media\cannot-view-free-busy-information\free-busy-registry-key.png" alt-text="Screenshot of the FreeBusySupport registry key after you add entries.":::
 10. Exit Registry Editor.
