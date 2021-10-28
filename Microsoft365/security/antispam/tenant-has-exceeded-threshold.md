@@ -49,7 +49,7 @@ To fix this issue, follow these steps:
    1. Select **mail flow** in the left-hand frame, and click **connector**.
    1. If any connectors already exist for your organization, you can see them listed here. If you see any connectors that don't belong, you should remove them by selecting the connector and clicking the Trash icon. The following screenshot shows some sample connectors that you should have if you are in a hybrid scenario. All other connectors should be inspected and removed if they are not required.
 
-      ![An example of connectors to and from Contoso email server](./media/tenant-has-exceeded-threshold/listed-connectors.png)
+      :::image type="content" source="media/tenant-has-exceeded-threshold/listed-connectors.png" alt-text="Screenshot shows an example of connectors to and from Contoso email server." border="false":::
 
 1. Check the audit logs to determine whether a connector was created recently. Spammers are known to create connectors, send out lots of mails on that connector, and then delete the connector to cover their tracks.
 1. Because an admin account was compromised, change the passwords for all your admins.
