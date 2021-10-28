@@ -60,7 +60,7 @@ If AutoComplete is enabled and still not working correctly, there may be a probl
 
 8. Right-click the RoamCache folder, select **Rename**, and change the folder name to *old_RoamCache*.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/change-the-roamcache-folder-name.png" alt-text="Screenshot of the selected RoamCache folder under the Outlook folder.":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/change-the-roamcache-folder-name.png" alt-text="Screenshot of the RoamCache folder under the Outlook folder which you can rename.":::
 
 9. When Outlook restarts, it will create a new RoamCache folder.
 10. Start Outlook.
@@ -100,7 +100,7 @@ If Auto-Complete is enabled and still not working correctly, there may be a prob
 
 8. Select on the Outlook folder listed at the top of the window.
 
-   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/select-the-outlook-folder.png" alt-text="Screenshot of the selected RoamCache folder under the Outlook folder.":::
+   :::image type="content" source="media/autocomplete-not-working-correctly-in-outlook-2010/select-the-outlook-folder.png" alt-text="Screenshot of the search result of step 7, which shows the Outlook folder on the top.":::
 
 9. Right-click the RoamCache folder, select **Rename**, and change the folder name to *old_RoamCache*.
 
