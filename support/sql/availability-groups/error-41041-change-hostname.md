@@ -44,5 +44,5 @@ For more information, see [rename a computer that hosts a stand-alone instance o
 
 ## Status
 
-- For SQL Server 2017, this issue has been fixed in [SQL Server 2017 CU27](https://support.microsoft.com/topic/kb5006944-cumulative-update-27-for-sql-server-2017-79117c8f-9d54-42f8-9727-5870fe475187).
-- For SQL Server 2019 on Windows, this issue has been fixed in [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535).
+- For SQL Server on Linux, a comprehensive solution has been scheduled for the next version of SQL Server.
+- For SQL Server on Windows, this issue has been fixed in [SQL Server 2017 CU27](https://support.microsoft.com/en-gb/topic/kb5006944-cumulative-update-27-for-sql-server-2017-79117c8f-9d54-42f8-9727-5870fe475187) and [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535).
