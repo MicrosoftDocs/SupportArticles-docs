@@ -1,19 +1,19 @@
 ---
 title: Console crashes after upgrading to version 2107
-description: The Configuration Manager console crashes after you update to Configuration Manager current branch version 2107. This issue occurs if the reporting services point isn't installed correctly.
+description: The Configuration Manager console crashes after you update to Configuration Manager current branch, version 2107.
 ms.date: 10/27/2021
 ms.prod-support-area-path: 
 ms.reviewer: payur
 author: helenclu
 ms.author: luche
 ---
-# Console crashes after you upgrade to Configuration Manager version 2107
+# Console crashes after you upgrade to Configuration Manager, version 2107
 
 *Applies to*: Configuration Manager (current branch)
 
 ## Symptoms
 
-When you open the Configuration Manager console after you upgrade to [Configuration Manager current branch version 2107](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2107), the console crashes.
+When you open the Configuration Manager console after you upgrade to [Configuration Manager current branch, version 2107](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2107), the console crashes.
 
 The following entries are logged in *SMSAdminUI.log*:
 
@@ -27,7 +27,7 @@ The following entries are logged in *SMSAdminUI.log*:
 > &nbsp;&nbsp;&nbsp; at Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine.WqlConnectionManager.Connect(String configMgrServerPath)  
 > &nbsp;&nbsp;&nbsp; at Microsoft.ConfigurationManagement.AdminConsole.SmsSiteConnectionNode.GetConnectionManagerInstance(String connectionManagerInstance)
 
-You run the following PowerShell cmdlet to call the SMS_Identification.GetReportVersion method:
+You run the following PowerShell cmdlet to call the **SMS_Identification.GetReportVersion** method:
 
 ```powershell
 PS <SiteCode>:\> Invoke-CMWmiMethod -ClassName SMS_Identification -MethodName GetReportVersion -parameter @{ Sitecode = '<SiteCode>' }
@@ -42,7 +42,7 @@ ServerName : {<Site server that hosts the reporting services point>}
 SSRSVersion : {}
 ```
 
-In this situation, the returned value of SSRSVersion is empty.
+In this situation, the returned value of **SSRSVersion** is empty.
 
 ## Cause
 
@@ -50,9 +50,9 @@ This issue occurs because the console can't get the installed SQL Server Reporti
 
 ## Resolution
 
-To fix the issue, following these steps:
+To fix the issue, follow these steps:
 
-1. Fix any issues with SSRS, and make sure the following URLs are accessible:
+1. Fix any issues that affect SSRS, and make sure that the following URLs are accessible:
 
    - The Report Manager URL. For example, `https://<server>/Reports`.
    - The Report Server URL. For example, `https://<server>/ReportServer`.
