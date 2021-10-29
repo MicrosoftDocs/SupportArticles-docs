@@ -18,7 +18,7 @@ ms.author: v-miegge
 
 # Troubleshoot Azure virtual machine performance on Linux or Windows
 
-This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur. Besides monitoring, you can also use Perfinsights which can provide a report with best practices recommendations and key bottlenecks around IO/CPU/Memory. Perfinsights is available for both [Windows](./how-to-use-perfinsights.md) and [Linux](./how-to-use-perfinsights-linux.md) VM’s in Azure.
+This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur. Besides monitoring, you can also use Perfinsights which can provide a report with best practices recommendations and key bottlenecks around IO/CPU/Memory. Perfinsights is available for both [Windows](./how-to-use-perfinsights.md) and [Linux](./how-to-use-perfinsights-linux.md) VM's in Azure.
 
 This article will walk through using monitoring to diagnose Performance bottlenecks.
 
@@ -28,21 +28,21 @@ This article will walk through using monitoring to diagnose Performance bottlene
 
 To monitor the Guest VM, use the Azure VM Monitoring, which will alert you to certain high-level resource conditions. To check whether you have the VM diagnostics enabled, see [Azure Resource logs overview](/azure/azure-monitor/learn/tutorial-resource-logs). If you see the following, then you most likely don't have the diagnostics enabled:
 
-![Monitoring isn't enabled](media/troubleshoot-performance-virtual-machine-linux-windows/1-virtual-machines-monitoring-not-enabled.png)
- 
+:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/monitoring-not-enabled.png" alt-text="Screenshot shows Monitoring may not be enabled message.":::
+
 ### Enable VM diagnostics through microsoft Azure portal
 
 To enable VM diagnostics:
 
-1. Go to the VM
-2. Click **Diagnostics Settings**
+1. Go to the VM.
+2. Click **Diagnostics Settings**.
 3. Select the storage account and click **Enable guest-level monitoring**.
 
-   ![Click Settings, then Diagnostics](media/troubleshoot-performance-virtual-machine-linux-windows/2-virtual-machines-diagnostics.png)
+    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/diagnostic-settings.png" alt-text="Screenshot shows steps to enable VM diagnostics.":::
 
 You can check the storage account used for Diagnostics setup from **Agent** tab under **Diagnostics Settings**.
 
-![Check storage account](media/troubleshoot-performance-virtual-machine-linux-windows/3-check-storage-account.png)
+:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/check-storage-account.png" alt-text="Screenshot highlights the Storage account under the Agent tab.":::
 
 ### Enable storage account diagnostics through Azure portal
 
@@ -50,27 +50,27 @@ Storage is a very important tier when we intend to analyze IO performance for a 
 
 1. Identify which storage account (or accounts) your VM is using by selecting the VM. Click **Settings**, and then click **Disks**:
 
-   ![Click Settings, then Disks](media/troubleshoot-performance-virtual-machine-linux-windows/4-storage-disks-disks-selection.png)
+    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/storage-account-disks-selection.png" alt-text="Screenshot shows the OS disk under disks.":::
 
 2. In the portal, go to the storage account (or accounts) for the VM and work through the following steps:
 
    1. Click overview for the Storage account you found with step above.
-   2. Default metrics would be shown. 
+   2. Default metrics would be shown.
 
-    ![Default metrics](media/troubleshoot-performance-virtual-machine-linux-windows/5-default-metrics.png)
+    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/default-metrics.png" alt-text="Screenshot shows default metrics under Overview.":::
 
 3. Click on any of the metrics, which will show another blade with more options to configure and add metrics.
 
-   ![Add metrics](media/troubleshoot-performance-virtual-machine-linux-windows/6-add-metrics.png)
+    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/add-metrics.png" alt-text="Screenshot shows steps to add and configure metrics.":::
 
 To configure these options:
 
-1.	Select **Metrics**.
-2.	Select the **Resource** (storage account).
-3.	Select the **Namespace**
-4.	Select **Metric**.
-5.	Select the type of **Aggregation**
-6.	You can pin this view on dashboard.
+1.    Select **Metrics**.
+2.    Select the **Resource** (storage account).
+3.    Select the **Namespace**
+4.    Select **Metric**.
+5.    Select the type of **Aggregation**
+6.    You can pin this view on dashboard.
 
 ## Observing bottlenecks
 
@@ -80,15 +80,15 @@ Once we are through the initial setup process for needed metrics, and post enabl
 
 Select the Azure VM you want to investigate and select **Monitoring**.
 
-![Select Monitoring](media/troubleshoot-performance-virtual-machine-linux-windows/7-select-monitoring.png)
- 
+:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/select-monitoring.png" alt-text="Screenshot shows the Monitoring panel.":::
+
 ### Timelines of observation
 
 To identify if you have any resource bottlenecks, review your data. If your find that your machine has been running fine, but it has been reported that the performance has recently degraded, review a time range of data that encompasses performance metric data before the reported changed, during and after the issue.
 
 ### Check for CPU bottleneck
 
-![Check for CPU Bottleneck](media/troubleshoot-performance-virtual-machine-linux-windows/8-cpu-bottleneck-time-range.png)
+:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/cpu-bottleneck-time-range.png" alt-text="Screenshot shows steps to check CPU Bottleneck.":::
 
 1. Edit the Graph.
 2. Set the time Range.
@@ -116,7 +116,7 @@ If your application or process isn't running at the correct performance level, a
 
 If you have increased the VM, and the CPU is still running 95%, determine whether this setting is offering better performance or higher application throughput to an acceptable level. If not, troubleshoot that individual application\process.
 
-You can use Perfinsights for [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md) to analyze which process is driving the CPU consumption. 
+You can use Perfinsights for [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md) to analyze which process is driving the CPU consumption.
 
 ## Check for memory bottleneck
 
@@ -133,7 +133,7 @@ The Memory Usage shows you how much memory is being consumed with the VM. Unders
 
 Spike and Constant/Constant Steady Consumption - High memory utilization may not be the cause of bad performance, as some applications such as relational database engines allocate a large amount of memory, and this utilization may not be significant. However, if there are multiple memory-hungry applications, you may see poor performance from memory contention causing trimming and paging/swapping to disk. This poor performance is often a noticeable cause of application performance impact.
 
-Steadily Increasing Consumption – A possible application ‘warming up’, this consumption is common among database engines starting up. However, it could also be a sign of a memory leak in an application. Identify the application and understand whether the behavior is expected.
+Steadily Increasing Consumption – A possible application 'warming up', this consumption is common among database engines starting up. However, it could also be a sign of a memory leak in an application. Identify the application and understand whether the behavior is expected.
 
 Page or Swap File Usage – Check whether you're using the Windows Paging file (located on D:\) or Linux Swap file (located on `/dev/sdb`) are being heavily used. If you have nothing on these volumes except these files, check for high Read/Writes on those disks. This issue is indicative of low memory conditions.
 
@@ -147,13 +147,13 @@ To resolve high memory utilization, perform any of the following tasks:
 
 If after upgrading to a larger VM, you discover that you still have a constant steady increase until 100%, identify the application/process and troubleshoot.
 
-You can use Perfinsights for [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md) to analyze which process is driving the Memory consumption. 
+You can use Perfinsights for [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md) to analyze which process is driving the Memory consumption.
 
 ## Check for disk bottleneck
 
 To check the storage subsystem for the VM, check the diagnostics at the Azure VM level by using the counters in VM Diagnostics and also the Storage Account Diagnostics.
 
-For within VM specific troubleshooting, you can use Perfinsights for [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md), which could help to analyze which process is driving the IO’s. 
+For within VM specific troubleshooting, you can use Perfinsights for [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md), which could help to analyze which process is driving the IO's.
 
 Note that we don't have counters for Zone Redundant and Premium Storage Accounts. For issues related to these counters, raise a support case.
 
@@ -161,7 +161,7 @@ Note that we don't have counters for Zone Redundant and Premium Storage Accounts
 
 To work on the below items, go into the storage account for the VM in the portal:
 
-![Viewing Storage Account Diagnostics in Monitoring](media/troubleshoot-performance-virtual-machine-linux-windows/9-virtual-machine-storage-account.png)
+:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/vm-storage-account.png" alt-text="Screenshot shows steps to view Storage Account Diagnostics in Monitoring.":::
 
 1. Edit the Monitoring Graph.
 2. Set the time range.
