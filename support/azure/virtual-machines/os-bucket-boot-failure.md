@@ -18,7 +18,7 @@ When you pull the screenshot of the virtual machine (VM), the screenshot shows t
 
 `Boot failure. Reboot and Select proper Boot device or Insert Boot Media in selected Boot device`
 
-![Boot Failure screen](./media/os-bucket-boot-failure/1-boot-failure.png)
+:::image type="content" source="/media/os-bucket-boot-failure/boot-failure.png" alt-text="Screenshot of the Boot Failure message.":::
 
 ## Causes
 
@@ -66,7 +66,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
       sel disk 1
       ```
 
-      ![Disk 1](media/os-bucket-boot-failure/11-Gen2-1.png)
+      :::image type="content" source="media/os-bucket-boot-failure/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
 
    3. List all of the partitions on the disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and around 350 Mb in size. In the image below, this partition is Partition 1.
 
@@ -75,13 +75,13 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
       sel partition 1
       ```
 
-      ![Partition 1](media/os-bucket-boot-failure/12-Gen2-2.png)
+      :::image type="content" source="media/os-bucket-boot-failure/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
 
    4. Check the status of the partition. In our example, Partition 1 is not active.
 
       `detail partition`
 
-      ![Detail Partition](media/os-bucket-boot-failure/13-Gen2-3.png)
+      :::image type="content" source="media/os-bucket-boot-failure/detail-partition-active-no.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active No.":::
 
       1. If the partition isn't active:
 
@@ -92,7 +92,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
             detail partition
             ```
 
-            ![Active Flag](media/os-bucket-boot-failure/14-Gen2-4.png)
+           :::image type="content" source="media/os-bucket-boot-failure/detail-partition-active-yes.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active Yes.":::
 
    5. Now exit the DISKPART tool.
 
@@ -114,7 +114,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
       2. Write down the identifier of the Windows Boot loader. This identifier is the one with the path `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/os-bucket-boot-failure/6-boot-configuration-data-windows-identifier.png)
+         :::image type="content" source="media/os-bucket-boot-failure/windows-identifier-generation-1.png" alt-text="Screenshot shows the output of Generation 1 VM, which lists the identifier number under Windows Boot Loader.":::
 
    2. For Generation 2 VM:
 
@@ -124,7 +124,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
       2. Write down the identifier of the Windows Boot loader. This is the one with the path `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 2](media/os-bucket-boot-failure/15-default-identifier.png)
+         :::image type="content" source="media/os-bucket-boot-failure/windows-identifier-generation-2.png" alt-text="Screenshot shows the output of Generation 2 VM, which lists the identifier number under Windows Boot Loader.":::
 
 3. Run the following commands:
 
