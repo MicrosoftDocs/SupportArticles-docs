@@ -81,7 +81,7 @@ To fix this issue, check which permissions are assigned to the \<Account Name> s
 In the log entries that are event ID 7038 related, you may find the following error message:
 
 - [This user can't sign in because this account is currently disabled](#this-user-cant-sign-in-because-this-account-is-currently-disabled).
-- [The user's password must be changed before signing in]((#the-users-password-must-be-changed-before-signing-in)).
+- [The user's password must be changed before signing in](#the-users-password-must-be-changed-before-signing-in).
 - [The user name or password is incorrect](#the-user-name-or-password-is-incorrect).
 - [The referenced account is currently locked out and may not be logged on to](#the-referenced-account-is-currently-locked-out-and-may-not-be-logged-on-to).
 
