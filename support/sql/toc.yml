@@ -80,7 +80,7 @@
       - name: Error 1068 when starting SQL Server
         href: admin/agent-service-fails-start-stand-alone-server.md
       - name: Error 1069 when starting SQL Server
-        href: admin/error-password-service-account-changed.md
+        href: admin/error-1069-service-cannot-start.md
       - name: Event ID 17058 and SQL Server doesn't start
         href: admin/event-id-17058-start-sql-server.md
       - name: Event ID 1814 and SQL Server doesn't start
