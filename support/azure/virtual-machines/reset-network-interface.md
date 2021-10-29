@@ -53,14 +53,14 @@ This article shows how to reset the network interface for Azure Windows VM to re
     $ResourceGroup = "<Resource Group>"
     $VNET = "<Virtual Network>"
     $IP = "NEWIP"
-
+    
     #Log in to the subscription​ 
     Add-AzAccount
     Select-AzSubscription -SubscriptionId $SubscriptionId 
-    
+        
     #Check whether the new IP address is available in the virtual network.
     Test-AzureStaticVNetIP –VNetName $VNET –IPAddress  $IP
-
+    
     #Add/Change static IP. This process will not change MAC address
     Get-AzVM -ResourceGroupName $ResourceGroup -Name $VM | Set-AzureStaticVNetIP -IPAddress $IP | Update-AzVM
     ```
@@ -97,14 +97,14 @@ To reset network interface, follow these steps:
     $CloudService = "<Cloud Service>"
     $VNET = "<Virtual Network>"
     $IP = "NEWIP"
-
+    
     #Log in to the subscription​ 
     Add-AzureAccount
     Select-AzureSubscription -SubscriptionId $SubscriptionId 
-
+    
     #Check whether the new IP address is available in the virtual network.
     Test-AzureStaticVNetIP –VNetName $VNET –IPAddress  $IP
-    
+        
     #Add/Change static IP. This process will not change MAC address
     Get-AzureVM -ResourceGroupName $CloudService -Name $VM | Set-AzureStaticVNetIP -IPAddress $IP |Update-AzureVM
     ```
@@ -123,7 +123,7 @@ After you can remote desktop to the machine, you must delete the old NICs to avo
 
         :::image type="content" source="media/reset-network-interface/network-adapter.png" alt-text="Screenshot shows network adapters in which Microsoft Hyper-V Network Adapter is greyed." border="false":::
 
-    > [!NOTE]
-    > Only uninstall the unavailable adapters that have the name "Microsoft Hyper-V Network Adapter". If you uninstall any of the other hidden adapters, it could cause additional issues.
+        > [!NOTE]
+        > Only uninstall the unavailable adapters that have the name "Microsoft Hyper-V Network Adapter". If you uninstall any of the other hidden adapters, it could cause additional issues.
 
 6.    Now all unavailable adapters should be cleared of your system.
