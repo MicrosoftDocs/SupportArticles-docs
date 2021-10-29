@@ -148,7 +148,7 @@ To increase the viewing area for the scan results, select **View results in my
 > [!NOTE]
 > The **Detailed View** in your browser contains a search feature that is not found when you view this information in the SaRA window.
 
-:::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/search-feature-in-detailed-view.png" alt-text=" Search feature in Detailed View tab." border="false":::
+:::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/search-feature-in-detailed-view.png" alt-text="Search feature in Detailed View tab." border="false":::
 
 ### Sharing your scan results
 
