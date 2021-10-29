@@ -60,7 +60,7 @@ An eDiscovery or content search may yield the following error:
 
 > This search completed with (#) errors.  Would you like to retry the search on the failed locations?
 
-:::image type="content" source="./media/resolve-ediscovery-issues/edisc-tshoot-specific-location-search-fails.png" alt-text="Screenshot of search-specific location fails error.":::
+:::image type="content" source="media/resolve-ediscovery-issues/search-fails-error.png" alt-text="Screenshot of search-specific location fails error.":::
 
 ### Resolution
 
@@ -170,7 +170,9 @@ When exporting search results from Core eDiscovery or Content search in the Micr
 
 When running an eDiscovery search, if the search continually fails with error similar to "Internal server error (500) occurred", you may need rerun the search only on specific mailbox locations.
 
-:::image type="content" source="./media/resolve-ediscovery-issues/edisc-tshoot-error-500.png" alt-text="Screenshot of internal server error 500.":::
+> (500) Internal Server Error.
+
+:::image type="content" source="./media/resolve-ediscovery-issues/internal-server-error-500.png" alt-text="Screenshot of Internal server error (500).":::
 
 ### Resolution
 

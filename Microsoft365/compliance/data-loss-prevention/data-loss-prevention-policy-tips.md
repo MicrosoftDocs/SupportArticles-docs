@@ -59,11 +59,9 @@ For these scenarios, create only one rule, and use detecting parameters that are
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/user-notifications.png" alt-text="Screenshot to turn on User notifications.":::
 
-
 Policy status
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot shows the Show policy tips while in test mode option is not checked.":::
-
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot shows the Show policy tips while in test mode option isn't checked.":::
 
 **Figure 2:** Multiple rules configured to have the same detection based on Sensitive info types that share **Instance count** and **Match accuracy** values.
 
@@ -73,7 +71,7 @@ Policy status
 
 A policy is configured by using conditions and actions that are currently not supported in Outlook 2013 or later clients.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-configurations.png" alt-text="Screenshot shows policy configurations are not supported." :::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-configurations.png" alt-text="Screenshot shows policy configurations aren't supported.":::
 
 > [!NOTE]
 > All these conditions and actions work in Outlook. They will match content and enforce protective actions on content. However, policy tips are not yet supported.
@@ -113,7 +111,6 @@ Policy tips don't work as expected if they're configured in multiple locations. 
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/rule-configuration.png" alt-text="Screenshot to set notify a policy in Exchange admin center rule with the Action.":::
 
-
 To view unified DLP policy tips, remove the **Notify the sender with a Policy Tip** action from all Transport rules in Exchange admin center.
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/remove-notify-sender.png" alt-text="Screenshot to remove the Notify the sender with a Policy Tip action.":::
@@ -123,7 +120,7 @@ To view unified DLP policy tips, remove the **Notify the sender with a Policy Ti
 1. In the Exchange admin center, locate **Compliance Management**, and then select **data loss prevention**.
 1. Select the policy that requires editing, and then select the pencil icon or double-click the policy that has to be changed.
 
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/open-policy-window.png" alt-text="Screenshot to open the policy window in the Exchange admin center.":::
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/open-policy-window.png" alt-text="Screenshot shows steps to open the policy window in the Exchange admin center.":::
 
 1. In the window that opens, select the rule, and then select the pencil icon or double-click the rule that has to be changed.
 
@@ -132,7 +129,6 @@ To view unified DLP policy tips, remove the **Notify the sender with a Policy Ti
 1. In the next window that opens, you can edit the rule.
 
    :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/detailed-fields.png" alt-text="Screenshot to edit the detailed fields.":::
-
 
 ## Client doesn't support MailTips
 
