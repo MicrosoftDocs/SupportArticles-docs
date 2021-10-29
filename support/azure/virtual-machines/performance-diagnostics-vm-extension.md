@@ -21,11 +21,12 @@ ms.author: genli
 Azure Performance Diagnostics VM Extension helps collect performance diagnostic data from Windows VMs. The extension performs analysis, and provides a report of findings and recommendations to identify and resolve performance issues on the virtual machine. This extension installs a troubleshooting tool called [PerfInsights](./how-to-use-perfinsights.md).
 
 > [!NOTE]
-> If you want to run diagnostics on your VM from the Azure portal for non-classic VMs, it is recommended to use the new experience. For more information, see [Performance Diagnostics for Azure virtual machines](performance-diagnostics.md) 
+> If you want to run diagnostics on your VM from the Azure portal for non-classic VMs, it is recommended to use the new experience. For more information, see [Performance Diagnostics for Azure virtual machines](performance-diagnostics.md).
 
 ## Prerequisites
 
-This extension can be installed on
+This extension can be installed on:
+
 * Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
@@ -36,6 +37,7 @@ This extension can be installed on
 * Windows 8
 
 ## Extension schema
+
 The following JSON shows the schema for Azure Performance Diagnostics VM Extension. This extension requires the name and key for a storage account to store the diagnostics output and report. These values are sensitive. Storage account key should be stored inside a protected setting configuration. Azure VM extension protected setting data is encrypted, and it is only decrypted on the target virtual machine. Note that **storageAccountName** and **storageAccountKey** are case-sensitive. Other required parameters are listed in the following section.
 
 ```JSON
@@ -62,7 +64,7 @@ The following JSON shows the schema for Azure Performance Diagnostics VM Extensi
           "resourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
         },
         "protectedSettings": {
-            "storageAccountKey": "[parameters('storageAccountKey')]"		
+            "storageAccountKey": "[parameters('storageAccountKey')]"        
         }
       }
     }
@@ -82,7 +84,7 @@ The following JSON shows the schema for Azure Performance Diagnostics VM Extensi
 | networkTrace | n | Option to enable Network Trace. Valid values are **n** or empty value. If you do not want to capture this trace, leave the value as empty. |
 | xperfTrace | x | Option to enable XPerf Trace. Valid values are **x** or empty value. If you do not want to capture this trace, leave the value as empty. |
 | storPortTrace | s | Option to enable StorPort Trace. Valid values are **s** or empty value. If you do not want to capture this trace, leave the value as empty. |
-| srNumber | 123452016365929 | The support ticket number, if available. Leave the value as empty if you don’t have it. |
+| srNumber | 123452016365929 | The support ticket number, if available. Leave the value as empty if you don't have it. |
 | requestTimeUtc | 2017-09-28T22:08:53.736Z | Current Date Time in Utc. If you are using the portal to install this extension, you do not need to provide this value. |
 | resourceId | /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName} | The unique identifier of a VM. |
 | storageAccountName | mystorageaccount | The name of the storage account to store the diagnostics logs and results. |
@@ -95,19 +97,23 @@ Follow these instructions to install the extension on Windows virtual machines:
 1. Sign in to the [Azure portal](https://portal.azure.com).
 2. Select the virtual machine where you want to install this extension.
 
-    ![Screenshot of Azure portal, with Virtual machines highlighted](media/performance-diagnostics-vm-extension/select-the-virtual-machine.png)
+    :::image type="content" source="media/performance-diagnostics-vm-extension/select-virtual-machine.png" alt-text="Screenshot of Azure portal, with Virtual machines highlighted.":::
+
 3. Select the **Extensions** blade, and select **Add**.
 
-    ![Screenshot of Extensions blade, with Add highlighted](media/performance-diagnostics-vm-extension/select-extensions.png)
+    :::image type="content" source="media/performance-diagnostics-vm-extension/select-extensions.png" alt-text="Screenshot of Extensions blade, with Add highlighted.":::
+
 4. Select **Azure Performance Diagnostics**, review the terms and conditions, and select **Create**.
 
-    ![Screenshot of New resource screen, with Azure Performance Diagnostics highlighted](media/performance-diagnostics-vm-extension/create-azure-performance-diagnostics-extension.png)
-5. Provide the parameter values for the installation, and select **OK** to install the extension. For more information about supported scenarios, see [How to use PerfInsights](how-to-use-perfinsights.md#supported-troubleshooting-scenarios). 
+    :::image type="content" source="media/performance-diagnostics-vm-extension/create-azure-performance-diagnostics-extension.png" alt-text="Screenshot of New resource screen, with Azure Performance Diagnostics highlighted.":::
 
-    ![Screenshot of Install extension dialog box](media/performance-diagnostics-vm-extension/install-the-extension.png)
+5. Provide the parameter values for the installation, and select **OK** to install the extension. For more information about supported scenarios, see [How to use PerfInsights](how-to-use-perfinsights.md#supported-troubleshooting-scenarios).
+
+    :::image type="content" source="media/performance-diagnostics-vm-extension/install-extension.png" alt-text="Screenshot of Install extension dialog box.":::
+
 6. When the installation is successful, you see a message indicating this status.
 
-    ![Screenshot of Provisioning succeeded message](media/performance-diagnostics-vm-extension/provisioning-succeeded-message.png)
+    :::image type="content" source="media/performance-diagnostics-vm-extension/provisioning-succeeded-message.png" alt-text="Screenshot of Provisioning succeeded message.":::
 
     > [!NOTE]
     > The extension runs when the provisioning has succeeded. It takes two minutes or less to complete for the basic scenario. For other scenarios, it runs through the duration specified during the installation.
@@ -116,10 +122,10 @@ Follow these instructions to install the extension on Windows virtual machines:
 
 To remove the extension from a virtual machine, follow these steps:
 
-1. Sign in to the [Azure portal](https://portal.azure.com), select the virtual machine from which you want to remove this extension, and then select the **Extensions** blade. 
+1. Sign in to the [Azure portal](https://portal.azure.com), select the virtual machine from which you want to remove this extension, and then select the **Extensions** blade.
 2. Select the (**…**) for the Performance Diagnostics Extension entry from the list, and select **Uninstall**.
 
-    ![Screenshot of Extensions blade, with Uninstall highlighted](media/performance-diagnostics-vm-extension/uninstall-the-extension.png)
+     :::image type="content" source="media/performance-diagnostics-vm-extension/uninstall-extension.png" alt-text="Screenshot of Extensions blade, with Uninstall highlighted.":::
 
     > [!NOTE]
     > You can also select the extension entry, and select the **Uninstall** option.
@@ -180,7 +186,7 @@ Azure virtual machine extensions can be deployed with Azure Resource Manager tem
     "requestTimeUtc": {
       "type": "string",
       "defaultValue": "10/2/2017 11:06:00 PM"
-    }		
+    }        
   },
   "resources": [
     {
@@ -218,9 +224,7 @@ Azure virtual machine extensions can be deployed with Azure Resource Manager tem
 
 The `Set-AzVMExtension` command can be used to deploy Azure Performance Diagnostics VM Extension to an existing virtual machine.
 
-PowerShell
-
-```
+```powershell
 $PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic";"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2017-09-28T22:08:53.736Z";"resourceId"="VMResourceId" }
 $ProtectedSettings = @{"storageAccountKey"="mystoragekey" }
 
@@ -236,6 +240,7 @@ Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" `
 ```
 
 ## Information on the data captured
+
 The PerfInsights tool collects various logs, configuration, and diagnostic data, depending on the selected scenario. For more information, see the [PerfInsights documentation](./how-to-use-perfinsights.md).
 
 ## View and share the results
@@ -248,14 +253,14 @@ To view the report, extract the zip file and open the **PerfInsights Report.html
 
 You should also be able to download the zip file directly from the portal by selecting the extension.
 
-![Screenshot of Performance Diagnostics detailed status](media/performance-diagnostics-vm-extension/view-detailed-status.png)
+:::image type="content" source="media/performance-diagnostics-vm-extension/view-detailed-status.png" alt-text="Screenshot of Performance Diagnostics detailed status and the extension download link.":::
 
 > [!NOTE]
 > The SAS link displayed in the portal might not work sometimes. This can be caused by a malformed URL during the encoding and decoding operations. You can instead get the link directly from the *_saslink.txt file from the VM.
 
 ## Troubleshoot and support
 
-- Extension deployment status (in the notification area) might show “Deployment in progress” even though the extension is successfully provisioned.
+- Extension deployment status (in the notification area) might show "Deployment in progress" even though the extension is successfully provisioned.
 
     This issue can be safely ignored, as long as the extension status indicates that the extension is successfully provisioned.
 - You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
