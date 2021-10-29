@@ -909,6 +909,16 @@
       "source_path": "support/windows-hardware/drivers/index.md",
       "redirect_url": "/support/windows-hardware/drivers/welcome-windowshardware",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "troubleshoot/sql/performance/performance-consistency-issues.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "troubleshoot/sql/performance/filter-drivers-lead-to-sql-performance-consistency.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
     }
   ]
 }
