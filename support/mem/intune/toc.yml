@@ -25,8 +25,6 @@ items:
     href: application-could-not-be-wrapped.md
   - name: Data associated with an app is removed
     href: removed-data-associated-with-app-error.md
-  - name: Deploy Windows update packages as Win32 apps
-    href: deploy-windows-update-packages-as-win32-apps.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
   - name: Error 0x87D13BA2 when you deploy a macOS LOB app
@@ -289,8 +287,6 @@ items:
     href: troubleshooting-blade-fails-loading.md
   - name: Troubleshoot software updates
     href: troubleshoot-software-updates-in-microsoft-intune.md
-  - name: Use PowerShell to look up licenses
-    href: look-up-intune-licenses.md
 - name: Migration to the Azure Portal
   items:
   - name: Migration blockers for grouping and targeting

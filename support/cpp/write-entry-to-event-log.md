@@ -45,13 +45,13 @@ To do it, follow these steps:
     You can register a particular source with only a single event log. If you want to write messages to more than one log, you must define multiple sources.
 
     ```cpp
-    String *sSource;
-    String *sLog;
-    String *sEvent;
+    String^ sSource;
+    String^ sLog;
+    String^ sEvent;
 
-    sSource = new String("dotNET Sample App1");
-    sLog = new String("Application1");
-    sEvent = new String("Sample Event1");
+    sSource = gcnew String("dotNET Sample App1");
+    sLog = gcnew String("Application1");
+    sEvent = gcnew String("Sample Event1");
     ```
 
 6. Use two static methods of the `EventLog` class to check whether your source exists, and if the source doesn't exist, to create this source that is associated with a particular event log. If the log name that you specify doesn't exist, the name is created automatically when you write your first entry to the log. By default, if you don't supply a log name to the `CreateEventSource` method, the log file is named *Application Log*.
@@ -81,13 +81,13 @@ using namespace System::Diagnostics;
 
 int _tmain()
 {
-    String *sSource;
-    String *sLog;
-    String *sEvent;
+    String^ sSource;
+    String^ sLog;
+    String^ sEvent;
 
-    sSource = new String("dotNET Sample App1");
-    sLog = new String("Application1");
-    sEvent = new String("Sample Event1");
+    sSource = gcnew String("dotNET Sample App1");
+    sLog = gcnew String("Application1");
+    sEvent = gcnew String("Sample Event1");
 
      if(!EventLog::SourceExists(sSource))
        EventLog::CreateEventSource(sSource,sLog);
