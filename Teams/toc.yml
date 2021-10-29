@@ -145,6 +145,8 @@
       href: ./known-issues/chrome-80-users-unable-to-sign-in-on-teams.md
     - name: Notifications and preview issues in iOS 13 Beta
       href: ./known-issues/problems-using-teams-on-ios-13-beta.md
+    - name: Settings for Teams calls with Apple CarPlay
+      href: ./mobile/settings-teams-calls-carplay.md
   - name: OneNote Integration
     items:
     - name: Can't upload or download OneNote file
