@@ -26,7 +26,7 @@ Public folder entries still appear in the global address list (GAL) after removi
 
 ## Cause
 
-Mail enabled public folders weren't removed properly. The mail enabled public folder (MEPF) objects may still be present.
+Mail-enabled public folders weren't removed properly. The mail-enabled public folder (MEPF) objects may still be present.
 
 ## Resolution
 
@@ -35,19 +35,19 @@ Check if the stale entry appears in Outlook on the Web or Outlook online mode. I
 If the stale entry appears in Outlook on the Web and Outlook online mode as well:
 
 1. Connect to Exchange Online PowerShell.
-2. Run the following cmdlet to list mail enabled public folders:
+2. Run the following cmdlet to list mail-enabled public folders:
 
     ```powershell
     Get-MailPublicFolder
     ```
 
-3. Verify if the stale public folder entry is there.
-4. If you see the stale public folder entry, run this cmdlet to remove the mail enabled public folders:
+3. Check whether the stale public folder entry is exists.
+4. If the stale public folder entry exists, run the following cmdlet to remove the mail-enabled public folders:
 
     ```powershell
     Get-MailPublicFolder <name of stale public folder> |foreach{Disable-MailPublicFolder $_.guid.guid}
     ```
-    If you want to remove all mail enabled public folders at once, run the following cmdlet:
+    If you want to remove all mail-enabled public folders at once, run the following cmdlet:
 
     ```powershell
     Get-MailPublicFolder -ResultSize unlimited |foreach{Disable-MailPublicFolder $_.Guid.Guid}
