@@ -18,7 +18,7 @@ When you pull the screenshot of the virtual machine (VM), the screenshot shows t
 
 `Boot failure. Reboot and Select proper Boot device or Insert Boot Media in selected Boot device`
 
-:::image type="content" source="/media/os-bucket-boot-failure/boot-failure.png" alt-text="Screenshot of the Boot Failure message.":::
+:::image type="content" source="media/os-bucket-boot-failure/boot-failure.png" alt-text="Screenshot of the Boot Failure message.":::
 
 ## Causes
 
