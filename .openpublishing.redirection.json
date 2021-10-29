@@ -944,6 +944,16 @@
       "source_path": "support/dynamics-365/marketing/index.md",
       "redirect_url": "/support/dynamics-365/marketing/welcome-marketing",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "troubleshoot/sql/performance/performance-consistency-issues.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "troubleshoot/sql/performance/filter-drivers-lead-to-sql-performance-consistency.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": false
     }
   ]
 }

@@ -351,10 +351,8 @@
       href: performance/decreased-performance-linkedserver-views.md      
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
-    - name: External modules can cause performance issues
-      href: performance/performance-consistency-issues.md
-    - name: Filter drivers cause performance and consistency issues
-      href: performance/filter-drivers-lead-to-sql-performance-consistency.md
+    - name: External modules and filter drivers cause performance issues
+      href: performance/performance-consistency-issues-filter-drivers-modules.md
     - name: High CPU use occurs in your queries
       href: performance/high-cpu-use-occurs-queries.md
     - name: Non-yielding Resource Monitor
