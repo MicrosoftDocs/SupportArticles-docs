@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online out of storage space 
 description: Run a diagnostic to solve storage space issues.
-author: prbalusu
+author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-matthamer
+ms.author: prbalusu
 ms.custom: 
 - CSSTroubleshoot
 - CI 157728

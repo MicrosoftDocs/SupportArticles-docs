@@ -2,6 +2,15 @@
 
 
 
+## Week of October 18, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/22/2021 | [Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run](/office/troubleshoot/access/cannot-use-odbc-or-oledb) | modified |
+| 10/22/2021 | [Define relationships between tables in an Access database](/office/troubleshoot/access/define-table-relationships) | modified |
+
+
 ## Week of October 04, 2021
 
 
@@ -26,13 +35,3 @@
 | 9/30/2021 | [Error message in Office when a file is blocked by registry policy settings](/office/troubleshoot/settings/file-blocked-in-office) | modified |
 | 9/30/2021 | [Properties of type (lookup – multi select) don't work on Office Backstage](/office/troubleshoot/administration/sharepoint-properties-backstage-file-info) | modified |
 | 9/30/2021 | [Open word documents in edit mode from a hyperlink in an email message](/office/troubleshoot/word/force-word-document-to-open-in-edit-mode) | modified |
-
-
-## Week of September 13, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/14/2021 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
-| 9/15/2021 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
-| 9/17/2021 | [We can't open this add-in from localhost](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost) | modified |
