@@ -1,6 +1,6 @@
 ---
 title: Performance and consistency issues when modules or driver are loaded
-description: This article provides a workaround for the problem that occurs when certain modules are loaded into SQL Server address space or certain filter drivers are loaded into a system that is running SQL Server components.
+description: Provides a workaround for the performance issue when certain modules are loaded into SQL Server address space or certain filter drivers are loaded into a system.
 ms.date: 10/22/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: bobward, SureshKa, jopilov
