@@ -50,7 +50,13 @@ This issue occurs because the console can't get the installed SQL Server Reporti
 
 ## Resolution
 
-To fix the issue, following these steps:
+To fix the issue, install [Update rollup for Microsoft Endpoint Configuration Manager version 2107](/mem/configmgr/hotfix/2107/11121541).
+
+## Workaround
+
+To work around the issue, use one of the following methods.
+
+### Method 1
 
 1. Fix any issues with SSRS, and make sure the following URLs are accessible:
 
@@ -58,16 +64,16 @@ To fix the issue, following these steps:
    - The Report Server URL. For example, `https://<server>/ReportServer`.
 1. Use an older version of console to connect to the site, and reinstall the reporting services point.
 
-## Workaround
+### Method 2
 
-To work around the issue, run the following PowerShell cmdlet to uninstall the reporting services point:
+1. Run the following PowerShell cmdlet to uninstall the reporting services point:
 
-```powershell
-Remove-CMSiteRole -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -RoleName "SMS SRS Reporting Point"
-```
+   ```powershell
+   Remove-CMSiteRole -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -RoleName "SMS SRS Reporting Point"
+   ```
 
-After you fix the underlying SSRS issue, run the following PowerShell cmdlet to reinstall the reporting services point:
+1. After you fix the underlying SSRS issue, run the following PowerShell cmdlet to reinstall the reporting services point:
 
-```powershell
-Add-CMReportingServicePoint -SiteCode "<SiteCode>" -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -UserName <Domain\ReportingUser>
-```
+   ```powershell
+   Add-CMReportingServicePoint -SiteCode "<SiteCode>" -SiteSystemServerName "<FQDN of the site server that hosts the reporting services point>" -UserName <Domain\ReportingUser>
+   ```
