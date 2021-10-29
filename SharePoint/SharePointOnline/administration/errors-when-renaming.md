@@ -52,5 +52,5 @@ This article lists common error messages that you might encounter when you chang
 
 ## References
 
-- Frequently asked questions about SharePoint Domain renames
+- [Frequently asked questions about SharePoint Domain renames](./domain-rename-faq.md)
 - [Rename your SharePoint domain](/sharepoint/tenant-rename)
