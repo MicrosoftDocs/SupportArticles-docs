@@ -37,6 +37,6 @@ If you have to combine separate Microsoft Word documents, you can copy and paste
     > [!NOTE]
     > Documents will be merged in the order in which they appear in the file list. To use a different order, select and insert each file individually in the desired order.
 
-   :::image type="content" source="media/merge-word-documents/insert-file.png" alt-text="Screenshot of inserting file.":::
+   :::image type="content" source="media/merge-word-documents/insert-file.png" alt-text="Screenshot of inserting files.":::
 
 For more information, see the [Forum](https://answers.microsoft.com/default.aspx).
