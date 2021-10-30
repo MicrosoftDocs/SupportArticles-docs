@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 3185258
 
 When you try to send a response to a meeting request in Microsoft Outlook, the option is not available. The **Accept**, **Tentative**, and **Decline** buttons do not triggers the expected drop-down options of **Edit the response before sending**, **Send the response now**, and **Do not send a response**.
 
-:::image type="content" source="media/cannot-send-response-to-meeting-request/options-of-meeting-tab.png" alt-text="Edit the response before sending, Send the response now and Do not send a response." border="false":::
+:::image type="content" source="media/cannot-send-response-to-meeting-request/options-of-meeting-tab.png" alt-text="Screenshot of the Accept, Tentative, and Decline buttons on the Meeting ribbon in Outlook." border="false":::
 
 Because you can't send a response, the meeting organizer doesn't receive one from you, and the meeting tracking feature is not updated as expected.
 
