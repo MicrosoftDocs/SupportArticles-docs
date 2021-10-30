@@ -49,7 +49,7 @@ Try the following options to help determine the root cause of your problem in Wo
 :::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png" border="false":::
 
 </a>
-</td><td>**<a href="#option1">Insert your document into another file</a>**
+</td><td><a href="#option1">Insert your document into another file</a>
 <ol>
 <li>On the **File** menu, select **New**, and then select **Blank Document**.</li>
 <li>On the **Insert tab**, select **Object** in the **Text** group, and then select **Text from File**.</li>
@@ -65,7 +65,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option2">Start Word by using the /a switch</a>**
+<td><a href="#option2">Start Word by using the /a switch</a>
 <ol>
 <li>Type **Run** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
 <li>In the **Run** dialog box, type **winword /a**, and then press Enter.</li>
@@ -80,7 +80,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option3">Delete the Word Data registry subkey</a>**
+<td><a href="#option3">Delete the Word Data registry subkey</a>
 <ol>
 <li>Exit all Office programs.</li>
 <li>Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
@@ -114,7 +114,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option4">Delete the Word Options registry key</a>**
+<td><a href="#option4">Delete the Word Options registry key</a>
 
 <ol>
 <li>Exit all Office programs.</li>
@@ -149,7 +149,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option5">Replace the Normal.dot or Normal.dotm global template file</a>**
+<td><a href="#option5">Replace the Normal.dot or Normal.dotm global template file</a>
 <ol>
 <li>Exit all Office programs.</li>
 <li>Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
@@ -181,7 +181,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option6">Disable the Startup folder add-ins</a>**
+<td><a href="#option6">Disable the Startup folder add-ins</a>
 
 <ol>
 <li>Exit all Office programs.</li>
@@ -244,7 +244,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option7">Delete the COM add-ins registry keys</a>**
+<td><a href="#option7">Delete the COM add-ins registry keys</a>
 
 <ol>
 <li>Exit all Office programs.</li>
@@ -277,7 +277,7 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 
 </a>
 </td>
-<td>**<a href="#option8">Change the default printer</a>**
+<td><a href="#option8">Change the default printer</a>
 
 <ol>
 <li>Exit all Office programs.</li>
