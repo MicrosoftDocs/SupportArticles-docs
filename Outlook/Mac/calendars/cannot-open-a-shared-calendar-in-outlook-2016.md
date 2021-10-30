@@ -25,17 +25,17 @@ _Original KB number:_ &nbsp; 3007307
 
 When you open your Calendar in Microsoft Outlook 2016 for Mac, the **Open Shared Calendar** button on the ribbon is unavailable.
 
-:::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/open-shared-calendar-not-available.png" alt-text="Open Shared Calendar is unavailable":::
+:::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/open-shared-calendar-not-available.png" alt-text="Screenshot shows that the Open Shared Calendar button on the Calendar ribbon is unavailable.":::
 
 Additionally, when you point to **Open** on the **File** menu, the **Calendar** option is unavailable.
 
-:::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/calendar-is-not-available.png" alt-text="the Calendar option is unavailable":::
+:::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/calendar-is-not-available.png" alt-text="Screenshot shows that the Calendar option is unavailable.":::
 
 ## Cause
 
 This issue occurs if the **Group similar folders, such as Inboxes, from different accounts** check box is selected and the **Hide On My Computer folders** check box is cleared in **General Preferences**.
 
-:::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/clear-hide-on-my-computer-folders.png" alt-text="General Preferences" border="false":::
+:::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/clear-hide-on-my-computer-folders.png" alt-text="Screenshot shows that the Hide On My Computer folders check box is cleared in General Preferences.":::
 
 ## Workaround
 
@@ -46,7 +46,7 @@ To work around this issue, use one of the following methods:
   2. Expand **My Calendars** to display the Exchange mailbox calendar, the On My Computer calendar, and calendars that are associated with any other accounts that are open in Outlook for Mac.
   3. Select the **Exchange** check box.
 
-     :::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/the-exchange-checkbox.png" alt-text="Select the Exchange check box":::
+     :::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/the-exchange-checkbox.png" alt-text="Screenshot shows that the Exchange check box is selected.":::
 
      After you do this, the **Open Shared Calendar** button on the ribbon is available.
 
@@ -54,12 +54,12 @@ To work around this issue, use one of the following methods:
 
   1. On the **File** menu, point to **Open**, and then select **Other Users Folder**.
 
-     :::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/other-users-folder-option.png" alt-text="select the Other Users Folder option":::
+     :::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/other-users-folder-option.png" alt-text="Screenshot shows several options including the Other User's Folder option under Open on the File menu.":::
 
   2. Search for and then select the user whose calendar you want to open.
   3. In the **Folder Type** box, select **Calendar**.
 
-     :::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/open-other-user-folder.png" alt-text="open other user's folder window" border="false":::
+     :::image type="content" source="media/cannot-open-a-shared-calendar-in-outlook-2016/open-other-user-folder.png" alt-text="Screenshot of the Open Other User's Folder window with the Calendar option selected in the Folder Type.":::
 
   4. Select **Open**.
 
