@@ -80,7 +80,7 @@
       - name: Error 1068 when starting SQL Server
         href: admin/agent-service-fails-start-stand-alone-server.md
       - name: Error 1069 when starting SQL Server
-        href: admin/error-password-service-account-changed.md
+        href: admin/error-1069-service-cannot-start.md
       - name: Event ID 17058 and SQL Server doesn't start
         href: admin/event-id-17058-start-sql-server.md
       - name: Event ID 1814 and SQL Server doesn't start
@@ -351,10 +351,8 @@
       href: performance/decreased-performance-linkedserver-views.md      
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
-    - name: External modules can cause performance issues
-      href: performance/performance-consistency-issues.md
-    - name: Filter drivers cause performance and consistency issues
-      href: performance/filter-drivers-lead-to-sql-performance-consistency.md
+    - name: External modules and filter drivers cause performance issues
+      href: performance/performance-consistency-issues-filter-drivers-modules.md
     - name: High CPU use occurs in your queries
       href: performance/high-cpu-use-occurs-queries.md
     - name: Non-yielding Resource Monitor
