@@ -29,7 +29,7 @@ In Outlook 2016 or Outlook 2013, you experience one or several of the following 
 
     > The Microsoft Exchange Administrator has made a change that requires you quit and restart Outlook.
 
-    :::image type="content" source="media/outlook-displays-disconnected-in-status/require-you-quit-and-restart-outlook.png" alt-text="screenshot of the error that you need to quit and restart outlook":::
+    :::image type="content" source="media/outlook-displays-disconnected-in-status/require-you-quit-and-restart-outlook.png" alt-text="Screenshot of the error message, which shows the Microsoft Exchange Administrator has made a change that requires you quit and restart Outlook.":::
 
 - You receive the following error message when you start Outlook:
 
@@ -61,7 +61,7 @@ To resolve this issue, remove the trailing space from the `legacyExchangeDN` att
 5. Right-click this account, and then select **Properties**.
 6. Locate the `legacyExchangeDN` attribute, and then select **Edit**.
 
-    :::image type="content" source="media/outlook-displays-disconnected-in-status/edit-egacyexchangedn.jpg" alt-text="screenshot of how to edit the legacyExchangeDN attribute":::
+    :::image type="content" source="media/outlook-displays-disconnected-in-status/edit-legacyexchangedn.png" alt-text="Screenshot of the administrator properties window with the legacyExchangeDN attribute selected.":::
 
 7. Remove the trailing space at the end of the username.
 8. Select **OK**, select **Apply**, and then exit ADSIEdit.msc.

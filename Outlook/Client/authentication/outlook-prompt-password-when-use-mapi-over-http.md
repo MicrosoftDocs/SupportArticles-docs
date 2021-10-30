@@ -42,7 +42,7 @@ To work around this issue, remove the cached credentials from Credential Manager
 ## Group policy setting consideration
 
 If you use MAPI over HTTP and the **Authentication with Exchange Server** Group Policy setting for Outlook, you must update the setting to use the **Kerberos/NTLM Password Authentication** that MAPI over HTTP uses as the authentication method.
-![Set the Authentication with Exchange Server Group Policy setting to Kerberos/NTLM Password Authentication](./media/outlook-prompt-password-when-use-mapi-over-http/authentication-with-exchange-server-window.png)
+:::image type="content" source="./media/outlook-prompt-password-when-use-mapi-over-http/authentication-with-exchange-server-window.png" alt-text="Screenshot of Authentication with Exchange Server setting window when you set the authentication setting to Kerberos/NTLM Password Authentication." border="false":::
 
 ## References
 

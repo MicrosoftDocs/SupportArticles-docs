@@ -44,7 +44,7 @@ In Outlook for Microsoft 365, Microsoft Outlook 2016, or Microsoft Outlook 2013,
     > Upgrade in Progress  
     Your mailbox is currently being optimized as part of an upgrade to Outlook 2016. This one-time process may take more than 15 minutes to finish, and performance may be affected while the optimization is in progress.
 
-    ![account information](./media/metered-connection-warning/account-information.png)
+    :::image type="content" source="media/metered-connection-warning/account-information-warning.png" alt-text="Screenshot shows the Metered Connection Warning and Upgrade in Progress messages under Account Information.":::
 
 ## Resolution
 
@@ -152,4 +152,4 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 2. On the **File** menu, select **Office Account**.
 3. An **Update Options** item is displayed for Office Click-to-Run installations, but not for MSI-based installations.
 
-![Determine office version](./media/metered-connection-warning/office-version.png)
+ :::image type="content" source="media/metered-connection-warning/office-version.png" alt-text="Screenshot shows differences between Office Click-to-Run and MSI-based versions under Office Account.":::

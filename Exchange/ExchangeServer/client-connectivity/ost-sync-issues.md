@@ -49,7 +49,7 @@ Follow these steps in Outlook:
     - **Server folder contains**
     - **Offline folder contains**
 
-    :::image type="content" source="media/ost-sync-issues/synchronization-status.png" alt-text="Screenshot of the synchronization status":::
+    :::image type="content" source="media/ost-sync-issues/synchronization-status.png" alt-text="Screenshot shows the statistics for this folder under the Synchronization tab." border="false":::
 
 If synchronization is working correctly, the number of items in the **Server folder contains** field and the **Offline folder contains** field will be the same.
 
