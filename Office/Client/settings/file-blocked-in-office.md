@@ -50,7 +50,7 @@ To resolve this issue, try the following general resolutions to change the File 
     > [!NOTE]
     > Clear the option means allow user to open or save the file. Check the option means block the file.
 
-   :::image type="content" source="media/file-blocked-in-office/trust-center-window.png" alt-text="Screenshot of Trust Center window.":::
+   :::image type="content" source="media/file-blocked-in-office/trust-center-window.png" alt-text="Screenshot of the Trust Center window.":::
 
 4. Select **OK** two times.
 5. Try to open or save the file that was blocked again.
