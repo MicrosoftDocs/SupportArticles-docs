@@ -371,7 +371,7 @@ If the document is corrupted and none of the previous methods work, try to recov
 2. Right click the document and select **Open with**.
 3. Select *Notepad*:
 
-:::image type="content" source="media/damaged-documents-in-word/damaged-documents-in-word.png" alt-text="Screenshot of Opening the Word doc in Notepad.":::
+:::image type="content" source="media/damaged-documents-in-word/damaged-documents-in-word.png" alt-text="Screenshot of opening the Word doc in Notepad.":::
 
 4. The document will open in Notepad with extra code and text around the content.
    > [!NOTE]
