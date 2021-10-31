@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, davidg, dhook 
-ms.prod-support-area-path: User, computer, group, and object management
+ms.reviewer: kaushika, davidg, dhook
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to set a user's password with Ldifde
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes how to set a user's password by using the Ldifde tool.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;263991
+_Original KB number:_ &nbsp; 263991
 
 ## More information
 

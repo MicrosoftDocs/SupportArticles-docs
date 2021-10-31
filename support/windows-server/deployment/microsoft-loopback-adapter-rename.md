@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Installing the Microsoft Loopback Adapter in Windows
@@ -18,7 +18,7 @@ ms.technology: windows-server-deployment
 This article helps fix an issue where you can't find the Microsoft Loopback Adapter.
 
 _Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2777200
+_Original KB number:_ &nbsp; 2777200
 
 ## Symptoms
 

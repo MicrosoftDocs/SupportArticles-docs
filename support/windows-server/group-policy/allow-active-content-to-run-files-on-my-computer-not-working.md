@@ -10,15 +10,15 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fmu
-ms.prod-support-area-path: Managing Internet Explorer settings through Group Policy
-ms.technology: windows-server-group-policy  
+ms.custom: sap:managing-internet-explorer-settings-through-group-policy, csstroubleshoot
+ms.technology: windows-server-group-policy
 ---
 # "Allow active content to run files on My Computer" Group Policy setting does not work as expected
 
 This article provides help to solve an issue where the **Allow active content to run files on My Computer** Group Policy setting doesn't work.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2002093
+_Original KB number:_ &nbsp; 2002093
 
 ## Symptoms
 

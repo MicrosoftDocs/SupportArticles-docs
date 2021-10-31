@@ -1,5 +1,5 @@
 ---
-title: Enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation
+title: Enable support for TLS 1.2 in your environment for upcoming Azure AD TLS 1.0/1.1 deprecation
 description: Describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
 ms.date: 05/26/2021
 ms.prod-support-area-path: 
@@ -133,7 +133,7 @@ Use these guidelines:
 - Update NET Framework 4.6 and earlier versions to support TLS 1.2 and TLS 1.1.
 
   For more information, see [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies).
-- If you're using .NET Framework 4.5.2 or 4.5.1 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=42883).
+- If you're using .NET Framework 4.5.2 or 4.5.1 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=2898850).
 
   - Also see [Microsoft Security Advisory 2960358](/security-updates/SecurityAdvisories/2015/2960358)
 
@@ -158,6 +158,7 @@ Set the following registry DWORD values on any computer that communicates across
 
 For more information, see the following articles:
 
+- [TLS Cipher Suites supported by Azure AD](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)
 - [Solving the TLS 1.0 Problem - Security documentation](/security/engineering/solving-tls1-problem)

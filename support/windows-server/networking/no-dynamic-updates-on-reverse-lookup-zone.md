@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # No dynamic updates on a classless reverse lookup zone

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Data corruption and disk errors
+ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Change in the behavior of the format command in Windows Vista and later versions
@@ -18,7 +18,7 @@ ms.technology: windows-server-backup-and-storage
 This article discusses a change in the behavior of the format command in Windows Vista and later Windows versions.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Window 10 – all editions  
-_Original KB number:_ &nbsp;941961
+_Original KB number:_ &nbsp; 941961
 
 ## Introduction
 

@@ -139,7 +139,8 @@
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
-        "power-platform/**/*.md": "power-platform",
+        "power-platform/power-apps/*.md": "powerapps",
+        "power-platform/power-automate/*.md": "power-automate",
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
@@ -205,7 +206,12 @@
         "mem/configmgr/**/*.md": [ "ConfigMgr" ],
         "system-center/**/*.md": [ "System Center" ],
         "dynamics-365/**/*.md": [ "Dynamics 365" ],
-        "power-platform/**/*.md": [ "Power Platform" ]
+        "power-platform/power-apps/*.md": [ "Power Apps" ],
+        "power-platform/power-automate/*.md": [ "Power Automate" ]
+      },
+      "ms.search.scope":{
+        "dynamics-365/supply-chain/**/*.md": ["Core","Operations","Supply Chain","ShowInHelp"],
+        "dynamics-365/finance/**/*.md": ["Core","Operations", "Finance","ShowInHelp"]
       }
     },
 

@@ -56,7 +56,7 @@ If the extension has not failed on every instance, add new instances to the Virt
 
 ## Read logs on impacted instances
 
-To gain further insight on the cause of the error, sign in to the affected instances. Depending on the OS of the Virtual Machine Scale Set and the impacted extension, navigate to the appropriate logs and review the impacted time frame:
+To gain further insight into the cause of the error, sign in to the affected instances. Depending on the OS of the Virtual Machine Scale Set and the impacted extension, navigate to the appropriate logs and review the impacted time frame:
 
 - **Windows Virtual Machine Scale Sets**: *C:\WindowsAzure\logs\plugins\ExtensionName\Extension.log*
 - **Linux Virtual Machine Scale Sets**: */var/log/plugins/ExtensionName/Extension.log*

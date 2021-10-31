@@ -1,16 +1,16 @@
 ---
-title: Access checks fail because of AuthZ 
+title: Access checks fail because of AuthZ
 description: Addresses an issue in which AuthZ fails and returns an Access Denied error when an application does access checks in Windows Server.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-jesits
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # AuthZ fails with an Access Denied error when an application does access checks in Windows Server

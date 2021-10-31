@@ -31,7 +31,7 @@ The `IEnumerator` interface provides iterative capability for a collection that 
     }
     public void Reset()
     {
-        position = 0;
+        position = -1;
     }
     public object Current
     {
@@ -159,7 +159,7 @@ The following example demonstrates how to use these interfaces. In this example,
           //IEnumerable
           public void Reset()
           {
-              position = 0;
+              position = -1;
           }
           //IEnumerable
           public object Current

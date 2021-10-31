@@ -33,10 +33,10 @@ To work around these issues, use one of the following methods:
     > Outdated drivers are a common source of Windows Presentation Foundation (WPF) rendering issues.
 
 - Turn off hardware graphics acceleration to switch to software rendering. To do this, follow these steps:
-    1. In Visual Studio, click **Tools**, and then click **Options**.
+    1. In Visual Studio, click **Tools** > **Options**.
     2. In the **Options** dialog box, clear the **Automatically adjust visual experience based on client performance** check box. (Refer to the following screenshot for this step.)
 
-        ![Screenshot for clearing Automatically adjust visual experience based on client performance checkbox](./media/performance-crash-issue/enable-rich-client.png)
+        :::image type="content" source="media/performance-crash-issue/automatically-adjust-visual-experience-based-on-client-performance.png" alt-text="Screenshot of the Options window showing the Automatically adjust visual experience based on client performance checkbox is cleared.":::
 
     3. Clear the **Use hardware graphics acceleration if available** check box to prevent the use of hardware graphics acceleration.
 

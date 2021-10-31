@@ -2,15 +2,15 @@
 title: Give users access to Group Policy Objects
 description: Describes how to give users permission to access the Group Policy object if the Access Control List (ACL) has been modified so that Read and Apply permissions are restricted.
 ms.date: 10/19/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, ROBINGER 
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.reviewer: kaushika, ROBINGER
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to give users access to Group Policy Objects

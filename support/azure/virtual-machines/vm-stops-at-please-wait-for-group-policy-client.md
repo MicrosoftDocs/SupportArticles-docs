@@ -49,7 +49,7 @@ To resolve this problem, the memory dump will need to be analyzed. Collect the m
 1.	Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
 
     > [!note]
-    > If you are having trouble locating the memory.dmp file, try to use [non-maskable interrupt (NMI) calls in serial console](/azure/virtual-machines/troubleshooting/serial-console-windows#use-the-serial-console-for-nmi-calls) instead. You can follow the guide to [generate a crash dump file using NMI calls here](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump).
+    > If you are having trouble locating the memory.dmp file, try to use [non-maskable interrupt (NMI) calls in serial console](/azure/virtual-machines/troubleshooting/serial-console-windows#use-the-serial-console-for-nmi-calls) instead. You can follow the guide to [generate a crash dump file using NMI calls here](/windows/client-management/generate-kernel-or-complete-crash-dump).
 
 
 ## More information

@@ -7,7 +7,9 @@ ms.reviewer: bernawy
 ---
 # Error AADSTS650056 - Misconfigured application
 
-This article describes a problem in which you receive the error message "Error AADSTS650056 - Misconfigured application. This could be due to one of the following The client has not listed any permissions in the requested permissions in the client's application registration. Or, The admin has not consented in the tenant. Or, Check the application identifier in the request to ensure it matches the configured client application identifier. Please contact your admin to fix the configuration or consent on behalf of the tenant." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
+This article describes a problem in which you receive the following error message when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD):
+
+> Error AADSTS650056 - Misconfigured application. This could be due to one of the following: the client has not listed any permissions for '{name}' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: {id}. Please contact your admin to fix the configuration or consent on behalf of the tenant.
 
 ## Symptoms
 

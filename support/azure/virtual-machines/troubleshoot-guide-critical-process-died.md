@@ -13,8 +13,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 03/26/2020
-ms.author: v-mibufo
-
 ---
 
 # Windows Stop Error - #0x000000EF "Critical Process Died"
@@ -25,7 +23,7 @@ This article provides steps to resolve issues where a critical process dies duri
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays the error *#0x000000EF* with the message *Critical Process Died*.
 
-!["Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart. (##% complete) If you'd like to know more, you can search online later for this error: 0x000000EF"](media/troubleshoot-guide-critical-process-died/1.jpg)
+:::image type="content" source="media/troubleshoot-guide-critical-process-died/stop-code-critical-process-died.png" alt-text="Screenshot shows Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart." border="false":::
 
 ## Cause
 
@@ -33,7 +31,7 @@ Usually, this is due to a critical system process failing during boot. You can r
 
 ## Solution
 
-### Process Overview:
+### Process Overview
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.

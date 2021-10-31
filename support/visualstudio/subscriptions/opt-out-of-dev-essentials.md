@@ -11,7 +11,7 @@ This article describes how to opt out of Visual Studio Dev Essentials.
 _Original product version:_ &nbsp; Visual Studio Dev Essentials  
 _Original KB number:_ &nbsp; 4013962
 
-If you wish to opt out of Visual Studio Dev Essentials, please follow these steps:
+If you wish to opt out of Visual Studio Dev Essentials, follow these steps:
 
 1. Open an 'In Private' Internet Explorer browser session.
 
@@ -22,8 +22,8 @@ If you wish to opt out of Visual Studio Dev Essentials, please follow these step
 3. Enter the email address associated with the Visual Studio Dev Essentials program and click **Continue**.
 4. Depending on the email address you may get:
 
-   - Redirected to the "Microsoft Account" (MSA) password page
-   - Redirected to your companies "Work or School" password page
+   - Redirected to the "Microsoft Account" (MSA) password page.
+   - Redirected to your companies "Work or School" password page.
 
 5. Enter your password, or complete sign in requirements.
 6. Upon successful sign in, a list of current subscriptions will be displayed.
@@ -31,8 +31,8 @@ If you wish to opt out of Visual Studio Dev Essentials, please follow these step
 8. A Pop-up window will be displayed, select **Confirm**.
 
    > [!NOTE]
-   > Coming back to the Visual Studio Dev Essentials program is easy.  Simply follow steps 1 - 6, and select the box for 'Join Visual Studio Dev Essentials'.
+   > Coming back to the Visual Studio Dev Essentials program is easy. Simply follow steps 1 - 6, and select the box for "Join Visual Studio Dev Essentials."
 
-For More Information About Visual Studio Dev Essentials click [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/).
+For more information about Visual Studio Dev Essentials, click [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/).
 
-![Visual Studio](./media/opt-out-of-dev-essentials/visual-studio-image.png)
+ :::image type="content" source="./media/opt-out-of-dev-essentials/visual-studio-dev-essentials.png" alt-text="Screenshot of My Subscriptions page where you can see the Visual Studio Dev Essentials link.":::

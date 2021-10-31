@@ -526,6 +526,8 @@
       href: ./identity/password-reset-fails-error.md
     - name: Password-change protocols in Windows
       href: ./identity/password-change-mechanisms.md
+    - name: Poor performance when calling lookup functions
+      href: ./identity/poor-performance-calling-lookup-functions.md
     - name: Redirect users and computers containers
       href: ./identity/redirect-users-computers-containers.md
     - name: Rename an item after replication collision
@@ -994,7 +996,7 @@
       href: ./deployment/fix-windows-update-errors.md
     - name: How to block user access to Windows Update
       href: ./deployment/block-user-access-windows-update.md
-    - name: How To use the Recovery Consol
+    - name: How to use the Recovery Console
       href: ./deployment/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
@@ -1724,12 +1726,14 @@
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
       href: ./networking/system-compatibility-with-dnssec-enabled-root-server.md
-    - name: Overview of TCP/IP performance
+    - name: "Part 1: TCP/IP performance overview"
       href: ./networking/overview-of-tcpip-performance.md
-    - name: PortQry version 2.0 features and functions
+    - name: "Part 2: TCP/IP performance underlying network issues"
+      href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
+    - name: "Part 3: TCP/IP performance known issues"
+      href: ./networking/tcpip-performance-known-issues.md
+    - name: Using the PortQry command-line tool
       href: ./networking/portqry-command-line-port-scanner-v2.md
-    - name: Portqry.exe command-line utility
-      href: ./networking/portqry-exe-command-line-utility.md
     - name: Process of the TCP three-way handshake
       href: ./networking/three-way-handshake-via-tcpip.md
     - name: Receive Window Auto-Tuning feature for HTTP traffic
@@ -1756,8 +1760,6 @@
       href: ./networking/automatic-metric-for-ipv4-routes.md
     - name: The default dynamic port range for TCP/IP has changed
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
-    - name: Troubleshoot TCP/IP performance issues about underlying network
-      href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Virtual machines lose network connectivity
@@ -1840,6 +1842,8 @@
       href: ./performance/memory-dump-file-options.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
+    - name: Stop code DRIVER_VERIFIER_DMA_VIOLATION
+      href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
       href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 0x109 on a VMWare virtual machine
@@ -1964,6 +1968,8 @@
       href: ./performance/slow-performance-file-server.md
   - name: System Hang
     items:
+    - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
+      href: ./performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md
     - name: Compress large registry hives
       href: ./performance/compress-bloated-registry.md
     - name: Description of Windows registry
@@ -1978,6 +1984,14 @@
   items:
   - name: 'Printing'
     href: ./printing/printing-overview.md
+  - name: Troubleshoot printing issues
+    items:
+    - name: Troubleshoot printing and best practices
+      href: ./printing/troubleshoot-printing-and-best-practices.md
+    - name: Troubleshoot printing scenarios
+      href: ./printing/troubleshoot-printing-scenarios.md
+    - name: Troubleshoot printing known issues
+      href: ./printing/troubleshoot-printing-known-issues.md
   - name: Management and Configuration of installing print drivers
     items:
     - name: Print Spooler errors
@@ -2226,6 +2240,8 @@
       href: ./remote/install-and-configure-the-external-connector.md
     - name: How to move Terminal Services CALs
       href: ./remote/move-terminal-services-client-access-licenses.md
+    - name: License attributes aren't updated
+      href: ./remote/license-attributes-not-updated-rdsh-server.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
     - name: Remove Terminal Server licenses from RDP client
@@ -2408,6 +2424,8 @@
     items:
     - name: Enter-PSSession cmdlet fails
       href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
+    - name: CJK characters are garbled in PowerShell
+      href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
     - name: error code 0x800706BE
@@ -2716,6 +2734,8 @@
       href: ./windows-security/http-error-500-internal-server-error.md
     - name: Add SAN to secure LDAP certificate
       href: ./windows-security/add-san-to-secure-ldap-certificate.md
+    - name: Approval required for certificate renewals
+      href: ./windows-security/approval-required-certificate-renewals-autoenrollment.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./windows-security/cannot-publish-certificate-trusted-domain.md
     - name: Can't request certificate from web enrollment pages

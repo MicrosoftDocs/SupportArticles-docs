@@ -55,6 +55,27 @@ This is a passive collection of information that shouldn't affect the system.
 
 This scenario is similar to Quick performance analysis but allows capturing diagnostics information for longer duration.
 
+### HPC performance analysis
+
+This scenario is meant for troubleshooting issues on HPC size VMs, meaning H-Series and N-Series. It checks a VMs configuration against what the Azure HPC Platform team has tested and recommends. It also collects logs and diagnostics related to the status and configuration of the special hardware that is available on those VMs, including:
+
+- GPU Driver information
+
+- GPU hardware diagnostics
+
+- InfiniBand driver information and configuration
+
+- InfiniBand device diagnostics
+
+- Network configuration files
+
+- Performance tuning information
+
+>[!Note]
+>Some tools used by the HPC performance analysis scenario, such as cli commands that are packaged in with device drivers, are not present on all VMs. In such cases, those portions of the analysis will be skipped. Running this scenario does not install any software on VMs or make any other permanent changes.
+
+>[!Note]
+>Running the HPC scenario directly from the Azure Portal is not supported at this time, so PerfInsights must be downloaded and run from the command line to use it.
 ## What kind of information is collected by PerfInsights
 
 Information about the Linux virtual machine, operating system, block devices, high resource consumers, configuration, and various logs are collected. Here are more details:
@@ -63,9 +84,13 @@ Information about the Linux virtual machine, operating system, block devices, hi
   - Linux distribution and version
   - Kernel information
   - Driver information
+  - Azure HPC Driver VM Extension logs`*`
+  - SELinux configuration`*`
 
 - Hardware
   - PCI devices [`*`]
+  - Output of lscpu`*`
+  - System Management BIOS table dump`*`
 
 - Processes and memory
   - List of processes (task name, memory used, files opened)
@@ -73,11 +98,20 @@ Information about the Linux virtual machine, operating system, block devices, hi
   - Total, available, and free swap memory
   - Profiling capture of CPU and processes CPU usage at 5-second interval
   - Profiling capture of processes memory usage at 5-second interval
+  - User-limits for memory access`*`
+  - NUMA configuration`*`
+
+- GPU
+  - Nvidia SMI output`*`
+  - Nvidia DCGM Diagnostics`*`
+  - Nvidia debug dump`*`
 
 - Networking  
   - List of network adapters with adapters statistics
   - Network routing table
   - Opened ports and status
+  - InfiniBand Partition Keys`*`
+  - Output of ibstat`*`
 
 - Storage
   - Block devices list
@@ -108,6 +142,30 @@ Information about the Linux virtual machine, operating system, block devices, hi
 
 - [Azure virtual machine instance metadata](/azure/virtual-machines/windows/instance-metadata-service)
 
+`*` Only in HPC scenario
+
+### Performance diagnostics trace
+
+Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. Rules are displayed in the report under the Category -> Finding tab. 
+
+Each rule consists of the following:
+- Finding: Description of the finding.
+- Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation that provide more information on the finding and/or recommendation.
+- Impact Level: Represents the potential for having an impact on performance.
+
+The following cateogries of rules are currently supported:
+
+- High resource usage:
+    * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
+    * High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+    * High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+- Storage: Detects specific storage configurations.
+- Memory: Detects specific memory configurations.
+- GPU: Detects specific GPU configurations.
+- Network: Detects specific network settings.
+- System: Detects specific system settings. 
+
+
 >[!Note]
 >[`*`] PCI information is not yet collected on Debian and SLES distributions.
 > 
@@ -136,6 +194,9 @@ Information about the Linux virtual machine, operating system, block devices, hi
 
 >[!Note]
 >[`*`] Please refer to [Known issues](#known-issues) section
+
+>[!Note]
+>[`*`] The HPC scenario relies on the [HPCDiag](https://aka.ms/hpcdiag) tool, so check its support matrix for supported VM sizes and OSes. In particular, NDv4 size VMs aren't yet supported and reports for those VMs may show extraneous findings.
 
 ### Known issues
 
@@ -199,6 +260,12 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py -r vmslow -d 300S -a -t <StorageAccountName> -k <StorageAccountKey> -i <full resource Uri of the current VM>
     ```
 
+    You can use the below example to run the HPC performance analysis scenario for 1 mins and upload the result tar ball to the storage account:
+
+    ```bash
+    sudo python perfinsights.py -r hpc -d 60S -a -t <StorageAccountName> -k <StorageAccountKey> -i <full resource Uri of the current VM>
+    ```
+
     >[!Note]
     >Before running a scenario, PerfInsights prompts the user to agree to share diagnostic information and to agree to the EULA. Use **-a or --accept-disclaimer-and-share-diagnostics** option to skip these prompts.
     >
@@ -228,6 +295,19 @@ Review the recommendations and links for all high and medium findings. Learn abo
 
 ![Screenshot of PerfInsights Report CPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-cpu-tab.png)
 
+### GPU tab
+
+**GPU** tab provides information about findings that will be helpful in troubleshooting GPU-related issues.
+
+![Screenshot of PerfInsights Report GPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-gpu-tab.png)
+
+
+### Network tab
+
+**Network** tab provides information about network configuration and status. Information about network-related findings, including InfiniBand issues in the HPC scenario, can be found here.
+
+![Screenshot of Network tab](media/how-to-use-perfinsights-linux/perfinsights-linux-network-tab.png)
+
 ### Storage tab
 
 The **Findings** section displays various findings and recommendations related to storage.
@@ -239,9 +319,13 @@ The **Block Devices** and other related sections such as **Partitions**, **LVM**
 
 ### Linux tab
 
-The **Linux** tab contains information on the hardware and the operating system running in your VM. Details include a list of running processes and information about Guest Agent, PCI, CPU, Drivers, and LIS drivers.
+The **Linux** tab contains information on the hardware and the operating system running in your VM. Details include a list of running processes and information about Guest Agent, PCI, CPU, GPU, Drivers, and LIS drivers.
 
 ![Screenshot of Linux tab](media/how-to-use-perfinsights-linux/perfinsights-linux-tab.png)
+
+Or on a GPU-enabled VM:
+
+![Screenshot of GPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-linux-gpu-tab.png)
 
 ## Next steps
 

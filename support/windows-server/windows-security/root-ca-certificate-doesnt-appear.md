@@ -2,7 +2,7 @@
 title: Root CA certificate doesn't appear
 description: The root CA certificate configured for the Wired or Wireless Network policies does not appear in the GPO settings report if its subject contains only one name.
 ms.date: 09/25/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, milanmil
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Certificate used by Wired or Wireless Network policies is missing in GPO settings report

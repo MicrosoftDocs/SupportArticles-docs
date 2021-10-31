@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kimnle
-ms.prod-support-area-path: Partition and volume management
-ms.technology: windows-server-backup-and-storage 
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.technology: windows-server-backup-and-storage
 ---
 # You cannot select or format a hard disk partition when you try to install Windows
 

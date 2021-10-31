@@ -268,6 +268,8 @@
       href: ./deployment/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
     - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
+    - name: Certificates are missing after you update a device
+      href: ./deployment/certs-missing-after-device-update.md
     - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
@@ -557,9 +559,7 @@
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
-      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
-    - name: Configure client proxy server settings
-      href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md    
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
@@ -600,8 +600,6 @@
     items:
     - name: Fail to use apps that connect to Internet
       href: ./networking/use-authenticated-proxy-servers.md
-    - name: Use Group Policy to apply WinHTTP proxy settings
-      href: ./networking/use-group-policy-apply-winhttp-proxy-settings.md
   - name: WebClient and WebDAV
     items:
     - name: Can't access WebDAV Web folder
@@ -682,6 +680,8 @@
       href: ./performance/tablet-device-creates-minidump-file.md
   - name: No Boot (not BugChecks)
     items:
+    - name: Advanced troubleshooting Windows boot problems with LiveRE tool
+      href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
     - name: Changing ATA drive setting causes reboot loop

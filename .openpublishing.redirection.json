@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "troubleshoot/windows-server/networking/portqry-exe-command-line-utility.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/active-directory/remove-duplicate-mobile-device-management.md",
+      "redirect_url": "/troubleshoot/mem/intune/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
@@ -511,6 +521,41 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
+      "redirect_url": "/mem/intune/apps/app-protection-policies",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "support/mem/intune/app-protection-options-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/configure-app-protection-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/device-enroll-intune-app-management-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/lob-app-versioning.md",
+      "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/look-up-intune-licenses.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses-assign",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/deploy-windows-update-packages-as-win32-apps.md",
+      "redirect_url": "/mem/intune/apps/apps-win32-deploy-update-package",
+      "redirect_document_id": false
+    },     
+    {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
@@ -856,8 +901,63 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/windows-server/networking/lt2p-ipsec-ras-vpn-connections-fail",
-      "redirect_url": "support/windows-server/networking/rras-vpn-connections-fail-ms-chapv2-authentication.md",
+      "source_path": "support/windows-server/networking/lt2p-ipsec-ras-vpn-connections-fail.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/rras-vpn-connections-fail-ms-chapv2-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-ip-virtualization-not-work.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-ip-virtualization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/sql-server-windows-8-later-versions.md",
+      "redirect_url": "/troubleshoot/sql/general/use-sql-server-in-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/index.md",
+      "redirect_url": "/support/windows-hardware/drivers/welcome-windowshardware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/index.md",
+      "redirect_url": "/support/power-platform/power-apps/welcome-power-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/index.md",
+      "redirect_url": "/support/power-platform/power-automate/welcome-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/fraud-protection/index.md",
+      "redirect_url": "/support/dynamics-365/fraud-protection/welcome-fraud-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/index.md",
+      "redirect_url": "/support/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/index.md",
+      "redirect_url": "/support/dynamics-365/marketing/welcome-marketing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "troubleshoot/sql/performance/performance-consistency-issues.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "troubleshoot/sql/performance/filter-drivers-lead-to-sql-performance-consistency.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "troubleshoot/sql/admin/error-password-service-account-changed.md",
+      "redirect_url": "/troubleshoot/sql/admin/error-1069-service-cannot-start",
       "redirect_document_id": true
     }
   ]

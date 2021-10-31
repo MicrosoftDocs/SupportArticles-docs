@@ -98,6 +98,8 @@
   items:
     - name: Console appears to hang when loading drivers
       href: console-stops-responding.md
+    - name: Console crashes after upgrading to version 2107
+      href: console-crash-after-upgrade.md
     - name: Internal Error 2711.LP3076
       href: internal-error-2711-lp3076-during-console-installation.md
     - name: Microsoft.ConfigurationManagement has stopped working
@@ -162,6 +164,8 @@
   items:
     - name: Configuration Manager diagnostics
       href: diagnostics-sdp.md
+    - name: Failed devices on client health dashboard
+      href: failed-devices-client-health-dashboard.md
 - name: Discovery
   items:
     - name: lastLogonTimestamp isn't updated as expected
@@ -306,6 +310,8 @@
           href: management-points-fail-http-500-errors.md
         - name: Service connection point doesn't download updates
           href: service-connection-point-not-download-updates.md
+        - name: Troubleshoot state message processing performance issues
+          href: state-message-processing-performance.md
     - name: SMS Executive service
       items:
         - name: SMS_EXECUTIVE service crashes
@@ -394,6 +400,8 @@
           href: troubleshoot-software-update-deployments.md
     - name: Windows Server Update Services (WSUS)
       items:
+        - name: Decline superseded updates in WSUS
+          href: decline-superseded-updates.md
         - name: Deploy Windows Defender definition updates
           href: deploy-definition-updates-using-wsus.md
         - name: Error 80244007 when WSUS client scans for updates

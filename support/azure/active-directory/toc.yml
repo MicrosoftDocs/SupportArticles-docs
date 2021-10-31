@@ -11,6 +11,23 @@
     href: cant-connect-service-error-register-device.md
   - name: Understand Azure AD Connect 1.4 and device disappearance
     href: reference-connect-device-disappearance.md
+  - name: Sign-in and Multi-factor Authentication
+    items:
+    - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
+      href: authentication-fails-with-error.md
+
+  - name: Azure AD Hybrid Sync Agent Installation Issues
+    items:
+    - name: No privileges to install MSI
+      href: azure-ad-hybrid-sync-no-privileges-install-msi.md
+    - name: Cannot start service AADConnectProvisioningAgent
+      href: azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
+    - name: The gMSA is set to log on as Service
+      href: azure-ad-hybrid-sync-gmsa-set-logon-service.md
+    - name: There is no such object on the server
+      href: azure-ad-hybrid-sync-no-such-object-on-server.md
+    - name: Unable to create gMSA because KDS may not be running on domain controller
+      href: azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
 
 - name: App Integration and Development 
   items:
@@ -62,10 +79,10 @@
     href: method-invocation-failed-error.md
   - name: Password changes aren't saved
     href: pwd-change-not-save.md
+  - name: Pending devices
+    href: pending-devices.md
   - name: Perform a Workplace Join using DRS
     href: cant-perform-workplace-join.md
-  - name: Remove duplicate mobile device management objects
-    href: remove-duplicate-mobile-device-management.md
   - name: Remove user from recycle bin
     href: remove-msoluser-user-not-found-recyclebin.md
   - name: Set up your enterprise for working remotely FAQ

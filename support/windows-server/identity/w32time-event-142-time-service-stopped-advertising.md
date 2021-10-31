@@ -1,16 +1,16 @@
 ---
-title: Event 142 time service stopped advertising 
+title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Event 142: The time service has stopped advertising as a time source
@@ -55,10 +55,10 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
      \<TimeCreated SystemTime="YYYY-MM-DDTHH:MM:SS.MSZ" />  
      \<EventRecordID>3965\</EventRecordID>  
      \<Correlation />  
-     \<Execution ProcessID="<PID>" ThreadID="\<TID>" />  
+     \<Execution ProcessID="\<PID\>" ThreadID="\<TID\>" />  
      \<Channel>System\</Channel>  
      \<Computer>`DC1.contoso.com`\</Computer>  
-     \<Security UserID="\<SID>" />  
+     \<Security UserID="\<SID\>" />  
    \</System>  
    \<EventData Name="TMP_EVENT_STOP_ADVERTISING">  
    \</EventData>  
@@ -150,10 +150,10 @@ Microsoft-Windows-Time-Service Event 142 was logged on `\\DC2.contoso.com`. The 
      \<TimeCreated SystemTime="YYYY-MM-DDTHH:MM:SS.MSZ" />  
      \<EventRecordID>3965</EventRecordID>  
      \<Correlation />  
-     \<Execution ProcessID="<PID>" ThreadID="\<TID>" />  
+     \<Execution ProcessID="\<PID\>" ThreadID="\<TID\>" />  
      \<Channel>System\</Channel>  
      \<Computer>DC1.contoso.com\</Computer>  
-     \<Security UserID="<SID>" />  
+     \<Security UserID="\<SID\>" />  
    \</System>  
    \<EventData Name="TMP_EVENT_STOP_ADVERTISING">  
    \</EventData>  

@@ -13,8 +13,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 03/25/2020
-ms.author: v-mibufo
-
 ---
 
 # Boot Error – This is not a Bootable Disk
@@ -25,9 +23,9 @@ This article provides steps to resolve issues where the disk isn't bootable in a
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you'll see that the screenshot displays a prompt with the message 'This is not a bootable disk. Please insert a bootable floppy and press any key to try again...'.
 
-   Figure 1
+Figure 1
 
-   ![Figure 1 shows the message *"This is not a bootable disk. Please insert a bootable floppy and press any key to try again..."*](media/troubleshoot-guide-not-bootable-disk/1.jpg)
+:::image type="content" source="media/troubleshoot-guide-not-bootable-disk/not-bootable-disk.png" alt-text="Screenshot of the message.":::
 
 ## Cause
 
@@ -65,31 +63,31 @@ Generation 1 VMs should first verify that the OS partition, which holds the BCD 
 
    Figure 2
 
-   ![Figure 2 shows the *DISKPART* window showing the output of list disk command, Disk 0 and Disk 1 displayed in the table.  Also shows output of the sel disk 1 command, Disk 1 is the selected disk](media/troubleshoot-guide-not-bootable-disk/2.jpg)
+   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
 
 5. Once the disk is selected, enter *list partition* to list the partitions of the selected disk.
 6. Once the boot partition is identified, enter *sel partition #* to select the partition.  Usually the boot partition will be around 350 MB in size.  See Figure 3, where Partition 1 is the boot partition.
 
    Figure 3
 
-   ![Figure 3 shows the *DISKPART* window with the output of the *list partition* command. Partition 1 and Partition 2 are displayed in the table. It also shows the output of the *sel partition 1* command, when Partition 1 is the selected disk.](media/troubleshoot-guide-not-bootable-disk/3.jpg)
+   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
 
 7. Enter 'detail partition' to check the status of the partition. See Figure 4, where the partition is *Active: No*, or Figure 5, where the partition is 'Active: Yes'.
 
    Figure 4
 
-   ![Figure 4 shows the *DISKPART* window with the output of the *detail partition* command, when Partition 1 is set to *Active: No*](media/troubleshoot-guide-not-bootable-disk/4.jpg)
+   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/detail-partition-active-no.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active No.":::
 
    Figure 5
 
-   ![Figure 5 shows the *DISKPART* window with the output of the *detail partition* command, when Partition 1 is set to *Active:  Yes*.](media/troubleshoot-guide-not-bootable-disk/5.jpg)
+   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/detail-partition-active-yes.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active Yes.":::
 
 8. If the partition is **Not Active**, enter *active* to change the *Active* flag.
 9. Check that the status change was done properly by typing *detail partition*.
 
    Figure 6
 
-   ![Figure 6 shows the diskpart window with the output of *detail partition* command, when Partition 1 is set to *Active: Yes*](media/troubleshoot-guide-not-bootable-disk/6.jpg)
+   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/detail-partition-active-yes.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active Yes.":::
 
 10. Enter *exit* to close the DISKPART tool and save your configuration changes.
 
@@ -100,8 +98,7 @@ Generation 1 VMs should first verify that the OS partition, which holds the BCD 
 
    `chkdsk <DRIVE LETTER>: /f`
 
-   Adding the '/f' command option will fix any errors on the disk. Make 
-sure to replace <DRIVE LETTER> with the letter of the attached OS VHD.
+   Adding the '/f' command option will fix any errors on the disk. Make sure to replace \<DRIVE LETTER\> with the letter of the attached OS VHD.
 
 ### Recommended: Before you rebuild the VM, enable serial console and memory dump collection
 

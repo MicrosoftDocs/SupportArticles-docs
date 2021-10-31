@@ -103,7 +103,7 @@ After you apply certain kernel changes (such as a kernel upgrade) to a Linux vir
 ## Resolution
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To recover the Linux VM on Azure, you must either install a newer kernel or roll back to an earlier version manually by using one of the following repair options.
 
@@ -118,7 +118,7 @@ Roll back the kernel, and start from a previous working setup by editing the con
 
 #### Repair option 2
 
-Install or reinstall a kernel by attaching the affected VM operating system disk to a temporary new VM, and then running a tool such as apt-get, `Yellowdog Updater Modified` (YUM), or `Zypper`. For more information, see [Linux Recovery: Using CHROOT steps to recover VMs that are not accessible](https://docs.microsoft.com/archive/blogs/linuxonazure/linux-recovery-using-chroot-steps-to-recover-vms-that-are-not-accessible).
+Install or reinstall a kernel by attaching the affected VM operating system disk to a temporary new VM, and then running a tool such as apt-get, `Yellowdog Updater Modified` (YUM), or `Zypper`. For more information, see [Linux Recovery: Using CHROOT steps to recover VMs that are not accessible](/archive/blogs/linuxonazure/linux-recovery-using-chroot-steps-to-recover-vms-that-are-not-accessible).
 
 > [!NOTE]
 > This second option may be the best way to do the repair because you don't have to edit files manually.
@@ -180,15 +180,15 @@ To change the boot loader (grub.conf) and force the Linux VM to load a different
 
 #### Method 1: Serial console
 
-The serial console is the fastest method to resolve this issue. This allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you have met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](https://docs.microsoft.com/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  After you have access to the serial console, go to the [mitigation steps](#mitigation-steps).  After you complete the mitigation steps, restart the VM.
+The serial console is the fastest method to resolve this issue. This allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you have met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  After you have access to the serial console, go to the [mitigation steps](#mitigation-steps).  After you complete the mitigation steps, restart the VM.
 
 #### Method 2: Offline repair
 
 If the serial console isn't enabled on your VM, or if it doesn't work, you can repair the system offline by following these steps:
 
-1. Attach the system disk of the VM as a data disk to a recovery VM (any working Linux VM). To do it, [use CLI commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager).
+1. Attach the system disk of the VM as a data disk to a recovery VM (any working Linux VM). To do it, [use CLI commands](/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager).
 2. Follow the steps in the mitigation section.
-3. Unmount and detach the original virtual hard disk, and then create a VM from the original system disk. To do it, [use CLI commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager).
+3. Unmount and detach the original virtual hard disk, and then create a VM from the original system disk. To do it, [use CLI commands](/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager).
 
 #### Mitigation steps
 

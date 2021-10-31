@@ -9,30 +9,39 @@ metadata:
   services: virtual-machine
   ms.service: virtual-machine #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  author: v-miegge  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/18/2020
+  ms.date: 08/26/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
-  # Card (optional)
+
+  # Card
+  - title: Create and manage Virtual machines
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Documentation for creating and managing VMs
+            url: https://docs.microsoft.com/azure/virtual-machines/
+
+  # Card
   - title: Troubleshoot deployment failures
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
-            url: allocation-failure.md
+            url: ./allocation-failure.md
           - text: Troubleshoot deployment issues when creating a new virtual machine in Azure
-            url: troubleshoot-deployment-new-vm-windows.md
+            url: ./troubleshoot-deployment-new-vm-windows.md
           - text: Resolve errors for invalid template
             url: /azure/azure-resource-manager/templates/error-invalid-template
           - text: Resolve errors for SKU not available
-            url: /azure/azure-resource-manager/templates/error-invalid-template
+            url: /azure/azure-resource-manager/templates/error-sku-not-available
 
-  # Card (optional)
+  # Card
   - title: VM deployment guidance
     linkLists:
       - linkListType: how-to-guide
@@ -53,7 +62,7 @@ landingContent:
           - text: Troubleshoot Azure VM RDP connection issues by Event ID
             url: ./event-id-troubleshoot-vm-rdp-connecton.md
           - text: Troubleshoot authentication errors when you use RDP to connect to Azure VM
-            url: /troubleshoot/azure/virtual-machines/cannot-connect-rdp-azure-vm
+            url: ./cannot-connect-rdp-azure-vm.md
           - text: VM guest network card is disabled
             url: ./troubleshoot-rdp-nic-disabled.md
           
@@ -109,7 +118,7 @@ landingContent:
           - text:  Diagnose and recover from boot failures after a restart
             url: https://azure.microsoft.com/blog/boot-diagnostics-for-virtual-machines-v2/
           - text:  Understand planned maintenance for virtual machines in Azure
-            url: /azure/virtual-machines/maintenance-and-updates?bc=/azure/virtual-machines/windows/breadcrumb/toc.json&toc=/azure/virtual-machines/windows/toc.json
+            url: /azure/virtual-machines/maintenance-and-updates
           - text:  Azure VM startup is stuck at Windows Update
             url: ./troubleshoot-stuck-updating-boot-error.md
 
@@ -133,8 +142,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text:  Troubleshooting Azure disk encryption
-            url: /azure/security/fundamentals/azure-disk-encryption-vms-vmss
-          - text:  Azure disk encryption FAQ
             url: /azure/security/fundamentals/azure-disk-encryption-vms-vmss
           - text:  How to troubleshoot Azure Extensions
             url: /azure/virtual-machines/extensions/troubleshoot
@@ -160,11 +167,3 @@ landingContent:
             url: /azure/virtual-machines/extensions/diagnostics-windows
           - text:  Custom Script Extension for Windows
             url: /azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks
-                    
-   # Card
-  - title: Backup and restore
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Troubleshoot Azure virtual machine backup in Azure Portal
-            url: /azure/backup/backup-azure-vms-troubleshoot

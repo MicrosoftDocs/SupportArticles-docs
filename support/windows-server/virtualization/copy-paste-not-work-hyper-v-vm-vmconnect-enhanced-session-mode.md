@@ -3,14 +3,14 @@ title: Copy-and-paste operations don't work when you connect to a Hyper-V virtua
 description: Describes an issue in which clipboard file copy redirection may not work as expected when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode. Provides a resolution.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevepar, eltons
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
