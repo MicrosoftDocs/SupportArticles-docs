@@ -28,57 +28,57 @@ When you try to start Outlook 2016, Outlook 2013 or Outlook 2010 on a computer t
 
 ### Outlook 2016 (MSI) on Windows 8
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/activation-wizard.png" alt-text="Activation Wizard" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/activation-wizard.png" alt-text="Screenshot of Microsoft Office Activation Wizard window." border="false":::
 
 > Activation Wizard
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/your-trial-has-expired-error.png" alt-text="Your trial has expired error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/your-trial-has-expired-error.png" alt-text="Screenshot of Your trial has expired error details." border="false":::
 
 > Your trial has expired. Most of the features of Outlook have bene disabled. Choose an option below to reactivate.
 
 ### Outlook 2016 (Click-to-Run) or Outlook 2013 (Click-to-Run) on Windows 8  
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/outlook-has-run-into-an-error.jpg" alt-text="Outlook has run into an error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/outlook-has-run-into-an-error.png" alt-text="Screenshot of Outlook has run into an error details." border="false":::
 
 > We're sorry, but Outlook has run into an error that is preventing it from working correctly. Outlook will need to be closed as a result. Would you like us to repair now?
 
 ### Outlook 2013 (MSI) on Windows 8
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/config-progress.jpg" alt-text="Configuring Microsoft Office Professional Plus 2013 error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/config-progress.png" alt-text="Screenshot of Configuring Microsoft Office Professional Plus 2013 error details." border="false":::
 
 > Configuring Microsoft Office Professional Plus 2013...
 
 Or
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/cannot-verify-the-license-for-this-product-error.png" alt-text="Microsoft Office cannot verify the license for this product error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/cannot-verify-the-license-for-this-product-error.png" alt-text="Screenshot of Microsoft Office cannot verify the license for this product error details." border="false":::
 
 > Microsoft Office cannot verify the license for this product. You should repair the Office program by using Control Panel.
 
 ### Outlook 2016 (Click-to-Run or MSI) on Windows 7
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/0xc000001d.png" alt-text="The application was unable to start correctly (0xc000001d) error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/0xc000001d.png" alt-text="Screenshot of The application was unable to start correctly (0xc000001d) error details." border="false":::
 
 > The application was unable to start correctly (0xc000001d). Click OK to close the application.
 
 ### Outlook 2013 (Click-to-Run or MSI) on Windows 7
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/you-need-to-create-a-microsoft-outlook-profile.jpg" alt-text="You need to create a Microsoft Outlook profile error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/you-need-to-create-a-microsoft-outlook-profile.png" alt-text="Screenshot of You need to create a Microsoft Outlook profile error details." border="false":::
 
 > You need to create a Microsoft Outlook profile. In Microsoft Windows, go to the Control Panel and open Mail. Click Show Profiles, and then click Add.
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/cannot-start-microsoft-outlook-error.jpg" alt-text="Cannot start Microsoft Outlook error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/cannot-start-microsoft-outlook-error.png" alt-text="Screenshot of Cannot start Microsoft Outlook error details." border="false":::
 
 > Cannot start Microsoft Outlook. Cannot open the Outlook window. The server is not available. Contact your administrator if this condition persists.
 
 ### Outlook 2010 on Windows 8.1 or Windows 8  
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/disconnected.jpg" alt-text="Disconnected status" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/disconnected.png" alt-text="Screenshot of Disconnected status in the status bar." border="false":::
 
 > Disconnected
 
 ### Outlook 2010 on Windows 7
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/no-profiles-has-been-created-error.jpg" alt-text="No Microsoft Outlook profiles have been created error details" border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/no-profiles-has-been-created-error.png" alt-text="Screenshot of No Microsoft Outlook profiles have been created error details." border="false":::
 
 > No Microsoft Outlook profiles have been created. In Microsoft Windows, click the Start button, and then click Control Panel. Click User Accounts, and then click Mail. Click Show Profiles, and then click Add.
 
@@ -107,12 +107,12 @@ Disable compatibility mode by using the following steps for the appropriate Outl
 2. Right-click Outlook.exe, and then select **Properties**.
 3. Under the **Compatibility** tab, clear the **Run this program in compatibility mode for** option.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/clear-run-this-program-in-compatibility-mode-for-option.png" alt-text="Screenshot 1 for Outlook 2016 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/clear-run-this-program-in-compatibility-mode-for-option.png" alt-text="Screenshot of Compatibility tab in Outlook Properties." border="false":::
 
 4. Select **Change settings for all users**.
 5. Under the **Compatibility for all users tab**, clear the **Run this program in compatibility mode for** option.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting.png" alt-text="Screenshot 2 for Outlook 2016 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting.png" alt-text="Screenshot of Compatibility for all users settings." border="false":::
 
 6. Select **OK** two times.
 
@@ -133,15 +133,15 @@ Disable compatibility mode by using the following steps for the appropriate Outl
 2. Right-click Outlook.exe,  and then select **Troubleshoot compatibility**.
 3. Select **Troubleshoot Program**.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/troubleshoot-program.png" alt-text="Screenshot 1 for Outlook 2013 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/troubleshoot-program.png" alt-text="Screenshot for Outlook 2013 Compatibility mode setting." border="false":::
 
 4. Clear all options, and then select **Next**.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/clear-all-options.png" alt-text="Screenshot 2 for Outlook 2013 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/clear-all-options.png" alt-text="Screenshot of problems selection in Outlook 2013 Compatibility mode setting." border="false":::
 
 5. Select the third option, **No, I am done investigating the problem...**, and then select **Next**.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/select-the-third-option.png" alt-text="Screenshot 3 for Outlook 2013 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/select-the-third-option.png" alt-text="Screenshot of try again option in Outlook 2013 Compatibility mode setting." border="false":::
 
 6. Select **Close**.
 
@@ -162,12 +162,12 @@ Disable compatibility mode by using the following steps for the appropriate Outl
 2. Right-click **Outlook.exe**, select **Properties**.
 3. Under the **Compatibility** tab, clear the **Run this program in compatibility mode for** option:
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting-1.png" alt-text="Screenshot 4 for Outlook 2013 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting-1.png" alt-text="Screenshot of Compatibility tab in Outlook Properties in Outlook 2013." border="false":::
 
 4. Select **Change settings for all users**.
 5. On the **Compatibility for all users** tab, clear the **Run this program in compatibility mode for** option.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting-2.png" alt-text="Screenshot 5 for Outlook 2013 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting-2.png" alt-text="Screenshot of Compatibility for all users settings in Outlook 2013." border="false":::
 
 6. Select **OK** two times.
 
@@ -181,12 +181,12 @@ Disable compatibility mode by using the following steps for the appropriate Outl
 2. Right-click Outlook.exe, and then select **Properties**.
 3. Under the **Compatibility** tab, clear the **Run this program in compatibility mode for** option.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting-for-outlook-2010.png" alt-text="Screenshot 1 for Outlook 2010 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-mode-setting-for-outlook-2010.png" alt-text="Screenshot of Compatibility tab in Outlook Properties in Outlook 2010." border="false":::
 
 4. Select **Change settings for all users**.
 5. Under the **Compatibility for all users** tab, clear the **Run this program in compatibility mode for** option.
 
-   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-for-all-user-tab.png" alt-text="Screenshot 2 for Outlook 2010 Compatibility mode setting" border="false":::
+   :::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/compatibility-for-all-user-tab.png" alt-text="Screenshot of Compatibility for all users settings in Outlook 2010." border="false":::
 
 6. Select **OK** two times.
 

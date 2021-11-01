@@ -111,13 +111,14 @@ Because there are four possible causes of this problem, follow these steps to de
 
         This value corresponds to the **PR_EXTENDED_RULE_SIZE_LIMIT** property. After you type this value into the **Property Tag** field, the remaining fields in the **Property Tag Editor** should automatically fill in to match the values that are shown in the following screenshot:
 
-        ![Screenshot of Property Tag Editor dialog box](./media/outlook-error-over-junk-emial-list-limit/property-tag-editor-details.jpg)
+        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/property-tag-editor-details.png" alt-text="Screenshot of Property Tag Editor dialog box." border="false":::
+
 
     10. Click **OK** in the **Property Tag Editor** dialog box.
     11. Click **OK** in the **Extra Properties** dialog box.
     12. With the mailbox selected in the top pane, locate and select the **PR_EXTENDED_RULE_SIZE_LIMIT** property in the bottom pane, as in the following screenshot:
 
-        ![Screenshot of selecting PR_EXTENDED_RULE_SIZE_LIMIT property](./media/outlook-error-over-junk-emial-list-limit/select-pr-extended-rule-size-limit-property.JPG)
+        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/select-pr-extended-rule-size-limit-property.png" alt-text="Screenshot of selecting PR_EXTENDED_RULE_SIZE_LIMIT property.":::
 
         The value of this property as displayed in the **Value** column. In this screenshot, the default limit of 522240 is being used.
 
@@ -143,7 +144,7 @@ Because there are four possible causes of this problem, follow these steps to de
 
 3. If the `Max Extended Rule Size` registry value is configured correctly, and there are not many entries in the Safe Senders, Blocked Senders, and Safe Recipients lists, the problem may involve the Trust e-mail from my Contacts setting in Outlook. This setting is shown in the following screenshot:
 
-    ![Screenshot of the Also trust e-mail from my Contacts option](./media/outlook-error-over-junk-emial-list-limit/also-trust-email-from-my-contacts-option-enabled.jpg)
+    :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/also-trust-email-from-my-contacts-option-enabled.png" alt-text="Screenshot of the Also trust e-mail from my Contacts option." border="false":::
 
     If this option is enabled, and you have a large number of contacts in your Contacts folder, you may unintentionally exceed the default 510-KB limit on your mailbox. When this option is enabled, Outlook tries to add all the email addresses for your contacts to the Safe Senders list. If you clear this check box, and the problem no longer occurs, you can either leave this option disabled or use the `Max Extended Rule Size` registry value on your Exchange server to increase the default limit.
 
@@ -170,20 +171,20 @@ Because there are four possible causes of this problem, follow these steps to de
     6. In the **Choose Profile** dialog box, select the Online mode profile, and then click **OK**.
     7. In the list of accounts, double-click the entry that has the email address for the mailbox.
 
-        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/double-click-email-address-for-mailbox.jpg" alt-text="Screenshot of selecting the email address for the mailbox.":::
+        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/double-click-email-address-for-mailbox.png" alt-text="Screenshot of selecting the email address for the mailbox.":::
     8. Expand **Root Container**, and then expand **Top of Information Store**.
     9. Right-click the **Inbox** folder, and then click **Open associated contents table**.
 
-        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/select-open-associated-contents-table.jpg" alt-text="Screenshot of clicking Open associated contents table.":::
+        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/select-open-associated-contents-table.png" alt-text="Screenshot of clicking Open associated contents table.":::
     10. In the **Inbox** dialog box, locate and select the message whose **Subject** is *Junk E-mail Rule*.
     11. In the bottom pane, locate and select the **PR_RULE_MSG_STATE** property.
 
-        ![Screenshot of selecting the PR_RULE_MSG_STATE property](./media/outlook-error-over-junk-emial-list-limit/select-pr-rule-msg-state-property.jpg)
+        ![Screenshot of selecting the PR_RULE_MSG_STATE property](./media/outlook-error-over-junk-emial-list-limit/select-pr-rule-msg-state-property.png)
 
         The default value of the **PR_RULE_MSG_STATE** property is 49 (decimal) as shown in this screenshot. If you do not see a value of 49 for this property, go on to step l.
     12. Right-click **PR_RULE_MSG_STATE** and then click **Delete property**.
 
-        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/delete-property-option.jpg" alt-text="Screenshot of selecting Delete property option.":::
+        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/delete-property-option.png" alt-text="Screenshot of selecting Delete property option.":::
     13. Click **OK** when you're prompted to delete the property.
     14. Close all windows that are open in MFCMAPI.
     15. Start Outlook.

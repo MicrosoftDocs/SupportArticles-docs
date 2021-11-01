@@ -58,6 +58,6 @@ To add a Blocked Senders domain in Outlook, follow these steps:
 3. On the **Blocked Senders** tab, select **Add**.
 4. Enter the domain entry that you want, and include an @ sign at the beginning of the entry if you want it to also appear in OWA, as in the following figure.
 
-   :::image type="content" source="media/blocked-senders-entries--are-missing-in-owa/add-address-or-domain.jpg" alt-text="Blocked sender Add dialog" border="false":::
+   :::image type="content" source="media/blocked-senders-entries--are-missing-in-owa/add-address-or-domain.png" alt-text="Screenshot of Blocked sender Add dialog box." border="false":::
 
 5. Select **OK**, and then select **OK** again to exit the **Junk E-mail Options** dialog box.
