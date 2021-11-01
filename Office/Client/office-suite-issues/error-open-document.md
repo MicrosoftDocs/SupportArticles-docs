@@ -33,7 +33,7 @@ When you try to open a file in any Microsoft Office program that’s listed in t
 
 > A DDE error has occurred, and a description of the error cannot be displayed because it is too long. If the filename or path is long, try renaming the file or copying it to a different folder.
 
-:::image type="content" source="media/error-open-document/error.png" alt-text="Screenshot of the error message." border="false:::
+:::image type="content" source="media/error-open-document/error.png" alt-text="Screenshot of the error message." border="false":::
 
 > [!NOTE]
 > This issue occurs when you open a file from a mapped drive, a UNC path, or a URL (web address).
