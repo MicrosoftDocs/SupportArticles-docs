@@ -179,7 +179,7 @@ Because there are four possible causes of this problem, follow these steps to de
     10. In the **Inbox** dialog box, locate and select the message whose **Subject** is *Junk E-mail Rule*.
     11. In the bottom pane, locate and select the **PR_RULE_MSG_STATE** property.
 
-        ![Screenshot of selecting the PR_RULE_MSG_STATE property](./media/outlook-error-over-junk-emial-list-limit/select-pr-rule-msg-state-property.png)
+        :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/select-pr-rule-msg-state-property.png" alt-text="Screenshot of selecting the PR_RULE_MSG_STATE property.":::
 
         The default value of the **PR_RULE_MSG_STATE** property is 49 (decimal) as shown in this screenshot. If you do not see a value of 49 for this property, go on to step l.
     12. Right-click **PR_RULE_MSG_STATE** and then click **Delete property**.
