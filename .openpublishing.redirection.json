@@ -956,7 +956,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "troubleshoot/sql/admin/error-password-service-account-changed.md",
+      "source_path": "support/sql/admin/error-password-service-account-changed.md",
       "redirect_url": "/troubleshoot/sql/admin/error-1069-service-cannot-start",
       "redirect_document_id": true
     }
