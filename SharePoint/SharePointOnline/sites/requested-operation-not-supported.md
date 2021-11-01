@@ -19,7 +19,7 @@ appliesto:
 
 # Site deletion error: “The requested operation is not supported for site”  
 
-When you try to delete a site using the Remove-SPOSite command in the SharePoint Management shell, you encounter the following error:
+When you try to delete a site using the `Remove-SPOSite` command in the SharePoint Management shell, you encounter the following error:
 
 > The requested operation is not supported for site
 
