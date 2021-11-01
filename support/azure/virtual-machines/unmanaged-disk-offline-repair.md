@@ -94,19 +94,19 @@ If the disks are unmanaged, the command will generate no output. If the disks ar
 3. In the Storage Explorer navigation pane, expand the appropriate subscription.
 4. Select the storage account in which the VHD is located, and then select the appropriate container for the disk. By default, unmanaged OS disks are stored in the **vhds (Leased)** container.
     
-:::image type="content" source="media/unmanaged-disk-offline-repair/storage-explorer-find-disk.png" alt-text="Screenshot of Azure Storage Explorer with the storage accounts container and the v h d s leased container both highlighted in the navigation tree.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/storage-explorer-find-disk.png" alt-text="Screenshot of Azure Storage Explorer with the storage accounts container and the v h d s leased container both highlighted in the navigation tree.":::
 
 5. In the right pane, select the VHD that's attached to the source VM that you want to repair, and then select **Copy** at the top. Notice that the copied disk can be pasted only into a different blob container.
     
-:::image type="content" source="media/unmanaged-disk-offline-repair/storage-explorer-copy-disk.png" alt-text="Screenshot of Azure Storage Explorer showing a disk selected with the Copy button highlighted.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/storage-explorer-copy-disk.png" alt-text="Screenshot of Azure Storage Explorer showing a disk selected with the Copy button highlighted.":::
 
 6. Create a new blob container by right-clicking **Blob Container** in the navigation pane, and then selecting **Create Blob Container**. Assign the new blob container a name of your choice, such as "disk-copies."
     
-:::image type="content" source="media/unmanaged-disk-offline-repair/create-blob-container.png" alt-text="Sreenshot of Azure Storage Explorer showing the shortcut menu for Blob Containers in the navigation menu, with Create Blob Container highlighted.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/create-blob-container.png" alt-text="Sreenshot of Azure Storage Explorer showing the shortcut menu for Blob Containers in the navigation menu, with Create Blob Container highlighted.":::
 
 7. Select **Paste** to paste the copied disk into the new blob container.
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/paste-unmanaged.png" alt-text="Screenshot of Azure Storage Explorer with the Paste button highlighted.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/paste-unmanaged.png" alt-text="Screenshot of Azure Storage Explorer with the Paste button highlighted.":::
 
 ## Create a repair VM with an unmanaged OS disk
 
@@ -114,11 +114,11 @@ If the disks are unmanaged, the command will generate no output. If the disks ar
 This new VM will act as your repair VM, and its own OS disk must be unmanaged.
 2. On the **Basics** page of the "Create a Virtual Machine" wizard,  select **No infrastructure redundancy required** in the **Availability options** list.
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/create-vm-no-infrastructure.png" alt-text="Screenshot of the Basics page of the Create a virtual machine wizard, showing the option selected for no infrastructure required.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/create-vm-no-infrastructure.png" alt-text="Screenshot of the Basics page of the Create a virtual machine wizard, showing the option selected for no infrastructure required.":::
 
 3. On the Disks page, expand **Advanced** below **Data Disks** and then clear the **Use managed disks** check box. Select a storage account for the unmanaged OS disk. Do not select to attach an existing disk.
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/create-vm-no-managed.png" alt-text="Screenshot of the Disks page of the Create a virtual machine wizard, with the use managed disk option cleared.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/create-vm-no-managed.png" alt-text="Screenshot of the Disks page of the Create a virtual machine wizard, with the use managed disk option cleared.":::
 
 4. Complete the "Create a Virtual Machine" wizard by specifying configuration details that are appropriate for your organization.
 
@@ -127,22 +127,22 @@ This new VM will act as your repair VM, and its own OS disk must be unmanaged.
 1. In the Azure portal, open the **Disks** blade for the new repair VM that you just created. 
 2. Select **+ Add data disk**.
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/add-data-disk.png" alt-text="Screenshot of the Disks blade of the repair VM in Azure portal, with the Add data disk button highlighted.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/add-data-disk.png" alt-text="Screenshot of the Disks blade of the repair VM in Azure portal, with the Add data disk button highlighted.":::
 
 3. On the **Attach Unmanaged Disk** page, select **Existing blob** as the **Source type**.
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/attach-unmanaged-existing-blob.png" alt-text="Screenshot of the attach unmanaged disk window with the existing blob option selected.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/attach-unmanaged-existing-blob.png" alt-text="Screenshot of the attach unmanaged disk window with the existing blob option selected.":::
 
 4. Beneath **Source blob**, select **Browse**, and then browse to select the OS disk copy that you created earlier.
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/browse-to-existing-blob.png" alt-text="Screenshot of the attach unmanaged disk window with the browse button highlighted.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/browse-to-existing-blob.png" alt-text="Screenshot of the attach unmanaged disk window with the browse button highlighted.":::
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/browse-to-unmanaged-disk.png" alt-text="Screenshot of the disk copies container with a disk selected and the Select button highlighted.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/browse-to-unmanaged-disk.png" alt-text="Screenshot of the disk copies container with a disk selected and the Select button highlighted.":::
 
 5. On the **Attach Unmanaged Disk** page, accept the default storage blob name, and then select **OK**. 
 6. On the **Disks** blade of the new repair VM, select **Save**.
 
-:::image type="content" source="media/unmanaged-disk-offline-repair/save-unmanaged-attached.png" alt-text="Screenshot of the Disks blade with the Save button highlighted.":::
+    :::image type="content" source="media/unmanaged-disk-offline-repair/save-unmanaged-attached.png" alt-text="Screenshot of the Disks blade with the Save button highlighted.":::
 
 ## Unlock the disk if it is encrypted
 
