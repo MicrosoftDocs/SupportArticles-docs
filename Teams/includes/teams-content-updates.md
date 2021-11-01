@@ -2,6 +2,20 @@
 
 
 
+## Week of October 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/25/2021 | Renamed Teams folder does not rename the same folder in SharePoint Online | removed |
+| 10/27/2021 | [Settings for Teams calls with Apple CarPlay on iOS device](/microsoftteams/troubleshoot/mobile/settings-teams-calls-carplay) | added |
+| 10/27/2021 | [Resolve sign-in errors in Teams](/microsoftteams/troubleshoot/teams-sign-in/resolve-sign-in-errors) | added |
+| 10/27/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
+| 10/27/2021 | [Dial pad in missing in Teams](/microsoftteams/troubleshoot/teams-conferencing/no-dial-pad) | modified |
+| 10/27/2021 | [Your actual presence status isn't displayed in Teams](/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status) | modified |
+| 10/27/2021 | [Settings for Teams calls with Apple CarPlay on iOS device](/microsoftteams/troubleshoot/mobile/settings-teams-calls-carplay) | modified |
+
+
 ## Week of October 18, 2021
 
 
