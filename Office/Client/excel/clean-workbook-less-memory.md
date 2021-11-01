@@ -37,7 +37,7 @@ After you upgrade to Microsoft Office 2013/2016/Office 365, you experience one o
        - Adding memory to your device.
     ```
 
-![error message](./media/clean-workbook-less-memory/error-message.jpg)
+:::image type="content" source="media/clean-workbook-less-memory/no-enough-memory-to-complete-this-action-error.png" alt-text="The details of the error about no enough memory to complete this action that occurs when you use an Excel workbook." border="false":::
   
 ## Cause
 
