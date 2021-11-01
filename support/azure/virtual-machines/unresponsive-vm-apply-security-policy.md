@@ -25,9 +25,9 @@ When you use [Boot diagnostics](boot-diagnostics.md) to view the screenshot of t
 
 > 'Applying security policy to the system'.
 
-:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy-server.png" alt-text="Screenshot of Windows Server 2012 R2 startup screen is stuck." border="false":::
+:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy-1.png" alt-text="Screenshot of Windows Server 2012 R2 startup screen is stuck." border="false":::
 
-:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy-os.png" alt-text="Screenshot of OS startup screen is stuck."border="false":::
+:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy-2.png" alt-text="Screenshot of OS startup screen is stuck."border="false":::
 
 ## Cause
 
