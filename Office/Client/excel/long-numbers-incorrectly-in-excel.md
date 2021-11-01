@@ -61,7 +61,7 @@ When you enter a long number, type a single quotation mark (**'**) first in the 
 
 For example, type **'1234567890123456789** and the quotation mark will not be displayed after you press ENTER.
 
-:::image type="content" source="media/long-numbers-incorrectly-in-excel/type-quotation-mark.png" alt-text="Add a single-quotation mark before tying a long number.":::
+:::image type="content" source="media/long-numbers-incorrectly-in-excel/type-quotation-mark.png" alt-text="Add a single-quotation mark before typing a long number.":::
 
 ## Related articles
 
