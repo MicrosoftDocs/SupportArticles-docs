@@ -81,7 +81,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
       `detail partition`
 
-      :::image type="content" source="media/os-bucket-boot-failure/detail-partition-active-no.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active No.":::
+      :::image type="content" source="media/os-bucket-boot-failure/detail-partition-not-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is not active.":::
 
       If the partition isn't active, set the Active flag and then recheck that the change was done properly.
 
@@ -90,7 +90,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
       detail partition
       ```
 
-      :::image type="content" source="media/os-bucket-boot-failure/detail-partition-active-yes.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active Yes.":::
+      :::image type="content" source="media/os-bucket-boot-failure/detail-partition-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is active.":::
 
    5. Now exit the DISKPART tool.
 
