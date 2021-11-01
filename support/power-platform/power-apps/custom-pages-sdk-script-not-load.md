@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Power Apps
 
 ## Symptoms
 
-Custom pages, the Microsoft 365 app launcher (also known as "the waffle"), or other Power Apps components do not load. A network trace shows various issues that affect calls - specifically calls that have request URLs that resemble the following.
+Custom pages, the Microsoft 365 app launcher (also known as "the waffle"), or other Power Apps components don't load. A network trace shows various issues that affect calls - specifically calls that have request URLs that resemble the following.
 
 - `https://apps.powerapps.com/apphost/clientsdk?version=1`
 - `https://content.powerapps.com/resource/webplayer/hashedresources/ikhj4ts3cqjq9/js/PowerAppsHostingSdk.bundle.v1.js`
