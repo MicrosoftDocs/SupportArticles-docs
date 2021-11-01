@@ -7,13 +7,13 @@ ms.date: 10/19/2021
 author: simonxjx
 ms.author: v-six
 ---
-# Third-party cookies or pop-up blocker errors when accessing Unified Interface apps
+# Third-party cookies or pop-up blocker errors when accessing Unified Interface apps in a web browser
 
 _Applies to:_ &nbsp; Power Apps
 
 ## Symptoms
 
-When you access Unified Interface apps, you receive one of the following error messages about cookies and pop-up blockers:
+When you access Unified Interface apps in a web browser, you receive one of the following error messages about cookies and pop-up blockers:
 
 - > Something has gone wrong. Check technical details for more details.  
   > Technical Details  
