@@ -144,9 +144,9 @@ Outlook stores certain data, such as email signatures and the spelling checker d
 4. Locate and then double-click the **AppData** value.
 
 5. In the **Value data** box, type the following path, and then select **OK**:  
-   %USERPROFILE%\AppData\Roaming
+   *%USERPROFILE%\AppData\Roaming*
 
-   :::image type="content" source="media/outlook-not-responding-error-or-outlook-freezes/edit-string.png" alt-text="Edit string image" border="false":::
+   :::image type="content" source="media/outlook-not-responding-error-or-outlook-freezes/edit-string.png" alt-text="Screenshot of the Edit String dialog where you can input the value data." border="false":::
 
 6. Exit Registry Editor.
 

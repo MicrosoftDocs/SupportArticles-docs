@@ -46,14 +46,14 @@ To resolve this issue, increase the size of the IIS **UploadReadAheadSize** sett
 1. Open IIS Manager.
 2. Expand **Sites**, expand **Default Web Site**, click the **EWS** virtual directory, and then click **Configuration Editor** on the feature page.
 
-    :::image type="content" source="./media/outlook-cannot-set-oof-status-view-busy-free/select-configuration-editor.png" alt-text="The screenshot for selecting Configuration Editor.":::
+    :::image type="content" source="./media/outlook-cannot-set-oof-status-view-busy-free/select-configuration-editor.png" alt-text="Screenshot for selecting Configuration Editor.":::
 
 3. In the **Section** box, expand **system.webServer**, and then click **serverRuntime**.
 
-    :::image type="content" source="./media/outlook-cannot-set-oof-status-view-busy-free/select-serverruntime-node.png" alt-text="The screenshot for selecting the serverRuntime node.":::
+    :::image type="content" source="./media/outlook-cannot-set-oof-status-view-busy-free/select-serverruntime-node.png" alt-text="Screenshot for selecting the serverRuntime node.":::
 
 4. Set **UploadReadAheadSize** to **49152**.
 
-    :::image type="content" source="./media/outlook-cannot-set-oof-status-view-busy-free/set-uploadreadaheadsize-attribute.png" alt-text="The screenshot for setting the UploadReadAheadSize value.":::
+    :::image type="content" source="./media/outlook-cannot-set-oof-status-view-busy-free/set-uploadreadaheadsize-attribute.png" alt-text="Screenshot for setting the UploadReadAheadSize value.":::
 
 5. Run the `iisreset` command to reset IIS.

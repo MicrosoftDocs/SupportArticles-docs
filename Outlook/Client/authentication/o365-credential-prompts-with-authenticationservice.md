@@ -30,7 +30,7 @@ When attempting to create an Outlook profile or connect to an Office 365 mailbox
 
 Under **More Settings** on the **Microsoft Exchange Security** tab, the dropdown for **Logon network security** displays a value other than Anonymous Authentication, and is disabled.
 
-:::image type="content" source="media/o365-credential-prompts-with-authenticationservice/more-settings.jpg" alt-text="The screenshot of the more settings" border="false":::
+:::image type="content" source="media/o365-credential-prompts-with-authenticationservice/more-settings.png" alt-text="Screenshot of the Security tab in the Microsoft Exchange setting window." border="false":::
 
 ## Cause
 
@@ -66,7 +66,7 @@ Remove the `AuthenticationService` registry value, or disable the Group Policy t
 
 The following Group Policy applies the `AuthenticationService` registry value:
 
-:::image type="content" source="media/o365-credential-prompts-with-authenticationservice/group-policy.jpg" alt-text="The screenshot of the group policy" border="false":::
+:::image type="content" source="media/o365-credential-prompts-with-authenticationservice/group-policy.png" alt-text="Screenshot of the Authentication with Exchange Server group policy." border="false":::
 
 Policy: Account Settings\Exchange\Authentication with Exchange Server
 
