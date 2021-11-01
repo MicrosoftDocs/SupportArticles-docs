@@ -1,6 +1,6 @@
 ---
 title: Cookies or pop-up blocker errors when using Unified Interface apps
-description: Describes issues in which you receive errors about Power Apps requires cookies to be enabled or pop-up blocker when using Unified Interface apps.
+description: Describes issues in which you receive errors that Power Apps requires cookies to be enabled or pop-up blocker when using Unified Interface apps.
 ms.reviewer: rashb
 ms.topic: troubleshooting
 ms.date: 10/19/2021
