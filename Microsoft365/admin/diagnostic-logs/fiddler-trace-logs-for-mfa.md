@@ -51,7 +51,7 @@ The SANeeded=1 cookie is set after password authentication. Network traffic is t
 
 MFA starts with BeginAuth, and then the phone call is triggered on the back end to the phone service provider.
 
-:::image type="content" source="media/fiddler-trace-logs-for-mfa/begin-auth.png" alt-text="Screenshot to start with BeginAuth method, and then the phone call is triggered on the back end to the phone service provider.":::
+:::image type="content" source="media/fiddler-trace-logs-for-mfa/begin-auth.png" alt-text="Screenshot shows starting with the BeginAuth method.":::
 
 After MFA authorization has begun, the client starts to query the same endpoint for the EndAuth method every 10 seconds to check whether authentication has completed. Until the call has been picked and verified, the Resultvalue is returned as AuthenticationPending.
 

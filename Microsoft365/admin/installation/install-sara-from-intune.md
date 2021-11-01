@@ -46,7 +46,7 @@ For complete information about app deployment by using Microsoft Intune, see the
 
     The following figure shows an example PowerShell session by using an interactive session in the Microsoft Win32 Content Prep Tool (IntuneWinAppUtil.exe) to create the Sarasetup.intunewin file.
 
-    :::image type="content" source="media/install-sara-from-intune/install-sara-powershell.png" alt-text="Screenshot shows an example to install SaRA using PowerShell." border="false":::
+    :::image type="content" source="media/install-sara-from-intune/install-sara-powershell.png" alt-text="Screenshot shows an example of installing SaRA using PowerShell." border="false":::
 
 3.	**Add the app to Microsoft Intune**
 
@@ -89,10 +89,10 @@ For complete information about app deployment by using Microsoft Intune, see the
     8.	For **Requirements**:
         1. Select both **32-bit** and **64-bit** in the **Operating system architecture** list.
         
-            :::image type="content" source="media/install-sara-from-intune/operating-system-architecture.png" alt-text="Screenshot to select both 32-bit and 64-bit.":::
+            :::image type="content" source="media/install-sara-from-intune/operating-system-architecture.png" alt-text="Screenshot to select both 32-bit and 64-bit options.":::
         1. Select **Windows 10 1809** (at a minimum) in the **Minimum operating system** list, and then select **Next**.
 
-            :::image type="content" source="media/install-sara-from-intune/minimum-operating-system.png" alt-text="Screenshot to select Windows 10 1809, and then select Next option.":::
+            :::image type="content" source="media/install-sara-from-intune/minimum-operating-system.png" alt-text="Screenshot to select Next option after selecting Windows 10 1809 option.":::
 
     9.	For **Detection rules**:
         1. Select **Manually configure detection rules** in the **Rules format** list, and then select **Add**.
@@ -115,7 +115,7 @@ For complete information about app deployment by using Microsoft Intune, see the
         :::image type="content" source="media/install-sara-from-intune/dependencies-next.png" alt-text="Screenshot to select Next option without entering dependencies.":::
     11.	No **Scope tags** are required. Select **Next**.
  
-        :::image type="content" source="media/install-sara-from-intune/no-scope-tags.png" alt-text="Screenshot to select Next option with no Scope tags.":::
+        :::image type="content" source="media/install-sara-from-intune/no-scope-tags.png" alt-text="Screenshot to select Next option without Scope tags.":::
     12.	For **Assignments**, see [Assign apps to groups with Microsoft Intune](/mem/intune/apps/apps-deploy) for information about how to assign the app to users or devices.
  
         :::image type="content" source="media/install-sara-from-intune/assignments-page.png" alt-text="Screenshot to select Next option after making the assignments.":::

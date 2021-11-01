@@ -32,7 +32,7 @@ In this scenario, the user receives the following error message:
 > Couldn't update the following event:  
 > \<EventName>
 
-:::image type="content" source="media/cannot-update-calendar-items-from-owa-or-outlook-on-mac/error-message.png" alt-text="Screenshot of the error message in this scenario.":::
+:::image type="content" source="media/cannot-update-calendar-items-from-owa-or-outlook-on-mac/error-message.png" alt-text="Screenshot of the error message, showing Couldn't update the following event.":::
 
 ## Cause
 

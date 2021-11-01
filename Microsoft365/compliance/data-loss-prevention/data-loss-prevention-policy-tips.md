@@ -100,7 +100,7 @@ For Outlook 2013 and later clients, make sure that MailTips are enabled. To enab
 1. Click **OK** two times to close the File window.
 1. Restart Outlook.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot to use MailTips Options to select settings.":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot shows steps to enable MailTips in Outlook.":::
 
 ## Policy tips are configured in multiple locations
 

@@ -68,7 +68,7 @@ To reduce the number of errors related to eDiscovery holds, we recommend the fol
    Get-CaseHoldPolicy -Identity "policyname" -DistributionDetail | Select -ExpandProperty DistributionResults
    ```
 
-   :::image type="content" source="./media/resolve-ediscovery-hold-issues/hold-distribution-results.png" alt-text="Screenshot to check into the DistributionResults, based on the ResultCode." border="false":::
+   :::image type="content" source="media/resolve-ediscovery-hold-issues/hold-distribution-results.png" alt-text="Screenshot to check into the DistributionResults, based on the ResultCode." border="false":::
 
 ## Error: PolicySyncTimeout
 
@@ -86,7 +86,7 @@ Running the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` will 
 
 Also in the case hold page in the Microsoft 365 compliance center, you can redeploy the policy by clicking **Retry**.
 
-:::image type="content" source="./media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to click Retry option in the case hold page.":::
+:::image type="content" source="media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to click Retry option in the case hold page.":::
 
 ## Error: PolicyNotifyError
 

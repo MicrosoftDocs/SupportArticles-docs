@@ -172,7 +172,7 @@ When running an eDiscovery search, if the search continually fails with error si
 
 > (500) Internal Server Error.
 
-:::image type="content" source="./media/resolve-ediscovery-issues/internal-server-error-500.png" alt-text="Screenshot of Internal server error (500).":::
+:::image type="content" source="media/resolve-ediscovery-issues/internal-server-error-500.png" alt-text="Screenshot of Internal server error (500).":::
 
 ### Resolution
 
