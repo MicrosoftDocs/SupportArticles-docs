@@ -49,8 +49,11 @@ The primary mailbox and archive mailbox appear in Outlook in the web folder list
 
 ## Workarounds - Method 2
 
-Create a new Outlook profile for the User B account. To create a profile, follow these steps:
+First, reconfigure User B mailbox permissions to grant User A Full Access permissions **without** automapping enabled. Follow the steps in [How to remove automapping for a shared mailbox in Outlook for Office 365](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
+
+Then, create a new Outlook profile for the shared User B mailbox. To create a profile, follow these steps:
 
 1. In Outlook, select **File** > **Account Settings** > **Manage Profiles**.
 2. Select **Show Profiles** > **Add**.
 3. In the **Profile Name** box, type a name for the profile, and then select **OK**.
+4. When prompted, input the credentials for User A.
