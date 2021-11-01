@@ -33,5 +33,7 @@
     items:
     - name: '"Blocked a frame with origin" error'
       href: blocked-frame-with-origin-uci.md
+    - name: Cookies or pop-up blocker errors
+      href: cookies-pop-up-blocker-error.md
     - name: No response with back button
       href: no-navigation-when-selecting-button.md
