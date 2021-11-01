@@ -946,17 +946,17 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "troubleshoot/sql/performance/performance-consistency-issues.md",
+      "source_path": "support/sql/performance/performance-consistency-issues.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/filter-drivers-lead-to-sql-performance-consistency.md",
       "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
       "redirect_document_id": false
     },
     {
-      "source_path": "troubleshoot/sql/performance/filter-drivers-lead-to-sql-performance-consistency.md",
-      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "troubleshoot/sql/admin/error-password-service-account-changed.md",
+      "source_path": "support/sql/admin/error-password-service-account-changed.md",
       "redirect_url": "/troubleshoot/sql/admin/error-1069-service-cannot-start",
       "redirect_document_id": true
     }
