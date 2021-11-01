@@ -47,36 +47,38 @@ Options and steps to populate a valid email address for an Office 365 user accou
 
 1. Log into the Office 365 admin center and look up the user.
 
-   ![look up Office 365 user](./media/support-cases-for-gcc-high-dod/look-up-o365-user.png)
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/look-up-o365-user.png" alt-text="Screenshot to look up the user after logging into the Office 365 admin center.":::
 
 1. Next to Username select Edit. 
 
-   ![select Edit to edit the Office 365 user](./media/support-cases-for-gcc-high-dod/edit-o365-user.png) 
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-o365-user.png" alt-text="Screenshot to select Edit option to edit the Office 365 Username.":::
 
 1. Under Aliases, type in a new email address and use the drop-down to select the desired domain. Click Add. Then select Set as primary. 
 
-   ![Save the editing](./media/support-cases-for-gcc-high-dod/save-the-edit.png)
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/primary-address.png" alt-text="Screenshot to set the new email address as primary address.":::
 
-1. This may bring up the following message for your confirmation. 
+1. This may bring up the following message for your confirmation.
 
-   ![warning message appears](./media/support-cases-for-gcc-high-dod/warning-message-appear.png)
+   > You're about to change this user's sign-in information.
+
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/warning-message-appear.png" alt-text="Screenshot shows the warning message for your confirmation.":::
 
 1. A summary of changes may be provided. 
 
-   ![a summary of changes may be provided](./media/support-cases-for-gcc-high-dod/summary-change-provided.png)
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/summary-change-provided.png" alt-text="Screenshot shows a summary of changes may be provided.":::
 
 1. The desired address will now show here. 
 
-   ![the desired address will now show ](./media/support-cases-for-gcc-high-dod/desired-address-show.png) 
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/desired-address-show.png" alt-text="Screenshot of the desired address in the Admin center.":::
 
 **Option 2 - Add an alternate email address to the existing administrator user** 
 1. Log into the Office 365 admin center and look up the user.  
 1. Edit the user and go the Roles section. Select Edit. 
 
-    ![edit role for an office 365 user](./media/support-cases-for-gcc-high-dod/edit-role.png)
+    :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-role.png" alt-text="Screenshot shows steps to edit the roles for an office 365 user.":::
 
 1. Scroll down and under Alternative email address, input the desired address. 
 
-   ![input desired address under Alternative email address](./media/support-cases-for-gcc-high-dod/type-desired-address.png)
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/type-desired-address.png" alt-text="Screenshot to input the desired address under the Alternative email address.":::
 
 1. The address added will not be listed on the Active user's page, but it will appear in Microsoft's system as an alternate email address, which can used to validate the caller during the creation of a support case.
