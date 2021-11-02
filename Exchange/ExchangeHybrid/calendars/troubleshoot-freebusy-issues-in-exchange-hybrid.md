@@ -57,7 +57,7 @@ To better understand how Hybrid Free/Busy is supposed to work, review the follow
 
 The following diagram shows the Exchange 2010/2013 free/busy workflow:
 
-:::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/freebusy-workflow.png" alt-text="the Exchange 2010/2013 free/busy workflow":::
+:::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/free-busy-workflow.png" alt-text="Screenshot of the Exchange 2010/2013 free/busy workflow.":::
 
 **Did this solve your issue?**
 
@@ -68,7 +68,7 @@ The following diagram shows the Exchange 2010/2013 free/busy workflow:
 
 The following diagram shows the Exchange 2007 free/busy workflow:
 
-:::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/exchange-2007-freebusy-workflow.png" alt-text="the Exchange 2007 free/busy workflow":::
+:::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/exchange-2007-free-busy-workflow.png" alt-text="Screenshot of the Exchange 2007 free/busy workflow.":::
 
 **Did this solve your issue?**
 
@@ -79,7 +79,7 @@ The following diagram shows the Exchange 2007 free/busy workflow:
 
 The following diagram shows the Exchange 2003 free/busy workflow:
 
-:::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/exchange-2003-freebusy-workflow.png" alt-text="the Exchange 2003 free/busy workflow":::
+:::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/exchange-2003-free-busy-workflow.png" alt-text="Screenshot of the Exchange 2003 free/busy workflow.":::
 
 **Did this solve your issue?**
 
@@ -137,7 +137,7 @@ Check the IIS logs on the Exchange Hybrid server to verify that the Autodiscover
 3. Search for Autodiscover.
 4. The following screenshot shows an example of the Autodiscover POST request on IIS log:
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/autodiscover-post-request.jpg" alt-text="an example of the Autodiscover POST request on IIS log":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/autodiscover-post-request.png" alt-text="Screenshot of an example of the Autodiscover POST request on IIS log.":::
 
 If you do not see any entry for Autodiscover in your on-premises Exchange hybrid deployment server, the firewall may be pointing to a wrong CAS server.
 
@@ -181,7 +181,7 @@ Determine whether Internet Information Services (IIS) configuration is missing t
 2. Expand **ServerName** > **Site** > **Default Web Site**, and then select Autodiscover.
 3. On IIS section, open Handler Mappings. The following screenshot shows an example of the svc-Integrated handler mapping in IIS:
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/handler-mapping.jpg" alt-text="an example of the svc-Integrated handler mapping":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/handler-mapping.png" alt-text="Screenshot of an example of the svc-Integrated handler mapping.":::
 
 If the IIS is missing the svc-Integrated handler mapping, see ["Exception has been thrown by the target" error in a hybrid deployment of Microsoft 365 and your on-premises environment](https://support.microsoft.com/help/2626696).
 
@@ -221,7 +221,7 @@ Check IIS logs on the Exchange 2010/2013 CAS server(s) to confirm that Web Servi
 2. Open the W3SVC1 folder, and then open the latest IIS log file.
 3. In the latest IIS log file, search for **exchange.asmx/wssecurity**. The following screenshot shows an example of the request in the IIS log:
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/example-of-request.png" alt-text="an example of the Web Services request":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/example-of-request.png" alt-text="Screenshot of an example of the Web Services request.":::
 
 4. If you do not see any entry for **exchange.asmx/wssecurity** in your on-premises Exchange 2010/2013 hybrid deployment server, the firewall may be pointing to a wrong CAS server, or you may have pre-authentication configured on the firewall. For information about how to bypass firewall pre-authentication, see [Configure Forefront TMG for a hybrid environment](/sharepoint/hybrid/configure-forefront-tmg-for-a-hybrid-environment).
 
@@ -240,7 +240,7 @@ Determine whether Internet Information Services (IIS) configuration is missing t
 2. Expand **ServerName** > **Site** > **Default Web Site**, and then select **EWS**.
 3. In the **IIS** area, open **Handler Mappings**. The following screenshot shows an example of the svc-Integrated handler mapping in IIS:
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/svc-integrated-handler-mapping.jpg" alt-text="an example of the svc-Integrated handler mapping in IIS":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/svc-integrated-handler-mapping.png" alt-text="Screenshot of an example of the svc-Integrated handler mapping in IIS.":::
 
 4. If the IIS is missing the svc-Integrated handler mapping, see [Exception has been thrown by the target" error in a hybrid deployment of Microsoft 365 and your on-premises environment](https://support.microsoft.com/help/2626696).
 
@@ -395,7 +395,7 @@ Every cloud mailbox will have a corresponding on-premises Mail enabled object. F
 
 1. In the results, verify that the External (FYDIBOHF25SPDLT) is in the path. For example, the results should show the path as follows:
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/fydibohf25spdlt.png" alt-text=" External (FYDIBOHF25SPDLT)":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/fydibohf25spdlt.png" alt-text="Screenshot of External (FYDIBOHF25SPDLT).":::
 
 **Did this solve your issue?**
 
@@ -418,7 +418,7 @@ To use the Exchange 2010 Public Folder Management Console to change the client p
 8. In the Result pane, right-click **EX:/O=FIRST ORGANIZATION/OU=EXTERNAL (FYDIBOHF25SPDLT)**, and then select **Properties**.
 9. On the **Permissions** tab, confirm that **Edit all permission level** is selected for the **Default user:
 
-      :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/permissions-tab.png" alt-text=" the Permissions tab details":::
+      :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/permissions-tab.png" alt-text="Screenshot of the Permissions tab details.":::
 
 **Did this solve your issue?**
 
@@ -482,7 +482,7 @@ Check the availability address space to make sure that it has the correct settin
 
 3. If the `ProxyURL` and `InternalURL` values do match, make sure that you can access the URL from the Exchange 2007 CAS server. To do this, move to `ProxyURL` of the `AvailabilityAddressSpace` from CAS 2007. Authenticate with the Exchange 2007 source mailbox credential. The expected result is as follows:
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/expected-result.png" alt-text="Alt text here.":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/expected-result.png" alt-text="Screenshot of the expected result for authentication with the Exchange 2007 source mailbox credential.":::
 
 > [!NOTE]
 > The InternalURL of the Exchange 2010/2013 CAS Web Service virtual directory should differ from Exchange 2007 CAS Web Service virtual directory.
@@ -509,7 +509,7 @@ Determine what error message you are receiving from OWA.
 2. Create a new meeting request, and then add the on-premises user to the meeting.
 3. When the Hash marks are returned rest the pointer over them to display the error message. Note the error code number in the error message.
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/determine-what-error-you-receive.jpg" alt-text="Determine what error message you are receiving from OWA":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/determine-what-error-you-receive.png" alt-text="Determine what error message you are receiving from OWA.":::
 
 Select the appropriate error message in the following list to help narrow the troubleshooting steps that you must follow:
 
@@ -567,7 +567,7 @@ To verify that the remote routing address is set, follow these steps:
 
 1. Verify that the address contains `TenantName.Mail.OnMicrosoft.com`
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/get-remotemailbox.jpg" alt-text="output of Get-RemoteMailbox.":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/get-remotemailbox.png" alt-text="Output of Get-RemoteMailbox.":::
 
 > [!NOTE]
 > If you did not use the Hybrid configuration wizard, the domain name should reflect the remote routing domain that you have selected.
@@ -634,7 +634,7 @@ From the on-premises environment, verify that you can retrieve a delegation toke
 2. Run the command `Test-FederationTrust -UserIdentity User@company.com -verbose` where User is the on-premises user who has issues viewing the cloud user's free/busy information.
 3. The output should show success for every test. If there is a failure, use the Hybrid Configuration Wizard again to try to reset the federation trust.
 
-   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/test-federationtrust.jpg" alt-text="output of Test-FederationTrust":::
+   :::image type="content" source="media/troubleshoot-freebusy-issues-in-exchange-hybrid/test-federation-trust.png" alt-text="Output of Test-FederationTrust.":::
 
 **Did this solve your issue?**
 
