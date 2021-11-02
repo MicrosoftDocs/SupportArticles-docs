@@ -75,12 +75,6 @@ items:
       href: troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
       href: troubleshoot-mam.md   
-    - name: Access Denied when accessing Exchange Online & SharePoint Online
-      href: app-protection-options-access-denied.md
-    - name: Access denied configuring Conditional Access
-      href: configure-app-protection-access-denied.md
-    - name: Devices enrolled in Conditional Access policy prompted to enroll in Intune
-      href: device-enroll-intune-app-management-error.md
     - name: Known issue - Fingerprint authentication on Samsung Note 4
       href: no-prompt-for-fingerprint-identity.md
 - name: Co-management with Configuration Manager
