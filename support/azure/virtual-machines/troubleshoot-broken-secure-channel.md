@@ -29,7 +29,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
 You're unable to complete a remote desktop protocol (RDP) connection to the VM and you receive the error: "The trust relationship between this workstation and the primary domain failed".
 
-:::image type="content" source="media/troubleshoot-broken-secure-channel/other-user-failed-ok-button.png" alt-text="Screenshot of the error The trust relationship between this workstation and the primary domain failed. This screenshot also includes the ok button." border="true":::
+:::image type="content" source="media/troubleshoot-broken-secure-channel/other-user-failed-ok-button.png" alt-text="Screenshot of the error The trust relationship between this workstation and the primary domain failed. This screenshot also includes the ok button." border="false":::
 
 ## Cause
 
