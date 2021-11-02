@@ -91,7 +91,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
         detail partition
         ```
 
-        :::image type="content" source="media/windows-boot-failure/4018937_en_1.png" alt-text="Screenshot of diskpart output.":::
+        :::image type="content" source="media/windows-boot-failure/detail-partition.png" alt-text="Screenshot of diskpart output, showing partition 1 is the selected partition but not active.":::
 
         If the partition is active, go to the step 2.
 

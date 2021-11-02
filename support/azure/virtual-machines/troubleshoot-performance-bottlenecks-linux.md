@@ -85,11 +85,11 @@ If we look at the **dd process** line from above:
 
 `22804 root      20   0  108096    616    516 R  99.7  0.0   1:05.71 dd`
 
-We can see that it’s consuming 100% of the CPU (note that `top` will show usage higher than 100% if the process is multithreaded and spans more than one CPU).
+We can see that it's consuming 100% of the CPU (note that `top` will show usage higher than 100% if the process is multithreaded and spans more than one CPU).
 
-Another useful reference is load average (load avg). The *loadavg* shows system load average in 1-minute, 5-minute, and 15-minute intervals. The number indicates the level of load of the system and interpreting the number depends on the number of CPUs available. For example, a load average of 2 on a one-CPU system, means the system is so loaded that the processes started queuing up. If there is a load average of 2 on a four-CPU system, then there’s about 50% overall CPU utilization.
+Another useful reference is load average (load avg). The *loadavg* shows system load average in 1-minute, 5-minute, and 15-minute intervals. The number indicates the level of load of the system and interpreting the number depends on the number of CPUs available. For example, a load average of 2 on a one-CPU system, means the system is so loaded that the processes started queuing up. If there is a load average of 2 on a four-CPU system, then there's about 50% overall CPU utilization.
 
-In the example above, the load average is at 1.04. This is a two-CPU system, meaning there’s about 50% CPU usage. This result can be confirmed by the 48% Idle CPU.
+In the example above, the load average is at 1.04. This is a two-CPU system, meaning there's about 50% CPU usage. This result can be confirmed by the 48% Idle CPU.
 
 Use load average as a quick overview of how the system is performing.
 
@@ -213,7 +213,7 @@ The main columns from the `iostat` output are as follows:
 - **r_await**: Average read time in milliseconds for I/O served by the device (latency)
 - **w_await**: Average read time in milliseconds for I/O served by the device (latency)
 
-The data presented by `iostat` is informational, but the presence of certain data in certain columns doesn’t mean that there’s a problem. Data from `iostat` should always be captured and analyzed for possible bottlenecks. High latency could be an indication of the disk reaching a saturation point.
+The data presented by `iostat` is informational, but the presence of certain data in certain columns doesn't mean that there's a problem. Data from `iostat` should always be captured and analyzed for possible bottlenecks. High latency could be an indication of the disk reaching a saturation point.
 
 ## Network
 
@@ -249,7 +249,7 @@ Mem:           7802         435        5250           9        2117        7051
 Swap:             0           0           0
 ```
 
-In Linux systems, it's common to see 99% memory usage. In the `free` output, there’s a column called *buff/cache*. The Linux kernel will use free (unused) memory to cache I/O requests for better response times, which is called a page cache. During memory pressure (scenarios where memory is running low)the kernel will return memory used for page cache, so that it can be used by applications.
+In Linux systems, it's common to see 99% memory usage. In the `free` output, there's a column called *buff/cache*. The Linux kernel will use free (unused) memory to cache I/O requests for better response times, which is called a page cache. During memory pressure (scenarios where memory is running low)the kernel will return memory used for page cache, so that it can be used by applications.
 
 In the `free` output, the *available* column indicates how much memory is available for processes to consume. This amount is calculated by adding buff/cache and free memory.
 
@@ -336,17 +336,17 @@ If these limiting resources are expected as a cost saving measure, the workload 
 
 ## Perform changes based on obtained data
 
-Designing for performance is not about solving problems. Performance problems can’t be completely solved, as there will always be a limiting resource. Bottlenecks will always exist  and can only be moved to a different location of the design.
+Designing for performance is not about solving problems. Performance problems can't be completely solved, as there will always be a limiting resource. Bottlenecks will always exist  and can only be moved to a different location of the design.
 
 As an example, if the application is being limited by disk performance, you can increase the disk size to allow more throughput. However, the network then becomes the next bottleneck. Because resources are limited, there is no ideal configuration, and issues must be addressed regularly.
 
-With the data obtained in the previous steps, changes can now be made based on actual, measurable data. These changes can also be compared against the baseline measured before to confirm there’s a tangible difference.
+With the data obtained in the previous steps, changes can now be made based on actual, measurable data. These changes can also be compared against the baseline measured before to confirm there's a tangible difference.
 
 Examine the following example:
 
-“When obtaining a baseline while the application was running, it was determined that the system had a constant 100% CPU usage with a configuration of two CPUs. A load average of 4 was observed which meant the system was queuing requests. A change to an 8CPU system reduced CPU usage to 25%, and load average was reduced to 2 with the exact same load.”
+"When obtaining a baseline while the application was running, it was determined that the system had a constant 100% CPU usage with a configuration of two CPUs. A load average of 4 was observed which meant the system was queuing requests. A change to an 8CPU system reduced CPU usage to 25%, and load average was reduced to 2 with the exact same load."
 
-In the example above, there’s a measurable difference when comparing the obtained results against the changed resources. Before the change, there was a clear resource constraint. But after the change, there are enough resources to increase the load
+In the example above, there's a measurable difference when comparing the obtained results against the changed resources. Before the change, there was a clear resource constraint. But after the change, there are enough resources to increase the load
 
 ## Migrating from on-premises to cloud
 
@@ -396,13 +396,13 @@ When PerfInsights is [installed through the Azure portal](performance-diagnostic
 
 Browse the VM blade and select the **Performance diagnostics** option. You'll be asked to install the option (uses extensions) on the VM that you selected it for.
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png" alt-text="This image shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics.":::
+:::image type="content" source="media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png" alt-text="Screenshot shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics.":::
 
 #### Azure portal Option 2
 
 Browse to the **Diagnose and Solve Problems** tab in the VM blade, and look for look for the **Troubleshoot** link under **VM Performance Issues**.
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/look-for-troublshoot-link-vm-perfissues.png" alt-text="This image asks the user to browse to the Diagnose and Solve Problems tab in the VM blade, and look for the Troubleshoot link under VM Performance Issues":::
+:::image type="content" source="media/troubleshoot-performance-bottlenecks-linux/troubleshoot-link-vm-perf-issues.png" alt-text="Screenshot shows Diagnose and Solve Problems tab in the VM blade, and the Troubleshoot link under VM Performance Issues":::
 
 #### What to look for in the PerfInsights report
 
@@ -410,14 +410,14 @@ After you run the PerfInsights report, the location of the contents depends on w
 
 ### Run through the Azure portal
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-highlighted-report.png" alt-text="This image shows the Performance Diagnostics reports screen, and highlights the generated Diagnostics report.":::
+:::image type="content" source="media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports.png" alt-text="Screenshot shows the Performance Diagnostics reports screen, and highlights the generated Diagnostics report.":::
 
 Where to start
 Open the PerfInsights report. The **Findings** tab logs any outliers in terms of resource consumption. If there are instances of slow performance due to specific resource usage, the **Findings** tab will categorize it as either High Impact or Medium Impact.
 
 For example, in the following report, we are seeing Medium impact findings related to Storage that have been detected and we have the corresponding recommendations. If you expand the **Findings** event, you'll see several key details.
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perfinsights-report-impact-finding-resources-recommendations.png" alt-text="This image shows the PerfInsights Report and details the results of the report, including Impact Level, Finding, Impacted Resources, and Recommendations.":::
+:::image type="content" source="media/troubleshoot-performance-bottlenecks-linux/perfinsights-report-findings.png" alt-text="Screenshot shows the PerfInsights Report and details the results of the report, including Impact Level, Finding, Impacted Resources, and Recommendations.":::
 
 For more information on PerfInsights in the Linux OS, review [How to use PerfInsights Linux in Microsoft Azure - Virtual Machines](how-to-use-perfinsights-linux.md).
 

@@ -19,8 +19,6 @@ items:
       href: apps-appear-unavailable.md
     - name: Deployment, delivery, and processing of a Win32 application
       href: develop-deliver-working-win32-app-via-intune.md
-    - name: Deploy Windows update packages as Win32 apps
-      href: deploy-windows-update-packages-as-win32-apps.md
     - name: Can't save corporate data in WIP-allowed apps
       href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: iOS apps
@@ -307,9 +305,7 @@ items:
     href: troubleshooting-blade-fails-loading.md
   - name: Troubleshoot software updates
     href: troubleshoot-software-updates-in-microsoft-intune.md
-  - name: Use PowerShell to look up licenses
-    href: look-up-intune-licenses.md
-- name: Migration to the Azure portal
+- name: Migration to the Azure Portal
   items:
   - name: Migration blockers for grouping and targeting
     href: grouping-targeting-migration-blockers.md
