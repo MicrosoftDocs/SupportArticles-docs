@@ -51,7 +51,7 @@ Options and steps to populate a valid email address for an Office 365 user accou
 
 1. Next to Username select Edit. 
 
-   :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-o365-user.png" alt-text="Screenshot to select Edit option to edit the Office 365 Username.":::
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-o365-user.png" alt-text="Screenshot to select the Edit option to edit the Office 365 Username.":::
 
 1. Under Aliases, type in a new email address and use the drop-down to select the desired domain. Click Add. Then select Set as primary. 
 

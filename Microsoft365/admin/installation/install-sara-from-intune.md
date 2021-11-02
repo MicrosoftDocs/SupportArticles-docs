@@ -54,11 +54,11 @@ For complete information about app deployment by using Microsoft Intune, see the
     1.	In **Client apps** section of Microsoft Intune dashboard, beneath **Manage**, select **Apps**.
     2.	Select **Add**.
 
-        :::image type="content" source="media/install-sara-from-intune/select-add.png" alt-text="Screenshot shows steps to select Add option in the Microsoft Intune Apps dashboard.":::
+        :::image type="content" source="media/install-sara-from-intune/select-add.png" alt-text="Screenshot shows steps to select the Add option in the Microsoft Intune Apps dashboard.":::
  
     3.	Under **Select app type**, select **Windows app (Win32)**.
 
-        :::image type="content" source="media/install-sara-from-intune/select-windows-app.png" alt-text="Screenshot to select Windows app (Win32) option under Select app type page.":::
+        :::image type="content" source="media/install-sara-from-intune/select-windows-app.png" alt-text="Screenshot to select the Windows app (Win32) option under the Select app type page.":::
     4.	Select **Select app package file**.
 
         :::image type="content" source="media/install-sara-from-intune/select-app-package-file.png" alt-text="Screenshot to select the Select app package file option.":::
@@ -67,11 +67,11 @@ For complete information about app deployment by using Microsoft Intune, see the
  
         :::image type="content" source="media/install-sara-from-intune/browse-select-file.png" alt-text="Screenshot to browse and select the Intunewin file that you created.":::
 
-        :::image type="content" source="media/install-sara-from-intune/app-package-file-ok.png" alt-text="Screenshot to select Ok option on the App package file page.":::
+        :::image type="content" source="media/install-sara-from-intune/app-package-file-ok.png" alt-text="Screenshot to select the Ok option on the App package file page.":::
  
     6.	Enter the name for the **Publisher** (required) and update the **Name** of the app (optional), and then select **Next**.
 
-        :::image type="content" source="media/install-sara-from-intune/enter-publish-name-next.png" alt-text="Screenshot to enter the publisher name and select Next option.":::
+        :::image type="content" source="media/install-sara-from-intune/enter-publish-name-next.png" alt-text="Screenshot to enter the publisher name and select the Next option.":::
  
     7.	For **Program** settings, enter the **Install command** (required), select **User** for **Install behavior**, and then select **Next**.
     
@@ -84,7 +84,7 @@ For complete information about app deployment by using Microsoft Intune, see the
 
         > [!NOTE]
         > The uninstall command provided above requires user interaction to complete the removal of SaRA. This user interaction is shown in the following screenshot.<br />
-        > :::image type="content" source="media/install-sara-from-intune/user-interaction.png" alt-text="Screenshot shows user interaction on the Microsoft Support and Recovery Assistant Maintenance page.":::
+        > :::image type="content" source="media/install-sara-from-intune/user-interaction.png" alt-text="Screenshot shows the user interaction on the Microsoft Support and Recovery Assistant Maintenance page.":::
  
     8.	For **Requirements**:
         1. Select both **32-bit** and **64-bit** in the **Operating system architecture** list.
@@ -92,7 +92,7 @@ For complete information about app deployment by using Microsoft Intune, see the
             :::image type="content" source="media/install-sara-from-intune/operating-system-architecture.png" alt-text="Screenshot to select both 32-bit and 64-bit options.":::
         1. Select **Windows 10 1809** (at a minimum) in the **Minimum operating system** list, and then select **Next**.
 
-            :::image type="content" source="media/install-sara-from-intune/minimum-operating-system.png" alt-text="Screenshot to select Next option after selecting Windows 10 1809 option.":::
+            :::image type="content" source="media/install-sara-from-intune/minimum-operating-system.png" alt-text="Screenshot to select the Next option after selecting the Windows 10 1809 option.":::
 
     9.	For **Detection rules**:
         1. Select **Manually configure detection rules** in the **Rules format** list, and then select **Add**.
@@ -100,7 +100,7 @@ For complete information about app deployment by using Microsoft Intune, see the
             :::image type="content" source="media/install-sara-from-intune/rules-format.png" alt-text="Screenshot to select Manually configure detection rules, and then select Add option.":::
         1. For **Rule type**, select **Registry**.
  
-            :::image type="content" source="media/install-sara-from-intune/rule-type-registry.png" alt-text="Screenshot to select Registry option for Rule type.":::
+            :::image type="content" source="media/install-sara-from-intune/rule-type-registry.png" alt-text="Screenshot to select the Registry option for Rule type.":::
         1. Use the following values for the **Detection rule** settings:
             - **Rule type**: Registry
             - **Key path**: Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\339020b868450372
@@ -112,18 +112,18 @@ For complete information about app deployment by using Microsoft Intune, see the
             :::image type="content" source="media/install-sara-from-intune/detection-rule-setting.png" alt-text="Screenshot to enter the values for the Detection rule settings.":::
     10.	For **Dependencies**, select **Next** without adding any dependencies.
  
-        :::image type="content" source="media/install-sara-from-intune/dependencies-next.png" alt-text="Screenshot to select Next option without entering dependencies.":::
+        :::image type="content" source="media/install-sara-from-intune/dependencies-next.png" alt-text="Screenshot to select the Next option without entering dependencies.":::
     11.	No **Scope tags** are required. Select **Next**.
  
-        :::image type="content" source="media/install-sara-from-intune/no-scope-tags.png" alt-text="Screenshot to select Next option without Scope tags.":::
+        :::image type="content" source="media/install-sara-from-intune/no-scope-tags.png" alt-text="Screenshot to select the Next option without Scope tags.":::
     12.	For **Assignments**, see [Assign apps to groups with Microsoft Intune](/mem/intune/apps/apps-deploy) for information about how to assign the app to users or devices.
  
-        :::image type="content" source="media/install-sara-from-intune/assignments-page.png" alt-text="Screenshot to select Next option after making the assignments.":::
+        :::image type="content" source="media/install-sara-from-intune/assignments-page.png" alt-text="Screenshot to select the Next option after making the assignments.":::
         Once you have made your assignments, select **Next**.
 
     13.	On the **Review + create** section, review your settings, and then select **Create**.
  
-        :::image type="content" source="media/install-sara-from-intune/review-create-page.png" alt-text="Screenshot to review your settings and select Create option.":::
+        :::image type="content" source="media/install-sara-from-intune/review-create-page.png" alt-text="Screenshot to review your settings and select the Create option.":::
     14.	Review your **Notifications**.
  
         :::image type="content" source="media/install-sara-from-intune/review-notifications.png" alt-text="Screenshot to review the Notifications on the Client apps page.":::
