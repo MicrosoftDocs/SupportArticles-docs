@@ -49,7 +49,7 @@ To configure and use MFCMapi to restart the search service, follow these steps:
 
     Your mailbox will typically be listed by your email address, as shown in the following screenshot.
 
-    :::image type="content" source="./media/outlook-search-folders-issue-online-mode/email-address.JPG" alt-text="Screenshot locating the email address.":::
+    :::image type="content" source="media/outlook-search-folders-issue-online-mode/email-address.png" alt-text="Screenshot locating the email address.":::
 
 7. In the navigation pane on the left, expand **Root Container**.
     - For the Reminders issue, right-click the **Reminders** folder, and then select **Edit Search Criteria**.
@@ -58,15 +58,15 @@ To configure and use MFCMapi to restart the search service, follow these steps:
 
         For example, the following screenshot shows the **AllItems** folder under **Root Container**.
 
-        :::image type="content" source="./media/outlook-search-folders-issue-online-mode/allitems-folder.JPG" alt-text="Screenshot of the AllItems folder under Root Container.":::
+        :::image type="content" source="media/outlook-search-folders-issue-online-mode/allitems-folder.png" alt-text="Screenshot of the AllItems folder under Root Container.":::
 
 8. In the second **Search State** box, look for the SEARCH_RUNNING value. If you don't see SEARCH_RUNNING, go to the next step.
 
-    :::image type="content" source="./media/outlook-search-folders-issue-online-mode/search-running.png" alt-text="Screenshot of Edit Search Criteria.":::
+    :::image type="content" source="media/outlook-search-folders-issue-online-mode/search-running.png" alt-text="Screenshot of the SEARCH_RUNNING value in the second Search State box.":::
 
 9. In the first **Search Flags** box, replace the existing text with the *0x2* value. As soon as you finish typing *0x2*, you'll see the second **Search Flags** box populated with "RESTART_SEARCH," as shown in the following screenshot. Click **OK** at the bottom of the window. This restarts the search service for this folder.
 
-    :::image type="content" source="./media/outlook-search-folders-issue-online-mode/restart-search.JPG" alt-text="Screenshot of Search Flags box.":::
+    :::image type="content" source="media/outlook-search-folders-issue-online-mode/search-flags.png" alt-text="Screenshot of the second Search Flags box populated with "RESTART_SEARCH" after you finish typing 0x2 in the first Search Flags box.":::
 
 ## More information
 
