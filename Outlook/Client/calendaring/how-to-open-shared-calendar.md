@@ -232,7 +232,7 @@ If **Microsoft Exchange** appears before the shared calendar name, this typicall
 
 2. In the **Open Other User's Folder** dialog box, type the name of the user who shares the calendar with you in the **Name** box. In the **Folder type** box, select the type of shared calendar, and then select **OK**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/other-users-folder.png" alt-text="Screenshot of the Open Other User's Folder window.":::
+   :::image type="content" source="media/how-to-open-shared-calendar/other-users-folder.png" alt-text="Screenshot that shows the Open Other User's Folder window.":::
 
 #### If Microsoft Exchange does not appear before the shared calendar name
 
@@ -426,7 +426,7 @@ After you do this, the **Open Shared Calendar** button on the ribbon is availabl
 2. Search for and then select the user whose calendar you want to open.
 3. In the Folder Type box, select Calendar.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/open-other-users-folder.png" alt-text=""Screenshot that shows the operation to search user name to open other user's folder.":::
+    :::image type="content" source="media/how-to-open-shared-calendar/open-other-users-folder.png" alt-text="Screenshot that shows the operation to search user name to open other user's folder.":::
 
 4. Select **Open**.
 
@@ -465,7 +465,7 @@ To open a shared calendar from the Outlook sharing invitation, select **Open thi
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitation.png" alt-text="Screenshot that shows the Open this Calendar in the sharing invitation.":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitation.png" alt-text="Screenshot shows the Open this Calendar in the sharing invitation.":::
 
 **If you see something different, what problem do you encounter?**
 
