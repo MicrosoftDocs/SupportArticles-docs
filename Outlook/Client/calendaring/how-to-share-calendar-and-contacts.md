@@ -55,7 +55,7 @@ Not sure which Microsoft 365 plan your organization uses? Go to [https://portal.
 
 If you see the below administrative interface, then you are using the Small Business plan.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/small-business-admin-interface.png" alt-text="Screenshot that shows  the administrative interface of Small Business plan." border="false":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/small-business-admin-interface.png" alt-text="Screenshot that shows the administrative interface of Small Business plan." border="false":::
 
 **Enterprise | Midsize | Education:**
 
