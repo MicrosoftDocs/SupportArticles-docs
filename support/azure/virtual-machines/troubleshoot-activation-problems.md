@@ -132,6 +132,7 @@ For the VM that is created from a custom image, you must configure the appropria
 ### I created the Windows Server 2016 from Azure Marketplace. Do I need to configure KMS key for activating the Windows Server 2016?
 
 No. The image in Azure Marketplace has the appropriate KMS client setup key already configured.
+> Note: Also applyed to Windows Server 2016, 2019 and 2022.
 
 ### Does Windows activation work the same way regardless if the VM is using Azure Hybrid Use Benefit (HUB) or not?
 
