@@ -55,7 +55,7 @@ Not sure which Microsoft 365 plan your organization uses? Go to [https://portal.
 
 If you see the below administrative interface, then you are using the Small Business plan.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/small-business-admin-interface.png" alt-text="Screenshot that shows  the administrative interface of Small Business plan." border="false":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/small-business-admin-interface.png" alt-text="Screenshot that shows the administrative interface of Small Business plan." border="false":::
 
 **Enterprise | Midsize | Education:**
 
@@ -479,7 +479,7 @@ You can share a contacts folder with people that are located in your organizatio
 
 6. The person in your organization receives the sharing invitation in email, and select **Open this Contacts folder**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-contacts-folder.png" alt-text="Screenshot that showsthe Open this Contacts folder tab selected.":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-contacts-folder.png" alt-text="Screenshot that shows the Open this Contacts folder tab selected.":::
 
 #### To change contact folder sharing permissions
 

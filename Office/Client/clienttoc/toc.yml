@@ -650,7 +650,7 @@
         - name: The ability to uninstall Office updates
           href: ../installation/ability-to-uninstall-office.md
         - name: Windows Installer service could not be accessed
-          href: ../installation/windows-installer-service-not-be-accesse.md
+          href: ../installation/windows-installer-service-not-be-accessed.md
     - name: Office for Mac
       items:
         - name: Can't pass the Welcome Screen in Office for Mac

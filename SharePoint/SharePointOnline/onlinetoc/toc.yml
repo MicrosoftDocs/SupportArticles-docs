@@ -7,6 +7,8 @@
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
       href: ../administration/access-denied-to-pim-user-accounts.md
+    - name: '"Access Denied" and "You need permission to access this site" errors'
+      href: ../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
     - name: '"API access" does not appear in the Modern admin center'
       href: ../administration/api-access-does-not-appear.md
     - name: Temporary changes in process schedule for SharePoint Online services 
@@ -31,8 +33,12 @@
       href: ../administration/error-404-onedrive-sharepoint.md
     - name: Errors when connecting to SharePoint Online Management Shell
       href: ../administration/errors-connecting-to-management-shell.md
+    - name: Errors when you rename a SharePoint domain
+      href: ../administration/errors-when-renaming.md
     - name: Exclude or remove sites from a SharePoint Online retention policy
       href: ../administration/exclude-sites-from-retention-policy.md
+    - name: FAQ about SharePoint domain renames
+      href: ../administration/domain-rename-faq.md
     - name: Invalid URL error when clicking an online prompted link
       href: ../administration/promoted-link-invalid-url.md
     - name: Issue when browsing to a SharePoint site
@@ -51,6 +57,8 @@
       href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
       href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: SharePoint Online out of storage spacet
+      href: ../administration/out-of-storage.md
     - name: Third-party tools changes support
       href: ../administration/third-party-tools-change-support.md
     - name: Troubleshoot mapped network drives
@@ -339,6 +347,8 @@
       href: ../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md
     - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
       href: ../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
+    - name: Unable to delete a SharePoint site
+      href: ../sites/unable-to-delete-site.md
   - name: Synchronization
     items:
     - name: A synchronized file is moved to the recycle bin
