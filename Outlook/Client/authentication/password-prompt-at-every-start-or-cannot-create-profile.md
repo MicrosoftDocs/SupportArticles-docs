@@ -88,7 +88,7 @@ The **Online Content Options** policy setting is located under the Microsoft Off
 
 You can set this to **Not Configured** or **Enabled** and then select the **Allow Office to connect to the Internet** online content option.
 
-:::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/onlion-content-options-setting-details.png" alt-text="Screendshot of Online Content Options policy setting details, setting to Not Configured or Enabled and selecting the Allow Office to connect to the Internet option." border="false":::
+:::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/onlion-content-options-setting-details.png" alt-text="Screenshot of Online Content Options policy setting details, setting to Not Configured or Enabled and selecting the Allow Office to connect to the Internet option." border="false":::
 
 When you enable the Allow Office to connect to the Internet setting, this affects other features in Office. These include the following:
 
