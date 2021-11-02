@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 3009042
 
 When you open a message in the Outlook Outbox to which a delayed delivery was applied, you can't edit the message body, and the **Send** button is missing from the message:
 
-![Delayed Delivery message without Send button ](./media/send-button-missing-delayed-delivery-email-outbox/delayed-delivery-message.png)
+:::image type="content" source="media/send-button-missing-delayed-delivery-email-outbox/delayed-delivery-message.png" alt-text="Screenshot of delayed delivery message without Send button.":::
 
 ## Cause
 
@@ -43,7 +43,7 @@ To work around this issue, close and reopen the affected message. After you take
 > [!NOTE]
 > If you open and close the message but don't reopen the message and then click **Send** again, the message will remain in the Outbox and won't be sent at the delayed delivery time. A message that's set correctly for delivery will appear with an italic subject line and with an outgoing message icon, as follows:
 
-![Message ready for Delayed Delivery](./media/send-button-missing-delayed-delivery-email-outbox/message-ready-delayed-dilivery.png)
+:::image type="content" source="media/send-button-missing-delayed-delivery-email-outbox/message-ready-delayed-delivery.png" alt-text="Screenshot shows a message that's set correctly for delivery will appear with an italic subject line and with an outgoing message icon.":::
 
 ## More information
 
@@ -52,4 +52,5 @@ To configure a message for delayed delivery, follow these steps:
 1. In the message that you want to delay, click the **Options** tab on the ribbon.
 2. Select **Delay Delivery**, and make sure that the **Do not deliver before** option is selected on the **Properties** dialog box and that the desired date and time for future delivery are selected, as follows:
 
-![Setting Delayed Delivery](./media/send-button-missing-delayed-delivery-email-outbox/configure-message-for-delay-delivery.png)
+:::image type="content" source="media/send-button-missing-delayed-delivery-email-outbox/configure-delayed-delivery-message.png" alt-text="Screenshot of delayed delivery message setting. Click the Options tab and select Delay Delivery. Select the Do not deliver before option on the Properties dialog box, and the desired date and time for future delivery.":::
+
