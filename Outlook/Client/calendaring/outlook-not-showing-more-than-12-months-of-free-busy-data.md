@@ -59,7 +59,7 @@ To change the number of months for which Calendar free/busy information is publi
     2. Enter the number of months that you want in the **Publish \<months> of Calendar free/busy information** box.
     3. If the **Publish at location** option was previously inactive, clear the check box to make it inactive again.
 
-       :::image type="content" source="media/outlook-not-showing-more-than-12-months-of-free-busy-data/publish-at-location-option.png" alt-text="check the Publish at location option details" border="false":::
+       :::image type="content" source="media/outlook-not-showing-more-than-12-months-of-free-busy-data/publish-at-location-option.png" alt-text="Screenshot of the Internet Free/Busy Options dialog box." border="false":::
 
     4. Select **OK**.
 
@@ -67,7 +67,7 @@ To change the number of months for which Calendar free/busy information is publi
 
     1. Enter the number of months that you want in the **Publish \<months> of Calendar free/busy information on the server** box.
 
-       :::image type="content" source="media/outlook-not-showing-more-than-12-months-of-free-busy-data/enter-months.png" alt-text="Enter the number of months" border="false":::
+       :::image type="content" source="media/outlook-not-showing-more-than-12-months-of-free-busy-data/enter-months.png" alt-text="Screenshot of the Free/Busy Options dialog box." border="false":::
 
     2. Select **OK**.
 
@@ -107,4 +107,4 @@ When Outlook 2010 or a later version connects to an Exchange 2010 mailbox, Outlo
 > [!NOTE]
 > The number of months in the `FBPublishRange` key must be specified in decimal format. If you specify 24 months in decimal, it appears as 18 in Hexadecimal, as shown in the following screenshot.
 
-:::image type="content" source="media/outlook-not-showing-more-than-12-months-of-free-busy-data/fbpublishrange-key.png" alt-text="FBPublishRange Registry Key" border="false":::
+:::image type="content" source="media/outlook-not-showing-more-than-12-months-of-free-busy-data/fbpublishrange-key.png" alt-text="Screenshot of FBPublishRange Registry Key.":::
