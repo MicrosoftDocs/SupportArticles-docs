@@ -31,20 +31,20 @@ Consider the following scenario:
 In this situation, you notice many warning messages with **event ID 1009**  in the Application log in Exchange Server 2016. The message resembles the following:
 
 ```console
-Log Name: Application
+Log Name: <LogName>
 Source: MSExchangeFastSearch
 Date: <Date>
 Event ID: 1009
 Task Category: General
 Level: Warning
-Keywords: Classic
+Keywords: <Keywords>
 User: N/A
 Computer: <ComputerName>
 Description:
 The indexing of mailbox database <database name> encountered an unexpected exception. Error details: Microsoft.Exchange.Search.Core.Abstraction.OperationFailedException: The component operation has failed. ---> Microsoft.Exchange.Search.Core.Abstraction.OperationFailedException: The component operation has failed. ---> Microsoft.Exchange.Search.Engine.FeedingSkippedException: "Feeding was skipped for <Database ID> due to the state 'Unknown', error code: 'Unknown'."
 ```
 
-![Screenshot of the window of Event 1009](./media/1009-errors-application-log-lagged-database-copies/event-1009.png)
+:::image type="content" source="media/1009-errors-application-log-lagged-database-copies/event-1009.png" alt-text="Screenshot of the window for Even Properties - Event 1009.":::
 
 ## Resolution
 

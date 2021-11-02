@@ -40,7 +40,7 @@ ExternalEmailAddress : SMTP:user@fourthcoffee.com
 
 You can also verify the `ExternalEmailAddress` attribute‎ value from the Office 365 Exchange Admin Center. To do this, locate **Recipients**, and then select **Contacts**. Double-click the mail user in question, and then view the email addresses section. Scroll down to the bottom of the page to see the external email address.
 
-:::image type="content" source="media/hybrid-freebusy-lookups-fail/set-external-email.png" alt-text="ExternalEmailAddress value from Office 365 Exchange Admin Center" border="false":::
+:::image type="content" source="media/hybrid-freebusy-lookups-fail/set-external-email.png" alt-text="Screenshot for ExternalEmailAddress value from Office 365 Exchange Admin Center.":::
 
 > [!NOTE]
 > When users are synchronized from on-premises by using the Azure Active Directory Connect synchronization tool, you cannot change the external email address directly in Exchange Online. Instead, you must change the synchronized user in the on-premises organization.
