@@ -55,13 +55,13 @@ Not sure which Microsoft 365 plan your organization uses? Go to [https://portal.
 
 If you see the below administrative interface, then you are using the Small Business plan.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/small-business-admin-interface.png" alt-text="Small Business plan administrative interface" border="false":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/small-business-admin-interface.png" alt-text="Screenshot that shows the administrative interface of Small Business plan." border="false":::
 
 **Enterprise | Midsize | Education:**
 
 If you see the below administrative interface, then you are using the Enterprise/Midsize or Education plan.
 
- :::image type="content" source="media/how-to-share-calendar-and-contacts/enterprise-midsize-edu-plan-admin-interface.png" alt-text="Enterprise/Midsize or Education plan administrative interface" border="false":::
+ :::image type="content" source="media/how-to-share-calendar-and-contacts/enterprise-midsize-edu-plan-admin-interface.png" alt-text="Screenshot that shows the administrative interface of Enterprise, Midsize or Education plan.":::
 
 - [Small Business](#create-a-new-shared-mailbox-and-assign-permissions)
 - [Enterprise | Midsize | Education](#create-a-security-group-for-your-organization-or-group-of-users)
@@ -102,7 +102,7 @@ If you have permissions to a shared mailbox, the shared calendar associated with
 1. In Outlook, select **Calendar**.
 2. In the folder pane, under **My Calendars**, select the shared calendar.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-shared-calendar.png" alt-text="select the shared calendar" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-shared-calendar.png" alt-text="Screenshot that shows the shared calendar selected in the My Calendars page.":::
 
 **Open a shared contacts list in Outlook**
 
@@ -111,7 +111,7 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 1. In Outlook, select **People**.
 2. Under **My Contacts**, select the contacts folder for the shared contacts list.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-contacts-folder.png" alt-text="select the contacts folder" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-contacts-folder.png" alt-text="Screenshot that shows the contacts folder selected under the My Contacts page.":::
 
 ##### Outlook Web App
 
@@ -123,15 +123,15 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 1. Sign in to your Microsoft 365 account using a Web browser. Select **Calendar**.
 2. Right-click **OTHER CALENDARS**, and then select **Open calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-calendar.png" alt-text="Open calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-calendar.png" alt-text="Screenshot that shows the open calendar option selected.":::
 
 3. In **From Directory**, search for the shared calendar you want to open. Select the shared mailbox you want to open and select **Open**.
 
-     :::image type="content" source="media/how-to-share-calendar-and-contacts/use-from-directory-to-open-calendar.png" alt-text="Open a calendar by using From Directory" border="false":::
+     :::image type="content" source="media/how-to-share-calendar-and-contacts/use-from-directory-to-open-calendar.png" alt-text="Screenshot that shows the operation to open a calendar by using From Directory functionality.":::
 
 4. The shared calendar displays in your Calendar folder list.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/shared-calendar-shown.png" alt-text="a shared calendar is shown" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/shared-calendar-shown.png" alt-text="Screenshot that shows a shared calendar displays in the Calendar folder list.":::
 
 **Did this solve your problem?**
 
@@ -193,7 +193,7 @@ If you have permissions to a shared mailbox, the shared calendar associated with
 1. In Outlook, select **Calendar**.
 2. In the folder pane, under **My Calendars**, select the shared calendar.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-shared-calendar.png" alt-text="select the shared calendar" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-shared-calendar.png" alt-text="Screenshot that shows the shared calendar selected in the My Calendars list.":::
 
 **Open a shared contacts list in Outlook**
 
@@ -202,7 +202,7 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 1. In Outlook, select **People**.
 2. Under **My Contacts**, select the contacts folder for the shared contacts list.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-contacts-folder.png" alt-text="select the contacts folder" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/select-contacts-folder.png" alt-text="Screenshot that shows the contacts folder selected in the My Contacts page.":::
 
 ##### Outlook Web App
 
@@ -214,15 +214,15 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 1. Sign in to your Microsoft 365 account using a Web browser. Select **Calendar**.
 2. Right-click **OTHER CALENDARS**, and then select **Open calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-calendar.png" alt-text="Open calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-calendar.png" alt-text="Screenshot that shows the open calendar tab selected." border="false":::
 
 3. In **From Directory**, search for the shared calendar you want to open. Select the shared mailbox you want to open and select **Open**.
 
-     :::image type="content" source="media/how-to-share-calendar-and-contacts/use-from-directory-to-open-calendar.png" alt-text="Open a calendar by using From Directory" border="false":::
+     :::image type="content" source="media/how-to-share-calendar-and-contacts/use-from-directory-to-open-calendar.png" alt-text="Screenshot that shows the operation to open a calendar by using From Directory functionality.":::
 
 4. The shared calendar displays in your Calendar folder list.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/shared-calendar-shown.png" alt-text="a shared calendar is shown" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/shared-calendar-shown.png" alt-text="Screenshot that shows a shared calendar displays in the Calendar folder list.":::
 
 **Did this solve your problem?**
 
@@ -259,19 +259,19 @@ You can share your calendar with specific users who can be located both within y
 
 1. Select **Calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Selecting Calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Screenshot that shows the Calendar option selected.":::
 
 2. Select **Home** > **Share Calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/share-calendar.png" alt-text="Sharing Calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/share-calendar.png" alt-text="Screenshot that shows the Sharing Calendar tab selected.":::
 
 3. In the email that opens, type the name of the person in your organization that you want to share your calendar with in the **To** box. In **Details**, specify the level of details that you want to share with the person in your organization, and then select **Send**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.jpg" alt-text="Sending a shared calendar 1":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.png" alt-text="Screenshot of an opening email sending a shared calendar.":::
 
 4. The person in your organization receives the sharing invitation in email, and then select **Open this calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.jpg" alt-text="the Open this calendar option":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.png" alt-text="Screenshot that shows the Open this Calendar tab selected.":::
 
 5. The shared calendar displays in the person's Calendar list.
 
@@ -279,15 +279,15 @@ You can share your calendar with specific users who can be located both within y
 
 1. Select **Calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Selecting Calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Screenshot that shows the Calendar option selected.":::
 
 2. Select **Home** > **Calendar Permissions**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-permissions-tab.png" alt-text="the Calendar Permissions tab" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-permissions-tab.png" alt-text="Screenshot that shows the Calendar Permissions tab selected.":::
 
 3. On the **Permissions** tab, make any changes to the calendar sharing permissions.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/permissions-tab.png" alt-text="the Permissions tab" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/permissions-tab.png" alt-text="Screenshot that shows the setting under Permissions tab.":::
 
 4. Select **OK**.
 
@@ -302,23 +302,23 @@ You can share your calendar with specific users who can be located both within y
 
 1. Select **Calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Selecting Calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Screenshot that shows the Calendar option selected.":::
 
 2. Select **Home** > **Share Calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/share-calendar.png" alt-text="Sharing Calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/share-calendar.png" alt-text="Screenshot that shows the Sharing Calendar tab selected.":::
 
 3. In the email that opens, type the name of the person outside of your organization that you want to share your calendar with in the **To** box. In **Details**, specify the level of details that you want to share with the person outside of your organization, and then click **Send**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.jpg" alt-text="Sending a shared calendar 2":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.png" alt-text="Screenshot of an opening email sending a shared calendar.":::
 
    If the following error displays when you try to send your sharing invitation, you have tried to share more details than is supported by the settings in your organization. If this occurs, under Details, choose to share a different level of details. Only an admin in your organization can change the sharing policy settings for your organization. For more information, see the end of this section.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/error-when-sending-sharing-invitation.png" alt-text="Sending a shared calendar 3":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/error-when-sending-sharing-invitation.png" alt-text="Screenshot of an  error message when sending a shared calendar.":::
 
 4. The person outside of your organization receives the sharing invitation in email, and then clicks Open this calendar.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.jpg" alt-text="the Open this calendar option"::: 
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.png" alt-text="Screenshot that shows the Open this Calendar tab selected.":::
 
 5. The shared calendar displays in the person's Calendar list.
 
@@ -326,15 +326,15 @@ You can share your calendar with specific users who can be located both within y
 
 1. Select **Calendar**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Selecting Calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-tab.png" alt-text="Screenshot that shows the Calendar option selected.":::
 
 2. Select **Home** > **Calendar Permissions**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-permissions-tab.png" alt-text="the Calendar Permissions tab" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-permissions-tab.png" alt-text="Screenshot that shows the Calendar Permissions tab selected.":::
 
 3. On the **Permissions** tab, make any changes to the calendar sharing permissions.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/permissions-tab.png" alt-text="the Permissions tab" border="false"::: 
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/permissions-tab.png" alt-text="Screenshot that shows the setting under Permissions tab.":::
 
 4. Select **OK**.
 
@@ -356,11 +356,11 @@ You can share your calendar with specific users who can be located both within y
 
 1. Sign in to your Microsoft 365 account using a web browser. Select **Calendar** > **Share**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/share-tab-in-calendar.png" alt-text="the Share tab in Calendar" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/share-tab-in-calendar.png" alt-text="Screenshot that shows the Share tab in Calendar.":::
 
 2. Type the name or email address of the person you want to share your calendar with in the **Share with** box. This box works just like the **To** box in an email message. You can add more than one person to share your calendar with.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/compose-shared-calendar.jpg" alt-text="compose a shared calendar message" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/compose-shared-calendar.png" alt-text="Screenshot that shows the page to compose a shared calendar message.":::
 
 3. After you've added who you want to share your calendar with, select how much information you want them to see. **Full details** will show the time, subject, location, and other details of all items in your calendar. **Limited** **details** will show the time, subject, and location, but no other information. **Availability** only will show only the time of items on your calendar.
 
@@ -372,11 +372,11 @@ You can share your calendar with specific users who can be located both within y
 
 Each person in your organization that you shared your calendar with will receive an email message telling them that you've shared your calendar with them. People inside your organization will have two buttons on the invitation - one to add your calendar to their calendar view, and another to share their calendar with you. The email will also include a URL that can be used to access the calendar.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/add-calendar-button.jpg" alt-text="the ADD CALENDAR button.":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/add-calendar-button.png" alt-text="Screenshot that shows the ADD CALENDAR button on the invitation.":::
 
 The calendar will display under PEOPLE'S CALENDARS.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.jpg" alt-text="The calendar displayed under PEOPLE'S CALENDARS 1" border="false":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 1" border="false":::
 
 #### To change calendar sharing permissions
 
@@ -406,7 +406,7 @@ The calendar will display under PEOPLE'S CALENDARS.
 
 2. Type the name or email address of the person you want to share your calendar with in the **Share with** box. This box works just like the **To** box in an email message. You can add more than one person to share your calendar with.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/compose-shared-calendar.jpg" alt-text="compose a shared calendar message" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/compose-shared-calendar.png" alt-text="Screenshot that shows the page to compose a shared calendar message.":::
 
 3. After you've added who you want to share your calendar with, select how much information you want them to see. **Full details** will show the time, subject, location, and other details of all items in your calendar. **Limited** **details** will show the time, subject, and location, but no other information. **Availability** only will show only the time of items on your calendar.
 
@@ -418,24 +418,24 @@ The calendar will display under PEOPLE'S CALENDARS.
 
 If your organization and the organization of the person you are sharing your calendar with are federated through Microsoft 365 or Exchange, the invitation will also have two buttons - one to add your calendar to their calendar view, and another to share their calendar with you.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/add-calendar-button.jpg" alt-text="the ADD CALENDAR button":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/add-calendar-button.png" alt-text="the ADD CALENDAR button":::
 
 If the external user's organization and your organization are federated through Microsoft 365 or Exchange, the person will see your calendar under PEOPLE's CALENDARS. However, if the external user's organization and your organization are not federated through Microsoft 365 or Exchange, the user will need to access your mailbox by clicking the URL in the body of the message.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.jpg" alt-text="The calendar displayed under PEOPLE'S CALENDARS 4" border="false":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.png" alt-text="Screenshot that shows the calendar displayed under PEOPLE'S CALENDARS list.":::
 
 #### To change calendar sharing permissions
 
 1. Right-click the calendar you want to change permission for, and then select **Permissions**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/change-permissions-on-calendar.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 5" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/change-permissions-on-calendar.png" alt-text="Screenshot that shows the permissions tab selected.":::
 
 2. Do one of the following, and then select **Save**:
 
    - Use the drop-down menu to change the level of details that you are sharing with a person.
-   - Select the delete icon![delete icon](./media/how-to-share-calendar-and-contacts/delete-icon.png) to stop sharing your calendar with a person.
+   - Select the delete icon :::image type="icon" source="./media/how-to-share-calendar-and-contacts/delete-icon.png" alt-text="Screenshot of the delete icon."::: to stop sharing your calendar with a person.
 
-        :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 6" border="false":::
+        :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="Screenshot that shows the save option to save the permission setting.":::
 
 **Did this solve your problem?**
 
@@ -464,11 +464,11 @@ You can share a contacts folder with people that are located in your organizatio
 
 2. Select **Home**. Then, in the **Share** group, select **Share Contacts**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/share-contacts-tab.png" alt-text="the Share Contacts tab" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/share-contacts-tab.png" alt-text="Screenshot that shows the Share Contacts tab in the Home page.":::
 
 3. In the **To** box, enter the name of the recipient for the sharing invitation message. If you want to, you can change the **Subject**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.jpg" alt-text="send a shared contact 1":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.png" alt-text="Screenshot that shows a sharing invitation message.":::
 
 4. If you want to, request permission to view the recipient's default **People** folder. To do so, select the **Request permission to view recipient's Contacts** folder check box.
 
@@ -479,7 +479,7 @@ You can share a contacts folder with people that are located in your organizatio
 
 6. The person in your organization receives the sharing invitation in email, and select **Open this Contacts folder**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-contacts-folder.jpg" alt-text="the Open this Contacts folder tab" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-contacts-folder.png" alt-text="Screenshot that shows the Open this Contacts folder tab selected.":::
 
 #### To change contact folder sharing permissions
 
@@ -491,7 +491,7 @@ You can share a contacts folder with people that are located in your organizatio
    - **Revoke or change access permissions** for everyone In the **Name** box, select **Default**. Under **Permissions**, in the **Permission Level** list, select **None** to revoke permissions or any of the other options to change permissions.
    - **Revoke or change access permissions** for one person In the **Name** box, select the name of the person whose access permissions you want to change. Under **Permissions**, in the **Permission Level** list, select None to revoke permissions or any of the other options to change permissions.
 
-     :::image type="content" source="media/how-to-share-calendar-and-contacts/contacts-properties.jpg" alt-text="the permissions tab in Contact Properties" border="false":::
+     :::image type="content" source="media/how-to-share-calendar-and-contacts/contacts-properties.png" alt-text="Screenshot that shows the permissions tab in Contact Properties.":::
 4. select **OK**.
 
 **Did this solve your problem?**
@@ -507,11 +507,11 @@ You can share a contacts folder with people that are located in your organizatio
 
 2. Select **Home**. Then, in the **Share** group, select **Share Contacts**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/share-contacts-tab.png" alt-text="the Share Contacts tab" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/share-contacts-tab.png" alt-text="Screenshot that shows the Share Contacts tab on the Home page.":::
 
 3. In the **To** box, enter the name of the recipient for the sharing invitation message. If you want to, you can change the **Subject**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.jpg" alt-text="send a shared contact 2":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.png" alt-text="Screenshot that shows a sharing invitation message.":::
 
 4. If you want to, request permission to view the recipient's default **People** folder. To do so, select the **Request permission to view recipient's Contacts** folder check box.
 
@@ -522,11 +522,11 @@ You can share a contacts folder with people that are located in your organizatio
 
    If the following error displays when you try to send the sharing invitation, sharing contacts with people outside of your organization is not supported by the sharing policy for your organization. Only an admin in your organization can change the sharing policy for your organization. For more information, see the end of this section.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/folder-sharing-is-not-available-error.png" alt-text="send a shared contact 3" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/folder-sharing-is-not-available-error.png" alt-text="Screenshot that shows an error displays when sending the sharing invitation.":::
 
 6. The person in your organization receives the sharing invitation in email, and clicks **Open this Contacts folder.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.jpg" alt-text="send a shared contact 4":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.png" alt-text="Screenshot that shows the Open this Calendar tab selected.":::
 
 #### To change contact folder sharing permissions
 
@@ -539,7 +539,7 @@ You can share a contacts folder with people that are located in your organizatio
    - **Revoke or change access permissions** for everyone In the **Name** box, select **Default**. Under **Permissions**, in the **Permission Level** list, select **None** to revoke permissions or any of the other options to change permissions.
    - **Revoke or change access permissions** for one person In the **Name** box, select the name of the person whose access permissions you want to change. Under **Permissions**, in the **Permission Level** list, select None to revoke permissions or any of the other options to change permissions.
 
-     :::image type="content" source="media/how-to-share-calendar-and-contacts/contacts-properties.jpg" alt-text="the permissions tab in Contact Properties" border="false":::
+     :::image type="content" source="media/how-to-share-calendar-and-contacts/contacts-properties.png" alt-text="Screenshot that shows the permissions tab in Contact Properties.":::
 
 4. select **OK**.
 
