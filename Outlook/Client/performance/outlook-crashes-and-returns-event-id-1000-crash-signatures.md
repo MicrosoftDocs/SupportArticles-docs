@@ -65,4 +65,4 @@ To review the Application log, follow these steps:
 4. In the **Actions** pane, select **Filter Current Log**.
 5. In the **Filter Current Log** dialog box, enter *1000* (as shown in the following screenshot), and then select **OK**.
 
-   :::image type="content" source="media/outlook-crashes-and-returns-event-id-1000-crash-signatures/filter-current-log.png" alt-text="enter 1000 into Filter Current Log" border="false":::
+   :::image type="content" source="media/outlook-crashes-and-returns-event-id-1000-crash-signatures/filter-current-log.png" alt-text="Screenshot of the Filter Current Log dialog box." border="false":::
