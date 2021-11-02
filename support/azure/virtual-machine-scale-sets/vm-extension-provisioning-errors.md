@@ -42,13 +42,13 @@ az vmss list-instances --resource-group MyResourceGroup --name MyVmss --query "[
 
 The output of this command will display the provisioning states of the extensions on each instance. The following example output shows how this extension information is grouped by instance ID.
 
-:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with first instance highlighted.":::
+:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with instance IDs highlighted." border="false":::
 
-Within each section dedicated to a particular instance, the “extProvisioningState” list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the “extension” list, which displays the names of the extensions in same corresponding order.
+Within each section dedicated to a particular instance, the "extProvisioningState" list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the "extension" list, which displays the names of the extensions in same corresponding order.
 
-For example, in the following example output, the first provisioning state in this instance, “Failed,” corresponds to the first extension, “customScript.” By matching the provisioning states to the extensions listed, you can also determine that in this example, the second and third extensions listed were successfully provisioned on the same instance.
+For example, in the following example output, the first provisioning state in this instance, "Failed," corresponds to the first extension, "customScript." By matching the provisioning states to the extensions listed, you can also determine that in this example, the second and third extensions listed were successfully provisioned on the same instance.
 
-:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-extensions-matched.png" alt-text="Screenshot of output with arrow from provisioning state to extension name":::
+:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-extensions-matched.png" alt-text="Screenshot of output showing the provisioning state and matched extension names." border="false":::
 
 ## Attempt to scale out the Virtual Machine Scale Set
 
@@ -80,4 +80,4 @@ If the extension is customizable, such as Custom Script Extension (CSE) or Desir
 
 ## Contact support
 
-If you’re unable to solve the problem, save the logs and [open a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+If you're unable to solve the problem, save the logs and [open a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
