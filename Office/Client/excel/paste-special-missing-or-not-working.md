@@ -45,7 +45,8 @@ Ensure that all instances of the web browsers that you use are closed and try 
    > [!NOTE]
    > For more information, see [Adding or Removing Add-ins](https://office.microsoft.com/excel-help/add-or-remove-add-ins-HP010342658.aspx) and [Working with Office Safe Modes.](https://office.microsoft.com/excel-help/work-with-office-safe-modes-HP010354300.aspx).
 
-    ![paste special](./media/paste-special-missing-or-not-working/paste-special.jpg)  
-    ![paste special settings](./media/paste-special-missing-or-not-working/paste-special-settings.jpg) |
+    :::image type="content" source="media/paste-special-missing-or-not-working/paste-special.png" alt-text="Check the Paste Special performance with office safe mode.":::
+
+    :::image type="content" source="media/paste-special-missing-or-not-working/paste-special-settings.png" alt-text="Check the Paste Special settings." border="false":::
 
 You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.

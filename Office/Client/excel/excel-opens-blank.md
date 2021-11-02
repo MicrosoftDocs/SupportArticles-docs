@@ -70,7 +70,7 @@ To disable hardware acceleration, follow these steps:
 
    The following screenshot shows this option in Excel.
 
-   ![Screenshot of the Disable hardware graphics acceleration check box.](./media/excel-opens-blank/disable-hardware-acceleration.png)
+   :::image type="content" source="media/error-when-send-commands-in-excel/disable-hardware-graphics-acceleration.png" alt-text="Select the Disable hardware graphics acceleration option to disable hardware acceleration in Office Options setting." border="false":::
 
 1. Select the **OK** button.
 
@@ -170,7 +170,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 1. Select **Microsoft Office 365**, then select **Change**.
 1. Select **Online Repair**, then select **Repair**.
 
-   ![Screenshot of the Office repair page that selects Online Repair](./media/excel-opens-blank/office-repair.jpg)
+   :::image type="content" source="media/error-when-send-commands-in-excel/online-repair-option.png" alt-text="Select the Online Repair option to repair office.":::
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.

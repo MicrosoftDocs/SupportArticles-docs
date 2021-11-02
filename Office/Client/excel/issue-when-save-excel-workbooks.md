@@ -164,7 +164,7 @@ If none of the causes that are listed in this article apply to your situation, o
 <td valign="top">
 <a href="#option1">
 
-![Option 1](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
+:::image type="icon" source="media/issue-when-save-excel-workbooks/save-workbook-using-new-file-name-option-1.png":::
 
 </a>
 </td><td><a href="#option1">
@@ -182,7 +182,7 @@ If none of the causes that are listed in this article apply to your situation, o
 <td valign="top">
 <a href="#option2">
 
-![Option 2](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
+:::image type="icon" source="media/issue-when-save-excel-workbooks/move-original-worksheets-new-workbook-option-2.png":::
 
 </a>
 </td>
@@ -204,7 +204,7 @@ If none of the causes that are listed in this article apply to your situation, o
 <td valign="top">
 <a href="#option3">
 
-![Option 3](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
+:::image type="icon" source="media/issue-when-save-excel-workbooks/save-file-different-excel-file-type-option-3.png":::
 
 </a>
 </td>
@@ -223,7 +223,7 @@ If none of the causes that are listed in this article apply to your situation, o
 <td valign="top">
 <a href="#option4">
 
-![Option 4](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+:::image type="icon" source="media/issue-when-save-excel-workbooks/try-save-workbook-another-location-option-4.png":::
 
 </a>
 </td>
@@ -241,7 +241,7 @@ Try saving your notebook to another location, such as a local hard disk, a netwo
 <td valign="top">
 <a href="#option5">
 
-![Option 5](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
+:::image type="icon" source="media/issue-when-save-excel-workbooks/try-save-new-workbook-original-location-option-5.png":::
 
 </a>
 </td>
@@ -265,7 +265,7 @@ Try saving your notebook to another location, such as a local hard disk, a netwo
 <td valign="top">
 <a href="#option6">
 
-![Option 6](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png)
+:::image type="icon" source="media/issue-when-save-excel-workbooks/try-save-workbook-safe-mode-option-6.png":::
 
 </a>
 </td>
