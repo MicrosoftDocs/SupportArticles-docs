@@ -67,7 +67,7 @@ If you have installed SaRA, follow these steps to start a calendar scan manually
     :::image type="content" source="media/scan-outlook-calendar-using-sara/select-diagnostic-you-like-to-run.png" alt-text="Screenshot of creating a scan of calendar.":::
 1. When you are prompted to confirm that you are using the affected machine, select **Yes** > **Next**.
 
-:::image type="content" source="media/scan-outlook-calendar-using-sara/affected-machine.png" alt-text="Screenshot of confirming the affected machine.":::
+    :::image type="content" source="media/scan-outlook-calendar-using-sara/affected-machine.png" alt-text="Screenshot of confirming the affected machine.":::
 1. Scan will run automatically when you select **Next** on the previous screen.
 
 1. The scan is completed when you see **We're done collecting your Outlook configuration details**.
