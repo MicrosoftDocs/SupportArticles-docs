@@ -7,11 +7,10 @@ ms.author: v-tappelgate
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: <upper-level folder>
+ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: <see CI>
-ms.technology: <subfolder>
+ms.technology: hyper-v
 keywords: DDA,passthrough,pass-through,LUN,MPIO
 ---
 
