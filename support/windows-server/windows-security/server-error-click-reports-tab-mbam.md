@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Error message when you click Reports tab in MBAM: Server Error in /Reports Application
@@ -18,7 +18,7 @@ ms.technology: windows-server-deployment
 This article fixes an error when you click the Reports tab in MBAM.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
-_Original KB number:_ &nbsp;2620287
+_Original KB number:_ &nbsp; 2620287
 
 ## Symptoms
 

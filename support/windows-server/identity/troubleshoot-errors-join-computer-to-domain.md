@@ -3,14 +3,14 @@ title: Troubleshoot errors that occur when you join Windows-based computers to a
 description: Troubleshooting guide for error messages that occurs when you join Windows-based computers to a domain.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain join issues
+ms.custom: sap:domain-join-issues, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot errors that occur when you join Windows-based computers to a domain

@@ -1,7 +1,7 @@
 ---
 title: Create and manage Central Store
 description: Describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
-ms.date: 12/23/2020
+ms.date: 10/20/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-client-group-policy
 ---
 # How to create and manage the Central Store for Group Policy Administrative Templates in Windows
@@ -22,6 +22,7 @@ _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
 
+- [Administrative Templates (.admx) for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/103507)
 - [Administrative Templates (.admx) for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/103124)
 - [Administrative Templates (.admx) for Windows 10 October 2020 Update (20H2) - v2.0](https://www.microsoft.com/download/103060)
 - [Administrative Templates (.admx) for Windows 10 May 2020 Update (2004)](https://www.microsoft.com/download/101445)
@@ -36,7 +37,7 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/43413)
 - [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/41193)
 
-To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/103125).
+To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/103506).
 
 ## Overview
 

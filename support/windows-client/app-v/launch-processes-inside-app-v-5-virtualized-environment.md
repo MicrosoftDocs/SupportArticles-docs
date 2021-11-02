@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path:
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to launch processes inside the App-V 5.0 virtualized environment

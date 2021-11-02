@@ -1,16 +1,16 @@
 ---
-title: Address Resolution Protocol caching behavior 
+title: Address Resolution Protocol caching behavior
 description: Describes ARP caching behavior in Windows Vista TCP/IP implementations.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, muratka
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Description of Address Resolution Protocol (ARP) caching behavior in TCP/IP implementations

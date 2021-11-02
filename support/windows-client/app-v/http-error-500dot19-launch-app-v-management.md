@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path:
+ms.custom: sap:management-server-issues, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # HTTP Error 500.19 - Internal Server Error when launching the App-V Management console

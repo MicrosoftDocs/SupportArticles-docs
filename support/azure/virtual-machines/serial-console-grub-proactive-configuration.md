@@ -142,14 +142,11 @@ By default you should be able to access GRUB by holding down **Esc** key during 
 **Option 1** - Forces GRUB to be displayed on Screen 
 
 Update the file /etc/default/grub.d/50-cloudimg-settings.cfg to keep the GRUB menu on screen for the specified TIMEOUT.
-You are not required to hit **Esc** as GRUB will be displayed immediately
+You are not required to hit **Esc** as GRUB will be displayed immediately.
 
 ```
-GRUB_TIMEOUT=0
-
-change to
-
 GRUB_TIMEOUT=5
+GRUB_TIMEOUT_STYLE=menu
 ```
 
 **Option 2** - Allows for **Esc** to be pressed before booting

@@ -3,14 +3,14 @@ title: Overview of Server Message Block signing
 description: Describes how to configure SMB signing and how to determine whether SMB signing is enabled.
 ms.date: 09/08/2021
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # Overview of Server Message Block signing

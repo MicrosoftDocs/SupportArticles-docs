@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-intune.yml
 - name: App management
@@ -18,8 +19,6 @@
       href: apps-appear-unavailable.md
     - name: Deployment, delivery, and processing of a Win32 application
       href: develop-deliver-working-win32-app-via-intune.md
-    - name: Deploy Windows update packages as Win32 apps
-      href: deploy-windows-update-packages-as-win32-apps.md
     - name: Can't save corporate data in WIP-allowed apps
       href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: iOS apps
@@ -64,8 +63,6 @@
       href: only-one-app-policy-applied-edge-managed-browser.md
   - name: General help and troubleshooting
     items:
-    - name: LOB app versioning
-      href: lob-app-versioning.md  
     - name: Save application failed error
       href: save-application-failed-error.md
     - name: Build software inventory using Power BI
@@ -86,8 +83,6 @@
       href: device-enroll-intune-app-management-error.md
     - name: Known issue - Fingerprint authentication on Samsung Note 4
       href: no-prompt-for-fingerprint-identity.md
-    - name: Set up and validate iOS app protection policies
-      href: set-up-app-protection-policies-ios-device.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -316,9 +311,7 @@
     href: troubleshooting-blade-fails-loading.md
   - name: Troubleshoot software updates
     href: troubleshoot-software-updates-in-microsoft-intune.md
-  - name: Use PowerShell to look up licenses
-    href: look-up-intune-licenses.md
-- name: Migration to the Azure portal
+- name: Migration to the Azure Portal
   items:
   - name: Migration blockers for grouping and targeting
     href: grouping-targeting-migration-blockers.md

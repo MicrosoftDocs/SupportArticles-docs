@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # TCP/IP and NBT configuration parameters for Windows XP

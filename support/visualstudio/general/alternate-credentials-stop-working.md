@@ -29,15 +29,15 @@ To work around the issue, reset your alternate credentials for that account to r
 
 2. Open your profile.
 
-    :::image type="content" source="./media/alternate-credentials-stop-working/my-profile.jpg" alt-text="Open your profile.":::
+    :::image type="content" source="./media/alternate-credentials-stop-working/my-profile.png" alt-text="Screenshot shows My profile menu under name.":::
 
 3. Enable alternate credentials for this account.
 
-    :::image type="content" source="./media/alternate-credentials-stop-working/user-profile.jpg" alt-text="User profile.":::
+    :::image type="content" source="./media/alternate-credentials-stop-working/enable-alternate-credentials.png" alt-text="Screenshot of the User profile page. Under credentials tab, there's an Enable alternate credentials link option.":::
 
 4. Set a password and optionally a secondary user name that isn't an email account if @ is not supported by your application.
 
-    :::image type="content" source="./media/alternate-credentials-stop-working/set-password.jpg" alt-text="Set Password.":::
+    :::image type="content" source="./media/alternate-credentials-stop-working/set-password.png" alt-text="In the User profile page, you can set password and a secondary user name.":::
 
 > [!NOTE]
 > If you are member of multiple Visual Studio Online accounts, you will have one set of alternate credentials that can be used to access all your Visual Studio Online accounts associated with your Microsoft Account, and another set for all the accounts connected to each AAD directory.

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, wincicadsec, Jitesh.Thakur
-ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
 ms.technology: windows-server-active-directory
 keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service account, computer account, machine account
 ---

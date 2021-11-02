@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Server Manager
+ms.custom: sap:server-manager, csstroubleshoot
 ms.technology: windows-server-system-management-components
 adobe-target: true
 ---

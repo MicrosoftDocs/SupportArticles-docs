@@ -3,14 +3,14 @@ title: Event ID 12321 Warning Token Based Activation failed
 description: Provides a resolution for Event ID 12321 Warning Token Based Activation failed
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joscon
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Event ID 12321 Warning Token Based Activation failed

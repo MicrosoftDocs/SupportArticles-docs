@@ -2,7 +2,7 @@
 title: Manual drive mappings are removed
 description: Provides a solution to an issue where manual drive mappings are removed after drive maps are deployed through Group Policy Preferences.
 ms.date: 09/24/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Managing drive mappings through Group Policy
+ms.custom: sap:managing-drive-mappings-through-group-policy, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Group Policy Preferences removes manual drive mappings if the use first available setting is enabled

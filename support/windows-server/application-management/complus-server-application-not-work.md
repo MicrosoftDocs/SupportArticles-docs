@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM and COM+ performance and stability
+ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # A COM+ application may stop working in Windows when a user logs off

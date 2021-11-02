@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash, v-jesits
-ms.prod-support-area-path: Integration components
+ms.custom: sap:integration-components, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Event ID 4096 (Microsoft-Windows-Hyper-V-Integration-KvpExchange) is logged
@@ -18,7 +18,7 @@ ms.technology: hyper-v
 This article discusses that Microsoft-Windows-Hyper-V-Integration-KvpExchange is logged on a Windows Server 2012 R2 Hyper-V host.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2989430
+_Original KB number:_ &nbsp; 2989430
 
 ## Symptoms
 

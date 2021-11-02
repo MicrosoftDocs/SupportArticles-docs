@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 'Management and Configuration: General issues'
+ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Consolidate print servers by using DNS alias (CNAME) records

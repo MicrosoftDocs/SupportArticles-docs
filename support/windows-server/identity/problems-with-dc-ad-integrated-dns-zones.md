@@ -3,14 +3,14 @@ title: Problems occur with DCs in AD integrated DNS zones
 description: Describes problems that can occur with many Domain Controllers in Active Directory integrated DNS zones.
 ms.date: 05/27/2021
 author: v-lianna
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
+ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Problems that can occur with many Domain Controllers in Active Directory integrated DNS zones

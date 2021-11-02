@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cluster node is hanging
-ms.technology: windows-server-high-availability 
+ms.custom: sap:cluster-node-is-hanging, csstroubleshoot
+ms.technology: windows-server-high-availability
 ---
 # Corrupted memory dump file when you try to obtain a full memory dump file from a virtual machine that is running in a cluster environment
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-client-group-policy
 keywords: Windows Update, known issue, kir, group policy, rollback
 ---
@@ -81,6 +81,8 @@ To apply a KIR policy definition to devices that belong to a hybrid Azure AD or 
 1. Check the KIR release information or the known issues lists to identify which operating system versions you have to update.  
 1. Download the KIR policy definition .msi files that you require to update to the computer that you use to manage Group Policy for your domain.
 1. Run the .msi files. This action installs the KIR policy definition in the Administrative Template.  
+   > [!NOTE]  
+   > Policy definitions are installed in the *C:\Windows\PolicyDefinitions* folder. If you have implemented the Group Policy [Central Store](create-and-manage-central-store.md#the-central-store), you must copy the .admx and .adml files to the Central Store.
 
 ### <a id="gpo"></a>2. Create a GPO
 

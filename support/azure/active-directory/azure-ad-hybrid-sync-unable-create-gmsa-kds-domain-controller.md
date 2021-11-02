@@ -1,32 +1,32 @@
 ---
 title: Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
-description: This troubleshooting guide focuses on the situation where you're unable to install the service account after multiple retries, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
-ms.date: 09/15/2021
+description: This troubleshooting guide focuses on when you repeatedly can't install the service account. It unblocks you to install the Azure AD Connect Provisioning Agent.
+ms.date: 10/13/2021
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
 
-This troubleshooting guide focuses on the situation where you're unable to install the service account after multiple retries, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
+This troubleshooting guide focuses on when you can't install the service account after many retries. This situation blocks you from installing the Azure AD Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites)
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
 
 ## Unable to create gMSA because KDS may not be running on domain controller
 
-While installing Cloud Provisioning Agent, you may encounter the following error:
+While installing Cloud Provisioning Agent, you may get the following error:
 
 > Unable to create gMSA because KDS may not be running on domain controller. Please create/run KDS manually.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/1-agent-configuration-unable-create-gmsa.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen, including the error message Unable to create gMSA because KDS may not be running on domain controller. Please create/run KDS manually." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/1-agent-configuration-unable-create-gmsa.png" alt-text="Screenshot of the agent configuration screen. It couldn't create a group managed service account (g M S A), so create and run K D S manually." border="true" lightbox="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/1-agent-configuration-unable-create-gmsa.png":::
 
 To locate the 9001 and 9002 EventIDs, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Security - Netlogon**.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/2-event-9001.png" alt-text="Screenshot of the Event 9001 window." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/2-event-9001.png" alt-text="Screenshot of the Event 9001 window. You can't use the account as an M S A locally, because the machine doesn't support all account encryption types." border="true" lightbox="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/2-event-9001.png":::
 
-:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/3-event-9002.png" alt-text="Screenshot of the Event 9002 window." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/3-event-9002.png" alt-text="Screenshot of the Event 9002 window. Netlogon couldn't add the account as a managed service account (M S A) to the local machine." border="true":::
 
-Use the following command to retrieve the server settings for the [supported encryption types](/windows/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos)
+Use the following command to retrieve the server settings for the [supported encryption types](/windows/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos):
 
 ```console
 C:\windows\system32>reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters"
@@ -37,14 +37,14 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Ker
 
 Within the command, the DWORD *0x7ffffff8* represents *AES128_HMAC_SHA1 AES256_HMAC_SHA1*.
 
-Using 'DSA.MSC' to open the **provAgentgMSA** properties of the domain controller:
+In the Active Directory Users and Computers snap-in (*dsa.msc*), open the **provAgentgMSA** properties of the domain controller:
 
 1. Select the **Attribute Editor** tab.
-1. Locate the value for **msDS-SupportedEncryptionTypes**.
+1. Choose the **msDS-SupportedEncryptionTypes** attribute, and select **Edit**.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/4-provagentgmsa-properties-integer-attribute-editor.png" alt-text="Screenshot of the Agent gMSA Properties window open to the Attribute Editor tab, with the Integer Attribute Editor window on top of it." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/4-provagentgmsa-properties-integer-attribute-editor.png" alt-text="Screenshot of the provisioning agent g M S A properties dialog box, Attribute Editor tab. The Integer Attribute Editor dialog box is on top." border="true":::
 
-Verify that the encryption types offered by the server and the accepted by the account don't match.
+Verify that there's a mismatch between the encryption types that the server offers and that the accounts accept.
 
 To resolve the issue, remove the RC4 from the **provAgentgMSA** account by running the following command in a domain controller:
 
@@ -52,6 +52,6 @@ To resolve the issue, remove the RC4 from the **provAgentgMSA** account by runni
 Set-ADServiceAccount -Identity provAgentgMSA -KerberosEncryptionType AES128,AES256
 ```
 
-Next, reboot the Provisioning agent server and re-install the agent.
+Next, reboot the Provisioning agent server and reinstall the agent.
 
 For more information on this issue, see [Cannot install service account. The provided context did not match the target.](/archive/blogs/joelvickery/cannot-install-service-account-the-provided-context-did-not-match-the-target)

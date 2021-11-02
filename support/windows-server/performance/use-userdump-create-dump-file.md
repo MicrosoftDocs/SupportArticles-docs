@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Shutdown is slow or hangs
+ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Use the Userdump.exe tool to create a dump file

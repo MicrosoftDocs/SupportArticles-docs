@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # NET.EXE /ADD command does not support names longer than 20 characters
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article provides a solution to an error that occurs when you use the `NET.EXE /ADD` command with user or group names longer than 20 characters.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;324639
+_Original KB number:_ &nbsp; 324639
 
 ## Symptoms
 

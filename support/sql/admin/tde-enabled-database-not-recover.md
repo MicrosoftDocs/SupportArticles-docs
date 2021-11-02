@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem where a TDE-enab
 ms.date: 01/14/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: VenCher, SureshKa
-ms.topic: troubleshooting
 ms.prod: sql 
 ---
 # A TDE-enabled database may not recover in SQL Server
