@@ -85,7 +85,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
 
    2. The product version will be listed here.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-about-outlook-page.png" alt-text="Screenshot that shows the product version found in the About Outlook page.":::
+      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-about-outlook-page.png" alt-text="Screenshot that shows the product version found on the About Outlook page.":::
 
    3. Select **OK**.
 
@@ -117,7 +117,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
 1. Start Outlook for Mac.
 2. On the **Outlook** menu, select **About Outlook**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/about-outlook-in-outlook-for-mac.png" alt-text="Screenshot that shows the About Outlook option selected in the Outlook menu for Mac.":::
+   :::image type="content" source="media/how-to-open-shared-calendar/about-outlook-in-outlook-for-mac.png" alt-text="Screenshot that shows the About Outlook option selected on the Outlook menu for Mac.":::
 
 3. The About Outlook window will appear similar to one of the following, depending on your version of Outlook for Mac.
 
@@ -173,7 +173,7 @@ To open the shared calendar, follow these steps:
 3. Type the name of the person who granted you access, select **Find**, select the person's name, and then select **OK**.
 4. On the **Type** menu, select **Calendar**, and then select **OK**.
 
-   The shared calendar appears in the navigation pane under the **Shared** heading.
+   The shared calendar appears on the navigation pane under the **Shared** heading.
 
 **If you cannot open the shared calendar, what problem do you encounter?**
 
@@ -189,7 +189,7 @@ To open the shared calendar, follow these steps:
 > [!NOTE]
 > If you would like to share an Outlook calendar to other people rather than open a shared calendar from others in Outlook Web App, please check [Sharing your calendar in Outlook Web App](https://support.microsoft.com/office/share-your-calendar-in-outlook-on-the-web-7ecef8ae-139c-40d9-bae2-a23977ee58d5).
 
-To open a shared calendar from the sharing invitation, select **Accept** to open the shared calendar, and then you will see the shared calendar in the left pane under **Other Calendar** and the events in the right pane.
+To open a shared calendar from the sharing invitation, select **Accept** to open the shared calendar, and then you will see the shared calendar on the left pane under **Other Calendar** and the events on the right pane.
 
 :::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="Screenshot of the OWA Shared Calendar Invitation window.":::
 
@@ -256,7 +256,7 @@ If **Microsoft Exchange** does not appear before the shared calendar name, this 
 
 6. Select **OK** > **Next** > **Finish** > **Close**.
 
-7. In the navigation pane, expand **Mailbox - UserNameOfFolderOwner**, and then select the calendar that the user shared with you.
+7. On the navigation pane, expand **Mailbox - UserNameOfFolderOwner**, and then select the calendar that the user shared with you.
 
     :::image type="content" source="media/how-to-open-shared-calendar/expand-mailbox.png" alt-text="Screenshot that shows the target user's mailbox selected.":::
 
@@ -361,7 +361,7 @@ To open the shared calendar, follow these steps:
 
 1. At the bottom of the navigation bar, select **Calendar**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/calendar-in-navigation-bar.png" alt-text="Screenshot that shows the Calendar option selected in the navigation bar.":::
+    :::image type="content" source="media/how-to-open-shared-calendar/calendar-in-navigation-bar.png" alt-text="Screenshot that shows the Calendar option selected on the navigation bar.":::
 
 2. On the **Organize** tab, select **Open Shared Calendar**.
 
@@ -374,7 +374,7 @@ To open the shared calendar, follow these steps:
     :::image type="content" source="media/how-to-open-shared-calendar/open-by-searching-user.png" alt-text="Screenshot that shows the operation to open a shared calendar by searching the user name.":::
 
     > [!NOTE]
-    > The shared calendar appears in the left navigation pane under the **Shared Calendar** heading, with the person's name who shared the calendar below it.
+    > The shared calendar appears on the left navigation pane under the **Shared Calendar** heading, with the person's name who shared the calendar below it.
 
 **If you cannot open the shared calendar, what problem do you encounter?**
 
@@ -391,11 +391,11 @@ To open the shared calendar, follow these steps:
 
 When you open your Calendar in Microsoft Outlook 2016 for Mac or Outlook for Mac 2011, the **Open Shared Calendar** button on the ribbon is unavailable.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-button-on-home.png" alt-text= "Screenshot that shows the Open Shared Calendar button being unavailable in the Home tab.":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-button-on-home.png" alt-text= "Screenshot that shows the Open Shared Calendar button being unavailable on the Home tab.":::
 
 Additionally, when you point to **Open** on the **File** menu, the **Calendar** option is unavailable.
 
-:::image type="content" source="media/how-to-open-shared-calendar/calendar-option-not-available.png" alt-text="Screenshot that shows the Calendar option being unavailable in the Open tab.":::
+:::image type="content" source="media/how-to-open-shared-calendar/calendar-option-not-available.png" alt-text="Screenshot that shows the Calendar option being unavailable on the Open tab.":::
 
 #### Cause
 
@@ -501,7 +501,7 @@ To use Outlook on the web or Outlook Web App to open the shared calendar from an
 
 :::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="Screenshot of a shared calendar invitation in Outlook Web App.":::
 
-Select **Accept** to open the shared calendar, and then you will see the shared calendar listed in the left pane under **Other Calendars** and the events on this calendar in the right pane.
+Select **Accept** to open the shared calendar, and then you will see the shared calendar listed on the left pane under **Other Calendars** and the events on this calendar on the right pane.
 
 :::image type="content" source="media/how-to-open-shared-calendar/other-calendars.png" alt-text="Screenshot of a Outlook Web App shared calendar list.":::
 
@@ -663,7 +663,7 @@ In this example, the **Second Calendar** folder is a subcalendar of the user's s
 
 We recommend using Outlook on the Web or Outlook Web App as a workaround to open shared calendar in Mac system.
 
-Log in Outlook on the Web or Outlook Web App with your Exchange or Office 365 account in browser, select **Accept** in the invitation email, and then you will see the shared calendar in the left pane under **Other Calendar** and the events in the right pane.
+Log in Outlook on the Web or Outlook Web App with your Exchange or Office 365 account in browser, select **Accept** in the invitation email, and then you will see the shared calendar on the left pane under **Other Calendar** and the events on the right pane.
 
 :::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="Screenshot that shows a opening shared calendar on Outlook Web App with Mac.":::
 
