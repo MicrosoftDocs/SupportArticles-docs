@@ -149,11 +149,11 @@ To reinstall the Windows Installer, follow these steps.
 
 1. Click **Start**, and then click **Run**. (The screen shot for this step is listed below).
 
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/select-start-and-then-select-run.png" alt-text="Select Start, and then select Run.":::
+    :::image type="content" source="media/windows-installer-service-not-be-accessed/select-start-and-then-select-run.png" alt-text="Select Start and then select Run.":::
 
 2. In the **Open** box, type cmd, and then click **OK**. (The screen shot for this step is listed below).
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/run-cmd.png" alt-text="Select Start, and then select Run." border="false":::
+   :::image type="content" source="media/windows-installer-service-not-be-accessed/run-cmd.png" alt-text="Screenshot to type cmd in the Run dialog box." border="false":::
 
 3. At the command prompt, type the following lines. Press ENTER after you type each line.
 
