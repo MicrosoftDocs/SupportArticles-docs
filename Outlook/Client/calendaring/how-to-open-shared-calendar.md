@@ -81,7 +81,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
 2. Select **File**, and then find either **Office Account** or **Help**, and follow the steps for which option you find. If you do not find either option, see the steps below.
    1. Select **Office Account**, and then select **About Outlook**.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/about-outlook.png" alt-text="Screenshot that shows the the About Outlook icon in the Office Account page being selected.":::
+      :::image type="content" source="media/how-to-open-shared-calendar/about-outlook.png" alt-text="Screenshot that shows the the About Outlook icon on the Office Account page being selected.":::
 
    2. The product version will be listed here.
 
@@ -93,11 +93,11 @@ If you do not find either Office Account or Help on the File menu, then follow t
 
    1. Select **Help**, and then select **Additional Version and Copyright Information**.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/additional-version-and-copyright-information.png" alt-text="Screenshot that shows the location of the Additional Version and Copyright Information tab in the Help page.":::
+      :::image type="content" source="media/how-to-open-shared-calendar/additional-version-and-copyright-information.png" alt-text="Screenshot that shows the location of the Additional Version and Copyright Information tab on the Help page.":::
 
    2. The product version will be listed here.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-help-page.png" alt-text="Screenshot that shows the product version found in the Additional Version and Copyright Information page.":::
+      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-help-page.png" alt-text="Screenshot that shows the product version found on the Additional Version and Copyright Information page.":::
 
    3. Select **OK**.
 
@@ -108,7 +108,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
       :::image type="content" source="media/how-to-open-shared-calendar/about-microsoft-office-outlook.png" alt-text="Screenshot that shows the About Microsoft Office Outlook option selected from the Help tab.":::
 
    2. The product version will be listed here.
-      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-about-microsoft-office-outlook.png" alt-text="Screenshot that shows the product version product version found in the About Microsoft Office Outlook page.":::
+      :::image type="content" source="media/how-to-open-shared-calendar/check-product-version-from-about-microsoft-office-outlook.png" alt-text="Screenshot that shows the product version product version found on the About Microsoft Office Outlook page.":::
 
    3. Select **OK**.
 
