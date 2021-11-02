@@ -158,7 +158,7 @@ For more information, see [Learn to narrow your search criteria for better searc
 
 Use **Customer Search Folder** to do a more extensive search. To do this, under **Advance** setting, use the **Expire** field. For more information, see [Create a Search Folder](https://support.office.com/article/C1807038-01E4-475E-8869-0CCAB0A56DC5).
 
-:::image type="content" source="media/mrm-and-retention-policy/customer-search-folder-page.png" alt-text="Screenshot to use the Expire field under Advance setting.":::
+:::image type="content" source="media/mrm-and-retention-policy/customer-search-folder-page.png" alt-text="Screenshot to use the Expire field under the Advance setting.":::
 
 Set a specific expiration date. For detailed steps, see [Set a message expiration date](https://support.office.com/article/FCAE213F-8D38-4318-A17B-42D83AC209ED).
 

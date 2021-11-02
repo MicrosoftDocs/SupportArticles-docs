@@ -44,7 +44,7 @@ To recover the data by using the alternative method, follow these steps.
 1. Download and install [Microsoft SQL Server Data-Tier Application Framework (17.8 GA DacFx)](https://www.microsoft.com/download/details.aspx?id=57073).
 2. Double-click the appdb.dacpac from your Access app package, select a destination location, and then click **Unpack**.
 
-    :::image type="content" source="media/deploy-dacpac-access-web-app-package/select-destination-and-unpack-files.png" alt-text="Screenshot of the Unpack a DAC Package file window where you select a destination location.":::
+    :::image type="content" source="media/deploy-dacpac-access-web-app-package/select-destination-and-unpack-files.png" alt-text="Screenshot of the Unpack a D A C Package file window where you select a destination location.":::
 
     See the "Open an Access app package to work with its contents" section of the [Access Services in SharePoint Roadmap](https://support.office.com/article/Access-Services-in-SharePoint-Roadmap-497fd86b-e982-43c4-8318-81e6d3e711e8) article for more information about how to extract the DACPAC from an app package.
 

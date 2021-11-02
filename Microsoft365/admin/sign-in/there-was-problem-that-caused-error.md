@@ -44,17 +44,17 @@ To restart the Microsoft Online Services Sign-in Assistant service, follow these
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type **services.msc**, and then press Enter.
 
-   :::image type="content" source="media/there-was-problem-that-caused-error/run-page.png" alt-text="Screenshot of Run windows with services.msc typed." border="false":::
+   :::image type="content" source="media/there-was-problem-that-caused-error/run-page.png" alt-text="Screenshot of the Run windows with services.msc typed." border="false":::
 3. In the list of services, locate and then double-click the Microsoft Online Services Sign-in Assistant service.
 
-   :::image type="content" source="media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png" alt-text="Screenshot to select Microsoft Online Services Sign-in Assistant in the Services windows." border="false":::
+   :::image type="content" source="media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png" alt-text="Screenshot to select the Microsoft Online Services Sign-in Assistant in the Services windows." border="false":::
 
 4. Stop the service. To do this, click Stop, and then wait until the service stops. The Service status should be displayed as Stopped.
 
-   :::image type="content" source="media/there-was-problem-that-caused-error/service-status-is-stopped.png" alt-text="Screenshot of Online Services Sign-in Assistant properties, showing Service status is stopped." border="false":::
+   :::image type="content" source="media/there-was-problem-that-caused-error/service-status-is-stopped.png" alt-text="Screenshot of the Online Services Sign-in Assistant properties window, showing the Service status is stopped." border="false":::
 5. Start the service. To do this, click Start, and then wait until the service starts. The Service status should be displayed as Started.
 
-   :::image type="content" source="media/there-was-problem-that-caused-error/service-status-is-started.png" alt-text="Screenshot of Online Services Sign-in Assistant properties, showing Service status is started." border="false":::
+   :::image type="content" source="media/there-was-problem-that-caused-error/service-status-is-started.png" alt-text="Screenshot of the Online Services Sign-in Assistant properties window, showing the Service status is started." border="false":::
 6. Verify that the issue is resolved and the pop-up dialog box is no longer displayed.   
 7. If you continue to see the pop-dialog box, restart the computer, and then verify that the issue is resolved.
 
