@@ -29,11 +29,11 @@ When you try to remove a mailbox database from Exchange Server 2016 or Exchange 
 
 EMS:
 
-:::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/screenshot-of-ems-warning.png" alt-text="Screenshot of EMS warning":::
+:::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/screenshot-of-ems-warning.png" alt-text="Screenshot of EMS warning.":::
 
 EAC:
 
-:::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/screenshot-of-eac-warning.png" alt-text="Screenshot of EAC warning":::
+:::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/screenshot-of-eac-warning.png" alt-text="Screenshot of EAC warning.":::
 
 ## Cause
 
@@ -49,19 +49,19 @@ To work around this issue, follow these steps to add an explicit allow permissio
 2. Select **View**, and then make sure that **Advanced Features** is selected. If it is not, select it.
 3. Navigate to the following container:
 
-    :::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/monitoring-mailboxes-container.png" alt-text="Screenshot of Monitoring mailboxes container":::
+    :::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/monitoring-mailboxes-container.png" alt-text="Screenshot of Monitoring mailboxes container.":::
 
 4. Right-click **Monitoring Mailboxes**, select **Properties**, and then select the **Security** tab.
 
 5. Select **Advanced** on the **Security** tab. You now see this dialog box:
 
-    :::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/advanced-security-settings-for-monitoring-mailboxes.png" alt-text="Screenshot of advanced security settings for monitoring mailboxes" border="false":::
+    :::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/advanced-security-settings-for-monitoring-mailboxes.png" alt-text="Screenshot of advanced security settings for monitoring mailboxes.":::
 
 6. Select **Add**, type *Exchange Servers*, select **Check Names**, and then select **OK**.
 
 7. Select the **Allow** check box for the **Delete subtree** permission.
 
-    :::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/permission-entry-monitoring-mailboxes.png" alt-text=" Screenshot of Permission Entry Monitoring Mailboxes" border="false":::
+    :::image type="content" source="media/remove-mailboxdatabase-cannot-remove-health-mailboxes/permission-entry-monitoring-mailboxes.png" alt-text=" Screenshot of Permission Entry Monitoring Mailboxes.":::
 
 8. Select **OK** in all the remaining windows.
 

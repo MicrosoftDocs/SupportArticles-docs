@@ -34,7 +34,7 @@ When you try to open another user's mailbox by using Outlook on the web (formall
 
 For example, you have full access permissions to Garry's mailbox, which is associated with the following email address: `Garry@contoso.com`. You sign in to Outlook Web App, type *Garry* in the **Open another mailbox** dialog box, and then click **open**. In this situation, you receive the error message that was mentioned earlier.
 
-![Screenshot of typing Garry](./media/http-400-bad-request-open-user-mailbox/wrong-typing.png)
+:::image type="content" source="media/http-400-bad-request-open-user-mailbox/wrong-typing.png" alt-text="Screenshot of typing Garry in the Open another mailbox dialog box.":::
 
 ## Cause
 
@@ -44,4 +44,4 @@ This issue occurs because Outlook on the web doesn't resolve the identity of the
 
 To open another user's mailbox by using Outlook on the web, use the email address that is associated with that mailbox. For example, you should type `Garry@contoso.com` instead of *Garry* in the **Open another mailbox** dialog box.
 
-![Screenshot of typing Garry@contoso.com](./media/http-400-bad-request-open-user-mailbox/correct-typing.png)
+:::image type="content" source="media/http-400-bad-request-open-user-mailbox/correct-typing.png" alt-text="Screenshot of typing Garry@contoso.com in the Open another mailbox dialog box.":::

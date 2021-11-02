@@ -68,7 +68,7 @@ Set-WebServicesVirtualDirectory -Identity "CAS_server_name\EWS (Default Web Site
 2. Locate **Servers** > **Virtual directories**, select your server by name, and then select type **EWS**.
 3. In the **Default Web Site** dialog box, set **External URL** to `https://mail.contoso.com/ews/exchange.asmx`.
 
-   :::image type="content" source="media/new-hybrid-configuration-wizard-crashes-with-0xe0434352/default-web-site-page.png" alt-text="screenshot of the Default Web Site page":::
+   :::image type="content" source="media/new-hybrid-configuration-wizard-crashes-with-0xe0434352/default-web-site-page.png" alt-text="Screenshot of the Default Web Site page.":::
 
 ## More information
 

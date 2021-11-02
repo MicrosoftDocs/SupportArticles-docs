@@ -254,7 +254,7 @@ Set-UnifiedGroup <GroupName> -AutoSubscribeNewMembers
 
 Group owners can enable/disable the subscription from group settings by selecting the following option:
 
-![Select the subscription option](./media/o365-group-tasks/subscription-checkbox.png)
+:::image type="content" source="media/o365-group-tasks/subscription-checkbox.png" alt-text="Screenshot of the subscription option to enable the subscription.":::
 
 > [!NOTE]
 > The `AutoSubscribeNewMembers` parameter takes effect for new members of a group after the change is made. Existing members are not affected.
@@ -271,7 +271,7 @@ By default, when you send an email message to an Outlook group that you're a mem
 2. Select **Mail** > **Groups**.
 3. Select the **Send me a copy of email I send to a group** check box.
 
-   ![Select the send me a copy of email I send to a group checkbox](./media/o365-group-tasks/checkbox.png)
+   :::image type="content" source="media/o365-group-tasks/checkbox.png" alt-text="Screenshot of the the send me a copy of email I send to a group checkbox.":::
 
 Administrators can enable the setting from Exchange Online PowerShell using the following command:
 
@@ -316,7 +316,7 @@ If your sender receives a non-delivery report (NDR) that has the status code 550
 2. Edit the group that's not receiving messages from external users.
 3. Make sure that you select the **Let people outside the organization email the group** check box.
 
-   ![Select the Let people outside the organization email the group checkbox](./media/o365-group-tasks/outside-checkbox.png)
+   :::image type="content" source="media/o365-group-tasks/outside-checkbox.png" alt-text="Screenshot of the Let people outside the organization email the group checkbox.":::
 
 4. Save the group.
 
@@ -370,13 +370,13 @@ Restoring a Microsoft 365 group restores any services that are related to the gr
 
 1. Open the [Deleted groups](https://outlook.office.com/people/group/deleted) page, select **Manage groups** under the **Groups** node, and then select **Deleted**.
 
-   ![Select deleted groups](./media/o365-group-tasks/manage-group.png)
+   :::image type="content" source="media/o365-group-tasks/manage-group.png" alt-text="Screenshot of deleted groups selecting Manage groups under the Groups node.":::
 
 2. Select the **Restore** tab next to the group that you want to restore.
 
-   ![Restore group](./media/o365-group-tasks/restore.png)
+   :::image type="content" source="media/o365-group-tasks/restore.png" alt-text="Screenshot of the restore group.":::
 
-   ![Successful notice](./media/o365-group-tasks/successful.png)
+   :::image type="content" source="media/o365-group-tasks/successful.png" alt-text="Screenshot of the successful notice.":::
 
 #### For tenant admins
 

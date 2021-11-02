@@ -69,7 +69,7 @@ Microsoft Exchange Host Controller Service starts four worker processes, and eac
 
 The following screenshot shows the four nodes of the NodeRunner.exe process: Admin, Content, Query, and Index.
 
-![Screenshot of the four nodes](./media/noderunnersexe-stops-search-not-work/noderunnerexe-process-nodes.png)
+:::image type="content" source="media/noderunnersexe-stops-search-not-work/noderunnerexe-process-nodes.png" alt-text="Screenshot of the four nodes of NodeRunner.exe process.":::
 
 If you're familiar with SharePoint Server, you probably know how to limit the memory that's allocated to the NodeRunner.exe process by using the application configuration file. However, it's unsupported in Exchange Server 2013 to limit memory allocation for NodeRunner.exe by this method.
 

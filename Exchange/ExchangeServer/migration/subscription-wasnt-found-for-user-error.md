@@ -31,7 +31,7 @@ When you migrate public folders from Exchange Server to Exchange Online, the mig
 
 > The subscription for the migration user MLPF3 couldn’t be loaded. The following error was encountered: A subscription wasn’t found for this user.
 
-:::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-1.png" alt-text="A subscription wasn't found for this user error message.":::
+:::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-1.png" alt-text="Screenshot of an error message that the subscription for the migration user MLPF3 couldn’t be loaded.":::
 
 You may also see another error message:
 

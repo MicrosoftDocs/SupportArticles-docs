@@ -33,12 +33,12 @@ To create a transport rule to block messages based on the file name extension of
 
 2. Select **Admin**, and then select **Exchange**.
 3. In the left navigation pane, select **mail flow**, and then select **rules**.
-4. Select **New** (![A screen shot of the New icon](./media/how-to-block-message-from-being-sent-or-received/new-icon.jpg)), and then select **Create a new rule**.
+4. Select **New** (:::image type="icon" source="media/how-to-block-message-from-being-sent-or-received/new-icon.png" border="false":::), and then select **Create a new rule**.
 5. In the **New Rule** window, select **More options**.
 6. In the **Name** box, specify a name for the new rule.
 7. Select the ***Apply this rule if** drop-down list, point to **Any attachment,** and then select **File extension includes these words**.
 
-8. In the **Specify words or phrases** window, type the file name extension of any attachment that you want to block, and then select the plus symbol (![A screen shot of the plus symbol ](./media/how-to-block-message-from-being-sent-or-received/plus-symbol.jpg)) to add the file name extension to the list. When the list is completed, select **OK**.
+8. In the **Specify words or phrases** window, type the file name extension of any attachment that you want to block, and then select the plus symbol (:::image type="icon" source="media/how-to-block-message-from-being-sent-or-received/plus-symbol.png" border="false":::) to add the file name extension to the list. When the list is completed, select **OK**.
 
 9. Select the ***Do the following** drop-down list, point to **Block the message**, and then select **Reject the message and include an explanation** or select **Delete the message without notifying anyone**.
 

@@ -51,7 +51,7 @@ The resolution for this issue corresponds to the scenario listed above in the "C
 
 ### Solution 2: On Exchange Server 2013 or Exchange Server 2016, wait 30 minutes for the cache to clear or restart the MSExchangeOWAAppPool. Refer to the following screenshot in Exchange Server 2013
 
-![Application Pools](./media/exchange-server-2013-2016-redirect-to-2010-owa-ecp/application-pools.png)
+:::image type="content" source="media/exchange-server-2013-2016-redirect-to-2010-owa-ecp/application-pools.png" alt-text="Screenshot of IIS Manager window selecting MSExchangeOWAAppPool.":::
 
 > [!NOTE]
 > The client is also provided a cookie from the Exchange 2013 Client Access Server with the location of the backend server. This cookie is valid for 10 minutes. Restarting the MSExchangeOWAAppPool may not resolve the issue if you try to connect within 10 minutes of the mailbox move. In this scenario, you must remove cookies from your browser. To remove the cookies in Microsoft Internet Explorer, follow these steps:

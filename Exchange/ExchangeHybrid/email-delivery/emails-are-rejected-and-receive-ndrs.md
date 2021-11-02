@@ -51,7 +51,7 @@ In a shared namespace and centralized mail control scenario, an Exchange Online 
 
 The following screenshot shows an example of an Exchange Online Protection receive connector that the Hybrid Configuration Wizard creates.
 
-:::image type="content" source="media/emails-are-rejected-and-receive-ndrs/example-of-eop-receive-connector.jpg" alt-text="Screenshot of an Exchange Online Protection receive connector" border="false":::
+:::image type="content" source="media/emails-are-rejected-and-receive-ndrs/example-of-eop-receive-connector.png" alt-text="Screenshot of an Exchange Online Protection receive connector.":::
 
 For more information about the Hybrid Configuration Wizard in Exchange 2010, see [Hybrid Deployments with the Hybrid Configuration Wizard](/previous-versions/office/exchange-server-2010/hh529920(v=exchg.141)).
 

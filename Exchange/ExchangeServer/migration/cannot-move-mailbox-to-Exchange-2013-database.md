@@ -27,7 +27,7 @@ You're moving a mailbox from an organization that has Microsoft Exchange Server 
 
 > MapiExceptionCorruptData: Unable to write mailbox info.
 
-:::image type="content" source="media/cannot-move-mailbox-to-Exchange-2013-database/MapiExceptionCorruptData-error-message.png" alt-text="Screenshot of the error message.":::
+:::image type="content" source="media/cannot-move-mailbox-to-Exchange-2013-database/MapiExceptionCorruptData-error-message.png" alt-text="Screenshot of the error message when you move the mailbox from the target forest to the database.":::
 
 ## Workaround
 
