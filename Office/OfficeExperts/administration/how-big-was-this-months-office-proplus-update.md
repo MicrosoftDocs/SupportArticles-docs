@@ -30,13 +30,13 @@ Microsoft Office 365 updates are designed to be very network bandwidth friendly.
 
    And only include the "OfficeClicktoRun.exe" process name. Your filter should resemble the following:
 
-   ![Filter in Process Monitor including OfficeClicktoRun.exe process](./media/how-big-was-this-months-office-proplus-update/filter.png)
+   :::image type="content" source="media/how-big-was-this-months-office-proplus-update/process-monitor-filter.png" alt-text="Screenshot shows filter in Process Monitor including the OfficeClicktoRun.exe process." border="false":::
 1. Start Process Monitor, and then start the manual update process by clicking Update Now in the File > Account menu of any Office Click-to-Run app. You see the updates downloading and data filling in the Procmon log.
 
-   ![Selecting update now in Account](./media/how-big-was-this-months-office-proplus-update/updating.png)
+   :::image type="content" source="media/how-big-was-this-months-office-proplus-update/updating-page.png" alt-text="Screenshot to select the Update now option in the Account menu." border="false":::
 
 1. After the update finishes, stop the Procmon trace, and then check for the network traffic summary by going to **Tools** > **Network Summary**.
 
-   ![Checking Receive Bytes in Network Summary](./media/how-big-was-this-months-office-proplus-update/network-summary.png)
+   :::image type="content" source="media/how-big-was-this-months-office-proplus-update/network-summary.png" alt-text="Screenshot to check the Receive Bytes in the Network Summary window.":::
 
 In this example, the Office ProPlus are on the July version of Semi-Annual Channel (16.0.6741.2056) and then updated to the August version (16.0.6741.2063). As you can see, this update is 167,829,264 bytes, or approximately 167 MB of data.

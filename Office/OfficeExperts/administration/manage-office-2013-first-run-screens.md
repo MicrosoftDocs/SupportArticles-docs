@@ -23,13 +23,13 @@ This article was written by [Jalal Babool](https://social.technet.microsoft.com/
 
 Microsoft Office 2013 shows the following screens when an application is started for the first time. This article describes how to disable these First Run screens by using the Office Customization Tool (OCT) or Group Policy Management Editor.
 
-![Welcome to Office screen](./media/manage-office-2013-first-run-screens/screen-1.png)
+:::image type="content" source="media/manage-office-2013-first-run-screens/welcome-to-new-office.png" alt-text="Screenshot of the First Run screens, showing Welcome to your new Office.":::
 
-![Meet SkyDrive screen](./media/manage-office-2013-first-run-screens/screen-2.png)
+:::image type="content" source="media/manage-office-2013-first-run-screens/meet-sky-drive.png" alt-text="Screenshot of the First Run screens, showing Meet SkyDrive.":::
 
-![Hello Test screen](./media/manage-office-2013-first-run-screens/screen-3.png)
+:::image type="content" source="media/manage-office-2013-first-run-screens/hello-test.png" alt-text="Screenshot of the First Run screens, showing Hello U Test.":::
 
-![You're good to go screen](./media/manage-office-2013-first-run-screens/screen-4.png)
+:::image type="content" source="media/manage-office-2013-first-run-screens/good-to-go.png" alt-text="Screenshot of the First Run screens, showing You're good to go.":::
 
 ## More Information
 
@@ -40,15 +40,15 @@ Microsoft Office 2013 shows the following screens when an application is started
 
 1. Open the OCT as an administrator, locate the **Features** section, and then select **Modify user settings** > **Microsoft Office 2013** > **First Run** > **Disable First Run Movie**.
  
-   ![Locate Disable First Run Movie in OCT](./media/manage-office-2013-first-run-screens/disable-first-run-movie-in-oct.png)
+   :::image type="content" source="media/manage-office-2013-first-run-screens/disable-first-run-movie-in-oct.png" alt-text="Screenshot to select the Disable First Run Movie item in O C T." border="false":::
 
 1. Set **Disable First Run Movie** to **Enabled**.
 
-   ![Set Disable First Run Movie to Enabled](./media/manage-office-2013-first-run-screens/enabled.png)
+   :::image type="content" source="media/manage-office-2013-first-run-screens/enabled-option.png" alt-text="Screenshot to set Disable First Run Movie to Enabled." border="false":::
 
 1. Select **Disable First Run on application boot**, and then set it to **Enabled**.
 
-   ![Set Disable First Run on application boot to Enabled](./media/manage-office-2013-first-run-screens/disable-first-run-on-application-boot.png)
+   :::image type="content" source="media/manage-office-2013-first-run-screens/disable-first-run-on-application-boot.png" alt-text="Screenshot to set Disable First Run on application boot to Enabled." border="false":::
 
 1. Save the resulting MSP file and use it as part of the Office 2013 deployment.
 
@@ -59,10 +59,10 @@ Microsoft Office 2013 shows the following screens when an application is started
 1. Copy the ADMX files to %systemroot%\PolicyDefinitions, and then copy the ADML files to the language specific folder (such as en-us) under %systemroot%\PolicyDefinitions.
 1. In Group Policy Management Editor, locate **User Configuration** > **Policies** > **Administrative Templates: Policy definitions** > **Microsoft Office 2013** > **First Run**.
 
-   ![Locate First Run in Group Policy Management Editor](./media/manage-office-2013-first-run-screens/first-run-policy.png)
+   :::image type="content" source="media/manage-office-2013-first-run-screens/first-run-policy.png" alt-text="Screenshot to locate First Run in Group Policy Management Editor." border="false":::
 
 1. Set both **Disable First Run Movie** and **Disable Office First Run on application boot** to **Enabled**.
 
-   ![Set Disable First Run Movie to enabled in Group Policy Management Editor](./media/manage-office-2013-first-run-screens/enable-setting1-in-group-policy.png)
+   :::image type="content" source="media/manage-office-2013-first-run-screens/disable-first-run-movie.png" alt-text="Screenshot to set Disable First Run Movie to Enabled." border="false":::
 
-   ![Set Disable Office First Run on application boot to enabled in Group Policy Management Editor](./media/manage-office-2013-first-run-screens/enable-setting2-in-policy.png)
+   :::image type="content" source="media/manage-office-2013-first-run-screens/disable-office-first-run.png" alt-text="Screenshot to set Disable Office First Run on application boot to Enabled." border="false":::
