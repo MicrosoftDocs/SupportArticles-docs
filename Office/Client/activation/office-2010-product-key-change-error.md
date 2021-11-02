@@ -26,7 +26,7 @@ appliesto:
 
 The previously installed version of Office 2010 prompts the user to change the product key. The screen then disappears, and shows no response when product key change is clicked.
 
-![product key change](./media/office-2010-product-key-change-error/product-key-change.png)
+:::image type="content" source="media/office-2010-product-key-change-error/product-key-change.png" alt-text="Screenshot to prompt the user to change the product key." border="false":::
 
 ## Cause
 
@@ -38,39 +38,39 @@ This issue can be resolved by removing the Office 2010 registry values.
 
 ![Alert icon](./media/office-2010-product-key-change-error/alert-icon.jpg) The following describes how to modify the registry. Incorrect registry modification can cause serious problems, so please proceed with extra caution. For additional protection, you are recommended to back up the registry before modifying it. This allows you to restore the registry if a problem occurs. For more information about backing up the registry, see [Back up the registry](https://support.microsoft.com/help/322756).
 
-1. Click Start ![windows icon](./media/office-2010-product-key-change-error/windows-icon.jpg) and enter regedit in the search pane. At the top of the program list, click regedit.
+1. Click Start :::image type="icon" source="media/office-2010-product-key-change-error/windows-icon.png"::: and enter regedit in the search pane. At the top of the program list, click regedit.
 
-     ![Click Start and enter regedit in the search pane. At the top of the program list, click regedit.](./media/office-2010-product-key-change-error/enter-regedit-in-the-search-pane.png)
+     :::image type="content" source="media/office-2010-product-key-change-error/enter-regedit-in-the-search-pane.png" alt-text="Screenshot shows steps to click the regedit item." border="false":::
 
-    ![Alert icon](./media/office-2010-product-key-change-error/alert-icon.jpg) If the user account control message appears, enter the administrator password, or click Yes.
+    :::image type="icon" source="media/office-2010-product-key-change-error/alert-icon.png"::: If the user account control message appears, enter the administrator password, or click Yes.
 
 2. In Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Registration path.
 
-     ![Registry Editor](./media/office-2010-product-key-change-error/registry-editor.png)
+     :::image type="content" source="media/office-2010-product-key-change-error/registry-editor.png" alt-text="Screenshot of the Registration path in the Registry Editor window." border="false":::
 
     > [!TIP]
     > If the operating system is Windows 7 64-bit, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Registration path.
 
 3. There are several GUID (Globally Unique Identifiers), consisting of a combination of alphanumeric characters, in the Registration subpath. Each GUID specifies the program that is installed on your computer. Click each GUID to view the registry entries in the right pane, and find and select the GUID that contains the relevant Office program version.
 
-    ![Click each GUID to view the registry entries in the right pane, and find and select the GUID that contains the relevant Office program version](./media/office-2010-product-key-change-error/view-the-registry-entries.png)
+    :::image type="content" source="media/office-2010-product-key-change-error/view-the-registry-entries.png" alt-text="Screenshot to click each GUID to view the registry entries in the right pane, and find and select the GUID that contains the relevant Office program version." border="false":::
 
 4. After selecting the GUID that contains the Office program version, find and right-click DigitalProductID and click delete.
     
-     ![find and right-clickDigitalProductID and click delete.](./media/office-2010-product-key-change-error/guid.png)
+     :::image type="content" source="media/office-2010-product-key-change-error/registry-guid.png" alt-text="Screenshot shows steps to delete the DigitalProductID." border="false":::
 
-    ![Alert icon](./media/office-2010-product-key-change-error/alert-icon.jpg) Click Yes when the confirm value delete message appears.
+    :::image type="icon" source="media/office-2010-product-key-change-error/alert-icon.png"::: Click Yes when the confirm value delete message appears.
 
 5. Find and right-click ProductID and click delete.
      
-     ![Find and right-click ProductID and click delete](./media/office-2010-product-key-change-error/product-id.png)
+     :::image type="content" source="media/office-2010-product-key-change-error/product-id.png" alt-text="Screenshot shows steps to delete the ProductID." border="false":::
 
-    ![Alert icon](./media/office-2010-product-key-change-error/alert-icon.jpg) Click Yes when the confirm value delete message appears.
+    :::image type="icon" source="media/office-2010-product-key-change-error/alert-icon.png"::: Click Yes when the confirm value delete message appears.
 6. Close Registry Editor and restart the computer.
 
 7. When you run any Office 2010 program, the Enter your product key screen will appear. Enter the correct product key to complete product key change.
 
-    ![When you run any Office 2010 program, the Enter your product key screen will appear](./media/office-2010-product-key-change-error/office-2010-program-enter.png)
+    :::image type="content" source="media/office-2010-product-key-change-error/office-2010-program-enter.png" alt-text="Screenshot of the Enter your product key screen after running any Office 2010 program." border="false":::
 
 ### Issue resolved?
 

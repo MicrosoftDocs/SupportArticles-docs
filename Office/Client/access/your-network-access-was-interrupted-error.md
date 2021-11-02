@@ -30,7 +30,7 @@ When opening Access from a mapped drive, using linked tables mapped to a drive, 
 
 > Your network access was interrupted. To continue, close the database, and then open it again.
 
-![your network access was interrupted](media/your-network-access-was-interrupted-error.png)
+:::image type="content" source="media/your-network-access-was-interrupted-error/error-message.png" alt-text="Screenshot of the error message after opening Access from a mapped drive." border="false":::
 
 ## Cause
 

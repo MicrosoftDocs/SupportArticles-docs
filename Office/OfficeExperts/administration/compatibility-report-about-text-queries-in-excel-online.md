@@ -26,7 +26,7 @@ When you try to edit a workbook that contains text queries in Microsoft Excel On
 > - Text queries
 
 
-![the compatibility report dialog box](./media/compatibility-report-about-text-queries-in-excel-online/text-query-error.png)
+:::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/text-query-error.png" alt-text="Screenshot of the compatibility report dialog box.":::
 
 ## Cause
 
@@ -41,26 +41,26 @@ To resolve the issue, use one of the following workarounds:
 1. Select **Edit Workbook** > **Edit in Excel Online** in the workbook.
 1. In the prompt dialog box, select **Edit a Copy**.
 
-   ![the edit a copy dialog box](./media/compatibility-report-about-text-queries-in-excel-online/edit-a-copy.PNG)
+   :::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/edit-a-copy.png" alt-text="Screenshot to select the Edit a copy option in the prompt dialog box.":::
 
 1. Type a new file name for this copy, and then click **Save**.
 
-   ![the create a copy dialog box](./media/compatibility-report-about-text-queries-in-excel-online/create-a-copy.jpg)
+   :::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/create-a-copy.png" alt-text="Screenshot to select the Save option after typing a new file name for this copy.":::
 
 A copied workbook that doesn't contain any unsupported features will be created through this method. It will be saved to the same directory as the original workbook.
 
-![the new copy workbook dialog box](./media/compatibility-report-about-text-queries-in-excel-online/copy.PNG)
+:::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/copied-workbook.png" alt-text="Screenshot of the new copy workbook dialog box in Excel Online.":::
 
 ### Method 2: Remove the query definition directly
 
 1. Right-click the table and select **Data Range Properties**.
 1. Clear the **Save query definition** check box in the **External Data Range Properties** dialog box.
 
-   ![the clear option dialog box](./media/compatibility-report-about-text-queries-in-excel-online/clear-option.PNG)
+   :::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/clear-save-query-definition.png" alt-text="Screenshot to clear the Save query definition check box.":::
 
 1. On the **Data** tab, select **Properties**, and then clear the **Save query definition** check box in the **External Data Range Properties** dialog box.
 
-   ![the clear option two dialog box](./media/compatibility-report-about-text-queries-in-excel-online/clear-option-two.PNG)
+   :::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/clear-option.png" alt-text="Screenshot show steps to clear the Save query definition check box.":::
 
 ### Method 3: Edit the Excel file in the desktop app
 
