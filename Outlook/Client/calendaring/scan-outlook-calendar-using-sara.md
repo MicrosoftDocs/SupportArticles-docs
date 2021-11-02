@@ -84,4 +84,4 @@ You can review your Outlook calendar scan report from the following tabs:
     :::image type="content" source="media/scan-outlook-calendar-using-sara/detailed-view-tab.png" alt-text="Screenshot of detailed view tab." border="false":::
 - **Configuration Summary** - This tab provides you a snapshot of the configuration settings that are most frequently collected and analyzed.
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/configuration-summary-tab.png" alt-text="Screenshot of starting the calendar scan." border="false":::
+    :::image type="content" source="media/scan-outlook-calendar-using-sara/configuration-summary-tab.png" alt-text="Screenshot of configuration summary tab." border="false":::
