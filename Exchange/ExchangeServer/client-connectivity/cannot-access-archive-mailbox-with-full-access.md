@@ -31,11 +31,11 @@ Consider the following scenario:
 - User A has delegated, Full Access permission to User B's mailboxes.
 - User A adds User B as an additional account in the Microsoft Outlook client.
 
-In this scenario, User A can access User B's primary mailbox in Outlook, but User A cannot see or access User B's archive mailbox.
+In this scenario, User A can access User B's primary mailbox in Outlook, but User A can't see or access User B's archive mailbox.
 
 ## Cause
 
-The issue occurs because the automapping feature doesn't work correctly in the scenario that is described in the Symptoms section. This is a limitation of the feature.
+The issue occurs because the automapping feature doesn't work correctly in the scenario that's described in the Symptoms section. It's a limitation of the feature.
 
 ## Workarounds - Method 1
 
@@ -49,11 +49,11 @@ The primary mailbox and archive mailbox appear in Outlook in the web folder list
 
 ## Workarounds - Method 2
 
-First, reconfigure User B mailbox permissions to grant User A Full Access permissions **without** automapping enabled. Follow the steps in [How to remove automapping for a shared mailbox in Outlook for Office 365](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
+First, reconfigure User B's mailbox permissions to grant User A Full Access permissions **without** automapping enabled. To do so, follow the steps in [How to remove automapping for a shared mailbox in Outlook for Office 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
 
-Then, create a new Outlook profile for the shared User B mailbox. To create a profile, follow these steps:
+Then, create a new Outlook profile for the shared User B's mailbox:
 
 1. In Outlook, select **File** > **Account Settings** > **Manage Profiles**.
 2. Select **Show Profiles** > **Add**.
 3. In the **Profile Name** box, type a name for the profile, and then select **OK**.
-4. When prompted, input the credentials for User A.
+4. When you're prompted, enter the credentials for User A.
