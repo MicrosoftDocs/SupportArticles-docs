@@ -44,10 +44,10 @@ Try the following options to help determine the root cause of your problem in Wo
 :::image type="icon" source="media/print-failures-word-for-office-365-on-win-10/test-printing-other-documents-option-1.png":::
 
 </a>
-</td><td>**<a href="#option1">Test printing in other documents</a>**
+</td><td><a href="#option1">Test printing in other documents</a>
 <ol>
 <li>Open a new blank document.</li>
-<li>Type the following text: **=rand(10)**.</li>
+<li>Type the following text: <b>=rand(10)</b>.</li>
 <li>Press Enter.</li>
 <li>Try to print again.</li>
 </ol>
@@ -61,7 +61,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option2">Test printing in other programs: WordPad</a>**
+<td><a href="#option2">Test printing in other programs: WordPad</a>
 <ol>
 <li>Open WordPad.</li>
 <li>In a new document, type <b>This is a test</b>.</li>
@@ -78,7 +78,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option3">Repair the Word program files</a>**
+<td><a href="#option3">Repair the Word program files</a>
 <ol>
 <li>Exit all Office programs.</li>
 <li>Select <b>Start</b>, and then type <b>add</b>.</li>
@@ -98,7 +98,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td>**<a href="#option4">Test for problems in Windows</a>**
+<td><a href="#option4">Test for problems in Windows</a>
 
 <ol>
 <li>
@@ -120,7 +120,7 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 
 </a>
 </td>
-<td>**<a href="#option5">Test printing with different print drivers</a>**
+<td><a href="#option5">Test printing with different print drivers</a>
 <ol>
 <li>Select <b>Start</b> > <b>Settings</b>.
 <li>Select <b>Devices</b> > <b>Printers & scanners</b>.</li>
