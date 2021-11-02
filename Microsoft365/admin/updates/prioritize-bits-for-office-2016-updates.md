@@ -39,7 +39,7 @@ When you download updates from Microsoft Content Delivery Network (CDN) to updat
 1. Download the latest templates ([Office 2016 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=49030)). A new GPO item (Prioritize BITS) is added to the Office16.admx file.
 2. Start the Group Policy Management Console, enable **Prioritize BITS** under **Computer Configuration**, expand **Administrative Templates**, expand **Microsoft Office 2016 (machine)**, and then select **Updates**.
 
-    ![Screenshot for step two](https://sawinternal.blob.core.windows.net/gds-images/3194164.jpg)
+    :::image type="content" source="media/prioritize-bits-for-office-2016-updates/prioritize-bits.png" alt-text="Screenshot to enable the Prioritize BITS under the Computer Configuration.":::
 
 ### Method 2: Add a registry entry
 
@@ -79,7 +79,7 @@ Registry subkey:
 2. Set up a local HTTP server (by using IIS, Apache, or other software).    
 3. Add the .dat MIME type as **application/octet-stream**. 
 
-    ![A screenshot of the IIS page to edit the .dat Mime Type](./media/prioritize-bits-for-office-2016-updates/iis-page.png)    
+    :::image type="content" source="media/prioritize-bits-for-office-2016-updates/iis-page.png" alt-text="Screenshot of the IIS page to edit the .dat M I M E Type.":::
 4. Copy the root directory from step 1 to the HTTP server. Then, the server can be accessed from the following website: 
 
     https://servername/directory1/directory2/office/xxx

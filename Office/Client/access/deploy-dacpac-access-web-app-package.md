@@ -44,7 +44,7 @@ To recover the data by using the alternative method, follow these steps.
 1. Download and install [Microsoft SQL Server Data-Tier Application Framework (17.8 GA DacFx)](https://www.microsoft.com/download/details.aspx?id=57073).
 2. Double-click the appdb.dacpac from your Access app package, select a destination location, and then click **Unpack**.
 
-    ![Unpack a DAC Package file window where you select a destination location](./media/deploy-dacpac-access-web-app-package/select-destination-and-unpack-file.png)
+    :::image type="content" source="media/deploy-dacpac-access-web-app-package/select-destination-and-unpack-files.png" alt-text="Screenshot of the Unpack a DAC Package file window where you select a destination location.":::
 
     See the "Open an Access app package to work with its contents" section of the [Access Services in SharePoint Roadmap](https://support.office.com/article/Access-Services-in-SharePoint-Roadmap-497fd86b-e982-43c4-8318-81e6d3e711e8) article for more information about how to extract the DACPAC from an app package.
 
@@ -56,10 +56,10 @@ To recover the data by using the alternative method, follow these steps.
 
 1. Create a query, and make sure that the database context in SQL Server Management Studio (SSMS) is pointing to the newly created database. 
 
-    ![Your database context in SSMS is selected when creating a new query](./media/deploy-dacpac-access-web-app-package/create-query.png)
+    :::image type="content" source="media/deploy-dacpac-access-web-app-package/create-query.png" alt-text="Screenshot shows your database context in S S M S is selected when creating a new query." border="false":::
 2. Add the following CREATE SCHEMA syntax to the new query.
 
-    ![CREATE SCHEMA syntax for Access, AccessExternal, AccessSystem, AccessRunTime shows in a command prompt in SQL](./media/deploy-dacpac-access-web-app-package/add-create-schema-to-new-query.png)
+    :::image type="content" source="media/deploy-dacpac-access-web-app-package/add-create-schema-to-new-query.png" alt-text="Screenshot to add the CREATE SCHEMA syntax to the new query.":::
 3. Open model.sql from the unpacked DACPAC in SSMS.
 4. Locate the CREATE TABLE syntax for the tables that you want to restore.
 5. Copy and paste the desired CREATE TABLE syntax into the new query under the CREATE SCHEMA entries.
@@ -67,7 +67,7 @@ To recover the data by using the alternative method, follow these steps.
 
     The following sample script creates the Person and PersonAddress tables:
 
-    ![Script creating Person and PersonAddress tables as an example in SQL command prompt](./media/deploy-dacpac-access-web-app-package/create-table.png)
+    :::image type="content" source="media/deploy-dacpac-access-web-app-package/create-table.png" alt-text="Screenshot shows the script creates the Person and PersonAddress tables as an example in SQL command prompt.":::
 
 ### Populate tables with data by using a bulk copy program (BCP)
 
