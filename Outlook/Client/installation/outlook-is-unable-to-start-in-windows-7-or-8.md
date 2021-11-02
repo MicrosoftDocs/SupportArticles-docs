@@ -32,7 +32,7 @@ When you try to start Outlook 2016, Outlook 2013 or Outlook 2010 on a computer t
 
 > Activation Wizard
 
-:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/your-trial-has-expired-error.png" alt-text="Screenshot of Your trial has expired error details." border="false":::
+:::image type="content" source="media/outlook-is-unable-to-start-in-windows-7-or-8/your-trial-has-expired-error.png" alt-text="Screenshot of the trial expired error." border="false":::
 
 > Your trial has expired. Most of the features of Outlook have bene disabled. Choose an option below to reactivate.
 
