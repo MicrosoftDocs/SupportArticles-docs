@@ -3,7 +3,8 @@ title: Windows stop error - #0x000000EF "critical process died"
 description: Provides steps to resolve issues where a critical process dies during boot in an Azure VM.
 services: virtual-machines
 documentationcenter: ''
-author: v-miegge
+author: genlin
+ms.author: genli
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -12,7 +13,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.date: 03/26/2020
+ms.date: 11/01/2021
 ---
 
 # Windows Stop Error - #0x000000EF "Critical Process Died"
@@ -56,7 +57,7 @@ Usually, this is due to a critical system process failing during boot. You can r
 
    `sfc /scannow /offbootdir=<BOOT DISK DRIVE>:\ /offwindir=<BROKEN DISK DRIVE>:\windows`
 
-   * Where < BOOT DISK DRIVE > is the boot volume of the Repair VM (typically "C:") and < BROKEN DISK DRIVE > will be the drive letter for the attached disk from the broken VM. Replace the greater than / less than symbols as well as the text contained within them, e.g. "< text here >", with the appropriate letter.
+   * Where `<BOOT DISK DRIVE>` is the boot partition of the broken VM, and `<BROKEN DISK DRIVE>` is the OS partition of the broken VM. Replace the greater than / less than symbols as well as the text contained within them, e.g. "< text here >", with the appropriate letter.
 
 3. Next, use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to reassemble the VM and see if it boots.
 4. If the VM is still not booting, then continue to collect the memory dump file.
