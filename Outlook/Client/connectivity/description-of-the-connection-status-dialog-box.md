@@ -44,7 +44,7 @@ To view the Outlook connection status properties, follow these steps:
 
 The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced several changes to the Exchange Server Connection Status dialog box. These include several new columns and the ability to resize the Connection Status dialog box. See the example in the following screenshot.
 
-:::image type="content" source="media/description-of-the-connection-status-dialog-box/exchange-connection-status.png" alt-text="Microsoft Exchange Connection Status Screenshot" border="false":::
+:::image type="content" source="media/description-of-the-connection-status-dialog-box/exchange-connection-status.png" alt-text="Screenshot of Microsoft Exchange Connection Status.":::
 
 - CID
 
