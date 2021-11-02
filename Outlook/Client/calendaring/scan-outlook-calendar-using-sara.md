@@ -42,10 +42,8 @@ To start a calendar scan automatically, follow these steps:
     :::image type="content" source="media/scan-outlook-calendar-using-sara/open-file.png" alt-text="Screenshot of the download file., select the open file link.":::
 1. If you don't have SaRA installed, select **Install** in the pop-up window that displays the security warning. Then, select **I agree** to agree to the terms of the Microsoft Services Agreement and Privacy Statement.
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/security-warning.png" alt-text="Screenshot of the application install-security warning.":::
 1. Once the download is completed, a calendar scan will start.
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/calendar-scan.png" alt-text="Screenshot of starting the calendar scan.":::
 1. The scan is completed when you see **We're done collecting your Outlook configuration details**.
 
     :::image type="content" source="media/scan-outlook-calendar-using-sara/scan-completed.png" alt-text="Screenshot of the completed scan.":::
@@ -83,5 +81,3 @@ You can review your Outlook calendar scan report from the following tabs:
 
     :::image type="content" source="media/scan-outlook-calendar-using-sara/detailed-view-tab.png" alt-text="Screenshot of detailed view tab.":::
 - **Configuration Summary** - This tab provides you a snapshot of the configuration settings that are most frequently collected and analyzed.
-
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/configuration-summary-tab.png" alt-text="Screenshot of configuration summary tab.":::
