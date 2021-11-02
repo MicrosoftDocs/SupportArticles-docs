@@ -30,11 +30,11 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 #### Blue screen
 
-![The screenshot shows a blue screen hardware malfunction crash.](media/windows-stop-error-hardware-malfunction/windows-stop-error-hardware-malfunction-1.png)
+:::image type="content" source="media/windows-stop-error-hardware-malfunction/hardware-malfunction-screen.png" alt-text="Screenshot shows a blue hardware malfunction crash screen." border="false":::
 
 #### Serial console
 
-![The screenshot shows the message "Hardware Malfunction" on the Serial Console feature if Serial Console has been enabled.](media/windows-stop-error-hardware-malfunction/windows-stop-error-hardware-malfunction-2.png)
+:::image type="content" source="media/windows-stop-error-hardware-malfunction/hardware-malfunction-serial-console.png" alt-text="Screenshot shows the message Hardware Malfunction on the Serial Console feature if Serial Console has been enabled.":::
 
 ## Cause
 
@@ -42,15 +42,15 @@ This screen will appear when the Guest OS wasn't set up correctly and a Non-Mask
 
 ## Solution
 
-### Process Overview 
+### Process Overview
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-1. Set up the Non-Maskable Interrupt (NMI) Registry Key 
-2. Create and Access a Repair VM 
-3. Enable Serial Console and Memory Dump Collection 
-4. Rebuild the VM 
+1. Set up the Non-Maskable Interrupt (NMI) Registry Key
+2. Create and Access a Repair VM
+3. Enable Serial Console and Memory Dump Collection
+4. Rebuild the VM
 
 ### Set up the Non-Maskable Interrupt (NMI) registry key
 
@@ -58,29 +58,33 @@ This screen will appear when the Guest OS wasn't set up correctly and a Non-Mask
 2. Once some access to the VM has been restored, open an elevated command prompt (run as administrator). 
 3. Set up the NMI registry key with the following command:
 
-    ```
+    ```console
     REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
     ```
+
     [View further information about the REG ADD command](/windows-server/administration/windows-commands/reg-add)
 4. *(Optional)* Setup memory dump collection:
 
-    ```
+    ```console
     REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f  
     REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
 
     ```
+
 5. *(Optional)* Setup serial console access:
 
-    ```
+    ```console
     BCDEDIT /ems {current} on, or bcdedit /ems '{current}' on if you are using PowerShell
     BCDEDIT /emssettings EMSPORT:1 EMSBAUDRATE:115200 
     ```
+
     [View further information about the BCDEDIT command](/windows-server/administration/windows-commands/bcdedit)
 6. Restart the VM with the following command:
 
-    ```
+    ```console
     SHUTDOWN /r /t 0 /f 
     ```
+
     [View further information about the SHUTDOWN command](/windows-server/administration/windows-commands/shutdown)
 
 > [!IMPORTANT]
@@ -104,28 +108,32 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 1. Open an elevated command prompt session (run as administrator). 
 2. List the BCD store data and determine the boot loader identifier, which you'll use in the next step. 
     1. For a Generation 1 VM, enter the following command and note the identifier listed: 
- 
-        ```
+
+        ```console
         bcdedit /store <BOOT PARTITON>:\boot\bcd /enum
         ```
-        In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder. 
 
-        ![The screenshot shows the output of listing the BCD store in a Generation 1 VM, which lists under Windows Boot Loader the identifier number.](media/windows-stop-error-hardware-malfunction/windows-stop-error-hardware-malfunction-3.png)
+        In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder.
+
+        :::image type="content" source="media/windows-stop-error-hardware-malfunction/identifier.png" alt-text="Screenshot the output of listing the BCD store in a Generation 1 VM, which lists the identifier number under Windows Boot Loader.":::
+
     2. For a Generation 2 VM, enter the following command and note the identifier listed:
-    
-        ```
+
+        ```console
         BCDEDIT /store <LETTER OF THE EFI SYSTEM PARTITION>:EFI\Microsoft\boot\bcd /enum 
         ```
+
         * In the command, replace `<LETTER OF THE EFI SYSTEM PARTITION>` with the letter of the EFI System Partition.
         * It may be helpful to launch the Disk Management console to identify the appropriate system partition labeled as *EFI System Partition*.
         * The identifier may be a unique GUID or it could be the default *bootmgr*.
 3. Run the following commands to enable Serial Console:
 
-    ```
+    ```console
     BCDEDIT /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON  
     BCDEDIT /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200 
 
     ```
+
     * In the command, replace `<VOLUME LETTER WHERE THE BCD FOLDER IS>` with the letter of the BCD folder.
     * In the command, replace `<BOOT LOADER IDENTIFIER>` with the identifier you found in the previous step.
 4. Verify that the free space on the OS disk is greater than the memory size (RAM) on the VM. 
@@ -134,13 +142,13 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 
     **Load Registry Hive from the broken OS Disk:**
 
-    ```
+    ```console
     REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM
     ```
 
     **Enable on ControlSet001:**
 
-    ```
+    ```console
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
@@ -148,7 +156,7 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 
     **Enable on ControlSet002:**
 
-    ```
+    ```console
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
@@ -156,9 +164,10 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 
     **Unload Broken OS Disk:**
 
-    ```
+    ```console
     REG UNLOAD HKLM\BROKENSYSTEM
     ```
+
 ### Rebuild the virtual machine
 
 * Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
