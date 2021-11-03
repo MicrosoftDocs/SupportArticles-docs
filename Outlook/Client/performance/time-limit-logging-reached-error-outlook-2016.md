@@ -105,7 +105,7 @@ To determine whether your Office 2016 installation is Click-to-Run or MSI-based,
 
 |Click-to-Run Office 2016 installation|MSI-based Office 2016 installation|
 |---|---|
-|![Click-to-Run screenshot](./media/time-limit-logging-reached-error-outlook-2016/click-to-run-version.png)<br/>|![MSI screenshot](./media/time-limit-logging-reached-error-outlook-2016/msi-version.png)<br/>|
+|:::image type="content" source="./media/time-limit-logging-reached-error-outlook-2016/click-to-run-version.png" alt-text="Screenshot of Office Account page of Click-to-Run Office 2016 installations." border="false":::<br/>|:::image type="content" source="./media/time-limit-logging-reached-error-outlook-2016/msi-version.png" alt-text="Screenshot of Office Account page of MSI-based Office 2016 installations." border="false":::<br/>|
 |||
 
 ## Status

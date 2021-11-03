@@ -32,21 +32,21 @@ _Original KB number:_ &nbsp; 3049193
 
 In Microsoft Outlook 2010 and later versions, you discover that contact photos are missing from email messages and from contacts in the global address list (GAL). The following screenshots show an example of this issue in Outlook 2016.
 
-:::image type="content" source="media/cannot-see-contact-photos/example-1.png" alt-text="Email displaying no contact photo" border="false":::
+:::image type="content" source="media/cannot-see-contact-photos/example-1.png" alt-text="Screenshot of email displaying no contact photo.":::
 
 You expect the contact photo to be displayed in Outlook, resembling the following.
 
-:::image type="content" source="media/cannot-see-contact-photos/example-2.png" alt-text="Email displaying contact photo" border="false":::
+:::image type="content" source="media/cannot-see-contact-photos/example-2.png" alt-text="Screenshot of mail displaying contact photo.":::
 
 You also discover that contact photos are missing in Skype for Business or Lync, as shown in the following screenshot.
 
-:::image type="content" source="media/cannot-see-contact-photos/example-3.png" alt-text="Skype for Business displaying no contact photos" border="false":::
+:::image type="content" source="media/cannot-see-contact-photos/example-3.png" alt-text="Screenshot of Skype for Business displaying no contact photos." border="false":::
 
 ## Cause
 
 This issue occurs when the **Show user photographs when available** check box is cleared in the **Outlook Options** dialog box.
 
-:::image type="content" source="media/cannot-see-contact-photos/show-user-photographs-when-available.png" alt-text="Outlook Options Show user photographs option" border="false":::
+:::image type="content" source="media/cannot-see-contact-photos/show-user-photographs-when-available.png" alt-text="Screenshot of the Show user photographs option in the People tab of Outlook Options." border="false":::
 
 ## Resolution Method 1 - Outlook Options
 
@@ -69,7 +69,7 @@ To update an existing policy that's configured to disable the **Show user photog
 
 3. Under **Contact Card**, double-click **Do not display photograph**.
 
-   :::image type="content" source="media/cannot-see-contact-photos/contact-card-setting.png" alt-text="Contact Card Group Policy" border="false":::
+   :::image type="content" source="media/cannot-see-contact-photos/contact-card-setting.png" alt-text="Screenshot of the Contact Card Group Policy settings." border="false":::
 
 4. Select **Disabled** or **Not Configured**, and then select **OK**.
 5. Select **OK** for the rest of the dialog boxes.

@@ -84,17 +84,17 @@ To deploy the Simple MAPI settings by using a custom Group Policy template, foll
 
 6. For **Exchange Security Form** settings to be set by using Group Policy, you must set the **Outlook Security Mode** setting to **Use Outlook Security Group Policy**. To locate that policy setting, expand **Classic Administrative Templates (ADM)**, expand **Microsoft Outlook 2010**, expand **Security**, and then select **Security Form Settings**. In the details pane, double-click **Outlook Security Mode**. Enable the policy, and then set it to **Use Outlook Security Group Policy**, as is shown in the following screen shot.
 
-   :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/outlook-security-mode-window.png" alt-text="The screenshot for setting Use Outlook Security Group Policy" border="false":::
+   :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/outlook-security-mode-window.png" alt-text="Screenshot for setting Use Outlook Security Group Policy." border="false":::
 
 7. The Simple MAPI options are located in the navigation pane (the left pane) under **Security Forms Settings**, in the **Programmatic Security** node, as shown in the following screenshot. To configure the Simple MAPI options, double-click any policy setting in the details pane. For example, double-click **Configure Simple MAPI sending prompt** to configure what happens when a program tries to send mail programmatically by using SimpleMAPI.
 
-   :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/programmatic-security-node.png" alt-text="The screenshot for Programmatic Security node settings" border="false":::
+   :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/programmatic-security-node.png" alt-text="Screenshot for Programmatic Security node settings." border="false":::
 
 8. In the dialog box for the policy setting, select **Enabled** to enable the policy, and then set the desired behavior in the **Guard Behavior** drop-down.
 
     For example, the following screenshot shows the **Guard Behavior** options for the Configure Simple MAPI sending prompt setting.
 
-    :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/configure-simple-mapi-sending-prompt.png" alt-text="The screenshot for Guard Behavior options" border="false":::
+    :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/configure-simple-mapi-sending-prompt.png" alt-text="Screenshot for Guard Behavior options.":::
 
 9. After you finish configuring your Simple MAPI policies, and they are propagated to your Outlook clients, you can verify that the policies are available to Outlook by examining the following registry subkey:
 
@@ -102,7 +102,7 @@ To deploy the Simple MAPI settings by using a custom Group Policy template, foll
 
    The following screenshot shows the registry of an Outlook client on which all three Simple MAPI policies are configured.
 
-   :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/registry-settings-for-simple-mapi-policies.png" alt-text="The screenshot for all three Simple MAPI policies are configured" border="false":::
+   :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/registry-settings-for-simple-mapi-policies.png" alt-text="Screenshot for all three Simple MAPI policies are configured." border="false":::
 
    > [!NOTE]
    > The **Outlook Security Mode** Group Policy setting that you set in step 6 created the **AdminSecurityMode** value and set it to **3**. This indicates that Outlook will use Group Policy for managing programmatic security.
