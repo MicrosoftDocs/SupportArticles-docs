@@ -45,19 +45,19 @@ To resolve error **0x8004010F**, identify the current location of your default O
 2. In Control Panel, select **Mail**.
 3. In the **Mail Setup - Outlook** dialog box, select **Show Profiles**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/show-profiles.jpg" alt-text="In the Mail Setup - Outlook dialog box, select Show Profiles" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/show-profiles.png" alt-text="Screenshot of the Mail Setup - Outlook dialog box. Show Profiles button is highlighted." border="false":::
 
 4. Select your current Outlook profile, and then select **Properties**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/properties.jpg" alt-text="Select your current Outlook profile, and then select Properties" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/properties.png" alt-text="Screenshot of the Mail dialog box. Your current Outlook profile and Properties button are selected." border="false":::
 
 5. In the **Mail Setup - Outlook** dialog box, select **Data Files**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/data-files.jpg" alt-text="In the Mail Setup - Outlook dialog box, select Data Files" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/data-files.png" alt-text="Screenshot of the Mail Setup - Outlook dialog box. Data Files button is highlighted." border="false":::
 
 6. Select the **Data Files** tab in the **Account Settings** dialog box, and then note the name and location of the default data file for your profile (a check mark will denote the default data file).
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/data-files-tab-on-account-settings.jpg" alt-text="Select the Data Files tab in the Account Settings dialog box" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/data-files-tab-on-account-settings.png" alt-text="Screenshot of the Account Settings dialog box. Under the Data Files tab, the default data file is shown." border="false":::
 
 7. Select **Close**.
 
@@ -74,16 +74,16 @@ To resolve error **0x8004010F**, identify the current location of your default O
 1. Select **Start**, and then select **Control Panel**.
 2. In the **Mail Setup - Outlook** dialog box, select **Show Profiles**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/show-profiles.jpg" alt-text="In the Mail Setup - Outlook dialog box, select Show Profiles" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/show-profiles.png" alt-text="Screenshot of the Mail Setup - Outlook dialog box. Show Profiles button is highlighted." border="false":::
 
 3. On the **General** tab in the **Mail** dialog box, select **Add**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/add.jpg" alt-text="select Add in the Mail dialog box" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/add.png" alt-text="Screenshot of the Mail dialog box. The Add button is selected." border="false":::
 
 4. In the **New Profile** dialog box, type a new profile name, and then select **OK**.
-5. In the **Add New Account** dialog box, type your email account information, and then select **Next**.
+5. In the **Add Account** dialog box, type your email account information, and then select **Next**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/add.jpg" alt-text="In the Add New Account dialog box, type your email account information" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/add-account.png" alt-text="Screenshot of the the Add Account dialog box, where you can type your email account information." border="false":::
 
 6. After your account is successfully configured, select **Finish**.
 
@@ -92,20 +92,20 @@ To resolve error **0x8004010F**, identify the current location of your default O
 1. Select **Start**, and then select **Control Panel**.
 2. In the **Mail Setup - Outlook** dialog box, select **Show Profiles**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/show-profiles.jpg" alt-text="In the Mail Setup - Outlook dialog box, select Show Profiles" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/show-profiles.png" alt-text="Screenshot of the Mail Setup - Outlook dialog box. Show Profiles button is highlighted." border="false":::
 
 3. On the **General** tab in the **Mail** dialog box, select **Add**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/add.jpg" alt-text="select Add in the Mail dialog box" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/add.png" alt-text="Screenshot of the Mail dialog box. The Add button is selected." border="false":::
 
 4. In the **New Profile** dialog box, type a new profile name, and then select **OK**.
-5. In the **Add New Account** dialog box, select **Manually configure server settings or additional server types**, and then select **Next**.
+5. In the **Add Account** dialog box, select **Manually configure server settings or additional server types**, and then select **Next**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/manually-configure-server-settings-or-additional-server-types.jpg" alt-text="select Manually configure server settings or additional server types" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/manually-configure-server-settings-or-additional-server-types.png" alt-text="Screenshot of the Add Account dialog box. The Manually configure server settings or additional server types option is selected." border="false":::
 
 6. In the **Choose Service** dialog box, select **Internet E-mail**, and then select **Next**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/the-internet-e-mail-option.jpg" alt-text="In the Choose Service dialog box, select Internet E-mail" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/internet-email.png" alt-text="Screenshot of the Choose Service dialog box. The Internet E-mail option is selected.":::
 
 7. In the **Internet E-mail Settings** dialog box, type your account details.
 8. Select **Test Account Settings** to test your account.
@@ -115,7 +115,7 @@ To resolve error **0x8004010F**, identify the current location of your default O
 
 9. Select **Existing Outlook Data File**, and then select **Browse**.
 
-   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/existing-outlook-data-file.jpg" alt-text="Select Existing Outlook Data File, and then select Browse" border="false":::
+   :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/existing-outlook-data-file.png" alt-text="Screenshot shows the Internet Email Settings dialog box. The Existing Outlook Data File option is selected.":::
 
 10. In the **Open Outlook Data File** dialog box, browse to and then select the Outlook data file you previously located. Select **OK**.
 11. Select **Next**.

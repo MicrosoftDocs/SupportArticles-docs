@@ -66,7 +66,7 @@ To access the AutoComplete setting, follow these steps:
 2. Select the **Mail** tab.
 3. Scroll approximately halfway down until you see **Send messages**. Make sure that the **Use Auto-Complete List to suggest names when typing in the To, Cc, and Bcc lines** box is checked.
 
-    :::image type="content" source="media/information-about-the-outlook-autocomplete-list/enable-the-autocomplete-feature.jpg" alt-text="Send messages window, Use Auto-Complete List to suggest names when typing in the To, Cc, and Bcc lines box checked":::
+    :::image type="content" source="media/information-about-the-outlook-autocomplete-list/use-auto-complete-list-to-suggest-names.png" alt-text="Screenshot of Send messages window, and Use Auto-Complete List to suggest names when typing in the To, Cc, and Bcc lines box is checked.":::
 
 #### Outlook 2003 and Outlook 2007
 
@@ -77,7 +77,7 @@ To access the AutoComplete settings, follow the steps:
 3. Select the **Advanced E-mail Options** button.
 4. Make sure that the **Suggest names while completing To, Cc, and Bcc fields**  box is checked. (The screenshot for this step follows.)
 
-    :::image type="content" source="media/information-about-the-outlook-autocomplete-list/enable-the-autocomplete-feature-for-outlook-2003-and-2007.jpg" alt-text="Advanced E-mail Options window, Suggest names while completing To, Cc, and Bcc fields checked" border="false":::
+    :::image type="content" source="media/information-about-the-outlook-autocomplete-list/suggest-names-while-completing-to-cc-and-bcc-fields.png" alt-text="Screenshot of the Advanced E-mail Options window, and the Suggest names while completing To, Cc, and Bcc fields box is checked.":::
 
 ### How to import .nk2 files into Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 
@@ -173,7 +173,7 @@ Use one of the following two methods to delete the AutoComplete list.
 3. Select the **Mail** tab.
 4. Under **Send Messages**, select **Empty Auto-Complete List**.
 
-    :::image type="content" source="media/information-about-the-outlook-autocomplete-list/empty-auto-complete-option.jpg" alt-text="Outlook Options window":::
+    :::image type="content" source="media/information-about-the-outlook-autocomplete-list/empty-auto-complete-option.png" alt-text="Screenshot of the Outlook Options window which shows the Empty Auto-Complete List button.":::
 
 5. Select **Yes**.
 

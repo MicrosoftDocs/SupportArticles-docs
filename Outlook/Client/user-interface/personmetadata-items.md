@@ -44,9 +44,9 @@ To prevent mail items in the PersonMetadata folder from showing up in your Searc
 
 If you receive a "folder item limit" notification that states that the PersonMetadata folder is approaching the 1-million-item limit, use one of the following methods to delete all the items in the folder.
 
-Folder item limit notification
+Folder item limit notification:
 
-:::image type="content" source="media/personmetadata-items/personmetadata-limit-notification.png" alt-text="{alt-text}":::
+:::image type="content" source="media/personmetadata-items/personmetadata-limit-notification.png" alt-text="Screenshot of the folder item limit notification.":::
 
 ### Method 1: Run MFCMAPI on the affected user's computer
 

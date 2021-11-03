@@ -28,9 +28,9 @@ _Original KB number:_ &nbsp; 982697
 
 By default, if a Microsoft Outlook 2010 or later versions profile is configured in Cached mode and you add another user's mailbox or shared folder to your profile, all items in all the folders to which you have access in the shared mailbox are downloaded to your local cache. This is a change from Microsoft Office Outlook 2007, in which only shared non-mail folder items are cached by default.
 
-For example, the following figure shows the shared Inbox folder of Marcelo Santos. This Inbox folder is being cached in Outlook 2010 because the status bar displays **Connected** when this folder is selected in the navigation pane.
+For example, the following figure shows the shared Inbox folder of a user. This Inbox folder is being cached in Outlook 2010 because the status bar displays **Connected** when this folder is selected in the navigation pane.
 
-:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/example-of-cached-shared-mailbox.png" alt-text="example of a shared mailbox that's being cached" border="false":::
+:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/example-of-cached-shared-mailbox.png" alt-text="Screenshot of an example of a shared mailbox that's being cached.":::
 
 ## Cause
 
@@ -65,7 +65,7 @@ You can use one of the following methods to configure this registry data for Out
 
 Regardless of the method that you use, if you disable the caching of shared mail folders, the Outlook status bar displays **Online** when you select a shared mail folder in another mailbox in the navigation pane. This is illustrated in the following figure.
 
-:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/outlook-status-bar-shows-online.png" alt-text="example of Outlook status bar displays Online" border="false":::
+:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/outlook-status-bar-shows-online.png" alt-text="Screenshot of an example of Outlook status bar which displays Online.":::
 
 In this configuration, items in mail folders are not available when you are working offline in Outlook. However, items in non-mail folders are still available when you are working offline in Outlook.
 
@@ -147,7 +147,7 @@ To deploy this setting by using the Outlook Group Policy template, follow these 
 
     Screenshot for Outlook 2013:
 
-    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/disable-shared-mail-folder-caching.jpg" alt-text="Screenshot for Outlook 2013" border="false":::
+    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/disable-shared-mail-folder-caching.png" alt-text="Screenshot of the Local Group Policy Editor for Outlook 2013.":::
 
 7. Under **Delegates**, double-click **Disable shared mail folder caching**.
 8. Select **Enabled**, and then select **OK**.
@@ -202,7 +202,7 @@ To deploy this setting by using a custom Group Policy template, follow these ste
 
 3. In the Group Policy Object Editor or the Group Policy Management Console, under **User Configuration**, expand **Classic Administrative Templates (ADM)** to locate the policy node for your custom template. By using the custom *.adm template that is provided in step 1, this node is named **Outlook 2010 Shared Mail Folder Caching**.
 
-    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/the-disable-shared-mail-folder-caching-setting.png" alt-text="Outlook 2010 Shared Mail Folder Caching" border="false":::
+    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/the-disable-shared-mail-folder-caching-setting.png" alt-text="Screenshot of the Group Policy window which shows the Outlook 2010 Shared Mail Folder Caching node.":::
 
 4. Under **Outlook 2010 Shared Mail Folder Caching**, double-click **Disable shared mail folder caching**.
 5. Select **Enabled**, and then select **OK**.
@@ -275,11 +275,11 @@ To deploy this setting in Outlook 2010, use the **Add registry entries** option 
 
    The following figure displays these changes that were made in the **Add/Modify Registry Entry** dialog box.
 
-    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/add-modify-registry-entry.png" alt-text="Add/Modify Registry Entry" border="false":::
+    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/add-modify-registry-entry.png" alt-text="Screenshot of the Add/Modify Registry Entry dialog box.":::
 
     After you select **OK** in the **Add/Modify Registry Entry** dialog box, the OCT displays this registry data. This change is displayed in the following figure.
 
-    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/change-shown-in-office-customiztion-tool.png" alt-text="results of Add/Modify Registry Entry" border="false":::
+    :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/change-shown-in-office-customiztion-tool.png" alt-text="Screenshot of the Microsoft Office Customization tool which shows the results of the Add/Modify Registry Entry.":::
 
 7. Complete any remaining tasks in the OCT, and then save your .msp file.
 8. Deploy Office 2010 with this .msp file.
@@ -300,7 +300,7 @@ In the OCT for Outlook 2010 and later versions, the setting that controls the ca
 
 The following figure shows this setting in the Outlook 2010 OCT.
 
-:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/settings-in-office-customization-tool.png" alt-text="setting in the Outlook 2010 OCT" border="false":::
+:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/settings-in-office-customization-tool.png" alt-text="Screenshot shows the setting in the Outlook 2010 OCT.":::
 
 When you use the OCT to disable this setting, the following registry key value is configured on your Outlook client.
 
@@ -318,7 +318,7 @@ In the Group Policy Template for Outlook 2010 and later versions, the setting th
 
 The following figure shows the Group Policy Management Editor that controls this setting in Outlook 2010.
 
-:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/setting-in-local-group-policy-editor.png" alt-text="The figure shows the Group Policy Management Editor that controls this setting in Outlook 2010" border="false":::
+:::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/setting-in-local-group-policy-editor.png" alt-text="Screenshot shows the Group Policy Management Editor that controls this setting in Outlook 2010.":::
 
 When you use a Group Policy setting to disable this setting, the following registry key value is configured on your Outlook 2010 client.
 
