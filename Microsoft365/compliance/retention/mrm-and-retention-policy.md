@@ -138,19 +138,19 @@ If a retention policy is not working as expected, review the following articles 
 
 To view and apply **retention policy tag** in Outlook, right-click a folder, and then select the desired tag.
 
-:::image type="content" source="media/mrm-and-retention-policy/folder-policy.png" alt-text="Screenshot shows steps to select the tag in the Folder Policy.":::
+:::image type="content" source="media/retention/folder-policy.png" alt-text="Screenshot shows steps to select the tag in the Folder Policy.":::
 
 Depending on a user's Group Policy, they may be able to change this list (add/delete) through OWA under **Options** > **Mail** > **Retention Policies**.
 
-:::image type="content" source="media/mrm-and-retention-policy/retention-policies.png" alt-text="Screenshot of the Retention Policies page through O W A.":::
+:::image type="content" source="media/retention/retention-policies.png" alt-text="Screenshot of the Retention Policies page through O W A.":::
 
 Check the **retention policy** option that applies to the folder in which the items are stored. To do this, right-click the folder, and then scroll down to **Assign policy**.
 
-:::image type="content" source="media/mrm-and-retention-policy/assign-policy.png" alt-text="Screenshot shows steps to check the retention policy option on the Assign policy page.":::
+:::image type="content" source="media/retention/assign-policy.png" alt-text="Screenshot shows steps to check the retention policy option on the Assign policy page.":::
 
 Check **Retention Policy** and **Expire**  fields to see whether an item is set an expiration date.
 
-:::image type="content" source="media/mrm-and-retention-policy/expiration-date-set-page.png" alt-text="Screenshot to check Retention Policy and Expire fields.":::
+:::image type="content" source="media/retention/expiration-date-set-page.png" alt-text="Screenshot to check Retention Policy and Expire fields.":::
 
 Use the search bar to quickly find items that are set to expire. For example: "expires:<=the next month".
 
@@ -158,7 +158,7 @@ For more information, see [Learn to narrow your search criteria for better searc
 
 Use **Customer Search Folder** to do a more extensive search. To do this, under **Advance** setting, use the **Expire** field. For more information, see [Create a Search Folder](https://support.office.com/article/C1807038-01E4-475E-8869-0CCAB0A56DC5).
 
-:::image type="content" source="media/mrm-and-retention-policy/customer-search-folder-page.png" alt-text="Screenshot to use the Expire field under the Advance setting.":::
+:::image type="content" source="media/retention/customer-search-folder-page.png" alt-text="Screenshot to use the Expire field under the Advance setting.":::
 
 Set a specific expiration date. For detailed steps, see [Set a message expiration date](https://support.office.com/article/FCAE213F-8D38-4318-A17B-42D83AC209ED).
 
@@ -168,11 +168,11 @@ Administrators can create new retention tags and policies by using the correct 
 
 #### New Retention Tag
 
-:::image type="content" source="media/mrm-and-retention-policy/new-retention-tag.png" alt-text="Screenshot of creating New Retention Tag page.":::
+:::image type="content" source="media/retention/new-retention-tag.png" alt-text="Screenshot of creating New Retention Tag page.":::
 
 #### New Retention Policy (using new or existing tags)
 
-:::image type="content" source="media/mrm-and-retention-policy/new-retention-policy.png" alt-text="Screenshot of creating New Retention Policy page.":::
+:::image type="content" source="media/retention/new-retention-policy.png" alt-text="Screenshot of creating New Retention Policy page.":::
 
 **Retention tags** are used to apply retention settings to messages and folders in user mailboxes. There are three types of retention tags:
 
