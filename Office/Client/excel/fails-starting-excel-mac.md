@@ -95,30 +95,30 @@ To create a new user account, use the following procedure.
 
 1. Click the Apple icon, and then click **System Preferences**.
 
-   ![System Preferences in the Apple icon](./media/fails-starting-excel-mac/step4a.png)
+   :::image type="content" source="media/fails-starting-excel-mac/system-preferences.png" alt-text="Select the System Preferences option in the Apple icon." border="false":::
 
 2. Click **Accounts**.
 
-   ![Accounts button in System Preferences](./media/fails-starting-excel-mac/step4b.png)
+   :::image type="content" source="media/fails-starting-excel-mac/accounts-button-in-system-preferences.png" alt-text="Select the Accounts button in System Preferences." border="false":::
 
 3. Click the plus sign ("+") in the lower-left corner to open the new account window.
 
    > [!NOTE]
    > If you are not the Administrator of the computer, click **Click the lock to make changes**. Log on by using your Administrator user name and password, and then click **OK**.
 
-   ![Clicking Plus sign in the lower-left corner](./media/fails-starting-excel-mac/step4c.png)
+   :::image type="content" source="media/fails-starting-excel-mac/plus-sign.png" alt-text="Select the Plus sign at the lower-left corner to open a new account." border="false":::
 
 4. Type the word **Test** for the user name, and leave the password box blank. Click **Create Account**. When you receive a warning, click **OK**.
 
-   ![Type name to create account](./media/fails-starting-excel-mac/step4d.png)
+   :::image type="content" source="media/fails-starting-excel-mac/create-account.png" alt-text="Type a name to create an account." border="false":::
 
 5. Click to select **Allow User to Administer this computer**. (If this option is not available, just go to the next step).
 
-   ![Select the Allow User to Administer this computer option](./media/fails-starting-excel-mac/step4e.png)
+   :::image type="content" source="media/fails-starting-excel-mac/allow-use-to-administer-this-computer.png" alt-text="Select the Allow User to Administer this computer option." border="false":::
 
 6. Click the Apple icon, and then click **Log Out *name***.
 
-   ![Log out in the Apple icon](./media/fails-starting-excel-mac/step4f.png)
+   :::image type="content" source="media/fails-starting-excel-mac/log-out.png" alt-text="Log out in the Apple icon." border="false":::
 
 7. Log on with your Test account.
 

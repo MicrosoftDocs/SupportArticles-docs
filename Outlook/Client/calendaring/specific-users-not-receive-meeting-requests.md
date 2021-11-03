@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4022896
 
 Some specific users in your organization cannot receive meeting invitations in a Microsoft Outlook client. After you run [message tracking](/Exchange/mail-flow/transport-logs/message-tracking) for the specific recipient on Microsoft Exchange Server, the status for this meeting is shown as **Failed** for this specific user in the message trace result. For example, the results resemble the following screenshot:
 
-![Screenshot of the failed meeting status](./media/specific-users-not-receive-meeting-requests/meeting-status.png)
+:::image type="content" source="./media/specific-users-not-receive-meeting-requests/meeting-status.png" alt-text="Screenshot of the failed meeting status.":::
 
 Additionally, you notice the following error message in the message trace result:
 
@@ -32,7 +32,7 @@ Additionally, you notice the following error message in the message trace resul
 
 This display resembles the following screenshot:
 
-![Screenshot of the error message](./media/specific-users-not-receive-meeting-requests/error-message.png)
+:::image type="content" source="./media/specific-users-not-receive-meeting-requests/error-message.png" alt-text="Screenshot of the error message in the message events box.":::
 
 ## Status
 
@@ -41,4 +41,4 @@ This is the expected behavior if the user did the following actions:
 - Turned on [Delegate Access](https://support.office.com/article/Allow-someone-else-to-manage-your-mail-and-calendar-9684b670-7588-4eea-8717-9e5799047540) in the Outlook client
 - Set the delivery option to **My delegates only**, as shown in the following screenshot:
 
-  ![Screenshot of the delivery option](./media/specific-users-not-receive-meeting-requests/delivery-option.png)
+  :::image type="content" source="./media/specific-users-not-receive-meeting-requests/delivery-option.png" alt-text="Screenshot of the delivery option in Delegate Access.":::
