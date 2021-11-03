@@ -21,7 +21,7 @@ ms.author: genli
 If you face difficulties troubleshooting SSH or application access to a Linux virtual machine (VM) in Azure, redeploying the VM may help. When you redeploy a VM, it moves the VM to a new node within the Azure infrastructure and then powers it back on. All your configuration options and associated resources are retained. This article shows you how to redeploy a VM using Azure CLI or the Azure portal.
 
 > [!NOTE]
-> After you redeploy a VM, all the data that you saved on the temporary disk and Ephemeral disk will be lost and dynamic IP addresses associated with virtual network interface are updated.
+> After you redeploy a VM, all the data that you saved on in the temporary disk and Ephemeral disk will be lost. The dynamic IP addresses associated with virtual network interface are updated.
 
 
 ## Use the Azure CLI
