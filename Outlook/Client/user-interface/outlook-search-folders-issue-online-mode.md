@@ -66,7 +66,7 @@ To configure and use MFCMapi to restart the search service, follow these steps:
 
 9. In the first **Search Flags** box, replace the existing text with the *0x2* value. As soon as you finish typing *0x2*, you'll see the second **Search Flags** box populated with "RESTART_SEARCH," as shown in the following screenshot. Click **OK** at the bottom of the window. This restarts the search service for this folder.
 
-    :::image type="content" source="media/outlook-search-folders-issue-online-mode/search-flags.png" alt-text="Screenshot of the second Search Flags box populated with "RESTART_SEARCH," after you finish typing 0x2 in the first Search Flags box.":::
+    :::image type="content" source="media/outlook-search-folders-issue-online-mode/search-flags.png" alt-text="Screenshot of the second Search Flags box populated with RESTART_SEARCH after you finish typing 0x2 in the first Search Flags box.":::
 
 ## More information
 
