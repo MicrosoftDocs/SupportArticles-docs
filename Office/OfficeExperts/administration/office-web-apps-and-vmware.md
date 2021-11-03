@@ -29,7 +29,7 @@ Here is one example (with the ULS entry) of the unusual behavior you are seeing:
 
 **"Sorry, there was a problem and we can't open this document.  If this happens again, try opening the document in Microsoft Word."**
 
-![word-web-app-error](./media/office-web-apps-and-vmware/error-message-dialog.jpg)
+:::image type="content" source="media/office-web-apps-and-vmware/error-message-dialog.png" alt-text="Screenshot of the error in the SharePoint Unified Logging Service (U L S) logs.":::
 
 Here is an example of what you are seeing in the ULS logs:
 

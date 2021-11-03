@@ -34,4 +34,4 @@ This is a current design limitation of Office, and there are no current plans to
 
 If you use Word, you can use the SharePoint properties screen (through **View** tab > **Properties**) or use the properties page from the SharePoint web UI.
 
-![SharePoint properties screen through the View tab](./media/sharepoint-properties-backstage-file-info/properties.png)
+:::image type="content" source="media/sharepoint-properties-backstage-file-info/view-properties.png" alt-text="Screenshot of the SharePoint properties screen through the View tab.":::
