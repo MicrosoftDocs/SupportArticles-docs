@@ -4,6 +4,7 @@ description: This article describes what to do when the EDI/AS2 runtime configur
 ms.date: 03/18/2020
 ms.prod-support-area-path: Accelerators
 ms.reviewer: EnriqueP
+ms.technology: biztalk-server-accelerators
 ---
 # BizTalk Server EDI/AS2 runtime configuration fails with the error: DTS package BAM_DM_InterchangeStatusActivity already exists
 
