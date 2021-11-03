@@ -60,7 +60,7 @@ A copied workbook that doesn't contain any unsupported features will be created 
 
 1. On the **Data** tab, select **Properties**, and then clear the **Save query definition** check box in the **External Data Range Properties** dialog box.
 
-   :::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/clear-option.png" alt-text="Screenshot show steps to clear the Save query definition check box.":::
+   :::image type="content" source="media/compatibility-report-about-text-queries-in-excel-online/clear-option.png" alt-text="Screenshot shows steps to clear the Save query definition check box.":::
 
 ### Method 3: Edit the Excel file in the desktop app
 

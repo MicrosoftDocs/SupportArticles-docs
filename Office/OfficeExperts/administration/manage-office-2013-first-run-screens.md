@@ -23,13 +23,13 @@ This article was written by [Jalal Babool](https://social.technet.microsoft.com/
 
 Microsoft Office 2013 shows the following screens when an application is started for the first time. This article describes how to disable these First Run screens by using the Office Customization Tool (OCT) or Group Policy Management Editor.
 
-:::image type="content" source="media/manage-office-2013-first-run-screens/welcome-to-new-office.png" alt-text="Screenshot of the First Run screens, showing Welcome to your new Office.":::
+:::image type="content" source="media/manage-office-2013-first-run-screens/welcome-to-new-office.png" alt-text="Screenshot of the First Run screens, showing welcome to your new Office.":::
 
 :::image type="content" source="media/manage-office-2013-first-run-screens/meet-sky-drive.png" alt-text="Screenshot of the First Run screens, showing Meet SkyDrive.":::
 
 :::image type="content" source="media/manage-office-2013-first-run-screens/hello-test.png" alt-text="Screenshot of the First Run screens, showing Hello U Test.":::
 
-:::image type="content" source="media/manage-office-2013-first-run-screens/good-to-go.png" alt-text="Screenshot of the First Run screens, showing You're good to go.":::
+:::image type="content" source="media/manage-office-2013-first-run-screens/good-to-go.png" alt-text="Screenshot of the First Run screens, showing you're good to go.":::
 
 ## More Information
 
@@ -44,7 +44,7 @@ Microsoft Office 2013 shows the following screens when an application is started
 
 1. Set **Disable First Run Movie** to **Enabled**.
 
-   :::image type="content" source="media/manage-office-2013-first-run-screens/enabled-option.png" alt-text="Screenshot to set Disable First Run Movie to Enabled." border="false":::
+   :::image type="content" source="media/manage-office-2013-first-run-screens/enabled-option.png" alt-text="Screenshot to set Disable First Run Movie to Enabled in O C T." border="false":::
 
 1. Select **Disable First Run on application boot**, and then set it to **Enabled**.
 
