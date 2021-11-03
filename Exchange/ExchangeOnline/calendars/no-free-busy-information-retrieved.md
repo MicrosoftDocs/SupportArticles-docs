@@ -39,7 +39,7 @@ An organization relationship that has delegated authentication configured is set
 
 > The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: The organization relationship NAMEOFTHEORGANIZATIONRELATIONSHIP can't be used. Please confirm that the organization relationship is configured correctly.\r\n. Name of the server where exception originated: Cloud/On-premises Server.
 
-# Cause
+## Cause
 
 This issue occurs because of the following causes according to the error messages:
 
@@ -52,7 +52,7 @@ This issue occurs because of the following causes according to the error message
 - `TargetApplicationUri`
 - Both `TargetAutodiscoverEpr` and `TargetSharingEpr` (at least one of these two values must exist)
 
-# Resolution
+## Resolution
 
 To fix this issue, check the following resolutions that correspond to the causes.
 
