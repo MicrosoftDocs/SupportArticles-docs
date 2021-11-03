@@ -168,11 +168,11 @@ Administrators can create new retention tags and policies by using the correct 
 
 #### New Retention Tag
 
-:::image type="content" source="media/mrm-and-retention-policy/new-retention-tag.png" alt-text="Screenshot of creating New Retention Tag page.":::
+:::image type="content" source="media/mrm-and-retention-policy/new-retention-tag.png" alt-text="Screenshot of creating the New Retention Tag page.":::
 
 #### New Retention Policy (using new or existing tags)
 
-:::image type="content" source="media/mrm-and-retention-policy/new-retention-policy.png" alt-text="Screenshot of creating New Retention Policy page.":::
+:::image type="content" source="media/mrm-and-retention-policy/new-retention-policy.png" alt-text="Screenshot of creating the New Retention Policy page.":::
 
 **Retention tags** are used to apply retention settings to messages and folders in user mailboxes. There are three types of retention tags:
 

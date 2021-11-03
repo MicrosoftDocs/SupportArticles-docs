@@ -47,7 +47,7 @@ To restart the Microsoft Online Services Sign-in Assistant service, follow these
    :::image type="content" source="media/there-was-problem-that-caused-error/run-page.png" alt-text="Screenshot of the Run windows with services.msc typed." border="false":::
 3. In the list of services, locate and then double-click the Microsoft Online Services Sign-in Assistant service.
 
-   :::image type="content" source="media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png" alt-text="Screenshot to select the Microsoft Online Services Sign-in Assistant in the Services windows." border="false":::
+   :::image type="content" source="media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png" alt-text="Screenshot to select the Microsoft Online Services Sign-in Assistant in the Services window." border="false":::
 
 4. Stop the service. To do this, click Stop, and then wait until the service stops. The Service status should be displayed as Stopped.
 
