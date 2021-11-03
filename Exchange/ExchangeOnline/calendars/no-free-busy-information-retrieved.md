@@ -1,5 +1,5 @@
 ---
-title: ErrorMailRecipientNotFound error when viewing free/busy information
+title: ErrorMailRecipientNotFound when viewing free/busy information
 description: Describes an issue in which you can't view free/busy information of a user who is in another forest or tenant from Scheduling Assistant.
 author: v-charloz
 audience: ITPro
@@ -21,27 +21,27 @@ appliesto:
 - Exchange Server 2019
 ---
 
-# "ErrorMailRecipientNotFound" error and no free/busy information
+# ErrorMailRecipientNotFound error and no free/busy information
 
 ## Symptoms
 
-An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed, and the following error message is displayed with the ErrorMailRecipientNotFound error in the GetUserAvailabilityInternal action log:
+An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed, and the following error message is displayed with the ErrorMailRecipientNotFound error in the `GetUserAvailabilityInternal` action log:
 
 **Error message 1**:
 
-> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@nootherforest.com` to an Active Directory object.\r\n. Name of the server where exception originated: Cloud/On-premise Server.
+> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@nootherforest.com` to an Active Directory object.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
 **Error message 2**:
 
-> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.\r\n. Name of the server where exception originated: CloudServer.
+> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.\r\n. Name of the server where exception originated: \<Host name of cloud server\>.
 
 **Error message 3**:
 
-> The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: The organization relationship NAMEOFTHEORGANIZATIONRELATIONSHIP can't be used. Please confirm that the organization relationship is configured correctly.\r\n. Name of the server where exception originated: Cloud/On-premises Server.
+> The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
 ## Cause
 
-This issue occurs because of the following causes according to the error messages:
+Here are the causes that correspond to the error messages:
 
 **Cause 1**: Free/busy information is retrieved from a non-resolvable email address where the domain name isn't included in the domain name list of the organization relationship.
 
