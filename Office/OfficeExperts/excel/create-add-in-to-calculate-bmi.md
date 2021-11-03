@@ -36,10 +36,10 @@ In this case below, I will share about how to create a custom function to calcul
 
 Body Mass Index is a simple index of weight and height that is commonly used to classify underweight, overweight, and obesity in adults. BMI values ​​are age-independent and same for both sexes. The classifications of BMI are shown in the following table:
 
-![classifications of BMI](./media/create-add-in-to-calculate-bmi/classifications-of-bmi.png)
+:::image type="content" source="media/create-add-in-to-calculate-bmi/classifications-of-bmi.png" alt-text="Diagram showing the classifications of Body Mass Index." border="false":::
 
 The BMI scale used here is only suitable for adults aged 20-65 and here is the calculation:
-![calculation screenshot](./media/create-add-in-to-calculate-bmi/calculation.png)
+:::image type="content" source="media/create-add-in-to-calculate-bmi/calculation-of-bmi.png" alt-text="Diagram showing the calculation of Body Mass Index." border="false":::
 
 ## What To Do
 
@@ -53,7 +53,7 @@ The BMI scale used here is only suitable for adults aged 20-65 and here is the c
     Function BMI(weight, height) BMI = weight / (height / 100) ^ 2 End Function
     ```
 
-    ![screenshot of write script](./media/create-add-in-to-calculate-bmi/write-script.png)
+    :::image type="content" source="media/create-add-in-to-calculate-bmi/write-script.png" alt-text="Screenshot shows steps to write the script in the Visual Basic Editor window." border="false":::
 
 3. Close the VBE window and back to Excel. Then save the file with click on Save button or press CTRL+S on your keyboard, so the Save as dialog box is displayed.
 
@@ -63,7 +63,7 @@ The BMI scale used here is only suitable for adults aged 20-65 and here is the c
 
 2. For the file type, choose Excel Add-In (.xlam) format. Then close the workbook.
 
-    ![select file format](./media/create-add-in-to-calculate-bmi/select-xlam-format.png)
+    :::image type="content" source="media/create-add-in-to-calculate-bmi/select-xlam-format.png" alt-text="Screenshot to fill the name and select the file format." border="false":::
 
     > [!NOTE]
     > You can save your Add-In file anywhere you want. But if you want it to be listed on Excel bulit-in, you should save it into the default location. On my computer with Windows 7 operating system, the default location for any versions of Microsoft Excel is:
@@ -81,9 +81,9 @@ Until this step, we have finished creating a custom function that is saved in Ex
 
 4. On the Add-Insdialog box, find the Add-In that we want installed to (in this case is BMI calculation), make sure the BMI calculation checkbox is unchecked. Then click OK.
 
-    ![uncheck BMI calculation option in Excel Options](./media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation.png)
+    :::image type="content" source="media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation.png" alt-text="Screenshot shows steps to uncheck the B M I calculation option in the Excel Options.":::
 
-    ![uncheck BMI calculation option in Developer tab](./media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation-in-developer-tab.png)
+    :::image type="content" source="media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation-in-developer-tab.png" alt-text="Screenshot shows steps to uncheck the B M I calculation option in the Developer tab.":::
 
     > [!NOTE]
     > This step is applied to the file which is saved in default Add-Ins location. If you want to installing Add-In that is saved in another location, you should click on Browse button in the Add-Ins dialog box. When Browse dialog box is displayed, go to the file location, choose the Add-In file and then click Open.
@@ -94,7 +94,7 @@ Now, BMI calculation custom function has installed and ready to use.
 
 Now, we can use the custom function that we have created. To testing this BMI function, write on the cell B1: =BMI(55,170), then Press Enter. If the Result is 19.03, it means our custom function is working well. Also you can try calculate your BMI then find out your BMI classification by looking at BMI Classification table.
 
-![use the function](./media/create-add-in-to-calculate-bmi/use-the-function.png)
+:::image type="content" source="media/create-add-in-to-calculate-bmi/use-the-function.png" alt-text="Screenshot to use the custom B M I function in Excel.":::
 
 ### Step 5: Uninstall The Add-In
 
@@ -106,6 +106,6 @@ However, every Add-In that has installed on Excel, will always running when Exce
 
 3. Click OK and Restart your Excel.
 
-    ![uninstall the add-in](./media/create-add-in-to-calculate-bmi/uninstall-add-in.png)
+    :::image type="content" source="media/create-add-in-to-calculate-bmi/uninstall-add-in.png" alt-text="Screenshot shows steps to uninstall the Add-Ins.":::
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../../includes/community-solution-content-disclaimer.md)]
