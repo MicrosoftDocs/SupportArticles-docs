@@ -21,7 +21,7 @@ If you have been facing difficulties troubleshooting Remote Desktop (RDP) connec
 If the VM is stuck in a failed state, try [reapplying your VM's state](vm-stuck-in-failed-state.md) before redeploying.
 
 > [!NOTE]
-> After you redeploy a VM, the temporary disk is lost and dynamic IP addresses associated with virtual network interface are updated. 
+> After you redeploy a VM, all the data that you saved on in the temporary disk and Ephemeral disk will be lost and dynamic IP addresses associated with virtual network interface are updated.
 
 
 ## Use the Azure CLI
