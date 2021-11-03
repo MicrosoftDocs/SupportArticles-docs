@@ -4,6 +4,7 @@ description: This article provides the resolution to solve the 'Error Executing 
 ms.date: 04/15/2020
 ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: radomirz
+ms.technology: aspnet-site-behavior-performance
 ---
 # Error when you use Server.Transfer or Server.Execute in ASP.NET pages: Executing Child Request
 

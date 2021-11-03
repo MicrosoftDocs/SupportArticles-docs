@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem that data grid ma
 ms.date: 04/07/2020
 ms.prod-support-area-path: Development
 ms.reviewer: joelrewe, anandh
+ms.technology: aspnet-development
 ---
 # DataGrid control doesn't display correctly in .aspx page
 

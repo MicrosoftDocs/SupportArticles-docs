@@ -3,6 +3,7 @@ title: MVC 3 installation fails
 description: This article describes the problem that a fatal error occurs when you install ASP.NET MVC 3 or ASP.NET Web pages.
 ms.date: 04/07/2020
 ms.prod-support-area-path: Development
+ms.technology: aspnet-development
 ---
 # Installation of ASP.NET MVC 3 or ASP.NET Web pages fails with a fatal error
 

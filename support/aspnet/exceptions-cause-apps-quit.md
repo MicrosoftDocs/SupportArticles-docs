@@ -4,6 +4,7 @@ description: This article describes a problem that occurs when an unhandled exce
 ms.date: 04/09/2020
 ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: tmarq
+ms.technology: aspnet-site-behavior-performance
 ---
 # Unhandled exceptions cause ASP.NET-based applications to quit unexpectedly in the .NET Framework
 

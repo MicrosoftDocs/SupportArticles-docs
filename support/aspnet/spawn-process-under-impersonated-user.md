@@ -5,6 +5,7 @@ ms.date: 08/07/2020
 ms.prod-support-area-path: Development
 ms.reviewer: earlb
 ms.topic: how-to
+ms.technology: aspnet-development
 ---
 # Spawn a process that runs under the context of the impersonated user in Microsoft ASP.NET
 

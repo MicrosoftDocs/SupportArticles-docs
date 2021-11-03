@@ -3,6 +3,7 @@ title: Cache trimming occurs in an ASP.NET web application
 description: This article provides resolutions for the problem of cache trimming in an ASP.NET web application running in IIS.
 ms.date: 12/11/2020
 ms.prod-support-area-path: Development
+ms.technology: aspnet-development
 ---
 # Cache trimming occurs in an ASP.NET web application running in IIS
 

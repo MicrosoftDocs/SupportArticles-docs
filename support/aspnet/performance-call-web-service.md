@@ -4,6 +4,7 @@ description: This article provides help to solve the performance issues that occ
 ms.date: 07/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: tferrand, aaronba
+ms.technology: aspnet-health-diagnostic-performance
 ---
 # Performance issues when you make calls to web services from an ASP.NET application
 
