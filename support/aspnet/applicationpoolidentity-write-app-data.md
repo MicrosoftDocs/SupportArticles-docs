@@ -4,7 +4,6 @@ description: This article provides resolutions for access denied error that occu
 ms.date: 04/15/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: danma
-ms.technology: aspnet-www-authentication-authorization
 ---
 # ApplicationPoolIdentity doesn't have write permission to ASP.NET App_Data folder
 

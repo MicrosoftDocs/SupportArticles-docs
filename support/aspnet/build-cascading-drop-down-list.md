@@ -5,7 +5,6 @@ ms.date: 04/09/2020
 ms.prod-support-area-path: Development
 ms.reviewer: v-zhiqni
 ms.topic: how-to
-ms.technology: aspnet-development
 ---
 # Steps to create a cascading drop-down list by using the Microsoft ASP.NET AJAX framework
 

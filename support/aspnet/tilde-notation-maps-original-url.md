@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that tilde notati
 ms.date: 04/07/2020
 ms.prod-support-area-path: Development
 ms.reviewer: kanchanm
-ms.technology: aspnet-development
 ---
 # Tilde notation maps to the original URLs by using IIS URL rewrite in ASP.NET Web Pages Razor V3
 

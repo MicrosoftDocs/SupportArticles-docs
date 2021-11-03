@@ -4,7 +4,6 @@ description: This article provides resolutions for the state server log Event ID
 ms.date: 03/25/2020
 ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: V-KIMWA, VENKATC
-ms.technology: aspnet-site-behavior-performance
 ---
 # State server logs Event ID 1072 or Event ID 1076
 

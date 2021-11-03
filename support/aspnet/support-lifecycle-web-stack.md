@@ -5,7 +5,6 @@ ms.date: 04/17/2020
 ms.prod-support-area-path: Development
 ms.reviewer: ericam
 ms.topic: article
-ms.technology: aspnet-development
 ---
 # Support lifecycle for ASP.NET web stack
 
