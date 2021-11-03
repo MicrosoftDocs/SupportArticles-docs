@@ -4,6 +4,7 @@ description: This article describes that when the Internet Explorer text input c
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: jeanr
+ms.technology: internet-explorer-development-website
 ---
 # How to hide the Clear button in Internet Explorer 10
 

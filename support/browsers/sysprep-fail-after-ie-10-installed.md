@@ -4,6 +4,7 @@ description: After installing Internet Explorer 10 on Windows 7, Sysprep may fai
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-installation
 ---
 # Sysprep in Windows 7 may fail after Internet Explorer 10 is installed
 

@@ -4,6 +4,7 @@ description: Describes an issue in which Windows 10 doesn't read automatic proxy
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: Aloot, pierrelc
+ms.technology: internet-explorer-administration
 ---
 # Windows 10 doesn't read a PAC file referenced by a file protocol
 

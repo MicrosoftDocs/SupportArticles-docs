@@ -4,6 +4,7 @@ description: Describes how to troubleshoot the problem when hyperlinks do not wo
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-development-website
 ---
 # Nothing happens when you click a link in Internet Explorer
 

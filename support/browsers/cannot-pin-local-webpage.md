@@ -3,6 +3,7 @@ title: Local page adding to favorites fails
 description: Describes why a local page cannot be pinned or added as a favorite site in Internet Explorer 11. Provides a workaround.
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
+ms.technology: internet-explorer-core-features
 ---
 # You cannot pin a local webpage in Internet Explorer 11
 
