@@ -25,7 +25,7 @@ appliesto:
 
 ## Symptoms
 
-An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed, and the following error message is displayed with the ErrorMailRecipientNotFound error in the `GetUserAvailabilityInternal` action log:
+An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed, and one of the following error messages is displayed with the ErrorMailRecipientNotFound error in the `GetUserAvailabilityInternal` action log:
 
 **Error message 1**:
 
@@ -54,11 +54,11 @@ Here are the causes that correspond to the error messages:
 
 ## Resolution
 
-To fix this issue, check the following resolutions that correspond to the causes.
-
 Before you try the resolutions, you can run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the domain name list of the organization relationship. See the following cmdlet output as an example:
 
 :::image type="content" source="media/no-freebusy-information-retrieved/domainnames-ouput.png" alt-text="Screenshot for cmdlet output as an example.":::
+
+To fix this issue, check the following resolutions that correspond to the causes.
 
 **Resolution 1**: If the domain name (for example, nootherforest) isn't included in the domain name list of the organization relationship when the recipient email address is valid, [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship#use-exchange-online-powershell-to-create-an-organization-relationship), or modify the existing organization relationship to include that domain.
 
