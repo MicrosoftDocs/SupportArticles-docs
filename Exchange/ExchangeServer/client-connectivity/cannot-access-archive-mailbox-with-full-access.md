@@ -56,17 +56,18 @@ Then, create a new Outlook profile for the shared User B's mailbox:
 1. In Outlook, select **File** > **Account Settings** > **Manage Profiles**.
 2. Select **Show Profiles** > **Add**.
 3. In the **Profile Name** box, type a name for the profile, and then select **OK**.
-4. Input the email address for User B.
-5. When prompted, enter the credentials for User A.
+4. Enter the email address for User B.
+5. When you're prompted, enter the credentials for User A.
 
 ## Workarounds - Method 3
 
-Create a new Outlook profile for the shared User B mailbox, using User B’s account credentials to log in. To create a profile, follow these steps:
+> [!IMPORTANT]
+> Don't share your passwords with anyone. This workaround assumes User A is administering additional accounts or the shared mailbox.
+
+Create a new Outlook profile for the shared User B's mailbox, using User B’s account credentials to log in. To create a profile, follow these steps:
 
 1.	In Outlook, select **File** > **Account Settings** > **Manage Profiles**.
-2.	Select S**Show Profiles** > **Add**.
+2.	Select **Show Profiles** > **Add**.
 3.	In the **Profile Name** box, type a name for the profile, and then select **OK**.
-4.	Input the email address for User B.
-5.	When prompted, input the credentials for User B.
-
-**Important** Never share your passwords with anyone. This workaround assumes User A is administering additional accounts or the shared mailbox.
+4.	Enter the email address for User B.
+5.	When you're prompted, enter the credentials for User B.
