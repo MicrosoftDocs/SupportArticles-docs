@@ -120,7 +120,7 @@ By using this procedure, you manually create a VM that has the OS disk of the so
 1. In Azure portal, [take a snapshot of the encrypted OS disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) on the source (failed) VM.
 2. Create a [disk from that snapshot](troubleshoot-recovery-disks-portal-windows.md#create-a-disk-from-the-snapshot).
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/create-disk-from-snapshot.png" alt-text="A screenshot of the overview blade of a snapshot with the create disk option highlighted.":::
+    :::image type="content" source="media/unlock-encrypted-disk-offline/create-disk-from-snapshot.png" alt-text="Screenshot of the overview blade of a snapshot with the create disk option highlighted.":::
 
     For the new disk, choose the same location and availability zone that were assigned to the source VM. Note that you will also need to duplicate these same settings when you create the repair VM in the next step.
 
@@ -133,7 +133,8 @@ By using this procedure, you manually create a VM that has the OS disk of the so
     >Make sure that you add the disk during the VM creation. It is only during VM creation that encryption settings are detected. This enables a volume that contains the BEK to be added automatically.
 
 5. After the repair VM is created, sign in to the VM, and open Disk Management (*Diskmgmt.msc*). Within Disk Management, locate the BEK volume. By default, no drive letter is assigned to this volume.
-:::image type="content" source="media/unlock-encrypted-disk-offline/find-bek-volume.png" alt-text="Screenshot of disk management with bek volume highlighted":::
+
+    :::image type="content" source="media/unlock-encrypted-disk-offline/find-bek-volume.png" alt-text="Screenshot of disk management with bek volume highlighted":::
 
 6. To assign a drive letter to the BEK volume, right-click the BEK volume, and then select **Change Drive Letter and Paths**.
 
@@ -207,9 +208,9 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 1. Connect to the repair VM through RDP.
 2. On the repair VM, in Server Manager, Select **Local Server**, and then turn off **IE Enhanced Security Configuration** for Administrators.
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/ie-esc-off-admins.png" alt-text="A screenshot of the dialog box for internet explorer enhanced security configuration, with the setting turned off for administrators":::
+    :::image type="content" source="media/unlock-encrypted-disk-offline/ie-esc-off-admins.png" alt-text="Screenshot of the dialog box for internet explorer enhanced security configuration, with the setting turned off for administrators." border="false":::
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/ie-esc-off.png" alt-text="A screenshot of server manager showing the internet explorer enhanced security configuration turned off":::
+    :::image type="content" source="media/unlock-encrypted-disk-offline/ie-esc-off.png" alt-text="Screenshot of server manager showing the internet explorer enhanced security configuration turned off.":::
 
 3. On the repair VM, open an elevated PowerShell window.
 4. Set the HTTP APIs security protocol to TLS 1.2 for current session by entering the following command.
@@ -297,11 +298,11 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
     In the following example output, the BEK file name (secret name + the ".BEK" file extension) is *AB4FE364-4E51-4034-8E09-0087C3D51C18.BEK*. Record this value because it will be used in the next step. (If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the repair VM.)
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/show-wrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a wrapped bek.":::
+    :::image type="content" source="media/unlock-encrypted-disk-offline/show-wrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a wrapped bek." border="false":::
 
 11. If the **Content Type** value in the output is **Wrapped BEK**, as in the example above, go to [Download and unwrap the BEK](#download-and-unwrap-the-bek). If the **Content Type** value in the output is simply **BEK**, as in the following example, go to the next section to [download the BEK to the repair VM](#download-the-bek-to-the-repair-vm).
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/show-unwrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a content type of bek.":::
+    :::image type="content" source="media/unlock-encrypted-disk-offline/show-unwrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a content type of bek." border="false":::
 
 ### Download the BEK to the repair VM
 
@@ -335,7 +336,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
         To find this value in the Azure portal, navigate to the **Secrets** blade in your key vault. Select the BEK name that was determined in the previous step, [Retrieve the BEK file name](#retrieve-the-bek-file-name). Select the current version identifier, and then read the Secret Identifier URL below **Properties**. (You can copy this URL to the clipboard.)
 
-        :::image type="content" source="media/unlock-encrypted-disk-offline/secret-url.png" alt-text="Screenshot of the secret properties in Azure portal, with the secret identifier U R L highlighted.":::
+        :::image type="content" source="media/unlock-encrypted-disk-offline/secret-url.png" alt-text="Screenshot of the secret properties in Azure portal, with the secret identifier U R L.":::
 
     - **keyVaultResourceGroup**. The resource group of the key vault.
     - **kekUrl**. This is the URL of the key that's used to protect the BEK. A valid kek URL uses the following format:
@@ -356,7 +357,8 @@ If the script runs successfully, a new file will be created in the *C:\BEK* fold
 
 1. Navigate to the *C:\BEK* folder on your local computer and locate the new output file.
 2. Open the file in Notepad. If the script ran correctly, you will find the phrase **BitLocker Extension Key Protector** on the top line of the file if you scroll to the right.
-:::image type="content" source="media/unlock-encrypted-disk-offline/verify-script.png" alt-text="A screenshot of a text file open in notepad, with the words Bitlocker Extension Key Protector highlighted.":::
+
+    :::image type="content" source="media/unlock-encrypted-disk-offline/verify-script.png" alt-text="Screenshot of a text file open in notepad, with the words Bitlocker Extension Key Protector highlighted.":::
 
 ### Unlock the attached disk
 
@@ -401,11 +403,11 @@ You are now ready to unlock the encrypted disk.
 
 1. After you repair the disk, open the **Disks** blade for the repair VM in the Azure portal. Detach the copy of the source VM OS disk. To do this, locate the row for the associated disk name under **Data Disks**, select the "X" at the right side of that row, and then select **Save**.
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/detach-repaired-disk.png" alt-text="A screenshot of a data disk selected on the Disks blade in Azure portal, with the X symbol highlighted next to it.":::
+    :::image type="content" source="media/unlock-encrypted-disk-offline/detach-repaired-disk.png" alt-text="Screenshot of a data disk selected on the Disks blade in Azure portal, with the X symbol highlighted next to it.":::
 
 2. In the Azure portal, navigate to the source (broken) VM, and open the **Disks** blade. Then, select **Swap OS disk** to replace the existing OS disk with the one that you repaired.
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/swap-os-disk.png" alt-text="A screenshot of the Disks blade, with the Swap O S disk option highlighted.":::
+    :::image type="content" source="media/unlock-encrypted-disk-offline/swap-os-disk.png" alt-text="Screenshot of the Disks blade, with the Swap O S disk option highlighted.":::
 
 3. Select the new disk that you repaired, and then enter the name of the VM to verify the change. If you don't see the disk in the list, wait 10 to 15 minutes after you detach the disk from the troubleshooting VM.
 4. Select **OK**.

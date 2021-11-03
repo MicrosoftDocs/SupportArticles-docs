@@ -115,7 +115,7 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 
         In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder.
 
-        :::image type="content" source="media/windows-stop-error-hardware-malfunction/identifier.png" alt-text="Screenshot the output of listing the BCD store in a Generation 1 VM, which lists the identifier number under Windows Boot Loader.":::
+        :::image type="content" source="media/windows-stop-error-hardware-malfunction/identifier.png" alt-text="Screenshot shows the output of listing the BCD store in a Generation 1 VM, which lists the identifier number under Windows Boot Loader.":::
 
     2. For a Generation 2 VM, enter the following command and note the identifier listed:
 
