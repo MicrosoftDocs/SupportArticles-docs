@@ -26,7 +26,7 @@ You can use the following steps to troubleshoot high CPU usage issues in SQL Ser
 
 ## Step 1: Verify that SQL Server is using CPU
 
-You can use one of the following tools to check whether the sqlservr.exe process is running. Make sure that the [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode) time is close to the upper limit, not kernel times (which could be anti-virus or another drivers).
+You can use one of the following tools to check whether the sqlservr.exe process is running. Make sure that the [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode) time is close to the upper limit, not kernel times.
 
 - Task Manager
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
