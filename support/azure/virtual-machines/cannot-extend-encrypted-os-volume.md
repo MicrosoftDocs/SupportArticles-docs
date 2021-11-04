@@ -41,8 +41,8 @@ To fix this problem, you need to perform the following steps:
 ### Assign a larger disk SKU to the OS disk in the Azure portal
 
 1.    In the Azure portal, stop the VM whose OS disk you want to expand.
-2.    Navigate to the properties page for the OS disk. Take a snapshot to make a backup of the disk. 
-3.    On the properties page of the OS disk, click **Size + performance** on the left menu. 
+2.    Navigate to the properties page for the OS disk. Take a snapshot to make a backup of the disk.
+3.    On the properties page of the OS disk, click **Size + performance** on the left menu.
 4.    In the **Size + performance** window, choose a larger disk SKU that gives you enough storage for  your needs, and then click **Resize**.
 5.    Start the VM again.
 
