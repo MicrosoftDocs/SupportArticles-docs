@@ -128,9 +128,11 @@ Then, rerun the query of step 2 and check if SQL is still using high CPU. Check 
 
 ## Step 5: Investigate parameter sensitive issues
 
-Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high CPU issue is fixed.
+Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high CPU usage issue is fixed.
 
-If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-check-any-possible-queries-that-cause-the-issue). If the issue is fixed, the issue can be caused by the parameter sensitive issues (PSP or parameter sniffing issues). Then, you can use the following methods to mitigate the parameter sensitive issues. Each method has associated tradeoffs and drawbacks:
+If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-check-any-possible-queries-that-cause-the-issue).
+
+If the issue is fixed, it's an indication of parameter sensitive problem (PSP/parameter sniffing issue). To mitigate the parameter sensitive issues, you can use the following methods. Each method has associated tradeoffs and drawbacks:
 
 - Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. For workloads that require high throughput, the recompile option is usually not possible.
 
@@ -146,7 +148,7 @@ If the issue still exists, you can add a `RECOMPILE` query hint to each of the h
 
 ## Step 6: Disable heavy tracing
 
-Check [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that impacts SQL performance and causes high CPU. For example, the events are SQL Audit, events cause high XML plans, statement event level events, login/logout, locks, and waits.
+Check [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that impacts SQL performance and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, login/logout, locks, and waits.
 
 Run these queries to identify active XEvent or Server traces:
 
@@ -208,7 +210,7 @@ SELECT sess.name 'session_name', event_name FROM sys.dm_xe_sessions sess JOIN sy
 GO
 ```
 
-## Step 7: SOS_CACHESTORE spinlock contention
+## Step 7: Fix SOS_CACHESTORE spinlock contention
 
 If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often evicted on ad hoc query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high CPU condition is resolved with T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server configuration manager.
 
