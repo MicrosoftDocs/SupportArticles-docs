@@ -59,7 +59,7 @@ To fix the issue, follow these steps.
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-0xc0000098/4015973_en_1.png" alt-text="Screenshot of sample of the DIR command.":::
+    :::image type="content" source="media/boot-error-0xc0000098/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 
