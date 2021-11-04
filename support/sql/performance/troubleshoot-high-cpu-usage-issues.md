@@ -24,16 +24,19 @@ See the following possible causes of most high CPU usage issues:
 
 You can use the following steps to troubleshoot high CPU usage issues in SQL Server.
 
-## Step 1: Verify that SQL Server is using CPU
+## Step 1: Verify that SQL Server is causing high CPU
 
-You can use one of the following tools to check whether the sqlservr.exe process is running. Make sure that the [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode) time is close to the upper limit, not kernel times (which could be anti-virus or another drivers).
-
-- Task Manager
+You can use one of the following tools to check if SQL Server process is indeed contributing to high CPU
+- Task Manager (Under Process tab, check CPU value for *SQL Server Windows NT-64 Bit* is close to 100%)
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
+  - Counter: Process/%User Time, % Privileged Time
+  - Instance:sqlservr
+  > If you notice that % User Time is consistently above 90%, then it is a confirmation that SQL Server process is causing high CPU. But, if you notice that % Privileged time is consistently above 90% it is an indication that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administartor to analyze the root cause of this behavior.
+
 
 ## Step 2: Check any possible queries that cause the issue
 
-If the sqlservr.exe process is running, identify whether there are any queries that cause the high CPU usage issue by using the following query:
+If the sqlservr.exe process is indeed causing the high CPU, identify the queries that are contributing to high CPU by using the following query:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -65,9 +68,9 @@ ORDER BY r.cpu_time DESC
 
 ## Step 3: Update statistics
 
-After you identify the query with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables, which are involved in the queries returned by the query in step 2.
+After you identify the queries with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables, which are involved in these queries.
 
-Then, rerun the query of step 2 and check if SQL is still using high CPU. Check whether the query of highest CPU usage has changed. If the query has changed, follow the actions mentioned in steps 2 and 3 for the other CPU bound queries. If the query is still the same, then go to the next step.
+Then, if SQL is still using high CPU, then go to the next step.
 
 ## Step 4: Add potential missing indexes
 
