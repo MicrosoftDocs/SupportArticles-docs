@@ -23,7 +23,7 @@ appliesto:
 
 # ErrorMailRecipientNotFound error and no free/busy information
 
-An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed. You log in Outlook on the Web as the source mailbox, open Developer Tools by pressing F12, and select the **Network** tab to troubleshoot the free/busy issue, one of the following error messages is displayed with the ErrorMailRecipientNotFound error in the response body for the `GetUserAvailabilityInternal` action.
+An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed. Additionally, when you log in Outlook on the Web as the source mailbox, open Developer Tools by pressing F12 and select the **Network** tab, one of the following error messages is displayed with the ErrorMailRecipientNotFound error in the response body for the `GetUserAvailabilityInternal` action.
 
 ## Unable to resolve e-mail address to an Active Directory object
 
@@ -58,18 +58,16 @@ This error occurs because the organization relationship that is used to retrieve
 
 ### Resolution
 
-Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check the value of these parameters, and set these parameters correctly with the required values.
+Before you try the resolution, you can run the `Get-OrganizationRelationship` cmdlet to check the parameters value. If any value is incorrectly set, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters correctly with the required values.
 
-The following example creates an organization relationship with Fourth Coffee and specifies the connection settings to use. The following conditions apply:
+The following example modifies an organization relationship with the following conditions applied:
 
-- The organization relationship is established with the `domain fourthcoffee.com`.
-- The Exchange Web Services application URL is `mail.fourthcoffee.com`.
-- The Autodiscover URL is `https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity`.
-- Free/busy access is enabled.
-- Fourth Coffee sees free/busy information with the time.
+- The Autodiscover URL of Exchange Web Services is `https://contoso.com/autodiscover/autodiscover.svc/wssecurity`.
+- The target Uniform Resource Identifier (URI) is `mail.contoso.com`.
+- The URL of the target Exchange Web Services is: `https://outlook.office365.com/ews/Exchange.asmx`.
 
 ```powershell
-New-OrganizationRelationship -Name "Fourth Coffee" -DomainNames "fourthcoffee.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.fourthcoffee.com"
+Set-OrganizationRelationship -TargetAutodiscoverEpr "https://contoso.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.contoso.com" -TargetSharingEpr "https://outlook.office365.com/ews/Exchange.asmx"
 ```
 
-**Note**: On-premises Exchange organizations can run the Get-FederationInformation cmdlet with the domain name of the queried user to check these values across the routing domain.
+**Note**: On-premises Exchange organizations can run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check these values across the routing domain.
