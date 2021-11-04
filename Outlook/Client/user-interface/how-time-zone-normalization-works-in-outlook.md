@@ -64,15 +64,15 @@ Before we examine the details of how time zone normalization works in Outlook, i
 
     Computer time is the actual time that is displayed by Windows, as seen in the following screenshot of the notification area.
 
-    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/notification-area-in-windows.jpg" alt-text="Screenshot of the notification area" border="false":::
+    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/notification-area-in-windows.png" alt-text="Screenshot of the notification area in the task bar." border="false":::
 
     If you select this part of the Windows notification area, an enhanced calendar and clock are displayed.
 
-    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/enhanced-calendar-and-clock.jpg" alt-text="Screenshot that shows an enhanced calendar and clock" border="false":::
+    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/enhanced-calendar-and-clock.png" alt-text="Screenshot that shows an enhanced calendar and clock." border="false":::
 
     You can select Change date and time settings to examine the current time zone settings for your computer (Screenshot for this step is listed below).
 
-    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/date-and-time.jpg" alt-text="select Change date and time settings" border="false":::
+    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/date-and-time.png" alt-text="Screenshot of date and time settings dialog box." border="false":::
 
 ### How computer time is calculated
 
@@ -110,7 +110,7 @@ On the organizer's computer, Outlook sends the meeting request. The request cont
 
 After the meeting is created, the government mandates a new law according to which, in the Pacific Time Zone, DST starts on February 2, 2011, and ends on December 1, 2011. Because there are new time zone rules, and the appointment falls in the time period in which a new time zone rule is applied, normalization occurs (steps 2 and 3). This normalization is depicted in the following figure.
 
-:::image type="content" source="media/how-time-zone-normalization-works-in-outlook/normalization-figure.jpg" alt-text="Figure of the normalization":::
+:::image type="content" source="media/how-time-zone-normalization-works-in-outlook/normalization-figure.png" alt-text="Figure of the timeline of normalization.":::
 
 #### Step 2 - Attendee's Outlook determines intended local time
 
@@ -154,6 +154,6 @@ This equates to 10 A.M. Eastern Time, attendee's local computer time, and this i
 > [!NOTE]
 > One core issue is that if you do not select **Automatically adjust clock for Daylight Saving Time** on the attendee's computer, there can be a mismatch in the UTC offset (off by one hour) between the time zone rules in the Windows global time zone database and the Windows current time zone settings. To select **Automatically adjust clock for Daylight Saving Time**, select **Change time zone** in the **Date and Time** dialog box to display the **Time Zone Settings** dialog box (Screen shot for this step is listed below).
 
-:::image type="content" source="media/how-time-zone-normalization-works-in-outlook/select-the-automatically-adjust-clock-for-daylight-saving-time.jpg" alt-text="select Change date and time" border="false":::
+:::image type="content" source="media/how-time-zone-normalization-works-in-outlook/select-the-automatically-adjust-clock-for-daylight-saving-time.png" alt-text="Screenshot of the Time Zone Settings dialog box." border="false":::
 
 For more information about how to manage daylight saving time and time zone configurations and updates, see [Daylight Saving Time Help and Support Center](https://support.microsoft.com/help/22803/daylight-saving-time).
