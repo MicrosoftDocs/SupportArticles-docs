@@ -66,7 +66,7 @@ ORDER BY r.cpu_time DESC
 
 ## Step 3: Update statistics
 
-After you identify the query with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables which are involved in the queries returned by query in step 2.
+After you identify the query with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables, which are involved in the queries returned by query in step 2.
 
 Then, rerun the query of step 2 and check if SQL is still using high CPU. Check whether the query of highest CPU usage has changed. If the query has changed, follow the actions mentioned in step 2 and 3 for the other CPU bound queries. If the query is still the same, then go to the next step.
 
