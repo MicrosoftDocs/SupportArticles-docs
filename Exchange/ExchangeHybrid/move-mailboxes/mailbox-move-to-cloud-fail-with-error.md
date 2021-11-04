@@ -46,7 +46,8 @@ To resolve this issue, configure flood mitigation settings in Forefront TMG to i
 1. Open the Forefront TMG management console, and then, in the tree, click **Intrusion Prevention System**.
 2. Click the **Behavioral Intrusion Detection** tab, and then click **Configure Flood Mitigation Settings**.
 
-   ![Screen shot of Behavioral Intrusion Detection tab, highlighted Configure Flood Mitigation Settings ](./media/mailbox-move-to-cloud-fail-with-error/configure-flood-mitigation-settings.jpg)
+   :::image type="content" source="media/mailbox-move-to-cloud-fail-with-error/configure-flood-mitigation-settings.jpg" alt-text="Screenshot of the Behavioral Intrusion Detection tab, highlighted Configure Flood Mitigation Settings.":::
+
 3. In the **Flood Mitigation** dialog box, follow these steps:
    1. Click the **IP Exceptions** tab, and then type the IP addresses that the Office 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Office 365, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
    2. Click the **Flood Mitigation** tab, and then, next to **Maximum HTTP Requests per minute per IP address**, click **Edit**. In the **Custom limit** box, type a number to increase the limit.
