@@ -76,7 +76,7 @@ To determine what type of Office installation you have, start Outlook, and then 
 
 The MSI installer displays the following:
 
-:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/msi-install-info.png" alt-text="Screenshot of the Information window for MSI install."":::
+:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/msi-install-info.png" alt-text="Screenshot of the Information window for MSI install.":::
 
 The Click-To-Run installer displays the following (notice the **Update Options** button):
 
