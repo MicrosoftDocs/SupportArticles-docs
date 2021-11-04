@@ -5,7 +5,6 @@ ms.date: 11/05/2021
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
 ms.prod: sql
-ms.technology: sql-engine-performance
 author: cobibi
 ms.author: v-yunhya
 ---
