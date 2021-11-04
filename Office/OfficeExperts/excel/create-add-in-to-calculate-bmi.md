@@ -81,7 +81,7 @@ Until this step, we have finished creating a custom function that is saved in Ex
 
 4. On the Add-Insdialog box, find the Add-In that we want installed to (in this case is BMI calculation), make sure the BMI calculation checkbox is unchecked. Then click OK.
 
-    :::image type="content" source="media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation.png" alt-text="Screenshot shows steps to uncheck the B M I calculation option in the Excel Options.":::
+    :::image type="content" source="media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation.png" alt-text="Screenshot shows steps to uncheck the B M I calculation option in the Excel Options dialog box.":::
 
     :::image type="content" source="media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation-in-developer-tab.png" alt-text="Screenshot shows steps to uncheck the B M I calculation option in the Developer tab.":::
 
