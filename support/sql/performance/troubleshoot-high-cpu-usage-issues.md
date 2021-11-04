@@ -11,7 +11,7 @@ ms.author: v-yunhya
 
 # Troubleshoot high CPU usage issues in SQL Server
 
-This article provides step-by-step procedure to help fix high CPU usage issues for a server that is running SQL Server.
+This article provides step-by-step procedures to help fix high CPU usage issues for a server that is running SQL Server.
 
 See the following possible causes of most high CPU usage issues:
 
@@ -26,7 +26,7 @@ You can use the following steps to troubleshoot high CPU usage issues in SQL Ser
 
 ## Step 1: Verify that SQL Server is using CPU
 
-You can use one of the following tools to check whether the sqlservr.exe process is running. Make sure that the [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode) time is close to upper limit, not kernel times (which could be anti-virus or another drivers).
+You can use one of the following tools to check whether the sqlservr.exe process is running. Make sure that the [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode) time is close to the upper limit, not kernel times (which could be anti-virus or another drivers).
 
 - Task Manager
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
@@ -65,9 +65,9 @@ ORDER BY r.cpu_time DESC
 
 ## Step 3: Update statistics
 
-After you identify the query with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables, which are involved in the queries returned by query in step 2.
+After you identify the query with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables, which are involved in the queries returned by the query in step 2.
 
-Then, rerun the query of step 2 and check if SQL is still using high CPU. Check whether the query of highest CPU usage has changed. If the query has changed, follow the actions mentioned in step 2 and 3 for the other CPU bound queries. If the query is still the same, then go to the next step.
+Then, rerun the query of step 2 and check if SQL is still using high CPU. Check whether the query of highest CPU usage has changed. If the query has changed, follow the actions mentioned in steps 2 and 3 for the other CPU bound queries. If the query is still the same, then go to the next step.
 
 ## Step 4: Add potential missing indexes
 
@@ -128,7 +128,7 @@ Then, rerun the query of step 2 and check if SQL is still using high CPU. Check 
 
 ## Step 5: Investigate parameter sensitive issues
 
-Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high CPU issue is fixed. If it's fixed, you may deal with a PSP problem (such as "parameter sniffing" or "atypical parameter" issues).
+Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high CPU issue is fixed.
 
 If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-check-any-possible-queries-that-cause-the-issue). If the issue is fixed, the issue can be caused by the parameter sensitive issues (PSP or parameter sniffing issues). Then, you can use the following methods to mitigate the parameter sensitive issues. Each method has associated tradeoffs and drawbacks:
 
@@ -146,7 +146,7 @@ If the issue still exists, you can add a `RECOMPILE` query hint to each of the h
 
 ## Step 6: Disable heavy tracing
 
-Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that impacts SQL performance and causes high CPU. For example, the events are SQL Audit, events cause high XML plans, statement event level events, login/logout, locks, and waits.
+Check [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that impacts SQL performance and causes high CPU. For example, the events are SQL Audit, events cause high XML plans, statement event level events, login/logout, locks, and waits.
 
 Run these queries to identify active XEvent or Server traces:
 
@@ -220,7 +220,7 @@ If you are using a virtual machine, ensure that you aren't overprovisioning CPUs
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the workload reaches high CPU levels together, you should consider scaling up your computer by adding more CPUs.
+If individual query instances are using little CPU, but the workload of them reaches a high CPU level, you should consider scaling up your computer by adding more CPUs.
 
 ## See also
 
