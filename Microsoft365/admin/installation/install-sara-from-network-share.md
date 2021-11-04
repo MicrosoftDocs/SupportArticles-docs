@@ -24,6 +24,10 @@ search.appverid: MET150
 
 If you want to install and start Microsoft Support and Recovery Assistant (SaRA) from a shared location on a network instead of the default internet location, don't use the download link in the [About the Microsoft Support and Recovery Assistant](https://support.office.com/article/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) article. Instead, follow these steps.
 
+> [!Note] </b>
+            Microsoft Support and Recovery Assistant scenarios can now be run using a command-line version. If you are an enterprise customer, please go to <a href="https://docs.microsoft.com/office365/troubleshoot/administration/sara-command-line-version" target="_blank" class="ocpExternalLink">Command-line version of the Microsoft Support and Recovery Assistant</a> for more information.</p>
+  </div>
+
 ## Installing SaRA
 
 1. Download SaRA by using the following link:  
