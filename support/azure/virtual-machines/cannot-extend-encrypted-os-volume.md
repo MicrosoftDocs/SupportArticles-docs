@@ -1,7 +1,7 @@
 ---
-author: jc-mackin
+author: genlin
 description: This article helps you troubleshoot a problem in which you are unable to extend the OS volume on an Azure VM that has been encrypted with Azure Disk Encryption.
-ms.author: v-jcmackin
+ms.author: genli
 ms.date: 05/07/2021
 ms.service: virtual-machines
 ms.collection: windows

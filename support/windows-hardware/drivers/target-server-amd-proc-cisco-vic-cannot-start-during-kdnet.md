@@ -12,7 +12,6 @@ localization_priority: medium
 ms.reviewer: kaushika
 keywords: amd processor, cisco VIC
 ms.prod-support-area-path: Kerberos authentication
-
 ---
 # Target server that has AMD processor and CISCO VIC cannot start if KDNET debugging is enabled
 

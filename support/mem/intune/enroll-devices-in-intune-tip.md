@@ -7,8 +7,8 @@ ms.reviewer: sausarka
 author: v-tappelgate
 ms.author: v-tappelgate
 ms.custom: 
-- CI 121335
-- CSSTroubleshooting
+  - CI 121335
+  - CSSTroubleshooting
 ---
 
 # Support Tip &ndash; Comparison of methods for enrolling a Windows device in Intune

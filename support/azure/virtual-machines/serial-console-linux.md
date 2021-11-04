@@ -3,7 +3,7 @@ title: Azure Serial Console for Linux | Microsoft Docs
 description: Bi-Directional Serial Console for Azure Virtual Machines and Virtual Machine Scale Sets using a Linux example.
 services: virtual-machines
 documentationcenter: ''
-author: asinn826
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
 ms.date: 5/1/2019
-ms.author: alsin
+ms.author: genli
 ---
 
 # Azure Serial Console for Linux
