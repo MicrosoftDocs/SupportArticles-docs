@@ -3,7 +3,7 @@ title: Troubleshoot Windows stop error – directory service initialization fail
 description: Resolve issues where an Active Directory domain controller virtual machine (VM) in Azure is stuck in a loop stating it needs to restart.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 05/05/2020
-ms.author: v-miegge
+ms.author: genli
 ---
 
 # Troubleshoot Windows stop error – directory service initialization failure
