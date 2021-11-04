@@ -369,6 +369,8 @@
       href: performance/schemamgr-store-degrades-performance.md
     - name: Troubleshoot blocking caused by compile locks
       href: performance/troubleshoot-blocking-caused-compile-locks.md
+    - name: Troubleshoot high CPU usage issues
+      href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
     - name: Troubleshoot query time-out errors
