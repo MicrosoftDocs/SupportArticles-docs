@@ -59,7 +59,7 @@ Microsoft Office 2013 shows the following screens when an application is started
 1. Copy the ADMX files to %systemroot%\PolicyDefinitions, and then copy the ADML files to the language specific folder (such as en-us) under %systemroot%\PolicyDefinitions.
 1. In Group Policy Management Editor, locate **User Configuration** > **Policies** > **Administrative Templates: Policy definitions** > **Microsoft Office 2013** > **First Run**.
 
-   :::image type="content" source="media/manage-office-2013-first-run-screens/first-run-policy.png" alt-text="Screenshot to locate First Run in Group Policy Management Editor." border="false":::
+   :::image type="content" source="media/manage-office-2013-first-run-screens/first-run-policy.png" alt-text="Screenshot to locate First Run in the Group Policy Management Editor window." border="false":::
 
 1. Set both **Disable First Run Movie** and **Disable Office First Run on application boot** to **Enabled**.
 

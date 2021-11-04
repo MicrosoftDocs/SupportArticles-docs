@@ -30,7 +30,7 @@ Microsoft Office 365 updates are designed to be very network bandwidth friendly.
 
    And only include the "OfficeClicktoRun.exe" process name. Your filter should resemble the following:
 
-   :::image type="content" source="media/how-big-was-this-months-office-proplus-update/process-monitor-filter.png" alt-text="Screenshot shows filter in Process Monitor including the OfficeClicktoRun.exe process." border="false":::
+   :::image type="content" source="media/how-big-was-this-months-office-proplus-update/process-monitor-filter.png" alt-text="Screenshot shows the filter in Process Monitor including the OfficeClicktoRun.exe process." border="false":::
 1. Start Process Monitor, and then start the manual update process by clicking Update Now in the File > Account menu of any Office Click-to-Run app. You see the updates downloading and data filling in the Procmon log.
 
    :::image type="content" source="media/how-big-was-this-months-office-proplus-update/updating-page.png" alt-text="Screenshot to select the Update now option in the Account menu." border="false":::
