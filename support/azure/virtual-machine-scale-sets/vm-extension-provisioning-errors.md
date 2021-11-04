@@ -2,13 +2,12 @@
 title: VM extension provisioning errors in Virtual Machine Scale Sets
 description: Steps to resolve VM extension provisioning errors in a Virtual Machine Scale Set.
 ms.date: 07/16/2021
-author: jc-mackin
-ms.author: v-jcmackin
+author: genlin
+ms.author: genli
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: azure
-
 ---
 
 # VM extension provisioning errors in Virtual Machine Scale Sets

@@ -7,7 +7,7 @@ ms.date: 10/21/2021
 author: simonxjx
 ms.author: v-six
 ---
-# Custom pages and SDK script don't load for Power Apps
+# Custom pages and client SDK script don't load for Power Apps
 
 _Applies to:_ &nbsp; Power Apps
 

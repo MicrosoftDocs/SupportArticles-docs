@@ -2,8 +2,8 @@
 title: How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
 description: Discusses how to implement S4U2Proxy and Constrained Delegation on a custom service account or the NetworkServices account for Web Enrollment proxy pages.
 ms.date: 12/3/2020
-author: Teresa-Motiv
-ms.author: v-tea
+author: v-tappelgate
+ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
