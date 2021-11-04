@@ -121,7 +121,7 @@ To fix the issue, try the one of following resolutions:
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-code-0xc000000f/4015973_en_1.png" alt-text="Screenshot of Sample of the DIR command.":::
+    :::image type="content" source="media/boot-error-code-0xc000000f/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 

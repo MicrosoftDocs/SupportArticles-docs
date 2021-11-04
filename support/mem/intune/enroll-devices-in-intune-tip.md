@@ -4,11 +4,11 @@ description: Brief overview and comparison of the methods that you can use to en
 ms.date: 09/08/2020
 ms.prod-support-area-path: intune
 ms.reviewer: sausarka
-author: Teresa-Motiv
-ms.author: v-tea
+author: v-tappelgate
+ms.author: v-tappelgate
 ms.custom: 
-- CI 121335
-- CSSTroubleshooting
+  - CI 121335
+  - CSSTroubleshooting
 ---
 
 # Support Tip &ndash; Comparison of methods for enrolling a Windows device in Intune

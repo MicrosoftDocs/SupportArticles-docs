@@ -1,9 +1,9 @@
 ---
-author: jc-mackin
+author: genlin
 description: This article describes how to unlock an encrypted disk attached to a repair VM.
-ms.author: v-jcmackin
+ms.author: genli
 ms.date: 07/16/2021
-ms.service: virtual-machines 
+ms.service: virtual-machines
 ms.topic: troubleshooting
 title: Unlocking an encrypted disk for offline repair
 ---
