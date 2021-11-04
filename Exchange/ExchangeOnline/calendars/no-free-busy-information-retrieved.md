@@ -23,50 +23,53 @@ appliesto:
 
 # ErrorMailRecipientNotFound error and no free/busy information
 
-## Symptoms
+An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed. You log in Outlook on the Web as the source mailbox, open Developer Tools by pressing F12, and select the **Network** tab to troubleshoot the free/busy issue, one of the following error messages is displayed with the ErrorMailRecipientNotFound error in the response body for the `GetUserAvailabilityInternal` action.
 
-An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed, and one of the following error messages is displayed with the ErrorMailRecipientNotFound error in the `GetUserAvailabilityInternal` action log:
+## Unable to resolve e-mail address to an Active Directory object
 
-**Error message 1**:
+> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
-> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@nootherforest.com` to an Active Directory object.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
+### Cause
 
-**Error message 2**:
+This error occurs if one of the following scenarios is true:
 
-> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.\r\n. Name of the server where exception originated: \<Host name of cloud server\>.
+- The domain name isn't included in the domain name list of the organization relationship.
 
-**Error message 3**:
+- The domain name is included in the domain name list of the organization relationship, but the free/busy access isn't enabled. (This scenario occurs in cloud server only environment.)
+
+### Resolution
+
+Before you try the resolution, you can run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check if the domain name is included in the domain name list of the organization relationship.
+
+- If the domain name isn't included, use the Exchange admin center or Exchange Online PowerShell to [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship), or [modify the existing organization relationship](/exchange/sharing/organization-relationships/modify-an-organization-relationship) to include that domain.
+
+- If the domain name is included, set the value of the `FreeBusyAccessEnabled` parameter to `$true` to enable the free/busy access.
+
+## The organization relationship can't be used
 
 > The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
-## Cause
+### Cause
 
-Here are the causes that correspond to the error messages:
-
-**Cause 1**: Free/busy information is retrieved from a non-resolvable email address where the domain name isn't included in the domain name list of the organization relationship.
-
-**Cause 2**: Free/busy information is retrieved from a non-resolvable email address where the domain name is included in the domain name list of the organization relationship, and the value of the `FreeBusyAccessEnabled` parameter is set to `$false`. (This scenario occurs in cloud server only environment.)
-
-**Cause 3**: Organization relationship that is used to retrieve free/busy information has no value set, or the value isn't set correctly for the following parameters:
+This error occurs because the organization relationship that is used to retrieve free/busy information has no value set, or the value isn't set correctly for the following parameters:
 
 - `TargetApplicationUri`
-- Both `TargetAutodiscoverEpr` and `TargetSharingEpr` (at least one of these two values must exist)
+- `TargetAutodiscoverEpr` and `TargetSharingEpr` (at least one of these two values must exist)
 
-## Resolution
+### Resolution
 
-Before you try the resolutions, you can run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the domain name list of the organization relationship. See the following cmdlet output as an example:
+Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check the value of these parameters, and set these parameters correctly with the required values.
 
-:::image type="content" source="media/no-freebusy-information-retrieved/domainnames-ouput.png" alt-text="Screenshot for cmdlet output as an example.":::
+The following example creates an organization relationship with Fourth Coffee and specifies the connection settings to use. The following conditions apply:
 
-To fix this issue, check the following resolutions that correspond to the causes.
+- The organization relationship is established with the `domain fourthcoffee.com`.
+- The Exchange Web Services application URL is `mail.fourthcoffee.com`.
+- The Autodiscover URL is `https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity`.
+- Free/busy access is enabled.
+- Fourth Coffee sees free/busy information with the time.
 
-**Resolution 1**: If the domain name (for example, nootherforest) isn't included in the domain name list of the organization relationship when the recipient email address is valid, [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship#use-exchange-online-powershell-to-create-an-organization-relationship), or modify the existing organization relationship to include that domain.
+```powershell
+New-OrganizationRelationship -Name "Fourth Coffee" -DomainNames "fourthcoffee.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.fourthcoffee.com"
+```
 
-**Resolution 2**: If the domain name (for example, northamerica.contoso) is included in the domain name list of the organization relationship when the recipient email address is valid, ensure that the organization relationship that is used sets the value of the `FreeBusyAccessEnabled` parameter to `$true`.
-
-**Resolution 3**: Ensure that the following parameters are set correctly with the required values:
-
-- `TargetApplicationUri`
-- `TargetAutodiscoverEpr` or `TargetSharingEpr` (at least one of these two values must exist)
-
-**Note**: On-premises Exchange organizations can run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check these values across the routing domain.
+**Note**: On-premises Exchange organizations can run the Get-FederationInformation cmdlet with the domain name of the queried user to check these values across the routing domain.
