@@ -36,7 +36,7 @@ You receive one of the following error messages when you try to activate Microso
 
 > Sorry, we are having some temporary server issues.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/temp-server-issues.png" alt-text="Screenshot of the error message, showing we're having some temporary server issues.":::
+:::image type="content" source="media/errors-activating-on-older-windows/temp-server-issues.png" alt-text="Screenshot of the error message, showing we're having some temporary server issues.":::
 
 ## Cause
 
