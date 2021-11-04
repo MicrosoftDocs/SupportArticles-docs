@@ -151,7 +151,7 @@ To fix this problem, you need to perform the following steps:
 
 2.    Finally, extend the C drive as needed with the unallocated space that is now adjacent.
 
-        :::image type="content" source="media/cannot-extend-encrypted-os-volume/extend-volume-available.png" alt-text="Screenshot of of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
+        :::image type="content" source="media/cannot-extend-encrypted-os-volume/extend-volume-available.png" alt-text="Screenshot of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
 
 ## More information
 
