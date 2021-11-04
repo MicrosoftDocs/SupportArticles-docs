@@ -34,7 +34,8 @@ To determine whether the workbook currently has a Power Query data connection or
 
 In Excel 2016, the connection may be created by using the **Get & Transform** or **Get Data** feature. This may use the **Microsoft.Mashup.OleDb.1** provider, for example, when combining data from multiple sources.
 
-![the connection properties dialog box](./media/call-to-excel-services-failed/connection-properties.png)
+:::image type="content" source="media/call-to-excel-services-failed/connection-properties-provider.png" alt-text="Screenshot of Connection Properties dialog box. Under the Definition tab, check if the provider is Microsoft.Mashup.OleDb.1." border="false":::
+
 
 ## More information
 
