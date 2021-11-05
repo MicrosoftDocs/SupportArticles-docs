@@ -32,7 +32,7 @@ When you try to View Reports on Microsoft BitLocker Administration and Monitorin
 >
 > Requested URL: /reports/Pages/ReportViewer.aspx
 
-![MBAM reports error](./media/server-error-click-reports-tab-mbam/mbam-reports-error.png)
+:::image type="content" source="./media/server-error-click-reports-tab-mbam/mbam-reports-error.png" alt-text="Screenshot of the BitLocker Administration and Monitoring window which shows the error message.":::
 
 ## Cause
 
@@ -59,7 +59,7 @@ If the DNS isn't able to resolve the local host correctly, you'll see the error 
 
     Now you can view the Reports in MBAM.
 
-    ![MBAM reports](./media/server-error-click-reports-tab-mbam/mbam-reports.png)
+    :::image type="content" source="./media/server-error-click-reports-tab-mbam/mbam-reports.png" alt-text="Screenshot of the BitLocker Administration and Monitoring window which has the Reports option selected on the left pane.":::
 
 ## More information
 

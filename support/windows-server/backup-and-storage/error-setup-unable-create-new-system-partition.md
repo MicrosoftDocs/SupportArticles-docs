@@ -34,7 +34,7 @@ Windows Server 2012 and Windows Server 2008 R2:
 
 > "Setup was unable to create a new system partition or locate an existing system partition. See the Setup log files for more information."
 
-:::image type="content" source="./media/error-setup-unable-create-new-system-partition/install-windows.jpg" alt-text="Select Disk.":::
+:::image type="content" source="./media/error-setup-unable-create-new-system-partition/install-windows.png" alt-text="Screenshot of the error message which shows at the bottom of the Install Windows window.":::
 
 Windows Server 2008:
 

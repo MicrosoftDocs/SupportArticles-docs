@@ -28,8 +28,8 @@ In some places in the Windows UI, you see Windows account security identifiers (
 - Security Audit reports
 - The access control list (ACL) editor in Registry Editor, as shown in the following examples:
 
-    ![A capability SID, visible in the ACL editor, does not resolve to a friendly name](./media/sids-not-resolve-into-friendly-names/permissions-for-classes.png)
-    ![A capability SID that appears on the Advanced ACL editor does not resolve to a friendly name](./media/sids-not-resolve-into-friendly-names/advanced-security-settings-for-classes.png)
+    :::image type="content" source="./media/sids-not-resolve-into-friendly-names/permissions-for-classes.png" alt-text="Screenshot of the Permissions for Classes window which shows that the SID dose not resolve to a friendly name.":::
+    :::image type="content" source="./media/sids-not-resolve-into-friendly-names/advanced-security-settings-for-classes.png" alt-text="Screenshot of the Advanced Security Settings for Classes window which shows that the SID dose not resolve to a friendly name.":::
 
 ## Cause
 
