@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot high CPU usage issues
-description: Provides step-by-step procedure to help fix high CPU usage issues for a server that is running SQL Server.
+description: Provides a procedure to help you fix high-CPU-usage issues for a server that is running SQL Server.
 ms.date: 11/05/2021
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
@@ -8,36 +8,36 @@ ms.prod: sql
 author: cobibi 
 ms.author: v-yunhya
 ---
-# Troubleshoot high CPU usage issues in SQL Server
+# Troubleshoot high-CPU-usage issues in SQL Server
 
 _Applies to:_ &nbsp; SQL Server
 
-This article provides step-by-step procedure to diagnose and fix high CPU usage issues on a computer that is running SQL Server.
+This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server.
 
-Although there is a large number of causes that can lead to high CPU coming from SQL Server, the following are the most common causes :
+Although there are many possible causes of high CPU that occuir in SQL Server, the following are the most common:
 
-- High logical reads that are caused by table or index scans because of:
+- High logical reads that are caused by table or index scans because of the following:
   - Out-of-date statistics
   - Missing indexes
   - [Parameter sensitive plan (PSP) issues](/azure/azure-sql/identify-query-performance-issues)
   - Poorly designed queries
-- Increase in workload
+- Increases in workload
 
-You can use the following steps to troubleshoot high CPU usage issues in SQL Server.
+You can use the following steps to troubleshoot high-CPU-usage issues in SQL Server.
 
 ## Step 1: Verify that SQL Server is causing high CPU
 
-You can use one of the following tools to check if SQL Server process is indeed contributing to high CPU:
+Use one of the following tools to check whether the SQL Server process is actually contributing to high CPU:
 
-- Task Manager (Under Process tab, check CPU value for *SQL Server Windows NT-64 Bit* is close to 100%)
+- Task Manager (On the **Process** tab, check whether the CPU value for **SQL Server Windows NT-64 Bit** is close to 100 percent)
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
   - Counter: Process/%User Time, % Privileged Time
-  - Instance:sqlservr
-  > If you notice that % User Time is consistently above 90%, then it is a confirmation that SQL Server process is causing high CPU. But, if you notice that % Privileged time is consistently above 90% it is an indication that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administartor to analyze the root cause of this behavior.
+  - Instance: sqlservr
+  > If you notice that **% User Time** is consistently greater than 90 percent, this would confir that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the sqlservr.exe process is indeed causing the high CPU, identify the queries that are contributing to high CPU by using the following query:
+If the Sqlservr.exe process is causing the high CPU, identify the queries that are responsible for this by using the following query:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -69,13 +69,13 @@ ORDER BY r.cpu_time DESC
 
 ## Step 3: Update statistics
 
-After you identify the queries with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables, which are involved in these queries.
+After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries.
 
-Then, if SQL is still using high CPU, proceed to the next step.
+If SQL Server is still using high CPU, go to the next step.
 
-## Step 4: Add potential missing indexes
+## Step 4: Add potentially missing indexes
 
-1. Use the following query to get the estimated execution plan of the highest CPU bound query.
+1. Use the following query to get the estimated execution plan of the highest CPU-bound query.
 
     ```sql
     -- Captures the Total CPU time spent by a query along with the plan handle
@@ -98,8 +98,8 @@ Then, if SQL is still using high CPU, proceed to the next step.
     FROM sys.dm_exec_query_plan (plan_handle)
     ```
 
-1. Review the execution plan and tune the query by implementing the required changes.
-1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measures.
+1. Review the execution plan, and tune the query by implementing the required changes.
+1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes that have high improvement measurements.
 
     ```sql
     SELECT CONVERT (VARCHAR(30),
@@ -128,31 +128,33 @@ Then, if SQL is still using high CPU, proceed to the next step.
     ORDER BY migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans) DESC
     ```
 
-## Step 5: Investigate parameter sensitive issues
+## Step 5: Investigate parameter-sensitive issues
 
 Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high CPU usage issue is fixed.
 
 If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
-If the issue is fixed, it's an indication of parameter sensitive problem (PSP/parameter sniffing issue). To mitigate the parameter sensitive issues, you can use the following methods. Each method has associated tradeoffs and drawbacks:
+If the issue is fixed, it's an indication of parameter-sensitive problem (PSP/parameter sniffing issue). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. For workloads that require high throughput, the recompile option is usually not possible.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. 
+
+**Note:** For workloads that require high throughput, the recompile option is usually not possible.
 
 - Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics.
 
-- Use the [option (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with density vector average. You can also do this by capturing the incoming parameter values in local variables and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
+- Use the [option (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
 
 - Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing entirely.
 
-- Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the good enough common plan is the one in cache already. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
+- Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the "good enough" common plan is the one that's already in cache. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
 
 - Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed.
 
 ## Step 6: Disable heavy tracing
 
-Check [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that impacts SQL performance and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, login/logout, locks, and waits.
+Check [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects SQL Server performance and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
 
-Run these queries to identify active XEvent or Server traces:
+Run the following queries to identify active XEvent or Server traces:
 
 ```sql
 PRINT '--Profiler trace summary--'
@@ -223,20 +225,20 @@ GO
 
 ## Step 7: Fix SOS_CACHESTORE spinlock contention
 
-If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often evicted on ad hoc query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high CPU condition is resolved with T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server configuration manager.
+If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often evicted on ad hoc query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
 [FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68)
 
 ## Step 8: Configure your virtual machine
 
-If you are using a virtual machine, ensure that you aren't overprovisioning CPUs and that they are configured properly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
+If you are using a virtual machine, make sure that you aren't overprovisioning CPUs and that they are configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the workload of them reaches a high CPU level, you should consider scaling up your computer by adding more CPUs.
+If individual query instances are using little CPU, but their workload reaches a high CPU level, consider scaling up your computer by adding more CPUs.
 
 ## See also
 
 - [High CPU usage occurs in your queries](high-cpu-use-occurs-queries.md)
-- [Updates and configuration for workloads](recommended-updates-configuration-options.md) (SQL Server 2012 and SQL Server 2014 versions)
+- [Updates and configuration for workloads](recommended-updates-configuration-options.md) (SQL Server 2014 and SQL Server 2012 versions)
 - [Recommended updates and configuration options for SQL Server 2016 and later versions with high-performance workloads](recommended-updates-configuration-workloads.md)
