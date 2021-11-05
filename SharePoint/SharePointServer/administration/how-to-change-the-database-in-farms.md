@@ -74,7 +74,7 @@ Get-SPDatabase | Select Name,Server
 
 You should receive a result that's similar to the following example:
 
-![DB output](./media/how-to-change-the-database-server-in-farms/db-output.png)
+:::image type="content" source="media/how-to-change-the-database-server-in-farms/db-output.png" alt-text="Screenshot of database output after running the relevant PowerShell cmdlet in an elevated SharePoint Management Shell window." border="false":::
 
 ### Step 3: Point the default database instance for the web applications to the new SQL Server instance  
 
@@ -107,7 +107,7 @@ $webapps = Get-SPWebApplication -IncludeCentralAdministration
 
 You should receive a result that resembles the following example:
 
-![DB instance output](./media/how-to-change-the-database-server-in-farms/db-instance-output.png)   
+:::image type="content" source="media/how-to-change-the-database-server-in-farms/db-instance-output.png" alt-text="Screenshot of database instance output after running the relevant PowerShell cmdlet in an elevated SharePoint Management Shell window." border="false":::   
 
 ### Step 4: Change the Distributed Cache cluster configuration  
 
@@ -164,7 +164,7 @@ To do this, follow these steps:
 
    When the service is stopped, you should receive a result that's similar to the following example:  
 
-   ![cache host output](./media/how-to-change-the-database-server-in-farms/cache-host-output.png)   
+   :::image type="content" source="media/how-to-change-the-database-server-in-farms/cache-host-output.png" alt-text="Screenshot of cache host output after the service is stopped by running the relevant PowerShell cmdlet in an elevated PowerShell prompt." border="false":::   
 
 3. Remove the local server from the Distributed Cache cluster by running the following PowerShell cmdlet:  
 
@@ -180,7 +180,7 @@ To do this, follow these steps:
 
 5. Open Registry Editor, and then verify that the **ConnectionString** value of the HKLM\SOFTWARE\Microsoft\AppFabric\V1.0\Configuration key is updated. Here is an example:  
 
-   ![registry](./media/how-to-change-the-database-server-in-farms/registry.png)   
+   :::image type="content" source="media/how-to-change-the-database-server-in-farms/registry-editor-connectionstring.png" alt-text="Screenshot of Registry Editor, verifying that the ConnectionString value of the HKLM\SOFTWARE\Microsoft\AppFabric\V1.0\Configuration key is updated." border="false":::   
 
 6. Repeat step 1 to 5 on each of the other servers in the Distributed Cache cluster.      
 
@@ -203,7 +203,7 @@ Get-SPServer
 
 You should receive a result that resembles the following example:   
 
-![server output](./media/how-to-change-the-database-server-in-farms/server-output.png)    
+:::image type="content" source="media/how-to-change-the-database-server-in-farms/server-output.png" alt-text="Screenshot of server output after running the relevant cmdlet to verify that the database server is successfully changed." border="false":::    
 
 ## More Information  
 
