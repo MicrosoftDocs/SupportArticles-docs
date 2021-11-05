@@ -29,7 +29,7 @@ Two new security options are now included in the Excel Trust Center in Office 36
 
 These new options are intended to help protect users from attackers who use Dynamic Data Exchange (DDE) to spread malware.
 
- ![Two options under Security Settings for Dynamic Data Exchange in Trust Center](./media/security-settings/options-to-protect-users.png)
+ :::image type="content" source="media/security-settings/options-to-protect-users.png" alt-text="Screenshot shows two options under the Security Settings for Dynamic Data Exchange heading.":::
 
 ## More Information
 

@@ -22,7 +22,7 @@ ms.reviewer:
 
 The equation that is displayed for a trendline on an XY Scatter chart in Microsoft Excel is incorrect. Microsoft Excel plots the incorrect trendline when you manually substitute values for the “x” variable.
 
-:::image type="content" source="./media/inaccurate-chart-trendline-formula/format-trendline.png" alt-text="Screenshot of Trendline Options on the Format Trendline page.":::
+:::image type="content" source="./media/inaccurate-chart-trendline-formula/format-trendline.png" alt-text="Screenshot of Trendline Options on the Format Trendline window.":::
 
 - **Trendline equation** is a formula that finds a line that best fits the data points.
 - **R-squared value** measures the trendline reliability - the nearer R2 is to 1, the better the trendline fits the data.

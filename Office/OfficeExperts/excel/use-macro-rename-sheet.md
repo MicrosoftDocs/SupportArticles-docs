@@ -29,7 +29,7 @@ This article was written by [Raddini Rahayu](https://mvp.microsoft.com/en-US/mvp
 
 Here are weekly sales activity reports. In example, there are 15 people in this case. Nancy, the admin reports, she is assigned summarizing each sales data into one file where all sales are separated on each sheet. For easily arranging data, each sheet she gave the name matches the sales name on that sheet. At first, Nancy feels comfortable with this, but as more data and demands rapid processing, she was so overwhelmed. To overcome this, Nancy wants to the name sheets changed automatically according to the sales name on each sheet without manually rename it.
 
-![users' error ](./media/use-macro-rename-sheet/error.png)
+:::image type="content" source="./media/use-macro-rename-sheet/weekly-sales-activity-reports.png" alt-text="Screenshot of the weekly sales activity reports.":::
 
 ## Solutions
 
@@ -42,7 +42,7 @@ The best solutions to overcome the Nancy's problem is by using macro. This macro
 - Designing report formats and specify the cell location where the sales name will be placed. In this case, the location is at cell J2. This report format should be the same on each sheet.
 - Keep the sheet names on the default name (Sheet1, Sheet2, Sheet3, etc).
 
-    ![first step](./media/use-macro-rename-sheet/first-step.png)
+    :::image type="content" source="media/use-macro-rename-sheet/sheet-names.png" alt-text="Screenshot to keep the sheet names on the default name.":::
 
 ### Last Step
 
@@ -52,7 +52,7 @@ After we know the cell location where the sales name will be placed, now we can 
 
 1. On the Developer tab, select Visual Basic in Code category, or press key combination Alt+F11 on the keyboard, so Visual Basic window is displayed.
 
-    ![visual basic window appears](./media/use-macro-rename-sheet/vb-window.png)
+    :::image type="content" source="media/use-macro-rename-sheet/visual-basic.png" alt-text="Screenshot to select Visual Basic in the Code category on the Developer tab.":::
 
 2. On the project task pane click Sales Report.xlsx(Workbook Name), then on Insert menu select Module and write the following script:
 
@@ -68,11 +68,11 @@ After we know the cell location where the sales name will be placed, now we can 
     End Sub
     ```
 
-     ![write script](./media/use-macro-rename-sheet/write-script.png)
+     :::image type="content" source="media/use-macro-rename-sheet/write-script.png" alt-text="Screenshot shows steps to write the script in the Sales Report.xlsx workbook." border="false":::
 
 3. Press the F5key on the keyboard, if there is no debug close the Visual Basic window and return to Excel. If there is debugged, check back your script.
 4. Return to Excel and see what happens, if the codes are correct, now the name of each sheet is renamed in accordance with the existing sales name on each sheet.
-![successful result](./media/use-macro-rename-sheet/result.png)
+:::image type="content" source="media/use-macro-rename-sheet/name-result.png" alt-text="Screenshot shows the name of each sheet is renamed following the existing sales name on each sheet.":::
 That's it. Hopefully usefully.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../../includes/community-solution-content-disclaimer.md)]

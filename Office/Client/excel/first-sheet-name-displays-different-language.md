@@ -34,7 +34,7 @@ Consider the following scenario:
 
 In this scenario, the name of the first sheet in the Excel workbook may appear in a language that's different than the **Display Language** set in Microsoft Office. For example, if you have Office 365 installed with German, English, and Polish, the name of the worksheet created is displayed in German, despite having English (or Polish) set as the **Display Language**.
 
-:::image type="content" source="media/first-sheet-name-displays-different-language/display-language.png" alt-text="Screenshot to set English as the Display Language in Excel Options.":::
+:::image type="content" source="media/first-sheet-name-displays-different-language/display-language.png" alt-text="Screenshot to set English as the Display Language in the Excel Options window.":::
 
 :::image type="content" source="media/first-sheet-name-displays-different-language/name-example.png" alt-text="Screenshot shows the first sheet name displayed in a different language.":::
 
