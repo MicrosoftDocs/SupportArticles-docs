@@ -23,9 +23,9 @@ appliesto:
 
 When you try to edit an equation that was inserted using Equation Editor 3.0 in an Office application (such as Word), you see the following error: 
 
-**Microsoft Equation is not available**
+> Microsoft Equation is not available.
 
-![Equation editor error](./media/issue-when-edit-equation-in-office/equation-editor-error.png) 
+:::image type="content" source="media/issue-when-edit-equation-in-office/equation-editor-error.png" alt-text="Screenshot shows the error after editing an equation that is inserted using Equation Editor 3.0 in an Office application." border="false":::
 
 ## Cause
 

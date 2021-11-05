@@ -22,7 +22,7 @@ appliesto:
 
 When you start any Office for Mac application such as Microsoft Word for Mac, PowerPoint for Mac, Excel for Mac or Outlook for Mac, the Welcome screen does not have any buttons such as OK or Close to continue.
 
-![welcome screen](./media/office-for-mac-welcome-screen/welcome-screen.jpg)
+:::image type="content" source="media/office-for-mac-welcome-screen/welcome-screen.png" alt-text="Screenshot shows the Welcome screen doesn't have any buttons such as OK or Close to continue." border="false":::
 
 ## Cause
 

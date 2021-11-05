@@ -29,7 +29,7 @@ After you upgrade a Windows 7 PC that came with Microsoft Office Starter 2010 to
 
 **NOTE** The compatibility problem does not occur if you select the **Activate** or **Purchase** options.
 
-![select Use to install Office Starter 2010 ](./media/cant-install-office-on-windows-8/select-use-to-install-office-starter-2010.png)
+:::image type="content" source="media/cant-install-office-on-windows-8/select-use-to-install.png" alt-text="Screenshot to select the Use option to install Office Starter 2010." border="false":::
 
 ## Resolution
 
@@ -41,7 +41,7 @@ In order to use Microsoft Office Starter 2010 in Windows 8, you must first insta
 1. Use the recovery method your PC manufacturer provided to restore your PC back to Windows 7.   
 2. Find and double-click the shortcut called **Microsoft Office 2010** in the Windows Start menu.
 
-   ![Office_2010_Shortcut ](./media/cant-install-office-on-windows-8/office-2010-shortcut.png)
+   :::image type="content" source="media/cant-install-office-on-windows-8/office-2010-shortcut.png" alt-text="Screenshot of the Office 2010 shortcut in the Windows Start menu." border="false":::
 
 3. Click the **Use** button, and then click **Open**.   
 4. Once the install is complete, download and install this [required Click-to-Run update](https://support.microsoft.com/help/2553141).   

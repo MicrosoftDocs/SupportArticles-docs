@@ -58,9 +58,9 @@ You can access the 2007 Office system Activation Wizard in two ways:
 - Click the **Microsoft Office Button**, click **Program_Name Options**, click
 **Resources**, and then click **Activate**.
 
-![select Word Options in the dialog box](./media/faq-about-office-activation-wizard/select-word-options-in-dialog-box.png)
+:::image type="content" source="media/faq-about-office-activation-wizard/select-word-options-in-dialog-box.png" alt-text="Screenshot to select Word Options in the Office 2007 dialog box." border="false":::
 
-![select Resources > activate Microsoft Office](./media/faq-about-office-activation-wizard/select-resources-activate-microsoft-office.png)
+:::image type="content" source="media/faq-about-office-activation-wizard/resources-activate.png" alt-text="Screenshot to select the Active option after selecting Resource." border="false":::
 
 Q5: What happens during product activation?
 
@@ -81,11 +81,11 @@ Office 2010 programs
 1. Start the Office 2010 program.
 2. On the File menu, click **Help**.
 
-   ![open Help pane](./media/faq-about-office-activation-wizard/open-help-pane.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/help-pane.png" alt-text="Screenshot to select Options under the Tools for Working with Office heading." border="false":::
 3. Under the Tools for Working with Office heading, click Options.
 4. In the navigation pane, click Trust Center.
 
-   ![select Trusted Center](./media/faq-about-office-activation-wizard/select-trusted-center.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/trusted-center.png" alt-text="Screenshot to select Trust Center in the navigation pane of Word Options." border="false":::
 5. Click the "Show the Microsoft program privacy statement" link.
 
 In Access 2007, Excel 2007, PowerPoint 2007, and Word 2007
@@ -93,23 +93,23 @@ In Access 2007, Excel 2007, PowerPoint 2007, and Word 2007
 1. Start the 2007 Office system program.
 2. Click the **Microsoft Office Button**, and then click **Program_Name Options**.
 
-   ![open Word Options dialog box](./media/faq-about-office-activation-wizard/open-word-options-dialog-box.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/open-word-options-dialog-box.png" alt-text="Screenshot to select Word Options in Office 2007." border="false":::
 3. Click **Trust Center** in the navigation pane, and then click one of the following:
 
    - **Show the Microsoft Application privacy statement**
    - **Microsoft Office Online privacy statement**
 
-   ![Screenshot of the Trust Center settings](./media/faq-about-office-activation-wizard/open-trusted-center.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/open-trusted-center.png" alt-text="Screenshot of the Trust Center settings in Office 2007." border="false":::
 
 All other 2007 Office system programs
 
 1. Start the 2007 Office system program.
 2. On the **Tools** menu, click **Trust Center**.
 
-   ![click Trusted Center](./media/faq-about-office-activation-wizard/select-tool-trusted-center.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/tool-trusted-center.png" alt-text="Screenshot to select Trust Center on the Tools menu." border="false":::
 3. Click **Privacy Options** in the navigation pane, and then click **Read our privacy statement**.
 
-   ![select Privacy Options](./media/faq-about-office-activation-wizard/select-privacy-options.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/privacy-options.png" alt-text="Screenshot to select Privacy Options in the navigation pane of the Trust Center." border="false":::
 
 Q7: Is product activation the same as registration?
 
@@ -150,10 +150,10 @@ To find the product ID, click **About Program_Name** on the **Help** menu in an 
 
 1. Click the **Office Button**, and then click the **Program_Name Options** button.
 
-   ![click Word Options to open the dialog box](./media/faq-about-office-activation-wizard/word-options-dilaog-box-open.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/open-word-options-dialog-box.png" alt-text="Screenshot to select Word Options after selecting the Office Button." border="false":::
 2. Click the **Resources** option in the navigation pane, and then click the **About** button beside the **about Microsoft Office Program_Name 2007** label.
 
-   ![select "about Microsoft Office Program_Name 2007" in the dialog box](./media/faq-about-office-activation-wizard/select-about-microsoft-office-word-2007.png)
+   :::image type="content" source="media/faq-about-office-activation-wizard/about-word-2007.png" alt-text="Screenshot to click the About button beside the about Microsoft Office Program_Name 2007 label." border="false":::
 
 Q12: Why do I receive notifications to activate my product?
 

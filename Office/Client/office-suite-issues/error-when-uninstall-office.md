@@ -27,12 +27,12 @@ You receive one of the following error messages when you try to uninstall Micros
 > Couldn't uninstall Office  
 > We're sorry, Office couldn't be uninstalled. Please try uninstalling Office again.
 
-![could not uninstall office](./media/error-when-uninstall-office/could-not-uninstall-office.PNG)
+:::image type="content" source="media/error-when-uninstall-office/could-not-uninstall-office.png" alt-text="Screenshot of the error message, showing couldn't uninstall Office.":::
 
 > Office is busy.  
 > Office can't do that right now because your product is busy with another task. Please wait for this task to complete and try again.
 
-![office is busy](./media/error-when-uninstall-office/office-is-busy.png)
+:::image type="content" source="media/error-when-uninstall-office/office-is-busy.png" alt-text="Screenshot of the error message, showing Office is busy.":::
 
 ##  Resolution
 

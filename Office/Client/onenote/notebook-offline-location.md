@@ -29,7 +29,7 @@ When you click this message, you receive the following message:
 
 > If you want to share it with specific people, please put it on OneDrive or SharePoint.
 
-![error message in the information bar](./media/notebook-offline-location/error-message.jpg)
+:::image type="content" source="media/notebook-offline-location/error-message.png" alt-text="Screenshot of the error message in the information bar.":::
 
 ## Cause
 
