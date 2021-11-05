@@ -58,7 +58,7 @@ This step changes the SQL Server instance pointer on all SharePoint databases. I
 > The SharePoint configuration database and Central Administration content database must reside on the same SQL Server instance.   
 To change the SQL Server instance pointer, run the following PowerShell script in an elevated SharePoint Management Shell window:   
 
-```  
+```powershell
 $SPDBs = Get-SPDatabase  
  ForEach ($DB in $SPDBs)  
  {  
@@ -68,7 +68,7 @@ $SPDBs = Get-SPDatabase
 
 To verify the change, run the following PowerShell cmdlet in an elevated SharePoint Management Shell window:   
 
-```  
+```powershell  
 Get-SPDatabase | Select Name,Server  
 ```  
 
@@ -84,7 +84,7 @@ The following action plan is going to point all databases to the same SQL Server
 
 Run the following PowerShell script in an elevated SharePoint Management Shell window:   
 
-```  
+```powershell  
 $ConfigDB = Get-SPDatabase | ?{$_.Name -eq 'SharePoint_Config'}  
  $WebApps = Get-SPWebApplication -IncludeCentralAdministration  
  ForEach ($WebApp in $WebApps)  
@@ -97,7 +97,7 @@ $ConfigDB = Get-SPDatabase | ?{$_.Name -eq 'SharePoint_Config'}
 
 To verify the change, run the following PowerShell cmdlet in an elevated SharePoint Management Shell window:   
 
-```  
+```powershell  
 $webapps = Get-SPWebApplication -IncludeCentralAdministration  
  foreach ($webapp in $webapps)  
  {  
@@ -118,7 +118,7 @@ To do this, follow these steps:
 
 1. Get the current configuration object from the server that's running SQL Server by using the following SQL query:  
 
-   ```  
+   ```sql  
    SELECT [ID],[Properties]  
    FROM [SharePoint_Config].[dbo].[Objects]  
    WITH (NOLOCK)  
@@ -127,19 +127,19 @@ To do this, follow these steps:
 
 2. The query returns a single row that has two columns. One column is for the GUID of the configuration item, and the other is for the content of the configuration item, as in the following example:  
 
-   ```
+   ```output
    <object type="Microsoft.SharePoint.DistributedCaching.Utilities.SPDistributedCacheClusterInfo, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=Token"><fld type="Microsoft.SharePoint.DistributedCaching.Utilities.SPDistributedCacheClusterConfigStorageLocation, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=Token" name="_cacheConfigStorageLocation"><object type="Microsoft.SharePoint.DistributedCaching.Utilities.SPDistributedCacheClusterConfigStorageLocation, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=Token"><sFld type="String" name="_provider">SPDistributedCacheClusterProvider</sFld><sFld type="String" name="_connectionString">Data Source=SPSQLRenamed;Initial Catalog=SharePoint_Config;Integrated Security=True;Persist Security Info=False;Enlist=False;Pooling=True;Min Pool Size=0;Max Pool Size=100;PoolBlockingPeriod=Auto;Asynchronous Processing=False;Connection Reset=True;MultipleActiveResultSets=False;Replication=False;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;Load Balance Timeout=0;Packet Size=8000;Type System Version=Latest;Application Name=".Net SqlClient Data Provider";User Instance=False;Context Connection=False;Transaction Binding="Implicit Unbind";ApplicationIntent=ReadWrite;MultiSubnetFailover=False;TransparentNetworkIPResolution=True;ConnectRetryCount=1;ConnectRetryInterval=10;Column Encryption Setting=Disabled</sFld></object></fld><sFld type="String" name="_clusterSize">medium</sFld><sFld type="Boolean" name="_enableHA">False</sFld><sFld type="Boolean" name="_isInitialized">True</sFld><sFld type="Boolean" name="_isDataCacheSecurityEnabled">False</sFld><sFld type="Boolean" name="m_DeploymentLocked">False</sFld><fld type="System.Collections.Hashtable, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=Token" name="m_UpgradedPersistedFields" /><fld name="m_Properties" type="null" /><sFld type="String" name="m_LastUpdatedUser">SP2016\Administrator</sFld><sFld type="String" name="m_LastUpdatedProcess">psconfigui (3536)</sFld><sFld type="String" name="m_LastUpdatedMachine">SP16APP1</sFld><sFld type="DateTime" name="m_LastUpdatedTime">Time</sFld><fld name="m_LastUpdatedStackTrace" type="null" /><sFld type="Int32" name="m_LastUpdatedThreadId">31</sFld><sFld type="Guid" name="m_LastUpdatedCorrelationId">CorrelationId</sFld></object>.
    ```
 
 3. Copy the result into Notepad, and then replace the following with the new SQL Server instance:  
 
-   ```
+   ```sql
    Data Source=SPSQLRenamed;Initial Catalog=SharePoint_Config;
    ```
 
 4. Run the following SQL command to update the configuration object:  
 
-   ```  
+   ```sql  
    UPDATE Objects  
    SET Properties = '[content in Notepad]'  
    WHERE ID = '[GUID of the configuration object in the query result]'  
@@ -151,14 +151,14 @@ To do this, follow these steps:
 
 1. On one of the Distributed Cache servers, gracefully shut down the service by running the following PowerShell cmdlet in an elevated PowerShell prompt:  
 
-   ```  
+   ```powershell  
    Use-CacheCluster  
    Stop-CacheHost -Graceful -CachePort 22233 -ComputerName $env:COMPUTERNAME  
    ```  
 
 2. Wait until the service is stopped. You can monitor the status by using the following PowerShell cmdlet:  
 
-   ```  
+   ```powershell  
    Get-CacheHost  
    ```    
 
@@ -168,13 +168,13 @@ To do this, follow these steps:
 
 3. Remove the local server from the Distributed Cache cluster by running the following PowerShell cmdlet:  
 
-   ```  
+   ```powershell  
    Remove-SPDistributedCacheServiceInstance  
    ```  
 
 4. Restore the local server to the Distributed Cache cluster by running the following PowerShell cmdlet:  
 
-   ```  
+   ```powershell  
    Add-SPDistributedCacheServiceInstance  
    ```  
 
@@ -188,7 +188,7 @@ To do this, follow these steps:
 
 To do this, run the following PowerShell cmdlet in an elevated SharePoint Management Shell window:   
 
-```  
+```powershell  
 $OldServer = Get-SPServer | ?{$_.Address -eq '<The name of the SQL Server to be removed>'}  
  $OldServer.Delete()  
 ```  
@@ -197,7 +197,7 @@ $OldServer = Get-SPServer | ?{$_.Address -eq '<The name of the SQL Server to be 
 
 To verify that the database server is successfully changed, run the following cmdlet:   
 
-```  
+```sql  
 Get-SPServer  
 ```  
 
