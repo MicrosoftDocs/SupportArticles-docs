@@ -34,7 +34,7 @@ You can use one of the following tools to check if SQL Server process is indeed 
   - Instance:sqlservr
   > If you notice that % User Time is consistently above 90%, then it is a confirmation that SQL Server process is causing high CPU. But, if you notice that % Privileged time is consistently above 90% it is an indication that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administartor to analyze the root cause of this behavior.
 
-## Step 2: Identify queries contributing to CPU usage 
+## Step 2: Identify queries contributing to CPU usage
 
 If the sqlservr.exe process is indeed causing the high CPU, identify the queries that are contributing to high CPU by using the following query:
 
@@ -131,7 +131,7 @@ Then, if SQL is still using high CPU, proceed to the next step.
 
 Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high CPU usage issue is fixed.
 
-If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-check-any-possible-queries-that-cause-the-issue).
+If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
 If the issue is fixed, it's an indication of parameter sensitive problem (PSP/parameter sniffing issue). To mitigate the parameter sensitive issues, you can use the following methods. Each method has associated tradeoffs and drawbacks:
 
