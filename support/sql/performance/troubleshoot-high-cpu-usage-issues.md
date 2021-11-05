@@ -209,7 +209,7 @@ GO
 PRINT '--XEvent Session Details--'
 SELECT sess.NAME 'session_name', event_name,xe_event_name, trace_event_id,
 CASE
- WHEN xemap.trace_event_id IN ( 23, 24, 40, 41,44, 45, 51, 52,54, 68, 96, 97,98, 113, 114, 122,146, 180 )
+ WHEN xemap.trace_event_id IN ( 23, 24, 40, 41, 44, 45, 51, 52, 54, 68, 96, 97, 98, 113, 114, 122, 146, 180 )
  THEN Cast(1 AS BIT) ELSE Cast(0 AS BIT)
 END AS expensive_event
 FROM sys.dm_xe_sessions sess
