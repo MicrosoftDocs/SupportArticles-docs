@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; SQL Server
 
 This article provides step-by-step procedure to diagnose and fix high CPU usage issues on a computer that is running SQL Server.
 
-See the following possible causes of most high CPU usage issues:
+Although there is a large number of causes that can lead to high CPU coming from SQL Server, the following are the most common causes :
 
 - High logical reads that are caused by table or index scans because of:
   - Out-of-date statistics
