@@ -1,7 +1,7 @@
 ---
 title: Enable support for TLS 1.2 in your environment for upcoming Azure AD TLS 1.0/1.1 deprecation
 description: Describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 05/26/2021
+ms.date: 11/03/2021
 ms.prod-support-area-path: 
 ms.reviewer: dahans
 ---
@@ -39,7 +39,7 @@ To maintain a secure connection to Azure Active Directory (Azure AD) and Microso
 - Identify and reduce you dependency on the client apps and operating systems that don't support TLS 1.2.
 - Enable TLS 1.2 for applications and services that communicate with Azure AD.
 - Update and configure your .NET Framework installation to support TLS 1.2.
-- Make sure that applications and PowerShell (that use [Azure AD Graph](https://graph.windows.net) and [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
+- Make sure that applications and PowerShell (that [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
 - Make sure that your web browser has the latest updates. We recommend that you use the new Microsoft Edge browser (based on Chromium). For more information, see the [Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel).
 - Make sure that your web proxy supports TLS 1.2. For more information about how to update a web proxy, check with the vendor of your web proxy solution.
 
@@ -112,7 +112,7 @@ To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforce
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
-Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Azure AD Graph](https://graph.windows.net/), or [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
+Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
 
 ### Install .NET updates to enable strong cryptography
 
