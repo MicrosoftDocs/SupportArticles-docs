@@ -29,7 +29,7 @@ To scan an Outlook calendar that is having issues, you can either download the d
 
 1. On the machine that's running the Outlook version with calendar issues, open a browser tab and navigate to  [Advanced Diagnostics - Outlook Calendar](https://aka.ms/sara-calcheck).
 
-1. After the download completes, open the downloaded file **SetupProd_CalCheck.exe**.
+1. After the download completes, open the downloaded file *SetupProd_CalCheck.exe*.
 
 1. If you don't have Microsoft Support and Recovery Assistant installed on the machine, you'll be presented with the option to install it. Select **Install** in the dialog that displays and then select **I agree** to agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).
 
@@ -60,6 +60,7 @@ The Outlook calendar scan report includes the following tabs:
 
     :::image type="content" source="media/scan-outlook-calendar-using-sara/detailed-view-tab.png" alt-text="Screenshot of detailed view tab." border="false":::
 - **Configuration Summary** - Lists the configuration settings that were analyzed during the scan to identify issues.
+
     :::image type="content" source="media/scan-outlook-calendar-using-sara/configuration-summary-tab.png" alt-text="Screenshot of configuration summary tab." border="false":::
 
 ## Access Outlook calendar scan report
