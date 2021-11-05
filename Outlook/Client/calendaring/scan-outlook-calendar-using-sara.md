@@ -19,69 +19,52 @@ appliesto:
 search.appverid: MET150
 ---
 
-# How to scan Outlook calendar using Microsoft Support and Recovery Assistant
+# Scan Outlook calendar using Microsoft Support and Recovery Assistant
 
-## Overview
+When you run into issues with Microsoft Outlook calendars such as meetings that are missing, shared calendars that can't be accessed and others, you can use [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) (SaRA) to run the Outlook Calendar diagnostic to troubleshoot and fix the issues. This advanced diagnostic closely mimics the scan logic that was introduced in the [Calendar Checking Tool for Outlook](https://support.microsoft.com/topic/information-about-the-calendar-checking-tool-for-outlook-calcheck-0d2ccac8-f8dd-9289-82cc-943650e36a76) (CalCheck) to identify and report issues with general settings such as permissions, free/busy publishing, delegate configuration, and automatic booking. It also alerts you to known issues with the Outlook calendar folder and calendar items.
 
-The [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) (SaRA) includes an advanced diagnostic that uses the [Calendar Checking Tool for Outlook](https://support.microsoft.com/topic/information-about-the-calendar-checking-tool-for-outlook-calcheck-0d2ccac8-f8dd-9289-82cc-943650e36a76) (CalCheck) to identify, and report known issues and details about items in your Microsoft Outlook calendar.
+To scan an Outlook calendar which is having issues, you can either download the diagnostic to the computer or select it from the list of diagnostics within Microsoft Support and Recovery Assistant. Select the option that works best for you.
 
 ## Use CalCheck to scan a calendar for known issues
 
 SaRA can resolve issues in many programs. To scan Outlook calendar for known issues and create a detailed report of your Outlook configuration, use one of the following methods to run a calendar scan automatically or manually:
 
-### Automatically start a calendar scan in SaRA
+### Download the Outlook Calendar diagnostic
 
-To start a calendar scan automatically, follow these steps:
+1. On the machine that's running the Outlook version with calendar issues, open a browser tab and navigate to  [Advanced Diagnostics - Outlook Calendar](https://aka.ms/sara-calcheck).
 
-1. In Microsoft Edge, download the [Microsoft Support and Recovery Assistant](https://aka.ms/sara-calcheck).
+1. After the download completes, open the downloaded file **SetupProd_CalCheck.exe**.
 
-    **Note**: By downloading this app, you agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).
+1. If you don't have Microsoft Support and Recovery Assistant installed on the machine, you'll be presented with the option to install it. Select **Install** in the dialog that displays and then select **I agree** to agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).
 
-1. Select the **Open file** link under the file name.
+    After Microsoft Support and Recovery Assistant is installed, the calendar scan will begin automatically. The scan is complete when you see **We're done collecting your Outlook configuration details**.
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/open-file.png" alt-text="Screenshot of the download file., select the open file link." border="false":::
-1. If you don't have SaRA installed, select **Install** in the pop-up window that displays the security warning. Then, select **I agree** to agree to the terms of the Microsoft Services Agreement and Privacy Statement.
+## Launch the Outlook Calendar diagnostic from SaRA
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/security-warning.png" alt-text="Screenshot of the application install-security warning." border="false":::
-1. Once the download is completed, a calendar scan will start.
-
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/calendar-scan.png" alt-text="Screenshot of starting the calendar scan." border="false":::
-1. The scan is completed when you see **We're done collecting your Outlook configuration details**.
-
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/scan-completed.png" alt-text="Screenshot of the completed scan." border="false":::
-
-### Manually start a calendar scan in SaRA
-
-If you have installed SaRA, follow these steps to start a calendar scan manually:
-
-1. Select the **Start** button, type *Microsoft Support and Recovery Assistant*, and then press Enter.
+1. On the machine that's running the Outlook version with calendar issues, launch Microsoft Support and Recovery Assistant.
 
 1. Select **Advanced diagnostics** > **Next**.
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/advanced-diagnostics.png" alt-text="Screenshot of the Microsoft Support and Recovery Assistant, select Advanced diagnostics." border="false":::
 1. Select **Outlook** > **Next**.
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/outlook-advanced-diagnostics.png" alt-text="Screenshot of selecting outlook advanced diagnostics." border="false":::
-1. Select the Outlook calendar diagnostic: **Create a detailed scan of my Outlook Calendar to identify and resolve issues**, and then select **Next** to start the scan.
+1. Select **Create a detailed scan of my Outlook Calendar to identify and resolve issues** > **Next**.
 
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/select-diagnostic-you-like-to-run.png" alt-text="Screenshot of creating a scan of calendar." border="false":::
-1. When you are prompted to confirm that you are using the affected machine, select **Yes** > **Next**.
-
-    :::image type="content" source="media/scan-outlook-calendar-using-sara/affected-machine.png" alt-text="Screenshot of confirming the affected machine." border="false":::
-1. Scan will run automatically when you select **Next** on the previous screen.
-
-1. The scan is completed when you see **We're done collecting your Outlook configuration details**.
+1. When prompted to confirm that you're using the affected machine, select  **Yes** > **Next**.
 
 ## Review Outlook calendar scan report
 
-You can review your Outlook calendar scan report from the following tabs:
+The Outlook calendar scan report includes the following tabs:
 
-- **Issues found** - This tab provides you a list of configuration issues that are detected during the scan.
+- **Issues found** - Lists the configuration issues detected during the scan.
 
     :::image type="content" source="media/scan-outlook-calendar-using-sara/issues-found-tab.png" alt-text="Screenshot of issues found tab." border="false":::
-- **Detailed View** - This tab provides you with all the issues that were found categorized by the issue type.
+- **Detailed View** - Lists the issues found categorized by the issue type.
 
     :::image type="content" source="media/scan-outlook-calendar-using-sara/detailed-view-tab.png" alt-text="Screenshot of detailed view tab." border="false":::
-- **Configuration Summary** - This tab provides you a snapshot of the configuration settings that are most frequently collected and analyzed.
+- **Configuration Summary** - Lists the configuration settings that were analyzed during the scan to identify issues.
 
     :::image type="content" source="media/scan-outlook-calendar-using-sara/configuration-summary-tab.png" alt-text="Screenshot of configuration summary tab." border="false":::
+
+## Access Outlook calendar scan report
+
+Microsoft Support and Recovery Assistant saves the following files related to a calendar scan in the \user\appdata\local\saralogs\uploadlogs folder on the machine where the scan was run.
