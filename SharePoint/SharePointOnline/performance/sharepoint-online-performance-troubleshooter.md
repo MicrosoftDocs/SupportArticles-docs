@@ -7,36 +7,33 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.date: 10/27/2021
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: luche
-ms.custom: 
-- CSSTroubleshoot
-- CI 158180
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
 
 # Office 365 SharePoint Online performance troubleshooter
 
+## Introduction
+
 The Office 365 SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint Online client performance issues. This diagnostic package also lets you capture a Fiddler trace of HTTP(S) traffic while you reproduce these performance issues.
 
 This diagnostic package uploads trace files of up to 2 gigabytes (GB) after the files are compressed.
 
-## Running the troubleshooter
+## More Information
 
-Microsoft 365 admins can use the following diagnostic tool to help determine why the site can’t be deleted.
-**Note** This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
-
-> [!div class="nextstepaction"]
-> [Run Tests: Site performance](https://aka.ms/PillarSiteandPagePerf)
+### Required permissions
 
 The rules in the diagnostic package require that you are the SharePoint Online site collection administrator for the SharePoint Online URL that you enter.
 
 ![Type your credentials](./media/sharepoint-online-performance-troubleshooter/credentials.png)
 
-## Fiddler or network trace output
+This article describes the information that may be collected from a computer that's trying to connect to SharePoint Online in Office 365.
+
+#### Fiddler or network trace output
 
 The following data may be collected by the Network Capture diagnostic that's run by the Microsoft Support Diagnostic Tool.
 
@@ -50,7 +47,9 @@ If the results files are larger than 2 GB after compression, some files won't be
 |Network capture information from nmcap.exe output|{ComputerName}_netcap.cap; {ComputerName}__NMcap_Trace_DisplayNet.txt}__NMcap_Trace_DisplayNet.txt|
 |||
 
-## Prerequisites
+### Site performance rules
+
+#### Prerequisites
 
 To install this package, you must have Windows PowerShell 2.0 installed on the computer. For more information, see [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview).
 

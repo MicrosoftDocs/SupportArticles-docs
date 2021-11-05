@@ -33,9 +33,9 @@ Consider the following scenario:
 
 - You are unable to connect to your Exchange mailbox with an existing Outlook profile and **Disconnected** displays in the Outlook Status Bar:
 
-    ![Screenshot 1 of the Disconnect message in Outlook 2010](./media/connection-issues-mapi-disabled/disconnected-message-outlook-2010.jpg)
+   :::image type="content" source="./media/connection-issues-mapi-disabled/disconnected-message-outlook-2010.png" alt-text="Screenshot of the Disconnect message in Outlook 2010 Status Bar." border="false":::
 
-    ![Screenshot of the DISCONNECT message in Outlook 2013](./media/connection-issues-mapi-disabled/disconnected-message-outlook-2013.jpg)
+   :::image type="content" source="./media/connection-issues-mapi-disabled/disconnected-message-outlook-2013.png" alt-text="Screenshot of the DISCONNECT message in Outlook 2013 Status Bar." border="false":::
 
 - You are unable to open Public Folders or an Online Archive, and you receive the following error message:
 
@@ -57,6 +57,6 @@ Set-CasMailbox User1@contoso.com -MapiEnabled $True
 
 You can verify MAPI is enabled by checking the protocol settings for the user:
 
-![Screenshot 2 of the Disconnect message in Outlook 2010](./media/connection-issues-mapi-disabled/verify-mapi-enabled.jpg)
+:::image type="content" source="./media/connection-issues-mapi-disabled/verify-mapi-enabled.png" alt-text="Screenshot of the protocol settings for the user, which includes MAPI." border="false":::
 
 For more information about protocol settings and Adsiedit, see [ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
