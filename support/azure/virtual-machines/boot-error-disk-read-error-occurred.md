@@ -3,18 +3,17 @@ title: Troubleshoot boot error - disk read error occurred
 description: This article provides steps to resolve issues where the disk cannot be read in an Azure VM.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
 ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 06/01/2020
-ms.author: v-miegge
+ms.author: genli
 ---
 
 # Troubleshoot boot error - disk read error occurred

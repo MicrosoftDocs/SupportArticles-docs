@@ -4,7 +4,7 @@ description: Describes an issue where IE or Edge does not function correctly bec
 ms.date: 08/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba;DEV_Triage
-author: Teresa-Motiv
+author: v-tappelgate
 ms.author: joelba
 ms.custom: 
 - CI 122170

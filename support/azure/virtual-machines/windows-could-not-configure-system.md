@@ -4,7 +4,7 @@ titlesuffix: Azure Virtual Machines
 description: This article provides steps to resolve issues where the Sysprep process prevents the booting of an Azure VM.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -14,7 +14,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 09/09/2020
-ms.author: v-miegge
+ms.author: genli
 ---
 
 # Troubleshoot Windows could not finish configuring the system
