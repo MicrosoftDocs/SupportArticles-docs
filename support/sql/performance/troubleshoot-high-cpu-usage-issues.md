@@ -207,7 +207,16 @@ PRINT '--Trace event details--'
                   JOIN sys.trace_columns tc ON e.columnid = trace_column_id) AS x
 GO
 PRINT '--XEvent Session Details--'
-SELECT sess.name 'session_name', event_name FROM sys.dm_xe_sessions sess JOIN sys.dm_xe_session_events evt ON sess.address = evt.event_session_address
+SELECT sess.NAME 'session_name', event_name,xe_event_name, trace_event_id,
+CASE
+ WHEN xemap.trace_event_id IN ( 23, 24, 40, 41,44, 45, 51, 52,54, 68, 96, 97,98, 113, 114, 122,146, 180 )
+ THEN Cast(1 AS BIT) ELSE Cast(0 AS BIT)
+END AS expensive_event
+FROM sys.dm_xe_sessions sess
+  JOIN sys.dm_xe_session_events evt
+  ON sess.address = evt.event_session_address
+INNER JOIN sys.trace_xe_event_map xemap
+  ON evt.event_name = xemap.xe_event_name
 GO
 ```
 
