@@ -50,11 +50,16 @@ The following switches are available to control SaRAcmd.exe.
    |---|---|---|
    |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook|No|
    |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it|Yes|
+   |`TeamsAddinScenario`|Teams \ The Teams Meeting option isn't shown, or the Teams Meeting add-in doesn't load in Outlook|No|
    |||
 
    **Note:** To open an elevated Command Prompt window, select **Start**, enter `cmd`, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
-2. `-AcceptEula`
+2. `-CloseOutlook`
+
+   The -CloseOutlook switch is required to run TeamsAddinScenario.  Warning - this switch closes Outlook, if running.
+
+3. `-AcceptEula`
 
    The End User License Agreement (EULA) must be accepted before a scenario can be run. If you're using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify the scenario that you want to run. For example, to uninstall Office, run the following command from an elevated Command Prompt window:
 
@@ -68,7 +73,7 @@ The following switches are available to control SaRAcmd.exe.
    SaRAcmd.exe -S ExpertExperienceAdminTask -AcceptEula
    ```
 
-3. `-DisplayEULA`
+4. `-DisplayEULA`
 
    Use the `-DisplayEULA` switch to display the EULA. To save the EULA text to a file, run a command that resembles the following example:
 
@@ -76,11 +81,11 @@ The following switches are available to control SaRAcmd.exe.
    SaRAcmd.exe -DisplayEULA > c:\temp\SaRAEula.txt
    ```
 
-4. `-Help`
+5. `-Help`
 
    The `-Help` switch displays a link to online content for additional information. If you use `-Help` together with other switches, `-Help` will override all the other switches except the `-?` switch.
 
-5. `-?`
+6. `-?`
 
    Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches. The following screenshot shows a sample output if the `-?` switch is used.
 
@@ -112,6 +117,21 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
   |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
   |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
+  |||
+
+- `TeamsAddinScenario`
+
+  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |---|---|---|
+  |Scan completed successfully|None|*00:* Scenario completed successfully. Please exit and restart Outlook.|
+  |User does not include</br> -CloseOutlook switch|Exit the scenario|*01:* This scenario requires the -CloseOutlook switch. Note, if Outlook is running, the -CloseOutlook switch closes Outlook. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion|
+  |User does not include</br> -AcceptEula switch|Exit the scenario|*01:* Please provide -AcceptEula to continue with this scenario. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion|
+  |Teams isn't installed|Exit the scenario|*20:* Could not find an installed version of Teams. Please see https://support.office.com/article/how-do-i-get-access-to-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b|
+  |Outlook 2013 or later isn't installed|Exit the scenario|*21:* Could not find an installed version of Outlook 2013, or later. See https://go.microsoft.com/fwlink/?linkid=2129032|
+  |Windows 7 & Runtime from KB2999226 isn’t installed|Exit the scenario|*22:* Pre-requisites not met. Update from KB2999226 needs to be installed. See https://go.microsoft.com/fwlink/?linkid=2129032|
+  |Registry issues detected (LoadBehavior<>3 or add-in listed under the DisabledItems key or TeamsAddin.Connect <> 1 under the DoNotDisableAddinList key|Run the registry recovery action, and then exit the scenario.|*23:* The registry was updated to address missing or incorrect values. Please exit and restart Outlook.</br></br>*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
+  |None of the above conditions were detected|Run the re-register dll recovery action, and then exit the scenario.|*24:* The Microsoft.Teams.AddinLoader.dll was re-registered. Please exit and restart Teams. Then, exit and restart Outlook.|
+  |Failure to complete the scenario</br>(for any reason)|Exit the scenario|*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
   |||
 
 ## SaRA command-line version history
