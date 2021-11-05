@@ -1,6 +1,6 @@
 ---
 title: Listing some issues for Outlook
-description: This article lists Outlook related issues.
+description: This article lists Outlook for Windows related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro

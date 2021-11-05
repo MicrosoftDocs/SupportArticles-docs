@@ -1,6 +1,6 @@
 ---
 title: Listing some issues for Skype for Business Hybrid
-description: This article lists Skype for Business related issues.
+description: This article lists Skype for Business Hybrid related issues.
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
