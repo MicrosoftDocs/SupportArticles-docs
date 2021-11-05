@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 4293589
 
 In Microsoft Outlook, you try to expand a contact group in a public folder that contains a nested contact group. However, the contact group doesn't expand, and the text **\<Unknown>** appears at the end of the group name.
 
-:::image type="content" source="media/cannot-expand-nested-contact-groups-unknown-shown/unknown-shown-for-nested-contact-group.png" alt-text="Nested Contact Group":::
+:::image type="content" source="media/cannot-expand-nested-contact-groups-unknown-shown/unknown-shown-for-nested-contact-group.png" alt-text="Screenshot of email address bar in Outlook when you expand two contact groups and the text Unknown appears at the end of the group name.":::
 
 ## Resolution 
   
