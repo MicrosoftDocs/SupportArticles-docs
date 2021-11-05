@@ -105,7 +105,7 @@ Starting in Configuration Manager version 1906, a co-managed device running Wind
 
 > Sync wasn't fully successful because we weren't able to verify your credentials. Select Sync to sign in and try again.
 
-:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/device-sync-failure.png" alt-text="Device sync fails":::
+:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/device-sync-failure.png" alt-text="Screenshot of the Sync wasn't fully successful message.":::
 
 When this issue occurs, the following error message is logged in **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin log** in the Event Viewer:
 
@@ -119,7 +119,7 @@ The following error message is logged in **Applications and Services Logs** > **
 
 This issue occurs when MFA is **Enabled** or **Enforced**, or Azure AD Conditional Access policies that require MFA are applied to all cloud apps. It prevents user association with the device in the portal.
 
-:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/user-association-blocked.png" alt-text="User association is prevented":::
+:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/user-association-blocked.png" alt-text="Screenshot shows the user association is prevented.":::
 
 To fix the issue, use one of the following methods:
 
