@@ -672,6 +672,8 @@
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
+    - name: Stop code SYSTEM SERVICE EXCEPTION when initializing PMEM or NVDIMM
+      href: ./performance/stop-code-initialize-pmem-nvdimm.md
     - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
