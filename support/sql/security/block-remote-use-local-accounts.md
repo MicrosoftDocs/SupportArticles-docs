@@ -79,11 +79,11 @@ This local "user" account isn't an administrative account or domain account. Thi
 
 This account is the CLIUSR account. It is identified by its description in the Computer Management snap-in.
 
-![CLIUSR account](./media/block-remote-use-local-accounts/cliusr-image.jpg)
+:::image type="content" source="./media/block-remote-use-local-accounts/cliusr-properties.png" alt-text="Screenshot of CLIUSR Properties in Computer Management.":::
 
 A frequent question is whether the CLIUSR account can be deleted. From a security standpoint, additional local accounts (not default) may be flagged during audits. If the network administrator isn't sure what this account is for (that is, they don't read the description of "Failover Cluster Local Identity"), they may delete it without understanding the ramifications. For Failover Clustering to function correctly, this account is necessary for authentication.
 
-![Passing CLIUSR credentials](./media/block-remote-use-local-accounts/passing-cliusr-credentials-image.jpg)
+:::image type="content" source="./media/block-remote-use-local-accounts/passing-cliusr-credentials.png" alt-text="Screenshot shows CLIUSR credentials passing between Running Cluster and Joining node.":::
 
 1. Joining node starts the Cluster Service, and passes the CLIUSR credentials across.
 
