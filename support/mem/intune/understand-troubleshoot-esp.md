@@ -196,8 +196,8 @@ Install-Script -Name Get-AutopilotDiagnostics -Force
 To use the script to examine the generated log file, run the following PowerShell command:
 
 ```powershell
-    Get-AutopilotDiagnostics -CABFile <pathToOutputCabFile>
-    ```
+Get-AutopilotDiagnostics -CABFile <pathToOutputCabFile>
+```
 
 ### Check the registry for app deployment failures during ESP
 
