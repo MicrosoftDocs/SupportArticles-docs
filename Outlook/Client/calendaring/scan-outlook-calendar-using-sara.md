@@ -61,6 +61,8 @@ The Outlook calendar scan report includes the following tabs:
     :::image type="content" source="media/scan-outlook-calendar-using-sara/detailed-view-tab.png" alt-text="Screenshot of detailed view tab." border="false":::
 - **Configuration Summary** - Lists the configuration settings that were analyzed during the scan to identify issues.
 
+    :::image type="content" source="media/scan-outlook-calendar-using-sara/configuration-summary-tab.png" alt-text="Screenshot of configuration summary tab." border="false":::
+
 ## Access Outlook calendar scan report
 
 Microsoft Support and Recovery Assistant saves the following files related to a calendar scan in the *\user\appdata\local\saralogs\uploadlogs* folder on the machine where the scan was run.
