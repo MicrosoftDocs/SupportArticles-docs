@@ -1,6 +1,6 @@
 ---
 title: ErrorMailRecipientNotFound when viewing free/busy information
-description: Describes an issue in which you can't view free/busy information of a user who is in another forest or tenant from Scheduling Assistant.
+description: Fixes ErrorMailRecipientNotFound ResponseCode that occurs when viewing free/busy information of a user in another organization by using Scheduling Assistant.
 author: v-charloz
 audience: ITPro
 ms.service: exchange-online
@@ -21,53 +21,62 @@ appliesto:
 - Exchange Server 2019
 ---
 
-# ErrorMailRecipientNotFound error and no free/busy information
+# ErrorMailRecipientNotFound ResponseCode and no free/busy information
 
-An organization relationship that has delegated authentication configured is set up to share calendar information with a user in another forest or tenant. When you try to view the user's free/busy information in Scheduling Assistant, no free/busy information is displayed. Additionally, when you log in Outlook on the Web as the source mailbox, open Developer Tools by pressing F12 and select the **Network** tab, one of the following error messages is displayed with the ErrorMailRecipientNotFound error in the response body for the `GetUserAvailabilityInternal` action.
+An organization relationship that has delegated authentication configured is set up to share calendar information. When you try to view the free/busy information of a user in another organization by using Scheduling Assistant, no free/busy information is displayed.
 
-## Unable to resolve e-mail address to an Active Directory object
+Additionally, one of the following error messages is displayed with the **ErrorMailRecipientNotFound** ResponseCode in the response body of the `GetUserAvailabilityInternal` action. To determine which error you have, sign in Outlook on the Web, open Developer Tools by pressing F12 and select the **Network** tab.
 
-> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
+## Error 1: Unable to resolve e-mail address to an Active Directory object
+
+> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: **Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
 ### Cause
 
-This error occurs if one of the following scenarios is true:
+This error occurs in one of the following situations:
 
-- The domain name isn't included in the domain name list of the organization relationship.
+- An organization relationship isn't established with the domain.
+- An organization relationship is established with the domain, but the free/busy access isn't enabled.
 
-- The domain name is included in the domain name list of the organization relationship, but the free/busy access isn't enabled. (This scenario occurs in cloud server only environment.)
+    **Note**: This scenario occurs only between two Microsoft 365 organizations.
 
 ### Resolution
 
-Before you try the resolution, you can run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check if the domain name is included in the domain name list of the organization relationship.
+Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the domain name information of the organization relationship. For example:
 
-- If the domain name isn't included, use the Exchange admin center or Exchange Online PowerShell to [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship), or [modify the existing organization relationship](/exchange/sharing/organization-relationships/modify-an-organization-relationship) to include that domain.
+```powershell
+Get-OrganizationRelationship | ft name, domainnames
+```
 
-- If the domain name is included, set the value of the `FreeBusyAccessEnabled` parameter to `$true` to enable the free/busy access.
+- If the organization relationship isn't established with the domain, run the [New-OrganizationRelationship](/powershell/module/exchange/new-organizationrelationship) cmdlet as follows, or use the Exchange admin center to [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship).
 
-## The organization relationship can't be used
+    ```powershell
+    New-OrganizationRelationship -Name "Contoso" -DomainNames "contoso.com"
+    ```
 
-> The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
+- If the organization relationship is established with the domain, run the following [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable the free/busy access. The cmdlet sets the value of the `FreeBusyAccessEnabled` parameter to `$true`.
+
+    ```powershell
+    Set-OrganizationRelationship -FreeBusyAccessEnabled $true
+    ```
+
+## Error 2: The organization relationship can't be used
+
+> The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: **The organization relationship \<name of the organization relationship\> can't be used.** Please confirm that the organization relationship is configured correctly.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
 ### Cause
 
-This error occurs because the organization relationship that is used to retrieve free/busy information has no value set, or the value isn't set correctly for the following parameters:
+This error occurs because the values of the following parameters aren't set correctly in the organization relationship:
 
 - `TargetApplicationUri`
-- `TargetAutodiscoverEpr` and `TargetSharingEpr` (at least one of these two values must exist)
+- `TargetAutodiscoverEpr` or `TargetSharingEpr`(at least one of these values isn't set correctly)
 
 ### Resolution
 
-Before you try the resolution, you can run the `Get-OrganizationRelationship` cmdlet to check the parameters value. If any value is incorrectly set, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters correctly with the required values.
+Run the `Get-OrganizationRelationship` cmdlet to check the parameters value. If any value is set incorrectly, use the `Set-OrganizationRelationship` cmdlet to set these parameters with the required values. For example:
 
-The following example modifies an organization relationship with the following conditions applied:
-
-- The Autodiscover URL of Exchange Web Services is `https://contoso.com/autodiscover/autodiscover.svc/wssecurity`.
-- The target Uniform Resource Identifier (URI) is `mail.contoso.com`.
-- The URL of the target Exchange Web Services is: `https://outlook.office365.com/ews/Exchange.asmx`.
+**Note**: On-premises Exchange organizations can run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check these values across the routing domain.
 
 ```powershell
 Set-OrganizationRelationship -TargetAutodiscoverEpr "https://contoso.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.contoso.com" -TargetSharingEpr "https://outlook.office365.com/ews/Exchange.asmx"
 ```
-
-**Note**: On-premises Exchange organizations can run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check these values across the routing domain.
