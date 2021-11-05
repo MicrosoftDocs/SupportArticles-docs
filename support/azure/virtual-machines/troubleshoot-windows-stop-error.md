@@ -25,11 +25,11 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
    **Windows Boot Manager**
 
-   ![Windows Boot Manager stating that "Windows failed to start. A recent hardware or software change might be the cause". Scrolling down, you see the Status code "0xC0000017" as well as info stating that "The application or operating system couldn't be loaded because a required file is missing or contains errors".](./media/troubleshoot-windows-stop-error/Windows_Boot_Manager.svg)
+   ![Windows Boot Manager stating that "Windows failed to start. A recent hardware or software change might be the cause". Scrolling down, you see the Status code "0xC0000017" as well as info stating that "The application or operating system couldn't be loaded because a required file is missing or contains errors".](./media/troubleshoot-windows-stop-error/windows-boot-manager.svg)
 
    **Recovery Screen**
  
-   ![The Recovery screen stating that "Your PC/Device needs to be repaired. There isn't enough memory available to create a ramdisk device". You should also see the error code "0xC0000017".](./media/troubleshoot-windows-stop-error/Recovery_Message.svg)
+   ![The Recovery screen stating that "Your PC/Device needs to be repaired. There isn't enough memory available to create a ramdisk device". You should also see the error code "0xC0000017".](./media/troubleshoot-windows-stop-error/recovery-screen.svg)
 
 ## Cause
 
