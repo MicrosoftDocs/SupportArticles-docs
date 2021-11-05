@@ -11,7 +11,7 @@ ms.author: v-yunhya
 
 # Troubleshoot high CPU usage issues in SQL Server
 
-This article provides step-by-step procedures to help fix high CPU usage issues for a computer that is running SQL Server.
+This article provides step-by-step procedure to diagnose and fix high CPU usage issues on a computer that is running SQL Server.
 
 See the following possible causes of most high CPU usage issues:
 
@@ -26,7 +26,7 @@ You can use the following steps to troubleshoot high CPU usage issues in SQL Ser
 
 ## Step 1: Verify that SQL Server is causing high CPU
 
-You can use one of the following tools to check if SQL Server process is indeed contributing to high CPU
+You can use one of the following tools to check if SQL Server process is indeed contributing to high CPU:
 - Task Manager (Under Process tab, check CPU value for *SQL Server Windows NT-64 Bit* is close to 100%)
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
   - Counter: Process/%User Time, % Privileged Time
@@ -34,7 +34,7 @@ You can use one of the following tools to check if SQL Server process is indeed 
   > If you notice that % User Time is consistently above 90%, then it is a confirmation that SQL Server process is causing high CPU. But, if you notice that % Privileged time is consistently above 90% it is an indication that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administartor to analyze the root cause of this behavior.
 
 
-## Step 2: Check any possible queries that cause the issue
+## Step 2: Identify queries contributing to CPU usage 
 
 If the sqlservr.exe process is indeed causing the high CPU, identify the queries that are contributing to high CPU by using the following query:
 
@@ -70,17 +70,15 @@ ORDER BY r.cpu_time DESC
 
 After you identify the queries with the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for relevant tables, which are involved in these queries.
 
-Then, if SQL is still using high CPU, then go to the next step.
+Then, if SQL is still using high CPU, proceed to the next step.
 
 ## Step 4: Add potential missing indexes
 
 1. Use the following query to get the estimated execution plan of the highest CPU bound query.
 
-    > [!NOTE]
-    > Review the execution plan and tune the query by implementing the required changes.
-
+    
     ```sql
-    -- Captures the Total CPU time spend by a query along with the plan handle
+    -- Captures the Total CPU time spent by a query along with the plan handle
     SELECT highest_cpu_queries.plan_handle,
            highest_cpu_queries.total_worker_time,
            q.dbid,
@@ -99,7 +97,7 @@ Then, if SQL is still using high CPU, then go to the next step.
     SELECT *
     FROM sys.dm_exec_query_plan (plan_handle)
     ```
-
+1. Review the execution plan and tune the query by implementing the required changes.
 1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measures.
 
     ```sql
