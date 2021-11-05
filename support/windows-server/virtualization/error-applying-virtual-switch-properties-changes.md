@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4492254
 
 When you try to create Hyper-V virtual switch in Windows Server 2019 (Build 17763), you receive the following error message:
 
-![Screenshot of error message](./media/error-applying-virtual-switch-properties-changes/error-message-dialog-box.png)  
+:::image type="content" source="./media/error-applying-virtual-switch-properties-changes/error-message-dialog-box.png" alt-text="Screenshot of the error message which shows Error applying Virtual Switch Properties changes.":::  
 
 > The Virtual Machine Management Service failed to setup the listen socket for Virtual Machine migration connections for address \<IP address>: %%2147952449 (0x80072741).  
  **OS Name Microsoft Windows Server 2019 Standard**  

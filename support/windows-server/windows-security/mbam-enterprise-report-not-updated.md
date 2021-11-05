@@ -32,13 +32,13 @@ There is always latency based on how often the MBAM client talks to the MBAM ser
 
 To get updated reports, open SQL Management Studio on the MBAM Server. Under **SQL Server Agent**, click **Jobs** and then click **Create Cache**. Right-click on **Create Cache** and click **Start Job at Step...**.
 
-![Screenshot of the Start Job at Step option](./media/mbam-enterprise-report-not-updated/start-job-at-sept.png)
+:::image type="content" source="./media/mbam-enterprise-report-not-updated/start-job-at-sept.png" alt-text="Screenshot of the Microsoft SQL Server Management Studio window, in which CreateCache is selected under the Jobs folder.":::
 
 Once the Job is completed, refresh the web page for MBAM Enterprise Reports and you will see all the computers listed.
 
-![Screenshot of job status](./media/mbam-enterprise-report-not-updated/jobs-status.png)
+:::image type="content" source="./media/mbam-enterprise-report-not-updated/jobs-status.png" alt-text="Screenshot of the Start Jobs window, in which Start Job CreateCache and Execute job CreateCache are in Success status.":::
 
-![Screenshot of MBAM Enterprise Reports](./media/mbam-enterprise-report-not-updated/mbam-enterprise-report.png)
+:::image type="content" source="./media/mbam-enterprise-report-not-updated/mbam-enterprise-report.png" alt-text="Screenshot of the MBAM Enterprise Reports in the BitLocker Administration and Monitoring window.":::
 
 ## References
 

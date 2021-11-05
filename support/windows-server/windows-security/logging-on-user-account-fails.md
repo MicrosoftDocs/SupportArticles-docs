@@ -73,7 +73,7 @@ Follow these steps:
 1. Open a command prompt on a computer that has AD Management Tools (Domain Controller or a computer that has RSAT).
 1. Switch to the *`gro mem eva`* tool and then get the available commands as the following screenshot:
 
-    ![Screenshot of running gro mem eva commands](./media/logging-on-user-account-fails/gro-mem-eva-commands.png)
+    :::image type="content" source="./media/logging-on-user-account-fails/gro-mem-eva-commands.png" alt-text="Screenshot of the output after running the gro mem eva command.":::
 
 1. Connect to the DCs that are needed for the evaluation:
 
@@ -90,7 +90,7 @@ Follow these steps:
 
 1. The results will be stored in a TSV file in the current directory as the following screenshot:
 
-    ![Output for TSV results](./media/logging-on-user-account-fails/output.png)
+    :::image type="content" source="./media/logging-on-user-account-fails/output.png" alt-text="Screenshot shows that the results will be stored in a TSV file in the current directory.":::
 
 See the following guide to read a TSV file:
 
