@@ -27,12 +27,12 @@ You can use the following steps to troubleshoot high CPU usage issues in SQL Ser
 ## Step 1: Verify that SQL Server is causing high CPU
 
 You can use one of the following tools to check if SQL Server process is indeed contributing to high CPU:
+
 - Task Manager (Under Process tab, check CPU value for *SQL Server Windows NT-64 Bit* is close to 100%)
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
   - Counter: Process/%User Time, % Privileged Time
   - Instance:sqlservr
   > If you notice that % User Time is consistently above 90%, then it is a confirmation that SQL Server process is causing high CPU. But, if you notice that % Privileged time is consistently above 90% it is an indication that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administartor to analyze the root cause of this behavior.
-
 
 ## Step 2: Identify queries contributing to CPU usage 
 
@@ -46,13 +46,13 @@ SELECT TOP 10 s.session_id,
            r.reads,
            r.writes,
            r.total_elapsed_time / (1000 * 60) 'Elaps M',
-           Substring(st.TEXT, (r.statement_start_offset / 2) + 1,
+           SUBSTRING(st.TEXT, (r.statement_start_offset / 2) + 1,
            ((CASE r.statement_end_offset
-                WHEN -1 THEN Datalength(st.TEXT)
+                WHEN -1 THEN DATALENGTH(st.TEXT)
                 ELSE r.statement_end_offset
             END - r.statement_start_offset) / 2) + 1) AS statement_text,
-           Coalesce(Quotename(Db_name(st.dbid)) + N'.' + Quotename(Object_schema_name(st.objectid, st.dbid)) 
-           + N'.' + Quotename(Object_name(st.objectid, st.dbid)), '') AS command_text,
+           COALESCE(QUOTENAME(DB_NAME(st.dbid)) + N'.' + QUOTENAME(OBJECT_SCHEMA_NAME(st.objectid, st.dbid)) 
+           + N'.' + QUOTENAME(OBJECT_NAME(st.objectid, st.dbid)), '') AS command_text,
            r.command,
            s.login_name,
            s.host_name,
@@ -76,7 +76,6 @@ Then, if SQL is still using high CPU, proceed to the next step.
 
 1. Use the following query to get the estimated execution plan of the highest CPU bound query.
 
-    
     ```sql
     -- Captures the Total CPU time spent by a query along with the plan handle
     SELECT highest_cpu_queries.plan_handle,
@@ -97,6 +96,7 @@ Then, if SQL is still using high CPU, proceed to the next step.
     SELECT *
     FROM sys.dm_exec_query_plan (plan_handle)
     ```
+
 1. Review the execution plan and tune the query by implementing the required changes.
 1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measures.
 
@@ -202,7 +202,7 @@ PRINT '--Trace event details--'
                   CASE WHEN te.trace_event_id in (23, 24, 40, 41, 44, 45, 51, 52, 54, 68, 96, 97, 98, 113, 114, 122, 146, 180) 
                   THEN CAST(1 as bit) ELSE CAST(0 AS BIT) END AS expensive_event
             FROM sys.traces t 
-                  CROSS apply ::fn_trace_geteventinfo(t .id) AS e 
+                  CROSS APPLY ::fn_trace_geteventinfo(t .id) AS e 
                   JOIN sys.trace_events te ON te.trace_event_id = e.eventid 
                   JOIN sys.trace_columns tc ON e.columnid = trace_column_id) AS x
 GO
