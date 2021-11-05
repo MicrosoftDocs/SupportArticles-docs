@@ -23,13 +23,9 @@ search.appverid: MET150
 
 When you run into issues with Microsoft Outlook calendars such as meetings that are missing, shared calendars that can't be accessed and others, you can use [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) (SaRA) to run the Outlook Calendar diagnostic to troubleshoot and fix the issues. This advanced diagnostic closely mimics the scan logic that was introduced in the [Calendar Checking Tool for Outlook](https://support.microsoft.com/topic/information-about-the-calendar-checking-tool-for-outlook-calcheck-0d2ccac8-f8dd-9289-82cc-943650e36a76) (CalCheck) to identify and report issues with general settings such as permissions, free/busy publishing, delegate configuration, and automatic booking. It also alerts you to known issues with the Outlook calendar folder and calendar items.
 
-To scan an Outlook calendar which is having issues, you can either download the diagnostic to the computer or select it from the list of diagnostics within Microsoft Support and Recovery Assistant. Select the option that works best for you.
+To scan an Outlook calendar that is having issues, you can either download the diagnostic to the computer or select it from the list of diagnostics within Microsoft Support and Recovery Assistant. Select the option that works best for you.
 
-## Use CalCheck to scan a calendar for known issues
-
-SaRA can resolve issues in many programs. To scan Outlook calendar for known issues and create a detailed report of your Outlook configuration, use one of the following methods to run a calendar scan automatically or manually:
-
-### Download the Outlook Calendar diagnostic
+## Download the Outlook Calendar diagnostic
 
 1. On the machine that's running the Outlook version with calendar issues, open a browser tab and navigate to  [Advanced Diagnostics - Outlook Calendar](https://aka.ms/sara-calcheck).
 
@@ -51,6 +47,8 @@ SaRA can resolve issues in many programs. To scan Outlook calendar for known iss
 
 1. When prompted to confirm that you're using the affected machine, select  **Yes** > **Next**.
 
+    The scan will begin and is complete when you see **We're done collecting your Outlook configuration details**.
+
 ## Review Outlook calendar scan report
 
 The Outlook calendar scan report includes the following tabs:
@@ -62,7 +60,10 @@ The Outlook calendar scan report includes the following tabs:
 
     :::image type="content" source="media/scan-outlook-calendar-using-sara/detailed-view-tab.png" alt-text="Screenshot of detailed view tab." border="false":::
 - **Configuration Summary** - Lists the configuration settings that were analyzed during the scan to identify issues.
+    :::image type="content" source="media/scan-outlook-calendar-using-sara/configuration-summary-tab.png" alt-text="Screenshot of configuration summary tab." border="false":::
 
 ## Access Outlook calendar scan report
 
-Microsoft Support and Recovery Assistant saves the following files related to a calendar scan in the \user\appdata\local\saralogs\uploadlogs folder on the machine where the scan was run.
+Microsoft Support and Recovery Assistant saves the following files related to a calendar scan in the *\user\appdata\local\saralogs\uploadlogs* folder on the machine where the scan was run.
+
+:::image type="content" source="media/scan-outlook-calendar-using-sara/access-calendar-scan-report.png" alt-text="Screenshot of calendar scan report.":::
