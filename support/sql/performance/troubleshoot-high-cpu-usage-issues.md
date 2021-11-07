@@ -33,7 +33,7 @@ Use one of the following tools to check whether the SQL Server process is actual
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
   - Counter: Process/%User Time, % Privileged Time
   - Instance: sqlservr
-  > If you notice that **% User Time** is consistently greater than 90 percent, this would confir that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+  > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -152,7 +152,7 @@ If the issue is fixed, it's an indication of parameter-sensitive problem (PSP/pa
 
 ## Step 6: Disable heavy tracing
 
-Check [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects SQL Server performance and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
+Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects SQL Server performance and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
 
 Run the following queries to identify active XEvent or Server traces:
 
