@@ -33,6 +33,25 @@ Use one of the following tools to check whether the SQL Server process is actual
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
   - Counter: Process/%User Time, % Privileged Time
   - Instance: sqlservr
+  
+- You can use the following Powershell script to collect the counter data over 60 sec period
+  ```Powershell
+    $serverName = "YourServerName"
+  $Counters = @(
+	("\\$serverName" +"\Process(sqlservr*)\% User Time"),
+("\\$serverName" +"\Process(sqlservr*)\% Privileged Time")
+  )
+  Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
+	  $_.CounterSamples | ForEach {
+		  [pscustomobject]@{
+			  TimeStamp = $_.TimeStamp
+			  Path = $_.Path
+			  Value = ([Math]::Round($_.CookedValue, 3))
+		  } 
+
+		  Start-Sleep -s 2
+	  }
+  }
   > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
