@@ -53,16 +53,16 @@ CLUSTER_RESOURCE_GROUP=  # Specify the cluster resource group.
 SCALE_SET_NAME=  # Specify the name of the virtual machine scale set.
 
 az vmss extension set  \
-    --resource-group CLUSTER_RESOURCE_GROUP \
-    --vmss-name SCALE_SET_NAME \
+    --resource-group $CLUSTER_RESOURCE_GROUP \
+    --vmss-name $SCALE_SET_NAME \
     --name VMAccessForLinux \
     --publisher Microsoft.OSTCExtensions \
     --version 1.4 \
     --protected-settings '{"username":"azureuser", "ssh_key":"$(cat ~/.ssh/id_rsa.pub)"}'
 
 az vmss update-instances --instance-ids '*' \
-    --resource-group CLUSTER_RESOURCE_GROUP \
-    --name SCALE_SET_NAME
+    --resource-group $CLUSTER_RESOURCE_GROUP \
+    --name $SCALE_SET_NAME
 ```
 
 Update the `CLUSTER_RESOURCE_GROUP` and `SCALE_SET_NAME` definitions to match your environment. This example also uses *~/.ssh/id_rsa.pub* as the location for your SSH public key. The default user name for the AKS nodes is *azureuser*.
