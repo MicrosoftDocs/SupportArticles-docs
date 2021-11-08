@@ -50,10 +50,10 @@ Get-OrganizationRelationship | ft name, domainnames
 
 - If the domain isn't included in the returned result, [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship) with the domain, or [add the domain to an existing organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship#use-the-exchange-admin-center-to-create-an-organization-relationship).
 
-- If the domain is included in the returned result, run the following [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable the free/busy access. The cmdlet sets the value of the `FreeBusyAccessEnabled` parameter to `$true`.
+- If the domain is included in the returned result, run the  [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable the free/busy access. For example:
 
     ```powershell
-    Set-OrganizationRelationship -Identity Contoso -FreeBusyAccessEnabled $true
+    Set-OrganizationRelationship -Identity <Contoso> -FreeBusyAccessEnabled $true
     ```
 
 ## Error 2: The organization relationship can't be used
@@ -69,10 +69,12 @@ This error occurs because the values of the following parameters aren't set corr
 
 ### Resolution
 
-Run the `Get-OrganizationRelationship` cmdlet to check the parameters value. If any value is set incorrectly, use the `Set-OrganizationRelationship` cmdlet to set these parameters with the required values. For example:
+Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the parameters value. 
 
 **Note**: On-premises Exchange organizations can run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check these values across the routing domain.
 
+If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters with the required values. For example:
+
 ```powershell
-Set-OrganizationRelationship -Identity Contoso -TargetAutodiscoverEpr "https://contoso.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.contoso.com" -TargetSharingEpr "https://outlook.office365.com/ews/Exchange.asmx"
+Set-OrganizationRelationship -Identity <Contoso> -TargetAutodiscoverEpr "https://contoso.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.contoso.com" -TargetSharingEpr "https://outlook.office365.com/ews/Exchange.asmx"
 ```
