@@ -90,7 +90,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
    > [!NOTE]  
    > If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs are not permitted.
 4. Specify a license server, and then select **Add**.  
-   :::image type="content" source="media/cannot-connect-rds-no-license-server/rdlicensing-configure.png" alt-text="RD Licensing Manager, showing a correctly configured license server":::
+   :::image type="content" source="media/cannot-connect-rds-no-license-server/rdlicensing-configure.png" alt-text="configure the RD Licensing.":::
 
 ### <a id=nordcb></a>Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
 
