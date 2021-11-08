@@ -27,6 +27,6 @@ landingContent:
           - text: Capture a TCP dump from a Linux node in AKS
             url: ./capture-tcp-dump-linux-node-aks.md
           - text: Capture TCP packets from a pod in AKS
-            url: ./identify-high-cpu-consuming-containers-aks.md
+            url: ./packet-capture-pod-level.md
           - text: Identify High CPU consuming containers in AKS 
             url: ./identify-high-cpu-consuming-containers-aks.md

@@ -65,7 +65,7 @@ az vmss update-instances --instance-ids '*' \
     --name SCALE_SET_NAME
 ```
 
-Update the CLUSTER_RESOURCE_GROUP and SCALE_SET_NAME definitions to match your environment. This example also uses *~/.ssh/id_rsa.pub* as the location for your SSH public key. The default user name for the AKS nodes is *azureuser*.
+Update the `CLUSTER_RESOURCE_GROUP` and `SCALE_SET_NAME` definitions to match your environment. This example also uses *~/.ssh/id_rsa.pub* as the location for your SSH public key. The default user name for the AKS nodes is *azureuser*.
 
 ### Make sure tcpdump is installed
 
