@@ -76,6 +76,7 @@ This scenario is meant for troubleshooting issues on HPC size VMs, meaning H-Ser
 
 >[!Note]
 >Running the HPC scenario directly from the Azure Portal is not supported at this time, so PerfInsights must be downloaded and run from the command line to use it.
+
 ## What kind of information is collected by PerfInsights
 
 Information about the Linux virtual machine, operating system, block devices, high resource consumers, configuration, and various logs are collected. Here are more details:
@@ -146,9 +147,10 @@ Information about the Linux virtual machine, operating system, block devices, hi
 
 ### Performance diagnostics trace
 
-Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. Rules are displayed in the report under the Category -> Finding tab. 
+Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. Rules are displayed in the report under the Category -> Finding tab.
 
 Each rule consists of the following:
+
 - Finding: Description of the finding.
 - Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation that provide more information on the finding and/or recommendation.
 - Impact Level: Represents the potential for having an impact on performance.
@@ -156,19 +158,20 @@ Each rule consists of the following:
 The following cateogries of rules are currently supported:
 
 - High resource usage:
+
     * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
     * High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
     * High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+
 - Storage: Detects specific storage configurations.
 - Memory: Detects specific memory configurations.
 - GPU: Detects specific GPU configurations.
 - Network: Detects specific network settings.
-- System: Detects specific system settings. 
-
+- System: Detects specific system settings.
 
 >[!Note]
 >[`*`] PCI information is not yet collected on Debian and SLES distributions.
-> 
+>
 >[`**`] /var/log/sysstat or /var/log/sa contains the System Activity Report (SAR) files that are collected by the sysstat package. If the sysstat package is not installed on the VM, the PerfInsights tool provides a recommendation to install it.
 
 ## Run the PerfInsights Linux on your VM
@@ -240,7 +243,7 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py
     ```
 
-    ![Screenshot of PerfInsights Linux commandline output](media/how-to-use-perfinsights-linux/perfinsights-linux-commandline.png)
+    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-commandline.png" alt-text="Screenshot of PerfInsights Linux command-line output.":::
 
     The basic syntax for running PerfInsights scenarios is:
 
@@ -281,8 +284,9 @@ Within the **PerformanceDiagnostics\_yyyy-MM-dd\_hh-mm-ss-fff.tar.gz** file, you
 
 The **Overview** tab provides basic run details and virtual machine information. The **Findings** tab displays a summary of the recommendations from all the different sections of the PerfInsights report.
 
-![Screenshot of the Overview tab of the PerfInsights Report.](media/how-to-use-perfinsights-linux/perfinsights-linux-overview.png)  
-![Screenshot of the Linux tab of the PerfInsights Report.](media/how-to-use-perfinsights-linux/perfinsights-linux-findings-tab.png)
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-overview.png" alt-text="Screenshot of the Overview tab of the PerfInsights Report.":::  
+
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-findings-tab.png" alt-text="Screenshot of the Findings tab of the PerfInsights Report.":::
 
 > [!NOTE]
 > Findings categorized as high are known issues that might cause performance issues. Findings categorized as medium represent non-optimal configurations that do not necessarily cause performance issues. Findings categorized as low are informative statements only.
@@ -293,20 +297,19 @@ Review the recommendations and links for all high and medium findings. Learn abo
 
 **CPU** tab provides information about system-wide CPU consumption during the PerfInsights run. Information about high CPU usage periods and top long running CPU consumers will be helpful to troubleshoot high CPU-related issues.
 
-![Screenshot of PerfInsights Report CPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-cpu-tab.png)
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-cpu-tab.png" alt-text="Screenshot of PerfInsights Report CPU tab.":::
 
 ### GPU tab
 
 **GPU** tab provides information about findings that will be helpful in troubleshooting GPU-related issues.
 
-![Screenshot of PerfInsights Report GPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-gpu-tab.png)
-
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-gpu-tab.png" alt-text="Screenshot of PerfInsights Report GPU tab.":::
 
 ### Network tab
 
 **Network** tab provides information about network configuration and status. Information about network-related findings, including InfiniBand issues in the HPC scenario, can be found here.
 
-![Screenshot of Network tab](media/how-to-use-perfinsights-linux/perfinsights-linux-network-tab.png)
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-network-tab.png" alt-text="Screenshot of Network tab.":::
 
 ### Storage tab
 
@@ -314,18 +317,19 @@ The **Findings** section displays various findings and recommendations related t
 
 The **Block Devices** and other related sections such as **Partitions**, **LVM**, and **MDADM** tabs describe how block devices are configured and related to each other.
 
-![Screenshot of storage tab](media/how-to-use-perfinsights-linux/perfinsights-linux-storage-tab.png)  
-![Screenshot of MDADM tab](media/how-to-use-perfinsights-linux/perfinsights-linux-mdadm-config.png)
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-storage-tab.png" alt-text="Screenshot of Storage tab.":::
+
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-mdadm-config.png" alt-text="Screenshot of MDADM tab.":::
 
 ### Linux tab
 
 The **Linux** tab contains information on the hardware and the operating system running in your VM. Details include a list of running processes and information about Guest Agent, PCI, CPU, GPU, Drivers, and LIS drivers.
 
-![Screenshot of Linux tab](media/how-to-use-perfinsights-linux/perfinsights-linux-tab.png)
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-tab.png" alt-text="Screenshot of the Linux tab and the details.":::
 
 Or on a GPU-enabled VM:
 
-![Screenshot of GPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-linux-gpu-tab.png)
+:::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-linux-gpu-tab.png" alt-text="Screenshot of GPU tab under Linux tab and the details.":::
 
 ## Next steps
 
@@ -333,7 +337,7 @@ You can upload diagnostics logs and reports to Microsoft Support for further rev
 
 The following screenshot shows a message similar to what you might receive:
 
-![Screenshot of sample message from Microsoft Support](media/how-to-use-perfinsights-linux/support-email.png)
+:::image type="content" source="media/how-to-use-perfinsights-linux/support-email.png" alt-text="Screenshot of sample message from Microsoft Support。":::
 
 Follow the instructions in the message to access the file transfer workspace. For additional security, you have to change your password on first use.
 

@@ -89,7 +89,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
         detail partition
         ```
 
-        :::image type="content" source="media/os-not-found/4018937_en_1.png" alt-text="Screenshot of disk partition output":::
+        :::image type="content" source="media/os-not-found/detail-partition.png" alt-text="Screenshot of disk partition output, showing partition 1 is not active.":::
 
         If the partition is active, go to "Step 2: Repair the Boot Configuration data."
 
