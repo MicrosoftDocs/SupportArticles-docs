@@ -26,7 +26,7 @@ When an automatic failover is triggered on the instance of SQL Server that is ho
 > The state of the local availability replica in availability group '\<Group name>' has changed from 'RESOLVING_NORMAL' to 'PRIMARY_PENDING'  
 The state of the local availability replica in availability group '\<Group name>' has changed from 'PRIMARY_PENDING' to 'PRIMARY_NORMAL'
 
-:::image type="content" source="./media/troubleshooting-automatic-failover-problems/error-log-notepad.png" alt-text="Screenshot of the error log when an automatic failover is triggered successfully.":::
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log-notepad.png" alt-text="Screenshot of the error log when an automatic failover is triggered successfully.":::
 
 > [!NOTE]
 > The secondary replica transitions successfully from a **RESOLVING_NORMAL** status to a **PRIMARY_NORMAL** status.
@@ -37,7 +37,7 @@ If an automatic failover event is not successful, the secondary replica does not
 
 For example, in the following image, SQL Server Management Studio reports that the secondary replica is in Resolving status because the automatic failover process was unable to transition the secondary replica into the primary role:
 
-:::image type="content" source="./media/troubleshooting-automatic-failover-problems/availability-replicas.png" alt-text="Screenshot of the availability replicas in SQL Server Management Studio.":::
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/availability-replicas.png" alt-text="Screenshot of the availability replicas in SQL Server Management Studio.":::
 
 This article describes several possible reasons that automatic failover may not succeed, and how to diagnose each cause.  
 
@@ -55,7 +55,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
       Get-ClusterLog -Node <SQL Server node name> -TimeSpan 15
       ```
 
-      :::image type="content" source="./media/troubleshooting-automatic-failover-problems/windows-powershell.png" alt-text="Screenshot of the Windows cluster log in Windows PowerShell." border="false":::
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/windows-powershell.png" alt-text="Screenshot of the Windows cluster log in Windows PowerShell." border="false":::
 
       > [!NOTE]
       >
@@ -68,7 +68,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
 
       > Not failing over group \<Resource name>, failoverCount 3, failoverThresholdSetting \<Number>, computedFailoverThreshold 2
 
-      :::image type="content" source="./media/troubleshooting-automatic-failover-problems/cluster-notepad.png" alt-text="Screenshot of Cluster.log file in Notepad.":::
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/cluster-notepad.png" alt-text="Screenshot of Cluster.log file in Notepad.":::
 
 - Step 2: Check the Maximum Failures in the Specified Period property
 
@@ -77,7 +77,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
    3. In the **Roles** pane, right-click the clustered resource, and then click **Properties**.
    4. Click the **Failover** tab, and check the **Maximum Failures in the Specified Period** value.
 
-      :::image type="content" source="./media/troubleshooting-automatic-failover-problems/properties.png" alt-text="Screenshot of the Maximum Failures in the Specified Period property." border="false":::
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/properties.png" alt-text="Screenshot of the Maximum Failures in the Specified Period property.":::
 
       > [!NOTE]
       > The default behavior specifies that if the clustered resource fails three times in a six hour period, it should remain in the failed state. For an availability group, this means the replica is left in the RESOLVING state.
@@ -109,7 +109,7 @@ If the NT AUTHORITY\SYSTEM login account lacks any of these permissions on the a
       Get-ClusterLog -Node <SQL Server node name> -TimeSpan 15
       ```
 
-      :::image type="content" source="./media/troubleshooting-automatic-failover-problems/windows-powershell.png" alt-text="Screenshot of the Windows cluster log in Windows PowerShell in Case 2." border="false":::
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/windows-powershell.png" alt-text="Screenshot of the Windows cluster log in Windows PowerShell in Case 2." border="false":::
 
    2. Open the Cluster.log file in Notepad in order to review the Windows cluster log.
    3. You can find error messages that resemble the following:
@@ -117,7 +117,7 @@ If the NT AUTHORITY\SYSTEM login account lacks any of these permissions on the a
       > Failed to run diagnostics command.
       The user does not have permission to perform this action.
 
-      :::image type="content" source="./media/troubleshooting-automatic-failover-problems/error-messages.png" alt-text="Screenshot of Cluster.log file in Notepad in Case 2." border="false":::
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/error-messages.png" alt-text="Screenshot of Cluster.log file in Notepad in Case 2." border="false":::
 
 Conclusion
 
@@ -137,7 +137,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
 
 One or more databases are not synchronized or have not joined the availability group
 
-:::image type="content" source="./media/troubleshooting-automatic-failover-problems/error-log.png" alt-text="Screenshot of the SQL Server error log in Case 3." border="false":::
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log.png" alt-text="Screenshot of the SQL Server error log in Case 3." border="false":::
 
 To check whether the availability databases were in the SYNCHRONIZED status, follow these steps:
 
@@ -151,7 +151,7 @@ To check whether the availability databases were in the SYNCHRONIZED status, fol
     Select database_name, is_failover_ready from sys.dm_hadr_database_replica_cluster_states where replica_id in (select replica_id from sys.dm_hadr_availability_replica_states)
     ```
 
-   :::image type="content" source="./media/troubleshooting-automatic-failover-problems/sql-query.png" alt-text="Screenshot of SQL query in Case 3.":::
+   :::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-query.png" alt-text="Screenshot of SQL query in Case 3.":::
 
 Conclusion
 
@@ -168,7 +168,7 @@ To check for this configuration:
 1. In dialog check **Force Encryption**, if set to **Yes**, change to **No**.
 1. Retest failover.  
 
-:::image type="content" source="./media/troubleshooting-automatic-failover-problems/sql-config.png" alt-text="Screenshot of the SQL Native Client 11.0 Configuration properties in SQL Server Configuration Manager." border="false":::
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-config.png" alt-text="Screenshot of the SQL Native Client 11.0 Configuration properties in SQL Server Configuration Manager." border="false":::
 
 Conclusion
 

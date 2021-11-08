@@ -56,12 +56,12 @@ To change the SSMS connection string, follow these steps:
 
 1. In Object Explorer, click **Connect**, and then click **Database Engine**.
 
-    :::image type="content" source="./media/object-explorer-intermittently-crashes/database-engine.png" alt-text="Screenshot of the Connect menu of Object Explorer." border="false":::
+    :::image type="content" source="media/object-explorer-intermittently-crashes/database-engine.png" alt-text="Screenshot of the Connect menu of Object Explorer.":::
 
 2. In the **Connect to Server** window, click the **Options** button.
 
-    :::image type="content" source="./media/object-explorer-intermittently-crashes/connect-to-server.png" alt-text="Screenshot of the Connect to Server Window.":::
+    :::image type="content" source="media/object-explorer-intermittently-crashes/connect-to-server.png" alt-text="Screenshot of the Connect to Server window.":::
 
 3. On the **Connection Properties** tab, enter *master* in the **Connect to database** field, and then click **Connect**.
 
-    :::image type="content" source="./media/object-explorer-intermittently-crashes/connection-properties.png" alt-text="Screenshot of the Connection Properties tab of connect options.":::
+    :::image type="content" source="media/object-explorer-intermittently-crashes/connection-properties.png" alt-text="Screenshot of the Connection Properties tab of the Connect to Server window.":::
