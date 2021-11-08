@@ -119,7 +119,7 @@ If SQL Server is still using high CPU, go to the next step.
     FROM sys.dm_exec_query_plan (plan_handle)
     ```
 
-1. Review the execution plan, and tune the query by implementing the required changes.
+1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query:
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." border="true":::
 
