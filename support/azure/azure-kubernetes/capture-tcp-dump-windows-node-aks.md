@@ -1,7 +1,7 @@
 ---
 title: Capture a TCP dump from a Windows node in an AKS cluster
 description: Understand how to capture a TCP dump from a Windows node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/05/2021
+ms.date: 11/08/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 manager: gwallace
@@ -41,9 +41,9 @@ aksapwin000001                      Ready    agent   3m50s   v1.20.9   10.240.0.
 aksapwin000002                      Ready    agent   3m32s   v1.20.9   10.240.0.226   <none>        Windows Server 2019 Datacenter   10.0.17763.2237    docker://20.10.6
 ```
 
-### Connect to a node
+### Connect to a Windows node
 
-The next step is to establish a connection to the AKS cluster node. You authenticate either using an SSH key, or using the Windows admin password in an RDP connection. The specific steps for SSH or RDP are outlined in the following sections.
+The next step is to establish a connection to the AKS cluster node. You authenticate either using an SSH key, or using the Windows admin password in an RDP connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. The specific steps for SSH or RDP are outlined in the following sections.
 
 Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*.
 
@@ -183,7 +183,7 @@ Next, follow these steps to copy the dump files from the jump VM to your machine
 
 1. In File Explorer on the jump VM, go to the root directory of your c: drive.
 1. Choose the **AKS_node_name.cab** and **AKS_node_name.etl** files.
-1. Drag the two files to the connection named **C on <myComputerName>**.
+1. Drag the two files to the connection named **C on \<myComputerName>**.
 
     :::image type="content" source="./media/capture-tcp-dump-windows-node-aks/jump-vm-file-explorer.png" alt-text="Screenshot of File Explorer on the jump virtual machine. Drag AKS_node_name.cab and AKS_node_name.etl from the jump VM to your local machine drive." lightbox="./media/capture-tcp-dump-windows-node-aks/jump-vm-file-explorer.png":::
 
