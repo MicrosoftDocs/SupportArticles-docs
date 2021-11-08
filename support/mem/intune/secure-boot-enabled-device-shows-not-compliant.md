@@ -15,11 +15,11 @@ _Original KB number:_ &nbsp; 4456680
 
 You create a compliance policy for Windows 10 devices in Intune. You set the **Require Secure Boot to be enabled on the device** setting to **Require**.
 
-:::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/require-secure-boot.png" alt-text="screenshot of Require secure boot":::
+:::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/require-secure-boot.png" alt-text="Screenshot of the Require Secure Boot to be enabled on the device setting.":::
 
 In this scenario, a Windows 10 device that meets the requirement is marked as **Not Compliant**.
 
-:::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/not-compliant.png" alt-text="screenshot of Not compliant":::
+:::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/not-compliant.png" alt-text="Screenshot shows Require Secure Boot to be enabled on the device Not compliant.":::
 
 ## Cause
 
@@ -29,7 +29,7 @@ For more information about supported versions, see [Supported versions for devic
 
 For more information about how MDM uses the Health Attestation Service, see [Protect, control, and report on the security status of Windows 10-based devices](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices#protect-control-and-report-on-the-security-status-of-windows-10-based-devices).
 
-## More Information
+## More information
 
 To check whether your device meets the hardware requirements for the health attestation feature:
 
@@ -37,7 +37,7 @@ To check whether your device meets the hardware requirements for the health atte
 
     Type `tpm.msc` in the **Run** box, and then check the value in **Specification Version**.
 
-    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/tpm-info.png" alt-text="screenshot of TPM info" border="false":::
+    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/tpm-info.png" alt-text="Screenshot of TPM Management on Local Computer window, where the Specification Version is highlighted.":::
 
     > [!NOTE]
     > If the TPM version is 1.2 and your device supports TPM 2.0, contact your device manufacturer to update to TPM 2.0.
@@ -46,7 +46,7 @@ To check whether your device meets the hardware requirements for the health atte
 
 3. In **System Summary**, verify that **BIOS Mode** is **UEFI**, and **PCR7 Configuration** is **Bound**.
 
-    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/system-information.png" alt-text="screenshot of System Information":::
+    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/system-information.png" alt-text="Screenshot of System Summary,where BIOS Mode is UEFI, and PCR7 Configuration is Bound.":::
 
 4. Open an elevated PowerShell command prompt, and run the following command:
 
@@ -64,4 +64,4 @@ To check whether your device meets the hardware requirements for the health atte
 
     Verify that the drive is protected by PCR 7.
 
-    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/pcr-validation-profile.png" alt-text="screenshot of PCR validation profile" border="false":::
+    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/pcr-validation-profile.png" alt-text="Screenshot of the PCR validation profile." border="false":::
