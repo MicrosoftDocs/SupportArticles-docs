@@ -231,7 +231,7 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   > [!NOTE]
   > The RTM installation of the product is supported. However, you have to install the respective service packs after the initial setup is complete. You will see the following message on the Solution Center page:
 
-  ![Solution Center page](./media/use-sql-server-in-windows/solution-center-page-image.png)
+  :::image type="content" source="media/use-sql-server-in-windows/solution-center-page-for-sql-server-2008-r2.png" alt-text="Screenshot of the SQL Server 2008 R2 setup problem details in Solution Center." border="false":::
 
   For more information, see [How to obtain the latest service pack for SQL Server 2008 R2](https://support.microsoft.com/help/2527041).
 
@@ -242,14 +242,14 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   > [!NOTE]
   > The RTM installation of the product is supported. However, you have to install the respective service packs after the initial setup is complete. Your SQL server 2008 installation is not supported unless you apply Service Pack 4 after you install the RTM edition. You will see the following message on the Solution Center page.
 
-  ![the Solution Center page](./media/use-sql-server-in-windows/solution-center-page-image2.png)
+  :::image type="content" source="media/use-sql-server-in-windows/solution-center-page-for-sql-server-2008.png" alt-text="Screenshot of the SQL Server 2008 setup problem details in Solution Center." border="false":::
 
   For more information, see [How to obtain the latest service pack for SQL Server 2008](https://support.microsoft.com/help/968382).
 
   > [!IMPORTANT]
   > The following dialog box appears in SQL Server 2008 R2 and SQL Server 2008 when you run the Setup program.
 
-  ![The following dialog box appears in SQL Server 2008 R2 and SQL Server 2008](./media/use-sql-server-in-windows/dialog-box-appears-in-sql-server.png)
+  :::image type="content" source="media/use-sql-server-in-windows/dialog-box-appears-in-sql-server.png" alt-text="Screenshot of the Program Compatibility Assistant dialog box." border="false":::
 
   After the SQL Server Setup program is finished, you have to install service packs before you run SQL Server on this version of Windows.
 

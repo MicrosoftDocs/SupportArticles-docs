@@ -91,7 +91,7 @@ To determine the version of SQL Server, you can use any of the following methods
   > - SQL Server 2014 Service Pack 1 CU3 and later versions
   > - SQL Server 2012 Service Pack 2 CU7 and later versions
   >
-  >   ![Example of changed output](./media/determine-version-edition-update-level/changed-output-image.jpg)
+  >   :::image type="content" source="media/determine-version-edition-update-level/changed-output.png" alt-text="Screenshot of the example of changed output.":::
 
 - **Method 4:** Connect to the instance of SQL Server, and then run the following query in SQL Server Management Studio (SSMS):
 
@@ -126,7 +126,7 @@ To determine the version of SQL Server, you can use any of the following methods
 
   A snapshot of a sample report is as follows:
 
-  ![The screen shot showing a sample report](./media/determine-version-edition-update-level/sample-report.png)  
+  :::image type="content" source="media/determine-version-edition-update-level/sample-report.png" alt-text="Screenshot showing a sample Installed SQL Server Features Discovery report." border="false":::  
 
 ## Determine the version of SQL Server Client tools
 
@@ -134,7 +134,7 @@ To determine the version of SQL Server, you can use any of the following methods
 
   To determine which versions of the client tools are installed on your system, start Management Studio, and then click **About** on the **Help** menu. (See the following screenshot.)
 
-  ![About SSMS](./media/determine-version-edition-update-level/ssms-image.jpg)
+  :::image type="content" source="media/determine-version-edition-update-level/ssms-about.png" alt-text="Screenshot of the About Microsoft SQL Server Management Studio window." border="false":::
 
   Starting with SQL Server 2016, SQL Server management studio is offered as a separate download. For additional information about various versions of the tool, review [Release notes for SQL Server Management Studio (SSMS)](/sql/ssms/release-notes-ssms).
 

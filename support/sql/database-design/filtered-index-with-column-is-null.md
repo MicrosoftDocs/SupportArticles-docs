@@ -37,7 +37,7 @@ select count(*) from dbo.filter_test where action_date is null and action_type=1
 
 In this scenario, the filtered index is not used. Instead, the clustered index is used.
 
-![Cluster index scan](./media/filtered-index-with-column-is-null/cluster-index-scan-image.jpg)
+:::image type="content" source="media/filtered-index-with-column-is-null/cluster-index-scan.png" alt-text="Diagram shows the clustered index scan is used.":::
 
 ## Resolution
 
@@ -47,7 +47,7 @@ To resolve this issue, include the column that is tested as NULL in the returned
 CREATE NONCLUSTERED INDEX New_i_action_filt_action_date_type ON dbo.filter_test (action_type) include (action_date) WHERE action_date IS NULL
 ```
 
-![Index Seek](./media/filtered-index-with-column-is-null/index-seek-image.jpg)
+:::image type="content" source="media/filtered-index-with-column-is-null/index-seek.png" alt-text="Diagram shows the filtered index seek is used.":::
 
 ## More information
 

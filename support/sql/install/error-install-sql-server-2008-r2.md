@@ -112,7 +112,7 @@ To resolve the problem, use one of the following methods:
 
        See image
 
-       ![Rename image](./media/error-install-sql-server-2008-r2/rename.png)
+       :::image type="content" source="media/error-install-sql-server-2008-r2/rename.png" alt-text="Screenshot of the right-click menu of Setup.rll" border="false":::
 
     4. Type *setup.rll.old*, and then press **Enter**.
 

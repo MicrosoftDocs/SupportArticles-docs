@@ -50,7 +50,7 @@ _Original KB number:_ &nbsp; 2681562
 
   An error message that resembles the following may be displayed during SQL Server 2012 installation when the .NET Framework is not enabled.
 
-  :::image type="content" source="./media/sql-server-2012-setup-issues/error-message-image.png" alt-text="Screenshot of error message." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/error-message.png" alt-text="Screenshot of the SQL Server 2012 setup error message." border="false":::
 
   Prevention
 
@@ -75,7 +75,7 @@ _Original KB number:_ &nbsp; 2681562
 
   In this situation, users may receive an error message that resembles the following.
 
-    :::image type="content" source="./media/sql-server-2012-setup-issues/users-may-receive-an-error-message.png" alt-text="Screenshot of users may receive an error message that resembles the following." border="false":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/users-may-receive-an-error-message.png" alt-text="Screenshot of .NET Framework 3.5 installation error message." border="false":::
 
   Cause
 
@@ -109,11 +109,11 @@ _Original KB number:_ &nbsp; 2681562
 
   Windows Server 2012 R2 and Windows Server 2012 - Full Server
 
-  :::image type="content" source="./media/sql-server-2012-setup-issues/server-2012-full-server.png" alt-text="Screenshot of Windows Server 2012 R2 and Windows Server 2012 - Full Server." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/server-2012-full-server.png" alt-text="Screenshot of the error message on Windows Server 2012 R2 and Windows Server 2012 - Full Server." border="false":::
 
   Windows Server 2012 R2 and Windows Server 2012 - Server Core
 
-  :::image type="content" source="./media/sql-server-2012-setup-issues/server-2012-server-core.png" alt-text="Screenshot of Windows Server 2012 R2 and Windows Server 2012 - Server Core." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/server-2012-server-core.png" alt-text="Screenshot of the error message on Windows Server 2012 R2 and Windows Server 2012 - Server Core." border="false":::
 
   Prevention
 
@@ -232,7 +232,7 @@ _Original KB number:_ &nbsp; 2681562
     > Operation failed with 0x8007000B  
     An attempt was made to load a program with an incorrect format.
 
-    :::image type="content" source="./media/sql-server-2012-setup-issues/program-with-an-incorrect-format.png" alt-text="Screenshot of an attempt was made to load a program with an incorrect format." border="true":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/program-with-an-incorrect-format.png" alt-text="Screenshot of the error message: an attempt was made to load a program with an incorrect format." border="true":::
 
     Prevention
 
@@ -253,11 +253,11 @@ _Original KB number:_ &nbsp; 2681562
   
   In this scenario, the installation fails. You receive an error message that resembles the following.
   
-  :::image type="content" source="./media/sql-server-2012-setup-issues/install-a-sql-server-failover-cluster.png" alt-text="Screenshot of the installation fails." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/install-a-sql-server-failover-cluster.png" alt-text="Screenshot of the installation fails." border="false":::
 
   The details of the error resemble the following.
   
-  :::image type="content" source="./media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot of the details of the error resemble the following." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot of the details of the rule check error." border="false":::
   
   Cause
   

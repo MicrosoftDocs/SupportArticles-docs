@@ -87,7 +87,7 @@ If .NET Framework 3.5.1 is not listed as an installed feature, use one of the fo
     > [!NOTE]
     > If you do not expand the **.NET Framework 3.5.1 Features**  item and check it, the following Add Features Wizard  is started:
 
-    ![Add features wizard](./media/understanding-dotnet-framework-requirements/2014321a.PNG)
+    :::image type="content" source="media/understanding-dotnet-framework-requirements/add-features-wizard.png" alt-text="Screenshot of the Add Features Wizard window." border="false":::
 
     If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then click to select the .NET Framework 3.5.1  check box.
 
@@ -109,7 +109,7 @@ Add-WindowsFeature as-net-framework
 > [!NOTE]
 > See the screen shot for more information:
 
-![PowerShell screen shot](./media/understanding-dotnet-framework-requirements/2014321a.PNG)
+:::image type="content" source="media/understanding-dotnet-framework-requirements/windows-powershell.png" alt-text="Screenshot of the Windows PowerShell window when you type the commands." border="false":::
 
 ## References  
 
