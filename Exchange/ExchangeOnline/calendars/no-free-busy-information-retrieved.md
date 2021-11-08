@@ -25,7 +25,7 @@ appliesto:
 
 An organization relationship that has delegated authentication configured is set up to share calendar information. When you try to view the free/busy information of a user in another organization by using Scheduling Assistant, no free/busy information is displayed.
 
-Additionally, one of the following error messages is displayed with the **ErrorMailRecipientNotFound** ResponseCode in the response body of the `GetUserAvailabilityInternal` action. To determine which error you have, sign in Outlook on the Web, open Developer Tools by pressing F12 and select the **Network** tab.
+Additionally, one of the following error messages is displayed with the **ErrorMailRecipientNotFound** ResponseCode in the response body of the `GetUserAvailabilityInternal` action. To view the error message, sign in to Outlook on the Web, open Developer Tools by pressing F12 and select the **Network** tab.
 
 ## Error 1: Unable to resolve e-mail address to an Active Directory object
 
@@ -42,27 +42,23 @@ This error occurs in one of the following situations:
 
 ### Resolution
 
-Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the domain name information of the organization relationship. For example:
+Run the following [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to get the domains with which an organization relationship has been set up:
 
 ```powershell
 Get-OrganizationRelationship | ft name, domainnames
 ```
 
-- If the organization relationship isn't established with the domain, run the [New-OrganizationRelationship](/powershell/module/exchange/new-organizationrelationship) cmdlet as follows, or use the Exchange admin center to [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship).
+- If the domain isn't included in the returned result, [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship) with the domain, or [add the domain to an existing organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship#use-the-exchange-admin-center-to-create-an-organization-relationship).
+
+- If the domain is included in the returned result, run the following [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable the free/busy access. The cmdlet sets the value of the `FreeBusyAccessEnabled` parameter to `$true`.
 
     ```powershell
-    New-OrganizationRelationship -Name "Contoso" -DomainNames "contoso.com"
-    ```
-
-- If the organization relationship is established with the domain, run the following [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable the free/busy access. The cmdlet sets the value of the `FreeBusyAccessEnabled` parameter to `$true`.
-
-    ```powershell
-    Set-OrganizationRelationship -FreeBusyAccessEnabled $true
+    Set-OrganizationRelationship -Identity Contoso -FreeBusyAccessEnabled $true
     ```
 
 ## Error 2: The organization relationship can't be used
 
-> The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: **The organization relationship \<name of the organization relationship\> can't be used.** Please confirm that the organization relationship is configured correctly.\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
+> The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: **The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
 ### Cause
 
@@ -78,5 +74,5 @@ Run the `Get-OrganizationRelationship` cmdlet to check the parameters value. If 
 **Note**: On-premises Exchange organizations can run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check these values across the routing domain.
 
 ```powershell
-Set-OrganizationRelationship -TargetAutodiscoverEpr "https://contoso.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.contoso.com" -TargetSharingEpr "https://outlook.office365.com/ews/Exchange.asmx"
+Set-OrganizationRelationship -Identity Contoso -TargetAutodiscoverEpr "https://contoso.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.contoso.com" -TargetSharingEpr "https://outlook.office365.com/ews/Exchange.asmx"
 ```
