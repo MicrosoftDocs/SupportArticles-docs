@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot high CPU usage issues
+title: Troubleshoot high-CPU-usage issues
 description: Provides a procedure to help you fix high-CPU-usage issues for a server that is running SQL Server.
 ms.date: 11/05/2021
 ms.prod-support-area-path: Performance
@@ -54,11 +54,11 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-  > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+  > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the Sqlservr.exe process is causing the high CPU, identify the queries that are responsible for this by using the following query:
+If the Sqlservr.exe process is causing high CPU, identify the queries that are responsible for this by using the following query:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -154,7 +154,7 @@ If SQL Server is still using high CPU, go to the next step.
 
 ## Step 5: Investigate parameter-sensitive issues
 
-Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high CPU usage issue is fixed.
+Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high-CPU-usage issue is fixed.
 
 If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
