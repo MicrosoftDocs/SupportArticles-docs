@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; SQL Server
 
 This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server.
 
-Although there are many possible causes of high CPU that occuir in SQL Server, the following are the most common:
+Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common:
 
 - High logical reads that are caused by table or index scans because of the following:
   - Out-of-date statistics
@@ -34,24 +34,26 @@ Use one of the following tools to check whether the SQL Server process is actual
   - Counter: Process/%User Time, % Privileged Time
   - Instance: sqlservr
   
-- You can use the following Powershell script to collect the counter data over 60 sec period
-  ```Powershell
-    $serverName = "YourServerName"
-  $Counters = @(
-	("\\$serverName" +"\Process(sqlservr*)\% User Time"),
-("\\$serverName" +"\Process(sqlservr*)\% Privileged Time")
-  )
-  Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
-	  $_.CounterSamples | ForEach {
-		  [pscustomobject]@{
-			  TimeStamp = $_.TimeStamp
-			  Path = $_.Path
-			  Value = ([Math]::Round($_.CookedValue, 3))
-		  } 
+- You can use the following Powershell script to collect the counter data over 60 sec period:
 
-		  Start-Sleep -s 2
-	  }
-  }
+  ```Powershell
+      $serverName = "YourServerName"
+      $Counters = @(
+        ("\\$serverName" +"\Process(sqlservr*)\% User Time"),
+        ("\\$serverName" +"\Process(sqlservr*)\% Privileged Time")
+      )
+      Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
+          $_.CounterSamples | ForEach {
+              [pscustomobject]@{
+                  TimeStamp = $_.TimeStamp
+                  Path = $_.Path
+                  Value = ([Math]::Round($_.CookedValue, 3))
+              } 
+              Start-Sleep -s 2
+          }
+      }
+    ```
+
   > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to the high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
@@ -118,6 +120,9 @@ If SQL Server is still using high CPU, go to the next step.
     ```
 
 1. Review the execution plan, and tune the query by implementing the required changes.
+
+    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the ." border="true":::
+
 1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes that have high improvement measurements.
 
     ```sql
@@ -155,7 +160,7 @@ If the issue still exists, you can add a `RECOMPILE` query hint to each of the h
 
 If the issue is fixed, it's an indication of parameter-sensitive problem (PSP/parameter sniffing issue). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. 
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality.
 
 **Note:** For workloads that require high throughput, the recompile option is usually not possible.
 
