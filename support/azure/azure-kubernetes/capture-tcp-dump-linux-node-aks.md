@@ -17,7 +17,7 @@ Networking issues may occur when you're using a Microsoft Azure Kubernetes Servi
 
 - Azure CLI, version&nbsp;2.0.59 or later. You can open [Azure Cloud Shell](/azure/cloud-shell/overview) in the web browser to enter Azure CLI commands. Or [install or upgrade Azure CLI](/cli/azure/install-azure-cli-linux) on your local machine. To find the version that's installed on your machine, run `az --version`.
 - An AKS cluster. If you don't have an AKS cluster, [create one using Azure CLI](/azure/aks/kubernetes-walkthrough) or [through the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
-- The [tcpdump](https://www.tcpdump.org/) command-line tool.
+- The [tcpdump](https://www.tcpdump.org/) command-line tool installed on the Linux node.
 
 ## Basic troubleshooting
 
