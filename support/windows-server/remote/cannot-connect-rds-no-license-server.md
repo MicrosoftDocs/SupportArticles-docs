@@ -73,7 +73,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 
    The configuration of the licenses should resemble the following screenshot. There should be a green check mark beside the license server name, and the numbers in the columns should reflect the numbers of total and available licenses.
 
-   :::image type="content" source="media/cannot-connect-rds-no-license-server/rd-licensing -manager-config.png" alt-text="RD Licensing Manager, showing a correctly configured license server":::
+   :::image type="content" source="media/cannot-connect-rds-no-license-server/rd-licensing-manager-config.png" alt-text="RD Licensing Manager, showing a correctly configured license server":::
 
 - The RDS deployment uses the correct license server, licensing mode, and policy settings. The details of the configuration depend on the type of deployment that you have:
 
@@ -83,13 +83,14 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 ### <a id=rdcb></a>Configure licensing for an RDS deployment that includes the RD Connection Broker role
 
 1. On the RD Connection Broker computer, open Server Manager.
-2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.
+2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.  
    :::image type="content" source="media/cannot-connect-rds-no-license-server/server-manager-rd-config.png" alt-text="Remote Desktop licensing settings in Server Manager":::
 3. Select the Remote Desktop licensing mode (either **Per User** or  **Per Device**, as appropriate for your deployment).
 
    > [!NOTE]  
    > If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs are not permitted.
-4. Specify a license server.
+4. Specify a license server, and then select **Add**.  
+   :::image type="content" source="media/cannot-connect-rds-no-license-server/rdlicensing-configure.png" alt-text="RD Licensing Manager, showing a correctly configured license server":::
 
 ### <a id=nordcb></a>Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
 
