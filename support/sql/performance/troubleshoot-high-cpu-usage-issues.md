@@ -121,7 +121,7 @@ If SQL Server is still using high CPU, go to the next step.
 
 1. Review the execution plan, and tune the query by implementing the required changes.
 
-    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the ." border="true":::
+    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." border="true":::
 
 1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes that have high improvement measurements.
 
