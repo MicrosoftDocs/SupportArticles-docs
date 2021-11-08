@@ -72,7 +72,7 @@ Before we examine the details of how time zone normalization works in Outlook, i
 
     You can select Change date and time settings to examine the current time zone settings for your computer (Screenshot for this step is listed below).
 
-    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/date-and-time.png" alt-text="Screenshot of date and time settings dialog box." border="false":::
+    :::image type="content" source="media/how-time-zone-normalization-works-in-outlook/date-and-time.png" alt-text="Screenshot of the Date and Time settings dialog box." border="false":::
 
 ### How computer time is calculated
 

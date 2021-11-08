@@ -29,7 +29,7 @@ In Microsoft Outlook 2010 or 2013 with Business Contact Manager, you may experie
 - In the Navigation Pane, **Business Contact Manager** folder icons will appear as normal Outlook icons.
 - In Outlook Contacts on the **Home** ribbon, when you select a Business Contact Manager element in the Folder List, you do not see the Business Contact Manager commands on the Ribbon such as **Mail Merge**, **Marketing**, **Assign To**, **Create Linked Business Contact** as shown.
 
-  :::image type="content" source="media/how-to-enable-add-in-for-business-contact-manager/business-contact-manager-commands.png" alt-text="Screenshot of the Home Ribbon in Outlook." border="false":::
+  :::image type="content" source="media/how-to-enable-add-in-for-business-contact-manager/business-contact-manager-commands.png" alt-text="Screenshot of the Home ribbon in Outlook." border="false":::
 
 ## Cause
 

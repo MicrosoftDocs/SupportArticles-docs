@@ -24,7 +24,7 @@ appliesto:
 
 After you install the Lync Meeting Add-in for Microsoft Office 2013 in Microsoft Outlook, the Lync Meetingcontrol may not appear on the ribbon of a meeting request in Outlook. The following figure shows the expected appearance of the control on the ribbon:
 
-:::image type="content" source="./media/lync-meeting-control-not-displayed/skype-meeting-control.png" alt-text="Screenshot of the Meeting Ribbon in Outlook." border="false":::
+:::image type="content" source="./media/lync-meeting-control-not-displayed/skype-meeting-control.png" alt-text="Screenshot of the Meeting ribbon in Outlook." border="false":::
 
 
 If this behavior occurs, you can manually enable the Lync Meeting Add-in for Microsoft Office 2013 in Outlook.
