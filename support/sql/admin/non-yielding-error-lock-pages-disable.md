@@ -34,7 +34,7 @@ sqldk!MemoryClerkInternal::AllocateReservedPages
 
 ## Cause
 
-This issue occurs if there are large size or a large number of allocations or deallocations. It takes a long time to wait for these allocations and deallocations to complete.
+This issue occurs if there are large size or a large number of memory allocations or deallocations, which results in a long wait for those allocations and deallocations in the OS to complete.
 
 > [!NOTE]
 > In the entry, the kernel time is almost same as the interval time, which indicates a high amount of privileged CPU time.
