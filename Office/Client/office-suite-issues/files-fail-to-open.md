@@ -55,11 +55,11 @@ Additionally, you may see one of the following error messages when you try to si
 > No Internet Connection  
 > Connect to the Internet to add or manage services.
 
-:::image type="content" source="media/files-fail-to-open/no-internet-connection-error.png" alt-text="Screenshot of the error message, showing this feature has been disabled by your administrator." border="false":::
+:::image type="content" source="media/files-fail-to-open/no-internet-connection-error.png" alt-text="Screenshot of the error message, showing no Internet Connection." border="false":::
     
 > This feature has been disabled by your administrator.
      
-:::image type="content" source="media/files-fail-to-open/feature-has-been-disabled.png" alt-text="Screenshot of the error message, showing we are unable to connect right now." border="false":::
+:::image type="content" source="media/files-fail-to-open/feature-has-been-disabled.png" alt-text="Screenshot of the error message, showing this feature has been disabled by your administrator." border="false":::
     
 > We are unable to connect right now. Please check your network and try again later.
      
