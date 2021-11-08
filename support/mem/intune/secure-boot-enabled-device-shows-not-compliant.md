@@ -46,7 +46,7 @@ To check whether your device meets the hardware requirements for the health atte
 
 3. In **System Summary**, verify that **BIOS Mode** is **UEFI**, and **PCR7 Configuration** is **Bound**.
 
-    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/system-information.png" alt-text="Screenshot of System Summary,where BIOS Mode is UEFI, and PCR7 Configuration is Bound.":::
+    :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/system-information.png" alt-text="Screenshot of System Summary, where BIOS Mode is UEFI, and PCR7 Configuration is Bound.":::
 
 4. Open an elevated PowerShell command prompt, and run the following command:
 
