@@ -6,8 +6,9 @@ ms.prod-support-area-path: Availability Groups
 ms.reviewer: ramakoni, ericbu
 ms.prod: sql
 ---
-
 # Always On availability groups and replication issues after changing the hostname
+
+_Applies to:_ &nbsp; SQL Server 2019, SQL Server 2017
 
 ## Symptoms
 

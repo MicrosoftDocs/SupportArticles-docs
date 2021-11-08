@@ -169,7 +169,7 @@ You can find the ESP settings under the following registry subkey in the `MDMDia
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Enrollments\{EnrollmentGUID}\FirstSync`
 
-:::image type="content" source="media/understand-troubleshoot-esp/firstsync.png" alt-text="The FirstSync key":::
+:::image type="content" source="media/understand-troubleshoot-esp/firstsync.png" alt-text="Screenshot show the location of the FirstSync key.":::
 
 > [!NOTE]
 > In some cases, you may notice that the account setup or device setup phase is skipped. This occurs if one the following custom CSPs is configured to skip that phase:
@@ -222,13 +222,13 @@ The `EnrollmentStatusTracking` registry subkey contains the following subkeys:
 - [ESPTrackingInfo](#the-esptrackinginfo-subkey)
 - [The security identifier (SID) of the logged-in user](#the-user_sid-subkey). This subkey is created in the account setup phase. It won't be created if the device setup phase fails.
 
-:::image type="content" source="media/understand-troubleshoot-esp/enrollmentstatustracking.png" alt-text="The EnrollmentStatusTracking key":::
+:::image type="content" source="media/understand-troubleshoot-esp/enrollmentstatustracking.png" alt-text="Screenshot shows the location of the EnrollmentStatusTracking key.":::
 
 #### The Device subkey
 
 This subkey contains information about the last step in the device preparation phase and the Win32 apps deployment information in the device setup phase.
 
-:::image type="content" source="media/understand-troubleshoot-esp/device.png" alt-text="The device key":::
+:::image type="content" source="media/understand-troubleshoot-esp/device.png" alt-text="Screenshot shows the location of the device subkey.":::
 
 This subkey contains the following subkeys:
 
@@ -236,7 +236,7 @@ This subkey contains the following subkeys:
   
   Under this subkey, you can find the installation state of the Intune Management Extension (SideCar) and the type of resources this SideCar provider tracks.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/sidecar.png" alt-text="The Sidecar key":::
+  :::image type="content" source="media/understand-troubleshoot-esp/sidecar.png" alt-text="Screenshot shows the location and information of the Sidecar subkey.":::
 
   The following are available values of the installation state:
 
@@ -247,24 +247,24 @@ This subkey contains the following subkeys:
 
   During ESP, SideCar tracks only Win32 apps (no PowerShell scripts).
 
-  :::image type="content" source="media/understand-troubleshoot-esp/trackedresourcetypes.png" alt-text="Tracked resource types":::
+  :::image type="content" source="media/understand-troubleshoot-esp/trackedresourcetypes.png" alt-text="Screenshot shows the tracked resource types of SideCar.":::
 - `Setup`
   
   When the device setup phase starts, this subkey contains the creation status of the tracking policy and the Win32 apps being tracked by the SideCar provider. It also contains the final installation state of each app and indicates whether a restart is required.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/setup.png" alt-text="The Setup key":::
+  :::image type="content" source="media/understand-troubleshoot-esp/setup.png" alt-text="Screenshot shows the content of the Setup key.":::
 
   The `Locked` value under the `Apps` subkey shows whether the device usage is blocked until this stage is completed.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/locked.png" alt-text="The Locked value":::
+  :::image type="content" source="media/understand-troubleshoot-esp/locked.png" alt-text="Screenshot shows the Locked value under Apps subkey.":::
 
   The `TrackingPoliciesCreated` value under the `Apps\PolicyProviders\Sidecar` subkey shows the status of tracking policies created for the device setup phase.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/trackingpoliciescreated.png" alt-text="The TrackingPoliciesCreated value":::
+  :::image type="content" source="media/understand-troubleshoot-esp/trackingpoliciescreated.png" alt-text="Screenshot shows the TrackingPoliciesCreated value under the Sidecar subkey.":::
 
   The `InstallationState` value under each `Apps\Tracking\Sidecar\Win32App_{AppID}` subkey shows the installation status of the Win32 app that's deployed in device context.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/appinstallationstate.png" alt-text="The app installation status":::
+  :::image type="content" source="media/understand-troubleshoot-esp/appinstallationstate.png" alt-text="Screenshot shows the app installation status.":::
 
   Available values for `InstallationState` are:
 
@@ -279,37 +279,37 @@ This subkey contains the following subkeys:
 
 This subkey contains diagnostics information for all applications and policies that are tracked by ESP and the status of each app and policy during specific timestamps for the device setup and account setup phases.
 
-:::image type="content" source="media/understand-troubleshoot-esp/diagnostics.png" alt-text="The diagnostics information":::
+:::image type="content" source="media/understand-troubleshoot-esp/diagnostics.png" alt-text="Screenshot shows the diagnostics information.":::
 
 - For each LOB (MSI) app, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedMSIAppPackages` to record the installation status. The name of the subkey is the date and time when the status of the app is logged. If no MSI app is targeted, the subkey contains only the state of the Intune Management Extension application package.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/msiapp.png" alt-text="MSI app status":::
+  :::image type="content" source="media/understand-troubleshoot-esp/msiapp.png" alt-text="Screenshot shows the MSI app status.":::
 
 - For each Wi-Fi profile, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedNetworkProfiles` to record the installation status. The name of the subkey is the date and time when the status of the Wi-Fi profile is logged.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/wifiprofile.png" alt-text="Wi-Fi profile status":::
+  :::image type="content" source="media/understand-troubleshoot-esp/wifiprofile.png" alt-text="Screenshot shows the Wi-Fi profile status.":::
 
 - For each SCEP certificate profile, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedCertificateProfiles` to record the installation status. The name of the subkey is the date and time when the status of the SCEP certificate profile is logged.
 
 - Because ESP doesn't track security policies, only one subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedPolicies` for the dummy policy **EntDMID**.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/securitypolicies.png" alt-text="Security policy status":::
+  :::image type="content" source="media/understand-troubleshoot-esp/securitypolicies.png" alt-text="Screenshot shows the Security policy status.":::
   
 - For each Microsoft Store for Business app that's deployed in device context, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedModernAppPackages` to record the installation status. The name of the subkey is the date and time when the status of the app is logged. If the app is deployed in user context, this subkey is created under `ESPTrackingInfo\Diagnostics\{User_SID}\ExpectedModernAppPackages`.
 
   In the following example, the registry value is 0. This means that the app isn't installed at 16:17:42.430Z.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/msfbapp1.png" alt-text="Microsoft Store for Business app status one":::
+  :::image type="content" source="media/understand-troubleshoot-esp/msfbapp-0.png" alt-text="Screenshot shows the first Microsoft Store for Business app status.":::
 
   In the following example, the registry value is 1. This means that the app is installed at 16:19:18.153Z.
 
-  :::image type="content" source="media/understand-troubleshoot-esp/msfbapp2.png" alt-text="Microsoft Store for Business app status two":::
+  :::image type="content" source="media/understand-troubleshoot-esp/msfbapp-1.png" alt-text="Screenshot shows the second Microsoft Store for Business app status.":::
 
 #### The {*User_SID*} subkey
 
 This subkey is created during the account setup phase if the device setup phase is completed successfully. It  contains the installation state of Win32 apps that are deployed in user context, and the creation status of the tracking policy for the account setup phase.
 
-:::image type="content" source="media/understand-troubleshoot-esp/usersid.png" alt-text="The user SID subkey":::
+:::image type="content" source="media/understand-troubleshoot-esp/usersid.png" alt-text="Screenshot shows the information of the user SID subkey.":::
 
 ### Common questions for troubleshooting ESP-related issues
 
