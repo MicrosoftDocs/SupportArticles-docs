@@ -15,7 +15,7 @@ Networking issues may occur when you're using a Microsoft Azure Kubernetes Servi
 
 ## Prerequisites
 
-- Azure CLI, version&nbsp;2.0.59 or later. You can open [Azure Cloud Shell](/azure/cloud-shell/overview) in the web browser to enter Azure CLI commands. Or [install or upgrade Azure CLI](/cli/azure/install-azure-cli) on your local machine. To find the version that's installed on your machine, run `az --version`.
+- Azure CLI, version&nbsp;2.0.59 or later. You can open [Azure Cloud Shell](/azure/cloud-shell/overview) in the web browser to enter Azure CLI commands. Or [install or upgrade Azure CLI](/cli/azure/install-azure-cli-windows) on your local machine. To find the version that's installed on your machine, run `az --version`.
 - An AKS cluster. If you don't have an AKS cluster, [create one using Azure CLI](/azure/aks/kubernetes-walkthrough) or [through the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 
 ## Basic troubleshooting
@@ -36,9 +36,9 @@ How do you determine which node to pull the TCP dump from? You first get the lis
 ```console
 $ kubectl get nodes --output wide
 NAME                                STATUS   ROLES   AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION     CONTAINER-RUNTIME
-aksapwin000000                      Ready    agent   3m8s    v1.20.9   10.240.0.4     <none>        Windows Server 2019 Datacenter   10.0.17763.2237    docker://20.10.6
-aksapwin000001                      Ready    agent   3m50s   v1.20.9   10.240.0.115   <none>        Windows Server 2019 Datacenter   10.0.17763.2237    docker://20.10.6
-aksapwin000002                      Ready    agent   3m32s   v1.20.9   10.240.0.226   <none>        Windows Server 2019 Datacenter   10.0.17763.2237    docker://20.10.6
+akswin000000                        Ready    agent   3m8s    v1.20.9   10.240.0.4     <none>        Windows Server 2019 Datacenter   10.0.17763.2237    docker://20.10.6
+akswin000001                        Ready    agent   3m50s   v1.20.9   10.240.0.115   <none>        Windows Server 2019 Datacenter   10.0.17763.2237    docker://20.10.6
+akswin000002                        Ready    agent   3m32s   v1.20.9   10.240.0.226   <none>        Windows Server 2019 Datacenter   10.0.17763.2237    docker://20.10.6
 ```
 
 ### Connect to a Windows node
@@ -70,7 +70,7 @@ Using your Windows admin password, [connect to the node with RDP](/azure/aks/rdp
 
 ##### Redirect a data drive to the RDP connection
 
-To transfer the capture files to your machine, you need to redirect a disk drive from your machine onto both the created virtual machine (VM) and the RDP connection to the AKS Windows node. This redirection lets you copy the capture files that you generate later to your machine.
+To transfer the capture files to your machine, you need to redirect a disk drive from your machine onto both the created virtual machine (VM) and the RDP connection to the AKS Windows node. This redirection lets you copy the capture files you generate later to your machine.
 
 1. On your machine, select the Start menu, then search for and select **Remote Desktop Connection**.
 
@@ -89,11 +89,15 @@ Then finish connecting to the Windows virtual machine that you set up earlier.
 
 ### Create a packet capture
 
-When you're connected to the Windows node through SSH or RDP, 
+When you're connected to the Windows node through SSH or RDP, a form of the Windows command prompt appears:
+
+```cmd
+azureuser@akswin000000 C:\Users\azureuser>
+```
 
 Now open a command prompt and enter the [Network Shell](/windows-server/networking/technologies/netsh/netsh) (netsh) command below for capturing traces ([netsh trace start](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj129382(v=ws.11)#start)). This command starts the packet capture process.
 
-```shell
+```cmd
 netsh trace start capture=yes tracefile=C:\Users\azureuser\AKS_node_name.etl 
 ```
 
@@ -110,14 +114,13 @@ Max Size:           250 MB
 Report:             Off
 ```
 
-While the trace is running, replicate your issue many times. This action ensures the issue has been captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, run the `netsh trace stop` command. Output similar to the following text appears:
+While the trace is running, replicate your issue many times. This action ensures the issue has been captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, enter `netsh trace stop`:
 
 ```console
 azureuser@akswin000000 C:\Users\azureuser>netsh trace stop
 Merging traces ... done
 Generating data collection ... done
-The trace file and additional troubleshooting information have been compiled as "C:\Users\azureuser\AKS_node_name.cab
-".
+The trace file and additional troubleshooting information have been compiled as "C:\Users\azureuser\AKS_node_name.cab".
 File location = C:\Users\azureuser\AKS_node_name.etl
 Tracing session was successfully stopped.
 ```
@@ -136,9 +139,9 @@ azure-vote-front-85b4df594d-jhpzw                       1/1     Running   2     
 node-debugger-aks-nodepool1-38878740-vmss000000-6ztp6   1/1     Running   0          3m58s
 ```
 
-The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. Replace the pod name, and then run the following Secure Copy (scp) commands. These commands retrieve the event trace log (.etl) file and the archive (.cab) file, which are generated for the packet capture.
+The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. Replace the pod name, and then run the following Secure Copy (scp) commands. These commands retrieve the event trace log (.etl) and archive (.cab) files, which are generated for the packet capture.
 
-```shell
+```cmd
 scp -o 'ProxyCommand ssh -p 2022 -W %h:%p azureuser@127.0.0.1' azureuser@10.240.0.97:AKS_node_name.cab .
 scp -o 'ProxyCommand ssh -p 2022 -W %h:%p azureuser@127.0.0.1' azureuser@10.240.0.97:AKS_node_name.etl .
 ```
