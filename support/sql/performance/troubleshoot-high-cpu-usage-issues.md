@@ -158,13 +158,25 @@ Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeprocc
 
 If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
-If the issue is fixed, it's an indication of parameter-sensitive problem (PSP/parameter sniffing issue). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
+If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here is an exmple of how you can apply this to your query
 
-**Note:** For workloads that require high throughput, the recompile option is usually not possible.
+  ```t-sql
+  SELECT * FROM Person.Person 
+  WHERE LastName = 'Wood'
+  OPTION (RECOMPILE)
+  ```
 
-- Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics.
+
+- Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here is an example how to use this hint in your query.
+
+  ```t-sql
+  DECLARE @LastName Name = 'Frintu'
+  SELECT FirstName, LastName FROM Person.Person 
+  WHERE LastName = @LastName
+  OPTION (OPTIMIZE FOR (@LastName = 'Wood' ))
+  ```
 
 - Use the [option (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
 
@@ -172,7 +184,15 @@ If the issue is fixed, it's an indication of parameter-sensitive problem (PSP/pa
 
 - Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the "good enough" common plan is the one that's already in cache. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
 
-- Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed.
+- Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed. You can use DBCC FREEPROCCACHE (plan_handle) to remove only the plan that is causing the issue. For example, to find query plans that reference the Person.Person table in AdventureWorks, you can use this query to look up the query handle. Then you can release the specific query plan from cache by using the **DBCC FREEPROCCACHE (plan_handle)**.
+
+  ```t-sql
+  SELECT text, 'DBCC FREEPROCCACHE (0x' + convert(varchar (512), plan_handle, 2) + ')' as dbcc_freeproc_command from sys.dm_exec_cached_plans
+  CROSS APPLY sys.dm_exec_query_plan(plan_handle)
+  CROSS APPLY sys.dm_exec_sql_text(plan_handle)
+  WHERE text like '%person.person%'
+  ```
+
 
 ## Step 6: Disable heavy tracing
 
