@@ -49,7 +49,7 @@ Microsoft Outlook 2019, Outlook 2016, Outlook for Microsoft 365, and Outlook on
 
   **Set up Outlook Mobile on my phone, too**
 
-  :::image type="content" source="media/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option/set-up-outlook-mobile-on-my-phone.png" alt-text="Screenshot of the Account setup is complete page." border="false":::
+  :::image type="content" source="media/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option/set-up-outlook-mobile-on-my-phone.png" alt-text="Screenshot of the Account setup is complete page.":::
 
 ## How to remove this option in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365
 
