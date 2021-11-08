@@ -68,7 +68,7 @@ Additionally, you may see one of the following error messages when you try to si
 > No Internet Connection  
 > It looks like you are not connected to the Internet. You may not be able to access these folders until you go online.
 
-:::image type="content" source="media/files-fail-to-open/cannot-connect-to-internet.png" alt-text="Screenshot of the error message, showing no Internet Connection." border="false":::
+:::image type="content" source="media/files-fail-to-open/cannot-connect-to-internet.png" alt-text="Screenshot of the error message, showing you may not be able to access these folders until you go online." border="false":::
 
 ## Cause
 
