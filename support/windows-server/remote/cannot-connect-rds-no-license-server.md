@@ -1,7 +1,7 @@
 ---
 title: Cannot connect to RDS because no RD Licensing servers are available
 description: This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
-ms.date: 03/11/2021
+ms.date: 11/16/2021
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -14,10 +14,9 @@ ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroublesh
 ms.technology: windows-server-rds
 keywords: RD Licensing server, RD CAL
 ---
-
 # Cannot connect to RDS because no RD Licensing servers are available
 
-This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
+This article help you troubleshoot the "No licenses available" error in a deployment that includes an Remote Desktop Session Host (RDSH) server and a Remote Desktop Licensing server.
 
 _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -25,11 +24,38 @@ _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 20
 
 Clients cannot connect to Remote Desktop Services, and they display messages that resemble the following:
 
-> The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
+```output
+The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
+```
+
+```output
+Access was denied because of a security error.
+```
+
+Sign in to the RD Session Host as a domain administrator and open the RD License Diagnoser. Look for messages like the following:
+
+```output
+The grace period for the Remote Desktop Session Host server has expired, but the RD Session Host server hasn't been configured with any license servers. Connections to the RD Session Host server will be denied unless a license server is configured for the RD Session Host server.
+```
+
+```output
+License server <computer name> is not available. This could be caused by network connectivity problems, the Remote Desktop Licensing service is stopped on the license server, or RD Licensing isn't available.
+```
 
 ## Cause
 
-This situation usually indicates a problem in the Remote Desktop licensing configuration.
+These issue could be caused by the following user messages:
+
+- The remote session was disconnected because there are no Remote Desktop client access licenses available for this computer.
+- The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
+
+In this case, [check the RD Licensing configuration](#check-the-rd-licensing-configuration).
+
+If the RD License Diagnoser lists other problems, such as "The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client", there may be a problem that affects the license certificates. Such problems tend to be associated with user messages, such as the following:
+
+Because of a security error, the client could not connect to the Terminal server. After making sure that you are signed in to the network, try connecting to the server again.
+
+In this case, [refresh the X509 Certificate registry keys](#refresh-the-x509-certificate-registry-keys).
 
 ## Check the RD Licensing configuration
 
@@ -78,6 +104,27 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 7. Select **Enabled**.
 8. Under **Specify the licensing mode for the Remote Desktop Session Host server**, select **Per Device** or **Per User**, as appropriate for your deployment.
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-specify-licensing-mode.png" alt-text="Policy settings for Remote Desktop licensing mode":::
+
+## Refresh the X509 Certificate registry keys
+
+> [!IMPORTANT]  
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
+
+To resolve this problem, back up and then remove the X509 Certificate registry keys, restart the computer, and then reactivate the RD Licensing server. Follow these steps.
+
+> [!NOTE]
+> Perform the following procedure on each of the RDSH servers.
+
+Here's how to reactivate the RD Licensing server:
+
+1. Open the Registry Editory and navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\RCM**.
+2. On the Registry menu, select **Export Registry File**.
+3. Enter **exported- Certificate** into the **File name** box, then select **Save**.
+4. Right-click each of the following values, select **Delete**, and then select **Yes** to verify the deletion:  
+   - **Certificate**
+   - **X509 Certificate**
+   - **X509 Certificate ID**
+   - **X509 Certificate2**
 
 ## Additional troubleshooting methods
 
