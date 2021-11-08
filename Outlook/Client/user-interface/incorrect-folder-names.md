@@ -97,15 +97,15 @@ If this option isn't available or doesn't work, use Option 2.
 Follow these steps:  
 
 1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that's named **Archive01**.
-2. Create a backup of the items already present in the old Archive folder.
+2. Create a backup of the existing items in the old archive folder. 
 3. Start MFCMapi in Online mode. To make sure that MFCMapi is in Online mode, select **Tools** > **Options**, and then make sure that the **Use the MDB_ONLINE flag** and **Use the MAPI_NO_CACHE** check boxes are selected.
 4. Expand **Root Container**, and then expand **Top of Information Store** (if the user has the mailbox set to a language other than English, then the name of this folder will be translated).
 5. Select the new Archive01 folder, and then find the property that's named **PR_ENTRYID**.  
 6. Double-click to open the **PR_ENTRYID** property, and then copy the property binary value.
 7. Close the property editor for Archive01 and select Inbox.
-8. Arrange the entries based on the Tag column and search for the **0x35FF0102** property tag. Double click on this property.
-9. Paste the binary value of the Entry ID of the Archive01 folder that you copied in step 5 in the binary value box for the property 0x35FF0102.
+8. Arrange the entries based on the Tag column and search for the **0x35FF0102** property tag. Double-click on this property.
+9. Paste the binary value of the Entry ID of the Archive01 folder that you copied in step 6 in the binary value box for the property 0x35FF0102.
 10. Run `Outlook.exe /resetfolders`.
 11. Run `Outlook.exe /resetfoldernames`.
-12. Import data to the new archive folder from the backup previously saved or just move the items to the new folder.
-13. The old Archive folder can be deleted now as the Archive01 folder will be the default archive folder.
+12. Import data to the new archive folder from the backup，or move the items to the new folder.
+13. Delete the old archive folder, as the **Archive01** folder is now the default archive folder.
