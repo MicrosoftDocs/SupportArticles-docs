@@ -133,7 +133,7 @@ To fix this problem, you need to perform the following steps:
         ```console
         bcdedit /store [Newest drive letter]:\boot\bcd /set [Identifier] device partition=[Newest drive letter]:
         ```
-    
+
         For example, if the newest drive letter is F and the identifier is the same as in the output above, you would type the following:
 
         ```console
