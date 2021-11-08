@@ -17,7 +17,7 @@ When you open the Outlook for Android app that's managed by Intune mobile applic
 
 > Your organization has removed its data associated with this app because the Microsoft Intune Company Portal data or application was removed. To reconnect, you must sign-in with your work or school account.
 
-:::image type="content" source="media/removed-data-associated-with-app-error/removed-data-error.png" alt-text="Screenshot of the error message.":::
+:::image type="content" source="media/removed-data-associated-with-app-error/removed-data-error.png" alt-text="Screenshot of the Your organization has removed its data associated with this app error message.":::
 
 ## Cause
 
