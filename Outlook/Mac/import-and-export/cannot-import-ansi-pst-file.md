@@ -29,7 +29,7 @@ Outlook 2016 for Mac:
 
 > There's something wrong with this file. Please try another file.
 
-:::image type="content" source="media/cannot-import-ansi-pst-file/there-is-something-wrong-with-this-file.png" alt-text="Screenshot ofthe error There's something wrong with this file.":::
+:::image type="content" source="media/cannot-import-ansi-pst-file/there-is-something-wrong-with-this-file.png" alt-text="Screenshot of the error There's something wrong with this file.":::
 
 Outlook for Mac 2011:
 

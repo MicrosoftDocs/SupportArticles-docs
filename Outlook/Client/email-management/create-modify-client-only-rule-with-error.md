@@ -37,7 +37,7 @@ This issue occurs if a client-only rule is created or changed to contain a total
 
 For example, the rule shown in the following screenshot is "(client-only)." This rule works because it includes only two people who were selected from the GAL in the "from" rule criteria. However, if the "from" criteria contained 20 or more people, the rule would cause the issue to occur.
 
-:::image type="content" source="./media/create-modify-client-only-rule-with-error/Outlook-Rules.png" alt-text="Screenshot of Rules and Alerts dialog box." border="false":::
+:::image type="content" source="./media/create-modify-client-only-rule-with-error/Outlook-Rules.png" alt-text="Screenshot of the Rules and Alerts dialog box." border="false":::
 
 Note: This issue occurs if the rule's action causes the rule to become a client-only rule. For example, any of the following rules can make this change:
 
