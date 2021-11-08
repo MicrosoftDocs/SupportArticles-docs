@@ -31,4 +31,4 @@ This definition doesn't prevent you from contacting Microsoft Customer Support, 
 
 Because of the diverse nature of Configuration Manager installations, some unsupported changes (such as adding a new index) are still desirable to optimize performance for a given environment. We recommend that you test such changes thoroughly in your environment to make sure that they meet your business needs and do not introduce unintended side effects. Remember that these changes may be reverted during an update or upgrade of the product.
 
-If you believe that product changes that you have made in your environment would be appropriate to include in a future version of the product, we encourage you to submit the details to the [Microsoft Endpoint Configuration Manager Feedback](https://configurationmanager.uservoice.com/forums/300492-ideas) site.
+If you believe that product changes that you have made in your environment would be appropriate to include in a future version of the product, we encourage you to [share feedback directly to the Microsoft product group](/mem/configmgr/core/understand/product-feedback).
