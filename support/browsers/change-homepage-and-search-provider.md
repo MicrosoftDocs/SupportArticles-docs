@@ -4,6 +4,7 @@ description: Describes how to change the home page in Internet Explore and how t
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-administration
 ---
 # How to change the home page and the search provider in Internet Explorer
 

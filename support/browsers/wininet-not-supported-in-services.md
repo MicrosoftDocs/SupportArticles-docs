@@ -4,6 +4,7 @@ description: Win32 Internet Functions (exported from WinInet.dll) are not suppor
 ms.date: 02/27/2020
 ms.prod-support-area-path: 
 ms.reviewer: leonbr
+ms.technology: internet-explorer-development-website
 ---
 # WinInet is not supported in a service or an IIS application
 

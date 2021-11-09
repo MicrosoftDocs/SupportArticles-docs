@@ -4,6 +4,7 @@ description: This article describes how to optimize the performance of an automa
 ms.date: 9/10/2020
 ms.prod-support-area-path: 
 ms.reviewer: heikom
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Optimizing performance with automatic proxy-configuration scripts (PAC)
 

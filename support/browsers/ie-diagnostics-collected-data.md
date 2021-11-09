@@ -4,6 +4,7 @@ description: This article describes the information that may be collected from a
 ms.prod-support-area-path: 
 ms.date: 02/29/2020
 ms.reviewer: louiss
+ms.technology: internet-explorer-general
 ---
 # Collected information by Internet Explorer Diagnostics
 

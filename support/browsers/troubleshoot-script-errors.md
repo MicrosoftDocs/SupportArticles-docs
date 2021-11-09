@@ -4,6 +4,7 @@ description: A script error occurs in Internet Explorer, the webpage cannot be d
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-development-website
 ---
 # How to troubleshoot script errors in Internet Explorer
 

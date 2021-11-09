@@ -4,6 +4,7 @@ description: Due to a problem with Internet Explorer policy management extension
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba
+ms.technology: internet-explorer-administration
 ---
 # Policy reporting tools indicate empty Internet Explorer Maintenance policy as winning
 

@@ -4,6 +4,7 @@ description: Internet Explorer does not always return the same DISPID for every 
 ms.date: 04/20/2020
 ms.prod-support-area-path: 
 ms.reviewer: bachoang
+ms.technology: internet-explorer-development-website
 ---
 # Internet Explorer may not return the same DISPID for the same property
 
