@@ -55,6 +55,7 @@ If you do use this method, the user has to follow these steps:
 
 1. On the device, select **Start** > **Settings** > **Accounts** > **Access Work or School**.
 2. Select **Enroll only in device management**.
+   
    :::image type="content" source="media/enroll-devices-in-intune-tip/intune-enroll-device-mgmt-only.png" alt-text="Screenshot of the Enroll only in device management command in Access work or school settings.":::
 
 ### <a id="2" ></a>Automatic enrollment by using MDM
