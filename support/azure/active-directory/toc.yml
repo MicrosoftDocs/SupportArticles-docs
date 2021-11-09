@@ -17,8 +17,10 @@
       href: authentication-fails-with-error.md
 
   - name: Azure AD Hybrid Sync Agent Installation Issues
-    href: azure-ad-hybrid-sync-agent-install-welcome.md
+
     items:
+    - name: Installation issues overview
+      href: azure-ad-hybrid-sync-agent-install-welcome.md
     - name: No privileges to install MSI
       href: azure-ad-hybrid-sync-no-privileges-install-msi.md
     - name: Cannot start service AADConnectProvisioningAgent
