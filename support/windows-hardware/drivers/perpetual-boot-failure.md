@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem where a prompt at
 ms.date: 09/01/2020
 ms.prod-support-area-path: Windows Embedded POSReady 7
 ms.reviewer: jtanner
+ms.technology: windows-hardware-general
 ---
 # Perpetual Boot failure with 'Boot Windows Normally' prompt
 
