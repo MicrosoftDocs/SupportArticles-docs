@@ -31,19 +31,19 @@ Consider the following scenario:
 
   > Your automatic reply settings cannot be displayed because the server is currently unavailable. Try again later.
 
-  :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/error-1.jpg" alt-text="error details 1" border="false":::
+  :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/automatic-reply-settings-error.png" alt-text="Screenshot of automatic reply settings error details." border="false":::
 
 - You do not see MailTips, instead you receive a warning:
 
   > We can't show MailTips right now.
 
-  :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/error-2.jpg" alt-text="error details 2":::
+  :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/mailtips-error.png" alt-text="Screenshot of MailTips error details.":::
 
 - Free/busy information cannot be displayed, you receive an error:
 
   > No information. No free/busy information could be retrieved. Your server location could not be determined. Contact your administrator.
 
-  :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/error-3.jpg" alt-text="error details 3":::
+  :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/free-busy-information-error.png" alt-text="Screenshot of Free/busy information error details.":::
 
 ## Cause
 
@@ -69,7 +69,7 @@ An incorrect WinHTTP Proxy is configured.
         netsh winhttp show proxy
         ```
 
-        :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-1.jpg" alt-text="command output 1":::
+        :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-1.png" alt-text="Screenshot of command output 1 after you type the command.":::
 
     2. The current WinHTTP proxy settings will be displayed.
     3. If the Proxy Servers shown are not correct, remove them using the following command:
@@ -78,7 +78,7 @@ An incorrect WinHTTP Proxy is configured.
         netsh winhttp reset proxy
         ```
 
-        :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-2.jpg" alt-text="command output 2":::
+        :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-2.png" alt-text="Screenshot of command output 2 after you type the command.":::
 
 3. If you are running a 32-bit version of Office on a 64-bit version of Windows:
 
@@ -94,7 +94,7 @@ An incorrect WinHTTP Proxy is configured.
        netsh winhttp show proxy
        ```
 
-       :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-3.jpg" alt-text="command output 3":::
+       :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-3.png" alt-text="Screenshot of command output 3 after you type the command.":::
 
     3. The current WinHTTP proxy settings will be displayed.
     4. If the Proxy Servers shown are not correct, remove them using the following command:
@@ -103,7 +103,7 @@ An incorrect WinHTTP Proxy is configured.
         netsh winhttp reset proxy
        ```
 
-        :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-4.jpg" alt-text="command output 4":::
+        :::image type="content" source="media/proxy-server-causes-issues-with-freebusy-oof-mailtips/command-4.png" alt-text="Screenshot of command output 4 after you type the command.":::
 
 ## More information
 
