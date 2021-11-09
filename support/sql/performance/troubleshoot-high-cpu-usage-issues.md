@@ -96,7 +96,7 @@ If SQL Server is still using high CPU, go to the next step.
 
 ## Step 4: Add potentially missing indexes
 
-1. Use the following query to identify queries with high CPU usage that containg at least one missing index in their query plan.
+1. Use the following query to identify queries with high CPU usage that contain at least one missing index in their query plan.
 
     ```sql
     -- Captures the Total CPU time spent by a query along with the query plan and total executions
