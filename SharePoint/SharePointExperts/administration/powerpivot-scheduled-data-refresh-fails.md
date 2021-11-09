@@ -26,7 +26,7 @@ Assume that you create a PowerPivot workbook with one or more data sources and u
 
 If you expand the refresh history, you will notice that the failed data source refresh runs for exactly 100 seconds.
 
-![the data refresh history page](./media/powerpivot-scheduled-data-refresh-fails/data-refresh-history.png)
+:::image type="content" source="media/powerpivot-scheduled-data-refresh-fails/data-refresh-history.png" alt-text="Screenshot shows that the failed data source refresh runs for exactly 100 seconds on the data refresh history page." border="false":::
 
 You may notice that some of your data sources succeed, or that the refresh succeeds intermittently if all the data sources refresh in less than 100 seconds.
 

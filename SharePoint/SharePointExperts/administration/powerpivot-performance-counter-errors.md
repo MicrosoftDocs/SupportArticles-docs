@@ -30,7 +30,7 @@ This may indicate that the PowerPivot System Service doesn't have permissions to
 
 To fix the error, add the account that's running the PowerPivot System Service application pool to the **Performance Log Users** and **Performance Monitor Users** groups by going to **Computer Management** > **Local Users and Groups** > **Groups**.
 
-![the computer management dialog box](./media/powerpivot-performance-counter-errors/computer-management.png)
+:::image type="content" source="media/powerpivot-performance-counter-errors/computer-management.png" alt-text="Screenshot of the Computer Management dialog box, adding the account that's running the PowerPivot System Service application pool to the Performance Log Users and Performance Monitor Users groups.":::
 
 ## More information
 
@@ -44,7 +44,7 @@ This means that the Performance Counters for PowerPivot haven't been loaded. Che
 
 If it is set to **1**, the Performance Counters for PowerPivot Analysis Services are disabled. To fix this error, set the value of this registry key to **2** to enable the Performance Counters.
 
-![the registry editor dialog box](./media/powerpivot-performance-counter-errors/registry-editor.png)
+:::image type="content" source="media/powerpivot-performance-counter-errors/registry-editor.png" alt-text="Screenshot of the Registry Editor dialog box, setting the value of Disable Performance Counters to 2 to enable the Performance Counters.":::
 
 If that method does not fix the error, you may have to run the following commands at a command prompt to re-create the Performance Counters:
    - unlodctr msolap$pwerpivot
