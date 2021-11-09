@@ -160,7 +160,7 @@ If the issue still exists, you can add a `RECOMPILE` query hint to each of the h
 
 If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here is an exmple of how you can apply this to your query.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here is an example of how you can apply this to your query.
 
   ```sql
   SELECT * FROM Person.Person 
