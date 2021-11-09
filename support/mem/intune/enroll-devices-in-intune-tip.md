@@ -28,7 +28,7 @@ Before you can manage devices in Intune, you have to enroll the devices in the I
 
 ## Overview of enrollment methods
 
- :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-enrollment-methods-1.png" alt-text="You can select one of eight methods to enroll devices in Intune":::
+ :::image type="content" source="media/enroll-devices-in-intune-tip/intune-enrollment-methods.png" alt-text="Diagram of the eight methods to enroll devices in Intune.":::
 
 You can choose from the following eight methods to enroll a Windows device in Intune:
 
@@ -55,7 +55,7 @@ If you do use this method, the user has to follow these steps:
 
 1. On the device, select **Start** > **Settings** > **Accounts** > **Access Work or School**.
 2. Select **Enroll only in device management**.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-enroll-device-mgmt-only-2.png" alt-text="Finding the Enroll command in Access work or school settings":::
+   :::image type="content" source="media/enroll-devices-in-intune-tip/intune-enroll-device-mgmt-only.png" alt-text="Screenshot of the Enroll only in device management command in Access work or school settings.":::
 
 ### <a id="2" ></a>Automatic enrollment by using MDM
 
@@ -86,9 +86,11 @@ To be able to use this method, the user has to follow these steps:
 1. On the device, select **Start** > **Settings** > **Accounts** > **Access Work or School** > **Connect**.
 2. Do one of the following:
    - Register the device as a Personal device. To do this, enter an email address, and then select **Next**.
-      :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-auto-enroll-3-personal.png" alt-text="Set up work or school account, enter an email address to register device":::
+
+        :::image type="content" source="media/enroll-devices-in-intune-tip/intune-auto-enroll-personal.png" alt-text="Screenshot of Set up a work or school account, where you can enter an email address to register device.":::
    - Register the device as a Corporate device. To do this, select **Join this device to Azure Active Directory**.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-auto-enroll-3-corporate.png" alt-text="Set up work or school account, join the device to Azure AD":::
+
+        :::image type="content" source="media/enroll-devices-in-intune-tip/intune-auto-enroll-corporate.png" alt-text="Screenshot of Set up work or school account, when you can select join the device to Azure AD.":::
 
 ### <a id="3" ></a>Automatic enrollment by using GPO
 
@@ -101,11 +103,11 @@ Group Policy provides a means of bulk-enrolling Corporate devices without involv
 
 To enroll the devices, configure a Group Policy object (GPO). For more information about how to configure and target the GPO, see [Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-gpo-for-mem-enrollment-4.png" alt-text="MDM GPO in the Group Policy Management Editor":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-gpo-for-mem-enrollment.png" alt-text="MDM GPO in the Group Policy Management Editor.":::
 
 The GPO, in turn, creates scheduled tasks to carry out the enrollment. You can view these tasks in Task Scheduler.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-task-scheduler-5.png" alt-text="Enrollment tasks in Task Scheduler":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-task-scheduler.png" alt-text="Enrollment tasks in Task Scheduler.":::
 
 ### <a id="4"></a>Windows Autopilot enrollment
 
@@ -113,7 +115,7 @@ The Windows Autopilot enrollment process joins a Corporate device to the Azure A
 
 As part of the Windows Autopilot process, you can customize the greeting screen of the OOBE. You can include company branding and predefined fields and options, as shown in the next figure.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-windows-autopilot-greeting-6.png" alt-text="Customized greeting screen for Windows Autopilot OOBE":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-windows-autopilot-greeting.png" alt-text="Customized greeting screen for Windows Autopilot OOBE.":::
 
 To configure Windows Autopilot, you have to have the hardware hashes or serial numbers of the device. In Intune, make sure that you configure the MDM scope for Autopilot.
 For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](/mem/intune/enrollment/enrollment-autopilot).
@@ -135,9 +137,9 @@ Every device must meet the following requirements:
 
 To use this method, you have to add the devices to an appropriate collection in the Configuration Manager console. The following figures show the relevant properties to configure.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-scmm-co-mgmt-props-7a.png" alt-text="Configuration Manager properties for enabling Intune co-management":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-scmm-co-mgmt-props-enablement.png" alt-text="Configuration Manager properties for enabling Intune co-management under Enablement tab.":::
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-scmm-co-mgmt-props-7b.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-scmm-co-mgmt-props-workloads.png" alt-text="Configuration Manager properties for co-managing devices in Intune under Workloads tab.":::
 
 For more information about this enrollment method, see [Support Tip: Understanding auto enrollment in a co-managed environment](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-understanding-auto-enrollment-in-a-co-managed/ba-p/834780).
 
@@ -145,11 +147,11 @@ For more information about this enrollment method, see [Support Tip: Understandi
 
 You can give users a deep link to start the enrollment process for Personal devices.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-deep-link-destination-8a.png" alt-text="Destination of an enrollment deep link":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-deep-link-destination.png" alt-text="Destination of an enrollment deep link.":::
 
 This process is the equivalent of the **Enroll only in device management** user interface option.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-deep-link-process-8b.png" alt-text="Deep link enrollment process, step 1":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-deep-link-process.png" alt-text="Deep link enrollment process: set up a work or school account.":::
 
 The enrollment process starts after the user enters their credentials and selects **Next**.
 
@@ -169,20 +171,28 @@ If your organization has a company portal app in the Microsoft Store, you can gi
 
 1. Open Microsoft Store, select **Search** on the menu bar (magnifying glass icon), and then enter the name of the company portal app.
 2. In the list of results, select the company portal app, and then select **Get**.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-store-app-9a.png" alt-text="Company portal app in the Microsoft store":::
+
+    :::image type="content" source="media/enroll-devices-in-intune-tip/company-portal-app.png" alt-text="Company portal app in the Microsoft store.":::
+
 3. After the app installs, start it, and then sign in when you're prompted. The enrollment process starts automatically.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-store-app-9b.png" alt-text="Signing in to the company portal app":::
+
+    :::image type="content" source="media/enroll-devices-in-intune-tip/company-portal-sign-in.png" alt-text="Signing in to the company portal app.":::
 
 #### Company portal website
 
 Provide the following instructions to users so that they can use your company's management portal for enrollment:
 
 1. In a web browser, go to portal.manage.microsoft.com.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-portal-10a.png" alt-text="Example landing page of a company portal website":::
+  
+     :::image type="content" source="media/enroll-devices-in-intune-tip/intune-portal.png" alt-text="Example landing page of a company portal website.":::
+
 2. Select **Devices**, and then select the gray bar.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-portal-enroll-10b.png" alt-text="Devices page of an example company portal website":::
+  
+     :::image type="content" source="media/enroll-devices-in-intune-tip/intune-portal-devices.png" alt-text="Devices page of an example company portal website.":::
+
 3. To start the enrollment process, select **Add**.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-portal-device-10c.png" alt-text="Adding a device by using an example company portal website":::
+   
+    :::image type="content" source="media/enroll-devices-in-intune-tip/intune-portal-add.png" alt-text="Adding a device by using an example company portal website.":::
 
 ### <a id="8" ></a>WCD provisioning package enrollment
 
@@ -190,7 +200,7 @@ Windows provisioning functionality provides a method for administrators to seaml
 
 You can use WCD to create a provisioning package (a .ppkg file) that contains configurations settings. In this case, you would create a provisioning package that joins each device to Azure AD and enrolls it in Intune. As shown in the following figure, you can configure packages for different kinds of devices.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-wcd-screen-11.png" alt-text="WCD start page":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-wcd-screen.png" alt-text="WCD start page.":::
 
 Existing users can access and install the package from their Windows desktop screens. Alternatively, you can load the package on removable USB media and distribute that media to new Windows devices. When a new device starts for the first time, the USB media copies the package to the device. Then the enrollment process is completed during the Windows OOBE experience.
 
@@ -220,23 +230,24 @@ The UserDevice Registration and DeviceManagement Enterprise Diagnostics provider
 |Auto MDM Enroll  Succeeded    \|\| (ConfigMgr/GPO) |75 |
 
 The following figures show event information from this table in Event Viewer.
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-event-viewer-example-12.png" alt-text="Event Viewer, detail view":::
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-event-viewer-example-13.png" alt-text="Event Viewer, overview of enrollment events":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-event-viewer-example-1.png" alt-text="Event Viewer, detail view.":::
+
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-event-viewer-example-2.png" alt-text="Event Viewer, overview of enrollment events.":::
 
 ### MDM diagnostic logs
 
 To see the MDM diagnostic logs on a device, select **Start** > **Settings** > **Accounts** > **Access work or school** > **Info** > **Create report**.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-diagnostics-14a.png" alt-text="Select Create report to see diagnostics":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-create-diagnostics.png" alt-text="Select Create report to see diagnostics.":::
 
 To export the diagnostic logs, select **Export**.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-diagnostics-14b.png" alt-text="Select Export to export diagnostics":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-export-diagnostics.png" alt-text="Select Export to export diagnostics.":::
 
 The diagnostics report includes information such as the GUIDs of services that apply policies, and the current values of settings that those policies control.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-diagnostics-report-15.png" alt-text="Diagnostic report information":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-diagnostics-report.png" alt-text="Diagnostic report information.":::
 
 ### Registry
 
@@ -246,7 +257,7 @@ To view the enrollment registry entries, open Registry Editor on the device, and
 
 The GUID represents the configuration source, as identified in the diagnostics report. The entries and values in this subkey include configuration information and the user principal name (UPN) of the user who is associated with the device.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-registry-16.png" alt-text="Enrollment subkeys and entries in the registry":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-registry.png" alt-text="Enrollment subkeys and entries in the registry.":::
 
 ## Comparison
 
