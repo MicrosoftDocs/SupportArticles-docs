@@ -4,6 +4,7 @@ description: You receive an error while trying to sign in to Microsoft Dynamics 
 ms.reviewer: jrader
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # You receive an error while signing in to Microsoft Dynamics CRM 2011 via IFD and the 2007 SDK endpoints
 

@@ -4,6 +4,7 @@ description: This article describes the problem where an HTTP 403.16 error occur
 ms.date: 03/26/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
+ms.technology: iis-health-diagnostic-performance
 ---
 # HTTP Error 403.16 when you try to access a website that's hosted on IIS 7.0
 

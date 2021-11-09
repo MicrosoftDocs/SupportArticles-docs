@@ -4,6 +4,7 @@ description: Provides a solution to an issue where a current Deployment Administ
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Unable to add a new Deployment Administrator from trusted domain in same forest
 

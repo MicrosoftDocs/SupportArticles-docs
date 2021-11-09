@@ -4,6 +4,7 @@ description: This KB article describes the proxy detection mechanism that the Cr
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: pphadke, macox
+ms.technology: internet-explorer-security-privacy
 ---
 # Description of the Cryptography API proxy detection mechanism when downloading a Certificate Revocation List (CRL) from a CRL distribution point
 

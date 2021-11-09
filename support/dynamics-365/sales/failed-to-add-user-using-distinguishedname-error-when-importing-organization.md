@@ -4,6 +4,7 @@ description: You may receive the Failed to add user using the DistinguishedName 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Failed to add user using the DistinguishedName error when importing an organization in Microsoft Dynamics CRM
 

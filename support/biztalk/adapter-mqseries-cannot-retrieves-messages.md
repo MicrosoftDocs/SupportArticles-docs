@@ -4,6 +4,7 @@ description: This article provides workarounds for the problem where MQSeries Ad
 ms.date: 08/25/2020
 ms.prod-support-area-path: Adapter
 ms.reviewer: xuehongg, v-paulsh
+ms.technology: biztalk-server-adapter
 ---
 # The MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node
 

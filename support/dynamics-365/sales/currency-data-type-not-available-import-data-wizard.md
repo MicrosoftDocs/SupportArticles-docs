@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: mmaasjo
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-other-functionality
 ---
 # Currency Data Type Not Available in Microsoft Dynamics CRM Import Data Wizard
 

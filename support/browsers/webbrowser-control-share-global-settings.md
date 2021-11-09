@@ -4,6 +4,7 @@ description: This article describes certain download options of WebBrowser can b
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: scotrobe
+ms.technology: internet-explorer-development-website
 ---
 # WebBrowser control clients share global settings
 

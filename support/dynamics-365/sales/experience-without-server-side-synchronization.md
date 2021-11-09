@@ -4,6 +4,7 @@ description: Describes Dynamics 365 App for Outlook experience without Server-Si
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics 365 App for Outlook experience without Server-Side Synchronization
 

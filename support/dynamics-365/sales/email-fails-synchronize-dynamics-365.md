@@ -4,6 +4,7 @@ description: Provides a solution to an issue where email fails to synchronize to
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Email fails to synchronize to Microsoft Dynamics 365 when encoded with PEC
 

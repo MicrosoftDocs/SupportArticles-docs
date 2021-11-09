@@ -4,6 +4,7 @@ description: Describes an issue in which XMLHttpRequest cannot correctly send Fo
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: DEV_Triage, yuhara
+ms.technology: internet-explorer-development-website
 ---
 # XMLHttpRequest cannot correctly send FormData that has an empty file element in Microsoft Edge
 

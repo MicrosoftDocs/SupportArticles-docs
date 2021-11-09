@@ -1,9 +1,10 @@
 ---
 title: Cannot connect to Microsoft Dynamics CRM server error when connecting Dynamics CRM for Outlook
 description: You may receive the Cannot connect to Microsoft Dynamics CRM server because we cannot authenticate your credentials error when connecting Microsoft Dynamics CRM for Microsoft Office Outlook. Provides a resolution.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Cannot connect to Microsoft Dynamics CRM server error when trying to connect Microsoft Dynamics CRM for Microsoft Office Outlook
 

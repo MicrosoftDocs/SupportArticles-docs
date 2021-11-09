@@ -3,7 +3,7 @@ title: IIS admin cmdlets slow in PowerShell 4.0
 description: This article provides resolutions for the problem where IIS administration cmdlets running slowly in PowerShell 4.0.
 ms.date: 04/07/2020
 ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
-ms.technology: iis
+ms.technology: iis-iisadmin-service-inetinfo
 ---
 # Some IIS administration cmdlets run slowly in PowerShell 4.0
 

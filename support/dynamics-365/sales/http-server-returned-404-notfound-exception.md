@@ -4,6 +4,7 @@ description: When you try to test and enable a mailbox in Microsoft Dynamics 365
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Http server returned 404 NotFound exception when using server-side synchronization in Microsoft Dynamics 365
 

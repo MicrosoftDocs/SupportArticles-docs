@@ -4,6 +4,7 @@ description: This article provides a resolution for the issue where Microsoft Vo
 ms.date: 08/27/2020
 ms.prod-support-area-path: 
 ms.reviewer: twarwick
+ms.technology: windows-hardware-general
 ---
 # MS Software Shadow Copy Provider service does not start on Windows Embedded POSReady 2009
 

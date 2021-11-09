@@ -4,6 +4,7 @@ description: This article explains how to handle the WM_DEVICECHANGE message to 
 ms.date: 03/16/2020
 ms.prod-support-area-path: System services development
 ms.topic: how-to
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # How to receive notification of CD-ROM insertion or removal
 

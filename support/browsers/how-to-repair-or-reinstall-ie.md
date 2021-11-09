@@ -4,6 +4,7 @@ description: Discusses how to repair or reinstall Internet Explorer in Windows.
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: wellsluo, ramakoni
+ms.technology: internet-explorer-installation
 ---
 # How to reinstall or repair Internet Explorer in Windows
 

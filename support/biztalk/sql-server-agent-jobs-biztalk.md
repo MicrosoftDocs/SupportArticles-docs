@@ -4,6 +4,7 @@ description: Lists all the SQL Server Agent jobs in BizTalk Server. Also provide
 ms.date: 03/06/2020
 ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ms.reviewer: rickcau
+ms.technology: biztalk-server-setup-config
 ---
 # Description of the SQL Server Agent jobs in BizTalk Server
 

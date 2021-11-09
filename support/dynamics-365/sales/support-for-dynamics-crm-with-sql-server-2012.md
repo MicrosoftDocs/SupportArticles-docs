@@ -4,6 +4,7 @@ description: This article describes support for running Microsoft Dynamics CRM 2
 ms.reviewer: chanson
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Support for Microsoft Dynamics CRM with Microsoft SQL Server 2012
 

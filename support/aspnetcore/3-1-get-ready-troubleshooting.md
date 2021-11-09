@@ -4,6 +4,7 @@ description: This article helps you consider the troubleshooting process as a wh
 ms.date: 03/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Part 3.1 - Get ready for troubleshooting
 

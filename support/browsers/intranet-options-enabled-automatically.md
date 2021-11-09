@@ -4,6 +4,7 @@ description: Provides the steps to solve the issue that all the three Intranet O
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: wuth
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Automatically Detect Intranet Network enables all Intranet options on a domain member computer
 

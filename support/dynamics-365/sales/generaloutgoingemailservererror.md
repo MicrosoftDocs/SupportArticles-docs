@@ -4,6 +4,7 @@ description: provides a solution to an error that occurs when using Gmail to sen
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "Smtp server returned GeneralOutgoingEmailServerError GeneralFailure exception" warning is logged when using Gmail to send email from Microsoft Dynamics 365
 

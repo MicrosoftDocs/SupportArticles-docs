@@ -4,6 +4,7 @@ description: This article provides resolutions for the ASP 0178 error that occur
 ms.date: 09/24/2020
 ms.prod-support-area-path: Active Server Pages
 ms.prod: iis
+ms.technology: iis-active-server-pages
 ---
 # Server object error 'ASP 0178' when you instantiate COM object
 

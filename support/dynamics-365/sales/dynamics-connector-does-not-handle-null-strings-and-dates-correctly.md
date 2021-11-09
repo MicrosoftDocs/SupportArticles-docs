@@ -4,6 +4,7 @@ description: This article describes a problem in the default maps for Microsoft 
 ms.reviewer: clintwa
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-other-integration
 ---
 # Dynamics connector does not handle null strings and dates correctly for Dynamics CRM and Dynamics GP Adapters
 

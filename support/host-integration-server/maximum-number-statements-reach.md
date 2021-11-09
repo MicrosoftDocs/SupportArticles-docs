@@ -3,6 +3,7 @@ title: Maximum number of statements has reached
 description: This article provides resolutions for the problem where the maximum number of statements has been reached for the current connection.
 ms.date: 03/18/2020
 ms.prod-support-area-path: Data integration (DB2, host files)
+ms.technology: his-data-integration
 ---
 # The maximum number of statements has been reached for the current connection
 

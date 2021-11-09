@@ -2,9 +2,10 @@
 title: Browser default action for CTRL+P cannot be prevented
 description: This article describes that browser default action for CTRL+P cannot be prevented.
 ms.date: 01/04/2021
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: article
+ms.technology: internet-explorer-development-website
 ---
 # Browser default action for CTRL+P cannot be prevented
 

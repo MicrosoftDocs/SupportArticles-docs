@@ -4,6 +4,7 @@ description: Introduces how to change the default behavior to raise a file downl
 ms.date: 03/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: JAYALLEN
+ms.technology: internet-explorer-development-website
 ---
 # How to raise a File Download dialog box for a known MIME type
 

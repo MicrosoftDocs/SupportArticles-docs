@@ -4,6 +4,7 @@ description: You may receive a ErrorQuotaExceeded. Exchange.server returned 403 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # ErrorQuotaExceeded Exchange server returned 403 error in Microsoft Dynamics 365 mailbox alert
 

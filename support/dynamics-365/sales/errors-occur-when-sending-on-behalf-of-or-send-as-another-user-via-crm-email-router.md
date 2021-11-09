@@ -4,6 +4,7 @@ description: This article explains why some errors may occur when using the Micr
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Errors occur when sending on behalf of or sending as another user when using Dynamics CRM Email Router with Exchange Online
 

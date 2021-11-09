@@ -4,6 +4,7 @@ description: Provides solutions to errors that occur when Server-Side Synchroniz
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Email fails to be sent or received when Server-Side Synchronization is configured with Gmail
 
