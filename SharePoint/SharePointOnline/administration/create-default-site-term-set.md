@@ -53,11 +53,11 @@ If you need a local term store and don't want to activate the publishing feature
 
 5. Change the column type from **Single line of text** to **Managed Metadata**.
 
-   :::image type="content" source="media/create-default-site-term-set/change-column-type-managed-metadata.png" alt-text="Screenshot of Create column setting, choose a column name and changing the column type to Managed Metadata." border="false":::
+   :::image type="content" source="media/create-default-site-term-set/change-column-type-managed-metadata.png" alt-text="Screenshot of the Create Column page that changes the column type to Managed Metadata." border="false":::
 
 6. Scroll down to **Term Set Settings** and choose **Customize your term set:**. You can provide description if you would like, but you should see the name of the column you put above there.
 
-   :::image type="content" source="media/create-default-site-term-set/customize-term-set.png" alt-text="Screenshot of Term Set Settings, choosing Customize your term set to provide description if you would like." border="false":::
+   :::image type="content" source="media/create-default-site-term-set/customize-term-set.png" alt-text="Screenshot of Term Set settings, choosing Customize your term set to provide description if you would like." border="false":::
 
 7. Select the **OK** button.
 

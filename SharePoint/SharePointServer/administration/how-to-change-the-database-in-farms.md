@@ -74,7 +74,7 @@ Get-SPDatabase | Select Name,Server
 
 You should receive a result that's similar to the following example:
 
-:::image type="content" source="media/how-to-change-the-database-server-in-farms/db-output.png" alt-text="Screenshot of database output after running the relevant PowerShell cmdlet in an elevated SharePoint Management Shell window." border="false":::
+:::image type="content" source="media/how-to-change-the-database-server-in-farms/db-output.png" alt-text="Screenshot of a database output after running the relevant PowerShell cmdlet in an elevated SharePoint Management Shell window." border="false":::
 
 ### Step 3: Point the default database instance for the web applications to the new SQL Server instance  
 
@@ -107,7 +107,7 @@ $webapps = Get-SPWebApplication -IncludeCentralAdministration
 
 You should receive a result that resembles the following example:
 
-:::image type="content" source="media/how-to-change-the-database-server-in-farms/db-instance-output.png" alt-text="Screenshot of database instance output after running the relevant PowerShell cmdlet in an elevated SharePoint Management Shell window." border="false":::   
+:::image type="content" source="media/how-to-change-the-database-server-in-farms/db-instance-output.png" alt-text="Screenshot of a database instance output after running the relevant PowerShell cmdlet in an elevated SharePoint Management Shell window." border="false":::   
 
 ### Step 4: Change the Distributed Cache cluster configuration  
 
@@ -203,7 +203,7 @@ Get-SPServer
 
 You should receive a result that resembles the following example:   
 
-:::image type="content" source="media/how-to-change-the-database-server-in-farms/server-output.png" alt-text="Screenshot of server output after running the relevant cmdlet to verify that the database server is successfully changed." border="false":::    
+:::image type="content" source="media/how-to-change-the-database-server-in-farms/server-output.png" alt-text="Screenshot of a server output after running the relevant cmdlet to verify that the database server is successfully changed." border="false":::    
 
 ## More Information  
 
