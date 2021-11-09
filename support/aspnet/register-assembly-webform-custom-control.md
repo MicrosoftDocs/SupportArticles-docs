@@ -5,7 +5,6 @@ ms.date: 03/25/2020
 ms.prod-support-area-path: Development
 ms.reviewer: pattim
 ms.topic: how-to
-ms.technology: aspnet-development
 ---
 # Register an assembly in a WebForm to use a custom control  
 

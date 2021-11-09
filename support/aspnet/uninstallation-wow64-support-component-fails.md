@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that On Windows 8
 ms.date: 12/11/2020
 ms.prod-support-area-path: Site Behavior and Performance
 ms.reviewer: pranavra
-ms.technology: aspnet-site-behavior-performance
 ---
 # Uninstallation of WoW64 Support component fails when ASP.NET is installed on Windows 8 or Windows Server 2012
 

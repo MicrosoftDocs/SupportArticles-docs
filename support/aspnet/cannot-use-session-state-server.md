@@ -1,9 +1,8 @@
 ---
 title: Unable to use session state server
-description: This article provides resolutions for the error that occurs when you add the setting <httpRuntime enableVersionHeader =false/> to the state server web.config.
+description: This article provides resolutions for the error that occurs when you add the setting <httpRuntime enableVersionHeader ="false"/> to the state server web.config.
 ms.date: 08/06/2020
 ms.prod-support-area-path: Development
-ms.technology: aspnet-development
 ---
 # Unable to use session state server because this version of ASP.NET requires session state server version 2.0 or above
 

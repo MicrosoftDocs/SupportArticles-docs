@@ -5,7 +5,6 @@ ms.date: 04/15/2020
 ms.prod-support-area-path: WWW administration and management
 ms.reviewer: saurabsi
 ms.topic: how-to
-ms.technology: aspnet-www-administration-management
 ---
 # Back up ASP.NET configuration files
 

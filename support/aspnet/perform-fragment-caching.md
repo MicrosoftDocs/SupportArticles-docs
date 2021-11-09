@@ -3,7 +3,6 @@ title: Perform Fragment Caching by Using Visual C# .NET
 description: This article describes how to perform Fragment Caching in ASP.NET by using Visual C# .NET.
 ms.date: 08/06/2020
 ms.topic: how-to
-ms.technology: aspnet-development
 ---
 # Perform Fragment Caching in ASP.NET by Using Visual C# .NET
 

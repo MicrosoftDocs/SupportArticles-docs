@@ -4,7 +4,6 @@ description: This article provides information about the code-behind model that 
 ms.date: 04/02/2020
 ms.prod-support-area-path: Development
 ms.topic: article
-ms.technology: aspnet-development
 ---
 # ASP.NET Code-behind model overview
 

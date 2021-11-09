@@ -5,7 +5,6 @@ ms.date: 03/26/2020
 ms.prod-support-area-path: Development
 ms.reviewer: wawang
 ms.topic: article
-ms.technology: aspnet-development
 ---
 # ASP.NET inline expressions in the .NET Framework
 
