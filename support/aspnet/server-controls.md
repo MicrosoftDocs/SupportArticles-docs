@@ -4,6 +4,7 @@ description: This article describes the information of the ASP.NET server contro
 ms.date: 04/02/2020
 ms.prod-support-area-path: Development
 ms.topic: article
+ms.technology: aspnet-development
 ---
 # ASP.NET server controls overview
 

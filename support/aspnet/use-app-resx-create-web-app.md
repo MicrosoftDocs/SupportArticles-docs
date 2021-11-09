@@ -4,6 +4,7 @@ description: This article provides instructions that how to use resource files (
 ms.date: 04/09/2020
 ms.prod-support-area-path: Development
 ms.topic: how-to
+ms.technology: aspnet-development
 ---
 # Use application resource files (.resx) to efficiently create a localizable ASP.NET Web application
 

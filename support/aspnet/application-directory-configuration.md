@@ -4,6 +4,7 @@ description: This article describes how to use ASP.NET to make application-speci
 ms.date: 04/03/2020
 ms.prod-support-area-path: Development
 ms.topic: how-to
+ms.technology: aspnet-development
 ---
 # Make application and directory-specific configuration settings in an ASP.NET application
 

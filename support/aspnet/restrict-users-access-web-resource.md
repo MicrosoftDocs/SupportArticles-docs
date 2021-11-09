@@ -4,6 +4,7 @@ description: This article describes some methods about restricting specific user
 ms.date: 03/26/2020
 ms.prod-support-area-path: WWW administration and management
 ms.topic: how-to
+ms.technology: aspnet-www-administration-management
 ---
 # Restrict specific users from gaining access to specified web resources
 
