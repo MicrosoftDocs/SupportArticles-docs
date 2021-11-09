@@ -5,6 +5,7 @@ ms.date: 09/24/2020
 ms.prod-support-area-path: Networking Development
 ms.reviewer: khorton, osmaner
 ms.prod: windows
+ms.technology: windows-dev-apps-networking-dev
 ---
 # SetFileCompletionNotificationModes API causes an I/O completion port not to work correctly if a non-IFS LSP is installed
 

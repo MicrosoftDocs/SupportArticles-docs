@@ -4,6 +4,7 @@ description: Describes the scenario where an Input Method Editor (IME) may crash
 ms.date: 
 ms.prod-support-area-path: 
 ms.reviewer: koichm, davean
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 # IME crashes when processing a window message sent from another thread
 

@@ -5,6 +5,7 @@ ms.date: 02/28/2020
 ms.reviewer: jhornick
 ms.topic: how-to
 ms.prod-support-area-path: Developer Tools
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # Send raw data to a printer by using the Win32 API
 
