@@ -340,7 +340,7 @@
     - name: SharePoint Online alert notifications isn't received
       href: ../Sites/no-alert-notifications.md
     - name: SharePoint or OneDrive read-only error messages
-      href: ../Sites/site-is-rate-only.md
+      href: ../Sites/site-is-read-only.md
     - name: Site doesn't use the site theme for top navigation bar
       href: ../Sites/top-navigation-bar-not-use-site-theme.md
     - name: Site is at or near the metadata limit
