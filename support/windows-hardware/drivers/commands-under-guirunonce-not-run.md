@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem where the command
 ms.date: 09/02/2020
 ms.prod-support-area-path: 
 ms.reviewer: twarwick, jtanner
+ms.technology: windows-hardware-general
 ---
 # GuiRunOnce in sysprep.inf not working in Windows POSReady
 

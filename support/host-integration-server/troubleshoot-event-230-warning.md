@@ -4,6 +4,7 @@ description: This article introduces that how to troubleshoot Host Integration S
 ms.date: 05/11/2020
 ms.prod-support-area-path: Network integration (SNA gateway)
 ms.topic: how-to
+ms.technology: his-network-integration
 ---
 # Troubleshooting on Host Integration Server Event 230 warnings
 

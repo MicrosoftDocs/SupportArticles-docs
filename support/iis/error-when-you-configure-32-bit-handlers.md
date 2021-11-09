@@ -4,6 +4,7 @@ description: This article provides workarounds for the problem that occurs when 
 ms.date: 12/11/2020
 ms.prod-support-area-path: WWW Administration and Management
 ms.reviewer: paulboc
+ms.technology: iis-www-administration-management
 ---
 # Error when you configure 32-bit managed handlers in the IIS console
 

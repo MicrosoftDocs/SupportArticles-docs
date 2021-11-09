@@ -3,6 +3,7 @@ title: HTTP Error 403 and 404
 description: This article provides resolutions for the HTTP Error 403 and 404 errors that occur when accessing WebView or WebPort.
 ms.date: 04/17/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.technology: iis-health-diagnostic-performance
 ---
 # HTTP Error 403 - Forbidden or HTTP Error 404 - File Not Found
 

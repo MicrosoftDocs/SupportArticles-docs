@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem that when you req
 ms.date: 12/11/2020
 ms.prod-support-area-path: WWW Administration and Management
 ms.reviewer: jamesche, mlaing
+ms.technology: iis-www-administration-management
 ---
 # Access to remote resources fails when requested through IIS
 

@@ -5,6 +5,7 @@ ms.date: 03/23/2020
 ms.prod-support-area-path: Active Server Pages
 ms.reviewer: mcai
 ms.topic: how-to
+ms.technology: iis-active-server-pages
 ---
 # Set the ASP locale ID per the browser's language settings
 

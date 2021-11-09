@@ -4,6 +4,7 @@ description: This article describes a problem where asynchronous disk I/O appear
 ms.date: 03/13/2020
 ms.prod-support-area-path: System services development
 ms.reviewer: allend
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # Asynchronous disk I/O appears as synchronous on Windows
 

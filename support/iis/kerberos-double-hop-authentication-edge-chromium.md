@@ -6,6 +6,7 @@ ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: aartigoyle, dili
 author: cobibi
 ms.author: v-yunhya
+ms.technology: iis-www-authentication-authorization
 ---
 # Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)
 

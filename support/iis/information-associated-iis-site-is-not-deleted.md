@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem where information
 ms.date: 12/11/2020
 ms.prod-support-area-path: WWW Authentication and Authorization
 ms.reviewer: paulboc
+ms.technology: iis-www-authentication-authorization
 ---
 # Information associated with IIS site isn't deleted during programmatic site deletion
 

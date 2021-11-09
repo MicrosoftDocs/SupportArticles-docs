@@ -4,6 +4,7 @@ description: This article describes a problem in which Windows Explorer override
 ms.date: 03/16/2020
 ms.prod-support-area-path: Desktop app UI development
 ms.reviewer: christys, delhan
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 # Applications calling SystemParametersInfo function with SPI_SETWORKAREA flag might not work correctly in Windows 10
 
