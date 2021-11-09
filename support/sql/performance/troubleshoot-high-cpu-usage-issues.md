@@ -96,27 +96,29 @@ If SQL Server is still using high CPU, go to the next step.
 
 ## Step 4: Add potentially missing indexes
 
-1. Use the following query to get the estimated execution plan of the highest CPU-bound query.
+1. Use the following query to identify queries with high CPU usage that containg at least one missing index in their query plan.
 
     ```sql
-    -- Captures the Total CPU time spent by a query along with the plan handle
-    SELECT highest_cpu_queries.plan_handle,
-           highest_cpu_queries.total_worker_time,
-           q.dbid,
-           q.objectid,
-           q.number,
-           q.encrypted,
-           q.[text]
+    -- Captures the Total CPU time spent by a query along with the query plan and total executions
+    SELECT 
+           qs_cpu.total_worker_time/1000 total_cpu_time_ms,
+           q.[text],
+    	   p.query_plan,
+    	   qs_cpu.execution_count,
+    	   q.dbid,
+    	   q.objectid,
+    	   q.encrypted as text_encrypted
     FROM
-      (SELECT TOP 50 qs.plan_handle,
-                  qs.total_worker_time
+      (SELECT TOP 100 qs.plan_handle,
+                  qs.total_worker_time,
+    			  qs.execution_count
        FROM sys.dm_exec_query_stats qs
-       ORDER BY qs.total_worker_time DESC) AS highest_cpu_queries CROSS apply sys.dm_exec_sql_text(plan_handle) AS q
-    ORDER BY highest_cpu_queries.total_worker_time DESC 
-    
-    -- Replace the Plan handle with the value obtained from above query.
-    SELECT *
-    FROM sys.dm_exec_query_plan (plan_handle)
+       ORDER BY qs.total_worker_time DESC) AS qs_cpu 
+       CROSS apply sys.dm_exec_sql_text(plan_handle) AS q
+       cross apply sys.dm_exec_query_plan (plan_handle) p
+	  WHERE p.query_plan.exist('declare namespace 
+	   qplan="http://schemas.microsoft.com/sqlserver/2004/07/showplan";
+            //qplan:MissingIndexes')=1
     ```
 
 1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query:
@@ -283,8 +285,28 @@ If you are using a virtual machine, make sure that you aren't overprovisioning C
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs.
+If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use this query to help you determine how many queries have exceed a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values for the two variables to match your environment.
 
+```sql
+-- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
+declare @cputime_threshold_microsec int = 200*1000,
+declare @execution_count int = 1000
+
+SELECT 
+     qs.total_worker_time/1000 total_cpu_time_ms,
+	   qs.max_worker_time/1000 max_cpu_time_ms,
+	   (qs.total_worker_time/1000)/execution_count average_cpu_time_ms,
+	   qs.execution_count,
+     q.[text]
+FROM
+   sys.dm_exec_query_stats qs
+   CROSS apply sys.dm_exec_sql_text(plan_handle) AS q
+WHERE  (qs.total_worker_time/execution_count > @cputime_threshold_microsec  
+       OR 	   qs.max_worker_time > @cputime_threshold_microsec )
+       AND execution_count > @execution_count
+ORDER BY qs.total_worker_time DESC 
+OPTION (RECOMPILE)
+```
 ## See also
 
 - [High CPU usage occurs in your queries](high-cpu-use-occurs-queries.md)
