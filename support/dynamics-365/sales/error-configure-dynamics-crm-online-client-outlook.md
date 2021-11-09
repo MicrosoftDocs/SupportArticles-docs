@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: jadenb, ehagen
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "Cannot connect to Microsoft Dynamics CRM server because we cannot authenticate your credentials" error when you configure Microsoft Dynamics CRM Online Client for Outlook
 

@@ -4,6 +4,7 @@ description: This article explains the problem that you can't install ASP.NET fe
 ms.date: 04/03/2020
 ms.prod-support-area-path: WWW administration and management
 ms.reviewer: pranavra
+ms.technology: aspnet-www-administration-management
 ---
 # Install ASP.NET 4.5 in Windows 8 and Windows Server 2012
 

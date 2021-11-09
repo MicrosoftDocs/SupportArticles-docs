@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where MSCRMSandb
 ms.reviewer: jowells
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # MSCRMSandboxClient errors in the Event Viewer for Microsoft Dynamics CRM 2011
 

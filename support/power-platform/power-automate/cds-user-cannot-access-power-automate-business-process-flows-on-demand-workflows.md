@@ -4,6 +4,7 @@ description: CDS User role cannot access Power Automate flows, business process 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # CDS User Role cannot access Power Automate flows, business process flows, or on-demand workflows
 

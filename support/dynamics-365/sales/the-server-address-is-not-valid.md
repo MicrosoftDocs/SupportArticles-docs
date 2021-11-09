@@ -4,6 +4,7 @@ description: Fixes an issue in which you receive the server address (URL) is not
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # "The server address (URL) is not valid" error when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

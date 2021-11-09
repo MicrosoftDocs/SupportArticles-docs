@@ -4,6 +4,7 @@ description: Provides a solution to an issue where Microsoft Silverlight web res
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Microsoft SilverLight web resources can't be viewed in the 64-bit version of the Microsoft Dynamics CRM Client for Microsoft Office Outlook
 

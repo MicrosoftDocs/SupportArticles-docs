@@ -3,6 +3,7 @@ title: Adapter for TIBCO EMS supports only text
 description: This article describes how the BizTalk Adapter for TIBCO EMS supports only the text message type.
 ms.date: 03/16/2020
 ms.prod-support-area-path: Adapter
+ms.technology: biztalk-server-adapter
 ---
 # BizTalk Adapter for TIBCO EMS supports only the text message type
 

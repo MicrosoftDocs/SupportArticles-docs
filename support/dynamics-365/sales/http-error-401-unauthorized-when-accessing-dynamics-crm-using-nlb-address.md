@@ -4,6 +4,7 @@ description: The error HTTP Error 401 - Unauthorized occurs when you access Micr
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # HTTP Error 401 Unauthorized error when you access Microsoft Dynamics CRM using the NLB address
 

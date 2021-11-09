@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to upload 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-reports
 ---
 # Custom code that is allowed for use in Microsoft Dynamics CRM Online FetchXML Reports
 

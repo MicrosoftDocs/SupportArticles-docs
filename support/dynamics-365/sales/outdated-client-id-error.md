@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs after your organization
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Outdated client ID error after upgrading to the December 2016 update for Microsoft Dynamics 365
 

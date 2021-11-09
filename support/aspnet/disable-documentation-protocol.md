@@ -4,6 +4,7 @@ description: This article describes how to disable the documentation protocol fo
 ms.date: 04/08/2020
 ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
 ms.topic: how-to
+ms.technology: aspnet-iisadmin-service-process
 ---
 # Disable the documentation protocol for ASP.NET web services
 

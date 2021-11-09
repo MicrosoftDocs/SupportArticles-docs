@@ -4,6 +4,7 @@ description: Describes information that is collected from a computer when you ru
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # [SDP 3][4d932503-ca3c-469c-9719-1ca0964a0e03] Microsoft Dynamics CRM IIS Memory Dump diagnostic
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs after selecting Test & 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # An internal Microsoft Dynamics 365 error occurred while synchronizing appointments, contacts, and tasks
 

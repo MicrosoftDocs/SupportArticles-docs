@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where you are un
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Unable to add CRM App for Outlook due to Missing Email Address
 

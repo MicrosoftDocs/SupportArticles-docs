@@ -4,6 +4,7 @@ description: You receive an alert indicating the mailbox requires approval by an
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Mailbox requires an approval by an Office 365 administrator alerts occur after selecting Test & Enable Mailbox
 

@@ -4,6 +4,7 @@ description: This article describes an problem that Request.ServerVariables() re
 ms.date: 04/03/2020
 ms.prod-support-area-path: Development
 ms.reviewer: anandh
+ms.technology: aspnet-development
 ---
 # Request.ServerVariables("LOGON_USER") returns empty string in ASP.NET
 

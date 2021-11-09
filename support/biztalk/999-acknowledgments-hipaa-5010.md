@@ -6,6 +6,7 @@ ms.prod-support-area-path: Accelerators
 ms.reviewer: anandsi, MQuian
 ms.topic: how-to
 ms.prod: biztalk-server
+ms.technology: biztalk-server-accelerators
 ---
 # Generate 999 Acknowledgments for HIPAA 5010 in BizTalk Server 2010
 

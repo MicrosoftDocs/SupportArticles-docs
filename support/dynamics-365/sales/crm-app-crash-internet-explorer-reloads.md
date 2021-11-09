@@ -4,6 +4,7 @@ description: This article provides a workaround for the problem that occurs when
 ms.topic: troubleshooting
 ms.reviewer: 
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # When you use Microsoft Dynamics CRM 2011, Internet Explorer 9 may reload and cause CRM to crash
 

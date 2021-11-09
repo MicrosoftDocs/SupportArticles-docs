@@ -4,6 +4,7 @@ description: Provides a solution to an issue where you're consistently signed ou
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # You are consistently signed out of the Microsoft Dynamics CRM Online Outlook Client
 

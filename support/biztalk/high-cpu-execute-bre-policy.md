@@ -3,6 +3,7 @@ title: High CPU when you execute a BRE policy
 description: This article describes that when you use a Business Rules Engine policy within an orchestration or using the Business Rules Framework to execute a BRE policy, the process executing the policy might experience high CPU.
 ms.date: 07/14/2020
 ms.prod-support-area-path: Performance
+ms.technology: biztalk-server-performance
 ---
 # High CPU when you execute a BRE policy
 

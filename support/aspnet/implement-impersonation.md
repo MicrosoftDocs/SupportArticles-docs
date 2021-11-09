@@ -5,6 +5,7 @@ ms.date: 03/26/2020
 ms.prod-support-area-path: FTP authentication and authorization
 ms.reviewer: jallen
 ms.topic: how-to
+ms.technology: aspnet-ftp-authentication-authorization
 ---
 # Implement impersonation in an ASP.NET application
 

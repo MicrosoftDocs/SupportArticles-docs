@@ -4,6 +4,7 @@ description: This article applies to Microsoft Dynamics CRM Government Cloud org
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Microsoft Dynamics CRM Government Cloud organization integration with the Microsoft Azure Service Bus
 

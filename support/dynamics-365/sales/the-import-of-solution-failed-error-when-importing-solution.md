@@ -1,9 +1,10 @@
 ---
 title: The import of solution failed error when importing solution
 description: The import of solution failed error occurs when you try to import a solution in Microsoft Dynamics 365.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # "The import of solution failed" error occurs in Microsoft Dynamics 365
 
