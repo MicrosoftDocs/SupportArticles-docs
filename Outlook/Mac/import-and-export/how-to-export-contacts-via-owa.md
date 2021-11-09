@@ -37,11 +37,11 @@ To export contacts from Outlook 2011 for Mac to Exchange Online by using Outlook
 1. In Outlook 2011 for Mac, on the **File** menu, select **Export**.
 2. In the Export Assistant, select **Contacts to a list (tab-delimited text)**, and then select the right arrow button.
 
-   :::image type="content" source="media/how-to-export-contacts-via-owa/contacts-to-a-list-(tab-delimited-text).jpg" alt-text="screenshot of the Export Assistant page, showing Contact to a list (tab-delimited text) is selected":::
+   :::image type="content" source="media/how-to-export-contacts-via-owa/contacts-to-a-list-(tab-delimited-text).png" alt-text="screenshot of the Export Assistant page, showing Contact to a list (tab-delimited text) is selected.":::
 
 3. Select **Done** to finish.
 
-   :::image type="content" source="media/how-to-export-contacts-via-owa/export-complete-page.jpg" alt-text="screenshot of the Export Complete page":::
+   :::image type="content" source="media/how-to-export-contacts-via-owa/export-complete-page.png" alt-text="screenshot of the Export Complete page.":::
 
 > [!NOTE]
 >
@@ -54,15 +54,15 @@ To export contacts from Outlook 2011 for Mac to Exchange Online by using Outlook
 2. In the Text Import Wizard, follow these steps. Be aware that in these next three steps, the default settings are used.
    1. Select **Delimited** as the file type, and then select **Next**.
 
-      :::image type="content" source="media/how-to-export-contacts-via-owa/delimited-option.jpg" alt-text="screenshot of the Text Import Wizard, showing the delimited file type is selected" border="false":::
+      :::image type="content" source="media/how-to-export-contacts-via-owa/delimited-option.png" alt-text="Screenshot of the Text Import Wizard, showing the delimited file type is selected." border="false":::
 
    2. Under **Delimiter**, select the **Tab** check box, and then select **Next**.
 
-      :::image type="content" source="media/how-to-export-contacts-via-owa/the-tab-checkbox-under-delimiters.jpg" alt-text="screenshot of the Text Import Wizard, showing the Tab check box is selected" border="false":::
+      :::image type="content" source="media/how-to-export-contacts-via-owa/the-tab-checkbox-under-delimiters.png" alt-text="Screenshot of the Text Import Wizard, showing the Tab check box is selected." border="false":::
 
    3. Under **Column data format**, select **General**, and then select **Finish**.
 
-      :::image type="content" source="media/how-to-export-contacts-via-owa/general-option-under-column-data-format.jpg" alt-text="screenshot of the Text Import Wizard, showing the General is selected as column data format" border="false":::
+      :::image type="content" source="media/how-to-export-contacts-via-owa/general-option-under-column-data-format.png" alt-text="Screenshot of the Text Import Wizard, showing the General is selected as column data format." border="false":::
 
 ### Step 3 - Export the contacts to a .csv file by using Excel 2011 for Mac
 
