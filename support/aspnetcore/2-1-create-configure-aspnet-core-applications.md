@@ -4,6 +4,7 @@ description: This article describes how to create and configure ASP.NET Core app
 ms.date: 03/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Part 2.1 - Create and configure ASP.NET Core applications in Linux
 

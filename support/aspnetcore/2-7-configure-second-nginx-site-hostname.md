@@ -1,9 +1,10 @@
 ---
-title: Configure a second website with hostname in Nginx 
+title: Configure a second website with hostname in Nginx
 description: This article describes how to configure a second website in Nginx by using hostname, and how to test the configuration.
 ms.date: 09/03/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Part 2.7 - Configure a second website by using hostname in Nginx
 

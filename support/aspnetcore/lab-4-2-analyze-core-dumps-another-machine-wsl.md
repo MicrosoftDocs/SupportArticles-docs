@@ -4,6 +4,7 @@ description: This article describes how to use Windows Subsystem for Linux to op
 ms.date: 06/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmet.bostanci
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 4.2 Analyze core dump files on another machine - Using WSL to open core dump files
 
