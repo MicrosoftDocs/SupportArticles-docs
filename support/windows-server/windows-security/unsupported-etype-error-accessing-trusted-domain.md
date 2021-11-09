@@ -124,7 +124,7 @@ To use this method, follow these steps:
 2. In the **Domains that trust this domain (incoming trusts)**  box, select the trusting domain (in the example, `child.domain.com`).
 3. Select **Properties**, select **The other domain supports Kerberos AES Encryption**, and then select **OK**.
 
-    :::image type="content" source="./media/unsupported-etype-error-accessing-trusted-domain/properties-of-a-child-domain.png" alt-text="Screenshot of the properties of a child domain, and the Properties window includes the other domain supports Kerberos AES Encryption checkbox.":::
+    :::image type="content" source="media/unsupported-etype-error-accessing-trusted-domain/properties-of-a-child-domain.png" alt-text="Screenshot of the properties of a child domain, and the Properties window includes the other domain supports Kerberos AES Encryption checkbox.":::
 
     > [!Note]
     > To validate the trust configuration, select **Validate** in the trusting domain dialog box.
