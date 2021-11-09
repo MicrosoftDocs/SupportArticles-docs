@@ -4,6 +4,7 @@ description: Microsoft Dynamics CRM Online outbound phone calls default to Lync 
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-other-functionality
 ---
 # Microsoft Dynamics CRM Online outbound phone calls default to Lync instead of Skype
 

@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you open a file that you expor
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The file you are trying to open is in a different format than specified warning when opening a file that is exported to Excel
 

@@ -4,6 +4,7 @@ description: Unable to open records after upgrade to Dynamics 365 (version 8.2).
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Unable to open records after upgrade to Dynamics 365 (version 8.2)
 

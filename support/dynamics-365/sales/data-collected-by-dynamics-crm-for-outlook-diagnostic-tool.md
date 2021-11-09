@@ -4,6 +4,7 @@ description: Describes the data that is collected by the Memory Dump diagnostic 
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # [SDP 3][61593d1b-21b0-43e3-9088-74e77dec12f4] Microsoft Dynamics CRM client for Outlook diagnostic tool
 

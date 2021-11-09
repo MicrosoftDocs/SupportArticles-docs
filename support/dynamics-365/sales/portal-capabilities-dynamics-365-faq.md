@@ -4,6 +4,7 @@ description: Describes Portal capabilities for Dynamics 365 FAQ.
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-portal-addon
 ---
 # Portal capabilities for Microsoft Dynamics 365 FAQ
 

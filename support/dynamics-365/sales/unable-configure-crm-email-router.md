@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you're unable to c
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Unable to configure the Microsoft Dynamics CRM E-mail Router
 

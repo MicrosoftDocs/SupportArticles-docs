@@ -4,6 +4,7 @@ description: This article describes the error message received while accessing t
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # "HTTP 503 Service Unavailable" error when accessing Microsoft Dynamics CRM Federation Metadata URL after configuring the claims-based Authentication
 

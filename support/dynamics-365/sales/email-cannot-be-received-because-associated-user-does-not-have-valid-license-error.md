@@ -1,9 +1,10 @@
 ---
 title: Email can't be received for the mailbox error when test and enable mailbox
 description: Email can't be received for the mailbox because the associated user doesn't have a valid Microsoft Dynamics 365 license - this error occurs when trying to Test and Enable a mailbox in Microsoft Dynamics 365.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Email can't be received for the mailbox because the associated user doesn't have a valid Microsoft Dynamics 365 license
 

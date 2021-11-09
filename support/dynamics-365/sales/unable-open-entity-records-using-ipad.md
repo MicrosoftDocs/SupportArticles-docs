@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-tablets
 ---
 # Unable to open entity records using an iPad in Microsoft Dynamics CRM Online
 
