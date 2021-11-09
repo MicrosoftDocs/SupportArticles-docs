@@ -63,13 +63,11 @@ To work around this behavior, create a matching user account in the on-premises 
       > The primary SMTP address value for the user object should be prepended by an uppercase "SMTP:" designator for the address value to be formatted correctly for the proxyAddressesattribute. For example, "SMTP:username@contoso.com" is an acceptable value, and "username@contoso.com" isn't an acceptable value.
    6. Click **OK** two times, and then exit ADSI Edit.
 
-   For more information about how to use ADSI Edit to edit Active Directory attributes, go to the following Microsoft TechNet website:
-  [Using ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_usingadsiedit)
+   For more information about how to use ADSI Edit to edit Active Directory attributes, go to the following Microsoft TechNet website: [Using ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_usingadsiedit)
 5. Force directory synchronization.
 
 ## More information
 
-For more information, see
-[Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2392130).  
+For more information, see [Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2392130).  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
