@@ -49,7 +49,7 @@ To verify that the PDFMaker add-in is installed on your computer, do the followi
 - Office 2010: Open any Office application, and then select **File** > **Add-Ins**.
 - Office 2013 and later versions, select **File** > **Options** > **Add-Ins**. Next to **Manage COM Add-ins** select **Go**. You will see a dialog box that resembles the following screenshot:
 
-![the screen shot for the add-ins of outlook options window](./media/incompatibilities-between-office-and-adob/the-screen-shot-for-the-add-ins-of-outlook-options-window.jpg)
+:::image type="content" source="media/incompatibilities-between-office-and-adob/add-ins-outlook-options.png" alt-text="Screenshot to check the add-ins in the Outlook Options window." border="false":::
 
 To resolve this issue, use one of the following methods:
 
@@ -79,7 +79,7 @@ If you have administrative permissions, you can also disable the add-in by follo
 2. In the Manage drop-down list, select COM Add-Ins, and then select Go.
 3. Clear the Acrobat PDFMaker Office COM Addin check box, as follows (Office 2010 screen shot), and then select OK.
 
-![the screen shot for the com add-ins](./media/incompatibilities-between-office-and-adob/the-screen-shot-for-the-com-add-ins.jpg)
+:::image type="content" source="media/incompatibilities-between-office-and-adob/disable-add-in.png" alt-text="Screenshot to clear the Acrobat PDFMaker Office COM Addin check box." border="false":::
 If you cannot disable the add-in by following these steps, use one of the following methods.
 
 > [!IMPORTANT]

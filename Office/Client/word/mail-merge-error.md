@@ -35,7 +35,7 @@ In this scenario, you receive the following error message:
 
 **Error has occurred: External table is not in the expected format.**
 
-![error message](./media/mail-merge-error-in-word/error.png)
+:::image type="content" source="media/mail-merge-error-in-word/error-message.png" alt-text="Screenshot of the error message, showing the external table is not in the expected format.":::
 
 ## Cause
 

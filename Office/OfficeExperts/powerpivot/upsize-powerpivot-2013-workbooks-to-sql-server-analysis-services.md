@@ -69,35 +69,35 @@ The only option to have a PowerPoint workbook larger than 2GB is to upsize or on
    1. On the **Setup Role** panel, select **SQL Server Feature Installation**.
    1. On the **Feature Selection** panel, select **SQL Server Data Tools**.
 
-      ![the sql server 2012 setup image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/sql-server-2012-setup.png)
+      :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/sql-server-2012-setup.png" alt-text="Screenshot to select the S Q L Server Data Tools option on the Feature Selection panel." border="false":::
 1. Finish the installation wizard.
 1. Install [SQL Server 2012 Service Pack 1](https://www.microsoft.com/en-us/download/details.aspx?id=35575) on the client computer. This supports Office 2013 workbooks.
 1. Copy the workbook that you want to upsize to the file share that's created in the step 2.
 1. Start **SQL Server Data Tools**.
 1. Select **Business Intelligence Settings** in the **Choose Default Environment Settings** prompt window.
 
-   ![the default environment settings image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/default-environment-settings.png)
+   :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/default-environment-settings.png" alt-text="Screenshot to select Business Intelligence Settings in the Choose Default Environment Settings prompt window." border="false":::
 1. Create a new project through selecting **File** > **New** > **Project**.
 1. In the **Business Intelligence \ Analysis Service** template, select **Import from PowerPivot**.
 1. Enter a project name. This project will hold the model and build the database on the SSAS server.
 1. Enter the tabular mode SSAS server or instance name in the next popup window.
 
-   ![the workspace and deployment server configuration image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/workspace-and-deployment-server-configuration.jpg)
+   :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/workspace-and-deployment-server-configuration.png" alt-text="Screenshot to enter the tabular mode S S A S server or instance name." border="false":::
 1. Verify the connection to make sure that the SSAS server is entered correctly and is functioning correctly.
 1. Click **Yes** in the following warning window. This just asks that you trust where the PowerPivot workbook is getting data from and informs you that the data won't be imported. It is fine because the server will fetch data from the data sources that's defined in the PowerPivot model. If you have data in the model that is from a linked sheet that will need to be copied manually into this solution through the **Past Append** function.
 
-   ![the business intelligence semantic model image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/bi-semantic-model.png)
+   :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/bi-semantic-model.png" alt-text="Screenshot of the Business Intelligence Semantic Model window." border="false":::
 1. Select the workbook that you want to upsize in the file open dialog box that pops up next. This file should reside on the file share that's created in step 2 and referenced in step 6.
 1. If all goes well, several progress bars should pass by in the lower-right corner of the window and you should end up with an open **Model.bim** file.
 
-   ![the model file image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/model-bim-file.png)
+   :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/model-bim-file.png" alt-text="Screenshot shows the Model.bim file in Visual Studio." border="false":::
 
 1. Click the **Existing Connections** toolbar button and review any existing connection(s) included in the model. The domain account that's used in step 1 should have read access to all the data sources used.
 
-   ![the existing connections image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/existing-connections.jpg)
+   :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/existing-connections.png" alt-text="Screenshot to review the existing connections in the model." border="false":::
 1. Deploy the project to the server through selecting **Build** > **Deploy**. You should get the **Success** message.
 
-   ![the deploy results image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/deploy-results.png)
+   :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/deploy-results.png" alt-text="Screenshot of the Success message in the Deploy window.":::
 
 1. At this point, you have a working data source that you can access from new workbooks and other data source consumers. In Excel, you just treat it like any other Analysis Services data source. For more information about how to connect to an SSAS database, see [Connect to a SQL Server Analysis Services Database (Import)](https://support.office.com/en-us/article/connect-to-a-sql-server-analysis-services-database-import-b6dd7f39-bea5-4e98-9aa1-39fc7b24424b).
 1. Set up an automated processing schedule by using the **SQL Server Management Studio** tool because the new SSAS database is not getting refreshed with the latest data and it is a static snapshot of the data at the time you deployed it to the server.  
@@ -122,6 +122,6 @@ The only option to have a PowerPoint workbook larger than 2GB is to upsize or on
       > [!NOTE]
       > **DatabaseID** should be the name of the SSAS database that you just created.
 
-      ![the command configuration image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/command.png)
+     :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/job-step-properties.png" alt-text="Screenshot shows steps to create a new S Q L Server Agent job.":::
 1. Schedule the job to run daily or how frequently you want changes that are made in the source data to reflect in the SSAS tabular database.
 1. New data is fetched from the source data sources when the SSAS database is processed.

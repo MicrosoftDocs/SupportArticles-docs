@@ -32,7 +32,7 @@ When you try to access a OneNote page, you receive the following error:
 > **Content Not Yet Available**<br/>
 > Sorry, it looks like this page was added from another computer and hasn't synced yet. Click here or press ENTER to reload this page.
 
-   ![Content Not Yet Available error](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-1.jpg)
+   :::image type="content" source="media/onenote-error-content-not-yet-available/error-message.png" alt-text="Screenshot of the error after accessing the OneNote page.":::
 
 
 
@@ -81,22 +81,22 @@ A "successful sync" icon can appear in either of the following user interface lo
 > [!NOTE]
 > All screenshot images are taken from OneNote for Windows 10.
 
-![Successful sync icon.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-2.jpg)<br/><br/>
-![Saved message.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-3.jpg)
+:::image type="content" source="media/onenote-error-content-not-yet-available/successful-sync-icon.png" alt-text="Screenshot of the successful sync icon in OneNote.":::<br/><br/>
+:::image type="content" source="media/onenote-error-content-not-yet-available/saved-status.png" alt-text="Screenshot of the successful sync status icon."":::
  
 ### Other OneNote sync status messages
 
 - A page sync is in progress.
 
-  ![Notebook sync in progress.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-4.jpg)
+  :::image type="content" source="./media/onenote-error-content-not-yet-available/sync-progress.png" alt-text="Screenshot shows the notebook is sync in progress.":::
 
 - A page has been saved offline.
 
-  ![Notebook has been saved offline 1.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)
-  ![Notebook has been saved offline 2.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
+  :::image type="content" source="media/onenote-error-content-not-yet-available/saved-offline.png" alt-text="Screenshot shows the notebook has been saved offline.":::
+  :::image type="content" source="media/onenote-error-content-not-yet-available/unsaved-changes-offline.png" alt-text="Screenshot shows Unsaved Changes (Offline) in OneNote.":::
  
 - A page has not been saved because of network issues and OneNote is trying to reconnect.
 
-  ![Notebook has network issues and is trying to connect.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-7.jpg)
+  :::image type="content" source="media/onenote-error-content-not-yet-available/network-issues-reconnect.png" alt-text="Screenshot shows the notebook has network issues and is trying to connect.":::
  
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

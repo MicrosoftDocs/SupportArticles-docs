@@ -74,7 +74,7 @@ To open the blocked drawing file or save a file to a blocked file type, use one 
 
 The following screen shot shows the default settings for the **File Block Settings **dialog box in Visio 2013:
 
-![file block settings](./media/file-blocked-by-registry-policy/file-block-settings.jpg)
+:::image type="content" source="media/file-blocked-by-registry-policy/file-block-settings.png" alt-text="Screenshot shows the default settings for the File Block Settings dialog box in Visio 2013." border="false":::
 
 If the Open and Save options are unavailable, your system administrator may have applied group policies to block the file types. 
 

@@ -32,7 +32,7 @@ Project client uses a site ID when opening a calendar. If both instances of the 
 ## Resolution
 To resolve this issue, designate one account in the Project client as the default account by using the following steps:
 1.    Select **Info**, select **Manage Accounts**, then select **Configure Accounts**.
-![In the Accounts screen, select one to be the default.](media/project-opens-calendar-from-different-instance-when-editing/95806-1.png)
+:::image type="content" source="media/project-opens-calendar-from-different-instance-when-editing/project-web-app-accounts.png" alt-text="Screenshot of the Project Web App Accounts window." border="false":::
 2.    Select an account and click **Set as Default**.
  
 3.    Select **OK**.
@@ -49,4 +49,4 @@ To check the Site ID, access the following registry location in the local machin
 HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\MS Project\Profiles\<Profile Name>
 ```
 
-![To check the site ID, check the profile name in the registry. ](media/project-opens-calendar-from-different-instance-when-editing/95806-2.png)
+:::image type="content" source="media/project-opens-calendar-from-different-instance-when-editing/check-the-site-id.png" alt-text="Screenshot shows that to check the site ID, check the profile name in the registry." border="false":::
