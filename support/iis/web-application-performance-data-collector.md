@@ -4,6 +4,7 @@ description: This article describes the web application Performance Data Collect
 ms.date: 12/11/2020
 ms.prod-support-area-path: Health, Diagnostic, and Performance Features
 ms.topic: article
+ms.technology: iis-health-diagnostic-performance
 ---
 # Web application Performance Data Collector
 

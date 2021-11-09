@@ -5,6 +5,7 @@ ms.date: 02/27/2020
 ms.reviewer: mlaing
 ms.prod-support-area-path: 
 ms.topic: article
+ms.technology: iis-general
 ---
 # Active Server Pages (ASP) support in Windows
 

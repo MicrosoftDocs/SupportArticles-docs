@@ -4,6 +4,7 @@ description: This article describes the information on what is collected in Debu
 ms.date: 03/19/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: article
+ms.technology: iis-health-diagnostic-performance
 ---
 # DebugDiag 1.2 installation and data collector
 

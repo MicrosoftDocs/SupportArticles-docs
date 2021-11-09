@@ -4,6 +4,7 @@ description: This article helps to fix the HTTP error 403.6 when you visit a web
 ms.date: 07/17/2020
 ms.prod-support-area-path: Development
 ms.reviewer: clinth
+ms.technology: iis-development
 ---
 # HTTP error 403.6 when you open an IIS Webpage
 
