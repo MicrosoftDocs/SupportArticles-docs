@@ -303,7 +303,7 @@ items:
     href: before-you-call-intune-support.md
   - name: Troubleshooting blade fails to load
     href: troubleshooting-blade-fails-loading.md
-  - name: Troubleshoot software updates
+  - name: Windows 7 devices stop reporting to Intune
     href: troubleshoot-software-updates-in-microsoft-intune.md
 - name: Migration to the Azure Portal
   items:
