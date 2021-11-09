@@ -20,7 +20,7 @@ Consider the following scenario:
 - You create a device configuration profile in Intune and assign the profile to your Windows 10 devices.
 - In the device configuration profile, you specify the **Enterprise mode site list location (Desktop only)** setting to open a list of web sites in [Enterprise Mode](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#what-is-enterprise-mode) on Internet Explorer 11.
 
-  :::image type="content" source="media/enterprise-mode-site-list-not-deployed-win10/enterprise-mode-site-list-location.png" alt-text="screenshot of Enterprise Mode site list location":::
+  :::image type="content" source="media/enterprise-mode-site-list-not-deployed-win10/enterprise-mode-site-list-location.png" alt-text="Screenshot of Enterprise Mode site list location setting in Start experience page.":::
 
 In this scenario, when you type `about:compat` in either Microsoft Edge or Internet Explorer 11 to view the Enterprise Mode site list, the sites specified in the device configuration profile aren't displayed.
 
