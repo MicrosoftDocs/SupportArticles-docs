@@ -4,6 +4,7 @@ description: When you try to set Microsoft Dynamics CRM for Microsoft Office Out
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # HResult 0x80004005 error when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 

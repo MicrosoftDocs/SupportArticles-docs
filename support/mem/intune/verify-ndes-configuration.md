@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4490130
 
 1. Open the [Validate-NDESConfiguration.ps1](https://github.com/microsoftgraph/powershell-intune-samples/blob/master/CertificationAuthority/Validate-NDESConfiguration.ps1) script and copy it to your NDES server.
 
-   :::image type="content" source="./media/verify-ndes-configuration/open-script.png" alt-text="Screenshot of opening the Validate-NDESConfiguration.ps1 script.":::
+   :::image type="content" source="media/verify-ndes-configuration/open-script.png" alt-text="Screenshot of opening the Validate-NDESConfiguration.ps1 script.":::
 
 2. On the NDES server, run PowerShell as administrator. You may have to change PowerShell [ExecutionPolicy](/powershell/module/microsoft.powershell.security/get-executionpolicy) to **Unrestricted** to run the script.
 
@@ -46,20 +46,20 @@ _Original KB number:_ &nbsp; 4490130
 
      For example:
 
-     :::image type="content" source="./media/verify-ndes-configuration/ndes-encryption-properties.png" alt-text="Screenshot of NDES Encryption properties.":::
+     :::image type="content" source="media/verify-ndes-configuration/ndes-encryption-properties.png" alt-text="Screenshot of NDES Encryption properties, showing the template name.":::
 
 4. The following screenshot occurs when the Validate-NDESConfiguration.ps1 script is run.
 
-   :::image type="content" source="./media/verify-ndes-configuration/running-script.png" alt-text="Screenshot of running script.":::
+   :::image type="content" source="media/verify-ndes-configuration/run-script.png" alt-text="Screenshot of running script in PowerShell." border="false":::
 
 5. Type **Y** to continue.
 6. The Validate-NDESConfiguration.ps1 script continues and finishes all required checks.
 
-   :::image type="content" source="./media/verify-ndes-configuration/script-finish.png" alt-text="Screenshot of script finishes.":::
+   :::image type="content" source="media/verify-ndes-configuration/script-finish.png" alt-text="Screenshot shows script finished all required checks." border="false":::
 
 7. When the Validate-NDESConfiguration.ps1 script is finished, you are prompted to generate a report.
 
-   :::image type="content" source="./media/verify-ndes-configuration/report.png" alt-text="You're prompted to generate a report.":::
+   :::image type="content" source="media/verify-ndes-configuration/report.png" alt-text="You're prompted to generate a report.":::
 
 8. Type **Y** or **N** to review the reports.
 

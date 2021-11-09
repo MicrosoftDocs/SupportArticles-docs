@@ -1,9 +1,10 @@
 ---
-title: Exceptions occur if web servers use load balancer 
+title: Exceptions occur if web servers use load balancer
 description: Support with CRM for Outlook and Email Router with Microsoft Dynamics CRM using cookie based persistence load balancer settings.
 ms.reviewer: Derek Braun
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # WCF failures occur when Dynamics 365 clients communicate through a load balancer
 

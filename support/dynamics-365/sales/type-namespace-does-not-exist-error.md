@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when a Microsoft Dynami
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Type or namespace does not exist error received when accessing a Microsoft Dynamics CRM organization
 

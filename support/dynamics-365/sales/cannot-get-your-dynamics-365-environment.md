@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you access your Co
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-access
 ---
 # You cannot get to your Dynamics 365 environment using the above URL. Error message displays when you access your Common Data Service environment for the first time
 

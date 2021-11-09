@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: ehagen, mmaasjo
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # When you import a Microsoft Dynamics CRM 2011 RC organization into a Microsoft Dynamics CRM 2011 RTM environment, the database does not get updated
 

@@ -4,6 +4,7 @@ description: This article describes how to configure ASP.NET SQL Server mode ses
 ms.date: 03/26/2020
 ms.prod-support-area-path: FTP authentication and authorization
 ms.topic: how-to
+ms.technology: aspnet-ftp-authentication-authorization
 ---
 # Configure SQL Server to store ASP.NET session state  
 

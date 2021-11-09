@@ -6,6 +6,7 @@ ms.topic: troubleshooting
 ms.date: 6/17/2021
 author: simonxjx
 ms.author: v-six
+ms.subservice: powerapps-connections
 ---
 # Refresh URL isn't displayed for custom connectors when using Generic Oauth 2
 

@@ -4,6 +4,7 @@ description: This article describes how to troubleshoot an installation issue wi
 ms.reviewer: chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Installation of Windows Live ID Sign-in Assistant failed Exit code 1603 when installing Microsoft Dynamics CRM 2011 client for Outlook
 

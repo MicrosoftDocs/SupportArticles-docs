@@ -4,6 +4,7 @@ description: This article describes how to create the Web.config file for an ASP
 ms.date: 03/27/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: how-to
+ms.technology: aspnet-health-diagnostic-performance
 ---
 # Create the Web.config file for an ASP.NET application
 

@@ -1,11 +1,12 @@
 ---
 title: Blocked a frame with origin when using Unified Interface apps
-description: Works around the "Blocked a frame with origin" error when you use Unified Interface apps in Google Chrome or Android.
+description: Works around the Blocked a frame with origin error when you use Unified Interface apps in Google Chrome or Android.
 ms.reviewer: xianc
 ms.topic: troubleshooting
 ms.date: 08/09/2021
 author: simonxjx
 ms.author: v-six
+ms.subservice: powerapps-unified-interface
 ---
 # "Blocked a frame with origin" error using Unified Interface apps
 

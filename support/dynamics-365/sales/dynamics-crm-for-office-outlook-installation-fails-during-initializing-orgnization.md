@@ -4,6 +4,7 @@ description: The installation of Microsoft Dynamics CRM for Outlook fails during
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # There is a problem communicating with the Microsoft Dynamics CRM server error when configuring Microsoft Dynamics CRM for Outlook
 

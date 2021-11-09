@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to configu
 ms.reviewer: chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Cannot connect to Microsoft Dynamics CRM server because we cannot authenticate your credentials
 

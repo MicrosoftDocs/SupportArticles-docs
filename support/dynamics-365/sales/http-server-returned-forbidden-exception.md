@@ -1,9 +1,10 @@
 ---
 title: Http server returned Forbidden exception
-description: Provides a solution to an error that occurs when you select the Test & Enable Mailbox button on a mailbox record in Dynamics 365. 
+description: Provides a solution to an error that occurs when you select the Test & Enable Mailbox button on a mailbox record in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "Http server returned Forbidden exception" error appears in Microsoft Dynamics 365 mailbox
 

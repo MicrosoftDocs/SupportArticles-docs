@@ -1,9 +1,10 @@
 ---
 title: You do not have permission to access these records occurs when configuring
 description: You may receive an error that states you do not have permission to access these records. This error occurs when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook. Provides a resolution.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # You do not have permission to access these records occurs when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 

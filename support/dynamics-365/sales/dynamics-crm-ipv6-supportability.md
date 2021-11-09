@@ -4,6 +4,7 @@ description: This article describes the supportability of IPv6 with Microsoft Dy
 ms.reviewer: chanson
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-admin-center
 ---
 # Microsoft Dynamics CRM IPv6 Supportability
 

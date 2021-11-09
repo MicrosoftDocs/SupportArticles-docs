@@ -3,6 +3,7 @@ title: Exception when you use Server.Transfer
 description: This article provides resolutions for System.Threading.ThreadAbortException error that occurs when you use Server.Transfer in HTTPHandler in an ASP.NET application.
 ms.date: 04/09/2020
 ms.prod-support-area-path: Site behavior and performance
+ms.technology: aspnet-site-behavior-performance
 ---
 # System.Threading.ThreadAbortException when you use Server.Transfer in HTTPHandler in an ASP.NET application
 

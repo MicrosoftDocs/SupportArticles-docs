@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where you receiv
 ms.topic: troubleshooting
 ms.reviewer: chanson, henningp
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # "There was an error with this field's customized event" error when you upgrade to Microsoft Dynamics CRM 2011 and then open forms
 

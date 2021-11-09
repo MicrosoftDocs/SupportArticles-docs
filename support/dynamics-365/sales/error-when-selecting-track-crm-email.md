@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you select Track i
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # You do not have permission to access these records error when you select Track in CRM on an email from a sender that does not exist in CRM
 

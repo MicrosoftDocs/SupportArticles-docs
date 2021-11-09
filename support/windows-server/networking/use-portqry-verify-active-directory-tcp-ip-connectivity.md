@@ -157,7 +157,7 @@ UDP port 389 is LISTENING
 
 This example demonstrates how to use PortQry to determine which services or applications are registered with the target server's RPC end point mapper database. The output includes each application's Universally Unique Identifier (UUID), annotated name (if one exists), the protocol the application uses, the network address that the application is bound to, and the application's end point (port number, named pipe in square brackets). This information can be useful in troubleshooting various problems.
 
-By default, the RPC end point mapper database is configured to listen to port 185. The example call specifies the server to query using the UDP protocol:
+By default, the RPC end point mapper database is configured to listen to port 135. The example call specifies the server to query using the UDP protocol:
 
 `portqry -n <fqdn> -p udp -e 135`
 
