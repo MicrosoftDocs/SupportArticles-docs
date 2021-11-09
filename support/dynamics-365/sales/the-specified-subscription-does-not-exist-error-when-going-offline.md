@@ -4,6 +4,7 @@ description: The specified subscription does not exist - this error occurs when 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "The specified subscription does not exist" error when going offline with Microsoft Dynamics CRM for Outlook
 

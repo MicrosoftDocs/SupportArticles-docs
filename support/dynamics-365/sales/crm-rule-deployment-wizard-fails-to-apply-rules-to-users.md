@@ -4,6 +4,7 @@ description: Microsoft Dynamics CRM Rule Deployment Wizard fails to apply rules 
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-other-functionality
 ---
 # Failed to access the default store for the user error when CRM Rule Deployment Wizard cannot apply rules
 

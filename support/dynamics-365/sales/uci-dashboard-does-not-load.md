@@ -4,6 +4,7 @@ description: Provides a solution to an issue where UCI Dashboard doesn't load af
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-access
 ---
 # UCI Dashboard doesn't load after the 2003.5 release
 

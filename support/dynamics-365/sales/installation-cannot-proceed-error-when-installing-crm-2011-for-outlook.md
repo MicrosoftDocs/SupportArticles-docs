@@ -4,6 +4,7 @@ description: Either a minimum supported version of Microsoft Outlook is not inst
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Installation cannot proceed error when installing Microsoft Dynamics CRM 2011 for Microsoft Office Outlook client
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you create a new o
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # An item with the same key has already been added error occurs when creating a workflow in Microsoft Dynamics 365
 

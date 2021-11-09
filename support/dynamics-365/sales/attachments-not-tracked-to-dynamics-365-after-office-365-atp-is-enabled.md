@@ -4,6 +4,7 @@ description: Attachments are not tracked to Dynamics 365 after Office 365 Advanc
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Attachments are not tracked to Microsoft Dynamics 365 after Office 365 Advanced Thread Protection(ATP) is enabled
 

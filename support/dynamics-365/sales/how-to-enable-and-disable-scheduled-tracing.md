@@ -4,6 +4,7 @@ description: Describes how to enable Scheduled Tracing for Microsoft Dynamics CR
 ms.reviewer: 
 ms.topic: how-to
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # How to enable and disable Scheduled Tracing for Microsoft Dynamics CRM
 

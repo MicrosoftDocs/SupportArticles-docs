@@ -4,6 +4,7 @@ description: Microsoft Dynamics CRM windows within the Microsoft Dynamics CRM fo
 ms.reviewer: jowells
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Windows within the Microsoft Dynamics CRM Outlook client do not render properly
 

@@ -4,6 +4,7 @@ description: When configuring the Microsoft Dynamics CRM 2011 Outlook client, yo
 ms.reviewer: jowells
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Error occurs during the Loading Outlook Profile portion of the Microsoft Dynamics CRM Configuration Wizard
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when viewing mailbox al
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "Exchange email address in [mailbox name] is currently in use for mailbox" warning alert appears in Microsoft Dynamics 365
 

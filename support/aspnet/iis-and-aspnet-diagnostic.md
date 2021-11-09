@@ -4,6 +4,7 @@ description: This article describes the basic information diagnostic of IIS/ASP.
 ms.date: 04/07/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: article
+ms.technology: aspnet-health-diagnostic-performance
 ---
 # IIS and ASP.NET basic information diagnostic
 

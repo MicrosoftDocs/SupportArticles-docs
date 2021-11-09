@@ -4,6 +4,7 @@ description: Describes an issue in which synchronized items may become untracked
 ms.reviewer: aaronric
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics CRM for Outlook client support with multiple Microsoft Dynamics CRM deployments
 

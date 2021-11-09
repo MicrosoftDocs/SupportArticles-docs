@@ -4,6 +4,7 @@ description: You cannot add Microsoft Dynamics CRM entities to the Microsoft Out
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Cannot add Microsoft Dynamics CRM add-in to the Favorites pane in Outlook 2010
 

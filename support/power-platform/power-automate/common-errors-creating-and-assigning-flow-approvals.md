@@ -4,6 +4,7 @@ description: Common Power Automate approval errors and potential resolutions.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Common errors creating and assigning flow approvals
 

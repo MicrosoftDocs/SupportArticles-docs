@@ -5,6 +5,7 @@ ms.date: 04/03/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: NATHANE
 ms.topic: how-to
+ms.technology: aspnet-www-authentication-authorization
 ---
 # Control authorization permissions in an ASP.NET application  
 
