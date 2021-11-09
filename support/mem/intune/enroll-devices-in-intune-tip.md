@@ -116,7 +116,7 @@ The Windows Autopilot enrollment process joins a Corporate device to the Azure A
 
 As part of the Windows Autopilot process, you can customize the greeting screen of the OOBE. You can include company branding and predefined fields and options, as shown in the next figure.
 
-:::image type="content" source="media/enroll-devices-in-intune-tip/intune-windows-autopilot-greeting.png" alt-text="Customized greeting screen for Windows Autopilot OOBE.":::
+:::image type="content" source="media/enroll-devices-in-intune-tip/intune-windows-autopilot-greeting.png" alt-text="Customized greeting screen for Windows Autopilot OOBE." border="false":::
 
 To configure Windows Autopilot, you have to have the hardware hashes or serial numbers of the device. In Intune, make sure that you configure the MDM scope for Autopilot.
 For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](/mem/intune/enrollment/enrollment-autopilot).
