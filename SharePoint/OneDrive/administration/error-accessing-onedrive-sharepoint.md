@@ -25,7 +25,7 @@ appliesto:
 
 When you try to access **OneDrive** or **SharePoint**, you receive following error:
 
-:::image type="content" source="media/error-accessing-onedrive-sharepoint/site-cannot-reach-error.png" alt-text="Screenshot of error that this site can't be reached when you access OneDrive or SharePoint.":::
+:::image type="content" source="media/error-accessing-onedrive-sharepoint/site-cannot-reach-error.png" alt-text="Screenshot shows the error that this site can't be reached when you access OneDrive or SharePoint.":::
 
 
 ## Cause

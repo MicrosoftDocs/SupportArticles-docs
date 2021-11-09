@@ -35,12 +35,12 @@ To determine whether the workbook currently has a Power Query data connection or
 
 In Excel 2016, the connection may be created by using the **Get & Transform** or **Get Data** feature. This may use the **Microsoft.Mashup.OleDb.1** provider, for example, when combining data from multiple sources.
 
-:::image type="content" source="media/call-to-excel-services-failed/connection-properties-provider.png" alt-text="Screenshot of Connection Properties dialog box. Under the Definition tab, check if the provider is Microsoft.Mashup.OleDb.1." border="false":::
+:::image type="content" source="media/call-to-excel-services-failed/connection-properties-provider.png" alt-text="Screenshot of the Connection Properties dialog box. Under the Definition tab, check if the provider is Microsoft.Mashup.OleDb.1." border="false":::
 
 
 ## More information
 
-Data refresh for Power Query connections is supported by Power BI for Office 365 (SharePoint Online). For more information, see [Scheduled Data Refresh for Power Query](https://powerbi.microsoft.com/en-us/blog/scheduled-data-refresh-for-power-query/).
+Data refresh for Power Query connections is supported by Power BI for Office 365 (SharePoint Online). For more information, see [Scheduled Data Refresh for Power Query](https://powerbi.microsoft.com/blog/scheduled-data-refresh-for-power-query/).
 
 Interactive browser refresh and scheduled data refresh for Power Query connections are supported on-premises with PowerPivot for SharePoint 2016. It has the following minimum product requirements:
 

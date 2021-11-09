@@ -40,12 +40,12 @@ To resolve this issue, enable the **CollabDBService** service for Microsoft Form
 1. Select **Enterprise Applications**.
 1. In the **Search** field, type **CollabDBService**.
 
-   :::image type="content" source="media/microsoft-forms-shows-sorry-something-went-wrong/enterprise-applications.png" alt-text="Screenshot of Enterprise applications page, typing CollabDBService in the Search field." border="false":::
+   :::image type="content" source="media/microsoft-forms-shows-sorry-something-went-wrong/enterprise-applications.png" alt-text="Screenshot of the Enterprise applications page, typing CollabDBService in the Search field." border="false":::
 
 1. Select **CollabDBService** in the result list.
 1. Under **MANAGE**, select **Properties**.
 1. For the **Enabled for users to sign-in** option, select **Yes**, and then click **Save**.
 
-   :::image type="content" source="media/microsoft-forms-shows-sorry-something-went-wrong/collabdbservice-properties.png" alt-text="Screenshot of CollabDBService Properties, selecting the Enabled for users to sign-in option." border="false":::
+   :::image type="content" source="media/microsoft-forms-shows-sorry-something-went-wrong/collabdbservice-properties.png" alt-text="Screenshot of shows the CollabDBService properties, selecting the Enabled for users to sign-in option." border="false":::
 
 For more information, see [Turn off or turn on Microsoft Forms](https://support.office.com/article/turn-off-or-turn-on-microsoft-forms-8dcbf3ab-f2d6-459a-b8be-8d9892132a43).
