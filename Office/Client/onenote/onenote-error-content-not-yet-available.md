@@ -82,7 +82,7 @@ A "successful sync" icon can appear in either of the following user interface lo
 > All screenshot images are taken from OneNote for Windows 10.
 
 :::image type="content" source="media/onenote-error-content-not-yet-available/successful-sync-icon.png" alt-text="Screenshot of the successful sync icon in OneNote.":::<br/><br/>
-:::image type="content" source="media/onenote-error-content-not-yet-available/saved-status.png" alt-text="Screenshot of the successful sync status icon."":::
+:::image type="content" source="media/onenote-error-content-not-yet-available/saved-status.png" alt-text="Screenshot of the successful sync status icon.":::
  
 ### Other OneNote sync status messages
 

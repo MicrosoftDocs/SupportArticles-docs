@@ -27,7 +27,7 @@ By default, when you open a Microsoft Word document from a hyperlink in an email
 
 1. Select the hyperlink to the document, and then click the hyperlink edit button :::image type="icon" source="media/force-word-document-to-open-in-edit-mode/hyperlink-edit-button.png":::.
 
-   :::image type="content" source="media/force-word-document-to-open-in-edit-mode/define-message-hyperlink.png" alt-text="Screenshot to select the hyperlink edit button in the Define E-mail Message dialog box."":::
+   :::image type="content" source="media/force-word-document-to-open-in-edit-mode/define-message-hyperlink.png" alt-text="Screenshot to select the hyperlink edit button in the Define E-mail Message dialog box.":::
 
 1. Add **ms-word:ofe|u|** to the beginning of the hyperlink address, such as the following example:
 
