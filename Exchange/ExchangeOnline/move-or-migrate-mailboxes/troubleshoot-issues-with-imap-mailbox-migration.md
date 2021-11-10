@@ -415,7 +415,7 @@ If you have confirmed that the super user account has the correct permissions, t
 Below are some of the possible errors you can run into while attempting to create/start an IMAP migration batch. If an error pops up when you select the CSV file, during the batch creation, then go to the CSV errors section for troubleshooting assistance. Otherwise select the appropriate option.
 
 - [The connection to the server Servername.contoso.com timed out...](#the-connection-to-the-server-servernamecontosocom-timed-out)
-- [Connection to the server couldn’t be completed](#the-connection-to-the-server-could-not-be-completed)
+- [Connection to the server couldn't be completed](#the-connection-to-the-server-could-not-be-completed)
 - [CSV errors](#csv-errors)
 - [Batch \<name> already exists](#the-migration-batch-batch-name-already-exists)
 
@@ -492,7 +492,7 @@ If you are using an existing IMAP migration endpoint, remove and recreate the en
 
 ### The connection to the server could not be completed
 
-You will encounter the below error when you are specifying the IMAP server's FQDN while creating either the IMAP migration endpoint, creating a batch when there are no existing IMAP endpoints, or you have an existing IMAP endpoint where the FQDN no longer resolves in DNS. Verify the IMAP server FQDN is correct and can be resolved publically in DNS.
+You will encounter the below error when you are specifying the IMAP server's FQDN while creating either the IMAP migration endpoint, creating a batch when there are no existing IMAP endpoints, or you have an existing IMAP endpoint where the FQDN no longer resolves in DNS. Verify the IMAP server FQDN is correct and can be resolved publicly in DNS.
 
 The connection to the server `imap.contoso.com` could not be completed.
 
@@ -503,9 +503,9 @@ If you are creating the IMAP migration batch, and you have no existing IMAP endp
 3. Select the **+** and choose **Migrate to Exchange Online**.
 4. Select **IMAP migration** and select **next**.
 5. Select **Choose file**, select the CSV file for the migration, and select **next**.
-6. Enter the publically resolvable FQDN of the IMAP server as shown below and continue with creating the migration batch.
+6. Enter the publicly resolvable FQDN of the IMAP server as shown below and continue with creating the migration batch.
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server.png" alt-text="Screenshot of entering FQDN of the IMAP server 1.":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server.png" alt-text="A screenshot of entering F Q D N of the I M A P server.":::
 
 If you are creating an IMAP migration endpoint, follow the below steps to specify the appropriate public FQDN:
 
@@ -514,9 +514,9 @@ If you are creating an IMAP migration endpoint, follow the below steps to specif
 3. Select the **...** and select **Migration** **endpoints**.
 4. Select **+** to create a new migration endpoint.
 5. Select **IMAP** and select **next**.
-6. Enter the publically resolvable FQDN of the IMAP server as shown below and continue with creating the migration endpoint.
+6. Enter the publicly resolvable FQDN of the IMAP server as shown below and continue with creating the migration endpoint.
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server-2.png" alt-text="Screenshot of entering FQDN of the IMAP server 2.":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server-2.png" alt-text="Another screenshot of entering F Q D N of the I M A P server.":::
 
 If you are creating the IMAP migration batch, and have an existing IMAP endpoint, follow the below steps to determine what the public FQDN of the IMAP server is:
 
@@ -524,9 +524,9 @@ If you are creating the IMAP migration batch, and have an existing IMAP endpoint
 2. Go to **recipients** > **migration**.
 3. Select the ... and select **Migration** **endpoints**.
 4. Select on the appropriate IMAP migration endpoint.
-5. You will see the FQDN of the IMAP server. If it is incorrect, or no longer publically resolvable, you will need to either remove and recreate the IMAP migration endpoint with an FQDN that is publicly resolvable or you will need to create a host (A) record that resolves the FQDN of your existing IMAP migration endpoint to the public IP of the IMAP server.
+5. You will see the FQDN of the IMAP server. If it is incorrect, or no longer publicly resolvable, you will need to either remove and recreate the IMAP migration endpoint with an FQDN that is publicly resolvable or you will need to create a host (A) record that resolves the FQDN of your existing IMAP migration endpoint to the public IP of the IMAP server.
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/find-fqdn-of-imap-server.png" alt-text="Screenshot of entering FQDN of the IMAP server 3.":::
+    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/find-fqdn-of-imap-server.png" alt-text="Screenshot that shows F Q D N of the I M A P server.":::
 
 **Did this solve your problem?**
 
@@ -742,7 +742,7 @@ The Office 365 Network Analysis Tool is designed to help analyze networking rela
 2. You may then be prompted to install an ActiveX control. If so, install it.
 3. Once you install it, you will get a security warning as shown below. Select **OK**.
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/security-warning.png" alt-text="Screenshot of security warning shown after installation.":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/security-warning.png" alt-text="Screenshot of the security warning that is displayed after installation.":::
 
 4. Install [Java](https://www.java.com/download/) and reboot.
 5. After the machine reboots, go back to the appropriate regional URL listed above. You will then be prompted to run the application as shown below:
