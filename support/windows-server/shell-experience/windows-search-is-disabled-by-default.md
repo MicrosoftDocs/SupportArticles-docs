@@ -40,7 +40,7 @@ You can re-enable the Windows Search service in the following scenarios:
 
 To do so, follow these steps:
 
-1. Press the Windows key‌ ![Windows logo key](./media/windows-search-is-disabled-by-default/windows-logo.jpg)+R to open the **Run** box.
+1. Press the Windows key‌ :::image type="icon" source="media/windows-search-is-disabled-by-default/windows-logo.png":::+R to open the **Run** box.
 2. Type *services.msc*, and then press Enter.
 3. Right-click **Windows Search**, and then select **Properties**.
 4. Change the Startup type to **Automatic (Delayed Start)**.

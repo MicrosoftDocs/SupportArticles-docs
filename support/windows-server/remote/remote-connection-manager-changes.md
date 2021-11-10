@@ -56,11 +56,11 @@ For example, if you use the RDS attributes to specify a Remote Desktop roaming p
 
 Remote Desktop Services Profile tab in Active Directory Users and Computers:
 
-![Screenshot of the Remote Desktop Services Profile tab](./media/remote-connection-manager-changes/remote-desktop-services-profile-tab.jpg)
+:::image type="content" source="media/remote-connection-manager-changes/remote-desktop-services-profile-tab.png" alt-text="Screenshot of the Remote Desktop Services Profile tab in the Administrator Properties window.":::
 
 User profiles in Control Panel > **System** > **Advanced SystemSettings** > **User Profiles**:
 
-![Screenshot of User profiles](./media/remote-connection-manager-changes/user-profile-in-control-panel.jpg)
+:::image type="content" source="media/remote-connection-manager-changes/user-profile-in-control-panel.png" alt-text="Screenshot of the User Profiles windows with Default Profile selected.":::
 
 The attributes that you can set in the Active Directory Users and Computers MMC snap-in are as follows:
 
