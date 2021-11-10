@@ -289,7 +289,7 @@ If individual query instances are using little CPU, but the overall workload of 
 
 ```sql
 -- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
-DECLARE @cputime_threshold_microsec INT = 200*1000,
+DECLARE @cputime_threshold_microsec INT = 200*1000
 DECLARE @execution_count INT = 1000
 
 SELECT 
