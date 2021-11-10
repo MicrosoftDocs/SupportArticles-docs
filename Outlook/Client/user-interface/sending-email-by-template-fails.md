@@ -84,8 +84,8 @@ To determine whether your Outlook 2010 client is configured in the manner that's
 1. On the **File** tab in Outlook 2010, click **Account Settings**, and then click **Account Settings**.
 2. On the **E-mail** tab, select your Microsoft Exchange account, and then view the location that's listed under **Selected account delivers new messages to the following location**. If this location is a .pst file, you may experience the issue.
 
-    :::image type="content" source="media/sending-email-by-template-fails/view-email-location.png" alt-text="Screenshot of Account Settings dialog box in Outlook 2010. Select the Microsoft Exchange account under the E-mail tab, and find the location listed under Selected account delivers new messages to the following location is a .pst file." border="false":::
+    :::image type="content" source="media/sending-email-by-template-fails/view-email-location.png" alt-text="Screenshot of the Account Settings dialog box in Outlook 2010. Select the Microsoft Exchange account under the E-mail tab, and find the location listed under Selected account delivers new messages to the following location is a .pst file." border="false":::
 
 3. On the **Data Files** tab, view the location that's listed in the **Location** field for each file. If the location of your email address is set to **Online**, and the location of the Outlook data file is a .pst file, you may experience this issue.
 
-    :::image type="content" source="media/sending-email-by-template-fails/view-data-files-location.png" alt-text="Screenshot of Account Settings dialog box in Outlook 2010. On the Data Files tab, the location of the email address is set to Online, and the location of the Outlook data file is a .pst file." border="false":::
+    :::image type="content" source="media/sending-email-by-template-fails/view-data-files-location.png" alt-text="Screenshot of the Account Settings dialog box in Outlook 2010. On the Data Files tab, the location of the email address is set to Online, and the location of the Outlook data file is a .pst file." border="false":::

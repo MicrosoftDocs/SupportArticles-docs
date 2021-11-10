@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 3009042
 
 When you open a message in the Outlook Outbox to which a delayed delivery was applied, you can't edit the message body, and the **Send** button is missing from the message:
 
-:::image type="content" source="media/send-button-missing-delayed-delivery-email-outbox/delayed-delivery-message.png" alt-text="Screenshot of delayed delivery message without Send button.":::
+:::image type="content" source="media/send-button-missing-delayed-delivery-email-outbox/delayed-delivery-message.png" alt-text="Screenshot of delayed delivery message without the Send button.":::
 
 ## Cause
 
