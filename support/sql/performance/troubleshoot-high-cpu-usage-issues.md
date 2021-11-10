@@ -21,7 +21,7 @@ Although there are many possible causes of high CPU that occur in SQL Server, th
   - Missing indexes
   - [Parameter sensitive plan (PSP) issues](/azure/azure-sql/identify-query-performance-issues)
   - Poorly designed queries
-- Increase in workload
+- Increases in workload
 
 You can use the following steps to troubleshoot high-CPU-usage issues in SQL Server.
 
@@ -54,7 +54,7 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-  If you notice that `% User Time` consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+  If you notice that `% User Time` is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -96,7 +96,7 @@ If SQL Server is still using high CPU, go to the next step.
 
 ## Step 4: Add potentially missing indexes
 
-1. Use the following query to identify queries with high CPU usage that contain at least one missing index in query plan.
+1. Use the following query to identify queries with high CPU usage that contain at least one missing index in the query plan.
 
     ```sql
     -- Captures the Total CPU time spent by a query along with the query plan and total executions
@@ -121,7 +121,7 @@ If SQL Server is still using high CPU, go to the next step.
             //qplan:MissingIndexes')=1
     ```
 
-1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another windows in SSMS.
+1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another window in SSMS.
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
