@@ -60,7 +60,7 @@ Use the steps below to confirm that you are facing this issue, and to reset the 
 
 7. Locate and select the folder that appears missing in Outlook, and check the value of the `PR_ATTR_HIDDEN` to determine if it is set to `True`, as shown in the following figure:
 
-   :::image type="content" source="media/default-folder-is-missing/check-the-value-of-pr_attr_hidden.jpg" alt-text="check the value of the PR_ATTR_HIDDEN" border="false":::
+   :::image type="content" source="media/default-folder-is-missing/check-the-value-of-pr_attr_hidden.png" alt-text="Screenshot of the MFCMAPI window when you select the missing folder." border="false":::
 
 8. If `PR_ATTR_HIDDEN` shows a value of `True`, right-click the `PR_ATTR_HIDDEN` property and select **Edit Property**.
 9. Uncheck the Boolean checkbox and select **OK**.

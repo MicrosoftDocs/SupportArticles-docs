@@ -41,9 +41,9 @@ Use this method only if you cannot install hotfix 2771431 as described in the "M
 
 1. Make sure that the server meets the minimum hardware requirements for SharePoint Server 2013. For more information about the minimum hardware requirements for SharePoint Server 2013, go to the following Microsoft TechNet website:
 
-   [Hardware and software requirements for SharePoint 2013](/SharePoint/install/hardware-and-software-requirements-0)
+   [Hardware and software requirements for SharePoint 2013](/SharePoint/install/hardware-software-requirements-2013)
 
-2. Manually install the Windows Server 2012 Roles and Features that are required by SharePoint 2013. To do this, use one of the following methods, depending on whether the SharePoint server is connected to the Internet or is offline.   
+2. Manually install the Windows Server 2012 Roles and Features that are required by SharePoint 2013. To do this, use one of the following methods, depending on whether the SharePoint server is connected to the Internet or is offline.
 
    **Online method: Server is connected to the Internet**  
 
