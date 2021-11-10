@@ -52,7 +52,7 @@ Get-MailboxPermission <EffectiveDefaultPublicFolderMailbox name>
 
 For example:
 
-:::image type="content" source="./media/cannot-expand-add-public-folder/validate-permission.png" alt-text="Screenshot of checking permission":::
+:::image type="content" source="media/cannot-expand-add-public-folder/validate-permission.png" alt-text="Screenshot of checking permission.":::
 
 ## Resolution
 

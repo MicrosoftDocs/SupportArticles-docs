@@ -57,4 +57,4 @@ For an example of this issue, consider the following scenario:
 
 In this scenario, if you select the ellipses button, select **Folders** to open the folder list, and then select the **Sync Issues** folder to view the messages it contains, you will find a message that resembles the message in the following screenshot.
 
-:::image type="content" source="media/messages-move-from-inbox-to-renamed-folder/error-example.png" alt-text="Sync Error Example image" border="false":::
+:::image type="content" source="media/messages-move-from-inbox-to-renamed-folder/error-example.png" alt-text="Screenshot of the example message in the Sync Error folder.":::

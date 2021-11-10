@@ -37,7 +37,8 @@ Consider the following scenario when you are running Windows 7 or Windows 8.
 
     > An error occurred while opening the file dialog. Please save your presentations, exit, and then restart PowerPoint.
 
-    ![PPT error](./media/office-program-errors-when-disablethemes-configured/ppt-error.JPG)
+    :::image type="content" source="./media/office-program-errors-when-disablethemes-configured/ppt-error.png" alt-text="Screenshot of the PowerPoint program error." border="false":::
+
 
 - In Microsoft Outlook:
   - You click **Save As** with an email message and you receive the following error:
@@ -48,13 +49,13 @@ Consider the following scenario when you are running Windows 7 or Windows 8.
 
     > The server is not available. Contact your administrator if this condition persists.
 
-    ![Outlook error](./media/office-program-errors-when-disablethemes-configured/outlook-error.JPG)
+    :::image type="content" source="./media/office-program-errors-when-disablethemes-configured/outlook-error.png" alt-text="Screenshot of the Outlook program error." border="false":::
 
 ## Cause
 
 These problems occur when you have the `__COMPAT_LAYER` environment variable and its value contains `DisableThemes`. This is shown in the following figure.
 
-![DisableThemes value in the `__COMPAT_LAYER` environment variable](./media/office-program-errors-when-disablethemes-configured/disablethemes-value.JPG)
+:::image type="content" source="./media/office-program-errors-when-disablethemes-configured/disablethemes-value.png" alt-text="Screenshot of the DisableThemes value in the __COMPAT_LAYER environment variable." border="false":::
 
 ## Resolution
 
