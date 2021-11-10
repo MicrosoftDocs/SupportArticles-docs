@@ -1,6 +1,6 @@
 ---
 title: ErrorMailRecipientNotFound when viewing free/busy information
-description: Fixes ErrorMailRecipientNotFound ResponseCode that occurs when viewing free/busy information of a user in another organization by using Scheduling Assistant.
+description: Fixes ErrorMailRecipientNotFound ResponseCode that occurs when viewing free/busy information of a user in another organization.
 author: v-charloz
 audience: ITPro
 ms.service: exchange-online
@@ -23,7 +23,7 @@ appliesto:
 
 # ErrorMailRecipientNotFound ResponseCode and no free/busy information
 
-An organization relationship that has delegated authentication configured is set up to share calendar information. When you try to view the free/busy information of a user in another organization by using Scheduling Assistant, no free/busy information is displayed.
+When you try to view the free/busy information of a user in another organization using organization relationships, no free/busy information is displayed.
 
 Additionally, one of the following error messages is displayed with the **ErrorMailRecipientNotFound** ResponseCode in the response body of the `GetUserAvailabilityInternal` action. To view the error message, sign in to Outlook on the Web, open Developer Tools by pressing F12 and select the **Network** tab.
 
@@ -33,7 +33,7 @@ Additionally, one of the following error messages is displayed with the **ErrorM
 
 ### Cause
 
-This error occurs in one of the following situations:
+This error occurs in one of the following situations if the recipient email address is valid:
 
 - An organization relationship isn't established with the domain.
 - An organization relationship is established with the domain, but the free/busy access isn't enabled.
@@ -69,12 +69,12 @@ This error occurs because the values of the following parameters aren't set corr
 
 ### Resolution
 
-Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the parameters value. 
+Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet to get the federation information. For example:
 
-**Note**: On-premises Exchange organizations can run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet with the domain name of the queried user to check these values across the routing domain.
+:::image type="content" source="media/no-free-busy-information-retrieved/federation-information.png" alt-text="Screenshot for the example of the Get-FederationInformation cmdlet.":::
 
-If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters with the required values. For example:
+Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the parameters value. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters with the required values. For example:
 
 ```powershell
-Set-OrganizationRelationship -Identity <Contoso> -TargetAutodiscoverEpr "https://contoso.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.contoso.com" -TargetSharingEpr "https://outlook.office365.com/ews/Exchange.asmx"
+Set-OrganizationRelationship -Identity <Contoso> -TargetAutodiscoverEpr "<Value from the federation information>" -TargetApplicationUri "<Value from the federation information>"
 ```
