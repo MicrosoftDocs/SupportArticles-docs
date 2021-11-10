@@ -30,7 +30,7 @@ When you start Microsoft Outlook, you receive the following error message:
 
 > Outlook could not create the work file. Check the temp environment variable.
 
-:::image type="content" source="media/outlook-could-not-create-the-work-file-error-when-starting/error.jpg" alt-text="Outlook could not create the work file. Check the temp environment variable." border="false":::
+:::image type="content" source="media/outlook-could-not-create-the-work-file-error-when-starting/error.png" alt-text="Screenshot of the Outlook work file error." border="false":::
 
 ## Cause
 

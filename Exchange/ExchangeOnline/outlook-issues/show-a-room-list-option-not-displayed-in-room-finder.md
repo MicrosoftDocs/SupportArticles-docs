@@ -35,7 +35,7 @@ _Original KB number:_ &nbsp; 3191297
 
 When a user creates a new meeting in Microsoft Outlook, the **Show a Room list** option isn't displayed in the Room Finder pane. Additionally, **None** is displayed in the **Choose an available room** box.
 
-:::image type="content" source="media/show-a-room-list-option-not-displayed-in-room-finder/room-finder.jpg" alt-text="Screenshot of the Room Finder pane" border="false":::
+:::image type="content" source="media/show-a-room-list-option-not-displayed-in-room-finder/room-finder.png" alt-text="Screenshot of the Room Finder pane.":::
 
 This issue occurs if no room lists were created in the organization.
 

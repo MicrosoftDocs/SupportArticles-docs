@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-matham
+ms.author: v-matthamer
 appliesto:
 - Access for Office 365
 - Access 2019
