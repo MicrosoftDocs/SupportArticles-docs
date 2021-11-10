@@ -4,7 +4,6 @@ description: This article describes the Debug mode in ASP.NET applications.
 ms.date: 12/29/2020
 ms.prod-support-area-path: Site Behavior and Performance
 ms.reviewer: radomirz, jamesche, mlaing, bretb
-ms.technology: aspnet-site-behavior-performance
 ---
 # Debug mode in ASP.NET applications
 

@@ -4,7 +4,6 @@ description: This article demonstrates how to disable session state in ASP.NET.
 ms.date: 04/03/2020
 ms.prod-support-area-path: Development
 ms.topic: how-to
-ms.technology: aspnet-development
 ---
 # Disable ASP session state in ASP.NET  
 

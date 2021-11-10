@@ -1,9 +1,10 @@
 ---
-title: Automatically Detect Settings is enabled 
+title: Automatically Detect Settings is enabled
 description: The Automatically Detect Settings option is unexpectedly enabled as soon as the user launches Internet Explorer 9 for the first time.
 ms.date: 04/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba
+ms.technology: internet-explorer-administration
 ---
 # Automatically Detect Settings is unexpectedly enabled at first login in Internet Explorer 9
 

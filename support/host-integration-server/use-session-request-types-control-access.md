@@ -4,6 +4,7 @@ description: This article describes how to use session request types to control 
 ms.date: 10/13/2020
 ms.prod-support-area-path: Network integration (SNA gateway)
 ms.topic: How to
+ms.technology: his-network-integration
 ---
 # Use session request types to control access to TN3270 sessions
 

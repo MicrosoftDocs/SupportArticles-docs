@@ -5,6 +5,7 @@ ms.date: 03/24/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: cirvin
 ms.topic: how-to
+ms.technology: iis-www-authentication-authorization
 ---
 # Read and analyze a client certificate
 

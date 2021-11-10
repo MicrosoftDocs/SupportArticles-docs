@@ -4,7 +4,6 @@ description: This article provides resolutions for Request Timed Out error that 
 ms.date: 04/15/2020
 ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: koushikd
-ms.technology: aspnet-site-behavior-performance
 ---
 # Request timed out error when you use the DataAdapter method in an ASP.NET application
 

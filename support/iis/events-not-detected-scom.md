@@ -3,8 +3,8 @@ title: IIS events not detected by Management Pack
 description: This article provides resolutions for the problem where certain IIS events are not detected by System Center Operations Manager.
 ms.date: 04/15/2020
 ms.prod-support-area-path: IIS extensions, tools, and Add-ons
-ms.technology: iis
-ms.reviewer: dougste 
+ms.technology: iis-iis-extensions-tools
+ms.reviewer: dougste
 ---
 # Some IIS events are not detected by the IIS Management Pack
 

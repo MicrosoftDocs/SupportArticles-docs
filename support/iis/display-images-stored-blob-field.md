@@ -5,6 +5,7 @@ ms.date: 09/24/2020
 ms.prod-support-area-path: Active Server Pages
 ms.reviewer: jlewis
 ms.prod: iis
+ms.technology: iis-active-server-pages
 ---
 # Display images stored in a BLOB field
 

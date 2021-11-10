@@ -4,6 +4,7 @@ description: Due to changes in the use of the navigator.online DOM property in I
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba
+ms.technology: internet-explorer-stability-performance
 ---
 # Typed characters are slow or fail to appear in Internet Explorer
 

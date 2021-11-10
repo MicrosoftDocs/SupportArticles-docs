@@ -4,6 +4,7 @@ description: This article provides the steps that help you to set Java security 
 ms.date: 03/02/2020
 ms.prod-support-area-path: 
 ms.reviewer: juanf
+ms.technology: internet-explorer-security-privacy
 ---
 # How to set Java security in Internet Explorer
 

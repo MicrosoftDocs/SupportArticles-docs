@@ -5,6 +5,7 @@ ms.date: 01/04/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: troubleshooting
+ms.technology: internet-explorer-stability-performance
 ---
 # Slow browsing in Internet Explorer because of multiple isInNet function calls
 

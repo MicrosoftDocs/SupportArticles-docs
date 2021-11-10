@@ -4,6 +4,7 @@ description: This article describes how to connect to a running instance of Inte
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: scotrobe
+ms.technology: internet-explorer-development-website
 ---
 # How to connect to a running instance of Internet Explorer
 

@@ -4,6 +4,7 @@ description: Describes ways that you can help identify and protect your computer
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-security-privacy
 ---
 # Steps to help identify and protect yourself from deceptive (spoofed) Web sites and malicious hyperlinks
 
