@@ -268,25 +268,38 @@ Your organization has reached the limit for the maximum number of concurrent exp
 
 ### Resolution
 
-Run the following script to discover how many export jobs that were started in the last seven days are still running.
+To discover how many export jobs that were started in the last seven days are still running, follow these steps:
 
 1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. Run the following script to collection information about the current export jobs are triggering the throttle:
+2. To collect information about the current export jobs that are triggering the throttle, run the following cmdlets as an eDiscovery administrator:
+
+    **Note**: An eDiscovery administrator is a member of the eDiscovery Manager role group, and can view all eDiscovery cases. You can use the [Get-eDiscoveryCaseAdmin](/powershell/module/exchange/get-ediscoverycaseadmin) cmdlet to check eDiscovery administrators, and use the [Add-eDiscoveryCaseAdmin](/powershell/module/exchange/add-ediscoverycaseadmin) cmdlet to add an eDiscovery administrator. The cmdlets may take some time to finish depending on the number of cases.
 
    ```powershell
-   $date = Get-Date;
-   $exports = Get-ComplianceSearchAction -Export -ResultSize Unlimited;
+   $date = Get-Date
+   $Exports = @(Get-ComplianceSearchAction -export -ResultSize Unlimited)
+   $allCases = Get-ComplianceCase | ?{$_.status -like "Active"}
+     
+   $i = 1
+   foreach ($case in $cases)
+   {
+   $Exports += Get-ComplianceSearchAction -export -case $case.name
+   write-host "Processing case $($i) of $($cases.count)"
+   $i++
+   }
+     
    $inprogressExports = $exports | ?{$_.Results -eq $null -or (!$_.Results.Contains("Export status: Completed") -and !$_.Results.Contains("Export status: none"))};
-   $exportJobsRunning = $inprogressExports | ?{$_.JobStartTime -ge $date.AddDays(-7)} | Sort-Object JobStartTime -Descending;
+   $exportJobsRunning = $inprogressExports | ?{$_.JobStartTime -ge $date.AddDays(-7)} | Sort-Object JobStartTime -Descending
+
    ```
 
-3. Run the following command to display a list of export jobs that are currently running:
+3. Run the following cmdlet to display a list of export jobs that are currently running:
+
+   **Note**: If the cmdlet returns 10 or more exports jobs, your organization has reached the limit for the number of concurrent export jobs. For more information, see [Limits for eDiscovery search](/microsoft-365/compliance/limits-for-content-search).
 
    ```powershell
    $exportJobsRunning | Format-Table Name, JobStartTime, JobEndTime, Status | More;
    ```
-
-   If the previous command returns 10 or more exports jobs, your organization has reached the limit for the number of concurrent export jobs. For more information, see [Limits for eDiscovery search](/microsoft-365/compliance/limits-for-content-search).
 
 4. Wait for existing export jobs to finish or remove export jobs that are no longer needed by using the [Remove-ComplianceSearchAction](/powershell/module/exchange/remove-compliancesearchaction) cmdlet.
