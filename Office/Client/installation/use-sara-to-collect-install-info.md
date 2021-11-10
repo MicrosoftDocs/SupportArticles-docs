@@ -1,7 +1,7 @@
 ---
 title: Use Support and Recovery Assistant to collect data about Microsoft 365 Apps installations
 description: Explains how the Microsoft Support and Recovery Assistant uses Robust Office Inventory Scan (ROIScan) to collect information about Microsoft 365 apps installations. 
-author: v-matham
+author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -13,7 +13,7 @@ ms.custom:
 - CI 144048
 - CI 147050
 ms.prod: office-perpetual-itpro
-ms.author: v-matham
+ms.author: v-matthamer
 appliesto:
 - Office 365
 - Office 2016

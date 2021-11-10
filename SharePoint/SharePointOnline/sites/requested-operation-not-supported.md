@@ -1,5 +1,5 @@
 ---
-title: Site deletion error '“The requested operation is not supported for site”'
+title: Site deletion error The requested operation is not supported for site
 description: When you try to delete a site using the SharePoint management shell, you encounter this error.
 author: PramodBalusu
 manager: dcscontentpm

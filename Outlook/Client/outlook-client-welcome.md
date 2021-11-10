@@ -1,6 +1,6 @@
 ---
 title: Listing some issues for Outlook
-description: This article lists Outlook related issues.
+description: This article lists Outlook for Windows related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
@@ -8,8 +8,6 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: luche
 localization_priority: Normal
-search.appverid: 
-- MET150
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot
