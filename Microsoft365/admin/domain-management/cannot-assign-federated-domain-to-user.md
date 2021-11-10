@@ -39,31 +39,31 @@ This behavior is by design in Office 365. You can't create federated users throu
 
 ## Solution
 
-To work around this behavior, create a matching user account in the on-premises Active Directory Domain Services (AD DS) environment, set up the user principal name (UPN) appropriately, and then sync the account and Azure Active Directory by using directory synchronization. To do this, follow these steps:
+To work around this behavior, create a matching user account in the on-premises Active Directory Domain Services (AD DS) environment, set up the user principal name (UPN) appropriately, and then sync the account and Azure Active Directory by using directory synchronization. To do so, follow these steps:
 
-1. Obtain the primary SMTP address of the Office 365 user account. To do this, follow these steps:
-   1. Sign in to the Office 365 portal (<https://portal.office.com>) as a global admin.
-   2. Click **Admin**, and then click **Exchange** to open Exchange Admin Center.
+1. Obtain the primary SMTP address of the Office 365 user account by following these steps:
+   1. Sign in to the [Office 365 portal](https://portal.office.com) as a global admin.
+   2. Select **Admin** > **Exchange** to open Exchange Admin Center.
    3. Locate the user account, and then double-click it.
-   4. In the left navigation pane, click **Email Address**, and then note the primary SMTP address of the user account.
-2. Start Active Directory Users and Computers, and then create a user account in the on-premises domain that matches the Office 365 user account. For more information about how to do this, see [Create a User Account in Active Directory Users and Computers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd894463(v=ws.10)).
-3. Make sure that the UPN of the user account is updated to the federated domain name. For more information about how to do this, see [Troubleshoot Active Directory user accounts that are piloted as Office 365 SSO-enabled user IDs](https://support.microsoft.com/help/2392130).
-4. Use Active Directory Service Interfaces (ADSI) Edit to edit the **proxyAddresses** attribute of the user object so that it matches the primary SMTP address that you noted in step 1D. To do this, follow these steps:
+   4. In the left navigation pane, select **Email Address**, and then note the primary SMTP address of the user account.
+2. Start Active Directory Users and Computers, and then create a user account in the on-premises domain that matches the Office 365 user account. For more information, see [Create a User Account in Active Directory Users and Computers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd894463(v=ws.10)).
+3. Make sure that the UPN of the user account is updated to the federated domain name. For more information, see [Troubleshoot Active Directory user accounts that are piloted as Office 365 SSO-enabled user IDs](https://support.microsoft.com/help/2392130).
+4. Use Active Directory Service Interfaces (ADSI) Edit to edit the **proxyAddresses** attribute of the user object so that it matches the primary SMTP address that you noted in step 1D. To do so, follow these steps:
 
    > [!NOTE]
    > For more information about how to install ADSI Edit, see [Installing ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_installingadsiedit).
 
-   1. Click **Start**, click **Run**, type **ADSIEdit.msc**, and then click **OK**.
-   2. Right-click **ADSI Edit**, select **Connect to**, and then click **OK** to load the domain partition.
-   3. In the navigation pane, locate the user object that you want to change, right-click it, and then click **Properties**.
-   4. In the **Attributes** list, click the **proxyAddresses** attribute, and then click **Edit**.
-   5. In the **Value to add** field, enter the appropriate SMTP address, and then click **Add**.
+   1. Select **Start** > **Run**, type **ADSIEdit.msc**, and then select **OK**.
+   2. Right-click **ADSI Edit**, select **Connect to**, and then select **OK** to load the domain partition.
+   3. In the navigation pane, locate the user object that you want to change, right-click it, and then select **Properties**.
+   4. In the **Attributes** list, select the **proxyAddresses** attribute, and then select **Edit**.
+   5. In the **Value to add** field, enter the appropriate SMTP address, and then select **Add**.
 
       > [!NOTE]
-      > The primary SMTP address value for the user object should be prepended by an uppercase "SMTP:" designator for the address value to be formatted correctly for the proxyAddressesattribute. For example, "SMTP:username@contoso.com" is an acceptable value, and "username@contoso.com" isn't an acceptable value.
-   6. Click **OK** two times, and then exit ADSI Edit.
+      > The primary SMTP address value for the user object should be prepended by an uppercase **SMTP:** designator for the address value to be formatted correctly for the proxyAddressesattribute. For example, "SMTP:username@contoso.com" is an acceptable value, and "username@contoso.com" isn't an acceptable value.
+   6. Select **OK** two times, and then exit ADSI Edit.
 
-   For more information about how to use ADSI Edit to edit Active Directory attributes, go to the following Microsoft TechNet website: [Using ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_usingadsiedit)
+   For more information about how to use ADSI Edit to edit Active Directory attributes, see [Using ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_usingadsiedit)
 5. Force directory synchronization.
 
 ## More information
