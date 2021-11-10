@@ -1,7 +1,7 @@
 ---
 title: Changes to GPO permissions through AGPM aren't saved
 description: Describes an issue that blocks you from changing Group Policy object permissions in Advanced Group Policy Management (AGPM). A workaround is provided.
-ms.date: 09/17/2020
+ms.date: 11/11/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -32,7 +32,7 @@ This behavior is by design in AGPM 4.0 Service Pack 3 (SP3) and earlier versions
 
 To work around this issue, follow these steps:
 
-1. Install the [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628) on the AGPM server. Download link: https://www.microsoft.com/en-us/download/details.aspx?id=54967
+1. Install the [Microsoft Desktop Optimization Pack March 2017 Servicing Release](https://www.microsoft.com/download/details.aspx?id=54967) on the AGPM server.
 2. Set the following registry key and values on the AGPM server.
 
     - Path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Agpm`
@@ -45,9 +45,6 @@ To work around this issue, follow these steps:
 If OverrideRemovePermissionsWithoutReadandApply is set to **1**, read permissions are saved after the policy is checked in to AGPM, but write permissions are removed.
 
 If OverrideRemovePermissionsWithoutReadAndApply is not set or is set to any value other than **1**, AGPM behaves in the way that's described in the [Symptoms](#symptoms) section.
-
-> [!IMPORTANT]
-> After you set this registry key, you must also apply the hotfix in [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628).
 
 ## References
 
