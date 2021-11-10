@@ -31,7 +31,7 @@ For example, assume that a user's primary SMTP email address is `alias@domain.co
 
 |Figure 1|Figure 2|
 |---|---|
-|![Figure 1](./media/smtp-address-in-users-profile-not-change/figure-1.jpg)<br/>|![Figure 2](./media/smtp-address-in-users-profile-not-change/figure-2.jpg)<br/>|
+|:::image type="content" source="media/smtp-address-in-users-profile-not-change/figure-1.png" alt-text="Screenshot of Figure 1 showing the primary SMTP email address displayed in Outlook is alias@domain.com.":::<br/>|:::image type="content" source="media/smtp-address-in-users-profile-not-change/figure-2.png" alt-text="Screenshot of Figure 2 showing the primary SMTP email address displayed in Outlook is expected to be changed to alias@subdomain.domain.com if the user's primary SMTP email address is changed.":::<br/>|
 |||
 
 However, if the user's primary SMTP email address is changed to `alias@subdomain.domain.com`, the primary SMTP email address that's displayed in Outlook does not change as expected. You expect the primary SMTP email address in Outlook to reflect the change, as shown in Figure 2.
