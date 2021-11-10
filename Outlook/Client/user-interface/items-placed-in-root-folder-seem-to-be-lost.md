@@ -32,7 +32,7 @@ When you move items to the root folder of your mailbox, you cannot see the items
 > [!NOTE]
 > The root folder in your Outlook mailbox is the folder at the top of your folder list. In Outlook 2010 and later versions the root folder is displayed as your email address, and in Outlook 2007 the root folder is displayed as **Mailbox - username**. In the following figure the root folder is displayed as `e15user1@wingtiptoys.com`.
 
-:::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/sample.jpg" alt-text="The screenshot of the sample" border="false":::
+:::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/sample.png" alt-text="Screenshot of the root folder in the mailbox folder list in Outlook." border="false":::
 
 ## Cause
 
@@ -48,7 +48,7 @@ To disable Outlook Today, follow these steps for your version of Outlook:
 2. Select the **Home Page** tab.
 3. Clear **Show home page by default for this folder**, and then select **OK**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/show-home-page-by-default-for-this-folder-option.jpg" alt-text="The screenshot of the Show home page by default for this folder option" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/show-home-page-by-default-for-this-folder-option.png" alt-text="Screenshot of the Show home page by default for this folder option." border="false":::
 
 4. Select the root folder to view the contents.
 
@@ -56,12 +56,12 @@ To disable Outlook Today, follow these steps for your version of Outlook:
 
 1. Right-click the root folder and select **Properties for "Mailbox - username"**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/properties-for-mailbox.jpg" alt-text="The screenshot of the Properties for Mailbox - username option" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/properties-for-mailbox.png" alt-text="Screenshot of the Properties for Mailbox - username option." border="false":::
 
 2. Select the **Home Page** tab.
 3. Clear **Show home page by default for this folder**, and then select **OK**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/clear-show-home-page-by-default-for-this-folder-option.jpg" alt-text="The screenshot of the Show home page by default for this folder" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/clear-show-home-page-by-default-for-this-folder-option.png" alt-text="Screenshot of the option of Show home page by default for this folder." border="false":::
 
 4. Select the root folder to view the contents.
 
@@ -82,7 +82,7 @@ To use Advanced Find to locate the items in the root folder and move them to a d
 6. Select only the root folder, which is typically displayed as your email address.
 7. Disable **Search subfolders**, and then select **OK**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/disable-search-subfolders.jpg" alt-text="Disable the Search subfolders option" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/disable-search-subfolders.png" alt-text="Screenshot of the Select Folder(s) dialog box." border="false":::
 
 8. Select **Find Now**.
 9. Messages and items found will be displayed in the results window.
@@ -96,7 +96,7 @@ To use Advanced Find to locate the items in the root folder and move them to a d
 4. Select only the root folder, which is typically displayed as **Mailbox - \<your username>**.
 5. Disable **Search subfolders**, and then select **OK**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/disable-search-subfolders.jpg" alt-text="Disable the Search subfolders option" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/disable-search-subfolders.png" alt-text="Screenshot of the Select Folder(s) dialog box in Outlook 2007." border="false":::
 
 6. Select **Find Now**.
 7. Messages and items found will be displayed in the results window.

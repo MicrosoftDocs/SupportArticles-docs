@@ -737,6 +737,8 @@
           href: ../office-suite-issues/error-open-document.md
         - name: Error when you open files from SharePoint in Office client
           href: ../office-suite-issues/files-fail-to-open.md
+        - name: Excel or PowerPoint error "This file cannot be saved"
+          href: ../office-suite-issues/files-fail-to-open.md
         - name: FAQ about Office Activation Wizard
           href: ../office-suite-issues/faq-about-office-activation-wizard.md
         - name: Features to enable collaboration

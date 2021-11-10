@@ -37,7 +37,7 @@ To resolve this issue, follow these steps:
 1. Make sure that the user is using a supported web browser.
 2. In Outlook Web App, select **Options**.
 
-   :::image type="content" source="media/outlook-web-app-unexpectedly-opens-in-the-light-version/options-button.jpg" alt-text="Screenshot of the light version of Outlook Web App, showing the Options button ":::
+   :::image type="content" source="media/outlook-web-app-unexpectedly-opens-in-the-light-version/options-button.png" alt-text="Screenshot of the light version of Outlook Web App showing the Options button.":::
 
 3. In the navigation pane on the left, select **Outlook Web App version**, and then clear the **Use the Light Version of Outlook Web App** checkbox.
 4. Select **Save** at the top of the page.
