@@ -42,11 +42,11 @@ Reduce the number of shared folders or mailboxes that you have open in Outlook. 
 
 A shared mailbox appears below your own mailbox in the Folder Pane, as shown in the following screenshot.
 
-:::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/example-of-shared-mailbox.png" alt-text="Screenshot showing a shared mailbox in the Folder Pane" border="false":::
+:::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/example-of-shared-mailbox.png" alt-text="Screenshot showing a shared mailbox in the Folder Pane." border="false":::
 
 A shared folder appears below Shared *\<Folder type>*, such as Shared Calendar or Shared Contacts, as shown in the following screenshot.
 
-:::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/different-types-of-shared-folders.png" alt-text="Screenshot showing shared folders of different types" border="false":::
+:::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/different-types-of-shared-folders.png" alt-text="Screenshot showing shared folders of different types.":::
 
 ### Remove a shared mailbox
 
@@ -76,7 +76,7 @@ Run the Test E-mail AutoConfiguration tool to determine whether any automapped m
 6. When the test is complete, select the **XML** tab.
 7. Scroll down until you see the \<AlternativeMailbox> section, and then look for \<Type>Delegate\</Type> in the script, as shown in the following screenshot.
 
-   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/test-e-mail-autoconfiguration-dialog.png" alt-text="Screenshot showing the Test E-mail AutoConfiguration dialog with an automapped mailbox" border="false":::
+   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/test-e-mail-autoconfiguration-dialog.png" alt-text="Screenshot showing the Test E-mail AutoConfiguration dialog with an automapped mailbox." border="false":::
 
 To remove an automapped mailbox from Outlook, use one of the following options:
 
@@ -94,11 +94,11 @@ To remove an automapped mailbox from Outlook, use one of the following options:
 2. Select the **Calendar, Contacts, Tasks or Notes** folder in the **Navigation** pane in which you have a shared folder open.
 3. Look under Shared \<Folder name> for any shared folders, as shown in the following screenshot.
 
-   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/different-types-of-shared-folders.png" alt-text="Screenshot showing shared folders of different types" border="false":::
+   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/different-types-of-shared-folders.png" alt-text="Screenshot showing shared folders of different types.":::
 
 4. Right-click the shared folder, and then select **Delete Folder** or **Delete Calendar**, depending on the folder type. The following screenshot shows a shared Calendar being removed.
 
-   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/remove-shared-calendar-folder.png" alt-text="Screenshot showing how to remove a shared calendar folder" border="false":::
+   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/remove-shared-calendar-folder.png" alt-text="Screenshot showing how to remove a shared calendar folder." border="false":::
 
     > [!NOTE]
     > Selecting **Delete Calendar** or **Delete Folder** on a Shared Calendar or Shared Folder does not delete the folder from the mailbox where it resides. This action removes the folder from your Outlook view Delete Folder only.
