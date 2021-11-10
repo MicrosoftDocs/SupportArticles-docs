@@ -34,7 +34,7 @@ For example, in some cases, the **Sent Items** folder is converted into the **Ar
 
 | **A working account**| **A non-working account** |
 |---|---|
-|:::image type="content" source="./media/email-stuck-in-outbox-outlook-2016-mac/correct-folders.png" alt-text="Screenshot of correct Sent and Archive folders in a working account." border="false":::<br/>|:::image type="content" source="./media/email-stuck-in-outbox-outlook-2016-mac/incorrect-folders.png" alt-text="Screenshot of incorrect Sent and Archive folders in a non-working account." border="false":::<<br/>|
+|:::image type="content" source="./media/email-stuck-in-outbox-outlook-2016-mac/correct-folders.png" alt-text="Screenshot of correct Sent and Archive folders in a working account." border="false":::|:::image type="content" source="./media/email-stuck-in-outbox-outlook-2016-mac/incorrect-folders.png" alt-text="Screenshot of incorrect Sent and Archive folders in a non-working account." border="false":::|
 |||
 
 ## Resolution

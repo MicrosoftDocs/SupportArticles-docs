@@ -84,7 +84,7 @@ To fix this problem, use one of the following methods, as appropriate for your s
   1. Start the Group Policy Management Console.
   2. Expand the Microsoft Outlook 2013 or Microsoft Outlook 2010 node, and then select **Security**, per the following screenshot:
 
-     :::image type="content" source="media/office-document-attachments-open-in-protected-view/security-settings.png" alt-text="Screenshot of Security group policy settings under Microsoft Outlook 2010." border="false":::
+     :::image type="content" source="media/office-document-attachments-open-in-protected-view/security-settings.png" alt-text="Screenshot of security group policy settings under Microsoft Outlook 2010." border="false":::
 
   3. Double-click the Use Protected View for attachments received from internal senders policy.
   4. Select **Not Configured**, and then select **OK**.

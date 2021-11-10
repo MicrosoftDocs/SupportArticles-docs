@@ -32,11 +32,11 @@ _Original KB number:_ &nbsp; 3049193
 
 In Microsoft Outlook 2010 and later versions, you discover that contact photos are missing from email messages and from contacts in the global address list (GAL). The following screenshots show an example of this issue in Outlook 2016.
 
-:::image type="content" source="media/cannot-see-contact-photos/example-1.png" alt-text="Screenshot of email displaying no contact photo.":::
+:::image type="content" source="media/cannot-see-contact-photos/example-1.png" alt-text="Screenshot of an email displaying no contact photo.":::
 
 You expect the contact photo to be displayed in Outlook, resembling the following.
 
-:::image type="content" source="media/cannot-see-contact-photos/example-2.png" alt-text="Screenshot of mail displaying contact photo.":::
+:::image type="content" source="media/cannot-see-contact-photos/example-2.png" alt-text="Screenshot of an email displaying contact photo.":::
 
 You also discover that contact photos are missing in Skype for Business or Lync, as shown in the following screenshot.
 
