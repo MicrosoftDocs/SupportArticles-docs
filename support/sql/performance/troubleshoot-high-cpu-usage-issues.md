@@ -285,7 +285,7 @@ If you are using a virtual machine, make sure that you aren't overprovisioning C
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to help you determine how many queries have exceed a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values for the two variables to match your environment.
+If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to help you determine how many queries have exceeded a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values of the two variables to match your environment.
 
 ```sql
 -- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
