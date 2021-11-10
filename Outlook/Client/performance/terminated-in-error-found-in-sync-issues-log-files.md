@@ -49,7 +49,7 @@ Delete and recreate the OST file
   2. In the **Account Settings** dialog, select **Data Files**.
   3. Locate the OST file for your email address, and note the path and filename of the OST file.
 
-      :::image type="content" source="media/terminated-in-error-found-in-sync-issues-log-files/data-files.png" alt-text="Data Files in Outlook" border="false":::
+      :::image type="content" source="media/terminated-in-error-found-in-sync-issues-log-files/data-files.png" alt-text="Screenshot of the Data Files tab in Account Settings in Outlook." border="false":::
 
   4. Close all dialog boxes, and then close Outlook.
   5. With Outlook closed, in Windows Explorer, navigate to the path and file determined in step 3, and then delete the .OST file.

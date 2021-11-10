@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 3044375
 
 In Microsoft Outlook, you discover that the server count and offline item count for a particular folder do not match. The following screen shot illustrates this issue.
 
-:::image type="content" source="media/offline-item-count-for-folder-differs-from-server-count/server-count-and-offline-item-count.jpg" alt-text="server count and offline item count for a particular folder do not match" border="false":::
+:::image type="content" source="media/offline-item-count-for-folder-differs-from-server-count/server-count-and-offline-item-count.png" alt-text="Screenshot of the Synchronization tab in Inbox Properties. In this example, Server folder contains 39 items and Offline folder contains 2 items." border="false":::
 
 ## Cause
 
