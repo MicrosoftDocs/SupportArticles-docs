@@ -109,7 +109,7 @@ If SQL Server is still using high CPU, go to the next step.
            q.objectid,
            q.encrypted AS text_encrypted
     FROM
-      (SELECT TOP 100 qs.plan_handle,
+      (SELECT TOP 500 qs.plan_handle,
                   qs.total_worker_time,
                   qs.execution_count
        FROM sys.dm_exec_query_stats qs
