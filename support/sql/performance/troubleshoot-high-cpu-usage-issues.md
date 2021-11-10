@@ -14,14 +14,14 @@ _Applies to:_ &nbsp; SQL Server
 
 This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server.
 
-Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common:
+Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common ones:
 
 - High logical reads that are caused by table or index scans because of the following:
   - Out-of-date statistics
   - Missing indexes
   - [Parameter sensitive plan (PSP) issues](/azure/azure-sql/identify-query-performance-issues)
   - Poorly designed queries
-- Increases in workload
+- Increase in workload
 
 You can use the following steps to troubleshoot high-CPU-usage issues in SQL Server.
 
@@ -31,7 +31,7 @@ Use one of the following tools to check whether the SQL Server process is actual
 
 - Task Manager (On the **Process** tab, check whether the CPU value for **SQL Server Windows NT-64 Bit** is close to 100 percent)
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
-  - Counter: Process/%User Time, % Privileged Time
+  - Counter: `Process/%User Time`, `% Privileged Time`
   - Instance: sqlservr
   
 - You can use the following Powershell script to collect the counter data over 60 sec period:
@@ -54,7 +54,7 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-  > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+  If you notice that `% User Time` consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -123,7 +123,7 @@ If SQL Server is still using high CPU, go to the next step.
 
 1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another windows in SSMS.
 
-    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." border="true":::
+    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
 1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes that have high improvement measurements.
 
