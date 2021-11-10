@@ -42,7 +42,7 @@ This problem can occur if Outlook.exe is not registered correctly under the foll
 
 If Outlook.exe is properly registered, you will find an \Outlook.exe subkey under the above key, and under the \Outlook.exe subkey you will find a string value called Path whose data references the correct path to Outlook.exe on your computer. The following figure shows the correct Outlook.exe registration on a 32-bit version of Windows.
 
-:::image type="content" source="media/custom-mapi-solutions-not-working/outlook-exe-registration.png" alt-text="The screenshot for the Outlook.exe registration" border="false":::
+:::image type="content" source="media/custom-mapi-solutions-not-working/outlook-exe-registration.png" alt-text="Screenshot for the Outlook.exe registration." border="false":::
 
 > [!NOTE]
 > The path to Outlook.exe on your computer may vary from the above figure if you installed Office in a non-default location.
