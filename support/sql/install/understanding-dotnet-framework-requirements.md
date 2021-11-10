@@ -109,7 +109,7 @@ Add-WindowsFeature as-net-framework
 > [!NOTE]
 > See the screen shot for more information:
 
-:::image type="content" source="media/understanding-dotnet-framework-requirements/windows-powershell.png" alt-text="Screenshot of the Windows PowerShell window when you type the commands." border="false":::
+:::image type="content" source="media/understanding-dotnet-framework-requirements/windows-powershell.png" alt-text="Screenshot shows the output of the command in Windows PowerShell." border="false":::
 
 ## References  
 

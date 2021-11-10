@@ -43,7 +43,7 @@ Symptoms
 
 When you try to install a SQL Server 2008 R2 failover cluster instance, the installation fails at the **Cluster Service verification** Rule. When you view the details, you receive an error message that resembles the following:
 
-:::image type="content" source="media/sql-server-2008-setup-issues/rule-check-result-blue.png" alt-text="Screenshot of the Cluster Service verification Rule error message." border="false":::
+:::image type="content" source="media/sql-server-2008-setup-issues/cluster-service-verification-rule-failed.png" alt-text="Screenshot of the Rule Check Result window, which shows Rule Cluster Service verification failed." border="false":::
 
 Cause
 

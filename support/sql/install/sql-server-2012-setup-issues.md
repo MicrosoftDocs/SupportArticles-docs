@@ -50,7 +50,7 @@ _Original KB number:_ &nbsp; 2681562
 
   An error message that resembles the following may be displayed during SQL Server 2012 installation when the .NET Framework is not enabled.
 
-  :::image type="content" source="media/sql-server-2012-setup-issues/error-message.png" alt-text="Screenshot of the SQL Server 2012 setup error message." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/dotnet-framework-not-enabled-error.png" alt-text="Screenshot of the SQL Server 2012 setup error message: Error while enabling Windows feature." border="false":::
 
   Prevention
 
@@ -75,7 +75,7 @@ _Original KB number:_ &nbsp; 2681562
 
   In this situation, users may receive an error message that resembles the following.
 
-    :::image type="content" source="media/sql-server-2012-setup-issues/users-may-receive-an-error-message.png" alt-text="Screenshot of .NET Framework 3.5 installation error message." border="false":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/install-dotnet-framework-3.5-error.png" alt-text="Screenshot of the .Net Framework 3.5 installation error message: The following feature couldn't be installed." border="false":::
 
   Cause
 
@@ -109,11 +109,11 @@ _Original KB number:_ &nbsp; 2681562
 
   Windows Server 2012 R2 and Windows Server 2012 - Full Server
 
-  :::image type="content" source="media/sql-server-2012-setup-issues/server-2012-full-server.png" alt-text="Screenshot of the error message on Windows Server 2012 R2 and Windows Server 2012 - Full Server." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/install-dotnet-framework-3.5-error-full-server.png" alt-text="Screenshot of the .Net Framework 3.5 installation error message on Full Server: The following feature couldn't be installed." border="false":::
 
   Windows Server 2012 R2 and Windows Server 2012 - Server Core
 
-  :::image type="content" source="media/sql-server-2012-setup-issues/server-2012-server-core.png" alt-text="Screenshot of the error message on Windows Server 2012 R2 and Windows Server 2012 - Server Core." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/roles-and-features-cannot-automatically-installed.png" alt-text="Screenshot of the roles and features cannot be automatically installed via Windows Feature error." border="false":::
 
   Prevention
 
@@ -232,7 +232,7 @@ _Original KB number:_ &nbsp; 2681562
     > Operation failed with 0x8007000B  
     An attempt was made to load a program with an incorrect format.
 
-    :::image type="content" source="media/sql-server-2012-setup-issues/program-with-an-incorrect-format.png" alt-text="Screenshot of the error message: an attempt was made to load a program with an incorrect format." border="true":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/operation-failed-with-0x8007000b.png" alt-text="Screenshot of the error message: an attempt was made to load a program with an incorrect format." border="true":::
 
     Prevention
 
@@ -253,7 +253,7 @@ _Original KB number:_ &nbsp; 2681562
   
   In this scenario, the installation fails. You receive an error message that resembles the following.
   
-  :::image type="content" source="media/sql-server-2012-setup-issues/install-a-sql-server-failover-cluster.png" alt-text="Screenshot of the installation fails." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/install-sql-server-failover-cluster-error.png" alt-text="Screenshot of the Feature Rules page, which shows Windows Server Core Supported Feature(s) Check failed." border="false":::
 
   The details of the error resemble the following.
   

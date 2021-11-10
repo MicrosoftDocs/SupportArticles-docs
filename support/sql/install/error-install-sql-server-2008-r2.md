@@ -112,7 +112,7 @@ To resolve the problem, use one of the following methods:
 
        See image
 
-       :::image type="content" source="media/error-install-sql-server-2008-r2/rename.png" alt-text="Screenshot of the right-click menu of Setup.rll" border="false":::
+       :::image type="content" source="media/error-install-sql-server-2008-r2/rename.png" alt-text="Screenshot shows the Rename option of Setup.rll in Windows Explorer." border="false":::
 
     4. Type *setup.rll.old*, and then press **Enter**.
 
