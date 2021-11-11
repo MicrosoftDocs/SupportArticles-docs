@@ -4,6 +4,7 @@ description: An unknown error occurred while synchronizing data to Outlook error
 ms.reviewer: clintwa, debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # An unknown error occurred while synchronizing data to Outlook error when synchronizing records
 

@@ -4,6 +4,7 @@ description: The Outlook ribbon disappears after you use the Microsoft Dynamics 
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # The Outlook ribbon disappears from Outlook when you use the Microsoft Dynamics CRM Client for Outlook
 

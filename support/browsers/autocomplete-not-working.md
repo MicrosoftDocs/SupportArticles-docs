@@ -4,6 +4,7 @@ description: Provides the resolution to make sure you can save passwords in a we
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba
+ms.technology: internet-explorer-core-features
 ---
 # Autocomplete functionality not working
 

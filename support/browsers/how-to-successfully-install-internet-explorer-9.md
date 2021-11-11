@@ -4,6 +4,7 @@ description: This article helps solve the error messages such as 0x800F081E that
 ms.date: 12/10/2020
 ms.prod-support-area-path: 
 ms.reviewer: mlaing
+ms.technology: internet-explorer-installation
 ---
 # How to troubleshoot Internet Explorer 9 installation problems
 

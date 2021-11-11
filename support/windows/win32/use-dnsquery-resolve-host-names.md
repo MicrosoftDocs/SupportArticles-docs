@@ -4,6 +4,7 @@ description: This article provides a Win32 console application sample that illus
 ms.date: 01/29/2021
 ms.prod-support-area-path: Networking Development
 ms.topic: how-to
+ms.technology: windows-dev-apps-networking-dev
 ---
 # Use the DnsQuery function to resolve host names and host addresses with Visual C++ .NET
 

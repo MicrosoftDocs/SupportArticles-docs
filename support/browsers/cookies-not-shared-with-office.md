@@ -4,6 +4,7 @@ description: Describes an issue that occurs when you use hyperlinks to open Offi
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: rtaylor, klaw
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Persistent cookies are not shared between Internet Explorer and Office applications
 

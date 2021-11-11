@@ -3,6 +3,7 @@ title: HTTP error 503 and event 5189 from web applications
 description: This article provides resolutions for the HTTP 503 error and 5189 event where after you upgrade to Version 1709 (Fall Creators Update) on Windows 10 or Windows Server 2016, web applications fail to start, and return an HTTP 503 error and WAS event 5189.
 ms.date: 01/29/2021
 ms.prod-support-area-path: IISAdmin Service and Inetinfo Process Operation
+ms.technology: iis-health-diagnostic-performance
 ---
 # Web applications return HTTP Error 503 and WAS event 5189 on Windows 10 Version 1709
 

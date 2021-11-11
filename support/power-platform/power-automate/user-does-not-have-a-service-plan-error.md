@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when doing any of these
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-connections
 ---
 # User doesn't have a service plan adequate for the non-Standard connection error
 

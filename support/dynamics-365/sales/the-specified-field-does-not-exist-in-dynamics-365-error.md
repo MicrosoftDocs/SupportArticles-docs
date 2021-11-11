@@ -4,6 +4,7 @@ description: You can't configure Microsoft Dynamics 365 for Outlook due to the s
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The specified field does not exist in Microsoft Dynamics 365 error when setting Microsoft Dynamics 365 for Outlook
 

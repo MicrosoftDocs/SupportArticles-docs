@@ -4,6 +4,7 @@ description: Troubleshooting Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Troubleshooting Microsoft Dynamics 365 App for Outlook
 

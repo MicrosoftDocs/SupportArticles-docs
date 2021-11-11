@@ -1,9 +1,10 @@
 ---
 title: You cannot send email as the selected user
-description: Fixes an issue in which you get the "You cannot send email as the selected user" error when you send an email as another user in Microsoft Dynamics CRM.
+description: Fixes an issue in which you get the You cannot send email as the selected user error when you send an email as another user in Microsoft Dynamics CRM.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "You cannot send email as the selected user" error when attempting to send email as another user
 

@@ -4,6 +4,7 @@ description: Discusses that an Internet Explorer 10 for Windows 7 installation f
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-stability-performance
 ---
 # Internet Explorer 10 does not install on some hybrid graphics systems
 

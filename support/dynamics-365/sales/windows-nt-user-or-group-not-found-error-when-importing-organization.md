@@ -4,6 +4,7 @@ description: You may receive a Windows NT user or group not found error when imp
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Windows NT user or group not found error when trying to import a Microsoft Dynamics CRM 2011 organization
 

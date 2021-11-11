@@ -4,6 +4,7 @@ description: This article helps you analyze performance problems and describes h
 ms.date: 04/15/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 2.1 Troubleshooting performance problems by using createdump in Linux
 

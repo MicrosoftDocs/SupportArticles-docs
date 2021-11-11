@@ -39,8 +39,8 @@ To check the version of cloud-init is in the image, run the following script:
 If you cannot connect to the VM with the user it was created with, you will need to reset the password using the Azure VM Access extension or the Azure portal:
 
 1. Go to the VM.
-2. In the VM Blade, scroll to 'Support + troubleshooting' 
-3. Select 'Password Reset', then select 'Reset password', with the username that cannot access the VM. 
+2. In the VM Blade, scroll to **Help**. 
+3. Select **Password Reset**, then select 'Reset password', with the username that cannot access the VM. 
 
 ## Prevention
 

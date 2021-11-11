@@ -5,6 +5,7 @@ ms.date: 04/17/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ms.topic: article
+ms.technology: iis-health-diagnostic-performance
 ---
 # Description of the time-taken field in IIS 7 HTTP logging
 

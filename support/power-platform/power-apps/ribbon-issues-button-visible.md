@@ -4,6 +4,7 @@ description: Fixes an issue in which a button in the command bar is visible when
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/19/2021
+ms.subservice: powerapps-ribbons-commanding
 ---
 # A button on the command bar is visible when it should be hidden
 

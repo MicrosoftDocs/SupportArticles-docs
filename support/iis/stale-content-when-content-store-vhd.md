@@ -4,6 +4,7 @@ description: This article provides workaround for the problem where IIS serves s
 ms.date: 12/11/2020
 ms.prod-support-area-path: Site Behavior and Performance
 ms.reviewer: mlaing, robmcm, romanf
+ms.technology: iis-site-behavior-performance
 ---
 # IIS serves stale content when you store the content on a VHD
 

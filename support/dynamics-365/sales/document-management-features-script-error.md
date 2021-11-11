@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs afte
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-connectors
 ---
 # After updating the SharePoint List component, Microsoft Dynamics CRM document management features are unavailable or present script errors
 

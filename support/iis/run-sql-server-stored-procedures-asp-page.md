@@ -5,6 +5,7 @@ ms.date: 09/24/2020
 ms.prod-support-area-path: Active Server Pages
 ms.reviewer: JAYAPST
 ms.prod: iis
+ms.technology: iis-active-server-pages
 ---
 # Run SQL Server stored procedures from an ASP Page
 

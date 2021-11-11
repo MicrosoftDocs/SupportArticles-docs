@@ -4,6 +4,7 @@ description: This article describes how to copy files from a Windows-based compu
 ms.date: 03/29/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Part 2.5 - Copy and extract files from your development environment to Linux
 

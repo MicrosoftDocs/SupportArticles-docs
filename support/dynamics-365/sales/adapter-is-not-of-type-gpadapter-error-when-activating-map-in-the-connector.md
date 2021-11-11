@@ -4,6 +4,7 @@ description: When you run a map in the Connector for Microsoft Dynamics GP, you 
 ms.reviewer: ehagen
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-connectors
 ---
 # "The Adapter is not of type GPAdapter" error when activating a map in the Connector for Microsoft Dynamics GP
 

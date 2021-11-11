@@ -4,6 +4,7 @@ description: Known issues and errors that users may face when receiving or respo
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Issues with flow approval emails in Outlook Desktop and Web
 

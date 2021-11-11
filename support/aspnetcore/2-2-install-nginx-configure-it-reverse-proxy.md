@@ -4,6 +4,7 @@ description: This article describes how to install Nginx and configure it as a r
 ms.date: 03/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Part 2.2 - Install Nginx and configure it as a reverse proxy server
 

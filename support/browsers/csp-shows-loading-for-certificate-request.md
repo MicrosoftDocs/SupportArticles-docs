@@ -4,6 +4,7 @@ description: Describes a problem that occurs because active scripting is disable
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: okang
+ms.technology: internet-explorer-security-privacy
 ---
 # CSP shows Loading when using Advanced Certificate Request to submit a request to an enterprise CA
 

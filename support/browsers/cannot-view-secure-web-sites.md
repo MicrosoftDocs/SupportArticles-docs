@@ -1,8 +1,9 @@
 ---
 title: Cannot view secure Web sites in Internet Explorer 8
-description: This article provides several methods to resolve the problem of secure Web sites (https://) not displaying in Internet Explorer 8 and later versions of Internet Explorer.
+description: "This article provides several methods to resolve the problem of secure Web sites (https://) not displaying in Internet Explorer 8 and later versions of Internet Explorer."
 ms.date: 03/08/2020
 ms.prod-support-area-path: 
+ms.technology: internet-explorer-security-privacy
 ---
 # You cannot view a secure Web site in Internet Explorer 8 and later versions
 

@@ -51,7 +51,7 @@ After each troubleshooting step, try connecting to your VM again. If you still c
 ## Use the Azure portal
 The Azure portal provides a quick way to reset the SSH configuration or user credentials without installing any tools on your local computer.
 
-To begin, select your VM in the Azure portal. Scroll down to the **Support + Troubleshooting** section and select **Reset password** as in the following example:
+To begin, select your VM in the Azure portal. Scroll down to the **Help** section and select **Reset password** as in the following example:
 
 ![Reset SSH configuration or credentials in the Azure portal](./media/troubleshoot-ssh-connection/reset-credentials-using-portal.png)
 
@@ -236,7 +236,7 @@ You can redeploy a VM to another node within Azure, which may correct any underl
 >
 
 ### Azure portal
-To redeploy a VM using the Azure portal, select your VM and scroll down to the **Support + Troubleshooting** section. Select **Redeploy** as in the following example:
+To redeploy a VM using the Azure portal, select your VM and scroll down to the **Help** section. Select **Redeploy** as in the following example:
 
 ![Redeploy a VM in the Azure portal](./media/troubleshoot-ssh-connection/redeploy-vm-using-portal.png)
 
