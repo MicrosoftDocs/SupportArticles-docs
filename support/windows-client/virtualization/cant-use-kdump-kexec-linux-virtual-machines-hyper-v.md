@@ -69,7 +69,7 @@ To change the contents of /etc/kdump.conf, follow these steps:
    path /var/crash`
    ```
 
-2. Block list the Linux Integration Services drivers in /etc/kdump.conf, which prevents the drivers from loading in to the kexec kernel. To do so, run the following command:
+2. Configure /etc/kdump.conf to prevent the Linux Integration Services drivers from loading in to the kexec kernel. To do so, run the following command:
 
    ```console
    blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
@@ -121,7 +121,7 @@ To change the contents of /etc/kdump.conf, follow these steps:
    extra_modules ata_piix sr_mod sd_mod
    ```
 
-3. Block list Linux Integration Services drivers in etc/kdump.conf. This prevents the drivers from loading into the kexec kernel:
+3. Configure etc/kdump.conf to prevent the Linux Integration Services drivers from loading into the kexec kernel:
 
    ```console
    blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
