@@ -41,7 +41,7 @@ To resolve this issue, configure your browser to allow third-party cookies. To d
 
     :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-allowed.png" alt-text="Screenshot of allowed cookies in use.":::
 
-    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-blocked.png" alt-text="screenshot of blocked cookies in use.":::
+    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-blocked.png" alt-text="Screenshot of blocked cookies in use.":::
 
 3. Select each site individually, and then click **Allow** at the bottom of the dialog box.
 4. Click **Done** to save your changes.
