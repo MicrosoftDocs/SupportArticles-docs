@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Microsoft 365 Apps for enterprise
 - Outlook 2016
 - Outlook 2013
 - Microsoft Outlook 2010
