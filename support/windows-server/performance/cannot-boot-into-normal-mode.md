@@ -40,7 +40,7 @@ Using the System Configuration Tool on Windows 2003/Windows XP:
 
 **Step 3:** In the **Run** field type *msconfig* as shown in the image below.
 
-:::image type="content" source="media/cannot-boot-into-normal-mode/run-msconfig.png" alt-text="Screenshot of Run window with the msconfig input.":::
+:::image type="content" source="media/cannot-boot-into-normal-mode/run-msconfig.png" alt-text="Screenshot of the Run window with the msconfig input.":::
 
 **Step 4:** Press the **OK** button and the **System Configuration Utility** will start up.
  You'll then see a screen similar to image below.
