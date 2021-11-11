@@ -25,7 +25,7 @@ To troubleshoot common device registration issues, use the [Device Registration 
 
 The following screenshot shows the main menu of the tool:
 
-:::image type="content" source="media/azure-ad-device-registration-autopilot/device-registration-troubleshooter.png" alt-text="Troublehooter main menu":::
+:::image type="content" source="media/azure-ad-device-registration-autopilot/device-registration-troubleshooter.png" alt-text="Screenshot of the Troublehooter main menu." border="false":::
 
 For example, if the device health status is **Pending**, select **5** on the menu. If the device doesn't have the Primary Refresh Token (PRT) issued, select **6** on the menu.
 
@@ -51,20 +51,20 @@ For more information about how to use the script, see [Collecting the hardware h
 
 To troubleshoot Windows Autopilot issues, first [collect logs](understand-troubleshoot-esp.md#collect-logs). The following files are useful for troubleshooting related issues:
 
--	microsoft-windows-devicemanagement-enterprise-diagnostics-provider-admin.evtx
--	microsoft-windows-moderndeployment-diagnostics-provider-autopilot.evtx
--	MdmDiagReport_RegistryDump.reg
--	TpmHliInfo_Output.txt
--	microsoft-windows-provisioning-diagnostics-provider-admin.evtx
+-    microsoft-windows-devicemanagement-enterprise-diagnostics-provider-admin.evtx
+-    microsoft-windows-moderndeployment-diagnostics-provider-autopilot.evtx
+-    MdmDiagReport_RegistryDump.reg
+-    TpmHliInfo_Output.txt
+-    microsoft-windows-provisioning-diagnostics-provider-admin.evtx
     
     This file contains some informational messages about the Enrollment Status Page (ESP), such as app installation failures or timeouts. Here are some examples:
 
-	- AutoPilotGetOobeSettingsOverride succeeded:  OOBE setting = AUTOPILOT_OOBE_SETTINGS_AAD_JOIN_ONLY; state = enabled.
-	- CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_ApplicationsFailed'.
-	- CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_DeviceConfigurationTimeOut'.
+    - AutoPilotGetOobeSettingsOverride succeeded:  OOBE setting = AUTOPILOT_OOBE_SETTINGS_AAD_JOIN_ONLY; state = enabled.
+    - CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_ApplicationsFailed'.
+    - CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_DeviceConfigurationTimeOut'.
 
 For more information about Windows Autopilot troubleshooting, see the following articles:
 
--	[Troubleshooting Windows Autopilot](/windows/deployment/windows-autopilot/troubleshooting)
--	[Windows Autopilot - known issues](/mem/autopilot/known-issues)
--	[Troubleshooting Windows Autopilot (level 300/400)](https://techcommunity.microsoft.com/t5/windows-blog-archive/troubleshooting-windows-autopilot-level-300-400/ba-p/706512)
+-    [Troubleshooting Windows Autopilot](/windows/deployment/windows-autopilot/troubleshooting)
+-    [Windows Autopilot - known issues](/mem/autopilot/known-issues)
+-    [Troubleshooting Windows Autopilot (level 300/400)](https://techcommunity.microsoft.com/t5/windows-blog-archive/troubleshooting-windows-autopilot-level-300-400/ba-p/706512)
