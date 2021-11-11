@@ -40,9 +40,9 @@ These issues can occur due to one of the following causes.
 
 ## Resolution
 
-To ensure this isn't a transient issue, attendees should leave and join the meeting again to fix the issue. If the issue persists, try the following resolutions.
+To ensure this isn't a transient issue, leave and join the meeting again. If the issue persists, try the following resolutions.
 
-**Resolution 1**: Enable the Allow chat in meetings setting.
+**Resolution 1**: Enable the **Allow chat in meetings** setting.
 
 Meeting policies are enabled and configured by Teams administrators. To update the meeting policy assigned to you, an administrator should follow these steps:
 
@@ -54,10 +54,11 @@ The administrator can check and update the setting for other users who have been
 
 1. In the **Microsoft Teams admin center**, select **Users**.
 1. To the right of the Search bar, select the **Filter** icon.
-1. Select **Meeting policy** and then the policy that was updated to enable chat in meetings.
+1. Select **Meeting policy** and the policy that was updated to enable chat in meetings.
 1. Select **Apply**. A list of users who have been assigned the policy is displayed.
 
-**Note**: If you're using Teams for Education, use [policy packages](/microsoftteams/policy-packages-edu) or the [Teams for Education policy wizard](/microsoftteams/easy-policy-setup-edu?tabs=students%2Cstudent-settings) to manage meeting policies.
+> [!NOTE]
+> If you're using Teams for Education, use [policy packages](/microsoftteams/policy-packages-edu) or the [Teams for Education policy wizard](/microsoftteams/easy-policy-setup-edu?tabs=students%2Cstudent-settings) to manage meeting policies.
 
 **Resolution 2**: The meeting organizer should ensure that the number of attendees in the meeting is below the maximum limit. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams#meetings-and-calls).
 
