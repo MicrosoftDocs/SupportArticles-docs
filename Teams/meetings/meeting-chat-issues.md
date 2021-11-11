@@ -1,6 +1,6 @@
 ---
 title: Chat issues in Teams meeting
-description: Fixes some chat issues when you join a Teams meeting. For example, the Chat icon is missing and you can't access the chat history.
+description: Fixes some meeting chat issues when you join a Teams meeting. For example, the Chat icon is missing and you can't see the meeting chat history.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -22,41 +22,43 @@ search.appverid:
 
 ## Symptoms
 
-You may experience one of the following chat issues when you join a Microsoft Teams meeting:
+As an attendee in a Microsoft Teams meeting, you might experience one of the following issues with accessing the meeting chat:
 
 - The **Chat** icon is missing.
-- You receive the "Administrator has disabled chat for this user" error message.
-- You can't access the chat history.
+- When you select the **Chat** icon, you see the "Administrator has disabled chat for this user" error message.
+- You can't see the meeting chat history.
 
 ## Cause
 
-These issues may occur because of one of the following causes.
+These issues can occur due to one of the following causes.
 
-**Cause 1**: The **Allow chat in meetings** meeting policy is disabled.
+**Cause 1**: The **Allow chat in meetings** setting is disabled in the meeting policy that is assigned to you.
 
-**Cause 2**: The number of people in a meeting exceeds the maximum limit: 1000.
+**Cause 2**: The number of attendees in the meeting exceeds 1000, which is the maximum limit supported for chat.
 
-**Cause 3**: Meeting participants who were added to a meeting via a meeting link (such as a meeting forward), and were not added to the original meeting invite will only have access to chats, files, notes, and other meeting content during the meeting, but lose access once the meeting ends. In addition, if this meeting is part of a recurrence, the user may not have access to the chat after the meeting.
+**Cause 3**: You were added to the meeting as an attendee by using a meeting link such as one shared in a forwarded meeting invite, but were not added to the original invite. In this scenario, attendees will have access to chats, files, notes, and other meeting content only during the meeting and will lose access to them after the meeting ends. If this is a recurring meeting, then attendees will not have access to the meeting chat in subsequent meetings as well.
 
 ## Resolution
 
-To ensure that it isn't a transient issue, leave the meeting and rejoin the meeting to see if the issue is fixed. If the issue still persists, check the following resolutions that correspond to the causes. You may need to try all the three resolutions before the issue is fixed.
+To ensure this isn't a transient issue, attendees should leave and join the meeting again to fix the issue. If the issue persists, try the following resolutions.
 
-**Resolution 1**: Administrators can enabled and configure the policy setting in the Microsoft Teams admin center by following the steps:
+**Resolution 1**: Enable the Allow chat in meetings setting.
 
-1. In **Microsoft Teams admin center**, select **Users**.
-1. Select the user, select **Policies** and then select the meeting policy assigned to the user.
-1. In the **Participants & guests** page, change **Allow chat in meetings** to **Enabled**.
+Meeting policies are enabled and configured by Teams administrators. To update the meeting policy assigned to you, an administrator should follow these steps:
 
-To view other users that have been assigned this meeting policy:
+1. In the **Microsoft Teams admin center**, select **Users**.
+1. Select your name from the list of users, select **Policies** and then select the meeting policy assigned to you.
+1. In the **Participants & guests** section for the **Allow chat in meetings** setting, select **Enabled** from the drop-down list.
 
-1. In **Microsoft Teams admin center**, select **Users**.
-1. On the right of the Search bar, select the **Filter** icon.
-1. Select **Meeting policy** and the name of the policy that was changed above.
-1. Select **Apply**. A list of users with this policy is displayed.
+The administrator can check and update the setting for other users who have been assigned the same meeting policy. To get a list of those users, follow these steps:
 
-Teams for Education users, refer to the [policy packages](/microsoftteams/policy-packages-edu) or the [Teams for Education policy wizard](/microsoftteams/easy-policy-setup-edu?tabs=students%2Cstudent-settings) to manage meeting policies.
+1. In the **Microsoft Teams admin center**, select **Users**.
+1. To the right of the Search bar, select the **Filter** icon.
+1. Select **Meeting policy** and then the policy that was updated to enable chat in meetings.
+1. Select **Apply**. A list of users who have been assigned the policy is displayed.
 
-**Resolution 2**: Make sure the number of people in a meeting is under the limit. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams#meetings-and-calls).
+**Note**: If you're using Teams for Education, use [policy packages](/microsoftteams/policy-packages-edu) or the [Teams for Education policy wizard](/microsoftteams/easy-policy-setup-edu?tabs=students%2Cstudent-settings) to manage meeting policies.
 
-**Resolution 3**: To enable access to the chat, meeting organizer should invite the user to the meeting series.
+**Resolution 2**: The meeting organizer should ensure that the number of attendees in the meeting is below the maximum limit. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams#meetings-and-calls).
+
+**Resolution 3**: To enable access to the chat after the meeting is over, the meeting organizer should add the attendee to the original meeting invite or to the original recurring meeting series as appropriate.
