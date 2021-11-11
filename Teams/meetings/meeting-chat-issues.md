@@ -25,7 +25,7 @@ search.appverid:
 As an attendee in a Microsoft Teams meeting, you might experience one of the following issues with accessing the meeting chat:
 
 - The **Chat** icon is missing.
-- When you select the **Chat** icon, you see the "Administrator has disabled chat for this user" error message.
+- When you select the **Chat** icon, you see the "The Administrator has disabled the Chat" error message.
 - You can't see the meeting chat history.
 
 ## Cause
