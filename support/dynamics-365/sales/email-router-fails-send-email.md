@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4494727
 
 When using the Dynamics 365 Email Router to send email from a Dynamics 365 instance, the email may go into a Pending Send state and never actually send:
 
-:::image type="content" source="media/email-router-fails-send-email/pending-send-state.jpg" alt-text="Email may go into a Pending Send state.":::
+:::image type="content" source="media/email-router-fails-send-email/pending-send-state.png" alt-text="Screenshot shows the email may go into a Pending Send state.":::
 
 The Dynamics Email Router exception logs may show the following error:
 
@@ -34,11 +34,11 @@ This behavior may have worked without needing these permissions on earlier versi
 
 The user sending this email must allow emails to be sent from other Dynamics users in their personal options:
 
-:::image type="content" source="media/email-router-fails-send-email/select-check-box.png" alt-text="Personal Options.":::
+:::image type="content" source="media/email-router-fails-send-email/select-check-box.png" alt-text="Screenshot to select the Allow other Microsoft Dynamics 365 users to send email on your behalf option.":::
 
 The account is being used by the Email Router must also have the **Send Email as Another User** permission within Dynamics:
 
-:::image type="content" source="media/email-router-fails-send-email/security-role.png" alt-text="Send Email as Another User permission.":::
+:::image type="content" source="media/email-router-fails-send-email/security-role.png" alt-text="Screenshot of the Send Email as Another User permission.":::
 
 ## More information
 

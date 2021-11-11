@@ -37,7 +37,7 @@ For example, if the user with a team member license tries to access the Customer
 
 The resolution is to reach out to your administrator and request the license to be assigned. The license name and the application names are present in the error details.
 
-:::image type="content" source="media/error-when-accessing-app-module/invalid-license.png" alt-text="Dynamics Team Member License Error.":::
+:::image type="content" source="media/error-when-accessing-app-module/invalid-license.png" alt-text="Screenshot of the Dynamics team member license error.":::
 
 **Access to Custom Apps:**
 

@@ -69,7 +69,7 @@ For Causes 1, 2, and 3:
 
     Then, type **Y** to finish the change:
 
-    :::image type="content" source="./media/cannot-configure-dynamics-crm-client/screenshot-how-do-this-method.png" alt-text="A screenshot to do this step.":::
+    :::image type="content" source="media/cannot-configure-dynamics-crm-client/screenshot-how-do-this-method.png" alt-text="Screenshot to use a command to sync time with the domain." border="false":::
 
     For more information about the net time command, visit [Net Time](/previous-versions/windows/it-pro/windows-xp/bb490716(v=technet.10)).
 

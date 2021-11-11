@@ -27,11 +27,11 @@ This issue is caused when there's a subgrid on the dashboard that has been confi
 
 For example, the control configuration may look something like this:
 
-:::image type="content" source="media/uci-dashboard-does-not-load/select-add-custom-control-configuration.png" alt-text="Subgrid custom control configuration for only web form factor.":::
+:::image type="content" source="media/uci-dashboard-does-not-load/custom-control-configuration.png" alt-text="Screenshot shows an example of the control configuration.":::
 
 Alternately, it may be caused by a control configuration that isn't used for any form factor, such as something like this:
 
-:::image type="content" source="media/uci-dashboard-does-not-load/unused-editable-grid.png" alt-text="Unused subgrid custom control configuration.":::
+:::image type="content" source="media/uci-dashboard-does-not-load/unused-editable-grid.png" alt-text="Screenshot of the unused subgrid custom control configuration.":::
 
 ## Resolution
 
@@ -41,6 +41,6 @@ In some cases, the custom control being used may not allow being set for all for
 
 For example, the first control configuration from the [Cause](#cause) section above can be changed to something like this to mitigate the issue:
 
-:::image type="content" source="media/uci-dashboard-does-not-load/configuration-all-form-factors.png" alt-text="Subgrid custom control configuration for all form factors.":::
+:::image type="content" source="media/uci-dashboard-does-not-load/configuration-all-form-factors.png" alt-text="Screenshot shows the subgrid custom control configuration for all form factors.":::
 
 Alternately, if this issue is happening because a control configuration that isn't used on any form factor, that control configuration can be removed.

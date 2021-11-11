@@ -19,7 +19,7 @@ We are modifying the approval process for new/updated/changed mailboxes. To prov
 
 The mailbox approval process is illustrated in the following flow chart.
 
-:::image type="content" source="media/changes-to-mailbox-approval-in-dynamics-365/flow.jpg" alt-text="Screenshot of Dynamics 365 Email Approval flow.":::
+:::image type="content" source="media/changes-to-mailbox-approval-in-dynamics-365/flow-chart.png" alt-text="Screenshot of the Dynamics 365 mailbox approval process.":::
 
 > [!NOTE]
 > When the Server-Side Synchronization feature initially released, only the [Global administrator](/microsoft-365/admin/add-users/about-admin-roles) role was able to approve mailboxes.
@@ -48,7 +48,7 @@ To remove the requirement of approving all User or Queue mailboxes, a Dynamics 3
 2. Navigate to **Settings**, **Administration**, and then click **System Settings**.
 3. Uncheck the **Email processing for unapproved user and queues** settings and then click **OK**.
 
-    :::image type="content" source="media/changes-to-mailbox-approval-in-dynamics-365/system-settings.png" alt-text="Screenshot of unchecking Email settings under System Settings.":::
+    :::image type="content" source="media/changes-to-mailbox-approval-in-dynamics-365/system-settings.png" alt-text="Screenshot to uncheck the Email processing for unapproved user and queues settings.":::
 
 For more information, see [Remove requirement to Approve](/power-platform/admin/connect-exchange-online#approve-email).
 
