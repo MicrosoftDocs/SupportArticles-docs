@@ -2650,6 +2650,8 @@
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
       href: ./virtualization/fcoe-io-failures-hyper-v-guests.md
+    - name: Virtual machine LUNs disappear after you configure them as MPIO devices
+      href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
     - name: Error when you manage a VHD file
