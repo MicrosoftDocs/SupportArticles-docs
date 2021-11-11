@@ -71,8 +71,6 @@ This error occurs because the values of the following parameters aren't set corr
 
 Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet to get the federation information. For example:
 
-:::image type="content" source="media/no-free-busy-information-retrieved/federation-information.png" alt-text="Screenshot for the example of the Get-FederationInformation cmdlet.":::
-
 Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the parameters value. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters with the required values. For example:
 
 ```powershell
