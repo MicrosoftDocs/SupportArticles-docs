@@ -279,7 +279,7 @@ To discover how many export jobs that were started in the last seven days are st
    ```powershell
    $date = Get-Date
    $Exports = @(Get-ComplianceSearchAction -export -ResultSize Unlimited)
-   $allCases = Get-ComplianceCase | ?{$_.status -like "Active"}
+   $cases = Get-ComplianceCase | ?{$_.status -like "Active"}
      
    $i = 1
    foreach ($case in $cases)
