@@ -26,7 +26,7 @@ description: Describes a resolution to an issue where a view doesn't appear in t
 
 When creating an alert in SharePoint, the option "Someone changes an item that appears in the following view" is not visible or a view doesn't show up in the drop-down list.
 
-:::image type="content" source="media/unable-to-create-view-alerts/unable-to-create-view-alerts.png" alt-text="Highlight of the view alert option.":::
+:::image type="content" source="media/unable-to-create-view-alerts/unable-to-create-view-alerts.png" alt-text="Screenshot that shows the view alert option.":::
  
 ## Cause
 

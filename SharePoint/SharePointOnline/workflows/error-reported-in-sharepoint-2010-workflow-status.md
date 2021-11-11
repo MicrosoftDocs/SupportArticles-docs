@@ -23,7 +23,7 @@ As you create a Microsoft SharePoint 2010 workflow in Microsoft SharePoint Desig
 
 When a workflow instance reaches the **Stop Workflow** action, an error that has a Correlation ID is reported to the Workflow Status page for that workflow instance.
 
-![SharePoint 2010 Stopped Workflow information page with an error](./media/error-reported-in-sharepoint-2010-workflow-status/stop-workflow.png)
+:::image type="content" source="./media/error-reported-in-sharepoint-2010-workflow-status/stop-workflow.png" alt-text="Screenshot that shows SharePoint 2010 Stopped Workflow information page with an error":::!
 
 ## Cause
 

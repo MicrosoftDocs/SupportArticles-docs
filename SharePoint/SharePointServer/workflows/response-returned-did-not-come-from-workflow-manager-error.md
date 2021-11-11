@@ -127,7 +127,7 @@ Gateway sending HTTP response: StatusCode: 201, ReasonPhrase: 'Created', Version
 
 Note "Successfully created scope /SharePoint/default/09d8c9b6-1994-4dad-bf46-cf5de701c0c8" and "returning status code 201 (Created)" references above.
 
-![Output](media/response-returned-did-not-come.jpg)
+:::image type="content" source="media/response-returned-did-not-come.png" alt-text="Screenshot that shows the output.":::
 
 This proved that the request was reaching WFM server but not going deep further to SB or backend. Hence the component in question was IIS. We captured IIS log on WFM in house while publishing the workflow. It revealed that IIS has events in fact while publishing.
 

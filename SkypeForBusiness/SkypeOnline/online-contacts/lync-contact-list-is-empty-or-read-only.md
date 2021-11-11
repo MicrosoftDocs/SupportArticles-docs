@@ -49,13 +49,13 @@ Check the Lync **Configuration Information** screen. To do this, follow these st
 2. Select **Configuration Information**.    
 3. If the mailbox is inaccessible, you should see **Exchange connection Down** next to **UCS Connectivity State**.
 
-   ![Screen shot of Exchange connection Down and UCS Connectivity State ](./media/lync-contact-list-is-empty-or-read-only/ucs-connectivity-state.jpg)
+   :::image type="content" source="./media/lync-contact-list-is-empty-or-read-only/ucs-connectivity-state.png" alt-text="Screenshot that shows Exchange connection Down and UCS Connectivity State in the Configuration Information.":::
 
 ### Then, check the Personal Information Manager
 
 Make sure that the **Personal information manager** is set to **Microsoft Exchange or Microsoft Outlook** in Lync. To check this setting, open Lync, click the gear icon, and then click **Personal**.
 
-![Personal information manager in Lync ](./media/lync-contact-list-is-empty-or-read-only/personal-information-manager.jpg)
+:::image type="content" source="./media/lync-contact-list-is-empty-or-read-only/personal-information-manager.png" alt-text="Screenshot that shows the Personal information manager in Lync.":::
 
 ### Then, check the DNS configuration for EWS Connectivity
 

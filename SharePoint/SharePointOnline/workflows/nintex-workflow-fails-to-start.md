@@ -25,7 +25,7 @@ When you try to run the Nintex workflow on SharePoint Online, you receive the fo
 
 >Oops.. Something went wrong. Please visit status.nintex.com for the latest Nintex service status or contact your system administrator to check the health of your Office 365 tenancy.
 
-:::image type="content" source="./media/nintex-workflow-fails-to-start/nintex-error.png" alt-text="Image of error displaying in a browser window":::
+:::image type="content" source="./media/nintex-workflow-fails-to-start/nintex-error.png" alt-text="Screenshot that shows the error displaying in a browser window":::
 
 ## Cause
 

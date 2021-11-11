@@ -22,7 +22,7 @@ appliesto:
 
 Online hosted users report that they receive the following error message when they try to present or view meeting content that's hosted in an on-premises Skype for Business meeting when they're connected to an internal corporate network:
 
-![error screenshot](./media/present-content-on-premises-meeting/error.png)
+:::image type="content" source="./media/present-content-on-premises-meeting/error.png" alt-text="Screenshot that shows the network error.":::
 
 > [!NOTE]
 > When users are connected externally, they can share content.

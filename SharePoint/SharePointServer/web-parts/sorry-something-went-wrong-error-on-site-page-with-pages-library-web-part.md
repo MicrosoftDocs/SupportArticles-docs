@@ -28,7 +28,7 @@ Sorry, something went wrong
 An unexpected error has occurred.
 ```
 
-![Sorry, something went wrong error](./media/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part/error.png)
+:::image type="content" source="./media/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part/error.png" alt-text="Screenshot that shows the "Sorry, something went wrong" error page.":::
 
 The SharePoint Universal Logging System ( ULS) reports:
 

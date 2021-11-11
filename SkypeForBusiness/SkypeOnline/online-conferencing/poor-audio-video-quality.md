@@ -30,11 +30,11 @@ In Lync 2010 and Lync 2013, you can use voice and video quality indicators to id
 
 ### Lync 2010
 
-![Screen shot of the vioce and video quality indicator in Lync 2010 ](./media/poor-audio-video-quality/lync-2010.jpg)
+:::image type="content" source="./media/poor-audio-video-quality/lync-2010.png" alt-text="Screenshot that shows the the voice and video quality indicator in Lync 2010.":::
 
 ### Lync 2013
 
-![Screen shot of the vioce and video quality indicator in Lync 2013 ](./media/poor-audio-video-quality/lync-2013.jpg)
+:::image type="content" source="./media/poor-audio-video-quality/lync-2013.png" alt-text="Screenshot that shows the voice and video quality indicator in Lync 2013":::
 
 As a general guideline, to troubleshoot scenarios in which you experience poor audio or video quality in a Skype for Business Online conference, follow these steps: 
 1. Determine whether the computer is using a wired or wireless Internet connection. A wired connection can provide more bandwidth and stability in most cases and should be the preferred method of connecting if that kind of connection is available. Additionally, consider turning off any wireless antennas to avoid connecting through a wireless connection.   
