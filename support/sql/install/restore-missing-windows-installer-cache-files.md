@@ -288,7 +288,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:
-     :::image type="content" source="media/restore-missing-windows-installer-cache-files/upgrade-error.png" alt-text="Screenshot of the error message: SQL Server 2008 R2 Setup has stopped working for SP2." border="false":::
+     :::image type="content" source="media/restore-missing-windows-installer-cache-files/2008-r2-setup-stopped-working.png" alt-text="Screenshot of the error message for SP2: SQL Server 2008 R2 Setup has stopped working." border="false":::
 
 - **For SQL Server 2012 prior to CU2**
 
