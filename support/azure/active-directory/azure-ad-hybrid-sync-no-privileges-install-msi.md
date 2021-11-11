@@ -2,7 +2,6 @@
 title: Azure AD Hybrid Sync Agent Installation Issues - No privileges to install MSI
 description: This troubleshooting guide focuses on when you have no privileges to install MSI. It helps unblock you to install the Azure AD Connect Provisioning Agent.
 ms.date: 10/13/2021
-ms.subservice: ad-hybrid
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - No privileges to install MSI
