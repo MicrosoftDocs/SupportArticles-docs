@@ -18,7 +18,7 @@ You experience one of the following issues:
 - You cannot load the **Help and support** blade in the Intune portal.
 - You receive a **login.microsoftonline.com refused to connect** error message in browsers such as Chrome or Firefox. Other browsers such as Safari or Microsoft Edge may display similar errors or nothing at all.
 
-    :::image type="content" source="media/cannot-load-help-and-support-blade/error.jpg" alt-text="screenshot of error]" border="false":::
+    :::image type="content" source="media/cannot-load-help-and-support-blade/login-refused-connect-error.png" alt-text="Screenshot of the login.microsoftonline.com refused to connect error in Help and support blade." lightbox="media/cannot-load-help-and-support-blade/login-refused-connect-error.png":::
 
 The exact symptom may differ depending on the browser. However, the overall problem is that the **Help and support** blade doesn't load correctly even when you use a Global Administrator account.
 
@@ -35,13 +35,13 @@ To resolve this issue, configure your browser to allow third-party cookies. To d
 
 1. In the top-right corner of the browser, to the right of the **Address** bar, click the little icon with a red **x** to display the **Cookies blocked** dialog box.
 
-    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-blocked.png" alt-text="screenshot of Cookies blocked" border="false":::
+    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-blocked.png" alt-text="Screenshot of Cookies blocked dialog.":::
 
 2. Select **Show cookies and other site data**, and then click **Blocked** in the **Cookies in use** dialog box to list the blocked sites.  
 
-    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-allowed.png" alt-text="screenshot of allowed cookies in use" border="false":::
+    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-allowed.png" alt-text="Screenshot of allowed cookies in use.":::
 
-    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-blocked.png" alt-text="screenshot of blocked cookies in use" border="false":::
+    :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-blocked.png" alt-text="screenshot of blocked cookies in use.":::
 
 3. Select each site individually, and then click **Allow** at the bottom of the dialog box.
 4. Click **Done** to save your changes.

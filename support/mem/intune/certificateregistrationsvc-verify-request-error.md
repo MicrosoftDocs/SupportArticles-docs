@@ -32,7 +32,7 @@ After you configure and assign a certificate profile in Microsoft Intune, you ex
 
 - The System event log on the computer that's running the Microsoft Intune NDES Connector contains an Event ID 5009 warning that includes the following:
 
-    > A process serving application pool 'SCEP' terminated unexpectedly. The process id was 'xxxx'. The process exit code was '0x0000374'.
+    > A process serving application pool 'SCEP' terminated unexpectedly. The process id was '\<ProcessID\>'. The process exit code was '0x0000374'.
 
 - The Application event Log on the computer that's running the Microsoft Intune NDES Connector contains an Event ID 1310 warning that includes error code 3007 and the following:
 
@@ -42,7 +42,7 @@ After you configure and assign a certificate profile in Microsoft Intune, you ex
 
 This issue can occur if the **Write** permission is missing for the account that's used to run the `CertificateRegistrationSvc` application pool (for example, the Network Service account) in the `C:\Windows\Temp` folder.
 
-:::image type="content" source="./media/certificateregistrationsvc-verify-request-returns-500-error/event-1310.png" alt-text="Screenshot of Event ID 1310 warning.":::
+:::image type="content" source="media/certificateregistrationsvc-verify-request-returns-500-error/event-1310.png" alt-text="Screenshot of Event ID 1310 warning in Application event Log.":::
 
 ## Resolution
 

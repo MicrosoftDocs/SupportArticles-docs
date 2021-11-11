@@ -28,4 +28,4 @@ The `Dmwappushservice` service is required on client devices for Intune manageme
 
 To fix the issue, change the startup type of the `Dmwappushservice` service to **Automatic**.
 
-:::image type="content" source="media/cannot-sync-windows-10-devices/change-startup-type.png" alt-text="change startup type":::
+:::image type="content" source="media/cannot-sync-windows-10-devices/change-startup-type.png" alt-text="Screenshot shows steps to find the change startup type drop-down option.":::
