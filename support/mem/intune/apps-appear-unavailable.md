@@ -38,7 +38,7 @@ To resolve this issue, users must identify their enrolled device by following th
 
 5. You are returned to **My Devices**. The device should show a green check, as shown in the following screenshot.
 
-   :::image type="content" source="media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices page with a green check of the selected device.":::
+   :::image type="content" source="media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices page with a green check in the selected device.":::
 
 6. Return to the **Apps** screen. The applications should now be visible.
 
