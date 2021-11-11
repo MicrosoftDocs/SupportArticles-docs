@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When you try to use Save As to save an Excel or PowerPoint file to a SharePoint or OneDrive location, you encounter the following error:
+When you try to use **Save As** to save an Excel or PowerPoint file to a SharePoint or OneDrive location, you encounter the following error:
 
 > This file cannot be saved because some properties are missing or invalid.
 
@@ -34,4 +34,4 @@ The issue is a design limitation of Excel and PowerPoint.
 
 ## Workaround
 
-Save the file to your device, then upload the document to SharePoint using the SharePoint web user interface. This will allow the lookup property to be set.  If you open the file later, **Show details** will allow you to set the property.
+Save the file to your device, then upload the document to SharePoint using the SharePoint web user interface. This will allow the **lookup** property to be set.  If you open the file later, **Show details** will allow you to set the property.
