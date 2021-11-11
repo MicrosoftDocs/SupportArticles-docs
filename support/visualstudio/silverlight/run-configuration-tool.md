@@ -5,6 +5,7 @@ ms.date: 04/30/2020
 ms.prod-support-area-path: Silverlight
 ms.reviewer: andyriv
 ms.topic: how-to
+ms.technology: vs-silverlight
 ---
 # Run the Silverlight Configuration tool in Silverlight 4
 

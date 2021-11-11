@@ -4,6 +4,7 @@ description: This article describes the known issues that may occur after you in
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
+ms.technology: vs-installation-general
 ---
 # Known issues when you install Release Management for Visual Studio 2013
 

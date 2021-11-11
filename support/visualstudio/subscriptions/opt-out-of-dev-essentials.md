@@ -3,6 +3,7 @@ title: Opt out of Visual Studio Dev Essentials
 description: This article describes how to opt out of Visual Studio Dev Essentials.
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
+ms.technology: vs-subscriptions
 ---
 # Opt out of Visual Studio Dev Essentials
 

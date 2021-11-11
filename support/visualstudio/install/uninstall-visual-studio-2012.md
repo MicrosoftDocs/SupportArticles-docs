@@ -5,6 +5,7 @@ ms.date: 04/13/2020
 ms.prod-support-area-path: Installation
 ms.reviewer: heaths, davguy, kelber
 ms.topic: how-to
+ms.technology: vs-installation-install
 ---
 # Uninstall Visual Studio 2012
 

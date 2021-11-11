@@ -4,6 +4,7 @@ description: This article resolves an error (Cannot find resource named) when yo
 ms.date: 04/20/2020
 ms.prod-support-area-path: 
 ms.reviewer: tatkins
+ms.technology: vs-general
 ---
 # Error (Cannot find resource) in Visual Studio 2017 XAML or WPF designer
 

@@ -4,6 +4,7 @@ description: This article describes how to use AssemblyVersion and AssemblyFileV
 ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: vs-general
 ---
 # Use AssemblyVersion and AssemblyFileVersion attributes
 

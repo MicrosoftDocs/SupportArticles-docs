@@ -4,6 +4,7 @@ description: This article describes the Visual Studio 2010 build failure when bu
 ms.date: 04/22/2020
 ms.prod-support-area-path: Language or compilers
 ms.reviewer: danmose
+ms.technology: vs-language-compilers
 ---
 # Visual Studio 2010 build fails with an error: The referenced project doesn't exist
 

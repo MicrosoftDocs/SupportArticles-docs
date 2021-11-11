@@ -4,6 +4,7 @@ description: This article describes the Help Viewer Power Tool.
 ms.date: 04/27/2020
 ms.prod-support-area-path: 
 ms.reviewer: scotbren
+ms.technology: vs-general
 ---
 # Help Viewer Power Tool
 

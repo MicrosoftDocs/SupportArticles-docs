@@ -3,6 +3,7 @@ title: Common issues in Visual Studio 2013 setup
 description: This article describes common issues during Visual Studio installation, and provides suggested workarounds.
 ms.date: 04/13/2020
 ms.prod-support-area-path: Installation
+ms.technology: vs-installation-install
 ---
 # Common issues and workarounds in Visual Studio 2013 setup
 

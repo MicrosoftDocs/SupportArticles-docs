@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs afte
 ms.date: 01/04/2021
 ms.prod-support-area-path: Project/Build system
 ms.topic: troubleshooting
+ms.technology: vs-project-build
 ---
 # Build errors when you delete the debug configuration from a solution
 

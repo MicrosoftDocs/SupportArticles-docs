@@ -4,7 +4,7 @@ description: This article describes how to determine the connection state of you
 ms.date: 09/24/2020
 ms.prod-support-area-path: Language or Compilers
 ms.topic: how-to
-ms.prod: visual-studio
+ms.technology: vs-language-compilers
 ---
 # Determine the connection state of your local system and how to initiate or end an Internet connection by using Visual Basic .NET or Visual Basic 2005
 

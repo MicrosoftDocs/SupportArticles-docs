@@ -2,8 +2,9 @@
 title: Windows Automation API 3.0 improves Visual Studio 2010
 description: This article describes Windows Automation API 3.0, which improves the speed and performance of Visual Studio 2010.
 ms.date: 04/28/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: jbartlet, robcap
+ms.technology: vs-general
 ---
 # Visual Studio 2010 runs faster when Windows Automation API 3.0 is installed
 

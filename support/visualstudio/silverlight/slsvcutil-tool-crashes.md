@@ -4,6 +4,7 @@ description: This article resolves an error that may be thrown when you use the 
 ms.date: 04/30/2020
 ms.prod-support-area-path: Silverlight
 ms.reviewer: kagatlin
+ms.technology: vs-silverlight
 ---
 # The slsvcutil tool crashes when Silverlight 5 is installed
 

@@ -4,6 +4,7 @@ description: This article describes known issues and workarounds for Visual Stud
 ms.date: 08/20/2021
 ms.prod-support-area-path: 
 ms.reviewer: pchapman
+ms.technology: vs-general
 ---
 # Workarounds and operating system requirements for Visual Studio 2022
 

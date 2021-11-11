@@ -3,6 +3,7 @@ title: Setup issues Readme file
 description: This article describes the Microsoft Visual Studio 2005 Express Edition Setup issues Readme file.
 ms.date: 10/26/2020
 ms.prod-support-area-path: installation
+ms.technology: vs-installation-install
 ---
 # Contents of Microsoft Visual Studio 2005 Express Edition Setup issues Readme file
 

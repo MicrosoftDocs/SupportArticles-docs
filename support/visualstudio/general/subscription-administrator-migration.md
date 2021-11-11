@@ -2,7 +2,8 @@
 title: VS subscriptions administrator migration
 description: Over the next few months, changes are coming to the management of Visual Studio Subscriptions (formerly MSDN).
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
+ms.technology: vs-general
 ---
 # Visual Studio subscriptions: administrator migration  
 

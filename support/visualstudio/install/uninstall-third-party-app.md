@@ -4,6 +4,7 @@ description: This article introduces how to uninstall the third-party applicatio
 ms.date: 04/22/2020
 ms.prod-support-area-path: Installation
 ms.topic: how-to
+ms.technology: vs-installation-install
 ---
 # Uninstall third-party applications for Visual Studio 2015
 
