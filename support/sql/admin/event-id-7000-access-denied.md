@@ -53,7 +53,7 @@ When you configure the Microsoft SQL Server service to run under an account that
     > [!NOTE]
     > You can also use [Process Monitor](/sysinternals/downloads/procmon) tool to identify and isolate the permission issues. The following screenshot of an example output from Process Monitor shows the \<DomainName>\sqlsrvlogin SQL Server service account generating an Access Denied error.
 
-    [![Process Monitor](./media/event-id-7000-access-denied/process-monitor.jpg)](./media/event-id-7000-access-denied/process-monitor.jpg#lightbox)
+    :::image type="content" source="media/event-id-7000-access-denied/process-monitor.png" alt-text="Screenshot of an example output from Process Monitor.":::
 
 ## Reference
 

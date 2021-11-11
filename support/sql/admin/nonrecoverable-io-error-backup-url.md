@@ -27,7 +27,7 @@ BACKUP DATABASE is terminating abnormally.
 
 This issue occurs if the storage account that you're trying to back up to was created with the **Account Kind** setting set to **Blob**. The **Account Kind** setting should be **General Purpose**.
 
-![General purpose storage account](./media/nonrecoverable-io-error-backup-url/general-purpose-storage-account-image.png)
+:::image type="content" source="media/nonrecoverable-io-error-backup-url/general-purpose-storage-account.png" alt-text="Screenshot of the drop-down menu of the Account kind setting in the Create storage account dialog box." border="false":::
 
 ## Resolution
 

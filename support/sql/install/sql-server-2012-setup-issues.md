@@ -232,7 +232,7 @@ _Original KB number:_ &nbsp; 2681562
     > Operation failed with 0x8007000B  
     An attempt was made to load a program with an incorrect format.
 
-    :::image type="content" source="media/sql-server-2012-setup-issues/operation-failed-with-0x8007000b.png" alt-text="Screenshot of the error message: an attempt was made to load a program with an incorrect format." border="true":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/error-0x8007000b.png" alt-text="Screenshot of the operation failed error message." border="true":::
 
     Prevention
 
@@ -257,7 +257,7 @@ _Original KB number:_ &nbsp; 2681562
 
   The details of the error resemble the following.
   
-  :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot of the details of the rule check error." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot of the shows details of the rule check error in Rule Check Result dialog." border="false":::
   
   Cause
   
