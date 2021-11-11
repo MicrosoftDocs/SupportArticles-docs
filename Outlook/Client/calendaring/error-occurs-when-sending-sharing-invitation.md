@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Outlook 2016
 - Outlook 2013
 - Microsoft Outlook 2010
 - Microsoft Office Outlook 2007
