@@ -47,6 +47,7 @@ You can use the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/pac
 ```powershell
 Install-Script -Name Get-WindowsAutoPilotInfo
 ```
+
 For more information about how to use the script, see [Collecting the hardware hash from existing devices using PowerShell](/mem/autopilot/add-devices#collecting-the-hardware-hash-from-existing-devices-using-powershell).
 
 To troubleshoot Windows Autopilot issues, first [collect logs](understand-troubleshoot-esp.md#collect-logs). The following files are useful for troubleshooting related issues:
@@ -56,12 +57,12 @@ To troubleshoot Windows Autopilot issues, first [collect logs](understand-troubl
 -    MdmDiagReport_RegistryDump.reg
 -    TpmHliInfo_Output.txt
 -    microsoft-windows-provisioning-diagnostics-provider-admin.evtx
-    
-    This file contains some informational messages about the Enrollment Status Page (ESP), such as app installation failures or timeouts. Here are some examples:
 
-    - AutoPilotGetOobeSettingsOverride succeeded:  OOBE setting = AUTOPILOT_OOBE_SETTINGS_AAD_JOIN_ONLY; state = enabled.
-    - CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_ApplicationsFailed'.
-    - CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_DeviceConfigurationTimeOut'.
+        This file contains some informational messages about the Enrollment Status Page (ESP), such as app installation failures or timeouts. Here are some examples:
+
+        - AutoPilotGetOobeSettingsOverride succeeded:  OOBE setting = AUTOPILOT_OOBE_SETTINGS_AAD_JOIN_ONLY; state = enabled.
+        - CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_ApplicationsFailed'.
+        - CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_DeviceConfigurationTimeOut'.
 
 For more information about Windows Autopilot troubleshooting, see the following articles:
 

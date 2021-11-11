@@ -45,7 +45,7 @@ Follow step 1 to 10 in [Connect to the OData feed for the Intune Data Warehouse 
 3. In the **Visualizations** pane, select **HierarchySlicer** to add it to the report canvas.
 4. In the **Fields** pane, locate and expand the `applicationInventories` table. Select the `applicationName` and `applicationVersion` data fields, drag the data fields to the **Visualizations** pane, and then drop them into the **Values** section in the box that's labeled **Add data fields here**.
 
-   :::image type="content" source="media/build-software-inventory-power-bi/add-application-fields.png" alt-text="Add applicationName and applicationVersion." lightbox="media/build-software-inventory-power-bi/add-application-fields.png:::
+   :::image type="content" source="media/build-software-inventory-power-bi/add-application-fields.png" alt-text="Add applicationName and applicationVersion." lightbox="media/build-software-inventory-power-bi/add-application-fields.png":::
 
    By adding multiple data fields, you can drill down within these values. For example, by adding the application name and application version, you can search the required application based on versions.
 
