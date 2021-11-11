@@ -5,6 +5,7 @@ ms.date: 04/20/2020
 ms.prod-support-area-path: Language or compilers
 ms.reviewer: JAYAPST
 ms.topic: how-to
+ms.technology: csharp-language-compilers
 ---
 # Use Visual C# to navigate XML documents with the XPathNavigator class
 

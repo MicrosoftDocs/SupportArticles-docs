@@ -2,9 +2,10 @@
 title: Error or high CPU utilization when running a WPF-based application
 description: This article provides a resolution for the problem where you receive a FileFormatException or ArgumentOutOfRangeException error message in a WPF-based program when the WPF-based program processes text.
 ms.date: 01/07/2021
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: troubleshooting
+ms.technology: dotnet-general
 ---
 # Error message or high CPU utilization when running a WPF-based application
 

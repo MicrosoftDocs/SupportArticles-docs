@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: amymcel, davidqiu
+ms.technology: dotnet-wcf
 ---
 # WCF Service does not start automatically when messages are available through MSMQ
 

@@ -4,6 +4,7 @@ description: This article describes how to copy an image stored in a database di
 ms.date: 10/10/2020
 ms.prod-support-area-path: Language or Compilers
 ms.topic: how-to
+ms.technology: csharp-language-compilers
 ---
 # Copy a Picture from a Database Directly to a PictureBox Control with Visual C sharp  
 

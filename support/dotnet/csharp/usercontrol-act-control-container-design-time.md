@@ -4,6 +4,7 @@ description: Describes how to make a UserControl object act as a control contain
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to make a UserControl object act as a control container design-time
 

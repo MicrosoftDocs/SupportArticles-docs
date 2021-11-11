@@ -5,6 +5,7 @@ ms.date: 07/14/2021
 Author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: hirotoh
+ms.technology: dotnet-general
 ---
 # PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps
 

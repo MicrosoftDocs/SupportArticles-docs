@@ -4,6 +4,7 @@ description: Describes how to install an assembly into the Global Assembly Cache
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to install an assembly into the Global Assembly Cache
 

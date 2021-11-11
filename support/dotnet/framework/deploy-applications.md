@@ -4,6 +4,7 @@ description: This article describes important considerations for deploying appli
 ms.date: 05/06/2020
 ms.prod-support-area-path: Installation
 ms.topic: how-to
+ms.technology: dotnet-installation
 ---
 # Deploy applications that are built on the .NET Framework
 

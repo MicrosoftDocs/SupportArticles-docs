@@ -4,6 +4,7 @@ description: This article describes how to determine which versions of the .NET 
 ms.date: 05/06/2020
 ms.topic: how-to
 ms.prod-support-area-path: 
+ms.technology: dotnet-general
 ---
 # Determine which versions and service pack levels of .NET Framework are installed
 

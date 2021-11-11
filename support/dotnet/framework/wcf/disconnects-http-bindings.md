@@ -4,6 +4,7 @@ description: This article provides workarounds for the issue that causes a Windo
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: pupanda, meerak, amymcel
+ms.technology: dotnet-wcf
 ---
 # HTTP.SYS forcibly disconnects HTTP bindings for WCF self-hosted services
 

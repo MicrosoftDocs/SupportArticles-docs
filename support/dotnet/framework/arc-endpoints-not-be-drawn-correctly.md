@@ -2,7 +2,8 @@
 title: Endpoints of an arc are drawn incorrectly
 description: Starting and finishing points of the arc may not be drawn correctly depending on the parameters set when you draw an arc with a large radius. Provides a resolution.
 ms.date: 05/12/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
+ms.technology: dotnet-general
 ---
 # The endpoints of an arc may not be drawn correctly
 

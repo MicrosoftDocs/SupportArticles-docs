@@ -2,8 +2,9 @@
 title: WCF REST services generate metadata in WSDL
 description: This article describes the problem where the REST Service generates WSDL for the associated contracts when you use a REST Service in WCF, and provides a resolution.
 ms.date: 03/20/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: hongmeig, vinelap, pradnyad, tvish
+ms.technology: dotnet-wcf
 ---
 # WCF REST services generate metadata in the WSDL
 

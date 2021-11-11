@@ -4,6 +4,7 @@ description: This article describes SDP for WCF and `System.Net` trace and the m
 ms.date: 05/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: huizhu, mimran
+ms.technology: dotnet-general
 ---
 # System.Net and WCF diagnostics
 

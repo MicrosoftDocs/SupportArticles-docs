@@ -4,6 +4,7 @@ description: Describes Visual Studio does not throw a warning during build for e
 ms.date: 04/27/2020
 ms.prod-support-area-path: Language or compilers
 ms.reviewer: irfanahm
+ms.technology: csharp-language-compilers
 ---
 # Visual Studio does not throw a warning during build for events marked Obsolete
 

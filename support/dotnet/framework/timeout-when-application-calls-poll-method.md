@@ -5,6 +5,7 @@ ms.date: 12/28/2020
 author: cobibi
 ms.author: v-yunhya
 ms.reviewer: roriddle, dev_triage
+ms.technology: dotnet-general
 ---
 # Time-out occurs when an application calls the Poll method
 

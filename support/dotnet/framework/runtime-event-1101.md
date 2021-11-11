@@ -4,6 +4,7 @@ description: This article describes that after Domain Controller promotion, .NET
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: sabinn
+ms.technology: dotnet-general
 ---
 # .NET Runtime Optimization Service event 1101 errors after Domain Controller promotion
 

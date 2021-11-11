@@ -4,6 +4,7 @@ description: This article describes how to use the `IComparable` and `IComparer`
 ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use the `IComparable` and `IComparer` interfaces in Visual CSharp
 

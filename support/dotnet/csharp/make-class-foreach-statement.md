@@ -5,6 +5,7 @@ ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: zakramer
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Make a Visual C# class usable in a foreach statement  
 

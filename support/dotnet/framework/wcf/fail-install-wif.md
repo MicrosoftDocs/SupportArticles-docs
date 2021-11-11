@@ -4,6 +4,7 @@ description: This article provides resolutions for an issue that prevents you fr
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: rviana, brandwe
+ms.technology: dotnet-wcf
 ---
 # You can't install Windows Identity Foundation in Windows Core
 

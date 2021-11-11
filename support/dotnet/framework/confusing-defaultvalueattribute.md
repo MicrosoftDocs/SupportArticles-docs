@@ -4,6 +4,7 @@ description: This article explains the confusing DefaultValueAttribute class doc
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: sedwards
+ms.technology: dotnet-general
 ---
 # Documentation for the DefaultValueAttribute class is confusing
 

@@ -4,6 +4,7 @@ description: Works around a problem in which your application may meet unpredict
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: enamulkh
+ms.technology: dotnet-general
 ---
 # Compatibility issue when you use RIA Services V1.0 SP2 together with Entity Framework 5
 

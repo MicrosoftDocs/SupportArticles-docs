@@ -3,6 +3,7 @@ title: HttpWebRequest fails to send lots of data
 description: This article discusses a problem where a POST or PUT request fails when you use the HttpWebRequest class to send lots of data on a computer on which the .NET Framework is installed.
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
+ms.technology: dotnet-general
 ---
 # A POST or PUT request fails when you use the HttpWebRequest class to send lots of data
 

@@ -5,6 +5,7 @@ ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: JAYAPST
 ms.topic: how-to
+ms.technology: dotnet-general
 ---
 # Use Visual C# to query XML with an XPath expression
 

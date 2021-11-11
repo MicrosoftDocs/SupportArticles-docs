@@ -2,9 +2,10 @@
 title: Use the HashTable collection in Visual C#
 description: This article describes how to use the HashTable collection by using Visual C#.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: imtiazs
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to work with the HashTable collection
 

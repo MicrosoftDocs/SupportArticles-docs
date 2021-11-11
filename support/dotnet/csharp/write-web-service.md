@@ -2,9 +2,10 @@
 title: Write a web service by using Visual C#
 description: This article describes steps to write a Web service (MathService) that exposes methods for adding, subtracting, dividing, and multiplying two numbers.
 ms.date: 04/28/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: SRINATHV
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Write a web service by using Visual C# .NET
 

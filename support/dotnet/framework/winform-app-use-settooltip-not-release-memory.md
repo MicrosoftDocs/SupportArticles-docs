@@ -4,6 +4,7 @@ description: A .NET Windows Forms application may not release memory if using th
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: Tatkins
+ms.technology: dotnet-general
 ---
 # Memory not freed if Windows Forms application uses ToolTip.SetToolTip
 

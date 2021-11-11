@@ -4,6 +4,7 @@ description: This article provides resolutions for the WCF problem where calls t
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: wzhao, amitap
+ms.technology: dotnet-wcf
 ---
 # The WCF calls timed out if you create the WCF service host inside ASP.NET MVC controller
 

@@ -4,6 +4,7 @@ description: Describes high memory usage when using EnlistDurable.
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: jcarley
+ms.technology: dotnet-general
 ---
 # You experience high memory usage when using EnlistDurable
 

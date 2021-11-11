@@ -4,6 +4,7 @@ description: This article provides resolutions for the error that occurs when yo
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: amymcel
+ms.technology: dotnet-wcf
 ---
 # Error when you create performance counters by using WCF service
 

@@ -4,6 +4,7 @@ description: An error occurs when you build .NET 3.5 or lower projects on .NET 4
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: teodoras
+ms.technology: dotnet-general
 ---
 # Mixed mode assembly is built against version v2.0.50727 of the runtime
 

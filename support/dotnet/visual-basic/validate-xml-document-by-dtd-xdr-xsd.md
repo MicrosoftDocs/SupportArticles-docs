@@ -3,7 +3,8 @@ title: Validate an XML document by using DTD, XDR, or XSD
 description: This article describes how to use the XmlValidatingReader class to validate an XML document against a DTD, an XDR schema, or an XSD schema in Visual Basic 2005 or in Visual Basic .NET. Also describes how to optimize validation by caching schemas.
 ms.date: 10/26/2020
 ms.prod-support-area-path: Language or Compilers
-ms.topic: how-to 
+ms.topic: how-to
+ms.technology: visual-basic-language-compilers
 ---
 # Validate an XML document by using DTD, XDR, or XSD in Visual Basic  
 

@@ -4,6 +4,7 @@ description: This article provides a resolution to fix the error that occurs on 
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: ryankiv, sulabhs
+ms.technology: dotnet-general
 ---
 # Error occurs on a .NET client that consumes a Web service through an HTTP proxy server
 

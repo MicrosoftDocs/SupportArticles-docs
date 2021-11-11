@@ -4,6 +4,7 @@ description: In a small number of cases, having .NET Framework applications runn
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: shorne, scotbren
+ms.technology: dotnet-general
 ---
 # Citrix Virtual Memory Optimization Service can lead to .NET application corruption
 

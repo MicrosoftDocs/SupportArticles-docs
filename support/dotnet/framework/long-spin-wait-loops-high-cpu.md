@@ -4,6 +4,7 @@ description: This article fixes a problem in which high CPU or memory usage occu
 ms.date: 07/15/2020
 ms.prod-support-area-path: .NET Framework, Virtual Machine running Windows
 ms.reviewer: joelpell
+ms.technology: dotnet-general
 ---
 # High CPU or memory usage and increased spin-wait loops in .NET Framework on VMs by using Intel Skylake processors
 

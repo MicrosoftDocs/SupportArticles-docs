@@ -5,6 +5,7 @@ ms.date: 04/20/2020
 ms.prod-support-area-path: 
 ms.reviewer: patcole, jallen
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Display hierarchical data by using nested Repeater controls and Visual C# .NET  
 

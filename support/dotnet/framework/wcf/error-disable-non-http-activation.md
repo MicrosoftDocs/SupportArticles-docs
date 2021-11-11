@@ -4,6 +4,7 @@ description: This article provides workaround for the error that occurs when you
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: ericam, mlaing
+ms.technology: dotnet-wcf
 ---
 # Error when you host .NET Framework 3.5 WCF service on Windows Server 2012 or Windows 8
 
