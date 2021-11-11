@@ -5,6 +5,7 @@ ms.date: 09/24/2020
 ms.prod-support-area-path: Language or Compilers
 ms.topic: how-to
 ms.prod: visual-cpp
+ms.technology: visual-cpp-language-compilers
 ---
 # Create a SQL Server Database programmatically by using ADO.NET and Visual C++ .NET
 

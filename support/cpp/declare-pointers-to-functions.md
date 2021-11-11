@@ -2,9 +2,10 @@
 title: Declare an array of pointers to functions in C++
 description: Describes how to build an array that contains function addresses and call those functions in Visual C++.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: markm
 ms.topic: how-to
+ms.technology: visual-cpp-general
 ---
 # Declare an array of pointers to functions in Visual C++
 

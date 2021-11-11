@@ -4,6 +4,7 @@ description: This article describes how to add Hypertext Markup Language (HTML) 
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: visual-cpp-general
 ---
 # Add HTML code to the clipboard by using Visual C++
 

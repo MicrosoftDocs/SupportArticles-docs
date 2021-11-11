@@ -5,6 +5,7 @@ ms.date: 04/22/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: V-JEFFBO
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Create and use string arrays in Visual C++
 

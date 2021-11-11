@@ -6,6 +6,7 @@ ms.prod-support-area-path: Language or Compilers
 ms.reviewer: willchen
 ms.topic: how-to
 ms.prod: visual-cpp
+ms.technology: visual-cpp-language-compilers
 ---
 # Read the XML data from a file by using Visual C++
 

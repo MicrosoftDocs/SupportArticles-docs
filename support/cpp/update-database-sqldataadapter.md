@@ -2,9 +2,10 @@
 title: Update SQL databases by using SqlDataAdapter
 description: Provides the code samples to help you to update a SQL Server database by using the SqlDataAdapter object in Visual C++.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: karthikr, estraley
 ms.topic: how-to
+ms.technology: visual-cpp-general
 ---
 # Update a SQL Server database by using the SqlDataAdapter object in Visual C++
 

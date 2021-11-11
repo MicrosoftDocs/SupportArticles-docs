@@ -3,6 +3,7 @@ title: Can't change the state of a menu item
 description: This article provides a resolution for the problem that occurs when the menu is attached to a dialog box in Visual C++.
 ms.date: 10/26/2020
 ms.prod-support-area-path: C and C++ Libraries
+ms.technology: visual-cpp-libraries
 ---
 # You cannot change the state of a menu item from its command user-interface handler if the menu is attached to a dialog box in Visual C++
 

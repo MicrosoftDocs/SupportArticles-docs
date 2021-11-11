@@ -1,9 +1,10 @@
 ---
 title: ReadFromStream() returns Access Denied
-description: Describes that Access Denied error occurs when your application uses CComVariant::ReadFromStream() to read data from a stream.
+description: "Describes that Access Denied error occurs when your application uses CComVariant::ReadFromStream() to read data from a stream."
 ms.date: 04/27/2020
 ms.prod-support-area-path: Language or Compilers
 ms.reviewer: prabhatt
+ms.technology: visual-cpp-language-compilers
 ---
 # CComVariant::ReadFromStream() returns an error (Access Denied) for stream > 1 MB
 

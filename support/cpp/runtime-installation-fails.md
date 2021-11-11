@@ -4,6 +4,7 @@ description: This article provides the resolution to avoid the filename, directo
 ms.date: 04/27/2020
 ms.prod-support-area-path: Installation
 ms.reviewer: smondal
+ms.technology: visual-cpp-installation
 ---
 # Error when you install VC Runtime: The filename, directory name, or volume label syntax is incorrect
 

@@ -4,6 +4,7 @@ description: This article provides a sample code to tell users how to call Run()
 ms.date: 04/22/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Call the Run() method of the Script control in C++
 

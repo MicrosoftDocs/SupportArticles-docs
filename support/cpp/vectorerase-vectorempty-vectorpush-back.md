@@ -4,6 +4,7 @@ description: Describes how to use the vector::erase, vector::empty, and vector::
 ms.date: 04/22/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Use the vector::erase, vector::empty, and vector::push_back STL functions in Visual C++
 
