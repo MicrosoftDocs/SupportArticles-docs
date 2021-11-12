@@ -34,7 +34,8 @@ There are many scenarios which can cause one of these messages during SharePoint
 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with sites that have the error messages mentioned above. To populate the diagnostic in the Microsoft 365 Admin Center and try to unlock the site, select Run Tests:
 
-Run Tests: Locked Site
+> [!div class="nextstepaction"]
+> [Run Tests: Locked Site](https://aka.ms/PillarLockedSite)
 
 ## Troubleshoot “This site is read-only at the site collection administrator's request” yourself
 
