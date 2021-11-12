@@ -467,15 +467,29 @@ To do so, compare the following folders:
 
 To do so, follow these steps:
 
-1. Open WBEMTEST.
-2. Connect to `root\sms\site_<SiteCode>`, and select **Execute Method**.
-3. Enter `SMS_CM_UpdatePackages` in **Object Path**, and select **OK**.
-4. Select **RetryContentReplication** from **Method**, and select **Edit in Parameters**.
-5. Select the **ForceRetry** property, and select **Edit Property**.
-6. In **Value**, select **Not Null**, and enter *1*.
-7. Select **Save Property** > **Save Object**.
-8. Select **Execute!**.
-9. Review Distmgr.log to check whether the package replicates successfully.
+1. Open PowerShell command line
+2. Run the following command: 
+```Powershell
+(gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)"
+```
+3. The output should look like below. If it's not - please verify the command line for typos.
+
+```Powershell
+__GENUS          : 2
+__CLASS          : __PARAMETERS
+__SUPERCLASS     : 
+__DYNASTY        : __PARAMETERS
+__RELPATH        : 
+__PROPERTY_COUNT : 1
+__DERIVATION     : {}
+__SERVER         : 
+__NAMESPACE      : 
+__PATH           : 
+ReturnValue      : 0
+PSComputerName   : 
+```
+    
+4. Review Distmgr.log to check whether the package replicates successfully.
 
 ### Issue 1: Error "Failed to calculate hash SMS_HIERARCHY_MANAGER"
 
@@ -822,8 +836,8 @@ To fix this issue, follow these steps:
 
 If there's a failure during content replication, retry the replication by running the following command:
 
-```console
-WMIC /namespace:\\root\sms\site_<site code> path SMS_CM_UpdatePackages WHERE PackageGuid="PackageGUID" CALL RetryContentReplication 1 /NOINTERACTIVE
+```Powershell
+(gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)"
 ```
 
 It tells `HMan` to start a package notification and update thread in DistMgr to start replicating the content again. Consider that it changes the package version and copies the content to all child primary sites again.
