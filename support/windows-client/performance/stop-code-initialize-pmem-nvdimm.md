@@ -26,6 +26,6 @@ Windows supports PMem or NVDIMM devices (both physical and virtual) at a minimum
 > [!NOTE]
 > The PMem support in Windows was first introduced in Windows Server 2016 and Windows 10.
 
-To work around this issue, set the size larger than 16 MB.
+To work around this issue, use a PMem or NVDIMM device with a size of 16 MB or larger.
 
 For more information about creating a persistent memory disk in an unused persistent memory region, see the [New-PmemDisk](/powershell/module/persistentmemory/new-pmemdisk) cmdlet.
