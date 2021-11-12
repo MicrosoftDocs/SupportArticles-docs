@@ -153,7 +153,7 @@ After your Intune account is connected to your Android enterprise account, you c
 
 12. After the app is added to Microsoft Intune, you can assign the app to users and devices. From the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), go to **Apps** > **All Apps**. Look under **Manage** to see the app displayed in the list.
 
-    :::image type="content" source="media/configure-android-enterprise-devices-intune/all-apps.png" alt-text="All Apps page in the Microsoft Endpoint Manager admin center. lightbox="media/configure-android-enterprise-devices-intune/all-apps.png":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/all-apps.png" alt-text="All Apps page in the Microsoft Endpoint Manager admin center." lightbox="media/configure-android-enterprise-devices-intune/all-apps.png":::
 
 13. To assign the app to a group, select the app that you want to assign. In the **Manage** section of the menu, select **Properties**, and then select **Edit** next to **Assignments** to open the **Add group** pane.
 
