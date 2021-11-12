@@ -42,7 +42,7 @@ database_name          synchronization_health_desc     synchronization_state_des
 
 Additionally, this database may be reported as being in the **Not Synchronizing / Recovery Pending** or **Suspect** state in SQL Server Management Studio.
 
-:::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/db-notsynchronizing-recoverypending.png" alt-text="Screenshot of database which is in Not Synchronizing / Recovery Pending state.":::
+:::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/db-not-synchronizing-recovery-pending.png" alt-text="Screenshot of database which is in Not Synchronizing / Recovery Pending state.":::
 
 When the database is defined in an availability group, the database can not be dropped or restored. Therefore, you have to take specific steps to recover the database and return it to production use.
 
@@ -173,7 +173,7 @@ This method lets you maintain the listener while dropping and re-creating the av
 4. Under the resources, right-click the listener, click **More Actions**, and then click **Assign to Another Role**.
 5. In the **Assign Source to Role** dialog box, select the new availability group, and then click **OK**.
 
-    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-ag-test.png" alt-text="Screenshot of Assign Source to Role, showing to add a new availability group.":::
+    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-ag-test.png" alt-text="Screenshot of Assign Source to Role dialog box, showing the added new availability group.":::
 
 6. In the **Roles** pane, select the new availability group. In the bottom-middle pane, under the **Resources** tab, you should now see the new availability group and the listener resource. Right-click the new availability group resource, and then click **Properties**.
 

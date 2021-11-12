@@ -93,6 +93,7 @@ Similarly, you can make a differential Backup of USERDB by pasting in 'D' for th
 **Step D:** Schedule a job by using Windows Task Scheduler to execute the batch file that you created in step B. To do this, follow these steps:
 
 1. On the computer that is running SQL Server Express, click **Start**, then in the text box type *task Scheduler*.
+
      :::image type="content" source="media/schedule-automate-backup-database/task-scheduler.png" alt-text="Screenshot of the Task Scheduler Desktop app option in the search bar of Start menu." border="false":::
 1. Under **Best match**, click **Task Scheduler** to launch it.
 

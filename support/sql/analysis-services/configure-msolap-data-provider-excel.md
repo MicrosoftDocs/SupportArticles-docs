@@ -74,7 +74,7 @@ To specify the version of MSOLAP that Excel uses, update the version in the regi
 
 The following is an example of Office 32-bit C2R configured to use MSOLAP.5:
 
-:::image type="content" source="media/configure-msolap-data-provider-excel/progid.png" alt-text="Screenshot of the ProgID registry key in Registry Editor. The Data of the (default) subkey is configured to MSOLAP.5.":::
+:::image type="content" source="media/configure-msolap-data-provider-excel/progid.png" alt-text="Screenshot of the ProgID registry key in Registry Editor. The Data of the (Default) subkey is configured to MSOLAP.5.":::
 
 To determine whether your installation is MSI or C2R, in Excel go to **File** > **Account**. If you see an **Office Updates** section, the installation is C2R:
 
@@ -86,4 +86,4 @@ If there's no **Office Updates** section, then it's an MSI installation:
 
 To determine whether Excel is 32-bit or 64-bit, click **About Excel** in the same Accounts screen and it will show you in the dialog box at the top:
 
-:::image type="content" source="media/configure-msolap-data-provider-excel/about-excel.png" alt-text="Screenshot of an example of the About Microsoft Excel window showing 32-bit.":::
+:::image type="content" source="media/configure-msolap-data-provider-excel/about-excel.png" alt-text="Screenshot of a 32-bit example in the About Microsoft Excel window.":::

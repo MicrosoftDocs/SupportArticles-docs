@@ -31,4 +31,4 @@ By default, all Configuration Manager databases should have the **Trustworthy** 
 
 To verify this setting, open the **Database Properties** window, select the **Options** page in the navigation pane, and then locate the **Trustworthy** row in the **Other options** list.
 
-:::image type="content" source="media/assembly-name-cannot-migrated-error/database-properties.png" alt-text="Screenshot of the Options page of the Database Properties - CM window.":::
+:::image type="content" source="media/assembly-name-cannot-migrated-error/database-properties.png" alt-text="Screenshot of the Options page of the Database Properties window.":::
