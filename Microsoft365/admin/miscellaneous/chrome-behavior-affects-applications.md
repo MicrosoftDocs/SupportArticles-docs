@@ -116,7 +116,7 @@ Use Chrome Beta version 80 to test the scenarios:
 
 3. Enable the SameSite flags. To do this, type *chrome://flags* in the address bar, search for SameSite, and then select **Enabled** for the following options.
 
-:::image type="content" source="./media/chrome-behavior-affects-applications/samesite-debugging.png" alt-text="Enable SameSite settings":::
+:::image type="content" source="media/chrome-behavior-affects-applications/samesite-debugging.png" alt-text="Screenshot to enable the SameSite settings in Chrome.":::
 
 ## More information
 
@@ -128,7 +128,7 @@ The Chrome team had announced plans to roll out [a change in the default behavio
 
 If you suspect that your users are using a Chrome version 76 or a later version that has SameSite enabled, you can check the version number by navigating to `chrome://settings/help` or by selecting the Chrome settings icon, and then selecting **Help** > **About Google Chrome**.
 
-:::image type="content" source="./media/chrome-behavior-affects-applications/check-chrome-version.png" alt-text="Checking Chrome version in About Google Chrome":::
+:::image type="content" source="media/chrome-behavior-affects-applications/check-chrome-version.png" alt-text="Screenshot shows steps to check the Chrome version.":::
 
 For the 77–79 versions of Chrome, navigate to `chrome://flags` to see whether they have the flags enabled. The setting default will begin to change in Chrome version 80 on a graduated release.
 

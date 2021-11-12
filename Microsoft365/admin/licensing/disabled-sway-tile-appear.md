@@ -47,7 +47,7 @@ To enable or disable Sway for a specific user in an organization, follow these s
     > To view the list of supported licenses for Office 365 Sway, see [Available licenses for Office 365 Sway](https://support.microsoft.com/help/3080969).
 5. Disable the Sway service plan by unchecking the check box that's associated with Sway. Or, enable the Sway service plan by selecting the check box that's associated with Sway.
 
-    ![Screen shot of the Assign License page in Office 365 ](./media/disabled-sway-tile-appear/sway-service.jpg)    
+    :::image type="content" source="media/disabled-sway-tile-appear/sway-service.png" alt-text="Screenshot of the Assign License page in Office 365.":::
  
 
 To enable or disable Sway for one or more users in an organization or for all users in the whole organization, use the necessary Windows PowerShell scripts that are described in [Disable access to services with Office 365 PowerShell](/microsoft-365/enterprise/disable-access-to-services-with-microsoft-365-powershell).
@@ -63,7 +63,7 @@ To work around the delay of associating the new Sway Service plan to users in an
     > By toggling the **Auto Renew** setting from **Off** to **On**, you trigger the tenant-level update that manually associates the new Sway service plan for users.    
 3. Browse to **Assign licenses.** You should see that Sway is enabled. This confirms that the new Sway service plan is associated with Office 365 users.
 
-    ![Screen shot of the license option for Sway ](./media/disabled-sway-tile-appear/assign-license.jpg)
+    :::image type="content" source="media/disabled-sway-tile-appear/assign-license.png" alt-text="Screenshot to enable the Sway option under the Assign licenses.":::
 
 > [!NOTE]
 > For more information about how to assign licenses for Office 365, see [Assign or unassign licenses for Office 365 for business](https://support.office.com/article/assign-or-unassign-licenses-for-office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).     
