@@ -59,7 +59,7 @@ Use one of the following methods to configure the Throttling settings.
 2. Expand the **Windows Server Backup**  tree, and then select **Backup**. In the **Actions**  pane (on the right), select **Change Properties**.
 3. There are three tabs with settings that you can change as necessary. Select the **Throttling** tab.
 
-    :::image type="content" source="media/manage-on-premises-azure-protection-network-bandwidth-usage/3058328.png" alt-text="Screenshot of the Throttling tab in the Microsoft Azure Backup Properties window.":::
+    :::image type="content" source="media/manage-on-premises-azure-protection-network-bandwidth-usage/throttling-tab.png" alt-text="Screenshot of the Throttling tab in the Microsoft Azure Backup Properties window.":::
 
 The **Throttling** tab allows for control of network usage during specific day and time intervals. After you select the **Enable internet bandwidth usage throttling for backup operations**  check box, you can configure how the agent uses the network bandwidth when it's backing up or restoring information.
 
