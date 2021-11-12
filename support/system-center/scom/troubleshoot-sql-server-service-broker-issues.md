@@ -46,11 +46,11 @@ This article provides common troubleshooting steps for SQL Server Service Broker
    - The IP address of the management server that created the queue and service.
    - The process ID of the OMSDK service (Microsoft.Mom.Sdk.ServiceHost.exe) that's running on that management server.
 
-   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/queues-services.png" alt-text="Service broker queue and service":::
+   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/queues-services.png" alt-text="Verify the process ID of the OMSDK service that's running on that management server.":::
 
    In this example, the IP address of the management server is 192.168.10.10. The PID of the OMSDK service is 3092.
 
-   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/pid.png" alt-text="SDK service PID":::
+   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/pid.png" alt-text="Screenshot of the PID of the OMSDK service.":::
 
    If you have more than one management server, each management server will have a separate Service Broker queue and service.
 1. If you can't find the corresponding queue and service, restart the OMSDK service again.
@@ -125,17 +125,17 @@ If you still can't find the queue and service, the current Service Broker may be
 
 If the previous steps don't resolve the issue, collect a SQL Server Profiler trace that includes [Service Broker events](/sql/relational-databases/event-classes/broker-event-category).
 
-   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/collect-trace.png" alt-text="Collect SQL Server Profiler trace":::
+   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/collect-trace.png" alt-text="Screenshot of collecting SQL Server Profiler trace.":::
 
 - Sample trace when the OMSDK service creates the service and queue when it's restarted:
 
-   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-create-queues-services.png" alt-text="Trace when creating queues and services":::
+   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-create-queues-services.png" alt-text="Sample trace when creating queues and services.":::
 - Sample trace when resetting the health of a monitor:
 
-   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-reset-health.png" alt-text="Trace when resetting health of a monitor":::
+   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-reset-health.png" alt-text="Sample trace when resetting health of a monitor.":::
 - Sample trace when the Service Broker is disabled:
 
-   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-broker-disabled.png" alt-text="Trace when the Service Broker is disabled":::
+   :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-broker-disabled.png" alt-text="Sample trace when the Service Broker is disabled.":::
 
 Additionally, run the following SQL script against the operational database to collect diagnostic logs.
 

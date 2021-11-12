@@ -43,11 +43,11 @@ The target of SQL Server DB discovery rule must be discovered before the discove
 2. Click **Scope**, select **View all Targets**, and then click **Clear all**.
 3. Input **SQL Server 2012 DB** in **Look for**, check **SQL Server 2012 DB**, and then click **OK**.
 
-    ![Search target](./media/troubleshoot-sql-database-discovery/search-target.png)
+    :::image type="content" source="media/troubleshoot-sql-database-discovery/search-target.png" alt-text="Search target in the Scope Management Pack Objects dialog box." border="false":::
 
 4. Locate the target of returned discovery rule (the **Target** column), in our example, the target is **SQL Server 2012 DB Engine**.
 
-    ![Target of returned discovery rule](./media/troubleshoot-sql-database-discovery/target-rule.png)
+    :::image type="content" source="media/troubleshoot-sql-database-discovery/target-rule.png" alt-text="Locate the Target column of the returned discovery rule.":::
 
 ### Determine if the target object is discovered
 
@@ -56,7 +56,7 @@ The target of SQL Server DB discovery rule must be discovered before the discove
 3. Select **View all target**, input **SQL Server 2012 DB Engine** in **Look for**.
 4. Select **SQL Server 2012 DB Engine**, and then click **OK**.
 
-    ![Find target](./media/troubleshoot-sql-database-discovery/find-target.png)
+    :::image type="content" source="media/troubleshoot-sql-database-discovery/find-target.png" alt-text="Look for and view all targets in the Select Items to Target dialog box.":::
 
 5. In **Discovered Inventory**, look for the name of the SQL Server or the name of the cluster that hosts the database. If you can't find any of them, you need to troubleshoot the DB Engine discovery rule.
 
@@ -74,7 +74,7 @@ To do this, follow these steps:
 4. Right-click **Discover Databases for a Database Engine**, and then select **Choose Overrides** > **Summary** > **For the Object Discovery**.
 5. Review any overrides that may affect the discovery rule.
 
-    ![Screenshot of Overrides Summary](./media/troubleshoot-sql-database-discovery/overrides-summary.png)
+    :::image type="content" source="media/troubleshoot-sql-database-discovery/overrides-summary.png" alt-text="Review any overrides that may affect the discovery rule in the Overrides Summary." border="false":::
   
 ## Check the Run As account that's running the discovery
 
@@ -83,14 +83,14 @@ The SQL Server 2012 DB discovery uses the **SQL Server Discovery Account** Run A
 1. In the Operations Manager console, go to **Administration** > **Run As Configuration** > **Profiles**, and then open the properties of the **SQL Server Discovery Account** profile.
 2. Move to the **Run As Accounts** page.
 
-   ![Screenshot of Run As accounts](./media/troubleshoot-sql-database-discovery/run-as-accounts.png)
+   :::image type="content" source="media/troubleshoot-sql-database-discovery/run-as-accounts.png" alt-text="The Run As accounts listed in the Run As accounts page." border="false":::
 
    If a Run As account is listed in this page, it's the account that's used to run the discovery. If nothing is listed, the default Run As account on the server is used to run the discovery. To find the default Run As account on the server, follow these steps:
   
    1. In the Operations Manager console, go to **Administration** > **Run As Configuration** > **Profiles**, and then open the properties of the Default Action Account profile.
    2. Move to the **Run As Accounts** page, locate the server name in the **Path** column, and then note the corresponding account in the **Account Name** column.
 
-      ![Default action account](./media/troubleshoot-sql-database-discovery/default-action-account.png)
+      :::image type="content" source="media/troubleshoot-sql-database-discovery/default-action-account.png" alt-text="The Run As accounts listed in the Run As accounts page." border="false":::
 
       > [!NOTE]
       > This account is usually the Local System Action Account, sometimes it may be a user account.
@@ -583,7 +583,7 @@ In this case, following these steps:
 
     3. Search for `<ScriptName>DiscoverSQL2012DB.vbs</ScriptName>`, copy the content of the \<ScriptBody> element, and then paste it to a new text file.
 
-        ![Screenshot of script body](./media/troubleshoot-sql-database-discovery/script-body.png)
+        :::image type="content" source="media/troubleshoot-sql-database-discovery/script-body.png" alt-text="Screenshot of the ScriptBody line that you need to copy and paste to a new text file.":::
 
     4. Remove the start tag \<ScriptBody> and the end tag \</ScriptBody>.
     5. Find and replace the following characters in the file:
@@ -627,7 +627,7 @@ In this case, following these steps:
     2. Connect to `root\Microsoft\SqlServer\ComputerManagement11`.
     3. Run the `select * from SQLService where SQLServiceType=1` query.
 
-        ![WQL query](./media/troubleshoot-sql-database-discovery/sql-query.png)
+        :::image type="content" source="media/troubleshoot-sql-database-discovery/sql-query.png" alt-text="Run a query to see whether you receive a WMI error or output.":::
 
     4. If you receive a WMI error or no output, make sure that you have a backup of the server, open an elevated command prompt, and then run the following command to repair the WMI namespace:
 
@@ -654,7 +654,7 @@ In this case, following these steps:
     2. Connect to `root\Microsoft\SqlServer\ComputerManagement11`.
     3. Run the `select * from SQLService where SQLServiceType=1` query:
 
-        ![WMI query](./media/troubleshoot-sql-database-discovery/sql-query.png)
+        :::image type="content" source="media/troubleshoot-sql-database-discovery/sql-query.png" alt-text="Run a query to see whether you receive a WMI error or output.":::
 
     4. If you receive a WMI error or no output, make sure that you have a backup of the server, open an elevated command prompt, and then run the following command to repair the WMI namespace:
 

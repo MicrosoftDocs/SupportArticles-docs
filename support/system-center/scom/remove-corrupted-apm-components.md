@@ -32,7 +32,7 @@ Typically, you can uninstall the Operations Manager agent and then reinstall it 
 
 This management pack has a class property in the state view that is named **APM Installed** to help you determine which agents still have the APM components installed (installed by default).
 
-:::image type="content" source="media/remove-corrupted-apm-components/apm-installed.png" alt-text="Screenshot of the APM Installed property.":::
+:::image type="content" source="media/remove-corrupted-apm-components/apm-installed.png" alt-text="Screenshot of the APM Installed property that shows which agents have APM installed.":::
 
 ## Repair or upgrade an agent
 
