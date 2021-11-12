@@ -55,7 +55,7 @@ MFA starts with BeginAuth, and then the phone call is triggered on the back end 
 
 After MFA authorization has begun, the client starts to query the same endpoint for the EndAuth method every 10 seconds to check whether authentication has completed. Until the call has been picked and verified, the Resultvalue is returned as AuthenticationPending.
 
-:::image type="content" source="media/fiddler-trace-logs-for-mfa/end-auth-method.png" alt-text="Screenshot shows ResultValue is set to AuthenticationPending.":::
+:::image type="content" source="media/fiddler-trace-logs-for-mfa/end-auth-method.png" alt-text="Screenshot shows that ResultValue is set to AuthenticationPending.":::
 
 When the phone has been picked and verified, the answer for the next query for EndAuth will be a ResultValue of Success. Additionally, the user has completed Mulitifactor authentication. Also the Set-Cookie : SANeeded=xxxxxxx cookie is set in the response, which will be given to the endpoint : login.srf to complete authentication.
 
@@ -64,17 +64,17 @@ When the phone has been picked and verified, the answer for the next query for E
 ### Scenario 2: When the phone is out of coverage or the phone is not picked
 When the phone is not picked and verified within 60 seconds after the call is made, the ResultValue will be set as UserVoiceAuthFailedPhoneUnreachable. And at the next query for the EndAuth method, UserVoiceAuthFailedPhoneUnreachable is returned, as seen in Fiddler.
 
-:::image type="content" source="media/fiddler-trace-logs-for-mfa/result-value-verified.png" alt-text="Screenshot shows ResultValue is set to UserVoiceAuthFailedPhoneUnreachable.":::
+:::image type="content" source="media/fiddler-trace-logs-for-mfa/result-value-verified.png" alt-text="Screenshot shows that ResultValue is set to UserVoiceAuthFailedPhoneUnreachable.":::
 
 ### Scenario 3: When the fraud alert is triggered to block the account in the cloud
 When the phone has not been picked and a fraud alert posted within 60 seconds after the call is made, the ResultValue will be set as AuthenticationMethodFailed. And at the next query for the EndAuth method, an AuthenticationMethodFailed response is returned, as seen in Fiddler.
 
-:::image type="content" source="media/fiddler-trace-logs-for-mfa/result-value-fraud-alert.png" alt-text="Screenshot shows ResultValue is set to AuthenticationMethodFailed.":::
+:::image type="content" source="media/fiddler-trace-logs-for-mfa/result-value-fraud-alert.png" alt-text="Screenshot shows that ResultValue is set to AuthenticationMethodFailed.":::
 
 ### Scenario 4: For a blocked account
 If the user is blocked, ResultValue will be set as UserIsBlocked. At the first query for the EndAuth method, UserIsBlocked will be returned, as seen in Fiddler.
 
-:::image type="content" source="media/fiddler-trace-logs-for-mfa/result-value-blocked.png" alt-text="Screenshot shows ResultValue is set to UserIsBlocked.":::
+:::image type="content" source="media/fiddler-trace-logs-for-mfa/result-value-blocked.png" alt-text="Screenshot shows that ResultValue is set to UserIsBlocked.":::
 
 Solution: In an Azure MFA scenario with an Azure subscription, you can unblock by first logging on to manage.windowsazure.com. Then, select **Directory > Users** and **Manage Multi factor Authentication** > **Service Settings**. At the end of the page, select **Go to portal**. Now, select **Block/Unblock Users** to find the list of blocked users.
 

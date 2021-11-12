@@ -81,7 +81,7 @@ When you install Office it's automatically linked to your Office 365 plan. This 
     
     1. In the lower-lower left corner select the **o15CTRRemove** file and from the drop-down list, choose **Show in folder**.
 
-       :::image type="content" source="media/install-apps/show-in-folder.png" alt-text="Screenshot shows steps to select Show in folder option.":::<br/>Double-click the download, **o15CTRRemove** to run the easy fix tool.
+       :::image type="content" source="media/install-apps/show-in-folder.png" alt-text="Screenshot shows steps to select the Show in folder option.":::<br/>Double-click the download, **o15CTRRemove** to run the easy fix tool.
     
     2. The Uninstall Microsoft Office wizard launches. Select **Next** and follow the prompts. 
     
@@ -93,7 +93,7 @@ When you install Office it's automatically linked to your Office 365 plan. This 
     
     1. Select **Save File**, and then **OK**.
 
-        :::image type="content" source="media/install-apps/save-file-firefox.png" alt-text="Screenshot to save O15CTRRemove.diagcab file in Firefox.":::  <br/>In the upper-right browser window, select **Show all downloads**. In the Library, select **Downloads** \> **O15CTRRemove.diagcab**, and then select the folder icon. Double-click the **O15CTRRemove.diagcab**.
+        :::image type="content" source="media/install-apps/save-file-firefox.png" alt-text="Screenshot to save the O15CTRRemove.diagcab file in Firefox.":::  <br/>In the upper-right browser window, select **Show all downloads**. In the Library, select **Downloads** \> **O15CTRRemove.diagcab**, and then select the folder icon. Double-click the **O15CTRRemove.diagcab**.
     
     2. The Uninstall Microsoft Office wizard launches. Select **Next** and follow the prompts. 
     
