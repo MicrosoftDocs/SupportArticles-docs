@@ -2,6 +2,14 @@
 
 
 
+## Week of October 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/27/2021 | [Error code 6031 when buying licenses in Office 365 portal](/office365/troubleshoot/licensing/error-code-6031-buy-licenses-office-365) | added |
+
+
 ## Week of October 18, 2021
 
 
@@ -50,15 +58,3 @@
 | 9/30/2021 | [Determine the license type of your Microsoft Office product](/office365/troubleshoot/licensing/determine-office-license-type) | modified |
 | 9/30/2021 | [Automatic updating for Microsoft Office is not enabled](/office365/troubleshoot/updates/automatic-updates) | modified |
 | 9/30/2021 | [Office Feature Updates task description and FAQ](/office365/troubleshoot/updates/office-feature-updates-task-faq) | modified |
-
-
-## Week of September 20, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/21/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | added |
-| 9/21/2021 | [Troubleshoot eDiscovery hold errors](/office365/troubleshoot/holds/resolve-ediscovery-hold-issues) | added |
-| 9/21/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | modified |
-| 9/21/2021 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
-| 9/22/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |

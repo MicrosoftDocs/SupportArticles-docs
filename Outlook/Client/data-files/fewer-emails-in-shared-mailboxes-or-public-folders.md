@@ -47,7 +47,7 @@ At the bottom of the email message list, one of the following messages is displa
 > [!NOTE]
 > The number of days, weeks, or months that is displayed in the message depends on what you have configured for the **Mail to keep offline** setting in Outlook. For example, if you set this value to **1** (one) month, the message displays **Currently displaying all messages newer than 1 month**, as shown in the following screenshot.
 
-:::image type="content" source="media/fewer-emails-in-shared-mailboxes-or-public-folders/message-example.png" alt-text="Screenshot showing the message displayed if you have the Mail to keep offline setting set to 1 month" border="false":::
+:::image type="content" source="media/fewer-emails-in-shared-mailboxes-or-public-folders/message-example.png" alt-text="Screenshot shows the message displayed if you have the Mail to keep offline setting set to 1 month.":::
 
 Also, when you search in a shared mailbox or public folder favorite, older items are missing from the search results.
 
@@ -81,7 +81,7 @@ You can configure Outlook to keep more of your mail offline. By doing this, more
     > [!NOTE]
     > Move the slider to the All setting if you prefer to keep all of your email cached on your local computer.
 
-    :::image type="content" source="media/fewer-emails-in-shared-mailboxes-or-public-folders/mail-to-keep-offline-setting.png" alt-text="Screenshot showing the Mail to keep offline setting" border="false":::
+    :::image type="content" source="media/fewer-emails-in-shared-mailboxes-or-public-folders/mail-to-keep-offline-setting.png" alt-text="Screenshot shows steps to change the Mail to keep offline setting.":::
 
 4. Select **Next**.
 5. In the message window that appears and states that this operation will not finish until you exit and restart Outlook, select **OK**.

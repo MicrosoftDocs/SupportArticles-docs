@@ -48,7 +48,7 @@ In this scenario, the email folders for these mailboxes may show item counts tha
 
 This message is shown in the following screenshot.
 
-![message 1](./media/only-subset-items-synchronized/message.png)
+:::image type="content" source="media/only-subset-items-synchronized/more-items-in-this-folder-1.png" alt-text="Screenshot shows the message There are more items in this folder on the server, and the link Click here to view more on Microsoft Exchange." border="false":::
 
 Additionally, if you search for email items in your mailbox, the search results may display the following text at the bottom of the results:
 
@@ -64,7 +64,7 @@ If you click the **More** link, additional items that meet your search criteria 
 
 This behavior occurs because the Cached Exchange mode **Mail to keep offline** setting is configured to a value other than **All**. For example, the following screenshot shows a profile that's configured to use Cached Exchange Mode and the **Mail to keep offline** setting is set to a default value of **12 months**.
 
-![Mail to keep offline](./media/only-subset-items-synchronized/mail-to-keep-offline.png)
+:::image type="content" source="media/only-subset-items-synchronized/mail-to-keep-offline-default.png" alt-text="Screenshot shows the Mail to keep offline setting is set to 12 months in Change Account dialog box.":::
 
 > [!NOTE]
 > Outlook 2019, Outlook 2016, Outlook 2013 and Outlook for Office 365 provide the options of 1, 3, 6, 12, or 24 months, or All. Outlook LTSC 2021, Outlook 2019, Outlook 2016, and Outlook for Office 365 provide the additional options of 3 days, 1 week, 2 weeks, 3 years, and 5 years. Additionally, later versions of Outlook renamed the **Mail to keep offline** setting to **Download email for the past**.
@@ -87,7 +87,7 @@ If your **Mail to keep offline** setting is set to 12 months and you have email 
 > [!NOTE]
 > Groups folders only synchronize a maximum of 1 year. **Mail to keep offline** settings that are lower than 1 year are honored.
   
-## More Information
+## More information
 
 To reduce the effect of the Outlook offline data file (.ost), the default number of months that are configured for your profile varies by the size of your hard disk. The following table provides the different default values for different hard disk sizes.
 
@@ -104,7 +104,8 @@ If you have to change the number of selected months of email to synchronize with
 3. On the **E-mail** tab, double-click your Microsoft Exchange account.
 4. In the **Change Account** dialog box, drag the **Mail to keep offline** slider to the desired number of months or to **All** to synchronize all email messages.
 
-    ![Change Account](./media/only-subset-items-synchronized/change-account.png)
+    :::image type="content" source="media/only-subset-items-synchronized/mail-to-keep-offline-all.png" alt-text="Screenshot shows the Mail to keep offline setting is set to All in Change Account dialog box.":::
+
 5. Click **Next**.
 6. Click **OK** when you're prompted to restart Outlook to complete the configuration change.
 7. Click **Finish**.
@@ -120,7 +121,7 @@ If you don't have connectivity with the Exchange server, the following message i
 
 This message is shown in the following screenshot.
 
-![message 2](./media/only-subset-items-synchronized/message-2.png)
+:::image type="content" source="media/only-subset-items-synchronized/more-items-in-this-folder-2.png" alt-text="Screenshot shows the message There are more items in this folder on the server. Connect to the server to view them." border="false":::
 
 Under similar conditions, if you search for items in your mailbox and you don't have connectivity with the Exchange server, the following message is displayed below the search results:
 
@@ -130,7 +131,7 @@ In this message, **\<x>** represents the value that's configured for the cached
 
 An example of this message is shown in the following screenshot.
 
-![message 3](./media/only-subset-items-synchronized/message-3.png)
+:::image type="content" source="media/only-subset-items-synchronized/server-unavailable.png" alt-text="Screenshot shows the message Server unavailable. 3 months of results shown." border="false":::
 
 ### Feature Administration through Group Policy
 

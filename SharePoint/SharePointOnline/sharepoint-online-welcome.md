@@ -8,8 +8,6 @@ ms.service: sharepoint-online
 ms.topic: article
 ms.author: luche
 localization_priority: Normal
-search.appverid: 
-- MET150
 ms.custom:
 - CSSTroubleshoot
 appliesto: 

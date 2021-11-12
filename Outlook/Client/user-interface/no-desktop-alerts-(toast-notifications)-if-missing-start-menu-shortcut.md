@@ -65,7 +65,7 @@ If the **Remove common program groups from Start Menu** setting is enabled, disa
 
 The **Remove common program groups from Start Menu** setting is located under **User Configuration** > **Administrative Templates** > **Start Menu and Taskbar**, as shown in the following screenshot:
 
-:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/remove-common-program-groups-from-start-menu.png" alt-text="Location of the Remove common program groups from Start Menu setting" border="false":::
+:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/remove-common-program-groups-from-start-menu.png" alt-text="Screenshot shows the location of the Remove common program groups from Start Menu setting." border="false":::
 
 If the **Remove common program groups from Start Menu** setting is not enabled, you can fix this by running a repair of your installation of Microsoft Office.
 
@@ -76,11 +76,11 @@ To determine what type of Office installation you have, start Outlook, and then 
 
 The MSI installer displays the following:
 
-:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/msi-install-info.png" alt-text="Information window for MSI install" border="false":::
+:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/msi-install-info.png" alt-text="Screenshot of the Information window for MSI install.":::
 
 The Click-To-Run installer displays the following (notice the **Update Options** button):
 
-:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/click-to-run-install-info.png" alt-text="Information window for Click-to-Run install" border="false":::
+:::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/click-to-run-install-info.png" alt-text="Screenshot of Information window for Click-to-Run install.":::
 
 For information about deploying Office 365 ProPlus, which uses Click-to-Run, see [Deployment guide for Office 365 ProPlus](/deployoffice/deployment-guide-microsoft-365-apps).
 

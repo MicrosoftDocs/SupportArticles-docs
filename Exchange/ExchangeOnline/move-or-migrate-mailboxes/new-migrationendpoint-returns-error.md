@@ -26,7 +26,7 @@ When you run the `New-MigrationEndpoint` cmdlet to create a PublicFolder or Publ
 
 > MAPI provider is not supported for mailbox with version <*VersionNumber*> on server <*ServerName*>.
 
-![Screenshot of the error information.](./media/new-migrationendpoint-returns-error/error-detail.png)
+:::image type="content" source="media/new-migrationendpoint-returns-error/error-detail.png" alt-text="Screenshot of the error information when you run the New-MigrationEndpoint cmdlet.":::
 
 ## Cause
 
