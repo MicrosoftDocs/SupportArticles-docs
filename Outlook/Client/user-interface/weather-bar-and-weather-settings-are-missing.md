@@ -77,7 +77,7 @@ Group Policy Setting name: **Online Content Options**
 > [!NOTE]
 > The \<xx> placeholder represents your version of Office (16 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, 13 = Office 2013).
 
-:::image type="content" source="media/weather-bar-and-weather-settings-are-missing/online-content-options.png" alt-text="Online Content Options" border="false":::
+:::image type="content" source="media/weather-bar-and-weather-settings-are-missing/online-content-options.png" alt-text="Screenshot of a Group Policy setting Online Content Options.":::
 
 This setting also affects other features in Microsoft Office, including:
 

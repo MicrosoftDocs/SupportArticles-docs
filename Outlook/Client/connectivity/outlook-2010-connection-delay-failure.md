@@ -27,9 +27,9 @@ When you configure Outlook 2010 with a profile to connect to two or more Office 
 
 Screenshots of both messages as shown in the Outlook status bar follow.
 
-![Trying to connect" message in the Outlook status bar](./media/outlook-2010-connection-delay-failure/trying-to-connect.jpg)
+:::image type="content" source="./media/outlook-2010-connection-delay-failure/trying-to-connect.png" alt-text="Screenshot of Trying to connect message in the Outlook status bar." border="false":::
 
-![Disconnected" message in the Outlook status bar](./media/outlook-2010-connection-delay-failure/disconnected.jpg)
+:::image type="content" source="./media/outlook-2010-connection-delay-failure/disconnected.png" alt-text="Screenshot of Disconnected message in the Outlook status bar." border="false":::
 
 ## Resolution
 
