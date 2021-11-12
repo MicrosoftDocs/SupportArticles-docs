@@ -4,6 +4,7 @@ description: Provides options for you to verify a supported version of Microsoft
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics CRM for Microsoft Office Outlook is not installed
 

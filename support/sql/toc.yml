@@ -163,6 +163,8 @@
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
       href: admin/manage-error-log.md
+    - name: Non-yielding error if the lock pages in memory option is disabled
+      href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
       href: admin/pass-variable-linked-server-query.md
     - name: Performance issues when using Columstore indexes with large pages
@@ -369,6 +371,8 @@
       href: performance/schemamgr-store-degrades-performance.md
     - name: Troubleshoot blocking caused by compile locks
       href: performance/troubleshoot-blocking-caused-compile-locks.md
+    - name: Troubleshoot high-CPU-usage issues
+      href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
     - name: Troubleshoot query time-out errors

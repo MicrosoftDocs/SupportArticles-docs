@@ -4,6 +4,7 @@ description: Describes the issue and resolution for restoring a Microsoft Dynami
 ms.reviewer: chanson, ehagen
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database
 

@@ -4,6 +4,7 @@ description: Describes an error message that occurs when you try to synchronize 
 ms.reviewer: jbsimon
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Error occurs when synchronizing Microsoft Office Outlook with the Microsoft Dynamics CRM server
 

@@ -4,6 +4,7 @@ description: A connectivity issue while accessing the CRM application and as a r
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-access
 ---
 # Internet accessible URLs required for connectivity to Microsoft Dynamics CRM Online
 

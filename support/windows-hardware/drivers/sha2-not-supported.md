@@ -4,6 +4,7 @@ description: This article provides a resolution for the issue where Windows Embe
 ms.date: 08/27/2020
 ms.prod-support-area-path: 
 ms.reviewer: saroskar, markrad
+ms.technology: windows-hardware-general
 ---
 # Windows Embedded HandHeld 6.5 does not support SHA2
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you import Attribu
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # Error occurs when importing AttributeMap in Microsoft Dynamics 365
 

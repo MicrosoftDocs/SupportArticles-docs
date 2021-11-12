@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # "The given URL neither points to an OData service or a feed" error when retrieving data from a Dynamics CRM 2013 OData endpoint
 

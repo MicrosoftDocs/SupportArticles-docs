@@ -4,6 +4,7 @@ description: This article describes some known problems with Internet Explorer 9
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: bachoang
+ms.technology: internet-explorer-development-website
 ---
 # A web page may fail to get focus in Internet Explorer 9
 

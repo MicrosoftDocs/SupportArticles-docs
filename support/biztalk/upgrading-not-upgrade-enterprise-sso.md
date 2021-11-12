@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where performing
 ms.date: 09/28/2020
 ms.prod-support-area-path: ENTSSO
 ms.prod: biztalk-server
+ms.technology: biztalk-server-entsso
 ---
 # Upgrading to BizTalk Server 2013 does not upgrade Enterprise SSO
 

@@ -4,6 +4,7 @@ description: This article provides a list of the HTTP status codes in IIS 7.0 an
 ms.date: 07/21/2020
 ms.prod-support-area-path: WWW Administration and Management
 ms.reviewer: v-jayc
+ms.technology: iis-www-administration-management
 ---
 # The HTTP status code in IIS 7.0 and later versions
 

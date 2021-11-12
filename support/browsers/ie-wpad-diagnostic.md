@@ -4,6 +4,7 @@ description: This article describes the actions that may occur and the informati
 ms.date: 04/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: aanders
+ms.technology: internet-explorer-general
 ---
 # Internet Explorer WPAD Diagnostic - All versions
 

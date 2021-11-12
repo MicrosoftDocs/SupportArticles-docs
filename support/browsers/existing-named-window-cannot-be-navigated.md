@@ -4,6 +4,7 @@ description: This article discusses issues related to named windows in Internet 
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: bachoang
+ms.technology: internet-explorer-development-website
 ---
 # Named window navigation might fail to navigate the existing named window
 

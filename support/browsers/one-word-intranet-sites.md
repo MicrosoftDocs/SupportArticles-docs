@@ -4,6 +4,7 @@ description: In order to get an excellent search experience, we are changing the
 ms.date: 04/20/2020
 ms.prod-support-area-path: 
 ms.reviewer: bhaskerk, davidcon, axelr, joelba, jmann
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # One-word intranet sites take you to your default search engine with Internet Explorer 9 and later versions
 

@@ -4,6 +4,7 @@ description: Appointments that are created in Microsoft Dynamics 365 can't synch
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Appointments do not synchronize to Exchange or Outlook after being created in Microsoft Dynamics 365
 

@@ -1,9 +1,10 @@
 ---
 title: Outlook closes unexpectedly during startup
-description: Fix an issue in which you get the "Microsoft Outlook has stopped working" error when starting Outlook with the Microsoft Dynamics CRM 2011 client installed.
+description: Fix an issue in which you get the Microsoft Outlook has stopped working error when starting Outlook with the Microsoft Dynamics CRM 2011 client installed.
 ms.reviewer: snulph, debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Outlook closes unexpectedly with the error (Microsoft Outlook has stopped working) during startup with the Microsoft Dynamics CRM 2011 client installed
 

@@ -4,6 +4,7 @@ description: Lists Microsoft Dynamics 365 E-mail Setup / Configuration and Dynam
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Microsoft Dynamics 365 E-mail Setup / Configuration and Microsoft Dynamics 365 for Mobile
 

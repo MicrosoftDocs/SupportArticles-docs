@@ -4,6 +4,7 @@ description: Introduces how to change the audience and type of a Dynamics 365 Po
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-portal-addon
 ---
 # How to change the audience and type of a Microsoft Dynamics 365 Portal
 

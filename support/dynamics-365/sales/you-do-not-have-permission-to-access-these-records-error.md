@@ -4,6 +4,7 @@ description: When you select Track in Microsoft Dynamics CRM within Microsoft Dy
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # You do not have permission to access these records error when you select Track in Microsoft Dynamics CRM
 

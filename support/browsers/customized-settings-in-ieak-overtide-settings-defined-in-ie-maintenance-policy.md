@@ -2,9 +2,10 @@
 title: Customized settings in IEAK override defined settings
 description: This article introduces a by design issue that customized settings that are defined in an IEAK installation package override the settings defined in Internet Explorer Maintenance Policy.
 ms.date: 01/04/2021
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: heikom, yechen, axelr, aanders
 ms.topic: article
+ms.technology: internet-explorer-administration
 ---
 # Customized settings in an IEAK installation package override setting defined in Internet Explorer Maintenance Policy
 

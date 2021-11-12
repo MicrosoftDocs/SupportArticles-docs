@@ -5,6 +5,7 @@ ms.date: 09/25/2020
 ms.prod-support-area-path: Management and Operations
 ms.reviewer: mandia
 ms.topic: how-to
+ms.technology: biztalk-server-management-operations
 ---
 # Maintain and troubleshoot BizTalk Server databases
 

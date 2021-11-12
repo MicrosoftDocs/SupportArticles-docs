@@ -260,12 +260,12 @@ The boot partition of the encrypted disk contains the header file. You'll use th
 
 ### <a name="lvm"></a> Mount the unlocked partition and enter the chroot environment (LVM only) 
 
-If the disks use the LVM device mapper framework, you have to take extra steps to mount the disk and enter the chroot environment. To use the chroot tool together with the encrypted disk, the unlocked partition ("osencrypt") and its logical volumes must be recognized as the volume group that's named rootvg. However, by default, the repair VM’s OS partition and its logical volumes are already assigned to a volume group that has the name rootvg. We must resolve this conflict before we can continue.
+If the disks use the LVM device mapper framework, you have to take extra steps to mount the disk and enter the chroot environment. To use the chroot tool together with the encrypted disk, the unlocked partition ("osencrypt") and its logical volumes must be recognized as the volume group that's named rootvg. However, by default, the repair VM's OS partition and its logical volumes are already assigned to a volume group that has the name rootvg. We must resolve this conflict before we can continue.
 
 1. Use the `pvs` command to display the properties of the LVM physical volumes. You might see warning messages, as in the following example, that indicate that the unlocked partition ("/dev/mapper/osencrypt") and another device are using duplicate universally unique identifiers (UUIDs). Alternatively, you might see two partitions assigned to rootvg.
 
     >[!NOTE]
-    > You want only the unlocked partition ("osencrypt") to be assigned to the rootvg volume group so that you can access its logical volumes through the chroot utility. To fix this problem, you'll temporarily import the partition into a different volume group, and activate that volume group. Next, you'll rename the current rootvg volume group. Only after you enter the chroot environment will you rename the encrypted disk’s volume group as "rootvg."
+    > You want only the unlocked partition ("osencrypt") to be assigned to the rootvg volume group so that you can access its logical volumes through the chroot utility. To fix this problem, you'll temporarily import the partition into a different volume group, and activate that volume group. Next, you'll rename the current rootvg volume group. Only after you enter the chroot environment will you rename the encrypted disk's volume group as "rootvg."
 
 ### Assigning the unlocked partition (example)
 
@@ -297,16 +297,16 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
    However, if you want to use the chroot utility for troubleshooting, continue by using the following steps.
 
-7. Mount the encrypted disk’s boot partition to the directory /investigateroot/boot/ without using the duplicate UUIDs. (Remember that the encrypted disk’s boot partition is the second largest that's assigned no partition label.) In our current example, the encrypted disk’s boot partition is sda2.
+7. Mount the encrypted disk's boot partition to the directory /investigateroot/boot/ without using the duplicate UUIDs. (Remember that the encrypted disk's boot partition is the second largest that's assigned no partition label.) In our current example, the encrypted disk's boot partition is sda2.
 
    ```bash
    mount -o nouuid /dev/sda2 /investigateroot/boot
    ```
-1. Mount the encrypted disk’s EFI system partition to the /investigateroot/boot/efi directory. You can identify this partition by its label. In our current example, the EFI system partition is sda1.
+1. Mount the encrypted disk's EFI system partition to the /investigateroot/boot/efi directory. You can identify this partition by its label. In our current example, the EFI system partition is sda1.
    ```bash
    mount /dev/sda1 /investigateroot/boot/efi
    ```
-1. Mount the remaining unmounted logical volumes in the encrypted disk’s volume group to subdirectories of "/investigateroot/":
+1. Mount the remaining unmounted logical volumes in the encrypted disk's volume group to subdirectories of "/investigateroot/":
    ```bash
    mount -o nouuid /dev/mapper/rescuemevg-varlv /investigateroot/var
    mount -o nouuid /dev/mapper/rescuemevg-homelv /investigateroot/home
@@ -431,7 +431,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
         |  Parameter |  Value in the output | example  |
         |---|---|---|
         | disk-encryption-keyvault  |  diskEncryptionKey:id | /subscriptions/deb73ff9-0000-0000-0000-0000c7a96d37/resourceGroups/Thomas/providers/Microsoft.KeyVault/vaults/ContosoKeyvault |
-        | key-encryption-key  | keyEncryptionKey:KeyURI   | https://ContosoKeyvault.vault.azure.net/keys/mykey/00000000987145a3b79b0ed415fa0000|
+        | key-encryption-key  | keyEncryptionKey:KeyURI   | `https://ContosoKeyvault.vault.azure.net/keys/mykey/00000000987145a3b79b0ed415fa0000`|
     
 1. Run the following command to check whether a new disk is attached: 
      ```bash

@@ -15,13 +15,13 @@ When you assign a device restrictions profile that includes password settings to
 
 If the profile is assigned before the device is enrolled, the password settings are applied at the initial state of device setup. Therefore, you are prompted to set a password, as shown in the following screenshot:
 
-:::image type="content" source="media/assign-password-setting-android-fully-managed/set-passcode.png" alt-text="Set a screen lock":::
+:::image type="content" source="media/assign-password-setting-android-fully-managed/set-screen-lock.png" alt-text="Screenshot of the Set a screen lock step.":::
 
 ## Behavior if the profile is assigned after enrollment
 
 If the profile is assigned after the device is enrolled, you aren't prompted to set a password during device setup, as shown in the following screenshot:
 
-:::image type="content" source="media/assign-password-setting-android-fully-managed/install-work-apps.png" alt-text="Install the work apps":::
+:::image type="content" source="media/assign-password-setting-android-fully-managed/install-work-apps.png" alt-text="Screenshot of the Install work apps step.":::
 
 When the profile is assigned to the device, you won't be notified or prompted to set a password. The password settings deployment will report as failed until you manually set a password that meets the requirements.
 

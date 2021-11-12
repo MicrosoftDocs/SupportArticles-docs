@@ -5,6 +5,7 @@ ms.date: 10/09/2020
 ms.prod-support-area-path: WWW Authentication and Authorization
 ms.reviewer: prchanda, jarrettr
 ms.prod: iis
+ms.technology: iis-www-authentication-authorization
 ---
 # Understanding identities in IIS
 

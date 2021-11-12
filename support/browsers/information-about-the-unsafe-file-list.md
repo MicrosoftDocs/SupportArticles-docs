@@ -4,6 +4,7 @@ description: The article provides information about the Unsafe File List in Inte
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-security-privacy
 ---
 # Information about the Unsafe File List in Internet Explorer
 

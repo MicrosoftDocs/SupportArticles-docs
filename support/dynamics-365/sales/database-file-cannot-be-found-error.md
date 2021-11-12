@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when configuring Micros
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The database file cannot be found error when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

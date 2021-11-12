@@ -4,6 +4,7 @@ description: Provides a solution to a dependency error attempting to uninstall P
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # Dependency error when you try to uninstall Portals solutions from Microsoft Dynamics 365
 

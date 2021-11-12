@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: aaronric
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Tracking an email in Outlook does not resolve to the associated record in Microsoft Dynamics CRM 2011
 

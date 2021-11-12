@@ -4,6 +4,7 @@ description: This article provides resolutions for the problems that a user may 
 ms.date: 12/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: LPrete
+ms.technology: iis-general
 ---
 # Users cannot access Web sites when the security event log is full
 

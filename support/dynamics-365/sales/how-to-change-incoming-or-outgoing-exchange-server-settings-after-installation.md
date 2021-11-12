@@ -4,6 +4,7 @@ description: Describes how to change the incoming or outgoing Microsoft Exchange
 ms.reviewer: mmaasjo, jstrand
 ms.topic: how-to
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # How to change incoming or outgoing Exchange Server settings after the original installation is done
 

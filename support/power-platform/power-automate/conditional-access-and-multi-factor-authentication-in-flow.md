@@ -4,6 +4,7 @@ description: Using conditional access has an unexpected effect on users who use 
 ms.reviewer: dblyth
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Recommendations for conditional access and multi-factor authentication in Microsoft Flow
 

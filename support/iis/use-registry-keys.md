@@ -4,6 +4,7 @@ description: This article describes the registry keys that are used by Microsoft
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: finbarr
+ms.technology: iis-general
 ---
 # Description of the registry keys that are used by Internet Information Services
 

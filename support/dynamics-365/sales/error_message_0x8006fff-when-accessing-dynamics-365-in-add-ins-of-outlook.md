@@ -4,6 +4,7 @@ description: Error_Message_0x8006ffff occurs when you access Microsoft Dynamics 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Issue when trying to access Microsoft Dynamics 365 within the Add-ins area of Outlook
 
