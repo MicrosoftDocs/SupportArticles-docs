@@ -25,21 +25,21 @@ To resolve this issue, users must identify their enrolled device by following th
 
 1. Browse to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com), and then log in by using your account. You should see something similar to the following.
 
-   :::image type="content" source="./media/apps-appear-unavailable/no-device.png" alt-text="Screenshot of no device shown.":::
+   :::image type="content" source="media/apps-appear-unavailable/cannot-show-apps.png" alt-text="Screenshot of We can't show you any apps message.":::
 
 2. Select **My Devices**.
 3. On the **My Devices** screen, select **Tap here**.
 
-   :::image type="content" source="./media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices.":::
+   :::image type="content" source="media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of the Tap here link in my devices page.":::
 
 4. On the next screen, select your device to enroll it.
 
-   :::image type="content" source="./media/apps-appear-unavailable/select-device.png" alt-text="Screenshot of selecting which device.":::
+   :::image type="content" source="media/apps-appear-unavailable/select-device.png" alt-text="Screenshot of selecting device.":::
 
 5. You are returned to **My Devices**. The device should show a green check, as shown in the following screenshot.
 
-   :::image type="content" source="./media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices.":::
+   :::image type="content" source="media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices page with a green check in the selected device.":::
 
 6. Return to the **Apps** screen. The applications should now be visible.
 
-   :::image type="content" source="./media/apps-appear-unavailable/apps.png" alt-text="Screenshot of apps displayed.":::
+   :::image type="content" source="media/apps-appear-unavailable/apps.png" alt-text="Screenshot of apps displayed in the screen.":::

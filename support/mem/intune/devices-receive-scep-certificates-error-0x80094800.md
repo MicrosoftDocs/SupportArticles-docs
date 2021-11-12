@@ -63,6 +63,6 @@ To fix this issue, follow these steps:
 
    The following is an example that shows an incorrect value for `SignatureTemplate`:
 
-   :::image type="content" source="./media/devices-receive-scep-certificates-error-0x80094800/value.png" alt-text="Screenshot of incorrect value for SignatureTemplate." border="false":::
+   :::image type="content" source="media/devices-receive-scep-certificates-error-0x80094800/signature-template-value.png" alt-text="Screenshot of an incorrect value for SignatureTemplate." border="false":::
 
 2. Restart the Intune Connector Service on the NDES server.

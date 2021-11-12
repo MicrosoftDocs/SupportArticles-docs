@@ -63,7 +63,7 @@ Reagentc /info
 
 The command should show a Windows RE status of **Enabled**, like this:
 
-:::image type="content" source="./media/remotewipe-fails-sending-dowipe-command/status.png" alt-text="Screenshot of Windows RE status of Enabled.":::
+:::image type="content" source="media/remotewipe-fails-sending-dowipe-command/windows-re-status.png" alt-text="Screenshot of the output of Reagentc/info command, showing the Windows R E status is Enabled.":::
 
 If the status is **Disabled**, you will need to troubleshoot why Windows RE is disabled.
 
