@@ -72,7 +72,7 @@ To fix this issue, follow these steps:
 
 The first time that you log on to Graph Explorer, you are prompted by a **Permissions requested** dialog box that resembles the following.
 
-:::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-2.png" alt-text="Screenshot of the Permissions requested page":::
+:::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-2.png" alt-text="Screenshot of the Permissions requested page.":::
 
 By selecting **Accept**, you grant the app permissions to your sign-in account. By selecting **Consent on behalf of your organization**, you allow other accounts to also use Graph Explorer to query Intune management objects. This creates an Enterprise application in Azure AD that has the following settings:
 

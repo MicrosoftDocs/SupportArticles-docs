@@ -55,7 +55,7 @@ To find the `AutopilotProfileID`, follow these steps:
 
     `https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/AutopilotMenuBlade/overview/id/<AutopilotProfileID>`
 
-    :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/url.png" alt-text="screenshot of the URL in the address bar.":::
+    :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/url.png" alt-text="Screenshot of the URL in the address bar.":::
   
 #### Step 2: Find the GroupID of the assigned group that has been deleted
 
