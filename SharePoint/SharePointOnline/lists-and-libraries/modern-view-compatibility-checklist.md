@@ -11,7 +11,9 @@ ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: luche
 keyword: modern view
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI-158475
 appliesto:
 - SharePoint Online
 ---
@@ -128,13 +130,13 @@ remove the publishing Column(s) from the current View. You don't have to remove 
 
 **Detection:** The View is either a Calendar or Gantt type and is not Modern compatible.
 
-**Recommendation:** Provide feedback through [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
+**Recommendation:** Provide feedback through [Feedback for Microsoft 365](https://feedbackportal.microsoft.com/) if this is an important feature for you.
 
 ## The List or Library is not Modern compatible
 
 **Detection:** The List or Library is not Modern compatible.
 
-**Recommendation:** Provide feedback through [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
+**Recommendation:** Provide feedback through [Feedback for Microsoft 365](https://feedbackportal.microsoft.com/) if this is an important feature for you.
 
 **More information:**
 
@@ -220,7 +222,7 @@ Run the following PNP commands:
 
 **Detection:** The current Document Library has a new item form, and this is not compatible with Modern.
 
-**Recommendation:** Provide feedback through [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
+**Recommendation:** Provide feedback through [Feedback for Microsoft 365](https://feedbackportal.microsoft.com/) if this is an important feature for you.
 
 ## The form page contains Column(s) that are incompatible with Modern
 

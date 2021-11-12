@@ -52,7 +52,7 @@ Microsoft Edge browser on Chromium (version 80) will not be affected by these Sa
 
 Microsoft customers who use Active Directory Federation Services (AD FS) or Web Application Proxy must deploy one of the following Windows Server updates:
 
-|**Product**|**KB Article**|**Release Date**|
+|Product|KB Article|Release Date|
 |:-----|:-----|:-----|
 Windows Server 2019|[KB 4534273](https://support.microsoft.com/help/4534273/windows-10-update-kb4534273)|January 14, 2020|
 |Windows Server 2016|[KB 4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271)|January 14, 2020|
@@ -60,7 +60,7 @@ Windows Server 2012 R2|[KB 4534309](https://support.microsoft.com/help/4534309/w
 
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
 
-|**Product**|**KB Article**|**Release Date**|
+|Product|KB Article|Release Date|
 |:-----|:-----|:-----|
 |Exchange Server 2019|[KB 4537677](https://support.microsoft.com/help/4537677/cumulative-update-5-for-exchange-server-2019)|March 17, 2020|
 |Exchange Server 2016|[KB 4537678](https://support.microsoft.com/help/4537678/cumulative-update-16-for-exchange-server-2016)|March 17, 2020|
@@ -116,7 +116,7 @@ Use Chrome Beta version 80 to test the scenarios:
 
 3. Enable the SameSite flags. To do this, type *chrome://flags* in the address bar, search for SameSite, and then select **Enabled** for the following options.
 
-:::image type="content" source="./media/chrome-behavior-affects-applications/samesite-debugging.png" alt-text="Enable SameSite settings":::
+:::image type="content" source="media/chrome-behavior-affects-applications/samesite-debugging.png" alt-text="Screenshot to enable the SameSite settings in Chrome.":::
 
 ## More information
 
@@ -128,7 +128,7 @@ The Chrome team had announced plans to roll out [a change in the default behavio
 
 If you suspect that your users are using a Chrome version 76 or a later version that has SameSite enabled, you can check the version number by navigating to `chrome://settings/help` or by selecting the Chrome settings icon, and then selecting **Help** > **About Google Chrome**.
 
-:::image type="content" source="./media/chrome-behavior-affects-applications/check-chrome-version.png" alt-text="Checking Chrome version in About Google Chrome":::
+:::image type="content" source="media/chrome-behavior-affects-applications/check-chrome-version.png" alt-text="Screenshot shows steps to check the Chrome version.":::
 
 For the 77–79 versions of Chrome, navigate to `chrome://flags` to see whether they have the flags enabled. The setting default will begin to change in Chrome version 80 on a graduated release.
 

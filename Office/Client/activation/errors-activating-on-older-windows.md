@@ -2,7 +2,7 @@
 title: Errors activating Microsoft 365 on older Windows versions
 description: Describes errors that can occur during Windows apps activation if TLS 1.2 isn't activated.
 author: vikkarti
-ms.author: v-matham
+ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

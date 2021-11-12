@@ -70,7 +70,7 @@ To resolve this issue, start the Windows Firewall service. To do this, follow th
 2. Type *services.msc*, and then select **OK**.
 3. In the **Services** window, right-click **Windows Firewall**, and then select **Start**.
 
-:::image type="content" source="media/cannot-open-word-documents-or-excel-spreadsheets/firewall-service.jpg" alt-text="Firewall Service":::
+:::image type="content" source="media/cannot-open-word-documents-or-excel-spreadsheets/firewall-service.png" alt-text="Screenshot of the Windows Firewall service.":::
 
 ## More information
 
