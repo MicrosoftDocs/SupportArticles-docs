@@ -1,6 +1,6 @@
 ---
 title: Non-yielding error if the lock pages in memory option is disabled
-description: This article provides resolutions for the non-yielding scheduler error that occurs in large memory server if the lock pages in memory option is disabled.
+description: Provides resolutions for the non-yielding scheduler error that occurs in large memory server if the lock pages in memory option is disabled.
 ms.date: 10/20/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni, pahaefel
