@@ -157,7 +157,7 @@ After your Intune account is connected to your Android enterprise account, you c
 
 13. To assign the app to a group, select the app that you want to assign. In the **Manage** section of the menu, select **Properties**, and then select **Edit** next to **Assignments** to open the **Add group** pane.
 
-    :::image type="content" source="media/configure-android-enterprise-devices-intune/assign-app.png" alt-text="Select Properties and then Assignments. " lightbox="media/configure-android-enterprise-devices-intune/assign-app.png":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/assign-app.png" alt-text="Select Properties and then Assignments." lightbox="media/configure-android-enterprise-devices-intune/assign-app.png":::
 
 14. In the **Assignments** tab, under **Required**, select **Add group**, select the groups to include, and then select **Select**.
 
