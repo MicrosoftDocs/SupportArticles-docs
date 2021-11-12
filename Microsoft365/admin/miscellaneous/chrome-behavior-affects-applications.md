@@ -52,7 +52,7 @@ Microsoft Edge browser on Chromium (version 80) will not be affected by these Sa
 
 Microsoft customers who use Active Directory Federation Services (AD FS) or Web Application Proxy must deploy one of the following Windows Server updates:
 
-|**Product**|**KB Article**|**Release Date**|
+|Product|KB Article|Release Date|
 |:-----|:-----|:-----|
 Windows Server 2019|[KB 4534273](https://support.microsoft.com/help/4534273/windows-10-update-kb4534273)|January 14, 2020|
 |Windows Server 2016|[KB 4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271)|January 14, 2020|
@@ -60,7 +60,7 @@ Windows Server 2012 R2|[KB 4534309](https://support.microsoft.com/help/4534309/w
 
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
 
-|**Product**|**KB Article**|**Release Date**|
+|Product|KB Article|Release Date|
 |:-----|:-----|:-----|
 |Exchange Server 2019|[KB 4537677](https://support.microsoft.com/help/4537677/cumulative-update-5-for-exchange-server-2019)|March 17, 2020|
 |Exchange Server 2016|[KB 4537678](https://support.microsoft.com/help/4537678/cumulative-update-16-for-exchange-server-2016)|March 17, 2020|
