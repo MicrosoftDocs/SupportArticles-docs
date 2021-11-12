@@ -44,7 +44,7 @@ Both Windows 10 and Windows 8 protect the part of the registry that stores the d
 2.	Select **Choose default apps by protocol**. 
 3.	Scroll to locate **MAILTO** in the list, and then set Outlook as the default app.
 
-    :::image type="content" source="media/configure-email-client-using-policy/configure-email-client-using-policy-1.png" alt-text="Set the MAILTO to Outlook.":::
+    :::image type="content" source="media/configure-email-client-using-policy/outlook-default-app.png" alt-text="Screenshot shows steps to set Outlook as the default app.":::
 4.	After the default is set, use [DISM to export these values to XML](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations#generate-a-default-app-associations-xml-file).
 
     > [!NOTE]
