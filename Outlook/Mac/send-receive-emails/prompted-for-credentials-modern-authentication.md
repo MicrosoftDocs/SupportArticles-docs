@@ -41,7 +41,7 @@ In this situation, you have to manually enter your UPN in the Username field in 
 
 Enter your UPN in the User name field of the **Accounts** dialog box, and then quit and restart Outlook 2016 for Mac.
 
-![Screenshot of the Outlook 2016 for Mac Accounts dialog box](./media/prompted-for-credentials-modern-authentication/enter-upn.png)
+:::image type="content" source="./media/prompted-for-credentials-modern-authentication/enter-upn.png" alt-text="Screenshot of the Outlook 2016 for Mac Accounts dialog box." border="false":::
 
 ## More information
 

@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-matham
+ms.author: v-matthamer
 ms.custom: 
 - CSSTroubleshoot
 - CI 153759
