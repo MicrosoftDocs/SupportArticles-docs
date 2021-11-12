@@ -684,6 +684,8 @@
       href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
+    - name: Can't start Windows 11 in S mode from a recovery drive
+      href: ./performance/cannot-start-windows-11-s-mode-recovery-drive.md
     - name: Changing ATA drive setting causes reboot loop
       href: ./performance/changing-bios-ata-drive-causes-reboot-loop.md
     - name: Fail to use PXE to boot clients from WDS
