@@ -257,7 +257,7 @@ _Original KB number:_ &nbsp; 2681562
 
   The details of the error resemble the following.
   
-  :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot of the shows details of the rule check error in Rule Check Result dialog." border="false":::
+  :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot shows details of the rule check error in Rule Check Result dialog." border="false":::
   
   Cause
   
