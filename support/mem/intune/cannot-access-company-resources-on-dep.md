@@ -15,9 +15,9 @@ _Original KB number:_ &nbsp; 4493320
 
 You have a DEP device that's enrolled in Microsoft Intune and has Conditional Access policies applied. When you try to access a cloud app on the device, you receive the following error message:
 
-> Your sign-in was successful but your admin requires your device to be managed by [*CompanyName*] to access this resource.
+> Your sign-in was successful but your admin requires your device to be managed by <*CompanyName*> to access this resource.
 
-:::image type="content" source="media/cannot-access-company-resources-on-dep/error.png" alt-text="screenshot of error":::
+:::image type="content" source="media/cannot-access-company-resources-on-dep/require-device-managed-error.png" alt-text="Screenshot of your admin requires your device to be managed by error.":::
 
 ## Cause
 
@@ -25,7 +25,7 @@ This issue occurs if the following conditions are true:
 
 - The enrollment profile has **Select where users must authenticate** set to **Setup Assistant**.
 
-    :::image type="content" source="media/cannot-access-company-resources-on-dep/user-affinity.png" alt-text="screenshot of User affinity":::
+    :::image type="content" source="media/cannot-access-company-resources-on-dep/select-where-users-must-authenticate.png" alt-text="Screenshot of the Select where users must authenticate option.":::
 
 - The Company Portal app isn't deployed to the DEP device.
 - The Company Portal app is required to enforce Conditional Access policies.

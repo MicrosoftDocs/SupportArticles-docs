@@ -18,11 +18,11 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 2. Use the browser to get the certificate details. For example, in Microsoft Edge, select the HTTPS lock symbol, and then select **Certificate**. In the Certificate window, select the **Certification Path** tab.
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/certification-path.png" alt-text="Cerfication path":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/certification-path.png" alt-text="Screenshot of the Certification Path tab." border="false":::
 
 3. In the local machine certificate store, find the Baltimore CyberTrust Root certificate, and then export the root certificate.
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/export-certificate.png" alt-text="Export Baltimore CyberTrust Root certificate":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/export-certificate.png" alt-text="Screenshot of steps to export Baltimore CyberTrust Root certificate.":::
 
 4. In ISE, select **Administration** > **System** > **Certificates** > **Trusted Certificates**, and then import the root certificate that you exported in step 3. Give the certificate a meaningful name, such as *Azure MDM*.
 
@@ -34,7 +34,7 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 
     ```powershell
     $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
-    $cer.Import(“mycer.cer”)
+    $cer.Import("mycer.cer")
     $bin = $cer.GetRawCertData()
     $base64Value = [System.Convert]::ToBase64String($bin)
 
@@ -46,7 +46,7 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 
     After the script runs, the values are stored in the variables. Type the variable name at the PowerShell prompt to review the values, as shown in the following example:
 
-    :::image type="content" source="media/integrate-cisco-ise-intune/script-demo.png" alt-text="Review variable values":::
+    :::image type="content" source="media/integrate-cisco-ise-intune/script-demo.png" alt-text="Review variable values in PowerShell window.":::
 
 4. Keep the values for `$base64Thumbprint`, `$base64Value`, and `$keyid`. They will be used in the [Configure the application manifest and upload to Azure](#configure-the-application-manifest-and-upload-to-azure) step.
 
@@ -60,7 +60,7 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
    - **Supported account types**: Select an option to specify who can use the application.
    - **Redirect URI (optional)**: Select **Web**, and then enter the [redirect URI](/azure/active-directory/develop/quickstart-register-app#add-a-redirect-uri) for the location that the access token is sent to.
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/register-application.png" alt-text="Register an application":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/register-application.png" alt-text="Screenshot of the Register an application page.":::
 
 4. Select **Register** to complete the app registration.
 
@@ -68,12 +68,12 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 
 1. After the registration is complete, the Azure portal displays the application's **Overview** page, which includes the **Application (client) ID**.
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/application-overview.png" alt-text="Application overview after registration":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/application-overview.png" alt-text="Application overview after registration.":::
 
 2. On the application **Overview** page, select **Manifest** under **Manage**.
 3. Select **Download** to download the manifest file, and then save it as a JSON file. Do not change the name of the manifest file.
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/download-manifest.png" alt-text="Download the manifest file":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/download-manifest.png" alt-text="Download the manifest file.":::
 
 4. Update the **keyCredentials** field in the JSON file as shown in the following example:
 
@@ -128,7 +128,7 @@ These values are used when you [configure the Microsoft Intune server in ISE](#c
 7. Select **Add permissions**.
 8. Select **Grant admin consent for \<tenant>** to grant administrator consent to the configured permissions. Select **Yes** when you are prompted to confirm the consent action.
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/configured-permissions.png" alt-text="Grant admin consent":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/configured-permissions.png" alt-text="Grant admin consent is highlighted in Configured permissions page.":::
 
 ## Configure the Microsoft Intune server in ISE
 

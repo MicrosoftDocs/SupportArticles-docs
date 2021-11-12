@@ -18,7 +18,7 @@ When you try to [configure the Microsoft Intune on-premises Exchange connector](
 > Configuration Failed  
 > The Microsoft Intune Exchange Connector version is not supported.
 
-:::image type="content" source="media/exchange-connector-version-not-supported/connector-error.png" alt-text="screenshot of Connector error":::
+:::image type="content" source="media/exchange-connector-version-not-supported/connector-error.png" alt-text="Screenshot of the Configuration Failed error.":::
 
 ## Cause
 
