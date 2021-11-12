@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DPI and Display Issues
+ms.custom: sap:dpi-and-display-issues, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Video resolution limits for H.264 and Video Stabilization in Windows 8 and Windows RT

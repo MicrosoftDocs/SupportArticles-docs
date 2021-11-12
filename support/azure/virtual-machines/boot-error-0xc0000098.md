@@ -31,14 +31,14 @@ This issue occurs if a binary is from a different version of Windows than the op
 ## Resolution
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 
 ### Step 1: Attach the OS disk of the VM to another VM as a data disk
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 
 ### Step 2: Replace the binary file
@@ -59,7 +59,7 @@ To fix the issue, follow these steps.
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-0xc0000098/4015973_en_1.png" alt-text="Screenshot of sample of the DIR command.":::
+    :::image type="content" source="media/boot-error-0xc0000098/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 
@@ -67,4 +67,4 @@ To fix the issue, follow these steps.
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 
-4. Detach the repaired disk from the troubleshooting VM. Then, ﻿ [create a VM from the OS disk](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal) ﻿.
+4. Detach the repaired disk from the troubleshooting VM. Then, ﻿ [create a VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal) ﻿.

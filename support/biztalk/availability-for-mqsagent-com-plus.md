@@ -4,6 +4,7 @@ description: This article explains that you must install the MQSAgent or MQSAgen
 ms.date: 03/17/2020
 ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ms.reviewer: shaheera
+ms.technology: biztalk-server-setup-config
 ---
 # Provide high availability for the MQSAgent or MQSAgent2 COM+ application in a clustered environment
 

@@ -4,6 +4,7 @@ description: This article provides two resolutions for the problem where the Qui
 ms.reviewer: bhshastr, clintwa
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # When using the Microsoft Dynamics CRM client for Outlook 2011, the Quick find in Outlook Client displays unexpected results
 

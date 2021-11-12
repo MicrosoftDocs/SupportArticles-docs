@@ -4,6 +4,7 @@ description: This article describes the ScrollHeight property calculation error 
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: adamki
+ms.technology: internet-explorer-development-website
 ---
 # The scrollHeight property may return incorrect values in Internet Explorer
 

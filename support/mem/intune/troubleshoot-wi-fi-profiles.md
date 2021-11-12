@@ -256,7 +256,7 @@ Some additional recommendations:
 
 ### All Wi-Fi profiles report as failing
 
-For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices, you might get a report that all profiles have failed. This can occur when you deploy more than one Wi-Fi profile. In this case, when one fails, all the profiles you deployed at the same time also fail.
+For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices, you might get a report that all profiles have failed. This can occur when you deploy more than one Wi-Fi profile. In this case, when one fails, all the profiles you deployed will report as failing (even if they are still working).
 
 ### A Wi-Fi profile reports as failing, but seems to be working
 

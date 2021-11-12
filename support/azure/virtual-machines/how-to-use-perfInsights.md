@@ -57,7 +57,7 @@ This is a passive collection of information that shouldn't affect the system.
 This scenario runs the [Diskspd](https://github.com/Microsoft/diskspd) benchmark test (IOPS and MBPS) for all drives that are attached to the VM. 
 
 > [!Note]
-> This scenario can affect the system, and shouldn’t be run on a live production system. If necessary, run this scenario in a dedicated maintenance window to avoid any problems. An increased workload that is caused by a trace or benchmark test can adversely affect the performance of your VM.
+> This scenario can affect the system, and shouldn't be run on a live production system. If necessary, run this scenario in a dedicated maintenance window to avoid any problems. An increased workload that is caused by a trace or benchmark test can adversely affect the performance of your VM.
 >
 
 ### Performance analysis
@@ -91,7 +91,7 @@ This scenario runs a special performance counter capture together with a network
 When you run an advanced performance analysis, you select traces to run in parallel. If you want, you can run them all (Performance Counter, Xperf, Network, and StorPort).  
 
 > [!Note]
-> This scenario can affect the system, and shouldn’t be run on a live production system. If necessary, run this scenario in a dedicated maintenance window to avoid any problems. An increased workload that is caused by a trace or benchmark test can adversely affect the performance of your VM.
+> This scenario can affect the system, and shouldn't be run on a live production system. If necessary, run this scenario in a dedicated maintenance window to avoid any problems. An increased workload that is caused by a trace or benchmark test can adversely affect the performance of your VM.
 >
 
 ## What kind of information is collected by PerfInsights?
@@ -125,12 +125,27 @@ Information about Windows VM, disks or storage pools configuration, performance 
 
 ### Performance diagnostics trace (*)
 
-Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. The following rules are currently supported:
+Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. Rules are displayed in the report under the Category -> Finding tab. 
 
-- HighCpuUsage rule: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
-- HighDiskUsage rule: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
-- HighResolutionDiskMetric rule: Shows IOPS, throughput, and I/O latency metrics per 50 milliseconds for each physical disk. It helps to quickly identify disk throttling periods.
-- HighMemoryUsage rule: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+Each rule consists of the following:
+- Finding: Description of the finding.
+- Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation that provide more information on the finding and/or recommendation.
+- Impact Level: Represents the potential for having an impact on performance.
+
+The following cateogries of rules are currently supported:
+
+- High resource usage:
+    * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
+    * High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+    * High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+    * High resolution disk usage: Shows IOPS, throughput, and I/O latency metrics per 50 milliseconds for each physical disk. It helps to quickly identify disk throttling periods.
+- Knowledge base: Detects if specific Knowledge Base (KB) articles are not installed.
+- Disk: Detects specific disk configuration settings.
+- SQL: Detects specific SQL settings.
+- Network: Detects specific network settings.
+- Server cluster: Detects specific server cluster configuration settings.
+- System: Detects specific system configuration settings.
+- CLR: Detects long garbage collection pauses on managed processes.
 
 > [!NOTE] 
 > Currently, Windows versions that include the .NET Framework 4.5 or later versions are supported.
@@ -144,14 +159,17 @@ Collects the following performance counters:
 - Selected counters under \Network Interface, \IPv4\Datagrams, \IPv6\Datagrams, \TCPv4\Segments, \TCPv6\Segments,  \Network Adapter, \WFPv4\Packets, \WFPv6\Packets, \UDPv4\Datagrams, \UDPv6\Datagrams, \TCPv4\Connection, \TCPv6\Connection, \Network QoS Policy\Packets, \Per Processor Network Interface Card Activity, and \Microsoft Winsock BSP
 
 #### For SQL Server instances
+
 - \SQL Server:Buffer Manager, \SQLServer:Resource Pool Stats, and \SQLServer:SQL Statistics\
 - \SQLServer:Locks, \SQLServer:General, Statistics
 - \SQLServer:Access Methods
 
 #### For Azure Files
+
 \SMB Client Shares
 
 ### Diskspd benchmark trace (***)
+
 Diskspd I/O workload tests (OS Disk [write] and pool drives [read/write])
 
 ## Run the PerfInsights tool on your VM
@@ -201,45 +219,46 @@ To run the PerfInsights tool, follow these steps:
 
 2. Unblock the PerfInsights.zip file. To do this, right-click the PerfInsights.zip file, and select **Properties**. In the **General** tab, select **Unblock**, and then select **OK**. This ensures that the tool runs without any additional security prompts.  
 
-    ![Screenshot of PerfInsights Properties, with Unblock highlighted](media/how-to-use-perfInsights/pi-unlock-file.png)
+    :::image type="content" source="media/how-to-use-perfInsights/pi-unlock-file.png" alt-text="Screenshot of PerfInsights Properties, with Unblock highlighted.":::
 
 3.  Expand the compressed PerfInsights.zip file into your temporary drive (by default, this is usually the D drive). 
 
 4.  Open Windows command prompt as an administrator, and then run PerfInsights.exe to view the available commandline parameters.
 
-    ```
+    ```console
     cd <the path of PerfInsights folder>
     PerfInsights
     ```
-    ![Screenshot of PerfInsights commandline output](media/how-to-use-perfInsights/pi-commandline.png)
+
+    :::image type="content" source="media/how-to-use-perfInsights/pi-commandline.png" alt-text="Screenshot of PerfInsights commandline output.":::
     
     The basic syntax for running PerfInsights scenarios is:
     
-    ```
+    ```console
     PerfInsights /run <ScenarioName> [AdditionalOptions]
     ```
 
     You can use the below example to run performance analysis scenario for 5 mins:
     
-    ```
+    ```console
     PerfInsights /run vmslow /d 300 /AcceptDisclaimerAndShareDiagnostics
     ```
 
     You can use the following example to run the advanced scenario with Xperf and Performance counter traces for 5 mins:
     
-    ```
+    ```console
     PerfInsights /run advanced xp /d 300 /AcceptDisclaimerAndShareDiagnostics
     ```
 
     You can use the below example to run performance analysis scenario for 5 mins and upload the result zip file to the storage account:
     
-    ```
+    ```console
     PerfInsights /run vmslow /d 300 /AcceptDisclaimerAndShareDiagnostics /sa <StorageAccountName> /sk <StorageAccountKey>
     ```
 
     You can look up all the available scenarios and options by using the **/list** command:
     
-    ```
+    ```console
     PerfInsights /list
     ```
 
@@ -260,8 +279,9 @@ Within the **PerformanceDiagnostics\_yyyy-MM-dd\_hh-mm-ss-fff.zip** file, you ca
 
 Select the **Findings** tab.
 
-![Screenshot of Overview tab of the PerfInsights Report.](media/how-to-use-perfInsights/pi-finding-tab.png)
-![Screenshot of Storage tab of the PerfInsights Report.](media/how-to-use-perfInsights/pi-findings.png)
+:::image type="content" source="media/how-to-use-perfInsights/pi-overview-findings-tab.png" alt-text="Screenshot of Findings tab under Overview tab of the PerfInsights Report.":::
+
+:::image type="content" source="media/how-to-use-perfInsights/pi-storage-findings-tab.png" alt-text="Screenshot of Findings tab under Storage tab of the PerfInsights Report.":::
 
 > [!NOTE] 
 > Findings categorized as high are known issues that might cause performance issues. Findings categorized as medium represent non-optimal configurations that do not necessarily cause performance issues. Findings categorized as low are informative statements only.
@@ -276,17 +296,17 @@ The **Disk Map** and **Volume Map** sections describe how logical volumes and ph
 
 In the physical disk perspective (Disk Map), the table shows all logical volumes that are running on the disk. In the following example, **PhysicalDrive2** runs two logical volumes created on multiple partitions (J and H):
 
-![Screenshot of disk tab](media/how-to-use-perfInsights/pi-disk-tab.png)
+:::image type="content" source="media/how-to-use-perfInsights/pi-disk-map.png" alt-text="Screenshot of disk map section under Findings tab of the PerfInsights Report.":::
 
 In the volume perspective (Volume Map), the tables show all the physical disks under each logical volume. Notice that for RAID/Dynamic disks, you might run a logical volume on multiple physical disks. In the following example, *C:\\mount* is a mount point configured as *SpannedDisk* on physical disks 2 and 3:
 
-![Screenshot of volume tab](media/how-to-use-perfInsights/pi-volume-tab.png)
+:::image type="content" source="media/how-to-use-perfInsights/pi-volume-map.png" alt-text="Screenshot of volume map section under Findings tab of the PerfInsights Report.":::
 
 ### SQL tab
 
 If the target VM hosts any SQL Server instances, you see an additional tab in the report, named **SQL**:
 
-![Screenshot of SQL tab](media/how-to-use-perfInsights/pi-sql-tab.png)
+:::image type="content" source="media/how-to-use-perfInsights/pi-sql-tab.png" alt-text="Screenshot of SQL tab and the sub-tabs under it.":::
 
 This section contains a **Findings** tab, and additional tabs for each of the SQL Server instances hosted on the VM.
 
@@ -294,11 +314,12 @@ The **Findings** tab contains a list of all the SQL related performance issues f
 
 In the following example, **PhysicalDrive0** (running the C drive) is displayed. This is because both the **modeldev** and **modellog** files are located on the C drive, and they are of different types (such as data file and transaction log, respectively).
 
-![Screenshot of log information](media/how-to-use-perfInsights/pi-log-info.png)
+:::image type="content" source="media/how-to-use-perfInsights/pi-physical-drive-0.png" alt-text="Screenshot of modeldev and modellog files information.":::
 
 The tabs for specific instances of SQL Server contain a general section that displays basic information about the selected instance. The tabs also contain additional sections for advanced information, including settings, configurations, and user options.
 
 ### Diagnostic tab
+
 The **Diagnostic** tab contains information about top CPU, disk, and memory consumers on the computer for the duration of the running of PerfInsights. You can also find information about critical patches that the system might be missing, the task list, and important system events. 
 
 ## References to the external tools used
@@ -317,7 +338,7 @@ You can upload diagnostics logs and reports to Microsoft Support for further rev
 
 The following screenshot shows a message similar to what you might receive:
 
-![Screenshot of sample message from Microsoft Support](media/how-to-use-perfInsights/pi-support-email.png)
+:::image type="content" source="media/how-to-use-perfInsights/pi-support-email.png" alt-text="Screenshot of sample message from Microsoft Support.":::
 
 Follow the instructions in the message to access the file transfer workspace. For additional security, you have to change your password on first use.
 

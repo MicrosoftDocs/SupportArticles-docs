@@ -268,6 +268,8 @@
       href: ./deployment/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
     - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
+    - name: Certificates are missing after you update a device
+      href: ./deployment/certs-missing-after-device-update.md
     - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
@@ -372,14 +374,14 @@
       href: ./deployment/edit-boot-ini-file-windows-2000.md
     - name: Installation File Location not behave on the Explain tab
       href: ./deployment/installation-file-location-service-pack-not-behave.md
+    - name: Language features aren't displayed in Windows 10
+      href: ./deployment/language-features-not-displayed.md
     - name: Language packs no longer available
       href: ./deployment/language-packs-no-longer-available-after-upgrade.md
     - name: MiracastView package cause sysprep error after upgrading a computer
       href: ./deployment/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
     - name: Network provider settings are removed during an in-place upgrade 
       href: ./deployment/network-provider-settings-removed-in-place-upgrade.md
-    - name: OOBE fails when you start a new computer
-      href: ./deployment/windows-oobe-fails-start-new-computer.md
     - name: Operations fail if Windows 8 is improperly identified as a WTG installation
       href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
     - name: Remote Server Admin Tools uninstalled during in-place upgrade
@@ -522,10 +524,6 @@
     items:
     - name: Intranet site is identified as Internet site
       href: ./networking/intranet-site-identified-as-an-internet-site.md
-  - name: Network Load Balancing (NLB)
-    items:
-    - name: Configure network infrastructure to support NLB operation mode
-      href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: Remote access
     items:
     - name: Change default MTU Size Settings
@@ -561,9 +559,7 @@
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
-      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
-    - name: Configure client proxy server settings
-      href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md    
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
@@ -604,8 +600,6 @@
     items:
     - name: Fail to use apps that connect to Internet
       href: ./networking/use-authenticated-proxy-servers.md
-    - name: Use Group Policy to apply WinHTTP proxy settings
-      href: ./networking/use-group-policy-apply-winhttp-proxy-settings.md
   - name: WebClient and WebDAV
     items:
     - name: Can't access WebDAV Web folder
@@ -686,6 +680,8 @@
       href: ./performance/tablet-device-creates-minidump-file.md
   - name: No Boot (not BugChecks)
     items:
+    - name: Advanced troubleshooting Windows boot problems with LiveRE tool
+      href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
     - name: Changing ATA drive setting causes reboot loop
@@ -930,8 +926,6 @@
       href: ./shell-experience/store-app-not-start-after-update.md
   - name: Windows Media Player
     items:
-    - name: Toggle between full screen mode and Windows mode
-      href: ./shell-experience/toggle-full-mode-and-windows-mode.md
     - name: Videos don't play in Windows Media Player 11
       href: ./shell-experience/media-player-11-not-play-video.md
     - name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN

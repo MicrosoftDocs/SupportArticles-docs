@@ -3,6 +3,7 @@ title: Create all-inclusive deployment package for Internet Explorer 11
 description: Describes how to create a one-restart installation package for Internet Explorer 11.
 ms.date: 04/26/2020
 ms.prod-support-area-path: 
+ms.technology: internet-explorer-installation
 ---
 # How to create an all-inclusive deployment package for Internet Explorer 11
 
@@ -41,7 +42,7 @@ Complete each section fully before you continue.
 > [!NOTE]
 > The following command-line example would be used to extract the x64 version of the Internet Explorer 11 prerequisite updates. (To process the x86 version of the component, replace the x64 (.msu) package name with the x86 (.msu) package name.)
 
-:::image type="content" source="media/create-all-inclusive-deploy-package/extract-prerequisites.png" alt-text="Extract Prerequisites Internet Explorer 11":::
+:::image type="content" source="media/create-all-inclusive-deploy-package/extract-prerequisites.png" alt-text="Screenshot shows the command output of extracting Internet Explorer 11 prerequisites updates.":::
 
 Repeat these steps to extract all the prerequisites for Internet Explorer 11, and save the *.cab* files in the `C:\Temp\Cabfiles` folder.
 
@@ -59,7 +60,7 @@ Repeat these steps to extract all the prerequisites for Internet Explorer 11, an
 > [!NOTE]
 > The following command-line example would be used to extract an x64 version of the Internet Explorer 11 core installation package. (To process the x86 version of the component, replace the x64 package name with the x86 package name.)
 >
-> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-setup-file.png" alt-text="Extract Setup File":::
+> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-core-installation-package.png" alt-text="Screenshot shows the command to extract Internet Explorer 11 core installation package.":::
 >
 > *IE-Win7.cab* is the name of the .cab file that is extracted from the Internet Explorer 11 setup file (IE11-Windows6.1-x64-en-us.exe). It is saved in the `C:\Temp\Cabfiles` folder.
 
@@ -97,7 +98,7 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 >
 > The following command-line example would be used for extracting an x64 version of the Afrikaans language pack. (To process the x86 version of the component, replace the x64 package name with the x86 package name.)
 >
-> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-language-pack.png" alt-text=" Internet Explorer 11 Language Pack":::
+> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-language-pack.png" alt-text="Screenshot shows the command output of extracting Internet Explorer 11 language pack.":::
 
 ## Internet Explorer 11 spelling dictionaries
 
@@ -112,7 +113,7 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 > [!NOTE]
 > The following command-line example would be used to extract the x64 or x86 version of the Spelling Dictionaries package.
 >
-> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-spelling-dictionary.png" alt-text="Extract Internet Explorer 11 Spelling Dictionary":::
+> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-spelling-dictionary.png" alt-text="Screenshot shows the command output of extracting Internet Explorer 11 Spelling Dictionary package.":::
 
 ## Internet Explorer 11 cumulative security update
 
@@ -127,7 +128,7 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 > [!NOTE]
 > The following command-line example would be used to extract the x64 version of Internet Explorer 11 Cumulative Security Updates. (To process the x86 version of the component, replace the x64 package name with the x86 package name.)
 >
-> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-ie-csu.png" alt-text="Extract Internet Explorer 11 CSU":::
+> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-ie-csu.png" alt-text="Screenshot shows the command output of extracting Internet Explorer 11 CSU.":::
 
 ## Complete the package
 
@@ -146,7 +147,7 @@ For Example: `C:\Temp\Cabfiles\SampleScript.bat`
 
 As soon as you customize and save the script file, you should double-click *Samplescript.bat* to execute it. A command prompt window displays the commands that are being executed by the script. The output resembles the following:
 
-:::image type="content" source="media/create-all-inclusive-deploy-package/script.png" alt-text="script output":::
+:::image type="content" source="media/create-all-inclusive-deploy-package/script-output.png" alt-text="Screenshot shows the Samplescript.bat script output.":::
 
 This script will install all the extracted .cab files without a prompt to restart. These files include prerequisites for Internet Explorer 11, the Internet Explorer 11 setup file, the Internet Explorer 11 language pack, the Internet Explorer 11 spelling package, and the Internet Explorer 11 cumulative security update.
 
@@ -192,7 +193,7 @@ dism /online /add-package /package path: IE11-Windows6.1-KB3049563-x64.cab /quie
 > [!IMPORTANT]
 > This is a sample script file that is provided as a demonstration to achieve the scenario that was discussed earlier. We provide no warranties or support for this script file. You should thoroughly test the script file before you try it in production environments.
 
-## More Information
+## More information
 
 These procedures can be applied only to the following operating systems:
 

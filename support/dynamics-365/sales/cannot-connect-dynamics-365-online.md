@@ -4,6 +4,7 @@ description: Provides a solution to an issue where you're unable to connect to D
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-program-softwaredev
 ---
 # Unable to connect to Dynamics 365 (online), version 9.0 using SDK tools
 

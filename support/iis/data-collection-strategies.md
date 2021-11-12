@@ -4,6 +4,7 @@ description: This article describes the data collection strategies to troublesho
 ms.date: 10/28/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: paulboc
+ms.technology: iis-health-diagnostic-performance
 ---
 # Data collection strategies to troubleshoot common IIS Web Server-related issues in Windows Server
 The IIS web-server allows administrators, site owners and web-application owners a rich set of possibilities to generate telemetry and metrics on how hosted web applications are performing: from the IIS request logs, to failed request log tracing, event viewer entries and many more. These pieces of telemetry can be scattered in various places on the Windows Server that is running IIS and collecting all of them when troubleshooting problems may prove time consuming, especially if the number of hosted applications is large. The IIS support team has constructed a tool to help with this specific task: LogCather is a tool that allows the collection of IIS telemetry and configuration related data to one centralized location, allowing administrators to target the entire server or only a subset of the hosted applications, and to define a time period for which the data will be collected.
@@ -59,7 +60,7 @@ When you report these kinds of issues to Microsoft Support, you must provide all
 
 The welcome screen in LogCatcher provides instructions for its use. The UI resembles the following screenshot.
 
-:::image type="content" source="media/data-collection-strategies/collect-data-in-logcatcher.jpg" alt-text="screenshot of collecting data in log catcher":::
+:::image type="content" source="media/data-collection-strategies/collect-data-in-logcatcher.png" alt-text="Screenshot of collecting data in log catcher.":::
 
 At the bottom of the main window, LogCatcher displays a list of websites that are hosted on the server that the tool is running on, and also the corresponding application pools and content location of each website.
 
@@ -67,7 +68,7 @@ To filter the data that is collected from your system, collect data from only a 
 
 Determine the filters that you want to apply, which websites to apply them to, and during what time period the data should be collected. Then, press the **GENERATE ZIP** button, and begin the log collection process. The status bar turns green when data collection is completed to confirm that all required logs were collected and compressed into a .zip file. The status bar also provides the file location.
 
-:::image type="content" source="media/data-collection-strategies/generate-zip-in-logcatcher.jpg" alt-text="screenshot of generating data in log catcher":::
+:::image type="content" source="media/data-collection-strategies/generate-zip-in-logcatcher.png" alt-text="Screenshot of generating data in log catcher.":::
 
 Windows File Explorer automatically opens the folder where the compressed log file was saved.
 

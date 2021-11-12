@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, philh, herbertm
-ms.prod-support-area-path: Active Directory Certificate Services
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Valid root CA certificates distributed using GPO might intermittently appear as untrusted

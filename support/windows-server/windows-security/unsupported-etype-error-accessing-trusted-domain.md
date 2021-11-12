@@ -1,16 +1,16 @@
 ---
-title: Kerberos Unsupported etype error 
+title: Kerberos Unsupported etype error
 description: Describes how to resolve a configuration problem that prevents clients from authenticating when they attempt to access resources in a trusted domain.
 ms.date: 11/10/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc, justintu, lindakup, herbertm, waynmc
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # "Unsupported etype" error when accessing a resource in a trusted domain
@@ -122,7 +122,9 @@ To use this method, follow these steps:
 
 1. In Active Directory Domains and Trusts, navigate to the trusted domain object (in the example,`contoso.com`). Right-click the object, select **Properties**, and then select **Trusts**.
 2. In the **Domains that trust this domain (incoming trusts)**  box, select the trusting domain (in the example, `child.domain.com`).
-3. Select **Properties**, select **The other domain supports Kerberos AES Encryption**, and then select **OK**.![Properties of a child domain in an AD DS forest, highlighting the ](./media/unsupported-etype-error-accessing-trusted-domain/properties-of-a-child-domain.png)
+3. Select **Properties**, select **The other domain supports Kerberos AES Encryption**, and then select **OK**.
+
+    :::image type="content" source="media/unsupported-etype-error-accessing-trusted-domain/properties-of-a-child-domain.png" alt-text="Screenshot of the properties of a child domain, and the Properties window includes the other domain supports Kerberos AES Encryption checkbox.":::
 
     > [!Note]
     > To validate the trust configuration, select **Validate** in the trusting domain dialog box.

@@ -53,7 +53,7 @@ To detect whether assemblies are being used, follow these steps:
 2. Launch procexp.exe and then press Ctrl+F to open the **Process Explorer Search** window.
 3. In the **Handle or DLL substring** textbox, type *Assembly* and then select **Search**.
 
-    :::image type="content" source="./media/patching-framework-fails/search-assembly.png" alt-text="search assembly":::
+    :::image type="content" source="./media/patching-framework-fails/search-assembly.png" alt-text="Screenshot shows steps to search assembly.":::
 
 4. All files listed could have an impact on the installation of the patch. Terminate all the listed processes or close the associated applications. To do this, follow these steps:
 
@@ -61,4 +61,4 @@ To detect whether assemblies are being used, follow these steps:
     2. Right click the process name in the **Process** pane.
     3. Select **Kill Process** to terminate the Process.
 
-        :::image type="content" source="./media/patching-framework-fails/kill-process.png" alt-text="kill process":::
+        :::image type="content" source="./media/patching-framework-fails/kill-process.png" alt-text="Screenshot shows steps to kill a process.":::

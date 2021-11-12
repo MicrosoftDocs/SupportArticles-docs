@@ -5,6 +5,7 @@ ms.date: 03/12/2020
 ms.prod-support-area-path: System services development
 ms.reviewer: jhornick, djanson
 ms.topic: how-to
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # Handle dates and times that include DST
 

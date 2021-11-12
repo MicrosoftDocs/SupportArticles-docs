@@ -5,6 +5,7 @@ ms.date: 01/04/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: troubleshooting
+ms.technology: internet-explorer-stability-performance
 ---
 # Slow browsing in Internet Explorer because of multiple isInNet function calls
 
@@ -22,14 +23,14 @@ Consider the following scenario:
 - Internet Explorer is configured to use a Proxy Auto Configuration (PAC) file or WPAD for proxy settings.
 - The PAC file contains several calls to the `isInNet()` function, which resemble the following:
 
-    ```csharp
+    ```js
     function FindProxyForURL(url, host)
     {
     
-        if (isInNet(host, "192.168.3.4","255.255.255.0")) ||
-        isInNet(host, "10.10.1.1", "255.255.255.0") ||
-        isInNet(host, "72.10.10.10", "255.240.0.0")) ||
-        isInNet(host, "172.16.0.0", "255.240.0.0"))
+        if (isInNet(host, "192.168.3.0","255.255.255.0")) ||
+        isInNet(host, "10.10.1.0", "255.255.255.0") ||
+        isInNet(host, "72.10.0.0", "255.255.0.0")) ||
+        isInNet(host, "172.16.0.0", "255.255.0.0"))
         {
         
             return PROXY <proxyname:PORT>;
@@ -50,14 +51,14 @@ To prevent these additional calls to the DNS subsystem every time a host is pass
 
 To do this, modify the sample code in the [Symptoms](#symptoms) section as follows:
 
-```csharp
+```js
 function FindProxyForURL(url, host)
 {
     var resolved_IP = dnsResolve(host);
-    if (isInNet(resolved_IP, "192.168.3.4","255.255.255.0")) ||
-    isInNet(resolved_IP, "10.10.1.1", "255.255.255.0") ||
-    isInNet(resolved_IP, "72.10.10.10", "255.240.0.0")) ||
-    isInNet(resolved_IP, "172.16.0.0", "255.240.0.0"))
+    if (isInNet(resolved_IP, "192.168.3.0","255.255.255.0")) ||
+    isInNet(resolved_IP, "10.10.1.0", "255.255.255.0") ||
+    isInNet(resolved_IP, "72.10.0.0", "255.255.0.0")) ||
+    isInNet(resolved_IP, "172.16.0.0", "255.255.0.0"))
     {
         return PROXY <proxyname:PORT>;
     }

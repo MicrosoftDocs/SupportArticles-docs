@@ -156,6 +156,7 @@ The following are possible values of `ClientHealthStatus`:
 
 - **1**: Client installed
 - **2**: Client registered
+- **5**: Client installed, but hasn't run Health Evaluation yet
 - **7**: Client healthy
 - **8**: Client install or upgrade error
 - **16**: Communication error in management point
@@ -236,6 +237,6 @@ For more information about Intune and Configuration Manager co-management, see t
 
 If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
-You can also submit feedback and ideas to the Intune development team through our [uservoice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
+You can also [send feedback directly to the Microsoft product group](/mem/configmgr/core/understand/product-feedback).
 
 If all else fails and you want to open a support case with the Intune Support team, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).

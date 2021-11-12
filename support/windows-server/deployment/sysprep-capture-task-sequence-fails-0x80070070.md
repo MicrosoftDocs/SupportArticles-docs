@@ -2,7 +2,7 @@
 title: SYSPREP and CAPTURE task sequence fails with error 0x80070070
 description: Helps fix a 0x80070070 error that occurs when Deployment Toolkit fails to complete sysprep and capture task sequence.
 ms.date: 09/15/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vineetm
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # SYSPREP and CAPTURE task sequence fails with error 0x80070070

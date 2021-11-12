@@ -83,7 +83,7 @@ Use the following steps to install the VM Agent in offline mode.
 
         1.	On the OS disk that you attached, create a folder named WindowsAzure in the root path.
 
-        2.	Go to C:\WindowsAzure on the troubleshooter VM, look for any folder with the name C:\WindowsAzure\GuestAgent_X.X.XXXX.XXX. Copy the GuestAgent folder that has latest version number from C:\WindowsAzure to the WindowsAzure folder in the attached OS disk. If you are not sure which folder should be copied, copy all GuestAgent folders. The following image shows an example of the GuestAgent folder that is copied to the attached OS disk.
+        2.	Go to C:\WindowsAzure on the troubleshooter VM, look for any folder with the name C:\WindowsAzure\GuestAgent_X.X.XXXX.XXX. Copy the GuestAgent folder that has latest version number from C:\WindowsAzure to the WindowsAzure folder in the attached OS disk. If you are not sure which folder should be copied, copy all GuestAgent folders. The following image shows an example of the GuestAgent folder that is copied to the attached OS disk. If you cannot find the GuestAgent folder, check for the imagePath of WindowsAzureGuestAgent registry subkey for the accurate path.
 
              ![Copy GuestAgent folder](./media/install-vm-agent-offline/copy-files.png)
 
@@ -91,7 +91,7 @@ Use the following steps to install the VM Agent in offline mode.
 
 10.  Select **BROKENSOFTWARE**. From the menu, select **File** > **Unload Hive**​.
 
-11.  Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-os-disk-for-the-vm). For the classic VM, create a new VM by using the repaired OS disk.
+11.  Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk). For the classic VM, create a new VM by using the repaired OS disk.
 
 12.  Access the VM. Notice that the RdAgent is running and the logs are being generated.
 

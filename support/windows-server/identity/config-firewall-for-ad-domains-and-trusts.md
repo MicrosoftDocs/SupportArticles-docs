@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to configure a firewall for Active Directory domains and trusts
@@ -42,7 +42,7 @@ _Original KB number:_ &nbsp; 179442
 |1024-65535/TCP|1024-65535/TCP|FRS RPC (*)|
 ||||
 
-NETBIOS ports as listed for Windows NT are also required for Windows 2000 and Windows Server 2003 when trusts to domains are configured that support only NETBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
+NetBIOS ports as listed for Windows NT are also required for Windows 2000 and Windows Server 2003 when trusts to domains are configured that support only NetBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
 
 For more information about how to define RPC server ports that are used by the LSA RPC services, see:
 
@@ -60,22 +60,22 @@ For more information about the dynamic port range change in Windows Server 2012 
 
 |Client Port(s)|Server Port|Service|
 |---|---|---|
-|49152 -65535/UDP|123/UDP|W32Time|
-|49152 -65535/TCP|135/TCP|RPC Endpoint Mapper|
-|49152 -65535/TCP|464/TCP/UDP|Kerberos password change|
-|49152 -65535/TCP|49152-65535/TCP|RPC for LSA, SAM, NetLogon (*)|
-|49152 -65535/TCP/UDP|389/TCP/UDP|LDAP|
-|49152 -65535/TCP|636/TCP|LDAP SSL|
-|49152 -65535/TCP|3268/TCP|LDAP GC|
-|49152 -65535/TCP|3269/TCP|LDAP GC SSL|
-|53, 49152 -65535/TCP/UDP|53/TCP/UDP|DNS|
-|49152 -65535/TCP|49152 -65535/TCP|FRS RPC (*)|
-|49152 -65535/TCP/UDP|88/TCP/UDP|Kerberos|
-|49152 -65535/TCP/UDP|445/TCP|SMB (**)|
-|49152 -65535/TCP|49152-65535/TCP|DFSR RPC (*)|
+|49152-65535/UDP|123/UDP|W32Time|
+|49152-65535/TCP|135/TCP|RPC Endpoint Mapper|
+|49152-65535/TCP|464/TCP/UDP|Kerberos password change|
+|49152-65535/TCP|49152-65535/TCP|RPC for LSA, SAM, NetLogon (*)|
+|49152-65535/TCP/UDP|389/TCP/UDP|LDAP|
+|49152-65535/TCP|636/TCP|LDAP SSL|
+|49152-65535/TCP|3268/TCP|LDAP GC|
+|49152-65535/TCP|3269/TCP|LDAP GC SSL|
+|53, 49152-65535/TCP/UDP|53/TCP/UDP|DNS|
+|49152-65535/TCP|49152-65535/TCP|FRS RPC (*)|
+|49152-65535/TCP/UDP|88/TCP/UDP|Kerberos|
+|49152-65535/TCP/UDP|445/TCP|SMB (**)|
+|49152-65535/TCP|49152-65535/TCP|DFSR RPC (*)|
 ||||
 
-NETBIOS ports as listed for Windows NT are also required for Windows 2000 and Server 2003 when trusts to domains are configured that support only NETBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
+NetBIOS ports as listed for Windows NT are also required for Windows 2000 and Server 2003 when trusts to domains are configured that support only NetBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
 
 (*) For information about how to define RPC server ports that are used by the LSA RPC services, see:
 

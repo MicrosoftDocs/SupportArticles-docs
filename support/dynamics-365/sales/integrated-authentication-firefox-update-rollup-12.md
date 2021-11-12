@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Microsoft Dynamics CRM 2011 Integrated authentication with Firefox in Update Rollup 12
 
@@ -18,7 +19,7 @@ Mozilla Firefox users are prompted for credentials when attempting to log in to 
 
 ## Cause
 
-This behavior is by design, as Firefox rejects all SPNEGO login challenges (Kerberos, NTLM, or other authentication protocols). For more information regarding this behavior, see [Integrated Authentication](https://developer.mozilla.org/docs/integrated_authentication).
+This behavior is by design, as Firefox rejects all SPNEGO login challenges (Kerberos, NTLM, or other authentication protocols).
 
 ## Resolution
 

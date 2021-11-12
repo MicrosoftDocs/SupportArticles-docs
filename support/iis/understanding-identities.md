@@ -5,6 +5,7 @@ ms.date: 10/09/2020
 ms.prod-support-area-path: WWW Authentication and Authorization
 ms.reviewer: prchanda, jarrettr
 ms.prod: iis
+ms.technology: iis-www-authentication-authorization
 ---
 # Understanding identities in IIS
 
@@ -17,7 +18,7 @@ _Original KB number:_ &nbsp; 4466942
 
 To understand application pool identities, you have to understand what an identity is. In simple terms, an identity is a Windows account. Every process that runs in Windows runs under an identity. The applications are run by the worker process by using a Windows identity. The Windows identity that is used is dependent on the application pool identity, which can be any of the following accounts:
 
-![Application Pool identities](./media/understanding-identities/4466947_en_1.png)
+:::image type="content" source="media/understanding-identities/accounts.png" alt-text="Windows identity accounts.":::
 
 - **Local System:** Trusted account that has high privileges and also has access to network resources.
 - **Network Service:** Restricted or limited service account that is used to run standard, least-privileged services. This account has fewer privileges than a Local System account. This account has access to network resources.
@@ -31,18 +32,19 @@ To understand application pool identities, you have to understand what an identi
 
     In this scenario, you have one web application that creates a custom event log (**MyWebAppZone**) and an event log source (**MyWebAppZone.com**) at runtime. Applications that run by using any of the identities can write to the event log by using existing event sources. However, if they are running under an identity other than Local System, they cannot create new event sources because of insufficient registry permissions.
 
-    ![My Web App Zone](./media/understanding-identities/4467010_en_1.png)
+    :::image type="content" source="media/understanding-identities/custom-event-log.png" alt-text="My Web App Zone.":::
 
     For example, if you run the application under Network Service, you receive the following security exception:
 
-    ![Server error](./media/understanding-identities/4467011_en_1.png)
+    :::image type="content" source="media/understanding-identities/security-exception.png" alt-text="Screenshot of the Server error.":::
 
     When you run the ProcMon trace simultaneously, you often find that NT AUTHORITY\NETWORK SERVICE does not have the required Read and Write access privileges to the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\`
 
-     This is the location in the registry where all the settings of an event log are stored. 
-    ![Process Monitor 1](./media/understanding-identities/4467012_en_1.png)
+    This is the location in the registry where all the settings of an event log are stored.
+
+    :::image type="content" source="media/understanding-identities/process-monitor-1.png" alt-text="Screenshot of Process Monitor 1." border="false":::
 
 - **Scenario 2: Registry access**  
 
@@ -50,7 +52,7 @@ To understand application pool identities, you have to understand what an identi
 
     `HKEY_LOCAL_MACHINE** **\SOFTWARE\Microsoft\Windows\CurrentVersion\DateTime\Servers`
 
-    ![Process Monitor 2](./media/understanding-identities/4467013_en_1.png)
+    :::image type="content" source="media/understanding-identities/process-monitor-2.png" alt-text="Screenshot of Process Monitor 2." border="false":::
 
     If you check the **MyWebAppZone** event log (from scenario 1), you find the following error event logged. It contains a `Requested registry access is not allowed` error message.
 
@@ -76,7 +78,7 @@ To understand application pool identities, you have to understand what an identi
 
     By using this approach, you run your application in an application pool that is configured to run by using a specific Windows identity. Consider the following diagram, in which an application is hosted in a load-balanced environment that includes two servers and uses Kerberos authentication to identify the client.
 
-    ![Load Balancer](./media/understanding-identities/4467019_en_1.gif)
+    :::image type="content" source="media/understanding-identities/kerberos-with-load-balancer.png" alt-text="Screenshot of Kerberos authentication in a load balanced-environment.":::
 
     For Kerberos authentication to work, you have to set up SPN for both servers by using their machine account. If the application pool is running under a built-in account, it presents the computer credentials on the network. For example, if the computer name is *Server1*, it presents itself as 'Server1$'. This machine account automatically gets created when a computer joins a domain. Therefore, if there are N servers, you must set N number of SPNs that correspond to their respective machine account.
 
@@ -139,7 +141,7 @@ The answer is by using the configuration isolation feature in IIS 7.0 and later 
 > [!NOTE]
 > To learn more about SID, see [Security Identifiers](/windows/win32/secauthz/security-identifiers) topic on the Microsoft Docs website.
 
-![Application Pool](./media/understanding-identities/4467021_en_1.png)
+:::image type="content" source="media/understanding-identities/application-pool.png" alt-text="Screenshot of using  application pool for configuration isolation.":::
 
 This is done to prevent IIS worker processes from application pool A from being able to read configuration information in the *ApplicationHost.config* file that is intended for application pool B.
 
@@ -149,7 +151,7 @@ This is done to prevent IIS worker processes from application pool A from being 
 appcmd list APPPOOL "DefaultAppPool" /text:*
 ```
 
-![appcmd](./media/understanding-identities/4467022_en_1.png)
+:::image type="content" source="media/understanding-identities/appcmd.png" alt-text="Screenshot of using the appcmd command.":::
 
 ## IUSR - anonymous authentication
 
@@ -199,4 +201,4 @@ Open the IIS worker process of a test website that is impersonating a `Test` loc
 
 The application pool identity of the application is set to *ApplicationPoolIdentity*, and anonymous authentication is provided by using `IUSR` account. You can easily trace the impersonating identity using ProcMon. For example, if you examine one of the CreateFile events that corresponds to the w3wp.exe process that you are examining, you can find the impersonating account, as shown in the following screenshot.
 
-![Event properties](./media/understanding-identities/4467029_en_1.png)
+:::image type="content" source="media/understanding-identities/impersonating.png" alt-text="Details of the impersonating in Event Properties.":::

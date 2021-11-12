@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lindakup
-ms.prod-support-area-path: Folder redirection
+ms.custom: sap:folder-redirection, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # Folder Redirection settings aren't applied

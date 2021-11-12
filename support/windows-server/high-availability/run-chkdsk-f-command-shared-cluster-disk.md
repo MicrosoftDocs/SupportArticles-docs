@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, CTIMON
-ms.prod-support-area-path: Root cause of an unexpected failover
+ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Run the chkdsk /f command on a shared cluster disk

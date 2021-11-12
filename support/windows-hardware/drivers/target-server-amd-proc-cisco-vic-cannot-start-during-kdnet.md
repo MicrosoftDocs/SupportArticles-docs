@@ -2,8 +2,8 @@
 title: Target server cannot start if KDNET debugging is enabled
 description: This article discusses a workaround for an issue that affects network kernel (KDNET) debugging on target servers that have AMD processors and Cisco virtual interface card (VIC) adapters.
 ms.date: 10/27/2020
-author: Teresa-Motiv
-ms.author: v-tea
+author: v-tappelgate
+ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 keywords: amd processor, cisco VIC
 ms.prod-support-area-path: Kerberos authentication
-
+ms.technology: windows-hardware-general
 ---
 # Target server that has AMD processor and CISCO VIC cannot start if KDNET debugging is enabled
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, arrenc
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot an Internal error message during the replication phase of dcpromo

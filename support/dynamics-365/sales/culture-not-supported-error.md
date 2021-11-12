@@ -1,9 +1,10 @@
 ---
 title: Culture isn't supported when connecting Dynamics CRM for Outlook
-description: Fixes an issue in which you get the "Culture is not supported" error when attempting to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
+description: Fixes an issue in which you get the Culture is not supported error when attempting to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # "Culture is not supported" error occurs when attempting to configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

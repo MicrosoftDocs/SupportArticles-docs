@@ -1,7 +1,7 @@
 ---
-title: Enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation
+title: Enable support for TLS 1.2 in your environment for upcoming Azure AD TLS 1.0/1.1 deprecation
 description: Describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 05/26/2021
+ms.date: 11/03/2021
 ms.prod-support-area-path: 
 ms.reviewer: dahans
 ---
@@ -27,7 +27,7 @@ These protocols and ciphers are being deprecated for the following reasons:
 The services are being deprecated on the following dates:
 
 - **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**.
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**. (This date has been postponed from **June 30th, 2021** to **January 31st, 2022**, to give administrators more time to remove the dependency on legacy TLS protocols and ciphers (TLS 1.0,1.1 and 3DES)).
 
 ## Enable support for TLS 1.2 in your environment
 
@@ -39,7 +39,7 @@ To maintain a secure connection to Azure Active Directory (Azure AD) and Microso
 - Identify and reduce you dependency on the client apps and operating systems that don't support TLS 1.2.
 - Enable TLS 1.2 for applications and services that communicate with Azure AD.
 - Update and configure your .NET Framework installation to support TLS 1.2.
-- Make sure that applications and PowerShell (that use [Azure AD Graph](https://graph.windows.net) and [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
+- Make sure that applications and PowerShell (that use [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
 - Make sure that your web browser has the latest updates. We recommend that you use the new Microsoft Edge browser (based on Chromium). For more information, see the [Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel).
 - Make sure that your web proxy supports TLS 1.2. For more information about how to update a web proxy, check with the vendor of your web proxy solution.
 
@@ -112,7 +112,7 @@ To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforce
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
-Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Azure AD Graph](https://graph.windows.net/), or [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
+Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
 
 ### Install .NET updates to enable strong cryptography
 
@@ -133,7 +133,7 @@ Use these guidelines:
 - Update NET Framework 4.6 and earlier versions to support TLS 1.2 and TLS 1.1.
 
   For more information, see [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies).
-- If you're using .NET Framework 4.5.2 or 4.5.1 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=42883).
+- If you're using .NET Framework 4.5.2 or 4.5.1 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=2898850).
 
   - Also see [Microsoft Security Advisory 2960358](/security-updates/SecurityAdvisories/2015/2960358)
 
@@ -158,6 +158,7 @@ Set the following registry DWORD values on any computer that communicates across
 
 For more information, see the following articles:
 
+- [TLS Cipher Suites supported by Azure AD](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)
 - [Solving the TLS 1.0 Problem - Security documentation](/security/engineering/solving-tls1-problem)

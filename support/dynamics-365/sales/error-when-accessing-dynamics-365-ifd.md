@@ -4,6 +4,7 @@ description: Describes how to add Microsoft Dynamics 365 IFD DNS records to Inte
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # The same client browser session has made 6 requests in the last 2 seconds error message displays when accessing Microsoft Dynamics 365 over IFD
 

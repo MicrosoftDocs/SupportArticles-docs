@@ -1,90 +1,97 @@
 ---
-title: Find the current Schema Version
+title: Find the current Active Directory Schema Version
 description: Describes how to find the current Schema Version.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Schema update - known issues, best practices, workflow review
+ms.custom: sap:schema-update-known-issues-best-practices-workflow-review, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to find the current Schema Version
 
-This article describes how to find the current Schema Version.
+This article describes how to find the current Schema Version. The original author of the article was [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 558112
 
-This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
-
-## Summary
-
-The following articles will help you to find the current Schema Version.
-
-## Tips
+## How to find the current Active Directory Schema Version
 
 To find the current Active Directory Schema Version, you can use one of the following methods:  
 
->[!Note]
->The internal root domain that we use in this demo is: "**domain.local**".
+> [!Note]
+> The internal root domain that we use in this demo is: **contoso.local**.
 
-1. Using "**ADSIEdit.msc**" or/and "**LDP.exe**" tools:
+### Method 1
 
-    Navigate to:
+1. Use *ADSIEdit.msc* or *LDP.exe* to navigate to:  
+    **CN=Schema,CN=Configuration,DC=contoso,DC=local**.
 
-    "**CN=Schema,CN=Configuration,DC=domain,DC=local**"
+2. Review the **objectVersion** attribute.
 
-    and review the current "**objectVersion**" attribute.
+### Method 2
 
-2. Using "**DSQuery**" command line:
+Use the `DSQuery` command line. Run the following command:
 
-    "**dsquery * cn=schema,cn=configuration,dc=domainname,dc=local -scope base -attr objectVersion**"
+```console
+dsquery * "cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr objectVersion
+```
 
-    The following information provides a mapping between the "**objectVersion**" attribute value, to
+### Method 3
 
-    the Active Directory Schema commutability:
+Use the `Get-ItemProperty` PowerShell cmdlet. Run the following command:
 
-    13 -> Windows 2000 Server  
-    30 -> Windows Server 2003 RTM, Windows 2003 With Service Pack 1, Windows 2003 With Service Pack 2  
-    31 -> Windows Server 2003 R2  
-    44 -> Windows Server 2008 RTM
+```powershell
+Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name objectVersion
+```
+
+### Some "objectVersion" attribute map
+
+The following information provides a mapping between the **objectVersion** attribute value to the Active Directory Schema commutability:
+
+13 -> Windows 2000 Server  
+30 -> Windows Server 2003 RTM, Windows 2003 With Service Pack 1, Windows 2003 With Service Pack 2  
+31 -> Windows Server 2003 R2  
+44 -> Windows Server 2008 RTM
+87 -> Windows Server 2016
+88 -> Windows Server 2019
+
+## How to find the current Exchange Schema Version
 
 To find the current Exchange Schema Version, you can use one of the following methods:  
 
 >[!Note]
->The internal root domain that we use in this demo is: "**domain.local**".
+>The internal root domain that we use in this demo is: **contoso.local**.
 
-1. Using "**ADSIEdit.msc**" or/and "**LDP.exe**" tools:
+### Method 1
 
-    Navigate to:
+1. Use *ADSIEdit.msc* or *LDP.exe* tools to navigate to  
+   **CN=ms-Exch-Schema-Version-Pt, CN=Schema,CN=Configuration,DC=contoso,DC=local**
 
-    "**CN=ms-Exch-Schema-Version-Pt,** **CN=Schema,CN=Configuration,DC=domain,DC=local**"
+2. Review the current "**rangeUpper**" attribute.
 
-    and review the current "**rangeUpper**" attribute.
+### Method 2
 
-2. Using "**DSQuery**" command line:
+Ues **DSQuery** command line:
 
-    "**dsquery * CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,dc=domain,dc=local -scope base -attr  
-    rangeUpper**"
+```console
+dsquery * "CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr rangeUpper
+```
 
-    The following information provides a mapping between the "**rangeUpper**" attribute value, to
+### Some "rangeUpper" attribute map
 
-    the Exchange Schema commutability:
+The following information provides a mapping between the **rangeUpper** attribute value, to the Exchange Schema commutability:
 
-    4397 -> Exchange Server 2000 RTM  
-    4406 -> Exchange Server 2000 With Service Pack 3  
-    6870 -> Exchange Server 2003 RTM  
-    6936 -> Exchange Server 2003 With Service Pack 2  
-    10628 -> Exchange Server 2007  
-    11116 -> Exchange 2007 With Service Pack 1  
-
-    Schema Changes Between Exchange 2000 Server and Exchange Server 2003
-
-    Exchange 2007 Schema Changes (SP1)
+4397 -> Exchange Server 2000 RTM  
+4406 -> Exchange Server 2000 With Service Pack 3  
+6870 -> Exchange Server 2003 RTM  
+6936 -> Exchange Server 2003 With Service Pack 2  
+10628 -> Exchange Server 2007  
+11116 -> Exchange 2007 With Service Pack 1  
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

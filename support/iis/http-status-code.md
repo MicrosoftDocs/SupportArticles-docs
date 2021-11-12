@@ -4,6 +4,7 @@ description: This article provides a list of the HTTP status codes in IIS 7.0 an
 ms.date: 07/21/2020
 ms.prod-support-area-path: WWW Administration and Management
 ms.reviewer: v-jayc
+ms.technology: iis-www-administration-management
 ---
 # The HTTP status code in IIS 7.0 and later versions
 
@@ -17,8 +18,6 @@ _Original KB number:_ &nbsp; 943891
 When you try to access content on a server that is running (IIS) 7.0, 7.5 or later versions by using the HTTP protocol, IIS returns a numeric code that indicates the status of the response. The HTTP status code is recorded in the IIS log. Additionally, the HTTP status code may be displayed in the client browser.
 
 The HTTP status code may indicate whether a request is successful or unsuccessful. The HTTP status code may also reveal the exact reason that a request is unsuccessful.
-
-This article is intended for use by support agents and IT professionals. If you're looking for more information about website error messages, see [Get help with website error messages (HTTP errors)](https://support.microsoft.com/hub/4338813).
 
 ## Log file locations
 

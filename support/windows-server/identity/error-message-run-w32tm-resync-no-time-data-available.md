@@ -1,16 +1,16 @@
 ---
-title: Error message when you run the 
+title: Error message when you run the w32tm /resync command
 description: Describes a problem that occurs if a Group Policy object for a Windows Time Service object is configured incorrectly.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, karanr
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Error message when you run the "w32tm /resync" command to synchronize Windows Server 2003 or Windows SBS to an external time source: "The computer did not resync because no time data was available"

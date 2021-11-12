@@ -4,6 +4,7 @@ description: Workaround V4 print drivers attempting to send PCL/Postscript data 
 ms.date: 03/09/2020
 ms.prod-support-area-path: Graphics and multimedia development
 ms.reviewer: v-mafect
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # V4 print drivers using RAW mode to send PCL/Postscript have 0 byte spool file
 

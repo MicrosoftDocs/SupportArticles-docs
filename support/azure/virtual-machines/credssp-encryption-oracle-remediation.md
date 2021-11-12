@@ -1,5 +1,5 @@
 ---
-title: Error (CredSSP encryption oracle remediation) when you try to RDP to a Windows VM in Azure
+title: Error CredSSP encryption oracle remediation when you try to RDP to a Windows VM in Azure
 description: Fixes an issue that you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
@@ -71,18 +71,18 @@ To resolve the issue, install CredSSP updates for both client and server so that
 1. Sign in to the [Azure portal](https://portal.azure.com), select **Virtual Machine**, and then select the VM.
 2. Scroll down to the **Support + Troubleshooting** section, and then click **Serial console (Preview)**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install this update by using Remote PowerShell](#how-to-install-this-update-by-using-remote-powershell)" section in this article.
 
-    :::image type="content" source="./media/credssp-encryption-oracle-remediation/connected-sac.png" alt-text="Screenshot of connected SAC":::
+    :::image type="content" source="media/credssp-encryption-oracle-remediation/connected-sac.png" alt-text="Screenshot of connected SAC." border="false":::
   
 3. Type `cmd` to start a channel that has a CMD instance.
 
 4. Type `ch-si 1` to switch to the channel that is running the CMD instance. You receive the following output:
 
-    :::image type="content" source="./media/credssp-encryption-oracle-remediation/launch-cmd.png" alt-text="Screenshot of launching CMD in SAC":::
+    :::image type="content" source="media/credssp-encryption-oracle-remediation/launch-cmd.png" alt-text="Screenshot of launching CMD in SAC." border="false":::
 
 5. Press Enter, and then enter your login credentials that have administrative permission.
 6. After you enter valid credentials, the CMD instance opens, and you will see the command at which you can start troubleshooting.
 
-    :::image type="content" source="./media/credssp-encryption-oracle-remediation/cmd-section.png" alt-text="Screenshot of CMD section in SAC":::
+    :::image type="content" source="media/credssp-encryption-oracle-remediation/cmd-section.png" alt-text="Screenshot of CMD section in SAC." border="false":::
 
 7. To start a PowerShell instance, type `PowerShell`.
 8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts) based on the VM operating system. This script performs the following steps:

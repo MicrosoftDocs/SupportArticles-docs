@@ -5,6 +5,7 @@ ms.date: 01/04/2021
 ms.prod-support-area-path: Windows Administration and Management Development
 ms.reviewer: RRANDALL
 ms.topic: how-to
+ms.technology: windows-dev-apps-admin-management-dev
 ---
 # Change a Windows Active Directory and LDS user password through LDAP
 
@@ -41,7 +42,7 @@ The second way to modify this attribute is analogous to an administrator resetti
 
 The following two functions provide examples of these operations:
 
-```javascript
+```cpp
 ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPassword)
 {
     ULONG err = 1;

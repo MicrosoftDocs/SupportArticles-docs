@@ -4,6 +4,7 @@ description: This article describes that the SNA LU6.2 Resync TP service (Resync
 ms.date: 10/13/2020
 ms.prod-support-area-path: Network integration (SNA gateway)
 ms.topic: article
+ms.technology: his-network-integration
 ---
 # SNA LU6.2 Resync TP Service logs event 131 and fails to Start in Host Integration Server 2000 or 2004
 

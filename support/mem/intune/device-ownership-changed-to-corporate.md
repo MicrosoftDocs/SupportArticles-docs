@@ -17,7 +17,7 @@ After you enroll an Android Enterprise work profile device in Intune, the owners
 
 > Your company support changed the ownership type of this device from Personal to Corporate.
 
-:::image type="content" source="media/device-ownership-changed-to-corporate/notification.jpg" alt-text="Screenshot of the notification.":::
+:::image type="content" source="media/device-ownership-changed-to-corporate/notification.png" alt-text="Screenshot of the notification.":::
 
 ## Cause
 

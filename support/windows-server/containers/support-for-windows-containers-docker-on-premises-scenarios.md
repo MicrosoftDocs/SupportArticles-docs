@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Management of Containers
+ms.custom: sap:management-of-containers, csstroubleshoot
 ms.technology: windows-server-containers
 ---
 # Support policy for Windows Server containers in on-premises scenarios

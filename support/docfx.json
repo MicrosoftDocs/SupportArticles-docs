@@ -112,13 +112,11 @@
         "cpp/**/*.md": "visual-cpp",
         "iis/**/*.md": "iis",
         "windows/win32/**/*.md": "windows-dev-apps",
-        "windows-hardware/drivers/**/*.md": "windows-hardware",
-        "mem/intune/**/*.md": "intune",
+        "windows-hardware/drivers/**/*.md": "windows-hardware",        
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "browsers/**/*.md": "internet-explorer",
-        "dynamics-365/**/*.md": "dynamics-365"
+        "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
@@ -128,21 +126,47 @@
         "visualstudio/**/*.md": "",
         "webapps/**/*.md": "",
         "windows/win32/**/*.md": "",
-        "windows-hardware/drivers/**/*.md": "",
-        "mem/intune/**/*.md": "microsoft-graph",
+        "windows-hardware/drivers/**/*.md": "troubleshooting",
         "mem/configmgr/**/*.md": "",
         "system-center/dpm/**/*.md": "data-protection-manager",
         "system-center/scom/**/*.md": "operations-manager",
         "system-center/orchestrator/**/*.md": "orchestrator",
         "system-center/scsm/**/*.md": "service-manager",
         "system-center/vmm/**/*.md": "virtual-machine-manager",
-        "microsoft-identity-manager/*.md": ""
+        "microsoft-identity-manager/*.md": "",
+        "sql/admin/**/*.md": "sql-engine-admin-management",
+        "sql/analysis-services/**/*.md": "sql-analysis-services",
+        "sql/analytics-platform-system/**/*.md": "sql-pdw-aps",
+        "sql/availability-groups/**/*.md": "sql-engine-hadr",
+        "sql/azure-sql/**/*.md": "sql-azure-vm",
+        "sql/database-design/**/*.md": "sql-engine-dbdesign-development",
+        "sql/database-mirroring/**/*.md": "sql-engine-hadr",
+        "sql/data-quality-services/**/*.md": "sql-dqs",
+        "sql/failover-clusters/**/*.md": "sql-engine-hadr",
+        "sql/general/**/*.md": "sql-general",
+        "sql/install/**/*.md": "sql-engine-installation-patching",
+        "sql/integration-services/**/*.md": "sql-integration-services-ssis",
+        "sql/linux/**/*.md": "sql-linux",
+        "sql/log-shipping/**/*.md": "sql-engine-hadr",
+        "sql/machine-learning/**/*.md": "sql-engine-ml",
+        "sql/master-data-services/**/*.md": "sql-mds",
+        "sql/performance/**/*.md": "sql-engine-performance",
+        "sql/replication/**/*.md": "sql-engine-replication-changetracking-cdc",
+        "sql/reporting-services/**/*.md": "sql-reporting-services-ssrs",
+        "sql/security/**/*.md": "sql-engine-security",
+        "sql/ssms/**/*.md": "sql-tools",
+        "sql/tools/**/*.md": "sql-tools"        
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
-        "power-platform/**/*.md": "power-platform"
+        "power-platform/power-apps/*.md": "powerapps",
+        "power-platform/power-automate/*.md": "power-automate",
+        "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
+        "dynamics-365/marketing/*.md": "dynamics-365-marketing",
+        "dynamics-365/sales/*.md": "dynamics-365-sales",
+        "mem/intune/**/*.md": "microsoft-intune"
       },
 
       "titleSuffix": {
@@ -204,7 +228,12 @@
         "mem/configmgr/**/*.md": [ "ConfigMgr" ],
         "system-center/**/*.md": [ "System Center" ],
         "dynamics-365/**/*.md": [ "Dynamics 365" ],
-        "power-platform/**/*.md": [ "Power Platform" ]
+        "power-platform/power-apps/*.md": [ "Power Apps" ],
+        "power-platform/power-automate/*.md": [ "Power Automate" ]
+      },
+      "ms.search.scope":{
+        "dynamics-365/supply-chain/**/*.md": ["Core","Operations","Supply Chain","ShowInHelp"],
+        "dynamics-365/finance/**/*.md": ["Core","Operations", "Finance","ShowInHelp"]
       }
     },
 

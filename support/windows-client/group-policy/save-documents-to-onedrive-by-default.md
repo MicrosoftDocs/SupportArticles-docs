@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ryanman
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-client-group-policy
 ---
 # Save documents to OneDrive by default is a OneDrive Group Policy Administrative Templates discrepancy in Windows 8.1

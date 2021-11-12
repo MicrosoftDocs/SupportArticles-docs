@@ -3,6 +3,8 @@
   items:
   - name: Azure Active Directory
     href: active-directory/welcome-azure-ad.yml
+  - name: Azure Kubernetes Services
+    href: azure-kubernetes/welcome-azure-kubernetes.yml
   - name: Cloud Services
     href: cloud-services/welcome-cloud-services.yml
   - name: Virtual Machines

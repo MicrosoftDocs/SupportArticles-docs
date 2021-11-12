@@ -17,17 +17,17 @@ You use Microsoft Intune to deploy SCEP certificate profiles to Windows 10 devic
 
 The following is a screenshot of the deployment status in the Intune portal:
 
-:::image type="content" source="media/scep-deployment-to-win10-devices-fails/deployment-error.png" alt-text="screenshot of Deployment error":::
+:::image type="content" source="media/scep-deployment-to-win10-devices-fails/deployment-error.png" alt-text="Screenshot of Deployment error status.":::
 
 On the Windows 10 device, event 32 and event 307 are logged in Admin logs under **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** as shown in the following screenshots:
 
-:::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-32.png" alt-text="screenshot of Event 32" border="false":::
+:::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-32.png" alt-text="Screenshot of Event 32.":::
 
-:::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-307.png" alt-text="screenshot of Event 307" border="false":::
+:::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-307.png" alt-text="Screenshot of Event 307.":::
 
 Event 30 is logged in CAPI2 log, as shown in the following screenshot:
 
-:::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-30.png" alt-text="screenshot of Event 30":::
+:::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-30.png" alt-text="Screenshot of Event 30 and its details.":::
 
 > [!NOTE]
 > This issue does not occur when you use Intune to deploy SCEP certificates to Android or iOS devices.

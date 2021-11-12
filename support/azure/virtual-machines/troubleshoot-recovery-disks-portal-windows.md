@@ -1,142 +1,94 @@
 ---
-title: Troubleshoot a Windows VM in the Azure portal | Microsoft Docs
-description: Learn how to troubleshoot Windows virtual machine problems in Azure by connecting the OS disk to a recovery VM through the Azure portal.
-services: virtual-machines
-documentationCenter: ''
+title: Troubleshoot a Windows VM in the Azure portal
 author: genlin
-manager: dcscontentpm
-editor: ''
-ms.service: virtual-machines
-ms.collection: windows
-ms.topic: troubleshooting
-ms.tgt_pltfrm: vm-windows
-ms.workload: infrastructure
-ms.date: 08/19/2018
+description: This article describes how to attach a disk to a repair VM for offline servicing.
 ms.author: genli
-
+ms.date: 07/16/2021
+ms.service: virtual-machines
+ms.topic: troubleshooting
 ---
 
-# Troubleshoot a Windows VM by attaching the OS disk to a recovery VM through the Azure portal
-If your Windows virtual machine (VM) in Azure encounters a startup or disk error, you might need to perform troubleshooting steps on the virtual hard disk (VHD). A common example is a failed application update that prevents the VM from starting successfully. This article details how to use the Azure portal to connect your virtual hard disk to another Windows VM to fix any errors, and then re-create your original VM. 
+# Troubleshoot a Windows VM by attaching the OS disk to a repair VM through the Azure portal
 
-## Recovery process overview
-The troubleshooting process is as follows:
+If your Windows virtual machine (VM) in Azure encounters a startup or disk error, you might need to perform troubleshooting steps on its OS disk offline. Attaching the OS disk to a second VM for offline repair might be required, for example, if a failed application update prevents a VM from starting successfully. This article describes how to connect a failed OS disk to a repair VM to fix any errors and then re-create your original VM.
 
-1. Stop the affected VM.
-1. Create a snapshot for the OS disk of the VM.
-1. Create a virtual hard disk from the snapshot.
-1. Attach and mount the virtual hard disk to another Windows VM for troubleshooting purposes.
-1. Connect to the troubleshooting VM. Edit files or run any tools to fix problems on the original virtual hard disk.
-1. Unmount and detach the virtual hard disk from the troubleshooting VM.
-1. Swap the OS disk for the VM.
+## Determine which method to use for offline repair
 
-> [!NOTE]
-> This article does not apply to VMs that have unmanaged disks.
+The steps you should use to attach a failed OS disk to a repair VM depend on whether the disk is encrypted with Azure Disk Encryption (ADE), whether it is managed or unmanaged, and some other factors.
 
-## Take a snapshot of the OS disk
+- If you know the OS disk is encrypted with ADE, see "[Unlocking an encrypted disk for offline repair](unlock-encrypted-disk-offline.md)" for instructions on attaching and unlocking the disk. If you are unsure if the OS disk is encrypted, see [Confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
+- If you know the OS disk is unmanaged, see "[Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md)" for instructions on attaching the disk to a repair VM. If you are unsure, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
+- If you know the disk is both managed and unencrypted, choose one of the following methods:
+  - If company policy allows you to assign a public IP address to a repair VM, see "[Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md)."  This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair).
+  - If company policies prevent you from assigning a public IP address to a repair VM, use the [manual method to attach an OS disk to a repair VM](#manually-attach-a-failed-os-disk-to-a-repair-vm).
+
+## Manually attach a failed OS disk to a repair VM
+
+Use the following process to fix a failed VM with the help of a repair VM.
+
+1. [Take a snapshot of the OS disk](#take-a-snapshot-of-the-os-disk).
+2. [Create a disk from the snapshot](#create-a-disk-from-the-snapshot).
+3. [Create a repair VM with the new disk attached as a data disk](#create-a-repair-vm-with-the-new-disk-attached-as-a-data-disk).
+4. [Repair the failed VM's OS disk](#repair-the-failed-vms-os-disk).
+5. [Swap the failed VM's OS disk with the repaired disk](#swap-the-failed-vms-os-disk-with-the-repaired-disk).
+
+### Take a snapshot of the OS disk
+
 A snapshot is a full, read-only copy of a virtual hard disk. We recommend that you cleanly shut down the VM before taking a snapshot, to clear out any processes that are in progress. To take a snapshot of an OS disk, follow these steps:
 
-1. Go to the [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has the problem.
-1. On the left pane, select **Disks**, and then select the name of the OS disk.
-    ![Screenshot that shows the name of the OS disk in disk settings.](./media/troubleshoot-recovery-disks-portal-windows/select-osdisk.png)
-1. On the **Overview** page of the OS disk, select **Create snapshot**.
-1. Create a snapshot in the same location as the OS disk.
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the VM that has the problem.
+2. Select the **Disks** blade, and then select the OS disk to open its **Overview** blade.
 
-## Create a disk from the snapshot
+    :::image type="content" source="media/troubleshoot-recovery-disks-portal-windows/os-disk.png" alt-text="Screenshot of the Disks blade of a V M in Azure portal, showing the O S disk highlighted.":::
+
+3. On the **Overview** blade of the OS disk, select **Create snapshot**.
+
+    :::image type="content" source="media/troubleshoot-recovery-disks-portal-windows/create-snapshot.png" alt-text="Screenshot of the overview blade of a disk with the create snapshot option highlighted.":::
+
+4. Proceed to create a snapshot with the default settings.
+
+### Create a disk from the snapshot
+
 To create a disk from the snapshot, follow these steps:
 
-1. Select **Cloud Shell** from the Azure portal.
+1. After the deployment of the disk snapshot is complete, navigate to the new resource in the Azure portal.
+2. On the **Overview** blade of the new disk snapshot, select **Create Disk.**
 
-    ![Screenshot that shows the button for opening Azure Cloud Shell.](./media/troubleshoot-recovery-disks-portal-windows/cloud-shell.png)
-1. Run the following PowerShell commands to create a managed disk from the snapshot. Replace the example names with the appropriate names.
+    :::image type="content" source="media/troubleshoot-recovery-disks-portal-windows/create-disk.png" alt-text="Screenshot of the overview blade of a snapshot, with the create disk option highlighted.":::
 
-    ```powershell
-    #Provide the name of your resource group.
-    $resourceGroupName ='myResourceGroup'
-    
-    #Provide the name of the snapshot that will be used to create managed disks.
-    $snapshotName = 'mySnapshot' 
-    
-    #Provide the name of the managed disk.
-    $diskName = 'newOSDisk'
-    
-    #Provide the size of the disks in gigabytes. It should be greater than the VHD file size. In this example, the size of the snapshot is 127 GB. So we set the disk size to 128 GB.
-    $diskSize = '128'
-    
-    #Provide the storage type for the managed disk: Premium_LRS or Standard_LRS.
-    $storageType = 'Standard_LRS'
-    
-    #Provide the Azure region (for example, westus) where the managed disks will be located.
-    #This location should be the same as the snapshot location.
-    #Get all the Azure locations by using this command:
-    #Get-AzLocation
-    $location = 'westus'
-    
-    $snapshot = Get-AzSnapshot -ResourceGroupName $resourceGroupName -SnapshotName $snapshotName 
-     
-    $diskConfig = New-AzDiskConfig -AccountType $storageType -Location $location -CreateOption Copy -SourceResourceId $snapshot.Id
-     
-    New-AzDisk -Disk $diskConfig -ResourceGroupName $resourceGroupName -DiskName $diskName
-    ```
-3. If the commands run successfully, you'll see the new disk in the resource group that you provided.
+3. On the **Basics** page of the "Create a Managed Disk" wizard, assign a descriptive name to the disk, such as "MyVMOsDiskCopy."
+4. On the **Basics** page, select a region and [Availability zone](/azure/availability-zones/az-overview#availability-zones), and record these choices. You will assign these same values to the repair VM.
+5. Complete the "Create a Managed Disk" wizard with the default options.
 
-## Attach the disk to another VM
-For the next few steps, you use another VM for troubleshooting purposes. After you attach the disk to the troubleshooting VM, you can browse and edit the disk's content. This process allows you to correct any configuration errors or review additional application or system log files. To attach the disk to another VM, follow these steps:
+### Create a repair VM with the new disk attached as a data disk
 
-1. Select your resource group from the portal, and then select your troubleshooting VM. Select **Disks** > **Edit** > **Add data disk**.
+1. In the Azure portal, begin the process of creating a new VM based on Windows Server. 
+2. On the **Basics** page of the "Create a Virtual Machine" wizard, specify the same region and availability zone that you chose for the new disk you just created from the snapshot.
+3. On the **Disks** page of the "Create a Virtual Machine" wizard, beneath **Data disks**, select **Attach an existing disk**.
 
-    ![Screenshot that shows selections for attaching an existing disk in the portal.](./media/troubleshoot-recovery-disks-portal-windows/attach-existing-disk.png)
+    :::image type="content" source="media/unlock-encrypted-disk-offline/attach-existing-disk.png" alt-text="Screenshot of the disks page of the create a virtual machine wizard, with the option highlighted to attach an existing disk.":::
 
-2. In the **Data disks** list, select the OS disk of the VM that you identified. If you don't see the OS disk, make sure that the troubleshooting VM and the OS disk are in the same region (location). 
-3. Select **Save** to apply the changes.
+4. In the **Data disks** list, select the disk you just created from the snapshot in the last procedure. 
+5. Complete the "Create a Virtual Machine" wizard with the default settings.
 
-## Mount the attached data disk to the VM
+### Repair the failed VM's OS disk
 
-1. Open a Remote Desktop connection to the troubleshooting VM. 
-2. In the troubleshooting VM, open **Server Manager**, and then select **File and Storage Services**. 
+With the copy of the OS disk mounted on the repair VM, you can now perform any maintenance and troubleshooting steps as needed. After you've fixed the errors on the disk that have prevented it from starting, continue with the following steps.
 
-    ![Screenshot that shows selecting File and Storage Services within Server Manager.](./media/troubleshoot-recovery-disks-portal-windows/server-manager-select-storage.png)
+## Swap the failed VM's OS disk with the repaired disk
 
-3. The data disk is automatically detected and attached. To see a list of the connected disks, select **Disks**. You can select your data disk to view volume information, including the drive letter. The following example shows the data disk attached and using drive **F**.
+Azure portal supports changing the OS disk of the VM. To do this, follow these steps:
 
-    ![Screenshot that shows an attached disk and volume information in Server Manager.](./media/troubleshoot-recovery-disks-portal-windows/server-manager-disk-attached.png)
+1. After you repair the disk, open the **Disks** blade for the repair VM in the Azure portal. Detach the copy of the source VM OS disk. To do this, locate the row for the associated disk name under **Data Disks**, select the "X" at the right side of that row, and then select **Save**.
 
-## Fix problems on the original virtual hard disk
-With the existing virtual hard disk mounted, you can now perform any maintenance and troubleshooting steps as needed. After you've resolved all errors, continue with the following steps.
+    :::image type="content" source="media/troubleshoot-recovery-disks-portal-windows/detach-repaired-disk-copy.png" alt-text="Screenshot of a data disk selected on the Disks blade in Azure portal, with the X symbol highlighted next to it.":::
 
-## Unmount and detach the original virtual hard disk
-Detach the existing virtual hard disk from your troubleshooting VM. You can't use your virtual hard disk with any other VM until the lease that attaches the virtual hard disk to the troubleshooting VM is released.
+2. In the Azure portal, navigate to the source (failed) VM and open the **Disks** blade. Click **Swap OS disk** to replace the existing OS disk with the one you have just repaired.
 
-1. From the Remote Desktop session to your VM, open **Server Manager**, and then select **File and Storage Services**.
+    :::image type="content" source="media/unlock-encrypted-disk-offline/swap-os-disk.png" alt-text="Screenshot of the disks blade in Azure portal with the swap O S disk option highlighted.":::
 
-    ![Screenshot that shows selecting File and Storage Services in Server Manager.](./media/troubleshoot-recovery-disks-portal-windows/server-manager-select-storage.png)
+3. Choose the new disk that you repaired, and then enter the name of the VM to confirm the change. If you don't see the disk in the list, wait 10 to 15 minutes after you detach the disk from the troubleshooting VM.
 
-2. Select **Disks**, right-click your data disk, and then select **Take Offline**.
+## Next Steps
 
-    ![Screenshot that shows setting the data disk as offline in Server Manager.](./media/troubleshoot-recovery-disks-portal-windows/server-manager-set-disk-offline.png)
-
-3. Detach the virtual hard disk from the VM. Select your VM in the Azure portal, and then select **Disks**. 
-4. Select **Edit**, select the OS disk that you attached, and then select **Detach**.
-
-    ![Screenshot that shows selections for detaching an existing virtual hard disk.](./media/troubleshoot-recovery-disks-portal-windows/detach-disk.png)
-
-    Before you continue, wait until the data disk is successfully detached from the VM.
-
-## Swap the OS disk for the VM
-
-Azure portal now supports changing the OS disk of the VM. To do this, follow these steps:
-
-1. Go to the [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has the problem.
-1. On the left pane, select **Disks**, and then select **Swap OS Disk**.
-   
-    ![Screenshot that shows the button for swapping an OS disk in the Azure portal.](./media/troubleshoot-recovery-disks-portal-windows/swap-os-ui.png)
-
-1. Choose the new disk that you repaired, and then enter the name of the VM to confirm the change. If you don't see the disk in the list, wait 10 to 15 minutes after you detach the disk from the troubleshooting VM. Also make sure that the disk is in the same location as the VM.
-1. Select **OK**.
-
-## Next steps
 If you're having problems connecting to your VM, see [Troubleshoot Remote Desktop connections to an Azure VM](troubleshoot-rdp-connection.md). For problems with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Windows VM](troubleshoot-app-connection.md).
-
-For more information about using Azure Resource Manager, see the [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
-
-

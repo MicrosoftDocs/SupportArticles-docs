@@ -4,6 +4,7 @@ description: This article describes how to configure IIS World Wide Web Publishi
 ms.date: 03/31/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: bretb, ahmedb, ctimon, mlaing
+ms.technology: iis-www-authentication-authorization
 ---
 # Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
 

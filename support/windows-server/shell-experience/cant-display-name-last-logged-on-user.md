@@ -2,7 +2,7 @@
 title: Can't display name of last logged-on user
 description: Describes how to prevent the name of the last logged-on user from being displayed in the Log On to Windows dialog box.
 ms.date: 10/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
-ms.prod-support-area-path: Lock Screen or Screensaver
+ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # How to prevent the name of the last logged-on user from being displayed in the Log On to Windows dialog box in Windows Server 2003  

@@ -3,7 +3,7 @@ title: Azure Serial Console for SysRq and NMI calls | Microsoft Docs
 description: Using Serial Console for SysRq and NMI calls in Azure virtual machines.
 services: virtual-machines
 documentationcenter: ''
-author: asinn826
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
 ms.date: 08/14/2018
-ms.author: alsin
+ms.author: genli
 ---
 
 
@@ -116,7 +116,7 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 ### Red Hat
  - [What is an NMI and what can I use it for?](https://access.redhat.com/solutions/4127)
  - [How can I configure my system to crash when NMI switch is pushed?](https://access.redhat.com/solutions/125103)
- - [Crash Dump Admin Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/kernel_crash_dump_guide/kernel-crash-dump-guide.pdf)
+ - [Crash Dump Admin Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/kernel_crash_dump_guide)
 
 ### SUSE
 - [Configure kernel core dump capture](https://www.suse.com/support/kb/doc/?id=3374462)

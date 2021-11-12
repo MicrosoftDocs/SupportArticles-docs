@@ -3,14 +3,14 @@ title: Troubleshoot errors that occur when you join Windows-based computers to a
 description: Troubleshooting guide for error messages that occurs when you join Windows-based computers to a domain.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain join issues
+ms.custom: sap:domain-join-issues, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot errors that occur when you join Windows-based computers to a domain
@@ -142,7 +142,7 @@ When you type the domain name, make sure that you type the DNS name and not the 
 Make sure that the DC that hosts the relative ID (RID) operations master is online and functional. For more information, see [Event ID 16650: The account-identifier allocator failed to initialize in Windows Server](/troubleshoot/windows-server/identity/event-16650-account-identifier-allocator-not-initialize).
 
 > [!Note]
-> You can use the `net query fsmo` command to determine which DC has the RID Master role.
+> You can use the `netdom query fsmo` command to determine which DC has the RID Master role.
 
 Verify that Active Directory is replicating between all DCs. You can use the following command to detect any errors:
 

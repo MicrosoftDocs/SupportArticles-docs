@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-client-user-profiles
 ---
 # Cached user logon fails when LSASRV event 45058 indicates FIFO deletion of cached credential

@@ -1,16 +1,16 @@
 ---
-title: Address Resolution Protocol caching behavior 
+title: Address Resolution Protocol caching behavior
 description: Describes ARP caching behavior in Windows Vista TCP/IP implementations.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, muratka
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Description of Address Resolution Protocol (ARP) caching behavior in TCP/IP implementations
@@ -114,7 +114,7 @@ Example result:
 `netsh interface ipv4 set global neighborcachelimit = 4096`  
 
     >[!NOTE]
-    >The default neighbor cache limit is 256.  
+    >The default neighbor cache limit is 256 for client versions of Windows, and is 1024 for Windows Server.  
 
 For more information about the neighbor cache entry states, visit the following Web site:  
 [https://www.ietf.org/rfc/rfc2461.txt](http://www.ietf.org/rfc/rfc2461.txt)  

@@ -3,7 +3,7 @@ title: Azure Serial Console for Windows | Microsoft Docs
 description: Bi-Directional Serial Console for Azure Virtual Machines and Virtual Machine Scale Sets using a Windows example.
 services: virtual-machines
 documentationcenter: ''
-author: asinn826
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
 ms.date: 5/1/2019
-ms.author: alsin
+ms.author: genli
 ---
 
 # Azure Serial Console for Windows
@@ -36,7 +36,7 @@ For serial console documentation for Linux, see [Azure Serial Console for Linux]
 
 - Your account that uses serial console must have the [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for the VM and the [boot diagnostics](boot-diagnostics.md) storage account
 
-- Your VM or virtual machine scale set instance must have a password-based user. You can create one with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Support + troubleshooting** section.
+- Your VM or virtual machine scale set instance must have a password-based user. You can create one with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
 
 * The VM for virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
 
@@ -143,6 +143,9 @@ Access to the serial console is limited to users who have an access role of [Vir
 
 ### Channel security
 All data that is sent back and forth is encrypted on the wire.
+
+### Data Storage and Encryption
+Azure Serial Console does not review, inspect, or store any of the content which is transmitted in and out of the virtual machine serial port.  No data is stored, therefore there is no data to encrypt.  Additionally, [host-based encryption](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) is used to ensure that any in-memory data paged to disk by virtual machines that run the service is also encrypted. This host-based encryption occurs for all Azure Serial Console connections and is enabled by default.
 
 ### Audit logs
 All access to the serial console is currently logged in the [boot diagnostics](./boot-diagnostics.md) logs of the virtual machine. Access to these logs are owned and controlled by the Azure virtual machine administrator.

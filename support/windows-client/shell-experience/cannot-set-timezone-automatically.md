@@ -3,14 +3,14 @@ title: Can't set time zone automatically
 description: Provides several methods to resolve the issue in which you cannot set the time zone automatically.
 ms.date: 06/23/2021
 author: v-lianna
-ms.author: delhan 
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, hunterm, ronruz, aandrejs
-ms.prod-support-area-path: DST and Timezones
+ms.custom: sap:dst-and-timezones, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Can't set time zone automatically in Windows 10
@@ -18,7 +18,7 @@ ms.technology: windows-client-shell-experience
 _Applies to:_ &nbsp; Windows 10  
 
 > [!NOTE]
-> If you're not a support agent or IT professional, you'll find more helpful information in [How to set your time and time zone](/windows/how-to-set-your-time-and-time-zone-dfaa7122-479f-5b98-2a7b-fa0b6e01b261).
+> If you're not a support agent or IT professional, you'll find more helpful information in [How to set your time and time zone](https://support.microsoft.com/windows/how-to-set-your-time-and-time-zone-dfaa7122-479f-5b98-2a7b-fa0b6e01b261).
 
 Non-administrator users cannot change or interact with the **Set time zone automatically** setting. The setting is either not visible or is "greyed out" in the **Settings** app. This is by design as the **Set time zone automatically** setting is a system wide setting that applies to all user profiles on a machine.
 
@@ -48,9 +48,11 @@ Run **Registry Editor** as an administrator and follow these steps:
 ## Use Group Policy
 
 To change the [registry settings](#1), use [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789188(v=ws.11)) to enable the **Set the time zone automatically** setting. Next, follow these steps to enable the **Location** setting in **Local Group Policy Editor**.
-Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Location and Sensors** > **Windows Location Provider** > **Turn off Windows Location Provider**, and then set the value of the **Turn off Windows Location Provider** setting to **Not Configured** as follows:
 
-:::image type="content" source="media/cannot-set-timezone-automatically/turn-off-location-setting-group-policy.png" alt-text="Turn off location setting group policy":::
+1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Location and Sensors** > **Windows Location Provider** > **Turn off Windows Location Provider**.
+2. Set the value of the **Turn off Windows Location Provider** setting to **Not Configured** as follows:
+
+    :::image type="content" source="media/cannot-set-timezone-automatically/turn-off-location-setting-group-policy.png" alt-text="Turn off location setting group policy":::
 
 ## Use MDM policy
 

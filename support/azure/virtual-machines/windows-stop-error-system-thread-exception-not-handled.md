@@ -1,6 +1,6 @@
 ---
 title: Windows stop error - 0x0000007E system thread exception not handled
-description: This article provides steps to resolve issues where the guest OS encounters a problem and wishes to restart your Azure VM. The message will state that "A system thread exception wasn’t handled".
+description: This article provides steps to resolve issues where the guest OS encounters a problem and wishes to restart your Azure VM. The message will state that "A system thread exception wasn't handled".
 services: virtual-machines
 documentationcenter: ''
 author: mibufo
@@ -12,19 +12,17 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 11/04/2020
-ms.author: v-mibufo
-
 ---
 
 # Windows stop error - 0x0000007E system thread exception not handled
 
-This article provides steps to resolve issues where the guest operating system (guest OS) encounters a problem and attempts to restart your Azure virtual machine (VM). The error message that's displayed says, "A system thread exception wasn’t handled."
+This article provides steps to resolve issues where the guest operating system (guest OS) encounters a problem and attempts to restart your Azure virtual machine (VM). The error message that's displayed says, "A system thread exception wasn't handled."
 
 ## Symptoms
 
 When you use [boot diagnostics](./boot-diagnostics.md) to view a screenshot of the VM output, you'll see that Windows needs to restart with either the "SYSTEM THREAD EXCEPTION NOT HANDLED" stop code or the "0x0000007E" error code.
 
-![Screenshot showing Windows stuck during boot with a “Your PC ran into a problem and needs to restart. We’ll restart for you.” error message and a “SYSTEM THREAD EXCEPTION NOT HANDLED” stop code.](media/windows-stop-error-system-thread-exception-not-handled/windows-stop-error-system-thread-exception-not-handled-1.png)
+:::image type="content" source="media/windows-stop-error-system-thread-exception-not-handled/system-thread-exception-not-handled.png" alt-text="Screenshot shows Your PC ran into a problem and needs to restart. We'll restart for you message and SYSTEM THREAD EXCEPTION NOT HANDLED stop code." border="false":::
 
 ## Cause
 

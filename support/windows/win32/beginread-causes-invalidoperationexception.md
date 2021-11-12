@@ -4,6 +4,7 @@ description: Lists the behavior that the NetworkStream.BeginRead method causes t
 ms.date: 03/12/2020
 ms.prod-support-area-path: Networking development
 ms.reviewer: koichm
+ms.technology: windows-dev-apps-networking-dev
 ---
 # The BeginRead method causes the InvalidOperationException
 

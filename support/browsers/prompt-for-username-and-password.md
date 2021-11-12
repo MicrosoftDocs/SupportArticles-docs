@@ -4,6 +4,7 @@ description: This article describes that when you use different windows authenti
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: clinth
+ms.technology: internet-explorer-security-privacy
 ---
 # Internet Explorer may prompt you for a password
 

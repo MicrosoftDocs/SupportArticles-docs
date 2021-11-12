@@ -4,6 +4,7 @@ description: Describes an issue that prevents you from signing in to Visual Stud
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: delhan
+ms.technology: internet-explorer-security-privacy
 ---
 # Can't sign in to Visual Studio Team Services through Internet Explorer or Microsoft Edge
 

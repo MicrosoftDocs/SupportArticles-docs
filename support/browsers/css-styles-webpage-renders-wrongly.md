@@ -2,7 +2,8 @@
 title: CSS styles webpage renders wrongly in Internet Explorer
 description: Describes a problem in Internet Explorer in which a webpage that uses CSS styles does not render correctly. Provides steps to reproduce the problem.
 ms.date: 03/03/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
+ms.technology: internet-explorer-development-website
 ---
 # A webpage that uses CSS styles does not render correctly in Internet Explorer
 

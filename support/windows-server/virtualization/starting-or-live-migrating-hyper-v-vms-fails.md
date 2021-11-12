@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, kledman
-ms.prod-support-area-path: Live Migration
+ms.custom: sap:live-migration, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Starting or live migrating Hyper-V virtual machines may fail with error 0x80070569

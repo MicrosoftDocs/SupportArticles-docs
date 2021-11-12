@@ -4,6 +4,7 @@ description: Describes the support with Microsoft Dynamics CRM 2011 and Microsof
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Support with Microsoft Dynamics CRM 2011 and Microsoft Office 2013
 

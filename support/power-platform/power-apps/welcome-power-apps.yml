@@ -22,3 +22,23 @@ landingContent:
         links:
           - text: Best practices when updating a flow
             url: best-practices-when-updating-a-flow.md
+
+ # Card
+  - title: Ribbons and commanding
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Ribbon issues
+            url: ribbon-issues.md
+          - text: Regenerate ribbon metadata 
+            url: regenerate-ribbon-metadata.md
+
+ # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Apps documentation
+            url: https://docs.microsoft.com/powerapps/
+          - text: Power Apps training 
+            url: https://docs.microsoft.com/learn/powerplatform/power-apps

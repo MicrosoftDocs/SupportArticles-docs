@@ -2,8 +2,9 @@
 title: Enhanced Protected Mode add-on compatibility
 description: Describes Enhanced Protected Mode for Windows 8.1 Preview, and explains how to disable the feature when it is necessary.
 ms.date: 10/13/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: fhigman, ramakoni
+ms.technology: internet-explorer-administration
 ---
 # Enhanced Protected Mode add-on compatibility
 
@@ -43,7 +44,7 @@ To disable Enhanced Protected Mode, follow these steps:
 3. On the **Advanced**  tab, clear the **Enable Enhanced Protected Mode** check box under **Security**.
 4. Tap or select **OK**.
 
-   :::image type="content" source="media/enhanced-protected-mode-add-on-compatibility/enable-enhanced-protected-mode-check-box.png" alt-text="Internet Properties window" border="false":::
+:::image type="content" source="media/enhanced-protected-mode-add-on-compatibility/enable-enhanced-protected-mode-check-box.png" alt-text="Screenshot shows the highlighted Enable Enhanced Protected Mode check box under Advanced tab in Internet Properties window." border="false":::
 
 > [!NOTE]
 > You must restart your browser for this setting to take effect.

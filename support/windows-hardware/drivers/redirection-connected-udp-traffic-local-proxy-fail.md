@@ -5,6 +5,7 @@ ms.date: 04/20/2021
 author: cobibi
 ms.author: v-yunhya
 ms.reviewer: jesweare, dev_triage
+ms.technology: windows-hardware-general
 ---
 # Failed to redirect connected UDP traffic to a local proxy service
 

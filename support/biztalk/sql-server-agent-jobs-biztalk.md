@@ -4,6 +4,7 @@ description: Lists all the SQL Server Agent jobs in BizTalk Server. Also provide
 ms.date: 03/06/2020
 ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ms.reviewer: rickcau
+ms.technology: biztalk-server-setup-config
 ---
 # Description of the SQL Server Agent jobs in BizTalk Server
 
@@ -36,7 +37,7 @@ The following table lists the BizTalk SQL Agent jobs.
 
 ## References
 
-For a list of the SQL Server Agent jobs and their descriptions on BizTalk Server, see [Database Structure and Jobs](https://docs.microsoft.com/biztalk/core/database-structure-and-jobs).
+For a list of the SQL Server Agent jobs and their descriptions on BizTalk Server, see [Database Structure and Jobs](/biztalk/core/database-structure-and-jobs).
 
 > [!NOTE]
 > The BizTalk SQL Agent jobs must be owned by a user who has a System Administrator server role on SQL Server.

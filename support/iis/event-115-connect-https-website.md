@@ -1,9 +1,10 @@
 ---
-title: Event 115 when you connect HTTPS website 
+title: Event 115 when you connect HTTPS website
 description: This article provides workarounds for the Event ID 115 error that occurs when you connect to a Web site by using HTTPS.
 ms.date: 03/23/2020
 ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: lauras, martinsm
+ms.technology: iis-site-behavior-performance
 ---
 # Event ID 115 occurs when you try to connect to a HTTPS Website
 
@@ -84,10 +85,10 @@ If all else fails, another program or service is probably bound to port 443. In 
 
 Here's how to check this:
 
-1. From a command prompt, type `et stop iisadmi` , and press ENTER to stop the IISADMIN service.
+1. From a command prompt, type `net stop iisadmin` , and press ENTER to stop the IISADMIN service.
 
     > [!NOTE]
     > You may need to stop other IIS services.
 
-2. Type `etstat -a` and press ENTER. (If the output is too long, you may need to pipe the output by using `|` more or `> output.txt`)
+2. Type `netstat -a` and press ENTER. (If the output is too long, you may need to pipe the output by using `|` more or `> output.txt`)
 3. Look for `0.0.0.0:443` or any other IP address ending in **:443** under the **Local Address**. For example, *column. 0.0.0.0* means something is bound to all IP addresses on port 443 and 192.0.0.1:443. After the IIS Admin Service (IISADMIN) service is stopped, if you see `0.0.0.0:443`, something else than IIS is bound and listening on port 443. Stop programs using port 443 to allow your websites to run normally.

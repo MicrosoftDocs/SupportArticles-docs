@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, nbassett
-ms.prod-support-area-path: Wireless networking and 802.1X authentication
+ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Virtual WiFi/SoftAP fails to start with error: The hosted network couldn't be started

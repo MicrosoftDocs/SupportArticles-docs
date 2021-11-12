@@ -3,14 +3,14 @@ title: DFS Namespaces service and configuration
 description: Provides information about the Distributed File System (DFS) Namespaces service to help you create a new namespace.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davfish, clandis
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # About the DFS Namespaces service and its configuration data

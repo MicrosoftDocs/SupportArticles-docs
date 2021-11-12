@@ -4,6 +4,7 @@ description: Provides the information that's collected by the Internet Explorer 
 ms.date: 04/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: louiss
+ms.technology: internet-explorer-general
 ---
 # Information collected by Internet Explorer Data Collector
 

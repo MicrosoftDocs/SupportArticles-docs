@@ -3,7 +3,7 @@ title: Hidden static files return HTTP 404
 description: This article provides resolutions for the problem where HTTP 404 File not Found or Access Denied error message from IIS hidden static files.
 ms.date: 04/15/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
-ms.technology: iis
+ms.technology: iis-health-diagnostic-performance
 ms.reviewer: robmcm; martinsm
 ---
 # IIS hidden static files return HTTP 404 or Access Denied errors

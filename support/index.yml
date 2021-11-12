@@ -10,7 +10,8 @@ brand: sql-server
 metadata:
    title: Microsoft troubleshooting documentation | Microsoft Docs
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
-   ms.topic: hub-page
+   ms.topic: hub-page  
+   ms.service: troubleshoot
 
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -61,7 +62,7 @@ productDirectory:
     url: sql/welcome-sql-server.md
 
   - title: Microsoft Endpoint Manager
-    imageSrc: "media/hub-landing/MEM.jpg"
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
     summary: Troubleshooting articles for Microsoft Endpoint Manager
     url: mem/index.yml
 

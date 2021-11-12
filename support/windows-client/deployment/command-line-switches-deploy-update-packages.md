@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: eriprice, kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Command-line switches for Microsoft software update packages
@@ -18,7 +18,7 @@ ms.technology: windows-client-deployment
 This article describes the consistent set of command-line switches that Microsoft is adopting for deploying packages that contain software updates.
 
 _Applies to:_ &nbsp; Windows 10 – all editions  
-_Original KB number:_ &nbsp;824687
+_Original KB number:_ &nbsp; 824687
 
 ## Summary
 

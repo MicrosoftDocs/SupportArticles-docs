@@ -37,17 +37,16 @@ ALAR covers the following repair scenarios:
 This script strips off any lines in the /etc/fstab file that the system doesn't need to start successfully. The system first makes a copy of the original file.
 After the system restarts, the /etc/fstab file can be updated to add lines for the correct mount options.
 
-For more information about problems that are caused by a bad /etc/fstab file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md). 
+For more information about problems that are caused by a bad /etc/fstab file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
 
 **kernel**
 This script changes the default kernel. The script replaces the broken kernel with the previously installed version.
 
-
-Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
-
+Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
 
 **initrd**
 This script corrects two problems that might occur when a new kernel is installed:
+
    - The Grub.cfg file is missing an `initrd` line.
    - The initrd image is missing.
 
@@ -55,18 +54,20 @@ Depending on the specific problem, the script either repairs the Grub.cfg file o
 
 Initrd-related startup problems can appear as the following logged symptoms.
 
-![Not syncing VFS](media/repair-linux-vm-using-ALAR/not-syncing-VFS.png)
-![No working init found](media/repair-linux-vm-using-ALAR/no-working-init-found.png)
+:::image type="content" source="media/repair-linux-vm-using-ALAR/not-syncing-vfs.png" alt-text="Screenshot shows message Not syncing VFS.":::
+
+:::image type="content" source="media/repair-linux-vm-using-ALAR/no-working-init-found.png" alt-text="Screenshot shows message No working init found.":::
 
 In both cases, the following information is logged before the error entries are logged.
 
-![Unpacking failed](media/repair-linux-vm-using-ALAR/unpacking-failed.png)
+:::image type="content" source="media/repair-linux-vm-using-ALAR/unpacking-failed.png" alt-text="Screenshot shows message Unpacking failed.":::
 
 ## How to use ALAR
+
 The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar-fki**. For example:
 
 ```azurecli-interactive
-az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234’
+az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234'
  ```
 
 ```azurecli-interactive
@@ -81,17 +82,18 @@ These steps create a repair task. In the next step, you will use the `initrd` sc
 
   [!NOTE]
 > You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
-   > - ‘fstab’
-   > - ‘fstab,initrd’
+   > - 'fstab'
+   > - 'fstab,initrd'
 
 ## Supported Operating Systems
+
 - CentOS/Redhat 6.8 - 8.2
 - Ubuntu 16.4 LTS and Ubuntu 18.4 LTS
 - Suse 12 and 15"
 - Debain 9 and 10"
-       
 
 ## Limitations
+
 - Encrypted images aren't supported.
 - Classic VMs aren't supported.
 - EFI-based images aren't supported.

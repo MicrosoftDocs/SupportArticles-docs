@@ -4,6 +4,7 @@ description: Describes the software and components that are bundled with Interne
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: jmann
+ms.technology: internet-explorer-installation
 ---
 # Prerequisites for installing Internet Explorer 9
 
@@ -44,11 +45,11 @@ If you're not sure which version of Windows is installed, follow these steps:
 
 1. Click **Start,** type *msinfo32* in the **Start Search** or **Search programs and files** box, and then press Enter.
 
-    :::image type="content" source="media/prerequisites-for-installing-ie-9/search.png" alt-text="screenshot of the Search box":::
+    :::image type="content" source="media/prerequisites-for-installing-ie-9/search.png" alt-text="Screenshot of the Search box, with msinfo32 input.":::
 
 2. Locate your operating system next to **OS Name** and your system architecture type next to **System Type**.
 
-    :::image type="content" source="media/prerequisites-for-installing-ie-9/system-information.png" alt-text="screenshot of System Information":::
+    :::image type="content" source="media/prerequisites-for-installing-ie-9/system-information.png" alt-text="Screenshot of System Information, highlighting OS name and System Type items.":::
   
 ## Manually install the Internet Explorer 9 prerequisites
 

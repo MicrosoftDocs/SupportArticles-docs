@@ -4,6 +4,7 @@ description: This article introduces about using the Configuration Editor featur
 ms.date: 04/02/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.topic: how-to
+ms.technology: iis-www-authentication-authorization
 ---
 # Configuring Many-to-One client certificate mappings for IIS 7.0 and 7.5
 
@@ -79,15 +80,15 @@ Here are the prerequisites needed for this walk-through:
 1. Launch the IIS manager and select the web site to be configured for client certificate authentication.
 2. In the **Features View**, select **Configuration Editor** under the **Management** section.
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/open-features-view.jpg" alt-text="select Features View under Configuration Editor":::
+    :::image type="content" source="media/configure-many-to-one-client-mappings/open-features-view.png" alt-text="Select the Configuration Editor under Management in Features View.":::
 
 3. Go to `system.webServer/security/authentication/iisClientCertificateMappingAuthentication` in the drop-down box as shown below:
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/iisclientcertificatemappingauthentication.jpg" alt-text="select iisClientCertificateMappingAuthentication under authentication":::
+    :::image type="content" source="media/configure-many-to-one-client-mappings/iisclientcertificatemappingauthentication.png" alt-text="Select iisClientCertificateMappingAuthentication under authentication.":::
 
     You will see a window to configure Many-to-One or One-to-One certificate mappings here. This is the UI provided through Configuration Editor from where you can set up all of the mapping configurations.
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/setup-configure-mapping.jpg" alt-text="a window used to set up all mapping configurations":::
+    :::image type="content" source="media/configure-many-to-one-client-mappings/setup-configure-mapping.png" alt-text="Screenshot of the window that's used to set up all mapping configurations.":::
 
 4. Modify the properties through this graphical user interface (GUI).
 
@@ -97,15 +98,15 @@ Here are the prerequisites needed for this walk-through:
 
 5. Under this new window, select to add a new item. You can modify the properties from within the window as shown below:
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/modify-properties.jpg" alt-text="property rule":::
+    :::image type="content" source="media/configure-many-to-one-client-mappings/modify-properties.png" alt-text="Screenshot of the window that's used to modify properties for a new item.":::
 
 6. Select on the ellipsis button for **rules**, which will give you the option to add multiple patterns for matching based on the certificate properties.
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/add-multiple-patterns-example-1.jpg" alt-text="Screenshot 1 for adding multiple patterns":::
+    :::image type="content" source="media/configure-many-to-one-client-mappings/add-multiple-patterns-example-1.png" alt-text="Screenshot 1 for adding multiple patterns.":::
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/add-multiple-patterns-example-2.jpg" alt-text="screenshot 2 for adding multiple patterns":::
+    :::image type="content" source="media/configure-many-to-one-client-mappings/add-multiple-patterns-example-2.png" alt-text="Screenshot 2 for adding multiple patterns.":::
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/add-multiple-patterns-exmaple-3.jpg" alt-text="screenshot 3 for adding multiple patterns":::
+    :::image type="content" source="media/configure-many-to-one-client-mappings/add-multiple-patterns-example-3.png" alt-text="Screenshot 3 for adding multiple patterns.":::
 
 In these example images, there are two entries for rules for mapping the certificate.
 
@@ -113,7 +114,7 @@ First, there are the **Subject** and **Issuer** fields in the certificate.  Seco
 
 In the image below, the final mapping for a specific windows account is illustrated. As you can see, there are two entries for **rules** for this account.
 
-:::image type="content" source="./media/configure-many-to-one-client-mappings/entry-for-rules.jpg" alt-text="entry for rules":::
+:::image type="content" source="media/configure-many-to-one-client-mappings/entry-for-rules.png" alt-text="Screenshot of an item that has two entries for rules.":::
 
 Similarly, you can have other mappings for the accounts based on the fields **Issuer** and **Subject** in the certificate.
 
@@ -123,9 +124,9 @@ So far what has been illustrated is achieved using the Configuration Editor, whi
 
 Configuration Editor also gives you an option to run these commands manually, and it generates the scripts to achieve it from inside the UI itself:
 
-:::image type="content" source="./media/configure-many-to-one-client-mappings/generate-script.jpg" alt-text="select generate script option to run commands":::
+:::image type="content" source="media/configure-many-to-one-client-mappings/generate-script.png" alt-text="Select the Generate Script option to run commands.":::
 
-:::image type="content" source="./media/configure-many-to-one-client-mappings/script-dialog.jpg" alt-text="run commands manually in script dialog":::
+:::image type="content" source="media/configure-many-to-one-client-mappings/script-dialog.png" alt-text="Run commands manually in the Script Dialog window.":::
 
 These are the code snippets to perform the same steps as above to configure the certificate mapping. They were generated using Configuration Editor's Script Generation feature.
 

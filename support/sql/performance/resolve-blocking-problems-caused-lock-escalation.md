@@ -4,7 +4,6 @@ description: This article describes how to determine whether lock escalation is 
 ms.date: 4/7/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: BARTD
-ms.topic: how-to
 ms.prod: sql
 ---
 # Resolve blocking problems caused by lock escalation in SQL Server
@@ -69,7 +68,7 @@ The simplest and safest method to prevent lock escalation is to keep transaction
 ## Disable lock escalation
 
 Although it's possible to disable lock escalation in SQL Server, we don't recommended it. Instead, use the prevention strategies that are described in the [Prevent Lock Escalation](#prevent-lock-escalation) section. 
-- **Table level:** You can disable lock escalation at the table level. See [`ALTER TABLE ... SET (LOCK_ESCALATION = DISABLE)`](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql). To determine which table to target, examine the T-SQL queries. If that's not possible, use [Extended events](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server), enable the _lock_escalation_ event, and examine the _object_id_ column. Alternatively use the [Lock:Escalation event](https://docs.microsoft.com/sql/relational-databases/event-classes/lock-escalation-event-class) and examine the `ObjectID2` column by using SQL Profiler.
+- **Table level:** You can disable lock escalation at the table level. See [`ALTER TABLE ... SET (LOCK_ESCALATION = DISABLE)`](/sql/t-sql/statements/alter-table-transact-sql). To determine which table to target, examine the T-SQL queries. If that's not possible, use [Extended events](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server), enable the _lock_escalation_ event, and examine the _object_id_ column. Alternatively use the [Lock:Escalation event](/sql/relational-databases/event-classes/lock-escalation-event-class) and examine the `ObjectID2` column by using SQL Profiler.
 - **Instance Level:** You can disable lock escalation by enabling trace flag 1211 for the instance. However, this trace flag disables all lock escalation globally in the instance of SQL Server. Lock escalation serves a useful purpose in SQL Server by maximizing the efficiency of queries that are otherwise slowed down by the overhead of acquiring and releasing several thousands of locks. Lock escalation also helps to minimize the required memory to keep track of locks. The memory that SQL Server can dynamically allocate for lock structures is finite. Therefore, if you disable lock escalation, and the lock memory grows large enough, any attempt to allocate additional locks for any query might fail and generate the following error entry:
 
 > Error: 1204, Severity: 19, State: 1  

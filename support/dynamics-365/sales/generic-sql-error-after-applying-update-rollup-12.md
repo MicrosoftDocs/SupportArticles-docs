@@ -4,6 +4,7 @@ description: Fixes an issue in which you can't access any web page after applyin
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # An error occurs after applying Update Rollup 12 to Microsoft Dynamics CRM 2011 Server Update Rollup 11: Generic SQL Error
 

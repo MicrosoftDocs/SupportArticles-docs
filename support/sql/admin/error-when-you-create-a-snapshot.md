@@ -18,7 +18,7 @@ In Microsoft SQL Server, you create a snapshot backup of many databases at the s
 
 > ERROR: Selected writer 'Microsoft Writer (Service State)' is in failed state!
 > - Status: 8 (VSS_WS_FAILED_AT_PREPARE_SNAPSHOT)  
-> - Writer Failure code: 0x800423f4 (<Unknown error code>)  
+> - Writer Failure code: 0x800423f4 (\<Unknown error code>)  
 > - Writer ID: { **WriterID** }
 > - Instance ID: { **InstanceID** }
 

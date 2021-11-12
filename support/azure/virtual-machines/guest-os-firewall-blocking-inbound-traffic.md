@@ -3,7 +3,7 @@ title: Azure VM Guest OS firewall is blocking inbound traffic | Microsoft Docs
 description: Learn how to fix the Remote Desktop Portal (RDP) connection issue that the guest operating system firewall is blocking inbound traffic.
 services: virtual-machines
 documentationcenter: ''
-author: Deland-Han
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: ''
@@ -13,8 +13,8 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 11/22/2018
-ms.author: delhan
+ms.date: 11/04/2021
+ms.author: genli
 
 ---
 
@@ -50,7 +50,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
 #### Mitigation 1
 
-1.	If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Support + troubleshooting** > **Reset password** on the VM menu.
+1.	If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Help** > **Reset password** on the VM menu.
 
 2.	Running this recovery option does the following:
 
@@ -112,10 +112,10 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     >    * *BlockInbound*: All inbound traffic will be blocked unless you have a rule in effect to allow that traffic.
     >    * *BlockInboundAlways*: All firewall rules will be ignored and all traffic will be blocked.
 
-2.	Edit the *DefaultInboundAction* to set these profiles to **Allow** traffic. To do this, run the following command:
+2.	Set the *DefaultInboundAction* to not always blocked traffic. To do this, run the following command:
 
     ```cmd
-    netsh advfirewall set allprofiles firewallpolicy allowinbound,allowoutbound
+    netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound
     ```
 
 3.	Query the profiles again to make sure that your change was made successfully. To do this, run the following command:
@@ -127,7 +127,8 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     > [!Note]
     > You don't have to restart the VM to apply the changes.
 
-4.	Try again to access your VM through RDP.
+4. Make sure that you add the inbound rule for RDP connection.
+5. Try again to access your VM through RDP.
 
 ### Offline Mitigations
 

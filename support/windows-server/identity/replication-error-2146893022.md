@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot AD replication error 2146893022
+title: Troubleshoot AD replication error -2146893022
 description: This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022).
 ms.date: 09/08/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error -2146893022: The target principal name is incorrect

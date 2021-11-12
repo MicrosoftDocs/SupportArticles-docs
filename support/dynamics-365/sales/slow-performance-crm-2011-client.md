@@ -4,6 +4,7 @@ description: This article discusses options to modify the time intervals that de
 ms.reviewer: chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Slow performance when you use the Microsoft Dynamics CRM 2011 client for Outlook
 

@@ -4,6 +4,7 @@ description: Fixes script errors after your Microsoft Dynamics CRM Online organi
 ms.reviewer: dmartens
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Client-side scripts no longer work in Microsoft Dynamics CRM Online after the December 2012 Service Update
 

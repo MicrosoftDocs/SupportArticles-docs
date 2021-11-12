@@ -48,14 +48,14 @@ This issue occurs for one of the following reasons:
 ## Resolution
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps, based on the error message that you received.
 
 ### Error 1: Fix the corrupted hive
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM.
 4. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 5. On the OS disk that you attached, navigate to **\windows\system32\config**. Copy all the files to a backup folder in case a rollback is required.
@@ -72,7 +72,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 ### Error 2: Repair the boot configuration data
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM.
 4. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 5. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partition and the Windows partition.
@@ -108,7 +108,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 ### Error 3: Repair the corrupted or missing binary file
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. On the attached disk, browse to the location of the binary file that's displayed in the error message.
 5. Rename the file to \<BINARY.SYS>.OLD.
@@ -122,7 +122,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-0xc0000225/4015973_en_1.png" alt-text="Sceenshot of sample of the DIR command":::
+    :::image type="content" source="media/boot-error-0xc0000225/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 

@@ -2,9 +2,10 @@
 metadata:
   title: Internet Explorer document modes FAQ
   description: Provides answers to frequently asked questions about Internet Explorer document modes.
-  ms.date: 07/14/2020
-  ms.prod-support-area-path:
+  ms.date: 07/14/2020  
   ms.reviewer: ramakoni
+  ms.topic: article
+  ms.technology: internet-explorer-development-website
     
 title: Internet Explorer document modes FAQ
 summary: |

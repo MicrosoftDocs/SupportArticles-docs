@@ -4,6 +4,7 @@ description: This article describes the problem where EndpointConfigurationName 
 ms.date: 03/24/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: weixi, lezha, smason
+ms.technology: iis-www-authentication-authorization
 ---
 # An update to a service reference doesn't update the EndpointConfigurationName property setting in the activities in a Windows Workflow Foundation 4.0 application
 

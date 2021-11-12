@@ -4,6 +4,7 @@ description: This article contains a list of Internet Explorer versions.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-general
 ---
 # Information about Internet Explorer versions
 
@@ -66,9 +67,9 @@ The build number of Internet Explorer in the release version of Windows Vista is
 
 You can open the **About Internet Explorer** dialog box by clicking **Help** > **About Internet Explorer**. Or, press Alt+X and then press A.
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-1.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 9" border="false":::
+:::image type="content" source="media/information-about-ie-version/about-internet-explorer-9.png" alt-text="Screenshot of the About Internet Explorer page for Internet Explorer 9." border="false":::
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-4.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 11" border="false":::
+:::image type="content" source="media/information-about-ie-version/about-internet-explorer-11.png" alt-text="Screenshot of the About Internet Explorer page for Internet Explorer 11." border="false":::
 
 The Update Versions field is updated every time Internet Explorer 9 or Internet Explorer 11 is updated. The version number has the following components:
 
@@ -76,19 +77,19 @@ The Update Versions field is updated every time Internet Explorer 9 or Internet 
 - The App Minor version field will remain **0**.
 - The **Update revision** field will increment by **1** for each Internet Explorer update that is released.
 
-:::image type="content" source="media/information-about-ie-version/Update-revision.png" alt-text="screenshot of the Update version field":::
+:::image type="content" source="media/information-about-ie-version/update-revision.png" alt-text="Screenshot of the Update version fields.":::
 
 Every update has an associated Knowledge base article (for example, [KB4586768](https://support.microsoft.com/help/4586768) – Cumulative security update for Internet Explorer: November 10, 2020) associated with it. The article provides detailed information about what's included in the update and the binaries that are updated. To get more information easily, check the **About Internet Explorer** dialog box. It provides a link to the Microsoft Knowledge Base Article that's associated with the most recently installed update to Internet Explorer.
 
 For example, if the first update for Internet Explorer 9 has been installed, the **About Internet Explorer** dialog box will have a link to **Update versions: 9.0.1 ([KB2530548](https://support.microsoft.com/help/2530548))**.
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-3.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 9 with update installed" border="false":::
+:::image type="content" source="media/information-about-ie-version/about-internet-explorer-update-version-901.png" alt-text="Screenshot of the About Internet Explorer page for Internet Explorer 9, showing the installed update versions: 9.0.1 (KB2530548)." border="false":::
 
 ## Changes to the About Internet Explorer dialog in Internet Explorer 11 on Windows 10 version 1809 and later
 
 You can open the **About Internet Explorer** dialog box by clicking **Help** > **About Internet Explorer**. Or, press Alt + X and then press A.
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-2.png" alt-text="screenshot of the About Internet Explorer page in Windows 10" border="false":::
+:::image type="content" source="media/information-about-ie-version/about-internet-explorer-windows-10.png" alt-text="Screenshot of the About Internet Explorer page in Windows 10 version 1903." border="false":::
 
 On Windows 10 version 1809 and later, the About Dialog has been updated to use a more modern dialog that reflects the latest installed Operating System updates to provide better accuracy. The updated dialog will reflect the same version information as seen in winver.exe. Update Version is no longer used.
 

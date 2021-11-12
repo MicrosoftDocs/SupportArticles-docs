@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: makat, kaushika
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # VSS event ID 8193 is logged when you restart the Cryptographic Services service after you install the DHCP role on a computer

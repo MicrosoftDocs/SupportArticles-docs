@@ -38,7 +38,7 @@ The following sections will help you identify, mitigate, and remedy Azure Stack 
 
 Azure Stack customers should take the following actions to help protect the Azure Stack infrastructure against the vulnerabilities:
 
-1. Apply Azure Stack 1712 update. See the [Azure Stack 1712 update release notes](https://docs.microsoft.com/azure/azure-stack/azure-stack-update-1712) for instructions about how to apply this update to your Azure Stack integrated system.  
+1. Apply Azure Stack 1712 update. See the [Azure Stack 1712 update release notes](/azure/azure-stack/azure-stack-update-1712) for instructions about how to apply this update to your Azure Stack integrated system.  
 2. Install firmware updates from your Azure Stack OEM vendor after the Azure Stack 1712 update installation is completed. Refer to your OEM vendor website to download and apply the updates.  
 3. Some variations of these vulnerabilities apply also to the virtual machines (VMs) that are running in the tenant space. Customers should continue to apply security best practices for their VM images, and apply all available operating system updates to the VM images that are running on Azure Stack. Contact the vendor of your operating systems for updates and instructions, as necessary. For Windows VM customers, guidance has now been published and is available [in this Security Update Guide](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). 
 
@@ -48,13 +48,13 @@ Azure Stack customers should take the following actions to help protect the Azur
 **A1:** All Azure Stack integrated systems are affected by the class of vulnerabilities that are described in the [MSRC Security Advisory ADV180002](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
 
 **Q2. Where can I find the Azure Stack update to fix this class of vulnerabilities?**   
-**A2:** See [Azure Stack 1712 update release notes](https://docs.microsoft.com/azure/azure-stack/azure-stack-update-1712) for instructions about how to download and apply this update to your Azure Stack integrated system. For more information about updates for Microsoft Azure Stack, see [Update package release cadence](https://docs.microsoft.com/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005&preserve-view=true#update-package-release-cadence).
+**A2:** See [Azure Stack 1712 update release notes](/azure/azure-stack/azure-stack-update-1712) for instructions about how to download and apply this update to your Azure Stack integrated system. For more information about updates for Microsoft Azure Stack, see [Update package release cadence](/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005&preserve-view=true#update-package-release-cadence).
 
 **Q3. Where can I find the firmware updates for my Azure Stack integrated system?**   
 **A3:** Firmware updates are OEM-specific. Refer to your OEM vendor website to download and apply the updates.
 
 **Q4. My Azure Stack integrated system is not running the latest update (1711). What should I do?**   
-**A4:** Azure Stack updates are sequential. You would have to apply all previous updates before you can apply the Azure Stack 1712 update. For more information, see [Azure Stack 1711 Update](https://docs.microsoft.com/azure/azure-stack/azure-stack-update-1711).
+**A4:** Azure Stack updates are sequential. You would have to apply all previous updates before you can apply the Azure Stack 1712 update. For more information, see [Azure Stack 1711 Update](/azure/azure-stack/azure-stack-update-1711).
 
 **Q5. I'm running an Azure Stack Development Kit (ASDK). Is that affected by this class of vulnerabilities?**    
 **A5:** Yes, it is. We recommend that you deploy the [latest version of the ASDK](https://azure.microsoft.com/overview/azure-stack/development-kit/). For firmware update, see your OEM vendor website to download and apply the updates.

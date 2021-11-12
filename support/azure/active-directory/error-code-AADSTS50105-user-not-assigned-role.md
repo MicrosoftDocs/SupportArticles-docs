@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS50105 - The signed in user is not assigned to a role for the application.
 description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The signed in user is not assigned to a role for the application.
-ms.date: 03/15/2021
+ms.date: 09/30/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
 ---
@@ -15,11 +15,11 @@ You receive error `AADSTS50105` when trying to sign into an application that has
 
 ## Cause
 
-The user has not been granted access to the application in Azure AD.
+The user has not been granted access to the application in Azure AD. The user must belong to a group that is assigned to the application, or be assigned directly. Note that nested groups are not supported, and the group must be directly assigned to the application.
 
 ## Resolution
 
-To assign one or more users to an application directly, see [Quickstart: Assign users to an app](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users).
+ To assign one or more users to an application directly, see [Quickstart: Assign users to an app](/azure/active-directory/manage-apps/add-application-portal-assign-users).
 
 ## More Information
 

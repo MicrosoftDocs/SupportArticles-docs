@@ -1,6 +1,6 @@
 ---
 title: Reduced performance after SMB Encryption or SMB Signing is enabled
-description: Describes an issue in which networking performance is reduced after you enable SMB Encryption or SMB Signing in Windows Server 2016. Provides a solution to this issue.
+description: Describes an issue in which networking performance is reduced after you enable SMB Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019. Provides a solution to this issue.
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
@@ -10,14 +10,14 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
-# Reduced networking performance after you enable SMB Encryption or SMB Signing in Windows Server 2016
+# Reduced networking performance after you enable SMB Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019
 
-This article provides a solution to an issue where networking performance is reduced after you enable Server Message Block (SMB) Encryption or SMB Signing in Windows Server 2016.
+This article provides a solution to an issue where networking performance is reduced after you enable Server Message Block (SMB) Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019. Windows Server 2022 improves network performance for this scenario.
 
-_Applies to:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4458042
 
 ## Symptoms
@@ -90,11 +90,15 @@ Or, if you use the following Group Policy settings to enable SMB Signing:
 
 SMB Signing and SMB Encryption have some trade-offs in performance. If network performance is important to your deployment scenarios (such as with Storage Spaces Direct), we recommend that you not deploy SMB Signing and SMB Encryption.
 
-If you are deploying in a highly secure environment, we recommend that you apply the following configurations:
+Windows Server 2022 SMB Direct now supports encryption. Data is encrypted before placement, leading to relatively minor performance degradation. Furthermore, Windows Server 2022 failover clusters now support granular control of encrypting intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct and SMB Direct, you can decide to encrypt east-west communications within the cluster itself for higher or lower security on a per SMB instance basis.
+
+If you are deploying in a highly secure environment with Windows Server 2016 and Windows Server 2019, we recommend that you apply the following configurations:
 
 1. Do not deploy by using RDMA-enabled network adapters, or disable RDMA by using the `Disable-NetAdapterRdma` cmdlet.
 
 2. Based on the SMB client and SMB server version, evaluate the most appropriate solution to optimize performance. Be aware that SMB Signing provides message integrity, and SMB Encryption provides message integrity plus privacy to provide the highest level of security.
 
-    - **SMB 3.0 (Windows Server 2012/Windows 8.1)** - SMB Signing will deliver better performance than SMB Encryption.
-    - **SMB 3.1 (Windows Server 2016/Windows 10)** - SMB Encryption will deliver better performance than SMB Signing, and has the added benefit of increased security together with message privacy in addition to message integrity guarantees.
+    - **SMB 3.0 (introduced with Windows Server 2012/Windows 8)** - SMB Signing will deliver better performance than SMB Encryption.
+    - **SMB 3.1 (introduced with Windows Server 2016/Windows 10)** - SMB Encryption will deliver better performance than SMB Signing, and has the added benefit of increased security together with message privacy in addition to message integrity guarantees.
+
+

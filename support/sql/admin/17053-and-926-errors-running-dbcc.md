@@ -4,7 +4,6 @@ description: This article describes how to interpret "Error:17053" and other err
 ms.date: 11/03/2020
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: sureshka
-ms.topic: how-to
 ms.prod: sql
 ---
 # Error 17053 may be logged in the error log after you run a DBCC command in SQL Server

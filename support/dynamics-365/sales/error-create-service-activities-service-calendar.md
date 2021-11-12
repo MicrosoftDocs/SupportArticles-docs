@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-apps-addons
 ---
 # Error creating Service Activities from the Service Calendar in Microsoft Dynamics CRM 2015
 

@@ -4,6 +4,7 @@ description: Introduces common issues and resolutions with the BizTalk Server Ad
 ms.date: 03/04/2020
 ms.prod-support-area-path: Management and Operations
 ms.reviewer: btstech
+ms.technology: biztalk-server-management-operations
 ---
 # Common issues and resolutions with the BizTalk Server Administration console
 
@@ -18,7 +19,7 @@ When using System Center Operations Manager (SCOM) 2007 with the BizTalk Managem
 
 To resolve this issue, use one of the following resolutions:
 
-- Confirm the BizTalk Management Pack is configured correctly. For example, you must specify a Run As Account for the *BizTalk Server Monitoring Account* and *BizTalk Server Discovery Account* profiles within SCOM. For the specific details, see [Microsoft BizTalk Server Management Pack for System Center Operations Manager 2007](https://docs.microsoft.com/biztalk/technical-guides/monitoring-biztalk-server-with-system-center-operations-manager-2007).
+- Confirm the BizTalk Management Pack is configured correctly. For example, you must specify a Run As Account for the *BizTalk Server Monitoring Account* and *BizTalk Server Discovery Account* profiles within SCOM. For the specific details, see [Microsoft BizTalk Server Management Pack for System Center Operations Manager 2007](/biztalk/technical-guides/monitoring-biztalk-server-with-system-center-operations-manager-2007).
 
 - The BizTalk Management pack runs a script for every artifact type (send port, receive port, receive location, send port group, orchestration, and so on) per host. If there are 50 hosts, then there will be 50 scripts executed against Windows Management Instrumentation (WMI) per artifact type. In this scenario, WMI can become overloaded. This querying may keep the BizTalk WMI provider running continuously.
 
@@ -101,7 +102,7 @@ You also may receive additional issues that are described in the following secti
 
 ## Common tasks require specific rights
 
-Many common tasks like creating a BizTalk host or stopping a send port require specific rights within BizTalk and SQL Server. If you're unable to perform certain functions within BizTalk Administration, you may be missing membership to a BizTalk group. For the specific details of the group or role requirements, see [Minimum Security User Rights](https://docs.microsoft.com/biztalk/core/minimum-security-user-rights).
+Many common tasks like creating a BizTalk host or stopping a send port require specific rights within BizTalk and SQL Server. If you're unable to perform certain functions within BizTalk Administration, you may be missing membership to a BizTalk group. For the specific details of the group or role requirements, see [Minimum Security User Rights](/biztalk/core/minimum-security-user-rights).
 
 ## SQL Server configured to listen on a port other than 1433 may cause issues
 
@@ -165,7 +166,7 @@ When BizTalk and SQL Server are remote, the network layer could be responsible f
 
     To test this scenario, copy/paste a file from the BizTalk Server to a folder on the SQL Server, and vice versa. If this copy process takes a while, then something in the network layer is causing an issue.
 
-- When connecting to the SQL Server Database Engine, a network protocol must be enabled. For BizTalk, confirm the TCP/IP protocol is enabled. See [Choosing a Network Protocol](https://docs.microsoft.com/previous-versions/sql/sql-server-2016/ms187892(v=sql.130)).
+- When connecting to the SQL Server Database Engine, a network protocol must be enabled. For BizTalk, confirm the TCP/IP protocol is enabled. See [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130)).
 
 ## OutOfMemory exception when working within BizTalk Administration
 
@@ -186,7 +187,7 @@ To check the MemoryPerHost value, use **wbemtest** on all BizTalk servers in the
 5. If the **MemoryPerHost** value is less than 512 MB (536870912), double-click **MemoryPerHost** and set the value to 536870912. Click **Save Property**, click **Save Object** and exit.
 6. Restart the Windows Management Instrumentation service.
 
-For more information, see [ProviderHostQuotaConfiguration class](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration).
+For more information, see [ProviderHostQuotaConfiguration class](/windows/win32/wmisdk/--providerhostquotaconfiguration).
 
 ## Troubleshooting
 

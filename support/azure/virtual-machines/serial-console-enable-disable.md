@@ -3,7 +3,7 @@ title: Enable and disable the Azure Serial Console | Microsoft Docs
 description: How to enable and disable the Azure Serial Console service
 services: virtual-machines
 documentationcenter: ''
-author: asinn826
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 8/20/2019
-ms.author: alsin
+ms.author: genli
 ---
 
 # Enable and disable the Azure Serial Console
@@ -37,21 +37,21 @@ Serial console can be disabled and re-enabled for an entire subscription by usin
 
 To disable serial console for a subscription, use the following commands:
 ```azurecli-interactive
-subscriptionId=$(az account show --output=json | jq -r .id)
+$subscriptionId=$(az account show --output=json | jq -r .id)
 
 az resource invoke-action --action disableConsole --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --api-version="2018-05-01"
 ```
 
 To enable serial console for a subscription, use the following commands:
 ```azurecli-interactive
-subscriptionId=$(az account show --output=json | jq -r .id)
+$subscriptionId=$(az account show --output=json | jq -r .id)
 
 az resource invoke-action --action enableConsole --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --api-version="2018-05-01"
 ```
 
 To get the current enabled/disabled status of serial console for a subscription, use the following commands:
 ```azurecli-interactive
-subscriptionId=$(az account show --output=json | jq -r .id)
+$subscriptionId=$(az account show --output=json | jq -r .id)
 
 az resource show --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --output=json --api-version="2018-05-01" | jq .properties
 ```
