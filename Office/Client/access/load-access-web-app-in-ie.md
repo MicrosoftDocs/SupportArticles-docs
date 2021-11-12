@@ -26,7 +26,7 @@ appliesto:
 
 When you try to load a Microsoft Access web app in Internet Explorer, the app may not load completely, and then you receive an "Error has occurred. Sorry, something went wrong. Please try again later" error message.
 
-![An error has occurred](./media/load-access-web-app-in-ie/error-message.jpg)
+:::image type="content" source="media/load-access-web-app-in-ie/error-message.png" alt-text="Screenshot of the error message when the app may not load completely." border="false":::
 
 > [!NOTE]
 > The "TECHNICAL DETAILS" section of the error does not show a value for the Correlation ID.

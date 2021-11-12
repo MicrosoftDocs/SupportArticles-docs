@@ -78,7 +78,7 @@ Follow these steps:
 4. In the **Edit Global Authentication Policy** dialog box, click the **Primary** tab.   
 5. In the **Extranet** and **Intranet** sections, select the **Forms Authentication** check box.
 
-   ![Screen shot of the Edit Global Authentication Policy dialog box, showing the Forms Authentication check boxes](./media/sign-in-issue-with-modern-auth/enable-global-authentication-policy.jpg)   
+   :::image type="content" source="media/sign-in-issue-with-modern-auth/enable-global-authentication-policy.png" alt-text="Screenshot of the Edit Global Authentication Policy dialog box, showing the Forms Authentication check boxes.":::
 
 ### Issue: Desktop single sign-on (SSO) with AD FS fails
 

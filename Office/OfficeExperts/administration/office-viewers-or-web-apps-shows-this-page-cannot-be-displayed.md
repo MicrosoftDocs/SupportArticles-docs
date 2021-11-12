@@ -1,5 +1,6 @@
 ---
 title: Office viewers or Microsoft Offices Online shows the "This page can't be displayed" error
+description: Office viewers don't work with the "This page can't be displayed" error when you use Microsoft .NET Framework 4.6.
 author: helenclu
 ms.author: arhinesm
 manager: dcscontentpm
@@ -22,7 +23,9 @@ This article was written by [Adam Rhinesmith](https://social.technet.microsoft.c
 
 When you use Microsoft .NET Framework 4.6 or later versions with Office Online Server 2013 or Office Online Server, Office viewers don't work or *https://internalurl/op/generate.aspx* page doesn't open in a browser, and you receive the following error:
 
-![the error message dialog box](./media/office-viewers-or-office-web-apps-shows-this-page-cannot-be-displayed/this-page-cant-be-displayed.png)
+> This page can't be displayed.
+
+:::image type="content" source="media/office-viewers-or-office-web-apps-shows-this-page-cannot-be-displayed/error-page.png" alt-text="Screenshot of the error message, showing this page can't be displayed." border="false":::
 
 ## Cause
 
