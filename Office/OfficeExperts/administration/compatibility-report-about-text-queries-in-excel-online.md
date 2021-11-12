@@ -1,5 +1,6 @@
 ---
 title: Compatibility Report about text queries in Excel Online
+description: Describes the steps to troubleshoot the compatibility report when you edit a workbook that contains text queries in Microsoft Excel Online.
 author: helenclu
 ms.author: jhaak
 manager: dcscontentpm

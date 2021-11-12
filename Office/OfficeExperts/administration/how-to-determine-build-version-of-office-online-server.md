@@ -1,5 +1,6 @@
 ---
-title: How to determine the build version of Office Web Apps 2013 or Office Online Server
+title: Determine the build version of Office Web Apps 2013 or Office Online Server
+description: Describes how to determine the build version of Office Web Apps 2013 or Office Online Server.
 author: helenclu
 ms.author: thempel
 manager: dcscontentpm
