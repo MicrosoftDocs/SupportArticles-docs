@@ -27,7 +27,7 @@ When you try to run queries in [Graph Explorer](https://developer.microsoft.com/
 &nbsp; &nbsp; }  
 }  
 
-:::image type="content" source="media/403-error-graph-explorer-query/403-error.png" alt-text="screenshot of the 403 error details":::
+:::image type="content" source="media/403-error-graph-explorer-query/403-error.png" alt-text="Screenshot of the 403 error details.":::
 
 ## Cause
 
@@ -41,14 +41,14 @@ To fix this issue, follow these steps:
 
 1. In the error message, select **modify your permissions**.
 
-    :::image type="content" source="media/403-error-graph-explorer-query/modify-your-permissions.png" alt-text="screenshot of modify your permissions":::
+    :::image type="content" source="media/403-error-graph-explorer-query/modify-your-permissions.png" alt-text="Screenshot of modify your permissions link in the top of the error.":::
 
 1. In the **Modify Permissions** dialog box, make sure that the following permissions are selected:
 
     - DeviceManagementConfiguration.Read.All
     - DeviceManagementConfiguration.ReadWrite.All
 
-    :::image type="content" source="media/403-error-graph-explorer-query/modify-permissions-options.png" alt-text="screenshot of the Modify Permissions options":::
+    :::image type="content" source="media/403-error-graph-explorer-query/modify-permissions-options.png" alt-text="Screenshot of the Modify Permissions options.":::
 
 1. Select **Modify Permissions**.
 
@@ -57,7 +57,7 @@ To fix this issue, follow these steps:
 
 1. The next time that you try to access Graph Explorer by using the same account, you are prompted by a **Permissions requested** dialog box that resembles the following.
 
-    :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-1.png" alt-text="Permissions requested":::
+    :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-1.png" alt-text="Screenshot of the Permissions requested page.":::
 
 1. Select **Accept** to apply the changes that you made in step 3. If you want other Intune administrators to also be granted access to the site, select **Consent on behalf of your organization**.
 
@@ -66,13 +66,13 @@ To fix this issue, follow these steps:
    - DeviceManagementConfiguration.Read.All
    - DeviceManagementConfiguration.ReadWrite.All
 
-    :::image type="content" source="media/403-error-graph-explorer-query/modify-permissions.png" alt-text="screenshot of Verify permissions":::
+    :::image type="content" source="media/403-error-graph-explorer-query/modify-permissions.png" alt-text="Screenshot of the modify permissions page.":::
 
 ## More information
 
 The first time that you log on to Graph Explorer, you are prompted by a **Permissions requested** dialog box that resembles the following.
 
-:::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-2.png" alt-text="screenshot of Permissions requested":::
+:::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-2.png" alt-text="Screenshot of the Permissions requested page":::
 
 By selecting **Accept**, you grant the app permissions to your sign-in account. By selecting **Consent on behalf of your organization**, you allow other accounts to also use Graph Explorer to query Intune management objects. This creates an Enterprise application in Azure AD that has the following settings:
 

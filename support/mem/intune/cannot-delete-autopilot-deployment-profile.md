@@ -18,7 +18,7 @@ When you try to delete a Windows Autopilot deployment profile in Microsoft Intun
 > Cannot delete \<Autopilot Profile Name>  
 > The profile is assigned to groups. You must unassign all groups from this profile before you can delete it.
 
-:::image type="content" source="media/cannot-delete-autopilot-deployment-profile/error.png" alt-text="screenshot of Error":::
+:::image type="content" source="media/cannot-delete-autopilot-deployment-profile/cannot-delete-error.png" alt-text="Screenshot of the Cannot delete Autopilot Profile error.":::
 
 ## Cause
 
@@ -55,7 +55,7 @@ To find the `AutopilotProfileID`, follow these steps:
 
     `https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/AutopilotMenuBlade/overview/id/<AutopilotProfileID>`
 
-    :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/url.png" alt-text="screenshot of URL":::
+    :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/url.png" alt-text="screenshot of the URL in the address bar.":::
   
 #### Step 2: Find the GroupID of the assigned group that has been deleted
 
@@ -78,7 +78,7 @@ To find the GroupID, use one of the following methods:
      GET https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>
      ```
 
-     :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query1.png" alt-text="screenshot of Query 1":::
+     :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query-1.png" alt-text="Screenshot of Query 1.":::
 
   3. Run the following query to get details of the assignment:
 
@@ -86,11 +86,11 @@ To find the GroupID, use one of the following methods:
      GET https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>/assignments
      ```
 
-     :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query2.png" alt-text="screenshot of Query 2]":::
+     :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query-2.png" alt-text="Screenshot of Query 2.":::
 
   4. Find the GroupID from the result. Here is an example:
 
-      :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/group-id.png" alt-text="screenshot of GroupID]":::
+      :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/group-id.png" alt-text="Screenshot of GroupID in the result.":::
   
 #### Step 3: Delete the profile assignment by using Graph Explorer
 
@@ -100,7 +100,7 @@ To delete the assignment, run the following query:
 DELETE https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>/assignments/<AutopilotProfileID>_<GroupID>
 ```
 
-:::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query3.png" alt-text="screenshot of Query 3]":::
+:::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query-3.png" alt-text="Screenshot of Query 3.":::
 
 You may receive the following error message when you run the DELETE query:
 
