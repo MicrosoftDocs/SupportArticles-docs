@@ -26,9 +26,11 @@ appliesto:
 
 When you attempt to install an Office Add-in from the Office Store you receive the following error:
 
-> We can't start this app because it isn't set up properly. This error is shown in the following image.
+> We can't start this app because it isn't set up properly.
 
-![error message dialog box](./media/cannot-install-office-add-in/app-error.png)
+This error is shown in the following image.
+
+:::image type="content" source="media/cannot-install-office-add-in/app-error.png" alt-text="Screenshot shows the error message after attempting to install an Office Add-in from the Office Store." border="false":::
 
 ## Cause
 

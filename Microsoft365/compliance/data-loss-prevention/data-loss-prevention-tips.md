@@ -47,7 +47,7 @@ The following table contains possible causes and resolutions for this issue. Use
 
 For an example of a DLP policy that's applied successfully, see the following screenshot:
 
-![A screenshot of an email message, showing a DLP policy that is applied successfully ](./media/data-loss-prevention-tips/dlp-example.jpg)
+:::image type="content" source="media/data-loss-prevention-tips/dlp-example.png" alt-text="Screenshot of an email message, showing a D L P policy that is applied successfully.":::
 
 > [!NOTE]
 > Only valid credit card number formats will trigger the rule.
