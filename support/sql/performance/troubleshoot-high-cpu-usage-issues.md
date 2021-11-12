@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; SQL Server
 
 This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server.
 
-Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common:
+Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common ones:
 
 - High logical reads that are caused by table or index scans because of the following:
   - Out-of-date statistics
@@ -31,7 +31,7 @@ Use one of the following tools to check whether the SQL Server process is actual
 
 - Task Manager (On the **Process** tab, check whether the CPU value for **SQL Server Windows NT-64 Bit** is close to 100 percent)
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
-  - Counter: Process/%User Time, % Privileged Time
+  - Counter: `Process/%User Time`, `% Privileged Time`
   - Instance: sqlservr
   
 - You can use the following Powershell script to collect the counter data over 60 sec period:
@@ -54,7 +54,7 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-  > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+  If you notice that `% User Time` is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -96,32 +96,34 @@ If SQL Server is still using high CPU, go to the next step.
 
 ## Step 4: Add potentially missing indexes
 
-1. Use the following query to get the estimated execution plan of the highest CPU-bound query.
+1. Use the following query to identify queries with high CPU usage that contain at least one missing index in the query plan.
 
     ```sql
-    -- Captures the Total CPU time spent by a query along with the plan handle
-    SELECT highest_cpu_queries.plan_handle,
-           highest_cpu_queries.total_worker_time,
+    -- Captures the Total CPU time spent by a query along with the query plan and total executions
+    SELECT 
+           qs_cpu.total_worker_time/1000 AS total_cpu_time_ms,
+           q.[text],
+           p.query_plan,
+           qs_cpu.execution_count,
            q.dbid,
            q.objectid,
-           q.number,
-           q.encrypted,
-           q.[text]
+           q.encrypted AS text_encrypted
     FROM
-      (SELECT TOP 50 qs.plan_handle,
-                  qs.total_worker_time
+      (SELECT TOP 500 qs.plan_handle,
+                  qs.total_worker_time,
+                  qs.execution_count
        FROM sys.dm_exec_query_stats qs
-       ORDER BY qs.total_worker_time DESC) AS highest_cpu_queries CROSS apply sys.dm_exec_sql_text(plan_handle) AS q
-    ORDER BY highest_cpu_queries.total_worker_time DESC 
-    
-    -- Replace the Plan handle with the value obtained from above query.
-    SELECT *
-    FROM sys.dm_exec_query_plan (plan_handle)
+       ORDER BY qs.total_worker_time DESC) AS qs_cpu 
+       CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
+       CROSS APPLY sys.dm_exec_query_plan (plan_handle) p
+      WHERE p.query_plan.exist('declare namespace 
+       qplan="http://schemas.microsoft.com/sqlserver/2004/07/showplan";
+            //qplan:MissingIndexes')=1
     ```
 
-1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query:
+1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another window in SSMS.
 
-    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." border="true":::
+    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
 1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes that have high improvement measurements.
 
@@ -283,7 +285,28 @@ If you are using a virtual machine, make sure that you aren't overprovisioning C
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs.
+If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to help you determine how many queries have exceeded a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values of the two variables to match your environment.
+
+```sql
+-- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
+DECLARE @cputime_threshold_microsec INT = 200*1000
+DECLARE @execution_count INT = 1000
+
+SELECT 
+     qs.total_worker_time/1000 total_cpu_time_ms,
+       qs.max_worker_time/1000 max_cpu_time_ms,
+       (qs.total_worker_time/1000)/execution_count average_cpu_time_ms,
+       qs.execution_count,
+     q.[text]
+FROM
+   sys.dm_exec_query_stats qs
+   CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
+WHERE  (qs.total_worker_time/execution_count > @cputime_threshold_microsec  
+       OR        qs.max_worker_time > @cputime_threshold_microsec )
+       AND execution_count > @execution_count
+ORDER BY qs.total_worker_time DESC 
+OPTION (RECOMPILE)
+```
 
 ## See also
 
