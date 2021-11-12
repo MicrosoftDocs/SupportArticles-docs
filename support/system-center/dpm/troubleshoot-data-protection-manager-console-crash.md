@@ -145,9 +145,9 @@ If the service is unable to connect to the DPM database, it will likely be unabl
 
 The **Problem Details** section in the event log should provide additional information about the nature of the failure. Typically the database is offline or not contactable (more likely if it's on a remote server), or you may have a login failure. In such scenarios, you will probably see an error in the event log similar to one of the following examples:
 
-:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/event-details-1.png" alt-text="Details of the Error 948 Unable to connect to DPM Server." border="false":::
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/event-details-1.png" alt-text="Details of the Error 948 Unable to connect to DPM Server example 1." border="false":::
 
-:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/event-details-2.png" alt-text="Details of the Error 948 Unable to connect to DPM Server." border="false":::
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/event-details-2.png" alt-text="Details of the Error 948 Unable to connect to DPM Server example 2." border="false":::
 
 Some common reasons include:
 
