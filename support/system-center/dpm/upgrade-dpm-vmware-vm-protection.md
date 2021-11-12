@@ -11,7 +11,7 @@ If you use Microsoft System Center 2012 R2 Data Protection Manager (DPM) to prot
 
 > 34517 - DPM 2016 does not support VMware VM Backup yet.
 
-![Select start job at step](./media/upgrade-dpm-vmware-vm-protection/dpm-protection-manager-setup.png)
+:::image type="content" source="media/upgrade-dpm-vmware-vm-protection/34517-dpm-2016-does-not-support-vmware-vm-backup-yet-error.png" alt-text="Screenshot of the error when you try to upgrade to System Center 2016 Data Protection Manager." border="false":::
 
 To fix this issue, follow the upgrade procedure in this article.
 

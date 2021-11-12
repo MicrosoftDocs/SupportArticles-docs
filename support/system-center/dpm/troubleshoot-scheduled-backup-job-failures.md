@@ -98,11 +98,13 @@ You can try running the job manually from SQL Management Studio. To do this, fol
 
 1. Start SQL Server Management Studio, and connect to the SQL Server instance that's used for the DPMDB database. Expand **SQL Server Agent** > **Jobs**. The GUIDs values in the list under **Jobs** provide the **Schedule ID** for each job. Right-click a job, and then select **Start Job at Step** on the context menu.
 
-    ![Select start job at step](./media/troubleshoot-scheduled-backup-job-failures/start-job-at-step.png)
+    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/start-job-at-step.png" alt-text="Right-click the job that is listed under Jobs and select the Start Job at Step option.":::
 
 2. If the job doesn't run, you should receive an error message that resembles the following.
 
-    ![job failure](./media/troubleshoot-scheduled-backup-job-failures/error-message.png)
+    > Execution of job '00890b12-9058-4f42-8143-291dc3de4d78' failed.
+
+    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/error-message.png" alt-text="The execution error that occurs if the job doesn't run.":::
 
 3. This message confirms that the SQL Server Agent wasn't able to run the job because of incorrect permissions or some other reason. See [Check the logon account credentials](#check-the-logon-account-credentials) section to troubleshoot this issue.
 
@@ -112,15 +114,15 @@ You can run `Triggerjob.exe` at a command line to manually check whether the com
 
 1. Start SQL Server Management Studio, and then connect to the SQL Server instance that's used for the DPMDB database. Expand **SQL Server Agent** > **Jobs**. Right-click one of the jobs, and then select **Properties**.
 
-    ![Select properties](./media/troubleshoot-scheduled-backup-job-failures/select-properties.png)
+    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/select-properties.png" alt-text="Right-click one of the jobs and then select Properties.":::
 
 2. In the **Properties** dialog box, select **Steps** on the left, and then select the **Edit** button at the bottom.
 
-    ![Configuration of Job Properties](./media/troubleshoot-scheduled-backup-job-failures/job-properties.png)
+    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/job-properties.png" alt-text="Edit properties for a job in the Job Properties dialog box." border="false":::
 
 3. In the **Job Step Properties** dialog box, copy the command from the Command Prompt window, as shown in the following screenshot.
 
-    ![Copy the command](./media/troubleshoot-scheduled-backup-job-failures/command-window.png)
+    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/command-window.png" alt-text="In the Job Step Properties dialog box, copy the command from the Command Prompt window." border="false":::
 
 4. Run the copied command, as appropriate:
 
@@ -197,7 +199,7 @@ You can run `Triggerjob.exe` at a command line to manually check whether the com
 
         The output of the SQL query will resemble the following example. Based on this output, you can pick a Schedule ID for a data source that's small and quick for testing.
 
-        ![Output of the SQL query](./media/troubleshoot-scheduled-backup-job-failures/output-query.png)
+        :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/output-query.png" alt-text="The output of the SQL query which contains Schedule IDs for data sources.":::
 
 ## Check whether SQL Server jobs are disabled
 
@@ -207,7 +209,7 @@ The scheduled jobs might be disabled in SQL Server. To check and enable the jobs
 
 1. Expand **SQL Server Agent** > **Jobs**. Compare the jobs that are listed there with the output from the SQL query that you ran in step 1. If a job from the query is listed as **Disabled** (arrow pointing down), right-click the job, select **Enable**, and then run the job manually from SQL Server by following the steps that are mentioned in the [Run the job manually at a command prompt](#run-the-job-manually-at-a-command-prompt) section.
 
-    ![enable job](./media/troubleshoot-scheduled-backup-job-failures/check-enable-jobs.png)
+    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/check-enable-jobs.png" alt-text="Enable the SQL Server jobs under SQL Server Agent.":::
 
 ## Check the logon account credentials
 

@@ -22,7 +22,7 @@ When dealing with console crashes, it's important to understand that the console
 
 Here is the screenshot of this error:
 
-![Screenshot of error 917](./media/troubleshoot-data-protection-manager-console-crash/error.png)
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/error-917.png" alt-text="Error ID 917 Connection to the DPM service has been lost." border="false":::
 
 If the crash occurs when you launch the console, verify that all of the DPM services are running. The services that must be running are listed in the error message:
 
@@ -47,7 +47,7 @@ If you are having trouble starting one of the DPM related services, it may be ca
 
 Here is a sample screenshot of the error:
 
-![Screenshot of error 1069](./media/troubleshoot-data-protection-manager-console-crash/error-1069.png)
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/error-1069.png" alt-text="Error ID 1069 The service did not start due to a logon failure." border="false":::
 
 The only services that might be running with an account other than SYSTEM are the SQL Server accounts. Use the following table to verify that the accounts are correct and that they have valid passwords.
 
@@ -118,7 +118,7 @@ For example, the **MSDPM** process that fails with event ID 999 has the followin
 
 Here is the screenshot of this event:
 
-![Screenshot of event 999](./media/troubleshoot-data-protection-manager-console-crash/event-999.png)
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/event-999.png" alt-text="Details of the Event ID 999 that shows when MSDPM process fails.":::
 
 In this example, the **Problem Details** section shows that it failed with the error code 0x80004015 that maps to:
 
@@ -130,7 +130,7 @@ The error logs are named for the service they log, and the current log file for 
 
 If the service has crashed, the system also creates a .crash file similar to those shown below:
 
-![Screenshot of crash file example](./media/troubleshoot-data-protection-manager-console-crash/crash-file.png)
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/crash-file.png" alt-text="Screenshot of a crash file example.":::
 
 The crash event is recorded at the very end of the file and shows you more details.
 
@@ -145,9 +145,9 @@ If the service is unable to connect to the DPM database, it will likely be unabl
 
 The **Problem Details** section in the event log should provide additional information about the nature of the failure. Typically the database is offline or not contactable (more likely if it's on a remote server), or you may have a login failure. In such scenarios, you will probably see an error in the event log similar to one of the following examples:
 
-![Screenshot of the event log](./media/troubleshoot-data-protection-manager-console-crash/event-details-1.png)
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/event-details-1.png" alt-text="Details of the Error 948 Unable to connect to DPM Server." border="false":::
 
-![Screenshot of the event log details](./media/troubleshoot-data-protection-manager-console-crash/event-details-2.png)
+:::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/event-details-2.png" alt-text="Details of the Error 948 Unable to connect to DPM Server." border="false":::
 
 Some common reasons include:
 
@@ -159,7 +159,7 @@ This error log file should include any failed login audit entries. Resolve these
 
 - For the SYSTEM account, you can add the relevant permissions in SQL Server Management Studio by going to **Security** > **Logins** and then right-clicking the **System** account. Ensure that it has the **sysadmin** role selected as shown below:
 
-    ![Screenshot of the sysadmin role](./media/troubleshoot-data-protection-manager-console-crash/sysadmin-role.png)
+    :::image type="content" source="media/troubleshoot-data-protection-manager-console-crash/sysadmin-role.png" alt-text="Make sure the sysadmin option is selected for the SYSTEM account.":::
 
 - For the SQL Server Run As account, reset the account in the SQL Server Configuration Manager.
 
@@ -167,7 +167,7 @@ This error log file should include any failed login audit entries. Resolve these
 
 You should have checked that the SQL Server service is running at this point. Otherwise, check it now. Once the SQL Server service is running, try to connect to the instance from SQL Server Management Studio (SSMS). Occasionally this can fail if the server is logged in under a different account than the account it was installed under. In this scenario, try running SSMS as Administrator. If you can connect successfully, the DPMDB is online. If DPMDB is offline, it will look like the following:
 
-:::image type="content" source="./media/troubleshoot-data-protection-manager-console-crash/dbmdb-offline.png" alt-text="Screenshot of DPMDB offline.":::
+:::image type="content" source="./media/troubleshoot-data-protection-manager-console-crash/dbmdb-offline.png" alt-text="The status of DPMDB is offline and you need to set it to online.":::
 
 If DPMDB is offline, right-click DPMDB, select **Tasks** and then select **Bring online**. After it's online, verify if the problem is resolved.
 
@@ -179,6 +179,6 @@ If you see errors that suggest there is a network-related problem, test the conn
 2. Double-click the UDL file and select the instance and database to test from the dropdown list.
 3. Click **Test Connection**.
 
-    ![Screenshot of Test Connection](./media/troubleshoot-data-protection-manager-console-crash/test-connection.png)
+    :::image type="content" source="./media/troubleshoot-data-protection-manager-console-crash/test-connection.png" alt-text="Select the Test Connection in the Data Link Properties dialog box.":::
 
 If this fails, check if you can ping the SQL Server from the DPM server and verify that name resolution is working correctly. Also verify that the IP address returned is correct. Verify that the address is also correct in SQL Server > DPM server. Check for any other obvious reasons why traffic might not get through, such as firewalls.

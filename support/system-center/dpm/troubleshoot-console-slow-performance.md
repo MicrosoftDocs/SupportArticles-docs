@@ -22,15 +22,15 @@ If the DPM database is getting bloated (larger than it should be) for any reason
 
 To check the size of DPMDB, right-click the database and select **Properties**:
 
-:::image type="content" source="media/troubleshoot-console-slow-performance/dpmdb-properties.png" alt-text="Screenshot of DPMDB Properties.":::
+:::image type="content" source="media/troubleshoot-console-slow-performance/dpmdb-properties.png" alt-text="Select the Properties option to check the size of DPMDB.":::
 
 Find the size in the properties:
 
-![Screenshot of Size in Properties](./media/troubleshoot-console-slow-performance/size.png)
+:::image type="content" source="media/troubleshoot-console-slow-performance/database-size.png" alt-text="Check the size of DPMDB that is shown in the Database Properties window.":::
 
 If the database is large, we need to identify which tables are responsible. Large can be fairly subjective because certain configurations such as protection of large SharePoint farms naturally leads to database growth. However, if it is causing issues with disk space or other performance issues, run the **Disk Usage by Top Table** report against the DPMDB database.
 
-:::image type="content" source="media/troubleshoot-console-slow-performance/run-report.png" alt-text="Screenshot of the Disk Usage by Top Table report.":::
+:::image type="content" source="media/troubleshoot-console-slow-performance/run-report.png" alt-text="Run the Disk Usage by Top Table report against the DPMDB database.":::
 
 Based on the report, take a look at the largest tables. The following are some of the tables that are usually found to be large:
 
@@ -134,7 +134,7 @@ The tape catalog pruning settings can cause these tables to be quite large. To r
 
 The default setting is to remove the entries as the tapes expire. If tapes are kept for multiple years, this can lead to a large amount of data retained in the database. In this case, change the settings to **Prune catalog for tapes older than \<a short period of time>**. For example, set it to 4 weeks.
 
-![Screenshot of the tape catalog setting](./media/troubleshoot-console-slow-performance/tape-catalog-pruning-setting.png)
+:::image type="content" source="media/troubleshoot-console-slow-performance/tape-catalog-pruning-setting.png" alt-text="Change the Prune catalog for tapes older than setting in the Tape Catalog Retention dialog box." border="false":::
 
 Updating this setting doesn't delete the data on tape. Tapes older than the specified value need to be recataloged in order to restore data from them. Make sure that you comply with any data retention policies in your organization before making any changes.
 
@@ -329,7 +329,7 @@ If other databases are colocated on the same SQL Server instance, it may cause a
 
 To verify if this is a problem with tempdb, open tempdb properties in SQL Server Management Studio:
 
-:::image type="content" source="media/troubleshoot-console-slow-performance/tempdb-properties.png" alt-text="Screenshot of the tempdb properties.":::
+:::image type="content" source="media/troubleshoot-console-slow-performance/tempdb-properties.png" alt-text="Check the size of the tempdb in the Database Properties window.":::
 
 If the size of tempdb is in GB, there may be a problem. You can also see if there's any **Space Available** in tempdb. If so, it is unlikely that whatever caused the growth is currently happening.
 
@@ -340,11 +340,11 @@ If the size of tempdb is in GB, there may be a problem. You can also see if ther
 
 From the SQL Server Management Studio, try to shrink the tempdb size:
 
-:::image type="content" source="media/troubleshoot-console-slow-performance/shrink.png" alt-text="Screenshot of shrink in Tasks.":::
+:::image type="content" source="media/troubleshoot-console-slow-performance/shrink.png" alt-text="Shrink the tempdb size in Tasks.":::
 
 If the size doesn't decrease as much as expected, check the **Initial Size**:
 
-![Screenshot of Initial Size](./media//troubleshoot-console-slow-performance/initial-size.png)
+:::image type="content" source="media/troubleshoot-console-slow-performance/initial-size.png" alt-text="Check the Initial Size if the size doesn't decrease as much as expected.":::
 
 If it's set to a very large value, drop it back to 8 MB and try to shrink tempdb again. Restarting the SQL Server instance also resets the tempdb size back to its initial size.
 
@@ -360,11 +360,11 @@ SELECT transaction_id, session_id, elapsed_time_seconds FROM sys.dm_tran_active_
 
 Here is a sample output:
 
-:::image type="content" source="media/troubleshoot-console-slow-performance/output.png" alt-text="Screenshot of query output.":::
+:::image type="content" source="media/troubleshoot-console-slow-performance/output.png" alt-text="An example of the query output of the longest running transactions.":::
 
 Used together with a SQL Server Profiler trace, you should be able to work out what's happening in the session by filtering on that `session_id`:
 
-:::image type="content" source="media/troubleshoot-console-slow-performance/session-details.png" alt-text="Screenshot of session details.":::
+:::image type="content" source="media/troubleshoot-console-slow-performance/session-details.png" alt-text="Screenshot of the session details by filtering the session id.":::
 
 You can find which database the query is running against and see the content of the query in the details pane. Check if the database is DPMDB. If not, then it's another application that is causing the issue and you have to troubleshoot that application.
 

@@ -78,7 +78,7 @@ DISKPART> clean all
 
 Use the **Reset Disk** option, as shown here:
 
-:::image type="content" source="media/disks-not-enumeratd-fail-to-add/reset-disk.jpg" alt-text="Screenshot of the Reset Disk option.":::
+:::image type="content" source="media/disks-not-enumeratd-fail-to-add/reset-disk-option.png" alt-text="Select the Reset Disk option by using the Server Manager interface.":::
 
 ## More information
 
