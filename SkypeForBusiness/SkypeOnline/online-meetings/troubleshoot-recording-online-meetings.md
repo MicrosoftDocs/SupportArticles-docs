@@ -43,7 +43,7 @@ To troubleshoot this issue, verify that incoming audio was active during the onl
 
 First, verify that recording is enabled for user having issues in the Skype for Business Admin Center. This setting can be enabled or disabled on a per-user basis. So, because one user can record, doesn't mean that all users can.
 
-![Screenshot of Lync features settings ](./media/troubleshoot-recording-online-meetings/enable-recording.jpg)
+:::image type="content" source="./media/troubleshoot-recording-online-meetings/enable-recording.png" alt-text="Screenshot that shows the Lync features settings window.":::
 
 Lync 2010 and Lync 2013 include features that allow users to record conferences, audio/video (A/V) conferences and desktop sharing sessions, as long as the session is converted to an online meeting or conference. Recording peer-to-peer IM, Audio, or Video sessions aren't supported.
 
@@ -55,10 +55,10 @@ If you want to distribute the IM conversations together with your recording, mak
 
 1. When you are finished recording, click **Stop Recording**. In the **Stop Recording** dialog box, click **Options**.
 
-    ![Screenshot of the Stop Recording dialog box ](./media/troubleshoot-recording-online-meetings/stop-recording.png)   
+    :::image type="content" source="./media/troubleshoot-recording-online-meetings/stop-recording.png" alt-text="Screenshot that shows the Stop Recording dialog box.":::
 2. In the **Save and Publish Options** dialog box, click to select the **Instant message** check box, and then click **OK**.
 
-    ![Screenshot of the Save and Publish Options dialog box ](./media/troubleshoot-recording-online-meetings/instant-message.png)
+    :::image type="content" source="./media/troubleshoot-recording-online-meetings/instant-message.png" alt-text="Screenshot that shows the Instant message option selected in the Save and Publish Options dialog box.":::
 
     When you publish the recording, the IM conversations will be included.   
 

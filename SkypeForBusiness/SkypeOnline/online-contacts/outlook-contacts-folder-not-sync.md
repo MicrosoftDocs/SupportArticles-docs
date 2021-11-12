@@ -39,41 +39,43 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
 2. Close Skype for Business and Microsoft Outlook.   
 3. Open MFCMapi. If you're prompted, click **OK** on the usage notes box. 
 
-    ![MFCMapi ](./media/outlook-contacts-folder-not-sync/mfcmapi.jpg)
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/mfc-mapi-notes-box.png" alt-text="Screenshot that shows the M F C Mapi usage notes box.":::
 
 4. From the **Tools** menu, select **Options** .
 
-    ![Tools menu ](./media/outlook-contacts-folder-not-sync/tools-options.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/tools-options.png" alt-text="Screenshot that shows the Options selected under the Tools menu.":::
 5. In the **Options** dialog box, click to select **Use the MAPI_NO_CACHE flag when calling OpenEntry** and **Use the MDB_ONLINE flag when calling OpenMsgstore**, and then click **OK**.
 
-    ![Options window ](./media/outlook-contacts-folder-not-sync/select-two-options.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/select-two-options.png" alt-text="Screenshot that shows two target options selected in the Options dialog box.":::
+
 6. To start a session, select **Logon** from the **Session** menu.
 
-    ![Logon window ](./media/outlook-contacts-folder-not-sync/settion-logon.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/session-logon.png" alt-text="Screenshot that shows the logon tab selected i nthe Session menu.":::
+
 7. In the **Choose Profile** box, type or click the arrow to select the name of the Outlook profile for the affected user, and then click **OK**.
 
-    ![Choose Profile window ](./media/outlook-contacts-folder-not-sync/choose-profile.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/choose-profile.png" alt-text="Screenshot that shows theChoose Profile window.":::
 8. In the window that opens, right-click the default Exchange mailbox store in the list, and then click **Open store**.
 
-    ![Mailbox store view ](./media/outlook-contacts-folder-not-sync/open-store.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/open-store.png" alt-text="Screenshot that shows the Open store tab selected in the list.":::
 9. In the left column, locate and click to expand **Root Container**, expand **Top of Information Store**, and then expand **Contacts**.
 
-   ![Root container view ](./media/outlook-contacts-folder-not-sync/expand-contacts.jpg)   
+   :::image type="content" source="./media/outlook-contacts-folder-not-sync/expand-contacts.png" alt-text="Screenshot that shows Root Container selected to expand Contacts.":::
 10. Locate and right-click **Skype for Business Contacts**. Then select **Open contacts table**.
 
-    ![Skype for Business Contacts view ](./media/outlook-contacts-folder-not-sync/open-contacts-table.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/open-contacts-table.png" alt-text="Screenshot that shows the Open contacts table option selected after rught-clicking Skype for Business Contacts.":::
 11. To delete the contacts in the list, hold down the Ctrl key, and then click to select the individual contacts.
 
-    ![Selecting contacts view ](./media/outlook-contacts-folder-not-sync/delete-contacts.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/delete-contacts.png" alt-text="Screenshot that shows the target contacts selected in the list.":::
 12. From the **Actions** menu, select **Delete Messages**.
 
-    ![Actions menu ](./media/outlook-contacts-folder-not-sync/delete-message.jpg)   
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/delete-message.png" alt-text="Screenshot that shows the Delete Messages option selected from the Actions menu.":::
 13. In the **Delete Item** dialog box, locate the **Deletion style** drop-down list, select **Permanent deleted passing DELETE_HARD_DELETE (unrecoverable)**, and then click **OK**.
 
-     ![Hard delete window ](./media/outlook-contacts-folder-not-sync/deletion-style.jpg)  
+     :::image type="content" source="./media/outlook-contacts-folder-not-sync/deletion-style.png" alt-text="Screenshot that shows the Permanent deleted option selected in the Delete Item dialog box.":::
 14. To close all the windows, select **Exit** from the **Actions** menu.
 
-     ![Action menu ](./media/outlook-contacts-folder-not-sync/exit.jpg)   
+     :::image type="content" source="./media/outlook-contacts-folder-not-sync/exit.png" alt-text="Screenshot that shows the Exit option selected from the Actions menu":::
 
 
 ## More Information

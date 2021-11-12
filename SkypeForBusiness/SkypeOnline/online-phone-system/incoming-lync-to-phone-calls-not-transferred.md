@@ -36,7 +36,7 @@ To resolve this issue, use the [Lync Remote Connectivity Analyzer](https://www.t
 
     The following is an example screenshot of the results of the test:
 
-    ![Screenshot of the Connectivity Test Successful result ](./media/incoming-lync-to-phone-calls-not-transferred/connectivity-test.jpg)   
+    :::image type="content" source="./media/incoming-lync-to-phone-calls-not-transferred/connectivity-test.png" alt-text="Screenshot that shows the Connectivity Test Successful result.":::
 
 ## More Information
 

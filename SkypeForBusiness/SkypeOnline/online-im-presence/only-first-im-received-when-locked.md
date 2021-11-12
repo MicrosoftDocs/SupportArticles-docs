@@ -30,11 +30,11 @@ When you unlock the computer, all IMs except the first are deleted and don’t a
 
 Messages sent appear as in the image below:
 
-:::image type="content" source="media/only-first-im-received-when-locked-1.png" alt-text="IMs as they appear when sent.":::
+:::image type="content" source="media/messages-sent.png" alt-text="Screenshot that shows the internet messages as they appear when sent.":::
  
 Messages received appear as in the image below:
 
-:::image type="content" source="media/only-first-im-received-when-locked-2.png" alt-text="Received IMs as they appear.":::
+:::image type="content" source="media/messages-received.png" alt-text="Screenshot that shows the Received internet messages as they appear.":::
 
 ## More information
 

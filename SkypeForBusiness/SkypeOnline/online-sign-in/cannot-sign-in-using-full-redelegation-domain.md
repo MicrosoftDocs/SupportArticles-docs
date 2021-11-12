@@ -44,7 +44,7 @@ To fix this problem, follow these steps:
 
     This test examines all four DNS records that are required by Skype for Business Online to determine whether they're correctly configured. The results of the test will resemble the following output.
 
-    ![Screen shot of the result for the Remote Connectivity Analyzer Test](./media/cannot-sign-in-using-full-redelegation-domain/test.png)   
+    :::image type="content" source="./media/cannot-sign-in-using-full-redelegation-domain/test.png" alt-text="Screenshot that shows the result for the Remote Connectivity Analyzer.":::
 
 If the NS records and the Lync Service (SRV) records are correct, perform standard Lync sign-in troubleshooting.
 

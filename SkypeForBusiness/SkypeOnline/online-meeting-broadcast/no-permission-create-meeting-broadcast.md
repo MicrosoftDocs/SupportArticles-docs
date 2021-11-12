@@ -24,7 +24,7 @@ When you try to create a new Skype Meeting Broadcast by using the [Skype Meeti
 
 "Sorry, you don't have permission to create meeting."
 
-![Screen shot of the error message in Skype Meeting Broadcast ](./media/no-permission-create-meeting-broadcast/error-message.png)
+:::image type="content" source="./media/no-permission-create-meeting-broadcast/error-message.png" alt-text="Screenshot that shows the error message in Skype Meeting Broadcast.":::
 
 > [!NOTE]
 > Skype Meeting Broadcast isn't currently available for nonprofit, educational (.edu), and government (.gov) plans. When customers who have one of these plans click **New Meeting** in the Skype Meeting Broadcast portal, they see this error message. However, because Skype Meeting Broadcast isn't currently available for these plans, the steps in the "Solution" section won't correct this issue.
