@@ -65,12 +65,15 @@ To work around this behavior, follow these steps:
   
 4. Click **Permissions**. 
 
-   ![select Permissions](./media/office-end-user-license-agreement/select-permission.png)   
+   :::image type="content" source="media/office-end-user-license-agreement/select-permission.png" alt-text="Screenshot to select Permissions in Registry Editor.":::
 5. Click **Users (Computer_name\Users)**, and then click to select the **Allow** check box for the **Full Control** permission. 
 
-   ![give users full control permission](./media/office-end-user-license-agreement/allow-full-control.png)   
+  :::image type="content" source="media/office-end-user-license-agreement/allow-full-control.png" alt-text="Screenshot shows steps to give the Users Full Control permission." border="false":::
+
 6. Click **OK**, and then quit Registry Editor.
+
 7. Start an Office program, and then accept the End User License Agreement.   
+
 8. Repeat steps 2 through 4, and then remove the **Full Control** permission that you gave to **Users (Computer_name\Users)** in step 5. To do this, locate **Users (Computer_name\Users)**, and then click to clear the **Allow** check box for the **Full Control** permission.    
 9. Click OK, and then exit Registry Editor.
 
