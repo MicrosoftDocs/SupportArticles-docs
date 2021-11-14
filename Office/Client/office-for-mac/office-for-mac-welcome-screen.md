@@ -1,5 +1,6 @@
 ---
 title: Cannot pass the Welcome Screen in Office for Mac
+description: The Welcome screenshot doesn't have any button to continue in Office for Mac.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
