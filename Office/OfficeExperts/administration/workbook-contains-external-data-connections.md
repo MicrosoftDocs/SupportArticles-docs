@@ -22,9 +22,9 @@ This article was written by [Tom Schauer](https://social.technet.microsoft.com/p
 
 When you click slicers in a Microsoft SharePoint Online PowerPivot workbook that contains external data connections or Business Intelligence (BI) features that are not supported, you receive the following error:
 
-**This workbook contains external data connections or BI features that are not supported.**
+> This workbook contains external data connections or BI features that are not supported.
 
-![the error message dialog box](./media/workbook-contains-external-data-connections/error-message.png)
+:::image type="content" source="media/workbook-contains-external-data-connections/error-message.png" alt-text="Screenshot of the error message in the Microsoft SharePoint Online PowerPivot workbook." border="false":::
 
 ## Cause
 

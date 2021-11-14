@@ -46,7 +46,7 @@ Get-MailboxImportRequest  -BatchName user-repaired | Get-MailboxImportRequestSta
 
 The output of this cmdlet should resemble the following sample. The number of corrupted items is the value of the `BadItemsEncountered` property.  
 
-:::image type="content" source="media/issues-with-pst-import-job/baditems.png" alt-text="Screenshot of cmdlet output.":::
+:::image type="content" source="media/issues-with-pst-import-job/bad-items.png" alt-text="Screenshot shows an example of the cmdlet output.":::
 
 To fix the skipped items, do the following:
 

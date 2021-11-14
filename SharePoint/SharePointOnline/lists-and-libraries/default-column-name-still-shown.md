@@ -1,7 +1,7 @@
 ---
 title: Default column name shown in list settings after name change
 description: If you change the name of a default column in a SharePoint Online list, the original default name is still shown in the list settings. 
-author: v-matham
+author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-matham
+ms.author: v-matthamer
 ms.reviewer: pejohn
 ms.custom: 
 - CSSTroubleshoot

@@ -23,7 +23,7 @@ appliesto:
 ## Symptoms
 
 In Microsoft Office 365 Dedicated/ITAR (vNext), you receive an email message that has the subject "Microsoft account security alert," and you are worried that it's a phishing email message.
-![A screenshot of the security alert message](./media/account-security-alert-email/security-alert-message.png)
+:::image type="content" source="media/account-security-alert-email/security-alert-message.png" alt-text="Screenshot of the Microsoft account security alert message.":::
 
 ## Cause
 

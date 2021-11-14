@@ -28,7 +28,7 @@ After Microsoft Exchange Server 2010 is installed, Microsoft Outlook users may b
 
 > Changes to the distribution list membership cannot be saved. You do not have sufficient permission to perform this operation on this object.
 
-![Error message from outlook](./media/cannot-manage-distribution-group-exchange-mailbox/error-message.jpg)
+:::image type="content" source="./media/cannot-manage-distribution-group-exchange-mailbox/error-message.png" alt-text="Screenshot of the error message from Outlook." border="false":::
 
 ## Causes and resolutions
 
