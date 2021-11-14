@@ -22,7 +22,7 @@ This article was written by [Warren Rath](https://social.technet.microsoft.com/p
 
 When you try to change the default save location to a SharePoint location in Microsoft Excel 2016 through the **Default local file location** setting, you receive the following error message:
 
-![the error message dialog box](./media/cannot-access-directory-error-in-excel-2016/cannot-access-directory.png)
+:::image type="content" source="media/cannot-access-directory-error-in-excel-2016/cannot-access-directory.png" alt-text="Screenshot of the error message after changing the default save location to a SharePoint location.":::
 
 ## Cause
 

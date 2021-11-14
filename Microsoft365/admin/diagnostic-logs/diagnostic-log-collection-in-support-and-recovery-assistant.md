@@ -27,7 +27,7 @@ By default, [Support and Recovery Assistant](https://diagnostics.office.com/#/Do
     
 - Support and Recovery Assistant collects diagnostic logs when a user chooses to run advanced diagnostics. Typically this happens at the request of an admin or Microsoft support engineer.
     
-    ![Support and Recovery Assistant scenario screen](./media/diagnostic-log-collection-in-support-and-recovery-assistant/daa5ca72-85b3-42c5-8837-18e246e3b7c6.png)
+    :::image type="content" source="media/diagnostic-log-collection-in-support-and-recovery-assistant/support-recovery-assistant.png" alt-text="Screenshot of Microsoft Support and Recovery Assistant page.":::
  
 Office 365 uses diagnostic logs to improve the tool to provide better troubleshooting in the future. Microsoft support engineers can also use these logs to analyze your user's specific issue more throughly. As an admin, you can make a registry edit to prevent users from collecting diagnostic logs if your organization wants to limit data sharing.
   

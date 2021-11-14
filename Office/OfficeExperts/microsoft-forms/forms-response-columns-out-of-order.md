@@ -31,4 +31,4 @@ This is a known issue that's being investigated.
 
 To work around this issue, locate the Responses tab on the form, click the ellipses, and then select Sync all responses to a new workbook. This resets the order of the columns to match the order of the questions on the form.
 
-![Selecting the Sync all responses to a new workbook option in Excel](./media/forms-response-columns-out-of-order/excel.png)
+:::image type="content" source="media/forms-response-columns-out-of-order/sync-all-responces.png" alt-text="Screenshot to select the Sync all responses to a new workbook option in Excel." border="false":::
