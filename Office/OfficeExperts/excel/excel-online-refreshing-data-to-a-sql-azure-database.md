@@ -32,7 +32,7 @@ This article describes how to connect to Microsoft SQL Azure Database and refres
 1. Select **SQL Server Native Client 11.0**.
 
    > [!NOTE]
-   > If you don't have [SQL Server Native Client 11.0](/sql/relational-databases/native-client/applications/installing-sql-server-native-client?view=sql-server-ver15).
+   > If you don't have [SQL Server Native Client 11.0](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).
 
    :::image type="content" source="media/excel-online-refreshing-data-to-a-sql-azure-database/sql-server-native-client.png" alt-text="Screenshot to select the SQL Server Native Client 11.0 item." border="false":::
 
