@@ -467,29 +467,31 @@ To do so, compare the following folders:
 
 To do so, follow these steps:
 
-1. Open PowerShell command line
-2. Run the following command: 
-```Powershell
-(gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)"
-```
-3. The output should look like below. If it's not - please verify the command line for typos.
+1. Open a Windows PowerShell session.
+2. Run the following cmdlet:
 
-```Powershell
-__GENUS          : 2
-__CLASS          : __PARAMETERS
-__SUPERCLASS     : 
-__DYNASTY        : __PARAMETERS
-__RELPATH        : 
-__PROPERTY_COUNT : 1
-__DERIVATION     : {}
-__SERVER         : 
-__NAMESPACE      : 
-__PATH           : 
-ReturnValue      : 0
-PSComputerName   : 
-```
-    
-4. Review Distmgr.log to check whether the package replicates successfully.
+    ```powershell
+    (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)"
+    ```
+
+3. The output should look like this:
+
+    ```output
+    __GENUS          : 2
+    __CLASS          : __PARAMETERS
+    __SUPERCLASS     : 
+    __DYNASTY        : __PARAMETERS
+    __RELPATH        : 
+    __PROPERTY_COUNT : 1
+    __DERIVATION     : {}
+    __SERVER         : 
+    __NAMESPACE      : 
+    __PATH           : 
+    ReturnValue      : 0
+    PSComputerName   : 
+    ```
+
+4. Review *Distmgr.log* to check whether the package replicates successfully.
 
 ### Issue 1: Error "Failed to calculate hash SMS_HIERARCHY_MANAGER"
 
@@ -834,9 +836,9 @@ To fix this issue, follow these steps:
 
 ### Issue 4: Content replication fails
 
-If there's a failure during content replication, retry the replication by running the following command:
+If there's a failure during content replication, retry the replication by running the following cmdlet:
 
-```Powershell
+```powershell
 (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)"
 ```
 
