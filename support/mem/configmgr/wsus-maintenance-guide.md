@@ -22,7 +22,7 @@ With the understanding that this maintenance needs to be done, you're wondering 
 
 If you are using Configuration Manager current branch version 1906 or later versions, we recommend that you enable the **WSUS Maintenance** options in the software update point configuration at the top-level site to automate the cleanup procedures after each synchronization. It would effectively handle all cleanup operations described in this article, except backup and reindexing of WSUS database. You should still automate backup of WSUS database along with reindexing of the WSUS database on a schedule.
 
-:::image type="content" source="media/wsus-maintenance-guide/wsus-maintenance-options.png" alt-text="Screenshot of WSUS Maintenance options in Software Update Point Components Properties window.":::
+:::image type="content" source="media/wsus-maintenance-guide/wsus-maintenance-options.png" alt-text="Screenshot of the WSUS Maintenance options in Software Update Point Components Properties window.":::
 
 For more information about software update maintenance in Configuration Manager, see [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance).
 
@@ -39,7 +39,7 @@ For more information about software update maintenance in Configuration Manager,
 
 1. Ensure that SUPs don't sync during the maintenance process, as it may cause a loss of some work already done. Check the SUP sync schedule and temporarily set it to manual during this process.
 
-    :::image type="content" source="media/wsus-maintenance-guide/sync-schedule-setting.png" alt-text="Screenshot of the sync schedule setting.":::
+    :::image type="content" source="media/wsus-maintenance-guide/sync-schedule-setting.png" alt-text="Screenshot of the Enable synchronization on a schedule setting.":::
 
 1. If you have multiple SUPs of the primary site or central administration sit (CAS) which don't share the SUSDB, consider the WSUS server that syncs with the first SUP on the site as residing in a tier below the site. For example, my CAS site has two SUPs:
    - The one named *New* syncs with Microsoft Update, it would be my top tier (Tier1).
@@ -67,7 +67,7 @@ This process is optional but recommended, it greatly improves performance during
 
 If you are using Configuration Manager current branch version 1906 or a later version, we recommend that you use Configuration Manager to create the indexes. To create the indexes, configure the **Add non-clustered indexes to the WSUS database** option in the software update point configuration for the top-most site.
 
-:::image type="content" source="media/wsus-maintenance-guide/index-option.png" alt-text="Screenshot of the Add non-clustered indexes to the WSUS database option under WSUS Maintenance tab.":::
+:::image type="content" source="media/wsus-maintenance-guide/add-non-clustered-index-option.png" alt-text="Screenshot of the Add non-clustered indexes to the WSUS database option under WSUS Maintenance tab.":::
 
 If you use an older version of Configuration Manager or standalone WSUS servers, follow these steps to create custom indexes in the SUSDB database. For each SUSDB, it's a one-time process.
 
@@ -164,7 +164,7 @@ Select COUNT(UpdateID) from vwMinimalUpdate where IsSuperseded=1 and Declined=0
 
 If you are using Configuration Manager current branch version 1906 or a later version, we recommend that you automatically decline the superseded updates by enabling the **Decline expired updates in WSUS according to supersedence rules** option in the software update point configuration for the top-most site.
 
-:::image type="content" source="media/wsus-maintenance-guide/decline-option.png" alt-text="Screenshot of the Decline expired updates in WSUS according to supersedence rules option under WSUS Maintenance tab.":::
+:::image type="content" source="media/wsus-maintenance-guide/decline-expired-updates-option.png" alt-text="Screenshot of the Decline expired updates in WSUS according to supersedence rules option under WSUS Maintenance tab.":::
 
 When you use this option, you can see how many updates were declined by reviewing the WsyncMgr.log file after the synchronization process finishes. If you use this option, you don't need to use the script described later in this section (either by manually running it or by setting up as task to run it on a schedule).
 
@@ -175,7 +175,7 @@ If you are using standalone WSUS servers or an older version of configuration Ma
 
 If Configuration Manager is set to **Immediately expire superseded updates** (see below), the PowerShell script can be used to decline all superseded updates. It should be done on all **autonomous** WSUS servers in the Configuration Manager/WSUS hierarchy.
 
-:::image type="content" source="media/wsus-maintenance-guide/expire-option.png" alt-text="Screenshot of the  Immediately expire superseded updates options under Supersedence Rules tab.":::
+:::image type="content" source="media/wsus-maintenance-guide/expire-updates-option.png" alt-text="Screenshot of the Immediately expire superseded updates options under Supersedence Rules tab.":::
 
 You don't need to run the PowerShell script on WSUS servers that are set as replicas, such as secondary site SUPs. To determine whether a WSUS server is a replica, check the **Update Source** settings.
 
@@ -199,11 +199,11 @@ Decline-SupersededUpdatesWithExclusionPeriod.ps1 -UpdateServer SERVERNAME -UseSS
 
 Running the script with a `-SkipDecline` and `-ExclusionPeriod 60` to gather information about updates on the WSUS server, and how many updates could be declined:
 
-:::image type="content" source="media/wsus-maintenance-guide/powershell-1.png" alt-text="Screenshot of the Windows PowerShell window running SkipDecline and ExclusionPeriod 60." border="false":::
+:::image type="content" source="media/wsus-maintenance-guide/powershell-skipdecline.png" alt-text="Screenshot of the Windows PowerShell window running SkipDecline and ExclusionPeriod 60." border="false":::
 
 Running the script with **-ExclusionPeriod 60**, to decline superseded updates older than 60 days:
 
-:::image type="content" source="media/wsus-maintenance-guide/powershell-2.png" alt-text="Screenshot of the Windows PowerShell window with ExclusionPeriod 60 running." border="false":::
+:::image type="content" source="media/wsus-maintenance-guide/powershell-exclusionperiod-60.png" alt-text="Screenshot of the Windows PowerShell window with ExclusionPeriod 60 running." border="false":::
 
 The output and progress indicators are displayed while the script is running. Note the **SupersededUpdates.csv** file, which will contain a list of all updates that are declined by the script:
 
@@ -228,7 +228,7 @@ In a Configuration Manager environment, **Computers not contacting the server** 
 
 If you are using Configuration Manager current branch version 1906 or a later version, enabling the **Decline expired updates in WSUS according to supersedence rules** option handles declining of **Expired updates** and **Superseded updates** based on the supersedence rules that are specified in Configuration Manager. Enabling the **Remove obsolete updates from the WSUS database** option in Configuration Manager current branch version 1906 handles the cleanup of **Unused updates and update revisions** (Obsolete updates). It's recommended to enable these options in the software update point configuration on the top-level site to allow Configuration Manager to clean up the WSUS database.
 
-:::image type="content" source="media/wsus-maintenance-guide/remove-obsolete.png" alt-text="Screenshot of the Remove obsolete updates from the WSUS database option.":::
+:::image type="content" source="media/wsus-maintenance-guide/remove-obsolete-updates-option.png" alt-text="Screenshot of the Remove obsolete updates from the WSUS database option.":::
 
 If you've never cleaned up obsolete updates from WSUS database before, this task may time out. You can review WsyncMgr.log for more information, and manually run the SQL script that is specified in [HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out](#help-my-wsus-has-been-running-for-years-without-ever-having-maintenance-done-and-the-cleanup-wizard-keeps-timing-out) once, which would allow subsequent attempts from Configuration Manager to run successfully. For more information about WSUS cleanup and maintenance in Configuration Manager, see the docs.
 
@@ -435,7 +435,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 3. Schedule this task to start about 30 minutes after you expect your cleanup to finish running. My cleanup is running at 1:00 AM every first Sunday. It takes about 30 minutes to run and I am going to give it another 30 minutes before starting my reindex. It means I would schedule this task for every first Sunday at 2:00 AM, as shown here:
 
-    :::image type="content" source="media/wsus-maintenance-guide/frequency.png" alt-text="Screenshot shows set the frequency for that task in the Create Basic Task Wizard.":::
+    :::image type="content" source="media/wsus-maintenance-guide/task-frequency.png" alt-text="Screenshot shows set the frequency for that task in the Create Basic Task Wizard.":::
 
 4. Select the action to **Start a program**. In the **Program/script** box, type the following command. The file specified after the `-i` parameter is the path to the SQL script you saved in step 1. The file specified after the `-o` parameter is where you would like the log to be placed. Here's an example:
 
