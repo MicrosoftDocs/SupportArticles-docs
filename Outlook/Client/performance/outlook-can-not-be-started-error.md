@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2751236
 
 When I open Outlook 2010, why do I see error messages such as **Microsoft Outlook can not be started, cannot open the Outlook window, the set of folders cannot be opened, cannot access file, you do not have the permission required to access the file XXX** or **Cannot open your default e-mail folders. Cannot access file, you do not have the permission required to access the file XXX**? How can I resolve this problem?
 
-:::image type="content" source="media/outlook-can-not-be-started-error/cannot-start-outlook-error.png" alt-text="Outlook can't start error message" border="false":::
+:::image type="content" source="media/outlook-can-not-be-started-error/cannot-start-outlook-error.png" alt-text="Screenshot of Outlook can't start error message." border="false":::
 
 ## Resolution
 
@@ -32,23 +32,23 @@ When I open Outlook 2010, why do I see error messages such as **Microsoft Outloo
 
 2. Change **View By** to **Large Icon**, then select **Mail**.
 
-   :::image type="content" source="media/outlook-can-not-be-started-error/open-mail-in-control-panel.png" alt-text="Open Mail in control panel" border="false":::
+   :::image type="content" source="media/outlook-can-not-be-started-error/open-mail-in-control-panel.png" alt-text="Screenshot of Control Panel window in Large icons view." border="false":::
 
 3. Select **Data File**.
 
-   :::image type="content" source="media/outlook-can-not-be-started-error/open-data-file.png" alt-text="Open Data Files" border="false":::
+   :::image type="content" source="media/outlook-can-not-be-started-error/open-data-file.png" alt-text="Screenshot of the Mail Setup dialog box." border="false":::
 
 4. Select the data file you're currently using, and then select **Open file Location**.
 
-   :::image type="content" source="media/outlook-can-not-be-started-error/open-file-location.png" alt-text="Open File location" border="false":::
+   :::image type="content" source="media/outlook-can-not-be-started-error/open-file-location.png" alt-text="Screenshot of the Open File location option of Data Files." border="false":::
 
 5. Right-click on the data file, and select **Properties**.
 
-   :::image type="content" source="media/outlook-can-not-be-started-error/properties-option.png" alt-text="Open PST file properties" border="false":::
+   :::image type="content" source="media/outlook-can-not-be-started-error/properties-option.png" alt-text="Screenshot of the properties option on the right-click menu of the PST file." border="false":::
 
 6. Uncheck the **Read-only** box and select **OK**.
 
-   :::image type="content" source="media/outlook-can-not-be-started-error/read-only.png" alt-text="Read-only checkbox" border="false":::
+   :::image type="content" source="media/outlook-can-not-be-started-error/read-only.png" alt-text="Screenshot of the Read-only checkbox in the File Properties." border="false":::
 
 Now you can open your Outlook 2010 without problems.
 
@@ -56,4 +56,4 @@ Now you can open your Outlook 2010 without problems.
 
 ## Let us know
 
-![Looking forward to your valuable comments](./media/outlook-can-not-be-started-error/survey-male.gif) Are you satisfied with our contents? Whether you think: Great! Problems solved or Problems aren't solved and I have a better idea. We would like you to provide us with your precious opinions. We welcome any encouragements you may have, and will be creating more useful technical articles for you.
+:::image type="icon" source="./media/outlook-can-not-be-started-error/survey-male.png" border="false"::: Are you satisfied with our contents? Whether you think: Great! Problems solved or Problems aren't solved and I have a better idea. We would like you to provide us with your precious opinions. We welcome any encouragements you may have, and will be creating more useful technical articles for you.

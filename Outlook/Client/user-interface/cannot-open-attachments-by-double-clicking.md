@@ -40,7 +40,7 @@ Change the double-click speed setting to a slower setting:
 
 2. On the **Buttons** tab, slide the **Double-click speed** slider to the left, and then select **OK**.
 
-   :::image type="content" source="media/cannot-open-attachments-by-double-clicking/mouse-properties.png" alt-text="Mouse Properties Double-click speed" border="false":::
+   :::image type="content" source="media/cannot-open-attachments-by-double-clicking/mouse-properties.png" alt-text="Screenshot of the Button tab in Mouse Properties." border="false":::
 
 > [!NOTE]
 > Sliding the **Double-click speed** slider one step to the left is typically sufficient to fix this issue. However, if the issue still occurs, you may have to slide it further.

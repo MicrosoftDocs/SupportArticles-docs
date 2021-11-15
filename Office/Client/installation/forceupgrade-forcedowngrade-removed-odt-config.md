@@ -44,16 +44,16 @@ The only supported scenario for the **ForceUpgrade** attribute is to upgrade fro
 > [!Note]
 > This section applies to customers who are using Office 365 ProPlus 2013.
 
-If you are running Office 365 ProPlus 2013 and **Office Updates** is enabled in the registry (**UpdatesEnabled=True**), you will receive an in-app upgrade notification  to upgrade to Office 365 ProPlus 2016.  
+If you are running Office 365 ProPlus 2013 and **Office Updates** is enabled in the registry (**UpdatesEnabled=True**), you will receive an in-app upgrade notification to upgrade to Office 365 ProPlus 2016.  
 
 > [!note]
 > The “Force Upgrade” notification appears at the initial startup of any Office app. 
 
-:::image type="content" source="media/forceupgrade-forcedowngrade-removed-odt-config/office-app-force-upgrade-notification.png" alt-text="ForceUpgrade screen at O365 ProPlus 2016 startup.":::
+:::image type="content" source="media/forceupgrade-forcedowngrade-removed-odt-config/force-upgrade-notification-2016.png" alt-text="Screenshot of the Force Upgrade notification at O365 ProPlus 2016 startup.":::
 
 This is the “Force Upgrade” notification if you use Office 365 ProPlus 2013.
 
-:::image type="content" source="media/forceupgrade-forcedowngrade-removed-odt-config/office-365-proplus-2013-force-upgrade-notification.png" alt-text="ForceUpgrade screen at O365 ProPlus 2013 startup.":::
+:::image type="content" source="media/forceupgrade-forcedowngrade-removed-odt-config/force-upgrade-notification-2013.png" alt-text="Screenshot of the Force Upgrade notification at O365 ProPlus 2013 startup.":::
 
 > [!important]
 > The “enableautomaticupgrade” registry entry and corresponding group policy are no longer listed in the Administrative Template XML-based file (ADMX). We recommend that you occasionally revise the ADMX in your environment. You can download the latest ADMX from the Microsoft Download Center. 
