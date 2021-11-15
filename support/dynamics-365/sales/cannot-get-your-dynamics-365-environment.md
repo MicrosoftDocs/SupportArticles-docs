@@ -30,13 +30,13 @@ Some of the internal values/codes are time-sensitive and are only valid for a sh
 
 When you first access your environment, you're directed to a Sign-in page (below) to enter your credentials.
 
-:::image type="content" source="media/cannot-get-your-dynamics-365-environment/sign-your-account.png" alt-text="Screenshot of the authentication sign-in dialog." lightbox="sign-your-account.png" border="false":::
+:::image type="content" source="media/cannot-get-your-dynamics-365-environment/sign-your-account.png" alt-text="Screenshot of the authentication sign-in dialog." lightbox="media/cannot-get-your-dynamics-365-environment/sign-your-account.png" border="false":::
 
 Upon entering your credentials, you see this notification page:
 
 > You cannot get to your Dynamics 365 environment using the above URL.
 
-:::image type="content" source="media/cannot-get-your-dynamics-365-environment/sign-in-error.png" alt-text="Screenshot of the authentication sign-in error page." lightbox="sign-in-error.png":::
+:::image type="content" source="media/cannot-get-your-dynamics-365-environment/sign-in-error.png" alt-text="Screenshot of the authentication sign-in error page.":::
 
 > [!NOTE]
 > The Common Data Service URL shown in the above screen shot is just an example, your environment actual URL will be displayed in the message.
@@ -47,7 +47,7 @@ In the Sign-in page URL, the link of the old Redirector service is embedded.
 
 Example (old):
 
-:::image type="content" source="media/cannot-get-your-dynamics-365-environment/old-example.png" alt-text="Screenshot shows an example of the old U R L." lightbox="old-example.png":::
+:::image type="content" source="media/cannot-get-your-dynamics-365-environment/old-example.png" alt-text="Screenshot shows an example of the old U R L.":::
 
 The deprecated redirector service is called <cloudredirector.crm.dynamics.com>.
 
@@ -58,7 +58,7 @@ And it's replaced by something like `bn1 -- namcrlivesg614.crm.dynamics.com`.
 
 Example (new):
 
-:::image type="content" source="media/cannot-get-your-dynamics-365-environment/new-example.png" alt-text="Screenshot shows an example of the new U R L." lightbox="new-example.png":::
+:::image type="content" source="media/cannot-get-your-dynamics-365-environment/new-example.png" alt-text="Screenshot shows an example of the new U R L.":::
 
 To avoid user and business interruption with this upgrade, we've created a notification page for users who accessed the environment that has a Sign-in page URL that contains the deprecated redirector URL.
 
