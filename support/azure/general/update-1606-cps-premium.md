@@ -109,7 +109,7 @@ To install the VMM hotfixes, follow these steps:
     - ImgLibEngine.dll (if installing the HNV hotfix)
     - Engine.Placement.ResourceModel.dll
 
-12. On the passive VMM node, run the following command to start the VMM Agent service: 
+12. On the passive VMM node, run the following command to start the VMM Agent service:
 
     ```powershell
     Start-Service SCVMMAgent
@@ -197,13 +197,13 @@ After the patching process is completed, remember to enable DPM agents if you di
 
 To run a compliance scan, pass the following flag:
 
-```
+```powershell
 \\SU1_InfrastructureShare1<CPSPU Folder Name>\Framework\PatchingUpgrade\Invoke-PURun.ps1 -PUCredential $cred -ComplianceScanOnly
 ```  
 
 The compliance scan output is written to the following location to which the update package was extracted. For example, the following output is written:
 
-```
+```output
 "PURoot"\MissingUpdates.json
 ```
 
@@ -536,13 +536,13 @@ In the WSUS console on a Console VM, follow these steps:
     1. Open a Windows PowerShell session, and then change directories to `C:\program files\Update Services\Tools\`.
     2. Run the following command to reset the consistency of the WSUS database:
 
-        ```
+        ```powershell
         WSUSUTIL Reset
         ```  
 
     3. Run the following command to verify consistency:
 
-        ```
+        ```powershell
         (Get-WsusServer)GetContentDownloadProgress()
         ```  
 
@@ -556,11 +556,13 @@ VMM "Perform servicing on a Service" fails. Occasionally, failures in servicing 
 
 Verify that the service template qualifies for this situation. An example of a qualified template is shown in the following screen shot.
 
+:::image type="content" source="media/update-1606-cps-premium/qualified-template.png" alt-text="Screenshot of a qualified service template.":::
+
 You should see entries that indicate one or more of the following situations:
 
 - The first job failed.
 - One of the subsequent attempts succeeded.
-- One or more subsequent attempts failed. 
+- One or more subsequent attempts failed.
 
 **Resolution**
 
