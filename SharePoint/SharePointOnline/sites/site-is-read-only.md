@@ -76,6 +76,8 @@ $loadInfo2 = [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.Office
 
 #Add-Type -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.SharePointOnline.CSOM.16.1.21714.12000\lib\netstandard2.0\Microsoft.Office.Client.Policy.dll" 
 
+$RootSiteURL    = Read-Host -Prompt "Root Site URL" 
+
 $SiteURL    = Read-Host -Prompt "URL" 
 
 $Username   = Read-Host -Prompt "Admin Username" 
@@ -86,7 +88,7 @@ $Password   = Read-Host -Prompt "Password for $Username" -AsSecureString
 
 ```powershell
 
-$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL) 
+$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($RootSiteURL) 
 
 $ctx.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($Username, $Password) 
 
