@@ -72,7 +72,7 @@ If you prefer other encryption methods, such as AES 256, use the guidance in the
 
 Your system deployment will now work. The encryption method is again set to AES 128, as it was in older Windows PE releases.
 
-:::image type="content" source="media/earlier-versions-not-start-use-pre-provision-bitlocker/aes-128.png" alt-text="Screenshot of the bde status command output after use the task sequence step, which shows the encryption method is again set to AES 128." border="false":::
+:::image type="content" source="media/earlier-versions-not-start-use-pre-provision-bitlocker/aes-128.png" alt-text="Screenshot of the bde status command output after using the task sequence step, which shows the encryption method is again set to AES 128." border="false":::
 
 ## References
 
