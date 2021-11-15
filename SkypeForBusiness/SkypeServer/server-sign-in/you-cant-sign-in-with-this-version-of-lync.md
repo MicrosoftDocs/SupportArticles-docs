@@ -47,7 +47,7 @@ To resolve this issue, install the Skype for Business for iOS client (version 6.
 To work around this problem in for Lync 2013 for iPhone and Lync 2013 for iPad, follow these steps.
 
 > [!NOTE]
-> This workaround does not apply to the **Chinese Simplified** language setting. If you have **Language** set to **Chinese Simplified**, you cannot sign in by using the Lync 2013 iPhone or Lync 2013 for iPad apps, regardless of the **Region** setting.
+> This workaround does not apply to the **Chinese Simplified** language setting. If you have **Language** set to **Chinese Simplified**, you cannot sign in by using the Lync 2013 iPhone or Lync 2013 for iPad apps, regardless of the **Region** setting.
 
 1. Verify that the **Language** and **Region** settings match. To do this, follow these steps:
 
@@ -60,7 +60,7 @@ To work around this problem in for Lync 2013 for iPhone and Lync 2013 for iPad, 
      1. Select a language that matches the **Region** setting. For example, if the region setting is **Israel**, select **Hebrew**.
      1. Tap **Done**, and then confirm the change when you're prompted.
        
-     After several seconds, your device should return to the **Home** screen and display the new language that you selected.
+     After several seconds, your device should return to the **Home** screen and display the new language that you selected.
 
    - Change the region:
 

@@ -254,7 +254,7 @@ You must install Microsoft Office 2003 Service Pack 3 (SP3) before you install t
 
 [2878303](https://support.microsoft.com/help/2878303) MS14-017: Description of the security update for Word 2003: April 8, 2014
 
-After you install all the update, you should see the following versions of important files that are used by Outlook.
+After you install all the update, you should see the following versions of important files that are used by Outlook.
 
 |File|Version|
 |---|---|

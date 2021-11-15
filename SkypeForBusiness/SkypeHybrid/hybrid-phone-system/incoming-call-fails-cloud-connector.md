@@ -28,7 +28,7 @@ Consider the following scenario:
 - The **InternetDNSIPAddress** property is configured by using the correct public DNS server IP address in the CloudConnector.ini file.   
 
 In this scenario, an incoming call fails and you receive either a fast busy signal or a recording whose content resembles the following:
- We're sorry, we cannot complete your call at this time.
+ We're sorry, we cannot complete your call at this time.
 
 ## Solution 
 
@@ -50,7 +50,7 @@ The Cloud Connector Edition Edge Server cannot resolve the **sipfederationtls** 
 
 - **SIP/2.0 504 Server time-out error**   
 - **ms-diagnostics error 1008 "Unable to resolve DNS SRV record"**   
- 
+ 
 For Cloud Connector Edition 1.4.1, the Edge Server is configured to use the internal Cloud Connector Edition DNS server, and this server has an authoritative zone configured for the SIP domain.
 
 For Cloud Connector Edition 1.4.2, the Edge Server is not automatically configured by using the DNS IP that's defined in the Cloud Connector configuration file.For more information, see the following Microsoft websites:

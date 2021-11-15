@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you click the [https://broadcast.skype.com](https://broadcast.skype.com/) hyperlink in either Microsoft Word or Microsoft OneNote to access the Skype Meeting Broadcast portal, you receive the following error in Internet Explorer:
+When you click the [https://broadcast.skype.com](https://broadcast.skype.com/) hyperlink in either Microsoft Word or Microsoft OneNote to access the Skype Meeting Broadcast portal, you receive the following error in Internet Explorer:
 
 ```adoc
 Server Error in '/' Application.
@@ -30,7 +30,7 @@ The resource cannot be found.
 
 ## Workaround
 
-To work around this issue, copy and paste the URL from Word or OneNote into the Internet Explorer address bar.
+To work around this issue, copy and paste the URL from Word or OneNote into the Internet Explorer address bar.
 
 
 ## More Information

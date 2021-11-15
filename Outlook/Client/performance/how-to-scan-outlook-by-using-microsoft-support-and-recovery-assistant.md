@@ -25,11 +25,11 @@ _Original KB number:_ &nbsp; 4098558
 
 ## Overview
 
-The Microsoft Support and Recovery Assistant (SaRA) uses advanced diagnostics to report known problems and details about your Microsoft Outlook configuration. Reported problems are linked to public-facing documentation (usually a Microsoft Knowledge Base article) for possible fixes. If you're a Helpdesk professional, you can review customer reports that are generated in HTML format.
+The Microsoft Support and Recovery Assistant (SaRA) uses advanced diagnostics to report known problems and details about your Microsoft Outlook configuration. Reported problems are linked to public-facing documentation (usually a Microsoft Knowledge Base article) for possible fixes. If you're a Helpdesk professional, you can review customer reports that are generated in HTML format.
 
-The SaRA scenario that is described in this article replaces the Outlook scanning functionality that was originally provided by the Office Configuration Analyzer Tool (OffCAT).
+The SaRA scenario that is described in this article replaces the Outlook scanning functionality that was originally provided by the Office Configuration Analyzer Tool (OffCAT).
 
-For more information about SaRA, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+For more information about SaRA, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
 ## System requirements
 
@@ -46,7 +46,7 @@ The Outlook program in any of the following Office versions can be scanned:
 - Microsoft Office 2013 (32-bit or 64-bit; Click-to-Run or MSI installations)
 - Microsoft Office 2010 (32-bit or 64-bit)
 
-If you are running Windows 7 (any edition), you must also have .NET Framework 4.5 installed. Windows 8 and later versions of Windows include at least .NET Framework 4.5.
+If you are running Windows 7 (any edition), you must also have .NET Framework 4.5 installed. Windows 8 and later versions of Windows include at least .NET Framework 4.5.
 
 ## Installing SaRA
 
@@ -111,11 +111,11 @@ On the **Issues found** tab, you are provided a list of configuration issues tha
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/issues-found-tab.png" alt-text="List of configuration issues." border="false":::
 
-Select an issue to expand it for a more detailed description. There is also a link to an article that contains steps for resolving the issue.
+Select an issue to expand it for a more detailed description. There is also a link to an article that contains steps for resolving the issue.
 
 ### Detailed view
 
-The information on the **Detailed View** tab is intended for advanced users, Helpdesk personnel, and IT administrators. This tab contains configuration information for diagnosing an Outlook issue from the client-side. This includes the following items:
+The information on the **Detailed View** tab is intended for advanced users, Helpdesk personnel, and IT administrators. This tab contains configuration information for diagnosing an Outlook issue from the client-side. This includes the following items:
 
 - User name
 - Computer hardware
@@ -141,7 +141,7 @@ The information on the **Configuration Summary** tab is a snapshot of the config
 
 ### Viewing scan results in a browser
 
-To increase the viewing area for the scan results, select **View results in my browser**. This view displays the whole scan report, including all three tabs, in your default browser.
+To increase the viewing area for the scan results, select **View results in my browser**. This view displays the whole scan report, including all three tabs, in your default browser.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/whole-scan-report.png" alt-text="Whole scan report and the three tab." border="false":::
 
@@ -152,18 +152,18 @@ To increase the viewing area for the scan results, select **View results in my
 
 ### Sharing your scan results
 
-After you review your scan results, select **Next**. The next screen provides an opportunity to see the log files that were saved on your computer (**See all logs**) or to view the log again (**View log**).
+After you review your scan results, select **Next**. The next screen provides an opportunity to see the log files that were saved on your computer (**See all logs**) or to view the log again (**View log**).
 
 > [!NOTE]
 > The scan file is ConfigurationDetails_{CorrelationId}.html. It's located in the ***%localappdata%\saralogs\UploadLogs*** folder, for example, *C:\users\\\<username>\AppData\Local\saralogs\UploadLogs*.
 
-#### Users who have an Office 365 account
+#### Users who have an Office 365 account
 
-If you sign in to SaRA by using an account in Office 365, you also see an option to send your files to Microsoft. This option is helpful if you are working with a Microsoft support engineer. Select **Send** to have your log files securely uploaded.
+If you sign in to SaRA by using an account in Office 365, you also see an option to send your files to Microsoft. This option is helpful if you are working with a Microsoft support engineer. Select **Send** to have your log files securely uploaded.
 
-:::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/upload-files.png" alt-text="Select Send to have your log files securely uploaded." border="false":::
+:::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/upload-files.png" alt-text="Select Send to have your log files securely uploaded." border="false":::
 
-Select **Don't send** if you don't want to upload your log files. If you have to share your log files with someone, select **See all logs** to open the folder that contains all the logs that are created by SaRA.
+Select **Don't send** if you don't want to upload your log files. If you have to share your log files with someone, select **See all logs** to open the folder that contains all the logs that are created by SaRA.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/see-all-logs.png" alt-text="Folder contains all the log screated by SaRA." border="false":::
 
@@ -172,7 +172,7 @@ Select **Don't send** if you don't want to upload your log files. If you have to
 
 #### Users who do not have an Office 365 account
 
-If you sign in to SaRA by using an account that is not in Office 365, there is no option to send your files to Microsoft.
+If you sign in to SaRA by using an account that is not in Office 365, there is no option to send your files to Microsoft.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/no-option-to-send.png" alt-text="Screenshot shows no option to send your files to Microsoft." border="false":::
 

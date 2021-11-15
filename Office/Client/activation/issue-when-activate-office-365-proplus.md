@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When you set up your network to block Internet Explorer 6, users discover that they cannot activate Microsoft 365 Apps for enterprise. When users try to activate Microsoft 365 Apps for enterprise, they receive the following error message:
+When you set up your network to block Internet Explorer 6, users discover that they cannot activate Microsoft 365 Apps for enterprise. When users try to activate Microsoft 365 Apps for enterprise, they receive the following error message:
 
 **We are unable to connect right now. Please check your network and try again later.**
 
@@ -30,12 +30,12 @@ When you set up your network to block Internet Explorer 6, users discover that t
 
 This issue occurs under one of the following situations:
 
-- The client computer can't connect to *.microsoftonline-p.net.
+- The client computer can't connect to *.microsoftonline-p.net.
 - Network Connectivity Status Indicator (NCSI) active probe is disabled.
 
 ## Workaround
 
-To work around this issue, first check your firewall or proxy setting. Add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6. For more information about how to configure firewall rules, see your firewall documentation. 
+To work around this issue, first check your firewall or proxy setting. Add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6. For more information about how to configure firewall rules, see your firewall documentation. 
 
 If the issue persists, check if NCSI active probe is disabled. In this case, enable NCSI active probe by using the registry or Group Policy Objects (GPOs).
 

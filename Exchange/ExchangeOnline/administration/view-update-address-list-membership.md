@@ -26,20 +26,20 @@ This article describes how to view and update address list membership for object
 
 ## More information
 
-1. To see whom the filter applies to, run the following command:
+1. To see whom the filter applies to, run the following command:
 
     ```powershell
     $a = get-addresslist "my list"
     Get-recipient -filter $a.recipientfilter
     ```
 
-1. To see which users are stamped by the address list that you created, run the following command:
+1. To see which users are stamped by the address list that you created, run the following command:
 
     ```powershell
     Get-Recipient -Filter {AddressListMembership -eq 'DistinguishedName of the address list'}
     ```
 
-1. For each object that you see in step 1 but don't see in step 2, you have to tickle the object. To do this, use one of the following options directly in an instance of Windows PowerShell that's connected to Exchange Online.
+1. For each object that you see in step 1 but don't see in step 2, you have to tickle the object. To do this, use one of the following options directly in an instance of Windows PowerShell that's connected to Exchange Online.
 
     **Option 1:** If the object is a mailbox, run the following commands:
 
@@ -57,9 +57,9 @@ This article describes how to view and update address list membership for object
     Set-MailUser -SimpleDisplayName
     ```
 
-    **Option 3:** Set any relevant attributes, including custom attributes, on-premises. Then, synchronize the changes to Exchange Online through Azure AD Connect.
+    **Option 3:** Set any relevant attributes, including custom attributes, on-premises. Then, synchronize the changes to Exchange Online through Azure AD Connect.
 
-    After you tickle the objects, you should see them by running the command from step 2. You can also verify the objects individually by running the following commands:
+    After you tickle the objects, you should see them by running the command from step 2. You can also verify the objects individually by running the following commands:
 
     ```powershell
     Get-Mailbox -identity user@contoso.com|fl Addresslistmembership

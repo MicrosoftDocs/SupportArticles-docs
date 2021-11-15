@@ -25,9 +25,9 @@ _Original KB number:_&nbsp;4486848
 
 ## Symptoms
 
-Office 365 Online archives allow for additional storage of users' email messages. However, in some scenarios, the **ArchiveStatus** property may be set to "None" even though you enabled an active archive for a user's mailbox in Office 365.
+Office 365 Online archives allow for additional storage of users' email messages. However, in some scenarios, the **ArchiveStatus** property may be set to "None" even though you enabled an active archive for a user's mailbox in Office 365.
 
-For example, when you run the following cmdlet in Exchange Online PowerShell to check the archive status, the status shows as "None" instead of "Active":
+For example, when you run the following cmdlet in Exchange Online PowerShell to check the archive status, the status shows as "None" instead of "Active":
 
 `Get-mailbox id|fl ArchiveStatus`
 

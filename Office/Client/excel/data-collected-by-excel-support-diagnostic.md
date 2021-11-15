@@ -56,7 +56,7 @@ You should click **Skip** only if you are experiencing startup issues (for examp
 
 |Description|File Name|Formats|
 |---|---|---|
-|List of third-party add-ins|\<*ComputerName*>_3rd_party_addins.*|.txt|
+|List of third-party add-ins|\<*ComputerName*>_3rd_party_addins.*|.txt|
 |List of Microsoft add-ins|\<*ComputerName*>_msft_addins.*|.txt|
 
 #### Third-party modules that are running under the Office application
@@ -71,9 +71,9 @@ For more information about the Autoruns utility that is used to collect this inf
 
 |Description|File name|Formats|
 |---|---|---|
-|Autorun information|\<*ComputerName*>_Autoruns.*| .xml, .htm|
+|Autorun information|\<*ComputerName*>_Autoruns.*| .xml, .htm|
 
-#### Application and System logs
+#### Application and System logs
 
 Events from the last 15 days are recorded in the full
 
@@ -94,13 +94,13 @@ This set of environment variables is a subset of those that are displayed by run
 
 |Description|File name|Formats|
 |---|---|---|
-|List containing environment variables and their values|\<*ComputerName*>_EnvironmentVariables.*|.txt|
+|List containing environment variables and their values|\<*ComputerName*>_EnvironmentVariables.*|.txt|
 
 #### Uploaded files
 
 |Description|File name|Formats|
 |---|---|---|
-|File containing any additional file(s) that you elected to upload to Microsoft|\<*ComputerName*>_File.*|.zip|
+|File containing any additional file(s) that you elected to upload to Microsoft|\<*ComputerName*>_File.*|.zip|
 
 #### Updates Installed
 
@@ -140,13 +140,13 @@ Windows registry locations below are exported in full .reg files. Text files are
 |Description|File name|Formats|
 |---|---|---|
 |List with network-related parameters|\<*ComputerName*>_SMB-Info.*|.txt|
-|List with TCP/IP-related information from the computer|\<*ComputerName*>_TcpIp-Info.*|.txt|
+|List with TCP/IP-related information from the computer|\<*ComputerName*>_TcpIp-Info.*|.txt|
 
 #### Robust Office Inventory Scan output
 
 |Description|File name|Formats|
 |---|---|---|
-|List of installed applications of the supported Office families|\<*ComputerName*>_ROIScan.*|.xml, .log|
+|List of installed applications of the supported Office families|\<*ComputerName*>_ROIScan.*|.xml, .log|
 
 ### Excel data
 
@@ -165,7 +165,7 @@ In addition to the data that is listed in the "Data that is collected for all Of
 
 Text and .csv files contain details about important files that are used by Excel.
 
-File details include: Version, Location, Description, Size, Date, Company
+File details include: Version, Location, Description, Size, Date, Company
 
 |Description|File name|Formats|
 |---|---|---|
@@ -214,13 +214,13 @@ Related article:
 
 ### Fixes Offered
 
-Fixes are offered for known issues while running this utility. Knowledge Base articles are provided for more information with each fix offered. You may choose to apply the fix automatically or opt-out. If choosing to opt-out, please review the articles and apply the fixes manually as you choose.
+Fixes are offered for known issues while running this utility. Knowledge Base articles are provided for more information with each fix offered. You may choose to apply the fix automatically or opt-out. If choosing to opt-out, please review the articles and apply the fixes manually as you choose.
 
 #### Known issue
 
-If the tool offers you only one opportunity to "fix" an issue and you opt out, the tool may appear to run successfully. However, results will not be uploaded.
+If the tool offers you only one opportunity to "fix" an issue and you opt out, the tool may appear to run successfully. However, results will not be uploaded.
 
-To work around this issue, run the diagnostic package by using the **Additional Methods** option.
+To work around this issue, run the diagnostic package by using the **Additional Methods** option.
 
 ## References
 

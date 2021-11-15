@@ -35,11 +35,11 @@ The Auto-Recover file location points to a network share. This will force Word t
 
 In order to resolve this problem, you need to set the Auto-Recover file location to a local path. The default path is %APPDATA%\Microsoft\Word. Also ensure that %APPDATA% (or Roaming Application Data) points to a local folder.
 
-To change this setting, please go to File - Options - Save and modify the Text Box "Auto-Recover file location:". Type in a valid local path.
+To change this setting, please go to File - Options - Save and modify the Text Box "Auto-Recover file location:". Type in a valid local path.
 
 ## More Information
 
-Since the temporary files that Word uses are file-access-driven, accessing them through the network is not optimal. 
+Since the temporary files that Word uses are file-access-driven, accessing them through the network is not optimal. 
 
 File-access-driven means that the computer uses special file access commands that the operating system provides to read and write data to the file.
 This is not efficient on WAN or LAN links because WAN and LAN links use network-access-driven methods.

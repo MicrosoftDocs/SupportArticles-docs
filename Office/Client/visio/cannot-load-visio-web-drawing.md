@@ -30,10 +30,10 @@ appliesto:
 Consider the following scenario:
 
 - You have two server farms that are running Microsoft SharePoint.   
-- You host a Visio web drawing on the first SharePoint farm.   
-- You try to load the Visio web drawing on the second SharePoint farm.   
+- You host a Visio web drawing on the first SharePoint farm.   
+- You try to load the Visio web drawing on the second SharePoint farm.   
 
-In this scenario, you receive the following error message: 
+In this scenario, you receive the following error message: 
 
 ```adoc
 Visio Services was unable to load this Web Drawing because the Web Drawing URL web part setting does not refer to an existing .VDW file or you do not have permissions to view it. To resolve this issue, verify that the Web Drawing URL refers to an existing .VDW file that you have permissions to view.
@@ -41,4 +41,4 @@ Visio Services was unable to load this Web Drawing because the Web Drawing URL w
 
 ## Cause
 
-This issue occurs because Visio Services in Microsoft SharePoint Server does not support federation. You can only display Visio web drawings on the SharePoint farm that hosts the drawing.
+This issue occurs because Visio Services in Microsoft SharePoint Server does not support federation. You can only display Visio web drawings on the SharePoint farm that hosts the drawing.

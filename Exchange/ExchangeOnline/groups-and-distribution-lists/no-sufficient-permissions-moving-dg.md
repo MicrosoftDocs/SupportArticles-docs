@@ -24,11 +24,11 @@ appliesto:
 
 ## Problem
 
-You try to remove or make a change to a distribution group by using the Exchange admin center in Microsoft Exchange Online for Microsoft Office 365 or in on-premises Microsoft Exchange Server. In this situation, you receive the following error message: You don't have sufficient permissions. This operation can only be performed by a manager of the group.
+You try to remove or make a change to a distribution group by using the Exchange admin center in Microsoft Exchange Online for Microsoft Office 365 or in on-premises Microsoft Exchange Server. In this situation, you receive the following error message: You don't have sufficient permissions. This operation can only be performed by a manager of the group.
 
 ## Cause
 
-This issue occurs if you're not a manager of the group. In this situation, you're not listed in the ManagedBy attribute.
+This issue occurs if you're not a manager of the group. In this situation, you're not listed in the ManagedBy attribute.
 
 ## Solution 1: Use Exchange Online PowerShell or the Exchange Management Shell
 
@@ -36,7 +36,7 @@ This issue occurs if you're not a manager of the group. In this situation, you'r
 > You have to be an Exchange Online admin, an Exchange admin, or a member of the "Security Group Creation and Membership" role in the Exchange admin center to perform this procedure.
 
 1. Take one of the following actions, as appropriate for your situation:
-   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    - On Exchange Server in your on-premises environment, open the Exchange Management Shell.
 
 2. Make the change that you want to the distribution group by using the appropriate Windows PowerShell cmdlet.
@@ -48,7 +48,7 @@ This issue occurs if you're not a manager of the group. In this situation, you'r
    ```
 
    > [!NOTE]
-   > In this cmdlet and in other cmdlets in the [Examples](#examples) section, the distribution group is represented by the placeholder <*NameOfGroup*>.
+   > In this cmdlet and in other cmdlets in the [Examples](#examples) section, the distribution group is represented by the placeholder <*NameOfGroup*>.
 
 ### Examples
 
@@ -80,10 +80,10 @@ Here are some more examples of other Windows PowerShell cmdlets that you can use
 
 ## Solution 2: Add yourself to the `ManagedBy` attribute
 
-To add yourself to the `ManagedBy` attribute, follow these steps:
+To add yourself to the `ManagedBy` attribute, follow these steps:
 
 1. Take one of the following actions, as appropriate for your situation:
-   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    - On Exchange Server in your on-premises environment, open the Exchange Management Shell.
 
 2. Run the following command:
@@ -92,7 +92,7 @@ To add yourself to the `ManagedBy` attribute, follow these steps:
     Set-DistributionGroup <group> -ManagedBy @{Add="<value1>", "<value2>", …} -BypassSecurityGroupManagerCheck
     ```
 
-    For example, if you're an Exchange Online admin or an Exchange admin who isn't listed in the `ManagedBy` attribute and you want to make changes to a distribution group that's named Accounting, run the following command to add yourself to the `ManagedBy` attribute:
+    For example, if you're an Exchange Online admin or an Exchange admin who isn't listed in the `ManagedBy` attribute and you want to make changes to a distribution group that's named Accounting, run the following command to add yourself to the `ManagedBy` attribute:
 
     ```powershell
     Set-DistributionGroup Accounting -ManagedBy @{Add="<Alias>"} -BypassSecurityGroupManagerCheck
@@ -100,7 +100,7 @@ To add yourself to the `ManagedBy` attribute, follow these steps:
 
     After you do this, you'll be able to change the distribution group.
 
-For more information about the `Set-DistributionGroup` cmdlet, see [Set-DistributionGroup](/powershell/module/exchange/set-distributiongroup).
+For more information about the `Set-DistributionGroup` cmdlet, see [Set-DistributionGroup](/powershell/module/exchange/set-distributiongroup).
 
 ## References
 

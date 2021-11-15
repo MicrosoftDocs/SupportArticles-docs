@@ -22,14 +22,14 @@ appliesto:
 
 Consider the following scenario:
 
-- You create a Skype Meeting Broadcast in the [Skype Meeting Broadcast portal](https://portal.broadcast.skype.com/).   
-- You enter your email address or alias in the **Members** list in the **Event team** area and then click **Check Names**.    
+- You create a Skype Meeting Broadcast in the [Skype Meeting Broadcast portal](https://portal.broadcast.skype.com/).   
+- You enter your email address or alias in the **Members** list in the **Event team** area and then click **Check Names**.    
 
-After you do this, your email address or alias entry disappears from the **Members** list without an error message or warning being displayed.
+After you do this, your email address or alias entry disappears from the **Members** list without an error message or warning being displayed.
 
 ## More Information
 
-When you schedule a Skype Meeting Broadcast, you're already a member of the Event team and don't have to add yourself explicitly. This avoids any potential issues of forgetting to add yourself to the Event team. 
+When you schedule a Skype Meeting Broadcast, you're already a member of the Event team and don't have to add yourself explicitly. This avoids any potential issues of forgetting to add yourself to the Event team. 
 
 For more information about how to schedule a Skype Meeting Broadcast, go to the following Microsoft website:
 

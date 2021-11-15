@@ -22,12 +22,12 @@ appliesto:
 
 ## Symptoms
 
-After you upgrade a Windows 7 PC that came with Microsoft Office Starter 2010 to Windows 8, a compatibility error will occur when you click **Use** to install Office Starter 2010:
+After you upgrade a Windows 7 PC that came with Microsoft Office Starter 2010 to Windows 8, a compatibility error will occur when you click **Use** to install Office Starter 2010:
 
 "This program has compatibility issues."
 
 
-**NOTE** The compatibility problem does not occur if you select the **Activate** or **Purchase** options.
+**NOTE** The compatibility problem does not occur if you select the **Activate** or **Purchase** options.
 
 :::image type="content" source="media/cant-install-office-on-windows-8/select-use-to-install.png" alt-text="Screenshot to select the Use option to install Office Starter 2010." border="false":::
 

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4034273
 
 ## Symptoms
 
-After a migration to Microsoft Office 365, users cannot open a folder or add a hidden mailbox in Outlook. Also, users may receive the following error messages, depending on what they are trying to add or access.
+After a migration to Microsoft Office 365, users cannot open a folder or add a hidden mailbox in Outlook. Also, users may receive the following error messages, depending on what they are trying to add or access.
 
 - Additional mailbox
 
@@ -42,6 +42,6 @@ This is expected behavior when you try to add a hidden mailbox.
 
 ## Resolution
 
-Auto-mapping enables users who have **Full Access** permissions to access a hidden mailbox. If you migrate from an on-premises environment, refer to the following article for instructions to enable auto-mapping in a hybrid environment:
+Auto-mapping enables users who have **Full Access** permissions to access a hidden mailbox. If you migrate from an on-premises environment, refer to the following article for instructions to enable auto-mapping in a hybrid environment:
 
-[Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com//help/3080561/)  
+[Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com//help/3080561/)  

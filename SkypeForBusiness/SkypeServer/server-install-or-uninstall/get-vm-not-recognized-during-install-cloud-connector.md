@@ -25,9 +25,9 @@ During a new installation of Cloud Connector Edition, running the cmdlet Install
 Get-VM : The term 'Get-VM' is not recognized as the name of a cmdlet, function, script file, or operable program.
 Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 At C:\Program Files\WindowsPowerShell\Modules\CloudConnector\Internal\MtCommon.ps1:1824 char:9
-+         Get-VM | ForEach-Object {
-+         ~~~~~~
-    + CategoryInfo          : ObjectNotFound: (Get-VM:String) [], ParentContainsErrorRecordException
++         Get-VM | ForEach-Object {
++         ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-VM:String) [], ParentContainsErrorRecordException
  + FullyQualifiedErrorId : CommandNotFoundException
 ```
 

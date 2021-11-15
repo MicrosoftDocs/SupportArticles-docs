@@ -84,7 +84,7 @@ oBook.SaveAs "C:\Book1.xls"
 oExcel.Quit
 ```
   
-Transferring data cell by cell can be a perfectly acceptable approach if the amount of data is small. You have the flexibility to place data anywhere in the workbook and can format the cells conditionally at run time. However, this approach is not recommended if you have a large amount of data to transfer to an Excel workbook. Each Range object that you acquire at run time results in an interface request so that transferring data in this manner can be slow. Additionally, Microsoft Windows 95 and Windows 98 have a 64K limitation on interface requests. If you reach or exceed this 64k limit on interface requests, the Automation server (Excel) might stop responding or you might receive errors indicating low memory.  
+Transferring data cell by cell can be a perfectly acceptable approach if the amount of data is small. You have the flexibility to place data anywhere in the workbook and can format the cells conditionally at run time. However, this approach is not recommended if you have a large amount of data to transfer to an Excel workbook. Each Range object that you acquire at run time results in an interface request so that transferring data in this manner can be slow. Additionally, Microsoft Windows 95 and Windows 98 have a 64K limitation on interface requests. If you reach or exceed this 64k limit on interface requests, the Automation server (Excel) might stop responding or you might receive errors indicating low memory.  
 
 Once more, transferring data cell by cell is acceptable only for small amounts of data. If you need to transfer large data sets to Excel, you should consider one of the solutions presented later.
 
@@ -406,5 +406,5 @@ Text1.LinkMode = 0
 
 When using LinkPoke with Excel, you specify the range in row-column (R1C1) notation for the LinkItem. If you are poking data to multiple cells, you can use a string where the columns are delimited by tabs and rows are delimited by carriage returns.
 
-When you use LinkExecute to ask Excel to carry out a command, you must give Excel the command in the syntax of the Excel Macro Language (XLM). The XLM documentation is not included with Excel versions 97 and later.  
+When you use LinkExecute to ask Excel to carry out a command, you must give Excel the command in the syntax of the Excel Macro Language (XLM). The XLM documentation is not included with Excel versions 97 and later.  
 DDE is not a recommended solution for communicating with Excel. Automation provides the greatest flexibility and gives you more access to the new features that Excel has to offer.  

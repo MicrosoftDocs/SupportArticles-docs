@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-An error occurs when you try to open a Microsoft Office file from SharePoint by using an Office 2016 client, such as Word, Excel, or PowerPoint. You may receive one of the following error messages, depending on the version of Office or SharePoint and the method that's used to open the file:
+An error occurs when you try to open a Microsoft Office file from SharePoint by using an Office 2016 client, such as Word, Excel, or PowerPoint. You may receive one of the following error messages, depending on the version of Office or SharePoint and the method that's used to open the file:
 
 > There are network issues stopping us from opening your document. Please try again later.   
   
@@ -40,7 +40,7 @@ An error occurs when you try to open a Microsoft Office file from SharePoint by
    
 :::image type="content" source="media/files-fail-to-open/server-is-not-responding-error.png" alt-text="Screenshot of the error message, showing can't open the Document Location because the server isn't responding." border="false":::
 
-Additionally, you may see one of the following error messages when you try to sign in Office. Or, if you have successfully signed in to Office, you may still see the error message in an Office application:
+Additionally, you may see one of the following error messages when you try to sign in Office. Or, if you have successfully signed in to Office, you may still see the error message in an Office application:
 
 > Account Error  
 > There are problems with your account. To fix them, please sign in again.
@@ -76,8 +76,8 @@ Additionally, you may see one of the following error messages when you try to si
 
 ## Resolution
 
-Enable and start **Network List Service** on the client computer. To do this, follow these steps:  
+Enable and start **Network List Service** on the client computer. To do this, follow these steps:  
  
 1. Click Start, type "**services.msc**" (without quotation marks) in the Start Search box and press Enter.    
-2. Double-click **Network List Service**.    
+2. Double-click **Network List Service**.    
 3. Right-click the service, and then click **Start**.    

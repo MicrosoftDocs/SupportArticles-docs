@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-The **Sent** time stamp on email messages may be incorrect when you sign in to Outlook on the web (formally known as Microsoft Outlook Web App or Outlook Web App) in a corporate messaging environment. Additionally, the time on meeting requests may also be incorrect.
+The **Sent** time stamp on email messages may be incorrect when you sign in to Outlook on the web (formally known as Microsoft Outlook Web App or Outlook Web App) in a corporate messaging environment. Additionally, the time on meeting requests may also be incorrect.
 
 ## Cause
 
@@ -36,7 +36,7 @@ To work around this issue, set the time zone on the Exchange Server to a region 
 
 **[Set Regional Settings in Outlook on the web](/previous-versions/exchange-server/exchangeserver-149/dd188698(v=exchsrvcs.149))**
 
-You may also have to set the time zone in Microsoft Outlook Web App or in Outlook Web App. To do this, follow these steps, as appropriate for your situation. 
+You may also have to set the time zone in Microsoft Outlook Web App or in Outlook Web App. To do this, follow these steps, as appropriate for your situation. 
 
 ### Microsoft Exchange Server 2013
 

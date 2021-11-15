@@ -36,7 +36,7 @@ This article contains a sample Microsoft Visual Basic for Applications macro (su
 
 To create the calendar, follow these steps.
 
-### Microsoft Excel 2003
+### Microsoft Excel 2003
 
 1. Create a workbook.
 2. On the **Tools** menu, point to **Macro**, and then select **Visual Basic Editor**.

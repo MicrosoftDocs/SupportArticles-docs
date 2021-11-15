@@ -31,7 +31,7 @@ This article discusses known issues that may occur with Office for Mac applicati
 
 ## More information
 
-There are two major Office for Mac issues Microsoft is aware of running on Lion: 
+There are two major Office for Mac issues Microsoft is aware of running on Lion: 
 
 1. Communicator for Mac crashes when you send an IM or start an audio/visual call.
     > [!NOTE]

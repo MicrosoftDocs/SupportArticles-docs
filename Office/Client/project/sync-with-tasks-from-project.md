@@ -34,9 +34,9 @@ appliesto:
 > [!NOTE]
 > The Project Manager must be part of the SharePoint Owners group (or at the least have designer permissions) on the parent site collection where the new or existing site resides.
 
-Synchronization goes the other way, too. If you have a SharePoint tasks list, there's an **Open with Project** button that opens the plan in Project Professional. This feature lets you use the Project Scheduling Engine to make schedule updates in Project Professional 2013, Project Professional 2016, Project Professional 2019, or Project for Office 365 and then synchronize the static list back to the tasks list on the SharePoint Project site.
+Synchronization goes the other way, too. If you have a SharePoint tasks list, there's an **Open with Project** button that opens the plan in Project Professional. This feature lets you use the Project Scheduling Engine to make schedule updates in Project Professional 2013, Project Professional 2016, Project Professional 2019, or Project for Office 365 and then synchronize the static list back to the tasks list on the SharePoint Project site.
 
-Managing a Project Site tasks list in this manner is also known as lightweight project management. Project Server is not required for this functionality. SharePoint Foundation 2013, SharePoint Foundation 2016, or SharePoint Foundation 2019 is the minimum requirement for using the **Sync to SharePoint**feature.
+Managing a Project Site tasks list in this manner is also known as lightweight project management. Project Server is not required for this functionality. SharePoint Foundation 2013, SharePoint Foundation 2016, or SharePoint Foundation 2019 is the minimum requirement for using the **Sync to SharePoint**feature.
 
 When you use SharePoint Server, you can use the "All My Work in One Place" feature to display all tasks that are specifically assigned to you. From your "My site" personal tasks list, you can view, organize, and update all your work from this one location. The following URL is for a SharePoint personal tasks list:
 
@@ -44,11 +44,11 @@ When you use SharePoint Server, you can use the "All My Work in One Place" featu
 
 **Scenarios for using Project Professional with SharePoint Server or SharePoint Online**
 
-- Create a plan in Project, and then sync by using NEW SharePoint Site. A site and tasks list are created.
-- Create a plan in Project, and then sync by using Existing SharePoint Site. This updates an existing list or creates a new list, depending on your selection.
-- In SharePoint when you have tasks in a tasks list, you can use Open with Projectto open the plan in Project Professional for editing and then sync back to the existing SharePoint site. The .mpp file is saved to the site assets for future editing.
+- Create a plan in Project, and then sync by using NEW SharePoint Site. A site and tasks list are created.
+- Create a plan in Project, and then sync by using Existing SharePoint Site. This updates an existing list or creates a new list, depending on your selection.
+- In SharePoint when you have tasks in a tasks list, you can use Open with Projectto open the plan in Project Professional for editing and then sync back to the existing SharePoint site. The .mpp file is saved to the site assets for future editing.
 
-The following Office article describes how to synchronize a Project plan with SharePoint, and how to sync to create a New Project site and an Existing Project site:
+The following Office article describes how to synchronize a Project plan with SharePoint, and how to sync to create a New Project site and an Existing Project site:
 
 - [Sync with a SharePoint tasks list](https://office.microsoft.com/project-help/sync-with-a-sharepoint-tasks-list-ha102828524.aspx)
 
@@ -66,7 +66,7 @@ The following Office article describes how to synchronize a Project plan with Sh
 
 **Manual versus Auto scheduled tasks**
 
- When you open a SharePoint tasks list in Project Professional for the first time, the tasks will be set to **Manual** or **Auto scheduled**, depending on the **New tasks created**setting in your Project client. You can find this setting on the **File** menu, by clicking **Options**, and then selecting the **Schedule** tab.
+ When you open a SharePoint tasks list in Project Professional for the first time, the tasks will be set to **Manual** or **Auto scheduled**, depending on the **New tasks created**setting in your Project client. You can find this setting on the **File** menu, by clicking **Options**, and then selecting the **Schedule** tab.
 
 **Predecessors**
 
@@ -98,11 +98,11 @@ To add these users to SharePoint, contact your SharePoint administrator. It's a 
 
 **Starting with a SharePoint tasks list**
 
- If you, the Project Manager, begin in SharePoint by having a tasks list, they can decide at any time that you want to use Project's scheduling engine to calculate a more precise schedule. You can click the **Open with Project** button from the **List** ribbon, the Project client starts as the currently logged-on user, and you can begin editing.
+ If you, the Project Manager, begin in SharePoint by having a tasks list, they can decide at any time that you want to use Project's scheduling engine to calculate a more precise schedule. You can click the **Open with Project** button from the **List** ribbon, the Project client starts as the currently logged-on user, and you can begin editing.
 
 **Open with Project**
 
- When the plan opens, the tasks will be either Manually Scheduled or Auto Scheduled based on the value of **File**> **Options** > **Schedule** > **New tasks Created**. Tasks can be added or edited by using any or all features in the Project client and then synced back to the SharePoint tasks list just by clicking **Save**.
+ When the plan opens, the tasks will be either Manually Scheduled or Auto Scheduled based on the value of **File**> **Options** > **Schedule** > **New tasks Created**. Tasks can be added or edited by using any or all features in the Project client and then synced back to the SharePoint tasks list just by clicking **Save**.
 
 **Map Fields**
 
@@ -115,7 +115,7 @@ To add these users to SharePoint, contact your SharePoint administrator. It's a 
 - Resource Name  
 - Predecessors
 
- If you want to map more fields to be synced between Project and SharePoint, you can do this on the **Info** tab on the **File** menu with in Project. Specifically, open the **Map Fields** dialog box, and then select the new fields that you want to sync. This way, you can have your team members report on other custom fields, or you can generate reports based on non-default SharePoint columns.
+ If you want to map more fields to be synced between Project and SharePoint, you can do this on the **Info** tab on the **File** menu with in Project. Specifically, open the **Map Fields** dialog box, and then select the new fields that you want to sync. This way, you can have your team members report on other custom fields, or you can generate reports based on non-default SharePoint columns.
 
 **Synchronizing to an existing task list**
 

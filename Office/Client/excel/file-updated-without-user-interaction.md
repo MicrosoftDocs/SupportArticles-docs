@@ -21,9 +21,9 @@ appliesto:
 
 ## Summary
 
-When you use Excel Online to open an Excel file stored in the document library, the fields such as Modified, Modified By, and Version are updated without user interaction in the following cases: 
+When you use Excel Online to open an Excel file stored in the document library, the fields such as Modified, Modified By, and Version are updated without user interaction in the following cases: 
 
-- The file was created in Excel 2010, 2013, or 2016 MSI.    
+- The file was created in Excel 2010, 2013, or 2016 MSI.    
 - You open the file with Excel Online for the first time after uploading it to the document library.
 
 ## More information
@@ -32,7 +32,7 @@ This is by design. Excel applications have an internal calculation engine for ea
 
 ### Steps to Reproduce Behavior
 
-1. Create a new file in Excel 2010, 2013, or 2016 MSI.    
+1. Create a new file in Excel 2010, 2013, or 2016 MSI.    
 2. Upload the file to the document library.    
 3. Open the file with Excel Online.    
 4. Close the file without any changes.    

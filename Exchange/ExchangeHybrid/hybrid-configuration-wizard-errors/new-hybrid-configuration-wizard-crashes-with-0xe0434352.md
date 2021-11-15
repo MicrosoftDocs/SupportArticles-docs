@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4014018
 
 ## Symptoms
 
-When you run a new Hybrid Configuration Wizard, it crashes and returns exception code 0xe0434352. The detailed event log resembles the following:
+When you run a new Hybrid Configuration Wizard, it crashes and returns exception code 0xe0434352. The detailed event log resembles the following:
 
 > Log Name: Application  
 Source: Application  
@@ -52,20 +52,20 @@ This issue occurs if the external Exchange Web Services (EWS) URL is not set on 
 To resolve this issue, set the external EWS URL. To do this, use one of the following methods.
 
 > [!NOTE]
-> In these methods, replace the `CAS_server_nameandcontoso.com` placeholders with the name of your CAS server and your domain, respectively.
+> In these methods, replace the `CAS_server_nameandcontoso.com` placeholders with the name of your CAS server and your domain, respectively.
 
-### Method 1 - Use Exchange Management Shell
+### Method 1 - Use Exchange Management Shell
 
-Run the following cmdlet in Exchange Management Shell:
+Run the following cmdlet in Exchange Management Shell:
 
 ```powershell
 Set-WebServicesVirtualDirectory -Identity "CAS_server_name\EWS (Default Web Site)" -ExternalUrl https://mail.contoso.com/ews/exchange.asmx
 ```
 
-### Method 2 - Use Exchange Admin Center
+### Method 2 - Use Exchange Admin Center
 
 1. Sign in to Exchange Admin Center.
-2. Locate **Servers** > **Virtual directories**, select your server by name, and then select type **EWS**.
+2. Locate **Servers** > **Virtual directories**, select your server by name, and then select type **EWS**.
 3. In the **Default Web Site** dialog box, set **External URL** to `https://mail.contoso.com/ews/exchange.asmx`.
 
    :::image type="content" source="media/new-hybrid-configuration-wizard-crashes-with-0xe0434352/default-web-site-page.png" alt-text="Screenshot of the Default Web Site page.":::

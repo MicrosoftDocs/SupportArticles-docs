@@ -36,7 +36,7 @@ The manual update involves running the Update-Engines.ps1 PowerShell script. Thi
 
 1. Create a local directory structure on the computer on which you want to download the scan engine updates.
 
-    1. Create a directory. For example, create a directory named *ScanEngineUpdates*.
+    1. Create a directory. For example, create a directory named *ScanEngineUpdates*.
 
         > [!NOTE]
         > This directory must be passed as a parameter to the script.
@@ -336,7 +336,7 @@ The manual update involves running the Update-Engines.ps1 PowerShell script. Thi
     Update-Engines.ps1 -EngineDirPath <string> -UpdatePathUrl <update url> -Engines <engine names> -Platforms <platform names>
     ```
 
-   - `EngineDirPath <string>` - The directory to serve as the root engine's directory (created in step 1). It's a required parameter.
+   - `EngineDirPath <string>` - The directory to serve as the root engine's directory (created in step 1). It's a required parameter.
    - `UpdatePathUrl <update url>` - The update path used to download the updates.
    - `Engines <engine names>` - The list of engine names to update.
 
@@ -355,4 +355,4 @@ The manual update involves running the Update-Engines.ps1 PowerShell script. Thi
     Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64
     ```
 
-4. You can now configure the servers to download updates from the directory created in step 1 by using the UNC path of a share name, such as `\\server_name\share_name`.
+4. You can now configure the servers to download updates from the directory created in step 1 by using the UNC path of a share name, such as `\\server_name\share_name`.

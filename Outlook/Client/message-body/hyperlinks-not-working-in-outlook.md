@@ -73,7 +73,7 @@ To resolve this problem, follow these methods in order. Check whether the proble
 
     :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-this-program-as-default.png" alt-text="Screenshot of the Set Default Programs window when you select Microsoft Outlook in the programs list." border="false":::
 
-11. Scroll back up to the top of the default programs list and highlight **Internet Explorer** and select **Set this program as default**.
+11. Scroll back up to the top of the default programs list and highlight **Internet Explorer** and select **Set this program as default**.
 
     :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-internet-explorer-as-default.png" alt-text="Screenshot of the Set Default Programs window when you select Internet Explorer in the programs list." border="false":::
 
@@ -91,7 +91,7 @@ To resolve this problem, follow these methods in order. Check whether the proble
 
     :::image type="content" source="media/hyperlinks-not-working-in-outlook/reset-internet-explorer-settings-in-ie9.png" alt-text="Screenshot of the Delete personal option on the Reset Internet Settings window." border="false":::
 
-5. Select **Close** when it is completed.
+5. Select **Close** when it is completed.
 
     :::image type="content" source="media/hyperlinks-not-working-in-outlook/close-the-reset-window.png" alt-text="Screenshot of the close option on the Reset Internet Explorer Settings window in IE9." border="false":::
 
@@ -122,7 +122,7 @@ To resolve this problem, follow these methods in order. Check whether the proble
 5. Select **Set Default Programs**.
 6. Select **Microsoft Outlook** > **Set this program as default**.
 7. Select **OK**, and then close the **Default Programs** dialog box.
-8. In the **Internet Options** dialog box, select the **Programs** tab, and then select **Make default** under **Default web browser**.
+8. In the **Internet Options** dialog box, select the **Programs** tab, and then select **Make default** under **Default web browser**.
 9. Select **OK**.
 
 #### Internet Explorer 6
@@ -153,7 +153,7 @@ This section is intended for advanced computer users. For help with advanced tro
 #### Step 1: Export the registry key from another computer
 
 1. On a computer that does not encounter this problem, select **Start** > **Run**.
-2. In the **Open** box, *type regedit*, and then select **OK**.
+2. In the **Open** box, *type regedit*, and then select **OK**.
 3. Locate, and then select the registry subkey: `HKEY_LOCAL_MACHINE\Software\Classes\htmlfile\shell\open\command`.
 4. On the **File** or **Registry** menu (depending on your operating system), select **Export**.
 
@@ -176,15 +176,15 @@ This section is intended for advanced computer users. For help with advanced tro
 
     **Windows 7**
 
-    > Are you sure you want to add the information in drive: location file was copied to\file name.reg to the registry?
+    > Are you sure you want to add the information in drive: location file was copied to\file name.reg to the registry?
 
 3. Select **Yes** > **OK**.
 
 #### Step 3: Verify that the String (Default) value of the HKEY_CLASSES_ROOT \.html key is htmlfile
 
 1. Select **Start** > **Run**.
-2. In the **Open** box, *type regedit*, and then select **OK**.
+2. In the **Open** box, *type regedit*, and then select **OK**.
 3. Locate, and then select the registry subkey: **HKEY_CLASSES_ROOT \\.html**.
-4. Make sure that the value of the **String (Default)**  is "htmlfile". If it's not **htmlfile**, right-click **(Default)**, select **Modify**, input *htmlfile* in the **Value data** box, and then select **OK**.
+4. Make sure that the value of the **String (Default)**  is "htmlfile". If it's not **htmlfile**, right-click **(Default)**, select **Modify**, input *htmlfile* in the **Value data** box, and then select **OK**.
 
 5. Exit Registry Editor.

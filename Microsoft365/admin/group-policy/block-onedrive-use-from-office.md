@@ -31,7 +31,7 @@ To block OneDrive access for Office 2016 users in your organization, follow thes
 
 1. Download the [Office 2016 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=49030).
 
-2. Use the Office 2016 Administrative Templates to configure Group Policy settings under **User configuration** > **Administrative Templates** > **Microsoft Office 2016** > **Miscellaneous** as follows:
+2. Use the Office 2016 Administrative Templates to configure Group Policy settings under **User configuration** > **Administrative Templates** > **Microsoft Office 2016** > **Miscellaneous** as follows:
    1. Set the **Show OneDrive Sign In** setting to **Disabled**:
 
         ![Show OneDrive Sign-in](https://sawinternal.blob.core.windows.net/gds-images/3120068.png)

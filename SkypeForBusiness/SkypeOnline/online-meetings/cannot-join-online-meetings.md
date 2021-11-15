@@ -20,7 +20,7 @@ appliesto:
 
 ## Scoping the problem
 
-Let's assume that you want to troubleshoot issues that occur when users try to join a Skype for Business Online (formerly Lync Online) meeting by using Lync 2010, Lync 2013, the Lync for Windows Store app, or Lync for Mac 2011. Before you start, ask yourself and any external users who are experiencing the issue the following questions:
+Let's assume that you want to troubleshoot issues that occur when users try to join a Skype for Business Online (formerly Lync Online) meeting by using Lync 2010, Lync 2013, the Lync for Windows Store app, or Lync for Mac 2011. Before you start, ask yourself and any external users who are experiencing the issue the following questions:
 
 - How many users does the problem affect?   
 - Are the users internal or external to your organization?   
@@ -59,9 +59,9 @@ Be aware that each column and each row are mutually exclusive. That is, the issu
 To resolve any client or computer issue, first make sure that the computer is up to date. The computer should have the latest operating system updates, audio and video drivers, and software application updates to make connecting to a Skype for Business Online meeting a successful experience. To do this, follow these steps:
 
 1. Run Windows Update, and then verify that all optional hardware updates are installed. Specifically, make sure that video, audio, and network drivers are up to date.    
-2. Verify that Lync is up to date. See [Lync Downloads and Updates](/SkypeForBusiness/software-updates) for the latest Lync updates.
+2. Verify that Lync is up to date. See [Lync Downloads and Updates](/SkypeForBusiness/software-updates) for the latest Lync updates.
 
-    Select your version (2013 or 2010), and then select **Lync client** under **Category**.
+    Select your version (2013 or 2010), and then select **Lync client** under **Category**.
 
 Now that the computer is up to date and meets all minimum system requirements, clear any cached credentials or certificates from previous logons:
 
@@ -90,7 +90,7 @@ Skype for Business Online falls back to "anonymous join" if it can't authenticat
 1. Verify that Skype for Business Online is the default program that is used to open .ocsmeet files. To do this, follow these steps:
    1. Click **Start**, click **Control Panel**, and then click **Default Programs**.   
    2. Click **Associate a file type or protocol with a program**.   
-   3. Scroll down to **.ocsmeet**, and then verify that **Microsoft Lync **is selected as the Current Default option.   
+   3. Scroll down to **.ocsmeet**, and then verify that **Microsoft Lync **is selected as the Current Default option.   
    
 2. If step 1 doesn't resolve the issue, perform an [Repair an Office application](https://office.microsoft.com/redir/ha010357402.aspx), or reinstall Lync 2010.   
 
@@ -125,6 +125,6 @@ If these troubleshooting steps don't resolve the issue, and if joining the meeti
 
 ### Troubleshooting issues with third-party software
 
-If you're using third-party software, you may be asked to update, disable, or remove the software as a troubleshooting step. If the issue is resolved after you take one of these actions, you may be referred to the third-party manufacturer for more help or to perform additional troubleshooting.  
+If you're using third-party software, you may be asked to update, disable, or remove the software as a troubleshooting step. If the issue is resolved after you take one of these actions, you may be referred to the third-party manufacturer for more help or to perform additional troubleshooting.  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

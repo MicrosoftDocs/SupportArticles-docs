@@ -52,7 +52,7 @@ To work around this behavior, do one of the following:
 - Implement GAL segmentation. For more information, see [Address book policies](/exchange/address-books/address-book-policies/address-book-policies).
 - Add User A as a contact in the local address book. To do this, follow these steps:
 
-  1. On the server that's running Exchange Server, reveal (unhide) the hidden account (for User B) in the GAL.
+  1. On the server that's running Exchange Server, reveal (unhide) the hidden account (for User B) in the GAL.
   2. On the delegate's computer (for User A), go to the address book, locate the account that was previously hidden, right-click the account, and then select **Add to Contacts**.
   3. Hide the account from the GAL on the server that's running Exchange Server.
   4. On the delegate's computer (for User A), do the following:

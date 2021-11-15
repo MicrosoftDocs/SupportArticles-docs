@@ -28,15 +28,15 @@ _Original KB number:_ &nbsp; 4058179
 
 ## Symptoms
 
-In Microsoft Exchange ActiveSync, some email messages are missing even though the client continues to receive messages.
+In Microsoft Exchange ActiveSync, some email messages are missing even though the client continues to receive messages.
 
 ## Cause
 
-When the server that's running Exchange Server responds to a **Sync** command for one or more new items, the client either does not receive the response or cannot process the response. The ActiveSync client sends a **Ping** command for the affected folder before it sends another **Sync** command to retrieve the items that failed in the first response. Because the **Ping** command was sent, the server believes that the message was already added to the device.
+When the server that's running Exchange Server responds to a **Sync** command for one or more new items, the client either does not receive the response or cannot process the response. The ActiveSync client sends a **Ping** command for the affected folder before it sends another **Sync** command to retrieve the items that failed in the first response. Because the **Ping** command was sent, the server believes that the message was already added to the device.
 
 ## Workaround
 
-To work around this behavior, disable email synchronization on the Exchange ActiveSync client, and then re-enable email for the client.
+To work around this behavior, disable email synchronization on the Exchange ActiveSync client, and then re-enable email for the client.
 
 ## Status
 

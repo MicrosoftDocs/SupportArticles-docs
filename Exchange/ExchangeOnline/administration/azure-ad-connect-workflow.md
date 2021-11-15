@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 4052070
 
 ## Summary
 
-Azure Active Directory (Azure AD) Connect is used to synchronize data to Azure AD. Azure Active Directory Connect checks and validates information along the way. Sync errors may occur, and new objects or updated values may not reach Azure AD.
+Azure Active Directory (Azure AD) Connect is used to synchronize data to Azure AD. Azure Active Directory Connect checks and validates information along the way. Sync errors may occur, and new objects or updated values may not reach Azure AD.
 
-It's important to understand the flow of data from on-premises to the cloud in Exchange Online. If a failure or error occurs, this article can help determine where the problem is occurring and how to fix it.
+It's important to understand the flow of data from on-premises to the cloud in Exchange Online. If a failure or error occurs, this article can help determine where the problem is occurring and how to fix it.
 
 ## High-level workflow
 
@@ -41,13 +41,13 @@ It's important to understand the flow of data from on-premises to the cloud in E
     - [Introduction to the Azure AD Connect Synchronization Service Manager UI](/azure/active-directory/hybrid/how-to-connect-sync-service-manager-ui)
     - [Using the Sync Service Manager Operations tab](/azure/active-directory/hybrid/how-to-connect-sync-service-manager-ui-operations)
 
-2. If a change passes the first stage, it enters the **Metaverse**, and then the change is passed along to the Target Connector Space. For more information, see [Sync Service Manager Metaverse Search](/azure/active-directory/hybrid/how-to-connect-sync-service-manager-ui-mvsearch).
+2. If a change passes the first stage, it enters the **Metaverse**, and then the change is passed along to the Target Connector Space. For more information, see [Sync Service Manager Metaverse Search](/azure/active-directory/hybrid/how-to-connect-sync-service-manager-ui-mvsearch).
 
 3. If there are no issues, the change is populated into the Target Data Store and Azure AD. At this point, you can use the [Get-MSOLUser](/powershell/module/msonline/get-msoluser) command and other Azure commands against the object to view them in Azure AD.
 
     If a problem occurs between the Target Connector Space and Azure AD, you may have to remove the object from Azure AD by using the [Remove-MsolUser](/powershell/module/msonline/remove-msoluser) cmdlet. You cannot force Azure AD to reevaluate the object as you can in MMSSPP.
 
-4. Finally, the data synchronizes to Exchange, where the object exists as a Mailbox, MailUser, Resource, and so on. This is known as **Forward Sync**. If there is a problem on an object between Azure AD and Exchange Online (represented by validation errors), ask Microsoft to submit the object for a Forward Sync from Azure AD to Exchange Online to force this action.
+4. Finally, the data synchronizes to Exchange, where the object exists as a Mailbox, MailUser, Resource, and so on. This is known as **Forward Sync**. If there is a problem on an object between Azure AD and Exchange Online (represented by validation errors), ask Microsoft to submit the object for a Forward Sync from Azure AD to Exchange Online to force this action.
 
 ## More information
 

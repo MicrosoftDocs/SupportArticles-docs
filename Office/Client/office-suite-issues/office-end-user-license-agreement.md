@@ -52,7 +52,7 @@ To work around this behavior, follow these steps:
 1. Log on to the computer by using an Administrator user account.    
 2. If you are using Microsoft Windows XP, click **Start**, click **Run**, type regedit, and then click **OK**. 
 
-   **Note** In Windows Vista and Windows 7, you may receive a **User Account Control** (UAC) dialog box. You must click **Continue** to open Registry Editor.   
+   **Note** In Windows Vista and Windows 7, you may receive a **User Account Control** (UAC) dialog box. You must click **Continue** to open Registry Editor.   
 3. Locate and then right-click the following registry subkey as appropriate.
 
    On 32-bit versions of Windows:

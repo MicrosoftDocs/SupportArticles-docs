@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-This article describes two scenarios that occur when the Microsoft Lync client can't establish a trust relationship with resources that require a secure TLS connection.
+This article describes two scenarios that occur when the Microsoft Lync client can't establish a trust relationship with resources that require a secure TLS connection.
 
 ### Scenario 1
 
@@ -38,7 +38,7 @@ For example, the following trust model dialog box is displayed:
 
 ### Scenario 2
 
-The **Lync – Sign In** dialog box that's shown in the screen shot in Scenario 1 displays the fully qualified domain name (FQDN) of the organization's Exchange Client Access server (CAS) interface. This interface is used by the Lync client to access user mailbox information through Exchange Web Services (EWS). This behavior occurs if the Lync user's SIP URI contains a domain suffix that does not match the domain suffix of the Exchange CAS interface. If the user chooses not to trust the connection to the Exchange CAS interface, the Lync client will not have access to the Exchange mailbox services that are provisioned by EWS.
+The **Lync – Sign In** dialog box that's shown in the screen shot in Scenario 1 displays the fully qualified domain name (FQDN) of the organization's Exchange Client Access server (CAS) interface. This interface is used by the Lync client to access user mailbox information through Exchange Web Services (EWS). This behavior occurs if the Lync user's SIP URI contains a domain suffix that does not match the domain suffix of the Exchange CAS interface. If the user chooses not to trust the connection to the Exchange CAS interface, the Lync client will not have access to the Exchange mailbox services that are provisioned by EWS.
 
 To verify this behavior, follow these steps:
 
@@ -46,7 +46,7 @@ To verify this behavior, follow these steps:
 2. Hold down the CTRL key and right-click the Lync icon in the Windows client's notification area.    
 3. In the shortcut menu, click **Configuration Information**. 
 4. Locate the "EWS Information" line.    
-5. If this line contains "EWS not fully initialized," you are experiencing the Scenario 2 behavior.    
+5. If this line contains "EWS not fully initialized," you are experiencing the Scenario 2 behavior.    
   
 ## Cause
 
@@ -57,7 +57,7 @@ This issue occurs because the SIP domain name of the user does not match the dom
 
 ## Resolution
 
-To prevent display of the Trust Model dialog box, use the **Trusted Domain List (TrustModelData) Group Policy**. After you set this policy, Lync will exclusively trust the domains that are specified in the policy. Supported values: 
+To prevent display of the Trust Model dialog box, use the **Trusted Domain List (TrustModelData) Group Policy**. After you set this policy, Lync will exclusively trust the domains that are specified in the policy. Supported values: 
  
 - Not Configured (Default)/Disabled
 
@@ -69,11 +69,11 @@ To prevent display of the Trust Model dialog box, use the **Trusted Domain List 
      
 - Enabled
 
-   This setting specifies the list of domains to be trusted—for example: contoso.com, contoso.co.in.
+   This setting specifies the list of domains to be trusted—for example: contoso.com, contoso.co.in.
 
 For more information about the Lync 2013 Trusted Domain List (TrustModelData) Group Policy setting, see [Configuring client bootstrapping policies](/skypeforbusiness/deploy/deploy-clients/configure-client-bootstrapping-policies).
 
-For more information about the Lync 2013.admx (ADMX) and .adml (ADML) Administrative Templates, see [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization tool](https://www.microsoft.com/download/details.aspx?id=35554). 
+For more information about the Lync 2013.admx (ADMX) and .adml (ADML) Administrative Templates, see [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization tool](https://www.microsoft.com/download/details.aspx?id=35554). 
 
 ## More Information
 
@@ -106,6 +106,6 @@ The Lync client makes https requests to the Exchange CAS interface as part of it
 - https://\<smtpdomain>/autodiscover/autodiscover.xml     
 - https://autodiscover.\<smtpdomain>/autodiscover/autodiscover.xml    
  
-If the FQDN of the SMTP domain does not match the FQDN of the SIP domain that the Lync client is signed in to, the Scenario 2 issue occurs.
+If the FQDN of the SMTP domain does not match the FQDN of the SIP domain that the Lync client is signed in to, the Scenario 2 issue occurs.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

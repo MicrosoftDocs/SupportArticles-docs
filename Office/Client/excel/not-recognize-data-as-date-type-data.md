@@ -40,4 +40,4 @@ This issue occurs because the SQL OLE DB Provider returns the String data type i
 To work around this issue, use one of the following methods: 
 
 - Change the column type to DateTime in the SQL Server data source.   
-- Use an Open Database Connectivity (ODBC) driver to import the data.   
+- Use an Open Database Connectivity (ODBC) driver to import the data.   

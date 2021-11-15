@@ -35,7 +35,7 @@ There are certain limitations concerning which users can be listed as an Event t
 - The creator of the Skype Meeting Broadcast event is automatically a member of the Event team and can't be added again.   
 - Users must be members of the same organization as the meeting organizer. External users can't be added at this point.   
 - The users must be synchronized by using Azure Active Directory (Azure AD).   
-- The accepted formats by which to enter a name are as follows:    
+- The accepted formats by which to enter a name are as follows:    
   - Email address   
   - Alias   
   - User principal name (UPN)   

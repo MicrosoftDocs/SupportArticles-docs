@@ -22,7 +22,7 @@ appliesto:
 
 Consider the following scenarios:
 
-- You add a new Skype for Business contact. But the contact doesn't appear in the Outlook Skype for Business Contacts folder.   
+- You add a new Skype for Business contact. But the contact doesn't appear in the Outlook Skype for Business Contacts folder.   
 - You remove a contact from Skype for Business. However, the contact isn't removed from the Outlook Skype for Business Contacts folder.   
 - The Outlook Skype for Business Contacts folder contains stale contact information (it isn't updating). This stale data may still sync to Skype for Business contacts.   
 
@@ -37,11 +37,11 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
 
 1. Download and install MFCMapi from the following Microsoft website: [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 2. Close Skype for Business and Microsoft Outlook.   
-3. Open MFCMapi. If you're prompted, click **OK** on the usage notes box. 
+3. Open MFCMapi. If you're prompted, click **OK** on the usage notes box. 
 
     :::image type="content" source="./media/outlook-contacts-folder-not-sync/mfc-mapi-notes-box.png" alt-text="Screenshot that shows the M F C Mapi usage notes box.":::
 
-4. From the **Tools** menu, select **Options** .
+4. From the **Tools** menu, select **Options** .
 
     :::image type="content" source="./media/outlook-contacts-folder-not-sync/tools-options.png" alt-text="Screenshot that shows the Options selected under the Tools menu.":::
 5. In the **Options** dialog box, click to select **Use the MAPI_NO_CACHE flag when calling OpenEntry** and **Use the MDB_ONLINE flag when calling OpenMsgstore**, and then click **OK**.
@@ -74,6 +74,8 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
 
      :::image type="content" source="./media/outlook-contacts-folder-not-sync/deletion-style.png" alt-text="Screenshot that shows the Permanent deleted option selected in the Delete Item dialog box.":::
 14. To close all the windows, select **Exit** from the **Actions** menu.
+ 
+     ![Action menu ](./media/outlook contacts-folder-n t-sync/exit jpg)   
 
      :::image type="content" source="./media/outlook-contacts-folder-not-sync/exit.png" alt-text="Screenshot that shows the Exit option selected from the Actions menu":::
 
@@ -82,4 +84,4 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
 
 This behavior is by design. The sync between the Outlook Skype for Business Contacts folder and the Skype for Business contacts is deprecated. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com). 

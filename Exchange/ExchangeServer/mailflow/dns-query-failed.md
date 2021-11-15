@@ -54,7 +54,7 @@ This problem may occur because the DNS server that Microsoft Exchange Server use
 
 To resolve this issue, fix the issues in your local DNS server, or configure the external DNS server for remote mail routing. To configure the external DNS server for remote mail routing, follow these steps:
 
-1. Open the Proprieties page of the Exchange server that hosts the send connector, and then add the IP address of [public DNS servers](https://www.bing.com/search?q=public+dns+server&go=submit+query&qs=bs&form=qbre) in the **External DNS Lookups** setting.
+1. Open the Proprieties page of the Exchange server that hosts the send connector, and then add the IP address of [public DNS servers](https://www.bing.com/search?q=public+dns+server&go=submit+query&qs=bs&form=qbre) in the **External DNS Lookups** setting.
 
    :::image type="content" source="media/dns-query-failed/step-1.png" alt-text="Screenshot of adding the IP address of public DNS servers in the External DNS Lookups setting.":::
 

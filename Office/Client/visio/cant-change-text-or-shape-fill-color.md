@@ -28,7 +28,7 @@ When changing the text color or shape fill color within a Visio 2013 or Visio 20
 
 ## Cause 
 
-This issue can occur if a Windows High Contrast theme is applied to the machine.
+This issue can occur if a Windows High Contrast theme is applied to the machine.
 
 ## Resolution 
 

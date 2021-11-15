@@ -19,11 +19,11 @@ appliesto:
 
 ## Summary
 
-Users can download the [Skype for Business for Android](https://play.google.com/store/apps/details?id=com.microsoft.office.lync15&hl=en) (formerly Lync 2013 for Android) for free from Google Play. Users can use the client to connect to Skype for Business Online (formerly Lync online ) if they're assigned a Skype for Business Online license. This article describes how to troubleshoot some common issues that you may encounter when you use Skype for Business for Android.
+Users can download the [Skype for Business for Android](https://play.google.com/store/apps/details?id=com.microsoft.office.lync15&hl=en) (formerly Lync 2013 for Android) for free from Google Play. Users can use the client to connect to Skype for Business Online (formerly Lync online ) if they're assigned a Skype for Business Online license. This article describes how to troubleshoot some common issues that you may encounter when you use Skype for Business for Android.
 
 ### How to install the app
 
-Make sure that you have the latest version of the app installed. The Skype for Business for Android is available for free from Google Play. To install the app, go to [https://play.google.com/store/apps/details?id=com.microsoft.office.lync15](https://play.google.com/store/apps/details?id=com.microsoft.office.lync15). Users should install the app directly to their device and use their user ID to sign in. 
+Make sure that you have the latest version of the app installed. The Skype for Business for Android is available for free from Google Play. To install the app, go to [https://play.google.com/store/apps/details?id=com.microsoft.office.lync15](https://play.google.com/store/apps/details?id=com.microsoft.office.lync15). Users should install the app directly to their device and use their user ID to sign in. 
 
 > [!NOTE]
 > The current release for Android smartphones isn't supported on Android media tablets or on other non-phone Android form factors (hardware models). For more information, click the following article number to view the article in the Microsoft Knowledge Base:
@@ -33,7 +33,7 @@ Make sure that you have the latest version of the app installed. The Skype for B
 When users sign in to the Skype for Business for Android, the sign-in information that's required to successfully authenticate depends on the following scenarios:
 
 - Whether a user's Session Initiation Protocol (SIP) address is the same as the user's user principal name (UPN)   
-- Whether users are hosted on an on-premises Skype for Business (Lync server) or on Skype for Business Online   
+- Whether users are hosted on an on-premises Skype for Business (Lync server) or on Skype for Business Online   
 
 The following table describes the sign-in fields required for Android users: 
 
@@ -51,14 +51,14 @@ If automatic discovery for mobile clients hasn't been configured, users have to 
 - External discovery address*:
 [https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root](https://webdir.online.lync.com/autodiscover/autodiscoverservice.svc/root)   
 
-*These addresses are valid only for Office 365 users and will be different for On-premises Skype for Business Server deployments.
+*These addresses are valid only for Office 365 users and will be different for On-premises Skype for Business Server deployments.
 
 > [!NOTE]
 > The Sign-in address and Password fields are displayed on the sign-in screen. To access the User name, Domain, Internal discovery address, and External discovery addressfields, select Server Settings on the sign-in screen.
 
 ### Troubleshoot Auto-Detect
 
-The Skype for Business for Android looks for different DNS records than the Skype for Business desktop client. For the Auto-Detect process to discover the correct Skype for Business Online service, a CNAME record that meets the following criteria must be created for the SIP domain that's being used:
+The Skype for Business for Android looks for different DNS records than the Skype for Business desktop client. For the Auto-Detect process to discover the correct Skype for Business Online service, a CNAME record that meets the following criteria must be created for the SIP domain that's being used:
 
 |Alias|Domain|Value|
 |-|-|-|
@@ -81,7 +81,7 @@ Can't sign in. Please check your account information and try again.
 
    This error message indicates one of the following conditions:
 
-   - The Skype for Business for Android  can discover the correct Skype for Business Online server. However, it can't find the sign-in address that was entered by the user.   
+   - The Skype for Business for Android  can discover the correct Skype for Business Online server. However, it can't find the sign-in address that was entered by the user.   
    - The password is incorrect.   
    
 **Connecting over Wi-Fi through an authenticating proxy**
@@ -90,7 +90,7 @@ If the Wi-Fi connection that's used requires authentication before connecting, S
 
 **Contact lists**
 
-The contact list that's displayed in the Skype for Business for Android is read-only and can't be changed from the mobile device. If a user wants to add or remove a contact from the list, the user must use the Skype for Business desktop client or Outlook Web App (OWA) Instant Messaging (IM).
+The contact list that's displayed in the Skype for Business for Android is read-only and can't be changed from the mobile device. If a user wants to add or remove a contact from the list, the user must use the Skype for Business desktop client or Outlook Web App (OWA) Instant Messaging (IM).
 
 Contact photos are displayed only if they're stored in the global address list (GAL). A contact who specified images through web URLs on the desktop client won't have a photo displayed for the contact.
 
@@ -117,7 +117,7 @@ When users experience an issue with the Skype for Business for Android, they can
 
 **Issues that arise after an OS update**
 
-Assume that a new operating system update is released for your device. After you install the update, Skype for Business fails. However, before you installed the update, Skype for Business worked as expected. 
+Assume that a new operating system update is released for your device. After you install the update, Skype for Business fails. However, before you installed the update, Skype for Business worked as expected. 
 
 > [!NOTE]
 > After commercially reasonable troubleshooting steps are taken, Support may inform the customer that in order to continue, engagement of the manufacturer will be necessary to obtain the correct resources to resolve the issue.

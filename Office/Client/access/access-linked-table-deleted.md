@@ -59,7 +59,7 @@ For earlier versions of Access, use one of the following methods to work around 
 
 - Change the compatibility level of the SQL Server database to 120 (the compatibility level for SQL Server 2014) or less.
 - Make sure that the **datetime** and **DateTime2** columns aren't part of the primary key.
-- Add a new column to the table using either **timestamp** or **rowversion** data type.
+- Add a new column to the table using either **timestamp** or **rowversion** data type.
 - Remove fractional seconds from the **datetime** column(s) using an **UPDATE** statement.
 - Change the data type from **datetime** to **smalldatetime**. **Note**: This will round values to the nearest minute.
 - If editing data isn't necessary, you may create a query and change the **RecordsetType** property to **Snapshot** which will return a read-only recordset that’s not affected by this issue.

@@ -36,7 +36,7 @@ To resolve this issue, follow these steps:
 2. Click the Security tab, click the zone for the SharePoint server, and then click Custom Level.   
 3. Under Run Active X controls and plug-ins, click to select Enable, and then click OK.   
 
-**Caution** This procedure lessens browser security for all sites in the affected security zone.
+**Caution** This procedure lessens browser security for all sites in the affected security zone.
 
 ## More Information
 

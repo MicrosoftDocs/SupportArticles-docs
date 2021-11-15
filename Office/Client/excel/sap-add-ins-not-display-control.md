@@ -26,9 +26,9 @@ appliesto:
 Consider the following scenario:
 
 - You're running Windows 10 with a lower version than 1809, and you update your Microsoft Office instance to version 1806 or higher.    
-- You install a SAP add-in for Microsoft Office (for Microsoft Excel, PowerPoint, or Word).    
+- You install a SAP add-in for Microsoft Office (for Microsoft Excel, PowerPoint, or Word).    
 
-In this scenario, the SAP add-in can no longer display some controls in dialog boxes and task panes. If you revert Office to version 1805, this issue doesn't occur. 
+In this scenario, the SAP add-in can no longer display some controls in dialog boxes and task panes. If you revert Office to version 1805, this issue doesn't occur. 
 
 ## Resolution
 
@@ -38,6 +38,6 @@ To resolve the issue, update Office to version 1808, or a later version, and upd
 
 ## Workaround
 
-Until Office and Windows have been updated to the required versions, you can configure the **When using multiple displays** setting in Office to **Optimize for compatibility**. The issues should not occur in compatibility mode.
+Until Office and Windows have been updated to the required versions, you can configure the **When using multiple displays** setting in Office to **Optimize for compatibility**. The issues should not occur in compatibility mode.
 
 :::image type="content" source="media/sap-add-ins-not-display-control/excel-options-dialog-box.png" alt-text="Screenshot to select the Optimize for compatibility option in the When using multiple displays setting.":::

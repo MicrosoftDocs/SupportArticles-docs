@@ -20,9 +20,9 @@ appliesto:
 
 ## Symptoms
 
-After you upgrade to the Skype for Business for iOS application on your iPhone or iPad, you notice that "+<**country code**>" is automatically added at the front of the number text box. This may cause a problem for customers who dial by using an extension or who have other custom dialing behavior. 
+After you upgrade to the Skype for Business for iOS application on your iPhone or iPad, you notice that "+<**country code**>" is automatically added at the front of the number text box. This may cause a problem for customers who dial by using an extension or who have other custom dialing behavior. 
 
-For example, customers in the **United States** that have a country code of **1**. They are used to dialing "5000" to call an internal DID. However, the dialing rules encounter "+15000" instead. In this situation, the call may fail for this user.
+For example, customers in the **United States** that have a country code of **1**. They are used to dialing "5000" to call an internal DID. However, the dialing rules encounter "+15000" instead. In this situation, the call may fail for this user.
 
 ## Cause
 

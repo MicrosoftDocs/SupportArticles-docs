@@ -21,7 +21,7 @@ appliesto:
 
 ##  Symptoms
 
-Customers reported that after installing [October 4, 2016, update for Excel 2016](https://support.microsoft.com/help/3118373). Some Excel 2016 workbooks stopped responding and returned the error.
+Customers reported that after installing [October 4, 2016, update for Excel 2016](https://support.microsoft.com/help/3118373). Some Excel 2016 workbooks stopped responding and returned the error.
 
 > "Microsoft Excel has stopped working"
 
@@ -33,7 +33,7 @@ We apologize for any inconvenience this may have caused. The fix for this regres
 
 ##  More Information
 
-How to uninstall this update: 
+How to uninstall this update: 
 
 Windows 10 
 

@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 4089865
 Consider the following scenario:
 
 - A delegate creates a calendar item for a manager who is in a different forest.
-- The delegate has been granted Reviewer or Editor permissions.
+- The delegate has been granted Reviewer or Editor permissions.
 
 In this scenario, the delegate can only see free/busy information of the calendar in OWA. Also, calendar item details are not displayed, and the delegate cannot create an item on the calendar.
 
@@ -34,7 +34,7 @@ In this scenario, the delegate can only see free/busy information of the calenda
 
 ## Cause
 
-This issue occurs because the delegate and manager may not have been moved to the cloud at the same time. OWA can only display calendar data through the organization relationship or sharing policy. Specific permissions that are granted to a delegate are not honored in OWA.
+This issue occurs because the delegate and manager may not have been moved to the cloud at the same time. OWA can only display calendar data through the organization relationship or sharing policy. Specific permissions that are granted to a delegate are not honored in OWA.
 
 ## Resolution
 

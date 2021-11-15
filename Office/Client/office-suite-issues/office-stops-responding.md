@@ -25,7 +25,7 @@ appliesto:
 If you perform one of the following procedures in one of the Microsoft Office programs that are listed at the end of this article, the program may stop responding (hang) for a long time:
 
 - You click the **Save in** list in the **Save As** dialog box.   
-- You click the **Look in** list in the **Open** dialog box.   
+- You click the **Look in** list in the **Open** dialog box.   
 
 If you click Cancel or try to close the dialog box, the program still does not respond.
 

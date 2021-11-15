@@ -27,13 +27,13 @@ Consider the following scenarios.
 
 Scenario 1
 
-You have a server that is running Microsoft Microsoft Offices Online. You open the Microsoft Word Online or Microsoft OneNote Online and then you click the ClipArt button. However, when you type an item to search, the search returns no clip art results.
+You have a server that is running Microsoft Microsoft Offices Online. You open the Microsoft Word Online or Microsoft OneNote Online and then you click the ClipArt button. However, when you type an item to search, the search returns no clip art results.
 
 This behavior occurs when the ClipArt button is enabled.
 
 Scenario 2
 
-You have a server that is running Microsoft Microsoft Offices Online. When you open the Microsoft Word Online or Microsoft OneNote Online and try to insert some clip art, you notice that the ClipArt button is disabled. 
+You have a server that is running Microsoft Microsoft Offices Online. When you open the Microsoft Word Online or Microsoft OneNote Online and try to insert some clip art, you notice that the ClipArt button is disabled. 
 
 ## Cause
 

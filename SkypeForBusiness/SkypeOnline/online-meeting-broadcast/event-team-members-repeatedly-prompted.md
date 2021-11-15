@@ -25,15 +25,15 @@ Consider the following scenario.
 - You're enabled for Modern Authentication in Office 365.   
 - You try to join a Skype Meeting Broadcast as an **Event Team** member.    
 
-In this situation, you're repeatedly prompted for your Office 365 password. This behavior occurs after you've joined the **Event Team** meeting and while the producer controls are being loaded. For example, this occurs when a PowerPoint presentation is uploaded or when a video feed is started. 
+In this situation, you're repeatedly prompted for your Office 365 password. This behavior occurs after you've joined the **Event Team** meeting and while the producer controls are being loaded. For example, this occurs when a PowerPoint presentation is uploaded or when a video feed is started. 
 
 ## Solution
 
-To work around this issue, use an account that isn't configured for Modern Authentication as a member of the Skype Meeting Broadcast **Event Team**, and then use the producer controls. 
+To work around this issue, use an account that isn't configured for Modern Authentication as a member of the Skype Meeting Broadcast **Event Team**, and then use the producer controls. 
 
 ## More Information
 
-Currently, the producer controls aren't supported when you're configured for Modern Authentication. 
+Currently, the producer controls aren't supported when you're configured for Modern Authentication. 
 
 For more information about Skype Meeting Broadcast, go to the following Microsoft websites: 
 

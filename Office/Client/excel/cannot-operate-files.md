@@ -24,7 +24,7 @@ appliesto:
 
 ## Symptoms
 
-Office 365 users may be unable to open, edit, or synchronize files if the following conditions are true: 
+Office 365 users may be unable to open, edit, or synchronize files if the following conditions are true: 
 
 - The user tries to open, edit, or synchronize files by using the Office 2013 rich client.   
 - The files are stored on a server that is running SharePoint.   

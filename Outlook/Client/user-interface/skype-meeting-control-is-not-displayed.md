@@ -40,7 +40,7 @@ If you do not see the Skype Meeting Add-in for Microsoft Office 2016 entry in th
 
 > [!NOTE]
 > You may receive the following error message during step 5:  
-> **The add-in is installed for all users of the computer, and can only be connected or disconnected by an administrator.**  
+> **The add-in is installed for all users of the computer, and can only be connected or disconnected by an administrator.**  
 > If this occurs, make sure that you are logged on to the local computer through an administrator account.
 
 ## Registry Key to enable or disable Skype Meeting Add-in

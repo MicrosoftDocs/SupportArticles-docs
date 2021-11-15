@@ -57,7 +57,7 @@ A remote user can be granted Calendar folder permissions to obtain additional ac
 :::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-reviewer.png" alt-text="Screenshot shows the user permission is set to reviewer, which can read Full Details." border="false":::
 
 > [!NOTE]
-> Granting the **Free/Busy time, subject, location (Limited Details)** permission is insufficient in a hybrid environment. The user has to be granted at least **Reviewer** permission to view calendar item details.
+> Granting the **Free/Busy time, subject, location (Limited Details)** permission is insufficient in a hybrid environment. The user has to be granted at least **Reviewer** permission to view calendar item details.
 
 The remote user (Test User 1) can now see the mailbox Calendar folder:
 

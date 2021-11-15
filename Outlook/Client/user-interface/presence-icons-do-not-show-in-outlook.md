@@ -64,7 +64,7 @@ DWORD: TurnOffPresenceIcon
 Value: 0
 
 DWORD: TurnOffPresenceIntegration  
-Value: 0
+Value: 0
 
 Key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\PersonaMenu`
 

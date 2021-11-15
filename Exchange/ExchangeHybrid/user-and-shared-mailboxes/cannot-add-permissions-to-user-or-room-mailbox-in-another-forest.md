@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3195201
 
 In Microsoft Office 365, you can't add a security group or user to the permissions of a cross-forest room (or shared) mailbox in Microsoft Outlook. Specifically, this issue occurs in the following scenario:
 
-- You were granted Full Access or folder level rights to a room mailbox in another forest.
+- You were granted Full Access or folder level rights to a room mailbox in another forest.
 - You add the room mailbox as a shared Calendar in Outlook.
 - You right-click the Calendar folder and then select the **Permissions** tab:
 
@@ -53,10 +53,10 @@ This issue occurs if the mailbox account isn't added to the profile correctly. T
 
 To work around this issue, use one of the following methods:
 
-- Add folder-level permissions to a room mailbox by using the [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps&preserve-view=true) cmdlet.
+- Add folder-level permissions to a room mailbox by using the [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps&preserve-view=true) cmdlet.
 - A user in the same forest as the room mailbox can add permissions in Outlook.
 
-If the mailbox is a user or a shared mailbox, add the mailbox as an additional email account. To do this, follow these steps:
+If the mailbox is a user or a shared mailbox, add the mailbox as an additional email account. To do this, follow these steps:
 
 1. Select **File** > **Info**, and then select **Account Settings**.
 2. Select **Account Settings**.

@@ -34,7 +34,7 @@ Your contact list cannot be edited in UCS mode using Microsoft Lync for Mac. Ple
 
 ## Solution
 
-To resolve this issue, the Lync admin should use the **Invoke-CsUcsRollback** cmdlet to roll the user back from Unified Contact Store (UCS) mode.
+To resolve this issue, the Lync admin should use the **Invoke-CsUcsRollback** cmdlet to roll the user back from Unified Contact Store (UCS) mode.
 
 Notes
 
@@ -47,7 +47,7 @@ For more information about the **Invoke-CsUcsRollback** cmdlet, see [Roll back m
 
 To work around this issue, use Lync 2013, Outlook Web Access 2013, or Outlook to change your contact list.
 
-Or, you can roll back the user's contacts to Lync Server and users will then be able to change their contact list. To do this, see [Lync contact list is empty or read-only after a user's Exchange mailbox is disconnected, unlicensed, or moved](https://support.microsoft.com/help/2811654). 
+Or, you can roll back the user's contacts to Lync Server and users will then be able to change their contact list. To do this, see [Lync contact list is empty or read-only after a user's Exchange mailbox is disconnected, unlicensed, or moved](https://support.microsoft.com/help/2811654). 
 
 ## More Information
 

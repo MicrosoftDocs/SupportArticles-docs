@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3193518
 
 ## Symptoms
 
-Exchange Online users who use Outlook for iOS and Android and who also use Device Access (ABQ) rules find that they've been unexpectedly quarantined. This problem occurs in the following scenario:
+Exchange Online users who use Outlook for iOS and Android and who also use Device Access (ABQ) rules find that they've been unexpectedly quarantined. This problem occurs in the following scenario:
 
 - The tenant's `DefaultAccessLevel` property that's configured through `Set-ActiveSyncOrganizationSettings` is set to a value of either **Quarantine** or **Block**.
 - The tenant administrator previously allowed Outlook for iOS and Android by stamping the DeviceID in the `ActiveSyncAllowedDeviceIDs` property of the mailbox.
@@ -32,7 +32,7 @@ Exchange Online users who use Outlook for iOS and Android and who also use Devic
 
 ## Cause
 
-A back-end protocol change in how Office 365 mailbox data is accessed through Outlook for iOS and Android applications changes the DeviceID that the app uses to connect to Exchange Online. The expected behavior is that the new DeviceID will automatically be added to the `ActiveSyncAllowedDeviceID` for the user. But in certain scenarios, the device may be quarantined. In such cases, follow the steps in the Resolution section. This issue is not expected to occur repeatedly.
+A back-end protocol change in how Office 365 mailbox data is accessed through Outlook for iOS and Android applications changes the DeviceID that the app uses to connect to Exchange Online. The expected behavior is that the new DeviceID will automatically be added to the `ActiveSyncAllowedDeviceID` for the user. But in certain scenarios, the device may be quarantined. In such cases, follow the steps in the Resolution section. This issue is not expected to occur repeatedly.
 
 ## Resolution
 

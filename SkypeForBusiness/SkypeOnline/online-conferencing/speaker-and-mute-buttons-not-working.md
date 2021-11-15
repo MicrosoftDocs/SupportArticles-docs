@@ -20,9 +20,9 @@ appliesto:
 
 ## Problem 
 
-When you add the 31st participant to a meeting through Skype Room Systems (formerly Lync Room Systems), you experience the following: 
+When you add the 31st participant to a meeting through Skype Room Systems (formerly Lync Room Systems), you experience the following: 
 
-- You receive the following notification:  
+- You receive the following notification:  
 
     **The screen has been optimized for a large meeting experience**  
 - The speaker and mute buttons stop functioning as expected.   
@@ -31,4 +31,4 @@ When you add the 31st participant to a meeting through Skype Room Systems (forme
 
 This is a known issue in Skype Room Systems. Microsoft is working to resolve this issue.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

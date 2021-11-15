@@ -4,14 +4,14 @@ description: When you access an existing meeting on a shared calendar that you a
 author: helenclu
 ms.author: gabesl
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro 
 ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
 - Outlook for Windows
-- CI 111779
-- CSSTroubleshoot 
+- CI 111779
+- CSSTroubleshoot 
 ms.reviewer: gabesl, aruiz
 appliesto:
 - Outlook for Office 365

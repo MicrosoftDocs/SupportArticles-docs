@@ -25,7 +25,7 @@ appliesto:
 After you upgrade to Microsoft Office 2013/2016/Office 365, you experience one or more of the following symptoms:
 
 - The computer uses more memory when you open multiple Microsoft Excel 2013 workbooks, save Excel workbooks, or make calculations in Excel workbooks.    
-- You can no longer open as many Excel workbooks in the same instance as you could before you upgraded to Excel 2013/2016.     
+- You can no longer open as many Excel workbooks in the same instance as you could before you upgraded to Excel 2013/2016.     
 - When you insert columns in an Excel workbook, you receive an error about available memory.    
 - When you are working with an Excel spreadsheet, you receive the following error message:
 
@@ -41,7 +41,7 @@ After you upgrade to Microsoft Office 2013/2016/Office 365, you experience one o
   
 ## Cause
 
-Starting in Excel 2013, improvements were made that require more system resources than earlier versions required. This article identifies areas in Excel workbooks that use lots of memory and describes how you can make your workbook files work more efficiently. 
+Starting in Excel 2013, improvements were made that require more system resources than earlier versions required. This article identifies areas in Excel workbooks that use lots of memory and describes how you can make your workbook files work more efficiently. 
 
 For more information about the changes that we made in Excel 2013, see [Memory Usage in the 32-bit edition of Excel 2013](https://support.microsoft.com/help/3066990).   
 
@@ -127,7 +127,7 @@ If the file continues to open slowly after Excel recalculates the file completel
 Look through your workbook and examine the kinds of formulas that you are using. Some formulas take lots of memory. These include the following array formulas: 
 
 - LOOKUP    
-- INDIRECT     
+- INDIRECT     
 - OFFSETS    
 - INDEX    
 - MATCH    

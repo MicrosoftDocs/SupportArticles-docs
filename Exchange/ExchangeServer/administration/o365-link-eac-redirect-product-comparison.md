@@ -21,11 +21,11 @@ appliesto:
 
 ## Problem
 
-When a user clicks the Office 365 link in the Exchange admin center (EAC) in Exchange Server 2016 or Exchange Server 2013, the user isn't routed to the Exchange admin center in Office 365. Instead, they are redirected to [https://go.microsoft.com/fwlink/p/?LinkId=258351](https://go.microsoft.com/fwlink/p/?linkid=258351), which is a page that compares plans and pricing for Office 365 services.
+When a user clicks the Office 365 link in the Exchange admin center (EAC) in Exchange Server 2016 or Exchange Server 2013, the user isn't routed to the Exchange admin center in Office 365. Instead, they are redirected to [https://go.microsoft.com/fwlink/p/?LinkId=258351](https://go.microsoft.com/fwlink/p/?linkid=258351), which is a page that compares plans and pricing for Office 365 services.
 
 ## Cause
 
-The on-premises Exchange user account that was used to sign in to the EAC doesn't have sufficient permissions. For example, this occurs if the user is a member of the Recipient Management role group.
+The on-premises Exchange user account that was used to sign in to the EAC doesn't have sufficient permissions. For example, this occurs if the user is a member of the Recipient Management role group.
 
 ## Solution
 
@@ -33,4 +33,4 @@ Add the user to at least the View-Only Organization Management role group or the
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

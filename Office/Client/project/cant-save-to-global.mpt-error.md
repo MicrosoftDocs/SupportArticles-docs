@@ -33,7 +33,7 @@ When you exit Microsoft Project while the Global.mpt template is opened as read-
 
 ## Cause
 
-This error message occurs when the Global.mpt file that Microsoft Project is using is read-only and when you've changed formatting options or macros.
+This error message occurs when the Global.mpt file that Microsoft Project is using is read-only and when you've changed formatting options or macros.
 
 Note This file is a template. It does not contain any data from the project that you are working on.
 
@@ -83,4 +83,4 @@ Project searches for the Global.mpt file in the following locations:
 
 - If the Global file is not found in any of these locations, Windows Installer starts and tries to restore a copy to the Winproj.exe language folder.
 
-- If Windows Installer is unable to restore a copy of the Global.mpt file, Project displays a message that states that it will create a new Global.mpt file that may be missing some items.
+- If Windows Installer is unable to restore a copy of the Global.mpt file, Project displays a message that states that it will create a new Global.mpt file that may be missing some items.

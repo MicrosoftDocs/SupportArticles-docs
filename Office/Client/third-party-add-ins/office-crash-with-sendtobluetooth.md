@@ -106,7 +106,7 @@ Before you start the steps below, make sure you close all of your Office program
 
 1. Open the Registry, here's how:
    - Windows 10, Windows 8.1 and Windows 8: Press Windows Key + R to open a Run dialog box. Type regedit.exeand then select OK.   
-   - Windows 7 or Vista: Click Start, type regedit.exein the search box, and then select Enter.    
+   - Windows 7 or Vista: Click Start, type regedit.exein the search box, and then select Enter.    
 
 
 2. Select the Office program that is crashing and locate and then select the key listed for it:

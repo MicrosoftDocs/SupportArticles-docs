@@ -32,7 +32,7 @@ This behavior is by design in most cases. Depending on the nature of the data th
 
 ## Resolution
 
-To change this behavior, try setting the **Message Preview** setting on all mailboxes instead of on a single folder. To do this, follow these steps:
+To change this behavior, try setting the **Message Preview** setting on all mailboxes instead of on a single folder. To do this, follow these steps:
 
 1. On the **View** tab, select **Message Preview**, and then select **Off**. If you're prompted, select **All mailboxes**.
 2. Select **Message Preview** again, and then select the preview setting that you prefer (**1 Line**, **2 Lines**, or **3 Lines**).

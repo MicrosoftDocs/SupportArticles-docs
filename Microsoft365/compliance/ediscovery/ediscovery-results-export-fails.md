@@ -23,9 +23,9 @@ _Original KB number:_&nbsp;2957583
 
 ## Problem
 
-As an administrator who wants to export the results of an In-Place eDiscovery search to a PST file, you click **Export to a PST file** in the Exchange admin center in Exchange Online. However, you receive an error message that resembles the following:
+As an administrator who wants to export the results of an In-Place eDiscovery search to a PST file, you click **Export to a PST file** in the Exchange admin center in Exchange Online. However, you receive an error message that resembles the following:
 
-> Failed exporting item id: from source id:mailbox@contoso.com with error: [FailedToSearchMailboxes] Export failed with error type: 'FailedToSearchMailboxes'. Message: The results are sorted but inconsistent with reference item. MailboxGuid:...', ReferenceItem:'001B 2013-10-04 T 09:29:32 .0000000000001D40002A8AD', Offending Item:'001B 2013-10-16 T 16:01:44 .0000000000001D400029FF1'
+> Failed exporting item id: from source id:mailbox@contoso.com with error: [FailedToSearchMailboxes] Export failed with error type: 'FailedToSearchMailboxes'. Message: The results are sorted but inconsistent with reference item. MailboxGuid:...', ReferenceItem:'001B 2013-10-04 T 09:29:32 .0000000000001D40002A8AD', Offending Item:'001B 2013-10-16 T 16:01:44 .0000000000001D400029FF1'
 
 > [!NOTE]
 > Make a note of the dates in the error message. These are shown in bold text in the preceding example.

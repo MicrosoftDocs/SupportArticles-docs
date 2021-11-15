@@ -26,21 +26,21 @@ Federated users on Apple iOS devices that have valid user certificates discover 
 
 Here's the typical experience for iOS users who can't authenticate when they sign in to ADAL-enabled Office applications on iOS:
 
-1. The user walks through the Office app setup experience. At the "Office365" sign-in page, the user clicks Sign-in.   
+1. The user walks through the Office app setup experience. At the "Office365" sign-in page, the user clicks Sign-in.   
 2. The ADAL Sign-in page appears, on which the user enters their federated email address and then clicks Next.   
-3. The ADAL Sign-in process hangs at a blank page until it times out and returns a "There is a problem with your account. Try again later" error. This page includes the option to tap OK.   
-4. If the user taps OK, they sit at the same blank Sign-in page with the option at the top to tap Back.   
-5. Tapping Backreturns the user to the ADAL Sign-in page, where the process starts all over: the user is prompted to enter their federated email address and then click Next.   
-6. Tapping OK returns to a blank Sign-in screen, where the user can enter their UserPrincipalName and repeat the process.
+3. The ADAL Sign-in process hangs at a blank page until it times out and returns a "There is a problem with your account. Try again later" error. This page includes the option to tap OK.   
+4. If the user taps OK, they sit at the same blank Sign-in page with the option at the top to tap Back.   
+5. Tapping Backreturns the user to the ADAL Sign-in page, where the process starts all over: the user is prompted to enter their federated email address and then click Next.   
+6. Tapping OK returns to a blank Sign-in screen, where the user can enter their UserPrincipalName and repeat the process.
 
-To eliminate Office applications as a factor, we recommend that federated users in an iOS environment test certificate-based authentication in the Safari browser by following the steps in "More Information" section. The typical experience for iOS users who cannot authenticate against [https://portal.office.com](https://portal.office.com/) from a Safari browser goes as follows:
+To eliminate Office applications as a factor, we recommend that federated users in an iOS environment test certificate-based authentication in the Safari browser by following the steps in "More Information" section. The typical experience for iOS users who cannot authenticate against [https://portal.office.com](https://portal.office.com/) from a Safari browser goes as follows:
 
-1. The user is not prompted as expected to approve the use of their user certificate after they click the Sign-in using an X.509 certificate link.    
-2. The federated user either sits at an unresponsive STS sign-in page or advances to the default STS sign-in page, where they are prompted as follows: 
+1. The user is not prompted as expected to approve the use of their user certificate after they click the Sign-in using an X.509 certificate link.    
+2. The federated user either sits at an unresponsive STS sign-in page or advances to the default STS sign-in page, where they are prompted as follows: 
 
     Select a certificate that you want to use for authentication. If you cancel the operation, please close your browser and try again.
 
-    **Note** If other authentication methods are enabled in AD FS, the user will also see a link stating "Sign-in with other options." If they click this, they return to the STS sign-in page. 
+    **Note** If other authentication methods are enabled in AD FS, the user will also see a link stating "Sign-in with other options." If they click this, they return to the STS sign-in page. 
  
 3. Both experiences fail with the following error:
 
@@ -49,7 +49,7 @@ To eliminate Office applications as a factor, we recommend that federated users 
 
 ##  Cause
 
-The certificate chain is incomplete because the issuing subordinate CA certificate is not retrieved by the device as expected when the MDM policy pushes just the Root certificate to the Apple device along with the SCEP profile.
+The certificate chain is incomplete because the issuing subordinate CA certificate is not retrieved by the device as expected when the MDM policy pushes just the Root certificate to the Apple device along with the SCEP profile.
 
 The iOS device does not correctly acquire the Issuing CA's *.crt file, even though the AIA path on the user certificate has a valid URL that points to the Issuing subordinate CA's *.crt file.
 

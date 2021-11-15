@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Outlook 2016 for Mac, you are repeatedly prompted for authentication while you're connected to your Office 365 account.
+In Microsoft Outlook 2016 for Mac, you are repeatedly prompted for authentication while you're connected to your Office 365 account.
 
 ## Cause
 
@@ -36,22 +36,22 @@ To resolve this issue in Outlook 2016 for Mac, install the February 2017 Outlook
 
 ## Workaround
 
-To work around this issue, delete any cached passwords for your account, and also delete any modern authentication tokens from the keychain. To do this, follow these steps.
+To work around this issue, delete any cached passwords for your account, and also delete any modern authentication tokens from the keychain. To do this, follow these steps.
 
 > [!NOTE]
 > These steps affect all Office applications that use modern authentication.
 
 1. Quit Outlook and all other Office applications. 
 2. Start Keychain Access by using one of the following methods:   
-   - Select the **Finder** application, click **Utilities** on the **Go** menu, and then double-click **Keychain Access**.   
-   - In **Spotlight Search**, type **Keychain Access**, and then double-click **Keychain Access** in the search results.   
+   - Select the **Finder** application, click **Utilities** on the **Go** menu, and then double-click **Keychain Access**.   
+   - In **Spotlight Search**, type **Keychain Access**, and then double-click **Keychain Access** in the search results.   
 
 3. In the search field in Keychain Access, enter **Exchange**.   
-4. In the search results, select each item to view the **Account** that's listed at the top, and then press Delete. Repeat this step to delete all items for your Exchange account.   
+4. In the search results, select each item to view the **Account** that's listed at the top, and then press Delete. Repeat this step to delete all items for your Exchange account.   
 5. In the search field, enter **adal**.   
 6. Select all items whose type is **MicrosoftOffice15_2_Data:ADAL:\<GUID>**, and then press Delete.
 7. In the search field, enter **office**.   
-8. Select the items that are named **Microsoft Office Identities Cache 2** and **Microsoft Office Identities Settings 2**, and then press Delete.   
+8. Select the items that are named **Microsoft Office Identities Cache 2** and **Microsoft Office Identities Settings 2**, and then press Delete.   
 9. Quit Keychain Access.   
 
    > [!NOTE]

@@ -19,7 +19,7 @@ appliesto:
 
 ## Problem 
 
-One or more of the following features don't work as expected in Skype for Business Online (formerly Lync Online): 
+One or more of the following features don't work as expected in Skype for Business Online (formerly Lync Online): 
 
 - Skype for Business Online Autodiscover and automatic sign-in   
 - Skype for Business Online federation with external users   

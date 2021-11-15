@@ -24,13 +24,13 @@ _Original KB number:_ &nbsp; 4459215
 
 ## Symptoms
 
-When you open an encrypted email message in Microsoft Outlook by using a certificate that has only 3DES encryption capabilities, you receive the following error message:
+When you open an encrypted email message in Microsoft Outlook by using a certificate that has only 3DES encryption capabilities, you receive the following error message:
 
 > Your Digital ID name cannot be found by the underlying security system
 
 ## Cause
 
-Starting in Outlook build 16.0.8518.1000, Microsoft upgraded the default fallback algorithm from 3DES to AES256. In the problem that is mentioned in the Symptoms section, the encrypted email message would be sent by a user who is using this Outlook build or a later build.
+Starting in Outlook build 16.0.8518.1000, Microsoft upgraded the default fallback algorithm from 3DES to AES256. In the problem that is mentioned in the Symptoms section, the encrypted email message would be sent by a user who is using this Outlook build or a later build.
 
 ## Resolution
 
@@ -39,7 +39,7 @@ Starting in Outlook build 16.0.8518.1000, Microsoft upgraded the default fallbac
 
 To resolve this problem, we recommend that you encrypt messages by using a certificate that has AES256 encryption capabilities or greater.
 
-If you must use the 3DES encryption algorithm, you can add the following registry values on the sender's computer:
+If you must use the 3DES encryption algorithm, you can add the following registry values on the sender's computer:
 
 `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Security`
 
@@ -50,10 +50,10 @@ String = **DefaultEncryptionAlgOID**
 Value = **1.2.840.113549.3.7**
 
 > [!NOTE]
-> The provided string value shows the OID for the 3DES encryption algorithm.
+> The provided string value shows the OID for the 3DES encryption algorithm.
 
 ## More information
 
 The certificate that the sender used to encrypt the email message does not contain the `SMIMECapabilities` attribute. This means that Outlook was not able to determine the capabilities of the recipient in advance. Therefore, it chose a commonly accepted secure algorithm.
 
-For more information, see the **2.5.2 SMIME Capabilities Attribute** section of Internet Engineering Task Force (IETF) RFC 5751:
+For more information, see the **2.5.2 SMIME Capabilities Attribute** section of Internet Engineering Task Force (IETF) RFC 5751:

@@ -68,9 +68,9 @@ This issue occurs because the instance of SQL Server that is designated as the L
 > [!NOTE]
 > The SQL Server model database is a SQL Server system database. This database provides the instance of SQL Server with a method to define SQL Server database sizing configurations. During the installation of the instance of SQL Server, the model database is installed with a default minimal file size and minimal increments of unrestricted growth. The database administrator for the instance of SQL Server can update the file size and growth properties of the model database to meet their specific requirements.
 
-In an instance of SQL Server, you can configure the model database to create new SQL Server databases that are larger than the default size of any of the Lync Sever 2013 Enterprise Edition back end databases. If you use this configuration, the Install-CsDatabase -ConfigureDatabases PowerShell cmdlet fails, and the error that is listed in the "Symptoms" section is generated.
+In an instance of SQL Server, you can configure the model database to create new SQL Server databases that are larger than the default size of any of the Lync Sever 2013 Enterprise Edition back end databases. If you use this configuration, the Install-CsDatabase -ConfigureDatabases PowerShell cmdlet fails, and the error that is listed in the "Symptoms" section is generated.
 
-Lync Server 2013 Enterprise Edition back-end databases that are created by using the Install-CsDatabase -ConfigureDatabases cmdlet have default sizes. For more information about the default size of the database, see the following list.
+Lync Server 2013 Enterprise Edition back-end databases that are created by using the Install-CsDatabase -ConfigureDatabases cmdlet have default sizes. For more information about the default size of the database, see the following list.
 
 > [!NOTE]
 > The .mdf file name extension represents the database data file and the .ldf file name extension represents the database transaction log file. The size is in megabytes (MB).
@@ -124,8 +124,8 @@ To resolve this issue, follow these steps.
 1. Open the Microsoft SQL Server Management Studio console.    
 2. Connect to the instance of SQL Server that is designated as the Lync Server 2013 Enterprise Edition SQL Server file store.   
 3. Use the **Object Explorer** pane to expand the **System Databases** node.   
-4. Right-click the model database, and then click **Properties**.   
-5. Click the **Files** option under the**Select a page** pane.   
+4. Right-click the model database, and then click **Properties**.   
+5. Click the **Files** option under the**Select a page** pane.   
 6. Check whether the **Initial Size** setting of the modeldev Logical Name object is larger than the database data file size values that are listed in the "Cause" section.   
 7. Check whether the **Autogrowth** setting of the modeldev Logical Name object is larger than the database data filegrowth values that are listed in the "Cause" section.   
 8. Check whether the **Initial Size** setting of the modellog Logical Name object is larger than the database transaction log size values that are listed in the "Cause" section.   
@@ -133,19 +133,19 @@ To resolve this issue, follow these steps.
 10. If any of the results from step 6 to step 9 is true, continue with the remaining steps.
 
     > [!NOTE]
-    > The results indicate that the model database creates databases that have larger data size and filegrowth values than the default size and values of Lync Server 2013 Enterprise Edition back end databases.    
-11. Click **cancel** to close the **Databases Properties - model** dialog box.   
+    > The results indicate that the model database creates databases that have larger data size and filegrowth values than the default size and values of Lync Server 2013 Enterprise Edition back end databases.    
+11. Click **cancel** to close the **Databases Properties - model** dialog box.   
 12. Use the **Object Explorer** pane to expand the **System Databases** node.   
 13. Right-click the model database, click **Task**, click **Shrink**, and then click **Database**.
 
     > [!NOTE]
     > The following steps change the sizing properties of the model database of the instance of SQL Server.   
 14. Click **OK**.   
-15. Right-click the model database, and then click **Properties**.   
-16. Click the **Files** option under the **Select a page** pane.    
-17. Check the values of the initial size of the modeldev and modellog Logical Name objects. Confirm the values are smaller than the values of the database data files and database transaction log files that are listed in the "Cause" section. The modeldev and modellog database file Autogrowth values for the instance of SQL Server should now be set to the default values   
+15. Right-click the model database, and then click **Properties**.   
+16. Click the **Files** option under the **Select a page** pane.    
+17. Check the values of the initial size of the modeldev and modellog Logical Name objects. Confirm the values are smaller than the values of the database data files and database transaction log files that are listed in the "Cause" section. The modeldev and modellog database file Autogrowth values for the instance of SQL Server should now be set to the default values   
 18. Click the **...** button under the **Autogrowth** field for the modeldev and modellog Logical Name objects.    
-19. Select the **Enable Autogrowth** option, select the **In Percent** option, set the value to 10, and then click **OK**.   
+19. Select the **Enable Autogrowth** option, select the **In Percent** option, set the value to 10, and then click **OK**.   
 
 ##  More Information
 

@@ -48,7 +48,7 @@ To manually enable the Lync Meeting Add-in for Microsoft Office 2013 in Outlook,
 
 The add-in is installed for all users of the computer, and can only be connected or disconnected by an administrator.
 
-When you manually enable or disable the Lync Meeting Add-in for Microsoft Office 2013 add-in using the COM Add-Ins dialog box (see above steps), the following registry data is updated:
+When you manually enable or disable the Lync Meeting Add-in for Microsoft Office 2013 add-in using the COM Add-Ins dialog box (see above steps), the following registry data is updated:
 
 **Key**: HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\UcAddin.LyncAddin.1
 
@@ -67,7 +67,7 @@ You can use the following steps to update this section of the registry:
 
     **HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\UcAddin.LyncAddin.1**
 
-4. In the details pane, double-click LoadBehavior. If the value in the Value databox is not 3, change it to 3 and then click OK.   
+4. In the details pane, double-click LoadBehavior. If the value in the Value databox is not 3, change it to 3 and then click OK.   
 5. Exit Registry Editor.   
 6. Start Outlook.   
 
