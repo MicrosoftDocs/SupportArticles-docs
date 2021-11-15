@@ -36,11 +36,11 @@ In this situation, you receive the following error message:
 
 This is a sample screenshot of the error message in EMS:
 
-:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-ems.png" alt-text="Screenshot of the error message in EMS.":::
+:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-ems.png" alt-text="Screenshot of the error message in E M S.":::
 
 The following is a sample screenshot of the error message in EAC:
 
-:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-eac.png" alt-text="Screenshot of the error message in EAC.":::
+:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-eac.png" alt-text="Screenshot of the error message in E A C.":::
 
 > [!NOTE]
 > The public folder mailbox should be created with the `HoldForMigration` parameter only if you are migrating from legacy public folders to modern public folders in Exchange Server 2013 or Exchange Server 2016. Specifying the `HoldForMigration` parameter locks the public folder hierarchy in Exchange Server 2013 or Exchange Server 2016 so that no public folders can be created by users until the migration is complete.  

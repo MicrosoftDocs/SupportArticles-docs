@@ -43,7 +43,7 @@ The following procedure describes how to edit a display name by using ADSI Edit.
 
 2. Right-click **ADSI Edit**, and then click **Connect to**.
 
-   :::image type="content" source="media/mail-enabled-groups-not-synchronized/connect-to.png" alt-text="Screenshot of the ADSI Edit window.":::
+   :::image type="content" source="media/mail-enabled-groups-not-synchronized/connect-to.png" alt-text="Screenshot of the A D S I Edit window.":::
 
 3. Under **Connection Point**, click **Select a well known Naming Context**, and then make sure that **Default naming context** is selected in the drop-down box.
 

@@ -271,7 +271,7 @@ By default, when you send an email message to an Outlook group that you're a mem
 2. Select **Mail** > **Groups**.
 3. Select the **Send me a copy of email I send to a group** check box.
 
-   :::image type="content" source="media/o365-group-tasks/checkbox.png" alt-text="Screenshot of the the send me a copy of email I send to a group checkbox.":::
+   :::image type="content" source="media/o365-group-tasks/checkbox.png" alt-text="Screenshot of the the Send me a copy of email I send to a group checkbox.":::
 
 Administrators can enable the setting from Exchange Online PowerShell using the following command:
 

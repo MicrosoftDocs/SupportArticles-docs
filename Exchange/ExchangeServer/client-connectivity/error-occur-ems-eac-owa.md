@@ -98,11 +98,11 @@ gpresult /scope computer /r
 
 In this example, the computer that's running Exchange Server 2013 has the following default group memberships:
 
-:::image type="content" source="media/error-occur-ems-eac-owa/output-gpresult-cmdlet.png" alt-text="Screenshot of output for gpresult cmdlet.":::
+:::image type="content" source="media/error-occur-ems-eac-owa/output-gpresult-cmdlet.png" alt-text="Screenshot of output for the gpresult cmdlet.":::
 
 In the following example, the computer was added to the "Exchange Trusted Subsystem" group. The "Exchange Trusted Subsystem" group was then added to the "Domain Admins" group:
 
-:::image type="content" source="media/error-occur-ems-eac-owa/output-gpresult-cmdlet-when-groups-nested.png" alt-text="Screenshot of Output for gpresult cmdlet when groups are nested.":::
+:::image type="content" source="media/error-occur-ems-eac-owa/output-gpresult-cmdlet-when-groups-nested.png" alt-text="Screenshot of Output for the gpresult cmdlet when groups are nested.":::
 
 To view all the users and groups that are denied permissions on the Exchange computer object, run the following cmdlet:
 

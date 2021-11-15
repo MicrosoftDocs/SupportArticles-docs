@@ -112,7 +112,7 @@ To make the distribution group an organization, you have to change the `msOrg-Is
 
 1. Open **ADSI Edit**, expand **Default naming context**, expand the organizational unit, and then expand the **OU=HAB Groups** container where you created a distribution group named **Contoso, Ltd**. The screenshot for this step is listed below.
 
-   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/adsi-edit.png" alt-text="Screenshot of ADSI Edit window expanding the OU\=HAB Groups.":::
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/adsi-edit.png" alt-text="Screenshot of A D S I Edit window expanding the OU\=HAB Groups.":::
 
 1. Right-click **CN=Contoso,Ltd**, and then click **Properties**.
 1. In the **CN=Contoso,Ltd Properties** dialog box, click the **Attribute Editor** tab.
