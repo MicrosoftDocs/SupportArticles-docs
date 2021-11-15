@@ -108,7 +108,7 @@ Step 4: Configure SQL to force encryption on all protocols.
 7. It fails since SQL account doesn't have rights on Private keys of the certificate.
 8. Open Certificate Manager MMC console and give the SQL account that is used for SQL services Full access on the certificate.
 
-    :::image type="content" source="media/mbam-secure-network-communication/sql-per.png" alt-text="Screenshot of the Security tab of the Certificate Manager MMC console, in which the SQL admin account has Full access.":::
+    :::image type="content" source="media/mbam-secure-network-communication/sql-account-permission.png" alt-text="Screenshot of the Security tab of the Certificate Manager MMC console, in which the SQL admin account has Full access.":::
 
 9. Restart the SQL Server Services now and it should be successful.
 
