@@ -104,7 +104,7 @@ You can try running the job manually from SQL Management Studio. To do this, fol
 
     > Execution of job '00890b12-9058-4f42-8143-291dc3de4d78' failed.
 
-    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/error-message.png" alt-text="The execution error that occurs if the job doesn't run.":::
+    :::image type="content" source="media/troubleshoot-scheduled-backup-job-failures/execution-job-failed-error.png" alt-text="The execution error that occurs if the job doesn't run.":::
 
 3. This message confirms that the SQL Server Agent wasn't able to run the job because of incorrect permissions or some other reason. See [Check the logon account credentials](#check-the-logon-account-credentials) section to troubleshoot this issue.
 
