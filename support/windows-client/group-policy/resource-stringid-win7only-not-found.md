@@ -55,7 +55,7 @@ To update SearchOCR.adml, follow these steps:
 > This is for the United States English version. Other languages will have similar instructions.
 
 1. Locate the file in the `\path\PolicyDefinitions\en-US` folder.
-2. Make a backup copy of SearchOCR.adml in case that you make a mistake editing the file.
+2. Make a backup copy of SearchOCR.adml in case that you make a mistake when editing the file.
 3. Open the file in a text editor. (If you use notepad.exe, turn on the **Status** Bar on the **View** menu.)
 4. Locate line 26.
 5. Add a blank line. Line 26 should now be blank.
