@@ -34,7 +34,7 @@ To manually send a join link to the Skype Meeting Broadcast participants by usin
 2. Next to **Join link**, click **Show**.   
 3. Click the copy icon to copy the meeting URL.
 
-    ![Screen shot of the copy button for the Join link option in Skype Meeting Broadcast ](./media/create-outlook-invitation-unavailable/meeting-url.png)
+    :::image type="content" source="./media/create-outlook-invitation-unavailable/meeting-url.png" alt-text="Screenshot that shows the copy button for the Join link option in Skype Meeting Broadcast.":::
 
 4. Open your Outlook calendar, click New Meeting, and then paste the meeting URL into the body of your meeting invitation.   
 

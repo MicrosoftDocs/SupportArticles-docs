@@ -26,7 +26,7 @@ When public switched telephone network (PSTN) callers try to join a Skype for Bu
 
 To allow PSTN callers to join a Skype for Business Online dial-in conference call, unlock the conference call by selecting any option other than **The meeting organizer** in the **These people don't have to wait in the lobby** list. 
 
-![Screen shot of the ](./media/pstn-callers-cant-join-dial-in-call/unlock-conference-call.png)
+:::image type="content" source="./media/pstn-callers-cant-join-dial-in-call/unlock-conference-call.png" alt-text="Screenshot that shows the selection in the These people don't have to wait in the lobby list.":::
 
 ## More Information
 

@@ -21,6 +21,7 @@ appliesto:
 # "Sorry, something went wrong" error on a Site Page with a Pages library web part added
 
 ## Symptoms
+
 You see the following error when selecting **Show Related Resources** within the Site Content and Structure page (sitemanager.aspx):
 
 ```text
@@ -28,7 +29,7 @@ Sorry, something went wrong
 An unexpected error has occurred.
 ```
 
-![Sorry, something went wrong error](./media/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part/error.png)
+:::image type="content" source="./media/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part/error.png" alt-text="Screenshot that shows the error of something went wrong.":::
 
 The SharePoint Universal Logging System ( ULS) reports:
 
@@ -37,9 +38,11 @@ w3wp.exe (0x192C) 0x14AC SharePoint Foundation General 8nca Medium Application e
 ```
 
 ## Cause
+
 This might happen if a list view web part that is consuming a publishing or pages library has the option "Require Content Approval" checked.
 
 ## Resolution
+
 Beginning in October 2018, the Site Content and Structure options were deprecated in SharePoint Online. The UI entry point to SiteManager.aspx was removed from SharePoint Online and direct access is restricted to Site Collection Admins until March 2019.
 
 Because Site Manager has been deprecated, it will no longer receive investment beyond security fixes in SharePoint Online or On Premise.
@@ -51,7 +54,8 @@ To resolve this issue:
 2. Turn off **Require content approval for submitted items** on the pages library.
 
 ## More information
-For more information about the deprecation of Site Content and Structure, see the Office support article [Features enabled in a SharePoint Online publishing site](https://support.office.com/en-us/article/Features-enabled-in-a-SharePoint-Online-publishing-site-3AB3810C-3C2C-4361-9D0E-0CBE666EA0B0).
+
+For more information about the deprecation of Site Content and Structure, see the Office support article [Features enabled in a SharePoint Online publishing site](https://support.office.com/article/Features-enabled-in-a-SharePoint-Online-publishing-site-3AB3810C-3C2C-4361-9D0E-0CBE666EA0B0).
 
 The steps to reproduce the error are as follows:
 

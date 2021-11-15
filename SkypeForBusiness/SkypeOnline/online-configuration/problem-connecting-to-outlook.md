@@ -53,16 +53,16 @@ For the best experience, add your Exchange email account to Outlook, and then se
   - Is Outlook configured to use the correct Exchange email account?
      - In most cases, the Lync sign-in address and Exchange email address are the same. Open the Windows Control Panel, and then click **Mail** (in Classic View) to make sure that the Exchange account in Outlook is using the same email address as your Lync sign-in.
 
-       ![Screen shot of all control panel items ](./media/problem-connecting-to-outlook/mail.png)
+       :::image type="content" source="./media/problem-connecting-to-outlook/mail.png" alt-text="Screenshot that shows the Mail option showing in the control panel items.":::
 
      - Click **E-Mail Accounts**, and then verify that the default email account (joshp@cohowinery in the following example) is the same as the Lync sign-in address:
 
-       ![Screen shot of  the Mail Setup - Outlook and Email Account dialog boxes ](./media/problem-connecting-to-outlook/email-account.jpg)   
+       :::image type="content" source="./media/problem-connecting-to-outlook/email-account.png" alt-text="Screenshot that shows the Mail Setup - Outlook and Email Account windows.":::
    
 - Is the correct default profile selected?
    - From the **Mail Setup** window in Control Panel, select **Show Profiles**, click **Always use this profile**, and then select the profile that uses the email account that you verified in the previous section. In the following example, the CoHo Winery profile is configured as the default profile.
 
-      ![Screen shot of the profile that uses the verified email acount ](./media/problem-connecting-to-outlook/use-profile.jpg)   
+      :::image type="content" source="./media/problem-connecting-to-outlook/use-profile.png" alt-text="Screenshot that shows the profile using the verified email acount.":::
 
 
 ### Solutions for Office 365 administrators

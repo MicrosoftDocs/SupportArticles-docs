@@ -68,7 +68,7 @@ For the best experience, add your Exchange email account to Outlook and then set
    2. Changed **EWS External URL**: `https://mail.outlook.com/EWS/Exchange.asmx`
 3. Enter the changed **EWS External URL** address into a browser. If you're prompted, enter your Exchange mailbox credentials. You should see the EWS XML document displayed in the web browser as shown in the following picture. This indicates that EWS can be accessed and that you shouldn't be experiencing any issues. If the page doesn't display or if you're denied access, contact your Support Team.
 
-    ![Screen shot of the EWS XML document ](./media/conversation-history-user-presence-unavailable/ews-xml-document.jpg)
+    :::image type="content" source="./media/conversation-history-user-presence-unavailable/ews-xml-document.png" alt-text="Screenshot that shows the E W S X M L document displayed in the web browser.":::
 
 #### Are you entering the correct credentials to connect to Exchange?
 
