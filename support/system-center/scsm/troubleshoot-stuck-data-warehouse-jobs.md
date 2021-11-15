@@ -195,7 +195,7 @@ If certain jobs seem to run forever, use the next steps to reset the jobs.
 
 2. Make sure that you see output similar to the following screenshot:
 
-    ![Job output](./media/troubleshoot-stuck-data-warehouse-jobs/job-output.png)
+    :::image type="content" source="media/troubleshoot-stuck-data-warehouse-jobs/job-output.png" alt-text="The output of the command Get-SCDWJob." border="false":::
 
     Verify the affected job has a new BatchId and all jobs have the value of **True** for `IsEnabled`. If any job shows **False** for `IsEnabled`, run the following SQL Server statement:
 
@@ -233,7 +233,7 @@ If the job completes successfully, go to the next step.
 
     The output should be similar to the following screenshot:
 
-    ![Output of checking job status](./media/troubleshoot-stuck-data-warehouse-jobs/output-checking-job-status.png)
+    :::image type="content" source="media/troubleshoot-stuck-data-warehouse-jobs/output-checking-job-status.png" alt-text="The Output of checking job status by running the command Get-SCDWJob." border="false":::
 
     > [!NOTE]
     > You may see that some process categories are disabled. This is normal, because `DWMaintenance` and `MPSyncJob` may disable processes for synchronization.
