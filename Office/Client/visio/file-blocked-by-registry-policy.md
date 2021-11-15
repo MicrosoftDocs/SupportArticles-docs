@@ -72,7 +72,7 @@ To open the blocked drawing file or save a file to a blocked file type, use one 
 > [!NOTE]
 > If the issue occurs in an embedded or linked Visio file in other Microsoft Office applications, clear both the **Save** and **Open** check boxes for the "Visio 2003-2010 Binary Drawings, Templates and Stencils" file type.
 
-The following screen shot shows the default settings for the **File Block Settings **dialog box in Visio 2013:
+The following screen shot shows the default settings for the **File Block Settings** dialog box in Visio 2013:
 
 :::image type="content" source="media/file-blocked-by-registry-policy/file-block-settings.png" alt-text="Screenshot shows the default settings for the File Block Settings dialog box in Visio 2013." border="false":::
 

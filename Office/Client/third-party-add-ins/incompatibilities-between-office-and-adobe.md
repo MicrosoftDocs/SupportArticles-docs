@@ -79,7 +79,7 @@ If you have administrative permissions, you can also disable the add-in by follo
 2. In the Manage drop-down list, select COM Add-Ins, and then select Go.
 3. Clear the Acrobat PDFMaker Office COM Addin check box, as follows (Office 2010 screen shot), and then select OK.
 
-:::image type="content" source="media/incompatibilities-between-office-and-adob/disable-add-in.png" alt-text="Screenshot to clear the Acrobat PDFMaker Office COM Addin check box." border="false":::
+:::image type="content" source="media/incompatibilities-between-office-and-adob/disable-add-in.png" alt-text="Screenshot to clear the Acrobat PDFMaker Office COM Add-in check box." border="false":::
 If you cannot disable the add-in by following these steps, use one of the following methods.
 
 > [!IMPORTANT]
