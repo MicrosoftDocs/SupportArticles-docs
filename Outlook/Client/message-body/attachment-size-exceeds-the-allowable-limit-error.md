@@ -42,7 +42,7 @@ Microsoft Exchange Server email account
 
 If you are using an Exchange Server mailbox, you receive this error message (by default) if you attach one or more items to a message, and if the sum total of the attachments is greater than 10 MB (10240 KB). This attachment limit is not related to the limit in Outlook for Internet email accounts. This limit for an Exchange mailbox stems from the Maximum send size setting that is configured in the **Transport Settings Properties** dialog box by the Exchange administrator (Refer the following screenshot).
 
-:::image type="content" source="media/attachment-size-exceeds-the-allowable-limit-error/transport-settings-properties-dialog-box.jpg" alt-text="Screenshot for the Transport Settings Properties dialog box" border="false":::
+:::image type="content" source="media/attachment-size-exceeds-the-allowable-limit-error/transport-settings-properties.png" alt-text="Screenshot of the Transport Settings Properties dialog box." border="false":::
 
 ## Resolution
 
@@ -98,7 +98,7 @@ If you are using an Exchange Server account, the 20-MB attachment limit for Inte
 2. Under **Organization Configuration**, select **Hub Transport**. (The screenshot for step 2 and 3 is listed below)
 3. On the **Global Settings** tab, select **Transport Settings**.
 
-   :::image type="content" source="media/attachment-size-exceeds-the-allowable-limit-error/transport-settings.jpg" alt-text="Screenshot for step 2 and 3":::
+   :::image type="content" source="media/attachment-size-exceeds-the-allowable-limit-error/transport-settings.png" alt-text="Screenshot shows steps to select Transport Settings.":::
 
 4. In the **Transport Settings** section of the **Actions** pane, select **Properties**.
 5. On the **General** tab in the **Transport Settings Properties** dialog box, configure the value for Maximum send size (KB).

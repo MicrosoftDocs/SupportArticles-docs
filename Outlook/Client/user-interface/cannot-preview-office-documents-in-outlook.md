@@ -42,7 +42,7 @@ When you try to preview an Office file attachment in the Microsoft Outlook readi
 
 > This file cannot be previewed because of an error with the following previewer
 
-:::image type="content" source="media/cannot-preview-office-documents-in-outlook/error.jpg" alt-text="Error message image.":::
+:::image type="content" source="media/cannot-preview-office-documents-in-outlook/error.png" alt-text="Screenshot of Excel previewer error message.":::
 
 ## Cause
 

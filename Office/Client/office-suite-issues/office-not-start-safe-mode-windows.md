@@ -41,13 +41,13 @@ When you try to open an Office 2016 or Office 2013 application, such as Outlook,
     > We couldn't start your program. Please try starting it again.
     > If it won't start, try repairing Office from 'Programs and Features' in the Control Panel.
 
-    ![Click-to-Run Error Message](./media/office-not-start-safe-mode-windows/error-for-c2r-installation.png)
+    :::image type="content" source="media/office-not-start-safe-mode-windows/error-for-c2r-installation.png" alt-text="Screenshot shows the error message for the Click-to-Run installation type.":::
 
 - MSI-based installation type:
 
   > Microsoft Office can't find your license for this application. A repair attempt was unsuccessful or was cancelled. Microsoft Office will now exit.
 
-  ![MSI Error Message](./media/office-not-start-safe-mode-windows/error-for-msi-installation.png)
+  :::image type="content" source="media/office-not-start-safe-mode-windows/error-for-msi-installation.png" alt-text="Screenshot shows the error message for the M S I-based installation type.":::
 
 ## Cause
 
@@ -62,29 +62,29 @@ To work around this issue, start Windows by using the **Selective Startup** opti
     1. Open **System Configuration**. To do this, press the Windows Key + R to open a **Run** dialog box. Type *msconfig*, and then click **OK**.
     2. Select **Selective startup**, and then clear the **Load system services** and **Load startup items** check boxes.
 
-       ![System Configuration Selective startup 1](./media/office-not-start-safe-mode-windows/selective-startup-for-c2r-installation.png)
+       :::image type="content" source="media/office-not-start-safe-mode-windows/selective-startup-for-c2r-installation.png" alt-text="Screenshot to clear the Load system services and Load startup items check boxes.":::
 
     3. Click the **Services** tab.
     4. Select the **Microsoft Office ClickToRun Service** check box.
 
-       ![System Configuration Services](./media/office-not-start-safe-mode-windows/select-office-clicktorun-service.png)
+       :::image type="content" source="media/office-not-start-safe-mode-windows/c2r-service.png" alt-text="Screenshot to select the Microsoft Office ClickToRun Service check box.":::
 
     5. Click **OK**.
     6. If you're prompted, click **Restart**.
 
-       ![System Configuration Restart prompt](./media/office-not-start-safe-mode-windows/restart-button.png)
+       :::image type="content" source="media/office-not-start-safe-mode-windows/restart-button.png" alt-text="Screenshot to select the Restart option in the System Configuration window.":::
 
 - MSI-based installation type:
 
     1. Open **System Configuration**. To do this, press the Windows Key + R to open a **Run** dialog box. Type *msconfig*, and then click **OK**.
     2. Select **Selective startup**, and then clear the **Load system services** and **Load startup items** check boxes.
 
-       ![System Configuration Selective startup 2](./media/office-not-start-safe-mode-windows/selective-startup-for-msi-installation.png)
+       :::image type="content" source="media/office-not-start-safe-mode-windows/selective-startup-for-msi-installation.png" alt-text="Screenshot to clear the Load system services and Load startup items check boxes for M S I-based installation type.":::
 
     3. Click **OK**.
     4. If you're prompted, click **Restart**.
 
-       ![System Configuration Restart prompt ](./media/office-not-start-safe-mode-windows/restart-button.png)
+       :::image type="content" source="media/office-not-start-safe-mode-windows/restart-button.png" alt-text="Screenshot to select the Restart option in System Configuration.":::
 
 When you have finished troubleshooting and no longer need to run in **Selective startup**, return to **Normal startup** by following these steps:
 
@@ -103,5 +103,5 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 
     | Click-to-Run Office installation| MSI-based Office installation |
     |---|---|
-    |![Update option for Click-to-Run](./media/office-not-start-safe-mode-windows/update-option-for-c2r-installation.png)|![No Update option for MSI](./media/office-not-start-safe-mode-windows/no-update-option-for-msi-installation.png)|
+    |:::image type="content" source="media/office-not-start-safe-mode-windows/update-option-for-c2r-installation.png" alt-text="Screenshot shows the Update Options item is displayed for Click-to-Run installation.":::|:::image type="content" source="media/office-not-start-safe-mode-windows/no-update-option-for-msi-installation.png" alt-text="Screenshot shows the Update Options item isn't displayed for M S I-based installation.":::|
     ||

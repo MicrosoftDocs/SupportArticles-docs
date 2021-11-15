@@ -34,9 +34,9 @@ Consider the following scenario:
 
 In this scenario, the name of the first sheet in the Excel workbook may appear in a language that's different than the **Display Language** set in Microsoft Office. For example, if you have Office 365 installed with German, English, and Polish, the name of the worksheet created is displayed in German, despite having English (or Polish) set as the **Display Language**.
 
-![Office display language](./media/first-sheet-name-displays-different-language/display-language.png)
+:::image type="content" source="media/first-sheet-name-displays-different-language/display-language.png" alt-text="Screenshot to set English as the Display Language in the Excel Options window.":::
 
-![The first sheet name shows different language](./media/first-sheet-name-displays-different-language/name-example.png)
+:::image type="content" source="media/first-sheet-name-displays-different-language/name-example.png" alt-text="Screenshot shows the first sheet name displayed in a different language.":::
 
 ## Cause
 
@@ -64,7 +64,7 @@ The next time you create a workbook by right-clicking in a folder, a copy of you
 
 > [!NOTE]
 > If you add a sheet by clicking "+" in the Excel Worksheet, the sheet name appears according to the **Display Language**. The behavior that's described in the Symptoms section only applies to the first sheet.
-> ![The second sheet name shows correct language](./media/first-sheet-name-displays-different-language/second-sheet.png)
+> :::image type="content" source="media/first-sheet-name-displays-different-language/second-sheet.png" alt-text="Screenshot shows the second sheet name displayed in the correct language." border="false":::
 
 Also, if you create a blank workbook in Excel by using the Start screen or through **File** > **New**, the first worksheet is displayed according to the display language.
 

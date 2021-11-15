@@ -38,7 +38,7 @@ To resolve this issue, determine whether the use of BigInt is required. If so, u
 > [!NOTE]
 > Create a backup of your database before you change the data type. If there is **Large Number** data in a column when you change the data type to **Number**, you receive a "Microsoft Access encountered errors while converting the data" dialog box. If you click **Yes** to proceed, the records that contain large numbers are deleted. 
 
-![access encountered errors while converting the data](./media/database-requires-newer-access/error-message-dialog.JPG)
+:::image type="content" source="media/database-requires-newer-access/error-message-dialog.png" alt-text="Screenshot shows Microsoft Access encountered errors while converting the data.":::
 
 ## More Information
 

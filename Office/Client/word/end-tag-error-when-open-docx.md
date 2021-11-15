@@ -33,7 +33,7 @@ Clicking the **Details** button provides this additional information:
 
 > The name in the end tag of the element must match the element type in the start tag.
 
-![Screenshot of error message](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.jpg)
+:::image type="content" source="media/end-tag-error-when-open-docx/error-message-2007-2010.png" alt-text="Screenshot to select the Details button in the error message window.":::
 
 **In Word 2013:**
 
@@ -43,13 +43,13 @@ Clicking the **Details** button provides this additional information:
 
 > The name in the end tag of the element must match the element type in the start tag.
 
-![Screenshot of the name error](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.png)
+:::image type="content" source="media/end-tag-error-when-open-docx/error-message-2013.png" alt-text="Screenshot to select the Details button in the error message window in Word 2013." border="false":::
 
 ##  Cause
 
 This issue is related strictly to oMath tags and occurs when a graphical object or text box is anchored to the same paragraph that contains the equation. The document will display the equation and object on the same line as demonstrated in this image:
 
-![The document will display the equation and object on the same line as demonstrated in this image](./media/end-tag-error-when-open-docx/the-document-will-display-the-equation-and-object.jpg)
+:::image type="content" source="media/end-tag-error-when-open-docx/equation-object-same-line.png" alt-text="Screenshot shows the document will display the equation and object on the same line." border="false":::
 
 The error may not occur until the document is saved, re-edited and saved again.
 
