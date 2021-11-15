@@ -69,7 +69,7 @@ To resolve this problem, review the Autodiscover-related registry data you may h
 
    - PreferLocalXML
    - PreferProvidedEmailInAutoDiscoverAuthPrompts
-   
+
      This value enables Exchange administrators to specify whether users will be authenticated by using the configured account email or the user principal name (UPN) during AutoDiscover scenarios. For more information, see [November 5, 2019, update for Outlook 2016 (KB4484139)](https://support.microsoft.com/topic/november-5-2019-update-for-outlook-2016-kb4484139-9f986a96-8075-7ded-ccf4-d4ba69e8efeb).
    - ExcludeHttpRedirect
    - ExcludeHttpsAutoDiscoverDomain
@@ -99,22 +99,22 @@ You can use the following steps in Outlook to determine the method by which Outl
 4. Enter your password if you are not logged into a domain or if you are accessing a mailbox that is different from your mailbox.
 5. Click to clear the Use Guessmart and the Secure Guessmart Authentication check boxes.
 6. Click Test.
-7. Review the details on the Log tab.
+7. Review the details on the **Log** tab.
 
-The following figure shows the Log tab when the ExcludeScpLookup and ExcludeHttpsAutoDiscoverDomain values have been set to 1.
+The following figure shows the **Log** tab when the ExcludeScpLookup and ExcludeHttpsAutoDiscoverDomain values have been set to 1.
 
-:::image type="content" source="./media/unexpected-autodiscover-behavior/log-tab.png" alt-text="Screenshot of log tab":::
+:::image type="content" source="media/unexpected-autodiscover-behavior/log-tab-excludescplookup-excludehttpsautodiscoverdomain-1.png" alt-text="Screenshot shows information under the Log tab when ExcludeScpLookup and ExcludeHttpsAutoDiscoverDomain values are set to 1.":::
 
 Compare this information when only the ExcludeScpLookup value is set to 1.
 
-:::image type="content" source="./media/unexpected-autodiscover-behavior/log-tab-2.png" alt-text="Screenshot of log tab 2":::
+:::image type="content" source="media/unexpected-autodiscover-behavior/log-tab-excludescplookup-1.png" alt-text="Screenshot shows information under the Log tab when ExcludeScpLookup value is set to 1.":::
 
 > [!NOTE]
 > Ignore the failures in these figures because this information is intended only to show you the different lookup attempts that are made by Outlook.
 
-Also, if you enable logging in Outlook (2007 or 2010), the different Autodiscover lookup attempts can be found in the %temp%\Olkdisc.log file. This log file also includes any registry settings you have configured to exclude any of the Autodiscover lookup methods. In the following figure, you can clearly see that the ExcludeScpLookup and ExcludeHttpsAutoDiscoverDomain values are both set to 1.
+Also, if you enable logging in Outlook (2007 or 2010), the different Autodiscover lookup attempts can be found in the *%temp%\Olkdisc.log* file. This log file also includes any registry settings you have configured to exclude any of the Autodiscover lookup methods. In the following figure, you can clearly see that the ExcludeScpLookup and ExcludeHttpsAutoDiscoverDomain values are both set to 1.
 
-:::image type="content" source="./media/unexpected-autodiscover-behavior/log-file.png" alt-text="Screenshot of log file":::
+:::image type="content" source="media/unexpected-autodiscover-behavior/log-file.png" alt-text="Screenshot shows the log file in which ExcludeScpLookup and ExcludeHttpsAutoDiscoverDomain are both on.":::
 
 For more information about the client-side management and administration of Autodiscover, go to the following Knowledge Base article:
 

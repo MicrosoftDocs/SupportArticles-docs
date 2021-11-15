@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4499299
 
 When you try to create a Microsoft Outlook profile after a domain migration, you receive an error message that indicates you can't start Outlook or something went wrong. You also receive a sign-in prompt.
 
-:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/error.png" alt-text="screenshot of the error messages" border="false":::
+:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/error.png" alt-text="Screenshot of the Outlook error messages." border="false":::
 
 Additionally, you may see the Event 1098 in Azure Active Directory (AAD) Operational log that resembles the following error:
 
@@ -38,7 +38,7 @@ Additionally, you may see the Event 1098 in Azure Active Directory (AAD) Operati
 
 To find the AAD Operational log in Event Viewer, locate **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
 
-:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/aad-operational-log.png" alt-text="Azure Active Directory location in Event Viewer":::
+:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/aad-operational-log.png" alt-text="Screenshot shows Azure Active Directory location in Event Viewer.":::
 
 ## Cause
 

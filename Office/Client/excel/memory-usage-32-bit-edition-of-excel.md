@@ -37,7 +37,7 @@ After you upgrade to Microsoft Office 2013 or 2016, you experience one or more o
     - Adding memory to your device 
     ```
 
-   ![error message](./media/memory-usage-32-bit-edition-of-excel/error-message.jpg)
+   :::image type="content" source="media/memory-usage-32-bit-edition-of-excel/error-message.png" alt-text="Screenshot of the error message, showing there isn't enough memory to complete this action." border="false":::
   
 ## Cause
 

@@ -13,7 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 149203
 - CI 150314
-ms.author: v-matham
+ms.author: v-matthamer
 appliesto:
 - SharePoint Online
 ---

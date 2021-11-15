@@ -650,7 +650,7 @@
         - name: The ability to uninstall Office updates
           href: ../installation/ability-to-uninstall-office.md
         - name: Windows Installer service could not be accessed
-          href: ../installation/windows-installer-service-not-be-accesse.md
+          href: ../installation/windows-installer-service-not-be-accessed.md
     - name: Office for Mac
       items:
         - name: Can't pass the Welcome Screen in Office for Mac
@@ -737,6 +737,8 @@
           href: ../office-suite-issues/error-open-document.md
         - name: Error when you open files from SharePoint in Office client
           href: ../office-suite-issues/files-fail-to-open.md
+        - name: "This file cannot be saved"
+          href: ../office-suite-issues/file-cannot-be-saved.md
         - name: FAQ about Office Activation Wizard
           href: ../office-suite-issues/faq-about-office-activation-wizard.md
         - name: Features to enable collaboration

@@ -37,15 +37,15 @@ If you have to reduce the size of your Outlook 2010 or Outlook 2013 .pst file, y
 1. Start Outlook 2010 or later with a profile that contains your original .pst file that is larger than 20 GB.
 2. On the **File** tab, select **Info**. (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/the-info-option-on-the-file-tab.png" alt-text="On the File tab, select Info" border="false":::
+   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/file-tab-info.png" alt-text="Screenshot to select Info option on the File tab." border="false":::
 
 3. Select **Cleanup Tools**, and then select **Archive**. (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/select-archive.png" alt-text="select Cleanup Tools" border="false":::
+   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/cleanup-tool-archive.png" alt-text="Screenshot to select Archive option after selecting Cleanup Tools." border="false":::
 
 4. In the **Archive** dialog box, make the following changes: (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/make-changes-in-archive-dialog-box.png" alt-text="select Archive" border="false":::
+   :::image type="content" source="media/file-size-limits-of-pst-and-ost-files-are-larger/archive-dialog-box.png" alt-text="Screenshot shows the changes in the Archive dialog box." border="false":::
 
    - Enable the **Archive this folder and all subfolders** option.
    - In the list of folders, select the .pst file that you want to archive.

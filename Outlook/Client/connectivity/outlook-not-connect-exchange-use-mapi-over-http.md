@@ -37,7 +37,7 @@ Consider the following scenario:
 
 In the above scenario, the **Protocol** column in the **Outlook Connection Status** dialog shows Outlook 2013 is connected to the Exchange server using a connection mechanism other than MAPI/HTTP. For example, the following figure shows a connection using RPC/HTTP.
 
-:::image type="content" source="./media/outlook-not-connect-exchange-use-mapi-over-http/rpc-http-protocol.jpg" alt-text="Outlook connection status dialog shows the Protocol column as RPC/HTTP.":::
+:::image type="content" source="./media/outlook-not-connect-exchange-use-mapi-over-http/rpc-http-protocol.png" alt-text="Screenshot of Outlook connection status dialog, which shows the Protocol column as RPC/HTTP.":::
 
 > [!NOTE]
 > MAPI/HTTP connections are designated in the **Protocol** column using the string **HTTP**.

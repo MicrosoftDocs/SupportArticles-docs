@@ -1,5 +1,6 @@
 ﻿---
 title: PowerPivot for SharePoint 2016 scheduled data refresh fails with the error The operation has timed out
+description: Fixes the timeout issue that you cannot schedule a workbook to refresh after you create a PowerPivot workbook with data sources.
 author: helenclu
 ms.author: randring
 manager: dcscontentpm
@@ -26,7 +27,7 @@ Assume that you create a PowerPivot workbook with one or more data sources and u
 
 If you expand the refresh history, you will notice that the failed data source refresh runs for exactly 100 seconds.
 
-![the data refresh history page](./media/powerpivot-scheduled-data-refresh-fails/data-refresh-history.png)
+:::image type="content" source="media/powerpivot-scheduled-data-refresh-fails/data-refresh-history.png" alt-text="Screenshot shows that the failed data source refresh runs for exactly 100 seconds on the data refresh history page." border="false":::
 
 You may notice that some of your data sources succeed, or that the refresh succeeds intermittently if all the data sources refresh in less than 100 seconds.
 
@@ -53,7 +54,8 @@ This issue occurs because SharePoint 2016 limits a single PowerPivot data source
 1. Use PowerShell to increase the default time out setting.
 
    - Run the following commands in a SharePoint 2016 Administrator enabled PowerShell prompt, modifying the "new_time_out_value" section to the desired timeout value.
-     ```
+
+     ```powershell
      $farm = Get-SPFarm
      
      #The time out value "new_time_out_value" is in milliseconds, so be very careful to not set it too low!!!
@@ -68,7 +70,8 @@ This issue occurs because SharePoint 2016 limits a single PowerPivot data source
      ```
 
    - Run the following command to set a different value in the future or if you are having issues with the setting.
-     ```
+
+     ```powershell
      $farm = Get-SPFarm
      
      $farm.properties.Remove("WopiProxyRequestTimeout")

@@ -1,5 +1,6 @@
 ---
 title: Office Online Server and Office Web Apps Server limitations and features with Information Rights Management (IRM)
+description: Describes the limitations and features with Information Rights Management in Office Online Server and Office Web Apps Server.
 author: helenclu
 ms.author: jhaak
 manager: dcscontentpm
@@ -41,6 +42,6 @@ When users try to preview an IRM protected document by using Office Online Serve
 
 **Sorry, Microsoft Word Online can't display this embedded document because it's protected by Information Rights Management (IRM).**
 
-![the error message dialog box](./media/office-online-limitations-and-features-with-information-rights-management/test-wac.png)
+:::image type="content" source="media/office-online-limitations-and-features-with-information-rights-management/test-wac.png" alt-text="Screenshot of the error message after previewing an I R M protected document.":::
 
 To fix this issue, remove the IRM setting and then preview the document again. If the preview is displayed, apply the IRM setting in the document library again.

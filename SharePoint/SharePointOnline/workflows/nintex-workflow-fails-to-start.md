@@ -1,7 +1,7 @@
 ---
 title: Nintex workflow on SharePoint Online does not start
 description: Describes an issue in which the Nintex workflow for SharePoint Online does not start and you receive an error message.
-author: v-matham
+author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

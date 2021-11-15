@@ -63,7 +63,7 @@ To resolve this problem, remove the data in the PR_OST_OSTID binary property. To
 
 10. Right-click the data in the **Binary** section of Property Editor, and then select **Select All**.
 
-    :::image type="content" source="media/cannot-start-outlook-in-cached-mode-or-create-profile/binary-section-of-property-editor.jpg" alt-text="Alt text here." border="false":::
+    :::image type="content" source="media/cannot-start-outlook-in-cached-mode-or-create-profile/binary-section-of-property-editor.png" alt-text="Screenshot of the PR_OST_OSTID binary property." border="false":::
 
 11. Right-click the selected data in the **Binary** section, and then select **Delete**.
 12. Select **OK**.

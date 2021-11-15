@@ -48,7 +48,7 @@ Make sure that the delivery address is set up correctly for the on-premises Send
 
 For example, the correct smart host address for contoso.com is contoso-com.mail.protection.com.For an example of an on-premises Exchange connector for the EOP-associated domain contoso.com, see the following screenshot:
 
-![A screenshot of the Internet Connector Properties dialog box, showing an example of an on-premises Exchange connector for the EOP-associated domain contoso.com](./media/relay-access-denied-ndr/internet-connector-properties.png)
+:::image type="content" source="media/relay-access-denied-ndr/internet-connector-properties.png" alt-text="Screenshot of the Internet Connector Properties dialog box, showing an example of an on-premises Exchange connector for the E O P-associated domain contoso.com." border="false":::
 
 #### Case 2
 

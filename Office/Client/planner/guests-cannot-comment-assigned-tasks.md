@@ -26,7 +26,7 @@ When [users with guest access are assigned tasks](https://support.microsoft.com/
 
 **Note** In this message, <*task GUID*> represents the GUID of the actual task GUID.
 
-![Screenshot of the no access error](./media/guests-cannot-comment-assigned-tasks/task-error.png)
+:::image type="content" source="media/guests-cannot-comment-assigned-tasks/task-error.png" alt-text="Screenshot of the error message after adding a comment to the tasks.":::
 
 ## Cause
 
