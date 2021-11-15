@@ -86,11 +86,11 @@ To run the SQL query against the Virtual Machine Manager database, follow these 
 1. Stop the Virtual Machine Manager service.
 1. Open Microsoft SQL Server Management Studio, and then browse to the **VirtualManagerDB** database.
 
-   ![Screenshot of VirtualManagerDB database.](./media/vmm-console-start-error-1602/virtualmanagerdb.png)
+   :::image type="content" source="media/vmm-console-start-error-1602/virtualmanagerdb.png" alt-text="Go to the VirtualManagerDB database in Microsoft SQL Server Management Studio." border="false":::
 
 1. On the toolbar, select **New Query**.
 
-   ![Screenshot of New Query button.](./media/vmm-console-start-error-1602/new-query.png)
+    :::image type="content" source="media/vmm-console-start-error-1602/new-query.png" alt-text="Select the New Query button on the toolbar." border="false":::
 
 1. Copy and paste the following query in the window:
 
@@ -102,7 +102,7 @@ To run the SQL query against the Virtual Machine Manager database, follow these 
 
     Select **!Execute** to execute the query. Make sure that the query finishes successfully. The results will resemble the following screenshot:
 
-    ![Screenshot of the the Query result.](./media/vmm-console-start-error-1602/query-result.png)
+    :::image type="content" source="media/vmm-console-start-error-1602/query-result.png" alt-text="The query result that is returned after you run Execute.":::
 
 1. Restart the Virtual Machine Manager service.
 

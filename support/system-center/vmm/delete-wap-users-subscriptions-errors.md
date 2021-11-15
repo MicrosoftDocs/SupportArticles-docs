@@ -38,7 +38,7 @@ To resolve this issue, verify that the bindings for port 8090 on the SPF server 
 
 In the following screenshot, two bindings exist. The second entry for HTTPS 8090 should be removed.
 
-![Screenshot of two bindings exist](./media/delete-wap-users-subscriptions-errors/two-bindings.jpg)
+:::image type="content" source="media/delete-wap-users-subscriptions-errors/two-bindings.png" alt-text="Two bindings exist in Site Bindings dialog box.":::
 
 ## More Information
 
