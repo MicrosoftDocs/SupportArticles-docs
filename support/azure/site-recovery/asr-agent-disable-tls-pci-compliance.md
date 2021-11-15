@@ -43,8 +43,8 @@ These issues can occur for the following reasons:
 
 To fix these issues, make sure that the .NET Framework 4.6 or a later version is installed and TLS 1.2 is enabled as the default protocol. To enable TLS 1.2, follow these steps:
 
-1. Open a Command Prompt window as an administrator. 
-2. At the elevated command prompt, run the following command: 
+1. Open a Command Prompt window as an administrator.
+2. At the elevated command prompt, run the following command:
 
     ```console
     net stop obengine
@@ -61,7 +61,11 @@ To fix these issues, make sure that the .NET Framework 4.6 or a later version is
     > [!NOTE]
     > These subkeys appear in the "v\<VersionNumber>" format.
 
+    :::image type="content" source="media/asr-agent-disable-tls-pci-compliance/registry-key.png" alt-text="Screenshot of subkeys in Registry Editor.":::
+
 5. For each of these subkeys, add a **DWORD Value** that is named **SchUseStrongCrypto**, and set its value to **1**.
+
+    :::image type="content" source="media/asr-agent-disable-tls-pci-compliance/dword-value.png" alt-text="Screenshot of adding a DWORD Value that is named SchUseStrongCrypto.":::
 
 6. Repeat step 5 for all the subkeys that have the "v\<VersionNumber>" format.
 7. Exit Registry Editor.
