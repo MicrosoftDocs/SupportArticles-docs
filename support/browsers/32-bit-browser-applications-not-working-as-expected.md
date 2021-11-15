@@ -4,6 +4,7 @@ description: Describes an issue in which some Internet Explorer 10 or 11 applica
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-administration
 ---
 # 32-bit browser applications may not work as expected in Internet Explorer
 

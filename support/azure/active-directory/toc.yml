@@ -163,6 +163,8 @@
     href: unexpected-error-reset-pwd.md
   - name: Verify account error when resetting password
     href: cannot-verify-account-reset-pwd.md
+  - name: Cannot receive MFA verification code
+    href: text-voice-call-verification-code-mfa-not-send.md
 
 - name: User Provisioning and Synchronization
   items:

@@ -5,7 +5,6 @@ ms.date: 04/07/2020
 ms.prod-support-area-path: Development
 ms.reviewer: cissyh
 ms.topic: how-to
-ms.technology: aspnet-development
 ---
 # Set current culture programmatically in an ASP.NET application
 

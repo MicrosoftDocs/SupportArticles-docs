@@ -4,6 +4,7 @@ description: This article describes the reasons and solutions for variables that
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Session variables do not persist between requests after you install Internet Explorer security Patch
 

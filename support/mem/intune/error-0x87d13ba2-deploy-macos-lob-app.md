@@ -22,7 +22,7 @@ You publish a macOS line-of-business (LOB) app by using Intune. When you select 
 
 Here's an example of Cisco AnyConnect VPN:
 
-:::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error.png" alt-text="Error 0x87D13BA2 ":::
+:::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error-0x87d13ba2.png" alt-text="Screenshot of error 0x87D13BA2 in the Cisco AnyConnect VPN.":::
 
 This problem can occur even if the app is successfully installed on the device.
 
@@ -48,7 +48,7 @@ To fix this problem and enable the macOS LOB app to correctly report its status,
 
    In our example, run `unzip AnyConnect.pkg.intunemac`.
   
-   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/unzip.png" alt-text="Extract the file":::
+   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/unzip.png" alt-text="Extract the file using unzip command.":::
 
    The content of the package will be extracted to a child folder that's named IntuneMacPackage under the temporary folder.
 3. Open the IntuneMacPackage/Metadata/Detection.xml file in a text editor.

@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem that allows drive
 ms.date: 09/04/2020
 ms.prod-support-area-path: Microsoft Update
 ms.reviewer: danielwh, davean, delhan, christys
+ms.technology: windows-hardware-other-driver
 ---
 # Unowned driver updates are installed unexpectedly from Windows Update
 

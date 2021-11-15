@@ -4,6 +4,7 @@ description: Provides workarounds for an issue in which the background of a recu
 ms.date: 09/30/2020
 ms.prod-support-area-path: Print driver
 ms.reviewer: riwaida
+ms.technology: windows-hardware-print-driver
 ---
 # The background of a recurring icon is black when printing an Outlook calendar
 

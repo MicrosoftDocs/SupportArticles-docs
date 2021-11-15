@@ -4,7 +4,6 @@ description: This article describes an issue in which uninstalling ASP.NET 4.5 f
 ms.date: 04/07/2020
 ms.prod-support-area-path: Development
 ms.reviewer: meyoun
-ms.technology: aspnet-development
 ---
 # ASP.NET 2.0 and 3.5 not working after you uninstall ASP.NET 4.5 in Windows 8 or Windows Server 2012
 

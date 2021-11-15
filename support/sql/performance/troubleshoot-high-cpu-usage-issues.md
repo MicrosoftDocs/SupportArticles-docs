@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; SQL Server
 
 This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server.
 
-Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common:
+Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common ones:
 
 - High logical reads that are caused by table or index scans because of the following:
   - Out-of-date statistics
@@ -31,7 +31,7 @@ Use one of the following tools to check whether the SQL Server process is actual
 
 - Task Manager (On the **Process** tab, check whether the CPU value for **SQL Server Windows NT-64 Bit** is close to 100 percent)
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
-  - Counter: Process/%User Time, % Privileged Time
+  - Counter: `Process/%User Time`, `% Privileged Time`
   - Instance: sqlservr
   
 - You can use the following Powershell script to collect the counter data over 60 sec period:
@@ -54,7 +54,7 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-  > If you notice that **% User Time** is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that **% Privileged time** is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+  If you notice that `% User Time` is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -96,32 +96,34 @@ If SQL Server is still using high CPU, go to the next step.
 
 ## Step 4: Add potentially missing indexes
 
-1. Use the following query to get the estimated execution plan of the highest CPU-bound query.
+1. Use the following query to identify queries with high CPU usage that contain at least one missing index in the query plan.
 
     ```sql
-    -- Captures the Total CPU time spent by a query along with the plan handle
-    SELECT highest_cpu_queries.plan_handle,
-           highest_cpu_queries.total_worker_time,
+    -- Captures the Total CPU time spent by a query along with the query plan and total executions
+    SELECT 
+           qs_cpu.total_worker_time/1000 AS total_cpu_time_ms,
+           q.[text],
+           p.query_plan,
+           qs_cpu.execution_count,
            q.dbid,
            q.objectid,
-           q.number,
-           q.encrypted,
-           q.[text]
+           q.encrypted AS text_encrypted
     FROM
-      (SELECT TOP 50 qs.plan_handle,
-                  qs.total_worker_time
+      (SELECT TOP 500 qs.plan_handle,
+                  qs.total_worker_time,
+                  qs.execution_count
        FROM sys.dm_exec_query_stats qs
-       ORDER BY qs.total_worker_time DESC) AS highest_cpu_queries CROSS apply sys.dm_exec_sql_text(plan_handle) AS q
-    ORDER BY highest_cpu_queries.total_worker_time DESC 
-    
-    -- Replace the Plan handle with the value obtained from above query.
-    SELECT *
-    FROM sys.dm_exec_query_plan (plan_handle)
+       ORDER BY qs.total_worker_time DESC) AS qs_cpu 
+       CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
+       CROSS APPLY sys.dm_exec_query_plan (plan_handle) p
+      WHERE p.query_plan.exist('declare namespace 
+       qplan="http://schemas.microsoft.com/sqlserver/2004/07/showplan";
+            //qplan:MissingIndexes')=1
     ```
 
-1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query:
+1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another window in SSMS.
 
-    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." border="true":::
+    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
 1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes that have high improvement measurements.
 
@@ -158,21 +160,45 @@ Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeprocc
 
 If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
-If the issue is fixed, it's an indication of parameter-sensitive problem (PSP/parameter sniffing issue). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
+If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here is an example of how you can apply this to your query.
 
-**Note:** For workloads that require high throughput, the recompile option is usually not possible.
+  ```sql
+  SELECT * FROM Person.Person 
+  WHERE LastName = 'Wood'
+  OPTION (RECOMPILE)
+  ```
 
-- Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics.
+- Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here is an example how to use this hint in your query.
+
+  ```sql
+  DECLARE @LastName Name = 'Frintu'
+  SELECT FirstName, LastName FROM Person.Person 
+  WHERE LastName = @LastName
+  OPTION (OPTIMIZE FOR (@LastName = 'Wood'))
+  ```
 
 - Use the [option (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
 
-- Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing entirely.
+- Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing entirely. Here is an example of how to use it in a query:
+
+  ```sql
+  SELECT * FROM Person.Address  
+  WHERE City = 'SEATTLE' AND PostalCode = 98104
+  OPTION (USE HINT ('DISABLE_PARAMETER_SNIFFING'))
+  ```
 
 - Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the "good enough" common plan is the one that's already in cache. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
 
-- Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed.
+- Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed. You can use `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the Person.Person table in AdventureWorks, you can use this query to look up the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query result.
+
+  ```sql
+  SELECT text, 'DBCC FREEPROCCACHE (0x' + CONVERT(VARCHAR (512), plan_handle, 2) + ')' AS dbcc_freeproc_command FROM sys.dm_exec_cached_plans
+  CROSS APPLY sys.dm_exec_query_plan(plan_handle)
+  CROSS APPLY sys.dm_exec_sql_text(plan_handle)
+  WHERE text LIKE '%person.person%'
+  ```
 
 ## Step 6: Disable heavy tracing
 
@@ -251,7 +277,7 @@ GO
 
 If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often evicted on ad hoc query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
-[FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68)
+[FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68).
 
 ## Step 8: Configure your virtual machine
 
@@ -259,7 +285,28 @@ If you are using a virtual machine, make sure that you aren't overprovisioning C
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs.
+If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to help you determine how many queries have exceeded a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values of the two variables to match your environment.
+
+```sql
+-- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
+DECLARE @cputime_threshold_microsec INT = 200*1000
+DECLARE @execution_count INT = 1000
+
+SELECT 
+     qs.total_worker_time/1000 total_cpu_time_ms,
+       qs.max_worker_time/1000 max_cpu_time_ms,
+       (qs.total_worker_time/1000)/execution_count average_cpu_time_ms,
+       qs.execution_count,
+     q.[text]
+FROM
+   sys.dm_exec_query_stats qs
+   CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
+WHERE  (qs.total_worker_time/execution_count > @cputime_threshold_microsec  
+       OR        qs.max_worker_time > @cputime_threshold_microsec )
+       AND execution_count > @execution_count
+ORDER BY qs.total_worker_time DESC 
+OPTION (RECOMPILE)
+```
 
 ## See also
 

@@ -4,7 +4,6 @@ description: This article describes how to edit the Web.config file of an ASP.NE
 ms.date: 03/27/2020
 ms.prod-support-area-path: FTP authentication and authorization
 ms.topic: how-to
-ms.technology: aspnet-ftp-authentication-authorization
 ---
 # Edit the configuration of an ASP.NET application
 

@@ -4,7 +4,6 @@ description: This article provides workarounds for the problem that session data
 ms.date: 04/15/2020
 ms.prod-support-area-path: Development
 ms.reviewer: josborne
-ms.technology: aspnet-development
 ---
 # Session data is lost when you use ASP.NET InProc session state mode
 

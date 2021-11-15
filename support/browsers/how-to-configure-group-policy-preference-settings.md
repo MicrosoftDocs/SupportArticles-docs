@@ -4,6 +4,7 @@ description: This article introduces how to configure Group Policy Preference se
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: ajayps, kaushika, ramakoni
+ms.technology: internet-explorer-administration
 ---
 # How to configure Group Policy Preference settings for Internet Explorer 11 in Windows
 

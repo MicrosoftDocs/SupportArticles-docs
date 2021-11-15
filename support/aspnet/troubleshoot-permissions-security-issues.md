@@ -4,7 +4,6 @@ description: This article describes how to troubleshoot common permissions and s
 ms.date: 12/29/2020
 ms.prod-support-area-path: WWW Authentication and Authorization
 ms.topic: how-to
-ms.technology: aspnet-www-authentication-authorization
 ---
 # Troubleshooting common permissions and security-related issues in ASP.NET
 

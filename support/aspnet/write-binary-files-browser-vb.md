@@ -4,7 +4,6 @@ description: This article describes how to write binary files to the browser by 
 ms.date: 08/06/2020
 ms.prod-support-area-path: Development
 ms.topic: how-to
-ms.technology: aspnet-development
 ---
 # Write binary files to the browser by using ASP.NET and Visual Basic .NET  
 

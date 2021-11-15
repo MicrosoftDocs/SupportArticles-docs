@@ -4,6 +4,7 @@ description: Introduces the Header and Library requirement When setting or getti
 ms.date: 03/09/2020
 ms.prod-support-area-path: Networking development
 ms.reviewer: MIKELIU
+ms.technology: windows-dev-apps-networking-dev
 ---
 # Header and Library requirement when set/get socket options at the IPPROTO_IP level
 

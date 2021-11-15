@@ -4,7 +4,6 @@ description: This article describes quick things to check when you experience hi
 ms.date: 07/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: mgraham
-ms.technology: aspnet-site-behavior-performance
 ---
 # Quick things to check when you experience high memory levels in ASP.NET
 

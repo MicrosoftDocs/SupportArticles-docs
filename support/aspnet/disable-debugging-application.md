@@ -4,7 +4,6 @@ description: This article discusses how to disable debugging for ASP.NET applica
 ms.date: 03/27/2020
 ms.prod-support-area-path: FTP authentication and authorization
 ms.topic: how-to
-ms.technology: aspnet-ftp-authentication-authorization
 ---
 # Disable debugging for ASP.NET applications
 

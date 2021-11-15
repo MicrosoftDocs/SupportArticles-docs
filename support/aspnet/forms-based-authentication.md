@@ -5,7 +5,6 @@ ms.date: 03/27/2020
 ms.prod-support-area-path: Development
 ms.reviewer: ARTHURYA
 ms.topic: how-to
-ms.technology: aspnet-development
 ---
 # Implement forms-based authentication in an ASP.NET application by using C#.NET
 

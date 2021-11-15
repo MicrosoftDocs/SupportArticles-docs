@@ -4,6 +4,7 @@ description: This article describes that you can't use the legacy MIDI API in th
 ms.date: 03/10/2020
 ms.prod-support-area-path: Graphics and multimedia development
 ms.reviewer: daleche, davean, jadailey
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # MIDI device application hangs when you use former MIDI API in Windows 10
 

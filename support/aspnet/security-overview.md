@@ -5,7 +5,6 @@ ms.date: 04/07/2020
 ms.prod-support-area-path: Development
 ms.reviewer: VENKATC, EARLB
 ms.topic: article
-ms.technology: aspnet-development
 ---
 # ASP.NET security overview
 

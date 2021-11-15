@@ -4,6 +4,7 @@ description: When scanning documents using an application that uses the Windows
 ms.date: 03/16/2020
 ms.prod-support-area-path: Graphics and multimedia development
 ms.reviewer: dbristol
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # WIA Automation Library 2.0 does not support duplex scan
 
