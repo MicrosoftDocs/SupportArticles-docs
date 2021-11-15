@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4487946
 
 When a user signs in to Microsoft Intune as a **Help Desk Operator** role member, and goes to the Intune troubleshooting portal, the **Troubleshooting** blade displays a banner that states **Account status You do not have enough permissions**, and no user or device data is displayed.
 
-:::image type="content" source="./media/troubleshooting-blade-fails-loading/troubleshooting-blade.png" alt-text="Screenshot of troubleshooting blade.":::
+:::image type="content" source="media/troubleshooting-blade-fails-loading/troubleshooting-blade.png" alt-text="Screenshot of troubleshooting blade showing the Account status You do not have enough permissions message.":::
 
 ## Cause
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to delete 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # Solution cannot be deleted due to dependencies from other components in the system error occurs when deleting a solution in Microsoft Dynamics 365
 

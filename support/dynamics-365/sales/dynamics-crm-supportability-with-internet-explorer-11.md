@@ -4,6 +4,7 @@ description: Describes the support for Microsoft Dynamics CRM 2011 in Windows 8.
 ms.reviewer: adonat, aaronric
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Microsoft Dynamics CRM supportability with Internet Explorer 11
 

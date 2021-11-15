@@ -4,6 +4,7 @@ description: This article provides resolutions for S1023 error that occurs when 
 ms.date: 10/26/2020
 ms.prod-support-area-path: Graphics and multimedia development
 ms.reviewer: stevelee
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # 'S1023' error when you install the DirectX SDK
 

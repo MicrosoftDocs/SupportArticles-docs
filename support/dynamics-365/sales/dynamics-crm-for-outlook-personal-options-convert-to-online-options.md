@@ -4,6 +4,7 @@ description: Microsoft Dynamics CRM client for Outlook Personal Options unexpect
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics CRM client for Outlook Personal Options unexpectedly revert to only the online Personal Options
 

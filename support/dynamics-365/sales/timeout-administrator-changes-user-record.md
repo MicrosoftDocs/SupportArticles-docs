@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where administra
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # A SQL Server Timeout may occur when changing a name field for a Microsoft Dynamics CRM User
 

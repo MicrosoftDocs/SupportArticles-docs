@@ -17,7 +17,10 @@
       href: authentication-fails-with-error.md
 
   - name: Azure AD Hybrid Sync Agent Installation Issues
+
     items:
+    - name: Installation issues overview
+      href: azure-ad-hybrid-sync-agent-install-welcome.md
     - name: No privileges to install MSI
       href: azure-ad-hybrid-sync-no-privileges-install-msi.md
     - name: Cannot start service AADConnectProvisioningAgent
@@ -160,6 +163,8 @@
     href: unexpected-error-reset-pwd.md
   - name: Verify account error when resetting password
     href: cannot-verify-account-reset-pwd.md
+  - name: Cannot receive MFA verification code
+    href: text-voice-call-verification-code-mfa-not-send.md
 
 - name: User Provisioning and Synchronization
   items:

@@ -4,6 +4,7 @@ description: Provides the solution to solve the problem that the web page that h
 ms.date: 02/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: davidg
+ms.technology: internet-explorer-development-website
 ---
 # Web page with frames isn't displayed properly in Internet Explorer
 

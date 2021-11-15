@@ -4,6 +4,7 @@ description: This article describes that Internet Explorer selects button of Del
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Permanent cookies for WebOC application lost when user closes Internet Explorer
 

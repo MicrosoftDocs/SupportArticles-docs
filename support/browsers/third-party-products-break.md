@@ -4,6 +4,7 @@ description: Describes an issue in which Browser Helper Objects (BHOs) and toolb
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: pierrelc
+ms.technology: internet-explorer-development-website
 ---
 # Third-party products that rely on BHOs or toolbars break in Internet Explorer 11
 

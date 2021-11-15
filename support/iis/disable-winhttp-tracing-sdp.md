@@ -5,6 +5,7 @@ ms.date: 03/23/2020
 ms.prod-support-area-path: WWW service and Svchost operation
 ms.reviewer: huizhu
 ms.topic: how-to
+ms.technology: iis-www-service-svchost
 ---
 # WinHTTP SDP package information
 

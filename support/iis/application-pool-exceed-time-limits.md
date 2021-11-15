@@ -3,6 +3,7 @@ title: An application pool exceeds time limits
 description: An application pool takes longer time and exceeds time limits during shutdown in Internet Information Services (IIS). This article provides resolutions for this problem.
 ms.date: 04/03/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.technology: iis-health-diagnostic-performance
 ---
 # An application pool exceeds time limits during shutdown in IIS
 

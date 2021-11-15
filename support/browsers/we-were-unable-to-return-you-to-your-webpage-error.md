@@ -4,6 +4,7 @@ description: Provides a resolution for the issue that you may receive a We were 
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-stability-performance
 ---
 # We were unable to return you to your webpage error occurs in Internet Explorer 9
 

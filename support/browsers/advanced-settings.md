@@ -4,6 +4,7 @@ description: This article provides the steps to set advanced settings by using G
 ms.date: 02/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: cgilbert
+ms.technology: internet-explorer-administration
 ---
 # How to set advanced settings in Internet Explorer by using Group Policy objects
 

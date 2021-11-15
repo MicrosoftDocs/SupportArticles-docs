@@ -4,6 +4,7 @@ description: This article describes event ID 4101. This problem happens when you
 ms.date: 03/16/2020
 ms.prod-support-area-path: Accelerators
 ms.reviewer: mquian
+ms.technology: biztalk-server-accelerators
 ---
 # Error message when you use the ADT^A03.txt file in the BizTalk Server Accelerator for HL7 1.3 tutorial
 

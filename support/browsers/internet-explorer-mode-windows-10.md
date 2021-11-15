@@ -5,6 +5,7 @@ ms.date: 01/21/2021
 ms.prod-support-area-path: Administration
 ms.reviewer: 
 ms.topic: article
+ms.technology: internet-explorer-administration
 ---
 # How Enterprise Mode works in Windows 10
 

@@ -4,6 +4,7 @@ description: This article discusses obtaining formatted strings associated with 
 ms.date: 04/29/2020
 ms.prod-support-area-path: System services development
 ms.reviewer: davean, franki
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # Use EvtFormatMessage to obtain formatted strings for an event
 

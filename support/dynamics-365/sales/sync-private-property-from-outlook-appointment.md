@@ -4,6 +4,7 @@ description: This article describes Microsoft Dynamics CRM 2011 with Update Roll
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Sync the private property from Outlook appointments to Microsoft Dynamics CRM 2011 with Update Rollup 12
 

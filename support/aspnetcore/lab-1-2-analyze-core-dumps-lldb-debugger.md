@@ -4,6 +4,7 @@ description: This article describes how to install and configure the lldb debugg
 ms.date: 04/07/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 1.2 Troubleshooting crashes - analyze system-generated core dump files in lldb debugger
 

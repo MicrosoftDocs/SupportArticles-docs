@@ -4,6 +4,7 @@ description: Discusses the issue that you can't configure the Microsoft Dynamics
 ms.reviewer: debrau, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Problem communicating with the Microsoft Dynamics CRM Server error message when you configure the Dynamics CRM Client for Outlook
 

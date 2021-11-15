@@ -4,6 +4,7 @@ description: This article describes updated mobile applications and additional R
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Update client app's registration in AD FS (CRM On-Premises)
 

@@ -1,7 +1,7 @@
 ---
 title: Error 80070005 when you run the Azure Active Directory Sync Services config wizard
 description: Describes an issue that generates a failed due to the 80070005 error when you run the Azure Active Directory Sync (AAD Sync) Services config wizard. Provides a solution.
-ms.date: 07/11/2020
+ms.date: 11/09/2021
 ms.technology:
 ms.reviewer: willfid
 ---
@@ -18,7 +18,7 @@ When you run the Azure Active Directory Sync (AAD Sync) Services config wizard, 
 
 ## Cause
 
-This issue may occur if you're not a member of the **AADSyncAdmins** group on the local computer or if you have just installed AAD Sync Services.
+This issue may occur if you're not a member of the **ADSyncAdmins** group on the local computer or if you have just installed AAD Sync Services.
 
 ## Resolution
 
@@ -26,8 +26,8 @@ To resolve this issue, sign out and then sign in to the computer. If the issue p
 
 1. Select **Start**, type `compmgmt.msc` in the search box, and then press Enter to open Computer Management.
 2. Under **Computer Management**, expand **Local Users and Groups**, and then expand **Groups**.
-3. Make sure that the **AADSyncAdmins** group exists. If this group is missing, create a new group, and name it **AADSyncAdmins**.
-4. Add yourself to the **AADSyncAdmins** group.
+3. Make sure that the **ADSyncAdmins** group exists. If this group is missing, create a new group, and name it **ADSyncAdmins**.
+4. Add yourself to the **ADSyncAdmins** group.
 5. Sign out, and then sign in to the computer again.
 
 ## More information

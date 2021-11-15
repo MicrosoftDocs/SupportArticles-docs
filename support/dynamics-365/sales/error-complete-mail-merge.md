@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # The Create Activities screen does not display when a Mail Merge is completed against a non-default Organization in the Microsoft Dynamics CRM Client for Outlook
 

@@ -4,6 +4,7 @@ description: This article describes how to use the createdump tool to capture .N
 ms.date: 04/07/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 1.3 Troubleshooting a crash problem - Capture core crash dumps with createdump tool
 

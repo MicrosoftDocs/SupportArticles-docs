@@ -4,6 +4,7 @@ description: Describes a solution to an error that occurs when you configure CRM
 ms.reviewer: debrau, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # We can't connect to your CRM server when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 

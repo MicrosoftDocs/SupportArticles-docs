@@ -4,6 +4,7 @@ description: When a user tries to configure the Microsoft Dynamics CRM client fo
 ms.reviewer: jowells
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # An error occurs when trying to configure the Microsoft Dynamics CRM client for Outlook 2011
 

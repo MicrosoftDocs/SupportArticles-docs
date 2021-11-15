@@ -5,6 +5,7 @@ ms.date: 01/29/2021
 ms.prod-support-area-path: Administration
 ms.reviewer: heikom, daleche
 ms.topic: troubleshooting
+ms.technology: internet-explorer-administration
 ---
 # Policy "Configure the home page URL" takes no effect in Microsoft Edge
 

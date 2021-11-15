@@ -4,6 +4,7 @@ description: Discusses an issue in which you receive a Validation Error error me
 ms.reviewer: tylerol, aaronric
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Validation Error when setting server-based SharePoint integration for Microsoft Dynamics CRM Online and SharePoint Online
 

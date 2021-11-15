@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to install
 ms.reviewer: chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # MspInstallAction failed when installing an Update Rollup on Microsoft Dynamics CRM
 

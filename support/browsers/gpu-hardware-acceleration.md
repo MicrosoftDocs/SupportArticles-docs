@@ -2,8 +2,9 @@
 title: GPU hardware acceleration
 description: Describes the GPU hardware acceleration feature in Internet Explorer and potential problems with it.
 ms.date: 07/14/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-core-features
 ---
 # Hardware acceleration (or GPU rendering) in Internet Explorer
 

@@ -4,6 +4,7 @@ description: This article describes that how to create a log file to troubleshoo
 ms.date: 04/17/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: how-to
+ms.technology: iis-health-diagnostic-performance
 ---
 # Create a log file to troubleshoot ABO Mapper errors in IIS
 

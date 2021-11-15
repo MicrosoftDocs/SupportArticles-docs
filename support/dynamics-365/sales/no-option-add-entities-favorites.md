@@ -4,6 +4,7 @@ description: This article provides a workaround for the problem that occurs when
 ms.reviewer: chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # There is no option to add Microsoft Dynamics CRM entities to favorites in Microsoft Office Outlook 2010
 

@@ -1,9 +1,10 @@
 ---
 title: You do not have a license to use Microsoft Dynamics CRM Online error
 description: You do not have a license to use Microsoft Dynamics CRM Online error occurs when you try to set up Microsoft Dynamics CRM for Microsoft Office Outlook. Provides a resolution.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "You do not have a license" error when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

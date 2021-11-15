@@ -4,6 +4,7 @@ description: It seems that Microsoft Dynamics CRM Outlook Client fails to config
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics CRM Outlook Client fails to configure if you are using App Passwords for authentication
 
