@@ -15,26 +15,26 @@ _Original KB number:_ &nbsp; 4033999
 
 This article describes how to resolve issues that you may experience when you use Azure Site Recovery in situations in which the following security protocol settings are made to achieve security hardening for Peripheral Component Interconnect (PCI) compliance:
 
-- Transport Layer Security (TLS) 1.0 is disabled 
-- TLS 1.1 and TLS 1.2 are enabled 
+- Transport Layer Security (TLS) 1.0 is disabled
+- TLS 1.1 and TLS 1.2 are enabled
 
 To update TLS settings, refer to [this article](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786418(v=ws.11)?redirectedfrom=MSDN).  
 
 ## Symptoms
 
-After you disable TLS 1.0, you may experience one or more of the following issues: 
+After you disable TLS 1.0, you may experience one or more of the following issues:
 
-- Ongoing protection starts to fail. 
-- Scale-out Process Server (PS) registrations fail. 
-- Mobility service installations fail. 
-- Services that are related to the Azure Site Recovery agents do not stop or start as usual. 
+- Ongoing protection starts to fail.
+- Scale-out Process Server (PS) registrations fail.
+- Mobility service installations fail.
+- Services that are related to the Azure Site Recovery agents do not stop or start as usual.
 
 ## Cause
 
-These issues can occur for the following reasons: 
+These issues can occur for the following reasons:
 
-- The .NET Framework version 4.6 or a later version is not available. 
-- The .NET Framework version 4.6 or a later version is available but strong cryptography (SchUseStrongCrypto) is disabled. 
+- The .NET Framework version 4.6 or a later version is not available.
+- The .NET Framework version 4.6 or a later version is available but strong cryptography (SchUseStrongCrypto) is disabled.
 
 ## Resolution
 
@@ -46,11 +46,11 @@ To fix these issues, make sure that the .NET Framework 4.6 or a later version is
 1. Open a Command Prompt window as an administrator. 
 2. At the elevated command prompt, run the following command: 
 
-    ```
+    ```console
     net stop obengine
     ```
 
-3. Start Registry Editor, and then navigate to the following registry subkeys: 
+3. Start Registry Editor, and then navigate to the following registry subkeys:
 
     `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\.NETFramework`
 
@@ -61,17 +61,13 @@ To fix these issues, make sure that the .NET Framework 4.6 or a later version is
     > [!NOTE]
     > These subkeys appear in the "v\<VersionNumber>" format.
 
-    :::image type="content" source="./media/asr-agent-disable-tls-pci-compliance/4034006_en_1.png" alt-text="Screenshot of subkeys.":::
+5. For each of these subkeys, add a **DWORD Value** that is named **SchUseStrongCrypto**, and set its value to **1**.
 
-5. For each of these subkeys, add a **DWORD Value** that is named **SchUseStrongCrypto**, and set its value to **1**. 
+6. Repeat step 5 for all the subkeys that have the "v\<VersionNumber>" format.
+7. Exit Registry Editor.
+8. At an elevated command prompt, run the following command:
 
-    :::image type="content" source="./media/asr-agent-disable-tls-pci-compliance/4034007_en_1.png" alt-text="Screenshot of DWORD Value":::
-
-6. Repeat step 5 for all the subkeys that have the "v\<VersionNumber>" format. 
-7. Exit Registry Editor. 
-8. At an elevated command prompt, run the following command: 
-
-    ```
+    ```console
     net start obengine
     ```
 

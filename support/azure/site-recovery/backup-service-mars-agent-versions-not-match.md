@@ -26,7 +26,7 @@ The following error message appears on the **Errors** tab of the **Job Details**
 
 The following is a sample of this error:
 
-:::image type="content" source="./media/backup-service-mars-agent-versions-not-match/4096068_en_1.png" alt-text="Error in log.":::
+:::image type="content" source="media/backup-service-mars-agent-versions-not-match/failed-backup-job-error.png" alt-text="Screenshot of a failed Backup error in Job Details dialog box.":::
 
 ## Cause
 
@@ -39,11 +39,12 @@ To resolve this issue, follow these steps:
 1. Close the Microsoft Azure Recovery Services Agent console.
 
     > [!IMPORTANT]
-    > If the server or the server's proxy has limited Internet access, follow steps 2 to 4. Otherwise, go to step 5. 
-2. To configure the firewall settings as mentioned earlier, run the following command from an elevated command prompt: 
-
-    `net stop obengine`  
-3. Make sure that the firewall settings on the server or proxy are configured to allow the URL that is appropriate to the Azure cloud that you are using. 
+    > If the server or the server's proxy has limited Internet access, follow steps 2 to 4. Otherwise, go to step 5.
+2. To configure the firewall settings as mentioned earlier, run the following command from an elevated command prompt:
+    ```console
+    net stop obengine
+    ``` 
+3. Make sure that the firewall settings on the server or proxy are configured to allow the URL that is appropriate to the Azure cloud that you are using.
 
     | Azure cloud| URL |
     |---|---|
@@ -53,18 +54,19 @@ To resolve this issue, follow these steps:
     | Azure German Cloud| https://login.microsoftonline.de |
     |||
 
-4. Run the following command from an elevated command prompt: 
-
-    `net start obengine`  
-5. Download the [latest version of Azure Backup Agent](https://go.microsoft.com/fwlink/?linkid=229525) to the server that has the issue. 
+4. Run the following command from an elevated command prompt:
+    ```console
+    net start obengine
+    ```   
+5. Download the [latest version of Azure Backup Agent](https://go.microsoft.com/fwlink/?linkid=229525) to the server that has the issue.
 6. Run the installer. The Microsoft Azure Recovery Services Agent Upgrade Wizard opens.
 
-    :::image type="content" source="./media/backup-service-mars-agent-versions-not-match/4096073_en_1.png" alt-text="The image about the wizard.":::
+    :::image type="content" source="media/backup-service-mars-agent-versions-not-match/azure-recovery-services-agent-upgrade-wizard.png" alt-text="Screenshot of the Microsoft Azure Recovery Services Agent Upgrade Wizard.":::
 
 7. Click **Next**.
 8. Click **Upgrade**.
 
-    :::image type="content" source="./media/backup-service-mars-agent-versions-not-match/4096074_en_1.png" alt-text="The image about Upgrade the agent.":::
+    :::image type="content" source="media/backup-service-mars-agent-versions-not-match/upgrade-installation.png" alt-text="Screenshot of upgrade installation of the Microsoft Azure Recovery Services Agent.":::
 
     The final confirmation screen indicates that Azure Backup Agent has been successfully updated.
 9. Close the wizard.
