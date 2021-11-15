@@ -467,14 +467,14 @@ To do so, compare the following folders:
 
 To do so, follow these steps:
 
-1. Open a Windows PowerShell session.
-2. Run the following cmdlet:
+1. Start Windows PowerShell.
+2. Run the following command:
 
     ```powershell
-    (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)"
+    (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)
     ```
 
-3. The output should look like this:
+3. The output should look like this example:
 
     ```output
     __GENUS          : 2
@@ -839,7 +839,7 @@ To fix this issue, follow these steps:
 If there's a failure during content replication, retry the replication by running the following cmdlet:
 
 ```powershell
-(gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)"
+(gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)
 ```
 
 It tells `HMan` to start a package notification and update thread in DistMgr to start replicating the content again. Consider that it changes the package version and copies the content to all child primary sites again.
