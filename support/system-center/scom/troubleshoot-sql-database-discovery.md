@@ -83,14 +83,14 @@ The SQL Server 2012 DB discovery uses the **SQL Server Discovery Account** Run A
 1. In the Operations Manager console, go to **Administration** > **Run As Configuration** > **Profiles**, and then open the properties of the **SQL Server Discovery Account** profile.
 2. Move to the **Run As Accounts** page.
 
-   :::image type="content" source="media/troubleshoot-sql-database-discovery/run-as-accounts.png" alt-text="The Run As accounts listed in the Run As accounts page." border="false":::
+   :::image type="content" source="media/troubleshoot-sql-database-discovery/run-as-accounts.png" alt-text="The Run As accounts that are listed in the Run As accounts page." border="false":::
 
    If a Run As account is listed in this page, it's the account that's used to run the discovery. If nothing is listed, the default Run As account on the server is used to run the discovery. To find the default Run As account on the server, follow these steps:
   
    1. In the Operations Manager console, go to **Administration** > **Run As Configuration** > **Profiles**, and then open the properties of the Default Action Account profile.
    2. Move to the **Run As Accounts** page, locate the server name in the **Path** column, and then note the corresponding account in the **Account Name** column.
 
-      :::image type="content" source="media/troubleshoot-sql-database-discovery/default-action-account.png" alt-text="The Run As accounts listed in the Run As accounts page." border="false":::
+      :::image type="content" source="media/troubleshoot-sql-database-discovery/default-action-account.png" alt-text="Locate the Path column and the account name column." border="false":::
 
       > [!NOTE]
       > This account is usually the Local System Action Account, sometimes it may be a user account.
