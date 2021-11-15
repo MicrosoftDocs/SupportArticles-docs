@@ -30,7 +30,7 @@ There are two Windows Azure Active Directory modules to administer Azure AD thro
 
 - MSOL - For more information about MSOL module, see the following articles:
 
-  - [Install-Module MSOnline](/powershell/azure/active-directory/install-msonlinev1?view=azureadps-1.0&viewFallbackFrom=azureadps-2.0&preserve-view=true)
+  - [Install-Module (MSOnline)](/powershell/azure/active-directory/install-msonlinev1)
   - [Connect-MsolService](/powershell/module/MSOnline/?view=azureadps-1.0&redirectedfrom=msdn#bkmk_installmodule&preserve-view=true)
 - AzureAD - For more information about AzureAD module, see the following articles:
 
@@ -49,7 +49,7 @@ This issue can occur under different circumstances.
   Get-AzureADUser -SearchString <userPrinicipalName or DisplayName> | fl UsageLocation
   ```
 
-- To resolve this issue, try assigning the license through PowerShell. see [Assign Microsoft 365 licenses to user accounts with PowerShell](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell?view=o365-worldwide&preserve-view=true). If that does not resolve the issue, collect the PowerShell log file that's located here and open a case with Microsoft:
+- To resolve this issue, try assigning the license through PowerShell. See [Assign Microsoft 365 licenses to user accounts with PowerShell](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell?view=o365-worldwide&preserve-view=true). If that does not resolve the issue, collect the PowerShell log file that's located here and open a case with Microsoft:
 
   > %userprofile%\appdata\local\microsoft\Office365\PowerShell
 
