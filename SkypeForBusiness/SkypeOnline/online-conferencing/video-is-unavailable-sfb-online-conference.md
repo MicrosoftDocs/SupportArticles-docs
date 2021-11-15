@@ -20,20 +20,20 @@ appliesto:
 
 ## Problem
 
-When you join a Skype for Business Online (formerly Lync Online) conference by using the Lync client, you can't see or connect to the video feed. This issue occurs if you use the **call me** option when you connect to the conference. 
+When you join a Skype for Business Online (formerly Lync Online) conference by using the Lync client, you can't see or connect to the video feed. This issue occurs if you use the **call me** option when you connect to the conference.
 
 ## Solution
 
-To work around this issue, don't use the **call me** option when you join a conference in Lync. Instead, use a phone to dial in to the audio conference. Then, you can add video by using Lync. 
+To work around this issue, don't use the **call me** option when you join a conference in Lync. Instead, use a phone to dial in to the audio conference. Then, you can add video by using Lync.
 
-1. Click the link in the meeting invitation to join the Lync meeting.   
+1. Click the link in the meeting invitation to join the Lync meeting.
 2. When the Join Meeting Audio window opens, select Do not join audio, and then click OK.
 
-    ![Screen shot of Join Meeting Audio windows and Do not join audio selected ](./media/video-is-unavailable-sfb-online-conference/join-audio.jpg)
+    :::image type="content" source="./media/video-is-unavailable-sfb-online-conference/join-audio.png" alt-text="Screenshot that shows the Join Meeting Audio windows and the Do not join audio option is selected.":::
 
     > [!NOTE]
-    > If you don't see the Join Meeting Audio window, you must enable it in **Options** before you join the meeting. In Lync, click **Options**, and then click **Phones**. Select Prompt me before joining to confirm or select another audio source.   
-3. Use your telephone to join the audio part of the meeting with the telephone number and ID or PIN that is provided by the audio conferencing provider in the meeting invitation.   
+    > If you don't see the Join Meeting Audio window, you must enable it in **Options** before you join the meeting. In Lync, click **Options**, and then click **Phones**. Select Prompt me before joining to confirm or select another audio source.
+3. Use your telephone to join the audio part of the meeting with the telephone number and ID or PIN that is provided by the audio conferencing provider in the meeting invitation.
 
 ## More Information
 

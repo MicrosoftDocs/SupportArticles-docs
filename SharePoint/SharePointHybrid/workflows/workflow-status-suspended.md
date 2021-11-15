@@ -32,7 +32,7 @@ To work around this issue, disable automatic updating of the workflow status to 
 1. Open the affected workflow in Microsoft SharePoint Designer 2013.
 1. On the Workflow Settings page for the workflow, clear the **Automatically update the workflow status to the current stage name** check box.
 
-   ![Uncheck automatically update option in Workflow settings page](./media/workflow-status-suspended/workflow.png)
+   :::image type="content" source="./media/workflow-status-suspended/workflow.png" alt-text="Screenshot that shows the option to uncheck the automatically update option on the Workflow settings page.":::
 
 1. Save the workflow, and then and publish it to the SharePoint website.
 1. Run the workflow again.

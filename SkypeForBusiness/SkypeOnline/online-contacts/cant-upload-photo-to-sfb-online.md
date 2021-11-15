@@ -23,7 +23,7 @@ appliesto:
 
 In Skype for Business Online (formerly Lync Online), you can't edit or remove your contact photo from Lync 2013. When you view the My Pictures setting under Options, the option for Edit or Remove Picture is unavailable (appears dimmed).
 
-![Screen shot of My Picture setting, showing the Edit or Remove Picure option is unavailable ](./media/cant-upload-photo-to-sfb-online/uncheck-edit-or-remove-picture.png)
+:::image type="content" source="./media/cant-upload-photo-to-sfb-online/uncheck-edit-or-remove-picture.png" alt-text="Screenshot that shows the My Picture setting with showing the Edit or Remove Picture option unavailable.":::
 
 ## Solution
 

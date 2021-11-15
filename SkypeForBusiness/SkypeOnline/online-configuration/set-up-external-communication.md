@@ -24,7 +24,7 @@ This guide enables your Skype for Business users to IM and talk with Skype for B
 
 > [!NOTE]
 > This is not the same as setting up external contacts in Outlook or sharing my website with outside people. Because each type of external contact has a different purpose.  
-> A Skype for Business external contact is someone outside your organization who's using a compatible IM and conferencing client - either Skype for Business or Skype. However, all that's required for Outlook external contacts or website sharing is a valid email address. For more information, see [Collaborating with people outside your organization](/microsoft-365/solutions/collaborate-with-people-outside-your-organization?view=o365-worldwide).
+> A Skype for Business external contact is someone outside your organization who's using a compatible IM and conferencing client - either Skype for Business or Skype. However, all that's required for Outlook external contacts or website sharing is a valid email address. For more information, see [Collaborating with people outside your organization](/microsoft-365/solutions/collaborate-with-people-outside-your-organization).
 
 First, we'll ask you a few quick questions about your Microsoft 365 setup. Then we'll give you all the information you need to complete up to four tasks.
 
@@ -57,7 +57,7 @@ Are you using a custom domain with Office 365?
 
 To set up your custom domain, sign in and select **Email address** in the Getting Started pane. (If you don't see the Getting Started pane, select **Setup** > **Open the Getting Started pane**.) For more information, see [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
 
-:::image type="content" source="media/set-up-external-communication/getting-started-pane.png" alt-text="screenshot of the Getting Started pane" border="false":::
+:::image type="content" source="media/set-up-external-communication/getting-started-pane.png" alt-text="Screenshot that shows the Getting Started pane.":::
 
 Have you already set up your custom domain?
 
@@ -74,7 +74,7 @@ When you've confirmed that your custom domain is set up correctly, continue to t
 
 Sign in to Microsoft 365, and go to **Admin** > **Service Settings** > **IM, meetings and conferencing** > **External communications**. For more information, see [Allow users to contact external Skype for Business users](/SkypeForBusiness/set-up-skype-for-business-online/allow-users-to-contact-external-skype-for-business-users).
 
-:::image type="content" source="media/set-up-external-communication/turn-on-external-communications.png" alt-text="turn on external communications" border="false":::
+:::image type="content" source="media/set-up-external-communication/turn-on-external-communications.png" alt-text="Screenshot that shows the external communications option set to ON.":::
 
 First, if you haven't already done so, turn on external communications for everyone in your organization.
 
@@ -106,7 +106,7 @@ After that make sure everything works as expected by running [Microsoft 365 Skyp
 
 Sign in to Microsoft 365, and go to **Admin** > **Service Settings** > **IM, meetings and conferencing** > **External communications**. For more information, see [Allow users to contact external Skype for Business users](/SkypeForBusiness/set-up-skype-for-business-online/allow-users-to-contact-external-skype-for-business-users).
 
-:::image type="content" source="media/set-up-external-communication/turn-on-external-communications.png" alt-text="turn on external communications" border="false":::
+:::image type="content" source="media/set-up-external-communication/turn-on-external-communications.png" alt-text="Screenshot that shows the external communications option set to ON.":::
 
 First, if you haven't already done so, turn on external communications for everyone in your organization.
 
@@ -126,7 +126,7 @@ Do you want your users to communicate with Skype for Business users in other org
 
 Sign in to Microsoft 365, and go to **Admin** > **Service Settings** > **IM, meetings and conferencing** > **External communications**. For more information, see [Allow users to contact external Skype for Business users](/SkypeForBusiness/set-up-skype-for-business-online/allow-users-to-contact-external-skype-for-business-users).
 
-:::image type="content" source="media/set-up-external-communication/turn-on-external-communications.png" alt-text="turn on external communications" border="false":::
+:::image type="content" source="media/set-up-external-communication/turn-on-external-communications.png" alt-text="Screenshot that shows the external communications option set to ON.":::
 
 First, if you haven't already done so, turn on external communications for everyone in your organization.
 
@@ -188,7 +188,7 @@ First, if you haven't already done so, turn on external communications for every
 
 Sign in to Microsoft 365, and go to **Admin Center** > **Settings** > **Services & add-ins** > **Skype for Business** > **External communications**. For more information, see [Allow users to contact external Skype for Business users](/SkypeForBusiness/set-up-skype-for-business-online/allow-users-to-contact-external-skype-for-business-users).
 
-:::image type="content" source="media/set-up-external-communication/all-domains-are-blocked-except.png" alt-text="the screenshot of the All domains are blocked except option" border="false":::
+:::image type="content" source="media/set-up-external-communication/all-domains-are-blocked-except.png" alt-text="Screenshot that shows the All domains are blocked except option in the External sharing window of Skype for Business.":::
 
 > [!IMPORTANT]
 > It may take up to 24 hours for your changes to take effect. You can save your current progress and return if you need to.
@@ -201,7 +201,7 @@ If you want to communicate with other Skype for Business organization, you'll ne
 
 If you want to allow your Skype for Business Online users to communicate with Skype consumer users? If so, make sure the following switch is enabled:
 
-:::image type="content" source="media/set-up-external-communication/enable-online-users-communicate-with-skype.png" alt-text="enable the communication with Skype users":::
+:::image type="content" source="media/set-up-external-communication/enable-online-users-communicate-with-skype.png" alt-text="Screenshot that shows the option to enable the communication with Skype users.":::
 
 Have you allowed your users to communicate with Skype for Business users in other organizations?
 
@@ -225,7 +225,7 @@ Are you using a custom domain with Microsoft 365?
 
 To set up your custom domain, sign in and go to **Admin** > **Setup**. For more information, see [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
 
-:::image type="content" source="media/set-up-external-communication/set-up-your-custom-domain.png" alt-text="setup custom domain" border="false":::
+:::image type="content" source="media/set-up-external-communication/set-up-your-custom-domain.png" alt-text="Screenshot that shows the setup custom domain option.":::
 
 Have you already set up your custom domain?
 

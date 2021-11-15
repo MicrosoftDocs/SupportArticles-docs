@@ -53,7 +53,7 @@ When this option is set to **$True**, the **Allow unauthenticated callers to be 
 > [!IMPORTANT]
 > Meeting organizers should always end meetings by selecting **End Meeting** from the Skype for Business meeting control menu. To do this, click the ellipses at the lower-right corner of the meeting window, and then select **End Meeting**. This makes sure that the meeting ends, that no unauthorized users can join without the organizer, and that all users are removed from the meeting. 
 >
-> ![Screen shot of the End Meeting option ](./media/meeting-organizer-not-prompted-for-leader-pin/select-end-meeting.png)
+> :::image type="content" source="./media/meeting-organizer-not-prompted-for-leader-pin/select-end-meeting.png" alt-text="Screenshot that shows how to find and select the End Meeting option.":::
 
 For more information about Skype for Business dial-in conferencing, see the following Microsoft websites:
 

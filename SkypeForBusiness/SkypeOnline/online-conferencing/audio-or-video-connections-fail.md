@@ -32,7 +32,7 @@ In most cases, audio and video connection issues can be resolved by following th
 1. If a Wi-Fi connection is available, switch to that connection, and make sure that only the **Require Wi-Fi for VoIP and video connections** setting is selected.
    - If you're using a corporate Wi-Fi connection that uses a proxy, you may have to configure the **HTTP Proxy** details in the Lync Mobile 2013 settings. 
 
-     ![Screen shot of the HTTP Proxy configuration page ](./media/audio-or-video-connections-fail/http-proxy.jpg)
+     :::image type="content" source="./media/audio-or-video-connections-fail/http-proxy.png" alt-text="Screenshot that shows the HTTP Proxy configuration page.":::
 
    - Skype for Business Online administrators should also make sure that the corporate firewall is configured correctly to allow necessary traffic in and out of the corporate network. For more information, see [You can't connect to Skype for Business Online, or certain features do not work, because an on-premises firewall blocks the connection](https://support.microsoft.com/help/2409256).   
 

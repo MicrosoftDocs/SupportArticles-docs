@@ -26,7 +26,7 @@ appliesto:
 
 When you try to use the Set Your Location feature in Microsoft Lync 2010 or Microsoft Lync 2013, the **Set Your Location** field is unavailable (dimmed), and you can't set your location.
 
-![Screen shot of the Set Your Location field ](./media/cant-set-location-in-lync/location-unvaliable.png)
+:::image type="content" source="./media/cant-set-location-in-lync/location-unvaliable.png" alt-text="Screenshot that shows the Set Your Location field in Microsoft Lync.":::
 
 ## More Information
 
