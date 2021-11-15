@@ -52,7 +52,7 @@ To resolve this issue, use a **Run** **Command Line** step. To do this, add the 
 reg.exe add HKLM\SOFTWARE\Policies\Microsoft\FVE /v EncryptionMethod  /t REG_DWORD /d 3 /f
 ```
 
-:::image type="content" source="media/earlier-versions-not-start-use-pre-provision-bitlocker/run-command-line.png" alt-text="Screenshot of the properties of Set BitLocker Key Strength AES 128 step in Install Windows 8.1 Default Template Task Sequence Editor." border="false":::
+:::image type="content" source="media/earlier-versions-not-start-use-pre-provision-bitlocker/run-command-line.png" alt-text="Screenshot of the properties of the added task sequence step: Set BitLocker Key Strength AES 128." border="false":::
 
 If an x64 boot image is used, select the option to disable 64-Bit file system redirection.
 
