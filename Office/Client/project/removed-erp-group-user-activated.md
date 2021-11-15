@@ -22,19 +22,19 @@ appliesto:
 
 ## Symptoms
 
-After removing users from an Active Directory security group used to synchronize user accounts in Project Web App's (PWA) 2013 Enterprise Resource Pool, resources are not inactivated.  Previous behavior in Project Web App 2010 the users were inactivated.
+After removing users from an Active Directory security group used to synchronize user accounts in Project Web App's (PWA) 2013 Enterprise Resource Pool, resources are not inactivated.  Previous behavior in Project Web App 2010 the users were inactivated.
 
 ## Cause
 
-This is by design in Project Online and new behavior in Project Server 2013 when using the default SharePoint permissions mode. When synchronizing security groups with the Enterprise Resource Pool (ERP), the users added to the ERP are not automatically inactivated if their account has been removed from the Active Directory group used to synchronize.
+This is by design in Project Online and new behavior in Project Server 2013 when using the default SharePoint permissions mode. When synchronizing security groups with the Enterprise Resource Pool (ERP), the users added to the ERP are not automatically inactivated if their account has been removed from the Active Directory group used to synchronize.
 
 The new behavior assumes that even when a user account is removed from an active directory group they may still be a valid resource that can be used in project plans by Project Managers and should not be marked as inactive.
 
-This is only true when using SharePoint permissions mode. Project Server 2013 and Project Online use SharePoint permissions mode by default in all new instances.  Project Server permissions mode will be in use on an upgraded Project Server 2010 site.  An Administrator can also set Project Server permissions mode on specific instances of PWA if more granular control of permissions are needed.  For more information about Project Online or Project Server 2103 permissions modes, see [Plan user access in Project Server 2013](https://technet.microsoft.com/library/fp161361.aspx).  
+This is only true when using SharePoint permissions mode. Project Server 2013 and Project Online use SharePoint permissions mode by default in all new instances.  Project Server permissions mode will be in use on an upgraded Project Server 2010 site.  An Administrator can also set Project Server permissions mode on specific instances of PWA if more granular control of permissions are needed.  For more information about Project Online or Project Server 2103 permissions modes, see [Plan user access in Project Server 2013](https://technet.microsoft.com/library/fp161361.aspx).  
 
 ## Resolution
 
-To remove a user's access to log into PWA, use one of the following options:
+To remove a user's access to log into PWA, use one of the following options:
 
 **Remove the user's Project Online license**
  

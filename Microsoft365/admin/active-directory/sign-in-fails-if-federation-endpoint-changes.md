@@ -26,7 +26,7 @@ appliesto:
 
 ## Problem
 
-After you change Active Directory Federation Services (AD FS) service endpoint settings in the AD FS Management Console, single sign-on (SSO) authentication to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune fails, and you experience one of the following symptoms:
+After you change Active Directory Federation Services (AD FS) service endpoint settings in the AD FS Management Console, single sign-on (SSO) authentication to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune fails, and you experience one of the following symptoms:
 
 - Federated users can't sign-in to Office 365, Azure, or Intune by using rich client applications.
 - Browser applications repeatedly prompt users for credentials when they try to authenticate to AD FS during SSO authentication.
@@ -83,7 +83,7 @@ To restore AD FS default service endpoint settings, follow these steps on the pr
 
 For more info about how to troubleshoot Kerberos authentication issues, see the following Microsoft Knowledge Base article:
 
-[2461628](https://support.microsoft.com/help/2461628) A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune
+[2461628](https://support.microsoft.com/help/2461628) A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune
 
 ## More Information
 

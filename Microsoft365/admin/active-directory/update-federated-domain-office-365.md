@@ -33,9 +33,9 @@ Single sign-on (SSO) in a Microsoft cloud service such as Office 365, Microsoft 
  
 The configuration of the federated domain has to be updated in the scenarios that are described in the following Microsoft Knowledge Base articles. 
 
-- [2713898 ](https://support.microsoft.com/help/2713898) "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune    
-- [2535191 ](https://support.microsoft.com/help/2535191)""Sorry, but we're having trouble signing you in" and "80048163" error when a federated user tries to sign in to Office 365, Azure, or Intune    
-- [2647020 ](https://support.microsoft.com/help/2647020)  "Sorry, but we're having trouble signing you in" and "80041317" or "80043431" error when a federated user tries to sign in to Office 365, Azure, or Intune    
+- [2713898 ](https://support.microsoft.com/help/2713898) "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune    
+- [2535191 ](https://support.microsoft.com/help/2535191)""Sorry, but we're having trouble signing you in" and "80048163" error when a federated user tries to sign in to Office 365, Azure, or Intune    
+- [2647020 ](https://support.microsoft.com/help/2647020)  "Sorry, but we're having trouble signing you in" and "80041317" or "80043431" error when a federated user tries to sign in to Office 365, Azure, or Intune    
 
 To update the configuration of the federated domain on a domain-joined computer that has Azure Active Directory Module for Windows PowerShell installed, follow these steps:
 
@@ -79,9 +79,9 @@ If the token-signing certificate is automatically renewed in an environment wher
 
 The configuration of the federated domain has to be repaired in the scenarios that are described in the following Microsoft Knowledge Base articles. 
 
-- [2523494 ](https://support.microsoft.com/help/2523494)  You receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Intune    
-- [2618887 ](https://support.microsoft.com/help/2618887)  "Federation service identifier specified in the AD FS 2.0 server is already in use." error when you try to set up another federated domain in Office 365, Azure, or Intune    
-- [2713898 ](https://support.microsoft.com/help/2713898)  "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune     
+- [2523494 ](https://support.microsoft.com/help/2523494)  You receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Intune    
+- [2618887 ](https://support.microsoft.com/help/2618887)  "Federation service identifier specified in the AD FS 2.0 server is already in use." error when you try to set up another federated domain in Office 365, Azure, or Intune    
+- [2713898 ](https://support.microsoft.com/help/2713898)  "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune     
 - [2647020 ](https://support.microsoft.com/help/2647020) "Your organization could not sign you in to this service" error and "80041317" or "80043431" error code when a federated user tries to sign in to Office 365   
 - The Federation Service name in AD FS is changed. For more info, go to the following Microsoft website: [AD FS 2.0: How to Change the Federation Service Name](https://social.technet.microsoft.com/wiki/contents/articles/ad-fs-2-0-how-to-change-the-federation-service-name.aspx)   
 
@@ -115,10 +115,10 @@ The following scenarios cause problems when you update or repair a federated dom
 
 - You can't connect by using Windows PowerShell. For more info about this issue, see the following Microsoft Knowledge Base article: 
 
-  [2494043 ](https://support.microsoft.com/help/2494043)  You cannot connect by using the Azure Active Directory Module for Windows PowerShell   
-- The Azure Active Directory Module for Windows PowerShell can't load because of missing prerequisites. For more info, see the following Microsoft Knowledge Base article:  
+  [2494043 ](https://support.microsoft.com/help/2494043)  You cannot connect by using the Azure Active Directory Module for Windows PowerShell   
+- The Azure Active Directory Module for Windows PowerShell can't load because of missing prerequisites. For more info, see the following Microsoft Knowledge Base article:  
   
-  [2461873 ](https://support.microsoft.com/help/2461873)  You can't open the Azure Active Directory Module for Windows PowerShell    
+  [2461873 ](https://support.microsoft.com/help/2461873)  You can't open the Azure Active Directory Module for Windows PowerShell    
 - You get an "Access Denied" error message when you try to run the set-MSOLADFSContext cmdlet. For more info, see the following Microsoft Knowledge Base article: 
 
   [2587730 ](https://support.microsoft.com/help/2587730) "The connection to \<ServerName> Active Directory Federation Services 2.0 server failed" error when you use the Set-MsolADFSContext cmdlet    

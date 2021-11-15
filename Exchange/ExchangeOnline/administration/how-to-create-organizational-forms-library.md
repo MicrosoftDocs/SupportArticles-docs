@@ -30,7 +30,7 @@ This article discusses how to create organizational forms in Exchange Online and
 
 ## More information
 
-1. Do one of the following, as appropriate for your situation:
+1. Do one of the following, as appropriate for your situation:
 
    - Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    - In Exchange Server, open the Exchange Management Shell.
@@ -67,7 +67,7 @@ This article discusses how to create organizational forms in Exchange Online and
     Add-PublicFolderClientPermission -identity "\NON_IPM_SUBTREE\EFORMS REGISTRY\Organizational Forms Library" -user Admin@domain.com -AccessRights CreateItems
     ```
 
-7. Add a user as the owner of the Organizational Forms Library folder if they have to publish or create forms in the library. To do this, run the following command:
+7. Add a user as the owner of the Organizational Forms Library folder if they have to publish or create forms in the library. To do this, run the following command:
 
    ```powershell
    Add-PublicFolderClientPermission "\NON_IPM_SUBTREE\EFORMS REGISTRY\Organizational forms library" -User <User@domain.com> -AccessRights Owner

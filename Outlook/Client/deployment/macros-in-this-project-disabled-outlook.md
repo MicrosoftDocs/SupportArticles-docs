@@ -26,12 +26,12 @@ _Original KB number:_ &nbsp;4465120
 
 Considering the following scenario:
 
-- You set the Macro Security to **Notifications for digitally signed macros, all other macros disabled** on the **Developer**  tab in Microsoft Outlook.
+- You set the Macro Security to **Notifications for digitally signed macros, all other macros disabled** on the **Developer**  tab in Microsoft Outlook.
 - You create a macro and assign a Digital Signature certificate to the macro under **Tools** > **Digital Signature** in Visual Basic.
-- You close Visual Basic and Outlook. When you're prompted to save the Visual Basic project, you click **Yes**.
-- You start Outlook, and then you start Visual Basic.
+- You close Visual Basic and Outlook. When you're prompted to save the Visual Basic project, you click **Yes**.
+- You start Outlook, and then you start Visual Basic.
 
- In this scenario, you receive the error message: **An error occurred while attempting to verify the VBA project's signature. Macros will be disabled**.
+ In this scenario, you receive the error message: **An error occurred while attempting to verify the VBA project's signature. Macros will be disabled**.
 
  When you try to run the macro, you receive the error message: **The macros in this project are disabled. Please refer to the online help or documentation of the host application to determine how to enable macros**.
 
@@ -43,5 +43,5 @@ This issue occurs because exiting Visual Basic effectively cancels the changes t
 
 Manually save the changes that you made to the project before you close the Visual Basic window by using either of the following methods:
 
-- Go to **File** > **Save VbaProject.OTM**.
+- Go to **File** > **Save VbaProject.OTM**.
 - Click the **Save** icon on the toolbar in the Visual Basic window.

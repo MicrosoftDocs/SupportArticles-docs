@@ -44,7 +44,7 @@ The error may be resolved in Outlook 2016, Outlook 2013 or Outlook 2007 by delet
 
 Delete and recreate the OST file
 
-- Outlook 2019, 2016, 2013, or Outlook for Office 365
+- Outlook 2019, 2016, 2013, or Outlook for Office 365
   1. On the **File** tab, select **Account Settings**, and then select **Account Settings**.
   2. In the **Account Settings** dialog, select **Data Files**.
   3. Locate the OST file for your email address, and note the path and filename of the OST file.
@@ -66,13 +66,13 @@ Delete and recreate the OST file
 
 Create a new Outlook profile
 
-Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2007, or Outlook for Office 365
+Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2007, or Outlook for Office 365
 
 1. Launch Control Panel.
 
-    In Windows 10, Windows 8.1 and Windows 8: Type Control Panel at the **Start** screen, and then select **Control Panel** in the search results.
+    In Windows 10, Windows 8.1 and Windows 8: Type Control Panel at the **Start** screen, and then select **Control Panel** in the search results.
 
-    In Windows 7 and Windows Vista: select **Start**, type *Control Panel* in the **Start Search** box, and then press Enter.
+    In Windows 7 and Windows Vista: select **Start**, type *Control Panel* in the **Start Search** box, and then press Enter.
 
 2. In Control Panel, locate and double-select Mail.
 3. Select **Show Profiles**, and then select **Add**.

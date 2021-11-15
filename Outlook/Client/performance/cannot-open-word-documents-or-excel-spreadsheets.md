@@ -38,7 +38,7 @@ _Original KB number:_ &nbsp; 3020607
 
 ## Symptoms
 
-You receive one of the following errors when you try to open a Microsoft Word document or Microsoft Excel spreadsheet from an external source:
+You receive one of the following errors when you try to open a Microsoft Word document or Microsoft Excel spreadsheet from an external source:
 
 > Word experienced an error trying to open the file. Try the following suggestions:
 >
@@ -74,4 +74,4 @@ To resolve this issue, start the Windows Firewall service. To do this, follow th
 
 ## More information
 
-If you are unable to preview an Office file attachment in the Microsoft Outlook reading pane, see [Can't preview Office documents in Outlook if Windows Firewall Service is disabled](https://support.microsoft.com/help/2912722).
+If you are unable to preview an Office file attachment in the Microsoft Outlook reading pane, see [Can't preview Office documents in Outlook if Windows Firewall Service is disabled](https://support.microsoft.com/help/2912722).

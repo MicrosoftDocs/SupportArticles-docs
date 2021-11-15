@@ -19,7 +19,7 @@ appliesto:
 
 ## Symptoms
 
-In Skype for Business Online, the **LastActive** attribute occasionally shows outdated information (for example, a user may see a colleague who was online yesterday as "Offline 88 days"). This behavior may occur even when the **LastActive** attribute is disabled. A user whose **LastActive** attribute is incorrect can resolve the inaccurate time stamp by signing out and in or by manually changing their presence. 
+In Skype for Business Online, the **LastActive** attribute occasionally shows outdated information (for example, a user may see a colleague who was online yesterday as "Offline 88 days"). This behavior may occur even when the **LastActive** attribute is disabled. A user whose **LastActive** attribute is incorrect can resolve the inaccurate time stamp by signing out and in or by manually changing their presence. 
 
 ## Status
 

@@ -33,7 +33,7 @@ The mouse wheel behavior in Form View was intentionally changed in Access 2007 a
 You can continue to use your mouse wheel in Form View in Access 2007 and in Access 2010. To do this, enable your database, or move it to a trusted location. Then, follow these steps:
 
 1. Open the form in Design View.   
-2. Use the Alt+F11 key combination, or click **View Code** in the Tools group on the Ribbon, to open the Microsoft Visual Basic editor window.    
+2. Use the Alt+F11 key combination, or click **View Code** in the Tools group on the Ribbon, to open the Microsoft Visual Basic editor window.    
 3. Paste the following code into the code window.
 
     ```vb

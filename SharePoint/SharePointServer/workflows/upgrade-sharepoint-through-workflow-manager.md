@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 4073758
 
 ## Summary
 
-When you upgrade Microsoft SharePoint 2013 to Microsoft SharePoint 2016, you don't have to create a new Workflow Manager installation. You can use the same installation that was used by the SharePoint 2013 farm in the new SharePoint 2016 farm.
+When you upgrade Microsoft SharePoint 2013 to Microsoft SharePoint 2016, you don't have to create a new Workflow Manager installation. You can use the same installation that was used by the SharePoint 2013 farm in the new SharePoint 2016 farm.
 
 However, you may have to create a new installation of Workflow Manager in certain circumstances. For example, if you want to move Workflow Manager to a different Windows operating system, or if the back-end database server is decommissioned. In these situations, follow the steps in [Workflow Manager Disaster Recovery](/archive/blogs/biztalknotes/workflow-manager-disaster-recovery) to create the new Workflow Manager installation by using the old databases. Make sure that you use the most recent copy of the Workflow Manager databases.
 
@@ -31,7 +31,7 @@ However, you may have to create a new installation of Workflow Manager in certai
 
 When you use SharePoint Server together with Workflow Manager, Workflow Manager keeps a record of the SharePoint sites that have published workflows. Each site is represented in Workflow Manager as a *scope*. Workflow Manager also stores the workflow definitions, all workflow instances, and their statuses.
 
-SharePoint stores the workflow history and workflow task information for SharePoint workflows. When the workflow status page is loaded, SharePoint first makes a call to Workflow Manager to see whether the workflow exists. To do this, it uses the workflow instance ID. Then, SharePoint loads the rest of the workflow information. If the workflow instance ID is missing in Workflow Manager, or if an error occurs during communication with Workflow Manager, you receive an error message.
+SharePoint stores the workflow history and workflow task information for SharePoint workflows. When the workflow status page is loaded, SharePoint first makes a call to Workflow Manager to see whether the workflow exists. To do this, it uses the workflow instance ID. Then, SharePoint loads the rest of the workflow information. If the workflow instance ID is missing in Workflow Manager, or if an error occurs during communication with Workflow Manager, you receive an error message.
 
 ## Upgrade SharePoint 2013 to SharePoint 2016 through Workflow Manager
 
@@ -64,9 +64,9 @@ If your site URL is changed in SharePoint 2016 but the site ID remains the same,
 
 ### Issue 2: Workflows don't start on some sites
 
-If workflows don't start on some sites, republish the workflows from the affected site. Or, run the **Refresh Trusted Security Token Services Metadata feed** timer job.
+If workflows don't start on some sites, republish the workflows from the affected site. Or, run the **Refresh Trusted Security Token Services Metadata feed** timer job.
 
-### Issue 3: Workflows fail and return "Cannot get app principal permission information" error
+### Issue 3: Workflows fail and return "Cannot get app principal permission information" error
 
 **Symptoms**
 
@@ -75,7 +75,7 @@ Consider the following scenario:
 - You have SharePoint 2013 workflows and Workflow Manager configured in your farm.
 - You have recently connected sites in the farm to a previously existing instance of Workflow Manager.
 
-In this scenario, workflows that are created after you connect to the Workflow Manager installation finish successfully. However, workflows that are created before you connect to Workflow Manager don't finish. Instead, they get stuck when they try to finish or they remain in a suspended state. For workflows that remain suspended, you receive an HTTP 500 error. Additionally, the following entry is logged in the ULS log:
+In this scenario, workflows that are created after you connect to the Workflow Manager installation finish successfully. However, workflows that are created before you connect to Workflow Manager don't finish. Instead, they get stuck when they try to finish or they remain in a suspended state. For workflows that remain suspended, you receive an HTTP 500 error. Additionally, the following entry is logged in the ULS log:
 
 > Cannot get app principal permission information.
 
@@ -138,7 +138,7 @@ To get the `SPAuthenticationRealm` value of `ApplicationID` that's stored in the
     > [!NOTE]
     > The GUID that appears before the at sign (@) is the ID of the `SPWeb` object, and the GUID that appears after the at sign is the `SPAuthenticationRealm` value.
 
-Alternatively, you can find the `SPAuthenticationRealm` value in ULS log, such as in the following example log entry:
+Alternatively, you can find the `SPAuthenticationRealm` value in ULS log, such as in the following example log entry:
 
 > Date/Time                 w3wp.exe (SPWFE01:0x51FC)    0x1298  SharePoint Foundation  Authentication Authorization    an3eg    Medium               Cannot get app principal permission information. AppId=i:0i.t|ms.sp.ext|**\<SPWeb object ID>@\<SPAuthenticationRealm>**
 >

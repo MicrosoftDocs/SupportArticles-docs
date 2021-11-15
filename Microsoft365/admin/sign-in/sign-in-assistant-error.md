@@ -43,15 +43,15 @@ This issue occurs if one of the following conditions is true:
 
 To troubleshoot this issue, follow these steps:
 
-1. Make sure that Microsoft Online Services Sign-in Assistant is installed on the computer. To do this, open Control Panel, and then in the **Add or Remove Programs** or **Programs and Features** tool, verify that Office Professional Plus is in the list of installed programs.
+1. Make sure that Microsoft Online Services Sign-in Assistant is installed on the computer. To do this, open Control Panel, and then in the **Add or Remove Programs** or **Programs and Features** tool, verify that Office Professional Plus is in the list of installed programs.
 
 1. Make sure that the services that are used by Office Professional Plus are started. To do this, follow these steps:
 
     1. Click Start, click Run, type services.msc, and then click OK.
 
-    2. In the list of services, verify that the Office Software Protection Platform service and the Microsoft Office 2010 Subscription Agent service are started. To do this, right-click each service (one at a time), click Properties, and then see whether the Service status is displayed as Started.
+    2. In the list of services, verify that the Office Software Protection Platform service and the Microsoft Office 2010 Subscription Agent service are started. To do this, right-click each service (one at a time), click Properties, and then see whether the Service status is displayed as Started.
 
-        If the service isn't started, click Start, click Automatic in the **Startup type** box, and then click OK.
+        If the service isn't started, click Start, click Automatic in the **Startup type** box, and then click OK.
 
 1. Browse to this [website](https://login.microsoftonline.com), and then make sure that you can successfully sign in by using your user ID.
 
@@ -59,7 +59,7 @@ To troubleshoot this issue, follow these steps:
 
 1. If the problem persists, enable tracing for Microsoft Online Services Sign-in Assistant, and then analyze the log files. For more information about how to enable tracing and troubleshoot Microsoft Online Services Sign-in Assistant issues, see the following Microsoft Knowledge Base article:
 
-      [2433327](https://support.microsoft.com/help/2433327) How to enable and disable a trace for the Microsoft Online Services Sign-in Assistant to troubleshoot non-browser based sign-in issues.
+      [2433327](https://support.microsoft.com/help/2433327) How to enable and disable a trace for the Microsoft Online Services Sign-in Assistant to troubleshoot non-browser based sign-in issues.
 
 ## More information
 

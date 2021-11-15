@@ -26,7 +26,7 @@ search.appverid: MET150
 _Original KB number:_ &nbsp; 10106
 
 > [!NOTE]
-> If you would like to share calendar or folder to others, or change permissions after sharing rather than opening, check the following articles at first:
+> If you would like to share calendar or folder to others, or change permissions after sharing rather than opening, check the following articles at first:
 >
 > - Outlook 2016/2013/2010/2007: [Share an Outlook calendar with other people](https://support.microsoft.com/office/share-an-outlook-calendar-with-other-people-353ed2c1-3ec5-449d-8c73-6931a0adab88)
 > - Outlook.com: [Share your calendar in Outlook.com](https://support.microsoft.com/office/share-your-calendar-in-outlook-com-0fc1cb48-569d-4d1e-ac20-5a9b3f5e6ff2)
@@ -36,7 +36,7 @@ _Original KB number:_ &nbsp; 10106
 
 **Who is it for?**
 
-Users of Outlook, Outlook for Mac, Outlook on the Web and Outlook Web App who can't open shared calendars from an invitation.
+Users of Outlook, Outlook for Mac, Outlook on the Web and Outlook Web App who can't open shared calendars from an invitation.
 
 **How does it work?**
 
@@ -606,8 +606,8 @@ If you get other errors, try the following instruction for general troubleshooti
 
 2. Check the right bottom corner in Outlook to see if the status looks like below to make sure Outlook is connected to the network and able to receive mail successfully, and isn't too busy performing other tasks such as updating folders.
 
-    If you see :::image type="icon" source="./media/how-to-open-shared-calendar/connected-status.png" alt-text="Screenshot of the message that says Connected to: Microsoft Exchange.":::, it indicates that the Outlook 2013 is connected to the network and Exchange server successfully.
-    If you see :::image type="icon" source="./media/how-to-open-shared-calendar/disconnected-status.png" alt-text="Screenshot of the message that says disconnected.":::, it indicates that the Outlook 2013 isn't connected to the network or Exchange server, check your network cable connection or contact your Network Admin.
+    If you see :::image type="icon" source="./media/how-to-open-shared-calendar/connected-status.png" alt-text="Screenshot of the message that says Connected to: Microsoft Exchange.":::, it indicates that the Outlook 2013 is connected to the network and Exchange server successfully.
+    If you see :::image type="icon" source="./media/how-to-open-shared-calendar/disconnected-status.png" alt-text="Screenshot of the message that says disconnected.":::, it indicates that the Outlook 2013 isn't connected to the network or Exchange server, check your network cable connection or contact your Network Admin.
 
 3. Try again later to see if the shared calendar works.
 
@@ -689,7 +689,7 @@ To open a shared calendar from the Outlook sharing invitation, select the **Acce
 
 ### Open a shared calendar in Outlook on the web
 
-To open a shared calendar from the sharing invitation, select the **Accept** button in the sharing invitation. The shared calendar will be added to your **Calendar** pane under the **People's calendars**  section.
+To open a shared calendar from the sharing invitation, select the **Accept** button in the sharing invitation. The shared calendar will be added to your **Calendar** pane under the **People's calendars**  section.
 
 :::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-outlook-on-the-web.png" alt-text="Screenshot of opening a shared calendar in Outlook on the web." border="false":::
 

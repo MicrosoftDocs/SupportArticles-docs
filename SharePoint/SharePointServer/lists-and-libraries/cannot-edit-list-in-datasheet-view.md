@@ -1,6 +1,6 @@
 ---
 title: List or view is read-only in SharePoint Datasheet View
-description: Fixes an issue in which a list or view is read-only when you try to edit the list in SharePoint Datasheet View.
+description: Fixes an issue in which a list or view is read-only when you try to edit the list in SharePoint Datasheet View.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2274841
 
 ## Symptoms
 
-When choosing to edit a list in Microsoft SharePoint Datasheet View, the list or view is read-only. You can observe this by seeing the message "This view is read-only" at the bottom of the datasheet.
+When choosing to edit a list in Microsoft SharePoint Datasheet View, the list or view is read-only. You can observe this by seeing the message "This view is read-only" at the bottom of the datasheet.
 
 ## Cause
 
@@ -34,7 +34,7 @@ The Microsoft SharePoint **Content Approval** setting has been turned on for the
 
 Make your edits in Microsoft SharePoint Standard View or turn off **Content Approval**.
 
-To turn off **Content Approval** in Microsoft SharePoint, do the following:
+To turn off **Content Approval** in Microsoft SharePoint, do the following:
 
 1. In the list, select **Settings**.
 2. Select **List Settings**.

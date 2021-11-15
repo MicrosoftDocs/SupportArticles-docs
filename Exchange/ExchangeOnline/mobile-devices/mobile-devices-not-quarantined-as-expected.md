@@ -33,7 +33,7 @@ For example, consider the following scenario:
     Method 1
 
       1. Locate Exchange Admin Center > **recipients** > **mailboxes**.
-      2. On the right side under **Mobile Devices**, select **View details**, and then remove the device from the list of all mobile devices.
+      2. On the right side under **Mobile Devices**, select **View details**, and then remove the device from the list of all mobile devices.
 
     Method 2
 
@@ -41,11 +41,11 @@ For example, consider the following scenario:
 
 3. After the device is removed, the user tries to add or configure the same device.
 
-In this scenario, the device is not quarantined and is allowed to connect. In the Office 365 Exchange admin center, mobile device details for the user show a status of **Access granted**, and the `Get-MobileDevice` cmdlet shows that the `DeviceAccessState` parameter value is **Allowed**. This is not the expected result. Instead, you expect the device to be quarantined.
+In this scenario, the device is not quarantined and is allowed to connect. In the Office 365 Exchange admin center, mobile device details for the user show a status of **Access granted**, and the `Get-MobileDevice` cmdlet shows that the `DeviceAccessState` parameter value is **Allowed**. This is not the expected result. Instead, you expect the device to be quarantined.
 
 ## Cause
 
-When the device is removed (either from the Office 365 Exchange Admin Center or through PowerShell by using the `Remove-MobileDevice` cmdlet), the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters are not cleared. Therefore, when the user tries to connect by using the device that was previously removed, the device ID is still populated in the `ActiveSyncAllowedDeviceIDs` parameter, so the device is not quarantined and is allowed to connect.
+When the device is removed (either from the Office 365 Exchange Admin Center or through PowerShell by using the `Remove-MobileDevice` cmdlet), the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters are not cleared. Therefore, when the user tries to connect by using the device that was previously removed, the device ID is still populated in the `ActiveSyncAllowedDeviceIDs` parameter, so the device is not quarantined and is allowed to connect.
 
 ## Workaround
 

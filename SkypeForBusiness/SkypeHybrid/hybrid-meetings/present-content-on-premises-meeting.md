@@ -29,7 +29,7 @@ Online hosted users report that they receive the following error message when th
 
 ## Cause
 
-This issue occurs because the user's Skype for Business client can't resolve the DNS entry for the Edge server's web conferencing service FQDN. This issue typically occurs because a split DNS has been configured for the sip domain, and there is no entry in the internal DNS zone for the Edge server's external DNS A records for the web conferencing service. 
+This issue occurs because the user's Skype for Business client can't resolve the DNS entry for the Edge server's web conferencing service FQDN. This issue typically occurs because a split DNS has been configured for the sip domain, and there is no entry in the internal DNS zone for the Edge server's external DNS A records for the web conferencing service. 
 
 ## Resolution
 
@@ -37,7 +37,7 @@ Add DNS A records for the Edge server's web conferencing service for all Skype f
 
 ### Technical information
 
-Users who are homed online will connect to meeting content through the Edge proxy service. If the DNS record can't be resolved, these users will be unable to connect. In this situation, the Skype for Business local tracing log will display the following error in the diagnostic header in the Service out message error report for the failed connection attempt: 
+Users who are homed online will connect to meeting content through the Edge proxy service. If the DNS record can't be resolved, these users will be unable to connect. In this situation, the Skype for Business local tracing log will display the following error in the diagnostic header in the Service out message error report for the failed connection attempt: 
 
 ```adoc
 54503;reason="Connection to the Web Conferencing Server could not be established due to client DNS configuration"

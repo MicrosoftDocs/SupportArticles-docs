@@ -40,7 +40,7 @@ Take one of the following actions:
 
 - Disable Office 365 integration in Windows Server Essentials.
 
-  If you want to use the Office 365 portal to manage users, you should disable Office 365 integration in Windows Server Essentials. To do this, click **Disable the integration** under **Services** in the Windows Server Essentials Dashboard.
+  If you want to use the Office 365 portal to manage users, you should disable Office 365 integration in Windows Server Essentials. To do this, click **Disable the integration** under **Services** in the Windows Server Essentials Dashboard.
 
 ## MORE INFORMATION
 

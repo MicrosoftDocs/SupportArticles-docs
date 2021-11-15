@@ -25,7 +25,7 @@ You download Microsoft Office Professional Plus from the Office 365 Subscription
 
 ## Cause
 
-The downloaded file is incomplete or corrupt
+The downloaded file is incomplete or corrupt
 
 ## Resolution
 

@@ -31,11 +31,11 @@ Remote Server returned '550 5.6.0 APPROVAL.InvalidExpiry; Cannot read expiry pol
 
 ## Cause
 
-The message approval agent requires that the retention policy has a retention policy tag with the `IsDefaultModeratedRecipientsPolicyTag` property is set on it.
+The message approval agent requires that the retention policy has a retention policy tag with the `IsDefaultModeratedRecipientsPolicyTag` property is set on it.
 
 ## Resolution
 
-For moderated distribution groups in your Exchange organization, you must create a retention policy tag that has the `IsDefaultModeratedRecipientsPolicyTag` property set.
+For moderated distribution groups in your Exchange organization, you must create a retention policy tag that has the `IsDefaultModeratedRecipientsPolicyTag` property set.
 
 To set the retention policy tag, do the following:
 

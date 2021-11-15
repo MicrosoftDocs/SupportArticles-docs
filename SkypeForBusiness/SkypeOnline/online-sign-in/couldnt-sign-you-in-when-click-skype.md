@@ -29,14 +29,14 @@ Consider the following scenario.
 
 ## Solution
 
-For Skype for Business Online (formerly Lync Online) chat integration to work in Office Online Web App, remove the SharePoint Online URL from the **Local intranet** or **Trusted sites** settings under **Internet Options**.
+For Skype for Business Online (formerly Lync Online) chat integration to work in Office Online Web App, remove the SharePoint Online URL from the **Local intranet** or **Trusted sites** settings under **Internet Options**.
 
 > [!NOTE]
-> The Open with Explorer feature requires that your SharePoint Online URLs are included in your **Trusted Sites** list. If you want to use the Open with Explorer feature, you must add this URL back to your trusted sites. 
+> The Open with Explorer feature requires that your SharePoint Online URLs are included in your **Trusted Sites** list. If you want to use the Open with Explorer feature, you must add this URL back to your trusted sites. 
 
 ## More Information
 
-This issue occurs because SharePoint Online URL domains (*.sharepoint.com) are typically added to the **Trusted** or **Local intranet** zones in Internet Explorer or Microsoft Edge. For more information, see the following Microsoft website:
+This issue occurs because SharePoint Online URL domains (*.sharepoint.com) are typically added to the **Trusted** or **Local intranet** zones in Internet Explorer or Microsoft Edge. For more information, see the following Microsoft website:
 
 [Office 365 URLs and IP address ranges](https://support.office.com/article/office-365-urls-and-ip-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
 

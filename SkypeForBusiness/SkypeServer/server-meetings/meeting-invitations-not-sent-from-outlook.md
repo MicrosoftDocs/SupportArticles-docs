@@ -37,7 +37,7 @@ This problem occurs because of a known issue in the KB 3114831 version of UCAddi
 
 ## Resolution
 
-To fix this problem, install the [June 7, 2016 update (KB3115033)](https://support.microsoft.com/help/3115033) for Microsoft Lync 2013 (Skype for Business).
+To fix this problem, install the [June 7, 2016 update (KB3115033)](https://support.microsoft.com/help/3115033) for Microsoft Lync 2013 (Skype for Business).
 
 ## Workaround
 
@@ -61,7 +61,7 @@ Change the manner in which the Skype for Business Add-in for Outlook (UCAddin.dl
 Follow these steps:   
 
 1. Open **Outlook Options**.   
-2. On the **Mail** tab, locate the **Send messages** section.   
+2. On the **Mail** tab, locate the **Send messages** section.   
 3. Clear the **Use Auto-Complete List to suggest names when typing in the To, CC, and Bcc lines** check box. The, click the **Empty Auto-Complete List** button.
 
 ## More information

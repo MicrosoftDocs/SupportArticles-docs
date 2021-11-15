@@ -26,7 +26,7 @@ appliesto:
 
 ## Symptoms
 
-The F4 keyboard shortcut does not work as expected in Microsoft Excel 2013, Excel 2010, or Excel 2007. 
+The F4 keyboard shortcut does not work as expected in Microsoft Excel 2013, Excel 2010, or Excel 2007. 
 
 For example, when you sort a row (row A), and then you press F4 to repeat the action on another row (row B), row B is not sorted. Or, when you copy and paste a cell, and then you press F4, the cell is pasted. However, when you press F4 again, the cell is not pasted.
 
@@ -36,8 +36,8 @@ This is a known issue in Excel 2013, Excel 2010, and Excel 2007.
 
 ## Workaround
 
-If you cannot use the F4 keyboard shortcut to repeat a command or action, manually perform the command or action that you want to repeat.
+If you cannot use the F4 keyboard shortcut to repeat a command or action, manually perform the command or action that you want to repeat.
 
 ## More Information
 
-F4 is a predefined keyboard shortcut in Excel that repeats your last command or action. However, the shortcut does not always work.
+F4 is a predefined keyboard shortcut in Excel that repeats your last command or action. However, the shortcut does not always work.

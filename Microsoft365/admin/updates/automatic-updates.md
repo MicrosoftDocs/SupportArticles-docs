@@ -32,7 +32,7 @@ appliesto:
 
 ## Symptoms
 
-By default, installations of Microsoft Office are configured to automatically update your Office installation when new updates are made publicly available. However, if you examine the Account section of the backstage, you may see that updates are disabled or that the command to manage updates is disabled or hidden. For example, the following figure indicates that updates are disabled in the backstage.
+By default, installations of Microsoft Office are configured to automatically update your Office installation when new updates are made publicly available. However, if you examine the Account section of the backstage, you may see that updates are disabled or that the command to manage updates is disabled or hidden. For example, the following figure indicates that updates are disabled in the backstage.
 
 :::image type="content" source="./media/automatic-updates/updates-are-disabled-in-the-backstage.png" alt-text="Screenshot indicates that updates are disabled in the backstage.":::
 
@@ -57,7 +57,7 @@ We recommend that you keep automatic updating enabled for Office installations b
   > [!WARNING]
   > Follow the steps in this section carefully. Serious problems might occur if you modify the  registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-  If you cannot follow the steps in the "Manually configure automatic updates" section, this is because the **Update Options** control is disabled or missing due to a Group Policy. For example, the following figure shows the **Update Options** control when the **Enable Updates** option is hidden through a Group Policy:
+  If you cannot follow the steps in the "Manually configure automatic updates" section, this is because the **Update Options** control is disabled or missing due to a Group Policy. For example, the following figure shows the **Update Options** control when the **Enable Updates** option is hidden through a Group Policy:
 
      :::image type="content" source="./media/automatic-updates/update-options.png" alt-text="Screenshot shows the Update Options control when the Enable Updates option is hidden through a Group Policy.":::
 

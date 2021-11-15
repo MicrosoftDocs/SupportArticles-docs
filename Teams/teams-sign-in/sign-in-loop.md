@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-When you try to sign in to Microsoft Teams in Microsoft Edge, Internet Explorer, Google Chrome, Mozilla Firefox, or Safari, the site continually loops, and you can never sign in.
+When you try to sign in to Microsoft Teams in Microsoft Edge, Internet Explorer, Google Chrome, Mozilla Firefox, or Safari, the site continually loops, and you can never sign in.
 
 ## Cause
 

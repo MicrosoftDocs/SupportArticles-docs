@@ -54,7 +54,7 @@ To fix these issues for Outlook for Microsoft 365, update your Office installati
 2. Select **File**, and then select **Office Account** or **Account**.
 3. Check the version number that is listed under **Office Updates**. If the version is earlier than 2008, select **Update Options**, and then select **Update Now**.
 
-For more information about update channels for Office 365 clients, see [Update history for Microsoft 365 Apps (listed by date)](/officeupdates/update-history-microsoft365-apps-by-date).
+For more information about update channels for Office 365 clients, see [Update history for Microsoft 365 Apps (listed by date)](/officeupdates/update-history-microsoft365-apps-by-date).
 
 If updating the Office installation does not fix the issues, use one of the methods that are listed in the "Workaround" section.
 
@@ -125,7 +125,7 @@ In some cases, the issues are related to a permissions issue in the registry. To
    - Open **Control Panel**.
    - From **Category** view, select **User Accounts**, and then select **User Accounts** again.
    - Select **Manage User Accounts**.
-   - In the **User Accounts** window, find your **User Name**, and review the groups that are listed in the **Group** column.
+   - In the **User Accounts** window, find your **User Name**, and review the groups that are listed in the **Group** column.
 
         > [!NOTE]
         > You may have to expand the **Group** column to view all the groups.

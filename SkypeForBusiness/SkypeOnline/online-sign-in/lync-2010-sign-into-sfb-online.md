@@ -22,7 +22,7 @@ appliesto:
 
 ## Problem
 
-When you try to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010, you receive the following message:
+When you try to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010, you receive the following message:
 
 > To sign in, additional software is required.
 

@@ -30,9 +30,9 @@ appliesto:
 
 When you try to create an ODBC DSN for drivers that are provided by Microsoft Access in the Data Sources ODBC Administrator, the attempt fails. This problem occurs if you're using a Click-to-Run (C2R) installation of Office. Depending on the version of Office, you may encounter any of the following issues when you try this operation:
  
-- The ODBC drivers provided by ACEODBC.DLL are not listed in the **Select a driver** dialog box.    
+- The ODBC drivers provided by ACEODBC.DLL are not listed in the **Select a driver** dialog box.    
 - You receive a "The operating system is not presently configured to run this application" error message.    
-- You receive an "Unable to load odbcji32.dll" error message.    
+- You receive an "Unable to load odbcji32.dll" error message.    
 - You receive a "The driver of this User DSN does not exist. It can only be removed" error message together with the platform showing **N/A**.
 
     :::image type="content" source="./media/cannot-use-odbc-or-oledb/error-with-odbc.png" alt-text="Screenshot of the ODBC Data Sources Administrator, which shows the error message together with the platform.":::
@@ -47,7 +47,7 @@ Additionally, if you try to define an OLEDB connection from an external applicat
 
 ## Cause
 
-Click-to-Run installations of Office run in an isolated virtual environment on the local operating system. Some applications outside Office may not be aware of where to look for the installation in the isolated environment. 
+Click-to-Run installations of Office run in an isolated virtual environment on the local operating system. Some applications outside Office may not be aware of where to look for the installation in the isolated environment. 
 
 [Overview of the Microsoft 365 Apps admin center](/deployoffice/admincenter/overview) 
 

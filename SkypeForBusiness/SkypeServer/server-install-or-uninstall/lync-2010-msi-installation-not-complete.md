@@ -77,7 +77,7 @@ C:\Lync2010\>msiexec /i C:\Lync2010\Lync.msi OCSETUPDIR="C:\Program Files\Micros
 
 #### Did this fix the problem?
 
-Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
 
 ## More Information
 

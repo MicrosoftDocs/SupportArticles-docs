@@ -46,5 +46,5 @@ To resolve this issue, reinstall Office from the Office website or from another 
 
 This article applies to:
 
-- Computers that have Office 2013 preinstalled, purchased and activated between January 29, 2013 and February 4, 2013.
-- Computers that have Office 2013 preinstalled, on which KB2760624, KB2760621, or KB2752100 is installed before you try to activate Office.
+- Computers that have Office 2013 preinstalled, purchased and activated between January 29, 2013 and February 4, 2013.
+- Computers that have Office 2013 preinstalled, on which KB2760624, KB2760621, or KB2752100 is installed before you try to activate Office.

@@ -38,7 +38,7 @@ You do not have permissions to the root PWA site and/or you do not have group pe
 
 In order for a user name to appear in the available users' list, the user must already have permissions on the PWA root site or they are a Global administrator. To Share the root PWA site using SharePoint Permissions mode:
 
-1. As the PWA Admin, log into the PWA site that the user is having access issues.   
+1. As the PWA Admin, log into the PWA site that the user is having access issues.   
 2. In the upper right-hand corner, underneath the account name click on the SHARE icon.    
 3. Add the user (user@domain.com). The user will receive the Contribute permissions and be added to the group called "Team Members for Project Web App" on the root PWA site. You can change the default by clicking the SHOW OPTIONS link in the dialog.    
 4. Give the synchronization about 2 minutes and then test access to the PWA site. 
@@ -55,11 +55,11 @@ Resolution when using Project Server Permissions mode:
 
 This is by design for both Project Online (and Project Server 2013) regardless of the permissions mode on the PWA site.
 
-SharePoint Permissions mode details - The PWA Admin must Share the root site with users, the user is given a specific set of permissions at the same time the root site is shared. This determines what they can see and do within just the PWA site.  Access to Project Sites is done in the same way, the individual site must be shared with individual user. 
+SharePoint Permissions mode details - The PWA Admin must Share the root site with users, the user is given a specific set of permissions at the same time the root site is shared. This determines what they can see and do within just the PWA site.  Access to Project Sites is done in the same way, the individual site must be shared with individual user. 
 
-Project Server Permissions mode details - Users can be added manually or synchronized using Active Directory groups (not SharePoint groups). If users are added manually, the PWA root site must be shared first in order for the users to be listed on the Available Users list in Manage Groups.  
+Project Server Permissions mode details - Users can be added manually or synchronized using Active Directory groups (not SharePoint groups). If users are added manually, the PWA root site must be shared first in order for the users to be listed on the Available Users list in Manage Groups.  
 
-Using Active Directory group synchronization, users are added to the Project Server group and the root PWA site is shared with them at the same time.  
+Using Active Directory group synchronization, users are added to the Project Server group and the root PWA site is shared with them at the same time.  
 
 To check which permissions mode your PWA site is using:
 

@@ -27,11 +27,11 @@ When you attempt to upgrade Exchange Server 2007 by using `setup.com /m:upgrade`
 ```console
 Performing Microsoft Exchange Server Prerequisite Check  
 
-Edge Transport Role Checks       ......................... COMPLETED  
+Edge Transport Role Checks       ......................... COMPLETED  
 
 Configuring Microsoft Exchange Server  
 
-Preparing Setup                  ......................... FAILED
+Preparing Setup                  ......................... FAILED
 An unexpected error has occurred and debug information is being generated: Unex
 pected error [0xCF6CDA0B] while executing command '$error.Clear(); $RoleNames =
 $RoleRoles.Replace('Role','').Split(','); if( test-path "$env:TMP\StoppedService
@@ -52,13 +52,13 @@ Exchange Server setup encountered an error.
 
 ## Cause
 
-A Pre-Setup task was trying to execute ServiceControl.PS1 to stop all exchange services for the Exchange upgrade process. However, the ServiceControl.ps1 script has been flagged as `Do Not Run`.
+A Pre-Setup task was trying to execute ServiceControl.PS1 to stop all exchange services for the Exchange upgrade process. However, the ServiceControl.ps1 script has been flagged as `Do Not Run`.
 
 ## Resolution
 
 1. Open the Exchange Management Shell and change directory to `<Service Pack installation path>:\Setup\ServerRoles\common\`.
 2. Run `.\ServiceControl.ps1`.
-3. You will see the default setting is `[D] Do not run`. Enter option `[A]` for `Always run`.
+3. You will see the default setting is `[D] Do not run`. Enter option `[A]` for `Always run`.
 4. Close the Exchange Management Shell.
 5. From a command prompt, run `setup.com /m:upgrade` again.
 

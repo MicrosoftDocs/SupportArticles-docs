@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-Skype for Business Online (formerly Lync Online) users may notice that their contact list is empty or read-only after their Exchange mailbox becomes unavailable or is disconnected, unlicensed, or moved to Exchange 2007 or Exchange 2010. When you try to add, remove, or change contacts or groups in the user's contact list in this situation, the user receives the following error message: 
+Skype for Business Online (formerly Lync Online) users may notice that their contact list is empty or read-only after their Exchange mailbox becomes unavailable or is disconnected, unlicensed, or moved to Exchange 2007 or Exchange 2010. When you try to add, remove, or change contacts or groups in the user's contact list in this situation, the user receives the following error message: 
 
 ```adoc
 Cannot add, remove, or move contacts or groups at this time. Please try again later.
@@ -36,7 +36,7 @@ You shouldn't migrate mailbox to Exchange 2010 or an earlier version while the u
 +FullyQualifiedErrorId: [Server=BN1PR04MB219,RequestId=e8740227-f060-4dd6-ac29-98aca24df8da,TimeStamp=7/24/2013 7:09:05 PM B1CB8EAD,Microsoft.Exchange.Management.RecipientTasks.NewMoveRequest+PSComputerName: pod51041psh.outlook.com
 ```
 
-When Office 365 was upgraded in 2013, Exchange Online was configured to store Skype for Business Online users' contacts and photos as part of their Exchange mailbox. This is known as the Unified Contact Store (UCS), and when a user's Exchange mailbox becomes unavailable, Lync can no longer take advantage of UCS to add, remove, or change the Lync contact list.
+When Office 365 was upgraded in 2013, Exchange Online was configured to store Skype for Business Online users' contacts and photos as part of their Exchange mailbox. This is known as the Unified Contact Store (UCS), and when a user's Exchange mailbox becomes unavailable, Lync can no longer take advantage of UCS to add, remove, or change the Lync contact list.
 
 Since then, this feature was disabled because by default, and Skype for Business Online contact lists are now managed by Skype for Business Online. However, some users might still be using the Exchange UCS and experience no issues or problems at all. If their mailbox is unavailable through Exchange Web Services (EWS) at any time, they won't be able to change or even access their contact lists. If this becomes an issue, you may want to migrate your contacts back to Skype for Business Online.
 
@@ -69,15 +69,15 @@ You have 30 days to reconnect the mailbox without any consequences. The user's m
 ### If the mailbox disconnect was intentional and you have to restore the user's contact list for Lync
 
 To restore the user's contact list to the Lync Server, you have to temporarily reconnect the user's mailbox and then run the Skype for Business OnlineRemote PowerShell cmdlet **Invoke-CsUcsRollback** to have the user's contact list migrated from his or her Exchange mailbox to the Lync server.
-
+ 
 ### If you want to migrate your contacts back toSkype for Business Online
 
 Confirm that the user is enabled for UCS. Press Ctrl while you right-click the Lync icon in the notification area, and then click **Configuration Information**. 
 
 - If the **Value** for **Contact List Provider** is **UCS**, then the user's contacts are stored in the Exchange Unified Contact Store. Run the Skype for Business Online Remote PowerShell cmdlet **Invoke-CsUcsRollback** to migrate the user's contacts back to the Lync server.   
-- If the **Value** for **Contact List Provider** is **NOT UCS**, then there's no need to migrate your contacts back. But if you still can't access your contact list, you may have to do additional troubleshooting. For more information, see [Contacts in Skype for Business Online appear offline or aren't searchable in the address book](https://support.microsoft.com/help/2435699).
+- If the **Value** for **Contact List Provider** is **NOT UCS**, then there's no need to migrate your contacts back. But if you still can't access your contact list, you may have to do additiona  troubleshooting. For more information, see [Contacts in Skype for Business Online appear offline or aren't searchable in the address book](https://support.microsoft.com/help/2435699).
 
 > [!NOTE]
 > If the mailbox is unavailable and you run the **Invoke-CsUcsRollback** cmdlet with the **force** parameter, you may cause additional problems with Lync and Exchange. Double-check to verify that the mailbox can be accessed before you perform a rollback.
-
+  
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -39,7 +39,7 @@ appliesto:
 
 ## Symptoms
 
-Microsoft Office 2016 applications may crash or cannot start. The applications that have been seen to be affected are Excel, Outlook, Skype for Business, Word, Access, Publisher, Project and OneNote.
+Microsoft Office 2016 applications may crash or cannot start. The applications that have been seen to be affected are Excel, Outlook, Skype for Business, Word, Access, Publisher, Project and OneNote.
 
 Additionally, in the Application Event log, you may find a crash signature similar to the following in event ID 1000:
 
@@ -72,8 +72,8 @@ To work around this issue, follow these steps:
     HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General
 
 4. Locate the **ShownFirstRunOptin** registry value in the key that is specified in step 3. If you do not find **ShownFirstRunOptin**, go to step 5. If you do find it, go to step 7.   
-5. If you do not find the **ShownFirstRunOptin** registry value, point to **New** on the **Edit** menu, and then click **DWORD (32-bit) Value**.   
-6. Type ShownFirstRunOptin, and then press ENTER.   
+5. If you do not find the **ShownFirstRunOptin** registry value, point to **New** on the **Edit** menu, and then click **DWORD (32-bit) Value**.   
+6. Type ShownFirstRunOptin, and then press ENTER.   
 7. Right-click **ShownFirstRunOptin**, and then click **Modify**.   
-8. In the **Value data** box, type 1, and then click **OK**.  
+8. In the **Value data** box, type 1, and then click **OK**.  
 9. On the **File** menu, click **Exit** to exit Registry Editor.

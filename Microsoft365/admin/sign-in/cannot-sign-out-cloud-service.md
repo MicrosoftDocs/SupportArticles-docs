@@ -58,21 +58,21 @@ Close all web browsers and then reopen them.
 
 To end the task for your browser, follow these steps: 
  
-1. Right-click the taskbar, and then click **Task Manager**.    
+1. Right-click the taskbar, and then click **Task Manager**.    
 2. Click the **Details** tab, and then do one of the following:  
      - If you're using Internet Explorer, find **iexplore.exe** in the list, right-click it, and then click **End task**.
 
-       **Note** Make sure that you end the Iexplore.exe task. Do not end the Explore.exe task.    
-     - If you're using Mozilla Firefox, find and right-click **firefox.exe** in the list, and then click **End task**.    
-     - If you're using Apple Safari, find and right-click **safari.exe** in the list, and then click **End task**.    
-     - If you're using Google Chrome, find and right-click **chrome.exe** in the list, and then click **End task**.    
+       **Note** Make sure that you end the Iexplore.exe task. Do not end the Explore.exe task.    
+     - If you're using Mozilla Firefox, find and right-click **firefox.exe** in the list, and then click **End task**.    
+     - If you're using Apple Safari, find and right-click **safari.exe** in the list, and then click **End task**.    
+     - If you're using Google Chrome, find and right-click **chrome.exe** in the list, and then click **End task**.    
  
     > [!NOTE]
     > - If more than one browser is listed, end the task for each browser.    
-    > - If you're using a different browser than those that are listed here, end the task for that browser.    
+    > - If you're using a different browser than those that are listed here, end the task for that browser.    
     
 ### Method 3: Sign out of all Microsoft online services  
-  
+  
 You may be signed in to another Microsoft online service, and this may be preventing you from signing out. If this is the case, sign out of all Microsoft online services. To do this, follow these steps: 
  
 1. Go to [https://login.microsoftonline.com/logout.srf](https://login.microsoftonline.com/logout.srf), and then sign out (if you aren't already signed out).    
@@ -91,7 +91,7 @@ Microsoft provides third-party contact information to help you find technical su
 
 ## More information
 
-This behavior is by design. Azure Active Directory-based services (including Office 365, Azure, and Intune) use cookies to remember who you are and to automatically sign you in. 
+This behavior is by design. Azure Active Directory-based services (including Office 365, Azure, and Intune) use cookies to remember who you are and to automatically sign you in. 
 
 The sign-out process for services forces the session cookies to expire. These session cookies are used to maintain your sign-in state when you use these services. However, because the web browser is still running and may not be updated to handle cookies correctly, you may have a cookie that is not updated to expire and finish the sign-out process. By default, these cookies are valid for eight hours or are set to expire when you close all web browsers.
 

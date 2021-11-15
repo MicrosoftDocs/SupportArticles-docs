@@ -21,7 +21,7 @@ appliesto:
 
 ## Summary
 
-This article describes how Microsoft Developer Network (MSDN) and Microsoft TechNet subscription customers can enable Microsoft Office Professional Plus 2010 to run on a server on which Office 2010 was installed and activated and on which the Terminal Services (Remote Desktop Services) server role was later added.
+This article describes how Microsoft Developer Network (MSDN) and Microsoft TechNet subscription customers can enable Microsoft Office Professional Plus 2010 to run on a server on which Office 2010 was installed and activated and on which the Terminal Services (Remote Desktop Services) server role was later added.
 
 ## Introduction 
 
@@ -46,7 +46,7 @@ To install an additional product key to enable Terminal Services, use one of the
 
 1. If you are an MSDN subscriber, you should go to your MSDN Subscriptions Product Keys page by clicking the following link: [https://msdn.microsoft.com/subscriptions/securedownloads/cc137106.aspx](https://msdn.microsoft.com/subscriptions/securedownloads/cc137106.aspx)
 
-   If you are a TechNet subscriber, you should go to your TechNet Subscriptions Product Keys page by clicking the following link: [https://technet.microsoft.com/subscriptions/securedownloads/cc137106.aspx](https://technet.microsoft.com/subscriptions/securedownloads/cc137106.aspx)
+   If you are a TechNet subscriber, you should go to your TechNet Subscriptions Product Keys page by clicking the following link: [https://technet.microsoft.com/subscriptions/securedownloads/cc137106.aspx](https://technet.microsoft.com/subscriptions/securedownloads/cc137106.aspx)
 
 1. Start the update of the current installation of Office Professional Plus 2010. To do this, follow these steps:
    1. Close all open Office 2010 applications.   
@@ -59,11 +59,11 @@ To install an additional product key to enable Terminal Services, use one of the
 3. In the **Microsoft Office Professional Plus 2010** dialog box, click the **Enter a Product Key** option, and then click **Continue**.
 
     :::image type="content" source="media/office-pro-plus-2010-terminal-server/enter-product-key.png" alt-text="Screenshot to select the Continue option after selecting the Enter a Product Key option." border="false":::
-4. Install the Terminal Services product key that you obtained from your MSDN or TechNet subscription. To do this, follow these steps:
+4. Install the Terminal Services product key that you obtained from your MSDN or TechNet subscription. To do this, follow these steps:
       1. Make sure that the computer is connected to the Internet.   
       2. Enter the product key, click to select the **Attempt to automatically activate my product online** check box, and then click **Continue**.   
       3. Click **Install Now**.   
-      4. When a dialog box appears that informs you that the configuration is successful, click **Close**.    
+      4. When a dialog box appears that informs you that the configuration is successful, click **Close**.    
    
 5. Complete the activation. To do this, follow these steps:
    1. Start an Office 2010 application.   
@@ -79,7 +79,7 @@ To install an additional product key to enable Terminal Services, use one of the
 1. Follow step 1 of Method 1 to obtain the Terminal Service enablement for the Office 2010 product key from your MSDN or TechNet subscription.   
 2. Open a Command Prompt window. 
 
-    To do this if you are using Windows Server 2003, click **Start**, click **Run**, type cmd, and then click **OK**. 
+    To do this if you are using Windows Server 2003, click **Start**, click **Run**, type cmd, and then click **OK**. 
     
     To do this if you are using Windows Server 2008 or Windows Server 2008 R2, follow these steps:
     

@@ -23,10 +23,10 @@ appliesto:
 
 ## Problem
 
-When you try to authenticate to a Microsoft a cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a federated account, the authentication is unsuccessful, and one or more of the following issues occur:
+When you try to authenticate to a Microsoft a cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a federated account, the authentication is unsuccessful, and one or more of the following issues occur:
 
 - At the sign-in prompt, when you try to update the Usernamefield by using a federated user name, the browser address bar contains a URL that resembles the following example, instead of a webpage that includes a "Sign in at \<AD FS endpoint name>" link: https://login.microsoftonline.com/login.srf?...   
-- After you sign in by using a federated account and you try to access a cloud service resource, such as the Office 365, Outlook Web App, SharePoint Online, or Skype for Business Online (formerly Lync Online), you get the following error message:
+- After you sign in by using a federated account and you try to access a cloud service resource, such as the Office 365, Outlook Web App, SharePoint Online, or Skype for Business Online (formerly Lync Online), you get the following error message:
 
     **Access Denied**   
 
@@ -47,9 +47,9 @@ If these issues only occur for some user accounts, this indicates that those use
 
   Access to Office 365 resources for which the user account doesn't have a license is restricted. To check the license status for a user account, follow these steps:
   1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com/)) by using an Office 365 admin user account. You can use a managed account if it's required.   
-  2. Click **Admin**, click **Office 365**, and then in the left navigation pane, click **users and groups**.   
+  2. Click **Admin**, click **Office 365**, and then in the left navigation pane, click **users and groups**.   
   3. In the list of users, locate the user accounts that you want to test, and then select **Display Name**. Check that each user account has the required licensing for the Office 365 resource.   
-  4. Select the **Select all items** check box.
+  4. Select the **Select all items** check box.
 
      If a user account that you want to test isn't listed, Active Directory synchronization may be syncing the account to Azure Active Directory (Azure AD).
 
@@ -57,7 +57,7 @@ If these issues only occur for some user accounts, this indicates that those use
    
 - Subdomain doesn't inherit parent domain's federation settings
 
-  When a subdomain, such as **subdomain.contoso.com**, is added before its parent domain, for example **contoso.com**, the subdomain automatically inherits the parent domain's federation status. To determine the inheritance status, follow these steps:
+  When a subdomain, such as **subdomain.contoso.com**, is added before its parent domain, for example **contoso.com**, the subdomain automatically inherits the parent domain's federation status. To determine the inheritance status, follow these steps:
   1. Sign in to Office 365 ([https://portal.office.com](https://portal.office.com/)) by using an Office 365 admin user account. You can use a managed account if this is required.   
   2. Click **Admin**, and then in the left navigation pane, click **Domains**.    
   3. In the list of domains, locate the federated subdomain name, and then determine whether the **Domain type** setting is set to **Single Sign-On**.   
@@ -77,7 +77,7 @@ To resolve this issue, use one or more of the following methods:
 
    For more info about how to resolve this issue, see the following Microsoft Knowledge Base article:
 
-   [2392130 ](https://support.microsoft.com/help/2392130) Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune    
+   [2392130 ](https://support.microsoft.com/help/2392130) Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune    
 - The Office 365 user account isn't licensed for Office 365 resources.
 
    To resolve this issue, use the Office 365 portal to assign the appropriate licenses to the user accounts that require a license.   
@@ -111,4 +111,4 @@ To resolve this issue, use one or more of the following methods:
 
 ## More Information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

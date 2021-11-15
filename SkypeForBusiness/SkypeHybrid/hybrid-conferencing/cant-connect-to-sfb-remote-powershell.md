@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-Administrators who have a Lync hybrid deployment may receive the following error message when they try to connect to Skype for Business Online (formerly Lync Online) Remote PowerShell: 
+Administrators who have a Lync hybrid deployment may receive the following error message when they try to connect to Skype for Business Online (formerly Lync Online) Remote PowerShell: 
 
 ```powershell
 Get-CsPowerShellEndpoint : Unable to query AutoDiscover URL at: http://lyncdiscover.contoso.com?Domain=contoso.com
@@ -28,7 +28,7 @@ Get-CsPowerShellEndpoint : Unable to query AutoDiscover URL at: http://lyncdisco
 
 ## Solution
 
-To resolve this issue, run the cmdlet again, but instead specify the OverrideAdminDomain property. Use the default domain that was included with your Office 365 subscription. For example, use contoso.onmicrosoft.com. The PowerShell cmdlet should resemble the following:
+To resolve this issue, run the cmdlet again, but instead specify the OverrideAdminDomain property. Use the default domain that was included with your Office 365 subscription. For example, use contoso.onmicrosoft.com. The PowerShell cmdlet should resemble the following:
 
 ```powershell
 $cssession = New-CsOnlineSession –Credential $cred –OverrideAdminDomain "contoso.onmicrosoft.com"
@@ -38,6 +38,6 @@ $cssession = New-CsOnlineSession –Credential $cred –OverrideAdminDomain "con
 
 This issue occurs when the DNS records for AutoDiscover are pointed to the on-premises Lync server.
 
-For more information about the **New-CsOnlineSession** cmdlet, or about how to manage Skype for Business Online with Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
+For more information about the **New-CsOnlineSession** cmdlet, or about how to manage Skype for Business Online with Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

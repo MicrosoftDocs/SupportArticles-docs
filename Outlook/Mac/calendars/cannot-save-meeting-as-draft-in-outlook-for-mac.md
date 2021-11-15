@@ -24,23 +24,23 @@ _Original KB number:_ &nbsp; 4505745
 
 ## Symptoms
 
-Microsoft Outlook for Mac does not support [saveAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#saveasyncoptions-callback) on a meeting in Compose mode. Outlook add-ins cannot get the item identifier. This means that the add-ins cannot uniquely identify and communicate with Microsoft Exchange to update or listen for changes on the item.
+Microsoft Outlook for Mac does not support [saveAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#saveasyncoptions-callback) on a meeting in Compose mode. Outlook add-ins cannot get the item identifier. This means that the add-ins cannot uniquely identify and communicate with Microsoft Exchange to update or listen for changes on the item.
 
 ## Workaround
 
-To work around this issue, you can set an extended property ([customProperty](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#loadcustompropertiesasynccallback-usercontext): Office JS API) on the item. An extended property is part of the item and will be available on Exchange as soon as the item is sent. Therefore, the add-in can query or listen to items that have this extended property set.
+To work around this issue, you can set an extended property ([customProperty](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#loadcustompropertiesasynccallback-usercontext): Office JS API) on the item. An extended property is part of the item and will be available on Exchange as soon as the item is sent. Therefore, the add-in can query or listen to items that have this extended property set.
 
-To set the property, follow these steps:
+To set the property, follow these steps:
 
-1. Choose one of the following API sets to use:
+1. Choose one of the following API sets to use:
     1. EWS
     2. REST
     3. Graph
 
 2. Get a valid token for each API set:
-    1. EWS: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback)
-    2. REST: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback) with **options.isRest** = **true**
-    3. Graph: Use onBehalfOf token
+    1. EWS: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback)
+    2. REST: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback) with **options.isRest** = **true**
+    3. Graph: Use onBehalfOf token
 
 3. Query or listen for calendar events:
     1. EWS: [Subscribe](/exchange/client-developer/exchange-web-services/how-to-synchronize-items-by-using-ews-in-exchange) to the created event

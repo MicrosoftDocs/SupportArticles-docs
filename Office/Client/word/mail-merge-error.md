@@ -43,4 +43,4 @@ When you store an .xlsx file in a shared folder and use it as data source in a W
 
 ## Workaround
 
-To work around this issue, use a .csv or .xls file instead of an .xlsx file as the data source. For example, open your data source in Excel, and then save it as an **Excel 97-2003 Workbook (*.XLS)** or **CSV Comma Delimited (*.CSV)** file.
+To work around this issue, use a .csv or .xls file instead of an .xlsx file as the data source. For example, open your data source in Excel, and then save it as an **Excel 97-2003 Workbook (*.XLS)** or **CSV Comma Delimited (*.CSV)** file.

@@ -53,7 +53,7 @@ This should set the correct permissions for your identity. You should now be abl
 
 ## More information
 
-Outlook 2016 for Mac is available with the following subscriptions:
+Outlook 2016 for Mac is available with the following subscriptions:
 
 - Office 365 Home
 - Office 365 Personal

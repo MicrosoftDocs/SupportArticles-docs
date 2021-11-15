@@ -22,7 +22,7 @@ appliesto:
 
 ## PROBLEM
 
-When you try to activate or sign in to Office Mobile on iPhone, available in the Apple iTunes Store as "Office Mobile for Office 365 subscribers," or Office Mobile on Android, available in the Google Play store as "Office Mobile for Office 365," you receive one of the following error messages:
+When you try to activate or sign in to Office Mobile on iPhone, available in the Apple iTunes Store as "Office Mobile for Office 365 subscribers," or Office Mobile on Android, available in the Google Play store as "Office Mobile for Office 365," you receive one of the following error messages:
 
 **You don't have permission to access this content**
 

@@ -48,7 +48,7 @@ First, restart your computer, and then test the font again. Some installations a
    1. After the duplicates have been resolved, select each disabled font, click **File** > **Reveal in Finder**, and then drag it to the trash.
    2. You may notice that Font Book sometimes turns off the newer copy of the font instead of the older one. If you prefer the newer copy, drag the older one to the trash, and then re-enable the new one.
 
-5. Restart the computer. Apple OS X will rebuild its font cache, and Word will rebuild its font cache from that.
+5. Restart the computer. Apple OS X will rebuild its font cache, and Word will rebuild its font cache from that.
 6. For best performance in Word, try to run with all your fonts enabled all the time. Each time that Word starts, it compares its font cache with the system font cache. If the two don't match, Word will regenerate its own font cache, which can take a few seconds. If you have dynamically enabled fonts, the system font cache will appear different nearly every time that Word runs this comparison.
 7. You must do this every time you install an update, because the Microsoft installer tries to restore the disabled fonts each time.
 
@@ -64,6 +64,6 @@ Create a new user account to determine whether the problem is associated with an
 
 ### The font is damaged, or the system is not reading the font
 
-If the font is not a custom font and does not appear in your Office program, the font may be damaged. To reinstall the font, see [Mac OS X: Font locations and their purposes](https://support.apple.com/HT201749).
+If the font is not a custom font and does not appear in your Office program, the font may be damaged. To reinstall the font, see [Mac OS X: Font locations and their purposes](https://support.apple.com/HT201749).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.

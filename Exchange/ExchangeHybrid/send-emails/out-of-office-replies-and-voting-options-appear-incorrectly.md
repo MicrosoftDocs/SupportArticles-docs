@@ -61,7 +61,7 @@ To resolve this problem, update the remote domain settings in Office 365. To do 
 
 ### Scenario 2 - On-premises users can't view out-of-office replies and voting options of Exchange Online users
 
-This scenario occurs because Exchange Online strips out the Transport Neutral Encapsulation Format (TNEF) content (specifically, the voting buttons). To prevent Exchange Online from removing the TNEF content when an email message is sent to an on-premises user, enable TNEF on the remote domains. To do this, use the one or both of following methods.
+This scenario occurs because Exchange Online strips out the Transport Neutral Encapsulation Format (TNEF) content (specifically, the voting buttons). To prevent Exchange Online from removing the TNEF content when an email message is sent to an on-premises user, enable TNEF on the remote domains. To do this, use the one or both of following methods.
 
 #### Method 1
 

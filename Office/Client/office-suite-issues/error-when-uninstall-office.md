@@ -36,7 +36,7 @@ You receive one of the following error messages when you try to uninstall Micros
 
 ##  Resolution
 
-Restart Windows and try to uninstall Office again to fix the problem. 
+Restart Windows and try to uninstall Office again to fix the problem. 
 
 If restarting Windows doesn't help, use the automated troubleshooter or follow the manual uninstall steps in this article: [Uninstall Microsoft Office 2013 or Office 365 suites](https://support.microsoft.com/help/2739501).
 

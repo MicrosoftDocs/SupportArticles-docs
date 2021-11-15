@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp; 4013913
 
 ## Symptom
 
-When you open HTML or rich text email in Microsoft Outlook 2013, 2010, or 2007 on a Windows 7 or Windows 8.0 based computer, Yu Gothic font multibyte characters are not displayed correctly and are unreadable.
+When you open HTML or rich text email in Microsoft Outlook 2013, 2010, or 2007 on a Windows 7 or Windows 8.0 based computer, Yu Gothic font multibyte characters are not displayed correctly and are unreadable.
 
 ## Cause
 
-Outlook uses the font API of Windows to display email text that has font settings. This issue occurs if the Yu Gothic font isn't installed on the computer.
+Outlook uses the font API of Windows to display email text that has font settings. This issue occurs if the Yu Gothic font isn't installed on the computer.
 
 ## Resolution
 

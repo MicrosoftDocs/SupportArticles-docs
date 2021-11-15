@@ -32,8 +32,8 @@ This issue may occur if password synchronization was disabled after it was set u
 ## Solution 
 
 To resolve this issue, enable password synchronization. To do this, take one of the following actions, as appropriate to the Azure Active Directory sync appliance that you're running.
-### If you're running the Azure Active Directory Sync tool
-Run the Azure Active Directory Sync Configuration Wizard, and then, on the Password Synchronization page, select the **Enable Password Synchronization** check box. Doing this finishes password synchronization set up and starts a full sync. 
+### If you're running the Azure Active Directory Sync tool
+Run the Azure Active Directory Sync Configuration Wizard, and then, on the Password Synchronization page, select the **Enable Password Synchronization** check box. Doing this finishes password synchronization set up and starts a full sync. 
 ### If you're running Azure Active Directory Connect
 
 

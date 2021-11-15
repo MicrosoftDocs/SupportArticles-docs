@@ -25,17 +25,17 @@ appliesto:
 
 ## Symptoms
 
-When you have Microsoft Silverlight installed on a computer, Microsoft Visio Services cannot render diagrams that are hosted on servers that have International Domain Names (IDNs). Specifically, Visio Services cannot render these diagrams by using Silverlight on a Microsoft SharePoint Server site. Additionally, a JavaScript error occurs.
+When you have Microsoft Silverlight installed on a computer, Microsoft Visio Services cannot render diagrams that are hosted on servers that have International Domain Names (IDNs). Specifically, Visio Services cannot render these diagrams by using Silverlight on a Microsoft SharePoint Server site. Additionally, a JavaScript error occurs.
 
 **Note** This is a known problem in Silverlight.
 
 ## Cause
 
-When Visio Services loads a diagram, Visio Services transforms the diagram by using Extensible Application Markup Language (XAML). Then, the Visio Web part reads the XAML. This problem occurs because Silverlight cannot fetch the new XAML-based diagram from the server that has an IDN.
+When Visio Services loads a diagram, Visio Services transforms the diagram by using Extensible Application Markup Language (XAML). Then, the Visio Web part reads the XAML. This problem occurs because Silverlight cannot fetch the new XAML-based diagram from the server that has an IDN.
 
 ## Resolution
 
-To resolve this problem, configure Visio Services to render diagrams as raster images. For example, configure Visio Services to render diagrams as Portable Network Graphics (PNG) images. Or, do not use a server that has an IDN.
+To resolve this problem, configure Visio Services to render diagrams as raster images. For example, configure Visio Services to render diagrams as Portable Network Graphics (PNG) images. Or, do not use a server that has an IDN.
 
 To do render diagrams as raster images, follow these steps:
 

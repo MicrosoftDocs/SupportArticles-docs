@@ -43,7 +43,7 @@ Method 1: Apply the fix from the appropriate link below:
 
 Office 2010: [https://support.microsoft.com/kb/2597986](https://support.microsoft.com/help/2597986)
 
-Office 2003:  [https://support.microsoft.com/kb/2687323](https://support.microsoft.com/help/2687323)
+Office 2003:  [https://support.microsoft.com/kb/2687323](https://support.microsoft.com/help/2687323)
 
 Method 2: Re-register MSCOMCTL.OCX from an elevated command prompt
 

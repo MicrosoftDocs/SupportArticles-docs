@@ -24,13 +24,13 @@ appliesto:
 
 ## Problem
 
-When an Office 365 user tries to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010 or Lync 2013, the user receives the following error message: 
+When an Office 365 user tries to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010 or Lync 2013, the user receives the following error message: 
 
 ```adoc
 There was a problem acquiring a personal certificate required to sign in. If the problem continues, please contact your support team.
 ```
 
-Additionally, when you try to sign in to Lync after a network outage or a Skype for Business Online service outage, you receive the following error message: 
+Additionally, when you try to sign in to Lync after a network outage or a Skype for Business Online service outage, you receive the following error message: 
 
 ```adoc
 Cannot sign into Lync. There was a problem verifying the certificate from the server.
@@ -73,7 +73,7 @@ During the sign in process, Lync 2013 caches your credentials and other informat
 #### Additional troubleshooting steps for Lync 2013 and Lync 2010
 
 > [!NOTE]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
 
 If the steps earlier in this article don't resolve the issue, try the following methods, as appropriate for your situation:
 
@@ -109,13 +109,13 @@ If the steps earlier in this article don't resolve the issue, try the following 
   1. Press **Windows + R**, type the following command, and then press Enter:
 
      Ipconfig /flushdns   
-- Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+- Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
   On the affected computers, check the following registry key:
 
   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MachineGuid**
 
-  If the value of **MachineGuid** contains braces around the GUID (for example, {c1cbd94c-0d35-414c-89ef-dd092b984883}), then remove the braces, restart Lync, and then try to sign in again.    
+  If the value of **MachineGuid** contains braces around the GUID (for example, {c1cbd94c-0d35-414c-89ef-dd092b984883}), then remove the braces, restart Lync, and then try to sign in again.    
 
 #### Resolution for Skype for Business Online administrators: Validate the certificate chain
 
@@ -136,7 +136,7 @@ Did this fix the problem?
 
 - Check whether the problem is fixed. 
   - If the problem is fixed, you are finished with these steps.    
-  - If the problem isn't fixed, go to [Microsoft Community](https://answers.microsoft.com/), or [contact support](https://support.microsoft.com/contactus/).
+  - If the problem isn't fixed, go to [Microsoft Community](https://answers.microsoft.com/), or [contact support](https://support.microsoft.com/contactus/).
 - We'd appreciate your feedback. To provide feedback or to report any issues with this solution, please send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

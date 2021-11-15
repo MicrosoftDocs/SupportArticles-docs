@@ -19,7 +19,7 @@ appliesto:
 
 ## Symptoms
 
-You validate an emergency address for your organization in the Skype for Business Administration Center. The address is validated correctly but the name of the city is abbreviated.
+You validate an emergency address for your organization in the Skype for Business Administration Center. The address is validated correctly but the name of the city is abbreviated.
 
 ## Resolution
 

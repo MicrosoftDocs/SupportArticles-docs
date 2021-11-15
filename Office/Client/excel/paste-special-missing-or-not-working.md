@@ -26,12 +26,12 @@ If you have Skype installed, see [Text has incorrect format when using paste in 
 To see if the **Paste Special** option is enabled: 
  
 1. Go to **File** > **Options** > **Advanced**.    
-2. Under **Cut, copy and paste**, ensure the **Show Paste Options button when content is pasted** option is checked. 
+2. Under **Cut, copy and paste**, ensure the **Show Paste Options button when content is pasted** option is checked. 
 
 > [!NOTE]
 > Using the `Worksheet_SelectionChange` event will clear the clipboard, which disables the **Paste Special** option. To enable the option, you need to set the value of the `Application.EnableEvents` property to `False`.
 
-Ensure that all instances of the web browsers that you use are closed and try to use the **Paste Special** option again. Paste special will not function if your web browser is causing the conflict. Windows Internet Explorer (8-9) do not conflict with the **Paste Special** option in Excel 2010. Third party Add-ins can cause a variety of issues, one of then being, conflicting with the **Paste Special** option. To determine if an add-in is causing the issue:
+Ensure that all instances of the web browsers that you use are closed and try to use the **Paste Special** option again. Paste special will not function if your web browser is causing the conflict. Windows Internet Explorer (8-9) do not conflict with the **Paste Special** option in Excel 2010. Third party Add-ins can cause a variety of issues, one of then being, conflicting with the **Paste Special** option. To determine if an add-in is causing the issue:
 
 1. Find the Microsoft Excel icon.   
 2. Press and hold the CTRL key and double-click the application shortcut.

@@ -71,13 +71,13 @@ Verify that connectivity to the Address Book web service is available. To do thi
    - If the URL is inaccessible, you'll see one of these error messages:
      - The webpage cannot be found.
      - 404 Not Found       
-5. Verify that the Exchange Autodiscover service is set up correctly. To do this, see Method 2 in the "Solution" section in the following Microsoft Knowledge Base article:  
+5. Verify that the Exchange Autodiscover service is set up correctly. To do this, see Method 2 in the "Solution" section in the following Microsoft Knowledge Base article:  
 
     [2404385 ](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365
 
 ### Scenario 3:Skype for Business Online contacts are lost or missing, or the contacts list isn't updated
 
-In rare cases, the contacts list may be corrupted because of an invalid character in an "out of office" message or because of a lingering deprovisioned contact. To resolve this problem, force a contacts list update to make sure that your information is synchronized. To this, follow these steps: 
+In rare cases, the contacts list may be corrupted because of an invalid character in an "out of office" message or because of a lingering deprovisioned contact. To resolve this problem, force a contacts list update to make sure that your information is synchronized. To this, follow these steps: 
 
 1. Locate the following folder:
    -  For Skype for Business 2016

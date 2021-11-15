@@ -22,24 +22,24 @@ _Original KB number:_ &nbsp; 4052036
 
 ## Symptoms
 
-You receive an error message when you try to add an Exchange license in Azure Active Directory (Azure AD) for Microsoft Office 365.
+You receive an error message when you try to add an Exchange license in Azure Active Directory (Azure AD) for Microsoft Office 365.
 
 ## Resolution
 
 There are two Windows Azure Active Directory modules to administer Azure AD through PowerShell. Both are supported currently.
 
-- MSOL - For more information about MSOL module, see the following articles:
+- MSOL - For more information about MSOL module, see the following articles:
 
   - [Install-Module MSOnline](/powershell/azure/active-directory/install-msonlinev1?view=azureadps-1.0&viewFallbackFrom=azureadps-2.0&preserve-view=true)
   - [Connect-MsolService](/powershell/module/MSOnline/?view=azureadps-1.0&redirectedfrom=msdn#bkmk_installmodule&preserve-view=true)
-- AzureAD - For more information about AzureAD module, see the following articles:
+- AzureAD - For more information about AzureAD module, see the following articles:
 
   - [Install-Module AzureAD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true)
   - [Connect-AzureAD](/powershell/module/Azuread/?view=azureadps-2.0&preserve-view=true)
 
 This issue can occur under different circumstances.
 
-- If you receive an error message when assigning a new license, confirm that the object exists in the Azure AD by using the Azure AD PowerShell module. A `UsageLocation` parameter is required and has to be populated. For example:
+- If you receive an error message when assigning a new license, confirm that the object exists in the Azure AD by using the Azure AD PowerShell module. A `UsageLocation` parameter is required and has to be populated. For example:
 
   ```powershell
   Get-MsolUser -SearchString <userPrinicipalName or DisplayName> | fl UsageLocation

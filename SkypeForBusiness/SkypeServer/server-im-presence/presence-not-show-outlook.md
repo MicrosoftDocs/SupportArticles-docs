@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-The presence information for a user of Microsoft Lync Server 2010 or of Microsoft Office Communications Server may not be displayed as expected in Microsoft Office Outlook 2010, in Office Outlook 2007, or in Outlook 2003 Service Pack 2 (SP2). Or, this information may be displayed only intermittently. This issue occurs when a user's Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) does not match the user's primary email address. Or, this issue occurs when the user has multiple email addresses. 
+The presence information for a user of Microsoft Lync Server 2010 or of Microsoft Office Communications Server may not be displayed as expected in Microsoft Office Outlook 2010, in Office Outlook 2007, or in Outlook 2003 Service Pack 2 (SP2). Or, this information may be displayed only intermittently. This issue occurs when a user's Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) does not match the user's primary email address. Or, this issue occurs when the user has multiple email addresses. 
 
 ## Resolution
 
@@ -53,7 +53,7 @@ By default, Exchange Server 2010 and Exchange Server 2007 can obtain a Lync Serv
 > [!NOTE]
 > This step is not required for Outlook 2010 or for Outlook 2007.
 
-Outlook 2003 SP2 does not search for the user's SIP address to obtain the presence information. If a user's SIP proxy address and the user's default e-mail address differ from one another, Outlook 2003 SP2 cannot show presence information. By adding the following registry keys for Outlook 2003 SP2, you can help prevent a problem if these addresses differ from one another.  
+Outlook 2003 SP2 does not search for the user's SIP address to obtain the presence information. If a user's SIP proxy address and the user's default e-mail address differ from one another, Outlook 2003 SP2 cannot show presence information. By adding the following registry keys for Outlook 2003 SP2, you can help prevent a problem if these addresses differ from one another.  
 
 1. Click **Start**, click **Run**, type regedit, and then press ENTER.    
 2. Locate the following registry subkey:**HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Common\PersonaMenu**   
@@ -70,7 +70,7 @@ After you create these registry keys, Outlook 2003 SP2 shows presence informatio
 
 ## More Information
 
-In Outlook 2007, the **QueryServiceForStatus** and **EnableDynamicPresence** registry values that are required for Outlook 2003 SP2 are enabled by default and are not available in the Windows client that is hosting the Outlook 2007 local registry. However, the integrated Instant Messaging presence features in the Outlook 2007 can be administered through local policies or through domain group policies. The implementation of the 2007 Office system (SP2) Administrative Template files (ADM, ADMX, ADML) template file Office12.adm adds the registry values that manage the Office 2007 Person Name Smart Tag menu options. The list of Person Name Smart Tag group policy options are displayed under the following registry subkey for the Windows client: 
+In Outlook 2007, the **QueryServiceForStatus** and **EnableDynamicPresence** registry values that are required for Outlook 2003 SP2 are enabled by default and are not available in the Windows client that is hosting the Outlook 2007 local registry. However, the integrated Instant Messaging presence features in the Outlook 2007 can be administered through local policies or through domain group policies. The implementation of the 2007 Office system (SP2) Administrative Template files (ADM, ADMX, ADML) template file Office12.adm adds the registry values that manage the Office 2007 Person Name Smart Tag menu options. The list of Person Name Smart Tag group policy options are displayed under the following registry subkey for the Windows client: 
 
 **HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\12.0\Common\PersonaMenu**
 
@@ -78,7 +78,7 @@ For more information about how to administer the 2007 Office group policy templa
 
 [2007 Office system (SP2) Administrative Template files (ADM, ADMX, ADML) and Office Customization Tool](https://www.microsoft.com/downloads/details.aspx?familyid=73d955c0-da87-4bc2-bbf6-260e700519a8)
 
-In Outlook 2010, the **QueryServiceForStatus** and **EnableDynamicPresence** registry values that are required for Outlook 2003 SP2 are enabled by default and are not available in the Windows client that is hosting the Outlook 2010 local registry. However, the integrated Instant Messaging presence features in the Outlook 2010 client can be administered through local policies or through domain group policies. The implementation of the Office 2010 Administrative Template files (ADM, ADMX, ADML) template file Office14.adm adds the registry values that manage the Office 2010 Contact Card presence features. The list of Contact Card presence features group policies will appear under the following registry key for the Windows client: 
+In Outlook 2010, the **QueryServiceForStatus** and **EnableDynamicPresence** registry values that are required for Outlook 2003 SP2 are enabled by default and are not available in the Windows client that is hosting the Outlook 2010 local registry. However, the integrated Instant Messaging presence features in the Outlook 2010 client can be administered through local policies or through domain group policies. The implementation of the Office 2010 Administrative Template files (ADM, ADMX, ADML) template file Office14.adm adds the registry values that manage the Office 2010 Contact Card presence features. The list of Contact Card presence features group policies will appear under the following registry key for the Windows client: 
 
 **HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\14.0\Common\IM**
 

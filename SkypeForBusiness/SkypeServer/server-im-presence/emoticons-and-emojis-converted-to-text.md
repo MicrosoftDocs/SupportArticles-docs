@@ -22,8 +22,8 @@ appliesto:
 
 Consider the following scenario: 
  
-- You have the Skype for Business 2015 or Skype for Business 2016 client installed.    
-- The client is updated by applying the Windows October 2, 2018, update for [Skype for Business 2015](https://support.microsoft.com/help/4461446) or [Skype for Business 2016](https://support.microsoft.com/help/4092445) or a later version.    
+- You have the Skype for Business 2015 or Skype for Business 2016 client installed.    
+- The client is updated by applying the Windows October 2, 2018, update for [Skype for Business 2015](https://support.microsoft.com/help/4461446) or [Skype for Business 2016](https://support.microsoft.com/help/4092445) or a later version.    
 - You send more than 10 emoticons or emojis in a single message block.    
 
 In this scenario, the emoticons or emojis are converted to text, as shown in the following examples. 
@@ -40,11 +40,11 @@ In this scenario, the emoticons or emojis are converted to text, as shown in the
 
 ![Single message](./media/emoticons-and-emojis-converted-to-text/single-message.png) 
 
-After this behavior occurs, successive messages may also not render emoticons in some scenarios. 
+After this behavior occurs, successive messages may also not render emoticons in some scenarios. 
 
 ## Cause
 
-This behavior is a by-design change in the behavior of Skype for Business 2015 and 2016 for both MSI and C2R clients. This change was introduced in the following MSI client updates: 
+This behavior is a by-design change in the behavior of Skype for Business 2015 and 2016 for both MSI and C2R clients. This change was introduced in the following MSI client updates: 
 
 **Skype for Business 2015** 
 

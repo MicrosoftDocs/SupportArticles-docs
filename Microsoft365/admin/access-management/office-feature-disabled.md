@@ -53,7 +53,7 @@ When you try to perform certain actions in Microsoft 365 Apps, Office LTSC 2021,
 
 The actions that trigger this error message may include the following:
 
-- On the **File** menu, you click **Account** or **Office Account**, and then you click **Sign In**.
+- On the **File** menu, you click **Account** or **Office Account**, and then you click **Sign In**.
 - On the **File** menu, you click **Share**, and then you click **Present Online**.
 - On Microsoft SharePoint Server or in OneDrive for Business, you click **Sync Now**.
 
@@ -126,7 +126,7 @@ To resolve this issue, follow these steps to modify the registry:
 1. Exit Registry Editor.
 
 > [!NOTE]
-> If the `UseOnlineContent` or `SignInOptions` value is located under the **Policies** hive, it may have been created by Group Policy. In this situation, your administrator must modify the policy to change this setting if the administrator set the value.
+> If the `UseOnlineContent` or `SignInOptions` value is located under the **Policies** hive, it may have been created by Group Policy. In this situation, your administrator must modify the policy to change this setting if the administrator set the value.
 
 ## More Information
 

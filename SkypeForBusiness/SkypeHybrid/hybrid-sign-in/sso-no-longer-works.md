@@ -25,24 +25,24 @@ _Original KB number:_ &nbsp; 4508931
 
 New users can't sign in to Microsoft Skype for Business 2016 on-premises using the Single Sign-on (SSO) method when Azure Active Directory Authentication Library (ADAL) and Active Directory Federation Services (AD FS) are used.
 
-Existing profiles aren't affected by this issue. New users or users who deleted their profile while trying to sign in receive this error message:
+Existing profiles aren't affected by this issue. New users or users who deleted their profile while trying to sign in receive this error message:
 
-> An error occurred.
+> An error occurred.
 
-This issue also occurs on newly imaged computers if no user profile was created.
+This issue also occurs on newly imaged computers if no user profile was created.
 
 ## Cause
 
-This issue occurs because the default authentication method changes to Web Account Manager (WAM) after upgrading to Microsoft Office 2016 version 16.0.7967.0000 or a later version.
+This issue occurs because the default authentication method changes to Web Account Manager (WAM) after upgrading to Microsoft Office 2016 version 16.0.7967.0000 or a later version.
 
 ## Workaround
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems can occur if you modify the registry incorrectly. [Back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-Add one of the following registry keys:
+Add one of the following registry keys:
 
-- Add the `EnableWAM` key to this subkey:
+- Add the `EnableWAM` key to this subkey:
 
     `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\16.0\Lync`
 
@@ -50,7 +50,7 @@ Add one of the following registry keys:
     Type: **DWORD (32 Bit)**  
     Value: **0x00000000**  
 
-- Add the `EnableWAM` key to this subkey:
+- Add the `EnableWAM` key to this subkey:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Office\16.0\Lync`
 
@@ -58,7 +58,7 @@ Add one of the following registry keys:
     Type: **DWORD (32 Bit)**  
     Value: **0x00000000**  
 
-- Add the `DisableADALatopWAM` key to this subkey:
+- Add the `DisableADALatopWAM` key to this subkey:
 
     `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity`
 

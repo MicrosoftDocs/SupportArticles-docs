@@ -35,9 +35,9 @@ SharePoint 2013 and SharePoint online, however, support protocol handlers that i
 To resolve this issue, use one of the following solutions:
 
 - Add a SharePoint place within an Office for iPad application that will connect to the SharePoint Document Library. Follow these steps:
-   1. Open Office for iPad installed application such as Word, Excel, or PowerPoint.   
+   1. Open Office for iPad installed application such as Word, Excel, or PowerPoint.   
    2. Select Add a Place.   
-  3. In the Add a Place window click SharePoint site URL.   
+  3. In the Add a Place window click SharePoint site URL.   
    4. Enter the URL or an Internet address of the SharePoint Document Library.
    5. Click Next.   
    6. Enter username and password when you are prompted.   

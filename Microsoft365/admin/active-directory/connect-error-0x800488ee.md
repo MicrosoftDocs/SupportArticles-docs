@@ -27,7 +27,7 @@ appliesto:
 
 Assume that Azure Multi-Factor Authentication was disabled for your admin account because you want to use the Azure Active Directory Module for Windows PowerShell. (Admins who are enabled for Azure Multi-Factor Authentication can't use the Azure Active Directory Module for Windows PowerShell.)
 
-When you open the Azure Active Directory Module for Windows PowerShell and then run the **Connect-MsolService** cmdlet to try to connect to Microsoft Office 365, Azure, or Microsoft Intune, the cmdlet does not run as expected. Instead, you receive the following error message:
+When you open the Azure Active Directory Module for Windows PowerShell and then run the **Connect-MsolService** cmdlet to try to connect to Microsoft Office 365, Azure, or Microsoft Intune, the cmdlet does not run as expected. Instead, you receive the following error message:
 
 ```asciidoc
 Connect-MsolService : Exception of type
@@ -41,7 +41,7 @@ rosoftOnlineException
 ```
 
 > [!NOTE]
-> This article applies only if the hexadecimal error code in the error message is 0x800488EE, as in this example.
+> This article applies only if the hexadecimal error code in the error message is 0x800488EE, as in this example.
 
 ## SOLUTION
 
@@ -52,4 +52,4 @@ Restart the Online Services Sign-In Assistant service. To do this, follow these 
 
 ## MORE INFORMATION
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread)website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread)website.

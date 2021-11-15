@@ -26,7 +26,7 @@ Assume that your mailbox is hosted in Microsoft Exchange Online. If the **VoiceM
 
 ## Resolution
 
-Microsoft implemented a fix to prevent this issue. However, if an existing mailbox is still affected, you can connect to Exchange Online PowerShell to run a move request on the mailbox and resolve this issue. To do this, follow these steps:
+Microsoft implemented a fix to prevent this issue. However, if an existing mailbox is still affected, you can connect to Exchange Online PowerShell to run a move request on the mailbox and resolve this issue. To do this, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 
@@ -36,7 +36,7 @@ Microsoft implemented a fix to prevent this issue. However, if an existing mailb
     New-MoveRequest -Identity <MailboxOrMailUserIdParameter>
     ```
 
-   The following example uses a user alias of *tony* in the Contoso domain:
+   The following example uses a user alias of *tony* in the Contoso domain:
 
     ```powershell
     New-MoveRequest -Identitytony@contoso.com

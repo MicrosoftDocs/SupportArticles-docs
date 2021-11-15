@@ -40,7 +40,7 @@ When OneNote 2013 detects that the notebook is in an offline folder location, yo
 - Duplicate copies of sections may be created if those sections are edited from more than one computer.
 - Edits that are performed on one computer do not appear or are lost.
 
-For more information, see item 4 of the "Troubleshooting steps" section of the following blog post:
+For more information, see item 4 of the "Troubleshooting steps" section of the following blog post:
 
 [OneNote Shared Notebooks - Options and Troubleshooting - Part 1: Windows File Shares](/archive/blogs/david_rasmussen/onenote-shared-notebooks-options-and-troubleshooting-part-1-windows-file-shares)
 
@@ -54,7 +54,7 @@ To resolve this issue, move the notebook from the current file location to a loc
 To move the notebook, take one of the following actions:
 
 - From On the **File** menu, click **Share**, and then click **Copy this notebook to OneDrive or SharePoint**.
-- Right-click the notebook, click **Properties**, and then click **Change Location**.
+- Right-click the notebook, click **Properties**, and then click **Change Location**.
 
 ## More Information
 

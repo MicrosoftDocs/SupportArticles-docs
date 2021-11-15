@@ -28,7 +28,7 @@ To work around this issue, use one of the following methods, as appropriate for 
 
 ### Method 1: Manually send the meeting request
 
-To manually send a join link to the Skype Meeting Broadcast participants by using an Outlook meeting invitation, follow these steps,  
+To manually send a join link to the Skype Meeting Broadcast participants by using an Outlook meeting invitation, follow these steps,  
 
 1. In the [Skype Meeting Broadcast portal](https://portal.broadcast.skype.com/), go to the meeting summary page.   
 2. Next to **Join link**, click **Show**.   
@@ -36,15 +36,15 @@ To manually send a join link to the Skype Meeting Broadcast participants by usin
 
     ![Screen shot of the copy button for the Join link option in Skype Meeting Broadcast ](./media/create-outlook-invitation-unavailable/meeting-url.png)
 
-4. Open your Outlook calendar, click New Meeting, and then paste the meeting URL into the body of your meeting invitation.   
+4. Open your Outlook calendar, click New Meeting, and then paste the meeting URL into the body of your meeting invitation.   
 
 ### Method 2: Manually change the language identifier for the Skype Meeting Broadcast portal
 
 To manually change the language identifier for the Skype Meeting Broadcast portal, follow these steps:
 
-1. In the [Skype Meeting Broadcast portal](https://portal.broadcast.skype.com), browse to the meeting summary page.    
-2. In the address bar of your browser, change the language identifier of the URL. For example, if you're using the French language, the URL will be https://portal.broadcast.skype.com/fr-FR/. Change this to https://portal.broadcast.skype.com/en-US.   
-3. Refresh your browser, and then open your meeting. The **Create Outlook invitation** option should be visible.   
+1. In the [Skype Meeting Broadcast portal](https://portal.broadcast.skype.com), browse to the meeting summary page.    
+2. In the address bar of your browser, change the language identifier of the URL. For example, if you're using the French language, the URL will be https://portal.broadcast.skype.com/fr-FR/. Change this to https://portal.broadcast.skype.com/en-US.   
+3. Refresh your browser, and then open your meeting. The **Create Outlook invitation** option should be visible.   
 
 ## More Information
 

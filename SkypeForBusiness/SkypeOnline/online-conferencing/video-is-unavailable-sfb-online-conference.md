@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you join a Skype for Business Online (formerly Lync Online) conference by using the Lync client, you can't see or connect to the video feed. This issue occurs if you use the **call me** option when you connect to the conference. 
+When you join a Skype for Business Online (formerly Lync Online) conference by using the Lync client, you can't see or connect to the video feed. This issue occurs if you use the **call me** option when you connect to the conference. 
 
 ## Solution
 
@@ -32,7 +32,7 @@ To work around this issue, don't use the **call me** option when you join a conf
     ![Screen shot of Join Meeting Audio windows and Do not join audio selected ](./media/video-is-unavailable-sfb-online-conference/join-audio.jpg)
 
     > [!NOTE]
-    > If you don't see the Join Meeting Audio window, you must enable it in **Options** before you join the meeting. In Lync, click **Options**, and then click **Phones**. Select Prompt me before joining to confirm or select another audio source.   
+    > If you don't see the Join Meeting Audio window, you must enable it in **Options** before you join the meeting. In Lync, click **Options**, and then click **Phones**. Select Prompt me before joining to confirm or select another audio source.   
 3. Use your telephone to join the audio part of the meeting with the telephone number and ID or PIN that is provided by the audio conferencing provider in the meeting invitation.   
 
 ## More Information

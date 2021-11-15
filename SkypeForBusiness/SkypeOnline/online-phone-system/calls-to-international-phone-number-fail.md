@@ -19,10 +19,10 @@ appliesto:
 
 ## Problem
 
-When you dial an international phone number by using Cloud PBX with PSTN International Calling in Skype for Business Online (formerly Lync Online), you experience one of the following symptoms: 
+When you dial an international phone number by using Cloud PBX with PSTN International Calling in Skype for Business Online (formerly Lync Online), you experience one of the following symptoms: 
 
-- Your call isn't completed successfully, and you may receive an error message. For example, when a user makes a call to Australia by using the +61 02 **XXXXXXXX** phone number format, the call fails with the "number not in service" error.    
-- The following details are recorded in the UCCAPI logs from the Mediation server:
+- Your call isn't completed successfully, and you may receive an error message. For example, when a user makes a call to Australia by using the +61 02 **XXXXXXXX** phone number format, the call fails with the "number not in service" error.    
+- The following details are recorded in the UCCAPI logs from the Mediation server:
 
     ```adoc
     Error message: SIP/2.0 404 Not Found
@@ -30,9 +30,9 @@ When you dial an international phone number by using Cloud PBX with PSTN Interna
     ```
 
 ## Solution
-These issues occur because the user is leaving the trunk code of 0 (zero) in the phone number sequence. This causes an invalid phone number to be passed to the PSTN when you use the Office 365 Skype for Business Online PSTN International calling service.  
+These issues occur because the user is leaving the trunk code of 0 (zero) in the phone number sequence. This causes an invalid phone number to be passed to the PSTN when you use the Office 365 Skype for Business Online PSTN International calling service.  
 
-With Skype for Business on-premises deployments, administrators frequently configure normalization rules to handle different dialing behaviors of users. However, when you use the Cloud, international phone numbers must be dialed in the format of + **(Country Code)****(Area Code)****(Local Number)**. In the earlier example, the phone number should be dialed using the following format: +61 2 **XXXXXXXX**. 
+With Skype for Business on-premises deployments, administrators frequently configure normalization rules to handle different dialing behaviors of users. However, when you use the Cloud, international phone numbers must be dialed in the format of + **(Country Code)****(Area Code)****(Local Number)**. In the earlier example, the phone number should be dialed using the following format: +61 2 **XXXXXXXX**. 
 
 ## More Information
 

@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-Event team members in a Skype Meeting Broadcast can make annotations on a Microsoft PowerPoint presentation that's given during the meeting. However, attendees of the broadcast can't see these annotations. 
+Event team members in a Skype Meeting Broadcast can make annotations on a Microsoft PowerPoint presentation that's given during the meeting. However, attendees of the broadcast can't see these annotations. 
 
 ## More Information
 

@@ -19,7 +19,7 @@ appliesto:
 
 ## Problem 
 
-You experience one of the following symptoms in Skype for Business Online (formerly Lync Online):
+You experience one of the following symptoms in Skype for Business Online (formerly Lync Online):
 
 - Instant messages aren't delivered to external contacts. When you try to send an instant message to an external contact in Skype for Business Online, you receive the following error message:
 

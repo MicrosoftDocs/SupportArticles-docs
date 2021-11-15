@@ -45,10 +45,10 @@ To change the number of months for which Calendar free/busy information is publi
 4. Select **Other Free/Busy**.
 5. Change the months setting for publishing Calendar free/busy information. To do this, follow the steps for your version of Outlook.
 
-    **Outlook 2019, Outlook 2016, and Outlook 2013**
+    **Outlook 2019, Outlook 2016, and Outlook 2013**
 
     > [!NOTE]
-    > To set the **Other Free/Busy**, you first have to bring back the option by creating the following registry entry.
+    > To set the **Other Free/Busy**, you first have to bring back the option by creating the following registry entry.
     >
     > | **Registry subkey**| **Type**| **Value** |
     > |---|---|---|
