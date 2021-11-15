@@ -90,8 +90,8 @@ Value: 0
 To determine whether Internet Explorer is configured to use a Proxy Server, follow these steps.
 
 1. Open Internet Explorer.
-2. Select the **Tools** button ![Tools button](./media/outlook-crashes-when-creating-a-new-profile/tools-button.png), and then select **Internet Options**.
+2. Select the **Tools** button :::image type="icon" source="./media/outlook-crashes-when-creating-a-new-profile/tools-button.png" border="false":::, and then select **Internet Options**.
 3. On the **Connections** tab, select your connection (if there are multiple connections), and then select **Settings**.
 4. If you have a Proxy Server configured, the **Use a proxy server for this connection** setting will be enabled, as shows in the following screenshot.
 
-   :::image type="content" source="media/outlook-crashes-when-creating-a-new-profile/use-a-proxy-server-for-this-connection.png" alt-text="Internet Explorer Proxy Settings" border="false":::
+   :::image type="content" source="media/outlook-crashes-when-creating-a-new-profile/use-a-proxy-server-for-this-connection.png" alt-text="Screenshot of Internet Explorer Proxy Settings." border="false":::

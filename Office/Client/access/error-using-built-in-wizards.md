@@ -46,7 +46,7 @@ To resolve this problem, follow these steps:
 2. Open File Explorer. To do this, select **Start**, type file, and then select **File Explorer** in the results list.
 3. Make sure that file extensions are visible. To do this, select the **View** ribbon, and then select the **File name extensions** check box in the **Show/hide** group.
 
-    :::image type="content" source="media/error-using-built-in-wizards/error-using-built-in-wizards.png" alt-text="Select the File name extensions box.":::
+    :::image type="content" source="media/error-using-built-in-wizards/file-name-extensions.png" alt-text="Screenshot to select the File name extensions check box.":::
 4. Rename the following files to (\<*filename*>.old extension).
 
     |     Original File Name    |     Rename To:      |
