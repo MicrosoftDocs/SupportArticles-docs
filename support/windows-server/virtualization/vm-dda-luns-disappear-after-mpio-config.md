@@ -29,9 +29,11 @@ You're using a virtual machine (VM) host that runs Windows Server 2016 or a late
   
    :::image type="content" source="./media/vm-dda-luns-disappear-after-mpio-config/hyper-v-vm-settings-show-dda-disks.png" alt-text="The VM Settings page in Hyper-V Manager lists DDA disks as physical disks.":::  
    When you connect to the VM and then open **Disk Management**, the tool lists the new LUNs as unallocated disks.  
+  
    :::image type="content" source="./media/vm-dda-luns-disappear-after-mpio-config/hyper-v-vm-disk-mgr-before-mpio-config.png" alt-text="On the VM, Disk Management lists the DDA disks as unallocated physical disks.":::
 1. On the VM, you open the MPIO Settings tool, and configure the LUNs as MPIO devices. Then, you restart the VM.
-1. After the VM restarts, you connect to it, and then open **Disk Management** again. Now, the new LUNs no longer appear in the tool.
+1. After the VM restarts, you connect to it, and then open **Disk Management** again. Now, the new LUNs no longer appear in the tool.  
+  
    :::image type="content" source="./media/vm-dda-luns-disappear-after-mpio-config/hyper-v-vm-disk-mgr-after-mpio-config.png" alt-text="After you configure MPIO on the VM, Disk Management on the VM no longer shows the DDA disks.":::
 
 ## Status
