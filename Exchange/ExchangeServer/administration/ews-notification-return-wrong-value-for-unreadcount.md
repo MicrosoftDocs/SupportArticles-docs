@@ -38,7 +38,7 @@ To include the `PR_UNREAD_COUNT` property, set the property tag to `PropertyTag=
 
 \<ExtendedFieldURI PropertyTag="0x3603" PropertyType=" Integer"/>  
 
-If you're using the EWS Managed API or EWS Java API, use the [ExtendedPropertyDefinition](/dotnet/api/microsoft.exchange.webservices.data.extendedpropertydefinition?view=exchange-ews-api) class to request the `PR_UNREAD_COUNT` property.
+If you're using the EWS Managed API or EWS Java API, use the [ExtendedPropertyDefinition](/dotnet/api/microsoft.exchange.webservices.data.extendedpropertydefinition) class to request the `PR_UNREAD_COUNT` property.
 
 ## More information
 

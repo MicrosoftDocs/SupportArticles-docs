@@ -101,9 +101,9 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
 
    To avoid this issue in future, we recommend that you update the TPM firmware.  
 
-   **For Windows 10, version 1709 or later versions:** The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn't occur automatically, we recommend that you use [this manual recovery](#manualrecovery) method.
+   **For Windows 10, version 1709 or later versions:** The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn't occur automatically, we recommend that you use [this manual recovery](#manual-recovery) method.
 
-   **For Windows 10, version 1703:** An automatic process is provided for Hybrid Azure AD join. No automatic process is provided for other environment configurations. If the Hybrid Azure AD join process doesn't occur automatically, we recommend that you use [this manual recovery](#manualrecovery) method.
+   **For Windows 10, version 1703:** An automatic process is provided for Hybrid Azure AD join. No automatic process is provided for other environment configurations. If the Hybrid Azure AD join process doesn't occur automatically, we recommend that you use [this manual recovery](#manual-recovery) method.
 - A device is disabled by the user, the Enterprise administrator, or a policy because of a security concern or by mistake. To determine whether you are experiencing this issue, follow these steps:  
   1. Open Event viewer.
   2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
@@ -120,7 +120,7 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
 
     **Description: AADSTS70002: Error validating credentials. AADSTS50155: Device is not authenticated.**
 
-  To resolve this issue, we recommend that you recover the device by using the [manual recovery](#manualrecovery) method. **Note** If nobody on the Enterprise deleted the device, please file a support ticket and provide an example of a device that is not recovered.
+  To resolve this issue, we recommend that you recover the device by using the [manual recovery](#manual-recovery) method. **Note** If nobody on the Enterprise deleted the device, please file a support ticket and provide an example of a device that is not recovered.
 
 #### Manual recovery
 

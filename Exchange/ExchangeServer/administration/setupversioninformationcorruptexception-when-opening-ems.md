@@ -41,7 +41,7 @@ This issue can occur after you uninstall PowerShell 2.0. When you uninstall Powe
 
 ## Workaround 2 - Reinstall PowerShell 2.0
 
-To install PowerShell 2.0, see [Installing the Windows PowerShell 2.0 Engine](/powershell/scripting/windows-powershell/install/installing-the-windows-powershell-2.0-engine?view=powershell-7).
+To install PowerShell 2.0, see [Installing the Windows PowerShell 2.0 Engine](/powershell/scripting/windows-powershell/install/installing-the-windows-powershell-2.0-engine).
 
 ## Status
 
