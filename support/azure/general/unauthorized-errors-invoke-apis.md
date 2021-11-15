@@ -40,9 +40,6 @@ The expected HTTP response code for all the operations is 200, however the respo
 - You can check your subscription key for a particular product from APIM Developer portal by navigating to **Profile** page after sign-in as shown below.
 - Select the **Show** button to see the subscription keys for respective products you have subscribed to.
 
-
-    :::image type="content" source="./media/unauthorized-errors-invoke-apis/4464931_en_1.png" alt-text="subscription key.":::
-
 - If you check the headers being sent from **Test** tab, you notice that the value of **Ocp-Apim-Subscription-Key** request header is wrong. You might be wondering how come that is possible, because APIM automatically fills this request header with the right subscription key.
 - Let's check the Frontend definition of **Create resource** and **Retrieve resource** operations under **Design** tab. Upon careful inspection, you would notice that these operations got a wrong hard-coded value of **Ocp-Apim-Subscription-Key** request header added under **Headers** tab.
 - You can remove it, this should resolve the invalid subscription key problem, but still you would get missing subscription key error.

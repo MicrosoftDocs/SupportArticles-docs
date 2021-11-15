@@ -556,8 +556,6 @@ VMM "Perform servicing on a Service" fails. Occasionally, failures in servicing 
 
 Verify that the service template qualifies for this situation. An example of a qualified template is shown in the following screen shot.
 
-:::image type="content" source="./media/update-1606-cps-premium/3176815.png" alt-text="An example of a qualified template.":::
-
 You should see entries that indicate one or more of the following situations:
 
 - The first job failed.
