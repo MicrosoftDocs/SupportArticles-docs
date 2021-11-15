@@ -101,4 +101,4 @@ If you do not have legacy public folders in the organization and you accidentall
 
 For more information about how to remove public folders in an Exchange Server 2013 environment, see [How to remove public folders](/exchange/collaboration-exo/public-folders/remove-public-folder).
 
-For more information about the `HoldForMigration` parameter, see [General information about the New-Mailbox cmdlet together with the HoldForMigration parameter](/powershell/module/exchange/new-mailbox?view=exchange-ps).
+For more information about the `HoldForMigration` parameter, see [General information about the New-Mailbox cmdlet together with the HoldForMigration parameter](/powershell/module/exchange/new-mailbox).
