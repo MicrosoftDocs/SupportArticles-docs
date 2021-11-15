@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4540228
 
 You may see the following banner in a flow's run history.
 
-:::image type="content" source="media/there-is-a-problem-with-the-flows-trigger/error.png" alt-text="screenshot of the There is a problem with the flow's trigger error":::
+:::image type="content" source="media/there-is-a-problem-with-the-flows-trigger/error-message.png" alt-text="Screenshot of the error in a flow's run history." border="false":::
 
 ## Cause
 
@@ -30,7 +30,7 @@ To understand why the trigger failed and how to fix the issue:
 1. Select the **Fix the trigger** link.
 2. The failed trigger will be displayed. Select the trigger to inspect the underlying error message:
 
-   :::image type="content" source="media/there-is-a-problem-with-the-flows-trigger/details.png" alt-text="screenshot of the Trigger error":::
+   :::image type="content" source="media/there-is-a-problem-with-the-flows-trigger/trigger-details.png" alt-text="screenshot to select the trigger to inspect the underlying error message" lightbox="trigger-details.png" border="false" :::
 
 In the above example, the trigger failed because the specified folder was not found in the SharePoint library. The fix would be to update the folder name to a valid name.
 

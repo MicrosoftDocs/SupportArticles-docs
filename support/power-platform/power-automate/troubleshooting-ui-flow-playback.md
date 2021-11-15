@@ -32,11 +32,11 @@ If the scenario isn't mentioned above, you can try if the following steps help t
 
     1. Find your UI flow in Power Automate portal, and edit your UI flow steps.
 
-        :::image type="content" source="./media/troubleshooting-ui-flow-playback/edit-your-ui-flow.png" alt-text="UI flow list page.":::
+        :::image type="content" source="./media/troubleshooting-ui-flow-playback/edit-your-ui-flow.png" alt-text="Screenshot of the U I flow list page in Power Automate portal." lightbox="edit-your-ui-flow.png":::
 
     2. Extend script and select the step (in following picture, select **LeftClick2**), you can check the screenshot to see if there's any duplicate recording.
 
-        :::image type="content" source="./media/troubleshooting-ui-flow-playback/record-edit-steps.png" alt-text="Edit steps.":::
+        :::image type="content" source="./media/troubleshooting-ui-flow-playback/record-edit-steps.png" alt-text="Screenshot shows steps to Extend the script and select LeftClick2." lightbox="record-edit-steps.png":::
   
     3. For UIA Element Not Found issue, it might be caused by various reasons, try to enable coordinate based playback. [Issue with UI flows - UIAElementNotFound](https://support.microsoft.com/help/4555804)
 

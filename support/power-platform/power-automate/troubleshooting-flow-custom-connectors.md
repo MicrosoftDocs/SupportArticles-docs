@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4526409
 
 > Error 500: Expression value is invalid. The template field is required.
 
-:::image type="content" source="./media/troubleshooting-flow-custom-connectors/operation-failed-500.jpg" alt-text="Custom Connector Test 500 error.":::
+:::image type="content" source="./media/troubleshooting-flow-custom-connectors/operation-failed-500.png" alt-text="Screenshot of the custom connector test 500 error." lightbox="operation-failed-500.png":::
 
 There can be several reasons for what might be causing this issue, but the most common reason is related to how the path and host fields are defined in the swagger. The path of each action is relative to the host of the API you're trying to reach, which ends up getting constructed as **\<host/path>**.
 
@@ -27,10 +27,10 @@ For this construction to happen successfully and to properly reach your API's en
 
 Suppose you want to call the endpoint `contoso.com/helloworld`. When configuring your custom connector, you might see that the swagger is defined as:
 
-:::image type="content" source="./media/troubleshooting-flow-custom-connectors/define-the-swagger.png" alt-text="Custom Connector Invalid swagger.":::
+:::image type="content" source="./media/troubleshooting-flow-custom-connectors/define-the-swagger.png" alt-text="Screenshot shows the custom connector invalid swagger.":::
 
 The problem here's that the host has the name of the endpoint we're trying to call, but the path should be the one with the endpoint name of `/helloworld`. So the correct way of defining it is:
 
-:::image type="content" source="./media/troubleshooting-flow-custom-connectors/define-the-swagger-correctly.png" alt-text="Correctly configuring Custom Connector.":::
+:::image type="content" source="./media/troubleshooting-flow-custom-connectors/define-the-swagger-correctly.png" alt-text="Screenshot of the correctly configuring custom connector.":::
 
 For more information, see [Paths and Operations](https://swagger.io/docs/specification/paths-and-operations/).
