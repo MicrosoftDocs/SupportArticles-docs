@@ -50,7 +50,7 @@ You might be able to work around this issue depending on the language settings o
         > - The system accounts include the network service account.
         > - You can revert the **Format** setting for **Current user** to the original value as long as **Format** for **Welcome screen** is set to **English (United States)**.
 
-        :::image type="content" source="./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Select the Welcome screen and system accounts option":::
+        :::image type="content" source="media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Screenshot that shows the Welcome screen and system accounts option is selected.":::
 
 > [!NOTE]
 > The MSExchangeDelivery service may not start together with Exchange Server. If the service doesn't start, follow these steps:

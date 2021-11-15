@@ -56,7 +56,7 @@ To resolve this issue, make the PopProxy and ImapProxy components active. To do 
 
     In the following example, `HealthAPI` is displayed as the requester that changed the state of PopProxy to **Inactive**.
 
-   ![screenshot of the Get-ServerComponentState](./media/cannot-connect-to-pop3-or-imap4/example-of-get-servercomponentstate.png)
+   :::image type="content" source="media/cannot-connect-to-pop3-or-imap4/example-of-get-servercomponentstate.png" alt-text="Screenshot of the Get-ServerComponentState cmdlet.":::
 
 2. Use the following command to make PopProxy active:
 
@@ -64,4 +64,4 @@ To resolve this issue, make the PopProxy and ImapProxy components active. To do 
 
     For example:
 
-   ![screenshot of the Set-ServerComponentState](./media/cannot-connect-to-pop3-or-imap4/example-of-set-servercomponentstate.png)
+   :::image type="content" source="media/cannot-connect-to-pop3-or-imap4/example-of-set-servercomponentstate.png" alt-text="Screenshot of the Set-ServerComponentState cmdlet.":::

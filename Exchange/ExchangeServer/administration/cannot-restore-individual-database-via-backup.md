@@ -37,9 +37,9 @@ In this scenario, you cannot restore the individual mailbox or the individual da
 
 (The screenshots for this issue are listed below).
 
-:::image type="content" source="media/cannot-restore-individual-database-via-backup/windows-server-backup.png" alt-text="The screenshot for Windows Server Backup" border="false":::
+:::image type="content" source="media/cannot-restore-individual-database-via-backup/windows-server-backup.png" alt-text="Screenshot of using Windows Server Backup to restore the mailbox.":::
 
-:::image type="content" source="media/cannot-restore-individual-database-via-backup/select-application-in-recovery-wizard.png" alt-text="The screenshot for this issue" border="false":::
+:::image type="content" source="media/cannot-restore-individual-database-via-backup/select-application-in-recovery-wizard.png" alt-text="Screenshot of the window for Details - Exchange.":::
 
 ## Cause
 
@@ -64,15 +64,15 @@ To work around this issue, use the Recovery Wizard in Windows Server Backup to r
 
 5. On the **Select Recovery Type** page, select **Files and folders**, and then select **Next** (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-restore-individual-database-via-backup/select-recovery-type-in-recovery-wizard.png" alt-text="The screenshot for this step 5" border="false":::
+   :::image type="content" source="media/cannot-restore-individual-database-via-backup/select-recovery-type-in-recovery-wizard.png" alt-text="Screenshot of the window for Select Recovery Type.":::
 
 6. On the **Select Items to Recover** page, under **Available items**, expand the list until the folder that you want is visible. select a folder to display the contents in the adjacent pane, select each item that you want to restore, and then select **Next** (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-restore-individual-database-via-backup/select-items-to-recover-in-recovery-wizard.png" alt-text="The screenshot for this step 6" border="false":::
+   :::image type="content" source="media/cannot-restore-individual-database-via-backup/select-items-to-recover-in-recovery-wizard.png" alt-text="Screenshot of the window for Select Items to Recover.":::
 
 7. On the **Specify Recovery Options** page, select **Original Location**, and then select **Next** (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-restore-individual-database-via-backup/specify-recovery-options-in-recovery-wizard.png" alt-text="The screenshot for this step 7" border="false":::
+   :::image type="content" source="media/cannot-restore-individual-database-via-backup/specify-recovery-options-in-recovery-wizard.png" alt-text="Screenshot of the window for Specify Recovery Options.":::
 
 8. Under **When this wizard find items in the backup that are already in the recovery destination**, select the option that you want, and then select **Next.**
 
@@ -82,15 +82,15 @@ To work around this issue, use the Recovery Wizard in Windows Server Backup to r
 
 12. After the restore operation is complete, check the health of the database, and verify that the log files exist (The screenshot for this step is listed below):
 
-    :::image type="content" source="media/cannot-restore-individual-database-via-backup/log-files.png" alt-text="The screenshot for this step 12" border="false":::
+    :::image type="content" source="media/cannot-restore-individual-database-via-backup/log-files.png" alt-text="Screenshot of verifying that the log files exist.":::
 
 13. Perform a Soft Recovery operation. To do this, run the Eseutil.exe utility (The screenshot for this step is listed below):
 
-    :::image type="content" source="media/cannot-restore-individual-database-via-backup/perform-soft-recovery-operation.png" alt-text="The screenshot for this step 13" border="false":::
+    :::image type="content" source="media/cannot-restore-individual-database-via-backup/perform-soft-recovery-operation.png" alt-text="Screenshot of performing a Soft Recovery operation by using Command Prompt.":::
 
 14. Verify the status of the database. To do this, run the Eseutil.exe utility (The screenshot for this step is listed below):
 
-    :::image type="content" source="media/cannot-restore-individual-database-via-backup/database-status.png" alt-text="The screenshot for this step 14" border="false":::
+    :::image type="content" source="media/cannot-restore-individual-database-via-backup/database-status.png" alt-text="Screenshot of verifying the status of the database by using Command Prompt.":::
 
 ## More information
 

@@ -31,11 +31,11 @@ You cannot view free/busy information for a specific user in Exchange Online. Yo
 
     > could not be updated
 
-    ![Screenshot of could not be updated error](./media/cannot-view-another-user-calendar-free-busy-information/could-not-be-updated.jpg)
+   :::image type="content" source="media/cannot-view-another-user-calendar-free-busy-information/could-not-be-updated.png" alt-text="Screenshot of could not be updated error.":::
 
 - When you try to view the user's Calendar through Outlook Web App, you see a red triangle with an exclamation mark.
 
-    ![Screenshot of the user's Calendar showing a red triangle with an exclamation mark](./media/cannot-view-another-user-calendar-free-busy-information/red-triangle.jpg)
+   :::image type="content" source="media/cannot-view-another-user-calendar-free-busy-information/red-triangle.png" alt-text="Screenshot of the user's Calendar showing a red triangle with an exclamation mark.":::
 
 ## Cause
 

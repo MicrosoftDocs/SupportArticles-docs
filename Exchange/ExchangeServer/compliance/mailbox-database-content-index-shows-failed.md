@@ -46,7 +46,7 @@ To work around this problem, update the following registry entries.
 
     *C:\Program Files\Microsoft\Exchange Server\V15\Bin\Search\Ceres\HostController\Data*
 
-    :::image type="content" source="./media/mailbox-database-content-index-shows-failed/datadirectory-registry-entry.jpg" alt-text="Set the Exchange Data Directory registry entry.":::
+    :::image type="content" source="media/mailbox-database-content-index-shows-failed/datadirectory-registry-entry.png" alt-text="Screenshot of setting the Exchange Data Directory registry entry.":::
 
 - **`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HostControllerService`**
 

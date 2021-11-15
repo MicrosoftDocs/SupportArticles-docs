@@ -69,7 +69,7 @@ After you create the alternate service account, you must determine the Exchange 
 
 For a small business, you probably won't have anything larger than a single Active Directory site. For example, your single Active Directory site may resemble the following diagram.
 
-![The screen shot for a small business that contains a single Active Directory site.](./media/kerberos-authentication-for-mapi-client/small-business.gif)
+:::image type="content" source="media/kerberos-authentication-for-mapi-client/small-business.png" alt-text="Screenshot of a small business that contains a single Active Directory site.":::
 
 To determine the SPNs that you would use in this example, we must look at the fully qualified domain names (FQDNs) that are used by the internal Outlook clients in the previous illustration. In this example, you would deploy the following SPNs on the ASA credential:
 

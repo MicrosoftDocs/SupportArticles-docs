@@ -31,7 +31,7 @@ You successfully installed Microsoft Exchange Server 2016 or Exchange Server 201
 >
 > Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
 
-![The screenshot for the error message](./media/event-1309-code-3005-cannot-access-owa-ecp/something-went-wrong-error.png)
+:::image type="content" source="media/event-1309-code-3005-cannot-access-owa-ecp/something-went-wrong-error.png" alt-text="Screenshot of the error message - we can't get that information right now.":::
 
 Additionally, the following event may be logged in the Application log:
 

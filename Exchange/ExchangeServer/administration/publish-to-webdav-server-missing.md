@@ -31,7 +31,7 @@ When you try to share a Calendar folder in an Exchange mailbox or an Exchange On
 
 The following screenshot shows the option that you expect to see on the menu when you right-click **Calendar** and then point to **Share**.
 
-:::image type="content" source="media/publish-to-webdav-server-missing/publish-to-webdav-server-option.jpg" alt-text="screenshot of Publish to WebDAV Server option" border="false":::
+:::image type="content" source="media/publish-to-webdav-server-missing/publish-to-webdav-server-option.png" alt-text="Screenshot of Publish to WebDAV Server option.":::
 
 > [!NOTE]
 > This issue doesn't occur if you try to share a calendar that's not located in the mailbox. For example, if you try to share a Calendar folder from your local personal folders file (.pst), the **Publish to WebDAV Server** option is available.
@@ -66,13 +66,13 @@ In this configuration, share the Exchange calendar folder together with users in
     > - If you're prompted to do this, enter your credentials.
     > - Your default browser opens, and the **Calendar Publishing - Calendar** page is displayed.
     >
-    > ![Screenshot of Calendar Publishing - Calendar page](./media/publish-to-webdav-server-missing/calendar-publishing.jpg)
+    >:::image type="content" source="media/publish-to-webdav-server-missing/calendar-publishing.png" alt-text="Screenshot of the Calendar Publishing - Calendar page.":::
 
 2. Set the publishing options for your calendar, and then select **Start publishing**.
 
 3. Note the URLs that are provided in the link for subscribing to this calendar and for viewing the calendar in a web browser.
 
-    :::image type="content" source="media/publish-to-webdav-server-missing/screenshot-of-step-3.jpg" alt-text="screenshot for step 3" border="false":::
+    :::image type="content" source="media/publish-to-webdav-server-missing/screenshot-of-step-3.png" alt-text="Screenshot for links of subscribing to this calendar and for viewing the calendar in a web browser.":::
 
     These are the links that you share together with other users who view your calendar.
 
