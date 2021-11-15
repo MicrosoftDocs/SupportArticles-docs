@@ -23,7 +23,7 @@ Microsoft Sway has file size limits for different types of files. The maximum su
 
 If you upload a file that exceeds the size to Sway, you may receive an error message that states that the file is too large to upload.
 
-![File is too large to load](./media/sway-file-size-limit-error/size-limit-error.png)
+:::image type="content" source="media/sway-file-size-limit-error/size-limit-error.png" alt-text="Screenshot of the error message, showing the file is too large to upload.":::
 
 You cannot change these file size limits. If you experience the error message, we recommend that you go to the following site:
 

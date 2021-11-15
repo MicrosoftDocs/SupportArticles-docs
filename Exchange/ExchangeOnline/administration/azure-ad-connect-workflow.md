@@ -28,7 +28,7 @@ It's important to understand the flow of data from on-premises to the cloud in E
 
 ## High-level workflow
 
-![A screenshot of the High-Level workflow](./media/azure-ad-connect-workflow/workflow.png)
+:::image type="content" source="media/azure-ad-connect-workflow/workflow.png" alt-text="Screenshot of the High-Level workflow from source on-premises AD to a source connector space.":::
 
 1. The data flows from source on-premises AD to a source connector space.
 

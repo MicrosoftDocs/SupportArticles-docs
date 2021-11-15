@@ -79,7 +79,7 @@ Misconfigured network adapter on Exchange Server causes failure in Domain Name S
 
 Make sure that the **Register this connection's addresses in DNS** property is selected on the network adapter:
 
-:::image type="content" source="media/exchange-restarts-frequently-stop-error/register-this-connection-s-addresses-in-dns.png" alt-text="screenshot for step 1":::
+:::image type="content" source="media/exchange-restarts-frequently-stop-error/register-this-connection-s-addresses-in-dns.png" alt-text="Screenshot shows that Register this connection's addresses in DNS property is selected.":::
 
 > [!NOTE]
 > For Exchange server that is a member of DAG and has separate MAPI and Replication network adapters, make sure that this property is selected on the network adapter that represents the MAPI network.

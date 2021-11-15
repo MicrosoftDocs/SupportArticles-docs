@@ -58,7 +58,7 @@ To install an additional product key to enable Terminal Services, use one of the
    
 3. In the **Microsoft Office Professional Plus 2010** dialog box, click the **Enter a Product Key** option, and then click **Continue**.
 
-    ![click Enter a Product Key option](./media/office-pro-plus-2010-terminal-server/enter-product-key.jpg)   
+    :::image type="content" source="media/office-pro-plus-2010-terminal-server/enter-product-key.png" alt-text="Screenshot to select the Continue option after selecting the Enter a Product Key option." border="false":::
 4. Install the Terminal Services product key that you obtained from your MSDN or TechNet subscription. To do this, follow these steps:
       1. Make sure that the computer is connected to the Internet.   
       2. Enter the product key, click to select the **Attempt to automatically activate my product online** check box, and then click **Continue**.   

@@ -32,11 +32,11 @@ Also, to help troubleshoot common support issues, a series of configuration chec
 > [!NOTE]
 > When you run the Outlook Support Diagnostic, you may be prompted to select a version of Microsoft Office if you have both Office 20013 (Click-to-Run) and an earlier version of Office installed. Make sure that you select the version in which you are experiencing a problem with Outlook.
 
-![Screenshot of selecting Office version](./media/outlook-support-diagnostic/select-version.JPG)
+:::image type="content" source="./media/outlook-support-diagnostic/select-version.png" alt-text="Screenshot of selecting Office version in the Outlook Support Diagnostic." border="false":::
 
 On the **Data Collection Options** page, you are prompted to select either **Full** or **Custom** for the data collection. Always select the **Full** option unless you receive other advice from a support engineer.
 
-![Screenshot of Data Collection Options](./media/outlook-support-diagnostic/data-collection-options.jpg)
+:::image type="content" source="./media/outlook-support-diagnostic/data-collection-options.png" alt-text="Screenshot of Data Collection Options." border="false":::
 
 > [!NOTE]
 > Depending on your version of Windows and the updates you have installed, you may also be prompted to install [Microsoft .NET Framework 4.5.2 (Web Installer)](https://www.microsoft.com/download/details.aspx?id=42643).

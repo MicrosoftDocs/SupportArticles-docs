@@ -26,7 +26,7 @@ When you run the [Office 365 Hybrid Configuration wizard](https://aka.ms/HybridW
 
 > DataStrings.InvalidSmtpDomainName(domain)
 
-![Screenshot of the error message](./media/hcw-invalidsmtpdomainname-error/error.jpg)
+:::image type="content" source="media/hcw-invalidsmtpdomainname-error/error.png" alt-text="Screenshot of the error message when the wizard tries to connect to your on-premises Exchange environment.":::
 
 Additionally, you experience the following symptoms:
 

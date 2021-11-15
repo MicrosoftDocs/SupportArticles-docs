@@ -52,7 +52,7 @@ For example, the error entry in the IIS log may resemble the following:
 
 This issue occurs if the IIS configuration is missing the svc-Integrated handler mapping. The following screenshot shows an example of the svc-Integrated handler mapping in IIS:
 
-![Screenshot of IIS configuration](./media/endpoint-connection-405-error/iis-configuration.jpg)
+:::image type="content" source="media/endpoint-connection-405-error/iis-configuration.png" alt-text="Screenshot of window for IIS configuration.":::
 
 ## Solution
 

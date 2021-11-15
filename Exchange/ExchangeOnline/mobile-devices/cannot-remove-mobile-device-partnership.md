@@ -37,7 +37,7 @@ Get-MobileDevice -Identity "Tony"
 Use the light version of Outlook Web App to remove the device from the user's mailbox. To do this, follow these steps:
 
 1. Have the user sign in to Outlook Web App.
-2. In the upper-right corner of the page, select **Settings** (![Screen shot of the Settings icon](./media/cannot-remove-mobile-device-partnership/icon.jpg)), and then select **Display settings**.
+2. In the upper-right corner of the page, select **Settings** (:::image type="icon" source="media/cannot-remove-mobile-device-partnership/icon.png" border="false":::), and then select **Display settings**.
 3. Click the **Outlook Web App version** tab, select the **Use the light version of Outlook Web App** check box, and then click **OK**.
 4. Sign out of Outlook Web App, and then close all browser windows.
 5. Open a new browser window, and then sign in to Outlook Web App.

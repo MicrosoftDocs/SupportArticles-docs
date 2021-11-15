@@ -32,7 +32,7 @@ Microsoft Outlook 2010 appears to run slowly in a Citrix Virtual Desktop environ
 
 This behavior can occur if Outlook 2010 is using a Cached Mode profile in a Citrix Virtual Desktop environment. A Cached Mode profile is in use if the Outlook 2010 status bar displays **Connected to Microsoft Exchange**, as shown in the following figure:
 
-:::image type="content" source="media/performance-issues-in-cached-mode-on-citrix-virtual-desktop/connected-to-microsoft-exchange.jpg" alt-text="Outlook 2010 status bar displays Connected to Microsoft Exchange" border="false":::
+:::image type="content" source="media/performance-issues-in-cached-mode-on-citrix-virtual-desktop/connected-to-microsoft-exchange.png" alt-text="Screenshot of Outlook 2010 status bar which displays Connected to Microsoft Exchange." border="false":::
 
 ## Resolution
 
@@ -59,7 +59,7 @@ Configure Microsoft Outlook 2010 to use an Online Mode profile instead of Cached
 
     You can confirm that Outlook is using an Online Mode profile if the Outlook status bar displays **Online with Microsoft Exchange** as shown in the figure below.
 
-    :::image type="content" source="media/performance-issues-in-cached-mode-on-citrix-virtual-desktop/online-with-microsoft-exchange.jpg" alt-text="Outlook status bar displays Online with Microsoft Exchange" border="false":::
+    :::image type="content" source="media/performance-issues-in-cached-mode-on-citrix-virtual-desktop/online-with-microsoft-exchange.png" alt-text="Screenshot of Outlook status bar which displays Online with Microsoft Exchange." border="false":::
 
 ## More information
 

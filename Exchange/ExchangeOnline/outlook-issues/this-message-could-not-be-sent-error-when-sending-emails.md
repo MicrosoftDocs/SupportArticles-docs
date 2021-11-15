@@ -39,11 +39,11 @@ To resolve this issue, follow these steps:
 
    1. On the Office ribbon, select the **Send/Receive** tab, select the down arrow next to **Send/Receive Groups**, and then select **Download Address Book**.
 
-      :::image type="content" source="media/this-message-could-not-be-sent-error-when-sending-emails/download-address-book.jpg" alt-text="Screenshot of the Download Address Book command on the Send/Receive tab" border="false":::
+      :::image type="content" source="media/this-message-could-not-be-sent-error-when-sending-emails/download-address-book.png" alt-text="Screenshot of the Download Address Book command on the Send/Receive tab.":::
 
    2. In the **Offline Address Book** dialog box, make sure that the **Download changes since last Send/Receive** check box is selected and that **Offline Global Address List** is selected as the address book, and then select **OK**.
 
-      :::image type="content" source="media/this-message-could-not-be-sent-error-when-sending-emails/offline-address-book.jpg" alt-text="Screenshot of the Offline Address Book dialog box" border="false":::
+      :::image type="content" source="media/this-message-could-not-be-sent-error-when-sending-emails/offline-address-book.png" alt-text="Screenshot of the Offline Address Book dialog box.":::
 
    3. Test to see whether the issue is resolved by sending an email message as the distribution group. When you create the message, use the global address list (GAL) to populate the **From** field.
 
@@ -56,7 +56,7 @@ To resolve this issue, follow these steps:
 
       \Users\<UserName>\AppData\Local\Microsoft\Outlook\Offline Address Books
 
-      :::image type="content" source="media/this-message-could-not-be-sent-error-when-sending-emails/folder-path.jpg" alt-text="Screenshot of Windows Explorer, showing the path to the Offline Address Books folder":::
+      :::image type="content" source="media/this-message-could-not-be-sent-error-when-sending-emails/folder-path.png" alt-text="Screenshot of Windows Explorer showing the path to the Offline Address Books folder.":::
 
       > [!NOTE]
       > The folder may be hidden. To unhide it, select **Start**, type folder options in the search box, select **Folder Options**, select the **View** tab, select **Show hidden files, folders, and drives**, and then select **OK**.

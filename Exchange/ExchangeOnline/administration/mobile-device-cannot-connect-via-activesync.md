@@ -64,15 +64,15 @@ To troubleshoot this issue further, run the Exchange ActiveSync Autodiscover tes
 
 2. Enter your Microsoft 365 sign-in credentials.
 
-   :::image type="content" source="media/mobile-device-cannot-connect-via-activesync/enter-sign-in-credentials.png" alt-text="Enter your Microsoft 365 sign-in credentials" border="false":::
+   :::image type="content" source="media/mobile-device-cannot-connect-via-activesync/enter-sign-in-credentials.png" alt-text="Screenshot of entering your Microsoft 365 sign-in credentials.":::
 
 3. Select **Perform Test**, and then wait while the details pane is displayed.
 
-   :::image type="content" source="media/mobile-device-cannot-connect-via-activesync/perform-test.png" alt-text="Perform Test" border="false":::
+   :::image type="content" source="media/mobile-device-cannot-connect-via-activesync/perform-test.png" alt-text="Screenshot of selecting Perform Test in the Remote Connectivity Analyzer window.":::
 
 4. Review the test results.
 
-   :::image type="content" source="media/mobile-device-cannot-connect-via-activesync/test-results.png" alt-text="Review the test results" border="false":::
+   :::image type="content" source="media/mobile-device-cannot-connect-via-activesync/test-results.png" alt-text="Screenshot of Test Details in the Remote Connectivity Analyzer window.":::
 
 5. Take one of the following actions:
 

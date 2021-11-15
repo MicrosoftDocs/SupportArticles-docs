@@ -92,7 +92,7 @@ To resolve this issue, set the Hub Transport component to an active state. To do
 
 To verify that a server is in an inactive state, run the `Get-ServerComponentState` cmdlet. The output from this cmdlet resembles the following:
 
-:::image type="content" source="./media/event-7009-send-receive-emails/cmdlet-output.png" alt-text="Screenshot showing the output from cmdlet.":::
+:::image type="content" source="media/event-7009-send-receive-emails/cmdlet-output.png" alt-text="Screenshot showing the output by running Get-ServerComponentState using cmdlet.":::
 
 ## References
 

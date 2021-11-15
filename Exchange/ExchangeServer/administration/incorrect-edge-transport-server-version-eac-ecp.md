@@ -33,7 +33,7 @@ After you upgrade an Edge Transport server to a new version, you notice the foll
 
 - In Exchange Admin Center (EAC) or Exchange Control Panel (ECP), the version information for the Edge Transport server isn't updated as expected, as shown in the following screenshot.
 
-    :::image type="content" source="./media/incorrect-edge-transport-server-version-eac-ecp/incorrect-version-eac.png" alt-text="Screenshot of wrong Edge Transport server version in EAC.":::
+    :::image type="content" source="media/incorrect-edge-transport-server-version-eac-ecp/incorrect-version-eac.png" alt-text="Screenshot of wrong Edge Transport server version in E A C.":::
 
 - On another server that is running Exchange Server and that isn't an Edge Transport server, you run the [Get-ExchangeServer](/powershell/module/exchange/get-exchangeserver) cmdlet in Exchange Management Shell by using the following command:
 

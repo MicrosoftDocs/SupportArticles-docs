@@ -36,11 +36,11 @@ In this situation, you receive the following error message:
 
 This is a sample screenshot of the error message in EMS:
 
-:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-ems.png" alt-text="Screenshot of the error message in EMS ":::
+:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-ems.png" alt-text="Screenshot of the error message in E M S.":::
 
 The following is a sample screenshot of the error message in EAC:
 
-:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-eac.png" alt-text="Screenshot of the error message in EAC ":::
+:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-eac.png" alt-text="Screenshot of the error message in E A C.":::
 
 > [!NOTE]
 > The public folder mailbox should be created with the `HoldForMigration` parameter only if you are migrating from legacy public folders to modern public folders in Exchange Server 2013 or Exchange Server 2016. Specifying the `HoldForMigration` parameter locks the public folder hierarchy in Exchange Server 2013 or Exchange Server 2016 so that no public folders can be created by users until the migration is complete.  
@@ -101,4 +101,4 @@ If you do not have legacy public folders in the organization and you accidentall
 
 For more information about how to remove public folders in an Exchange Server 2013 environment, see [How to remove public folders](/exchange/collaboration-exo/public-folders/remove-public-folder).
 
-For more information about the `HoldForMigration` parameter, see [General information about the New-Mailbox cmdlet together with the HoldForMigration parameter](/powershell/module/exchange/new-mailbox?view=exchange-ps).
+For more information about the `HoldForMigration` parameter, see [General information about the New-Mailbox cmdlet together with the HoldForMigration parameter](/powershell/module/exchange/new-mailbox).
