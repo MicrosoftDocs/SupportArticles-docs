@@ -185,7 +185,7 @@ This method lets you maintain the listener while dropping and re-creating the av
 
 9. Right-click the listener, click **Properties**, type the appropriate port number for the listener, and then click **OK**.
 
-    :::image type="content" source="./media/alwayson-availability-databases-recovery-pending-suspect/config-ag-listener.png" alt-text="Screenshot of availability group listener properties, showing the configuration of listener." border="false":::
+    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/config-ag-listener.png" alt-text="Screenshot of availability group listener properties, showing the configuration of listener." border="false":::
 
 This makes sure that applications that use the listener can still use it to connect to the instance of SQL Server that is hosting the production databases without interruption. The original availability group can now be completely removed and re-created. Or the databases and replicas can be added to the new availability group.
 

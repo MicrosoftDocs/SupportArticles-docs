@@ -232,7 +232,7 @@ _Original KB number:_ &nbsp; 2681562
     > Operation failed with 0x8007000B  
     An attempt was made to load a program with an incorrect format.
 
-    :::image type="content" source="media/sql-server-2012-setup-issues/error-0x8007000b.png" alt-text="Screenshot of the operation failed error message." border="true":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/error-0x8007000b.png" alt-text="Screenshot of the operation failed error message.":::
 
     Prevention
 
