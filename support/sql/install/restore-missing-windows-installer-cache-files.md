@@ -265,7 +265,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:  
-    ![SQL Server error2](./media/restore-missing-windows-installer-cache-files/sql-server-error-image.jpg)
+    :::image type="content" source="media/restore-missing-windows-installer-cache-files/2008-setup-stopped-working.png" alt-text="Screenshot of the error message: SQL Server 2008 Setup has stopped working." border="false":::
 
 - **For SQL Server 2008 R2 SP1 only (CU/GDR branches are not applicable)**
 
@@ -276,7 +276,8 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:
-    ![SQL Server error](./media/restore-missing-windows-installer-cache-files/upgrade-error.jpg)
+    :::image type="content" source="media/restore-missing-windows-installer-cache-files/2008-r2-setup-stopped-working.png" alt-text="Screenshot of the error message: SQL Server 2008 R2 Setup has stopped working." border="false":::
+
 
 - **For SQL Server 2008 R2 SP2**
 
@@ -287,7 +288,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:
-    ![SQL Server error3](./media/restore-missing-windows-installer-cache-files/upgrade-error.jpg)
+     :::image type="content" source="media/restore-missing-windows-installer-cache-files/2008-r2-setup-stopped-working.png" alt-text="Screenshot of the error message for SP2: SQL Server 2008 R2 Setup has stopped working." border="false":::
 
 - **For SQL Server 2012 prior to CU2**
 
