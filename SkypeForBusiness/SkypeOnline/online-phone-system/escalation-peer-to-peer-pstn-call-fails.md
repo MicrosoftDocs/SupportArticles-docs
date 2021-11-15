@@ -25,19 +25,19 @@ Consider the following scenario.
 - You have an active PSTN call through Skype for Business on Windows, where the voice for this call uses Skype for Business Cloud Connector Edition.   
 - You try to escalate the call to a conference call by adding an additional participant to the call or by adding meeting content.   
 
-In this scenario, the conference call fails, and the active call shows one of the following errors: 
+In this scenario, the conference call fails, and the active call shows one of the following errors: 
 - An error occurred   
 - An error occurred while presenting   
 
 ## Workaround
 
-To work around this issue, schedule or create an ad hoc Skype for Business Online Meeting, and invite the PSTN participants to the meeting. 
+To work around this issue, schedule or create an ad hoc Skype for Business Online Meeting, and invite the PSTN participants to the meeting. 
 
 ## More Information
 
-This is a known issue in Skype for Business Cloud Connector Edition. Microsoft is working to resolve this issue. 
+This is a known issue in Skype for Business Cloud Connector Edition. Microsoft is working to resolve this issue. 
 
-For more information, see the following Microsoft resources: 
+For more information, see the following Microsoft resources: 
 
 - [Set up a Skype for Business meeting in Outlook](https://support.office.com/article/set-up-a-skype-for-business-meeting-in-outlook-b8305620-d16e-4667-989d-4a977aad6556)   
 - [Start an impromptu Skype for Business meeting](https://support.office.com/article/start-an-impromptu-skype-for-business-meeting-0a31877f-f737-4b64-88ec-a2e1ddce2073)   

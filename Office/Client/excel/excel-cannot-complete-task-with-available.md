@@ -35,7 +35,7 @@ The error occurs when you:
 
 ## Resolution
 
-**Note:** Before continuing on to the Resolution methods, ensure you have the latest Office updates installed: [Keep Windows up to date with the latest Updates](https://www.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx).
+**Note:** Before continuing on to the Resolution methods, ensure you have the latest Office updates installed: [Keep Windows up to date with the latest Updates](https://www.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx).
 
 After you have installed the available updates, check to see if you still have the issue. Continue to the Resolution Methods if you're still having problems.
 

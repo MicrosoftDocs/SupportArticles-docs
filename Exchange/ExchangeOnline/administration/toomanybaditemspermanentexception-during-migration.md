@@ -27,7 +27,7 @@ During a migration in Microsoft Office 365, you received the following error mes
 > TooManyBadItemsPermanentException
 
 > [!NOTE]
-> The information in this article may also apply to the "TooManyMissingItemsPermanentException" error because the number of missing items is counted in the bad item limit (but doesn't increment it).
+> The information in this article may also apply to the "TooManyMissingItemsPermanentException" error because the number of missing items is counted in the bad item limit (but doesn't increment it).
 
 ## Cause
 
@@ -45,7 +45,7 @@ To resolve this issue, follow these steps:
     $report.BadItems
     ```
 
-1. Update the `baditemlimit` value, which has a default value of **0**. Use a larger value or set it to **unlimited**. (This depends on the number determined in the previous step.)
+1. Update the `baditemlimit` value, which has a default value of **0**. Use a larger value or set it to **unlimited**. (This depends on the number determined in the previous step.)
 
     ```powershell
     Get-Moverequest <identity> | Set-Moverequest –baditemlimit <input value>

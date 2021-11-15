@@ -21,17 +21,17 @@ appliesto:
 
 ## Problem
 
-In Skype for Business Online (formerly Lync Online), you can't edit or remove your contact photo from Lync 2013. When you view the My Pictures setting under Options, the option for Edit or Remove Picture is unavailable (appears dimmed).
+In Skype for Business Online (formerly Lync Online), you can't edit or remove your contact photo from Lync 2013. When you view the My Pictures setting under Options, the option for Edit or Remove Picture is unavailable (appears dimmed).
 
-![Screen shot of My Picture setting, showing the Edit or Remove Picure option is unavailable ](./media/cant-upload-photo-to-sfb-online/uncheck-edit-or-remove-picture.png)
+:::image type="content" source="./media/cant-upload-photo-to-sfb-online/uncheck-edit-or-remove-picture.png" alt-text="Screenshot that shows the My Picture setting with showing the Edit or Remove Picture option unavailable.":::
 
 ## Solution
 
-Lync 2013 uses the Exchange service to upload contact photos to the user's mailbox. If the user doesn't have an Exchange mailbox, the Edit or Remove Picture button in the Lync Options is unavailable.
+Lync 2013 uses the Exchange service to upload contact photos to the user's mailbox. If the user doesn't have an Exchange mailbox, the Edit or Remove Picture button in the Lync Options is unavailable.
 
 ## Workaround
 
-To work around this issue, the admin will have to perform one of the following actions:
+To work around this issue, the admin will have to perform one of the following actions:
 
 - If the user doesn't have an Exchange Online mailbox, assign an Exchange Online license to the user.   
 - Synchronize the thumbnail photo from the on-premises Active Directory.   

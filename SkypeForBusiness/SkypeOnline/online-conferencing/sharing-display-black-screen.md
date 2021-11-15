@@ -27,7 +27,7 @@ Consider the following scenario:
 - On a Windows 7-based computer, you click **Share your desktop**, and then share your primary monitor.   
 - While the primary monitor is still being shared, you click **Share your desktop**, and then share a secondary monitor.  
  
-In this scenario, a Skype for Business (formerly Lync) user sees only a black screen instead of the shared desktop. 
+In this scenario, a Skype for Business (formerly Lync) user sees only a black screen instead of the shared desktop. 
 
 ## Resolution
 
@@ -39,7 +39,7 @@ In this scenario, a Skype for Business (formerly Lync) user sees only a black sc
 To work around this issue, switch to a secondary monitor. To do this, follow these steps: 
 
 1. Click **Stop Sharing** on the primary monitor.   
-2. Click **Share your desktop**, and then select a secondary monitor.    
+2. Click **Share your desktop**, and then select a secondary monitor.    
 
 ## More information
 

@@ -44,7 +44,7 @@ The following Lync Server Edge Server roles will not be installed after the Setu
 The Windows server computer that will host the Lync Server Edge Server services roles:
 
 - Does not have a FQDN or primary DNS suffix that matches the FQDN that was used to define the single server Lync Server Edge server pool   
-- The FQDN or primary DNS suffix of one or more of the Windows server computers does not match the FQDN information that was used to define the multiple server Lync Server Edge server pool    
+- The FQDN or primary DNS suffix of one or more of the Windows server computers does not match the FQDN information that was used to define the multiple server Lync Server Edge server pool    
 
 ## Resolution
 

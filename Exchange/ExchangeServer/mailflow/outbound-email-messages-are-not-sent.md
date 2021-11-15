@@ -43,7 +43,7 @@ This issue occurs if a third-party certificate that is installed on the server t
 
 To resolve this issue, bind the third-party certificate to the SMTP service. To do this, follow these steps:
 
-1. Enable logging on the Send connector. To do this, run the following command:
+1. Enable logging on the Send connector. To do this, run the following command:
 
     ```powershell
     Set-SendConnector "<SendConnectorName>" -ProtocolLoggingLevel Verbose
@@ -58,13 +58,13 @@ To resolve this issue, bind the third-party certificate to the SMTP service. To 
     2017-10-07T04:42:56.804Z,Outbound to Office 365,08D50D3D9730A8D2,20,10.10.248.7:16547,216.32.181.234:25,\*,\*.domai.com;`conotso.com`,Certificate alternate names  
     2017-10-07T04:42:56.804Z,Outbound to Office 365,08D50D3D9730A8D2,21,10.10.248.7:16547,216.32.181.234:25,\*,,TLS negotiation failed with error UnknownCredentials
 
-3. Verify the services that are associated with the TLS certificate. To do this, run the following command. The names of the services are used in the next step.
+3. Verify the services that are associated with the TLS certificate. To do this, run the following command. The names of the services are used in the next step.
 
     ```powershell
     Get-ExchangeCertificate -ThumbPrint "<TLSCertThumbprint>" | select-object services
     ```
 
-4. Bind the certificate to the SMTP service. To do this, run the following command:
+4. Bind the certificate to the SMTP service. To do this, run the following command:
 
     ```powershell
     Enable-ExchangeCertificate -ThumbPrint "<TLSCertThumbprint>" -services <ServicesNames>
@@ -76,4 +76,4 @@ To resolve this issue, bind the third-party certificate to the SMTP service. To 
     Enable-ExchangeCertificate -ThumbPrint "xxxxxxxxxxxxxxxxxxxx" -services SMTP,IIS,POP
     ```
 
-5. At the prompt to replace the existing certificate by using the new certificate, type *N*, and then press **Enter**.
+5. At the prompt to replace the existing certificate by using the new certificate, type *N*, and then press **Enter**.

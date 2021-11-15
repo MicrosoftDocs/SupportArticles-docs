@@ -24,7 +24,7 @@ appliesto:
 
 Consider the following scenario: 
 
-- You add an external contact that uses a Microsoft account to a Skype for Business Online (formerly Lync Online) user's contact list.    
+- You add an external contact that uses a Microsoft account to a Skype for Business Online (formerly Lync Online) user's contact list.    
 - The external contact uses a custom domain or an "email as sign in" (EASI) ID domain instead of a default @outlook.com address.    
 - You add the contact to Lync by using the contact's email address. For example, you use the email address joe@live-contoso.com.    
 
@@ -44,7 +44,7 @@ To resolve this issue, use one of the following methods.
 
 ### Microsoft Lync 2013
 
-The best method to add external contacts in Lync 2013 is to use the **Add Contact** icon. For more info about how to add contacts through search or the add contact wizard, go to the following Microsoft website:
+The best method to add external contacts in Lync 2013 is to use the **Add Contact** icon. For more info about how to add contacts through search or the add contact wizard, go to the following Microsoft website:
 
 [Add a contact in Lync](https://office.microsoft.com/redir/ha102828922.aspx)
 
@@ -68,7 +68,7 @@ Administrators can let Skype for Business Online users add contacts without havi
 
 ## More Information 
 
-PIC in Skype for Business Online supports connectivity with Microsoft accounts (msn.com, live.com and outlook.com). However, when you add PIC contacts that use a Windows Live EASI domain such as live-contoso.com, Skype for Business Online can't resolve the Instant Messaging (IM) Federation server based on the domain suffix. 
+PIC in Skype for Business Online supports connectivity with Microsoft accounts (msn.com, live.com and outlook.com). However, when you add PIC contacts that use a Windows Live EASI domain such as live-contoso.com, Skype for Business Online can't resolve the Instant Messaging (IM) Federation server based on the domain suffix. 
 
 If you directly add a PIC contact by using the contact's EASI ID (for example, you use JoeAndreshak.@live-contoso.com), a specific SRV record is required in the DNS for live-contoso.com. This SRV record is required because the Skype for Business Online server uses the domain suffix in the user's EASI ID to determine how to route messages. In this example, the Skype for Business Online server tries to use the live-contoso.com domain suffix. 
 

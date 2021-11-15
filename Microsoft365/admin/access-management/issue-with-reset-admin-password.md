@@ -38,15 +38,15 @@ When you try to reset your admin password for a Microsoft cloud service such as 
 
 ## Cause 
 
-This issue occurs if the UsageLocation parameter isn't set for your user account in Azure Active Directory (Azure AD). Self-service password reset for admins doesn't work if the UsageLocation parameter isn't set.
+This issue occurs if the UsageLocation parameter isn't set for your user account in Azure Active Directory (Azure AD). Self-service password reset for admins doesn't work if the UsageLocation parameter isn't set.
 
 ## Solution 
 
-To change your password, ask another admin to reset it. If there are no other admins in your organization, contact Technical Support. 
+To change your password, ask another admin to reset it. If there are no other admins in your organization, contact Technical Support. 
 
 To resolve the issue that triggers the error message, use one of the following methods, as appropriate for your situation.
 
-### Method 1: Set your mobile phone number
+### Method 1: Set your mobile phone number
 
 Work with another admin to set your mobile phone number. Or, after you're able to sign in, update your mobile phone number in your cloud service portal.
 
@@ -55,13 +55,13 @@ Work with another admin to set your mobile phone number. Or, after you're able t
 Work with another admin to set your user location. Or, after you're able to sign in, set your user location in the Office 365 portal. To do this, follow these steps:
 
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)).
-2. Go to **users and groups**, and then select the admin account.   
+2. Go to **users and groups**, and then select the admin account.   
 3. Go to **settings**.   
-4. Under **Set user location**, select the region where you're located.    
-Or, you can use the Set-MsolUser Azure Active Directory Module for Windows PowerShell cmdlet together with the UsageLocation parameter to set your user location.
+4. Under **Set user location**, select the region where you're located.    
+Or, you can use the Set-MsolUser Azure Active Directory Module for Windows PowerShell cmdlet together with the UsageLocation parameter to set your user location.
 
 ## More information
 
-For more info about the Set-MsolUser cmdlet, see [Set-MsolUser](/previous-versions/azure/dn194136(v=azure.100)).
+For more info about the Set-MsolUser cmdlet, see [Set-MsolUser](/previous-versions/azure/dn194136(v=azure.100)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

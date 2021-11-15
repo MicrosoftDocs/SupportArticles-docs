@@ -30,7 +30,7 @@ This issue occurs when one or more of the following conditions are true:
 - The binary file store is locked because the previous Groove shutdown was not completed.    
 - You are logged on as a user who does not have permissions to write to the file or to the directory that contains the binary file store.   
 
-**Note** This error occurs in SharePoint Workspace 2010 only if you are a member of a 2007 Groove workspace or a workspace of an earlier version. 
+**Note** This error occurs in SharePoint Workspace 2010 only if you are a member of a 2007 Groove workspace or a workspace of an earlier version. 
 
 ## Resolution
 

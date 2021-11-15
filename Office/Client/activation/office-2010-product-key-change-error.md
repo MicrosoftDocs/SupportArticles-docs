@@ -38,7 +38,7 @@ This issue can be resolved by removing the Office 2010 registry values.
 
 :::image type="icon" source="media/office-2010-product-key-change-error/alert-icon.png"::: The following describes how to modify the registry. Incorrect registry modification can cause serious problems, so please proceed with extra caution. For additional protection, you are recommended to back up the registry before modifying it. This allows you to restore the registry if a problem occurs. For more information about backing up the registry, see [Back up the registry](https://support.microsoft.com/help/322756).
 
-1. Click Start :::image type="icon" source="media/office-2010-product-key-change-error/windows-icon.png"::: and enter regedit in the search pane. At the top of the program list, click regedit.
+1. Click Start :::image type="icon" source="media/office-2010-product-key-change-error/windows-icon.png"::: and enter regedit in the search pane. At the top of the program list, click regedit.
 
      :::image type="content" source="media/office-2010-product-key-change-error/enter-regedit-in-the-search-pane.png" alt-text="Screenshot shows steps to click the regedit item." border="false":::
 

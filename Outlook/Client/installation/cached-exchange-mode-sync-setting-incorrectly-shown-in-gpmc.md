@@ -31,4 +31,4 @@ When you use the Microsoft Outlook administrative template to configure the **Ca
 This only affects the way that the setting is displayed in GPMC. Actually, the **Cached Exchange Mode Sync Setting** policy works correctly as it's configured.
 
 > [!NOTE]
-> You can also configure the cache mode setting by using the `SyncWindowSetting` and the `SyncWindowSettingDays` registry keys. For more information, see [Update lets administrators set additional default Sync Slider windows for new Exchange accounts in Outlook 2016](https://support.microsoft.com/help/3115009/update-lets-administrators-set-additional-default-sync-slider-windows).
+> You can also configure the cache mode setting by using the `SyncWindowSetting` and the `SyncWindowSettingDays` registry keys. For more information, see [Update lets administrators set additional default Sync Slider windows for new Exchange accounts in Outlook 2016](https://support.microsoft.com/help/3115009/update-lets-administrators-set-additional-default-sync-slider-windows).

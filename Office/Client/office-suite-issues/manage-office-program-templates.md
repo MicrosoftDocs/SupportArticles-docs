@@ -98,7 +98,7 @@ For more information about the workgroup templates file location and about how t
 
 ### Advertised and installed templates file location
 
-Advertised templates are the templates that are included with Office programs. These templates appear in the **Templates** dialog box. Depending on the type of Office installation, you may not have all the templates installed on the computer. However, each Office program displays the templates as they are available in the **Templates** dialog box.
+Advertised templates are the templates that are included with Office programs. These templates appear in the **Templates** dialog box. Depending on the type of Office installation, you may not have all the templates installed on the computer. However, each Office program displays the templates as they are available in the **Templates** dialog box.
 
 When you select a template, the Office program determines whether the template is installed. If the template is installed, a new document that is based on the template opens. If the template is advertised but is not installed, the program prompts you to install the template.
 
@@ -109,7 +109,7 @@ By default, all templates that are installed with Microsoft Office are installed
 C:\Program Files\Microsoft Office\Templates\\\<Language ID Number>
 
 > [!NOTE]
-> The **Language ID Number** is a four-digit code that represents the language types that are currently installed. For example, the English (US) version of Office installs a 1033 folder. The Arabic version installs a 1025 folder. The German version installs a 1031 folder. 2007 Office programs support many other languages. Additionally, you can have multiple languages installed at the same time. Therefore, you may have a Templates folder that contains several language ID folders. 
+> The **Language ID Number** is a four-digit code that represents the language types that are currently installed. For example, the English (US) version of Office installs a 1033 folder. The Arabic version installs a 1025 folder. The German version installs a 1031 folder. 2007 Office programs support many other languages. Additionally, you can have multiple languages installed at the same time. Therefore, you may have a Templates folder that contains several language ID folders. 
 
 ### Non-file-based templates file location
 
@@ -122,7 +122,7 @@ For example, if the Word global template (Normal.dotm) is used to create a blank
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-Office programs use two registry keys to record the user templates file location and the workgroup templates file location. Both settings are recorded in the following registry key: 
+Office programs use two registry keys to record the user templates file location and the workgroup templates file location. Both settings are recorded in the following registry key: 
 
 Office 2007: 
 

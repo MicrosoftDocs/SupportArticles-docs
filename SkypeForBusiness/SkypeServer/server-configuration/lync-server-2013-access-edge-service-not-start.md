@@ -29,7 +29,7 @@ Log Name: Lync Server Source: LS User Replicator Event ID: 30006 Task Category: 
 
 ## Cause
 
-This problem occurs because the EnableUserReplicator setting is enabled in the Lync Server 2013 Access Edge configuration.
+This problem occurs because the EnableUserReplicator setting is enabled in the Lync Server 2013 Access Edge configuration.
 
 ## Resolution
 
@@ -75,7 +75,7 @@ Use Lync Server Management Shell to disable the Lync Server 2010 User Replicator
 
 Run the following Lync Server PowerShell cmdlets in the given order.
 
-- To reset the EnableUserReplicator flag to **False** for the Lync Server 2013 Access Edge configuration:
+- To reset the EnableUserReplicator flag to **False** for the Lync Server 2013 Access Edge configuration:
 
     ```powershell
     Set-CsAccessEdgeConfiguration -EnableUserReplicator $FalseNote The default setting for the EnableUserReplicator flag is **False**.   

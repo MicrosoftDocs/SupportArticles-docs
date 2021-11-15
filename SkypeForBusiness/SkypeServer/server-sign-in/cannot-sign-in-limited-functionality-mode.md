@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-A user in a routing group may experience the following issues in a Microsoft Lync Server 2013 environment. These issues occur because the Windows Fabric replicas that are available for the routing group are insufficient or because of back-end server connectivity problems. 
+A user in a routing group may experience the following issues in a Microsoft Lync Server 2013 environment. These issues occur because the Windows Fabric replicas that are available for the routing group are insufficient or because of back-end server connectivity problems. 
 
 ### Issue 1
 
@@ -28,9 +28,9 @@ When a primary replica of the routing group is unavailable, the user cannot sign
 
 ### Issue 2
 
-Assume that the primary replica is available, but a secondary replica and a Backup secondary replica are unavailable. In this situation, the user will sign in to a Lync client in limited functionality mode. 
+Assume that the primary replica is available, but a secondary replica and a Backup secondary replica are unavailable. In this situation, the user will sign in to a Lync client in limited functionality mode. 
 
-This issue occurs because the operation data that requires Windows Fabric writes cannot be replicated to a secondary replica. 
+This issue occurs because the operation data that requires Windows Fabric writes cannot be replicated to a secondary replica. 
 
 This issue will also occur when the connection to the back-end server is not available or when a pool failover is in progress.
 
@@ -42,15 +42,15 @@ This issue will also occur when the connection to the back-end server is not ava
 To resolve these issues, you must perform the following operations:
 
 - Check if there are any servers that are unexpectedly shut down or have connectivity problems. If so, then you must start the servers.   
-- Check if there are connectivity issues between front-end servers and the back-end server. If so, then try to resolve the issues.    
+- Check if there are connectivity issues between front-end servers and the back-end server. If so, then try to resolve the issues.    
 
-To resolve the sign-in and limited functionality mode issues that are caused by lack of replicas, you must obtain information on Windows Fabric replica instances for the routing group service. To do this, run the following command in Windows PowerShell:
+To resolve the sign-in and limited functionality mode issues that are caused by lack of replicas, you must obtain information on Windows Fabric replica instances for the routing group service. To do this, run the following command in Windows PowerShell:
 
 ```powershell
 Get-CsPoolFabricState -PoolFqdn < FQDN > -Verbose -Type Routing 
 ```
 
-This will output primary replica and secondary replicas that the routing groups lack. For example, the following information may be displayed:
+This will output primary replica and secondary replicas that the routing groups lack. For example, the following information may be displayed:
 
 ```adoc
 Service: (P) fabric:/lync/routing/E71E41AD8A345CCCA2493484208565C7 has no primaries.

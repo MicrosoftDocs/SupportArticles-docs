@@ -34,7 +34,7 @@ In Microsoft Excel, you may have a named range that must be extended to include 
 
 To do this, follow these steps, as appropriate for the version of Excel that you are running.
 
-#### Microsoft Office Excel 2007,  Microsoft Excel 2010 and Microsoft Excel 2013
+#### Microsoft Office Excel 2007,  Microsoft Excel 2010 and Microsoft Excel 2013
 
 1. In a new worksheet, enter the following data.
 

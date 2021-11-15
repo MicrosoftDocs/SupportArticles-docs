@@ -23,7 +23,7 @@ appliesto:
 
 ## Introduction
 
-This article contains information about the **AllowAdalForNonLyncIndependentOfLync** setting in Skype for Business 2016, Skype for Business 2015, Lync 2013, and Exchange Online. This article also describes which Exchange Online and Skype for Business deployments require this setting.  
+This article contains information about the **AllowAdalForNonLyncIndependentOfLync** setting in Skype for Business 2016, Skype for Business 2015, Lync 2013, and Exchange Online. This article also describes which Exchange Online and Skype for Business deployments require this setting.  
 
 ## More information
 
@@ -34,10 +34,10 @@ The information in this article helps IT and Office 365 administrators in the fo
  
 In these scenarios, the available functionality in the previous environment is as follows: 
  
-- The Skype for Business Desktop and Lync 2013 clients connect to Skype for Business Server by using NTLM or the Kerberos authentication protocol, a user name and password, or Windows Integrated Authentication.     
+- The Skype for Business Desktop and Lync 2013 clients connect to Skype for Business Server by using NTLM or the Kerberos authentication protocol, a user name and password, or Windows Integrated Authentication.     
 - After you sign in, Skype for Business or Lync 2013 connects to the user's mailbox in Exchange Online by using Exchange Web Services (EWS). Although the EWS service advertises OAuth settings (the authorization URI), the client ignores this and falls back to a non-MFA sign-in by using an OrgID channel. This limits sign-in protocols to a user name and password or to Windows Integrated Authentication.    
  
-The new **AllowAdalForNonLyncIndependentOfLync** setting lets Skype for Business Desktop or Lync 2013 clients unblock MFA in Exchange Online in situations in which the IT administrator must enforce MFA on Exchange Online. You can apply this new setting by using Group Policy in the Windows registry or as an in-band endpoint policy setting on the Skype for Business server.
+The new **AllowAdalForNonLyncIndependentOfLync** setting lets Skype for Business Desktop or Lync 2013 clients unblock MFA in Exchange Online in situations in which the IT administrator must enforce MFA on Exchange Online. You can apply this new setting by using Group Policy in the Windows registry or as an in-band endpoint policy setting on the Skype for Business server.
 
 After you apply this setting to the client computer, the environment functionality is as follows: 
  
@@ -45,9 +45,9 @@ After you apply this setting to the client computer, the environment functionali
 - After you sign in, Skype for Business or Lync 2013 connects to Exchange Web Services (EWS). If the EWS service advertises OAuth settings (authorization URI), the client uses MFA. Additionally, if a credentials refresh is necessary, the user will be prompted through the Modern Authentication dialog box.    
  
 > [!NOTE]
-> This setting is not required for cloud-only topologies or if Exchange and Skype for Business are both configured for a hybrid environment that has Modern Authentication enabled. For detailed information about the topologies, see [Skype for Business topologies supported with Modern Authentication](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported).  
+> This setting is not required for cloud-only topologies or if Exchange and Skype for Business are both configured for a hybrid environment that has Modern Authentication enabled. For detailed information about the topologies, see [Skype for Business topologies supported with Modern Authentication](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported).  
 
-In some cases (specifically, Mixed 1, Mixed 3, and Mixed 5 topologies as described in [Skype for Business topologies supported with Modern Authentication](https://apac01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fskypeforbusiness%2Fplan-your-deployment%2Fmodern-authentication%2Ftopologies-supported&data=02%7C01%7Cv-maqiu%40microsoft.com%7C4cf5a5f0b7f64bf7f72a08d67676eda0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636826650522806131&sdata=Cr7cSWF6yx97e2HiCEFxjogtuSB8X8ddn7I1bN2VLcQ%3D&reserved=0)), you have to set the **AllowADALForNonLynIndependentOfLync** registry key correctly for Windows desktop clients.
+In some cases (specifically, Mixed 1, Mixed 3, and Mixed 5 topologies as described in [Skype for Business topologies supported with Modern Authentication](https://apac01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fskypeforbusiness%2Fplan-your-deployment%2Fmodern-authentication%2Ftopologies-supported&data=02%7C01%7Cv-maqiu%40microsoft.com%7C4cf5a5f0b7f64bf7f72a08d67676eda0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636826650522806131&sdata=Cr7cSWF6yx97e2HiCEFxjogtuSB8X8ddn7I1bN2VLcQ%3D&reserved=0)), you have to set the **AllowADALForNonLynIndependentOfLync** registry key correctly for Windows desktop clients.
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
@@ -55,12 +55,12 @@ In some cases (specifically, Mixed 1, Mixed 3, and Mixed 5 topologies as describ
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
-Use either of the following methods to apply the **AllowAdalForNonLyncIndependentOfLync** setting. 
+Use either of the following methods to apply the **AllowAdalForNonLyncIndependentOfLync** setting. 
 
 ### Method 1: Use Group Policy
  
 > [!NOTE]
-> The option to enable this setting through Group Policy is available only after you apply the July 2015 Public Update (PU). 
+> The option to enable this setting through Group Policy is available only after you apply the July 2015 Public Update (PU). 
 
 For Skype for Business or Lync 2013 clients 15.0* (available from the September 2015 PU only):
 
@@ -70,14 +70,14 @@ For Skype for Business or Lync 2013 clients 16.0*:
 
 **HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Lync** 
  
-Then, apply the **AllowAdalForNonLyncIndependentOfLync** registry key setting:  
+Then, apply the **AllowAdalForNonLyncIndependentOfLync** registry key setting:  
 
 "**AllowAdalForNonLyncIndependentOfLync**"=**dword**:**00000001**
  
 ### Method 2: As an in-band setting on the Lync server
  
 > [!NOTE]
-> This option is available through the September PU only. 
+> This option is available through the September PU only. 
 
 To enable the in-band setting on the Lync server, run the following cmdlet:   
 

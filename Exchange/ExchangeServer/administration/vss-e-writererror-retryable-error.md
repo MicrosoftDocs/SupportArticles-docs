@@ -53,11 +53,11 @@ Computer: ComputerName
 Description: The log copier was unable to communicate with server \<FQDN of the Active Server>. The copy of database \<Mailbox Database\Local Server> is in a disconnected state. The communication error was: An error occurred while communicating with server \<Active server>. Error: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. The copier will automatically retry after a short delay.
 
 > [!NOTE]
-> This article uses passive database server to refer to the Exchange server that initiates the backup of a passive database copy and active database server to refer to the Exchange server that hosts the active database.
+> This article uses passive database server to refer to the Exchange server that initiates the backup of a passive database copy and active database server to refer to the Exchange server that hosts the active database.
 
 ## Cause
 
-This issue may occur because of network issues that block or interrupt communication on the remote procedure call (RPC) channel between the passive database server and the active database server. See the DAG backup considerations section for explanation of the RPC channel.
+This issue may occur because of network issues that block or interrupt communication on the remote procedure call (RPC) channel between the passive database server and the active database server. See the DAG backup considerations section for explanation of the RPC channel.
 
 ## Resolution
 
@@ -76,16 +76,16 @@ For better tolerance on possible networking or performance issues, increase the 
 
 2. Create a registry key of **DWORD (32-bit) Value**.
 3. Set the name of the registry key to **QueryLogRangeTimeoutInMsec**.
-4. Set the value to 120,000, which means 120 seconds. (Or you can set a different value, depending on your business needs.)
+4. Set the value to 120,000, which means 120 seconds. (Or you can set a different value, depending on your business needs.)
 5. Restart the Microsoft Exchange Replication Service (msexchangerepl).
 
 ## DAG backup considerations
 
 To initiate backup of a passive database copy, the Exchange replication service on the passive database server creates a query to get the range of transaction logs on the active database server. If the active database server is busy, the query may take longer than expected, especially if there are many log files. Then, the Exchange replication service opens an RPC channel to the active database server to inform the server that a backup is in progress. The RPC channel should be open during the backup.
 
-Consider the following points about DAG backups:
+Consider the following points about DAG backups:
 
 - Use passive database copies for backups. We don't recommend that you back up active database copies. Active database copies should be dedicated to ongoing business operations.
-- If you must back up active database copies for some reason, make sure that the passive database copies are not configured for backup at the same time. Otherwise, you will experience backup failure and the **RETRYABLE** error.
-- During backup, databases shouldn't be moved to another Exchange server in the DAG.
+- If you must back up active database copies for some reason, make sure that the passive database copies are not configured for backup at the same time. Otherwise, you will experience backup failure and the **RETRYABLE** error.
+- During backup, databases shouldn't be moved to another Exchange server in the DAG.
 - Network connections should be active and stable.

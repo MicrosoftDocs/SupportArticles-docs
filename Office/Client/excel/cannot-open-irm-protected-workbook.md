@@ -28,7 +28,7 @@ When you try to open an Information Rights Management (IRM) protected Microsoft 
 
 ## Workaround
 
-To work around this issue, temporarily disable Protected View in Excel 2013, and then open the workbook again. To disable Protected View in Excel 2013, follow these steps:
+To work around this issue, temporarily disable Protected View in Excel 2013, and then open the workbook again. To disable Protected View in Excel 2013, follow these steps:
 
 1. In the **File** tab, click **Options**.
 2. In the **Excel Options** dialog box, click **Trust Center**.

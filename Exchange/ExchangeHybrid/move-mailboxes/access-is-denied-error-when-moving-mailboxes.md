@@ -44,11 +44,11 @@ For example, you receive this error message when you run the following command:
 Test-MigrationServerAvailability -ExchangeRemoteMove -Autodiscover -EmailAddressusername@contoso.com -Credentials (Get-Credential)
 ```
 
-Additionally, assume that inheritance is not enabled on the computer account of the Exchange 2013 or Exchange 2016 hybrid server. If you enable it, you later discover that it has been disabled.
+Additionally, assume that inheritance is not enabled on the computer account of the Exchange 2013 or Exchange 2016 hybrid server. If you enable it, you later discover that it has been disabled.
 
 ## Cause
 
-This issue occurs if the computer account of the Exchange 2013 or Exchange 2016 hybrid server is a member of one or more protected groups.  
+This issue occurs if the computer account of the Exchange 2013 or Exchange 2016 hybrid server is a member of one or more protected groups.  
 
 ## Resolution
 
@@ -58,12 +58,12 @@ To resolve this issue, follow these steps:
 
    To find the `adminCount` attribute, follow these steps:
 
-   1. Locate **Active Directory Users and Computers**, and then select **View** > **Advanced Features**.
+   1. Locate **Active Directory Users and Computers**, and then select **View** > **Advanced Features**.
    2. Expand the domain for the server that is running Exchange Server, and then expand **Computers**.
    3. Locate the Exchange 2013 or Exchange 2016 server. Right-click the server, and then select **Properties**.
    4. Locate the **Attribute Editor** tab, and then locate the **adminCount** attribute.
 
-   If the attribute is set to **1**, this means that the computer account is a member, directly or indirectly, of one more of the following protected groups:  
+   If the attribute is set to **1**, this means that the computer account is a member, directly or indirectly, of one more of the following protected groups:  
 
      - Administrators
      - Account Operators

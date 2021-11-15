@@ -67,7 +67,7 @@ Enable-ExchangeCertificate <thumbprint> -services SMTP
 ```
 
 > [!NOTE]
-> Select **No** when you are prompted to overwrite the default certificate). Otherwise, EdgeSync breaks and has to be re-created. Then, remove the `TlsCertificateName` property from the receive connector on the hybrid server. To do this, run the following command:
+> Select **No** when you are prompted to overwrite the default certificate). Otherwise, EdgeSync breaks and has to be re-created. Then, remove the `TlsCertificateName` property from the receive connector on the hybrid server. To do this, run the following command:
 
 ```powershell
 Get-ReceiveConnector "ServerName\Default Frontend ReceiveConnector" | Set-ReceiveConnector -TlsCertificateName $null

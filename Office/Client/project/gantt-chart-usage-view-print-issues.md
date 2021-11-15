@@ -42,7 +42,7 @@ If the Fit Timescale to End of Page option is selected, turn off this option, an
 3. Click to clear the Fit timescale to end of page check box.   
 4. Click OK. If you do not get the result you want, continue to the next step. 
 5. Click the View tab.   
-6. Back in the Project plan click View. On the Timescale drop-down list, click Timescale.   
+6. Back in the Project plan click View. On the Timescale drop-down list, click Timescale.   
 7. In the Size box, reduce the percentage to reduce the width of the timescale, Increase the percentage to increase the width of the timescale.   
 8. Click OK.   
 
@@ -81,7 +81,7 @@ If the **Fit Timescale to End of Page** option is selected, turn off this option
 4. Click Print Preview. If you do not get the result you want, continue to the next step.   
 5. Click the Close button on the toolbar in print preview.   
 6. On the Format menu, click Timescale.   
-7. In the Size box, reduce the percentage to reduce the width of the timescale. Increase the percentage to increase the width of the timescale.   
+7. In the Size box, reduce the percentage to reduce the width of the timescale. Increase the percentage to increase the width of the timescale.   
 8. Click OK.   
 
 ### Method 2: Fit Timescale to End of Page

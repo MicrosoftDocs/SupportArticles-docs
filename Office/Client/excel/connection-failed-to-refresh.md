@@ -23,11 +23,11 @@ appliesto:
 
 Consider the following scenario:
 
-- You create a pivot table that references external data in a workbook in Microsoft Excel 2013.   
+- You create a pivot table that references external data in a workbook in Microsoft Excel 2013.   
 - You upload the workbook to a Web Application Companions (WAC) server.   
 - You update the data connection or change the PivotTable fields.   
 
-In this scenario, you receive the following error message:
+In this scenario, you receive the following error message:
 
 ```adoc
 A data connection is set to always use connection file and {0:ExcelWebApp} does not support external connection files. The following connection failed to refresh:

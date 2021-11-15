@@ -27,20 +27,20 @@ _Original KB number:_ &nbsp; 2859256
 
 ## Symptoms
 
-Some of the instant messaging features that are shared between your instant messaging (IM) client and Microsoft Outlook may be missing. For example, in Microsoft Outlook 2010, the **Quick Contacts** items from Microsoft Lync are not available in the Outlook To-Do bar; or presence information and contact photos do not appear in Outlook.
+Some of the instant messaging features that are shared between your instant messaging (IM) client and Microsoft Outlook may be missing. For example, in Microsoft Outlook 2010, the **Quick Contacts** items from Microsoft Lync are not available in the Outlook To-Do bar; or presence information and contact photos do not appear in Outlook.
 
 ## Cause
 
 This problem can occur when a wrong or incompatible IM client is listed as the value for `DefaultIMApp` in the registry.
 
-In one case, Microsoft Support teams saw the problem that is described in the Symptoms section by noticing that the value of `DefaultIMApp` was set to **Cisco Jabber**. Cisco Jabber is manufactured by Cisco Systems.
+In one case, Microsoft Support teams saw the problem that is described in the Symptoms section by noticing that the value of `DefaultIMApp` was set to **Cisco Jabber**. Cisco Jabber is manufactured by Cisco Systems.
 
 ## Resolution
 
 > [ !IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-To resolve the problem, make sure that the `DefaultIMApp` string value is set to the appropriate value for your installed IM client. The following table lists the values to use for the different IM clients from Microsoft.
+To resolve the problem, make sure that the `DefaultIMApp` string value is set to the appropriate value for your installed IM client. The following table lists the values to use for the different IM clients from Microsoft.
 
 | Installed IM client| Value for DefaultIMApp |
 |---|---|

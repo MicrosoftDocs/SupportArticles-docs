@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 4056666
 
 ## Symptoms
 
-When you send an email message to a large distribution group in Microsoft Exchange Online, a MailTip is displayed that shows the size of the group. The count may be inaccurate and not update correctly when the group membership changes.
+When you send an email message to a large distribution group in Microsoft Exchange Online, a MailTip is displayed that shows the size of the group. The count may be inaccurate and not update correctly when the group membership changes.
 
-This issue seems to affect only some customers and groups.
+This issue seems to affect only some customers and groups.
 
 ## Status
 

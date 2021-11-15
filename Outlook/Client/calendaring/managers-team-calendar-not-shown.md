@@ -41,7 +41,7 @@ To resolve this issue, use one of the following methods, depending on the cause 
 ## Method 1 - Enable the Show Manager's Team Calendar setting in Outlook
 
 1. In Outlook, open the Calendar.
-2. On the **Home**  tab, select **Calendar Groups**.
+2. On the **Home**  tab, select **Calendar Groups**.
 3. Select **Show Manager's Team Calendars**.
 
 Note If the **Show Manager's Team Calendars** setting is unavailable, follow the steps in the remaining methods until the issue is resolved.
@@ -52,11 +52,11 @@ Note If the **Show Manager's Team Calendars** setting is unavailable, follow the
 > Follow the steps in this section carefully. Serious problems might occur if you incorrectly modify the registry. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 1. Exit Outlook.
-2. Open Registry Editor. To do this, use one of the following procedures, depending on the version of Windows you're using:
-   - Windows 10, Windows 8.1, and Windows 8: Press Windows key+R to open a **Run** dialog box. Type *regedit.exe*, and then select **OK**.
+2. Open Registry Editor. To do this, use one of the following procedures, depending on the version of Windows you're using:
+   - Windows 10, Windows 8.1, and Windows 8: Press Windows key+R to open a **Run** dialog box. Type *regedit.exe*, and then select **OK**.
    - Windows 7: Select **Start**, type *regedit.exe* in the search box, and then press Enter.
 
-3. In Registry Editor, locate the `DisableReportingLineGroupCalendar` registry value. It's located in one of the following registry subkeys:
+3. In Registry Editor, locate the `DisableReportingLineGroupCalendar` registry value. It's located in one of the following registry subkeys:
    - `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\Options\WunderBar`
    - `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\x.0\Outlook\Options\WunderBar`
 
@@ -70,19 +70,19 @@ Note If the **Show Manager's Team Calendars** setting is unavailable, follow the
 > [!NOTE]
 > If the `DisableReportingLineGroupCalendar` registry value is located under the `\Policies` hive of the registry, it may have been created by using Group Policy. Your administrator must modify the policy to change this setting.
 
-## Method 3 - Set the Manager attribute
+## Method 3 - Set the Manager attribute
 
 > [!NOTE]
 > You must be an administrator to complete these steps.
 
-To set the Manager  attribute on an on-premises Active Directory server, follow these steps:
+To set the Manager  attribute on an on-premises Active Directory server, follow these steps:
 
 1. In Active Directory Users and Computers, open the **Properties** dialog box of the user account.
 2. On the **Organization** tab, under the **Manager** area, select **Change**.
 3. Browse the directory to find the user's manager, and then select the manager.
 4. Select **OK**.
 
-To set the Manager attribute in Exchange Online, follow these steps:
+To set the Manager attribute in Exchange Online, follow these steps:
 
 1. In the Microsoft 365 admin center, select **Users**, and then select **Active users**.
 2. Select the user's name, and then select **Mail**.

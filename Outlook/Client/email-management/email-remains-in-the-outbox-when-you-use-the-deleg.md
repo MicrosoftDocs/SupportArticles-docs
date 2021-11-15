@@ -64,7 +64,7 @@ If you set DelegateSentItemsStyle=0 in the registry, email messages that you sen
     `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Preferences`
 
     > [!NOTE]
-    > In this key path, the placeholder <x.0> represents 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 for Outlook 2013, 14.0 for Outlook 2010, 12.0 for Outlook 2007, and 11.0 for Outlook 2003.
+    > In this key path, the placeholder <x.0> represents 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 for Outlook 2013, 14.0 for Outlook 2010, 12.0 for Outlook 2007, and 11.0 for Outlook 2003.
 
 4. Select the `DelegateSentItemsStyle` value.
 5. On the **Edit** menu, select **Modify**.
@@ -76,7 +76,7 @@ If you set DelegateSentItemsStyle=0 in the registry, email messages that you sen
 
 If you must have the functionality that is offered by the `DelegateSentItemsStyle` registry value (=1), your other option is to change your profile from online mode to cached mode.
 
-Outlook 2010 and later versions
+Outlook 2010 and later versions
 
 1. On the **File** tab, select **Account Settings**, and then select **Account Settings**.
 2. On the **E-mail** tab, select your Exchange Server account, select **Change**, and then enable the **Use Cached Exchange Mode** option.

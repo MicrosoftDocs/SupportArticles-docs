@@ -23,13 +23,13 @@ _Original KB number:_ &nbsp; 2475771
 
 ## Symptoms
 
-When you connect to an Exchange Server 2010 Client Access Server (CAS) running Exchange Server 2010 SP1, and you must proxy to an internal Client Access Server running the original Release to Manufacturing (RTM) version of Exchange Server 2010, you receive the following error:
+When you connect to an Exchange Server 2010 Client Access Server (CAS) running Exchange Server 2010 SP1, and you must proxy to an internal Client Access Server running the original Release to Manufacturing (RTM) version of Exchange Server 2010, you receive the following error:
 
 > HTTP 400 - Bad Request will occur in Internet Explorer. IIS logs show:
 >
 > *DateTime* *IPAddress* POST /owa/ev.owa oeh=1&ns=HttpProxy&ev=LanguagePost&v=14.1.218.13&sessionId=a3789db012cb4d1093cbf206d85c72c6&prfltncy=18 443 contoso\user2 192.168.154.1 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.2;+SV1;+.NET+CLR+1.1.4322) 400 0 0 31
 
-This only occurs for first-time OWA users in the Exchange Server 2010 environment. These users are not prompted to set the User Culture or Time Zone.  
+This only occurs for first-time OWA users in the Exchange Server 2010 environment. These users are not prompted to set the User Culture or Time Zone.  
 
 ## Status
 
@@ -41,17 +41,17 @@ Microsoft is investigating this issue and will update this article with addition
 2. Type the following cmdlet and press enter:
 
     ```powershell
-    Set-MailboxRegionalConfiguration -Identity <Username> -Language en-us-TimeZone Central Standard Time
+    Set-MailboxRegionalConfiguration -Identity <Username> -Language en-us-TimeZone Central Standard Time
     ```
 
     > [!NOTE]
-    > The example cmdlet above specifies the Language as US English, and the Time Zone to US Central Standard Time. Change the language or time zone as needed for your user.
+    > The example cmdlet above specifies the Language as US English, and the Time Zone to US Central Standard Time. Change the language or time zone as needed for your user.
 
 For more information about the cmdlet, see [Set-MailboxRegionalConfiguration](/powershell/module/exchange/set-mailboxregionalconfiguration).
 
 ## Resolution - Method 2
 
-Update the target CASs in the organization to use Exchange Server 2010 SP1.
+Update the target CASs in the organization to use Exchange Server 2010 SP1.
 
 ## More information
 

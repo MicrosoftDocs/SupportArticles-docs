@@ -24,9 +24,9 @@ appliesto:
 
 ## Problem
 
-Consider the following scenario: 
+Consider the following scenario: 
 
-- You're setting up a Skype for Business Online (formerly Lync Online) hybrid environment in Skype for Business Server 2015, Microsoft Lync Server 2013, or Microsoft Lync Server 2010.   
+- You're setting up a Skype for Business Online (formerly Lync Online) hybrid environment in Skype for Business Server 2015, Microsoft Lync Server 2013, or Microsoft Lync Server 2010.   
 - You run the following Lync Server or Skype for Business Server PowerShell cmdlet:
 
     ```powershell
@@ -35,7 +35,7 @@ Consider the following scenario: 
     -IsLocal $false -AutodiscoverUrl https://webdir.online.lync.com/Autodiscover/AutodiscoverService.svc/root    
     ```
 
-In this scenario, you receive the following error message:  
+In this scenario, you receive the following error message:  
 
 ```adoc
 There is a duplicate key sequence "LYNCONLINE" for the 'urn:schema:Microsoft.Rtc.Management.Settings.Edge.2008:ProviderName' key or unique identity constraint.
@@ -43,7 +43,7 @@ There is a duplicate key sequence "LYNCONLINE" for the 'urn:schema:Microsoft.Rtc
 
 ## Solution
 
-To resolve this issue, remove the existing LyncOnline provider, and then run the original cmdlet again.  Run both **Get-CSHostingProvider** and **Get-CSPublicProvider** cmdlets to see all existing providers and determine whether any providers have the same name as the name that you're trying to create. (For example, determine whether any providers have the name "LyncOnline.")
+To resolve this issue, remove the existing LyncOnline provider, and then run the original cmdlet again.  Run both **Get-CSHostingProvider** and **Get-CSPublicProvider** cmdlets to see all existing providers and determine whether any providers have the same name as the name that you're trying to create. (For example, determine whether any providers have the name "LyncOnline.")
 
 If the existing LyncOnline connector is a hosting provider, use the following command to remove it: 
 
@@ -53,7 +53,7 @@ Remove-CSHostingProvider –Identity LyncOnline If the conflicting provider is a
 
 ## More Information
 
-This issue occurs because there is a public provider that has the duplicate name "LyncOnline configured in the topology. This can be verified by viewing the following settings in the Lync control panel:
+This issue occurs because there is a public provider that has the duplicate name "LyncOnline configured in the topology. This can be verified by viewing the following settings in the Lync control panel:
 
 - In Lync 2010, click **External User Access**, and then click **Provider**.   
 - In Lync 2013, click **Federation and External Access**, and then click **SIP Federated Providers**.   

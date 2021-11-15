@@ -27,9 +27,9 @@ _Original KB number:_ &nbsp; 4075323
 Consider this scenario:
 
 - You create a database availability group (DAG) for Exchange Server 2016.
-- A node of the DAG contains two network interface cards (NICs) on the same subnet.
+- A node of the DAG contains two network interface cards (NICs) on the same subnet.
 
-In this scenario, you see a **Misconfigured** error status when you view the **Subnet** status of the DAG in the Exchange Admin Center or you run the `Get-DatabaseAvailabilityGroupNetwork` cmdlet.
+In this scenario, you see a **Misconfigured** error status when you view the **Subnet** status of the DAG in the Exchange Admin Center or you run the `Get-DatabaseAvailabilityGroupNetwork` cmdlet.
 
 ## Cause
 
@@ -37,7 +37,7 @@ The Multi-NIC Cluster Network feature of Windows Server 2016 is not supported by
 
 ## Resolution
 
-Avoid using the Multi-NIC Cluster Network feature on an Exchange Server 2016 DAG node.
+Avoid using the Multi-NIC Cluster Network feature on an Exchange Server 2016 DAG node.
 
 ## References
 

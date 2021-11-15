@@ -25,9 +25,9 @@ _Original KB number:_ &nbsp; 3033864
 
 ## Symptoms
 
-When you are using Microsoft Outlook, images will display a red X instead of the actual image. And, when you try to download the image you receive the following error:
+When you are using Microsoft Outlook, images will display a red X instead of the actual image. And, when you try to download the image you receive the following error:
 
-> The linked image cannot be displayed. The file may have been moved, renamed, or deleted. Verify that the link points to the correct file...
+> The linked image cannot be displayed. The file may have been moved, renamed, or deleted. Verify that the link points to the correct file...
 
 This error is shown in the following figure.
 

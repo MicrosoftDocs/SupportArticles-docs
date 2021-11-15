@@ -33,15 +33,15 @@ When you run an existing Microsoft Access query, you receive the following error
 Query must have at least one destination field.
 ```
 
-You do not see the expected query in Design View, and you see only "Select;" or "Select*;" in SQL View.
+You do not see the expected query in Design View, and you see only "Select;" or "Select*;" in SQL View.
 
 ## Cause
 
-This problem occurs when you run the OutputTo method because of an issue that affects reading the structure of queries that have been designed and saved only within SQL View.
+This problem occurs when you run the OutputTo method because of an issue that affects reading the structure of queries that have been designed and saved only within SQL View.
 
 ## Workaround
 
-To work around this problem, use one of the following methods:
+To work around this problem, use one of the following methods:
 
 - For each database that is affected by this problem, open the database in Access, click **Options** on the **File** menu, select **Current Database**, and then clear the **Track name AutoCorrect info** check box.
 - Make sure that each query is opened and saved while in you are in Design View.

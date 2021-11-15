@@ -65,7 +65,7 @@ In order to successfully use the Office Click-to-Run version of Office Home and 
 
 Why do I receive the "This product must be installed to Q:. Ensure that Q: is unused and try again" error when I try to use Office Starter To-Go on my computer?
 
-This error means that the Q: drive letter is already being used by something else on your computer. However, the installation of Office Click-to-Run requires this drive letter for Office 2010. If the Q: drive letter cannot be made available, you cannot use Office Starter To-Go on your computer.
+This error means that the Q: drive letter is already being used by something else on your computer. However, the installation of Office Click-to-Run requires this drive letter for Office 2010. If the Q: drive letter cannot be made available, you cannot use Office Starter To-Go on your computer.
 
 Why do I have a "Q:" drive when I use Office Starter To-Go?
 
@@ -73,7 +73,7 @@ Office Starter To-Go uses the Office Click-to-Run technology that must use a vir
 
 What is the "Q:" drive?
 
-Office 2010 Click-to-Run suite such as Office Starter 2010, Office Starter To-Go, Office Home and Student 2010, and Office Home and Business 2010 are based on some application virtualization technology. The Q: drive is the virtual file system drive where virtualized applications are located in the file system namespace. This Q:drive is not a typical drive. The Q: drive has no space that the user can access directly and is inaccessible from Windows Explorer or My Computer. 
+Office 2010 Click-to-Run suite such as Office Starter 2010, Office Starter To-Go, Office Home and Student 2010, and Office Home and Business 2010 are based on some application virtualization technology. The Q: drive is the virtual file system drive where virtualized applications are located in the file system namespace. This Q:drive is not a typical drive. The Q: drive has no space that the user can access directly and is inaccessible from Windows Explorer or My Computer. 
 
 Are my Office documents also stored in this "Q:" drive?
 
@@ -82,14 +82,14 @@ By default, Office saves your documents in the **My Documents** folder.
 Caution We strongly recommend that you do not save any Office documents on the Q:drive for the following reasons:
 
 - The Q:drive cannot be accessed from Windows Explorer directly.    
-- If the Office installation files have to be repaired, the Q: drive may be removed and recreated. Therefore, any Office documents that are stored on the Q: drive are lost.    
+- If the Office installation files have to be repaired, the Q: drive may be removed and recreated. Therefore, any Office documents that are stored on the Q: drive are lost.    
 Can I hide or delete the "Q:" drive?
 
 No. Any access to hide or to delete the Q: drive is removed.
 
 Can I rename the "Q:" drive?
 
-Yes. Right-click the drive, click Rename, and then type the new name for the drive.
+Yes. Right-click the drive, click Rename, and then type the new name for the drive.
 
 Why is my backup program giving me errors when it tries to access the "Q:" drive?
 

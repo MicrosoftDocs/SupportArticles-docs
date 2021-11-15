@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2249287
 
 ## Symptoms
 
-E-mails with attachments sent to Exchange Server users are intermittently dropped during IMAIL conversion.
+E-mails with attachments sent to Exchange Server users are intermittently dropped during IMAIL conversion.
 
 The following events may be recorded as a result of the IMAIL conversion failure:
 
@@ -50,7 +50,7 @@ Message: The following call : \<function name> to the store failed. Error code :
 
 ## Cause
 
-This issue is exposed during IMAIL conversion. While converting attachments, the Store will use either the `working directory` or the `Temporary File Path` to process the attachment.
+This issue is exposed during IMAIL conversion. While converting attachments, the Store will use either the `working directory` or the `Temporary File Path` to process the attachment.
 
 If the value for the parameter `Temporary File Path` does not point to a valid location on the system drive, IMAIL conversion will fail.
 
@@ -69,9 +69,9 @@ To resolve this issue, inspect the registry key:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS\ParameterSystem\`
 
-1. If the parameter `Temporary File Path` exists, ensure it is pointing to a valid path and the Local System Account has full access to the folder.
+1. If the parameter `Temporary File Path` exists, ensure it is pointing to a valid path and the Local System Account has full access to the folder.
 
-2. If the above parameter does not exist, ensure the parameter `Working Directory` exists and pointing to a valid path and the Local System Account has full access to the folder.
+2. If the above parameter does not exist, ensure the parameter `Working Directory` exists and pointing to a valid path and the Local System Account has full access to the folder.
 
 > [!NOTE]
 > Since these settings are stored in String Values, it possible to have trailing spaces in these values that could also cause this issue.

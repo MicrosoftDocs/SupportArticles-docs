@@ -30,7 +30,7 @@ When you configure Microsoft Outlook to have one or more Microsoft SharePoint ca
 
 ## Cause
 
-This issue occurs because of the **Alternate access mappings** setting on the SharePoint server. When SharePoint servers are on the same network as Outlook, the Intranet Zone mapping in SharePoint takes precedence over the Default mapping. If the intranet URL doesn't match the certificate URL, you receive the security alert that described in the "Symptoms" section.
+This issue occurs because of the **Alternate access mappings** setting on the SharePoint server. When SharePoint servers are on the same network as Outlook, the Intranet Zone mapping in SharePoint takes precedence over the Default mapping. If the intranet URL doesn't match the certificate URL, you receive the security alert that described in the "Symptoms" section.
 
 ## Resolution 1
 
@@ -45,4 +45,4 @@ To manage **Alternate access mappings** on the SharePoint server, follow these s
 
 ## Resolution 2
 
-Use a certificate that matches the URL in the **Intranet zone** list on the SharePoint server.
+Use a certificate that matches the URL in the **Intranet zone** list on the SharePoint server.

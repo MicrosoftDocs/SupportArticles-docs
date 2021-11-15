@@ -44,7 +44,7 @@ This problem occurs because of incorrect information in the Windows registry.
 To resolve this problem, please follow these steps.
 
 1. Exit any open Office programs.
-2. Start Registry Editor. To do this, press the Windows key+R to open the Run window, type regedit in the Open box, and then press OK.
+2. Start Registry Editor. To do this, press the Windows key+R to open the Run window, type regedit in the Open box, and then press OK.
 3. In Registry Editor, locate and then click the following subkey:
 
     HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\WEF\Providers
@@ -61,7 +61,7 @@ To resolve this problem, please follow these steps.
     > The *guidpreceding* _ADAL is a random set of numbers and letters (for example, 3a975b5d-ad3e-4e3d-84b0-a7e6776ba6a6).
 6. If the data value for UniqueID is either guid_ADAL or Anonymous, delete the parent subkey of UniqueID.
 
-    For example, if UniqueID = 3a975b5d-ad3e-4e3d-84b0-a7e6776ba6a6_ADAL under the \KpwDSnL9jumf9ZJTx_XF_Q== subkey, then you would delete the \KpwDSnL9jumf9ZJTx_XF_Q== subkey.
+    For example, if UniqueID = 3a975b5d-ad3e-4e3d-84b0-a7e6776ba6a6_ADAL under the \KpwDSnL9jumf9ZJTx_XF_Q== subkey, then you would delete the \KpwDSnL9jumf9ZJTx_XF_Q== subkey.
 
 7. Repeat steps 4-6 for each subkey under the \Providers key.
 8. Exit Registry Editor.
@@ -72,7 +72,7 @@ To resolve this problem, please follow these steps.
     > [!NOTE]
     > \<username\> is your user name and x.0 is your Office version.
 
-    If you are unable to manually locate the above folder, press the Windows key+R to open the Run window, type the command below for your version of Office in the Open box, and then press OK:  
+    If you are unable to manually locate the above folder, press the Windows key+R to open the Run window, type the command below for your version of Office in the Open box, and then press OK:  
 
       - Microsoft 365 Apps, Office LTSC 2021, Office 2019 and Office 2016
 

@@ -30,7 +30,7 @@ This article discusses how Microsoft Excel stores and calculates floating-point 
 
 ### Overview
 
-Microsoft Excel was designed around the IEEE 754 specification to determine how it stores and calculates floating-point numbers. IEEE is the Institute of Electrical and Electronics Engineers, an international body that, among other things, determines standards for computer software and hardware. The 754 specification is a very widely adopted specification that describes how floating-point numbers should be stored in a binary computer. It is popular because it allows floating-point numbers to be stored in a reasonable amount of space and calculations to occur relatively quickly. The 754 standard is used in the floating-point units and numeric data processors of nearly all of today's PC-based microprocessors that implement floating-point math, including the Intel, Motorola, Sun, and MIPS processors.
+Microsoft Excel was designed around the IEEE 754 specification to determine how it stores and calculates floating-point numbers. IEEE is the Institute of Electrical and Electronics Engineers, an international body that, among other things, determines standards for computer software and hardware. The 754 specification is a very widely adopted specification that describes how floating-point numbers should be stored in a binary computer. It is popular because it allows floating-point numbers to be stored in a reasonable amount of space and calculations to occur relatively quickly. The 754 standard is used in the floating-point units and numeric data processors of nearly all of today's PC-based microprocessors that implement floating-point math, including the Intel, Motorola, Sun, and MIPS processors.
 
 When numbers are stored, a corresponding binary number can represent every number or fractional number. For example, the fraction 1/10 can be represented in a decimal number system as 0.1. However, the same number in binary format becomes the following repeating binary decimal:  
 
@@ -135,12 +135,12 @@ This results in the value TRUE.
 
 In some cases, you may be able to prevent rounding errors from affecting your work by using the **Precision as displayed** option. This option forces the value of each number in the worksheet to be the displayed value. To turn on this option, follow these steps.
 
-1. On the **File** menu, click **Options**, and then click the **Advanced** category.
-2. In the **When calculating this workbook** section, select the workbook that you want, and then select the **Set precision as displayed** check box.
+1. On the **File** menu, click **Options**, and then click the **Advanced** category.
+2. In the **When calculating this workbook** section, select the workbook that you want, and then select the **Set precision as displayed** check box.
 
-For example, if you choose a number format that shows two decimal places, and then you turn on the **Precision as displayed** option, all accuracy beyond two decimal places is lost when you save your workbook. This option affects the active workbook including all worksheets. You cannot undo this option and recover the lost data. We recommend that you save your workbook before you enable this option.
+For example, if you choose a number format that shows two decimal places, and then you turn on the **Precision as displayed** option, all accuracy beyond two decimal places is lost when you save your workbook. This option affects the active workbook including all worksheets. You cannot undo this option and recover the lost data. We recommend that you save your workbook before you enable this option.
 
-### Repeating binary numbers and calculations that have near-zero results
+### Repeating binary numbers and calculations that have near-zero results
 
 Another confusing problem that affects the storage of floating point numbers in binary format is that some numbers that are finite, non-repeating numbers in decimal base 10, are infinite, repeating numbers in binary. The most common example of this is the value 0.1 and its variations. Although these numbers can be represented perfectly in base 10, the same number in binary format becomes the following repeating binary number when it is stored in the mantissa:
 
@@ -150,7 +150,7 @@ The IEEE 754 specification makes no special allowance for any number. It stores 
 
 Even common decimal fractions, such as decimal 0.0001, cannot be represented exactly in binary. (0.0001 is a repeating binary fraction that has a period of 104 bits). This is similar to why the fraction 1/3 cannot be exactly represented in decimal (a repeating 0.33333333333333333333).
 
-For example, consider the following simple example in Microsoft Visual Basic for Applications:
+For example, consider the following simple example in Microsoft Visual Basic for Applications:
 
 ```vb
    Sub Main()
@@ -171,7 +171,7 @@ This will PRINT 0.999999999999996 as output. The small error in representing 0.0
    **A1: =(43.1-43.2)+1**
 2. Right-click cell A1, and then click **Format Cells**. On the Number tab, click Scientific under Category. Set the **Decimal places** to 15.
 
-Instead of displaying 0.9, Excel displays 0.899999999999999. Because (43.1-43.2) is calculated first, -0.1 is stored temporarily and the error from storing -0.1 is introduced into the calculation.
+Instead of displaying 0.9, Excel displays 0.899999999999999. Because (43.1-43.2) is calculated first, -0.1 is stored temporarily and the error from storing -0.1 is introduced into the calculation.
 
 ### Example when a value reaches zero
 

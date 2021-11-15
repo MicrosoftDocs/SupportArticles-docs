@@ -26,9 +26,9 @@ Mailbox quotas for qualifying license types are not automatically increased to a
 
 ## Cause
 
-By design, mailboxes for which an explicit quota was set previously retain that quota instead of having a new default quota applied. This behavior ensures that tenant administrators can set custom quotas for their mailboxes and have them honored by the system.
+By design, mailboxes for which an explicit quota was set previously retain that quota instead of having a new default quota applied. This behavior ensures that tenant administrators can set custom quotas for their mailboxes and have them honored by the system.
 
-This behavior can also occur if a different type of license (qualifying for a smaller quota) was originally assigned, and then a new license enabling larger quotas is assigned. Because the original license stamped quota values onto the mailbox, quotas will not be automatically updated when new license values are assigned.
+This behavior can also occur if a different type of license (qualifying for a smaller quota) was originally assigned, and then a new license enabling larger quotas is assigned. Because the original license stamped quota values onto the mailbox, quotas will not be automatically updated when new license values are assigned.
 
 Additionally, several issues that could have caused this behavior have been reported for non-custom quotas for a subset of customers. The resolution for these issues is the same.
 
@@ -40,7 +40,7 @@ To work around this issue, use Exchange Online PowerShell to increase mailbox qu
 Set-Mailbox -Identity<user>-ProhibitSendReceiveQuota 100GB -ProhibitSendQuota 99GB -IssueWarningQuota 98GB
 ```
 
-If you have multiple mailboxes that need quota updates, you can make these updates by using the scripting capabilities that are available in PowerShell.
+If you have multiple mailboxes that need quota updates, you can make these updates by using the scripting capabilities that are available in PowerShell.
 
 If the previous steps don't update the quotas, make sure that the `UseDatabaseQuotaDefaults` for the mailbox is set to **false**:
 

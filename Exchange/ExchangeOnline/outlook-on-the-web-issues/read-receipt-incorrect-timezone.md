@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When an Office 365 user sends an email message to another Office 365 user by using Microsoft Outlook or Microsoft Outlook Web App, the message requests a read receipt. After the recipient reads the message, the read receipt that the sender receives displays a different time zone from the actual time zone setting of the sender. For example, the read receipt shows a time zone of (UTC) Monrovia, Reykjavik.
+When an Office 365 user sends an email message to another Office 365 user by using Microsoft Outlook or Microsoft Outlook Web App, the message requests a read receipt. After the recipient reads the message, the read receipt that the sender receives displays a different time zone from the actual time zone setting of the sender. For example, the read receipt shows a time zone of (UTC) Monrovia, Reykjavik.
 
 ## Cause
 
@@ -30,8 +30,8 @@ Office 365 doesn't have access to the time zone of the client computer. The time
 
 In Office 365, the date and time of read receipts is based on the time zone setting of the Exchange Online server. Because Office 365 is a cloud service, and users can be in any one of 24 different time zones, the time stamp uses Coordinated Universal Time (UTC).
 
-For example, if you're the sender and your time zone setting is set to **(UTC-06:00) Central Time (US & Canada)**, you have to subtract 6 hours from the UTC time that's on the read receipt to reflect the time in your time zone.
+For example, if you're the sender and your time zone setting is set to **(UTC-06:00) Central Time (US & Canada)**, you have to subtract 6 hours from the UTC time that's on the read receipt to reflect the time in your time zone.
 
-UTC is the primary time standard by which the world regulates clocks and time. UTC is one of several closely related successors to Greenwich Mean Time (GMT).  
+UTC is the primary time standard by which the world regulates clocks and time. UTC is one of several closely related successors to Greenwich Mean Time (GMT).  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

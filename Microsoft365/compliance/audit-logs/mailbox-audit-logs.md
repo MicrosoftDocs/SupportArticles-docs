@@ -26,7 +26,7 @@ _Original KB number:_&nbsp;4021960
 
 ## Summary
 
-In Microsoft Office 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. You may have to do this, for example, if items are moved or if they're deleted unexpectedly or incorrectly.
+In Microsoft Office 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. You may have to do this, for example, if items are moved or if they're deleted unexpectedly or incorrectly.
 
 For the vNext environment, please note that mailbox audit logs are not enabled by default and need to be turned on for a user before beginning a search.
 
@@ -51,7 +51,7 @@ To run the script, follow these steps:
 1. Start Notepad, and then copy the following code into the file. The code uses the `search-mailboxAuditLog` command that is part of Microsoft Exchange Server.
 
     ```powershell
-     param ([PARAMETER(Mandatory=$TRUE,ValueFromPipeline=$FALSE)]
+     param ([PARAMETER(Mandatory=$TRUE,ValueFromPipeline=$FALSE)]
     [string]$Mailbox,
     [PARAMETER(Mandatory=$TRUE,ValueFromPipeline=$FALSE)]
     [string]$StartDate,
@@ -118,7 +118,7 @@ To run the script, follow these steps:
     >   - Mailbox
     >   - StartDate
     >   - EndDate
-    > - To search for entries from the current day, add one day to the end-date value in the prompt window. For example, if the current date is **3/14/2017**, and you want to include the current day in your search, enter **3/15/2017**  as the end date.
+    > - To search for entries from the current day, add one day to the end-date value in the prompt window. For example, if the current date is **3/14/2017**, and you want to include the current day in your search, enter **3/15/2017**  as the end date.
 
 ### Step 2: Customize a mailbox audit log search
 
@@ -144,11 +144,11 @@ This example message indicates that the search process has found 11 entries. By 
 > [!NOTE]
 > The **FolderBind** operation indicates the times at which the mailbox is accessed by a non-owner. This is the most common operation. You do not have to view the FolderBind operations when you investigate an item that is updated or deleted.
 
-Review the output of the .csv file. The most useful columns are exported, and some of these columns are merged to make the output easier to review. For more information about the columns that are exported, see the 'More Information' section.
+Review the output of the .csv file. The most useful columns are exported, and some of these columns are merged to make the output easier to review. For more information about the columns that are exported, see the 'More Information' section.
 
 ### Owner mailbox audit logging
 
-By default. owner audit logging is not turned on. It should only be used if you have to investigate an action by the owner of the mailbox. It should be used for a limited time period, approximately two weeks. This is because the audit log entries are stored in the mailbox, and this may cause the mailbox dumpster to exceed the size limit.
+By default. owner audit logging is not turned on. It should only be used if you have to investigate an action by the owner of the mailbox. It should be used for a limited time period, approximately two weeks. This is because the audit log entries are stored in the mailbox, and this may cause the mailbox dumpster to exceed the size limit.
 
 To enable owner audit logging, follow these steps:
 
@@ -171,7 +171,7 @@ To enable owner audit logging, follow these steps:
     ```
 
 1. Rerun the **Run-MailboxAuditLogSearcher.ps1**, and review the data.
-1. After the troubleshooting is complete, disable owner audit logging. To do this, run the following cmdlet:
+1. After the troubleshooting is complete, disable owner audit logging. To do this, run the following cmdlet:
 
     ```powershell
     Set-Mailbox <useridentity> -AuditOwner $none
@@ -232,7 +232,7 @@ The most useful columns of the .csv file are exported. Some of these columns are
 
 ### More information about mailbox audit logging
 
-- The **Search-MailboxAuditLog**  cmdlet is used in the sample script in Step 1 to search a single mailbox synchronously. You can also do this by running the cmdlet in Windows Remote PowerShell.
+- The **Search-MailboxAuditLog**  cmdlet is used in the sample script in Step 1 to search a single mailbox synchronously. You can also do this by running the cmdlet in Windows Remote PowerShell.
 
   For more information about the cmdlet, go to the following TechNet article:
 
@@ -247,6 +247,6 @@ The most useful columns of the .csv file are exported. Some of these columns are
 
     [New-MailboxAuditLogSearch](/powershell/module/exchange/new-mailboxauditlogsearch)
 
-    For more information about the default mailbox audit logging entries, go to the 'Mailbox audit log entries' section of the following TechNet article:
+    For more information about the default mailbox audit logging entries, go to the 'Mailbox audit log entries' section of the following TechNet article:
 
     [Mailbox Audit Logging in Exchange 2016](/Exchange/policy-and-compliance/mailbox-audit-logging/mailbox-audit-logging#mailbox)

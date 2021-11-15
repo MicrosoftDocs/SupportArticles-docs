@@ -25,7 +25,7 @@ The file "wkresources" gets created and moved to Trash-Recovered Files every tim
 
 ## More Information
 
-Click Help then type *recovered files* to review the information why recovered files are created. From macOS Help Topic:
+Click Help then type *recovered files* to review the information why recovered files are created. From macOS Help Topic:
 
 If the Trash contains folders of recovered files
 

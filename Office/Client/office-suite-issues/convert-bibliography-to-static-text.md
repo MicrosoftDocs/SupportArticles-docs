@@ -23,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-You cannot use the **Convert bibliography to static text** option in Microsoft Office Word 2007 or Word 2010.
+You cannot use the **Convert bibliography to static text** option in Microsoft Office Word 2007 or Word 2010.
 
 ## Workaround
 

@@ -22,13 +22,13 @@ appliesto:
 
 ## Problem
 
-When you try to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010, you receive the following message:
+When you try to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010, you receive the following message:
 
 > To sign in, additional software is required.
 
 When you click **Download and install now?**, you're prompted to download and install the Microsoft Online Services Sign-In Assistant.
 
-![Screenshot of Lync sign in page, including error message Download and install now? link ](./media/lync-2010-sign-into-sfb-online/additional-software-required.png)
+:::image type="content" source="./media/lync-2010-sign-into-sfb-online/additional-software-required.png" alt-text="Screenshot that shows the Lync sign in page, including error message Download and install now? link.":::
 
 ## Solution
 

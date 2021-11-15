@@ -38,7 +38,7 @@ In such scenario, use the following command to find the Requestor that has chang
 
 For example, in the following example, Monitoring and RecoveryActionsEnabled components are inactive.
 
-![Screenshot of Monitoring and RecoveryActionsEnabled components](./media/requestor-changed-server-component/inactive-components.png)
+:::image type="content" source="media/requestor-changed-server-component/inactive-components.png" alt-text="Screenshot of Monitoring and RecoveryActionsEnabled components.":::
 
 Use the following command to find Requestor that change state of the Monitoring component to `Inactive`:
 
@@ -46,7 +46,7 @@ Use the following command to find Requestor that change state of the Monitoring 
 (Get-ServerComponentState -Identity Exch1 -Component Monitoring).LocalStates
 ```
 
-![Screenshot of finding Requestor that changed state](./media/requestor-changed-server-component/find-requestor-that-changed-state.png)
+:::image type="content" source="media/requestor-changed-server-component/find-requestor-that-changed-state.png" alt-text="Screenshot of finding Requestor that changed state.":::
 
 Now that you know the Requestor, use the following command to change the state of the Monitoring component to `Active`:
 
@@ -60,7 +60,7 @@ Verify the component is active by using the following command:
 Get-ServerComponentState -Identity exch1 -Component Monitoring).LocalStates
 ```
 
-![Screenshot of active component](./media/requestor-changed-server-component/verify-component-state-changed.png)
+:::image type="content" source="media/requestor-changed-server-component/verify-component-state-changed.png" alt-text="Screenshot of showing that the component is active.":::
 
 ## References
 

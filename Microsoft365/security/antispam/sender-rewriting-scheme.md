@@ -29,11 +29,11 @@ _Original KB number:_&nbsp;4490129
 
 ## Summary
 
-Sender Rewriting Scheme (SRS) functionality was added to Office 365 to resolve a problem in which autoforwarding is incompatible with SPF. The SRS feature rewrites the **P1 From** address (also known as the Envelope From address) for all applicable messages that are sent externally from Office 365. It is important to note that the **From** header (also known as the Display From address or P2 From address) that is displayed by email clients remains unchanged.
+Sender Rewriting Scheme (SRS) functionality was added to Office 365 to resolve a problem in which autoforwarding is incompatible with SPF. The SRS feature rewrites the **P1 From** address (also known as the Envelope From address) for all applicable messages that are sent externally from Office 365. It is important to note that the **From** header (also known as the Display From address or P2 From address) that is displayed by email clients remains unchanged.
 
-This SRS change improves deliverability of applicable messages that pass Sender Policy Framework (SPF) checks when they arrive from the original sender but that then fail SPF at the final external destination after they are forwarded.
+This SRS change improves deliverability of applicable messages that pass Sender Policy Framework (SPF) checks when they arrive from the original sender but that then fail SPF at the final external destination after they are forwarded.
 
-SRS rewrites the **P1 From** address in the following scenario:
+SRS rewrites the **P1 From** address in the following scenario:
 
 - Messages that are autoforwarded (or redirected) in Office 365 by using any of the following methods to forward a message to an external recipient:
   - SMTP forwarding*
@@ -47,9 +47,9 @@ SRS rewrites the **P1 From** address in the following scenario:
 *Some messages forwarded with SMTP Forwarding will not be rewritten with SRS as they have already been rewritten.
 
 > [!NOTE]
-> SRS rewriting does not fix the issue of DMARC passing for forwarded messages. Although an SPF check will now pass by using a rewritten **P1 From** address, DMARC also requires an alignment check for the message to pass. For forwarded messages, DKIM always fails because the signed DKIM domain does not match the **From** header domain. If an original sender sets their DMARC policy to reject forwarded messages, the forwarded messages are rejected by Message Transfer Agents (MTAs) that honor DMARC policies.  
+> SRS rewriting does not fix the issue of DMARC passing for forwarded messages. Although an SPF check will now pass by using a rewritten **P1 From** address, DMARC also requires an alignment check for the message to pass. For forwarded messages, DKIM always fails because the signed DKIM domain does not match the **From** header domain. If an original sender sets their DMARC policy to reject forwarded messages, the forwarded messages are rejected by Message Transfer Agents (MTAs) that honor DMARC policies.  
 
-This change causes Non-Delivery Reports (NDRs) to return to Office 365 instead of the original sender, as they would do if SRS were not used. Therefore, part of the SRS implementation is to reroute returning NDRs to the original sender if a message cannot be delivered.  
+This change causes Non-Delivery Reports (NDRs) to return to Office 365 instead of the original sender, as they would do if SRS were not used. Therefore, part of the SRS implementation is to reroute returning NDRs to the original sender if a message cannot be delivered.  
 
 > [!NOTE]
 > SRS rewriting is used to prevent spoofing of unverified domains. Customers are advised to send messages only from domains that they own and for which they have verified their ownership through the Accepted Domains list. For more information about Accepted Domains in Office 365, see the following TechNet topic:
@@ -60,7 +60,7 @@ This change causes Non-Delivery Reports (NDRs) to return to Office 365 instead 
 
 ### Autoforwarding emails for an Office 365-hosted mailbox
 
-A message that is autoforwarded for a hosted mailbox by mechanisms such as SMTP forwarding or Mailbox Rule redirection or Transport Rule redirection have the **P1 From** address rewritten before the message leaves Office 365. The address is rewritten by using the following pattern:
+A message that is autoforwarded for a hosted mailbox by mechanisms such as SMTP forwarding or Mailbox Rule redirection or Transport Rule redirection have the **P1 From** address rewritten before the message leaves Office 365. The address is rewritten by using the following pattern:
 
 ```powershell
 <Forwarding Mailbox Username>+SRS=<Hash>=<Timestamp>=<Original Sender Domain>=<Original Sender Username>@<Forwarding Mailbox Domain>
@@ -81,14 +81,14 @@ A message is sent from Bob (bob@fabrikam.com) to John's mailbox in Office 365 (j
 
 ### Relaying from a customer's on-premises server
 
-A message that is relayed from a customer's on-premises server or application through Office 365 from a non-verified domain has the **P1 From** address rewritten before it leaves Office 365. The address is rewritten by using the following pattern:
+A message that is relayed from a customer's on-premises server or application through Office 365 from a non-verified domain has the **P1 From** address rewritten before it leaves Office 365. The address is rewritten by using the following pattern:
 
 ```powershell
 bounces+SRS=<Hash>=<Timestamp>@<Default Accepted Domain>
 ```
 
 > [!IMPORTANT]
-> In order to receive NDRs for relayed messages that are rewritten by SRS, a mailbox (either hosted or on-premises) must be created by using the username of "bounces" and by having the domain be set as the default Accepted Domain of the customer.
+> In order to receive NDRs for relayed messages that are rewritten by SRS, a mailbox (either hosted or on-premises) must be created by using the username of "bounces" and by having the domain be set as the default Accepted Domain of the customer.
 
 Example
 

@@ -22,9 +22,9 @@ appliesto:
 
 ## Symptoms
 
-After you upgrade to Microsoft Office 2013 or 2016, you experience one or more of the following symptoms:  
+After you upgrade to Microsoft Office 2013 or 2016, you experience one or more of the following symptoms:  
 
-- The computer uses more memory when you open multiple Microsoft Excel files, save Excel files, or make calculations in Excel workbooks.
+- The computer uses more memory when you open multiple Microsoft Excel files, save Excel files, or make calculations in Excel workbooks.
 - You can no longer open as many Excel workbooks in the same instance as you could before you upgraded to Excel.
 - When you insert columns in an Excel workbook, you receive an error about available memory.
 - When you are working with an Excel worksheet, you receive the following error message:
@@ -41,7 +41,7 @@ After you upgrade to Microsoft Office 2013 or 2016, you experience one or more o
   
 ## Cause
 
-Although improvements in Office 2013/2016 did not significantly affect system requirements, Office 2013/2016 does use more available system resources than Office 2010 did. The limit of virtual address space for 32-bit editions of Windows-based applications is 2 gigabytes (GB). For Excel, this space is shared by the Excel application itself together with any add-ins that run in the same process. The size of the worksheet itself also affects the usage of virtual address space. Because Excel loads the worksheet into addressable memory, some worksheets that have a file size of less than 2 GB may still require Excel to use more than 2 GB of addressable memory. This situation results in the error message that is mentioned in the "Symptoms" section.
+Although improvements in Office 2013/2016 did not significantly affect system requirements, Office 2013/2016 does use more available system resources than Office 2010 did. The limit of virtual address space for 32-bit editions of Windows-based applications is 2 gigabytes (GB). For Excel, this space is shared by the Excel application itself together with any add-ins that run in the same process. The size of the worksheet itself also affects the usage of virtual address space. Because Excel loads the worksheet into addressable memory, some worksheets that have a file size of less than 2 GB may still require Excel to use more than 2 GB of addressable memory. This situation results in the error message that is mentioned in the "Symptoms" section.
 
 ## Resolution
 
@@ -61,7 +61,7 @@ The following options can help improve performance in Excel 2013/2016:
 
 ## More Information
 
-You can use [Process Explorer](/sysinternals/downloads/process-explorer) to check whether you are approaching the 2-GB limit in Excel. Consider anything over 1.75 GB as a maximum for the 32-bit edition of Excel. The column to focus is not there by default and can be added by Choosing View> Select Columns> Process Memory tab and clicking on Virtual Size.
+You can use [Process Explorer](/sysinternals/downloads/process-explorer) to check whether you are approaching the 2-GB limit in Excel. Consider anything over 1.75 GB as a maximum for the 32-bit edition of Excel. The column to focus is not there by default and can be added by Choosing View> Select Columns> Process Memory tab and clicking on Virtual Size.
 
 Before moving to a 64-bit version of Office, see [64-bit editions of Office 2013](/previous-versions/office/office-2013-resource-kit/ee681792(v=office.15)).
 

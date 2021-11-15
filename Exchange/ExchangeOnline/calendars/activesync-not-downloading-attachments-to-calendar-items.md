@@ -22,25 +22,25 @@ _Original KB number:_ &nbsp; 2503175
 
 ## Symptoms
 
-Attachments on meetings or appointments are not available when you synchronize the Calendar with a Microsoft Exchange ActiveSync client.
+Attachments on meetings or appointments are not available when you synchronize the Calendar with a Microsoft Exchange ActiveSync client.
 
 ## Cause
 
-This problem occurs if one or both of the following conditions are true:
+This problem occurs if one or both of the following conditions are true:
 
 - The Exchange ActiveSync client doesn't support version 16 or a later version of the Exchange ActiveSync protocol.
 - The mailbox is located on a version of Exchange that doesn't support version 16 or a later version of the Exchange ActiveSync protocol.
 
 ## Resolution
 
-To synchronize attachments in a calendar item, follow these steps:
+To synchronize attachments in a calendar item, follow these steps:
 
 1. Move the mailbox to Exchange Online or to Exchange 2016.
 2. Upgrade the device to a client that supports version 16 or later.
 
 ## More information
 
-For more information about the Exchange ActiveSync protocols, see:
+For more information about the Exchange ActiveSync protocols, see:
 
 - [[MS-ASHTTP]: Exchange ActiveSync: HTTP Protocol](/openspecs/exchange_server_protocols/ms-ashttp/4cbf28dc-2876-41c6-9d87-ba9db86cd40d)
 - [2.2.4 Exchange ActiveSync Protocols](/openspecs/exchange_server_protocols/ms-oxproto/8b83944d-0eed-4b2b-87dd-1982733ec089)

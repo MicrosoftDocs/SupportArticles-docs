@@ -26,7 +26,7 @@ In Microsoft Excel, when attempting to use controls on the PowerPivot ribbon, yo
 
 :::image type="content" source="media/powerpivot-controls-disabled-with-non-default/excel-controls.png" alt-text="Screenshot shows the Excel controls are grayed out on the PowerPivot ribbon.":::
 
-The behavior may appear to be inconsistent between existing files; however, it occurs in any new file you attempt to create in Excel.
+The behavior may appear to be inconsistent between existing files; however, it occurs in any new file you attempt to create in Excel.
 
 ##  Cause
 
@@ -43,11 +43,11 @@ Here are some of the formats which may result in this behavior:
 
 The availability of PowerPivot controls is specific to the file type of the active document, depending on whether that file type supports the PowerPivot features.
 
-New, unsaved documents will enable or disable the PowerPivot controls based on the current Save files in this format option setting. If the file is later saved as a file type that supports PowerPivot, the controls on the PowerPivot ribbon will then be enabled.
+New, unsaved documents will enable or disable the PowerPivot controls based on the current Save files in this format option setting. If the file is later saved as a file type that supports PowerPivot, the controls on the PowerPivot ribbon will then be enabled.
 
 ##  Resolution
 
-To allow the use of the PowerPivot ribbon controls in new documents, configure the Save files in this format option to the default setting of Excel Workbook, using the steps below.
+To allow the use of the PowerPivot ribbon controls in new documents, configure the Save files in this format option to the default setting of Excel Workbook, using the steps below.
 
 
 1. From the File tab in Excel, select Options.   

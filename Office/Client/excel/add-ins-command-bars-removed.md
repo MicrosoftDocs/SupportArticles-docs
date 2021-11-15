@@ -36,7 +36,7 @@ When you unload an Excel add-in (.xlam) or an Excel 97-2003 add-in (.xla) or clo
 
 ## Cause
 
-These issues occur because of the Single Document Interface (SDI) in Excel 2013 or later. When you use a legacy CommandBar object to create menu items, the menu items are added to the Add-Ins tab of the ribbon. In Excel 2013 or later, each workbook has its own ribbon. Therefore, when you load or unload add-ins after the ribbon of the workbook is created, the ribbon is not updated. 
+These issues occur because of the Single Document Interface (SDI) in Excel 2013 or later. When you use a legacy CommandBar object to create menu items, the menu items are added to the Add-Ins tab of the ribbon. In Excel 2013 or later, each workbook has its own ribbon. Therefore, when you load or unload add-ins after the ribbon of the workbook is created, the ribbon is not updated. 
 
 The following code sample creates menu items by using the CommandBar object:
 

@@ -35,4 +35,4 @@ To work around this problem, change the actions of your anti-spam and anti-phish
 2. Under **Default spam filter policy**, select **Edit policy**
 3. Under **Spam and bulk actions**, select **Quarantine message** for **Spam**, **High confidence spam**, and **Phishing email**
 
-    ![edit spam filter policy](./media/user-impersonation-messages-are-classified-as-phishing/edit-spam-filter-policy.png)
+   :::image type="content" source="media/user-impersonation-messages-are-classified-as-phishing/edit-spam-filter-policy.png" alt-text="Screenshot of Default spam filter policy.":::

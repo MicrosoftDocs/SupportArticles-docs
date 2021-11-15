@@ -43,7 +43,7 @@ This issue is caused by the changes that are made in Microsoft Office 2013 to op
     Application.ScreenUpdating = True
     ```
 
-2. If you need to see the screen changes, insert a DoEvents command after the line in the code that causes the screen to appear white. Using DoEvents sparingly will help maintain macro performance.
+2. If you need to see the screen changes, insert a DoEvents command after the line in the code that causes the screen to appear white. Using DoEvents sparingly will help maintain macro performance.
 
     ```vb
     Workbooks.Add
@@ -55,4 +55,4 @@ This issue is caused by the changes that are made in Microsoft Office 2013 to op
 This is a known limitation in Excel 2013.
 
 > [!NOTE]
-> For all versions of Excel, a similar effect can occur in long running macros when Windows turns the application white and marks it not responding. This occurs because Excel is not responding to Windows while the macro is running. DoEvents will also assist in this scenario by allowing Excel to respond to Windows and allow the application screen to recover.
+> For all versions of Excel, a similar effect can occur in long running macros when Windows turns the application white and marks it not responding. This occurs because Excel is not responding to Windows while the macro is running. DoEvents will also assist in this scenario by allowing Excel to respond to Windows and allow the application screen to recover.

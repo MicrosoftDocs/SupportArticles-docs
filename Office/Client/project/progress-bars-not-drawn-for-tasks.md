@@ -48,7 +48,7 @@ You deleted the progress bar style from the Bar Styles dialog box in a Gantt Cha
 To verify if the progress bar style exists or has been deleted, follow these steps:
 
 
-1. On the men ribbon's Format tab, click the arrown in the right corner of the Chart Style section to view Bar Styles. In Project 2010, choose the Format tab, click Format, and then click Bar Styles. NOTE: In Project 2007 and earlier versons, click BarStyleson the Formatmenu.   
+1. On the men ribbon's Format tab, click the arrown in the right corner of the Chart Style section to view Bar Styles. In Project 2010, choose the Format tab, click Format, and then click Bar Styles. NOTE: In Project 2007 and earlier versons, click BarStyleson the Formatmenu.   
 2. By default, a progress bar style is listed in the Name column with Progress as the name. You can also identify a progress bar in the Bar Styles dialog box, where Actual Start is in the From column and Complete Through is in the To column.   
 
 

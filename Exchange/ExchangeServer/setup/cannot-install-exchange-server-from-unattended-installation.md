@@ -23,20 +23,20 @@ _Original KB number:_ &nbsp; 2280782
 
 ## Symptoms 1
 
-Consider the following scenario:  
+Consider the following scenario:  
 
 - You run the `Setup /PrepareAD` cmdlet without the `hosting` parameter to install Exchange Server 2010 SP1.
 - You run the `setup.com` cmdlet with the `hosting` parameter to install the first Exchange Server 2010 SP1 server. This installation fails.
 
-In this scenario, you receive the following error message:
+In this scenario, you receive the following error message:
 
-> Active Directory wasn't prepared using hosting mode. To install server roles for hosting mode, you need to clean up Active Directory and prepare it again for hosting mode.
+> Active Directory wasn't prepared using hosting mode. To install server roles for hosting mode, you need to clean up Active Directory and prepare it again for hosting mode.
 
 ## Symptoms 2
 
 Consider the following scenario:
 
-- You run the `Setup /PrepareAD` cmdlet with the `hosting` parameter to install Exchange Server 2010 SP1.
+- You run the `Setup /PrepareAD` cmdlet with the `hosting` parameter to install Exchange Server 2010 SP1.
 - You run the `setup.com` cmdlet without the `hosting` parameter to install the first Exchange Server 2010 SP1 server. This installation fails.
 
 In this scenario, receive the following error message:
@@ -53,7 +53,7 @@ In this scenario, receive the following error message:
 To clean up the environment and install Exchange Server 2010 SP1 in hosting mode, follow these steps:
 
 1. Remove Exchange Server 2010 SP1 from the first server. For more information about how to remove Exchange Server 2010, see [Modify or Remove Exchange 2010](/previous-versions/office/exchange-server-2010/ee332361(v=exchg.141)).
-2. Install Active Directory Service Interfaces Editor (ADSI Edit). For more information about ADSI Edit, see [ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
+2. Install Active Directory Service Interfaces Editor (ADSI Edit). For more information about ADSI Edit, see [ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 3. Open **ADSI Edit**, expand **Default naming context**.
 4. Locate and then delete the following two objects:
 
@@ -67,14 +67,14 @@ To clean up the environment and install Exchange Server 2010 SP1 in hosting mode
     Microsoft Exchange Autodiscover
 
 7. Run the `Setup /PrepareAD` cmdlet with using the `hosting` parameter.
-8. Run the `setup.com` cmdlet with using the `hosting` parameter to install Exchange Server 2010 SP1 in hosting mode.
+8. Run the `setup.com` cmdlet with using the `hosting` parameter to install Exchange Server 2010 SP1 in hosting mode.
 
 ### Resolution 2
 
 To clean up the environment and install Exchange Server 2010 SP1 in non-hosting mode:
 
 1. Remove Exchange Server 2010 SP1 from the first server. For more information about how to remove Exchange Server 2010, see [Modify or Remove Exchange 2010](/previous-versions/office/exchange-server-2010/ee332361(v=exchg.141)).
-2. Install Active Directory Service Interfaces Editor (ADSI Edit). For more information about ADSI Edit, see [ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
+2. Install Active Directory Service Interfaces Editor (ADSI Edit). For more information about ADSI Edit, see [ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 3. Open **ADSI Edit**, expand **Default naming context**.
 4. Locate and then delete the following two objects:
 
