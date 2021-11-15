@@ -26,9 +26,9 @@ Assume that you update the ADML and ADMX file to the Windows 10, version 1803 ve
 
 > Resource $(string id="Win7Only)' referenced in attribute displayName could not be found
 
-![Error message 1](./media/resource-stringid-win7only-not-found/error-message-1.png)
+:::image type="content" source="media/resource-stringid-win7only-not-found/resource-referenced-in-attribute-displayname-could-not-be-found-error-1.png" alt-text="The details of the error message that's shown in the Group Policy Management Editor.":::
 
-![Error message 2](./media/resource-stringid-win7only-not-found/error-message-2.png)  
+:::image type="content" source="media/resource-stringid-win7only-not-found/resource-referenced-in-attribute-displayname-could-not-be-found-error-2.png" alt-text="The details of the error message that's shown in User Configuration.":::
 
 ## Cause
 

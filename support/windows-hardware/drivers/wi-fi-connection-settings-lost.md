@@ -25,17 +25,17 @@ For example, this problem occurs when you configure following settings:
 **EAP type:** PEAP  
 **Authentication method:** Username and Password
 
-![Control Panel](./media/wi-fi-connection-settings-lost/security-properties.png)
+:::image type="content" source="media/wi-fi-connection-settings-lost/security-properties.png" alt-text="An example of the settings that you may configure in security properties." border="false":::
 
 **Validate server:** Cleared
 
-![Authentication Method](./media/wi-fi-connection-settings-lost/authetication-method-username.png)  
+:::image type="content" source="media/wi-fi-connection-settings-lost/authentication-method-username.png" alt-text="Select the Username and Password option in Authentication Method." border="false":::
 
 **Domain\Username:** *wpa2user*
 
 **Password:** *123456#*
 
-![Password](./media/wi-fi-connection-settings-lost/username-and-password.png)  
+:::image type="content" source="media/wi-fi-connection-settings-lost/username-and-password.png" alt-text="You have to input username and password again." border="false":::
 
 ## Cause
 
