@@ -73,7 +73,7 @@ Go to the [Lync Connectivity Analyzer](https://www.testconnectivity.microsoft.co
 
 This test examines all four DNS records that are required by Skype for Business Online to determine whether they're correctly configured.
 
-:::image type="content" source="./media/dns-configuration-issue/examines-dns.png" alt-text="Screenshot that shows the result of the DNS test.":::
+:::image type="content" source="./media/dns-configuration-issue/examines-dns.png" alt-text="Screenshot that shows the result of the D N S test.":::
 
 If any issues are detected, check the DNS configuration with your domain registrar. For instructions about how to configure DNS for the most common DNS providers, go to the following Microsoft Office 365 website: [Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-e21a9a4a-7b14-42cb-b39b-03aee92da95f) 
 

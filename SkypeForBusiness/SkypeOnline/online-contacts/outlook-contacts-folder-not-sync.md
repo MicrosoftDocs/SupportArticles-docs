@@ -50,11 +50,11 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
 
 6. To start a session, select **Logon** from the **Session** menu.
 
-    :::image type="content" source="./media/outlook-contacts-folder-not-sync/session-logon.png" alt-text="Screenshot that shows the logon tab selected i nthe Session menu.":::
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/session-logon.png" alt-text="Screenshot that shows the logon tab selected on the Session menu.":::
 
 7. In the **Choose Profile** box, type or click the arrow to select the name of the Outlook profile for the affected user, and then click **OK**.
 
-    :::image type="content" source="./media/outlook-contacts-folder-not-sync/choose-profile.png" alt-text="Screenshot that shows theChoose Profile window.":::
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/choose-profile.png" alt-text="Screenshot that shows the Choose Profile window.":::
 8. In the window that opens, right-click the default Exchange mailbox store in the list, and then click **Open store**.
 
     :::image type="content" source="./media/outlook-contacts-folder-not-sync/open-store.png" alt-text="Screenshot that shows the Open store tab selected in the list.":::
@@ -63,7 +63,7 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
    :::image type="content" source="./media/outlook-contacts-folder-not-sync/expand-contacts.png" alt-text="Screenshot that shows Root Container selected to expand Contacts.":::
 10. Locate and right-click **Skype for Business Contacts**. Then select **Open contacts table**.
 
-    :::image type="content" source="./media/outlook-contacts-folder-not-sync/open-contacts-table.png" alt-text="Screenshot that shows the Open contacts table option selected after rught-clicking Skype for Business Contacts.":::
+    :::image type="content" source="./media/outlook-contacts-folder-not-sync/open-contacts-table.png" alt-text="Screenshot that shows the Open contacts table option selected after right-clicking Skype for Business Contacts.":::
 11. To delete the contacts in the list, hold down the Ctrl key, and then click to select the individual contacts.
 
     :::image type="content" source="./media/outlook-contacts-folder-not-sync/delete-contacts.png" alt-text="Screenshot that shows the target contacts selected in the list.":::
