@@ -32,11 +32,11 @@ After following the required steps above to enable this feature, follow the step
 
 2. Locate and select the **Server-Side Synchronization Failures** dashboard from the dashboard list.
 
-   :::image type="content" source="media/troubleshoot-item-level-server-side-synchronization-issues/server-side-synchronization-failures-option.png" alt-text="Screenshot to select the Server-Side Synchronization Failures dashboard from the dashboard list.":::
+   :::image type="content" source="media/troubleshoot-item-level-server-side-synchronization-issues/server-side-synchronization-failures-option.png" alt-text="Screenshot to select the Server-Side Synchronization Failures dashboard from the dashboard list." lightbox="server-side-synchronization-failures-option.png":::
 
 3. If you locate a specific email or ACT item that did not sync as expected, you can view the reason in the **Sync Error** column. Selecting the link will direct you to a help article for that error if one exists.
 
-   :::image type="content" source="media/troubleshoot-item-level-server-side-synchronization-issues/reason-sync-error.png" alt-text="Screenshot to select the reason in the Sync Error column.":::
+   :::image type="content" source="media/troubleshoot-item-level-server-side-synchronization-issues/reason-sync-error.png" alt-text="Screenshot to select the reason in the Sync Error column." lightbox="reason-sync-error.png":::
 
 ## More information
 
