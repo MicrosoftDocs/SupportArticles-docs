@@ -80,12 +80,12 @@ Your browser requires access to the following addresses to run Log Analytics que
 3. Under the **System Center Advisor** node, select **Advisor Connection**.
 4. Select **Configure Proxy Server**.
 
-   ![Screenshot of Configure Proxy Server.](./media/troubleshoot-oms-onboarding-issues/configure-proxy-server.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/configure-proxy-server.png" alt-text="Screenshot of the Configure Proxy Server option in OpsMgr console." border="false":::
 
 5. Select the check box to use a proxy server to access the Advisor Web Service.
 6. Specify the proxy address in the `<http://proxyserver:port>` format:
 
-   ![Screenshot of proxy address.](./media/troubleshoot-oms-onboarding-issues/proxy-address.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/proxy-address.png" alt-text="Setting up the proxy address in the Advisor Settings Wizard." border="false":::
 
 ### Step 3: Specify credentials for OpsMgr if the proxy server requires authentication
 
@@ -95,13 +95,13 @@ If the proxy server requires authentication, you can specify one for an OpsMgr *
 2. Under the **RunAs Configuration** node, select **Profiles**.
 3. Double-click to open **System Center Advisor Run As Profile Proxy**:
 
-   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/open-proxy.jpg" alt-text="Screenshot of System Center Advisor Run As Profile Proxy.":::
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/open-proxy.png" alt-text="Open the System Center Advisor Run As Profile Proxy in Profiles under RunAs Configuration.":::
 
 4. Select **Add** to add a **RunAs Account**. You can either create one or use an existing account. This account must have sufficient permissions to pass through the proxy.
 5. Set the account to be targeted at the **Operations Manager Management Servers** group.
 6. Complete the wizard and save the changes:
 
-   ![Screenshot of the wizard.](./media/troubleshoot-oms-onboarding-issues/wizard.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/wizard.png" alt-text="Set the RunAs account to the Operations Manager Management Servers group." border="false":::
 
 ### Step 4: Configure the proxy server on each OpsMgr management server for managed code
 
@@ -111,7 +111,7 @@ There is an additional setting in Operations Manager that's intended for general
 2. Select **Device Management**, and then select the **Management Servers** node.
 3. Right-click, select **Properties** for each management server (one at the time), and then set the proxy on the **Proxy Settings** tab:
 
-   ![Screenshot of the Proxy Settings tab](./media/troubleshoot-oms-onboarding-issues/proxy-settings.png)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/proxy-settings.png" alt-text="Set the proxy on the Proxy Settings tab.":::
 
 ## Verify the deployment after registration
 
@@ -119,7 +119,7 @@ There is an additional setting in Operations Manager that's intended for general
 
 Depending on which Solutions (formerly known as Intelligence Packs) that you have enabled in the Operational Insights portal, you will see some or all of the management packs in the following screenshot. Search for keyword **Advisor** or **Solution** in their names, and make sure that the solutions that you've enabled have corresponding management packs installed.
 
-![Screenshot of searching Advisor](./media/troubleshoot-oms-onboarding-issues/advisor.png)
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/advisor.png" alt-text="Screenshot of the management packs that you installed." border="false":::
 
 You can also check for these management packs through PowerShell by using the following commands:
 
@@ -146,7 +146,7 @@ If you only see one or two of these, remove them and wait 5 to 10 minutes for Op
 
 With Direct Agents, you should see the Solution collection policy being cached under the `C:\Program Files\Microsoft Monitoring Agent\Agent\Health Service State\Management Packs` path:
 
-:::image type="content" source="media/troubleshoot-oms-onboarding-issues/solution-collection-policy.png" alt-text="Screenshot of the solution collection.":::
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/solution-collection-policy.png" alt-text="Screenshot of the solution collection policies that are cached.":::
 
 ### Step 3: Validate that data is being sent up to the Advisor service (or at least that a send is tried)
 
@@ -154,11 +154,11 @@ With Direct Agents, you should see the Solution collection policy being cached u
 2. Select **Health Service Management Groups**.
 3. Add all the counters that start with **HTTP**:
 
-   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/adding-counters.jpg" alt-text="Screenshot of adding counters.":::
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/adding-counters.png" alt-text="Adding all the counters that start with H T T P.":::
 
 4. If the configuration is correct, you should see activity for these counters as events, and other data is uploaded (based on the solutions loaded in the portal and the configured log collection policy). These counters do not necessarily have to be continuously busy. However, if you see little or no activity, it might be that you have not added many solutions, or that you have a lightweight collection policy.
 
-   ![Screenshot of activity for counters as events.](./media/troubleshoot-oms-onboarding-issues/activity.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/activity.png" alt-text="Screenshot of activity for counters as events." border="false":::
 
 ### Step 4: Check for errors in the management server or Direct Agent event logs
 
@@ -169,7 +169,7 @@ As a final step, if all of the preceding steps fail, check whether you have any 
 
 Most of these events apply to both types of reporting infrastructure. Open **Event Viewer** > **Application and Services** > **Operations Manager** and filter by **Event Sources: Advisor, Health Service Modules, HealthService, and Service Connector** (this last one applies to Direct Agent only).
 
-:::image type="content" source="media/troubleshoot-oms-onboarding-issues/event-sources.jpg" alt-text="Screenshot of Event Sources filter.":::
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/event-sources.png" alt-text="Use the Event Sources filter to check errors." border="false":::
 
 A few of the events that you might see when things aren't working correctly are included in the following table:
 
@@ -195,7 +195,7 @@ Check in the Operational Insights portal to see whether your computers are repor
 > [!NOTE]
 > If a data source is listed as reporting on this page it does not necessarily mean we have collected any data from the source. In this case it's possible that drilling into search from this page will show inconsistent results (for example, you will see a data source listed in **CONNNECTED SOURCES** but it won't be in search). Once data collection has started, either from an IP address or from log collection, the results in search will be consistent.
 
-:::image type="content" source="media/troubleshoot-oms-onboarding-issues/connected-sources.png" alt-text="Screenshot of connected sources.":::
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/connected-sources.png" alt-text="Screenshot of data sources that are listed in the connected sources.":::
 
 The Advisor engineering team is committed to resolving all your onboarding issues so contact us if you run into any issues. We are here to help.
 
@@ -205,7 +205,7 @@ The Advisor engineering team is committed to resolving all your onboarding issue
 
 Some customers have reported that the **Search** button in the **Computer Search** dialog box is missing. We are currently investigating this. As a temporary workaround, select the **Filter by (optional)** edit box, and then press the Tab key to get to the invisible search button. Then, you can activate the button by pressing the \<Spacebar> or \<Enter> key.
 
-![Screenshot of search button missing](./media/troubleshoot-oms-onboarding-issues/search-button-missing.jpg)
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/search-button-missing.png" alt-text="The Search button is missing from the Computer Search dialog box.":::
 
 ### IIS log collection issues
 
