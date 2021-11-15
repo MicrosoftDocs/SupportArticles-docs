@@ -37,11 +37,11 @@ This article discusses the data that is collected by the Microsoft Excel Baselin
 
 When you run the Excel Baseline Diagnostic, you receive a message that resembles the following. The message asks whether you want to have fixes applied automatically or by selecting them yourself:
 
-![message when you run the Excel Baseline Diagnostic](./media/data-collected-by-excel-support-diagnostic/message-after-run-excel-baseline-diagnostic.JPG)
+:::image type="content" source="media/data-collected-by-excel-support-diagnostic/message-excel-baseline-diagnostic.png" alt-text="Screenshot of the message when running the Excel Baseline Diagnostic.":::
 
 You see several items that are running, and then you see a prompt that resembles the following. The prompt lets you know that the Excel application will have to be open to continue.
 
-![select to start Excel or skip](./media/data-collected-by-excel-support-diagnostic/select-to-continue-or-skip.JPG)
+:::image type="content" source="media/data-collected-by-excel-support-diagnostic/select-to-continue-or-skip.png" alt-text="Screenshot shows the prompt that the Excel application will have to be open to continue.":::
 
 You should click **Skip** only if you are experiencing startup issues (for example, crashes) with the selected application.
 

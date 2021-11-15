@@ -48,7 +48,7 @@ To resolve this issue, follow these steps. You may find it helpful to print this
 
 1. Click **Force Quit**.
 
-   ![Selecting an application and then clicking Force Quit](./media/fails-starting-powerpoint-mac/force-quit.png)
+   :::image type="content" source="media/fails-starting-powerpoint-mac/force-quit.png" alt-text="Screenshot to select the Force Quit option after selecting an application." border="false":::
 
 1. Repeat the previous steps until you quit all active applications.
 

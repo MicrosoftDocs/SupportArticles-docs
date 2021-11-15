@@ -29,18 +29,18 @@ When opening a document in Microsoft Word, you receive one of the following erro
 
 - > There is insufficient memory or disk space. Word cannot display the requested font.
 
-    ![Insufficient memory or disk space error](./media/missing-fonts-opening-documents/1.png)
+    :::image type="content" source="media/missing-fonts-opening-documents/error-word.png" alt-text="Screenshot of the error message, showing Word can't display the requested font.":::
 
 - > Not enough system resources to display completely.
 
-    ![Not enough system resources error](./media/missing-fonts-opening-documents/2.png)
+    :::image type="content" source="media/missing-fonts-opening-documents/error-excel.png" alt-text="Screenshot of the error message, showing not enough system resources to display completely.":::
 
 > [!NOTE]
 > Error messages also occur in other Office applications (such as Microsoft Excel, or Microsoft PowerPoint).
 
 The permissions of the **Fonts** folder may be different from the default permissions (see the following screenshot for the default permissions). To check the default permissions, open a Command Prompt window and run the `icacls C:\Windows\Fonts` command.
 
-![Default permissions](./media/missing-fonts-opening-documents/3.png)
+:::image type="content" source="media/missing-fonts-opening-documents/default-permissions.png" alt-text="Screenshot to check the default permissions in the Command Prompt window." border="false":::
 
 ## Cause
 
@@ -75,7 +75,7 @@ For more information, see [How to install fonts that are missing after upgrading
 
 When this issue occurs in Office applications, you will also see the following behavior of the Font dropdown menu in WordPad.
 
-![Missing fonts in WordPad](./media/missing-fonts-opening-documents/4.png)
+:::image type="content" source="media/missing-fonts-opening-documents/missing-font.png" alt-text="Screenshot of the Font dropdown menu in WordPad." border="false":::
 
 ### References
 

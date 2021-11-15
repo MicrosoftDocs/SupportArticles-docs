@@ -56,7 +56,7 @@ To configure your Apple iCloud email account in Microsoft Outlook for Mac, follo
 
 9. Select **Override default port** under the **Outgoing server** box, and then enter *587* in the **Outgoing server** port text box.
 
-   :::image type="content" source="media/outlook-for-mac-compatibility-with-apple-icloud/enter-587-in-outgoing-server.png" alt-text="The screenshot for step 9" border="false":::
+   :::image type="content" source="media/outlook-for-mac-compatibility-with-apple-icloud/configure-email.png" alt-text="Screenshot shows steps to configure the Apple iCloud email account in Microsoft Outlook for Mac." border="false":::
 
 After you have entered the incoming and outgoing server information, Outlook for Mac will start to receive your email messages.
 
