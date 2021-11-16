@@ -25,7 +25,7 @@ Figure 1: Output of the `DistributionContentVersion` table before you reassign t
 
 Figure 2: Output of the `DistributionContentVersion` table after you reassign the DP and a new content validation cycle ends
 
-:::image type="content" source="media/duplicate-rows-in-distributioncontentversion/table-after-dp-move.png" alt-text="Screenshot of the output of the Output of the DistributionContentVersion table after DP move.":::
+:::image type="content" source="media/duplicate-rows-in-distributioncontentversion/table-after-dp-move.png" alt-text="Screenshot of the output of the DistributionContentVersion table after DP move.":::
 
 After you reassign the DP, merging data into the `ContentDistribution` table fails. For example, when the `spRebuildContentDistribution` procedure runs or the Configuration Data group is reinitialized, you receive this error message:
 

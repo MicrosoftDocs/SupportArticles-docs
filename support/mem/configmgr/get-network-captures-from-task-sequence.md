@@ -34,7 +34,7 @@ It's difficult to capture a network trace in Windows PE, as the `Netsh` command 
 
 4. Copy the **Microsoft Network Monitor 3** folder from the extracted Network Monitor files to the \<Image_MountDir> folder. The **Microsoft Network Monitor 3** folder contains all the executables (.exe) that are needed to install and run Network Monitor 3.4.
 
-    :::image type="content" source="media/get-network-captures-from-task-sequence/copy-folder.png" alt-text="Screenshot of the Microsoft Network Monitor 3 folder." border="false":::
+    :::image type="content" source="media/get-network-captures-from-task-sequence/copy-folder.png" alt-text="Screenshot of the Microsoft Network Monitor 3 folder details." border="false":::
 
 5. Copy Nm3.sys to the following folders. Only the SYSTEM account has write permission. Therefore, you have to use Psexec.exe to start a command prompt with SYSTEM context.
 
