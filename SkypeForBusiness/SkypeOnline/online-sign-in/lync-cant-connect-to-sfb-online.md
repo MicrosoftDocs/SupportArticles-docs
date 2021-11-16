@@ -27,7 +27,7 @@ You may experience the following issues in Lync: 
 - Lync 2013 or Lync 2010 can't connect to the Skype for Business Online (formerly Lync Online) service through a proxy that is configured by using a file://-based Proxy Auto-Configuration (PAC) file.   
 - You can't connect to the Skype for Business Online service when you're using Lync 2013 or Lync 2010. When you view Network Monitor, traces show multiple TCP SYNC requests for login.microsoftonline.com.
 
-    ![Screen shot of network monitor, showing multiple TCP sync request for login.microsoft.com ](./media/lync-cant-connect-to-sfb-online/network-monitor.jpg)   
+    :::image type="content" source="./media/lync-cant-connect-to-sfb-online/network-monitor.png" alt-text="Screen shot of network monitor, showing multiple T C P sync request for login.microsoft.com.":::
 
 ## Solution
 

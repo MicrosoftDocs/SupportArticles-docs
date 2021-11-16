@@ -34,7 +34,7 @@ To troubleshoot this issue, follow these steps.
 
 To verify that the Lyncdiscover CNAME record is present in the Domain Name System (DNS) records, go to the Lync Connectivity Analyzer, and select **Office 365 Custom/Vanity Domain Name Settings Test for Lync**. Enter the sign-in address that you're using when you to try to sign in to Skype for Business Online (for example, darrin@contoso.com), and start the test. 
 
-![Screen shot of the test ](./media/sign-in-lync-2010-mobile/verify-lyncdiscover-cname-record.jpg)
+:::image type="content" source="./media/sign-in-lync-2010-mobile/verify-lyncdiscover-cname-record.png" alt-text="Screenshot that shows the result of the Vanity Domain Name Settings Test for Lync.":::
 
 If any issues are detected, check the DNS configuration with your domain registrar.
 
