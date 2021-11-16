@@ -182,67 +182,67 @@ Below you can find some quick screenshots showing the required configuration of 
 
   1. Open Windows firewall on the system hosting SQL server default instance and click **New Rule** under **Inbound Rules**.
 
-      ![Inound rules](./media/solving-connectivity-errors/new-rule-under-inbound-rules.png)
+      :::image type="content" source="media/solving-connectivity-errors/new-rule-under-inbound-rules.png" alt-text="Screenshot of Inbound Rules under Windows Firewall with Advanced Security.":::
 
   2. Select the **Port** option and click **Next**.
 
-      ![InboundRulePort](./media/solving-connectivity-errors/select-the-port-option.png)
+      :::image type="content" source="media/solving-connectivity-errors/select-the-port-option.png" alt-text="Screenshot of the Rule Type step of New Inbound Rule Wizard." border="false":::
 
   3. In the next screen:
 
      - Select **TCP** as the protocol.
      - Select **Specific local ports** and specify the value as *1433* and click **Next**.
 
-       ![TCP1433](./media/solving-connectivity-errors/specific-local-ports.png)
+       :::image type="content" source="media/solving-connectivity-errors/specific-local-ports.png" alt-text="Screenshot of the Protocol and Ports step of New Inbound Rule Wizard." border="false":::
 
   4. In the next screen, select **Allow the connection** and click **Next**.
 
-     ![AllowConnection](./media/solving-connectivity-errors/allow-the-connection.png)
+     :::image type="content" source="media/solving-connectivity-errors/allow-the-connection.png" alt-text="Screenshot of the Action step of New Inbound Rule Wizard." border="false":::
 
   5. In the next screen, select the option that best suits your environment and click **Next**.
 
-     ![NewInboundRule](./media/solving-connectivity-errors/option-best-suits-your-environment.png)
+     :::image type="content" source="media/solving-connectivity-errors/option-best-suits-your-environment.png" alt-text="Screenshot of the Profile step of New Inbound Rule Wizard." border="false":::
 
   6. In the next screen, give the name to your rule and provide a clear description for future reference and click **Finish**.
 
-     ![NewInboundRuleName](./media/solving-connectivity-errors/name-and-description.png)
+     :::image type="content" source="media/solving-connectivity-errors/name-and-description.png" alt-text="Screenshot of the Name step of New Inbound Rule Wizard." border="false":::
 
   7. Once done, you should see that rule is created and is enabled by default.
 
-     ![EnableInboundRule](./media/solving-connectivity-errors/rule-is-created-and-enabled.png)  
+     :::image type="content" source="media/solving-connectivity-errors/rule-is-created-and-enabled.png" alt-text="Screenshot shows rule is created and is enabled.":::
 
 - Adding an exception for UDP port 1434 to enable connections to a named instance of SQL server:
 
   1. Open Windows firewall on the system hosting SQL server default instance and click **New Rule** under **Inbound Rules**.
 
-     ![Inound rules](./media/solving-connectivity-errors/new-rule-under-inbound-rules.png)  
+     :::image type="content" source="media/solving-connectivity-errors/new-rule-under-inbound-rules.png" alt-text="Screenshot 2 of Inbound Rules under Windows Firewall with Advanced Security.":::
 
   2. Select the **Port** option and click **Next**.
   
-     ![InboundRulePort](./media/solving-connectivity-errors/select-the-port-option.png)
+     :::image type="content" source="media/solving-connectivity-errors/select-the-port-option.png" alt-text="Screenshot 2 of the Rule Type step of New Inbound Rule Wizard." border="false":::
   
   3. In the next screen:
 
       - Select **UDP** as the protocol.
       - Select **Specific local ports** and specify the value as *1434* and click **Next**.
 
-        ![NewInboundUDP](./media/solving-connectivity-errors/udp-specific-local-ports.png)  
+        :::image type="content" source="media/solving-connectivity-errors/udp-specific-local-ports.png" alt-text="Screenshot 2 of the Protocol and Ports step of New Inbound Rule Wizard." border="false":::
   
   4. In the next screen, select **Allow the connection** and click **Next**.
   
-     ![AllowConnection](./media/solving-connectivity-errors/allow-the-connection.png)
+     :::image type="content" source="media/solving-connectivity-errors/allow-the-connection.png" alt-text="Screenshot 2 of the Action step of New Inbound Rule Wizard." border="false":::
   
   5. In the next screen, select the option that best suits your environment and click **Next**.
   
-     ![NewInboundRule](./media/solving-connectivity-errors/option-best-suits-your-environment.png)
+     :::image type="content" source="media/solving-connectivity-errors/option-best-suits-your-environment.png" alt-text="Screenshot 2 of the Profile step of New Inbound Rule Wizard." border="false":::
   
   6. In the next screen, give the name to your rule and provide a clear description for future reference and click **Finish**.
 
-     ![NewInboundName2](./media/solving-connectivity-errors/udp-name-and-description.png)  
+     :::image type="content" source="media/solving-connectivity-errors/udp-name-and-description.png" alt-text="Screenshot 2 of the Name step of New Inbound Rule Wizard." border="false":::
   
   7. Once done, you should see that rule is created and is enabled by default.
 
-     ![EnableInboundRule2](./media/solving-connectivity-errors/udp-rule-is-created-and-enabled.png)  
+     :::image type="content" source="media/solving-connectivity-errors/udp-rule-is-created-and-enabled.png" alt-text="Screenshot 2 shows rule is created and is enabled.":::
 
 If this does not resolve your issue, move to [Still having problems](#still-having-problems) section.
 
@@ -267,19 +267,19 @@ Examples outputs:
 
 - Default instance on default port: Working scenario
 
-    ![DeaultInstanceDefaultPort_Working](./media/solving-connectivity-errors/working-scenario.png)  
+    :::image type="content" source="media/solving-connectivity-errors/working-scenario.png" alt-text="Screenshot of examples output of Default instance on default port: Working scenario.":::
 
 - Default instance on default port: Non-working scenario
 
-    ![DeaultInstanceDefaultPort_NonWorking](./media/solving-connectivity-errors/non-working-scenario.png)  
+    :::image type="content" source="media/solving-connectivity-errors/non-working-scenario.png" alt-text="Screenshot of examples output of Default instance on default port: Non-working scenario.":::
 
 - Named instance: Working scenario: (Instance name: SQL 2014, hostname: SQLCONNVM)
 
-    ![WorkingNameInstance](./media/solving-connectivity-errors/named-instance-working-scenario.png)  
+    :::image type="content" source="media/solving-connectivity-errors/named-instance-working-scenario.png" alt-text="Screenshot of examples output of Named instance: Working scenario.":::
 
 - Named instance: Non - Working scenario: (Instance name: SQL 2014, hostname: SQLCONNVM)
 
-    ![NonWorkingNameInstance](./media/solving-connectivity-errors/named-instance-non-working-scenario.png)
+    :::image type="content" source="media/solving-connectivity-errors/named-instance-non-working-scenario.png" alt-text="Screenshot of examples output of Named instance: Non - Working scenario.":::
 
 For more information, move to [Configuring firewalls](#configuring-firewalls) section.
 
@@ -293,7 +293,7 @@ If this does not resolve your issue, move to [Still having problems](#still-havi
 
 3. If the **TCP Dynamic Ports** dialog box contains **0**, it indicates that the Database Engine is listening on dynamic ports. If it contains a specific number, it means the database instance is listening on a static port.
 
-    ![TCPDynamicPorts](./media/solving-connectivity-errors/tcp-dynamic-ports-dialog-box.png)  
+    :::image type="content" source="media/solving-connectivity-errors/tcp-dynamic-ports-dialog-box.png" alt-text="Screenshot of the TCP/IP Properties dialog box in SQL Server Configuration Manager.":::
 
 For more information, see [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).
 
@@ -352,25 +352,25 @@ Kerberos authentication failures can happen due to a variety of reasons. The maj
 
 2. Launch the tool using a domain account preferably with an account that has sufficient privileges to create SPNs in your active directory. See the below picture:
 
-    ![KerberosConfigManager](./media/solving-connectivity-errors/kerberos-configuration-manager.png)
+    :::image type="content" source="media/solving-connectivity-errors/kerberos-configuration-manager.png" alt-text="Screenshot of the Kerberos Configuration manager window." border="false":::
 
 3. Connect to SQL Server you would like to collect the Kerberos error-related information:
 
-    ![ConnectKerberosConfigManager](./media/solving-connectivity-errors/connect-to-sql-server.jpg)
+    :::image type="content" source="media/solving-connectivity-errors/connect-to-sql-server.png" alt-text="Screenshot of the Connect to Server dialog box in Kerberos Configuration manager.":::
 
 4. Once connected, you can see different tabs as shown below:
 
     - **System**: Has the basic System information.
 
-      ![KerConfigManager_System](./media/solving-connectivity-errors/basic-system-information.jpg)
+      :::image type="content" source="media/solving-connectivity-errors/basic-system-information.png" alt-text="Screenshot of the System tab in Kerberos Configuration manager.":::
 
     - **SPN:** Gives the SPN information about the instances of each of the SQL instances found on the target server and provides various options as noted below. Use this tab to find the missing or misconfigured SPNs and the **Generate** or **Fix** buttons to fix these issues.
 
-      ![KerConfigManager_SPN](./media/solving-connectivity-errors/missing-or-misconfigured-spns.jpg)  
+      :::image type="content" source="media/solving-connectivity-errors/missing-or-misconfigured-spns.png" alt-text="Screenshot of the SPN tab in Kerberos Configuration manager.":::
 
         - **Generate** option will let you create the SPN Generation script. Clicking on the **Generate** button kicks off the following dialog:
 
-            ![KerConfigManager_GenerateSPN](./media/solving-connectivity-errors/create-the-spn-generation-script.jpg)  
+            :::image type="content" source="media/solving-connectivity-errors/create-the-spn-generation-script.png" alt-text="Screenshot of the pop-up dialog after clicking on the Generate button." border="false":::
 
             This option creates cmd file, which can be executed from the command prompt to generate the SPN.
 
@@ -388,14 +388,14 @@ Kerberos authentication failures can happen due to a variety of reasons. The maj
 
             It simply uses the **SetSPN** option to create an SPN under the service account for SQL Server.
 
-        - **Fix** option will add the SPN as long as you have the right to add the SPN and shows the following tool tip: ![KerbConfigManager_Fix](./media/solving-connectivity-errors/fix-option-add-spn.jpg)  
+        - **Fix** option will add the SPN as long as you have the right to add the SPN and shows the following tool tip: :::image type="content" source="media/solving-connectivity-errors/fix-option-add-spn.png" alt-text="Screenshot of the Fix option in the SPN tab of Kerberos Configuration manager.":::
 
             > [!NOTE]
             > The tool only provides **Fix** and **Generate** options for default instances and named instances with static ports. For named instances using dynamic port, the recommendation is to switch from dynamic to static ports or give necessary permissions for the service account to register and unregister the SPN each time the service is started. Otherwise you have to manually unregister and re-register the corresponding SPNs each time the SQL Service is started.
 
         - **Delegation tab**: The tab identifies any issues with the service account's configuration for delegation. This is especially useful in troubleshooting linked server issues. For example, if the SPNs check out fine but if you still run into issues with linked server queries it could be an indication that the service account is not configured to delegate credentials. For additional information review the Books online topic at [Configuring Linked Servers for Delegation](/previous-versions/sql/sql-server-2008-r2/ms189580(v=sql.105)).
 
-            ![KerbConfigManger_Delegation](./media/solving-connectivity-errors/delegation-tab.jpg)  
+            :::image type="content" source="media/solving-connectivity-errors/delegation-tab.png" alt-text="Screenshot of the Delegation tab in Kerberos Configuration manager.":::
 
 5. Once you fix the SPNs, rerun the Kerberos Configuration Manager tool, and ensure the SPN and Delegation tabs no longer report any error messages and retry the connection from your application.
 
@@ -600,7 +600,7 @@ UDL files provide an easy and effective way to test connections to your SQL serv
    1. On Windows 8 and later systems: Either go to **File Explorer** **Options** in **Control Panel** or just type *Hide* in Windows search and in the **View** tab, uncheck **Hide Extensions for known file types**.
    2. Windows 7 and earlier versions:
 
-      ![Win7ViewExtFile](./media/solving-connectivity-errors/hide-extensions-for-known-file-types.png)  
+      :::image type="content" source="media/solving-connectivity-errors/hide-extensions-for-known-file-types.png" alt-text="Screenshot of the File Explorer Options window.":::  
 
 2. Navigate to the folder where you want to create the Universal Data Link (.udl) file (for example *c:\temp*)
 3. Create a new text file (sqlconn.txt) and rename the extension from .txt to .udl. (click **Yes** to the warning message about changing the file name extension)
