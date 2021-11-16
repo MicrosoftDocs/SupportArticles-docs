@@ -65,7 +65,7 @@ It’s possible that permissions for the file haven’t replicated correctly or 
 <details>
 <summary><b>Check whether the OneDrive site is locked</b></summary>
 
-It's possible that the user’s OneDrive site is in a locked "NoAccess" state. As a global or SharePoint admin in Microsoft 365, you can unlock the site by using PowerShell or running a Microsoft 365 Diagnostic. For more information, see [SharePoint or OneDrive read-only error messages](https://docs.microsoft.com/sharepoint/troubleshoot/sites/site-is-read-only).  
+It's possible that the user's OneDrive site is in a locked "NoAccess" state. As a global or SharePoint admin in Microsoft 365, you can unlock the site by using PowerShell or running a Microsoft 365 Diagnostic. For more information, see [SharePoint or OneDrive read-only error messages](/sharepoint/troubleshoot/sites/site-is-read-only).  
 </details>
 
 <details>
