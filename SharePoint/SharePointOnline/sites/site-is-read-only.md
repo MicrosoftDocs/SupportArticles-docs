@@ -28,7 +28,7 @@ When navigating to a SharePoint Online or OneDrive for Business site, you might 
 
 > 403 Forbidden  
 
-There are many scenarios which can cause one of these messages during SharePoint maintenance events, but the most frequent cause is that the site has been locked or closed.  
+There're many scenarios which can cause one of these messages during SharePoint maintenance events, but the most frequent cause is that the site has been locked or closed.  
 
 ## Automated troubleshooting
 
@@ -112,4 +112,4 @@ If the site isn’t in a lock state, this message can also mean that there is ma
 
 This message can mean that your site has a [lock state](/sharepoint/manage-lock-status) set and it needs to be unlocked. To change the lock state of a site, please follow the steps in [Change the lock state for a site](/sharepoint/manage-lock-status#change-the-lock-state-for-a-site).  
 
-If the site isn’t in a lock state, this message can also occur from other conditions. For more information, see ["403 Forbidden" error on OneDrive or SharePoint](../sharing-and-permissions/error-403-forbidden.md).
+If the site isn't in a lock state, this message can also occur from other conditions. For more information, see ["403 Forbidden" error on OneDrive or SharePoint](../sharing-and-permissions/error-403-forbidden.md).
