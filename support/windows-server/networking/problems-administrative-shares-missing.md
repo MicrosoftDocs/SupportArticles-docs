@@ -150,7 +150,7 @@ If the administrative shares are not listed, the computer may be running a malic
 
 2. If the antivirus scan identifies a malicious program on the system, use the antivirus vendor's removal instructions. Additionally, review the threat assessment and the technical details about the program on your antivirus vendor's Web site. In particular, check to see if the program includes backdoor capability. Backdoor capability means that the program provides a way for the malicious user to regain control of the system if the program is discovered and removed.
 
-    If the technical details about the program indicate that it has backdoor capability, we recommend that you format the computer's hard disk and reinstall Windows securely. For information about improving security of Windows-based computers and servers, visit the following [Microsoft Security Guidance Center](https://docs.microsoft.com/previous-versions/tn-archive/cc184906(v=technet.10))
+    If the technical details about the program indicate that it has backdoor capability, we recommend that you format the computer's hard disk and reinstall Windows securely. For information about improving security of Windows-based computers and servers, visit the following [Microsoft Security Guidance Center](/previous-versions/tn-archive/cc184906%28v=technet.10%29)
 
 3. If the antivirus scan does not identify a malicious program on the system, it does not mean that the computer is not infected by a malicious program. More likely, it may mean that the malicious program is a new program or variant, and that the latest virus definitions do not detect it. In this case, contact the antivirus vendor to report the problem, or open a support incident with Microsoft Product Support Services (PSS) to investigate.
 
