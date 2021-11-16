@@ -64,10 +64,6 @@ $loadInfo2 = [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.ShareP
 
 $loadInfo2 = [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.Office.Client.Policy") 
 
-```
-
-```powershell
-
 #Use this method if you need to manually load the assemblies  
 
 #Add-Type -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.SharePointOnline.CSOM.16.1.21714.12000\lib\netstandard2.0\Microsoft.SharePoint.Client.dll" 
@@ -83,10 +79,6 @@ $SiteURL    = Read-Host -Prompt "URL"
 $Username   = Read-Host -Prompt "Admin Username" 
 
 $Password   = Read-Host -Prompt "Password for $Username" -AsSecureString 
-
-```
-
-```powershell
 
 $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($RootSiteURL) 
 
