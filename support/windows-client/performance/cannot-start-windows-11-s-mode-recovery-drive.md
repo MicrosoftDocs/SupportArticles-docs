@@ -15,7 +15,7 @@ ms.technology: windows-client-performance
 ---
 # Can't start Windows 11 in S mode from a recovery drive
 
-Windows 11 in S mode has security policies that ensure the system runs securely. When you try to start Windows 11 in S mode from a recovery drive, the system fails to start because of a missing policy. To work around this issue, you can copy the policy file to a designated location of the drive by using one of the following methods.
+Windows 11 in S mode has security policies that ensure the system runs securely. When you try to start Windows 11 in S mode from a recovery drive, the system may fail to start because of a missing policy. To work around this issue, you can copy the policy file to a designated location of the drive by using one of the following methods.
 
 ## Copy the policy file from the recovery drive
 
