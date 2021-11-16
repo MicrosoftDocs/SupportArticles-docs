@@ -46,7 +46,7 @@ The process to request access is relatively straight forward, you can initiate t
 
     If you have multiple Subscription IDs, which you would like to request for, we recommend including any additional Subscription IDs in the description section, thereby avoiding the need to fill out multiple support requests.
 
-    If you prefer to submit multiple requests, Microsoft Support will combine these on your behalf, for more streamlined communications.
+    If you prefer to submit multiple requests, Microsoft Support will combine these requests on your behalf, for more streamlined communications.
 4. Complete the following information:  
 
     :::image type="content" source="media/region-access-request-process/problem-details.png" alt-text="Screenshot of the problem details.":::
@@ -55,10 +55,10 @@ The process to request access is relatively straight forward, you can initiate t
     |---|---|
     |Region to Enable| \<insert the region you are requesting access to> |
     | Deployment Model| ARM |
-    | Planned VM type| for example, Dv3 Series |
+    | Planned VM type| For example, Dv3 Series |
     | Planned Compute usage in Cores|25|
     | Planned Storage usage in TB| 10 |
-    | Planned SQL Database SKU| for example, S0 |
+    | Planned SQL Database SKU| For example, S0 |
     | Planned No. of Databases per DB SKU (20 DB limit per SKU)| |
     |||  
 
