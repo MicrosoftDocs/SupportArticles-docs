@@ -35,17 +35,17 @@ Use quotes around events, errors, and strings after removing any machine-specifi
 
 For example: **"a user account is required"**  
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550563_en_1.png" alt-text="{A user account is required.":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/user-account-required.png" alt-text="Screenshot of search example, A user account is required.":::
 
 If the error is in a log, add the log name.
 
 For example: **System log AND "a user account is required"**  
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550564_en_1.png" alt-text="System log AND a user account is required.":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/log-name.png" alt-text="Screenshot of search example, System log AND a user account is required.":::
 
 Add the product name (for Windows 10 you can narrow to a version by adding the version number to your search string. Use assets like the [Wikipedia Windows 10 version history](https://en.wikipedia.org/wiki/Windows_10_version_history) to understand the different naming conventions for a given product and use that in your query. For example: **"domain join" AND 1903**
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550569_en_1.png" alt-text="Domain join and 1903":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/domain-join.png" alt-text="Screenshot of search example, Domain join and 1903":::
 
 If searching for a specific KB article by number, try adding 'KB' to the number.
 
@@ -55,9 +55,9 @@ For example:
 
 (Exercise: Try finding this article using both methods - **KB4550049** or **KB 4550049**)
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550570_en_1.png" alt-text="KB12345678":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/KB12345678.png" alt-text="Screenshot of search example, KB12345678":::
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4555994_en_1.png" alt-text="kb search example.":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/KB-12345678.png" alt-text="Screenshot of search example, KB 12345678.":::
 
 ## Site search
 
@@ -65,11 +65,11 @@ For example:
 
 The search string **"a user account is required" site:Microsoft.com** targets only the **microsoft.com** domain:
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550609_en_1.png" alt-text="Microsoft search results":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/site-microsoft.png" alt-text="Screenshot of Microsoft search results":::
 
 The search string **"a user account is required" site:reddit.com** targets just the **reddit.com** domain:
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550610_en_1.png" alt-text="Reddit search results.":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/site-reddit.png" alt-text="Screenshot of Reddit search results.":::
 
 ### Scope searches starting with the most relevant to the least relevant sites
 
@@ -111,7 +111,7 @@ You don't have to open a support ticket just yet! The Microsoft support portals 
 - [Azure Support](https://ms.portal.azure.com/)
 - [Office 365 Support](/Office365/Admin/contact-support-for-business-products)
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550611_en_1.png" alt-text="Microsoft support portals.":::
+:::image type="content" source="media/search-tips-find-troubleshooting-content/support-portal.png" alt-text="Screenshot of Azure portal.":::
 
 ## Open a support case
 

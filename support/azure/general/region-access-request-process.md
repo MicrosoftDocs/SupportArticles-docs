@@ -21,7 +21,11 @@ The process to request access is relatively straight forward, you can initiate t
 
 1. Log into the Azure Management Portal and navigate to the **Help + support** icon on the left-hand side of the screen, then select **+ New support request**.
 
+    :::image type="content" source="media/region-access-request-process/new-support-request.png" alt-text="Screenshot of New Support Request":::
+
 2. You'll be presented with step 1 of the new support request, complete the following:
+
+    :::image type="content" source="media/region-access-request-process/create-support-request.jpg" alt-text="Screenshot of creating a New Support Request (Basics).":::
 
     1. In **Issue Type**, select " **Service and subscription Limit (quotas)** ".  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
@@ -45,7 +49,7 @@ The process to request access is relatively straight forward, you can initiate t
     If you prefer to submit multiple requests, Microsoft Support will combine these on your behalf, for more streamlined communications.
 4. Complete the following information:  
 
-    :::image type="content" source="./media/region-access-request-process/4528808_en_2.png" alt-text="provide problem details.":::
+    :::image type="content" source="media/region-access-request-process/problem-details.png" alt-text="Screenshot of the problem details.":::
 
     | Field| Value |
     |---|---|
@@ -62,7 +66,7 @@ The process to request access is relatively straight forward, you can initiate t
 
     **Azure VM Reserved Instances**  
 
-    List the specific VM Types for which you plan to apply Reserved Instances, and your estimated usage in Cores. 
+    List the specific VM Types for which you plan to apply Reserved Instances, and your estimated usage in Cores.
 
     | Field| Value |
     |---|---|
@@ -78,7 +82,7 @@ The process to request access is relatively straight forward, you can initiate t
 
      **SQL Data warehouse**  
 
-    In the details section of the request, add the **SQL Data warehouse** requirements with the following: 
+    In the details section of the request, add the **SQL Data warehouse** requirements with the following:
 
     | Field| Value |
     |---|---|
@@ -90,13 +94,13 @@ The process to request access is relatively straight forward, you can initiate t
 
 ## Step 3: Enter your contact details
 
-1. Fill in the details for the best way to contact you. We will use this information to follow up with you if we need additional details, or need to learn more about your intended use of the Azure Region to which you are requesting access. 
+1. Fill in the details for the best way to contact you. We will use this information to follow up with you if we need additional details, or need to learn more about your intended use of the Azure Region to which you are requesting access.
 
-    :::image type="content" source="./media/region-access-request-process/4528809_en_1.png" alt-text="provide Contact Info.":::
+    :::image type="content" source="media/region-access-request-process/contact-info.png" alt-text="Screenshot of details for Contact Info.":::
 
-2. Click " **Create** " to complete the process. 
+2. Click " **Create** " to complete the process.
 
-    :::image type="content" source="./media/region-access-request-process/4528810_en_1.jpg" alt-text="example request.":::
+    :::image type="content" source="media/region-access-request-process/complete-process.jpg" alt-text="Screenshot of completing the support request.":::
 
 ## Request processing
 

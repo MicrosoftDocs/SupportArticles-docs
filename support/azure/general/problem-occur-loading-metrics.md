@@ -19,7 +19,9 @@ When you access the metrics for a virtual machine in Microsoft Azure, you receiv
 
 > A problem occurred loading metrics. Please try again later.
 
-:::image type="content" source="./media/problem-occurred-loading-metrics-error/4041983_en_1.png" alt-text="Screenshot of error message on portal.":::
+:::image type="content" source="media/problem-occurred-loading-metrics-error/metrics.png" alt-text="Screenshot of metrics for a virtual machine in Microsoft Azure.":::
+
+:::image type="content" source="media/problem-occurred-loading-metrics-error/metrics-error.png" alt-text="Screenshot of metrics error message on portal.":::
 
 ## Cause
 

@@ -130,14 +130,16 @@ You need to understand who is throwing these HTTP 404 and 500 responses, APIM, o
 
 - As per the backend ASMX service definition you would notice SOAP 1.1 request needs a request header **SOAPAction that is missing in the request sent from APIM.
 
-    ```
+    ```xml
     Host: www.dneonline.com
     Content-Type: text/xml; charset=utf-8
     Content-Length: length
     SOAPAction: "http://tempuri.org/Multiply"
     ```
 
-- Adding **SOAPAction** header with the value [http://tempuri.org/Multiply](http://tempuri.org/Multiply) will resolve the problem. You can add the request header under the **Frontend** definition of the Multiply operation and set the value as a default one under **Headers**  tab so that you don't have to send that header every time on each request.
+- Adding **SOAPAction** header with the value [http://tempuri.org/Multiply](http://tempuri.org/Multiply) will resolve the problem. You can add the request header under the **Frontend** definition of the Multiply operation and set the value as a default one under **Headers** tab so that you don't have to send that header every time on each request.
+
+    :::image type="content" source="media/soap-based-api-return-404-500-http-code/header.png" alt-text="Screenshot of adding SOAPAction header with the value.":::
 
 - Divide operation throwing HTTP 500 (Internal Server Error) status code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
 - In other words, backend service is not able to process your request body sent from APIM. You can examine the request body sent from APIM.
@@ -164,4 +166,6 @@ You need to understand who is throwing these HTTP 404 and 500 responses, APIM, o
     </Envelope>
     ```
 
-- If you check the request content representation from the **Request**  tab present in **Frontend**  definition of the Divide operation, you would notice that **intB**  value is set to zero. You need to change the value of **intB**  to a non-zero value and it should resolve the issue.
+- If you check the request content representation from the **Request** tab present in **Frontend** definition of the Divide operation, you would notice that **intB** value is set to zero. You need to change the value of **intB** to a non-zero value and it should resolve the issue.
+
+    :::image type="content" source="media/soap-based-api-return-404-500-http-code/intb-value.png" alt-text="Screenshot of the intB value that is set to zero.":::
