@@ -21,11 +21,7 @@ The process to request access is relatively straight forward, you can initiate t
 
 1. Log into the Azure Management Portal and navigate to the **Help + support** icon on the left-hand side of the screen, then select **+ New support request**.
 
-    :::image type="content" source="./media/region-access-request-process/4511987_en_1.png" alt-text="New Support Request":::
-
 2. You'll be presented with step 1 of the new support request, complete the following:
-
-    :::image type="content" source="./media/region-access-request-process/4528754_en_2.jpg" alt-text="New Support Request (Basics).":::
 
     1. In **Issue Type**, select " **Service and subscription Limit (quotas)** ".  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.

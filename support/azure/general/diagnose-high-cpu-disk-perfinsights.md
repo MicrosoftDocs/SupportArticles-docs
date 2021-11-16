@@ -42,8 +42,6 @@ This article describes how to use PerfInsights to diagnose high CPU or disk usag
 
     If any high CPU or disk usage data was captured during the Performance Diagnostics job, warning messages appear on the **Findings** tab. The messages contain links to the **Top CPU Consumer** and **Top Disk Consumer**  tabs.
 
-    :::image type="content" source="./media/diagnose-high-cpu-disk-perfinsights/4023366_en_1.png" alt-text="PerfInsights Report.":::
-
 2. You can use the **Top CPU Consumers** tab to identify the periods in which high CPU usage occurred and the top processes show the most CPU consumption. This tab includes the following information:
 
     - StartTime and EndTime. The start time and end time  of the analysis period are shown as UTC time. Additionally, there are some notes about how the data was collected and evaluated. 
