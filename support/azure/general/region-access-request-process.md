@@ -10,14 +10,14 @@ ms.reviewer:
 ---
 # Azure region access request process  
 
-Certain Azure regions require customers to go through a request process in order to gain access.  To request access to these regions, a customer or their Cloud Solution Provider may [open a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) and work with our Support team to discuss or enable access.
+Certain Azure regions require customers to go through a request process in order to gain access. To request access to these regions, a customer or their Cloud Solution Provider may [open a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) and work with our Support team to discuss or enable access.
 
 _Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 4339658
 
 ## Step 1: Create a new support request
 
-The process to request access is relatively straight forward, you can initiate the process directly within the Azure portal, just follow the steps below:
+The process to request access is relatively straight forward, you can initiate the process directly within the Azure portal, follow these steps:
 
 1. Log into the Azure Management Portal and navigate to the **Help + support** icon on the left-hand side of the screen, then select **+ New support request**.
 
@@ -30,7 +30,7 @@ The process to request access is relatively straight forward, you can initiate t
     1. In **Issue Type**, select " **Service and subscription Limit (quotas)** ".  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
     3. In **Quota type**, select **Other Request**.  
-    4. Click **Next**.
+    4. Select **Next**.
 
 ## Step 2: Provide problem details
 
@@ -40,7 +40,7 @@ The process to request access is relatively straight forward, you can initiate t
 
     If you're unsure about what you'll need, we recommend that you add the following basic quota to the description section of the request, and include all the VM Types you are likely to need over time. This won't lock you into a specific quota. The quota can be adjusted as necessary over time.
 
-    In your submission form, please list all Virtual Machine SKUs, which you would like to request access for, along with your requested quota, thereby avoiding the need to fill out multiple support requests.
+    In your submission form, list all Virtual Machine SKUs, which you would like to request access for, along with your requested quota, thereby avoiding the need to fill out multiple support requests.
 
     Likewise, if you want to request access for Storage, SQL, SQL-Managed Instance, HDI, and/or Batch, we recommend including these in your submission as well, along with your requested quota for these, thereby avoiding the need to fill out multiple support requests. For example: Once your Compute request has been approved, when logging in to your account, you will see that you have been granted access to associated products as well (like App Services, Functions, etc.).
 
@@ -90,7 +90,7 @@ The process to request access is relatively straight forward, you can initiate t
     | Region| \<insert the Azure region you are requesting access to> |
     ||
 
-5. Click **Next**.
+5. Select **Next**.
 
 ## Step 3: Enter your contact details
 
@@ -98,7 +98,7 @@ The process to request access is relatively straight forward, you can initiate t
 
     :::image type="content" source="media/region-access-request-process/contact-info.png" alt-text="Screenshot of details for Contact Info.":::
 
-2. Click " **Create** " to complete the process.
+2. Select **Create** to complete the process.
 
     :::image type="content" source="media/region-access-request-process/complete-process.jpg" alt-text="Screenshot of completing the support request.":::
 
