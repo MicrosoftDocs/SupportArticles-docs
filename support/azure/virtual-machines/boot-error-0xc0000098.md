@@ -1,7 +1,7 @@
 ---
 title: Windows boot error 0xc0000098 on an Azure VM
 description: Provides the resolution for the error code 0xc0000098.
-ms.date: 07/21/2020
+ms.date: 11/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
@@ -44,7 +44,7 @@ To fix the issue, follow these steps.
 ### Step 2: Replace the binary file
 
 1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
-2. Rename the file to `<BINARY.SYS>.OLD`.
+2. Rename the file to `<BINARY.SYS>.OLD`. If the file cannot be renamed, [take ownership of the file](https://www.bing.com/search?q=take+ownership+of+a+file+windows). Then you will get full access to this file.
 3. On the attached disk, browse to the `\Windows\winsxs` folder. Then, search for the binary file that's displayed in the error message. To do this, run the following command at a command prompt:
 
     ```console
@@ -67,4 +67,4 @@ To fix the issue, follow these steps.
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 
-4. Detach the repaired disk from the troubleshooting VM. Then, ﻿ [create a VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal) ﻿.
+4. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal).
