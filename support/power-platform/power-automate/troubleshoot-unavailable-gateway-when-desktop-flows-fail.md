@@ -23,7 +23,7 @@ Go to the run summary page of the flow, and look at the error for the **desktop 
 
 **Unreachable gateway**, **The target gateway is not available**, and **Could not connect to UI flows running on your machine** are good candidates for this problem.
 
-:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/error-for-desktop-flows-step.png" alt-text="Screenshot shows the run failed because of the unavailable gateway." lightbox="error-for-desktop-flows-step.png" border="false":::
+:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/error-for-desktop-flows-step.png" alt-text="Screenshot shows that the run failed because of the unavailable gateway." border="false":::
 
 The next step is to determine which of the machine, the gateway, or the UI flow service is offline.
 
@@ -33,11 +33,11 @@ The next step is to determine which of the machine, the gateway, or the UI flow 
 4. Filter for **UI flows** to find UI flows connections, and select the connections used in the failing flows.
 5. Select the gateway name on the details page:
 
-   :::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/gateway-details.png" alt-text="Screenshot to select the gateway name on the details page." lightbox="gateway-details.png":::
+   :::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/gateway-details.png" alt-text="Screenshot to select the gateway name on the details page.":::
 
 6. You can check the status of the gateway here:
 
-   :::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/gateway-status.png" alt-text="Screenshot to check the status of the gateway." lightbox="gateway-status.png":::
+   :::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/gateway-status.png" alt-text="Screenshot to check the status of the gateway in Power Automate.":::
 
 ## Solving steps
 
@@ -45,8 +45,8 @@ If the gateway appears offline, make sure that the host machine is turned on and
 
 :::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/search-for-gateway.png" alt-text="Screenshot to search for the gateway application.":::
 
-:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/gateway-in-good-state.png" alt-text="Screenshot shows the gateway app is in a good state." lightbox="gateway-in-good-state.png":::
+:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/gateway-in-good-state.png" alt-text="Screenshot shows the gateway app is in a good state.":::
 
 If the gateway appears online or if the above steps fail to solve the issue, make sure that the UI Flow service is started on the machine.
 
-:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/check-ui-flow-service.png" alt-text="Screenshot to check if the U I Flow service is running." lightbox="check-ui-flow-service.png":::
+:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/check-ui-flow-service.png" alt-text="Screenshot to check if the U I Flow service is running.":::

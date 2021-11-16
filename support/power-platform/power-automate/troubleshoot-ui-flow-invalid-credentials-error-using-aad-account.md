@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4555623
 
 A flow that ran using an AAD account fails with the **InvalidConnectionCredentials** or **WindowsIdentityIncorrect** error codes.
 
-:::image type="content" source="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/error-invalid-connection-credentials.png" alt-text="Screenshot of the InvalidConnectionCredentials error code.":::
+:::image type="content" source="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/error-invalid-connection-credentials.png" alt-text="Screenshot of the InvalidConnectionCredentials error code." lightbox="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/error-invalid-connection-credentials.png":::
 
 :::image type="content" source="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/error-windows-identity-incorrect.png" alt-text="Screenshot of the WindowsIdentityIncorrect error code.":::
 
@@ -37,7 +37,7 @@ First, ensure that the device is AAD-joined or domain-joined:
 2. Run the command `dsregcmd /status`.
 3. Check the Device State section.
 
-:::image type="content" source="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/command-output.png" alt-text="Screenshot shows the Device state in the command prompt when running dsregcmd /status." border="false":::
+:::image type="content" source="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/command-output.png" alt-text="Screenshot of the device state in the command prompt when running dsregcmd /status." border="false":::
 
 Make sure that one of the `DomainJoined` or `AzureAdJoined` values is **YES**.
 

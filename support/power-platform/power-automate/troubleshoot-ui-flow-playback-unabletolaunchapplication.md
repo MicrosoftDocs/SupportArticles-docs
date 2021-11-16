@@ -19,7 +19,7 @@ When trying to run a UI flow during Test run or Flow run, the user gets the erro
 
 > UnableToLaunchApplication.
 
-:::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/error-message.png" alt-text="Screenshot of the error message when trying to run a UI flow during Test run or Flow run.":::
+:::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/error-message.png" alt-text="Screenshot of the error message when trying to run a UI flow during the Test run or Flow run.":::
 
 The error is visible in the UI flow Test Page or See detail page of the UI flow run instance.
 
@@ -49,11 +49,11 @@ This issue sometime occurs for Power BI:
   - Launch Application.
   - Select Action - Delete this action.
 
-    :::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/delete-action.png" alt-text="Screenshot shows steps after the Application launches and fails.":::
+    :::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/delete-action.png" alt-text="Screenshot shows the steps after the Application launches and fails.":::
 
 - Start new Recording by selecting.
 
-   :::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/add-an-action.png" alt-text="Screenshot to select the Add an action option to start new recording.":::
+   :::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/add-an-action.png" alt-text="Screenshot to select the Add an action option to start the new recording.":::
 
 - Start recording Power BI Desktop application again and record couple of actions (Click or Keyboard).
 

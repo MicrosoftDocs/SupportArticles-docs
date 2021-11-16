@@ -30,7 +30,7 @@ To understand why the trigger failed and how to fix the issue:
 1. Select the **Fix the trigger** link.
 2. The failed trigger will be displayed. Select the trigger to inspect the underlying error message:
 
-   :::image type="content" source="media/there-is-a-problem-with-the-flows-trigger/trigger-details.png" alt-text="screenshot to select the trigger to inspect the underlying error message" lightbox="trigger-details.png" border="false" :::
+   :::image type="content" source="media/there-is-a-problem-with-the-flows-trigger/trigger-details.png" alt-text="Screenshot to select the trigger to inspect the underlying error message." border="false" :::
 
 In the above example, the trigger failed because the specified folder was not found in the SharePoint library. The fix would be to update the folder name to a valid name.
 

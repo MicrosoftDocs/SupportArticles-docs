@@ -19,7 +19,7 @@ When trying to run UI flows, you may see this error:
 
 > UIAElementMismatch.
 
-:::image type="content" source="media/ui-flows-fails-uiaelementmismatch/error-message.png" alt-text="Screenshot of the error when trying to run U I flows." border="false":::
+:::image type="content" source="media/ui-flows-fails-uiaelementmismatch/error-message.png" alt-text="Screenshot of the error when trying to run the U I flows." border="false":::
 
 ## Verifying issue
 

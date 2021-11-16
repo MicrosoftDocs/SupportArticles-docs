@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4555735
 
 UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to download the installation package.
 
-:::image type="content" source="media/ui-flows-cannot-launch-recorder/download-install-package.png" alt-text="Screenshot of the U I Flows installation package message." lightbox="download-install-package.png":::
+:::image type="content" source="media/ui-flows-cannot-launch-recorder/download-install-package.png" alt-text="Screenshot of the U I Flows installation package message.":::
 
 ## Verifying the issue
 
@@ -33,7 +33,7 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
     Verify that the extension is enabled in the extensions page:
 
-    :::image type="content" source="media/ui-flows-cannot-launch-recorder/extension-enabled.png" alt-text="Screenshot to check the extension is enabled in the extensions page." lightbox="extension-enabled.png":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/extension-enabled.png" alt-text="Screenshot to check the extension is enabled in the extensions page." lightbox="media/ui-flows-cannot-launch-recorder/extension-enabled.png":::
 
     Enable the extension by toggling the switch on the card.
 
