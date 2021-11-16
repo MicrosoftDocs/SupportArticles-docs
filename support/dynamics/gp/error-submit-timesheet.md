@@ -80,11 +80,11 @@ To resolve this problem, follow these steps.
 
       `Update PA01301 set PAUnit_of_Measure = 'Hour' where PATU = 1 Update PA01301 set UOMSCHDL = '<XXX>' where PATU = 1`
       > [!NOTE]
-      > The\<XXX>placeholder represents the unit of measure schedule ID that you specified in step 1.
+      > The \<XXX> placeholder represents the unit of measure schedule ID that you specified in step 1.
 1. If you use templates to create new projects, update the unit of measure and the unit of measure schedule in those templates. To do this, run the following scripts.</br>`Update PA40201 set PAUnit_of_Measure = 'Hour' where PATU = 1 Update PA40201 set UOMSCHDL = '<XXX>' where PATU = 1`
     > [!NOTE]
-    > The\<XXX>placeholder represents the unit of measure schedule ID that you specified in step 1.
-1. If you use timesheet templates to create new timesheet transactions, update the unit of measure and the unit of measure schedule in those templates. To do this, run the following scripts.</br>`Update PDK00301 set PAUnit_of_Measure = 'Hour' Update PDK00301 set UOMSCHDL = '<XXX>'
+    > The \<XXX> placeholder represents the unit of measure schedule ID that you specified in step 1.
+1. If you use timesheet templates to create new timesheet transactions, update the unit of measure and the unit of measure schedule in those templates. To do this, run the following scripts.</br>`Update PDK00301 set PAUnit_of_Measure = 'Hour' Update PDK00301 set UOMSCHDL = '\<XXX>'
     > [!NOTE]
     > The \<XXX> placeholder represents the unit of measure schedule ID that you specified in step 1.
 1. If you use rate tables to obtain costs or profit values, update the unit of measure in those rate tables. To do this, run the following scripts.
