@@ -28,7 +28,7 @@ When navigating to a SharePoint Online or OneDrive for Business site, you might 
 
 > 403 Forbidden  
 
-There are many scenarios which can cause one of these messages during SharePoint maintenance events, but the most frequent cause is that the site has been locked or closed.  
+There are many scenarios that can cause one of these messages during SharePoint maintenance events, but the most frequent cause is that the site has been locked or closed.  
 
 ## Automated troubleshooting
 
@@ -72,13 +72,15 @@ $loadInfo2 = [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.Office
 
 #Add-Type -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.SharePointOnline.CSOM.16.1.21714.12000\lib\netstandard2.0\Microsoft.Office.Client.Policy.dll" 
 
+$RootSiteURL    = Read-Host -Prompt "Root Site URL" 
+
 $SiteURL    = Read-Host -Prompt "URL" 
 
 $Username   = Read-Host -Prompt "Admin Username" 
 
 $Password   = Read-Host -Prompt "Password for $Username" -AsSecureString 
 
-$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL) 
+$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($RootSiteURL) 
 
 $ctx.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($Username, $Password) 
 
@@ -94,12 +96,12 @@ $ctx.ExecuteQuery()
 
 ## Troubleshoot “SharePoint sites are read-only right now while we do some maintenance” yourself
 
-This message can mean that your site has a lock state set and it needs to be unlocked. To change the lock state of a site, please follow the steps in [Change the lock state for a site](/sharepoint/manage-lock-status#change-the-lock-state-for-a-site).
+This message can mean that your site has a lock state set and it needs to be unlocked. To change the lock state of a site, follow the steps in [Change the lock state for a site](/sharepoint/manage-lock-status#change-the-lock-state-for-a-site).
 
-If the site isn’t in a lock state, this message can also mean that there is maintenance occurring on your tenant. You should check your [Message center](https://admin.microsoft.com/#/MessageCenter) and [Service Health Dashboard](https://admin.microsoft.com/AdminPortal/Home#/servicehealth).
+If the site isn't in a lock state, this message can also mean that there is maintenance occurring on your tenant. You should check your [Message center](https://admin.microsoft.com/#/MessageCenter) and [Service Health Dashboard](https://admin.microsoft.com/AdminPortal/Home#/servicehealth).
 
 ## Troubleshoot “Error: 403 Forbidden” yourself
 
-This message can mean that your site has a [lock state](/sharepoint/manage-lock-status) set and it needs to be unlocked. To change the lock state of a site, please follow the steps in [Change the lock state for a site](/sharepoint/manage-lock-status#change-the-lock-state-for-a-site).  
+This message can mean that your site has a [lock state](/sharepoint/manage-lock-status) set and it needs to be unlocked. To change the lock state of a site, follow the steps in [Change the lock state for a site](/sharepoint/manage-lock-status#change-the-lock-state-for-a-site).  
 
-If the site isn’t in a lock state, this message can also occur from other conditions. For more information, see ["403 Forbidden" error on OneDrive or SharePoint](../sharing-and-permissions/error-403-forbidden.md).
+If the site isn't in a lock state, this message can also occur from other conditions. For more information, see ["403 Forbidden" error on OneDrive or SharePoint](../sharing-and-permissions/error-403-forbidden.md).
