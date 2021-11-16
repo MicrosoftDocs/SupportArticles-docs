@@ -32,8 +32,6 @@ To determine the version of Windows PowerShell that you're currently running, op
   
 The following screenshot shows an example of the command output.
 
-:::image type="content" source="./media/automation-scripted-diagnostic-capture/4041636_en_1.png" alt-text="Screenshot of Check PowerShell version.":::
-
 The **PSVersion** property indicates which version of PowerShell is being used. In this example, PowerShell 5.1 is installed. 
 
 ## Requirement: Azure Resource Management 

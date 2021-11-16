@@ -17,11 +17,7 @@ _Original KB number:_ &nbsp; 3110165
 
 When a site-to-site connection is configured to use a Standard-size gateway, the connection status isn't displayed correctly on the Microsoft [Azure Management Portal](https://portal.azure.com/). Additionally, a download link for the VPN device script isn't displayed.
 
-:::image type="content" source="./media/connection-status-not-display-correctly-portal/3120073.png" alt-text="Screenshot shows that connection status is displayed normally":::
-
 Figure 1: Usually, the connection status is displayed as in this figure.
-
-:::image type="content" source="./media/connection-status-not-display-correctly-portal/3120074.png" alt-text="Screenshot shows that with Standard size gateway,some items are not properly displayed":::
 
 Figure 2: When you use a Standard-size gateway, some items aren't displayed correctly.
 

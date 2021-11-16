@@ -22,8 +22,6 @@ When you create a VM as an Azure EA user in the [Microsoft Azure portal](https:/
 
 > Retail prices displayed here. Contact your reseller for accurate pricing
 
-:::image type="content" source="./media/cannot-create-vm-ea/4092159_en_2.png" alt-text="Error Message.":::
-
 ## Cause
 
 This issue occurs in one of the following scenarios:
@@ -42,9 +40,6 @@ When you are a direct or indirect EA user who has **release markup** enabled an
 1. Go to the [Azure EA portal](https://ea.azure.com/)  by using the Enrollment Admin role.
 2. Click the **Manage** panel on the left. 
 3. Enable **DA view charges** and **AO view charges** at the **Enrollment** level.
-
-    :::image type="content" source="./media/cannot-create-vm-ea/4092158_en_2.png" alt-text="Configinfo.":::
-
 
 ### Scenario 2 
 
