@@ -26,7 +26,7 @@ When you try to click a slicer in an Excel Online PowerPivot workbook, you recei
 **PivotTable Operation Failed**
 **An error occurred while working on the Data Model in the workbook. Please try again.**
 
-![PivotTable Operation Failed error message](./media/excel-online-pivottable-operation-failed/error.png)
+:::image type="content" source="media/excel-online-pivottable-operation-failed/error-message.png" alt-text="Screenshot of the error message, showing PivotTable Operation Failed.":::
 
 ## Cause
 
@@ -40,7 +40,7 @@ To resolve this issue, manually recalculate the workbook (in PowerPivot) inside 
 1. Select **Calculation Options**, and then select **Manual Calculation Mode** to enable **Calculate Now** command.
 1. Select **Calculate Now**.
 
-   ![Select Manual Calculation Mode to let you select Calculate Now command](./media/excel-online-pivottable-operation-failed/calculation.png)
+   :::image type="content" source="media/excel-online-pivottable-operation-failed/calculation-option.png" alt-text="Screenshot to select the Manual Calculation Mode option to enable the Calculate Now command." border="false":::
    
 1. After you manually recalculate, select **Automatic Calculation Mode**, save the file, and then test the result.
 

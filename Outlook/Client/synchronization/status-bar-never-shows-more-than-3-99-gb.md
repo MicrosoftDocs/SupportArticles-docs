@@ -76,7 +76,7 @@ To resolve this problem you have several options.
 
             The following figure shows the example criteria in the **Filter** dialog box.
 
-            :::image type="content" source="media/status-bar-never-shows-more-than-3-99-gb/criteria-in-filter.jpg" alt-text="The screenshot for the Filter dialog box." border="false":::
+            :::image type="content" source="media/status-bar-never-shows-more-than-3-99-gb/criteria-in-filter.png" alt-text="Screenshot for the Advanced tab of the Filter dialog box." border="false":::
 
             > [!NOTE]
             > You can use other descriptive text in the Value box for your criteria. For example, you can use *1 year ago* to filter on mail that was received within the past year.
@@ -84,7 +84,7 @@ To resolve this problem you have several options.
       6. Select **Add to List**, and then select **OK**.
       7. Note the information provided in the prompt advising you what events will take place with the filter applied to the folder, and then select **OK** (The screenshot for this step is listed below).
 
-         :::image type="content" source="media/status-bar-never-shows-more-than-3-99-gb/information.jpg" alt-text="The screenshot for step 7" border="false":::
+         :::image type="content" source="media/status-bar-never-shows-more-than-3-99-gb/information.png" alt-text="Screenshot of the Microsoft Outlook prompt." border="false":::
 
       8. Select **OK** in the **Properties** dialog box for the folder.
 

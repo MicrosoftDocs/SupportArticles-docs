@@ -67,14 +67,14 @@ In the section "Project Site Permissions", clear the box to Check to automatical
 
 For Project Server 2013 in Project Server security mode:
 
-Go to Server Settings, click Manage User Sync Settings. You can disable one or both sync options, PWA or Project Site sync. 
+Go to Server Settings, click Manage User Sync Settings. You can disable one or both sync options, PWA or Project Site sync.
 
 Lastly check the clocks among all the servers to verify they are in sync. Out of sync servers will result in delayed pickup of queue jobs.
 
-## More Information
+## More information
 
 The SQL server may time out when attempting to add users to workspaces. When reviewing a SQL Profiler trace you see Exception 1222 Severity 16 State 18 when the stored procedure MSP_Resource_ReadUserSummariesActive is executed. This is a timeout error.
 
-At the same time SharePoint Server has a limit of 5000 security objects per web application. Project Server Admins should use SharePoint best practices to avoid such limitation. The following document link has more information on SharePoint limits: [https://technet.microsoft.com/library/cc262787.aspx](https://technet.microsoft.com/library/cc262787.aspx)
+At the same time SharePoint Server has a limit of 5000 security objects per web application. Project Server Admins should use SharePoint best practices to avoid such limitation. The following document link has more information on SharePoint limits: [Software boundaries and limits for SharePoint Servers 2016 and 2019](/sharepoint/install/software-boundaries-limits-2019).
 
-Best practices for managing a large number of resources in Project Server 2010: [https://technet.microsoft.com/en-us/library/hh670402(v=office.14).aspx](https://technet.microsoft.com/library/hh670402%28v=office.14%29.aspx)
+[Best practices for managing a large number of resources in Project Server 2010](/previous-versions/office/project-server-2010/hh670402(v=office.14))

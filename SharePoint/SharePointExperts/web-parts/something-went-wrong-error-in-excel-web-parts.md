@@ -1,5 +1,6 @@
 ---
-title: A We don't know what happened, but something went wrong error in Excel Web Access Web Parts 
+title: A We don't know what happened, but something went wrong error in Excel Web Access Web Parts
+description: Fixes the error about Excel Services when you try to view a Microsoft Excel workbook in the Excel Web Access Web Part.
 author: helenclu
 ms.author: remcgurk
 manager: dcscontentpm
@@ -22,11 +23,11 @@ This article was written by [Tom Schauer](https://social.technet.microsoft.com/p
 
 When you try to view a Microsoft Excel workbook in the Excel Web Access Web Part, you receive the following error:
 
-:::image type="content" source="./media/something-went-wrong-error-in-excel-web-access-web-parts/excel-services.png" alt-text="Screenshot that shows the "something went wrong" error message dialog box in excel services.":::
+:::image type="content" source="./media/something-went-wrong-error-in-excel-web-access-web-parts/excel-services.png" alt-text="Screenshot that shows the error of something went wrong about Excel Services.":::
 
 In the Unified Logging Service (ULS) logs, the following log is displayed:
 
-```
+```output
 The EXECUTE permission was denied on the object 'rbs_fn_get_blob_reference', database 'SharePoint_Content_80', schema 'mssqlrbs'.
 ```
 
@@ -43,4 +44,3 @@ To resolve this issue, grant the following permissions for the Application Pool 
 - db_rbs_writer
 
 :::image type="content" source="./media/something-went-wrong-error-in-excel-web-access-web-parts/application-pool-account-permissions.png" alt-text="Screenshot that shows the application pool account permissions dialog box":::
-![the application pool account permissions dialog box](./media/something-went-wrong-error-in-excel-web-access-web-parts/application-pool-account-permissions.png)

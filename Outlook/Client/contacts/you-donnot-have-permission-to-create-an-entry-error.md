@@ -27,7 +27,7 @@ After a G Suite migration to Microsoft 365, users receive the following error me
 
 > You don't have permission to create an entry in this folder.  Right-click the folder, and then click Properties to check your permissions for the folder.  See the folder owner or your administrator to change your permissions.
 
-:::image type="content" source="media/you-donnot-have-permission-to-create-an-entry-error/error-details.png" alt-text="error message":::
+:::image type="content" source="media/you-donnot-have-permission-to-create-an-entry-error/error-details.png" alt-text="Screenshot of the Outlook error message.":::
 
 ## Cause
 

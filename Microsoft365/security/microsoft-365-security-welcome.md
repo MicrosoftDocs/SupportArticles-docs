@@ -8,8 +8,6 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
-search.appverid: 
-- MET150
 ms.custom:
 - CSSTroubleshoot
 - CI 148980

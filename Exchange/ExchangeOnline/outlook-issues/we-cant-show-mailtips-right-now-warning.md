@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp; 3083843
 
 In Outlook in Microsoft 365, you receive a **We can't show MailTips right now** warning after you change the **From** address to the address of a non-mailbox-enabled recipient.
 
-:::image type="content" source="media/we-cant-show-mailtips-right-now-warning/we-cant-show-mailtips-right-now-warning.png" alt-text="A screenshot of the We can’t show MailTips right now warning" border="false":::
+:::image type="content" source="media/we-cant-show-mailtips-right-now-warning/we-cant-show-mailtips-right-now-warning.png" alt-text="Screenshot of the We can’t show MailTips right now warning.":::
 
 You may also see a similar warning when you forward a meeting invite for a non-mailbox-enabled recipient.
 
-:::image type="content" source="media/we-cant-show-mailtips-right-now-warning/warning-when-forwarding-meeting.png" alt-text="A screenshot of a warning when forwarding a meeting invite for a non-mailbox-enabled recipient" border="false":::
+:::image type="content" source="media/we-cant-show-mailtips-right-now-warning/warning-when-forwarding-meeting.png" alt-text="Screenshot of a warning when forwarding a meeting invite for a non-mailbox-enabled recipient.":::
 
 However, in Outlook Web App (OWA), you don't see this warning. Instead, OWA displays a MailTip from the current forest.
 

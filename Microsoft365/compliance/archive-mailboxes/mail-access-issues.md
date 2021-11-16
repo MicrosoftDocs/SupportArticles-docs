@@ -67,7 +67,7 @@ This issue occurs if the email address policy has a default domain that isn't a 
 
         The following is an example of the output:
 
-        ![A screen shot showing an example of the output that shows the SMTP domain that's specified for the FederatedEmail mailbox ](./media/mail-access-issues/output.jpg)
+        :::image type="content" source="media/mail-access-issues/listed-domain-output.png" alt-text="Screenshot shows an example of the output, which notes the S M T P domain that's specified for the FederatedEmail mailbox." border="false":::
 
    1. Run the following cmdlet:
 

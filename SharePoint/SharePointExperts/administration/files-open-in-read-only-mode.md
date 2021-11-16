@@ -1,5 +1,6 @@
 ---
 title: Some Office files open in read-only mode in SharePoint Server 2013
+description: Describes that some Office files are opened in read-only mode unexpectedly in SharePoint Server 2013. Provides a resolution.
 author: helenclu
 ms.author: arhinesm
 manager: dcscontentpm
@@ -24,7 +25,8 @@ Some Office documents are opened correctly in Microsoft SharePoint Server 2013, 
 
 Sometimes, this is shown as a limitation of the size of the document. For example, documents over 6 megabytes (MB) are opened in read-only mode, but documents smaller than 6 MB are opened correctly.
 
-![the read-only document dialog box](./media/files-open-in-read-only-mode/read-only-document.png)
+:::image type="content" source="media/files-open-in-read-only-mode/read-only-document.png" alt-text="Screenshot shows the read-only notice in Microsoft SharePoint Server 2013." border="false":::
+
 
 ## Cause
 

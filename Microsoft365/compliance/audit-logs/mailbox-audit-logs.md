@@ -126,7 +126,7 @@ In Office 365, mailbox audit logging entries are retained in the mailbox for 90 
 
 If items are found after the script runs, you receive a message that resembles the following:
 
-![A screenshot of the message after running script](./media/mailbox-audit-logs/message.png)
+:::image type="content" source="media/mailbox-audit-logs/script-message.png" alt-text="Screenshot of the message after running the script." border="false":::
 
 This example message indicates that the search process has found 11 entries. By default, the **FolderBind** entries are filtered out, and the following operation types remain:
 

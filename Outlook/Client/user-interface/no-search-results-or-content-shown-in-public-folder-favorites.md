@@ -125,4 +125,4 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 2. On the **File** menu, select **Office Account**.
 3. For Office Click-to-Run installations, an Update Options item is displayed. For MSI-based installations, the Update Options item is not displayed.
 
-   :::image type="content" source="media/no-search-results-or-content-shown-in-public-folder-favorites/determine-office-installation.png" alt-text="determine whether your Office installation is Click-to-Run or MSI-based" border="false":::
+   :::image type="content" source="media/no-search-results-or-content-shown-in-public-folder-favorites/determine-office-installation.png" alt-text="Screenshot of the Office Account page for Click-to-Run and MSI-based Office installations.":::

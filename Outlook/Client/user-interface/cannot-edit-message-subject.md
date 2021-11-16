@@ -36,7 +36,7 @@ Outlook 2013 Service Pack 1 and newer versions can collapse the message header t
 
 Expand the Outlook Infobar by selecting in the lower right arrow to expand the header for editing.
 
-:::image type="content" source="media/cannot-edit-message-subject/expand-outlook-infobar.png" alt-text="Expand the Outlook Infobar":::
+:::image type="content" source="media/cannot-edit-message-subject/expand-outlook-infobar.png" alt-text="Screenshot of the lower right arrow to expand the header.":::
 
 ## More information
 

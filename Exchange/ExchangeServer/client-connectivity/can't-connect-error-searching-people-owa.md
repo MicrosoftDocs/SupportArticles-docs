@@ -42,8 +42,8 @@ Install the English language pack using the corresponding language .cab files fr
 
 1. On the **Formats** tab, make sure that the format is set to **English (United States)**.
 
-    :::image type="content" source="media/can't-connect-error-searching-people-owa/region-format.png" alt-text="Screenshot of format settings":::
+    :::image type="content" source="media/can't-connect-error-searching-people-owa/region-format.png" alt-text="Screenshot of the window for format settings.":::
 
 1. On the **Administrative** tab, select **Copy settings** and make sure that the settings are also set to **English (United States)**.
 
-    :::image type="content" source="media/can't-connect-error-searching-people-owa/region-settings.png" alt-text="Screenshot of region settings":::
+    :::image type="content" source="media/can't-connect-error-searching-people-owa/region-settings.png" alt-text="Screenshot of the window for region settings.":::

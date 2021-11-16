@@ -24,7 +24,7 @@ This guide enables your Skype for Business users to IM and talk with Skype for B
 
 > [!NOTE]
 > This is not the same as setting up external contacts in Outlook or sharing my website with outside people. Because each type of external contact has a different purpose.  
-> A Skype for Business external contact is someone outside your organization who's using a compatible IM and conferencing client - either Skype for Business or Skype. However, all that's required for Outlook external contacts or website sharing is a valid email address. For more information, see [Collaborating with people outside your organization](/microsoft-365/solutions/collaborate-with-people-outside-your-organization?view=o365-worldwide).
+> A Skype for Business external contact is someone outside your organization who's using a compatible IM and conferencing client - either Skype for Business or Skype. However, all that's required for Outlook external contacts or website sharing is a valid email address. For more information, see [Collaborating with people outside your organization](/microsoft-365/solutions/collaborate-with-people-outside-your-organization).
 
 First, we'll ask you a few quick questions about your Microsoft 365 setup. Then we'll give you all the information you need to complete up to four tasks.
 

@@ -25,7 +25,7 @@ This step-by-step article describes how to enable the Hierarchical Address Book 
 
 HAB is enabled by creating a root organization that will be the top of the hierarchy. After you create a root organization on Exchange Server, Outlook 2010 automatically detects when the feature is enabled and adds the **Organization** tab in the **Outlook Address Book**  dialog box. End users can use HAB and the name list, such as the global address list, by switching tabs. The screenshot for this step is listed below.
 
-![Screenshot for the name list. ](./media/enable-hierarchical-address-book-exchange-2010/name-list.png)
+:::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/name-list.png" alt-text="Screenshot of the window for Select Names.":::
 
 You must have the Active Directory Service Interfaces (ADSI) Edit snap-in to complete some of these steps.
 
@@ -46,7 +46,7 @@ For more information about how to create a distribution group in Exchange Server
 
 For example, the following screenshot shows the organization hierarchy for an example organization named **Contoso, Ltd**.
 
-:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/contoso-ltd-organization.png" alt-text="Screenshot for the Contoso, Ltd organization.":::
+:::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/contoso-ltd-organization.png" alt-text="Screenshot that shows the organization hierarchy for an example organization named Contoso, Ltd.":::
 
 The following list explains this hierarchy:
 
@@ -110,13 +110,15 @@ To make the distribution group an organization, you have to change the `msOrg-Is
 
 1. Open **ADSI Edit**, expand **Default naming context**, expand the organizational unit, and then expand the **OU=HAB Groups** container where you created a distribution group named **Contoso, Ltd**. The screenshot for this step is listed below.
 
-    ![Screenshot for the ADSI Edit.](./media/enable-hierarchical-address-book-exchange-2010/adsi-edit.png)
+1. Open **ADSI Edit**, expand **Default naming context**, expand the organizational unit, and then expand the **OU=HAB Groups** container where you created a distribution group named **Contoso, Ltd**. The screenshot for this step is listed below.
+
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/adsi-edit.png" alt-text="Screenshot of A D S I Edit window expanding the OU\=HAB Groups.":::
 
 1. Right-click **CN=Contoso,Ltd**, and then click **Properties**.
 1. In the **CN=Contoso,Ltd Properties** dialog box, click the **Attribute Editor** tab.
 1. In the **Attributes** section, locate **msOrg-IsOrganizational**, and then click **Edit**. The screenshot for this step is listed below.
 
-    ![Screenshot for the Attribute Editor.](./media/enable-hierarchical-address-book-exchange-2010/attribute-editor.png)
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/attribute-editor.png" alt-text="Screenshot of selecting msOrg-IsOrganizational and edit.":::
 
 1. In the Boolean Attribute Editor, click **True**, and then click **OK**.
 1. In the **CN=Contoso,Ltd Properties** dialog box, click **OK**.
@@ -183,7 +185,7 @@ To add child organizations, follow the steps:
     > 1. In the **Contoso,Ltd Properties** dialog box, on the **Members** tab, click **Add** to open the **Select Recipient** dialog box.
     > 1. In the **Select Recipient** dialog box, click the **Corporate Office** distribution group, and then click **OK**. The screenshot for this step is listed below.
     >
-    > ![Screenshot for the Corporate Office.](./media/enable-hierarchical-address-book-exchange-2010/corporate-office.png)
+    > :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/corporate-office.png" alt-text="Screenshot of selecting Corporate Office in the Contoso,Ltd Properties dialog box.":::
 
 ## Step six: Add organization members
 
@@ -191,7 +193,7 @@ Members who belong to the organization are members of the distribution group.
 
 For this example, **David Hamilton** is a user who is a Vice President of an organization named **Corporate Office**. The screenshot for this step is listed below.
 
-:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/user-example-david-Hamilton.png" alt-text="Screenshot for the example.":::
+:::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/user-example-david-Hamilton.png" alt-text="Screenshot shows that David Hamilton is a Vice President of an organization named Corporate Office.":::
 
 To add David Hamilton (SMTP address: `dhamilton@contoso.com`) to **Corporate Office** (Alias: CorporateOffice) as a member of the organization, run the following command:
 
@@ -223,7 +225,7 @@ To change the `msDS-HABSeniorityIndex` attribute of organizations, use the ADSI 
 
 For this example, the organization named **Corporate Office** has three child organizations. These are named **Accounting Group**, **Administration Group**, and **Human Resources Organization**. Without the `msDS-HABSeniorityIndex` attribute, those organizations are sorted alphabetically by the display name and appear in the tree pane as follow screenshots display:
 
-:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/corporate-office-child-organizations-sorted-alphabetically.png" alt-text="Screenshot for the alphabetically sorted child organizations of Corporate Office.":::
+:::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/corporate-office-child-organizations-sorted-alphabetically.png" alt-text="Screenshot for the alphabetically sorted child organizations of Corporate Office.":::
 
 To change the display order of those organizations, follow the steps:
 
@@ -231,7 +233,7 @@ To change the display order of those organizations, follow the steps:
 1. Right-click **CN=Human Resources Organization**, and then click **Properties**.
 1. In the **CN=Human Resources Organization Properties** dialog box, click the **Attribute Editor** tab. In the **Attributes** section, locate **msDS-HABSeniorityIndex**, and then click **Edit**. The screenshot for this step is listed below.
 
-    ![Screenshot about setting value for the msDS-HABSeniorityIndex of Human Resources Organization.](./media/enable-hierarchical-address-book-exchange-2010/set-value-msds-abseniorityindex-human-resources-organization.png)
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/set-value-msds-abseniorityindex-human-resources-organization.png" alt-text="Screenshot about setting value for the msDS-HABSeniorityIndex of Human Resources Organization.":::
 
 1. In the Integer Attribute Editor, type the value that you defined for the organization (such as *100*), and then click **OK**.
 1. In **CN=Human Resources Organization Properties**, click **OK**.
@@ -239,7 +241,7 @@ To change the display order of those organizations, follow the steps:
 
 After you set the `msDS-HABSeniorityIndex`, **Human Resources Organization** is the top of the three organizations. The other organizations are sorted by descending number of the `msDS-HABSeniorityIndex`, as follow screenshot shows:
 
-:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/other-organizations-sorted.png" alt-text="Screenshot about how other organizations are sorted.":::
+:::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/other-organizations-sorted.png" alt-text="Screenshot about how other organizations are sorted.":::
 
 ## Step nine: Change the Seniority Index of members
 
@@ -253,7 +255,7 @@ To change the display order of these members, follow the steps:
 1. Right-click **CN=David Hamilton**, and then click **Properties**.
 1. In the **CN=David Hamilton Properties** dialog box, click the **Attribute Editor** tab. In the **Attributes** section, locate **msDS-HABSeniorityIndex**, and then click **Edit**. The screenshot for this step is listed below.
 
-    ![Screenshot about setting value to msDS-HABSeniorityIndex of David Hamilton.](./media/enable-hierarchical-address-book-exchange-2010/set-value-msds-habseniorityindex-david-hamilton.png)
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/set-value-msds-habseniorityindex-david-hamilton.png" alt-text="Screenshot of setting value to msDS-HABSeniorityIndex of David Hamilton.":::
 
 1. In the Integer Attribute Editor, type the integer value that you defined for the user (such as *100*), and then click **OK**.
 1. In the CN=David Hamilton Properties dialog box, click **OK**.
@@ -261,7 +263,7 @@ To change the display order of these members, follow the steps:
 
 After you set the `msDS-HABSeniorityIndex` attribute, David Hamilton is the top of the list as the following screenshot shows, and other members are sorted by descending number of the Seniority In.
 
-:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/how-david-hamilton-shows.png" alt-text="Screenshot of how David Hamilton shows.":::
+:::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/how-david-hamilton-shows.png" alt-text="Screenshot of how David Hamilton shows.":::
 
 ## Step ten: Enable the Hierarchical Address Book feature
 
@@ -271,12 +273,12 @@ For this example, **Contoso, Ltd** is the name of the root organization that's c
 
 1. Open **ADSI Edit**, expand **Default naming context**, expand an organizational unit, and then expand the **OU=HAB Groups** container in which you created a distribution group that is named **Contoso, Ltd**. The screenshot for this step is listed below.
 
-    ![Screenshot for creating Contoso, Ltd.](./media/enable-hierarchical-address-book-exchange-2010/create-contoso-ltd.png)
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/create-contoso-ltd.png" alt-text="Screenshot of creating a distribution group named Contoso, Ltd.":::
 
 1. Right-click **CN=Contoso,Ltd**, and then click **Properties**.
 1. In the **CN=Contoso,Ltd Properties** dialog box, click the **Attribute Editor** tab. In the **Attributes** section, locate **distinguishedName**, and then click **View**. The screenshot for this step is listed below.
 
-    ![Screenshot for viewing distinguishedName.](./media/enable-hierarchical-address-book-exchange-2010/view-distinguishedName.png)
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/view-distinguishedName.png" alt-text="Screenshot of viewing distinguishedName.":::
 
 1. In the **String Attribute Editor**, copy the following text from the **Value** box, and then click **OK**:
 
@@ -285,12 +287,12 @@ For this example, **Contoso, Ltd** is the name of the root organization that's c
 1. In the **CN=Contoso,Ltd Properties** dialog box, click **OK**.
 1. In **ADSI Edit**, expand **Configuration**, expand **CN=Configuration**, expand **CN=Services**, expand **CN=Microsoft Exchange**, and then select **CN=First Organization**. The screenshot for this step is listed below.
 
-    ![Screenshot for selecting CN=First Organization.](./media/enable-hierarchical-address-book-exchange-2010/select-cn-first-organization.png)
+   :::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/select-cn-first-organization.png" alt-text="Screenshot of selecting CN=First Organization.":::
 
 1. Right-click **CN=First Organization**, and then click **Properties**.
 1. In the **CN=First Organization Properties** dialog box, click the **Attribute Editor** tab. In the **Attributes** section, locate **msExchHABRootDepartmentLink**, and then click **Edit**. The screenshot for this step is listed below.
 
-    ![Screenshot of how to set a value to msExchHABRootDepartmentLink.](./media/enable-hierarchical-address-book-exchange-2010/set-value-msexchhabrootdepartmentLink.png)
+:::image type="content" source="media/enable-hierarchical-address-book-exchange-2010/set-value-msexchhabrootdepartmentLink.png" alt-text="Screenshot of how to set a value to msExchHABRootDepartmentLink.":::
 
 1. In the **String Attribute Editor**, in the **Value** field, type the distinguishedName of the root organization that you copied in step 4, **CN=Contoso\,Ltd,OU=HAB Groups,DC=Contoso-dom,DC=Contoso,DC=com**, and then click **OK**.
 1. In the **CN=First Organization Properties** dialog box, click **OK**.

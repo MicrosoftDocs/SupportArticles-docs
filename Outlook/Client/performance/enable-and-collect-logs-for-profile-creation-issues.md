@@ -33,7 +33,7 @@ Outlook logs are helpful in investigations into free busy issues, connectivity p
 1. In Outlook, go to the **File** tab, then **Options**, and then **Advanced**.
 2. Under **Other**, select or clear the check box **Enable troubleshooting logging** (this will require an Outlook restart).
 
-   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/enable-troubleshooting-logging.png" alt-text="Enable troubleshooting logging":::
+   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/enable-troubleshooting-logging.png" alt-text="Screenshot of the Advanced tab of Outlook Options.":::
 
 3. Select **OK** and restart Outlook.
 
@@ -59,11 +59,11 @@ If you are troubleshooting a profile with the creation of a new profile, you can
 
 The log files will be in the user's temp directory that can be found by typing *%temp%* in the **Run** box or File Explorer:
 
-:::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/search-logging-folder.png" alt-text="search the logging folder":::
+:::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/search-logging-folder.png" alt-text="Screenshot of Run dialog box after you type %temp%.":::
 
 In File Explorer, select on the Outlook Logging folder and sort by Date Modified:
 
-:::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/sort-by-date-modified.png" alt-text="Select on the Outlook Logging folder and sort by Date Modified":::
+:::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/sort-by-date-modified.png" alt-text="Screenshot of File Explorer window when you select on the Outlook Logging folder.":::
 
 In most cases, you will only have to collect the Outlook*.etl for analysis by Microsoft. To do this:
 
@@ -77,14 +77,14 @@ The Outlook connection status may be used to investigate connectivity issues.
 
 1. Locate the Outlook icon in the task bar. Hold down the Ctrl key and right-select the icon. Then, select **Connection Status**.
 
-   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/connection-status.png" alt-text="Select Connection Status":::
+   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/connection-status.png" alt-text="Screenshot of the Connection Status option on the right-click menu of the Outlook icon in the task bar.":::
 
 2. Expand ALL columns, and then take screenshots of all the information.
 
     > [!NOTE]
     > You will have to scroll to the right side of the screen to capture all columns.
 
-   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/capture-all-columns.png" alt-text="Scroll right to capture all columns":::
+   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/capture-all-columns.png" alt-text="Screenshot of the Outlook Connection Status window.":::
 
 3. Provide the screen shots to the support agent as requested.
 
@@ -94,7 +94,7 @@ The Autodiscover status may also be used to investigate connectivity issues.
 
 1. Locate the Outlook icon in the task bar. Hold down the Ctrl key and right-select the icon. Select **Test Email AutoConfiguration**.
 
-   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/test-email-autoconfiguration.png" alt-text="Select Test Email AutoConfiguration":::
+   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/test-email-autoconfiguration.png" alt-text="Screenshot of the Test Email AutoConfiguration option on the right-click menu of the Outlook icon in the task bar.":::
 
 2. Enter the email address of the user's mailbox, if that field isn't already auto-completed.
 
@@ -102,6 +102,6 @@ The Autodiscover status may also be used to investigate connectivity issues.
 
 4. Take screenshots of each tab. You may have to take multiple screenshots of each tab by scrolling down to access all the data.
 
-   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/take-screenshots-of-each-tab.png" alt-text="Take screenshots of each tab.":::
+   :::image type="content" source="media/enable-and-collect-logs-for-profile-creation-issues/take-screenshots-of-each-tab.png" alt-text="Screenshot of Test Email AutoConfiguration window.":::
 
 5. Provide the screenshots to the support agent as requested.

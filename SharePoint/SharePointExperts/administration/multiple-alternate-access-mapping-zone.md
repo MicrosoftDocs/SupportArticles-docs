@@ -29,7 +29,7 @@ Office Online Server will use the default zone set in SharePoint Server for the 
 
 For example:
 
-![alternate access mappings](./media/multiple-alternate-access-mapping-zone/access-mappings.png)
+:::image type="content" source="media/multiple-alternate-access-mapping-zone/alternate-access-mappings.png" alt-text="Screenshot of the Alternate Access Mapping page, which displays the default zone URL that Office Online Server will use to contact the SharePoint Server.":::
 
 The default zone URL is http://sp2013t. So this is the URL that Office Online Server will use to contact the SharePoint Server.
 

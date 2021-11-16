@@ -31,15 +31,15 @@ appliesto:
 
 When you look at **Add-Ins** section of the **Options** dialog box in a Microsoft 2016 or Microsoft Office 2013 program, none of your add-ins are enabled, as shown in the following figure for Outlook.
 
-![no add-ins loaded in Outlook](./media/office-add-in-not-loaded/no-add-in-load-in-outlook.PNG)
+:::image type="content" source="media/office-add-in-not-loaded/no-add-in-outlook.png" alt-text="Screenshot shows no add-ins are enabled in Outlook.":::
 
 If you then open the **COM Add-ins** dialog box by clicking **Go**, you cannot enable any of the listed add-ins. When you select any add-in, the **COM Add-ins** dialog box displays the following text.
 
-**The add-in you have selected is disabled by your system administrator.**
+> The add-in you have selected is disabled by your system administrator.
 
 The warning is shown in the following figure for Outlook.
 
-![warning message in Outlook](./media/office-add-in-not-loaded/warning-in-outlook.PNG)
+:::image type="content" source="media/office-add-in-not-loaded/warning-in-outlook.png" alt-text="Screenshot of the warning message in Outlook." border="false":::
 
 ## Cause
 

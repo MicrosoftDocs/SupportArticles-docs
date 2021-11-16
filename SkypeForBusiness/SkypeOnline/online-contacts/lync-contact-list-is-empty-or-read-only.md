@@ -44,12 +44,13 @@ Since then, this feature was disabled because by default, and Skype for Business
 
 ### If you're experiencing this issue
 
-Check the Lync **Configuration Information** screen. To do this, follow these steps: 
-1. Press and hold the Ctrl key, and then right-click the Lync icon in the notification area.   
-2. Select **Configuration Information**.    
+Check the Lync **Configuration Information** screen. To do this, follow these steps:
+
+1. Press and hold the Ctrl key, and then right-click the Lync icon in the notification area.
+2. Select **Configuration Information**.
 3. If the mailbox is inaccessible, you should see **Exchange connection Down** next to **UCS Connectivity State**.
 
-   :::image type="content" source="./media/lync-contact-list-is-empty-or-read-only/ucs-connectivity-state.png" alt-text="Screenshot that shows Exchange connection Down and UCS Connectivity State in the Configuration Information.":::
+   :::image type="content" source="./media/lync-contact-list-is-empty-or-read-only/ucs-connectivity-state.png" alt-text="Screenshot that shows Exchange connection Down and UCS Connectivity State in the Configuration Information window.":::
 
 ### Then, check the Personal Information Manager
 

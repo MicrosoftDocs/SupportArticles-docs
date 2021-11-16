@@ -35,13 +35,13 @@ To fix this error, try the following steps:
 
 1. When you receive the error that your .pst file can't be found, copy down the file name for future reference and click **OK**.
 
-    ![Screenshot for the error message](./media/outlook-2013-not-find-pst-file/error-message.png)  
+    :::image type="content" source="./media/outlook-2013-not-find-pst-file/error-message.png" alt-text="Screenshot for the Outlook error message." border="false":::  
 
     The default name that Outlook uses for a .pst file is \<Your email address>.pst.
 
 2. The next window that opens will be either the default .pst file location or the location you specified when creating your email account.
 
-    ![Screenshot for .pst file location](./media/outlook-2013-not-find-pst-file/pst-file-location.jpg)
+    :::image type="content" source="./media/outlook-2013-not-find-pst-file/pst-file-location.png" alt-text="Screenshot for .pst file location." border="false":::
 
     Keep this window open and continue with the next section.  
 
@@ -55,11 +55,11 @@ If your .pst has been deleted and your Recycle Bin hasn't been emptied, it can b
 
     If your .pst file is there, right-click on it and select **Restore**.
 
-    ![Screenshot for restoring .pst file](./media/outlook-2013-not-find-pst-file/restore-pst-file.jpg)
+    :::image type="content" source="./media/outlook-2013-not-find-pst-file/restore-pst-file.png" alt-text="Screenshot for restoring .pst file." border="false":::
 
 2. Look in the window you kept open in the first section. If your .pst file appears, click **Open**.
 
-    ![Screenshot for opening the .pst location](./media/outlook-2013-not-find-pst-file/open-pst-file.jpg)
+    :::image type="content" source="./media/outlook-2013-not-find-pst-file/open-pst-file.png" alt-text="Screenshot for opening the .pst location." border="false":::
 
 3. Outlook should start normally.  
 
@@ -79,11 +79,11 @@ Unfortunately, if you've reached this section, your .pst file isn't recoverable,
 
 1. In the window left open from the first section, type the name you would like to have for your new Outlook data file and click **Open**.
 
-    ![Screenshot for creating a new Outlook data file](./media/outlook-2013-not-find-pst-file/type-name-for-new-pst-file.jpg)
+    :::image type="content" source="./media/outlook-2013-not-find-pst-file/type-name-for-new-pst-file.png" alt-text="Screenshot for creating a new Outlook data file." border="false":::
 
 2. Outlook will then ask you if you want to password protect your new .pst file. If you select to use a password for your data file, enter and verify it in this window. Otherwise, click **OK**.
 
-    ![Screenshot for .pst file password](./media/outlook-2013-not-find-pst-file/add-password.jpg)
+    :::image type="content" source="./media/outlook-2013-not-find-pst-file/add-password.png" alt-text="Screenshot for .pst file password." border="false":::
 
     > [!NOTE]
     > Check and save this password in your password list if you want Windows to remember it.

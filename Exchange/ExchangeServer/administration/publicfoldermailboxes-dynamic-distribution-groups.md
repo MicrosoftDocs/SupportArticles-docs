@@ -32,7 +32,7 @@ Consider the following scenario:
 
 In this scenario, multiple dynamic distribution groups are created unexpectedly. The names of these dynamic distribution groups begin with PublicFolderMailboxes.
 
-![Screenshot of unexpected PublicFolderMailBoxes dynamic distribution groups](./media/publicfoldermailboxes-dynamic-distribution-groups/publicfoldermailboxes-groups.jpg)
+:::image type="content" source="media/publicfoldermailboxes-dynamic-distribution-groups/publicfoldermailboxes-groups.png" alt-text="Screenshot of unexpected PublicFolderMailBoxes dynamic distribution groups.":::
 
 ## Cause
 
@@ -81,7 +81,7 @@ To work around this issue, hard code a domain controller on the Exchange Server 
     Get-Mailbox -PublicFolder | ?{$_.IsRootPublicFolderMailbox -eq "true"} | Update-PublicFolderMailbox
     ```
 
-8. You should see only one dynamic distribution group created. Wait for 15 or 20 minutes, and then run the following command to verify whether a single dynamic distribution group was created: 
+8. You should see only one dynamic distribution group created. Wait for 15 or 20 minutes, and then run the following command to verify whether a single dynamic distribution group was created:
 
     ```powershell
     Get-DynamicDistributionGroup -IncludeSystemObjects PublicFolderMailboxes*

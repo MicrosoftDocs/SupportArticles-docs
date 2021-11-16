@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2957336
 
 After starting Microsoft Outlook 2013, the program hangs or stops when the **Loading Profile** dialog appears, as shown in the following figure:
 
-:::image type="content" source="media/outlook-stops-at-the-loading-profile-screen/loading-profile.jpg" alt-text="screenshot of the loading profile screen" border="false":::
+:::image type="content" source="media/outlook-stops-at-the-loading-profile-screen/loading-profile.png" alt-text="Screenshot of the loading profile screen." border="false":::
 
 ## Cause
 

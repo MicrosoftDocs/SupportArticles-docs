@@ -40,7 +40,7 @@ When you use the EAC, you can specify only the number of concurrent migration ba
 4. Select the migration batch that you want to change.
 5. Under **Associated endpoint**, select **View details**.
 
-    :::image type="content" source="media/how-to-manage-maximum-concurrent-migration-batches/associated-endpoint.jpg" alt-text="screenshot of the status for current migration batches, showing the Associated endpoint section and View details link":::
+    :::image type="content" source="media/how-to-manage-maximum-concurrent-migration-batches/associated-endpoint.png" alt-text="Screenshot of the status for current migration batches showing the Associated endpoint section.":::
 
 6. In the **Edit Migration Endpoint** window, enter a value in the ***Maximum concurrent migrations** box.
 

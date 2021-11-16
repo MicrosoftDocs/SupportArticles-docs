@@ -28,7 +28,7 @@ After you install Exchange Server 2016, you notice that the Exchange Servers and
 
 > Default Domain Controller Policy\Computer Config\Policies\Windows settings\Security Settings\local policies\User Rights Assignments\Debug program
 
-:::image type="content" source="media/unexpected-debug-programs-user-right/debug-programs-user-right.png" alt-text="Debug programs user right for Exchange groups" border="false":::
+:::image type="content" source="media/unexpected-debug-programs-user-right/debug-programs-user-right.png" alt-text="Screenshot of debug programs user right for Exchange groups.":::
 
 ## Cause
 

@@ -52,9 +52,9 @@ To create a correct connection string, select the **Use connection string** op
 
 1. In the **Table Import Wizard**, click **Build**.   
 2. In the **Provider** tab, make sure that you select Microsoft OLE DB Provider for ODBC Drivers.   
-3. In the **Connection** tab, select the **User connection string** option, and then click **Build**.
+3. In the **Connection** tab, select the **Use connection string** option, and then click **Build**.
 
-   ![The screenshot for the step 3 ](./media/connection-to-odbc-driver-fails/type-connection-string.png)   
+   :::image type="content" source="media/connection-to-odbc-driver-fails/type-connection-string.png" alt-text="Screenshot to select the Build option after selecting the Use connection string option." border="false":::
 4. Click the **Machine Data Source** tab, select your database resource, and then click **OK**.   
 5. When you receive the Database logon prompt, type the logon ID and password, and then click **OK**.    
 6. In the **Enter information to log on to the server** box, type in the logon ID and password again, and then select the **Allow saving password** option.   

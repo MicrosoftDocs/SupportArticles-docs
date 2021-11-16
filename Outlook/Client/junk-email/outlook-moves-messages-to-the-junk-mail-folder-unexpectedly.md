@@ -77,7 +77,7 @@ To work around this problem, try to enable RPC encryption between Outlook and Ex
 7. In the **Microsoft Exchange Server** dialog box, select the **Security** tab.
 8. Select the **Encrypt data between Microsoft Outlook and Microsoft Exchange** check box, and then select **OK**.
 
-    :::image type="content" source="media/outlook-moves-messages-to-the-junk-mail-folder-unexpectedly/encrypt-data-between-microsoft-outlook-and-microsoft-exchange.png" alt-text="Select the Encrypt data between Microsoft Outlook and Microsoft Exchange check box" border="false":::
+    :::image type="content" source="media/outlook-moves-messages-to-the-junk-mail-folder-unexpectedly/encrypt-data-between-microsoft-outlook-and-microsoft-exchange.png" alt-text="Screenshot of the Security tab of the Microsoft Exchange dialog box." border="false":::
 
     > [!IMPORTANT]
     > If the check box is unavailable (dimmed), you are most likely connected to Microsoft Exchange Server 2013, or you are using a mailbox in Office 365. In this case, RPC encryption cannot be enabled. Be aware that Outlook Anywhere (RPC over HTTPS) connections are secure as they are encrypted by using Secure HTTP (HTTPS).

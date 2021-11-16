@@ -103,6 +103,8 @@
       href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
     - name: Room Finder doesn't show conference rooms
       href: ../calendaring/outlook-room-finder-not-show-conference-room.md
+    - name: Scan calendar by using SaRA
+      href: ../calendaring/scan-outlook-calendar-using-sara.md
     - name: Send Update is missing when copying meetings
       href: ../calendaring/send-update-missing-copy-meeting.md
     - name: Specific users can't receive meeting requests

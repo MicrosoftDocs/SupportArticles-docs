@@ -41,24 +41,24 @@ To restore In-Place Hold settings, follow these steps:
 1. On the Exchange server, open the Exchange Admin Center by using on-premises admin credentials.
 1. If your organization is enabled for a hybrid deployment with Microsoft Exchange Online in Office 365, click the **Enterprise**  tab in the navigation bar.
 
-   ![Screenshot of the navigation bar in the Exchange Admin Center](./media/restore-in-place-litigation-hold/navigation.jpg)
+   :::image type="content" source="media/restore-in-place-litigation-hold/navigation-bar.png" alt-text="Screenshot of the navigation bar in the Exchange Admin Center.":::
 
 1. Click **compliance management**, and then click **in-place eDiscovery & hold**.
 
-   ![Screenshot of the in-place eDiscovery & hold page in the Exchange Admin Center](./media/restore-in-place-litigation-hold/ediscovery.jpg)
+   :::image type="content" source="media/restore-in-place-litigation-hold/e-discovery-hold.png" alt-text="Screenshot shows steps to click in-place eDiscovery & hold page in the Exchange Admin Center.":::
 
-1. Select the In-Place Hold entry for which you want to restore In-Place Hold settings, and then double-click it, or click **Edit** (![Edit icon](./media/restore-in-place-litigation-hold/edit.jpg)), to open the properties page.
+1. Select the In-Place Hold entry for which you want to restore In-Place Hold settings, and then double-click it, or click **Edit** (:::image type="icon" source="media/restore-in-place-litigation-hold/edit-icon.png" border="false":::), to open the properties page.
 
-   ![Screenshot of the properties page for an In-Place Hold entry](./media/restore-in-place-litigation-hold/properties.jpg)
+   :::image type="content" source="media/restore-in-place-litigation-hold/properties-page.png" alt-text="Screenshot of the properties page for an In-Place Hold entry." border="false":::
 
 1. On the properties page, click **In-Place Hold**. The In-Place Hold settings for the user are displayed.
 
-   ![Screenshot of the In-Place Hold settings for a user](./media/restore-in-place-litigation-hold/settings.jpg)
+   :::image type="content" source="media/restore-in-place-litigation-hold/in-place-hold-settings.png" alt-text="Screenshot of the In-Place Hold settings for a user." border="false":::
 
 1. Click to clear the **Place content matching the search query in selected mailboxes on hold** check box, and then click **Save**.
 1. Reopen the same properties page, and then click **In-Place Hold**. Notice that the **Place content matching the search query in selected mailboxes on hold** check box is cleared.
 
-   ![Screen shot of the In-Place hold settings for a user](./media/restore-in-place-litigation-hold/settings-selected.jpg)
+   :::image type="content" source="media/restore-in-place-litigation-hold/settings-selected.png" alt-text="Screenshot of the Place content matching the search query in selected mailboxes on hold check box is cleared." border="false":::
 
 1. Click to select the **Place content matching the search query in selected mailboxes on hold** check box. Additionally, if you were using a time-based In-Place Hold, select **Specify number of days to hold items relative to their received date**, enter the duration, and then click **Save**. Doing this restores any In-Place Hold settings that existed before the issue occurred.
 1. Repeat steps 4 through 8 for any other In-Place Hold entries that you have.

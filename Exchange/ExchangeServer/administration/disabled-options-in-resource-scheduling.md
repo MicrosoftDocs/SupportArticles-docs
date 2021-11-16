@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 2859532
 
 When you open the **Resource Scheduling** dialog box in Microsoft Outlook, all the options in the dialog box are unavailable (dimmed). An example of this behavior is shown in this screenshot:
 
-:::image type="content" source="media/disabled-options-in-resource-scheduling/resource-scheduling-dialog-box.jpg" alt-text="screenshot of Resource Scheduling dialog box":::
+:::image type="content" source="media/disabled-options-in-resource-scheduling/resource-scheduling-dialog-box.png" alt-text="Screenshot of Resource Scheduling dialog box.":::
 
 ## Cause
 

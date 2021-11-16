@@ -62,10 +62,10 @@ To disable ActiveSync for users in Microsoft 365 by using the Exchange admin cen
 1. Sign in to the [Microsoft 365 portal](https://portal.office.com/) as a global admin.
 2. Select **Admin**, and then select **Exchange**.
 3. In the left navigation pane, select **recipients**, and then select **mailboxes**.
-4. Select the user mailbox that you want to change, and then select **Edit** (![A screenshot of the Edit icon](./media/how-to-disable-exchange-activesync-for-users/edit-icon.png)).
+4. Select the user mailbox that you want to change, and then select **Edit** (:::image type="icon" source="media/how-to-disable-exchange-activesync-for-users/edit-icon.png" border="false":::).
 5. Select **mailbox features**, and then select **Disable Exchange ActiveSync**.
 
-   :::image type="content" source="media/how-to-disable-exchange-activesync-for-users/mailbox-features.jpg" alt-text="A screenshot of the Mailbox Feature dialog box":::
+   :::image type="content" source="media/how-to-disable-exchange-activesync-for-users/mailbox-features.png" alt-text="Screenshot of the Mailbox Feature dialog box.":::
 
 6. Select **OK**.
 

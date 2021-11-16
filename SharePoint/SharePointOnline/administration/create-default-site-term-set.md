@@ -23,7 +23,7 @@ This article describes how to create a default Site collection Term Set if none 
 
 In a site collection, when you go to **Term Store Management** during a site collection, you don't see a **term set** specific to that respective site collection.
 
-![No local term store available](./media/create-default-site-term-set/no-local-term-store.png)
+:::image type="content" source="media/create-default-site-term-set/no-local-term-store.png" alt-text="Screenshot shows no local term store available when you go to Term Store Management during a site collection." border="false":::
 
 ## Cause
 
@@ -39,30 +39,28 @@ If you need a local term store and don't want to activate the publishing feature
 
 1. On any site, select the **Gear icon** at the top-right corner of the window, and select **Site contents** from the drop-down menu.
 
-   ![Select Site contents](./media/create-default-site-term-set/select-site-contents.png)
+  :::image type="content" source="media/create-default-site-term-set/select-site-contents.png" alt-text="Screenshot shows selecting the Gear icon at the top-right corner of the window and selecting Site contents from the drop-down menu.":::
   
 2. Find any list or library, and select the **ellipsis**, then select **Settings**.
 
-   ![Choose Settings](./media/create-default-site-term-set/choose-settings.png)
+   :::image type="content" source="media/create-default-site-term-set/choose-settings.png" alt-text="Screenshot shows finding any list or library, selecting the ellipsis, and then selecting Settings." border="false":::
 
 3. In the List settings, go to the **Columns** section and select **Create column**.
 
-   ![Add a Managed Metadata column, create the column](./media/create-default-site-term-set/create-column.png)
+   :::image type="content" source="media/create-default-site-term-set/create-column.png" alt-text="Screenshot of the Columns section in the List setting, selecting Create column." border="false":::
 
 4. Choose a name for the column, such as **LocalMMS** or **NewMMS**.
 
 5. Change the column type from **Single line of text** to **Managed Metadata**.
 
-   ![Add a Managed Metadata column, add a name](./media/create-default-site-term-set/change-column-type-to-managed-metadata.png)
+   :::image type="content" source="media/create-default-site-term-set/change-column-type-managed-metadata.png" alt-text="Screenshot of the Create Column page that changes the column type to Managed Metadata." border="false":::
 
 6. Scroll down to **Term Set Settings** and choose **Customize your term set:**. You can provide description if you would like, but you should see the name of the column you put above there.
 
-   ![Select the option to customize your term set](./media/create-default-site-term-set/customize-your-term-set.png)
+   :::image type="content" source="media/create-default-site-term-set/customize-term-set.png" alt-text="Screenshot of Term Set settings, choosing Customize your term set to provide description if you would like." border="false":::
 
 7. Select the **OK** button.
 
-   ![Select the OK button](./media/create-default-site-term-set/select-okay.png)
-
 8. Return to the **Taxonomy Term Store** in Site settings, and verify that you can locate the new local term store at the site collection level.
 
-   ![The site collection now appears in the term store](./media/create-default-site-term-set/site-collection-appears-in-term-store.png)
+   :::image type="content" source="media/create-default-site-term-set/site-collection-new-local-term-store.png" alt-text="Screenshot of the Taxonomy Term Store in Site settings, with new local term store at the site collection level." border="false":::

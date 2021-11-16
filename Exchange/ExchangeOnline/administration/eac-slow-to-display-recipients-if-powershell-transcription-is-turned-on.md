@@ -42,7 +42,7 @@ To fix this issue, you can disable PowerShell Transcription. To do this, follow 
 3. Select **Windows Components**, then select **Windows PowerShell**.
 4. Double-click **Turn on PowerShell Transcription**, select **Disable**, then select **OK**.
 
-   :::image type="content" source="media/eac-slow-to-display-recipients-if-powershell-transcription-is-turned-on/disable-powershell-transcription.png" alt-text="PowerShell Transcription Disable" border="false":::
+   :::image type="content" source="media/eac-slow-to-display-recipients-if-powershell-transcription-is-turned-on/disable-powershell-transcription.png" alt-text="Screenshot of selecting Disabled for Turn on PowerShell Transcription window.":::
 
 5. At a command prompt, run `gpupdate /force` to make sure that your settings are applied.
 

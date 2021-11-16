@@ -95,7 +95,7 @@ Once all applications are closed, open the Excel workbook and test. If the error
 ### Method 4: Test Excel in safe mode
  The error can occur if you have too many Excel add-in programs running. To test whether an add-in is causing the problem, start Excel in safe mode: 
  
-1. Click **Start**![Start ](./media/excel-cannot-complete-task-with-available/VistaStartButton.jpg).    
+1. Click **Start**:::image type="icon" source="media/excel-cannot-complete-task-with-available/start-button.png":::.    
 2. In Windows 7, type excel /s in the **Search programs and files** box and press **Enter**.
  In Windows Vista, type excel /s in the **Start Search** box and press **Enter**.
 3. Check the title. It should read Book1 - Microsoft Excel (Safe Mode).    
@@ -111,7 +111,7 @@ If the error continues to occur, go to the next method.
 ### Method 5: Turn off the preview pane in Windows Explorer (Windows 7 only)
  The preview pane is used to see the contents of most files in Windows Explorer. For example, if you click a picture, video, or text file, you can preview its contents without opening the file. By default, the preview pane is turned off in Windows 7. However, if it is turned on, it may cause a conflict with the Excel workbook you try to open leading to this error. We recommend that you turn off the preview pane and test opening your Excel workbook. To do this: 
  
-1. Click **Start**![Start ](./media/excel-cannot-complete-task-with-available/VistaStartButton.jpg), and then click **Computer**.    
+1. Click **Start**:::image type="icon" source="media/excel-cannot-complete-task-with-available/start-button.png":::, and then click **Computer**.    
 2. Click **Organize**.    
 3. Select **Layout**, and then click to clear **Preview pane**.    
 4. Open the Excel workbook and test.    

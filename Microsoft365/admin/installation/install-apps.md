@@ -59,7 +59,7 @@ If you're not sure what plan you have, follow the steps in [What subscription do
 
 When you install Office it's automatically linked to your Office 365 plan. This means if you recently switched plans you'll need to uninstall and then reinstall Office to associate it with your updated subscription. Use this easy fix tool and then follow the steps to reinstall Office.
   
-1. Select this easy fix button to uninstall Office.<br/>[![Easy fix download indicating a fix is available](./media/install-apps/8b46b28d-8630-458f-b31c-0bbe25e168ec.png)](https://aka.ms/diag_officeuninstall)
+1. Select this easy fix button to uninstall Office.<br/>[:::image type="icon" source="media/install-apps/download-button.png":::](https://aka.ms/diag_officeuninstall)
 
 2. For the remaining steps showing how to save and use the easy fix, follow the steps for your browser:
     
@@ -67,7 +67,7 @@ When you install Office it's automatically linked to your Office 365 plan. This 
     
     1. At the bottom of the browser window, select **Open** to open the **O15CTRRemove.diagcab** file.
 
-        ![Open the O15CTRRemove easy fix tool](./media/install-apps/3de4a58b-7168-4a6c-a14e-b46e3510b254.png)
+        :::image type="content" source="media/install-apps/open-easy-fix-tool.png" alt-text="Screenshot to open the O15CTRRemove easy fix tool.":::
 
         If the file doesn't open automatically, select **Save** \> **Open Folder**, and then double-click the file (it should start with "**O15CTRRemove**") to run the easy fix tool.
     
@@ -81,7 +81,7 @@ When you install Office it's automatically linked to your Office 365 plan. This 
     
     1. In the lower-lower left corner select the **o15CTRRemove** file and from the drop-down list, choose **Show in folder**.
 
-        ![Select Show in folder](./media/install-apps/fedb929c-6474-4b00-970e-a5799bc09256.png)<br/>Double-click the download, **o15CTRRemove** to run the easy fix tool.
+       :::image type="content" source="media/install-apps/show-in-folder.png" alt-text="Screenshot shows steps to select the Show in folder option.":::<br/>Double-click the download, **o15CTRRemove** to run the easy fix tool.
     
     2. The Uninstall Microsoft Office wizard launches. Select **Next** and follow the prompts. 
     
@@ -93,7 +93,7 @@ When you install Office it's automatically linked to your Office 365 plan. This 
     
     1. Select **Save File**, and then **OK**.
 
-        ![Save O15CTRRemove diagcab file in Firefox](./media/install-apps/b153dec9-ab5c-4be4-b3aa-4082761eeb51.png)  <br/>In the upper-right browser window, select **Show all downloads**. In the Library, select **Downloads** \> **O15CTRRemove.diagcab**, and then select the folder icon. Double-click the **O15CTRRemove.diagcab**.
+        :::image type="content" source="media/install-apps/save-file-firefox.png" alt-text="Screenshot to save the O15CTRRemove.diagcab file in Firefox.":::  <br/>In the upper-right browser window, select **Show all downloads**. In the Library, select **Downloads** \> **O15CTRRemove.diagcab**, and then select the folder icon. Double-click the **O15CTRRemove.diagcab**.
     
     2. The Uninstall Microsoft Office wizard launches. Select **Next** and follow the prompts. 
     

@@ -33,6 +33,6 @@ The Microsoft Offices Online 2013 or Office Online installer enables the install
 
 When you deploy Microsoft Offices Online 2013 to a hard disk drive that is security hardened (permissions are removed), assign "CREATOR OWNER" and "SERVERNAME\users" with the following permissions to the installation location on the non-system drive:
 
-![the program files properties](./media/deploy-office-online-server-to-security-hardened-drive/programs-files-properties.png)
+:::image type="content" source="media/deploy-office-online-server-to-security-hardened-drive/programs-files-properties.png" alt-text="Screenshot of the Program Files Properties page." border="false":::
 
 For more information, see [Deploy Office Online Server](/officeonlineserver/deploy-office-online-server).

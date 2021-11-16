@@ -61,7 +61,7 @@ Current Major and Minor Leagues.....................................2
 
     **Figure A**
 
-    :::image type="content" source="./media/create-toc-entries-no-page-number/table-of-contents.jpg" alt-text="The table of contents.":::
+    :::image type="content" source="media/create-toc-entries-no-page-number/table-of-contents.png" alt-text="Screenshot to select Table of Contents in the Table of Contents window.":::
 
 4.	To add the annotations to the TOC, select **Options**. In the dialog box that opens, enter **4** in the **TOC level** control to the right of Heading 4, and then select OK (see **Figure B**). 
 
@@ -69,7 +69,7 @@ Current Major and Minor Leagues.....................................2
     > Although you might consider removing levels 2 and 3 because Heading 2 and Heading 3 are in use, we recommend that you keep them because you might want to add them later, and not remember why the TOC doesn't update to show those levels.
 
     **Figure B**
-    :::image type="content" source="./media/create-toc-entries-no-page-number/toc-options.jpg" alt-text="TOC options.":::
+    :::image type="content" source="media/create-toc-entries-no-page-number/toc-options.png" alt-text="Screenshot shows steps to add the annotations to the T O C.":::
 
     Add a level for the annotations.
 
@@ -77,7 +77,7 @@ Current Major and Minor Leagues.....................................2
 
     **Figure C**
 
-    :::image type="content" source="./media/create-toc-entries-no-page-number/show-page-numbers.jpg" alt-text="Show page numbers.":::
+    :::image type="content" source="media/create-toc-entries-no-page-number/show-page-numbers.png" alt-text="Screenshot to clear the Show page numbers check box.":::
 
     > [!NOTE]
     > Disabling page numbering disables it for the entire TOC.
@@ -89,7 +89,7 @@ Current Major and Minor Leagues.....................................2
 
     **Figure D**
 
-    :::image type="content" source="./media/create-toc-entries-no-page-number/result-toc.jpg" alt-text="The resulting TOC.":::
+    :::image type="content" source="media/create-toc-entries-no-page-number/result-toc.png" alt-text="Screenshot shows the resulting T O C, all page numbers are gone.":::
 
 
 ### How to change to a TOC entry that doesn't have a page number
@@ -98,21 +98,21 @@ Current Major and Minor Leagues.....................................2
 
 1. Select **File** > **Options**.
 
-    :::image type="content" source="./media/create-toc-entries-no-page-number/file.png" alt-text="Select File and then Options.":::
+    :::image type="content" source="media/create-toc-entries-no-page-number/file-options.png" alt-text="Screenshot to select the File option and then select Options.":::
 
 1. On the **Display** tab, select the **Show all formatting marks** check box, and then select **OK**.
 
-    :::image type="content" source="./media/create-toc-entries-no-page-number/display.png" alt-text="The display tab.":::
+    :::image type="content" source="media/create-toc-entries-no-page-number/word-option-display.png" alt-text="Screenshot to select the Show all formatting marks check box and then select OK.":::
 
     > [!NOTE]
     > Next to the text that appears in the table of contents, you now see a TC field without a page number. The TC field resembles the following example:
     >
-    > :::image type="content" source="./media/create-toc-entries-no-page-number/example.png" alt-text="Example of a TC field without a page number.":::
+    > :::image type="content" source="media/create-toc-entries-no-page-number/example-tc-field.png" alt-text="Screenshot shows an example of a T C field without a page number.":::
 
 1. Select the TC field. Make sure that you include the opening bracket and the closing bracket.
 1. On the **Insert** tab, select **Quick Parts**, and then select **Field**.
 
-    :::image type="content" source="./media/create-toc-entries-no-page-number/field.png" alt-text="Select Quick Parts and then Field.":::
+    :::image type="content" source="media/create-toc-entries-no-page-number/quick-parts-field.png" alt-text="Screenshot to select Quick Parts and then select the Field item.":::
 
     > [!NOTE]
     > For information about how to use the Field dialog box for a table of contents entry that contains no page number, see steps 5 through 9 of the “[How to create a TOC entry without a page number](#how-to-create-a-toc-entry-without-a-page-number)” section.

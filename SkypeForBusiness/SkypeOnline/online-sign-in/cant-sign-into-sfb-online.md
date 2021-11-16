@@ -56,7 +56,7 @@ This issue may occur if one or more of the following conditions are true:
 
 During the sign in process, Lync 2013 caches your credentials and other information about its connection to Skype for Business Online. If you have trouble signing in to Skype for Business Online, click **Delete my sign-in information** and Lync 2013 will automatically remove any saved password, certificates, and connection settings for the user account.
 
-:::image type="content" source="./media/cant-sign-into-sfb-online/delete-sign-in-info.png" alt-text="Screenshot that shows the Lync 2013 sign in page with the Delete my sign-in info option selected.":::
+:::image type="content" source="./media/cant-sign-into-sfb-online/delete-sign-in-info.png" alt-text="Screenshot that shows the Lync 2013 sign-in page with the Delete my sign-in info option selected.":::
 
 ### Resolution for Lync 2010
 
