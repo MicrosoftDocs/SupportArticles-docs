@@ -9,7 +9,7 @@ metadata:
 
 productDirectory:
   items:
-  - title: Dynamics GP
+  - title: Microsoft Dynamics GP
     imageSrc: "../media/hub-landing/microsoft-logo.svg"
     summary: Troubleshooting articles for Dynamics GP
     url: gp/welcome-gp.yml
