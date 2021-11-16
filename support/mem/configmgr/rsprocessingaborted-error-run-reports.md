@@ -23,7 +23,7 @@ When you run reports for collections in Microsoft Endpoint Configuration Manager
 
 Refer to the following screenshot for an example of the error messages.
 
-:::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="A screenshot of the rsProcessingAborted error.":::
+:::image type="content" source="media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="Screenshot of the rsProcessingAborted error." border="false":::
 
 When this issue occurs, the following error entries are logged in the *ReportingServicesService.log* file on the reporting services point:
 
