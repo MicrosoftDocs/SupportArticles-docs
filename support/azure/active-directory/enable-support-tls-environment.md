@@ -4,6 +4,8 @@ description: Describes how to enable support for TLS 1.2 in your environment, in
 ms.date: 11/03/2021
 ms.prod-support-area-path: 
 ms.reviewer: dahans
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
 

@@ -4,6 +4,8 @@ description: Troubleshoot the common problems people face when adding or removin
 ms.date: 03/22/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
+ms.service: active-directory
+ms.subservice: app-mgmt
 ---
 
 # Troubleshoot common problems adding or removing an application to Azure Active Directory

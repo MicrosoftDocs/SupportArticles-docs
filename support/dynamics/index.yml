@@ -1,0 +1,16 @@
+### YamlMime:Hub
+title: Microsoft Dynamics troubleshooting
+summary: Technical content to troubleshoot issues in Microsoft Dynamics
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.prod: dynamics
+
+productDirectory:
+  items:
+  - title: Microsoft Dynamics GP
+    imageSrc: "../media/hub-landing/microsoft-logo.svg"
+    summary: Troubleshooting articles for Dynamics GP
+    url: gp/welcome-gp.yml
+
