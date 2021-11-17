@@ -4,6 +4,7 @@ description: Describes a problem that triggers warnings about an untrusted certi
 ms.date: 04/22/2020
 ms.prod-support-area-path: Installation
 ms.reviewer: soshir, jarrettr
+ms.technology: vs-installation
 ---
 # Warnings about an untrusted certificate after you install Visual Studio 2015 Update 3
 

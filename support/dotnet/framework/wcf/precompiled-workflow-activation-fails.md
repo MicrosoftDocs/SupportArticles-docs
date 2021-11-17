@@ -3,6 +3,7 @@ title: Pre-compiled WCF service activation fails
 description: A pre-compiled workflow service wrapped with a .svc file may fail activation when the service path contains non-English characters. This article provides a resolution.
 ms.date: 03/24/2020
 ms.prod-support-area-path: 
+ms.technology: dotnet-wcf
 ---
 # Service activation may fail when a pre-compiled WCF workflow service that is wrapped together with a .svc file is hosted
 

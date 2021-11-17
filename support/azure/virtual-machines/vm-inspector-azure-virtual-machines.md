@@ -129,7 +129,7 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 
 1. Change a storage account (optional):
 
-   To change a diagnostic storage account, select the **Settings** button on the toolbar, select the storage account, and then select **OK**. For more details, see the **Change VM Inspector settings** section.
+   To change a diagnostic storage account, select the **Settings** button on the toolbar, select the storage account, and then select **OK**. For more information, see the **Change VM Inspector settings** section.
 
 ## Select an analysis scenario to run
 
@@ -445,7 +445,7 @@ To delete one or more VM Inspector reports, select **Delete report**.
 
 **Q2. How do I submit the feedback for VM Inspector?**
 
-**A2.** To submit feedback, select the **Feedback** button on the toolbar, and then select the **Smile** or **Frown** icon, or provide additional feedback to us.
+**A2.** To submit feedback, select the **Feedback** button on the toolbar, and then select the **Smile** or **Frown** icon, or provide extra feedback to us.
 
 **Q3. I ran VM Inspector but I don't see any error messages.**
 
@@ -454,6 +454,10 @@ To delete one or more VM Inspector reports, select **Delete report**.
 **Q4. Why do I have to provide consent to be able to run VM Inspector successfully?**
 
 **A4.** The disk doesn't have the **Disk Backup Reader Access** role to enable VM Inspector to run successfully. Select the check box for **Consent to assign Disk Backup Reader access to Compute Recommendation Service** to grant access to the service for **Disk Backup Reader Access**.
+
+## Resources
+
+- [VM Inspector error messages](vm-inspector-error-messages.md)
 
 ## Next steps
 
