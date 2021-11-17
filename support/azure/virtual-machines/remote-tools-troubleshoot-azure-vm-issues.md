@@ -7,7 +7,6 @@ author: Deland-Han
 manager: dcscontentpm
 editor: ''
 tags: ''
-ms.servize: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -15,7 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 01/11/2018
 ms.author: delhan
-
+ms.service: virtual-machines
 ---
 
 # Use remote tools to troubleshoot Azure VM issues
