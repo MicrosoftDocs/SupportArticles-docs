@@ -38,4 +38,4 @@ To print a purchase order from history, use one of the following methods.
 
 ## More information
 
-You can print a purchase order from history in Microsoft Business Solutions - Great Plains 7.5. However, you can't print a purchase order from history in Microsoft Great Plains Dynamics 7.0 or in Microsoft Great Plains Dynamics 6.0. For more information, see [Printing a Purchase Order from History](https://support.microsoft.com//help/866532).
+You can print a purchase order from history in Microsoft Business Solutions - Great Plains 7.5. However, you can't print a purchase order from history in Microsoft Great Plains Dynamics 7.0 or in Microsoft Great Plains Dynamics 6.0.

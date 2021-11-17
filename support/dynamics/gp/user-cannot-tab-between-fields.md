@@ -28,7 +28,7 @@ The problem area is within the event processing loop that controls all aspects o
 
 To lessen risk to the Dynamics GP community, the solution is implemented as an Add-in assembly. This assembly is basically the same code that would typically go into the Dynamics.exe runtime engine, it's packaged as an external application.
 
-To resolve this issue, download the [MBSGreatPlains_46619.zip](https://mbs.microsoft.com/fileexchange/?fileID=43f4e20a-72d3-4198-a3be-6d51dab4e7c6) file and follow the installation instructions contained in the compressed (.zip) file.
+To resolve this issue, download the [MBSGreatPlains_46619.zip](https://mbs2.microsoft.com/fileexchange/?fileID=43f4e20a-72d3-4198-a3be-6d51dab4e7c6) file and follow the installation instructions contained in the compressed (.zip) file.
 
 ## More information
 

@@ -77,7 +77,7 @@ If you must process 2021 pay runs before you complete the 2020 year-end closing 
 
 #### Verify that you have installed the latest 2020 payroll tax update
 
-Download the latest tax table update and installation instructions for 2020 to ensure your FICA Wage Limit is correct. To access the U.S. Payroll Tax Update pages, select the **US Taxes** link for your version within the [Microsoft Dynamics GP Directory](https://mbs.microsoft.com/customersource/northamerica/GP/learning/documentation/system-requirements/dynamicsgpresource) page.
+Download the latest tax table update and installation instructions for 2020 to ensure your FICA Wage Limit is correct. 
 
 > [!NOTE]
 > To check your tax table update date, select **Microsoft Dynamics GP**, point to **Tools**, point to **Setup**, point to **System**, and select **Payroll Tax**. The Last Tax Update should be 12/20/2019 (Round 1 for 2020) or later.
@@ -260,6 +260,6 @@ Q2: Where can I get more information on the Affordable Care Act (ACA) functional
 
    [Microsoft Dynamics GP Year-End Update 2016: Affordable Care Act (ACA)](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-update-2016-affordable-care-act-aca)
 
-2. Visit the [Microsoft Dynamics GP Directory](https://mbs.microsoft.com/customersource/northamerica/gp/learning/documentation/system-requirements/dynamicsgpresource) page. Scroll to the *On This Page* section and open the *Module Information* link. Select ACA/Year End to open a document that included information about complying with ACA and other information about other year-end changes.
+2. Visit the Microsoft Dynamics GP Directory page. Scroll to the *On This Page* section and open the *Module Information* link. Select ACA/Year End to open a document that included information about complying with ACA and other information about other year-end changes.
 
 3. There were several blog articles written to cover the ACA changes and functionality. All the blog links are listed in [ACA blog links for Microsoft Dynamics GP](https://support.microsoft.com/topic/aca-blog-links-for-microsoft-dynamics-gp-619fbabb-6211-7d46-55a8-822aac413674).

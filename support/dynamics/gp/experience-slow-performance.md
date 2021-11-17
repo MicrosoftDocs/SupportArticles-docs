@@ -49,8 +49,6 @@ Service packs
 > - The PJOURNAL table is a temporary table and doesn't affect data.
 > - All users must exit Microsoft Dynamics GP before you run the DELETE statement.
 > - A PJOURNAL job is also created when you install Microsoft Business Solutions - Great Plains 7.5 and Microsoft Business Solutions - Great Plains 8.0. The PJOURNAL job must be turned on manually for the job to manage the PJOURNAL table so that the table does not grow larger and affect performance.
->
->     For more information, see [How to use Enterprise Manager to enable the Delete PJournal job that is created during the installation of Microsoft Dynamics GP](https://support.microsoft.com/help/862342).
 
 ### Printer settings that affect Microsoft Dynamics GP performance
 
@@ -266,7 +264,7 @@ DBCC Traceon (1204,3605 -1)
 
 ### The SQLDIAG tool
 
-Create a Sqldiag.txt output file when you reproduce the performance issue. For more information, see [Description of the SQLDIAG diagnostic tool](https://support.microsoft.com/help/850527).
+Create a Sqldiag.txt output file when you reproduce the performance issue. For more information, see [Description of the SQLDIAG diagnostic tool](https://docs.microsoft.com/sql/tools/sqldiag-utility).
 
 ### The Application log
 

@@ -30,4 +30,4 @@ A shared component is missing on the computer.
 
 ## Resolution
 
-Install the Report Viewer Redistributable using [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=6576).
+Install the Report Viewer Redistributable using [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/search.aspx?q=reportviewer).

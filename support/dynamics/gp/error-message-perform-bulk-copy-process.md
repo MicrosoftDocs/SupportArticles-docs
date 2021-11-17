@@ -81,9 +81,7 @@ To troubleshoot the possible causes of this error, use the following checklist:
    For more information, see [How to set up an ODBC Data Source on SQL Server for Microsoft Dynamics GP](https://support.microsoft.com/help/870416).
 
    > [!NOTE]
-   > This issue is fixed in the Microsoft Dynamics GP 10.0 March hotfix 968118. To obtain the latest hotfix, visit one of the following Web sites:
-
-    - [CustomerSource](https://mbs.microsoft.com/Pages/csretirement.aspx?printpage=false)
+   > This issue is fixed in the Microsoft Dynamics GP 10.0 March hotfix 968118. To obtain the latest hotfix, visit the following Web site:
 
     - [PartnerSource](https://partner.microsoft.com/solutions/business-applications/dynamics-onprem?printpage=false)
 

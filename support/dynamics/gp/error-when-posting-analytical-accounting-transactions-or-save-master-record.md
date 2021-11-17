@@ -69,7 +69,7 @@ You can download a SQL script using the link below and run it in SQL Server Mana
 
 AAG10000, AAG20000, AAG30000, AAG00201, AAG00400, AAG00401, AAG00500, AAG00600, AAG00900, and AAG00903
 
-So it looks at most of the AA tables, but not all, and not sub-tables for a series. To obtain the script, see [AA_Update_AAG00102.sql](https://mbs.microsoft.com/files/customer/gp/downloads/servicepacks/aa_update_aag00102.sql).
+So it looks at most of the AA tables, but not all, and not sub-tables for a series.
 
 ### Method 2: Manual method to research and update value in AAG00102 for one AA table at a time
 

@@ -153,7 +153,7 @@ Verify the settings in the Client Network Utility. To do this, follow these step
    4. On the **Network Libraries** tab, locate a row that is named TCP/IP in the **Network Library** column, and then locate the Dbnetlib.dll file.
 
         > [!NOTE]
-        > The Dbnetlib.dll file is the associated library file. If the [Dbnetlib.dll](https://mbs.microsoft.com/downloads/customer/dbnetlib.zip) file is missing, you can copy the file from another computer or you can download the file.
+        > The Dbnetlib.dll file is the associated library file. If the Dbnetlib.dll file is missing, you can copy the file from another computer or you can download the file.
 
    5. Copy the Dbnetlib.dll file to the following folder on the hard disk of the client computer:
 

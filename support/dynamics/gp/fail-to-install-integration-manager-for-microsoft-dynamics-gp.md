@@ -20,10 +20,6 @@ When you install Integration Manager for Microsoft Dynamics GP 10.0, you may rec
 
 ## Resolution
 
-This error message was resolved by completely uninstalling all .NET frameworks from the computer. As soon as you have them uninstalled then reinstall all versions of the .NET Framework by using the links provided here.
-
-The following are the .NET Framework links:
-
-- [Microsoft .NET Framework Version 1.1 Redistributable Package](https://www.microsoft.com/download/details.aspx?id=26)
+This error message was resolved by completely uninstalling all .NET frameworks from the computer. As soon as you have them uninstalled, then reinstall all versions of the [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework).
 
 [!INCLUDE [Publishing Disclaimer](../../includes/publishing-disclaimer.md)]

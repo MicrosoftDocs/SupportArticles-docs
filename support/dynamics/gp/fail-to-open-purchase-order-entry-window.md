@@ -57,7 +57,7 @@ For more information about how to disable third-party applications and customiza
 
 [872087](https://support.microsoft.com/help/872087) How to disable third-party products in the Dynamics.set file in Microsoft Dynamics GP  
 
-If you have to grant security to a resource for a third-party product, contact the company that supports that product. If the product is an add-in product for Microsoft Dynamics GP, open a support incident with Microsoft to address the issue. To do this, visit this Microsoft [Web site](https://mbs.microsoft.com/support/newstart.aspx).
+If you have to grant security to a resource for a third-party product, contact the company that supports that product. If the product is an add-in product for Microsoft Dynamics GP, open a support incident with Microsoft to address the issue.
 
 If you want to open a support incident with Microsoft Dynamics GP support, collect a Dexsql.log file of the error before you contact support to help you troubleshoot the problem. For more information about how to collect a Dexsql.log file, click the following article number to view the article in the Microsoft Knowledge Base:
 

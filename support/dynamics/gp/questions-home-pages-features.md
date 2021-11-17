@@ -22,7 +22,7 @@ This article contains answers to frequently asked questions about the home pages
 
   A1: The SystemUserGuide.pdf file includes more information about home pages.
 
-  To obtain user guides for Microsoft Dynamics GP, visit the following Microsoft Web site: [MBS CustomerSource Retirement](https://mbs.microsoft.com/Pages/csretirement.aspx).
+  To obtain user guides for Microsoft Dynamics GP, visit the following Microsoft Web site: [MBS CustomerSource Retirement](https://mbs2.microsoft.com/Pages/csretirement.aspx).
 
 - **Q2: What occurs when I select an industry and then select a role? Are the home pages different for the different industries?**
 
@@ -297,7 +297,7 @@ This article contains answers to frequently asked questions about the home pages
 
   - [Partners](https://partner.microsoft.com/solutions/business-applications/dynamics-onprem?printpage=false)
 
-  - [Customers](https://mbs.microsoft.com/Pages/csretirement.aspx?printpage=false)
+  - [Customers](https://mbs2.microsoft.com/Pages/csretirement.aspx?printpage=false)
 
 - **Q27: How do I add a report to the My Reports list on the home page?**
 

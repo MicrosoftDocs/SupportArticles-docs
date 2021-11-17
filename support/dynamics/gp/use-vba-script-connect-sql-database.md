@@ -54,6 +54,6 @@ To use the example script, follow these steps:
     End Sub
     ```
 
-You can also use the RetrieveGlobals_80.dll file for Microsoft Business Solutions - Great Plains 8.0 to retrieve the same information that this script example retrieves. To obtain the appropriate .dll file, see [MBS CustomerSource Retirement](https://mbs.microsoft.com/Pages/csretirement.aspx).
+You can also use the RetrieveGlobals_80.dll file for Microsoft Business Solutions - Great Plains 8.0 to retrieve the same information that this script example retrieves. To obtain the appropriate .dll file, see [MBS CustomerSource Retirement](https://mbs2.microsoft.com/Pages/csretirement.aspx).
 
 A Readme file is included with each version of the .dll file. The Readme file describes how to declare the variables. For example, you can declare the variables in your code and then use the variables in the connection string.

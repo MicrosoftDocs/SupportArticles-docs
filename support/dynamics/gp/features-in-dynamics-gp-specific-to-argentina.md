@@ -30,7 +30,6 @@ These products are not available on a US or UK install. You must have a GP insta
 
 ## References
 
-You can download the following documents (in PDF format) to learn more about each feature:
+You can download the following document (in PDF format) to learn more about each feature:
 
-- [Argentina Guides for Microsoft Dynamics GP 2010](https://mbs.microsoft.com/partnersource/northamerica/deployment/documentation/user-guides/gp2010_argentinaguides)
 - [Argentina Feature Guides (GP 2010)](/previous-versions/dynamics-gp/appuser-itpro/hh686205(v=gp.20))

@@ -31,10 +31,6 @@ It's a known quality issue #63243 and was fixed in the 2011 US Payroll Year-End 
 
 A fix for this issue is currently available. Install the 2011 US Payroll Year-end update patch (11.00.1860) to resolve this issue.
 
-The following Knowledge Base article lists the bugs that are fixed in the Year-end Update patch. This issue is listed under Payables Management:
-
-- [The 2011 U.S. Payroll Year-End Update is available for the English version of Microsoft Dynamics GP 2010](https://support.microsoft.com/help/2599505).
-
 ## Workaround
 
 To get around the issue until you're able to update to the 2011 year-end update patch, you can use a different general ledger account that has an account index (in the GL00100 and GL00105) smaller than the value of 32767. To do it, follow these steps:

@@ -53,7 +53,3 @@ To resolve this problem, follow these steps:
     > In this script, replace **\<XXXX>** with the sub-feature product ID that is listed in the Duinstall.log file.
 
    The version for this sub-feature must be the correct version to update to Microsoft Dynamics GP.
-
-   To verify the update paths to Microsoft Dynamics GP 2010, see [MBS CustomerSource Retirement](https://mbs.microsoft.com/Pages/csretirement.aspx?printpage=false).
-
-   On this website, you can also verify the sub-feature version for every service pack or hotfix that is installed.

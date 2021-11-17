@@ -35,10 +35,7 @@ To work around this problem, use one of the following methods.
 
 To work around this problem, follow these steps:
 
-1. Download the SkipDotNetCheckDexterity.mst file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
-
-    - [SkipDotNetCheckDexterity.mst](https://mbs.microsoft.com/fileexchange/?fileid=211766f4-5edf-4b86-bc56-afdc8c2bbd42)  
-    Release Date: April 15, 2008
+1. Download the [SkipDotNetCheckDexterity.mst](https://community.dynamics.com/gp/f/microsoft-dynamics-gp-forum/275325/microsoft-dynamics-gp-10-0-skipdotnetcheckdexterity-mst) file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
 
     Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 
@@ -64,13 +61,7 @@ After you follow these steps, Dexterity is installed in the location that you sp
 
 To work around this problem, follow these steps:
 
-1. Download the SkipDotNetCheckVSTools.mst file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
-
-    - [SkipDotNetCheckVSTools.mst](https://mbs.microsoft.com/fileexchange/?fileid=d782e181-6471-4db1-9431-df0c8a96c932)  
-    Release Date: April 15, 2008
-
-    Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
-
+1. Download the SkipDotNetCheckVSTools.mst file.
 2. Copy the SkipDotNetCheckVSTools.mst file to the root directory of drive C.
 3. Select **Start**, select **Run**, type **cmd**, and then select **OK**.
 4. At the command prompt, type **cd\\**, and then press **ENTER**.

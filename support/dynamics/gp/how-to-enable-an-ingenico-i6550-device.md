@@ -26,7 +26,7 @@ To enable an Ingenico i6550 device in Store Operations, follow these steps.
 
 To install the OLE for Point of Sale (OPOS) drivers, follow these steps:
 
-1. [Download the OPOS driver file](https://mbs.microsoft.com/downloads/customer/i6550_opos.zip) for the Ingenico i6550 device.
+1. Download the OPOS driver file for the Ingenico i6550 device.
 
 2. Create a folder, and then name this folder *Ingenico Files*.
 3. Extract the files from the driver file that you downloaded in step 1. Extract the files to the Ingenico Files folder.

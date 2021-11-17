@@ -33,11 +33,3 @@ To obtain these database schemas, follow these steps.
 > The database schemas are included in Microsoft Office Excel worksheets.
 
 - [Database schemas for Headquarters 2.0 Cumulative Update 5 and for Store Operations 2.0 Cumulative Update 5](https://mbs2.microsoft.com/fileexchange/?fileid=813c2afa-7f3d-4b4b-a5b7-21b5b307b427)
-
-- [Database schemas for Headquarters 2.0 Service Pack 4 and for Store Operations 2.0 Service Pack 4](https://mbs.microsoft.com/downloads/customer/rms_20_sp4_database_schema.xlsx)
-
-- [Database schemas for Headquarters 2.0 Feature Pack 1 and for Store Operations 2.0 Feature Pack 1](https://mbs.microsoft.com/downloads/customer/rms_20_fp1_database_schema.xlsx)
-
-- [Database schemas for Headquarters 2.0 Service Pack 2 and for Store Operations 2.0 Service Pack 2](https://mbs.microsoft.com/downloads/customer/rms_20_sp2_database_schema.xlsx)
-
-- [Database schemas for Headquarters 2.0 RTM and for Store Operations 2.0 RTM](https://mbs.microsoft.com/downloads/customer/rms_20_database_schema.xlsx)

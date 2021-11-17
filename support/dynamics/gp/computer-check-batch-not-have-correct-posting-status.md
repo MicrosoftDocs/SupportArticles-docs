@@ -23,7 +23,9 @@ When you view the Computer Checks batch ID in the Payables Batch IDs window, the
 
 If a backup is unavailable to restore the Payables Computer Check batch, follow these steps:
 
-1. If you cannot change the status of the Payables Computer Check batch to the **Available** status, complete the procedure in Microsoft Knowledge Base article 850289. [850289](https://vkbexternal.partners.extranet.microsoft.com/VKbWebService/ViewContent.aspx?PortalId=1&scid=kb;en-US;850289) A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP
+1. If you cannot change the status of the Payables Computer Check batch to the **Available** status, complete the procedure in Microsoft Knowledge Base article 850289.
+
+    [850289](https://support.microsoft.com/help/850289) A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP
 
 2. Click **Computer Checks**, click **Select**, and then click **Delete**.
 

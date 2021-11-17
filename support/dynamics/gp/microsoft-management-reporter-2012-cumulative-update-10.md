@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 3000799
 
 A supported update rollup for Microsoft Management Reporter is now available.
 
-If you have questions about how to install this rollup, contact Technical Support for Microsoft Dynamics. On to the Microsoft Dynamics Support website, you can [file a new support request](https://mbs.microsoft.com/support/newstart.aspx).
+If you have questions about how to install this rollup, contact Technical Support for Microsoft Dynamics. On to the Microsoft Dynamics Support website, you can [file a new support request](https://mbs2.microsoft.com/support/newstart.aspx).
 
 > [!NOTE]
 > When you create a support request, select Financial - Management Reporter 2012 as the Support Topi .

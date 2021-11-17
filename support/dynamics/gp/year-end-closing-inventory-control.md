@@ -108,7 +108,7 @@ The following options are available:
 
 - Update: Item's Standard Cost
 
-    If you select the **Item's Standard Cost** check box, the Standard Cost for any items that have been assigned the FIFO periodic valuation method or the LIFO periodic valuation method will be adjusted automatically to reflect each item's current cost or the amount you most recently paid for the item. If you're registered for the Manufacturing module, you'll be unable to select the **Item's Standard Cost** check box. For more information, see [Error message when you perform the "Inventory Year-end Closing" routine in Microsoft Dynamics GP: "Update standard costs in the Standard Cost Rollup window"](https://support.microsoft.com/help/930998).
+    If you select the **Item's Standard Cost** check box, the Standard Cost for any items that have been assigned the FIFO periodic valuation method or the LIFO periodic valuation method will be adjusted automatically to reflect each item's current cost or the amount you most recently paid for the item. If you're registered for the Manufacturing module, you'll be unable to select the **Item's Standard Cost** check box.
 
     > [!NOTE]
     > When you select to update an item's standard cost during the Inventory Year-End Closing process for Standard Cost Items, you must have the *Standard Cost Revaluation Account* populated in one of the two locations listed below in order for the Year-End Close process to complete. If you don't have the account populated the Exception Report will print with the list of items that need to be populated before you'll be able to process the year-end closing.

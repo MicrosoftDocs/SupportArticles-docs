@@ -48,7 +48,7 @@ In Microsoft Dynamics GP 2010 and higher versions, the Check Amount to Words fea
 To install the **Check Amount to Words** tool for older Microsoft Dynamics GP versions, you must use the cnk file. Follow these steps:
 
 1. Have all users exit Microsoft Dynamics GP.
-2. Download the [chkkwords.zip](https://mbs.microsoft.com/fileexchange/?fileID=339b354a-d206-4d1d-80e4-9396498874f3) file.  
+2. Download the [chkkwords.zip](https://mbs2.microsoft.com/fileexchange/?fileID=339b354a-d206-4d1d-80e4-9396498874f3) file.  
 3. Extrace the chkwords.cnk file to a temporary location.
 4. Copy the chkworkds.cnk to the Microsoft Dynamics GP code folder. By default, the Microsoft Dynamics GP code folder in the following location:  
    `C:\\Program Files (x86)\Microsoft Dynamics \GP`

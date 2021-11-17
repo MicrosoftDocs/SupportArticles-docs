@@ -190,7 +190,7 @@ If you're maintaining the account history, the year-end closing routine transfer
 When the year-end closing routine is complete, the Year-End Closing report is printed. This report lists the accounts that were closed and the transactions that were created to close those accounts. The Year-End Closing report is part of the audit trail. Save this report for the company's permanent records. The Year-End Closing report cannot be reprinted.
 
 > [!NOTE]
-> If you use Microsoft SQL Server, and if database maintenance is not automated, we recommend that you perform database maintenance after you close the year. For more information about recommended database maintenance procedures, see [Recommended maintenance with SQL Server for Microsoft Dynamics GP databases](https://support.microsoft.com/help/866439).
+> If you use Microsoft SQL Server, and if database maintenance is not automated, we recommend that you perform database maintenance after you close the year.
 
 ### Step 12: (Optional) Close all the fiscal periods for all the series. (Tools | setup | company | Fiscal periods)
 

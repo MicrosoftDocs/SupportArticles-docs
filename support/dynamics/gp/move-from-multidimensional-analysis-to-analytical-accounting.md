@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 897742
 
     > [!NOTE]
     >
-    > - To obtain the installation file, visit [this Microsoft Web site](https://mbs.microsoft.com/customersource).
+    > - To obtain the installation file, visit [this Microsoft Web site](https://mbs2.microsoft.com/customersource).
     >
     >    After you log on to the Web site, click **Downloads and Updates**, click **Service Packs/Product Releases**, and then click **Great Plains**. Then, click **Analytical Accounting 8.0 Extensions Release**.
     > - Analytical Accounting is a separate purchase. Registration keys are required.
@@ -40,7 +40,7 @@ _Original KB number:_ &nbsp; 897742
     > [!NOTE]
     >
     > - In Multidimensional Analysis, the analysis groups are assigned one at a time to the general ledger accounts in the Account Maintenance window. In Analytical Accounting, the transaction dimensions are assigned to a group of general ledger accounts in the **Account Class** window.
-    > - For more information, see the Analytical Accounting 8.0 Extensions Release document (AnalyticalAccounting.pdf) in the Great Plains\Documentation folder after you install Analytical Accounting. Or, visit [this Microsoft Web site](https://mbs.microsoft.com/customersource). After you log on to the Web site, click **Documentation**, click **User Guides**, and then click **Great Plains 8.0 User Guides**.
+    > - For more information, see the Analytical Accounting 8.0 Extensions Release document (AnalyticalAccounting.pdf) in the Great Plains\Documentation folder after you install Analytical Accounting. Or, visit [this Microsoft Web site](https://mbs2.microsoft.com/customersource). After you log on to the Web site, click **Documentation**, click **User Guides**, and then click **Great Plains 8.0 User Guides**.
 
 4. To adjust journal entries to add transaction dimension information, take one of the following actions:
 

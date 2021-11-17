@@ -81,4 +81,3 @@ In summary, the void process will return the invoice to open that the payment wa
 ## More information
 
 - Watch [video](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2013-features-on-youtube-check-it-out) clips for all the new features introduced in Microsoft Dynamics GP 2013
-- Access [Microsoft Dynamics GP 2013 Technical Readiness Information](https://mbs.microsoft.com/customersource/northamerica/GP/learning/documentation/user-guides/MDGP2013_TechnicalReadiness) page to find YouTube Video links and documentation for all new features

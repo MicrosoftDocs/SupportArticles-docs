@@ -100,8 +100,6 @@ A5 When Microsoft Dynamics GP starts, Microsoft Dynamics GP selects the default 
 
 1. Select the **ICA Client Options** tab in the properties of the published application, and then select to clear the **Start this application without waiting for printers to be created** check box.
 
-    For more information, see [Citrix support](https://support.citrix.com/article/ctx101856)
-
     Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.  
 
 2. Find the Dex.ini file in one of the following locations:
@@ -168,16 +166,12 @@ Some examples of non-proportional fonts that are available in Windows Vista incl
 > [!NOTE]
 > Many fonts have multiple versions. If a version of a font ends with "Che," the font is non-proportional.
 
-Q8: How can I control the printer font size in Microsoft Dynamics GP?
+Q8: How can I tell which font a report is printed in?
 
-A8 For more information about how to control the printer font size in Microsoft Dynamics GP, see [How to control the printer font size in Great Plains](https://support.microsoft.com/help/869078).
+A8 For more information about how to determine which font a report in printed in, see [Printer Fonts Selected by Dynamics](https://support.microsoft.com/help/870341).
 
-Q9: How can I tell which font a report is printed in?
+Q9: How does Report Writer decide which font to use when Best Text Fit is marked in the Report Definition window?
 
-A9 For more information about how to determine which font a report in printed in, see [Printer Fonts Selected by Dynamics](https://support.microsoft.com/help/870341).
-
-Q10: How does Report Writer decide which font to use when Best Text Fit is marked in the Report Definition window?
-
-A10 For more information about how Report Writer decides which font to use when Best Text Fit is marked in the Report Definition window, see [Font used when Best Text Fit is marked](https://support.microsoft.com/help/849370).
+A9 For more information about how Report Writer decides which font to use when Best Text Fit is marked in the Report Definition window, see [Font used when Best Text Fit is marked](https://support.microsoft.com/help/849370).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

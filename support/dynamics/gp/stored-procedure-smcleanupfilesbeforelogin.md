@@ -48,10 +48,10 @@ This problem may occur for any one of the following causes:
 3. Select **Database Engine Query**.
 4. Re-create the stored procedure. Then, run the script against the company database. The following files are available for download from the Microsoft Dynamics File Exchange Server.
 
-    - [The script for Microsoft Dynamics GP 2010](https://mbs.microsoft.com/fileexchange/?fileid=126d5922-43c0-4f3b-a02d-33b5bcca9e64)
-    - [The script for Microsoft Dynamics GP 10.0](https://mbs.microsoft.com/fileexchange/?fileid=a3792765-0deb-43cb-8db4-a620da3ee4c0)
-    - [The script for Microsoft Dynamics GP 9.0](https://mbs.microsoft.com/fileexchange/?fileid=0dc2a65d-8c06-4d41-b086-0ec8ee157bda)
-    - [The script for Microsoft Business Solutions - Great Plains 8.0](https://mbs.microsoft.com/fileexchange/?fileid=bb21a74f-aaa1-45c5-b85b-323b47dd680f)
+    - [The script for Microsoft Dynamics GP 2010](https://mbs2.microsoft.com/fileexchange/?fileid=126d5922-43c0-4f3b-a02d-33b5bcca9e64)
+    - [The script for Microsoft Dynamics GP 10.0](https://mbs2.microsoft.com/fileexchange/?fileid=a3792765-0deb-43cb-8db4-a620da3ee4c0)
+    - [The script for Microsoft Dynamics GP 9.0](https://mbs2.microsoft.com/fileexchange/?fileid=0dc2a65d-8c06-4d41-b086-0ec8ee157bda)
+    - [The script for Microsoft Business Solutions - Great Plains 8.0](https://mbs2.microsoft.com/fileexchange/?fileid=bb21a74f-aaa1-45c5-b85b-323b47dd680f)
 
 Microsoft scanned these files for viruses. Microsoft used the most current virus-detection software that was available on the date that these files were posted. The files are stored on security-enhanced servers that help prevent any unauthorized changes to the files.
 

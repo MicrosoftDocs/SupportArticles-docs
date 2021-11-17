@@ -89,7 +89,7 @@ To modify the IV Item Transaction Inquiry report to improve the system performan
 To view an example of the IV Item Transaction Inquiry report, follow these steps:
 
 1. Download the package file to the computer that is running Microsoft Dynamics GP. The following file is available for download from the Microsoft Dynamics File Exchange Server:
-    - [IVItemTransactionInquiry.zip](https://mbs.microsoft.com/fileexchange/?fileID=0a94a53b-c233-4fe6-9280-23c600ee9cfa)
+    - [IVItemTransactionInquiry.zip](https://mbs2.microsoft.com/fileexchange/?fileID=0a94a53b-c233-4fe6-9280-23c600ee9cfa)
 
     Release Date: October 18, 2007  
     Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.

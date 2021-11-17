@@ -34,7 +34,7 @@ To resolve this problem, use one of the following resolutions.
 
 To resolve this problem, install the EEO update for Microsoft Dynamics GP 10.0. To do it, download and run the following file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
 
-- [MicrosoftDynamicsGP-KB940507-v10-ENU.msp](https://mbs.microsoft.com/fileexchange/?fileid=c4a04a71-91d1-4ee5-b46d-60542fa60a33)
+- [MicrosoftDynamicsGP-KB940507-v10-ENU.msp](https://mbs2.microsoft.com/fileexchange/?fileid=c4a04a71-91d1-4ee5-b46d-60542fa60a33)
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 
@@ -60,7 +60,7 @@ You must restart the computer to apply the fixes that are contained in the EEO u
 
 To resolve this problem, install the EEO update for Microsoft Dynamics GP 9.0. To do it, download and run the following file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
 
-- [HR9.00.283.exe](https://mbs.microsoft.com/fileexchange/?fileid=a01e2334-a20b-4731-80e0-c554a6b0074a)
+- [HR9.00.283.exe](https://mbs2.microsoft.com/fileexchange/?fileid=a01e2334-a20b-4731-80e0-c554a6b0074a)
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 
@@ -91,7 +91,7 @@ To install the EEO update for Microsoft Dynamics GP 9.0, follow these steps:
 
 To resolve this problem, install the EEO update for Microsoft Business Solutions - Great Plains 8.0. To do it, download and run the following file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
 
-- [HR800g79.exe](https://mbs.microsoft.com/fileexchange/?fileid=b1817723-0a00-4e7a-b6fa-a107b8f79824)
+- [HR800g79.exe](https://mbs2.microsoft.com/fileexchange/?fileid=b1817723-0a00-4e7a-b6fa-a107b8f79824)
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 

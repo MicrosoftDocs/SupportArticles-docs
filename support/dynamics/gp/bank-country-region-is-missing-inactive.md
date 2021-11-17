@@ -108,6 +108,4 @@ This error message can occur if the VADCDTRO (Vendor Address Code - Remit To) fi
 
 ## References
 
-For more information about the EFT setup for Payables Management, see "Chapter 2: EFT setup for Payables Management" in the [Microsoft Dynamics GP Electronic Banking manual](https://mbs.microsoft.com/downloads/public/gp10docs/electronicbanking.pdf).
-
 For more information and troubleshooting tips to generate the EFT file for Payables Management in Microsoft Dynamics GP 10.0, see [KB - Guidelines to follow when you generate EFT files or EFT prenote files in Electronic Funds Transfer for Payables Management or Receivables Management in Microsoft Dynamics GP](https://support.microsoft.com/help/945955).

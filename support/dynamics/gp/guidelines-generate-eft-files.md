@@ -223,7 +223,7 @@ Q9: What if my bank uses a file format that varies slightly from one of the stan
 
 A9: The EFT file formats available in Microsoft Dynamics GP are set up to follow the US Government and NACHA (National Automated Clearing House Association) published formats. They're published standard requirements. The file formats currently offered in Microsoft Dynamics GP are coded to achieve the required **** fields in these standard formats. So if your bank requires a format that varies slightly from one of the standard formats offered in GP, or a more updated version of a format, you may need to pursue a consulting service for the customization.  In the meantime, you could check with the bank to see if they would make an exception, or accept any other formats that Dynamics GP can do (such as one of the standard NACHA formats), or edit the EFT file in Notepad before sending it to the bank.
 
-You can search the [Microsoft ISV Central](https://www.isv-central.com/search/vars.aspx) to find an ISV that may offer an EFT product compatible with Dynamics GP or could help you achieve a customization to meet your needs:
+You can search the [Microsoft ISV Central](https://www.microsoft.com/licensing/licensing-programs/isv-program) to find an ISV that may offer an EFT product compatible with Dynamics GP or could help you achieve a customization to meet your needs:
 
 Also enter a Product Suggestion in the [Ideas](https://experience.dynamics.com/ideas/) link so Microsoft can track it and consider this new functionality for a future enhancement.
 

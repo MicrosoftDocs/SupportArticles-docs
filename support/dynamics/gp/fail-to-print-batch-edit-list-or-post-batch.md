@@ -106,7 +106,7 @@ To retrieve the batches, follow these steps.
 
 1. Make a full backup of Microsoft Dynamics GP.
 2. Have all users log off from the system.
-3. Install the Professional Services Tools Library (PSTL). To do this, visit the [CustomerSource website](https://mbs.microsoft.com/customersource).
+3. Install the Professional Services Tools Library (PSTL).
 
     > [!NOTE]
     > This download is located under **Downloads and Updates, Service Packs & Product Releases, Professional Services Tools Library (PSTL) for Microsoft Dynamics (North America Only)**. Installation instructions are included with the download.

@@ -56,7 +56,7 @@ A1: Yes. Use the following service pack or hotfix pre-install checklist:
 4. Make sure that the Microsoft .NET Framework 1.1 is installed and up-to-date. Update the .NET Framework through Windows Update. Verify that the updates are installed by looking for Microsoft .NET Framework 1.1 in the **Add/Remove Programs** item in Control Panel.
 5. Update the Windows Scripts for Windows XP. This step isn't automatically done through Windows Update. However, you can follow this step by visiting one of the following Microsoft Web sites:
 
-    - [Windows Script 5.7 for Windows XP](https://www.microsoft.com/download/details.aspx?id=824)
+    - [Windows Script 5.7 for Windows XP](https://www.microsoft.com/download/details.aspx?id=8247)
 
     - [Windows Script 5.7 for Windows Server 2003](https://www.microsoft.com/download/details.aspx?id=24059)
 

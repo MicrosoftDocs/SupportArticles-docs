@@ -359,19 +359,13 @@ This article contains frequently asked questions about role-based security in Mi
   select * from DYNAMICS.dbo.SY10550 where SECMODALTID like 'CNV%'
   ```
 
-- **Q5: What should I consider before I convert the security?**
+- **Q5: When I convert the security, I receive a "The application at the location you specified is a different version than the database that you are attempting to convert. You must specify the location to the version X.0.0 application" error message. How can I resolve this problem?**
 
-  A5: See the Critical Updates area of the following Microsoft Web site: [MBS CustomerSource Retirement](https://mbs.microsoft.com/Pages/csretirement.aspx?printpage=false)
+  A5: To resolve this problem, review the resolution that Microsoft Knowledge Base article 935750 describes.
 
-  The Critical Updates area contains pre-update checks to run.
+- **Q6: How can I move security that I have set up in Microsoft Dynamics GP from my test environment to my live environment?**
 
-- **Q6: When I convert the security, I receive a "The application at the location you specified is a different version than the database that you are attempting to convert. You must specify the location to the version X.0.0 application" error message. How can I resolve this problem?**
-
-  A6: To resolve this problem, review the resolution that Microsoft Knowledge Base article 935750 describes.
-
-- **Q7: How can I move security that I have set up in Microsoft Dynamics GP from my test environment to my live environment?**
-
-  A7: To move security that you have set up in Microsoft Dynamics GP from a test environment to a live environment, follow these steps:
+  A6: To move security that you have set up in Microsoft Dynamics GP from a test environment to a live environment, follow these steps:
 
   1. Make a backup of the DYNAMICS database on both servers.
 
@@ -402,9 +396,9 @@ This article contains frequently asked questions about role-based security in Mi
 
   For more information about how to export and import tables from one environment to another environment, see [How to transfer setup information between company databases by using Microsoft SQL Server](https://support.microsoft.com/help/874208).
 
-- **Q8: How can I remove converted security task IDs and converted security role IDs after security has been converted?**
+- **Q7: How can I remove converted security task IDs and converted security role IDs after security has been converted?**
 
-  A8: The converted security tasks and roles are created to provide a starting point for security. However, you can implement customized roles and tasks later. If you do this, you do not need the converted security tasks and roles anymore. To remove all of the converted security tasks and roles, run the following statements in Management Studio or in Query Analyzer:
+  A7: The converted security tasks and roles are created to provide a starting point for security. However, you can implement customized roles and tasks later. If you do this, you do not need the converted security tasks and roles anymore. To remove all of the converted security tasks and roles, run the following statements in Management Studio or in Query Analyzer:
 
   ```sql
   DELETE DYNAMICS..SY09000 WHERE SECURITYTASKID LIKE 'CNV%'
@@ -436,7 +430,7 @@ This article contains frequently asked questions about role-based security in Mi
 
     7. Click **Save**.
 
-  For more information, see [Error message when you use the Payroll Clerk security role to calculate payroll checks Microsoft Dynamics GP: "You don’t have security privileges to open this window”](https://support.microsoft.com/help/942007).
+  For more information, see [Error message when you use the Payroll Clerk security role to calculate payroll checks Microsoft Dynamics GP: "You don't have security privileges to open this window"](https://support.microsoft.com/help/942007).
 
 - **Q2: When I open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP 10.0, I receive a "You don't have security privileges to open this window. Contact your system administrator for assistance" error message. How can I resolve this problem?**
 

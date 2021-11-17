@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 3065253
 
 A supported update rollup for Microsoft Management Reporter is now available.
 
-If you have questions about how to install this rollup, contact Technical Support for Microsoft Dynamics. On to the Microsoft Dynamics Support website, you can [file a new support request](https://mbs.microsoft.com/support/newstart.aspx).
+If you have questions about how to install this rollup, contact Technical Support for Microsoft Dynamics. On to the Microsoft Dynamics Support website, you can [file a new support request](https://mbs2.microsoft.com/support/newstart.aspx).
 
 > [!NOTE]
 > When you create a support request, select Financial - Management Reporter 2012 as the Support Topic.
@@ -28,7 +28,3 @@ You can also contact Technical Support for Microsoft Dynamics by telephone at (8
 ### Prerequisites
 
 Before you install Management Reporter, your system must meet the minimum requirements as listed in the [Management Reporter 2012 for Microsoft Dynamics ERP: Installation, Migration, and Configuration Guides](https://www.microsoft.com/download/details.aspx?id=5916).
-
-### Fixes in the cumulative update
-
-For a complete list of fixes included in CU12, see [here](https://mbs.microsoft.com/files/customer/mgmtreporter/learning/documentation/userguides/managementreportercu12fixlist.pdf).

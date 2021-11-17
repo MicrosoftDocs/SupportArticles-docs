@@ -59,6 +59,6 @@ For Microsoft Dynamics GP 2013, to run the scripts to delete the company databas
     3. To run the query, click the green arrow button on the toolbar.
 
     > [!NOTE]
-    > If the company database was deleted in SQL Server Enterprise Manager or in SQL Server Management Studio before it was deleted from Microsoft Dynamics GP, you must remove the orphaned records. To remove the orphaned records, run the following  [ClearCompanies.sql](https://mbs.microsoft.com/Files/customer/GP/Downloads/TaxUpdates/ClearCompanies.sql) script in SQL Query Analyzer or in SQL Server Management Studio.
+    > If the company database was deleted in SQL Server Enterprise Manager or in SQL Server Management Studio before it was deleted from Microsoft Dynamics GP, you must remove the orphaned records.
 
 An automated solution that deletes a company in Microsoft Dynamics GP may be available. All automated solutions are not available for all product versions.

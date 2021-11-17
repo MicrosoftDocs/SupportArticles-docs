@@ -30,7 +30,7 @@ This problem occurs for one of the following reasons:
 
 To resolve this problem, install the Microsoft SQL Server 2005 Backward Compatibility stand-alone package. To do this, follow these steps:
 
-1. Download the [Microsoft SQL Server Backward Compatibility stand-alone package](https://download.microsoft.com/download/f/7/4/f74cbdb1-87e2-4794-9186-e3ad6bd54b41/sqlserver2005_bc.msi).
+1. Download the Microsoft SQL Server Backward Compatibility stand-alone package.
 
 2. Double-click the SQLServer2005_BC.msi file that you downloaded in step 1, and then follow the Microsoft SQL Server Backward Compatibility Installation Wizard to install Microsoft SQL Server Backward Compatibility.
 

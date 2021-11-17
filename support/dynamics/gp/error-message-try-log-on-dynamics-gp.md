@@ -97,11 +97,9 @@ The logon **User ID** field is now case-sensitive in Microsoft Dynamics GP. To r
 
 ### Resolution 3
 
-To resolve this problem, obtain the latest service pack for Microsoft Dynamics GP. For more information, visit one of the following Microsoft Web sites, depending on whether you are a partner or a customer.
+To resolve this problem, obtain the latest service pack for Microsoft Dynamics GP. For more information, visit the following Microsoft Web site.
 
 - [Partners](https://mbs2.microsoft.com/userinfo/associateaccount.aspx)
-
-- [Customers](https://mbs.microsoft.com/Pages/csretirement.aspx)  
 
 ### Resolution 4
 
@@ -168,19 +166,15 @@ Have the system administrator remove the mandatory profile.
 
 #### Microsoft Dynamics GP 9.0
 
-Obtain hotfix 947362 or the latest update. For more information, visit one of the following Microsoft Web sites, depending on whether you are a partner or a customer.
+Obtain hotfix 947362 or the latest update. For more information, visit the following Microsoft Web site.
 
 - [Partners](https://partner.microsoft.com/solutions/business-applications/dynamics-onprem?printpage=false)
 
-- [Customers](https://mbs.microsoft.com/Pages/csretirement.aspx)
-
 ### Resolution 7
 
-To resolve this problem, obtain the Microsoft Small Business Financials 9.0 logon hotfix. For more information, visit one of the following Microsoft Web sites, depending on whether you are a partner or a customer.
+To resolve this problem, obtain the Microsoft Small Business Financials 9.0 logon hotfix. For more information, visit the following Microsoft Web site.
 
 - [Partners](https://mbs2.microsoft.com/userinfo/associateaccount.aspx)
-
-- [Customers](https://mbs.microsoft.com/Pages/csretirement.aspx)
 
 ### Resolution 8
 

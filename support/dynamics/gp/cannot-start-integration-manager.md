@@ -44,7 +44,7 @@ Select to install Integration Manager under **Additional Products**.
 
 If the Integration Manager or Run Integration menu options are grayed out, verify the registration keys are entered correctly in Integration Manager:
 
-Verify the registration keys from [CustomerSource](https://mbs.microsoft.com/customersource).
+Verify the registration keys from Customer Source.
 
 To verify registration keys in Integration Manager:
 
@@ -54,7 +54,7 @@ To verify registration keys in Integration Manager:
 
 If the Integration Manager or Run Integration menu options are grayed out, verify the registration keys are entered correctly in Microsoft Dynamics GP:
 
-Verify the registration keys from [CustomerSource](https://mbs.microsoft.com/customersource).
+Verify the registration keys from Customer Source.
 
 To verify registration keys in Microsoft Dynamics GP:
 
