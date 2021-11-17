@@ -80,11 +80,13 @@ The following Knowledge Base articles discuss how to prevent copying custom styl
 
 To clean up workbooks that already contain several styles, you can use one of the following third-party tools.
 
-- Excel formats (xlsx, xlsm)  
-    [XLStyles Tool](https://sergeig888.wordpress.com/2011/03/21/net4-0-version-of-the-xlstylestool-is-now-available/)
+- Excel formats (xlsx, xlsm)
+
+  [XLStyles Tool](https://sergeig888.wordpress.com/2011/03/21/net4-0-version-of-the-xlstylestool-is-now-available/)
 
 - Binary Excel formats (xls, xlsb), workbooks protected by a password, and encrypted workbooks  
-    [Remove Styles Add-in](https://ro.softpedia-secure-download.com/dl/8cf59470c56d8c59ef33441743129a81/61946f8e/100232879/software/OFFICE%20TOOLS/RemoveStyles.xlam)
+
+  [Remove Styles Add-in](https://ro.softpedia-secure-download.com/dl/8cf59470c56d8c59ef33441743129a81/61946f8e/100232879/software/OFFICE%20TOOLS/RemoveStyles.xlam)
 
 > [!NOTE]
 > You can also download a copy of XLStyles Tool for Windows 10, Windows 8.1, and Windows 8 from [the Microsoft Store](https://www.microsoft.com/store/apps/xlstylestool/9wzdncrfjptg).
