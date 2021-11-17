@@ -32,7 +32,7 @@ Critical software update data relies on the state messaging system in Configurat
 
 The following diagram provides a good description of how the state messaging system works.
 
-:::image type="content" source="./media/state-messaging-description/diagram.png" alt-text="Screenshot of the diagram.":::
+:::image type="content" source="media/state-messaging-description/system-workflow.png" alt-text="Diagram shows how the state messaging system works.":::
 
 The green box represents the state messaging system. The components inside the box are components that feed information to the system.
 
@@ -156,7 +156,7 @@ For more information, see [State messages in Configuration Manager](/mem/configm
 
 The following example aligns and compares the Updatesdeployment.log and Statemessage.log files. Make sure that the logs refer to the same state message by aligning the same `TopicID` (green text). It clearly indicates that the two logs are referring to the same state message. The `TopicType` is shown in light blue text. Notice that one log might show the actual number that can be interpreted from the [State messaging data](#state-messaging-data) chart. The other might show a generic value (already interpreted). The **State Message ID** (`StateId`) is shown in purple text.
 
-:::image type="content" source="./media/state-messaging-description/logs.png" alt-text="Screenshot of log messages.":::
+:::image type="content" source="media/state-messaging-description/logs.png" alt-text="Screenshot shows the details of the log messages.":::
 
 By combining the `TopicType` and **State Message ID** (`StateId`) from the chart, you can track exactly what's occurring in the logs. In this example, these code examples show the following information:
 
@@ -178,15 +178,15 @@ In WMI, state messages are stored in the `root\ccm\statemsg` namespace. In that 
 
 The `CCM_StateMsg_SerialNum` class is used to record the last serial number that's used for a state message. Every state message has a unique serial number, similar to the hardware inventory. In this manner, the site server can keep track of whether it's missing any state messages from the system. It's important because missing state messages may cause incomplete or inaccurate state reporting.
 
-:::image type="content" source="./media/state-messaging-description/class.png" alt-text="Screenshot of CCM_StateMsg_SerialNum class.":::
+:::image type="content" source="media/state-messaging-description/class.png" alt-text="Screenshot of the CCM_StateMsg_SerialNum class." border="false":::
 
 The `CCM_StateMsg` class contains the state messages themselves. In the class instance, you can find all the state messages that are recorded.
 
-:::image type="content" source="./media/state-messaging-description/class-instance.png" alt-text="Instances of CCM_StateMsg.":::
+:::image type="content" source="media/state-messaging-description/class-instance.png" alt-text="Screenshot of the CCM_StateMsg instance." border="false":::
 
 If you open one of these messages, you'll find the details of the state message and some data that we previously discussed, as shown in the following example.
 
-:::image type="content" source="./media/state-messaging-description/details.png" alt-text="Details of the state message.":::
+:::image type="content" source="media/state-messaging-description/details.png" alt-text="Screenshot shows the details of the state message." border="false":::
 
 We can resend the data to the management point, and track its progress by using the following resync scripts.
 
@@ -210,7 +210,7 @@ This script can be found on the web in various locations. It uses the Configurat
 
 Typically, a Visual Basic script (VBScript) is run by using `cscript`. Notice that the script may fail if you try to run it yourself. The problem is that Configuration Manager is a 32-bit application that's running on a 64-bit server. The default version of `cscript` is the 64-bit version and generally works fine with any VBScript. However, in this case, the call that's being made requires the 32-bit version of `cscript` that you must run out of the syswow64 folder.
 
-:::image type="content" source="./media/state-messaging-description/cscript-command.png" alt-text="Screenshot of administrator command prompt." border="false":::
+:::image type="content" source="media/state-messaging-description/cscript-command.png" alt-text="Screenshot of administrator command prompt running cscript." border="false":::
 
 When the next state message polling cycle occurs, all state messages are sent to the management point.
 
@@ -242,7 +242,7 @@ When the data arrives for processing at `MP_Relay`, it's processed and translate
 
 In the `auth\statesys.box\incoming` folder, you can see the *`.smx`* files being processed. Typically, you won't see them here. But if the files remain in this folder, you need to investigate what the messages are and why they aren't being processed. If you find an *`.smx`* file, you can open it by using a text editor such as Notepad to see the details. However, the formatting of the file may be unreadable, as in the following example:
 
-:::image type="content" source="./media/state-messaging-description/notepad-example.png" alt-text="An example of SMX file in Notepad." border="false":::
+:::image type="content" source="media/state-messaging-description/notepad-example.png" alt-text="Screenshot of an example SMX file in Notepad." border="false":::
 
 If you rename the *`.smx`* file by adding the *`.xml`* extension so that the file is named *file_name*.smx.xml, and then you double-click the new file name, the XML file is opened in Internet Explorer and is much easier to read.
 
@@ -251,7 +251,7 @@ The following image is an example of an XML file opened in Internet Explorer. Th
 > [!NOTE]
 > If you rename these files, first copy them to a different folder so that you don't affect the *Statesys.box* folder.
 
-:::image type="content" source="./media/state-messaging-description/xml.png" alt-text="An example .smx.xml file in Internet Explorer." border="false":::
+:::image type="content" source="media/state-messaging-description/xml.png" alt-text="Screenshot of an example .smx.xml file in Internet Explorer." border="false":::
 
 Finally, the state messages must be processed into the database. In the *Statesys.log* file, you can see such messages similar to the following example:
 
