@@ -4,7 +4,7 @@ description: Provides information to help you fast and secure transfer files wit
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: storage
+ms.service: azure
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
