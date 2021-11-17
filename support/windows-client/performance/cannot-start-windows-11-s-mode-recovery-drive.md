@@ -19,7 +19,7 @@ Windows 11 in S mode has security policies that ensure the system runs securely.
 
 ## Copy the policy file from the recovery drive
 
-Follow these steps to check if the recovery drive includes the policy file, then copy the file to a designated location of the drive.
+Follow these steps to check whether the recovery drive includes the policy file, and then copy the file to a designated location of the drive.
 
 1. Insert or connect the recovery drive to your computer.
 2. Open **File Explorer**, go to the *\<Recovery Drive\>:\\EFI\\Microsoft\\Boot* folder, and check if the *winsipolicy.p7b* file is in the folder.
