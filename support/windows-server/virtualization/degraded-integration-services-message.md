@@ -28,7 +28,7 @@ While running a non-Windows guest such as Linux on Hyper-V, the Hyper-V manageme
 
 While running a non-Windows guest such as Linux on Hyper-V, the Hyper-V management console may display messages similar to the one shown below:
 
-:::image type="content" source="./media/degraded-integration-services-message/message-hyper-v-management-console.PNG" alt-text="Message displays after running a non-Windows guest.":::
+:::image type="content" source="./media/degraded-integration-services-message/degraded-message-in-hyper-v-management-console.png" alt-text="A degraded message displays after running a non-Windows guest.":::
 
 Furthermore, upon examination of the Windows server event log, you may also observe messages in the format shown below:
 
