@@ -142,7 +142,7 @@ The same setting (without editing the policy) after an ADMX upgrade to 1607d
 
 If the SmartScreen setting is enabled, and the **Require approval from an administrator before running downloaded unknown software** option is selected, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-1.png" alt-text="Screenshot shows the Configure Windows SmartScreen policy is enabled.":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-1.png" alt-text="Screenshot shows the Configure Windows SmartScreen policy is enabled and there is a Pick one of the following settings box with 1 item under this policy.":::
 
 After you upgrade the templates directly without changing the policy, you see:
 
