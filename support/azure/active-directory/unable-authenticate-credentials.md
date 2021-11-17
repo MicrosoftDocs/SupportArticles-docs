@@ -4,6 +4,8 @@ description: Describes an issue that triggers an Unable to authenticate your cre
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # "Unable to authenticate your credentials" error when you try to connect to Azure Active Directory
 

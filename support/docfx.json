@@ -77,7 +77,8 @@
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md":"helenclu",
         "dynamics-365/**/*.md":"David-Pack",
-        "power-platform/**/*.md":"David-Pack"
+        "power-platform/**/*.md":"David-Pack",
+        "dynamics/gp/*.md": "David-Pack"
       },
       "ms.author": {
         "**/*.md": "ramakoni",
@@ -87,7 +88,8 @@
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
         "dynamics-365/**/*.md": "davidpac",
-        "power-platform/**/*.md": "davidpac"
+        "power-platform/**/*.md": "davidpac",
+        "dynamics/gp/*.md": "davidpac"
       },
       "ms.localizationpriority": {
         "**/*.md": "medium"
@@ -117,7 +119,8 @@
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "browsers/**/*.md": "internet-explorer"
+        "browsers/**/*.md": "internet-explorer",
+        "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
@@ -207,7 +210,8 @@
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
         "power-platform/power-apps/*.md": "Power Apps",
-        "power-platform/power-automate/*.md": "Power Automate"
+        "power-platform/power-automate/*.md": "Power Automate",
+        "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
         "biztalk/**/*.md": [ "BizTalk Server" ],

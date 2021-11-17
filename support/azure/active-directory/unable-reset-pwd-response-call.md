@@ -4,6 +4,8 @@ description: Describes a problem in which you receive an error message when you 
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Error when trying to reset password in Azure, Office 365, or Intune: We did not receive your response in time, or you hung up the call
 

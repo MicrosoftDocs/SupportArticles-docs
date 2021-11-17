@@ -4,6 +4,8 @@ description: Describes an error message that you receive when you run the Azure 
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: aconkle
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you run the Azure Active Directory Sync tool configuration wizard: Failed to get address for method: CreateIdentityHandle2
 
