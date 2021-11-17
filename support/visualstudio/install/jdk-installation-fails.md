@@ -4,6 +4,7 @@ description: You can't install JDK package in Visual Studio 2017. To solve this 
 ms.date: 04/20/2020
 ms.prod-support-area-path: Third Party Tools installed with Visual Studio
 ms.reviewer: vyedin
+ms.technology: vs-installation-general
 ---
 # Error for installation of JDK in Visual Studio 2017: Failed to download
 

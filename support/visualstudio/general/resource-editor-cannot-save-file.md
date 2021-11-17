@@ -2,8 +2,9 @@
 title: Visual Studio 2012 can't save file
 description: This article describes the problem that VS 2012 can't save file while using Resource Editor, and provides a solution.
 ms.date: 04/23/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: ScotBren, NSuhas
+ms.technology: vs-general
 ---
 # Visual Studio 2012 can't save file while you use Resource Editor
 

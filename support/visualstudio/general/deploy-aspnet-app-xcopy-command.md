@@ -4,6 +4,7 @@ description: Describes how to use the MS-DOS Xcopy command to deploy a Microsoft
 ms.date: 04/22/2020
 ms.prod-support-area-path: Language or compilers
 ms.topic: how-to
+ms.technology: vs-language-compilers
 ---
 # Deploy an ASP.NET web application by using Xcopy deployment  
 

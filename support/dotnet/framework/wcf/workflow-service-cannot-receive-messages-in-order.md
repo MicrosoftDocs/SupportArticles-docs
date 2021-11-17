@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem where Windows Wor
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: smason
+ms.technology: dotnet-wcf
 ---
 # A Windows Workflow Services service has multiple sequential Receives may not receive messages in order
 

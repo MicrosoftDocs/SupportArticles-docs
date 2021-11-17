@@ -4,6 +4,7 @@ description: Outlines the SDP for System.Net trace.
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: pphadke
+ms.technology: dotnet-general
 ---
 # System.Net SDP package information
 

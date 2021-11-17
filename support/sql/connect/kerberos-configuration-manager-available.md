@@ -5,7 +5,7 @@ ms.date: 01/14/2021
 ms.prod-support-area-path: Connection issues
 ms.reviewer: sunilbs, asaxton, daleche
 ms.topic: article
-ms.prod: sql 
+ms.technology: sql-engine-connectionissues 
 ---
 # Kerberos Configuration Manager for SQL Server is available
 
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2985455
 
 This tool is available for download from the Microsoft Download Center:
 
-[Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)
+[Microsoft&reg; Kerberos Configuration Manager for SQL Server&reg;](https://www.microsoft.com/download/details.aspx?id=39046)
 
 The Kerberos Configuration Manager for SQL Server is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with SQL Server, SQL Server Reporting Services (SSRS), and SQL Server Analysis Services (SSAS). It can perform the following functions:
 
