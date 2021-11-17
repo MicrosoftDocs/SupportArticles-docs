@@ -264,7 +264,7 @@ DBCC Traceon (1204,3605 -1)
 
 ### The SQLDIAG tool
 
-Create a Sqldiag.txt output file when you reproduce the performance issue. For more information, see [Description of the SQLDIAG diagnostic tool](https://docs.microsoft.com/sql/tools/sqldiag-utility).
+Create a *Sqldiag.txt* output file when you reproduce the performance issue. For more information, see [Description of the SQLDIAG diagnostic tool](/sql/tools/sqldiag-utility).
 
 ### The Application log
 
