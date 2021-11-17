@@ -26,19 +26,19 @@ Assume that you have a Windows 7-based system with system restore points set, an
 
 Windows 7 Disk Size:
 
-:::image type="content" source="./media/system-restore-points-disabled/disk-size.jpg" alt-text="Screenshot of Windows 7 Disk Size.":::
+:::image type="content" source="media/system-restore-points-disabled/disk-size.png" alt-text="Screenshot of Windows 7 Disk Size in Windows Explorer.":::
 
 Restore points on Windows 7:
 
-:::image type="content" source="./media/system-restore-points-disabled/restore-points-before-upgrade.jpg" alt-text="Screenshot of restore points before upgrade.":::
+:::image type="content" source="media/system-restore-points-disabled/restore-points-before-upgrade.png" alt-text="Screenshot of restore points before upgrade.":::
 
 Restore points after you upgrade to Windows 10:
 
-:::image type="content" source="./media/system-restore-points-disabled/restore-points-after-upgrade.jpg" alt-text="Screenshot of restore points after upgrade.":::
+:::image type="content" source="media/system-restore-points-disabled/restore-points-after-upgrade.png" alt-text="Screenshot of restore points after upgrade.":::
 
 Querying the System Restore via PowerShell:  
 
-:::image type="content" source="./media/system-restore-points-disabled/query-system-restore.jpg" alt-text="Screenshot of querying System Restore.":::
+:::image type="content" source="media/system-restore-points-disabled/query-system-restore.png" alt-text="Screenshot of the output of the querying System Restore command in Windows PowerShell.":::
 
 ## Cause
 
