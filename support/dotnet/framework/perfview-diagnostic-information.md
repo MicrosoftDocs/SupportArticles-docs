@@ -2,7 +2,8 @@
 title: Information collected by PerfView
 description: List information that's collected by the PerfView diagnostic tool.
 ms.date: 05/08/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
+ms.technology: dotnet-general
 ---
 # Information collected by PerfView
 

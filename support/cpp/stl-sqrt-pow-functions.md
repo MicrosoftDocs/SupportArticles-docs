@@ -4,6 +4,7 @@ description: Describes how to use the STL sqrt function and the STL pow function
 ms.date: 04/24/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Use the STL sqrt and pow functions in Visual C++
 

@@ -3,7 +3,7 @@ title: Resolving connectivity errors
 description: This article provides resolutions to troubleshoot various connectivity issues to SQL server.
 ms.date: 08/11/2020
 ms.prod-support-area-path: Connection issues
-ms.prod: sql
+ms.technology: sql-engine-connectionissues
 ---
 # Resolving connectivity errors to SQL Server
 

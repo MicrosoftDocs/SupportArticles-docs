@@ -4,6 +4,7 @@ description: Connect customer tries to use DEBUG_ADDRESS structure in a Managed 
 ms.date: 04/27/2020
 ms.prod-support-area-path: Debuggers and analyzers
 ms.reviewer: raviuppa, ruisun, lukim
+ms.technology: csharp-debuggers
 ---
 # Visual Studio crashes when Microsoft.VisualStudio.Debugger.Interop.IDebugAddress.GetAddress() is invoked
 

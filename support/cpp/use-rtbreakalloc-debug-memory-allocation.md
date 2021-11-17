@@ -4,6 +4,7 @@ description: This article describes how to use _crtBreakAlloc to debug a memory 
 ms.date: 10/27/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Use _crtBreakAlloc to debug a memory allocation
 

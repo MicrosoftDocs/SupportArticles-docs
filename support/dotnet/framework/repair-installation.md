@@ -5,6 +5,7 @@ ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: V-JEFFBO
 ms.topic: how-to
+ms.technology: dotnet-general
 ---
 # Repair an existing installation of .NET Framework
 
