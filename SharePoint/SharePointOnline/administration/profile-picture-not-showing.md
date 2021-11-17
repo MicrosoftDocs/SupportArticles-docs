@@ -51,10 +51,10 @@ The diagnostic performs a large range of verifications for users who may not be 
 
 Check for the picture to trigger a sync between Exchange Online and SharePoint Online:
 
-1. Add the user(s) who are missing a photo in SharePoint Online to an existing People web part or create a new page and add the user to a People web part using [Show people profiles on your page with the People web part](https://support.microsoft.com/office/show-people-profiles-on-your-page-with-the-people-web-part-7e52c5f6-2d72-48fa-a9d3-d2750765fa05)
+1. Add the users who are missing a photo in SharePoint Online to an existing People web part or create a new page and add the user to a People web part using [Show people profiles on your page with the People web part](https://support.microsoft.com/office/show-people-profiles-on-your-page-with-the-people-web-part-7e52c5f6-2d72-48fa-a9d3-d2750765fa05).
 1. In a private (InPrivate/Incognito) browser session, ask each user to browse to the location where they were added to the People web part.
 
-If all these steps have been completed and the photo is not showing within 24 hours of retrying the steps, contact your Microsoft 365 Administrator. If you aren’t sure who that is, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
+If all these steps have been completed and the photo isn't showing within 24 hours of retrying the steps, contact your Microsoft 365 Administrator. If you aren’t sure who that is, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
     
 </details>
 
