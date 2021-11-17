@@ -4,6 +4,8 @@ description: Fixes the account lockout issue that occurs in Microsoft Active Dir
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Troubleshoot account lockout in AD FS on Windows Server
 

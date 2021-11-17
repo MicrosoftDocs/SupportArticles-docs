@@ -2,7 +2,9 @@
 title: Troubleshoot dynamic groups
 description: Diagnose and resolve issues with dynamic groups.
 ms.date: 12/10/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Troubleshoot dynamic groups
 

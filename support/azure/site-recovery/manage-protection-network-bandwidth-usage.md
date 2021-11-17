@@ -3,7 +3,7 @@ title: How to manage on-premises to Azure protection network bandwidth usage
 description: Describes the steps that administrators can take to limit network bandwidth usage while using Azure Site Recovery on-premises to Microsoft Azure protection.
 ms.date: 10/10/2020
 ms.prod-support-area-path: 
-ms.service: backup
+ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: anbacker, markstan

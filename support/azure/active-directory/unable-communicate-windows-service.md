@@ -4,6 +4,8 @@ description: Provides information about troubleshooting a problem in which your 
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when Azure AD Connect cannot authenticate to Azure AD: Unable to communicate with the Windows Azure Active Directory service
 

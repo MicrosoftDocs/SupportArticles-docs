@@ -4,6 +4,8 @@ description: Describes an issue in which users can no longer access Office 365, 
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: dahans
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Users can no longer sign in after you run the Convert-MSOLDomaintoFederated command to convert an existing domain
 

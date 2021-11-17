@@ -6,6 +6,8 @@ author: genlin
 ms.author: genli
 ms.reviewer: riantu, nualex, wufrank
 editor: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 
 # Table-valued parameter errors after Azure AD Connect is installed on Windows Server 2019

@@ -4,6 +4,8 @@ description: Describes that users have to use a separate password to sign in to 
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Separate passwords required for the computer and work or school account when using password synchronization and the Azure Active Directory sync tool
 

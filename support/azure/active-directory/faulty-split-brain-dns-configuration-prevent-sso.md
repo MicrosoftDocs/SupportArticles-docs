@@ -4,6 +4,8 @@ description: Describes the conditions in which Active Directory Federation Servi
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # A faulty split-brain DNS configuration can prevent a seamless SSO sign-in experience
 

@@ -4,6 +4,8 @@ description: Discusses an issue in which an Office 365 admin who has Azure Activ
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # You don't receive a text or voice call that contains the verification code for Azure AD Multi-Factor Authentication
 
