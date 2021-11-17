@@ -31,7 +31,7 @@ BitLocker will close now. Contact the help desk of your company if you need addi
 > Details  
 Error taking ownership of the TPM.
 
-:::image type="content" source="./media/error-mbam-take-ownership-tpm/bitlocker-encrypt-error.png" alt-text="Screenshot of the error.":::
+:::image type="content" source="./media/error-mbam-take-ownership-tpm/bitlocker-encrypt-error.png" alt-text="The details of the BitLocker drive encryption has a problem and must close error.":::
 
 ## Cause
 

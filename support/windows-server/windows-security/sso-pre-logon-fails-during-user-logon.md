@@ -28,7 +28,7 @@ Wireless and Wired 802.1**x** Authentication fails on the first logon attempt af
 
 The message window resembles the following screenshot.
 
-:::image type="content" source="./media/sso-pre-logon-fails-during-user-logon/logon-error-message.png" alt-text="Message window displays.":::
+:::image type="content" source="./media/sso-pre-logon-fails-during-user-logon/logon-error-message.png" alt-text="The error message window that shows the no logon servers available to service the logon request error.":::
 
 ## Cause
 
