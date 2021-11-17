@@ -4,6 +4,7 @@ description: This article describes a problem where NuGet-Based Microsoft Packag
 ms.date: 04/27/2020
 ms.prod-support-area-path: Tools and utilities
 ms.reviewer: riande
+ms.technology: vs-tools-utilities
 ---
 # NuGet-Based Microsoft Package Manager is missing or out of date
 

@@ -3,8 +3,9 @@ title: Adding references to a managed C++ project
 description: Describes how to add references to a managed Visual C++ project.
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
-ms.reviewer: jianges, jroth 
+ms.reviewer: jianges, jroth
 ms.topic: how-to
+ms.technology: visual-cpp-general
 ---
 # Add references to a managed Visual C++ project  
 
