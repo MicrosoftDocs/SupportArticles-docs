@@ -4,6 +4,8 @@ description: Describes a scenario in which a federated user is prompted unexpect
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Federated user is prompted unexpectedly to enter account credentials
 
