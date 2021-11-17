@@ -946,6 +946,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics/gp/index.md",
+      "redirect_url": "/support/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/sql/performance/performance-consistency-issues.md",
       "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
       "redirect_document_id": true
