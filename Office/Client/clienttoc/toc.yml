@@ -311,8 +311,8 @@
           href: ../activation/office-2010-product-key-change-error.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
-        - name: Microsoft 365 Apps activation Unlicensed product error
-          href: ../activation/unlicensed-product-error.md
+        - name: Sign in issues when activating Microsoft 365 Apps
+          href: ../activation/sign-in-issues.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
     - name: End of Support
