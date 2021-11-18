@@ -49,7 +49,7 @@ To fix this issue, follow these steps:
 1. Check if the `ArchiveGUID` property matches on both locations.
     - If yes, continue Step 3.
     - If no, create a support request to Microsoft for further investigation.
-1. [Backup the on-premises archive mailbox and export to a .pst file](/exchange/recipients/mailbox-import-and-export/export-procedures?view=exchserver-2019#create-mailbox-export-requests).
+1. [Backup the on-premises archive mailbox and export to a .pst file](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
 1. Run the following cmdlet to add the `ArchiveDomain` parameter back on the affected mailbox by the Exchange Management Shell:
     ```powershell
     Set-ADUser <on-premises user mailbox> -Add @{msExchArchiveaddress="contoso.mail.onmicrosoft.com"}
