@@ -35,7 +35,7 @@ The diagnostic performs a large range of verifications for users who may not be 
   > [!NOTE]
   > Microsoft is seeking to collect feedback on Microsoft 365 diagnostics. If you choose to run the Picture Sync diagnostic, you can provide feedback through the following link: 
   >
-  > [Picture Sync Diagnostic Feedback](https://forms.office.com/r/ae2sgsgDhB)
+  > [Picture Sync Diagnostic Feedback](https://forms.office.com/r/1TLidCz9VX)
 
 ## Resolution Option 2: Select the most relevant option below and follow the steps
 
