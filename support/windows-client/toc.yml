@@ -556,6 +556,8 @@
     items:
     - name: Additional gateways appear in persistent routes
       href: ./networking/incorrect-default-gateways-in-persistent-routes.md
+    - name: Can't install the SNMP and WMI SNMP Provider features
+      href: ./networking/cannot-install-snmp-wmisnmpprovider.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
