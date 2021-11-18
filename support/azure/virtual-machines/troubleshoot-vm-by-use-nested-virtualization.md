@@ -30,7 +30,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     -  Operating system: Windows Server 2016 Datacenter
 
-    -  Size: Any V3 series with at least two cores that support nested virtualization. For more information, see [Introducing the new Dv3 and Ev3 VM sizes](https://azure.microsoft.com/blog/introducing-the-new-dv3-and-ev3-vm-sizes/).
+    -  Size: Select a series that supports nested virtualization. For example: [Dv3](dv3-dsv3-series.md) or [Dv4](dv4-dsv4-series.md).
 
     -  Same location, Storage Account, and Resource Group as the faulty VM.
 
