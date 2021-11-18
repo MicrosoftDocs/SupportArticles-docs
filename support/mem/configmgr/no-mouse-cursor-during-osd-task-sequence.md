@@ -36,27 +36,26 @@ To make this change, use the following method to manually set the task sequence:
 
 1. In the Configuration Manager console under **Software Library** > **Operating Systems** > **Task Sequences**, navigate to the affected task sequence.
 
-   ![Locate affected task sequence in Task Sequences.](./media/no-mouse-cursor-during-osd-task-sequence/locate-affected-task-sequence.png)
+   :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/affected-task-sequence.png" alt-text="Screenshot shows the steps to locate the affected task sequence.":::
 
 2. Right-click the affected task sequence, and select **Edit**.
 
-   ![Right-click to edit the task sequence.](./media/no-mouse-cursor-during-osd-task-sequence/edit.png)
-
+   :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/edit.png" alt-text="Screenshot shows the right-click menu to edit the task sequence.":::
 3. In the affected task sequence, select the **Apply Operating System** task.
 
-   ![Select the Apply Operating System task.](./media/no-mouse-cursor-during-osd-task-sequence/apply-operating-system-task.png)
+   :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/apply-operating-system-task.png" alt-text="Screenshot shows the Apply Operating System task properties.":::
 
 4. Add a new group immediately after the **Apply Operating System** task. To do this, open the **Add** menu, and select **New Group**.
 
-   :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/new-group.png" alt-text="Add new group.":::
+   :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/new-group.png" alt-text="Screenshot shows the right-click menu to add a new group for Apply Operating System task.":::
 
 5. Select the newly created group, and rename it to **Correct Missing Mouse Cursor**.
 
-   ![Rename new group](./media/no-mouse-cursor-during-osd-task-sequence/rename.png)**  
+   :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/rename.png" alt-text="Screenshot shows the Correct Missing Mouse Cursor group properties where you can rename it.":::
 
 6. Under the **Correct Missing Mouse Cursor** group, add a **Run Command Line** task. To do this, open the **Add** menu, and then select **General** > **Run Command Line**.
 
-   :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/add-task.png" alt-text="Add Run Command Line task.":::
+   :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/add-task.png" alt-text="Screenshot shows the right-click menu to add a Run Command Line task for Correct Missing Mouse Cursor group.":::
 
 7. Select the newly created **Run Command Line** task, and specify the following values:
 
@@ -65,11 +64,11 @@ To make this change, use the following method to manually set the task sequence:
 
      `reg.exe load HKLM\Temp %OSDTargetSystemDrive%\Windows\system32\config\software`
 
-   :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/specify-values.png" alt-text="Specify name and Command line.":::
+   :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/specify-values.png" alt-text="Screenshot shows the Load Registry SOFTWARE Hive task properties where you can specify the name and Command line.":::
 
 8. Immediately after the **Load Registry SOFTWARE Hive** task, add another **Run Command Line** task. To do this, open the **Add** menu, and select **General** > **Run Command Line**.
 
-   ![Add a Run Command Line task.](./media/no-mouse-cursor-during-osd-task-sequence/add-another-task.png)
+     :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/add-another-task.png" alt-text="Screenshot shows the right-click menu to add Run Command Line task for Load Registry SOFTWARE Hive.":::
 
 9. Select the newly created **Run Command Line** task, and specify the following values:
 
@@ -78,11 +77,11 @@ To make this change, use the following method to manually set the task sequence:
 
      `reg.exe add "HKLM\Temp\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableCursorSuppression /t REG_DWORD /d 0 /f`
 
-   ![Specify name and command line](./media/no-mouse-cursor-during-osd-task-sequence/name-and-command-line.png)
+     :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/name-and-command-line.png" alt-text="Screenshot shows the Disable Suppressed Mouse Cursor task properties where you can specify the name and command line for it.":::
 
 10. Immediately after the **Disable Suppressed Mouse Cursor** task, add another **Run Command Line** task. To do this, open the **Add** menu, and select **General** > **Run Command Line**.
 
-    ![Add another Run Command Line task.](./media/no-mouse-cursor-during-osd-task-sequence/another-run-command-line-task.png)
+     :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/another-run-command-line-task.png" alt-text="Screenshot shows the right-click menu to add Run Command Line task for Disable Suppressed Mouse Cursor.":::
 
 11. Select the newly created **Run Command Line** task, and specify the following values:
 
@@ -91,17 +90,17 @@ To make this change, use the following method to manually set the task sequence:
 
       `reg.exe unload HKLM\Temp`
   
-    :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/unmount-registry-software-hive.png" alt-text="Specify Unmount Registry SOFTWARE Hive.":::
+    :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/unmount-registry-software-hive.png" alt-text="Screenshot shows the Unmount Registry SOFTWARE Hive properties where you can specify the name and command line for it.":::
 
 12. Select the last task in the task sequence.
 
     The last task in the task sequence may differ from the one that's shown in the screenshot.
 
-    :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/last-task.png" alt-text="Select last task.":::
+    :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/last-task.png" alt-text="Screenshot shows the Setup Windows and Configuration Manager task.":::
 
 13. Add a **Run Command Line** task. To do this, open the **Add** menu, and then select **General** > **Run Command Line**. This should add the **Run Command Line** task as the last task in the task sequence.
 
-    :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/add-last-task.png" alt-text="Add a Run Command Line task as the last task.":::
+    :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/add-last-task.png" alt-text="Screenshot shows the right-click menu to add a Run Command Line task for Setup Windows and Configuration Manager.":::
 
 14. Select the newly created **Run Command Line** task and specify the following values:
 
@@ -110,11 +109,11 @@ To make this change, use the following method to manually set the task sequence:
 
       `reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableCursorSuppression /t REG_DWORD /d 1 /f`
 
-    :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/reset-mouse-suppression-to-default.png" alt-text="Specify the Run Command Line task.":::
+    :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/reset-mouse-suppression-to-default.png" alt-text="Screenshot shows the Reset Mouse Suppression to Default properties where you can specify the name and Command line for it.":::
 
 15. Select the **OK** or **Apply** button to save the task sequence.
 
-    :::image type="content" source="./media/no-mouse-cursor-during-osd-task-sequence/apply-to-save.png" alt-text="Save the task sequence.":::
+    :::image type="content" source="media/no-mouse-cursor-during-osd-task-sequence/apply-to-save.png" alt-text="Screenshot shows the OK and Apply button to save the task sequence.":::
 
 > [!NOTE]
 >
