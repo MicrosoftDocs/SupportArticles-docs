@@ -27,9 +27,8 @@ Currently, we provide diagnostics through text analytics. It's important to note
 **Note:** This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 |Example for an Exchange Online issue|Example for an Outlook issue|
-|---|---|
+|----------|----------|
 |:::image type="content" source="media/self-help-diagnostics/diagnostics-exchange.png" alt-text="Screenshot of the diagnostics for an Exchange Online issue.":::|:::image type="content" source="media/self-help-diagnostics/diagnostics-outlook.png" alt-text="Screenshot of the diagnostics for an Outlook issue.":::|
-|||
 
 ## What scenarios are currently covered?
 
