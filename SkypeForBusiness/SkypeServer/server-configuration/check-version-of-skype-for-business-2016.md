@@ -33,7 +33,7 @@ The following methods help you determine the installed version of Skype for Bus
 2. On the **File** tab, select either the **Account** or **Help** command.   
 3. Under **Product Information**, you'll see your Office product name and, in some cases, the full version number.
 
-    ![Office version](./media/check-version-of-skype-for-business-2016/office-version.png)   
+    :::image type="content" source="./media/check-version-of-skype-for-business-2016/office-version.png" alt-text="Screenshot that shows the Office version showing in the Product Information tab.":::
 
 ### Method 2
 
@@ -42,7 +42,7 @@ The following methods help you determine the installed version of Skype for Bus
 3. Right-click **Lync.exe**. and then select **Open file location**. 
 4. In the **Description** list, locate the product version number.
 
-    ![lync properties](./media/check-version-of-skype-for-business-2016/lync-properties.png)   
+    :::image type="content" source="./media/check-version-of-skype-for-business-2016/lync-properties.png" alt-text="Screenshot that shows the Lync properties in the Description list.":::
 
 ### Method 3
 

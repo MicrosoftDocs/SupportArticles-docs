@@ -124,7 +124,7 @@ Update your computer's system time:
 2. Go to **Setting** > **PC Settings** > **Time and Language**.
 3. Note your UTC offset, and compare your device's time to that shown on the website.
 
-    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/device-date-time.png" alt-text="Time and Language setting" border="false":::
+    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/device-date-time.png" alt-text="Screenshot that shows the Time and Language setting.":::
 
 If you need to update your device's time:
 
@@ -137,7 +137,7 @@ If you need to update your device's time:
 1. Go to a web site that shows Coordinated Universal Time (UTC).
 2. Go to **Control Panel** > **Date and Time**, and note the UTC offset for your location.
 
-    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/date-time.png" alt-text="Date and Time" border="false":::
+    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/date-time.png" alt-text="Screenshot that shows where to set U T C in the Date and Time tab." border="false":::
 
 3. If you need to, choose **Change date and time** and update your computer's clock.
 4. Try signing in again.
@@ -169,7 +169,7 @@ Make sure your system clock shows the correct time, and then try signing in agai
 Follow these steps:
 
 1. Go to a web site that shows [Coordinated Universal Time (UTC).
-2. Go to **Apple** ![The Apple icon](./media/troubleshoot-sign-in-issues-for-users/the-apple-icon.png) > **System Preferences**.
+2. Go to **Apple** :::image type="icon" source="./media/troubleshoot-sign-in-issues-for-users/the-apple-icon.png" alt-text="Screenshot that shows the icone of Apple."::: > **System Preferences**.
 3. In the **Date & Time** pane, select the **Date & Time tab**.
 4. Note the UTC offset for your location.
 5. If you need to, update your computer's clock, and then try signing in again.
@@ -220,10 +220,10 @@ Manually add Skype for Business server settings and try signing in again.
 
 Manually add Skype for Business server settings:
 
-1. Go to **Skype for Business options** ![Skype for Business options](./media/troubleshoot-sign-in-issues-for-users/the-arrow-next-to-options-button.png) > **Personal**.
+1. Go to **Skype for Business options** :::image type="icon" source="./media/troubleshoot-sign-in-issues-for-users/the-arrow-next-to-options-button.png" alt-text="Screenshot that shows the icon of Skype for Business options."::: > **Personal**.
 2. Under My account, select **Advanced**, and then select **Manual configuration**.
 
-    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/advanced-connection-settings.png" alt-text="the Advanced Connection Settings page" border="false":::
+    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/advanced-connection-settings.png" alt-text="Screenshot that shows the Advanced Connection Settings page.":::
 
 3. Enter `sipdir.online.lync.com:443` in both boxes, and then select **OK** > **OK**.
 4. Sign out, and then try signing back in.
@@ -297,7 +297,7 @@ Make sure you have the most current version of Skype for Business Windows Store 
 
 1. On the Start screen, tap **Store**
 
-    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/windows-store-app.png" alt-text="Windows Store App" border="false":::
+    :::image type="content" source="media/troubleshoot-sign-in-issues-for-users/windows-store-app.png" alt-text="Screenshot that shows the icon of Windows Store App.":::
 
 2. Search for Skype for Business, and install the update if one is available.
 3. Try signing in again.

@@ -31,7 +31,7 @@ To fix this issue, install the April 2, 2019 update for Skype for Business for a
 > [!NOTE]
 > If "Update Options" does not exist in the client, this is an .msi installation.
  
-![The screenshot for Update Options](./media/not-responding-receive-toast-notification/update-options.png) 
+:::image type="content" source="./media/not-responding-receive-toast-notification/update-options.png" alt-text="Screenshot that shows the Update Now tab selected in the Update Options.":::
 
 Don't see your Skype for Business client in the list? Click [here](/SkypeForBusiness/software-updates) for a complete list of clients. You can download the Click-to-Run client from the [Office365 Portal](https://portal.office.com/ols/mysoftware.aspx).  
 

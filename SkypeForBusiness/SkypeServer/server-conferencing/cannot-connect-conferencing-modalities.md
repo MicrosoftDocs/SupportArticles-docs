@@ -100,7 +100,7 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 
 |Office 2016 Click-to-Run installation|MSI-based Office 2016|
 |-|-|
-|![The screenshot for Word click to run](./media/cannot-connect-conferencing-modalities/click-to-run.png)|![The screenshot for Word MSI](./media/cannot-connect-conferencing-modalities/word-msi.png)|
+|:::image type="content" source="./media/cannot-connect-conferencing-modalities/click-to-run.png" alt-text="Screenshot that shows the Word click to run installation option.":::|:::image type="content" source="./media/cannot-connect-conferencing-modalities/word-msi.png" alt-text="Screenshot that shows the Word M S I.":::|
 
 > [!IMPORTANT]
 > After the clients are updated, remove any previously installed workarounds in Lync Server 2013 and Skype for Business 2015. To do this, delete the added registry keys.
