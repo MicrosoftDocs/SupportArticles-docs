@@ -34,7 +34,7 @@ This issue occurs because the affected mailbox has the same `ArchiveGuid` proper
 
 To fix this issue, follow these steps:
 
-**Note**: The only supported archive split scenario is a primary mailbox in the on-premises environment and an archive mailbox in Exchange Online.
+**Note**: The only supported archive split scenario is a primary mailbox in the on-premises Exchange organization and an archive mailbox in Exchange Online.
 
 1. Run the following cmdlets to retrieve the `ArchiveGuid` property:
 
@@ -46,7 +46,7 @@ To fix this issue, follow these steps:
         ```powershell
         Get-MailUser <cloud mail user> | FL *archive*
         ```
-1. Check if the `ArchiveGUID` property matches on both locations.
+1. Check if the `ArchiveGUID` property in the on-premises Exchange organization matches the one in Exchange Online.
     - If yes, continue Step 3.
     - If no, create a support request to Microsoft for further investigation.
 1. [Backup the on-premises archive mailbox and export to a .pst file](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
