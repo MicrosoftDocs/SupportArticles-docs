@@ -330,6 +330,8 @@
         href: how-to-use-perfinsights.md
       - name: PerfInsights in Linux
         href: how-to-use-perfinsights-linux.md
+      - name: PerfInsights and scale set VM instances
+        href: perfinsights-and-scale-set-vm-instances.md
   - name: Troubleshoot VM Performance issues
     items:
     - name: Isolate bottlenecks in Linux
