@@ -309,6 +309,8 @@
           href: ../activation/issue-when-activate-office-from-office-365.md
         - name: Issue with changing Office 2010 product key
           href: ../activation/office-2010-product-key-change-error.md
+        - name: Microsoft 365 Apps activation error 0xCAA50021
+          href: ../activation/activation-error-0xcaa50021.md
         - name: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
           href: ../activation/aadsts9002313-invalid-request.md
         - name: Microsoft 365 Apps activation network connection issues
