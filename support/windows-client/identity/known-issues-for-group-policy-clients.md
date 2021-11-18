@@ -193,7 +193,7 @@ After the PolicyDefinitions folder is upgraded to build 1611, the settings becom
 
 Enabling the Microsoft Store options by using the Windows Server 2012 R2 build of ADMX provides the report:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/winstoreui-upgrade-to-windowsstore-1.png" alt-text="Screenshot shows 3 policies is enabled.":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/winstoreui-upgrade-to-windowsstore-1.png" alt-text="Screenshot shows 3 policies are enabled.":::
 
 After the ADMX files are replaced in the central store by build 1511, you see:
 
