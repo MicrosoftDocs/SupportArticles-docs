@@ -26,7 +26,7 @@ Changes to usage and popularity reports in SharePoint Online help you identify u
 ## View search usage reports for a site collection
 
 1. From the desired site collection, select **Settings**, and then select **Site settings**.  If you don't see **Site settings**, select **Site information**, and then select **View all site settings**.
-2. Under **Site Collection Administration**, select **Microsoft Search** > **Insights**.
+2. Under **Site Collection Administration**, select **Microsoft Search** > **Configure search settings** > **Insights**.
 3. To retrieve a report, select the name link. Select by date for the past 31 days of usage, or past month for the past 12 months of usage.
 
 ### What's new and what's changed with search reports
