@@ -41,21 +41,21 @@ For Windows editions that experience activation and "not genuine" errors that ar
 
 1. You receive a **Windows is not genuine** error message after you log on.
 
-    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/error-message-for-step-1.jpg" alt-text="Screenshot of error message." border="false":::
+    :::image type="content" source="media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/windows-is-not-genuine-error-message.png" alt-text="Screenshot of Windows is not genuine error message." border="false":::
 
 2. A **This copy of windows is not genuine** watermark appears in the bottom-right corner of the Windows desktop on a black background.
 
-    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/screenshot-of-the-watermark.jpg" alt-text="Screenshot of the watermark." border="false":::
+    :::image type="content" source="media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/watermark.png" alt-text="Screenshot of the watermark appears in the bottom-right corner of the Windows desktop.":::
 
 3. The `slmgr /dlv` output reports error 0xC004F200.
 
-    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/command-output-error-0xc004f200.png" alt-text="Screenshot of the command output." border="false":::
+    :::image type="content" source="media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/command-output-error-0xc004f200.png" alt-text="Screenshot of the command output, which reports error 0xC004F200.":::
 
 4. Activations that are made by using the `slmgr /ato` command fails and return the following message:
 
     > Windows is running within the non-genuine notification period. Run 'slui.exe' to go online and validate Windows.
 
-    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/activation-failure.jpg" alt-text="Screenshot of the error." border="false":::
+    :::image type="content" source="media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/activation-failure.png" alt-text="Screenshot of the message it returns after using the command.":::
 
 5. The following events are logged in the event log.
 

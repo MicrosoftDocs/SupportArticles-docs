@@ -30,18 +30,18 @@ From the VLSC, you can download software included in your contract. On the secti
 2. Enter your Windows Live ID E-mail address and password, then select the **Sign-In** button.
 3. Select **Downloads** > **Licensed Downloads**, and then search for your product.
 
-    ![Screenshot of Licensed Downloads tab](./media/iso-file-on-vlsc/licensed-downloads-tab.png)
+    :::image type="content" source="media/iso-file-on-vlsc/licensed-downloads-tab.png" alt-text="Screenshot of Licensed Downloads tab of Volume License Service Center." border="false":::
 
 4. Choose the Download Settings from the drop-down box. Specify the **Language** and **Connection Speed**. **Operating System Type** may be required for certain products.
 
-    ![Screenshot of Download settings](./media/iso-file-on-vlsc/download-settings.png)
+    :::image type="content" source="media/iso-file-on-vlsc/download-settings.png" alt-text="Screenshot of the Language, Connection Speed and Operating System Type option in Download settings." border="false":::
 
 5. Select **Continue Download**.
 6. You may choose either **Download Manager** or the **Web Browser**.
 
     1. Download Manager is a program to pause and resume the download at any time by selecting the **Pause** button. You can cancel the download if required by clicking the **Cancel** button.
 
-        :::image type="content" source="./media/iso-file-on-vlsc/download-manager.png" alt-text="Screenshot of Download Manager.":::
+        :::image type="content" source="media/iso-file-on-vlsc/download-manager.png" alt-text="Screenshot of the Download Manager and the Web Browser option for EXE or ISO download format.":::
 
     2. Choose the location on your computer and select the **Save** button.
 
@@ -50,7 +50,7 @@ From the VLSC, you can download software included in your contract. On the secti
     3. The Download Manager opens and the download begins.
     4. You can cancel the download if required by clicking the **Cancel** button.
 
-        :::image type="content" source="./media/iso-file-on-vlsc/cancel-download.png" alt-text="Screenshot of canceling the download.":::
+        :::image type="content" source="media/iso-file-on-vlsc/cancel-download.png" alt-text="Screenshot of canceling the download. Using Pause button to pause the download. Using Cancel button to cancel the download." border="false":::
 
 7. The ISO file should be saved on the hard disk on your computer.
 8. When the download is completed, copy the ISO file to a CD or DVD using a software burning program.

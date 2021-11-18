@@ -77,7 +77,7 @@ To do the downgrade on your PC yourself, follow these steps:
 
 Volume Licensing provides the greatest flexibility as to downgrade rights. Volume Licensing allows for downgrades to additional earlier versions and editions. The following table summarizes downgrade eligibility. There are no downgrade rights to Windows 7 Ultimate.
 
-:::image type="content" source="./media/downgrade-from-windows-8/downgrade-eligibility.png" alt-text="Summarizes downgrade eligibility.":::
+:::image type="content" source="media/downgrade-from-windows-8/downgrade-eligibility.png" alt-text="Diagram which summarizes downgrade eligibility.":::
 
 > [!NOTE]
 > A Windows 8 customer who has multi-language functionality cannot downgrade to Windows 7 Pro or to Windows XP Pro. This is because the multi-language functionality is exclusive to Windows 7 Enterprise and is not available for a Professional edition.
