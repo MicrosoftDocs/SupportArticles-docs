@@ -32,7 +32,7 @@ Here's a quick list of the primary components used for content distribution:
 
 Distribution Manager (DistMgr) performs a variety of operations to distribute content to the distribution points (DPs). These operations are handled by the different types of threads, and the diagram below explains the DistMgr thread hierarchy for the default thread configuration:
 
-:::image type="content" source="media/components-and-threads/distmgr-thread-hierarchy.png" alt-text="Diagram shows the Distribution Manager thread hierarchy." lightbox="image-file-expanded.png":::
+:::image type="content" source="media/components-and-threads/distmgr-thread-hierarchy.png" alt-text="Diagram shows the Distribution Manager thread hierarchy." lightbox="media/components-and-threads/distmgr-thread-hierarchy.png":::
 
 - **Main DistMgr thread**
 
