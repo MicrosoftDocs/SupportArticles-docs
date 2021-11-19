@@ -1,15 +1,15 @@
 ---
-title: Error AADSTS50011 - The reply URL specified in the request does not match the reply URLs configured for the application.
-description: Describes a problem in which you receive an error message when signing in to OIDC-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is AADSTS50011: The redirect URI <redirect URI sent> specified in the request does not match the redirect URIs configured for the application <GUID>.  Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this.
+title: Error AADSTS50011 - The redirect URI <redirect URI sent> specified in the request does not match the redirect URIs configured for the application...
+description: Describes a problem in which you receive an error message when signing in to OIDC-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is AADSTS50011: The redirect URI 'redirect_URI_sent' specified in the request does not match the redirect URIs configured for the application 'GUID'.  Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this.
 ms.date: 03/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: arcrowe
 ms.service: active-directory
-ms.subservice: app-dev
+ms.subservice: app-mgmt
 ---
-Error AADSTS50011: The redirect URI <redirect URI sent> specified in the request does not match the redirect URIs configured for the application <GUID>.  Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this.
+# Error AADSTS50011: The redirect URI 'redirect URI sent' specified in the request does not match the redirect URIs configured for the application 'appId'...
 
-This article describes a problem in which you receive the error message "Error AADSTS50011: The redirect URI <redirect URI sent> specified in the request does not match the redirect URIs configured for the application <GUID>.  Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this." when trying to sign into an OIDC-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
+This article describes a problem in which you receive the error message "Error AADSTS50011: The redirect URI 'redirect URI sent' specified in the request does not match the redirect URIs configured for the application 'appId'.  Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this." when trying to sign into an OIDC-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
 
 ## Symptoms
 
