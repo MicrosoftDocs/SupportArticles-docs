@@ -293,6 +293,8 @@
           href: ../access/your-network-access-was-interrupted-error.md
     - name: Activation
       items:
+        - name: Activation error Sorry, we are having some temporary server issues
+          href: ../activation/temporary-server-issues.md
         - name: Activation error That Microsoft account doesn’t exist
           href: ../activation/account-doesnt-exist.md
         - name: Activation error Trusted Platform Module malfunctioned
