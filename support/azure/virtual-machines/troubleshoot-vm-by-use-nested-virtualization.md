@@ -3,7 +3,7 @@ title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure | 
 description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
 services: virtual-machines
 documentationcenter: ''
-author: glimoli
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: vm-windows
 
 ms.topic: article
 ms.date: 10/11/2020
-ms.author: genli
+ms.author: glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
