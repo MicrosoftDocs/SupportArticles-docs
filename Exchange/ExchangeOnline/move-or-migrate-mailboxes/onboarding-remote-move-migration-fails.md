@@ -1,5 +1,5 @@
 ---
-title: Can't migrate on-premises mailbox with cloud-based archive to Exchange Online
+title: Can't migrate on-premises primary mailbox with cloud-based archive to Exchange Online
 description: Fixes an error when you migrate an on-premises primary mailbox with a cloud-based archive mailbox to Exchange Online.
 author: v-charloz
 audience: ITPro
@@ -18,7 +18,7 @@ appliesto:
 - Exchange Online
 ---
 
-# Can't migrate on-premises mailbox with cloud-based archive to Exchange Online
+# Can't migrate on-premises primary mailbox with cloud-based archive to Exchange Online
 
 When you try to migrate an on-premises primary mailbox with a cloud-based archive mailbox to Exchange Online, you receive the following error message:
 
@@ -34,23 +34,23 @@ To fix this issue, follow these steps:
 
 In the on-premises Exchange Server environment and Exchange Online, follow these steps:
 
-- Run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` value for the on-premises archive mailbox by using the Exchange Management Shell.
+- [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` value for the on-premises archive mailbox:
 
     ```powershell
     Get-Mailbox -Identity "<user@contoso.com>" | FL *archive*
     ```
 
-- Run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet to get the `ArchiveGuid` value for the cloud-based archive mailbox by using Exchange Online PowerShell.
+- [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet to get the `ArchiveGuid` value for the cloud-based archive mailbox:
 
     ```powershell
     Get-MailUser -Identity "<user@contoso.com>" | FL *archive*
     ```
 
-If the `ArchiveGuid` value of the two archive mailboxes is same, proceed to the next step. If not, create a support request.
+If the `ArchiveGuid` value of the two archive mailboxes is the same, proceed to the next step. If not, create a support request.
 
 ## Step 2: Back up the on-premises archive mailbox
 
-To back up and export the on-premises archive mailbox to a PST file, follow these steps in Exchange admin center. For more information, see [create mailbox export requests](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
+To back up and export the on-premises archive mailbox to a PST file, follow these steps in the [Exchange admin center](https://admin.exchange.microsoft.com). For more information, see [create mailbox export requests](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
 
 1. In the Exchange admin center, select **recipients** > **mailboxes** > **More options** > **Export to a PST file**.
 1. On the **Export to a .pst file** page, select the source mailbox, and then select **Export only the contents of this mailbox's archive** > **Next**.
@@ -60,13 +60,13 @@ To back up and export the on-premises archive mailbox to a PST file, follow thes
 
 In the on-premises Exchange Server environment, follow these steps:
 
-1. Run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox by using the Exchange Management Shell:
+1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox:
 
     ```powershell
     Set-ADUser -Identity "<user@contoso.com>" -Add @{msExchArchiveaddress="<contoso.mail.onmicrosoft.com>"}
     ```
 
-1. Run the following `Get-Mailbox` cmdlet to verify the `ArchiveDomain` value is added successfully.
+1. Run the following `Get-Mailbox` cmdlet to verify the `ArchiveDomain` value is added successfully:
 
     ```powershell
     Get-Mailbox -Identity "<user@contoso.com>" | FL *archive*

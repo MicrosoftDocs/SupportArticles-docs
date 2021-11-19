@@ -325,7 +325,7 @@
       href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
     - name: Can't migrate IMAP mailboxes
       href: ../move-or-migrate-mailboxes/imap-mailbox-migration-fails.md
-    - name: Can't migrate on-premises mailbox with cloud-based archive
+    - name: Can't migrate on-premises primary mailbox with cloud-based archive
       href: ../move-or-migrate-mailboxes/onboarding-remote-move-migration-fails.md
     - name: Can't see free/busy information
       href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
