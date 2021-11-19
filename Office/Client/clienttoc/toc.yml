@@ -327,6 +327,8 @@
           href: ../activation/network-connection-issues.md
         - name: Microsoft 365 Apps activation Product deactivated
           href: ../activation/product-deactivated.md
+        - name: Microsoft 365 Apps activation Subscription expired error
+          href: ../activation/subscription-expired.md
         - name: Microsoft 365 Apps activation usage report issues
           href: ../activation/activation-usage-report-issues.md
         - name: Office for Mac activation An unknown error has occurred
