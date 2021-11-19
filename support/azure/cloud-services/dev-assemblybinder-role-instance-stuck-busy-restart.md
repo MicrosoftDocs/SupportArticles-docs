@@ -32,12 +32,7 @@ From the error call stack, it looks like this WorkerRole is performing some unzi
 
 In order to find out the answer, use [Process Monitor](/sysinternals/downloads/procmon) tool to take a ProcMon trace and see what you can find.
 
-:::image type="content" source="media/scenario-2-assemblybinder-role-instance-stuck-busy-restart/4464905_en_1.png" alt-text="Screenshot of ProcMon trace.":::
-
 **WaWorkerHost.exe** process is writing some file in its default temporary directory, which has a maximum size of 100 MB, which may become full at some point. Upon navigating to the **RoleTemp** directory, you might find that disk space quota is indeed getting exhausted for that directory.
-
-:::image type="content" source="media/scenario-2-assemblybinder-role-instance-stuck-busy-restart/4464906_en_1.png" alt-text="Screenshot of RoleTemp directory.":::
-
 
 You might have figured out the cause of the problem, but what should you do when running out of space in **RoleTemp** location? [Here](/azure/cloud-services/cloud-services-troubleshoot-default-temp-folder-size-too-small-web-worker-role) is the answer.
 
