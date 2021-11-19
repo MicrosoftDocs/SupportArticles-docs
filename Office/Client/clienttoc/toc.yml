@@ -323,6 +323,8 @@
           href: ../activation/mac-unknown-error.md
         - name: Sign in issues when activating Microsoft 365 Apps
           href: ../activation/sign-in-issues.md
+        - name: Sorry, another account from your organization is already signed in on this computer
+          href: ../activation/another-account-already-signed-in.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
     - name: End of Support
