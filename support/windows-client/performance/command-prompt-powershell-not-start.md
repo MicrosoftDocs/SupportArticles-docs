@@ -36,7 +36,7 @@ C:\Windows\System32\cmd.exe
 
 Contact your support person for more info.  
 
-![Screenshot of the error message](./media/command-prompt-powershell-not-start/error-message-screenshot.png)
+:::image type="content" source="media/command-prompt-powershell-not-start/error-message-screenshot.png" alt-text="Screenshot of the error message when you open command prompt and PowerShell." border="false":::
 
 ## Cause
 
