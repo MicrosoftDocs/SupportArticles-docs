@@ -25,7 +25,7 @@ Microsoft Outlook displays additional information for links to files on OneDrive
 
 When Outlook detects such a link, it applies a gray background to the link, which makes it stand out to your recipients. It shows that the link has special functionality and options. The link will be shortened to the name of the file with the file type icon (for example, Word, PowerPoint, or Excel) added and the link permission information displayed.
 
-### When links to a shareable file will be recognized
+## When links to a shareable file will be recognized
 
 Outlook recognizes links to a shareable file in an email when you:
 
@@ -38,7 +38,7 @@ Outlook recognizes links to a shareable file in an email when you:
 - Reply or forward an email with existing links.
 - Resume a draft with existing links. For example, if you started the draft on an earlier version of Outlook and resume it on a newer version.
 
-### How to undo the link shortening and show the full URL
+## How to undo the link shortening and show the full URL
 
 You can undo this change and show the full URL by using one of the following ways:
 
@@ -51,7 +51,7 @@ You can undo this change and show the full URL by using one of the following way
 
     **Note:** It only works if the URL gets shortened before you continue typing.
 
-### Link permission information
+## What is link permission information
 
 Link permission information will pop up automatically after you insert a new link without any editing. This example shows that anyone within your organization can view and edit the link:
 
@@ -71,11 +71,11 @@ Select the link permission information to manage who can access the link. When y
 
 **Note:** You can also right-click the link or press the Menu key when the cursor is inside the link, and select **Manage Access…** to get the same setting.
 
-### Errors and warnings of link permission checking
+## Errors and warnings of link permission checking
 
 Outlook checks whether the recipients of your email message can access the link. The check will be finished before you send the email message. There is no error or warning if all recipients can access the link. Otherwise, you will receive one of the three results:
 
-#### One or more recipients don't have access
+### Error: One or more recipients don't have access
 
 The link color shows red and there's a red exclamation mark over the upper right corner of the link. When you select the link, it gives the error message:
 
@@ -96,7 +96,7 @@ In the above example, the recipient is outside of your organization and won't ha
 - The error message for not having access might differ.
 - You can navigate between the links that have the error by pressing Ctrl+Alt+F1.
 
-#### Unable to verify recipients' access
+### Warning 1: We couldn't verify that recipients can access this link because you're offline
 
 If Outlook can't verify whether the recipients have access to a link, it provides a warning. A gray exclamation icon shows over the upper right corner of the link, but the link color doesn't change. In addition, the reason that Outlook can't check the link for recipient access will be displayed when you select the link.
 
@@ -112,7 +112,7 @@ See the following screenshot for an example:
 
 **Note:** Right-click the link or press the Menu key when the cursor is inside the link, you can also get the same error information and options.
 
-#### Warning before sending
+### Warning 2: Some recipients don't have access to links in your message
 
 If some of your recipients can't access the link in an email message, you receive a warning when you try to send the email message.
 
@@ -121,6 +121,8 @@ If some of your recipients can't access the link in an email message, you receiv
 This checking allows you to adjust your email before sending if you want all the recipients can access to all your links.
 
 **Note:** Outlook will not warn you if it can't verify the recipient's access.
+
+### Warning 3: We are still checking if recipients can access links in this message
 
 You will receive the following warning if the permission check hasn't been finished when you try to send the email.
 
