@@ -32,9 +32,9 @@ To fix this issue, follow these steps:
 
 ## Step 1: Verify on-premises and cloud-based archive mailboxes have the same archive GUID
 
-In the on-premises Exchange Server environment and Exchange Online, follow these steps:
+In the on-premises Exchange Server environment and Exchange Online, get the archive GUID as follows:
 
-- [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` value for the on-premises archive mailbox:
+- [Start the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` value for the on-premises archive mailbox:
 
     ```powershell
     Get-Mailbox -Identity "<user@contoso.com>" | FL *archive*
@@ -46,21 +46,21 @@ In the on-premises Exchange Server environment and Exchange Online, follow these
     Get-MailUser -Identity "<user@contoso.com>" | FL *archive*
     ```
 
-If the two archive mailboxes have the same `ArchiveGuid` value, proceed to the next step. If not, create a support request.
+If the two archive mailboxes have the same `ArchiveGuid` value, proceed to the next steps. If not, create a support request.
 
 ## Step 2: Back up the on-premises archive mailbox
 
-To back up and export the on-premises archive mailbox to a PST file, follow these steps in the [Exchange admin center](https://admin.exchange.microsoft.com). For more information, see [create mailbox export requests](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
+To back up and export the on-premises archive mailbox to a .pst file in the [Exchange admin center](https://admin.exchange.microsoft.com), use the following steps. For more information, see [create mailbox export requests](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
 
-1. In the Exchange admin center, select **recipients** > **mailboxes** > **More options** > **Export to a PST file**.
+1. In the Exchange admin center, select **recipients** > **mailboxes** > **More options**:::image type="icon" source="media/onboarding-remote-move-migration-fails/eac_moreoptions-icon.png" border="false"::: > **Export to a PST file**.
 1. On the **Export to a .pst file** page, select the source mailbox, and then select **Export only the contents of this mailbox's archive** > **Next**.
-1. Type the file name of the target .pst file, and then select **Next** > **Finish**.
+1. Specify the path to export the .pst file, and then select **Next** > **Finish**.
 
 ## Step 3: Specify the domain of the cloud-based archive mailbox for the on-premises primary mailbox
 
 In the on-premises Exchange Server environment, follow these steps:
 
-1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox:
+1. [Start the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox:
 
     ```powershell
     Set-ADUser -Identity "<user@contoso.com>" -Add @{msExchArchiveaddress="<contoso.mail.onmicrosoft.com>"}
