@@ -51,8 +51,6 @@ at System.Threading.ThreadHelper.ThreadStart()
 
 Now you get a bit more detail about the exception from **Microsoft Azure Event Logs** saying that process hosting worker role is not able to load the assembly 'WorkerAssembly' due to **System.BadImageFormatException**. In general when a process is not able to load an assembly, it's always a good practice to capture Fusion logs. Make the following registry key changes under the path `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Fusion` to enable fusion logging. Give **Everyone - Full Control** permission to the fusion log path folder `C:\FusionLogs`.
 
-:::image type="content" source="media/scenario-1-zipengine-role-stuck-busy-restart/4464908_en_1.png" alt-text="Screenshot of changing registry key.":::
-
 Upon checking the fusion log for 'WorkerAssembly', you might get more information for further troubleshooting.
 
 ```

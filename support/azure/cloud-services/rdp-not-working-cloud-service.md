@@ -92,8 +92,6 @@ Write-Host (Get-Date).ToString()" : Remote desktop extension applied successful
 
 Output of the script will be something like below:
 
-:::image type="content" source="media/rdp-not-working-cloud-service/4464926_en_1.png" alt-text="Screenshot of PowerShell outputs.":::
-
 If you are not able to RDP after running the above script, then definitely it's a networking issue. There are few possible reasons:
 
 - The network from where you are trying to RDP is blocking the traffic.

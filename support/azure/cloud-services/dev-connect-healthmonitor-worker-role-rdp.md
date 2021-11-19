@@ -52,17 +52,11 @@ As per the above statistics, definitely RDP port is open and server is respondin
 
 If you checked the **ServiceDefinition.csdef** file but couldn't find any ACL configured and there were no startup tasks related to firewall configuration for this cloud service solution as well, the only thing that was left was to capture a [Network Monitor](/windows/client-management/troubleshoot-tcpip-netmon) trace and analyze the RDP traffic.
 
-:::image type="content" source="media/scenario-6-connect-healthmonitor-worker-role-rdp/4464841_en_1.png" alt-text="Screenshot of network trace.":::
-
 Let's split the above network trace screenshot into two halves for better understanding. Every TCP session is always established with the three-way handshake, which depicted by the first half of the screenshot.
-
-:::image type="content" source="media/scenario-6-connect-healthmonitor-worker-role-rdp/4464843_en_1.png" alt-text="Screenshot of split network trace.":::
 
 The first three frames (90, 97 and 98) with the Syn, Syn/Ack, and Ack flags depicted as S, A..S, and A respectively is what is collectively referred to as the TCP three-way handshake, which is successful in this case. Moving on to the later half of the network trace you can see that client has initiated an RDP connection request depicted by X224: Connection Request but didn't receive any confirmation from the server side as per [RDP connection sequence](/openspecs/windows_protocols/ms-rdpbcgr/023f1e69-cfe8-4ee6-9ee0-7e759fb4e4ee?redirectedfrom=MSDN). The X.224 Connection Request PDU is an RDP Connection Sequence PDU sent from client to server during the Connection Initiation phase of the RDP Connection Sequence (section [1.3.1.1](/openspecs/windows_protocols/ms-rdpbcgr/023f1e69-cfe8-4ee6-9ee0-7e759fb4e4ee?redirectedfrom=MSDN) for an overview of the RDP Connection Sequence phases).
 
 Instead server tore down the TCP session with a Fin flag (depicted as A...F in frame number 491). The client in turn acknowledges the server's packet and then proceeds to abruptly terminate the session with the Reset flag (depicted as A.R..) in the screenshot below, also acknowledging the receipt of the previous pact from the server (thus the A in A.R..).
-
-:::image type="content" source="media/scenario-6-connect-healthmonitor-worker-role-rdp/4464847_en_1.png" alt-text="Screenshot of another network trace.":::
 
 This looks like a firewall issue as the server is gracefully terminating the RDP connection request after TCP handshake is complete. But where or how exactly firewall rules are configured?
 Upon reviewing the WorkerRole.cs of 'HealthMonitor' role, You might find that firewall rules were programmatically added using [INetFwRules interface](/previous-versions/windows/desktop/api/netfw/nn-netfw-inetfwrules). So firewall rules can be added not only through startup tasks or ACL but also through application code.

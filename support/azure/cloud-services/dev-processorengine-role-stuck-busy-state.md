@@ -43,8 +43,6 @@ From the above log, it looks like the process is stuck while running a startup s
 
 Microsoft Azure Bootstrapper event viewer log shows the same piece of information:
 
-:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/4464887_en_1.png" alt-text="Screenshot of event viewer log.":::
-
 Hence the next step is to check the functionality of this startup script. the script is running an executable 'setup.exe', which takes a command line 'configuration.xml'. The output of the script processing is logged in 'StartupLog.txt' file created under RoleTemp directory.
 
 ```
