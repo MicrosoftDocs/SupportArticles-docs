@@ -34,7 +34,7 @@ To fix this issue, follow these steps:
 
 In the on-premises Exchange Server environment and Exchange Online, get the archive GUID as follows:
 
-- [Start the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` value for the on-premises archive mailbox:
+- [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` value for the on-premises archive mailbox:
 
     ```powershell
     Get-Mailbox -Identity "<user@contoso.com>" | FL *archive*
@@ -60,7 +60,7 @@ To back up and export the on-premises archive mailbox to a .pst file in the [Exc
 
 In the on-premises Exchange Server environment, follow these steps:
 
-1. [Start the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox:
+1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox:
 
     ```powershell
     Set-ADUser -Identity "<user@contoso.com>" -Add @{msExchArchiveaddress="<contoso.mail.onmicrosoft.com>"}
