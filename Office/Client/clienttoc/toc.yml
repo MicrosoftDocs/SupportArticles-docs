@@ -293,6 +293,8 @@
           href: ../access/your-network-access-was-interrupted-error.md
     - name: Activation
       items:
+        - name: Account or subscription verification errors activating Microsoft 365 Apps
+          href: ../activation/account-or-subscription-errors.md
         - name: Activation error Sorry, we are having some temporary server issues
           href: ../activation/temporary-server-issues.md
         - name: Activation error That Microsoft account doesn’t exist
@@ -325,6 +327,10 @@
           href: ../activation/problem-with-your-account.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
+        - name: Microsoft 365 Apps activation Product deactivated
+          href: ../activation/product-deactivated.md
+        - name: Microsoft 365 Apps activation Subscription expired error
+          href: ../activation/subscription-expired.md
         - name: Microsoft 365 Apps activation usage report issues
           href: ../activation/activation-usage-report-issues.md
         - name: Office for Mac activation An unknown error has occurred
