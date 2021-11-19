@@ -865,31 +865,31 @@ Flow charts are provided for the following phases:
 
   **Figure 10. Flow chart for the Install Phase**  
 
-  :::image type="content" source="media/troubleshooting-reference/install-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Install Phase.":::
+  :::image type="content" source="media/troubleshooting-reference/install-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI Install Phase.":::
 
   **Figure 11. Flow chart for the Postinstall Phase (1 of 2)**  
 
-  :::image type="content" source="media/troubleshooting-reference/postinstall-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the Postinstall Phase 1.":::
+  :::image type="content" source="media/troubleshooting-reference/postinstall-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI Postinstall Phase 1.":::
 
   **Figure 12 Flow chart for the Postinstall Phase (2 of 2)**  
 
-  :::image type="content" source="media/troubleshooting-reference/postinstall-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the Postinstall Phase 2.":::
+  :::image type="content" source="media/troubleshooting-reference/postinstall-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI Postinstall Phase 2.":::
 
   **Figure 13. Flow chart for the State Restore Phase (1 of 4)**  
 
-  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 1.":::
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI State Restore Phase 1.":::
 
   **Figure 14. Flow chart for the State Restore Phase (2 of 4)**  
 
-  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 2.":::
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI State Restore Phase 2.":::
 
   **Figure 15. Flow chart for the State Restore Phase (3 of 4)**  
 
-  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-3-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 3.":::
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-3-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI State Restore Phase 3.":::
 
   **Figure 16. Flow chart for the State Restore Phase (4 of 4)**  
 
-  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-4-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 4.":::
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-4-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI State Restore Phase 4.":::
 
 ###  <a name="ZTIDevelopmentProcessFlowcharts"></a> ZTI Deployment Process Flowcharts
 
@@ -913,38 +913,39 @@ Flow charts are provided for the following phases of ZTI deployment with Configu
   
   **Figure 17. Flow chart for the Initialization Phase**  
 
-  :::image type="content" source="media/troubleshooting-reference/initialization-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Initialization Phase.":::
+  :::image type="content" source="media/troubleshooting-reference/initialization-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI Initialization Phase.":::
 
   **Figure 18. Flow chart for the Validation Phase**  
-  :::image type="content" source="media/troubleshooting-reference/validation-phase-flowchart.png" alt-text="Flow chart for the Validation Phase.":::
+
+  :::image type="content" source="media/troubleshooting-reference/zti-validation-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI Validation Phase.":::
 
   **Figure 19. Flow chart for the State Capture Phase**  
 
-  :::image type="content" source="media/troubleshooting-reference/state-capture-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Stete Capture Phase.":::
+  :::image type="content" source="media/troubleshooting-reference/state-capture-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI Stete Capture Phase.":::
 
   **Figure 20. Flow chart for the Preinstall Phase**  
 
-   :::image type="content" source="media/troubleshooting-reference/preinsatll-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Preinstall Phase.":::
+   :::image type="content" source="media/troubleshooting-reference/preinsatll-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI Preinstall Phase.":::
 
   **Figure 21. Flow chart for the Install Phase**  
 
-  :::image type="content" source="media/troubleshooting-reference/install-phase-flowchart.png" alt-text="Flow chart for the Install Phase.":::
+  :::image type="content" source="media/troubleshooting-reference/zti-install-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI Install Phase.":::
 
   **Figure 22. Flow chart for the Postinstall Phase**  
 
-   :::image type="content" source="media/troubleshooting-reference/postinstall-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Postinstall Phase.":::
+   :::image type="content" source="media/troubleshooting-reference/postinstall-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI Postinstall Phase.":::
 
   **Figure 23. Flow chart for the State Restore Phase (1 of 2)**  
 
-   :::image type="content" source="media/troubleshooting-reference/state-restore-phase-1-flowchart.png" alt-text="Flow chart for the State Restore Phase 1.":::
+   :::image type="content" source="media/troubleshooting-reference/zti-state-restore-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI State Restore Phase 1.":::
 
   **Figure 24. Flow chart for the State Restore Phase (2 of 2)**  
 
-   :::image type="content" source="media/troubleshooting-reference/state-restore-phase-2-flowchart.png" alt-text="Flow chart for the the State Restore Phase 2.":::
+   :::image type="content" source="media/troubleshooting-reference/zti-state-restore-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the the ZTI State Restore Phase 2.":::
 
   **Figure 25. Flow chart for the Capture Phase**  
 
-   :::image type="content" source="media/troubleshooting-reference/capture-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Capture Phase.":::
+   :::image type="content" source="media/troubleshooting-reference/capture-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the ZTI Capture Phase.":::
 
 
 ## <a name="MicrosoftSupport"></a> Microsoft Support
