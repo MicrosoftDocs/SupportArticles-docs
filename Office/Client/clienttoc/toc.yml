@@ -295,6 +295,8 @@
       items:
         - name: Activation error Sorry, we are having some temporary server issues
           href: ../activation/temporary-server-issues.md
+        - name: Activation error That Microsoft account doesn’t exist
+          href: ../activation/account-doesnt-exist.md
         - name: Activation error Trusted Platform Module malfunctioned
           href: ../activation/tpm-malfunctioned.md
         - name: Can't activate Office on a new computer
