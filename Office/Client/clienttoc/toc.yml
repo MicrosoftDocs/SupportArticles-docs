@@ -309,10 +309,16 @@
           href: ../activation/issue-when-activate-office-from-office-365.md
         - name: Issue with changing Office 2010 product key
           href: ../activation/office-2010-product-key-change-error.md
+        - name: Microsoft 365 Apps activation error 0xCAA50021
+          href: ../activation/activation-error-0xcaa50021.md
+        - name: Microsoft 365 Apps activation error 0x80070005
+          href: ../activation/activation-error-0x80070005.md
         - name: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
           href: ../activation/aadsts9002313-invalid-request.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
+        - name: Microsoft 365 Apps activation usage report issues
+          href: ../activation/activation-usage-report-issues.md
         - name: Office for Mac activation An unknown error has occurred
           href: ../activation/mac-unknown-error.md
         - name: Sign in issues when activating Microsoft 365 Apps
