@@ -38,7 +38,7 @@ Any of these scenarios may use Simple MAPI to generate the email message. In thi
 
 ## Workaround
 
-Use the **Signature** button on the **Message** tab of the Ribbon to insert the signature manually.
+Use the **Signature** button on the **Message** tab of the Ribbon to insert the signature manually.
 
 > [!NOTE]
 > There are no plans to change this behavior in Microsoft Outlook 2019 or in earlier versions of Outlook.

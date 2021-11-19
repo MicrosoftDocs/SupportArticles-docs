@@ -28,7 +28,7 @@ When you visit the Skype Meeting Broadcast portal at [https://portal.broadcast.s
 
 ## Solution
 
-To resolve this issue, use one of the following methods, as appropriate for your situation: 
+To resolve this issue, use one of the following methods, as appropriate for your situation: 
 
 - Use InPrivate browsing in Internet Explorer or Incognito mode in Google Chrome. For more information about how to use InPrivate browsing in Internet Explorer, see the following Microsoft website:
 
@@ -39,7 +39,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 ## More Information
 
-This issue is related to authentication behavior in the Skype Meeting Broadcast portal and to how cached files are updated.  
+This issue is related to authentication behavior in the Skype Meeting Broadcast portal and to how cached files are updated.  
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 

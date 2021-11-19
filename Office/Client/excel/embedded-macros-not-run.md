@@ -35,10 +35,10 @@ Macros in this document have been disabled by your enterprise administrator for 
 
 ## Cause
 
-This issue occurs if the embedded Excel workbook isn't from a trusted location, or the new workbook isn't saved to a trusted location. 
+This issue occurs if the embedded Excel workbook isn't from a trusted location, or the new workbook isn't saved to a trusted location. 
 
 ## Resolution
 
 To work around the issue, save the embedded or new workbook to a trusted location.
 
-For more information about the **Block macros from running in Office files from the Internet** Group Policy setting, see [New feature in Office 2016 can block macros and help prevent infection](https://cloudblogs.microsoft.com/microsoftsecure/2016/03/22/new-feature-in-office-2016-can-block-macros-and-help-prevent-infection/?source=mmpc).
+For more information about the **Block macros from running in Office files from the Internet** Group Policy setting, see [New feature in Office 2016 can block macros and help prevent infection](https://cloudblogs.microsoft.com/microsoftsecure/2016/03/22/new-feature-in-office-2016-can-block-macros-and-help-prevent-infection/?source=mmpc).

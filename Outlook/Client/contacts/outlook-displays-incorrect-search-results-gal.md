@@ -54,13 +54,13 @@ If the phonetic display name of all the users and distribution lists on the GAL 
 
 To work around this issue, use one of the following methods:
 
-To have us fix this problem by using method 1 for you, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
+To have us fix this problem by using method 1 for you, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
 
 ### Let me fix it myself
 
 - Method 1
 
-    1. Click **Start**![start button](./media/outlook-displays-incorrect-search-results-gal/vista-start-button.jpg), click **Run**, type *Regedit*, and then press **OK**.
+    1. Click **Start**:::image type="icon" source="./media/outlook-displays-incorrect-search-results-gal/vista-start-button.png":::, click **Run**, type *Regedit*, and then press **OK**.
     1. Locate and then click the DisableGALPhonetic registry entry in one of the following registry subkeys:
         - `HKEY_CURRENT_USER\Software\Policies\Microsoft\Exchange\Exchange Provider`
         - `HKEY_CURRENT_USER\Software\Microsoft\Exchange\Exchange Provider`

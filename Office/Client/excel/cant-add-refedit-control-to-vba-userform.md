@@ -22,7 +22,7 @@ appliesto:
 
 ##  Symptoms
 
-When trying to add a refedit control on a VBA userform the following error messages are received: 
+When trying to add a refedit control on a VBA userform the following error messages are received: 
 
 > "%1 Could not be found".
 >
@@ -36,14 +36,14 @@ Multiple versions of refedit.dll exist on the machine.
 
 **To Resolve the error message "%1 Could not be found".**
 
-1. Exit Excel
+1. Exit Excel
 
 2. Click Start, click Run, type regedit in the Open box, and then click OK.
 1. In the Registry Editor, click on Edit, choose Find
 1. In the Find What dialog type in the following key:
 
    HKEY_Classes_Root\Wow6432Node\TypeLib\{00024517-0000-0000-C000-000000000046}\1.0
-1. Export and then delete every instance of this CLSID key.
+1. Export and then delete every instance of this CLSID key.
 1. Repair Office in the Control Panel.
 1. Restart the machine.
 
@@ -52,9 +52,9 @@ Multiple versions of refedit.dll exist on the machine.
 Step 1: Search Regstry
 
 1. Exit Excel.
-1. Click Start, click Run, type regedit in the Open box, and then click OK.
-1. In the Registry Editor, click on Edit, choose Find
-1. In the Find What dialog type refedit.dll
+1. Click Start, click Run, type regedit in the Open box, and then click OK.
+1. In the Registry Editor, click on Edit, choose Find
+1. In the Find What dialog type refedit.dll
 1. Export and then delete every key that refers to refedit.dll
 
 Step 2: Search machine for dll file
@@ -62,10 +62,10 @@ Step 2: Search machine for dll file
 2. Repair Office in the Control Panel
 
 Step 3: Add refedit control to the user form
-1. Go to the Developer ribbon, Insert, Lower Right Corner is Additional Controls 
+1. Go to the Developer ribbon, Insert, Lower Right Corner is Additional Controls 
 2. Select Additional Controls and register custom
 3. Browse to C:\Program Files\Microsoft Office\Office15\Refedit.dll (for Excel 2013)
- or C:\Program Files\Microsoft Office\Office14\Refedit.dll (for Excel 2010)
-4. Go to VBA and insert a userform 
-5. In the toolbox choose additional controls and select refedit.ctrl 
+ or C:\Program Files\Microsoft Office\Office14\Refedit.dll (for Excel 2010)
+4. Go to VBA and insert a userform 
+5. In the toolbox choose additional controls and select refedit.ctrl 
 6. Click on the refedit control in the toolbox and add it to the user form

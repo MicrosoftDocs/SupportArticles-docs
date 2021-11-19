@@ -37,8 +37,8 @@ Consider the following scenario:
 If you are running Outlook in Cached mode in this scenario, you receive a non-deliverable report (NDR) in your Inbox that contains the following details:
 
 ```asciidoc
-    Subject: Undeliverable: Subject_Of_Message Your message did not reach some or all of the intended recipients.
-   Subject: Subject_Of_Message
+    Subject: Undeliverable: Subject_Of_Message Your message did not reach some or all of the intended recipients.
+   Subject: Subject_Of_Message
  Sent: Date_and_Time
 
 The following recipient(s) cannot be reached:
@@ -46,14 +46,14 @@ The following recipient(s) cannot be reached:
 ```
   
 Or
-    
+    
 ```asciidoc
 Subject: Undeliverable: Subject_of_Message Your message did not reach some or all of the intended recipients.
 
-Subject: Subject_Of_Message
- Sent: Date_and_Time The following recipient(s) cannot be reached: RecipientName on Date_and_Time
+Subject: Subject_Of_Message
+ Sent: Date_and_Time The following recipient(s) cannot be reached: RecipientName on Date_and_Time
 
-This message could not be sent. Try sending the message again later, or contact your network administrator. You do not have the permission to send the message on behalf of the specified user. Error is [0x80070005-0x0004dc-0x000524].     
+This message could not be sent. Try sending the message again later, or contact your network administrator. You do not have the permission to send the message on behalf of the specified user. Error is [0x80070005-0x0004dc-0x000524].     
 ```
 
 And if you are running Outlook in Online mode, you receive the following error message:

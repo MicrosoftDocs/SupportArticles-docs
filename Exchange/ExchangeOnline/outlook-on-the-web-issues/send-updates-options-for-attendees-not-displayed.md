@@ -29,12 +29,12 @@ When a meeting organizer updates a meeting by adding or removing an attendee, th
 - Send updates only to added or deleted attendees
 - Send updates to all attendees
 
-These options were removed from Outlook on the web, and the code logic was moved to the server. Therefore, the server makes the decision about whether to send the update to all attendees or only to attendees that are added or deleted.
+These options were removed from Outlook on the web, and the code logic was moved to the server. Therefore, the server makes the decision about whether to send the update to all attendees or only to attendees that are added or deleted.
 
 > [!NOTE]
 > This change affects only Outlook on the web. These notifications are displayed in Microsoft Outlook when a meeting organizer adds or removes attendees from an existing meeting request.
 
-### Two kinds of updates
+### Two kinds of updates
 
 There are two kinds of updates:
 
@@ -50,7 +50,7 @@ There are two kinds of updates:
 - Message body
 - Attachments
 
-These updates are informational, and they do not require the recipient to process (accept/decline/tentative).
+These updates are informational, and they do not require the recipient to process (accept/decline/tentative).
 
 **Updates are sent to all recipients to be processed when one of the following changes occurs:**
 
@@ -59,6 +59,6 @@ These updates are informational, and they do not require the recipient to proce
 - Instance of a recurrence pattern changes
 - Instance or series cancellations
 
-These updates require a response, and they do require the recipient to process (accept/decline/tentative).
+These updates require a response, and they do require the recipient to process (accept/decline/tentative).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

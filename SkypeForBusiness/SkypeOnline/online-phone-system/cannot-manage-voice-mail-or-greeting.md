@@ -31,7 +31,7 @@ In this scenario, you can't retrieve your voice mail by using the Skype for Busi
 
 Voice mails and voice mail greetings are included in Cloud PBX and stored in an Exchange Online mailbox. A license for Exchange Online (Plan 2) or later is required.
 
-To work around this issue, you can set the Simultaneously Ring feature for your calls to a phone number that already has voice mail, such as a mobile phone number. When the Simultaneously Ring feature is configured, and a call is made to your Skype for Business phone number, it will ring simultaneously for the phone numbers that you have specified. If you don't answer the call, voice mail will accept the call, based on the wait time that's configured for your Skype for Business phone number. For more information about Simultaneously Ring, see [Call forwarding and simultaneously ring](https://support.office.com/article/call-forwarding-and-simultaneously-ring-967d9aaf-3fed-448b-ab96-40bbc9a11a20 ). 
+To work around this issue, you can set the Simultaneously Ring feature for your calls to a phone number that already has voice mail, such as a mobile phone number. When the Simultaneously Ring feature is configured, and a call is made to your Skype for Business phone number, it will ring simultaneously for the phone numbers that you have specified. If you don't answer the call, voice mail will accept the call, based on the wait time that's configured for your Skype for Business phone number. For more information about Simultaneously Ring, see [Call forwarding and simultaneously ring](https://support.office.com/article/call-forwarding-and-simultaneously-ring-967d9aaf-3fed-448b-ab96-40bbc9a11a20 ). 
 
 ## More information
 

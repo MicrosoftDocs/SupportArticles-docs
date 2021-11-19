@@ -48,7 +48,7 @@ Outlook for Mac has the following limitations:
 
 ## Workaround
 
-To work around these limitations, take the following actions:
+To work around these limitations, take the following actions:
 
 - Send email messages from a single account instead of from a distribution list, a security group, or a mail-enabled Public Folder.
 - Use single accounts as delegates instead of using distribution lists, security groups, or mail-enabled Public Folders as delegates.

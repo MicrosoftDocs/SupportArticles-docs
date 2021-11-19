@@ -47,7 +47,7 @@ To work around this problem, follow these steps:
 
    _Ref
 
-1. Locate and select the outline numbered heading to which the cross-reference should point.    
+1. Locate and select the outline numbered heading to which the cross-reference should point.    
 1. On the **Insert** tab, in the **Links** group, click **Bookmark**.   
 1. In the **Bookmark** dialog box, click to select the **Hidden bookmarks** check box.
 1. Locate and then select the bookmark name that matches the bookmark name that you noted in step 1.   

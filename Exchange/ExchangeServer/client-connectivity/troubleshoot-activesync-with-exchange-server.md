@@ -274,7 +274,7 @@ We now have the data collected and we are ready to begin troubleshooting. The fi
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [here](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **SendMail** under **Search raw log data for strings** and select **Search**.

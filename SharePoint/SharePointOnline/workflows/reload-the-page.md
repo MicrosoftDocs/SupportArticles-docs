@@ -12,7 +12,7 @@ ms.topic: article
 ms.custom: 
 - CSSTroubleshoot
 - CI 151596
-ms.author: v-matham
+ms.author: v-matthamer
 appliesto:
 - SharePoint Online
 ---

@@ -47,7 +47,7 @@ Because of the password policy restrictions, the Azure Active Directory Sync too
 
 Use the Windows Server Essentials Dashboard to manage Office 365. We also recommend that you uninstall the Azure Active Directory Sync tool from the server. 
 
-If, for any reason, you can't remove the Azure Active Directory Sync tool from the computer, disable Office 365 integration on the Windows Server Essentials Dashboard, and then restart the server. Doing this removes the password policy restrictions. 
+If, for any reason, you can't remove the Azure Active Directory Sync tool from the computer, disable Office 365 integration on the Windows Server Essentials Dashboard, and then restart the server. Doing this removes the password policy restrictions. 
 
 ## More information
 

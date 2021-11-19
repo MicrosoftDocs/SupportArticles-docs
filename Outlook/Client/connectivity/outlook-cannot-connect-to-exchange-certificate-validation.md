@@ -25,12 +25,12 @@ _Original KB number:_ &nbsp; 4488049
 
 ## Symptoms
 
-After you configure a network device to require certificate validation between Outlook and Exchange Server 2019, 2016, or 2013, you experience connection failures in Outlook clients.
+After you configure a network device to require certificate validation between Outlook and Exchange Server 2019, 2016, or 2013, you experience connection failures in Outlook clients.
 
 > [!NOTE]
-> The network device can be a load balancer or another network device, as described in [Certificate Selection and Validation](/dotnet/framework/network-programming/certificate-selection-and-validation).
+> The network device can be a load balancer or another network device, as described in [Certificate Selection and Validation](/dotnet/framework/network-programming/certificate-selection-and-validation).
 
-This problem occurs especially if the network device is configured to require the client to present a certificate during the SSL handshake in the network layer instead of passing the traffic directly to the server that is running Exchange Server.
+This problem occurs especially if the network device is configured to require the client to present a certificate during the SSL handshake in the network layer instead of passing the traffic directly to the server that is running Exchange Server.
 
 ## Cause
 
@@ -38,7 +38,7 @@ This issue occurs because Outlook doesn't support using the Windows certificate 
 
 ## Resolution
 
-To configure certificate authentication in Outlook 2016 and later versions, we recommend that you use Modern Authentication. For more information about how to enable Modern Authentication, see the following articles:
+To configure certificate authentication in Outlook 2016 and later versions, we recommend that you use Modern Authentication. For more information about how to enable Modern Authentication, see the following articles:
 
 - [Enable Modern Authentication in Office 365](https://social.technet.microsoft.com/wiki/contents/articles/36101.office-365-enable-modern-authentication.aspx)
 - [Configure on-premises Exchange to use Hybrid Modern Authentication](/office365/enterprise/configure-exchange-server-for-hybrid-modern-authentication)

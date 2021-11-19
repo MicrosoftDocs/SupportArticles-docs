@@ -22,9 +22,9 @@ appliesto:
 
 ## Symptoms
 
-Users are periodically being prompted by Office 2013 and Lync 2013 for credentials to SharePoint Online, OneDrive, and Lync Online. 
+Users are periodically being prompted by Office 2013 and Lync 2013 for credentials to SharePoint Online, OneDrive, and Lync Online. 
 
-The following are some examples of the credential messages:
+The following are some examples of the credential messages:
 
 - Sign in with your organizational account   
 - Credentials are required   
@@ -34,7 +34,7 @@ The following are some examples of the credential messages:
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
-User names and passwords entered for Office 2013 and Lync 2013 in order to log on to SharePoint Online, OneDrive, and Lync Online can be optionally saved in Windows CredMan. This typically happens when the user selects the **Keep me signed-in** check box. For federated user accounts, the user name and passwords are not saved. This is because Integrated Windows Authentication can be used, which does not require the password. For a third-party federated identity provider that does not support Integrated Windows Authentication, the password is not available from CredMan, and therefore it must be prompted for.
+User names and passwords entered for Office 2013 and Lync 2013 in order to log on to SharePoint Online, OneDrive, and Lync Online can be optionally saved in Windows CredMan. This typically happens when the user selects the **Keep me signed-in** check box. For federated user accounts, the user name and passwords are not saved. This is because Integrated Windows Authentication can be used, which does not require the password. For a third-party federated identity provider that does not support Integrated Windows Authentication, the password is not available from CredMan, and therefore it must be prompted for.
 
 ## Resolution
 

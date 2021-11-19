@@ -26,15 +26,15 @@ _Original KB number:_ &nbsp; 4230296
 
 When you try to start Outlook 2016, you receive a **Do you want to allow this website to open an app on your computer?** message.
 
-:::image type="content" source="media/you-ll-need-a-new-app-to-open-this-osf-roaming-16/message-1.png" alt-text="Screenshot of message: Do you want to allow this website to open an app on your computer]":::
+:::image type="content" source="media/you-ll-need-a-new-app-to-open-this-osf-roaming-16/message-1.png" alt-text="Screenshot of message: Do you want to allow this website to open an app on your computer.":::
 
-If you select **Allow**, you receive a **You'll need a new app to open this osf-roaming.16** message.
+If you select **Allow**, you receive a **You'll need a new app to open this osf-roaming.16** message.
 
-:::image type="content" source="media/you-ll-need-a-new-app-to-open-this-osf-roaming-16/message-2.png" alt-text="Screenshot of message: you'll need a new app to open this osf-roaming.16":::
+:::image type="content" source="media/you-ll-need-a-new-app-to-open-this-osf-roaming-16/message-2.png" alt-text="Screenshot of message: you'll need a new app to open this osf-roaming.16.":::
 
 ## Cause
 
-This issue occurs when the Click-to-Run version of Microsoft Office Professional Plus is installed on the system together with the App-V version of Microsoft Visio or Microsoft Project.
+This issue occurs when the Click-to-Run version of Microsoft Office Professional Plus is installed on the system together with the App-V version of Microsoft Visio or Microsoft Project.
 
 ## Resolution
 

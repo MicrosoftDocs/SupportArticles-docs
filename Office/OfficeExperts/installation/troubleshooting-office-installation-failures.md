@@ -23,7 +23,7 @@ This article describes techniques on how to determine and fix Microsoft Office i
 
 ## Enable verbose logging
 
-When you troubleshoot Office install failures, make sure that MSI verbose logging is enabled. In Office, there's a setup.exe log file that's created by default. However, it doesn't give the detail that's usually required to diagnose an installation failure. With verbose MSI logging enabled, you will get a verbose log file for each component that Office installs. You will have a verbose log for the installation of the Word component, Excel and so on.
+When you troubleshoot Office install failures, make sure that MSI verbose logging is enabled. In Office, there's a setup.exe log file that's created by default. However, it doesn't give the detail that's usually required to diagnose an installation failure. With verbose MSI logging enabled, you'll get a verbose log file for each component that Office installs. You'll have a verbose log for the installation of the Word component, Excel, and so on.
 
 To enable verbose logging, set the following registry keys:
 
@@ -37,17 +37,17 @@ For more information about Windows Installer logging, see [How to enable Windows
 
 ## Perform the installation attempt
 
-If you are running your installation manually on the computer as a signed-in user by double-clicking setup.exe, the log files will be generated in the **%temp%** directory of the user who performs the installation.
+If you're running your installation manually on the computer as a signed-in user by double-clicking setup.exe, the log files will be generated in the **%temp%** directory of the user who performs the installation.
 
-Now that you have enabled verbose logging and know where you should look for the logs, just retry your installation. It's failed previously, expect it to fail again. However, this time, you are ready to capture log files that will be detailed enough to help you diagnose the failure point.
+Now that you have enabled verbose logging and know where you should look for the logs, just retry your installation. It's failed previously, expect it to fail again. However, this time, you're ready to capture log files that will be detailed enough to help you diagnose the failure point.
 
 ## Analyzing logs
 
-After your install attempt, you will find that you have somewhere between 1 and 20 logs from the installation in your temp directory.
+After your install attempt, you'll find that you have somewhere between 1 and 20 logs from the installation in your temp directory.
 
-Here is a screen shot of the verbose logs from an installation attempt.
+Here's a screenshot of the verbose logs from an installation attempt.
 
-![An example of verbose logs from Office installation](./media/troubleshooting-office-installation-failures/setup.png)
+:::image type="content" source="media/troubleshooting-office-installation-failures/verbose-logs.png" alt-text="Screenshot shows an example of the verbose logs from an installation attempt.":::
 
 When you look through the MSI logs, we will typically want to look for a value 3 entry in the logs. Windows installer returns codes during the installation that indicate if a particular function is successful or not.
 
@@ -55,11 +55,11 @@ When you look through the MSI logs, we will typically want to look for a value 3
 - Value 2 = Cancel
 - Value 3 = Error
 
-In a good installation, you will typically not see any *value 3* entries in the logs.
+In a good installation, you'll typically not see any *value 3* entries in the logs.
 
-Therefore, there are many logs to verify. We recommend that you start with the setup.exe log. This log usually has a value 3 entry in it when there is a failure. However, this log is not clear enough to diagnose the issue. If it doesn't have a *value 3* entry, look for the first instance of ***Rolling back package***. Rolling back package indicates that the Office installation has failed and Office is trying to "roll back" the installation. You should be able to identify the failure immediately at that point. As soon as you find *value 3* or *Rolling back package* in the setup.exe log, you should be able to identify which component is failing, and then from there look for the particular MSI log that corresponds to that component.
+Therefore, there are many logs to verify. We recommend that you start with the setup.exe log. This log usually has a value 3 entry in it when there is a failure. However, this log isn't clear enough to diagnose the issue. If it doesn't have a *value 3* entry, look for the first instance of ***Rolling back package***. Rolling back package indicates that the Office installation has failed and Office is trying to "roll back" the installation. You should be able to identify the failure immediately at that point. As soon as you find *value 3* or *Rolling back package* in the setup.exe log, you should be able to identify which component is failing, and then from there look for the particular MSI log that corresponds to that component.
 
-There is frequently more than one *value 3* or *rolling back package* entry. You should focus on the first entry that you find.
+There's frequently more than one *value 3* or *rolling back package* entry. You should focus on the first entry that you find.
 
 Here are some examples of Office installation failures and how we can identify the failure point.
 
@@ -91,7 +91,7 @@ For example, from the bottom of the MSIb0bc7.LOG, you see the information that r
 
 So this is the verbose MSI log for the Office Outlook MUI component, and the component is from the rollback (the installation failure occurred earlier than this rollback).
 
-When you find the ProPlus log (it's the biggest one), you see the following information that indicates it is the ProPlus log:
+When you find the ProPlus log (it's the biggest one), you see the following information that indicates it's the ProPlus log:
 
 *Product: C:\MSOCache\All Users\GUID-C\ProPlusWW.msi*
 
@@ -138,7 +138,7 @@ To fix this issue, make sure that the network service is running, and then make 
 
 ### Analyze logs example 3: Office ProPlus 2010
 
-In this next example, you find a value 3 entry in the setup.exe log that resembles the following:
+In this next example, you find a value 3 entry in the setup.exe log that resembles the following error:
 
 *MSI(ERROR): 'Error 1304. Error writing to file: C:\WINDOWS\winsxs\Policies\x86_policy.8.0.Microsoft.VC80.ATL_1fc8b3b9a1e18e3b_x-ww_5f0bbcff\8.0.50727.4053.policy. Verify that you have access to that directory.'*
 
@@ -349,12 +349,12 @@ Grant **Everyone** full rights to that folder, and then retry the installation. 
 
 **Cause**
 
-This issue may occur if the **Windows Event Log** service is not running.
+This issue may occur if the **Windows Event Log** service isn't running.
 
 **Solution**
 
 1. Click start or search, type **services.msc**, and then press Enter. 
-1. Scroll down to the **Windows Event Log** service, and make sure that it's set to automatic. If it is not running, right-click it, and then select **Start**.
+1. Scroll down to the **Windows Event Log** service, and make sure that it's set to automatic. If it isn't running, right-click it, and then select **Start**.
 
 You may receive an error that resembles the following:
 
@@ -364,4 +364,4 @@ In this case, do the following actions:
 
 1. Check the permissions on the "c:\windows\system32\logfiles\wmi\RTbackup" folder.
 1. If the system account doesn't have **Full control** permission, grant the system account **Full control** permission, and then restart the system.
-1. Check and see whether the **Windows Event Log service** is started in **services.msc**. If it is now started correctly, try your Office installation again.
+1. Check and see whether the **Windows Event Log service** is started in **services.msc**. If it's now started correctly, try your Office installation again.

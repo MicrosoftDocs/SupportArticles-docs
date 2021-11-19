@@ -22,8 +22,8 @@ appliesto:
 This issue may occur under the following circumstances:
 
 - The Lync Server 2013 pool hosts three or more Lync Server 2013 Front-End servers.   
-- The Lync Server 2013 Front-End servers have had updates applied recently that required the stopping of services.   
-- The Windows Server that hosts the Lync Server 2013 Front-End servers has had updates applied recently that required a system restart.   
+- The Lync Server 2013 Front-End servers have had updates applied recently that required the stopping of services.   
+- The Windows Server that hosts the Lync Server 2013 Front-End servers has had updates applied recently that required a system restart.   
 - Components that make up the required Lync Server 2013 infrastructure fail and caused the shut down or restarting of Lync Server Front-End services.   
 - Lync Server 2013 Front-End server services will not start when you have two Front-End servers and one Back-End server with mirroring. 
 
@@ -31,7 +31,7 @@ This issue may occur under the following circumstances:
     Resolution: 
     Shut down one of the Front-End servers. Then shut down the Back-End server to make the mirroring failover work correctly.
     ```
-- The Lync Server 2013 Front-End servers will log the following Warning event in the Lync Server Event Log in Windows Event Viewer during the Lync Server 2013 service startup:
+- The Lync Server 2013 Front-End servers will log the following Warning event in the Lync Server Event Log in Windows Event Viewer during the Lync Server 2013 service startup:
 
     ```AsciiDoc
     Log Name: Lync Server 
@@ -68,7 +68,7 @@ As mentioned in the Summary section this kind of issue can occur when you update
 
 Updating the Front-End servers in the Lync Server 2013 Enterprise Edition pool
 
-For upgrades of Front-End servers, we recommend that you upgrade one server at a time. Bring one server down, apply the upgrade, then bring that server back up before upgrading another server. 
+For upgrades of Front-End servers, we recommend that you upgrade one server at a time. Bring one server down, apply the upgrade, then bring that server back up before upgrading another server. 
 
 For a Front-End pool to be functional, a certain number of Front-End servers in the pool have to be up and running. For detailed information on how many Lync Server 2013 Front-End servers are required to remain running during maintenance operations review the following Microsoft TechNet documentation:
 
@@ -76,7 +76,7 @@ For a Front-End pool to be functional, a certain number of Front-End servers in 
 
 ### Single point of failure
 
-The failure of any physical grouping of a set of hardware components, for example, servers that share a single point of failure such as electrical power, overheating, a network switch or data storage, can cause a single point of failure for the Lync Server 2013 Front-End server pool. In a single point of failure scenario there is the possibility that under 85% of the Lync Server 2013 Pool's Front-End server services will remain functional. When this amount of functionality loss occurs the Lync Server 2013 Pool may lose its quorum state. This results in the issue that is described in the Summary section of this KB article. The solution for this kind of issue is described here: 
+The failure of any physical grouping of a set of hardware components, for example, servers that share a single point of failure such as electrical power, overheating, a network switch or data storage, can cause a single point of failure for the Lync Server 2013 Front-End server pool. In a single point of failure scenario there is the possibility that under 85% of the Lync Server 2013 Pool's Front-End server services will remain functional. When this amount of functionality loss occurs the Lync Server 2013 Pool may lose its quorum state. This results in the issue that is described in the Summary section of this KB article. The solution for this kind of issue is described here: 
 
 #### Using Windows Server 2012
 
@@ -87,10 +87,10 @@ The failure of any physical grouping of a set of hardware components, for exampl
 #### Using Windows Server 2008 or Windows Server 2008 R2
 
 1. Click **Start**.   
-2. Select **All Programs**, then Microsoft Lync Server 2013.  
+2. Select **All Programs**, then Microsoft Lync Server 2013.  
 3. Click the Lync Server Management Shell.   
 
-Use the Lync Server 2013 PowerShell cmdlet in the example listed here from the Lync Server Management Shell:
+Use the Lync Server 2013 PowerShell cmdlet in the example listed here from the Lync Server Management Shell:
 
 ```powershell
 Reset-CsPoolRegistrarState -PoolFqdn "atl-cs-001.litwareinc.com" -ResetType QuorumLossRecovery

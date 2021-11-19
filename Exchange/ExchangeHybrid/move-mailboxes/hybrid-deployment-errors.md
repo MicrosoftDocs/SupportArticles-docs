@@ -59,7 +59,7 @@ In a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and 
 
 This issue occurs if the Internet Information Services (IIS) configuration is missing the svc-Integrated handler mapping. The following screenshot shows an example of the svc-Integrated handler mapping in IIS:
 
-![Screenshot of an example of the svc-Integrated handler mapping in IIS ](./media/hybrid-deployment-errors/handler-mapping.jpg)
+:::image type="content" source="media/hybrid-deployment-errors/handler-mapping.png" alt-text="Screenshot of an example of the svc-Integrated handler mapping in IIS.":::
 
 ## Solution
 

@@ -30,11 +30,11 @@ _Original KB number:_ &nbsp; 982997
 
 After you configure Outlook 2010 or later versions to display Quota Information on the Status bar, you should see something that resembles the following example when you right-click the Status bar:
 
-:::image type="content" source="./media/mailbox-quota-information-not-displayed/customize-status-bar.jpg" alt-text="Screenshot of Customize Status Bar.":::
+:::image type="content" source="./media/mailbox-quota-information-not-displayed/customize-status-bar.png" alt-text="Screenshot of Customize Status Bar.":::
 
 However, Quota Information may not be displayed on the Status bar. When this occurs, you see a Status bar that resembles the following example:
 
-![Screenshot of Status Bar](./media/mailbox-quota-information-not-displayed/quota-infor-not-displayed-on-status-bar.jpg)
+:::image type="content" source="./media/mailbox-quota-information-not-displayed/quota-infor-not-displayed-on-status-bar.png" alt-text="Screenshot of the Status bar of Outlook 2010." border="false":::
 
 ## Cause
 
@@ -75,7 +75,7 @@ To examine these settings, follow these steps:
 
             The following example shows a mailbox that does not have any specific limits set on it ("Use mailbox database defaults" = *enabled*).
 
-            ![Screenshot of Storage Quotas dialog box](./media/mailbox-quota-information-not-displayed/storage-quotas.jpg)
+            :::image type="content" source="./media/mailbox-quota-information-not-displayed/storage-quotas.png" alt-text="Screenshot of the Storage Quotas dialog box." border="false":::
 
   - Exchange Management Shell
 
@@ -87,7 +87,7 @@ To examine these settings, follow these steps:
 
     In the following example, the results indicate a mailbox that does not have specific limits set on it ("UseDatabaseQuotaDefaults" = True).
 
-    ![Screenshot 1 of Command prompt example](./media/mailbox-quota-information-not-displayed/command-prompt-example.jpg)
+    :::image type="content" source="./media/mailbox-quota-information-not-displayed/command-prompt-example.png" alt-text="Screenshot of the command prompt example." border="false":::
 
 - On a mailbox store
 
@@ -101,7 +101,7 @@ To examine these settings, follow these steps:
 
         In the following example, only the Issue warning at and **Prohibit send at**  limits are set.
 
-        ![Screenshot of Mailbox Database Properties](./media/mailbox-quota-information-not-displayed/mailbox-database-properties.jpg)
+        :::image type="content" source="./media/mailbox-quota-information-not-displayed/mailbox-database-properties.png" alt-text="Screenshot of the Mailbox Database Properties dialog box." border="false":::
 
   - Exchange Management Shell
 
@@ -113,12 +113,12 @@ To examine these settings, follow these steps:
 
     In the following example, the results indicate that the mailbox database does not have a Send and Receive quota set on it ("ProhibitSendReceiveQuota" = unlimited).
 
-    ![Screenshot 2 of Command prompt example](./media/mailbox-quota-information-not-displayed/command-issuewarning-example.jpg)
+    :::image type="content" source="./media/mailbox-quota-information-not-displayed/command-issuewarning-example.png" alt-text="Screenshot of this command prompt example." border="false":::
 
 ## More information
 
 The following example demonstrates the Quota Information that is displayed on the Status bar in Outlook when the necessary quotas are configured for a mailbox on Exchange Server 2007 or on Exchange Server 2010. The tool tip below the Status bar is displayed when you move the mouse pointer over the quota text on the Status bar.
 
-![Screenshot of Status bar with Quota Information](./media/mailbox-quota-information-not-displayed/quota-information-display-on-status-bar.jpg)
+:::image type="content" source="./media/mailbox-quota-information-not-displayed/quota-information-display-on-status-bar.png" alt-text="Screenshot of the Status bar with quota information." border="false":::
 
 For additional symptoms when you are working with mailbox limits and quotas, see [The Mailbox Cleanup Wizard does not start in Outlook 2010 or Outlook 2013 when the mailbox is full](https://support.microsoft.com/help/2632283).

@@ -53,7 +53,7 @@ To test for and eliminate the possibility that a third-party Excel add-in or fil
 
 If the file now saves correctly, a custom add-in or a file that is located in an Excel startup location is most likely the cause. You must locate and remove the add-in or the file to eliminate the problem. After you determine which add-in or file caused the problem, contact the vendor for additional information or an update that resolves the problem.
 
-For more information about Microsoft Excel safe mode, press **F1** in Excel to open the Help menu, type **safe mode** in the **Search** box, and then select **Search** to view the topic.
+For more information about Microsoft Excel safe mode, press **F1** in Excel to open the Help menu, type **safe mode** in the **Search** box, and then select **Search** to view the topic.
 
 For more information about how to determine the folders that Excel uses during startup, and additional options to disable this functionality, see the following articles:
 
@@ -144,7 +144,7 @@ For more information, see [Error message when you open or save a file in Microso
 
 Excel follows these steps when it saves a file:
 
-1. Excel creates a randomly named temporary file (for example, Cedd4100 without a file name extension) in the destination folder that you specified in the **Save As** dialog box. The whole workbook is written to the temporary file.
+1. Excel creates a randomly named temporary file (for example, Cedd4100 without a file name extension) in the destination folder that you specified in the **Save As** dialog box. The whole workbook is written to the temporary file.
 2. If changes are being saved to an existing file, Excel deletes the original file.
 3. Excel renames the temporary file. Excel gives the temporary file the file name that you specified (such as Book1.xls) in the **Save As** dialog box.
 
@@ -298,7 +298,7 @@ You may have problems when you try to save a Microsoft Excel workbook if one or 
 
 - You save an Excel workbook to a network drive on which you have restricted permissions.
 - You save an Excel workbook to a location that does not have sufficient storage space.
-- The connection to the Excel workbook is lost.
+- The connection to the Excel workbook is lost.
 - There is a conflict with an antivirus software program.
 - You save an Excel workbook that is shared.
 - The 218-character path limitation is exceeded when you save an Excel workbook.
@@ -308,7 +308,7 @@ You may have problems when you try to save a Microsoft Excel workbook if one or 
 To work around this problem and try to save your work before you troubleshoot, use the following methods. Depending on the cause of the problem, you may be unable to recover the current file as-is. However, the following methods are typically successful. These methods are listed in order of format retention when you are trying to keep the original file formatting.
 
 > [!NOTE]
-> The following methods may not save all the latest changes, formatting, and feature sets of the workbook that are specific to the version of Excel that you are using. The following methods are intended to let you obtain a usable, saved version of the file. These methods require you to save the file to your local hard disk by using a unique file name.  
+> The following methods may not save all the latest changes, formatting, and feature sets of the workbook that are specific to the version of Excel that you are using. The following methods are intended to let you obtain a usable, saved version of the file. These methods require you to save the file to your local hard disk by using a unique file name.  
 
 <a id="option1">
 
@@ -403,7 +403,7 @@ Restart Windows in safe mode, and then try to save the workbook to your local ha
 
 For more information about how to start Windows in safe mode, see [Advanced startup options (including safe mode)](https://windows.microsoft.com/windows/start-computer-safe-mode#start-computer-safe-mode=windows-7).
 
-If the workbook saves after you restart Windows in safe mode, try again to save the file. To do this, select **Save** on the **File** menu.
+If the workbook saves after you restart Windows in safe mode, try again to save the file. To do this, select **Save** on the **File** menu.
 
 If the workbook doesn't save after you restart Windows in safe mode, the following are possible causes:
 

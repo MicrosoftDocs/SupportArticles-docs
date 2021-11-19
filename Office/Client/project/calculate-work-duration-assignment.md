@@ -91,7 +91,7 @@ The duration of the task changes from 2d to 2.67d due to the length of time nece
 
 
 1. On the File menu, click New. If you receive the Summary Information dialog box, click OK.   
-2. Enter a new task, T1. Set the duration to two days.   
+2. Enter a new task, T1. Set the duration to two days.   
 3. On the Window menu, click Split.   
 4. Press F6.
 

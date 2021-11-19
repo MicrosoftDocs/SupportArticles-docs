@@ -22,7 +22,7 @@ appliesto:
 
 ## Summary
 
-To help you resolve an issue that you have reported, Microsoft Support may request that you run a network trace by using the Network Monitor (NetMon.exe) tool.  
+To help you resolve an issue that you have reported, Microsoft Support may request that you run a network trace by using the Network Monitor (NetMon.exe) tool.  
 For example, you might have to use Network Monitor to troubleshoot the following kinds of issues: 
 
 - Outlook cannot connect to the network.    
@@ -34,7 +34,7 @@ For example, you might have to use Network Monitor to troubleshoot the following
 
 ## More Information
 
-To install, collect, and send the Network Monitor trace file so that it can be reviewed by Microsoft Support, follow these steps:
+To install, collect, and send the Network Monitor trace file so that it can be reviewed by Microsoft Support, follow these steps:
 
 1. Get the NetMon.exe tool from the following location:
     
@@ -44,10 +44,10 @@ To install, collect, and send the Network Monitor trace file so that it can be r
 
     > [!NOTE]
     > You may have to right-click **OneClick_Autorun.exe**, and then click **Run as administrator**.
-4. The **Network Monitor One-Click Traffic Capture** window appears. (This is a Command Prompt window that has a dark red background.) To select the default location in which to save the capture file,**press Enter**.   
+4. The **Network Monitor One-Click Traffic Capture** window appears. (This is a Command Prompt window that has a dark red background.) To select the default location in which to save the capture file,**press Enter**.   
 5. Close and restart the application that has the reported issue.   
 6. Take the relevant actions to reproduce the issue.   
-7. Switch back to the Network Monitor Command Prompt window, and then press the **X** key to stop the capture. A Windows Explorer window should open that contains the newly created OneClick.cap file.   
+7. Switch back to the Network Monitor Command Prompt window, and then press the **X** key to stop the capture. A Windows Explorer window should open that contains the newly created OneClick.cap file.   
 8. Compress the OneClick.cap file to a .zip file, and name the new file. Although you can give the file any name, Microsoft Support prefers that the file name include your escalation number and user name ("123456_\<user name>.zip"). 
 
     > [!NOTE]

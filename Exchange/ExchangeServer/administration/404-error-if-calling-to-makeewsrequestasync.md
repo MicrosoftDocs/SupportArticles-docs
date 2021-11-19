@@ -27,13 +27,13 @@ Consider the following scenario:
 
 - You're running Exchange Server 2013 Cumulative Update 19 (CU19) or a later version.
 - The server that's running Exchange Server is configured to have split Client Access server (CAS) and Mailbox server (MBX) roles.
-- A Modern add-in calls the **makeEwsRequestAsync** function from any supported client, such as the [Outlook client](/office/dev/add-ins/outlook/web-services).
+- A Modern add-in calls the **makeEwsRequestAsync** function from any supported client, such as the [Outlook client](/office/dev/add-ins/outlook/web-services).
 
-In this scenario, the call fails and returns a **404** error message.
+In this scenario, the call fails and returns a **404** error message.
 
 ## Resolution
 
-To fix this issue, install the CAS role on each Mailbox server. This is the preferred architecture for Exchange Server 2013.
+To fix this issue, install the CAS role on each Mailbox server. This is the preferred architecture for Exchange Server 2013.
 
 ## Status
 

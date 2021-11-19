@@ -51,7 +51,7 @@ For more information about how to turn Clutter on or off, see [Use Clutter to so
     Get-Mailbox user@contoso.com | Set-Clutter -Enable $false
     ```
 
-For more information about how to use the `Set-Clutter` cmdlet to turn Clutter on or off, see [Set-Clutter](/powershell/module/exchange/set-clutter).
+For more information about how to use the `Set-Clutter` cmdlet to turn Clutter on or off, see [Set-Clutter](/powershell/module/exchange/set-clutter).
 
 ## More information
 

@@ -2,7 +2,7 @@
 title: Error 404 File/Page not found in OneDrive or SharePoint
 description: How to troubleshoot Error 404 when you try to view content in OneDrive or SharePoint.
 ms.author: bpeterse
-author: v-matham
+author: v-matthamer
 manager: dcscontentpm
 ms.date: 7/26/2021
 audience: Admin

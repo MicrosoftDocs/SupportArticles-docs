@@ -30,7 +30,7 @@ In Microsoft Excel, all currently open documents use the same mode of calculatio
 
 To help explain how the mode of calculation is determined, this article refers to the following hypothetical documents: 
 
-|File name|Kind of document|Mode that is used to save the file|
+|File name|Kind of document|Mode that is used to save the file|
 |---|---|---|
 |Auto1.xlsx|Workbook|Automatic|
 |Manual1.xlsx|Workbook|Manual|
@@ -46,10 +46,10 @@ The following statements apply to calculation modes in Excel:
 
 ### How to control the mode of calculation
 
-All open documents use the same mode of calculation. You must follow special procedures to work with documents that use different calculation modes. For example, if you are working with Auto1.xlsx and you want to open Manual1.xlsx in manual calculation mode, take one of the following actions:  
+All open documents use the same mode of calculation. You must follow special procedures to work with documents that use different calculation modes. For example, if you are working with Auto1.xlsx and you want to open Manual1.xlsx in manual calculation mode, take one of the following actions:  
 
-- Set Auto1.xlsx to manual calculation mode before you open Manual1.xlsx.    
-- Close Auto1.xlsx (and any other open documents) before you open Manual1.xlsx.    
+- Set Auto1.xlsx to manual calculation mode before you open Manual1.xlsx.    
+- Close Auto1.xlsx (and any other open documents) before you open Manual1.xlsx.    
 
 There are four modes of calculation that you can select in Excel. They are as follows: 
 
@@ -63,7 +63,7 @@ There are four modes of calculation that you can select in Excel. They are as fo
 |Automatic|When you make any change to the document. All affected parts of the document are recalculated.|
 |Automatic except tables|When you make any change to the document. All affected parts of the document except tables are recalculated. A table is recalculated only when a change is made to it.|
 |Manual|When you press F9, click **Options** on the **Tools** menu, click the **Calculation** tab, and then click **Calc Sheet**.|
-|Manual / Recalculate before saving|When you press F9 or click **Calc Sheet** on the **Calculation** tab on the **Tools/Options** menu. Calculation also occurs every time that you save the file if you have the checkbox "Recalculate workbook before saving" checked under **File** > **Options** > **Formulas**.<br/>!["Recalculate workbook before saving" checkbox.](./media/current-mode-of-calculation/current-mode-of-calculation.png)|
+|Manual / Recalculate before saving|When you press F9 or click **Calc Sheet** on the **Calculation** tab on the **Tools/Options** menu. Calculation also occurs every time that you save the file if you have the checkbox "Recalculate workbook before saving" checked under **File** > **Options** > **Formulas**.<br/>:::image type="content" source="media/current-mode-of-calculation/recalculate-workbook-before-saving.png" alt-text="Screenshot to select the Recalculate workbook before saving checkbox.":::|
 
 ### Recalculate the active sheet
 

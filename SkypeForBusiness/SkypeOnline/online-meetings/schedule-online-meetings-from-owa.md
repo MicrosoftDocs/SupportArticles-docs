@@ -20,9 +20,9 @@ appliesto:
 
 ## Problem 
 
-When you use Outlook Web App in Office 365, you may experience the following issues: 
+When you use Outlook Web App in Office 365, you may experience the following issues: 
 
-- You can't schedule Skype for Business Online (formerly Lync Online) meetings in Outlook Web App because the link or button to do this is missing.   
+- You can't schedule Skype for Business Online (formerly Lync Online) meetings in Outlook Web App because the link or button to do this is missing.   
 - You can't see presence information for contacts in Outlook Web App.   
 - When you try to use the Instant Messaging (IM) feature in Outlook Web App, you receive the following error message:
    

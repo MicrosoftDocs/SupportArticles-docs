@@ -42,7 +42,7 @@ This issue does not occur for Office 365 accounts that are using the REST protoc
 
 This issue is caused by a limitation in the EWS protocol that is used for Exchange on-premises accounts. Microsoft 365 accounts that use REST are no longer affected by this issue.
 
-In Outlook for Mac, you must have at least the Reviewer permission to access the other user's default Calendar folder so that you can also access any subcalendar folders.
+In Outlook for Mac, you must have at least the Reviewer permission to access the other user's default Calendar folder so that you can also access any subcalendar folders.
 
 For example, you have permissions to the following shared Calendar folders:
 
@@ -57,6 +57,6 @@ To be able to open the other user's Second Calendar folder, you must have at lea
 
 ## References
 
-For more information about REST for Outlook for Mac, see [Outlook for Mac improves calendar sharing performance with REST](https://techcommunity.microsoft.com/t5/outlook-blog/outlook-for-mac-improves-calendar-sharing-performance-with-rest/ba-p/273005).
+For more information about REST for Outlook for Mac, see [Outlook for Mac improves calendar sharing performance with REST](https://techcommunity.microsoft.com/t5/outlook-blog/outlook-for-mac-improves-calendar-sharing-performance-with-rest/ba-p/273005).
 
 For more information about how to share a folder in Outlook for Mac, see [Share a folder in an Exchange account](https://support.microsoft.com/office/share-a-folder-in-an-exchange-account-645b7a89-2c2e-42b0-92b6-97a703b406b3).

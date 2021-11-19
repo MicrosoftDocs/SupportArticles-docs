@@ -24,7 +24,7 @@ appliesto:
 
 ## PROBLEM
 
-When you make a change to a parent (top-level) domain that's verified in Office 365, Microsoft Azure, or Microsoft Intune, a child domain that's also verified doesn't inherit the changes. This issue may occur when you do one of the following:
+When you make a change to a parent (top-level) domain that's verified in Office 365, Microsoft Azure, or Microsoft Intune, a child domain that's also verified doesn't inherit the changes. This issue may occur when you do one of the following:
 
 - Change the domain from standard to federated
 - Change the domain from federated to standard

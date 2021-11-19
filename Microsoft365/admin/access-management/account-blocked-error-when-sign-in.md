@@ -27,7 +27,7 @@ When a user tries to sign in to the Microsoft 365 portal, he or she receives the
 
 ## Solution 
 
-To resolve this issue, use the following methods in the order in which they're presented. After each method, test to see whether the issue is resolved. If the issue isn't resolved, go to the next method. 
+To resolve this issue, use the following methods in the order in which they're presented. After each method, test to see whether the issue is resolved. If the issue isn't resolved, go to the next method. 
 
 ### For users
 

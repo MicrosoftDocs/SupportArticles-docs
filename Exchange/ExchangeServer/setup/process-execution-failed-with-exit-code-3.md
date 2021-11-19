@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4495264
 
 ## Symptoms
 
-When you install Exchange Server 2019, 2016, or 2013 Edge Transport server roles by using the Setup wizard, the installation fails and returns an error message that resembles the following:
+When you install Exchange Server 2019, 2016, or 2013 Edge Transport server roles by using the Setup wizard, the installation fails and returns an error message that resembles the following:
 
 > The following error was generated when "$error.Clear(); $dllFile = join-path $RoleInstallPath "bin\ExSMIME.dll"; $regsvr = join-path (join-path $env:SystemRoot system32) regsvr32.exe; start-SetupProcess -Name:"$regsvr" -Args:"/s `"$dllFile`"" -Timeout:120000; " was run: "Microsoft.Exchange.Configuration.Tasks.TaskException: Process execution failed with exit code 3.  
 > at Microsoft.Exchange.Management.Tasks.RunProcessBase.InternalProcessRecord()  
@@ -33,11 +33,11 @@ When you install Exchange Server 2019, 2016, or 2013 Edge Transport server role
 
 ## Cause
 
-This issue occurs because Visual C++ 2012 isn't installed on the server. Visual C++ 2012 is required in order to include the Active Template Library (ATL).
+This issue occurs because Visual C++ 2012 isn't installed on the server. Visual C++ 2012 is required in order to include the Active Template Library (ATL).
 
 ## Resolution
 
-To fix this issue, install Visual C++ 2012, and run the Setup wizard again.
+To fix this issue, install Visual C++ 2012, and run the Setup wizard again.
 
 The following article lists the download links for the latest versions of Visual C++:  
 [The latest supported Visual C++ downloads](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)

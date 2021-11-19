@@ -1,5 +1,6 @@
 ---
-title: How to determine the build version of Office Web Apps 2013 or Office Online Server
+title: Determine the build version of Office Web Apps 2013 or Office Online Server
+description: Describes how to determine the build version of Office Web Apps 2013 or Office Online Server.
 author: helenclu
 ms.author: thempel
 manager: dcscontentpm
@@ -30,11 +31,11 @@ The build version that begins with 15.0 is Office Web Apps 2013.The build versio
 
 **Office Web Apps 2013**
 
-![the office web apps 2013 image](./media/how-to-determine-build-version-of-office-online-server/office-web-apps-2013.jpg)
+:::image type="content" source="media/how-to-determine-build-version-of-office-online-server/office-web-apps-2013.png" alt-text="Screenshot of the cmdlet result for Office Web Apps 2013." border="false":::
 
 **Office Online Server**
 
-![the office online server image](./media/how-to-determine-build-version-of-office-online-server/office-online-server.jpg)
+:::image type="content" source="media/how-to-determine-build-version-of-office-online-server/office-online-server.png" alt-text="Screenshot of the cmdlet result for Office Online Server." border="false":::
 
 ## Method 2: Run a network trace if you don't have access to the servers directly
 
@@ -42,4 +43,4 @@ To get the build version, you can run a network trace while opening a document i
 
 There are many network tracing tools that you can use. However, if the SharePoint and Office Web Apps farms are running HTTPS, Fiddler is the easiest tool for the job. You can check the **X-OfficeVersion** in the **Response Headers** to determine the build version.
 
-![the response headers image](./media/how-to-determine-build-version-of-office-online-server/response-headers.png)
+:::image type="content" source="media/how-to-determine-build-version-of-office-online-server/response-headers.png" alt-text="Screenshot to check the X-OfficeVersion in the Response Headers." border="false":::

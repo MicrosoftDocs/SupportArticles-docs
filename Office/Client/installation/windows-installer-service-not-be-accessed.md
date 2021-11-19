@@ -49,7 +49,7 @@ To resolve this problem, use one of the following methods.
 
    :::image type="content" source="media/windows-installer-service-not-be-accessed/select-windows-installer-in-services-tab.png" alt-text="Select the Windows Installer option under the Services tab in the System Configuration Utility dialog box." border="false":::
 
-4. Click **OK**, and then click **Restart** to restart the computer. (The screen shot for this step is listed below).
+4. Click **OK**, and then click **Restart** to restart the computer. (The screen shot for this step is listed below).
 
    :::image type="content" source="media/windows-installer-service-not-be-accessed/restart-computer.png" alt-text="Select the Restart button on the System Configuration dialog box to restart the computer." border="false":::
 
@@ -85,9 +85,9 @@ To re-register Windows Installer, follow these steps.
 
    :::image type="content" source="media/windows-installer-service-not-be-accessed/location-of-msiexec-exe.png" alt-text="After the search is complete, make a note of the location of the Msiexec.exe file.":::
 
-5. On the **File** menu, click **Close** to close the **Search** dialog box. (The screen shot for this step is listed below).
+5. On the **File** menu, click **Close** to close the **Search** dialog box. (The screen shot for this step is listed below).
 
-   :::image type="content" source="media/windows-installer-service-not-be-accessed/close-the-search-results-dialog-box.png" alt-text="On the File menu, select Close to close the Search Results dialog box.":::
+   :::image type="content" source="media/windows-installer-service-not-be-accessed/close-the-search-results-dialog-box.png" alt-text="On the File menu, select Close to close the Search Results dialog box.":::
 
 6. Click **Start**, and then click **Run**. (The screen shot for this step is listed below).
 
@@ -117,9 +117,9 @@ To re-register Windows Installer, follow these steps.
 
     :::image type="content" source="media/windows-installer-service-not-be-accessed/set-value-data-for-imagepath.png" alt-text="If the Value data box doesn't contain the correct path, correct the path, and then select OK to close the Edit String dialog box." border="false":::
 
-11. On the **File** menu, click **Exit** to quit Registry Editor. (The screen shot for this step is listed below).
+11. On the **File** menu, click **Exit** to quit Registry Editor. (The screen shot for this step is listed below).
 
-    :::image type="content" source="media/windows-installer-service-not-be-accessed/quit-registry-edit.png" alt-text="On the File menu, select Exit to quit Registry Editor.":::
+    :::image type="content" source="media/windows-installer-service-not-be-accessed/quit-registry-edit.png" alt-text="On the File menu, select Exit to quit Registry Editor.":::
 
 12. Start your computer in Safe mode, and then register the Msiexec.exe file. To do this, follow these steps:  
     1. Shut down your computer, and then restart your computer.    

@@ -22,13 +22,13 @@ _Original KB number:_ &nbsp; 4025474
 
 ## Summary
 
-A Files folder is listed in the output of `Get-MailboxFolderStatistics`  for a mailbox. It is in the root of the mailbox but not visible to the end user. It may show a large amount of content that otherwise appears to be unusable.
+A Files folder is listed in the output of `Get-MailboxFolderStatistics`  for a mailbox. It is in the root of the mailbox but not visible to the end user. It may show a large amount of content that otherwise appears to be unusable.
 
 ## More information
 
-The Files folder within a mailbox is used to store the metadata of attachments that come into the mailbox. This content is then used to improve search performance and the overall user experience when search is used to find attachments. From the perspective of eDiscovery, the folder doesn't contain usable items, because the content is just reference (metadata) to real attachments that are already stored in the IPM visible subtree (for example, in the Inbox or whichever folder the mail with the attachment ended up in).
+The Files folder within a mailbox is used to store the metadata of attachments that come into the mailbox. This content is then used to improve search performance and the overall user experience when search is used to find attachments. From the perspective of eDiscovery, the folder doesn't contain usable items, because the content is just reference (metadata) to real attachments that are already stored in the IPM visible subtree (for example, in the Inbox or whichever folder the mail with the attachment ended up in).
 
-Content in the Files does not count against the user's quota. It is instead included in the system quota.
+Content in the Files does not count against the user's quota. It is instead included in the system quota.
 
 ```powershell
 Get-MailboxStatistics user@contoso.com | fl *SystemMessage*

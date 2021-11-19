@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 apps open files from SharePoint on-premises that aren’t the current version
-ms.author: v-matham
-author: v-matham
+ms.author: v-matthamer
+author: v-matthamer
 manager: dcscontentpm
 ms.date: 3/8/2021
 audience: ITPro

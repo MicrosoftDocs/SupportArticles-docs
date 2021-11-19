@@ -35,7 +35,7 @@ This problem occurs because of an infinite loop condition that occurs when Acces
 
 ## Workaround
 
-To work around this problem, select the **Use the cache format that is compatible with Microsoft Access 2010 and later** check box. To do this, follow these steps:
+To work around this problem, select the **Use the cache format that is compatible with Microsoft Access 2010 and later** check box. To do this, follow these steps:
 
 1. In Access, select **File** > **Options**.
 2. Select **Current Database**.

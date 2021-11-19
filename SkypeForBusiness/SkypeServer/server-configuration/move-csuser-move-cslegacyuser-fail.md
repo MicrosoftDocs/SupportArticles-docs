@@ -28,14 +28,14 @@ The Move-CsUser Lync Server PowerShell cmdlet will fail with the following error
 
 ```adoc
 Move-CsUser : SetMoveResourceData failed because the user is not provisioned.
-At line:1 char:12 + Move-CsUser <<<<  -Target pool01.contoso.com -Identity bill@contoso.com -Verbose + CategoryInfo: InvalidOperation: (CN=Bill Ander...DC=com:OCSADUser) [Move-CsUser], MoveUserException + FullyQualifiedErrorId :MoveError,Microsoft.Rtc.Management.AD.Cmdlets.MoveOcsUserCmdlet
+At line:1 char:12 + Move-CsUser <<<<  -Target pool01.contoso.com -Identity bill@contoso.com -Verbose + CategoryInfo: InvalidOperation: (CN=Bill Ander...DC=com:OCSADUser) [Move-CsUser], MoveUserException + FullyQualifiedErrorId :MoveError,Microsoft.Rtc.Management.AD.Cmdlets.MoveOcsUserCmdlet
 ```
 
 The Move-CsLegacyUser Lync Server PowerShell cmdlet will fail with the following error:
 
 ```adoc
 Move-CsLegacyUser : SetMoveResourceData failed because the user is not provisioned.
-At line:1 char:18 + Move-CsLegacyUser <<<<  -Identity "jeff@contoso.com" -Target "pool01.contoso.com" + CategoryInfo : InvalidOperation: (CN=Jeff Ander...contoso,DC=com:OCSADUser) [Move-CsLegacyUser], MoveUserException + FullyQualifiedErrorId : MoveLegacyUserError,Microsoft.Rtc.Management.AD.Cmdlets.MoveOcsLegacyUserCmdlet  
+At line:1 char:18 + Move-CsLegacyUser <<<<  -Identity "jeff@contoso.com" -Target "pool01.contoso.com" + CategoryInfo : InvalidOperation: (CN=Jeff Ander...contoso,DC=com:OCSADUser) [Move-CsLegacyUser], MoveUserException + FullyQualifiedErrorId : MoveLegacyUserError,Microsoft.Rtc.Management.AD.Cmdlets.MoveOcsLegacyUserCmdlet  
 ```
 
 ## Cause
@@ -49,7 +49,7 @@ The Lync Server User Replicator Service has not completed the initial replicatio
 1. Use the following steps to locate the migration user information in the Lync Server database:   
 2. Install the Lync Server Resource Kit tools locally on one of the Lync Server Pool front-end servers   
 3. Open an administrative command prompt window   
-4. Browse to **%ProgramFiles%\Microsoft Lync Server 2010\ResKit** or **%ProgramFiles%\Microsoft Lync Server 2013\ResKit**    
+4. Browse to **%ProgramFiles%\Microsoft Lync Server 2010\ResKit** or **%ProgramFiles%\Microsoft Lync Server 2013\ResKit**    
 5. Use the following Dbanalyze command to verify that the user information has been migrated into the Lync target pool:
 
     ```powershell
@@ -57,7 +57,7 @@ The Lync Server User Replicator Service has not completed the initial replicatio
     ```
 
     > [!NOTE]
-    > Lync 2010 Server 2010 Standard Edition uses the following syntax for the dbanalyze command listed above: dbanalyze /report:user /user:sipuri@contoso.com
+    > Lync 2010 Server 2010 Standard Edition uses the following syntax for the dbanalyze command listed above: dbanalyze /report:user /user:sipuri@contoso.com
 
 1. If the following error is returned, then the specific user information has not been added to the Lync Server database yet:
 
@@ -79,17 +79,17 @@ Use the following steps to make sure that the Lync Server User Replicator initia
 9. Event information that is similar to the information that is listed below should be returned:
 
     ```adoc
-    Log Name:      Communications Server
-    Source:        CS User Replicator
-    Date:          9/22/2010 5:48:31 PM
-    Event ID:      30024
+    Log Name:      Communications Server
+    Source:        CS User Replicator
+    Date:          9/22/2010 5:48:31 PM
+    Event ID:      30024
     Task Category: (1009)
-    Level:         Information
-    Keywords:      Classic
-    User:          N/A
-    Computer:      LyncServer.contoso.com
+    Level:         Information
+    Keywords:      Classic
+    User:          N/A
+    Computer:      LyncServer.contoso.com
     Description:
-    User Replicator has completed initial synchronization of domain contoso.com (DN: CN=Configuration,DC=contoso,DC=com) and the database.  Future synchronization for this domain will occur as changes are made in Active Directory. 
+    User Replicator has completed initial synchronization of domain contoso.com (DN: CN=Configuration,DC=contoso,DC=com) and the database.  Future synchronization for this domain will occur as changes are made in Active Directory. 
     ```
 
 ## More Information

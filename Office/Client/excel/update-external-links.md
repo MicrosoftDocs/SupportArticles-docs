@@ -26,14 +26,14 @@ appliesto:
 
 Consider the following scenario:
 - You create a workbook (workbook A) and save it as an .xlsx file in Microsoft Excel.
-- You create a defined name under the **Formulas** tab that refers to a three-dimensional reference.
+- You create a defined name under the **Formulas** tab that refers to a three-dimensional reference.
 - You save workbook A.
 - You create another workbook (workbook B) and save it as an .xlsx file.
 - You add an external reference link to the defined name in workbook A.
 - You save workbook B, you close both workbooks, and then you open workbook B again.
-- You update external reference links when you are prompted to do this.
+- You update external reference links when you are prompted to do this.
 
-In this scenario, you receive one of the following error messages:
+In this scenario, you receive one of the following error messages:
 
 ```adoc
 Microsoft Excel cannot find name "Defined Name".
@@ -48,5 +48,5 @@ We can't update some of the links in your workbook right now. You can continue w
 
 To work around this issue, use either of the following methods:
 
-- Save workbook A and workbook B as .xlsb files.
+- Save workbook A and workbook B as .xlsb files.
 - Do not add an external reference link to a defined name that refers to a 3-D reference in workbook B.

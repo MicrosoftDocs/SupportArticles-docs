@@ -22,7 +22,7 @@ appliesto:
 
 For a Microsoft Office 2010 version of this article, see [2121447](https://support.microsoft.com/help/2121447).
 
-For a Microsoft Office 365 client version of this article, see [Install and use different versions of Office on the same PC](https://support.office.com/article/Install-and-use-different-versions-of-Office-on-the-same-PC-6ebb44ce-18a3-43f9-a187-b78c513788bf). 
+For a Microsoft Office 365 client version of this article, see [Install and use different versions of Office on the same PC](https://support.office.com/article/Install-and-use-different-versions-of-Office-on-the-same-PC-6ebb44ce-18a3-43f9-a187-b78c513788bf). 
 
 ## Introduction
 
@@ -30,7 +30,7 @@ This article contains information about how to use Microsoft Office 2013 suites 
 
 ## More Information
 
-You can install and use more than one version of Office on a single computer. For example, you can install and use both Office 2013 and Office 2010 on the same computer. However, we do not recommend this. 
+You can install and use more than one version of Office on a single computer. For example, you can install and use both Office 2013 and Office 2010 on the same computer. However, we do not recommend this. 
 
 > [!NOTE]
 > We do not support the use of multiple versions of Office on versions of Windows that have Terminal Services enabled. If you want to run multiple versions of Office on Windows, you should disable Terminal Services.
@@ -93,7 +93,7 @@ You can install Office 2013 suites or programs by using either the traditional M
 
 ### Office 2013 suites and products 64-bit version
 
-To install and use more than one 64-bit version of Office on the same computer without using virtualization, install them in the following order:
+To install and use more than one 64-bit version of Office on the same computer without using virtualization, install them in the following order:
 
 |Version|Installation order|
 |---|---|
@@ -106,11 +106,11 @@ You cannot run the 64-bit version of any Office 2013 suite or program when a 32-
 
 ### Office Bin folder location
 
-When you install Office 2013 suites or programs, the Setup program uses the Program Files\Microsoft Office folder as the default folder on a 32-bit version of Windows, or the Program Files (x86)\Microsoft Office folder as the default folder on a 64-bit version of Windows. The Office Bin default folder in these versions of windows are Program Files\Microsoft Office\Office15 and Program Files (x86)\Microsoft Office\Office15 respectively. The Office Bin folder is the folder in which the Office executable files are installed. This location provides a better user experience for those who want to use multiple versions of Office on the same computer. Be aware that you cannot change the name of the Office Bin folder.
+When you install Office 2013 suites or programs, the Setup program uses the Program Files\Microsoft Office folder as the default folder on a 32-bit version of Windows, or the Program Files (x86)\Microsoft Office folder as the default folder on a 64-bit version of Windows. The Office Bin default folder in these versions of windows are Program Files\Microsoft Office\Office15 and Program Files (x86)\Microsoft Office\Office15 respectively. The Office Bin folder is the folder in which the Office executable files are installed. This location provides a better user experience for those who want to use multiple versions of Office on the same computer. Be aware that you cannot change the name of the Office Bin folder.
 
 ### Start menu shortcuts
 
-You can use the Office Customization Tool to specify a different location for the Office 2007, Office 2010, and Office 2013 shortcuts. To access the Office Customization Tool, run the setup /admincommand in the root directory of the Office 2013 CD at a command prompt:
+You can use the Office Customization Tool to specify a different location for the Office 2007, Office 2010, and Office 2013 shortcuts. To access the Office Customization Tool, run the setup /admincommand in the root directory of the Office 2013 CD at a command prompt:
 
 **Note** The Office Customization Tool is available only for non-retail versions of Office 2007, Office 2010, and Office 2013. 
 

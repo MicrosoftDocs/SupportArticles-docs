@@ -23,7 +23,7 @@ appliesto:
 
 Microsoft Access databases that are created by using the 64-bit version of Microsoft Access 2010 and that are compiled as MDE, ACCDE, and ADE files have to be recompiled in Microsoft Access 2010 Service Pack 1 (SP1) to work correctly with Access 2010 SP1. 
 
-Access 2010 MDE, ACCDE, and ADE databases that were built by using the initial release, or RTM, version of 64-bit Access 2010 are incompatible with SP1, Also, Access 2010 MDE, ACCDE, and ADE databases that were compiled in Access 2010 SP1 will not work with the RTM version. Compiled MDE, ACCDE, and ADE databases have to be re-created from their source ACCDB, MDB, or ADP databases.  
+Access 2010 MDE, ACCDE, and ADE databases that were built by using the initial release, or RTM, version of 64-bit Access 2010 are incompatible with SP1, Also, Access 2010 MDE, ACCDE, and ADE databases that were compiled in Access 2010 SP1 will not work with the RTM version. Compiled MDE, ACCDE, and ADE databases have to be re-created from their source ACCDB, MDB, or ADP databases.  
 
 Access databases that are created by using the 32-bit version of Access 2010 and that are compiled as MDE, ACCDE, and ADE files will work correctly with Microsoft Access 2010 SP1. However, Access MDE, ACCDE, and ADE databases that are created by using the 32-bit version of Microsoft Access 2010 SP1 will not work correctly with the RTM version.
 

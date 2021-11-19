@@ -40,7 +40,7 @@ Create a new alias for the user in Office 365, and use it to set up Outlook. To 
 
 1. Sign in to the Exchange admin center.
 2. Select **recipients**, select **mailboxes**, and then double-click the user's mailbox.
-3. Select **email address**, select **Add** (![Screenshot of the Add button ](./media/connection-to-microsoft-exchange-is-unavailable-error/add-button.jpg)), select **SMTP**, and then add a new alias that uses the `.onmicrosoft.com` domain. For example, add the `john@contoso.onmicrosoft.com` alias.
+3. Select **email address**, select **Add** (:::image type="icon" source="media/connection-to-microsoft-exchange-is-unavailable-error/add-button.png" border="false":::), select **SMTP**, and then add a new alias that uses the `.onmicrosoft.com` domain. For example, add the `john@contoso.onmicrosoft.com` alias.
 4. Use the alias that you created in step 3 instead of the user's email address to set up Outlook. When you're prompted again to enter credentials during the setup process, use the user's actual Office 365 email address.
 
 ### Method 2 - Change the user name or password

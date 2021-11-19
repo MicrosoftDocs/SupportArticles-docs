@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-You may experience one of the following problems in Skype for Business Online (formerly Lync Online): 
+You may experience one of the following problems in Skype for Business Online (formerly Lync Online): 
 
 - The Lync contact card includes a "Maximum Followers Reached" message.   
 - A Lync contact displays no presence.   
@@ -29,7 +29,7 @@ You may experience one of the following problems in Skype for Business Online (
 
 This problem occurs when a Lync user (User A) adds a contact for another Lync user (User B), and User B reaches or exceeds the maximum number of followers that are specified by the Microsoft Lync Server presence policy.
 
-This limit on the number of followers can't be increased in Skype for Business Online. However, users should review the following Microsoft Office Help topic for best practices and guidelines about how to manage contact lists: 
+This limit on the number of followers can't be increased in Skype for Business Online. However, users should review the following Microsoft Office Help topic for best practices and guidelines about how to manage contact lists: 
 
 [Manage your contacts and Contacts list](https://office.microsoft.com/redir/ha101835254.aspx)
 

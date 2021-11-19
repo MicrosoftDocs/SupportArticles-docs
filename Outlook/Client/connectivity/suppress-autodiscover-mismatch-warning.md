@@ -50,7 +50,7 @@ Outlook uses the domain name part of the user's SMTP address to query DNS. In th
 
 ## Workaround 1: Reissue certificate that includes domain name as Subject Alternative Name
 
-Reissue a certificate that includes the domain name (`contoso.com`) as the Subject Alternative Name. This solution may be appropriate if you can't implement client-side registry keys, or have only a limited number of domains.
+Reissue a certificate that includes the domain name (`contoso.com`) as the Subject Alternative Name. This solution may be appropriate if you can't implement client-side registry keys, or have only a limited number of domains.
 
 ## Workaround 2: Don't install IIS service and DNS on the same server
 
@@ -65,7 +65,7 @@ If the IIS site doesn't require SSL, you can remove the certificate. Or, you can
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-To configure Outlook to ignore the name mismatch and connect to a specific HTTP endpoint, you can set or deploy a registry value. To do this, follow these steps:
+To configure Outlook to ignore the name mismatch and connect to a specific HTTP endpoint, you can set or deploy a registry value. To do this, follow these steps:
 
 1. Close Outlook.
 1. Start Registry Editor. To do this, use one of the following procedures, as appropriate for your version of Windows.
@@ -81,7 +81,7 @@ To configure Outlook to ignore the name mismatch and connect to a specific HTTP
     > You can also use the following registry subkey:  
     > HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\xx.0\Outlook\AutoDiscover\RedirectServers
 
-    Where *xx* is 12.0 for Outlook 2007, 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019
+    Where *xx* is 12.0 for Outlook 2007, 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019
 
 1. Click the **Edit** menu, point to **New**, and then click **String Value**.
 

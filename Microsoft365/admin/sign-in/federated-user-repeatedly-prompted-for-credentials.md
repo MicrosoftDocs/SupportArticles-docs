@@ -50,7 +50,7 @@ The symptom indicates an issue with Windows Integrated authentication with AD FS
 
       For more information, see the following Microsoft Knowledge Base article:
 
-      [2510193](https://support.microsoft.com/help/2510193) Supported scenarios for using AD FS to set up single sign-on in Office 365, Azure, or Intune
+      [2510193](https://support.microsoft.com/help/2510193) Supported scenarios for using AD FS to set up single sign-on in Office 365, Azure, or Intune
   - A monitoring or SSL decryption application is installed or is active on the client computer
 
 - Domain Name System (DNS) resolution of the AD FS service endpoint was performed through CNAME record lookup instead of through an A record lookup.
@@ -191,7 +191,7 @@ To do this, follow these steps:
 2. In Features View, double-click **Authentication**.
 3. On the Authentication page, select **Windows Authentication**.
 4. In the **Actions** pane, click **Advanced Settings**.
-5. When the **Advanced Settings** dialog box appears, select **Off** from the **Extended Protection** drop-down menu.
+5. When the **Advanced Settings** dialog box appears, select **Off** from the **Extended Protection** drop-down menu.
 
 #### For active clients
 
@@ -275,7 +275,7 @@ Windows 7 (or appropriately updated versions of Windows Vista or of Windows XP)
 |Setting|Require|Allow (the default)|None|
 |-------|--------|------------------|----|
 |Windows Communication Foundation (WCF) Client (All endpoints)|Works|Works|Works|
-|Internet Explorer 8 and later versions|Works|Works|Works|
+|Internet Explorer 8 and later versions|Works|Works|Works|
 |Firefox 3.6|Fails|Fails|Works|
 |Safari 4.0.4|Fails|Fails|Works|
 
@@ -284,7 +284,7 @@ Windows Vista without appropriate updates
 |Setting|Require|Allow (the default)|None|
 |-------|-------|-------------------|----|
 |WCF Client (All endpoints)|Fails|Works|Works|
-|Internet Explorer 8 and later versions|Works|Works|Works|
+|Internet Explorer 8 and later versions|Works|Works|Works|
 |Firefox 3.6|Fails|Works|Works|
 |Safari 4.0.4|Fails|Works|Works|
 
@@ -292,7 +292,7 @@ Windows XP without appropriate updates
 
 |Setting|Require|Allow (the default)|None|
 |-------|-------|-------------------|----|
-|Internet Explorer 8 and later versions|Works|Works|Works|
+|Internet Explorer 8 and later versions|Works|Works|Works|
 |Firefox 3.6|Fails|Works|Works|
 |Safari 4.0.4|Fails|Works|Works|
 

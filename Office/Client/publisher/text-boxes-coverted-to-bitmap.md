@@ -25,12 +25,12 @@ appliesto:
 
 Consider the following scenario:
 
-- In Microsoft Publisher, you create a new publication.    
+- In Microsoft Publisher, you create a new publication.    
 - On the **File** tab, you click **Save & Send**.   
 - You click **Send Using Email** and then click either **Send Current Page** or **Send All Pages**.   
 - You add the necessary information to the email fields, such as recipients and a subject, and then click **Send**.   
 
-In this scenario, recipients of the email message cannot select some individual words in the body of the email message because several text boxes are converted to bitmap images. 
+In this scenario, recipients of the email message cannot select some individual words in the body of the email message because several text boxes are converted to bitmap images. 
 
 ## Cause
 
@@ -57,7 +57,7 @@ To work around this issue, change any text that is formatted to use a ClearType 
 
     Text is in a non-web-ready font. Text will be exported as an image. 
     
-    Notice that a text box that contains a ClearType font is selected.   
+    Notice that a text box that contains a ClearType font is selected.   
 4. Under **Text Box Tools**, click **Format**.   
 5. Select the text that uses the ClearType font, and then in the **Font** group, select another font to use from the **Font** drop-down list. When the font issue is fixed for the text box, the Design Checker item closes.   
 6. Repeat steps 3 through 5 for each text box that contains a ClearType font.  
@@ -66,7 +66,7 @@ To work around this issue, change any text that is formatted to use a ClearType 
 
 If you are using a template, you can change the font scheme that is used in the publication. To do this, follow these steps.
 
-**Note** This method changes all the fonts in the publication to the fonts that are used in the font scheme.
+**Note** This method changes all the fonts in the publication to the fonts that are used in the font scheme.
 
 1. On the **Page Design** tab, in the **Schemes** group, click **Fonts**.   
 2. Select a font scheme that does not use a ClearType font.   

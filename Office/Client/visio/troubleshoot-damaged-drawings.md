@@ -25,7 +25,7 @@ appliesto:
 
 ## Summary
 
-This article discusses how to troubleshoot damaged drawings in Microsoft Office Visio 2013, Visio 2010, Visio 2007, Microsoft Office Visio 2003, and Microsoft Visio 2002. This article describes some symptoms that may indicate that the drawing that you are working with in Visio is damaged. 
+This article discusses how to troubleshoot damaged drawings in Microsoft Office Visio 2013, Visio 2010, Visio 2007, Microsoft Office Visio 2003, and Microsoft Visio 2002. This article describes some symptoms that may indicate that the drawing that you are working with in Visio is damaged. 
 
 Additionally, this article lists some recovery methods that you can use on the damaged drawing. They include general troubleshooting methods, methods to try if you can or cannot open the drawing, and methods to help prevent damage that may occur to drawings.
 
@@ -97,7 +97,7 @@ For Visio 2013 and Visio 2010:
 
 1. Make sure that nothing in the drawing is selected.    
 2. On the **Home** tab, under the **Clipboard** group, click **Copy**.    
-3. Open the document in which you want to embed the drawing, and then on the **Home** tab, in the **Clipboard** group, click **Paste**.   
+3. Open the document in which you want to embed the drawing, and then on the **Home** tab, in the **Clipboard** group, click **Paste**.   
 
 For Visio 2007 and Visio 2003:
 
@@ -132,7 +132,7 @@ Drag the drawing file to the icon that represents the Visio.exe file. To do this
 
 1. Quit Visio.   
 2. Start Microsoft Windows Explorer, and then locate the Visio.exe file on your hard disk. If you installed Visio to the default location, the Visio.exe file is located in one of the following folders, depending on the version of Visio that you are running:
-   - If you are running Visio 2013, the Visio.exe file is located in the following folder:**Drive**:\Program Files\Microsoft Office\Office15 
+   - If you are running Visio 2013, the Visio.exe file is located in the following folder:**Drive**:\Program Files\Microsoft Office\Office15 
 
      > [!NOTE]
      > If you installed a 32-bit version of Visio on a 64-bit version of Windows, the Program Files folder will have a (x86) behind the folder name. Visio 2013 now has a native 64-bit version.   
@@ -196,7 +196,7 @@ Install Microsoft Office Visio Viewer 2010, and then use Visio Viewer to open an
 
 [https://www.microsoft.com/download/details.aspx?id=21701](https://www.microsoft.com/download/details.aspx?id=21701)
 
-If you can open your drawing in the Visio Viewer, the installation of Visio on your computer may be damaged, or your drawing may contain one or more objects that may be damaged. 
+If you can open your drawing in the Visio Viewer, the installation of Visio on your computer may be damaged, or your drawing may contain one or more objects that may be damaged. 
 
 #### Method 5: Copy the drawing file to another computer
 
@@ -256,10 +256,10 @@ Insert the drawing to a new blank drawing. To do this:
 For Visio 2013 and Visio 2010:
 
 1. Start Visio    
-2. Under the **File** tab, under **New**, select **Blank Drawing**, and then click the **Create** button.   
+2. Under the **File** tab, under **New**, select **Blank Drawing**, and then click the **Create** button.   
 3. On the **Insert** tab, click **Object**.   
 4. Click **Create from file**, and then click **Browse**.    
-5. Select the drawing, click **Open**, and then click **OK**.    
+5. Select the drawing, click **Open**, and then click **OK**.    
 6. Depending on your situation, determine whether the drawing file is damaged or whether there is another problem. 
    - If you receive an "Error 3400" error message, the drawing file may be damaged. Use the methods that are described in this article to try to recover the drawing.    
    - If you do not receive an "Error 3400" error message, there may be another issue that may be preventing Visio from opening the drawing. For example, a conflict may exist between certain components on the computer that prevent Visio from opening the drawing.    

@@ -29,7 +29,7 @@ Assume that you have a public folder in Outlook on the web that contains a conta
 
 > This message can't be sent right now. Please try again later. Data is corrupt., Participant is invalid: "Exchange couldn't correctly identify a OneOff backing store with the data that was provided.". Validation status: AddressAndOriginMismatch.
 
-:::image type="content" source="media/cannot-send-email-to-contact-list-public-folder/message-cannot-sent-error.png" alt-text="Screenshot of the error message.":::
+:::image type="content" source="media/cannot-send-email-to-contact-list-public-folder/message-cannot-sent-error.png" alt-text="Screenshot of the error message when you send an email message to the contact list.":::
 
 ## Workaround
 

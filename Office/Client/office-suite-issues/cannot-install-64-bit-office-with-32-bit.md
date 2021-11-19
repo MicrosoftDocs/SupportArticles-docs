@@ -55,7 +55,7 @@ You can also use the following instructions to remove a single component.
 4. Locate one of the products that you noted in step 1, right-click the product name, and then select **Uninstall**.   
 5. Repeat step 3 until you have uninstalled all the products that you noted in step 1.   
 
-After you remove all previous 32-bit versions, you can try to install the 64-bit version of Office 2010.
+After you remove all previous 32-bit versions, you can try to install the 64-bit version of Office 2010.
 
 ### Known issues with this resolution
 

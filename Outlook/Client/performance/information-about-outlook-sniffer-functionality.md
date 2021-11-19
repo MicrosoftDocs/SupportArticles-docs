@@ -38,7 +38,7 @@ In Outlook versions earlier than Outlook 2007, the sniffer process does not run 
 
 The sniffer process can be controlled by the Automatically process meeting requests and responses to meeting requests and polls setting in the **Options** dialog box, as shown in the following figure from Outlook 2010.
 
-:::image type="content" source="media/information-about-outlook-sniffer-functionality/outlook-options.png" alt-text="The screenshot for the Outlook Options dialog box":::
+:::image type="content" source="media/information-about-outlook-sniffer-functionality/outlook-options.png" alt-text="Screenshot for the Outlook Options dialog box.":::
 
 If you disable this option, Outlook will not automatically process these items and processing of the items will only occur if you manually view the items (either by opening the item or viewing it in the Reading Pane). Therefore, it is not recommended you disable this option unless you prefer to manually process items.
 
@@ -65,7 +65,7 @@ DWORD: AutoProcReq
 Value: 0
 
 > [!NOTE]
-> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).
+> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).
 
 > [!NOTE]
 > If the `AutoProcReq` registry value is either missing or set to a value of 1, the sniffer feature is enabled.

@@ -26,13 +26,13 @@ appliesto:
 
 ## Symptoms
 
-After you apply security update 2881067, 2881029, 3039794, or 2920727 that are described in security bulletin MS16-004, you have problems that affect your Access database if you use certain Windows common controls. Specifically, these problems occur if you use the controls that are associated with the MSCOMCTL.OCX file that's updated in the security update. These problems may include the following:
+After you apply security update 2881067, 2881029, 3039794, or 2920727 that are described in security bulletin MS16-004, you have problems that affect your Access database if you use certain Windows common controls. Specifically, these problems occur if you use the controls that are associated with the MSCOMCTL.OCX file that's updated in the security update. These problems may include the following:
 
 - The program crashes when you try to open an object that includes one of the controls.    
 - You receive error messages that indicate that events were canceled. Example error messages include (but aren't limited to) the following:
 
     ```adoc
-    Error 459: Object or class does not support the set of events. 
+    Error 459: Object or class does not support the set of events. 
     
     2501: <EventName> action cancelled.
     
@@ -101,7 +101,7 @@ After you successfully determine the fix for this problem in your environment by
 4. Run the .bat file. To do this, right-click it, and then click **Run as Administrator**. (In Windows XP, double-click the file.)
 
 > [!NOTE]
-> If you have determined in Method 1 that you don't have to delete the registry key that's mentioned in Method 2 in order to make your application work, you can remove the "reg delete" line from the batch file.
+> If you have determined in Method 1 that you don't have to delete the registry key that's mentioned in Method 2 in order to make your application work, you can remove the "reg delete" line from the batch file.
 
 ## More Information
 

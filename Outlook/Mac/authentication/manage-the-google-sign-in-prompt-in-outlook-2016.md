@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 4340460
 
 ## Notification
 
-When you use Outlook 2016 for Mac version 16.13 (180513) or a later version, you are prompted to sign in to your Google account.
+When you use Outlook 2016 for Mac version 16.13 (180513) or a later version, you are prompted to sign in to your Google account.
 
-:::image type="content" source="media/manage-the-google-sign-in-prompt-in-outlook-2016/google-in-outlook.png" alt-text="Sign in prompt" border="false":::
+:::image type="content" source="media/manage-the-google-sign-in-prompt-in-outlook-2016/google-in-outlook.png" alt-text="Screenshot of prompting to sign in the Google account." border="false":::
 
 ## Option to disable notification
 
@@ -32,7 +32,7 @@ To turn off this prompt, set the Outlook **googlePromoTriggeredPref** PLIST valu
 
 1. On your Mac, select **Finder** > **Applications** > **Utilities** > **Terminal**.
 
-   :::image type="content" source="media/manage-the-google-sign-in-prompt-in-outlook-2016/finder-in-mac.png" alt-text="Finder in Mac":::
+   :::image type="content" source="media/manage-the-google-sign-in-prompt-in-outlook-2016/finder-in-mac.png" alt-text="Screenshot to select the Finder item in the Mac toolbar.":::
 
 2. Type the following command, and then press Return:
 

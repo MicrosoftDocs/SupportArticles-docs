@@ -36,7 +36,7 @@ This problem occurs for one of the following reasons:
 - The wrong email address was entered on the **Auto Account Setup** page of the Add New Account Wizard in Outlook.
 - The required updates for Outlook to automatically connect to Exchange Online aren't installed for the version of Outlook that you're running.
 - The Autodiscover CNAME record for your domain doesn't exist or isn't set up correctly.
-- In organizations that use Active Directory synchronization, the **mail**, **mailNickname**, **displayName** , and **proxyAddresses** attributes are not set up correctly for the synced user in the on-premises Active Directory.
+- In organizations that use Active Directory synchronization, the **mail**, **mailNickname**, **displayName** , and **proxyAddresses** attributes are not set up correctly for the synced user in the on-premises Active Directory.
 
 > [!NOTE]
 > This article discusses Outlook 2016, Outlook 2013, and Exchange Online. For help in connecting to Exchange Online from a mobile device, see [Set up and use Office 365 on your phone or tablet](https://office.microsoft.com/redir/ha102818686.aspx). For help in connecting Outlook to a third-party service, contact your third-party mail provider.
@@ -134,7 +134,7 @@ Microsoft doesn't support manually setting up a profile in Outlook for connectiv
 
 ## References
 
-Go to [Microsoft Support and Recovery Assistant for Office 365](https://aka.ms/outlookconnectivity) to solve this problem.
+Go to [Microsoft Support and Recovery Assistant for Office 365](https://aka.ms/outlookconnectivity) to solve this problem.
 
 For more information, see the following Microsoft Knowledge Base articles:
 

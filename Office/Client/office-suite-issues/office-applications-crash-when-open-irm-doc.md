@@ -37,7 +37,7 @@ You do one of the following:
 - Try to protect a document or email message by using IRM    
 - Sign in to an Office 2016 or Office 2013 application    
  
-In this situation, the relevant Office application crashes. 
+In this situation, the relevant Office application crashes. 
 
 ## Cause
 
@@ -50,7 +50,7 @@ This issue is fixed in the following updates:
 - Office 2013 MSI: [April 4, 2017, update for Office 2013 (KB 3172523)](https://support.microsoft.com/help/3172523)    
 - Office 2016 MSI: [April 4, 2017, update for Office 2016 (KB 3178666)](https://support.microsoft.com/help/3178666)    
 - Office 2013 Click-to-Run: Build 15.0. 4919.1002 or a later build    
-- Office 2016 Click-to-Run: Build 16.0.8067.2115 or a later build
+- Office 2016 Click-to-Run: Build 16.0.8067.2115 or a later build
 
  
 
@@ -71,8 +71,8 @@ Notes
 2. Start Registry Editor:
 
    - In Windows 10, go to **Start**, enter **regedit **in the **Search **box, and then select **regedit.exe** in the search results.    
-   - In Windows 7, click **Start**, enter **regedit** in the **Search programs and files** box, and then click **regedit.exe** in the search results.    
-   - In Windows 8 or Windows 8.1, move the mouse pointer to the upper-right corner, select **Search**, type **regedit **in the search box, and then select **regedit.exe** in the search results.    
+   - In Windows 7, click **Start**, enter **regedit** in the **Search programs and files** box, and then click **regedit.exe** in the search results.    
+   - In Windows 8 or Windows 8.1, move the mouse pointer to the upper-right corner, select **Search**, type **regedit **in the search box, and then select **regedit.exe** in the search results.    
      
 3. Locate and then select one of the following subkeys, depending on your version of Office and Windows:
    - 32-bit Office
@@ -86,10 +86,10 @@ Notes
    - 64-bit Office
 
      - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\RMSOServerVerification          
-4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.    
-5. Enter **NoValidation**, and then press Enter.    
-6. In the **Details** pane, press and hold (or right-click) **NoValidation**, and then select **Modify**.    
-7. In the **Value data** box, enter **1**, and then select **OK**.    
+4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.    
+5. Enter **NoValidation**, and then press Enter.    
+6. In the **Details** pane, press and hold (or right-click) **NoValidation**, and then select **Modify**.    
+7. In the **Value data** box, enter **1**, and then select **OK**.    
 8. Exit Registry Editor.    
  
 

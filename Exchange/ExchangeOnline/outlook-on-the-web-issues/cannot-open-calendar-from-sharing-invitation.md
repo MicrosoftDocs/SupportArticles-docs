@@ -28,7 +28,7 @@ A user can't open a calendar from a sharing invitation in Outlook on the web bec
 
 This issue occurs if a disclaimer transport rule is applied to calendaring messages, and **Wrap** is specified as the fallback action.
 
-![Screenshot of the disclaimer transport rule, showing the fallback action set to Wrap](./media/cannot-open-calendar-from-sharing-invitation/disclaimer.jpg)
+:::image type="content" source="media/cannot-open-calendar-from-sharing-invitation/disclaimer.png" alt-text="Screenshot of the disclaimer transport rule showing the fallback action set to Wrap.":::
 
 ## Solution
 
@@ -39,7 +39,7 @@ To resolve this issue, do one of the following:
 
     Except if: **The subject or body** > **subject or body includes any of these words** > has invited you to view his or her Microsoft Exchange Calendar or Sharing invitation or Sharing request or I'd like to share my calendar with you or You're invited to share this calendar
 
-    ![Screenshot of the exception that's added to the disclaimer transport rule](./media/cannot-open-calendar-from-sharing-invitation/exception.jpg)
+   :::image type="content" source="media/cannot-open-calendar-from-sharing-invitation/exception.png" alt-text="Screenshot of the exception that's added to the disclaimer transport rule.":::
 
 For more information about how to set up disclaimers, see [Organization-wide disclaimers, signatures, footers, or headers in Exchange Server](/Exchange/policy-and-compliance/mail-flow-rules/signatures).
 

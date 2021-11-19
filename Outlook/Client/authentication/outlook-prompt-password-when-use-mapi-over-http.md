@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp;4051374
 
 ## Symptoms
 
-You change the protocol that your Outlook clients use to access Microsoft Exchange Server from RPC over HTTP to MAPI over HTTP. After the change, Outlook 2016 or Outlook 2010 users are repeatedly prompted for credentials to connect to Exchange Server.
+You change the protocol that your Outlook clients use to access Microsoft Exchange Server from RPC over HTTP to MAPI over HTTP. After the change, Outlook 2016 or Outlook 2010 users are repeatedly prompted for credentials to connect to Exchange Server.
 
 ## Cause
 
@@ -37,7 +37,7 @@ To work around this issue, remove the cached credentials from Credential Manager
 1. In Control Panel, click **User Accounts** > **Credential Manager** > **Windows Credentials**.
 2. Remove all credentials that start with *MicrosoftOffice15_Data:SSPI* or *MicrosoftOffice16_Data:SSPI*.
 3. Restart Outlook.
-4. Enter the user credential in the format of *domain/user*.
+4. Enter the user credential in the format of *domain/user*.
 
 ## Group policy setting consideration
 

@@ -32,7 +32,7 @@ In this situation, the transaction log for the user services database reaches ma
 Also, you receive the following error:
 
 ```adoc
-SQL_9002_severity_17                                           sql_err
+SQL_9002_severity_17                                           sql_err
 # The log file for database '%.*ls' is full. Back up the
 # transaction log for the database to free up some log space.
 # as an HRESULT: Severity: SUCCESS (0), FACILITY_NULL (0x0), Code 0x232a

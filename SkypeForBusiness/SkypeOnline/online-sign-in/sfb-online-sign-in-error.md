@@ -20,29 +20,29 @@ appliesto:
 
 ## Problem
 
-When a user tries to sign in to Skype for Business Online (formerly Lync Online) from a particular computer, he or she receives one of the following error messages: 
+When a user tries to sign in to Skype for Business Online (formerly Lync Online) from a particular computer, he or she receives one of the following error messages: 
 
 - Lync 2013
     ```adoc
     Can't sign in to Lync
     
-    Cannot sign in to Lync because your computer clock is not set correctly.  To check your computer clock settings, open Date and Time in the Control Panel.
+    Cannot sign in to Lync because your computer clock is not set correctly.  To check your computer clock settings, open Date and Time in the Control Panel.
     ```
 - Lync 2010
     ```adoc
     Cannot sign in to Lync
     
-    The user name, password, or domain appears to be incorrect.  Ensure that you entered them correctly.  If the problem continues, please contact your support team.
+    The user name, password, or domain appears to be incorrect.  Ensure that you entered them correctly.  If the problem continues, please contact your support team.
     ```
 - Lync for Mac 2011
     ```adoc
-    Either date and time settings are incorrect, or the digital certificate file is not valid or installed on your computer.  If date and time are correct, see your network administrator to verify that your digital certificate file is valid...
+    Either date and time settings are incorrect, or the digital certificate file is not valid or installed on your computer.  If date and time are correct, see your network administrator to verify that your digital certificate file is valid...
     ```
 However, this same user can sign in from another computer that's running the Lync client. 
 
 ## Solution 
 
-To resolve this issue, make sure that the computer's clock and time zone settings are set correctly. 
+To resolve this issue, make sure that the computer's clock and time zone settings are set correctly. 
 
 ## More information
 

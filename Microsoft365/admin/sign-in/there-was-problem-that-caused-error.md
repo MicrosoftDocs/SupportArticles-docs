@@ -44,17 +44,17 @@ To restart the Microsoft Online Services Sign-in Assistant service, follow these
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type **services.msc**, and then press Enter.
 
-   ![Screenshot of Run windows with services.msc typed ](./media/there-was-problem-that-caused-error/run-page.jpg)   
+   :::image type="content" source="media/there-was-problem-that-caused-error/run-page.png" alt-text="Screenshot of the Run window with services.msc typed." border="false":::
 3. In the list of services, locate and then double-click the Microsoft Online Services Sign-in Assistant service.
 
-   ![Screenshot of Services windows, Microsoft Online Services Sign-in Assistant highlighted ](./media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png)
+   :::image type="content" source="media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png" alt-text="Screenshot to select the Microsoft Online Services Sign-in Assistant in the Services window." border="false":::
 
 4. Stop the service. To do this, click Stop, and then wait until the service stops. The Service status should be displayed as Stopped.
 
-   ![Screenshot of Online Services Sign-in Assistant properties, showing Service status is stopped ](./media/there-was-problem-that-caused-error/service-status-is-stopped.png)   
+   :::image type="content" source="media/there-was-problem-that-caused-error/service-status-is-stopped.png" alt-text="Screenshot of the Online Services Sign-in Assistant properties window, showing the Service status is stopped." border="false":::
 5. Start the service. To do this, click Start, and then wait until the service starts. The Service status should be displayed as Started.
 
-   ![Screenshot of Online Services Sign-in Assistant properties, showing Service status is started ](./media/there-was-problem-that-caused-error/service-status-is-started.png)   
+   :::image type="content" source="media/there-was-problem-that-caused-error/service-status-is-started.png" alt-text="Screenshot of the Online Services Sign-in Assistant properties window, showing the Service status is started." border="false":::
 6. Verify that the issue is resolved and the pop-up dialog box is no longer displayed.   
 7. If you continue to see the pop-dialog box, restart the computer, and then verify that the issue is resolved.
 
@@ -71,6 +71,6 @@ Did this fix the problem?
 
 For more information about related technical issues, see the following Microsoft Knowledge Base article: 
 
-[2637629](https://support.microsoft.com/help/2637629) How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune
+[2637629](https://support.microsoft.com/help/2637629) How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

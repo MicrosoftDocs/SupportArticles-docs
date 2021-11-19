@@ -51,7 +51,7 @@ To restore the Weather Bar settings and functionality, follow these steps to ena
 
 ## More information
 
-The setting documented in the Resolution section corresponds to the following registry value:
+The setting documented in the Resolution section corresponds to the following registry value:
 
 `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\Internet`
 
@@ -62,12 +62,12 @@ or
 DWORD: UseOnlineContent  
 Value:
 
-0  - Do not allow user to access Office resources on the Internet (checkbox is unchecked and grayed out)  
-1  - Allows the user to opt in to access of Office resources on the Internet (checkbox is unchecked)  
-2  - (Default) Allows the user to access Office resources on the Internet (checkbox is checked)
+0  - Do not allow user to access Office resources on the Internet (checkbox is unchecked and grayed out)  
+1  - Allows the user to opt in to access of Office resources on the Internet (checkbox is unchecked)  
+2  - (Default) Allows the user to access Office resources on the Internet (checkbox is checked)
 
 > [!NOTE]
-> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, 15.0 = Office 2013).
+> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, 15.0 = Office 2013).
 
 This option can also be configured by using a Group Policy setting. This Group Policy setting is located here:
 
@@ -77,7 +77,7 @@ Group Policy Setting name: **Online Content Options**
 > [!NOTE]
 > The \<xx> placeholder represents your version of Office (16 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, 13 = Office 2013).
 
-:::image type="content" source="media/weather-bar-and-weather-settings-are-missing/online-content-options.png" alt-text="Online Content Options" border="false":::
+:::image type="content" source="media/weather-bar-and-weather-settings-are-missing/online-content-options.png" alt-text="Screenshot of a Group Policy setting Online Content Options.":::
 
 This setting also affects other features in Microsoft Office, including:
 

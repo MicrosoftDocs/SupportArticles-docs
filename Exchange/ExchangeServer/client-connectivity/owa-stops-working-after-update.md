@@ -2,7 +2,7 @@
 title: OWA or ECP stops working after you install a security update
 description: OWA/ECP stops working after a security update is manually installed on Exchange server without elevated permissions.
 author: batre
-ms.author: v-matham
+ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

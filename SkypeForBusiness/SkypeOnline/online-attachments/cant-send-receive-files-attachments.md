@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-Assume that in an Office 365 environment, you try to send or receive files or attachments in Lync through Skype for Business Online (formerly Lync Online). In this situation, you may experience the following issues:
+Assume that in an Office 365 environment, you try to send or receive files or attachments in Lync through Skype for Business Online (formerly Lync Online). In this situation, you may experience the following issues:
 
 - You can't send files to contacts.   
 - You can't receive files from contacts.   
@@ -32,7 +32,7 @@ Assume that in an Office 365 environment, you try to send or receive files or at
 
 ### For Skype for Business Online users
 
-If you receive an error message when you send or receive files, make sure that the file type being transferred isn't one of those that is listed in the "More Information" section. 
+If you receive an error message when you send or receive files, make sure that the file type being transferred isn't one of those that is listed in the "More Information" section. 
 
 ### For Skype for Business Online administrators
 
@@ -40,7 +40,7 @@ If a user doesn't see the option to transfer files, verify that file transfer ca
 
 Firewalled networks must meet the network requirements for Skype for Business Online. For more information about Skype for Business Online network requirements, go to the following Microsoft Knowledge Base article:
 
-[2409256 ](https://support.microsoft.com/help/2409256) You can't connect to Skype for Business Online, or certain features don't work, because an on-premises firewall blocks the connection
+[2409256 ](https://support.microsoft.com/help/2409256) You can't connect to Skype for Business Online, or certain features don't work, because an on-premises firewall blocks the connection
 
 ## More Information
 

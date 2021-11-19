@@ -27,9 +27,9 @@ Assume that you convert the documents to PDF files by using PDF printer (for exa
 
 ## How Word determines the DPI when printing PDF documents 
 
-Word 2010 and Word 2013 use a single DPI for the whole document when printing to a PDF document. This DPI is determined by the capabilities of the printer. During printing, Word will try to adjust the image to reach the print DPI. 
+Word 2010 and Word 2013 use a single DPI for the whole document when printing to a PDF document. This DPI is determined by the capabilities of the printer. During printing, Word will try to adjust the image to reach the print DPI. 
 
-For example, the PDF printer is treated as a printer with a highest DPI of 600. Word chooses between three print modes: Low, Medium, and High. If the print quality is set to High, the content will be printed by using the highest supported DPI. In this case it is 600 DPI. If the print quality is set to Medium, the content will be printed by using half of the highest DPI (300). Low print quality means the content will be printed by using a quarter of the highest DPI (150).
+For example, the PDF printer is treated as a printer with a highest DPI of 600. Word chooses between three print modes: Low, Medium, and High. If the print quality is set to High, the content will be printed by using the highest supported DPI. In this case it is 600 DPI. If the print quality is set to Medium, the content will be printed by using half of the highest DPI (300). Low print quality means the content will be printed by using a quarter of the highest DPI (150).
 
 The following table shows the Default print quality in Word 2013 and Word 2010:
 
@@ -47,27 +47,27 @@ Important
  
 Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
 
-To work around this issue, you can change the default print quality by adding the following reg key:
+To work around this issue, you can change the default print quality by adding the following reg key:
 
 **Word 2013**
 
-Registry subkey: [HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word\Options]
+Registry subkey: [HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word\Options]
 
-Registry Value Name: PrintHighQualityDefault
+Registry Value Name: PrintHighQualityDefault
 
-Registry Value Type: REG_DWORD
+Registry Value Type: REG_DWORD
 
-Registry Value Data: 1
+Registry Value Data: 1
 
 **Word 2010**
 
-Registry subkey: [HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Options]
+Registry subkey: [HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Options]
 
-Registry Value Name:  PrintMediumQualityDefault
+Registry Value Name:  PrintMediumQualityDefault
 
-Registry Value Type:    REG_DWORD
+Registry Value Type:    REG_DWORD
 
-Registry Value Data:    1
+Registry Value Data:    1
 
 For more information about how to add the reg, see [How to add, modify, or delete registry subkeys and values by using a .reg file](https://support.microsoft.com/help/310516).
 

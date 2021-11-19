@@ -56,11 +56,11 @@ If the on-premises account no longer exists and is not listed in the **Active Us
 4. Select the **Restore** option.
 
     > [!NOTE]
-    > The user becomes an active user. The **Sync Type** is now listed as **In cloud** instead of **Synced with Active Directory**.
+    > The user becomes an active user. The **Sync Type** is now listed as **In cloud** instead of **Synced with Active Directory**.
 
     :::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/sync-type-page.png" alt-text="A screenshot of the Sync Type page" border="false":::
 
 5. Locate **Active Users**, and then add an Exchange license for the user.
 6. After some minutes, the mailbox becomes active in Exchange.
 
-7. When you finish the search and export, run the `Remove-Mailbox` cmdlet to change the object to a soft-deleted mailbox. The soft-deleted mailbox will be available for 30 days. It can be returned to an active state by using the `Undo-SoftDeletedMailbox` cmdlet.
+7. When you finish the search and export, run the `Remove-Mailbox` cmdlet to change the object to a soft-deleted mailbox. The soft-deleted mailbox will be available for 30 days. It can be returned to an active state by using the `Undo-SoftDeletedMailbox` cmdlet.

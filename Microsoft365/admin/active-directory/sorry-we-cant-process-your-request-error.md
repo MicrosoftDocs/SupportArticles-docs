@@ -31,7 +31,7 @@ When you try to set up additional security verification settings for Microsoft A
 >
 > There was an error processing your request because your session is invalid or expired. Please try again.
 
-This issue occurs if you waited too long to complete the Azure Multi-Factor Authentication set up process for the user. 
+This issue occurs if you waited too long to complete the Azure Multi-Factor Authentication set up process for the user. 
 
 ## Solution
 

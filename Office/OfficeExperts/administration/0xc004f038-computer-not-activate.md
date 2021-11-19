@@ -35,7 +35,7 @@ However, you receive the following error message:
 
 ## Cause
 
-This issue occurs because the Office KMS pool contains fewer than five unique client computers.
+This issue occurs because the Office KMS pool contains fewer than five unique client computers.
 
 ## Resolution
 
@@ -61,7 +61,7 @@ If you have more than five computers that are trying to activate, and you still 
 In this example, notice that Ignite5 and ignite1 have the same CMID (930bd202-a335-4c7e-bd9d-7305361f0d37). This indicates that the Office rearm was skipped even though the base operating system image may have been generated.
 
 > [!NOTE]
-> Before Sysprep prepares the image, make sure that you run one of the following commands, based on your Office bit version, to guarantee a unique Office CMID.
+> Before Sysprep prepares the image, make sure that you run one of the following commands, based on your Office bit version, to guarantee a unique Office CMID.
 >
 > - For 32-bit Office
 >  
@@ -70,16 +70,16 @@ In this example, notice that Ignite5 and ignite1 have the same CMID (930bd202-a3
 >  
 >   C:\Program Files\Microsoft Office\Office16\ospprearm.exe
 
-For detailed information about how to rearm the Office installation, see the following articles:  
+For detailed information about how to rearm the Office installation, see the following articles:  
 
 - [Rearm the Office 2013 installation](/previous-versions/office/office-2013-resource-kit/dn385362%28v%3doffice.15%29)
 - [Rearm a volume licensed version of Office that's included in an operating system image](/deployoffice/vlactivation/rearm-an-office-installation-on-an-image-when-using-kms-to-activate)
 
-You can run the following startup script on these computers to rearm Office and generate new, unique Office IDs. In this script, replace XX with the appropriate value, based on your Office version:
+You can run the following startup script on these computers to rearm Office and generate new, unique Office IDs. In this script, replace XX with the appropriate value, based on your Office version:
 
-*XX* = 15 for Office 2013
+*XX* = 15 for Office 2013
 
-*XX* = 16 for Office 2016
+*XX* = 16 for Office 2016
 
 ```console
 @echo off

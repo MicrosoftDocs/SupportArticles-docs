@@ -30,29 +30,29 @@ In Microsoft Outlook, you experience some conditions that prevent changes to a s
 
 - A conference room is configured to automatically accept meetings.
 - The conference room does not accept recurring meetings.
-- A manager configures a delegate to the manager's calendar.
+- A manager configures a delegate to the manager's calendar.
 - The manager creates a recurring meeting and invites user attendees only.
 - The delegate edits one occurrence of the recurring meeting to manually add the conference room as an attendee.
-- After the delegate sends the update, the conference room automatically accepts the request and sends an **Accepted** response.
+- After the delegate sends the update, the conference room automatically accepts the request and sends an **Accepted** response.
 
 In this scenario, when the delegate checks the meeting occurrence tracking status, the conference room response is displayed as **None**.
 
 **Scenario 2**
 
-- A manager grants another user delegate permission to the manager's calendar.
+- A manager grants another user delegate permission to the manager's calendar.
 - The manager configures the delegated calendar so that the manager also receives copies of meeting requests and responses.
 - A delegate creates a recurring meeting in the shared (manager's) calendar.
-- The delegate includes themselves as an attendee to the recurring meeting.
+- The delegate includes themselves as an attendee to the recurring meeting.
 - The delegate accepts their own invitation as an attendee.
 - The delegate modifies the time of one instance of the recurring meeting to create a meeting recurrence exception, and then sends the update.
 - The delegate accepts their own updated invitation as an attendee.
-- The manager receives the delegate's **Accepted** response.
+- The manager receives the delegate's **Accepted** response.
 
 In this scenario, the manager's meeting exception time reverts to the original recurring meeting time.
 
 ## Cause
 
-This issue occurs when Outlook processes the **Accepted** response before calendar synchronization is complete. This is a known limitation in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
+This issue occurs when Outlook processes the **Accepted** response before calendar synchronization is complete. This is a known limitation in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
 
 ## Workaround
 

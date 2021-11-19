@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When you use a company app to sign in to or authenticate to one of the Microsoft Cloud Services, such as Microsoft Office 365, Microsoft Intune, Microsoft Dynamics, Microsoft Power BI, or Microsoft Azure, or Azure Active Directory (Azure AD) Federated Gallery Apps, you receive the following error message:
+When you use a company app to sign in to or authenticate to one of the Microsoft Cloud Services, such as Microsoft Office 365, Microsoft Intune, Microsoft Dynamics, Microsoft Power BI, or Microsoft Azure, or Azure Active Directory (Azure AD) Federated Gallery Apps, you receive the following error message:
 
 > AADSTS65005: The client application has requested access to resource. This request has failed because the client has not specified this resource in its requiredResourceAccess list.  
 
@@ -32,7 +32,7 @@ This issue occurs because the company's app may not be registered with Azure AD,
 
 ## Resolution
 
-To fix this issue, use one of the following resources, depending on the services that you are trying to access:
+To fix this issue, use one of the following resources, depending on the services that you are trying to access:
 
 - [Office 365: Manually register your app with Azure AD so that it can access Office 365 APIs](/graph/auth-register-app-v2)       
 - [Dynamics CRM: Register application for Dynamics CRM](/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory)    

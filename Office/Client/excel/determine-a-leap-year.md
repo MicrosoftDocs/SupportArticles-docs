@@ -47,7 +47,7 @@ The following years are leap years: 1600, 2000, 2400
 
 This is because they are evenly divisible by both 100 and 400.
 
-Because versions of Microsoft Excel earlier than Excel 97 handle only years from 1900 to 2078, only the year 1900 is subject to the 100/400 exclusion rule of leap years in Microsoft Excel. However, in order to be compatible with other programs, Microsoft Excel treats the year 1900 as a leap year.   
+Because versions of Microsoft Excel earlier than Excel 97 handle only years from 1900 to 2078, only the year 1900 is subject to the 100/400 exclusion rule of leap years in Microsoft Excel. However, in order to be compatible with other programs, Microsoft Excel treats the year 1900 as a leap year.   
 
 ### How to determine whether a year is a leap year
 

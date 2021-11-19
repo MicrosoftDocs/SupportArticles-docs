@@ -26,7 +26,7 @@ When publishing your Project plan, you notice on the Project Server Manage Queue
 
 ## Cause
 
-This issue occurs because your Project plan contains a large number of Tasks and Assignments. What is occurring is that the publish operation is trying to synchronize the task information in the Project plan with the associated SharePoint task list, and that can take time, especially if there is a large amount of tasks to be synchronized. 
+This issue occurs because your Project plan contains a large number of Tasks and Assignments. What is occurring is that the publish operation is trying to synchronize the task information in the Project plan with the associated SharePoint task list, and that can take time, especially if there is a large amount of tasks to be synchronized. 
 
 ## Resolution
 
@@ -84,7 +84,7 @@ If you need to use the Task List after deleting it, you can recover it by going 
 
 This section covers steps on how to configure a new EPT to use a changed Project Site template with the Task List removed. We recommend this only be done after carefully considering your Project plan data profile. 
 
-**Note** Only create Projects using this custom EPT if you never have to use the Task List in the Project site, and if the Projects created using this EPT are expected to have many Tasks, Assignments, or both. We do not recommend creating all Projects by using an EPT configured this way. 
+**Note** Only create Projects using this custom EPT if you never have to use the Task List in the Project site, and if the Projects created using this EPT are expected to have many Tasks, Assignments, or both. We do not recommend creating all Projects by using an EPT configured this way. 
 
 **How to configure a custom EPT with a changed Project Site template with the Task List removed**
 

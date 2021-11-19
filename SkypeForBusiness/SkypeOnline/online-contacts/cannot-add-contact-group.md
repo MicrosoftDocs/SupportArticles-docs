@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem 
 
-When you try to add more distribution groups to your Skype for Business Online (formerly Lync Online) contact list in Lync 2010 or Lync 2013, you receive the following error message:
+When you try to add more distribution groups to your Skype for Business Online (formerly Lync Online) contact list in Lync 2010 or Lync 2013, you receive the following error message:
 
 **Cannot add contact group. The Contacts list already contains the maximum number of distribution groups.**
 

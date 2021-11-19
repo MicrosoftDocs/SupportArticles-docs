@@ -21,10 +21,10 @@ appliesto:
 
 ## Symptoms
 
-When you attempt to send a file from Microsoft Excel, Microsoft  Word, or Microsoft PowerPoint using email, you receive the following error:
+When you attempt to send a file from Microsoft Excel, Microsoft  Word, or Microsoft PowerPoint using email, you receive the following error:
 
 ```adoc
-Either there is no default mail client or the current mail client cannot fulfill the messaging request. Please run Microsoft Outlook and set it as the default  mail client. 
+Either there is no default mail client or the current mail client cannot fulfill the messaging request. Please run Microsoft Outlook and set it as the default  mail client. 
 ```
 
 ## Cause
@@ -47,13 +47,13 @@ This problem occurs when the following registry data is present on your computer
 
     Data value: \<no data\>
 
-**NOTE**: If you do not find the **Version** value with no data associated with it, or the **Version** value does not exist at all under this registry path, then there is a different cause of the error. Please search the Microsoft Knowledge Base for additional causes of this error.
+**NOTE**: If you do not find the **Version** value with no data associated with it, or the **Version** value does not exist at all under this registry path, then there is a different cause of the error. Please search the Microsoft Knowledge Base for additional causes of this error.
 
 ## Resolution
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/kb/322756/).
-  
+  
 To resolve this problem, delete the Version value from under the \MSMapiApps key using the following steps:
 
 - 32-bit versions of Microsoft Office on 32-bit versions of Windows, or 64-bit versions of Microsoft Office on 64-bit versions of Windows

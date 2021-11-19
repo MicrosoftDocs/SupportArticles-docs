@@ -28,11 +28,11 @@ When you view an email message in Outlook 2013, you do not see any Apps for Outl
 
 For example, you see the following screenshot when you view an email message that contains a street address.
 
-:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/email-message-that-contains-street-address.jpg" alt-text="Screenshot that is displayed when you view an email message" border="false":::
+:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/email-message-that-contains-street-address.png" alt-text="Screenshot that is displayed when you view an email message." border="false":::
 
 Your expectation is that the Bing Maps app for Outlook is displayed, as in the following figure.
 
-:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/bing-maps-app-shown-in-outlook.jpg" alt-text="Screenshot for the Bing Maps" border="false":::
+:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/bing-maps-app-shown-in-outlook.png" alt-text="Screenshot of the email message with Bing Maps." border="false":::
 
 ## Cause
 
@@ -48,7 +48,7 @@ Get-OrganizationConfig | FL AppsForOffice*
 
 In the configuration where you do not see any Apps for Outlook in email messages, the result from this cmdlet will be the same as that shown in the following screenshot:
 
-:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/get-organizationconfig-cmdlet.jpg" alt-text="Screenshot for this cmdlet":::
+:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/get-organizationconfig-cmdlet.png" alt-text="Screenshot of the result from this cmdlet.":::
 
 If it is necessary, you can use the following cmdlet in Exchange Server 2013 to set the value of the `AppsForOfficeEnabled` parameter to **$True**.
 
@@ -62,7 +62,7 @@ If you make this change, you can force an update by recycling the MSExchangeServ
 
 The `AppsForOfficeEnabled` parameter value is stored in the `msExchProvisioningFlags` attribute in Active Directory, as shown in the following screenshot.
 
-:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/msexchprovisioningflags-value.jpg" alt-text="Screenshot for msExchProvisioningFlags value in AD" border="false":::
+:::image type="content" source="media/apps-for-outlook-2013-do-not-activate-as-expected/msexchprovisioningflags-value.png" alt-text="Screenshot for msExchProvisioningFlags value in AD." border="false":::
 
 |AppsForOfficeEnabled parameter setting|msExchProvisioningFlags attribute value |
 |---|---|

@@ -22,8 +22,8 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Office 365 Dedicated/ITAR (vNext), you receive an email message that has the subject "Microsoft account security alert," and you are worried that it's a phishing email message.
-![A screenshot of the security alert message](./media/account-security-alert-email/security-alert-message.png)
+In Microsoft Office 365 Dedicated/ITAR (vNext), you receive an email message that has the subject "Microsoft account security alert," and you are worried that it's a phishing email message.
+:::image type="content" source="media/account-security-alert-email/security-alert-message.png" alt-text="Screenshot of the Microsoft account security alert message.":::
 
 ## Cause
 
@@ -31,8 +31,8 @@ You may have set your Office 365 work account as a secondary email address on yo
 
 ## Resolution
 
-Always use caution, and perform due diligence to determine whether the message is a phishing email message before you take any other action.
-Start by hovering your mouse over all email addresses, links, and buttons to verify that the information looks valid and references Microsoft. You can also analyze the message headers and message tracking to review the "spam confidence level" and other elements of the message to determine whether it's legitimate.
+Always use caution, and perform due diligence to determine whether the message is a phishing email message before you take any other action.
+Start by hovering your mouse over all email addresses, links, and buttons to verify that the information looks valid and references Microsoft. You can also analyze the message headers and message tracking to review the "spam confidence level" and other elements of the message to determine whether it's legitimate.
 
 ## More Information
 

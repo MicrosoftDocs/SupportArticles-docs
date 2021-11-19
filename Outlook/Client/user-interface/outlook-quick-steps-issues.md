@@ -27,7 +27,7 @@ When you use an IMAP or POP account that's added as a secondary account to the O
 "The Calendar folder cannot be found" or "The Tasks folder cannot be found".
 ```
 
-![quick step error message](media/outlook-quick-steps-issues/folder-cannot-be-found.png)
+:::image type="content" source="media/outlook-quick-steps-issues/folders-not-found.png" alt-text="Screenshot of two error messages. When using an IMAP or POP account added as a secondary account to the Outlook profile and trying to use Quick Steps, you receive one of the errors.":::
 
 **Quick Steps**:
 

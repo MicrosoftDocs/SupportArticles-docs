@@ -31,7 +31,7 @@ When you right-click an email message in Microsoft Office Outlook 2007, Outlook 
 
 |Outlook 2007|Outlook 2010 and Outlook 2013|
 |---|---|
-|![A screenshot showing Outlook 2007 Junk Email menu](./media/no-shortcut-menu-command-to-add-senders-domain-to-blocked/junk-email-menu-2007.jpg)|![A screenshot showing Outlook 2010 Junk Email menu ](./media/no-shortcut-menu-command-to-add-senders-domain-to-blocked/junk-email-menu-2010-2013.jpg)|
+|:::image type="content" source="./media/no-shortcut-menu-command-to-add-senders-domain-to-blocked/junk-email-menu-2007.png" alt-text="Screenshot showing Outlook 2007 Junk Email menu." border="false":::|:::image type="content" source="./media/no-shortcut-menu-command-to-add-senders-domain-to-blocked/junk-email-menu-2010-2013.png" alt-text="Screenshot showing Outlook 2010 Junk Email menu." border="false":::|
 |||
 
 ## Cause

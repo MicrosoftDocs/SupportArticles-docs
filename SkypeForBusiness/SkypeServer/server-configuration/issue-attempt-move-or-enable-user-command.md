@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-When using the Lync Server Control Panel to enable or move an Active Directory, directory service domain user for use with Lync Server the following error is returned:
+When using the Lync Server Control Panel to enable or move an Active Directory, directory service domain user for use with Lync Server the following error is returned:
 
 Active Directory operation failed on "DC1.contoso.com". You cannot retry this operation: "Insufficient access rights to perform the operation"
 
@@ -33,7 +33,7 @@ The error that is described in the SYMPTOMS section of this article is caused by
 - The Lync Server Control Panel is not designed to delegate the permissions of RTCUniversalUserAdmins and RTCUniversalUserReadOnlyGroup Lync Server Universal Security groups that are needed to complete the user account move or enable operation.    
 
 > [!NOTE]
-> As an example, the Domain Admins global security group is a Windows Server protected group. For detailed information on the Windows Server protected security groups and the Active Directory, directory service processes that maintain their default Access Control list entries see the MORE INFORMATION section of this article. 
+> As an example, the Domain Admins global security group is a Windows Server protected group. For detailed information on the Windows Server protected security groups and the Active Directory, directory service processes that maintain their default Access Control list entries see the MORE INFORMATION section of this article. 
 
 ## Resolution
 
@@ -60,9 +60,9 @@ For more detailed information on the permissions needed to use the Lync Server C
 
 [Enable or Disable Users for Lync Server](/previous-versions/office/lync-server-2013/lync-server-2013-disable-or-re-enable-user-account-for-lync-server)
 
-Windows Server Active Directory, directory service security groups that are designated protected groups will block the inheritance of non-default Access Control Entries (ACEs) to their default Access Control List (ACL) as a security measure. Windows Server protected groups consist of the list of default administrative groups that are used to manage the Windows Server enterprise.
+Windows Server Active Directory, directory service security groups that are designated protected groups will block the inheritance of non-default Access Control Entries (ACEs) to their default Access Control List (ACL) as a security measure. Windows Server protected groups consist of the list of default administrative groups that are used to manage the Windows Server enterprise.
 
-The link listed below provides the details of the processes that are used to manage the default level of security for the Windows Server protected security groups:
+The link listed below provides the details of the processes that are used to manage the default level of security for the Windows Server protected security groups:
 
 [AdminSDHolder, Protected Groups and SDPROP for Windows Server](/previous-versions/technet-magazine/ee361593(v=msdn.10))
 

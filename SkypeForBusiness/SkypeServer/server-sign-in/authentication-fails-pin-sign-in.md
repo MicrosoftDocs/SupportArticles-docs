@@ -134,7 +134,7 @@ To export and remove any mismatched Trusted Root Certification Authorities certi
 16. Click **Save**, and then confirm the file save information.   
 17. Click **Next**, and then click **Finish** to complete the export of the certificate file.   
 18. Right-click the mismatched certificate, and then click **Delete**.   
-19. Read the warning information, make sure that you're deleting the intended certificate, and then click **OK**.   
+19. Read the warning information, make sure that you're deleting the intended certificate, and then click **OK**.   
 20. Repeat steps 9–20 to delete all the mismatched Trusted Root Certification Authorities certificates.   
 
 To export and remove any mismatched Intermediate Certification Authorities certificates, follow these steps:
@@ -165,7 +165,7 @@ To export and remove any mismatched Intermediate Certification Authorities certi
 16. Click **Save**, and then confirm the file save information.   
 17. Click **Next**, and then click **Finish** to complete the export of the certificate file.   
 18. Right-click the mismatched certificate, and then click **Delete**.   
-19. Read the warning information, make sure that you're deleting the intended certificate, and then click **OK**.   
+19. Read the warning information, make sure that you're deleting the intended certificate, and then click **OK**.   
 20. Repeat steps 9–20 listed delete all the mismatched Intermediate Certification Authorities certificates.   
 
 ## More Information

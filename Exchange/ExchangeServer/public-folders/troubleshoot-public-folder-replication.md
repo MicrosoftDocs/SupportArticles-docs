@@ -255,7 +255,7 @@ Does Event ID 3079 contain EcReplStartup?
 
 ### Application log Event ID 9528
 
-If Event ID 3079 contains EcReplStartup, this indicates that the replication thread is dying at startup. Then, check if Event ID 9528 is recorded in the Application log of the source server.
+If Event ID 3079 contains EcReplStartup, this indicates that the replication thread is dying at startup. Then, check if Event ID 9528 is recorded in the Application log of the source server.
 
 |Event Type|Information|
 |---|---|
@@ -1277,7 +1277,7 @@ For more information, see [Fixing Public Folder Replication Errors From Exchange
 
 ### Remove duplicate accounts
 
-Remove the duplicate accounts mentioned in the event, or delete one of the users, so that the SID can be resolved for a single user in the DS.
+Remove the duplicate accounts mentioned in the event, or delete one of the users, so that the SID can be resolved for a single user in the DS.
 
 Is this information helpful?
 

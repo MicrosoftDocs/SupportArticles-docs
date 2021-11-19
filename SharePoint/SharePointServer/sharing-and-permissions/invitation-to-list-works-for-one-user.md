@@ -34,14 +34,14 @@ When you send an external user invitation to a shared Microsoft SharePoint resou
 
 ## Cause
 
-This issue occurs because distribution lists aren't supported methods for assigning SharePoint permissions. When you share with a distribution list, the first user who accepts the invitation receives access to the resource as an external user. 
+This issue occurs because distribution lists aren't supported methods for assigning SharePoint permissions. When you share with a distribution list, the first user who accepts the invitation receives access to the resource as an external user. 
 
 ## Resolution
 
 To resolve this issue, use one of the following methods, depending on your specific scenario:
 
 - If you're using directory synchronization, share the resource with security groups and not with a distribution list.
-- Use SharePoint groups. For more information, go to [Customize SharePoint site permissions](/sharepoint/customize-sharepoint-site-permissions).
+- Use SharePoint groups. For more information, go to [Customize SharePoint site permissions](/sharepoint/customize-sharepoint-site-permissions).
 - Use Microsoft 365 groups. For more information, go to [Learn about Office 365 Groups](https://support.microsoft.com/office/learn-about-microsoft-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 ## More information

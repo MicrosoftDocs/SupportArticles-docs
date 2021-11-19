@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-When you use the **Export to Excel** button in Microsoft SharePoint Online, Excel starts and shows the following error message:
+When you use the **Export to Excel** button in Microsoft SharePoint Online, Excel starts and shows the following error message:
 ```adoc
 An unexpected error has occurred. Changes to your data cannot be saved.  
 ```
@@ -55,12 +55,12 @@ You can increase the default Excel timeout value by using a registry key. To inc
 
         `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines`
 
-2. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
+2. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 3. Type **DataFetchTimeout**, and then press **Enter**.
-4. Right-click **DataFetchTimeout**, and then select **Modify**.
-5. Select **Decimal** for **Base**, type **90000** in the **Value data** box, and then select **OK**.
+4. Right-click **DataFetchTimeout**, and then select **Modify**.
+5. Select **Decimal** for **Base**, type **90000** in the **Value data** box, and then select **OK**.
 
     > [!NOTE]
-    > If the new value doesn't resolve the issue, try a larger value. **DataFetchTimeout** is in milliseconds.
+    > If the new value doesn't resolve the issue, try a larger value. **DataFetchTimeout** is in milliseconds.
 
 6. Exit Registry Editor.

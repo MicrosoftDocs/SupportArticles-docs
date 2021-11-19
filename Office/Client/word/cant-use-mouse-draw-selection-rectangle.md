@@ -24,7 +24,7 @@ appliesto:
 
 ##  Symptoms
 
-If a Microsoft Word 2010 or later document contains multiple AutoShape objects that are near one another, you cannot use the mouse to draw a selection rectangle around the objects.
+If a Microsoft Word 2010 or later document contains multiple AutoShape objects that are near one another, you cannot use the mouse to draw a selection rectangle around the objects.
 
 ##  Resolution
 
@@ -70,4 +70,4 @@ The Selection Pane appears. The Selection Pane lets you select multiple AutoShap
 
 
 1. On the Home tab, click Select and then click Select Objects.   
-2. Use the mouse to draw a selection rectangle around the shapes.    
+2. Use the mouse to draw a selection rectangle around the shapes.    

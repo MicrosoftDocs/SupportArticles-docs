@@ -27,15 +27,15 @@ _Original KB number:_ &nbsp; 4020759
 
 ## Symptom
 
-Assume that you create a new [MailItem](/office/vba/api/Outlook.MailItem), [AppointmentItem](/office/vba/api/Outlook.AppointmentItem), or [MeetingItem](/office/vba/api/Outlook.MeetingItem) object by using the [Outlook Object Model](/visualstudio/vsto/outlook-object-model-overview). You then set the [HtmlBody](/office/vba/api/Outlook.MailItem.HTMLBody) property of the item to some previously created well-formed HTML source that contains Cascading Style Sheet (CSS) styles. After you call the [Display](/office/vba/api/Outlook.MailItem.Display) method and the [Send](/office/vba/api/Outlook.MailItem.Send(method)) method to send the item, the formatting that's dictated by the configured CSS styles may disappear, or the paragraph styles may be replaced by the `MSONormal` class.
+Assume that you create a new [MailItem](/office/vba/api/Outlook.MailItem), [AppointmentItem](/office/vba/api/Outlook.AppointmentItem), or [MeetingItem](/office/vba/api/Outlook.MeetingItem) object by using the [Outlook Object Model](/visualstudio/vsto/outlook-object-model-overview). You then set the [HtmlBody](/office/vba/api/Outlook.MailItem.HTMLBody) property of the item to some previously created well-formed HTML source that contains Cascading Style Sheet (CSS) styles. After you call the [Display](/office/vba/api/Outlook.MailItem.Display) method and the [Send](/office/vba/api/Outlook.MailItem.Send(method)) method to send the item, the formatting that's dictated by the configured CSS styles may disappear, or the paragraph styles may be replaced by the `MSONormal` class.
 
 ## Cause
 
-Microsoft Outlook uses Microsoft Word as its editor. Loss of formatting may occur when the HTML  source is validated by the Word HTML engine when the item is sent.
+Microsoft Outlook uses Microsoft Word as its editor. Loss of formatting may occur when the HTML  source is validated by the Word HTML engine when the item is sent.
 
 ## Workaround
 
-We recommend that you use the underlying WordEditor object of the inspector to edit the HTML and Rich Text Format (RTF) bodies of Outlook items when you use the Outlook Object Model, instead of editing the `HtmlBody` property. See the following example.
+We recommend that you use the underlying WordEditor object of the inspector to edit the HTML and Rich Text Format (RTF) bodies of Outlook items when you use the Outlook Object Model, instead of editing the `HtmlBody` property. See the following example.
 
 > [!NOTE]
 > See [Word Object Model](/visualstudio/vsto/word-object-model-overview) for more information.

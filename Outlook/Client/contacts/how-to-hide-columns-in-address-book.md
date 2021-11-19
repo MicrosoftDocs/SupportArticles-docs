@@ -70,7 +70,7 @@ For example, to hide the **Business Phone**, **Location**, and **Alias** columns
 
 ## More information
 
-The `ABHiddenColumns` registry key lets you hide these columns in the **Address Book** only. After you hide these columns in the **Address Book**, they are is still available in the **Properties** dialog box. The **Properties** dialog box is displayed when you double-click a user entry in the **Address Book**.
+The `ABHiddenColumns` registry key lets you hide these columns in the **Address Book** only. After you hide these columns in the **Address Book**, they are is still available in the **Properties** dialog box. The **Properties** dialog box is displayed when you double-click a user entry in the **Address Book**.
 
 To hide these columns in the **Properties** dialog box, modify the details template in the **Exchange System Manager**. For more information about the details template, see [How to Add, Edit, Change and Revert Address and Details Templates](/archive/blogs/dgoldman/how-to-add-edit-change-and-revert-address-and-details-templates).
 
@@ -95,7 +95,7 @@ The `ABHiddenColumns` values for columns that can be hidden are determined by us
 | **Department**|2.663 PidTagDepartmentName<br/>Canonical name: PidTagDepartmentName<br/> **Property ID** : 0x3A18<br/> **Data type** : PtypString, 0x001F|
 |||
 
-These properties are described in the [MS-OXPROPS]: Exchange Server Protocols Master Property List document that is available for download from the Microsoft Download Center:
+These properties are described in the [MS-OXPROPS]: Exchange Server Protocols Master Property List document that is available for download from the Microsoft Download Center:
 
 [Download the [MS-OXPROPS] package now.](https://download.microsoft.com/download/5/d/d/5dd33fdf-91f5-496d-9884-0a0b0ee698bb/%5bms-oxprops%5d.pdf)
 

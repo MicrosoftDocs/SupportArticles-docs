@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you try to invite participants to a Skype for Business Online (formerly Lync Online) meeting in Outlook, the meeting invitations aren't sent as expected. This issue may occur if Outlook isn't connected to a Exchange Online server. 
+When you try to invite participants to a Skype for Business Online (formerly Lync Online) meeting in Outlook, the meeting invitations aren't sent as expected. This issue may occur if Outlook isn't connected to a Exchange Online server. 
 
 ## Solution
 

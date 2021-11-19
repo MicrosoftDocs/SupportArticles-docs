@@ -23,11 +23,11 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Visio 2010 or Visio 2013, when you click **Fit to Drawing** in the **Size** group on the **Design** tab, the page resizes. But a small margin remains between the edge of the page and the drawing. 
+In Microsoft Visio 2010 or Visio 2013, when you click **Fit to Drawing** in the **Size** group on the **Design** tab, the page resizes. But a small margin remains between the edge of the page and the drawing. 
 
 ## Cause
 
-This issue occurs because of a design change in Visio. The **Fit to Drawing** command takes the margin settings of the page into consideration when the command resizes the page to fit the drawing.
+This issue occurs because of a design change in Visio. The **Fit to Drawing** command takes the margin settings of the page into consideration when the command resizes the page to fit the drawing.
 
 ## Resolution
 

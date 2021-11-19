@@ -52,7 +52,7 @@ To clear the ClickOnce application cache, follow these steps:
 
 To check whether the problem is fixed, follow these steps:
   - If the problem is fixed, you are finished with these steps.    
-  - If the problem is not fixed, visit [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907) or [contact support](https://support.microsoft.com/contactus/).    
+  - If the problem is not fixed, visit [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907) or [contact support](https://support.microsoft.com/contactus/).    
      
 ## More information
 

@@ -34,7 +34,7 @@ This article describes how to create a custom macro, and toolbar/ribbon that con
 When a project is opened it uses information in the local file, as well as the global template file, to set defaults for the plan. The global template file
 contains, views, reports, modules (macros), tables, filters, calendars, maps, fields, and groups (Toolbars are available in Project 2007 or earlier global template files but not 2010, the ribbon was introduced in 2010). Your project plan will use the defaults from the global template unless you create new or modify the existing objects . Customized objects are stored to the local project unless you take steps to copy the information to the global file. This global template can be shared with other Project client users, either by sending them the global.mpt file to save locally or share it via a network location.
 
-When an enterprise project is opened from Project Server, the enterprise global template settings are applied to the project.  After the enterprise global template is applied to the project, any items in the local global file that do not have the same names as the items in the enterprise global template are also applied to the project file. Therefore, if you created a custom view, table, or filter that has the same name as an item in the enterprise global template, you are prompted to rename or overwrite the custom item. The error message you receive is similar to the error below:
+When an enterprise project is opened from Project Server, the enterprise global template settings are applied to the project.  After the enterprise global template is applied to the project, any items in the local global file that do not have the same names as the items in the enterprise global template are also applied to the project file. Therefore, if you created a custom view, table, or filter that has the same name as an item in the enterprise global template, you are prompted to rename or overwrite the custom item. The error message you receive is similar to the error below:
 
 "The Enterprise Global already contains a (an object such as a view, table, calendar, etc.) named "\<ObjectName>". Rename or Replace."
 
@@ -42,11 +42,11 @@ Renaming the object will resolve the issue and allow you to continue to open the
 
 Typically, the enterprise global template takes precedence over other templates. However, the precedence of ribbons, toolbars and menus is treated differently from other items in the enterprise global template. Ribbons, toolbars and menus in the local global file take precedence over ribbons, toolbars and menus that have the same name in the enterprise global template. Additionally, different language versions of ribbons, toolbars and menus in the local global file take precedence over ribbons, toolbars and menu items in the enterprise global template. However, a custom ribbon or toolbar that has a unique name in the enterprise global template file in Project Server will be available to all users of Project. 
 
-The general steps used to move customized objects from a local plan into the local global file are pretty straight forward:
+The general steps used to move customized objects from a local plan into the local global file are pretty straight forward:
 
 1. Create the custom object in your local plan.   
 2. Open the Organizer which shows the objects in the local global template and the plan side by side.   
-3. Move the customized object from the plan to the global template and you are done.    
+3. Move the customized object from the plan to the global template and you are done.    
 
 These steps will work for all versions of Project through 2010.
 
@@ -54,21 +54,21 @@ However, if you want to add customized objects to the Enterprise Global Template
 
 To include a custom ribbon tab that has a command button to run a macro in your enterprise global template file in Project 2010, follow these steps:
 
-### Steps to Create a custom macro
+### Steps to Create a custom macro
 
 
 1. Start Project client.   
-2. Start a new project. It's name is Project1.   
+2. Start a new project. It's name is Project1.   
 3. On the View tab, click the Macros drop down list, and then click RecordMacro.    
 4. In the Macro name box, type a name. For example, Macro1 is the default.   
 5. In the Store Macro in list, click Global file. If you select This Project then the macro is only available in Project 1.    
 6. Click the other appropriate options, and then click OK.   
 
 
-### Steps to copy the module that includes the macro to the local global template if needed
+### Steps to copy the module that includes the macro to the local global template if needed
 
 
-1. On the Info page of the File tab, click the Organizer button ot the left of OrganizeGlobal Template.
+1. On the Info page of the File tab, click the Organizer button ot the left of OrganizeGlobal Template.
 
    Note: the name of the files currently open will appear at the top of each window. You can change the file to another open file using the drop down lists at the bottom of each window.   
 2. Click the Modules tab   
@@ -81,13 +81,13 @@ The global will is automatically saved. The module and macro will now be availab
 ### Steps to copy the module to the enterprise global template in 2007 or 2010.
 
 
-1. Launch Project Web Access as a user with permissions to modify the Enterprise Global Template.   
-2. Click Server Settings > Enterprise Global and click the button Configure Project Professional. Project Professional will launch with the Enterprise Global template in memory.   
+1. Launch Project Web Access as a user with permissions to modify the Enterprise Global Template.   
+2. Click Server Settings > Enterprise Global and click the button Configure Project Professional. Project Professional will launch with the Enterprise Global template in memory.   
 3. Click the File tab, select Info and Manage Global Template.    
 4. Open the plan where your macro is stored if not already in the Global (+ non-cached enterprise).   
 5. Click the Module tab and then select the module you wish to copy into the Enterprise Global Template.   
 6. Between the panes, click **Copy**, and then click **Close**.   
-7. Click the Task tab and then click Save to save the enterprise global template.   
+7. Click the Task tab and then click Save to save the enterprise global template.   
 8. Exit Project Professional.    
 
 The next time a user opens any enterprise plan, the macro will be available.

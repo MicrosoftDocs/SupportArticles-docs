@@ -42,11 +42,11 @@ To work around this problem, revert to the classic ECP user interface. To do thi
 1. Sign in to ECP.
 2. On the **Options** menu, expand **Mail**, and then click **Other**.
 
-    :::image type="content" source="./media/cannot-configure-out-of-office-message-owa-ecp/select-other-option.png" alt-text="Screenshot of selecting the Other options.":::
+    :::image type="content" source="media/cannot-configure-out-of-office-message-owa-ecp/select-other-option.png" alt-text="Screenshot of selecting the Other options.":::
 
 3. Click **Go to the earlier version**.
 
-    :::image type="content" source="./media/cannot-configure-out-of-office-message-owa-ecp/select-go-to-the-earlier-version.png" alt-text="Screenshot of the Go to the earlier version link.":::
+    :::image type="content" source="media/cannot-configure-out-of-office-message-owa-ecp/select-go-to-the-earlier-version.png" alt-text="Screenshot of the Go to the earlier version link.":::
 
 ## Status
 

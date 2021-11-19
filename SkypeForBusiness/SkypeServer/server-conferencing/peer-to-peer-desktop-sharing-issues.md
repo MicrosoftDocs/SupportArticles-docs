@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-When you try to start a desktop sharing session in a Peer-to-Peer (P2P) instant message (IM) or in a P2P audio conversation with a Microsoft Skype for Business for iOS user, you experience the following symptoms: 
+When you try to start a desktop sharing session in a Peer-to-Peer (P2P) instant message (IM) or in a P2P audio conversation with a Microsoft Skype for Business for iOS user, you experience the following symptoms: 
 
 - Users of Skype for Business for iOS receive the following notification:
 

@@ -31,16 +31,16 @@ When a Microsoft Office 365 user tries to delete an item such as a calendar even
   
 ## Cause
 
-This issue occurs if the items in the Recoverable Items folder of the user's mailbox exceed the default quota of 30 gigabytes (GB).
+This issue occurs if the items in the Recoverable Items folder of the user's mailbox exceed the default quota of 30 gigabytes (GB).
 
 ## Solution
 
 To fix this issue, use either of the following methods:
 
-- Make sure that Litigation Hold or In-Place Hold is enabled. If either feature is enabled, the storage quota for the Recoverable Items folder is automatically increased from 30 GB to 100 GB.
-- Enable the archive mailbox, turn on the auto-expanding archiving feature in Exchange Online, and then create a custom retention policy for mailboxes on hold. After you complete these steps, the storage quota for the Recoverable Items folder in the user's archive will be unlimited.
+- Make sure that Litigation Hold or In-Place Hold is enabled. If either feature is enabled, the storage quota for the Recoverable Items folder is automatically increased from 30 GB to 100 GB.
+- Enable the archive mailbox, turn on the auto-expanding archiving feature in Exchange Online, and then create a custom retention policy for mailboxes on hold. After you complete these steps, the storage quota for the Recoverable Items folder in the user's archive will be unlimited.
 
-For more information about how to increase the storage quota, see [Increase the Recoverable Items quota for mailboxes on hold](/microsoft-365/compliance/increase-the-recoverable-quota-for-mailboxes-on-hold).  
+For more information about how to increase the storage quota, see [Increase the Recoverable Items quota for mailboxes on hold](/microsoft-365/compliance/increase-the-recoverable-quota-for-mailboxes-on-hold).  
 
 ## More information
 
@@ -53,6 +53,6 @@ An item is considered soft-deleted in the following cases:
 
 Users can use the **Recover Deleted Items** feature in Outlook or Outlook Web App to recover a deleted item.
 
-For more information about deleted item recovery, see [Recoverable Items folder](/exchange/recoverable-items-folder-exchange-2013-help).
+For more information about deleted item recovery, see [Recoverable Items folder](/exchange/recoverable-items-folder-exchange-2013-help).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
