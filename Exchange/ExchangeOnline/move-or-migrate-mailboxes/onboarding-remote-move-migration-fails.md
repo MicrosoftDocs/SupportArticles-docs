@@ -30,7 +30,7 @@ This issue typically occurs because the on-premises primary mailbox also has an 
 
 To fix this issue, follow these steps:
 
-## Step 1: Verify the archive GUID of on-premises and cloud-based archive mailboxes is same
+## Step 1: Verify on-premises and cloud-based archive mailboxes have the same archive GUID
 
 In the on-premises Exchange Server environment and Exchange Online, follow these steps:
 
@@ -46,7 +46,7 @@ In the on-premises Exchange Server environment and Exchange Online, follow these
     Get-MailUser -Identity "<user@contoso.com>" | FL *archive*
     ```
 
-If the `ArchiveGuid` value of the two archive mailboxes is the same, proceed to the next step. If not, create a support request.
+If the two archive mailboxes have the same `ArchiveGuid` value, proceed to the next step. If not, create a support request.
 
 ## Step 2: Back up the on-premises archive mailbox
 
