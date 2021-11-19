@@ -32,25 +32,25 @@ When you try to start Exchange Management Shell (EMS) or Exchange Management Con
 
 ## Cause
 
-This problem occurs because one or more of the following conditions are true:
+This problem occurs because one or more of the following conditions are true:
 
-- The MSExchangePowerShellAppPool application pool is experiencing problems or is not running.
-- The user does not have **Remote PowerShell Enabled** status.
-- Windows Remote Management (WinRM) is configured incorrectly on the server.
+- The MSExchangePowerShellAppPool application pool is experiencing problems or is not running.
+- The user does not have **Remote PowerShell Enabled** status.
+- Windows Remote Management (WinRM) is configured incorrectly on the server.
 
 ## Resolution
 
 To resolve this problem, use one of the following methods:
 
-- Make sure that the MSExchangePowerShellAppPool application pool is running. If the pool is running, try to recycle it. Then, check for errors or warnings in the event logs.
+- Make sure that the MSExchangePowerShellAppPool application pool is running. If the pool is running, try to recycle it. Then, check for errors or warnings in the event logs.
 
-- Make sure that the user who is trying to connect has **Remote PowerShell Enabled** status. To determine whether a user is enabled for Remote PowerShell, start Exchange Management Shell by using an account that has been enabled, and then run the following query:
+- Make sure that the user who is trying to connect has **Remote PowerShell Enabled** status. To determine whether a user is enabled for Remote PowerShell, start Exchange Management Shell by using an account that has been enabled, and then run the following query:
 
     ```powershell
     (Get-User <username>).RemotePowershellEnabled
     ```
 
-    This query returns a response of **True** or **False**. If the response is **False**, the user is not enabled for Remote PowerShell. To enable the user, run the following command:
+    This query returns a response of **True** or **False**. If the response is **False**, the user is not enabled for Remote PowerShell. To enable the user, run the following command:
 
     ```powershell
     Set-User \<username> -RemotePowerShellEnabled $True
@@ -60,8 +60,8 @@ To resolve this problem, use one of the following methods:
 
     1. Run WinRM QuickConfig. To do this, click **Start**, type *WinRM QuickConfig* in the **Start Search** box, and then press ENTER.
 
-    2. Make sure that both tests pass and that no actions are required. If any actions are required, click **Yes**  in the prompt window to allow the WinRM configuration changes to be made.
+    2. Make sure that both tests pass and that no actions are required. If any actions are required, click **Yes**  in the prompt window to allow the WinRM configuration changes to be made.
 
-    3. Click Start, type *cmd* in the **Start Search** box, and then press ENTER. In the Command Prompt window, type *WinRM enumerate winrm/config/listener* at the command prompt, and then press ENTER.
+    3. Click Start, type *cmd* in the **Start Search** box, and then press ENTER. In the Command Prompt window, type *WinRM enumerate winrm/config/listener* at the command prompt, and then press ENTER.
 
-    4. Make sure that a listener exists for the HTTP protocol on port 5985, and that the listener is listening on all addresses.
+    4. Make sure that a listener exists for the HTTP protocol on port 5985, and that the listener is listening on all addresses.

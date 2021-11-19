@@ -19,7 +19,7 @@ appliesto:
 # Remote PowerShell cmdlets don't work in Skype for Business Server 2015
 
 > [!NOTE]
-> Before you apply this article, make sure that you don't have update [3169706](https://support.microsoft.com/help/3169706/remote-powershell-can-t-connect-after-an-upgrade-to-windows-management-framework-5.0) installed on the affected system.
+> Before you apply this article, make sure that you don't have update [3169706](https://support.microsoft.com/help/3169706/remote-powershell-can-t-connect-after-an-upgrade-to-windows-management-framework-5.0) installed on the affected system.
 
 ## Symptoms
 
@@ -30,7 +30,7 @@ When this problem occurs, you may receive the following error message:
 ```adoc
 PS C:\Windows\system32> $session = New-PSSession -ConnectionUri "https:///OcsPowershell" -Credential
 $credential -SessionOption $sessionOption
-New-PSSession : [<ServerName>] Connecting to remote server <ServerName> failed with the following error message: The SSL connection cannot be established. Verify that the service on the remote host is properly configured to listen for HTTPS requests. Consult the logs and documentation for the WS-Management service running on the destination, most commonly IIS or WinRM. If the destination is the WinRM service, run the following command on the destination to analyze and configure the WinRM service: "winrm quickconfig -transport: https". For more information, see the about_Remote_Troubleshooting Help topic.
+New-PSSession : [<ServerName>] Connecting to remote server <ServerName> failed with the following error message: The SSL connection cannot be established. Verify that the service on the remote host is properly configured to listen for HTTPS requests. Consult the logs and documentation for the WS-Management service running on the destination, most commonly IIS or WinRM. If the destination is the WinRM service, run the following command on the destination to analyze and configure the WinRM service: "winrm quickconfig -transport: https". For more information, see the about_Remote_Troubleshooting Help topic.
 At line:1 char:12
 + $session = New-PSSession -ConnectionUri "https:///OcsPowershe/OcsPowershe ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,13 +40,13 @@ At line:1 char:12
 
 Additionally, if you run the Skype for Business Server 2015 Deployment Wizard, you notice the following status for steps 1 and 2 in the installation:
 
-- Step 1 (Install or Update Skype for Business Server System) is shown as Partial.   
-- Step 2 (**Setup or Remove Skype for Business Server Components**) is not shown as **Complete**.   
+- Step 1 (Install or Update Skype for Business Server System) is shown as Partial.   
+- Step 2 (**Setup or Remove Skype for Business Server Components**) is not shown as **Complete**.   
 
-If you run the [Enable-CSReplica](/powershell/module/skype/Enable-CsReplica) command in the Skype for Business Server 2015 Management Shell, you notice the following error entry:
+If you run the [Enable-CSReplica](/powershell/module/skype/Enable-CsReplica) command in the Skype for Business Server 2015 Management Shell, you notice the following error entry:
 
 ```adoc
-Error: An error occurred: "System.MissingMethodException" "Method not found: 'Void System.Runtime.InteropServices.Marshal.StructureToPtr(!!0, IntPtr, Boolean)'."
+Error: An error occurred: "System.MissingMethodException" "Method not found: 'Void System.Runtime.InteropServices.Marshal.StructureToPtr(!!0, IntPtr, Boolean)'."
 WARNING: Detailed results can be found at C:\Users\seguim02admin\AppData\Local\Temp\Enable-CSReplica-[2017_03_16][15_15_56].html".Command execution failed: Method not found: 'Void System.Runtime.InteropServices.Marshal.StructureToPtr(!!0, IntPtr, Boolean)'.
 ```
 
@@ -63,7 +63,7 @@ To fix this issue, install the .NET Framework 4.5.2 update on Skype for Business
 
 ## More information
 
-To determine the .Net Framework version that's installed on the Skype for Business Server 2015 server, run the following cmdlet as an administrator in the Skype for Business Server 2015 Management Shell or in Windows PowerShell:
+To determine the .Net Framework version that's installed on the Skype for Business Server 2015 server, run the following cmdlet as an administrator in the Skype for Business Server 2015 Management Shell or in Windows PowerShell:
 
 ```powershell
 Get-ChildItem -Path Registry::"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4"

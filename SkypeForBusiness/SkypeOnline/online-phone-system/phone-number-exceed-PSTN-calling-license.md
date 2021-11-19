@@ -26,9 +26,9 @@ Assume that you have 100 licenses for PSTN Calling in a Skype for Business Onlin
 
 This behavior is by design. In a Skype for Business Online environment, you can acquire more phone numbers than you have licenses for.
 
-To determine how many phone numbers you can reserve, add 10 percent onto the number of licenses that you hold, and then add 10. That is, use **N** + .10(**N**) + 10 = **R**, where **N** = the number of licenses that you hold, and **R** = the number of phone numbers that you can reserve.
+To determine how many phone numbers you can reserve, add 10 percent onto the number of licenses that you hold, and then add 10. That is, use **N** + .10(**N**) + 10 = **R**, where **N** = the number of licenses that you hold, and **R** = the number of phone numbers that you can reserve.
 
-For example, if you have 100 PSTN Calling licenses, you can reserve 120 phone numbers. This assumes that you have not already acquired some phone numbers for those 100 users.
+For example, if you have 100 PSTN Calling licenses, you can reserve 120 phone numbers. This assumes that you have not already acquired some phone numbers for those 100 users.
 
 ## Reference
 

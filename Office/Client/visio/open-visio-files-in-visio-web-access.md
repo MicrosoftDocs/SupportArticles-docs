@@ -31,17 +31,17 @@ Consider the following scenario:
 - You have Visio Viewer installed on the computer.
 - You try to open Microsoft Office Visio files in Visio Web Access.
 
-In this scenario, when you click Open in Visio, you receive the following error message:
+In this scenario, when you click Open in Visio, you receive the following error message:
 
 > To open this document, your computer must be running a supported version of Microsoft Visio and a browser that supports opening files directly from Visio Web Access
 
 ## Cause
 
-This issue occurs because Visio Web Access invokes the client application by using the **ms-visio:ofv|u|documenturl** protocol, but Visio Viewer doesn't support or process this protocol.
+This issue occurs because Visio Web Access invokes the client application by using the **ms-visio:ofv|u|documenturl** protocol, but Visio Viewer doesn't support or process this protocol.
 
 ## Workaround
 
-To work around this issue, install [Visio desktop app](https://support.microsoft.com/office/install-visio-or-access-visio-for-the-web-f98f21e3-aa02-4827-9167-ddab5b025710#VisioInstall=Install_Visio). 
+To work around this issue, install [Visio desktop app](https://support.microsoft.com/office/install-visio-or-access-visio-for-the-web-f98f21e3-aa02-4827-9167-ddab5b025710#VisioInstall=Install_Visio). 
 
 ## Status
 

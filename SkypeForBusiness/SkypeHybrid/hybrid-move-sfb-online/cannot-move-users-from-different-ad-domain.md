@@ -19,7 +19,7 @@ appliesto:
 
 ## Symptoms
 
-In a Microsoft Skype for Business Server 2015 hybrid environment that has a multidomain Active Directory Domain Services (AD DS) topology, a user from a child AD domain cannot be moved to Skype for Business Online from Control Panel. The move operation fails and returns the following error message:    
+In a Microsoft Skype for Business Server 2015 hybrid environment that has a multidomain Active Directory Domain Services (AD DS) topology, a user from a child AD domain cannot be moved to Skype for Business Online from Control Panel. The move operation fails and returns the following error message:    
  
 **Cannot find user in Active Directory with the following SIP URI: \<SipAddress>.**     
 

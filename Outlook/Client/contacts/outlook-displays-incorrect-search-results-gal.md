@@ -54,7 +54,7 @@ If the phonetic display name of all the users and distribution lists on the GAL 
 
 To work around this issue, use one of the following methods:
 
-To have us fix this problem by using method 1 for you, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
+To have us fix this problem by using method 1 for you, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
 
 ### Let me fix it myself
 

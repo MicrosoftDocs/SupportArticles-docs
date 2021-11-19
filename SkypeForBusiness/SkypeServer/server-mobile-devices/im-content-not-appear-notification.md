@@ -10,7 +10,7 @@ ms.prod: skype-for-busines-itpro
 localization_priority: Normal
 ms.custom: 
 - CI 109367
-- CSSTroubleshoot 
+- CSSTroubleshoot 
 ms.reviewer: vliorgu, Claudia.Lake, premgan
 appliesto:
 - Skype for Business for iOS

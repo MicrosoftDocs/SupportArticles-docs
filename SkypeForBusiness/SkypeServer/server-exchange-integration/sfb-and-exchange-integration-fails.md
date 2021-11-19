@@ -25,7 +25,7 @@ Consider the following scenario:
 
 - You have a Microsoft Lync 2013 or Skype for Business server, and you have configured integration with Microsoft Exchange 2013 or 2016.   
 - At least some of the users have contoso.com as primary SMTP.   
-- On the Exchange server, you change the AcceptedDomains settings so that instead of contoso.com you have \*.contoso.com, as described in [Procedures for accepted domains in Exchange 2016](/Exchange/mail-flow/accepted-domains/accepted-domain-procedures).   
+- On the Exchange server, you change the AcceptedDomains settings so that instead of contoso.com you have \*.contoso.com, as described in [Procedures for accepted domains in Exchange 2016](/Exchange/mail-flow/accepted-domains/accepted-domain-procedures).   
 
 After this change, Skype for Business and Exchange integration starts failing. The following error message is reported in the Lync server log:
 
@@ -44,7 +44,7 @@ Storage Service had an EWS Autodiscovery failure.
 UnsupportedStoreException: code=ErrorIncorrectExchangeServerVersion, reason=GetUserSettings failed, smtpAddress=bob@contoso.com, Autodiscover Uri=https://autodiscover.contoso.com/autodiscover/autodiscover.svc, Autodiscover WebProxy=<NULL> ---> Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (401) Unauthorized. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
 ```
 
-Also, the following details are reported if you run the command Test-CsExStorageConnectivity -SipUri "sip:bob@contoso.com" -Verbose:
+Also, the following details are reported if you run the command Test-CsExStorageConnectivity -SipUri "sip:bob@contoso.com" -Verbose:
 
 ```adoc
 HTTP/1.1 401 Unauthorizedrequest-id: 33086db3-69f9-4cdf-8ffe-ee364539e113

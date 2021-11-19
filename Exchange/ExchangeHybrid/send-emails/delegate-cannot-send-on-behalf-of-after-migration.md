@@ -26,7 +26,7 @@ If your mailbox is migrated to Exchange Online and add a delegate who has the ma
 
 ## Cause
 
-This issue occurs because the `publicDelegates` attribute (`GrantSendOnBehalfTo`) is not currently written back to the on-premises Active Directory Domain Services. This is by default.
+This issue occurs because the `publicDelegates` attribute (`GrantSendOnBehalfTo`) is not currently written back to the on-premises Active Directory Domain Services. This is by default.
 
 ## Resolution
 
@@ -35,17 +35,17 @@ To automatically write back the send on behalf (`publicDelegates`) attribute, th
 - [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback)
 - [Azure AD Connect Version 1.1.553.0](/azure/active-directory/hybrid/reference-connect-version-history#115530)
 
-As a workaround, an administrator can manually add the **send on behalf** permission by using Remote PowerShell. To do this, run the following cmdlet:
+As a workaround, an administrator can manually add the **send on behalf** permission by using Remote PowerShell. To do this, run the following cmdlet:
 
 ```powershell
-Set-MailUser UserSMTPAddress -GrantSendOnBehalfTo DelegateSMTPAddress
+Set-MailUser UserSMTPAddress -GrantSendOnBehalfTo DelegateSMTPAddress
 ```
 
 After this permission is manually added, the delegate will be able to send on behalf of the user.
 
 **For Microsoft 365 dedicated/ITAR users only:**
 
-If you migrate from a legacy dedicated environment to Microsoft 365, you have to add the **send on behalf** permission manually. The values are not automatically written back to the dedicated users who moved their mailboxes to vNext.
+If you migrate from a legacy dedicated environment to Microsoft 365, you have to add the **send on behalf** permission manually. The values are not automatically written back to the dedicated users who moved their mailboxes to vNext.
 
 You can use the following options:
 

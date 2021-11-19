@@ -33,13 +33,13 @@ The following features that are currently available in Microsoft Lync 2013 for i
 ### Chat screen
 
 - Send the chat transcript as an email message.   
-- Access a participant's Contact Card from the Participant list.    
+- Access a participant's Contact Card from the Participant list.    
 
 ### Meetings List screen
 
 - Visually identify meetings that are currently in the Tentative acceptance state.    
 - Access the meeting organizer's Contact Card from the Meeting detail view.
-  - The ability to access the meeting organizer's Contact Card from the Meeting detail view is available in version 6.4. Users can download the latest version of Skype for Business for iOS at [Skype for Business is now on iOS](https://support.office.com/article/skype-for-business-is-now-on-ios-1a2cf653-955b-4329-b289-db7a67d32bfd).     
+  - The ability to access the meeting organizer's Contact Card from the Meeting detail view is available in version 6.4. Users can download the latest version of Skype for Business for iOS at [Skype for Business is now on iOS](https://support.office.com/article/skype-for-business-is-now-on-ios-1a2cf653-955b-4329-b289-db7a67d32bfd).     
    
 ### Voice Mail screen
 
@@ -49,7 +49,7 @@ The following features that are currently available in Microsoft Lync 2013 for i
 - Use quick options to return a call and navigate to the Contact Card from a voice mail message. 
    - The ability to return a call from a voice mail message is available in version 6.2.3. Users can download the latest version of Skype for Business for iOS at [Skype for Business is now on iOS](https://support.office.com/article/skype-for-business-is-now-on-ios-1a2cf653-955b-4329-b289-db7a67d32bfd).   
 - Use Accessibility features.   
-- Use Speed Controls for faster and slower voice mail playback.    
+- Use Speed Controls for faster and slower voice mail playback.    
 
 ### In-call screens
 

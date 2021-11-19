@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-You create a PowerPoint presentation that contains an embedded video, such as an MP4 file. You upload the PowerPoint presentation into Skype Meeting Broadcast. When you start the broadcast, event team members can view the presentation. However, attendees of the broadcast receive the following error message: 
+You create a PowerPoint presentation that contains an embedded video, such as an MP4 file. You upload the PowerPoint presentation into Skype Meeting Broadcast. When you start the broadcast, event team members can view the presentation. However, attendees of the broadcast receive the following error message: 
 
 "unsupported video type or invalid file path"
 

@@ -28,14 +28,14 @@ In Exchange Server 2016, Exchange Server 2013, and Exchange Server 2010, AD Acce
 
 The Event 2080 log entry:
 
-> Log Name:      Application  
-Source:        MSExchange ADAccess  
-Event ID:      2080  
+> Log Name:      Application  
+Source:        MSExchange ADAccess  
+Event ID:      2080  
 Task Category: Topology  
-Level:         Information  
-Keywords:      Classic  
+Level:         Information  
+Keywords:      Classic  
 Description:  
-     Process Microsoft.Exchange.Directory.TopologyService.exe (PID=4016). Exchange Active Directory Provider has discovered the following servers with the following characteristics:  
+     Process Microsoft.Exchange.Directory.TopologyService.exe (PID=4016). Exchange Active Directory Provider has discovered the following servers with the following characteristics:  
 (Server name | Roles | Enabled | Reachability | Synchronized | GC capable | PDC | SACL right | Critical Data | Netlogon | OS Version)  
 In-site:  
 `domaincontroller1.company.com` CDG 1 7 7 1 0 0 1 7 1  
@@ -59,16 +59,16 @@ The following information describes the columns in Event 2080 and their contents
 ### Column descriptions
 
 - **Server name:** The first column indicates the name of the domain controller that the rest of the data in the row corresponds to.
-- **Roles:** The second column shows whether the particular server can be used as a configuration domain controller (column value C), a domain controller (column value D), or a global catalog server (column value G) for this particular Exchange server. A letter in this column means that the server can be used for the designated function, and a hyphen (-) means that the server cannot be used for that function. In the example that is described earlier in this article, the **Roles** column contains the value **CDG** to indicate that the service can use the server for all three functions.
+- **Roles:** The second column shows whether the particular server can be used as a configuration domain controller (column value C), a domain controller (column value D), or a global catalog server (column value G) for this particular Exchange server. A letter in this column means that the server can be used for the designated function, and a hyphen (-) means that the server cannot be used for that function. In the example that is described earlier in this article, the **Roles** column contains the value **CDG** to indicate that the service can use the server for all three functions.
 - **Enabled:** The third column indicates whether the domain controller is enabled to use Exchange Server.
-- **Reachability:** The fourth column shows whether the server is reachable by a Transmission Control Protocol (TCP) connection. These bit flags are connected by an **OR** value. 0x1 means the server is reachable as a global catalog server (port 3268), 0x2 means the server is reachable as a domain controller (port 389), and 0x4 means the server is reachable as a configuration domain controller (port 389). In other words, if a server is reachable as a global catalog server and as a domain controller but not as a configuration domain controller, the value is **3**. In this example, the value of **7** in the third column means that the server is reachable as a global catalog server, as a domain controller, and as a configuration domain controller (0x1 | 0x2 | 0x4 = 0x7).
+- **Reachability:** The fourth column shows whether the server is reachable by a Transmission Control Protocol (TCP) connection. These bit flags are connected by an **OR** value. 0x1 means the server is reachable as a global catalog server (port 3268), 0x2 means the server is reachable as a domain controller (port 389), and 0x4 means the server is reachable as a configuration domain controller (port 389). In other words, if a server is reachable as a global catalog server and as a domain controller but not as a configuration domain controller, the value is **3**. In this example, the value of **7** in the third column means that the server is reachable as a global catalog server, as a domain controller, and as a configuration domain controller (0x1 | 0x2 | 0x4 = 0x7).
 - **Synchronized:** The fifth column shows whether the `isSynchronized` flag on the rootDSE of the domain controller is set to **TRUE**. These values use the same bit flags connected by an **OR** value as the flags that are used in the **Reachability** column.
 - **GC capable:** The sixth column is a Boolean expression that states whether the domain controller is a global catalog server.
 - **PDC:** The seventh column is a Boolean expression that states whether the domain controller is a primary domain controller for its domain.
 - **SACL right:** The eighth column is a Boolean expression that states whether DSAccess has the correct permissions to read the SACL (part of `nTSecurityDescriptor`) against that directory service.
 - **Critical data:** The ninth column is a Boolean expression that states whether DSAccess found this Exchange server in the configuration container of the domain controller listed in **Server name** column.
-- **Netlogon check:** The tenth column indicates whether AD Access successfully connected to a domain controller's Net Logon service. This requires the use of Remote Procedure Call (RPC). That call may fail for reasons other than that a server is down. For example, firewalls may block this call. So, if there is a value of **7** in the ninth column, this means that the Net Logon service check was successful for each role (domain controller, configuration domain controller, and global catalog).
-- **System version:** The eleventh column indicates whether the operating system of the listed domain controller satisfies the operating system requirements of Exchange Server for use by DSAccess.
+- **Netlogon check:** The tenth column indicates whether AD Access successfully connected to a domain controller's Net Logon service. This requires the use of Remote Procedure Call (RPC). That call may fail for reasons other than that a server is down. For example, firewalls may block this call. So, if there is a value of **7** in the ninth column, this means that the Net Logon service check was successful for each role (domain controller, configuration domain controller, and global catalog).
+- **System version:** The eleventh column indicates whether the operating system of the listed domain controller satisfies the operating system requirements of Exchange Server for use by DSAccess.
 
 ## How to use the information in Event ID 2080 to diagnose DSAccess problems
 

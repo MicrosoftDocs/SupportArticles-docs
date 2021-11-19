@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom:
-- CI 157398
+- CI 157398
 - CSSTroubleshoot
 - seo-marvel-apr2020
 ms.collection: 
@@ -59,7 +59,7 @@ An eDiscovery or content search might yield the following error:
 
 > This search completed with (#) errors.  Would you like to retry the search on the failed locations?
 
-:::image type="content" source="./media/resolve-ediscovery-issues/edisc-tshoot-specific-location-search-fails.png" alt-text="Screenshot of search-specific location fails error.":::
+:::image type="content" source="media/resolve-ediscovery-issues/search-fails-error.png" alt-text="Screenshot of search-specific location fails error.":::
 
 ### Resolution
 
@@ -168,7 +168,9 @@ When you export search results from Core eDiscovery or Content search in the Mic
 
 When you run an eDiscovery search, if the search continually fails and returns an error message that resembles "Internal server error (500) occurred," you might have to rerun the search on specific mailbox locations only.
 
-:::image type="content" source="./media/resolve-ediscovery-issues/edisc-tshoot-error-500.png" alt-text="Screenshot of internal server error 500.":::
+> (500) Internal Server Error.
+
+:::image type="content" source="media/resolve-ediscovery-issues/internal-server-error-500.png" alt-text="Screenshot of Internal server error (500).":::
 
 ### Resolution
 

@@ -47,13 +47,13 @@ Get-MailboxFolderPermission -Identity ManagerSMTP:\Calendar
 Get-MailboxFolderPermission -Identity ManagerSMTP:\Inbox
 ```
 
-Delegates can still send on behalf of others as expected. This is true so long as they are listed in the **Delegate Permissions** dialog box. This can be verified by an administrator by running the following command from the Exchange Online environment:
+Delegates can still send on behalf of others as expected. This is true so long as they are listed in the **Delegate Permissions** dialog box. This can be verified by an administrator by running the following command from the Exchange Online environment:
 
 ```powershell
 Get-MailUser -Identity ManagerSMTP | Format-Table GrantSendOnBehalfTo
 ```
 
-Additionally, delegates report that they cannot see private items if they were previously granted this permission.
+Additionally, delegates report that they cannot see private items if they were previously granted this permission.
 
 ## Status
 
@@ -64,4 +64,4 @@ This issue is currently under investigation by Microsoft.
 No action is required unless delegates require access to private items on the calendar. Delegates retain the access that was granted to their account before their account or their manager's account was migrated. If changes must be made before users have mailboxes in Exchange Online, the folder permissions can be managed from the folder properties. The permissions can also be reapplied in the **Delegate Permissions** dialog box.
 
 > [!NOTE]
-> If the delegate is listed two times in the **Delegate Permissions** dialog box, you do not have to remove the duplicate user unless the delegate has to be able to view the private items. If you make any change, you should take steps to reconfigure the delegate fully. To do this, you must re-add the folder level permissions in Outlook, and select the **Delegate can see my private items** check box.
+> If the delegate is listed two times in the **Delegate Permissions** dialog box, you do not have to remove the duplicate user unless the delegate has to be able to view the private items. If you make any change, you should take steps to reconfigure the delegate fully. To do this, you must re-add the folder level permissions in Outlook, and select the **Delegate can see my private items** check box.

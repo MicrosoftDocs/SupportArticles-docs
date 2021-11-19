@@ -21,22 +21,22 @@ appliesto:
 
 ## Problem
 
-When you try to access mail for your organizational account in Office 365, you receive the following error message: 
+When you try to access mail for your organizational account in Office 365, you receive the following error message: 
 
 > We're having trouble signing you in
 >
 > You're currently signed in with a Microsoft account as <>, but that account can't be used with Outlook Web App.  
 > Please sign out of your Microsoft account, then sign in to Outlook Web App with the account you use to read your organization's email. Click here to sign out. Learn more.
 
-This issue may occur when you try to access your mailbox through [https://www.outlook.com](https://www.outlook.com). 
+This issue may occur when you try to access your mailbox through [https://www.outlook.com](https://www.outlook.com). 
 
 ## Solution
 
-To access your mailbox, click the link to sign out, and then sign in to [https://mail.office365.com](https://mail.office365.com/). 
+To access your mailbox, click the link to sign out, and then sign in to [https://mail.office365.com](https://mail.office365.com/). 
 
 **Note** If you still can't sign out, follow the steps in the following Microsoft Knowledge Base article: 
  
-[2507767](https://support.microsoft.com/help/2507767) Problems when signing out of Office 365, Azure, or Intune in a web browser 
+[2507767](https://support.microsoft.com/help/2507767) Problems when signing out of Office 365, Azure, or Intune in a web browser 
 
 ## More Information 
 

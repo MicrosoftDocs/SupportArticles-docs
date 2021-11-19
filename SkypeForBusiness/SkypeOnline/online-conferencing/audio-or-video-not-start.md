@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you try to start audio or video in a peer-to-peer (P2P) or multiparty conference in Skype for Business Online (formerly Lync Online), you experience one or more of the following symptoms:
+When you try to start audio or video in a peer-to-peer (P2P) or multiparty conference in Skype for Business Online (formerly Lync Online), you experience one or more of the following symptoms:
 
 - The connection fails.   
 - You receive an error message that resembles one of the following:
@@ -47,12 +47,12 @@ To resolve this issue, follow these steps:
       2. Determine whether one or both users are roaming from one wireless access point to another wireless access point. In this situation, a delayed presence scenario may occur. In this scenario, the user may appear online but may actually be between two wireless access points.    
       3. Try to reproduce the issue when both users are on a wired connection, on a VPN connection, or on a Wi-Fi connection.   
    
-7. Reset the Windows Sockets (Winsock) Catalog. To do this, follow these steps: 
+7. Reset the Windows Sockets (Winsock) Catalog. To do this, follow these steps: 
     > [!NOTE]
-    > You must be logged on to the computer as an administrator to do the steps. 
-      1. On the **Start** screen, type cmd.   
-      2. In the search results, right-click **Command Prompt**, and then click **Run as administrator**.   
-      3. At the command prompt, type the following command, and then press **Enter**: 
+    > You must be logged on to the computer as an administrator to do the steps. 
+      1. On the **Start** screen, type cmd.   
+      2. In the search results, right-click **Command Prompt**, and then click **Run as administrator**.   
+      3. At the command prompt, type the following command, and then press **Enter**: 
             ```powershell
             netsh winsock reset
             ```
@@ -62,9 +62,9 @@ To resolve this issue, follow these steps:
       1. If the issue is reproducible with only one contact, determine whether anyone else can reproduce the issue with the same contact.    
       2. If the issue occurs with multiple contacts, check for commonalities among the group of contacts.   
    
-9. Important This step doesn't apply to Office 365 dedicated subscription plans. Don't use this step to troubleshoot this issue if you have an Office 365 dedicated plan.
+9. Important This step doesn't apply to Office 365 dedicated subscription plans. Don't use this step to troubleshoot this issue if you have an Office 365 dedicated plan.
 
-    Verify that the network meets the requirements for connecting to Skype for Business Online. For more information, go to the following Microsoft Knowledge Base article: 
+    Verify that the network meets the requirements for connecting to Skype for Business Online. For more information, go to the following Microsoft Knowledge Base article: 
 
      [2409256 ](https://support.microsoft.com/help/2409256) You can't connect to Skype for Business Online, or certain features don't work, because an on-premises firewall blocks the connection   
 

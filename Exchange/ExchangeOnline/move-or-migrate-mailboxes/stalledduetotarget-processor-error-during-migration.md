@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3162761
 
 When you perform a Microsoft Exchange Server migration, you receive a **StalledDueToTarget_Processor** error message. This problem occurs in Office 365.
 
-When you view the data in the move report, the report contains an error message that resembles the following:
+When you view the data in the move report, the report contains an error message that resembles the following:
 
 > {DataExportTransientException: MapiFxProxyTransientException: The data export was cancelled  
 due to a timeout. The destination didn't respond in time. --> The data export was cancelled  

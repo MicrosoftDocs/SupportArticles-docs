@@ -19,13 +19,13 @@ appliesto:
 
 ## Summary
 
-Microsoft Skype for Business 2016 users see a new feature that's known as contextual tips. These tips appear in a pop-up window to describe program features that are relevant to the current task. Contextual tips are helpful suggestions that encourage you to try Skype for Business features that you might not have used before.
+Microsoft Skype for Business 2016 users see a new feature that's known as contextual tips. These tips appear in a pop-up window to describe program features that are relevant to the current task. Contextual tips are helpful suggestions that encourage you to try Skype for Business features that you might not have used before.
 
 For a description of contextual tips, see the following Microsoft Office article:
 
 [What's New in Skype For Business 2016](https://support.office.com/article/what-s-new-in-skype-for-business-2016-cece9f93-add1-4d93-9a38-56cc598e5781)
 
-To dismiss the tip, click the **X** character at the top of the tip window. After you close the window, the tip will not display again. However, in some environments, you may want to disable contextual tips for through a client policy.
+To dismiss the tip, click the **X** character at the top of the tip window. After you close the window, the tip will not display again. However, in some environments, you may want to disable contextual tips for through a client policy.
 
 ## More Information
 

@@ -23,11 +23,11 @@ _Original KB number:_ &nbsp; 2027063
 
 ## Symptoms
 
-When you try to start EMS or EMC on a computer that is running Exchange Server 2010, you receive the following error message:
+When you try to start EMS or EMC on a computer that is running Exchange Server 2010, you receive the following error message:
 
 > Connecting to remote server failed with the following error message: The WinRM client received an HTTP server error status (500), but the remote service did not include any other information about the cause of the failure. For more information, see the about_Remote_Troubleshooting Help topic. It was running the command 'Discover-ExchangeServer -UseWIA $true -SuppressError $true'.
 
-Additionally, you may see the following warning event logged in the System log:
+Additionally, you may see the following warning event logged in the System log:
 
 > Source: Microsoft-Windows-WinRM  
 > EventID: 10113  
@@ -36,9 +36,9 @@ Additionally, you may see the following warning event logged in the System log:
 
 ## Cause
 
-This problem occurs because one of the following conditions is true:
+This problem occurs because one of the following conditions is true:
 
-- The **ExchangeInstallPath** variable is missing.
+- The **ExchangeInstallPath** variable is missing.
 - The path of the PowerShell virtual directory was modified.
 
 ## Resolution
@@ -47,6 +47,6 @@ To resolve this problem, use one of the following methods:
 
 - Make sure that the **ExchangeInstallPath** value is set correctly.
 
-    To do this, open the **System** item in **Control Panel**, click **Advanced system settings**, and then click **Environment variables** on the **Advanced** tab. In the **System variables** box, locate the **ExchangeInstallPath** variable. The corresponding value for this variable should be `C:\Program Files\Microsoft\Exchange Server\V14\`.
+    To do this, open the **System** item in **Control Panel**, click **Advanced system settings**, and then click **Environment variables** on the **Advanced** tab. In the **System variables** box, locate the **ExchangeInstallPath** variable. The corresponding value for this variable should be `C:\Program Files\Microsoft\Exchange Server\V14\`.
 
 - In IIS Manager, locate the entry for the PowerShell virtual directory under **Default Web Site**. Then, make sure that the entry points to the `\Program Files\Microsoft\Exchange Server\v14\ClientAccess\PowerShell` folder.

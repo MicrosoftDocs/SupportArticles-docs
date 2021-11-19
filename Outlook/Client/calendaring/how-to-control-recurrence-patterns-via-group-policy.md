@@ -64,19 +64,19 @@ To configure recurrence settings in Outlook by using custom Group Policy templat
     Outlook 2003 = Outlk11.adm
 
     > [!NOTE]
-    > The steps to add the template file to a domain controller vary, depending on the version of Windows that you are running. Also, because you may be applying the policy to an organizational unit (OU) and not to the whole domain, the steps may vary in this aspect of applying a policy. Therefore, check your Windows documentation for more information.
+    > The steps to add the template file to a domain controller vary, depending on the version of Windows that you are running. Also, because you may be applying the policy to an organizational unit (OU) and not to the whole domain, the steps may vary in this aspect of applying a policy. Therefore, check your Windows documentation for more information.
 
 4. Add the custom Group Policy template that you downloaded in step 1 to your domain controller.
 
     > [!IMPORTANT]
     > This step is not required for Outlook 2013 and later versions, as the recurrence administration settings are included in the main template.
 
-    Outlook 2010 = OLK14-RecurrenceAdministration.adm  
+    Outlook 2010 = OLK14-RecurrenceAdministration.adm  
     Outlook 2007 = OLK12-RecurrenceAdministration.adm  
     Outlook 2003 = OLK11-RecurrenceAdministration.adm
 
     > [!NOTE]
-    > The steps to add the .adm file to a domain controller vary, depending on the version of Windows that you are running. Also, because you may be applying the policy to an organizational unit (OU) and not to the whole domain, the steps may vary in this aspect of applying a policy. Therefore, check your Windows documentation for more information.
+    > The steps to add the .adm file to a domain controller vary, depending on the version of Windows that you are running. Also, because you may be applying the policy to an organizational unit (OU) and not to the whole domain, the steps may vary in this aspect of applying a policy. Therefore, check your Windows documentation for more information.
 
 5. Locate the policy node, depending on your Outlook version.
 
@@ -98,12 +98,12 @@ To configure recurrence settings in Outlook by using custom Group Policy templat
    :::image type="content" source="media/how-to-control-recurrence-patterns-via-group-policy/enable-the-policy.png" alt-text="Screenshot of Disable the No end date option for recurring items dialog box.":::
 
     > [!IMPORTANT]
-    > This will disable the **No end date** option for new recurring items.
+    > This will disable the **No end date** option for new recurring items.
 
 8. Select **OK**.
 9. Double-click the **Specify total number of days in a recurring meeting or appointment** policy to configure this policy.
 
-   Using this policy, you can specify the default number of days after which a recurring meeting or appointment (not task) will end. When this policy is enabled, the End by setting in the recurrence pattern is used as the default configuration for a recurring meeting. Therefore, depending on your recurrence pattern (daily, weekly, monthly), the number of meetings that occur during this period can vary. For example, if you specify a value of 180 and today's date is May 5, 2011, the End by value will show Tue 11/1/2011 (180 days after today). If you select Weekly for the recurrence pattern, you will get 26 meetings during this timeframe. However, if you specify Monthly for the recurrence pattern, you will only get six meetings during this timeframe.
+   Using this policy, you can specify the default number of days after which a recurring meeting or appointment (not task) will end. When this policy is enabled, the End by setting in the recurrence pattern is used as the default configuration for a recurring meeting. Therefore, depending on your recurrence pattern (daily, weekly, monthly), the number of meetings that occur during this period can vary. For example, if you specify a value of 180 and today's date is May 5, 2011, the End by value will show Tue 11/1/2011 (180 days after today). If you select Weekly for the recurrence pattern, you will get 26 meetings during this timeframe. However, if you specify Monthly for the recurrence pattern, you will only get six meetings during this timeframe.
 
 10. In the dialog box for the policy, select **Enabled** to enable the policy. Then, specify the number of days after which the recurrence period ends and then select **OK**.
 
@@ -124,9 +124,9 @@ The following registry data is associated with the policies discussed in this ar
   Value: integer value between 2 and 720
 
 > [!NOTE]
-> The *x.0* placeholder represents your version of Office.
+> The *x.0* placeholder represents your version of Office.
 >
-> Outlook 2016 and Outlook 2019: *x.0* = 16.0  
+> Outlook 2016 and Outlook 2019: *x.0* = 16.0  
 > Outlook 2013: *x.0* = 15.0  
 > Outlook 2010: *x.0* = 14.0  
 > Outlook 2007: *x.0* = 12.0  

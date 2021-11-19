@@ -48,7 +48,7 @@ To resolve this issue, follow these steps. You may find it helpful to print this
 
 1. Click **Force Quit**.
 
-   ![Selecting an application and then clicking Force Quit](./media/fails-starting-powerpoint-mac/force-quit.png)
+   :::image type="content" source="media/fails-starting-powerpoint-mac/force-quit.png" alt-text="Screenshot to select the Force Quit option after selecting an application." border="false":::
 
 1. Repeat the previous steps until you quit all active applications.
 
@@ -67,9 +67,9 @@ When you are finished, click the red button in the upper-left corner of the scre
    > The Library folder is hidden in MAC OS X Lion. To display this folder, hold down the OPTION key while you click the Go menu.
 
 1. Open the Preferences folder.
-1. Look for a file that is named com.microsoft.powerpoint.plist. If you locate the file, move it to the desktop. Start PowerPoint, and check whether the problem still occurs. If you cannot locate the file, the application is using the default preferences.
+1. Look for a file that is named com.microsoft.powerpoint.plist. If you locate the file, move it to the desktop. Start PowerPoint, and check whether the problem still occurs. If you cannot locate the file, the application is using the default preferences.
 1. If the problem still occurs, quit PowerPoint, and restore the file to its original location. Then, go to the next step. If the problem seems to be resolved, you can move the com.microsoft.powerpoint.plist file to the trash.
-1. Quit all Microsoft Office for Mac applications.
+1. Quit all Microsoft Office for Mac applications.
 1. On the **Go** menu, click **Home**.
 1. Open Library.
 
@@ -78,12 +78,12 @@ When you are finished, click the red button in the upper-left corner of the scre
 
 1. Open the Preferences folder.
 1. Open the Microsoft folder.
-1. Look for a file that is named com.microsoft.powerpoint.prefs.plist. If you locate the file, move it to the desktop. Start PowerPoint, and check whether the problem still occurs. If you do cannot locate the file, the application is using the default preferences.
+1. Look for a file that is named com.microsoft.powerpoint.prefs.plist. If you locate the file, move it to the desktop. Start PowerPoint, and check whether the problem still occurs. If you do cannot locate the file, the application is using the default preferences.
 1. If the problem still occurs, quit PowerPoint, and restore the file to its original location. Then, go to the next step. If the problem seems to be resolved, you can move the com.microsoft.powerpoint.prefs.plist file to the trash.
 
 If the problem continues to occur, go to the next step.
 
-### Step 3: Perform a clean startup
+### Step 3: Perform a clean startup
 
 For information how to "clean start" your computer, click the following article number to view the article in the Microsoft Knowledge Base:
 
@@ -93,7 +93,7 @@ If the problem continues to occur, go to the next step.
 
 ### Step 4: Create a new user account
 
-Sometimes, a specific user's information may become corrupted, and this may prevent installation, startup, or use of some applications. To determine whether this is the case, you can log on to the computer by using a different or new user account, and then test the application.
+Sometimes, a specific user's information may become corrupted, and this may prevent installation, startup, or use of some applications. To determine whether this is the case, you can log on to the computer by using a different or new user account, and then test the application.
 
 If the problem no longer occurs, the cause exists within the user's home folder. If you think that the user account was responsible, you can continue to troubleshoot by using the new user account.
 
@@ -104,7 +104,7 @@ If the problem continues to occur, go to the next step.
 
 ### Step 5: Use the "Repair Disk Permissions" option
 
-You can use the Repair Disk Permissions option to troubleshoot permissions problems in Mac OS X 10.2 and later versions. If the permissions for your Microsoft software are incorrect, Office for Mac applications may start slowly or perform slowly. To use the Repair Disk Permissions option, follow these steps:
+You can use the Repair Disk Permissions option to troubleshoot permissions problems in Mac OS X 10.2 and later versions. If the permissions for your Microsoft software are incorrect, Office for Mac applications may start slowly or perform slowly. To use the Repair Disk Permissions option, follow these steps:
 
 1. On the Go menu, click Utilities.
 2. Start the Disk Utility program.
@@ -117,7 +117,7 @@ You can use the Repair Disk Permissions option to troubleshoot permissions probl
 
 ### Step 6: Remove and then reinstall Office
 
-For information about how to manually remove and then reinstall Office, see the following article:
+For information about how to manually remove and then reinstall Office, see the following article:
 
 [Troubleshoot Office 2011 for Mac issues by completely uninstalling before you reinstall](https://support.office.com/article/Troubleshoot-Office-2011-for-Mac-issues-by-completely-uninstalling-before-you-reinstall-ba8d8d13-0015-4eea-b60b-7719c2cedd17)
 

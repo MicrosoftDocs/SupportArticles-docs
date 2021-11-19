@@ -24,7 +24,7 @@ appliesto:
 
 This article describes the supportability for Microsoft Lync 2010 clients on Windows 8 client systems, and for Microsoft Lync Server 2010 server roles on a server that has the Windows Server 2012 or Windows Server 2012 R2 operating system installed. However, the following scenarios are currently not supported on a Windows Server 2012 or Windows Server 2012 R2 operating system:
 
-- Upgrading the operating system to Windows Server 2012 or Windows Server 2012 R2 for an existing installation of Lync Server 2010 is not supported.   
+- Upgrading the operating system to Windows Server 2012 or Windows Server 2012 R2 for an existing installation of Lync Server 2010 is not supported.   
 - Microsoft Lync Server 2010 Group Chat Server is not supported on Windows Server 2012 or Windows Server 2012 R2.   
 
 ## More Information

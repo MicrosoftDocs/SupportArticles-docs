@@ -30,7 +30,7 @@ Email messages that are sent to a Dynamic Distribution Group aren't delivered to
 
 By default, when you create a Dynamic Distribution Group, the `RecipientContainer` parameter is set to the organizational unit (OU) in which the Dynamic Distribution Group is created, if it isn't selected explicitly.
 
-The categorizer searches only under the OU that is mentioned in the `RecipientContainer` parameter. It uses the `RecipientFilter` parameter to select the members of the Dynamic Distribution Group to deliver email messages to.
+The categorizer searches only under the OU that is mentioned in the `RecipientContainer` parameter. It uses the `RecipientFilter` parameter to select the members of the Dynamic Distribution Group to deliver email messages to.
 
 Users who are part of another OU don't receive email messages that are sent to the Dynamic Distribution Group. This is expected behavior.
 
@@ -38,7 +38,7 @@ Users who are part of another OU don't receive email messages that are sent to t
 
 To fix this issue, specify the correct `RecipientContainer` parameter when you create the Dynamic Distribution Group.
 
-For example, the following command creates a Dynamic Distribution Group that is named *Marketing Group*. It contains all users in the OU that are named *North America* who have a **Department** field that equals the **Marketing** or **Sales** strings.
+For example, the following command creates a Dynamic Distribution Group that is named *Marketing Group*. It contains all users in the OU that are named *North America* who have a **Department** field that equals the **Marketing** or **Sales** strings.
 
 ```console
 New-DynamicDistributionGroup -Name "Marketing Group" -IncludedRecipients "MailboxUsers,MailContacts" -ConditionalDepartment "Marketing","Sales" -RecipientContainer "North America"

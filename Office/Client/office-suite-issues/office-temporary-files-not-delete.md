@@ -49,5 +49,5 @@ The Disk Cleanup Wizard Handler for the Office Document Cache is available in th
 To enable the Disk Cleanup Wizard Handler for the Office Document Cache, follow these steps:
 
 1. Start the Disk Cleanup Wizard. To do this, click **Start**, click **All Programs**, click **Accessories**, click **System Tools**, and then click **Disk Cleanup**.   
-2. Select the drive that you want to clean up, and then click **OK**.   
+2. Select the drive that you want to clean up, and then click **OK**.   
 3. Under **Files to delete**, click to select the **Microsoft Office Temporary Files** check box.   

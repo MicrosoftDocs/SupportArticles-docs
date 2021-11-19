@@ -19,9 +19,9 @@ appliesto:
 
 ## Symptoms
 
-After you migrate Subscriber Access or Auto Attendant contact objects to Skype for Business Server 2019 by using the **Move-CsExUmContact** cmdlet, calls to these numbers fail and experience a fast busy signal. 
+After you migrate Subscriber Access or Auto Attendant contact objects to Skype for Business Server 2019 by using the **Move-CsExUmContact** cmdlet, calls to these numbers fail and experience a fast busy signal. 
 
-Additionally, a "500 Server Internal" error entry is logged in the calling client's UCCAPI log file.
+Additionally, a "500 Server Internal" error entry is logged in the calling client's UCCAPI log file.
 
 ```adoc
 SIP/2.0 500 Server Internal Error
@@ -44,10 +44,10 @@ This problem occurs because of an emerging issue in Skype for Business Server 20
 
 ## Workaround
 
-To work around this problem, move the Subscriber Access or Auto Attendant contact objects to Skype for Business Server 2015 or an earlier supported topology server by using the **Move-CsExUmContact** cmdlet. 
+To work around this problem, move the Subscriber Access or Auto Attendant contact objects to Skype for Business Server 2015 or an earlier supported topology server by using the **Move-CsExUmContact** cmdlet. 
 
 > [!NOTE]
-> You don't have to run **exchucutil.ps1** again when you move Subscriber Access or Auto Attendant contact objectsin a configured topology. 
+> You don't have to run **exchucutil.ps1** again when you move Subscriber Access or Auto Attendant contact objectsin a configured topology. 
 
 ## References
 

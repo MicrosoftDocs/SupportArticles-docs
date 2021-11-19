@@ -29,17 +29,17 @@ appliesto:
 
 ## Symptoms
 
-When you look at **Add-Ins** section of the **Options** dialog box in a Microsoft 2016 or Microsoft Office 2013 program, none of your add-ins are enabled, as shown in the following figure for Outlook.
+When you look at **Add-Ins** section of the **Options** dialog box in a Microsoft 2016 or Microsoft Office 2013 program, none of your add-ins are enabled, as shown in the following figure for Outlook.
 
-![no add-ins loaded in Outlook](./media/office-add-in-not-loaded/no-add-in-load-in-outlook.PNG)
+:::image type="content" source="media/office-add-in-not-loaded/no-add-in-outlook.png" alt-text="Screenshot shows no add-ins are enabled in Outlook.":::
 
 If you then open the **COM Add-ins** dialog box by clicking **Go**, you cannot enable any of the listed add-ins. When you select any add-in, the **COM Add-ins** dialog box displays the following text.
 
-**The add-in you have selected is disabled by your system administrator.**
+> The add-in you have selected is disabled by your system administrator.
 
 The warning is shown in the following figure for Outlook.
 
-![warning message in Outlook](./media/office-add-in-not-loaded/warning-in-outlook.PNG)
+:::image type="content" source="media/office-add-in-not-loaded/warning-in-outlook.png" alt-text="Screenshot of the warning message in Outlook." border="false":::
 
 ## Cause
 
@@ -59,9 +59,9 @@ The following registry data is used to disable all add-ins:
 
 > [!NOTE]
 >
-> - When this problem occurs, there is nothing listed under this key except for the Default REG_SZ value with no data.
+> - When this problem occurs, there is nothing listed under this key except for the Default REG_SZ value with no data.
 > - In the above registry data, \<application> is the name of the Office program in which you are experiencing this problem.
-> - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
+> - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
 
 ## More Information
 
@@ -81,7 +81,7 @@ Through group policy, an administrator can manage the add-ins that are loaded in
 
   **2**: The add-in can be manually enabled or disabled by the user
 
-  When you enable the List of managed add-ins policy, the following registry data is configured on the Office 2016 or Office 2013 client:
+  When you enable the List of managed add-ins policy, the following registry data is configured on the Office 2016 or Office 2013 client:
 
   **Key:** HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\x.0\\\<application>\Resiliency\AddinList
   
@@ -96,14 +96,14 @@ Through group policy, an administrator can manage the add-ins that are loaded in
   **2**= The add-in can be manually enabled or disabled by the user
 
   > [!NOTE]
-  > In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013)
+  > In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013)
 - Block all unmanaged add-ins
 
   This policy setting blocks all add-ins that are not managed by the "List of managed add-ins" policy setting.
 
-  If you enable the Block all unmanaged add-ins and List of managed add-ins policy settings, all add-ins are blocked except those that are configured in the List of managed add-ins as 1 (always enabled) or 2 (configurable by the user).
+  If you enable the Block all unmanaged add-ins and List of managed add-ins policy settings, all add-ins are blocked except those that are configured in the List of managed add-ins as 1 (always enabled) or 2 (configurable by the user).
 
-  When you enable the Block all unmanaged add-ins policy, the following registry data is configured on the Outlook client:
+  When you enable the Block all unmanaged add-ins policy, the following registry data is configured on the Outlook client:
 
   **Key:** HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\x.0\\\<application>\Resiliency
 
@@ -113,5 +113,5 @@ Through group policy, an administrator can manage the add-ins that are loaded in
 
  > [!NOTE]
 >
- > - If RestrictToList is set to 1, but you do not enable any add-ins using the List of managed add-ins policy, all COM add-ins are disabled.
- > - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
+ > - If RestrictToList is set to 1, but you do not enable any add-ins using the List of managed add-ins policy, all COM add-ins are disabled.
+ > - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).

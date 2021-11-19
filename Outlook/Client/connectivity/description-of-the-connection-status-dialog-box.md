@@ -25,11 +25,11 @@ _Original KB number:_ &nbsp; 2737188
 
 ## Summary
 
-In the June 26, 2012 hotfix packages for Microsoft Office Outlook 2007 and Microsoft Outlook 2010, the Connection Status dialog box was updated to provide additional details. Additionally, Outlook 2013 and Outlook 2016 include other columns. These are especially helpful when you connect to Microsoft Exchange Online accounts in an Office 365 environment.
+In the June 26, 2012 hotfix packages for Microsoft Office Outlook 2007 and Microsoft Outlook 2010, the Connection Status dialog box was updated to provide additional details. Additionally, Outlook 2013 and Outlook 2016 include other columns. These are especially helpful when you connect to Microsoft Exchange Online accounts in an Office 365 environment.
 
 ## More information
 
-To view the Outlook connection status properties, follow these steps:
+To view the Outlook connection status properties, follow these steps:
 
 1. Press and hold Ctrl, and then select the **Microsoft Outlook** icon in the notification area.
 
@@ -56,7 +56,7 @@ The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced 
 
 - Proxy Server
 
-  Indicates the proxy server through which Outlook connects. If you are connected to a server that is running Microsoft Exchange Server and that uses RPC over TCP (RPC/TCP), the proxy name does not appear. Only the RPC server appears under the **Server name** column (**Server name** column omitted from screenshot).
+  Indicates the proxy server through which Outlook connects. If you are connected to a server that is running Microsoft Exchange Server and that uses RPC over TCP (RPC/TCP), the proxy name does not appear. Only the RPC server appears under the **Server name** column (**Server name** column omitted from screenshot).
 
 - Authn
 
@@ -70,7 +70,7 @@ The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced 
   ANONYMOUS  
   BEARER
 
-    Outlook can display multiple values in the **Authn** column if a connection is using multiple protocols. When this occurs, the values are separated by a space. The example screenshot shows the following value:
+    Outlook can display multiple values in the **Authn** column if a connection is using multiple protocols. When this occurs, the values are separated by a space. The example screenshot shows the following value:
 
   Clear [Anonymous]
 
@@ -89,7 +89,7 @@ The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced 
   NO  
   YES
 
-  Like the **Authn** column, the **Encrypt** column may contain information about multiple protocols. In that case, information about each protocol is separated by space. The example screenshot shows the following value:
+  Like the **Authn** column, the **Encrypt** column may contain information about multiple protocols. In that case, information about each protocol is separated by space. The example screenshot shows the following value:
 
   SSL[No]
 
@@ -105,7 +105,7 @@ The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced 
 
 - Avg Resp
 
-  Shows the average round trip request or response time for client requests. This value includes server and connection latency. When you consider average response times, larger sample sizes give a truer indication of latency. For example, a large sample size could be 100 request/response pairs.
+  Shows the average round trip request or response time for client requests. This value includes server and connection latency. When you consider average response times, larger sample sizes give a truer indication of latency. For example, a large sample size could be 100 request/response pairs.
 
 - Avg Proc
 
@@ -113,7 +113,7 @@ The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced 
 
 - Sess type
 
-  Specifies whether Outlook is connected to the Exchange mailbox in Cached Exchange Mode or online mode. This information is useful when you troubleshoot latency issues. Possible values include Forground, Background, Spooler, and Cache.
+  Specifies whether Outlook is connected to the Exchange mailbox in Cached Exchange Mode or online mode. This information is useful when you troubleshoot latency issues. Possible values include Forground, Background, Spooler, and Cache.
 
 - Interface
 
@@ -145,7 +145,7 @@ Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authenticati
 
 - Proxy Server
 
-  Indicates the proxy server through which Outlook connects. If you are connected to a server that is running Exchange Server and that uses RPC over TCP (RPC/TCP), the proxy name does not appear. Only the RPC server appears under the **Server name** column (**Server name** column omitted from screenshot).
+  Indicates the proxy server through which Outlook connects. If you are connected to a server that is running Exchange Server and that uses RPC over TCP (RPC/TCP), the proxy name does not appear. Only the RPC server appears under the **Server name** column (**Server name** column omitted from screenshot).
 
 - Server name
 
@@ -171,14 +171,14 @@ Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authenticati
   ANONYMOUS  
   AUTOLOGON
 
-  Outlook can display multiple values in the **Authn** column if a connection is using multiple protocols. When this occurs, the values are separated by a space. The sample screenshot shows the following value:
+  Outlook can display multiple values in the **Authn** column if a connection is using multiple protocols. When this occurs, the values are separated by a space. The sample screenshot shows the following value:
 
   Clear [Anonymous]
 
-  In the example screenshot, the **connection protocol** column is RPC/HTTP. The **Authn** column shows that the RPC portion of this connection object is using anonymous authentication and that the HTTP portion is using Basic (Clear).
+  In the example screenshot, the **connection protocol** column is RPC/HTTP. The **Authn** column shows that the RPC portion of this connection object is using anonymous authentication and that the HTTP portion is using Basic (Clear).
 
   > [!NOTE]
-  > The **Authn** column alone does not fully define the security of an Outlook connection. The security of a connection must be verified by cross-referencing the **Conn**(connection) and **Encrypt** (encryption) columns.
+  > The **Authn** column alone does not fully define the security of an Outlook connection. The security of a connection must be verified by cross-referencing the **Conn**(connection) and **Encrypt** (encryption) columns.
 
 - Encrypt
 
@@ -190,7 +190,7 @@ Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authenticati
   NO  
   YES
 
-  Like the **Authn** column, the **Encrypt** column may contain information about multiple protocols. In that case, information about each protocol is separated by space. The example screenshot shows the following value:
+  Like the **Authn** column, the **Encrypt** column may contain information about multiple protocols. In that case, information about each protocol is separated by space. The example screenshot shows the following value:
 
   SSL[No]
 
@@ -210,7 +210,7 @@ Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authenticati
 
 - Avg Resp
 
-  Shows the average round trip request or response time for client requests. This value includes server and connection latency. When you consider average response times, larger sample sizes give a truer indication of latency. For example, a large sample size could be 100 request/response pairs.
+  Shows the average round trip request or response time for client requests. This value includes server and connection latency. When you consider average response times, larger sample sizes give a truer indication of latency. For example, a large sample size could be 100 request/response pairs.
 
 - Avg Proc
 
@@ -218,7 +218,7 @@ Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authenticati
 
 - Sess type
 
-  Specifies whether Outlook is connected to the Exchange mailbox in Cached Exchange Mode or online mode. This information is useful when you troubleshoot latency issues. Possible values include Forground, Background, Spooler, and Cache.
+  Specifies whether Outlook is connected to the Exchange mailbox in Cached Exchange Mode or online mode. This information is useful when you troubleshoot latency issues. Possible values include Forground, Background, Spooler, and Cache.
 
 - Interface
 

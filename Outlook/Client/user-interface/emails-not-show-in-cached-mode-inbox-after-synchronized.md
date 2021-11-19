@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2330226
 
 ## Symptoms
 
-Sometimes e-mail messages do not appear in your Cached mode Inbox even though they were synchronized down from your mailbox. You can see the items in your Inbox using Online mode, Outlook Web Access, or Outlook Web App (OWA), but you can't see them in your Cached mode profile.
+Sometimes e-mail messages do not appear in your Cached mode Inbox even though they were synchronized down from your mailbox. You can see the items in your Inbox using Online mode, Outlook Web Access, or Outlook Web App (OWA), but you can't see them in your Cached mode profile.
 
 ## Cause
 
@@ -47,7 +47,7 @@ To resolve this problem, use one of the following methods.
 
 2. Clear the offline items in your Inbox so they can resynchronize.
 
-    If for some reason, the /cleanips switch does not resolve the issue, try the following steps to resynchronize the items in your Inbox folder.
+    If for some reason, the /cleanips switch does not resolve the issue, try the following steps to resynchronize the items in your Inbox folder.
 
       1. Start Outlook.
       2. Right-click the Inbox folder and then select **Properties**.
@@ -59,6 +59,6 @@ To resolve this problem, use one of the following methods.
 
 ## More information
 
-Usually when things work as expected in Outlook, new messages that are synchronized into the mailbox are temporarily hidden so they can be processed by the ItemProcSearch search folder. At this time, the ItemProcSearch search folder receives a *notification* that a new message has arrived and it starts the processing of the incoming item. After the item is processed, it is marked as unhidden and then you see it in your Inbox.
+Usually when things work as expected in Outlook, new messages that are synchronized into the mailbox are temporarily hidden so they can be processed by the ItemProcSearch search folder. At this time, the ItemProcSearch search folder receives a *notification* that a new message has arrived and it starts the processing of the incoming item. After the item is processed, it is marked as unhidden and then you see it in your Inbox.
 
 When the items don't appear in your Inbox, this *notification* fails to reach the ItemProcSearch search folder. Therefore, after the incoming message is flagged as hidden, it does not get processed by the ItemProcSearch search folder and marked as unhidden.

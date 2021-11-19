@@ -34,8 +34,8 @@ To create a new report template to use with other project plans, use one of the 
 ### Method 1
 
 1. Select a report from an open project plan, and then change the report.   
-2. Click **FILE**, and then click **Organizer**. Select the Reports tab in the Organizer dialog box, and then rename the report.   
-3. On the **Reports** tab of the **Organizer** dialog box, copy the report to the Global.mpt file so that the report can be used in other project plans.   
+2. Click **FILE**, and then click **Organizer**. Select the Reports tab in the Organizer dialog box, and then rename the report.   
+3. On the **Reports** tab of the **Organizer** dialog box, copy the report to the Global.mpt file so that the report can be used in other project plans.   
 
 ### Method 2
 

@@ -32,7 +32,7 @@ In this scenario, the user receives the following error message:
 > Couldn't update the following event:  
 > \<EventName>
 
-:::image type="content" source="media/cannot-update-calendar-items-from-owa-or-outlook-on-mac/error.png" alt-text="The error message saying Couldn't update the following event" border="false":::
+:::image type="content" source="media/cannot-update-calendar-items-from-owa-or-outlook-on-mac/error-message.png" alt-text="Screenshot of the error message, showing Couldn't update the following event.":::
 
 ## Cause
 
@@ -51,7 +51,7 @@ Because the user's mailbox is on hold, the items in the Versions folder are very
 
     > [!NOTE]
     >
-    > - Enabling the auto-expanding archiving for the mailbox increases the storage quota for the Recoverable Items folder in the user's primary mailbox by 10 GB (from 100 GB to 110 GB). Also, this step increases the archive mailbox size to **unlimited**.
+    > - Enabling the auto-expanding archiving for the mailbox increases the storage quota for the Recoverable Items folder in the user's primary mailbox by 10 GB (from 100 GB to 110 GB). Also, this step increases the archive mailbox size to **unlimited**.
     > - A user's archive mailbox must be enabled before you can enable auto-expanding archiving. A user must be assigned an Exchange Online Plan 2 license to enable the archive mailbox. If a user is assigned an Exchange Online Plan 1 license, you have to assign to them a separate Exchange Online Archiving license to enable their archive mailbox.
 
 3. Create a custom retention policy for mailboxes on hold, and then move the items from the Versions folder to the archive mailbox. To do this, follow the steps that are mentioned in the **Step 1: Create a custom retention tag for the Recoverable Items folder** section of the following Docs article:

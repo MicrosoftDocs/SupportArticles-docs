@@ -22,9 +22,9 @@ appliesto:
 
 ## Problem
 
-You may experience the following issues in Lync: 
+You may experience the following issues in Lync: 
 
-- Lync 2013 or Lync 2010 can't connect to the Skype for Business Online (formerly Lync Online) service through a proxy that is configured by using a file://-based Proxy Auto-Configuration (PAC) file.   
+- Lync 2013 or Lync 2010 can't connect to the Skype for Business Online (formerly Lync Online) service through a proxy that is configured by using a file://-based Proxy Auto-Configuration (PAC) file.   
 - You can't connect to the Skype for Business Online service when you're using Lync 2013 or Lync 2010. When you view Network Monitor, traces show multiple TCP SYNC requests for login.microsoftonline.com.
 
     ![Screen shot of network monitor, showing multiple TCP sync request for login.microsoft.com ](./media/lync-cant-connect-to-sfb-online/network-monitor.jpg)   
@@ -80,7 +80,7 @@ For example, this issue may occur in a scenario where all the following conditio
 - The **Automatically detect settings** option isn't enabled in Internet Explorer.
 
     > [!NOTE]
-    > The only location that the Lync and Skype for Business clients use to detect network proxy configuration information is in the **LAN settings** option on the **Connections** tab in **Internet options**.   
+    > The only location that the Lync and Skype for Business clients use to detect network proxy configuration information is in the **LAN settings** option on the **Connections** tab in **Internet options**.   
 
 For more information about the WinHTTP limitations of supporting a file-based proxy, see [WinHTTP AutoProxy Support](/windows/win32/winhttp/winhttp-autoproxy-support).
 

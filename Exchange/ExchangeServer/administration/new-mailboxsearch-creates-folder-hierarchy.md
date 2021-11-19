@@ -35,7 +35,7 @@ Consider the following scenario:
 
 In this scenario, the `New-MailboxSearch` cmdlet creates a folder hierarchy of all the mailboxes that match the search criteria in the target mailbox.
 
-![Screenshot for the folder hierarchy of all the matched mailboxes.](./media/new-mailboxsearch-creates-folder-hierarchy/folder-hierarchy.png)
+:::image type="content" source="media/new-mailboxsearch-creates-folder-hierarchy/folder-hierarchy.png" alt-text="Screenshot for the folder hierarchy of all the matched mailboxes.":::
 
 ## Cause
 

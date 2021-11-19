@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2938468
 
 When you launch Outlook 2013 or Outlook 2010, the following message stating **Looking for credential tiles...** appears:
 
-:::image type="content" source="media/looking-for-credential-tiles-message/looking-for-credential-tiles.jpg" alt-text="screenshot of the Looking for credential tiles message" border="false":::
+:::image type="content" source="media/looking-for-credential-tiles-message/looking-for-credential-tiles.png" alt-text="Screenshot of the Looking for credential tiles message." border="false":::
 
 The **OK** button remains greyed out, and if you select **Cancel** on this message, Outlook is not able to launch successfully. Outlook will stay on the **Loading Profile** step of the launch process.
 

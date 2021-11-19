@@ -22,19 +22,19 @@ _Original KB number:_ &nbsp; 4099000
 
 ## Symptoms
 
-In Microsoft Skype for Business, you experience one of the following issues:
+In Microsoft Skype for Business, you experience one of the following issues:
 
 - Conversation history of the Skype for Business client can' t be saved in the Outlook client.
-- You can't see the option for voice mails in the Skype for Business client.
+- You can't see the option for voice mails in the Skype for Business client.
 
-Additionally, you may receive the following error message:
+Additionally, you may receive the following error message:
 
-> The Exchange server won't let us connect.  We're working on fixing the connection.  Your history, voice mail and Outlook features might be unavailable.
+> The Exchange server won't let us connect.  We're working on fixing the connection.  Your history, voice mail and Outlook features might be unavailable.
 
 ## Cause
 
-This behavior occurs because the size of the item that is being read from the Deleted Items folder exceeds the quota of 1048576 (0x100000) bytes.
+This behavior occurs because the size of the item that is being read from the Deleted Items folder exceeds the quota of 1048576 (0x100000) bytes.
 
 ## Resolution
 
-Navigate to **Outlook Client** > **Deleted Items** to check if there are subfolders under Deleted Items. If there are, remove them and try again.
+Navigate to **Outlook Client** > **Deleted Items** to check if there are subfolders under Deleted Items. If there are, remove them and try again.

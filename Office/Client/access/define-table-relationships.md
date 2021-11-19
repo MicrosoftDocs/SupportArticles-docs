@@ -47,17 +47,17 @@ This article describes how to define relationships in a Microsoft Access databas
 
 ## What are table relationships?
 
-In a relational database, relationships enable you to prevent redundant data. For example, if you are designing a database that will track information about books, you might have a table named "Titles" that stores information about each book, such as the book's title, date of publication, and publisher. There is also information that you might want to store about the publisher, such as the publisher's telephone number, address, and ZIP Code/Postal Code. If you were to store all this information in the "Titles" table, the publisher's telephone number would be duplicated for each title that the publisher prints.
+In a relational database, relationships enable you to prevent redundant data. For example, if you are designing a database that will track information about books, you might have a table named "Titles" that stores information about each book, such as the book's title, date of publication, and publisher. There is also information that you might want to store about the publisher, such as the publisher's telephone number, address, and ZIP Code/Postal Code. If you were to store all this information in the "Titles" table, the publisher's telephone number would be duplicated for each title that the publisher prints.
 
 A better solution is to store the publisher's information only one time, in a separate table that we will call "Publishers." You would then put a pointer in the "Titles" table that references an entry in the "Publishers" table.
 
 To make sure that you data stays synchronized, you can enforce referential integrity between tables. Referential integrity relationships help make sure that information in one table matches information in another. For example, each title in the "Titles" table must be associated with a specific publisher in the "Publishers" table. A title cannot be added to the database for a publisher that does not exist in the database.
 
-Logical relationships in a database enable you to efficiently query data and create reports.
+Logical relationships in a database enable you to efficiently query data and create reports.
 
 ## Kinds of table relationships
 
-A relationship works by matching data in key columns, usually columns (or fields) that have the same name in both tables. In most cases, the relationship connects the primary key, or the unique identifier column for each row, from one table to a field in another table. The column in the other table is known as the "foreign key." For example, if you want to track sales of each book title, you create a relationship between the primary key column (let's call it **title_ID**) in the "Titles" table and a column in the "Sales" table that is named **title_ID**. The **title_ID** column in the "Sales" table is the foreign key.
+A relationship works by matching data in key columns, usually columns (or fields) that have the same name in both tables. In most cases, the relationship connects the primary key, or the unique identifier column for each row, from one table to a field in another table. The column in the other table is known as the "foreign key." For example, if you want to track sales of each book title, you create a relationship between the primary key column (let's call it **title_ID**) in the "Titles" table and a column in the "Sales" table that is named **title_ID**. The **title_ID** column in the "Sales" table is the foreign key.
 
 There are three kinds of relationships between tables. The kind of relationship that is created depends on how the related columns are defined.
 
@@ -73,7 +73,7 @@ In the relationship window in Access, the primary key side of a one-to-many rela
 
 #### Many-to-many relationships
 
-In a many-to-many relationship, a row in table A can have many matching rows in table B, and vice versa. You create such a relationship by defining a third table that is called a junction table. The primary key of the junction table consists of the foreign keys from both table A and table B. For example, the "Authors" table and the "Titles" table have a many-to-many relationship that is defined by a one-to-many relationship from each of these tables to the "TitleAuthors" table. The primary key of the "TitleAuthors" table is the combination of the **au_ID** column (the "Authors" table's primary key) and the **title_ID** column (the "Titles" table's primary key).
+In a many-to-many relationship, a row in table A can have many matching rows in table B, and vice versa. You create such a relationship by defining a third table that is called a junction table. The primary key of the junction table consists of the foreign keys from both table A and table B. For example, the "Authors" table and the "Titles" table have a many-to-many relationship that is defined by a one-to-many relationship from each of these tables to the "TitleAuthors" table. The primary key of the "TitleAuthors" table is the combination of the **au_ID** column (the "Authors" table's primary key) and the **title_ID** column (the "Titles" table's primary key).
 
 :::image type="content" source="./media/define-table-relationships/many-to-many-relationships.png" alt-text="Screenshot of an example for many-to-many relationships in the relationships window in Access.":::
 
@@ -104,19 +104,19 @@ To create a one-to-many or a one-to-one relationship, follow these steps:
    1. Press F11 to switch to the Database window.
    2. On the **Tools** menu, click **Relationships**.
    
-   In Access 2007, Access 2010, or Access 2013, click **Relationships** in the **Show/Hide** group on the **Database Tools** tab.
-3. If you have not yet defined any relationships in your database, the **Show Table** dialog box is automatically displayed. If you want to add the tables that you want to relate but the **Show Table** dialog box does not appear, click **Show Table** on the **Relationships** menu.
-4. Double-click the names of the tables that you want to relate, and then close the **Show Table** dialog box. To create a relationship between a table and itself, add that table two times.
+   In Access 2007, Access 2010, or Access 2013, click **Relationships** in the **Show/Hide** group on the **Database Tools** tab.
+3. If you have not yet defined any relationships in your database, the **Show Table** dialog box is automatically displayed. If you want to add the tables that you want to relate but the **Show Table** dialog box does not appear, click **Show Table** on the **Relationships** menu.
+4. Double-click the names of the tables that you want to relate, and then close the **Show Table** dialog box. To create a relationship between a table and itself, add that table two times.
 5. Drag the field that you want to relate from one table to the related field in the other table. To drag multiple fields, press Ctrl, click each field, and then drag them.
 
    In most cases, you drag the primary key field (this field is displayed in bold text) from one table to a similar field (this field frequently has the same name) that is called the foreign key in the other table.
-6. The **Edit Relationships** dialog box appears. Make sure that the field names that are displayed in the two columns are correct. You can change the names if it is necessary. 
+6. The **Edit Relationships** dialog box appears. Make sure that the field names that are displayed in the two columns are correct. You can change the names if it is necessary. 
 
-   Set the relationship options if it is necessary. If you have to have information about a specific item in the **Edit Relationships** dialog box, click the question mark button, and then click the item. (These options will be explained in detail later in this article.)
+   Set the relationship options if it is necessary. If you have to have information about a specific item in the **Edit Relationships** dialog box, click the question mark button, and then click the item. (These options will be explained in detail later in this article.)
 7. Click **Create** to create the relationship.
 8. Repeat steps 4 through 7 for each pair of tables that you want to relate.
 
-   When you close the **Edit Relationships** dialog box, Access asks whether you want to save the layout. Whether you save the layout or do not save the layout, the relationships that you create are saved in the database.
+   When you close the **Edit Relationships** dialog box, Access asks whether you want to save the layout. Whether you save the layout or do not save the layout, the relationships that you create are saved in the database.
 
    > [!NOTE]
    > You can create relationships not only in tables but also in queries. However, referential integrity is not enforced with queries.
@@ -143,15 +143,15 @@ To create a many-to-many relationship, follow these steps:
 
 ## Referential integrity
 
-Referential integrity is a system of rules that Access uses to make sure that relationships between records in related tables are valid, and that you do not accidentally delete or change related data. You can set referential integrity when all the following conditions are true:
+Referential integrity is a system of rules that Access uses to make sure that relationships between records in related tables are valid, and that you do not accidentally delete or change related data. You can set referential integrity when all the following conditions are true:
 
 - The matching field from the primary table is a primary key or has a unique index.
-- The related fields have the same data type. There are two exceptions. An **AutoNumber** field can be related to a **Number** field that has a `FieldSize` property setting of Long Integer, and an **AutoNumber** field that has a `FieldSize` property setting of Replication ID can be related to a **Number** field that has a `FieldSize` property setting of Replication ID.
+- The related fields have the same data type. There are two exceptions. An **AutoNumber** field can be related to a **Number** field that has a `FieldSize` property setting of Long Integer, and an **AutoNumber** field that has a `FieldSize` property setting of Replication ID can be related to a **Number** field that has a `FieldSize` property setting of Replication ID.
 - Both tables belong to the same Access database. If the tables are linked tables, they must be tables in Access format, and you must open the database in which they are stored to set referential integrity. Referential integrity cannot be enforced for linked tables from databases in other formats.
 
 The following rules apply when you use referential integrity:
 
-- You cannot enter a value in the foreign key field of the related table that does not exist in the primary key of the primary table. However, you can enter a Null value in the foreign key. This specifies that the records are unrelated. For example, you cannot have an order that is assigned to a customer who does not exist. However, you can have an order that is assigned to no one by entering a Null value in the **CustomerID** field.
+- You cannot enter a value in the foreign key field of the related table that does not exist in the primary key of the primary table. However, you can enter a Null value in the foreign key. This specifies that the records are unrelated. For example, you cannot have an order that is assigned to a customer who does not exist. However, you can have an order that is assigned to no one by entering a Null value in the **CustomerID** field.
 - You cannot delete a record from a primary table if matching records exist in a related table. For example, you cannot delete an employee record from the "Employees" table if there are orders assigned to the employee in the "Orders" table.
 - You cannot change a primary key value in the primary table if that record has related records. For example, you cannot change an employee's ID in the "Employees" table if there are orders assigned to that employee in the "Orders" table.
 
@@ -159,12 +159,12 @@ The following rules apply when you use referential integrity:
 
 For relationships in which referential integrity is enforced, you can specify whether you want Access to automatically cascade update or cascade delete related records. If you set these options, delete and update operations that would usually be prevented by referential integrity rules are enabled. When you delete records or change primary key values in a primary table, Access makes the necessary changes to related tables to preserve referential integrity.
 
-If you click to select the **Cascade Update Related Fields** check box when you define a relationship, any time that you change the primary key of a record in the primary table, Microsoft Access automatically updates the primary key to the new value in all related records. For example, if you change a customer's ID in the "Customers" table, the **CustomerID** field in the "Orders" table is automatically updated for every one of that customer's orders so that the relationship is not broken. Access cascades updates without displaying any message.
+If you click to select the **Cascade Update Related Fields** check box when you define a relationship, any time that you change the primary key of a record in the primary table, Microsoft Access automatically updates the primary key to the new value in all related records. For example, if you change a customer's ID in the "Customers" table, the **CustomerID** field in the "Orders" table is automatically updated for every one of that customer's orders so that the relationship is not broken. Access cascades updates without displaying any message.
 
 > [!NOTE]
-> If the primary key in the primary table is an AutoNumber field, selecting the **Cascade Update Related Fields** check box has no effect because you cannot change the value in an AutoNumber field.
+> If the primary key in the primary table is an AutoNumber field, selecting the **Cascade Update Related Fields** check box has no effect because you cannot change the value in an AutoNumber field.
 
-If you select the **Cascade Delete Related Records** check box when you define a relationship, any time that you delete records in the primary table, Access automatically deletes related records in the related table. For example, if you delete a customer record from the "Customers" table, all the customer's orders are automatically deleted from the "Orders" table. (This includes records in the "Order Details" table that are related to the "Orders" records). When you delete records from a form or datasheet when the **Cascade Delete Related Records** check box selected, Access warns you that related records may also be deleted. However, when you delete records by using a delete query, Access automatically deletes the records in related tables without displaying a warning.
+If you select the **Cascade Delete Related Records** check box when you define a relationship, any time that you delete records in the primary table, Access automatically deletes related records in the related table. For example, if you delete a customer record from the "Customers" table, all the customer's orders are automatically deleted from the "Orders" table. (This includes records in the "Order Details" table that are related to the "Orders" records). When you delete records from a form or datasheet when the **Cascade Delete Related Records** check box selected, Access warns you that related records may also be deleted. However, when you delete records by using a delete query, Access automatically deletes the records in related tables without displaying a warning.
 
 ## Join types
 

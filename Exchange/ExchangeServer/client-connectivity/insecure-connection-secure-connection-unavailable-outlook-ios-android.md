@@ -31,17 +31,17 @@ When you use Microsoft Outlook for iOS or Outlook for Android to sign in to an i
 
 ## Cause
 
-This issue occurs because the SSL certificate is considered unsupported for one of the following reasons:
+This issue occurs because the SSL certificate is considered unsupported for one of the following reasons:
 
 - The SSL certificate is invalid or expired.
 - The SSL certificate is untrusted.
 
 > [!NOTE]
-> Outlook for iOS and Outlook for Android use the standard Java trusted certificate authorities (CAs). If your organization's certificate isn't signed by a certificate authority that's part of the standard Java trusted certificate authorities, this error occurs.
+> Outlook for iOS and Outlook for Android use the standard Java trusted certificate authorities (CAs). If your organization's certificate isn't signed by a certificate authority that's part of the standard Java trusted certificate authorities, this error occurs.
 
 ## Resolution
 
-You can safely ignore this error message and sign in to Exchange Server. This error message should be displayed only one time.
+You can safely ignore this error message and sign in to Exchange Server. This error message should be displayed only one time.
 
 We recommend that you use an SSL certificate that's officially supported by the Java CA certificate store.
 
@@ -49,7 +49,7 @@ We recommend that you use an SSL certificate that's officially supported by the 
 
 1. Get the CA of the certificate.
 1. Download the latest [Java SE Development Kit](https://www.azul.com/downloads/azure-only/zulu) (JDK). This kit includes the Java trusted CAs.
-1. Open a Command Prompt window on a Windows-based computer or open a Terminal window on a macOS-based computer.
+1. Open a Command Prompt window on a Windows-based computer or open a Terminal window on a macOS-based computer.
 1. Use the keytool utility to list the trusted CAs by running the following command:
 
     ```powershell
@@ -57,7 +57,7 @@ We recommend that you use an SSL certificate that's officially supported by the 
     ```
 
     > [!NOTE]
-    > On a macOS-based computer, the \<keystore location> parameter could be "$JAVA_HOME/jre/lib/security/cacerts."
+    > On a macOS-based computer, the \<keystore location> parameter could be "$JAVA_HOME/jre/lib/security/cacerts."
 1. Verify that the CA of the certificate is in the list.
 
 For more information about the keytool utility, see the following articles:

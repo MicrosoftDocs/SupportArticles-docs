@@ -25,17 +25,17 @@ _Original KB number:_ &nbsp; 4486479
 
 ## Symptoms
 
-Consider the following scenario:
+Consider the following scenario:
 
-- In a Microsoft Exchange Server hybrid environment, the primary mailboxes for User A and User B are hosted on-premises, and the archive mailboxes for both users are hosted in Exchange Online.
-- User A has delegated, Full Access permission to User B's mailboxes.
-- User A adds User B as an additional account in the Microsoft Outlook client.
+- In a Microsoft Exchange Server hybrid environment, the primary mailboxes for User A and User B are hosted on-premises, and the archive mailboxes for both users are hosted in Exchange Online.
+- User A has delegated, Full Access permission to User B's mailboxes.
+- User A adds User B as an additional account in the Microsoft Outlook client.
 
-In this scenario, User A can access User B's primary mailbox in Outlook, but User A can't see or access User B's archive mailbox.
+In this scenario, User A can access User B's primary mailbox in Outlook, but User A can't see or access User B's archive mailbox.
 
 ## Cause
 
-The issue occurs because the automapping feature doesn't work correctly in the scenario that's described in the Symptoms section. It's a limitation of the feature.
+The issue occurs because the automapping feature doesn't work correctly in the scenario that's described in the Symptoms section. It's a limitation of the feature.
 
 ## Workarounds - Method 1
 

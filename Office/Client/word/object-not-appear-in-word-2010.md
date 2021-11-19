@@ -110,7 +110,7 @@ When you turn on the **Print drawings created in Word** option, you can view the
 
 1. Click **File**, and then click **Options**.   
 2. Click **Display**.   
-3. Under **Printing options**, click to select the **Print drawings created in Word ** check box.   
+3. Under **Printing options**, click to select the **Print drawings created in Word ** check box.   
 4. Click **OK**.   
 
 #### Turn off the "Use draft quality" option

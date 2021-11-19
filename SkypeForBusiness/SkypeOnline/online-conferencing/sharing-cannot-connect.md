@@ -19,7 +19,7 @@ appliesto:
 
 ## Problem 
 
-A user shares the user's desktop or an application with other participants through Skype for Business Online (formerly Lync Online). However, the participants in the conversation can't connect to the desktop sharing session. The user receives the following error message in Lync 2010 or Lync 2013:
+A user shares the user's desktop or an application with other participants through Skype for Business Online (formerly Lync Online). However, the participants in the conversation can't connect to the desktop sharing session. The user receives the following error message in Lync 2010 or Lync 2013:
 
 **Cannot start Desktop/Application Sharing due to network issues.**
 

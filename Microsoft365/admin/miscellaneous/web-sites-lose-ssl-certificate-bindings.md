@@ -24,14 +24,14 @@ appliesto:
 
 Consider the following scenario: 
 
-- You bind web sites in Internet Information Services (IIS) by using an SSL certificate.    
+- You bind web sites in Internet Information Services (IIS) by using an SSL certificate.    
 - Office Online Server is running on the server.    
  
-In this scenario, when the server is restarted, the certificate become unbound from the web sites. This issue also sometimes occurs randomly. You can see this issue by viewing the bindings in IIS Manager. 
+In this scenario, when the server is restarted, the certificate become unbound from the web sites. This issue also sometimes occurs randomly. You can see this issue by viewing the bindings in IIS Manager. 
 
 ## Cause
 
-This issue occurs because the certificate doesn't have a unique **Friendly name** field. This field is required by the Microsoft Office Online. Therefore, Microsoft Offices Online manager removes the bindings. 
+This issue occurs because the certificate doesn't have a unique **Friendly name** field. This field is required by the Microsoft Office Online. Therefore, Microsoft Offices Online manager removes the bindings. 
 
 The Friendly name field must be unique within the Trusted Root Certificate Authorities store. If you have multiple certificates that share a Friendly Name field, the farm creation process fails because the **New-OfficeWebAppsFarm** cmdlet can't know which certificates to use. 
 

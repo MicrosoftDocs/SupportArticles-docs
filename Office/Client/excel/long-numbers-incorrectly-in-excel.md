@@ -49,13 +49,13 @@ To do this, follow these steps:
 3. Then type a long number. (Be sure to set the cell format before you type the number)
 
     :::image type="content" source="media/long-numbers-incorrectly-in-excel/a-long-number.png" alt-text="Type a long number.":::
-4. If you do not want to see the warning arrows, click the small arrow, and then click **Ignore Error**.
+4. If you do not want to see the warning arrows, click the small arrow, and then click **Ignore Error**.
 
    :::image type="content" source="media/long-numbers-incorrectly-in-excel/ignore-error.png" alt-text="Select Ignore Error if you don't want to see the warning arrows.":::
 
    :::image type="content" source="media/long-numbers-incorrectly-in-excel/result-of-method-1.png" alt-text="The result of method 1.":::
 
-### Method 2: Use a single quotation mark
+### Method 2: Use a single quotation mark
 
 When you enter a long number, type a single quotation mark (**'**) first in the cell, and then type the long number.
 

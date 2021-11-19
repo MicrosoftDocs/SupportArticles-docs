@@ -31,6 +31,6 @@ To add a record other than a www record, use a different host name, or update th
 
 ## More information
 
-This issue occurs if the DNS record already exists.
+This issue occurs if the DNS record already exists.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

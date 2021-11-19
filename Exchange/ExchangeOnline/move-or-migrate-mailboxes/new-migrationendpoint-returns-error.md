@@ -37,7 +37,7 @@ This error occurs because the following mailboxes aren't on the same server:
 
 ## Resolution
 
-To resolve this problem, make sure that the databases that host these two mailboxes are on the same server. To do this, follow these steps:
+To resolve this problem, make sure that the databases that host these two mailboxes are on the same server. To do this, follow these steps:
 
 1. Locate the database that hosts the primary hierarchy public folder mailbox by running the one of the following cmdlet options:
 

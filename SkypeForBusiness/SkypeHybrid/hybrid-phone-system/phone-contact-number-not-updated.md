@@ -21,7 +21,7 @@ appliesto:
 
 In Skype for Business Online, you experience one of the following issues:
 
-- Users who are enabled for public switched telephone network (PSTN) calling in Microsoft Office 365 and who migrate from Skype for Business to Skype for Business Online have an incorrect telephone number displayed on their contact card.     
+- Users who are enabled for public switched telephone network (PSTN) calling in Microsoft Office 365 and who migrate from Skype for Business to Skype for Business Online have an incorrect telephone number displayed on their contact card.     
 - Skype for Business users who migrate to the cloud don't have their newly assigned telephone number displayed on their contact card.   
 - Users can't manage the telephone number that's displayed in the Office 365 contact card for users who are homed in Office 365.   
 

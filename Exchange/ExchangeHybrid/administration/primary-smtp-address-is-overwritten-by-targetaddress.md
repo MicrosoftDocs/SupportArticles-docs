@@ -31,7 +31,7 @@ Consider the following scenario:
   - **EnabledPrimarySMTPAddressTemplate**: @domain.com
   - **EnabledEmailAddressTemplates**: {`smtp:%m@domain.mail.onmicrosoft.com`, `SMTP:@domain.com`}
 
-In this scenario, when you run the [Hybrid Configuration Wizard](/exchange/hybrid-configuration-wizard) (HCW), the following cmdlets are run:
+In this scenario, when you run the [Hybrid Configuration Wizard](/exchange/hybrid-configuration-wizard) (HCW), the following cmdlets are run:
 
 ```powershell
 Set-EmailAddressPolicy -Identity "Default Policy" -ForceUpgrade "True" -EnabledEmailAddressTemplates ("SMTP: @domain.com", "smtp:%m@domain.mail.onmicrosoft.com", + "SMTP: @domain.com" + "smtp:%m@domain.mail.onmicrosoft.com")
@@ -41,7 +41,7 @@ Set-EmailAddressPolicy -Identity "Default Policy" -ForceUpgrade "True" -EnabledE
 Update-EmailAddressPolicy -Identity "Default Policy" -UpdateSecondaryAddressesOnly "True" -DomainController "GlobalCatalog.domain.com"
 ```
 
-In this scenario, the primary SMTP address will be replaced by the value of the `targetAddress` attribute. The `proxyAddresses` attribute will now have the former primary SMTP address as a secondary address, and the attribute value will be {`SMTP:FirstName.LastName@ExternalDomain.com`, `smtp:FirstName.LastName@domain.com`, `smtp:FirstName.LastName@domain.mail.onmicrosoft.com`}.
+In this scenario, the primary SMTP address will be replaced by the value of the `targetAddress` attribute. The `proxyAddresses` attribute will now have the former primary SMTP address as a secondary address, and the attribute value will be {`SMTP:FirstName.LastName@ExternalDomain.com`, `smtp:FirstName.LastName@domain.com`, `smtp:FirstName.LastName@domain.mail.onmicrosoft.com`}.
 
 ## Cause
 

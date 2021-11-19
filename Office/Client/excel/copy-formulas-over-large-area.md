@@ -25,14 +25,14 @@ appliesto:
 
 ## Symptoms
 
-If you fill or copy formulas into a large area of a worksheet, or you add formulas to a large worksheet, you receive error messages that are similar to the following: 
+If you fill or copy formulas into a large area of a worksheet, or you add formulas to a large worksheet, you receive error messages that are similar to the following: 
 
 - Not enough memory.
 - Not enough system resources to display completely.
 
 ## Cause
 
-Each instance of Microsoft Excel 2007, Excel 2010, and Excel 2013 32-bit is limited to 2 gigabyte (GB) of memory (internal heap space). Each instance is also limited to 32,760 source cells when you perform a smart fill operation. When you copy or fill large sections of a worksheet, one or both of these limitations may affect the result. 
+Each instance of Microsoft Excel 2007, Excel 2010, and Excel 2013 32-bit is limited to 2 gigabyte (GB) of memory (internal heap space). Each instance is also limited to 32,760 source cells when you perform a smart fill operation. When you copy or fill large sections of a worksheet, one or both of these limitations may affect the result. 
 
 ## Workaround
 

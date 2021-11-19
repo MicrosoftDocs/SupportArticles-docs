@@ -32,7 +32,7 @@ In this scenario, the other phone number rings, and you can answer the transferr
 
 ## Solution
 
-This is a known issue in Cloud Connector Edition versions that are earlier than 1.3.8. To resolve this issue, upgrade to Cloud Connector Edition version 1.3.8 or later.
+This is a known issue in Cloud Connector Edition versions that are earlier than 1.3.8. To resolve this issue, upgrade to Cloud Connector Edition version 1.3.8 or later.
 
 ## More Information
 

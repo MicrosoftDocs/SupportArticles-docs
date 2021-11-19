@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When you enable the Inquire COM add-in in Microsoft Excel 2013, the **INQUIRE** tab is displayed as expected. However, there is no response when you click any option (such as the **Clean Excess Cell Formatting** or **Compare Files** option) on the **INQUIRE** tab. When this issue occurs, you do not receive an error message. 
+When you enable the Inquire COM add-in in Microsoft Excel 2013, the **INQUIRE** tab is displayed as expected. However, there is no response when you click any option (such as the **Clean Excess Cell Formatting** or **Compare Files** option) on the **INQUIRE** tab. When this issue occurs, you do not receive an error message. 
 
 ## Cause
 
@@ -32,4 +32,4 @@ This issue occurs because the Inquire COM add-in works only on computers that ha
 
 To work around this issue, install the .NET Framework 4 or a later version of the .NET Framework. 
 
-**Note** We recommend that you install the Microsoft .NET Framework 4.5 to work around the issue. To do this, go to [Download the .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653).
+**Note** We recommend that you install the Microsoft .NET Framework 4.5 to work around the issue. To do this, go to [Download the .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653).

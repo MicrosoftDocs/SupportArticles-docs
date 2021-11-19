@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 4052493
 
 Consider the following scenario:
 
-- You run the Hybrid Configuration Wizard against an Exchange Server 2016 or Exchange Server 2013 environment that includes an Edge server.
+- You run the Hybrid Configuration Wizard against an Exchange Server 2016 or Exchange Server 2013 environment that includes an Edge server.
 - A user sends an email message from Exchange on-premises to the Exchange Online account of another user. Both users are in your organization.
 
 In this scenario, you notice the following issues on the receiver side:
@@ -39,7 +39,7 @@ Additional symptoms when the issue occurs:
 
 - There is an *Outbound to Office 365* **TLSCertificateName** attribute on the Send connector that sends messages to Office 365. When the issue occurs, the attribute value isn't replicated to the Edge servers.
 
-- When you run the `start-edgesynchronization` command from the mailbox server, the output shows the **Configuration** type as **Incomplete**. The following is a sample excerpt:
+- When you run the `start-edgesynchronization` command from the mailbox server, the output shows the **Configuration** type as **Incomplete**. The following is a sample excerpt:
 
     ```console
     RunspaceId: RunspaceId
@@ -111,13 +111,13 @@ To resolve this issue, use one of the following methods.
 
 ## Resolution 2: Configure Send connector use FQDN
 
-Configure the Send connector not to use the **TLSCertificateName** attribute for specifying the certificate to be used during TLS negotiation. Instead, use an FQDN to select the appropriate third-party certificate based on the certificate selection procedure that is described in [Selection of Outbound Anonymous TLS Certificates](/previous-versions/office/exchange-server-2010/bb430773(v=exchg.141)).
+Configure the Send connector not to use the **TLSCertificateName** attribute for specifying the certificate to be used during TLS negotiation. Instead, use an FQDN to select the appropriate third-party certificate based on the certificate selection procedure that is described in [Selection of Outbound Anonymous TLS Certificates](/previous-versions/office/exchange-server-2010/bb430773(v=exchg.141)).
 
 To configure the Send connector to use the FQDN, follow these steps:
 
-1. Make sure that the domain name that will be set as the FQDN is set as the Subject Name or Subject Alternative Name of the third-party certificate.
+1. Make sure that the domain name that will be set as the FQDN is set as the Subject Name or Subject Alternative Name of the third-party certificate.
 
-1. Set the Send connector to use the FQDN by running the following command. This command also clears the **TLSCertificateName** attribute.
+1. Set the Send connector to use the FQDN by running the following command. This command also clears the **TLSCertificateName** attribute.
 
     ```powershell
     Set-SendConnector "outbound to office 365" -Fqdn "Domain Note in step 1 of option 2" -TlsCertificateName:$null
@@ -133,7 +133,7 @@ To configure the Send connector to use the FQDN, follow these steps:
 
 Use a certificate that doesn't cause the cap to be exceeded. To do this, follow these steps:
 
-1. Create a certificate in which the following string from the certificate is less than 256 characters:
+1. Create a certificate in which the following string from the certificate is less than 256 characters:
 
    \<I>*Issuer*\<S>*SubjectName*
 

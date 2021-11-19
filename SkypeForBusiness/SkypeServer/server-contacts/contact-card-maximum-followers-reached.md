@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-- A Lync contact might display no presence and will have a contact card that includes the message - Maximum Followers Reached   
+- A Lync contact might display no presence and will have a contact card that includes the message - Maximum Followers Reached   
 - The following warning event will be logged in the Lync Server Event log:
 
     ```adoc
@@ -46,7 +46,7 @@ appliesto:
 
 ## Cause
 
-A Lync user has been added as a contact by another Lync user and has reached or exceeded the maximum category subscriptions per publisher limit specified by the current Lync server presence policy. 
+A Lync user has been added as a contact by another Lync user and has reached or exceeded the maximum category subscriptions per publisher limit specified by the current Lync server presence policy. 
 
 InformationWhen one Lync user adds another Lync user as a contact, the first Lync user is subscribing to five categories of information about the second Lync user. Updates for these categories of information are automatically sent to the first Lync user. The user model assumes a default of 1000 category subscriptions per Lync user. This means that a Lync user could be a contact of as many as 200 other Lync users.
 
@@ -56,7 +56,7 @@ For detailed information on how the MaxCategorySubscription value of the Lync cl
 
 ## Resolution
 
-The following step-by-step information describes how to analyze and update the current presence policy settings for the Lync user's MaxCategorySubscription 
+The following step-by-step information describes how to analyze and update the current presence policy settings for the Lync user's MaxCategorySubscription 
 
 **Using Server 2008**
 
@@ -90,7 +90,7 @@ For detailed information on creating a new presence policy, review the TechNet a
 Perform the following steps from a computer that has the Lync Server Administrative Tools installed:
 
 1. Click the Windows logo key to access the Start screen, click on the Lync Server Management Shell tile   
-2. Follow steps 2 through 3 that are previously listed in the Using Server 2008 section of this article    
+2. Follow steps 2 through 3 that are previously listed in the Using Server 2008 section of this article    
 
 ## More Information
 

@@ -47,7 +47,7 @@ For example, if the default permissions are set to **Free/Busy time**, all users
 The cross-forest user cannot open the calendar directly and cannot view details based on their individually granted permissions. However, they can do these things by adding another folder in Outlook. To do this, a user selects **File** > **Open** > **Other User's Folder**. If the cross-forest user is granted reviewer or other permissions, the user can see details about the items in the calendar.
 
 > [!NOTE]
-> Granting the **Free/Busy time, subject, location (Limited Details)** permission is insufficient in a hybrid environment. The user has to be granted at least **Reviewer** permission to view calendar item details.
+> Granting the **Free/Busy time, subject, location (Limited Details)** permission is insufficient in a hybrid environment. The user has to be granted at least **Reviewer** permission to view calendar item details.
 
 The user may see the subjects of the meetings from the calendar:
 
@@ -58,7 +58,7 @@ The user can also open and change calendar items:
 :::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/open-and-change-calendar-items.png" alt-text="Screenshot of a calendar that you can open or change.":::
 
 > [!NOTE]
-> Folder-level permissions are transferred when a mailbox is migrated to the cloud. Or, the permissions can be added if the object that represents the other user is mail-enabled and can be monitored by an access control list (that is, if the value of the `msExchRecipientDisplayType` attribute is set to **-1073741818**).
+> Folder-level permissions are transferred when a mailbox is migrated to the cloud. Or, the permissions can be added if the object that represents the other user is mail-enabled and can be monitored by an access control list (that is, if the value of the `msExchRecipientDisplayType` attribute is set to **-1073741818**).
 
 ## More information
 

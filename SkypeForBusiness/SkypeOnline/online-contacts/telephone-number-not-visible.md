@@ -20,13 +20,13 @@ appliesto:
 
 ## Problem
 
-An administrator changes a user's telephone number through the Microsoft Office 365 portal or in the on-premises Active Directory Domain Services (AD DS). After 24 hours, the change isn't visible in the Microsoft Lync contact card for the user, or the telephone number appears in an unexpected format.
+An administrator changes a user's telephone number through the Microsoft Office 365 portal or in the on-premises Active Directory Domain Services (AD DS). After 24 hours, the change isn't visible in the Microsoft Lync contact card for the user, or the telephone number appears in an unexpected format.
 
 ## Solution
 
-To resolve this issue, change the telephone number in the Office 365 portal or the on-premises AD DS so that it follows the E.164 format. For example, +14255550100.
+To resolve this issue, change the telephone number in the Office 365 portal or the on-premises AD DS so that it follows the E.164 format. For example, +14255550100.
 
-If you're using Directory Synchronization together with an on-premises AD DS, populate the telephoneNumberattribute that uses the E.164 formatted telephone number, and let the attribute sync to Microsoft Office 365.
+If you're using Directory Synchronization together with an on-premises AD DS, populate the telephoneNumberattribute that uses the E.164 formatted telephone number, and let the attribute sync to Microsoft Office 365.
 
 > [!NOTE]
 > It can take up to 24 hours for changes that you make in the portal or on-premises to be visible in a user's Lync contact card.

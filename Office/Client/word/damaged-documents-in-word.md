@@ -32,7 +32,7 @@ You may find it easier to follow the steps if you print this article first.
 
 ## Update Microsoft Office and Windows
 
-Many software issues can be resolved by updating the Microsoft Office and Windows programs.  
+Many software issues can be resolved by updating the Microsoft Office and Windows programs.  
 
 [Windows Update FAQ](https://support.microsoft.com/help/12373/windows-update-faq) 
 
@@ -54,8 +54,8 @@ A Word document can become corrupted for several reasons that will prevent you f
  
 Sometimes, this behavior can be caused by factors other than document damage. It is important to determine whether the document is damaged or whether the problem is a software issue. To eliminate these other factors, follow these steps: 
  
-1. Look for similar behavior in other documents. Try to open other Word documents to see whether the same problem occurs. If they open correctly, then the problem might be with the Word document.    
-2. Look for similar behavior in other Microsoft Office programs. If this is the case, then the issue might be with another application or the operating system.    
+1. Look for similar behavior in other documents. Try to open other Word documents to see whether the same problem occurs. If they open correctly, then the problem might be with the Word document.    
+2. Look for similar behavior in other Microsoft Office programs. If this is the case, then the issue might be with another application or the operating system.    
  
 If any of these steps indicate that the problem is not in the document, you will then have to troubleshoot Word, the Office suite, or the operating system that is running on the computer.  
 

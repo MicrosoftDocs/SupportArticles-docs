@@ -29,14 +29,14 @@ When you try to access an InfoPath Forms folder in your mailbox in Microsoft Out
 
 > Cannot display the folder. An OLE registration error occurred. The program is not correctly installed. Run Setup again for the program.
 
-If you have a programmatic solution that uses the Outlook Object Model to access the InfoPath Forms folder, you receive the following Microsoft Visual Basic run-time error message:
+If you have a programmatic solution that uses the Outlook Object Model to access the InfoPath Forms folder, you receive the following Microsoft Visual Basic run-time error message:
 
 > Run-time error '-2147221164 (80040154)':  
 An OLE registration error occurred. The problem is not correctly installed. Run Setup again for the program.
 
 ## Cause
 
-Office 2016, Office 2019, and Outlook for Office 365 do not include InfoPath desktop client. InfoPath 2013 is the last release of the desktop client.
+Office 2016, Office 2019, and Outlook for Office 365 do not include InfoPath desktop client. InfoPath 2013 is the last release of the desktop client.
 
 ## Workaround
 

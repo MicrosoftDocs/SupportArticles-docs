@@ -40,7 +40,7 @@ The RP trust created above came with two claims rules
 
 `Get-MsolFederationProperty -DomainName <domain>` on the federated domains shows that the "FederationServiceIdentifier" was the same for source ADFS and O365,  which is `http://stsname/adfs/Services/trust`.
 
-Earlier before the ADFS [Rollup 1](https://support.microsoft.com/kb/2607496) and [Rollup 2](https://support.microsoft.com/kb/2681584) updates, Microsoft Office 365 customers who utilize single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers.
+Earlier before the ADFS [Rollup 1](https://support.microsoft.com/kb/2607496) and [Rollup 2](https://support.microsoft.com/kb/2681584) updates, Microsoft Office 365 customers who utilize single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers.
 
 ### With the ADFS rollup 1 update, we added the following functionality
 
@@ -50,7 +50,7 @@ Earlier before the ADFS [Rollup 1](https://support.microsoft.com/kb/2607496) and
 
 #### Support for Multiple Top-Level Domains
 
-"Currently, Microsoft Office 365 customers who use single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers."
+"Currently, Microsoft Office 365 customers who use single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers."
 
 ### Commands that would create the RP trust for O365 are below
 
@@ -102,7 +102,7 @@ It's interesting to note that the rule issues "Issuerid" claim, we don't see thi
 
 #### Support for Sub domains
 
-"It's important to note that the"SupportMultipleDomain" switch isn't required when you have a single top-level domain and multiple sub domains. For example, if the domains used for upn suffixes are @sales.contoso.com, @marketing.contoso.com, and @contoso.com, and the top-level domain (contoso.com in this case) was added first and federated then you don't need to use the "SupportMultipleDomain" switch. These sub domains are effectively managed within the scope of the parent, and a single AD FS server can be used to handle this already."
+"It's important to note that the"SupportMultipleDomain" switch isn't required when you have a single top-level domain and multiple sub domains. For example, if the domains used for upn suffixes are @sales.contoso.com, @marketing.contoso.com, and @contoso.com, and the top-level domain (contoso.com in this case) was added first and federated then you don't need to use the "SupportMultipleDomain" switch. These sub domains are effectively managed within the scope of the parent, and a single AD FS server can be used to handle this already."
 
 If however, you have multiple top-level domains (@contoso.com and @fabrikam.com), and these domains also have sub domains (@sales.contoso.com and @sales.fabrikam.com), the "SupportMultipleDomain" switch will not work for the sub domains and these users will not be able to log in.
 
@@ -141,7 +141,7 @@ The rules above may not apply to all scenarios, but can be customized to ensure 
 
 The mismatch of federationServiceIdentifier between ADFS and O365 for a domain can also be corrected by modifying the "federationServiceIdentifier" for the domain at O365 end, to match the "federationServiceIdentifier" for ADFS. But the federationServiceIdentifier can only be configured for ONE federated domain and not all.
 
-Set-MSOLDomainFederationSettings -domain name  Contoso.com –issueruri `http://STS.contoso.com/adfs/services/trust/`
+Set-MSOLDomainFederationSettings -domain name  Contoso.com –issueruri `http://STS.contoso.com/adfs/services/trust/`
 
 ### More information that should help you write your own claim rules.**
 

@@ -29,15 +29,15 @@ Consider the following scenario:
 - You have an Inbox rule to stamp a **1 Week Delete** personal tag on incoming messages.
 - A new message arrives at the Inbox.
 
-In this scenario, the **1 Week Delete** personal tag appears to be stamped on the message correctly in Microsoft Outlook. However, the message is deleted after three days.
+In this scenario, the **1 Week Delete** personal tag appears to be stamped on the message correctly in Microsoft Outlook. However, the message is deleted after three days.
 
 ## Cause
 
-This issue occurs because the message is stamped against the DPT or RPT instead of the personal tag. This causes the action to occur according to the retention date of the DPT or RPT and not according to the personal tag.
+This issue occurs because the message is stamped against the DPT or RPT instead of the personal tag. This causes the action to occur according to the retention date of the DPT or RPT and not according to the personal tag.
 
 ## Workaround
 
-To work around this issue, don't use personal tags for Inbox rules. Instead, manually assign a personal tag to specific items. To do this, follow these steps:
+To work around this issue, don't use personal tags for Inbox rules. Instead, manually assign a personal tag to specific items. To do this, follow these steps:
 
 1. Open Outlook.
 2. Right-click any email message.

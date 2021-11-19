@@ -29,4 +29,4 @@ The only supported way to modify MAPI profiles programmatically is through Exten
 
 ## More information
 
-The keys and values that make up a MAPI profile depend on the various providers that make up the profile. Because providers are not required to document the properties that they write or the relationship of the properties to one another, modifying these values directly can have unpredictable and adverse effects.
+The keys and values that make up a MAPI profile depend on the various providers that make up the profile. Because providers are not required to document the properties that they write or the relationship of the properties to one another, modifying these values directly can have unpredictable and adverse effects.

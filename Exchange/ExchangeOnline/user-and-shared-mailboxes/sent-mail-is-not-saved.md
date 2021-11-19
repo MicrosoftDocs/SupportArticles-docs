@@ -53,14 +53,14 @@ set-mailbox <mailbox name> -MessageCopyForSendOnBehalfEnabled $True
 
 #### Exchange Server 2010 Service Pack 2 Update Rollup 4 or later update
 
-Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchange PowerShell cmdlet to configure the Sent Items folder to which a message is copied. Because this new feature is handled by the server that's running Exchange Server, Outlook can be configured in online mode or cached Exchange mode. However, this feature works only if the Outlook DelegateSentItemsStyleregistry (Method 2 below) value is disabled.
+Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchange PowerShell cmdlet to configure the Sent Items folder to which a message is copied. Because this new feature is handled by the server that's running Exchange Server, Outlook can be configured in online mode or cached Exchange mode. However, this feature works only if the Outlook DelegateSentItemsStyleregistry (Method 2 below) value is disabled.
 
 For more information about the Set-MailboxSentItemsConfiguration cmdlet, see the following Microsoft Knowledge Base article:
 
 [2632409](https://support.microsoft.com/help/2632409) Messages sent by using the "Send As" and "Send on behalf" permissions are only copied to the Sent Items folder of the sender in an Exchange Server 2010 environment  
 
 > [!NOTE]
-> The **MessageCopyForSentAsEnabled** and **MessageCopyForSendOnBehalfEnabled** settings are not supported if the user mailbox and shared mailbox are located in different environments (cloud and on-premises). The settings are supported only if both mailboxes are in the same environment (cloud or on-premises).
+> The **MessageCopyForSentAsEnabled** and **MessageCopyForSendOnBehalfEnabled** settings are not supported if the user mailbox and shared mailbox are located in different environments (cloud and on-premises). The settings are supported only if both mailboxes are in the same environment (cloud or on-premises).
 
 ### Method 2: Set the DelegateSentItemsStyle registry value on the Outlook client
 

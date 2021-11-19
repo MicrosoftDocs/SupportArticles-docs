@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you search for a contact by using Skype for Business Online (formerly Lync Online), and the search fails, Skype for Business Online displays a link that suggests that you can use the Microsoft SharePoint Skill search. However, when you try to use a SharePoint Skill search, the search fails, and you receive an error message.
+When you search for a contact by using Skype for Business Online (formerly Lync Online), and the search fails, Skype for Business Online displays a link that suggests that you can use the Microsoft SharePoint Skill search. However, when you try to use a SharePoint Skill search, the search fails, and you receive an error message.
 
 ## Solution
 

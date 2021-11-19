@@ -25,27 +25,27 @@ _Original KB number:_ &nbsp;4023757
 
 Consider the following scenario:
 
-- You have Exchange Database Availability Groups (DAGs) deployed in your organization and enabled lagged database copies configuration.
-- You have Cumulative Update 4 or Cumulative Update 5 installed for Microsoft Exchange Server 2016 installed.
+- You have Exchange Database Availability Groups (DAGs) deployed in your organization and enabled lagged database copies configuration.
+- You have Cumulative Update 4 or Cumulative Update 5 installed for Microsoft Exchange Server 2016 installed.
 
-In this situation, you notice many warning messages with **event ID 1009**  in the Application log in Exchange Server 2016. The message resembles the following:
+In this situation, you notice many warning messages with **event ID 1009**  in the Application log in Exchange Server 2016. The message resembles the following:
 
 ```console
-Log Name: Application
+Log Name: <Log Name>
 Source: MSExchangeFastSearch
 Date: <Date>
 Event ID: 1009
 Task Category: General
 Level: Warning
-Keywords: Classic
+Keywords: <Keywords>
 User: N/A
-Computer: <ComputerName>
+Computer: <Computer Name>
 Description:
-The indexing of mailbox database <database name> encountered an unexpected exception. Error details: Microsoft.Exchange.Search.Core.Abstraction.OperationFailedException: The component operation has failed. ---> Microsoft.Exchange.Search.Core.Abstraction.OperationFailedException: The component operation has failed. ---> Microsoft.Exchange.Search.Engine.FeedingSkippedException: "Feeding was skipped for <Database ID> due to the state 'Unknown', error code: 'Unknown'."
+The indexing of mailbox database <Database Name> encountered an unexpected exception. Error details: Microsoft.Exchange.Search.Core.Abstraction.OperationFailedException: The component operation has failed. ---> Microsoft.Exchange.Search.Core.Abstraction.OperationFailedException: The component operation has failed. ---> Microsoft.Exchange.Search.Engine.FeedingSkippedException: "Feeding was skipped for <Database ID> due to the state 'Unknown', error code: 'Unknown'."
 ```
 
-![Screenshot of the window of Event 1009](./media/1009-errors-application-log-lagged-database-copies/event-1009.png)
+:::image type="content" source="media/1009-errors-application-log-lagged-database-copies/event-1009.png" alt-text="Screenshot of the window for Even Properties - Event 1009.":::
 
 ## Resolution
 
-You can safely ignore these logged events. However, [Cumulative Update 6 for Exchange Server 2016](https://support.microsoft.com/help/4012108) includes a change that represses these messages.
+You can safely ignore these logged events. However, [Cumulative Update 6 for Exchange Server 2016](https://support.microsoft.com/help/4012108) includes a change that represses these messages.

@@ -45,10 +45,10 @@ To troubleshoot this issue, identify the error code, and then contact technical 
 
    For example, in Internet Explorer, press the ALT key to display the menu bar (if it isn't already displayed), and then click **Source** on the **View** menu. 
 
-   ![screen shot of view table in Internet Explorer menu bar, Source option highlighted](./media/office-365-azure-intune-sign-in-issue/select-view-source-in-ie.jpg)   
+   :::image type="content" source="media/office-365-azure-intune-sign-in-issue/select-view-source.png" alt-text="Screenshot to select the Source option on the View menu.":::
 2. Search the source code for the HR=string, and then note the numeric code that follows the HR=string.
 
-   ![screen shot of source code page and Search the source code for the HR= string ](./media/office-365-azure-intune-sign-in-issue/source-code-page.png)
+   :::image type="content" source="media/office-365-azure-intune-sign-in-issue/source-code-page.png" alt-text="Screenshot to search the source code for the HR = string." border="false":::
 
 ### List of known error codes
 
@@ -56,14 +56,14 @@ The following table lists known error codes for the "Sorry, but we're having tro
 
 |Error code|More information|Resource|
 |---|---|---|
-|8004786C|This issue may occur in scenarios where you pilot Active Directory user accounts as Office 365 single sign-on (SSO)-enabled user IDs, and then the user account is piloted incorrectly.|[2392130 ](https://support.microsoft.com/help/2392130) Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune |
+|8004786C|This issue may occur in scenarios where you pilot Active Directory user accounts as Office 365 single sign-on (SSO)-enabled user IDs, and then the user account is piloted incorrectly.|[2392130 ](https://support.microsoft.com/help/2392130) Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune |
 |80041034|This issue may occur when the UPN has been changed from its original value.||
-|80041317 or 80043431|This issue may occur if the configuration settings of the Office 365 federated domain for the on-premises Active Directory Federation Services (AD FS) 2.0 service and for the Azure AD authentication system are mismatched.|[2647020](https://support.microsoft.com/help/2647020) "80041317" or "80043431" error when federated users sign in to Office 365, Azure, or Intune|
+|80041317 or 80043431|This issue may occur if the configuration settings of the Office 365 federated domain for the on-premises Active Directory Federation Services (AD FS) 2.0 service and for the Azure AD authentication system are mismatched.|[2647020](https://support.microsoft.com/help/2647020) "80041317" or "80043431" error when federated users sign in to Office 365, Azure, or Intune|
 |80048163|This issue occurs if unsupported characters are used in the user's sign-in name.||
-|8004789A||[2635357 ](https://support.microsoft.com/help/2635357) "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user tries to sign in to Office 365, Azure, or Intune|
+|8004789A||[2635357 ](https://support.microsoft.com/help/2635357) "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user tries to sign in to Office 365, Azure, or Intune|
 
 ## More information
 
-This issue occurs if user authentication is interrupted after a Azure Active Directory (Azure AD) authentication system error state is detected.
+This issue occurs if user authentication is interrupted after an Azure Active Directory (Azure AD) authentication system error state is detected.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

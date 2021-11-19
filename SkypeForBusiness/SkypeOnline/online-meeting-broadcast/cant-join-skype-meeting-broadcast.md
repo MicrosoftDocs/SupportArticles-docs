@@ -20,9 +20,9 @@ appliesto:
 
 ## Problem
 
-When you try to join a Skype Meeting Broadcast as an **Event team** member by using a supported Skype for Business client that has **Producer** controls, you experience the following behavior:
+When you try to join a Skype Meeting Broadcast as an **Event team** member by using a supported Skype for Business client that has **Producer** controls, you experience the following behavior:
 
-- You receive the following message in a yellow banner in the Skype for Business client: 
+- You receive the following message in a yellow banner in the Skype for Business client: 
 
     ```adoc
     The connection to Skype Meeting Broadcast service was lost. Attempting to reconnect...
@@ -44,7 +44,7 @@ To resolve this issue, make sure that the following URLs and domains are configu
 
 ## More Information
 
-The Skype for Business client uses the Unified Communications Web API (UCWA) for the producer controls when it participates in a Skype Meeting Broadcast as an **Event team** member. Many web content filtering solutions can affect the producer controls by interfering with web traffic from the Skype for Business client to the Skype Meeting Broadcast infrastructure. 
+The Skype for Business client uses the Unified Communications Web API (UCWA) for the producer controls when it participates in a Skype Meeting Broadcast as an **Event team** member. Many web content filtering solutions can affect the producer controls by interfering with web traffic from the Skype for Business client to the Skype Meeting Broadcast infrastructure. 
 
 For more information, see the following Microsoft websites:
 
