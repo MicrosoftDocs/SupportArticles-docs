@@ -53,7 +53,7 @@ For manual steps or more information, see [Reset Microsoft 365 Apps for enterpri
 <details>
 <summary><b>Perform a manual recovery</b></summary>
 
-See the [“Manual recovery” section of Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](https://docs.microsoft.com/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016#manualrecovery).
+See the [“Manual recovery” section of Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016#manualrecovery).
 
 <br/><br/>
 </details>
