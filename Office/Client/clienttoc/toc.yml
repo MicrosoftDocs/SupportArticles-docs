@@ -325,6 +325,8 @@
           href: ../activation/sign-in-issues.md
         - name: Sorry, another account from your organization is already signed in on this computer
           href: ../activation/another-account-already-signed-in.md
+        - name: Troubleshooting device-based licensing for Microsoft 365 Apps
+          href: ../activation/device-based-licensing.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
     - name: End of Support
