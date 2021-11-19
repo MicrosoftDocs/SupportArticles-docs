@@ -34,7 +34,7 @@ If you haven't yet set the MDM authority, follow these steps.
    - Intune MDM Authority
    - None
 
-   ![Choose MDM authority option](./media/set-mdm-authority/4517068_en_1.png)
+   :::image type="content" source="media/set-mdm-authority/choose-mdm-authority.png" alt-text="Screenshot of the MDM authority options." border="false":::
 
 A message indicates that you have successfully set your MDM authority to Intune.
 

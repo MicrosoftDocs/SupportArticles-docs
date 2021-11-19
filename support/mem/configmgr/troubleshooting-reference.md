@@ -3,6 +3,7 @@ title: Troubleshoot MDT
 description: Troubleshooting reference for the Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ---
+
 # Troubleshooting Reference for the Microsoft Deployment Toolkit
 
 The deployment of operating systems and applications as well as the migration of user state can be a challenging endeavor, even when you are equipped with appropriate tools and guidance. This reference, which is part of Microsoft&reg; Deployment Toolkit (MDT) 2013, provides information on current known issues, possible workarounds for those issues, and troubleshooting guidance.  
@@ -249,11 +250,10 @@ Many error codes presented in the log files seem cryptic and difficult to correl
 2. From the **View** menu, click **Scientific**.  
 
 3. Select **Hex**, and then enter the last four digits of the code—in this case, **0040**, as shown in Figure 1.  
-
-    ![Enter the last four digits of the code](./media/troubleshooting-reference/TroubleshootingReference1.jpg "TroubleshootingReference1")  
-   Figure 1. Error conversion  
-
+    
     **Figure 1. Error conversion**  
+
+    :::image type="content" source="media/troubleshooting-reference/error-conversion.png" alt-text="Screenshot shows entering the last four digits of the code in Calculator." border="false":::
 
     Notice that leading zeros are not displayed while the calculator is in Hexadecimal mode.  
 
@@ -310,10 +310,9 @@ Review the problems and solutions for application installation issues:
 
 Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](/sysinternals/downloads/streams).  
 
-![NTFS data streams](./media/troubleshooting-reference/TroubleshootingReference2.jpg "TroubleshootingReference2")  
-Figure 2. NTFS data streams  
-
 **Figure 2. NTFS data streams**
+
+:::image type="content" source="media/troubleshooting-reference/ntfs-data-streams.png" alt-text="Screenshot shows the output of the streams.exe and More commands.":::
 
 **Possible Solution 1:** Right\-click the installation source file, and then click **Properties**. Click **Unblock**, and then click **OK** to remove the NTFS file system data streams from the file. Repeat this process for each installation source file that is blocked by the existence of one or more NTFS file system data streams.  
 
@@ -665,10 +664,9 @@ Review Sysprep\-related problems and solutions:
 
 **Problem:** The error message shown in  REF \_Ref308174600 \\h Figure 3 is displayed when you attempt to create a Configuration Manager PXE service point using the **Create self\-signed PXE certificate** option.  
 
-![Error message](./media/troubleshooting-reference/TroubleshootingReference3.jpg "TroubleshootingReference3")  
-Figure  SEQ Figure \\\* ARABIC 3. PXE service point error  
+**Figure SEQ Figure \\\* ARABIC 3. PXE service point error**
 
-**Figure  SEQ Figure \\\* ARABIC 3. PXE service point error**
+:::image type="content" source="media/troubleshooting-reference/self-signed-certificate-cannot-created.png" alt-text="Screenshot of The self signed certificate can not be created sucessfully error message.":::
 
 **Possible Solution:** If a PXE service point previously existed on the server you are configuring, the PXE service point may not have deleted the self\-created certificates when you uninstalled it. Delete the PXE certificate folder from C:\\Documents and Settings\\*user\_name*\\Application Data\\Microsoft\\Crypto\\RSA, where *user\_name* is the name of the user performing the current configuration or who performed the previous configuration. The New Site Role Wizard in the Configuration Manager console should successfully finish when you have deleted the folder.  
 
@@ -841,70 +839,57 @@ Flow charts are provided for the following phases:
 
 - State Restore (Figure 13, Figure 14, Figure 15, and Figure 16)  
 
-  ![Flow chart for the LTI Validation Phase](./media/troubleshooting-reference/TroubleshootingReference4.jpg "TroubleshootingReference4")  
-  Figure 4. Flow chart for the Validation Phase  
+    **Figure 4. Flow chart for the Validation Phase**  
 
-  **Figure 4. Flow chart for the Validation Phase**  
+    :::image type="content" source="media/troubleshooting-reference/validation-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI Validation Phase.":::
 
-  ![Flow chart for the LTI State Capture Phase 1](./media/troubleshooting-reference/TroubleshootingReference5.jpg "TroubleshootingReference5")  
-  Figure 5. Flow chart for the State Capture Phase (1 of 2)  
+    **Figure 5. Flow chart for the State Capture Phase (1 of 2)**  
 
-  **Figure 5. Flow chart for the State Capture Phase (1 of 2)**  
+   :::image type="content" source="media/troubleshooting-reference/state-capture-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI State Capture Phase 1.":::
 
-  ![Flow chart for the LTI State Capture Phase 2](./media/troubleshooting-reference/TroubleshootingReference6.jpg "TroubleshootingReference6")  
-  Figure 6. Flow chart for the State Capture Phase (2 of 2)  
+    **Figure 6. Flow chart for the State Capture Phase (2 of 2)**  
 
-  **Figure 6. Flow chart for the State Capture Phase (2 of 2)**  
+    :::image type="content" source="media/troubleshooting-reference/state-capture-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI State Capture Phase 2.":::
 
-  ![Flow chart for the LTI Preinstall Phase 1](./media/troubleshooting-reference/TroubleshootingReference7.jpg "TroubleshootingReference7")  
-  Figure 7. Flow chart for the Preinstall Phase (1 of 3)  
+    **Figure 7. Flow chart for the Preinstall Phase (1 of 3)**  
+  
+  :::image type="content" source="media/troubleshooting-reference/preinstall-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI Preinstall Phase 1.":::
 
-  **Figure 7. Flow chart for the Preinstall Phase (1 of 3)**  
+    **Figure 8. Flow chart for the Preinstall Phase (2 of 3)**  
 
-  ![Flow chart for the LTI Preinstall Phase 2](./media/troubleshooting-reference/TroubleshootingReference8.jpg "TroubleshootingReference8")  
-  Figure 8. Flow chart for the Preinstall Phase (2 of 3)  
-
-  **Figure 8. Flow chart for the Preinstall Phase (2 of 3)**  
-
-  ![Flow chart for the LTI Preinstall Phase 3](./media/troubleshooting-reference/TroubleshootingReference9.jpg "TroubleshootingReference9")  
-  Figure 9. Flow chart for the Preinstall Phase (3 of 3)  
+   :::image type="content" source="media/troubleshooting-reference/preinstall-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI Preinstall Phase 2.":::
 
   **Figure 9. Flow chart for the Preinstall Phase (3 of 3)**  
 
-  ![Flow chart for the LTI Install Phase](./media/troubleshooting-reference/TroubleshootingReference10.jpg "TroubleshootingReference10")  
-  Figure 10. Flow chart for the Install Phase  
+   :::image type="content" source="media/troubleshooting-reference/preinstall-phase-3-flow-chart.png" alt-text="Screenshot of the flow chart for the LTI Preinstall Phase 3.":::
 
   **Figure 10. Flow chart for the Install Phase**  
 
-  ![Flow chart for the LTI Postinstall Phase 1](./media/troubleshooting-reference/TroubleshootingReference11.jpg "TroubleshootingReference11")  
-  Figure 11. Flow chart for the Postinstall Phase (1 of 2)  
+  :::image type="content" source="media/troubleshooting-reference/install-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Install Phase.":::
 
   **Figure 11. Flow chart for the Postinstall Phase (1 of 2)**  
 
-  ![Flow chart for the LTI Postinstall Phase 2](./media/troubleshooting-reference/TroubleshootingReference12.jpg "TroubleshootingReference12")  
-  Figure 12 Flow chart for the Postinstall Phase (2 of 2)  
+  :::image type="content" source="media/troubleshooting-reference/postinstall-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the Postinstall Phase 1.":::
 
   **Figure 12 Flow chart for the Postinstall Phase (2 of 2)**  
 
-  ![Flow chart for the LTI State Restore Phase 1](./media/troubleshooting-reference/TroubleshootingReference13.jpg "TroubleshootingReference13")  
-  Figure 13. Flow chart for the State Restore Phase (1 of 4)  
+  :::image type="content" source="media/troubleshooting-reference/postinstall-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the Postinstall Phase 2.":::
 
   **Figure 13. Flow chart for the State Restore Phase (1 of 4)**  
 
-  ![Flow chart for the LTI State Restore Phase 2](./media/troubleshooting-reference/TroubleshootingReference14.jpg "TroubleshootingReference14")  
-  Figure 14. Flow chart for the State Restore Phase (2 of 4)  
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-1-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 1.":::
 
   **Figure 14. Flow chart for the State Restore Phase (2 of 4)**  
 
-  ![Flow chart for the LTI State Restore Phase 3](./media/troubleshooting-reference/TroubleshootingReference15.jpg "TroubleshootingReference15")  
-  Figure 15. Flow chart for the State Restore Phase (3 of 4)  
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-2-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 2.":::
 
   **Figure 15. Flow chart for the State Restore Phase (3 of 4)**  
 
-  ![Flow chart for the LTI State Restore Phase 4](./media/troubleshooting-reference/TroubleshootingReference16.jpg "TroubleshootingReference16")  
-  Figure 16. Flow chart for the State Restore Phase (4 of 4)  
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-3-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 3.":::
 
   **Figure 16. Flow chart for the State Restore Phase (4 of 4)**  
+
+  :::image type="content" source="media/troubleshooting-reference/state-restore-phase-4-flow-chart.png" alt-text="Screenshot of the flow chart for the State Restore Phase 4.":::
 
 ###  <a name="ZTIDevelopmentProcessFlowcharts"></a> ZTI Deployment Process Flowcharts
 
@@ -925,51 +910,42 @@ Flow charts are provided for the following phases of ZTI deployment with Configu
 - State Restore (Figure 23 and Figure 24)  
 
 - Capture (Figure 25)  
-
-  ![Flow chart for the ZTI Initialization Phase](./media/troubleshooting-reference/TroubleshootingReference17.jpg "TroubleshootingReference17")  
-  Figure 17. Flow chart for the Initialization Phase  
-
+  
   **Figure 17. Flow chart for the Initialization Phase**  
 
-  ![Flow chart for the ZTI Validation Phase](./media/troubleshooting-reference/TroubleshootingReference18.jpg "TroubleshootingReference18")  
-  Figure 18. Flow chart for the Validation Phase  
+  :::image type="content" source="media/troubleshooting-reference/initialization-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Initialization Phase.":::
 
   **Figure 18. Flow chart for the Validation Phase**  
-
-  ![Flow chart for the ZTI State Capture Phase](./media/troubleshooting-reference/TroubleshootingReference19.jpg "TroubleshootingReference19")  
-  Figure 19. Flow chart for the State Capture Phase  
+  :::image type="content" source="media/troubleshooting-reference/validation-phase-flowchart.png" alt-text="Flow chart for the Validation Phase.":::
 
   **Figure 19. Flow chart for the State Capture Phase**  
 
-  ![Flow chart for the ZTI Preinstall Phase](./media/troubleshooting-reference/TroubleshootingReference20.jpg "TroubleshootingReference20")  
-  Figure 20. Flow chart for the Preinstall Phase  
+  :::image type="content" source="media/troubleshooting-reference/state-capture-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Stete Capture Phase.":::
 
   **Figure 20. Flow chart for the Preinstall Phase**  
 
-  ![Flow chart for the ZTI Install Phase](./media/troubleshooting-reference/TroubleshootingReference21.jpg "TroubleshootingReference21")  
-  Figure 21. Flow chart for the Install Phase  
+   :::image type="content" source="media/troubleshooting-reference/preinsatll-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Preinstall Phase.":::
 
   **Figure 21. Flow chart for the Install Phase**  
 
-  ![Flow chart for the ZTI Postinstall Phase](./media/troubleshooting-reference/TroubleshootingReference22.jpg "TroubleshootingReference22")  
-  Figure 22. Flow chart for the Postinstall Phase  
+  :::image type="content" source="media/troubleshooting-reference/install-phase-flowchart.png" alt-text="Flow chart for the Install Phase.":::
 
   **Figure 22. Flow chart for the Postinstall Phase**  
 
-  ![Flow chart for the ZTI State Restore Phase 1](./media/troubleshooting-reference/TroubleshootingReference23.jpg "TroubleshootingReference23")  
-  Figure 23. Flow chart for the State Restore Phase (1 of 2)  
+   :::image type="content" source="media/troubleshooting-reference/postinstall-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Postinstall Phase.":::
 
   **Figure 23. Flow chart for the State Restore Phase (1 of 2)**  
 
-  ![Flow chart for the ZTI State Restore Phase 2](./media/troubleshooting-reference/TroubleshootingReference24.jpg "TroubleshootingReference24")  
-  Figure 24. Flow chart for the State Restore Phase (2 of 2)  
+   :::image type="content" source="media/troubleshooting-reference/state-restore-phase-1-flowchart.png" alt-text="Flow chart for the State Restore Phase 1.":::
 
   **Figure 24. Flow chart for the State Restore Phase (2 of 2)**  
 
-  ![Flow chart for the ZTI Capture Phase](./media/troubleshooting-reference/TroubleshootingReference25.jpg "TroubleshootingReference25")  
-  Figure 25. Flow chart for the Capture Phase  
+   :::image type="content" source="media/troubleshooting-reference/state-restore-phase-2-flowchart.png" alt-text="Flow chart for the the State Restore Phase 2.":::
 
   **Figure 25. Flow chart for the Capture Phase**  
+
+   :::image type="content" source="media/troubleshooting-reference/capture-phase-flow-chart.png" alt-text="Screenshot of the flow chart for the Capture Phase.":::
+
 
 ## <a name="MicrosoftSupport"></a> Microsoft Support
 
