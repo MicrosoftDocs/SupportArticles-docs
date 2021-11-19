@@ -61,11 +61,7 @@ Link permission information will pop up automatically after you insert a new lin
 
 ## Manage access to shareable links
 
-You can manage access to shareable links, and Outlook will check whether the recipients have access before sending an email message.
-
-### How to adjust who can access the link
-
-Select the link permission information to manage who can access the link. When you share the link through OneDrive, SharePoint websites, or other Office 365 apps (such as Word or Excel), the same setting presents as follows:
+You can manage access to shareable links, and Outlook will check whether the recipients have access before sending an email message. To adjust who can access the link, select the link permission information to manage who can access the link. When you share the link through OneDrive, SharePoint websites, or other Office 365 apps (such as Word or Excel), the same setting presents as follows:
 
 :::image type="content" source="media\shareable-links-functionality-in-outlook\shareable-link-settings.png" alt-text="You can manage access by the link settings.":::
 
