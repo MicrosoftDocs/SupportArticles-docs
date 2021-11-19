@@ -3,7 +3,7 @@ title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure | 
 description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
 services: virtual-machines
 documentationcenter: ''
-author: glimoli
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: vm-windows
 
 ms.topic: article
 ms.date: 10/11/2020
-ms.author: genli
+ms.author: glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
@@ -30,7 +30,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     -  Operating system: Windows Server 2016 Datacenter
 
-    -  Size: Any V3 series with at least two cores that support nested virtualization. For more information, see [Introducing the new Dv3 and Ev3 VM sizes](https://azure.microsoft.com/blog/introducing-the-new-dv3-and-ev3-vm-sizes/).
+    -  Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
     -  Same location, Storage Account, and Resource Group as the faulty VM.
 
