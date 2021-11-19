@@ -319,6 +319,8 @@
           href: ../activation/activation-error-0x80070005.md
         - name: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
           href: ../activation/aadsts9002313-invalid-request.md
+        - name: Microsoft 365 Apps activation error codes 0xCAA70007 and 0xCAA80000
+          href: ../activation/0xcaa70007-and-0xcaa80000.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
         - name: Microsoft 365 Apps activation usage report issues
