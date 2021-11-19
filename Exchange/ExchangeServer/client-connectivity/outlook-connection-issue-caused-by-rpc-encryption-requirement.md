@@ -200,7 +200,7 @@ To disable the required encryption between Outlook and Exchange, follow these st
     You must run this cmdlet for all Client Access servers that are running Exchange Server 2010 or later version.
 
 1. Rerun this command for each Exchange server that has the **Client Access Server** role. The command also needs to be run on each **Mailbox Server** role that contains a **Public Folder Store**. Public Folder connections from the MAPI client go directly to the **RPC Client Access Service** on the Mailbox server.
-1. After your Outlook clients are updated with the setting to enable encrypted RPC communication with Exchange (see steps provided below), you can re-enable the RPC encryption requirement on your Exchange servers that have the **Client Access Server** role.
+1. After your Outlook clients are updated with the setting to enable encrypted RPC communication with Exchange (see steps provided below), you can re-enable the RPC encryption requirement on your Exchange servers that have the **Client Access Server** role.
 
     To re-enable the RPC encryption requirement on your Exchange servers that have the **Client Access Server** role, run the following command in the Exchange Management Shell:
 

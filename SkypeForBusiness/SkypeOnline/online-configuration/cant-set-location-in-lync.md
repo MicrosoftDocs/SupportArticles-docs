@@ -24,12 +24,12 @@ appliesto:
 
 ## Problem
 
-When you try to use the Set Your Location feature in Microsoft Lync 2010 or Microsoft Lync 2013, the **Set Your Location** field is unavailable (dimmed), and you can't set your location.
+When you try to use the Set Your Location feature in Microsoft Lync 2010 or Microsoft Lync 2013, the **Set Your Location** field is unavailable (dimmed), and you can't set your location.
 
-![Screen shot of the Set Your Location field ](./media/cant-set-location-in-lync/location-unvaliable.png)
+:::image type="content" source="./media/cant-set-location-in-lync/location-unvaliable.png" alt-text="Screenshot that shows the Set Your Location field in Microsoft Lync.":::
 
 ## More Information
 
-This is expected behavior. This issue occurs when you install or sign in to Lync 2010 or Lync 2013 on a virtual machine or by using a remote desktop connection. When you're logged in to a remote desktop connection or a virtual machine, Lync disables the **Set Your Location** field because it can't accurately rely on the location information through a virtual host. Lync uses the Location Information Service (LIS) based on a network map to detect your location. Then, Lync automatically publishes your location to the organization. However, when you use a virtual machine, or you connect to a virtual machine by using a remote desktop connection, the LIS can't accurately determine your location. Therefore, the location is unavailable.
+This is expected behavior. This issue occurs when you install or sign in to Lync 2010 or Lync 2013 on a virtual machine or by using a remote desktop connection. When you're logged in to a remote desktop connection or a virtual machine, Lync disables the **Set Your Location** field because it can't accurately rely on the location information through a virtual host. Lync uses the Location Information Service (LIS) based on a network map to detect your location. Then, Lync automatically publishes your location to the organization. However, when you use a virtual machine, or you connect to a virtual machine by using a remote desktop connection, the LIS can't accurately determine your location. Therefore, the location is unavailable.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

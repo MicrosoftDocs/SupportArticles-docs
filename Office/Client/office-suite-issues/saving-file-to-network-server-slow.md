@@ -23,11 +23,11 @@ appliesto:
 
 ## Symptoms
 
-Assume that you use the Encrypting File System (EFS) to help secure the Temporary Internet Files folder. You save Microsoft Office documents to a remote server than can support encryption, but the server is not configured to do remote encryption. In this situation, it takes longer than expected to save the documents. 
+Assume that you use the Encrypting File System (EFS) to help secure the Temporary Internet Files folder. You save Microsoft Office documents to a remote server than can support encryption, but the server is not configured to do remote encryption. In this situation, it takes longer than expected to save the documents. 
 
 ## Cause
 
-When you save documents, the Office applications (Excel, Word, and PowerPoint) create a temporary file in secure subfolders named "Content.MSO" and "Content.Word" in the Temporary Internet Files folder. If the subfolder is encrypted by using EFS, the file that is then copied to the server will have the encrypted attribute applied to it also. If the server supports encryption but is not configured to do it, multiple attempts to keep the file encrypted occur, and this slows the save process.  
+When you save documents, the Office applications (Excel, Word, and PowerPoint) create a temporary file in secure subfolders named "Content.MSO" and "Content.Word" in the Temporary Internet Files folder. If the subfolder is encrypted by using EFS, the file that is then copied to the server will have the encrypted attribute applied to it also. If the server supports encryption but is not configured to do it, multiple attempts to keep the file encrypted occur, and this slows the save process.  
 
 ## Resolution
 
@@ -44,12 +44,12 @@ To work around this issue, use one of the following methods:
   - VALUE: 1
 
   **Note** A value of 0 means encryption is enabled, while a value of 1 means encryption is disabled.   
-- Enable delegated authentication for the server. This allows the server to impersonate the client, and to then create a profile that has the certificate for encryption on the server. For information about how to do this, see[Enabling delegated authentication](https://technet.microsoft.com/library/cc780217%28v=ws.10%29.aspx). 
+- Enable delegated authentication for the server. This allows the server to impersonate the client, and to then create a profile that has the certificate for encryption on the server. For information about how to do this, see[Enabling delegated authentication](https://technet.microsoft.com/library/cc780217%28v=ws.10%29.aspx). 
 - Save the file locally, then drag the file to the desired network location.   
 
 ## More Information
 
-By default, the "Content.MSO" and "Content.Word" subfolders are used by Excel, Word, and PowerPoint. They are hidden, system-protected subfolders of the Temporary Internet Files folder, as seen in the following example path:
+By default, the "Content.MSO" and "Content.Word" subfolders are used by Excel, Word, and PowerPoint. They are hidden, system-protected subfolders of the Temporary Internet Files folder, as seen in the following example path:
 
 C:\User\\\<**user name**>\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.MSO
 

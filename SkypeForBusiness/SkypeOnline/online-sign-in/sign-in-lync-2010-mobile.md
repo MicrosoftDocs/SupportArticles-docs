@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-A Skype for Business Online (formerly Lync Online) user tries to sign in to the Lync 2010 mobile client from a Windows Phone, Apple iPhone or iPad, Google Android, or Nokia Symbian device by using the Auto-Detect Serveroption to determine the Skype for Business Online server. However, the user receives the following error message:
+A Skype for Business Online (formerly Lync Online) user tries to sign in to the Lync 2010 mobile client from a Windows Phone, Apple iPhone or iPad, Google Android, or Nokia Symbian device by using the Auto-Detect Serveroption to determine the Skype for Business Online server. However, the user receives the following error message:
 
 ```adoc
 Cannot connect to the server. It might be unavailable. Also please check the network connection, sign-in address and server addresses.
@@ -68,7 +68,7 @@ Additionally, the CNAME records in DNS must meet the following criteria. Otherwi
 For more information about Lync Mobile client devices, see the following websites: 
 
 - [2636318 ](https://support.microsoft.com/help/2636318 ) How to troubleshoot issues that you may encounter when you use the Lync 2010 mobile client for Windows Phone 7 
-- [2636320 ](https://support.microsoft.com/help/2636320 ) How to troubleshoot issues that you may encounter when you use the Lync 2010 mobile client for Apple iOS  
+- [2636320 ](https://support.microsoft.com/help/2636320 ) How to troubleshoot issues that you may encounter when you use the Lync 2010 mobile client for Apple iOS  
 - [2636313 ](https://support.microsoft.com/help/2636313 ) How to troubleshoot issues that you may encounter when you use the Lync 2010 mobile client for Google Android
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

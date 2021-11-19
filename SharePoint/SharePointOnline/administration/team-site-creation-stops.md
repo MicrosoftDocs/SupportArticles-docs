@@ -14,7 +14,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 150328
 ms.collection: SPO_Content
-ms.author: v-matham
+ms.author: v-matthamer
 appliesto:
 - SharePoint Online
 ---

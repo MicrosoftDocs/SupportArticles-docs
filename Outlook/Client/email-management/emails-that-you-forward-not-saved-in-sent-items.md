@@ -51,7 +51,7 @@ To fix this issue, enable the **Save forwarded messages** option by following th
 
 #### Outlook 2013 or later versions
 
-The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019, Outlook LTSC 2021, or Outlook for Office 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
+The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019, Outlook LTSC 2021, or Outlook for Office 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
 
 To deploy this setting by using the Outlook Group Policy template, follow these steps:
 

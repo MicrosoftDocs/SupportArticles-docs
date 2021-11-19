@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp;4056664
 Consider the following scenarios:
 
 - You have more than one Active Directory site.
-- You configure the redirection for Exchange Control Panel (ECP) for those sites by adding the `ExternalURL` property for the /ECP virtual directories.
+- You configure the redirection for Exchange Control Panel (ECP) for those sites by adding the `ExternalURL` property for the /ECP virtual directories.
 
 In this scenario, redirection fails when you try to access ECP from a remote site, and you receive the following error message:
 
@@ -33,11 +33,11 @@ In this scenario, redirection fails when you try to access ECP from a remote sit
 
 ## Cause
 
-The virtual directory in the 302 response that's created by the Microsoft Exchange server on the local Active Directory site contains incorrect data. This causes the browser to enter a loop that eventually ends with the local Exchange Server issuing the Error 400 message.
+The virtual directory in the 302 response that's created by the Microsoft Exchange server on the local Active Directory site contains incorrect data. This causes the browser to enter a loop that eventually ends with the local Exchange Server issuing the Error 400 message.
 
 ## Workaround
 
-To work around this issue, remove the `ExternalURL` property from the ECP. Then, when a user accesses the ECP from the remote site, the user will be proxied to the ECP in the targeted Active Directory site. For more information, see [Understanding Proxying and Redirection](/previous-versions/office/exchange-server-2010/bb310763(v=exchg.141)).
+To work around this issue, remove the `ExternalURL` property from the ECP. Then, when a user accesses the ECP from the remote site, the user will be proxied to the ECP in the targeted Active Directory site. For more information, see [Understanding Proxying and Redirection](/previous-versions/office/exchange-server-2010/bb310763(v=exchg.141)).
 
 ## Status
 

@@ -30,7 +30,7 @@ When a user tries to sign in to Office 365, the user receives the following erro
 
 ## Cause 
 
-This issue occurs if the user principal name (UPN) of the user in the on-premises Active Directory environment and the user's UPN in Microsoft Azure Active Directory (Azure AD) don't match. For example, the issue occurs if the on-premises UPN is john@contoso.com and the Azure AD UPN is john@contoso.onmicrosoft.com. 
+This issue occurs if the user principal name (UPN) of the user in the on-premises Active Directory environment and the user's UPN in Microsoft Azure Active Directory (Azure AD) don't match. For example, the issue occurs if the on-premises UPN is john@contoso.com and the Azure AD UPN is john@contoso.onmicrosoft.com. 
 
 This situation can occur if the user's UPN changed but directory synchronization didn't yet occur to sync the change.
 

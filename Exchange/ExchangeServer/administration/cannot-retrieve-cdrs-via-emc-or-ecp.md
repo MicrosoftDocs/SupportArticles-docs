@@ -36,4 +36,4 @@ To work around this issue, use the Exchange admin center (EAC) in Exchange Serve
 2. Sign in to the EAC by using the administrator account.
 3. Select **Unified Messaging**, select **...**, and then select **Call statistics** or **User call logs**  to retrieve the CDRs (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-retrieve-cdrs-via-emc-or-ecp/options-to-retrieve-cdrs.png" alt-text="screenshot of the options to retrieve CDRs":::
+   :::image type="content" source="media/cannot-retrieve-cdrs-via-emc-or-ecp/options-to-retrieve-cdrs.png" alt-text="Screenshot of the options to retrieve CDRs":::

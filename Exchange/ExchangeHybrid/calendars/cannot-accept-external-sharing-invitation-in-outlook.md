@@ -22,25 +22,25 @@ _Original KB number:_ &nbsp; 4337974
 
 ## Symptoms
 
-You experience one of the following symptoms in a Microsoft Exchange hybrid environment when you share calendars with users:
+You experience one of the following symptoms in a Microsoft Exchange hybrid environment when you share calendars with users:
 
 - Office 365 users in other organizations cannot accept your shared invitations.
 - Office 365 users in your same organization who are hosted in Exchange on-premises cannot accept your shared invitations.
 
 ## Cause
 
-A recent update enables delegated mailbox permissions in hybrid environments. This feature enables **send on behalf** permissions in hybrid environments. However, it also interferes with the Calendar Sharing feature.
+A recent update enables delegated mailbox permissions in hybrid environments. This feature enables **send on behalf** permissions in hybrid environments. However, it also interferes with the Calendar Sharing feature.
 
 ## Status
 
-Microsoft is currently developing a fix to be released in the following phases.
+Microsoft is currently developing a fix to be released in the following phases.
 
 ### Phase 1 - Fix released in March 2019
 
 Calendars work again for cross-organization sharing and for cross-premises sharing. However, be aware of the following caveats:
 
-- You must share a calendar from an updated version of Microsoft Outlook. You can find an updated version of Outlook under the **Share a calendar** section of [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/calendar-sharing-in-microsoft-365-b576ecc3-0945-4d75-85f1-5efafb8a37b4) this article.
-- If a calendar is shared cross-premises, the calendar must be accepted from Outlook for Windows. (There is no minimum build requirement.) Users cannot accept a cross-premises sharing invitation from any other version of Outlook.
+- You must share a calendar from an updated version of Microsoft Outlook. You can find an updated version of Outlook under the **Share a calendar** section of [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/calendar-sharing-in-microsoft-365-b576ecc3-0945-4d75-85f1-5efafb8a37b4) this article.
+- If a calendar is shared cross-premises, the calendar must be accepted from Outlook for Windows. (There is no minimum build requirement.) Users cannot accept a cross-premises sharing invitation from any other version of Outlook.
 
 > [!NOTE]
 >
@@ -49,7 +49,7 @@ Calendars work again for cross-organization sharing and for cross-premises shari
 
 ### Phase 2 - Fix released in August 2019
 
-After this fix is released, Outlook clients that cannot accept cross-premises sharing invitations will no longer offer an **Accept** button to users. The cross-premises invitations can be accepted on legacy and modern Outlook Desktop clients only. This fix does not change any functionality. Instead, it improves the user experience so that users are not offered an option that is not supported.
+After this fix is released, Outlook clients that cannot accept cross-premises sharing invitations will no longer offer an **Accept** button to users. The cross-premises invitations can be accepted on legacy and modern Outlook Desktop clients only. This fix does not change any functionality. Instead, it improves the user experience so that users are not offered an option that is not supported.
 
 #### State after the server fix (August 2019)
 

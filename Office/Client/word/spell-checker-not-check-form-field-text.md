@@ -25,11 +25,11 @@ appliesto:
 
 ## Symptom
 
-The spelling and grammar checker in Microsoft Word doesn't check text in the form fields.  
+The spelling and grammar checker in Microsoft Word doesn't check text in the form fields.  
 
 ## Cause
 
-Because form field text is formatted as No Proofing, the spelling and grammar checker ignores text in form fields. 
+Because form field text is formatted as No Proofing, the spelling and grammar checker ignores text in form fields. 
 
 ## Resolution
 
@@ -44,27 +44,27 @@ You can use this macro as an On Exit macro for the last form field so you can ch
 
 ```vb
 Sub FormsSpellCheck()
-    ' If document is protected, Unprotect it. 
-    If ActiveDocument.ProtectionType <> wdNoProtection Then 
-       ActiveDocument.Unprotect Password:="" 
-    End If 
+    ' If document is protected, Unprotect it. 
+    If ActiveDocument.ProtectionType <> wdNoProtection Then 
+       ActiveDocument.Unprotect Password:="" 
+    End If 
 
-    ' Set the language for the document. 
-    Selection.WholeStory 
-    Selection.LanguageID = wdEnglishUS 
-    Selection.NoProofing = False
+    ' Set the language for the document. 
+    Selection.WholeStory 
+    Selection.LanguageID = wdEnglishUS 
+    Selection.NoProofing = False
 
-   ' Perform Spelling/Grammar check. 
-    If Options.CheckGrammarWithSpelling = True Then 
-       ActiveDocument.CheckGrammar 
-    Else 
-       ActiveDocument.CheckSpelling 
-    End If
+   ' Perform Spelling/Grammar check. 
+    If Options.CheckGrammarWithSpelling = True Then 
+       ActiveDocument.CheckGrammar 
+    Else 
+       ActiveDocument.CheckSpelling 
+    End If
 
-   ' ReProtect the document. 
-    If ActiveDocument.ProtectionType = wdNoProtection Then 
-       ActiveDocument.Protect Type:=wdAllowOnlyFormFields, NoReset:=True 
-    End If
+   ' ReProtect the document. 
+    If ActiveDocument.ProtectionType = wdNoProtection Then 
+       ActiveDocument.Protect Type:=wdAllowOnlyFormFields, NoReset:=True 
+    End If
 
 End Sub
 ```

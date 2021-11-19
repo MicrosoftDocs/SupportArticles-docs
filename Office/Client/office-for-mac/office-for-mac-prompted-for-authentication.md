@@ -23,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-After you install or upgrade to Microsoft Office 2016 for Mac version 16.9 and later versions, you experience one of the following issues in Microsoft Excel, Microsoft Word, or Microsoft PowerPoint: 
+After you install or upgrade to Microsoft Office 2016 for Mac version 16.9 and later versions, you experience one of the following issues in Microsoft Excel, Microsoft Word, or Microsoft PowerPoint: 
  
 - You are prompted for authentication.    
 - The Office application stops responding.    
@@ -33,14 +33,14 @@ After you install or upgrade to Microsoft Office 2016 for Mac version 16.9 and
 
 ## Cause
 
-This problem occurs because of one or more of the following situations: 
+This problem occurs because of one or more of the following situations: 
  
-- An Office file contains an embedded URL that triggers a SafeLink check. SafeLink is run to verify that it's safe to open the target content before it's handed to the local browser.    
-- Office tries to connect to an online endpoint for an Office service.    
+- An Office file contains an embedded URL that triggers a SafeLink check. SafeLink is run to verify that it's safe to open the target content before it's handed to the local browser.    
+- Office tries to connect to an online endpoint for an Office service.    
  
-Office 2016 for Mac 16.9 and later versions use a new user agent string in the HTTP request that starts with "Microsoft Office".
+Office 2016 for Mac 16.9 and later versions use a new user agent string in the HTTP request that starts with "Microsoft Office".
  
-When the user agent is blocked by the proxy server, you experience the issues that are mentioned in the "Symptoms" section. 
+When the user agent is blocked by the proxy server, you experience the issues that are mentioned in the "Symptoms" section. 
 
 ## Resolution
 

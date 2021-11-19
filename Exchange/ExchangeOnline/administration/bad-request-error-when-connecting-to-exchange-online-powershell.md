@@ -40,4 +40,4 @@ Set-User -identity user@contoso.com -RemotePowerShellEnabled $True
 ```
 
 > [!NOTE]
-> Allow 15-20 minutes for the setting to fully take effect, and then try to connect to Exchange Online PowerShell again.
+> Allow 15-20 minutes for the setting to fully take effect, and then try to connect to Exchange Online PowerShell again.

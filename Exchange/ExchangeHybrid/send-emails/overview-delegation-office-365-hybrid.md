@@ -31,7 +31,7 @@ For Office 365 hybrid delegation to work as expected, multiple requirements must
 
 Office 365 hybrid delegation requires a specific configuration in the cloud and in the on-premises Active Directory Domain Services (AD DS) environment. The following list discusses the different permissions and how they work in a hybrid deployment.
 
-This article describes the necessary configuration, administration details, and known issues that are associated with different kinds of permissions. If you need help from Microsoft to investigate a specific issue, collect the following diagnostic data from a user who can reproduce the behavior:
+This article describes the necessary configuration, administration details, and known issues that are associated with different kinds of permissions. If you need help from Microsoft to investigate a specific issue, collect the following diagnostic data from a user who can reproduce the behavior:
 
 - Detailed description of the issue, including the users who are affected and the error message that they receive
 - Relevant screenshots or [Problem Steps Recorder](https://support.microsoft.com/help/3035258) output
@@ -49,7 +49,7 @@ This article describes the necessary configuration, administration details, and
   - Adding as an additional mailbox requires a mailbox in another forest to be ACLable in the user's forest. For more information, see [Configure Exchange to support delegated mailbox permissions in a hybrid deployment](/exchange/hybrid-deployment/set-up-delegated-mailbox-permissions).
   - Auto-mapping will not work until all related mailboxes are moved to Exchange Online. Any mailboxes that receive permissions from another mailbox need to be moved at the same time as the granting mailbox. If a mailbox receives permissions from multiple mailboxes, that mailbox, and all of the mailboxes granting permissions to it, need to be moved at the same time. For more information, see [Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com/help/3080561) and [Permissions in Exchange hybrid deployments](/Exchange/permissions).
   - In some scenarios, a user will see only free/busy information for a calendar to which they have additional permissions. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](../calendars/cannot-view-cross-forest-calendar-data.md).
-  - The user cannot send on behalf of another user after they add a mailbox as an additional account. For more information, see [Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server](../../ExchangeServer/mailflow/cannot-send-email-with-full-access.md).
+  - The user cannot send on behalf of another user after they add a mailbox as an additional account. For more information, see [Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server](../../ExchangeServer/mailflow/cannot-send-email-with-full-access.md).
 
 - Resource mailboxes have special capabilities and work differently in some scenarios if they're in another forest, as follows:
 
@@ -73,7 +73,7 @@ This article describes the necessary configuration, administration details, and
 
 - Folders can be accessed cross forest in many scenarios, but they are not fully supported by Microsoft as outlined in [Permissions in Exchange hybrid deployments](/Exchange/permissions).
 - Autodiscover is used to find the mailbox even if it's in another forest (by using the target address redirect).
-- Folder access can be granted by users by using Outlook or by administrators by using the Remote PowerShell cmdlet [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission). The following conditions apply:
+- Folder access can be granted by users by using Outlook or by administrators by using the Remote PowerShell cmdlet [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission). The following conditions apply:
 
   - The Calendar folder works differently in Outlook than other folders do. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](../calendars/cannot-view-cross-forest-calendar-data.md).
   - Private items are viewable only if the user is configured correctly as a delegate. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](./delegates-not-listed-correctly-in-outlook-after-migration.md).
@@ -81,11 +81,11 @@ This article describes the necessary configuration, administration details, and
 
 ### Send on Behalf of
 
-- Send on Behalf of permissions enable mail to be sent on behalf of another email address
+- Send on Behalf of permissions enable mail to be sent on behalf of another email address
 - Permissions can be granted by users by using Outlook or by administrators by using Exchange Admin Center or Remote PowerShell ([Set-Mailbox](/powershell/module/exchange/set-mailbox) cmdlet).
 - Permissions must exist in the sending user's forest.
 - By default, the `PublicDelegates` attribute (also known as the `GrantSendOnBehalfTo` attribute in Exchange on-premises) is synchronized to Exchange Online by Azure AD Connect.
-- Additional configuration is required to synchronize the `PublicDelegates` attribute with on-premises AD DS. This configuration requires enabling Exchange hybrid deployment settings in Azure AD Connect.For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
+- Additional configuration is required to synchronize the `PublicDelegates` attribute with on-premises AD DS. This configuration requires enabling Exchange hybrid deployment settings in Azure AD Connect.For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
 
   ![optional features](./media/overview-delegation-office-365-hybrid/optional-features.jpg)
 
@@ -104,9 +104,9 @@ This article describes the necessary configuration, administration details, and
 - Some of these rights can be seen and managed by an administrator (such as Folder and Send on Behalf of rights). However, some are stored only in the Exchange mailbox (such as meeting-related messages, forwarding rules, and private item visibility).
 - Basic functionality works cross-forest by using Outlook for Windows. The following conditions apply:
 
-  - Users can access other user folders (Folder rights and Full Access).
+  - Users can access other user folders (Folder rights and Full Access).
   - Users can send on behalf of a user from another forest.
-  - Rules to forward meeting invitations will be delivered successfully.
+  - Rules to forward meeting invitations will be delivered successfully.
   - New delegates can be added if users exist in different forests.
 
 - In the Scheduling Assistant, no details or limited free/busy information is listed for mailboxes in another forest. The following conditions apply:
@@ -115,11 +115,11 @@ This article describes the necessary configuration, administration details, and
   - [Users can see only basic free/busy mailbox information in a remote forest in Office 365](https://support.microsoft.com/en-US/help/3079932)
 
 - Some functionality does not work in Outlook Web App (OWA). For more information, see the following articles:  
-  - Delegates cannot accept meeting invitations in OWA if the manager is in another forest during coexistence. For more information, see [Delegate can't accept meeting request in OWA when manager is in another forest during coexistence](https://support.microsoft.com/help/4089867).
-  - Delegates can see free/busy information in OWA only if the manager is in another forest during coexistence. For more information, see [Delegate can only see free/busy information in OWA when manager is in another forest during coexistence](https://support.microsoft.com/help/4089865).
+  - Delegates cannot accept meeting invitations in OWA if the manager is in another forest during coexistence. For more information, see [Delegate can't accept meeting request in OWA when manager is in another forest during coexistence](https://support.microsoft.com/help/4089867).
+  - Delegates can see free/busy information in OWA only if the manager is in another forest during coexistence. For more information, see [Delegate can only see free/busy information in OWA when manager is in another forest during coexistence](https://support.microsoft.com/help/4089865).
 
 - Workflows between the manager and delegate users differ, and problems may be experienced.
-- We recommend that you move your manager and delegate users together as much as possible. The following conditions apply:
+- We recommend that you move your manager and delegate users together as much as possible. The following conditions apply:
 
   - When they're moved separately, delegates may not able to see private calendar items. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](./delegates-not-listed-correctly-in-outlook-after-migration.md).
   - Misconfigured delegates may result in a non-delivery report. For more information, see [Users receive NDR 5.2.0 when they send meeting invites in Office 365 hybrid environment](../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md).
@@ -130,4 +130,4 @@ This article describes the necessary configuration, administration details, and
   - If the Exchange hybrid deployment setting is not enabled, delegates may see a non-delivery report when they update meetings. For more information, see ["550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Office 365 hybrid environment](https://support.microsoft.com/help/4039597).
 
 > [!NOTE]
-> Be aware that delegation also affects external calendar sharing. For more information, see [Unable to accept an external sharing invitation by using Outlook in a hybrid environment](../calendars/cannot-accept-external-sharing-invitation-in-outlook.md).
+> Be aware that delegation also affects external calendar sharing. For more information, see [Unable to accept an external sharing invitation by using Outlook in a hybrid environment](../calendars/cannot-accept-external-sharing-invitation-in-outlook.md).

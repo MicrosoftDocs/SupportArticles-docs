@@ -24,7 +24,7 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Access, you create a linked table that uses Azure Active Directory interactive authentication. When you open objects that use this connection, you experience repetitive "connection failed" messages that resemble the following example:
+In Microsoft Access, you create a linked table that uses Azure Active Directory interactive authentication. When you open objects that use this connection, you experience repetitive "connection failed" messages that resemble the following example:
 
 ```output
 Connection failed: SQLState: 'FA003' SQL Server Error: 0 [Microsoft][ODBC Driver 17 for SQL Server][SQL Server] User option must be specified, if Authentication option is 'ActiveDirectoryInteractive'.     

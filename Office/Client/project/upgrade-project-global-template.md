@@ -29,20 +29,20 @@ Assume that you install Microsoft Project 2013 on a computer on which an earlier
 ##  More Information
 
 ### Project 2007 is already installed on the computer
-When a user starts Project for the first time after it is installed and Project 2007 is already installed on the computer, the user is presented with the Planning Wizard. The wizard presents the following options: 
+When a user starts Project for the first time after it is installed and Project 2007 is already installed on the computer, the user is presented with the Planning Wizard. The wizard presents the following options: 
 
 - **Upgrade automatically. Design customization items will be copied to Microsoft Project automatically**. If the user selects this option, the global template will be upgraded. The user is then presented with the Welcome to Project screen.
 
   If the user clicks Start, the user will be walked through each section of the wizard that is listed at the top of the window. When the user finishes the walk-through, the user sees a screen that displays a dummy project plan.
 
-  If the user instead selects the Skip intro link, the user is presented directly with the screen that displays the dummy project plan.  
+  If the user instead selects the Skip intro link, the user is presented directly with the screen that displays the dummy project plan.  
 
-  In either case, the user should close the dummy project plan, either through File/Close or by pressing the "X" in the upper-right corner. After the user does this, the user will be presented with the usual first screen whenever he or she starts Project.   
-- **Upgrade manually. You can choose which items you want to copy to Microsoft Project.** If the user selects this option and then clicks **OK**, the user is presented with the **Organizer** dialog box. This gives the user the opportunity to select the items that the user wants to upgrade. 
+  In either case, the user should close the dummy project plan, either through File/Close or by pressing the "X" in the upper-right corner. After the user does this, the user will be presented with the usual first screen whenever he or she starts Project.   
+- **Upgrade manually. You can choose which items you want to copy to Microsoft Project.** If the user selects this option and then clicks **OK**, the user is presented with the **Organizer** dialog box. This gives the user the opportunity to select the items that the user wants to upgrade. 
 
-  Should the user click **Cancel** at any time, the user is presented with the same screens that were described earlier and should follow the same actions. However, the user's global template will not yet be upgraded with the user's previous customizations.
+  Should the user click **Cancel** at any time, the user is presented with the same screens that were described earlier and should follow the same actions. However, the user's global template will not yet be upgraded with the user's previous customizations.
 
-  The next time that the user starts Project, the user will again be presented with the initial Planning Wizard. This behavior will continue until the option to automatically upgrade is selected or a manual upgrade is performed or until the user selects the **Don't tell me about this again checks box.   
+  The next time that the user starts Project, the user will again be presented with the initial Planning Wizard. This behavior will continue until the option to automatically upgrade is selected or a manual upgrade is performed or until the user selects the **Don't tell me about this again checks box.   
 - **Cancel. Don't perform the upgrade at this time.** If the user selects this option and then clicks **OK**, the user will be presented with the same screens that were described earlier and should follow the same actions. However, the user's global template will not be upgraded with the user's previous customizations.
 
   The next time that the user starts Project, the user will again be presented with the initial Planning Wizard. This behavior will continue until ether the option to automatically upgrade is selected or a manual upgrade is performed.
@@ -102,5 +102,5 @@ To edit the registry to force the Planning Wizard to reappear when Microsoft Pro
 17. In the **Value Data** box, type 0 (zero).   
 18. Exit Registry Editor.    
 
-### No earlier version of Project is installed 
-When a user starts Project the first time after it is installed and no earlier version of Project is installed, the user is presented with the **Welcome to Project** screen. This is a dummy project plan, and you can safely close it without saving. You can do this either through **File**/**Close** or by pressing the "X" in the upper-right corner. After you do this, you will be presented with the usual first screen whenever you start Project.
+### No earlier version of Project is installed 
+When a user starts Project the first time after it is installed and no earlier version of Project is installed, the user is presented with the **Welcome to Project** screen. This is a dummy project plan, and you can safely close it without saving. You can do this either through **File**/**Close** or by pressing the "X" in the upper-right corner. After you do this, you will be presented with the usual first screen whenever you start Project.

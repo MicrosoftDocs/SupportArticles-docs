@@ -25,15 +25,15 @@ By default, when you open a Microsoft Word document from a hyperlink in an email
 
 1. In SharePoint Designer, open the **Define E-mail Message** dialog box.
 
-1. Select the hyperlink to the document, and then click the hyperlink edit button ![the hyperlink edit button dialog box](./media/force-word-document-to-open-in-edit-mode/hyperlinkeditbutton.png).
+1. Select the hyperlink to the document, and then click the hyperlink edit button :::image type="icon" source="media/force-word-document-to-open-in-edit-mode/hyperlink-edit-button.png":::.
 
-   ![the hyperlink dialog box](./media/force-word-document-to-open-in-edit-mode/hyperlink.png)
+   :::image type="content" source="media/force-word-document-to-open-in-edit-mode/define-message-hyperlink.png" alt-text="Screenshot to select the hyperlink edit button in the Define E-mail Message dialog box.":::
 
 1. Add **ms-word:ofe|u|** to the beginning of the hyperlink address, such as the following example:
 
    **ms-word:ofe|u|[%Task Process:Web URL%]/[%Task Process:Item URL%]**
 
-   ![the define e-mail message dialog box](./media/force-word-document-to-open-in-edit-mode/defineemailmessage.png)
+   :::image type="content" source="media/force-word-document-to-open-in-edit-mode/edit-hyperlink-example.png" alt-text="Screenshot shows an example in the Edit HyperLink window." border="false":::
 
    > [!NOTE]
    > You can use this method for plain hyperlinks. For example, use "ms-word:ofe|u|http://sharepointserver/library/testdocument.docx" instead of "http://sharepointserver/library/testdocument.docx".
@@ -48,7 +48,7 @@ After you update the hyperlink by using the previous steps, you may receive the 
 
 Microsoft Office has identified a potential security concern.
 
-![the outlook security notice dialog box](./media/force-word-document-to-open-in-edit-mode/outlooksecuritynotice.png)
+:::image type="content" source="media/force-word-document-to-open-in-edit-mode/outlook-security-notice.png" alt-text="Screenshot of the warning in the Outlook Security Notice dialog box." border="false":::
 
 To suppress this notification, add the `ms-word:` registry key, as follows:
 

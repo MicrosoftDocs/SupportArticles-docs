@@ -41,7 +41,7 @@ NoteThe diagnostic that is described in this article can be used on the followin
 
 When you run the diagnostic, you are prompted with a message advising you that the application must be running in order to collect certain information, as in the following screenshot:
 
-![Access Running Prompt](./media/diagnostic-data-collected/prompt.png)
+:::image type="content" source="media/diagnostic-data-collected/prompt-message.png" alt-text="Screenshot of the prompt message after running the diagnostic." border="false":::
 
 Click Skip only if you are experiencing startup issues (for example, crashes) with the selected application.
 

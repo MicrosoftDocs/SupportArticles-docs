@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 2008668
 
 ## Supportability regarding SQL Server collation
 
-The following article talks about the SQL Server collation for the SharePoint databases
+The following article talks about the SQL Server collation for the SharePoint databases
 
 [Prepare the database servers (Windows SharePoint Services)](/previous-versions/office/sharepoint-2007-products-and-technologies/cc288970(v=office.12))
 
@@ -29,4 +29,4 @@ The following article talks about the SQL Server collation for the SharePoint d
 
 However, we do **not support** changing the default collation (`Latin1_General_CI_AS_KS_WS`) for SharePoint databases to any other collations (CI, AS, KS, WS).
 
-We **support** any CI collation for the SQL Server instance (for master and tempdb databases). However we recommend using `Latin1_General_CI_AS_KS_WS` as the instance default collation (master and tempdb databases).
+We **support** any CI collation for the SQL Server instance (for master and tempdb databases). However we recommend using `Latin1_General_CI_AS_KS_WS` as the instance default collation (master and tempdb databases).

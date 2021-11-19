@@ -29,13 +29,13 @@ When you open a Microsoft Office document that's attached to an Outlook email me
 
   Be careful - email attachments can contain viruses. Unless you need to edit, it's safer to stay in Protected View.
 
-  :::image type="content" source="media/office-document-attachments-open-in-protected-view/notification-in-outlook-2013.jpg" alt-text="The screenshot of the notification in Outlook 2013" border="false":::
+  :::image type="content" source="media/office-document-attachments-open-in-protected-view/notification-in-outlook-2013.png" alt-text="Screenshot of the notification in Outlook 2013.":::
 
 - Outlook 2010
 
   This file originated as an e-mail attachment and might be unsafe. Click for more details.
 
-  :::image type="content" source="media/office-document-attachments-open-in-protected-view/notification-in-outlook-2010.jpg" alt-text="The screenshot of the notification in Outlook 2010" border="false":::
+  :::image type="content" source="media/office-document-attachments-open-in-protected-view/notification-in-outlook-2010.png" alt-text="Screenshot of the notification in Outlook 2010.":::
 
 This problem occurs even though the email message was sent to you by another user in your organization (through Microsoft Exchange Server).
 
@@ -84,7 +84,7 @@ To fix this problem, use one of the following methods, as appropriate for your s
   1. Start the Group Policy Management Console.
   2. Expand the Microsoft Outlook 2013 or Microsoft Outlook 2010 node, and then select **Security**, per the following screenshot:
 
-     :::image type="content" source="media/office-document-attachments-open-in-protected-view/security-settings.jpg" alt-text="The screenshot for step 2" border="false":::
+     :::image type="content" source="media/office-document-attachments-open-in-protected-view/security-settings.png" alt-text="Screenshot of security group policy settings under Microsoft Outlook 2010." border="false":::
 
   3. Double-click the Use Protected View for attachments received from internal senders policy.
   4. Select **Not Configured**, and then select **OK**.

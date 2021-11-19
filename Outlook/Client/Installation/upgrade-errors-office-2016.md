@@ -29,7 +29,7 @@ When you upgrade to Office 2016, you receive the following error message during 
 > You won't be able to receive mail from a current mailbox.  
 > Outlook 2016 requires access to the Autodiscover service for your Exchange service. You may want to contact your mailbox provider or system administrator about this issue.
 
-![Screenshot of error message](./media/upgrade-errors-office-2016/error-message-dialog-box.png)
+:::image type="content" source="./media/upgrade-errors-office-2016/error-message-dialog-box.png" alt-text="Screenshot of the error message when you upgrade to Office 2016." border="false":::
 
 If you select **Install anyway** and upgrade to Outlook 2016, and then you start Outlook, you receive the following error message:
 

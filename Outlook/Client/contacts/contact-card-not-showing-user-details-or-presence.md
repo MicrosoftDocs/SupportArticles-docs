@@ -25,9 +25,9 @@ _Original KB number:_ &nbsp; 4467874
 
 You experience one or more of the following symptoms in Microsoft Outlook:
 
-- An Outlook contact card doesn't display a recipient's photo, details, or presence.
-- When you try to search for a recipient by using the **Search People** box, the search results display the user name without the presence information. Additionally, when you select to open the user's contact card, only minimal details are displayed.
-- No presence is displayed for a recipient who's listed in the **TO** field. When you open that recipient's contact card, no photo or details are displayed.
+- An Outlook contact card doesn't display a recipient's photo, details, or presence.
+- When you try to search for a recipient by using the **Search People** box, the search results display the user name without the presence information. Additionally, when you select to open the user's contact card, only minimal details are displayed.
+- No presence is displayed for a recipient who's listed in the **TO** field. When you open that recipient's contact card, no photo or details are displayed.
 
 ## Cause
 
@@ -39,12 +39,12 @@ Value: **0**
 
 ## Resolution
 
-Before you troubleshoot this issue, you must differentiate between the following kinds of recipients:
+Before you troubleshoot this issue, you must differentiate between the following kinds of recipients:
 
-- A corporate recipient that exists in your GAL and includes information
+- A corporate recipient that exists in your GAL and includes information
 - A recipient that consists of only an SMTP address
 
-Presence information and contact card details will not be displayed for a recipient that has only an SMTP address.
+Presence information and contact card details will not be displayed for a recipient that has only an SMTP address.
 
 To resolve this issue for a recipient that exists in the GAL and includes information, remove the registry key that's mentioned in the "Cause" section. Additionally, the `DownloadDetailsFromAD` setting is typically set by a Group Policy Object (GPO). Therefore, you can also use Group Policy Object Editor to manage the setting.
 

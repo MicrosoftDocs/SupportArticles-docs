@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4492759
 
 ## Symptoms
 
-After you successfully install Cumulative Update 22 for Exchange Server 2013, the **Programs and Features** item in Control Panel lists the installation as Exchange Server 2013 Cumulative Update 20.
+After you successfully install Cumulative Update 22 for Exchange Server 2013, the **Programs and Features** item in Control Panel lists the installation as Exchange Server 2013 Cumulative Update 20.
 
 ## Cause
 

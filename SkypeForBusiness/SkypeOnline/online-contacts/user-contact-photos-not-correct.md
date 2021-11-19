@@ -20,9 +20,9 @@ appliesto:
 
 ## Problem
 
-When you connect to Skype for Business Online (formerly Lync Online), you may experience the following issues: 
+When you connect to Skype for Business Online (formerly Lync Online), you may experience the following issues: 
 
-- Issue 1: You can't view your own contact photo in Lync 2010 or Lync 2013.   
+- Issue 1: You can't view your own contact photo in Lync 2010 or Lync 2013.   
 - Issue 2: Other contacts can't see your photo. This includes external contacts.   
 - Issue 3: High-resolution contact photos don't display in conferences and online meetings in Lync 2013.   
 
@@ -57,7 +57,7 @@ These issues may occur for one of the following reasons:
 
 ### How to upload photos to Exchange Online through PowerShell
 
-First, connect to Exchange Online by using remote PowerShell by using the instructions at the following Microsoft website: 
+First, connect to Exchange Online by using remote PowerShell by using the instructions at the following Microsoft website: 
 
 [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
@@ -67,7 +67,7 @@ As soon as you are connected, use the Set-UserPhoto cmdlet to upload a photo dir
 
 ### How to populate the "thumbnailPhoto" attribute in AD DS
 
-If you are running the Microsoft Azure Active Directory Sync Tool , run a Windows PowerShell script to populate the thumbnailPhotoattribute in the on-premises Active Directory schema. To do this, follow these steps:
+If you are running the Microsoft Azure Active Directory Sync Tool , run a Windows PowerShell script to populate the thumbnailPhotoattribute in the on-premises Active Directory schema. To do this, follow these steps:
 
 1. Start Notepad, and then paste the following Windows PowerShell script into Notepad:
 

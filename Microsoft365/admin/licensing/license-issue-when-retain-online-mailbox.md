@@ -33,16 +33,16 @@ Additionally, you experience the following symptoms:
 
 ## Cause 
 
-This occurs if the user mailboxes are created in the Exchange admin center, and the users aren't yet assigned a license. 
+This occurs if the user mailboxes are created in the Exchange admin center, and the users aren't yet assigned a license. 
 
 ## Solution 
 
 Create a view in the Office 365 portal to display a list of users who have mailboxes but who don't have a license. To do this, follow these steps:
 
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an admin.   
-2. Click **users and groups**, and then click **active users**.   
-3. Click **Filter** (![Screen shot of the Filter icon](./media/license-issue-when-retain-online-mailbox/filter.png)), and then in the drop-down box, click **Unlicensed users**.   
-NoteTo assign a license to a user, double-click the user. On the "Assign licenses" page, click to select the check boxes next to the items that you want to assign, and then click save. 
+2. Click **users and groups**, and then click **active users**.   
+3. Click **Filter** (:::image type="icon" source="media/license-issue-when-retain-online-mailbox/filter-icon.png":::), and then in the drop-down box, click **Unlicensed users**.   
+NoteTo assign a license to a user, double-click the user. On the "Assign licenses" page, click to select the check boxes next to the items that you want to assign, and then click save. 
 
 ## More information
 

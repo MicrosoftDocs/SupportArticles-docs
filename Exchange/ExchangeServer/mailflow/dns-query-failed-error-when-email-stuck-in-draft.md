@@ -34,7 +34,7 @@ Additionally, when you check the transport queue, you see an error message that 
 
 ## Cause
 
-This issue occurs because the DNS service cannot be used if the **Register this connection's addresses in DNS** check box is not selected in an Exchange Server 2016 or Exchange Server 2013 environment.
+This issue occurs because the DNS service cannot be used if the **Register this connection's addresses in DNS** check box is not selected in an Exchange Server 2016 or Exchange Server 2013 environment.
 
 ## Resolution - Method 1: Select the Register this connection's addresses in DNS check box
 

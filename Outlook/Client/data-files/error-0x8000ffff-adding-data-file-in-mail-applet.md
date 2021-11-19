@@ -26,7 +26,7 @@ You run Microsoft Outlook 2016, and when you open **Mail** in **Control Panel** 
 
 > An unknown error occurred, error code: 0x8000ffff
 
-:::image type="content" source="media/error-0x8000ffff-adding-data-file-in-mail-applet/error.png" alt-text="Error message recieved when adding a data file in the Mail applet" border="false":::
+:::image type="content" source="media/error-0x8000ffff-adding-data-file-in-mail-applet/error.png" alt-text="Screenshot of the error message received when adding a data file in the Mail applet." border="false":::
 
 This is a known limitation in Outlook 2016.
 

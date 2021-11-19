@@ -52,6 +52,6 @@ For more information, please the following articles:
 - [Manage permission policies for a Web application (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ff607712(v=office.14))    
 - [Manage permission policies for a Web application (SharePoint Server 2010)](/SharePoint/administration/manage-permission-policies-for-a-web-application)   
 - [User permissions and permission levels (SharePoint Server 2010)](/SharePoint/sites/user-permissions-and-permission-levels)   
-- [SPBasePermissions Enumeration](/previous-versions/office/sharepoint-server/ms412690(v=office.15))     
+- [SPBasePermissions Enumeration](/previous-versions/office/sharepoint-server/ms412690(v=office.15))     
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

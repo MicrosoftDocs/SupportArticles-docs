@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4495258
 
 ## Symptoms
 
-Email messages that are sent to External domains are queued in on-premises Exchange Server (2016 or 2013). When you check the status, you receive the following error message:
+Email messages that are sent to External domains are queued in on-premises Exchange Server (2016 or 2013). When you check the status, you receive the following error message:
 
 > 421 4.4.1 Connection timed out." Attempted failover to alternate host, but that did not succeed. Either there are no alternate hosts, or delivery failed to all alternate hosts.
 
@@ -32,10 +32,10 @@ Additionally, the following error entry in the Send Connector logs indicates tha
 
 ## Cause
 
-This issue occurs if the following conditions are true:
+This issue occurs if the following conditions are true:
 
-- The certificate that's used for outbound TLS is missing a private key.
-- You populate the `TLSCertificateName` attribute by using the **Issuer** and **SubjectName** strings of the certificate. Additionally, the `<I>Issuer string<S>SubjectName string` attribute is used for outbound TLS within the Send Connector to route email messages to external domains.
+- The certificate that's used for outbound TLS is missing a private key.
+- You populate the `TLSCertificateName` attribute by using the **Issuer** and **SubjectName** strings of the certificate. Additionally, the `<I>Issuer string<S>SubjectName string` attribute is used for outbound TLS within the Send Connector to route email messages to external domains.
 
 ## Resolution
 
@@ -63,7 +63,7 @@ To resolve this issue, follow these steps:
     Get-ChildItem -Path Cert:\LocalMachine\My | where {$_.Thumbprint -like 'Certificate thumbprint identified in step 2'} | Select-Object -Property thumbprint,hasprivatekey
     ```
 
-1. Remove the certificate that's identified in step 2 by running the following cmdlet:
+1. Remove the certificate that's identified in step 2 by running the following cmdlet:
 
     ```powershell
     Get-ChildItem -Path Cert:\LocalMachine\My | where {$_.Thumbprint -like 'Certificate thumbprint identified in step 2'} | remove-item

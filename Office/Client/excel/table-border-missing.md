@@ -37,10 +37,10 @@ Microsoft is currently investigating this issue.
 To work around this problem follow these steps:
 
 1. In Excel, select your table.
-2. Click the button to **Apply borders to the selection**.
+2. Click the button to **Apply borders to the selection**.
 3. Select the **Thick Box Border** option.
 4. Copy and paste the table into your email message.
 
-You can also select the **Thick Box Border** option before you create your table.
+You can also select the **Thick Box Border** option before you create your table.
 
 The table borders will be displayed as regular borders in the email when you copy it.

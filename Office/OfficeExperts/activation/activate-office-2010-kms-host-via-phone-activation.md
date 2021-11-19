@@ -29,7 +29,7 @@ This article describes how to activate the Office 2010 KMS host through telephon
 1. At a command prompt, change the directory to **c:\windows\system32**.
 1. Type **cscript slmgr.vbs /dlv bfe7a195-4f8f-4f0b-a622-cf13c7d16864**, and then press Enter. You see all the license files that are installed on your KMS server.
 
-   ![Cscript command result with license files installed](./media/activate-office-2010-kms-host-via-phone-activation/command.png)
+   :::image type="content" source="media/activate-office-2010-kms-host-via-phone-activation/command-result.png" alt-text="Screenshot of the script command result with license files installed." border="false":::
 
 1. Copy the activation ID and installation ID into Notepad. You may have to put dashes after every six characters in the installation ID. For example:
 

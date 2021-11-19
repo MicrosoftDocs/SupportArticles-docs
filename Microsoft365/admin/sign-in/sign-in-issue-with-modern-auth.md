@@ -29,7 +29,7 @@ The following table lists known issues and recommended solutions.
 |Issue|Recommendation|
 |---|---|
 |"An error occurred. Contact your administrator" message when you try to sign in to an Office 2016 or Office 2013 modern authentication app|To resolve this issue, contact your administrator and refer to this article.|
-|Desktop single sign-on (SSO) with AD FS fails|To resolve this issue, contact your administrator and refer to this article.|
+|Desktop single sign-on (SSO) with AD FS fails|To resolve this issue, contact your administrator and refer to this article.|
 
 If you have an issue that's not listed in this article, go to the following Microsoft TechNet wiki page. The wiki page lists other known issues and workarounds.
 
@@ -78,13 +78,13 @@ Follow these steps:
 4. In the **Edit Global Authentication Policy** dialog box, click the **Primary** tab.   
 5. In the **Extranet** and **Intranet** sections, select the **Forms Authentication** check box.
 
-   ![Screen shot of the Edit Global Authentication Policy dialog box, showing the Forms Authentication check boxes](./media/sign-in-issue-with-modern-auth/enable-global-authentication-policy.jpg)   
+   :::image type="content" source="media/sign-in-issue-with-modern-auth/enable-global-authentication-policy.png" alt-text="Screenshot of the Edit Global Authentication Policy dialog box, showing the Forms Authentication check boxes.":::
 
-### Issue: Desktop single sign-on (SSO) with AD FS fails
+### Issue: Desktop single sign-on (SSO) with AD FS fails
 
-Desktop SSO is the process that's used to obtain seamless sign-in to Office 365 resources through AD FS from a domain-joined computer that's inside a company network. When desktop SSO fails, users may be unable to activate Microsoft 365 Apps for enterprise or users may be prompted for forms-based logon even though they are using domain joined-computers from inside the company network. 
+Desktop SSO is the process that's used to obtain seamless sign-in to Office 365 resources through AD FS from a domain-joined computer that's inside a company network. When desktop SSO fails, users may be unable to activate Microsoft 365 Apps for enterprise or users may be prompted for forms-based logon even though they are using domain joined-computers from inside the company network. 
 
-Modern authentication (ADAL) with AD FS requires the /adfs/services/trust/13/windowstransport endpoint to be enabled.
+Modern authentication (ADAL) with AD FS requires the /adfs/services/trust/13/windowstransport endpoint to be enabled.
 
 To enable the endpoint, run the following Windows PowerShell command on the AD FS server:
 

@@ -25,7 +25,7 @@ appliesto:
 
 ## Summary
 
-This article contains a sample Microsoft Visual Basic for Applications macro that you can use to delete every other row in a selected range on a Microsoft Excel worksheet. 
+This article contains a sample Microsoft Visual Basic for Applications macro that you can use to delete every other row in a selected range on a Microsoft Excel worksheet. 
 
 ## More Information
 
@@ -47,7 +47,7 @@ Microsoft provides programming examples for illustration only, without warranty 
     ```
 3. On the Tools menu, point to Macro, and then click Visual Basic Editor. 
 
-   **Note** In Microsoft Office Excel 2007 and later versions, click **Visual Basic** in the **Code** group on the **Developer** tab.   
+   **Note** In Microsoft Office Excel 2007 and later versions, click **Visual Basic** in the **Code** group on the **Developer** tab.   
 4. On the Insert menu, click Module.    
 5. In the new module, type the following macro: 
 
@@ -89,7 +89,7 @@ End Sub
 7. To run the macro, point to Macro on the Tools menu, and then click Macros. 
 
    > [!NOTE]
-   > - In Excel 2007 and later versions, click **Macros** in the **Code** group on the **Developer** tab.
+   > - In Excel 2007 and later versions, click **Macros** in the **Code** group on the **Developer** tab.
    >- To display the **Developer** tab in the Ribbon, click the **Microsoft Office Button**, click **Excel Options**, click the **Popular category**, click to select the **Show Developer tab in the Ribbon** check box, and then click **OK**.   
 8. Select the **Delete_Every_Other_Row** macro, and then click **Run**.    
  

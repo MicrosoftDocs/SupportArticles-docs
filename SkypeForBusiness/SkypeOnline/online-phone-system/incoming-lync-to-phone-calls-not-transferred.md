@@ -21,7 +21,7 @@ appliesto:
 
 ## Problem
 
-Consider the following scenario. You are set up for Office 365, and you have valid Skype for Business Online (formerly Lync Online) and Exchange Online licenses. Lync To Phone and Exchange Online voice mail are set up according to the documentation. You can answer calls that are made to the Lync To Phone number, and you can make calls to other numbers. 
+Consider the following scenario. You are set up for Office 365, and you have valid Skype for Business Online (formerly Lync Online) and Exchange Online licenses. Lync To Phone and Exchange Online voice mail are set up according to the documentation. You can answer calls that are made to the Lync To Phone number, and you can make calls to other numbers. 
 
 In this scenario, if an incoming call isn't answered, the call isn't transferred to Exchange Online Unified Messaging voice mail as expected. Instead, the person who is calling you hears a fast busy tone. The call never is transferred to voice mail. 
 
@@ -36,7 +36,7 @@ To resolve this issue, use the [Lync Remote Connectivity Analyzer](https://www.t
 
     The following is an example screenshot of the results of the test:
 
-    ![Screenshot of the Connectivity Test Successful result ](./media/incoming-lync-to-phone-calls-not-transferred/connectivity-test.jpg)   
+    :::image type="content" source="./media/incoming-lync-to-phone-calls-not-transferred/connectivity-test.png" alt-text="Screenshot that shows the Connectivity Test Successful result.":::
 
 ## More Information
 

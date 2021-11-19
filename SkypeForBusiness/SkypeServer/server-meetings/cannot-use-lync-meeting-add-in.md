@@ -74,21 +74,21 @@ Follow these steps on the Lync meeting manager's Windows client computer:
 2. Right-click the selected contact, and then select the **Remove from group** option from the list.
 
     > [!NOTE]
-    > If this is the removal of the last contact in the **Delegates** contact group, the **Delegates** contact group will be removed from the Lync client because it is no longer needed. 
+    > If this is the removal of the last contact in the **Delegates** contact group, the **Delegates** contact group will be removed from the Lync client because it is no longer needed. 
 
 3. Wait for approximately five minutes for the updated Lync user information to complete its replication process.   
 4. Access the notification area icon on the desktop of the Windows client.   
 5. Right-click the Lync icon, and then click the **Exit** menu option.   
 6. Open the Lync meeting manager's Outlook client.   
-7. On the Outlook client's **File** tab, click **Account Settings**, and then select the **Delegate Access** link.   
+7. On the Outlook client's **File** tab, click **Account Settings**, and then select the **Delegate Access** link.   
 8. Locate and then select the nonfunctional Lync meeting administrative delegate from the Outlook delegates' list. If the Lync meeting administrative delegate is not in the Outlook delegates' list, go to step 12.   
 9. Click **Remove** to remove the delegate from the **Delegate Access** list.   
 10. Click OK button to accept the changes and close the **Delegate Access** dialog box.   
-11. Open the Lync client, and then sign back in.    
+11. Open the Lync client, and then sign back in.    
 12. Follow steps 6 through 8 and then go to step 14   
 13. In the **Outlook Delegates** dialog box, click **Add**, and then select the administrative delegate from the Exchange global address list (GAL).   
 14. Click **Add**, and then click **OK**.    
-15. In the **Outlook Delegate permissions** dialog box, click **OK** to add the default permissions for the administrative Lync meeting delegate to the Calendar and Tasks folders of the Lync meeting manager's Exchange mailbox.
+15. In the **Outlook Delegate permissions** dialog box, click **OK** to add the default permissions for the administrative Lync meeting delegate to the Calendar and Tasks folders of the Lync meeting manager's Exchange mailbox.
 
     > [!NOTE]
     > The administrative Lync meeting delegate requires SendOnBehalf and Editor permissions on the Calendar folder of the Lync meeting manager's Exchange mailbox.
@@ -107,31 +107,31 @@ Follow these steps on the Lync meeting manager's Windows client computer:
 2. Right-click the selected contact, and select the **Remove from group** option from the list. Wait for approximately five minutes for the updated Lync user information to complete the replication process.
 
     > [!NOTE]
-    > If this is the removal of the last contact in the **Delegates** contact group, the **Delegates** contact group will be removed from the Lync client because it is no longer needed.
+    > If this is the removal of the last contact in the **Delegates** contact group, the **Delegates** contact group will be removed from the Lync client because it is no longer needed.
 
 3. Access the notification area icon on the desktop of the Windows client computer.   
 4. Right-click the Lync icon, and then click **Exit**.   
 5. Open the Lync meeting manager's Outlook client.   
-6. On the Outlook client's **File** tab, click **Account Settings**, and then select the **Delegate Access** link.   
+6. On the Outlook client's **File** tab, click **Account Settings**, and then select the **Delegate Access** link.   
 7. Open the Lync client, and then sign back in.   
-8. In the **Outlook Delegates** dialog box, click **Add**, and then select the administrative delegate from the Exchange global address list (GAL).   
+8. In the **Outlook Delegates** dialog box, click **Add**, and then select the administrative delegate from the Exchange global address list (GAL).   
 9. Click **Add**, and then click **OK**.   
-10. In the **Outlook Delegate permissions** dialog box, click **OK** to add the default permissions for the administrative Lync meeting delegate to the Calendar and Tasks folders of the Lync meeting manager's Exchange mailbox.
+10. In the **Outlook Delegate permissions** dialog box, click **OK** to add the default permissions for the administrative Lync meeting delegate to the Calendar and Tasks folders of the Lync meeting manager's Exchange mailbox.
 
     > [!NOTE]
-    > The administrative Lync meeting delegate requires Editor permissions on the Calendar folder of the Lync meeting manager's Exchange mailbox. 
+    > The administrative Lync meeting delegate requires Editor permissions on the Calendar folder of the Lync meeting manager's Exchange mailbox. 
 
-11. In the **Outlook Delegates** dialog box, click **OK** to complete the process.
+11. In the **Outlook Delegates** dialog box, click **OK** to complete the process.
 
 > [!IMPORTANT]
-> After you follow the steps that were mentioned for issue 1 or issue 2, the Lync meeting manager's Lync client will add the Lync meeting administrative delegate to their **Delegates** contact group, and the Lync meeting administrator's Lync client will add the Lync meeting manager's contact to their **People I manage Calls For** contact group. If this does not occur within 10 minutes, review the troubleshooting steps in the "More Information" section.
+> After you follow the steps that were mentioned for issue 1 or issue 2, the Lync meeting manager's Lync client will add the Lync meeting administrative delegate to their **Delegates** contact group, and the Lync meeting administrator's Lync client will add the Lync meeting manager's contact to their **People I manage Calls For** contact group. If this does not occur within 10 minutes, review the troubleshooting steps in the "More Information" section.
 
 > [!NOTE]
-> If this is the first administrative delegate to be added for the Lync meeting manager, the **Delegates** contact group will be added to the UI of the manager's Lync client, and then the Lync meeting administrative delegate will be added to the **Delegates** contact group. If this is the first manager to be added for the Lync meeting administrative delegate, the **People I Manage Calls For** contact group will be added to the UI of the delegate's Lync client, and the Lync meeting manager will be added to the **People I Manage Calls For** contact group.
+> If this is the first administrative delegate to be added for the Lync meeting manager, the **Delegates** contact group will be added to the UI of the manager's Lync client, and then the Lync meeting administrative delegate will be added to the **Delegates** contact group. If this is the first manager to be added for the Lync meeting administrative delegate, the **People I Manage Calls For** contact group will be added to the UI of the delegate's Lync client, and the Lync meeting manager will be added to the **People I Manage Calls For** contact group.
 
 ## More Information
 
-The addition of the **Delegates** and the **People I Manage Calls For** contact groups and their respective contacts that are paired for the Lync meeting delegation roles depend on the Lync client's ability to complete a network connection to the Exchange server's MAPI service. This network connection is administered by the Lync client's built-in UCMAPI service. The MAPI connection to the Exchange server's MAPI service makes sure that the administrative delegate has the appropriate permissions for Lync meeting administration applied to the calendar folder of the Lync meeting manager's mailbox before the Lync meeting delegation relationship is established. Creating the contact groups and their respective contacts should take approximately 10 minutes. 
+The addition of the **Delegates** and the **People I Manage Calls For** contact groups and their respective contacts that are paired for the Lync meeting delegation roles depend on the Lync client's ability to complete a network connection to the Exchange server's MAPI service. This network connection is administered by the Lync client's built-in UCMAPI service. The MAPI connection to the Exchange server's MAPI service makes sure that the administrative delegate has the appropriate permissions for Lync meeting administration applied to the calendar folder of the Lync meeting manager's mailbox before the Lync meeting delegation relationship is established. Creating the contact groups and their respective contacts should take approximately 10 minutes. 
 
 If this process takes more than 10 minutes, follow these steps to make sure that the Lync clients can complete the needed MAPI connection to the Exchange server MAPI service. You can follow these steps on the Lync client of either the Lync meeting manager or the Lync meeting administrative delegate.
 

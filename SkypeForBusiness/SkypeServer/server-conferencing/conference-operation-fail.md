@@ -35,7 +35,7 @@ Replication of stateful data from the primary Front-End server to both of its se
 
 During an outage or disconnect of one or more Front-End servers, the currently active Front-End servers may take ownership of certain sets of users, and in the process, require the creation of new secondary replicas for those users.
 
-When many conferences are created over time by a third-party application, the Persisted Service Data (PSD) table may grow to a size at which replication to the new secondary replicas takes an excessive amount of time to complete. This prolonged process causes queues on the server to become full for longer than expected, and it triggers replication failures during conference operations. 
+When many conferences are created over time by a third-party application, the Persisted Service Data (PSD) table may grow to a size at which replication to the new secondary replicas takes an excessive amount of time to complete. This prolonged process causes queues on the server to become full for longer than expected, and it triggers replication failures during conference operations. 
 
 ## Resolution
 
@@ -50,7 +50,7 @@ This tool locates any entries related to conferences that were created by applic
 
 You can use the Get-CsPoolUpgradeReadinessState PowerShell command to determine whether all the secondary replication processes have completed. When the state is **Busy**, there are still secondary replication tasks in progress, and therefore some portions of the application endpoints may still be affected. After the state transitions to **Ready**, all secondary replication tasks should have completed, and all application endpoints should now be able to complete conference operations.
 
-Follow these steps on every affected pool: 
+Follow these steps on every affected pool: 
 
 1. Optional: Run the following SQL query on the RTCLocal SQL instance of your Front-End servers to determine the current number of entries in the PersistedServiceData table. The value returned may vary between individual Front-End servers in a particular pool. 
 
@@ -71,7 +71,7 @@ Follow these steps on every affected pool: 
     ```
 5. Optional: While the tool is running, you can run the SQL query from step 1 to verify that the count is being reduced. After the script has finished running, you can run the SQL query one more time to determine the final number of entries in the PersistedServiceData table on each Front-End server. This number should be less than the count seen in step 1.    
 
-By default, this script will process application endpoints that are currently homed on a particular pool. If application endpoints have been moved to a different pool, you can use the optional AllPoolEndpoints switch to indicate that you want to include application endpoints homed on any pool, as follows:
+By default, this script will process application endpoints that are currently homed on a particular pool. If application endpoints have been moved to a different pool, you can use the optional AllPoolEndpoints switch to indicate that you want to include application endpoints homed on any pool, as follows:
 
 ```powershell
 PurgeAppEndpointUserDataFromPSD.ps1 - PoolName <Pool name> -Command delete -AllPoolEndpoints

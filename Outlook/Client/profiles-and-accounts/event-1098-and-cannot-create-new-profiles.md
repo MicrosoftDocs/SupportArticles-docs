@@ -25,20 +25,20 @@ _Original KB number:_ &nbsp; 4499299
 
 When you try to create a Microsoft Outlook profile after a domain migration, you receive an error message that indicates you can't start Outlook or something went wrong. You also receive a sign-in prompt.
 
-:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/error.png" alt-text="screenshot of the error messages" border="false":::
+:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/error.png" alt-text="Screenshot of the Outlook error messages." border="false":::
 
 Additionally, you may see the Event 1098 in Azure Active Directory (AAD) Operational log that resembles the following error:
 
 > Error: 2147943712
 >
-> ErrorMessage: A specified logon session does not exist. It may already have been terminated. A specified logon session does not exist. It may already have been terminated.
+> ErrorMessage: A specified logon session does not exist. It may already have been terminated. A specified logon session does not exist. It may already have been terminated.
 >
 > AdditionalInformation: Exception of type 'class WinRTException' at webaccountprocessor.cpp, line: 190, method:  
 > AAD::Core::WebAccountProcessor::ProcessBrokerRequest::<lambda_>::operator (). Log: 0xcaa5001c Token broker operation failed. Operation name: RequestToken Logged at webaccountprocessor.cpp, line: 520, method: AAD::Core::WebAccountProcessor::ReportException.
 
-To find the AAD Operational log in Event Viewer, locate **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
+To find the AAD Operational log in Event Viewer, locate **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
 
-:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/aad-operational-log.png" alt-text="Azure Active Directory location in Event Viewer":::
+:::image type="content" source="media/event-1098-and-cannot-create-new-profiles/aad-operational-log.png" alt-text="Screenshot shows Azure Active Directory location in Event Viewer.":::
 
 ## Cause
 
@@ -48,11 +48,11 @@ There are multiple scenarios that can result in a change to a user security iden
 
 To resolve this issue, follow these steps:
 
-1. Delete all files from the Accounts folder at the following: location:
+1. Delete all files from the Accounts folder at the following: location:
 
    %LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts
 
    > [!NOTE]
    > Copy and paste the above location in the Windows Search box to find the folder.
 
-2. Restart and re-create an Outlook profile.  
+2. Restart and re-create an Outlook profile.  

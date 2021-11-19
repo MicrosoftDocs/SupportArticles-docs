@@ -47,14 +47,14 @@ Follow these steps to configure the Windows Server 2008 server that is hosting t
 From the console of the Windows Server 2008 server that is hosting the Lync Server Edge Server Access Edge service:
 
 1. Click **Start**.   
-2. Type gpedit.msc into the **Search** window.   
-3. Right-click the gpedit icon in the **Search** details pane, and then select **Run as administrator**, to open an instance of the **Local Group Policy Editor** with local administrative permissions.   
+2. Type gpedit.msc into the **Search** window.   
+3. Right-click the gpedit icon in the **Search** details pane, and then select **Run as administrator**, to open an instance of the **Local Group Policy Editor** with local administrative permissions.   
 4. Expand the **Computer Configuration** node that is listed under the **Local Computer Policy.**   
-5. Expand the **Administrative Templates** node, and then expand the **Network** node.   
-6. Locate and select the **SSL Configuration Settings** node.   
-7. Right-click the **SSL Cypher Suite** **Order** policy in the details pane of the **Local Group Policy Editor**, and then chose **Edit** from the pop-up menu.   
-8. Select the **Enabled** option on the **SSL Cipher Suite Order** dialog box.   
-9. In the window that is labeled **SSL Cypher Suites:**, right-click, and then select **Select all** from the pop-up menu.   
+5. Expand the **Administrative Templates** node, and then expand the **Network** node.   
+6. Locate and select the **SSL Configuration Settings** node.   
+7. Right-click the **SSL Cypher Suite** **Order** policy in the details pane of the **Local Group Policy Editor**, and then chose **Edit** from the pop-up menu.   
+8. Select the **Enabled** option on the **SSL Cipher Suite Order** dialog box.   
+9. In the window that is labeled **SSL Cypher Suites:**, right-click, and then select **Select all** from the pop-up menu.   
 10. Right-click the selected text in the **SSL Cypher Suites:** window, and then select **copy** from the pop-up menu.   
 11. Paste the list of SSL cypher suites into an open text document. For example, the notepad.exe Text Editor
 
@@ -73,7 +73,7 @@ From the console of the Windows Server 2008 server that is hosting the Lync Serv
 
 ## More Information
 
-For more information about the certificate configuration that is required for the AOL PIC, review documentations listed here:
+For more information about the certificate configuration that is required for the AOL PIC, review documentations listed here:
 
 [Set up certificates for the external edge interface for Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-set-up-certificates-for-the-external-edge-interface)
 

@@ -56,4 +56,4 @@ To work around this issue, change the **Download Preferences** setting to **Down
 
 ## More information
 
-For more information about the **Mail to keep offline** setting, see [Only a subset of your Exchange mailbox items is synchronized in Outlook](/outlook/troubleshoot/user-interface/only-subset-items-synchronized).
+For more information about the **Mail to keep offline** setting, see [Only a subset of your Exchange mailbox items is synchronized in Outlook](/outlook/troubleshoot/user-interface/only-subset-items-synchronized).

@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-Office 365 users in your organization who connect to Exchange Online by using incorrect hardcoded service settings (or IP addresses) will be unable to connect to the service after these outdated service settings are discontinued on July 8, 2015. (The original date was June 26, 2015).
+Office 365 users in your organization who connect to Exchange Online by using incorrect hardcoded service settings (or IP addresses) will be unable to connect to the service after these outdated service settings are discontinued on July 8, 2015. (The original date was June 26, 2015).
 
 The services for which users may be using incorrect settings include the following:
 

@@ -27,7 +27,7 @@ You have a public folder that contains a contact list in Microsoft Exchange Serv
 
 > Sorry, we're having trouble opening this item. This could be temporary, but if you see it again you might want to restart Outlook. Out of memory or system resources. Close some windows or programs and try again.
 
-:::image type="content" source="media/cannot-access-contact-list/cannot-access-contact-list-error.png" alt-text="Screenshot of the error message.":::
+:::image type="content" source="media/cannot-access-contact-list/cannot-access-contact-list-error.png" alt-text="Screenshot of the error message in the Microsoft Outlook window.":::
 
 ## Cause
 

@@ -55,10 +55,10 @@ $a = New-CsClientPolicyEntry -NameEnableContactResolutionWithTelUriAndEmailOnly 
  
 1. In Group Policy Management, create a Group Policy object.
  
-   **Note** When you create a GPO, specify a name and leave the source as none.    
+   **Note** When you create a GPO, specify a name and leave the source as none.    
 2. On the **Settings** tab, right-click **Computer Configuration** or **User Configuration**, and then select **Edit**.    
-3. Right-click **Registry**, select **New**, and then select **Registry Item**.    
-4. In the **New Registry Properties** dialog box, specify the following information, and then select **OK**:
+3. Right-click **Registry**, select **New**, and then select **Registry Item**.    
+4. In the **New Registry Properties** dialog box, specify the following information, and then select **OK**:
 
    ```adoc
    Action: Create

@@ -30,7 +30,7 @@ To change an existing Sandbox solution that's created in Visual Studio, follow t
 1. Open the **Properties** dialog box for the project. To do this, open the Visual Studio project in Solution Explorer, and then press the F4 key.
 1. Locate and change the **Include Assembly In Package** property setting to ***False***.
 
-   ![Changing the Include Assembly In Package property to False](./media/change-sandbox-solution/properties.png)
+   :::image type="content" source="media/change-sandbox-solution/properties.png" alt-text="Screenshot of the Properties dialog box, changing the Include Assembly In Package property to False." border="false":::
 
 1. Recompile and then publish the new version of the Sandbox solution.
 

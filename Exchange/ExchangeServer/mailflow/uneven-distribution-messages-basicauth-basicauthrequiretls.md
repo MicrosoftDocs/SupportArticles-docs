@@ -30,7 +30,7 @@ Consider the following scenario:
 
 - You create a receive connector to use **Basic Authentication** or **Basic Authentication over TLS**.
 - You don't use **Anonymous Users** as a permission group on this connector.
-- You send email messages to the Microsoft Exchange Front End Transport Service.
+- You send email messages to the Microsoft Exchange Front End Transport Service.
 
 In this scenario, the mail flow always seems to proxy the message to the same Transport Service regardless of which Front End Transport Service the message comes in on. The mail queue database can unexpectedly grow on the SMTP server. This causes more resources to be consumed because of the additional messages that are routed to this server.
 
@@ -63,7 +63,7 @@ Disable the Client Proxy Prefer Mailbox Mounted Server by setting its value to "
 
 ## Workaround 2
 
-Don't use **Basic Authentication** on the receive connector. Instead, use an external secure authentication method.
+Don't use **Basic Authentication** on the receive connector. Instead, use an external secure authentication method.
 
 > [!NOTE]
 > This will make the server an open relay type. This is not a recommended configuration. For more information, see [Allow anonymous relay on Exchange servers](/exchange/mail-flow/connectors/allow-anonymous-relay).

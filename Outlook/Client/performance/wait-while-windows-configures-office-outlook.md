@@ -26,7 +26,7 @@ When you start Microsoft Outlook 2013, you receive the following message:
 
 > Please wait while Windows configures Microsoft Office 64-bit Components 2013
 
-![Screenshot of the message dialog box](./media/wait-while-windows-configures-office-outlook/message-dialog.png)
+:::image type="content" source="./media/wait-while-windows-configures-office-outlook/message-dialog.png" alt-text="Screenshot of the Outlook message dialog box." border="false":::
 
 > [!NOTE]
 > The message disappears after a time, and Outlook starts. However, you continue to receive the message whenever you start Outlook.

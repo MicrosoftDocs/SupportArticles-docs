@@ -25,11 +25,11 @@ _Original KB number:_ &nbsp; 4057584
 
 ## Symptoms
 
-When you view a Microsoft Office 365 modern group calendar in Microsoft Outlook, the free/busy data of all members of the group is displayed, rather than just calendar events. There may be so much data displayed that the calendar is difficult to use.
+When you view a Microsoft Office 365 modern group calendar in Microsoft Outlook, the free/busy data of all members of the group is displayed, rather than just calendar events. There may be so much data displayed that the calendar is difficult to use.
 
 ## Cause
 
-This issue may occur when you open the O365 modern group calendar in this way:
+This issue may occur when you open the O365 modern group calendar in this way:
 
 1. Open Outlook.
 2. In the **Calendar** view, select **Home** > **Open Calendar** > **From Address Book**.

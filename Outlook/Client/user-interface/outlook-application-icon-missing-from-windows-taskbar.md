@@ -31,13 +31,13 @@ _Original KB number:_ &nbsp; 2847732
 
 When you examine the Windows taskbar, the Outlook icon is not displayed even though Outlook is running and there is an Outlook icon in the notification area of the taskbar. The following figure demonstrates this problem.
 
-:::image type="content" source="media/outlook-application-icon-missing-from-windows-taskbar/outlook-icon-not-shown-in-taskbar.png" alt-text="Screenshot showing the Outlook icon not on the taskbar, but it appears in the notification area" border="false":::
+:::image type="content" source="media/outlook-application-icon-missing-from-windows-taskbar/task-bar-not-show-outlook-icon.png" alt-text="Screenshot shows the Outlook icon doesn't display on the taskbar, but appears in the notification area." border="false":::
 
 ## Cause
 
 This scenario occurs when you have enabled the Hide When Minimized option for Outlook and you minimize the main Outlook window. This option is available when you select the Outlook icon in the notification area.
 
-:::image type="content" source="media/outlook-application-icon-missing-from-windows-taskbar/hide-when-minimized-option.png" alt-text="Outlook Hide When Minimized option" border="false":::
+:::image type="content" source="media/outlook-application-icon-missing-from-windows-taskbar/hide-when-minimized-option.png" alt-text="Screenshot shows the Outlook Hide When Minimized option is selected." border="false":::
 
 ## Resolution
 
@@ -58,4 +58,4 @@ Values:
 1 = Outlook icon is not displayed in the taskbar when Outlook is running and you minimize the Outlook window
 
 > [!NOTE]
-> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).
+> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).

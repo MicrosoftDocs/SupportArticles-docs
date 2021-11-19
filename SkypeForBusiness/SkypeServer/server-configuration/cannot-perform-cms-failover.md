@@ -23,7 +23,7 @@ You can't run the [Invoke-CsManagementServerFailover](/powershell/module/skype/I
 
 ### Scenario 1
 
-Assume that you perform a force failover because one of the pools is unavailable. After pool functionality is restored, you try to execute another failover operation by running the **Invoke-CsManagementServerFailover** cmdlet, and you receive the following error messages: 
+Assume that you perform a force failover because one of the pools is unavailable. After pool functionality is restored, you try to execute another failover operation by running the **Invoke-CsManagementServerFailover** cmdlet, and you receive the following error messages: 
 
 **###50020:XDSForceReplication: This central management store is being moved to another location. No changes can be made until this move is complete**
 
@@ -45,11 +45,11 @@ The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreRe
 
 ### Scenario 1
 
-If the main pool is unavailable, the CMS status that's persisted into databases will still be set as active. When pool functionality is restored, Backup services may take longer to mark the CMS as in Backup mode, CMS replication may fail, and a failover may be blocked. 
+If the main pool is unavailable, the CMS status that's persisted into databases will still be set as active. When pool functionality is restored, Backup services may take longer to mark the CMS as in Backup mode, CMS replication may fail, and a failover may be blocked. 
 
 ### Scenario 2
 
-If a failover isn't completed and another failover is performed immediately after, the CMS could be marked either as in active or Backup mode due to a race condition issue. 
+If a failover isn't completed and another failover is performed immediately after, the CMS could be marked either as in active or Backup mode due to a race condition issue. 
 
 ### Scenario 3
 
@@ -71,7 +71,7 @@ To fix this issue, follow these steps:
    - **Import-CsConfiguration -FileName c:\temp\configuration.zip -LocalStore**     
  
     > [!NOTE]
-    > After the process is complemented, the configuration.zip file can be deleted, although we recommend that you keep a copy of the file for disaster recovery.    
+    > After the process is complemented, the configuration.zip file can be deleted, although we recommend that you keep a copy of the file for disaster recovery.    
 5. On each server of the previously identified pool, run the **[Invoke-CsManagementStoreReplication](/powershell/module/skype/Invoke-CsManagementStoreReplication)** cmdlet in the Skype for Business Server Management Shell.     
 6. Run the Invoke-CsManagementServerFailover cmdlet to perform a CMS failover again.
 

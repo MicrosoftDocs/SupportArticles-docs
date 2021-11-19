@@ -36,7 +36,7 @@ To resolve this issue, change the domain that's used for your SharePoint Online 
 
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as a global administrator.   
 2. Click **Admin**, and then click **SharePoint**.    
-3. On the Site Collections page, click to select the check box next to your public website link, and then click Rename Website.    
+3. On the Site Collections page, click to select the check box next to your public website link, and then click Rename Website.    
 4. In the list, select **<your_domain>.sharepoint.com**, and then click **OK**.   
 5. Wait 1 hour, and then try to remove the domain. Check back periodically. The process could take as long as 24 hours.   
 

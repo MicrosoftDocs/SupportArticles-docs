@@ -69,7 +69,7 @@ Windows Azure Active Directory Module for Windows PowerShell and Azure Active Di
 
 ### Step 5: Add your domain to Office 365
 
-The video does not explain how to add and verify your domain to Office 365. For more information about that procedure, see [Verify your domain in Office 365](https://support.office.com/en-ca/article/verify-your-domain-in-office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611).
+The video does not explain how to add and verify your domain to Office 365. For more information about that procedure, see [Verify your domain in Office 365](https://support.office.com/en-ca/article/verify-your-domain-in-office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611).
 
 ### Step 6: Connect ADFS to Office 365
 
@@ -97,7 +97,7 @@ Sync the user accounts to Office 365 by using Directory Sync Tool.
 
 **Notes for ADFS 2.0**
 
-If you are using ADFS 2.0, you must change the UPN of the user account from "company.local" to "company.com" before you sync the account to Office 365. Otherwise, the user will not be validated on the ADFS server. 
+If you are using ADFS 2.0, you must change the UPN of the user account from "company.local" to "company.com" before you sync the account to Office 365. Otherwise, the user will not be validated on the ADFS server. 
 
 ### Step 8: Configure the client computer for Single Sign-On
 

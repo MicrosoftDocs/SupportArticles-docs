@@ -25,7 +25,7 @@ appliesto:
 
 When you try to access **SharePoint** or **OneDrive**, you receive following error:
 
-![This site can't be reached](media/error-accessing-sharepoint-onedrive/this-site-cannot-be-reached.png)
+:::image type="content" source="media/error-accessing-sharepoint-onedrive/site-cannot-reach-error.png" alt-text="Screenshot of the error that this site can't be reached when you access SharePoint or OneDrive.":::
 
 ## Cause
 

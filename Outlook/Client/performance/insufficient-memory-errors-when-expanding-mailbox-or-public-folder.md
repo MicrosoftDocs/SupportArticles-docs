@@ -66,12 +66,12 @@ To delete the public folder favorites by using MFCMapi, follow these steps:
 
    1. In the navigation pane. right-click the Shortcuts folder, select **Advanced**, and then select **Empty items and subfolders from folder**.
 
-      :::image type="content" source="media/insufficient-memory-errors-when-expanding-mailbox-or-public-folder/empty-items-and-subfolders-from-folder.jpg" alt-text="select the Empty items and subfolders from folder option.":::
+      :::image type="content" source="media/insufficient-memory-errors-when-expanding-mailbox-or-public-folder/empty-items-and-subfolders-from-folder.png" alt-text="Screenshot of  the Empty items and subfolders from folder option in the right-click menu.":::
 
    2. Keep the default options, and then select **OK**.
 9. If you want to delete specific public folder favorites, follow these steps:
    1. In the navigation pane, expand the Shortcuts folder, right-click the Public Folder favorite that you want to delete, and select **Delete folder**.
 
-      :::image type="content" source="media/insufficient-memory-errors-when-expanding-mailbox-or-public-folder/delete-folder.jpg" alt-text="select the Delete folder option":::
+      :::image type="content" source="media/insufficient-memory-errors-when-expanding-mailbox-or-public-folder/delete-folder.png" alt-text="Screenshot of the Delete folder option in the right-click menu.":::
 
    2. Keep the default options, and then select **OK**.

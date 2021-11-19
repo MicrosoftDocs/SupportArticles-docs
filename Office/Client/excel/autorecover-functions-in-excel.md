@@ -33,9 +33,9 @@ This article contains an overview of the Auto-Recover feature.
 
 #### Microsoft Office Excel 2007 and Excel 2010
  
-The controls to configure the Auto-Recover feature are in the **Save** settings in Excel Options.
+The controls to configure the Auto-Recover feature are in the **Save** settings in Excel Options.
 
-Note To open the **Save** settings, click the Microsoft Office Button in Excel 2007 or the File menu in Excel 2010, clickExcel Options in 2007 or Options in Excel 2010, and then click **Save**.
+Note To open the **Save** settings, click the Microsoft Office Button in Excel 2007 or the File menu in Excel 2010, clickExcel Options in 2007 or Options in Excel 2010, and then click **Save**.
 
 To configure the Auto-Recover settings, follow these steps: 
  
@@ -52,7 +52,7 @@ To configure the Auto-Recover settings, follow these steps:
     **Notes**  
       - If the location that you type is local (on your hard drive) or is on a network drive, and if this location does not exist, you receive the following error message: 
 
-        Cannot access directory **path**. 
+        Cannot access directory **path**. 
 
         To determine the unique number that is associated with the message that you receive, press CTRL+SHIFT+I. The following number appears in the lower-right corner of this message: 
 
@@ -84,7 +84,7 @@ To configure the Auto-Recover dialog box, follow these steps:
     **Notes**  
       - If the location that you type is local (on your hard drive) and if the location does not exist, you receive the following error message: 
 
-        Cannot access directory **path**.     
+        Cannot access directory **path**.     
       - If the location that you type is on a network drive, you will not receive an alert until your first Auto-Recover attempt. You receive the following error message: 
 
         Microsoft cannot save Auto-Recover info to **path**. Please check the network connection or change the location on the Save tab of the Tools, Options dialog.     
@@ -111,7 +111,7 @@ To keep from filling up your Auto-Recover location with unneeded files, Auto-Rec
  
 ### Auto-Recover save timing
  
-The Auto-Recover timer checks for changed Excel files at the interval you set in the minutes box on the Save tab in the Options dialog box. The timer starts when you start Excel.
+The Auto-Recover timer checks for changed Excel files at the interval you set in the minutes box on the Save tab in the Options dialog box. The timer starts when you start Excel.
 
 > [!NOTE]
 > In Excel 2007, the minutes box is in the **Save** category in the Excel Option dialog box. In Excel 2010, the minutes box is in the Save category under File, Options.
@@ -158,7 +158,7 @@ Important This section, method, or task contains steps that tell you how to modi
  
 ### File formats that are saved by Auto-Recover
  
-Auto-Recover saves all file formats that can be opened in Excel. To maintain speed and simplicity, Auto-Recover saves all files as the current Excel file format, regardless of the original file format opened. The file is saved as a hidden file with an arbitrary filename with the extension ".xar" (for example, ~ar18a.xar). 
+Auto-Recover saves all file formats that can be opened in Excel. To maintain speed and simplicity, Auto-Recover saves all files as the current Excel file format, regardless of the original file format opened. The file is saved as a hidden file with an arbitrary filename with the extension ".xar" (for example, ~ar18a.xar). 
 
 When you try to save a recovered file upon reopening Excel after it closed unexpectedly, the original file format and name is suggested as the Save file type. Excel stores the original file name and it's related ".xar" file name in the registry for the purpose of recovery. 
 

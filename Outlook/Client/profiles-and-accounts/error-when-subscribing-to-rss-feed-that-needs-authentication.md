@@ -38,7 +38,7 @@ This behavior may occur if the RSS feed requires authentication. Outlook support
 
 ## Workaround
 
-To work around this behavior, use one of the following methods:  
+To work around this behavior, use one of the following methods:  
 
 - Use an RSS site that is a Microsoft Office SharePoint site and that is internal to your domain. In this scenario, Outlook allows the use of NTLM credentials that are passed to the SharePoint site.
 - Add the RSS feed in Microsoft Internet Explorer. Then, let the RSS feed synchronize with Outlook. This scenario requires synchronizing the RSS feeds list between Outlook and Windows.
@@ -47,9 +47,9 @@ To work around this behavior, use one of the following methods:  
 
 To configure this option in Outlook 2007, follow these steps:
 
-1. On the **Tools** menu, select **Options**.
+1. On the **Tools** menu, select **Options**.
 2. Select the **Other** tab, and then select **Advanced Options**.
-3. Enable **Sync RSS feeds to the System Feed List**.  
+3. Enable **Sync RSS feeds to the System Feed List**.  
 
 ### Outlook 2010 and Outlook 2013
 

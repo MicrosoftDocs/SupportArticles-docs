@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-When you click the Projects link from the Office 365 ribbon to get to Project Web Access, you receive one of the following errors:
+When you click the Projects link from the Office 365 ribbon to get to Project Web Access, you receive one of the following errors:
 
 > Error  
 > An unexpected error has occurred.  
@@ -36,7 +36,7 @@ Or
 > \-------------------------------------------------------------------------------  
 > GO BACK TO SITE
 
-You can still navigate to Project Web App by manually entering the URL in the address bar or with admin permissions go to SharePoint admin center, click the link to the PWA site collection once, when the dialog comes up click the link again.
+You can still navigate to Project Web App by manually entering the URL in the address bar or with admin permissions go to SharePoint admin center, click the link to the PWA site collection once, when the dialog comes up click the link again.
 
 ## Cause
 
@@ -48,7 +48,7 @@ Your Office365 tenant was recently upgraded and your Tenant Admin has not yet ma
 
 ### Cause 2
 
-The default PWA site with the suffix "/sites/PWA" e.g. `https://domainname.sharepoint.com/sites/PWA` has been renamed or deleted.   
+The default PWA site with the suffix "/sites/PWA" e.g. `https://domainname.sharepoint.com/sites/PWA` has been renamed or deleted.   
 
 ## Resolution
 
@@ -70,6 +70,6 @@ The My Site collection will be upgraded for all users in your tenant and the Pro
 
 ### Resolution steps for Cause 2
 
-The Project link in the top navigation bar requires a default PWA site with the following suffix "/sites/PWA" is present in order for the link to work. E.g., `https://domainname.sharepoint.com/sites/PWA`.
+The Project link in the top navigation bar requires a default PWA site with the following suffix "/sites/PWA" is present in order for the link to work. E.g., `https://domainname.sharepoint.com/sites/PWA`.
 
 You can either restore the default PWA site that may have been deleted but is still in the Recycle bin, or create a new PWA site in the Sharepoint Admin Center and name the new site as "PWA".

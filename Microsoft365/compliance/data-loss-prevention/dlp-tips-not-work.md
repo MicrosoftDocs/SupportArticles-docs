@@ -28,7 +28,7 @@ Policy tips for unified data loss prevention (DLP) policies that are created in 
 
 ## Cause
 
-This issue occurs because a policy tip can be enabled only in one of the following locations:
+This issue occurs because a policy tip can be enabled only in one of the following locations:
 
 - Security and Compliance Center
 - Exchange Online
@@ -38,6 +38,6 @@ This issue occurs because a policy tip can be enabled only in one of the follow
 To view unified DLP policy tips, use one of the following options in Exchange Online:
 
 - Disable all Transport rules that include the **Notify the sender with a Policy Tip** action.
-- Remove the action **Notify the sender with a Policy Tip**  from all Transport rules.
+- Remove the action **Notify the sender with a Policy Tip**  from all Transport rules.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/site/createprofile).

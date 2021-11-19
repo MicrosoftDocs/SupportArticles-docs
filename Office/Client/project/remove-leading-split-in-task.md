@@ -40,7 +40,7 @@ To remove a split at the beginning of a task, use the method appropriate for you
 
 - If a resource is assigned to the task, follow these steps:
 
-1. On the View tab, click Task Usage.
+1. On the View tab, click Task Usage.
 
    NOTE: In Microsoft Office Project 2007 and earlier versions, click Task Usage on the View menu.    
 2. Click to select the value 0 at the beginning of the task's work values under the timescale (the row labeled "Work" in the right pane), and press DELETE. Project removes the leading work value with 0 value.

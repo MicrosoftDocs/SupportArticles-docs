@@ -41,7 +41,7 @@ The following registry key contains an invalid default value of accdb_auto_file:
 
 ## Resolution
 
-Modify the **HKEY_CLASSES_ROOT\Access.Application\CurVer** registry key to specify the appropriate default value for your version of Access.
+Modify the **HKEY_CLASSES_ROOT\Access.Application\CurVer** registry key to specify the appropriate default value for your version of Access.
 
 Registry DISCLAIMER: Modifying REGISTRY settings incorrectly can cause serious problems that may prevent your computer from booting properly. Microsoft cannot guarantee that any problems resulting from the configuring of REGISTRY settings can be solved. Modifications of these settings are at your own risk. 
 

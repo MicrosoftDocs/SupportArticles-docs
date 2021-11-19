@@ -21,13 +21,11 @@ appliesto:
 
 When you try to sign in the first time to Microsoft Skype for Business in the German version of Microsoft Office 365, you receive the following error message:
 
-**Your sign in request is being redirected to the following server:**
+> Your sign in request is being redirected to the following server:  
+> Outlook.de  
+> We can't verify if the server should be trusted. Do you want to continue signing in?
 
-**Outlook.de**
-
-**We can't verify if the server should be trusted. Do you want to continue signing in?**
-
-![sign-in window](./media/issue-sign-in-german-environment/sign-in-window.png)
+:::image type="content" source="./media/issue-sign-in-german-environment/sign-in-window.png" alt-text="Screenshot that shows the sign-in window with an error message.":::
 
 ## Cause
 

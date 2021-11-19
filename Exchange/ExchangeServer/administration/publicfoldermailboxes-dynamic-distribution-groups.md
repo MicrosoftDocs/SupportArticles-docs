@@ -32,17 +32,17 @@ Consider the following scenario:
 
 In this scenario, multiple dynamic distribution groups are created unexpectedly. The names of these dynamic distribution groups begin with PublicFolderMailboxes.
 
-![Screenshot of unexpected PublicFolderMailBoxes dynamic distribution groups](./media/publicfoldermailboxes-dynamic-distribution-groups/publicfoldermailboxes-groups.jpg)
+:::image type="content" source="media/publicfoldermailboxes-dynamic-distribution-groups/publicfoldermailboxes-groups.png" alt-text="Screenshot of unexpected PublicFolderMailBoxes dynamic distribution groups.":::
 
 ## Cause
 
-Exchange Server 2016 creates a dynamic distribution group for hierarchy sync of public folders. In an environment that has multiple domain controllers, the entry for the dynamic distribution group is created in one of the domain controllers. Immediately, a process looks up the dynamic distribution group from a different domain controller to verify whether the dynamic distribution group exists. Because Active Directory replication hasn't happened yet, the dynamic distribution group is not replicated. Therefore, it is not found and is created again. Until replication occurs, a new dynamic distribution group is created each time that the process runs.
+Exchange Server 2016 creates a dynamic distribution group for hierarchy sync of public folders. In an environment that has multiple domain controllers, the entry for the dynamic distribution group is created in one of the domain controllers. Immediately, a process looks up the dynamic distribution group from a different domain controller to verify whether the dynamic distribution group exists. Because Active Directory replication hasn't happened yet, the dynamic distribution group is not replicated. Therefore, it is not found and is created again. Until replication occurs, a new dynamic distribution group is created each time that the process runs.
 
 ## Workaround
 
 To work around this issue, hard code a domain controller on the Exchange Server that hosts the primary hierarchy public folder mailbox so that the Exchange Server only communicates to the domain controller. To do this, follow these steps:
 
-1. Remove the unexpected dynamic distribution groups by running the following command in the Exchange Management Shell:
+1. Remove the unexpected dynamic distribution groups by running the following command in the Exchange Management Shell:
 
     ```powershell
     Get-DynamicDistributionGroup -IncludeSystemObjects PublicFolderMailboxes* | Remove- DynamicDistributionGroup
@@ -50,7 +50,7 @@ To work around this issue, hard code a domain controller on the Exchange Server 
 
 2. In the Application log in Event Viewer, filter the log to show **Event ID 2080**.
 
-3. Locate the latest Event ID 2080. In the description, you should find more than one domain controller listed under In-site.
+3. Locate the latest Event ID 2080. In the description, you should find more than one domain controller listed under In-site.
 
     Example:
 
@@ -81,7 +81,7 @@ To work around this issue, hard code a domain controller on the Exchange Server 
     Get-Mailbox -PublicFolder | ?{$_.IsRootPublicFolderMailbox -eq "true"} | Update-PublicFolderMailbox
     ```
 
-8. You should see only one dynamic distribution group created. Wait for 15 or 20 minutes, and then run the following command to verify whether a single dynamic distribution group was created: 
+8. You should see only one dynamic distribution group created. Wait for 15 or 20 minutes, and then run the following command to verify whether a single dynamic distribution group was created:
 
     ```powershell
     Get-DynamicDistributionGroup -IncludeSystemObjects PublicFolderMailboxes*

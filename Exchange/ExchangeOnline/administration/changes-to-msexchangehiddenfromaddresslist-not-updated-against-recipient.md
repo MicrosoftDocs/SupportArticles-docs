@@ -52,7 +52,7 @@ To resolve this issue, follow these steps:
     Import-Module activedirectory
     ```  
 
-    For PowerShell module 3.0 and later versions, the module will load automatically based on the commands that are issued.
+    For PowerShell module 3.0 and later versions, the module will load automatically based on the commands that are issued.
 
 3. Validate that the `mailnickname` attribute is not set to any value. To do this, run the following cmdlet:
 

@@ -42,21 +42,19 @@ If you're using Outlook to access your Office 365 email account or another Excha
 ## Let us fix your Outlook connection problems for you
 
 We can diagnose and fix several common Outlook connectivity issues for you. If our automated tool can't fix your issue, or you'd like to fix it yourself, see the next section.
-
-|||||
-|:-----|:-----|:-----|:-----|
-|[:::image type="icon" source="media/outlook-connection-issues/support-icon.png":::](https://diagnostics.office.com/#/)|**Let us fix your issue** <br/>[Support and Recovery Assistant for Office 365](https://diagnostics.office.com/#/)|[:::image type="icon" source="media/outlook-connection-issues/help-icon.png":::](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)|**Need more help?** <br/> [Contact support for business products - Admin Help](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
-|||||
+</br></br>
+<table>
+<tr><td><img src="media/outlook-connection-issues/support-icon.png" alt="Support icon."/></td><td><b>Let us fix your issue</b></br><a href="https://diagnostics.office.com/#/">Support and Recovery Assistant for Office 365</a></td><td><img src="media/outlook-connection-issues/help-icon.png" alt="Help icon."/></td><td><b>Need more help?</b></br><a href="https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b">Contact support for business products - Admin Help</a></td></tr>
+</table>
 
 ## Fix software update and profile issues
 
 Out-of-date software and corrupted Outlook profiles are two of the most common issues that can prevent you from sending and receiving email. If you're an admin with multiple users reporting problems, you also should check for service issues with Office 365.
 
 **Common Outlook fixes**
-
-||||
-|:-----|:-----|:-----|
-|[:::image type="icon" source="media/outlook-connection-issues/monitor-icon.png":::](https://windows.microsoft.com/windows/is-computer-up-to-date)|**Run Windows Update**|If your Outlook client software or Windows operating system software is out of date, you might have problems sending and receiving email. For Windows Update instructions, see [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq)|
-|[:::image type="icon" source="media/outlook-connection-issues/screwdriver-wrench-symbol.png":::](https://support.office.com/article/4d5febf6-7623-486b-9a9f-d5cfc4264af3.aspx)|**Repair your Outlook profile**|An Outlook profile is a set of configuration information that includes your user name, password, and file storage location. To repair your Outlook profile, see [Fix your Outlook email connection by repairing your profile](https://support.office.com/article/4D5FEBF6-7623-486B-9A9F-D5CFC4264AF3).|
-|[:::image type="icon" source="media/outlook-connection-issues/settings-icon.png":::](https://go.microsoft.com/fwlink/p/?LinkID=402339)|**Check for service issues**|**Admin only:** If more than one person in your organization is experiencing email problems in Office 365, it could be due to a problem with the service. Go to the [Office 365 service health dashboard page](https://go.microsoft.com/fwlink/p/?LinkID=402339) (admin sign in required), and check the status of the services under **Exchange Online**.|
-||||
+</br></br>
+<table>
+<tr><td><img src="media/outlook-connection-issues/monitor-icon.png" alt="Monitor icon."/></td><td><b>Run Windows Update</b></td><td>If your Outlook client software or Windows operating system software is out of date, you might have problems sending and receiving email. For Windows Update instructions, see <a href="https://support.microsoft.com/help/12373/windows-update-faq">Windows Update: FAQ</a>.</td></tr>
+<tr><td><img src="media/outlook-connection-issues/screwdriver-wrench-symbol.png" alt="Screwdriver wrench symbol."/></td><td><b>Repair your Outlook profile</b></td><td>An Outlook profile is a set of configuration information that includes your user name, password, and file storage location. To repair your Outlook profile, see <a href="https://support.office.com/article/4D5FEBF6-7623-486B-9A9F-D5CFC4264AF3">Fix your Outlook email connection by repairing your profile</a>.</td></tr>
+<tr><td><img src="media/outlook-connection-issues/settings-icon.png" alt="Settings icon."/></td><td><b>Check for service issues</b></td><td><b>Admin only:</b> If more than one person in your organization is experiencing email problems in Office 365, it could be due to a problem with the service. Go to the <a href="https://status.office.com/">Office 365 service health dashboard page</a> (admin sign in required), and check the status of the services under <b>Exchange Online</b>.</td></tr>
+</table>

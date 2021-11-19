@@ -29,8 +29,8 @@ For all Office 365 services (including OneDrive For Business, Delve, and SharePo
 
 **Note** Before you sync the settings, you should configure the alternative language settings on your SharePoint Online site. To do this, follow these steps:
 
-1. On your team site, select **Settings** > **Site settings**.   
-2. In **Site Administration**, select **Language settings**.   
+1. On your team site, select **Settings** > **Site settings**.   
+2. In **Site Administration**, select **Language settings**.   
 3. On the **Language Settings** page, select the alternative languages that your site should support.   
 4. Click **OK**.   
 

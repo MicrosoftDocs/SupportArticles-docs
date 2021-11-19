@@ -39,7 +39,7 @@ Do one of the following things, as appropriate for your situation:
 
   To edit the default role assignment policy, follow these steps:
    1. Sign in to the Office 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
-   2. In the left navigation pane click **permissions**, and then click **user roles**.
+   2. In the left navigation pane click **permissions**, and then click **user roles**.
    3. Double-click **Default Role Assignment Policy**.
    4. Click to clear the **MyDistributionGroups** check box and the **MyDistributionGroupMembershipcheck** box.
    5. Click **Save**.
@@ -48,8 +48,8 @@ Do one of the following things, as appropriate for your situation:
 
   To create a new role assignment policy, follow these steps:
   1. Sign in to the Office 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
-  2. In the left navigation pane click **permissions**, and then click **user roles**.
-  3. Click **New** (![A screen shot of the New icon](./media/prevent-users-create-manage-dg/new.png)).
+  2. In the left navigation pane click **permissions**, and then click **user roles**.
+  3. Click **New** (:::image type="icon" source="media/prevent-users-create-manage-dg/new.png" border="false":::).
   4. Type a name for the new role assignment policy, and then click to select the options that you want. Make sure that the **MyDistributionGroups** check box and the **MyDistributionGroupMembershipcheck** box are cleared.
   5. Click **Save**.
 

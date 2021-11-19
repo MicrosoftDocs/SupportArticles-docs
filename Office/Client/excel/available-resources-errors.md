@@ -39,7 +39,7 @@ When you work with a Microsoft Excel file, you receive one of the following mess
 
 The above memory error messages can be generic and don't always identify the real cause of the issue. However, if your file is large or contains a large number of features, it is possible you are running low on available memory resources.
 
-Before we explore the more common reasons for the memory errors, it good to understand Excel's limitations. See the following resources for more information:
+Before we explore the more common reasons for the memory errors, it good to understand Excel's limitations. See the following resources for more information:
 
 - [Excel specifications and limits](https://support.office.com/article/excel-specifications-and-limits-ca36e2dc-1f09-4620-b726-67c00b05040f)
 - [Excel 2010 Performance: Performance and Limit Improvements](https://msdn.microsoft.com/library/office/ff700514.aspx)
@@ -51,7 +51,7 @@ If you are not hitting a resource limitation, these are the most common resoluti
 
 Follow the provided methods in this article to resolve the available resource error message in Excel. If you have previously tried one of these methods and it did not help, go to another method from this list:
 
-### Method 1: Contents of the spreadsheet
+### Method 1: Contents of the spreadsheet
 
 The first thing to determine is if the error is specific to one workbook (or others created from the same template). Typical actions that cause memory error messages are:
 
@@ -66,7 +66,7 @@ If you're seeing the error when performing any of the above actions, it's time t
 
 **Calculations**
 
-If you're inserting rows and columns, performing calculations, or copying and pasting and receive the message, it can be tied to formulas having to recalculate.
+If you're inserting rows and columns, performing calculations, or copying and pasting and receive the message, it can be tied to formulas having to recalculate.
 
 Consider this scenario:
 
@@ -106,7 +106,7 @@ You might have to set Windows Update to automatically download and install recom
 
 For more information about Office updates, see [Office downloads & updates](/officeupdates/).
 
-If your issue is not resolved after you install the updates, go to method 3.  
+If your issue is not resolved after you install the updates, go to method 3.  
 
 ### Method 3: Add-ins interfering
 
@@ -114,13 +114,13 @@ Check the Add-ins that are running, and try disabling them to see if Excel is wo
 
 [View, manage, and install add-ins in Office programs](https://support.office.com/article/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d)
 
-If you find that Excel is no longer giving you the error after you remove the add-ins, then it is recommended to contact the manufacturer of the add-in for support.
+If you find that Excel is no longer giving you the error after you remove the add-ins, then it is recommended to contact the manufacturer of the add-in for support.
 
-If your issue is not resolved after you remove the add-ins, go to method 4.
-  
+If your issue is not resolved after you remove the add-ins, go to method 4.
+  
 ### Method 4: Test disabling Preview/Details Pane in Windows 7
 
-If you are running Windows 7, try disabling the preview and details panes in Windows. You will have to disable them in three locations.  
+If you are running Windows 7, try disabling the preview and details panes in Windows. You will have to disable them in three locations.  
 
 Windows Explorer:
 
@@ -139,24 +139,24 @@ Excel:
 1. Click Organize | Layout.
 1. Uncheck Details Pane and Preview Pane.
 
-If your issue isn't resolved after you turn off preview and details panes, go to method 5.
+If your issue isn't resolved after you turn off preview and details panes, go to method 5.
 
 ### Method 5: Test a different Default Printer
 
-When Excel launches, it uses the default printer to help render the file. Try testing with the "Microsoft XPS Document Writer" as the default printer and see if we continue to get the error. To do so, follow these steps:
+When Excel launches, it uses the default printer to help render the file. Try testing with the "Microsoft XPS Document Writer" as the default printer and see if we continue to get the error. To do so, follow these steps:
 
 1. Close Excel.
 2. Open the printer and faxes window (XP) or Devices and Printers (Vista, 7, 8, 10).
 3. Right-click the "Microsoft XPS Document Writer" printer.
 4. Click Set as Default.
 
-If your issue isn't resolved after you change your default printer, go to method 6.
+If your issue isn't resolved after you change your default printer, go to method 6.
 
 ### Method 6: Test without Antivirus
 
-Antivirus can sometimes cause problems by continuously trying to scan the Excel file or something in the file. Many times the memory error will be random and will be found with any spreadsheet. Test this by shutting off the antivirus temporarily, or by not having Excel files scanned. In some cases, the AV will need to be removed.  
+Antivirus can sometimes cause problems by continuously trying to scan the Excel file or something in the file. Many times the memory error will be random and will be found with any spreadsheet. Test this by shutting off the antivirus temporarily, or by not having Excel files scanned. In some cases, the AV will need to be removed.  
 
-If your issue is not resolved after you turn off antivirus, go to method 7.
+If your issue is not resolved after you turn off antivirus, go to method 7.
 
 ### Method 7: Test with 64-bit version of Excel
 
@@ -178,7 +178,7 @@ Additional article
 
 [Excel cannot complete this task with available resources error, Excel 2010](https://support.microsoft.com/help/2655178)
 
-If the information in this article did not help resolve the error in Excel, select one of the following options:  
+If the information in this article did not help resolve the error in Excel, select one of the following options:  
 
 - More Microsoft online articles:
  [Perform a search to find more online articles about this specific error](https://support.microsoft.com/)

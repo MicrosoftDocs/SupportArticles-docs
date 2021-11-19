@@ -36,12 +36,12 @@ When you use one of the following methods to call a user in Microsoft Lync 2013 
 
 ## Cause
 
-This issue may occur in the following scenario: 
+This issue may occur in the following scenario: 
 
 - The user is included in the contact list.   
 - The user has explicitly blocked his or her photo from being published.   
 - You have to scroll down in order to see the affected user.   
-- The user has at least one associated phone number.   
+- The user has at least one associated phone number.   
 
 ### Hotfix or update information
 
@@ -51,7 +51,7 @@ This issue may occur in the following scenario: 
 
 To work around this issue, use one of the following methods as a user with admin permissions:
 
-- Make sure that the **Show my picture** option is enabled for all users, even if they haven't published a photo:
+- Make sure that the **Show my picture** option is enabled for all users, even if they haven't published a photo:
 
   ![Enable show my picture](./media/contacts-telephone-numbers-missing/enable-show-my-picture.jpg)
 

@@ -24,24 +24,24 @@ _Original KB number:_ &nbsp; 4056663
 
 ## Symptoms
 
-When you open EMS, you receive the following error message:
+When you open EMS, you receive the following error message:
 
 > [SetupVersionInformationCorruptException]Unable to determine the installed file version from the registry key
 
 ## Cause
 
-This issue can occur after you uninstall PowerShell 2.0. When you uninstall PowerShell 2.0, the uninstall process also removes the following registry key that EMS uses to determine whether PowerShell is installed:
+This issue can occur after you uninstall PowerShell 2.0. When you uninstall PowerShell 2.0, the uninstall process also removes the following registry key that EMS uses to determine whether PowerShell is installed:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\PowerShellEngine`
 
-## Workaround 1 - Import the registry key
+## Workaround 1 - Import the registry key
 
-1. Download the [PowerShellEngine registry key](https://gallery.technet.microsoft.com/Exchange-2016-CU1-7c843cb0#content).
-2. Import the registry key into the server.
+1. Download the [PowerShellEngine registry key](https://gallery.technet.microsoft.com/Exchange-2016-CU1-7c843cb0#content).
+2. Import the registry key into the server.
 
 ## Workaround 2 - Reinstall PowerShell 2.0
 
-To install PowerShell 2.0, see [Installing the Windows PowerShell 2.0 Engine](/powershell/scripting/windows-powershell/install/installing-the-windows-powershell-2.0-engine?view=powershell-7).
+To install PowerShell 2.0, see [Installing the Windows PowerShell 2.0 Engine](/powershell/scripting/windows-powershell/install/installing-the-windows-powershell-2.0-engine).
 
 ## Status
 

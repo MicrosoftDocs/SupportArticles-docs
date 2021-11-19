@@ -1,7 +1,7 @@
 ---
 title: Use Support and Recovery Assistant to collect data about Microsoft 365 Apps installations
 description: Explains how the Microsoft Support and Recovery Assistant uses Robust Office Inventory Scan (ROIScan) to collect information about Microsoft 365 apps installations. 
-author: v-matham
+author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -13,7 +13,7 @@ ms.custom:
 - CI 144048
 - CI 147050
 ms.prod: office-perpetual-itpro
-ms.author: v-matham
+ms.author: v-matthamer
 appliesto:
 - Office 365
 - Office 2016
@@ -62,16 +62,16 @@ To install Support and Recovery Assistant and automatically start collecting ROI
 After Support and Recovery Assistant is successfully installed, collect the ROIScan data:
 
 1. Select **Advanced diagnostics** > **Next**.<br/>
-:::image type="content" source="./media/use-sara-to-collect-install-info/open-screen.png" alt-text="Advanced Diagnostics window choose next":::
+:::image type="content" source="media/use-sara-to-collect-install-info/open-screen.png" alt-text="Screenshot of the Support and Recovery Assistant window with Advanced diagnostics selected.":::
 
 1. Select **Office** > **Next**.<br/>
-:::image type="content" source="./media/use-sara-to-collect-install-info/advanced-diagnostics.png" alt-text="Select Office and then Next.":::
+:::image type="content" source="media/use-sara-to-collect-install-info/advanced-diagnostics.png" alt-text="Screenshot of the Support and Recovery Assistant window with Office selected.":::
 
 1. Select **Normal Robust Office Inventory Scan** or **Full Robust Office Inventory Scan**.
-:::image type="content" source="./media/use-sara-to-collect-install-info/select-diagnostic.png" alt-text="Choose whether to run normal or full scan":::
+:::image type="content" source="media/use-sara-to-collect-install-info/select-diagnostic.png" alt-text="Screenshot to select whether to run the normal scan or the full scan.":::
  
 1. When you are prompted to confirm that you are using the affected computer, select **Yes** > **Next**.
-:::image type="content" source="./media/use-sara-to-collect-install-info/affected-machine.png" alt-text="Confirm you are using the affected computer":::
+:::image type="content" source="media/use-sara-to-collect-install-info/affected-machine.png" alt-text="Screenshot to confirm you're using the affected computer.":::
 
    After you select **Next**, you might be prompted for a Support and Recovery Assistant restart in order to validate the user or admin permissions.
 

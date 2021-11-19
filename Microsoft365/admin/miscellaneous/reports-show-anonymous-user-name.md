@@ -41,7 +41,7 @@ Starting September 1, 2021, we're hiding user information by default for all rep
 
 ## Resolution
 
-To resolve this issue, change the following account setting in the Microsoft 365 admin center.
+To resolve this issue, change the following account setting in the Microsoft 365 admin center.
 
 > [!NOTE]
 > You must be a Microsoft 365 tenant administrator.

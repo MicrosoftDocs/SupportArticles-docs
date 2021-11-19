@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 3035127
 
 When you view an Apps for Outlook app in Microsoft Outlook 2016 or Outlook 2013, the app does not load correctly, as shown in the following screenshot.
 
-:::image type="content" source="media/apps-for-outlook-app-does-not-load-data/apps-for-outlook-app-not-loading-correctly.png" alt-text="Apps for Outlook app not loading correctly" border="false":::
+:::image type="content" source="media/apps-for-outlook-app-does-not-load-data/apps-for-outlook-app-not-loading-correctly.png" alt-text="Screenshot shows Bing Maps for Outlook app not loading correctly." border="false":::
 
 > [!NOTE]
 > This image shows an example of the issue in the Bing Maps app. However, other apps may also be affected.

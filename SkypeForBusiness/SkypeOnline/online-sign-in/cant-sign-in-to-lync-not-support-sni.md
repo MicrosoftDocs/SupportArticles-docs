@@ -29,7 +29,7 @@ When you use Active Directory Federation Services 3.0 (ADFS) as an identity fede
 
 To work around this issue as a Skype for Business administrator, associate the SSL certificate with the ADFS web URL for each ADFS server in your environment. To do this, follow these steps:
 
-1. Run the following command on the ADFS servers: 
+1. Run the following command on the ADFS servers: 
 
     ```powershell
     netsh http show sslcert 
@@ -44,7 +44,7 @@ To work around this issue as a Skype for Business administrator, associate the S
     ```
     > [!NOTE]
     > - Replace the IP address in this command (0.0.0.0) with the IP address that you want to specify. Also replace the port value with the specific port that's configured for the website. This is typically 443 for ADFS 3.0. For most customers, binding the SSL certificate to all IP addresses is recommended.   
-    > - The **appid** value must include the braces.    
+    > - The **appid** value must include the braces.    
    
 For more information about these commands, go to the following Microsoft websites:
 
@@ -55,11 +55,11 @@ For more information about these commands, go to the following Microsoft website
 
 This issue occurs when the following conditions are true:
 
-- You have a Windows Server 2012 R2-based server that has ADFS 3.0 installed.    
+- You have a Windows Server 2012 R2-based server that has ADFS 3.0 installed.    
 - There's a new Server Name Indication (SNI) feature in ADFS 3.0, but some platforms don't support this yet. Support for SNI depends on the device's operating system in question. Although the clients themselves support this new feature, the device platform may not.   
 
 > [!NOTE]
-> If you need help configuring ADFS 3.0, we recommend that you contact ADFS 3.0 technical support. We also recommended that you run the most recent versions of the ADFS 3.0 components. 
+> If you need help configuring ADFS 3.0, we recommend that you contact ADFS 3.0 technical support. We also recommended that you run the most recent versions of the ADFS 3.0 components. 
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 

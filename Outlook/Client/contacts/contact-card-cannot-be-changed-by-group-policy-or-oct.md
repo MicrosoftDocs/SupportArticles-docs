@@ -26,11 +26,11 @@ When you use Group Policy or the Office Customization Tool (OCT) to customize th
 
 For example, you try to replace the **Department** field on the contact card with another attribute from the Active Directory Domain Services (AD DS). After you deploy this change, the Contact Card remains unchanged. All default fields remain displayed on the Contact Card. The default Contact Card fields are shown in the following figure.
 
-:::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/default-contact-card-fields.png" alt-text="Screenshot that shows the default Contact Card fields" border="false":::
+:::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/default-contact-card-fields.png" alt-text="Screenshot that shows the default Contact Card fields." border="false":::
 
 This problem occurs for all settings that you configure under the **Office 2010\Contact Card\Contact Tab** node in the settings tree. The following figure shows these settings in the Office Customization Tool.
 
-:::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/contact-tab-settings.png" alt-text="Screenshot that shows these settings in the Office Customization Tool" border="false":::
+:::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/contact-tab-settings.png" alt-text="Screenshot that shows these settings in the Office Customization Tool." border="false":::
 
 A similar tree structure for these settings is also shown in the Group Policy Management Console.
 

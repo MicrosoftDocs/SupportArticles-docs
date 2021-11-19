@@ -21,7 +21,7 @@ appliesto:
 
 ## Problem
 
-When you try to remove a domain from Microsoft Office 365 by using Windows PowerShell, you get the following error message:
+When you try to remove a domain from Microsoft Office 365 by using Windows PowerShell, you get the following error message:
 
 ```asciidoc
 Remove-MsolDomain : Unable to remove this domain. Use Get-MsolUser -DomainName<domain name> to retrieve a list of objects that are blocking removal.
@@ -37,11 +37,11 @@ This issue occurs if one or more of the following conditions are true:
 
 - User accounts or groups are associated with the domain.    
 - The proxies that correspond to the domain for all mail-licensed users and for all mail-enabled groups aren't removed. Office 365 blocks the deletion of a domain until the proxies that correspond to the domain are removed.   
-- Skype for Business Online (formerly Lync Online) Session Initiation Protocol (SIP) addresses are used by the domain.   
+- Skype for Business Online (formerly Lync Online) Session Initiation Protocol (SIP) addresses are used by the domain.   
 
 ## Solution
 
-Use the Microsoft 365 admin center to remove the domain. The Domain Manager in Office 365 will help admins remove any dependencies that block domain removal without having to use Windows PowerShell. 
+Use the Microsoft 365 admin center to remove the domain. The Domain Manager in Office 365 will help admins remove any dependencies that block domain removal without having to use Windows PowerShell. 
 
 For more info about how to remove a domain in the Microsoft 365 admin center, go to [Remove a domain](/microsoft-365/admin/get-help-with-domains/remove-a-domain). 
 
@@ -84,7 +84,7 @@ To check email addresses, follow these steps:
    ```powershell
    get-recipient | where {$_.EmailAddresses -match "contoso.com"} | fl Name, RecipientType, EmailAddresses
    ```       
-3. In the output, note the value of the EmailAddresses property and the RecipientTypeproperty. For example, the output may resemble the following:     
+3. In the output, note the value of the EmailAddresses property and the RecipientTypeproperty. For example, the output may resemble the following:     
    ```asciidoc
    Name : John Smith RecipientType : UserMailbox EmailAddresses : {SIP:john@contoso.com, SMTP:john@contoso.com,   smtp:john@contoso.onmicrosoft.com}
    ```

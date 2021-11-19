@@ -60,13 +60,13 @@ If you are not sure where to create a batch or you are not sure if you have an e
 
 If you are needing to create a new IMAP migration batch, you can select the + to get started. For more information, see [What you need to know about migrating your IMAP mailboxes to Microsoft 365 or Office 365](/Exchange/mailbox-migration/migrating-imap-mailboxes/migrating-imap-mailboxes) on how to create an IMAP migration batch.
 
-If you have an existing batch, and it's not started, you can highlight the batch and then select the play ![play button](./media/troubleshoot-issues-with-imap-mailbox-migration/play-button.png) button.
+If you have an existing batch, and it's not started, you can highlight the batch and then select the play :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/play-button.png" border="false"::: button.
 
-:::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/start-an-existing-batch.png" alt-text="start an existing batch":::
+:::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/start-an-existing-batch.png" alt-text="Screenshot of starting an existing batch.":::
 
 Select **yes** on the pop-up box to start it.
 
-:::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/warning.png" alt-text="warning text" border="false":::
+:::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/warning.png" alt-text="Screenshot of the warning text for migration batch.":::
 
 **Were you able to successfully create and/or start the batch?**
 
@@ -219,7 +219,7 @@ If you have additional mailboxes that you have not yet migrated, you can use the
 
 1. When creating the IMAP migration batch, make sure to exclude the **[Gmail]** folder as shown below. See [What you need to know about migrating your IMAP mailboxes to Microsoft 365 or Office 365](/Exchange/mailbox-migration/migrating-imap-mailboxes/migrating-imap-mailboxes) for how to create an IMAP migration batch.
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/creat-new-imap-migration-batch.png" alt-text="creating an IMAP migration batch" border="false":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/creat-new-imap-migration-batch.png" alt-text="Screenshot of creating an IMAP migration batch.":::
 
 2. Remove the labels from all emails in the source mailbox.
 
@@ -258,7 +258,7 @@ If you are migrating from Gmail/Google Apps, email duplication is known to occur
        > [!NOTE]
        > A warning box will pop up asking you if you want to stop the batch. Select **yes** and wait until the status of the batch says **Stopped**.
 
-    4. Select **Delete** ![the delete icon](./media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png).
+    4. Select **Delete** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png" border="false":::.
 
         > [!NOTE]
         > A warning box will pop up asking you if you want to delete the batch. Select **yes**.
@@ -276,7 +276,7 @@ If you are migrating from Gmail/Google Apps, email duplication is known to occur
 
 4. Recreate the batch, making sure to exclude the **[Gmail]** folder as shown below:
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/creat-new-imap-migration-batch.png" alt-text="recreate a new batch." border="false":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/creat-new-imap-migration-batch.png" alt-text="Screenshot of recreating a new batch.":::
 
 > [!NOTE]
 > See [What you need to know about migrating your IMAP mailboxes to Microsoft 365 or Office 365](/Exchange/mailbox-migration/migrating-imap-mailboxes/migrating-imap-mailboxes) for steps on how to create an IMAP migration batch.
@@ -305,7 +305,7 @@ Some problems can be fixed by removing and recreating the batch. Below are steps
 2. Highlight the migration batch and select the stop button.
    > [!NOTE]
    > A warning box will pop up asking you if you want to stop the batch. Select **yes** and wait until the status of the batch says **Stopped**.
-3. Select **Delete** ![the Delete icon](./media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png).
+3. Select **Delete** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png" border="false":::.
 
    > [!NOTE]
    > A warning box will pop up asking you if you want to delete the batch. Select **yes**.
@@ -340,7 +340,7 @@ Sometimes the connection settings in an existing IMAP migration endpoint can cha
 
 1. In the EAC, navigate to **Recipients** > **Migration**.
 2. Select **More...** and then select **Migration** **endpoints**.
-3. Highlight the existing migration endpoint and select **Delete** ![the Delete icon](./media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png).
+3. Highlight the existing migration endpoint and select **Delete** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png" border="false":::.
 
    > [!NOTE]
    > If you have more than one IMAP migration endpoint, delete the appropriate one.
@@ -369,8 +369,8 @@ Below are the steps on how to add the account to the appropriate role group so t
 
 1. Sign in to the [Exchange Administration Center](https://outlook.office365.com/ecp/) (EAC) with the Office 365 tenant administrator credentials.
 2. In the EAC, navigate to **Permissions** > **Admin Roles**.
-3. Select the role group you want to add members to, and then select **Edit** ![the Edit icon](./media/troubleshoot-issues-with-imap-mailbox-migration/edit-icon.png).
-4. In the Members section, select **Add** ![the Add icon](./media/troubleshoot-issues-with-imap-mailbox-migration/add-icon.png).
+3. Select the role group you want to add members to, and then select **Edit** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/edit-icon.png" border="false":::.
+4. In the Members section, select **Add** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/add-icon.png" border="false":::.
 5. Select the user you want to add to the role group, select **Add**, and then select **OK**.
 6. Select **Save** to save the changes to the role group.
 
@@ -415,7 +415,7 @@ If you have confirmed that the super user account has the correct permissions, t
 Below are some of the possible errors you can run into while attempting to create/start an IMAP migration batch. If an error pops up when you select the CSV file, during the batch creation, then go to the CSV errors section for troubleshooting assistance. Otherwise select the appropriate option.
 
 - [The connection to the server Servername.contoso.com timed out...](#the-connection-to-the-server-servernamecontosocom-timed-out)
-- [Connection to the server couldn’t be completed](#the-connection-to-the-server-could-not-be-completed)
+- [Connection to the server couldn't be completed](#the-connection-to-the-server-could-not-be-completed)
 - [CSV errors](#csv-errors)
 - [Batch \<name> already exists](#the-migration-batch-batch-name-already-exists)
 
@@ -468,7 +468,7 @@ If you are using an existing IMAP migration endpoint, remove and recreate the en
 
 1. In the EAC, navigate to **Recipients** > **Migration**.
 2. Select **More...** and then select **Migration** **endpoints**.
-3. Highlight the existing IMAP migration endpoint and select **Delete** ![the Delete icon](./media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png).
+3. Highlight the existing IMAP migration endpoint and select **Delete** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png" border="false":::.
    > [!NOTE]
    > If you have more than one endpoint, delete the appropriate one.
 4. Select the **yes** button in the warning page asking you if you want to delete the endpoint.
@@ -492,7 +492,7 @@ If you are using an existing IMAP migration endpoint, remove and recreate the en
 
 ### The connection to the server could not be completed
 
-You will encounter the below error when you are specifying the IMAP server's FQDN while creating either the IMAP migration endpoint, creating a batch when there are no existing IMAP endpoints, or you have an existing IMAP endpoint where the FQDN no longer resolves in DNS. Verify the IMAP server FQDN is correct and can be resolved publically in DNS.
+You will encounter the below error when you are specifying the IMAP server's FQDN while creating either the IMAP migration endpoint, creating a batch when there are no existing IMAP endpoints, or you have an existing IMAP endpoint where the FQDN no longer resolves in DNS. Verify the IMAP server FQDN is correct and can be resolved publicly in DNS.
 
 The connection to the server `imap.contoso.com` could not be completed.
 
@@ -503,9 +503,9 @@ If you are creating the IMAP migration batch, and you have no existing IMAP endp
 3. Select the **+** and choose **Migrate to Exchange Online**.
 4. Select **IMAP migration** and select **next**.
 5. Select **Choose file**, select the CSV file for the migration, and select **next**.
-6. Enter the publically resolvable FQDN of the IMAP server as shown below and continue with creating the migration batch.
+6. Enter the publicly resolvable FQDN of the IMAP server as shown below and continue with creating the migration batch.
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server.png" alt-text="Enter FQDN of the IMAP server 1":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server.png" alt-text="A screenshot of entering F Q D N of the I M A P server.":::
 
 If you are creating an IMAP migration endpoint, follow the below steps to specify the appropriate public FQDN:
 
@@ -514,9 +514,9 @@ If you are creating an IMAP migration endpoint, follow the below steps to specif
 3. Select the **...** and select **Migration** **endpoints**.
 4. Select **+** to create a new migration endpoint.
 5. Select **IMAP** and select **next**.
-6. Enter the publically resolvable FQDN of the IMAP server as shown below and continue with creating the migration endpoint.
+6. Enter the publicly resolvable FQDN of the IMAP server as shown below and continue with creating the migration endpoint.
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server-2.png" alt-text="Enter FQDN of the IMAP server 2":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server-2.png" alt-text="Another screenshot of entering F Q D N of the I M A P server.":::
 
 If you are creating the IMAP migration batch, and have an existing IMAP endpoint, follow the below steps to determine what the public FQDN of the IMAP server is:
 
@@ -524,9 +524,9 @@ If you are creating the IMAP migration batch, and have an existing IMAP endpoint
 2. Go to **recipients** > **migration**.
 3. Select the ... and select **Migration** **endpoints**.
 4. Select on the appropriate IMAP migration endpoint.
-5. You will see the FQDN of the IMAP server. If it is incorrect, or no longer publically resolvable, you will need to either remove and recreate the IMAP migration endpoint with an FQDN that is publicly resolvable or you will need to create a host (A) record that resolves the FQDN of your existing IMAP migration endpoint to the public IP of the IMAP server.
+5. You will see the FQDN of the IMAP server. If it is incorrect, or no longer publicly resolvable, you will need to either remove and recreate the IMAP migration endpoint with an FQDN that is publicly resolvable or you will need to create a host (A) record that resolves the FQDN of your existing IMAP migration endpoint to the public IP of the IMAP server.
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/find-fqdn-of-imap-server.png" alt-text="Enter FQDN of the IMAP server 3":::
+    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/find-fqdn-of-imap-server.png" alt-text="Screenshot that shows F Q D N of the I M A P server.":::
 
 **Did this solve your problem?**
 
@@ -742,15 +742,15 @@ The Office 365 Network Analysis Tool is designed to help analyze networking rela
 2. You may then be prompted to install an ActiveX control. If so, install it.
 3. Once you install it, you will get a security warning as shown below. Select **OK**.
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/security-warning.jpg" alt-text="security warning shown after installation" border="false":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/security-warning.png" alt-text="Screenshot of the security warning that is displayed after installation.":::
 
 4. Install [Java](https://www.java.com/download/) and reboot.
 5. After the machine reboots, go back to the appropriate regional URL listed above. You will then be prompted to run the application as shown below:
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/prompted-waring-to-run-this-application.png" alt-text="a security warning prompted to run the application" border="false":::
+    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/prompted-waring-to-run-this-application.png" alt-text="Screenshot of a security warning prompted to run the application.":::
 6. Once you install the application, you will then enter the Office 365 tenant name in the Office 365 Network Analysis tool as shown below:
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-office-365-tenant-name.png" alt-text="enter the Office 365 tenant name in the Office 365 Network Analysis tool " border="false":::
+    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-office-365-tenant-name.png" alt-text="Screenshot of entering the Office 365 tenant name in the Office 365 Network Analysis tool.":::
 
 For more information on IMAP migration performance and best practices, see [Microsoft 365 and Office 365 email migration performance and best practices](/Exchange/mailbox-migration/office-365-migration-best-practices).
 
@@ -773,7 +773,7 @@ First you will need to log into the [EAC](https://outlook.office365.com/ecp/) us
 
    > [!NOTE]
    > A warning box will pop up asking you if you want to stop the batch. Select **yes** and wait until the status of the batch says **Stopped**.
-3. Select **Delete** ![the Delete icon](./media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png).
+3. Select **Delete** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/delete-icon.png" border="false":::.
 
    > [!NOTE]
    > A warning box will pop up asking you if you want to delete the batch. Select **yes**.

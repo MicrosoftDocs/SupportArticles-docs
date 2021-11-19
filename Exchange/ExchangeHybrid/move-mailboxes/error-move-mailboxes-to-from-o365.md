@@ -38,7 +38,7 @@ You were previously able to successfully move mailboxes to or from Office 365 an
 
 This issue occurs if the Web.config file was overwritten during the upgrade from Exchange Server 2010 Service SP1 to Exchange Server 2010 SP2 or later. Remote mailbox moves require the Mailbox Replication Proxy (MRSProxy) service endpoint to be enabled on the Client Access server. In Exchange Server 2010 SP1 and Exchange Server 2010, the MRSProxy setting is configured in the Web.config file.
 
-In Exchange Server 2010 SP2 or later, the MRSProxy settings are stored in Active Directory and are configured by using the `Set-WebServicesVirtualDirectoryWindows` PowerShell cmdlet.
+In Exchange Server 2010 SP2 or later, the MRSProxy settings are stored in Active Directory and are configured by using the `Set-WebServicesVirtualDirectoryWindows` PowerShell cmdlet.
 
 > [!NOTE]
 > There are several possible causes of this error message. This article discusses one scenario that may cause this error message.

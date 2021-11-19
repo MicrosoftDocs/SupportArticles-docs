@@ -26,14 +26,14 @@ appliesto:
 Consider the following scenario in Microsoft Excel:
 
 - You create a table that has two or more columns of data on a worksheet.   
-- You insert a new PivotTable into the worksheet that is based on the new table's data.   
+- You insert a new PivotTable into the worksheet that is based on the new table's data.   
 - You enter a formula by using either of the following database functions:
   - DCOUNT   
   - DSUM   
    
-- You use the PivotTable's cell references for the database parameter of the database function. And, you use the cell reference for the column in the PivotTable for the field parameter of the database function. 
+- You use the PivotTable's cell references for the database parameter of the database function. And, you use the cell reference for the column in the PivotTable for the field parameter of the database function. 
 
-  For example, consider the following scenario. The PivotTable is in cells C10:F20. The targeted column is F10, and this column has the column label of "Total." The database table on which the PivotTable is based is in N1:Q10. The criteria for the function are H2:H12. The DCOUNT function parameters are as follows:
+  For example, consider the following scenario. The PivotTable is in cells C10:F20. The targeted column is F10, and this column has the column label of "Total." The database table on which the PivotTable is based is in N1:Q10. The criteria for the function are H2:H12. The DCOUNT function parameters are as follows:
 
   database= C10:F20
 
@@ -50,7 +50,7 @@ Consider the following scenario in Microsoft Excel:
 
 ##  Cause
 
-This problem occurs because the field parameter of the DCOUNT and DSUM functions cannot use a cell reference or a column label to retrieve data from the database table. When you use the DCOUNT and the DSUM functions on a PivotTable, the field parameter can only use a number to represent the position of the column within the list. For example, the parameter can use 1 for the first column, 2 for the second column, and so on. Do not use quotation marks around the number.
+This problem occurs because the field parameter of the DCOUNT and DSUM functions cannot use a cell reference or a column label to retrieve data from the database table. When you use the DCOUNT and the DSUM functions on a PivotTable, the field parameter can only use a number to represent the position of the column within the list. For example, the parameter can use 1 for the first column, 2 for the second column, and so on. Do not use quotation marks around the number.
 
 ##  Workaround
 

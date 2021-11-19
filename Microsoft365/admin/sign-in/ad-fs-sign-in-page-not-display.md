@@ -45,7 +45,7 @@ Before you begin to resolve this issue, determine the AD FS endpoint address for
 
 To do this, follow these steps on a domain-connected computer that has Azure Active Directory Module for Windows PowerShell installed:
 
-1. Run the Azure Active Directory Module for Windows PowerShell as an elevated admin. To do this, right-click **Windows Azure Active Directory Module for Windows PowerShell**, and then click **Run as administrator**.   
+1. Run the Azure Active Directory Module for Windows PowerShell as an elevated admin. To do this, right-click **Windows Azure Active Directory Module for Windows PowerShell**, and then click **Run as administrator**.   
 2. Type the following commands. Press Enter after you type each command:
 
     ```powershell

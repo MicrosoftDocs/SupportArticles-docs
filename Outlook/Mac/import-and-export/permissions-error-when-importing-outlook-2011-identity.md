@@ -44,7 +44,7 @@ To resolve this issue, follow these steps:
 
 3. Type chmod -R 755 <**Identity_Name**>, and then press Enter. Steps 2 and 3 are represented in this screenshot:
 
-    :::image type="content" source="media/permissions-error-when-importing-outlook-2011-identity/terminal-commands.png" alt-text="Terminal Commands for steps 2 and 3" border="false":::
+    :::image type="content" source="media/permissions-error-when-importing-outlook-2011-identity/terminal-commands.png" alt-text="Screenshot of the Outlook 2011 identity directory Terminal window after you type the commands.":::
 
     > [!NOTE]
     > If you do not know your Identity name, you can type LS in Terminal and then press Enter for a list of the Identity names.
@@ -53,7 +53,7 @@ This should set the correct permissions for your identity. You should now be abl
 
 ## More information
 
-Outlook 2016 for Mac is available with the following subscriptions:
+Outlook 2016 for Mac is available with the following subscriptions:
 
 - Office 365 Home
 - Office 365 Personal

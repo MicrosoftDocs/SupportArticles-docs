@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 3189806
 
 In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook for Office 365, Outlook 2016, and Outlook 2013, when you send an email message from another program such as Microsoft Excel, you receive the following warning message:
 
-> A program is trying to send an e-mail message on your behalf. If this is unexpected, click Deny and verify your antivirus software is up-to-date.
+> A program is trying to send an e-mail message on your behalf. If this is unexpected, click Deny and verify your antivirus software is up-to-date.
 
 ## Cause
 

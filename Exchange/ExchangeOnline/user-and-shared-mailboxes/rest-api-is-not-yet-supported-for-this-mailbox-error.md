@@ -38,7 +38,7 @@ To get a valid Office 365 mailbox, submit a request to your Exchange or Global a
 
 ## More information
 
-Outlook REST API includes the following subsets to enable access to your mailbox data in Office 365, Hotmail.com, Live.com, MSN.com, Outlook.com, and Passport.com.
+Outlook REST API includes the following subsets to enable access to your mailbox data in Office 365, Hotmail.com, Live.com, MSN.com, Outlook.com, and Passport.com.
 
 - [Batching multiple API calls](/previous-versions/office/office-365-api/api/version-2.0/batch-outlook-rest-requests)
 - [Calendar API](/previous-versions/office/office-365-api/api/version-2.0/calendar-rest-operations)

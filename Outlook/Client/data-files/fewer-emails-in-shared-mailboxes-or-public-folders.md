@@ -91,7 +91,7 @@ You can configure Outlook to keep more of your mail offline. By doing this, more
 > [!NOTE]
 > The cached mode **Sync Slider** setting is maintained in the Outlook profile settings in the Windows registry. If you want to administer this setting through Group Policy, you can use the Group Policy templates. These are available from the Microsoft website. The Group Policy template files are Outlk16.admx and Outlk16.adml. If you use Group Policy to manage this setting, the following registry data is used by Outlook:
 >
-> Subey: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Outlook\Cached Mode`  
+> Subey: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Outlook\Cached Mode`  
 > DWORD: SyncWindowSetting  
 > Value: integer value (Decimal)
 >
@@ -108,7 +108,7 @@ You can configure Outlook to keep more of your mail offline. By doing this, more
 
 ### Method 2 - Use the registry
 
-Configure the registry so that the **Mail to keep offline** setting no longer applies to shared mailboxes or public folder favorites.
+Configure the registry so that the **Mail to keep offline** setting no longer applies to shared mailboxes or public folder favorites.
 
 1. Exit Outlook.
 2. Start Registry Editor. To do this, use the appropriate method for your version of Windows.

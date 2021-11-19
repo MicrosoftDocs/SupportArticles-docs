@@ -33,10 +33,10 @@ If you don't require Producer controls and are joining as an event team member o
 
 Joining as an "Event team"** **member **with the broadcast controls** is supported only in the following Skype for Business clients: 
  
-- Skype for Business 2015 (build 15.0.4747 and later)    
-- Skype for Business 2016 (Click-to-Runbuild 16.0.4227 and later)    
+- Skype for Business 2015 (build 15.0.4747 and later)    
+- Skype for Business 2016 (Click-to-Runbuild 16.0.4227 and later)    
  
-Joining as an Event team member **without the broadcast controls** is supported only if another event team clicks **Invite More People** in the Skype for Business meeting and then selects the Skype for Business user. In this situation, the invited user can upload a Microsoft PowerPoint presentation and share audio and video. The following Skype for Business clients are supported when no broadcast controls are displayed: 
+Joining as an Event team member **without the broadcast controls** is supported only if another event team clicks **Invite More People** in the Skype for Business meeting and then selects the Skype for Business user. In this situation, the invited user can upload a Microsoft PowerPoint presentation and share audio and video. The following Skype for Business clients are supported when no broadcast controls are displayed: 
  
 - Skype for Business 2015 client (Click-to-Run)    
 - Skype for Business 2015 client (MSI)    

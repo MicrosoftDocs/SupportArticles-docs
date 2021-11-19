@@ -28,7 +28,7 @@ This article describes the error codes and corresponding descriptions of Microso
 
 ## More Information
 
-You can use the Office Repair tool to repair Office activation issues that contain the error codes that are listed in the following table:
+You can use the Office Repair tool to repair Office activation issues that contain the error codes that are listed in the following table:
 
 |Error Code|Description |
 |---|---|
@@ -145,7 +145,7 @@ You can use the Office Repair tool to repair Office activation issues that cont
 To work around the errors that are listed earlier in this document, follow these steps:
 
 1. Click **Start**, click **Run**, type appwiz.cpl, and then click **OK**.   
-2. Click to select the Office product that you installed, and then click **Change**.   
+2. Click to select the Office product that you installed, and then click **Change**.   
 3. Click the **Repair** option, and then follow the prompts to complete the repair process.
 
 ## References

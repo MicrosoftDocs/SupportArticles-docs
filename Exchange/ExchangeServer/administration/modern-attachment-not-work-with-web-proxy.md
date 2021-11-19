@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4056953
 
 ## Symptoms
 
-After you set the `InternetWebProxy` property by using the `Set-ExchangeServer` cmdlet in Microsoft Exchange Server 2016, the [modern attachment feature](/exchange/hybrid-deployment/set-up-document-collaboration) doesn't work. An event like the following is logged on the Exchange Server:
+After you set the `InternetWebProxy` property by using the `Set-ExchangeServer` cmdlet in Microsoft Exchange Server 2016, the [modern attachment feature](/exchange/hybrid-deployment/set-up-document-collaboration) doesn't work. An event like the following is logged on the Exchange Server:
 
 > **Log Name:** Application  
 > **Source:** MSExchange OWA  
@@ -39,14 +39,14 @@ After you set the `InternetWebProxy` property by using the `Set-ExchangeServer`
 
 ## Cause
 
-OAuth authentication is used between Exchange Server 2016 and the web location (such as OneDrive) that stores the attachment. The `InternetWebProxy` property isn't supported by OAuth authentication.
+OAuth authentication is used between Exchange Server 2016 and the web location (such as OneDrive) that stores the attachment. The `InternetWebProxy` property isn't supported by OAuth authentication.
 
 ## Resolution
 
 To resolve this issue, follow these steps:
 
 1. Locate and open each web.config file for the virtual directories: OWA, Mapi, EWS.
-1. Look for the proxy part of the web.config file, such as the following:
+1. Look for the proxy part of the web.config file, such as the following:
 
     ```xml
     <system.net>
@@ -55,7 +55,7 @@ To resolve this issue, follow these steps:
             <bypasslist>
     ```
 
-1. Add the proxy server with a port number, such as `http://proxy.contoso.com:8080`, and set the necessary bypass list:
+1. Add the proxy server with a port number, such as `http://proxy.contoso.com:8080`, and set the necessary bypass list:
 
     ```xml
     <system.net>
