@@ -17,7 +17,9 @@ _Original KB number:_ &nbsp; 4555846
 
 While you try to record an application, the following message is displayed:
 
-:::image type="content" source="media/recorder-not-recording-applications/recording-this-app-is-not-supported-yet.png" alt-text="Application Not supported":::
+> Recording this app is not supported yet.
+
+:::image type="content" source="media/recorder-not-recording-applications/recording-this-app-is-not-supported-yet.png" alt-text="Screenshot of the message when recording an application." border="false":::
 
 ## Verifying issue
 
