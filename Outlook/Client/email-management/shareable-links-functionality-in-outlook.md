@@ -69,7 +69,7 @@ You can manage access to shareable links, and Outlook will check whether the rec
 
 ## Errors and warnings of link permission checking
 
-Outlook checks whether the recipients of your email message can access the link. The check will be finished before you send the email message. There is no error or warning if all recipients can access the link. Otherwise, you will receive one of the three results:
+Outlook checks whether the recipients of your email message can access the link. The check will be finished before you send the email message. There is no error or warning if all recipients can access the link. Otherwise, you will receive the following error or one of the following warnings:
 
 ### Error: One or more recipients don't have access
 
@@ -80,10 +80,15 @@ The link color shows red and there's a red exclamation mark over the upper right
 In the above example, the recipient is outside of your organization and won't have access to this link. There are three options together with the information:
 
 - **Manage access**  
+
     Change who can access the link.
+
 - **Attach as a copy**  
+
     Attach the file as a copy instead if you have the permission to do so.
+
 - **Ignore**  
+
     Ignore the error, then there will be no warning before you send the email message.
 
 **Notes:**
@@ -120,7 +125,7 @@ This checking allows you to adjust your email before sending if you want all the
 
 ### Warning 3: We are still checking if recipients can access links in this message
 
-You will receive the following warning if the permission check hasn't been finished when you try to send the email.
+If the permission check hasn't been finished, you will receive the following warning when you try to send the email.
 
 :::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-warning.png" alt-text="Error message for still checking if the recipients can access links in this message.":::
 
@@ -132,17 +137,17 @@ You can skip the remaining checks and send the email anyway or not send it right
 
 You may experience the following issues when you use the functionality in Outlook.
 
-**Q:** A link shows with a gray background, but the permission checking for this link isn't working. I can't manage access on the link, or get the expected UI.
+**Q1:** A link shows with a gray background, but the permission checking for this link isn't working. I can't manage access on the link, or get the expected UI.
 
-**A:** The most common cause is that the link is sent from someone else, and you reply or forward the email message. In this case, there are a few possibilities:
+**A1:** The most common cause is that the link is sent from someone else, and you reply or forward the email message. In this case, there are a few possibilities:
 
 - The original sender of the link manually applied a gray background.
 - Your Outlook client doesn't recognize the service that the link points to, but the sender may recognize. For example, if the sender uses a custom domain to host a SharePoint site that isn't hosted on sharepoint.com), then Outlook can't recognize the site. Unless you sign in to an account associated with that domain via **File** > **Office Account** > **Connected Services**.
 - The link is [Safelink wrapped](https://support.microsoft.com/office/advanced-outlook-com-security-for-microsoft-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2) using the Microsoft standard URL prefix: `https://nam01.safelinks.protection.outlook.com`. For example, you copy a wrapped link from an email message, and paste it into a new email message. Outlook can't unwrap it to recognize the OneDrive or SharePoint file. But if the email message is viewed or previewed, and you reply or forward, Outlook can unwrap the link. If you turn off the preview pane and don't open the email message before you reply or forward, Outlook can't unwrap it.
 
-**Q:** I have a link that points to a OneDrive or SharePoint file, but there is no gray background, and I can't interact with the link as described.
+**Q2:** I have a link that points to a OneDrive or SharePoint file, but there is no gray background, and I can't interact with the link as described.
 
-**A:** Here are several reasons:
+**A2:** Here are several reasons:
 
 - The link isn't shareable. When you first insert the link, Outlook checks with the server what the link points to. If Outlook can't manage access or check permissions for the location the link points to (for example, a web page hosted on sharepoint.com), then it appears as a normal hyperlink.
 
@@ -152,9 +157,9 @@ You may experience the following issues when you use the functionality in Outloo
 - The link may be [Safelink wrapped](https://support.microsoft.com/office/advanced-outlook-com-security-for-microsoft-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2), and Outlook can't check whether the link pointing to OneDrive or SharePoint.
 - The link is for the consumer version of OneDrive, but only the business version is supported now.
 
-**Q:** What warnings that Outlook might give me if it can't check whether my recipients can access to my links?
+**Q3:** What warnings that Outlook might give me if it can't check whether my recipients can access to my links?
 
-**A:** Here are some common reasons why Outlook can't check whether your recipients have access to the links:
+**A3:** Here are some common reasons why Outlook can't check whether your recipients have access to the links:
 
 - Outlook is working offline
 
@@ -174,16 +179,16 @@ You may experience the following issues when you use the functionality in Outloo
 
     **Note:** Each recipient inside of a distribution list counts towards the limit.
 
-**Q:** I reply to someone's email message and notice that one of the links they sent me is red. Why didn't I get a warning before sending the email message?
+**Q4:** I reply to someone's email message and notice that one of the links they sent me is red. Why didn't I get a warning before sending the email message?
 
-**A:** The sender may not have access to the link. This issue may happen if they forward you an email message with a link that they didn't open. For example, if they use an earlier version of Outlook (or a different email client), they may not be warned before sending you the email message.
+**A4:** The sender may not have access to the link. This issue may happen if they forward you an email message with a link that they didn't open. For example, if they use an earlier version of Outlook (or a different email client), they may not be warned before sending you the email message.
 
 If you reply to the original sender, Outlook doesn't warn you about it before you send the reply. However, if you add more links, make changes to the existing links, or add new recipients, then Outlook will warn you before sending if any links don't work for any of your recipients.
 
-**Q:** I don't see the **Recipients of this message** option when I try to manage access for a link in a meeting invitation.
+**Q5:** I don't see the **Recipients of this message** option when I try to manage access for a link in a meeting invitation.
 
-**A:** It's currently unavailable.
+**A5:** It's currently unavailable.
 
-**Q:** Can I turn off this functionality?
+**Q6:** Can I turn off this functionality?
 
-**A:** There's no way to disable the functionality now.
+**A6:** There's no way to disable the functionality now.
