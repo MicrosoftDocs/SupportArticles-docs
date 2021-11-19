@@ -35,7 +35,7 @@ In this scenario, you receive an error message that resembles the following:
 
 > Changes to the meeting cannot be saved. The meeting has been updated by another person. Close and reopen the meeting, and then make your updates. The operation cannot be performed because the message has been changed.
 
-:::image type="content" source="media/operation-cannot-be-performed-error/error-details.png" alt-text="the error details" border="false":::
+:::image type="content" source="media/operation-cannot-be-performed-error/error-details.png" alt-text="Screenshot of the Changes cannot be saved error details." border="false":::
 
 Additionally, you may notice that the meeting isn't displayed on the delegator's calendar. However, the meeting invitation is successfully delivered to the attendees.
 
@@ -64,7 +64,7 @@ To set the Autosave feature, follow these steps:
 
 The value range for **AutoSave** is from **1** to **99** minutes. Consider increasing the value to 10 minutes or more to allow more time to change the meeting contents.
 
-:::image type="content" source="media/operation-cannot-be-performed-error/automatically-save-checkbox.png" alt-text="the Automatically save check box" border="false":::
+:::image type="content" source="media/operation-cannot-be-performed-error/automatically-save-checkbox.png" alt-text="Screenshot of Mail settings in Outlook Options." border="false":::
 
 Additionally, delegates can consider using Outlook on the Web (OWA) to create meetings. OWA is not affected by this problem.
 

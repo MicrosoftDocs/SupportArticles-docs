@@ -43,7 +43,7 @@ To learn how Outlook detects your antivirus status, follow these steps:
 3. Select **Programmatic Access**.
 4. View the **Antivirus status** that's listed in this window. If the status is anything other than **Valid**, follow the appropriate steps to enable your antivirus program, or update your antivirus program as necessary.
 
-   :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/antivirus-status.png" alt-text="Antivirus status" border="false":::
+   :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/antivirus-status.png" alt-text="Screenshot of the Trust Center dialog, where Antivirus status valid is highlighted in Programmatic Access entry.":::
 
 ## Resolution Method 2 - Change the Programmatic Access Security setting in Outlook
 
@@ -52,7 +52,7 @@ To learn how Outlook detects your antivirus status, follow these steps:
 3. Select **Programmatic Access**.
 4. Select the option that you prefer. If you want to stop these warning messages permanently, select the **Never warn me about suspicious activity (not recommended)** option.
 
-    :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/never-warn-me-about-suspicious-activity-not-recommended-option.png" alt-text="Never warn me about suspicious activity (not recommended)" border="false":::
+    :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/never-warn-me-about-suspicious-activity-not-recommended-option.png" alt-text="Screenshot shows the Never warn me about suspicious activity (not recommended) option is selected in Programmatic Access Security area.":::
 
     > [!NOTE]
     > If these options are not available, exit Outlook, and then start Outlook again in elevated mode. To do this, type Outlook on the desktop or in the **Start Search** box, right-click the **Microsoft Outlook** search result, select **Properties**, select the **Compatibility** tab, and then select **Run this program as an administrator**.
@@ -101,5 +101,5 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 
     |Click-to-Run Office installation|MSI-based Office installation|
     |---|---|
-    |![Click-to-Run Office installation](./media/a-program-is-trying-to-send-an-email-message-on-your-behalf/click-to-run-office-installation.png)|![MSI-based Office installation](./media/a-program-is-trying-to-send-an-email-message-on-your-behalf/msi-based-office-installation.png)|
+    |  :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/click-to-run-office-installation.png" alt-text="Screenshot of the Click-to-Run Office installation information, showing the Update Options item.":::|:::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/msi-based-office-installation.png" alt-text="Screenshot of the MSI-based Office installation information. No Update Options item.":::|
     |||

@@ -33,7 +33,7 @@ When you try to open a file in any Microsoft Office program that’s listed in t
 
 > A DDE error has occurred, and a description of the error cannot be displayed because it is too long. If the filename or path is long, try renaming the file or copying it to a different folder.
 
-:::image type="content" source="./media/error-open-document/error.jpg" alt-text="Error message":::
+:::image type="content" source="media/error-open-document/error.png" alt-text="Screenshot of the error message." border="false":::
 
 > [!NOTE]
 > This issue occurs when you open a file from a mapped drive, a UNC path, or a URL (web address).
@@ -64,11 +64,11 @@ To work around this issue, try any of the following workarounds.
 1. Start Word, Excel, or PowerPoint.
 2. On the **File** tab, select **Open** > **Browse** to locate the damaged file.
 
-    :::image type="content" source="./media/error-open-document/open.jpg" alt-text="Open dialog box":::
+    :::image type="content" source="media/error-open-document/open.png" alt-text="Screenshot of opening a dialog box.":::
 
 3. Select the file, select the **Open** menu at the bottom of the window, and then select **Open and Repair**.
 
-    :::image type="content" source="./media/error-open-document/open-and-repair.jpg" alt-text="Open and Repair":::
+    :::image type="content" source="media/error-open-document/open-and-repair.png" alt-text="Screenshot of the Open and Repair option.":::
 
 This option repairs the damage to the file, and then opens the file. After you repair the document, workbook, or presentation, it’s important to verify that the issue has been resolved successfully. To do this, begin working on the file, and make sure that everything is working as expected.
 
@@ -84,7 +84,7 @@ You might be able to rescue a damaged file by resaving it in a different file fo
 4. Navigate to the file location that you want to save in.
 5. On the **Save as type** list, select the desired file format. For example, select **Rich Text Format (*rtf)**.
 
-    :::image type="content" source="./media/error-open-document/save-as.jpg" alt-text="Save as":::
+    :::image type="content" source="media/error-open-document/save-as.png" alt-text="Screenshot of the Save As option.":::
 
 6. Select **Save**, and then select **File** > **Close**.
 
@@ -96,7 +96,7 @@ You might be able to rescue a damaged file by resaving it in a different file fo
 4. On the **Save as** type list, select **Word Document**.
 5. Rename the file, and then select **Save**.
 
-     :::image type="content" source="./media/error-open-document/save-a-copy.jpg" alt-text="Save a copy":::
+     :::image type="content" source="media/error-open-document/save-a-copy.png" alt-text="Screenshot of the Save a Copy option.":::
 
 You have to do this only one time to make sure that the document will now function correctly on your device. However, keep in mind that by saving the file as a new document, you are creating a different file. To avoid confusion, name the new file something distinctive, and archive or delete the damaged version. By doing this, you won’t accidentally re-open the original file that hasn’t been reformatted.
 
@@ -113,9 +113,9 @@ For example, in Word, you want to view a PDF file that’s attached to an email 
 
     > [!NOTE]
     > If this works, and you would like the selected program to always open this type of file, select the **Always use this app to open .docx files** (for example) check box.
-    :::image type="content" source="./media/error-open-document/always-use-this-app.jpg" alt-text="Always use this app":::
+    :::image type="content" source="media/error-open-document/always-use-this-app.png" alt-text="Screenshot of the Always use this app to open .docx files checkbox.":::
 
-For more information about file formats and how to manage them, see  [Learn about file formats](https://support.office.com/article/Learn-about-file-formats-56DC3B55-7681-402E-A727-C59FA0884B30).
+For more information about file formats and how to manage them, see [Learn about file formats](https://support.office.com/article/Learn-about-file-formats-56DC3B55-7681-402E-A727-C59FA0884B30).
 
 ### Workaround 5: Clear some disk space
 
@@ -124,15 +124,15 @@ You might not be able to open a new file or save a file to your device if you’
 1. Select **Search**, and type **Disk Cleanup**.
 2. In the results list, select **Disk Cleanup**.
 
-    :::image type="content" source="./media/error-open-document/disk-cleanup.jpg" alt-text="Disk Cleanup":::
+    :::image type="content" source="media/error-open-document/disk-cleanup.png" alt-text="Screenshot of Disk Cleanup.":::
 
 3. A dialog box opens and provides options to delete unnecessary files. Select the check box next to each category of items that you want to delete from your device, and then select **OK**. Everything in this list can be deleted safely.
 
-    :::image type="content" source="./media/error-open-document/disk-cleanup-c.jpg" alt-text="Disk Cleanup for C disk":::
+    :::image type="content" source="media/error-open-document/disk-cleanup-c.png" alt-text="Screenshot of Disk Cleanup for Local Disk (C:).":::
 
 4. When you are prompted, confirm that you want to permanently delete the unnecessary files.
 
-    :::image type="content" source="./media/error-open-document/delete-files.jpg" alt-text="Delete files":::
+    :::image type="content" source="media/error-open-document/delete-files.png" alt-text="Screenshot of the Delete Files option.":::
 
 The following files types are examples of removable items that you might see in the Disk Cleanup list:
 

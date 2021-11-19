@@ -73,17 +73,17 @@ All Inbox rules can be viewed by using the [MFCMapi](https://github.com/stephene
 
 OOF rules in MFCMapi:
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF01.jpg" alt-text="Screenshot of OOF rules in MFCMapi.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-rules.png" alt-text="Screenshot of OOF rules in MFCMapi.":::
 
 OOF rules templates in MFCMapi:
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF02.jpg" alt-text="Screenshot 1 of OOF rule templates in MFCMapi.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-rules-templates.png" alt-text="Screenshot of OOF rules templates in MFCMapi.":::
 
 ## OOF response history
 
 An OOF response is sent one time per recipient. The list of recipients to whom the OOF response is sent are stored in the OOF history, which is cleared out either when the OOF state changes (enabled or disabled) or when the OOF rule is modified. OOF history is stored in the user's mailbox, and can be viewed by using the MFCMapi tool at: **Freebusy Data** > **PR_DELEGATED_BY_RULE**.
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF03.jpg" alt-text="Screenshot 2 of OOF rule templates in MFCMapi.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-response-history.png" alt-text="Screenshot of the OOF response history that's stored in the Freebusy Data.":::
 
 > [!NOTE]
 > If you want to send a response to the sender every time instead of only one time, you can apply the "have server reply using a specific message" mailbox server-side rule instead of using the OOF rule. This alternative rule sends a response every time that a message is received.
@@ -112,7 +112,7 @@ Because OOF rules have a blank (<>) return path, the OOF rule unexpectedly match
 To fix this issue, change the "Match sender address in message" transport rule property to "Header or envelope", so that the checks will also be done against the **From**(also known as "Header From"), **Sender**, or **Reply-To** fields. For more information about mail flow rule conditions, see the "Senders" section of
 [this article](/Exchange/policy-and-compliance/mail-flow-rules/conditions-and-exceptions).
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF04.png" alt-text="Screenshot 3 of OOF rule templates in MFCMapi.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/rule-property-header.png" alt-text="Screenshot to select Header on the Match sender address in message page.":::
 
 ### JournalingReportNdrTo mailbox setting
 
@@ -126,7 +126,7 @@ If the affected user mailbox has [SMTP forwarding](/microsoft-365/admin/email/co
 
 - In the user mailbox settings in the client (such as Outlook on the web):
 
-    :::image type="content" source="media/understand-troubleshoot-oof-replies/OOF05.png" alt-text="Screenshot of forwarding SMTP address.":::
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/smtp-address-client.png" alt-text="Screenshot of checking forwarding SMTP address using the client.":::
 
 - In PowerShell:
 
@@ -134,11 +134,11 @@ If the affected user mailbox has [SMTP forwarding](/microsoft-365/admin/email/co
     Get-Mailbox -Identity Daniel | fl DeliverToMailboxAndForward, ForwardingSmtpAddress, ForwardingAddress
     ```
 
-    :::image type="content" source="media/understand-troubleshoot-oof-replies/OOF06.jpg" alt-text="Screenshot of checking forwarding SMTP address using PowerShell.":::
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/smtp-address-powershell.png" alt-text="Screenshot of checking forwarding SMTP address using PowerShell.":::
 
 - In User Properties in the Microsoft 365 Portal:
 
-    :::image type="content" source="media/understand-troubleshoot-oof-replies/OOF07.png" alt-text="Screenshot of checking forwarding SMTP address using portal." :::
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/smtp-address-portal.png" alt-text="Screenshot of checking forwarding SMTP address using the Microsoft 365 Portal.":::
 
 For information about how to resolve this issue, see [this article](https://support.microsoft.com/help/2866165).
 
@@ -157,7 +157,7 @@ For more information about these OOF types, see the **AllowedOOFType** entry in 
 
 You can check the OOF reply type from **Exchange Admin Center** > **Mail flow** > **Remote domains**.
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF08.png" alt-text="Screenshot of checking OOF reply type using portal." border="false":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-reply-type.png" alt-text="Screenshot of Out of Office automatic reply types." border="false":::
 
 Alternatively, you can run the following PowerShell cmdlet:
 
@@ -165,7 +165,7 @@ Alternatively, you can run the following PowerShell cmdlet:
 Get-RemoteDomain | ft -AutoSize Name, DomainName, AllowedOOFType
 ```
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF09.png" alt-text="Screenshot of checking OOF reply using PowerShell.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-reply-type-powershell.png" alt-text="Screenshot of checking OOF reply using PowerShell.":::
 
 As an example, assume that you have a hybrid organization that includes mailboxes that are hosted both in Exchange on-premises and Exchange Online. By design, only external messages in this scenario will be sent to Exchange on-premises if **AllowedOOFType** is set to **External**. To send internal OOF messages to Exchange on-premises in a hybrid environment, set **AllowedOOFType** to **InternalLegacy**.
 
@@ -175,7 +175,7 @@ You also have the option at the mailbox configuration level (ExternalAudience: K
 Get-MailboxAutoReplyConfiguration daniel | fl ExternalAudience
 ```
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF10.jpg" alt-text="Screenshot of checking OOF reply configuration using PowerShell.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-reply-configuration.png" alt-text="Screenshot of checking OOF reply configuration using PowerShell.":::
 
 ### Remote domain blocks OOF replies
 
@@ -183,7 +183,7 @@ Another setting on remote domains is one that you use to allow or prevent messag
 
 This setting can be found in **Exchange Admin Center** > **Mail flow** > **Remote domains**.
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF11.jpg" alt-text="Screenshot of checking OOF reply blocking using portal.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/automatic-replies-setting.png" alt-text="Screenshot of Automatic replies setting.":::
 
 Alternatively, you can run the following PowerShell cmdlet:
 
@@ -191,7 +191,7 @@ Alternatively, you can run the following PowerShell cmdlet:
 Get-RemoteDomain | ft -AutoSize Name, DomainName, AutoReplyEnabled
 ```
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF12.jpg" alt-text="Screenshot of checking OOF reply blocking using PowerShell.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/automatic-replies-powershell.png" alt-text="Screenshot of checking OOF reply blocking using PowerShell.":::
 
 > [!NOTE]
 > If the value of the setting is **false**, no automatic replies will be sent to users in that domain. This setting takes precedence over the automatic replies that are set up at the mailbox level or over the OOF type (as discussed earlier). Keep in mind that **true** is the default value for new remote domains that you create and the built-in remote domain named Default in Exchange Online. And **false** is the default value for the built-in remote domain named Default in on-premises Exchange.
@@ -260,7 +260,7 @@ If two different OOF messages are sent, and you don't find an additional Inbox r
 1. In the Outlook client, select **File** > **Automatic Replies** > **Rules**.
 2. Select the OOF rule and then select **Delete Rule**.
 
-    :::image type="content" source="media/understand-troubleshoot-oof-replies/auto-reply-rule.png" alt-text="Delete auto-reply rule":::
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/auto-reply-rule.png" alt-text="Screenshot shows steps to delete the automatic reply rule.":::
 
 ### Automatic replies cannot be enabled and an error message is received
 
@@ -284,7 +284,7 @@ To help narrow down this issue, follow these steps:
     Get-mailbox -identity <mailbox> | fl RulesQuota
     ```
 
-    :::image type="content" source="media/understand-troubleshoot-oof-replies/OOF13.jpg" alt-text="Screenshot of checking mailbox identity.":::
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/check-mailbox-identity.png" alt-text="Screenshot of checking mailbox identity.":::
 
     By default, the RulesQuota parameter has a maximum value of 256 KB (262,144 bytes). This is determined by the size of the rules, not the number of rules.
 

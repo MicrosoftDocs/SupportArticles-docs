@@ -31,19 +31,19 @@ This topic discusses how to solve distribution group (also known as distribution
 There could be a couple of issues here:
   
 - It usually takes about 60 minutes for distribution groups to be fully created and ready for management. Make sure you've waited the appropriate amount of time and try sending the email again.
-    
+
 - Sometimes, people create an Office 365 Group instead of a distribution group. Check out your distribution group in the admin center and make sure you created a distribution group.
-    
+
 ## External members not getting emails sent to distribution group
 
 There could be a couple of issues here:
   
 - Make sure you've allowed people outside your organization to send emails to the distribution group. The two toggles at the bottom of the **Edit details** pane should be set to **On**.
-    
-    ![Allow external members to send to a group](./media/distribution-list-issues/edit-distribution-group.png) 
- 
-- External members don't receive email messages that are sent to a group they're a member of, and the senders don't receive non-delivery message about the email. Read [External members don't receive email...](/exchange/troubleshoot/email-delivery/external-recipients-not-receiving-distribution-group-emails) for steps on how to fix this issue. 
-    
+
+    :::image type="content" source="media/distribution-list-issues/edit-distribution-group.png" alt-text="Allow external members to send to a group.":::
+
+- External members don't receive email messages that are sent to a group they're a member of, and the senders don't receive non-delivery message about the email. Read [External members don't receive email...](/exchange/troubleshoot/email-delivery/external-recipients-not-receiving-distribution-group-emails) for steps on how to fix this issue.
+
 ## I'm an admin and I can't edit a distribution group in the admin center
 
-Make sure you have an Office 365 license. You need an Office 365 for business license before you can edit distribution groups in the admin center. Read [Assign licenses to users in Office 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users) for the steps. 
+Make sure you have an Office 365 license. You need an Office 365 for business license before you can edit distribution groups in the admin center. Read [Assign licenses to users in Office 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users) for the steps.

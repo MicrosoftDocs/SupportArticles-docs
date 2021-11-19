@@ -84,11 +84,11 @@ Value:
 
 The **Online Content Options** policy setting is located under the Microsoft Office 2019, Office 2016, Office 2013, or Outlook for Office 365 administrative template. Find these templates under **Tools | Options | General | Service Options, Online Content**.
 
-:::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/online-content-options-policy-setting.png" alt-text="Online Content Options policy setting" border="false":::
+:::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/online-content-options-policy-setting.png" alt-text="Screenshot of Online Content Options policy setting." border="false":::
 
 You can set this to **Not Configured** or **Enabled** and then select the **Allow Office to connect to the Internet** online content option.
 
-:::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/setting-details.png" alt-text="Online Content Options policy setting details" border="false":::
+:::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/onlion-content-options-setting-details.png" alt-text="Screenshot of Online Content Options policy setting details, setting to Not Configured or Enabled and selecting the Allow Office to connect to the Internet option." border="false":::
 
 When you enable the Allow Office to connect to the Internet setting, this affects other features in Office. These include the following:
 

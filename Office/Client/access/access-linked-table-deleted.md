@@ -13,6 +13,7 @@ ms.topic: article
 ms.author: luche
 appliesto:
 - Access for Office 365
+- Access LTSC 2021
 - Access 2019
 - Access 2016
 - Access 2013
@@ -47,7 +48,7 @@ Access is introducing a new and improved **Date & Time Extended** data type begi
 To improve syntax compatibility with SQL, and to increase the accuracy and level of detail in records that include dates and times, Microsoft is implementing the **DateTime2** data type in Access. This data type will include a larger date range (0001-01-01 through 9999-12-31) that has better time precision (nanoseconds, instead of seconds). To enable the **DateTime2** data type, select **New field** > **Date & Time Extended**. For more information, see [Using the Date/Time Extended data type](https://support.microsoft.com/office/using-the-date-time-extended-data-type-708c32da-a052-4cc2-9850-9851042e0024).
 
 > [!NOTE]
-> The **Date & Time Extended** data type is incompatible with non-subscription versions of Microsoft Access. Therefore, if the data type is implemented in a local Access table, and the Access database is used together with a non-subscription version of Access, you can’t open the database.
+> The **Date & Time Extended** data type isn't compatible with previous versions of Microsoft Access. As a result, if the data type is implemented within a local Access table and the Access database is used with a previous version that doesn't include this feature, you can't open the database.
 
 You can enable or disable the **Date & Time Extended** data type for linking and importing operations by using the **Current Database** Access option **Support Date Time Extended (DateTime2) Data Type for Linked/lmported Tables**. For more information, see [Set user options for the current database](https://support.microsoft.com/office/set-user-options-for-the-current-database-29b6b7be-4c3b-43a7-b8f0-5e1c68f5adce).
 

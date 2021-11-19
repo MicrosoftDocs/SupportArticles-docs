@@ -1,9 +1,9 @@
 ---
-title: How to download and run Office 2019 installation files not in VLSC
-ms.author: luche
-author: helenclu
+title: How to download and run Office LTSC installation files not in VLSC
+description: Describes how to install Office LTSC files that are not in VLSC and activate by using a product key.
+ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
-ms.date: 03/03/2020
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
@@ -13,123 +13,159 @@ search.appverid:
 - MET150
 appliesto:
 - Office
-ms.custom: 
+ms.custom:
+- CI 157620
 - CI 113921
 - CSSTroubleshoot 
 ms.reviewer: joselr
-description: Describes how to install Office with files that are not in VLSC or with a product key. 
 ---
+# How to install Office LTSC installation files not found in VLSC
 
-# How to install Office 2019 installation files not found in VLSC
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-## Summary
-
-Office files can be downloaded separately. 
-
-## More information
+Office files can be downloaded separately.
 
 > [!IMPORTANT]
-> The steps below apply only to the following programs: 
-> - Office Professional Plus 2019
-> - Office Standard 2019
-> - Visio Professional 2019
-> - Visio Standard 2019
-> - Project Professional 2019
-> - Project Standard 2019
+> The following steps apply to only the following programs:
+>
+> - Office LTSC Professional Plus 2021
+> - Office LTSC Standard 2021
+> - Visio LTSC Professional 2021
+> - Visio LTSC Standard 2021
+> - Project Professional 2021
+> - Project Standard 2021
 
-Follow the steps below to download and install your Office 2019 software or application:
+Follow these steps to download and install your Office LTSC, Visio LTSC, or Project 2021 software or application.
 
 > [!NOTE]
-> The screenshots below are examples that may not match your own experience.
+> The screenshots show examples that might not match your own experience.
 
-1. Browse to https://www.microsoft.com/download/details.aspx?id=49117 and select **Download**.
-![Select the file to download.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-1.png)
-2. Select the arrow next to the **Save As** option.
-![Select Save As. ](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-2.png)
-3. Create a new folder and save the file to this folder. (The name of the folder is irrelevant. For instance, create a folder on your Desktop named "Office".)
+1. In Microsoft Edge, browse to [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117), and then select **Download**.
+
     > [!NOTE]
-    > This folder should be a shared location that is accessible for installation to other devices. 
+    > The file will automatically be saved to the *Downloads* folder on your device. Office LTSC 2021 requires version **16.0.14326.20404** or a later version of the Office Deployment Tool. This version was released on September 17, 2021.
 
-   ![Create a new folder. ](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-3.png)
-4. Double click the .EXE file (or select **Run**, if the dialog box is still open). If asked, select **Yes**.<br/>
-![Double click the executable file.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-4.png)
-5. A pop up window will display the Microsoft Software License Terms. Check the box and select Continue.
-![Accept the Microsoft Software License Terms.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-5.png)
+2. Select the **Open file** link under the file name.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/open-file-link.png" alt-text="Screenshot that shows the Open file link under the file name in the Downloads window.":::
+
+3. A pop-up window will display the Microsoft Software License Terms. Select the check box to accept the terms, and then select **Continue**.
+
    > [!NOTE]
-   > You might be requested to select a location where you want the files saved. If so, select the folder that you created. 
+   > If you are prompted to select a location that you want the files saved to, select the folder that you created.
 
-6. Open your browser and go to https://config.office.com.
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/microsoft-software-license-terms.png" alt-text="Screenshot of the Microsoft Software License Terms.":::
 
-7. Under **Create a new configuration**, select **Create**.<br/>
-![Select Create.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-6.png)
-8. Under **Products and releases**, select 64-bit.
+4. When you are prompted to select a folder to store the extracted files in, select **Desktop** > **Make New Folder** > **OK**.
+
+5. If you have purchased Office LTSC Professional Plus 2021, Visio LTSC Professional 2021, and Project Professional 2021, you can use the sample configuration file (*configuration-Office2021Enterprise.xml*) that's included with the Office Deployment Tool to install your products. In this case, you can skip to Step 22 in these instructions. If you have purchased only one of these products, go to the next step to use the Office Customization Tool.
+
+6. Browse to the [Microsoft 365 Apps admin center](https://config.office.com). Do not try to sign in. Scroll down to see the available options at the bottom of the page without signing in.
+
+7. Under **Create a new configuration**, select **Create** to open the Office Customization Tool.
+
+    > [!NOTE]
+    > The following steps describe the simplest method to create a configuration file. For more information about the various configuration options, see [Configuration options for the Office Deployment Tool](/deployoffice/office-deployment-tool-configuration-options).
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/create-new-configuration.png" alt-text="Screenshot that shows the Create button to create a new configuration.":::
+
+8. Under **Products and releases** > **Architecture**, select **64-bit**.
+
     > [!NOTE]
     > For more information, see [Choose between the 64-bit or 32-bit version of Office](https://support.microsoft.com/office/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261).
 
-   ![Select the 32-bit or 64-bit option.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-7.jpg)
-9. Then, select the product or app that you want to deploy and select **Next**.
-![Select the product or app you want to deploy. ](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-8.png)
-![Select the product or app.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-9.png)
-10. Choose your Language and then select **Next**.
-![Choose your preferred language.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-10.png)
-11. Under **Installation options**, select the options that match your needs (or do nothing) and select **Next**.
-![Change the options if desired.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-11.png)
-12. Under **Update and Upgrade**, select the options that match your needs (or do nothing) and then select **Next**.
-![Change more options if desired.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-12.png)
-13. Select the **Multiple Activation Key (MAK)** option. Enter the volume license key specific to the software, move the **Autoactivate** slider to **On**, and then select **Next**.
-    >[!NOTE]
-    > If your organization uses Key Management Service (KMS) activation, select KMS Client Key instead.
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-architecture.png" alt-text="Screenshot of the page to select the architecture option.":::
 
-    ![Enter the volume licnese key.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-13.png)
+9. Under **Products**, select the products that you want to deploy.
 
-14. Enter your name or the name of your company or organization and then select **Next**.
-![Enter your name or your company's name.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-14.png)
-15. Under **Application preferences**, select **Finish**.
-![Select Finish. ](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-15.png)
-16. Select **Export** in the upper-right corner of the page.<br/>
-![Select Export.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-16.png)
-17. In the **File Name** text box, type "Configuration" (if it does not already show this) and then select **Save as** to save it to the folder you created.
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-products.png" alt-text="Screenshot of the page to select products.":::
+
+10. Under **Update channel**, Office LTSC 2021 Perpetual Enterprise will be listed as the Update Channel. Do not change this setting.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/update-channel.png" alt-text="Screenshot of the page to select update channel.":::
+
+11. Under **Apps**, use the toggles to determine which apps will be installed, and then select **Next**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-apps.png" alt-text="Screenshot of the page to select apps.":::
+
+12. Under **Language**, select the primary language, and then select **Next**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-language.png" alt-text="Screenshot of the page to select languages.":::
+
+13. Under **Installation**, select the options that match your requirements, as necessary, and then select **Next**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-installation-options.png" alt-text="Screenshot of the page to select installation options.":::
+
+14. Under **Update and upgrade** > **Update and upgrade options**, select the options that match your requirements, as necessary.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-update-options.png" alt-text="Screenshot of the page to select update options.":::
+
+15. Under **Upgrade options**, indicate whether you have to keep any of the products that are already installed on the device, as necessary, and then select **Next**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-upgrade-options.png" alt-text="Screenshot of the page to select upgrade options.":::
+
+16. Under **Licensing and activation**, select the **Multiple Activation Key (MAK)** option, type the volume license key that's specific to the product, switch the **Autoactivate** slider to **On**, and then select **Next**.
+
     > [!NOTE]
-    > Make a note of this location as it will be needed for the following steps. 
+    >
+    > - By default, users have to accept the End User License Agreement. You can switch the **Automatically accept the EULA** slider to **Off** to accept it for them.
+    > - Under **Product activation**, only the **User based** option can be selected.
+    > - If your organization uses Key Management Service (KMS) activation, select the **KMS Client Key** option instead.
 
-    ![Type Configuration in the text box.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-17.png)
-    ![Select Save.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-18.png)
-18. Open an elevated Command Prompt. (Select the **Windows** button, type "CMD", right-click **Command Prompt**, and select **Run as administrator**.)<br/>
-![Open a Command Prompt.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-19.png)
-![Run as Administrator.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-20.png)
-19. Type "cd "(c+d+space bar). Copy the file path of the location where you downloaded the file and paste it in the command prompt window.
-![Copy the filepath.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-21.png)
-![Paste the location in the command prompt.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-22.png)
-20. Select **Enter**. The Command Prompt Line is now updated to the location where the files were downloaded:
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/select-licensing-activation-options.png" alt-text="Screenshot of the page to select licensing and activation options.":::
+
+17. Under **General**, type your name or the name of your company or organization, and then select **Next**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/provide-organization-name-configuration-purposes.png" alt-text="Screenshot of the page to provide organization name and configuration purposes.":::
+
+18. Under **Application preferences**, select **Finish**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/application-preferences.png" alt-text="Screenshot of the page that shows application preferences.":::
+
+19. In the upper-right corner of the page, select **Export**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/export-button.png" alt-text="Screenshot that shows the Export button.":::
+
+20. In the **Default File Format** window, select a format for Office LTSC 2021, and then select **OK**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/default-file-format.png" alt-text="Screenshot of the page to select the default file format.":::
+
+21. In the **Export configuration to XML** window, select the **I accept the terms in the license agreement** check box. In the **File Name** text box, type *Configuration*, select **Export**, and then move the *Configuration.xml* file to the new folder that you created in Step 4.
+
     > [!NOTE]
-    > This will vary depending on where you created the folder for the downloaded file.
+    > The folder that the file is saved to will vary depending on the web browser that you use. Note the location that the browser saves to. For example, if you use Microsoft Edge, the *Configuration.xml* file will be stored in the *Downloads* folder.
 
-    ![The command line should show the path where the downloaded files are. ](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-23.png)
-21. Copy and paste the following command in the Command Prompt window and select **Enter**:
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/export-configuration-xml.png" alt-text="Screenshot of the Export configuration to XML page.":::
 
-    > Setup /configure configuration.xml
+22. Open an elevated Command Prompt window. (Select the **Windows** button, type *CMD*, right-click **Command Prompt**, and then select **Run as administrator**.)
 
-    ![Enter the command into the command line.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-24.png)
+23. Type `cd <file path>`, and then press **Enter**. The command prompt line is now updated to the location where the files were downloaded.
 
-22. The Office installation will start.<br/>
-![The installation will start. ](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-25.png)
-![Office splash screen.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-26.png)
- 
+    > [!NOTE]
+    > The \<*file path*\> placeholder corresponds to the file path of the location to which you downloaded the file.
 
+24. Run the following command to start the Office installation:
 
-## How to Activate Microsoft Office 2019 using a product key
+    ```cmd
+    Setup /configure configuration.xml
+    ```
 
-If automatic activation did not work, you can manually activate your software by following the steps below:
+    > [!NOTE]
+    > If you are on a slow or limited bandwidth internet connection, use the following command instead:
+    >
+    > ```cmd
+    > Setup /download configuration.xml
+    > ```
 
-1. Open a Word, Excel, or PowerPoint file. Select **File**. 
-![Open an Office program.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-27.png)
- 
-2. Select **Help** or **Account**. <br/>
-![Select Help or Account.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-28.png)
-3. Select **Change Product Key**. 
-![Select Change Product Key.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-29.png)
-4. Enter the product key in the field box and then select **Install**.<br/>
-![Enter the product key.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-30.png)
-The Office installation will begin. 
+## How to activate Office LTSC by using a product key
+
+If automatic activation did not work, you can manually activate your software by following these steps:
+
+1. Open a Word, Excel, or PowerPoint file, and then select **File**.
+
+2. Select **Account** > **Change Product Key**.
+
+    :::image type="content" source="./media/how-to-download-office-install-not-in-vlsc/change-product-key.png" alt-text="Screenshot of the page to change product key.":::
+
+3. Type the product key in the text box, and then select **Activate Office**.
+
+    > [!NOTE]
+    > You might have to close the Office application and restart it in order to see Office as licensed.

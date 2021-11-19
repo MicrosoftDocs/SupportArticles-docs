@@ -35,7 +35,7 @@ For example, a user shares the following Calendar folders with you:
 - Second Calendar
 - Third Calendar
 
-:::image type="content" source="media/cannot-open-shared-calendar/third-calendar.png" alt-text="Third Calendar Snapshot" border="false":::
+:::image type="content" source="media/cannot-open-shared-calendar/third-calendar.png" alt-text="Screenshot of the Third Calender folder in the left pane in Outlook." border="false":::
 
 In this example, the Second Calendar folder is a subcalendar of the user's shared default Calendar folder. Therefore, you can open the Second Calendar folder in Outlook for Mac. However, the Third Calendar folder is not a subcalendar under the default Calendar folder. Therefore, you cannot open this folder in Outlook for Mac.
 

@@ -17,6 +17,7 @@ appliesto:
 - Microsoft 365
 search.appverid: MET150
 ---
+
 # Accessing other people's mailboxes in Microsoft 365
 
 _Original KB number:_ &nbsp; 10048
@@ -51,13 +52,13 @@ Not sure which Microsoft 365 plan your organization uses? Go to [https://portal.
 - [Small Business](#how-do-i-access-the-mailbox-small-business)
 - [If you see the below administrative interface, then you are using the Small Business plan](#how-do-i-access-the-mailbox-enterprise-midsize-education).
 
-  :::image type="content" source="media/how-to-access-other-mailboxes/small-business-admin-interface.png" alt-text="Small Business plan administrative interface" border="false":::
+  :::image type="content" source="media/how-to-access-other-mailboxes/small-business-admin-interface.png" alt-text="Screenshot of Small Business plan administrative interface." border="false":::
 
   Enterprise | Midsize | Education
 
   If you see the below administrative interface, then you are using the Enterprise/Midsize or Education plan.
 
-  :::image type="content" source="media/how-to-access-other-mailboxes/enterprise-midsize-edu-plan-admin-interface.png" alt-text="Enterprise/Midsize or Education plan administrative interface" border="false":::
+  :::image type="content" source="media/how-to-access-other-mailboxes/enterprise-midsize-edu-plan-admin-interface.png" alt-text="Screenshot of Enterprise/Midsize or Education plan administrative interface." border="false":::
 
 ### How do I access the mailbox (Small Business)
 
@@ -68,10 +69,10 @@ The following procedure shows how to assign full permissions to a user mailbox:
 Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Small Business admin, you need to access EAC by using the direct URL. The Microsoft 365 Small Business Microsoft Online Portal does not have an option to access EAC.
 
 1. In the EAC, navigate to **Recipients** > **Mailboxes**.
-2. In the list of mailboxes, select the mailbox that you want to assign permissions for, and then select **Edit**![Edit icon](./media/how-to-access-other-mailboxes/edit-icon.gif).
+2. In the list of mailboxes, select the mailbox that you want to assign permissions for, and then select **Edit**:::image type="icon" source="media/how-to-access-other-mailboxes/edit-icon.gif":::.
 3. On the mailbox properties page, select **Mailbox Delegation**.
 
-4. To assign permissions to delegates, select **Add**![Add icon](./media/how-to-access-other-mailboxes/add-icon.gif) under **Full Access** to display a page that lists all recipients in your Exchange organization that can be assigned the permission. Select the recipients you want, add them to the list, and then select **OK**. You can also search for a specific recipient by typing the recipient's name in the search box and then selecting **Search**![Search icon](./media/how-to-access-other-mailboxes/search-icon.gif). To remove a permission for a recipient, under the appropriate permission, select the recipient and then select **Remove**![Remove icon](./media/how-to-access-other-mailboxes/remove-icon.gif).
+4. To assign permissions to delegates, select **Add**:::image type="icon" source="media/how-to-access-other-mailboxes/add-icon.gif"::: under **Full Access** to display a page that lists all recipients in your Exchange organization that can be assigned the permission. Select the recipients you want, add them to the list, and then select **OK**. You can also search for a specific recipient by typing the recipient's name in the search box and then selecting **Search**:::image type="icon" source="media/how-to-access-other-mailboxes/search-icon.gif":::. To remove a permission for a recipient, under the appropriate permission, select the recipient and then select **Remove**:::image type="icon" source="media/how-to-access-other-mailboxes/remove-icon.gif":::.
 
 5. Select **Save** to save your changes.
 
@@ -86,7 +87,7 @@ If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have be
 > [!NOTE]
 > If you were recently granted access to the mailbox, it may take a few hours for the other user's mailbox to display in your folder list.
 >
-> :::image type="content" source="media/how-to-access-other-mailboxes/others-mailboxes-listed-in-your-folder.png" alt-text="other user's mailbox shown in your folder" border="false":::
+> :::image type="content" source="media/how-to-access-other-mailboxes/others-mailboxes-listed-your-folder.png" alt-text="Screenshot of other user's mailbox shown in your folder.":::
 
 **Outlook Web App**
 
@@ -95,21 +96,21 @@ After you complete this procedure, the person's mailbox for which you have been 
 1. Sign in to your mailbox using Outlook Web App.
 2. Right-click **Folders** in the left navigation pane, and then select **Add shared folder**.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Screenshot shows the add shared folder entry after right-clicking Folders.":::
 
 3. In the **Add shared folder** dialog box, type the name of the mailbox that you have been provided access, and select **Add**.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/add-a-shared-folder.png" alt-text="Add a shared folder" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder-dialog-box.png" alt-text="Screenshot of add shared folder dialog box, in which you enter the name or email of a user who has shared folders.":::
 
 4. The mailbox appears in your Outlook Web App folder list.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/mailbox-shown-in-owa.png" alt-text="mailbox appears in your Outlook Web App" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/mailbox-shown-owa.png" alt-text="Screenshot of the the mailbox appearing in your Outlook Web App." :::
 
    If you have only been provided access to specific folders in the other user's mailbox, you will only see the folders for which you have been granted access.
 
 If you decide that you no longer want to see the other person's mailbox every time you open Outlook Web App, right-click the folder, and select **Remove shared folder**.
 
-:::image type="content" source="media/how-to-access-other-mailboxes/remove-shared-folder.png" alt-text="Remove shared folder" border="false":::
+:::image type="content" source="media/how-to-access-other-mailboxes/remove-shared-folder.png" alt-text="Screenshot shows the remove shared folder entry when right-clicking the folder.":::
 
 **Did this resolve your issue?**
 
@@ -125,9 +126,9 @@ The following procedure shows how to assign full permissions to a user mailbox:
 Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 admin for Enterprises, Midsize, or Education, you can also access EAC by selecting **Admin** > **Exchange** in the Microsoft Online Portal.
 
 1. In the EAC, navigate to **Recipients** > **Mailboxes**.
-2. In the list of mailboxes, select the mailbox that you want to assign permissions for, and then select **Edit**![Edit icon](./media/how-to-access-other-mailboxes/edit-icon.gif).
+2. In the list of mailboxes, select the mailbox that you want to assign permissions for, and then select **Edit**:::image type="icon" source="media/how-to-access-other-mailboxes/edit-icon.gif":::.
 3. On the mailbox properties page, select **Mailbox Delegation**.
-4. To assign permissions to delegates, select **Add**![Add icon](./media/how-to-access-other-mailboxes/add-icon.gif) under **Full Access** to display a page that lists all recipients in your Exchange organization that can be assigned the permission. Select the recipients you want, add them to the list, and then select **OK**. You can also search for a specific recipient by typing the recipient's name in the search box and then selecting **Search** ![Search icon](./media/how-to-access-other-mailboxes/search-icon.gif).
+4. To assign permissions to delegates, select **Add**:::image type="icon" source="media/how-to-access-other-mailboxes/add-icon.gif"::: under **Full Access** to display a page that lists all recipients in your Exchange organization that can be assigned the permission. Select the recipients you want, add them to the list, and then select **OK**. You can also search for a specific recipient by typing the recipient's name in the search box and then selecting **Search** :::image type="icon" source="media/how-to-access-other-mailboxes/search-icon.gif":::.
 
    The **Full Access** permission allows a delegate to open a user's mailbox and access the contents of the mailbox.
 
@@ -147,7 +148,7 @@ If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have be
 > [!NOTE]
 > If you were recently granted access to the mailbox, it may take a few hours for the other user's mailbox to display in your folder list.
 >
-> :::image type="content" source="media/how-to-access-other-mailboxes/others-mailboxes-listed-in-your-folder.png" alt-text="other user's mailbox shown in your folder" border="false":::
+> :::image type="content" source="media/how-to-access-other-mailboxes/others-mailboxes-listed-your-folder.png" alt-text="Screenshot of other user's mailbox shown in your folder.":::
 
 **Outlook Web App**
 
@@ -156,19 +157,19 @@ After you complete this procedure, the person's mailbox for which you have been 
 1. Log in to your mailbox using Outlook Web App.
 2. Right-click **Folders** in the left navigation pane, and then select **Add shared folder**.
 
-    :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
+    :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Screenshot shows the add shared folder entry after right-clicking Folders.":::
 
 3. In the **Add shared folder** dialog box, type the name of the mailbox that you have been provided access, and select **Add**.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/add-a-shared-folder.png" alt-text="Add a shared folder" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder-dialog-box.png" alt-text="Screenshot of add shared folder dialog box, in which you enter the name or email of a user who has shared folders.":::
 
 4. The mailbox appears in your Outlook Web App folder list.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/mailbox-shown-in-owa.png" alt-text="mailbox appears in your Outlook Web App" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/mailbox-shown-owa.png" alt-text="Screenshot of the mailbox appearing in your Outlook Web App.":::
 
 If you decide that you no longer want to see the other person's mailbox every time you open Outlook Web App, right-click the folder, and select **Remove shared folder**.
 
-:::image type="content" source="media/how-to-access-other-mailboxes/remove-shared-folder.png" alt-text="Remove shared folder" border="false":::
+:::image type="content" source="media/how-to-access-other-mailboxes/remove-shared-folder.png" alt-text="Screenshot shows the remove shared folder entry when right-clicking the folder.":::
 
 **Did this resolve your issue?**
 
@@ -219,7 +220,7 @@ You can access user's mailboxes by using Outlook or Outlook Web App. Use the fol
 
 If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have been granted access automatically display in your folder list. In the example below, Adam Barr has been granted access to the mailbox of Kim Akers. Kim's mailbox displays automatically in Adam's folder list in Outlook 2013.
 
-:::image type="content" source="media/how-to-access-other-mailboxes/others-mailboxes-listed-in-your-folder.png" alt-text="other user's mailbox shown in your folder" border="false":::
+:::image type="content" source="media/how-to-access-other-mailboxes/others-mailboxes-listed-your-folder.png" alt-text="Screenshot of other user's mailbox shown in your folder.":::
 
 **Outlook Web App**
 
@@ -228,21 +229,21 @@ After you complete this procedure, the person's mailbox for which you have been 
 1. Log in to your mailbox using Outlook Web App.
 2. Right-click **Folders** in the left navigation pane, and then select **Add shared folder**.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Screenshot shows the add shared folder entry after right-clicking Folders.":::
 
 3. In the **Add shared folder** dialog box, type the name of the mailbox that you have been provided access, and select **Add**.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/add-a-shared-folder.png" alt-text="Add a shared folder" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder-dialog-box.png" alt-text="Screenshot of add shared folder dialog box, in which you enter the name or email of a user who has shared folders.":::
 
 4. The mailbox appears in your Outlook Web App folder list.
 
-   :::image type="content" source="media/how-to-access-other-mailboxes/mailbox-shown-in-owa.png" alt-text="mailbox appears in your Outlook Web App" border="false":::
+   :::image type="content" source="media/how-to-access-other-mailboxes/mailbox-shown-owa.png" alt-text="Screenshot of the mailbox appearing in your Outlook Web App.":::
 
 If you have only been provided access to specific folders in the other user's mailbox, you will only see the folders for which you have been granted access.
 
 If you decide that you no longer want to see the other person's mailbox every time you open Outlook Web App, right-click the folder, and select **Remove shared folder**.
 
-:::image type="content" source="media/how-to-access-other-mailboxes/remove-shared-folder.png" alt-text="Remove shared folder" border="false":::
+:::image type="content" source="media/how-to-access-other-mailboxes/remove-shared-folder.png" alt-text="Screenshot shows the remove shared folder entry when right-clicking the folder.":::
 
 **Did this resolve your issue?**
 

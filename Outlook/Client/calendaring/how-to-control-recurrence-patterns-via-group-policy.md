@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 2548319
 
 By default, recurring appointments, meetings, and tasks created by Microsoft Outlook have the **No end date** option enabled and have the default number of occurrences to end after set to **10**. An example of these settings in a new meeting is shown in the following figure.
 
-:::image type="content" source="media/how-to-control-recurrence-patterns-via-group-policy/recurring-appointment-settings.png" alt-text="recurring appointments settings" border="false":::
+:::image type="content" source="media/how-to-control-recurrence-patterns-via-group-policy/recurring-appointment-settings.png" alt-text="Screenshot of Appointments Recurrence settings window.":::
 
 This article describes how to use Group Policy templates for Outlook 2003 and later versions so that you can make the following changes to recurring items:
 
@@ -95,7 +95,7 @@ To configure recurrence settings in Outlook by using custom Group Policy templat
 6. Double-click the **Disable the "No end date" option for recurring items** policy to configure this policy.
 7. In the dialog box for the policy, select **Enabled** to enable the policy.
 
-   :::image type="content" source="media/how-to-control-recurrence-patterns-via-group-policy/enable-the-policy.png" alt-text="select Enabled to enable the policy" border="false":::
+   :::image type="content" source="media/how-to-control-recurrence-patterns-via-group-policy/enable-the-policy.png" alt-text="Screenshot of Disable the No end date option for recurring items dialog box.":::
 
     > [!IMPORTANT]
     > This will disable the **No end date** option for new recurring items.
@@ -107,7 +107,7 @@ To configure recurrence settings in Outlook by using custom Group Policy templat
 
 10. In the dialog box for the policy, select **Enabled** to enable the policy. Then, specify the number of days after which the recurrence period ends and then select **OK**.
 
-    :::image type="content" source="media/how-to-control-recurrence-patterns-via-group-policy/specify-the-days.png" alt-text="specify the number of days" border="false":::
+    :::image type="content" source="media/how-to-control-recurrence-patterns-via-group-policy/specify-the-days.png" alt-text="Screenshot of the Specify total number of days in a recurring meeting or appointment dialog box.":::
 
 The following registry data is associated with the policies discussed in this article:
 

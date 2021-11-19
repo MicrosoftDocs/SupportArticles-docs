@@ -59,7 +59,7 @@ You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vb
 
    The `ospp.vbs` command generates a report of the licenses currently in use. The output is in this format:
 
-   ![Screenshot of running the dstatus cscript command.](./media/reset-office-365-proplus-activation-state/command.png)
+   :::image type="content" source="media/reset-office-365-proplus-activation-state/cscript-ospp-vbs-dstatus.png" alt-text="Screenshot of running the dstatus cscript command.":::
 
    > [!NOTE]
    > The report could include multiple licenses. If the output contains a "No installed Product Keys" message after you run `ospp.vbs /dstatus`, skip the section below and go to "[Step 2: Remove cached identities in HKCU registry](#step-2-remove-cached-identities-in-hkcu-registry)".
@@ -80,7 +80,7 @@ You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vb
 
    Repeat the command until all keys are removed.
 
-   ![Screenshot of product key uninstalled successful in the command result.](./media/reset-office-365-proplus-activation-state/uninstall-successful.png)
+   :::image type="content" source="media/reset-office-365-proplus-activation-state/product-key-uninstall-successful.png" alt-text="Screenshot of product key uninstalled successful in the command result.":::
 
    If the output contains the message "product key uninstall successful", close the Command Prompt window and go to Step 2.
 
@@ -143,19 +143,19 @@ Here's how to find out if a device is DJ, AADJ, HAADJ, or WPJ:
 
    Domain Joined (DJ):
 
-   ![Azure AD Joined](./media/reset-office-365-proplus-activation-state/aadj.png)
+   :::image type="content" source="./media/reset-office-365-proplus-activation-state/domain-joined-state.png" alt-text="Command output of the Domain Joined status of the device.":::
 
    Azure AD Joined (AADJ):
 
-   ![Domain Joined](./media/reset-office-365-proplus-activation-state/dj.png)
+   :::image type="content" source="./media/reset-office-365-proplus-activation-state/azure-ad-joined-state.png" alt-text="Command output of the Azure AD Joined status of the device.":::
 
    Hybrid Azure AD Joined (HAADJ):
 
-   ![Workplace Joined](./media/reset-office-365-proplus-activation-state/wpj.png)
+   :::image type="content" source="./media/reset-office-365-proplus-activation-state/hybrid-azure-ad-joined-state.png" alt-text="Command output of the Hybrid Azure AD Joined status of the device.":::
 
    Workplace Joined (WPJ):
 
-   ![Hybrid Azure AD Joined](./media/reset-office-365-proplus-activation-state/haadj.png)
+   :::image type="content" source="./media/reset-office-365-proplus-activation-state/workplace-joined-state.png" alt-text="Command output of the Workplace Joined status of the device.":::
 
 In scenarios where all stored credentials (such as domain/tenant migration) must be cleared, clear the additional WAM locations.
 
@@ -171,7 +171,7 @@ To clear all WAM accounts associated with Office on the device, download and run
 
 To manually clear Workplace Joined accounts, go to **Access Work or School** on the device and select **Disconnect** to remove the device from WPJ.
 
-:::image type="content" source="./media/reset-office-365-proplus-activation-state/disconnect.png" alt-text="Select Disconnect in Access Work or School.":::
+:::image type="content" source="./media/reset-office-365-proplus-activation-state/disconnect-to-work-or-school.png" alt-text="Select Disconnect in Access Work or School.":::
 
 To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip), extract the folder, and run WPJCleanUp.cmd.
 
@@ -184,7 +184,7 @@ After Office successfully authenticates and activates, the **Stay signed in to a
 
 To prevent your device from being Azure AD registered, clear **Allow my organization to manage my device**, select **No, sign in to this app only**, and then select **OK**.
 
-:::image type="content" source="media/reset-office-365-proplus-activation-state/prevent-azure-join.png" alt-text="Prevent Azure AD registration":::
+:::image type="content" source="media/reset-office-365-proplus-activation-state/prevent-azure-join.png" alt-text="Clear the Allow my organization to manage my device option to prevent Azure AD registration." border="false":::
 
 To automate this configuration, add the following registry value to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin`:
 

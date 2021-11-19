@@ -51,7 +51,7 @@ If you are troubleshooting Availability Service issues in Outlook 2010 or Outloo
 3. In the **Outlook Options** dialog box, select **Advanced**.
 4. In the **Other** section, select the **Enable troubleshooting logging (requires restarting Outlook)** check box, and then select **OK**.
 
-   :::image type="content" source="media/uselegacyfb-not-working/enable-troubleshooting-logging-requires-restarting-outlook.png" alt-text="Outlook Options" border="false":::
+   :::image type="content" source="media/uselegacyfb-not-working/enable-troubleshooting-logging-requires-restarting-outlook.png" alt-text="Screenshot of the Advanced tab on Outlook Options." border="false":::
 
 5. Restart Outlook
 

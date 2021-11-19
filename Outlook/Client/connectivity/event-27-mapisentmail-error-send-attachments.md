@@ -32,7 +32,7 @@ In reviewing the Application Event log, you find an error for Outlook with Event
 
 This event log entry is shown in the following figure:
 
-:::image type="content" source="./media/event-27-mapisentmail-error-send-attachments/event-viewer.jpg" alt-text="Screenshot of event log entry.":::
+:::image type="content" source="./media/event-27-mapisentmail-error-send-attachments/event-viewer.png" alt-text="Screenshot of Application event log entry.":::
 
 ## Cause
 
@@ -53,12 +53,14 @@ There may be several options to prevent the Event ID 27, and successfully delive
 Attempting to send the same attachment within Outlook, by selecting **Attach File** from the **Message** or **Insert** ribbon, results in one of the following error dialogs:
 
 - Outlook 2013
+  > The file you're attaching is bigger than the server allows. Try putting the file in a shared location and sending a link instead.
 
-   ![Screenshot 1 of the error in Outlook 2013](./media/event-27-mapisentmail-error-send-attachments/outlook-2013-error.jpg)
+   :::image type="content" source="./media/event-27-mapisentmail-error-send-attachments/outlook-2013-error.png" alt-text="Screenshot of the error in Outlook 2013." border="false":::
 
 - Outlook 2010
+  >The attachment size exceeds the allowable limit.
 
-  ![Screenshot 2 of the error in Outlook 2013](./media/event-27-mapisentmail-error-send-attachments/outlook-2010-error.jpg)
+  :::image type="content" source="./media/event-27-mapisentmail-error-send-attachments/outlook-2010-error.png" alt-text="Screenshot of the error in Outlook 2010." border="false":::
 
 You can use the following steps to review Event ID 27 in the Application event log:
 
@@ -68,4 +70,4 @@ You can use the following steps to review Event ID 27 in the Application event l
 4. In the **Actions** pane, click **Filter Current Log**.
 5. In the **Filter Current Log** dialog box, select **Error** under **Event level**, and enter **27** as the Event ID (as shown in the following figure) and then click **OK**.
 
-    ![Screenshot of filtering Event ID 27](./media/event-27-mapisentmail-error-send-attachments/filter-event-27.jpg)
+    :::image type="content" source="./media/event-27-mapisentmail-error-send-attachments/filter-event-27.png" alt-text="Screenshot of filtering Event ID 27 in the Application event log." border="false":::

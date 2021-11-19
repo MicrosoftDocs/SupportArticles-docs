@@ -15,7 +15,8 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: luche
 appliesto:
-- Excel O365
+- Excel for Microsoft 365
+- Excel LTSC 2021
 - Excel 2019
 - Excel 2016
 - Excel 2013
@@ -62,14 +63,14 @@ To work around this problem, disable hardware acceleration until a fix is releas
 
 To disable hardware acceleration, follow these steps:
 
-1. Start any Office 2013, 2016, 2019, or O365 program.
+1. Start any Office 2013, Office 2016, Office 2019, or Microsoft 365 Apps program.
 1. On the **File** tab, select **Options**.
 1. In the **Options** dialog box, select **Advanced**.
 1. In the list of available options, select the **Disable hardware graphics acceleration** check box.
 
    The following screenshot shows this option in Excel.
 
-   ![Screenshot of the Disable hardware graphics acceleration check box.](./media/excel-opens-blank/disable-hardware-acceleration.png)
+   :::image type="content" source="media/error-when-send-commands-in-excel/disable-hardware-graphics-acceleration.png" alt-text="Select the Disable hardware graphics acceleration option to disable hardware acceleration in Office Options setting." border="false":::
 
 1. Select the **OK** button.
 
@@ -87,7 +88,7 @@ If you select the "Ignore" option, Excel ignores DDE messages that are sent to i
 To correct this setting, follow these steps.
 
 > [!NOTE]
-> This step can be skipped for Excel 2019 and Excel O365.
+> This step can be skipped for Excel 2019, Excel LTSC 2021 and Excel O365.
 
 1. In the upper-left corner of the Excel window, select **File** > **Options**.
 1. On the left side of the **Options** window, select **Advanced**.
@@ -143,7 +144,7 @@ If you aren't sure whether you are running UE-V, examine the program list in the
 
 Try to repair your Office programs. To do this, follow the steps for your installation type and operating system.
 
-### For an Office 365 or Office 2019 Click-to-Run installation
+### For an Microsoft 365 Apps, Office LTSC 2021, or Office 2019 Click-to-Run installation
 
 #### Windows 10
 
@@ -169,7 +170,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 1. Select **Microsoft Office 365**, then select **Change**.
 1. Select **Online Repair**, then select **Repair**.
 
-   ![Screenshot of the Office repair page that selects Online Repair](./media/excel-opens-blank/office-repair.jpg)
+   :::image type="content" source="media/error-when-send-commands-in-excel/online-repair-option.png" alt-text="Select the Online Repair option to repair office.":::
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.

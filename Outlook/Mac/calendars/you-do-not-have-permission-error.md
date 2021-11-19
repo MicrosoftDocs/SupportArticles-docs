@@ -51,7 +51,7 @@ For example, you have permissions to the following shared Calendar folders:
 
 In this example, Second Calendar is a subfolder of Calendar. This is displayed as follows.
 
-:::image type="content" source="media/you-do-not-have-permission-error/second-calendar.png" alt-text="Sub Calendar snapshot" border="false":::
+:::image type="content" source="media/you-do-not-have-permission-error/second-calendar.png" alt-text="Screenshot of Sub Calendar in Calendar folders." border="false":::
 
 To be able to open the other user's Second Calendar folder, you must have at least the Reviewer permission to their default Calendar folder.
 

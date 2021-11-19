@@ -43,7 +43,7 @@ Change the settings for your browser using administrator rights or a Group Polic
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
 
-    :::image type="content" source="media/sign-in-loop/edge.png" alt-text="Screenshot of edge.":::
+    :::image type="content" source="media/sign-in-loop/edge-cookies-site-permissions.png" alt-text="Screenshot of Settings window in edge, showing options under the Cookies and site permissions item and sites added.":::
 
 To change the settings by using GPO, follow these steps:
 
@@ -59,7 +59,7 @@ To change the settings by using GPO, follow these steps:
 2. In the Internet Options window, select **Privacy** and **Advanced**.
 3. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and then select the **Always allow session cookies** check box.
 
-    :::image type="content" source="media/sign-in-loop/ie.png" alt-text="Screenshot of IE.":::
+    :::image type="content" source="media/sign-in-loop/ie-advanced-privacy-settings.png" alt-text="Screenshot of Advanced Privacy Settings dialog. First and Third party Cookies are selected as accept, and Always allow session cookies is checked.":::
 
     Alternatively, follow steps 3 and 4 if you need to keep third-party cookies blocked.
 4. In the Internet Options window, select **Security** > **Trusted Sites** > **Sites**.

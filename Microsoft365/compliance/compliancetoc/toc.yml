@@ -95,12 +95,16 @@
     items:
     - name: Issues related to information barrier policies
       href: ../information-barriers/information-barriers-troubleshooting.md
-  - name: MRM & Retention Policies
+  - name: Retention
     items:
+    - name: Can't manage disposition reviews
+      href: ../retention/cannot-manage-disposition-reviews.md
+    - name: Can't retain cloud attachments
+      href: ../retention/cannot-retain-cloud-attachments.md
     - name: Managed folders disappear
-      href: ../mrm-rentention-policies/managed-folders-disappear.md
+      href: ../retention/managed-folders-disappear.md
     - name: MRM and retention policies
-      href: ../mrm-rentention-policies/mrm-and-retention-policy.md
+      href: ../retention/mrm-and-retention-policy.md
   - name: Office Message Encryption (OME)
     items:
     - name: Can't display message

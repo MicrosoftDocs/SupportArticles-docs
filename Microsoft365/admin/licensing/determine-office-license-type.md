@@ -13,13 +13,15 @@ search.appverid:
 - MET150
 appliesto:
 - Microsoft 365
+- Office LTSC 2021 suites
 - Office 2019 suites
 - Office 2016 suites
 - Office 2013 suites
 - Excel for Microsoft 365 for Mac 
 - Word for Microsoft 365 for Mac 
 - Outlook for Microsoft 365 for Mac
-- PowerPoint for Microsoft 365 for Mac 
+- PowerPoint for Microsoft 365 for Mac
+- Office LTSC 2021 for Mac
 - Office 2019 for Mac 
 - Excel 2019 for Mac 
 - PowerPoint 2019 for Mac 
@@ -41,7 +43,7 @@ description: Describes how to determine the license type of your Microsoft Offic
 
 ## Summary
 
-This article helps you determine the licensing type of your Microsoft Office product, whether it's Microsoft 365, Office 2019, Office 2016, or Office 2013.
+This article helps you determine the licensing type of your Microsoft Office product, whether it's Microsoft 365, Office LTSC 2021, Office 2019, Office 2016, or Office 2013.
 
 ## License types
 
@@ -53,12 +55,12 @@ To determine whether you have a retail edition or a volume license edition, use 
 
 If you're using a Microsoft 365 product, see [View Microsoft 365 licenses and services with PowerShell](/microsoft-365/enterprise/view-licenses-and-services-with-microsoft-365-powershell). Follow the steps to find your license type and other details about your version of Office.
 
-### Office 2019 and Office 2016
+### Office LTSC 2021, Office 2019 and Office 2016
 
 1. Press Windows logo key+X on your keyboard to open the quick action menu.
 2. Select Command Prompt (Admin).
 
-     :::image type="content" source="media/determine-office-license-type/determine-office-license-type-1.png" alt-text="Select Command Prompt (Admin).":::
+     :::image type="content" source="media/determine-office-license-type/command-prompt-admin.png" alt-text="Screenshot that contains the Command Prompt (Admin) option when you open the quick action menu.":::
 3. If a security prompt window is displayed, select **Allow**.
 
 #### Using the command line to check your license type
@@ -76,7 +78,7 @@ If you're using a Microsoft 365 product, see [View Microsoft 365 licenses and se
 
 3. Type `cscript ospp.vbs /dstatus`, and then press Enter.
 
-    :::image type="content" source="media/determine-office-license-type/determine-office-license-type-2.png" alt-text="The screen will display the license type. ":::
+    :::image type="content" source="media/determine-office-license-type/retail-type-license.png" alt-text="Screenshot displays the retail type license.":::
 
    In this example, the screen displays the **Retail type** license. If you have a volume license (VL) product, the license type is displayed as **VL** or **Volume Licensing**.
 
@@ -87,15 +89,16 @@ If you're using a Microsoft 365 product, see [View Microsoft 365 licenses and se
 This method requires that you have access to the DVD or ISO file that's used to install your Office product.
 
 1. Open File Explorer, and navigate to the DVD or ISO file.
-2. Search for a folder that’s named **Admin**.
+2. Search for a folder that's named **Admin**.
 
    - If the Admin folder exists, this disc is a **volume license** (VL) edition.
    - If the Admin folder does not exist, this disc is a retail edition.
 
     > [!NOTE]
     > Retail media includes a lowercase "r" before the ".WW" in the folder name and before the "WW.msi" in the MSI file name.
-        :::image type="content" source="media/determine-office-license-type/determine-office-license-type-3.png" alt-text="ProPlus will have the letter R before WW. ":::
     For example, the installation file for Proplus retail is Proplus**r**WW.msi in the Proplus**r**WW folder. Proplus non-retail is ProplusWW.msi in the PlusplusWW.
+    >
+    > :::image type="content" source="media/determine-office-license-type/proplus-installation-file.png" alt-text="Screenshot of an example of Proplus non-retail which named proplusww.":::
 
 #### Method 2: Use the command-line interface
 
@@ -106,7 +109,7 @@ This method requires that you have access to the DVD or ISO file that's used to 
      1. Press Windows logo key+X on your keyboard to open the quick action menu.
      2. Select **Command Prompt (Admin)**.
 
-        :::image type="content" source="media/determine-office-license-type/determine-office-license-type-1.png" alt-text="Select the Command Prompt (Admin).":::
+        :::image type="content" source="media/determine-office-license-type/command-prompt-admin.png" alt-text="Screenshot that contains the Command Prompt (Admin) option when you open the quick action menu.":::
      3. If a security prompt window is displayed, select **Allow**.
 
    - **Windows 7**
@@ -125,7 +128,7 @@ This method requires that you have access to the DVD or ISO file that's used to 
      `cd c:\Program Files\Microsoft Office\Office15\`
 3. At the command prompt, type `cscript ospp.vbs /dstatus`, and then press **Enter**.
 
-    :::image type="content" source="media/determine-office-license-type/determine-office-license-type-2.png" alt-text="The screen displays the license type. ":::
+    :::image type="content" source="media/determine-office-license-type/retail-type-license.png" alt-text="Screenshot displays the retail type license.":::
 
    In this example, the license channel is reflected as **RETAIL** or **VOLUME**.
 
@@ -135,21 +138,21 @@ This method requires that you have access to the DVD or ISO file that's used to 
 
 To determine the Office volume license type on a Mac, open an Office app (such as PowerPoint), select the name of the app in the menu, and then select **About (app)**.
 
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="Select the Office product name from the menu.":::
+:::image type="content" source="media/determine-office-license-type/about-powerpoint.png" alt-text="Select PowerPoint from the menu.":::
 
 The license type will be listed below the Product ID. 
 
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-6.png" alt-text="Select the About menu item for that product.":::
+:::image type="content" source="media/determine-office-license-type/volume-license.png" alt-text="Screenshot shows the license type after selecting About PowerPoint.":::
 
 ### Subscription licenses
 
 To determine the Office subscription license type, open an Office app (such as PowerPoint), select the name of the app in the menu, and then **About (app)**.
 
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="The Volume License type will be displayed. ":::
+:::image type="content" source="media/determine-office-license-type/about-powerpoint.png" alt-text="Select PowerPoint from the menu. ":::
 
 The license type will be listed below the Product ID.
 
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-5.png" alt-text="The Subscription license type will be displayed.":::
+:::image type="content" source="media/determine-office-license-type/subscription-license.png" alt-text="Screenshot shows the subscription license type after selecting About PowerPoint.":::
 
 ---
 

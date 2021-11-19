@@ -61,7 +61,7 @@ To manually delete the `001e660e` registry value, follow these steps:
 4. On the **Edit** menu, select **Find**.
 5. Enter 001e660E and then select **Find Next**.
 
-   :::image type="content" source="media/0x8007007a-whendownloading-offline-address-book/find-registry-value.png" alt-text="finding a registry value" border="false":::
+   :::image type="content" source="media/0x8007007a-whendownloading-offline-address-book/find-registry-value.png" alt-text="Screenshot of the Find dialog box of Registry Editor." border="false":::
 
 6. When a result is found, make sure that it is listed under the correct `<profile name>` subkey.
 
@@ -69,7 +69,7 @@ To manually delete the `001e660e` registry value, follow these steps:
     > View the data of the `001e660E` registry value to determine whether it is blank. If it is blank, this confirms the cause of the OAB download issue.
 7. Right-click the 001e660E registry value, and then select **Delete**.
 
-   :::image type="content" source="media/0x8007007a-whendownloading-offline-address-book/delete-registry-value.png" alt-text="deleting a registry value" border="false":::
+   :::image type="content" source="media/0x8007007a-whendownloading-offline-address-book/delete-registry-value.png" alt-text="Screenshot of the right-click menu of the 001e660E registry value." border="false":::
   
 ## More information
 

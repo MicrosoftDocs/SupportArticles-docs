@@ -19,6 +19,9 @@ appliesto:
 - PowerPoint 2019
 - Excel 2019
 - Word 2019
+- PowerPoint LTSC 2021
+- Excel LTSC 2021
+- Word LTSC 2021
 ---
 
 # Error message in Office when a file is blocked by registry policy settings
@@ -39,14 +42,16 @@ To resolve this issue, try the following general resolutions to change the File 
 
 1. Select **File** > **Options**.
 
-    If you cannot open a file in Office, open a blank document to start the Office application. For example, if you cannot open a Word file, open a new document in Word 2019 or Word 2016 to see the option.
+    If you cannot open a file in Office, open a blank document to start the Office application. For example, if you cannot open a Word file, open a new document in Word 2016 or later versions to see the option.
+
 2. In the **Options** window, select **Trust Center** > **Trust Center Settings**.
 3. In the **Trust Center** window, select **File Block Settings**, and then clear the "Open" or "Save" check box for the file type that you want to open or save.
 
     > [!NOTE]
     > Clear the option means allow user to open or save the file. Check the option means block the file.
 
-    ![Trust Center window](./media/file-blocked-in-office/trust-center-window.png)
+   :::image type="content" source="media/file-blocked-in-office/trust-center-window.png" alt-text="Screenshot of the Trust Center window.":::
+
 4. Select **OK** two times.
 5. Try to open or save the file that was blocked again.
 

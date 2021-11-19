@@ -1,6 +1,10 @@
 - name: Outlook for iOS and Android Troubleshooting
   href: ../outlook-mobile-welcome.md
   items:
+  - name: Add-ins
+    items:
+    - name: Can't save items from Outlook for iOS to OneNote
+      href: ../add-ins/cannot-save-to-onenote.md
   - name: Calendars
     items:
     - name: Create and book a workspace in Outlook

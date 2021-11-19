@@ -51,8 +51,6 @@
       href: ./known-issues/notifications-cannot-manage.md
     - name: Logon re-enabled user doesn't see previous joined teams
       href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
-    - name: Rename a channel doesn't rename the corresponding folder
-      href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
     items:
     - name: '"You need a phone system license" error when assigning a toll service number from the admin center'
@@ -111,6 +109,8 @@
       href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
+    - name: Guest user can't access Files tab
+      href: ./files/guests-cannot-access-files.md
   - name: Forms
     items:
     - name: Can't send or respond a poll
@@ -145,6 +145,8 @@
       href: ./known-issues/chrome-80-users-unable-to-sign-in-on-teams.md
     - name: Notifications and preview issues in iOS 13 Beta
       href: ./known-issues/problems-using-teams-on-ios-13-beta.md
+    - name: Settings for Teams calls with Apple CarPlay
+      href: ./mobile/settings-teams-calls-carplay.md
   - name: OneNote Integration
     items:
     - name: Can't upload or download OneNote file
@@ -185,6 +187,8 @@
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
       href: ./known-issues/teams-for-surface-hub-wont-start-from-store.md
+    - name: Resolve sign-in errors
+      href: ./teams-sign-in/resolve-sign-in-errors.md
     - name: Sign-in error after password change
       href: ./known-issues/sign-in-error-after-password-change.md
     - name: Someone has already setup Teams for your organization

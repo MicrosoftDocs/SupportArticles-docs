@@ -33,7 +33,7 @@ When you try to create an Outlook profile or connect to a Microsoft Office 365 m
 
 This issue can occur if the **Logon network security** setting on the **Security** tab of the **Microsoft Exchange** dialog box is set to a value other than **Anonymous Authentication**.
 
-![Logon network security](./media/continually-prompts-password-office-365/logon-network-security.png)
+:::image type="content" source="media/continually-prompts-password-office-365/logon-network-security.png" alt-text="Screenshot of the Security tab of the Microsoft Exchange dialog box, checking if the Logon network security setting is set to Anonymous Authentication.":::
 
 ## Resolution
 
@@ -108,4 +108,4 @@ To locate and view the registry setting for Anonymous Authentication in the Outl
 
     Any other value represents an authentication method other than Anonymous.
 
-    ![image of 00036619](./media/continually-prompts-password-office-365/00036619.png)
+    :::image type="content" source="media/continually-prompts-password-office-365/00036619-binary-value.png" alt-text="Screenshot of the Security tab of the Microsoft Exchange dialog box, checking the value of the 00036619 binary value." border="false":::

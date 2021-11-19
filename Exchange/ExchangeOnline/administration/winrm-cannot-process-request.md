@@ -77,7 +77,6 @@ This issue occurs in one of the following situations:
         ```
 
         For example, run `netsh winhttp set proxy 10.0.0.6:8080`.
-      - You can also [import the settings](/troubleshoot/windows-client/networking/use-group-policy-apply-winhttp-proxy-settings#import-the-settings-through-control-panel).
 
 ## More information
 

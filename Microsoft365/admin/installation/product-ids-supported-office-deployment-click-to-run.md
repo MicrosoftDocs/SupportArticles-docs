@@ -3,7 +3,7 @@ title: Product IDs that are supported by the Office Deployment Tool for Click-to
 description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
 author: MaryQiu1987
 ms.author: v-maqiu
-ms.date: 2/26/2020
+ms.date: 10/4/2021
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -20,8 +20,6 @@ appliesto:
 ---
 
 # List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -67,46 +65,58 @@ In addition to these product IDs, the following non-Office 365 product IDs are s
 
 - AccessRetail
 - Access2019Retail
+- Access2021Retail
 - Access2019Volume
 - Access2021Volume
 - ExcelRetail
 - Excel2019Retail
+- Excel2021Retail
 - Excel2019Volume
 - Excel2021Volume
 - HomeBusinessRetail
 - HomeBusiness2019Retail
+- HomeBusiness2021Retail
 - HomeStudentRetail
 - HomeStudent2019Retail
+- HomeStudent2021Retail
 - O365HomePremRetail
 - OneNoteFreeRetail
 - OneNoteRetail
 - OneNote2021Volume
 - OutlookRetail
 - Outlook2019Retail
+- Outlook2021Retail
 - Outlook2019Volume
 - Outlook2021Volume
 - Personal2019Retail
+- Personal2021Retail
 - PowerPointRetail
 - PowerPoint2019Retail
+- PowerPoint2021Retail
 - PowerPoint2019Volume
 - PowerPoint2021Volume
 - ProfessionalRetail
 - Professional2019Retail
+- Professional2021Retail
 - ProjectProXVolume
 - ProjectPro2019Retail
+- ProjectPro2021Retail
 - ProjectPro2019Volume
 - ProjectPro2021Volume
 - ProjectStdRetail
 - ProjectStdXVolume
 - ProjectStd2019Retail
+- ProjectStd2021Retail
 - ProjectStd2019Volume
 - ProjectStd2021Volume
 - ProPlus2019Volume
 - ProPlus2021Volume
 - ProPlusSPLA2021Volume
 - ProPlus2019Retail
+- ProPlus2021Retail
 - PublisherRetail
 - Publisher2019Retail
+- Publisher2021Retail
 - Publisher2019Volume
 - Publisher2021Volume
 - Standard2019Volume
@@ -114,15 +124,18 @@ In addition to these product IDs, the following non-Office 365 product IDs are s
 - StandardSPLA2021Volume
 - VisioProXVolume
 - VisioPro2019Retail
+- VisioPro2021Retail
 - VisioPro2019Volume
 - VisioPro2021Volume
 - VisioStdRetail
 - VisioStdXVolume
 - VisioStd2019Retail
+- VisioStd2021Retail
 - VisioStd2019Volume
 - VisioStd2021Volume
 - WordRetail
 - Word2019Retail
+- Word2021Retail
 - Word2019Volume
 - Word2021Volume
 

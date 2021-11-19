@@ -92,7 +92,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
     [Remote Connectivity Analyzer Outlook Autodiscover test](https://testconnectivity.microsoft.com/tests/O365Ola/input)
 2. Complete all the required fields on the form, and then click **Perform Test**.
 
-    :::image type="content" source="./media/cannot-set-up-profile-autodiscover/credentials.jpg" alt-text="Screenshot of enter test credentials":::
+    :::image type="content" source="media/cannot-set-up-profile-autodiscover/outlook-connectivity-required-fields.png" alt-text="Screenshot of the Outlook Connectivity form, showing required fields of email address, authentication type and credentials.":::
 
 3. When the test is finished, determine whether it's successful.
 

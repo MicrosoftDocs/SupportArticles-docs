@@ -32,7 +32,7 @@ This issue occurs after you add an additional Exchange account to your Outlook p
 1. On the **File** menu, select **Info**.
 2. Select **Account Settings**, and then select **Account Settings**.
 
-![Account Setting](./media/room-finder-is-not-available-shared-calendars-outlook/outlook-account-setting.png)
+:::image type="content" source="./media/room-finder-is-not-available-shared-calendars-outlook/outlook-account-setting.png" alt-text="Screenshot of the Email tab on Account Settings window.":::
 
 In this example, the delegate has added a second Exchange email account to the Outlook profile.
 

@@ -35,7 +35,7 @@ The Propose New Time feature is available in Outlook 2016 for Mac version 15.9 a
 
 To use this feature, view a meeting request, select the **Propose New Time** button, and then select either **Tentative and Propose New Time** or **Decline and Propose New Time**.
 
-:::image type="content" source="media/cannot-propose-a-new-time-for-a-meeting/how-to-use-propse-new-time-feature.png" alt-text="Screen shot of a meeting request, showing the Tentative, Decline, and Propose New Time options" border="false":::
+:::image type="content" source="media/cannot-propose-a-new-time-for-a-meeting/how-to-use-propse-new-time-feature.png" alt-text="Screenshot of a meeting request, showing the Tentative, Decline, and Propose New Time options.":::
 
 > [!NOTE]
 > If you are running Outlook 2016 for Mac version 15.9 or a later version and you are connected to a version of Exchange Server that is earlier than Exchange 2013 Service Pack 1 (SP1), the **Propose New Time** button does not appear on meeting requests.

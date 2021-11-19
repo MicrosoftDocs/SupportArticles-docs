@@ -41,7 +41,7 @@ The Propose New Time feature is available in Outlook 2016 for Mac version 15.9 a
 
 To use this feature when a new time proposal is received, open the New Time Proposed message, and then select the **Accept Proposal** or **View All Proposals** button.
 
-:::image type="content" source="media/cannot-accept-new-meeting-time-proposals/accept-proposal-and-view-all-proposals-buttons.png" alt-text="Screen shot of the Accept Proposal button and the View All Proposals button" border="false":::
+:::image type="content" source="media/cannot-accept-new-meeting-time-proposals/accept-proposal-and-view-all-proposals-buttons.png" alt-text="Screenshot of the Accept Proposal button and the View All Proposals button.":::
 
 > [!NOTE]
 > If you are running Outlook 2016 for Mac version 15.9 or a later version and you are connected to a version of Exchange Server that's earlier than Exchange 2013 SP1, the **Accept Proposal** and **View All Proposals** buttons do not appear.

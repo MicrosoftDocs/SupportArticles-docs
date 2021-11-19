@@ -26,17 +26,17 @@ If you have to combine separate Microsoft Word documents, you can copy and paste
 
 1. Select the **Insert** tab.
 
-   ![Screenshot of the Insert tab](./media/merge-word-documents/insert-tab.png)
+   :::image type="content" source="media/merge-word-documents/insert-tab.png" alt-text="Screenshot of the Insert tab.":::
 
 2. Select **Object**, and then select **Text from File** from the drop-down menu.
 
-   :::image type="content" source="./media/merge-word-documents/text-from-file.png" alt-text="Screenshot of the Text from File option.":::
+   :::image type="content" source="media/merge-word-documents/text-from-file.png" alt-text="Screenshot of the Text from File option.":::
 
 3. Select the files to be merged into the current document. Press and hold **Ctrl** to select more than one document.
 
     > [!NOTE]
     > Documents will be merged in the order in which they appear in the file list. To use a different order, select and insert each file individually in the desired order.
 
-   ![Screenshot of inserting file](./media/merge-word-documents/insert-file.png)
+   :::image type="content" source="media/merge-word-documents/insert-file.png" alt-text="Screenshot of inserting files.":::
 
 For more information, see the [Forum](https://answers.microsoft.com/default.aspx).

@@ -26,38 +26,42 @@ Public folder entries still appear in the global address list (GAL) after removi
 
 ## Cause
 
-Mail enabled public folders weren't removed properly. The mail enabled public folder (MEPF) objects may still be present.
+Mail-enabled public folders weren't removed properly. The mail-enabled public folder (MEPF) objects may still be present.
 
 ## Resolution
 
-Check if the stale entry appears in OWA or Outlook online mode. If the entry appears in cached mode and not in OWA or Outlook online mode, the Offline Address Book (OAB) may not be updated on the Outlook cached mode client yet.
+Check if the stale entry appears in Outlook on the Web or Outlook online mode. If the entry appears in cached mode and not in Outlook on the Web or Outlook online mode, the Offline Address Book (OAB) may not be updated on the Outlook cached mode client yet.
 
-If the stale entry appears in OWA and Outlook online mode as well:
+If the stale entry appears in Outlook on the Web and Outlook online mode as well:
 
 1. Connect to Exchange Online PowerShell.
-2. Run the following command to list mail enabled public folders:
+2. Run the following cmdlet to list mail-enabled public folders:
 
     ```powershell
     Get-MailPublicFolder
     ```
 
-3. Verify if the stale public folder entry is there.
-4. If you see the stale public folder entry, run this command to remove the mail enabled public folders:
+3. Check whether the stale public folder entry is exists.
+4. If the stale public folder entry exists, run the following cmdlet to remove the mail-enabled public folders:
 
     ```powershell
-    Get-MailPublicFolder <name of stale public folder> | Disable-MailPublicFolder
+    Get-MailPublicFolder <name of stale public folder> |foreach{Disable-MailPublicFolder $_.guid.guid}
     ```
+    If you want to remove all mail-enabled public folders at once, run the following cmdlet:
 
-    You may get the following warning, which is expected if the public folder is not present:
+    ```powershell
+    Get-MailPublicFolder -ResultSize unlimited |foreach{Disable-MailPublicFolder $_.Guid.Guid}
+    ```
+    You may get the following warning, which is expected if the public folder isn't present:
 
     > WARNING: Failed to locate the public folder \<name of public folder> because the following error occurred: Microsoft.Exchange.Data.StoreObjects.ObjectNotFoundException: No active public folder mailboxes were found. This happens when no public folder mailboxes are provisioned or they are provisioned in 'HoldForMigration' mode. If you're not currently performing a migration, create a public folder mailbox.
 
     > [!NOTE]
-    > Make Sure the MEPF's are no longer needed before removing them.
+    > Make Sure the MEPF's are no longer needed before removing them.  
 
-    After removing the entry, use OWA to verify if the entry appears in GAL.
+    After removing the entry, run the `Get-MailPublicFolder` cmdlet to check that the output doesn't list the entry. Alternatively, use Outlook on the Web to check whether this entry still appears in the GAL.
 
-5. If Get-MailPublicFolder doesn't show a stale entry, run this command to check if there's any other object with the same name or email address:
+5. If `Get-MailPublicFolder` doesn't show a stale entry, run this cmdlet to check if there's any other object with the same name or email address:
 
     Search by name:
 
@@ -71,7 +75,7 @@ If the stale entry appears in OWA and Outlook online mode as well:
     Get-Recipient |?{$_.EmailAddresses -like "*pub*"}
     ```
 
-    If you find another object with the same name or email address, remove it using the appropriate command, i.e. Remove-mailbox if it's a mailbox object type.
+    If you find another object with the same name or email address, remove it using the appropriate cmdlet, i.e. Remove-mailbox if it's a mailbox object type.
 
 6. Use Outlook on the Web to verify if the entries have been removed.
     > [!NOTE]

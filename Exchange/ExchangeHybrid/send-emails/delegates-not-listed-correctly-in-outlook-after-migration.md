@@ -40,17 +40,17 @@ However, when you view the calendar or other folder properties in Outlook, the a
 Also, an administrator can view permissions in Exchange Remote PowerShell by using one of the following commands:
 
 ```powershell
-Get-MailboxFolderPermissionManagerSMTP:\Calendar
+Get-MailboxFolderPermission -Identity ManagerSMTP:\Calendar
 ```
 
 ```powershell
-Get-MailboxFolderPermissionManagerSMTP:\Inbox
+Get-MailboxFolderPermission -Identity ManagerSMTP:\Inbox
 ```
 
 Delegates can still send on behalf of others as expected. This is true so long as they are listed in the **Delegate Permissions** dialog box. This can be verified by an administrator by running the following command from the Exchange Online environment:
 
 ```powershell
-Get-MailUserManagerSMTP| ft GrantSendOnBehalfTo
+Get-MailUser -Identity ManagerSMTP | Format-Table GrantSendOnBehalfTo
 ```
 
 Additionally, delegates report that they cannot see private items if they were previously granted this permission.

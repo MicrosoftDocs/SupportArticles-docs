@@ -633,7 +633,7 @@
           href: ../installation/error-1935-when-install-office-2010.md
         - name: Error when you install an Office program
           href: ../installation/error-run-office-setup-program.md
-        - name: How to download and run Office 2019 installation files not in VLSC
+        - name: How to download and run Office LTSC installation files not in VLSC
           href: ../installation/how-to-download-office-install-not-in-vlsc.md
         - name: ForceUpgrade and ForceDowngrade attributes
           href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
@@ -650,7 +650,7 @@
         - name: The ability to uninstall Office updates
           href: ../installation/ability-to-uninstall-office.md
         - name: Windows Installer service could not be accessed
-          href: ../installation/windows-installer-service-not-be-accesse.md
+          href: ../installation/windows-installer-service-not-be-accessed.md
     - name: Office for Mac
       items:
         - name: Can't pass the Welcome Screen in Office for Mac

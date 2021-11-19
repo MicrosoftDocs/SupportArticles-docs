@@ -28,13 +28,13 @@ Outlook 2010
 
 Create online meeting failed. Please make sure that Lync is running and signed-in and try again.
 
-:::image type="content" source="media/create-online-meeting-failed-error/error-1.png" alt-text="error details" border="false":::
+:::image type="content" source="media/create-online-meeting-failed-error/outlook-2010-error.png" alt-text="Screenshot of Outlook 2010 error details." border="false":::
 
 Outlook 2013
 
 Create Lync Meeting failed. Please make sure that Microsoft Lync is running and signed-in and try again.
 
-:::image type="content" source="media/create-online-meeting-failed-error/error-2.png" alt-text="error details 2" border="false":::
+:::image type="content" source="media/create-online-meeting-failed-error/outlook-2013-error.png" alt-text="Screenshot of Outlook 2013 error details." border="false":::
 
 ## Cause
 
@@ -54,14 +54,14 @@ To update an existing policy that's configured to manage add-ins for Outlook, fo
 2. Under **User Configuration**, expand **Administrative Templates** to locate the policy node for your template. When you use the Outlk15.admx template, this node is named Microsoft Outlook 2013.
 3. Under **Miscellaneous**, double-click **List of managed add-ins**.
 
-   :::image type="content" source="media/create-online-meeting-failed-error/list-of-managed-add-ins.jpg" alt-text="List of managed add-ins setting" border="false":::
+   :::image type="content" source="media/create-online-meeting-failed-error/list-of-managed-add-ins.png" alt-text="Screenshot of the Miscellaneous group policy settings." border="false":::
 
 4. Under **Options**, select **Show**.
 
-   :::image type="content" source="media/create-online-meeting-failed-error/show.jpg" alt-text="select the Show option" border="false":::
+   :::image type="content" source="media/create-online-meeting-failed-error/show.png" alt-text="Screenshot of List of managed add-ins setting details window." border="false":::
 
 5. In the **Shows Contents** dialog box, add `Microsoft.VBAAddinForOutlook.1`, and then enter a value of *1*.
 
-   :::image type="content" source="media/create-online-meeting-failed-error/show-contents.jpg" alt-text="Shows Contents" border="false":::
+   :::image type="content" source="media/create-online-meeting-failed-error/show-contents.png" alt-text="Screenshot of Shows Contents window after you select Show." border="false":::
 
 6. Click **OK** for the rest of the dialog boxes.At this point, the policy setting will be applied on your Outlook client computers when the Group Policy update is replicated.

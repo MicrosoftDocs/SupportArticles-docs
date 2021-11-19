@@ -30,25 +30,25 @@ By default, when you open a new meeting form in Microsoft Outlook 2016, Microsof
 
 > [!NOTE]
 > You can hide the Room Finder by selecting the **Room Finder** control in the **Options** group of the ribbon. However, the Room Finder remains hidden only if you hide it on the **Appointment** screen. If you hide it on the **Scheduling Assistant** screen, switch to the **Appointment** screen and then back to the **Scheduling Assistant** screen, the Room Finder is visible again. The **Room Finder** control button isn't available when you create an appointment. You can select **Invite Attendees** on the **Appointment** tab to make it available.  
-> :::image type="content" source="./media/room-finder/invite-attendees.png" alt-text="Invite attendees on the Appointment tab.":::
+> :::image type="content" source="./media/room-finder/invite-attendees.png" alt-text="Screenshot that shows the Invite Attendees option on the Appointment tab.":::
 
 **The Appointment screen in Outlook**
 
-:::image type="content" source="./media/room-finder/room-finder-outlook-2016-appointment.png" alt-text="Room Finder feature in the Appointment view in Outlook 2016.":::
+:::image type="content" source="./media/room-finder/room-finder-outlook-2016-appointment.png" alt-text="Screenshot that shows the Room Finder feature in the Appointment view in Outlook 2016.":::
 
 **The Scheduling Assistant screen in Outlook**
 
-:::image type="content" source="./media/room-finder/room-finder-outlook-2016-scheduling-assistant.png" alt-text="Room Finder feature in the Scheduling Assistant view in Outlook 2016.":::
+:::image type="content" source="./media/room-finder/room-finder-outlook-2016-scheduling-assistant.png" alt-text="Screenshot that shows the Room Finder feature in the Scheduling Assistant view in Outlook 2016.":::
 
 In Outlook for Microsoft 365, the **Room Finder** control button can be found next to the **Location** field on the **Meeting** tab, or on the ribbon when you view the **Scheduling Assistant** screen.
 
 **The Meeting tab of Outlook in Outlook for Microsoft 365**
 
-:::image type="content" source="./media/room-finder/room-finder-microsoft-365-meeting.png" alt-text="Room Finder feature in the Meeting view in Microsoft 365.":::
+:::image type="content" source="./media/room-finder/room-finder-microsoft-365-meeting.png" alt-text="Screenshot that shows the Room Finder feature in the Meeting view in Microsoft 365.":::
 
 **The Scheduling Assistant tab in Outlook for Microsoft 365**
 
-:::image type="content" source="./media/room-finder/room-finder-microsoft-365-scheduling-assistant.png" alt-text="Room Finder feature in the Scheduling Assistant view in Microsoft 365.":::
+:::image type="content" source="./media/room-finder/room-finder-microsoft-365-scheduling-assistant.png" alt-text="Screenshot that shows the Room Finder feature in the Scheduling Assistant view in Microsoft 365.":::
 
 > [!NOTE]
 > There's a known issue in which no available rooms are displayed in the **Room Finder** pane when you start a meeting outside your working hours. For more information, see [No available rooms for a meeting outside working hours](https://support.microsoft.com/help/2932395).

@@ -50,9 +50,9 @@ appliesto:
 
 When you start a Microsoft Office 2016 or Office 2013 application, such as Outlook, Word, Excel, or PowerPoint, you may receive the following error message:
 
-![Microsoft Office cannot verify the license for this product. You should repair the Office program by using Control Panel.](./media/license-issue-when-start-office-application/error-message.png)
+> Microsoft Office cannot verify the license for this product. You should repair the Office program by using Control Panel.
 
-Microsoft Office cannot verify the license for this product. You should repair the Office program by using Control Panel.
+:::image type="content" source="media/license-issue-when-start-office-application/office-cannot-verify-the-license-for-this-product-error.png" alt-text="Screenshot of the error message that states that Microsoft Office cannot verify the license for this product." border="false":::
 
 ## Cause
 

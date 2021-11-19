@@ -60,7 +60,7 @@ To resolve this issue, use the Exchange admin center in Office 365 to add the us
 2. Click **Admin**, and then click **Exchange**.
 3. Click **permissions**, and then click **admin roles**.
 4. Double-click the role group to which you want to add the user. For example, if you want the user to have full access that includes Windows PowerShell, double-click **Organization Management**.
-5. To add the user to the list, click **Add** (![Add icon](./media/access-denied-connect-powershell/add.png)) under **Members**.
+5. To add the user to the list, click **Add** (:::image type="icon" source="media/access-denied-connect-powershell/add.png":::) under **Members**.
 6. Click **Save**.
 
 If you have security defaults enabled, see [Connect to Exchange Online PowerShell using modern authentication with or without MFA](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true).

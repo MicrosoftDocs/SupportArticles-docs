@@ -84,7 +84,7 @@ When you try to preview or save a document, Word returns the following error mes
 
 To work around the issue, turn off the Preview pane in File Explorer.
 
-   :::image type="content" source="./media/no-file-previews-file-explorer-switching-to-32-bit\preview-pane.png" alt-text="In File Explorer, choose the View tab, and then Preview Pane.":::
+   :::image type="content" source="media/no-file-previews-file-explorer-switching-to-32-bit/preview-pane.png" alt-text="Screenshot of selecting the Preview Pane after selecting View tab in File Explorer.":::
 
 If you want to keep the Preview Pane active, edit the following registry subkeys to fix the error.
 

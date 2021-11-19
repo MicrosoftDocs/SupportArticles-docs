@@ -34,18 +34,24 @@ To set up Outlook Web App to access Exchange Server, follow these steps:
 
 1. Ask your network administrator or local HelpDesk to see whether your account has Outlook Web App enabled. If Outlook Web App is enabled, ask the administrator or HelpDesk for the address (URL) of Outlook Web App. Usually, the address is in the following form:
 
-    `https://\<Domain Name>/OWA`
+    `https://<Domain Name>/OWA`
 
     Normally, you can find the Outlook Web App URL by clicking File->Info in Outlook.
 
     > [!NOTE]
     > This feature is available on Outlook 2010 and Outlook 2013. It depends on the server side settings.
 
-    ![The screenshot for the step](./media/set-up-web-access/account-information.png)
+    :::image type="content" source="./media/set-up-web-access/account-information.png" alt-text="Screenshot of the Info page in Outlook where you can find the URL. In this example, it's https://mail.contoso.com/owa.":::
 2. Open a web browser such as Internet Explorer, type the Outlook Web App address in the address bar, and then press Enter.
 3. If you receive the following certificate warning page, click **Continue to this website (not recommended)** to continue to open Outlook Web App.
+    >There is a problem with this website's security certificate.</br>
+The security certificate presented by this website was not issued by a trusted certificate authority.</br>
+Security certificate problems may indicate an attempt to fool you or intercept any data you send to the server.</br>
+We recommend that you close this webpage and do not continue to this website.</br>
+Click here to close this webpage.</br>
+Continue to this website (not recommended).
 
-    ![A screenshot of the certificate warning page.](./media/set-up-web-access/certificate-warning.png)
+    :::image type="content" source="./media/set-up-web-access/certificate-warning.png" alt-text="Screenshot of the certificate warning page.":::
 
     > [!NOTE]
     > This certificate warning is displayed if an incorrect certificate is being used in the Exchange server. Report this issue to the network administrator.

@@ -70,7 +70,7 @@ In the Inbox Repair tool, type the path and the file name of your personal folde
 > [!NOTE]
 > If you do not know where the .pst file is located, follow the steps in [How to locate, move, or back up your .pst file](https://support.microsoft.com/help/287070).
 
-:::image type="content" source="media/how-to-repair-personal-folder-file/microsoft-outlook-inbox-repair-tool.jpg" alt-text="Repair the .pst file" border="false":::
+:::image type="content" source="media/how-to-repair-personal-folder-file/inbox-repair-tool.png" alt-text="Screenshot shows steps to repair the .pst file in the Inbox Repair tool." border="false":::
 
 > [!NOTE]
 >

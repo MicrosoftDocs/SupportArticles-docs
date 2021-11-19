@@ -143,12 +143,14 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 
 1. On the Client Access Server (CAS), open Internet Information Services (IIS).  
 
-2. Expand **Sites**, select **Default Web Site**, and then click **Bindings** on the **Actions** pane.  
+2. Expand **Sites**, select **Default Web Site**, and then click **Bindings** on the **Actions** pane.
 
 3. In the **Site Bindings** dialog box, open the binding for the following values: </br>
    **Type**: **https**; **Port**: **443**.  
 
 4. Check whether a valid SSL certificate is specified for the default web site. If not, specify a valid SSL certificate, such as **Microsoft Exchange**, and select **OK**.
+
+   :::image type="content" source="./media/exchange-security-update-issues/front-end-binding.png" alt-text="Screenshot that shows Microsoft Exchange is selected as the S S L certificate for the S S L binding for the default web site.":::
 
 5. Run the following command in an elevated PowerShell window to restart IIS:
 
@@ -156,11 +158,9 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
    Restart-Service WAS,W3SVC  
    ```
 
-   ![The SSL certificate for the SSL binding for the default web site on the CAS server.](./media/exchange-security-update-issues/front-end-binding.png)  
-
 6. On the Mailbox server, perform the verification steps 1 through 5 for the **Exchange Back End** site.
 
-    ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
+    :::image type="content" source="./media/exchange-security-update-issues/back-end-binding.png" alt-text="Screenshot that shows Microsoft Exchange is selected as the S S L certificate for the S S L binding for the Exchange Back End site on the Mailbox server.":::
 
 For more information, see [this article](https://support.microsoft.com/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
 
@@ -172,10 +172,10 @@ For more information, see [this article](https://support.microsoft.com/topic/you
 
 When you try to sign in to OWA or the EAC in Exchange Server, the web browser freezes or you see a message that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer.
 
->Event ID: 1003
->Source: MSExchange Front End HTTPS Proxy
->An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.
->at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
+> Event ID: 1003
+> Source: MSExchange Front End HTTPS Proxy
+> An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.
+> at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
 
 **Cause:**
 
@@ -193,9 +193,9 @@ Follow the steps in this [article](../administration/cannot-access-owa-or-ecp-if
 
 When installing Exchange Server 2016 or Exchange Server 2013, the installation process might have failed or been interrupted at some stage, then resumed and finally completed successfully. However, when you try to access EAC or OWA, you receive the following error message:
 
->something went wrong
+> something went wrong
 >
->Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
+> Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
 
 **Cause:**
 
@@ -271,7 +271,7 @@ For more information, see [this article](../setup/ex2019-setup-does-not-run-corr
 
 You might see the following error message when installing the SU:
 
->The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
+> The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
 
 **Cause:**
 
@@ -322,7 +322,7 @@ Check the state of the services. If they are **Disabled**, set them to **Automat
 
 You receive the following error message during Setup in the Setup logs:
 
->Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role isn’t installed on this computer.
+> Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role isn’t installed on this computer.
 
 **Resolution:**
 
@@ -355,7 +355,7 @@ To find the Domain Controller (DC) which holds the schema master, run the follow
 
 When you install the update rollup on a computer that isn’t connected to the internet, you may experience a long installation delay. Additionally, you may receive the following error message:
 
->Creating Native images for .Net assemblies.
+> Creating Native images for .Net assemblies.
 
 **Cause:**
 
@@ -385,7 +385,8 @@ Do the following:
 **Issue:**
 
 The CU setup might fail with the following error message:
->Cannot start the service Microsoft Exchange Service Host
+
+> Cannot start the service Microsoft Exchange Service Host
 
 You might find that the Microsoft Exchange Service Host and/or all other Exchange services are stopped and in **Disabled** mode.
 
@@ -407,7 +408,7 @@ Do the following:
 
 During the SU installation, you might see the following error message:
 
->Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration.
+> Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration.
 
 **Resolution 1:**
 
@@ -488,7 +489,7 @@ To get mail flow working again, make sure that the following requirements are me
 
 When you run either Exchange setup or the PrepareAD command, the process fails with the following error message:
 
->The well-known object entry B:\<guid\>:CN=Recipient Management\0ADEL:\<guid\>,CN=Deleted Objects,DC=contoso,DC=com on the otherWellKnownObjects attribute in the container object CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com points to an invalid DN or a deleted object. Remove the entry, and then rerun the task. at Microsoft.Exchange.Configuration.Tasks.Task.ThrowError(Exception exception, ErrorCategory errorCategory, Object target, String helpUrl)
+> The well-known object entry B:\<guid\>:CN=Recipient Management\0ADEL:\<guid\>,CN=Deleted Objects,DC=contoso,DC=com on the otherWellKnownObjects attribute in the container object CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com points to an invalid DN or a deleted object. Remove the entry, and then rerun the task. at Microsoft.Exchange.Configuration.Tasks.Task.ThrowError(Exception exception, ErrorCategory errorCategory, Object target, String helpUrl)
 
 **Cause:**
 
@@ -520,7 +521,7 @@ Now you should be able to continue with the setup.
 
 You see the following error message during Exchange installation:
 
->Installing product F:\exchangeserver.msi failed. Fatal error during installation. Error code is 1603. Last error reported by the MSI package is 'The installer has insufficient privileges to access this directory: C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\15.1.2106'.
+> Installing product F:\exchangeserver.msi failed. Fatal error during installation. Error code is 1603. Last error reported by the MSI package is 'The installer has insufficient privileges to access this directory: C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\15.1.2106'.
 
 **Resolution:**
 

@@ -59,8 +59,7 @@ When you try to start the Microsoft Exchange Management Shell (EMS) or the Micro
 
 - Error message 9
 
-    **Connecting to remote server failed with the following error message: The WinRM client cannot process the request. The WinRM client tried to use Kerberos authentication mechanism, but the destination computer.**   
-
+    **Connecting to remote server failed with the following error message: The WinRM client cannot process the request. The WinRM client tried to use Kerberos authentication mechanism, but the destination computer.**
 
 ## Resolution
 
@@ -68,35 +67,35 @@ To resolve these problems, run the "Exchange Management Troubleshooter" (EMTshoo
 
 ### About the EMT shooter
 
-The EMTshooter runs on the local (target) Exchange server and tries to identify potential problems that affect the management tools that are connected to it. 
+The EMTshooter runs on the local (target) Exchange server and tries to identify potential problems that affect the management tools that are connected to it.
 
-The troubleshooter runs in two stages. First, it examines the IIS Default Web Site, the PowerShell vdir, and other critical areas to identify known causes of connection problems. If the tool identifies a problem that affects one of the pre-check processes, it makes a recommendation to resolve the problem. If the pre-checks pass, the troubleshooter tries to connect to the server exactly like the management tools would connect. If that connection attempt still causes a WinRM-style error, the troubleshooter tries compare that error to a list of stored strings that are collected from related support cases. If a match is found, the troubleshooter displays the known causes of that error in the CMD window. 
+The troubleshooter runs in two stages. First, it examines the IIS Default Web Site, the PowerShell vdir, and other critical areas to identify known causes of connection problems. If the tool identifies a problem that affects one of the pre-check processes, it makes a recommendation to resolve the problem. If the pre-checks pass, the troubleshooter tries to connect to the server exactly like the management tools would connect. If that connection attempt still causes a WinRM-style error, the troubleshooter tries compare that error to a list of stored strings that are collected from related support cases. If a match is found, the troubleshooter displays the known causes of that error in the CMD window.
 
 The following screen shot shows how this display might appear.
 
-![EMT shooter](./media/connecting-remote-server-failed/emt-shooter.png)
+:::image type="content" source="media/connecting-remote-server-failed/emt-shooter.png" alt-text="Screenshot of how this display might appear.":::
 
 The EMTshooter logs events in the "Microsoft-Exchange-Troubleshooters/Operational" event log. All results that are displayed in the CMD window are also logged in the event log to create a record.
 
 ### Things to remember
 
 - Depending on your current settings, you may have to adjust the execution policy on your computer to run the troubleshooter by using one of the following commands:
-  - Set-ExecutionPolicy RemoteSigned   
-  - Set-ExecutionPolicy Unrestricted   
+  - Set-ExecutionPolicy RemoteSigned
+  - Set-ExecutionPolicy Unrestricted
 
     > [!IMPORTANT]
-    > Remember to revert to the usual settings after you run the troubleshooter. 
+    > Remember to revert to the usual settings after you run the troubleshooter.
 
-- You must run this version of the troubleshooter on the server that is running Exchange Server that the management tools do not connect to.   
-- In order to run the troubleshooter, you must have the user rights to log on locally to the Exchange server. This is a current requirement of the tool. Additionally, you must have the user rights to run Windows PowerShell.   
+- You must run this version of the troubleshooter on the server that is running Exchange Server that the management tools do not connect to.
+- In order to run the troubleshooter, you must have the user rights to log on locally to the Exchange server. This is a current requirement of the tool. Additionally, you must have the user rights to run Windows PowerShell.
 
 ### How to install EMTshooter
 
 To install the EMT shooter, follow these steps:
 
-1. Download the troubleshooter compressed file that has a .zip filename extension from [here](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/Exchange/4274/1/EMTshooter.zip).   
-2. Extract the four files that are included in the .zip file into a folder, and then rename the file extensions to .ps1.   
-3. Run EMTshooter.ps1 from a standard (and local) Windows PowerShell window.   
+1. Download the troubleshooter compressed file that has a .zip filename extension from [here](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/Exchange/4274/1/EMTshooter.zip).
+2. Extract the four files that are included in the .zip file into a folder, and then rename the file extensions to .ps1.
+3. Run EMTshooter.ps1 from a standard (and local) Windows PowerShell window.
 
 ## References
 

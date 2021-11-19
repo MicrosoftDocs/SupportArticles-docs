@@ -30,23 +30,23 @@ _Original KB number:_ &nbsp; 2797572
 
 When you send an e-mail message in Microsoft Outlook, the message may remain in your Outbox folder as shown in the following figure.
 
-:::image type="content" source="media/email-stays-in-outbox-until-manually-send-or-receive/outbox-folder-in-outlook.jpg" alt-text="The screenshot for the Symptoms" border="false":::
+:::image type="content" source="media/email-stays-in-outbox-until-manually-send-or-receive/outbox-folder-in-outlook.png" alt-text="Screenshot shows an email message stuck in the Outbox folder." border="false":::
 
 When this problem occurs, the message remains in your Outbox folder until you manually initiate a Send/Receive operation (for example, press F9 or select send or receive).
 
 ## Cause
 
-This problem can occur if the Send immediately when connected option is not enabled, as shown in the following figure from Outlook 2016.
+This problem can occur if the **Send immediately when connected** option is not enabled, as shown in the following figure from Outlook 2016.
 
-:::image type="content" source="media/email-stays-in-outbox-until-manually-send-or-receive/send-immediately-when-connected-setting.png" alt-text="Outlook 2016 Send immediately when connected setting" border="false":::
+:::image type="content" source="media/email-stays-in-outbox-until-manually-send-or-receive/send-immediately-when-connected-setting.png" alt-text="Screenshot of the Outlook Options window, where Send immediately when connected option is highlighted in Send and receive area." border="false":::
 
 This setting is tied to the following registry data, so this setting can also be configured by an administrator through a modification of the registry.
 
-Key: HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Options\Mail
+Key: `HKEY_CURRENT_USER\Software\Microsoft\Office<x.0>\Outlook\Options\Mail`
 
 or
 
-Policy key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Outlook\Options\Mail
+Policy key: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office<x.0>\Outlook\Options\Mail`
 
 DWORD: Send Mail Immediately  
 Value: 0

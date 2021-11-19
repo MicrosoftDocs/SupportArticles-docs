@@ -41,44 +41,44 @@ This issue occurs because of the deprecation of the classic offline mode in Outl
 
 3. In **Control Panel**, type mail to search for the Mail item, and then open it. If there are two Mail items, choose the one that is labeled with your version of Outlook, such as Outlook 2013 or Outlook 15 for Outlook 2013, or Outlook 2016 or Outlook 16 for Outlook 2016 (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-change-the-location-of-ost-file/search-mail-item-in-control-panel.png" alt-text="type mail to search for the Mail item in Control Panel" border="false":::
+   :::image type="content" source="media/cannot-change-the-location-of-ost-file/search-mail-item-in-control-panel.png" alt-text="Screenshot of the result after searching for the Mail item in Control Panel.":::
 
 4. Select **Show Profiles**.
 5. Select **Add** (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-change-the-location-of-ost-file/add-mail.png" alt-text="add profile" border="false":::
+   :::image type="content" source="media/cannot-change-the-location-of-ost-file/add-mail.png" alt-text="Screenshot of the Mail window which shows the add button.":::
 
 6. In the **Profile Name** box, type the name that you want to use for the new email profile, and then select **OK** (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-change-the-location-of-ost-file/create-new-profile.png" alt-text="create a new email profile" border="false":::
+   :::image type="content" source="media/cannot-change-the-location-of-ost-file/create-new-profile.png" alt-text="Screenshot of the New Profile window where you can type a profile name.":::
 
 7. Select **Next** after Outlook finds your account information (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-change-the-location-of-ost-file/add-account-page.png" alt-text="select Next on the Add Account page" border="false":::
+   :::image type="content" source="media/cannot-change-the-location-of-ost-file/add-account-page.png" alt-text="Screenshot of the Add Account window where you can select Next after Outlook finds your account information.":::
 
 8. After Outlook finishes the setup for your account, select the **Change account settings** option, and then select **Next** (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-change-the-location-of-ost-file/change-account-settings-option.png" alt-text="Change account settings" border="false":::
+   :::image type="content" source="media/cannot-change-the-location-of-ost-file/change-account-settings-option.png" alt-text="Screenshot of the Add Account window in which Outlook finishes the setup for your account.":::
 
 9. In the **Server Settings** section, select **More Settings** (The screenshot for this step is listed below).
 
-   :::image type="content" source="media/cannot-change-the-location-of-ost-file/more-settings.png" alt-text="More Settings" border="false":::
+   :::image type="content" source="media/cannot-change-the-location-of-ost-file/more-settings.png" alt-text="Screenshot of the Add Account window with the More Settings button under the Server Settings section.":::
 
 10. On the **Advanced** tab, select **Outlook Data File Settings** (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/cannot-change-the-location-of-ost-file/outlook-data-file-settings.png" alt-text="Outlook Data File Settings" border="false":::
+    :::image type="content" source="media/cannot-change-the-location-of-ost-file/outlook-data-file-settings.png" alt-text="Screenshot of Microsoft Exchange window with Outlook Data File Settings button on the Advanced tab.":::
 
 11. Select **Browse**, browse to the `.ost` file that you copied in step 1, and then select **Open**. If you want to create a new `.ost` file, browse to the location where you want to save the new `.ost` file, type the file name that you want to use, and then select **Open**. Outlook will create the new `.ost` file (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/cannot-change-the-location-of-ost-file/browse.png" alt-text="Select Browse on the Outlook Data File Settings page" border="false":::
+    :::image type="content" source="media/cannot-change-the-location-of-ost-file/outlook-data-files-setting-browse.png" alt-text="Screenshot of the Outlook Data File Settings window with the Browse button.":::
 
-    :::image type="content" source="media/cannot-change-the-location-of-ost-file/open.png" alt-text="open the the new .ost file" border="false":::
+    :::image type="content" source="media/cannot-change-the-location-of-ost-file/new-outlook-data-file.png" alt-text="Screenshot of the New Outlook data file window which shows the new .ost file.":::
 
 12. Select **Finish** to finish the setup for your email account.
 13. Open **Control Panel**, and then open the **Mail**.
 14. Select **Always use this profile**, select the new profile that you created, and then select **OK** (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/cannot-change-the-location-of-ost-file/always-use-this-profile.png" alt-text="Always use this profile" border="false":::
+    :::image type="content" source="media/cannot-change-the-location-of-ost-file/always-use-this-profile.png" alt-text="Screenshot of the Mail window with New Profile selected under Always use this profile.":::
 
 ## Workaround Method 2 - Set the ForceOSTPath registry entry to change the location of the .ost file
 

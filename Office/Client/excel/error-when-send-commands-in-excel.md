@@ -123,7 +123,7 @@ Windows 7
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.
 
-![You may have to restart your computer after the repair process is complete](./media/error-when-send-commands-in-excel/note.png)    
+:::image type="content" source="media/error-when-send-commands-in-excel/online-repair-option.png" alt-text="Select the Online Repair option to repair office.":::
     
 **For an Office 2016, 2013, Office 2010, or Office 2007 installation**
 
@@ -163,7 +163,8 @@ To disable hardware acceleration, follow these steps:
 
     The following screen shot shows this option in Excel.
     
-    ![The following screen shot shows this option in Excel.](./media/error-when-send-commands-in-excel/screenshot.png)    
+    :::image type="content" source="media/error-when-send-commands-in-excel/disable-hardware-graphics-acceleration.png" alt-text="Select the Disable hardware graphics acceleration option to disable hardware acceleration in Office Options setting." border="false":::
+
 5. Select **OK**.    
  
 > [!NOTE]

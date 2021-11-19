@@ -27,6 +27,8 @@
     items:
     - name: Search doesn't provide results from another language
       href: ../../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Searching private content
+      href: ../search/search-private-content.md
   - name: Setup
     items:
     - name: OneDrive for Business installation fails

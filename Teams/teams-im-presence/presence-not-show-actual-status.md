@@ -58,6 +58,18 @@ If neither workaround fixes the issue, open a support ticket that contains the f
 - The desktop and debug logs. For more information about the logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
 - The UTC time at which you might expect that the presence indicator shows the user's actual status. For the example that's described in the "Symptoms" section, this would be when you expect that the presence status would show **Available** instead of **Away**. Verify that the UTC time is captured in the collected logs.
 
+### Run a self-diagnostics tool
+
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect user presence.
+
+> [!NOTE]
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag)
+
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
