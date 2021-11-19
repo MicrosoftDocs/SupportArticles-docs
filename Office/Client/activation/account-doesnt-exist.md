@@ -17,7 +17,7 @@ appliesto:
 - Microsoft 365
 ---
 
-When you try to activate Microsoft 365 apps, you might encounter the following error:
+# When you try to activate Microsoft 365 apps, you might encounter the following error:
 
 > That Microsoft account doesn’t exist. Enter a different account or get a new one.
 
