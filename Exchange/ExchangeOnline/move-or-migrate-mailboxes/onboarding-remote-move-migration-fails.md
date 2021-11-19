@@ -20,42 +20,56 @@ appliesto:
 
 # Can't migrate on-premises mailbox with cloud-based archive to Exchange Online
 
-## Symptoms
-
-You have an on-premises primary mailbox with a cloud-based archive mailbox in Exchange Online. When you try to migrate the on-premises mailbox to Exchange Online by using the [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch) cmdlet or the [New-MoveRequest](/powershell/module/exchange/new-moverequest) cmdlet that has the `PrimaryOnly` switch used, the migration fails with the following error message:
+When you try to migrate an on-premises primary mailbox with a cloud-based archive mailbox to Exchange Online, you receive the following error message:
 
 > The archive database is not explicitly set on the mailbox. Hence a primary only move cannot be allowed for this user.
 
-## Cause
+The migration still fails even if you use the [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch) cmdlet or the [New-MoveRequest](/powershell/module/exchange/new-moverequest) cmdlet with the `PrimaryOnly` switch.
 
-This issue occurs because the affected mailbox has the same `ArchiveGuid` property on both on-premises archive and cloud-based archive. This error is raised by a validation check on Exchange Online for the move request to avoid losing archive data for the affected user object.
-
-## Resolution
+This issue typically occurs because the on-premises primary mailbox also has an on-premises archive mailbox, and the archive GUID (`ArchiveGuid`) of the on-premises archive mailbox is also used by the cloud-based archive mailbox, which isn't a valid state. To avoid losing data of the on-premises archive mailbox, the validation check fails for the migration.
 
 To fix this issue, follow these steps:
 
-**Note**: The only supported archive split scenario is a primary mailbox in the on-premises Exchange organization and an archive mailbox in Exchange Online.
+## Step 1: Verify the archive GUID of on-premises and cloud-based archive mailboxes is same
 
-1. Run the following cmdlets to retrieve the `ArchiveGuid` property:
+In the on-premises Exchange Server environment and Exchange Online, follow these steps:
 
-    - For the on-premises mailbox:
-        ```powershell
-        Get-Mailbox <on-premises user mailbox> | FL *archive*
-        ```
-    - For the mail-enabled user on the cloud:
-        ```powershell
-        Get-MailUser <cloud mail user> | FL *archive*
-        ```
-1. Check if the `ArchiveGUID` property in the on-premises Exchange organization matches the one in Exchange Online.
-    - If yes, continue Step 3.
-    - If no, create a support request to Microsoft for further investigation.
-1. [Backup the on-premises archive mailbox and export to a .pst file](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
-1. Run the following cmdlet to add the `ArchiveDomain` parameter back on the affected mailbox by the Exchange Management Shell:
+- Run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` value for the on-premises archive mailbox by using the Exchange Management Shell.
+
     ```powershell
-    Set-ADUser <on-premises user mailbox> -Add @{msExchArchiveaddress="contoso.mail.onmicrosoft.com"}
+    Get-Mailbox -Identity "<user@contoso.com>" | FL *archive*
     ```
-1. Run the following cmdlet to validate that the `ArchiveDomain` parameter is added properly across the affected mailbox:
+
+- Run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet to get the `ArchiveGuid` value for the cloud-based archive mailbox by using Exchange Online PowerShell.
+
     ```powershell
-    Get-Mailbox <on-premises user mailbox> | FL *archive*
+    Get-MailUser -Identity "<user@contoso.com>" | FL *archive*
     ```
-1. Migrate the affected mailbox to Exchange Online by using the `New-MigrationBatch` cmdlet or the `New-MoveRequest` cmdlet.
+
+If the `ArchiveGuid` value of the two archive mailboxes is same, proceed to the next step. If not, create a support request.
+
+## Step 2: Back up the on-premises archive mailbox
+
+To back up and export the on-premises archive mailbox to a PST file, follow these steps in Exchange admin center. For more information, see [create mailbox export requests](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
+
+1. In the Exchange admin center, select **recipients** > **mailboxes** > **More options** > **Export to a PST file**.
+1. On the **Export to a .pst file** page, select the source mailbox, and then select **Export only the contents of this mailbox's archive** > **Next**.
+1. Type the file name of the target .pst file, and then select **Next** > **Finish**.
+
+## Step 3: Specify the domain of the cloud-based archive mailbox for the on-premises primary mailbox
+
+In the on-premises Exchange Server environment, follow these steps:
+
+1. Run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox by using the Exchange Management Shell:
+
+    ```powershell
+    Set-ADUser -Identity "<user@contoso.com>" -Add @{msExchArchiveaddress="<contoso.mail.onmicrosoft.com>"}
+    ```
+
+1. Run the following `Get-Mailbox` cmdlet to verify the `ArchiveDomain` value is added successfully.
+
+    ```powershell
+    Get-Mailbox -Identity "<user@contoso.com>" | FL *archive*
+    ```
+
+If the `ArchiveDomain` value is added successfully, use the `New-MigrationBatch` cmdlet or the `New-MoveRequest` cmdlet with the `PrimaryOnly` switch to migrate the on-premises primary mailbox again.
