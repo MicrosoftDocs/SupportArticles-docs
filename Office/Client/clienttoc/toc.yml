@@ -295,6 +295,8 @@
       items:
         - name: Account or subscription verification errors activating Microsoft 365 Apps
           href: ../activation/account-or-subscription-errors.md
+        - name: Activating Microsoft 365 Apps for Business with a product key
+          href: ../activation/activate-with-product-key.md
         - name: Activation error Sorry, we are having some temporary server issues
           href: ../activation/temporary-server-issues.md
         - name: Activation error That Microsoft account doesn’t exist
