@@ -90,4 +90,4 @@ For manual steps or more information, see [Reset Microsoft 365 Apps for enterpri
 <details>
 <summary><b>Check Shared Computer Activation (SCA)</b></summary>
 
-If you’re using SCA, see [Microsoft 365 Apps Shared Computer Activation issues].
+If you’re using SCA, see [Microsoft 365 Apps Shared Computer Activation issues](./shared-computer-activation.md).
