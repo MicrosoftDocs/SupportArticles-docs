@@ -293,6 +293,8 @@
           href: ../access/your-network-access-was-interrupted-error.md
     - name: Activation
       items:
+        - name: Activating Microsoft 365 Apps for Business with a product key
+          href: ../activation/activate-with-product-key.md
         - name: Activation error Sorry, we are having some temporary server issues
           href: ../activation/temporary-server-issues.md
         - name: Activation error That Microsoft account doesn’t exist
