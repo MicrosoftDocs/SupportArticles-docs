@@ -1,6 +1,6 @@
 ---
-title: The products we found in your account can't be used to activate
-description: Troubleshooting Microsoft 365 activation error The products we found in your account can't be used to activate
+title: Microsoft 365 Apps activation error Product deactivated
+description: Troubleshooting for Microsoft 365 Apps activation error Product deactivated.
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
@@ -10,18 +10,16 @@ ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
-- CI 157756
+- CI 157753
 search.appverid: 
 - MET150
 appliesto:
 - Microsoft 365
 ---
 
-# Microsoft 365 Apps activation error: "The products we found in your account can't be used to activate"
+# Microsoft 365 Apps activation error: “Product deactivated"
 
-When activating Microsoft 365 apps, you might encounter the following error:  
-
-> The products we found in your account can't be used to activate.
+When trying to activate Microsoft 365 Apps, you might encounter an error stating that your Microsoft 365 Apps installation was deactivated.
 
 Try the following troubleshooting methods to solve the problem.
 
@@ -29,41 +27,13 @@ Try the following troubleshooting methods to solve the problem.
 <br/><br/>
 
 <details>
-<summary><b>Update Microsoft 365</b></summary>
-
-It is recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open an Office app (such as Word), select **File**, and then select **Account**.
-Select **Update options**, and then select **Update now**.
-<br/><br/>
-</details>
-
-<details>
-<summary><b>Run the Microsoft Support and Recovery Assistant (SaRA) Sign in troubleshooter</b></summary>
-
-Run [the SaRA Office sign in issue troubleshooter](https://aka.ms/SaRA-OfficeSignInScenario).
-<br/><br/>
-</details>
-
-<details>
-<summary><b>Sign out of Office and sign back in</b></summary>
-
-1.	Open an Office app, such as Word.
-1.	Select your name and profile picture or icon at the top.
-1.	Select **Sign out**.
-1.	Select **Sign in**.
-1.	Make sure you are signed in with your **Work or School** account, not your personal Microsoft account.
-1.	Try activating Microsoft 365 again.
- 
-<br/><br/>
-</details>
-
-<details>
-<summary><b>Make sure you have the correct Office installed/b></summary>
+<summary><b>Make sure you have the correct Office installed</b></summary>
   
 Go to https://portal.office.com/account to check which Office version and edition you have available.  
   
 If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  
   
-If you have Microsoft 365 for Business Basic, you won’t have any Office applications to install. You can use Office Online apps at https://office.com.
+If you have Microsoft 365 for Business Basic, you won’t have any Office applications to install. You can use Office Online apps at https://office.com.   
   
 Make sure that the version listed (32-bit or 64-bit) matches your version of Windows. To check what version of Windows you have installed, go to **Start** > **Settings** (gear icon) > **System** > **About**, and check the **System type**.  
   
@@ -72,9 +42,13 @@ If you have a different edition or version installed on your device, run the SaR
 </details>
 
 <details>
-<summary><b>Uninstall Office apps and then reinstall</b></summary>
+<summary><b>Make sure user licenses are assigned</b></summary>
 
-[Run the SaRA package to uninstall Office](https://aka.ms/SaRA-OfficeUninstallFromPC). Restart the device, and install from https://portal.office.com/account to get the correct version.
+1.	In the [Microsoft 365 Admin Center](https://admin.microsoft.com/), go to the **Users** > [Active users](https://go.microsoft.com/fwlink/p/?linkid=834822) page.
+1.	Select the row of the user that you want to assign a license to.
+1.	In the right pane, select **Licenses and Apps**.
+1.	Expand the **Licenses** section, select the boxes for the licenses that you want to assign, then select **Save changes**.
+1.	If the license is already assigned, uncheck it, select **Save changes**, then check it again and select **Save changes** again.
 <br/><br/>
 </details>
 
@@ -88,6 +62,9 @@ For manual steps or more information, see [Reset Microsoft 365 Apps for enterpri
 </details>
 
 <details>
-<summary><b>Check Shared Computer Activation (SCA)</b></summary>
+<summary><b>Run the SaRA activation troubleshooter</b></summary>
 
-If you’re using SCA, see [Microsoft 365 Apps Shared Computer Activation issues](./shared-computer-activation.md).
+Run the [SaRA activation troubleshooter](https://aka.ms/SARA-OfficeActivation-Alchemy), and select the **Office** option. When prompted, select the option that best describes your situation.
+
+<br/><br/>
+</details>
