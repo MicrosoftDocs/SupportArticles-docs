@@ -70,7 +70,7 @@ After the duplicate device is removed , delete your BrokerPlugin data and then r
 1.	Restart the device.  
 1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).  
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](../authentication/automatic-authentication-fails.md).  
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).  
 <br/><br/>
 </details>
 
@@ -124,4 +124,4 @@ After that, enroll the device in MDM. For instructions, see [MDM enrollment of W
 
 ### Additional troubleshooting
 
-If the above methods don’t solve the problem, try the troubleshooting methods in [Microsoft 365 Apps activation error: “Sorry, another account from your organization is already signed in on this computer”](./another-account-already-signed-in)
+If the above methods don’t solve the problem, try the troubleshooting methods in [Microsoft 365 Apps activation error: “Sorry, another account from your organization is already signed in on this computer”](./another-account-already-signed-in.md)
