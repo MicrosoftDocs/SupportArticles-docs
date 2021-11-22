@@ -355,6 +355,8 @@
           href: ../activation/device-based-licensing.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
+        - name: We’ve run into a problem with your Office 365 subscription
+          href: ../activation/run-into-a-problem.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
