@@ -102,7 +102,7 @@ To run the SQL query against the Virtual Machine Manager database, follow these 
 
     Select **!Execute** to execute the query. Make sure that the query finishes successfully. The results will resemble the following screenshot:
 
-    :::image type="content" source="media/vmm-console-start-error-1602/query-result.png" alt-text="The query result that is returned after you run Execute.":::
+    :::image type="content" source="media/vmm-console-start-error-1602/query-result.png" alt-text="Query result that is returned after you run Execute.":::
 
 1. Restart the Virtual Machine Manager service.
 

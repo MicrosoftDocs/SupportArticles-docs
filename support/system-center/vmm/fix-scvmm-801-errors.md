@@ -43,25 +43,25 @@ The following are common errors that are logged in the **Jobs** view in the Virt
 
   - VMM cannot find VM object:
 
-    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-vm-object-error.png" alt-text="The details of the VMM cannot find VM object error." border="false":::
+    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-vm-object-error.png" alt-text="Details of the VMM cannot find VM object error." border="false":::
 
   - VMM cannot find ISO object:
 
-    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-iso-object-error.png" alt-text="The details of the VMM cannot find ISO object error." border="false":::
+    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-iso-object-error.png" alt-text="Details of the VMM cannot find ISO object error." border="false":::
 
   - VMM cannot find VirtualHardDisk object:
 
-    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-virtualharddisk-object-error.png" alt-text="The details of the VMM cannot find VirtualHardDisk object error." border="false":::
+    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-virtualharddisk-object-error.png" alt-text="Details of the VMM cannot find VirtualHardDisk object error." border="false":::
 
 - You receive the following error message when you try to open the properties of a VM that has an 801 issue:
 
   > VmmAdminUI has stopped working
 
-   :::image type="content" source="media/fix-scvmm-801-errors/vmmadminui-has-stopped-working-error.png" alt-text="The details of the VmmAdminUI has stopped working error." border="false":::
+   :::image type="content" source="media/fix-scvmm-801-errors/vmmadminui-has-stopped-working-error.png" alt-text="Details of the VmmAdminUI has stopped working error." border="false":::
 
   The following information is displayed when you view problem details for the error or when you view the Windows Error Reporting log in MSINFO32:
 
-   :::image type="content" source="media/fix-scvmm-801-errors/event-clr20r3.png" alt-text="The details of Windows Error Reporting logging in MSINFO32.":::
+   :::image type="content" source="media/fix-scvmm-801-errors/event-clr20r3.png" alt-text="Details of Windows Error Reporting logging in MSINFO32.":::
 
   > [!NOTE]
   > When a virtual machine is in a failed state via an 801 error, you cannot delete it from the console.
@@ -101,7 +101,7 @@ To resolve this issue, delete the orphaned objects from the database by followin
 
    To determine where the SCVMM database is being hosted from, go to **Settings**, and then click **General**. The database connection is shown as follows:
 
-   :::image type="content" source="media/fix-scvmm-801-errors/database-connection.png" alt-text="The details of database connection information.":::
+   :::image type="content" source="media/fix-scvmm-801-errors/database-connection.png" alt-text="Details of database connection information.":::
 
 3. In SQL Server Management Studio on the SQL server that hosts the SCVMM database, open the SQL instance. In the Databases folder on the left, select **VirtualManagerDB** (or whatever the database was renamed as), and make sure that the name of the database is listed in the drop-down list on the toolbar. Select **New Query**, and then paste the following script into the query field:
 

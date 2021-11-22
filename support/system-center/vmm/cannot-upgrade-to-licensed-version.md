@@ -38,7 +38,7 @@ To resolve this issue, follow these steps:
 
     This is the expected behavior.
 
-    :::image type="content" source="media/cannot-upgrade-to-licensed-version/default-cmdlet-processor-must-be-assigned-a-non-null-value.png" alt-text="The error that occurs when you run the last page of the Add Roles and Features wizard." border="false":::
+    :::image type="content" source="media/cannot-upgrade-to-licensed-version/default-cmdlet-processor-must-be-assigned-a-non-null-value.png" alt-text="Error that occurs when you run the last page of the Add Roles and Features wizard." border="false":::
 
 7. Click **OK** in response to the error message, open **IIS Manager**, and then restart the AppController website.
 
