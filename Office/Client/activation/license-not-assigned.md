@@ -91,6 +91,6 @@ If you have a different edition or version installed on your device, run the SaR
 
 ### References
 
-- [Try or buy a Microsoft 365 for business subscription](h/microsoft-365/commerce/try-or-buy-microsoft-365)
+- [Try or buy a Microsoft 365 for business subscription](/microsoft-365/commerce/try-or-buy-microsoft-365)
 - [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users)
 - [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users)

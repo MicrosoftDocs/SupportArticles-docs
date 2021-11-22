@@ -289,8 +289,6 @@
           href: ../access/sqlconfigdatasource-access-system-dsn.md
         - name: Use the Workgroup Administrator utility
           href: ../access/use-workgroup-administrator-utility.md
-        - name: You currently have not been assigned an office license that includes the Office desktop apps
-          href: ../access/license-not-assigned.md
         - name: Your network access was interrupted when using a mapped drive
           href: ../access/your-network-access-was-interrupted-error.md
     - name: Activation
@@ -359,6 +357,8 @@
           href: ../activation/something-configured-fails-activating-office.md
         - name: We’ve run into a problem with your Office 365 subscription
           href: ../activation/run-into-a-problem.md
+        - name: You currently have not been assigned an office license that includes the Office desktop apps
+          href: ../activation/license-not-assigned.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
