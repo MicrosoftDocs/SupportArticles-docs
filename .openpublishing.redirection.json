@@ -216,6 +216,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/active-directory/manage-sub-parent-domain.md",
+      "redirect_url": "/azure/active-directory/enterprise-users/domains-manage",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/previous-versions/msxml/error-when-xml-contains-low-order-ascii.md",
       "redirect_url": "/previous-versions/troubleshoot/msxml/error-when-xml-contains-low-order-ascii",
       "redirect_document_id": false

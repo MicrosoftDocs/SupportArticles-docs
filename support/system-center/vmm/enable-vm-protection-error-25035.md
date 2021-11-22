@@ -45,6 +45,6 @@ Azure Site Recovery portal error details display a message that resembles the fo
 > **Recommendation**  
 > Resolve the issue and retry the operation.
 
-Azure Site Recovery portal error details:
+The screenshot of the Azure Site Recovery portal error details:
 
-![Enable protection error details](./media/enable-vm-protection-error-25035/error.png)
+:::image type="content" source="media/enable-vm-protection-error-25035/error-25035.png" alt-text="DRA could not prepare for initial replication error code 25035.":::
