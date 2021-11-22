@@ -331,6 +331,8 @@
           href: ../activation/problem-with-your-account.md
         - name: Microsoft 365 Apps activation error Your organization has disabled this device
           href: ../activation/your-organization-disabled-this-device.md
+        - name: Microsoft 365 Apps activation limits
+          href: ../activation/activation-limits.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
         - name: Microsoft 365 Apps activation Product deactivated
