@@ -32,8 +32,6 @@ SignalR uses the WebSocket transport where available, and falls back to older tr
 
 Example of F12 developer trace:
 
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/4464816_en_1.png" alt-text="Screenshot of developer trace.":::
-
 From the above developer trace, you can see that client tried to connect over number of transports but all of them failed with 404 error. You can check the server response for the first negotiate request for which you got HTTP 200 response.
 
 `Request URL : http://cloudservicelabs.cloudapp.net:81/tracker/negotiate?clientProtocol=1.3&_=1534347303083`
@@ -58,8 +56,6 @@ From the above developer trace, you can see that client tried to connect over nu
 From the above network trace it's clear that client tried to connect over WebSocket but Server doesn't support it. Also note that for SignalR to use WebSocket, IIS 8 must be used, the server must be Windows Server 2012, or later, and WebSocket must be enabled in IIS. You are using Windows Server 2016 but you need to check if WebSocket is enabled in IIS or not. In order to confirm that, log in to one of the instances and opened Add Roles and Features Wizard from Server Manager.
 
 Expand Web Server (IIS) role verify if WebSocket protocol was enabled:
-
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/4464823_en_1.png" alt-text="Screenshot of WebSocket protocol status.":::
 
 In order to enable WebSocket feature you can use the below DISM command in a startup task, so that when the role starts it installs the WebSocket feature in IIS.
 
