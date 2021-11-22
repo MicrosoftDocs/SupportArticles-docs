@@ -2,7 +2,7 @@
 title: Can't install the SNMP and WMI SNMP Provider features
 description: Works around the issue in which the SNMP and WMI SNMP Provider features can't be installed using the DISM.exe tool in Windows 10 or Windows 11.
 ms.date: 11/17/2021
-author: v-lianna
+author: delhan
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
@@ -29,7 +29,8 @@ Then, you receive this error message:
 > A Windows feature name was not recognized.  
 > Use the /Get-Features option to find the name of the feature in the image and try the command again.
 
-**This issue occurs because the SNMP and WMI SNMP Provider features are deprecated.**
+> [!IMPORTANT]
+> This issue occurs because the SNMP and WMI SNMP Provider features are deprecated.
 
 To work around this issue, use one of the following methods.
 
