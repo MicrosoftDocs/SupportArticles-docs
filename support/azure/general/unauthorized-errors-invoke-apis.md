@@ -39,6 +39,7 @@ The expected HTTP response code for all the operations is 200, however the respo
 - Regarding error **Access denied due to invalid subscription key. Make sure to provide a valid key for an active subscription**, it's clear that you are sending a wrong value of **Ocp-Apim-Subscription-Key** request header while invoking **Create resource** and **Retrieve resource** operations.
 - You can check your subscription key for a particular product from APIM Developer portal by navigating to **Profile** page after sign-in as shown below.
 - Select the **Show** button to see the subscription keys for respective products you have subscribed to.
+
     :::image type="content" source="media/unauthorized-errors-invoke-apis/subscription-keys.png" alt-text="Screenshot of the subscription keys for respective products.":::
 - If you check the headers being sent from **Test** tab, you notice that the value of **Ocp-Apim-Subscription-Key** request header is wrong. You might be wondering how come that is possible, because APIM automatically fills this request header with the right subscription key.
 - Let's check the Frontend definition of **Create resource** and **Retrieve resource** operations under **Design** tab. Upon careful inspection, you would notice that these operations got a wrong hard-coded value of **Ocp-Apim-Subscription-Key** request header added under **Headers** tab.

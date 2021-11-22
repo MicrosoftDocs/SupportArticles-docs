@@ -26,11 +26,11 @@ The following error message appears on the **Errors** tab of the **Job Details**
 
 The following is a sample of this error:
 
-:::image type="content" source="media/backup-service-mars-agent-versions-not-match/failed-backup-job-error.png" alt-text="Screenshot of a failed Backup error in Job Details dialog box.":::
+:::image type="content" source="media/backup-service-mars-agent-versions-not-match/failed-backup-job-error.png" alt-text="Screenshot of a failed Backup error in Job Details dialog box." border="false":::
 
 ## Cause
 
-This issue occurs because the Microsoft Azure Recovery Services Agent is outdated. 
+This issue occurs because the Microsoft Azure Recovery Services Agent is outdated.
 
 ## Resolution
 
@@ -61,12 +61,12 @@ To resolve this issue, follow these steps:
 5. Download the [latest version of Azure Backup Agent](https://go.microsoft.com/fwlink/?linkid=229525) to the server that has the issue.
 6. Run the installer. The Microsoft Azure Recovery Services Agent Upgrade Wizard opens.
 
-    :::image type="content" source="media/backup-service-mars-agent-versions-not-match/azure-recovery-services-agent-upgrade-wizard.png" alt-text="Screenshot of the Microsoft Azure Recovery Services Agent Upgrade Wizard.":::
+    :::image type="content" source="media/backup-service-mars-agent-versions-not-match/azure-recovery-services-agent-upgrade-wizard.png" alt-text="Screenshot of the Microsoft Azure Recovery Services Agent Upgrade Wizard." border="false":::
 
 7. Click **Next**.
 8. Click **Upgrade**.
 
-    :::image type="content" source="media/backup-service-mars-agent-versions-not-match/upgrade-installation.png" alt-text="Screenshot of upgrade installation of the Microsoft Azure Recovery Services Agent.":::
+    :::image type="content" source="media/backup-service-mars-agent-versions-not-match/upgrade-installation.png" alt-text="Screenshot of upgrade installation of the Microsoft Azure Recovery Services Agent." border="false":::
 
     The final confirmation screen indicates that Azure Backup Agent has been successfully updated.
 9. Close the wizard.

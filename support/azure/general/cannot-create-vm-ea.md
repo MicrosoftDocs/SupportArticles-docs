@@ -1,5 +1,5 @@
 ---
-title: Error (Retail prices displayed here) for Azure EA user when creating VM
+title: Retail prices displayed here error for Azure EA user when creating VM
 description: Provides several solutions to an issue in which you can't create a VM as an Azure Enterprise Agreement (EA) user in portal.
 ms.date: 09/16/2021
 ms.prod-support-area-path: 
@@ -41,7 +41,8 @@ When you are a direct or indirect EA user who has **release markup** enabled an
 1. Go to the [Azure EA portal](https://ea.azure.com/)  by using the Enrollment Admin role.
 2. Click the **Manage** panel on the left.
 3. Enable **DA view charges** and **AO view charges** at the **Enrollment** level.
-    :::image type="content" source="media/cannot-create-vm-ea/enrollment.png" alt-text="Screenshot of the enrollment detail, enable DA view charges and AO view charges at the Enrollment level.":::
+
+    :::image type="content" source="media/cannot-create-vm-ea/enrollment.png" alt-text="Screenshot of the enrollment detail, where DA view charges and AO view charges at the Enrollment level are enabled.":::
 
 ### Scenario 2
 

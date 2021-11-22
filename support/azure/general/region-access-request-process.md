@@ -21,11 +21,11 @@ The process to request access is relatively straight forward, you can initiate t
 
 1. Log into the Azure Management Portal and navigate to the **Help + support** icon on the left-hand side of the screen, then select **+ New support request**.
 
-    :::image type="content" source="media/region-access-request-process/new-support-request.png" alt-text="Screenshot of New Support Request":::
+    :::image type="content" source="media/region-access-request-process/new-support-request.png" alt-text="Screenshot of New Support Request." border="false":::
 
 2. You'll be presented with step 1 of the new support request, complete the following:
 
-    :::image type="content" source="media/region-access-request-process/create-support-request.jpg" alt-text="Screenshot of creating a New Support Request (Basics).":::
+    :::image type="content" source="media/region-access-request-process/create-support-request.jpg" alt-text="Screenshot of the New Support Request information under Basics tab." border="false":::
 
     1. In **Issue Type**, select " **Service and subscription Limit (quotas)** ".  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
@@ -49,7 +49,7 @@ The process to request access is relatively straight forward, you can initiate t
     If you prefer to submit multiple requests, Microsoft Support will combine these requests on your behalf, for more streamlined communications.
 4. Complete the following information:  
 
-    :::image type="content" source="media/region-access-request-process/problem-details.png" alt-text="Screenshot of the problem details.":::
+    :::image type="content" source="media/region-access-request-process/problem-details.png" alt-text="Screenshot of the problem details." border="false":::
 
     | Field| Value |
     |---|---|
@@ -96,11 +96,11 @@ The process to request access is relatively straight forward, you can initiate t
 
 1. Fill in the details for the best way to contact you. We will use this information to follow up with you if we need additional details, or need to learn more about your intended use of the Azure Region to which you are requesting access.
 
-    :::image type="content" source="media/region-access-request-process/contact-info.png" alt-text="Screenshot of details for Contact Info.":::
+    :::image type="content" source="media/region-access-request-process/contact-info.png" alt-text="Screenshot of details for Contact Info." border="false":::
 
 2. Select **Create** to complete the process.
 
-    :::image type="content" source="media/region-access-request-process/complete-process.jpg" alt-text="Screenshot of completing the support request.":::
+    :::image type="content" source="media/region-access-request-process/complete-process.jpg" alt-text="Screenshot of the create button in the New support request page.":::
 
 ## Request processing
 

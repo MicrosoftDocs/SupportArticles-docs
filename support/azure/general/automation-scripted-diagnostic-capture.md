@@ -32,7 +32,7 @@ To determine the version of Windows PowerShell that you're currently running, op
   
 The following screenshot shows an example of the command output.
 
-:::image type="content" source="media/automation-scripted-diagnostic-capture/powershell-version.png" alt-text="Screenshot of the version of Windows PowerShell.":::
+:::image type="content" source="media/automation-scripted-diagnostic-capture/powershell-version.png" alt-text="Screenshot of the version of Windows PowerShell." border="false":::
 
 The **PSVersion** property indicates which version of PowerShell is being used. In this example, PowerShell 5.1 is installed.
 
