@@ -12,7 +12,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 10/31/2018
+ms.date: 11/10/2021
 ms.author: genli
 
 ---
@@ -25,6 +25,9 @@ If you are experiencing performance problems with virtual machines, before conta
 ## Supported troubleshooting scenarios
 
 PerfInsights can collect and analyze several kinds of information. The following sections cover common scenarios.
+
+> [!NOTE]
+> For information about using PerfInsights across an Azure virtual machine scale set, go to [PerfInsights and scale set VM instances](perfinsights-and-scale-set-vm-instances.md).
 
 ### Quick performance analysis
 
@@ -127,12 +130,13 @@ Information about Windows VM, disks or storage pools configuration, performance 
 
 Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. Rules are displayed in the report under the Category -> Finding tab. 
 
-Each rule consists of the following:
+Each rule consists of the following items:
+
 - Finding: Description of the finding.
-- Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation that provide more information on the finding and/or recommendation.
+- Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation containing more information on the finding and/or recommendation.
 - Impact Level: Represents the potential for having an impact on performance.
 
-The following cateogries of rules are currently supported:
+The following categories of rules are currently supported:
 
 - High resource usage:
     * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
@@ -196,7 +200,7 @@ If the VM has SQL Server instance(s) installed on it, PerfInsights will use the 
 
 #### Possible problems when you run the tool on production VMs
 
--  For the benchmarking scenario or the "Advanced performance analysis" scenario that is configured to use Xperf or Diskspd, the tool might adversely affect the performance of the VM. These scenarios should not be run in a live production environment.
+-  For the benchmarking scenario or the "Advanced performance analysis" scenario that is configured to use Xperf or Diskspd, the tool might adversely affect the performance of the VM. These scenarios shouldn't be run in a live production environment.
 
 -  For the benchmarking scenario or the "Advanced performance analysis" scenario that is configured to use Diskspd, ensure that no other background activity interferes with the I/O workload.
 
@@ -217,7 +221,7 @@ To run the PerfInsights tool, follow these steps:
 
 1. Download [PerfInsights.zip](https://aka.ms/perfinsightsdownload).
 
-2. Unblock the PerfInsights.zip file. To do this, right-click the PerfInsights.zip file, and select **Properties**. In the **General** tab, select **Unblock**, and then select **OK**. This ensures that the tool runs without any additional security prompts.  
+2. Unblock the PerfInsights.zip file. To do this, right-click the PerfInsights.zip file, and select **Properties**. In the **General** tab, select **Unblock**, and then select **OK**. This action ensures that the tool runs without any other security prompts.  
 
     :::image type="content" source="media/how-to-use-perfInsights/pi-unlock-file.png" alt-text="Screenshot of PerfInsights Properties, with Unblock highlighted.":::
 
@@ -304,11 +308,11 @@ In the volume perspective (Volume Map), the tables show all the physical disks u
 
 ### SQL tab
 
-If the target VM hosts any SQL Server instances, you see an additional tab in the report, named **SQL**:
+If the target VM hosts any SQL Server instances, you see another tab in the report, named **SQL**:
 
 :::image type="content" source="media/how-to-use-perfInsights/pi-sql-tab.png" alt-text="Screenshot of SQL tab and the sub-tabs under it.":::
 
-This section contains a **Findings** tab, and additional tabs for each of the SQL Server instances hosted on the VM.
+This section contains a **Findings** tab, and extra tabs for each of the SQL Server instances hosted on the VM.
 
 The **Findings** tab contains a list of all the SQL related performance issues found, along with the recommendations.
 
@@ -316,7 +320,7 @@ In the following example, **PhysicalDrive0** (running the C drive) is displayed.
 
 :::image type="content" source="media/how-to-use-perfInsights/pi-physical-drive-0.png" alt-text="Screenshot of modeldev and modellog files information.":::
 
-The tabs for specific instances of SQL Server contain a general section that displays basic information about the selected instance. The tabs also contain additional sections for advanced information, including settings, configurations, and user options.
+The tabs for specific instances of SQL Server contain a general section that displays basic information about the selected instance. The tabs also contain more sections for advanced information, including settings, configurations, and user options.
 
 ### Diagnostic tab
 
@@ -340,6 +344,6 @@ The following screenshot shows a message similar to what you might receive:
 
 :::image type="content" source="media/how-to-use-perfInsights/pi-support-email.png" alt-text="Screenshot of sample message from Microsoft Support.":::
 
-Follow the instructions in the message to access the file transfer workspace. For additional security, you have to change your password on first use.
+Follow the instructions in the message to access the file transfer workspace. For extra security, you have to change your password on first use.
 
 After you sign in, you will find a dialog box to upload the **PerformanceDiagnostics\_yyyy-MM-dd\_hh-mm-ss-fff.zip** file that was collected by PerfInsights.

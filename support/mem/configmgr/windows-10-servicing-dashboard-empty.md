@@ -37,5 +37,5 @@ If the service connection point is running in Online mode, review DmpDownloader.
    For example, copy the file to `C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD`.
 5. In Hman.log, you should see entries that resemble the following example:
 
-    :::image type="content" source="media/windows-10-servicing-dashboard-empty/hman-log.png" alt-text="Hman.log":::
+    :::image type="content" source="media/windows-10-servicing-dashboard-empty/hman-log.png" alt-text="Screenshot of the example entries in Hman.log.":::
 6. Try again to open the Windows 10 servicing dashboard.

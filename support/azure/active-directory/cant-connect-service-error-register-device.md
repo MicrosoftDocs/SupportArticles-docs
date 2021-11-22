@@ -4,6 +4,8 @@ description: Describes a problem that triggers an error when you try to register
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: hybrid
 ---
 # Error when you try to register a device: Can't connect to the service
 

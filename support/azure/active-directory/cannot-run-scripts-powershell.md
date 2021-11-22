@@ -4,6 +4,8 @@ description: Describes an issue in which you receive an error message when you t
 ms.date: 10/26/2021
 ms.prod-support-area-path: 
 ms.reviewer: willfid, willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Can't run scripts in Azure Active Directory Module for Windows PowerShell
 

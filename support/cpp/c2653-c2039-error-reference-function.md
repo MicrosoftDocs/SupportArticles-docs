@@ -4,6 +4,7 @@ description: Explains that when you try to reference a function from the STD C++
 ms.date: 04/22/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: v-ingor
+ms.technology: visual-cpp-libraries
 ---
 # C2653 or C2039 error when you try to reference a function from the STD C++ library
 

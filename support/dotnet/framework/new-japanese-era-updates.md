@@ -4,6 +4,7 @@ description: This article introduces the new Japanese era update for .NET Framew
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: kaorif
+ms.technology: dotnet-general
 ---
 # Summary of new Japanese era updates for .NET Framework
 
