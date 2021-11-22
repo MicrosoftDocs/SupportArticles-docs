@@ -32,7 +32,7 @@ SignalR uses the WebSocket transport where available, and falls back to older tr
 
 Example of F12 developer trace:
 
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/developer-trace.png" alt-text="Screenshot of the developer trace." lightbox="image-file-expanded.png":::
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/developer-trace.png" alt-text="Screenshot of the developer trace." lightbox="media/scenario-8-aspnet-signalr-application-not-work/developer-trace.png":::
 
 From the above developer trace, you can see that client tried to connect over number of transports but all of them failed with 404 error. You can check the server response for the first negotiate request for which you got HTTP 200 response.
 
