@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4494727
 
 When using the Dynamics 365 Email Router to send email from a Dynamics 365 instance, the email may go into a Pending Send state and never actually send:
 
-:::image type="content" source="media/email-router-fails-send-email/pending-send-state.png" alt-text="Screenshot shows the email may go into a Pending Send state.":::
+:::image type="content" source="media/email-router-fails-send-email/pending-send-state.png" alt-text="Screenshot shows the email in a Pending Send state.":::
 
 The Dynamics Email Router exception logs may show the following error:
 

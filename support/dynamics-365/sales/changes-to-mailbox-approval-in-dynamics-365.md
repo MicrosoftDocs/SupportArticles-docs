@@ -19,7 +19,7 @@ We are modifying the approval process for new/updated/changed mailboxes. To prov
 
 The mailbox approval process is illustrated in the following flow chart.
 
-:::image type="content" source="media/changes-to-mailbox-approval-in-dynamics-365/flow-chart.png" alt-text="Screenshot of the Dynamics 365 mailbox approval process.":::
+:::image type="content" source="media/changes-to-mailbox-approval-in-dynamics-365/flow-chart.png" alt-text="Diagram of the Dynamics 365 mailbox approval process.":::
 
 > [!NOTE]
 > When the Server-Side Synchronization feature initially released, only the [Global administrator](/microsoft-365/admin/add-users/about-admin-roles) role was able to approve mailboxes.

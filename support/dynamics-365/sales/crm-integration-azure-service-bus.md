@@ -37,7 +37,7 @@ When the procedures in this article have been completed, ACS access control will
 
 First, retrieve the list of service endpoints. The steps in this article will need to be done for each of the service endpoints. To find the service endpoints in Microsoft Dynamics CRM, navigate to **Settings**, select **Customizations**, select **Customize the System**, and select **Service Endpoints**.
 
-:::image type="content" source="media/crm-integration-azure-service-bus/retrieve-service-endpoints.png" alt-text="Screenshot shows steps to find the service endpoints in Microsoft Dynamics C R M." border="false":::
+:::image type="content" source="media/crm-integration-azure-service-bus/retrieve-service-endpoints.png" alt-text="Screenshot shows steps to find the service endpoints in Microsoft Dynamics C R M.":::
 
 > [!NOTE]
 > If the service endpoint connection mode is **Federated**, the same steps will need to be repeated in the following instructions for `https://.accesscontrol.windows.net/v2/mgmt/web` or `https://.accesscontrol.usgovcloudapi.net/v2/mgmt/web`.
@@ -48,7 +48,7 @@ To configure access control for a service namespace:
 
     If you don't have access, contact the solution developer to follow the steps.
 
-    :::image type="content" source="media/crm-integration-azure-service-bus/access-control-service.png" alt-text="Screenshot to contact the solution developer." :::
+    :::image type="content" source="media/crm-integration-azure-service-bus/access-control-service.png" alt-text="Screenshot to contact the solution developer.":::
 
 2. Under **Service Settings**, select **Service Identities**.
 
