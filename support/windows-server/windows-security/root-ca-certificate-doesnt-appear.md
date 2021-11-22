@@ -43,17 +43,17 @@ You set the following CA certificates to be used by the authentication:
     DC = contoso  
     DC = com  
 
-    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate-multiple-subject-names.png" alt-text="Set the first certificate to have multiple subject names.":::
+    :::image type="content" source="media/root-ca-certificate-doesnt-appear/certificate-multiple-subject-names.png" alt-text="Set the first certificate to have multiple subject names.":::
 
 - The second certificate has a single subject name:
 
     CN = Contoso OneAD Root CA2
 
-    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate-single-subject-name.png" alt-text="Set the second certificate to have a single subject name.":::
+    :::image type="content" source="media/root-ca-certificate-doesnt-appear/certificate-single-subject-name.png" alt-text="Set the second certificate to have a single subject name.":::
 
 In this example, the GPO settings report displays only the first certificate. The second certificate is missing.
 
-:::image type="content" source="./media/root-ca-certificate-doesnt-appear/second-certificate-missing.png" alt-text="Certificate that contains a single subject names is missing.":::  
+:::image type="content" source="media/root-ca-certificate-doesnt-appear/second-certificate-missing.png" alt-text="Certificate that contains a single subject names is missing.":::  
 
 ## Cause
 

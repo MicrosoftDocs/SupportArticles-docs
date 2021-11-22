@@ -29,7 +29,7 @@ When a user uses a specific account for SQL Server Reporting Service (SSRS) in t
 > Log on failed. Ensure the user name and password are correct. (reLogonFailed)  
 > Logon failure: unknown user name or bad password
 
-:::image type="content" source="./media/error-when-opening-reports-mbam/rsprocessingaborted-error.png" alt-text="The error message that is shown in BitLocker Administration and Monitoring." border="false":::
+:::image type="content" source="media/error-when-opening-reports-mbam/rsprocessingaborted-error.png" alt-text="Error message that is shown in BitLocker Administration and Monitoring." border="false":::
 
 ## Cause
 
@@ -48,7 +48,7 @@ To resolve this issue, follow the steps from below:
 2. Click Microsoft BitLocker Administration and Monitoring.
 3. Click **Malta Data Source** (see screenshot below).
 
-    :::image type="content" source="./media/error-when-opening-reports-mbam/malta-data-source-setting.png" alt-text="The properties setting page of Malta Data Source.":::
+    :::image type="content" source="media/error-when-opening-reports-mbam/malta-data-source-setting.png" alt-text="Properties setting page of Malta Data Source.":::
 
 4. Make sure you have Windows-integrated security selected.
 5. Click **Test Connection** and then click **Apply**.
