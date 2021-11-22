@@ -1,6 +1,6 @@
 ---
 title: SharePoint or OneDrive read-only error messages 
-description: Troubleshooting information for errors indicating a SharePoint or OneDrive is set to read-only.
+description: SharePoint sites in read only mode
 author: salarson
 manager: dcscontentpm
 localization_priority: Normal
