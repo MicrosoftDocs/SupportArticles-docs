@@ -29,7 +29,7 @@ Then, you receive this error message:
 > A Windows feature name was not recognized.  
 > Use the /Get-Features option to find the name of the feature in the image and try the command again.
 
-This issue occurs because the SNMP and WMI SNMP Provider features are deprecated.
+**This issue occurs because the SNMP and WMI SNMP Provider features are deprecated.**
 
 To work around this issue, use one of the following methods.
 
