@@ -74,4 +74,4 @@ Go to https://portal.office.com/account and select **Security & privacy**. Reset
 
 If the above steps don’t solve the problem, try the steps in the following article:
 
-- [Microsoft 365 Apps activation limits]
+- [Microsoft 365 Apps activation limits](./activation-limits.md)
