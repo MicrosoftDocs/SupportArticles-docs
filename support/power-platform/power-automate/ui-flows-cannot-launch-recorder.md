@@ -41,7 +41,7 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
     There should be an icon in the system tray:
 
-    :::image type="content" source="media/ui-flows-cannot-launch-recorder/ui-flows-icon.png" alt-text="Screenshot shows the U I flows icon in the system tray." border="false":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/ui-flows-icon.png" alt-text="Screenshot shows the U I flows icon in the system tray.":::
 
     If the icon isn't present, you can manually start the service by searching for **UI flows** in the **start** menu:
 
@@ -54,6 +54,6 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
     Look for the UI flows installation package:
 
-    :::image type="content" source="media/ui-flows-cannot-launch-recorder/ui-flows-installation-package.png" alt-text="Screenshot of the U I flows installation package." border="false":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/ui-flows-installation-package.png" alt-text="Screenshot of the U I flows installation package.":::
 
     If the package isn't installed, follow the instructions in the UI flows wizard to download and install the latest version.

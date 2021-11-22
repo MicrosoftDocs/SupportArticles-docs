@@ -37,7 +37,7 @@ First, ensure that the device is AAD-joined or domain-joined:
 2. Run the command `dsregcmd /status`.
 3. Check the Device State section.
 
-:::image type="content" source="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/command-output.png" alt-text="Screenshot of the device state in the command prompt when running dsregcmd /status." border="false":::
+:::image type="content" source="media/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account/command-output.png" alt-text="Screenshot of the device state in the command prompt when running dsregcmd /status.":::
 
 Make sure that one of the `DomainJoined` or `AzureAdJoined` values is **YES**.
 

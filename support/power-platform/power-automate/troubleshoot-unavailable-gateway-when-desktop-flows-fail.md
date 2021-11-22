@@ -23,7 +23,7 @@ Go to the run summary page of the flow, and look at the error for the **desktop 
 
 **Unreachable gateway**, **The target gateway is not available**, and **Could not connect to UI flows running on your machine** are good candidates for this problem.
 
-:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/error-for-desktop-flows-step.png" alt-text="Screenshot shows that the run failed because of the unavailable gateway." border="false":::
+:::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/error-for-desktop-flows-step.png" alt-text="Screenshot shows that the run failed because of the unavailable gateway.":::
 
 The next step is to determine which of the machine, the gateway, or the UI flow service is offline.
 
