@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4464827
 
 Visitor Tracker is an ASP.NET SignalR application that tracks the number of visitors accessing the website. Each user is given a unique tracking ID that is displayed on the browser as the user moves the mouse pointer. As new users keep on visiting the site, the other users will be able to see new tracking IDs on their browsers. Click on the below image to get an idea of the expected output.
 
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/4464807_en_1.gif" alt-text="Screenshot of opening multiple windows and hovering over the text.":::
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/tracking-id.gif" alt-text="Screenshot of opening multiple windows and hovering over the text.":::
 
 But after few days the application stopped working i.e users are not able to see their tracking IDs as well as for the other users on the browser.
 
@@ -31,6 +31,8 @@ But after few days the application stopped working i.e users are not able to see
 SignalR uses the WebSocket transport where available, and falls back to older transports (Server Sent Events, Forever Frame (for Internet Explorer only), Ajax long polling) where necessary - This is known as SignalR transport negotiation. Refer [this](/aspnet/signalr/overview/getting-started/introduction-to-signalr) article to know more. You can determine what transport your application is using by taking a fiddler or F12 browser trace.
 
 Example of F12 developer trace:
+
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/developer-trace.png" alt-text="Screenshot of the developer trace." lightbox="image-file-expanded.png":::
 
 From the above developer trace, you can see that client tried to connect over number of transports but all of them failed with 404 error. You can check the server response for the first negotiate request for which you got HTTP 200 response.
 
@@ -56,6 +58,8 @@ From the above developer trace, you can see that client tried to connect over nu
 From the above network trace it's clear that client tried to connect over WebSocket but Server doesn't support it. Also note that for SignalR to use WebSocket, IIS 8 must be used, the server must be Windows Server 2012, or later, and WebSocket must be enabled in IIS. You are using Windows Server 2016 but you need to check if WebSocket is enabled in IIS or not. In order to confirm that, log in to one of the instances and opened Add Roles and Features Wizard from Server Manager.
 
 Expand Web Server (IIS) role verify if WebSocket protocol was enabled:
+
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/websocket-feature.png" alt-text="Screenshot of the Add Roles and Features Wizard that shows the WebSocket protocol status.":::
 
 In order to enable WebSocket feature you can use the below DISM command in a startup task, so that when the role starts it installs the WebSocket feature in IIS.
 
