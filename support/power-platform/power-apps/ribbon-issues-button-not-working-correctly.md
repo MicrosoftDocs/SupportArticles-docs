@@ -45,7 +45,7 @@ You'll use the in-app tool, Command Checker, to inspect the ribbon component def
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
+:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to the Dynamics 365 application U R L.":::
 
 > [!NOTE]
 > Currently the Command Checker tool works only in a web browser. It does not work in Android and iOS apps. A future update is planned to make this tool work in these mobile apps.
@@ -57,11 +57,11 @@ After the Command Checker tool is enabled, look within the application on each o
 1. Select the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it might be listed in the **More** overflow flyout menu).
 1. Find and select your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by a de-emphasized and italicized font together with the **(hidden)** term. Buttons that are visible will be displayed by having the label in a normal font. Select the **Command Properties** tab to display the details of the command for this button.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Command properties.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Screenshot to select the Command Properties tab.":::
 
 1. The **Command properties** tab displays the actions and the corresponding `JavaScriptFunction` configuration. Select the **View command definition solution layers** link below the command name to view the solutions that installed a definition of the command.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers.png" alt-text="View command definition solution layers.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers.png" alt-text="Screenshot to select the View command definition solution layers link below the command name.":::
 
 1. The Solution Layers pane displays the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that's used by the application. The other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition that's used by the application. If an unmanaged **Active** solution layer is present, it will always be the definition that the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition that's used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft-published solution layers.
 
@@ -73,11 +73,11 @@ After the Command Checker tool is enabled, look within the application on each o
 
     If there is only one solution layer, go to step 8. Otherwise, select the top two solution layers. (If you have a layer in the Active solution, but it's not listed at the top, select the Active solution layer, and then the top row.) Then, select **Compare**.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-solution.png" alt-text="Compare solution.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-solution.png" alt-text="Screenshot to select the top two solution layers and select the Compare option.":::
 
 1. The comparison of the current active definition and the previous inactive definition are displayed and will show the differences, if any. The following example shows that the unmanaged Active definition was customized by specifying the `FunctionName` value incorrectly, as compared to the other inactive definition in the Microsoft-published System solution layer. The `FunctionName` value is expected to be `XrmCore.Commands.Delete.deletePrimaryRecord`, but the custom definition has declared `FunctionName="deletePrimaryRecord"`. In this case, nothing will occur when the button is selected because the function cannot be found.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison.png" alt-text="Comparison.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison.png" alt-text="Screenshot shows the comparison of the current active definition and the previous inactive definition.":::
 
 1. The approach that's required to fix the action functionality of a button will depend on the various customizations in your specific scenario. Considering the example, the command was customized by specifying an incorrect `FunctionName` value. You could modify the custom version of the command, and fix the `FunctionName` value. Because this is a custom override of a Microsoft-published definition, and there are no other intentional modifications, we recommend that you delete this custom version of the command to restore the default functionality.
 
@@ -110,11 +110,11 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example.png" alt-text="commanddefinition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-node.png" alt-text="Screenshot to locate the CommandDefinition node.":::
 
 1. Edit the `<RibbonDiffXml>` node to remove the specific `<CommandDefinition>` node that has the ID of the command that you want to delete. Make sure that you don't unintentionally delete other `<CommandDefinition>` nodes that might be present. (Based on the example, you would delete the `<CommandDefinition>` node in which the ID is `Mscrm.DeletePrimaryRecord`.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-2.png" alt-text="Second command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/delete-node.png" alt-text="Screenshot to delete the CommandDefinition node.":::
 
 1. Save the *customizations.xml* file.
 1. Restore the modified *customizations.xml* file to the solution .zip file.
@@ -197,11 +197,11 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-3.png" alt-text="Third command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-example-node.png" alt-text="Screenshot shows an example to locate the CommandDefinition node.":::
 
 1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands), and [Define ribbon actions](/powerapps/developer/model-driven-apps/define-ribbon-actions). (Based on the example, you would modify the `<CommandDefinition>` node's `JavaScriptFunction` by setting the `FunctionName` value to `XrmCore.Commands.Delete.deletePrimaryRecord`.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-4.png" alt-text="Fourth command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/modify-node.png" alt-text="Screenshot to modify the CommandDefinition node's JavaScriptFunction by setting the FunctionName value.":::
 
 1. Restore the modified *customizations.xml* file to the solution .zip file.
 1. Import the solution file.
@@ -266,7 +266,7 @@ You might receive a script error message that resembles the following:
 
 > Invalid JavaScript Action Library: [script name] is not a web resource and is not supported.
 
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/script-error.png" alt-text="Script error.":::
+:::image type="content" source="media/ribbon-issues-button-not-working-correctly/script-error.png" alt-text="Screenshot shows an example of the script error message.":::
 
 This is caused by an invalid ribbon command customization that has declared an incorrect Library on the command's `JavaScriptFunction`.
 
@@ -274,7 +274,7 @@ The in-app tool, Command Checker, will be used to inspect the ribbon component d
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
+:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to the Dynamics 365 application U R L.":::
 
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
@@ -286,17 +286,17 @@ Once the Command Checker tool has been enabled, within the application in each o
 1. Select the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it might be listed in the **More** overflow flyout menu).
 1. Find and select your button in the list of buttons displayed in the left-most pane of the Command Checker tool to show the button and command properties. The following example shows the **New** button on the account entity's form page is visible and is represented by an item labeled **New**.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/new-button.png" alt-text="New button.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/new-button.png" alt-text="Screenshot shows the New button on the account entity's form page.":::
 
 1. Select the **Command Properties** tab to display the details of the command for this button. This will display the **Actions** and JavaScriptFunction declaration, and any enable or display the rules together with the result (**True**, **False**, **Skipped**) of each rule evaluation.
 
     Expand **JavaScriptFunction**, by selecting the "chevron" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/chevron-icon.png"::: icon to view the details of the function declaration. The Library property must be a JavaScript web resource and be prefixed with `$webresource:`. The following example shows that the Library property is */_static/_common/scripts/RibbonActions.js*. This is not a path to a valid JavaScript web resource. You should next review the solution layers of the command to try to identify the correct value to fix the issue.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/library-property.png" alt-text="Library property.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/library-property.png" alt-text="Screenshot shows an example of the Library property.":::
 
 1. Select the **View command definition solution layers** link below the command name to view the solutions that installed a definition of the command.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers-2.png" alt-text="View command definition solution layers.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers-link.png" alt-text="Screenshot to select the View command definition solution layers link below the command name.":::
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that's used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft-published solution layers.
 
@@ -310,11 +310,11 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     Select the top two rows and select **Compare** to view a comparison of the definitions brought in by each solution. If you only have one solution layer, then you will skip this step.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-solution-2.png" alt-text="Compare solution.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-comparison.png" alt-text="Screenshot to select the top two rows and select the Compare option to view a comparison of the definitions.":::
 
 1. The comparison between command definitions will show any differences that might exist between the two layers. The following example clearly shows that the Library value is different. The unmanaged entry from the Active solution is set to an incorrect path */_static/_common/scripts/RibbonActions.js* (your specific path might be slightly different), and the default definition from Microsoft has set the library to `$webresoure:Main_system_library.js`. This is a supported path for this particular command (this value might be different, depending on your particular command). The only supported path is one that begins with `$webresource:` and ends with the name of a valid JavaScript web resource.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison-2.png" alt-text="Comparison.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison-library-value.png" alt-text="Screenshot shows an example that the Library value is different.":::
 
 1. Now that you have reviewed the solution layers and determined the solution that installed the customization, you must fix the definition in the appropriate solution.
 
@@ -352,11 +352,11 @@ Please select the option that reflects your scenario:
     1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
     1. Locate the `<CommandDefinition>` node (In the example, ID of the `<CommandDefinition>` is `Mscrm.NewRecordFromForm`. Therefore, you would locate the following node.)
 
-        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-5.png" alt-text="Fifth command definition example. ":::
+        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-command-definition-node.png" alt-text="Screenshot of Locating the CommandDefinition node.":::
 
     1. Edit the `<RibbonDiffXml>` node to remove the specific `<CommandDefinition>` node. Make sure that you don't unintentionally delete other `<CommandDefinition>` nodes that might be present. (Based on the example, you would delete the `<CommandDefinition>` node in which the ID is `Mscrm.NewRecordFromForm`.)
 
-        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-6.png" alt-text="Sixth command definition example. ":::
+        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/delete-node-example.png" alt-text="Screenshot shows an example to delete the CommandDefinition node.":::
 
     1. Save the *customizations.xml* file.
     1. Restore the modified *customizations.xml* file to the solution .zip file.
@@ -415,11 +415,11 @@ Please select the option that reflects your scenario:
     1. Locate the `<Entity>` node child of the entity node you want to edit, and locate its child `<RibbonDiffXml>` node.
     1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.NewRecordFromForm`. Therefore, you would locate the following node.)
 
-        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-7.png" alt-text="Seventh command definition example. ":::
+        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-node-id.png" alt-text="Screenshot to locate the CommandDefinition node which ID is Mscrm.NewRecordFromForm.":::
 
     1. Edit `<RibbonDiffXml>` to make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands) and [Define ribbon actions](/powerapps/developer/model-driven-apps/define-ribbon-actions). (Based on the example, you would modify the `<CommandDefinition>` node by setting `Library="$webresoure:Main_system_library.js"`, and then make sure that the `FunctionName` value matches. In the example, that would be `FunctionName="XrmCore.Commands.Open.openNewRecord"`.)
 
-        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-8.png" alt-text="Eighth command definition example. ":::
+        :::image type="content" source="media/ribbon-issues-button-not-working-correctly/modify-node-value-match.png" alt-text="Screenshot to modify the CommandDefinition node, and then make sure that the FunctionName value matches.":::
 
     1. Save the *customizations.xml* file.
     1. Restore the modified *customizations.xml* file to the solution .zip file.
@@ -500,7 +500,7 @@ The in-app tool, Command Checker will be used to inspect the ribbon component de
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
+:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to your Dynamics 365 application U R L.":::
 
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
@@ -512,11 +512,11 @@ Once the Command Checker tool has been enabled, within the application in each o
 1. Select the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it might be listed in the **More** overflow flyout menu).
 1. Find and select your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Select the **Command Properties** tab to display the details of the command for this button.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Command properties.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Screenshot to select the Command Properties tab on the Button Delete page.":::
 
 1. The **Command properties** tab will display the **Actions** and corresponding JavaScriptFunction configuration. Select the **View command definition solution layers** link below the command name to view the solutions that installed a definition of the command.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers.png" alt-text="View command definition solution layers.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers.png" alt-text="Screenshot to select the View command definition solution layers link below the command name to view the solutions.":::
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that's used by the application. The other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft-published solution layers.
 
@@ -528,11 +528,11 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     If there is only one solution layer, skip to step 9. Otherwise, select the top two solution layers. (If you have a layer in the Active solution, but it's not listed at the top, select the Active solution layer and then the top row.) Then, select **Compare**.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-solution.png" alt-text="Compare solution.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-solution.png" alt-text="Screenshot to select two rows and select the Compare option to view the solutions.":::
 
 1. The comparison of the current active definition and the previous inactive definition will be displayed and show the differences, if any. The following example shows the unmanaged Active definition to have been customized by specifying the first parameter incorrectly as compared to the other inactive definition in the Microsoft-published System solution layer. The function is expecting a single ID of the primary record, as declared by the CrmParameter that's named **FirstPrimaryItemId**. However, the custom definition has declared the `PrimaryItemIds` value of the `<CrmParameter>` node. This will cause the script to throw an error because the parameters do not match the function signature.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison-3.png" alt-text="comparison.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison-two-definition.png" alt-text="Screenshot shows that the comparison of the current active definition and the previous inactive definition will be displayed and show the differences.":::
 
 1. The approach that's required to fix a button action functionality will depend on the various customizations in your specific scenario. Considering the example, the command was customized by specifying the first parameter incorrectly. You could modify the custom version of the command and fix the parameter. Because this is a custom override of a Microsoft-published definition, and there are no other intentional modifications, we recommend that you delete this custom version of the command to restore the default functionality.
 
@@ -565,11 +565,11 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and then locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example.png" alt-text="commanddefinition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-node.png" alt-text="Screenshot show an example to locate the CommandDefinition node, which ID is Mscrm.DeletePrimaryRecord.":::
 
 1. Edit the `<RibbonDiffXml>` node to remove the specific `<CommandDefinition>` node that has the ID of the command that you want to delete. Make sure that you don't unintentionally delete other `<CommandDefinition>` nodes that might be present. (Based on the example, you would delete the `<CommandDefinition>` node in which the ID is `Mscrm.DeletePrimaryRecord`.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-2.png" alt-text="Second command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/delete-node.png" alt-text="Screenshot to delete the CommandDefinition node in which the ID is Mscrm.DeletePrimaryRecord.":::
 
 1. Save the *customizations.xml* file.
 1. Restore the modified *customizations.xml* file to the solution .zip file.
@@ -653,11 +653,11 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-3.png" alt-text="Third command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-example-node.png" alt-text="Screenshot of Locating the CommandDefinition node which ID is Mscrm.DeletePrimaryRecord.":::
 
 1. Edit the `<RibbonDiffXml>` node to make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands), and [Define ribbon actions](/powerapps/developer/model-driven-apps/define-ribbon-actions). (Based on the example, you would modify the `<CommandDefinition>` node's `JavaScriptFunction` by setting the `FunctionName` value to `XrmCore.Commands.Delete.deletePrimaryRecord`.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-4.png" alt-text="Fourth command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/modify-node.png" alt-text="Screenshot to modify the CommandDefinition node's JavaScriptFunction by setting the FunctionName value.":::
 
 1. Restore the modified *customizations.xml* file to the solution .zip file.
 1. Import the solution file.
