@@ -71,7 +71,7 @@ The problem stays with the Entity that contains the attribute `msdyn_orginsights
 
 The problematic entity is easy to find within customizations as it's normally listed at the top of the entities with no name listed. See the below screenshot:
 
-:::image type="content" source="media/an-item-with-same-key-has-been-added/solution-default-solution.jpg" alt-text="Dynamics 365 Entity Customization.":::
+:::image type="content" source="media/an-item-with-same-key-has-been-added/problematic-entity.png" alt-text="Screenshot of the problematic entity within customizations.":::
 
 ## Resolution
 
@@ -83,7 +83,7 @@ To resolve this error, you'll need to give the entity you located in the [cause]
 4. Select the entity at the top with no display name listed.
 5. In the right window pane, give the entity a Display Name and a Plural Name. See below screenshot.
 
-    :::image type="content" source="media/an-item-with-same-key-has-been-added/entity-definition.jpg" alt-text="give the entity a Display Name and a Plural Name.":::
+    :::image type="content" source="media/an-item-with-same-key-has-been-added/entity-definition.png" alt-text="Screenshot to give the entity a Display Name and a Plural Name.":::
 
 6. After naming the entity, select **Save** and then select **Publish**.
 7. Finally, go back to your workflow editor and attempt to create a new workflow or edit an existing. It will now succeed.
