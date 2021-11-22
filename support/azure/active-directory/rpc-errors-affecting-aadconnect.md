@@ -2,6 +2,8 @@
 title: RPC errors affecting AADConnect
 description: This article describes common examples of AADConnect features affected by RPC errors.
 ms.date: 11/05/2020
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 
 # RPC errors affecting AADConnect

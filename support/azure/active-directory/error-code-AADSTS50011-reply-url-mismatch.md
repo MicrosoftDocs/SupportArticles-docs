@@ -4,6 +4,8 @@ description: Describes a problem in which you receive an error message when sign
 ms.date: 03/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
+ms.service: active-directory
+ms.subservice: app-mgmt
 ---
 # Error AADSTS50011 - The reply URL specified in the request does not match the reply URLs configured for the application
 

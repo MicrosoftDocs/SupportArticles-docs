@@ -4,6 +4,8 @@ description: Resolves an error when a user can't join a device to a Workplace by
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Can't perform a Workplace Join by using Device Registration Services
 

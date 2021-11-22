@@ -3,14 +3,14 @@ title: VM restarting or resizing issues in Azure | Microsoft Docs
 description: Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Virtual Machine in Azure
 services: virtual-machines
 documentationcenter: ''
-author: Deland-Han
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue
 ms.service: virtual-machines
 ms.topic: troubleshooting
-ms.date: 06/15/2018
-ms.author: delhan
+ms.date: 11/16/2021
+ms.author: genli
 ms.custom: H1Hack27Feb2017
 
 ---
@@ -55,16 +55,18 @@ The request to resize the VM has to be attempted at the original cluster that ho
   2. After all the VMs stop, resize the desired VM to a larger size.
   3. Select the resized VM and click **Start**, and then start each of the stopped VMs.
   
-## Issue: Error when Stop/Stop/Redeploy/Restart an existing VM
-You try to stop, start, redeploy, restart the VM but failed with “An unexpected error occurred while processing the network profile of the VM. Please retry later” and turns your VM in failed state.
+## Error when you stop, start, restart, or redeploy an existing VM
+When you try to stop, start, restart, or redeploy an existing VM, the process fails, and you receive an “An unexpected error occurred while processing the network profile of the VM. Please retry later” error message. When this error occurs, the VM is put into a failed state.
 
 ### Cause  
-This will occur if there is an issue in allocating Network resource or failed to update the Network resource.
+This issue occurs if there is a problem in allocating or updating network resources.
 
 ### Resolution
-* Try reapplying your virtual machine’s state. This operation will rerun VM provisioning and help solve the VM failed state, in case when VM provisioning failed while executing a previous VM action.
-     
-     * Click **Virtual Machines** > *your Virtual Machine* > **Redeploy+Reapply** > *Reapply* 
+Try to reapply the virtual machine state. This operation reruns VM provisioning, and helps resolve the VM state failure that occurs if VM provisioning failed when you ran a previous VM action.
+
+1. Navigate to the VM that's stuck in the failed state.
+2. Under **Help**, select **Redeploy + reapply**.
+3. Select the **Reapply** option.
 
 ## Next steps
 If you encounter issues when you create a new Windows VM in Azure, see [Troubleshoot deployment issues with creating a new Windows virtual machine in Azure](./troubleshoot-deployment-new-vm-windows.md).

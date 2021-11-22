@@ -4,6 +4,7 @@ description: This article provides resolutions for the issue where you are authe
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: rviana, jasonpa
+ms.technology: dotnet-wcf
 ---
 # Kerberos not used when you call a WCF service
 

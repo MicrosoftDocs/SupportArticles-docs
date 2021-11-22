@@ -4,6 +4,8 @@ description: This article describes the three hours delay during boot if the wor
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: maweeras, ntuttle, arpadg, takondo, cleng, hiyazawa, genli
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Azure Active Directory Joined computers experience a three hours delay during boot
 

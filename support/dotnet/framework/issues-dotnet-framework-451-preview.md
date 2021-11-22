@@ -4,6 +4,7 @@ description: Lists the known issues for .NET Framework 4.5.1 Preview.
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: meyoun
+ms.technology: dotnet-general
 ---
 # Known issues for .NET Framework 4.5.1 Preview
 

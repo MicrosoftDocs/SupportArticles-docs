@@ -2,8 +2,9 @@
 title: RemotingException when using binary format
 description: Works around a problem in which a RemotingException exception occurs when .NET Remoting receives a binary formatted custom message.
 ms.date: 05/08/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: zhenlwa
+ms.technology: dotnet-general
 ---
 # RemotingException is thrown when .NET Remoting receives a binary formatted custom message
 

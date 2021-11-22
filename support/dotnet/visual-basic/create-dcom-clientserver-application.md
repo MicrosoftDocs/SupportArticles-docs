@@ -4,6 +4,7 @@ description: This article describes how to create, package, and deploy a Distrib
 ms.date: 10/12/2020
 ms.prod-support-area-path: Language or Compilers
 ms.topic: how-to
+ms.technology: visual-basic-language-compilers
 ---
 # Create a DCOM Client/Server Application by Using Visual Basic
 

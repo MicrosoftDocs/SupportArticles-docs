@@ -4,6 +4,8 @@ description: Describes how the proxyAddresses attribute is populated in Azure AD
 ms.date: 05/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # How the proxyAddresses attribute is populated in Azure AD
 

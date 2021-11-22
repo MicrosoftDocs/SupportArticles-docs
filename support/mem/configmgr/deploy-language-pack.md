@@ -30,15 +30,15 @@ To deploy a language pack as an application in Configuration Manager, follow the
 4. On the **Application Catalog** page, specify information about how to display the application to users in the Application Catalog, and then select **Next**.
 5. On the **Deployment Types** page, select **Add** to open the **Create Deployment Type Wizard**.
 
-    :::image type="content" source="media/deploy-language-pack/deployment-types.png" alt-text="Screenshot of the Add button." border="false":::
+    :::image type="content" source="media/deploy-language-pack/deployment-types.png" alt-text="Screenshot of the Add button on the Deployment page." border="false":::
 
 6. On the **General** page, select **Script Installer** from the **Type** list, and then select **Next**.
 
-    :::image type="content" source="media/deploy-language-pack/select-type.png" alt-text="Screenshot of selecting type." border="false":::
+    :::image type="content" source="media/deploy-language-pack/select-type.png" alt-text="Screenshot of selecting type on the General page." border="false":::
 
 7. On the **General Information** page, enter application name, and then select **Next**.
 
-    :::image type="content" source="media/deploy-language-pack/enter-name.png" alt-text="Enter application name." border="false":::
+    :::image type="content" source="media/deploy-language-pack/enter-name.png" alt-text="Enter application name on the General Information page." border="false":::
 
 8. On the **Content** page, specify the content location, enter the following for **Installation program**, and then select **Next**.
 
@@ -48,11 +48,11 @@ To deploy a language pack as an application in Configuration Manager, follow the
 
 9. On the **Detection Method** page, select **Add Clause**.
 
-    :::image type="content" source="media/deploy-language-pack/add-clause.png" alt-text="Add clause.":::
+    :::image type="content" source="media/deploy-language-pack/add-clause.png" alt-text="Add clause on the Detection Method page.":::
 
 10. For **Detection Rule**, select **Registry** from the **Setting Type** drop-down list, select **HKEY_LOCAL_MACHINE** for **Hive**, enter `SYSTEM\CurrentControlSet\Control\MUI\UILanguages\<language name>` in **Key**, (for example, `SYSTEM\CurrentControlSet\Control\MUI\UILanguages\fr-FR`), and then select **OK**.
 
-    :::image type="content" source="media/deploy-language-pack/detection-rule.png" alt-text="Detection rule.":::
+    :::image type="content" source="media/deploy-language-pack/detection-rule.png" alt-text="Detection rule page details.":::
 
 11. Select **Next**.
 12. On **User Experience** page, select **Install for system** from the **Installation behavior** drop-down list, specify a **Logon requirement**, and then select **Next**.
@@ -70,31 +70,31 @@ To deploy a language pack as an application in Configuration Manager, follow the
 
     1. Select **Custom** for **Category**, and then select **Create**.
 
-        :::image type="content" source="media/deploy-language-pack/category.png" alt-text="Select custom for Category.":::
+        :::image type="content" source="media/deploy-language-pack/category.png" alt-text="Select custom for Category in Create Requirement dialog box.":::
 
     2. Specify details at **Create Global Condition**.
 
-        :::image type="content" source="media/deploy-language-pack/global-condition.png" alt-text="Global condition.":::
+        :::image type="content" source="media/deploy-language-pack/global-condition.png" alt-text="Screenshot of the details in the Create Global condition window.":::
 
     3. Enter **1803** for **Value**, and then select **OK**.
 
-        :::image type="content" source="media/deploy-language-pack/value.png" alt-text="Enter value.":::
+        :::image type="content" source="media/deploy-language-pack/value.png" alt-text="Screenshot shows value 1803 is entered in Create Requirement dialog box.":::
 
 14. On **Summary** page, confirm the settings, and then select **Next**.
 15. Wait for the wizard to complete, and then select **Close** to exit the wizard.
 
-    :::image type="content" source="media/deploy-language-pack/completion.png" alt-text="Completion.":::
+    :::image type="content" source="media/deploy-language-pack/completion.png" alt-text="Completion page in the Create Deployment Type Wizard.":::
 
 16. Select **Next**.
 
-    :::image type="content" source="media/deploy-language-pack/next.png" alt-text="Click next.":::
+    :::image type="content" source="media/deploy-language-pack/next.png" alt-text="Select next button in the Deployment Types page.":::
 
 17. On **Summary** page, confirm the settings for the application, and then select **Next**.
 18. Wait for the wizard to complete, and then select **Close** to exit the wizard.
 19. After the application is created successfully, deploy it to the required collections.
 20. On the client device, open **Software Center**, select the application, and then select **Install**.
 
-    :::image type="content" source="media/deploy-language-pack/install-application.png" alt-text="Install application.":::
+    :::image type="content" source="media/deploy-language-pack/install-application.png" alt-text="Install application from Software Center.":::
 
 21. Verify that the language pack was installed successfully by running the following command from an elevated command prompt:
 
@@ -104,7 +104,7 @@ To deploy a language pack as an application in Configuration Manager, follow the
 
     The following is sample output:
 
-    :::image type="content" source="media/deploy-language-pack/result.png" alt-text="Command result.":::
+    :::image type="content" source="media/deploy-language-pack/result.png" alt-text="Screenshot of the Command result.":::
 
 ## Use logs to track policy and application installation
 

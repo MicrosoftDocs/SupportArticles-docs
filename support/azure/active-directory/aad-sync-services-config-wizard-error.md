@@ -2,8 +2,9 @@
 title: Error 80070005 when you run the Azure Active Directory Sync Services config wizard
 description: Describes an issue that generates a failed due to the 80070005 error when you run the Azure Active Directory Sync (AAD Sync) Services config wizard. Provides a solution.
 ms.date: 11/09/2021
-ms.technology:
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error: 80070005 when you run the Azure Active Directory Sync Services config wizard
 

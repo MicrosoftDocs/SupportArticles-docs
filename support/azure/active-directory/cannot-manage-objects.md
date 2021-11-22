@@ -4,6 +4,8 @@ description: Resolves an issue that you can't manage or remove objects created t
 ms.date: 08/30/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 

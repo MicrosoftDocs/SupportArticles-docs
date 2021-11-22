@@ -4,6 +4,8 @@ description: Describes a problem in which you receive an error message when sign
 ms.date: 09/30/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
+ms.service: active-directory
+ms.subservice: app-mgmt
 ---
 # Error AADSTS70001 - Application with Identifier was not found in the directory
 
