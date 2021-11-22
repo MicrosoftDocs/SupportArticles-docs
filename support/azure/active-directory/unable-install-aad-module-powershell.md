@@ -4,6 +4,8 @@ description: Describes an issue in which you can't install Azure Active Director
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you try to install Azure Active Directory Module for Windows PowerShell: You must have Windows PowerShell 2.0 or greater installed
 

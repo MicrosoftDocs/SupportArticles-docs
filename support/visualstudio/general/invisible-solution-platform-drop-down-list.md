@@ -4,6 +4,7 @@ description: Works around a problem that you can't see the default Solution Plat
 ms.date: 04/24/2020
 ms.prod-support-area-path: Team explorer/Version control
 ms.reviewer: lavonnec, cbrochu
+ms.technology: vs-version-control
 ---
 # Solution Platform drop-down list isn't visible after you install Visual Studio 2013 Update 2
 

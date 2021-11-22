@@ -4,6 +4,8 @@ description: Describes a problem in which settings configured to sync between de
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # ESR settings don't sync with multi-factor authentication enabled
 

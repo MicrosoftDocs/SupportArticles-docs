@@ -4,6 +4,7 @@ description: Describes how to do basic file I/O in Visual C#. This article also 
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to do basic file I/O
 

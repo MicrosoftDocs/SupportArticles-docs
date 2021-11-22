@@ -7,7 +7,7 @@ ms.author: genli
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: azure
+ms.service: virtual-machine-scale-sets
 ---
 
 # VM extension provisioning errors in Virtual Machine Scale Sets

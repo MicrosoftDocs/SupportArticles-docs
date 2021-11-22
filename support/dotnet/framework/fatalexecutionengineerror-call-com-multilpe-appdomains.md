@@ -4,6 +4,7 @@ description: This article describes a problem in which an ASP.NET application cr
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: leecow
+ms.technology: dotnet-general
 ---
 # FatalExecutionEngineError occurs when you do COM calls together with multiple AppDomains
 

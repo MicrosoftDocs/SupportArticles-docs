@@ -4,6 +4,8 @@ description: Describes a problem in which changes to your password are not saved
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Changes to your password are not saved in Azure, Office 365, or Intune
 
