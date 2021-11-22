@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4552004
 
 Some users are unable to see all the dynamic content from previous steps while attempting to add dynamic content to a parameter. The dynamic content picker may show that there is **No dynamic content available**.
 
-:::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/no-dynamic-content-available.png" alt-text="Screenshot shows there is no dynamic content automatically available when using the Microsoft Forms card." border="false":::
+:::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/no-dynamic-content-available.png" alt-text="Screenshot shows there is no dynamic content automatically available when using the Microsoft Forms card.":::
 
 ## Cause
 
@@ -27,7 +27,7 @@ This can occur for one of two reasons:
 
 1. Or when the type of the dynamic content may differ from the data type of the parameter. This is expected behavior as the dynamic content picker filters the dynamic content based on the data type of the parameter. For instance, the dynamic content picker for a string parameter will show a filtered list of dynamic content that is strings.
 
-   :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/dynamic-content-picker.png" alt-text="Screenshot shows the dynamic content picker filters the dynamic content based on the data type of the parameter." border="false":::
+   :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/dynamic-content-picker.png" alt-text="Screenshot shows the dynamic content picker filters the dynamic content based on the data type of the parameter.":::
 
 ## Resolution
 
@@ -35,11 +35,11 @@ If using a trigger that supports Split On, fix this issue by turning off the Spl
 
 1. First, on the trigger card, selected the three dots (...).
 
-    :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/three-dots-on-trigger-card.png" alt-text="Screenshot to selected the three dots icon on the trigger card." border="false":::
+    :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/three-dots-on-trigger-card.png" alt-text="Screenshot to selected the three dots icon on the trigger card.":::
 
 2. Then, select **Settings**.
 
-    :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/settings.png" alt-text="Screenshot to select the Settings item in the options." border="false":::
+    :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/settings.png" alt-text="Screenshot to select the Settings item in the options.":::
 
 3. Then, **turn off** the Split on setting and select **Done**.
 

@@ -29,7 +29,7 @@ Users can still use SharePoint sites not listed by typing in the using the desir
 
 ### Resolution 1 - Select Enter custom value
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/enter-custom-value.png" alt-text="Screenshot to select the Enter custom value item." border="false":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/enter-custom-value.png" alt-text="Screenshot to select the Enter custom value item.":::
 
 ### Resolution 2 - Get the SharePoint site URL
 
@@ -39,10 +39,10 @@ You can also use any URL from your SharePoint site. The Flow designer will clean
 
 ### Resolution 3 - Type the SharePoint URL directly into the dropdown text box
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/type-url.png" alt-text="Screenshot to type the SharePoint U R L directly into the dropdown text box." border="false":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/type-url.png" alt-text="Screenshot to type the SharePoint U R L directly into the dropdown text box.":::
 
 The Flow designer will clean up any URL and point it directly to the SharePoint site.
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/clean-url-sharepoint-site.png" alt-text="Screenshot shows the Flow designer will clean up any U R L and point it directly to the SharePoint site." border="false":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/clean-url-sharepoint-site.png" alt-text="Screenshot shows the Flow designer will clean up any U R L and point it directly to the SharePoint site.":::
 
 The dropdown should fill in the SharePoint site automatically. Make sure you have access to the SharePoint site.

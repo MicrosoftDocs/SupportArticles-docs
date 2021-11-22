@@ -19,7 +19,7 @@ While you try to record an application, the following message is displayed:
 
 > Recording this app is not supported yet.
 
-:::image type="content" source="media/recorder-not-recording-applications/recording-this-app-is-not-supported-yet.png" alt-text="Screenshot of the message when recording an application." border="false":::
+:::image type="content" source="media/recorder-not-recording-applications/recording-this-app-is-not-supported-yet.png" alt-text="Screenshot of the message when recording an application.":::
 
 ## Verifying issue
 

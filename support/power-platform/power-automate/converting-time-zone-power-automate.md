@@ -37,7 +37,7 @@ Search for **convert time zone** and choose the **Convert time zone** operation.
 
 The **Convert time zone** operation has a few required inputs:
 
-:::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation." border="false":::
+:::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation.":::
 
 **Base time**: The datetime you wish to convert.
 **Source time zone**: The time zone that the datetime is currently in.
