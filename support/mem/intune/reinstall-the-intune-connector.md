@@ -22,11 +22,11 @@ This article describes how to uninstall and reinstall the connector when the **S
 To make sure that the connector will reinstall correctly, follow these steps before you uninstall it:
 
 1. Verify the certificate's thumbprint. On the Windows server that hosts the connector, open Registry Editor, locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy` subkey, and then check the value of `NDESCertThumbprint`.
-2. Open the connector user interface (UI) from %ProgramFiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
+2. Open the connector user interface (UI) from *%ProgramFiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe*.
     - On the **Enrollment** tab, check whether proxy server is used. If it is, note the proxy server configuration.
     - On the **Advanced** tab, check the account that you use, and note the account information.
 
-      :::image type="content" source="./media/reinstall-the-intune-connector/ca-account.png" alt-text="Check the CA account specified":::
+      :::image type="content" source="media/reinstall-the-intune-connector/ca-account.png" alt-text="Screenshot of the CA account specified under Advanced tab.":::
 
 ## Uninstall the connector
 
@@ -47,4 +47,4 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 
 To verify that the **Intune Connector Service** is running, open a web browser, and enter the URL `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`. It should return a 403 error.
 
-:::image type="content" source="./media/reinstall-the-intune-connector/403error.png" alt-text="HTTP error 403":::
+:::image type="content" source="media/reinstall-the-intune-connector/403-error.png" alt-text="Screenshot of HTTP error 403 forbidden access is denied.":::

@@ -20,7 +20,7 @@ When you try to sign in to Microsoft Intune Connector for Active Directory, you 
 > An error occurred while processing your request.  
 > View Service Status
 
-:::image type="content" source="./media/intune-connector-signin-unexpected-error/unexpected-error.png" alt-text="Screenshot of the unexpected error.":::
+:::image type="content" source="media/intune-connector-signin-unexpected-error/unexpected-error.png" alt-text="Screenshot of the unexpected error.":::
 
 ## Cause
 

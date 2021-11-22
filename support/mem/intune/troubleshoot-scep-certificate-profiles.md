@@ -25,7 +25,7 @@ Before proceeding, ensure you've met the [prerequisites for using SCEP certifica
 
 The following graphic demonstrates a basic overview of the SCEP communication process in Intune.
 
-![SCEP certificate profile flow](./media/troubleshoot-scep-certificate-profiles/scep-certificate-profile-flow.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-profiles/scep-certificate-profile-flow.png" alt-text="Screenshot shows the SCEP certificate profile flow.":::
 
 1. [Deploy a SCEP certificate profile](troubleshoot-scep-certificate-profile-deployment.md). Intune generates a challenge string, which requires a specific user, certificate purpose, and certificate type.
 
@@ -107,10 +107,10 @@ For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a
 
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**.
 
-   ![Select log options](./media/troubleshoot-scep-certificate-profiles/message-options.png)
+    :::image type="content" source="media/troubleshoot-scep-certificate-profiles/message-options.png" alt-text="Screenshot shows the Include Info Messages and Include Debug Messages options are selected.":::
 
 3. Reproduce the problem, and then save the logs to a text file:
-   1. Select **Edit** > **Select All** to select all the messages on the current screen, and then select **Edit** > **Copy** to copy the messages to the clipboard. 
+   1. Select **Edit** > **Select All** to select all the messages on the current screen, and then select **Edit** > **Copy** to copy the messages to the clipboard.
    2. Open the TextEdit application, paste the copied logs into a new text file, and then save the file.
 
 The Company Portal log for iOS and iPadOS devices doesn't contain information about SCEP certificate profiles.
@@ -119,9 +119,9 @@ The Company Portal log for iOS and iPadOS devices doesn't contain information ab
 
 For devices that run Windows, use the Windows Event logs to diagnose enrollment or device management issues for devices that you manage with Intune.
 
-On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
+On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**.
 
-![Windows event logs](./media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-profiles/windows-event-log.png" alt-text="Screenshot of the Windows event logs in Event Viewer.":::
 
 ## Next steps
 

@@ -4,6 +4,8 @@ description: Describes an issue in which you receive errors when you try to use 
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: roberg, jhayes
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Can't sync SystemMailbox or DiscoveryMailboxSearch accounts using Azure Active Directory Sync tool
 

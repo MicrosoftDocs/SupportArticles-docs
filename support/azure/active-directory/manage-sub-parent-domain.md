@@ -4,6 +4,8 @@ description: Discusses how to manage subdomains and parent domains that are loca
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: vweiner
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 
 # How to manage subdomains and parent domains in different organizations in Office 365, Azure, or Intune

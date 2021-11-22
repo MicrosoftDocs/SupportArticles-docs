@@ -4,6 +4,7 @@ description: Describes a problem that when using VBScript to perform a numeric c
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: estraley, jayapst
+ms.technology: vs-general
 ---
 # VBScript runtime error (Type Mismatch) when you perform a numeric comparison on an adNumeric field type
 

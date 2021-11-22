@@ -330,6 +330,8 @@
         href: how-to-use-perfinsights.md
       - name: PerfInsights in Linux
         href: how-to-use-perfinsights-linux.md
+      - name: PerfInsights and scale set VM instances
+        href: perfinsights-and-scale-set-vm-instances.md
   - name: Troubleshoot VM Performance issues
     items:
     - name: Isolate bottlenecks in Linux
@@ -387,6 +389,8 @@
   items:
   - name: VM Inspector for Azure Virtual Machines
     href: vm-inspector-azure-virtual-machines.md
+  - name: VM Inspector error messages
+    href: vm-inspector-error-messages.md
   - name: Serial Console
     items:
     - name: Overview

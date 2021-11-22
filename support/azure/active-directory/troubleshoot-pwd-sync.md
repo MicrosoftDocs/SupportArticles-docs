@@ -4,6 +4,8 @@ description: Troubleshoots common issues when you're using an Azure Active Direc
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # How to troubleshoot password synchronization when using an Azure AD sync appliance
 

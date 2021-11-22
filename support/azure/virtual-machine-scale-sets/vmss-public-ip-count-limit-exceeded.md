@@ -4,7 +4,7 @@ description: Describes how to file a support ticket for a Public IP quota increa
 ms.date: 09/03/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: virtual-machine-scale-sets
 ---
 # PublicIPCountLimitExceededByVMScaleSet error when you create virtual machine scale set
 

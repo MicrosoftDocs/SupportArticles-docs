@@ -4,6 +4,8 @@ description: Describes how to verify first-party Microsoft applications in sign-
 ms.date: 04/02/2021
 ms.prod-support-area-path: 
 ms.reviewer: jafritts
+ms.service: active-directory
+ms.subservice: compliance
 ---
 # Verify first-party Microsoft applications in sign-in reports
 

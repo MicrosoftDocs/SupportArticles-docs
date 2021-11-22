@@ -20,21 +20,21 @@ To confirm the validation request is submitted to the module, look for an entry 
 
 - **IIS logs**:
 
-  ```
+  ```output
   fe80::f53d:89b8:c3e8:5fec%13 POST /CertificateRegistrationSvc/Certificate/VerifyRequest - 443 - 
   fe80::f53d:89b8:c3e8:5fec%13 NDES_Plugin - 201 0 0 341 875
   ```
 
 - **NDESPlugin log**:
 
-  ```
+  ```output
   Calling VerifyRequest ...  
   Sending request to certificate registration point.
   ```
 
   The following example indicates a successful validation of the devices challenge request and that NDES can now contact the CA:
 
-  ```
+  ```output
   Verify challenge returns true
   Exiting VerifyRequest with 0x0
   ```
@@ -55,7 +55,7 @@ If the information in that article doesn't help you resolve the issue, the follo
 
 When the log contains an error 12175 that's similar to the following, there might be a problem with the SSL certificate:
 
-```
+```output
 WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
 Failed to send http request /CertificateRegistrationSvc/Certificate/VerifyRequest. Error 12175
 ```
@@ -76,7 +76,7 @@ When the following logs contain an error 403 that's similar to the following, th
 
 **NDESPlugin.log**:
 
-```
+```output
 Sending request to certificate registration point.
 Verify challenge returns <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns="http://www.w3.org/1999/xhtml"> <head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 <title>403 - Forbidden: Access is denied.</title>
@@ -84,7 +84,7 @@ Verify challenge returns <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN
 
 **IIS log**:
 
-```
+```output
 POST /CertificateRegistrationSvc/Certificate/VerifyRequest - 443 -<IP_address>
 NDES_Plugin - 403 16 2148204809 453  
 ```
@@ -99,7 +99,7 @@ If a certificate has the same *Issued to* and *Issued by* values, it's a root ce
 
 When the result of the challenge returns **false**, check the *CertificateRegistrationPoint.svclog* for errors. For example, you might see a "Signing certificate could not be retrieved" error that resembles the following entry:
 
-```
+```output
 Signing certificate could not be retrieved. System.Security.Cryptography.CryptographicException: m_safeCertContext is an invalid handle. at System.Security.Cryptography.X509Certificates.X509Certificate.ThrowIfContextInvalid() at System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString() at Microsoft.ConfigurationManager.CertRegPoint.CRPCertificate.RetrieveSigningCert(String certThumbprint
 ```
 
@@ -115,14 +115,14 @@ After a successful validation by the certificate registration point (the policy 
 
 - **NDESPlugin log**:
 
-  ```
+  ```output
   Verify challenge returns true
   Exiting VerifyRequest with 0x0
   ```
 
 - **IIS logs**:
 
-  ```
+  ```output
   fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe ... 80 - 
   fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 2713 1296
   ```
@@ -144,11 +144,11 @@ If you don't see the entries that indicate success, follow these steps:
 
 2. Open the Certification Authority MMC on the CA, and select **Failed Requests** to look for errors that help identify a problem. The following image is an example:
 
-   ![Example of a failed request](./media/troubleshoot-scep-certificate-ndes-policy-module/failed-requests.png)
+    :::image type="content" source="media/troubleshoot-scep-certificate-ndes-policy-module/failed-requests.png" alt-text="Screenshot of an example failed request.":::
 
 3. Review the application event log on the CA for errors. Usually you can see errors that match what you see in the **Failed Requests** from the previous step. The following image is an example:
 
-   ![Review the application log](./media/troubleshoot-scep-certificate-ndes-policy-module/application-log-errors.png)
+    :::image type="content" source="media/troubleshoot-scep-certificate-ndes-policy-module/application-log-errors.png" alt-text="Screenshot shows details of the application log.":::
 
 ## Next steps
 

@@ -4,6 +4,8 @@ description: Describes a problem in which you receive an error message AADSTS650
 ms.date: 03/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
+ms.service: active-directory
+ms.subservice: app-mgmt
 ---
 # Error AADSTS650056 - Misconfigured application
 
