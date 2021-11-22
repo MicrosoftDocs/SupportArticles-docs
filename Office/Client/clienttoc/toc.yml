@@ -331,6 +331,8 @@
           href: ../activation/problem-with-your-account.md
         - name: Microsoft 365 Apps activation error Your organization has disabled this device
           href: ../activation/your-organization-disabled-this-device.md
+        - name: Microsoft 365 Apps activation limits
+          href: ../activation/activation-limits.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
         - name: Microsoft 365 Apps activation Product deactivated
@@ -345,6 +347,8 @@
           href: ../activation/sign-in-issues.md
         - name: Sorry, another account from your organization is already signed in on this computer
           href: ../activation/another-account-already-signed-in.md
+        - name: The account isn’t associated with this Office product
+          href: ../activation/account-not-associated-with-office.md
         - name: The products we found in your account can't be used to activate
           href: ../activation/cant-be-used-to-activate.md
         - name: Troubleshooting device-based licensing for Microsoft 365 Apps
