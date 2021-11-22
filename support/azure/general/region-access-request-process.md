@@ -25,7 +25,7 @@ The process to request access is relatively straight forward, you can initiate t
 
 2. You'll be presented with step 1 of the new support request, complete the following:
 
-    :::image type="content" source="media/region-access-request-process/create-support-request.jpg" alt-text="Screenshot of the New Support Request information under Basics tab." border="false":::
+    :::image type="content" source="media/region-access-request-process/create-support-request.png" alt-text="Screenshot of the New Support Request information under Basics tab." border="false":::
 
     1. In **Issue Type**, select " **Service and subscription Limit (quotas)** ".  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
@@ -100,7 +100,7 @@ The process to request access is relatively straight forward, you can initiate t
 
 2. Select **Create** to complete the process.
 
-    :::image type="content" source="media/region-access-request-process/complete-process.jpg" alt-text="Screenshot of the create button in the New support request page.":::
+    :::image type="content" source="media/region-access-request-process/complete-process.png" alt-text="Screenshot of the create button in the New support request page.":::
 
 ## Request processing
 
