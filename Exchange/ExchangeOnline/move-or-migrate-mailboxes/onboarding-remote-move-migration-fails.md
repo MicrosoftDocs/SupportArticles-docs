@@ -36,21 +36,21 @@ This issue occurs because you also have an on-premises archive mailbox, and this
 
 To fix this issue, follow these steps:
 
-**Step 1**: Check the `ArchiveGuid` property of the on-premises and cloud-based archive mailboxes:
+**Step 1**: Check the `ArchiveGuid` property value of the on-premises and cloud-based archive mailboxes:
 
-- For the on-premises archive mailbox, [open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` property value:
+- For the on-premises archive mailbox, [open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) and run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet to get the `ArchiveGuid` property value:
 
     ```powershell
     Get-Mailbox -Identity john@contoso.com | FL *archive*
     ```
 
-- For the cloud-based archive mailbox, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet to get the `ArchiveGuid` property value:
+- For the cloud-based archive mailbox, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet to get the `ArchiveGuid` property value:
 
     ```powershell
     Get-MailUser -Identity John | FL *archive*
     ```
 
-If the two archive mailboxes have the same `ArchiveGuid` property value, go to Step 2. Otherwise, [get support](/microsoft-365/business-video/get-help-support) for submitting a support request.
+If the two archive mailboxes have the same `ArchiveGuid` property value, go to Step 2. Otherwise, [create a support request](/microsoft-365/business-video/get-help-support).
 
 **Step 2**: Back up and export the on-premises archive mailbox to a .pst file in the [Exchange admin center](https://admin.exchange.microsoft.com). For more information, see [create mailbox export requests](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
 
@@ -60,7 +60,7 @@ If the two archive mailboxes have the same `ArchiveGuid` property value, go to S
 
 **Step 3**: Add the `ArchiveDomain` value to the on-premises primary mailbox.
 
-1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox:
+1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) and run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet to add the `ArchiveDomain` value to the on-premises primary mailbox:
 
     ```powershell
     Set-ADUser -Identity John -Add @{msExchArchiveaddress="contoso.mail.onmicrosoft.com"}
