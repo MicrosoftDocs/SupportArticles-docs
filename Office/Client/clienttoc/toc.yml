@@ -329,8 +329,12 @@
           href: ../activation/0xcaa70007-and-0xcaa80000.md
         - name: Microsoft 365 Apps activation error There’s a problem with your account
           href: ../activation/problem-with-your-account.md
+        - name: Microsoft 365 Apps activation error Your account doesn’t allow editing on a Mac
+          href: ../activation/doesnt-allow-editing-on-mac.md
         - name: Microsoft 365 Apps activation error Your organization has disabled this device
           href: ../activation/your-organization-disabled-this-device.md
+        - name: Microsoft 365 Apps activation limits
+          href: ../activation/activation-limits.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
         - name: Microsoft 365 Apps activation Product deactivated
@@ -345,12 +349,18 @@
           href: ../activation/sign-in-issues.md
         - name: Sorry, another account from your organization is already signed in on this computer
           href: ../activation/another-account-already-signed-in.md
+        - name: The account isn’t associated with this Office product
+          href: ../activation/account-not-associated-with-office.md
         - name: The products we found in your account can't be used to activate
           href: ../activation/cant-be-used-to-activate.md
         - name: Troubleshooting device-based licensing for Microsoft 365 Apps
           href: ../activation/device-based-licensing.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
+        - name: We’ve run into a problem with your Office 365 subscription
+          href: ../activation/run-into-a-problem.md
+        - name: You currently have not been assigned an office license that includes the Office desktop apps
+          href: ../activation/license-not-assigned.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
