@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When accessing the Content type gallery in SharePoint admin center, you might encounter one of the following errors:
+When you access the Content type gallery in the SharePoint admin center, you receive one of the following error messages:
 
 > An unexpected error has occurred. Please try again later.
 
@@ -30,17 +30,17 @@ When accessing the Content type gallery in SharePoint admin center, you might en
 
 ## Cause
 
-There are many causes for this problem, but the most common cause is that permissions for the user or administrator aren't configured or are configured incorrectly.
+There are many causes of this problem. The most common cause is that permissions for the user or administrator aren't configured or are configured incorrectly.
 
 ## Resolution  
 
-To troubleshoot this issue, try the following steps.
+To troubleshoot this problem, try the following steps.
 
-**Note** Examples in this article use `contoso` as a placeholder. Replace `contoso` with your organization’s SharePoint domain name to navigate to the correct page.
+**Note** The examples in this article use `contoso` as a placeholder. To navigate to the correct page, replace `contoso` with your organization’s SharePoint domain name.
 
-1. Make sure the user trying to access the Content type gallery is a Global or SharePoint administrator.  
+1. Make sure that the user who is trying to access the Content type gallery is a Global or SharePoint administrator.  
 
-1. If you’re still encountering the error message, go to `https://contoso.sharepoint.com/sites/contenttypehub/_layouts/15/mngsiteadmin.aspx` and verify the following groups are added as administrators:
+1. If you’re still receiving the error message, go to `https://contoso.sharepoint.com/sites/contenttypehub/_layouts/15/mngsiteadmin.aspx` and verify that the following groups are added as administrators:
     - Company administrator
     - SharePoint service administrator  
 
