@@ -42,8 +42,8 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
 - Global admin credentials for the Microsoft cloud service
 
 ## Use the nltest tool to check connectivity to the domain
-
-- Run the [Nltest.exe command-line tool](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11)). To do so, type the following command at the command prompt:
+[Nltest.exe command-line tool](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11)) is a command-line tool that is built into Windows Server. It is available as part of the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
+- Type the following command at the command prompt:
 
     ```console
     Nltest /dsgetdc:<FQDN of the domain>
@@ -107,15 +107,6 @@ In this case, the Directory Sync tool may not be installed because of a previous
 1. In Control Panel, check whether Microsoft Identity Integration Server is listed in **Add or Remove Programs** or in **Programs and Features**. If it's present, you must remove it.
 2. Verify that the Program Files folder contains a subfolder that's named *Microsoft Identity Integration Server*. If the subfolder exists, you must rename the folder to *Microsoft Identity Integration Server_Old*.
 3. Run Setup again.
-
-## Error: "The Microsoft Online Services Sign-in Assistant service installation returned FAIL"
-
-You receive the following error message when you try to install the Azure Active Directory Sync tool:
-
-> The Microsoft Online Services Sign-in Assistant service installation returned FAIL. See the event log for more detailed information.  
-> Unable to uninstall the Windows Azure Active Directory Sync tool. Use the Control Panel to remove the Directory Sync tool
-
-To resolve this issue, see ["Microsoft Online Services Sign-in Assistant service installation returned FAIL" error when you try to install the Azure Active Directory Sync tool](https://support.microsoft.com/help/3073644).
 
 ## Troubleshoot other error messages
 
