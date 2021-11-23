@@ -1014,7 +1014,7 @@ To do this, follow these steps:
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found here.
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 
@@ -1416,7 +1416,7 @@ Review the mailbox log to determine that attachment the user is attempting to op
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found in [Exchange ActiveSync Mailbox Logging](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 
@@ -1566,7 +1566,7 @@ The request from the ActiveSync client to send this message is not successful. W
     > [!NOTE]
     > This sends the ActiveSync mailbox log to the specified email address. Additional information on mailbox logging can be found in [Exchange ActiveSync Mailbox Logging](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://mailboxlogparser.codeplex.com/) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **SendMail** under **Search raw log data for strings** and select **Search**.
@@ -1769,7 +1769,7 @@ We now have the data collected and we are ready to begin troubleshooting. The fi
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [Exchange ActiveSync Mailbox Logging](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter the UID value you copied earlier under **Search raw log data for strings** and select **Search**.
@@ -2361,7 +2361,7 @@ To resolve this issue, review the mailbox log after attempting another Sync requ
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [here](https://blogs.technet.com/b/jasonsla/archive/2013/03/19/exchange-activesync-mailbox-logging.aspx).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **Cmd=Sync** under **Search raw log data for strings** and select **Search**.
