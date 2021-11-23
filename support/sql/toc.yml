@@ -157,8 +157,8 @@
       href: admin/io-subsystem-requirements-tempdb.md
     - name: Improve the performance of full-text queries
       href: admin/improve-performance-full-text-queries.md
-    - name: Latch timeout when running DBCC
-      href: admin/latch-timeout-running-dbcc.md
+    - name: Latch timeout when running DBCC CHECKDB
+      href: admin/latch-timeout-running-dbcc-checkdb.md
     - name: Logging and data storage algorithms
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
