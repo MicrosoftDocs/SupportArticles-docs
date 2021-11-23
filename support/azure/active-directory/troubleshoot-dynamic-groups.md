@@ -51,7 +51,7 @@ Existing members of the rule are removed.
 
 You don't see membership changes instantly after adding or changing a rule.
 
-- Membership evaluation is performed periodically as a background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created because of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 24 hours or longer to populate.
+- Membership evaluation is performed periodically as a background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created because of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 30 minutes or longer to populate.
 
 - Check the [membership processing status](/azure/active-directory/users-groups-roles/groups-create-rule#check-processing-status-for-a-rule) to confirm whether the process is complete. Check the last updated date on the group **Overview** page in Azure portal to confirm that the page is updated.
 
