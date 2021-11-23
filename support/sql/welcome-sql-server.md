@@ -12,7 +12,7 @@ Welcome to SQL Server troubleshooting. These articles explain how to determine, 
 
 - See [How to contribute to SQL Server Documentation](/sql/sql-server/sql-server-docs-contribute).
 
-### Latest builds and cumulative updates available for SQL Server versions
+### Builds and Cumulative Updates available for SQL Server versions
 
 - See [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
 
