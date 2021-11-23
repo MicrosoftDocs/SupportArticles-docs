@@ -41,7 +41,7 @@ Name                                                              StatusDetail T
 PublicFolderMailboxMigrationfb3cdd37-ecf4-4d33-xxxx -fcec86xxxxxx FailedOther  MigP1         95
 ```
 
-![Error in the migration report](./media/public-folder-migration-fails/command-error.png)
+:::image type="content" source="media/public-folder-migration-fails/command-error.png" alt-text="Screenshot of the error in the migration report.":::
 
 Then, you run the following command and receive the error details:
 
