@@ -24,23 +24,23 @@ If using Web Services for Microsoft Dynamics GP 2013 or Microsoft Dynamics GP 20
 2. Open the SecurityAdminService folder within the installation directory from step #1.
 
     1. Right-click on the DynamicsSecurityAdmin.config and open it.
-    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48621/"/>`
+    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48621/"/>`.
     1. Copy the URL from that line to a browser window to browse it.
     1. Verify that the service description appears as expected.
 
 3. Open the ServiceConfigs folder within the installation directory from step #1.
 
     1. Right-click on the DynamicsGP.config and open it.
-    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48620/Dynamics/GPService"/>`
-    1. Copy the URL from that line to a browser window to browse it. By default, this URL is <https://SERVERNAME:48620/Dynamics/GPService>
+    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48620/Dynamics/GPService"/>`.
+    1. Copy the URL from that line to a browser window to browse it. By default, this URL is `https://SERVERNAME:48620/Dynamics/GPService`.
     1. Verify that the service description appears as expected.
     1. Right-click on the DynamicsGPLegacy.config and open it.
-    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48620/DynamicsGPWebServices"/>`
-    1. Copy the URL from that line to a browser window to browse it. By default, this URL is <https://SERVERNAME:48620/DynamicsGPWebServices>
-    1. Verify that the service description appears as expected
+    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48620/DynamicsGPWebServices"/>`.
+    1. Copy the URL from that line to a browser window to browse it. By default, this URL is `https://SERVERNAME:48620/DynamicsGPWebServices`.
+    1. Verify that the service description appears as expected.
     1. Right-click on the DynamicsSecurity.config and open it.
-    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48620/DynamicsSecurityService"/>`
-    1. Copy the URL from that line to a browser window to browse it. By default, this URL is <https://SERVERNAME:48620/DynamicsSecurityService>
+    1. Find the line that reads `<add baseAddress="https://SERVERNAME:48620/DynamicsSecurityService"/>`.
+    1. Copy the URL from that line to a browser window to browse it. By default, this URL is `https://SERVERNAME:48620/DynamicsSecurityService`.
     1. Verify that the service description appears as expected.
 
 4. Select **Start**, point to **Administrative Tools**, and then select **Dynamics Security Console**.
@@ -48,8 +48,8 @@ If using Web Services for Microsoft Dynamics GP 2013 or Microsoft Dynamics GP 20
 6. Verify that the policy information appears as expected.
 7. Expand **Entity ID Assignments**.
 8. Right-click on **Customer**, and select **Add**.
-9. Entity Type: Customer
-10. Company: Select your Company
+9. Entity Type: Customer.
+10. Company: Select your Company.
 11. It should populate the grid below with ID and Description.
 
 ## Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 9.0
