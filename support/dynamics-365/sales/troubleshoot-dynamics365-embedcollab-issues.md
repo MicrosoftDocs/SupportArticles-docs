@@ -21,7 +21,7 @@ When you try to open chat window or start a new chat from dynamics 365 and you s
 
 - [*.]dynamics.com
 
-![EDGE_SETTINGS.PNG](/.attachments/EDGE_SETTINGS-d50534be-856d-4664-bcc2-f9f615311442.PNG)
+![Edge settings](media/dynamics-embed-collab-error/edge-settings-cookies-error-collab.PNG)
 
 To change the settings by using GPO, follow these steps:
 
@@ -37,7 +37,7 @@ To change the settings by using GPO, follow these steps:
 1. Add the following site:
 - [*.]dynamics.com
 
-![CHROME_SETTINGS.PNG](/.attachments/CHROME_SETTINGS-26ca5e51-e083-47d2-8d99-ca74a68e8406.PNG)
+![Chrome settings](media/dynamics-embed-collab-error/chrome-settings-cookies-error-collab.PNG)
 
 To change the settings by using GPO:
 1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202).
