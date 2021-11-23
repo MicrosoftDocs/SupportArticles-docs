@@ -85,7 +85,7 @@ Other areas that can cause the memory issues are excess shapes, complex PivotTab
 
 #### Custom Views in a Shared Workbook
 
-If you are using the feature Shared Workbook (Review Ribbon > Share Workbook), cleaning out the Custom Views may help with available memory. To do this;
+If you are using the feature Shared Workbook (Review Ribbon > Share Workbook), cleaning out the Custom Views may help with available memory. To do this:
 
 1. On the **View Ribbon**
 2. **Custom Views** on the dialog choose **Delete**

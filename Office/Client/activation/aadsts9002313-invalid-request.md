@@ -54,7 +54,7 @@ For more information, see [Disabling ADAL or WAM not recommended for fixing Offi
 
 Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
 
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/reset-office-365-proplus-activation-state.md).
+For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/><br/>
 </details>
 
