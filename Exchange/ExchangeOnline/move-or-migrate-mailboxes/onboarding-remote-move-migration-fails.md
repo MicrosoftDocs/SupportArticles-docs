@@ -55,6 +55,7 @@ To fix this issue, follow these steps:
 1. Back up and export the on-premises archive mailbox to a .pst file in the [Exchange admin center](https://admin.exchange.microsoft.com):
 
     1. In the Exchange admin center, select **recipients** > **mailboxes** > **More options**:::image type="icon" source="media/onboarding-remote-move-migration-fails/eac_moreoptions-icon.png" border="false"::: > **Export to a PST file**.
+
     1. On the **Export to a .pst file** page, select the source mailbox, and then select **Export only the contents of this mailbox's archive** > **Next**.
     1. Specify the path to export the .pst file, and then select **Next** > **Finish**.
 
