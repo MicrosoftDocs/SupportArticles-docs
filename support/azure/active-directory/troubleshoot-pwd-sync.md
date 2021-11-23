@@ -110,7 +110,7 @@ The following tables list event ID messages in the Application log that are rela
 
 |Event ID|Description|Cause|More information|
 |---|---|---|---|
-| 0|The following password changes failed to synchronized and have scheduled for retry.<br/>DN = CN=Eli McLean,OU=Cloud Objects,DC=contoso,DC=local|User or users whose password wasn't synced|[Configure directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_configuretool) <br/>[One or more objects don't sync when using the Azure Active Directory Sync tool|](https://support.microsoft.com/help/2643629)
+| 0|The following password changes failed to synchronized and have scheduled for retry.<br/>DN = CN=Eli McLean,OU=Cloud Objects,DC=contoso,DC=local|User or users whose password wasn't synced|[Configure directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_configuretool) <br/>[One or more objects don't sync when using the Azure Active Directory Sync tool](https://support.microsoft.com/help/2643629)|
 | 115|Access to Windows Azure Active Directory has been denied. Contact Technical Support.|Azure AD credentials were updated through Forefront Identity Manager (FIM).|Run the Azure AD Configuration Wizard again. See [Password hash synchronization stops working after you update Azure Active Directory credentials in FIM](https://support.microsoft.com/help/2962509)<br/>|
 | 657|Password Change Result - Anchor : B0H+OD3LM0GEnYODwdPhpg==, Result : failed, Extended Error :|User or users whose password wasn't synced|[Configure directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_configuretool) <br/>[One or more objects don't sync when using the Azure Active Directory Sync tool](https://support.microsoft.com/help/2643629) |
 |||||
