@@ -1,9 +1,10 @@
 ---
 title: Make sure that the credentials specified in the mailbox are correct error when you test and enable a mailbox
 description: When you test and enable a mailbox in Microsoft Dynamics 365, you may receive an error that states make sure that the credentials specified in the mailbox are correct and have sufficient permissions. Provides a resolution.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "Make sure that the credentials specified in the mailbox are correct and have sufficient permissions" error when you test and enable a mailbox in Dynamics 365
 

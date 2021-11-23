@@ -4,7 +4,7 @@ description: Describes how to identify the containers consuming high CPU in an A
 ms.date: 07/08/2021
 ms.prod-support-area-path: 
 ms.reviewer: chiragpa
-ms.service: cloud-services
+ms.service: container-service
 ---
 # Identify the containers consuming high CPU in an AKS cluster
 

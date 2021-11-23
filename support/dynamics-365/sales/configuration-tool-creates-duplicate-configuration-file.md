@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: clintwa
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-connectors
 ---
 # Dynamics Connector for Microsoft Dynamics CRM 2011 Configuration Tool Creates Duplicate Configuration File
 

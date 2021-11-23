@@ -4,6 +4,7 @@ description: Internet Explorer 9 or a later version creates invalid HTML in desi
 ms.date: 04/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: apinho
+ms.technology: internet-explorer-development-website
 ---
 # Internet Explorer 9 or a later version may generate invalid HTML in design mode
 

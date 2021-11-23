@@ -4,6 +4,7 @@ description: This article discusses a by-design HTTP 501 error when you use an u
 ms.date: 07/17/2020
 ms.prod-support-area-path: Health, Diagnostic, and Performance Features
 ms.reviewer: robmcm
+ms.technology: iis-health-diagnostic-performance
 ---
 # HTTP/1.1 Error 501 - Not Implemented
 

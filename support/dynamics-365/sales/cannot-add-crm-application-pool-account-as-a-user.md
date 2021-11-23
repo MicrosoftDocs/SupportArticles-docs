@@ -4,6 +4,7 @@ description: Fixes an issue that occurs in which Microsoft Dynamics CRM 2013 is 
 ms.reviewer: aaronric
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Cannot add the Microsoft Dynamics CRM Application Pool account as a user in Microsoft Dynamics CRM 2013
 

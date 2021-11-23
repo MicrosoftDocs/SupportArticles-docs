@@ -4,6 +4,8 @@ description: Describes a problem in which you receive an error message when sign
 ms.date: 09/30/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
+ms.service: active-directory
+ms.subservice: app-mgmt
 ---
 # Error AADSTS50105 - The signed in user is not assigned to a role for the application
 

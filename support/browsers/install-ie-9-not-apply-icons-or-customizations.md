@@ -4,6 +4,7 @@ description: This article describes the problem that icons and user-defined aren
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-installation
 ---
 # Installing Internet Explorer 9 doesn't apply icons or per-user customizations
 

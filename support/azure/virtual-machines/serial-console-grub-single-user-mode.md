@@ -3,7 +3,7 @@ title: Azure Serial Console for GRUB and single-user mode | Microsoft Docs
 description: This article describes how to use Serial Console for GRUB in Azure virtual machines.
 services: virtual-machines
 documentationcenter: ''
-author: asinn826
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
 ms.date: 08/06/2019
-ms.author: alsin
+ms.author: genli
 ---
 
 # Use Serial Console to access GRUB and single-user mode

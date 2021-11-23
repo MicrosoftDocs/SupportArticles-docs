@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
-localization_priority: medium
+localization_priority: high
 ms.reviewer: kaushika
 ms.custom: sap:user-logon-fails, csstroubleshoot
 adobe-target: true

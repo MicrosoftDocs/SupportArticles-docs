@@ -4,6 +4,7 @@ description: Describes troubleshooting steps, important memory usage considerati
 ms.date: 03/16/2020
 ms.prod-support-area-path: Performance
 ms.reviewer: mandia
+ms.technology: biztalk-server-performance
 ---
 # How to troubleshoot a memory leak or an out-of-memory exception in the BizTalk Server process
 

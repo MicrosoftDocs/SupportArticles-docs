@@ -4,6 +4,7 @@ description: This article gives information about BizTalk Server hotfixes, cumul
 ms.date: 03/06/2020
 ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ms.reviewer: MandiA
+ms.technology: biztalk-server-setup-config
 ---
 # Information about BizTalk Server hotfixes, cumulative updates, and service packs
 

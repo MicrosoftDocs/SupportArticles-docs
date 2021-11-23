@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2777223
 
 When you export a Microsoft SSRS report to an Excel workbook, there are hidden rows or columns in the workbook. The following image is an example of this problem:
 
-![an example of hidden rows ](./media/workbook-hidden-rows-columns/2777238.PNG)
+:::image type="content" source="media/workbook-hidden-rows-columns/hidden-rows-example.png" alt-text="Screenshot shows an example of hidden rows, where the 8th row height is too small (hidden row).":::
 
 ## Cause
 

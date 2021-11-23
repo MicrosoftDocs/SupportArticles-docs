@@ -4,6 +4,7 @@ description: GeneralIncomingEmailServerError when you try to install Microsoft D
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # GeneralIncomingEmailServerError when trying to install Microsoft Dynamics 365 App for Outlook
 

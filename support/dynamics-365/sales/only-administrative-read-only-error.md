@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Error (You only have administrative or read-only access to your organization) when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

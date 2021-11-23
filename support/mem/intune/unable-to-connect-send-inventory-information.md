@@ -21,7 +21,7 @@ You receive the following notification in the Jamf console:
 > Unable to send inventory information to Microsoft Intune  
 > Test your Microsoft Intune Integration configuration
 
-:::image type="content" source="media/unable-to-connect-send-inventory-information/notifications.png" alt-text="screenshot of notification" border="false":::
+:::image type="content" source="media/unable-to-connect-send-inventory-information/notifications.png" alt-text="screenshot of notification." border="false":::
 
 ## Cause
 

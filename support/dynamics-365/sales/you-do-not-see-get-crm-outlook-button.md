@@ -4,6 +4,7 @@ description: This article provides three resolutions for the problem that occurs
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # After uninstalling the Dynamics CRM Client for Outlook, you do not see the Get CRM for Outlook Button
 

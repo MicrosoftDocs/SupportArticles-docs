@@ -4,6 +4,7 @@ description: Provides workarounds for the experience performance issues in Micro
 ms.reviewer: dzilch
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Slow performance with McAfee antivirus
 

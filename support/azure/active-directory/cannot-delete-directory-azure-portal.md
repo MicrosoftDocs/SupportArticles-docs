@@ -4,6 +4,8 @@ description: Fixes an issue in which you can't delete a directory from the Azure
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Can't delete a directory through the Azure Management Portal
 

@@ -3,7 +3,7 @@ title: Azure Serial Console | Microsoft Docs
 description: The Azure Serial Console allows you to connect to your VM when SSH or RDP are not available.
 services: virtual-machines
 documentationcenter: ''
-author: asinn826
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 02/10/2020
-ms.author: alsin
+ms.author: genli
 ---
 
 # Azure Serial Console
@@ -28,7 +28,7 @@ Serial Console is generally available in global Azure regions and in public prev
 To access the Serial Console on your VM or virtual machine scale set instance, you will need the following:
 
 - Boot diagnostics must be enabled for the VM
-- A user account that uses password authentication must exist within the VM. You can create a password-based user with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Support + troubleshooting** section.
+- A user account that uses password authentication must exist within the VM. You can create a password-based user with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
 - The Azure account accessing Serial Console must have [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for both the VM and the [boot diagnostics](boot-diagnostics.md) storage account
 - Classic deployments aren't supported. Your VM or virtual machine scale set instance must use the Azure Resource Manager deployment model.
 
@@ -39,12 +39,12 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 The Serial Console for VMs and virtual machine scale set is accessible only through the Azure portal:
 
 ### Serial Console for Virtual Machines
-Serial Console for VMs is as straightforward as clicking on **Serial console** within the **Support + troubleshooting** section in the Azure portal.
+Serial Console for VMs is as straightforward as clicking on **Serial console** within the **Help** section in the Azure portal.
   1. Open the [Azure portal](https://portal.azure.com).
 
   1. Navigate to **All resources** and select a Virtual Machine. The overview page for the VM opens.
 
-  1. Scroll down to the **Support + troubleshooting** section and select **Serial console**. A new pane with the serial console opens and starts the connection.
+  1. Scroll down to the **Help** section and select **Serial console**. A new pane with the serial console opens and starts the connection.
 
      ![Linux Serial Console window](./media/virtual-machines-serial-console/virtual-machine-linux-serial-console-connect.gif)
 
@@ -58,7 +58,7 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 
   1. Select a virtual machine scale set instance
 
-  1. From the **Support + troubleshooting** section, select **Serial console**. A new pane with the serial console opens and starts the connection.
+  1. From the **Help** section, select **Serial console**. A new pane with the serial console opens and starts the connection.
 
      ![Linux virtual machine scale set Serial Console](./media/virtual-machines-serial-console/vmss-start-console.gif)
 

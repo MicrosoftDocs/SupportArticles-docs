@@ -4,6 +4,7 @@ description: Discusses the support policy for running BizTalk Server in a virtua
 ms.date: 03/06/2020
 ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ms.reviewer: larryfr
+ms.technology: biztalk-server-setup-config
 ---
 # Microsoft BizTalk Server supportability on a virtual machine
 

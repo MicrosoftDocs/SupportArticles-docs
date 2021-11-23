@@ -2,8 +2,9 @@
 title: Exception when running .NET app with UI automation
 description: You might see a null reference exception thrown when running an application that contains a .NET calendar control and any UI Automation tool like Inspect.exe. The application may crash when focus goes to the calendar control.
 ms.date: 05/08/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: hanxia
+ms.technology: dotnet-general
 ---
 # Null reference exception when running a .NET app with UI automation
 

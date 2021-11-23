@@ -4,6 +4,8 @@ description: Discusses that you can't open the Azure Active Directory Module for
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # You can't open the Azure Active Directory Module for Windows PowerShell
 

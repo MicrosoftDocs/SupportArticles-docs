@@ -23,20 +23,20 @@ To enable MFA, follow these steps:
 
 1. Connect to the Configuration Manager primary site namespace `root\sms\site_<site code>`. Then, select **Execute Method**.
 
-    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/execute-method.png" alt-text="Execute Method" border="false":::
+    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/execute-method.png" alt-text="Screenshot of the Execute Method option in Windows Management Instrumentation Tester window." border="false":::
 
 1. In the **Object Path** field, enter **sms_site**, and then select **OK**.
 
 1. In **Method** list, select `SetAuthenticationLevel`, and then select **Edit In Parameters**.
 
-    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/execute-method-dialog-box.png" alt-text="Execute Method dialog box" border="false":::
+    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/edit-in-parameters.png" alt-text="Screenshot of the Execute Method dialog box where you can see the method list and Edit in parameters button." border="false":::
 
 1. Edit the `AuthenticationLevel` and `ExceptionList` properties, and then select **Save Object**.
 
     > [!NOTE]
     > Both `AuthenticationLevel` and `ExceptionList` are global properties that are used on all primary sites.
 
-    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/edit-properties.png" alt-text="Edit properties" border="false":::
+    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/edit-properties.png" alt-text="Screenshot of the AuthenticationLevel and ExceptionList properties." border="false":::
 
    - Edit the `AuthenticationLevel` property.
 

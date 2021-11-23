@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you connect an iPh
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-tablets
 ---
 # We're Sorry. Your server is not available or does not support this application. An error occurs when connecting to the CRM app on an iPad or iPhone
 

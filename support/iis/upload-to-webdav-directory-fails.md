@@ -3,6 +3,7 @@ title: Fail to upload files to WebDav directory
 description: This article describes how programmatically to upload files to a WebDav directory hosted on Internet Information Services by using the WinINet API.
 ms.date: 07/17/2020
 ms.prod-support-area-path: Development
+ms.technology: iis-development
 ---
 # Upload files to an IIS WebDav directory by using the WinINet API
 

@@ -4,6 +4,7 @@ description: If Admin Mode is enabled, the Relevance Search does not behave as e
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-other-functionality
 ---
 # Relevance Search does not behave as expected for sandbox instances when Admin Mode is enabled
 

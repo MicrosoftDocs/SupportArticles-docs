@@ -4,6 +4,8 @@ description: Describes an issue that occurs after you enter enterprise admin cre
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error (LogonUser() Failed with error code: 1789) after you enter enterprise administrator credentials in the Azure Active Directory Sync tool Configuration Wizard
 

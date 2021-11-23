@@ -16,12 +16,14 @@ ms.author: genli
 
 ---
 # Reset local Windows password for Azure VM offline
+
 You can reset the local Windows password of a VM in Azure using the [Azure portal or Azure PowerShell](reset-rdp.md) provided the Azure guest agent is installed. This method is the primary way to reset a password for an Azure VM. If you encounter issues with the Azure guest agent not responding, or failing to install after uploading a custom image, you can manually reset a Windows password. This article details how to reset a local account password by attaching the source OS virtual disk to another VM. The steps described in this article do not apply to Windows domain controllers. 
 
 > [!WARNING]
 > Only use this process as a last resort. Always try to reset a password using the [Azure portal or Azure PowerShell](reset-rdp.md) first.
 
 ## Overview of the process
+
 The core steps for performing a local password reset for a Windows VM in Azure when there is no access to the Azure guest agent is as follows:
 
 1. Stop the affected VM.
@@ -40,43 +42,43 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](rese
 
 1. Take a snapshot for the OS disk of the affected VM,  create a disk from the snapshot, and then attach the disk to a troubleshoot VM. For more information, see [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-windows.md).
 2. Connect to the troubleshooting VM using Remote Desktop.
-3. Create `gpt.ini` in `\Windows\System32\GroupPolicy` on the source VM’s drive (if gpt.ini exists, rename to gpt.ini.bak):
+3. Create `gpt.ini` in `\Windows\System32\GroupPolicy` on the source VM's drive (if gpt.ini exists, rename to gpt.ini.bak):
    
    > [!WARNING]
    > Make sure that you do not accidentally create the following files in C:\Windows, the OS drive for the troubleshooting VM. Create the following files in the OS drive for your source VM that is attached as a data disk.
    
-   * Add the following lines into the `gpt.ini` file you created:
+   Add the following lines into the `gpt.ini` file you created:
      
-     ```
+     ```ini
      [General]
      gPCFunctionalityVersion=2
      gPCMachineExtensionNames=[{42B5FAAE-6536-11D2-AE5A-0000F87571E3}{40B6664F-4972-11D1-A7CA-0000F87571E3}]
      Version=1
      ```
      
-     :::image type="content" source="./media/reset-local-password-without-agent/create-gpt-ini.png" alt-text="Screenshot that shows the updates made to the gpt.ini file.":::
+     :::image type="content" source="media/reset-local-password-without-agent/create-gpt-ini.png" alt-text="Screenshot shows the updates made to the gpt.ini file.":::
 
 4. Create `scripts.ini` in `\Windows\System32\GroupPolicy\Machine\Scripts\`. Make sure hidden folders and file name extensions are shown. If needed, create the `Machine` or `Scripts` folders. 
    
-   * Add the following lines the `scripts.ini` file you created:
+   Add the following lines the `scripts.ini` file you created:
      
-     ```
+     ```ini
      [Startup]
      0CmdLine=FixAzureVM.cmd
      0Parameters=
      ```
      
-     :::image type="content" source="./media/reset-local-password-without-agent/create-scripts-ini-1.png" alt-text="Screenshot that shows the updates made to the script.ini file.":::
+     :::image type="content" source="media/reset-local-password-without-agent/create-scripts-ini.png" alt-text="Screenshot shows the updates made to the script.ini file.":::
 
 5. Create `FixAzureVM.cmd` in `\Windows\System32\GroupPolicy\Machine\Scripts\Startup\` with the following contents, replacing `<username>` and `<newpassword>` with your own values:
    
-    ```
+    ```ini
     net user <username> <newpassword> /add /Y
     net localgroup administrators <username> /add
     net localgroup "remote desktop users" <username> /add
     ```
 
-    :::image type="content" source="./media/reset-local-password-without-agent/create-fixazure-cmd-1.png" alt-text="Screenshot that shows the newly created FixAzureVM.cmd file where you update the username and password.":::
+    :::image type="content" source="media/reset-local-password-without-agent/create-fixazure-cmd.png" alt-text="Screenshot shows the newly created FixAzureVM.cmd file where you update the username and password.":::
    
     You must meet the configured password complexity requirements for your VM when defining the new password.
 
@@ -108,31 +110,31 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](/pre
    
    * Select the VM in the Azure portal, then click *Delete*:
      
-     :::image type="content" source="./media/reset-local-password-without-agent/delete-vm-classic.png" alt-text="Delete existing Classic VM":::
+     :::image type="content" source="media/reset-local-password-without-agent/delete-vm.png" alt-text="Screenshot shows the Delete button in an existing Classic VM page.":::
 
-2. Attach the source VM’s OS disk to the troubleshooting VM. The troubleshooting VM must be in the same region as the source VM's OS disk (such as `West US`):
+2. Attach the source VM's OS disk to the troubleshooting VM. The troubleshooting VM must be in the same region as the source VM's OS disk (such as `West US`):
    
    1. Select the troubleshooting VM in the Azure portal. Click *Disks* | *Attach existing*:
      
-      :::image type="content" source="./media/reset-local-password-without-agent/disks-attach-existing-classic.png" alt-text="Attach existing disk - Classic":::
+      :::image type="content" source="media/reset-local-password-without-agent/attach-existing.png" alt-text="Screenshot shows the Attach existing button of the troubleshooting VM.":::
      
    2. Select *VHD File* and then select the storage account that contains your source VM:
      
-      :::image type="content" source="./media/reset-local-password-without-agent/disks-select-storage-account-classic.png" alt-text="Select storage account - Classic":::
+      :::image type="content" source="media/reset-local-password-without-agent/select-storage-account.png" alt-text="Screenshot shows the location to select storage account.":::
      
    3. Check the box marked *Show classic storage accounts*, then select the source container. The source container is typically *vhds*:
      
-      :::image type="content" source="./media/reset-local-password-without-agent/disks-select-container-classic.png" alt-text="Select storage container - Classic":::
+      :::image type="content" source="media/reset-local-password-without-agent/show-classic-storage-accounts.png" alt-text="Screenshot shows the Show classic storage accounts option is cleared.":::
 
-      :::image type="content" source="./media/reset-local-password-without-agent/disks-select-container-vhds-classic.png" alt-text="Select storage container - VHD - Classic":::
+      :::image type="content" source="media/reset-local-password-without-agent/select-container-vhds.png" alt-text="Screenshot shows the vhds is selected as storage container.":::
      
    4. Select the OS vhd to attach. Click *Select* to complete the process:
      
-      :::image type="content" source="./media/reset-local-password-without-agent/disks-select-source-vhd-classic.png" alt-text="Select source virtual disk - Classic":::
+      :::image type="content" source="media/reset-local-password-without-agent/select-source-vhd.png" alt-text="Screenshot shows the selected source virtual disk.":::
 
    5. Click Ok to attach the disk
 
-      :::image type="content" source="./media/reset-local-password-without-agent/disks-attach-okay-classic.png" alt-text="Attach existing disk - OK dialog - Classic":::
+      :::image type="content" source="./media/reset-local-password-without-agent/attach-okay.png" alt-text="Screenshot shows the Attach existing disk page, at the bottom of which, there's an OK button.":::
 
 3. Connect to the troubleshooting VM using Remote Desktop and ensure the source VM's OS disk is visible:
 
@@ -140,67 +142,67 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](/pre
 
    2. Open the RDP file that downloads. Enter the username and password of the troubleshooting VM.
 
-   3. In File Explorer, look for the data disk you attached. If the source VM’s VHD is the only data disk attached to the troubleshooting VM, it should be the F: drive:
+   3. In File Explorer, look for the data disk you attached. If the source VM's VHD is the only data disk attached to the troubleshooting VM, it should be the F: drive:
      
-      :::image type="content" source="./media/reset-local-password-without-agent/troubleshooting-vm-file-explorer-classic.png" alt-text="View attached data disk":::
+      :::image type="content" source="media/reset-local-password-without-agent/file-explorer-data-disk.png" alt-text="Screenshot shows the F local disk in File Explorer." border="false":::
 
-4. Create `gpt.ini` in `\Windows\System32\GroupPolicy` on the source VM’s drive (if `gpt.ini` exists, rename to `gpt.ini.bak`):
+4. Create `gpt.ini` in `\Windows\System32\GroupPolicy` on the source VM's drive (if `gpt.ini` exists, rename to `gpt.ini.bak`):
    
    > [!WARNING]
    > Make sure that you do not accidentally create the following files in `C:\Windows`, the OS drive for the troubleshooting VM. Create the following files in the OS drive for your source VM that is attached as a data disk.
    
-   * Add the following lines into the `gpt.ini` file you created:
+   Add the following lines into the `gpt.ini` file you created:
      
-     ```
+     ```ini
      [General]
      gPCFunctionalityVersion=2
      gPCMachineExtensionNames=[{42B5FAAE-6536-11D2-AE5A-0000F87571E3}{40B6664F-4972-11D1-A7CA-0000F87571E3}]
      Version=1
      ```
      
-     :::image type="content" source="./media/reset-local-password-without-agent/create-gpt-ini-classic.png" alt-text="Create gpt.ini - Classic":::
+     :::image type="content" source="media/reset-local-password-without-agent/create-gpt-ini-classic.png" alt-text="Screenshot shows the updates made to the gpt.ini file for Classic VM.":::
 
 5. Create `scripts.ini` in `\Windows\System32\GroupPolicy\Machine\Scripts\`. Make sure hidden folders and file name extensions are shown. If needed, create the `Machine` or `Scripts` folders.
    
-   * Add the following lines the `scripts.ini` file you created:
+   Add the following lines the `scripts.ini` file you created:
 
-     ```
+     ```ini
      [Startup]
      0CmdLine=FixAzureVM.cmd
      0Parameters=
      ```
      
-     :::image type="content" source="./media/reset-local-password-without-agent/create-scripts-ini-classic-1.png" alt-text="Create scripts.ini - Classic":::
+     :::image type="content" source="media/reset-local-password-without-agent/create-scripts-ini.png" alt-text="Screenshot shows the updates made to the scripts.ini file for Classic VM.":::
 
 6. Create `FixAzureVM.cmd` in `\Windows\System32\GroupPolicy\Machine\Scripts\Startup\` with the following contents, replacing `<username>` and `<newpassword>` with your own values:
    
-    ```
+    ```ini
     net user <username> <newpassword> /add /Y
     net localgroup administrators <username> /add
     net localgroup "remote desktop users" <username> /add
     ```
 
-    :::image type="content" source="./media/reset-local-password-without-agent/create-fixazure-cmd-1.png" alt-text="Create FixAzureVM.cmd - Classic":::
-   
+    :::image type="content" source="media/reset-local-password-without-agent/create-fixazure-cmd.png" alt-text="Screenshot shows the newly created FixAzureVM.cmd file where you update the username and password for Classic VM.":::
+
     You must meet the configured password complexity requirements for your VM when defining the new password.
 
 7. In Azure portal, detach the disk from the troubleshooting VM:
-   
+
    1. Select the troubleshooting VM in the Azure portal, click *Disks*.
-   
+
    2. Select the data disk attached in step 2, click **Detach**, then click **OK**.
 
-     :::image type="content" source="./media/reset-local-password-without-agent/data-disks-classic.png" alt-text="Detach disk - Troubleshooting VM - Classic":::
-     
-     :::image type="content" source="./media/reset-local-password-without-agent/detach-disk-classic.png" alt-text="Detach disk - Troubleshooting VM - Ok dialog - Classic":::
+     :::image type="content" source="media/reset-local-password-without-agent/data-disks.png" alt-text="Screenshot shows the detached disk in step 2.":::
 
-8. Create a VM from the source VM’s OS disk:
-   
-     :::image type="content" source="./media/reset-local-password-without-agent/create-new-vm-from-template-classic.png" alt-text="Create a VM from template - Classic":::
+     :::image type="content" source="media/reset-local-password-without-agent/detach-disk.png" alt-text="Screenshot shows the Detach button.":::
 
-     :::image type="content" source="./media/reset-local-password-without-agent/choose-subscription-classic.png" alt-text="Create a VM from template - Choose Subscription - Classic":::
+8. Create a VM from the source VM's OS disk:
 
-     :::image type="content" source="./media/reset-local-password-without-agent/create-vm-classic.png" alt-text="Create a VM from template - Create VM - Classic":::
+     :::image type="content" source="media/reset-local-password-without-agent/create-new-vm-from-template.png" alt-text="Screenshot shows the Disk (classic) item.":::
+
+     :::image type="content" source="media/reset-local-password-without-agent/choose-subscription.png" alt-text="Screenshot shows the subscriptions.":::
+
+     :::image type="content" source="media/reset-local-password-without-agent/create-vm.png" alt-text="Screenshot highlights the Create VM button.":::
 
 ## Complete the Create virtual machine experience
 
@@ -216,4 +218,5 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](/pre
       * remove `gpt.ini` (if `gpt.ini` existed before, and you renamed it to `gpt.ini.bak`, rename the `.bak` file back to `gpt.ini`)
 
 ## Next steps
+
 If you still cannot connect using Remote Desktop, see the [RDP troubleshooting guide](troubleshoot-rdp-connection.md). The [detailed RDP troubleshooting guide](detailed-troubleshoot-rdp.md) looks at troubleshooting methods rather than specific steps. You can also [open an Azure support request](https://azure.microsoft.com/support/options/) for hands-on assistance.

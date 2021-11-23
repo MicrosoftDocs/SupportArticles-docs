@@ -3,7 +3,7 @@ title: Azure VM Guest OS firewall is blocking inbound traffic | Microsoft Docs
 description: Learn how to fix the Remote Desktop Portal (RDP) connection issue that the guest operating system firewall is blocking inbound traffic.
 services: virtual-machines
 documentationcenter: ''
-author: Deland-Han
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: ''
@@ -13,8 +13,8 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 10/25/2021
-ms.author: delhan
+ms.date: 11/04/2021
+ms.author: genli
 
 ---
 
@@ -50,7 +50,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
 #### Mitigation 1
 
-1.	If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Support + troubleshooting** > **Reset password** on the VM menu.
+1.	If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Help** > **Reset password** on the VM menu.
 
 2.	Running this recovery option does the following:
 

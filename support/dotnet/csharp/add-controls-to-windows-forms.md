@@ -2,9 +2,10 @@
 title: Add controls to Windows forms by Visual C#
 description: This article describes how to programmatically add controls to Windows forms at run time by using Visual C#, and also includes a code sample to explain the methods.
 ms.date: 04/17/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: DATBUI
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to programmatically add controls to Windows forms at run time
 

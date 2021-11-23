@@ -4,6 +4,7 @@ description: Discusses that the IIS 10.0 processor affinity does not work on NUM
 ms.date: 04/07/2020
 ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
 ms.reviewer: yashi
+ms.technology: iis-iisadmin-service-inetinfo
 ---
 # IIS 10.0 processor affinity feature doesn't work on NUMA hardware
 

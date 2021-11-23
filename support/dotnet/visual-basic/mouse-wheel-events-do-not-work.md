@@ -4,6 +4,7 @@ description: This article provides workarounds for the problem where you cannot 
 ms.date: 12/10/2020
 ms.prod-support-area-path: Visual Basic
 ms.prod: visual-basic-6
+ms.technology: visual-basic-ide
 ---
 # Mouse wheel events do not work in the Visual Basic 6.0 IDE
 

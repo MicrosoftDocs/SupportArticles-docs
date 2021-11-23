@@ -4,6 +4,7 @@ description: This article describes the process of reproducing the .NET Core cra
 ms.date: 04/07/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 1.1  Reproduce and troubleshoot a crash problem
 

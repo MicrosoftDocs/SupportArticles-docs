@@ -1,7 +1,7 @@
 {
   "redirections": [
     {
-      "source_path": "troubleshoot/windows-server/networking/portqry-exe-command-line-utility.md",
+      "source_path": "support/windows-server/networking/portqry-exe-command-line-utility.md",
       "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
       "redirect_document_id": true
     },
@@ -213,6 +213,11 @@
     {
       "source_path": "support/previous-versions/msxml/display-html-xsl-style-sheet.md",
       "redirect_url": "/previous-versions/troubleshoot/msxml/display-html-xsl-style-sheet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/active-directory/manage-sub-parent-domain.md",
+      "redirect_url": "/azure/active-directory/enterprise-users/domains-manage",
       "redirect_document_id": false
     },
     {
@@ -943,6 +948,11 @@
     {
       "source_path": "support/dynamics-365/marketing/index.md",
       "redirect_url": "/support/dynamics-365/marketing/welcome-marketing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/index.md",
+      "redirect_url": "/support/dynamics/gp/welcome-gp",
       "redirect_document_id": false
     },
     {

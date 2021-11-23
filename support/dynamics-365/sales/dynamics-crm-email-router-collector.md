@@ -2,8 +2,9 @@
 title: Microsoft Dynamics CRM Email Router Collector
 description: This article describes the Microsoft Dynamics CRM Email Router Collector.
 ms.reviewer: 
-ms.topic: article 
+ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Microsoft Dynamics CRM Email Router Collector
 

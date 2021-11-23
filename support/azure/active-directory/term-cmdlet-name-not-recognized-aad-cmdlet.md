@@ -4,6 +4,8 @@ description: Describes an issue in which you receive an error message when you t
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Error when you try to run Azure Active Directory for Windows PowerShell cmdlets: The term \<cmdlet name> is not recognized
 

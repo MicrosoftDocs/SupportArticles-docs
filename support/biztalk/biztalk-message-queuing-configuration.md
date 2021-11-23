@@ -3,6 +3,7 @@ title: Configuration options can't be changed
 description: Explains that the BizTalk Message Queuing Configuration options that you specify the first time can't be changed unless you remove and reinstall BizTalk Server 2004.
 ms.date: 03/16/2020
 ms.prod-support-area-path: BizTalk Server Setup and Configuration
+ms.technology: biztalk-server-setup-config
 ---
 # BizTalk Message Queuing Configuration options can't be changed after initial setup
 
