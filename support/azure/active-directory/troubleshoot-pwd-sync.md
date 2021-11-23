@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2855271
 
 ## Before you start troubleshooting
 
-Before you perform the troubleshooting steps, make sure that you have the latest version of Azure AD Connect installed.
+Before you perform the troubleshooting steps, make sure that you have the [latest version of Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-roadmap#install-azure-ad-connect) installed.
 
 Additionally, make sure that directory synchronization is in a healthy state. For more information, see [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync).
 
