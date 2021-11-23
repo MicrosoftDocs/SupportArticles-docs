@@ -113,7 +113,7 @@ Therefore, the table that should not have terribly many unique strings to store 
 
 To work around this issue, disable logging on the AD RMS cluster:
 
-:::image type="content" source="./media/event-id-84-occurs-ad-rms-windows-server/disable-logging-on-the-ad-rms-cluster.jpg" alt-text="Disable logging on the AD RMS cluster" border="false":::
+:::image type="content" source="media/event-id-84-occurs-ad-rms-windows-server/disable-logging-on-the-ad-rms-cluster.png" alt-text="Unselect the Enable logging option on the A D R M S cluster.":::
 
 ## Resolution
 
@@ -127,7 +127,7 @@ To resolve this issue, change the data type of the columns from smallint to int 
     - The AD RMS logging database name
     - The Dbo.UserAgent key name
 
-    :::image type="content" source="./media/event-id-84-occurs-ad-rms-windows-server/sql-information.jpg" alt-text="SQL information" border="false":::
+    :::image type="content" source="media/event-id-84-occurs-ad-rms-windows-server/sql-information.png" alt-text="Collect the SQL information about the A D R M S logging database name and Dbo.UserAgent key name.":::
 
 3. Generate the script (see the following sample).
 
