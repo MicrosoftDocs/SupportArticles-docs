@@ -191,8 +191,8 @@
       href: admin/transaction-log-file-not-grow.md
     - name: Troubleshoot backup and restore operation issues
       href: admin/backup-restore-operations.md
-    - name: Troubleshoot DBCC errors
-      href: admin/troubleshoot-dbcc-errors.md
+    - name: Troubleshoot DBCC CHECKDB errors
+      href: admin/troubleshoot-dbcc-checkdb-errors.md
     - name: Unable to begin a distributed transaction
       href: admin/error-message-ole-db-provider.md
     - name: Virtual host drivers lead to data consistency problems
