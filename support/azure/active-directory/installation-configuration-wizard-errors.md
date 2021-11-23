@@ -16,11 +16,9 @@ _Original KB number:_ &nbsp; 2684395
 
 ## Introduction
 
-This article lists error messages that may occur when you install or set up the Directory Sync tool. It also contains information about how to resolve the issues.
+This article lists common causes of error messages that may occur when you install or set up the Directory Sync tool and how to resolve them.
 
-## Troubleshoot Directory Sync tool installation and Configuration Wizard issues
-
-### System requirements
+## System requirements are not met
 
 The Azure Active Directory Sync tool can be installed on a computer if all the following conditions are true:
 
@@ -34,7 +32,7 @@ The Azure Active Directory Sync tool can be installed on a computer if all the f
 - The computer is joined to an Active Directory domain. And it's located in the forest that you want to sync with Azure Active Directory (Azure AD).
 - The Microsoft .NET Framework 3.5 or a later version is installed on the computer.
 
-### Permissions
+## Incorrect permissions
 
 To start the Directory Sync tool Configuration Wizard successfully, users who log on to the computer on which the Directory Sync tool is installed must be a member of the local Microsoft Identity Integration Server (MIIS) Admins group that was added during installation of the tool.
 
@@ -43,7 +41,36 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
 - Enterprise admin credentials for the on-premises Active Directory schema
 - Global admin credentials for the Microsoft cloud service
 
-### Troubleshoot "The computer must be joined to a domain" error message
+## Use the nltest tool to check connectivity to the domain
+
+- Run the [Nltest.exe command-line tool](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11)). To do so, type the following command at the command prompt:
+
+    ```console
+    Nltest /dsgetdc:<FQDN of the domain>
+    ```
+
+    > [!NOTE]
+    > The `Nltest` tool requires installation of the Windows Server 2003 Support Tools.
+
+    If the settings are correct, you receive output that resembles the following example:
+
+    ```output
+    DC: \DC.contoso.com Address:\ <IP Address> Dom Guid: <GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
+    ```
+
+- Run the following command to check the computer's site membership:
+
+    ```console
+    nltest /dsgetsite
+    ```
+
+    A successful result resembles the following example:
+
+    ```output
+    Default-First-Site-Name The command completed successfully
+    ```
+
+## Error: "The computer must be joined to a domain"
 
 To troubleshoot this issue, check the domain membership of the computer by following these steps:
 
@@ -73,36 +100,7 @@ Sometimes, joining the computer to a workgroup, and then joining the computer ba
 - The computer is experiencing an issue in contacting the domain controllers.
 - The Active Directory domain is rejecting the request.
 
-### Use the nltest tool
-
-- Run the `Nltest` command-line tool. To do so, type the following command at the command prompt:
-
-    ```console
-    Nltest /dsgetdc:<FQDN of the domain>
-    ```
-
-    > [!NOTE]
-    > The `Nltest` tool requires installation of the Windows Server 2003 Support Tools.
-
-    If the settings are correct, you receive output that resembles the following example:
-
-    ```output
-    DC: \DC.contoso.com Address:\ <IP Address> Dom Guid: <GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
-    ```
-
-- Run the following command to check the computer's site membership:
-
-    ```console
-    nltest /dsgetsite
-    ```
-
-    A successful result resembles the following example:
-
-    ```output
-    Default-First-Site-Name The command completed successfully
-    ```
-
-### Troubleshoot "The Azure Active Directory Sync Tool is already installed" error message
+## Error: "The Azure Active Directory Sync Tool is already installed"
 
 In this case, the Directory Sync tool may not be installed because of a previous pending installation. The Setup package also installs software in the background during installation. To resolve this issue, follow these steps:
 
@@ -110,7 +108,7 @@ In this case, the Directory Sync tool may not be installed because of a previous
 2. Verify that the Program Files folder contains a subfolder that's named *Microsoft Identity Integration Server*. If the subfolder exists, you must rename the folder to *Microsoft Identity Integration Server_Old*.
 3. Run Setup again.
 
-### Troubleshoot "The Microsoft Online Services Sign-in Assistant service installation returned FAIL. See the event log for more detailed information." error message
+## Error: "The Microsoft Online Services Sign-in Assistant service installation returned FAIL"
 
 You receive the following error message when you try to install the Azure Active Directory Sync tool:
 
@@ -119,7 +117,7 @@ You receive the following error message when you try to install the Azure Active
 
 To resolve this issue, see ["Microsoft Online Services Sign-in Assistant service installation returned FAIL" error when you try to install the Azure Active Directory Sync tool](https://support.microsoft.com/help/3073644).
 
-### Troubleshoot other error messages
+## Troubleshoot other error messages
 
 All directory synchronization logging is viewable in Event Viewer. To view all events that are related to directory synchronization, follow these steps:
 
