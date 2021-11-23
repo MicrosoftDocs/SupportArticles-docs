@@ -4,7 +4,7 @@ description: Troubeshoot SCEP/NDES failures on iOS devices when the IIS logs sho
 ms.date: 11/23/2021
 ms.prod-support-area-path: Configure certificates
 ---
-# iOS SCEP failure and no GetCACaps request is generated in IIS logs
+# iOS SCEP failure and no GetCACaps request is generated
 
 This article gives troubleshooting steps to help resolve NDES/SCEP issues on iOS devices where IIS logs show that no **GetCACaps** request is generated.
 
@@ -28,7 +28,7 @@ This issue is typically caused by one of these two scenarios:
      > [!NOTE]
      > Android devices have a similar issue, but the error message is different.
 
-- The Signature algorithm of the Root or Intermediate certificate is not supported by the device or OS. Root or Intermediate Issuing CA Certs using Signature Algorithm RSASSA-PSS (SHA-1) also present similar issues.
+- The signature algorithm of the Root or Intermediate certificate is not supported by the device or OS. Root or Intermediate Issuing CA Certs using Signature Algorithm RSASSA-PSS (SHA-1) also present similar issues.
 
 ## Solution
 
