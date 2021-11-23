@@ -45,7 +45,7 @@ You'll use the in-app tool, Command Checker, to inspect the ribbon component def
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to the Dynamics 365 application U R L.":::
+:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to the Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png":::
 
 > [!NOTE]
 > Currently the Command Checker tool works only in a web browser. It does not work in Android and iOS apps. A future update is planned to make this tool work in these mobile apps.
@@ -77,7 +77,7 @@ After the Command Checker tool is enabled, look within the application on each o
 
 1. The comparison of the current active definition and the previous inactive definition are displayed and will show the differences, if any. The following example shows that the unmanaged Active definition was customized by specifying the `FunctionName` value incorrectly, as compared to the other inactive definition in the Microsoft-published System solution layer. The `FunctionName` value is expected to be `XrmCore.Commands.Delete.deletePrimaryRecord`, but the custom definition has declared `FunctionName="deletePrimaryRecord"`. In this case, nothing will occur when the button is selected because the function cannot be found.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison.png" alt-text="Screenshot shows the comparison of the current active definition and the previous inactive definition.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison.png" alt-text="Screenshot shows the comparison of the current active definition and the previous inactive definition." lightbox="media/ribbon-issues-button-not-working-correctly/comparison.png":::
 
 1. The approach that's required to fix the action functionality of a button will depend on the various customizations in your specific scenario. Considering the example, the command was customized by specifying an incorrect `FunctionName` value. You could modify the custom version of the command, and fix the `FunctionName` value. Because this is a custom override of a Microsoft-published definition, and there are no other intentional modifications, we recommend that you delete this custom version of the command to restore the default functionality.
 
@@ -274,7 +274,7 @@ The in-app tool, Command Checker, will be used to inspect the ribbon component d
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to the Dynamics 365 application U R L.":::
+:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to the Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png":::
 
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
@@ -296,7 +296,7 @@ Once the Command Checker tool has been enabled, within the application in each o
 
 1. Select the **View command definition solution layers** link below the command name to view the solutions that installed a definition of the command.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers-link.png" alt-text="Screenshot to select the View command definition solution layers link below the command name.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers-link.png" alt-text="Screenshot to select the View command definition solution layers link below the command name to view the solutions that installed a definition of the command.":::
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that's used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft-published solution layers.
 
@@ -500,7 +500,7 @@ The in-app tool, Command Checker will be used to inspect the ribbon component de
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to your Dynamics 365 application U R L.":::
+:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of appending a parameter to your Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png":::
 
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
@@ -528,7 +528,7 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     If there is only one solution layer, skip to step 9. Otherwise, select the top two solution layers. (If you have a layer in the Active solution, but it's not listed at the top, select the Active solution layer and then the top row.) Then, select **Compare**.
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-solution.png" alt-text="Screenshot to select two rows and select the Compare option to view the solutions.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-solution.png" alt-text="Screenshot to select the top two solution layers and then select the Compare option.":::
 
 1. The comparison of the current active definition and the previous inactive definition will be displayed and show the differences, if any. The following example shows the unmanaged Active definition to have been customized by specifying the first parameter incorrectly as compared to the other inactive definition in the Microsoft-published System solution layer. The function is expecting a single ID of the primary record, as declared by the CrmParameter that's named **FirstPrimaryItemId**. However, the custom definition has declared the `PrimaryItemIds` value of the `<CrmParameter>` node. This will cause the script to throw an error because the parameters do not match the function signature.
 
@@ -653,7 +653,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
-    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-example-node.png" alt-text="Screenshot of Locating the CommandDefinition node which ID is Mscrm.DeletePrimaryRecord.":::
+    :::image type="content" source="media/ribbon-issues-button-not-working-correctly/locate-example-node.png" alt-text="Screenshot of Locating the CommandDefinition node, which ID is Mscrm.DeletePrimaryRecord.":::
 
 1. Edit the `<RibbonDiffXml>` node to make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands), and [Define ribbon actions](/powerapps/developer/model-driven-apps/define-ribbon-actions). (Based on the example, you would modify the `<CommandDefinition>` node's `JavaScriptFunction` by setting the `FunctionName` value to `XrmCore.Commands.Delete.deletePrimaryRecord`.)
 

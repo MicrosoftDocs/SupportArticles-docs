@@ -58,7 +58,7 @@ To work around this issue, use one of the following workarounds:
 
 1. Add any columns that you want to be searched and matched inside of the lookup control.
 
-    :::image type="content" source="media/lookup-does-not-filter-entity-records/add-columns-to-find-view.png" alt-text="Screenshot to add any columns that you want to be searched and matched inside of the lookup control." border="false":::
+    :::image type="content" source="media/lookup-does-not-filter-entity-records/add-columns-to-find-view.png" alt-text="Screenshot to add any columns that you want to be searched and matched inside of the lookup control.":::
 
 1. Save and publish changes.
 

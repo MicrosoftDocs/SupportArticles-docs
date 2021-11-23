@@ -22,7 +22,7 @@ The in-app tool, Command Checker, will be used to inspect the ribbon component d
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
-:::image type="content" source="media/ribbon-issues-button-visible/enable-command-checker.png" alt-text="Screenshot to append the parameter to your Dynamics 365 application U R L.":::
+:::image type="content" source="media/ribbon-issues-button-visible/enable-command-checker.png" alt-text="Screenshot to append the parameter to your Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-visible/enable-command-checker.png":::
 
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
@@ -275,7 +275,7 @@ To fix a command that was installed by a Microsoft published managed solution, y
 
     The following image shows the solution layers for the enable rule in our example, and indicates that there is one solution layer in this case, and that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/solution-layer-example.png" alt-text="Screenshot shows an example of solution layer.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/solution-layer-example.png" alt-text="Screenshot shows an example of the solution layer.":::
 
 1. Now that we have reviewed the solution layers and identified the solution that installed the customization, we must fix the definition in the appropriate solution.
 
