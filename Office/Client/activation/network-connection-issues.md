@@ -227,8 +227,10 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 <details>
 <summary><b>Reset Winsock</b></summary>
 
-1. Test a.
-1. Test b.
-1. Test c.
+1. Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
+1. Type `netsh int ip reset`, and then press Enter.
+1. Type `netsh winsock reset`, and then press Enter.
+1. Restart the device.
+1. Try to activate Microsoft 365 again.
 
 </details>
