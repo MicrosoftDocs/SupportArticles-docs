@@ -40,7 +40,7 @@ Enable third-party cookies from browser settings:
 2. Go to **Settings** > **Site permissions** > **Cookies and site data**
 3. Set **Block third-party cookies** to **Disable**.
 
-    :::image type="content" source="media\cannot-access-admin-center\disable-cookie.png" alt-text="Screenshot of Block third-party cookies settings":::
+    :::image type="content" source="media\cannot-access-admin-center\disable-cookie.png" alt-text="Screenshot that shows the Block third-party cookies settings.":::
 
 ## More information
 
