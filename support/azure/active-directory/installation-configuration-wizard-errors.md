@@ -16,9 +16,9 @@ _Original KB number:_ &nbsp; 2684395
 
 ## Introduction
 
-This article lists common causes of error messages that may occur when you install or set up the Directory Sync tool and how to resolve them.
+This article provides resolutions and common causes of error messages that may occur when you install or set up the Directory Sync tool.
 
-## System requirements are not met
+## Minimum system requirements are not met
 
 The Azure Active Directory Sync tool can be installed on a computer if all the following conditions are true:
 
@@ -42,8 +42,10 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
 - Global admin credentials for the Microsoft cloud service
 
 ## Use the nltest tool to check connectivity to the domain
-[Nltest.exe command-line tool](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11)) is a command-line tool that is built into Windows Server. It is available as part of the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
-- Type the following command at the command prompt:
+
+The [Nltest](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11)) tool is a command-line tool that is built into Windows Server. It is available as part of the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
+
+- To check the domain controllers of the domain, run the following command at the command prompt:
 
     ```console
     Nltest /dsgetdc:<FQDN of the domain>
@@ -58,7 +60,7 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     DC: \DC.contoso.com Address:\ <IP Address> Dom Guid: <GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
     ```
 
-- Run the following command to check the computer's site membership:
+- To check the computer's site membership, run the following command at the command prompt:
 
     ```console
     nltest /dsgetsite
@@ -70,7 +72,7 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     Default-First-Site-Name The command completed successfully
     ```
 
-## Error: "The computer must be joined to a domain"
+## Error 1: "The computer must be joined to a domain"
 
 To troubleshoot this issue, check the domain membership of the computer by following these steps:
 
@@ -100,7 +102,7 @@ Sometimes, joining the computer to a workgroup, and then joining the computer ba
 - The computer is experiencing an issue in contacting the domain controllers.
 - The Active Directory domain is rejecting the request.
 
-## Error: "The Azure Active Directory Sync Tool is already installed"
+## Error 2: "The Azure Active Directory Sync Tool is already installed"
 
 In this case, the Directory Sync tool may not be installed because of a previous pending installation. The Setup package also installs software in the background during installation. To resolve this issue, follow these steps:
 
