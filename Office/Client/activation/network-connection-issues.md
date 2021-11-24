@@ -193,19 +193,6 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 </details>
 
 <details>
-<summary><b>Reset Winsock</b></summary>
-  
-1. Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
-1. Type the following command, and then press Enter:  
-`netsh int ip reset`
-1. Type the following command, and then press Enter:  
-`netsh winsock reset`
-1. Restart the device.
-1. Try to activate Microsoft 365 again.
-
-</details>
-
-<details>
 <summary><b>Rename Connections registry value</b></summary>
 
 **Important** Before editing the registry, it is strongly recommended that you back up the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
@@ -241,10 +228,8 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 <summary><b>Reset Winsock</b></summary>
   
 1. Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
-1. Type the following command, and then press Enter:  
-`netsh int ip reset`
-1. Type the following command, and then press Enter:  
-`netsh winsock reset`
+1. Type `netsh int ip reset`, and then press Enter.
+1. Type `netsh winsock reset`, and then press Enter.
 1. Restart the device.
 1. Try to activate Microsoft 365 again.
 
