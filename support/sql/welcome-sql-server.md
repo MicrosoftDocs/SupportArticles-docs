@@ -8,7 +8,7 @@ ms.date: 11/23/2021
 
 Welcome to SQL Server troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use SQL Server.
 
-### You can contribute to SQL Server troubleshooting documentation
+### Contribute to SQL Server troubleshooting documentation
 
 [How to contribute to SQL Server Documentation](/sql/sql-server/sql-server-docs-contribute).
 
