@@ -19,13 +19,13 @@ appliesto:
 
 # Microsoft 365 Apps activation network connection issues
 
-This article will help you troubleshoot network connection issues when activating Microsoft 365 apps. When you’re having network connection issues, you might encounter an error such as the following example:
+This article will help you troubleshoot network connection issues when activating Microsoft 365 apps. When you're having network connection issues, you might encounter an error such as the following example:
 
 > We're having trouble activating Office.
 
 Try the following troubleshooting methods to solve the problem.
 
-**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
+**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren't an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
 
 <details>
 <summary><b>Activating Microsoft 365 on Windows 8.1 or earlier</b></summary>
@@ -37,7 +37,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 1. If you are running Windows 7 or Windows Server 2008, make sure that [Service Pack 1]( https://support.microsoft.com/topic/information-about-service-pack-1-for-windows-7-and-for-windows-server-2008-r2-df044624-55b8-3a97-de80-5d99cb689063) is installed.
 1. Enable TLS 1.2 as the default protocol by using [this easy fix]( https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi), and then restart the device.
 1. From Start, select **Control Panel** > **Internet options** > **Advanced settings**.
-1. If **TLS 1.2** isn’t checked, check it, then select **Apply** and **OK**.
+1. If **TLS 1.2** isn't checked, check it, then select **Apply** and **OK**.
 1. Restart the device, and then try activating Microsoft 365 again.
 
 </details>
@@ -58,7 +58,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 Are you behind a proxy server? If you're not sure, ask your administrator. If so, you (or your administrator) might have to change the proxy settings for Windows HTTP clients. To do this, follow these steps:
   
 1. Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
-1. Type `netsh winhttp set proxy <Address of proxy server>`, and then press Enter:
+1. Type `netsh winhttp set proxy <Address of proxy server>`, and then press Enter.
   
 You need to allow the URLs and IP addresses in [this list](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true#microsoft-365-common-and-office-online).
   
@@ -107,7 +107,7 @@ Some antivirus, proxy, or firewall software might block the following plug-in pr
 
 Temporarily disable your antivirus software. Contact your system administrator to find out if you are behind a proxy or firewall that is blocking this process. If so, you will also need to temporarily disable your proxy or firewall connection. If you connect through a Virtual Private Network (VPN), you might need to temporarily disable your VPN also.
 
-If the process isn’t blocked, but you still can’t activate Microsoft 365, delete your BrokerPlugin data and then reinstall it using the following steps:
+If the process isn't blocked, but you still can't activate Microsoft 365, delete your BrokerPlugin data and then reinstall it using the following steps:
 
 1. Open File Explorer, and put the following location in the address bar:  
 `%LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts`
@@ -147,9 +147,9 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
     - Windows Event Log
 1. If any of these services is not running, right-click the service and select **Start**.
 1. If you have a problem starting the service, run the System File Checker using the following steps:
-    - From Start, type **cmd**. Right-click **Command Prompt** in the search results and select **Run as administrator**.
-    - At the command prompt, type `sfc /scannow`
-    - When the scan completes, restart the device.
+    1. From Start, type **cmd**. Right-click **Command Prompt** in the search results and select **Run as administrator**.
+    1. At the command prompt, type `sfc /scannow`
+    1. When the scan completes, restart the device.
 1. When all the services listed under step 2 are running, try activating Microsoft 365 again.
 
 </details>
@@ -165,17 +165,17 @@ Check if NCSI is registering your internet connection using the following steps:
 1. At the command prompt, type the following command, and then press Enter:  
 `Get-NetConnectionProfile`
 1. If **IPv4Connectivity** says **Internet**, it suggests NCSI is registering your internet connection correctly. If it says **NoTraffic** or **LocalNetwork**, it is not.
-1. If you aren’t behind a proxy, type the following command and then press Enter:  
+1. If you aren't behind a proxy, type the following command and then press Enter:  
 `nslookup dns.msftncsi.com`.
 1. If the address resolves, it suggests NCSI is registering your internet connection correctly.
 1. Check HTTP Probe destinations by opening your browser and putting the following URLs in your address bar:
     - For Windows 10 version 1607 or later, `http://www.msftconnecttest.com/connecttest.txt` and `http://ipv6.msftconnecttest.com/connecttest.txt` should return **Microsoft Connect Test**.
     - For Windows 10 version 1511 or earlier, `http://www.msftncsi.com/ncsi.txt` and `http://ipv6.msftncsi.com/ncsi.txt` should return **Microsoft NCSI**.
 
-If NCSI isn’t registering your internet connection, try setting it to use GlobalDNS using the following steps:
+If NCSI isn't registering your internet connection, try setting it to use GlobalDNS using the following steps:
 
 1. From Start, type *regedit*, and then select **Registry Editor** from the results.
-1. Use the arrows to expand selections and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows\NetworkConnectivityStatusIndicator`.
+1. Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows\NetworkConnectivityStatusIndicator`.
 1. Right-click the registry value and select **New**, then select **DWORD**.
 1. Name the DWORD `UseGlobalDNS`, and set the value to 1.
 1. Try activating Microsoft 365 again.
@@ -187,18 +187,17 @@ If you still can't activate, try temporarily disabling IPv4 Checksum Offload:
 `Disable-NetAdapterChecksumOffload -Name "*" -TcpIPv4`
 1. Try activating again.
 
-If you’re still unable to activate, try temporarily disabling NCSI.cd 
-For instructions, see the [“Workaround” section of An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network](/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network#workaround).
+If you're still unable to activate, try temporarily disabling NCSI. For instructions, see the **Workaround** section of [An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network](/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network#workaround).
 
 </details>
 
 <details>
 <summary><b>Rename Connections registry value</b></summary>
 
-**Important** Before editing the registry, it is strongly recommended that you back up the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
+**Important** Before editing the registry, it's strongly recommended that you back up the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
 
 1. From Start, type *regedit*, and then select **Registry Editor** from the results.
-1. Use the arrows to expand selections and navigate to `HKEY_LOCAL_MACHINE/Software/Microsoft/Windows/ CurrentVersion/Internet Settings/Connections`.
+1. Navigate to `HKEY_LOCAL_MACHINE/Software/Microsoft/Windows/ CurrentVersion/Internet Settings/Connections`.
 1. Right-click **Connections**, and select **Rename**.
 1. Rename **Connections** to *Connections.old*.
 1. Restart the device and try activating Microsoft 365 again.
@@ -208,17 +207,17 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 <details>
 <summary><b>Check Network Services permissions</b></summary>
 
-**Important** Before editing the registry, it is strongly recommended that you back up the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
+**Important** Before editing the registry, it's strongly recommended that you back up the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
 
 1. From Start, type *regedit*, and then select **Registry Editor** from the results.
-1. Use the arrows to expand selections and navigate to `HKEY_USERS/S-1-5-20`.
+1. Navigate to `HKEY_USERS/S-1-5-20`.
 1. Right-click the registry value and select **Permissions**.
 1. If **NETWORK SERVICE** is listed, select it. Make sure that **Full Control** and **Read** are checked.
-1. If **NETWORK SERVICE** is not listed:
-    - Select **Add**.
-    - In the field labeled **Enter the object names to select**, type network service.
-    - Select **Check names**. When the service is found, select **OK**.
-    - Make sure that **Full Control** and **Read** are checked, and then select **Apply** and then **OK**.
+1. If **NETWORK SERVICE** isn't listed:
+    1. Select **Add**.
+    1. In the field labeled **Enter the object names to select**, type network service.
+    1. Select **Check names**. When the service is found, select **OK**.
+    1. Make sure that **Full Control** and **Read** are checked, and then select **Apply** and then **OK**.
 1. Restart the device.
 1. Try to activate Microsoft 365 again.
 
@@ -249,8 +248,6 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 
 <details>
 <summary><b>Delete officeclient subfolders in the registry</b></summary>
-
-**Important** Resetting Edge settings might cause certain webpages that rely on custom settings to not work properly.
 
 1. From Start, type *regedit*, and then select **Registry Editor** from the results.
 1. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet\WebServiceCache\AllUsers\officeclient.microsoft.com`.
