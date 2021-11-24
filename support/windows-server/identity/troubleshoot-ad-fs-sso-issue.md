@@ -309,7 +309,7 @@ Check if the endpoints are enabled. AD FS provides various endpoints for differe
 2. Expand **Service** > **Endpoints**.
 3. Locate the endpoints and verify if the statuses are enabled on the **Enabled** column.  
 
-   :::image type="content" source="media\troubleshoot-adfs-sso-issue\adfs-endpoints-enabled.png" alt-text="ADFS endpoints" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/adfs-endpoints-enabled.png" alt-text="Double check the status of all the A D F S endpoints are enabled.":::
 
 Then, check if Azure AD Connect is installed. We recommend that you use Azure AD Connect which makes SSL certificate management easier.
 
@@ -563,7 +563,7 @@ Check the user status in Windows PowerShell or the UI. If the user is disabled, 
    Get-ADUser -Identity <samaccountname of the user> | Select Enabled
    ```
 
-   :::image type="content" source="media\troubleshoot-adfs-sso-issue\get-enabled-aduser.png" alt-text="Get-ADUser command" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/get-enabled-aduser.png" alt-text="Use the Get-ADUser command to check the user enabled status.":::
 
 ###### Check the user status in the UI
 
@@ -573,7 +573,7 @@ Check the user status in Windows PowerShell or the UI. If the user is disabled, 
 4. Click the **Account** tab.
 5. Under **Account options**, verify if **Account is disabled** is checked.
 
-   :::image type="content" source="media\troubleshoot-adfs-sso-issue\account-is-disabled.png" alt-text="Account is disabled option" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/account-is-disabled.png" alt-text="Double check whether the Account is disabled option is checked.":::
 
 6. If the option is checked, uncheck it.
 
@@ -590,7 +590,7 @@ If any property of the user is updated in the Active Directory, it results in a 
    `repadmin /showobjmeta localhost "CN=test user,CN=Users,DC=fabidentity,DC=com"`
 4. In the metadata, examine the Time/Date column for each attribute for any clue to a change. In the following example, the userPrincipleName attribute takes a newer date than the other attributes which represents a change to the user object metadata.
 
-   :::image type="content" alt-text="repadmin command" source="media\troubleshoot-adfs-sso-issue\repadmin-showobjmeta.png" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/repadmin-showobjmeta.png" alt-text="Output of the repadmin showobjmeta command." border="false":::
 
 ##### Check the forest trust if the user belongs to another forest
 
@@ -607,7 +607,7 @@ In a multi-forest AD FS environment, a two-way forest trust is required between 
    - If you select **No**, we recommend that you repeat the same procedure for the reciprocal domain.
    - If you select **Yes**, provide an administrative user credential for the reciprocal domain. There is no need to perform the same procedure for the reciprocal domain.
 
-     :::image type="content" alt-text="ADDS option" source="media\troubleshoot-adfs-sso-issue\adds-validate-incoming-trust.png" border="true":::
+     :::image type="content" source="media/troubleshoot-adfs-sso-issue/adds-validate-incoming-trust.png"  alt-text="Validate the incoming trust in the Active Directory Domain Services dialog box." border="false":::
 
 If these steps did not help you solve the issue, continue the troubleshooting with the steps in the [Not all users are impacted by the issue, and the user can access some of the relying parties](#not-all-users-are-impacted-by-the-issue-and-the-user-can-access-some-of-the-relying-parties) section.
 
@@ -648,9 +648,9 @@ To check if the claim rules for immutableID and UPN in AD FS matches what Azure 
 
    1. Open Azure AD Connect.
    2. Click **View current configuration**.  
-      :::image type="content" alt-text="AAD connect configuration" source="media\troubleshoot-adfs-sso-issue\microsoft-azure-active-directory-connect.png" border="true":::
-   3. On the **Review Your Solution** page, make a note of the values of **SOURCE ANCHOR** and **USER PRINCIPAL NAME**.  
-      :::image type="content" alt-text="AAD connect review your solution" source="media\troubleshoot-adfs-sso-issue\azure-active-directory-connect.jpg" border="true":::
+      :::image type="content" source="media/troubleshoot-adfs-sso-issue/microsoft-azure-active-directory-connect.png"  alt-text="Select the View current configuration in the Azure A D Connect additional tasks page." border="false":::
+   3. On the **Review Your Solution** page, make a note of the values of **SOURCE ANCHOR** and **USER PRINCIPAL NAME**.
+      :::image type="content" source="media/troubleshoot-adfs-sso-issue/azure-active-directory-connect.png"  alt-text="Get the values of SOURCE ANCHOR and USER PRINCIPAL NAME in the Azure A D Connect page.":::
 2. Verify the values of immutableID (sourceAnchor) and UPN in the corresponding claim rule configured in the AD FS server.
 
    1. On the AD FS server, open the AD FS management console.
@@ -658,7 +658,7 @@ To check if the claim rules for immutableID and UPN in AD FS matches what Azure 
    3. Right-click the relying party trust with Azure AD, and then click **Edit Claim Issuance Policy**.
    4. Open the claim rule for immutable ID and UPN.
    5. Verify if the variables queried for values of immutableID and UPN are the same as those appear in Azure AD Connect.  
-      :::image type="content" alt-text="AAD immutableID and UPN" source="media\troubleshoot-adfs-sso-issue\edit-rule-issue-upn-and-immutableid.png" border="true":::
+      :::image type="content" source="media/troubleshoot-adfs-sso-issue/edit-rule-issue-upn-and-immutableid.png" alt-text="Verify the values of immutableID and UPN in the corresponding claim rule configured in the A D F S server.":::
 
 3. If there is a difference, use one of the methods below:
 
@@ -754,14 +754,14 @@ If the two algorithms match, check if the Name ID format matches what the applic
    1. Open the AD FS management console.
    2. Click **Relying Party Trusts**, select the appropriate federation partner, and then click **Edit Claims Issuance Policy** in the **Actions** pane.
    3. Add a new rule if there is no rule to issue the NameIdentifier claim, or update an existing rule. Select **Name ID** for **Incoming claim type**, and then specify the format that the application requires.  
-   :::image type="content" alt-text="Add transform claim rule wizard" source="media\troubleshoot-adfs-sso-issue\add-transform-claim-rule-wizard.png" border="true":::
+   :::image type="content"  source="media/troubleshoot-adfs-sso-issue/add-transform-claim-rule-wizard.png" alt-text="Add a transform claim rule if there is no rule to issue the NameIdentifier claim, or update an existing rule.":::
 
 If the two algorithms mismatch, update the signing algorithm used by the relying party trust.
 
 1. Open the AD FS management console.
 2. Right-click the relying party trust, and then click **Properties**.
 3. On the **Advanced** tab, select the algorithm to match what the application requires.  
-   :::image type="content" alt-text="urn:dumptoken" source="media\troubleshoot-adfs-sso-issue\urndumptoken-properties.png" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/urndumptoken-properties.png" alt-text="Select the algorithm to match what the application requires under the Advanced tab in the Properties setting dialog box.":::
 
 #### About certificate auto renewal
 
@@ -775,7 +775,7 @@ To determine if you’re using self-signed certificates, follow these steps:
    Get-ADFSCerticate -CertificateType "token-signing"
    ```
 
-   :::image type="content" alt-text="Get-ADFSCerticate cmdlet, token-signing" source="media\troubleshoot-adfs-sso-issue\get-adfscertificate.jpg" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/get-adfscertificate.png" alt-text="Run the Get-ADFSCerticate cmdlet, Certificate Type token-signing." border="false":::
 
 2. Examine the certificate attributes.  
 
@@ -789,7 +789,7 @@ To confirm if the certificates renew automatically, follow these steps:
    Get-ADFSProperties | FL AutoCertificateRollover
    ```
 
-   :::image type="content" alt-text="Get-ADFSProperties cmdlet, AutoCertificateRollover" source="media\troubleshoot-adfs-sso-issue\get-adfsproperties-autocertificaterollover.png" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/get-adfsproperties-autocertificaterollover.png" alt-text="Run the Get-ADFSProperties cmdlet to confirm if the certificates renew automatically." border="false":::
 
 2. Examine the AutoCertificateRollover attribute.
 
@@ -847,7 +847,7 @@ ADFS provides various endpoints for different functionalities and scenarios. Not
 1. On the ADFS server, open the ADFS Management Console.
 2. Expand **Service** > **Endpoints**.
 3. Locate the endpoint and verify if the status is enabled on the **Proxy Enabled** column.  
-   :::image type="content" alt-text="ADFS Proxy Enabled" source="media\troubleshoot-adfs-sso-issue\adfs-endpoints.png" border="true":::
+   :::image type="content" source="media/troubleshoot-adfs-sso-issue/adfs-endpoints.png" alt-text="Verify the A D F S endpoints status shown on the Proxy Enabled column.":::
 
 ## Check the proxy trust relationship
 
@@ -1057,7 +1057,7 @@ If a CA issued certificate is in a certificate store where only self-signed cert
 - MS-Organization-Access: The self-signed certificate used for issuing workplace join certificates.
 - ADFS Proxy Trust: The certificates for each Web Application Proxy server.
 
-:::image type="content" alt-text="ADFS certificate" source="media\troubleshoot-adfs-sso-issue\adfs-certificate.png" border="true":::
+:::image type="content" source="media/troubleshoot-adfs-sso-issue/adfs-certificate.png"  alt-text="The certificates for each Web Application Proxy server.":::
 
 Therefore, delete any CA issued certificate from the AdfsTrustedDevices certificate store.
 

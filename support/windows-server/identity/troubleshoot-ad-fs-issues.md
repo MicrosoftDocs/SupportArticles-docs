@@ -39,11 +39,11 @@ _Original KB number:_ &nbsp; 3079872
 
     When redirection occurs, you see the following page:
 
-    :::image type="content" source="./media/troubleshoot-ad-fs-issues/office-365-redirecting.png" alt-text="Page when redirection occurs.":::
+    :::image type="content" source="media/troubleshoot-ad-fs-issues/office-365-redirecting.png" alt-text="Page that is shown when the A D F S redirection occurs.":::
 
     1. If no redirection occurs and you're prompted to enter a password on the same page, which means that Azure Active Directory (AD) or Office 365 doesn't recognize the user or the domain of the user to be federated. To check whether there's a federation trust between Azure AD or Office 365 and your AD FS server, run the `Get-msoldomain` cmdlet from Azure AD PowerShell. If a domain is federated, its authentication property will be displayed as **Federated**, as in the following screenshot:
 
-        :::image type="content" source="./media/troubleshoot-ad-fs-issues/federated-domain.png" alt-text="Step about Federated domain.":::
+        :::image type="content" source="media/troubleshoot-ad-fs-issues/federated-domain.png" alt-text="Cmdlet Get-msoldomain output shows that there is a federation trust between Azure AD or Office 365 and your A D F S server.":::
 
     2. If redirection occurs but you aren't redirected to your AD FS server for sign-in, check whether the AD FS service name resolves to the correct IP and whether it can connect to that IP on TCP port 443.
 
@@ -60,7 +60,7 @@ _Original KB number:_ &nbsp; 3079872
 
     1. Make sure that the AD FS service communication certificate that's presented to the client is the same one that's configured on AD FS.
 
-        :::image type="content" source="./media/troubleshoot-ad-fs-issues/service-communications.png" alt-text="Make sure the AD FS service communication certificate is the same one that's configured on AD FS.":::
+        :::image type="content" source="media/troubleshoot-ad-fs-issues/service-communications.png" alt-text="Make sure the A D F S service communication certificate is the same one that's configured on A D F S.":::
 
         Ideally, the AD FS service communication certificate should be the same as the SSL certificate that's presented to the client when it tries to establish an SSL tunnel with the AD FS service.
 
@@ -158,7 +158,7 @@ _Original KB number:_ &nbsp; 3079872
             - Audit logon event, located in `Computer configuration\Windows Settings\Security setting\Local Policy\Audit Policy`
             - Audit Object Access, located in `Computer configuration\Windows Settings\Security setting\Local Policy\Audit Policy`
 
-                :::image type="content" source="./media/troubleshoot-ad-fs-issues/local-domain-policy.png" alt-text="Use local or domain policy to enable success and failure.":::
+                :::image type="content" source="media/troubleshoot-ad-fs-issues/local-domain-policy.png" alt-text="Use local or domain policy to enable success and failure.":::
 
         2. Disable the following policy:
 
@@ -166,7 +166,7 @@ _Original KB number:_ &nbsp; 3079872
 
             This policy is located in `Computer configuration\Windows Settings\Security setting\Local Policy\Security Option`.
 
-            :::image type="content" source="./media/troubleshoot-ad-fs-issues/disable-policy.png" alt-text="Disable Force audit policy subcategory settings policy.":::
+            :::image type="content" source="media/troubleshoot-ad-fs-issues/disable-policy.png" alt-text="Disable Force audit policy subcategory settings policy.":::
 
             If you want to configure it by using advanced auditing, see [Configuring Computers for Troubleshooting AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641696(v=ws.10)).
 
@@ -176,18 +176,19 @@ _Original KB number:_ &nbsp; 3079872
             2. In the **Actions** pane, select **Edit Federation Service Properties**.
             3. In the **Federation Service Properties** dialog box, select the **Events** tab.
             4. Select the **Success audits** and **Failure audits** check boxes.
-                :::image type="content" source="./media/troubleshoot-ad-fs-issues/federation-service-properties.png" alt-text="Enable AD FS auditing.":::
+
+                :::image type="content" source="media/troubleshoot-ad-fs-issues/federation-service-properties.png" alt-text="Enable A D F S auditing by selecting the Success audits and Failure audits check boxes under the Events tab in the Federation Service Properties dialog box." border="false":::
             5. Run `GPupdate /force` on the server.
 
     3. Service Principal Name (SPN) is registered incorrectly
 
         There may be duplicate SPNs or an SPN that's registered under an account other than the AD FS service account. For an AD FS Farm setup, make sure that SPN HOST/AD FSservicename is added under the service account that's running the AD FS service. For an AD FS stand-alone setup, where the service is running under Network Service, the SPN must be under the server computer account that's hosting AD FS.
 
-        :::image type="content" source="./media/troubleshoot-ad-fs-issues/ad-fs-service-name.png" alt-text="AD FS service name.":::
+        :::image type="content" source="media/troubleshoot-ad-fs-issues/ad-fs-service-name.png" alt-text="Input the A D F S service name under the Log On tab in the Active Directory Federation Services Properties dialog box." border="false":::
 
         Make sure that there aren't duplicate SPNs for the AD FS service, as it may cause intermittent authentication failures with AD FS. To list the SPNs, run `SETSPN -L <ServiceAccount>`.
 
-        :::image type="content" source="./media/troubleshoot-ad-fs-issues/list-spn.png" alt-text="run SETSPN -L \<ServiceAccount>":::
+        :::image type="content" source="media/troubleshoot-ad-fs-issues/list-spn.png" alt-text="Run SETSPN -L command to list the SPNs for the A D F S service.":::
 
         Run `SETSPN -A HOST/AD FSservicename ServiceAccount` to add the SPN.
 
@@ -235,14 +236,14 @@ _Original KB number:_ &nbsp; 3079872
         1. Expand **Certificates (Local Computer)**, expand **Persona** l, and then select **Certificates**.
         1. Right-click your new token-signing certificate, select **All Tasks**, and then select **Manage Private Keys**.
 
-            :::image type="content" source="./media/troubleshoot-ad-fs-issues/add-permisssion.png" alt-text="Steps to add permission":::
+            :::image type="content" source="media/troubleshoot-ad-fs-issues/add-permission.png" alt-text="Steps to add Read access permission for your A D F S service account.":::
 
         1. Add Read access for your AD FS 2.0 service account, and then select **OK**.
         1. Close the Certificates MMC.
 
     7. The **Extended Protection** option for Windows Authentication is enabled for the AD FS or LS virtual directory. It may cause issues with specific browsers. Sometimes you may see AD FS repeatedly prompting for credentials, and it might be related to the Extended protection setting that's enabled for Windows Authentication for the AD FS or LS application in IIS.
 
-        :::image type="content" source="./media/troubleshoot-ad-fs-issues/extended-protection.png" alt-text="Enable Extended Protection option.":::
+        :::image type="content" source="media/troubleshoot-ad-fs-issues/extended-protection.png" alt-text="Turn on the Extended Protection option for Windows Authentication.":::
 
         When Extended Protection for authentication is enabled, authentication requests are bound to both the Service Principal Names (SPNs) of the server to which the client tries to connect and to the outer Transport Layer Security (TLS) channel over which Integrated Windows Authentication occurs. Extended protection enhances the existing Windows Authentication functionality to mitigate authentication relays or "man in the middle" attacks. However, certain browsers don't work with the Extended protection setting; instead they repeatedly prompt for credentials and then deny access. Disabling Extended protection helps in this scenario.
 
@@ -260,7 +261,7 @@ _Original KB number:_ &nbsp; 3079872
 
           If certain federated users can't authenticate through AD FS, you may want to check the Issuance Authorization rules for the Office 365 RP and see whether the Permit Access to All Users rule is configured.
 
-          :::image type="content" source="./media/troubleshoot-ad-fs-issues/permit-access-all-users.png" alt-text="Configure the Permit Access to All Users rule.":::
+          :::image type="content" source="media/troubleshoot-ad-fs-issues/permit-access-all-users.png" alt-text="Configure the Permit Access to All Users rule.":::
 
           If this rule isn't configured, peruse the custom authorization rules to check whether the condition in that rule evaluates "true" for the affected user. For more information, see the following resources:
           - [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx)
