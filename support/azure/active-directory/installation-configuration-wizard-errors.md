@@ -52,7 +52,7 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     ```
 
     > [!NOTE]
-    > The `Nltest` tool requires installation of the Windows Server 2003 Support Tools.
+    > The `nltest` tool requires installation of the Windows Server 2003 Support Tools.
 
     If the settings are correct, the output resembles the following example:
 
