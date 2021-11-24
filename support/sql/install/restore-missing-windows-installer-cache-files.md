@@ -99,7 +99,7 @@ To resolve these problems by using a script, follow these steps:
 1. Based on the results in previous step, take the steps that are required.
 
     > [!NOTE]
-    > Look for more information about these steps in the [Examples](#findsqlinstalls.vbs-Examples) section.
+    > Look for more information about these steps in the [Examples](#findsqlinstallsvbs-examples) section.
 
 1. Repeat steps 2 through 4 until the text file that is created in step 2 no longer contains text that references invalid paths or missing files for the component that is being updated.
 
