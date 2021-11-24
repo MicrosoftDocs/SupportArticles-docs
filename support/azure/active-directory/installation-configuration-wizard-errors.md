@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2684395
 
 This article provides resolutions and common causes of error messages that may occur when you install or set up the Directory Sync tool.
 
-## Minimum system requirements are not met
+## Check system requirements
 
 The Azure Active Directory Sync tool can be installed on a computer if all the following conditions are true:
 
@@ -32,7 +32,7 @@ The Azure Active Directory Sync tool can be installed on a computer if all the f
 - The computer is joined to an Active Directory domain. And it's located in the forest that you want to sync with Azure Active Directory (Azure AD).
 - The Microsoft .NET Framework 3.5 or a later version is installed on the computer.
 
-## Incorrect permissions
+## Check permissions
 
 To start the Directory Sync tool Configuration Wizard successfully, users who log on to the computer on which the Directory Sync tool is installed must be a member of the local Microsoft Identity Integration Server (MIIS) Admins group that was added during installation of the tool.
 
