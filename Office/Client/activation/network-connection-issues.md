@@ -224,8 +224,6 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 
 </details>
 
-</details>
-
 <details>
 <summary><b>Reset Microsoft Edge settings</b></summary>
   
@@ -265,3 +263,6 @@ Disable the security defaults from portal.azure.com using the information found 
 1. Type `netsh winsock reset`, and then press Enter.
 1. Restart the device.
 1. Try to activate Microsoft 365 again.
+
+</details>
+
