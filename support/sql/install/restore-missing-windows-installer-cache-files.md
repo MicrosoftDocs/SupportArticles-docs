@@ -1,7 +1,7 @@
 ---
 title: Restore the missing Windows Installer cache files
 description: This article describes various procedures that you can use to resolve various errors that occur when installing SQL Server service pack or a cumulative update due to corruption of windows installer cache.
-ms.date: 11/02/2020
+ms.date: 11/24/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.topic: how-to
@@ -33,6 +33,10 @@ When a product is installed by using Windows Installer, a stripped version of th
 
 Any future update to the product such as a hotfix, a cumulative update, or a service pack setup, relies on the information in the files that are stored in the Windows Installer cache. Without this information, the new update cannot perform the required transformations.
 
+> [!WARNING]
+> The Installer cache directory *%windir%\installer* is automatically managed by Windows when applications install and update packages. Manual intervention by users in this directory may result in variety of issues, including the problems described in this article. 
+
+
 ## Resolution
 
 To resolve these problems, use one of the following procedures.
@@ -42,7 +46,7 @@ Microsoft recommends that for SQL Server installations you first use the repair 
 
 - [How to: Repair a Failed SQL Server Installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation)
 
-  For previous versions:
+For previous versions:
 
 - [How to: Repair a Failed SQL Server 2008 Installation](/previous-versions/sql/sql-server-2008/cc646006(v=sql.100))
 - [How to: Repair a Failed SQL Server 2008 R2 Installation](/previous-versions/sql/sql-server-2008-r2/cc646006(v=sql.105))
