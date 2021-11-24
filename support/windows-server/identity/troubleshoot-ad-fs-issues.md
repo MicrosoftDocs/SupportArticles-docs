@@ -324,7 +324,7 @@ _Original KB number:_ &nbsp; 3079872
 
    - Issuance Transform claim rules for the Office 365 RP aren't configured correctly.
 
-        In a scenario where you have multiple TLDs (top-level domains), you might have logon issues if the Supportmultipledomain switch wasn't used when the RP trust was created and updated. For more information, ses [SupportMultipleDomain switch, when managing SSO to Office 365](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
+        In a scenario where you have multiple TLDs (top-level domains), you might have logon issues if the Supportmultipledomain switch wasn't used when the RP trust was created and updated. For more information, see [SupportMultipleDomain switch, when managing SSO to Office 365](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
    - Make sure that token encryption isn't being used by AD FS or STS when a token is issued to Azure AD or to Office 365.
 6. There are stale cached credentials in Windows Credential Manager.
