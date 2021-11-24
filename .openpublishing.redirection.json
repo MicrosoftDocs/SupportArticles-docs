@@ -969,6 +969,31 @@
       "source_path": "support/sql/admin/error-password-service-account-changed.md",
       "redirect_url": "/troubleshoot/sql/admin/error-1069-service-cannot-start",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/1450-and-665-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/1450-and-665-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/17053-and-926-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/17053-and-926-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/8967-8921-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/8967-8921-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/latch-timeout-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/latch-timeout-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-dbcc-errors.md",
+      "redirect_url": "/troubleshoot/sql/admin/troubleshoot-dbcc-checkdb-errors",
+      "redirect_document_id": true
     }
   ]
 }
