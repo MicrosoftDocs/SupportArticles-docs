@@ -237,31 +237,12 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 
 <details>
 <summary><b>Reset Microsoft Edge settings</b></summary>
-  
+
 **Important** Resetting Edge settings might cause certain webpages that rely on custom settings to not work properly.
-  
-To restore Edge's default settings, use the following steps:
-  
-1. Open Edge and select the three dots at the top.  
-1. Select **Settings**.  
-1. Select **Reset settings**, and then **Restore settings to their default values**.  
-1. After the process completes, close Edge and try to activate again.  
 
-</details>
-
-<details>
-<summary><b>Delete officeclient subfolders in the registry</b></summary>
-  
-1. From Start, type regedit, and then select **Registry Editor** from the results.
-1. Use the arrows to expand selections and navigate to `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet\WebServiceCache\AllUsers\officeclient.microsoft.com`.
-1. Delete all subfolders of `officeclient.microsoft.com`.
-1. Restart the device and try to activate again.
-
-</details>
-
-<details>
-<summary><b>Turn off Default Security from portal.azure.com</b></summary>
-
-Disable the security defaults from portal.azure.com using the information found in the [“Disabling security defaults” section of What are security defaults?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#disabling-security-defaults)
+1. Open Edge and select the three dots at the top.
+1. Select **Settings**.
+1. Select **Reset settings**, and then **Restore settings to their default values**.
+1. After the process completes, close Edge and try to activate again.
 
 </details>
