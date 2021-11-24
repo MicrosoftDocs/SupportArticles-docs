@@ -28,7 +28,7 @@ This issue is typically caused by one of these two scenarios:
      > [!NOTE]
      > Android devices have a similar issue, but the error message is different.
 
-- The signature algorithm of the Root or Intermediate certificate is not supported by the device or OS. Root or Intermediate Issuing CA Certs using Signature Algorithm RSASSA-PSS (SHA-1) also present similar issues.
+- The signature algorithm of the Root or Intermediate certificate is not supported by the device or OS. Root or Intermediate Issuing CA Certs using are using Signature Algorithm RSASSA-PSS or SHA-1.
 
 ## Solution
 
