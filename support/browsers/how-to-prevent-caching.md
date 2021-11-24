@@ -85,5 +85,5 @@ Remember that it is not a good idea to use this header globally across the entir
 
 ## See Also
 
-- For more information about HTTP/1.1, see [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html).
-- [Client Cache in IIS](https://docs.microsoft.com/iis/configuration/system.webserver/staticcontent/clientcache)
+- For more information about HTTP/1.1, see this external link [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html).
+- [Client Cache in IIS](/iis/configuration/system.webserver/staticcontent/clientcache)
