@@ -67,6 +67,8 @@
       href: ../administration/troubleshoot-site-collection-upgrade-issue.md
     - name: Unable to delete items in SharePoint and OneDrive
       href: ../administration/unable-to-delete-files.md
+    - name: Unexpected error in SharePoint admin center Content type gallery
+      href: ../administration/content-type-gallery-error.md
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Using relative URLs isn't supported
