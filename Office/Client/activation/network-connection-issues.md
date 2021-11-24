@@ -240,7 +240,7 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
   
 **Important** Resetting Edge settings might cause certain webpages that rely on custom settings to not work properly.
   
-To restore Edge’s default settings, use the following steps:  
+To restore Edge's default settings, use the following steps:
   
 1. Open Edge and select the three dots at the top.  
 1. Select **Settings**.  
