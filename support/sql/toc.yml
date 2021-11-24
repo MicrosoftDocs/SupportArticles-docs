@@ -91,12 +91,12 @@
         href: admin/event-id-33566-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
-    - name: 1450 and 665 errors when running DBCC
-      href: admin/1450-and-665-errors-running-dbcc.md
+    - name: 1450 and 665 errors when running DBCC CHECKDB
+      href: admin/1450-and-665-errors-running-dbcc-checkdb.md
     - name: 17053 and 926 errors when running DBCC CHECK
       href: admin/17053-and-926-errors-running-dbcc-check.md
-    - name: 8967 and 8921 errors when running DBCC
-      href: admin/8967-8921-errors-running-dbcc.md
+    - name: 8967 and 8921 errors when running DBCC CHECKDB
+      href: admin/8967-8921-errors-running-dbcc-checkdb.md
     - name: A nonrecoverable I/O error when you use Backup to URL
       href: admin/nonrecoverable-io-error-backup-url.md
     - name: A TDE-enabled database may not recover
