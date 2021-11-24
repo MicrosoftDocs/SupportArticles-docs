@@ -48,7 +48,7 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
 - To check the domain controllers of the domain, run the following command at the command prompt:
 
     ```console
-    Nltest /dsgetdc:<FQDN of the domain>
+    nltest /dsgetdc:<FQDN of the domain>
     ```
 
     > [!NOTE]
