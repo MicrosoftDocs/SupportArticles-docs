@@ -26,13 +26,11 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
 
 1. End users receive a notification to install the Trusted Root certificate profile:
 
-    > [!div class="mx-imgBorder"]
-    > ![A notification to install Trusted Root certificate profile](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png" alt-text="Screenshot of a notification to install Trusted Root certificate profile.":::
 
 2. The next notification prompts to install the SCEP certificate profile:
 
-    > [!div class="mx-imgBorder"]
-    > ![Sample Company Portal app notification on Android to install SCEP certificate profile](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png" alt-text="Screenshot of a sample Company Portal app notification on Android to install SCEP certificate profile.":::
 
     > [!TIP]
     > When using a device administrator-managed Android device, there may be multiple certificates listed. When a certificate profile is revoked or removed, the certificate stays on the device. In this scenario, select the newest certificate. It's usually the last certificate shown in the list.
@@ -41,13 +39,11 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
 
 3. Next, users receive a notification to install the Wi-Fi profile:
 
-    > [!div class="mx-imgBorder"]
-    > ![A notification to install the Wi-Fi profile](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png" alt-text="Screenshot of a notification to install the Wi-Fi profile.":::
 
 4. When complete, the Wi-Fi connection is shown as a saved network:
 
-    > [!div class="mx-imgBorder"]
-    > ![Wi-Fi connection shows as a saved network](./media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png" alt-text="Screenshot of a Wi-Fi connection that's shown as a saved network.":::
 
 ### Review Company Portal app logs
 
@@ -55,8 +51,7 @@ On Android, the **Omadmlog.log** file details the activities of the Wi-Fi profil
 
 In the following example, use [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs, and search for "wifimgr":
 
-> [!div class="mx-imgBorder"]
-> ![Search for wifimgr](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
+:::image type="content" source="media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png" alt-text="Screenshot shows wifimgr is searched in Filter Settings.":::
 
 The following log shows your search results, and shows the Wi-Fi profile successfully applied:
 
@@ -85,11 +80,9 @@ The following log shows your search results, and shows the Wi-Fi profile success
 
 After the Wi-Fi profile is installed on the device, it's shown in the **Management Profile**:
 
-> [!div class="mx-imgBorder"]
-> ![Management Profile on iOS/iPadOS device in Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
+:::image type="content" source="media/troubleshoot-wi-fi-profiles/ios-management-profile.png" alt-text="Screenshot of Management Profile on iOS/iPadOS device in Intune.":::
 
-> [!div class="mx-imgBorder"]
-> ![Wi-Fi connection shows as a Wi-Fi network on iOS/iPadOS device in Intune](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
+:::image type="content" source="media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png" alt-text="Screenshot of Wi-Fi connection that shows as a Wi-Fi network on iOS/iPadOS device in Intune.":::
 
 ### Review the iOS/iPadOS console and device logs
 
@@ -98,8 +91,7 @@ On iOS/iPadOS devices, the Company Portal app log doesn't include information ab
 1. Connect the iOS/iPadOS device to Mac. Go to **Applications** > **Utilities**, and open the Console app.
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**:
 
-    > [!div class="mx-imgBorder"]
-    > ![Include Info Messages and Include Debug Messages in iOS/iPadOS console app](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-debug-messages.png" alt-text="Screenshot of the Include Info Messages and Include Debug Messages options in iOS/iPadOS console app.":::
 
 3. Reproduce the scenario, and save the logs to a text file:
 
@@ -119,18 +111,15 @@ On iOS/iPadOS devices, the Company Portal app log doesn't include information ab
 
 After the Wi-Fi profile is installed on the device, go to **Settings** > **Accounts** > **Access work or school**. Select your account > **Info**:
 
-> [!div class="mx-imgBorder"]
-> ![Access work or school, and select Info on Windows device](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
+:::image type="content" source="media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png" alt-text="Screenshot of the Access work or school pane. Info button is highlighted on Windows device.":::
 
 In **Areas managed by Microsoft**, **WiFi** is shown:
 
-> [!div class="mx-imgBorder"]
-> ![In areas managed by Microsoft, see that WiFi is listed on Windows](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
+:::image type="content" source="media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png" alt-text="Screenshot of the Areas managed by Microsoft, where WiFi is listed on Windows.":::
 
 To see the Wi-Fi connection, go to **Settings** > **Network & Internet**  > **Wi-Fi**:
 
-> [!div class="mx-imgBorder"]
-> ![On Windows, see the Wi-Fi connection as a known network in settings](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
+:::image type="content" source="media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png" alt-text="Screenshot of the Wi-Fi settings on Windows, where the Wi-Fi connection is a known network.":::
 
 ### Review event viewer logs
 
@@ -178,8 +167,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   4. A window opens that shows the path to the log files. Select **Export**.
   5. Go to the `\Users\Public\Documents\MDMDiagnostics` path, and view the report:
 
-      > [!div class="mx-imgBorder"]
-      > ![Sample MDM Diagnostic Information that shows WiFi profile configuration on Windows 10 devices](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
+      :::image type="content" source="media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png" alt-text="Screenshot of a sample MDM Diagnostic Information that shows WiFi profile configuration on Windows 10 devices." lightbox="media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png":::
 
   > [!TIP]
   > For more information, see [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
@@ -194,7 +182,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     If the matching certificate isn't found, the certificates on the device aren't installed. The Wi-Fi profile isn't applied because it doesn't have the correct certificate. In this scenario, you see the following entry in the Company Portal app Omadmlog file:
 
-    ` Skipping Wifi profile <profile ID> because it is pending certificates.`
+    `Skipping Wifi profile <profile ID> because it is pending certificates.`
 
     The following sample log shows certificates being excluded because the **Any Purpose** Extended Key Usage (EKU) criteria was specified. But, the certificates assigned to the device don't have that EKU:
 
@@ -208,24 +196,20 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     The following sample shows the SCEP profile entered the **Any Purpose** EKU. But, it's not entered in the Certificate Template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template. Or, remove the **Any Purpose** option from the SCEP profile.
 
-    > [!div class="mx-imgBorder"]
-    > ![On Android, add Any Purpose to certificate template on the certificate authority](./media/troubleshoot-wi-fi-profiles/android-add-any-purpose-eku.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/android-add-any-purpose-eku.png" alt-text="Screenshot shows steps to add Any Purpose to certificate template on the certificate authority." lightbox="media/troubleshoot-wi-fi-profiles/android-add-any-purpose-eku.png":::
 
-    > [!div class="mx-imgBorder"]
-    > ![On Android, add Any Purpose to SCEP certificate configuration profile in Intune](./media/troubleshoot-wi-fi-profiles/android-any-purpose-scep-device-config-profile.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/android-any-purpose-scep-device-config-profile.png" alt-text="Screenshot shows adding Any Purpose to SCEP certificate configuration profile in Intune." lightbox="media/troubleshoot-wi-fi-profiles/android-any-purpose-scep-device-config-profile.png":::
 
   - Confirm that all required certificates in the complete certificate chain are on the Android device. Otherwise, the Wi-Fi profile can't be installed on the device. For more information, see [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa) (opens Android's web site).
   - Filter Omadmlog with keywords to look for information, such as which certificate is used in the Wi-Fi profile, and if the profile successfully applied.
 
     For example, use [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter "wifimgr":
 
-    > [!div class="mx-imgBorder"]
-    > ![Filter CMTrace to look for WiFiMgr configuration profiles on Android devices](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png" alt-text="Screenshot shows filtering CMTrace to look for WiFiMgr configuration profiles on Android devices.":::
 
     The output looks similar to the following log:
 
-    > [!div class="mx-imgBorder"]
-    > ![Sample CMTrace log output that shows WiFi Intune configuration profile successfully applied on devices](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
+    :::image type="content" source="media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png" alt-text="Screenshot of a sample CMTrace log output that shows WiFi Intune configuration profile successfully applied on devices." lightbox="media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png":::
 
     If you see an error in the log, copy the time stamp of the error and unfilter the log. Then, use the "find" option with the time stamp to see what happened right before the error.
 

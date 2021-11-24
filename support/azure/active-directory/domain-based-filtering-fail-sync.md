@@ -4,6 +4,8 @@ description: Describes an issue in which changes to domain-based filtering in th
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Changes to domain-based filtering in Synchronization Service Manager fail to sync
 

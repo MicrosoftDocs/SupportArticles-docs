@@ -2,6 +2,8 @@
 title: Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
 description: This troubleshooting guide focuses on when you repeatedly can't install the service account. It unblocks you to install the Azure AD Connect Provisioning Agent.
 ms.date: 10/13/2021
+ms.service: active-directory
+ms.subservice: hybrid
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller

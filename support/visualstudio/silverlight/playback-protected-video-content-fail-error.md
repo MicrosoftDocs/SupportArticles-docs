@@ -5,6 +5,7 @@ ms.date: 01/04/2021
 ms.prod-support-area-path: 
 ms.reviewer: jebishop
 ms.topic: troubleshooting
+ms.technology: vs-silverlight
 ---
 # Playback of protected video content can fail and cause an error message to be returned
 

@@ -3,7 +3,7 @@ title: Storage account setting is blank in Azure Site Recovery
 description: Fixes an issue in which the Storage Account list is blank when you try to configure protection group settings in Azure Site Recovery.
 ms.date: 10/10/2020
 ms.prod-support-area-path: 
-ms.service: backup
+ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan

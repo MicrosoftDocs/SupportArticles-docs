@@ -2,7 +2,7 @@
 title: Can't set time zone automatically
 description: Provides several methods to resolve the issue in which you cannot set the time zone automatically.
 ms.date: 06/23/2021
-author: v-lianna
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

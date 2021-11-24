@@ -4,6 +4,8 @@ description: Describes an issue in which one or more AD DS object attributes don
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool
 
