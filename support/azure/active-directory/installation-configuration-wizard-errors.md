@@ -72,7 +72,7 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     Default-First-Site-Name The command completed successfully
     ```
 
-## Error 1: "The computer must be joined to a domain"
+## Error 1: The computer must be joined to a domain
 
 To troubleshoot this issue, check the domain membership of the computer by following these steps:
 
@@ -102,7 +102,7 @@ Sometimes, joining the computer to a workgroup, and then joining the computer ba
 - The computer is experiencing an issue in contacting the domain controllers.
 - The Active Directory domain is rejecting the request.
 
-## Error 2: "The Azure Active Directory Sync Tool is already installed"
+## Error 2: The Azure Active Directory Sync Tool is already installed
 
 In this case, the Directory Sync tool may not be installed because of a previous pending installation. The Setup package also installs software in the background during installation. To resolve this issue, follow these steps:
 
