@@ -66,7 +66,7 @@ In this procedure, you will use the FixMissingMSI tool to identify MSI and MSP f
 #### Download
 You can download the FixMissingMSI tool from the [GitHub repository](https://github.com/suyouquan/SQLSetupTools/releases/).
 
-#### Use
+#### How to use
 This is a grapical-user-interface (GUI) tool and allows you to easily identify and fix the missing MSIs. 
 
 :::image type="content" source="https://user-images.githubusercontent.com/35096859/35314819-939ae972-0103-11e8-8e32-f0f9bcc7475e.png" alt-text="FixMissingMSI":::
@@ -103,11 +103,11 @@ To resolve these problems by using a script, follow these steps:
 
 1. Repeat steps 2 through 4 until the text file that is created in step 2 no longer contains text that references invalid paths or missing files for the component that is being updated.
 
-### Examples
+#### FindSQLInstalls.vbs Examples
 
 The following examples are entries and explanations of actions that are outlined in the output file that is generated when you run the FindSQLInstalls.vbs script.
 
-#### Example 1: Missing installer files
+**Example 1: Missing installer files**
 
 The following is an example of the output that is generated when you are missing an .msi package in the Windows Installer cache folder.
 
@@ -150,7 +150,7 @@ The following section of the output advises you of actions that are required to 
 
 > Action needed, recreate or re-establish path to the directory: G:\x64\setup\sql_engine_core_inst_msi\then rerun this script to update installer cache and results The path on the line above must exist at the root location to resolve this problem with your msi/msp file not being found or corrupted, In some cases you may need to manually copy the missing file or manually replace the problem file overwriting it is exist: Copy "G:\x64\setup\sql_engine_core_inst_msi\sql_engine_core_inst.msi" C:\WINDOWS\Installer\19b4d2.msi Replace the existing file if prompted to do so.
 
-#### Example 2: Missing patches
+**Example 2: Missing patches**
 
 Missing patches may result in entries that resemble those in Example 1. Most of the time, you will notice entries in the Patch LastUsedSource line that reference a patch, and this line resembles: `Patch LastUsedSource: n;1;c:\0ca91e857a4f12dd390f0821a3\HotFixSQL\Files\`.
 
@@ -198,7 +198,7 @@ To obtain a list of all the missing Windows Installer cache files that are relat
 
 If the error message references a missing Windows Installer database file (.msi), you do not have to perform steps 2 through 4. Instead, you can go directly to step 5. You have to locate the .msi from the original media that you used to install the product. If this error message was generated for sql_engine_core_inst.msi, then you have to locate this file from the setup media under the folder structure: `\x64\setup\sql_engine_core_inst_msi\`. The other steps are the same.
 
-## Find the patch package and the product details for a missing .msp file
+#### Find the patch package and the product details for a missing .msp file
 
 Different versions of the product generate different error messages for this problem. The error messages that are mentioned in the [Symptoms](#symptoms) section appear for Setup programs for updates starting with SQL Server 2008 SP1. For other updates, you receive error messages that may not clearly specify which patch file is missing from the Windows Installer cache and the specific update details. For these error messages, the setup log files will contain information about the missing Windows Installer cache file. A sample setup log resembles the following:
 
@@ -243,7 +243,7 @@ To find more details about the missing .msp file in the Windows Installer cache,
 
 For more information about how to obtain the service pack, see [KB2546951 - List of issues that are fixed by SQL Server 2008 Service Pack 3](https://support.microsoft.com/help/2546951).
 
-## Procedure 3: Restore from system state backups
+###  Restore from system state backups
 
 You can restore from system state backups as described in [Missing Windows Installer cache requires a computer rebuild](/troubleshoot/windows-client/deployment/missing-windows-installer-cache).
 
