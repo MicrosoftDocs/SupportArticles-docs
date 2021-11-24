@@ -31,7 +31,7 @@ You can't sign in with this version of Lync. Please install a newer version. If 
 
 This problem occurs because the **Language** and **Region** settings on your device don't match. For example, the language value is **English** and the region value is **Sweden**. When this problem occurs, your settings may resemble the settings in the following screen shot.
 
-![Setting languages and region](./media/you-cant-sign-in-with-this-version-of-lync/language-region-setting.png)
+:::image type="content" source="./media/you-cant-sign-in-with-this-version-of-lync/language-region-setting.png" alt-text="Screenshot that shows the Setting languages and region page for i O S system.":::
 
 ## Resolution
 
