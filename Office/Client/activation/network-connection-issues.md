@@ -224,15 +224,6 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 
 </details>
 
-<details>
-<summary><b>Reset Winsock</b></summary>
-  
-1. Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
-1. Type `netsh int ip reset`, and then press Enter.
-1. Type `netsh winsock reset`, and then press Enter.
-1. Restart the device.
-1. Try to activate Microsoft 365 again.
-
 </details>
 
 <details>
@@ -265,3 +256,12 @@ To restore Edge’s default settings, use the following steps:
 Disable the security defaults from portal.azure.com using the information found in the [“Disabling security defaults” section of What are security defaults?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#disabling-security-defaults)
 
 </details>
+
+<details>
+<summary><b>Reset Winsock</b></summary>
+  
+1. Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
+1. Type `netsh int ip reset`, and then press Enter.
+1. Type `netsh winsock reset`, and then press Enter.
+1. Restart the device.
+1. Try to activate Microsoft 365 again.
