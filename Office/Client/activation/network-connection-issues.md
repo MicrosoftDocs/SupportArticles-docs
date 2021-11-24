@@ -262,6 +262,6 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 <details>
 <summary><b>Turn off Default Security from portal.azure.com</b></summary>
 
-To do so, follow the steps in ["Disabling security defaults" section of What are security defaults?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#disabling-security-defaults)
+To do so, follow the steps in [Disabling security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#disabling-security-defaults).
 
 </details>
