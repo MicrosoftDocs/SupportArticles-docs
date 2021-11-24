@@ -1,7 +1,7 @@
 {
   "redirections": [
     {
-      "source_path": "troubleshoot/windows-server/networking/portqry-exe-command-line-utility.md",
+      "source_path": "support/windows-server/networking/portqry-exe-command-line-utility.md",
       "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
       "redirect_document_id": true
     },
@@ -213,6 +213,11 @@
     {
       "source_path": "support/previous-versions/msxml/display-html-xsl-style-sheet.md",
       "redirect_url": "/previous-versions/troubleshoot/msxml/display-html-xsl-style-sheet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/active-directory/manage-sub-parent-domain.md",
+      "redirect_url": "/azure/active-directory/enterprise-users/domains-manage",
       "redirect_document_id": false
     },
     {
@@ -544,7 +549,17 @@
       "source_path": "support/mem/intune/lob-app-versioning.md",
       "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
       "redirect_document_id": false
-    },  
+    }, 
+    {
+      "source_path": "support/mem/intune/look-up-intune-licenses.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses-assign",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/deploy-windows-update-packages-as-win32-apps.md",
+      "redirect_url": "/mem/intune/apps/apps-win32-deploy-update-package",
+      "redirect_document_id": false
+    },     
     {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
@@ -909,6 +924,51 @@
       "source_path": "support/windows-hardware/drivers/index.md",
       "redirect_url": "/support/windows-hardware/drivers/welcome-windowshardware",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/index.md",
+      "redirect_url": "/support/power-platform/power-apps/welcome-power-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/index.md",
+      "redirect_url": "/support/power-platform/power-automate/welcome-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/fraud-protection/index.md",
+      "redirect_url": "/support/dynamics-365/fraud-protection/welcome-fraud-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/index.md",
+      "redirect_url": "/support/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/index.md",
+      "redirect_url": "/support/dynamics-365/marketing/welcome-marketing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/index.md",
+      "redirect_url": "/support/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/performance-consistency-issues.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/filter-drivers-lead-to-sql-performance-consistency.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/admin/error-password-service-account-changed.md",
+      "redirect_url": "/troubleshoot/sql/admin/error-1069-service-cannot-start",
+      "redirect_document_id": true
     },
     {
       "source_path": "support/sql/admin/1450-and-665-errors-running-dbcc.md",
