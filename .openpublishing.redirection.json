@@ -909,6 +909,21 @@
       "source_path": "support/windows-hardware/drivers/index.md",
       "redirect_url": "/support/windows-hardware/drivers/welcome-windowshardware",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/admin/1450-and-665-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/1450-and-665-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/17053-and-926-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/17053-and-926-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/8967-8921-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/8967-8921-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
     }
   ]
 }
