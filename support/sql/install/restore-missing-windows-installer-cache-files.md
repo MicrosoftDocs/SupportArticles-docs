@@ -23,16 +23,7 @@ When you try to install a Microsoft SQL Server service pack or a cumulative upda
 
 When you install SQL Server, the Windows Installer stores critical files in the Windows Installer Cache (default is *C:\Windows\Installer*). These files are required for uninstalling and updating applications. Missing files cannot be copied between computers, because they are unique.
 
-Microsoft recommends that for SQL Server installations you first use the repair process that's described in the following articles to verify your current installation:
 
-- [How to: Rebuild the Registry for SQL Server 2005](/previous-versions/sql/sql-server-2005/ms143727(v=sql.90))
-- [How to: Repair a Failed SQL Server 2008 Installation](/previous-versions/sql/sql-server-2008/cc646006(v=sql.100))
-- [How to: Repair a Failed SQL Server 2008 R2 Installation](/previous-versions/sql/sql-server-2008-r2/cc646006(v=sql.105))
-- [How to: Repair a Failed SQL Server 2012 Installation](/previous-versions/sql/sql-server-2012/cc646006(v=sql.110))
-
-You should run the repair from the original installation media, using the command line: `setup.exe/ACTION=REPAIR/INDICATEPROGRESS=TRUE`.
-
-Repair the common shared components and features first, and then repeat the command to repair the instances installed. During the repair process, the setup dialog box disappears. As long as the progress window does not show an error, the repair process is proceeding as expected. If the installer cache file for a specific component is missing, then repair process will encounter an error.
 
 ## Cause
 
@@ -46,46 +37,77 @@ Any future update to the product such as a hotfix, a cumulative update, or a ser
 
 To resolve these problems, use one of the following procedures.
 
-## Procedure 1.a.: Use the FixMissingMSI tool
+### Use Repair Installation
+Microsoft recommends that for SQL Server installations you first use the repair process that's described in the following articles to verify your current installation:
+
+- [How to: Repair a Failed SQL Server Installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation)
+
+  For previous versions:
+
+- [How to: Repair a Failed SQL Server 2008 Installation](/previous-versions/sql/sql-server-2008/cc646006(v=sql.100))
+- [How to: Repair a Failed SQL Server 2008 R2 Installation](/previous-versions/sql/sql-server-2008-r2/cc646006(v=sql.105))
+- [How to: Repair a Failed SQL Server 2012 Installation](/previous-versions/sql/sql-server-2012/cc646006(v=sql.110))
+
+
+
+You should run the repair from the original installation media, using the command line: 
+
+```cmd
+setup.exe/ACTION=REPAIR/INDICATEPROGRESS=TRUE
+```
+
+Repair the common shared components and features first, and then repeat the command to repair the instances installed. During the repair process, the setup dialog box disappears. As long as the progress window does not show an error, the repair process is proceeding as expected. If the installer cache file for a specific component is missing, then repair process will encounter an error.
+
+
+### Use the FixMissingMSI tool
 
 In this procedure, you will use the FixMissingMSI tool to identify MSI and MSP files that are missing from the Windows Installer cache. As an additional step you can point the tool to the original media locations and recache the missing files.
 
+#### Download
 You can download the FixMissingMSI tool from the [GitHub repository](https://github.com/suyouquan/SQLSetupTools/releases/).
 
-For more information, please see [SQL Setup ToolSuite Introduction (1) -FixMissingMSI](/archive/blogs/psssql/sql-setup-toolsuite-introduction-1-fixmissingmsi).
+#### Use
+This is a grapical-user-interface (GUI) tool and allows you to easily identify and fix the missing MSIs. 
 
-## Procedure 1.b.: Use the FindSQLInstalls.vbs script
+:::image type="content" source="https://user-images.githubusercontent.com/35096859/35314819-939ae972-0103-11e8-8e32-f0f9bcc7475e.png" alt-text="FixMissingMSI":::
+
+For more information, see [SQL Setup ToolSuite Introduction (1) -FixMissingMSI](/archive/blogs/psssql/sql-setup-toolsuite-introduction-1-fixmissingmsi).
+
+### Use the FindSQLInstalls.vbs script
 
 To complete the steps in this procedure, you have to copy the FindSQLInstalls.vbs script in the *FixMissingMSI* folder from the [GitHub repository](https://github.com/suyouquan/SQLSetupTools/tree/master/FixMissingMSI) to a local folder on the computer where you are trying to update your SQL Server installation.
 
 > [!NOTE]
-> The FindSQLInstalls.vbs script collects the information to correct invalid package paths. This script is used against the source locations to make sure that all MSP packages are in the Windows Installer cache directory. After executing the commands indicated in the Action needed lines in the script output file, the missing packages will be re-added if the original source media is available.
+> The FindSQLInstalls.vbs script collects package information to correct invalid package paths. This script is used against the source locations to make sure that all MSP packages are in the Windows Installer cache directory. After executing the commands indicated in the Action needed lines in the script output file, the missing packages will be re-added if the original source media is available.
 
 To resolve these problems by using a script, follow these steps:
 
 1. Click [here](https://raw.githubusercontent.com/suyouquan/SQLSetupTools/master/FixMissingMSI/FindSQLInstalls.vbs) to go to the FindSQLInstalls.vbs raw page on GitHub.
+1. Select all of the contents on this page, copy, and paste it to a new text file
+1. Save the text file as *FindSQLInstalls.vbs*.
+1. Open an elevated Command Prompt to the directory to which you saved the **FindSQLInstalls.vbs** file, and run the command: 
 
-2. Select all of the contents on this page, copy, and paste it to a text file. Save the text file as *FindSQLInstalls.vbs*.
+   ```cmd
+   Cscript FindSQLInstalls.vbs %computername%_sql_install_details.txt`.
+   ```
 
-3. Open an elevated command prompt to the directory to which you saved the **FindSQLInstalls.vbs** file, and run the command: `Cscript FindSQLInstalls.vbs %computername%_sql_install_details.txt`.
+1. Open the file from step 2 in a text editor such as Notepad, and identify the problems that are causing the failure. To do this, search the text file for string patterns such as the following:
 
-4. Open the file from step 2 in a text editor such as Notepad, and identify the problems that are causing the failure. To do this, search the text file for string patterns such as the following:
+    - `do not`
+    - `!!!`
 
-    - do not
-    - !!!
-
-5. Based on the results in step 3, take the steps that are required.
+1. Based on the results in step 3, take the steps that are required.
 
     > [!NOTE]
     > Look for more information about these steps in the [Examples](#examples) section.
 
-6. Repeat steps 2 through 4 until the text file that is created in step 2 no longer contains text that references invalid paths or missing files for the component that is being updated.
+1. Repeat steps 2 through 4 until the text file that is created in step 2 no longer contains text that references invalid paths or missing files for the component that is being updated.
 
-## Examples
+### Examples
 
 The following examples are entries and explanations of actions that are outlined in the output file that is generated when you run the FindSQLInstalls.vbs script.
 
-## Example 1: Missing installer files
+#### Example 1: Missing installer files
 
 The following is an example of the output that is generated when you are missing an .msi package in the Windows Installer cache folder.
 
@@ -128,7 +150,7 @@ The following section of the output advises you of actions that are required to 
 
 > Action needed, recreate or re-establish path to the directory: G:\x64\setup\sql_engine_core_inst_msi\then rerun this script to update installer cache and results The path on the line above must exist at the root location to resolve this problem with your msi/msp file not being found or corrupted, In some cases you may need to manually copy the missing file or manually replace the problem file overwriting it is exist: Copy "G:\x64\setup\sql_engine_core_inst_msi\sql_engine_core_inst.msi" C:\WINDOWS\Installer\19b4d2.msi Replace the existing file if prompted to do so.
 
-## Example 2: Missing patches
+#### Example 2: Missing patches
 
 Missing patches may result in entries that resemble those in Example 1. Most of the time, you will notice entries in the Patch LastUsedSource line that reference a patch, and this line resembles: `Patch LastUsedSource: n;1;c:\0ca91e857a4f12dd390f0821a3\HotFixSQL\Files\`.
 
@@ -147,7 +169,7 @@ Patch LastUsedSource:
 
 The KB Article URL line can help you download any patch media, if this is necessary.
 
-## Procedure 2: Manually restore the files
+### Manually restore the files
 
 To manually restore the files that are missing from the Windows Installer cache, follow these steps:
 
@@ -197,30 +219,25 @@ If you examine this setup log carefully, it already gives you the information ab
 To find more details about the missing .msp file in the Windows Installer cache, follow these steps:
 
 1. Search for the missing .msp file in the following Windows Installer Patches registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Patches\`
+1. Find the **Patch GUID**.
+1. Search for the Patch GUID in the following Windows Installer Products registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\`
 
-2. Find the **Patch GUID**.
+   For the sample setup log, the information about the missing .msp file and its corresponding patch details are present in the following registry entries:
 
-3. Search for the Patch GUID in the following Windows Installer Products registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\`
+   ```
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Patches\A3B085EA74A9A7640A496636F7EF9A44
+    Value: 0
+    Name: LocalPackage
+    Data: `C:\WINDOWS\Installer\145258.msp
+   ```
 
-For the sample setup log, the information about the missing .msp file and its corresponding patch details are present in the following registry entries:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Patches\A3B085EA74A9A7640A496636F7EF9A44`
-
-Value: 0
-
-Name: LocalPackage
-
-Data: `C:\WINDOWS\Installer\145258.msp`
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\1EB3A031CC585314E87AA527E46EECC2\Patches\A3B085EA74A9A7640A496636F7EF9A44`  
-
-Value: 6
-
-Name: DisplayName
-
-Data: GDR 2050 for SQL Server Database Services 2005 ENU (KB932555)
-
-Now you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
+   ```
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\1EB3A031CC585314E87AA527E46EECC2\Patches\A3B085EA74A9A7640A496636F7EF9A44
+    Value: 6
+    Name: DisplayName
+    Data: GDR 2050 for SQL Server Database Services 2005 ENU (KB932555)
+   ```
+ Now you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
 
 > [!NOTE]
 > If you use SQL Server 2008 Service Pack 3 (SP3) or a later version, you can also receive a similar error message for the missing .msi files. By using this error message, you can quickly determine which file is missing, what service pack to download, and where you can find the download.
