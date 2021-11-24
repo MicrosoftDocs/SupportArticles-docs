@@ -10,9 +10,9 @@ Welcome to SQL Server troubleshooting. These articles explain how to determine, 
 
 ### You can contribute to SQL Server troubleshooting documentation
 
-- See [How to contribute to SQL Server Documentation](/sql/sql-server/sql-server-docs-contribute).
+See [How to contribute to SQL Server Documentation](/sql/sql-server/sql-server-docs-contribute).
 
 ### Builds and Cumulative Updates available for SQL Server versions
 
-- See [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
+See [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
 
