@@ -179,18 +179,17 @@ To manually restore the files that are missing from the Windows Installer cache,
     - Original MSP file that is used by the Patch: sql_engine_core_inst.msp
     - Cached MSP file: `c:\Windows\Installer\1fdb1aec.msp`
 
-1. If you do not have all the details, see the [Procedure 2: Manually restore the files](#procedure-2-manually-restore-the-files) section for the steps to collect these details.
-
+1. If you do not have all the details, see the previous step to collect these details.
 1. Visit [Queries](https://support.microsoft.com), and search for the KB article that is associated with this patch. In this example, you must search for KB981355.
-
 1. Download this patch package to your computer. Make sure that you download the patch package that corresponds to the required platform. In this example, the package is SQLServer2008R2-KB981355-x64.exe.
+1. Extract the contents of the patch package by using the syntax: 
 
-1. Extract the contents of the patch package by using the syntax: `C:\Temp>SQLServer2008R2-KB981355-x64.exe /x C:\Temp\SQLServer2008R2-KB981355-x64\`.
-
+   ```cmd
+   C:\Temp>SQLServer2008R2-KB981355-x64.exe /x C:\Temp\SQLServer2008R2-KB981355-x64\
+   ```
+   
 1. Locate the original msp file *sql_engine_core_inst.msp* file. The file should be in the following folder: `C:\Temp\SQLServer2008R2-KB981355-x64\x64\setup\sql_engine_core_inst_msi\`.
-
 1. Copy this original msp file to the following Windows Installer cache: `%windir%\installer\`.
-
 1. Rename the original msp file, *sql_engine_core_inst.msp*, to the name: cached msp file 1fdb1aec.msp.
 
 You can start the Setup program for the update that resulted in the error and resume the update process. You may encounter this message for a missing Windows Installer cache file for another component or for another update of the same product.
