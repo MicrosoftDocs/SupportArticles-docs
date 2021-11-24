@@ -44,9 +44,9 @@ To work around this issue, you must fix the problem that caused validation to fa
 
 At a command prompt, change to the hard disk drive and to the folder that contains SQL Server Setup (Setup.exe). Then, type one of the following commands to skip the validation rule:
 
-- For an integrated failover Add-Note setup, run the command on each node that is being added: `Setup/SkipRules=Cluster_VerifyForErrors/Action=InstallFailoverCluster`.
+- For an integrated failover Add-Note setup, run the command on each node that is being added: `Setup /SkipRules=Cluster_VerifyForErrors /Action=InstallFailoverCluster`.
 
-- For an advanced or enterprise installation, run the command: `Setup/SkipRules=Cluster_VerifyForErrors/Action=CompleteFailoverCluster`
+- For an advanced or enterprise installation, run the command: `Setup /SkipRules=Cluster_VerifyForErrors /Action=CompleteFailoverCluster`
 
 - If you receive this validation failure when you add a node to an existing failover installation, run the command on each node that is being added: `Setup /SkipRules=Cluster_VerifyForErrors /Action=AddNode`.
 
