@@ -246,3 +246,22 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 1. After the process completes, close Edge and try to activate again.
 
 </details>
+
+<details>
+<summary><b>Delete officeclient subfolders in the registry</b></summary>
+
+**Important** Resetting Edge settings might cause certain webpages that rely on custom settings to not work properly.
+
+1. From Start, type *regedit*, and then select **Registry Editor** from the results.
+1. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet\WebServiceCache\AllUsers\officeclient.microsoft.com`.
+1. Delete all subfolders of `officeclient.microsoft.com`.
+1. Restart the device and try to activate again.
+
+</details>
+
+<details>
+<summary><b>Turn off Default Security from portal.azure.com</b></summary>
+
+To do so, follow the steps in ["Disabling security defaults" section of What are security defaults?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#disabling-security-defaults)
+
+</details>
