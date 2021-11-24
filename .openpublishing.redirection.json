@@ -977,7 +977,7 @@
     },
     {
       "source_path": "support/sql/admin/17053-and-926-errors-running-dbcc.md",
-      "redirect_url": "/troubleshoot/sql/admin/17053-and-926-errors-running-dbcc-checkdb",
+      "redirect_url": "/troubleshoot/sql/admin/17053-and-926-errors-running-dbcc-check",
       "redirect_document_id": true
     },
     {
