@@ -225,7 +225,7 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 </details>
 
 <details>
-<summary><b>Test</b></summary>
+<summary><b>Reset Winsock</b></summary>
 
 1. Test a.
 1. Test b.
