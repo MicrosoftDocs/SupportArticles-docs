@@ -43,7 +43,7 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
 
 ## Check domain connectivity by using nltest
 
-The [Nltest](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11)) tool is a command-line tool that is built into Windows Server. It is available as part of the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
+[Nltest](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11)) is a command-line tool that is built into Windows Server. It is available as part of the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 
 - To check the domain controllers of the domain, run the following command at the command prompt:
 
