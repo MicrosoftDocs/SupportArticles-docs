@@ -5,6 +5,8 @@ ms.date: 2/3/2021
 ms.prod-support-area-path: 
 ms.reviewer: nualex
 editor: v-jesits
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 
 # End-to-end troubleshooting of Azure AD Connect objects and attributes

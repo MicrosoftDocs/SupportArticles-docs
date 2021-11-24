@@ -138,6 +138,6 @@ In most cases, no action is needed because most application workloads won't be i
 
 - [Cardinality Estimation (SQL Server)](/sql/relational-databases/performance/cardinality-estimation-sql-server)
 - [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance)
-- [Query Hints](/sql/t-sql/queries/hints-transact-sql-query.md)
-- [USE HINT Query Hints](/sql/t-sql/queries/hints-transact-sql-query.md#use_hint)
-- [Query Processing Architecture Guide](/sql/relational-databases/query-processing-architecture-guide.md)
+- [Query Hints](/sql/t-sql/queries/hints-transact-sql-query)
+- [USE HINT Query Hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint)
+- [Query Processing Architecture Guide](/sql/relational-databases/query-processing-architecture-guide)

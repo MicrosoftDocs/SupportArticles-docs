@@ -4,6 +4,7 @@ description: Describes how to sort a ListView control by a column in Visual C#. 
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to sort a ListView control by using a column  
 

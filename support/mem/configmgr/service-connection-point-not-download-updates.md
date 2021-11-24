@@ -46,7 +46,7 @@ After you've obtained the certificate, you must import it. To import the certifi
 
 You should now see an entry for Baltimore CyberTrust Root under **Trusted Root Certificate Authority**:
 
-:::image type="content" source="media/service-connection-point-not-download-updates/certificate.png" alt-text="Screenshot of Baltimore CyberTrust Root entry.":::
+:::image type="content" source="media/service-connection-point-not-download-updates/certificate.png" alt-text="Screenshot of Baltimore CyberTrust Root entry." lightbox="media/service-connection-point-not-download-updates/certificate.png":::
 
 ## More information
 

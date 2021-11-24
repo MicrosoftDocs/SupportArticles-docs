@@ -1,7 +1,7 @@
 ---
 title: Swap file is not re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
-ms.date: 7/27/2021
+ms.date: 10/25/2021
 ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.collection: linux
@@ -32,19 +32,19 @@ To resolve this problem, follow these steps:
 1. Disable resource disk formatting, and then swap the configuration within the waagent configuration file: `/etc/waagent.conf`. To do this, follow the cloud-init method:
 
     ```
-    # Format if unformatted. If 'n', resource disk will not be mounted. ResourceDisk.Format=n 
-    # Create and use swapfile on resource disk. ResourceDisk.EnableSwap=n** 
+    vi /etc/waagent.conf
+
+    # Format if unformatted. If 'n', resource disk will not be mounted. 
+    ResourceDisk.Format=n 
+    # Create and use swapfile on resource disk.
+    ResourceDisk.EnableSwap=n
     ```
 
 2. Make sure that the Azure Linux Agent is not trying to mount the ephemeral disk. This is because the task is typically handled by cloud-init. Set the parameters as follows:
 
     ```
-    # vi /etc/waagent.conf 
     #Mount point for the resource disk 
     ResourceDisk.MountPoint=/mnt 
-
-    #Create and use swapfile on resource disk. 
-    ResourceDisk.EnableSwap=n 
 
     #Size of the swapfile. 
     ResourceDisk.SwapSizeMB=0

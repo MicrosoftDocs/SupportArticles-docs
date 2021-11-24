@@ -18,7 +18,7 @@ You have a custom Intune role assigned. The custom role includes permissions tha
 > Save application failed.  
 > You don't have enough permissions to update this application, contact your administrator.
 
-:::image type="content" source="media/save-application-failed-error/save-application-failed-error.png" alt-text="Save application failed error.":::
+:::image type="content" source="media/save-application-failed-error/save-application-failed-error.png" alt-text="Screenshot of the Save application failed error.":::
 
 ## Cause
 

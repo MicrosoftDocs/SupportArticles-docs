@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when trying to save a r
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-apps-addons
 ---
 # "The specified user is either disabled or is not a member of any business unit" error when trying to save a record in Microsoft Dynamics CRM
 

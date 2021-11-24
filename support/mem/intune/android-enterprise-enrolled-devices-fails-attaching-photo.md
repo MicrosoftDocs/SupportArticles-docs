@@ -18,7 +18,7 @@ On an Android Enterprise work profile enrolled device, when you try to attach a 
 
 > Unable to add attachment due to IO error
 
-:::image type="content" source="./media/android-enterprise-enrolled-devices-fails-attaching-photo/error.png" alt-text="Screenshot of the IO error.":::
+:::image type="content" source="media/android-enterprise-enrolled-devices-fails-attaching-photo/unable-add-attachment-error.png" alt-text="Screenshot of the IO error." border="false":::
 
 ## Cause
 

@@ -4,6 +4,7 @@ description: This article describes a problem in which the Low Fragmentation Hea
 ms.date: 03/16/2020
 ms.prod-support-area-path: System services development
 ms.reviewer: jlambert, davean
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # Heap manager may not decommit memory after memory is freed
 

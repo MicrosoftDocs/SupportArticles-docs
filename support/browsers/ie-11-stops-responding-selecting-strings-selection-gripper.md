@@ -4,6 +4,7 @@ description: Provides a workaround for the issue that Internet Explorer 11 stops
 ms.date: 09/28/2021
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni, yuhara
+ms.technology: internet-explorer-stability-performance
 ---
 # Internet Explorer 11 stops responding when selecting strings with the selection gripper
 

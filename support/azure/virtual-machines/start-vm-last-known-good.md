@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 4016731
 3. Click the **HKEY_USERS** key, and then select **File > Load Hive** on the menu.
 4. Navigate to `\windows\system32\config\SYSTEM` type a name for the hive, such as **ProblemSystem**. After you do this, you will see the registry hive under **HKEY_USERS**.
 
-    :::image type="content" source="media/start-vm-last-known-good/4016734_en_1.png" alt-text="Screenshot of registry keys.":::
+    :::image type="content" source="media/start-vm-last-known-good/registry-editor.png" alt-text="Screenshot shows registry key ProblemSystem under HKEY_USERS." border="false":::
 
 5. Expand to `HKEY_USERS/ProblemSystem/Select`, and then modify the following values based on the OS version:
 

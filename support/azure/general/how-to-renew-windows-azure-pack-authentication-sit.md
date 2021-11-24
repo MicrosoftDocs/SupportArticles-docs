@@ -4,7 +4,7 @@ description: Describes an issue in which Windows Azure Pack sites certificates e
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: azure-stack
+ms.service: cloud-services
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---

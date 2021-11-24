@@ -1,7 +1,7 @@
 ---
 title: New SMB file server 3.0 features
 description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows Server introduced SMB 3.0.
-ms.date: 09/08/2020
+ms.date: 10/28/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 8.1 - all editions, Windows Server 2012 R2 and later versions of Windows  
 _Original KB number:_ &nbsp; 2709568
 
 ## Summary
@@ -62,7 +62,7 @@ Both the SMB client and SMB server must support SMB 3.0 to take advantage of the
 
 ### SMB Direct (SMB over Remote Direct Memory Access [RDMA])
 
-SMB Direct is available only on the Windows Server platform and was introduced in Windows Server 2012. SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
+SMB Direct is available in Windows Server 2012, Windows 10 (Enterprise, Education, and Pro for Workstations editions), and later versions. SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
 
 ### SMB Encryption
 
@@ -78,7 +78,7 @@ Both the SMB client and SMB server must support SMB 3.0 to take advantage of the
 
 ### SMB PowerShell
 
-SMB PowerShell management cmdlets were introduced in Windows Server 2012 and in Windows 8. Older SMB clients and SMB servers will have to continue using down-level tools for management (for example, Net.exe) and APIs (for example, Win32 APIs).
+SMB PowerShell management cmdlets were introduced in Windows Server 2012 and in Windows 8. Older SMB clients and SMB servers will have to continue using down-level tools for management (for example, *net.exe*) and APIs (for example, Win32 APIs).
 
 ## References
 

@@ -3,6 +3,7 @@ title: Create all-inclusive deployment package for Internet Explorer 11
 description: Describes how to create a one-restart installation package for Internet Explorer 11.
 ms.date: 04/26/2020
 ms.prod-support-area-path: 
+ms.technology: internet-explorer-installation
 ---
 # How to create an all-inclusive deployment package for Internet Explorer 11
 

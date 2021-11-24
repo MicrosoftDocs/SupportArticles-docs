@@ -4,6 +4,7 @@ description: Discusses an installation and configuration issue with the Microsof
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Errors when you try to install or to configure the Microsoft Dynamics CRM Client for Microsoft Office Outlook
 

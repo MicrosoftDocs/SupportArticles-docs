@@ -56,7 +56,7 @@ To use `Nslookup` to verify the SRV records, follow these steps:
 2. In the **Open** box, type `cmd`.
 3. Type `nslookup`, and then press ENTER.
 4. Type `set type=all`, and then press ENTER.
-5. Type `_ldap._tcp.dc._msdcs. Domain_Name`, where \<Domain_Name> is the name of your domain, and then press ENTER.
+5. Type `_ldap._tcp.dc._msdcs.Domain_Name`, where \<Domain_Name> is the name of your domain, and then press ENTER.
 
 `Nslookup` returns one or more SRV service location records that appear in the following format, where \<Server_Name> is the host name of a domain controller, and where \<Domain_Name> is the domain where the domain controller belongs to, and \<Server_IP_Address> is the domain controller's Internet Protocol (IP) address:
 

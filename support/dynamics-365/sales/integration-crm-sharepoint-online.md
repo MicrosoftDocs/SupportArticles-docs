@@ -4,6 +4,7 @@ description: Integration of MS Dynamics CRM 2011 with SharePoint Online 2007 (BP
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-connectors
 ---
 # Integration between Microsoft Dynamics CRM Online and SharePoint Online
 

@@ -2,8 +2,9 @@
 title: Can't sign in when JavaScript is disabled
 description: This article discusses a problem in which you can't sign in to Visual Studio 2013 when JavaScript is disabled in Internet Explorer and provides a workaround.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: anthc, meyoung
+ms.technology: vs-general
 ---
 # You can't sign in to Visual Studio 2013 when JavaScript is disabled in Internet Explorer
 

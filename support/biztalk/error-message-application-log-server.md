@@ -4,6 +4,7 @@ description: This article explains possible causes and resolutions for the error
 ms.date: 09/27/2020
 ms.prod-support-area-path: Performance
 ms.prod: biztalk-server
+ms.technology: biztalk-server-performance
 ---
 # Error message in the application log of a computer that is running BizTalk Server
 

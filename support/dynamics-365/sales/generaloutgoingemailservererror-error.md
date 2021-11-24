@@ -4,6 +4,7 @@ description: Email Server Error Code GeneralOutgoingEmailServerError occurs in a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # GeneralOutgoingEmailServerError error occurs in Microsoft Dynamics 365 mailbox
 

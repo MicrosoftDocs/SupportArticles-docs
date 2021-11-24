@@ -6,6 +6,7 @@ ms.topic: troubleshooting
 ms.date: 06/18/2021
 author: simonxjx
 ms.author: v-six
+ms.subservice: powerapps-solutions
 ---
 # Can't import solutions or publish unmanaged changes in Power Platform
 

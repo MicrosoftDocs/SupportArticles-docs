@@ -5,6 +5,7 @@ ms.date: 03/19/2020
 ms.prod-support-area-path: WWW modules and features
 ms.reviewer: jamesche
 ms.topic: how-to
+ms.technology: iis-www-modules-features
 ---
 # Disable the Save Embedded Files dialog in Expression Web 4
 

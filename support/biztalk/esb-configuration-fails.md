@@ -4,6 +4,7 @@ description: BizTalk ESB configuration fails because of problems in ESB.config.
 ms.date: 03/16/2020
 ms.prod-support-area-path: ESB Toolkit
 ms.reviewer: shaheera
+ms.technology: biztalk-server-esb-toolkit
 ---
 # ESB configuration fails with unrecognized element typeConfig
 

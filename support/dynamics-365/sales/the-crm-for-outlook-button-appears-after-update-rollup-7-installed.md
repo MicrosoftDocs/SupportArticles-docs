@@ -4,6 +4,7 @@ description: Describes a by design behavior that you may see the Get CRM For Out
 ms.reviewer: chanson, mmaasjo
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # The CRM For Outlook button appears after installing Update Rollup 7 for Microsoft Dynamics CRM 2011
 

@@ -59,7 +59,7 @@ Before you deploy the software package, test whether the package can be installe
 
    Here's an example of Skype MSI:
 
-   :::image type="content" source="./media/software-distribution-best-practices/switch.png" alt-text="Screenshot of switch.":::
+   :::image type="content" source="media/software-distribution-best-practices/switch.png" alt-text="Screenshot of switch in Skype MSI.":::
 
    Besides the `/quiet` switch that's added by Intune, you must add the `/passive` and `/qn` switches to enable silent installation.
 

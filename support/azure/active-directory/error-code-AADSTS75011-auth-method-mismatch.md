@@ -4,6 +4,8 @@ description: Describes a problem in which you receive an error message when sign
 ms.date: 03/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
+ms.service: active-directory
+ms.subservice: app-mgmt
 ---
 # Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef
 

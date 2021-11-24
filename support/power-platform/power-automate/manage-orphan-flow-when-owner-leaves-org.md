@@ -4,6 +4,7 @@ description: Describes how to manage orphan flows when the owner leaves the orga
 ms.reviewer: 
 ms.topic: how-to
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # How to manage orphan flows when the owner leaves the organization
 

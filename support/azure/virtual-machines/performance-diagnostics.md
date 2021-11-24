@@ -64,7 +64,7 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 1. From the list of VM names, select the VM that you want to run diagnostics on.
 1. In the right column of commands, select **Performance diagnostics**.
 
-    ![Screenshot of Azure portal, with Install performance diagnostics button highlighted](media/performance-diagnostics/performance-diagnostics-install.png)
+    :::image type="content" source="media/performance-diagnostics/performance-diagnostics-install.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
 
     > [!NOTE]
     > In this screenshot, the blade of VM names is hidden.
@@ -74,14 +74,14 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 
     If you do not specify a storage account, a new storage account will be created by default.
 
-    ![Screenshot of Performance diagnostics blade, with Settings toolbar button highlighted](media/performance-diagnostics/settings-button.png)
+    :::image type="content" source="media/performance-diagnostics/settings-button.png" alt-text="Screenshot of Performance diagnostics blade, with Settings toolbar button highlighted.":::
 
-    ![Screenshot of storage account selection from Performance diagnostics settings blade](media/performance-diagnostics/select-storage-account.png)
+    :::image type="content" source="media/performance-diagnostics/select-storage-account.png" alt-text="Screenshot of storage account selection from Performance diagnostics settings blade.":::
 
 1. Select the **Install performance diagnostics** button.
 1. Select the **Run diagnostics** check box if you want to run a diagnostic after the installation is completed. If you make this selection, you will be able to choose the performance analysis scenario and related options.
 
-    ![Screenshot of Performance diagnostics install button](media/performance-diagnostics/install-diagnostics-button.png)
+    :::image type="content" source="media/performance-diagnostics/install-diagnostics-button.png" alt-text="Screenshot of Performance diagnostics install button. The Run diagnostics after installation finishes option is checked.":::
 
 ## Select an analysis scenario to run
 
@@ -102,7 +102,7 @@ The following analysis scenarios are available from the Azure portal. Select an 
 >[!Note]
 >[`*`] These analysis scenarios are only supported on Windows.
 
-![Screenshot of Run diagnostics pane inside Performance diagnostics blade](media/performance-diagnostics/run-diagnostics-pane.png)
+:::image type="content" source="media/performance-diagnostics/run-diagnostics-pane.png" alt-text="Screenshot of Run diagnostics pane inside Performance diagnostics blade.":::
 
 ### Provide symptoms (optional)
 
@@ -128,7 +128,7 @@ After the analysis is complete, the following items are uploaded to Azure tables
 
 After the upload, a new diagnostics report is listed in the Azure portal.
 
-![Screenshot of a list of diagnostics report in Performance diagnostics blade](media/performance-diagnostics/diagnostics-report-list.png)
+:::image type="content" source="media/performance-diagnostics/diagnostics-report-list.png" alt-text="Screenshot of a list of diagnostics report in Performance diagnostics blade.":::
 
 ## How to change performance diagnostics settings
 
@@ -142,7 +142,7 @@ Each diagnostic run contains a list of insights and recommendations, affected re
 
 You can use the diagnostics report list to find all the diagnostics reports that were run. The list includes details about the analysis that was used, insights that were found, and their impact levels. Select a row to view more details.
 
-![Screenshot of selecting a diagnostics report from Performance diagnostics blade](media/performance-diagnostics/select-report.png)
+:::image type="content" source="media/performance-diagnostics/select-report.png" alt-text="Screenshot of selecting a diagnostics report from Performance diagnostics blade.":::
 
 ### Review a performance diagnostics report
 
@@ -150,13 +150,13 @@ Each performance diagnostics report may contain several insights and indicate an
 
 Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you may have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
 
-![Screenshot of Performance diagnostics report overview blade](media/performance-diagnostics/performance-diagnostics-report-overview.png)
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-report-overview.png" alt-text="Screenshot of Performance diagnostics report overview blade.":::
 
 ### Reviewing performance diagnostics insights and recommendations
 
 You can select an insight to view more details about the affected resources, suggested mitigations, and reference links.
 
-![Screenshot of a Performance diagnostics insight detail](media/performance-diagnostics/insight-detail.png)
+:::image type="content" source="media/performance-diagnostics/insight-detail.png" alt-text="Screenshot of a Performance diagnostics insight detail.":::
 
 ### Download and review the full performance diagnostics report
 
@@ -170,7 +170,7 @@ You can delete one or more performance diagnostics reports by using the **Delete
 
 You can uninstall performance diagnostics from a VM. This action removes the VM extension but does not affect any diagnostics data that is in the storage account.
 
-![Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted](media/performance-diagnostics/uninstal-button.png)
+:::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted.":::
 
 ## Frequently asked questions
 
@@ -185,7 +185,7 @@ You can view the storage account information by using the Settings button on the
 There are multiple ways to share the diagnostics report with Microsoft.
 
 **Option 1:** Automatically share the latest report  
-When you open a support ticket with Microsoft, it is important to share the performance diagnostics report. If you opted to share this information with Microsoft while you run the diagnostics (by selecting the “**I agree to share diagnostics information with Microsoft**” check box), Microsoft will be able to access the report from your storage account using a SAS link to the output zip file for up to 30 days from the run date. Only the latest report is available to the support engineer.
+When you open a support ticket with Microsoft, it is important to share the performance diagnostics report. If you opted to share this information with Microsoft while you run the diagnostics (by selecting the "**I agree to share diagnostics information with Microsoft**" check box), Microsoft will be able to access the report from your storage account using a SAS link to the output zip file for up to 30 days from the run date. Only the latest report is available to the support engineer.
 
 **Option 2:** Generate a Shared Access Signature for the diagnostics report compressed file  
 You may share a link to the reports compressed file by using Shared Access Signatures. To do this, follow these steps:

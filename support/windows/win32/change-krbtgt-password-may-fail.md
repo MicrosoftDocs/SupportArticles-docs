@@ -4,6 +4,7 @@ description: Changing the krbtgt password may fail with STATUS_PASSWORD_RESTRICT
 ms.date: 03/16/2020
 ms.prod-support-area-path: Security development
 ms.reviewer: msmall
+ms.technology: windows-dev-apps-security-dev
 ---
 # Changing the Krbtgt password may fail when a custom password filter is installed
 

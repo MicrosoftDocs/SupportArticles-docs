@@ -4,7 +4,7 @@ description: Describes the support options and coverage that Microsoft offers fo
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
-ms.service: container-service
+ms.service: azure
 ms.author: genli
 author: genlin
 ---
@@ -43,7 +43,7 @@ Container orchestrators are enabled to work with container deployments as mentio
 
 We recommend that you use community resources or contact the orchestrator provider for additional technical assistance:
 
-- [Mesosphere](https://support.d2iq.com/s/)
+- [Mesosphere](https://support.d2iq.com/)
 - [Docker Swarm](https://success.docker.com/Policies/Scope_of_Support)
 - [DC/OS](https://dcos.io/community/)
 - [Kubernetes](https://kubernetes.io/community/)

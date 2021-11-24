@@ -4,6 +4,7 @@ description: This article describes a problem for the regarding field on activit
 ms.reviewer: clintwa
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # Relationship for activity about fields is reset after you import a solution to Microsoft Dynamics CRM
 

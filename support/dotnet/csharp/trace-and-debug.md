@@ -4,6 +4,7 @@ description: This article describes how to trace and debug in Visual C# and prov
 ms.date: 10/09/2020
 ms.prod-support-area-path: Language or Compilers
 ms.topic: how-to
+ms.technology: csharp-language-compilers
 ---
 # Trace and debug in Visual C sharp
 

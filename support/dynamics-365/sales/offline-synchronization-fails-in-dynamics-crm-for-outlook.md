@@ -4,6 +4,7 @@ description: This article discusses how to used advanced configuration options a
 ms.reviewer: clintwa
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Offline synchronization fails in Microsoft Dynamics CRM client for Outlook
 

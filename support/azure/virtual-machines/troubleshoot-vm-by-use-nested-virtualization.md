@@ -3,7 +3,7 @@ title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure | 
 description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
 services: virtual-machines
 documentationcenter: ''
-author: glimoli
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: vm-windows
 
 ms.topic: article
 ms.date: 10/11/2020
-ms.author: genli
+ms.author: glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
@@ -30,7 +30,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     -  Operating system: Windows Server 2016 Datacenter
 
-    -  Size: Any V3 series with at least two cores that support nested virtualization. For more information, see [Introducing the new Dv3 and Ev3 VM sizes](https://azure.microsoft.com/blog/introducing-the-new-dv3-and-ev3-vm-sizes/).
+    -  Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
     -  Same location, Storage Account, and Resource Group as the faulty VM.
 
@@ -60,7 +60,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 13. Allow the server to install the Hyper-V role. This takes a few minutes and the server will reboot automatically.
 
-## Step 2: Create the faulty VM on the Rescue VM’s Hyper-V server
+## Step 2: Create the faulty VM on the Rescue VM's Hyper-V server
 
 1.  [Create a snapshot disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) for the OS disk of the VM that has problem, and then attach the snapshot disk to the Rescue VM.
 
@@ -82,7 +82,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 10. Select **Attach a virtual hard disk later**.
 
-    ![the image about the Attach a Virtual Hard Disk Later option](media/troubleshoot-vm-by-use-nested-virtualization/attach-disk-later.png)
+    :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/attach-virtual-hard-disk-later.png" alt-text="Screenshot shows the Attach a Virtual Hard Disk Later option under the Connect Virtual Hard Disk entry." border="false":::
 
 11. Select **Finish** when the VM is created.
 
@@ -90,12 +90,11 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 13. Select **IDE Controller 0**, select **Hard Drive**, and then click **Add**.
 
-    ![the image about adds new hard drive](media/troubleshoot-vm-by-use-nested-virtualization/create-new-drive.png)    
+    :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/create-new-drive.png" alt-text="Screenshot shows steps to add a new hard drive." border="false":::
 
 14. In **Physical Hard Disk**, select the disk of the faulty VM that you attached to the Azure VM. If you do not see any disks listed, check if the disk is set to offline by using Disk management.
 
-    ![the image about mounts the disk](media/troubleshoot-vm-by-use-nested-virtualization/mount-disk.png)  
-
+    :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/physical-hard-disk.png" alt-text="Screenshot shows the Physical hard disk area." border="false":::
 
 15. Select **Apply**, and then select **OK**.
 

@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: henningp, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics CRM 2011 Outlook client configuration fails with error (The specified Microsoft Dynamics CRM server address (URL) is not responding)
 

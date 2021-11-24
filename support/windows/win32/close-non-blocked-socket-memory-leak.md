@@ -4,6 +4,7 @@ description: Closing a non-blocking socket with linger enabled and the linger ti
 ms.date: 03/09/2020
 ms.prod-support-area-path: Networking development
 ms.reviewer: atuck
+ms.technology: windows-dev-apps-networking-dev
 ---
 # Closing a non-blocking socket with linger enabled may cause leak
 

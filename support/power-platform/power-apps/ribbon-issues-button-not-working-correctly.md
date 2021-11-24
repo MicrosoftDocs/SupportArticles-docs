@@ -4,6 +4,7 @@ description: Fixes an issue in which a button in the command bar is not working 
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/20/2021
+ms.subservice: powerapps-ribbons-commanding
 ---
 # A button in the command bar is not working correctly
 

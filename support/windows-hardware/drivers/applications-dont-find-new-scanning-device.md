@@ -4,6 +4,7 @@ description: This article provides workarounds for the error that occurs when an
 ms.date: 01/29/2021
 ms.prod-support-area-path: Developer Tools\Windows Driver Kit (WDK, HLK)\Windows Driver Kit 10\Other Driver\Scanner
 ms.reviewer: jesweare
+ms.technology: windows-hardware-other-driver
 ---
 # Applications are unable to find a new scanning device after another device is disconnected
 

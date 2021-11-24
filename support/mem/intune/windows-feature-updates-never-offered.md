@@ -59,7 +59,7 @@ To fix this issue, follow these steps:
 2. Select the profile that's assigned to the affected Windows 10 devices, and then select **Properties** > **Device restrictions** > **Cloud and Storage**.
 3. Set **Microsoft Account sign-in assistant** to **Not configured**.
 
-   :::image type="content" source="./media/windows-feature-updates-never-offered/sign-in-assistant.png" alt-text="Screenshot of the Microsoft Account sign-in assistant setting.":::
+   :::image type="content" source="media/windows-feature-updates-never-offered/sign-in-assistant.png" alt-text="Screenshot of the Microsoft Account sign-in assistant setting under Cloud and Storage.":::
 
 ## More information
 

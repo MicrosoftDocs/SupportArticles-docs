@@ -4,6 +4,7 @@ description: This article introduces about using the Configuration Editor featur
 ms.date: 04/02/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.topic: how-to
+ms.technology: iis-www-authentication-authorization
 ---
 # Configuring Many-to-One client certificate mappings for IIS 7.0 and 7.5
 

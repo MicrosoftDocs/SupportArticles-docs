@@ -4,6 +4,7 @@ description: This article introduces how to change the Enterprise Single Sign-On
 ms.date: 05/11/2020
 ms.prod-support-area-path: Setup and configuration
 ms.topic: how-to
+ms.technology: his-setup-configuration
 ---
 # Change the Enterprise SSO service account that runs on the master secret server in HIS and BizTalk Server
 

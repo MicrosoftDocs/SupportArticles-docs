@@ -5,6 +5,7 @@ ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: dougste
 ms.topic: article
+ms.technology: dotnet-general
 ---
 # Change in the TSAware flag behavior in .NET Framework 3.5 SP1
 

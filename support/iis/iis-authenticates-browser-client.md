@@ -4,6 +4,7 @@ description: This article describes how IIS authenticates browser clients.
 ms.date: 12/11/2020
 ms.prod-support-area-path: WWW Authentication and Authorization
 ms.topic: how-to
+ms.technology: iis-www-authentication-authorization
 ---
 # IIS authenticates browser clients
 

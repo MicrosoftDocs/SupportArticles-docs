@@ -4,6 +4,7 @@ description: Installation cannot proceed this error may occur when installing Mi
 ms.reviewer: v-anlang, ehagen, mmaasjo
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # "Installation cannot proceed" error when installing Microsoft Dynamics CRM for Microsoft Office Outlook
 

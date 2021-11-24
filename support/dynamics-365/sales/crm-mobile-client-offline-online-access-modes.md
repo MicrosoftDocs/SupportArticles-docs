@@ -4,6 +4,7 @@ description: This article describes CRM Mobile client offline and online access 
 ms.reviewer: 
 ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-phones
 ---
 # Understanding CRM Mobile client offline and online access modes in Microsoft Dynamics CRM 2011
 

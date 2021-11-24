@@ -1,9 +1,10 @@
 ---
 title: Calling PostCompletion twice may cause crash
-description: This article provides workaround for the problem where Calling HttpContext::PostCompletion method twice may cause crash.
+description: "This article provides workaround for the problem where Calling HttpContext::PostCompletion method twice may cause crash."
 ms.date: 12/11/2020
 ms.prod-support-area-path: Site Behavior and Performance
 ms.reviewer: ahmetmb
+ms.technology: iis-site-behavior-performance
 ---
 # Calling HttpContext::PostCompletion method twice may cause crash
 

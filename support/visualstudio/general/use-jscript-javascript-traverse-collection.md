@@ -5,7 +5,7 @@ ms.date: 09/24/2020
 ms.prod-support-area-path: Language or Compilers
 ms.reviewer: TFERRAND
 ms.topic: how-to
-ms.prod: visual-studio
+ms.technology: vs-language-compilers
 ---
 # Use JScript or JavaScript to traverse through a collection
 

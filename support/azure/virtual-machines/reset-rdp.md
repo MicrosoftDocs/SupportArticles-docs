@@ -31,9 +31,9 @@ First, sign in to the [Azure portal](https://portal.azure.com) and then select *
 
 ### **Reset the local administrator account password**
 
-1. Select your Windows VM and then select **Reset password** under **Support + Troubleshooting**. The **Reset password** window is displayed.
+1. Select your Windows VM and then select **Reset password** under **Help**. The **Reset password** window is displayed.
 
-2. Select **Reset password**, enter a username and a password, and then select **Update**. 
+2. Select **Reset password**, enter a username and a password, and then select **Update**.
 
 3. Try connecting to your VM again.
 
@@ -41,7 +41,7 @@ First, sign in to the [Azure portal](https://portal.azure.com) and then select *
 
 This process will enable Remote Desktop service in the VM, and create a firewall rule for the default RDP port 3389.
 
-1. Select your Windows VM and then select **Reset password** under **Support + Troubleshooting**. The **Reset password** window is displayed. 
+1. Select your Windows VM and then select **Reset password** under **Help**. The **Reset password** window is displayed. 
 
 2. Select **Reset configuration only** and then select **Update**. 
 

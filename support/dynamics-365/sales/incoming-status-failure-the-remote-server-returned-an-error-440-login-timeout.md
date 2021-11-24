@@ -4,6 +4,7 @@ description: Describes an error that occurs when you select Test Access in the M
 ms.reviewer: chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The remote server returned an error (440) Login Timeout error in Microsoft Dynamics CRM E-mail Router Configuration Manager
 

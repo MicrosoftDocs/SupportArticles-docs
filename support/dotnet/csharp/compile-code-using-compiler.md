@@ -4,6 +4,7 @@ description: Describes how to compile code from a text source by using C# compil
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Compile code programmatically by using C# compiler
 

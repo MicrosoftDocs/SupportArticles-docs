@@ -9,6 +9,8 @@
       href: custom-connectors-not-show-refresh-url.md
   - name: Others
     items:
+    - name: Custom pages and SDK script don't load
+      href: custom-pages-sdk-script-not-load.md
     - name: Lookup doesn't filter records for particular entity
       href: lookup-does-not-filter-entity-records.md
     - name: Required fields are missing in Dataverse records
@@ -33,5 +35,7 @@
     items:
     - name: '"Blocked a frame with origin" error'
       href: blocked-frame-with-origin-uci.md
+    - name: Cookies or pop-up blocker errors
+      href: cookies-pop-up-blocker-error.md
     - name: No response with back button
       href: no-navigation-when-selecting-button.md

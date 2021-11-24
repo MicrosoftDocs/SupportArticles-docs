@@ -4,6 +4,7 @@ description: Describes how to uninstall Internet Explorer 9 when the standard pr
 ms.date: 10/15/2020
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-installation
 ---
 # What to do if you can't uninstall Internet Explorer 9
 
