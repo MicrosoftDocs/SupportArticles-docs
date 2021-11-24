@@ -2,7 +2,6 @@
 title: Visibility to which GL accounts are inactive in FA batch
 description: Visibility to which GL accounts are inactive in an FA batch in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Visibility to which GL accounts are inactive in an FA batch in Microsoft Dynamics GP

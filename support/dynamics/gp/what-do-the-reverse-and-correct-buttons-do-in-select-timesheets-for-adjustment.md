@@ -2,7 +2,6 @@
 title: What Reverse and Correct buttons do in Select Timesheets for Adjustment
 description: Provides more information about what do the Reverse and Correct buttons do in the Select Timesheets for Adjustment window for Project Accounting in Microsoft Dynamics GP.
 ms.reviewer: isolson, cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # What do the Reverse and Correct buttons do in the "Select Timesheets for Adjustment" window for Project Accounting
