@@ -69,7 +69,7 @@ You can also allow Microsoft 365 to bypass the proxy server by creating a PAC fi
 <details>
 <summary><b>Check whether you're behind a firewall</b></summary>
 
-Are you behind a firewall? If you're not sure, ask your administrator. If you're behind a firewall, it might have to be configured to enable access to the following:
+Are you behind a firewall? If you're not sure, ask your administrator. If you're behind a firewall, it might have to be configured to enable access to the following URLs:
 
 - `officecdn.microsoft.com`
 - `ols.officeapps.live.com/olsc`
@@ -94,7 +94,7 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
   
 Each firewall will have a different method to enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you.
   
-For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
+For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 
 </details>
 
@@ -161,7 +161,7 @@ The Network Connectivity Status Indicator (NCSI) is an OS feature that determine
 
 Check if NCSI is registering your internet connection using the following steps:
 
-1. From Start, type *powershell*, and then select **Windows Powershell** from the search results.
+1. From Start, type *`powershell`*, and then select **Windows PowerShell** from the search results.
 1. At the command prompt, type the following command, and then press Enter:  
 `Get-NetConnectionProfile`
 1. If **IPv4Connectivity** says **Internet**, it suggests NCSI is registering your internet connection correctly. If it says **NoTraffic** or **LocalNetwork**, it is not.
@@ -174,7 +174,7 @@ Check if NCSI is registering your internet connection using the following steps:
 
 If NCSI isn’t registering your internet connection, try setting it to use GlobalDNS using the following steps:
 
-1. From Start, type regedit, and then select **Registry Editor** from the results.
+1. From Start, type *regedit*, and then select **Registry Editor** from the results.
 1. Use the arrows to expand selections and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows\NetworkConnectivityStatusIndicator`.
 1. Right-click the registry value and select **New**, then select **DWORD**.
 1. Name the DWORD `UseGlobalDNS`, and set the value to 1.
@@ -182,20 +182,33 @@ If NCSI isn’t registering your internet connection, try setting it to use Glob
 
 If you still can't activate, try temporarily disabling IPv4 Checksum Offload:
 
-1. From Start, type *powershell*, and then select **Windows Powershell** from the search results.
+1. From Start, type *`powershell`*, and then select **Windows PowerShell** from the search results.
 1. At the command prompt, type the following command, and then press Enter:  
 `Disable-NetAdapterChecksumOffload -Name "*" -TcpIPv4`
 1. Try activating again.
 
-If you’re still unable to activate, try temporarily disabling NCSI.
+If you’re still unable to activate, try temporarily disabling NCSI.cd 
 For instructions, see the [“Workaround” section of An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network](/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network#workaround).
+
+</details>
+
+<details>
+<summary><b>Reset Winsock</b></summary>
+  
+1. Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
+1. Type the following command, and then press Enter:  
+`netsh int ip reset`
+1. Type the following command, and then press Enter:  
+`netsh winsock reset`
+1. Restart the device.
+1. Try to activate Microsoft 365 again.
 
 </details>
 
 <details>
 <summary><b>Rename Connections registry value</b></summary>
 
-**Important** Before editing the registry, it is strongly recommended that you backup the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
+**Important** Before editing the registry, it is strongly recommended that you back up the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
 
 1. From Start, type *regedit*, and then select **Registry Editor** from the results.
 1. Use the arrows to expand selections and navigate to `HKEY_LOCAL_MACHINE/Software/Microsoft/Windows/ CurrentVersion/Internet Settings/Connections`.
@@ -208,7 +221,7 @@ For instructions, see the [“Workaround” section of An Internet Explorer or E
 <details>
 <summary><b>Check Network Services permissions</b></summary>
 
-**Important** Before editing the registry, it is strongly recommended that you backup the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
+**Important** Before editing the registry, it is strongly recommended that you back up the registry. For instructions, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
 
 1. From Start, type regedit, and then select **Registry Editor** from the results.
 1. Use the arrows to expand selections and navigate to `HKEY_USERS/S-1-5-20`.
@@ -256,7 +269,7 @@ To restore Edge’s default settings, use the following steps:
   
 1. From Start, type regedit, and then select **Registry Editor** from the results.
 1. Use the arrows to expand selections and navigate to `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet\WebServiceCache\AllUsers\officeclient.microsoft.com`.
-1. Delete all the subfolders of `officeclient.microsoft.com`.
+1. Delete all subfolders of `officeclient.microsoft.com`.
 1. Restart the device and try to activate again.
 
 </details>
