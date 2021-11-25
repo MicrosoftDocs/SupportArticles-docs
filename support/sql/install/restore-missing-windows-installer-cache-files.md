@@ -71,7 +71,7 @@ You can download the FixMissingMSI tool from the [GitHub repository](https://git
 
 #### How to use
 
-This is a grapical-user-interface (GUI) tool and enables you to identify and fix the missing MSIs easily. 
+This is a graphical-user-interface (GUI) tool and enables you to identify and fix the missing MSIs easily. 
 
 :::image type="content" source="media/fix-missing-msi-tool.png" alt-text="Screenshot FixMissingMSI Tool":::
 
