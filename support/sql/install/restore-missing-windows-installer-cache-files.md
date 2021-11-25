@@ -19,11 +19,9 @@ _Original KB number:_ &nbsp; 969052
 
 ## Symptoms
 
-When you install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages that indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores critical files for applications installed via the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately see problems. Issues will appear when you perform an uninstall, repair, or update of SQL Server.
+When you install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages that indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores critical files for applications installed via the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately see problems; issues will appear when you perform an uninstall, repair, or update of SQL Server.
 
-When you install SQL Server, the Windows Installer stores critical files in the Windows Installer Cache (default is *C:\Windows\Installer*). These files are required for uninstalling and updating applications. Missing files cannot be copied between computers, because they are unique.
-
-
+Because SQL Server uses Windows Installer technology, it can be affected by the issues described here. SQL server installation packages (.MSI and .MSP files) will be stored in the Windows Installer Cache. These files are required for uninstalling and updating applications. Missing files cannot be copied between computers, because they are unique.
 
 ## Cause
 
@@ -35,7 +33,6 @@ Any future update to the product such as a hotfix, a cumulative update, or a ser
 
 > [!WARNING]
 > The Installer cache directory (*%windir%\installer*) is automatically managed by Windows when applications install and update packages. Manual intervention by users in this directory may result in variety of issues, including the problems that are described in this article. 
-
 
 ## Resolution
 
