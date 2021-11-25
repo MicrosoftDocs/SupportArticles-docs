@@ -2,7 +2,6 @@
 title: The order in which the reconcile procedures should be run
 description: Describes the order in which you should run the reconcile procedures in Microsoft Dynamics GP or in Microsoft Business Solutions - Great Plains.
 ms.reviewer: krasmuss
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Information about the order in which the reconcile procedures should be run in Microsoft Dynamics GP

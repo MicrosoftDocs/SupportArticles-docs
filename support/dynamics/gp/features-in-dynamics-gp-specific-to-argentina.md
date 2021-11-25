@@ -2,7 +2,6 @@
 title: Features in Dynamics GP specific to Argentina
 description: Features in Microsoft Dynamics GP specific to Argentina.
 ms.reviewer: cwaswick
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Features in Microsoft Dynamics GP specific to Argentina

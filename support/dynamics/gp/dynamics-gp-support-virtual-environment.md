@@ -2,7 +2,6 @@
 title: Description of the support of Microsoft Dynamics GP in a virtual environment
 description: Describes the support of Microsoft Dynamics GP 10.0 in a virtual environment.
 ms.reviewer: kyouells, lmuelle
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the support of Microsoft Dynamics GP in a virtual environment
