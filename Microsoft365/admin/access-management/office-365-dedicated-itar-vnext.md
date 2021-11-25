@@ -26,11 +26,11 @@ After a migration to Microsoft Office 365 dedicated/ITAR (vNext), the Full Acces
 
 ## Cause
 
-Full Access permissions should be successfully migrated. However, if a provisioning readiness step isn't completed, the permissions no longer work. 
+Full Access permissions should be successfully migrated. However, if a provisioning readiness step isn't completed, the permissions no longer work. 
 
 ## Resolution
 
-To make sure that the migration does not have any negative effects, see the following information: 
+To make sure that the migration does not have any negative effects, see the following information: 
 
 *The Dedicated service, via Active Directory Trusts, has allowed customers to set permissions on cloud objects using on-premises security identifiers (SIDs). This is a practice that does not work for vNext as there will no longer be AD trusts to the on-premises directory. To ensure that permissions to shared mailboxes are not lost during migration, you must ensure that all permissions are set using cloud objects.*
 

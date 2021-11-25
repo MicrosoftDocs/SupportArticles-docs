@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp;3054391
 
 ## Symptoms
 
-When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
+When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
 
 ## Workaround
 
@@ -50,7 +50,7 @@ You might be able to work around this issue depending on the language settings o
         > - The system accounts include the network service account.
         > - You can revert the **Format** setting for **Current user** to the original value as long as **Format** for **Welcome screen** is set to **English (United States)**.
 
-        :::image type="content" source="./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Select the Welcome screen and system accounts option":::
+        :::image type="content" source="media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Screenshot that shows the Welcome screen and system accounts option is selected.":::
 
 > [!NOTE]
 > The MSExchangeDelivery service may not start together with Exchange Server. If the service doesn't start, follow these steps:

@@ -43,7 +43,7 @@ This is the recommended implementation of AD FS.
 
 #### Support assumptions 
 
-There are no support assumptions for this scenario. This scenario is supported by Microsoft Support. 
+There are no support assumptions for this scenario. This scenario is supported by Microsoft Support. 
 
 ### Scenario 2: Firewall-published AD FS
 
@@ -57,7 +57,7 @@ Extended Authentication Protection must be disabled on the AD FS Federation serv
 
 #### Support assumptions 
 
-It's assumed that the ISA/TMG firewall and reverse proxy rule are implemented correctly and are functional. For Microsoft Support to support this scenario, the following conditions must be true:  
+It's assumed that the ISA/TMG firewall and reverse proxy rule are implemented correctly and are functional. For Microsoft Support to support this scenario, the following conditions must be true:  
 
 - The reverse proxy of HTTPS (port 443) traffic between the Internet client and the AD FS server must be transparent.    
 - The AD FS server must receive a faithful copy of SAML requests from the Internet client.    
@@ -77,15 +77,15 @@ An AD FS Federation server farm services Active Directory client requests throug
 
 #### Limitations 
 
-Internet clients (including mobile devices) can't use Microsoft cloud service resources. For service-level reasons, we recommend that you do not do this. 
+Internet clients (including mobile devices) can't use Microsoft cloud service resources. For service-level reasons, we recommend that you do not do this. 
 
-Outlook rich clients cannot connect to Exchange Online resources. For more information, see the following Microsoft Knowledge Base article: 
+Outlook rich clients cannot connect to Exchange Online resources. For more information, see the following Microsoft Knowledge Base article: 
 
 [2466333](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailbox
 
 #### Support assumptions 
 
-It's assumed that the customer acknowledges by implementation that this setup doesn't provide the fully advertised suite of services that are supported by Azure Active Directory (Azure AD). Under these circumstances, this scenario is supported by Microsoft Support. 
+It's assumed that the customer acknowledges by implementation that this setup doesn't provide the fully advertised suite of services that are supported by Azure Active Directory (Azure AD). Under these circumstances, this scenario is supported by Microsoft Support. 
 
 ### Scenario 4: VPN-published AD FS
 
@@ -95,24 +95,24 @@ An AD FS Federation server (or Federation server farm) services Active Directory
 
 #### Limitations
 
-Unless Internet clients (including mobile devices) are VPN-capable, they can't use Microsoft cloud services. For service-level reasons, we recommend that you do not do this. 
+Unless Internet clients (including mobile devices) are VPN-capable, they can't use Microsoft cloud services. For service-level reasons, we recommend that you do not do this. 
 
 Outlook rich clients (including ActiveSync clients) can't connect to Exchange Online resources. For more information, see the following Microsoft Knowledge Base article:
 
 [2466333](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailboxSupport assumptions
 
-It's assumed that the customer acknowledges by implementation that this setup doesn't provide the fully advertised suite of services that are supported by identity federation in Azure AD. 
+It's assumed that the customer acknowledges by implementation that this setup doesn't provide the fully advertised suite of services that are supported by identity federation in Azure AD. 
 
-It's assumed the VPN is implemented correctly and is functional. For this scenario to be supported by Microsoft Support, the following conditions must be true: 
+It's assumed the VPN is implemented correctly and is functional. For this scenario to be supported by Microsoft Support, the following conditions must be true: 
 
 - The client can connect to the AD FS system by DNS name through HTTPS (port 443).    
-- The client can connect to the Azure AD federation endpoint by DNS name by using appropriate ports/protocols.    
+- The client can connect to the Azure AD federation endpoint by DNS name by using appropriate ports/protocols.    
 
 ### High-availability AD FS and Azure AD identity federation
 
 Each scenario can be varied by using a stand-alone AD FS Federation server instead of a server farm. However, it's always a Microsoft best-practice recommendation that all critical infrastructure services be implemented by using high-availability technology to avoid loss of access. 
 
-On-premises AD FS availability directly affects Microsoft cloud service availability for federated users, and its service level is the responsibility of the  customer. The Microsoft TechNet library contains extensive guidance on how to plan and deploy AD FS in the on-premises environment. This guidance can help customers reach their target service level for this critical subsystem. For more information, go to the following TechNet website: 
+On-premises AD FS availability directly affects Microsoft cloud service availability for federated users, and its service level is the responsibility of the  customer. The Microsoft TechNet library contains extensive guidance on how to plan and deploy AD FS in the on-premises environment. This guidance can help customers reach their target service level for this critical subsystem. For more information, go to the following TechNet website: 
 
 [Active Directory Federation Services (AD FS) 2.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd727958(v=ws.10))
 

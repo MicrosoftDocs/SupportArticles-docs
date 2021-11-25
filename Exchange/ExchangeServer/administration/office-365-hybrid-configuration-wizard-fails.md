@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp;4051381
 
 When you run the Microsoft Office 365 Hybrid Configuration Wizard after Exchange Server 2016 Cumulative Update 7 is installed, the wizard fails to run and reports that the Set-FederatedOrganizationIdentifier cmdlet returns error "Object reference not set to an instance of an object."
 
-This message is part of the following full error message that's written to the Hybrid Configuration Wizard log:
+This message is part of the following full error message that's written to the Hybrid Configuration Wizard log:
 
 ```console
 017.10.23 11:39:51.552         10276 [Client=UX, Activity=Domain Ownership, Session=OnPremises, Cmdlet=Set-FederatedOrganizationIdentifier, Thread=9] START Set-FederatedOrganizationIdentifier -AccountNamespace 'contoso.com' -DelegationFederationTrust 'Microsoft Federation Gateway' -Enabled: $true -DefaultDomain $null
@@ -58,7 +58,7 @@ Object reference not set to an instance of an object.
 
 ## Workaround 1
 
-Use this method if you have a second Exchange Server in your domain that's running Exchange Server 2010, Exchange Server 2013, or Exchange Server 2016 Cumulative Update 6 or earlier.
+Use this method if you have a second Exchange Server in your domain that's running Exchange Server 2010, Exchange Server 2013, or Exchange Server 2016 Cumulative Update 6 or earlier.
 
 1. Connect Exchange Management Shell to the second Exchange Server and run the following cmdlet:
 
@@ -70,7 +70,7 @@ Use this method if you have a second Exchange Server in your domain that's runni
 
 ## Workaround 2
 
-[Contact Microsoft Support](https://support.microsoft.com/contactus/?ws=support) to request a copy of the interim update that contains the fix to this issue. The fix will be included in the Exchange Server 2016 Cumulative Update 8.
+[Contact Microsoft Support](https://support.microsoft.com/contactus/?ws=support) to request a copy of the interim update that contains the fix to this issue. The fix will be included in the Exchange Server 2016 Cumulative Update 8.
 
 ## Status
 

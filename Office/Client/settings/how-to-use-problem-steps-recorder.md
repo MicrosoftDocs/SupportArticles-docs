@@ -28,7 +28,7 @@ This article describes how to use Problem Steps Recorder (PSR) to automatically 
 > - These instructions apply to Windows 7 and later versions.
 > - Recorded steps don't capture anything that's typed during the recording. If customer input is important to re-create the issue, you can use the comment feature that's described later in this article to record these kinds of details.
 > - Some programs may not be captured accurately or may not provide details that are useful to Microsoft Support.
-> - If you use a computer that's not running Windows, provide screen shots instead.
+> - If you use a computer that's not running Windows, provide screen shots instead.
 > - The tool only collects the last 25 screen shots. If you see the following in your capture, refer to the **To adjust settings** in the section below to increase this value if you need to capture longer than 25 screen shots.  
     Step 1: <date/time> user left-click on **Text Editor (edit)** in **Untitled - Notepad**.
 
@@ -59,11 +59,11 @@ To view the recording, open the compressed file that you just saved, and then do
 
 ### To adjust settings
 
-When you adjust settings for PSR, the settings are saved for only your current session. After you close and reopen PSR, the program returns to the regular settings.
+When you adjust settings for PSR, the settings are saved for only your current session. After you close and reopen PSR, the program returns to the regular settings.
 
 1. Select the Help down arrow or perform Alt+G, and then select **Settings**.
 2. Change any of the following settings for PSR:
 
    - Output Location: If you don't want to be prompted to save a file after recording, select the **Browse** button to set a default output file name.
    - Enable screen capture: If you don't want to capture the screenshots together with the select information, select **No**. This may be a consideration if you take screenshots of a program that contains personal information, such as bank statements, and if you share the screenshots with someone else.
-   - Number of recent screen captures to store:  The default number of saved screen captures is 25. You can increase or decrease this value. PSR records only up through the set number of screenshots. For example, if this option setting is 25 but you take 30 screenshots during a recording, the first five screenshots will be overwritten. Increase this value if you need to capture more screenshots.
+   - Number of recent screen captures to store:  The default number of saved screen captures is 25. You can increase or decrease this value. PSR records only up through the set number of screenshots. For example, if this option setting is 25 but you take 30 screenshots during a recording, the first five screenshots will be overwritten. Increase this value if you need to capture more screenshots.

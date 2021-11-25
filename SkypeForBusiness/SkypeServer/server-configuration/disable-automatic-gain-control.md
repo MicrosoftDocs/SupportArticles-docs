@@ -22,7 +22,7 @@ If you're using Office 365 Click-to-Run version 16.0.8625.2055 or a later versio
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall your operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
-## Method 1: Disable the feature in the Audio Device settings
+## Method 1: Disable the feature in the Audio Device settings
 
 By default, there is no AGC option displayed in the UI. To display and set the option, follow these steps: 
  
@@ -36,7 +36,7 @@ By default, there is no AGC option displayed in the UI. To display and set the o
 
     ![The Automatically adjust microphone volume on calls checkbox](./media/disable-automatic-gain-control/checkbox.png)    
  
-## Method 2: Disable the feature in the registry
+## Method 2: Disable the feature in the registry
 
 In Registry Editor, create and set the following registry entry: 
 
@@ -44,13 +44,13 @@ In Registry Editor, create and set the following registry entry:
 
 **"DisableAutomaticGainControl"=dword:00000001**
 
-## Method 3: Use Group Policy to display and disable the feature
+## Method 3: Use Group Policy to display and disable the feature
 
 1. In Group Policy Management, create a Group Policy object.  
-2. Right-click the new Group Policy object, and then select **Edit**.    
+2. Right-click the new Group Policy object, and then select **Edit**.    
 3. Expand **Computer Configuration** or **User Configuration** > **Preferences** > **Windows Settings**.    
-4. Right-click **Registry**, select **New**, and then select **Registry Item**.    
-5. In the **New Registry Properties** dialog box, specify the following information, and then select **OK**:
+4. Right-click **Registry**, select **New**, and then select **Registry Item**.    
+5. In the **New Registry Properties** dialog box, specify the following information, and then select **OK**:
 
     **Action:** Create
 

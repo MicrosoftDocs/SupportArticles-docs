@@ -28,7 +28,7 @@ appliesto:
 
 ## Introduction
 
-This article describes how to customize the color of the spelling and grammar checker underlines in Microsoft Word 2007 and later. These underlines indicate the following items:
+This article describes how to customize the color of the spelling and grammar checker underlines in Microsoft Word 2007 and later. These underlines indicate the following items:
 
 - Spelling errors   
 - Grammar errors   

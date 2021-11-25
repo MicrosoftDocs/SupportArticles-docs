@@ -25,18 +25,18 @@ appliesto:
 
 ##  Symptoms
 
-In a Microsoft Access desktop database, when you try to open a table that's linked to a SharePoint list, Access stops responding. 
+In a Microsoft Access desktop database, when you try to open a table that's linked to a SharePoint list, Access stops responding. 
 
 ##  Cause
 
-The issue occurs when the user who tries to open the existing linked table in Access doesn't have locally stored credentials for the SharePoint site that contains the list. A stored credential may be either a credential in Windows Credential Manager or a persistent cookie in Internet Explorer. 
+The issue occurs when the user who tries to open the existing linked table in Access doesn't have locally stored credentials for the SharePoint site that contains the list. A stored credential may be either a credential in Windows Credential Manager or a persistent cookie in Internet Explorer. 
 
 ##  Resolution
 
 To work around this issue, use one of the following methods. 
-### Method 1: Add the EnableLegacyListAuth registry entry
+### Method 1: Add the EnableLegacyListAuth registry entry
 
-**Note** For Access 2016, you must have Click-to-Run version 1804 (build 9226.2114) or MSI version (build 16.0.4690.1000) or a later version installed to use this method. 
+**Note** For Access 2016, you must have Click-to-Run version 1804 (build 9226.2114) or MSI version (build 16.0.4690.1000) or a later version installed to use this method. 
 To add the **EnableLegacyListAuth** registry entry, follow these steps: 
  
 1. Open Registry Editor, and then locate and select the following registry subkey:
@@ -60,7 +60,7 @@ To add the **EnableLegacyListAuth** registry entry, follow these steps:
      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\List    
      
 2. On the **Edit** menu, point to **New**, and then click **DWORD Value**.    
-3. Type **EnableLegacyListAuth**, and then press **Enter**.    
+3. Type **EnableLegacyListAuth**, and then press **Enter**.    
 4. Right-click **EnableLegacyListAuth**, and then click **Modify**.    
 5. In the **Value data** box, type **1**, and then click **OK**.    
 6. Locate the following registry key:  
@@ -71,8 +71,8 @@ To add the **EnableLegacyListAuth** registry entry, follow these steps:
 
      HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Identity    
      
-7. Make sure that the value of **EnableADAL** is **0**.    
-8.  Exit Registry Editor.    
+7. Make sure that the value of **EnableADAL** is **0**.    
+8.  Exit Registry Editor.    
  
 ### Method 2: Refresh the list
 
@@ -80,7 +80,7 @@ To refresh the list, follow these steps:
  
 1. Open Windows Task Manager, select Microsoft Access, and then click **End task**.    
 2. Reopen the database.    
-3. Right-click the linked table in Access, and then select **More Options** > **Refresh List**.    
+3. Right-click the linked table in Access, and then select **More Options** > **Refresh List**.    
 4. Log on by using your credentials.    
  
 ### Method 3: Programmatically relink the list
@@ -94,11 +94,11 @@ To relink the list, follow these steps:
 
 ```vb
 Public Function TableRelinkSample()
-           CurrentDb.TableDefs("<TableName>").RefreshLink
+           CurrentDb.TableDefs("<TableName>").RefreshLink
      End Function
 ```
 
-**Note** If you have multiple linked SharePoint lists, you have to call **RefreshLink** only one time for any one of the tables.
+**Note** If you have multiple linked SharePoint lists, you have to call **RefreshLink** only one time for any one of the tables.
     
 4. Call the **TableRelinkSample()** function from the AutoExec macro or other startup code in the database.
 

@@ -2,6 +2,23 @@
 
 
 
+## Week of November 15, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/15/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 11/15/2021 | [Error 403 Forbidden in OneDrive or SharePoint](/sharepoint/troubleshoot/sharing-and-permissions/error-403-forbidden) | modified |
+| 11/15/2021 | [SharePoint or OneDrive read-only error messages](/sharepoint/troubleshoot/sites/site-is-read-only) | modified |
+| 11/17/2021 | [Access Denied or You need permission to access this site](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business) | modified |
+| 11/17/2021 | [Profile picture not showing in SharePoint Online](/sharepoint/troubleshoot/administration/profile-picture-not-showing) | modified |
+| 11/17/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 11/17/2021 | [Classic site collection search usage reports](/sharepoint/troubleshoot/sites/classic-site-collection-search-usage-reports) | modified |
+| 11/18/2021 | [Profile picture not showing in SharePoint Online](/sharepoint/troubleshoot/administration/profile-picture-not-showing) | modified |
+| 11/18/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 11/18/2021 | [Classic site collection search usage reports](/sharepoint/troubleshoot/sites/classic-site-collection-search-usage-reports) | modified |
+
+
 ## Week of October 25, 2021
 
 
@@ -25,30 +42,3 @@
 | 10/20/2021 | [Troubleshoot "View In File Explorer" issues in SharePoint Online](/sharepoint/troubleshoot/lists-and-libraries/troubleshoot-issues-using-open-with-explorer) | modified |
 | 10/20/2021 | [Non-CDN-enabled SharePoint Picture Library Slideshow web part no longer switches automatically to new images](/sharepoint/troubleshoot/web-parts/non-cdn-enabled-picture-library-slideshow-web-part-no-longer-switches-automatically-to-new-images) | modified |
 | 10/22/2021 | [SharePoint Online out of storage space](/sharepoint/troubleshoot/administration/out-of-storage) | added |
-
-
-## Week of October 11, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/14/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
-
-
-## Week of October 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2021 | A SharePoint Online list item attachment doesn't open in the Office client app | removed |
-| 10/8/2021 | [Searching private content in Microsoft 365 OneDrive for Business](/sharepoint/troubleshoot/search/search-private-content) | added |
-
-
-## Week of September 27, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/28/2021 | [Profile picture not showing in SharePoint Online](/sharepoint/troubleshoot/administration/profile-picture-not-showing) | modified |
-| 9/29/2021 | [Common issues syncing SharePoint lists offline](/sharepoint/troubleshoot/lists-and-libraries/common-sync-issues) | added |
-| 9/30/2021 | [Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business) | modified |

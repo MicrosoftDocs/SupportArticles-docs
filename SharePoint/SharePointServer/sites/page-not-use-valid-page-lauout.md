@@ -25,7 +25,7 @@ Users attempting to view or render a .aspx format page receive the following err
 
 ## Cause
 
-The .aspx page is using an invalid page layout, or the current layout is corrupt.
+The .aspx page is using an invalid page layout, or the current layout is corrupt.
 
 ## Resolution
 
@@ -35,7 +35,7 @@ If the page was working at some point in time, use Version History to revert to 
 
 1. Go to Site Actions > View All Site Content.
 2. Click Pages.
-3. Click the dropdown menu next to the .aspx page in question.
+3. Click the dropdown menu next to the .aspx page in question.
 4. Select Version History.
 5. Preview older versions to see if the issue was recently introduced. If possible, identify a last-known working version, and suggest the customer restore that version.
 

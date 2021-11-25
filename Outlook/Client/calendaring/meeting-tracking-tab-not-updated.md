@@ -57,7 +57,7 @@ For more information about how to disable add-ins in Outlook, see [View, manage,
 
 To determine whether a mobile device caused the meeting response to be processed, determine whether you have any mobile devices that are regularly used to sync against the Exchange calendar. Make sure that you upgrade to the newest operating system of your mobile device to avoid known issues that are already resolved. Temporarily disable access to the mobile device, and then try to reproduce the behavior. If the behavior does not occur, additional investigation of the mobile device may be necessary.
 
-You can also investigate the cause of the behavior by using MFCMapi to review the calendar item. MFCMapi is a Messaging API (MAPI) client that exposes additional information about folders and items in an Exchange mailbox. Download **MFCMAPI** from [github](https://github.com/stephenegriffin/mfcmapi) (scroll down and then click **Latest release**).
+You can also investigate the cause of the behavior by using MFCMapi to review the calendar item. MFCMapi is a Messaging API (MAPI) client that exposes additional information about folders and items in an Exchange mailbox. Download **MFCMAPI** from [github](https://github.com/stephenegriffin/mfcmapi/releases/) (scroll down and then click **Latest release**).
 
 To determine whether the meeting response was processed by something other than Outlook, follow these steps: 
  

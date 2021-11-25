@@ -24,13 +24,13 @@ _Original KB number:_&nbsp;4051373
 
 ## Symptoms
 
-When a user tries to view items in a Microsoft Exchange Online archive mailbox by using Outlook Web App (Microsoft Outlook Web App), they receive the following error message:
+When a user tries to view items in a Microsoft Exchange Online archive mailbox by using Outlook Web App (Microsoft Outlook Web App), they receive the following error message:
 
 > Your request can't be completed right now. Try again.
 
 ## Cause
 
-This problem can occur due to a regression in Cumulative Update 6 (CU6) for Exchange Server 2016 that breaks this functionality.
+This problem can occur due to a regression in Cumulative Update 6 (CU6) for Exchange Server 2016 that breaks this functionality.
 
 ## Status
 
@@ -43,7 +43,7 @@ This issue is scheduled to be fixed in a future update.
 This issue only occurs if the user's primary mailbox is on Exchange 2016. See the 'Symptoms' and run the following command (in Exchange 2016 PowerShell) to confirm the issue:
 
 ```powershell
-Test-ArchiveConnectivity -UserSmtp EmailAddressOfUser -IncludeArchiveMRMConfiguration -Verbose | FL
+Test-ArchiveConnectivity -UserSmtp EmailAddressOfUser -IncludeArchiveMRMConfiguration -Verbose | FL
 ```
 
 The result resembles the following:

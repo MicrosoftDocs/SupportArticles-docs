@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4014990
 
 ## Symptoms
 
-Meeting attendees receive a forwarded meeting invitation from another attendee for an existing meeting.
+Meeting attendees receive a forwarded meeting invitation from another attendee for an existing meeting.
 
 ## Cause
 
@@ -44,4 +44,4 @@ To resolve this issue, all devices that are running iOS or watchOS must be updat
 
 The information and the solution in this document represent the current view of Microsoft Corporation about these problems as of the date of publication. This solution is available through Microsoft or through a third-party provider. Microsoft does not specifically recommend any third-party provider or third-party solution that this article might describe. There might also be other third-party providers or third-party solutions that this article does not describe. Because Microsoft must respond to changing market conditions, this information should not be interpreted to be a commitment by Microsoft. Microsoft cannot guarantee or endorse the accuracy of any information or of any solution that is presented by Microsoft or by any mentioned third-party provider.
 
-Microsoft makes no warranties and excludes all representations, warranties, and conditions whether express, implied, or statutory. These include but are not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition, merchantability, and fitness for a particular purpose, with regard to any service, solution, product, or any other materials or information. Microsoft is in no way liable for any third-party solution that this article mentions.
+Microsoft makes no warranties and excludes all representations, warranties, and conditions whether express, implied, or statutory. These include but are not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition, merchantability, and fitness for a particular purpose, with regard to any service, solution, product, or any other materials or information. Microsoft is in no way liable for any third-party solution that this article mentions.

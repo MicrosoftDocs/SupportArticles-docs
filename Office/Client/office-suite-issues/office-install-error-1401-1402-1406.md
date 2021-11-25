@@ -48,7 +48,7 @@ To resolve this issue, use one of the following methods.
 
 ### Method 1
 
-Set the permission for the **Everyone** group of the registry subkeys that are listed in the error message to Full Control.
+Set the permission for the **Everyone** group of the registry subkeys that are listed in the error message to Full Control.
 
 ### Method 2
 
@@ -69,29 +69,29 @@ Some activation problems indicate that the license file is corrupted. If the lic
 
 > [!NOTE]
 > This method applies only to Office 2007, Office 2003 and Office XP. Office 2010 does not use the OPA licensing file. 
- 
+ 
 #### Delete the license file manually
 
 Easy fix 50302
 
-For Windows 7 or Windows Vista
+For Windows 7 or Windows Vista
 
-1. Log on to the computer by using an Administrator user account.    
-2. Start Microsoft Windows Explorer.    
-3. On the **Organize** menu, click **Folder and search options**.    
-4. Click the **View** tab.    
-5. Under **Hidden files and folders**, click **Show hidden files, folders, and drives**.    
-6. Click to clear the **Hide extensions for known file types** check box.    
+1. Log on to the computer by using an Administrator user account.    
+2. Start Microsoft Windows Explorer.    
+3. On the **Organize** menu, click **Folder and search options**.    
+4. Click the **View** tab.    
+5. Under **Hidden files and folders**, click **Show hidden files, folders, and drives**.    
+6. Click to clear the **Hide extensions for known file types** check box.    
 7. Click to clear the **Hide protected operating system file (Recommended)** check box, and then click OK.   
 8. On the **Warning** dialog box, click **Yes**.   
-9. Open the following folder: C:\Users\All Users\Microsoft\Office\Data\    
-10. If you are running Office 2007, right-click **Opa12.dat** or if you are running Office 2003, right-click **Data.dat**, and then click **Properties**.  
-11. Click the **Security** tab.    
-12. Click **Advanced**.    
-13. Click the **Permissions** tab.    
-14. Click to select **Everyone** in the **Permission entries** list, and then click **Edit**.    
-15. Click to select the **Full Control** check box.    
-16. Click **OK** four times. If these steps do not resolve this issue, delete the Opa12.dat, the Opa11.dat file or the Data.dat file from the following folder, and then restart an Office 2007 program, an Office 2003 program or an Office XP program
+9. Open the following folder: C:\Users\All Users\Microsoft\Office\Data\    
+10. If you are running Office 2007, right-click **Opa12.dat** or if you are running Office 2003, right-click **Data.dat**, and then click **Properties**.  
+11. Click the **Security** tab.    
+12. Click **Advanced**.    
+13. Click the **Permissions** tab.    
+14. Click to select **Everyone** in the **Permission entries** list, and then click **Edit**.    
+15. Click to select the **Full Control** check box.    
+16. Click **OK** four times. If these steps do not resolve this issue, delete the Opa12.dat, the Opa11.dat file or the Data.dat file from the following folder, and then restart an Office 2007 program, an Office 2003 program or an Office XP program
 
     C:\Users\All Users\Microsoft\Office\Data   
 

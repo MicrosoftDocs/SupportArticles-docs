@@ -23,9 +23,9 @@ _Original KB number:_ &nbsp; 4514534
 
 ## Symptoms
 
-After a G Suite migration to Microsoft 365, users receive the following error message when they try to create or edit their contacts in the Outlook desktop client:
+After a G Suite migration to Microsoft 365, users receive the following error message when they try to create or edit their contacts in the Outlook desktop client:
 
-> You don't have permission to create an entry in this folder.  Right-click the folder, and then click Properties to check your permissions for the folder.  See the folder owner or your administrator to change your permissions.
+> You don't have permission to create an entry in this folder.  Right-click the folder, and then click Properties to check your permissions for the folder.  See the folder owner or your administrator to change your permissions.
 
 :::image type="content" source="media/you-donnot-have-permission-to-create-an-entry-error/error-details.png" alt-text="Screenshot of the Outlook error message.":::
 
@@ -35,7 +35,7 @@ This error occurs because the Contacts folder was flagged as ReadOnly by the ser
 
 ## Status - Service fix
 
-A service side fix has been deployed. The fixed version is 15.20.2132.000​ or a later version.
+A service side fix has been deployed. The fixed version is 15.20.2132.000​ or a later version.
 
 > [!NOTE]
 > The service side fix will be available only for new migrations. Migrations that are run before this update must follow the workaround steps in this article.
@@ -48,13 +48,13 @@ To work around this issue, manually set this property for affected users through
 2. Start the MfcMapi.exe program that you downloaded, and then select **OK**.
 3. On the **Tools** menu, select **Options**.
 
-4. Select the check boxes next to the following options, and then select **OK**:
+4. Select the check boxes next to the following options, and then select **OK**:
    - Use the MDB_ONLINE flag when calling Open MsgStore
    - Use the MAPI_NO_CACHE flag when calling OpenEntry
 
 5. On the **Session** menu, select **Logon**.
-6. In the Profile Name list, select the profile for the mailbox, and then select **OK**.
-7. Double-click the appropriate **Microsoft Exchange Message Store**.
+6. In the Profile Name list, select the profile for the mailbox, and then select **OK**.
+7. Double-click the appropriate **Microsoft Exchange Message Store**.
 8. In the navigation pane, select **Root Container**.
 9. In the navigation pane, expand **Root Container**, expand **Top of Information Store**, and then select **Contacts**.
-10. In the properties pane on the right, look for the `PR_EXTENDED_FOLDER_FLAGS` property, double-click it, set the binary value to **010400001000**, and then select **OK**.
+10. In the properties pane on the right, look for the `PR_EXTENDED_FOLDER_FLAGS` property, double-click it, set the binary value to **010400001000**, and then select **OK**.

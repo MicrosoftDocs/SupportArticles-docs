@@ -28,7 +28,7 @@ This issue occurs only when the messages are sent to the distribution group. Whe
 
 ## Cause
 
-By default, the `ReportToManagerEnabled` parameter is set to **False** and the `ReportToOriginatorEnabled` parameter is set to **True** when a distribution group is created in Exchange Online. When the parameters are both set to **False**, the **Return-Path** field in the header of the message is <> (blank). This means that the remote messaging system will not send delivery reports to the user who sent the message to the distribution group.
+By default, the `ReportToManagerEnabled` parameter is set to **False** and the `ReportToOriginatorEnabled` parameter is set to **True** when a distribution group is created in Exchange Online. When the parameters are both set to **False**, the **Return-Path** field in the header of the message is <> (blank). This means that the remote messaging system will not send delivery reports to the user who sent the message to the distribution group.
 
 Additionally, if spam filtering is enabled on the remote messaging system, the message is dropped, and delivery reports are suppressed. This occurs because some anti-spam devices might flag messages whose **Return-Path** field is blank and not let the messages be delivered.
 

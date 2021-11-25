@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you schedule a meeting in Skype for Business Online (formerly Lync Online) in Office 365, you may experience one of the following symptoms. 
+When you schedule a meeting in Skype for Business Online (formerly Lync Online) in Office 365, you may experience one of the following symptoms. 
 
 |Symptom|Cause|Resolution|
 |---|----|---|

@@ -35,7 +35,7 @@ In this scenario, you receive the following error message:
 
 **Error has occurred: External table is not in the expected format.**
 
-![error message](./media/mail-merge-error-in-word/error.png)
+:::image type="content" source="media/mail-merge-error-in-word/error-message.png" alt-text="Screenshot of the error message, showing the external table is not in the expected format.":::
 
 ## Cause
 
@@ -43,4 +43,4 @@ When you store an .xlsx file in a shared folder and use it as data source in a W
 
 ## Workaround
 
-To work around this issue, use a .csv or .xls file instead of an .xlsx file as the data source. For example, open your data source in Excel, and then save it as an **Excel 97-2003 Workbook (*.XLS)** or **CSV Comma Delimited (*.CSV)** file.
+To work around this issue, use a .csv or .xls file instead of an .xlsx file as the data source. For example, open your data source in Excel, and then save it as an **Excel 97-2003 Workbook (*.XLS)** or **CSV Comma Delimited (*.CSV)** file.

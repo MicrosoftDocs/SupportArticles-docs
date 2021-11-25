@@ -77,7 +77,7 @@ First, check installed programs to see if the latest version of .NET Framework i
 2. Type *`appwiz.cpl`*, and then press Enter.
 3. Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs.
 
-    ![Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs](./media/error-1935-when-install-office-2010/list-of-installed-programs.png)
+    :::image type="content" source="media/error-1935-when-install-office-2010/list-of-installed-programs.png" alt-text="Screenshot to look for the Microsoft .NET Framework 4 Client Profile item in the list of installed programs.":::
 
 If you find Microsoft .NET Framework 4 Client Profile, follow these steps to repair it:
 
@@ -86,10 +86,10 @@ If you find Microsoft .NET Framework 4 Client Profile, follow these steps to rep
 3. Type `appwiz.cpl`, and then press Enter.
 4. Click Microsoft .NET Framework 4 Client Profile, and then select Uninstall/Change.
 
-    ![Click Microsoft .NET Framework 4 Client Profile and click Uninstall/Change (or Change/Remove in Windows XP).](./media/error-1935-when-install-office-2010/uninstall-change.png)
+    :::image type="content" source="media/error-1935-when-install-office-2010/uninstall-change.png" alt-text="Screenshot to select Uninstall/Change after selecting the Microsoft .NET Framework 4 Client Profile item.":::
 5. Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then select **Next**.
 
-    ![Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next.](./media/error-1935-when-install-office-2010/repair.png)
+    :::image type="content" source="media/error-1935-when-install-office-2010/client-profile-maintenance.png" alt-text="Screenshot to select the Next option after selecting the Repair .NET Framework 4 Client Profile to its original state option." border="false":::
 6. When the repair is complete, select **Finish**, and then select **Restart Now** to restart the computer.
 
 If you can't find Microsoft .NET Framework 4 Client Profile, download and install [Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/en/details.aspx?id=17851) to update the computer.
@@ -99,7 +99,7 @@ If you can't find Microsoft .NET Framework 4 Client Profile, download and instal
 
 Need More Help?
 
-Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
+Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
 
 ## More Information
 

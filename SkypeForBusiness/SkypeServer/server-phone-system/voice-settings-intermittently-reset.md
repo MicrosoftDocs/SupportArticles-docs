@@ -26,7 +26,7 @@ Consider the following scenario:
 - You use the Skype for Business app on an iOS-based or Android-based mobile phone.    
 - You set **Voice Settings** to **Cellular** or **VoIP over Wi-Fi only**.    
  
-In this scenario, when you join a Skype for Business meeting, the **Voice Settings** value is intermittently reset to **VoIP always**. 
+In this scenario, when you join a Skype for Business meeting, the **Voice Settings** value is intermittently reset to **VoIP always**. 
 
 ## Cause
 

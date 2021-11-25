@@ -84,7 +84,7 @@ To determine whether your Office is an "Office in the Microsoft Store" version o
 
  If "Microsoft Office Desktop Apps" is listed, you are using "Office in the Microsoft Store".
 
-![use "Office in the Microsoft Store"](./media/windows-cannot-access-device/apps-and-features.png)
+:::image type="content" source="media/windows-cannot-access-device/apps-and-features.png" alt-text="Screenshot shows steps to determine the version of Office in Settings.":::
 
 #### Method 2
 
@@ -94,4 +94,4 @@ To determine whether your Office is an "Office in the Microsoft Store" version o
 
 If you are using "Office in the Microsoft Store", the **Update Options** button will not be displayed, and you will see "**Microsoft Store**" in under About Word instead of a build version.
 
-![Product information](./media/windows-cannot-access-device/product-information.png)
+:::image type="content" source="media/windows-cannot-access-device/product-information.png" alt-text="Screenshot shows the build version on the Product Information page." border="false":::

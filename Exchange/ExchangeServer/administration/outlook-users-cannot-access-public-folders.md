@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 2788136
 
 When Microsoft Outlook users try to access public folders in Exchange Server 2013 or Exchange Server 2016, the following dialog box appears:
 
-:::image type="content" source="./media/outlook-users-cannot-access-public-folders/exchange-dialog-box-appear.png" alt-text="Screenshot for the Microsoft Exchange dialog box.":::
+:::image type="content" source="media/outlook-users-cannot-access-public-folders/exchange-dialog-box-appear.png" alt-text="Screenshot for the Microsoft Exchange dialog box.":::
 
 However, if the users click **Ok** in this dialog box, they aren't connected to the public folder.
 

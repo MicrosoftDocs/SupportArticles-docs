@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 2221635
 
 ## Symptoms
 
-When performing a copy/paste operation from Microsoft Excel into Microsoft Access, you receive the following error message:
+When performing a copy/paste operation from Microsoft Excel into Microsoft Access, you receive the following error message:
 
 > The data on the Clipboard is damaged, so Microsoft Access can't paste it. There may be an error in the Clipboard, or there may not be enough free memory. Try the operation again.
 
@@ -93,7 +93,7 @@ Steps to Reproduce
 
 Result
 
-You receive the one of these versions of the error:
+You receive the one of these versions of the error:
 
 - The data on the Clipboard is damaged, so Microsoft Office Access can't paste it. There may be an error in the Clipboard, or there may not be enough free memory. Try the operation again.
 - The data on the Clipboard is damaged, so Microsoft Access can't paste it. There may be an error in the Clipboard, or there may not be enough free memory. Try the operation again.

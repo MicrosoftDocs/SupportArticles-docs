@@ -27,6 +27,6 @@ This is the expected behavior. You must use a client version that supports the a
 
 ## More Information 
 
-This behavior occurs because the Skype for Business and Lync Basic 2013 clients don't support the advanced Skype Voice features. For more information, see [Collect data about Office installations by using Robust Office Inventory Scan](/previous-versions/office/office-2010/hh221405(v=office.14)).
+This behavior occurs because the Skype for Business and Lync Basic 2013 clients don't support the advanced Skype Voice features. For more information, see [Collect data about Office installations by using Robust Office Inventory Scan](/previous-versions/office/office-2010/hh221405(v=office.14)).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

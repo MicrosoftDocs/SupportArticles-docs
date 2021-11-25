@@ -35,7 +35,7 @@ The diagnostic performs a large range of verifications for users who may not be 
   > [!NOTE]
   > Microsoft is seeking to collect feedback on Microsoft 365 diagnostics. If you choose to run the Picture Sync diagnostic, you can provide feedback through the following link: 
   >
-  > [Picture Sync Diagnostic Feedback](https://forms.office.com/r/ae2sgsgDhB)
+  > [Picture Sync Diagnostic Feedback](https://forms.office.com/r/1TLidCz9VX)
 
 ## Resolution Option 2: Select the most relevant option below and follow the steps
 
@@ -51,14 +51,10 @@ The diagnostic performs a large range of verifications for users who may not be 
 
 Check for the picture to trigger a sync between Exchange Online and SharePoint Online:
 
-1. Open an [InPrivate](https://support.microsoft.com/microsoft-edge/browse-inprivate-in-microsoft-edge-e6f47704-340c-7d4f-b00d-d0cf35aa1fcc) browser session.
-1. Go to [office.com](https://office.com).
-1. Select the SharePoint icon.
-1. In the **Search in SharePoint** box, search for yourself, then select **Show more results**.
-1. Select the **People** tab.
-1. Wait 24 hours, and then repeat steps 1-5.
+1. Add the users who are missing a photo in SharePoint Online to an existing People web part or create a new page and add the user to a People web part using [Show people profiles on your page with the People web part](https://support.microsoft.com/office/show-people-profiles-on-your-page-with-the-people-web-part-7e52c5f6-2d72-48fa-a9d3-d2750765fa05).
+1. In a private (InPrivate/Incognito) browser session, ask each user to browse to the location where they were added to the People web part.
 
-If all these steps have been completed and the photo is not showing within 24 hours of retrying the steps, contact your Microsoft 365 Administrator. If you aren’t sure who that is, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
+If all these steps have been completed and the photo isn't showing within 24 hours of retrying the steps, contact your Microsoft 365 Administrator. If you aren’t sure who that is, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
     
 </details>
 

@@ -24,7 +24,7 @@ appliesto:
 
 ## Symptoms
 
-You receive the following error message in Microsoft Excel. This error indicates that some process that is running inside Excel will not let Excel close.
+You receive the following error message in Microsoft Excel. This error indicates that some process that is running inside Excel will not let Excel close.
 An error occurred when sending commands to the program
 
 ## Resolution
@@ -39,7 +39,7 @@ To correct this setting, follow these steps:
 2. Select **Advanced**, scroll down to the **General** section, and then clear the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box in the **General** area. 
 3. Select**OK**.    
  
-This problem may occur if the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box in Excel options is selected.  
+This problem may occur if the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box in Excel options is selected.  
  
 When you double-click an Excel workbook in Windows Explorer, a dynamic data exchange (DDE) message is sent to Excel. This message instructs Excel to open the workbook that you double-clicked.
 
@@ -72,19 +72,19 @@ To check whether the file associations in the system are performing correctly, r
 **Windows 8**  
  
 1. On the Start screen, type Control Panel.    
-2. Select **Control Panel**.    
-3. Select **Default Programs** > **Set your default programs**.    
-4. Select **Excel** > **Choose default for this program**.    
-5. On the **Set Program Associations** screen, select **Select All** > **Save**.    
+2. Select **Control Panel**.    
+3. Select **Default Programs** > **Set your default programs**.    
+4. Select **Excel** > **Choose default for this program**.    
+5. On the **Set Program Associations** screen, select **Select All** > **Save**.    
  
 **Windows 7**  
  
-1. Select **Start** > **Control Panel**.    
-2. Select **Default Programs**.    
-3. Select **Associate a file type or protocol with a specific program**.   
+1. Select **Start** > **Control Panel**.    
+2. Select **Default Programs**.    
+3. Select **Associate a file type or protocol with a specific program**.   
 4. Select **Microsoft Excel Worksheet**, and then select change program.    
-5. Under **Recommended Programs**, select **Microsoft Excel**.    
-6. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe** > **Excel**.    
+5. Under **Recommended Programs**, select **Microsoft Excel**.    
+6. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe** > **Excel**.    
     
 If these steps do not resolve the problem, go to Method 4.
 
@@ -105,20 +105,20 @@ Windows 10
 > You may have to restart your computer after the repair process is completed. Windows 8  
 
 1. On the Start screen, type Control Panel.    
-2. Select **Control Panel**.    
-3. Under **Programs**, select **Uninstall a program**.    
-4. Select **Microsoft Office 365 **> **Change**.    
-5. Select **Online Repair** > **Repair**.
+2. Select **Control Panel**.    
+3. Under **Programs**, select **Uninstall a program**.    
+4. Select **Microsoft Office 365 **> **Change**.    
+5. Select **Online Repair** > **Repair**.
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is finished.    
  
 Windows 7  
 
-1. Select **Start** >**Control Panel**.    
+1. Select **Start** >**Control Panel**.    
 2. Double-click **Programs and Features**.    
-3. Select **Microsoft Office 365 **> **Change**.    
-4. Select **Online Repair** > **Repair**.
+3. Select **Microsoft Office 365 **> **Change**.    
+4. Select **Online Repair** > **Repair**.
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.
@@ -128,7 +128,7 @@ Windows 7
 **For an Office 2016, 2013, Office 2010, or Office 2007 installation**
 
 To repair Office 2013, Office 2010, or Office 2007, follow the steps in the following Office website topic:
-   
+   
 [Repair Office programs](https://office.microsoft.com/outlook-help/repair-office-programs-ha010357402.aspx) 
 
 If these steps do not resolve the problem, go to Method 5.
@@ -137,9 +137,9 @@ If these steps do not resolve the problem, go to Method 5.
  
 Excel and COM add-in programs can also cause this problem. These two kinds of add-ins are located in different folders. For testing, disable and isolate the conflict by turning off each add-in one at a time. To do this, follow these steps: 
  
-1. On the **File** menu, select **Options** > **Add-Ins**.    
-2. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** > **Go**.    
-3. Clear one of the add-ins in the list, and then select **OK**.    
+1. On the **File** menu, select **Options** > **Add-Ins**.    
+2. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** > **Go**.    
+3. Clear one of the add-ins in the list, and then select **OK**.    
 4. Restart Excel by double-clicking the icon or file name for the workbook that you are trying to open. 
 5. If the problem persists, repeat steps 1-4, except select a different add-in in step 3.    
 6. If the problem persists after you clear all the COM Add-ins, repeat steps 1-4, except select **Excel Add-Ins** in step 2, and then try each of the Excel add-ins one at a time in step 3.    
@@ -157,18 +157,18 @@ To work around this problem, disable hardware acceleration until a fix is releas
 To disable hardware acceleration, follow these steps: 
  
 1. Start any Office 2013 program.    
-2. On the **File** tab, select **Options**.    
-3. In the **Options** dialog box, select **Advanced**.    
+2. On the **File** tab, select **Options**.    
+3. In the **Options** dialog box, select **Advanced**.    
 4. In the list of available options, select the **Disable hardware graphics acceleration** check box.
 
     The following screen shot shows this option in Excel.
     
     :::image type="content" source="media/error-when-send-commands-in-excel/disable-hardware-graphics-acceleration.png" alt-text="Select the Disable hardware graphics acceleration option to disable hardware acceleration in Office Options setting." border="false":::
 
-5. Select **OK**.    
+5. Select **OK**.    
  
 > [!NOTE]
-> For more information about hardware acceleration, see [Performance and display issues in Office 2013 client applications (KB2768648)](https://support.microsoft.com/help/2768648).
+> For more information about hardware acceleration, see [Performance and display issues in Office 2013 client applications (KB2768648)](https://support.microsoft.com/help/2768648).
 
 If these steps do not resolve the problem, go to Method 7.
 
@@ -177,7 +177,7 @@ If these steps do not resolve the problem, go to Method 7.
 You may have to set Windows Update to automatically download and install recommended updates. Installing any important, recommended, and optional updates can frequently correct problems by replacing out-of-date files and fixing vulnerabilities.
 
 For more information about Office updates, click the following article number to go to the article in the Microsoft Knowledge Base:
-   
+   
 [Office Updates](https://technet.microsoft.com/library/dn789213%28v=office.14%29)  
 
 [Microsoft Support](https://support.microsoft.com/contactus/?ws=support) 

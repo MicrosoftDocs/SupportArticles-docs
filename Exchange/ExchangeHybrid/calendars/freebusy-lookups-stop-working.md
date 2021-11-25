@@ -39,7 +39,7 @@ If you run the `Test-FederationTrust` cmdlet, you receive an error message that 
 Type : Error  
 Message : Failed to validate delegation token.
 
-Additionally, you might receive one of the following error messages in the **Exchange Web Services (EWS)** Responses:
+Additionally, you might receive one of the following error messages in the **Exchange Web Services (EWS)** Responses:
 
 > An error occurred when processing the security tokens in the message
 

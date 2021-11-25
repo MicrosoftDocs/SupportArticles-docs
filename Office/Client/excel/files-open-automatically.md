@@ -81,10 +81,10 @@ There are two ways to start Excel in safe mode: the CTRL key and command-line sw
 To start Excel in safe mode, hold down the CTRL key while you start Excel. You will receive the following message: Excel has detected that you are holding down the CTRL key. Do you want to start Excel in Safe mode? Select **Yes** to start in safe mode.
 
 You can then delete files from the alternative startup location as described earlier.
-  
+  
 ##### Use Command-line switches
 
-In all versions of Excel, you can use a command-line switch to start Excel in safe mode.Both the /safe switch and the /automation switch can be used for this purpose.
+In all versions of Excel, you can use a command-line switch to start Excel in safe mode.Both the /safe switch and the /automation switch can be used for this purpose.
 
 > [!NOTE]
 > The /safe switch starts Excel in safe mode. The /automation switch disables all automatically opened files and auto-run macros.

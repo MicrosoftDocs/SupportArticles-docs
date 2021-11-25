@@ -27,7 +27,7 @@ When you try to send email messages in Office 365 Small Business from a domain t
 "smtp; 550 SPF MAIL FROM check failed (PermError)"
 
 > [!NOTE]
-> A domain that is set up for full redelegation is a domain in which the name server (NS) resource records point to Office 365. Full domain redelegation is available only for Office 365 Small Business subscriptions and Office 365 for small businesses subscriptions.  
+> A domain that is set up for full redelegation is a domain in which the name server (NS) resource records point to Office 365. Full domain redelegation is available only for Office 365 Small Business subscriptions and Office 365 for small businesses subscriptions.  
 
 ## Solution
 
@@ -40,7 +40,7 @@ To fix this issue, follow these steps:
    4. Type set type=ns, and then press Enter.   
    5. Type your domain name (for example, type contoso.com), and then press Enter.
 
-   The NS resource records should point to two of the following: 
+   The NS resource records should point to two of the following: 
     - ns1.bdm.microsoftonline.com   
     - ns2.bdm.microsoftonline.com   
     - ns3.bdm.microsoftonline.com   

@@ -41,7 +41,7 @@ To delete a junk email rule, follow these steps:
 
 2. Export the list of addresses that contain safe senders and blocked senders to a text (.txt) file.
 
-3. Download MFCMAPI from [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+3. Download MFCMAPI from [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 
     > [!NOTE]
     > Only an Exchange administrator who has full permissions of a mailbox can use the MFCMAPI tool to remove a junk email rule.
@@ -52,12 +52,12 @@ To delete a junk email rule, follow these steps:
     1. Open MFCMAPI.
     2. Click the **Session** tab and select **Logon**. (The screenshot for this step is listed below).
 
-        ![Screenshot for selecting Logon from the Session tab](./media/delete-junk-email-rules-mfcmapi-exchange/logon-option-on-session-tab.jpg)
+   :::image type="content" source="media/delete-junk-email-rules-mfcmapi-exchange/logon-option-on-session-tab.png" alt-text="Screenshot of selecting Logon from the Session tab.":::
 
     3. Double-click the default Exchange mailbox store in the list. This is displayed as **UserName**@**DomainName.com**. A new MFCMAPI window will open.
     4. Expand **Root Container**, and then expand **Top of Information Store**. (The screenshot for this step is listed below).
 
-        :::image type="content" source="./media/delete-junk-email-rules-mfcmapi-exchange/expand-top-of-information-store-option.jpg" alt-text="The screenshot for expanding Top of Information Store.":::
+        :::image type="content" source="media/delete-junk-email-rules-mfcmapi-exchange/expand-top-of-information-store-option.png" alt-text="Screenshot of window for Top of Information Store.":::
 
         > [!NOTE]
         > If you see **IPM_SUBTREE** in the list, then you are accessing the mailbox by using cached Exchange mode. Exit MFCMAPI and change the mail profile to use online mode.
@@ -71,13 +71,13 @@ To delete a junk email rule, follow these steps:
     11. Right-click **IPM.ExtendedRule.Message** and select **Delete message**. The **Delete Item** window will open.
     12. In the **Deletion style** drop-down list, select **Permanent delete passing DELETE_HARD_DELETE (unrecoverable)**, and then click **OK**. (The screenshot for this step is listed below).
 
-        :::image type="content" source="./media/delete-junk-email-rules-mfcmapi-exchange/permanent-delete-passing-delete-hard-delete.jpg" alt-text="Screenshot for selecting Permanent delete passing DELETE_HARD_DELETE.":::
+        :::image type="content" source="media/delete-junk-email-rules-mfcmapi-exchange/permanent-delete-passing-delete-hard-delete.png" alt-text="Screenshot for selecting Permanent delete passing DELETE_HARD_DELETE.":::
 
     13. **IPM.ExtendedRule.Message** should disappear from the top pane after the rule is deleted.
     14. Close the first two MFCMAPI windows.
     15. On the final MFCMAPI window, click the **Session** tab and select **Logoff**  to close the MAPI session. (The screenshot for this step is listed below).
 
-        :::image type="content" source="./media/delete-junk-email-rules-mfcmapi-exchange/select-logoff.jpg" alt-text="The screenshot for selecting Logoff.":::
+        :::image type="content" source="media/delete-junk-email-rules-mfcmapi-exchange/select-logoff.png" alt-text="Screenshot for selecting Logoff under Session.":::
 
     16. Close the final MFCMAPI window.
 

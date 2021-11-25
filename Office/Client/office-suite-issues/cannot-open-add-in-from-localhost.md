@@ -31,13 +31,13 @@ One cause of this error is that the Microsoft Edge Web Viewer does not have a lo
 
 ### Option 1: Use command to add a local loopback exemption
  
-1. Open a command prompt as administrator.     
+1. Open a command prompt as administrator.     
 2. Run the following command:
     ```powershell
     CheckNetIsolation LoopbackExempt -a -n="microsoft.win32webviewhost_cw5n1h2txyewy" 
     ```
 
-### Option 2: Use Fiddler to add a local loopback exemption
+### Option 2: Use Fiddler to add a local loopback exemption
 
 1. Select **Tools** > **Win8 Loopback Exemptions**.    
 2. Add an exemption to **Desktop App Web Viewer**.    

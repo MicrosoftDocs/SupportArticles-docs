@@ -38,7 +38,7 @@ To maintain the behavior of transport rules, change the **Match sender address i
 2. Double-click the affected rule in the list, and then locate the **Match sender address in message** heading.
 3. In the list under this heading, select **Header or envelope**.
 
-    ![Screenshot of selecting Header or envelope.](./media/autoforward-mail-exclusions-not-honored-transport-rule/transport-rule-error.png)
+   :::image type="content" source="media/autoforward-mail-exclusions-not-honored-transport-rule/transport-rule-error.png" alt-text="Screenshot of selecting Header or envelope.":::
 
 > [!NOTE]
 > This change also affects the mailbox redirect rule, because the sender that's evaluated by the transport rule is now the original sender, and not the mailbox on which the rule is set. To maintain the behavior of this rule, set the exception in the transport rule based on the recipient instead of the sender. Alternatively, change this rule to an automatic forwarding rule.

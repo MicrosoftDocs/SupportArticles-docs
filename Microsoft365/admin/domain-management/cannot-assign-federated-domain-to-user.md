@@ -39,13 +39,13 @@ This behavior is by design in Office 365. You can't create federated users throu
 
 ## Solution
 
-To work around this behavior, create a matching user account in the on-premises Active Directory Domain Services (AD DS) environment, set up the user principal name (UPN) appropriately, and then sync the account and Azure Active Directory by using directory synchronization. To do so, follow these steps:
+To work around this behavior, create a matching user account in the on-premises Active Directory Domain Services (AD DS) environment, set up the user principal name (UPN) appropriately, and then sync the account and Azure Active Directory by using directory synchronization. To do so, follow these steps:
 
 1. Obtain the primary SMTP address of the Office 365 user account by following these steps:
    1. Sign in to the [Office 365 portal](https://portal.office.com) as a global admin.
-   2. Select **Admin** > **Exchange** to open Exchange Admin Center.
+   2. Select **Admin** > **Exchange** to open Exchange Admin Center.
    3. Locate the user account, and then double-click it.
-   4. In the left navigation pane, select **Email Address**, and then note the primary SMTP address of the user account.
+   4. In the left navigation pane, select **Email Address**, and then note the primary SMTP address of the user account.
 2. Start Active Directory Users and Computers, and then create a user account in the on-premises domain that matches the Office 365 user account. For more information, see [Create a User Account in Active Directory Users and Computers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd894463(v=ws.10)).
 3. Make sure that the UPN of the user account is updated to the federated domain name. For more information, see [Troubleshoot Active Directory user accounts that are piloted as Office 365 SSO-enabled user IDs](https://support.microsoft.com/help/2392130).
 4. Use Active Directory Service Interfaces (ADSI) Edit to edit the **proxyAddresses** attribute of the user object so that it matches the primary SMTP address that you noted in step 1D. To do so, follow these steps:
@@ -68,6 +68,6 @@ To work around this behavior, create a matching user account in the on-premises 
 
 ## More information
 
-For more information, see [Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2392130).  
+For more information, see [Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2392130).  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

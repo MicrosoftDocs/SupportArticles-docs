@@ -31,7 +31,7 @@ When you try to recover deleted items from a non-mail public folder (such as a c
 
 ## Cause
 
-This behavior is by design. In Outlook 2010 or later versions, the **Recover Deleted Items** option is removed from the **Folder** tab on the ribbon for non-mail public folders. In Outlook 2016, the **Recover Deleted Items** option is also removed from the shortcut menu.
+This behavior is by design. In Outlook 2010 or later versions, the **Recover Deleted Items** option is removed from the **Folder** tab on the ribbon for non-mail public folders. In Outlook 2016, the **Recover Deleted Items** option is also removed from the shortcut menu.
 
 ## Workaround
 

@@ -26,7 +26,7 @@ As a delegate, you can't open a meeting request in Outlook Web Access (OWA) that
 
 > Your request can't be completed right now. Please try again later.
 
-![Screenshot of the meeting request error](./media/delegate-cannot-accept-meeting-request-using-owa/meeting-request-error.png)
+:::image type="content" source="media/delegate-cannot-accept-meeting-request-using-owa/meeting-request-error.png" alt-text="Screenshot of the meeting request error.":::
 
 ## Cause
 

@@ -27,11 +27,11 @@ For Microsoft Office 2010, Microsoft is offering a new way to download and insta
 
 What is Click-to-Run?
 
-Click-to-Run is a new way to deliver and update Microsoft Office to broadband customers. Click-to-Run uses Microsoft virtualization and streaming technologies. 
+Click-to-Run is a new way to deliver and update Microsoft Office to broadband customers. Click-to-Run uses Microsoft virtualization and streaming technologies. 
 
 How does Click-to-Run work?
 
-Click-to-Run products use streaming. Think of this in the same way that you think about streaming video. You can watch the first part of the video before the whole file is downloaded. Similarly, with Click-to-Run, you can start using Office before the whole suite or product has been downloaded. While you are using your application, the rest of Office is being downloaded quietly in the background. 
+Click-to-Run products use streaming. Think of this in the same way that you think about streaming video. You can watch the first part of the video before the whole file is downloaded. Similarly, with Click-to-Run, you can start using Office before the whole suite or product has been downloaded. While you are using your application, the rest of Office is being downloaded quietly in the background. 
 
 Another aspect of Office Click-to-Run is the unique way that Office is stored after it is downloaded onto your computer. Click-to-Run uses Microsoft virtualization technology to contain Office 2010 inside a virtualized application space. This virtual "bubble" separates Office from the regular file system and applications on your hard disk. This lets Office 2010 Click-to-Run coexist side-by-side with any existing version of Office that is already installed on your computer. There are also other benefits to Office Click-to-Run.
 
@@ -57,7 +57,7 @@ That said, users will have a drive Q or drive R configuration that is incompatib
 
 What can users do to protect against malware until their anti-malware vendors release an update that is compatible with Microsoft virtualization technology?
 
-Users should run their existing anti-malware software. They are no more vulnerable than if they did not have a Click-to-Run Office product installed. If the installation of Office is experiencing problems, users can perform a repair of Office. This procedure removes any non-Microsoft content and restores Office to its original installation state. Microsoft also recommends that users contact their anti-malware vendors for specific help with malware concerns.
+Users should run their existing anti-malware software. They are no more vulnerable than if they did not have a Click-to-Run Office product installed. If the installation of Office is experiencing problems, users can perform a repair of Office. This procedure removes any non-Microsoft content and restores Office to its original installation state. Microsoft also recommends that users contact their anti-malware vendors for specific help with malware concerns.
 
 What if my anti-malware vendor doesn't have a solution for detecting and cleaning malware on drive Q or drive R?
 

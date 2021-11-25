@@ -38,7 +38,7 @@ During the opening process for Word 2007, for Word 2010 or for Word 2013, you re
 Then when you click **OK**, the custom XML elements don't display.
 
 > [!NOTE]
-> Microsoft Word 2013 displays the error message for the following file formats in addition to the file formats previously listed:
+> Microsoft Word 2013 displays the error message for the following file formats in addition to the file formats previously listed:
 >
 > - Word 97-2003 Document (.DOC)
 > - Word Web Pages (.HTML)
@@ -50,7 +50,7 @@ Versions of Word that are distributed by Microsoft after January 10, 2010 no lon
 
 Custom XML markup in a Word document is visible as pink (the default color) tag names surrounding text in a document:
 
-![custom XML markup](./media/custom-xml-elements-not-supported/custom-xml-tag.jpg)
+:::image type="content" source="media/custom-xml-elements-not-supported/custom-xml-tag.png" alt-text="Screenshot of the custom XML markup in a Word document.":::
 
 The removal of custom XML markup is the result of a United States court ruling on December 22, 2009. Generally, customers who purchase or license Word 2007, Word 2010 or Word 2013 from Microsoft after January 10, 2010 for use in the United States and its territories have to use updated software that does not include a particular custom XML tagging implementation.
 

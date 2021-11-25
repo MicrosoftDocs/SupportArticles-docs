@@ -66,7 +66,7 @@ This method is a workaround for the symptom of content not being displayed in th
 > [!NOTE]
 > To determine whether your Office installation is Click-to-Run or MSI-based, see the More Information section.
 
-Revert the Office 2016 Click-to-Run installation to the 16.0.7070.2036 version. To do this, follow these steps.
+Revert the Office 2016 Click-to-Run installation to the 16.0.7070.2036 version. To do this, follow these steps.
 
 1. Exit all Office applications.
 2. Open an elevated command prompt as administrator.

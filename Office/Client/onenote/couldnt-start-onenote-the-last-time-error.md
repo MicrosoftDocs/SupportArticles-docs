@@ -34,15 +34,18 @@ When you start OneNote for the first time, you see the following errors if you c
 
 A sign-in prompt appears at the first launch:
 
-![Sign-in prompt at first launch.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-1.png)
+:::image type="content" source="media/couldnt-start-onenote-the-last-time-error/sign-in-prompt.png" alt-text="Screenshot of the sign-in prompt at the first launch.":::
 
 Error message:
 
-!["We couldn't start OneNote" error message.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-2.png)
+> We couldn't start OneNote the last time we tried. What do you want us to do?
+> We're not sure what went wrong.
+
+:::image type="content" source="media/couldnt-start-onenote-the-last-time-error/error-message.png" alt-text="Screenshot of the error message after canceling the sign-in prompt." border="false":::
 
 If you select **Delete Notebook Cache** or **Delete Settings**, OneNote will start, but displays the message "You don't have any open notebooks."
 
-!["You don't have any open notebooks" error message.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-3.gif)
+:::image type="content" source="media/couldnt-start-onenote-the-last-time-error/error-message-notebook.png" alt-text="Screenshot of the error message, showing you don't have any open notebooks.":::
 
 ## Cause
 
@@ -120,7 +123,7 @@ Reference: [Deployment guide for OneNote](/deployoffice/deployment-guide-onenote
 ### References
 
 - Get OneNote: [Mac](http://onenote.com/get) | [iOS](https://app.adjust.com/ux3h90) | [Android](https://app.adjust.com/l1lwt7) | [Windows](https://www.microsoft.com/p/onenote-for-windows-10/9wzdncrfhvjl) | [OneNote Online](http://www.onenote.com/notebooks)
-- Suggestions: [OneNote UserVoice](https://onenote.uservoice.com/)
+- Suggestions: [Feedback for Microsoft 365](https://feedbackportal.microsoft.com/)
 - Help: [Answers.Microsoft.com](https://answers.microsoft.com/)
 - [Install or reinstall OneNote 2016 for Windows](https://support.office.com/article/install-or-reinstall-onenote-2016-for-windows-c08068d8-b517-4464-9ff2-132cb9c45c08?ui=en-US&rs=en-US&ad=US)
 - [Your OneNote](https://techcommunity.microsoft.com/t5/office-365-blog/your-onenote/ba-p/954922)

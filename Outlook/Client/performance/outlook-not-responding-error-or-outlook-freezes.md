@@ -50,7 +50,7 @@ This problem occurs for one or more of the following reasons:
 > [!NOTE]
 >
 > - This issue may occur for one or more of the reasons in this section. To fix this issue, you may have to follow the troubleshooting steps in the Resolution section.
-> - Many of these items can be automatically checked by the Microsoft Support and Recovery Assistant (SaRA). To start the automated checks, follow these steps:
+> - Many of these items can be automatically checked by the Microsoft Support and Recovery Assistant (SaRA). To start the automated checks, follow these steps:
 >    1. Install the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) tool.
 >    2. Select **Run** when you are prompted by your browser.
 >    3. In the report that's generated, review the items on the **Issues found** tab. For configuration details about Outlook, Windows, and your computer, review the settings on the **Detailed View** tab.
@@ -80,7 +80,7 @@ Performance may be decreased if you use the Outlook AutoArchive feature or sync 
 
 If Outlook is in use by another process, this information is displayed in the status bar at the bottom of the screen. If you try to perform other actions while Outlook is in use, Outlook may not respond. Let the task in process finish its job before you try another action.
 
-### Step 3 - Check the problem caused by external content
+### Step 3 - Check the problem caused by external content
 
 To resolve this issue, use one of the following methods:
 
@@ -109,7 +109,7 @@ If the problem does not occur after you restart Outlook, one of the add-ins is l
 
 ### Step 5 - Check whether your mailbox is too large
 
-As your mailbox size increases, more resources are required to open each folder. If you have a large number of items in any single folder, you may experience performance issues during certain operations. For more information, see [Outlook performance issues when there are too many items or folders in a cached mode .ost or .pst file](https://support.microsoft.com/help/2768656).
+As your mailbox size increases, more resources are required to open each folder. If you have a large number of items in any single folder, you may experience performance issues during certain operations. For more information, see [Outlook performance issues when there are too many items or folders in a cached mode .ost or .pst file](https://support.microsoft.com/help/2768656).
 
 We recommend that you move several items in your larger folders to separate folders, or that you archive those items by using the AutoArchive feature.
 
@@ -143,8 +143,8 @@ Outlook stores certain data, such as email signatures and the spelling checker d
    `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
 4. Locate and then double-click the **AppData** value.
 
-5. In the **Value data** box, type the following path, and then select **OK**:  
-   *%USERPROFILE%\AppData\Roaming*
+5. In the **Value data** box, type the following path, and then select **OK**:  
+   *%USERPROFILE%\AppData\Roaming*
 
    :::image type="content" source="media/outlook-not-responding-error-or-outlook-freezes/edit-string.png" alt-text="Screenshot of the Edit String dialog where you can input the value data." border="false":::
 
@@ -197,7 +197,7 @@ To create a user profile, follow these steps:
 5. In the **Profile Name** dialog box, type a name for the profile.
 6. Specify the user name, the primary SMTP address, and the password. Then, select **Next**.
 7. You may receive the following prompt:  
-   Allow this website to configure <alias@domain server> settings?
+   Allow this website to configure <alias@domain server> settings?
 
    In this prompt, select the **Don't ask me about this again** checkbox, and then select **Allow**.
 

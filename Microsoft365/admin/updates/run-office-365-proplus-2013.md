@@ -22,9 +22,9 @@ appliesto:
 ## Summary
 
 > [!NOTE]
-> Support for this family of products will end in early 2017. For more information, see [Support for the 2013 version of Microsoft 365 Apps for enterprise ends February 28, 2017](https://support.microsoft.com/help/3199744).  
+> Support for this family of products will end in early 2017. For more information, see [Support for the 2013 version of Microsoft 365 Apps for enterprise ends February 28, 2017](https://support.microsoft.com/help/3199744).  
 
-To prevent Microsoft Microsoft 365 Apps for enterprise from being automatically updated to Office 2016 over the Internet, use one of the methods in the "Resolution" section. 
+To prevent Microsoft 365 Apps for enterprise from being automatically updated to Office 2016 over the Internet, use one of the methods in the "Resolution" section. 
 
 > [!IMPORTANT]
 > Apply one of these methods only on installations of Microsoft 365 Apps for enterprise that are configured to automatically receive monthly updates over the Internet. If you've configured Microsoft 365 Apps for enterprise to receive updates from a location on your internal network, or if you've turned off automatic updates, you don't have to use these methods, because you control when the update to Office 2016 occurs.
@@ -43,7 +43,7 @@ There are two ways to prevent Microsoft 365 Apps for enterprise from updating to
 
 Use the Enable Automatic Upgrade Group Policy setting that's included in the Office 2013 Group Policy Administrative Template files (ADMX/ADML), which you can download from [here](https://www.microsoft.com/en-in/download/details.aspx?id=35554). This policy setting is located under Computer Configuration\Administrative Templates\Microsoft Office 2013 (Machine)\Updates. Select Disabled.
 
-![Disable automatic upgrade](./media/run-office-365-proplus-2013/enable-automatic-upgrade-dialog-box.jpg)
+:::image type="content" source="media/run-office-365-proplus-2013/enable-automatic-upgrade-dialog-box.png" alt-text="Screenshot to select the Disable option in the Enable Automatic Upgrade dialog box.":::
 
 > [!NOTE]
 > Group Policy can be used only on computers that are joined to a domain.
@@ -70,10 +70,10 @@ Go to the following location in the registry on each affected computer:
 
 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\15.0\common\officeupdate**
 
-Then, add the following value under the office update subkey: 
+Then, add the following value under the office update subkey: 
 
 **"enableautomaticupgrade"=dword:00000000**
 
 ## More Information
 
-Support for Office 2013 versions of the Office 365 client applications ended on February 28, 2016. Therefore, we recommend that you update to the Office 2016 version of Microsoft 365 Apps for enterprise as soon as possible. For more information, see [Support for the 2013 version of Microsoft 365 Apps for enterprise ends February 28, 2017](https://support.microsoft.com/help/3199744).
+Support for Office 2013 versions of the Office 365 client applications ended on February 28, 2016. Therefore, we recommend that you update to the Office 2016 version of Microsoft 365 Apps for enterprise as soon as possible. For more information, see [Support for the 2013 version of Microsoft 365 Apps for enterprise ends February 28, 2017](https://support.microsoft.com/help/3199744).

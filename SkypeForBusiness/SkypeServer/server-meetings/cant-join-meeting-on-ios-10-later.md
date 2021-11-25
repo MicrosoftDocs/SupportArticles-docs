@@ -28,15 +28,15 @@ Consider the following scenario:
 - You have Microsoft Lync 2013, Lync 2010, or Skype for Business installed on the device.   
 - You try to join a meeting from outside the Lync or Skype for Business app. For example, you tap the "Join Meeting" link in an email message or calendar appointment in an app other than Lync or Skype for Business.    
 
-In this scenario, the link tries to start the desktop version of the website instead of the mobile version. The mobile version would try to start the Lync or Skype for Business app and join the meeting, or redirect you to the app store if it cannot join the meeting. The desktop version will not try to start the app. 
+In this scenario, the link tries to start the desktop version of the website instead of the mobile version. The mobile version would try to start the Lync or Skype for Business app and join the meeting, or redirect you to the app store if it cannot join the meeting. The desktop version will not try to start the app. 
 
 ## Resolution
 
 To fix this issue, install one of the following updates based on the version of your Microsoft Skype for Business Server or Microsoft Lync Server:
 
-- Install the [November 2016 cumulative update 6.0.9319.272](https://support.microsoft.com/help/3199094) for Skype for Business Server 2015, Web Components Server. 
+- Install the [November 2016 cumulative update 6.0.9319.272](https://support.microsoft.com/help/3199094) for Skype for Business Server 2015, Web Components Server. 
 See [KB3204849](https://support.microsoft.com/help/3204849) for more information.   
-- Install the [November 2016 cumulative update 5.0.8308.974](https://support.microsoft.com/help/3200078) for Lync Server 2013, web components server. 
+- Install the [November 2016 cumulative update 5.0.8308.974](https://support.microsoft.com/help/3200078) for Lync Server 2013, web components server. 
 See [KB3204546](https://support.microsoft.com/help/3204546) for more information.   
 
 ## Workaround

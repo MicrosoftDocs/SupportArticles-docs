@@ -128,16 +128,16 @@ Check whether the client access policy was applied correctly. For more informati
 
 ### Scenario 3: The federation metadata endpoint or the relying party trust may be disabled
 
-Enable the federation metadata endpoint and the relying party trust with Azure AD on the primary AD FS server. To do this, follow these steps: 
+Enable the federation metadata endpoint and the relying party trust with Azure AD on the primary AD FS server. To do this, follow these steps: 
 
 1. Open the AD FS 2.0 Management Console.    
 2. Make sure that the federation metadata endpoint is enabled. To do this, follow these steps: 
    1. In the left navigation pane, browse to **AD FS (2.0), Service, Endpoints**.    
    2. In the center pane, right-click the **/Federation Metadata/2007-06/FederationMetadata.xml** entry, and then click to select **Enable** and **Enable on Proxy**.
-3. Make sure that the relying party trust with Azure AD is enabled. To do this, follow these steps: 
+3. Make sure that the relying party trust with Azure AD is enabled. To do this, follow these steps: 
    1. In the left navigation pane, browse to **AD FS (2.0)**, then **Trust Relationships**, and then **Relying Party Trusts**.    
    2. If **Microsoft Office 365 Identity Platform** is present, right-click this entry, and then click **Enable**.    
-4. Repair the relying party trust with Azure AD by seeing the "Update trust properties" section of [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100)).   
+4. Repair the relying party trust with Azure AD by seeing the "Update trust properties" section of [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100)).   
 
 ### Scenario 4: The relying party trust may be missing or corrupted
 
@@ -157,7 +157,7 @@ To grant the "Impersonate a client after authentication" user permission to the 
 
 For more information about how to troubleshoot sign-in issues for federated users, see the following Microsoft Knowledge Base articles: 
 
-- [2530569 ](https://support.microsoft.com/help/2530569) Troubleshoot single sign-on setup issues in Office 365, Intune, or Azure   
-- [2712961 ](https://support.microsoft.com/help/2712961) How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure     
+- [2530569 ](https://support.microsoft.com/help/2530569) Troubleshoot single sign-on setup issues in Office 365, Intune, or Azure   
+- [2712961 ](https://support.microsoft.com/help/2712961) How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure     
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

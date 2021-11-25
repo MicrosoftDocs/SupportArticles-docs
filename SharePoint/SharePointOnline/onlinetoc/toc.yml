@@ -67,6 +67,8 @@
       href: ../administration/troubleshoot-site-collection-upgrade-issue.md
     - name: Unable to delete items in SharePoint and OneDrive
       href: ../administration/unable-to-delete-files.md
+    - name: Unexpected error in SharePoint admin center Content type gallery
+      href: ../administration/content-type-gallery-error.md
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Using relative URLs isn't supported
@@ -339,8 +341,8 @@
       href: ../Sites/rich-text-fields-fails-responding.md
     - name: SharePoint Online alert notifications isn't received
       href: ../Sites/no-alert-notifications.md
-    - name: Site deletion error '“The requested operation is not supported for site”'
-      href: ../Sites/requested-operation-not-supported.md
+    - name: SharePoint or OneDrive read-only error messages
+      href: ../Sites/site-is-read-only.md
     - name: Site doesn't use the site theme for top navigation bar
       href: ../Sites/top-navigation-bar-not-use-site-theme.md
     - name: Site is at or near the metadata limit

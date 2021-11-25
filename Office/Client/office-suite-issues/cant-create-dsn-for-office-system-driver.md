@@ -31,15 +31,15 @@ When attempting to create ODBC connections that utilize the Microsoft Office Sys
 
 ## Cause
 
-This occurs when the 32-bit version of Office or the 32-bit Office System Drivers is installed on a 64-bit version of Windows.  In 64-bit versions of Windows, there is a separate ODBC Administrator used to manage 32-bit drivers and DSNs.
+This occurs when the 32-bit version of Office or the 32-bit Office System Drivers is installed on a 64-bit version of Windows.  In 64-bit versions of Windows, there is a separate ODBC Administrator used to manage 32-bit drivers and DSNs.
 
 ## Resolution
 
-To locate the 32-bit Office System drivers, use the appropriate version of the ODBC Administrator tool.  If you build and then run an application as a 32-bit application on a 64-bit operating system, you must create the ODBC data source by using the ODBC Administrator tool in %windir%\SysWOW64\odbcad32.exe.  For example, the default location on a Windows 7 64-bit machine is "C:\Windows\SysWOW64\odbcad32.exe".
+To locate the 32-bit Office System drivers, use the appropriate version of the ODBC Administrator tool.  If you build and then run an application as a 32-bit application on a 64-bit operating system, you must create the ODBC data source by using the ODBC Administrator tool in %windir%\SysWOW64\odbcad32.exe.  For example, the default location on a Windows 7 64-bit machine is "C:\Windows\SysWOW64\odbcad32.exe".
 
 ## More Information
 
-On a 64-Bit Windows operating system, there are two versions of the ODBC Administrator tool.  The 64-bit ODBC Administrator tool is the default dialog that is launched from the control panel and is used to manage the 64-bit drivers and DSNs on the machine.  The second ODBC Administrator tool to manage the 32-bit drivers and DSNs on the machine can be launched from the SysWow64 folder.
+On a 64-Bit Windows operating system, there are two versions of the ODBC Administrator tool.  The 64-bit ODBC Administrator tool is the default dialog that is launched from the control panel and is used to manage the 64-bit drivers and DSNs on the machine.  The second ODBC Administrator tool to manage the 32-bit drivers and DSNs on the machine can be launched from the SysWow64 folder.
 
 To determine whether Office 2010 64-bit or 32-bit is installed, take the following steps:
 
@@ -60,7 +60,7 @@ Here is a table that shows which ODBC Administrator Tool to use:
 
 For more information about known issues with using the 32-bit and 64-bit ODBC Administrator tool view the following article:
 
-[942976](https://support.microsoft.com/help/942976) The 32-bit version of the ODBC Administrator tool and the 64-bit version of the ODBC Administrator tool display both the 32-bit user DSNs and the 64-bit user DSNs in a 64-bit version of the Windows operating system
+[942976](https://support.microsoft.com/help/942976) The 32-bit version of the ODBC Administrator tool and the 64-bit version of the ODBC Administrator tool display both the 32-bit user DSNs and the 64-bit user DSNs in a 64-bit version of the Windows operating system
 
 For more information on the 2010 Office System Drivers view the following article:
 

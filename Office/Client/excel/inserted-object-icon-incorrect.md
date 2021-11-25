@@ -23,8 +23,8 @@ appliesto:
 
 In Microsoft Excel 2019, when you try to insert a file that's located on a OneDrive for Business locally synced folder and you select the **Display as icon** check box, the wrong icon is displayed.
 
-![incorrect icon for inserted object in Excel 2019](./media/inserted-object-icon-incorrect/incorrect-icon.png) 
+:::image type="content" source="media/inserted-object-icon-incorrect/incorrect-icon.png" alt-text="Screenshot shows the incorrect icon after inserting the file and selecting the Display as icon check box." border="false":::
 
 ## Workaround
 
-Use the **Change Icon** button to manually assign an icon to the inserted object.
+Use the **Change Icon** button to manually assign an icon to the inserted object.

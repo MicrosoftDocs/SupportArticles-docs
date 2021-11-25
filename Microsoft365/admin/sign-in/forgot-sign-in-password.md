@@ -35,7 +35,7 @@ To fix this issue, do one of the following:
   - If you're using a work or school account, go to [https://passwordreset.microsoftonline.com](https://passwordreset.microsoftonline.com/).
   - If you're using a Microsoft account, go to [https://account.live.com/ResetPassword.aspx](https://account.live.com/resetpassword.aspx).
 
-  If the admin turned on the capability to let you to reset your own password, you will be able to reset your own password. Otherwise, the password reset form gives you the option to contact your admin.
+  If the admin turned on the capability to let you to reset your own password, you will be able to reset your own password. Otherwise, the password reset form gives you the option to contact your admin.
 - If you're an admin and you want to enable password reset for your users, see [Quickstart: Self-service password reset](/azure/active-directory/authentication/quickstart-sspr).
 - If you're an admin, you can try to reset your own password if you had already set up an alternate email address and a mobile phone number.
   - For more info about how to reset the password for your company admin account in Azure or Intune, see [Quickstart: Self-service password reset](/azure/active-directory/authentication/quickstart-sspr).

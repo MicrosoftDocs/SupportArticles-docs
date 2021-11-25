@@ -23,7 +23,7 @@ appliesto:
 
 ## Summary
 
-This article discusses how to troubleshoot the activation issues in Microsoft Office from Office 365. Activation fails and you receive one the following error messages:  
+This article discusses how to troubleshoot the activation issues in Microsoft Office from Office 365. Activation fails and you receive one the following error messages:  
 
 **We are unable to connect right now. Please check your network and try again later.**
 
@@ -35,7 +35,7 @@ This issue might be caused by one of several circumstances. Follow these steps t
 
 ### Step 1. Identify and fix activation issues by using the Support and Recovery Assistant for Office 365  
 
-The Support and Recovery Assistant app runs on Windows PCs and can help you identify and fix activation issues with Office 365.   
+The Support and Recovery Assistant app runs on Windows PCs and can help you identify and fix activation issues with Office 365.   
 [Office 365: Use the Support and Recovery Assistant for Office 365](https://support.office.com/article/0d23d3c0-c19c-4b2f-9845-5344fedc4380?#bkmk_sara)
 
 ### Step 2. Check whether you're behind a proxy server  
@@ -69,7 +69,7 @@ For more information about Microsoft 365 Apps for enterprise URLs and IP address
 
 ### Step 4. Check whether you have the appropriate license   
  
-1. Sign in to the Office 365 portal.     
+1. Sign in to the Office 365 portal.     
 2. Click **Settings** :::image type="icon" source="./media/issue-when-activate-office-from-office-365/setting-icon.png"::: and then click **Office 365 settings**.    
 3. Locate the **Assigned licenses** area.    
 4. If you see **The latest desktop version of Office**, then you have an Office subscription assigned correctly.    

@@ -57,7 +57,7 @@ First Release Deferred Channel (FRDC): Fixed in builds 16.0.6965.2078 and later
 
 Deferred Channel (DC): Fixed in builds 16.0.6965.2092 and later
 
-For more information about C2R Channel builds, see [Office 365 client update channel releases](/officeupdates/release-notes-microsoft365-apps).
+For more information about C2R Channel builds, see [Office 365 client update channel releases](/officeupdates/release-notes-microsoft365-apps).
 
 ## Workaround
 
@@ -137,7 +137,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 1. Obtain the MFCMapi tool from the following website:
 
-    [MFCMapi](https://github.com/stephenegriffin/mfcmapi)
+    [MFCMapi](https://github.com/stephenegriffin/mfcmapi/releases/)
 2. Start the tool on the affected user's computer.
 
     ![MFCMapi screenshot](./media/mapi-unavailable/mfcmapi.png)

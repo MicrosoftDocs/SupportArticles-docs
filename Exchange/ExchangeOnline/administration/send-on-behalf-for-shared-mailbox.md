@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When you sign in to the Exchange Admin Center (EAC) in Microsoft Exchange Online, you see limited options to set the permissions of a shared mailbox. The option to individually manage the **Send on Behalf** permissions is available for user mailboxes. However, only the option to manage full mailbox permissions is available for shared mailboxes.
+When you sign in to the Exchange Admin Center (EAC) in Microsoft Exchange Online, you see limited options to set the permissions of a shared mailbox. The option to individually manage the **Send on Behalf** permissions is available for user mailboxes. However, only the option to manage full mailbox permissions is available for shared mailboxes.
 
 ## Cause
 
@@ -35,7 +35,7 @@ To work around this issue, add the **Send on Behalf** permission by using Window
 [Manage permissions for recipients in Exchange Online](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
 
 > [!NOTE]
-> If you use Office 365, you can use Office 365 Admin Portal to assign the **Send on Behalf** permission to shared mailboxes.
+> If you use Office 365, you can use Office 365 Admin Portal to assign the **Send on Behalf** permission to shared mailboxes.
 
 ## More Information
 

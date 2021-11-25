@@ -25,13 +25,13 @@ When O365 paid subscription tries to renew, the license fails and eventually dis
 
 Message 1: Couldn't Verify Subscription
 
-We couldn't verify your Office 365 subscription, so most features of \<application\> have been disabled. Please make sure you're connected to the internet and restart your application.
+We couldn't verify your Office 365 subscription, so most features of \<application\> have been disabled. Please make sure you're connected to the internet and restart your application.
 
-![product info](./media/subscription-automatic-license-renew-fails/product-info.jpg)
+:::image type="content" source="media/subscription-automatic-license-renew-fails/product-info.png" alt-text="Screenshot shows the message of Couldn't Verify Subscription.":::
 
 Message 2: Application (Unlicensed Product)
 
-![unlicensed product](./media/subscription-automatic-license-renew-fails/unlicensed-product.png)
+:::image type="content" source="media/subscription-automatic-license-renew-fails/unlicensed-product.png" alt-text="Screenshot shows the message of Application Unlicensed Product." border="false":::
 
 ## Cause
 

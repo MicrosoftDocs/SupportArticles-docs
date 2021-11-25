@@ -68,11 +68,11 @@ Because of these behaviors, Offline Folders files and Personal Address Book (.pa
 
 ## Recommendations solutions
 
-Microsoft recommends the following solutions. The first three should be used instead of .pst files over a LAN or WAN. The fourth describes an option for using networked .pst files, but only when Outlook 2010 or later versions are hosted remotely on a Windows Server 2008 R2 or later Remote Desktop Session Host.
+Microsoft recommends the following solutions. The first three should be used instead of .pst files over a LAN or WAN. The fourth describes an option for using networked .pst files, but only when Outlook 2010 or later versions are hosted remotely on a Windows Server 2008 R2 or later Remote Desktop Session Host.
 
 ### Exchange Server 2010 and Exchange Server 2013 Personal Archive mailbox
 
-Personal Archives help you regain control of your organization's messaging data by eliminating the need for personal store files and allowing users to store messages in a Personal Archive mailbox accessible in  Microsoft Outlook 2007 or later versions, and Microsoft Office Outlook Web App.
+Personal Archives help you regain control of your organization's messaging data by eliminating the need for personal store files and allowing users to store messages in a Personal Archive mailbox accessible in  Microsoft Outlook 2007 or later versions, and Microsoft Office Outlook Web App.
 
 For more information about Personal Archives, see [Understanding Personal Archives](/previous-versions/office/exchange-server-2010/dd979795(v=exchg.141)).
 
@@ -84,7 +84,7 @@ When you're working over a WAN or LAN, it's better to configure Microsoft Outloo
 
 If an enterprise wants to use Outlook over WAN or LAN links, it's highly efficient to configure Outlook to connect to the Exchange Server mailbox in Online mode while using the Microsoft Windows Terminal Server service. With Terminal Services, only the information that is required to update a display is transferred. The potential benefits in having many remote users based on Terminal Services (instead of using either .pst or .ost files) are significant in any network bandwidth conservation analysis.
 
-### Outlook 2010 or later versions hosted remotely by using Windows Server 2008 R2 or later RDSH or VDI configuration
+### Outlook 2010 or later versions hosted remotely by using Windows Server 2008 R2 or later RDSH or VDI configuration
 
 Outlook 2010 or later versions functionality is supported when networked .pst or .ost files are used under the following conditions:
 
@@ -95,7 +95,7 @@ Outlook 2010 or later versions functionality is supported when networked .pst or
 If a specific Outlook feature stops working or the .pst or .ost file becomes corrupt and you can reproduce the issue in the above environment, contact Microsoft Support.
 
 > [!NOTE]
-> Customers are responsible for both defining and maintaining adequate network and disk I/O. Microsoft will not assist in troubleshooting slow performance due to *networked*.pst or .ost files. Microsoft will only assist if the performance issue is reproduced while the .pst or .ost file is located on either a hard disk that is physically attached to the computer that is running Outlook, or on a virtual hard disk (VHD) that is attached to the virtual machine that is running Outlook.
+> Customers are responsible for both defining and maintaining adequate network and disk I/O. Microsoft will not assist in troubleshooting slow performance due to *networked*.pst or .ost files. Microsoft will only assist if the performance issue is reproduced while the .pst or .ost file is located on either a hard disk that is physically attached to the computer that is running Outlook, or on a virtual hard disk (VHD) that is attached to the virtual machine that is running Outlook.
 
 > [!IMPORTANT]
 > Microsoft programs may not work as expected in a third-party application or software virtualization environment. We do not test Microsoft products that are running in third-party application or software virtualization environments. For more information about support provided by Microsoft for its software running together with non-Microsoft hardware virtualization software, see [Support policy for Microsoft software running in non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615).

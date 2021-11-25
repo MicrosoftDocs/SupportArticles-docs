@@ -22,13 +22,13 @@ _Original KB number:_ &nbsp;4484206
 
 ## Symptoms
 
-When you try to send email messages in Outlook 2016 for Mac, the email messages remain stuck in the **Outbox** folder, and you receive the following error message:
+When you try to send email messages in Outlook 2016 for Mac, the email messages remain stuck in the **Outbox** folder, and you receive the following error message:
 
 > Unexpected data was encountered.
 
 ## Cause
 
-This issue occurs because Outlook 2016 for Mac can't locate and use the **Sent Items** folder. The folder hierarchy in the mailbox may have become corrupted.
+This issue occurs because Outlook 2016 for Mac can't locate and use the **Sent Items** folder. The folder hierarchy in the mailbox may have become corrupted.
 
 For example, in some cases, the **Sent Items** folder is converted into the **Archive** folder, and the icons that mark the two folders are incorrect. See the following screenshots:
 
@@ -47,7 +47,7 @@ Use the **/resetfolders** switch to restore the missing folders at the default d
 
 1. Exit Outlook.
 2. Open the **Run** dialog box:
-   - In Windows 10, Windows 8.1, and Windows 8, press Windows logo key +R.
+   - In Windows 10, Windows 8.1, and Windows 8, press Windows logo key +R.
    - In Windows 7 and Windows Vista, select **Start** > **All Programs** > **Accessories** > **Run**.
 3. In the **Run** dialog box, enter the following command, and then click **OK**:
 
@@ -57,11 +57,11 @@ Use the **/resetfolders** switch to restore the missing folders at the default d
 
 ### Method 2: Use Outlook Web App
 
-Use Outlook Web App to reset the default folder names. To do this, follow these steps:
+Use Outlook Web App to reset the default folder names. To do this, follow these steps:
 
 1. Exit Outlook.
 2. Sign in to [Outlook Web App](https://support.office.com/article/Sign-in-to-Outlook-Web-App-e08eb8ac-ac27-49f4-a400-a47311e1ee7e) by using your credentials.
-3. Select **Settings** (the gear icon on the right) > **Options** > **General** (expand the list in the navigation pane) > **Region and time zone**.
+3. Select **Settings** (the gear icon on the right) > **Options** > **General** (expand the list in the navigation pane) > **Region and time zone**.
 4. On the **Regional and time zone settings** page, change the language, select the date and time format that you want to use, select the **Rename default folders so their names match the specified language** option, and then select **Save**.
 5. Exit Outlook Web App.
     > [!NOTE]
@@ -76,7 +76,7 @@ If you're an administrator, run the following cmdlet to reset the default folder
 set-MailboxRegionalConfiguration -id <alias> -LocalizeDefaultFolderName:$true -Language <Language_code_to_switch_to> -DateFormat <your_preferred_DateFormat>
 ```
 
-For more information about language codes and the `Set-MailboxRegionalConfiguration` cmdlet, see the following websites:
+For more information about language codes and the `Set-MailboxRegionalConfiguration` cmdlet, see the following websites:
 
 [Language codes](https://msdn.microsoft.com/library/ms533052%28v=vs.85%29.aspx)
 
@@ -90,7 +90,7 @@ To do this, follow these steps:
     > [!NOTE]
     > The x86-based version of MFCMAPI should be used with the x86-based version of Office, and the x64-based version of MFCMAPI should be used with the x64-based version of Office.
 2. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that's named **Archive01**.
-3. Start MFCMAPI in Online mode. To make sure that MFCMAPI is in Online mode, select **Tools** > **Options**, and then make sure that the **Use the MDB_ONLINE flag** and **Use the MAPI_NO_CACHE** check boxes are selected.
+3. Start MFCMAPI in Online mode. To make sure that MFCMAPI is in Online mode, select **Tools** > **Options**, and then make sure that the **Use the MDB_ONLINE flag** and **Use the MAPI_NO_CACHE** check boxes are selected.
 4. Expand **Root Container** > **Top of Information Store**.
 5. Copy the default input ID from the Inbox folder (the renamed **Archive** folder in this case). To do this, click the **Archive** folder, select the **InternalSchema.ArchiveFolderEntryId (0x35ffXXXX)** tag, right-click this tag, select **Open Entry ID**, and then copy the whole ID.
 6. Select the **Archive01** folder that you created, and then examine the item. The following details are displayed:

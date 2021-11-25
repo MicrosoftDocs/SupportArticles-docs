@@ -27,7 +27,7 @@ Consider the following scenario:
 - A remote mailbox is created in on-premises Active Directory Domain Services (AD DS) environment by using the `New-RemoteMailbox` cmdlet.
 - A mailbox is provisioned in Exchange Online.
 
-In this scenario, the remote mailbox object in the on-premises AD DS is not considered ACLable. On-premises users cannot add the cloud mailbox user as a delegate or cannot grant folder permissions.
+In this scenario, the remote mailbox object in the on-premises AD DS is not considered ACLable. On-premises users cannot add the cloud mailbox user as a delegate or cannot grant folder permissions.
 
 ## Workaround
 
@@ -46,11 +46,11 @@ This behavior is by design.
 
 ## More information
 
-Starting in Microsoft Exchange 2013 Cumulative Update 10, you can make migrated users ACLable by setting an organization configuration. To do this, run the following command:
+Starting in Microsoft Exchange 2013 Cumulative Update 10, you can make migrated users ACLable by setting an organization configuration. To do this, run the following command:
 
 ```powershell
 Set-OrganizationConfig -ACLableSyncedObjectEnabled $True
 ```
 
 > [!NOTE]
-> This requires that an on-premises mailbox is migrated to Exchange Online instead of being provisioned directly in Exchange Online.
+> This requires that an on-premises mailbox is migrated to Exchange Online instead of being provisioned directly in Exchange Online.

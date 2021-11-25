@@ -26,7 +26,7 @@ appliesto:
 
 The Microsoft Excel team has made a change in the behavior of certain file types to increase security. This change is included in the [July 2016 security updates (MS16-088)](https://support.microsoft.com/help/3170008). 
 
-Previously, when you tried to open an HTML or XLA/XLAM file from an untrusted location, Excel opened the workbook without using Protected View security. After the security updates are installed, Excel no longer opens the workbook because these files are incompatible with Protected View. There is no warning or other indication that the file was not opened. 
+Previously, when you tried to open an HTML or XLA/XLAM file from an untrusted location, Excel opened the workbook without using Protected View security. After the security updates are installed, Excel no longer opens the workbook because these files are incompatible with Protected View. There is no warning or other indication that the file was not opened. 
 
 ## Resolution
 
@@ -87,7 +87,7 @@ The following guidelines apply to the Trusted Locations feature:
 - Using Trusted Locations can unblock you. However, it also creates some risks. This is because files of any file type that are listed in Trusted Locations are fully trusted. An attacker who can add files to the trusted location can easily exploit users who open such documents. Therefore, you should be especially cautious when you specify a custom folder as a trusted location.   
 
 > [!NOTE]
-> In case your HTML contains one or more input tags you may see `File is corrupt` error. We are working on getting a full resolution in future updates. 
+> In case your HTML contains one or more input tags you may see `File is corrupt` error. We are working on getting a full resolution in future updates. 
 
 ### Additional information
 

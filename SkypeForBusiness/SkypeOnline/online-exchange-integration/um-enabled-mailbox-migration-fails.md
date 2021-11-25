@@ -25,10 +25,10 @@ When you try to migrate a Unified Messaging (UM)-enabled mailbox from on-premise
 
 ```AsciiDoc
 Mailbox '**USER**' in the source forest is currently enabled for Unified Messaging but it can't be enabled for Unified Messaging in the target forest for the following reason: Unified Messaging isn't available in the target forest. Please fix the problem or disable the mailbox for Unified Messaging before you try the operation again.
-     + CategoryInfo          : InvalidArgument: (**USER**:MailboxOrMailUserIdParameter) [New-MoveRequest], RecipientTask
-    Exception
-     + FullyQualifiedErrorId : [Server=**Server**,RequestId=**RequestId**,TimeStamp=**TimeStamp**] [FailureCategory=Cmdlet-RecipientTaskException] xxxxxxxx,Microsoft.Exchange.Management.RecipientTasks.
-   NewMoveRequest  
+     + CategoryInfo          : InvalidArgument: (**USER**:MailboxOrMailUserIdParameter) [New-MoveRequest], RecipientTask
+    Exception
+     + FullyQualifiedErrorId : [Server=**Server**,RequestId=**RequestId**,TimeStamp=**TimeStamp**] [FailureCategory=Cmdlet-RecipientTaskException] xxxxxxxx,Microsoft.Exchange.Management.RecipientTasks.
+   NewMoveRequest  
 ```
 
 ## Cause
@@ -39,16 +39,16 @@ This issue occurs because Exchange Online cannot find a valid target forest that
 
 To resolve this issue, follow these steps:
 
-1. Make sure that the user has an Exchange Online license. 
+1. Make sure that the user has an Exchange Online license. 
 
     > [!NOTE]
     > [Exchange Online Service Description](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description) indicates that some mailbox plans don't include Voice Message Services (formerly known as UM). To resolve this issue, a license must be applied for a mailbox plan that includes Voice Message Services (Exchange Online Plan 2, Office 365 Enterprise E3 or Office 365 Enterprise E5 license).    
-2. Verify that the value of the **LicenseReconciliationNeeded** property is **False**. To do this, run the following Microsoft Online Services Module for Windows PowerShell cmdlets in the given order:  
+2. Verify that the value of the **LicenseReconciliationNeeded** property is **False**. To do this, run the following Microsoft Online Services Module for Windows PowerShell cmdlets in the given order:  
    - Connect-MsolService    
    - Get-MsolUser -UserPrincipalName**UPN** |fl LicenseReconciliationNeeded    
 
     > [!NOTE]
-    > If the value is **True**, assign an Exchange Online license to the user account. Doing this operation resets the **LicenseReconciliationNeeded** property to **False** and enables the migration to continue.    
+    > If the value is **True**, assign an Exchange Online license to the user account. Doing this operation resets the **LicenseReconciliationNeeded** property to **False** and enables the migration to continue.    
 3. Map the UM mailbox policy on the cloud and on the on-premises Exchange-based server. To do this, follow these steps:  
    1. Run the following command in Exchange Online PowerShell:
 

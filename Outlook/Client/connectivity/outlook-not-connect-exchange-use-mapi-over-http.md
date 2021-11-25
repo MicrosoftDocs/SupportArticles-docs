@@ -35,14 +35,14 @@ Consider the following scenario:
 - The Exchange mailbox and Client Access (CAS) servers that you're connecting to all have Exchange Server 2013 SP1 or a later version installed or Exchange Server 2016.
 - The necessary server settings to establish MapiHttp connections are correctly configured.
 
-In the above scenario, the **Protocol** column in the **Outlook Connection Status** dialog shows Outlook 2013 is connected to the Exchange server using a connection mechanism other than MAPI/HTTP. For example, the following figure shows a connection using RPC/HTTP.
+In the above scenario, the **Protocol** column in the **Outlook Connection Status** dialog shows Outlook 2013 is connected to the Exchange server using a connection mechanism other than MAPI/HTTP. For example, the following figure shows a connection using RPC/HTTP.
 
 :::image type="content" source="./media/outlook-not-connect-exchange-use-mapi-over-http/rpc-http-protocol.png" alt-text="Screenshot of Outlook connection status dialog, which shows the Protocol column as RPC/HTTP.":::
 
 > [!NOTE]
-> MAPI/HTTP connections are designated in the **Protocol** column using the string **HTTP**.
+> MAPI/HTTP connections are designated in the **Protocol** column using the string **HTTP**.
 
-Additionally, if MAPI/HTTP is disabled, Office 365 users receive a Basic Authentication prompt instead of a Modern Authentication prompt.
+Additionally, if MAPI/HTTP is disabled, Office 365 users receive a Basic Authentication prompt instead of a Modern Authentication prompt.
 
 ## Cause
 

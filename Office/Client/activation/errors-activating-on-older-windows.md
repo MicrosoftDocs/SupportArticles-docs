@@ -27,16 +27,16 @@ You receive one of the following error messages when you try to activate Microso
 > We’re having trouble activating office<br>
 > This might be due to a network or temporary service issue. Please make sure you're connected to the internet. We'll activate Office for you when the issue is resolved.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/trouble-activating-office.png" alt-text="Screenshot with error text We're having trouble activating Office":::
+:::image type="content" source="media/errors-activating-on-older-windows/trouble-activating-office.png" alt-text="Screenshot of the error message, showing we're having trouble activating Office.":::
 
 > Sorry, but we’re having trouble signing you in.
 > AADSTS9002313: Invalid request. Request is malformed or invalid.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/invalid-request.png" alt-text="Screenshot with error text Invalid request Request is malformed or invalid":::
+:::image type="content" source="media/errors-activating-on-older-windows/invalid-request.png" alt-text="Screenshot of the error message, showing request is malformed or invalid.":::
 
 > Sorry, we are having some temporary server issues.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/temp-server-issues.png" alt-text="Screenshot with error text Sorry, we are having some temporary server issues.":::
+:::image type="content" source="media/errors-activating-on-older-windows/temp-server-issues.png" alt-text="Screenshot of the error message, showing we're having some temporary server issues.":::
 
 ## Cause
 

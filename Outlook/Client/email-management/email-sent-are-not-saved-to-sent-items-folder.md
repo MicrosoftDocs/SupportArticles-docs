@@ -59,7 +59,7 @@ In Outlook 2007:
 
 ## More information
 
-The **Save copies of messages in Sent Items folder** option can be controlled using the Outlook Group Policy setting. You can find the policy setting below, depending on your version of Outlook.
+The **Save copies of messages in Sent Items folder** option can be controlled using the Outlook Group Policy setting. You can find the policy setting below, depending on your version of Outlook.
 
 - Outlook 2007:
 

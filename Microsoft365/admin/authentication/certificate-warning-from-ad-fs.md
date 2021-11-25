@@ -45,7 +45,7 @@ Before a certificate can be used to help secure a Secure Sockets Layer (SSL) or 
   2. After you reproduce the error, follow these steps:
      1. Click **View Certificates**, and then click the **Details** tab. Compare the URL from step A to the **Subject** field and to the **Subject Alternative Name** fields in the **Properties** dialog box of the certificate.
 
-         ![Screen shot of mismatched address page ](./media/certificate-warning-from-ad-fs/properties.jpg)
+         :::image type="content" source="media/certificate-warning-from-ad-fs/mismatched-address.png" alt-text="Screenshot shows the error on the Mismatched Address page.":::
      1. Verify that the address that's used in step A isn't listed or doesn't match any entries in these fields, or both. If this is the case, the certificate must be reissued to include the server address that was used in step A.
    
 - Certificate wasn't issued by a trusted root certification authority (CA). If the client computer that's requesting the connection doesn't trust the CA chain that generated the certificate, the connection request will issue a warning that's based on this state. To make sure that the certificate passes this test, follow these steps:

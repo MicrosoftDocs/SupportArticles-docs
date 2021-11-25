@@ -39,5 +39,5 @@ You may use one of the following methods to prevent the issue.
 
 1. Use the *.xlsx format instead 
 2. Restrict any memo/long text fields to a length less than 8224 bytes
-3. When exporting, delete the existing .xls file before performing the export using the same file name
+3. When exporting, delete the existing .xls file before performing the export using the same file name
 4. Open the .xls file in Excel before performing the Import/Export from Access

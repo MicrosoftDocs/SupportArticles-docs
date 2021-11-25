@@ -20,7 +20,7 @@ appliesto:
 
 ## Introduction
 
-When a user's Office 365 sign-in address (also known as the User Principal Name, UPN, or user ID) is changed, the Skype for Business Online (formerly Lync Online) SIP address for the user is automatically synchronized. Previously, when a user's Office 365 sign-in address was changed, the IT administrator had to update the user's SIP address separately to match the new Office 365 sign-in address. Otherwise, the two values would be mismatched. A mismatch between a user ID and the user's SIP address may cause confusion for the Skype for Business Online user during sign in.
+When a user's Office 365 sign-in address (also known as the User Principal Name, UPN, or user ID) is changed, the Skype for Business Online (formerly Lync Online) SIP address for the user is automatically synchronized. Previously, when a user's Office 365 sign-in address was changed, the IT administrator had to update the user's SIP address separately to match the new Office 365 sign-in address. Otherwise, the two values would be mismatched. A mismatch between a user ID and the user's SIP address may cause confusion for the Skype for Business Online user during sign in.
 
 ## Procedure 
 
