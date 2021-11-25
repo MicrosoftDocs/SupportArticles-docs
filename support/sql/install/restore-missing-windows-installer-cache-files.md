@@ -73,7 +73,7 @@ You can download the FixMissingMSI tool from the [GitHub repository](https://git
 
 This is a graphical-user-interface (GUI) tool and enables you to identify and fix the missing MSIs easily. 
 
-:::image type="content" source="media/fix-missing-msi-tool.png" alt-text="Screenshot FixMissingMSI Tool":::
+:::image type="content" source="media/restore-missing-windows-installer-cache-files/fix-missing-msi-tool.png" alt-text="Screenshot FixMissingMSI Tool":::
 
 For more information, see [SQL Setup ToolSuite Introduction (1) -FixMissingMSI](/archive/blogs/psssql/sql-setup-toolsuite-introduction-1-fixmissingmsi).
 
