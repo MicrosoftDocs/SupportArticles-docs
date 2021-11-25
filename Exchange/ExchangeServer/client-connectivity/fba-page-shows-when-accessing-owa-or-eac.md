@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2871485
 
 ## Symptoms
 
-In Microsoft Exchange Server 2013, you have forms-based authentication (FBA) disabled for Outlook Web App (Outlook Web App) and [Exchange admin center](/exchange/architecture/client-access/exchange-admin-center?view=exchserver-2019) (EAC). Additionally, you have either Windows Integrated or Basic Authentication enabled. After you upgrade Exchange Server 2013 to a newer build, the FBA page is displayed when a user accesses Outlook Web App or EAC. Additionally, the FBA page continues to appear even after the user provides valid credentials.
+In Microsoft Exchange Server 2013, you have forms-based authentication (FBA) disabled for Outlook Web App (Outlook Web App) and [Exchange admin center](/exchange/architecture/client-access/exchange-admin-center) (EAC). Additionally, you have either Windows Integrated or Basic Authentication enabled. After you upgrade Exchange Server 2013 to a newer build, the FBA page is displayed when a user accesses Outlook Web App or EAC. Additionally, the FBA page continues to appear even after the user provides valid credentials.
 
 This issue also occurs in Exchange Server 2016.
 

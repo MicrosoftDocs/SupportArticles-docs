@@ -98,7 +98,7 @@ To copy the AutoComplete list, follow these steps:
 To export the AutoComplete mailbox message, follow these steps:
 
 1. Exit Outlook, and then close Outlook Web Access or Outlook Web App (OWA) on all workstations that are connected to your mailbox.
-2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 3. Run mfcmapi.exe.
 4. On the **Session** menu, select **Logon**.
 5. If you're prompted for a profile, select the desired profile name, and then select **OK**.
@@ -114,7 +114,7 @@ To export the AutoComplete mailbox message, follow these steps:
 To import the AutoComplete mailbox message, follow these steps.
 
 1. Exit Outlook, and then close Outlook Web Access or Outlook Web App (OWA) on all workstations that are connected to your mailbox.
-2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 3. Run mfcmapi.exe.
 4. On the **Session** menu, select **Logon**.
 5. If you're prompted for a profile, select the desired profile name, and then select **OK**.

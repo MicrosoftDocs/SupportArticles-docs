@@ -34,7 +34,7 @@ This error occurs because the site, file, or group was renamed, moved, or delete
 
 ## Resolution
 
-If you can’t find the content that you're looking for, check with your SharePoint administrator. For more information, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b).
+If you can't find the content that you're looking for, check with your SharePoint administrator. For more information, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b).
 
 ## Actions for administrators
 
@@ -45,7 +45,7 @@ Try to locate the site or file by using the following methods:
 
 If the site home page was deleted, follow these steps:
 
-1. Browse to the site recycle bin by pasting this URL into the browser: `https://tenantname.sharepoint.com/sites/sitename/_layouts/15/RecycleBin.aspx?view=5`
+1. Browse to the site recycle bin by pasting this URL into the browser: `https://<tenantname>.sharepoint.com/sites/<sitename>/_layouts/15/RecycleBin.aspx?view=5`
 
    > **Important**: In the path, replace *tenantname* with your organization's name and *sitename* with the name of the site that's missing a home page.
 
@@ -78,7 +78,7 @@ The site might have been deleted. If so, restore the deleted site from the new S
 1. Select the site to restore.
 1. Select **Restore**.
 
-**Important**: If the deleted site was the root (top-level) SharePoint site, you’ll have to first restore the site and then replace it by using the steps in [Replace your root site](../sites/url-that-resides-under-root-site-collection-is-broken.md).
+**Important**: If the deleted site was the root (top-level) SharePoint site, you'll have to first restore the site and then replace it by using the steps in [Replace your root site](../sites/url-that-resides-under-root-site-collection-is-broken.md).
 
 **For OneDrive**
 
@@ -89,13 +89,13 @@ For more information, see [Restore a deleted OneDrive](/onedrive/restore-deleted
 <details>
 <summary><b>Check whether the site was redirected</b></summary>
 
-If the user is trying to access the site from a saved site URL or a link to a specific site URL, it’s possible that the site URL was changed or that the site was moved or deleted.
+If the user is trying to access the site from a saved site URL or a link to a specific site URL, it's possible that the site URL was changed or that the site was moved or deleted.
 
 If the Site URL was changed, a site redirect page should have been created. For more information, see [Manage site redirects](/sharepoint/manage-site-redirects).
 
 **Important:**
 - If the site was removed by using the steps in [To remove a redirect](/sharepoint/manage-site-redirects#to-remove-a-redirect), a "404" error can occur.
-- To determine which sites have new URLs, see the “To get a list of all redirects” section of [Manage site redirects](/sharepoint/manage-site-redirects).
+- To determine which sites have new URLs, see the "To get a list of all redirects" section of [Manage site redirects](/sharepoint/manage-site-redirects).
 
 If the site was deleted, you can restore it from the SharePoint admin center. For more information, see [Restore deleted sites](/sharepoint/restore-deleted-site-collection).
 </details>
