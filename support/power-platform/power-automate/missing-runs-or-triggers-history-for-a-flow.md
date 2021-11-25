@@ -2,7 +2,6 @@
 title: Missing runs or triggers history for a flow
 description: Missing runs or triggers history for a flow.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---

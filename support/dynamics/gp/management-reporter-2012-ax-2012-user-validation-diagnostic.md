@@ -2,7 +2,6 @@
 title: User Validation diagnostic
 description: Diagnostic tool to check users in Management Reporter and Microsoft Dynamics AX and confirm they are valid.
 ms.reviewer: kellybj, kevogt
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3][eac0d4f1-1e4a-4713-9e07-65e49e866fd0] Management Reporter 2012 AX 2012 User Validation diagnostic

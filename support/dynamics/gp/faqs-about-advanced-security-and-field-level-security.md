@@ -1,7 +1,6 @@
 ---
 title: FAQs about Advanced Security and Field Level Security
 description: Discusses frequently asked questions about how to set up and use Advanced Security and Field Level Security.
-ms.topic: article
 ms.reviewer: kyouells
 ms.date: 03/31/2021
 ---

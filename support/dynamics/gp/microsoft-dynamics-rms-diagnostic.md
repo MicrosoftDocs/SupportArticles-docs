@@ -2,7 +2,6 @@
 title: Microsoft Dynamics RMS Diagnostic
 description: Describes the information that is collected by the Microsoft Dynamics RMS diagnostic.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3][cae41a93-53b6-455a-a5b2-2140b3e8a7c6] Microsoft Dynamics RMS Diagnostic
