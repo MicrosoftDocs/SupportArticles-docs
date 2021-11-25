@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 969052
 
 ## Symptoms
 
-When you try to install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages, and these may indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores important files for applications installed using the Windows Installer technology and should not be deleted. If the installer cache has been compromised, you may not immediately see problems until you perform an action such as uninstall, repair, or update SQL Server.
+When you install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages that indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores critical files for applications installed via the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately see problems. Issues will appear when you perform an uninstall, repair, or update of SQL Server.
 
 When you install SQL Server, the Windows Installer stores critical files in the Windows Installer Cache (default is *C:\Windows\Installer*). These files are required for uninstalling and updating applications. Missing files cannot be copied between computers, because they are unique.
 
@@ -63,7 +63,7 @@ Repair the common shared components and features first, and then repeat the comm
 
 ### Use the FixMissingMSI tool
 
-In this procedure, you will use the FixMissingMSI tool to identify MSI and MSP files that are missing from the Windows Installer cache. As an additional step you can point the tool to the original media locations and recache the missing files.
+In this procedure, you will use the FixMissingMSI tool to identify MSI and MSP files that are missing from the Windows Installer cache. As an extra step, you can point the tool to the original media location and re-cache the missing files.
 
 #### Download
 
@@ -204,7 +204,7 @@ If the error message references a missing Windows Installer database file (.msi)
 
 #### Find the patch package and the product details for a missing .msp file
 
-Different versions of the product generate different error messages for this problem. The error messages that are mentioned in the [Symptoms](#symptoms) section appear for Setup programs for updates starting with SQL Server 2008 SP1. For other updates, you receive error messages that may not clearly specify which patch file is missing from the Windows Installer cache and the specific update details. For these error messages, the setup log files will contain information about the missing Windows Installer cache file. A sample setup log resembles the following:
+Different versions of the product generate different error messages for the described problem. The error messages that are mentioned in the [Symptoms](#symptoms) section appear for updates starting with SQL Server 2008 SP1. For other updates, you receive error messages that may not clearly specify which patch file is missing from the Windows Installer cache and the specific update details. For these error messages, the setup log files will contain information about the missing Windows Installer cache file. A sample setup log resembles the following:
 
 ```output
 MSI (s) (FC:F8) [13:48:58:649]: Opening existing patch 'C:\WINDOWS\Installer\145258.msp'.  
