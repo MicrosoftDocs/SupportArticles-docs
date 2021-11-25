@@ -74,7 +74,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 6.  Type a name for the VM, and then select **Next**.
 
-7.  Select **Generation 1** or **Generation 2** as per your faulty Azure VM generation.
+7.  Select **Generation 1** or **Generation 2** according to the faulty VM generation.
 
 8.  Set the startup memory at 1024 MB or more.
 
@@ -88,7 +88,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 12. Right-click the VM that you created, and then select **Settings**.
 
-13. Select **IDE Controller 0** for Gen 1 or **SCSI controller** for Gen 2, select **Hard Drive**, and then click **Add**.
+13. Select **IDE Controller 0** for generation 1 VMs or **SCSI Controller** for generation 2 VMs, select **Hard Drive**, and then click **Add**.
 
     :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/create-new-drive.png" alt-text="Screenshot shows steps to add a new hard drive." border="false":::
 
