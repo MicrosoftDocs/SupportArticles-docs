@@ -53,7 +53,7 @@ Get-OrganizationRelationship | ft name, domainnames
 - If the domain is included in the returned result, run the  [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable the free/busy access. For example:
 
     ```powershell
-    Set-OrganizationRelationship -Identity "<Contoso>" -FreeBusyAccessEnabled $true
+    Set-OrganizationRelationship -Identity "Contoso" -FreeBusyAccessEnabled $true
     ```
 
 ## Error 2: The organization relationship can't be used
@@ -76,5 +76,5 @@ Run the [Get-FederationInformation](/powershell/module/exchange/get-federationin
 Then, run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the parameters value of the organization relationship. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters with the required values. For example:
 
 ```powershell
-Set-OrganizationRelationship -Identity "<Contoso>" -TargetAutodiscoverEpr "<Value from the federation information>" -TargetApplicationUri "<Value from the federation information>"
+Set-OrganizationRelationship -Identity "Contoso" -TargetAutodiscoverEpr "<Value from the federation information>" -TargetApplicationUri "<Value from the federation information>"
 ```
