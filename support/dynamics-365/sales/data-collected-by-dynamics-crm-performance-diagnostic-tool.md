@@ -2,7 +2,6 @@
 title: Microsoft Dynamics CRM Client Performance diagnostic tool
 description: This article describes the data that is collected by the Microsoft Dynamics CRM Client Performance diagnostic tool.
 ms.reviewer: aaronric
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-client-outlook
 ---

@@ -2,7 +2,6 @@
 title: Microsoft Dynamics CRM Claims and IFD Collector
 description: This article describes Microsoft Dynamics CRM Claims and IFD Collector.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-server
 ---

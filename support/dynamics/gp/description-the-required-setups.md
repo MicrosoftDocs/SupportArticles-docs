@@ -2,7 +2,6 @@
 title: Description of the required setups
 description: Describes the many Fixed Assets windows that can be set up in Microsoft Dynamics GP.
 ms.reviewer:
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the required setups and the conditionally required setups in Fixed Assets in Microsoft Dynamics GP

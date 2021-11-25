@@ -2,7 +2,6 @@
 title: Supportability with Dynamics CRM
 description: Discusses support for Tablet Browser, CRM for Tablets, and CRM for Phones support with Microsoft Dynamics CRM.
 ms.reviewer: aaronric, taskar
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-phones
 ---

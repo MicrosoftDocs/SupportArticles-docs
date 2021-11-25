@@ -2,7 +2,6 @@
 title: Workflow 2.0 tables used with Microsoft Dynamics GP
 description: Workflow 2.0 tables used with Microsoft Dynamics GP 2013 R2 and higher versions.
 ms.reviewer: cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Workflow 2.0 tables used with Microsoft Dynamics GP

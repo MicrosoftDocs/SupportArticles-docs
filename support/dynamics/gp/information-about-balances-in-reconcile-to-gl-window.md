@@ -2,7 +2,6 @@
 title: Information about the balances in Reconcile to GL window
 description: Provides information about the balances (RM, PM, and Bank Rec) in the Reconcile to GL window in Microsoft Dynamics GP.
 ms.reviewer: cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about the balances in the Reconcile to GL window in Microsoft Dynamics GP
