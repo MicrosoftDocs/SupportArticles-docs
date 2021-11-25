@@ -27,6 +27,6 @@ If you upload a file that exceeds the size to Sway, you may receive an error mes
 
 You cannot change these file size limits. If you experience the error message, we recommend that you go to the following site:
 
-[Sway Suggestion Box](https://sway.uservoice.com/)
+[Feedback for Microsoft 365](https://feedbackportal.microsoft.com/)
 
-In this site, you can make suggestions by using the **Sway Suggestion Box** that the product group can consider for improving the product and adding features. Include the description of the types of files that you try to upload and the size of the files. This information will help the product group determine what limits better meet customer needs.
+In this site, you can make suggestions by using the **Send feedback** button that the product group can consider for improving the product and adding features. Include the description of the types of files that you try to upload and the size of the files. This information will help the product group determine what limits better meet customer needs.
