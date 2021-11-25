@@ -25,14 +25,14 @@ Office 365 Support is available only to users with Administrator roles associate
 
 If a user does not need any specialized administrative access you can grant them the role of Service Administrator, which will provide them view-only access and the ability to contact support to create an incident.
 
-To create a new service request, browse to [https://portal.office365.us/adminportal](https://portal.office365.us/adminportal). After login, navigate to **Show all** > **Support** > **New Service Request**, and use the subject to briefly describe the problem for the new service request.
+To create a new service request, browse to the [Microsoft Office 365 Admin Portal](https://portal.office365.us/adminportal). After login, navigate to **Show all** > **Support** > **New Service Request**, and use the subject to briefly describe the problem for the new service request.
 
 > [!NOTE]
 > Users cannot change their own account permissions and their account needs to be updated by another administrator.
 
-For more details and step-by-step guidance on how to assign administrative roles to users, please see [https://docs.microsoft.com/office365/admin/add-users/assign-admin-roles?view=o365-worldwide.](/office365/admin/add-users/assign-admin-roles)  
+For more details and step-by-step guidance on how to assign administrative roles to users, please see [Assign admin roles](/office365/admin/add-users/assign-admin-roles).
 
-For more details on administrator roles, please see [https://docs.microsoft.com/office365/admin/add-users/about-admin-roles](/office365/admin/add-users/about-admin-roles).  
+For more details on administrator roles, please see [About admin roles](/office365/admin/add-users/about-admin-roles).  
 
 For more information on how to populate a valid email address for a user account, see the "More Information" section below.  A valid email address is necessary for the following situations: 
 

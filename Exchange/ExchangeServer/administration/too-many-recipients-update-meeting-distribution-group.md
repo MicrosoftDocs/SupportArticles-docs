@@ -79,4 +79,4 @@ Set-TransportConfig -maxrecipientenvelopelimit: value
 
 The `MaxRecipientEnvelopeLimit` parameter specifies the maximum number of recipients for a message. The default value is 5000. The valid input range for this parameter runs from 0 through 2147483647. If you enter a value of **Unlimited**, no limit is imposed on the number of recipients for a message. Exchange treats an unexpanded distribution group as one recipient. This parameter is available only in on-premises installations of Exchange 2013.
 
-For more information, see [Set-TransportConfig](/powershell/module/exchange/set-transportconfig?view=exchange-ps).
+For more information, see [Set-TransportConfig](/powershell/module/exchange/set-transportconfig).
