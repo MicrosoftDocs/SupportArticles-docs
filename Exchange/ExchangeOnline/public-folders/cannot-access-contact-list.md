@@ -50,7 +50,7 @@ In Outlook on the web, [add the public folder to Favorites](/exchange/collaborat
 
 ### Method 3: Use the MFCMAPI tool to split the contact list
 
-Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool to split the contact list. Then, try again to access the contact list.
+Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/) tool to split the contact list. Then, try again to access the contact list.
 
 1. Start the MFCMAPI tool.
 1. Select **Session** > **Logon**.

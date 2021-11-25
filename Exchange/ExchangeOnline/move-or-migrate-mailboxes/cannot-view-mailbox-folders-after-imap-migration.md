@@ -53,7 +53,7 @@ Use Microsoft Exchange Server MAPI Editor (MFCMAPI) to change the `PR_CONTAINER_
 > [!NOTE]
 > Although the MFCMAPI editor is supported, you should use caution when you use this tool to change mailboxes. Using the MFCMAPI editor incorrectly can cause permanent damage to a mailbox.
 
-1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi), and then run it.
+1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/), and then run it.
 2. On the **Tools** menu, select **Options**.
 3. Select the **Use the MDB_ONLINE flag when calling OpenMsgStore** check box and the **Use the MAPI_NO_CACHE flag** when calling OpenEntry check box.
 4. On the **Session** menu, select **Logon**.
