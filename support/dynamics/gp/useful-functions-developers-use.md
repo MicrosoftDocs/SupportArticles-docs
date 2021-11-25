@@ -2,7 +2,6 @@
 title: Useful functions for developers to use
 description: Describes six new functions that developers can use to modify existing Report Writer reports instead of creating alternate reports in their third-party dictionaries.
 ms.reviewer:
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Useful functions for developers to use instead of creating alternate reports in Microsoft Dynamics GP

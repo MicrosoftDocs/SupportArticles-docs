@@ -2,7 +2,6 @@
 title: Management Reporter 2012 Exception Call Stack Diagnostic
 description: This diagnostic connects to a selected local process and outputs the call stack from the specified exception type.
 ms.reviewer: kellybj
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3][527f0061-fb98-48b3-af4c-230914a1fbad] Management Reporter 2012 Exception Call Stack Diagnostic

@@ -2,7 +2,6 @@
 title: Description of the Management Reporter Base Collector diagnostic
 description: Describes the Management Reporter Base Collector diagnostic.
 ms.reviewer: kellybj, kevogt
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3][e9c28bfc-8657-40e7-907f-41790777151b] Description of the Management Reporter Base Collector diagnostic
