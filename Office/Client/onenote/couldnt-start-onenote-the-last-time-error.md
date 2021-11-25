@@ -123,7 +123,7 @@ Reference: [Deployment guide for OneNote](/deployoffice/deployment-guide-onenote
 ### References
 
 - Get OneNote: [Mac](http://onenote.com/get) | [iOS](https://app.adjust.com/ux3h90) | [Android](https://app.adjust.com/l1lwt7) | [Windows](https://www.microsoft.com/p/onenote-for-windows-10/9wzdncrfhvjl) | [OneNote Online](http://www.onenote.com/notebooks)
-- Suggestions: [OneNote UserVoice](https://onenote.uservoice.com/)
+- Suggestions: [Feedback for Microsoft 365](https://feedbackportal.microsoft.com/)
 - Help: [Answers.Microsoft.com](https://answers.microsoft.com/)
 - [Install or reinstall OneNote 2016 for Windows](https://support.office.com/article/install-or-reinstall-onenote-2016-for-windows-c08068d8-b517-4464-9ff2-132cb9c45c08?ui=en-US&rs=en-US&ad=US)
 - [Your OneNote](https://techcommunity.microsoft.com/t5/office-365-blog/your-onenote/ba-p/954922)

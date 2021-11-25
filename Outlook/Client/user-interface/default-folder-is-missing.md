@@ -41,7 +41,7 @@ This behavior can occur if the `PR_ATTR_HIDDEN` property of the affected folder 
 
 Use the steps below to confirm that you are facing this issue, and to reset the `PR_ATTR_HIDDEN` property of the affected folder.
 
-1. Download and extract the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool.
+1. Download and extract the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/) tool.
 2. Launch mfcmapi.exe and select **OK** through the intro screen.
 3. On the **Session** menu, select **Logon**.
 4. Select the Outlook profile for the affected mailbox, and select **OK**.

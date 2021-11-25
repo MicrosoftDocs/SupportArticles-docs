@@ -53,7 +53,7 @@ Folder item limit notification:
 Use this method if only a few users are experiencing the issue. If there many affected users, use [Method 2](#method-2-run-the-ews-script-as-an-administrator).
 
 1. Exit Outlook.
-2. Download the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool.
+2. Download the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/) tool.
 3. Start the MfcMapi.exe program, and select **OK**.
 4. On the **Tools** menu, select **Options**, specify the following options, and then select **OK**:
 
