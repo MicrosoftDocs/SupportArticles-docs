@@ -3,7 +3,8 @@ title: Write CGI applications
 description: This article describes how to write CGI applications.
 ms.date: 10/26/2020
 ms.prod-support-area-path: Language or Compilers
-ms.topic: how-to 
+ms.topic: how-to
+ms.technology: visual-basic-language-compilers
 ---
 # Write CGI Applications in Visual Basic
 

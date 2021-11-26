@@ -4,7 +4,7 @@ description: This article provides a workaround for the problem where you may be
 ms.date: 01/14/2021
 ms.prod-support-area-path: 
 ms.topic: troubleshooting
-ms.prod: sql 
+ms.service: azure
 ---
 # JSON script sent via SSMS unable to delete a corrupted database in Azure Analysis Services
 

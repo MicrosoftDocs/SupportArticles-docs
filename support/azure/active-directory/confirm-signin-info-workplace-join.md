@@ -4,6 +4,8 @@ description: Describes a problem that returns a (Confirm you are using the curre
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Error when you perform a Workplace Join: Confirm you are using the current sign-in info
 

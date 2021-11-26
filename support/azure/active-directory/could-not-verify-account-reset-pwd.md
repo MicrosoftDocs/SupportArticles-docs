@@ -4,6 +4,8 @@ description: Describes a problem in which you receive a (We could not verify you
 ms.date: 05/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you try to reset your password in Azure, Office 365, or Intune: We could not verify your account
 

@@ -4,6 +4,8 @@ description: Describes an issue in which you can't enable the Device writeback o
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Can't enable the Device writeback option in Azure AD Connect
 

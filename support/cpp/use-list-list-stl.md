@@ -1,9 +1,10 @@
 ---
-title: Use the list::list function in Visual C++
-description: Describes how to use the list::list STL functions in Visual C++. This article also provides a code sample to show how to do this task.
+title: "Use the list::list function in Visual C++"
+description: "Describes how to use the list::list STL functions in Visual C++. This article also provides a code sample to show how to do this task."
 ms.date: 04/24/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Use the list::list STL function in Visual C++
 

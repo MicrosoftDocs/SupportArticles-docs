@@ -20,10 +20,10 @@ To enable clients to be peer cache sources, follow these steps:
 1. Go to the **Administration** workspace, and then select the **Client Settings** node.
 1. Select **Create Custom Client Device Settings**, specify a name and description, and then select the **Client Cache Settings** group.
 
-   :::image type="content" source="media/configure-peer-cache/select-client-cache-settings.png" alt-text="Select Client Cache Settings":::
+   :::image type="content" source="media/configure-peer-cache/select-client-cache-settings.png" alt-text="Screenshot highlights the Client Cache Settings in Create Custom Client Device Settings window.":::
 1. In the navigation pane, select **Client Cache Settings**, set **Enable as peer cache source** to **Yes**, and then specify the ports.
 
-   :::image type="content" source="media/configure-peer-cache/specify-client-cache-settings.png" alt-text="Specify Client Cache Settings":::
+   :::image type="content" source="media/configure-peer-cache/specify-client-cache-settings.png" alt-text="Screenshot shows details of the Client Cache Settings.":::
 1. Select **OK** to save the settings.
 1. Deploy this custom client setting to the device collection that you created in step 1.
 
@@ -81,7 +81,7 @@ When the site server receives the state message, it calls the `spUpdateSuperPeer
 1. Right-click the boundary group, and then select **Properties**.
 1. Select the **Options** tab, and then enable the **Allow peer downloads in this boundary group** setting.
 
-   :::image type="content" source="media/configure-peer-cache/boundary-group-option.png" alt-text="Allow peer downloads":::
+   :::image type="content" source="media/configure-peer-cache/boundary-group-option.png" alt-text="Screenshot of the Allow peer downloads in this boundary group setting under Options tab.":::
 
 ## Example scenario
 

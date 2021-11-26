@@ -4,6 +4,7 @@ description: Full-screen WPF applications might not receive touch input events o
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: davean
+ms.technology: dotnet-general
 ---
 # Full-screen WPF applications may not receive touch input events
 

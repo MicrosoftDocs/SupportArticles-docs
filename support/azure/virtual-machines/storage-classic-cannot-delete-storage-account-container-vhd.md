@@ -4,12 +4,10 @@ description: How to troubleshoot problems when deleting storage resources contai
 services: storage
 author: AngshumanNayakMSFT
 tags: top-support-issue,azure-service-management
-
-ms.service: storage
+ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.date: 01/11/2019
 ms.author: annayak
-
 ---
 # Troubleshoot classic storage resource deletion errors
 This article provides troubleshooting guidance when one of the following errors occurs trying to delete Azure classic storage account, container, or *.vhd page blob file. 

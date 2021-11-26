@@ -4,6 +4,8 @@ description: Discusses an issue in which Azure AD Connect Health shows outdated 
 ms.date: 05/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: cychua, arrenc
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Azure AD Connect Health shows old information about on-premises Azure AD Connect server
 

@@ -5,6 +5,7 @@ ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: michmo
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Query and display excel data by using ASP.NET, ADO.NET, and Visual C# .NET  
 

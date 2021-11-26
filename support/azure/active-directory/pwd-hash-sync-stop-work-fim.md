@@ -4,6 +4,8 @@ description: Describes a problem that prevents password hash synchronization fro
 ms.date: 05/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Password hash synchronization stops working after updating Azure Active Directory credentials in FIM
 
