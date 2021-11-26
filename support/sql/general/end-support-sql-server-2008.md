@@ -59,9 +59,9 @@ We recommend that you migrate to Azure SQL DB, or upgrade to the current product
 
 ## Resources
 
-- [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview?view=sql-server-ver15&preserve-view=true)
+- [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview)
 
-- [Extend support for SQL Server 2008 and SQL Server 2008 R2 with _Azure_](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+- [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
 
 - [End of _Mainstream_ support for SQL Server 2008 and SQL Server 2008 R2, July 2014](/archive/blogs/sqlreleaseservices/end-of-mainstream-support-for-sql-server-2008-and-sql-server-2008-r2)
 
