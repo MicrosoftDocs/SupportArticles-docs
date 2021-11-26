@@ -16,15 +16,15 @@ This guide is divided into the following sections:
 - [How to create VPN profiles](#how-to-create-vpn-profiles)
 - [How to assign VPN profiles](#how-to-assign-vpn-profiles)
 - [What successful VPN profiles look like on your Android, iOS, and Windows devices](#what-successful-vpn-profiles-look-like-on-your-device)
-- [Entries in Company Portal logs of successful VPN profile deployment](#entries-in-company-portal-logs-of-successful-vpn-profile-deployment)
+- [Company Portal logs of successful VPN profile deployment](#company-portal-logs-of-successful-vpn-profile-deployment)
 - [Troubleshooting common issues](#troubleshooting-common-issues)
 - [How to view logs in the AnyConnect app](#how-to-view-logs-in-the-anyconnect-app)
 
 The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) certificate authentication for these profiles. The examples also assume that the Trusted Root and SCEP profiles work correctly on the device. In the examples, the Trusted Root and SCEP profiles are named as follows:
 
-||Android|iOS|Windows|
+|Profile types|Android|iOS|Windows|
 |-|-|-|-|
-|Trusted Root Profile|AndroidRoot|iOSRoot|WindowsRoot2|
+|Trusted Root profile|AndroidRoot|iOSRoot|WindowsRoot2|
 |SCEP profile|AndroidSCEP|iOSSCEP|WindowsSCEP2|
 
 ## Overview of VPN profiles
@@ -38,7 +38,7 @@ You can create VPN profiles by using different VPN connection types.
 > [!NOTE]
 > Before you can use VPN profiles that are assigned to a device, you must install the applicable VPN app for the profile.
 
-## How to create VPN Profiles
+## How to create VPN profiles
 
 To create a VPN profile, follow the steps in [Create a device profile](/intune/vpn-settings-configure#create-a-device-profile).
 
@@ -61,7 +61,7 @@ For examples, see the following screenshots:
 
 For information about how to create an Extensible Authentication Protocol (EAP) configuration XML for the VPN profile, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
-## How to assign VPN Profiles
+## How to assign VPN profiles
 
 After you create the VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
 
@@ -79,7 +79,7 @@ For examples, see the following screenshots:
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot shows how to assign a profile for Windows.":::
 
-## What successful VPN profiles look like on your device
+## What successful VPN profiles look like
 
 ### For Android
 
@@ -148,7 +148,7 @@ The VPN connection is listed in **Network Connections**.
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/network-connections-vpn.png" alt-text="Screenshot shows the VPN connection in Network Connections.":::
 
-## Entries in Company Portal logs of successful VPN profile deployment
+## Company Portal logs of successful VPN profile deployment
 
 ### For Android
 
@@ -257,12 +257,12 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
-    If the Trusted Root and SCEP profiles aren't installed on the device, you will see the following entry in the Company Portal *Omadmlog.log* file:
+    If the Trusted Root and SCEP profiles aren't installed on the device, you will see the following entry in the Company Portal log file (*Omadmlog.log*):
 
     `<Date Time>    INFO    com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine    14210    00948    Waiting for required certificates for vpn profile 'androidVPN'.`
 
     > [!NOTE]
-    > There is a scenario when the Trusted Root and SCEP profiles are on the device and compliant, but the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be on the Certificate Template or in the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded, which will result in the skipping of the VPN profile because it doesn't have the right certificate. In this scenario, you see the following entry in the Company Portal *Omadmlog.log* file:
+    > There is a scenario when the Trusted Root and SCEP profiles are on the device and compliant, but the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be on the Certificate Template or in the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded, which will result in the skipping of the VPN profile because it doesn't have the right certificate. In this scenario, you see the following entry in the Company Portal log file (*Omadmlog.log*):
     >
     > **Waiting for required certificates for vpn profile 'androidVPN'.**
 
@@ -290,7 +290,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting-enabled.png" alt-text="Screenshot shows the External Control option is enabled.":::
 
-1. Verify that all required certificates in the complete certificate chain are on the device. Otherwise, you see the following entry in the Company Portal *Omadmlog.log* file:
+1. Verify that all required certificates in the complete certificate chain are on the device. Otherwise, you see the following entry in the Company Portal log file (*Omadmlog.log*):
 
     > **Waiting for required certificates for vpn profile 'androidVPN'.**
 
