@@ -25,7 +25,7 @@ For example, this problem occurs when you configure following settings:
 **EAP type:** PEAP  
 **Authentication method:** Username and Password
 
-:::image type="content" source="media/wi-fi-connection-settings-lost/security-properties.png" alt-text="An example of the settings that you may configure in security properties." border="false":::
+:::image type="content" source="media/wi-fi-connection-settings-lost/security-properties.png" alt-text="Screenshot of the example of the configuration settings in security properties." border="false":::
 
 **Validate server:** Cleared
 
@@ -35,7 +35,7 @@ For example, this problem occurs when you configure following settings:
 
 **Password:** *123456#*
 
-:::image type="content" source="media/wi-fi-connection-settings-lost/username-and-password.png" alt-text="You have to input username and password again." border="false":::
+:::image type="content" source="media/wi-fi-connection-settings-lost/username-and-password.png" alt-text="Screenshot of the username and password dialog box." border="false":::
 
 ## Cause
 
