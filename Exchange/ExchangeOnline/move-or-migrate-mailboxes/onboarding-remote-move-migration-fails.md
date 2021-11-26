@@ -28,7 +28,8 @@ In an Exchange hybrid deployment, you have an on-premises primary mailbox, and a
 
 ## Cause
 
-This issue occurs because you also have an on-premises archive mailbox, and this mailbox uses the same archive GUID (`ArchiveGuid`) as the cloud-based archive mailbox. It's an invalid configuration, so the validation check during the migration returns this error.
+This issue occurs because you have dual archives (an on-premises archive mailbox uses the same archive GUID (`ArchiveGuid`) as the cloud-based archive mailbox), which is not a valid state. Therefore, the migration fails with the error to avoid losing archive data because of a validation check during the migration.
+
 
 **Note**: The only supported archive split scenario is an on-premises primary mailbox and an archive mailbox in Exchange Online.
 
