@@ -2,7 +2,6 @@
 title: Description of Language ID global system variable
 description: Lists the values of the Language ID global system variable and the corresponding values of the getmsg(9999) function in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the Language ID global system variable in Microsoft Dynamics GP

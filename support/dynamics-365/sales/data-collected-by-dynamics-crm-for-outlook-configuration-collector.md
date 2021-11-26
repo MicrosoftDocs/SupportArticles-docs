@@ -2,7 +2,6 @@
 title: Data collected by Dynamics CRM for Outlook Configuration Collector
 description: This article describes the data that is collected by the Microsoft Dynamics CRM Client for Microsoft Office Outlook Configuration diagnostic tool.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-client-outlook
 ---

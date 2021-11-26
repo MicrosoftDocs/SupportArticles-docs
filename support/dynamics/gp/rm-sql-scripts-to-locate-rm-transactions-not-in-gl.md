@@ -2,7 +2,6 @@
 title: RM SQL scripts to locate RM transactions that are not in GL
 description: Provides RM  SQL scripts to locate RM Transactions that are not in GL in Microsoft Dynamics GP.
 ms.reviewer: cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # RM SQL scripts to locate RM transactions that are not in GL in Microsoft Dynamics GP

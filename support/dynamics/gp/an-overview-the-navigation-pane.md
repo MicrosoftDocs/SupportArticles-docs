@@ -2,7 +2,6 @@
 title: An overview of the Navigation Pane
 description: Explains the new navigation lists for Microsoft Dynamics GP.  Provides a list of all of the lists and information about how to restrict security for each of these lists.
 ms.reviewer: kyouells
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # An overview of the Navigation Pane in Microsoft Dynamics GP

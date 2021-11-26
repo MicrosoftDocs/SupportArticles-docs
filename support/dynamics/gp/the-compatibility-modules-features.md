@@ -2,7 +2,6 @@
 title: The compatibility of modules, features
 description: Contains lists of the modules, features, and add-ins that are compatible or incompatible with Project Accounting.
 ms.reviewer: ppeterso
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about the compatibility of modules, features, and add-ins with Project Accounting in Microsoft Dynamics GP

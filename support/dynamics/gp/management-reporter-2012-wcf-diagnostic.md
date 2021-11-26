@@ -2,7 +2,6 @@
 title: Management Reporter 2012 WCF diagnostic
 description: Describes the MR 2012 WCF diagnostic that enables WCF tracing and message logging.
 ms.reviewer: kellybj, kevogt
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3][9ebe9abd-0960-4165-9074-7873262746bf] MR 2012 WCF diagnostic

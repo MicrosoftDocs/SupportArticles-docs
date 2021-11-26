@@ -2,7 +2,6 @@
 title: Posting accounts to build the check file
 description: Lists the posting accounts that are required to build the check file in Payroll in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Required posting accounts to build the check file in Payroll in Microsoft Dynamics GP
