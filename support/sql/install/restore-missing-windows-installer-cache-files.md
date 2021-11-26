@@ -260,7 +260,7 @@ You can restore from system state backups as described in [Missing Windows Insta
     ||||
 
     > [!NOTE]
-    > You must review the setup log files to identify whether any cache files are missing. For more information about how to do this, go to the [Resolution](#resolution-1-use-repair-installation) sections.
+    > You must review the setup log files to identify whether any cache files are missing. For more information about how to do this, go to the [Resolution](#solution-1-repair-the-sql-server-installation) sections.
 
 - **For SQL Server 2008 SP1**
 
