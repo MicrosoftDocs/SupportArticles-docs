@@ -8,7 +8,7 @@ ms.reviewer: jarrettr
 
 ## Introduction
 
-This guide helps you understand and troubleshoot VPN profile issues that may be encountered when you use Microsoft Intune.
+This guide helps you understand and troubleshoot VPN profile issues that may occur when you use Microsoft Intune.
 
 This guide is divided into the following sections:
 
@@ -20,7 +20,7 @@ This guide is divided into the following sections:
 - [Troubleshooting common issues](#troubleshooting-common-issues)
 - [How to view logs in the AnyConnect app](#how-to-view-logs-in-the-anyconnect-app)
 
-The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) certificate authentication for these profiles. The examples also assume that the Trusted Root and SCEP profiles work correctly on the device. In the examples, the Trusted Root and SCEP profiles are named as follows:
+The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) certificate authentication for profiles. The examples also assume that the Trusted Root and SCEP profiles work correctly on the device. In the examples, the Trusted Root and SCEP profiles are named as follows:
 
 |Profile types|Android|iOS|Windows|
 |-|-|-|-|
@@ -47,15 +47,15 @@ For examples, see the following screenshots:
 > [!NOTE]
 > In the examples, the connection type for Android and iOS VPN profile is Cisco AnyConnect, and the one for Windows 10 is Automatic. And the VPN profile is linked to the SCEP profile.
 
-### For Android
+### Android
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-android.png" alt-text="Screenshot shows how to create a VPN profile for Android.":::
 
-### For iOS
+### iOS
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-ios.png" alt-text="Screenshot shows how to create a VPN profile for iOS.":::
 
-### For Windows
+### Windows
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-windows.png" alt-text="Screenshot shows how to create a VPN profile for Windows.":::
 
@@ -67,21 +67,21 @@ After you create the VPN profile, [assign the profile](/intune/device-profile-as
 
 For examples, see the following screenshots:
 
-### For Android
+### Android
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-android.png" alt-text="Screenshot shows how to assign a profile for Android.":::
 
-### For iOS
+### iOS
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-ios.png" alt-text="Screenshot shows how to assign a profile for iOS.":::
 
-### For Windows
+### Windows
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot shows how to assign a profile for Windows.":::
 
 ## What successful VPN profiles look like
 
-### For Android
+### Android
 
 The following steps are for a Nokia 6.1 device. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
 
@@ -110,7 +110,7 @@ The following steps are for a Nokia 6.1 device. Since the Trusted Root and SCEP 
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/successfully-created-vpn-connection.png" alt-text="Screenshot that shows a VPN connection is created successfully.":::
 
-### For iOS
+### iOS
 
 After the VPN profile is installed on the device, you can see it in **Management Profile**:
 
@@ -130,7 +130,7 @@ The VPN connection is displayed in the AnyConnect app:
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/vpn-connection-anyconnect.png" alt-text="Screenshot shows the VPN connection in the AnyConnect app.":::
 
-### For Windows
+### Windows
 
 After the VPN profile is installed on the device, select **Settings** > **Accounts** > **Access work or school**, select your work or school account, and then select **Info**.
 
@@ -150,7 +150,7 @@ The VPN connection is listed in **Network Connections**.
 
 ## Company Portal logs of successful VPN profile deployment
 
-### For Android
+### Android
 
 On an Android device, the *Omadmlog.log* file logs detail activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files, getting the timestamp of the last sync can help you find the related entries.
 
@@ -168,7 +168,7 @@ Sample log snippet:
 <Date Time>    INFO    com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine    13229    00002    VPN Profile "AnyConnect" state changed from PENDING_USER_INSTALL to PROVISIONED
 ```
 
-### For iOS
+### iOS
 
 On an iOS device, Company Portal logs don't contain any information about VPN profiles. To see details about the installation of the VPN profiles, you must get console or device Logs as follows:
 
@@ -210,7 +210,7 @@ default    <Time> -0400    profiled     Successfully saved configuration Contoso
 default    <Time> -0400    profiled    Profile \'93www.windowsintune.com.vpn.ContosoVPN\'94 installed.\
 ```
 
-### For Windows
+### Windows
 
 On a Windows device, the details about VPN profiles are logged in the following locations in the Event Viewer:
 
@@ -243,7 +243,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 ### Issue 1: The VPN profile isn't deployed to the device
 
-#### For Android
+#### Android
 
 1. Verify that the VPN profile is assigned to the correct group.
 
@@ -296,7 +296,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     For more information, see [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa).
 
-#### For iOS
+#### iOS
 
 1. Verify that the VPN profile is assigned to the correct group.
 
@@ -312,7 +312,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
-#### For Windows
+#### Windows
 
 1. Verify that the VPN profile is assigned to the correct group.
 
