@@ -19,9 +19,9 @@ _Original KB number:_ &nbsp; 969052
 
 ## Symptoms
 
-When you install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages that indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores critical files for applications installed via the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately see problems; issues will appear when you perform an uninstall, repair, or update of SQL Server.
+When you install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages that indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores critical files for applications installed through the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately encounter problems until you uninstall, repair, or update SQL Server.
 
-Because SQL Server uses Windows Installer technology, it can be affected by the issues described here. SQL server installation packages (.MSI and .MSP files) will be stored in the Windows Installer Cache. These files are required for uninstalling and updating applications. Missing files cannot be copied between computers, because they are unique.
+Because SQL Server uses the Windows Installer technology, it can be affected by the issues that are described here. SQL server installation packages (.MSI and .MSP files) will be stored in the Windows Installer Cache. These files are required for uninstalling and updating applications. Missing files cannot be copied between computers because they are unique.
 
 ## Cause
 
@@ -92,7 +92,7 @@ To resolve these problems by using a script, follow these steps:
    Cscript FindSQLInstalls.vbs %computername%_sql_install_details.txt`.
    ```
 
-1. Open the file from step 2 in a text editor such as Notepad, and identify the problems that are causing the failure. To do this, search the text file for string patterns such as the following:
+1. Open the file from step 2 in a text editor such as Notepad, and identify the problems that cause the failure. To do this, search the text file for string patterns such as the following:
 
     - `do not`
     - `!!!`
@@ -201,7 +201,7 @@ If the error message references a missing Windows Installer database file (.msi)
 
 #### Find the patch package and the product details for a missing .msp file
 
-Different versions of the product generate different error messages for the described problem. The error messages that are mentioned in the [Symptoms](#symptoms) section appear for updates starting with SQL Server 2008 SP1. For other updates, you receive error messages that may not clearly specify which patch file is missing from the Windows Installer cache and the specific update details. For these error messages, the setup log files will contain information about the missing Windows Installer cache file. A sample setup log resembles the following:
+Different versions of the product generate different error messages for the problem that is described. The error messages that are mentioned in the [Symptoms](#symptoms) section appear for updates starting with SQL Server 2008 SP1. For other updates, you receive error messages that may not clearly specify which patch file is missing from the Windows Installer cache and the specific update details. For these error messages, the setup log files will contain information about the missing Windows Installer cache file. A sample setup log resembles the following:
 
 ```output
 MSI (s) (FC:F8) [13:48:58:649]: Opening existing patch 'C:\WINDOWS\Installer\145258.msp'.  
@@ -222,7 +222,7 @@ To find more details about the missing .msp file in the Windows Installer cache,
 1. Find the **Patch GUID**.
 1. Search for the Patch GUID in the following Windows Installer Products registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\`
 
-   For the sample setup log, the information about the missing .msp file and its corresponding patch details are present in the following registry entries:
+   For the sample setup log, the missing .msp file and its corresponding patch details are displayed in the following registry entries:
 
    ```output
    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Patches\A3B085EA74A9A7640A496636F7EF9A44
