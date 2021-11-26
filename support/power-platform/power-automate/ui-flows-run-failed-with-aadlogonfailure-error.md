@@ -28,12 +28,12 @@ You need to disable Network Level Authentication (NLA) on the machine.
 1. Open **Control Panel**.
 2. Open **System and Security**.
 
-    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/system-and-security-in-control-panel.png" alt-text="Open System and Security in Control Panel":::
+    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/system-and-security-in-control-panel.png" alt-text="Screenshot to select the System and Security option in the Control Panel.":::
 
 3. Open **Allow remote access**.
 
-    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/open-allow-remote-access.png" alt-text="Allow remote access in System and Security":::
+    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/open-allow-remote-access.png" alt-text="Screenshot to select the Allow remote access option in the System and Security window.":::
 
 4. Disable Network Level Authentication and select **OK**.
 
-    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/disable-network-level-auth.png" alt-text="Disable Network Level Authentication in System Properties":::
+    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/disable-network-level-auth.png" alt-text="Screenshot to disable Network Level Authentication in the System Properties window.":::
