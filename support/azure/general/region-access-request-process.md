@@ -100,8 +100,6 @@ The process to request access is relatively straight forward, you can initiate t
 
 2. Select **Create** to complete the process.
 
-    :::image type="content" source="media/region-access-request-process/complete-process.png" alt-text="Screenshot of the create button in the New support request page.":::
-
 ## Request processing
 
 Once you have created the support request, the ticket follows our standard process, including a stop with the Azure Engineering team, where we validate the claims made in the request. This may include reaching out to the requestor for further details, so please ensure you add up-to-date contact details.  

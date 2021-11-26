@@ -56,5 +56,5 @@ When you use an EA dev/test subscription under an account that is not marked as 
 2. Click the **Manage** panel on the left side.
 3. Select the **Account** level at the top.
 4. Find the account that has this issue in Azure portal.
-5. Click the pencil icon![Pencilicon](media/cannot-create-vm-ea/4092160_en_2.png) on the right side.
-6. Check the **Dev/Test** box ![Devtest](media/cannot-create-vm-ea/4092161_en_2.png), and then click **Save**.
+5. Click the pencil icon :::image type="icon" source="media/cannot-create-vm-ea/pencil-icon.png"::: on the right side.
+6. Check the **Dev/Test** box :::image type="icon" source="media/cannot-create-vm-ea/devtest-box.png":::, and then click **Save**.
