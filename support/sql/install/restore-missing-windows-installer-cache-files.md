@@ -36,9 +36,9 @@ Any future update to the product such as a hotfix, a cumulative update, or a ser
 
 ## Resolution
 
-To resolve these problems, use one of the following procedures.
+To resolve these problems, use one of the following methods.
 
-### Use repair installation
+### Method 1: Use repair installation
 
 For SQL Server installation, first use the repair process that's described in the following articles to verify your current installation:
 
@@ -58,7 +58,7 @@ setup.exe /ACTION=REPAIR/INDICATEPROGRESS=TRUE
 
 Repair the common shared components and features first, and then repeat the command to repair the instances installed. During the process, the setup dialog box disappears. As long as the progress window does not show an error, the process is proceeding as expected. If the installer cache file for a specific component is missing, the repair process will encounter an error.
 
-### Use the FixMissingMSI tool
+### Method 2: Use the FixMissingMSI tool
 
 In this procedure, you will use the FixMissingMSI tool to identify MSI and MSP files that are missing from the Windows Installer cache. As an extra step, you can point the tool to the original media location and re-cache the missing files.
 
@@ -74,7 +74,7 @@ This is a graphical-user-interface (GUI) tool and enables you to identify and fi
 
 For more information, see [SQL Setup ToolSuite Introduction (1) -FixMissingMSI](/archive/blogs/psssql/sql-setup-toolsuite-introduction-1-fixmissingmsi).
 
-### Use the FindSQLInstalls.vbs script
+### Method 3: Use the FindSQLInstalls.vbs script
 
 To complete the steps in this procedure, you have to copy the FindSQLInstalls.vbs script in the *FixMissingMSI* folder from the [GitHub repository](https://github.com/suyouquan/SQLSetupTools/tree/master/FixMissingMSI) to a local folder on the computer where you are trying to update your SQL Server installation.
 
@@ -170,7 +170,7 @@ Patch LastUsedSource:
 
 The KB Article URL line can help you download any patch media, if this is necessary.
 
-### Manually restore the files
+### Method 4: Manually restore the files
 
 To manually restore the files that are missing from the Windows Installer cache, follow these steps:
 
@@ -244,7 +244,7 @@ To find more details about the missing .msp file in the Windows Installer cache,
 
 For more information about how to obtain the service pack, see [KB2546951 - List of issues that are fixed by SQL Server 2008 Service Pack 3](https://support.microsoft.com/help/2546951).
 
-###  Restore from system state backups
+### Method 5: Restore from system state backups
 
 You can restore from system state backups as described in [Missing Windows Installer cache requires a computer rebuild](/troubleshoot/windows-client/deployment/missing-windows-installer-cache).
 
