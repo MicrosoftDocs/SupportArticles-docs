@@ -2,7 +2,6 @@
 title: Different packages for Integration Manager
 description: Describes the different packages that are available for Integration Manager in Microsoft Dynamics GP.
 ms.reviewer: kvogel
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # The different packages that are available for Integration Manager in Microsoft Dynamics GP

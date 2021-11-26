@@ -2,7 +2,6 @@
 title: Changes to mailbox approval in Dynamics 365
 description: Changes to Mailbox approval in Dynamics 365.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---

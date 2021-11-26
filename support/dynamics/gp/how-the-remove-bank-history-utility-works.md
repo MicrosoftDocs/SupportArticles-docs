@@ -2,7 +2,6 @@
 title: How Remove Bank History utility works
 description: Introduces how Remove Bank History utility works in Microsoft Dynamics GP.
 ms.reviewer: Cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # How the Remove Bank History utility works in Microsoft Dynamics GP

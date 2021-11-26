@@ -216,6 +216,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/active-directory/manage-sub-parent-domain.md",
+      "redirect_url": "/azure/active-directory/enterprise-users/domains-manage",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/previous-versions/msxml/error-when-xml-contains-low-order-ascii.md",
       "redirect_url": "/previous-versions/troubleshoot/msxml/error-when-xml-contains-low-order-ascii",
       "redirect_document_id": false
@@ -963,6 +968,31 @@
     {
       "source_path": "support/sql/admin/error-password-service-account-changed.md",
       "redirect_url": "/troubleshoot/sql/admin/error-1069-service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/1450-and-665-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/1450-and-665-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/17053-and-926-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/17053-and-926-errors-running-dbcc-check",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/8967-8921-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/8967-8921-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/latch-timeout-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/latch-timeout-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-dbcc-errors.md",
+      "redirect_url": "/troubleshoot/sql/admin/troubleshoot-dbcc-checkdb-errors",
       "redirect_document_id": true
     }
   ]
