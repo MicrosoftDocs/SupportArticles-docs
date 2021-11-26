@@ -85,7 +85,7 @@ To resolve this issue, Exchange 2010 organizations and any affected federated Ex
     Get-FederationTrust | Remove-FederationTrust
     ```
 
-    For more information, see [Replace an expired federation certificate](/previous-versions/exchange-server/exchange-160/mt779252(v=exchg.160)#replace-an-expired-federation-certificate) and [Remove-FederationTrust](/powershell/module/exchange/remove-federationtrust?view=exchange-ps).
+    For more information, see [Replace an expired federation certificate](/previous-versions/exchange-server/exchange-160/mt779252(v=exchg.160)#replace-an-expired-federation-certificate) and [Remove-FederationTrust](/powershell/module/exchange/remove-federationtrust).
 
 5. Create a new federation trust
 

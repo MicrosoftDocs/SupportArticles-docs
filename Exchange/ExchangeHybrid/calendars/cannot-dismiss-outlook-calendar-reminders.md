@@ -47,7 +47,7 @@ If that method doesn't work, use Resolution 2.
 
 Delete the Reminders folder by using the Microsoft Exchange Server MAPI Editor (MFCMAPI). To do this, follow these steps:
 
-1. Download **MFCMAPI** from [github](https://github.com/stephenegriffin/mfcmapi) (scroll down and then click **Latest release**).
+1. Download **MFCMAPI** from [github](https://github.com/stephenegriffin/mfcmapi/releases/) (scroll down and then click **Latest release**).
 2. Exit Outlook.
 3. Open MFCMAPI.
 4. On the **Tools** menu, click **Options**, select both of the following check boxes (if they're not already selected), and then click **OK**:

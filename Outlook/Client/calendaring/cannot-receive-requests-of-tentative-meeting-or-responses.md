@@ -56,7 +56,7 @@ To resolve this issue, start by following the steps in resolution 1. Depending o
 
 ### Resolution 1
 
-1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 2. Start MFCMAPI.
 3. On the **Session** menu, select **Logon**.
 4. Select the user's online mode Outlook profile, and then select **OK**.
@@ -78,7 +78,7 @@ To resolve this issue, start by following the steps in resolution 1. Depending o
 
 ### Resolution 2
 
-1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 2. Start MFCMAPI.
 3. On the **Session** menu, select **Logon**.
 4. Select the user's online mode Outlook profile, and then select **OK**.
