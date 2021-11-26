@@ -85,7 +85,7 @@ To resolve this problem, boot the VM into emergency mode by using the [serial co
 
 2. Select the Power icon button, and then select Restart VM. (If the serial console is not enabled or not connected successfully, you won't see the button.)
 
-   ![IMAGE](./media/linux-recovery-cannot-ssh-to-linux-vm-due-to-file-system-errors-fsck/restart-vm.png)
+   :::image type="content" source="media/linux-recovery-cannot-ssh-to-linux-vm-due-to-file-system-errors-fsck/restart-vm.png" alt-text="Screenshot of the Power icon button displayed in the button bar.":::
 
 3. Boot the VM in to emergency mode.
 
