@@ -15,7 +15,7 @@ This guide is divided into the following sections:
 - [Overview of VPN profiles](#overview-of-vpn-profiles)
 - [How to create VPN profiles](#how-to-create-vpn-profiles)
 - [How to assign VPN profiles](#how-to-assign-vpn-profiles)
-- [What successful VPN profiles look like on your Android, iOS, and Windows devices](#what-successful-vpn-profiles-look-like-on-your-device)
+- [What successful VPN profiles look like on your Android, iOS, and Windows devices](#what-successful-vpn-profiles-look-like)
 - [Company Portal logs of successful VPN profile deployment](#company-portal-logs-of-successful-vpn-profile-deployment)
 - [Troubleshooting common issues](#troubleshooting-common-issues)
 - [How to view logs in the AnyConnect app](#how-to-view-logs-in-the-anyconnect-app)
