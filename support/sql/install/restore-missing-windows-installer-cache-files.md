@@ -9,7 +9,7 @@ ms.prod: sql
 ---
 # Restore the missing Windows Installer cache files and resolve problems that occur during a SQL Server update
 
-This article describes various resolutions that you can use to resolve various errors that occur when installing SQL Server service pack or a cumulative update due to corruption of windows installer cache. 
+This article presents several solutions to missing-MSI errors that occur when installing SQL Server updates.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 969052
