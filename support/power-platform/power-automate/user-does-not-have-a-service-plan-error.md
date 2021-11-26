@@ -24,7 +24,7 @@ You may receive this error when doing any of these actions on a flow that uses *
 
 > The user does not have a service plan adequate for the non-Standard connection.
 
-:::image type="content" source="media/user-does-not-have-a-service-plan-error/error-on-flow.png" alt-text="Screenshot of the error when doing any of these actions on the flow." lightbox="media/user-does-not-have-a-service-plan-error/error-on-flow.png" border="false":::
+:::image type="content" source="media/user-does-not-have-a-service-plan-error/error-on-flow.png" alt-text="Screenshot of the error when doing any of these actions on the flow." lightbox="media/user-does-not-have-a-service-plan-error/error-on-flow.png":::
 
 ## Cause
 

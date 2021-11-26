@@ -31,6 +31,6 @@ Suppose you want to call the endpoint `contoso.com/helloworld`. When configuring
 
 The problem here's that the host has the name of the endpoint we're trying to call, but the path should be the one with the endpoint name of `/helloworld`. So the correct way of defining it is:
 
-:::image type="content" source="media/troubleshooting-flow-custom-connectors/define-the-swagger-correctly.png" alt-text="Screenshot of the correctly configuring custom connector.":::
+:::image type="content" source="media/troubleshooting-flow-custom-connectors/define-the-swagger-correctly.png" alt-text="Screenshot of the correctly configured custom connector.":::
 
 For more information, see [Paths and Operations](https://swagger.io/docs/specification/paths-and-operations/).
