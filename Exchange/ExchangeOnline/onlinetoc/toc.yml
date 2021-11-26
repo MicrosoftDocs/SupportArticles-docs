@@ -325,7 +325,7 @@
       href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
     - name: Can't migrate IMAP mailboxes
       href: ../move-or-migrate-mailboxes/imap-mailbox-migration-fails.md
-    - name: Can't off-board mailboxes to Exchange Server 2010
+    - name: Can't migrate mailboxes to Exchange Server 2010
       href: ../move-or-migrate-mailboxes/cannot-migrate-to-exchange-2010.md
     - name: Can't see free/busy information
       href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
