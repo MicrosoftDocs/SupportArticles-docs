@@ -20,7 +20,7 @@ This guide is divided into the following sections:
 - [Troubleshooting common issues](#troubleshooting-common-issues)
 - [How to view logs in the AnyConnect app](#how-to-view-logs-in-the-anyconnect-app)
 
-The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) certificate authentication for these profiles and assume that the Trusted Root and SCEP profiles work correctly on the device. In the examples, the Trusted Root and SCEP profiles are named as follows:
+The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) certificate authentication for these profiles. The examples also assume that the Trusted Root and SCEP profiles work correctly on the device. In the examples, the Trusted Root and SCEP profiles are named as follows:
 
 ||Android|iOS|Windows|
 |-|-|-|-|
