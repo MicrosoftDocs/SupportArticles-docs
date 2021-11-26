@@ -15,7 +15,7 @@ This guide is divided into the following sections:
 - [Overview of VPN profiles](#overview-of-vpn-profiles)
 - [How to create VPN profiles](#how-to-create-vpn-profiles)
 - [How to assign VPN profiles](#how-to-assign-vpn-profiles)
-- [What successful VPN profiles look like on your Android, iOS, and Windows devices](#what-successful-vpn-profiles-look-like)
+- [What successful VPN profiles look like on Android, iOS, and Windows devices](#what-successful-vpn-profiles-look-like)
 - [Company Portal logs of successful VPN profile deployment](#company-portal-logs-of-successful-vpn-profile-deployment)
 - [Troubleshooting common issues](#troubleshooting-common-issues)
 - [How to view logs in the AnyConnect app](#how-to-view-logs-in-the-anyconnect-app)
@@ -29,7 +29,7 @@ The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) cer
 
 ## Overview of VPN profiles
 
-Virtual private networks (VPNs) give your users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. VPN profiles in Microsoft Intune assign VPN settings to users and devices in your organization, so they can easily and securely connect to your organizational network.
+Virtual private networks (VPNs) give users secure remote access to the organization network. Devices use a VPN connection profile to start a connection with the VPN server. VPN profiles in Microsoft Intune assign VPN settings to users and devices in the organization, so they can easily and securely connect to the organizational network.
 
 For example, you want to configure all iOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
@@ -83,7 +83,7 @@ For examples, see the following screenshots:
 
 ### Android
 
-The following steps are for a Nokia 6.1 device. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
+This scenario uses a Nokia 6.1 device. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
 
 1. You receive a notification to install the corporate VPN profile:
 
@@ -132,7 +132,7 @@ The VPN connection is displayed in the AnyConnect app:
 
 ### Windows
 
-After the VPN profile is installed on the device, select **Settings** > **Accounts** > **Access work or school**, select your work or school account, and then select **Info**.
+After the VPN profile is installed on the device, select **Settings** > **Accounts** > **Access work or school**, select the work or school account, and then select **Info**.
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/installed-vpn-profile-windows.png" alt-text="Screenshot shows the installed VPN profile in Windows.":::
 
