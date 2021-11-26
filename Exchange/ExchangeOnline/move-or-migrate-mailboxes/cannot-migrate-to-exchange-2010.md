@@ -24,13 +24,13 @@ appliesto:
 
 ## Symptoms
 
-You have a hybrid deployment of Exchange Online and on-premises Exchange Server 2010 environment. When you try to migrate an Exchange Online mailbox to your on-premises Exchange organization, you receive an error message that resembles the following:
+You have a hybrid deployment of Exchange Online and on-premises Exchange Server 2010 environment. When you try to migrate an Exchange Online mailbox to the on-premises Exchange Server 2010 organization, you receive an error message that resembles the following:
 
 > MigrationPermanentException: **Moving mailbox to Exchange version '\<Version number\> (\<Build number\>)' is not supported**. Mailboxes can be moved to Exchange Server 2013 and later versions only. --> Moving mailbox to Exchange version '\<Version number\> (\<Build number\>)' is not supported. Mailboxes can be moved to Exchange Server 2013 and later versions only.
 
 ## Cause
 
-This issue occurs because [Exchange Server 2010 reached end of support on October 13, 2020](/microsoft-365/enterprise/exchange-2010-end-of-support), and it doesn't support to migrate an Exchange Online mailbox to Exchange Server 2010 organization.
+This issue occurs because [Exchange Server 2010 reached end of support on October 13, 2020](/microsoft-365/enterprise/exchange-2010-end-of-support), and it doesn't support to migrate an Exchange Online mailbox to an Exchange Server 2010 organization.
 
 ## Resolution
 
