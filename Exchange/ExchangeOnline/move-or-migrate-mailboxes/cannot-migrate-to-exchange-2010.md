@@ -20,7 +20,7 @@ appliesto:
 - MSfC O365-Exchange Online
 ---
 
-# Can't migrate from Exchange Online to Exchange Server 2010
+# Can't migrate mailbox from Exchange Online to Exchange Server 2010
 
 ## Symptoms
 
