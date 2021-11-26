@@ -1,6 +1,6 @@
 ---
 title: Restore the missing Windows Installer cache files
-description: This article describes various procedures that you can use to resolve various errors that occur when installing SQL Server service pack or a cumulative update due to corruption of windows installer cache.
+description: Describes various resolutions that you can use to resolve various errors that occur when installing SQL Server service pack or a cumulative update due to corruption of windows installer cache.
 ms.date: 11/24/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.reviewer: ramakoni
@@ -56,7 +56,7 @@ Repair the common shared components and features first, and then repeat the comm
 
 ## Resolution 2: Use the FixMissingMSI tool
 
-In this procedure, you will use the FixMissingMSI tool to identify MSI and MSP files that are missing from the Windows Installer cache. As an extra step, you can point the tool to the original media location and re-cache the missing files.
+You can use the FixMissingMSI tool to identify MSI and MSP files that are missing from the Windows Installer cache. As an extra resolution, you can point the tool to the original media location and re-cache the missing files.
 
 ### Download
 
@@ -176,7 +176,7 @@ To manually restore the files that are missing from the Windows Installer cache,
     - Original MSP file that is used by the Patch: sql_engine_core_inst.msp
     - Cached MSP file: `c:\Windows\Installer\1fdb1aec.msp`
 
-1. If you do not have all the details, see the previous step to collect these details.
+1. If you do not have all the details, see the first step to collect these details.
 1. Visit [Queries](https://support.microsoft.com), and search for the KB article that is associated with this patch. In this example, you must search for KB981355.
 1. Download this patch package to your computer. Make sure that you download the patch package that corresponds to the required platform. In this example, the package is SQLServer2008R2-KB981355-x64.exe.
 1. Extract the contents of the patch package by using the syntax: 
@@ -260,7 +260,7 @@ You can restore from system state backups as described in [Missing Windows Insta
     ||||
 
     > [!NOTE]
-    > You must review the setup log files to identify whether any cache files are missing. For more information about how to do this, go to the [Resolution](#resolution) section.
+    > You must review the setup log files to identify whether any cache files are missing. For more information about how to do this, go to the [Resolution](#resolution-1-use-repair-installation) sections.
 
 - **For SQL Server 2008 SP1**
 
