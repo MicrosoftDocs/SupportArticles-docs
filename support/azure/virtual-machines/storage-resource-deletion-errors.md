@@ -43,12 +43,12 @@ Retry deleting the storage account, container, or blob after these steps are com
 2. On the Hub menu, select **All resources**. Go to the storage account, under **Blob Service** select **Containers**, and navigate to the blob to delete.
 3. If the blob **Lease State** is **Leased**, then right-click and select **Edit Metadata** to open Blob metadata pane. 
 
-    ![Screenshot of the portal, with the Storage account blobs and right click > "Edit Metadata" highlighted](./media/troubleshoot-vhds/utd-edit-metadata-sm.png)
+    :::image type="content" source="media/troubleshoot-vhds/utd-edit-metadata-sm.png" alt-text="Screenshot of the portal, with the Storage account blobs and right click > Edit Metadata highlighted.":::
 
 4. In Blob metadata pane, check and record the value for **MicrosoftAzureCompute_VMName**. This value is the name of the VM that the VHD is attached to. (See **important** if this field does not exist)
 5. In Blob metadata pane, check and record the value of **MicrosoftAzureCompute_DiskType**. This value identifies if the attached disk is OS or data disk (See **important** if this field does not exist). 
 
-     ![Screenshot of the portal, with the storage "Blob Metadata" pane open](./media/troubleshoot-vhds/utd-blob-metadata-sm.png)
+     :::image type="content" source="media/troubleshoot-vhds/utd-blob-metadata-sm.png" alt-text="Screenshot of the portal, with the storage Blob Metadata pane open.":::
 
 6. If the blob disk type is **OSDisk** follow [Step 2: Delete VM to detach OS disk](#step-2-delete-vm-to-detach-os-disk). Otherwise, if the blob disk type is **DataDisk** follow the steps in [Step 3: Detach data disk from the VM](#step-3-detach-data-disk-from-the-vm). 
 
@@ -60,7 +60,7 @@ Retry deleting the storage account, container, or blob after these steps are com
 2. On the Hub menu, select **All resources**. Go to the storage account, under **Blob Service** select **Containers**, and find the container to be deleted.
 3. Click to open the container and the list of blobs inside it will appear. Identify all the blobs with Blob Type = **Page blob** and Lease State = **Leased** from this list. Follow Scenario 1 to identify the VM associated with each of these blobs.
 
-    ![Screenshot of the portal, with the Storage account blobs and the "Lease State" with "Leased" highlighted](./media/troubleshoot-vhds/utd-disks-sm.png)
+    :::image type="content" source="media/troubleshoot-vhds/utd-disks-sm.png" alt-text="Screenshot of the portal, with the Storage account blobs and the Lease State with Leased highlighted.":::
 
 4. Follow [Step 2](#step-2-delete-vm-to-detach-os-disk) and [Step 3](#step-3-detach-data-disk-from-the-vm) to delete VM(s) with **OSDisk** and detach **DataDisk**. 
 
@@ -92,7 +92,7 @@ If the VHD is a data disk, detach the VHD from the VM to remove the lease:
 7. Select **Edit** on the top of **Disks** pane.
 8. Click **detach icon** of the data disk to be deleted.
 
-     ![Screenshot of the portal, with the storage "Blob Metadata" pane open and it highlights the detach icon of the data disk to be deleted.](./media/troubleshoot-vhds/utd-vm-disks-edit.png)
+     :::image type="content" source="media/troubleshoot-vhds/utd-vm-disks-edit.png" alt-text="Screenshot of the portal, with the storage Blob Metadata pane open and it highlights the detach icon of the data disk to be deleted.":::
 
 9. Select **Save**. The disk is now detached from the VM, and the VHD is no longer leased. It may take a few minutes for the lease to be released. To verify that the lease has been released, browse to the blob location and in the **Blob properties** pane, the **Lease Status** value should be **Unlocked** or **Available**.
 
