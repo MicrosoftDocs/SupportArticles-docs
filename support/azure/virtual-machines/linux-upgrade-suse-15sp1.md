@@ -25,7 +25,7 @@ This article provides general steps about how to upgrade SUSE Linux Enterprise s
 ## Supported upgrade paths
 The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to SLES 15 SP1.
 
-![The screenshot about supported upgrade path](./media/linux-upgrade-suse-15sp1/upgrade-path.png)
+:::image type="content" source="media/linux-upgrade-suse-15sp1/upgrade-path.png" alt-text="Diagram shows the supported upgrade path. Only SLES 12 SP4 or 12 SP5 can upgrade to SLES 15 SP1." border="false":::
 
 ## Prerequisites
 
@@ -63,11 +63,11 @@ The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to
 
 6. Go to the [Azure portal](https://portal.azure.com), select the VM, and then select **Serial console**. You will see that the system stops at "reboot: Restarting system". This process should take about 15-45 minutes. For Generation 2 VM, it might be stuck on the "reboot: Restarting system" screen. In this case, wait for 45 minutes. If it still doesn't progress further, go to the **Overview** page of the VM in the Azure portal, stop the VM, and then restart it.
 
-     ![The screenshot about the messages in the serial console.](./media/linux-upgrade-suse-15sp1/reboot-message.png)
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/reboot-message.png" alt-text="Screenshot of the reboot: Restarting system log in the command-line interface of Serial console.":::
 
 8. After the system is restarted with new kernel, you will see the following message.
 
-     ![The screenshot about the messages in the serial console after the system is restarted with the new kernel.](./media/linux-upgrade-suse-15sp1/output-message.png)
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-message.png" alt-text="Screenshot of the messages in the serial console after the system is restarted with the new kernel.":::
 9. Verify the kernel and OS version to check whether the system is upgraded successfully.
 
     ```
@@ -81,5 +81,5 @@ You can use one of the following methods to check the generation version:
 
 - In the SLES terminal,  run the command `dmidecode | grep -i hyper`. If it's a generation V1 VM,  there is no output returned. For the generations V2 VMs, you will see the following output:
 
-     ![The screenshot about output for generation 2 vm](./media/linux-upgrade-suse-15sp1/output-gen2.png)
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 V M.":::
 - In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.
