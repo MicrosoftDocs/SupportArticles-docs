@@ -25,4 +25,4 @@ SSL (Secure Sockets Layer) connection isn't enabled.
 
 To fix this issue, you could request to enable the SSL connection and check the security settings for your account. If you enabled two-step verification, try using your app password. Otherwise, enable access for less secure apps.
 
-:::image type="content" source="media/unable-send-smtp-email/smtp-setting.png" alt-text="smtp.":::
+:::image type="content" source="media/unable-send-smtp-email/smtp-setting.png" alt-text="Screenshot to enable the S S L connection in the S M T P setting.":::

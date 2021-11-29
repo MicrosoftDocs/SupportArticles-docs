@@ -2,7 +2,6 @@
 title: Frequently asked questions about File Exchange System
 description: Provides answers to frequently asked questions about the new file exchange system on the Microsoft Business Solutions Web sites.
 ms.reviewer: kyouells
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Frequently asked questions about the File Exchange System

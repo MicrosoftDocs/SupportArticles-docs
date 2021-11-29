@@ -2,7 +2,6 @@
 title: Class ID not updated between Human Resources and Canadian Payroll
 description: The Class ID field is not updating between Human Resources and Canadian Payroll.
 ms.reviewer: cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Class ID not updated between Human Resources and Canadian Payroll in Microsoft Dynamics GP

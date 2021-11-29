@@ -1,7 +1,6 @@
 ---
 title: Mobile Device Fingerprinting
 description: This article describes Mobile device fingerprinting.
-ms.topic: article
 ms.reviewer: 
 ms.date: 3/31/2021
 ms.subservice: d365-fraud-protection-application

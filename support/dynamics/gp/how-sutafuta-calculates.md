@@ -2,7 +2,6 @@
 title: How SUTA/FUTA calculates
 description: How SUTA/FUTA calculates in Microsoft Dynamics GP.
 ms.reviewer: amelroe
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # How SUTA/FUTA calculates in Microsoft Dynamics GP

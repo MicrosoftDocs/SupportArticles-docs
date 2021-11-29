@@ -2,7 +2,6 @@
 title: Conditional access and multi-factor authentication in Flow
 description: Using conditional access has an unexpected effect on users who use Flow to connect to Microsoft services that are relevant to conditional access policies.
 ms.reviewer: dblyth
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---

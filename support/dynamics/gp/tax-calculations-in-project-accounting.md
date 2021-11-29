@@ -1,7 +1,6 @@
 ---
 title: Tax calculations in Project Accounting in Dynamics GP
 description: Includes a document that explains how taxes are calculated in Project Accounting in Microsoft Dynamics GP.
-ms.topic: article
 ms.reviewer: jchrist, ppeterso
 ms.date: 03/31/2021
 ---

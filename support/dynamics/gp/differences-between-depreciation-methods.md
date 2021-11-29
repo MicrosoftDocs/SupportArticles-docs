@@ -2,7 +2,6 @@
 title: Differences between depreciation methods
 description: Discusses the differences between the daily depreciation method and the periodic depreciation method
 ms.reviewer: v-shanee, lmuelle
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Differences between the daily depreciation method and the periodic depreciation method in Microsoft Dynamics GP

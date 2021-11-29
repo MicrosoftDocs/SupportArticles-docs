@@ -2,7 +2,6 @@
 title: Description of product IDs for Dexterity
 description: Describes product IDs for Dexterity add-in products and custom products in Microsoft Dynamics GP.
 ms.reviewer:
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of product IDs for Dexterity in Microsoft Dynamics GP

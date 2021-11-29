@@ -2,7 +2,6 @@
 title: Microsoft Dynamics CRM IIS Memory Dump diagnostic
 description: Describes information that is collected from a computer when you run the Memory Dump diagnostic in Microsoft Dynamics CRM.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-server
 ---
