@@ -1,7 +1,7 @@
 ---
-title: Devices connected through a Thunderbolt Dock stop working after the computer resumes from the S5 power state
-description: Describes an issue in which devices that are connected through a Thunderbolt Dock stop working after the computer resumes from the S5 power state. Provides a workaround.
-ms.date: 12/03/2020
+title: Devices connected through a Thunderbolt Dock stop working
+description: Describes an issue in which devices that are connected through a Thunderbolt Dock stop working after the computer resumes from a power state. Provides a workaround.
+ms.date: 11/23/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,12 +10,12 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Power Management
+ms.custom: sap:power-management, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
-# Devices connected through a Thunderbolt Dock stop working after the computer resumes from the S5 power state
+# Devices connected through a Thunderbolt Dock stop working after the computer resumes from a power state
 
-This article provides a workaround for an issue where devices that are connected through a Thunderbolt Dock stop working after the computer resumes from the S5 power state.
+This article provides a workaround for an issue where devices that are connected through a Thunderbolt Dock stop working after the computer resumes from a power state.
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4532436
@@ -24,21 +24,17 @@ _Original KB number:_ &nbsp; 4532436
 
 Consider the following scenario:
 
-- On a computer that is running Windows 10 that has a version between Windows 10, version 1709 and Windows 10, version 2004, you enable Fast Startup.
+- On a computer that is running Windows 10 that has a version between Windows 10, version 1709 and Windows 10, version 21H1, you enable Fast Startup.
 - On a Thunderbolt Dock, several devices, such as a keyboard, mouse, and USB encryption key, are attached.
 - You repeatedly do the following steps:
   - You connect the Thunderbolt Dock to the computer. Devices on the Thunderbolt Dock are enumerated.
-  - You press the power button to put the system into a Soft Off (S5) power state. After the screen turns off, you remove the Thunderbolt Dock.
-  - You wait for the S5 process to finish, plug in the Thunderbolt Dock, and then wait five seconds for the Thunderbolt Dock to become idle.
-  - You power on the computer. Then, you check whether the mouse, keyboard, and USB key are functional.
+  - The system enters or resumes from a Modern Standby, Hibernate (S4) or Soft Off (S5) power state, and you plug or unplug the dock during this period.
 
-In this scenario, there is a five percent failure rate for all the devices that are attached to the Thunderbolt Dock. In this situation, the devices stop working even if they are listed in Device Manager.
-
-When the failure occurs, the functionality of the devices cannot be restored by re-attaching the Thunderbolt Dock. Instead, you have to restart the computer.
+In this scenario, the devices stop working and might show yellow exclamation points with the code 24 in the Device Manager.
 
 ## Workaround
 
-To work around this issue, restart the computer.
+When the issue occurs, the functionality of the devices can be restored by reattaching the Thunderbolt Dock. If it doesn't work, restart the computer.
 
 ## References
 

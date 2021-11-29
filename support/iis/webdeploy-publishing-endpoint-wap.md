@@ -4,6 +4,7 @@ description: This article describes a change in functionality that's provided by
 ms.date: 03/19/2020
 ms.prod-support-area-path: Deployment and migration
 ms.topic: article
+ms.technology: iis-deployment-migration
 ---
 # WebDeploy publishing endpoint is changed in WAP-Websites [UR6]
 

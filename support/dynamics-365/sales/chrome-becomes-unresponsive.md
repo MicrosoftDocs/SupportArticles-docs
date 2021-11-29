@@ -4,6 +4,7 @@ description: Fixes an issue in which the Google Chrome browser becomes unrespons
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-apps-addons
 ---
 # Google Chrome becomes unresponsive when logging into Microsoft Dynamics CRM Online
 

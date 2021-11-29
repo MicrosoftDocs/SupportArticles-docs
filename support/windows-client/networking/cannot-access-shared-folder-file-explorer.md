@@ -2,7 +2,7 @@
 title: Can't access shared folders from File Explorer
 description: Provides troubleshooting for the issue that shared folders can't be accessed from File Explorer in Windows 10.
 ms.date: 3/4/2021
-author: v-lianna
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-wanyi
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Can't access shared folders from File Explorer in Windows 10

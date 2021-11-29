@@ -4,6 +4,7 @@ description: This article describes that you might receive an error message when
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: hongmeig, vinelap, pradnyad, tvish
+ms.technology: dotnet-general
 ---
 # RSS20FeedFormatter throws exception when trying to read some DateTime formats
 

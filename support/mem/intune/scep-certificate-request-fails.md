@@ -22,7 +22,7 @@ Additionally, you see error entries in CRP logs.
 
 Three log entries specify a Cryptography Exception error, as shown in the following image.
 
-:::image type="content" source="media/scep-certificate-request-fails/three-instances-of-error.jpg" alt-text="screenshot of three instances of the error":::
+:::image type="content" source="media/scep-certificate-request-fails/three-instances-of-error.png" alt-text="Screenshot of the three instances of the error.":::
 
 ### First error entry
 
@@ -56,7 +56,7 @@ Three log entries specify a Cryptography Exception error, as shown in the follow
 
 This issue occurs because the registry keys that are responsible for verification of the certificate request are missing in NDES connector registry settings.
 
-:::image type="content" source="media/scep-certificate-request-fails/ndes-connector-registry.jpg" alt-text="screenshot of NDES connector registry settings":::
+:::image type="content" source="media/scep-certificate-request-fails/ndes-connector-registry.png" alt-text="Screenshot of NDES connector registry settings.":::
 
 ## Solution 1
 
@@ -66,7 +66,7 @@ Complete these steps to restart the Intune Connector Service:
 2. In the **Services** snap-in, restart the Intune Connector Service.
 3. Check the `HKLM\Software\Microsoft\MicrosoftIntune\NDESConnector` registry subkey to verify that the registry keys were created according to the following screenshot.
 
-    :::image type="content" source="media/scep-certificate-request-fails/ndes-connector-subkey.jpg" alt-text="screenshot of NDESConnector registry subkey":::
+    :::image type="content" source="media/scep-certificate-request-fails/ndes-connector-subkey.png" alt-text="Screenshot of the required NDESConnector registry subkey settings.":::
 
 If restarting the service or computer does not fix the issue, continue to Solution 2.
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you configure Micr
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Exception: System.ServiceModel.Security.SecurityAccessDeniedException: Access is denied. error when configuring the Microsoft Dynamics CRM 2011 Client for Outlook
 

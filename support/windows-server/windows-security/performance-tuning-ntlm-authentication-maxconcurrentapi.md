@@ -3,14 +3,14 @@ title: performance tuning for NTLM authentication
 description: Describes how to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tspring
-ms.prod-support-area-path: Legacy authentication (NTLM)
+ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting

@@ -3,14 +3,14 @@ title: Error the RPC server is unavailable
 description: Provides a resolution for the issue that the system cannot log you on, due to error the RPC server is unavailable.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # The system can't log you on with the following error: The RPC server is unavailable 

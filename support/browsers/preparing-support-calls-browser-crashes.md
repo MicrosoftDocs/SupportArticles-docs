@@ -5,6 +5,7 @@ ms.date: 01/21/2021
 ms.prod-support-area-path: Stability and Performance
 ms.reviewer: ramakoni
 ms.topic: how-to
+ms.technology: internet-explorer-stability-performance
 ---
 # Preparing for support calls for browser crashes
 
@@ -132,16 +133,16 @@ Some tools that we use require the process PID. To find this number, follow the
 
 1. In Task Manager, select the **Details** tab.
 
-   ![Image1](./media/preparing-support-calls-browser-crashes/details-image.png)
+     :::image type="content" source="media/preparing-support-calls-browser-crashes/details-column.png" alt-text="Screenshot shows information under Details tab in Task Manager.":::
 
 1. By default, the PID column is not visible. To display it if it's hidden, right-click any column header, and select **Select columns**.
 
-   ![Image 2](./media/preparing-support-calls-browser-crashes/select-columns-image.png)
+     :::image type="content" source="media/preparing-support-calls-browser-crashes/select-columns.png" alt-text="Screenshot shows the Select columns entry item above the Status column header.":::
 
-   Select the **PID** check box, and then select **OK**.
+1. Select the **PID** check box, and then select **OK**.
 
-   ![Image 3](./media/preparing-support-calls-browser-crashes/pid-image.png)
+     :::image type="content" source="media/preparing-support-calls-browser-crashes/pid-check-box.png" alt-text="Screenshot of the Select columns panel where PID is checked.":::
 
-   The PID column is now visible.
+The PID column is now visible.
 
-   ![Image 4](./media/preparing-support-calls-browser-crashes/pid-number-image.png)
+:::image type="content" source="media/preparing-support-calls-browser-crashes/pid-column.png" alt-text="Screenshot shows the PID column under Details tab.":::

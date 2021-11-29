@@ -3,14 +3,14 @@ title: Stop error on Lenovo ThinkPad that has KB4568831 or a later update and En
 description: Describes a problem that causes a Stop error on Lenovo ThinkPad devices that were manufactured in 2019 or 2020 and that have received the KB4568831 update.
 ms.date: 09/10/2021
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, mapalko, v-tea
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Stop error on Lenovo ThinkPad that has KB4568831 or a later update and Enhanced Windows Biometric Security enabled in UEFI

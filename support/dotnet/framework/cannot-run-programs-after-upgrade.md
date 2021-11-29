@@ -4,6 +4,7 @@ description: When upgrading .NET Framework 4.5.2 to .NET Framework 4.6 or 4.6.1,
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: Brettl
+ms.technology: dotnet-general
 ---
 # Known issues when you upgrade .NET Framework from version 4.5.2 to 4.6 or 4.6.1 on Windows Server 2012
 

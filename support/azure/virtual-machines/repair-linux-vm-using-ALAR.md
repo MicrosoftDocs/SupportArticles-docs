@@ -1,14 +1,13 @@
 ---
 title: Repair a Linux VM automatically with the help of ALAR | Microsoft Docs
 description: This article describes how to autorepair a non-bootable VM with the  Azure Linux Auto Repair scripts (ALAR).
-services: virtual-machines
+services: virtual-machines-linux
 documentationcenter: ''
 author: malachma
 manager: noambi
-editor: ''
+editor: v-jsitser
 tags: virtual-machines
 ms.service: virtual-machines
-ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
@@ -42,9 +41,7 @@ For more information about problems that are caused by a bad /etc/fstab file, se
 **kernel**
 This script changes the default kernel. The script replaces the broken kernel with the previously installed version.
 
-
-Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
-
+For more information about messages that might be logged on the serial console for kernel-related startup events, see [How to recover an Azure Linux virtual machine from kernel-related boot issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues).
 
 **initrd**
 This script corrects two problems that might occur when a new kernel is installed:
@@ -83,13 +80,6 @@ These steps create a repair task. In the next step, you will use the `initrd` sc
 > You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
    > - ‘fstab’
    > - ‘fstab,initrd’
-
-## Supported Operating Systems
-- CentOS/Redhat 6.8 - 8.2
-- Ubuntu 16.4 LTS and Ubuntu 18.4 LTS
-- Suse 12 and 15"
-- Debain 9 and 10"
-       
 
 ## Limitations
 - Encrypted images aren't supported.

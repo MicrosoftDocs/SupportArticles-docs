@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Remote Management (WinRM)
+ms.custom: sap:windows-remote-management-winrm, csstroubleshoot
 ms.technology: windows-server-administration-management-development
 ---
 # Events are not forwarded if the collector is running Windows Server

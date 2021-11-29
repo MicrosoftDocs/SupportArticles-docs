@@ -4,6 +4,7 @@ description: This article describes a situation where enabling enhanced protecti
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: jeanr
+ms.technology: internet-explorer-administration
 ---
 # You cannot add favorites with redirected favorites folder and enhanced protected mode in Internet Explorer 10
 

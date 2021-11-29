@@ -2,7 +2,7 @@
 title: Enable Debug mode causes to hang
 description: Provides a solution to an issue where the Operating System with debug mode enabled may hang if no Debugger is connected.
 ms.date: 10/13/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
-ms.prod-support-area-path: System Hang
+ms.custom: sap:system-hang, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Enabling Debug mode causes Windows to hang if no Debugger is connected

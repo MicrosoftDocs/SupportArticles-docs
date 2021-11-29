@@ -2,7 +2,7 @@
 title: Minimize SYSVOL size by removing administrative templates
 description: Describes how to minimize SYSVOL size by removing administrative templates (.adm files).
 ms.date: 09/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to minimize SYSVOL size by removing administrative templates (.adm files)

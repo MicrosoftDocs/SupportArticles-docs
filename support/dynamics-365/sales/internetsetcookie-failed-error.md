@@ -4,6 +4,7 @@ description: Fixes an issue that occurs when you configure Microsoft Dynamics CR
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # InternetSetCookie failed error when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

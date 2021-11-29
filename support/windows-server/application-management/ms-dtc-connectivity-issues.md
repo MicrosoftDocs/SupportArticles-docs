@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DTC startup, configuration, connectivity, and cluster
-ms.technology: windows-server-application-compatibility 
+ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
+ms.technology: windows-server-application-compatibility
 ---
 # How to troubleshoot connectivity issues in MS DTC by using the DTCPing tool
 

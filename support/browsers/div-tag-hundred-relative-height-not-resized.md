@@ -4,6 +4,7 @@ description: Discusses a by design behavior that DIV tags with 100% relative hei
 ms.date: 04/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jeanr
+ms.technology: internet-explorer-development-website
 ---
 # DIV tags with 100% relative height are not resized in Internet Explorer
 

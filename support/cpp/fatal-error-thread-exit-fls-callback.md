@@ -4,6 +4,7 @@ description: A process may crash at thread exit with an Access Violation excepti
 ms.date: 04/22/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: ScotBren, gaurap
+ms.technology: visual-cpp-libraries
 ---
 # Fatal error at thread exit if FLS callback isn't freed
 

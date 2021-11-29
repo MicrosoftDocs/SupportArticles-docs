@@ -2,7 +2,7 @@
 title: Error (This property is limited to 64 values) when adding more than 64 logon workstations
 description: Describes a problem in which you cannot add more than 64 logon workstation entries by using the user account properties on a Windows Server 2003-based computer.
 ms.date: 09/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: v-jomcc, kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Error message when you try to add more than 64 logon workstations: "This property is limited to 64 values"

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-miegge
-ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
+ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # The Active Directory database garbage collection process and calculation of allowed intervals
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes the Active Directory database garbage collection process and calculation of allowed intervals.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
-_Original KB number:_ &nbsp;198793
+_Original KB number:_ &nbsp; 198793
 
 ## Summary
 

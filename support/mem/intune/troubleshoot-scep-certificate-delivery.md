@@ -14,7 +14,7 @@ This article applies to the step 5 of the [SCEP communication workflow](troubles
 
 When the CA has issued the certificate, you'll see an entry similar to the following example on the CA:
 
-![Example of issued certificates](./media/troubleshoot-scep-certificate-delivery/certificate-authority.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-delivery/certificate-authority.png" alt-text="Screenshot of an example of issued certificates.":::
 
 ## Review the device
 
@@ -22,7 +22,7 @@ When the CA has issued the certificate, you'll see an entry similar to the follo
 
 For device administrator enrolled devices, you'll see a notification similar to the following image, which prompts you to install the certificate:
 
-![Android notification](./media/troubleshoot-scep-certificate-delivery/android-notification.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-delivery/android-notification.png" alt-text="Screenshot of an Android notification." border="false":::
 
 For Android Enterprise or Samsung Knox, the certificate installation is automatic, and silent.
 
@@ -32,7 +32,7 @@ You can also review the [devices OMADM log](troubleshoot-scep-certificate-profil
 
 **Root certificate**:
 
-```
+```output
 2018-02-27T04:50:52.1890000    INFO    Event     com.microsoft.omadm.platforms.android.certmgr.state.NativeRootCertInstallStateMachine     9595        9    Root cert '17…' state changed from CERT_INSTALL_REQUESTED to CERT_INSTALL_REQUESTED
 2018-02-27T04:53:31.1300000    INFO    Event     com.microsoft.omadm.platforms.android.certmgr.state.NativeRootCertInstallStateMachine     9595        0    Root cert '17…' state changed from CERT_INSTALL_REQUESTED to CERT_INSTALLING
 2018-02-27T04:53:32.0390000    INFO    Event     com.microsoft.omadm.platforms.android.certmgr.state.NativeRootCertInstallStateMachine     9595       14    Root cert '17…' state changed from CERT_INSTALLING to CERT_INSTALL_SUCCESS
@@ -40,7 +40,7 @@ You can also review the [devices OMADM log](troubleshoot-scep-certificate-profil
 
 **Certificate provisioned through SCEP**
 
-```
+```output
 2018-02-27T05:16:08.2500000    VERB    Event     com.microsoft.omadm.platforms.android.certmgr.CertificateEnrollmentManager    18327       10    There are 1 requests
 2018-02-27T05:16:08.2500000    VERB    Event     com.microsoft.omadm.platforms.android.certmgr.CertificateEnrollmentManager    18327       10    Trying to enroll certificate request: ModelName=AC_51…%2FLogicalName_39907…;Hash=1677525787
 2018-02-27T05:16:20.6150000    VERB    Event     org.jscep.transport.UrlConnectionGetTransport    18327       10    Sending GetCACert(ca) to https://<server>-contoso.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACert&message=ca
@@ -58,11 +58,11 @@ You can also review the [devices OMADM log](troubleshoot-scep-certificate-profil
 
 On the iOS/iPadOS or iPadOS device, you can view the certificate under the Device Management Profile. Drill down to see details for installed certificates.
 
-![iOS certificate](./media/troubleshoot-scep-certificate-delivery/ios-certificate.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-delivery/ios-certificate.png" alt-text="Screenshot of iOS certificates under the Device Management Profile." border="false":::
 
 You can also find entries that resemble the following in the [iOS debug log](troubleshoot-scep-certificate-profiles.md#logs-for-ios-and-ipados-devices):
 
-```
+```output
 Debug 18:30:53.691033 -0500 profiled Performing synchronous URL request: https://<server>-contoso.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACert&message=SCEP%20Authority\  
 Debug 18:30:54.640644 -0500 profiled Performing synchronous URL request: https://<server>-contoso.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=SCEP%20Authority\ 
 Debug 18:30:55.487908 -0500 profiled Performing synchronous URL request: https://<server>-contoso.msappproxy.net/certsrv/mscep/mscep.dll?operation=PKIOperation&message=MIAGCSqGSIb3DQEHAqCAMIACAQExDzANBglghkgBZQMEAgMFADCABgkqhkiG9w0BBwGggCSABIIZfzCABgkqhkiG9w0BBwOggDCAAgEAMYIBgjCCAX4CAQAwZjBPMRUwEwYKCZImiZPyLGQBGRYFbG9jYWwxHDAaBgoJkiaJk/IsZAEZFgxmb3VydGhjb2ZmZWUxGDAWBgNVBAMTD0ZvdXJ0aENvZmZlZSBDQQITaAAAAAmaneVjEPlcTwAAAAAACTANBgkqhkiG9w0BAQEFAASCAQCqfsOYpuBToerQLkw/tl4tH9E+97TBTjGQN9NCjSgb78fF6edY0pNDU+PH4RB356wv3rfZi5IiNrVu5Od4k6uK4w0582ZM2n8NJFRY7KWSNHsmTIWlo/Vcr4laAtq5rw+CygaYcefptcaamkjdLj07e/Uk4KsetGo7ztPVjSEFwfRIfKv474dLDmPqp0ZwEWRQG 
@@ -76,7 +76,7 @@ On a Windows device, verify the certificate was delivered:
 
 - Run **eventvwr.msc** to open Event Viewer. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin** and look for **Event 39**. This Event should have a general description of: **SCEP: Certificate installed successfully.**
 
-   ![Event 39 in the Windows Application log](./media/troubleshoot-scep-certificate-delivery/device-app-log.png)
+    :::image type="content" source="media/troubleshoot-scep-certificate-delivery/device-app-log.png" alt-text="Screenshot of event 39 in the Windows Application log." border="false":::
 
 To view the certificate on the device, run **certmgr.msc** to open the Certificates MMC and verify that the root and SCEP certificates are installed correctly on the device in the personal store:
 

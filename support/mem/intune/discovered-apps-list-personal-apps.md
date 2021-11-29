@@ -17,12 +17,12 @@ When you view the details of an Android Enterprise work profile device in Micros
 
 The following screenshot shows an example **Discovered apps** list.
 
-:::image type="content" source="media/discovered-apps-list-personal-apps/discovered-apps.png" alt-text="screenshot of Discovered apps":::
+:::image type="content" source="media/discovered-apps-list-personal-apps/discovered-apps.png" alt-text="Screenshot of Discovered apps list.":::
 
 ## More information
 
 This is expected behavior. What seem to be personal apps are actually system apps and services that are duplicated in the work profile. To view these apps on the Android Enterprise work profile device, tap **Settings** > **Work Profile** > **Apps**. Work apps are indicated by a briefcase icon.
 
-:::image type="content" source="media/discovered-apps-list-personal-apps/work-apps.png" alt-text="screenshot of Work apps":::
+:::image type="content" source="media/discovered-apps-list-personal-apps/work-apps.png" alt-text="Screenshot of Work apps list.":::
 
 Intune can't inventory apps that are installed within the personal profile, even if the device is configured as corporate-owned.

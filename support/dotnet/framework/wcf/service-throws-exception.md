@@ -4,6 +4,7 @@ description: This article provides resolutions for the exception AddressAlreadyI
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: piyushjo
+ms.technology: dotnet-wcf
 ---
 # .NET 4.0 WCF service throws AddressAlreadyInUseException when moved to .NET 4.5
 

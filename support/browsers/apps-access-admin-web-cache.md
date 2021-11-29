@@ -4,11 +4,12 @@ description: Describes an issue where IE or Edge does not function correctly bec
 ms.date: 08/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba;DEV_Triage
-author: Teresa-Motiv
+author: v-tappelgate
 ms.author: joelba
 ms.custom: 
-- CI 122170
-- CSSTroubleshooting
+  - CI 122170
+  - CSSTroubleshooting
+ms.technology: internet-explorer-security-privacy
 ---
 
 # Applications try to access web cache content that belongs to the local Administrator account
@@ -23,13 +24,13 @@ _Original product version:_&nbsp;Internet Explorer, Windows 10; Microsoft Edge, 
 
 Enterprise users of Internet Explorer, Microsoft Edge, or applications that use the modules of either browser are reporting the following symptoms:
 
-- Long delays occur when users sign in to the Windows desktop
-- The application can't save content to the browser cache
-- The application can't access content from the browser cache
+- Long delays occur when users sign in to the Windows desktop.
+- The application can't save content to the browser cache.
+- The application can't access content from the browser cache.
 
-In this scenario, an affected user records a Process Monitor log while experiencing the issue. When you analyze the log, you notice that the browsers or applications try to access files and folders that are located in the C:\Users\Administrator folder in addition to files and folders that are located in the user's profile folder.
+In this scenario, an affected user records a Process Monitor log while experiencing the issue. When you analyze the log, you notice that the browsers or applications try to access files and folders that are located in the *C:\Users\Administrator* folder in addition to files and folders that are located in the user's profile folder.
 
-:::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-procmon-log.png" alt-text="Process Monitor log that shows attempts to access the Administrator folders":::
+:::image type="content" source="media/apps-access-admin-web-cache/ie-mse-procmon-log.png" alt-text="Process Monitor log that shows attempts to access the Administrator folders.":::
 
 ## Cause
 
@@ -53,28 +54,28 @@ On affected computers, you have to separately fix the affected user profile and 
 > 2. Select **View** > **Options** > **View**.
 > 3. In the **Advanced settings** list, select **Show hidden files, folders, and drives**.
 > 4. In the same list, clear the **Hide protected operating system files (Recommended)** check box, and then select **Yes**.
->   :::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-show-hidden-files.png" alt-text="An alert appears when you clear the option to hide protected files":::
-> 5. Select **Apply**, and then select **OK**.
+>   :::image type="content" source="media/apps-access-admin-web-cache/ie-mse-show-hidden-files.png" alt-text="An alert appears when you clear the option to hide protected files.":::
+> 5. Select **Apply** > **OK**.
 
 ### Step 1: Repair the default user profile
 
 To prevent new user profiles from receiving a copy the cache container from the default user profile, delete the following file and folders (if they exist):
 
-- C:\Users\Default\AppData\Local\Microsoft\Windows\WebCacheLock.dat
-- C:\Users\Default\AppData\Local\Microsoft\Windows\WebCache
-- C:\Users\Default\AppData\Local\Microsoft\Windows\INetCache
-- C:\Users\Default\AppData\Local\Microsoft\Windows\INetCookies
+- *C:\Users\Default\AppData\Local\Microsoft\Windows\WebCacheLock.dat*
+- *C:\Users\Default\AppData\Local\Microsoft\Windows\WebCache*
+- *C:\Users\Default\AppData\Local\Microsoft\Windows\INetCache*
+- *C:\Users\Default\AppData\Local\Microsoft\Windows\INetCookies*
 
-:::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-delete-folders-and-files.png" alt-text="File and folders to delete to repair the Default user profile":::
+:::image type="content" source="media/apps-access-admin-web-cache/ie-mse-delete-folders-and-files.png" alt-text="File and folders to delete to repair the Default user profile.":::
 
 ### Step 2: Repair each affected user profile
 
 Several files and folders that are part of the user profile can't be deleted while the user is signed in to Windows. Because of this restriction, the user has to sign out of Windows, and then an administrator can sign in and fix the profile. To fix the profile, delete the following file and folders (if they exist):
 
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCacheLock.dat  
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCache  
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCache  
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCookies  
+- *C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCacheLock.dat*
+- *C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCache*
+- *C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCache*
+- *C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCookies*  
   
   > [!NOTE]  
   > In these file paths, \<*user name*> is the name of the affected user's profile.

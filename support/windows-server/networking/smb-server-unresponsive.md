@@ -3,14 +3,14 @@ title: Windows SMB server is unresponsive
 description: Provides recommendations from Escalation Engineering about what to do when a Windows SMB server is unresponsive
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tatec, amanjain
-ms.prod-support-area-path: TCP/IP communications 
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Windows SMB server is unresponsive

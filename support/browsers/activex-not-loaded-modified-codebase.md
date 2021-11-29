@@ -4,6 +4,7 @@ description: This article describes the error message you receive when you view 
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: mmcgough
+ms.technology: internet-explorer-development-website
 ---
 # ActiveX control is not loaded with modified CODEBASE value in the registry
 

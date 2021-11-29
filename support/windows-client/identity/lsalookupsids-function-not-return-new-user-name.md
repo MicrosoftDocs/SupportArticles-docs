@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-client-active-directory
 ---
 # The LsaLookupSids function may return the old user name instead of the new user name if the user name has changed
@@ -18,7 +18,7 @@ ms.technology: windows-client-active-directory
 This article describes a cache update delay in Windows.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;946358
+_Original KB number:_ &nbsp; 946358
 
 ## Symptoms
 

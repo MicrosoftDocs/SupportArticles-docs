@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: MSI
+ms.custom: sap:msi, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # Error 1603 when you try to install a Windows Installer package: A fatal error occurred during installation

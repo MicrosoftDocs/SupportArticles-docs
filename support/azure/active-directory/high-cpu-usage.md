@@ -4,6 +4,8 @@ description: Resolves an issue in which high CPU usage occurs in Azure Active Di
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # High CPU usage in Azure AD Connect Health for Sync
 

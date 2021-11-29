@@ -4,6 +4,7 @@ description: This article describes the problem where you can't stop the HTTP se
 ms.date: 02/27/2020
 ms.reviewer: bretb
 ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
+ms.technology: iis-iisadmin-service-inetinfo
 ---
 # HTTP services can't be stopped when the Microsoft Web Deployment Service is installed
 

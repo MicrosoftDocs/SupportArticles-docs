@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you configure the 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Object reference not set to an instance of an object error message displays when you configure the Microsoft Dynamics CRM for Outlook client
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to import 
 ms.reviewer: chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # The import of a solution may be unsuccessful in Microsoft Dynamics CRM 2011
 

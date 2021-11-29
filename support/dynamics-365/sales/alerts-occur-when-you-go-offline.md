@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when Microsoft Dynamics
 ms.reviewer: mmaasjo
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Intranet Settings Alerts displayed when you go offline in Microsoft Dynamics CRM for Microsoft Office Outlook 2010
 

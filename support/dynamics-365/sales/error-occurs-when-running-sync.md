@@ -4,6 +4,7 @@ description: Provides a solution to errors that occur when you run the Synchroni
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Unable to cast object of type System.DBNull to type System.String error occurs when you run the Synchronize with CRM function in the Microsoft Dynamics CRM 2011 Outlook client
 

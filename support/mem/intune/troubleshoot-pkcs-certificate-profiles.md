@@ -26,8 +26,7 @@ You can use the [certutil command-line program](/windows-server/administration/w
 
 The following graphic provides a basic overview of the PKCS certificate deployment process in Intune.
 
-> [!div class="mx-imgBorder"]
-> ![PKCS certificate profile flow](./media/troubleshoot-pkcs-certificate-profiles/pkcs-overview-graphic.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/pkcs-overview-graphic.png" alt-text="Screenshot of the PKCS certificate profile flow.":::
 
 1. An Admin creates a PKCS certificate profile in Intune.
 1. The Intune service requests that the on-premises Intune Certificate Connector create a new certificate for the user.
@@ -83,7 +82,7 @@ For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a
 
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**.
 
-   ![Select log options](./media/troubleshoot-pkcs-certificate-profiles/message-options.png)
+    :::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/message-options.png" alt-text="Screenshot shows the Include Info Messages and Include Debug Messages options are selected.":::
 
 3. Reproduce the problem, and then save the logs to a text file:
    1. Select **Edit** > **Select All** to select all the messages on the current screen, and then select **Edit** > **Copy** to copy the messages to the clipboard.
@@ -97,7 +96,7 @@ For devices that run Windows, use the Windows Event logs to diagnose enrollment 
 
 On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
 
-![Windows event logs](./media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png" alt-text="Screenshot of the Windows event logs.":::
 
 ## Antivirus exclusions
 
@@ -128,7 +127,7 @@ The following common errors are each addressed in a following section:
 
 During PFX deployment, the trusted root certificate appears on the device but the PFX certificate doesn't appear on the device. The NDESConnector_date_time.svclog log file contains the string **The RPC server is unavailable. 0x800706ba**, as seen in the first line of the following example:
 
-```
+```output
 IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x800706BA): CCertRequest::Submit: The RPC server is unavailable. 0x800706ba (WIN32: 1722 RPC_S_SERVER_UNAVAILABLE)
 IssuePfx -Generic Exception: System.ArgumentException: CCertRequest::Submit: The parameter is incorrect. 0x80070057 (WIN32: 87 ERROR_INVALID_PARAMETER)
 IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094800): The requested certificate template is not supported by this CA. (Exception from HRESULT: 0x80094800)
@@ -152,7 +151,7 @@ Review the following settings, and fix if they're incorrect:
 
 If the CA FQDN and name are correct in the PKCS certificate profile, review the Windows Application log that's on the certificate authority server. Look for an **Event ID 128** that resembles the following example:
 
-```
+```output
 Log Name: Application:
 Source: Microsoft-Windows-CertificationAuthority
 Event ID: 128
@@ -176,7 +175,7 @@ After the Certificate Services service restarts, devices can receive certificate
 
 **An enrollment policy server cannot be located** and **0x80094015**, as seen in the following example:
 
-```
+```output
 IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094015): An enrollment policy server cannot be located. (Exception from HRESULT: 0x80094015)
 ```
 
@@ -192,22 +191,20 @@ Manually configure the name of the certificate enrollment policy server on the c
 
 After you deploy a PKCS certificate profile to mobile devices, the certificates aren't acquired, and the NDESConnector_date_time.svclog log contains the string **The submission is pending**, as seen in the following example:
 
-```
+```output
 IssuePfx - The submission is pending: Taken Under Submission
 IssuePfx -Generic Exception: System.InvalidOperationException: IssuePfx - The submission is pending
 ```
 
 In addition, on the certificate authority server, you can see the PFX request in the **Pending Requests** folder:
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of the Certification Authority pending requests folder](./media/troubleshoot-pkcs-certificate-profiles/pending-requests.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/pending-requests.png" alt-text="Screenshot of the Certification Authority pending requests folder." lightbox="media/troubleshoot-pkcs-certificate-profiles/pending-requests.png":::
 
 #### Cause - Incorrect configuration for Request Handling
 
 This issue occurs if the option **Set the request status to pending. The administrator must explicitly issue the certificate** is selected in the certificate authority **Properties** > **Policy Module** > **Properties** dialog box.
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of the Policy Module properties](./media/troubleshoot-pkcs-certificate-profiles/policy-module-properties.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/policy-module-properties.png" alt-text="Screenshot of the Policy Module properties.":::
 
 **Solution**:
 
@@ -217,7 +214,7 @@ Edit the Policy Module properties to set: **Follow the settings in the certifica
 
 With the Intune Certificate Connector installed and configured successfully, devices don't receive PKCS certificates and the NDESConnector_date_time.svclog log contains the string **The parameter is incorrect. 0x80070057**, as seen in the following example:
 
-```
+```output
 CCertRequest::Submit: The parameter is incorrect. 0x80070057 (WIN32: 87 ERROR_INVALID_PARAMETER)
 ```
 
@@ -242,7 +239,7 @@ For more information, see [Configure and use PKCS certificates with Intune](/mem
 
 When devices receive the trusted root certificate but don't receive the PFX certificate and the NDESConnector_date_time.svclog log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
 
-```
+```output
 IssuePfx - The submission failed: Denied by Policy Module
 IssuePfx -Generic Exception: System.InvalidOperationException: IssuePfx - The submission failed
    at Microsoft.Management.Services.NdesConnector.MicrosoftCA.GetCertificate(PfxRequestDataStorage pfxRequestData, String containerName, String& certificate, String& password)
@@ -277,8 +274,7 @@ Review the request files for errors that indicate why they failed to be processe
 1. On the server that hosts the Intune Certificate Connector, use File Explorer to navigate to **%programfiles%\Microsoft Intune\PfxRequest**.
 2. Review files in the **Failed** and **Processing** folders, using your favorite text editor.
 
-   > [!div class="mx-imgBorder"]
-   > ![Review the PfxRequest folder](./media/troubleshoot-pkcs-certificate-profiles/pfxrequest-folder.png)
+    :::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/pfxrequest-folder.png" alt-text="Screenshot of the the PfxRequest folder." lightbox="media/troubleshoot-pkcs-certificate-profiles/pending-requests.png":::
 
 3. In these files, look for entries that indicate errors or suggest problems. Using a web-based search, look up the error messages for clues as to why the request failed to process, and for solutions to those issues.
 
@@ -297,7 +293,7 @@ For more information, see [Use certificates for authentication in Microsoft Intu
 
 PKCS certificates fail to deploy, and the certificate console on the issuing CA displays a message with the string **-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED**, as seen in the following example:
 
-```
+```output
 Active Directory Certificate Services denied request abc123 because The Email name is unavailable and cannot be added to the Subject or Subject Alternate name. 0x80094812 (-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED). The request was for CN=" Common Name".  Additional information: Denied by Policy Module".
 ```
 
@@ -305,8 +301,7 @@ Active Directory Certificate Services denied request abc123 because The Email na
 
 This issue occurs if the **Supply in the request** option isn't enabled on the **Subject Name** tab in the certificate template **Properties** dialog box.
 
-> [!div class="mx-imgBorder"]
-> ![Configure the NDES properties](./media/troubleshoot-pkcs-certificate-profiles/supply-in-the-request.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/supply-in-the-request.png" alt-text="Screenshot of the NDES properties where the Supply in the request option is highlighted." border="false":::
 
 **Solution**:
 

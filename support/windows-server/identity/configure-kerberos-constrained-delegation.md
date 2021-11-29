@@ -2,15 +2,15 @@
 title: How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
 description: Discusses how to implement S4U2Proxy and Constrained Delegation on a custom service account or the NetworkServices account for Web Enrollment proxy pages.
 ms.date: 12/3/2020
-author: Teresa-Motiv
-ms.author: v-tea
+author: v-tappelgate
+ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, wincicadsec, Jitesh.Thakur
-ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
 ms.technology: windows-server-active-directory
 keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service account, computer account, machine account
 ---

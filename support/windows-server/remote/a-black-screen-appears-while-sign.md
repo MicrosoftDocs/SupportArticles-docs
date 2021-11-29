@@ -2,7 +2,7 @@
 title: A black screen appears while sign-in
 description: Provides a solution to an issue that a black screen may appear while sign-in by using remote desktop.
 ms.date: 10/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # A black screen may appear while sign-in by using remote desktop

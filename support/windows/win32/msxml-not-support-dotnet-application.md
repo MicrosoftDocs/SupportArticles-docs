@@ -4,6 +4,7 @@ description: This article describes the MSXML is not supported in .NET applicati
 ms.date: 11/03/2020
 ms.prod-support-area-path: System Services Development
 ms.reviewer: Dave Anderson
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # The use of MSXML is not supported in .NET applications
 

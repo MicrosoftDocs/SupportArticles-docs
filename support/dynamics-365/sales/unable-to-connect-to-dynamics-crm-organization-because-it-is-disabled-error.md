@@ -4,6 +4,7 @@ description: You may receive an error that states unable to connect to your Micr
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # "We're unable to connect to Microsoft Dynamics CRM organization because it is disabled" error in Microsoft Dynamics CRM for Outlook
 

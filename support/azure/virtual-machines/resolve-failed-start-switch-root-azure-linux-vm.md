@@ -81,7 +81,7 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
 3. Once connected to the repair VM, use `lsblk` to find your boot and efi partitions:
 
-   :::image type="content" source="./media/resolve-failed-start-switch-root-azure-linux-vm/find-boot-efi-partitions.png" alt-text="Screenshot that shows the boot and efi partitions.":::
+   :::image type="content" source="media/resolve-failed-start-switch-root-azure-linux-vm/find-boot-efi-partitions.png" alt-text="Screenshot shows the boot and efi partitions.":::
 
 4. Create a temporary mount point. For example, use `/repair`.
 

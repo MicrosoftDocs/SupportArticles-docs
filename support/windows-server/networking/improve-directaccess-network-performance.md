@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: delhan, jheath, ajayps, thierdel, mihaipe, alvinm, kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
 # DirectAccess network performance in Windows
@@ -18,7 +18,7 @@ ms.technology: networking
 This article discusses a performance issue that affects DirectAccess networking.
 
 _Applies to:_ &nbsp; Windows 10, version 1809, Windows 10, version 1709, Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;4056838
+_Original KB number:_ &nbsp; 4056838
 
 ## Symptoms
 

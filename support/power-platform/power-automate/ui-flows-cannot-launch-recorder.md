@@ -4,6 +4,7 @@ description: Troubleshooting recorder launch for UI Flows in Power Automate.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # UI flows cannot launch recorder
 
@@ -16,7 +17,7 @@ _Original KB number:_ &nbsp; 4555735
 
 UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to download the installation package.
 
-:::image type="content" source="media/ui-flows-cannot-launch-recorder/download-install-package.png" alt-text="UI Flows install package message.":::
+:::image type="content" source="media/ui-flows-cannot-launch-recorder/download-install-package.png" alt-text="Screenshot of the U I Flows installation package message.":::
 
 ## Verifying the issue
 
@@ -32,7 +33,7 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
     Verify that the extension is enabled in the extensions page:
 
-    :::image type="content" source="media/ui-flows-cannot-launch-recorder/verify-extension-is-enabled.png" alt-text="Edge Chromium Extension Page.":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/extension-enabled.png" alt-text="Screenshot to check the extension is enabled in the extensions page." lightbox="media/ui-flows-cannot-launch-recorder/extension-enabled.png":::
 
     Enable the extension by toggling the switch on the card.
 
@@ -40,11 +41,11 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
     There should be an icon in the system tray:
 
-    :::image type="content" source="media/ui-flows-cannot-launch-recorder/icon.png" alt-text="UI Flows tray icon.":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/ui-flows-icon.png" alt-text="Screenshot shows the U I flows icon in the system tray.":::
 
     If the icon isn't present, you can manually start the service by searching for **UI flows** in the **start** menu:
 
-    :::image type="content" source="media/ui-flows-cannot-launch-recorder/search-ui-flows.png" alt-text="UI Flows start menu.":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/search-ui-flows.png" alt-text="Screenshot to search for the U I Flows app in the start menu." border="false":::
 
 4. Check that you've installed the UI flows package:
 
@@ -53,6 +54,6 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
     Look for the UI flows installation package:
 
-    :::image type="content" source="media/ui-flows-cannot-launch-recorder/ui-flows-installation-package.png" alt-text="UI Flows installation.":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/ui-flows-installation-package.png" alt-text="Screenshot of the U I flows installation package.":::
 
     If the package isn't installed, follow the instructions in the UI flows wizard to download and install the latest version.

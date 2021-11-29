@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Account lockouts
-ms.technology: windows-client-security 
+ms.custom: sap:account-lockouts, csstroubleshoot
+ms.technology: windows-client-security
 ---
 # How to access the computer after you disable the administrator account
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory topology (sites, subnets, and connection objects)
+ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # You cannot promote a Windows Server domain controller to be a global catalog server
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article provides solutions to an issue where you can't promote a Windows Server domain controller to be a global catalog server.
 
 _Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;889711
+_Original KB number:_ &nbsp; 889711
 
 ## Symptoms
 

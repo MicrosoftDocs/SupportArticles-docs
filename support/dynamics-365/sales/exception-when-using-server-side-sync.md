@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you use Server-Sid
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # 401 Unauthorized exception occurs in Microsoft Dynamics 365 when using Server-Side Synchronization
 

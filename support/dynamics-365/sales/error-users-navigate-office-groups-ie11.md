@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # When users navigate to Office Groups in IE11 in Microsoft Dynamics CRM Online 2016 Update 0.1, the users may receive a prompt (Sign in to Office 365)
 

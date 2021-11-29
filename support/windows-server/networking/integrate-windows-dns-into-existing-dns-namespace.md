@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # Integrating Windows DNS into an existing DNS namespace
@@ -18,7 +18,7 @@ ms.technology: networking
 This article describes how to integrate Windows DNS into an organization that already has a DNS namespace implemented in which the DNS server that is authoritative for the zone with the name of the Active Directory domain doesn't support RFC 2136 (dynamic updates).
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;255913
+_Original KB number:_ &nbsp; 255913
 
 ## Summary
 

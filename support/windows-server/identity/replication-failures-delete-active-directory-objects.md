@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Deleting Active Directory objects that have many links causes replication failures
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article provides a workaround for an issue that occurs when you delete Active Directory objects that contain many forward links.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3149779
+_Original KB number:_ &nbsp; 3149779
 
 ## Summary
 

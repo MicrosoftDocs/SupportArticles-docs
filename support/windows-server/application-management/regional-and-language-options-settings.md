@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: markreno, kaushika
-ms.prod-support-area-path: Multilingual User Interface (MUI) and Input Method Editor (IME)
+ms.custom: sap:multilingual-user-interface-mui-and-input-method-editor-ime, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # How the Regional and Language Options settings in Windows Server 2003 are applied

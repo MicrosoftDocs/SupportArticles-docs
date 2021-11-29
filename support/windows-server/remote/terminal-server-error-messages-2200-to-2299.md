@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: willgloy, kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Terminal Server error messages: 2200 to 2299
@@ -18,7 +18,7 @@ ms.technology: windows-server-rds
 This article describes Terminal Server error messages 2200 to 2299.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;186555
+_Original KB number:_ &nbsp; 186555
 
 ## Error 2200
 

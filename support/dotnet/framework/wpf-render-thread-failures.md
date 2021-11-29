@@ -2,8 +2,9 @@
 title: WPF render thread failures
 description: This document discusses failures in WPF's render thread, with particular attention to those that cause an exception in SyncFlush or NotifyPartitionIsZombie or that cause applications to hang in WaitForNextMessage or SynchronizeChannel.
 ms.date: 11/18/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: tatkins, sambent, davean
+ms.technology: dotnet-general
 ---
 # WPF render thread failures
 

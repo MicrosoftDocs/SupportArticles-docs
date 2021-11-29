@@ -4,6 +4,7 @@ description: A window name cannot be found when Internet Explorer is started by 
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-development-website
 ---
 # Named browser windows cannot be found when Internet Explorer is started as a published application
 

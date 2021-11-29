@@ -4,6 +4,7 @@ description: Provides a solution to an issue where you can't see your gateway in
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Check if the gateway is in the right region
 

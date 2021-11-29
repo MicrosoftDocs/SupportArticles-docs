@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Storage hardware
+ms.custom: sap:storage-hardware, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Information about Event ID 51

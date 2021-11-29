@@ -3,14 +3,14 @@ title: ConflictAndDeleted folder size exceeds
 description: Describes how to reduce the sizes of the ConflictAndDeleted folder and the ConflictandDeletedManifest.xml when using Windows Server DFSR.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, cdan
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # The ConflictAndDeleted folder size may exceed its configured limitation

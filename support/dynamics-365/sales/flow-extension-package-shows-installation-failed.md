@@ -1,9 +1,10 @@
 ---
-title: Flow Extension shows Installation failed 
+title: Flow Extension shows Installation failed
 description: Provides a solution to an issue where Microsoft Flow Extension Package shows Installation failed.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-other-functionality
 ---
 # Microsoft Flow Extension Package shows "Installation failed" on PPAC
 
@@ -16,7 +17,7 @@ _Original KB number:_ &nbsp; 4560419
 
 Power Platform Admin Center is showing "Installation failed" for Microsoft Flow Extensions Package version 1.0.0.3.
 
-:::image type="content" source="media/flow-extension-package-shows-installation-failed/installation-failed-status.png" alt-text="Microsoft Flow Extensions Package Installation Failed.":::
+:::image type="content" source="media/flow-extension-package-shows-installation-failed/installation-failed-status.png" alt-text="Screenshot shows the Microsoft Flow Extensions Package installation failed.":::
 
 ## Cause
 

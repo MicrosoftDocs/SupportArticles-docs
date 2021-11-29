@@ -4,6 +4,7 @@ description: This article describes the operating uptime of the operating system
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: heikom
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Time-out events in Internet Explorer get fired multiple times when the system uptime is near 49.7 days
 

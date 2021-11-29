@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # "Access is denied" error when you try to create NTDS Settings object
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article provides a solution to fix an error (Access is denied) that occurs when you promote new Windows Server 2012 R2 domain controllers in an existing domain.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3207962
+_Original KB number:_ &nbsp; 3207962
 
 ## Symptoms
 

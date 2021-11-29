@@ -147,7 +147,7 @@ Use the following steps to test the URL that is specified in the SCEP certificat
 
 When you browse to the SCEP server URL, you receive the following Network Device Enrollment Service message:
 
-![SCEP server URL](./media/troubleshoot-scep-certificate-device-to-ndes/ndes-server-url-message.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/ndes-server-url-message.png" alt-text="Screenshot of the Network Device Enrollment Service message.":::
 
 - **Cause**: This problem is usually an issue with the Microsoft Intune Connector installation.
 
@@ -167,7 +167,7 @@ When you browse to the SCEP server URL, you receive the following Network Device
 
 When you browse to the SCEP server URL, you receive the following error:
 
-![HTTP Error 503. The service is unavailable](./media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png" alt-text="Screenshot of the HTTP Error 503. The service is unavailable."  border="false":::
 
 This issue is usually because the **SCEP** application pool in IIS isn't started. On the NDES server, open **IIS Manager** and go to **Application Pools**. Locate the **SCEP** application pool and confirm it's started.
 
@@ -212,7 +212,7 @@ If the SCEP application pool isn't started, check the application event log on t
 
   **Solution**: Enable **Anonymous Authentication** and disable **Windows Authentication**, and then restart the NDES server.
 
-  ![IIS permissions](./media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
+  :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png" alt-text="Screenshot of the Anonymous Authentication and Windows Authentication permissions.":::
 
 - **Cause 4**: The NDESPolicy module certificate has expired.
 
@@ -245,7 +245,7 @@ If the SCEP application pool isn't started, check the application event log on t
 
 When you browse to the SCEP server URL, you receive the following error:
 
-![Gatewaytimeout error](./media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png" alt-text="Screenshot of the Gatewaytimeout error." border="false":::
 
 - **Cause**: The **Microsoft Azure AD Application Proxy Connector** service isn't started.
 
@@ -291,7 +291,7 @@ You have Azure AD Application Proxy configured. When you browse to the SCEP serv
 
 When you browse to the SCEP server URL, you receive the following error:
 
-![500 - Internal server error](./media/troubleshoot-scep-certificate-device-to-ndes/500-internal-server-error.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/500-internal-server-error.png" alt-text="Screenshot of the 500 - Internal server error." border="false":::
 
 - **Cause 1**: The NDES service account is locked or its password is expired.
 
@@ -309,7 +309,8 @@ When you browse to the SCEP server URL, you receive the following error:
   4. Expand **Personal**, right-click **Certificates**, then select **All Tasks** > **Request New Certificate**.
   5. On the **Request Certificate** page, select **CEP Encryption**, then select **More information is required to enroll for this certificate. Click here to configure settings**.
   
-     ![Select CEP Encryption](./media/troubleshoot-scep-certificate-device-to-ndes/select-scep-encryption.png)
+     :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/select-scep-encryption.png" alt-text="Screenshot of the Request Certificate page, where CEP Encryption is selected.":::
+
   6. In **Certificate Properties**, select the **Subject** tab, fill the **Subject name** with the information that you collected during step 2, select **Add**, then select **OK**.
   7. Complete the certificate enrollment.
   8. Open the Certificates MMC for **My user account**.
@@ -318,14 +319,16 @@ When you browse to the SCEP server URL, you receive the following error:
   9. Expand **Personal**, right-click **Certificates**, then select **All Tasks** > **Request New Certificate**.
   10. On the **Request Certificate** page, select **Exchange Enrollment Agent (Offline request)**, then select **More information is required to enroll for this certificate. Click here to configure settings**.
 
-      ![Select Exchange Enrollment Agent](./media/troubleshoot-scep-certificate-device-to-ndes/select-exchange-enrollment-agent.png)
+      :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/select-exchange-enrollment-agent.png" alt-text="Screenshot of the Request Certificate page, where Exchange Enrollment Agent (Offline request) is selected.":::
+
   11. In **Certificate Properties**, select the **Subject** tab, fill the **Subject name** with the information that you collected during step 2, select **Add**.
 
-      ![Certificate properties](./media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png)
+      :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png" alt-text="Screenshot of the Subject tab in Certificate properties window.":::
 
       Select the **Private Key** tab, select **Make private key exportable**, then select **OK**.
 
-      ![Private key](./media/troubleshoot-scep-certificate-device-to-ndes/private-key.png)
+      :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/private-key.png" alt-text="Screenshot of the Private key tab in Certificate properties window." border="false":::
+
   12. Complete the certificate enrollment.
   13. Export the Exchange Enrollment Agent (Offline request) certificate from the current user certificate store. In the Certificate Export Wizard, select **Yes, export the private key**.
   14. Import the certificate to the local machine certificate store.

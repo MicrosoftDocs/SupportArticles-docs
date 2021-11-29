@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Remote Desktop or RemoteApp session does not terminate due to spawned splwow64.exe process
@@ -18,7 +18,7 @@ ms.technology: windows-server-rds
 This article provides a solution to solve an issue where Remote Desktop that specifies a program to start on logon doesn't terminate when the specified program is exited.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2513330
+_Original KB number:_ &nbsp; 2513330
 
 ## Symptoms
 

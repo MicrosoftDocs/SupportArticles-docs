@@ -556,12 +556,12 @@
     items:
     - name: Additional gateways appear in persistent routes
       href: ./networking/incorrect-default-gateways-in-persistent-routes.md
+    - name: Can't install SNMP and WMI SNMP Provider
+      href: ./networking/cannot-install-snmp-wmisnmpprovider.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
-      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
-    - name: Configure client proxy server settings
-      href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md    
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
@@ -602,8 +602,6 @@
     items:
     - name: Fail to use apps that connect to Internet
       href: ./networking/use-authenticated-proxy-servers.md
-    - name: Use Group Policy to apply WinHTTP proxy settings
-      href: ./networking/use-group-policy-apply-winhttp-proxy-settings.md
   - name: WebClient and WebDAV
     items:
     - name: Can't access WebDAV Web folder
@@ -676,6 +674,8 @@
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
+    - name: Stop code when initializing PMem or NVDIMM
+      href: ./performance/stop-code-initialize-pmem-nvdimm.md
     - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
@@ -684,8 +684,12 @@
       href: ./performance/tablet-device-creates-minidump-file.md
   - name: No Boot (not BugChecks)
     items:
+    - name: Advanced troubleshooting Windows boot problems with LiveRE tool
+      href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
+    - name: Can't start Windows 11 in S mode from a recovery drive
+      href: ./performance/cannot-start-windows-11-s-mode-recovery-drive.md
     - name: Changing ATA drive setting causes reboot loop
       href: ./performance/changing-bios-ata-drive-causes-reboot-loop.md
     - name: Fail to use PXE to boot clients from WDS

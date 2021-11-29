@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markm
-ms.prod-support-area-path: Partition and volume management
-ms.technology: windows-client-backup-and-storage 
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.technology: windows-client-backup-and-storage
 ---
 # Overview of FAT, HPFS, and NTFS File Systems
 

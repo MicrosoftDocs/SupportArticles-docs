@@ -2,7 +2,7 @@
 title: Mouse and screen resolution issues
 description: Provides a solution to mouse and screen resolution issues when managing a virtual machine using the Hyper-V Manager Console.
 ms.date: 09/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # After a new Hyper-V VMMS certificate is generated, there are mouse and screen resolution issues when you manage a virtual machine using the Hyper-V Manager Console

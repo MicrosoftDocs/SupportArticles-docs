@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Task Manager 
-ms.technology: windows-server-system-management-components 
+ms.custom: sap:task-manager, csstroubleshoot
+ms.technology: windows-server-system-management-components
 ---
 # Error message: Task Manager has been disabled by your administrator
 

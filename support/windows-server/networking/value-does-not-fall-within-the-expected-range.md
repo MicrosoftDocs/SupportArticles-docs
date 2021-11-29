@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, takondo, fanx
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # Error "Value does not fall within the expected range" when changing a DFS replication group or namespace in Windows Server 2016 or Windows Server 2012 R2

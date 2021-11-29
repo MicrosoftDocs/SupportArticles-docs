@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Background Intelligent Transfer Service (BITS)
+ms.custom: sap:background-intelligent-transfer-service-bits, csstroubleshoot
 ms.technology: networking
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed

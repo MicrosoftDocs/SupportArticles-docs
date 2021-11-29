@@ -2,7 +2,7 @@
 title: Error 0xC004E002 during activation
 description: Provides a solution to an error 0xC004E002 when you try to activate Windows.
 ms.date: 10/12/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danv
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Error 0xC004E002 during activation for Windows

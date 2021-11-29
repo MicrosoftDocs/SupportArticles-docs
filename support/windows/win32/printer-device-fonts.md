@@ -4,6 +4,7 @@ description: This article describes how to enumerate and then use printer device
 ms.date: 02/27/2020
 ms.prod-support-area-path: Graphics and multimedia development
 ms.topic: how-to
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # Use printer device fonts
 

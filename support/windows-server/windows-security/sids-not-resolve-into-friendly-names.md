@@ -3,14 +3,14 @@ title: Some SIDs do not resolve into friendly names
 description: Some security identifiers that you see in access control lists or Security Audit reports do not resolve into friendly names. These may be capability SIDs.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, johnbay
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Some SIDs do not resolve into friendly names
@@ -28,8 +28,8 @@ In some places in the Windows UI, you see Windows account security identifiers (
 - Security Audit reports
 - The access control list (ACL) editor in Registry Editor, as shown in the following examples:
 
-    ![A capability SID, visible in the ACL editor, does not resolve to a friendly name](./media/sids-not-resolve-into-friendly-names/permissions-for-classes.png)
-    ![A capability SID that appears on the Advanced ACL editor does not resolve to a friendly name](./media/sids-not-resolve-into-friendly-names/advanced-security-settings-for-classes.png)
+    :::image type="content" source="media/sids-not-resolve-into-friendly-names/permissions-for-classes.png" alt-text="Screenshot of the Permissions for Classes window which shows that the SID dose not resolve to a friendly name.":::
+    :::image type="content" source="media/sids-not-resolve-into-friendly-names/advanced-security-settings-for-classes.png" alt-text="Screenshot of the Advanced Security Settings for Classes window which shows that the SID dose not resolve to a friendly name.":::
 
 ## Cause
 

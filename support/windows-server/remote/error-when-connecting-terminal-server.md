@@ -2,7 +2,7 @@
 title: Error when connecting to a Terminal server
 description: Provides a solution to various certificate-related error messages when you connect to a Terminal server.
 ms.date: 10/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificate management
+ms.custom: sap:certificate-management, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # You receive various certificate-related error messages when connecting to a Terminal server that is running Windows Server 2008 or Windows Server 2008 R2

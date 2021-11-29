@@ -4,6 +4,7 @@ description: InstallPSTAction failed error when installing Microsoft Dynamics CR
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # InstallPSTAction failed error when installing Microsoft Dynamics CRM client for Microsoft Office Outlook
 

@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # "Microsoft CRM Splash Screen has stopped working" error occurs when trying to install Microsoft Dynamics CRM 2011 from the Splash Screen
 

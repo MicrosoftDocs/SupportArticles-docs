@@ -5,6 +5,7 @@ ms.date: 01/04/2021
 ms.prod-support-area-path: Windows Administration and Management Development
 ms.reviewer: RRANDALL
 ms.topic: how-to
+ms.technology: windows-dev-apps-admin-management-dev
 ---
 # Change a Windows Active Directory and LDS user password through LDAP
 

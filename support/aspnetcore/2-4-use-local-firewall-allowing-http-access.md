@@ -4,6 +4,7 @@ description: This article describes how to configure a local firewall to secure 
 ms.date: 03/29/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Part 2.4 - Secure Linux using local firewall and allow remote HTTP access
 

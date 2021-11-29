@@ -2,8 +2,8 @@
 title: Support for Microsoft Dynamics CRM with SQL Server 2012
 description: This article describes support for running Microsoft Dynamics CRM 2011 with Microsoft SQL Server 2012.
 ms.reviewer: chanson
-ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Support for Microsoft Dynamics CRM with Microsoft SQL Server 2012
 

@@ -4,6 +4,7 @@ description: Visual Studio 2012 tool windows no longer accessible via screen rea
 ms.date: 04/27/2020
 ms.prod-support-area-path: Integrated development environment (IDE)
 ms.reviewer: eddo, cbrochu
+ms.technology: vs-ide
 ---
 # Screen readers fail to read content of Visual Studio tool windows
 

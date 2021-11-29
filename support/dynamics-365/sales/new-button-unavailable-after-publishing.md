@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the New button for a custom e
 ms.reviewer: mmaasjo
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # The New button for a custom entity is not available immediately after publishing in Microsoft Dynamics CRM for Microsoft Outlook
 
