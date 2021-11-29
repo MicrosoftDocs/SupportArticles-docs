@@ -67,7 +67,7 @@ The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to
 
 8. After the system is restarted with new kernel, you will see the following message.
 
-     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-message.png" alt-text="Screenshot of the messages in the serial console after the system is restarted with the new kernel." border="false":::
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-message.png" alt-text="Screenshot of the messages in the serial console after the system is restarted with the new kernel.":::
 9. Verify the kernel and OS version to check whether the system is upgraded successfully.
 
     ```
