@@ -34,7 +34,7 @@ Then, continue with the following steps.
 
 1. Select the **Collect logs** option on the **Installation details** pane.
 
-   <image alt="Win32 app installation details - Collect log option" src="./media/troubleshoot-app-install/troubleshoot-app-install-04.png" width="500" />
+    :::image type="content" source="media/troubleshoot-app-install/collect-logs.png" alt-text="Screenshot of the Collect log option in the Win32 app installation details pane." border="false":::
 
 1. To begin the log file collection process, provide file paths with log file names and select **OK**.
 
@@ -43,7 +43,7 @@ Then, continue with the following steps.
 
 1. Once the log files are collected, you can select the **logs** link to download the log files.
 
-    <image alt="Win32 app log details - Download logs" src="./media/troubleshoot-app-install/troubleshoot-app-install-05.png" width="500" />
+    :::image type="content" source="media/troubleshoot-app-install/download-app-logs.png" alt-text="Screenshot of the Download app logs option in the Win32 installation details pane." border="false":::
 
     > [!NOTE]
     > A notification will be displayed indicating the success of the app log collection.
