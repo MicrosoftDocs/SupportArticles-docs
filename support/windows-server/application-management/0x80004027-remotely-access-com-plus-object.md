@@ -43,6 +43,8 @@ To resolve this problem and enable COM+ remote access, follow these steps:
 
     ![Allowed apps dialog box](./media/0x80004027-remotely-access-com-plus-object/com-plus-network-access-option.png)
 
+    :::image type="content" source="media/0x80004027-remotely-access-com-plus-object/com-plus-network-access-option.png" alt-text="The COM+ Network Access check box in the Allowed apps and features list.":::
+
 3. Set the registry value that allows COM+ remote access. To do this, follow these steps:
 
     1. In the **Start search** box, type regedit, and then click **regedit.exe** in the results list.
