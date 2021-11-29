@@ -47,7 +47,7 @@ Use the following steps to install the VM Agent in offline mode.
 
 4.  Select the **HKEY_LOCAL_MACHINE** key. On the menu, select **File** > **Load Hive**:
 
-    ![Load the hive](./media/install-vm-agent-offline/load-hive.png)
+    :::image type="content" source="media/install-vm-agent-offline/load-hive.png" alt-text="Screenshot of the HKEY_LOCAL_MACHINE key and the Load Hive option in the File menu in Registry Editor." border="false":::
 
 5.  Browse to the \windows\system32\config\SYSTEM folder on the OS disk that you attached. For the name of the hive, enter **BROKENSYSTEM**. The new registry hive is displayed under the **HKEY_LOCAL_MACHINE** key.
 
@@ -67,11 +67,11 @@ Use the following steps to install the VM Agent in offline mode.
         - HKEY_LOCAL_MACHINE  \SYSTEM\ControlSet001\Services\WindowsAzureGuestAgent
         - HKEY_LOCAL_MACHINE  \SYSTEM\ControlSet001\Services\RdAgent
 
-          ![Export the registry subkeys](./media/install-vm-agent-offline/backup-reg.png)
+          :::image type="content" source="media/install-vm-agent-offline/backup-reg.png" alt-text="Screenshot of the rdagent and winazureguestagent reg files in Windows Explorer." border="false":::
 
     2. Edit the registry files. In each file, change the entry value **SYSTEM** to **BROKENSYSTEM** (as shown in the following images) and save the file. Remember the **ImagePath** of the current VM agent. We will need to copy the corresponding folder to the attached OS disk. 
 
-        ![Change the registry subkey values](./media/install-vm-agent-offline/change-reg.png)
+        :::image type="content" source="media/install-vm-agent-offline/change-reg.png" alt-text="Screenshot of the original entry value and the changed entry value of the rdagent reg file." border="false":::
 
     3. Import the registry files into the repository by double-clicking each registry file.
 
@@ -85,7 +85,7 @@ Use the following steps to install the VM Agent in offline mode.
 
         2.	Go to C:\WindowsAzure on the troubleshooter VM, look for any folder with the name C:\WindowsAzure\GuestAgent_X.X.XXXX.XXX. Copy the GuestAgent folder that has latest version number from C:\WindowsAzure to the WindowsAzure folder in the attached OS disk. If you are not sure which folder should be copied, copy all GuestAgent folders. The following image shows an example of the GuestAgent folder that is copied to the attached OS disk. If you cannot find the GuestAgent folder, check for the imagePath of WindowsAzureGuestAgent registry subkey for the accurate path.
 
-             ![Copy GuestAgent folder](./media/install-vm-agent-offline/copy-files.png)
+             :::image type="content" source="media/install-vm-agent-offline/copy-files.png" alt-text="Screenshot of an example GuestAgent folder in the attached OS disk." border="false":::
 
 9.  Select **BROKENSYSTEM**. From the menu, select **File** > **Unload Hive**​.
 
