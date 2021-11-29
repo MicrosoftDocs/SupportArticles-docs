@@ -42,7 +42,7 @@ Active Directory extends the single-master model found in earlier versions of Wi
 - PDC emulator
 - Infrastructure master
 
-Typically, a FSMO role ownership is executed only when the domain controller has replicated the naming context (NC) where the ownership is stored since the Directory Service started. Make sure that a FSMO role seizure reaches the previous owner before the role is used.
+Typically, an FSMO role ownership is executed only when the domain controller has replicated the naming context (NC) where the ownership is stored since the Directory Service started. Make sure that an FSMO role seizure reaches the previous owner before the role is used.
 
 ### Schema master FSMO role
 
