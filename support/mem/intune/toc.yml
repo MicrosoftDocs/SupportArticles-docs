@@ -205,6 +205,8 @@ items:
       href: scep-deployment-to-win10-devices-fails.md
     - name: SCEP certificate request fails on CRP
       href: scep-certificate-request-fails.md
+    - name: iOS SCEP failure - no GetCACaps request generated
+      href: ios-scep-failure-no-getcacaps.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
     - name: Support tip - Choose between SCEP and PKCS
