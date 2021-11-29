@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # You may receive error messages when you share a folder in a Windows Server 2008 failover cluster
@@ -18,7 +18,7 @@ ms.technology: windows-server-high-availability
 This article provides a solution to an error that occurs when you provision a shared folder on a cluster physical disk resource.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;947051
+_Original KB number:_ &nbsp; 947051
 
 ## Beta Information
 

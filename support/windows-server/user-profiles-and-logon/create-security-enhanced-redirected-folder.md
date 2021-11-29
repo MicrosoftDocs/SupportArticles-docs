@@ -2,15 +2,15 @@
 title: Create security-enhanced redirected folder
 description: Describes how to dynamically create security-enhanced redirected folders or home folders.
 ms.date: 10/09/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, CCLAY, 
-ms.prod-support-area-path: User profiles
+ms.reviewer: kaushika, CCLAY
+ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # How to dynamically create security-enhanced redirected folders or home folders  

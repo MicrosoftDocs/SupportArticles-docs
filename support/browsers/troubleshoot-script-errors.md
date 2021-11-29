@@ -4,6 +4,7 @@ description: A script error occurs in Internet Explorer, the webpage cannot be d
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-development-website
 ---
 # How to troubleshoot script errors in Internet Explorer
 
@@ -89,7 +90,7 @@ Active scripting, ActiveX, and Java are all involved in shaping the way that inf
     > [!NOTE]
     > ActiveX controls and Java programs are turned off in the High security level in Internet Explorer.
 
-    :::image type="content" source="media/troubleshoot-script-errors/security-tab.jpg" alt-text="Internet Options - Security" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/security-tab.png" alt-text="Screenshot of the Internet Options Window. Under the Security tab, select Default Level.":::
 
 #### Method 2: Remove all temporary Internet files
 
@@ -102,7 +103,7 @@ To remove all the temporary Internet-related files for Internet Explorer.
 3. Select the **General** tab.
 4. Under **Browsing History**, select **Delete**.
 
-    :::image type="content" source="media/troubleshoot-script-errors/general-tab.jpg" alt-text="Internet Options - General" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/general-tab.png" alt-text="Screenshot of the Internet Options Window. Under the Geneal tab, in Browsing history section, Delete button is highlighted.":::
 
 5. In the **Delete Browsing History** dialog box, select the following check boxes, and then select **Delete**:
 
@@ -110,7 +111,7 @@ To remove all the temporary Internet-related files for Internet Explorer.
     - **Cookies**
     - **History**
 
-    :::image type="content" source="media/troubleshoot-script-errors/options-in-delete-browsing-history.jpg" alt-text="Options in Delete Browsing History" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/options-in-delete-browsing-history.png" alt-text="Screenshot of the Delete Browsing History Window. Temporary Internet Files, Cookies, and History options are checked.":::
 
 6. Select **Close**, and then select **OK** to close the **Internet Options** dialog box.
 
@@ -155,7 +156,7 @@ If you experience a video display problem, the Smooth Scrolling feature may caus
 2. On the **Tools** menu, select **Internet Options**. If you can't see the **Tools** menu, press Alt to display the menus.
 3. On the **Advanced** tab, clear the **Display a notification about every script error** box, and then select **OK**.
 
-    :::image type="content" source="media/troubleshoot-script-errors/advanced-tab.jpg" alt-text="Display a notification about every script error" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/advanced-tab.png" alt-text="Screenshot of Internet Options window. Under the Advance tab, Display a notification about every script error check box is cleared.":::
 
 ### Troubleshooting Script Errors when printing from Internet Explorer
 

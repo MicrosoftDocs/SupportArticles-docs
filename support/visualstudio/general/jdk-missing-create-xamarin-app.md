@@ -4,6 +4,7 @@ description: This article provides a workaround for an error that occurs when yo
 ms.date: 04/23/2020
 ms.prod-support-area-path: Third Party Tools installed with Visual Studio
 ms.reviewer: vyedin
+ms.technology: vs-general
 ---
 # JDK is missing when you create a Xamarin-based app in Visual Studio 2015
 
@@ -14,13 +15,13 @@ _Original KB number:_ &nbsp; 4483429
 
 ## Symptoms
 
-When you create a Xamarin Android or Xamarin.Forms app in Visual Studio 2015, you may receive an error message that resembles the following message:
+When you create a Xamarin Android or Xamarin.Forms app in Visual Studio 2015, you may receive an error message that resembles the following one:
 
 > Xamarin.Android for Visual Studio requires Java Development Kit. Please install it or set Java Development Kit path on Tools->Options->Xamarin->Android Settings menu.
 
 For example, you see an error message dialog box that's similar to the following screenshot:
 
-:::image type="content" source="./media/jdk-missing-create-xamarin-app/error-message-dialog.png" alt-text="error message dialog box":::
+:::image type="content" source="./media/jdk-missing-create-xamarin-app/error-message-dialog.png" alt-text="Screenshot of the error message dialog box.":::
 
 ## Cause
 

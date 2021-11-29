@@ -2,7 +2,7 @@
 title: Error when you do a system state backup
 description: Describes why you receive an error when you try to do a system state backup in Windows Server 2008. You can configure a registry entry to change this behavior.
 ms.date: 10/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jomcc, prambrav
-ms.prod-support-area-path: Configuring and using Backup software
+ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Error message when you try to do a system state backup in Windows Server 2008 and Windows Server 2008 R2

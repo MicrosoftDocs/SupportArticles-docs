@@ -2,7 +2,7 @@
 title: Errors when you bring a physical disk resource online on a server
 description: Describes a problem in which various errors messages may be logged for a resource on a server that is running Windows Server 2008. Provides workarounds for this problem.
 ms.date: 09/15/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevenek
-ms.prod-support-area-path: Data corruption and disk errors
+ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # A physical disk resource remains in the Online Pending status, or the Chkdsk utility automatically starts to run on a server that is running Windows Server 2008

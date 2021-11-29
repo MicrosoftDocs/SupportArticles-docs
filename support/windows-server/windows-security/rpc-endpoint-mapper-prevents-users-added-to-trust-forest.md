@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain and forest trusts
+ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # RPC Endpoint Mapper client authentication prevents users and groups from being added to trusting forest
@@ -41,7 +41,7 @@ In this scenario, you receive the following error message:
 
 You receive this message as in the following screenshot:
 
-![Screenshot of error message](./media/rpc-endpoint-mapper-prevents-users-added-to-trust-forest/error-message-dialog-box.jpg)
+:::image type="content" source="media/rpc-endpoint-mapper-prevents-users-added-to-trust-forest/error-message-dialog-box.png" alt-text="Screenshot of the Select Users, Computers, Service Accounts, or Groups window which shows the error message.":::
 
 When you enable enhanced logging, the logging information that you receive does not provide any additional information except errors that state that domain controllers from the trusted forest are not available. Network monitoring traces do not provide additional details.
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevenxu, kaushika
-ms.prod-support-area-path: Virtual machine will not boot
+ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Error in Windows Server: Virtual machine could not start because the hypervisor is not running
@@ -18,7 +18,7 @@ ms.technology: hyper-v
 This article helps fix an issue that you're unable to start virtual machines because of incorrect DEP setting in BIOS.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2490458
+_Original KB number:_ &nbsp; 2490458
 
 ## Symptoms
 

@@ -2,8 +2,9 @@
 title: Form height and width changes with VS 2012
 description: WinForms application developers may notice that the Height and Width of some Forms changes when running under the Visual Studio 2012 debugger. This article provides a resolution for this problem.
 ms.date: 05/08/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: kevinh
+ms.technology: dotnet-general
 ---
 # Form height and width changes with Visual Studio 2012
 
@@ -18,11 +19,11 @@ Developers debugging existing WinForms applications (targeting .NET 4.0 or an ol
 
 *Example of original behavior:*
 
-![Running outside the Visual Studio debugger](./media/wrong-winform-height-width/original-form.png)
+:::image type="content" source="./media/wrong-winform-height-width/original-form.png" alt-text="Screenshot shows the original behavior of some forms." border="false":::
 
 *Example of new behavior*:
 
-![Running under the Visual Studio debugger ](./media/wrong-winform-height-width/new-form.png)
+:::image type="content" source="./media/wrong-winform-height-width/new-form.png" alt-text="Screenshot shows the new behavior of some forms." border="false":::
 
 ## Cause
 

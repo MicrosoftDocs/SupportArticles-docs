@@ -122,7 +122,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-0xc0000225/4015973_en_1.png" alt-text="Sceenshot of sample of the DIR command":::
+    :::image type="content" source="media/boot-error-0xc0000225/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 

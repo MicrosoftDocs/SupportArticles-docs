@@ -4,6 +4,7 @@ description: After you select the Test & Enable Mailbox button, one or more of t
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Failure after selecting Test & Enable Mailbox in Microsoft Dynamics 365
 

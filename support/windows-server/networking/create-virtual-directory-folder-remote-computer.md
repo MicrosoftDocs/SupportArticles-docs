@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # How to create a virtual directory on an existing Web site to a folder that resides on a remote computer  

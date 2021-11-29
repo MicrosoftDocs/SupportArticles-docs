@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # .bak log files are deleted and lost

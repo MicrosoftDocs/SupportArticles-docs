@@ -4,6 +4,7 @@ description: Describes an issue where Outlook crashes when you select Track in C
 ms.reviewer: dmartens, tasitae
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Outlook crashes when you try to track an email in Microsoft Dynamics CRM
 

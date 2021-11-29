@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, anshg
-ms.prod-support-area-path: Deploying software through Group Policy
+ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to change the MSI file location in the Software Deployment GPO (Multiple UNC paths for same package)
@@ -18,7 +18,7 @@ ms.technology: windows-server-group-policy
 This article describes how to change the MSI file location in the Software Deployment GPO and set the multiple UNC paths for the same MSI package.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2395088
+_Original KB number:_ &nbsp; 2395088
 
 ## Summary
 

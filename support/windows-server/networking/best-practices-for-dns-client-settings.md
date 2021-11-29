@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # Best practices for DNS client settings in Windows 2000 Server and in Windows Server 2003

@@ -4,6 +4,7 @@ description: This article describes a problem that might occur when a client app
 ms.date: 05/12/2020
 ms.prod-support-area-path: Component development
 ms.reviewer: wmascia
+ms.technology: windows-dev-apps-component-dev
 ---
 # A client application may intermittently receive an error message when it tries to create a COM+ component
 

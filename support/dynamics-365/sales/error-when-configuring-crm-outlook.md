@@ -4,6 +4,7 @@ description: Describes a solution to an error that occurs when you configure CRM
 ms.reviewer: debrau, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # We can't connect to your CRM server when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 
@@ -59,7 +60,7 @@ To fix this issue, follow these steps:
 
     Then, type **Y** to finish the change:
 
-    :::image type="content" source="media/error-when-configuring-crm-outlook/command-know-computername.png" alt-text="Example of syncing time with the domain.":::
+    :::image type="content" source="media/error-when-configuring-crm-outlook/command-know-computer-name.png" alt-text="Screenshot to use a command to sync time with the domain.":::
 
     For more information about the net time command, see [Net Time](/previous-versions/windows/it-pro/windows-xp/bb490716(v=technet.10)).
 

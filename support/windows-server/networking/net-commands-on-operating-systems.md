@@ -3,14 +3,14 @@ title: Net Commands for Operating Systems
 description: Provides some information about Net Commands on Operating Systems.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Net Commands On Operating Systems

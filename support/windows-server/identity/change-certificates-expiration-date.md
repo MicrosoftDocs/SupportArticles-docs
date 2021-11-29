@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Certificate Services
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Change the expiration date of certificates that are issued by Certificate Authority

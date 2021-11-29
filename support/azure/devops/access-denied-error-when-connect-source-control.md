@@ -1,11 +1,11 @@
 ---
-title: Access denied when you connect to Source Control 
+title: Access denied when you connect to Source Control
 description: This article discusses an access denied problem that occurs when you connect to Source Control or build components in Team Foundation Server.
-ms.prod: devops
 ms.date: 08/14/2020
 ms.prod-support-area-path: Pipelines
 ms.reviewer: manojm, georgea, ccoop, davean
 ms.topic: article
+ms.service: az-devops-project
 ---
 # 'Access denied' error message for a different user when you connect to Source Control or build components in Team Foundation Server
 

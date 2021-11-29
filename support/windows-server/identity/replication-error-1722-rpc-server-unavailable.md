@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 1722: The RPC server is unavailable
 

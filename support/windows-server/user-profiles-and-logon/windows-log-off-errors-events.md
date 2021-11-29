@@ -1,5 +1,5 @@
 ---
-title: Log-off problems 
+title: Log-off problems
 description: Discusses log off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # You experience log-off problems on a Windows XP-based, Windows Server 2003-based, Windows 2000-based, or Windows NT 4.0-based computer

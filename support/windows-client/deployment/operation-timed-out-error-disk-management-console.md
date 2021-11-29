@@ -3,14 +3,14 @@ title: The operation timed out error
 description: Helps to fix the error The operation timed out when creating a partition using Disk Management console or DiskPart.exe.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jburrage
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # "The operation timed out" error when creating a partition using Disk Management console or DiskPart.exe

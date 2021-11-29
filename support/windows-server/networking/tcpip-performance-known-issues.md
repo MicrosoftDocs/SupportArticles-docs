@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, rabhardw, anupamk 
-ms.prod-support-area-path: TCP/IP communications
+ms.reviewer: kaushika, rabhardw, anupamk
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Known issues of TCP/IP performance

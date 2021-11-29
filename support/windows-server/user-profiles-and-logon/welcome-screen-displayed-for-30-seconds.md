@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User profiles
+ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # The Welcome screen may be displayed for 30 seconds, and the logon script interacts with me when I try to log on to a computer that is running Windows Vista or Windows Server 2008
@@ -18,7 +18,7 @@ ms.technology: windows-server-user-profiles
 This article provides a solution to an issue where the Welcome screen may be displayed for 30 seconds when you log on.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;940452
+_Original KB number:_ &nbsp; 940452
 
 ## Problem description
 

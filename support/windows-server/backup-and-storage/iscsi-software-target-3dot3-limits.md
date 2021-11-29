@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: iSCSI
+ms.custom: sap:iscsi, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Supported and tested Microsoft iSCSI Software Target 3.3 limits

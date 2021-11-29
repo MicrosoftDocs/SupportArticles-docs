@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Secure Boot and UEFI
+ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Clear TPM fails with error code: 0x80290300
@@ -18,7 +18,7 @@ ms.technology: windows-client-security
 This article helps fix the error code 0x80290300 that occurs when you try to clear the TPM information.
 
 _Applies to:_ &nbsp; Window 10 – all editions  
-_Original KB number:_ &nbsp;2561178
+_Original KB number:_ &nbsp; 2561178
 
 ## Symptoms
 

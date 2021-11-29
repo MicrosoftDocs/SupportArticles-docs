@@ -3,7 +3,6 @@ title: SQL Server fails to start with error 17182
 description: This article provides a resolution for the problem that occurs when server is configured to use SSL.
 ms.date: 01/14/2021
 ms.prod-support-area-path: Security Issues
-ms.topic: troubleshooting
 ms.prod: sql 
 ---
 # SQL Server fails to start with when server is configured to use SSL

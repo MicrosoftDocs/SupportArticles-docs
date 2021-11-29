@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory FSMO
+ms.custom: sap:active-directory-fsmo, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory FSMO roles in Windows

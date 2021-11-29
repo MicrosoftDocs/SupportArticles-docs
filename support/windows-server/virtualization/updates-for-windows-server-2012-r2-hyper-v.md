@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: AJAYPS, kaushika
-ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V environments
@@ -18,7 +18,7 @@ ms.technology: hyper-v
 This article documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V environments.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3135020
+_Original KB number:_ &nbsp; 3135020
 
 ## More information
 

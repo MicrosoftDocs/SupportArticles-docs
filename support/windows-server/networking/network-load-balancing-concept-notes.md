@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Network Load Balancing (NLB)
+ms.custom: sap:network-load-balancing-nlb, csstroubleshoot
 ms.technology: networking
 ---
 # Network Load Balancing - Concept and notes

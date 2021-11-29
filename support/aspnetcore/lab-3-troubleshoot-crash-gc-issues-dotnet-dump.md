@@ -4,6 +4,7 @@ description: This article describes how to use the dotnet-dump tool to capture a
 ms.date: 04/15/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 3 Troubleshooting performance and GC issues with dotnet-dump in Linux
 

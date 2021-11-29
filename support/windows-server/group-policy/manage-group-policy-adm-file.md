@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Recommendations for managing Group Policy administrative template (.adm) files

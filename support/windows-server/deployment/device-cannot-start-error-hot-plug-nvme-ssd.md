@@ -3,20 +3,20 @@ title: This device cannot start error when deploying a hot plug NVMe SSD
 description: Describes an error "This device cannot start" that occurs when you deploy a hot plug NVMe SSD.
 ms.date: 05/14/2021
 author: v-lianna
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-pekuo, shthomps
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # "This device cannot start" error when deploying a hot plug NVMe SSD
 
-_Applies to:_ &nbsp;Windows Server, version 2004, all editions, Windows Server, version 1903, all editions, Windows Server 2019, all editions, Windows Server 2016, Windows Server 2016 Datacenter, Windows Server 2016 Standard  
-_Original KB number:_ &nbsp;4035110
+_Applies to:_ &nbsp; Windows Server, version 2004, all editions, Windows Server, version 1903, all editions, Windows Server 2019, all editions, Windows Server 2016, Windows Server 2016 Datacenter, Windows Server 2016 Standard  
+_Original KB number:_ &nbsp; 4035110
 
 When deploying a hot plug NVM Express (NVMe) solid-state drive (SSD) that supports a maximum payload size (MPS) which is less than the currently configured Peripheral Component Interconnect Express (PCIe) bus MPS, the SSD device cannot be detected or enumerated, and you receive the following error message:
 

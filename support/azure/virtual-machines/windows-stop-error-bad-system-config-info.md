@@ -3,7 +3,7 @@ title: Windows stop error - 0x00000074 Bad System Config Info
 description: This article provides steps to resolve issues where Windows cannot boot and needs to restart due to bad system configuration information in an Azure Virtual Machine (VM).
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 08/24/2020
-ms.author: v-miegge
+ms.author: genli
 ---
 
 # Windows stop error - 0x00000074 Bad System Config Info

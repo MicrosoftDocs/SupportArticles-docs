@@ -30,3 +30,5 @@
   href: dynamics-365/index.yml
 - name: Welcome
   href: power-platform/index.yml
+- name: Welcome
+  href: dynamics/index.yml

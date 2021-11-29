@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: FRS
+ms.custom: sap:frs, csstroubleshoot
 ms.technology: networking
 ---
 # Folder name is changed to "FolderName_NTFRS_\<xxxxxxxx>"
@@ -18,7 +18,7 @@ ms.technology: networking
 This article provides help to fix an issue where File Replication service (FRS) adds "NTFRS_**xxxxxxxx**" to a folder name.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
-_Original KB number:_ &nbsp;328492
+_Original KB number:_ &nbsp; 328492
 
 ## Symptoms
 

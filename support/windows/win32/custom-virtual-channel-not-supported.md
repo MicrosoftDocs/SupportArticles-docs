@@ -4,6 +4,7 @@ description: Describes a scenario where there is a limitation in Universal Windo
 ms.date: 7/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: davean, franki
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # Remote Desktop in Microsoft Store doesn't support custom virtual channels
 

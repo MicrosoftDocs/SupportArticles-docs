@@ -4,6 +4,7 @@ description: Describes how to set up filters to send the batched EDI.
 ms.date: 03/17/2020
 ms.prod-support-area-path: Accelerators
 ms.reviewer: mquian
+ms.technology: biztalk-server-accelerators
 ---
 # How to set up filters to send the batched EDI Interchange
 

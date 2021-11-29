@@ -4,6 +4,7 @@ description: Provides a solution to an issue where you're consistently experienc
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # How to restart UI flows to recover from a bad state
 

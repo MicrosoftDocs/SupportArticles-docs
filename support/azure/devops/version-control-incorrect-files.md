@@ -1,10 +1,10 @@
 ---
 title: Version control download returns incorrect files
 description: This article provides resolutions to the error that occurs after you restore a Team Project Collection from a backup.
-ms.prod: devops
 ms.date: 08/18/2020
 ms.prod-support-area-path: Repos
 ms.reviewer: mmitrik, remilema, congyiw
+ms.service: az-devops-project
 ---
 # Version control download returns incorrect files after restoring Team Project Collection database
 

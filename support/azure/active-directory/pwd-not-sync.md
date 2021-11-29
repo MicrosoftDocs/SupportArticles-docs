@@ -1,9 +1,11 @@
 ---
 title: Password isn't synced from Azure AD to the local on-premises directory after the password is changed or reset
-description: This article describes an issue in which password isn't synced from Azure AD to the local on-premises directory after the password is changed or reset. It provides a resolution. 
+description: This article describes an issue in which password isn't synced from Azure AD to the local on-premises directory after the password is changed or reset. It provides a resolution.
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Password isn't synced from Azure AD to on-premises after the password is changed or reset
 

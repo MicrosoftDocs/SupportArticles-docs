@@ -19,7 +19,7 @@ As an initial change, the Office 365 management portal now supports subscription
 
 For EMS customers who previously visited the Azure portal for user creation and license assignment, you can continue to use the Azure portal to take advantage of advanced features such as group license assignment. Alternatively, you can begin assigning licenses while already managing other subscriptions in the Office 365 management portal. There are no changes to the Azure portal or the Intune admin console as part of this migration.
 
-![Office 365 portal](./media/itune-account-portal-retired/3093591-1.png)
+:::image type="content" source="media/itune-account-portal-retired/office-365-portal.png" alt-text="Screenshot of the Office 365 portal.":::
 
 ## Frequently Asked Questions
 

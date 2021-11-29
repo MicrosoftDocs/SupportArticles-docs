@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to use the BitLocker Recovery Password Viewer for Active Directory Users and Computers tool to view recovery passwords for Windows Vista
@@ -18,7 +18,7 @@ ms.technology: windows-server-security
 This article describes a tool that you can use to locate and view BitLocker recovery passwords.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;928202
+_Original KB number:_ &nbsp; 928202
 
 Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
@@ -173,7 +173,7 @@ The following information describes how to use the BitLocker Recovery Password V
 1. In Active Directory Users and Computers, right-click the domain container, and then click **Find BitLocker Recovery Password**.
 2. In the **Find BitLocker Recovery Password** dialog box, type the first eight characters of the recovery password in the **Password ID (first 8 characters)** box, and then click **Search**.
 
-    ![Find BitLocker Recovery Password dialog box](./media/bitlocker-recovery-password-viewer-tool/find-bitlocker-recover-pwd.jpg)
+    :::image type="content" source="media/bitlocker-recovery-password-viewer-tool/find-bitlocker-recover-pwd.png" alt-text="Screenshot of the Active Directory Users and Computers window with Find BitLocker Recovery Password selected.":::
 
 ## Frequently asked questions about the BitLocker Recovery Password Viewer tool
 

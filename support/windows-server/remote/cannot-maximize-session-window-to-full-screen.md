@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
-ms.technology: windows-server-rds 
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
+ms.technology: windows-server-rds
 ---
 # You can't maximize a Remote Desktop Connection session window to full-screen when you use the /v parameter
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, chrit
-ms.prod-support-area-path: Virtual machine will not boot
+ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Restored Hyper-V virtual machines won't start

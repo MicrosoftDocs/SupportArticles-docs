@@ -3,14 +3,14 @@ title: Change IP address of a network adapter
 description: Provides some information about how to change the IP address of a network adapter.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # How to change the IP address of a network adapter  

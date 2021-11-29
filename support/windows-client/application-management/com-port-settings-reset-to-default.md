@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM and COM+ performance and stability
+ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # Com port settings reset to default after making changes in Device Manager

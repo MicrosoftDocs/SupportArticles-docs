@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Blank desktop in Windows

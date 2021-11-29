@@ -3,6 +3,7 @@ title: Invokable Transaction Program registry locations
 description: This article describes invokable Transaction Program registry locations that Tpsetup.exe creates under different running environments.
 ms.date: 10/13/2020
 ms.prod-support-area-path: Application integration (Transaction Integrator)
+ms.technology: his-app-integration
 ---
 # Invokable Transaction Program registry locations that Tpsetup.exe creates
 

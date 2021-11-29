@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Task Scheduler
+ms.custom: sap:task-scheduler, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # Error when you use the /z switch together with the Schtasks command in Windows Vista: The task XML is missing a required element or attribute
@@ -18,7 +18,7 @@ ms.technology: windows-client-system-management-components
 This article helps resolve an issue where you receive an error when you use the **/z** switch together with the **Schtasks.exe** command in Windows Vista.
 
 _Applies to:_ &nbsp; Windows Vista  
-_Original KB number:_ &nbsp;2004151
+_Original KB number:_ &nbsp; 2004151
 
 ## Symptoms
 

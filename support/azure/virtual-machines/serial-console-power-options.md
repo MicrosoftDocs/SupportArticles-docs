@@ -3,7 +3,7 @@ title: Azure Serial Console Power Options | Microsoft Docs
 description: VM power options available within the Azure Serial Console
 services: virtual-machines
 documentationcenter: ''
-author: asinn826
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -14,7 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 8/6/2019
-ms.author: alsin
+ms.author: genli
 ---
 
 # Power Options available from the Azure Serial Console

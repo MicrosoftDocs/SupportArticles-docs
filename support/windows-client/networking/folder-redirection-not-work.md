@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, philibla
-ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Folder redirection does not work correctly after you restart the computer

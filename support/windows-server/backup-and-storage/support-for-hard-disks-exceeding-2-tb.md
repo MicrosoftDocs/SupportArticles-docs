@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows support for hard disks that are larger than 2 TB

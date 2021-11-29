@@ -4,6 +4,7 @@ description: Discusses how to use Internet Explorer in Proxy environments.
 ms.date: 07/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Using Proxy Servers together with Internet Explorer
 
@@ -37,7 +38,7 @@ If you're configuring proxy settings on a user's computer after the deployment, 
    > [!NOTE]
    > Multiple exceptions should be separated by semicolons (";").
 
-   :::image type="content" source="media/use-proxy-servers-with-ie/browser-setting-to-bypass-address.png" alt-text="browser settings to bypass address" border="false":::
+   :::image type="content" source="media/use-proxy-servers-with-ie/browser-setting-to-bypass-address.png" alt-text="Screenshot shows the browser settings windows." border="true":::
 
 For more information, see [Internet Explorer uses Proxy Server for Local IP address even if the "Bypass Proxy Server for Local Addresses" option is turned on](https://support.microsoft.com/help/262981).
 

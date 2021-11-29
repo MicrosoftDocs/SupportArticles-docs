@@ -4,6 +4,7 @@ description: Provides a workaround for the issue that a Desktop Bridge app fails
 ms.date: 05/24/2021
 ms.prod-support-area-path: Desktop app UI development
 ms.reviewer: ishimada, soshogoh
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 # A Desktop Bridge app fails to start when running it as an administrator
 

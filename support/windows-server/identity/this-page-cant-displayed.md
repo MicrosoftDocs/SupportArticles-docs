@@ -2,7 +2,7 @@
 title: This page can't be displayed
 description: Discusses that you receive a "This page cannot be displayed" error message when you try to access an application on a website that uses AD FS 2.0. Provides a resolution.
 ms.date: 09/10/2021
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fszita, maweeras, timccu, abizerh
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 error: This page cannot be displayed

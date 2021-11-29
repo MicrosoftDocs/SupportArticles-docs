@@ -2,8 +2,9 @@
 title: GPU hardware acceleration
 description: Describes the GPU hardware acceleration feature in Internet Explorer and potential problems with it.
 ms.date: 07/14/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-core-features
 ---
 # Hardware acceleration (or GPU rendering) in Internet Explorer
 
@@ -57,7 +58,7 @@ To disable hardware acceleration, follow these steps:
 
 1. Select the **Advanced** tab, and then select the **Use software rendering instead of GPU rendering** check box under **Accelerated graphics**.
 
-   :::image type="content" source="media/gpu-hardware-acceleration/option-under-accelerated-graphics.png" alt-text="screenshot of the option under Accelerated graphics" border="false":::
+   :::image type="content" source="media/gpu-hardware-acceleration/option-under-accelerated-graphics.png" alt-text="Screenshot of Internet Options window. Under Advanced tab, The Use software rendering instead of GPU rendering for Accelerated graphics is checked." border="false":::
 
 1. Select **Apply**, and then select **OK**.
 

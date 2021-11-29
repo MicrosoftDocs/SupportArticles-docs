@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tode
-ms.prod-support-area-path: Boot is slow
+ms.custom: sap:boot-is-slow, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
@@ -18,7 +18,7 @@ ms.technology: windows-server-performance
 This article provides a workaround for an issue that causes slow boot and services fail to start.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2004121
+_Original KB number:_ &nbsp; 2004121
 
 ## Symptoms
 

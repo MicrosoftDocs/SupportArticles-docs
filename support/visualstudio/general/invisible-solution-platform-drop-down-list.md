@@ -4,6 +4,7 @@ description: Works around a problem that you can't see the default Solution Plat
 ms.date: 04/24/2020
 ms.prod-support-area-path: Team explorer/Version control
 ms.reviewer: lavonnec, cbrochu
+ms.technology: vs-version-control
 ---
 # Solution Platform drop-down list isn't visible after you install Visual Studio 2013 Update 2
 
@@ -23,7 +24,7 @@ In this scenario, by default, the Solution Platform drop-down list in Visual Stu
 
 By default, the Solution Platform drop-down list is visible as a feature improvement in [Description of Visual Studio 2013 Update 2](https://support.microsoft.com/help/2927432) (refer to the following screenshot).
 
-:::image type="content" source="./media/invisible-solution-platform-drop-down-list/screen-shot.png" alt-text="describes difference before and after VS 2013 update":::
+:::image type="content" source="./media/invisible-solution-platform-drop-down-list/solution-platform-drop-down-compare.png" alt-text="Screenshot shows the difference before and after VS 2013 update.":::
 
 ## Workaround 1: Install Visual Studio 2013 Update 2 if you don't
 
@@ -34,12 +35,12 @@ Otherwise, you can try one of the following methods:
 ## Workaround 2: Customize the profile to add the Solution Platform
 
 1. Open Visual Studio 2013.
-2. Click **Standard Toolbar Options** (The screenshot for step 2, 3 and 4 is under the step 4).
+2. Click **Standard Toolbar Options**.
 3. Click **Add or Remove Buttons**.
 4. Select **Solution Platforms**.
 
-    :::image type="content" source="./media/invisible-solution-platform-drop-down-list/add-remove-solution-platforms.png" alt-text="how to add or remove solution platforms":::
-  
+:::image type="content" source="./media/invisible-solution-platform-drop-down-list/add-remove-solution-platforms.png" alt-text="Screenshot shows steps to add or remove solution platforms.":::
+
 ## Workaround 3: Reset the profile
 
 > [!NOTE]

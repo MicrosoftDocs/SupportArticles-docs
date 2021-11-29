@@ -4,6 +4,7 @@ description: This article provides resolutions for problem where the PathIsDirec
 ms.date: 01/29/2021
 ms.prod-support-area-path: Developer Tools\Windows SDK\Windows SDK for Windows 10
 ms.reviewer: davean
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 # PathIsDirectory function may be blocked when called by using a UNC server name with a trailing backslash
 

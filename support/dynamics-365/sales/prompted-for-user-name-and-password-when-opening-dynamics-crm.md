@@ -4,6 +4,7 @@ description: Provides methods for resolving an issue where you are prompted for 
 ms.reviewer: dmartens, tlemar
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # You are prompted for user name and password when opening Microsoft Dynamics CRM or Dynamics CRM client for Outlook
 

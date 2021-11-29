@@ -2,7 +2,7 @@
 title: Importing a GPO using GPMC fails with an error (The Directory is not empty)
 description: Provides solutions to an issue when you import a saved GPO using GPMC.
 ms.date: 09/15/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, oweindl
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Importing a GPO using GPMC fails with "The Directory is not empty"

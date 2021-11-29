@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Command prompt and PowerShell don't open after in-place upgrade of Windows 10 S

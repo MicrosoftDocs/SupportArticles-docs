@@ -3,14 +3,14 @@ title: Desktop wakes up unexpectedly from sleep or hibernation
 description: Document findings based on OEM support case, where customer observed unexpected wake behavior. Provide information on how to track down the source of wake events, and related information.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved
-ms.prod-support-area-path: Power Management
+ms.custom: sap:power-management, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Desktop wakes up unexpectedly from sleep or hibernation

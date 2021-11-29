@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to upgrade Windows 2000 domain controllers to Windows Server 2003
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article discusses how to upgrade Microsoft Windows 2000 domain controllers to Windows Server 2003 and how to add new Windows Server 2003 domain controllers to Windows 2000 domains.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;325379
+_Original KB number:_ &nbsp; 325379
 
 ## Summary
 

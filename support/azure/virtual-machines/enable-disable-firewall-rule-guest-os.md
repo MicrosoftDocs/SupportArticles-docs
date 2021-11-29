@@ -135,7 +135,7 @@ Before you follow these steps, take a snapshot of the system disk of the affecte
 
 6.	Highlight the **HKEY_LOCAL_MACHINE** key, and then select **File** > **Load Hive** from the menu.
 
-    ![Regedit](./media/enable-or-disable-firewall-rule-guest-os/load-registry-hive.png)
+    :::image type="content" source="media/enable-or-disable-firewall-rule-guest-os/load-registry-hive.png" alt-text="Screenshot of the HKEY_LOCAL_MACHINE key and the Load Hive option in the File menu of Registry Editor." border="false":::
 
 7.	Locate and then open the \windows\system32\config\SYSTEM file. 
 

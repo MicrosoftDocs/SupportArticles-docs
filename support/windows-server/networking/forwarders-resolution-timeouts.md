@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, dpracht, kellyv, stegag
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # NET: DNS: Forwarders and conditional forwarders resolution timeouts

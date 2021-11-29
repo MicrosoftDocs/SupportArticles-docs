@@ -4,6 +4,7 @@ description: Provides the method to solve the delay that occurs when you click a
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: jamesche
+ms.technology: internet-explorer-development-website
 ---
 # UpdatePanel async postbacks slow in Internet Explorer
 

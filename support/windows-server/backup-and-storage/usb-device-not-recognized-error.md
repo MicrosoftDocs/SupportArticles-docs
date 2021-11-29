@@ -1,6 +1,6 @@
 ---
-title: "\"USB Device not recognized\" error"
-description: "Helps resolve the \"USB Device not recognized error\" that occurs when trying to access a USB external hard drive."
+title: '"USB Device not recognized" error'
+description: Helps resolve the "USB Device not recognized error" that occurs when trying to access a USB external hard drive.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Storage hardware
+ms.custom: sap:storage-hardware, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 adobe-target: true
 ---

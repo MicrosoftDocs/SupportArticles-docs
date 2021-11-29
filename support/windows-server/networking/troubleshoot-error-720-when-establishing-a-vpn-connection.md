@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
 # "Error 720: Can't connect to a VPN Connection" when you try to establish a VPN connection

@@ -2,8 +2,9 @@
 title: Create a smooth progress bar by using C#
 description: Describes how to create a simple, custom UserControl to create a smooth, scrolling ProgressBar control.
 ms.date: 04/13/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to create a smooth progress bar
 
@@ -88,15 +89,16 @@ The sample code in this article illustrates how to create a control that support
             // Prevent a negative value.
             if (value < 0)
             {
-                min = 0;
+                value = 0;
             }
 
             // Make sure that the minimum value is never set higher than the maximum value.
             if (value > max)
             {
-                min = value;
-                min = value;
+                max = value;
             }
+            
+            min = value;
 
             // Ensure value is still in range
             if (val < min)

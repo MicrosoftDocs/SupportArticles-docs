@@ -145,7 +145,7 @@ Users see the message "Your IT admin hasn't given you access to use this app. Ge
 Assign the appropriate license to the user. For more information, see [Assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).
 
 ## IT admin needs to set MDM authority
- 
+
 Users see the message "Looks like your IT admin hasn't set an MDM authority. Get help from your IT admin or try again later."
 
 **Cause:** The mobile device management authority hasn't been defined in Intune.

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, CWEST
-ms.prod-support-area-path: Connecting to a session or desktop
+ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Connect to and shadow the console session with Windows Server 2003 Terminal Services

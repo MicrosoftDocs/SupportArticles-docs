@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you try to start Outlook on a 
 ms.reviewer: tlemar
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # An error occurred loading Microsoft Dynamics CRM functionality error when starting Outlook
 
