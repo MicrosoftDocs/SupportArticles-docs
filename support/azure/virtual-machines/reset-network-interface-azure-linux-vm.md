@@ -33,7 +33,9 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Select the affected Virtual Machine.
 1. Select **Networking** and then select the network interface of the VM.
-   :::image type="content" source="media/reset-network-interface-azure-linux-vm/select-network-interface-vm.png" alt-text="Screenshot of the Network Interface VM selection under Networking." border="false":::
+
+    :::image type="content" source="media/reset-network-interface-azure-linux-vm/select-network-interface-vm.png" alt-text="Screenshot of the Network Interface VM selection under Networking." border="false":::
+
 1. Select **IP configurations**.
 1. Select the IP.
 1. If the **Private IP assignment** isn't set to **Static**, change it to **Static**.
@@ -111,7 +113,7 @@ To reset network interface, follow these steps:
 
    Example of a private IP address within Networking in the Azure portal.
 
-   :::image type="content" source="media/reset-network-interface-azure-linux-vm/azure-portal-screenshot-private-ip-address.png" alt-text="Screenshot of the private IP address shown under Networking in the Azure portal.":::
+   :::image type="content" source="media/reset-network-interface-azure-linux-vm/azure-portal-private-ip-address.png" alt-text="Screenshot shows the private IP address under Networking in the Azure portal.":::
 
 If the IPv4 addresses aren't the same, the interface configuration file may need to be fixed:
 
@@ -135,11 +137,11 @@ Changes to these fields, or adding other configuration options which are commonl
 
 - The MAC address setting doesn't match the address collected in step 2.
 
-  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-mac-no-match.png" alt-text="Screenshot of the text output in a terminal window where the MAC address setting doesn't match the address collected in step 2":::
+  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-mac-no-match.png" alt-text="Screenshot of the text output in a terminal window where the MAC address setting doesn't match the address collected in step 2.":::
 
 - The boot protocol has been set to something other than *dhcp*,  and a static IP address is configured.
 
-  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-static-ip-configured.png" alt-text="Screenshot of the txt output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
+  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-static-ip-configured.png" alt-text="Screenshot of the text output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
 
 Once these details have been corrected, restart the VM with networking configured correctly.
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory FSMO
+ms.custom: sap:active-directory-fsmo, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Error Attempting to Seize RID Master Role with Ntdsutil
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article provides help to fix an error that occurs when you seize the relative ID (RID) Master role with the Ntdsutil tool to a different domain controller.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2001165
+_Original KB number:_ &nbsp; 2001165
 
 ## Symptoms
 

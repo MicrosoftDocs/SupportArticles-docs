@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: rolandw, v-jomcc, kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # How to create and apply a custom application directory partition on an Active Directory integrated DNS zone
@@ -18,7 +18,7 @@ ms.technology: networking
 This article describes how to create a custom application directory partition by using the DnsCmd.exe command.
 
 _Applies to:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp;884116
+_Original KB number:_ &nbsp; 884116
 
 ## Introduction
 

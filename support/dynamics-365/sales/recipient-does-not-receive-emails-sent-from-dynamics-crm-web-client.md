@@ -4,6 +4,7 @@ description: Describes a problem that occurs because the SMTP configuration on t
 ms.reviewer: frachkid
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The recipient does not receive emails that a Microsoft Dynamics CRM user sends by using the Microsoft Dynamics CRM web client
 

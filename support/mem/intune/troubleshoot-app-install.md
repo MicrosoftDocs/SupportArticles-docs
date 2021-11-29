@@ -20,11 +20,16 @@ Intune provides app troubleshooting details based on the apps installed on a spe
 3. Click **Select user** to go to the **Select users** pane.
 4. Type the name or email address of the user you want to troubleshoot, and then click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane.
 5. Select the device that you want to troubleshoot from the **Devices** list.
-    ![The Intune Troubleshooting pane.](./media/troubleshoot-app-install/troubleshoot-app-install-01.png)
+
+    :::image type="content" source="media/troubleshoot-app-install/devices.png" alt-text="Screenshot of the Intune Troubleshooting pane." border="false" lightbox="media/troubleshoot-app-install/devices.png":::
+
 6. Select **Managed Apps** from selected device pane. A list of managed apps is displayed.
-    ![Details of a specific device managed by Intune.](./media/troubleshoot-app-install/troubleshoot-app-install-02.png)
+
+    :::image type="content" source="media/troubleshoot-app-install/managed-apps.png" alt-text="Screenshot of the details of a specific device managed by Intune." border="false" lightbox="media/troubleshoot-app-install/managed-apps.png":::
+
 7. Select an app from the list where **Installation Status** indicates a failure.
-    ![A selected app that shows installation failure details.](./media/troubleshoot-app-install/troubleshoot-app-install-03.png)
+
+    :::image type="content" source="media/troubleshoot-app-install/select-app.png" alt-text="Screenshot of a selected app that shows installation failure details." border="false" lightbox="media/troubleshoot-app-install/select-app.png":::
 
     > [!Note]  
     > The same app could be assigned to multiple groups but with different intended actions (intents) for the app. For instance, a resolved intent for an app will show **excluded** if the app is excluded for a user during app assignment. For more information, see [How conflicts between app intents are resolved](/mem/intune/apps/apps-deploy#how-conflicts-between-app-intents-are-resolved).  
@@ -47,7 +52,7 @@ If you have app installation problems, consider the following actions:
   3. Navigate to [Azure Active Directory Users](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Select the affected user and click **Devices**.
   5. If user is over the set limit then delete any stale records that are no longer needed.
-- For iOS/iPadOS ADE devices, ensure that the user is listed as **Enrolled by User** in Intune Devices **Overview** pane. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
+- For iOS/iPadOS ADE devices, ensure that the user is listed as **Enrolled by User** in the Intune devices **Overview** pane. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
 
 ## App types supported on ARM64 devices
 

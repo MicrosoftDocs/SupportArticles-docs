@@ -4,6 +4,7 @@ description: Different table layout behaviors for standard and quirks mode in In
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: jeanr
+ms.technology: internet-explorer-development-website
 ---
 # Unexpected table height calculation in Internet Explorer standards mode
 

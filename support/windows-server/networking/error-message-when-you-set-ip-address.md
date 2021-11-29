@@ -2,7 +2,7 @@
 title: Error message when you set an IP address
 description: Provides a solution to an error that occurs when you try to set an IP address on a network adapter.
 ms.date: 09/28/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, TERRYBA
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Error message when you try to set an IP address on a network adapter

@@ -3,14 +3,14 @@ title: Incorrect shutdown reason code
 description: Provides a resolution for the issue that an incorrect shutdown reason code written to SEL on user initiated shutdown.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Shutdown is slow or hangs
+ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # An incorrect shutdown reason code written to SEL on user initiated shutdown

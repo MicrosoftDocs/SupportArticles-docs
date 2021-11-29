@@ -6,6 +6,7 @@ ms.prod-support-area-path: Security development
 ms.reviewer: mstanley
 author: cobibi
 ms.author: v-yunhya
+ms.technology: windows-dev-apps-security-dev
 ---
 
 # PowerShell script files re-signed with SignTool may be corrupted

@@ -3,8 +3,9 @@ title: Implement custom collections in Visual C#
 description: Describes how to implement a custom collection in Visual C#. Also includes a code sample that illustrates the task.
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
-ms.reviewer: bobbym 
+ms.reviewer: bobbym
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to implement custom collections  
 

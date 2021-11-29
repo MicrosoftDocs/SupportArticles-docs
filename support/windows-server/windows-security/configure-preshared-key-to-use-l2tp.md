@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Secure channel issues
+ms.custom: sap:secure-channel-issues, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Configure a preshared key for use with Layer 2 Tunneling Protocol Connections in Windows Server 2003

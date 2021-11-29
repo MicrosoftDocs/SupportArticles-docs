@@ -3,7 +3,7 @@ title: Azure VM Guest OS firewall is blocking inbound traffic | Microsoft Docs
 description: Learn how to fix the Remote Desktop Portal (RDP) connection issue that the guest operating system firewall is blocking inbound traffic.
 services: virtual-machines
 documentationcenter: ''
-author: Deland-Han
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: ''
@@ -13,8 +13,8 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 11/22/2018
-ms.author: delhan
+ms.date: 11/04/2021
+ms.author: genli
 
 ---
 
@@ -36,7 +36,7 @@ The RDP rule is not set up to allow the RDP traffic.
 
 The guest system firewall profiles are set up to block all inbound connections, including the RDP traffic.
 
-![Firewall setting](./media/guest-os-firewall-blocking-inbound-traffic/firewall-advanced-setting.png)
+:::image type="content" source="media/guest-os-firewall-blocking-inbound-traffic/firewall-advanced-setting.png" alt-text="Screenshot of the block all inbound connections option under the Domain Profile tab of the firewall setting window." border="false":::
 
 ## Solution
 
@@ -50,7 +50,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
 #### Mitigation 1
 
-1.	If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Support + troubleshooting** > **Reset password** on the VM menu.
+1.	If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Help** > **Reset password** on the VM menu.
 
 2.	Running this recovery option does the following:
 
@@ -105,17 +105,17 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     netsh advfirewall show allprofiles | more
     ```
 
-    ![Allprofiles](./media/guest-os-firewall-blocking-inbound-traffic/firewall-profiles.png)
+    :::image type="content" source="media/guest-os-firewall-blocking-inbound-traffic/firewall-profiles.png" alt-text="Screenshot of the query result of the inbound firewall profiles which contains BlockInboundAlways." border="false":::
 
     > [!Note]
     > The following guidelines apply to the firewall policy, depending on how it’s set up:
     >    * *BlockInbound*: All inbound traffic will be blocked unless you have a rule in effect to allow that traffic.
     >    * *BlockInboundAlways*: All firewall rules will be ignored and all traffic will be blocked.
 
-2.	Edit the *DefaultInboundAction* to set these profiles to **Allow** traffic. To do this, run the following command:
+2.	Set the *DefaultInboundAction* to not always blocked traffic. To do this, run the following command:
 
     ```cmd
-    netsh advfirewall set allprofiles firewallpolicy allowinbound,allowoutbound
+    netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound
     ```
 
 3.	Query the profiles again to make sure that your change was made successfully. To do this, run the following command:
@@ -127,7 +127,8 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     > [!Note]
     > You don't have to restart the VM to apply the changes.
 
-4.	Try again to access your VM through RDP.
+4. Make sure that you add the inbound rule for RDP connection.
+5. Try again to access your VM through RDP.
 
 ### Offline Mitigations
 

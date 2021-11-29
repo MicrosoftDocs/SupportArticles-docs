@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4490864
 
 After you deploy a device restriction policy in Microsoft Intune to block the iOS **Personal Hotspot** setting, users of iOS devices that run iOS 12.1 or earlier can still enable the **Personal Hotspot** feature.
 
-:::image type="content" source="./media/restriction-policy-not-blocking-personal-hotspot/personal-hotspot.png" alt-text="Screenshot of the Personal Hotspot feature.":::
+:::image type="content" source="media/restriction-policy-not-blocking-personal-hotspot/personal-hotspot.png" alt-text="Screenshot of the Personal Hotspot feature in Device restrictions.":::
 
 ## Cause
 

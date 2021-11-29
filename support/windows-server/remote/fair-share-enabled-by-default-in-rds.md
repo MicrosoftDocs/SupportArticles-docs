@@ -3,14 +3,14 @@ title: Fair Share technologies are enabled by default in Remote Desktop Services
 description: Describes how an RDSH server uses Fair Share technology to balance CPU, disk, and network bandwidth resources among multiple Remote Desktop sessions.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davean
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Fair Share technologies are enabled by default in Remote Desktop Services

@@ -17,7 +17,7 @@ When you try to [enroll your Windows devices in Intune by using the Intune Compa
 
 > You don't have the right privileges to perform this operation. Please talk to your admin.
 
-:::image type="content" source="media/no-permission-to-enroll-windows-devices/error.png" alt-text="Windows enrollment error.":::
+:::image type="content" source="media/no-permission-to-enroll-windows-devices/enrollment-error.png" alt-text="Screenshot of the You don't have the right privileges to perform this operation error.":::
 
 ## Cause
 

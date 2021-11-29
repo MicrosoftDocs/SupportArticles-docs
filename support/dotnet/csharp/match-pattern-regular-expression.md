@@ -2,9 +2,10 @@
 title: Match a pattern via regular expressions
 description: This article describes how to create and use regular expressions to determine whether strings match certain patterns.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: felipeme, broder
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Match a pattern by using Visual C# and regular expressions
 

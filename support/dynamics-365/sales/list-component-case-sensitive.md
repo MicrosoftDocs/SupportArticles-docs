@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you can't configur
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-other-functionality
 ---
 # Microsoft Dynamics CRM 2011 List Component for Microsoft SharePoint 2013 Configuration is case-sensitive for SharePoint URLs
 

@@ -2,7 +2,7 @@
 title: DCDiag VerifyReferences test fails
 description: Provides a solution to an error that occurs when you use the DFSR service to replicate the sysvol folder.
 ms.date: 10/22/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, harsur, rolandw, justintu, arrenc
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # DCDiag VerifyReferences test fails when you use DFSR to replicate SYSVOL

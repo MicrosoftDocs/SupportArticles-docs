@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you're initially a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-apps-addons
 ---
 # Something went wrong while initializing the app error message displays in the Microsoft Dynamics CRM app for users in child business units
 

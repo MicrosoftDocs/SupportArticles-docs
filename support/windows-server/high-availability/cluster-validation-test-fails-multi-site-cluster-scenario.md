@@ -3,14 +3,14 @@ title: Cluster validation test fails in a multi-site cluster scenario
 description: The Active Directory configuration validation may fail in a multi-site cluster scenario. Ignore it if domain communication and DC replication are OK.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robsim, cpuckett
-ms.prod-support-area-path: Errors when running the Validation Wizard
+ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Cluster validation test on Active Directory configuration fails in a multi-site cluster scenario

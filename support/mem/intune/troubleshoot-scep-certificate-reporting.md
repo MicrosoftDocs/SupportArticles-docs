@@ -28,11 +28,11 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 - **CertificateRegistrationPoint.svclog**:
 
-  ![CertificateRegistrationPoint.svclog](./media/troubleshoot-scep-certificate-reporting/certificate-registration-point-log.png)
+  :::image type="content" source="media/troubleshoot-scep-certificate-reporting/certificate-registration-point-log.png" alt-text="Screenshot of entries in the Certificate Registration Point log.":::
 
 - **NDESConnector.svclog**:
 
-  ![Intune Certificate Connector log](./media/troubleshoot-scep-certificate-reporting/ndesconnector-log.png)
+  :::image type="content" source="media/troubleshoot-scep-certificate-reporting/ndesconnector-log.png" alt-text="Screenshot of entries in the Intune Certificate Connector log.":::
 
 - **CertificateRequestStatus**:
 

@@ -3,14 +3,14 @@ title: Terminal Server user's Home Directory is not set correctly
 description: Provides a resolution to an issue where Terminal Server user's Home Directory is not set correctly
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Terminal Server user's Home Directory is not set correctly

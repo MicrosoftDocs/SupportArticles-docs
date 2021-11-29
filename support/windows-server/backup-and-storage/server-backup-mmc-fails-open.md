@@ -2,7 +2,7 @@
 title: Server Backup MMC fails to open
 description: Provides a solution to an error that occurs when you launch the Windows Server Backup on Windows Server 2008.
 ms.date: 09/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adityah, kaushika
-ms.prod-support-area-path: Configuring and using Backup software
+ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows Server Backup MMC fails to open

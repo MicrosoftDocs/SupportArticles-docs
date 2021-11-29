@@ -3,14 +3,14 @@ title: Cannot open EXE files
 description: Provides a resolution for the issue that you cannot open exe files.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Can't open EXE files

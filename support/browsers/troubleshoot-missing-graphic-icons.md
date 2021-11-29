@@ -2,8 +2,9 @@
 title: Graphic icons missing on webpages
 description: Describes some scenarios where web fonts' icons are missing.
 ms.date: 07/14/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: ramakoni
+ms.technology: internet-explorer-development-website
 ---
 # Troubleshooting missing graphic icons on Internet Explorer webpages
 
@@ -40,7 +41,7 @@ You can determine whether this feature is contributing to the problem by checkin
 
 Shell-icons-0.4.0.eot
 
-:::image type="content" source="media/troubleshoot-missing-graphic-icons/CSS3111-error.png" alt-text="CSS3111 error screenshot":::
+:::image type="content" source="media/troubleshoot-missing-graphic-icons/CSS3111-error.png" alt-text="Screenshot of CSS3111 error.":::
 
 [CSS3114](/previous-versions/windows/internet-explorer/ie-developer/samples/hh180764(v=vs.85)): @font-face failed OpenType embedding permission check. Permission must be Installable.
 

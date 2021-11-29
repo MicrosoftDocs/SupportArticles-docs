@@ -4,6 +4,7 @@ description: Fixes an issue in which users see a new category called Tracked to 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Tracked To Dynamics 365 category added to user's mailbox
 

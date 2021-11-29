@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Restoring a domain controller may cause inconsistencies between domain controllers
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs after you select the Te
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The email message "Your mailbox is now connected to Dynamics 365" cannot be sent because the mailbox [Mailbox Name] is deactivated or disabled for outgoing email
 

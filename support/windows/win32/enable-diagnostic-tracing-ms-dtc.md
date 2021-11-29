@@ -5,6 +5,7 @@ ms.date: 03/13/2020
 ms.reviewer: johngil
 ms.prod-support-area-path: Distributed transactions
 ms.topic: how-to
+ms.technology: windows-dev-apps-distributed-transactions
 ---
 # Enable diagnostic tracing for MS DTC on a Windows 10 computer
 

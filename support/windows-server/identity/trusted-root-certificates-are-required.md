@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Required trusted root certificates
 

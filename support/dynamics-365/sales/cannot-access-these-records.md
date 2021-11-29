@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to configu
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Error message displays when you try to configure Microsoft Dynamics CRM for Office Outlook
 

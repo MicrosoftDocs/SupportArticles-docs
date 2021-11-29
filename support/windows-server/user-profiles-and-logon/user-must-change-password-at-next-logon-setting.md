@@ -3,14 +3,14 @@ title: Not Able to Change Password
 description: Provides some information about the issue that user may not be able to change their password, if you configure the 'User Must Change Password at Next Logon' setting.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User profiles
+ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # User may not be able to change their password if you configure the 'User must change password at next logon' setting

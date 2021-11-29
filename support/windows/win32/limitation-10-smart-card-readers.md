@@ -4,6 +4,7 @@ description: Explains that Windows Server 2012, Windows 8, and later versions of
 ms.date: 03/16/2020
 ms.prod-support-area-path: Security development
 ms.topic: article
+ms.technology: windows-dev-apps-security-dev
 ---
 # Limitation of 10 smartcard readers in Windows Server 2012 R2, Windows 8, and later
 

@@ -3,14 +3,14 @@ title: Use or reference Usbser.sys driver from USB modem .inf files
 description: Describes how to use or reference the system-supplied Usbser.sys driver file from a third-party modem .inf file. We recommend different configurations, depending on how the driver is distributed.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to use or reference the Usbser.sys driver from universal serial bus (USB) modem .inf files

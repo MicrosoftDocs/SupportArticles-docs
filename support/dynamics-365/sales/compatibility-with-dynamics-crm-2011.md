@@ -2,8 +2,8 @@
 title: Compatibility with Microsoft Dynamics CRM 2011
 description: Lists the compatibility of other Microsoft products with Microsoft Dynamics CRM 2011.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Compatibility with Microsoft Dynamics CRM 2011
 

@@ -5,6 +5,7 @@ ms.date: 01/21/2021
 ms.prod-support-area-path: installation
 ms.reviewer: 
 ms.topic: how-to
+ms.technology: internet-explorer-installation
 ---
 # Disable and enable Internet Explorer on Windows
 

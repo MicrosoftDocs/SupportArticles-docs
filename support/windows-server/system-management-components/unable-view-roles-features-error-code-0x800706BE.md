@@ -1,16 +1,16 @@
 ---
-title: error code 0x800706BE 
+title: error code 0x800706BE
 description: Provides a resolution for the issue that you are unable to view Roles and Features and receive error code 0x800706BE in Server Manager.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Server Manager
+ms.custom: sap:server-manager, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # You are unable to view Roles and Features and receive error code 0x800706BE in Server Manager

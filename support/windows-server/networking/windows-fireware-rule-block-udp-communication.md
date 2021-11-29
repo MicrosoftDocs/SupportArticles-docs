@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
+ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
 ms.technology: networking
 ---
 # UDP communication is blocked by the Windows Firewall rule in WSFC when the network connection is interrupted and then restored
@@ -18,7 +18,7 @@ ms.technology: networking
 This article provides resolutions for the issue where UDP communication is blocked by the Windows Firewall rule in WSFC when the network connection is interrupted and then restored.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2701206
+_Original KB number:_ &nbsp; 2701206
 
 ## Symptoms
 

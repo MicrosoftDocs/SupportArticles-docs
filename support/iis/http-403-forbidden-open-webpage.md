@@ -4,6 +4,7 @@ description: This article describes an HTTP error 403 that occurs when you open 
 ms.date: 03/30/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: Anahith
+ms.technology: iis-www-authentication-authorization
 ---
 # Error when you open an IIS webpage: 403.7 Forbidden: Client certificate required
 

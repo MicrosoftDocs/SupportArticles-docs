@@ -11,7 +11,7 @@ metadata:
   ms.prod: windows-server
   localization_priority: medium
   ms.reviewer: kaushika, MBIAS
-  ms.prod-support-area-path: Partition and volume management
+  ms.custom: sap:partition-and-volume-management, csstroubleshoot
   ms.technology: windows-server-backup-and-storage
     
 title: Frequently asked questions about the GUID Partitioning Table disk architecture
@@ -113,11 +113,11 @@ sections:
         answer: |
           - Can the 64-bit version of Windows XP read, write, and boot from GUID Partition Table disks?
           
-              Yes.
+             The 64-bit version of Windows XP can read and write GUID Partition Table disks, but cannot boot from GUID Partition Table disks.
           
           - Can the 64-bit version of Windows XP read, write, and boot from MBR disks?
           
-              The 64-bit version of Windows XP can read and write MBR disks, but cannot boot from MBR disks.
+              Yes.
           
           - Can the 32-bit version of Windows XP read, write, and boot from GUID Partition Table disks?
           

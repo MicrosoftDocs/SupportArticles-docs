@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.prod-support-area-path: Configuring and using Backup software
+ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # 0x80042306 error occurs when configuring shadow copies for clustered mount points on another drive in Windows Server
@@ -18,7 +18,7 @@ ms.technology: windows-server-backup-and-storage
 This article helps fix the error 0x80042306 that occurs when you configure Previous Versions in Windows Server for the clustered disks that are mounted as folders on a different volume.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2828270
+_Original KB number:_ &nbsp; 2828270
 
 ## Symptoms
 

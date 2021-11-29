@@ -42,7 +42,7 @@ select * from #mytemp where au_id = @au_id
 delete #mytemp where au_id = @au_id
 
 set rowcount 1
-select @au_id = au_id from #mytemp<BR/>
+select @au_id = au_id from #mytemp
 end
 set rowcount 0
 

@@ -4,6 +4,8 @@ description: Resolves a problem in which you receive Code 403 (Forbidden) when y
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Code 403 (Forbidden) when you use Azure Seamless Single Sign-On on Windows 10
 

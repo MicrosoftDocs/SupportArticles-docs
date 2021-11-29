@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you try to test access from th
 ms.reviewer: henningp, mmaasjo
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-access
 ---
 # Could not establish trust relationship for the SSL/TLS secure channel error when testing access from Dynamics CRM E-mail Router
 

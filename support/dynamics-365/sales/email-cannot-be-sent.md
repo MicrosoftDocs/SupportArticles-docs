@@ -4,6 +4,7 @@ description: Describes an error that occurs when you try to test and enable a ma
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Email cannot be sent because the email address of the mailbox requires an approval by an Office 365 administrator
 

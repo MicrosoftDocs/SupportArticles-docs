@@ -4,6 +4,7 @@ description: Provides a solution to errors that occur when you create or save fl
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-connections
 ---
 # Client Request Aborted or Failed to fetch error in Power Automate
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.prod-support-area-path: Backup and restore of virtual machines
+ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
 ms.technology: hyper-v
 ---
 # How to back up Hyper-V virtual machines from the parent partition on a Windows Server computer by using Windows Server Backup
@@ -18,7 +18,7 @@ ms.technology: hyper-v
 This article describes how to back up Hyper-V virtual machines from the parent partition on a Windows Server computer by using Windows Server Backup.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;958662
+_Original KB number:_ &nbsp; 958662
 
 ## Problem description
 

@@ -4,6 +4,8 @@ description: Describes a problem that occurs when you run the Azure Active Direc
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: arrenc, willfid
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Error when you run the Azure Active Directory Sync tool Configuration Wizard: The user name or password is incorrect
 

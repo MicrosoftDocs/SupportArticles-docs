@@ -4,7 +4,6 @@ description: This article provides two workarounds for the problem that occurs w
 ms.date: 01/15/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: 
-ms.topic: troubleshooting
 ms.prod: sql 
 ---
 # Dashes '-' ignored in search with SQL Full-Text and MSIDXS queries

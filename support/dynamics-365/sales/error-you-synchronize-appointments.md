@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: jbirnbau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # 'Unknown Error' When Synchronizing Appointments in the Microsoft Dynamics CRM 2011 Outlook Client
 

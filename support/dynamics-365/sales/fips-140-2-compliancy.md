@@ -2,8 +2,8 @@
 title: FIPS 140-2 Compliancy
 description: Describes Federal Information Processing Standard (FIPS) 140-2 compliancy.
 ms.reviewer: aaronric
-ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # FIPS 140-2 Compliancy with Microsoft Dynamics CRM 2011
 

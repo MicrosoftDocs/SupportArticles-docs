@@ -4,6 +4,7 @@ description: Describes an issue that occurs because the Microsoft Dynamics CRM W
 ms.reviewer: jstrand
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Some buttons and tabs are missing from the Microsoft Dynamics CRM Web client
 

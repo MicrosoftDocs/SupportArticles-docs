@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, takondo, dajiro, chadbee
-ms.prod-support-area-path: Data corruption and disk errors
+ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows Server Backup doesn't start after you perform a BMR in Windows Server 2012

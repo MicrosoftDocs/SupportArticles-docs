@@ -2,15 +2,15 @@
 title: Suspend BitLocker protection for non-Microsoft software updates
 description: Describes how to suspend and resume BitLocker protection for non-Microsoft software updates using Control Panel and PowerShell.
 ms.date: 12/18/2020
-author: v-lianna
-ms.author: v-lianna
+author: Deland-Han
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jefen, xingrli
-ms.prod-support-area-path: windows-security
+ms.custom: sap:windows-security, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Suspend BitLocker protection for non-Microsoft software updates

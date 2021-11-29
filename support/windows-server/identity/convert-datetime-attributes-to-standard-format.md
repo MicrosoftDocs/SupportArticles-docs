@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
-ms.technology: windows-server-active-directory 
+ms.custom: sap:windows-time-service, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # How to convert date/time attributes in Active Directory to standard time format
 

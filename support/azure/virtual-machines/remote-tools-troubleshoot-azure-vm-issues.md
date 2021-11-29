@@ -7,7 +7,6 @@ author: Deland-Han
 manager: dcscontentpm
 editor: ''
 tags: ''
-ms.servize: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -15,7 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 01/11/2018
 ms.author: delhan
-
+ms.service: virtual-machines
 ---
 
 # Use remote tools to troubleshoot Azure VM issues
@@ -162,7 +161,7 @@ cmd.exe /C $command
 
 For Azure Resource Manager VMs, use run commands from the portal to run the EnableRemotePS script:
 
-![Run command](./media/remote-tools-troubleshoot-azure-vm-issues/run-command.png)
+:::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/run-command.png" alt-text="Screenshot of the steps to run the EnableRemotePS script from the portal." lightbox="media/remote-tools-troubleshoot-azure-vm-issues/run-command.png":::
 
 ### Connect to the VM
 
@@ -213,11 +212,11 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 
 2. Select **File** > **Connect Network Registry**.
 
-   ![Registry editor](./media/remote-tools-troubleshoot-azure-vm-issues/remote-registry.png) 
+   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/remote-registry.png" alt-text="Screenshot of the Connect Network Registry... option in the  File menu of Registry Editor"::: 
 
 3. Locate the target VM by **host name** or **dynamic IP** (preferable) by entering it in the **Enter the object name to select** box.
 
-   ![Enter the object name to select box](./media/remote-tools-troubleshoot-azure-vm-issues/input-computer-name.png) 
+   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/input-computer-name.png" alt-text="Screenshot of the Enter the object name to select box in the Select Computer dialog."::: 
  
 4. Enter the credentials for the target VM.
 
@@ -238,11 +237,11 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 
 3. Select **Connect to another computer**.
 
-   ![Remote service](./media/remote-tools-troubleshoot-azure-vm-issues/remote-services.png)
+   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/remote-services.png" alt-text="Screenshot of the Connect to another computer option in the right-click menu of Services (Local).":::
 
 4. Enter the dynamic IP of the target VM.
 
-   ![Input dynamic IP](./media/remote-tools-troubleshoot-azure-vm-issues/input-ip-address.png)
+   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/input-ip-address.png" alt-text="Screenshot of the dynamic IP input box in the Another computer option in the Select Computer dialog.":::
 
 5. Make any necessary changes to the services.
 

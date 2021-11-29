@@ -4,6 +4,7 @@ description: Describes the minimum permissions that are required for a user to i
 ms.reviewer: chanson
 ms.topic: how-to
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # How to install Microsoft Dynamics CRM with the minimum required permissions
 

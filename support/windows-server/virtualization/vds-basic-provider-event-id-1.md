@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tyagi, adityah
-ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: hyper-v 
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.technology: hyper-v
 ---
 # VDS Basic Provider event ID 1 is logged in a Hyper-V guest operating system
 

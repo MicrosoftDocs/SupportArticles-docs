@@ -1,11 +1,12 @@
 ---
-title: Cannot open certain files in Windows 7 
+title: Cannot open certain files in Windows 7
 description: Fixes a problem in which you receive an error message when you try to open .exe files by using Internet Explorer in Windows 7.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: Joel
+ms.technology: internet-explorer-security-privacy
 ---
-# Your Internet security settings prevented one or more files from being opened error when opening files
+# "Your Internet security settings prevented one or more files from being opened" error when opening files
 
 [!INCLUDE [](../includes/browsers-important.md)]
 
@@ -18,7 +19,10 @@ _Original KB number:_ &nbsp; 2588679
 
 When you try to open a file by using Internet Explorer in Windows 7, you receive the following error message:
 
-:::image type="content" source="media/cannot-open-certain-files/error.png" alt-text="error message" border="false":::
+> These files can't be opened.  
+> Your Internet security settings prevented one or more files from being opened.
+
+:::image type="content" source="media/cannot-open-certain-files/file-cannot-be-opened-error.png" alt-text="Screenshot of the error message dialog box." border="false":::
 
 ## Cause
 
@@ -27,7 +31,7 @@ This issue may occur because the following conditions are true:
 - The file type that you are trying to open is considered unsafe.
 - The **Launching applications and unsafe file** security setting is set to **Disable** for the zone that is associated with where the file originated.
 
-## Resolution Method 1: Reset Internet Explorer security zone settings to their default level
+## Resolution 1: Reset Internet Explorer security zone settings to their default level
 
 To reset Internet Explorer security zone settings to their default level, follow these steps:
 
@@ -36,7 +40,7 @@ To reset Internet Explorer security zone settings to their default level, follow
 3. Click the **Security** tab.
 4. Click **Reset all zones to default level**, and then click **OK**.
 
-## Resolution Method 2: Reset Internet Explorer settings
+## Resolution 2: Reset Internet Explorer settings
 
 > [!NOTE]
 > The steps in this article may not fully resolve the issue. For example, if the current Internet Explorer settings are being enforced by a Group Policy object (GPO), these steps may not resolve the issue. If you want further assistance in resolving the problem that is described in this article, contact Microsoft Customer Support.

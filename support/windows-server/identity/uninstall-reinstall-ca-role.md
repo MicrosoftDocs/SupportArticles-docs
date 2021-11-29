@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AshishSu, luche, LavinK, v-jesits
-ms.prod-support-area-path: Active Directory Certificate Services
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Reinstall the CA role in Windows Server 2012 Essentials
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes how to uninstall and then reinstall the Certificate Authority (CA) role in Windows Server 2012 Essentials.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2795825
+_Original KB number:_ &nbsp; 2795825
 
 ## Uninstall the CA server role
 

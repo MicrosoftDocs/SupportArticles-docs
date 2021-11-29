@@ -69,7 +69,7 @@ WSUS Configuration Manager configures the WSUS server once every hour. It does s
 
 If WCM fails to configure the WSUS server properly, synchronization attempts can fail with an error similar to the following screenshot:
 
-:::image type="content" source="media/troubleshoot-software-update-synchronization/fail-error.png" alt-text="Fail error in Status Message Details." border="false":::
+:::image type="content" source="media/troubleshoot-software-update-synchronization/fail-error.png" alt-text="Screenshot of the fail error in Status Message Details dialog box." border="false":::
 
 You'll also find the following error in the WsyncMgr.log file on the site server (located in `\Logs`):
 
@@ -160,7 +160,7 @@ Unlike WCM and WSyncMgr, WSUS Control Manager (WSUSCtrl) resides on the software
 To check whether WSUS is functioning as expected, run the following command on the WSUS server. Then review the Application log in Event Viewer for errors:
 
 ```console
-%ProgramFiles%\Update Services\Tools\wsusutil.exe check health
+%ProgramFiles%\Update Services\Tools\wsusutil.exe checkhealth
 ```
 
 ### Check connectivity from the site server to the WSUS server

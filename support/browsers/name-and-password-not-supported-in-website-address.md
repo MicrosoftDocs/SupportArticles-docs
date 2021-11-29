@@ -4,6 +4,7 @@ description: Discusses the default behavior of Internet Explorer for handling us
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: josborne, ericlaw, gsilva
+ms.technology: internet-explorer-security-privacy
 ---
 # Internet Explorer does not support user names and passwords in Web site addresses (HTTP or HTTPS URLs)
 

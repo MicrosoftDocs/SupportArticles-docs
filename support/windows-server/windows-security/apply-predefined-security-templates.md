@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Security templates
+ms.custom: sap:security-templates, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to apply predefined security templates in Windows Server 2003

@@ -4,8 +4,8 @@ description: Many product features have Azure dependencies that might not be ava
 ms.date: 09/16/2021
 ms.prod-support-area-path: 
 ms.service: azure
-ms.author: v-matham
-author: tiffanyyu
+ms.author: genli
+author: genlin
 ms.reviewer: tiffanyyu
 ---
 
@@ -14,7 +14,9 @@ ms.reviewer: tiffanyyu
 Many product features have Azure dependencies that might not be available in all countries. This includes, but is not limited to, the following list:
 
 - Insider risk management
-- Microsoft Threat Protection (MTP)  
+- Microsoft Threat Protection (MTP)
+- Microsoft Information Protection (MIP)
+  - Auto-labeling for sensitivity labels 
 - Communication compliance
 - Attack simulation
 - Microsoft Application Protection and Governance (MAPG)
@@ -29,7 +31,6 @@ Countries that have Azure dependencies availability as of September 2021:
 - Brazil
 - Canada
 - France
-- Germany
 - India
 - Japan
 - South Korea

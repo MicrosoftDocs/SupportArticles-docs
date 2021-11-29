@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # How to Troubleshoot Inter-Forest Password Migration with ADMTv2
 

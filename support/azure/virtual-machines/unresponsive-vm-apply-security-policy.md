@@ -25,9 +25,9 @@ When you use [Boot diagnostics](boot-diagnostics.md) to view the screenshot of t
 
 > 'Applying security policy to the system'.
 
-:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy.png" alt-text="Screenshot of Windows Server 2012 R2 startup screen is stuck.":::
+:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy-1.png" alt-text="Screenshot of Windows Server 2012 R2 startup screen is stuck." border="false":::
 
-:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy-2.png" alt-text="Screenshot of OS startup screen is stuck.":::
+:::image type="content" source="media/unresponsive-vm-apply-security-policy/apply-policy-2.png" alt-text="Screenshot of OS startup screen is stuck."border="false":::
 
 ## Cause
 
@@ -65,7 +65,7 @@ To enable memory dump collection and Serial Console, run this script:
 
         In the command, replace \<BOOT PARTITON> with the letter of the partition in the attached disk that contains the boot folder.
 
-        :::image type="content" source="media/unresponsive-vm-apply-security-policy/store-data.png" alt-text="Diagram shows the output of listing the BCD store in a Generation 1 VM, which lists under Windows Boot Loader the identifier number.":::
+        :::image type="content" source="media/unresponsive-vm-apply-security-policy/identifier.png" alt-text="Screenshot shows the output of listing the BCD store in a Generation 1 VM, which lists the identifier number under Windows Boot Loader.":::
 
      2. For a Generation 2 VM, enter the following command and note the identifier listed:
 

@@ -4,6 +4,7 @@ description: Memory isn't released when leaving iframe pages in Internet Explore
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: adamki
+ms.technology: internet-explorer-stability-performance
 ---
 # Memory usage rises due to iframes with orphaned elements with circular references in Internet Explorer 8
 

@@ -1,16 +1,16 @@
 ---
-title: unable to allocate memory 
+title: unable to allocate memory
 description: Provides a resolution for the issue that it is unable to allocate memory from the system paged pool.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mohak, weiwan
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Unable to allocate memory from the system paged pool

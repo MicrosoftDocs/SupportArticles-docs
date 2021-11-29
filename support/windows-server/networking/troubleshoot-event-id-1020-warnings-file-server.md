@@ -1,16 +1,16 @@
 ---
 title: Troubleshoot event ID 1020 warnings on a file server
-description: Explains how to troubleshoot event ID 1020 warnings on a file server 
+description: Explains how to troubleshoot event ID 1020 warnings on a file server
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # Troubleshoot event ID 1020 warnings on a file server

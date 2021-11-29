@@ -48,7 +48,8 @@ Review the following sections to troubleshoot email notification issues.
    1. At a command prompt, enter *NSLOOKUP*.
 
    2. Enter *Autodiscover.SMTPdomain.com*. The output should be similar to the following image:
-      ![Nslookup results](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png)
+
+      :::image type="content" source="media/troubleshoot-exchange-connector-common-problems/nslookup-results.png" alt-text="Screenshot of the Nslookup output.":::
 
    You can also test the Autodiscover service from the internet at [https://testconnectivity.microsoft.com](https://testconnectivity.microsoft.com). Or test it from a local domain by using the Microsoft Connectivity Analyzer tool. For more information, see [Microsoft Connectivity Analyzer tool](/connectivity-analyzer/microsoft-connectivity-analyzer-tool).
 

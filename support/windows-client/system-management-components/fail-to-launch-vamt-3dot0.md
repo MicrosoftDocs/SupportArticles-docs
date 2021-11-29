@@ -1,5 +1,5 @@
 ---
-title: Error (MMC has detected an error in a snap-in and will unload it) when you launch VAMT 3.0 
+title: Error (MMC has detected an error in a snap-in and will unload it) when you launch VAMT 3.0
 description: Provides a solution to an error that occurs when you try to launch the Volume Activation Management Tool (VAMT) 3.0 on a Windows 7 or Windows Server 2008 R2-based computer.
 ms.date: 12/03/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, zhchia, squin
-ms.prod-support-area-path: Microsoft Management Console (MMC)
+ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # Error (MMC has detected an error in a snap-in and will unload it) when you try to launch VAMT 3.0 on a Windows 7 or Windows Server 2008 R2-based computer

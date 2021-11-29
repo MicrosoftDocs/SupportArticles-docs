@@ -1,9 +1,9 @@
 ---
 title: Explorer work item form doesn't display images
 description: This article provides a workaround for the problem that prevents inline images from being rendered in Visual Studio Team Explorer.
-ms.prod: devops
 ms.date: 08/14/2020
 ms.prod-support-area-path: Boards
+ms.service: az-devops-project
 ---
 # Visual Studio Team Explorer work item form doesn't display inline images
 
