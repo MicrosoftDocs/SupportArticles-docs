@@ -31,7 +31,7 @@ The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) cer
 
 Virtual private networks (VPNs) give users secure remote access to the organization network. Devices use a VPN connection profile to start a connection with the VPN server. VPN profiles in Microsoft Intune assign VPN settings to users and devices in the organization, so they can easily and securely connect to the organizational network.
 
-For example, you want to configure all iOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
+For example, you want to configure all iOS devices with the required settings to connect to a file share on the organization network. Then, you create a VPN profile that includes these settings, and assign this profile to all users who have iOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
 You can create VPN profiles by using different VPN connection types.
 
@@ -124,7 +124,7 @@ The VPN connection is displayed in **Settings** > **General** > **VPN**:
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/vpn-status-not-connected.png" alt-text="Screenshot shows that the VPN status is Not Connected in iOS.":::
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/created-vpn-status-not-connected.png" alt-text="Screenshot shows that the created VPN is not connected.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/created-vpn-status-not-connected.png" alt-text="Screenshot shows that the created VPN isn't connected.":::
 
 The VPN connection is displayed in the AnyConnect app:
 
@@ -152,7 +152,7 @@ The VPN connection is listed in **Network Connections**.
 
 ### Android
 
-On an Android device, the *Omadmlog.log* file logs detail activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files, getting the timestamp of the last sync can help you find the related entries.
+On an Android device, the *Omadmlog.log* file logs detail activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files and the timestamp of the last sync can help you find the related entries.
 
 The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs and uses the search string filter of `android.vpn.client`.
 
@@ -257,7 +257,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
-    If the Trusted Root and SCEP profiles aren't installed on the device, you will see the following entry in the Company Portal log file (*Omadmlog.log*):
+    If the Trusted Root and SCEP profiles aren't installed on the device, you see the following entry in the Company Portal log file (*Omadmlog.log*):
 
     `<Date Time>    INFO    com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine    14210    00948    Waiting for required certificates for vpn profile 'androidVPN'.`
 
@@ -276,7 +276,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     <Date Time>    INFO     com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine       14210     00948    Waiting for required certificates for vpn profile '<profile name>'.
     ```
 
-    In this example, the SCEP profile has the option of **Any Purpose** EKU specified but it is not specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template, or remove the **Any Purpose** option from the SCEP profile.
+    In this example, the SCEP profile has the option of **Any Purpose** EKU specified but it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template, or remove the **Any Purpose** option from the SCEP profile.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot shows how to add the Any Purpose option.":::
 
@@ -340,7 +340,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 ### Issue 2: The VPN profile is deployed to the device, but the device can't connect to the network
 
-Typically, this issue is not an Intune issue. There can be multiple causes of a connectivity issue, the following items may help you understand and troubleshoot the connectivity issue:
+Typically, this issue isn't an Intune issue. There can be multiple causes of a connectivity issue, the following items may help you understand and troubleshoot the connectivity issue:
 
 - Can you manually connect to the network by using a certificate with the same criteria that's specified in the VPN profile?
 
