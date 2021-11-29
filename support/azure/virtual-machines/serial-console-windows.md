@@ -40,7 +40,7 @@ For serial console documentation for Linux, see [Azure Serial Console for Linux]
 
 * The VM for virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
 
-    :::image type="content" source="media/serial-console-windows/virtual-machine-serial-console-diagnostics-settings.png" alt-text="Screenshot of the Boot diagnostics option under the Diagnostics settings." border="false":::
+    :::image type="content" source="media/serial-console-windows/virtual-machine-serial-console-diagnostics-settings.png" alt-text="Screenshot of the Boot diagnostics option under the Diagnostics settings.":::
 
 ## Enable Serial Console functionality for Windows Server
 
@@ -62,7 +62,7 @@ Alternatively, to manually enable the serial console for Windows VMs/virtual mac
     - `bcdedit /emssettings EMSPORT:1 EMSBAUDRATE:115200`
 1. Reboot the system for the SAC console to be enabled.
 
-    :::image type="content" source="media/serial-console-windows/virtual-machine-windows-serial-console-connect.gif" alt-text="Video snap shows process of rebooting the system and enabling the SAC console.":::
+    :::image type="content" source="media/serial-console-windows/virtual-machine-windows-serial-console-connect.gif" alt-text="Animated GIF shows process of rebooting the system and enabling the SAC console.":::
 
 If needed, the SAC can be enabled offline as well:
 
@@ -131,7 +131,7 @@ You can initiate a restart within the serial console by navigating to the power 
 
 This is useful in situations where you may want to access the boot menu without leaving the serial console experience.
 
-:::image type="content" source="media/serial-console-windows/virtual-machine-serial-console-restart-button-windows.gif" alt-text="Video snap shows process of restarting VM within Serial Console.":::
+:::image type="content" source="media/serial-console-windows/virtual-machine-serial-console-restart-button-windows.gif" alt-text="Animated GIF shows process of restarting VM within Serial Console.":::
 
 ## Disable the Serial Console
 By default, all subscriptions have serial console access enabled. You can disable the serial console at either the subscription level or VM/virtual machine scale set level. For detailed instructions, visit [Enable and disable the Azure Serial Console](./serial-console-enable-disable.md).

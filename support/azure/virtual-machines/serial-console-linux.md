@@ -39,7 +39,7 @@ For Serial Console documentation for Windows, see [Serial Console for Windows](.
 
 - Your VM or virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
 
-    :::image type="content" source="media/serial-console-linux/virtual-machine-serial-console-diagnostics-settings.png" alt-text="Screenshot of the Diagnostics settings page in Azure portal. The Boot diagnostics option is enabled." border="false":::
+    :::image type="content" source="media/serial-console-linux/virtual-machine-serial-console-diagnostics-settings.png" alt-text="Screenshot of the Diagnostics settings page in Azure portal. The Boot diagnostics option is enabled.":::
 
 - For settings specific to Linux distributions, see [Serial console Linux distribution availability](#serial-console-linux-distribution-availability).
 

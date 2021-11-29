@@ -72,7 +72,7 @@ After each troubleshooting step, try connecting to your VM again. If you still c
    
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Resource health** button. A healthy VM reports as being **Available**:
    
-    :::image type="content" source="media/troubleshoot-rdp-connection/check-resource-health.png" alt-text="Screenshot of a healthy VM report, which shows There aren't any known Azure platform problems affecting this virtual machine." border="false":::
+    :::image type="content" source="media/troubleshoot-rdp-connection/check-resource-health.png" alt-text="Screenshot of a healthy V M report, which shows There aren't any known Azure platform problems affecting this virtual machine." border="false":::
 6. **Reset user credentials**. This troubleshooting step resets the password on a local administrator account when you are unsure or have forgotten the credentials.  Once you have logged into the VM, you should reset the password for that user.
    
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Reset password** button. Make sure the **Mode** is set to **Reset password** and then enter your username and a new password. Finally, click the **Update** button:

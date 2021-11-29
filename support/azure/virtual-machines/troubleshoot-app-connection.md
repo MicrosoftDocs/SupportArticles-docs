@@ -47,7 +47,7 @@ For more information, see [Troubleshooting Endpoint Connectivity (RDP/SSH/HTTP, 
 ## Detailed troubleshooting overview
 There are four main areas to troubleshoot the access of an application that is running on an Azure virtual machine.
 
-:::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-troubleshoot-main-area.png" alt-text="Diagram shows two Client devices are connected to the application on a VM by Internet and VPN respectively. 4 main areas to troubleshoot the access are highlighted.":::
+:::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-troubleshoot-main-area.png" alt-text="Diagram shows two Client devices are connected to the application on a V M by Internet and VPN respectively. 4 main areas to troubleshoot the access are highlighted.":::
 
 1. The application running on the Azure virtual machine.
    * Is the application itself running correctly?
@@ -67,7 +67,7 @@ To determine the source of the problem and its correction, follow these steps.
 ## Step 1: Access application from target VM
 Try to access the application with the appropriate client program from the VM on which it is running. Use the local host name, the local IP address, or the loopback address (127.0.0.1).
 
-:::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-from-target-vm.png" alt-text="Diagram of accessing the application directly from the VM in Azure VNet.":::
+:::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-from-target-vm.png" alt-text="Diagram of accessing the application directly from the V M in Azure VNet.":::
 
 For example, if the application is a web server, open a browser on the VM and try to access a web page hosted on the VM.
 
@@ -83,7 +83,7 @@ On both Windows and Linux-based virtual machines, use the **netstat -a** command
 ## <a id="step2"></a>Step 2: Access application from another VM in the same virtual network
 Try to access the application from a different VM but in the same virtual network, using the VM's host name or its Azure-assigned public, private, or provider IP address. For virtual machines created using the classic deployment model, do not use the public IP address of the cloud service.
 
-:::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-from-another-vm.png" alt-text="Diagram of accessing the application directly from another VM in the same virtual network in Azure VNet.":::
+:::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-from-another-vm.png" alt-text="Diagram of accessing the application directly from another V M in the same virtual network in Azure VNet.":::
 
 For example, if the application is a web server, try to access a web page from a browser on a different VM in the same virtual network.
 

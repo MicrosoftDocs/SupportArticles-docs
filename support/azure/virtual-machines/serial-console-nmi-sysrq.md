@@ -30,7 +30,7 @@ The Azure Serial Console can be used to send a SysRq to an Azure virtual machine
 
 Choosing "Send SysRq Command" will open a dialog, which will provide common SysRq options or accept a sequence of SysRq commands entered into the dialog.  This allows for series of SysRq's to perform a high-level operation such as a safe reboot using: `REISUB`.
 
-:::image type="content" source="media/serial-console-nmi-sysrq/virtual-machine-serial-console-sysreq-ui.png" alt-text="Screenshot of the Send SysRq Command to Guest dialog box. The option for entering commands is selected, and the command box contains REISUB." border="false":::
+:::image type="content" source="media/serial-console-nmi-sysrq/virtual-machine-serial-console-sysreq-ui.png" alt-text="Screenshot of the Send SysRq Command to Guest dialog box when the entering key option is selected and REISUB is input into the field below." border="false":::
 
 The SysRq command can't be used on virtual machines that are stopped or whose kernel is in a non-responsive state. (for example a kernel panic).
 

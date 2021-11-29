@@ -120,6 +120,7 @@ Using the Azure portal Operations -> Run Command -> RunShellScript feature, requ
 `sysctl -w kernel.sysrq=1 ; echo kernel.sysrq = 1 >> /etc/sysctl.conf`
 
 As shown here:
+
 :::image type="content" source="media/virtual-machines-serial-console/enabling-sysrq-2.png" alt-text="Screenshot of the RunShellScript window when you inject the command.":::
 
 Once completed, you can then try accessing **sysrq** and should see that a reboot is possible.
@@ -206,11 +207,11 @@ Interrupt the BOOT Process and access GRUB menu
 
 Select Advanced Options for Ubuntu and press enter
 
-:::image type="content" source="media/virtual-machines-serial-console/ubunturec1.png" alt-text="Screenshot shows the Serial console with Advanced options for Ubuntu selected." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/ubunturec1.png" alt-text="Screenshot shows the Serial console with Advanced options for Ubuntu selected.":::
 
 Select the line displaying *(recovery mode)* do not press enter but press “e”
 
-:::image type="content" source="media/virtual-machines-serial-console/ubunturec2.png" alt-text="Screenshot shows the Serial console with a recovery mode version selected." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/ubunturec2.png" alt-text="Screenshot shows the Serial console with a recovery mode version selected.":::
 
 Locate the line that will load the kernel and substitute the last parameter **nomodeset** with destination as **console=ttyS0**
 
@@ -222,12 +223,12 @@ change to
 linux /boot/vmlinuz-4.15.0-1023-azure root=UUID=21b294f1-25bd-4265-9c4e-d6e4aeb57e97 ro recovery console=ttyS0
 ```
 
-:::image type="content" source="media/virtual-machines-serial-console/ubunturec3.png" alt-text="Screenshot shows the Serial console with the changed value." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/ubunturec3.png" alt-text="Screenshot shows the Serial console with the changed value.":::
 
 Press **Ctrl-x** to start and load the kernel.
 If all goes well you will see these additional Options, which can help perform other recovery options
 
-:::image type="content" source="media/virtual-machines-serial-console/ubunturec4.png" alt-text="Screenshot shows the Serial console at the Recovery Menu, which offers additional recovery options." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/ubunturec4.png" alt-text="Screenshot shows the Serial console at the Recovery Menu, which offers additional recovery options.":::
 
 
 ## Red Hat GRUB configuration
@@ -336,9 +337,9 @@ The last line  *terminal –-timeout=5 serial console* will further increase **G
 
 :::image type="content" source="media/virtual-machines-serial-console/rh6-1.png" alt-text="Screenshot shows a console with output.":::
 
-GRUB menu should appear on-screen for the configured timeout=15 without the need to press Esc. Make sure to click in the Console in the Browser to make active the menu and select the required kernel
+GRUB menu should appear on-screen for the configured timeout=15 without the need to press Esc. Make sure to click in the Console in the Browser to make active the menu and select the required kernel.
 
-:::image type="content" source="media/virtual-machines-serial-console/rh6-2.png" alt-text="Screenshot shows a console with two Linux options." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/rh6-2.png" alt-text="Screenshot shows a console with two Linux options.":::
 
 ## SuSE
 
@@ -402,18 +403,18 @@ You will gain access to a shell without having to enter a password. You can then
 Having access to GRUB allows you to interrupt the initialization process this interaction is useful for many recovery procedures.
 If you do not have root password and single user requires you to have a root password, you can boot the kernel replacing the init program with a bash prompt – this interrupt can be achieved by appending init=/bin/bash to the kernel boot line
 
-:::image type="content" source="media/virtual-machines-serial-console/bash1.png" alt-text="Screenshot shows a console with the updated boot line." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/bash1.png" alt-text="Screenshot shows a console with the updated boot line.":::
 
 Remount your / (root) file system RW using the command
 
 `mount -o remount,rw /`
 
-:::image type="content" source="media/virtual-machines-serial-console/bash2.png" alt-text="Screenshot shows a console with a re-mount action." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/bash2.png" alt-text="Screenshot shows a console with a re-mount action.":::
 
 
 Now you can perform root password change or many other Linux configuration changes
 
-:::image type="content" source="media/virtual-machines-serial-console/bash3.png" alt-text="Screenshot shows a console where you can change root password and other configuration." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/bash3.png" alt-text="Screenshot shows a console where you can change root password and other configuration.":::
 
 Restart the VM with 
 
@@ -431,7 +432,7 @@ On RHEL systems, you can also append **rd.break**.
 For more information on how to access single user mode, see [this doc](./serial-console-grub-single-user-mode.md#general-single-user-mode-access) 
 
 
-:::image type="content" source="media/virtual-machines-serial-console/single-user-ubuntu.png" alt-text="Screenshot of the *Ubuntu entry in the boot the selected OS screen in GRUB." border="false":::
+:::image type="content" source="media/virtual-machines-serial-console/single-user-ubuntu.png" alt-text="Screenshot of the *Ubuntu entry in the boot the selected OS screen in GRUB.":::
 
 
 ## Next steps

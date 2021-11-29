@@ -46,7 +46,7 @@ Serial Console for VMs is as straightforward as clicking on **Serial console** w
 
   1. Scroll down to the **Help** section and select **Serial console**. A new pane with the serial console opens and starts the connection.
 
-     :::image type="content" source="media/virtual-machines-serial-console/serial-console-connect-vm.gif" alt-text="Video snap shows process of starting the connection to the serial console for VM.":::
+     :::image type="content" source="media/virtual-machines-serial-console/serial-console-connect-vm.gif" alt-text="Animated GIF shows process of starting the connection to the serial console for VM.":::
 
 ### Serial Console for Virtual Machine Scale Sets
 Serial Console is available for virtual machine scale sets, accessible on each instance within the scale set. You will have to navigate to the individual instance of a virtual machine scale set before seeing the **Serial console** button. If your virtual machine scale set does not have boot diagnostics enabled, ensure you update your virtual machine scale set model to enable boot diagnostics, and then upgrade all instances to the new model in order to access serial console.
@@ -60,7 +60,7 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 
   1. From the **Help** section, select **Serial console**. A new pane with the serial console opens and starts the connection.
 
-     :::image type="content" source="media/virtual-machines-serial-console/serial-console-connect-vm-scale-sets.gif" alt-text="Video snap shows process of starting the connection to the serial console for VM Scale Sets.":::
+     :::image type="content" source="media/virtual-machines-serial-console/serial-console-connect-vm-scale-sets.gif" alt-text="Animated GIF shows process of starting the connection to the serial console for VM Scale Sets.":::
 
 
 ### TLS 1.2 in Serial Console
