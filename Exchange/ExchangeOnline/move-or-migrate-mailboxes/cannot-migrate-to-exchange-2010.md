@@ -1,6 +1,6 @@
 ---
-title: Version is not supported when migrating mailbox to Exchange Server 2010
-description: Describes an issue in which you can't migrate mailboxes to Exchange Server 2010 in a hybrid deployment because it is not supported.
+title: Moving mailboxes to Exchange Server 2010 isn't supported
+description: You can't migrate Exchange Online mailboxes to Exchange Server 2010 in a hybrid deployment, because Exchange Server 2010 has reached end of support.
 author: v-charloz
 ms.author: v-chazhang
 audience: ITPro
@@ -20,21 +20,21 @@ appliesto:
 - MSfC O365-Exchange Online
 ---
 
-# Version is not supported when migrating mailbox from Exchange Online to Exchange Server 2010
+# Moving mailboxes from Exchange Online to Exchange Server 2010 isn't supported
 
 ## Symptoms
 
-You have a hybrid deployment of Exchange Online and on-premises Exchange Server 2010 environment. When you try to migrate an Exchange Online mailbox to the on-premises Exchange Server 2010 organization, you receive an error message that resembles the following:
+In an Exchange hybrid deployment, you try to move Exchange Online mailboxes to on-premises Exchange Server 2010. In this scenario, you receive the following error message:
 
-> MigrationPermanentException: **Moving mailbox to Exchange version '\<Version number\> (\<Build number\>)' is not supported**. Mailboxes can be moved to Exchange Server 2013 and later versions only. --> Moving mailbox to Exchange version '\<Version number\> (\<Build number\>)' is not supported. Mailboxes can be moved to Exchange Server 2013 and later versions only.
+> MigrationPermanentException: **Moving mailbox to Exchange version 'Version 14.x (Build \<build number>\)' is not supported**. Mailboxes can be moved to Exchange Server 2013 and later versions only. --> Moving mailbox to Exchange version 'Version 14.x (Build \<build number>\)' is not supported. Mailboxes can be moved to Exchange Server 2013 and later versions only.
 
 ## Cause
 
-This issue occurs because [Exchange Server 2010 reached end of support on October 13, 2020](/microsoft-365/enterprise/exchange-2010-end-of-support), and it doesn't support to migrate an Exchange Online mailbox to an Exchange Server 2010 organization.
+[Exchange Server 2010 has reached end of support](/microsoft-365/enterprise/exchange-2010-end-of-support). Microsoft no longer supports moving mailboxes from Exchange Online to Exchange Server 2010.
 
 ## Resolution
 
-You can migrate the Exchange Online mailbox to an organization of on-premises Exchange Server 2013 or a later version. For more information, see the following articles:
+You can move Exchange Online mailboxes to Exchange Server 2013 and later versions. To upgrade from Exchange Server 2010, see the following articles:
 
 - [Upgrade from Exchange 2010 to Exchange 2013](/exchange/upgrade-from-exchange-2010-to-exchange-2013-exchange-2013-help)
 - [Upgrade to a newer version of Exchange Server on-premises](/microsoft-365/enterprise/exchange-2010-end-of-support#upgrade-to-a-newer-version-of-exchange-server-on-premises)
