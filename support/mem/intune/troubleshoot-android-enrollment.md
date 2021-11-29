@@ -18,7 +18,7 @@ To troubleshoot, follow these steps:
 
   1. Collect Company Portal logs.
   2. Note apps that appear in the work profile unexpectedly.
-  3. Unenroll device from Intune and uninstall Company Portal.
+  3. Un-enroll the device from Intune and uninstall Company Portal.
   4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app, which allows creation of a work profile without an EMM for testing.
   5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
   6. Review apps that appear in the work profile.

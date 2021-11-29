@@ -20,18 +20,18 @@ If a device doesn't check in, it means it cannot successfully sync with Intune a
 
 On the affected device, start the iOS/iPadOS Company Portal app to see if the device has lost contact with Intune. If it detects that there's no contact, it automatically tries to sync with Intune to reconnect (users will see the **Trying to sync…** message).
 
-  ![Trying to sync notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-trying-to-sync-notification.png" alt-text="Screenshot of the trying to sync notification.":::
 
 If the sync is successful, you see a **Sync successful** inline notification in the iOS/iPadOS Company Portal app, indicating that the device is in a healthy state.
 
-  ![Sync successful notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_sync_successful_notification.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-sync-successful-notification.png" alt-text="Screenshot of the sync successful notification.":::
 
 If the sync is unsuccessful, you see an **Unable to sync** inline notification in the iOS/iPadOS Company Portal app.
 
-  ![Unable to sync notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_unable_to_sync_notification.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-unable-to-sync-notification.png" alt-text="Screenshot of the unable to sync notification.":::
 
 To fix the issue, select **Set up** which is to the right of the **Unable to sync** notification. **Set up** takes you to the Company Access Setup flow screen, where you can follow the prompts to enroll the device.
 
-  ![Company Access Setup screen](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_company_access_setup.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-company-access-setup.png" alt-text="Screenshot of the Company Access Setup screen.":::
 
 Once enrolled, the device returns to a healthy state and regains access to company resources.
