@@ -36,7 +36,7 @@ The RDP rule is not set up to allow the RDP traffic.
 
 The guest system firewall profiles are set up to block all inbound connections, including the RDP traffic.
 
-:::image type="content" source="media/guest-os-firewall-blocking-inbound-traffic/firewall-advanced-setting.png" alt-text="Screenshot of the block all inbound connections option in the Domain Profile tab of the firewall setting window." border="false":::
+:::image type="content" source="media/guest-os-firewall-blocking-inbound-traffic/firewall-advanced-setting.png" alt-text="Screenshot of the block all inbound connections option under the Domain Profile tab of the firewall setting window." border="false":::
 
 ## Solution
 

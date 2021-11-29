@@ -63,7 +63,7 @@ The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to
 
 6. Go to the [Azure portal](https://portal.azure.com), select the VM, and then select **Serial console**. You will see that the system stops at "reboot: Restarting system". This process should take about 15-45 minutes. For Generation 2 VM, it might be stuck on the "reboot: Restarting system" screen. In this case, wait for 45 minutes. If it still doesn't progress further, go to the **Overview** page of the VM in the Azure portal, stop the VM, and then restart it.
 
-     :::image type="content" source="media/linux-upgrade-suse-15sp1/reboot-message.png" alt-text="Screenshot of the reboot: Restarting system log in the command-line interface of Serial console." border="false":::
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/reboot-message.png" alt-text="Screenshot of the reboot: Restarting system log in the command-line interface of Serial console.":::
 
 8. After the system is restarted with new kernel, you will see the following message.
 
@@ -81,5 +81,5 @@ You can use one of the following methods to check the generation version:
 
 - In the SLES terminal,  run the command `dmidecode | grep -i hyper`. If it's a generation V1 VM,  there is no output returned. For the generations V2 VMs, you will see the following output:
 
-     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 vm." border="false":::
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 V M.":::
 - In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.

@@ -67,7 +67,7 @@ Use the following steps to install the VM Agent in offline mode.
         - HKEY_LOCAL_MACHINE  \SYSTEM\ControlSet001\Services\WindowsAzureGuestAgent
         - HKEY_LOCAL_MACHINE  \SYSTEM\ControlSet001\Services\RdAgent
 
-          :::image type="content" source="media/install-vm-agent-offline/backup-reg.png" alt-text="Screenshot of the rdagent and winazureguestagent reg file in Windows Explorer." border="false":::
+          :::image type="content" source="media/install-vm-agent-offline/backup-reg.png" alt-text="Screenshot of the rdagent and winazureguestagent reg files in Windows Explorer." border="false":::
 
     2. Edit the registry files. In each file, change the entry value **SYSTEM** to **BROKENSYSTEM** (as shown in the following images) and save the file. Remember the **ImagePath** of the current VM agent. We will need to copy the corresponding folder to the attached OS disk. 
 
