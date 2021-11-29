@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Microsoft Teams Chat integration with Dynamics 365
 description: Provides a solution to an error that occurs in opening chat windows when using Teams Chat in Microsoft Dynamics CRM .
-ms.reviewer: 
+ms.reviewer: Usha-Rathnavel
 ms.topic: troubleshooting
 ms.date: 11/23/2021
-ms.subservice: d365-sales
+ms.subservice: d365-sales-access
 ---
 
 ## Troubleshoot issue with opening chat windows in Dynamics 365
