@@ -4,6 +4,7 @@ description: Describes how to resolve a scenario in which you receive an error (
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
 ---
 # Error when you run the IdFix tool: Current security context is not associated with an Active Directory domain or forest
 

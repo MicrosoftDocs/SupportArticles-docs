@@ -4,6 +4,7 @@ description: Provides a solution to an issue where a blank window appears when y
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # A blank window appears when you attempt to sign into Yammer within Microsoft Dynamics CRM Online
 

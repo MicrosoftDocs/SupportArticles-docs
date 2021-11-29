@@ -4,6 +4,7 @@ description: This article describes how to copy core dump files from a Linux mac
 ms.date: 06/11/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmet.bostanci
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 4.1 Analyze core dump files after copying them to another machine
 

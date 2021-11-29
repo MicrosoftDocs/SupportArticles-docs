@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem where no data is 
 ms.date: 04/07/2020
 ms.prod-support-area-path: IIS extensions, tools, and Add-ons
 ms.reviewer: Mike
+ms.technology: iis-iis-extensions-tools
 ---
 # No data is logged in the cs-username field when using the Advanced Logging feature of IIS
 

@@ -4,6 +4,7 @@ description: Provides a solution to an issue where appointments aren't syncing t
 ms.reviewer: taskar, tybosse
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Appointments are not syncing to Exchange or Outlook after being created in the CRM for Phones Express app
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to access 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-access
 ---
 # Error Code: 2147812097 Invalid License: This application requires a license and you don't have an appropriate license assigned
 
@@ -36,7 +37,7 @@ For example, if the user with a team member license tries to access the Customer
 
 The resolution is to reach out to your administrator and request the license to be assigned. The license name and the application names are present in the error details.
 
-:::image type="content" source="media/error-when-accessing-app-module/invalid-license.png" alt-text="Dynamics Team Member License Error.":::
+:::image type="content" source="media/error-when-accessing-app-module/invalid-license.png" alt-text="Screenshot of the Dynamics team member license error.":::
 
 **Access to Custom Apps:**
 

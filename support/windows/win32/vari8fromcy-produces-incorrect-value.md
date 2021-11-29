@@ -4,6 +4,7 @@ description: There is a long-existing but rarely encountered bug in the OLE Auto
 ms.date: 03/16/2020
 ms.prod-support-area-path: Component development
 ms.reviewer: cosminr
+ms.technology: windows-dev-apps-component-dev
 ---
 # VarI8FromCy produces incorrect value when CY value is large
 

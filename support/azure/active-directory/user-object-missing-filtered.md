@@ -4,6 +4,8 @@ description: Describes an issue that blocks synchronization between a user objec
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: elvinf
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # User object is missing or filtered from the Azure Active Directory connector in Azure Active Directory Sync
 

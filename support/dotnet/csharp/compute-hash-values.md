@@ -5,6 +5,7 @@ ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: v-ingor
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to compute and compare hash values
 

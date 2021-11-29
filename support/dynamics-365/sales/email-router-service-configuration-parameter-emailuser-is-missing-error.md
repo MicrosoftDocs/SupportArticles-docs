@@ -4,6 +4,7 @@ description: Describes an error message that you may receive when you use the Mi
 ms.reviewer: danhamre
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The E-mail Router service configuration parameter Emailuser is missing error when you use the Microsoft Dynamics CRM E-mail Router
 

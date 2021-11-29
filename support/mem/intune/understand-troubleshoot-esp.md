@@ -269,7 +269,7 @@ This subkey contains the following subkeys:
   Available values for `InstallationState` are:
 
   - 1 (NotInstalled)
-  - 2 (NotRequired)
+  - 2 (InProgress)
   - 3 (Completed)
   - 4 (Error)
 

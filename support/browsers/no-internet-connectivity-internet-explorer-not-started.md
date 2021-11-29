@@ -2,9 +2,10 @@
 title: No Internet connectivity if Internet Explorer is not started
 description: This article describes a problem where you may not be able to get Internet connectivity if Internet Explorer has not been started at least once in the current Windows session.
 ms.date: 01/04/2021
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: pierrelc, aloot, andyriv
 ms.topic: article
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # No Internet connectivity if Internet Explorer is not started once
 

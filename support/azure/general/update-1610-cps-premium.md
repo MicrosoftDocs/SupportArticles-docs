@@ -4,7 +4,7 @@ description: Describes Update 1610 for Cloud Platform System (CPS) Premium and p
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: azure-stack
+ms.service: cloud-services
 ms.prod-support-area-path: 
 ms.reviewer: ashtons
 ---

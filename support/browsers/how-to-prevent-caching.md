@@ -2,7 +2,8 @@
 title: How to prevent caching in Internet Explorer
 description: This article describes how to use HTTP headers to control the caching of Web pages in Internet Explorer.
 ms.date: 02/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # How to prevent caching in Internet Explorer
 
@@ -92,6 +93,7 @@ If you've applied the techniques in this article and you're still having problem
 - If you're using CGI/ISAPI/Servlets on the server side, are you following the HTTP 1.1 specification exactly, particularly about CRLF termination of HTTP headers? In the interest of performance, Internet Explorer is typically unforgiving of responses that violate the HTTP 1.1 specification. It usually results in ignored headers or reports of unexpected server errors.
 - Are the HTTP headers spelled correctly?
 
-## References
+## See also
 
-For more information about HTTP/1.1, see [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html).
+- For more information about HTTP 1.1 protocol, see this external link: [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html).
+- [Client Cache in IIS](/iis/configuration/system.webserver/staticcontent/clientcache)

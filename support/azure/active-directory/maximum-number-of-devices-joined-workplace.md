@@ -4,6 +4,8 @@ description: Describes a problem in which a (The maximum number of devices that 
 ms.date: 06/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: hybrid
 ---
 # Error (The maximum number of devices that can be joined to the workplace by the user has been reached) during a Workplace Join
 

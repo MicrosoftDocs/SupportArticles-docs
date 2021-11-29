@@ -4,6 +4,7 @@ description: Troubleshooting the issue that output is not successfully captured 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # UI flow outputs not working
 

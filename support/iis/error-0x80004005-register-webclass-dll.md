@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 03/24/2020
 ms.prod-support-area-path: Development
 ms.reviewer: MCLAY
+ms.technology: iis-development
 ---
 # Error 0x80004005 when you try to register a WebClass DLL
 

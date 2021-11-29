@@ -4,6 +4,7 @@ description: This article discusses a problem in a BizTalk Server project where 
 ms.date: 03/16/2020
 ms.prod-support-area-path: Development and Deployment
 ms.reviewer: rickcau
+ms.technology: biztalk-server-dev-deploy
 ---
 # Add Generated Items Wizard fails to generate an XSD schema
 

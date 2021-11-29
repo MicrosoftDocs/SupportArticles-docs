@@ -4,6 +4,7 @@ description: Describes how to upgrade the solutions for a Microsoft Dynamics CRM
 ms.reviewer: jbirnbau
 ms.topic: how-to
 ms.date: 3/31/2021
+ms.subservice: d365-sales-connectors
 ---
 # How to upgrade the solutions for a Microsoft Dynamics CRM Portals Deployment
 

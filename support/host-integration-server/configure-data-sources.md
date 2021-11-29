@@ -5,6 +5,7 @@ ms.date: 10/13/2020
 ms.prod-support-area-path: Data integration (DB2, host files)
 ms.reviewer: syedw
 ms.topic: how-to
+ms.technology: his-data-integration
 ---
 # Configure data sources for the Microsoft OLE DB Provider for DB2
 

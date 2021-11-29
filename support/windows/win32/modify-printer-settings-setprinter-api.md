@@ -5,6 +5,7 @@ ms.date: 03/09/2020
 ms.prod-support-area-path: Graphics and multimedia development
 ms.reviewer: kayda
 ms.topic: how-to
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # Modify printer settings by using the SetPrinter function
 

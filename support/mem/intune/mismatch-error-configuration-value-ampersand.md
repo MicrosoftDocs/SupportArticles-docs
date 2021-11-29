@@ -28,7 +28,7 @@ In this scenario, you receive the following error message when you click **OK** 
 > Mismatch between the value type and the configuration value in the configuration settings designer  
 > The configuration settings designer has a value type as String but a configuration value as "https://sso.contoso.com/idpov/accesslogin/FedSSODispatch.faces?PartnerIdpId=https://sts.windows.net/{GUID}/&TargetResource=https://sso.contoso.com/idprov/pages/home/dispatch.jsp?SpName=MBF", which has invalid characters XML format doesn't support. Please correct it accordingly.
 
-:::image type="content" source="media/mismatch-error-configuration-value-ampersand/value-mismatch-error.png" alt-text="screenshot of Value mismatch error":::
+:::image type="content" source="media/mismatch-error-configuration-value-ampersand/value-mismatch-error.png" alt-text="Screenshot of the Mismatch between the value type and the configuration value in the configuration settings designer error.":::
 
 ## Cause
 

@@ -5,6 +5,7 @@ ms.date: 09/27/2020
 ms.prod-support-area-path: Development and Deployment
 ms.reviewer: shaheera
 ms.prod: biztalk-server
+ms.technology: biztalk-server-dev-deploy
 ---
 # Change in scripting function boolean parameter behavior
 

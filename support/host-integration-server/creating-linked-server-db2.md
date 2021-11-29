@@ -4,6 +4,7 @@ description: This article describes a sample SQL script for creating a linked se
 ms.date: 10/14/2020
 ms.prod-support-area-path: Data integration (DB2, host files)
 ms.reviewer: syedw
+ms.technology: his-data-integration
 ---
 # Creating a linked server to DB2 using Microsoft OLE DB provider for DB2
 

@@ -91,12 +91,12 @@
         href: admin/event-id-33566-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
-    - name: 1450 and 665 errors when running DBCC
-      href: admin/1450-and-665-errors-running-dbcc.md
-    - name: 17053 and 926 errors when running DBCC
-      href: admin/17053-and-926-errors-running-dbcc.md
-    - name: 8967 and 8921 errors when running DBCC
-      href: admin/8967-8921-errors-running-dbcc.md
+    - name: 1450 and 665 errors when running DBCC CHECKDB
+      href: admin/1450-and-665-errors-running-dbcc-checkdb.md
+    - name: 17053 and 926 errors when running DBCC CHECK
+      href: admin/17053-and-926-errors-running-dbcc-check.md
+    - name: 8967 and 8921 errors when running DBCC CHECKDB
+      href: admin/8967-8921-errors-running-dbcc-checkdb.md
     - name: A nonrecoverable I/O error when you use Backup to URL
       href: admin/nonrecoverable-io-error-backup-url.md
     - name: A TDE-enabled database may not recover
@@ -157,8 +157,8 @@
       href: admin/io-subsystem-requirements-tempdb.md
     - name: Improve the performance of full-text queries
       href: admin/improve-performance-full-text-queries.md
-    - name: Latch timeout when running DBCC
-      href: admin/latch-timeout-running-dbcc.md
+    - name: Latch timeout when running DBCC CHECKDB
+      href: admin/latch-timeout-running-dbcc-checkdb.md
     - name: Logging and data storage algorithms
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
@@ -193,8 +193,8 @@
       href: admin/transaction-log-file-not-grow.md
     - name: Troubleshoot backup and restore operation issues
       href: admin/backup-restore-operations.md
-    - name: Troubleshoot DBCC errors
-      href: admin/troubleshoot-dbcc-errors.md
+    - name: Troubleshoot DBCC CHECKDB errors
+      href: admin/troubleshoot-dbcc-checkdb-errors.md
     - name: Unable to begin a distributed transaction
       href: admin/error-message-ole-db-provider.md
     - name: Virtual host drivers lead to data consistency problems
@@ -371,6 +371,8 @@
       href: performance/schemamgr-store-degrades-performance.md
     - name: Troubleshoot blocking caused by compile locks
       href: performance/troubleshoot-blocking-caused-compile-locks.md
+    - name: Troubleshoot high-CPU-usage issues
+      href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
     - name: Troubleshoot query time-out errors

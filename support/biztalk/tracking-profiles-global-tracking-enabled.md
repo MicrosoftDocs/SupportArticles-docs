@@ -4,6 +4,7 @@ description: Explains the behavior of tracking profiles when Global Tracking is 
 ms.date: 03/16/2020
 ms.prod-support-area-path: Management and Operations
 ms.reviewer: xuehongg
+ms.technology: biztalk-server-management-operations
 ---
 # Tracking profiles behavior when more than one tracking profile associate with an entity and global tracking is turned off
 

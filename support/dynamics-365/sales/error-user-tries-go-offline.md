@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # "An error occurred during deleting database" error when a user tries to go offline in the Microsoft Dynamics CRM Client for Outlook
 

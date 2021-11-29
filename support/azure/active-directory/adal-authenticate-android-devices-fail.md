@@ -4,6 +4,8 @@ description: Describes an issue in which ADAL authentication from Android device
 ms.date: 05/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Using ADAL to authenticate from Android devices fails if additional certificate downloads are required
 

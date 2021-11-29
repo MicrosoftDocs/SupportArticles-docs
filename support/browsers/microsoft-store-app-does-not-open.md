@@ -5,6 +5,7 @@ ms.date: 01/21/2021
 ms.prod-support-area-path: Core Features
 ms.reviewer: 
 ms.topic: troubleshooting
+ms.technology: internet-explorer-core-features
 ---
 # Microsoft Store app does not open from Internet Explorer print menu on Windows 8.1
 

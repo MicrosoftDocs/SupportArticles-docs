@@ -4,6 +4,7 @@ description: This article describes the installation of ProcDump tool and how to
 ms.date: 04/15/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Lab 2.2 Capture dump files with ProcDump in Linux
 
