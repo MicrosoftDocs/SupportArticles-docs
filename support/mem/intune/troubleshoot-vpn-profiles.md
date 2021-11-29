@@ -61,6 +61,8 @@ For examples, see the following screenshots:
 
 For information about how to create an Extensible Authentication Protocol (EAP) configuration XML for the VPN profile, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
+---
+
 ## How to assign VPN profiles
 
 After you create the VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
@@ -78,6 +80,8 @@ For examples, see the following screenshots:
 ### [Windows](#tab/windows)
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot shows how to assign a profile for Windows.":::
+
+---
 
 ## What successful VPN profiles look like
 
@@ -147,6 +151,8 @@ The VPN profile is listed under **Settings** > **Network & Internet** > **VPN**.
 The VPN connection is listed in **Network Connections**.
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/network-connections-vpn.png" alt-text="Screenshot shows the VPN connection in Network Connections.":::
+
+---
 
 ## Company Portal logs of successful VPN profile deployment
 
@@ -238,6 +244,8 @@ Event 6165
   Description: 
 MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enrollment Name: (MDMFullWithAAD), Provider Name: (VPNv2), Operation: (Add), CSP URI: (./User/Vendor/MSFT/VPNv2), Child URI: (Contoso), Result: (The operation completed successfully.).
 ```
+
+---
 
 ## Troubleshooting common issues
 
@@ -337,6 +345,8 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-diagnostic-information-configuration-source.png" alt-text="Screenshot shows the MDM Diagnostic information for configuration resource.":::
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-connection-vpn-profiles.png" alt-text="Screenshot shows the VPN profiles that are managed by the MDM connection.":::
+
+---
 
 ### Issue 2: The VPN profile is deployed to the device, but the device can't connect to the network
 
