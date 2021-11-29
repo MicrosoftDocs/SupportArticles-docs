@@ -371,7 +371,9 @@ Typically, this connectivity issue isn't an Intune issue and there can be multip
 
 ## How to view logs in the AnyConnect app
 
-### [View logs on Android devices](#tab/android)
+To view logs, see the following two examples for Android and iOS devices.
+
+### Example 1: View logs on Android devices
 
 1. Select **Menu** > **Diagnostics**.
 
@@ -421,7 +423,7 @@ Sample log for VPN connection failure:
 <Date Time> I/vpnapi  (14530): Message type error sent to the user: The VPN connection failed due to unsuccessful domain name resolution.
 ```
 
-### [View logs on iOS devices](#tab/ios)
+### Example 2: View logs on iOS devices
 
 1. To view user certificate, select **Diagnostics** > **Certificates**.
 
