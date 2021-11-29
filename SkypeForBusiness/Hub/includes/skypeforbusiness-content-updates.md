@@ -2,11 +2,10 @@
 
 
 
-## Week of May 10, 2021
+## Week of November 22, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 5/11/2021 | [Voicemail messages aren't delivered in Teams or Skype for Business client](/skypeforbusiness/troubleshoot/hybrid-phone-system/voicemails-not-delivered) | modified |
-| 5/12/2021 | [Lync conferencing feature fails for a mandatory user profile](/skypeforbusiness/troubleshoot/server-conferencing/conferencing-feature-fails-for-mandatory-user) | modified |
-| 5/14/2021 | [Troubleshoot sign-in issues for admins](/skypeforbusiness/troubleshoot/online-sign-in/troubleshoot-sign-in-issues-for-admins) | modified |
+| 11/25/2021 | [Outlook SFB Contacts folder doesn't sync with Skype for Business contacts](/skypeforbusiness/troubleshoot/online-contacts/outlook-contacts-folder-not-sync) | modified |
+| 11/25/2021 | [MAPI unavailable in Skype for Business 2016 client](/skypeforbusiness/troubleshoot/server-exchange-integration/mapi-unavailable) | modified |
