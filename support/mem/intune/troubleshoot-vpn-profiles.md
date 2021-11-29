@@ -29,9 +29,9 @@ The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) cer
 
 ## Overview of VPN profiles
 
-Virtual private networks (VPNs) give users secure remote access to the organization network. Devices use a VPN connection profile to start a connection with the VPN server. VPN profiles in Microsoft Intune assign VPN settings to users and devices in the organization, so they can easily and securely connect to the organizational network.
+Virtual private networks (VPNs) give users secure remote access to the organization network. Devices use a VPN connection profile to start a connection with the VPN server. In Microsoft Intune, VPN profiles assign VPN settings to users and devices in the organization. Then, the users can easily and securely connect to the organizational network.
 
-For example, you want to configure all iOS devices with the required settings to connect to a file share on the organization network. Then, you create a VPN profile that includes these settings, and assign this profile to all users who have iOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
+For example, if you want to configure all iOS devices with the required settings to connect to a file share on the organization network, you can create a VPN profile that includes these settings, and assign this profile to all users who have iOS devices. After that, the users can see the VPN connection in the list of available networks and connect with minimal effort.
 
 You can create VPN profiles by using different VPN connection types.
 
@@ -47,7 +47,7 @@ For examples, see the following screenshots:
 > [!NOTE]
 > In the examples, the connection type for Android and iOS VPN profile is Cisco AnyConnect, and the one for Windows 10 is Automatic. And the VPN profile is linked to the SCEP profile.
 
-### [Andriod](#tab/andriod)
+### [Android](#tab/android)
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-android.png" alt-text="Screenshot shows how to create a VPN profile for Android.":::
 
@@ -65,11 +65,11 @@ For information about how to create an Extensible Authentication Protocol (EAP) 
 
 ## How to assign VPN profiles
 
-After you create the VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
+After you create a VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
 
 For examples, see the following screenshots:
 
-### [Andriod](#tab/andriod)
+### [Android](#tab/android)
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-android.png" alt-text="Screenshot shows how to assign a profile for Android.":::
 
@@ -85,7 +85,7 @@ For examples, see the following screenshots:
 
 ## What successful VPN profiles look like
 
-### [Andriod](#tab/andriod)
+### [Android](#tab/android)
 
 This scenario uses a Nokia 6.1 device. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
 
@@ -93,7 +93,7 @@ This scenario uses a Nokia 6.1 device. Since the Trusted Root and SCEP profiles 
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/notification-install-vpn-profile-android.png" alt-text="Screenshot shows the notification to install the VPN profile.":::
 
-1. In the AnyConnect app, tap the **Change Setting** button to enable the **External Control** option.
+1. In the AnyConnect app, tap the **Change Settings** button to enable the **External Control** option.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/change-settings-android.png" alt-text="Screenshot shows the Change Settings button.":::
 
@@ -101,12 +101,12 @@ This scenario uses a Nokia 6.1 device. Since the Trusted Root and SCEP profiles 
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting-enabled.png" alt-text="Screenshot shows that the External Control option is enabled.":::
 
-1. Select the SCEP Certificate in the AnyConnect app:
+1. Select the SCEP certificate in the AnyConnect app:
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/choose-certificate.png" alt-text="Screenshot shows the page to choose certificates.":::
 
     > [!NOTE]
-    > If you use a device administrator-managed Android device, there may be multiple certificates, because the certificates aren't revoked or removed when a certificate profile is changed or removed. In this case, select the latest certificate, usually it's the last one in the list of certificates.
+    > When using a device administrator-managed Android device, there may be multiple certificates, because the certificates aren't revoked or removed when a certificate profile is changed or removed. In this scenario, select the newest certificate. It's usually the last certificate displayed in the list.
 
     This situation doesn't occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices with Intune](/intune/android-enterprise-overview) and [Remove SCEP and PKCS certificates in Microsoft Intune](/intune/remove-certificates#android-knox-devices).
 
@@ -116,7 +116,7 @@ This scenario uses a Nokia 6.1 device. Since the Trusted Root and SCEP profiles 
 
 ### [iOS](#tab/ios)
 
-After the VPN profile is installed on the device, you can see it in **Management Profile**:
+After the VPN profile is installed on the device, it's displayed in **Management Profile**:
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-management-profile.png" alt-text="Screenshot shows that Management Profile has the VPN profile.":::
 
@@ -146,7 +146,7 @@ You can see **VPN** is listed under **Areas managed by Microsoft**.
 
 The VPN profile is listed under **Settings** > **Network & Internet** > **VPN**.
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-windows.png" alt-text="Screenshot shows the VPN profile in Windows.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-windows.png" alt-text="Screenshot shows the VPN profile in Network & Internet.":::
 
 The VPN connection is listed in **Network Connections**.
 
@@ -156,15 +156,15 @@ The VPN connection is listed in **Network Connections**.
 
 ## Company Portal logs of successful VPN profile deployment
 
-### [Andriod](#tab/andriod)
+### [Android](#tab/android)
 
 On an Android device, the *Omadmlog.log* file logs detail activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files and the timestamp of the last sync can help you find the related entries.
 
-The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs and uses the search string filter of `android.vpn.client`.
+The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs, and searches for `android.vpn.client`.
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/cmtrace-android.png" alt-text="Screenshot shows an example that uses CMTrace to read logs.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/cmtrace-android.png" alt-text="Screenshot shows an example that uses CMTrace to read logs, and searches for android.vpn.client.":::
 
-Sample log snippet:
+Sample log:
 
 ```output
 <Date Time>    INFO    com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine    13229    00622    Notifying to provision vpn profile 'AnyConnect'.
@@ -176,18 +176,22 @@ Sample log snippet:
 
 ### [iOS](#tab/ios)
 
-On an iOS device, Company Portal logs don't contain any information about VPN profiles. To see details about the installation of the VPN profiles, you must get console or device Logs as follows:
+On an iOS device, Company Portal logs don't contain any information about VPN profiles. To see installation details of the VPN profiles, check console or device logs as follows:
 
 1. Connect the iOS device to Mac, and then select **Applications** > **Utilities** to open the Console app.
 1. Under **Action**, check the **Include Info Messages** and **Include Debug Messages** options.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/action-menu-ios.png" alt-text="Screenshot shows that the Include Info Messages and Include Debug Messages options are checked.":::
 
-1. After the issue is reproduced, save the logs to a text file. First, select **Edit** > **Select All** to select all the messages on the current screen. Then, select **Edit** > **Copy** to copy them to the clipboard. Next, open the TextEdit application and paste the copied logs into a new text file and save the file.
+1. Reproduce the scenario, and save the logs to a text file:
 
-To view detail information, search the file by using the VPN profile name.
+    1. Select all the messages on the current screen: **Edit** > **Select All**.
+    1. Copy the messages: **Edit** > **Copy**.
+    1. Paste the log data in a text editor, and save the file.
 
-Sample log snippet:
+1. To view detailed information, use the VPN profile name to search the file.
+
+Sample log:
 
 ```output
 debug    <Time> -0400    profiled    createConfigurationFromPayload type com.apple.vpn.managed.applayer, name 'ContosoVPN', atom \{\
@@ -226,7 +230,7 @@ On a Windows device, the details about VPN profiles are logged in the following 
 > [!NOTE]
 > You must select the **Show Analytic and Debug Logs** option in the Event Viewer to see these logs.
 
-Sample log snippet:
+Sample log:
 
 ```output
 Event 6165
@@ -251,7 +255,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 ### Issue 1: The VPN profile isn't deployed to the device
 
-#### [Andriod](#tab/andriod)
+#### [Android](#tab/android)
 
 1. Verify that the VPN profile is assigned to the correct group.
 
@@ -259,9 +263,9 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-android.png" alt-text="Screenshot shows the assigned VPN profile of a group for Android.":::
 
-1. Verify that the device can sync with Intune by checking the **Last Check In** time on the **Troubleshoot** pane.
+1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot shows the Last Check In time on the Troubleshoot pane for Android.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot shows the LAST CHECK IN time on the Troubleshoot pane for Android.":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -270,11 +274,11 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     `<Date Time>    INFO    com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine    14210    00948    Waiting for required certificates for vpn profile 'androidVPN'.`
 
     > [!NOTE]
-    > There is a scenario when the Trusted Root and SCEP profiles are on the device and compliant, but the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be on the Certificate Template or in the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded, which will result in the skipping of the VPN profile because it doesn't have the right certificate. In this scenario, you see the following entry in the Company Portal log file (*Omadmlog.log*):
+    > There is a scenario when the Trusted Root and SCEP profiles are on the device and compliant, but the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be in the certificate template or in the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded, which will result in the skipping of the VPN profile because it doesn't have the right certificate. In this scenario, you see the following entry in the Company Portal log file (*Omadmlog.log*):
     >
-    > **Waiting for required certificates for vpn profile 'androidVPN'.**
+    > `Waiting for required certificates for vpn profile 'androidVPN'.`
 
-    The following log is a sample log snippet in which certificates are excluded because the **Any Purpose** Extended Key Usage (EKU) criteria was specified but the certificates that are assigned to the device don't have that EKU:
+    The following sample log shows certificates are excluded because the **Any Purpose** Extended Key Usage (EKU) criteria was specified. But, the certificates assigned to the device don't have that EKU:
 
     ```output
     <Date Time>    VERB     com.microsoft.omadm.utils.CertUtils      14210    00948    Excluding cert with alias User<ID1> and requestId <requestID1> as it does not have any purpose EKU.
@@ -284,7 +288,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     <Date Time>    INFO     com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine       14210     00948    Waiting for required certificates for vpn profile '<profile name>'.
     ```
 
-    In this example, the SCEP profile has the option of **Any Purpose** EKU specified but it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template, or remove the **Any Purpose** option from the SCEP profile.
+    The following sample shows the SCEP profile has the option of **Any Purpose** EKU specified. But, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template. Or, remove the **Any Purpose** option from the SCEP profile.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot shows how to add the Any Purpose option.":::
 
@@ -300,7 +304,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that all required certificates in the complete certificate chain are on the device. Otherwise, you see the following entry in the Company Portal log file (*Omadmlog.log*):
 
-    > **Waiting for required certificates for vpn profile 'androidVPN'.**
+    `Waiting for required certificates for vpn profile 'androidVPN'.`
 
     For more information, see [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa).
 
@@ -314,9 +318,9 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/assignments-ios.png" alt-text="Screenshot shows the assignment information on the Troubleshoot pane for iOS":::
 
-1. Verify that the device can sync with Intune by checking the **Last Check In** time on the **Troubleshoot** pane.
+1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-ios.png" alt-text="Screenshot shows the Last Check In time on the Troubleshoot pane for iOS.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-ios.png" alt-text="Screenshot shows the LAST CHECK IN time on the Troubleshoot pane for iOS.":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -328,15 +332,16 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot shows the assigned VPN profile of a group for Windows.":::
 
-1. Verify that the device can sync with Intune by checking the **Last Check In** time on the **Troubleshoot** pane.
+1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot shows the Last Check In time on the Troubleshoot pane for Windows.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot shows the LAST CHECK IN time on the Troubleshoot pane for Windows.":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
-1. Check the MDM Diagnostic Information log for Windows 10 devices.
+1. For Windows 10 devices, check the MDM Diagnostic Information log.
 
-    First, [download the MDM Diagnostic Information log](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10#download-the-mdm-diagnostic-information-log-from-windows-10-pcs). Next, navigate to the *C:\Users\Public\Documents\MDMDiagnostics* folder to check the report.
+    1. [Download the MDM Diagnostic Information log](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10#download-the-mdm-diagnostic-information-log-from-windows-10-pcs)
+    1. To check the report, navigate to the *C:\Users\Public\Documents\MDMDiagnostics* folder.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/mdmdiagnostics-folder.png" alt-text="Screenshot shows the MDMDiagnostics folder.":::
 
@@ -350,23 +355,23 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 ### Issue 2: The VPN profile is deployed to the device, but the device can't connect to the network
 
-Typically, this issue isn't an Intune issue. There can be multiple causes of a connectivity issue, the following items may help you understand and troubleshoot the connectivity issue:
+Typically, this connectivity issue isn't an Intune issue and there can be multiple causes. The following items may help you understand and troubleshoot the issue:
 
-- Can you manually connect to the network by using a certificate with the same criteria that's specified in the VPN profile?
+- Can you manually connect to the network by using a certificate with the same criteria in the VPN profile?
 
-    If so, check the properties of the certificate that you used in the manual connection and make change to the Intune VPN profile accordingly.
+    If so, check the properties of the certificate that you used in the manual connection, and make change to the Intune VPN profile.
 
 - For Android and iOS devices, did the VPN client Application logs show that the device tried to connect with the VPN profile?
 
     Usually, connectivity errors are logged in VPN client application logs.
 
-- For Windows devices, did the Radius server log show that the device tried to connect with the VPN profile?
+- For Windows devices, did the Radius server logs show that the device tried to connect with the VPN profile?
 
     Usually, connectivity errors are logged in Radius server logs.
 
 ## How to view logs in the AnyConnect app
 
-### Example 1: How to view logs in the AnyConnect app on Android devices
+### [View logs on Android devices](#tab/android)
 
 1. Select **Menu** > **Diagnostics**.
 
@@ -392,42 +397,42 @@ Typically, this issue isn't an Intune issue. There can be multiple causes of a c
 
 1. After you get the debug logs, check the *debug_logs_unfiltered.txt* file for profile creation and connection information.
 
-    Sample log snippet for VPN creation:
+Sample log for VPN creation:
 
-    ```output
-    <Date Time> I/AnyConnect(14530): URIHandlerActivity: Received command: anyconnect://create?host=VPN.Contoso.com&name=AnyConnect&usecert=true&keychainalias=UserID
-    <Date Time> I/AnyConnect(14530): VpnService: VpnService is being created.
-    ```
+```output
+<Date Time> I/AnyConnect(14530): URIHandlerActivity: Received command: anyconnect://create?host=VPN.Contoso.com&name=AnyConnect&usecert=true&keychainalias=UserID
+<Date Time> I/AnyConnect(14530): VpnService: VpnService is being created.
+```
 
-    Sample log snippet for VPN connection failure:
+Sample log for VPN connection failure:
 
-    ```output
-    <Date Time> I/vpnapi  (14530): Message type information sent to the user: Contacting VPN.Contoso.com.
-    <Date Time> I/vpnapi  (14530): Initiating VPN connection to the secure gateway https://VPN.Contoso.com
-    <Date Time> I/acvpnagent(14592): Using default preferences. Some settings (e.g. certificate matching) may not function as expected if a local profile is expected to be used. Verify that the selected host is in the server list section of the profile and that the profile is configured on the secure gateway.
-    <Date Time> I/acvpnagent(14592): Function: processConnectNotification File: MainThread.cpp Line: 14616 Received connect notification (host VPN.Contoso.com, profile N/A)
-    <Date Time> W/acvpnagent(14592): Function: getHostIPAddrByName File: SocketSupport.cpp Line: 344 Invoked Function: ::getaddrinfo Return Code: 11 (0x0000000B) Description: unknown 
-    <Date Time> W/acvpnagent(14592): Function: resolveHostName File: HostLocator.cpp Line: 710 Invoked Function: CSocketSupport::getHostIPAddrByName Return Code: -31129588 (0xFE25000C) Description: SOCKETSUPPORT_ERROR_GETADDRINFO 
-    <Date Time> W/acvpnagent(14592): Function: ResolveHostname File: HostLocator.cpp Line: 804 Invoked Function: CHostLocator::resolveHostName Return Code: -31129588 (0xFE25000C) Description: SOCKETSUPPORT_ERROR_GETADDRINFO failed to resolve host name VPN.Contoso.com to IPv4 address
-    <Date Time> I/vpnapi  (14530): Message type warning sent to the user: Connection attempt has failed.
-    <Date Time> E/vpnapi  (14530): Function: processIfcData File: ConnectMgr.cpp Line: 3399 Content type (unknown) received. Response type (DNS resolution failed) from VPN.Contoso.com: DNS resolution failed
-    <Date Time> I/vpnapi  (14530): Message type warning sent to the user: Unable to contact VPN.Contoso.com.
-    <Date Time> E/vpnapi  (14530): Function: processIfcData File: ConnectMgr.cpp Line: 3535 Unable to contact VPN.Contoso.com DNS resolution failed
-    <Date Time> I/vpnapi  (14530): Message type error sent to the user: The VPN connection failed due to unsuccessful domain name resolution.
-    ```
+```output
+<Date Time> I/vpnapi  (14530): Message type information sent to the user: Contacting VPN.Contoso.com.
+<Date Time> I/vpnapi  (14530): Initiating VPN connection to the secure gateway https://VPN.Contoso.com
+<Date Time> I/acvpnagent(14592): Using default preferences. Some settings (e.g. certificate matching) may not function as expected if a local profile is expected to be used. Verify that the selected host is in the server list section of the profile and that the profile is configured on the secure gateway.
+<Date Time> I/acvpnagent(14592): Function: processConnectNotification File: MainThread.cpp Line: 14616 Received connect notification (host VPN.Contoso.com, profile N/A)
+<Date Time> W/acvpnagent(14592): Function: getHostIPAddrByName File: SocketSupport.cpp Line: 344 Invoked Function: ::getaddrinfo Return Code: 11 (0x0000000B) Description: unknown 
+<Date Time> W/acvpnagent(14592): Function: resolveHostName File: HostLocator.cpp Line: 710 Invoked Function: CSocketSupport::getHostIPAddrByName Return Code: -31129588 (0xFE25000C) Description: SOCKETSUPPORT_ERROR_GETADDRINFO 
+<Date Time> W/acvpnagent(14592): Function: ResolveHostname File: HostLocator.cpp Line: 804 Invoked Function: CHostLocator::resolveHostName Return Code: -31129588 (0xFE25000C) Description: SOCKETSUPPORT_ERROR_GETADDRINFO failed to resolve host name VPN.Contoso.com to IPv4 address
+<Date Time> I/vpnapi  (14530): Message type warning sent to the user: Connection attempt has failed.
+<Date Time> E/vpnapi  (14530): Function: processIfcData File: ConnectMgr.cpp Line: 3399 Content type (unknown) received. Response type (DNS resolution failed) from VPN.Contoso.com: DNS resolution failed
+<Date Time> I/vpnapi  (14530): Message type warning sent to the user: Unable to contact VPN.Contoso.com.
+<Date Time> E/vpnapi  (14530): Function: processIfcData File: ConnectMgr.cpp Line: 3535 Unable to contact VPN.Contoso.com DNS resolution failed
+<Date Time> I/vpnapi  (14530): Message type error sent to the user: The VPN connection failed due to unsuccessful domain name resolution.
+```
 
-### Example 2: How to view logs in the AnyConnect app on iOS devices
+### [View logs on iOS devices](#tab/ios)
 
 1. To view user certificate, select **Diagnostics** > **Certificates**.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificates.png" alt-text="Screenshot shows imported certificates.":::
 
-1. To view log messages, select **Diagnostics**, enable the **VPN Debug Logs** option to enable logging, then select **Logs**.
-
-    :::image type="content" source="media/troubleshoot-vpn-profiles/vpn-dubug-logs.png" alt-text="Screenshot shows the VPN Debug Logs option.":::
+1. To view log messages, select **Diagnostics**, enable the **VPN Debug Logs** option to enable logging, and then select **Logs**.
 
     - To display the service debug log messages, select **Service**.
     - To display the application debug log messages, select **App**.
+
+    :::image type="content" source="media/troubleshoot-vpn-profiles/vpn-dubug-logs.png" alt-text="Screenshot shows the VPN Debug Logs option.":::
 
 1. To send logs, select **Share Logs** in the **Diagnostics** window, enter the information about the problem, and then select **Send**.
 
@@ -437,7 +442,7 @@ Typically, this issue isn't an Intune issue. There can be multiple causes of a c
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/debug-log-files.png" alt-text="Screenshot shows the folder that has the debug log files.":::
 
-Sample log snippet of the *AnyConnect_App_Debug_Logs.txt* file that shows the VPN profile:
+Sample log of the *AnyConnect_App_Debug_Logs.txt* file that shows the VPN profile:
 
 ```output
 [<Date Time>] Info: Function: SaveSettings File: AppleVpnConfig.mm Line: 198 SaveSettings {type = mutable dict, count = 3, entries => 0 : {contents = "RemoteAddress"} = {contents = "Contoso.com"} 1 : {contents = "AuthenticationMethod"} = {contents = "Certificate"} 2 : {contents = "LocalCertificate"} = <69646e74 00000000 000002d3> }
@@ -447,7 +452,7 @@ Sample log snippet of the *AnyConnect_App_Debug_Logs.txt* file that shows the VP
 [<Date Time>] Info: Function: -[AppleVpnConfigBatch startBatchSaveToSystem] File: AppleVpnConfigBatch.mm Line: 36 completed!.
 ```
 
-Sample log snippet of the *AnyConnect_Messages.txt* file that shows VPN connection failure:
+Sample log of the *AnyConnect_Messages.txt* file that shows VPN connection failure:
 
 ```output
 [<Date Time>] [VPN] - Contacting Contoso.com.
@@ -456,7 +461,7 @@ Sample log snippet of the *AnyConnect_Messages.txt* file that shows VPN connecti
 [<Date Time>] [VPN] - Connection attempt has timed out. Please verify Internet connectivity.
 ```
 
-Sample log snippet of the *AnyConnect_Plugin_Debug_Logs.txt* file that shows VPN connection failure:
+Sample log of the *AnyConnect_Plugin_Debug_Logs.txt* file that shows VPN connection failure:
 
 ```output
 [<Date Time>] Info: Message type information sent to the user: Contacting Contoso.com.
@@ -476,7 +481,7 @@ Sample log snippet of the *AnyConnect_Plugin_Debug_Logs.txt* file that shows VPN
 
 ## More Information
 
-If you're still looking for a solution to a related issue, or if you want more information about Microsoft Intune, post a question in the [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of the development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
+If you're still looking for a solution to a related issue, or if you want more information about Microsoft Intune, post a question in the [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod%2Cwindowsintuneprod&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of the development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
 
 If you want to open a support request to the Microsoft Intune product support team, see [How to get support for Microsoft Intune](/intune/get-support).
 
