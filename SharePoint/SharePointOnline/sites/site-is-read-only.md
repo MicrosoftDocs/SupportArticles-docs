@@ -32,6 +32,9 @@ There are many scenarios that can cause one of these messages during SharePoint 
 
 ## Automated troubleshooting
 
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account and is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with sites that have the error messages mentioned above. To populate the diagnostic in the Microsoft 365 Admin Center and try to unlock the site, select Run Tests:
 
 > [!div class="nextstepaction"]
