@@ -24,7 +24,7 @@ This article provides steps to resolve issues where an Active Directory domain c
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, the screenshot shows that the VM needs to restart because of an error, displaying the stop code **0xC00002E1** in Windows Server 2008 R2, or **0xC00002E2** in Windows Server 2012 or later.
 
-![Windows Server 2012 startup screen states "Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.".](./media/troubleshoot-directory-service-initialization-failure/1.png)
+:::image type="content" source="media/troubleshoot-directory-service-initialization-failure/error-0xc00002e2.png" alt-text="Screenshot of an example of the error screen displaying the stop code 0xC00002E2: Your PC ran into a problem and needs to restart.":::
 
 ## Cause
 
@@ -121,7 +121,7 @@ Set up the VM to boot on **Directory Services Restore Mode (DSRM)** mode to bypa
 
    Replace `<Drive Letter>` with the letter determined in the previous steps.
 
-   ![The screenshot shows an elevated CMD instance after entering the command, which displays Windows Boot Manager with the identifier.](./media/troubleshoot-directory-service-initialization-failure/2.png)
+   :::image type="content" source="media/troubleshoot-directory-service-initialization-failure/identifier-output.png" alt-text="Screenshot shows the output of an example of the command in CMD, which displays Windows Boot Manager with the identifier.":::
 
 1. Enable the `safeboot DsRepair` flag on the booting partition:
 
@@ -131,7 +131,7 @@ Set up the VM to boot on **Directory Services Restore Mode (DSRM)** mode to bypa
 
 1. Query the booting options again to ensure that your change was properly set.
 
-   ![The screenshot shows an elevated CMD instance after enabling the safeboot DsRepair flag.](./media/troubleshoot-directory-service-initialization-failure/3.png)
+   :::image type="content" source="media/troubleshoot-directory-service-initialization-failure/safeboot-dsrepair-output.png" alt-text="Screenshot shows the output of the query command after enabling the safeboot DsRepair flag.":::
 
 ### Recommended: before you rebuild the VM, enable serial console and memory dump collection
 
