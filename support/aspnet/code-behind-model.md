@@ -7,7 +7,7 @@ ms.topic: article
 ---
 # ASP.NET Code-behind model overview
 
-This article provides a brief overview of the in-line code and Code-behind model in ASP.NET
+This article provides a brief overview of the in-line code and Code-behind model in ASP.NET.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 303247
