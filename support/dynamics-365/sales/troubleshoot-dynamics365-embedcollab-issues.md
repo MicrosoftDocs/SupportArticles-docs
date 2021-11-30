@@ -25,8 +25,8 @@ When you try to open chat window or start a new chat from dynamics 365 and you s
 
 To change the settings by using GPO, follow these steps:
 
-1. [Download and install the Microsoft Edge administrative template](https://docs.microsoft.com/deployedge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
-1. Add the sites listed in step 3 above to the **Content settings > CookiesAllowedForUrls** setting, either with a mandatory or recommended policy. For more information, see [Set mandatory or recommended policies](https://docs.microsoft.com/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) and [CookiesAllowedForUrls setting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls).
+1. [Download and install the Microsoft Edge administrative template](/deployedge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
+1. Add the sites listed in step 3 above to the **Content settings > CookiesAllowedForUrls** setting, either with a mandatory or recommended policy. For more information, see [Set mandatory or recommended policies](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) and [CookiesAllowedForUrls setting](/deployedge/microsoft-edge-policies#cookiesallowedforurls).
 
 ## Google Chrome
 
