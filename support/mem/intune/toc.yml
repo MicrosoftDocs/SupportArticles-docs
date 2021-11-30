@@ -259,6 +259,8 @@ items:
     href: integrate-cisco-ise-intune.md
   - name: Troubleshoot BitLocker policies
     href: troubleshoot-bitlocker-policies.md
+  - name: Troubleshoot BitLocker in Intune
+    href: troubleshoot-bitlocker-admin-center.md
   - name: Users are prompted to enroll when accessing Office 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
   - name: Windows 10 devices show incorrect compliance status
