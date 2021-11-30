@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157754
+- CI 159067
 search.appverid: 
 - MET150
 appliesto:
@@ -42,10 +43,11 @@ If your subscription is a retail license, see [Office error Account Notice: We'v
 
 <details>
 <summary><b>Redeem a product key</b></summary>
-  
+
 If your purchase of Office or Microsoft 365 came with a product key, see [Where to enter your Office product key](https://support.microsoft.com/office/where-to-enter-your-office-product-key-0a82e5ae-739e-4b92-a6f4-2ec780c185db).
   
 For more information, see [Using product keys with Office](https://support.microsoft.com/office/using-product-keys-with-office-12a5763a-d45c-4685-8c95-a44500213759).
+
 <br/><br/>
 </details>
 
@@ -62,8 +64,9 @@ If you are trying to set up a subscription for a customer, see [Partners: use a 
 
 <details>
 <summary><b>Redeem an Action Pack product key</b></summary>
-  
+
 If you have an Action Pack subscription product key, go to https://portal.office.com/Commerce/ProductKeyStart.aspx, sign in and then enter the product key.
+
 <br/><br/>
 </details>
 
