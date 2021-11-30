@@ -12,6 +12,8 @@ REVISIT AFTER This article provides guidance on how to troubleshoot problems wit
 
 ....discusses common issues when using BitLocker with Intune, and gives steps to help troubleshoot BitLocker encryption on the client side.
 
+For guidance on how to troubleshoot encryption failures in the Microsoft Endpoint Manager admin center, see [Troubleshooting BitLocker with the Intune encryption report](troubleshoot-bitlocker-admin-center).
+
 ## BitLocker encryption process
 The following steps describe the flow of events that should result in a successful encryption of a Windows 10 device that has not been previously encrypted with BitLocker.
 
