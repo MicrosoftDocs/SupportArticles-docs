@@ -905,6 +905,10 @@
     items:
     - name: Connector doesn't handle null strings and dates correctly
       href: dynamics-connector-does-not-handle-null-strings-and-dates-correctly.md
+  - name: Microsoft Teams Integration
+    items:
+    - name: Troubleshoot Microsoft Teams Chat integration with Dynamics 365
+      href: troubleshoot-dynamics365-embedcollab-issues.md
   - name: Mobile Apps
     items:
     - name: We can't find any apps for your role
