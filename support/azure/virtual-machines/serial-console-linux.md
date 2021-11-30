@@ -39,7 +39,7 @@ For Serial Console documentation for Windows, see [Serial Console for Windows](.
 
 - Your VM or virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
 
-    :::image type="content" source="media/serial-console-linux/virtual-machine-serial-console-diagnostics-settings.png" alt-text="Screenshot of the Diagnostics settings page in Azure portal. The Boot diagnostics option is enabled.":::
+    :::image type="content" source="media/serial-console-linux/diagnostics-settings.png" alt-text="Screenshot of the Diagnostics settings page in Azure portal. The Boot diagnostics option is enabled.":::
 
 - For settings specific to Linux distributions, see [Serial console Linux distribution availability](#serial-console-linux-distribution-availability).
 
@@ -51,6 +51,7 @@ For Serial Console documentation for Windows, see [Serial Console for Windows](.
 > You can also reset the administrator password in your account by [using GRUB to boot into single user mode](./serial-console-grub-single-user-mode.md).
 
 ## Serial Console Linux distribution availability
+
 For the serial console to function properly, the guest operating system must be configured to read and write console messages to the serial port. Most [Endorsed Azure Linux distributions](/azure/virtual-machines/linux/endorsed-distros) have the serial console configured by default. Selecting **Serial console** in the **Help** section of the Azure portal provides access to the serial console.
 
 > [!NOTE]
@@ -67,6 +68,7 @@ SUSE        | Newer SLES images available on Azure have serial console access en
 Oracle Linux        | Serial console access enabled by default.
 
 ### Custom Linux images
+
 To enable the serial console for your custom Linux VM image, enable console access in the file */etc/inittab* to run a terminal on `ttyS0`. For example: `S0:12345:respawn:/sbin/agetty -L 115200 console vt102`. You may also need to spawn a getty on ttyS0. This can be done with `systemctl start serial-getty@ttyS0.service`.
 
 You will also want to add ttys0 as the destination for serial output. For more information on configuring a custom image to work with the serial console, see the general system requirements at [Create and upload a Linux VHD in Azure](/azure/virtual-machines/linux/create-upload-generic#general-linux-system-requirements).
@@ -90,36 +92,45 @@ By default, all subscriptions have serial console access enabled. You can disabl
 ## Serial console security
 
 ### Access security
+
 Access to the serial console is limited to users who have an access role of [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) or higher to the virtual machine. If your Azure Active Directory tenant requires multi-factor authentication (MFA), then access to the serial console will also need MFA because the serial console's access is through the [Azure portal](https://portal.azure.com).
 
 ### Channel security
+
 All data that is sent back and forth is encrypted on the wire.
 
 ### Data Storage and Encryption
+
 Azure Serial Console does not review, inspect, or store any of the content which is transmitted in and out of the virtual machine serial port.  No data is stored, therefore there is no data to encrypt.  Additionally, [host-based encryption](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) is used to ensure that any in-memory data paged to disk by virtual machines that run the service is also encrypted. This host-based encryption occurs for all Azure Serial Console connections and is enabled by default.
 
 ### Audit logs
+
 All access to the serial console is currently logged in the [boot diagnostics](./boot-diagnostics.md) logs of the virtual machine. Access to these logs are owned and controlled by the Azure virtual machine administrator.
 
 > [!CAUTION]
 > No access passwords for the console are logged. However, if commands run within the console contain or output passwords, secrets, user names, or any other form of personally identifiable information (PII), those will be written to the VM boot diagnostics logs. They will be written along with all other visible text, as part of the implementation of the serial console's scroll back function. These logs are circular and only individuals with read permissions to the diagnostics storage account have access to them. If you are inputting any dataor commands that contain secrets or PII, we would recommend using SSH unless serial console is absolutely necessary.
 
 ### Concurrent usage
+
 If a user is connected to the serial console and another user successfully requests access to that same virtual machine, the first user will be disconnected and the second user connected to the same session.
 
 > [!CAUTION]
 > This means that a user who's disconnected won't be logged out. The ability to enforce a logout upon disconnect (by using SIGHUP or similar mechanism) is still on the roadmap. For Windows there is an automatic timeout enabled in Special Administrative Console (SAC); however, for Linux you can configure the terminal timeout setting. To do so, add `export TMOUT=600` in your *.bash_profile* or *.profile* file for the user you use to sign in to the console. This setting will time out the session after 10 minutes.
 
 ## Accessibility
+
 Accessibility is a key focus for the Azure Serial Console. To that end, we've ensured that the serial console is fully accessible.
 
 ### Keyboard navigation
+
 Use the **Tab** key on your keyboard to navigate in the serial console interface from the Azure portal. Your location will be highlighted on screen. To leave the focus of the serial console window, press **Ctrl**+**F6** on your keyboard.
 
 ### Use Serial Console with a screen reader
+
 The serial console has screen reader support built in. Navigating around with a screen reader turned on will allow the alt text for the currently selected button to be read aloud by the screen reader.
 
 ## Known issues
+
 We're aware of some issues with the serial console and the VM's operating system. Here's a list of these issues and steps for mitigation for Linux VMs. These issues and mitigations apply for both VMs and virtual machine scale set instances. If these don't match the error you're seeing, see the common serial console service errors at [Common Serial Console errors](./serial-console-errors.md).
 
 Issue                           |   Mitigation
@@ -168,6 +179,7 @@ A. Yes, it is! See [Serial Console for Virtual Machine Scale Sets](serial-consol
 A. Yes. Because the serial console doesn't require SSH keys, you only need to set up a username/password combination. You can do so by selecting **Reset password** in the Azure portal and using those credentials to sign in to the serial console.
 
 ## Next steps
+
 * Use the serial console to [access GRUB and single user mode](serial-console-grub-single-user-mode.md).
 * Use the serial console for [NMI and SysRq calls](serial-console-nmi-sysrq.md).
 * Learn how to use the serial console to [enable GRUB in various distros](serial-console-grub-proactive-configuration.md)
