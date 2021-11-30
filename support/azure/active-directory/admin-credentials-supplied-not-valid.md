@@ -45,11 +45,11 @@ To check whether an account has enterprise admin permissions, follow these steps
 
 3. In the **Name** box, type enterprise admins, and then click **Find Now**.
 
-    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/type-name-find-now.png" alt-text="Screenshot to type enterprise admins in the Name box, and then click the Find Now option.":::
+    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/type-name-find-now.png" alt-text="Screenshot to type enterprise admins in the Name box, and then click the Find Now option." border="false":::
 
 4. Double-click **Enterprise Admins**, and then click the **Members** tab.
 
-    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/enterprise-admins-properties.png" alt-text="Screenshot to double-click the Enterprise Admins item, and then select the Members tab.":::
+    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/enterprise-admins-properties.png" alt-text="Screenshot to double-click the Enterprise Admins item, and then select the Members tab." border="false":::
 
 5. Check whether the user is listed in the **Members** list. If the user isn't in the list, one of the members of this list must log on and add the user to this list. Or, a member of this list can use their credentials in the Directory Sync Tool Configuration Wizard.
 
