@@ -221,7 +221,7 @@ This is expected behavior. Existing members of the group are removed when a rule
 
 ### You don't see membership changes instantly after updating a rule<a id="17"></a>
 
-Membership evaluation is done periodically in an background process. How long the process takes is determined by multiple factors.
+Membership evaluation is done periodically in a background process. How long the process takes is determined by multiple factors.
 
 ### Force the group to be processed now<a id="18"></a>
 
