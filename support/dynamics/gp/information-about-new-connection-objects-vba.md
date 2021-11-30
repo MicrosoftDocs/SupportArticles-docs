@@ -1,7 +1,6 @@
 ---
 title: Information about the new connection objects in VBA
 description: This article describes the new connection objects that were added to VBA from the GPConn.dll file in Microsoft Dynamics GP 10.0.
-ms.topic: article
 ms.reviewer: dclauson
 ms.date: 03/31/2021
 ---

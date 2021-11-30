@@ -2,7 +2,6 @@
 title: Reports to view HR Attendance balances for Employees
 description: Introduces the reports that you can use to view HR Attendance balances for Employees in Microsoft Dynamics GP.
 ms.reviewer: Cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Reports that can be used to view HR Attendance balances for Employees

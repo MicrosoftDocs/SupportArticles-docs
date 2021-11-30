@@ -2,7 +2,6 @@
 title: Process that you must complete before you post multicurrency intercompany transactions in Microsoft Dynamics GP
 description: Description of the process that you must complete before you post multicurrency intercompany transactions in Microsoft Dynamics GP.
 ms.reviewer: lmuelle, ryanklev
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the process that you must complete before you post multicurrency intercompany transactions in Microsoft Dynamics GP

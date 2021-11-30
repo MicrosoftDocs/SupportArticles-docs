@@ -1,7 +1,6 @@
 ---
 title: Description of the date that's used for the invoice date when you transfer a quote to an invoice or when you transfer an order to an invoice in Microsoft Dynamics GP
 description: Description of the date that is used for the invoice date when you transfer a quote to an invoice or when you transfer an order to an invoice in Microsoft Dynamics GP.
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the date that is used for the invoice date when you transfer a quote to an invoice or when you transfer an order to an invoice in Microsoft Dynamics GP

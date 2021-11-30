@@ -2,7 +2,6 @@
 title: Available transactions in Inventory Control
 description: Description of the transactions that are available in Inventory Control in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the transactions that are available in Inventory Control in Microsoft Dynamics GP

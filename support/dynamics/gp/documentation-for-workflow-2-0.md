@@ -2,7 +2,6 @@
 title: Documentation for Workflow 2.0 in Dynamics GP
 description: Documentation for Workflow 2.0 in Microsoft Dynamics GP 2013 R2 and later versions.
 ms.reviewer: Theley, cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Documentation for Workflow 2.0 in Microsoft Dynamics GP
