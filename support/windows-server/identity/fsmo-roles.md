@@ -79,7 +79,7 @@ Each Windows DC in a domain is allocated a pool of RIDs that it's allowed to ass
 #### Initial replication and connectivity requirements
 
 - This FSMO role holder is active only when the role owner has inbound replicated the domain NC successfully since the Directory Service started.
-- DCs contact the FSMO role holder when they retrieve a new RID pool.
+- DCs contact the FSMO role holder when they retrieve a new RID pool. The new RID pool is delivered to DCs through AD replication.
 
 ### PDC emulator FSMO role
 
