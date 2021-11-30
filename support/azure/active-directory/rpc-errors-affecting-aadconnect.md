@@ -24,7 +24,7 @@ For these types of errors, Application events include information about the RPC 
 
 ### Example 1
 
-![Application events include information about the RPC error](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-error-1722.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/rpc-error-1722.png" alt-text="Screenshot shows that the application events include information about the R P C error 1722." lightbox="media/rpc-errors-aadconnect/rpc-error-1722.png":::
 
 Snippet from the Application error event seen in the previous image:
 
@@ -55,7 +55,7 @@ The error in Example 1 is a common networking related error for which troublesho
 
 In this scenario, investigating a network trace reveals retransmit packets being sent for communication with destination **port 135**, so traffic on this port is being blocked on the destination server.
 
-![Traffic is being blocked on the destination server](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-bad-checksum.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/traffic-block.png" alt-text="Screenshot shows that traffic is being blocked on the destination server." lightbox="media/rpc-errors-aadconnect/traffic-block.png":::
 
 These errors can manifest intermittently, which adds complexity to the process of collecting data, like a network trace, for investigation and troubleshooting.
 
@@ -84,11 +84,11 @@ The following steps allow you to automatically collect a network trace, when the
 
 3. Attach a task that runs the cmd file created in the previous step to the event that is generated when the issue reproduces. That will trigger the ping command that stops the trace.
 
-   ![Attach a task to an event](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-attach-task.jpg)
+   :::image type="content" source="media/rpc-errors-aadconnect/attach-task.png" alt-text="Screenshot to attach a task that runs the cmd file created in the previous step to the event.":::
 
 ### Example 2
 
-   ![Event Properties - Event 611](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-error-8333.jpg)
+   :::image type="content" source="media/rpc-errors-aadconnect/rpc-error-8333.png" alt-text="Screenshot shows that application events include information about the R P C error 8333.":::
 
 Snippet from the Application error event seen in the previous image:
 
@@ -123,7 +123,7 @@ More detailed information and troubleshooting guidance can be found in [Windows 
 
 ### Example 3
 
-![An unexpected error occurred during a password set operation](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-failed-0x6ba.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/error-failed-0x6ba.png" alt-text="Screenshot shows an unexpected error occurred during a password setting operation.":::
 
 Snippet from the Application error event seen in the previous image:
 
@@ -167,7 +167,7 @@ The error **"0x6ba"** translates to an **"RPC Server Unavailable" error 1722**. 
 
 Another example with the RPC error represented in its hexadecimal form:
 
-![The RPC error represented in its hexadecimal form](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-failed-0x5.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/error-failed-0x5.png" alt-text="Screenshot shows an example with the R P C error represented in its hexadecimal form.":::
 
 In this case, the error returned **"0x5"** translates to an access denied error:
 
