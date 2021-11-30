@@ -1,5 +1,6 @@
 ---
 title: Use Saved property to determine if workbook has changed
+description: Describes how to use Saved property to determine if a workbook has changed and provides sample macros.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -20,7 +21,7 @@ appliesto:
 
 ## Summary
 
-You can determine if changes have been made to a workbook by checking the Saved property of the workbook. The Saved property returns a True or False value depending on whether changes have been made to the workbook. 
+You can determine if changes have been made to a workbook by checking the Saved property of the workbook. The Saved property returns a True or False value depending on whether changes have been made to the workbook.
 
 > [!NOTE]
 > It is possible to set the Saved property to True or False. The "More Information" section of this article contains sample macros that demonstrate the use of the Saved property.

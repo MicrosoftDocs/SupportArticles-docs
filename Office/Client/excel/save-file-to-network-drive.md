@@ -1,5 +1,6 @@
 ---
 title: Programmatically save an excel file to a network drive
+description: Describes how to save a file to a network drive programmatically and use macro to save the active workbook and use a variable for the file name.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
