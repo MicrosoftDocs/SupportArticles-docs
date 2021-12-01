@@ -45,4 +45,4 @@ To fix this issue, change the registry key for the update display name. To do th
    **Microsoft Exchange Server 2013 Cumulative Update 22**  
 5. Select **OK** to save the change.
 
-   :::image type="content" source="media//cumulative-update-20-is-shown-not-22/change-version-string-in-registry.png" alt-text="screenshot of changing Exchange server version in registry" border="false":::
+   :::image type="content" source="media/cumulative-update-20-is-shown-not-22/change-registry-key.png" alt-text="Screenshot shows steps to change the registry key for the update display name.":::

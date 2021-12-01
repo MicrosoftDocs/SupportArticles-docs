@@ -35,7 +35,7 @@ ID: **660d4be7-2665-497f-9611-a42c2668dbce**
 > [!NOTE]
 > If you have a long list of applications, consider searching on "Microsoft Fluid."
 
-![screenshot of Microsoft Fluid Framework Preview properties tab](./media/manage-fluid-framework-preview-access/properties.png)
+:::image type="content" source="media/manage-fluid-framework-preview-access/fluid-preview-experience.png" alt-text="Screenshot of the Microsoft Fluid Framework Preview Properties page." lightbox="media/manage-fluid-framework-preview-access/fluid-preview-experience.png":::
 
 ## Create a missing Microsoft Fluid Framework service principal
 
