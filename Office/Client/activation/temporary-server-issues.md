@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157597
+- CI 159115
 search.appverid: 
 - MET150
 appliesto:
@@ -45,7 +46,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 
 <details>
 <summary><b>Sign out of Office and sign back in</b></summary>
-  
+
 1.	Open an Office app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.
@@ -84,7 +85,7 @@ If you have a third-party antivirus app installed, temporarily disable it or uni
 <summary><b>Check whether you're behind a proxy server</b></summary>
 
 Are you behind a proxy server? If you're not sure, ask your administrator. If so, you (or your administrator) might have to change the proxy settings for Windows HTTP clients. To do this, follow these steps:
-  
+
 1.	Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
 1.	Type the following command, and then press Enter:
 `netsh winhttp set proxy < Address of proxy server >`
@@ -129,7 +130,7 @@ For more information about Microsoft 365 Apps for enterprise URLs and IP address
 
 <details>
 <summary><b>Reset Microsoft Edge settings</b></summary>
-  
+
 **Important**
   
 Resetting Edge settings might cause certain webpages that rely on custom settings to not work properly.
