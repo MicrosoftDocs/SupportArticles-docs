@@ -21,7 +21,7 @@ This article was written by [Warren Rath](https://social.technet.microsoft.com/p
 
 ## Symptoms
 
-When you use a custom multi-factor authentication login page that uses DUO API with the Office application, the login page will flicker for a moment before disappearing, and you receive the following error message:
+When you use a custom multi-factor authentication login page that uses DUO API with the Office application, the login page will flicker for a moment before it disappears, and you receive the following error message:
 
 > Your organization's policies are preventing us from completing this action for you.  For more info, please contact your help desk.
 
@@ -35,11 +35,11 @@ When the DUO iframe is loaded from the "duo.form.login.template.html" file, the 
 <iframe id="duo_iframe" width="100%" height="350px" frameborder="0">
 ```
 
-Notice that the src attribute of the Iframe element is missing. This causes that the iFrame loads the URL about:blank (The Iframe src attribute is set later in the Duo-Web-v2.js file).
+Notice that the src attribute of the Iframe element is missing. It causes that the iFrame loads the URL "about:blank" (The Iframe src attribute is set later in the Duo-Web-v2.js file).
 
-For security reasons, Office does not allow navigation to any non-https end point within the web view that is shown to capture user credentials. The lack of the src attribute causes the embedded browser to load "about:blank" in the IFRAME.
+For security reasons, Office doesn't allow navigation to any non-https end point within the web view that is shown to capture user credentials. The lack of the src attribute causes the embedded browser to load "about:blank" in the IFRAME.
 
-Because data is not based on HTTPS, Office can't allow such navigation to occur.
+Because data isn't based on HTTPS, Office can't allow such navigation to occur.
 
 ## Workaround
 
