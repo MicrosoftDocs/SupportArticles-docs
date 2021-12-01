@@ -25,6 +25,12 @@ search.appverid: MET150
 
 When you send an email that requests a read receipt to a mail-enabled public folder, you don't receive a read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
 
+This issue occurs if you set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis. To check the parameter value, run the following cmdlet:
+
+```powershell
+Get-PublicFolder -Identity \MyPublicFolder | FL *PerUserReadStateEnabled*
+```
+
 ## Status
 
 This is a known issue of read receipts. Microsoft is researching this problem and will post more information in this article when the information becomes available.
