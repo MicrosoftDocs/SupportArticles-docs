@@ -4,9 +4,12 @@ description: Describes tips for distributing a software or update package to Win
 ms.date: 05/11/2020
 ms.prod-support-area-path: Software distribution
 ---
-# Best practices for Intune software distribution to Windows PC using Silverlight intune (Deprecated)
+# Best practices for Intune software distribution to Windows PC
 
-You can use Microsoft Intune to manage Windows PCs as computers by using the Intune software client [(Deprecated)](https://techcommunity.microsoft.com/t5/intune-customer-success/no-longer-supported-microsoft-intune-silverlight-based-admin/ba-p/916249). This article provides tips and best practices for using Intune to make software deployments to Windows PC clients. Intune deploys only software that can be installed silently without user interaction.
+> [!NOTE]
+> Starting from October 16, 2020, [Microsoft Intune Silverlight-based admin console is no longer supported](https://techcommunity.microsoft.com/t5/intune-customer-success/no-longer-supported-microsoft-intune-silverlight-based-admin/ba-p/916249).
+
+You can use Microsoft Intune to manage Windows PCs as computers by using the Intune software client. This article provides tips and best practices for using Intune to make software deployments to Windows PC clients. Intune deploys only software that can be installed silently without user interaction.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 2583929
