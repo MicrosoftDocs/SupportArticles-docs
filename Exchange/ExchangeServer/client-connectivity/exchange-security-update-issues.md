@@ -76,7 +76,7 @@ Reinstall the security update from an elevated command prompt.
 1. Select **Start**, and then type **cmd**.
 1. Right-click **Command Prompt** from the search results, and then select **Run as administrator**.
 1. If the **User Account Control** window appears, select the option to open an elevated Command Prompt window, and then select **Continue**.
-   If the UAC window doesn’t appear, continue to the next step.
+   If the UAC window doesn't appear, continue to the next step.
 1. Type the full path of the .msp file for the security update, and then press **Enter**.
 1. After the update installs, restart the server.
 
@@ -136,7 +136,7 @@ A blank page displays when you log in to the Exchange Admin Center (EAC) or OWA 
 This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the following problems:  
 
 - The binding is installed incorrectly  
-- The binding doesn’t have a certificate assigned.  
+- The binding doesn't have a certificate assigned.  
 - The binding contains incorrect information.  
 
 **Resolution:**
@@ -322,11 +322,11 @@ Check the state of the services. If they are **Disabled**, set them to **Automat
 
 You receive the following error message during Setup in the Setup logs:
 
-> Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role isn’t installed on this computer.
+> Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role isn't installed on this computer.
 
 **Resolution:**
 
-Download and run the Exchange Setup log reviewer script [SetupLogReviewer.ps1](https://aka.ms/ExSetupScripts). This script reviews the ExchangeSetup.log, determines whether this error is a known issue and presents an action you can take to resolve the issue.
+Download and run the Exchange Setup log reviewer script [SetupLogReviewer.ps1](https://github.com/microsoft/CSS-Exchange/releases/latest/download/SetupLogReviewer.ps1). This script reviews the ExchangeSetup.log, determines whether this error is a known issue and presents an action you can take to resolve the issue.
 After you download the script, point it to the Exchange Setup log as shown below and review the output.
 
 ````powershell
@@ -353,7 +353,7 @@ To find the Domain Controller (DC) which holds the schema master, run the follow
 
 **Issue:**
 
-When you install the update rollup on a computer that isn’t connected to the internet, you may experience a long installation delay. Additionally, you may receive the following error message:
+When you install the update rollup on a computer that isn't connected to the internet, you may experience a long installation delay. Additionally, you may receive the following error message:
 
 > Creating Native images for .Net assemblies.
 
@@ -363,7 +363,7 @@ This issue is caused by the network requests to connect to the following URL:
 
 ``http://crl.microsoft.com/pki/crl/products/CodeSigPCA.crl``
 
-The network requests are attempts to access the Certificate Revocation List for each assembly for which Native image generation (Ngen) compiles to native code. Because the server that’s running Exchange Server isn’t connected to the internet, each request must wait to time out before the process can continue.
+The network requests are attempts to access the Certificate Revocation List for each assembly for which Native image generation (Ngen) compiles to native code. Because the server that's running Exchange Server isn't connected to the internet, each request must wait to time out before the process can continue.
 
 **Resolution:**
 
@@ -371,12 +371,12 @@ Do the following:
 
 1. In Internet Explorer, select **Tools** > **Internet Options**.
 2. Select the **Advanced** tab.
-3. In the **Security** section, clear the **Check for publisher’s certificate revocation** check box, and then select **OK**.
+3. In the **Security** section, clear the **Check for publisher's certificate revocation** check box, and then select **OK**.
 
     > [!NOTE]
     > Clear this security option only if the computer is in a tightly-controlled environment.
   
-4. After the Setup process completes, select the **Check for publisher’s certificate revocation** check box again.
+4. After the Setup process completes, select the **Check for publisher's certificate revocation** check box again.
 
 [Back to top](#summary)
 
@@ -420,12 +420,12 @@ This error message may also display on a server that has no IUs installed but is
 
 1. In Internet Explorer, select **Tools** > **Internet Options**.
 2. Select the **Advanced** tab.
-3. In the **Security** section, clear the **Check for publisher’s certificate revocation** check box, and then select **OK**.
+3. In the **Security** section, clear the **Check for publisher's certificate revocation** check box, and then select **OK**.
 
     > [!NOTE]
     > Clear this security option only if the computer is in a tightly-controlled environment.
   
-4. After the Setup process completes, select the **Check for publisher’s certificate revocation** check box again.
+4. After the Setup process completes, select the **Check for publisher's certificate revocation** check box again.
 
 [Back to top](#summary)
 
@@ -493,7 +493,7 @@ When you run either Exchange setup or the PrepareAD command, the process fails w
 
 **Cause:**
 
-This issue occurs because “otherWellKnownObjects”, the object referenced in the error, is no longer in Active Directory. So the link to the object needs to be removed.
+This issue occurs because "otherWellKnownObjects", the object referenced in the error, is no longer in Active Directory. So the link to the object needs to be removed.
 
 **Resolution:**
 
@@ -589,11 +589,11 @@ When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (
 
 If your scenario meets both the following conditions, apply the update rollup on the internet-facing CAS before you apply the update rollup on the non–internet-facing CAS:
 
-- You’re a CAS Proxy Deployment Guidance customer.
+- You're a CAS Proxy Deployment Guidance customer.
 - You have deployed [CAS-CAS proxying](/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)).
 
 > [!NOTE]
-> For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in a specific order.
+> For other Exchange Server 2010 configurations, you don't have to apply the update rollup on your servers in a specific order.
 
 [Back to top](#summary)
 

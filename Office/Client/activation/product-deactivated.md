@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157753
+- CI 159131
 search.appverid: 
 - MET150
 appliesto:
@@ -28,7 +29,7 @@ Try the following troubleshooting methods to solve the problem.
 
 <details>
 <summary><b>Make sure you have the correct Office installed</b></summary>
-  
+
 Go to https://portal.office.com/account to check which Office version and edition you have available.  
   
 If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  

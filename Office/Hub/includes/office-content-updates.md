@@ -2,6 +2,22 @@
 
 
 
+## Week of November 22, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/22/2021 | [How to troubleshoot available resources errors in Excel](/office/troubleshoot/excel/available-resources-errors) | modified |
+| 11/22/2021 | [Open Click-to-Run version of Office on a terminal server](/office/troubleshoot/office-suite-issues/click-to-run-office-on-terminal-server) | modified |
+| 11/23/2021 | [Microsoft 365 Apps activation error The account isn’t associated with this Office product](/office/troubleshoot/activation/account-not-associated-with-office) | added |
+| 11/23/2021 | [Microsoft 365 Apps activation limits](/office/troubleshoot/activation/activation-limits) | added |
+| 11/23/2021 | [Microsoft 365 Apps activation error Your account doesn’t allow editing on a Mac](/office/troubleshoot/activation/doesnt-allow-editing-on-mac) | added |
+| 11/23/2021 | [You currently have not been assigned an office license that includes the Office desktop apps](/office/troubleshoot/activation/license-not-assigned) | added |
+| 11/23/2021 | [We’ve run into a problem with your Office 365 subscription](/office/troubleshoot/activation/run-into-a-problem) | added |
+| 11/25/2021 | [Error "We couldn't start OneNote the last time we tried"](/office/troubleshoot/onenote/couldnt-start-onenote-the-last-time-error) | modified |
+| 11/25/2021 | [File size limit error when you upload files to Sway](/office/troubleshoot/sway/sway-file-size-limit-error) | modified |
+
+
 ## Week of November 15, 2021
 
 
@@ -21,12 +37,3 @@
 | 11/18/2021 | [Office for Mac activation An unknown error has occurred](/office/troubleshoot/activation/mac-unknown-error) | added |
 | 11/18/2021 | [Microsoft 365 Apps activation error Trusted Platform Module malfunctioned](/office/troubleshoot/activation/tpm-malfunctioned) | modified |
 | 11/18/2021 | [Microsoft 365 Apps activation Unlicensed product error](/office/troubleshoot/activation/unlicensed-product-error) | modified |
-
-
-## Week of October 18, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/22/2021 | [Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run](/office/troubleshoot/access/cannot-use-odbc-or-oledb) | modified |
-| 10/22/2021 | [Define relationships between tables in an Access database](/office/troubleshoot/access/define-table-relationships) | modified |

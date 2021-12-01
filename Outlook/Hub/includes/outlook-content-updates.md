@@ -2,25 +2,20 @@
 
 
 
-## Week of October 18, 2021
+## Week of November 22, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 10/20/2021 | [Skype Meeting control is not shown](/outlook/troubleshoot/user-interface/skype-meeting-control-is-not-displayed) | modified |
-
-
-## Week of October 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/5/2021 | [Can't use Send to OneNote add-in to save items from Outlook for iOS](/outlook/troubleshoot/add-ins/cannot-save-to-onenote) | added |
-
-
-## Week of September 20, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/22/2021 | [Hyperlinks are not working](/outlook/troubleshoot/message-body/hyperlinks-not-working-in-outlook) | modified |
+| 11/25/2021 | [Cannot receive tentative meetings requests or responses](/outlook/troubleshoot/calendaring/cannot-receive-requests-of-tentative-meeting-or-responses) | modified |
+| 11/25/2021 | [Delegate gets multiple or duplicate meeting requests](/outlook/troubleshoot/calendaring/delegate-receives-multiple-or-duplicate-meeting-requests) | modified |
+| 11/25/2021 | [The Outlook meeting tracking tab is not updated](/outlook/troubleshoot/calendaring/meeting-tracking-tab-not-updated) | modified |
+| 11/25/2021 | [Information about the Outlook AutoComplete list](/outlook/troubleshoot/contacts/information-about-the-outlook-autocomplete-list) | modified |
+| 11/25/2021 | [You are over Junk E-mail list limit](/outlook/troubleshoot/junk-email/outlook-error-over-junk-emial-list-limit) | modified |
+| 11/25/2021 | [Cannot start Outlook in cached mode](/outlook/troubleshoot/performance/cannot-start-outlook-in-cached-mode-or-create-profile) | modified |
+| 11/25/2021 | [Insufficient memory errors and sent mail stuck](/outlook/troubleshoot/performance/insufficient-memory-errors-when-expanding-mailbox-or-public-folder) | modified |
+| 11/25/2021 | [Default folder is missing](/outlook/troubleshoot/user-interface/default-folder-is-missing) | modified |
+| 11/25/2021 | [Outlook search folders aren't populated in Online mode after migration from Exchange 2013 to 2010](/outlook/troubleshoot/user-interface/outlook-search-folders-issue-online-mode) | modified |
+| 11/25/2021 | [Outlook Search Folders show unexpected mail items with empty subject lines](/outlook/troubleshoot/user-interface/personmetadata-items) | modified |
+| 11/25/2021 | [WPF WebBrowser control doesn't display content correctly in an Office application](/outlook/troubleshoot/user-interface/wpf-webbrowser-control-content-not-display-correctly) | modified |
+| 11/25/2021 | [Open Shared Calendar option is unavailable](/outlook/troubleshoot/calendars/cannot-open-a-shared-calendar-in-outlook-2016) | modified |
