@@ -1,5 +1,6 @@
 ---
 title: PowerPoint cannot load an add-in when you lower macro security level
+description: Describes an issue in which PowerPoint can't load an add-in when you lower the level of macro security.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -22,7 +23,7 @@ appliesto:
 
 When you lower the level of macro security in Microsoft PowerPoint, and then open a PowerPoint add-in file (*.ppa), the new level of macro security may not be applied, and the add-in file may not run as expected. The add-in is listed as an available add-in in the Add-Ins dialog box, but the check box is not selected, and you receive an error message similar to the following when you attempt to select the check box:
 
-**PowerPoint couldn't load the add-in *file name***.
+> PowerPoint couldn't load the add-in *file name*.
 
 ## Cause
 
