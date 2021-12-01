@@ -41,7 +41,7 @@ The issue is caused by the security trimming of the query (filtering based on us
 
 To resolve this issue, ensure that the owner is also a member of that group. All search results will then be visible for the owner of the group.
 
-If you create a group from the admin portal, it's the dialogue you will see:
+If you create a group from the admin portal, it's the dialogue you'll see:
 
 :::image type="content" source="media/search-results-dont-appear/new-group-admin-center.png" alt-text="Screenshot of the New Group form in Microsoft 365 admin center.":::
 
