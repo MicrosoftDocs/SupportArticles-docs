@@ -1,5 +1,5 @@
 ﻿---
-title: Office doesn't render a custom DUO API multi-factor authentication login page
+title: Office doesn't render a custom DUO API multifactor authentication login page
 description: Describes an issue in which Office application doesn't render a custom DUO API multifactor authentication login page.
 author: helenclu
 ms.author: warrenr
@@ -15,13 +15,13 @@ appliesto:
 - Microsoft Office
 ---
 
-# Office doesn't render a custom DUO API multi-factor authentication login page
+# Office doesn't render a custom DUO API multifactor authentication login page
 
 This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
 
 ## Symptoms
 
-When you use a custom multi-factor authentication login page that uses DUO API with the Office application, the login page will flicker for a moment before it disappears. And you receive the following error message:
+When you use a custom multifactor authentication login page that uses DUO API with the Office application, the login page will flicker for a moment before it disappears. And you receive the following error message:
 
 > Your organization's policies are preventing us from completing this action for you.  For more info, please contact your help desk.
 
