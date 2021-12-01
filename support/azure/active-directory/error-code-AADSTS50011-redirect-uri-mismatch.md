@@ -7,7 +7,7 @@ ms.reviewer: arcrowe
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
-# Error AADSTS50011: The redirect URI 'redirect URI sent' specified in the request does not match the redirect URIs configured for the application 'appId'...
+# Error AADSTS50011: The redirect URI 'redirect URI sent' specified in the request does not match the redirect URIs configured for the application 'appId'
 
 This article describes a problem in which you receive the error message "Error AADSTS50011 - The redirect URI \<redirect URI sent\> specified in the request does not match the redirect URIs configured for the application \<GUID\>. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this." when trying to sign into an OIDC-based app that has been integrated with Azure Active Directory (Azure AD).
 
