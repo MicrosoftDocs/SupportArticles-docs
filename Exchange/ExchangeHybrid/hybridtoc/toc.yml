@@ -219,6 +219,8 @@
       href: ../move-mailboxes/cannot-move-items-using-owa.md
     - name: Can't find a recipient that has mailbox GUID error
       href: ../move-mailboxes/migrationpermanentexception-when-moving-mailboxes.md
+    - name: Can't move Exchange Online mailboxes to Exchange Server 2010
+      href: ../move-mailboxes/cannot-migrate-to-exchange-2010.md
     - name: Error when you move mailboxes to or from Office 365
       href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
     - name: Extension number can‎'t be generated
