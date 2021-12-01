@@ -1,6 +1,6 @@
 ---
 title: ErrorMailRecipientNotFound when viewing free/busy information
-description: Fixes ErrorMailRecipientNotFound ResponseCode that occurs when viewing free/busy information of a user in another organization.
+description: Fixes ErrorMailRecipientNotFound response that occurs when viewing free/busy information of a user in another organization.
 author: v-charloz
 audience: ITPro
 ms.service: exchange-online
@@ -21,13 +21,15 @@ appliesto:
 - Exchange Server 2019
 ---
 
-# ErrorMailRecipientNotFound ResponseCode and no free/busy information
+# ErrorMailRecipientNotFound response when viewing free/busy information
 
-When you try to view the free/busy information of a user in another organization using organization relationships, no free/busy information is displayed.
+When you try to view the free/busy information of a user in another organization by using organization relationships, the information isn't displayed.
 
-Additionally, one of the following error messages is displayed with the **ErrorMailRecipientNotFound** ResponseCode in the response body of the `GetUserAvailabilityInternal` action. To view the error message, sign in to Outlook on the Web, open Developer Tools by pressing F12 and select the **Network** tab.
+Additionally, you might see one of the following error messages that is displayed with the **ErrorMailRecipientNotFound** response.
 
 ## Error 1: Unable to resolve e-mail address to an Active Directory object
+
+You try to view the free/busy information for a user in another organization, you receive the following error message:
 
 > Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: **Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
@@ -57,6 +59,8 @@ Get-OrganizationRelationship | ft name, domainnames
     ```
 
 ## Error 2: The organization relationship can't be used
+
+You try to view the free/busy information for a user in another organization, you receive the following error message:
 
 > The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: **The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
 
