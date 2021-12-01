@@ -13,7 +13,7 @@ Microsoft Intune provides a built-in [encryption report](/mem/intune/protect/enc
 This article explains how to use the Intune encryption report to help troubleshoot encryption for BitLocker. For additional troubleshooting guidance, see [Troubleshooting BitLocker policies from the client side](troubleshoot-bitlocker-policies.md).
 
 > [!NOTE]
-> To take full advantage of this troubleshooting method and the error details available in the encryption report, you will need to configure a BitLocker policy. If you are currently using a device configuration policy, consider migrating the policy. For more information, see [Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices) and [Disk encryption policy settings for endpoint security in Intune](mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
+> To take full advantage of this troubleshooting method and the error details available in the encryption report, you will need to configure a BitLocker policy. If you are currently using a device configuration policy, consider migrating the policy. For more information, see [Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices) and [Disk encryption policy settings for endpoint security in Intune](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
 
 ## Encryption prerequisites
 

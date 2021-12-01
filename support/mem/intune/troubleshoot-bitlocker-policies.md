@@ -93,7 +93,7 @@ Another common error in the BitLocker-API log is that the TPM is not available. 
 
 > Error: A compatible Trusted Platform Module (TPM) Security Device cannot be found on this computer.
 
-**Solution:** Ensure there is a TPM available on the device and if it is present check the status via TPM.msc or the PowerShell cmdlet get-tpm.
+**Solution:** Ensure there is a TPM available on the device and if it is present, check the status via TPM.msc or the PowerShell cmdlet get-tpm.
 
 #### Error: Un-Allowed DMA capable bus
 
@@ -219,7 +219,7 @@ In the example above, you can see that the TPM is present and active in the Powe
 
 ### Manage-bde command-line tool
 
-Manage-bde is a BitLocker encryption command line tool included in Windows. It’s designed to help with administration after BitLocker is enabled.
+Manage-bde is a BitLocker encryption command-line tool included in Windows. It’s designed to help with administration after BitLocker is enabled.
 
 - Location: In the Search box, enter **cmd**, right-click and select **Run as administrator**, and then enter **manage-bde -status**.
 - File system location: C:\Windows\System32\manage-bde.exe.
@@ -228,7 +228,7 @@ Manage-bde is a BitLocker encryption command line tool included in Windows. It�
 
 You can use manage-bde to discover the following information about a device:
 
-- Is it encrypted? If reporting in the Microsoft Endpoint Manager admin center indicates a device is not encrypted, this command line tool can identify the encryption status.
+- Is it encrypted? If reporting in the Microsoft Endpoint Manager admin center indicates a device is not encrypted, this command-line tool can identify the encryption status.
 - Which encryption method has been used? You can compare information from the tool to the encryption method in the policy to make sure they match. For example, if the Intune policy is configured to XTS-AES 256-bit and the device is encrypted using XTS-AES 128-bit, this will result in errors in Microsoft Endpoint Manager admin center policy reporting.
 - What specific protectors are being used? There are several [combinations of protectors](/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies). Knowing which protector is used on a device will help you understand if the policy has been applied correctly.
 
@@ -283,16 +283,16 @@ This is an example of the FVE registry key:
   - 4 = AES-CBC 256
   - 6 = XTS-AES 128
   - 7 = XTS-AES 256
-- **B:** UseTPM, UseTPMKey, UseTPMKeyPIN, USeTPMPIN are all set to 2,which means they are all set to allow.
+- **B:** UseTPM, UseTPMKey, UseTPMKeyPIN, USeTPMPIN are all set to 2, which means they are all set to allow.
 - **C:** Notice that most of the keys are divided into groups of settings for the operating system drive (OS), fixed drive (FDV) and removable drive (FDVR).
 - **D:** OSActiveDirectoryBackup has a value of 1 and is enabled.
 - **E:** OSHideRecoveryPage is equal to 0 and not enabled.
 
 Use the [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-csp) to decode all of the setting names in the registry.
 
-### REAgentC.exe command line tool
+### REAgentC.exe command-line tool
 
-REAgentC.exe is a command line executable tool that you can use to configure the Windows Recovery Environment (Windows RE). WinRE is a prerequisite for enabling BitLocker in certain scenarios such as silent or automatic encryption.
+REAgentC.exe is a command-line executable tool that you can use to configure the Windows Recovery Environment (Windows RE). WinRE is a prerequisite for enabling BitLocker in certain scenarios such as silent or automatic encryption.
 
 - Location: Right-click on **Start** > **Run**, enter **cmd**. Then right-click **cmd** and select **Run as administrator** > **reagnetc /info**.
 - File system location: C:\Windows\System32\ReAgentC.exe.
@@ -302,7 +302,7 @@ REAgentC.exe is a command line executable tool that you can use to configure the
 
 :::image type="content" source="media\troubleshoot-bitlocker-policies\reagentc-output.png" alt-text="Output of the ReAgentC.exe command in Command Prompt.":::
 
-If the WinRE status is disabled, it is possible to enable it manually using the following command line as an administrator:
+If the WinRE status is disabled, it is possible to enable it manually using the following command as an administrator:
 
 :::image type="content" source="media\troubleshoot-bitlocker-policies\reagentc-enable.png" alt-text="Example screenshot to enable ReAgentC.exe in Command Prompt. Run the command reagentc /enable":::
 
