@@ -13,11 +13,11 @@ This article describes a problem in which you receive the error message "Error A
 
 ## Symptoms
 
-You receive error `AADSTS50011` when trying to sign into an application that has been set up to use Azure AD for identity management using OIDC or OAuth protocols.
+You receive error `AADSTS50011` when trying to sign into an application that has been set up to use Azure AD for identity management using OIDC or OAuth2 protocols.
 
 ## Cause
 
-When an app tries to sign in an Azure Active Directory user with OIDC or OAuth, the login server (Azure AD) needs to know where to send the authorization code or access token that proves the user has been successfully authenticated.  The app tells Azure AD this location by sending the URI to redirect to, called the 'redirect URI', with the login request.  However, protocol specifications require that the redirect URI the app sends in the request also be registered on the application itself.  You will receive this error if your app sent a redirect URI in the login request that doesn't match any of the redirect URIs registered on your application. 
+When an app tries to sign in an Azure Active Directory user with OIDC or OAuth2, the login server (Azure AD) needs to know where to send the authorization code or access token that proves the user has been successfully authenticated.  The app tells Azure AD this location by sending the URI to redirect to, called the 'redirect URI', with the login request.  However, protocol specifications require that the redirect URI the app sends in the request also be registered on the application itself.  You will receive this error if your app sent a redirect URI in the login request that doesn't match any of the redirect URIs registered on your application. 
 
 ## Resolution
 
@@ -36,7 +36,7 @@ To fix the issue, follow these steps:
 After these steps are done, wait a few minutes and send the log in request again.  You should be able to sign in to the application.
 
 >[!Note]
->The redirect URI is also known as the reply Url. These values depend on what protocol is being used. OIDC and OAuth protocols refer to this value as a redirect URI.
+>The redirect URI is also known as the reply Url. These values depend on what protocol is being used. OIDC and OAuth2 protocols refer to this value as a redirect URI.
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
