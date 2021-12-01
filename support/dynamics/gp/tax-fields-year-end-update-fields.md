@@ -2,7 +2,6 @@
 title: Tax fields and year-end update fields
 description: Describes what the different date fields mean for tax and year-end updates In Microsoft Dynamics GP.
 ms.reviewer: Theley, Dbader
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about the tax fields and year-end update fields in Payroll in Microsoft Dynamics GP

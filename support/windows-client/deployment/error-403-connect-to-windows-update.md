@@ -65,7 +65,7 @@ For information about how to reset the Hosts file to the default Hosts file, see
 1. Go to the [Microsoft Download Center](https://www.microsoft.com/download/en/search.aspx?q=windows%20script%205.7).
 2. Click the Update symbol next to the update for your version of Windows.
 
-    ![Update symbol](./media/error-403-connect-to-windows-update/update-symbol.png)
+    :::image type="icon" source="media/error-403-connect-to-windows-update/update-symbol.png":::
 
 3. Click **Download** (on the right side of the page).
 4. Click **Save to Disk**, and then save the file to the default location.

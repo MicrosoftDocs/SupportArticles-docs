@@ -3,7 +3,7 @@ title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure | 
 description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
 services: virtual-machines
 documentationcenter: ''
-author: glimoli
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: vm-windows
 
 ms.topic: article
 ms.date: 10/11/2020
-ms.author: genli
+ms.author: glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
@@ -30,7 +30,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     -  Operating system: Windows Server 2016 Datacenter
 
-    -  Size: Any V3 series with at least two cores that support nested virtualization. For more information, see [Introducing the new Dv3 and Ev3 VM sizes](https://azure.microsoft.com/blog/introducing-the-new-dv3-and-ev3-vm-sizes/).
+    -  Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
     -  Same location, Storage Account, and Resource Group as the faulty VM.
 
@@ -74,7 +74,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 6.  Type a name for the VM, and then select **Next**.
 
-7.  Select **Generation 1**.
+7.  Select **Generation 1** or **Generation 2** according to the faulty VM generation.
 
 8.  Set the startup memory at 1024 MB or more.
 
@@ -88,7 +88,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 12. Right-click the VM that you created, and then select **Settings**.
 
-13. Select **IDE Controller 0**, select **Hard Drive**, and then click **Add**.
+13. Select **IDE Controller 0** for generation 1 VMs or **SCSI Controller** for generation 2 VMs, select **Hard Drive**, and then click **Add**.
 
     :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/create-new-drive.png" alt-text="Screenshot shows steps to add a new hard drive." border="false":::
 
