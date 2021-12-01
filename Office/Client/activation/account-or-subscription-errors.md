@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157752
+- CI 159119
 search.appverid: 
 - MET150
 appliesto:
@@ -73,7 +74,7 @@ Go to https://portal.office.com/account and select **Security & privacy**. Reset
 
 <details>
 <summary><b>Sign out of Office and sign back in</b></summary>
-  
+
 1.	Open an Office app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.
@@ -85,15 +86,15 @@ Go to https://portal.office.com/account and select **Security & privacy**. Reset
 
 <details>
 <summary><b>Make sure you have the correct Office installed</b></summary>
-  
+
 Go to https://portal.office.com/account to check which Office version and edition you have available.  
-  
+
 If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  
-  
+
 If you have Microsoft 365 for Business Basic, you won’t have any Office applications to install. You can use Office Online apps at https://office.com.
-  
+
 Make sure that the version listed (32-bit or 64-bit) matches your version of Windows. To check what version of Windows you have installed, go to **Start** > **Settings** (gear icon) > **System** > **About**, and check the **System type**.  
-  
+
 If you have a different edition or version installed on your device, run the SaRA package to uninstall Office. Restart the device, and install from https://portal.office.com/account to get the correct version.  
 <br/><br/>
 </details>
@@ -120,13 +121,13 @@ Try the steps in the article Repair an Office application.
 <summary><b>Check whether you're behind a proxy server</b></summary>
 
 Are you behind a proxy server? If you're not sure, ask your administrator. If so, you (or your administrator) might have to change the proxy settings for Windows HTTP clients. To do this, follow these steps:
-  
+
 1.	Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.
 1.	Type the following command, and then press Enter:
 `netsh winhttp set proxy < Address of proxy server >`
-  
+
 You need to allow the URLs and IP addresses in [this list](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true#microsoft-365-common-and-office-online).
-  
+
 You can also allow Microsoft 365 to bypass the proxy server by creating a PAC file. For more information about creating a PAC file, see [Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints).
 <br/><br/>
 </details>
@@ -156,9 +157,9 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
 -	`aadcdn.msauth.net`
 -	`aadcdn.msauthimages.net`
 -	`enterpriseregistration.windows.net`
-  
+
 Each firewall will have a different method to enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you.
-  
+
 For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 <br/><br/>
 </details>
