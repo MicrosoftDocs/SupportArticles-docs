@@ -25,7 +25,7 @@ When you try to activate Microsoft 365 Apps, you might encounter an error that s
 Try the following troubleshooting methods to solve the problem.
 
 **Notes:**
-- If your Microsoft 365 license didn't come from your work, school, or other organization, see [Unlicensed Product and activation errors in Office](https://support.microsoft.com/en-us/office/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380)
+- If your Microsoft 365 license didn't come from your work, school, or other organization, see [Unlicensed Product and activation errors in Office](https://support.microsoft.com/office/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380)
 - Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
 
 <br/>
