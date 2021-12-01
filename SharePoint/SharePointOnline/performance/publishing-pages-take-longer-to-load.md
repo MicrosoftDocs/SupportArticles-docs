@@ -41,7 +41,7 @@ Browse to the affected SharePoint Online site collection.
 
 1. Clear the **Show in Global Navigation Menu** and **Show in Current Navigation Menu** check boxes, and then click **Save**.
 
-    :::image type="content" source="media/publishing-pages-take-longer-to-load/select-visibility-in-menus-option.jpg" alt-text="Screenshot of the Navigation tab. The Show in Global Navigation Menu and Show in Current Navigation Menu boxes are unchecked.":::
+    :::image type="content" source="media/publishing-pages-take-longer-to-load/select-visibility-in-menus-option.png" alt-text="Screenshot of the Navigation tab. The Show in Global Navigation Menu and Show in Current Navigation Menu boxes are unchecked.":::
 
 > [!NOTE]
 > You may also use the EDIT LINKS feature on the page to remove the navigation links. For more information, go to [Customize the navigation on your team site](https://support.office.com/article/customize-the-navigation-on-your-sharepoint-site-3cd61ae7-a9ed-4e1e-bf6d-4655f0bf25ca?ocmsassetID=HA103532378&CorrelationId=f200f54d-a47d-472e-8356-49934f9b1222).
