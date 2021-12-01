@@ -27,15 +27,15 @@ You type text in a cell in Microsoft Excel. The first few characters of the text
 
 In Microsoft Excel, the Auto-Complete feature may not fill in the remaining characters if the algorithm that Excel uses detects a header row in the list.
 
-## More Information
+## More information
 
 ### Example
 
-When you use the steps in the following example, the Auto-Complete feature does not appear to function properly.
+When you use the steps in the following example, the Auto-Complete feature doesn't appear to function properly.
 
 1. Save and close any open workbooks, and then create a new workbook.
 2. In cell A1, type **ABC** in uppercase.
-3. In cell A2, type **a** in lowercase and do not press ENTER.
+3. In cell A2, type **a** in lowercase and don't press ENTER.
 
    The Auto-Complete feature automatically inserts **aBC** in cell A2.
 
@@ -44,8 +44,8 @@ When you use the steps in the following example, the Auto-Complete feature does 
    This overwrites the text that is suggested by Auto-Complete.
 
 5. In cell B1, type **ABC** in uppercase.
-6. In cell B2, type **a** in lowercase and do not press ENTER.
+6. In cell B2, type **a** in lowercase and don't press ENTER.
 
-   The Auto-Complete feature does not automatically suggest "aBC" in cell B2 as it does in step 3.
+   The Auto-Complete feature doesn't automatically suggest "aBC" in cell B2 as it does in step 3.
 
-Because the characters in cell A1 are all uppercase, and the characters in cell A2 are all lowercase, Microsoft Excel determines that row 1 is a list header row. The algorithm for the Auto-Complete feature does not generate suggested text if the first row is considered a list header row. This behavior also occurs if characters in cell A2 are uppercase and lowercase.
+Because the characters in cell A1 are all uppercase, and the characters in cell A2 are all lowercase, Microsoft Excel determines that row 1 is a list header row. The algorithm for the Auto-Complete feature doesn't generate suggested text if the first row is considered a list header row. This behavior also occurs if characters in cell A2 are uppercase and lowercase.
