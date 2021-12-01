@@ -72,10 +72,12 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 1. On the **Settings** blade, click **Backup Infrastructure** in the **Manage** section.
 
 1. Click **Protected Servers** under **Management Servers**, and then select **Azure Backup Agent** as the **Backup Management Type**.
-    :::image type="content" source="media/ars-agent-update-november-2017/protected-servers.png" alt-text="Screenshot of Backup Infrastructure in Azure portal.":::
+
+    :::image type="content" source="media/ars-agent-update-november-2017/protected-servers.png" alt-text="Screenshot of Backup Infrastructure in Azure portal." lightbox="media/ars-agent-update-november-2017/protected-servers.png":::
 
 1. On the blade that appears, select a server for which the Agent version number is earlier than **2.0.9099.0**. On the server's detail blade, click **Connect**. A Remote Desktop Connection file is downloaded that you can use to connect to the server, copy the update installer, and then run the installer to update the MARS Agent on the server.
-    :::image type="content" source="media/ars-agent-update-november-2017/server-detail-blade.png" alt-text="Screenshot of how to update the MARS Agent on the server.":::
+
+    :::image type="content" source="media/ars-agent-update-november-2017/server-detail-blade.png" alt-text="Screenshot shows how to update the MARS Agent on the server." lightbox="media/ars-agent-update-november-2017/server-detail-blade.png":::
 
 1. When you're done updating, you can select other servers that have Agent versions that are earlier than *2.0.9099.0**, and then update the Agents on those servers in the same manner.
 

@@ -33,7 +33,7 @@ The following table outlines the criteria that is used by Windows to assign metr
 
 |Link Speed|Metric|
 |---|---|
-|Greater than or equal to 2 GB|5|
+|Greater than or equal to 2 Gb|5|
 |Greater than 200 Mb|10|
 |Greater than 20 Mb, and less than or equal to 200 Mb|20|
 |Greater than 4 Mb, and less than or equal to 20 Mb|30|
@@ -45,7 +45,7 @@ The following table lists the link speeds and assigned metrics for computers tha
 
 |Link Speed|Metric|
 |---|---|
-|Greater than or equal to 2 GB|5|
+|Greater than or equal to 2 Gb|5|
 |Greater than 200 Mb|10|
 |Greater than 80 Mb, and less than or equal to 200 Mb|20|
 |Greater than 20 Mb, and less than or equal to 80 Mb|25|
@@ -60,7 +60,7 @@ For interfaces with physical medium types NdisPhysicalMediumWirelessLan, NdisPhy
 
 |Link Speed|Metric|
 |---|---|
-|Greater than or equal to 2 GB|25|
+|Greater than or equal to 2 Gb|25|
 |Greater than or equal to 500 Mb and less than 2 Gb|30|
 |Greater than or equal to 200 Mb and less than 500 Mb|35|
 |Greater than or equal to 150 Mb and less than 200 Mb|40|
