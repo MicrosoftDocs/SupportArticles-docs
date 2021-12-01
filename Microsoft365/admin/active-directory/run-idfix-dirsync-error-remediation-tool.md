@@ -1,6 +1,6 @@
 ---
 title: Duplicate is displayed in the ERROR column for two or more objects
-description: Describes how to resolve a problem that occurs when you run the IdFix DirSync Error Remediation Tool in your on-premises Active Directory Domain Services (AD DS) environment.
+description: Fixes a problem that "duplicate" is displayed in the ERROR column when you run the IdFix DirSync Error Remediation Tool in your on-premises AD DS environment.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -34,9 +34,9 @@ This problem occurs if two or more objects have the same email address.
 
 To resolve this problem, specify a unique email address for the object. To do this, follow these steps:
 
-1. In the **UPDATE** column for the object, type an email address that isn't already used.    
-2. In the **ACTION** column, click **EDIT**, and then click **Apply**.   
-3. Run IdFix again to look for more object errors.    
+1. In the **UPDATE** column for the object, type an email address that isn't already used.
+2. In the **ACTION** column, click **EDIT**, and then click **Apply**.
+3. Run IdFix again to look for more object errors.
 
 ## More information
 
