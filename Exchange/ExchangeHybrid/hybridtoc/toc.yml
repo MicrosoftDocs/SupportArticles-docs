@@ -213,6 +213,8 @@
       href: ../move-mailboxes/remote-server-returned-error-403-forbidden.md
     - name: Access is denied error when moving mailboxes
       href: ../move-mailboxes/access-is-denied-error-when-moving-mailboxes.md
+    - name: Can't migrate on-premises primary mailbox with cloud-based archive
+      href: ../move-mailboxes/cannot-migrate-on-premises-primary-mailbox.md
     - name: Can't move mailboxes to Exchange Online
       href: ../move-mailboxes/user-is-already-being-moved-error.md
     - name: Can't use OWA move items in a hybrid deployment
