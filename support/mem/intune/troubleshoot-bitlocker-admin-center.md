@@ -1,16 +1,16 @@
 ---
 title: Troubleshooting BitLocker with the Intune encryption report
-description: How to use the Intune encryption report from the Microsoft Endpoint Manager admin center to troubleshoot encryption failures.
+description: How to troubleshoot encryption failures using the Intune encryption report from the Microsoft Endpoint Manager admin center.
 ms.author: v-dsindona
 author: dsindona88
-ms.reviewer: saurkosh
-ms.date: 11/29/2021
+ms.reviewer: luker
+ms.date: 12/01/2021
 --- 
 # Troubleshooting BitLocker with the Intune encryption report
 
 Microsoft Intune provides a built-in [encryption report](/mem/intune/protect/encryption-monitor) that gives details about encryption status across all managed devices. The Intune encryption report is a useful starting point for troubleshooting encryption failure. You can use the report to identify and isolate BitLocker encryption failures, and see the Trusted Platform Module (TPM) status and encryption status of Windows devices.
 
-This article explains how to use the Intune encryption report to help troubleshoot encryption for BitLocker. For guidance on how to troubleshoot encryption from the client side, see [Troubleshooting BitLocker policies from the client side](troubleshoot-bitlocker-policies.md).
+This article explains how to use the Intune encryption report to help troubleshoot encryption for BitLocker. For additional troubleshooting guidance, see [Troubleshooting BitLocker policies from the client side](troubleshoot-bitlocker-policies.md).
 
 > [!NOTE]
 > To take full advantage of this troubleshooting method and the error details available in the encryption report, you will need to configure a BitLocker policy. If you are currently using a device configuration policy, consider migrating the policy. For more information, see [Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices) and [Disk encryption policy settings for endpoint security in Intune](mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
@@ -111,7 +111,7 @@ If WinRE is disabled, run the reagentc.exe/info command as administrator to enab
 
 The **Status details** page will display the following message if WinRE is not configured correctly:
 
-| The user logged into the device does not have admin rights.
+> The user logged into the device does not have admin rights.
 
 Another reason could be administrative rights. If your BitLocker policy is targeting a user who does not have administrative rights and **Allow standard users to enable encryption during Autopilot** is not enabled, you will see the following encryption status details.
 
