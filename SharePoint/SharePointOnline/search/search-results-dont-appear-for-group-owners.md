@@ -43,13 +43,13 @@ To resolve this issue, ensure that the owner is also a member of that group. All
 
 If you create a group from the admin portal, this is the dialogue you will see:
 
-![The admin portal dialogue box.](media/search-results-dont-appear/search-results-dont-appear-1.png)
+:::image type="content" source="media/search-results-dont-appear/new-group-admin-center.png" alt-text="Screenshot of the New Group form in Microsoft 365 admin center.":::
 
 Here you can define owner of the group. The owner is not automatically added as a member. 
 
 For the owner to be a first-class member of the group, and be able to search for all the content, you must explicitly add the owner as member of the group via the configuration dialogue:
  
-![Explicitly add the owner as a member.](media/search-results-dont-appear/search-results-dont-appear-2.png)
+:::image type="content" source="media/search-results-dont-appear/add-owner-config-dialog.png" alt-text="Screenshot of the Owners and Members fields where you can add the owner in the configuration dialogue of the group.":::
 
 ## More information
 
