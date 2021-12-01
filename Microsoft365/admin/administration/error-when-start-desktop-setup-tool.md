@@ -26,7 +26,7 @@ When you try to start the Office 365 Desktop Setup Tool, you receive the followi
 
 > Cannot continue. The application is improperly formatted. Contact the application vendor for assistance.
 
-:::image type="content" source="media/error-when-start-desktop-setup-tool/start-app-error.png" alt-text="Screenshot of the error message when attempting to start the Office 365 Desktop Setup Tool."":::
+:::image type="content" source="media/error-when-start-desktop-setup-tool/start-app-error.png" alt-text="Screenshot of the error message when attempting to start the Office 365 Desktop Setup Tool.":::
 
 If you click **Details** in the dialog box, you receive a detailed error message that's like the following:
 

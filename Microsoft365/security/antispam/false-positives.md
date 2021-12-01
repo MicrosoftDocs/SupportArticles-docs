@@ -38,7 +38,7 @@ This issue occurs for one of the following reasons:
 
     `contoso.com. IN MX 10 contoso-com.mail.protection.outlook.com`
 
-    An MX record for a domain whose primary MX record doesn't point to EOP resembles the following. (The MX record does not contain "mail.protection.outlook.com.")
+    An MX record for a domain whose primary MX record doesn't point to EOP resembles the following. (The MX record doesn't contain "mail.protection.outlook.com.")
 
     `fabrikam.com. IN MX 10 mail.fabrikam.com`
 
