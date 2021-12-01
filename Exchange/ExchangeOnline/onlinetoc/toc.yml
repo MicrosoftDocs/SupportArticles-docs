@@ -489,6 +489,8 @@
       href: ../public-folders/permissions-settings-not-propagate-eac.md
     - name: Public folder couldn't be mail-enabled
       href: ../public-folders/public-folder-not-be-mail-enabled.md
+    - name: Read receipt isn't sent from public folder
+      href: ../public-folders/public-folder-not-send-read-receipt.md
     - name: Restored folders cause a migration batch failure
       href: ../public-folders/public-folder-migration-batch-error.md
     - name: Show up in address list after removing
