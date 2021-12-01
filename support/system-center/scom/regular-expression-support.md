@@ -90,13 +90,13 @@ Search for any matches to folders located recursively under the two folder paths
 
 ### Example 4
 
-Search for any matches to Windows Computers with display names that match the following (case insensitive), (`Agent1` or `Agent2`):
+Search for any matches to Windows computers with display names that contain either of the two strings, `Agent1` or `Agent2`(case insensitive):
 
 ```perl
 ^(?i)(agent1)|(?i)(agent2)$
 ```
 
-Search for any matches to Windows Computers with display names that match any name containing the following (case insensitive), (`Agent`):
+Search for any matches to Windows computers with display names that contain `Agent` (case insensitive):
 
 ```perl
 ^(?i)(agent.*)$
