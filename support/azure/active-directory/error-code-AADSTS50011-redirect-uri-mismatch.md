@@ -1,6 +1,7 @@
 ---
 title: Error AADSTS50011 - The redirect URI specified in the request does not match the redirect URIs configured for the application...
 description: Describes a problem in which you receive an error message when signing in to OIDC-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is Error AADSTS50011 - The redirect URI <redirect URI sent> specified in the request does not match the redirect URIs configured for the application <GUID>. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this.
+author: arcrowe
 ms.date: 12/1/2021
 ms.prod-support-area-path: 
 ms.reviewer: arcrowe
@@ -25,13 +26,13 @@ To fix the issue, follow these steps:
 
 1. Retrieve your application (client) ID.  You may already know this value.  If not, you can extract it from the error message.   The error message should be in the format 'The redirect URI \<redirect URI sent\> specified in the request does not match the redirect URIs configured for the application \<GUID\>. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal...'.  Copy the \<GUID\> value.
   
-1. Navigate to the authentication blade of your application in the Azure portal.  You can get to this page directly by inserting your application ID as the GUID value in one of the following links:
-   - 'https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/GUID/'. Use this link if this app is owned by an organization, also known as Azure AD tenant.  This is most likely the link you want to use.  Make sure you sign in to the portal with an administrator account for that organization, or an account that owns the application.
-   -  'https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/GUID/isMSAApp/true'.  Use this link if this app is owned by your personal Microsoft (MSA) account.  Make sure you sign into the portal with that personal Microsoft account. 
+1. Navigate to the authentication blade of your application in the Azure portal. Alternatively, you can get to this page directly by inserting your application ID as the GUID value in one of the following links:
+   - If this app is owned by an organization (Azure AD tenant), use the link `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>/`. Make sure you sign in to the portal with an administrator account for that organization, or an account that owns the application.
+   -  if this app is owned by your personal Microsoft (MSA) account, use the link `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>/isMSAApp/true`. Make sure you sign into the portal with that personal Microsoft account. 
 
 1. Extract the redirect URI that was sent in the request from the error message.  The error message should be in the format 'The redirect URI \<redirect URI sent\> specified in the request does not match the redirect URIs configured for the application \<GUID\>. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal...'.  Copy the \<redirect URI sent\> value.
   
-1. Add the redirect URI to the appropriate platform configuration.  This might be web, single page app (spa), or some public/native client platform.  Make sure to save after the redirect URI is added.
+1. Add the redirect URI to the appropriate platform configuration. This might be web, single page app (spa), or some public/native client platform.  Make sure to save after the redirect URI is added.
   
 After these steps are done, wait a few minutes and send the log in request again.  You should be able to sign in to the application.
 
