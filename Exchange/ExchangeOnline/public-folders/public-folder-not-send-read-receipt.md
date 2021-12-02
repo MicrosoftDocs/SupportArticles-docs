@@ -25,12 +25,29 @@ search.appverid: MET150
 
 When you send an email that requests a read receipt to a mail-enabled public folder, you don't receive a read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
 
-This issue occurs if you set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis. To check the parameter value, run the following cmdlet:
+This issue occurs when you set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis.
 
-```powershell
-Get-PublicFolder -Identity \MyPublicFolder | FL *PerUserReadStateEnabled*
-```
+For example, you send an email that requests a read receipt to a mail-enabled public folder (the name of the public folder is PF2).
+
+:::image type="content" source="media/public-folder-not-send-read-receipt/public-folder-name.png" alt-text="Screenshot of the an email message that requests a read receipt.":::
+
+However, you receive the read receipt from the public folder mailbox that is hosting the public folder (the name of the public folder mailbox is MSExchangepf2).
+
+:::image type="content" source="media/public-folder-not-send-read-receipt/read-receipt-from-mailbox.png" alt-text="Screenshot of a read receipt that comes from the public folder mailbox.":::
 
 ## Status
 
 This is a known issue of read receipts. Microsoft is researching this problem and will post more information in this article when the information becomes available.
+
+## More information
+
+For more information about how to request a read receipt for your message in Outlook and in Outlook on the web, see the following articles:
+
+- [Add and request read receipts and delivery notifications](https://support.microsoft.com/en-us/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141)
+- [Read receipts in Outlook on the web](https://support.microsoft.com/en-us/office/read-receipts-in-outlook-on-the-web-e09af74d-3519-45fc-a680-37a538a92157)
+
+To check the `PerUserReadStateEnabled` parameter value, run the following cmdlet:
+
+```powershell
+Get-PublicFolder -Identity \<Public Folder Name> | FL *PerUserReadStateEnabled*
+```
