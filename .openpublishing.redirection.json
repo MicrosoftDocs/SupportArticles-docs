@@ -994,6 +994,11 @@
       "source_path": "support/sql/admin/troubleshoot-dbcc-errors.md",
       "redirect_url": "/troubleshoot/sql/admin/troubleshoot-dbcc-checkdb-errors",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/software-distribution-best-practices.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+      "redirect_document_id": false
     }
   ]
 }
