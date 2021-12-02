@@ -23,28 +23,29 @@ appliesto:
 
 # ErrorMailRecipientNotFound response when viewing free/busy information
 
-When you try to view the free/busy information of a user in another organization by using organization relationships, the information isn't displayed.
+When you try to view the free/busy information for a user in another forest or tenant by using organization relationships, the information isn't displayed. Instead, you see the **ErrorMailRecipientNotFound** response and one of the following error messages.
 
-Additionally, you might see one of the following error messages that is displayed with the **ErrorMailRecipientNotFound** response.
+## Error: Unable to resolve e-mail address to an Active Directory object
 
-## Error 1: Unable to resolve e-mail address to an Active Directory object
+A sample of the complete error message is as follows:
 
-You try to view the free/busy information for a user in another organization, you receive the following error message:
-
+"MessageText":
 > Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: **Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
+
+"ResponseCode": "**ErrorMailRecipientNotFound**"
 
 ### Cause
 
-This error occurs in one of the following situations if the recipient email address is valid:
+If the user's email address is valid, then this error occurs in one of the following situations:
 
-- An organization relationship isn't established with the domain.
-- An organization relationship is established with the domain, but the free/busy access isn't enabled.
+- An organization relationship isn't established with the user's domain.
+- An organization relationship is established with the user's domain, but access to the free/busy information isn't enabled..
 
     **Note**: This scenario occurs only between two Microsoft 365 organizations.
 
 ### Resolution
 
-Run the following [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to get the domains with which an organization relationship has been set up:
+Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to get the list of domains for which an organization relationship has been set up:
 
 ```powershell
 Get-OrganizationRelationship | ft name, domainnames
@@ -52,33 +53,36 @@ Get-OrganizationRelationship | ft name, domainnames
 
 - If the domain isn't included in the returned result, [create an organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship) with the domain, or [add the domain to an existing organization relationship](/exchange/sharing/organization-relationships/create-an-organization-relationship#use-the-exchange-admin-center-to-create-an-organization-relationship).
 
-- If the domain is included in the returned result, run the  [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable the free/busy access. For example:
+- If the domain is included in the returned result, run the  [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable access to the free/busy information for the domain.
 
     ```powershell
-    Set-OrganizationRelationship -Identity "Contoso" -FreeBusyAccessEnabled $true
+    Set-OrganizationRelationship -Identity "<Domain_name>" -FreeBusyAccessEnabled $true
     ```
 
-## Error 2: The organization relationship can't be used
+## Error: The organization relationship can't be used
 
-You try to view the free/busy information for a user in another organization, you receive the following error message:
+A sample of the complete error message is as follows:
 
+"MessageText":
 > The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: **The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
+
+"ResponseCode": "**ErrorMailRecipientNotFound**"
 
 ### Cause
 
-This error occurs because the values of the following parameters aren't set correctly in the organization relationship:
+This error occurs when the values of one of all of the following parameters in the organization relationship aren't set correctly:
 
 - `TargetApplicationUri`
 - `TargetAutodiscoverEpr` or `TargetSharingEpr`(at least one of these values isn't set correctly)
 
 ### Resolution
 
-Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet to get the federation information of the domain from Exchange Online. For example:
+1. In Exchange Online, run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet to get the federation information of the user's domain.
 
-:::image type="content" source="media/no-free-busy-information-retrieved/federation-information.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet.":::
+    :::image type="content" source="media/no-free-busy-information-retrieved/federation-information.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet.":::
 
-Then, run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the parameters value of the organization relationship. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set these parameters with the required values. For example:
+1. Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the values of the three parameters in the organization relationship. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set them by using the output from the `Get_FederationInformation` cmdlet. For example:
 
-```powershell
-Set-OrganizationRelationship -Identity "Contoso" -TargetAutodiscoverEpr "<Value from the federation information>" -TargetApplicationUri "<Value from the federation information>"
-```
+    ```powershell
+    Set-OrganizationRelationship -Identity "<User Domain Name>" -TargetAutodiscoverEpr "<Value from the federation information>" -TargetApplicationUri "<Value from the federation information>"
+    ```
