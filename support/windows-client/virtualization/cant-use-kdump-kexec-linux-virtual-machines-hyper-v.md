@@ -61,47 +61,7 @@ Different Linux distributions have slightly different mechanisms to specify the 
 
 In RHEL 5.9, you have to pass the *prefer_ms_hyper_v* parameter through a kernel command-line argument to the ide_core module that's built into the RHEL 5.9 kernel. By default, this parameter is initialized to 1, and it causes the Linux virtual machine to avoid using the ide_core module if it's running in a Hyper-V environment. Administrators have to set the *prefer_ms_hyper_v* parameter value to 0 so that the ide_core driver becomes operational during the kexec kernel boot process. You can do this by changing the contents of /etc/kdump.conf.
 
-To change the contents of /etc/kdump.conf, follow these steps:
-
-1. Run the following command to configure kdump to write to a local directory:
-
-   ```console
-   path /var/crash`
-   ```
-
-2. Configure /etc/kdump.conf to prevent the Linux Integration Services drivers from loading in to the kexec kernel. To do so, run the following command:
-
-   ```console
-   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
-   ```
-
-3. Configure the disk time-out value by running the following command:
-
-   ```console
-   disk_timeout 100
-   ```
-
-4. After the required edits, the /etc/kdump.conf file looks like this:
-
-   ```console
-   path /var/crash  
-   core_collector makedumpfile -c--message-level 1 -d 31  
-   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv  
-   disk_timeout 100
-   ```
-
-5. Modify the contents of the /etc/sysconfig/kdump file as follows:
-
-   - Add or modify the following line to include the prefer_ms_hyperv=0 argument:
-
-     > KDUMP_COMMANDLINE_APPEND="irqpoll maxcpus=1 reset_devices ide_core.prefer_ms_hyperv=0 "
-
-   - After the required edits, the /etc/sysconfig/kdump file looks like this:
-
-     > KDUMP_COMMANDLINE=""  
-    *# This variable lets us append arguments to the current kdump commandline*  
-    *# As taken from either KDUMP_COMMANDLINE above, or from /proc/cmdline*  
-    KDUMP_COMMANDLINE_APPEND="irqpoll maxcpus=1 reset_devices ide_core.prefer_ms_hyperv=0"
+To change the contents of /etc/kdump.conf, see [11.10. Preventing kernel drivers from loading for kdump](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel)
 
 ### Red Hat Enterprise Linux (RHEL) 6.4
 
