@@ -38,40 +38,40 @@ This article introduces configuration requirements and methods for scheduling Po
 
 1. Create a new Secure Store Target Application by using a Group type.
 
-   ![the target application type selection image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/target-application-type.png)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/target-application-type.png" alt-text="Screenshot of the Group option under the Target Application Type field." border="false":::
 
 1. On the next page, make sure that you change the middle field to "User Name" and "Password". When you use non-Windows credentials, they are the only valid fields that you can choose. The fields on the left of the page are editable to whatever you want them to be.
 
-   ![the create new secure store target application image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/create-new-secure-store-target-application.jpg)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/create-new-secure-store-target-application.png" alt-text="Screenshot of the field setting page. The middle field is set to User Name and Password." border="false":::
 
 1. Set the target application administrators and members. The members group is the group of users who have access to use the Secure Store Target Application on the site.
 
-   ![the set the target application administrator image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/target-application-administrator.png)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/target-application-administrator.png" alt-text="Screenshot of the Target Application Administrators and Members setting page." border="false":::
 
 1. On the main Secure Store page, set the credentials on the new Target Application that you just created.
 
-   ![the main secure store image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/set-credentials.png)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/set-credentials.png" alt-text="Screenshot of the Set Credentials option in the drop-down menu of the new Target Application." border="false":::
 
 1. As soon as the credentials are set, we can go back to the workbook in the gallery and set the schedule.
 
-   ![the set a schedule image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/set-the-schedule.png)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/set-the-schedule.png" alt-text="Screenshot 1 of the set schedule icon for the workbook." border="false":::
 
 1. Leave the first set of radio buttons alone as they are options for Windows Authentication only. Select the third option under **Data Source Credentials** and type the name of your Secure Store Target Application in the **ID** text box.
 
    > [!NOTE]
    > Make sure that you test this as a user account and not an administrator.
 
-   ![the select a data source credential image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/data-source-credentials.png)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/data-source-credentials.png" alt-text="Screenshot of the schedule setting page when the third option under Data Source Credentials is selected." border="false":::
 
 **Method 2: Specify a User Account**
 
 1. Click the set schedule icon for the workbook in the gallery.
 
-   ![the set a schedule image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/set-the-schedule.png)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/set-the-schedule.png" alt-text="Screenshot 2 of the set schedule icon for the workbook." border="false":::
 
 1. Leave the first set of radio buttons alone as they are options for Windows Authentication only. Select the second option **Specify a user account** under **Data Source Credentials** and type the login name and password of the account that has access to this specific data source.
 
-   ![the specify user account image](./media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/specify-user-account.png)
+   :::image type="content" source="media/schedule-data-refresh-to-a-data-source-with-non-windows-authentication/specify-user-account.png" alt-text="Screenshot of the schedule setting page when the second option under Data Source Credentials is selected." border="false":::
 
 > [!NOTE]
 > This method creates a temporary Secure Store ID that is used specifically by the workbook. The ID is removed when the schedule is purged or changed in any way.

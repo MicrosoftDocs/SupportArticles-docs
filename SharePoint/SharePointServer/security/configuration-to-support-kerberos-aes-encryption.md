@@ -96,7 +96,7 @@ If only the following Options are selected:
 - AES256_HMAC_SHA1
 - Future encryption types
 
-:::image type="content" source="./media/configuration-to-support-kerberos-aes-encryption/encryption-types.png" alt-text="Screenshot of encryption types allowed for Kerberos.":::
+:::image type="content" source="media/configuration-to-support-kerberos-aes-encryption/encryption-types.png" alt-text="Screenshot of encryption types allowed for Kerberos.":::
 
 Then you will need to enable **Support for Kerberos AES Encryption** on the Active Directory user objects that are used to run SharePoint services and application pools.
 
