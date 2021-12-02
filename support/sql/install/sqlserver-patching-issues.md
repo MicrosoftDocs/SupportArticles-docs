@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot common SQL Server patching issues
-description: 
+description: This article helps you to troubleshoot common SQL Server patching issues. 
 ms.date: 12/01/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.author: jayaramanp
@@ -11,7 +11,7 @@ ms.prod: sql
 
 This article provides general troubleshooting procedures that you can use when you run into any issue applying a Service Pack (SP) or a Cumulative Update (CU) for your SQL Server instance. It also provides detailed procedures for solving the following failure messages associated with patching:
 
-- [Wait on Database Engine recovery handle failed / 912 and 3417 errors](#wait-on-database-engine-recovery-handle-failed--912-and-3417-errors)** error message when executing upgrade scripts.
+- [Wait on Database Engine recovery handle failed / 912 and 3417 errors](#wait-on-database-engine-recovery-handle-failed--912-and-3417-errors) error message when executing upgrade scripts.
 - [Various setup errors that occur](#setup-errors-resulting-from-missing-installer-files-in-windows-cache) due to missing  MSI files or patch files in the Windows installer cache.
 - [The Database Engine system data directory in the registry is not valid](#setup-failing-due-to-incorrect-data-or-log-location-in-registry) or the User Log directory in the registry is not valid.
 - [Network path was not found](#setup-failing-due-to-incorrect-data-or-log-location-in-registry) and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AG).
@@ -53,7 +53,7 @@ Upgrade scripts are shipped with each SQL Server update and are executed after t
 
 To troubleshoot and fix these errors, do the following steps:
 
-1. Review the SQL Server Errorlogs for details on f ailure.
+1. Review the SQL Server Errorlogs for details on failure.
 1. Start SQL Server with trace flag 902 to bypass upgrade script execution.
 1. Address the cause of the failure (see different scenarios below).
 1. Restart SQL Server without trace flag 902 to allow upgrade process to complete.
@@ -62,12 +62,12 @@ Following are some of the common causes of upgrade script failures and correspon
 
 - **SSISDB part of Availability group**
 
-  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](https://docs.microsoft.com/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15#Upgrade) section.
+  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](https://docs.microsoft.com/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15#Upgrade&preserve-view=true) section.
 
 - **Misconfigured System User/Role in msdb database**
 
   This section provides steps to resolve misconfigured system user or role in the msdb database:
-  - TargetServersRole Schema/Security role: These are generally used in Multiserver environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
+  - TargetServersRole Schema/Security role: These are generally used in multiserver environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
     1. Back up your msdb database.
     1. Make a list of users (if any) that are currently part of this role.
     1. Drop the TargetServersRole using the statement: ```EXECUTE msdb.dbo.sp_droprole @rolename = N'TargetServersRole'```.
@@ -81,7 +81,7 @@ Following are some of the common causes of upgrade script failures and correspon
 
 ## Setup errors resulting from missing installer files in Windows cache
 
-Applications like SQL Server that use Windows Installer technology for setup process, stores critical files in the Windows Installer Cache (default is C:\Windows\Installer). These files are required for uninstalling and updating applications and are unique to a computer. As such, if these files are either inadvertently deleted or otherwise compromised, subsequent updates will fail. To resolve this condition review and implement the procedures described in [Restore the missing Windows Installer cache files](https://docs.microsoft.com/troubleshoot/sql/install/restore-missing-windows-installer-cache-files)
+Applications like SQL Server that use Windows Installer technology for setup process, stores critical files in the Windows Installer Cache (default is C:\Windows\Installer). These files are required for uninstalling and updating applications and are unique to a computer. As such, if these files are either inadvertently deleted or otherwise compromised, subsequent updates will fail. To resolve this condition, review and implement the procedures described in the [Restore the missing Windows Installer cache files](https://docs.microsoft.com/troubleshoot/sql/install/restore-missing-windows-installer-cache-files) section.
 
 ## Setup failing due to incorrect data or log location in registry
 
@@ -90,22 +90,23 @@ The default location that you specify for database's data and log files during i
 - *Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.*
 - *The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.*
 
-To fix this issue, connect to the SQLServer instance using SQL Server Management Studio (SSMS), open properties page for the instance and ensure the **Database Default locations** under **Database Settings** page point to the right location and retry the CU or SP installation.
+To fix this issue, connect to the SQL Server instance using SQL Server Management Studio (SSMS), open **Properties** for the instance and ensure the **Database Default locations** under **Database Settings** points to the right location and retry the CU or SP installation.
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
 For smooth functioning and maintenance of a SQL Server failover cluster you must always follow all the best practices noted in the [Before Installing Failover Clustering](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15) and [Failover Cluster Instance administration & maintenance](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15#changing-service-accounts) sections. If you are running into errors applying a CU or a SP, check the following:
+
 - The remote registry service is up and running on all the nodes of the WSFC cluster.
-- If the service account for SQL Server is not an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information review [Overview of problems that may occur when administrative shares are missing](https://docs.microsoft.com/troubleshoot/windows-server/networking/problems-administrative-shares-missing).
+- If the service account for SQL Server is not an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information, see the [Overview of problems that may occur when administrative shares are missing](https://docs.microsoft.com/troubleshoot/windows-server/networking/problems-administrative-shares-missing) section.
 When these are not properly configured, you may notice one or more of the following symptoms when trying to install a CU or SP:
-  - Patch taking a long time to run or appears hung. Setup logs do not reveal any progress
+  - Patch taking a long time to run or does not respond. Setup logs do not reveal any progress.
   - Setup logs show messages like the following:
-    - The network path was not found
+    - The network path was not found.
     - System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
 
 ## See Also
 
-- For general information on updating SQL Server review [Install SQL Server Servicing Updates](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15)
-- For information on security updates for SQL Server and other products consult [Security Update Guide](https://msrc.microsoft.com/update-guide)
-- For information on standard terminology associated with Microsoft updates review [Description of the standard terminology that is used to describe Microsoft software updates](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15)
-- For resolving setup issues that may occur in highly secure environments check [SQL Server installation fails if the Setup account doesn't have certain user rights](https://docs.microsoft.com/troubleshoot/sql/install/installation-fails-if-remove-user-right)
+- For general information on updating SQL Server, see the [Install SQL Server Servicing Updates](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15&preserve-view=true) section.
+- For information on security updates for SQL Server and other products, see the [Security Update Guide](https://msrc.microsoft.com/update-guide) section.
+- For information on standard terminology associated with Microsoft updates, see the [Description of the standard terminology that is used to describe Microsoft software updates](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15&preserve-view=true) section.
+- For resolving setup issues that may occur in highly secure environments, see the [SQL Server installation fails if the Setup account doesn't have certain user rights](https://docs.microsoft.com/troubleshoot/sql/install/installation-fails-if-remove-user-right) section.
