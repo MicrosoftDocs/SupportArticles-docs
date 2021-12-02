@@ -2,7 +2,6 @@
 title: Table hierarchy inconsistency errors in Dexterity
 description: Contains information about table hierarchy inconsistency errors that concern Dexterity and Report Writer in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about table hierarchy inconsistency errors in Dexterity in Microsoft Dynamics GP

@@ -108,13 +108,14 @@ To transfer the logins, use one of the following methods, as appropriate for you
             DECLARE @is_expiration_checked    VARCHAR (3)
             Declare @Prefix                   VARCHAR(255)
             DECLARE @defaultdb                SYSNAME
+            DECLARE @defaultlanguage          SYSNAME     
             DECLARE @tmpstrRole               VARCHAR (1024)
          
         IF (@login_name IS NULL)
         BEGIN
             DECLARE login_curs CURSOR 
             FOR 
-                SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin 
+                SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin, p.default_language_name  
                 FROM  sys.server_principals p 
                 LEFT JOIN sys.syslogins     l ON ( l.name = p.name ) 
                 WHERE p.type IN ( 'S', 'G', 'U' ) 
@@ -124,7 +125,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
         ELSE
                 DECLARE login_curs CURSOR 
                 FOR 
-                    SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin 
+                    SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin, p.default_language_name  
                     FROM  sys.server_principals p 
                     LEFT JOIN sys.syslogins        l ON ( l.name = p.name ) 
                     WHERE p.type IN ( 'S', 'G', 'U' ) 
@@ -132,7 +133,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
                     ORDER BY p.name
                 
                 OPEN login_curs 
-                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin
+                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin, @defaultlanguage 
                 IF (@@fetch_status = -1)
                 BEGIN
                       PRINT 'No login(s) found.'
@@ -185,7 +186,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
                                 WHERE name = @name
          
                                 SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' WITH PASSWORD = ' + @PWD_string + ' HASHED, SID = ' 
-                                                + @SID_string + ', DEFAULT_DATABASE = [' + @defaultdb + ']'
+                                                + @SID_string + ', DEFAULT_DATABASE = [' + @defaultdb + ']' + ', DEFAULT_LANGUAGE = [' + @defaultlanguage + ']'
                                  
                                 IF ( @is_policy_checked IS NOT NULL )
                                 BEGIN
@@ -252,7 +253,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
                     PRINT @tmpstrRole
                     PRINT 'END'
                 END 
-                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin 
+                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin, @defaultlanguage 
             END
             CLOSE login_curs
             DEALLOCATE login_curs

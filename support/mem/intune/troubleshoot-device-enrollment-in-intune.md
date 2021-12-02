@@ -148,27 +148,27 @@ If Resolution 2 doesn't work, have your users follow these steps to make Smart M
 
 1. Launch the Smart Manager app on the device.
 
-   ![Select Smart Manager icon on device](./media/troubleshoot-device-enrollment-in-intune/smart-manager-app-icon.png)
+    :::image type="content" source="media/troubleshoot-device-enrollment-in-intune/smart-manager-app-icon.png" alt-text="Select the Smart Manager app on the device." border="false":::
 
 2. Choose the **Battery** tile.
 
-   ![Select the Battery tile](./media/troubleshoot-device-enrollment-in-intune/smart-manager-battery-tile.png)
+    :::image type="content" source="media/troubleshoot-device-enrollment-in-intune/smart-manager-battery-tile.png" alt-text="Select the Battery tile.":::
 
 3. Under **App power saving** or **App optimization**, select **Detail**.
 
-   ![Select Detail under App power saving or App optimization](./media/troubleshoot-device-enrollment-in-intune/smart-manager-app-power-saving-detail.png)
+    :::image type="content" source="media/troubleshoot-device-enrollment-in-intune/smart-manager-app-power-saving-detail.png" alt-text="Select Detail under App power saving or App optimization.":::
 
 4. Choose **Company Portal** from the list of apps.
 
-   ![Select Company Portal from the apps list](./media/troubleshoot-device-enrollment-in-intune/smart-manager-company-portal.png)
+    :::image type="content" source="media/troubleshoot-device-enrollment-in-intune/smart-manager-company-portal.png" alt-text="Select Company Portal from the apps list.":::
 
 5. Choose **Turned off**.
 
-   ![Select Turned off from App optimization dialog](./media/troubleshoot-device-enrollment-in-intune/smart-manager-app-optimization-turned-off.png)
+    :::image type="content" source="media/troubleshoot-device-enrollment-in-intune/smart-manager-app-optimization-turned-off.png" alt-text="Select Turned off from App optimization dialog." border="false":::
 
 6. Under **App power saving** or **App optimization**, confirm that Company Portal is turned off.
 
-   ![Verify that Company Portal is turned off](./media/troubleshoot-device-enrollment-in-intune/smart-manager-verify-comp-portal-turned-off.png)
+    :::image type="content" source="media/troubleshoot-device-enrollment-in-intune/smart-manager-verify-comp-portal-turned-off.png" alt-text="Verify that Company Portal is turned off.":::
 
 ### Profile installation failed
 
@@ -267,19 +267,19 @@ The following table lists errors that end users might see while enrolling iOS/iP
 
 When users start the iOS/iPadOS Company Portal app, it can tell if their device has lost contact with Intune. If it detects that there's no contact, it automatically tries to sync with Intune to reconnect (users will see the **Trying to sync…** message).
 
-  ![Trying to sync notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-trying-to-sync-notification.png" alt-text="Screenshot of the trying to sync notification.":::
 
 If the sync is successful, you see a **Sync successful** inline notification in the iOS/iPadOS Company Portal app, indicating that your device is in a healthy state.
 
-  ![Sync successful notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_sync_successful_notification.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-sync-successful-notification.png" alt-text="Screenshot of the sync successful notification.":::
 
 If the sync is unsuccessful, users see an **Unable to sync** inline notification in the iOS/iPadOS Company Portal app.
 
-  ![Unable to sync notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_unable_to_sync_notification.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-unable-to-sync-notification.png" alt-text="Screenshot of the unable to sync notification.":::
 
 To fix the issue, users must select the **Set up** button, which is to the right of the **Unable to sync** notification. The **Set up** button takes users to the Company Access Setup flow screen, where they can follow the prompts to enroll their device.
 
-  ![Company Access Setup screen](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_company_access_setup.png)
+:::image type="content" source="media/troubleshoot-device-enrollment-in-intune/ios-cp-app-company-access-setup.png" alt-text="Screenshot of the Company Access Setup screen.":::
 
 Once enrolled, the devices return to a healthy state and regain access to company resources.
 

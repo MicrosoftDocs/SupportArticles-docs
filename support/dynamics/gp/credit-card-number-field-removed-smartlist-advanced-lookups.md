@@ -2,7 +2,6 @@
 title: Credit card number field that was removed from SmartList and from Advanced Lookups
 description: This article describes that the credit card number field was removed from SmartList and from Advanced Lookups because of customer requests.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about the credit card number field that was removed from SmartList and from Advanced Lookups in Microsoft Dynamics GP

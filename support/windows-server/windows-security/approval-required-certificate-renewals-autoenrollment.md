@@ -20,7 +20,7 @@ Assume that you're configuring a certificate autoenrollment that has the **CA ce
 > [!NOTE]
 > To identify the validity period and renewal period, use the `certutil -dstemplate <CertificateTemplateName>` cmdlet, and search for `pKIExpirationPeriod` (the validity period) and `pKIOverlapPeriod` (the renewal period).
 
-:::image type="content" source="./media/approval-required-certificate-renewals-autoenrollment/certificate-autoenrollment-configuration.png" alt-text="Configuration for certificate autoenrollment.":::
+:::image type="content" source="media/approval-required-certificate-renewals-autoenrollment/certificate-autoenrollment-configuration.png" alt-text="Configuration example for certificate autoenrollment.":::
 
 Certificate autoenrollment runs every eight hours. When unsupported values of validity and renewal period are configured in a certificate template, the certificate renewal is skipped and the client triggers new enrollment requests instead of renewals, then prompting CA certificate manager approval.
 

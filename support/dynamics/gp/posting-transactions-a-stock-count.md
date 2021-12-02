@@ -2,7 +2,6 @@
 title: Posting transactions for a stock count
 description: Describes the effects of taking a snapshot of inventory when a stock count has been started in Microsoft Dynamics GP.
 ms.reviewer:
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about posting transactions for a stock count that has been started in Inventory in Microsoft Dynamics GP

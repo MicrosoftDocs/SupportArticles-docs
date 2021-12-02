@@ -2,7 +2,6 @@
 title: Management Reporter 2012 TDBX Update Diagnostic
 description: Describes the steps that the tdbx diagnostic for Management Reporter will perform.
 ms.reviewer: kellybj, kevogt
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3.0][783d5dcd-1017-4b80-9429-fbb89a92174e] Management Reporter 2012 TDBX Update Diagnostic

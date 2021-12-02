@@ -2,7 +2,6 @@
 title: Use Banked paycodes with Project Accounting
 description: Introduces a method to use Banked paycodes in Canadian Payroll with Project Timesheet entry.
 ms.reviewer:
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Can you use Banked paycodes with Project Accounting?

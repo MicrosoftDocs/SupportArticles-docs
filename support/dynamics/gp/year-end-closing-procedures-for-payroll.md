@@ -2,7 +2,6 @@
 title: Year-end closing procedures
 description: Describes how to perform the year-end closing procedure for Microsoft Dynamics GP Payroll. This article also lists preparation steps and troubleshooting information for the year-end closing procedure.
 ms.reviewer: theley
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Year-end closing procedures for Microsoft Dynamics GP Payroll

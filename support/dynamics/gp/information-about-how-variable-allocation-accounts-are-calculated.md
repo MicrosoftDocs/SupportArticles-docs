@@ -2,7 +2,6 @@
 title: How variable allocation accounts are calculated
 description: This article contains the information about how variable allocation accounts are calculated in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about how variable allocation accounts are calculated in Microsoft Dynamics GP
