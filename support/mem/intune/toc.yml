@@ -260,7 +260,7 @@ items:
     href: intune-licensed-users-prompted-to-enroll.md
   - name: Windows 10 devices show incorrect compliance status
     href: win10-devices-show-incorrect-compliance-status.md
-- name: General guidance or advisory
+- name: General guidance
   items:
   - name: Attributes synced by Intune
     href: intune-synced-attributes-list.md
