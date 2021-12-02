@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot common SQL Server patching issues
 description: This article helps you to troubleshoot common SQL Server patching issues. 
-ms.date: 12/01/2021
+ms.date: 12/03/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
-ms.author: v-jayaramanp@microsoft.com
+ms.author: v-jayaramanp
 ms.prod: sql
 ---
 
@@ -36,20 +36,20 @@ This section provides information on the CU and SP installation prerequisites.
     - a directory where system files are located, and
     - shared drives on a failover cluster instance.
 - Before applying a CU or SP, make sure your instance that is being patched, is configured accordingly.
-- If you have added a new [database engine feature](//sql/database-engine/install-windows/install-sql-server-database-engine) after applying a SP or CU to your instance, you should patch the new feature to the same level as others before applying a new CU or SP.
+- If you have added a new [database engine feature](/sql/database-engine/install-windows/install-sql-server-database-engine) after applying a CU or an SP to your instance, you should patch the new feature to the same level as others before applying a new CU or SP.
 
 ## General troubleshooting methodology
 
 1. Isolate the error by doing the following steps:
     1. Check **Details** in the **Failure** screen of the setup process.
-    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true) section.
+    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver) section.
 
 1. Check for a matching scenario in the next few sections and follow associated troubleshooting procedures for the corresponding scenario.
 1. If there is no matching scenario, look for additional pointers in the log files and also review the general information section above.
 
 ## Wait on Database Engine recovery handle failed, 912, and 3417 errors
 
-Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports  *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?view=sql-server-ver15&preserve-view=true) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error?view=sql-server-ver15&preserve-view=true) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
+Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports  *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?view=sql-server-ver) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error?view=sql-server-ver) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
 
 To troubleshoot and fix these errors, do the following steps:
 
@@ -62,12 +62,12 @@ Following are some of the common causes of upgrade script failures and correspon
 
 - **SSISDB part of Availability group**
 
-  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15) section.
+  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver) section.
 
 - **Misconfigured System User/Role in msdb database**
 
   This section provides steps to resolve misconfigured system user or role in the msdb database:
-  - **TargetServersRole Schema/Security role**: These are generally used in multiserver environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
+  - **TargetServersRole Schema/Security role**: These are used in multiserver environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
     1. Back up your msdb database.
     1. Make a list of users (if any) that are currently part of this role.
     1. Drop the TargetServersRole using the statement: ```EXECUTE msdb.dbo.sp_droprole @rolename = N'TargetServersRole'```.
@@ -94,7 +94,7 @@ To fix this issue, connect to the SQL Server instance using SQL Server Managemen
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
-For smooth functioning and maintenance of a SQL Server failover cluster, you must always follow all the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15) sections. If you are running into errors applying a CU or a SP, check the following:
+For smooth functioning and maintenance of a SQL Server failover cluster, you must always follow all the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver) sections. If you are running into errors applying a CU or an SP, check the following:
 
 - The remote registry service is up and running on all the nodes of the WSFC cluster.
 - If the service account for SQL Server is not an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information, see the [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md) section.
@@ -106,7 +106,7 @@ When these are not properly configured, you may notice one or more of the follow
 
 ## See Also
 
-- For general information on updating SQL Server, see the [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15&preserve-view=true) section.
+- For general information on updating SQL Server, see the [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver) section.
 - For information on security updates for SQL Server and other products, see the [Security Update Guide](https://msrc.microsoft.com/update-guide) section.
-- For information on standard terminology associated with Microsoft updates, see the [Description of the standard terminology that is used to describe Microsoft software updates](/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15&preserve-view=true) section.
+- For information on standard terminology associated with Microsoft updates, see the [Description of the standard terminology that is used to describe Microsoft software updates](/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver) section.
 - For resolving setup issues that may occur in highly secure environments, see the [SQL Server installation fails if the Setup account doesn't have certain user rights](installation-fails-if-remove-user-right.md) section.
