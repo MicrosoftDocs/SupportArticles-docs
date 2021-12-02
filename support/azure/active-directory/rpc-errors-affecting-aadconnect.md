@@ -24,7 +24,7 @@ For these types of errors, Application events include information about the RPC 
 
 ### Example 1
 
-:::image type="content" source="media/rpc-errors-aadconnect/rpc-error-1722.png" alt-text="Screenshot shows that the application events include information about the R P C error 1722." lightbox="media/rpc-errors-aadconnect/rpc-error-1722.png":::
+:::image type="content" source="media/rpc-errors-aadconnect/rpc-error-1722.png" alt-text="Screenshot shows the application events include information about the R P C error 1722." lightbox="media/rpc-errors-aadconnect/rpc-error-1722.png":::
 
 Snippet from the Application error event seen in the previous image:
 
@@ -88,7 +88,7 @@ The following steps allow you to automatically collect a network trace, when the
 
 ### Example 2
 
-   :::image type="content" source="media/rpc-errors-aadconnect/rpc-error-8333.png" alt-text="Screenshot shows that application events include information about the R P C error 8333.":::
+   :::image type="content" source="media/rpc-errors-aadconnect/rpc-error-8333.png" alt-text="Screenshot shows the application events include information about the R P C error 8333.":::
 
 Snippet from the Application error event seen in the previous image:
 

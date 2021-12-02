@@ -37,11 +37,11 @@ To check whether an account has enterprise admin permissions, follow these steps
 
 1. On a domain controller or computer that has the Windows Server Administration Toolkit installed, start Active Directory Users and Computers. To do this, click **Start**, click **Run**, type dsa.msc in the **Open** box, and then click **OK**.
 
-    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/run-dsa-msc.png" alt-text="Screenshot of the Run window after typing dsa.msc.":::
+    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/run-dsa-msc.png" alt-text="Screenshot of the Run window with dsa.msc typed.":::
 
 2. Right-click the domain, and then click **Find**.
 
-   :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/domain-find.png" alt-text="Screenshot to right-click the domain item, and then click the Find item.":::
+   :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/domain-find.png" alt-text="Screenshot to right-click the domain, and then click the Find item.":::
 
 3. In the **Name** box, type enterprise admins, and then click **Find Now**.
 
@@ -49,7 +49,7 @@ To check whether an account has enterprise admin permissions, follow these steps
 
 4. Double-click **Enterprise Admins**, and then click the **Members** tab.
 
-    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/enterprise-admins-properties.png" alt-text="Screenshot to double-click the Enterprise Admins item, and then select the Members tab." border="false":::
+    :::image type="content" source="media/admin-credentials-supplied-not-valid-aad-sync/enterprise-admins-properties.png" alt-text="Screenshot of the Members tab in the Enterprise Admins Properties window." border="false":::
 
 5. Check whether the user is listed in the **Members** list. If the user isn't in the list, one of the members of this list must log on and add the user to this list. Or, a member of this list can use their credentials in the Directory Sync Tool Configuration Wizard.
 

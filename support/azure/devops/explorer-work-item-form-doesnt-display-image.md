@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4011768
 
 When you open a work item that has inline images in Microsoft Visual Studio Team Explorer, the images are not displayed as expected.  
 
-:::image type="content" source="media/explorer-work-item-form-doesnt-display-image/images-not-display.png" alt-text="Screenshot shows the images are not displayed as expected.":::
+:::image type="content" source="media/explorer-work-item-form-doesnt-display-image/images-not-display.png" alt-text="Screenshot shows the images aren't displayed as expected.":::
 
 > [!NOTE]
 > The images are displayed without a problem when you open the same work item in the web browser.

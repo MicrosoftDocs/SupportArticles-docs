@@ -59,7 +59,7 @@ To fix this issue, follow these steps to verify the status of the JRE installat
 
     `C:\Program Files\Java\jre1.8.0_74`
 
-    :::image type="content" source="media/error-run-copy-activity-azure/folder-of-jre.png" alt-text="Screenshot shows the path to locate the bin folder.":::
+    :::image type="content" source="media/error-run-copy-activity-azure/folder-of-jre.png" alt-text="Screenshot shows the location of the bin folder.":::
 
 4. Check whether this folder contains a jvm.dll file. If it does not, check for the file in the `bin\client` folder.
 
