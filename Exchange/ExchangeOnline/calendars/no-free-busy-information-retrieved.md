@@ -69,7 +69,7 @@ A sample of the complete error message is as follows:
 This error occurs when the values of one of all of the following parameters in the organization relationship aren't set correctly:
 
 - `TargetApplicationUri`
-- `TargetAutodiscoverEpr` or `TargetSharingEpr`(at least one of these values isn't set correctly)
+- `TargetAutodiscoverEpr` or `TargetSharingEpr` (at least one of these values isn't set correctly)
 
 ### Resolution
 
@@ -77,7 +77,7 @@ This error occurs when the values of one of all of the following parameters in t
 
     :::image type="content" source="media/no-free-busy-information-retrieved/federation-information.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet.":::
 
-1. In Exchange Server on-premises, run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the values of the three parameters in the organization relationship. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set them by using the output from the `Get_FederationInformation` cmdlet. For example:
+1. Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the values of the three parameters in the organization relationship. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set them by using the output from the `Get_FederationInformation` cmdlet. For example:
 
     ```powershell
     Set-OrganizationRelationship -Identity "<User Domain Name>" -TargetAutodiscoverEpr "<Value from the federation information>" -TargetApplicationUri "<Value from the federation information>"
