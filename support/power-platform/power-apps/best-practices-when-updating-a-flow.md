@@ -19,9 +19,9 @@ After updating a Flow, calls to that Flow from Power Apps start failing.
 
 - If a new input is added to a Flow without a Power App being updated, the Flow will fail with an error message like:
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-fail-error-message.png" alt-text="Screenshot of the error message when adding the new input to the Flow without updating the Power App." lightbox="media/best-practices-when-updating-a-flow/flow-fail-error-message.png":::
-
     > Unable to process template language expressions in action 'Send_me_a_mobile_notification' inputs at line '1' and column '1900': 'The template language expression 'triggerBody()['Sendmeamobilenotification_Text']' cannot be evaluated because property 'Sendmeamobilenotification_Text' cannot be selected. Please see `https://aka.ms/logicexpressions` for usage details.'.
+
+    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-fail-error-message.png" alt-text="Screenshot of the error message when adding the new input to the Flow without updating the Power App." lightbox="media/best-practices-when-updating-a-flow/flow-fail-error-message.png":::
 
 - If the connections required to run a flow change, an error complaining about connections should appear:
 
@@ -31,9 +31,9 @@ After updating a Flow, calls to that Flow from Power Apps start failing.
 
     Or in Flow
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-run-failed.png" alt-text="Screenshot of the error message complaining about the connections in Flow." lightbox="media/best-practices-when-updating-a-flow/flow-run-failed.png":::
-
     > Unable to process template language expressions in action 'Send_an_email' inputs at line '1' and column '1899': 'The template language expression 'json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$connections']['shared_office365']['connectionId']' cannot be evaluated because property 'shared_office365' doesn't exist, available properties are 'shared_flowpush'. Please see `https://aka.ms/logicexpressions` for usage details.'.
+
+    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-run-failed.png" alt-text="Screenshot of the error message complaining about the connections in Flow." lightbox="media/best-practices-when-updating-a-flow/flow-run-failed.png":::
 
 - If a response output is removed, Power Apps will treat the value as blank and the PowerApp will behave unexpectedly.  
 
@@ -53,11 +53,11 @@ Types of changes most likely to break a Power Apps ability to call a flow includ
 
 - Changing an existing connection. For example, changing an existing connection to a new connection.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/change-existing-connection.png" alt-text="Screenshot of changing a existing connection in Flow.":::
+    :::image type="content" source="media/best-practices-when-updating-a-flow/change-existing-connection.png" alt-text="Screenshot of changing an existing connection in Flow.":::
 
-- Removing an output from a Respond to Power Apps actions.
+- Removing an output from a Respond to Power Apps action.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/remove-output.png" alt-text="Screenshot of removing an output from a Respond to Power Apps actions.":::
+    :::image type="content" source="media/best-practices-when-updating-a-flow/remove-output.png" alt-text="Screenshot of removing an output from a Respond to Power Apps action.":::
 
 Other changes to the inputs or outputs won't break the integration between Power Apps and Flow but will require the Power App to be updated so that it can use them.
 

@@ -22,7 +22,7 @@ The in-app tool, Command Checker, will be used to inspect the ribbon component d
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
-:::image type="content" source="media/ribbon-issues-button-visible/enable-command-checker.png" alt-text="Screenshot to append the parameter to your Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-visible/enable-command-checker.png":::
+:::image type="content" source="media/ribbon-issues-button-visible/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to your Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-visible/enable-command-checker.png":::
 
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
@@ -42,7 +42,7 @@ Once the Command Checker tool has been enabled, within the application in each o
 
 1. Click the **View command definition solution layers** link below the command name to view the solution(s) that installed a definition of the command.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/view-command-definition-solution-layers.png" alt-text="Screenshot to select the View command definition solution layers link below the command name.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/view-command-definition-solution-layers.png" alt-text="Screenshot of the View command definition solution layers link below the command name.":::
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
@@ -101,7 +101,7 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate it's child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node (In our example, ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`, so we would locate the following node).
 
-    :::image type="content" source="media/ribbon-issues-button-visible/locate-node.png" alt-text="Screenshot to locate the CommandDefinition node.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/locate-node.png" alt-text="Screenshot shows the location of the CommandDefinition node.":::
 
 1. Edit the `<RibbonDiffXml>` node and remove the specific `<CommandDefinition>` node that has the ID of the command you wish to delete. Make sure you don't unintentionally delete other `<CommandDefinition>` nodes that may be present. (Based on our example, we would delete the `<CommandDefinition>` node in which ID is `Mscrm.CreateAppointment`.)
 
@@ -192,7 +192,7 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. In the example, the ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`. Therefore, you would locate the following node:
 
-    :::image type="content" source="media/ribbon-issues-button-visible/locate-example-node.png" alt-text="Screenshot shows an example to locate the CommandDefinition node.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/locate-example-node.png" alt-text="Screenshot shows the location of the example CommandDefinition node.":::
 
 1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more informatioin about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands). (Based on our example, we would modify the `<CommandDefinition>` node by adding the `Mscrm.HideOnModern` display rule that will correctly hide this button.)
 
@@ -263,7 +263,7 @@ To fix a command that was installed by a Microsoft published managed solution, y
 
 1. Click the **View rule definition solution layers** link below the rule name to view the solution(s) that installed a definition of the rule.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/view-rule-definition-solution-layers.png" alt-text="Screenshot to select the View rule definition solution layers link below the rule name.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/view-rule-definition-solution-layers.png" alt-text="Screenshot shows the View rule definition solution layers link below the rule name.":::
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
@@ -306,7 +306,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
 1. Locate the enable/display rule. In the example, the ID of the enable rule is `new.contact.EnableRule.EntityRule`. Therefore, you would locate the following node:
 
-    :::image type="content" source="media/ribbon-issues-button-visible/locate-enable-display-rule.png" alt-text="Screenshot to locate the enable/display rule.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/locate-enable-display-rule.png" alt-text="Screenshot shows the location of the enable/display rule.":::
 
 1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the enable/display rule that will enable the rule to evaluate to True under the correct circumstances to fix the rule. For more information about how to declare rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
 

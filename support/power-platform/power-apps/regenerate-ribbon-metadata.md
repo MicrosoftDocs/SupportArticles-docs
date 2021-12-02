@@ -22,11 +22,11 @@ An in-app tool, Command Checker, is available to help you regenerate all ribbon 
 
 You can use the Command Checker tool to start the regeneration of ribbon metadata. To enable Command Checker, append the `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
-:::image type="content" source="media/regenerate-ribbon-metadata/enable-command-checker.png" alt-text="Screenshot of appending the parameter to the Dynamics 365 application U R L." lightbox="media/regenerate-ribbon-metadata/enable-command-checker.png":::
+:::image type="content" source="media/regenerate-ribbon-metadata/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to a Dynamics 365 application U R L." lightbox="media/regenerate-ribbon-metadata/enable-command-checker.png":::
 
 After Command Checker is enabled, a new special "Command Checker" :::image type="icon" source="media/regenerate-ribbon-metadata/command-checker-button-icon.png" border="false"::: program button is available within the application on each of the various command bars (global, form, grid, and subgrid). (The button might be included on the **More** overflow flyout menu). To open Command Checker, select the button on any command bar.
 
-:::image type="content" source="media/regenerate-ribbon-metadata/open-command-checker.png" alt-text="Screenshot to select the Command Checker program button on any command bar.":::
+:::image type="content" source="media/regenerate-ribbon-metadata/open-command-checker.png" alt-text="Screenshot of the Command Checker program button on a command bar.":::
 
 After the **Command Checker** dialog box opens, select the **Regenerate ribbon metadata** button to start regenerating all the ribbon metadata.
 

@@ -22,7 +22,7 @@ When you try to verify the configuration of custom connectors that use **Generic
 
 - In the Swagger Editor, the **Refresh URL** value isn't listed or displayed as a security definition.
 
-    :::image type="content" source="media/custom-connectors-not-show-refresh-url/swagger-security-definitions.png" alt-text="Screenshot of the Refresh U R L value in the Swagger Editor.":::
+    :::image type="content" source="media/custom-connectors-not-show-refresh-url/swagger-security-definitions.png" alt-text="Screenshot shows the Refresh U R L value isn't listed in the Swagger Editor.":::
 
 ## Cause
 
