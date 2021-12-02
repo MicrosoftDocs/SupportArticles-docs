@@ -33,13 +33,13 @@ Use the following methods to restart the UI flow service in the following order.
 - Method 1: Restart *UIFlowService*
   - Open the task manager and go to **the services tab**, then look for **UIFlowService**, right-click on it, and select **Restart**.
   
-  :::image type="content" source="media/reset-ui-flow-service-when-bad-state/restart-ui-flow-service.png" alt-text="Screenshot to restart the U I flow service in the task manager.":::
+  :::image type="content" source="media/reset-ui-flow-service-when-bad-state/restart-ui-flow-service.png" alt-text="Screenshot to restart the U I flow service in task manager.":::
 
 - Method 2: If method 1 returns an error, you can try to restart the service manually as follows:
 
   - Kill (end task) the UI flow service process (parent of the service) in the **process** tab of the task manager.
   
-  :::image type="content" source="media/reset-ui-flow-service-when-bad-state/end-task-ui-flow-service-process.png" alt-text="Screenshot to end the U I flow service process in the process tab of the task manager.":::
+  :::image type="content" source="media/reset-ui-flow-service-when-bad-state/end-task-ui-flow-service-process.png" alt-text="Screenshot to end the U I flow service process under the Process tab of task manager.":::
 
 - Then delete session.json located in
 

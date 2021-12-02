@@ -113,11 +113,11 @@ If you enable a conditional access policy after flows and connections are create
 
 > AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access \<service>.
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/error-details.png" alt-text="Screenshot of the error message when investigating the failed runs.":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/error-details.png" alt-text="Screenshot of the error details including Time, Status, Error, Error Details, and how to fix.":::
 
 When users view connections on the Flow portal, they see an error message that resembles the following:
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/status-error.png" alt-text="Screenshot of the error message when users view connections on the Flow portal." border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/status-error.png" alt-text="Screenshot of the error Failed to refresh access token for service users see in the Flow portal." border="false":::
 
 To resolve this issue, users must sign in to the Flow portal under conditions that match the access policy of the service that they are trying to access (such as multi-factor, corporate network, and so on), and then repair or re-create the connection.
 
@@ -159,7 +159,7 @@ More importantly, users may also be unable to discover or run their flows from S
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/add-a-sharepoint-list-or-library-as-owner.png" alt-text="Screenshot to share Flows with SharePoint lists and libraries.":::
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/owner-see-site-url-and-list-id.png" alt-text="Screenshot shows that owners can see the site U R L and the list ID.":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/owner-see-site-url-and-list-id.png" alt-text="Screenshot shows the site U R L and the list ID owners can see.":::
 
 #### Effect 7 - Creation of SharePoint out-of-box flows
 

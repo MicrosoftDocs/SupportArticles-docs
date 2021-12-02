@@ -32,7 +32,7 @@ This error occurs if your UI flows has the property **Use coordinates** set to *
 
 - Verify that the properties Screen width, Screen height, Screen scale matches the display settings in your PC (shown in next step).
 
-  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/properties.png" alt-text="Screenshot to check that the properties Screen width, Screen height, Screen scale matches the display settings in your PC.":::
+  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/properties.png" alt-text="Screenshot to check that the Screen width, Screen height, Screen scale match the display settings in your PC.":::
 
 - Display Settings in your PC [View display settings in Windows 10](https://support.microsoft.com/windows/view-display-settings-in-windows-10-37f0e05e-98a9-474c-317a-e85422daa8bb)
 
