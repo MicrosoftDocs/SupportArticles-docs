@@ -47,7 +47,7 @@ To work around this issue, follow these steps:
    - **Certificate Authority**: **Windows Server 2012 R2**  
    - **Certificate recipient**: **Windows 8.1 / Windows Server 2012 R2**  
 
-        :::image type="content" source="media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/compatibility-settings-certificate-template-authority-recipient.png" alt-text="Screenshot of the compatibility settings of a certificate template, showing the compatibility level set to Windows Server 2012 R2 and Windows 8.1..":::
+        :::image type="content" source="media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/compatibility-settings-certificate-template-authority-recipient.png" alt-text="Screenshot of the compatibility settings of a certificate template, showing the compatibility level set to Windows Server 2012 R2 and Windows 8.1.":::
 
 2. Wait 30 minutes for the CEP server to receive the updated template information (or use the IISReset tool to restart the server).
 3. On the client computer, clear the client-side Enrollment Policy Cache by using the following command in a Command Prompt window:
