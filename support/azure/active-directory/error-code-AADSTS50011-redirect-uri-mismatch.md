@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS50011 - The redirect URI specified in the request does not match the redirect URIs configured for the application...
 description: Describes a problem in which you receive an error message when signing in to OIDC-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is Error AADSTS50011 - The redirect URI <redirect URI sent> specified in the request does not match the redirect URIs configured for the application <GUID>. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this.
-author: arcrowe
+author: aricrowe57
 ms.date: 12/1/2021
 ms.prod-support-area-path: 
 ms.reviewer: arcrowe
