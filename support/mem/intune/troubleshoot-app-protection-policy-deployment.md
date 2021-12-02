@@ -162,7 +162,7 @@ Intune app protection policy includes multi-identity support. Intune can apply a
 
 ### Scenario: The policy is applied, but iOS users can still transfer work files to unmanaged apps
 
-The **Open-in management** (![Open-in button](./media/troubleshoot-app-protection-policy-deployment/troubleshoot-app-protection.jpg)) feature for iOS devices can limit file transfers between apps that are deployed through the MDM channel. The user may be able to transfer work files from managed locations such as OneDrive and Exchange to unmanaged apps or locations, depending on the configuration. The iOS **Open-in management** feature works outside other data transfer methods. Therefore, it isn't affected by **Save as** and **Copy/Paste** settings.
+The **Open-in management** (:::image type="icon" source="media/troubleshoot-app-protection-policy-deployment/open-in-icon.png":::) feature for iOS devices can limit file transfers between apps that are deployed through the MDM channel. The user may be able to transfer work files from managed locations such as OneDrive and Exchange to unmanaged apps or locations, depending on the configuration. The iOS **Open-in management** feature works outside other data transfer methods. Therefore, it isn't affected by **Save as** and **Copy/Paste** settings.
 
 You can use Intune app protection policies together with the iOS **Open-in management** feature to protect company data in the following manner:
 

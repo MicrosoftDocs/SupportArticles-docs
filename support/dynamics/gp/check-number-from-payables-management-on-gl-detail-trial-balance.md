@@ -2,7 +2,6 @@
 title: Check Number from Payables Management on GL Detail Trial Balance
 description: Describes how to add the check number to detailed GL detailed Trial Balance.
 ms.reviewer: 
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Check Number from Payables Management on GL Detail Trial Balance
