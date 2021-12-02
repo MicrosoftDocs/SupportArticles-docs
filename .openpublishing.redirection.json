@@ -551,7 +551,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/mem/intune/enroll-devices-in-intune-tip.m",
+      "source_path": "support/mem/intune/enroll-devices-in-intune-tip.md",
       "redirect_url": "/mem/intune/enrollment/windows-enrollment-methods",
       "redirect_document_id": false
     },
