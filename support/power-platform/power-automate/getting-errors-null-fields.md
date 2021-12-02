@@ -22,7 +22,7 @@ In Microsoft Power Automate, when you create a flow, here's what could happen wi
 
    - > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
 
-   :::image type="content" source="media/getting-errors-null-fields/invaildtemplate-error.png" alt-text="Invalid template runtime error.":::
+   :::image type="content" source="media/getting-errors-null-fields/invaild-template-error.png" alt-text="Screenshot of the invalid template runtime error." border="false":::
 
 ## Cause
 
@@ -37,22 +37,22 @@ You can set up a condition check for null field. Here are the steps to create a 
 
 1. Add a new condition action.
 
-    :::image type="content" source="media/getting-errors-null-fields/add-new-condition-action.png" alt-text="Condition action.":::
+    :::image type="content" source="media/getting-errors-null-fields/add-new-condition-action.png" alt-text="Screenshot to add a new condition action in the Choose an action window.":::
 
 2. Choose dynamic content output (for example, user email) you want to check.
 
-    :::image type="content" source="media/getting-errors-null-fields/choose-user-email.png" alt-text="Condition for null with email.":::
+    :::image type="content" source="media/getting-errors-null-fields/choose-user-email.png" alt-text="Screenshot to choose the dynamic content output that you want to check.":::
 
 3. Set the operation to be (for example) **is not equal to**.
 4. Put the value field as the expression value **null**.
 
-    :::image type="content" source="media/getting-errors-null-fields/expression-value-null.png" alt-text="Put the value field as null.":::
+    :::image type="content" source="media/getting-errors-null-fields/expression-value-null.png" alt-text="Screenshot to put the value field as the expression value null.":::
 
 ## Runtime error resolution
 
 You can also use the coalesce function to provide default values when a value is null. For example, using **coalesce(trigger().outputs, '')** will default to empty string when **trigger().outputs** is null.
 
-:::image type="content" source="media/getting-errors-null-fields/coalesce-function-provide-default-values.png" alt-text="Use coalesce function with ''.":::
+:::image type="content" source="media/getting-errors-null-fields/coalesce-function-provide-default-values.png" alt-text="Screenshot to use the coalesce function to provide the default values when a value is null.":::
 
 > [!NOTE]
 > If you're still getting a runtime error, it may be caused by reference null properties in an object. You should use the question mark operator **?**. For example, to handle null outputs from a trigger, you can use this expression:  
