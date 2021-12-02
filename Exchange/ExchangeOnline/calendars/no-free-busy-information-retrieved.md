@@ -29,10 +29,8 @@ When you try to view the free/busy information for a user in another forest or t
 
 A sample of the complete error message is as follows:
 
-"MessageText":
-> Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: **Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
-
-"ResponseCode": "**ErrorMailRecipientNotFound**"
+> "MessageText": "Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException: **Unable to resolve e-mail address `user@northamerica.contoso.com` to an Active Directory object.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>."  
+>"ResponseCode": "**ErrorMailRecipientNotFound**"
 
 ### Cause
 
@@ -63,10 +61,8 @@ Get-OrganizationRelationship | ft name, domainnames
 
 A sample of the complete error message is as follows:
 
-"MessageText":
-> The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: **The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>.
-
-"ResponseCode": "**ErrorMailRecipientNotFound**"
+> "MessageText": "The mail recipient is not found in Active Directory., inner exception: Microsoft.Exchange.InfoWorker.Common.Availability.InvalidOrganizationRelationshipForRequestDispatcherException: **The organization relationship \<name of the organization relationship\> can't be used. Please confirm that the organization relationship is configured correctly.**\r\n. Name of the server where exception originated: \<Host name of cloud or on-premises server\>."  
+> "ResponseCode": "**ErrorMailRecipientNotFound**"
 
 ### Cause
 
@@ -81,7 +77,7 @@ This error occurs when the values of one of all of the following parameters in t
 
     :::image type="content" source="media/no-free-busy-information-retrieved/federation-information.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet.":::
 
-1. Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the values of the three parameters in the organization relationship. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set them by using the output from the `Get_FederationInformation` cmdlet. For example:
+1. In Exchange Server on-premises, run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the values of the three parameters in the organization relationship. If any value is set incorrectly, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to set them by using the output from the `Get_FederationInformation` cmdlet. For example:
 
     ```powershell
     Set-OrganizationRelationship -Identity "<User Domain Name>" -TargetAutodiscoverEpr "<Value from the federation information>" -TargetApplicationUri "<Value from the federation information>"
