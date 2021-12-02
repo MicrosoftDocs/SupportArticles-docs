@@ -18,11 +18,11 @@ When you try to verify the configuration of custom connectors that use **Generic
 
 - The **Security** page shows placeholder text instead of the configured value in the **Refresh URL** field.
 
-    :::image type="content" source="./media/custom-connectors-not-show-refresh-url/refresh-url-security.png" alt-text="A screenshot of the Security page.":::
+    :::image type="content" source="media/custom-connectors-not-show-refresh-url/refresh-url-security.png" alt-text="Screenshot of the Refresh U R L field on the Security page.":::
 
 - In the Swagger Editor, the **Refresh URL** value isn't listed or displayed as a security definition.
 
-    :::image type="content" source="./media/custom-connectors-not-show-refresh-url/swagger-security-definitions.png" alt-text="A screenshot of the Swagger Editor.":::
+    :::image type="content" source="media/custom-connectors-not-show-refresh-url/swagger-security-definitions.png" alt-text="Screenshot shows the Refresh U R L value isn't listed in the Swagger Editor.":::
 
 ## Cause
 
