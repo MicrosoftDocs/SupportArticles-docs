@@ -34,7 +34,7 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
    - Service Packs 
    - Update Rollups 
 
-    :::image type="content" source="media/apply-out-of-band-updates-to-cps/update-classification-tab.png" alt-text="Screenshot to check the check boxes are selected on the Update Classifications tab.":::
+    :::image type="content" source="media/apply-out-of-band-updates-to-cps/update-classification-tab.png" alt-text="Screenshot shows the check boxes are selected on the Update Classifications tab.":::
 
 7. Click **OK**.
 8. Right-click the update server again, and then click **Synchronize**.
