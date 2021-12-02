@@ -536,6 +536,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/grouping-targeting-migration-blockers.md",
+      "redirect_url": "/mem/intune/fundamentals/setup-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/intune-account-portal-retired.md",
+      "redirect_url": "/mem/intune/fundamentals/setup-steps",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/assignmentfilter-permissions.md",
       "redirect_url": "/mem/intune/fundamentals/create-custom-role#custom-role-permissions",
       "redirect_document_id": false

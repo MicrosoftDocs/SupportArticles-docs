@@ -272,8 +272,6 @@ items:
     href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
   - name: Help and support blade doesn't load
     href: cannot-load-help-and-support-blade.md
-  - name: Intune account portal retired
-    href: intune-account-portal-retired.md
   - name: Script error during Intune setup process
     href: script-error-intune-setup.md  
   - name: Set the MDM authority
@@ -284,10 +282,6 @@ items:
     href: troubleshooting-blade-fails-loading.md
   - name: Troubleshoot software updates
     href: troubleshoot-software-updates-in-microsoft-intune.md
-- name: Migration to the Azure Portal
-  items:
-  - name: Migration blockers for grouping and targeting
-    href: grouping-targeting-migration-blockers.md
 - name: Reporting
   items:
   - name: AADSTS50011 query the Intune Data Warehouse
