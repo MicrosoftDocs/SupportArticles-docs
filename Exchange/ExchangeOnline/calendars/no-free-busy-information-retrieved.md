@@ -56,7 +56,7 @@ Get-OrganizationRelationship | ft name, domainnames
 - If the domain is included in the returned result, run the  [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to enable access to the free/busy information for the domain.
 
     ```powershell
-    Set-OrganizationRelationship -Identity "<Domain_name>" -FreeBusyAccessEnabled $true
+    Set-OrganizationRelationship -Identity "<User Domain Name>" -FreeBusyAccessEnabled $true
     ```
 
 ## Error: The organization relationship can't be used
