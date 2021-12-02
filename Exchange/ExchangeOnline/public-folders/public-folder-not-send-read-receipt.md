@@ -25,15 +25,11 @@ search.appverid: MET150
 
 When you send an email that requests a read receipt to a mail-enabled public folder, you don't receive a read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
 
-This issue occurs when you set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis.
+This issue occurs even if you set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis.
 
 For example, you send an email that requests a read receipt to a mail-enabled public folder (the name of the public folder is PF2).
 
-:::image type="content" source="media/public-folder-not-send-read-receipt/public-folder-name.png" alt-text="Screenshot of the an email message that requests a read receipt.":::
-
 However, you receive the read receipt from the public folder mailbox that is hosting the public folder (the name of the public folder mailbox is MSExchangepf2).
-
-:::image type="content" source="media/public-folder-not-send-read-receipt/read-receipt-from-mailbox.png" alt-text="Screenshot of a read receipt that comes from the public folder mailbox.":::
 
 ## Status
 
