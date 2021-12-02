@@ -61,8 +61,6 @@
       href: ../administration/items-missing-on-exchange-activesync-client.md
     - name: Event ID 1014 when connecting to Exchange Online mailbox
       href: ../administration/event-id-1014-when-connecting-to-exchange-online-mailbox.md
-    - name: Exchange Online Message Trace Diagnostic
-      href: ../administration/exchange-online-message-trace-diagnostic.md
     - name: Format of the Exchange object version is wrong
       href: ../administration/wrong-format-exchange-object-version.md
     - name: GetFolder requests return wrong TotalCount values
