@@ -28,7 +28,7 @@ In an Exchange hybrid deployment, you have an on-premises primary mailbox, and a
 
 ## Cause
 
-This issue occurs because you have dual archives (an on-premises archive mailbox uses the same archive GUID (`ArchiveGuid`) as the cloud-based archive mailbox), which is not a valid state. Therefore, the migration fails with the error to avoid losing archive data because of a validation check during the migration.
+This error is triggered by a validation check in Exchange Online for the move request. It might occur because you have dual archive mailboxes, an on-premises archive mailbox and a cloud-based archive mailbox, both of which have the same value for the `ArchiveGuid` parameter. This situation isn't supported. That is why the migration fails with the error to avoid losing archive data in the affected on-premises primary mailbox.
 
 
 **Note**: The only supported archive split scenario is an on-premises primary mailbox and an archive mailbox in Exchange Online.
@@ -37,18 +37,18 @@ This issue occurs because you have dual archives (an on-premises archive mailbox
 
 To fix this issue, follow these steps:
 
-1. Check the `ArchiveGuid` property value of the on-premises and cloud-based archive mailboxes:
+1. Check the `ArchiveGuid` property value of both the on-premises and cloud-based archive mailboxes:
 
     - For the on-premises archive mailbox, [open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) and run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet:
 
         ```powershell
-        Get-Mailbox -Identity john@contoso.com | FL *archive*
+        Get-Mailbox -Identity <name of affected mailbox> | FL *archive*
         ```
 
     - For the cloud-based archive mailbox, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet:
 
         ```powershell
-        Get-MailUser -Identity John | FL *archive*
+        Get-MailUser -Identity <name of affected mailbox> | FL *archive*
         ```
 
     If the two archive mailboxes have the same `ArchiveGuid` property value, go to Step 2. Otherwise, [create a support request](/microsoft-365/business-video/get-help-support).
@@ -63,18 +63,18 @@ To fix this issue, follow these steps:
 
     For more information, see [create mailbox export requests](/exchange/recipients/mailbox-import-and-export/export-procedures#create-mailbox-export-requests).
 
-1. Add the domain of the cloud-based archive mailbox to the `ArchiveDomain` property of the affected user:
+1. Add the domain of the cloud-based archive mailbox to the `ArchiveDomain` property of the affected on-premises primary mailbox:
 
-    1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) and run the following [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet:
-
-        ```powershell
-        Set-ADUser -Identity John -Add @{msExchArchiveaddress="contoso.mail.onmicrosoft.com"}
-        ```
-
-    1. Run the following `Get-Mailbox` cmdlet to verify that the `ArchiveDomain` value is set successfully:
+    1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) and run the [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet:
 
         ```powershell
-        Get-Mailbox -Identity john@contoso.com | FL *archive*
+        Set-ADUser -Identity <name of affected mailbox> -Add @{msExchArchiveaddress="<domain name of cloud archive>"}
         ```
 
-1. Use the `New-MigrationBatch` or the `New-MoveRequest` cmdlet with the `PrimaryOnly` switch to migrate the on-premises primary mailbox again.
+    1. Run the `Get-Mailbox` cmdlet to verify that the `ArchiveDomain` value is set successfully:
+
+        ```powershell
+        Get-Mailbox -Identity <name of affected mailbox> | FL *archive*
+        ```
+
+1. Use the `New-MigrationBatch` or the `New-MoveRequest` cmdlet with the `PrimaryOnly` switch to migrate the on-premises primary mailbox to Exchange Online.
