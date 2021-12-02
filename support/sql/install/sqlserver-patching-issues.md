@@ -11,7 +11,7 @@ ms.prod: sql
 
 This article provides general troubleshooting procedures that you can use when you run into any issue applying a Service Pack (SP) or a Cumulative Update (CU) for your SQL Server instance. It also provides detailed procedures for solving the following failure messages associated with patching:
 
-- [Wait on Database Engine recovery handle failed / 912 and 3417 errors](#wait-on-database-engine-recovery-handle-failed--912-and-3417-errors) error message when executing upgrade scripts.
+- [Wait on Database Engine recovery handle failed / 912 and 3417 errors](#wait-on-database-engine-recovery-handle-failed-912-and-3417-errors) error message when executing upgrade scripts.
 - [Various setup errors that occur](#setup-errors-resulting-from-missing-installer-files-in-windows-cache) due to missing  MSI files or patch files in the Windows installer cache.
 - [The Database Engine system data directory in the registry is not valid](#setup-failing-due-to-incorrect-data-or-log-location-in-registry) or the User Log directory in the registry is not valid.
 - [Network path was not found](#setup-failing-due-to-incorrect-data-or-log-location-in-registry) and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AG).
