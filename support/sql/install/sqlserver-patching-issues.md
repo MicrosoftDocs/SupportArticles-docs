@@ -42,7 +42,7 @@ This section provides information on the CU and SP installation prerequisites.
 
 1. Isolate the error by doing the following steps:
     1. Check **Details** in the **Failure** screen of the setup process.
-    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver) section.
+    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15) section.
 
 1. Check for a matching scenario in the next few sections and follow associated troubleshooting procedures for the corresponding scenario.
 1. If there is no matching scenario, look for additional pointers in the log files and also review the general information section above.
