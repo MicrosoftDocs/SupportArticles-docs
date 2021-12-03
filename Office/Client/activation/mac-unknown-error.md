@@ -29,7 +29,7 @@ This is a server issue that occurs when trying to activate Microsoft 365 for Mac
 
 1. Run the [Office for Mac License Removal Tool](https://support.microsoft.com/en-us/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193).
 
-1. Uninstall Office for Mac and then re-install Office from https://office.com/signin.
+1. [Uninstall Office for Mac](https://support.microsoft.com/office/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3) and then re-install Office from https://office.com/signin.
 
 1. Restart your Mac and then activate Office.
 
