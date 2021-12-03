@@ -34,7 +34,7 @@ It's important that administrators can diagnose and resolve issues quickly in Sh
 
 Diagnostic capabilities for a few text queries were first released within the Microsoft 365 admin center support portal in December 2018.
 
-:::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-1.jpg" alt-text="Screenshot of the Run diagnostics page in the SharePoint admin center.":::
+:::image type="content" source="media/sharepoint-and-onedrive-diagnostics/run-diagnostics.png" alt-text="Screenshot of the Run diagnostics page in the Microsoft 365 admin center.":::
 
 ### What scenarios are currently covered?
 

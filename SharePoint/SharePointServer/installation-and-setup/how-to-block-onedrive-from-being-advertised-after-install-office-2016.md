@@ -46,9 +46,9 @@ After OneDrive.exe is installed, you will see shortcuts to the product added to 
    
    In Windows 10 and Windows 7, the views of Windows Explorer and the Start menu should resemble the following screen shots after you install Office 2016.  
 
-   :::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-10-explorer-start-menu.png" alt-text="Screenshot shows the views of Windows Explorer and the Start menu after installing Office 2016 in Windows 10." border="false":::
+   :::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-10-explorer-start-menu.png" alt-text="Screenshot shows the views of Windows Explorer and the Start menu, after installing Office 2016 in Windows 10." border="false":::
 
-   :::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-7-explorer-start-menu.png" alt-text="Screenshot shows the views of Windows Explorer and the Start menu after installing Office 2016 in Windows 7." border="false":::
+   :::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-7-explorer-start-menu.png" alt-text="Screenshot shows the views of Windows Explorer and the Start menu, after installing Office 2016 in Windows 7." border="false":::
 
 ### Method 2: Uninstall OneDrive.exe
 
