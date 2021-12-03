@@ -62,7 +62,7 @@ Following are some of the common causes of upgrade script failures and correspon
 
 - **SSISDB part of Availability group**
 
-  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver) section.
+  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15) section.
 
 - **Misconfigured System User/Role in msdb database**
 
@@ -94,7 +94,7 @@ To fix this issue, connect to the SQL Server instance using SQL Server Managemen
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
-For smooth functioning and maintenance of a SQL Server failover cluster, you must always follow all the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver) sections. If you are running into errors applying a CU or an SP, check the following:
+For smooth functioning and maintenance of a SQL Server failover cluster, you must always follow all the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true) sections. If you are running into errors applying a CU or an SP, check the following:
 
 - The remote registry service is up and running on all the nodes of the WSFC cluster.
 - If the service account for SQL Server is not an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information, see the [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md) section.
