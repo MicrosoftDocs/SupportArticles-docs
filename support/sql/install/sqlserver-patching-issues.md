@@ -42,14 +42,14 @@ This section provides information on the CU and SP installation prerequisites.
 
 1. Isolate the error by doing the following steps:
     1. Check **Details** in the **Failure** screen of the setup process.
-    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver) section.
+    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true) section.
 
 1. Check for a matching scenario in the next few sections and follow associated troubleshooting procedures for the corresponding scenario.
 1. If there is no matching scenario, look for additional pointers in the log files and also review the [CU and SP installation general info](#cu-and-sp-installation-general-info) section.
 
 ## Wait on Database Engine recovery handle failed, 912, and 3417 errors
 
-Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports  *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?view=sql-server-ver) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error?view=sql-server-ver) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
+Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports  *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?view=sql-server-ver15&preserve-view=true) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error?view=sql-server-ver15&preserve-view=true) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
 
 To troubleshoot and fix these errors, do the following steps:
 
@@ -62,7 +62,7 @@ Following are some of the common causes of upgrade script failures and correspon
 
 - **SSISDB part of Availability group**
 
-  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15) section.
+  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
 
 - **Misconfigured System User/Role in msdb database**
 
@@ -106,7 +106,7 @@ When these are not properly configured, you may notice one or more of the follow
 
 ## See Also
 
-- For general information on updating SQL Server, see the [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver) section.
+- For general information on updating SQL Server, see the [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15&preserve-view=true) section.
 - For information on security updates for SQL Server and other products, see the [Security Update Guide](https://msrc.microsoft.com/update-guide) section.
-- For information on standard terminology associated with Microsoft updates, see the [Description of the standard terminology that is used to describe Microsoft software updates](/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver) section.
+- For information on standard terminology associated with Microsoft updates, see the [Description of the standard terminology that is used to describe Microsoft software updates](/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15&preserve-view=true) section.
 - For resolving setup issues that may occur in highly secure environments, see the [SQL Server installation fails if the Setup account doesn't have certain user rights](installation-fails-if-remove-user-right.md) section.
