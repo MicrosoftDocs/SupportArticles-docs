@@ -1,5 +1,5 @@
 ---
-title: "An error occurred when loading the Sandbox cube" error in PowerPivot for SharePoint
+title: '"An error occurred when loading the Sandbox cube" error in PowerPivot for SharePoint'
 description: Fixes an issue that occurs when run a scheduled data refresh of a PowerPivot workbook in Microsoft SharePoint.
 author: helenclu
 ms.author: zakirh
