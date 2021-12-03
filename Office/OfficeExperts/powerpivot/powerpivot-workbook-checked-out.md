@@ -1,5 +1,6 @@
 ---
-title: The workbook must be checked out when run data refresh in PowerPivot 
+title: The workbook must be checked out when run data refresh in PowerPivot
+description: Fixes an error that occurs when you run a scheduled data refresh on a PowerPivot workbook.
 author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
@@ -22,7 +23,7 @@ This article was written by [Rick Andring](https://social.technet.microsoft.com/
 
 When you run a scheduled data refresh on a PowerPivot workbook, you receive the following error:
 
-**The workbook must be checked out before it can be replaced. You can save this file with another name.**
+> The workbook must be checked out before it can be replaced. You can save this file with another name.
 
 ## Cause
 
