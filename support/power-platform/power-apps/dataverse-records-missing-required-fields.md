@@ -16,11 +16,11 @@ _Applies to:_ &nbsp; Dynamics 365 Field Service, Dataverse
 
 After users input data through the [Microsoft Dataverse Web API](/powerapps/developer/data-platform/webapi/overview), some required fields are missing or not populated in the created records. For example, the required **Case Title** field is blank in a created case, as shown in the following screenshot.
 
-:::image type="content" source="./media/dataverse-records-missing-required-fields/dataverse-error.jpg" alt-text="Screenshot of an example about missing required fields.":::
+:::image type="content" source="media/dataverse-records-missing-required-fields/dataverse-error.png" alt-text="Screenshot of an example about missing required fields.":::
 
 When you open the affected case, you must enter a value for the **Case Title** field.
 
-:::image type="content" source="./media/dataverse-records-missing-required-fields/missing-fields-case.jpg" alt-text="Screenshot of a case.":::
+:::image type="content" source="media/dataverse-records-missing-required-fields/missing-fields-case.png" alt-text="Screenshot to enter a value for the Case Title field.":::
 
 ## Cause
 

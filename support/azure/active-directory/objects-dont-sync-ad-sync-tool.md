@@ -69,9 +69,18 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 Use the [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix) to find objects and errors that prevent synchronization to Azure AD.
 
-- If you see "Blank" in the **ERROR** column after you run IdFix, see ["Blank" is displayed in the ERROR column for one or more objects after you run the IdFix tool](/office365/troubleshoot/active-directory/idfix-not-display-objects-errors).
+- If you see "Blank" in the **ERROR** column after you run IdFix, the displayName attribute of the object isn't defined. To resolve this issue, specify a value for the displayName attribute of the object using these steps:
 
-- If you see "Duplicate" in the **ERROR** column after you run IdFix, see: ["Duplicate" is displayed in the ERROR column for one or more objects after you run the IdFix tool](/office365/troubleshoot/active-directory/run-idfix-dirsync-error-remediation-tool)
+1. In the UPDATE column for the object, type the name of its displayName attribute.
+2. In the ACTION column, click EDIT, and then click Apply.
+3. Repeat steps 1 and 2 for each object that has a "blank" entry in the ERROR column.
+4. Run IdFix again to look for more object errors.
+
+- If you see "Duplicate" in the **ERROR** column after you run IdFix, two or more objects have the same email address. To resolve this problem, specify a unique email address for the object using these steps:
+
+1. In the UPDATE column for the object, type an email address that isn't already used.
+2. In the ACTION column, click EDIT, and then click Apply.
+3. Run IdFix again to look for more object errors.
 
 ### Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
 
@@ -150,7 +159,9 @@ Identify the specific attributes that are preventing synchronization based on th
 - The report from the output of the Office 365 Deployment Readiness Tool
 - Default directory synchronization scoping rules and custom rules
 
-After a specific attribute value is identified, use the Active Directory Users and Computers tool to edit the attribute value. To do it, follow these steps:
+After a specific attribute value is identified, edit the attribute value using one of these methods:
+
+- Use the Active Directory Users and Computers tool to edit the attribute value.
 
 1. Open Active Directory Users and Computers, and then select the root node of the AD DS domain.
 2. Select **View,** and then make sure that the **Advanced Features** option is selected.
@@ -158,7 +169,8 @@ After a specific attribute value is identified, use the Active Directory Users a
 4. On the **Object Editor** tab, locate the attribute that you want. Select **Edit**, and then edit the attribute value to the value that you want.
 5. Select **OK** two times.
 
-Or, you can use Active Directory Service Interfaces (ADSI) Edit to update object attributes in AD DS. You can download and install ADSI Edit as a part of the Windows Server Toolkit. To use ADSI Edit to edit attributes, follow these steps.
+- Use Active Directory Service Interfaces (ADSI) Edit to update object attributes in AD DS.
+You can download and install ADSI Edit as a part of the Windows Server Toolkit. To use ADSI Edit to edit attributes, follow these steps.
 
 > [!WARNING]
 > This procedure requires ADSI Edit. Using ADSI Edit incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems that result from the incorrect use of ADSI Edit can be resolved. Use ADSI Edit at your own risk.
