@@ -71,23 +71,27 @@ This error occurs when the values of any or all of the following parameters in t
 
 ### Resolution
 
-1. Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet either in Exchange Online or on Exchange on-premises as appropriate to get federation information for the user's domain.
+1. Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet either in Exchange Online or in Exchange on-premises as appropriate to get federation information for the user's domain.
 
-For example, if the user's domain name on Exchange Online is `northamerica.contoso.com`, run:
+    For example, if the user's domain name in Exchange Online is `northamerica.contoso.com`, run:
 
-```powershell
-Get-FederationInformation northamerica.contoso.com
-```
+    ```powershell
+    Get-FederationInformation northamerica.contoso.com
+    ```
 
-The following is a sample of the output you'll see:
+    The following is a sample of the output you'll see:
 
-If the user's domain is on Exchange on-premises , run the `Get-FederationInformation` cmdlet on the routing domain "`<user's domain_name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run:
+    :::image type="content" source="media/no-free-busy-information-retrieved/output.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet in Exchange Online.":::
 
-```powershell
-Get-FederationInformation contoso.mail.onmicrosoft.com
-```
+    If the user's domain is in Exchange on-premises, run the `Get-FederationInformation` cmdlet on the routing domain "`<user's domain name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run:
 
-The following is a sample of the output you'll see:
+    ```powershell
+    Get-FederationInformation contoso.mail.onmicrosoft.com
+    ```
+
+    The following is a sample of the output you'll see:
+
+    :::image type="content" source="media/no-free-busy-information-retrieved/output-routing-domain.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet on the routing domain.":::
 
 1. Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to check the values of the three parameters in the organization relationship. For any parameters whose values don't match those in the output from the `Get-FederationInformation` cmdlet, use the [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship) cmdlet to correct them. For example:
 
