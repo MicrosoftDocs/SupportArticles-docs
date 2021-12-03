@@ -57,3 +57,24 @@ To enable MFA, follow these steps:
      > Users in the `ExceptionList` can't call the `SetAuthenticationLevel` method.
 
 1. select **Execute!**, and then select **Dismiss**.
+
+### PowerShell examples
+
+You can also use the following PowerShell examples to set the AuthenticationLevel and modify the ExceptionList.
+Retrieve the SID of Active Directory users and groups with the Get-AdUser and Get-ADGroup cmdlets if needed. 
+
+#### Example 1 Set the AuthenticationLevel and add two SIDs to the ExceptionList
+     > [!NOTE]
+     > The command will overwrite the ExceptionList and will only add the entroes provides in the script. 
+  ```powershell
+    [array]$ExceptionList=@("S-1-5-21-<domain-SID-part>-<user/group-SID-part>","S-1-5-21-<domain-SID-part>-<user/group-SID-part>")
+    [uint32]$AuthenticationLevel=<desired authentication level value>
+    Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+  ```
+
+#### Example 2 Set the AuthenticationLevel and remove any entries from the ExceptionList
+ ```powershell
+    [array]$ExceptionList=@()
+    [uint32]$AuthenticationLevel=<desired authentication level value>
+    Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+  ```
