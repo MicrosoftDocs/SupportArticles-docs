@@ -1,12 +1,13 @@
 ---
-title: Troubleshooting guidance for when a user is not authorized to enroll a Windows device in Intune
-description: Helps resolve the issue when a user is not allowed to enroll their Windows device in Microsoft Intune.
-ms.date: 10/06/2021
+title: Windows user is not authorized to enroll in Intune
+description: Troubleshooting guidance for when a user cannot enroll a Windows device in Microsoft Intune
+ms.date: 12/02/2021
+ms.reviewer: joelste
 ---
 
 # Windows user is not authorized to enroll
 
-This article gives troubleshooting steps to help resolve an issue where a user is not authorized to enroll their Windows device. 
+This article gives troubleshooting steps to help resolve an issue where a user is not authorized to enroll their Windows device.
 
 ## Symptom
 
