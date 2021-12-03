@@ -22,16 +22,15 @@ appliesto:
 
 ## Symptoms
 
-In an Exchange hybrid deployment, you have an on-premises primary mailbox, and a cloud-based archive mailbox in Exchange Online. You try to migrate the on-premises primary mailbox to Exchange Online by using the [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch) or the [New-MoveRequest](/powershell/module/exchange/new-moverequest) cmdlet with the `PrimaryOnly` switch. In this scenario, you receive the following error message:
+In an Exchange hybrid deployment, you have an on-premises Microsoft Exchange Server primary mailbox, and a cloud-based archive mailbox in Exchange Online. You try to migrate the on-premises primary mailbox to Exchange Online by using the [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch) or the [New-MoveRequest](/powershell/module/exchange/new-moverequest) cmdlet together with the `PrimaryOnly` switch. In this scenario, you receive the following error message:
 
 > The archive database is not explicitly set on the mailbox. Hence a primary only move cannot be allowed for this user.
 
 ## Cause
 
-This error is triggered by a validation check in Exchange Online for the move request. It might occur because you have dual archive mailboxes, an on-premises archive mailbox and a cloud-based archive mailbox, both of which have the same value for the `ArchiveGuid` parameter. This situation isn't supported. That is why the migration fails with the error to avoid losing archive data in the affected on-premises primary mailbox.
+This error is triggered by a validation check in Exchange Online for the move request. The error might occur because you have dual archive mailboxes (an on-premises archive mailbox and a cloud-based archive mailbox), and they share the same value for the `ArchiveGuid` parameter. This situation isn't supported. Therefore, the migration fails and generates the error to avoid losing archive data in the affected on-premises primary mailbox.
 
-
-**Note**: The only supported archive split scenario is an on-premises primary mailbox and an archive mailbox in Exchange Online.
+**Note**: The only supported split-archive scenario is an on-premises primary mailbox and an archive mailbox in Exchange Online.
 
 ## Resolution
 
@@ -39,23 +38,25 @@ To fix this issue, follow these steps:
 
 1. Check the `ArchiveGuid` property value of both the on-premises and cloud-based archive mailboxes:
 
-    - For the on-premises archive mailbox, [open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) and run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet:
+    - For the on-premises archive mailbox, [open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), and then run the following [Get-Mailbox](/powershell/module/exchange/get-mailbox) cmdlet:
 
         ```powershell
         Get-Mailbox -Identity <name of affected mailbox> | FL *archive*
         ```
 
-    - For the cloud-based archive mailbox, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet:
+    - For the cloud-based archive mailbox, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), and then run the following [Get-MailUser](/powershell/module/exchange/get-mailuser) cmdlet:
 
         ```powershell
         Get-MailUser -Identity <name of affected mailbox> | FL *archive*
         ```
 
-    If the two archive mailboxes have the same `ArchiveGuid` property value, go to Step 2. Otherwise, [create a support request](/microsoft-365/business-video/get-help-support).
+    If both archive mailboxes have the same `ArchiveGuid` property value, go to Step 2. Otherwise, [create a support request](/microsoft-365/business-video/get-help-support).
 
-1. Back up and export the on-premises archive mailbox to a .pst file in the [Exchange admin center](https://admin.exchange.microsoft.com):
+1. Back up and export the on-premises archive mailbox to a .pst file:
 
-    1. In the Exchange admin center, select **recipients** > **mailboxes** > **More options**:::image type="icon" source="media/onboarding-remote-move-migration-fails/eac_moreoptions-icon.png" border="false"::: > **Export to a PST file**.
+    1. Open the [Exchange admin center](https://admin.exchange.microsoft.com).
+
+    1. Select **recipients** > **mailboxes** > **More options** :::image type="icon" source="media/onboarding-remote-move-migration-fails/eac_moreoptions-icon.png" border="false"::: > **Export to a PST file**.
 
     1. On the **Export to a .pst file** page, select the source mailbox, and then select **Export only the contents of this mailbox's archive** > **Next**.
 
@@ -65,7 +66,7 @@ To fix this issue, follow these steps:
 
 1. Add the domain of the cloud-based archive mailbox to the `ArchiveDomain` property of the affected on-premises primary mailbox:
 
-    1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) and run the [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet:
+    1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell), and run the [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlet:
 
         ```powershell
         Set-ADUser -Identity <name of affected mailbox> -Add @{msExchArchiveaddress="<domain name of cloud archive>"}
@@ -77,4 +78,4 @@ To fix this issue, follow these steps:
         Get-Mailbox -Identity <name of affected mailbox> | FL *archive*
         ```
 
-1. Use the `New-MigrationBatch` or the `New-MoveRequest` cmdlet with the `PrimaryOnly` switch to migrate the on-premises primary mailbox to Exchange Online.
+1. To migrate the on-premises primary mailbox to Exchange Online, use the `New-MigrationBatch` or the `New-MoveRequest` cmdlet together with the `PrimaryOnly` switch.
