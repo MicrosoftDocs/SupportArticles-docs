@@ -1,5 +1,6 @@
 ﻿---
-title: A "The virtual path maps to another application, which is not allowed." error when you run a scheduled data refresh
+title: "The virtual path maps to another application, which is not allowed." error when you run a scheduled data refresh
+description: Fixes an issue that occurs when you run a scheduled data refresh on a PowerPivot workbook in Microsoft SharePoint Server 2016.
 author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
@@ -22,7 +23,7 @@ This article was written by [Zakir Haveliwala](https://social.technet.microsoft.
 
 When you run a scheduled data refresh on a PowerPivot workbook in Microsoft SharePoint Server 2016, you may receive the following error:
 
-**The virtual path '/……xlsx' maps to another application, which is not allowed.**
+> The virtual path '/……xlsx' maps to another application, which is not allowed.
 
 ![the virtual path error dialog box](./media/virtual-path-maps-to-another-application-not-allowed/virtual-path-error.png)
 
