@@ -23,12 +23,12 @@ search.appverid: MET150
 
 ## Symptoms
 
-You configure the following settings for a mail-enabled public folder to send read receipts:
+A mail-enabled public folder has the following settings:
 
-- Set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis.
-- For any message received that includes a read receipt request, select **Always send a read receipt** in Outlook or **Always send a response** in Outlook on the web.
+- The `PerUserReadStateEnabled` parameter value is set to `False` to remove read or unread tracking on a per-user basis.
+- The **Always send a read receipt** option in Outlook, or the **Always send a response** option in Outlook on the web is selected.
 
-When you send an email that requests a read receipt to the public folder, you don't receive the read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
+When you send an email that requests a read receipt to the mail-enabled public folder, you don't receive the read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
 
 For example, you send an email that requests a read receipt to a mail-enabled public folder (named **PF2**).
 
