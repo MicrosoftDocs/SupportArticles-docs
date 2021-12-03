@@ -23,7 +23,7 @@ When you click **Sync Now** in Microsoft SharePoint or OneDrive for Business, th
 
 > We can't connect to the specified SharePoint site
 
-![error message dialog box](./media/onedrive-for-business-sync-returns-error/error-message-dialog-box.png)
+:::image type="content" source="media/onedrive-for-business-sync-returns-error/error-message-dialog-box.png" alt-text="Screenshot of the OneDrive for Business sync error message dialog box." border="false":::
 
 ## Cause
 
