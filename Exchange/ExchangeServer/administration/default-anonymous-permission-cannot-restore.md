@@ -61,6 +61,6 @@ Inbox Anonymous {None}
 
 ## References
 
-- [Get-MailboxFolderPermission](/powershell/module/exchange/get-mailboxfolderpermission?view=exchange-ps)
+- [Get-MailboxFolderPermission](/powershell/module/exchange/get-mailboxfolderpermission)
 
-- [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps)
+- [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission)

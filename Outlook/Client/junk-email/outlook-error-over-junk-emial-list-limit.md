@@ -98,7 +98,7 @@ Because there are four possible causes of this problem, follow these steps to de
 
     1. Download the MFCMAPI tool on a computer on which you have an Outlook profile configured for the mailbox in question.
 
-        For more information about MFCMAPI, see [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+        For more information about MFCMAPI, see [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 
     2. Create an Online mode profile for the mailbox.
     3. Start MFCMAPI.
@@ -163,7 +163,7 @@ Because there are four possible causes of this problem, follow these steps to de
     > [!NOTE]
     > The following procedure assumes that you're using the November 2011 version (15.0.0.1029) of MFCMAPI or a later version.
 
-    1. Download the MFCMAPI tool on a computer on which you have an Outlook profile configured for the mailbox in question. For more information about MFCMAPI, see [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+    1. Download the MFCMAPI tool on a computer on which you have an Outlook profile configured for the mailbox in question. For more information about MFCMAPI, see [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
     2. Create an Online mode profile for the mailbox.
     3. Exit Outlook if it's currently running.
     4. Start MFCMAPI.

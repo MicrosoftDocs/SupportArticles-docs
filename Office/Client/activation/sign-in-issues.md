@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157601
+- CI 159070
 search.appverid: 
 - MET150
 appliesto:
@@ -53,13 +54,13 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 <details>
 <summary><b>Citrix Server issues</b></summary>
 
-Microsoft 365 Apps fails to activate when opened from published apps on a Citrix server. This is a known issue with Citrix. For more information, see [Known issues (Citrix product documentation)](https://docs.citrix.com/citrix-virtual-apps-desktops/whats-new/known-issues.html).
+Microsoft 365 Apps fails to activate when opened from published apps on a Citrix server. This is a known issue with Citrix. For more information, see [Known issues (Citrix product documentation)](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/whats-new/known-issues.html).
 <br/><br/>
 </details>
 
 <details>
 <summary><b>Sign out of Office and sign back in</b></summary>
-  
+
 1.	Open an Office app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.

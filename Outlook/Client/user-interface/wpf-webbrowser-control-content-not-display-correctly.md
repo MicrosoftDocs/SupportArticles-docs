@@ -110,7 +110,7 @@ namespace TaskPaneWorkaround
 
 Add an intermediary form between the CustomTaskPane and the actual WebBrowser or WPF control.
 
-For more information on adding a custom task pane to an application, see [Add a custom task pane to an application](/visualstudio/vsto/how-to-add-a-custom-task-pane-to-an-application?view=vs-2017).
+For more information on adding a custom task pane to an application, see [Add a custom task pane to an application](/visualstudio/vsto/how-to-add-a-custom-task-pane-to-an-application).
 
 For WPF rendering issues, the workaround consists of hosting a WPF UserControl inside a WindowsForm as described in [Walkthrough: Hosting a 3-D WPF Composite Control in Windows Forms](/dotnet/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms).
 
