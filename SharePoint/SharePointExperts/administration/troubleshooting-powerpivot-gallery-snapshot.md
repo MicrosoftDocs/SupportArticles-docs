@@ -25,7 +25,7 @@ This issue was discovered back in December 2016 during testing and again in a we
 (<https://info.summit7systems.com/blog/bug-report-powerpivot-for-sharepoint-2016-thumbnails-not-generating>) in February of 2017.
 
 
-![Display of the issue in PowerPivot Gallery](media/troubleshooting-powerpivot-gallery-snapshot/issue.png)
+:::image type="content" source="media/troubleshooting-powerpivot-gallery-snapshot/hourglass-issue.png" alt-text="Screenshot shows the issue in the PowerPivot Gallery.":::
 
 Extensive detail on the snapshot process or the log entries is not covered in this post (you can see Brian's blog above for most of it or follow along in the ULS logs). Here is the 10,000 foot view:
 
@@ -93,11 +93,11 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
     
     1.  Navigate to the list a site owner.    
     2.  Click "Library" \> "Library Settings" from the ribbon menu.  
-        ![SharePoint menu showing Library Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)    
+        :::image type="content" source="media/troubleshooting-powerpivot-gallery-snapshot/library-settings.png" alt-text="Screenshot to select the Library Settings item under the Library tab." lightbox="media/troubleshooting-powerpivot-gallery-snapshot/library-settings.png":::
     3.  Scroll down to the **Views** section and click **All Documents**.  
-        ![SharePoint Library Settings options](media/troubleshooting-powerpivot-gallery-snapshot/ClickAllDocs.png)    
+        :::image type="content" source="media/troubleshooting-powerpivot-gallery-snapshot/views-all-documents.png" alt-text="Screenshot of the Views section with the All Documents item selected.":::
     4.  Check the **Make the default view** box and click "OK"  
-        ![The default setting checkbox](media/troubleshooting-powerpivot-gallery-snapshot/AllDocsDefault.png)
+        :::image type="content" source="media/troubleshooting-powerpivot-gallery-snapshot/make-the-default-view.png" alt-text="Screenshot to check the Make the default view box.":::
 
   - You can take the above a step further by deleting the Silverlight views in the PowerPivot Gallery:
     
@@ -105,11 +105,11 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
         
         1.  Navigate to the list a site owner.        
         2.  Click "Library" \> "Library Settings" from the ribbon menu.  
-            ![SharePoint menu showing Library Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)        
+            :::image type="content" source="media/troubleshooting-powerpivot-gallery-snapshot/library-settings.png" alt-text="Screenshot to select the Library Settings item under the Library tab." lightbox="media/troubleshooting-powerpivot-gallery-snapshot/library-settings.png":::
         3.  Scroll down to the "Views" section and click on any of the 3 PowerPivot Silverlight views "Gallery", "Theatre" and "Carousel".  
-            ![SharePoint Library Settings options 2](media/troubleshooting-powerpivot-gallery-snapshot/ClickPPIVViews.png)        
+            :::image type="content" source="media/troubleshooting-powerpivot-gallery-snapshot/views-gallery-theatre-carousel.png" alt-text="Screenshot of the Views section, with the Gallery, Theatre, and Carousel items selected.":::
         4.  Click "Delete".  
-            ![SharePoint Delete button image](media/troubleshooting-powerpivot-gallery-snapshot/ClickDelete.png)
+            :::image type="content" source="media/troubleshooting-powerpivot-gallery-snapshot/delete-button.png" alt-text="Screenshot to select the Delete button in the PowerPivot Gallery.":::
 
   - You can also Delete/Hide the extra views with PowerShell (sample scripts attached below):
     

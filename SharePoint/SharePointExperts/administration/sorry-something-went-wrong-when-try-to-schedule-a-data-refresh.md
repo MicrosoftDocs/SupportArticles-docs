@@ -37,18 +37,18 @@ To fix this issue, add the required permissions with the following steps:
 
 1. In **SharePoint Central Administration**, go to **Application Management** > **Manage service applications**, and then select **User Profile Service Application**. Then click **Administrators**.
 
-   ![the manage service applications page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/manage-service-applications.png)
+   :::image type="content" source="media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/service-applications-administrators.png" alt-text="Screenshot to select the Administrators option under the Service Applications tab.":::
 
 1. Add the PowerPivot system service account, select the **Full Control** check box, and then click **OK**.
 
-   ![the administrators for user profile service application page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/administrators-for-user-profile-service-application.png)
+   :::image type="content" source="media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/administrators-for-user-profile-service-application.png" alt-text="Screenshot of the Administrators for User Profile Service Application page.":::
 
 1. Select **Permissions**.
 
-   ![the user profile service application permissions page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/user-profile-service-application-permissions.png)
+   :::image type="content" source="media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/service-applications-permissions.png" alt-text="Screenshot to select the Permissions option under the Service Applications tab.":::
 
 1. Add the PowerPivot System Service account, select the **Full Control** check box, and then click **OK**.
 
-   ![the connection permissions for user profile service application page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/connection-permissions-for-user-profile-service-application.png)
+   :::image type="content" source="media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/connection-permissions-for-user-profile-service-application.png" alt-text="Screenshot of the Connection Permissions for User Profile Service Application page.":::
 
 1. Restart the PowerPivot System Service on all the SharePoint servers that are running this service.
