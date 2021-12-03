@@ -68,7 +68,7 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 13. When you have finished, click **Next**.
 14. On the Assignment Scope tab, select the All Hosts  check box and all the check boxes under Infrastructure.
 
-:::image type="content" source="media/apply-out-of-band-updates-to-cps/assignment-scope.png" alt-text="Screenshot to select the All Hosts check box and all the check boxes under Infrastructure." border="false":::
+:::image type="content" source="media/apply-out-of-band-updates-to-cps/assignment-scope.png" alt-text="Screenshot of the All Hosts check box and all the check boxes under Infrastructure." border="false":::
 
 15. Click **Next** to continue.
 
