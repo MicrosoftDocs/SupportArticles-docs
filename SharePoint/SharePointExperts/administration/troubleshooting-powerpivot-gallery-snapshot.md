@@ -24,7 +24,6 @@ If you have been following the multiple threads on issues and changes to the Pow
 This issue was discovered back in December 2016 during testing and again in a well-researched blog post by [Brian Laws](https://social.technet.microsoft.com/profile/Brian+H+Laws)
 (<https://info.summit7systems.com/blog/bug-report-powerpivot-for-sharepoint-2016-thumbnails-not-generating>) in February of 2017.
 
-
 ![Display of the issue in PowerPivot Gallery](media/troubleshooting-powerpivot-gallery-snapshot/issue.png)
 
 Extensive detail on the snapshot process or the log entries is not covered in this post (you can see Brian's blog above for most of it or follow along in the ULS logs). Here is the 10,000 foot view:
