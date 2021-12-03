@@ -22,11 +22,12 @@ _Original KB number:_ &nbsp; 204279
 
 ## Summary
 
-Windows supports file and printer sharing traffic by using the SMB protocol directly hosted on TCP. This differs from earlier operating systems, in which SMB traffic requires the NetBIOS over TCP (NBT) protocol to work on a TCP/IP transport. Removing the NetBIOS transport has several advantages, including:
+Windows supports file and printer sharing traffic by using the SMB protocol directly hosted on TCP. SMB 1.0 and older CIFS traffic supported the NetBIOS over TCP (NBT) protocol supported the UDP transport, but starting in Windows Vista and Windows Server 2008 with SMB 2.0.2, requires TCP/IP over port 445. Removing the NetBIOS transport has several advantages, including:
 
 - Simplifying the transport of SMB traffic.
 - Removing WINS and NetBIOS broadcast as a means of name resolution.
 - Standardizing name resolution on DNS for file and printer sharing.
+- Removing the less secure NetBIOS protocol as a method of attack
 
 If both the direct hosted and NBT interfaces are enabled, both methods are tried at the same time and the first to respond is used. This allows Windows to function properly with operating systems that don't support direct hosting of SMB traffic.
 
@@ -39,7 +40,7 @@ NetBIOS over TCP traditionally uses the following ports:
 - nbdatagram: 138/UDP
 - nbsession: 139/TCP
 
-Direct hosted *NetBIOS-less* SMB traffic uses port 445 (TCP and UDP). In this situation, a four-byte header precedes the SMB traffic. The first byte of this header is always 0x00, and the next 3 bytes are the length of the remaining data.
+Direct hosted *NetBIOS-less* SMB traffic uses port 445 (TCP). In this situation, a four-byte header precedes the SMB traffic. The first byte of this header is always 0x00, and the next 3 bytes are the length of the remaining data.
 
 Use the following steps to disable NetBIOS over TCP/IP; this procedure forces all SMB traffic to be direct hosted. Take care in implementing this setting because it causes the Windows-based computer to be unable to communicate with earlier operating systems using SMB traffic:
 
