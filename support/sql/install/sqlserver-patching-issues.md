@@ -101,8 +101,8 @@ For smooth functioning and maintenance of a SQL Server failover cluster, you mus
 When these are not properly configured, you may notice one or more of the following symptoms when trying to install a CU or SP:
   - Patch taking a long time to run or does not respond. Setup logs do not reveal any progress.
   - Setup logs show messages like the following:
-    - The network path was not found.
-    - System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
+    - "The network path was not found".
+    - "System.UnauthorizedAccessException: Attempted to perform an unauthorized operation".
 
 ## See Also
 
