@@ -1,6 +1,5 @@
 ---
-title: "An error occurred when loading the Sandbox cube" error in PowerPivot for SharePoint
-description: Fixes an issue that occurs when run a scheduled data refresh of a PowerPivot workbook in Microsoft SharePoint.
+title: You receive "An error occurred when loading the Sandbox cube" error in PowerPivot for SharePoint 
 author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
@@ -23,7 +22,7 @@ This article was written by [Zakir Haveliwala](https://social.technet.microsoft.
 
 When you run a scheduled data refresh of a PowerPivot workbook in Microsoft SharePoint, you may receive an error message that resembles the following:
 
-> The table with ID of '*TableID*', Name of '*TableName*' referenced by the 'Sandbox' cube, does not exist. An error occurred when loading the Sandbox cube, from the file, '\\?\C:\Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup\Sandboxes\PowerPivotServiceApplication\GUID.db\Sandbox.9825.cub.xml'.
+**The table with ID of '*TableID*', Name of '*TableName*' referenced by the 'Sandbox' cube, does not exist. An error occurred when loading the Sandbox cube, from the file, '\\?\C:\Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup\Sandboxes\PowerPivotServiceApplication\GUID.db\Sandbox.9825.cub.xml'.**
 
 This error may display in the scheduled data refresh results on the PowerPivot Data Refresh History page. This error may also display in Unified Logging Service (ULS) logs of the SharePoint server that's running the PowerPivot system service after matching the Correlation ID of a generic error that's received when you try to view the Manage Data Refresh page for the PowerPivot workbook.
 

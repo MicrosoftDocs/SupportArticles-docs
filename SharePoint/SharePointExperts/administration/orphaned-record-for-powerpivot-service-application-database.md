@@ -1,6 +1,5 @@
 ---
 title: Orphaned record for PowerPivot service application database
-description: Fixes an error that occurs in Windows Event Viewer or the SharePoint Unified Logging Service (ULS) logs.
 author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
@@ -23,7 +22,7 @@ This article was written by [Zakir Haveliwala](https://social.technet.microsoft.
 
 You may receive the following error in Windows Event Viewer or the SharePoint Unified Logging Service (ULS) logs:
 
-> Cannot open database "*Database name of PowerPivot Service application*" requested by the login. The login failed. Login failed for user 'username'.
+**Cannot open database "*Database name of PowerPivot Service application*" requested by the login. The login failed. Login failed for user 'username'.**
 
 ## Cause
 

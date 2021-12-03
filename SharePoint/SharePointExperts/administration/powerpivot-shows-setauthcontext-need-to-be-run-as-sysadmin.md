@@ -1,6 +1,5 @@
 ---
-title: "SetAuthContext need to be run as sysadmin" error in Power Pivot for SharePoint
-description: Fixes an error that occurs when interacting with a PowerPivot workbook in Microsoft SharePoint. 
+title: You received a "SetAuthContext need to be run as sysadmin" error in Power Pivot for SharePoint
 author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
@@ -23,7 +22,7 @@ This article was written by [Zakir Haveliwala](https://social.technet.microsoft.
 
 If you receive an error when interacting with a PowerPivot workbook in Microsoft SharePoint, you may see the following error from the PowerPivot Service in the SharePoint Unified Logging Service (ULS) log:
 
-> EXCEPTION: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: SetAuthContext need to be run as sysadmin.
+**EXCEPTION: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: SetAuthContext need to be run as sysadmin.**
 
 This error refers to the Administrator permission on the PowerPivot Analysis Service instance.
 

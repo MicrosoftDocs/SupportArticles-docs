@@ -1,6 +1,5 @@
 ---
 title: Excel workbooks in XML format don't open from SharePoint
-description: Describes an issue that occurs when you try to open Microsoft Excel workbooks in an XML format (XML Spreadsheet 2003) from a SharePoint document library.
 author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
@@ -23,7 +22,7 @@ This article was written by [Warren Rath](https://social.technet.microsoft.com/p
 
 When you try to open Microsoft Excel workbooks in an XML format (XML Spreadsheet 2003) from a SharePoint document library, you receive the following error:
 
-> This action couldn't be performed because Office doesn't recognize the command it was given.
+**This action couldn't be performed because Office doesn't recognize the command it was given**.
 
 ## Workaround
 
