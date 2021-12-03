@@ -13,7 +13,7 @@ When you try to open a chat or start a new chat from dynamics 365 and you see an
 
 ## Microsoft Edge
 
-1. In the Edge **Settings** window, select **Cookies and site permissions** then select Manage and delete cookies and site data under Cookies and data stored.
+1. In the Edge **Settings** window, select **Cookies and site permissions** then select **Manage and delete cookies and site data** under **Cookies and data stored**.
 
 2. Turn on **Allow sites to save and read cookie data (recommended)** and make sure **Block third-party cookies** is turned off. Alternatively, follow step 3 if you need to keep third-party cookies blocked.
 
@@ -31,6 +31,8 @@ To change the settings by using GPO, follow these steps:
 ## Google Chrome
 
 1. In the Chrome **Settings** window, on the **Privacy and security** tab, select **Cookies and other site data**.
+
+3. Under **General settings**, select **Allow all cookies**. Alternatively, follow step 3 if you need to keep third-party cookies blocked.
 
 1. Under **Sites that can always use cookies**, select **Add**, and then select the **Including third-party cookies on this site** check box.
 
