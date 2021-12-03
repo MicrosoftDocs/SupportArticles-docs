@@ -23,13 +23,16 @@ search.appverid: MET150
 
 ## Symptoms
 
-When you send an email that requests a read receipt to a mail-enabled public folder, you don't receive a read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
+You configure the following settings for a mail-enabled public folder to send read receipts:
 
-This issue occurs even if you set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis.
+- Set the `PerUserReadStateEnabled` parameter value to `False` for the public folder to remove read or unread tracking on a per-user basis.
+- For any message received that includes a read receipt request, select **Always send a read receipt**.
+
+When you send an email that requests a read receipt to the public folder, you don't receive the read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
 
 For example, you send an email that requests a read receipt to a mail-enabled public folder (named **PF2**).
 
-:::image type="content" source="media/public-folder-not-send-read-receipt/public-folder-name.png" alt-text="Screenshot of the an email message that requests a read receipt.":::
+:::image type="content" source="media/public-folder-not-send-read-receipt/public-folder-name.png" alt-text="Screenshot of an email message that requests a read receipt.":::
 
 However, you receive the read receipt from the public folder mailbox (named **MSExchangepf2**) that is hosting the public folder.
 
@@ -41,7 +44,7 @@ This is a known issue of read receipts. Microsoft is researching this problem an
 
 ## More information
 
-For more information about how to request a read receipt for your message in Outlook and in Outlook on the web, see the following articles:
+For more information about how to request a read receipt for your message in Outlook and Outlook on the web, see the following articles:
 
 - [Add and request read receipts and delivery notifications](https://support.microsoft.com/en-us/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141)
 - [Read receipts in Outlook on the web](https://support.microsoft.com/en-us/office/read-receipts-in-outlook-on-the-web-e09af74d-3519-45fc-a680-37a538a92157)
