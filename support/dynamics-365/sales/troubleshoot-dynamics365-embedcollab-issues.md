@@ -4,12 +4,12 @@ description: Provides a solution to an error that occurs in opening chat windows
 ms.reviewer: Usha-Rathnavel
 ms.topic: troubleshooting
 ms.date: 11/23/2021
-ms.subservice: dynamics-365-sales
+ms.subservice: d365-sales-other-integration
 ---
 
 # Troubleshoot issue with opening chat windows in Dynamics 365
 
-When you try to open chat window or start a new chat from dynamics 365 and you see an error, it might be because your organization uses Trusted Sites and doesn't enable the URLs for Dynamics. To resolve this error, change the settings for your browser using administrator rights or a Group Policy Object (GPO).
+When you try to open a chat or start a new chat from dynamics 365 and you see an error, it might be because your organization uses Trusted Sites and doesn't enable the URLs for Dynamics. To resolve this error, change the settings for your browser using administrator rights or a Group Policy Object (GPO).
 
 ## Microsoft Edge
 
