@@ -25,7 +25,7 @@ When you run a public folder migration batch job, you receive the following erro
 
 > ErrorFoldersRestoredDuringMigrationPermanentException
 
-![Screenshot of the error message.](./media/public-folder-migration-batch-error/failure.png)
+:::image type="content" source="media/public-folder-migration-batch-error/failure.png" alt-text="Screenshot of the error message when you run a public folder migration batch job." lightbox="media/public-folder-migration-batch-error/failure.png":::
 
 ## Cause
 
@@ -50,11 +50,11 @@ To resolve this problem, use one of the following methods, as appropriate for yo
 
       Note the identity of the failed migration mailbox. In the following example, the identity is *Mailbox1*.
 
-      :::image type="content" source="media/public-folder-migration-batch-error/download-report.png" alt-text="Screenshot of the downloading the report for failed mailbox.":::
+      :::image type="content" source="media/public-folder-migration-batch-error/download-report.png" alt-text="Screenshot of the downloading the report for failed mailbox." lightbox="media/public-folder-migration-batch-error/download-report.png":::
 
    1. In the report, search for the keyword "recovered" to find the entry IDs of the recovered folders. The entry ID is the first data value of the recovered folder entry, as shown in the following example.
 
-      :::image type="content" source="media/public-folder-migration-batch-error/entry-id.png" alt-text="Screenshot of the entry ID of recovered folder.":::
+      :::image type="content" source="media/public-folder-migration-batch-error/entry-id.png" alt-text="Screenshot of the entry ID of recovered folder." lightbox="media/public-folder-migration-batch-error/entry-id.png":::
 
    **Method 2: Use PowerShell**
 
@@ -74,11 +74,11 @@ To resolve this problem, use one of the following methods, as appropriate for yo
       $failed_req | foreach { Get-PublicFolderMailboxMigrationRequestStatistics $_.Identity -IncludeReport -DiagnosticInfo verbose | Export-Clixml "PF_failed_$($_.TargetMailbox)_$($_.RequestGuid).xml" }
       ```
 
-      ![Screenshot of the cmdlet to export statistics.](./media/public-folder-migration-batch-error/export-statistics.png)
+      :::image type="content" source="media/public-folder-migration-batch-error/export-statistics.png" alt-text="Screenshot of the cmdlet to export statistics." lightbox="media/public-folder-migration-batch-error/export-statistics.png":::
 
       The .xml file is created on your computer, as shown in the following example.
 
-      :::image type="content" source="media/public-folder-migration-batch-error/xml-path.png" alt-text="Screenshot of downloaded xml file path.":::
+      :::image type="content" source="media/public-folder-migration-batch-error/xml-path.png" alt-text="Screenshot of downloaded .xml file path." lightbox="media/public-folder-migration-batch-error/xml-path.png":::
 
    1. Import the xml file by running the following cmdlet:
 
@@ -96,7 +96,7 @@ To resolve this problem, use one of the following methods, as appropriate for yo
 
       The entry ID is the first data value of the recovered folder entry, as shown in the following example.
 
-      ![Screenshot of the entry ID example.](./media/public-folder-migration-batch-error/check-entry.png)
+      :::image type="content" source="media/public-folder-migration-batch-error/check-entry.png" alt-text="Screenshot of the entry ID that is the first data value of the recovered folder entry." lightbox="media/public-folder-migration-batch-error/check-entry.png":::
 
 2. Remove the recovered public folder by running the following cmdlet:
 

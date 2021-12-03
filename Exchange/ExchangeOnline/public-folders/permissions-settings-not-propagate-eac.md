@@ -33,7 +33,7 @@ When you use the Exchange admin center (EAC) to apply permissions or settings to
 
 When you apply permissions to a public folder and its subfolders by selecting the **Apply changes to this public folder and all its subfolders** check box in the EAC, the permissions aren't applied to some or all subfolders.
 
-:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-permission.png" alt-text="Apply permissions":::
+:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-permission.png" alt-text="Screenshot of applying permissions to a public folder and its subfolders.":::
 
 The issue occurs if the parent folder and its subfolders are in different public folder mailboxes.
 
@@ -66,7 +66,7 @@ When you select the **Apply the read and unread setting to this folder and all i
 
 > The operation couldn't be performed because '\public folder identity' couldn't be found.
 
-:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-error.png" alt-text="Error when applying read and unread setting":::
+:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-error.png" alt-text="Screenshot of the error when applying read and unread setting.":::
 
 ### Workaround
 
@@ -94,7 +94,7 @@ When you apply age limit settings to a public folder and its subfolders by selec
 
 > The operation couldn't be performed because '\public folder identity' couldn't be found.
 
-:::image type="content" source="media/permissions-settings-not-propagate-eac/set-age-limit-error.png" alt-text="Error when you apply age limit settings":::
+:::image type="content" source="media/permissions-settings-not-propagate-eac/set-age-limit-error.png" alt-text="Screenshot of the error when you apply age limit settings.":::
 
 ### Workaround
 
