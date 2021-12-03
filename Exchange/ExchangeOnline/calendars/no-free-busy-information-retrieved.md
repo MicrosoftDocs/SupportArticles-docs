@@ -71,7 +71,7 @@ This error occurs when the values of any or all of the following parameters in t
 
 ### Resolution
 
-1. Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet either in Exchange Online or in Exchange on-premises as appropriate to get federation information for the user's domain.
+1. Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet either in Exchange Online or on Exchange Server on-premises, as appropriate, to get federation information for the user's domain.
 
     For example, if the user's domain name in Exchange Online is `northamerica.contoso.com`, run:
 
@@ -83,7 +83,7 @@ This error occurs when the values of any or all of the following parameters in t
 
     :::image type="content" source="media/no-free-busy-information-retrieved/output.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet in Exchange Online.":::
 
-    If the user's domain is in Exchange on-premises, run the `Get-FederationInformation` cmdlet on the routing domain "`<user's domain name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run:
+    If the user's domain is on Exchange Server on-premises, run the `Get-FederationInformation` cmdlet on the routing domain "`<user's domain name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run:
 
     ```powershell
     Get-FederationInformation contoso.mail.onmicrosoft.com
