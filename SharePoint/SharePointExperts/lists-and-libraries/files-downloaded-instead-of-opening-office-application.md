@@ -25,7 +25,7 @@ Assume that you have Microsoft Offices Online in a SharePoint farm. When you ope
 
 ## Cause
 
-This is how the Chrome browser works.
+It is how the Chrome browser works.
 
 ## Workaround
 

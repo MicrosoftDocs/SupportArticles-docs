@@ -29,7 +29,7 @@ This error refers to the Administrator permission on the PowerPivot Analysis Ser
 
 ## Resolution
 
-To fix this issue, add the PowerPivot System Service account that's running the PowerPivot service application in SharePoint as an Administrator by connecting to the PowerPivot Analysis Services instance in SQL Server Management Studio. To do this, follow these steps:
+To fix this issue, add the PowerPivot System Service account that's running the PowerPivot service application in SharePoint as an Administrator by connecting to the PowerPivot Analysis Services instance in SQL Server Management Studio. Follow these steps:
 
 1. Right-click the instance, and then select **Properties**.
 1. In the **Analysis Server Properties** dialog box, select **Security**, and then select **Add** to add the user.
