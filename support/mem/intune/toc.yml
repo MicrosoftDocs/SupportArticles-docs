@@ -53,6 +53,8 @@ items:
       href: android-enterprise-enrolled-devices-fails-attaching-photo.md
     - name: Can't create messages in Outlook for Android
       href: creating-message-action-not-allowed.md
+    - name: Troubleshoot Managed Google Play apps
+      href: troubleshoot-google-apps.md
   - name: Managed browsers
     items:
     - name: Error when you open a web app on iOS 
