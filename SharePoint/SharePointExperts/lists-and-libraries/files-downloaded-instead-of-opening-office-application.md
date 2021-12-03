@@ -1,5 +1,6 @@
 ---
 title: A SharePoint file is downloaded instead of opening the Office application with a direct connection to it
+description: Describes an issue in which a SharePoint file is downloaded directly instead of opening the Office application with a direct connection to it.
 author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
@@ -24,7 +25,7 @@ Assume that you have Microsoft Offices Online in a SharePoint farm. When you ope
 
 ## Cause
 
-This is how the Chrome browser works.
+It is how the Chrome browser works.
 
 ## Workaround
 
