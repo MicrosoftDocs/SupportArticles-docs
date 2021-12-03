@@ -1,5 +1,6 @@
 ---
 title: How to calculate ages before 1/1/1900 in Excel
+description: Describes how to use Macro to calculate age before 1/1/1900 in Excel.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -28,9 +29,9 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 Excel enters dates prior to 1/1/1900 as text. This function works for dates entered as text beginning with 1/1/0001, normal dates, and can handle dates when the starting date is before 1900 and ending date is after 1900. To use the macro, follow these steps:
 
-1. Start Excel. View the worksheet on which you want to use the function.    
-2. Press ALT+F11 to switch to the Visual Basic Editor.   
-3. On the Insert menu, click Module.   
+1. Start Excel. View the worksheet on which you want to use the function.
+2. Press ALT+F11 to switch to the Visual Basic Editor.
+3. On the Insert menu, click Module.
 4. Type the following code in the module:
 
     ```vb
@@ -150,7 +151,7 @@ Excel enters dates prior to 1/1/1900 as text. This function works for dates ente
 
 5. Save the file.   
 6. Type the following data:
-   
+
    ```asciidoc
     A1 01/01/1887
     A2 02/02/1945
@@ -160,8 +161,8 @@ Excel enters dates prior to 1/1/1900 as text. This function works for dates ente
     =AgeFunc(startdate,enddate)
     ```
     The **startdate** is a cell reference to your first date (A1) and **enddate** is a cell reference to your second date (A2).
-    
-    The result should be 58.   
+
+    The result should be 58.
 
 > [!NOTE]
 > Check all dates before 1/1/1900 for validity. Dates entered as text are not checked by Excel.

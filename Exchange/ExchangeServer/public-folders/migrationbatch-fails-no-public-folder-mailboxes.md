@@ -28,9 +28,9 @@ You are migrating public folders from Microsoft Exchange Server 2019, 2016, or 2
 
 When you run the **Complete-MigrationBatch** command, the migration batch goes into a failed state and generates the following error message:
 
-![Screenshot of Get-MigrationBatch-command](./media/migrationbatch-fails-no-public-folder-mailboxes/Get-MigrationBatch-command.png)
+:::image type="content" source="media/migrationbatch-fails-no-public-folder-mailboxes/Get-MigrationBatch-command.png" alt-text="Screenshot of the Get-MigrationBatch-command.":::
 
-![Screenshot of Complete-MigrationBatch-error-message](./media/migrationbatch-fails-no-public-folder-mailboxes/Complete-MigrationBatch-error-message.png)
+:::image type="content" source="media/migrationbatch-fails-no-public-folder-mailboxes/Complete-MigrationBatch-error-message.png" alt-text="Screenshot of the Complete-MigrationBatch-error-message.":::
 
 ```
 "No active public folder mailboxes were found. This happens when no public folder mailboxes are provisioned or they are provisioned in 'HoldForMigration' mode."

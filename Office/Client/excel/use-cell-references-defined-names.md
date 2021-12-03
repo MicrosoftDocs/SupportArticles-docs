@@ -1,5 +1,6 @@
 ---
 title: How to use cell references and defined names in criteria in Excel
+description: Describes how to use cell references and defined names in criteria in Excel.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal

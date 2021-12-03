@@ -1,5 +1,6 @@
 ---
 title: The result is false when you use the ISBLANK function
+description: Provides a workaround for the false result when you use the ISBLANK() function in a Microsoft Excel spreadsheet.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -30,13 +31,13 @@ When you use the **ISBLANK()** function in a Microsoft Excel spreadsheet, the re
 
 This behavior may occur when the cell contains a zero-length string. A zero length string may be a result of the following conditions:
 
-- A formula.   
-- A copy and paste operation.   
-- A cell that contains a zero-length string is imported from a database that supports zero-length strings and that contains zero-length strings.   
+- A formula.
+- A copy and paste operation.
+- A cell that contains a zero-length string is imported from a database that supports zero-length strings and that contains zero-length strings.
 
 ## Workaround
 
-To work around this issue, clear the zero-length string from the cell. To do this, select the cell, click **Edit**, and then click **Clear All**. 
+To work around this issue, clear the zero-length string from the cell. To do this, select the cell, click **Edit**, and then click **Clear All**.
 
 In addition, you can also check whether a cell contains a zero-length string by using the LEN function. For example, if the cell you are checking is A1, the formula will be **=OR(Len(A1)=0, Isblank(A1))**.
 
