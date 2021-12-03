@@ -87,7 +87,7 @@ This article describes the necessary configuration, administration details, and 
 - By default, the `PublicDelegates` attribute (also known as the `GrantSendOnBehalfTo` attribute in Exchange on-premises) is synchronized to Exchange Online by Azure AD Connect.
 - Additional configuration is required to synchronize the `PublicDelegates` attribute with on-premises AD DS. This configuration requires enabling Exchange hybrid deployment settings in Azure AD Connect.For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
 
-  ![optional features](./media/overview-delegation-office-365-hybrid/optional-features.jpg)
+  :::image type="content" source="media/overview-delegation-office-365-hybrid/optional-features.png" alt-text="Screenshot of the optional features in Azure AD Connect dialog box.":::
 
 - If Exchange hybrid deployment setting is not enabled, the Send on Behalf of permission has to be added manually by an administrator by using Remote PowerShell. To do this, refer to[Delegate can't send on behalf of after migration to Microsoft 365 hybrid environment](./delegate-cannot-send-on-behalf-of-after-migration.md).
 
@@ -99,7 +99,8 @@ This article describes the necessary configuration, administration details, and 
   - Sending on behalf of
   - Meeting request forwarding rules (hidden rules)
   - The ability to see private items (calendar)
-    ![Delegates window](./media/overview-delegation-office-365-hybrid/delegates.png)
+
+  :::image type="content" source="media/overview-delegation-office-365-hybrid/delegates.png" alt-text="Screenshot of the Delegates window.":::
 
 - Some of these rights can be seen and managed by an administrator (such as Folder and Send on Behalf of rights). However, some are stored only in the Exchange mailbox (such as meeting-related messages, forwarding rules, and private item visibility).
 - Basic functionality works cross-forest by using Outlook for Windows. The following conditions apply:
@@ -125,7 +126,7 @@ This article describes the necessary configuration, administration details, and 
   - Misconfigured delegates may result in a non-delivery report. For more information, see [Users receive NDR 5.2.0 when they send meeting invites in Office 365 hybrid environment](../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md).
   - The `LegacyExchangeDN` attribute of objects from Exchange Online and on-premises should be synching as x500 addresses between forests to avoid resolution issues that require enabling Exchange hybrid deployment settings in AD Connect. For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
 
-    ![optional features](./media/overview-delegation-office-365-hybrid/optional-features.jpg)
+    :::image type="content" source="media/overview-delegation-office-365-hybrid/optional-features.png" alt-text="Screenshot of the optional features in Azure AD Connect dialog box.":::
 
   - If the Exchange hybrid deployment setting is not enabled, delegates may see a non-delivery report when they update meetings. For more information, see ["550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Office 365 hybrid environment](https://support.microsoft.com/help/4039597).
 

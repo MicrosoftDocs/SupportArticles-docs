@@ -29,7 +29,7 @@ When you run a public folder migration batch from Microsoft Exchange Server to E
 
 Here's an example of the "EndpointNotFoundTransientException" error message.
 
-:::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/pf-migration.png" alt-text="Screenshot of the detailed errors.":::
+:::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/pf-migration.png" alt-text="Screenshot of the detailed errors for EndpointNotFoundTransientException.":::
 
 However, when you test migration server availability for the public folder endpoint by running the following cmdlet, the result is successful:
 
@@ -57,7 +57,7 @@ To verify that the migration batch uses incorrect `SourcePFPrimaryMailboxGuid`, 
 
    Here's an example of the cmdlet and the output.
 
-   :::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/exo-guid.png" alt-text="Screenshot of cmdlet for GUID.":::
+   :::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/exo-guid.png" alt-text="Screenshot of an example of cmdlet for GUID.":::
 
 1. Verify that the GUID provided is from Exchange Online by running the following cmdlet:
 
