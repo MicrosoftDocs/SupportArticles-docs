@@ -4,6 +4,7 @@ description: This article describes how to install Microsoft Windows SDK for Win
 ms.date: 10/27/2020
 ms.prod-support-area-path: installation
 ms.topic: how-to
+ms.technology: vs-installation-install
 ---
 # Installing Windows SDK 7.1 in Silent Mode
 

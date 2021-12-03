@@ -2,6 +2,8 @@
 title: Azure AD Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent
 description: This troubleshooting guide focuses on when you can't start service AADConnectProvisioningAgent. It unblocks you to install Azure AD Connect Provisioning Agent.
 ms.date: 10/13/2021
+ms.service: active-directory
+ms.subservice: hybrid
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent

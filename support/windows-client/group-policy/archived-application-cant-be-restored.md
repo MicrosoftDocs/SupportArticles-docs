@@ -26,6 +26,8 @@ To reduce disk space usage, Windows automatically archives applications that you
 
 In some environments, Group Policy Objects (GPOs) may block applications from automatically downloading in this manner. When you start such a blocked application, you receive a message that resembles the following.
 
+> Voice Recorder needs an update, but we're unable to apply the update right now.
+
 :::image type="content" source="media/archived-application-cant-be-restored/gpo-preventing-app-updating.png" alt-text="Screenshot of the message that indicates a GPO is preventing an app from updating." border="false":::
 
 In these cases, you have to contact your system administrator to obtain an updated version of the application. The information in this article helps you to do this.

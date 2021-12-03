@@ -4,7 +4,7 @@ description: Describes the support options and coverage that Microsoft offers fo
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
-ms.service: container-service
+ms.service: azure
 ms.author: genli
 author: genlin
 ---
@@ -64,7 +64,7 @@ For third-party (non-Microsoft technology), Microsoft provides commercially reas
 - Performance issues related to Azure platform
 - Networking
 
-:::image type="content" source="./media/support-policy-containers/4037701_en_1.png" alt-text="Container services.":::
+:::image type="content" source="media/support-policy-containers/container-service.png" alt-text="Screenshot of container services.":::
 
 ## Azure Web Apps and containers
 
@@ -74,7 +74,7 @@ Customers may also choose to deploy containers to Azure Web Apps on Linux. In th
 
 Microsoft offers commercially reasonable support for the components that are deployed in this scenario, including the operating system, Docker Engine, and hosted elements in the container (such as Node.js). Customized code is not within the scope of support.
 
-:::image type="content" source="./media/support-policy-containers/4037702_en_1.png" alt-text="Component support.":::
+:::image type="content" source="media/support-policy-containers/component-support.png" alt-text="Screenshot of component support.":::
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

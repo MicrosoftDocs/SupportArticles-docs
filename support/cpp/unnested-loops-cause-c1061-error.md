@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you include more than 250 unne
 ms.date: 04/24/2020
 ms.prod-support-area-path: Language or Compilers
 ms.reviewer: ScotBren
+ms.technology: visual-cpp-language-compilers
 ---
 # Too many unnested loops incorrectly causes a C1061 compiler error in Visual C++
 

@@ -5,6 +5,7 @@ ms.date: 04/17/2020
 ms.prod-support-area-path: 
 ms.reviewer: piyushjo, fabianm
 ms.topic: how-to
+ms.technology: dotnet-wcf
 ---
 # Use a custom X509CertificateValidator with an IIS hosted WCF service and self-signed client certificate
 

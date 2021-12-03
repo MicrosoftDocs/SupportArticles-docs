@@ -556,6 +556,8 @@
     items:
     - name: Additional gateways appear in persistent routes
       href: ./networking/incorrect-default-gateways-in-persistent-routes.md
+    - name: Can't install SNMP and WMI SNMP Provider
+      href: ./networking/cannot-install-snmp-wmisnmpprovider.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
@@ -672,6 +674,8 @@
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
+    - name: Stop code when initializing PMem or NVDIMM
+      href: ./performance/stop-code-initialize-pmem-nvdimm.md
     - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
@@ -684,6 +688,8 @@
       href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
+    - name: Can't start Windows 11 in S mode from a recovery drive
+      href: ./performance/cannot-start-windows-11-s-mode-recovery-drive.md
     - name: Changing ATA drive setting causes reboot loop
       href: ./performance/changing-bios-ata-drive-causes-reboot-loop.md
     - name: Fail to use PXE to boot clients from WDS

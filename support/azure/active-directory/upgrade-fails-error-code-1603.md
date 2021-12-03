@@ -4,6 +4,8 @@ description: Error code 1603 and (Unable to install the synchronization service)
 ms.date: 07/20/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when upgrading Azure AD Connect: Unable to install the synchronization service
 

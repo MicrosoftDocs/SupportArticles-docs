@@ -5,6 +5,7 @@ ms.date: 04/22/2020
 ms.prod-support-area-path: Microsoft Foundation Classes (MFC)
 ms.reviewer: scotbren
 ms.topic: how-to
+ms.technology: visual-cpp-language-compilers
 ---
 # Enable Tablet press-and-hold gesture in MFC applications
 

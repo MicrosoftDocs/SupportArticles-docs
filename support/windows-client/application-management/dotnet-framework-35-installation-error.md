@@ -56,11 +56,11 @@ To configure the Group Policy setting, follow these steps:
 
 2. Expand **Computer Configuration**, expand **Administrative Templates**, and then select **System**. The screenshot for this step is listed below.
 
-    :::image type="content" source="media/dotnet-framework-35-installation-error/system-option.png" alt-text="Screenshot for the System group policy setting window.":::
+    :::image type="content" source="media/dotnet-framework-35-installation-error/system-option.svg" alt-text="Screenshot of the System group policy setting window.":::
 
 3. Open the **Specify settings for optional component installation and component repair** Group Policy setting, and then select **Enabled**. The screenshot for this step is listed below.
 
-    :::image type="content" source="media/dotnet-framework-35-installation-error/enabled-option.png" alt-text="Screenshot for the Enabled option of the Specify settings for optional component installation and component repair item.":::
+    :::image type="content" source="media/dotnet-framework-35-installation-error/enabled-option.svg" alt-text="Screenshot of the Enabled option of the Specify settings for optional component installation and component repair item.":::
 
 4. If you want to specify an alternative source file, in the **Alternate source file path** box, specify a fully qualified path of a shared folder that contains the contents of the `\sources\sxs` folder from the installation media.  
 
@@ -123,12 +123,12 @@ To use the **Add Roles and Features Wizard**, follow these steps:
 3. On the **Select features** page, select the **.NET Framework 3.5 Features** check box, and then click **Next**.
 4. On the **Confirm installation selections** page, click the **Specify an alternate source path** link. The screenshot for this step is listed below.
 
-    :::image type="content" source="media/dotnet-framework-35-installation-error/specify-alternate-source-path.png" alt-text="Screenshot of the Specify an alternate source path link on the Conform installation selections page." border="false":::  
+    :::image type="content" source="media/dotnet-framework-35-installation-error/specify-alternate-source-path.svg" alt-text="Screenshot of the Specify an alternate source path link on the Conform installation selections page." border="false":::  
 
 5. On the **Specify Alternate Source Path** page, type the path of the *SxS* folder as a local path or as a network share path. The screenshot for this step is listed below.
 
-    :::image type="content" source="media/dotnet-framework-35-installation-error/path-of-the-sxs-folder.png" alt-text="Screenshot of the Specify Alternate Source Path page." border="false":::  
-
+    :::image type="content" source="media/dotnet-framework-35-installation-error/path-of-sxs-folder.svg" alt-text="Screenshot of the Specify Alternate Source Path page." border="false":::  
+     
 6. Click **OK**.
 7. Click **Install** to finish the wizard.
 

@@ -3,8 +3,9 @@ title: Create a File-Compare function in C#
 description: Describes how to create a File-Compare function in Visual C#. Also includes a code sample to explain the methods.
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
-ms.reviewer: keithf 
+ms.reviewer: keithf
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to create a File-Compare function
 

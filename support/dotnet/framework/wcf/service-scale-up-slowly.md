@@ -4,6 +4,7 @@ description: This article provides resolutions for the error that occurs where W
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: davidlam, smason
+ms.technology: dotnet-wcf
 ---
 # WCF service may scale up slowly under load
 

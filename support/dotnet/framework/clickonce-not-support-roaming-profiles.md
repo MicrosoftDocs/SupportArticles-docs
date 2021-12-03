@@ -4,6 +4,7 @@ description: ClickOnce deployment isn't supported when using Roaming User Profil
 ms.date: 05/06/2020
 ms.prod-support-area-path: Installation
 ms.reviewer: LeeCow
+ms.technology: dotnet-installation
 ---
 # ClickOnce deployment isn't supported with Roaming profiles
 
