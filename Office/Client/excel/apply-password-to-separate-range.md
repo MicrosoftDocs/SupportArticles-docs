@@ -1,5 +1,6 @@
 ---
 title: Apply different passwords or permissions to separate ranges in workbooks
+description: Describes how to apply different passwords or permissions to separate ranges in workbooks in Excel.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -38,7 +39,7 @@ Excel does not encrypt data that is hidden or locked in a workbook. With enough 
 To apply different passwords to two ranges in a worksheet, follow these steps:
 
 1. Start Excel, and then open a blank workbook.
-1. On the **Tools** menu, point to Protection, and then click **Allow Users to Edit Ranges**. 
+1. On the **Tools** menu, point to Protection, and then click **Allow Users to Edit Ranges**.
 
     > [!NOTE]
     > In Microsoft Office Excel 2007, click **Allow Users to Edit Ranges** in the **Changes** group on the **Review** tab.
@@ -51,13 +52,13 @@ To apply different passwords to two ranges in a worksheet, follow these steps:
 
     > [!NOTE]
     > When you type D, the **Unlock Range** dialog box appears.
-1. Type rangeone in the **Enter the password to change this cell** box, and then click **OK**. 
-    
+1. Type rangeone in the **Enter the password to change this cell** box, and then click **OK**.
+
      You can now enter data in cell B3 and in any other cell in the range B2:B6, but you cannot enter data in any of the cells D2:D6 without first providing the correct password for that range.
 
 The range that you protect with a password does not have to be made of adjacent cells. If you want the ranges B2:B6 and D2:D6 to share a password, you can select B2:B6 as described in step 4 earlier in this article, type a comma in the **New Range** dialog box, and then select the range D2:D6 before you assign the password.
 
-When you apply different passwords to separate ranges in this way, a range that has been unlocked remains unlocked until the workbook is closed. When you unlock another range, you do not relock the first range. Likewise, when you save a workbook, you do not relock a range. 
+When you apply different passwords to separate ranges in this way, a range that has been unlocked remains unlocked until the workbook is closed. When you unlock another range, you do not relock the first range. Likewise, when you save a workbook, you do not relock a range.
 
 You can use existing range names to identify cells that are to be protected with passwords, but if you do, Excel converts any relative references in the existing name definitions to absolute references. Because this may not give you the results you intended, it is better to use the **Collapse Dialog** button to select the cells, as described earlier in this article.
 
@@ -86,7 +87,7 @@ To apply group-level protection to a worksheet, follow these steps:
     No password is required.
 
 > [!NOTE]
-> You must use Windows 2000 in order to assign permissions to groups or individuals as described earlier in this article, but after you have done so, those permissions are recognized when the worksheets are edited on computers that use Microsoft Windows NT. Windows NT does not enable you to assign or modify the permissions. 
+> You must use Windows 2000 in order to assign permissions to groups or individuals as described earlier in this article, but after you have done so, those permissions are recognized when the worksheets are edited on computers that use Microsoft Windows NT. Windows NT does not enable you to assign or modify the permissions.
 
 If you apply group permissions or user permissions, and then open the workbook in Excel 2002 on a Microsoft Windows Millennium Edition-based computer or Microsoft Windows 98-based computer, the group permissions or user permissions are ignored, but different passwords for different ranges are recognized.
 
