@@ -1,5 +1,6 @@
 ---
 title: Excel works with two-digit year numbers
+description: Describes how Microsoft Excel determines the century when you  type a date using a two-digit year number.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -67,7 +68,7 @@ By default, Excel determines the century by using a cutoff year of 2029, which r
 - Dates in the inclusive range from January 1, 1900 (1/1/1900) to December 31, 9999 (12/31/9999) are valid.
 
 - When you type a date that uses a two-digit year, Excel uses the following centuries:
-    
+
     |Two-digit year typed| Century used|
     |----------|----------------|
     |00-29| 21st (year 2000)|

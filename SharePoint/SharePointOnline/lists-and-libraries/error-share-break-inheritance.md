@@ -37,7 +37,7 @@ This issue occurs for one of the following reasons:
 
 To fix this issue, use the following methods:
 
-- Reduce the number of items in the foder, library or list that you want to break permission inheritance or reinherit permissions on. You can move some items out first, break or reinherit permissions, and then move them back.
+- Reduce the number of items in the folder, library or list that you want to break permission inheritance or reinherit permissions on. You can move some items out first, break or reinherit permissions, and then move them back.
 - Reduce the number of uniquely permitted items in a list or library.
 
 ## More information
