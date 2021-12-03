@@ -189,7 +189,7 @@ Additionally, you can engage with the SQL Server engineering team by using the f
 
 - [Stack Overflow (tag sql-server)](http://stackoverflow.com/questions/tagged/sql-server) - Development questions
 
-- [MSDN forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver) - Technical questions
+- [Microsoft Q&A](https://docs.microsoft.com/en-us/answers/topics/58065/sql-server-general.html) - Technical questions
 
 - [Reddit](https://www.reddit.com/r/SQLServer/) - Discuss SQL Server
 
