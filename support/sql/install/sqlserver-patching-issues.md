@@ -11,10 +11,10 @@ ms.prod: sql
 
 This article provides general troubleshooting procedures that you can use when you run into any issue applying a Service Pack (SP) or a Cumulative Update (CU) for your SQL Server instance. It also provides detailed procedures for solving the following failure messages associated with patching:
 
-- [Wait on Database Engine recovery handle failed, 912, and 3417 error](#wait-on-database-engine-recovery-handle-failed-912-and-3417-errors) messages when executing upgrade scripts.
-- [Various setup errors](#setup-errors-resulting-from-missing-installer-files-in-windows-cache) that occur due to missing  MSI files or patch files in the Windows installer cache.
-- [The Database Engine system data directory in the registry is not valid](#setup-failing-due-to-incorrect-data-or-log-location-in-registry) or the User Log directory in the registry is not valid.
-- [Network path was not found](#setup-failing-due-to-incorrect-data-or-log-location-in-registry) and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AG).
+- "Wait on Database Engine recovery handle failed, 912, and 3417 error messages when executing upgrade scripts.
+- Various setup errors that occur due to missing  MSI files or patch files in the Windows installer cache.
+- "The Database Engine system data directory in the registry is not valid" or "the User Log directory in the registry is not valid".
+- "Network path was not found" and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AG).
 
 For a complete list of currently available updates for your SQL version and download locations, see the [Determine the version, edition, and update level - SQL Server](../general/determine-version-edition-update-level.md) section.
 
@@ -42,10 +42,10 @@ This section provides information on the CU and SP installation prerequisites.
 
 1. Isolate the error by doing the following steps:
     1. Check **Details** in the **Failure** screen of the setup process.
-    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15) section.
+    1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver) section.
 
 1. Check for a matching scenario in the next few sections and follow associated troubleshooting procedures for the corresponding scenario.
-1. If there is no matching scenario, look for additional pointers in the log files and also review the general information section above.
+1. If there is no matching scenario, look for additional pointers in the log files and also review the [CU and SP installation general info](#cu-and-sp-installation-general-info) section.
 
 ## Wait on Database Engine recovery handle failed, 912, and 3417 errors
 
