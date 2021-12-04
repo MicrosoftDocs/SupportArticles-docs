@@ -1,6 +1,6 @@
 ---
 title: ErrorMailRecipientNotFound when viewing free/busy information
-description: Fixes ErrorMailRecipientNotFound response that occurs when viewing free/busy information of a user in another organization.
+description: Fixes the "ErrorMailRecipientNotFound" response that occurs when viewing free/busy information of a user in another organization.
 author: v-charloz
 audience: ITPro
 ms.service: exchange-online
@@ -16,16 +16,16 @@ search.appverid:
 - MET150
 appliesto:
 - Exchange Online
-- Exchange Server 2013
-- Exchange Server 2016
 - Exchange Server 2019
+- Exchange Server 2016
+- Exchange Server 2013
 ---
 
 # ErrorMailRecipientNotFound response when viewing free/busy information
 
 When you try to view the free/busy information for a user in another forest or tenant by using organization relationships, the information isn't displayed. Instead, you see the **ErrorMailRecipientNotFound** response and one of the following error messages.
 
-## Error: Unable to resolve e-mail address to an Active Directory object
+## Error 1: "Unable to resolve e-mail address to an Active Directory object"
 
 A sample of the complete error message is as follows:
 
@@ -42,7 +42,7 @@ This error occurs in one of the following situations after the user's email addr
 
 ### Resolution
 
-Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to see the list of domains for which an organization relationship has been set up:
+Run the [Get-OrganizationRelationship](/powershell/module/exchange/get-organizationrelationship) cmdlet to see the list of domains for which an organization relationship was set up:
 
 ```powershell
 Get-OrganizationRelationship | ft name, domainnames
@@ -56,7 +56,7 @@ Get-OrganizationRelationship | ft name, domainnames
     Set-OrganizationRelationship -Identity "<User's Domain Name>" -FreeBusyAccessEnabled $true
     ```
 
-## Error: The organization relationship can't be used
+## Error 2: "The organization relationship can't be used"
 
 A sample of the complete error message is as follows:
 
@@ -64,32 +64,32 @@ A sample of the complete error message is as follows:
 
 ### Cause
 
-This error occurs when the values of any or all of the following parameters in the organization relationship aren't set correctly:
+This error occurs if the values of any or all the following parameters in the organization relationship aren't set correctly:
 
 - `TargetApplicationUri`
 - `TargetAutodiscoverEpr` or `TargetSharingEpr`
 
 ### Resolution
 
-1. Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet either in Exchange Online or on Exchange Server on-premises, as appropriate, to get federation information for the user's domain.
+1. Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet in either Exchange Online or Microsoft Exchange Server on-premises, as appropriate, to get federation information for the user's domain.
 
-    For example, if the user's domain name in Exchange Online is `northamerica.contoso.com`, run:
+    For example, if the user's domain name in Exchange Online is `northamerica.contoso.com`, run the following:
 
     ```powershell
     Get-FederationInformation northamerica.contoso.com
     ```
 
-    The following is a sample of the output you'll see:
+    The following is an example of the output:
 
     :::image type="content" source="media/no-free-busy-information-retrieved/output.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet in Exchange Online.":::
 
-    If the user's domain is on Exchange Server on-premises, run the `Get-FederationInformation` cmdlet on the routing domain "`<user's domain name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run:
+    If the user's domain is in Exchange Server on-premises, run the `Get-FederationInformation` cmdlet on the routing domain, "`<user's domain name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run the following:
 
     ```powershell
     Get-FederationInformation contoso.mail.onmicrosoft.com
     ```
 
-    The following is a sample of the output you'll see:
+    The following is an example of the output:
 
     :::image type="content" source="media/no-free-busy-information-retrieved/output-routing-domain.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet on the routing domain.":::
 
