@@ -4,9 +4,10 @@ description: Introduces how to configure Microsoft Intune as an MDM server for C
 author: helenclu
 ms.author: luche
 ms.reviewer: shhodge
-ms.date: 10/13/2020
-ms.prod-support-area-path: 
+ms.date: 12/06/2021
+ROBOTS: NOINDEX
 ---
+<!-- Added robots no index. Removing page from docset, but keeping as reference -->
 # Support tip: Integrate Cisco ISE with Intune
 
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources. If the device is enrolled in Intune and is compliant with Intune device compliance policies, the NAC solution allows the device to access corporate resources. For more information about how the NAC integration works, see [Network access control (NAC) integration with Intune](/mem/intune/protect/network-access-control-integrate).
