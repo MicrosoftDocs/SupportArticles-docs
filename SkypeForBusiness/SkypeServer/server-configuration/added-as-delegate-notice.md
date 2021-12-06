@@ -79,6 +79,6 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 
 |Office 2016 Click-to-Run installation|MSI-based Office 2016|
 |-|-|
-|![The screenshot for Word click to run](./media/added-as-delegate-notice/click-to-run.png)|![The screenshot for Word MSI](./media/added-as-delegate-notice/about-word.png)|
+|:::image type="content" source="./media/added-as-delegate-notice/click-to-run.png" alt-text="Screenshot that shows the Word click to run installation option.":::|:::image type="content" source="./media/added-as-delegate-notice/about-word.png" alt-text="Screenshot that shows the Word MSI.":::|
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

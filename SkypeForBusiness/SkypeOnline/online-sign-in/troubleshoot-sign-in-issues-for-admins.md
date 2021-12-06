@@ -47,7 +47,7 @@ Check that the affected users have a valid Skype for Business license with the f
 3. In the right pane, select **Licenses and Apps**.
 4. Verify that the user is licensed for Skype for Business Online.
 
-    ![Screenshot of licensed users](./media/troubleshoot-sign-in-issues-for-admins/verify-user-licensed.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/verify-user-licensed.png" alt-text="Screenshot that shows the user's license information with a license for Skype for Business Online assigned.":::
 
     Your user license screen may be different from this example.
 5. Wait 30 minutes, and then ask the user to try signing in again.
@@ -81,7 +81,7 @@ Make sure the system clock shows the correct time, and then try signing in again
     1. Go to **Setting** > **PC Settings** > **Time and Language**.
     1. Note your UTC offset, and compare your device's time to that shown on the website.
 
-        ![Screenshot 1 of Store icon](./media/troubleshoot-sign-in-issues-for-admins/store.png)
+        :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/store.png" alt-text="Screenshot that shows the Store icon.":::
 
     If you need to update your device's time:
 
@@ -94,7 +94,7 @@ Make sure the system clock shows the correct time, and then try signing in again
     1. Go to a web site that shows Coordinated Universal Time (UTC).
     1. Go to **Control Panel** > **Date and Time**, and note the UTC offset for your location.
 
-        ![Screenshot 2 of Store icon](./media/troubleshoot-sign-in-issues-for-admins/utc-offset.png)
+        :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/utc-offset.png" alt-text="Screenshot that shows the where to check the U T C information in the Date and Time tab.":::
     1. If you need to, choose **Change date and time** and update your computer's clock.
     1. Try signing in again.
 
@@ -102,7 +102,7 @@ If the problem isn't solved, go to the [Determine Lync client version (Windows)]
 
 ###### Determine Lync client version (Windows)
 
-If you're using the desktop version of Skype for Business, find out if it's Skype for Business 2010 or Skype for Business 2013. To do this, click the arrow next to the **Options** button![Screenshot of Options button](./media/troubleshoot-sign-in-issues-for-admins/option-button.png), and then go to **Help** > **About Microsoft Skype for Business**.
+If you're using the desktop version of Skype for Business, find out if it's Skype for Business 2010 or Skype for Business 2013. To do this, click the arrow next to the **Options** button:::image type="icon" source="./media/troubleshoot-sign-in-issues-for-admins/option-button.png" alt-text="Screenshot that shows the icon of the Options button.":::, and then go to **Help** > **About Microsoft Skype for Business**.
 
 Choose your version of Skype for Business:
 
@@ -154,10 +154,10 @@ Ask the user to manually add Skype for Business server settings and try signing 
 
 Manually add Skype for Business server settings:
 
-1. Go to **Lync options**![Screenshot of Options button](./media/troubleshoot-sign-in-issues-for-admins/option-button.png) > **Personal**.
+1. Go to **Lync options**:::image type="icon" source="./media/troubleshoot-sign-in-issues-for-admins/option-button.png" alt-text="Screenshot that shows the icon of the Options button."::: > **Personal**.
 1. Under **My account**, click **Advanced**, and then click **Manual configuration**.
 
-    ![Screenshot of Manual configuration setting](./media/troubleshoot-sign-in-issues-for-admins/manual-configuration.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/manual-configuration.png" alt-text="Screenshot that shows the Manual configuration option selected in the Advanced Connection Settings window.":::
 
 1. Enter *sipdir.online.lync.com:443* in both boxes, and then click **OK** > **OK**.
 1. Sign out, and then try signing back in.
@@ -177,7 +177,7 @@ Make sure that previously saved sign-in information isn't blocking the sign-in a
     1. Click the status menu below your name, and then click **Sign Out**.
     1. On the sign-in screen, click **Delete my sign-in info**.
 
-         ![Screenshot 1 of Delete my sign-in info setting](./media/troubleshoot-sign-in-issues-for-admins/delete-my-sign-in-info.png)
+         :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/delete-my-sign-in-info.png" alt-text="Screenshot that shows the Delete my sign-in info option in the Lync Sign-out window.":::
 
 1. Delete cached sign-in credentials.
 
@@ -192,7 +192,7 @@ Make sure you have the most current version of Skype for Business Windows Store 
 
 1. On the Start screen, tap **Store**.
 
-    ![Screenshot of Store](./media/troubleshoot-sign-in-issues-for-admins/store.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/store.png" alt-text="Screenshot that shows the sign of Store.":::
 
 1. Search for Skype for Business, and install the update if one is available.
 1. Try signing in again.
@@ -205,7 +205,7 @@ Make sure that previously saved sign-in information isn't blocking your sign-in 
 
 1. On the Skype for Business Windows Store app sign-in screen, tap **Delete my sign-in info**.
 
-    ![Screenshot 2 of Delete my sign-in info setting](./media/troubleshoot-sign-in-issues-for-admins/delete-sign-in-info-windows-store-app.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/delete-sign-in-info-windows-store-app.png" alt-text="Screenshot that shows the sign-in screen with the Delete my sign-in info option.":::
 1. Try signing in again.
 
 If the issue still exists, [contact support](#contact-support).
@@ -215,7 +215,7 @@ If the issue still exists, [contact support](#contact-support).
 Make sure the system clock shows the correct time, and then try signing in again. Ask the user to follow these steps:
 
 1. Go to a web site that shows Coordinated Universal Time (UTC).
-1. Go to **Apple** ![Screenshot of Apple icon](./media/troubleshoot-sign-in-issues-for-admins/apple-icon.png)> **System Preferences**.
+1. Go to **Apple** :::image type="icon" source="./media/troubleshoot-sign-in-issues-for-admins/apple-icon.png" alt-text="Screenshot that shows the Apple icon.":::> **System Preferences**.
 1. In the **Date & Time** pane, click the **Date & Time** tab.
 1. Note the UTC offset for your location.
 1. If you need to, update your computer's clock, and then try signing in again.
@@ -327,7 +327,7 @@ Find out if you've set up directory synchronization:
 1. In the Office 365 admin center, go to **User and groups**.
 1. Check the status of Active Directory synchronization.
 
-    ![Screenshot of Active Directory synchronization status](./media/troubleshoot-sign-in-issues-for-admins/check-status-of-ad-synchronization.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/check-status-of-ad-synchronization.png" alt-text="Screenshot that shows the Active Directory synchronization status in the User and groups tab.":::
 
 If your organization synchronizing Active Directory with Office 365 is using the Windows Azure Directory Synchronization Tool, go to [Single sign-on](#single-sign-on) section. If not, [contact support](#contact-support).
 
@@ -395,7 +395,7 @@ What type of Office 365 subscription do you have?
 
 To set up your custom domain, sign in and click **Email address** in the Getting Started pane. (If you don't see the Getting Started pane, click **Setup** > **Open the Getting Started pane**.) [Learn more](/microsoft-365/admin/setup/add-domain).
 
-![Screenshot of clicking Email address](./media/troubleshoot-sign-in-issues-for-admins/click-email-address.png)
+:::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-email-address.png" alt-text="Screenshot that shows the Email address option in the Getting Started pane.":::
 
 Have you already set up your custom domain? If yes, go to [Test your custom domain (Small Business)](#test-your-custom-domain-small-business) section. If no, go to the [Set up your custom domain (Small Business)](#set-up-your-custom-domain-small-business) section.
 
@@ -409,11 +409,11 @@ Run the domain troubleshooter:
 
 1. Go to the Office 365 admin center and click **Domains**.
 
-    ![Screenshot of clicking Domains](./media/troubleshoot-sign-in-issues-for-admins/click-domains.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-domains.png" alt-text="Screenshot that shows the Domains option in the Office 365 admin center.":::
 
 1. Select your custom domain name, and then click **Troubleshooting**.
 
-    ![Screenshot 1 of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/click-troubleshoot.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-troubleshoot.png" alt-text="Screenshot that shows the troubleshoot option selected.":::
 1. If you discovered any network setup issues, resolve them, and then try signing in again.
 
 If this method doesn't solve the issue, go to the [Access to Office 365 on the web](#access-to-office-365-on-the-web) section.
@@ -447,7 +447,7 @@ If the issue still exists, go to the [Access to Office 365 on the web](#access-t
 
 To set up your custom domain, sign in and go to **Admin** > **Setup**.
 
-![Screenshot of clicking Setup](./media/troubleshoot-sign-in-issues-for-admins/click-setup.png)
+:::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-setup.png" alt-text="Screenshot that shows the setup tab in the Office 365 admin center.":::
 
 Have you already set up your custom domain? If yes, go to [Test your custom domain](#test-your-custom-domain). If no, go to the [Set up your custom domain](#set-up-your-custom-domain) section.
 
@@ -460,7 +460,7 @@ Run the domain troubleshooter:
 1. Go to the Office 365 admin center and click **Domains**.
 1. Select your custom domain name, and then click **Troubleshooting**.
 
-    ![Screenshot 2 of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png" alt-text="Screenshot that shows the Troubleshoot option selected in the domains tab.":::
 1. If you discovered any network setup issues, resolve them, and then try signing in again.
 
 If you discovered any network setup issues, resolve them, and then try signing in again.
@@ -482,7 +482,7 @@ Run the domain troubleshooter:
 1. Go to the Office 365 admin center and click **Domains**.
 1. Select your custom domain name, and then click **Troubleshooting**.
 
-    ![Screenshot 3 of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png)
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png" alt-text="Screenshot that shows the Troubleshoot option selected in the domains tab.":::
 1. If you discovered any network setup issues, resolve them, and then try signing in again.
 
 If you discovered any network setup issues, resolve them, and then try signing in again.
@@ -495,7 +495,7 @@ If the issue still isn't solved, go to the [Access to Office 365 on the web](#ac
 
 In the Office 365 admin center, click **Service health**. A green check mark next to Skype for Business Online indicates no service interruptions.
 
-![Screenshot of clicking Servie health](./media/troubleshoot-sign-in-issues-for-admins/service-health.png)
+:::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/service-health.png" alt-text="Screenshot that shows the Lync Online service tab and service status on the service health page.":::
 
 Is a service interruption preventing you from signing in? If yes, go to the [Service interruption](#service-interruption) section. If no, go to the [Custom domain](#custom-domain) section.
 
@@ -504,7 +504,7 @@ Is a service interruption preventing you from signing in? If yes, go to the [Ser
 What to do if there's a service interruption:
 
 1. Save your place in this guide by clicking **Save current progress** at the bottom of the page.
-1. In the O365 admin center, click the service interruption indicator ![Screenshot of clicking service interruption indicator](./media/troubleshoot-sign-in-issues-for-admins/click-service-interruption-indicator.png) for more information.
+1. In the O365 admin center, click the service interruption indicator :::image type="icon" source="./media/troubleshoot-sign-in-issues-for-admins/click-service-interruption-indicator.png" alt-text="Screenshot that shows the icon of the service interruption indicator.":::
 1. Note the time of the next scheduled status update, and check back periodically until service is restored.
 1. If you still cannot sign in to Skype for Business after the interruption has been resolved, return to this guide and click **No** to continue.
 

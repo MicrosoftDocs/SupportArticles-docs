@@ -92,7 +92,7 @@ AudioPortCount, VideoPortStart, VideoPortCount, AppSharingPortStart,
 AppSharingPortCount 
 ```
 
-![CMD screen showing Get-CsService command. ](media/103849-1.jpg)
+:::image type="content" source="./media/verify-port-range.png" alt-text="Screenshot that shows the CMD screen showing Get-CsService command and the result of the port range.":::
 
 ```
 Get-CsService -ApplicationServer | Select-Object Identity, AudioPortStart, AudioPortCount 
@@ -134,7 +134,7 @@ Run the command below to find existing media client ports:
 ```
 Get-CsConferencingConfiguration | fl Client* 
 ```
-![CMD screen showing Get-CsConferencingConfiguration command.](media/103849-2.jpg)
+:::image type="content" source="./media/configure-client-port-ranges.png" alt-text="Screenshot that shows the CMD screen showing Get-CsConferencingConfiguration command and the result of port ranges.":::
 
 **To make changes in client port ranges:**
 
@@ -158,32 +158,32 @@ After defining port ranges, you must also create QoS policies that specify the D
    2. Sign in to the Domain Controller or computer, which has Group Policy Management installed.
    3. Open the Group Policy Management tool (**run** > **gpmc.msc**) and then right-click the OU (computer). Select **Create a GPO in this domain, and Link it here** to create a new GPO. (For example,  SfBLyncClient-QoS.) You must have the required permission (Domain Admin) to create and link a policy object.
    4. Right-click the new GPO and select **Edit** to open the Group Policy Management editor. Then expand **Computer Configuration** > **Policies** > **Windows Settings**. Right-click **Policy-based QoS** and then select **Create new policy**.
-   <img alt="Create new policy option." src="media/103849-3.jpg">
+   :::image type="content" source="./media/create-new-policy.png" alt-text="Screenshot that shows the Create new policy option selected after right-clicking Policy-based QoS.":::
    5. In the policy-based QoS page, give the policy a name such as "Lync2013-Audio". Then set **Specify DSCP Value**: at 46 and select **Next**.<br/>
-   <img alt="Edit an existing QoS policy screen." src="media/103849-4.jpg">
+   :::image type="content" source="./media/set-specify-dscp-value.png" alt-text="Screenshot that shows the option to edit the Specify D S C P value in the Edit an existing Q o S policy window.":::
    6. On the next page, enter lync.exe in the field. Only applications with this executable name** and select **OK**.
    > [!NOTE]
    > This option ensures that the Lync.exe application will match packets from the specified port range with the specified DSCP code.
    
-   <img alt="Only applications with this executable name" src="media/103849-5.jpg">
+   :::image type="content" source="./media/enter-application-name.png" alt-text="Screenshot that shows the option to edit the Application name or U R L in the Edit an existing Q o S policy window." border="false":::
 
    7. On the next screen, make sure that both **Any source IP address and Any destination IP address** are selected and then select **Next**.
    > [!NOTE]
    > These two settings ensure that packets will be managed regardless of which computer (IP address) sent those packets and which computer (IP address) will receive those packets.
 
-   <img alt="Select Any source IP address and Any destination IP address." src="media/103849-6.jpg">
+   :::image type="content" source="./media/set-ip-address.png" alt-text="Screenshot that shows the option to edit I P address in the Edit an existing Q o S policy window." border="false":::
 
    8. On the next screen, select **TCP and UDP** and then select **From this source port or range**. In the field, type the port range reserved for audio transmissions.
    > [!NOTE]
    > Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) are the two networking protocols most commonly used by Skype for Business/ Lync servers and their client applications.
 
-   <img alt="Select From this source port or range." src="media/103849-7.jpg">
+   :::image type="content" source="./media/set-protocol-and-ports.png" alt-text="Screenshot that shows the From this source port or range option selected under the Protocol and Ports tab in the Edit an existing Q o S policy window." border="false":::
    
    9. Follow steps **e** through **h** to create new policy objects and label them "Lync2013-Signaling", "Lync2013-AppShare", "Lync2013-File Transfer", and Lync2013-Video" with the above ports ranges and DSCP values.
    10. After you have configured all policy objects, it will look like the image below:
-   <img alt="Configured policy objects." src="media/103849-8.jpg">
+   :::image type="content" source="./media/result-after-configuration.png" alt-text="Screenshot that shows the configured policy objects.":::
    11. Open Group Policy Management and then right-click **OU (Server)**. Select **Create a GPO in this domain, and Link it here** to create a new GPO. (For example, SfBLync-Server-QoS.) You must then add your Skype for Business/Lync Server-to-Server OU. Repeat steps **d** through **i** to create a policy object for the server as well.  After configuring all policy objects for the server, it will look like the image below:
-   <img alt="Screen after configuring all policy objects." src="media/103849-9.jpg">
+   :::image type="content" source="./media/server-result-after-configuration.png" alt-text="Screenshot that shows the screen after configuring all policy objects.":::
 
 
 4. **Finally test the QoS.**
@@ -197,7 +197,7 @@ To enable QoS on a Skype for Business/Lync Phone Edition device, edit the VoiceD
 
 The settings screen is found by selecting **Clients** > **Device Configuration** from the Lync/Skype Server control panel.
 
-![Skype Server configuration panel. ](media/103849-10.jpg)
+:::image type="content" source="./media/device-configuration.png" alt-text="Screenshot that shows the input box of Q o S value in the Skype Server configuration panel.":::
 
 You can enable QoS using PowerShell as well. Open the Skype for Business/Lync Management Shell and type the command below: 
 
@@ -228,22 +228,22 @@ Business/Lync client and then open the Skype/Lync (UCCAPILOG) logs in Notepad or
 %userprofile%\appdata\local\Microsoft\Office\16.0\Lync\Tracing\ 
 
 The screenshot below shows the correct client ports. 
-![The correct client ports.](media/103849-11.jpg)
+:::image type="content" source="./media/correct-client-ports.png" alt-text="Screenshot that shows the correct client ports that can be checked from the log file.":::
 
 #### Test3: 
 Make an audio call with another internal user and capture network traffic to verify whether the QoS tagging shows correctly or not. Verify two-way packets and check that the DSCP value shows correctly. 
 The screenshot below shows UDP traffic DSCP: FE (Expedited Forwarding (46)), which is the correct tagging. 
-![UDP traffic DSCP: FE, the correct tagging.](media/103849-12.jpg)
+:::image type="content" source="./media/correct-tagging.png" alt-text="Screenshot that shows the correct tagging in the UDP traffic DSCP: F E.":::
 
 #### Test4:  
 1. On a Windows machine, open "regedit" and then browse to the folder: <br/><br/>
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS<br/><br/>
 Here you can see all QoS policies applied to this machine: 
-![All QoS policies applied to this computer.](media/103849-13.jpg)
+:::image type="content" source="./media/applied-qos-policies.png" alt-text="Screenshot that shows all Q o S policies applied to this computer that can be checked in the Registry Editor.":::
 2. On the FE Server, you don't have to define the application name because on this server, all applications are related to Skype and Lync.
 3. Open "regedit"  and then browse to:<br/><br/>
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS<br/><br/> The Front-End Server should appear as in the image below:  
-![How the Front-End Server should appear.](media/103849-14.jpg)
+:::image type="content" source="./media/front-end-server.png" alt-text="Screenshot that shows how the Front-End Server should appear." border="false":::
 
 ## Best practices
 1.	Audit QoS policies every quarter and observe the tagging. 
