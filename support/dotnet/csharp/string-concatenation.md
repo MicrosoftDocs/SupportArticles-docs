@@ -32,23 +32,26 @@ However, the .NET Framework includes a `StringBuilder` class that is optimized f
 2. The following code uses the `+=` concatenation operators and the `StringBuilder` class to time 5,000 concatenations of 30 characters each. Add this code to the main procedure.
 
     ```csharp
-    const int sLen=30, Loops=5000;
-    DateTime sTime, eTime;
+    const int sLen = 30, Loops = 5000;
     int i;
     string sSource = new String('X', sLen);
     string sDest = "";
+
     // Time string concatenation.
-    sTime = DateTime.Now;
-    for(i=0;i<Loops;i++) sDest += sSource;
-    eTime = DateTime.Now;
-    Console.WriteLine("Concatenation took " + (eTime - sTime).TotalSeconds + " seconds.");
+    var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+    for (i = 0; i < Loops; i++) sDest += sSource;
+    stopwatch.Stop();
+    Console.WriteLine($"Concatenation took {stopwatch.ElapsedMilliseconds} ms.");
+
     // Time StringBuilder.
-    sTime = DateTime.Now;
+    stopwatch.Restart();
     System.Text.StringBuilder sb = new System.Text.StringBuilder((int)(sLen * Loops * 1.1));
-    for(i=0;i<Loops;i++) sb.Append(sSource);
+    for (i = 0; i < Loops; i++) 
+        sb.Append(sSource);
     sDest = sb.ToString();
-    eTime = DateTime.Now;
-    Console.WriteLine("String Builder took " + (eTime - sTime).TotalSeconds + " seconds.");
+    stopwatch.Stop();
+    Console.WriteLine($"String Builder took {stopwatch.ElapsedMilliseconds} ms.");
+
     // Make the console window stay open
     // so that you can see the results when running from the IDE.
     Console.WriteLine();
@@ -59,8 +62,8 @@ However, the .NET Framework includes a `StringBuilder` class that is optimized f
 3. Save the application. Press F5 to compile and then run the application. The console windows should display output similar to the  examples:
 
     ```console
-    Concatenation took 6.208928 seconds.
-    String Builder took 0 seconds.
+    Concatenation took 348 ms.
+    String Builder took 0 ms.
     Press ENTER to finish...
     ```
 
