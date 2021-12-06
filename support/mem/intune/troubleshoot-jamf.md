@@ -109,7 +109,7 @@ In the Company Portal app, the user might see **`Not registered`**, and an entry
 
 To change the registration source from Intune to Jamf:
 
-1. [Remove the macOS device from Intune](/mem/intune/user-help/unenroll-your-device-from-intune-macos). To avoid further complications for devices that aren't fully removed from Intune, see [Cause 6](#cause-6-the-device-was-previously-enrolled-in-intune) below.
+1. [Remove the macOS device from Intune](/mem/intune/user-help/unenroll-your-device-from-intune-macos). To avoid further complications for devices that aren't fully removed from Intune, see [Cause 6](#cause-6---the-device-was-previously-enrolled-in-intune) below.
 
 2. On the device, use Jamf Self Service to open the Company Portal app, and then register the device with Azure AD. This task requires you to have already completed the following tasks:
    - [Deploy the Company Portal app for macOS in Jamf Pro](/mem/intune/protect/conditional-access-assign-jamf#deploy-the-company-portal-app-for-macos-in-jamf-pro)
@@ -204,7 +204,7 @@ This request is similar to the request for [Mac devices prompt for keychain sign
 - The device was registered multiple times without the necessary cleanup.
 
 **Solution**  
-To resolve this issue, follow the steps in [Cause 6](#cause-6-the-device-was-previously-enrolled-in-intune).
+To resolve this issue, follow the steps in [Cause 6](#cause-6---the-device-was-previously-enrolled-in-intune).
 
 ## Duplicate entries appear in the Intune console for Mac devices enrolled by using Jamf  
 
@@ -213,7 +213,7 @@ To resolve this issue, follow the steps in [Cause 6](#cause-6-the-device-was-pre
 When a device is removed from Intune and Jamf Pro integration, some data can be left behind which can cause successive registrations to create duplicate entries.  
 
 **Solution**  
-To resolve this issue, follow the steps in [Cause 6](#cause-6-the-device-was-previously-enrolled-in-intune).
+To resolve this issue, follow the steps in [Cause 6](#cause-6---the-device-was-previously-enrolled-in-intune).
 
 ## Compliance policy fails to evaluate the device  
 
@@ -238,13 +238,13 @@ There's a permission issue with the Jamf Pro application in Azure. While registe
 - The **Grant admin consent for *\<your company>*** option wasn't selected.  
 
 **Solution**  
-See the resolution for Cause 1 for [Devices fail to register](#devices-fail-to-register), earlier in this article.
+See the resolution for Cause 1 for [Devices fail to register](#devices-fail-to-register-with-intune), earlier in this article.
 
 ### Cause 2
 
 A license required for Jamf-Intune integration has expired.
 
-**Solution**  See the resolution for Cause 3 for [Devices fail to register](#devices-fail-to-register).
+**Solution**  See the resolution for Cause 3 for [Devices fail to register](#devices-fail-to-register-with-intune).
 
 ### Cause 3
 
