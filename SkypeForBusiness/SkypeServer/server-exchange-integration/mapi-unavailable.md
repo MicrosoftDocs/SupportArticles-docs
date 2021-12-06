@@ -191,7 +191,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 14. Close all MFCMapi windows and Registry Editor, and then test MAPI connectivity. Also, completely log off from Skype, and verify that the program is not running.
 15. Log back on to Skype, wait a minute or two, and then check the Skype configuration. You should now see **MAPI Status** displayed as **OK**.
 
-    :::image type="content" source="./media/mapi-unavailable/mapi-status-2.png" alt-text="Screenshot that shows the MAPI Status.":::
+    :::image type="content" source="./media/mapi-unavailable/mapi-status-2.png" alt-text="Screenshot that shows the MAPI status.":::
 
     > [!NOTE]
     > It can take some time for the change to take effect. You may have to log out of Outlook and Skype for Business and then sign back in to see the change.
