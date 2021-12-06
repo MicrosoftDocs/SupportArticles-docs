@@ -2,7 +2,6 @@
 title: Available packages for Integration Manager
 description: Outlines the packages that are available for Integration Manager. Lists the items that are included in each package.
 ms.reviewer: kvogel
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Packages that are available for Integration Manager for Microsoft Dynamics GP 10.0

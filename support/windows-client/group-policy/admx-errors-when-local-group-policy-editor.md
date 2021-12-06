@@ -32,8 +32,8 @@ For example, you receive the following error messages when you change to the Jap
 
 |Error files|Text of the errors in Japanese|Screenshot of the errors|
 |---|---|---|
-|InetRes.admx|管理用テンプレート<br/><br/>リソース '$(string.Advanced_EnableSSL3Fallback)' (属性 displayName で参照) が見つかりませんでした。ファイル C:\Windows\PolicyDefinitions\inetres.admx、行 795、列 308<br/><br/>|![The screen shot of the Inetres.admx error in Japanese ](./media/admx-errors-when-local-group-policy-editor/inetres-admx.png)<br/>|
-|Pinting.admx|管理用テンプレート<br/><br/>リソース '$(string.ShowJobTitleInEventLogs)' (属性 displayName で参照) が見つかりませんでした。ファイル C:\Windows\PolicyDefinitions\Printing.admx、行 721、列 7<br/><br/>|![The screen shot of the Printing.admx error in Japanese ](./media/admx-errors-when-local-group-policy-editor/pinting-admx.png)<br/>|
+|InetRes.admx|管理用テンプレート<br/><br/>リソース '$(string.Advanced_EnableSSL3Fallback)' (属性 displayName で参照) が見つかりませんでした。ファイル C:\Windows\PolicyDefinitions\inetres.admx、行 795、列 308<br/><br/>|:::image type="content" source="media/admx-errors-when-local-group-policy-editor/inetres-admx.png" alt-text="The details of the Inetres.admx error in Japanese." border="false":::<br/>|
+|Pinting.admx|管理用テンプレート<br/><br/>リソース '$(string.ShowJobTitleInEventLogs)' (属性 displayName で参照) が見つかりませんでした。ファイル C:\Windows\PolicyDefinitions\Printing.admx、行 721、列 7<br/><br/>|:::image type="content" source="media/admx-errors-when-local-group-policy-editor/pinting-admx.png" alt-text="The details of the Printing.admx error in Japanese." border="false":::<br/>|
 ||||
 
 ## Cause

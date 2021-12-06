@@ -2,7 +2,6 @@
 title: New feature documentation for Microsoft Dynamics GP
 description: New feature documentation for Microsoft Dynamics GP 2015, Microsoft Dynamics GP 2016, and Microsoft Dynamics GP 2018.
 ms.reviewer: cwaswick
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # New feature documentation for Microsoft Dynamics GP 2015, Microsoft Dynamics GP 2016 and Microsoft Dynamics GP 2018

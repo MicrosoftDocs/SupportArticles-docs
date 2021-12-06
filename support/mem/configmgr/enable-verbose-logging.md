@@ -78,10 +78,10 @@ In some circumstances, you may need to use SQL Server Profiler to find the call 
 
 To do this, configure the SQL Server Profiler as shown in the following screenshot:
 
-![Configure SQL Server Profiler to call MP_GetWSUSServerLocation](./media/enable-verbose-logging/mp_getwsusserverlocation.png)
+:::image type="content" source="media/enable-verbose-logging/mp-get-wsus-server-location.png" alt-text="Screenshot shows the configuration of SQL Server Profiler to call MP_GetWSUSServerLocation." border="false":::
 
 ## Configure SQL Server Profiler to view state message processing
 
 To do this, configure the SQL Server Profiler as shown in the following screenshot:
 
-![Configure SQL Server Profiler to call spProcess](./media/enable-verbose-logging/spProcess.png)
+:::image type="content" source="media/enable-verbose-logging/sp-process.png" alt-text="Screenshot shows the configuration of SQL Server Profiler to call spProcess." border="false":::
