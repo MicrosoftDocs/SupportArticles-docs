@@ -34,7 +34,7 @@ To resolve this problem, reset the registry subkey for the file association of t
 1. To open the Task Manager, press CTRL + SHIFT + ESC.
 2. Click **File**, press CTRL and click **New Task (Run...)** at the same time. A command prompt opens.
 
-    :::image type="content" source="media/running-exe-starts-another-program/select-new-task-run-option.png" alt-text="Screenshot of New Task (Run...) option of the File menu in Windows Task Manager.":::
+    :::image type="content" source="media/running-exe-starts-another-program/new-task-run-option.png" alt-text="Screenshot of New Task (Run...) option of the File menu in Windows Task Manager.":::
 
 3. At the command prompt, type *notepad*, and then press ENTER.
 
@@ -50,7 +50,7 @@ To resolve this problem, reset the registry subkey for the file association of t
 
 5. On the **File** menu, click **Save as**.
 
-    :::image type="content" source="media/running-exe-starts-another-program/save-file.png" alt-text="Screenshot of the Save As option under the File menu.":::
+    :::image type="content" source="media/running-exe-starts-another-program/save-as-file.png" alt-text="Screenshot of the Save As option under the File menu.":::
 
 6. Select **All Files** in the **Save as type** list, and then type *Exe.reg* in the **File name** box.
 7. Select **Unicode** in the **Encoding** list. Save it and remember the file location.

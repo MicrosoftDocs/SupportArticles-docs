@@ -37,14 +37,14 @@ Use the following methods to restart the UI flow service in the following order.
 
 - Method 2: If method 1 returns an error, you can try to restart the service manually as follows:
 
-  - Kill (end task) the UI flow service process (parent of the service) in the **process** tab of the task manager.
+    1. Kill (end task) the UI flow service process (parent of the service) in the **process** tab of the task manager.
   
-  :::image type="content" source="media/reset-ui-flow-service-when-bad-state/end-task-ui-flow-service-process.png" alt-text="Screenshot to end the U I flow service process under the Process tab of task manager.":::
+          :::image type="content" source="media/reset-ui-flow-service-when-bad-state/end-task-ui-flow-service-process.png" alt-text="Screenshot to end the U I flow service process under the Process tab of task manager.":::
 
-- Then delete session.json located in
+    1. Then delete session.json located in
 
-  - `C:\Windows\ServiceProfiles\UIFlowService for Windows 10`
-  - `C:\Users\UIFlowService for Windows Server 2016 and Windows Server 2019`
+          - `C:\Windows\ServiceProfiles\UIFlowService for Windows 10`
+          - `C:\Users\UIFlowService for Windows Server 2016 and Windows Server 2019`
 
-- > [!NOTE]
+  > [!NOTE]
   > The service should automatically restart after the task had ended.
