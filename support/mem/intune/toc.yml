@@ -267,6 +267,8 @@ items:
         href: troubleshoot-exchange-connector-common-errors.md
     - name: Troubleshoot Jamf Pro integration
       href: troubleshoot-jamf.md
+    - name: Devices fail to register with Jamf Pro
+      href: troubleshoot-jamf-device-registration.md
     - name: Unable to connect Jamf console to Intune
       href: unable-to-connect-send-inventory-information.md
   - name: Error -2016281112 deploying a password policy
