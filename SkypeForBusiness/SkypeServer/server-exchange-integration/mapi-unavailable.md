@@ -28,7 +28,7 @@ This issue may occur for Office 365 Exchange Online or Exchange On-Premises user
 
 - The Skype for Business Configuration Information feature (hold down the Ctrl key and right-click the Skype for Business 2016 system tray icon) shows a "MAPI unavailable" status, as shown.
 
-    :::image type="content" source="./media/mapi-unavailable/mapi-status.png" alt-text="Screenshot that shows the MAPI status.":::
+    :::image type="content" source="./media/mapi-unavailable/mapi-status.png" alt-text="Screenshot that shows the M A P I status.":::
 
     If you click the Conversations tab :::image type="icon" source="./media/mapi-unavailable/conversations.png" alt-text="Screenshot that shows the icon of the conversations tab.":::, and then you click **View more in Outlook**, you receive the following error message:
 
@@ -146,7 +146,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 4. Double-click the affected user's profile. In this situation, there is only the default profile that's named "Outlook." If the user has multiple profiles, select the one that represents their primary user account that is experiencing this issue.
 
-    :::image type="content" source="./media/mapi-unavailable/outlook-profiles.png" alt-text="Screenshot that shows the Outlook profiles." border="false":::
+    :::image type="content" source="./media/mapi-unavailable/outlook-profiles.png" alt-text="Screenshot that shows the profiles in Outlook." border="false":::
 
 5. In the **Services** table that opens, locate the service that has the Display Name of "Microsoft Exchange," and then double-click that service to open it.
 
@@ -191,7 +191,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 14. Close all MFCMapi windows and Registry Editor, and then test MAPI connectivity. Also, completely log off from Skype, and verify that the program is not running.
 15. Log back on to Skype, wait a minute or two, and then check the Skype configuration. You should now see **MAPI Status** displayed as **OK**.
 
-    :::image type="content" source="./media/mapi-unavailable/mapi-status-2.png" alt-text="Screenshot that shows the MAPI status.":::
+    :::image type="content" source="./media/mapi-unavailable/mapi-status-2.png" alt-text="Screenshot that shows the M A P I status in Skype.":::
 
     > [!NOTE]
     > It can take some time for the change to take effect. You may have to log out of Outlook and Skype for Business and then sign back in to see the change.
