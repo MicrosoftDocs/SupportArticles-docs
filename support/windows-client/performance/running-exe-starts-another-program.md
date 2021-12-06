@@ -34,11 +34,11 @@ To resolve this problem, reset the registry subkey for the file association of t
 1. To open the Task Manager, press CTRL + SHIFT + ESC.
 2. Click **File**, press CTRL and click **New Task (Run...)** at the same time. A command prompt opens.
 
-    :::image type="content" source="./media/running-exe-starts-another-program/select-new-task-run-option.png" alt-text="Screenshot of New Task (Run...) option.":::
+    :::image type="content" source="media/running-exe-starts-another-program/new-task-run-option.png" alt-text="Screenshot of New Task (Run...) option of the File menu in Windows Task Manager.":::
 
 3. At the command prompt, type *notepad*, and then press ENTER.
 
-    :::image type="content" source="./media/running-exe-starts-another-program/enter-notepad.png" alt-text="Screenshot of entering notepad in command prompt.":::
+    :::image type="content" source="media/running-exe-starts-another-program/enter-notepad.png" alt-text="Screenshot shows notepad is typed in command prompt.":::
 
 4. Paste the following text into Notepad:
 
@@ -50,16 +50,16 @@ To resolve this problem, reset the registry subkey for the file association of t
 
 5. On the **File** menu, click **Save as**.
 
-    :::image type="content" source="./media/running-exe-starts-another-program/save-file.png" alt-text="Screenshot of saving the notepad file as exe.reg format.":::
+    :::image type="content" source="media/running-exe-starts-another-program/save-as-file.png" alt-text="Screenshot of the Save As option under the File menu.":::
 
 6. Select **All Files** in the **Save as type** list, and then type *Exe.reg* in the **File name** box.
 7. Select **Unicode** in the **Encoding** list. Save it and remember the file location.
 
-    ![Screenshot of saving the notepad file as Exe.reg file format.](./media/running-exe-starts-another-program/save-exe-reg-file.png)
+    :::image type="content" source="media/running-exe-starts-another-program/save-exe-reg-file.png" alt-text="Screenshot of the Save As dialog box to save the notepad file as Exe.reg file format." border="false":::
 
 8. Return to the Command Prompt window, type `REG IMPORT <filepath> Exe.reg`, and then press ENTER.
 
-    :::image type="content" source="./media/running-exe-starts-another-program/enter-reg-import-exe-reg-file.png" alt-text="Screenshot of importing the saved Exe.reg file.":::
+    :::image type="content" source="media/running-exe-starts-another-program/enter-reg-import-exe-reg-file.png" alt-text="Screenshot of the REG IMPROT command in command prompt.":::
 
     > [!NOTE]
     > \<filepath> is a placeholder which is to input your Exe.reg file location (for example, C:\Exe.reg).
