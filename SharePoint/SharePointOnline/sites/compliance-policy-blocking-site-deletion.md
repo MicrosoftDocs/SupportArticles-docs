@@ -28,7 +28,7 @@ When you try to delete a SharePoint site, the following message appears:
 
 **A compliance policy is currently blocking this site deletion.**
 
-![Error message stating that a site can't be deleted](./media/compliance-policy-blocking-site-deletion/cant-delete-site.png)
+:::image type="content" source="media/compliance-policy-blocking-site-deletion/cant-delete-site.png" alt-text="Screenshot of the error message stating that a site can't be deleted." border="false":::
 
 ## Cause
 
@@ -59,11 +59,11 @@ If you're an administrator, and you're unable to delete the site:
 
 2. In the Run diagnostic section, type or paste the **SharePoint site URL**, and then select **Run Tests**.
 
-   ![Run diagnostics window asking for SharePoint URL information](./media/compliance-policy-blocking-site-deletion/run-diagnostics.png)
+   :::image type="content" source="media/compliance-policy-blocking-site-deletion/run-diagnostics.png" alt-text="Screenshot of the Run diagnostics window asking for SharePoint URL information.":::
 
 3. If the test finds an **Invalid retention policy**, and the policy is blocking the site deletion, you may choose to remove the policy.
 
-   ![Run diagnostics window asking to update settings](./media/compliance-policy-blocking-site-deletion/invalid-retention-policies-on-tenant.png)
+   :::image type="content" source="media/compliance-policy-blocking-site-deletion/invalid-retention-policies-on-tenant.png" alt-text="Screenshot of the Run diagnostics window asking to update settings." border="false":::
 
 ## More information
 

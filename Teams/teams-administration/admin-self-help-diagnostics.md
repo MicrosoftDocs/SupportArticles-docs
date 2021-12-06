@@ -37,13 +37,13 @@ While you’re logged in as an administrator, visit your [Microsoft 365 admin ce
 > [!NOTE]
 > As you type search terms, a type-ahead query assists you to find the topics that you’re searching for. 
 
-:::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-1.png" alt-text="Teams diagnostic query screen."::: 
+:::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-1.png" alt-text="Screenshot that shows the Teams diagnostic query screen."::: 
  
 Enter your organization’s root URL. In the Guest Access diagnostic, select the drop-down arrow, select a pre-populated URL from your tenant, and then select **Run tests**.
 
 After the diagnostic checks finish and the configuration issue is found, the system provides the steps to resolve the issue. In this example, the Tenant Admin had not turned on Guest Access:
 
-:::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-2.png" alt-text="Example diagnostics response screen.":::
+:::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-2.png" alt-text="Screenshot that shows the example diagnostics response screen.":::
 
 > [!NOTE]
 > If a diagnostic detects an issue, and you've implemented a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved. 
