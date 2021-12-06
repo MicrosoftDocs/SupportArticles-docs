@@ -36,7 +36,7 @@ C:\Windows\System32\cmd.exe
 
 Contact your support person for more info.  
 
-:::image type="content" source="media/command-prompt-powershell-not-start/error-message-screenshot.png" alt-text="Screenshot of the error message when you open command prompt and PowerShell." border="false":::
+:::image type="content" source="media/command-prompt-powershell-not-start/organization-used-device-guard-block-app-error.png" alt-text="Screenshot of the Your organization used Device Guard to block this app error." border="false":::
 
 ## Cause
 
