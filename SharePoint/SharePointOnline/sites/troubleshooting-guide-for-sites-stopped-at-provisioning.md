@@ -40,8 +40,8 @@ Listed below are some recommendations to help resolve the issue.
 1. Navigate to the [Office 365 Admin Center](https://admin.microsoft.com/AdminPortal/Home#/homepage). 
 2. Under **Users**, select **Active users**.
 3. Search for and select the user's account. A panel opens on the right with the user's information.  
-4. If the message "Sign in blocked" is displayed, unblock the user by selecting the "blocked"  icon (![Blocked icon.](media/troubleshooting-guide-for-sites/blocked-icon.jpg)).
-!["Sign in blocked" message.](media/troubleshooting-guide-for-sites/troubleshooting-sign-in-blocked.jpg)
+4. If the message "Sign in blocked" is displayed, unblock the user by selecting the "blocked"  icon (:::image type="icon" source="media/troubleshooting-guide-for-sites/blocked-icon.png" border="false":::).
+:::image type="content" source="media/troubleshooting-guide-for-sites/troubleshooting-sign-in-blocked.png" alt-text="Screenshot of the user information panel with Sign in blocked message.":::
 
    > [!NOTE]
    > If the user account is synced from the Local AD, the user will have to be enabled in the Local AD and wait for the AD sync to occur. 
@@ -65,7 +65,7 @@ To check whether **Create Personal Site** is selected:
 3. In the new tab, select **Open** under **User profiles**. 
 4. Select **Manage user permissions**.
 5. Select the **Everyone except external users** permission group and check that **Create Personal Site** is selected.
-![Create Personal Site permission dialog box.](media/troubleshooting-guide-for-sites/troubleshooting-create-personal-site.jpg)
+:::image type="content" source="media/troubleshooting-guide-for-sites/troubleshooting-create-personal-site.png" alt-text="Screenshot of the Everyone except external users permission group and Create Personal Site option in Create Personal Site permission dialog.":::
 
 For more information about this, see [Disable OneDrive creation for some users](/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users).
 
