@@ -38,7 +38,7 @@ Run the Microsoft Dynamics CRM Configuration Wizard:
 
     You'll see the following (or similar) dialog box:
 
-    :::image type="content" source="media/dynamics-crm-outlook-is-not-enabled/add-dynamics-crm-organization.png" alt-text="Microsoft Dynamics CRM Configuration Wizard.":::
+    :::image type="content" source="media/dynamics-crm-outlook-is-not-enabled/add-dynamics-crm-organization.png" alt-text="Screenshot of the Microsoft Dynamics C R M for Outlook dialog box." border="false":::
 
 4. Do one of the following steps:
 

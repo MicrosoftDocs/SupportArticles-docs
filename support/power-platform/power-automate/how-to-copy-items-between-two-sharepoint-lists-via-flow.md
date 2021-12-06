@@ -25,7 +25,7 @@ In the following example, we assume that the **Title** column is the same in bot
 
 The first step is to set up your trigger on the source SharePoint list. Because you want to capture all item changes (not only new items), you should select the **SharePoint - When an existing item is modified** trigger.
 
-:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/when-an-existing-item-is-modified.png" alt-text="Sharepoint - When an existing item is modified trigger with site address and list name":::
+:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/when-an-existing-item-is-modified.png" alt-text="Screenshot to select the When an existing item is modified trigger in Sharepoint.":::
 
 > [!NOTE]
 > Although the trigger name mentions only modifications to existing items, the trigger also reacts to new items that are added to the list.
@@ -38,7 +38,7 @@ Instead, you should use the **Filter Query** field on the **Get items** step in 
 
 Title eq '[*select the title from dynamic content*]'
 
-:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/get-items.png" alt-text="Type the title in the Filter Query field on the Get items step":::
+:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/get-items.png" alt-text="Screenshot to type the title in the Filter Query field on the Get items step.":::
 
 You don't necessarily have to have a strict 1:1 column mapping between the two data sources. For example, if you have **First Name** and **Last Name** columns in the source list, and a **Full name** column in the destination list, you can type **FullName eq '[*First name*] [*Last name*]'** in the **List Name** field.
 
@@ -57,7 +57,7 @@ Use a condition to determine the actual situation. To do this, follow these step
     > [!NOTE]
     > The collection that contains the list of all items returned by **Get items**  is named **value**. Make sure that you select the value from **Get items** (not from the trigger if an existing item is changed).
 
-    :::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/value-listed-when-adding-condition.png" alt-text="A value collection is listed in Get items when adding a condition":::
+    :::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/value-listed-when-adding-condition.png" alt-text="Screenshot shows that a value collection is listed in Get items when adding a condition.":::
 
 3. On the **Condition** card, select **is equal to** in the **Relationship** box, and then type *0* in the **Value** box.
 
@@ -65,7 +65,7 @@ Use a condition to determine the actual situation. To do this, follow these step
 
 5. In Advanced mode, type **length()** around the **body('Get_items')?['value']** expression. Your condition appears as follows.
 
-    :::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/length-is-0.png" alt-text="Condition box shows the length of the list equals 0":::
+    :::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/length-is-0.png" alt-text="Screenshot of the Condition box shows the length of the list equals 0.":::
 
 ### Create the item
 
@@ -79,11 +79,11 @@ In the **IF NO** branch, you will add a SharePoint **Update item** step.
 
 Select the site and list. Then, select the ID that's returned from the **Get items** steps.
 
-:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/id-in-get-items.png" alt-text="ID shows in Get items when updating item":::
+:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/id-in-get-items.png" alt-text="Screenshot to select the ID that's returned from the Get items steps.":::
 
 When you add the ID, an **Apply to each** container is automatically added around the **Update item** step. This is expected behavior. If the query that you used in the **Get items** step is accurate, the container will update only the item that you want to copy. After you complete the remaining fields (and make sure that you use the outputs from the trigger, not from the **Get items** call), your condition block should resemble the following screenshot.
 
-:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/condition-block.png" alt-text="condition block":::
+:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/condition-block.png" alt-text="Screenshot shows an example of the condition block.":::
 
 ### Limitations of the flow process
 

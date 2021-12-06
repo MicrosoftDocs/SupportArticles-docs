@@ -2,7 +2,6 @@
 title: Year-end closing procedures for the Canadian Payroll module
 description: Describes how to perform the year-end closing routine for Canadian Payroll in Microsoft Dynamics GP. This article also lists preparation steps and troubleshooting information for the year-end closing routine.
 ms.reviewer: theley
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Year-end closing procedures for the Canadian Payroll module in Microsoft Dynamics GP

@@ -2,7 +2,6 @@
 title: Update client app's registration in AD FS
 description: This article describes updated mobile applications and additional Redirect URIs.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-client-outlook
 ---

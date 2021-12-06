@@ -2,7 +2,6 @@
 title: UOM used on POs generated from Sales Order
 description: Information about the unit of measure used on purchase orders generated from Sales Order Processing in Microsoft Dynamics GP.
 ms.reviewer: lmuelle
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about the unit of measure used on purchase orders generated from Sales Order Processing in Microsoft Dynamics GP

@@ -44,7 +44,7 @@ To fix the issue, do the following:
      Type: **Public client (mobile & desktop)**  
      Redirect URI: **urn:ietf:wg:oauth:2.0:oob**
 
-     ![Redirect URI](./media/error-query-intune-data-warehouse/4506350_en_1.png)
+     :::image type="content" source="media/error-query-intune-data-warehouse/redirect-uris.png" alt-text="Screenshot of the Redirect URI type and value." lightbox="media/error-query-intune-data-warehouse/redirect-uris.png":::
 
 ## More information
 
