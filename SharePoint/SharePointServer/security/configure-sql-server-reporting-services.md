@@ -87,7 +87,7 @@ To configure constrained delegation, follow these steps:
 
 2. Navigate to the **Delegation** tab.
 
-    ![Screenshot of the Delegation tab](./media/configure-sql-server-reporting-services/delegation-tab.png)
+    :::image type="content" source="media/configure-sql-server-reporting-services/delegation-tab.png" alt-text="Screenshot of the Delegation tab with Use any authentication protocol option selected.":::
 
 3. Select **Trust this computer for delegation to specified services only**.
 
@@ -97,7 +97,7 @@ To configure constrained delegation, follow these steps:
 
 6. Select Users and Computers.
 
-    ![Screenshot of the Select Users and Computers page](./media/configure-sql-server-reporting-services/select-users-and-computers.png)
+    :::image type="content" source="media/configure-sql-server-reporting-services/select-users-and-computers.png" alt-text="Screenshot of the Select Users and Computers dialog with a service account entered." border="false":::
 
 7. Select the service account running the service you wish to delegate to (SQL Server, SQL Server Analysis Services, or both).
 
@@ -108,11 +108,11 @@ To configure constrained delegation, follow these steps:
 
 9. Select the SPNs you would like to delegate to, and then click **OK**.
 
-    ![Screenshot of selecting SPNs](./media/configure-sql-server-reporting-services/select-spns.png)
+    :::image type="content" source="media/configure-sql-server-reporting-services/select-spns.png" alt-text="Screenshot of selecting SPNs in the Add Service dialog." border="false":::
 
 10. You should now see the selected SPNS in the services to which this account can presented delegated credentials list.
 
-    ![Screenshot of the selected SPNS in the services](./media/configure-sql-server-reporting-services/selected-spns-in-services.png)
+    :::image type="content" source="media/configure-sql-server-reporting-services/selected-spns-in-services.png" alt-text="Screenshot of the selected SPNS in the services." border="false":::
 
 11. Repeat these steps for each delegation path defined in the beginning of this section.
 
@@ -124,7 +124,7 @@ Before creating a Reporting Services service application, start the Reporting Se
 
 2. Under services, select **Manage services on server**.
 
-    :::image type="content" source="./media/configure-sql-server-reporting-services/manage-services-on-server.png" alt-text="Screenshot of selecting Manage services on server.":::
+    :::image type="content" source="media/configure-sql-server-reporting-services/manage-services-on-server.png" alt-text="Screenshot of selecting Manage services on server.":::
 
 3. In the server selection box in the upper right hand corner, select the server(s) running Reporting Services.
 
@@ -138,15 +138,15 @@ Next configure a new Reporting Services service application and application prox
 
 2. Select **Manage Service Applications** under **Application Management**.
 
-    :::image type="content" source="./media/configure-sql-server-reporting-services/manage-service-applications.png" alt-text="Screenshot of selecting Manage Service Applications.":::
+    :::image type="content" source="media/configure-sql-server-reporting-services/manage-service-applications.png" alt-text="Screenshot of selecting Manage Service Applications.":::
 
 3. Select **New**, and then click **SQL Server Reporting Services Service Application**.
 
-    ![Screenshot of selecting SQL Server Reporting Services Service Application](./media/configure-sql-server-reporting-services/selecting-application.png)
+    :::image type="content" source="media/configure-sql-server-reporting-services/selecting-application.png" alt-text="Screenshot of selecting SQL Server Reporting Services Service Application.":::
 
 4. Configure the new service application. Be sure to select the correct service account or create a new managed account if you didn't perform this step previously.
 
-    :::image type="content" source="./media/configure-sql-server-reporting-services/configure-applications.png" alt-text="Screenshot of configuring the new service application.":::
+    :::image type="content" source="media/configure-sql-server-reporting-services/configure-applications.png" alt-text="Screenshot of configuring the new service application.":::
 
 You can create and register a new service account for an existing application pool dedicated for Reporting Services before this step or when you create the new Reporting Services service. To associate the service account with an existing application pool dedicated to Reporting Services or verify an existing account, do the following.
 
@@ -156,7 +156,7 @@ You can create and register a new service account for an existing application po
 
 3. Select the Active Directory account.
 
-    :::image type="content" source="./media/configure-sql-server-reporting-services/select-account.png" alt-text="Screenshot of selecting Active Directory account.":::
+    :::image type="content" source="media/configure-sql-server-reporting-services/select-account.png" alt-text="Screenshot of selecting Active Directory account.":::
 
 ## Grant the Reporting Services service account permissions on the web application content database
 
