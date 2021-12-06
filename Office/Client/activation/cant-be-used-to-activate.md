@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157756
+- CI 159132
 search.appverid: 
 - MET150
 appliesto:
@@ -25,7 +26,9 @@ When activating Microsoft 365 apps, you might encounter the following error:
 
 Try the following troubleshooting methods to solve the problem.
 
-**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
+**Notes:**
+- If your Microsoft 365 license didn't come from your work, school, or other organization, see [Office error "The products we found in your account can't be used to activate"](https://support.microsoft.com/office/office-error-the-products-we-found-in-your-account-can-t-be-used-to-activate-c9f9a0b3-5aae-4131-8077-21e6a59f141e)
+- Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
 <br/><br/>
 
 <details>
@@ -52,13 +55,12 @@ Run [the SaRA Office sign in issue troubleshooter](https://aka.ms/SaRA-OfficeSig
 1.	Select **Sign in**.
 1.	Make sure you are signed in with your **Work or School** account, not your personal Microsoft account.
 1.	Try activating Microsoft 365 again.
- 
 <br/><br/>
 </details>
 
 <details>
-<summary><b>Make sure you have the correct Office installed/b></summary>
-  
+<summary><b>Make sure you have the correct Office installed</b></summary>
+
 Go to https://portal.office.com/account to check which Office version and edition you have available.  
   
 If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  

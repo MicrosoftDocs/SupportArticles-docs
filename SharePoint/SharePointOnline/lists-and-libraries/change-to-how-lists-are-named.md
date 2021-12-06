@@ -38,14 +38,14 @@ Users can update previously created lists by following these steps:
 3.	Select and add the “Item” content type.
 4.	Select **Add**.
 
-    :::image type="content" source="media/change-to-how-lists-are-named/change-to-how-lists-are-named-1.png" alt-text="Select and add the Item content type.":::
+    :::image type="content" source="media/change-to-how-lists-are-named/add-item-content-type.png" alt-text="Screenshot to select and add the Item content type to the list.":::
  
 ## Step 2. Make "Item” the default, and hide the old default content type.
 
 1.	Select **Change new button order and default content type**.
 2.	Set the position of “Item” as **1**. Clear the check box beneath **Visible** for any other content type to hide that content type (such as “Content scheduler” in the example below).
 
-    :::image type="content" source="media/change-to-how-lists-are-named/change-to-how-lists-are-named-2.png" alt-text="Set the position of Item as 1.":::
+    :::image type="content" source="media/change-to-how-lists-are-named/set-item-content-type-1.png" alt-text="Screenshot to set the position of the Item content type as 1.":::
  
 ## Step 3. Copy all fields from the old default content type to the new default content type.
 
@@ -56,7 +56,7 @@ Users can update previously created lists by following these steps:
 
 To do this, bulk edit all list items. 
 
-:::image type="content" source="media/change-to-how-lists-are-named/change-to-how-lists-are-named-3.gif" alt-text="Bulk move all the old content types to the new default content types.":::
+:::image type="content" source="media/change-to-how-lists-are-named/bulk-edit-all-list-items.gif" alt-text="Bulk move all the old content types to the new default content types.":::
 
 
 ## More information

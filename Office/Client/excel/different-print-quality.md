@@ -1,5 +1,6 @@
 ---
 title: Unexpected behavior when using different print quality for Excel sheets
+description: Provides a workaround for unexpected behavior when you use different print quality for sheets in Excel.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -61,7 +62,7 @@ After you run this macro, all of the worksheets use the same print quality setti
 
 This behavior is by design.
 
-## More Information
+## More information
 
 The following steps demonstrate the behavior:
 

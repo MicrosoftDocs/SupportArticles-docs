@@ -69,7 +69,7 @@ If all these steps have been completed and the photo isn't showing within 24 hou
 1. Select the camera icon.
 1. Choose **Upload picture**.
 
-    :::image type="content" source="./media/profile-picture-not-showing/profile-picture.png" alt-text="Image shows the Picture dialog with the Upload Picture button.":::
+    :::image type="content" source="media/profile-picture-not-showing/profile-picture.png" alt-text="Screenshot shows the Picture dialog with the Upload Picture button.":::
 
     **Note** If you see **Change photo** instead of **Upload picture**, you have an Exchange Online mailbox. Follow the steps in **If you have an Exchange Online mailbox** instead.
 

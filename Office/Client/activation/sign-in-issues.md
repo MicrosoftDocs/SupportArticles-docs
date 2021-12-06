@@ -60,7 +60,7 @@ Microsoft 365 Apps fails to activate when opened from published apps on a Citrix
 
 <details>
 <summary><b>Sign out of Office and sign back in</b></summary>
-  
+
 1.	Open an Office app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.
