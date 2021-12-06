@@ -34,15 +34,15 @@ To add your SharePoint Online site to the trusted zone, follow these steps:
    - On the **Tools** menu, click **Internet options**.
    - Click the gear icon, and then click **Internet options**.
 
-   ![Go to Internet options from IE](./media/rich-text-fields-fails-responding/internet-options.png)
+   :::image type="content" source="media/rich-text-fields-fails-responding/internet-options.png" alt-text="Screenshot of the Internet options item in the Setting menu of Internet Explorer.":::
 
 1. Click the **Security** tab, click **Trusted sites**, and then click **Sites**.
 
-   ![Go to Sites in the Trusted sites field](./media/rich-text-fields-fails-responding/trusted-sites.png)
+   :::image type="content" source="media/rich-text-fields-fails-responding/trusted-sites.png" alt-text="Screenshot of the Trusted Sites setting in the Security tab of Internet Options.":::
 
 1. In the Add this website to the zone box, type the URL for the SharePoint Online site that you want to add to the Trusted sites zone, and then click Add. For example, type https://*contoso*.sharepoint.com. (Here, the *contoso* placeholder represents the domain that you use for your organization.) Repeat this step for any additional sites that you want to add to this zone.
 
-   ![Adding websites to the Trusted sites zone](./media/rich-text-fields-fails-responding/adding-site.png)
+   :::image type="content" source="media/rich-text-fields-fails-responding/adding-site.png" alt-text="Screenshot of adding the example website to the Trusted sites zone." border="false":::
 
 1. After you have added each site to the **Websites** list, click **Close**, and then click **OK**.
 

@@ -23,7 +23,7 @@ This article was written by [Adam Rhinesmith](https://social.technet.microsoft.c
 
 The Office Online Server is limited to 50 MB for embedded media in the PowerPoint Web App. You may experience the following error:
 
-![error-message](./media/increase-size-limit-embedded-media/cannot-play-media-error.png)
+:::image type="content" source="media/increase-size-limit-embedded-media/cannot-play-media-error.png" alt-text="Screenshot of the cannot play media error message in PowerPoint Web App." lightbox="media/increase-size-limit-embedded-media/cannot-play-media-error.png":::
 
 ## Resolution
 
