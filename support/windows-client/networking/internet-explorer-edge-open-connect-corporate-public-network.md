@@ -30,7 +30,7 @@ You connect a computer that's running Windows 8 (or a later version) to a networ
 You notice the following behavior:
 
 - The default browser (for example, **Internet Explorer** or **Edge**) opens, and shows a web page such as a sign-in page for the network or the MSN portal page.
-- The network icon on the Task Bar shows an alert symbol (for example,:::image type="content" source="./media/internet-explorer-edge-open-connect-corporate-public-network/network-status-alert.png" alt-text="Network status alert" border="false":::). If you hover over the icon, you see a message such as "No connectivity" or "Limited Internet access."
+- The network icon on the Task Bar shows an alert symbol (for example,:::image type="icon" source="media/internet-explorer-edge-open-connect-corporate-public-network/network-status-alert.png" border="false":::). If you hover over the icon, you see a message such as "No connectivity" or "Limited Internet access."
 
 After you sign in to the network, you can use the network in the usual manner. After you use the network for a few seconds, the network alert on the Task Bar disappears.
 
