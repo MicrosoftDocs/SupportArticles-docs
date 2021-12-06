@@ -63,11 +63,11 @@ Download the free Debugging Tools for Windows (WinDbg, KD, CDB, NTSD). These too
 5. Browse to the location of the kernel dump file that you noted in step 1d, and then select **Open**. Check the date on the .dmp file to make sure that it was newly created during this troubleshooting session.
 6. In the **Command** window, type **!apc**, and then press Enter.
 
-    ![AttachFileHandler](./media/lsaiso-process-high-cpu-usage/type-apc.png)  
+    :::image type="content" source="media/lsaiso-process-high-cpu-usage/type-apc.png" alt-text="Screenshot of the command box of the kernel dump file which shows !apc.":::  
 
     The output should resemble the following screenshot.
 
-    ![apc output](./media/lsaiso-process-high-cpu-usage/apc-output.png)
+    :::image type="content" source="media/lsaiso-process-high-cpu-usage/apc-output.png" alt-text="Screenshot of the output of the !apc command. In this example, a driver that is named ProblemDriver.sys is listed under LsaIso.exe.":::
 7. Search the results for **LsaIso.exe**. If a driver that is named \<ProblemDriver>.sys is listed under **LsaIso.exe** (as shown in the example screenshot of output in step 6), contact the vendor, and then refer them to the recommended mitigation that is listed in the [Isolated User Mode (IUM) Processes](/windows/win32/procthread/isolated-user-mode--ium--processes) topic.
 
     > [!NOTE]
