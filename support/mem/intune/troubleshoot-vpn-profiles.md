@@ -19,7 +19,7 @@ The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) cer
 
 ## Overview of VPN profiles
 
-Virtual private networks (VPNs) give users secure remote access to the organization network. Devices use a VPN connection profile to start a connection with the VPN server. In Microsoft Intune, VPN profiles assign VPN settings to users and devices in the organization. Then, the users can easily and securely connect to the organizational network.
+Virtual private networks (VPNs) give users secure remote access to the organization network. Devices use a VPN connection profile to start a connection with the VPN server. In Intune, VPN profiles assign VPN settings to users and devices in the organization. Then, the users can easily and securely connect to the organizational network.
 
 For example, if you want to configure all iOS devices with the required settings to connect to a file share on the organization network, you can create a VPN profile that includes these settings, and assign this profile to all users who have iOS devices. After that, the users can see the VPN connection in the list of available networks and connect with minimal effort.
 
@@ -477,7 +477,7 @@ If you're still looking for a solution to a related issue, or if you want more i
 
 If you want to open a support request to the Microsoft Intune product support team, see [How to get support for Microsoft Intune](/intune/get-support).
 
-For more information about VPN profiles in Microsoft Intune, see the following articles:
+For more information about VPN profiles in Intune, see the following articles:
 
 - [Android device settings to configure VPN in Intune](/intune/vpn-settings-android)
 - [Configure VPN settings on iOS devices in Microsoft Intune](/intune/vpn-settings-ios)
