@@ -495,7 +495,7 @@ If the issue still isn't solved, go to the [Access to Office 365 on the web](#ac
 
 In the Office 365 admin center, click **Service health**. A green check mark next to Skype for Business Online indicates no service interruptions.
 
-:::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/service-health.png" alt-text="Screenshot that shows the Lync Online service tab and service status in the service health page.":::
+:::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/service-health.png" alt-text="Screenshot that shows the Lync Online service tab and service status on the service health page.":::
 
 Is a service interruption preventing you from signing in? If yes, go to the [Service interruption](#service-interruption) section. If no, go to the [Custom domain](#custom-domain) section.
 
