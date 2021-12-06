@@ -98,7 +98,8 @@ To help reduce the content of an Outlook mailbox, you can change the synchroniza
 ### Troubleshoot Search errors
 
 If the Indexer successfully builds the index database, you see the message **Indexing complete** on the Windows Search settings page and in **Indexing Options**.
- ‎ :::image type="content" source="media/windows-search-performance-issues/indexing-complete.png" alt-text="Screenshot of the Indexing complete message in the Indexing Options dialog.":::  
+
+:::image type="content" source="media/windows-search-performance-issues/indexing-complete.png" alt-text="Screenshot of the Indexing complete message in the Indexing Options dialog.":::
 
 If a different message appears, see the following table for more information about the message and how to respond.
 
