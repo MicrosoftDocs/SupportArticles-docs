@@ -23,13 +23,13 @@ This article was written by [Rick Andring](https://social.technet.microsoft.com/
 
 You are trying to render Excel workbooks in the Microsoft Excel Online web part in SharePoint 2016 and are encountering the following error inside the web part when it attempts to load: "We couldn't find the file you wanted".
 
-![error-message](./media/excel-web-access-web-part-error/error.png)
+:::image type="content" source="media/excel-web-access-web-part-error/error.png" alt-text="Screenshot of the SharePoint 2016 Excel Online Web Part error message." border="false":::
 
 You will notice that workbooks are rendering in the browser (view, edit, and preview) are all working fine assuming that there are no other issues.
 
 The Unified Logging Service (ULS) logging won't have anything helpful, but you may see errors that resemble the following while SharePoint is trying to engage the workbook:
 
-![uls logs](./media/excel-web-access-web-part-error/uls.png)
+:::image type="content" source="media/excel-web-access-web-part-error/uls.png" alt-text="Screenshot of the ULS log says Failed to get WOPI target." border="false":::
 
 Office Online Server Unified Logging Service (ULS) will have no messages related to this issue, because the request doesn't even make it to the server.
 

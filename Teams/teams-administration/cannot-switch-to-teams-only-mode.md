@@ -28,7 +28,7 @@ When you try to switch a tenant to Teams Only mode at the organization level eit
 
 Please see the unsaved sections highlighted in red below.
 
-:::image type="content" source="media/cannot-switch-to-teams-only-mode/teams-only-error.png" alt-text="Screenshot of unsaved section when switching o Teams Only mode.":::
+:::image type="content" source="media/cannot-switch-to-teams-only-mode/teams-only-error.png" alt-text="Screenshot that shows the unsaved section when switching o Teams Only mode.":::
 
 **Note:** If you encounter this error in the Microsoft Teams admin center, we recommend that you run the `Grant-CsTeamsUpgradePolicy` cmdlet which will display the following detailed error message.
 
@@ -36,7 +36,7 @@ Please see the unsaved sections highlighted in red below.
 
 > WARNING: \*All* users in this tenant are now full Teams-only users, except for any users that have an explicit policy assignment of TeamsUpgradePolicy. Teams-only users cannot use Skype for Business clients, except to join Skype for Business meetings. For details, see [http://aka.ms/UpgradeToTeams](/MicrosoftTeams/teams-only-mode-considerations). This organization cannot be upgraded to TeamsOnly mode. One or more M365 domains have a public DNS record that points to an on-premises Skype for Business Server deployment. The domain records at fault are {[lyncdiscover.\<domain_name>.\<IP_address>];}. To upgrade this tenant to TeamsOnly, first complete the migration of all users from on-premises Skype for Business Server to the cloud (using `Move-CsUser`), and then disable Skype for Business hybrid configuration for this tenant and update the DNS records to point to M365. After these steps are complete, you can execute this command, after which all users and any subsequently created new users will be TeamsOnly.
 
-:::image type="content" source="media/cannot-switch-to-teams-only-mode/teams-only-powershell-error.png" alt-text="Screenshot of the PowerShell error when switching o Teams Only mode.":::
+:::image type="content" source="media/cannot-switch-to-teams-only-mode/teams-only-powershell-error.png" alt-text="Screenshot that shows the PowerShell error when switching to Teams Only mode.":::
 
 **Note:** The actual error message specifies the name and IP address of each domain that has incorrect domain records. This example uses placeholder text for one affected domain name and IP address.
 

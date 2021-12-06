@@ -30,7 +30,7 @@ To meet right away by using working CVI coordinates, select **Meet Now** in the 
 
 |Teams calendar|Outlook calendar|
 |-|-|
-|:::image type="content" source="media/cvi-info-does-not-populate-in-meet-now/teams-calendar.png" alt-text="Teams calendar":::|:::image type="content" source="media/cvi-info-does-not-populate-in-meet-now/outlook-calendar.png" alt-text="Outlook calendar":::|
+|:::image type="content" source="media/cvi-info-does-not-populate-in-meet-now/teams-calendar.png" alt-text="Screenshot that shows the Meet Now option in the Teams calendar.":::|:::image type="content" source="media/cvi-info-does-not-populate-in-meet-now/outlook-calendar.png" alt-text="Screenshot that shows the Meet Now option in the Outlook calendar.":::|
 
 ## Supported scenarios
 

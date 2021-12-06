@@ -62,7 +62,7 @@ To fix this issue, identify the client's public IP address that's used by Teams,
 1. Open [Microsoft Teams log files](/microsoftteams/log-files).
 1. Locate the public IP address listed for the client in the *MSTeams Diagnostics Log [Date]__[Time]_calling.txt* file. Here's an example of this file:
 
-   :::image type="content" source="media/issues-with-lmo/txt-file.png" alt-text="Screenshot of the public IP address in the txt file.":::
+   :::image type="content" source="media/issues-with-lmo/txt-file.png" alt-text="Screenshot that shows the public IP address in the txt file.":::
 
 1. Run the [Get-CsTenantTrustedIPAddress](/powershell/module/skype/get-cstenanttrustedipaddress) cmdlet to get the list of trusted IP addresses:
 
@@ -93,7 +93,7 @@ To fix this issue, identify the client's public IP address that's used by Teams,
 
    The output of the cmdlet should resemble the following example:
 
-   :::image type="content" source="media/issues-with-lmo/add-missing-ip-address.png" alt-text="Screenshot of adding missing IP address.":::
+   :::image type="content" source="media/issues-with-lmo/add-missing-ip-address.png" alt-text="Screenshot that shows adding missing IP address.":::
 
    You can see that the client's IP address has now been added to the list of trusted IP addresses.
 
@@ -101,7 +101,7 @@ To fix this issue, identify the client's public IP address that's used by Teams,
 
    After the restart, Teams will find a match for the client's IP address in the list of trusted IP addresses, as shown in the following example:
 
-   :::image type="content" source="media/issues-with-lmo/match-address.png" alt-text="Screenshot of matched IP address.":::
+   :::image type="content" source="media/issues-with-lmo/match-address.png" alt-text="Screenshot of the matched IP address.":::
 
 ## Incoming calls fail or go to voicemail if both LMO and LBR are enabled
 
@@ -132,7 +132,7 @@ To determine whether the SBC assignment is correct, identify the user site that'
 
 1. Run the [Get-CsOnlinePSTNGateway](/powershell/module/skype/get-csonlinepstngateway) cmdlet to check the configuration of the SBC. The output that you see should resemble the following example:
 
-    :::image type="content" source="media/issues-with-lmo/sbc-configuration.png" alt-text="Screenshot of checking SBC configuration.":::
+    :::image type="content" source="media/issues-with-lmo/sbc-configuration.png" alt-text="Screenshot that shows checking S B C configuration.":::
 
 1. In the output from step 2, the value of the `networksiteId` parameter that's listed in the user site information is "Vietnam." However, in the output from step 3, the value of the equivalent `GatewaySiteId` parameter that's listed in the SBC's configuration is "India." This is a mismatch. To update the SBC's configuration, run the [Set-CsOnlinePSTNGateway](/powershell/module/skype/set-csonlinepstngateway) cmdlet, as follows:
 
@@ -142,6 +142,6 @@ To determine whether the SBC assignment is correct, identify the user site that'
 
    Next, run the `Get-CsOnlinePSTNGateway` cmdlet to verify the SBC's updated configuration. The output should now show the correct value for the `GatewaySiteId` parameter.
 
-    :::image type="content" source="media/issues-with-lmo/update-gatewaysiteid.png" alt-text="Screenshot of updating GatewaySiteId.":::
+    :::image type="content" source="media/issues-with-lmo/update-gatewaysiteid.png" alt-text="Screenshot of updating Gateway Site I d.":::
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -30,7 +30,7 @@ When you try to access a dial plan in the Microsoft Teams admin center, you rece
 
 > We can’t get the effective dial plan so the dial plan can’t be tested.
 
-:::image type="content" source="./media/errors-managing-dial-plans/cant-get-dial-plan.png" alt-text="Error when accessing a dial plan":::
+:::image type="content" source="./media/errors-managing-dial-plans/cant-get-dial-plan.png" alt-text="Screenshot that shows the error when accessing a dial plan.":::
 
 **Error message 2**
 
@@ -38,7 +38,7 @@ When you try to test a dial plan, you receive the following error message:
 
 > Something went wrong while testing this phone number. If you continue to have problems, contact Microsoft customer support.
 
-:::image type="content" source="./media/errors-managing-dial-plans/something-went-wrong.png" alt-text="Error when trying to test a phone number":::
+:::image type="content" source="./media/errors-managing-dial-plans/something-went-wrong.png" alt-text="Screenshot that shows the error when trying to test a phone number.":::
 
 **Error message 3**
 
@@ -46,7 +46,7 @@ When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cs
 
 > Management object not found for identity OrgID_of_unlicensed_user
 
-:::image type="content" source="./media/errors-managing-dial-plans/management-object.png" alt-text="Get CS Effective Tenant dial plan cmdlet error":::
+:::image type="content" source="./media/errors-managing-dial-plans/management-object.png" alt-text="Screenshot that shows the Get CS Effective Tenant dial plan cmdlet error message.":::
   
 ## Cause
 
