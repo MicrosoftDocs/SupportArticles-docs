@@ -72,15 +72,15 @@ If the Owners group is changed or was removed from the **Access requests** list,
 
 1. Click the **Debugger tab**.
 
-    ![The debugger tab](./media/request-approval-failed/debugger-tab.png)
+    :::image type="content" source="media/request-approval-failed/debugger-tab.png" alt-text="Screenshot of the Debugger tab of F12 Developer Tools window.":::
 
 1. In the search box on the right hand side of the page, type **pagelistid:**, and then press Enter.
 
-    ![Page list ID](./media/request-approval-failed/pagelistid.png)
+    :::image type="content" source="media/request-approval-failed/pagelistid.png" alt-text="Screenshot of the search box when you type PageListId.":::
 
 1. Copy the GUID that follows the pageListId located in the listedit.aspx page. The GUID will be between an opening brace ( { ) character and a closing brace ( } ) character as follows:
 
-    ![guid image](./media/request-approval-failed/guid.png)
+    :::image type="content" source="media/request-approval-failed/guid.png" alt-text="Screenshot of an example of GUID that follows the pageListId.":::
 
 1. In the browser address bar, enter **https://contoso.sharepoint.com>/_layouts/15/ListEdit.aspx?List=<{GUID}>**.
 

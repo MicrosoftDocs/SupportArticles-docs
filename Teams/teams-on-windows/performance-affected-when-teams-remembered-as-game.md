@@ -41,7 +41,7 @@ To resolve this issue, use one of the following methods.
 1. Select **Start** > **Settings** > **Gaming** > **Xbox Game Bar**.
 2. Turn off **Xbox Game Bar**.
 
-   :::image type="content" source="media/performance-affected-when-teams-remembered-as-game/turn-off.png" alt-text="Turning off Xbox Game Bar.":::
+   :::image type="content" source="media/performance-affected-when-teams-remembered-as-game/turn-off.png" alt-text="Screenshot that shows the turning off option in the Xbox Game Bar page.":::
 
 ## More information  
 

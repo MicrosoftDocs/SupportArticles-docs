@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157598
+- CI 159117
 search.appverid: 
 - MET150
 appliesto:
@@ -39,7 +40,7 @@ If you are prompted for a product key, see [Where to enter your Office product k
 
 <details>
 <summary><b>Sign out of Office and sign back in</b></summary>
-  
+
 1.	Open an Office app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.
@@ -51,15 +52,15 @@ If you are prompted for a product key, see [Where to enter your Office product k
 
 <details>
 <summary><b>Make sure you have the correct Office installed</b></summary>
-  
+
 Go to https://portal.office.com/account to check which Office version and edition you have available.  
-  
+
 If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  
-  
+
 If you have Microsoft 365 for Business Basic, you won’t have any Office applications to install. You can use Office Online apps at https://office.com.   
-  
+
 Make sure that the version listed (32-bit or 64-bit) matches your version of Windows. To check what version of Windows you have installed, go to **Start** > **Settings** (gear icon) > **System** > **About**, and check the **System type**.  
-  
+
 If you have a different edition or version installed on your device, run the SaRA package to uninstall Office. Restart the device, and install from https://portal.office.com/account to get the correct version.  
 <br/><br/>
 </details>

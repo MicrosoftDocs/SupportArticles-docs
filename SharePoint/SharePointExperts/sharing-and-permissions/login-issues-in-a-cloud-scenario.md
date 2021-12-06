@@ -26,13 +26,13 @@ Microsoft SharePoint Designer 2013 can be used to create workflows, change desig
 
 Assume that you install SharePoint Designer 2013 on Windows Server 2012 R2, Windows Server 2016, or Windows 10. You may also install Office 2013 or Office 2016. You open a SharePoint Site such as "https://contoso.sharepoint.de" by using SharePoint Designer 2013, the following sign-in dialog box may appear:
 
-![the signinone dialog box](./media/login-issues-in-a-cloud-scenario/signinone.png)
+:::image type="content" source="media/login-issues-in-a-cloud-scenario/type-email-signin-dialog.png" alt-text="Screenshot of the sign in dialog: Type the email of the account you would like to use to open https://contoso.sharepoint.de." border="false":::
 
 When you click **Next** and type the password in the prompt dialog box, you receive the following error:
 
 **There is a problem with your account. Please try again later.**
 
-![the signintwo dialog box](./media/login-issues-in-a-cloud-scenario/signintwo.png)
+:::image type="content" source="media/login-issues-in-a-cloud-scenario/signin-error.png" alt-text="Screenshot of the error after type the password." border="false":::
 
 This issue may occur when you work with SharePoint Server on-premises and modern authentication.
 
@@ -46,7 +46,7 @@ To fix this issue, set the value of the **EnableADAL** registry key to 1 and che
 
 After you set the registry key, restart SharePoint Designer 2013. Then the sign-in dialog box will be displayed as follows:
 
-![the signinthree dialog box](./media/login-issues-in-a-cloud-scenario/signinthree.png)
+:::image type="content" source="media/login-issues-in-a-cloud-scenario/microsoft-account-signin-dialog.png" alt-text="Screenshot of the sign-in dialog for entering the account name and password of your Microsoft account." border="false":::
 
 This issue occurs with tests in the Microsoft Cloud Germany (MCG) (also called Microsoft Cloud Deutschland (MCD)).
 
@@ -75,7 +75,7 @@ If SharePoint Designer is experiencing connection issues to SharePoint sites, tr
 
 If all related products are installed correctly and registry keys are set, but the login still doesn't work and you see earlier build numbers than those in the following screenshot, make sure that your Office and SharePoint Designer 2013 are up to date by using Windows Update.
 
-![the signinfour dialog box](./media/login-issues-in-a-cloud-scenario/signinfour.png)
+:::image type="content" source="media/login-issues-in-a-cloud-scenario/build-number.png" alt-text="Screenshot of the build number: Microsoft SharePoint Designer 2013 (15.0.4849.1000) MSO (15.0.4919.1002) 64-bit." border="false":::
 
 You can also install the latest updates for  SharePoint Designer 2013 and Office 2013 that contain ADAL.LL manually to troubleshoot this issue.
 

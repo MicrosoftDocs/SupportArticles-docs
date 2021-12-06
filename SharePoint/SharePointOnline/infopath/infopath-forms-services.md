@@ -28,11 +28,11 @@ The only available InfoPath Forms Services configurations in the DvNext/MT envir
 
 **SharePoint On-Premises**
 
-![SharePoint On-Premises](./media/infopath-forms-services/sharepoint-on-premises.png)
+:::image type="content" source="media/infopath-forms-services/sharepoint-on-premises.png" alt-text="Screenshot of the InfoPath Forms Services configurations in SharePoint On-Premises." border="false":::
 
 **SharePoint Online (DvNext/MT)**
 
-![SharePoint Online (DvNext/MT)](./media/infopath-forms-services/sharepoint-online.png)
+:::image type="content" source="media/infopath-forms-services/sharepoint-online.png" alt-text="Screenshot of the InfoPath Forms Services configurations in SharePoint Online." border="false":::
 
 ## Full -Trust browser forms
 

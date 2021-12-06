@@ -65,7 +65,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 <details>
 <summary><b>Check that your Office 365 plan supports shared computer activation</b></summary>
 
-To use shared computer activation, you must have an Office 365 (or Microsoft 365) plan that includes Microsoft 365 Apps and that supports shared computer activation.
+To use shared computer activation, you must have an Office 365 (or Microsoft 365) plan that includes Microsoft 365 Apps and that supports shared computer activation. For more information, see [How to enable shared computer activation for Microsoft 365 Apps](/DeployOffice/overview-shared-computer-activation#how-to-enable-shared-computer-activation-for-microsoft-365-apps)
 
 **Note** You also can use shared computer activation with the subscription versions of the Project and Visio desktop apps. You just need a subscription plan that includes those products.
 <br/><br/>
@@ -263,17 +263,6 @@ If you are having trouble with shared computer activation using Citrix, see the 
 - [Microsoft 365 Apps (Office 365) is Randomly Asking Users to Reactivate](https://support.citrix.com/article/CTX227286)
 
 - [Office 365 activation issue with Windows 10 VDI's](https://support.citrix.com/article/CTX289614)
-<br/><br/>
-</details>
-  
-<details>
-<summary><b>Make sure your Microsoft 365 plan supports shared computer activation, and that it’s enabled</b></summary>
-
-See the sections of this article that address these steps:
-
-- [Implement password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization)
-
-- [Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso)
 <br/><br/>
 </details>
 
