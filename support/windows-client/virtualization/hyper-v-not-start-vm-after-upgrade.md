@@ -96,8 +96,8 @@ To do this, you may use some tools such as process explorer. Follow these steps:
 2. Extract the tool, and run ProcessExp64.exe, which is for 64-bit operating system.
 3. Under **View** menu, select **Show Lower Pane**, click **Lower Pane View**, and then select **DLLs**.
 
-    :::image type="content" source="./media/hyper-v-not-start-vm-after-upgrade/lower-pane-view-option.png" alt-text="Screenshot of Lower Pane View option.":::
+    :::image type="content" source="media/hyper-v-not-start-vm-after-upgrade/lower-pane-view-option.png" alt-text="Screenshot of Lower Pane View option of the View menu in Process Explorer.":::
 
 4. Select the Vmcompute.exe process, and check for non-Microsoft DLLs in the lower pane. It is fine for some entries to be blank.
 
-    :::image type="content" source="./media/hyper-v-not-start-vm-after-upgrade/vmcompute-running-result.png" alt-text="Screenshot of Process monitor results.":::
+    :::image type="content" source="media/hyper-v-not-start-vm-after-upgrade/vmcompute-running-result.png" alt-text="Screenshot of Process monitor results of Vmcompute.exe process and the DLL list in the lower pane.":::
