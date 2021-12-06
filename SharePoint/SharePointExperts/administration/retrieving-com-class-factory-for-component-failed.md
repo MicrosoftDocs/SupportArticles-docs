@@ -31,18 +31,18 @@ When you open a workbook in a browser by using Excel Services, or when a schedul
 1. Expand **SharePoint Web Services** on the left pane.
 1. Select the first **ID** under **SharePoint Web Services**, and then select **Content View** at the bottom of the center pane.
 
-   ![the content view dialog box](./media/retrieving-com-class-factory-for-component-failed/content-view.png)
+  :::image type="content" source="media/retrieving-com-class-factory-for-component-failed/content-view.png" alt-text="Screenshot shows steps to select the Content View option at the bottom of the center pane." border="false":::
 
 1. Select each ID until you see **ExcelService.asmx** (for Excel Services error) or **SSASMidTierService.svc** (for PowerPivot error) on the center pane.
 1. Select **Advanced Settings** on the right pane, note the value in **Application Pool**, and then click **Cancel**.
 
-   ![the advanced settings dialog box](./media/retrieving-com-class-factory-for-component-failed/advanced-settings.png)
+   :::image type="content" source="media/retrieving-com-class-factory-for-component-failed/advanced-settings.png" alt-text="Screenshot of the Application Pool value in the Advanced Settings window." border="false":::
 
 1. Select **Application Pools** on the left pane and select the application pool that you noted in step 5.
 
-   ![the application pools dialog box](./media/retrieving-com-class-factory-for-component-failed/application-pools.png)
+   :::image type="content" source="media/retrieving-com-class-factory-for-component-failed/application-pools.png" alt-text="Screenshot shows steps to select the application pool." border="false":::
 1. Select **Advanced Settings** on the right pane.
 1. Set the value of **Load User Profile** to True, and then click **OK**.
 
-   ![the load user profile dialog box](./media/retrieving-com-class-factory-for-component-failed/load-user-profile.png)
+   :::image type="content" source="media/retrieving-com-class-factory-for-component-failed/load-user-profile.png" alt-text="Screenshot of setting the Load User Profile value to True." border="false":::
 1. Open a **Command Prompt** and run the **iisreset** command to restart Internet Information Services (IIS).
