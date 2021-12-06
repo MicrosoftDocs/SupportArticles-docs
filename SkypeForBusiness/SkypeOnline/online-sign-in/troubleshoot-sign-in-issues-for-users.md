@@ -169,7 +169,7 @@ Make sure your system clock shows the correct time, and then try signing in agai
 Follow these steps:
 
 1. Go to a web site that shows [Coordinated Universal Time (UTC).
-2. Go to **Apple** :::image type="icon" source="./media/troubleshoot-sign-in-issues-for-users/the-apple-icon.png" alt-text="Screenshot that shows the icone of Apple."::: > **System Preferences**.
+2. Go to **Apple** :::image type="icon" source="./media/troubleshoot-sign-in-issues-for-users/the-apple-icon.png" alt-text="Screenshot that shows the icon of Apple."::: > **System Preferences**.
 3. In the **Date & Time** pane, select the **Date & Time tab**.
 4. Note the UTC offset for your location.
 5. If you need to, update your computer's clock, and then try signing in again.
