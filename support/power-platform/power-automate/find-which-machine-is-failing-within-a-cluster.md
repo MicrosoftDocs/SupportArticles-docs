@@ -24,13 +24,13 @@ If flow runs are intermittently failing when running on a Gateway Cluster, it's 
 1. Go to the Connections pages under Data/ in the left pane
 2. Find the desktop flows connection targeting the cluster you're interested in: Filter for **desktop flows**, and on the connection details page, check out the **Gateway** field:
 
-   :::image type="content" source="media/find-which-machine-is-failing-within-a-cluster/gateway-details.png" alt-text="Gateway details location":::
+   :::image type="content" source="media/find-which-machine-is-failing-within-a-cluster/gateway-details.png" alt-text="Screenshot to check out the Gateway field on the connection details page.":::
 
 3. Go to the **Flows using this connection**.
 4. Identify the list of desktop flows running within the list of Flows.
 5. Go on the desktop flow details page, and checkout the run history, taking note of the failing runs and the corresponding machine name:
 
-   :::image type="content" source="media/find-which-machine-is-failing-within-a-cluster/check-failing-machine.png" alt-text="Check the machine on which the run fails":::
+   :::image type="content" source="media/find-which-machine-is-failing-within-a-cluster/check-failed-machine.png" alt-text="Screenshot of the failed runs and the corresponding machine name." lightbox="media/find-which-machine-is-failing-within-a-cluster/check-failed-machine.png":::
 
 6. Verify all desktop flows runs. If the failures are all happening on the same machine, this machine might be in a bad state and need recovery.
 

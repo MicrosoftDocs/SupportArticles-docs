@@ -37,7 +37,7 @@ This issue can occur if the service is disabled or if the service is disabled fo
 1. Click **Start**, search for *Services*, and then click **Services** in the search result.
 2. Scroll until you find the service, and then double-click the service.
 
-   :::image type="content" source="./media/error-1058-displayed-when-service-stops/service-properties-win10.png" alt-text="Screenshot of service property dialog box." border="false":::
+   :::image type="content" source="media/error-1058-displayed-when-service-stops/service-properties-win10.png" alt-text="Screenshot of Startup type option under the General tab of the Routing and Remote Access Properties (Local Computer) dialog box." border="false":::
 
 3. If the service is disabled, click the **Startup type** list, and then select an option other than **Disabled**.
 4. Click **Apply**.
@@ -51,13 +51,13 @@ This issue can occur if the service is disabled or if the service is disabled fo
 3. Double-click the service that did not start.
 4. Click the **Log On** tab.
 
-   :::image type="content" source="./media/error-1058-displayed-when-service-stops/log-on-tab-shown.png" alt-text="Screenshot of the Log on tab." border="false":::
+   :::image type="content" source="media/error-1058-displayed-when-service-stops/log-on-tab-shown.png" alt-text="Screenshot of the Log On tab of the Remote Procedure Call (RPC) Locator Properties (Local Computer) dialog box." border="false":::
 
 5. Verify that the service isn't disabled for the hardware profile that you're using. If the service is disabled for the hardware profile, click **Enable**.
 
 6. Click the **General** tab, and then in the **Startup Type** box, verify that the service is not disabled. If the service is disabled, click **Automatic** to have it start when you start the computer.
 
-   :::image type="content" source="./media/error-1058-displayed-when-service-stops/verify-service-startup-type.png" alt-text="Verify the service Startup type." border="false":::
+   :::image type="content" source="media/error-1058-displayed-when-service-stops/verify-service-startup-type.png" alt-text="Screenshot of the startup type box in the General tab." border="false":::
 
 7. Click **OK**.
 

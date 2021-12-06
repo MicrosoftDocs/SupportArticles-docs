@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4316891
 
 When you try to sign in to Microsoft Flow, you receive an **Authentication Failed** error message that resembles the following:
 
-:::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/authentication-failed-error.png" alt-text="A 404 error page when signing in to Flow":::
+:::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/authentication-failed-error.png" alt-text="Screenshot of the error page when signing in to Flow.":::
 
 The URL in the message might resemble the following:
 
@@ -43,23 +43,23 @@ To resolve this problem, follow these steps.
 1. Open the [Azure portal](https://portal.azure.com)), and sign in.
 2. In the navigation bar, open Azure Active Directory Settings.
 
-    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/add-settings-icon.png" alt-text="Azure Active Directory Settings icon in the left side":::
+    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/add-settings-icon.png" alt-text="Screenshot of the Azure Active Directory Settings icon in the navigation bar.":::
 
 3. Navigate to **Enterprise applications** > **All applications**.
 
-    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/all-applications.png" alt-text="Enterprise applications and All applications in AAD settings":::
+    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/all-applications.png" alt-text="Screenshot to select the All applications item after selecting the Enterprise applications item.":::
 
 4. Paste **7df0a125-d3be-4c96-aa54-591f83ff541c** into the filter input.
 
     > [!NOTE]
     > This is the application ID for the Flow service. You may have to select **All applications** in the **Show** list.
 
-    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/filter.png" alt-text="Paste 7df0a125-d3be-4c96-aa54-591f83ff541c into the filter input":::
+    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/filter-input.png" alt-text="Screenshot to paste 7df0a125-d3be-4c96-aa54-591f83ff541c into the filter input.":::
 
 5. Select **Microsoft Flow Service**, and then select **Properties**.
 6. Make sure that the **Enabled for users to sign-in?** option is set to **Yes**.
 
-    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/enabled-for-users-to-sign-in.png" alt-text="The Enabled for users to sign-in field shows Yes":::
+    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/enabled-for-users-to-sign-in.png" alt-text="Screenshot to check the Enabled for users to sign-in field is set to Yes.":::
 
 7. Select **Save**.
 
