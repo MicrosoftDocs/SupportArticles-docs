@@ -56,7 +56,7 @@ Access Windows settings to change the dial tone setting, as follows:
 1. Under the **Skype for Business** node, select **Dial Tone**.
 1. In the **Sounds** section, scroll to the top of the list, select **None**, and then select **OK**.
 
-![Screenshot of setting the Dial Tone sound to None](./media/sfb-play-dial-tone-teams-call/sound-setting.png)
+:::image type="content" source="./media/sfb-play-dial-tone-teams-call/sound-setting.png" alt-text="Screenshot that shows setting the Dial Tone sound to None.":::
 
 ### Method 2
 

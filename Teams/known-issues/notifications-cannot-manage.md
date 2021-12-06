@@ -36,10 +36,10 @@ When a user changes the notification setting for a channel, this setting overrid
 
 For example, a newly created or newly added team will have the same **Channel mentions** notification setting set in the user notification settings.
 
-:::image type="content" source="media/notifications-cannot-manage/notifications-setting.png" alt-text="Screenshot of settings":::
+:::image type="content" source="media/notifications-cannot-manage/notifications-setting.png" alt-text="Screenshot that shows the settings page of a newly created team.":::
 
 In this example, the setting overrides the user notification settings for **Channel mentions**.
 
-:::image type="content" source="media/notifications-cannot-manage/default-setting.png" alt-text="Screenshot of default setting":::
+:::image type="content" source="media/notifications-cannot-manage/default-setting.png" alt-text="Screenshot that shows the default setting page for a team.":::
 
 There's an option to **Reset to default** in the channel notification settings. This will update the settings to mirror the current user settings. If the user notification settings are changed again, the change won't be reflected in the channel notification settings.
