@@ -1,5 +1,6 @@
 ---
 title: Columns and rows are labeled numerically
+description: Fixes an issue in which column labels are numeric rather than alphabetic in Excel.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal

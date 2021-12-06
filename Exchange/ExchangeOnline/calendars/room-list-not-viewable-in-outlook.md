@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4039148
 
 ## Problem
 
-A room list in Microsoft Exchange Online cannot be viewed in Microsoft Outlook or Outlook Web App (OWA).
+A room list in Microsoft Exchange Online cannot be viewed in Microsoft Outlook or Outlook Web App (OWA).
 
 ## Cause
 
@@ -32,10 +32,10 @@ This issue occurs if the room list is reverted to a distribution group.
 
 To resolve this issue, follow these steps:
 
-1. Run the following cmdlet to verify the recipient type of the room list. If the recipient type is not displayed as `RoomList`, go to step 2.
+1. Run the following cmdlet to verify the recipient type of the room list. If the recipient type is not displayed as `RoomList`, go to step 2.
 
     ```powershell
-    Get-distributionGroup "Name of the affected room list" | fl recipienttypedetails
+    Get-distributionGroup "Name of the affected room list" | fl recipienttypedetails
     ```
 
 2. If the tenant is a cloud-only tenant, run the following cmdlet in Exchange Online PowerShell:
@@ -45,7 +45,7 @@ To resolve this issue, follow these steps:
     ```
 
 3. If you have an on-premises deployment of Microsoft Exchange Server, run the cmdlet from step 2 in the on-premises Exchange Management Shell.
-4. If you do not have an on-premises Exchange Server deployment, change the `msExchRecipientTypeDetails` attribute against the affected distribution groups, and set the value as **268435456** by using the Active Directory PowerShell Module. To do this, follow these steps:
+4. If you do not have an on-premises Exchange Server deployment, change the `msExchRecipientTypeDetails` attribute against the affected distribution groups, and set the value as **268435456** by using the Active Directory PowerShell Module. To do this, follow these steps:
 
     1. Start PowerShell as an administrator on any domain controller or any server that has a remote server administrator pack installed, and then run the following cmdlet to verify that the module exists on the server:
 
@@ -59,7 +59,7 @@ To resolve this issue, follow these steps:
         Import-Module activedirectory
         ```
 
-    3. Run the following cmdlet to check the current value of the `msExchRecipientTypeDetails` attribute. If no result is retuned, the attribute has no set value.
+    3. Run the following cmdlet to check the current value of the `msExchRecipientTypeDetails` attribute. If no result is retuned, the attribute has no set value.
 
         ```powershell
         Get-ADObject -Filter {Name -eq "Name of the Distribution group"} -Properties * | Out-String -Stream | Select-String msExchRecipientTypeDetails

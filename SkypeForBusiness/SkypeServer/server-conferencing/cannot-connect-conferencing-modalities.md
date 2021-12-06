@@ -81,7 +81,7 @@ Fixes are now available for the following MSI-based clients.
 Fixed in [Windows 10 Team Anniversary Update 1607](https://www.microsoft.com/surface/support/surface-hub/surface-hub-update-history)
 
 > [!NOTE]
-> After further investigation, it has been determined Lync for Mac 2011 is not affected by this issue.
+> After further investigation, it has been determined Lync for Mac 2011 is not affected by this issue.
 
 #### Click-to-Run installations
 
@@ -238,7 +238,7 @@ Use the following examples to set the exceptions in your environment.
 
 **Notes**
 
-- Lync Web App may not function correctly in a Lync Server 2010 environment. To reduce Lync Web App problems in Lync Server 2010, you must add an exception for the Lync Web App component (w3wp.exe).   
+- Lync Web App may not function correctly in a Lync Server 2010 environment. To reduce Lync Web App problems in Lync Server 2010, you must add an exception for the Lync Web App component (w3wp.exe).   
 - For Lync Server 2010, Lync Web App still requires exceptions for the MeetingMCUSvc.exe and w3wp.exe service processes.   
 
 

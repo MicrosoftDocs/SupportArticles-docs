@@ -27,4 +27,4 @@ In Microsoft Excel 2019, when you try to insert a file that's located on a OneDr
 
 ## Workaround
 
-Use the **Change Icon** button to manually assign an icon to the inserted object.
+Use the **Change Icon** button to manually assign an icon to the inserted object.

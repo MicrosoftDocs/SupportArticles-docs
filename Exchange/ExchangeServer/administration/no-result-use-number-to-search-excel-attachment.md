@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 3166063
 
 ## Problem
 
-When you use a number as a keyword to search for a Microsoft Excel attachment in an Exchange Server 2016 account, no result is displayed in Outlook or Outlook on the web.
+When you use a number as a keyword to search for a Microsoft Excel attachment in an Exchange Server 2016 account, no result is displayed in Outlook or Outlook on the web.
 
 ## Cause
 

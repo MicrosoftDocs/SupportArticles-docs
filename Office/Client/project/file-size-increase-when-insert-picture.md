@@ -36,7 +36,7 @@ The RichEdit control (Riched20.dll) causes this problem. This problem may occur 
 
 To work around this behavior, insert the picture directly into your Microsoft Project task, into your Microsoft Project task resource, or into your Microsoft Project task assignment note. 
 
-If you are using Project 98 through Project 2007, use the following steps:
+If you are using Project 98 through Project 2007, use the following steps:
 
 1. In a Microsoft Project task, in a Microsoft Project resource, or in a Microsoft Project assignment note, click **Object** on the **Insert** menu.   
 2. In the **Insert Object** dialog box, click **Create from File**.   

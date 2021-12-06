@@ -22,11 +22,11 @@ appliesto:
 
 ##  Symptoms
 
-You try to insert or delete rows in a Microsoft Excel 2013 worksheet. You do this after you sort a range that contains defined names that refer to whole columns. In this scenario, it takes a very long time to insert or delete rows. 
+You try to insert or delete rows in a Microsoft Excel 2013 worksheet. You do this after you sort a range that contains defined names that refer to whole columns. In this scenario, it takes a very long time to insert or delete rows. 
 
 ##  Cause
 
-This issue occurs because of the defined names. There are over one million rows per column in Excel 2013. If you refer to the whole column, all rows of the column are loaded into memory when you perform an operation on the column. Therefore, you encounter a performance issue when you insert or delete rows after sorting. 
+This issue occurs because of the defined names. There are over one million rows per column in Excel 2013. If you refer to the whole column, all rows of the column are loaded into memory when you perform an operation on the column. Therefore, you encounter a performance issue when you insert or delete rows after sorting. 
 
 ##  Workaround
 

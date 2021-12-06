@@ -48,8 +48,8 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 Click the following article number to go to the article in the Microsoft Knowledge Base article: 
 
-[A user or an administrator forgot his or her password in Office 365, Azure, or Intune ](https://support.microsoft.com/help/2606983)
- 
+[A user or an administrator forgot his or her password in Office 365, Azure, or Intune ](https://support.microsoft.com/help/2606983)
+ 
 ### Scenario: Your organization is using password synchronization together with the Azure Active Directory Sync tool
 
 Do one of the following:

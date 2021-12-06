@@ -24,7 +24,7 @@ The Lync Server 2013 LyncUcwa application pool manages resources for Lync Server
 Some third-party vendor software may trigger recycling of all the IIS application pools. The LyncUcwa application pool is not reinitialized correctly following an application pool recycle. You can diagnose and fix this problem by using the methods in the "More Information" section. We also recommend that you work with your third-party software vendors to prevent frequent recycling of IIS application pools. 
 
 > [!NOTE]
-> Antivirus software may also trigger this kind of event.
+> Antivirus software may also trigger this kind of event.
 
 ## More Information
 
@@ -170,10 +170,10 @@ Event Xml:
  at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)
 </Data>
  </EventData>
-</Event>Note The Application event information that's displayed in bold in the preceding text will be included in instances of event ID 1309 when the issue that's described in the "Summary" section occurs.
+</Event>Note The Application event information that's displayed in bold in the preceding text will be included in instances of event ID 1309 when the issue that's described in the "Summary" section occurs.
 ```
 
-This issue is triggered by the default configuration of the LyncUcwa application pool's disallowOverlappingRotation and shutdownTimeLimit properties. These properties function correctly during the LyncUcwa application pool's default operation. To provide more efficient performance by the LyncUcwa application pool during periods of non-default operation, use the method that's described in the "Workaround" section.
+This issue is triggered by the default configuration of the LyncUcwa application pool's disallowOverlappingRotation and shutdownTimeLimit properties. These properties function correctly during the LyncUcwa application pool's default operation. To provide more efficient performance by the LyncUcwa application pool during periods of non-default operation, use the method that's described in the "Workaround" section.
 
 > [!NOTE]
 > The LyncUcwa application pool's configuration updates that are described in the "Workaround" section will be added to a future version of the Lync Server 2013 UCWA mobility web services role.

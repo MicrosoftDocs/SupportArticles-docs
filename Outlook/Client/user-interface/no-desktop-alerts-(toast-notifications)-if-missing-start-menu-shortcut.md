@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 3014833
 
 ## Symptoms
 
-If you have Microsoft Outlook 2013, Outlook 2016, Outlook 2019, or Outlook for Office 365 running on Windows Server 2012 or Windows 8, you no longer receive new email desktop alerts (toast notifications). Additionally, Outlook is no longer listed under **Search and Apps Notifications**.
+If you have Microsoft Outlook 2013, Outlook 2016, Outlook 2019, or Outlook for Office 365 running on Windows Server 2012 or Windows 8, you no longer receive new email desktop alerts (toast notifications). Additionally, Outlook is no longer listed under **Search and Apps Notifications**.
 
 ## Cause
 
@@ -72,13 +72,13 @@ If the **Remove common program groups from Start Menu** setting is not enabled, 
 > [!NOTE]
 > To complete the repair process, you will have to restart Outlook, and you may also have to restart Windows.
 
-To determine what type of Office installation you have, start Outlook, and then on the **File** menu, select **Office Account**. Compare the image that this generates to the following screenshots to determine the installation type of your Office suite. Notice that the MSI installation type doesn't have the **Update Options** button, whereas the Click-To-Run installation type does have the **Update Options** button.
+To determine what type of Office installation you have, start Outlook, and then on the **File** menu, select **Office Account**. Compare the image that this generates to the following screenshots to determine the installation type of your Office suite. Notice that the MSI installation type doesn't have the **Update Options** button, whereas the Click-To-Run installation type does have the **Update Options** button.
 
 The MSI installer displays the following:
 
 :::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/msi-install-info.png" alt-text="Screenshot of the Information window for MSI install.":::
 
-The Click-To-Run installer displays the following (notice the **Update Options** button):
+The Click-To-Run installer displays the following (notice the **Update Options** button):
 
 :::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/click-to-run-install-info.png" alt-text="Screenshot of Information window for Click-to-Run install.":::
 

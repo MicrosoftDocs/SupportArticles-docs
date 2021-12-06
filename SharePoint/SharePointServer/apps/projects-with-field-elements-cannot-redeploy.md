@@ -45,7 +45,7 @@ The root cause of this issue is that Field elements are not properly retracted a
 If closing VS after retraction doesn't solve the problem, then a larger workaround is:
 
 - Redeploy the project. This will show an error during feature activation.
-- Go to SharePoint UI and Activate and then Deactivate the deployed feature that was showing activation error in VS.
+- Go to SharePoint UI and Activate and then Deactivate the deployed feature that was showing activation error in VS.
 - Retract the Solution/WSP in VS.
 - Close VS.
 - Reopen VS and deploy the Project.

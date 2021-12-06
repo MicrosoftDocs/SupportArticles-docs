@@ -23,7 +23,7 @@ When you click **Sync Now** in Microsoft SharePoint or OneDrive for Business, th
 
 > We can't connect to the specified SharePoint site
 
-![error message dialog box](./media/onedrive-for-business-sync-returns-error/error-message-dialog-box.png)
+:::image type="content" source="media/onedrive-for-business-sync-returns-error/error-message-dialog-box.png" alt-text="Screenshot of the OneDrive for Business sync error message dialog box." border="false":::
 
 ## Cause
 
@@ -64,7 +64,7 @@ To resolve this issue, follow these steps:
    `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Common\SignIn`
 
 4. Double-click the **SignInOptions** value.
-5. In the **Value Data** box, type **0**, and then click OK.
+5. In the **Value Data** box, type **0**, and then click OK.
 6. Exit Registry Editor.
 
 > [!NOTE]

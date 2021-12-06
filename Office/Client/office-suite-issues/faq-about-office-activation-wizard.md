@@ -40,7 +40,7 @@ A2: Product activation is required for all licenses that are purchased through r
 
 Q3: How does product activation work?
 
-A3: Product activation checks that the product key hasn't been used on more personal computers than are permitted by the Microsoft Software License Terms. You can activate your product either over the Internet or by telephone. If you activate a product by telephone, you provide an installation ID code. In return, you receive a confirmation ID number. A Microsoft customer service representative activates the product by telephone. This process takes several minutes. If you want to activate your product over the Internet, the process is performed automatically. The only information that you must provide is the name of your country and your region.
+A3: Product activation checks that the product key hasn't been used on more personal computers than are permitted by the Microsoft Software License Terms. You can activate your product either over the Internet or by telephone. If you activate a product by telephone, you provide an installation ID code. In return, you receive a confirmation ID number. A Microsoft customer service representative activates the product by telephone. This process takes several minutes. If you want to activate your product over the Internet, the process is performed automatically. The only information that you must provide is the name of your country and your region.
 
 > [!NOTE]
 > If you are activating the Product Trial Program version, you can activate the product only over the Internet.
@@ -50,7 +50,7 @@ Q4: How do I activate my product?
 A4: You can access the Office 2010 Activation Wizard in two ways:
 
 - The Office 2010 Activation Wizard appears when you start an Office program that hasn't been activated.
-- On the **File** menu, click Help, and look for the section under the Microsoft Office logo. If "Product is not activated" text appears, click **Change**.
+- On the **File** menu, click Help, and look for the section under the Microsoft Office logo. If "Product is not activated" text appears, click **Change**.
 
 You can access the 2007 Office system Activation Wizard in two ways:
 
@@ -104,7 +104,7 @@ In Access 2007, Excel 2007, PowerPoint 2007, and Word 2007
 All other 2007 Office system programs
 
 1. Start the 2007 Office system program.
-2. On the **Tools** menu, click **Trust Center**.
+2. On the **Tools** menu, click **Trust Center**.
 
    :::image type="content" source="media/faq-about-office-activation-wizard/tool-trusted-center.png" alt-text="Screenshot to select Trust Center on the Tools menu." border="false":::
 3. Click **Privacy Options** in the navigation pane, and then click **Read our privacy statement**.
@@ -113,11 +113,11 @@ All other 2007 Office system programs
 
 Q7: Is product activation the same as registration?
 
-A7: No. Product activation differs from product registration. You can voluntarily register your product by providing your name and contact information during product activation. Register the product if you want to receive future communications about product updates, service releases, and special offers.
+A7: No. Product activation differs from product registration. You can voluntarily register your product by providing your name and contact information during product activation. Register the product if you want to receive future communications about product updates, service releases, and special offers.
 
 Q8: How do I know whether my product is activated?
 
-A8: The Office Activation Wizard doesn't run if you already activated your product. If the product was already activated, you receive the following message when you run the Office Activation Wizard: The product has already been activated.
+A8: The Office Activation Wizard doesn't run if you already activated your product. If the product was already activated, you receive the following message when you run the Office Activation Wizard: The product has already been activated.
 
 In Office 2010, you can check the activation status by clicking Help on the File menu. On the right side of the dialog box, under the Microsoft Office logo, you see a message that says "Product activated" or "Product requires activation."
 
@@ -171,23 +171,23 @@ A13: Yes, the following license types are available:
 
 Q14: What's a perpetual license?
 
-A14: A perpetual license lets you use the 2007 Office system programs and the Office 2010 programs as long as you own the product.
+A14: A perpetual license lets you use the 2007 Office system programs and the Office 2010 programs as long as you own the product.
 
 Q15: What is a subscription license?
 
-A15: A subscription license lets you use the 2007 Office system programs and Office 2010 programs for a determined time.
+A15: A subscription license lets you use the 2007 Office system programs and Office 2010 programs for a determined time.
 
 Q16: What is a Product Trial Program license?
 
-A16: A Product Trial Program license lets you use the 2007 Office system and Office 2010 on a trial basis for one month.
+A16: A Product Trial Program license lets you use the 2007 Office system and Office 2010 on a trial basis for one month.
 
 Q17: How many times can I skip activation?
 
-A17: For Product Trial Program license products, the Office programs run in reduced-functionality mode the first time that the programs start. For perpetual license products, you can skip product activation 25 times. If you don't activate the product in the allocated number of program starts, the 2007 Office system programs and the Office 2010 programs start to run in reduced-functionality mode.
+A17: For Product Trial Program license products, the Office programs run in reduced-functionality mode the first time that the programs start. For perpetual license products, you can skip product activation 25 times. If you don't activate the product in the allocated number of program starts, the 2007 Office system programs and the Office 2010 programs start to run in reduced-functionality mode.
 
 Q18: How many installations can be performed with one license agreement? Can I install the product on my portable computer and on my desktop computer? How many times can I reinstall the product and still be able to activate it?
 
-A18: The goal of product activation is to reduce a form of piracy known as "casual copying" or "soft lifting." Casual copying is a form of piracy that is characterized by the sharing of software between people in a way that infringes on the Microsoft Software License Terms. For example, Windows XP is primarily licensed for use on a single computer and cannot be installed on other computers without buying additional licenses. If someone were to obtain a copy of Windows XP and load it on his or her computer, and then share it with a second person who loaded it on his or her computer, they would be guilty of casual copying.
+A18: The goal of product activation is to reduce a form of piracy known as "casual copying" or "soft lifting." Casual copying is a form of piracy that is characterized by the sharing of software between people in a way that infringes on the Microsoft Software License Terms. For example, Windows XP is primarily licensed for use on a single computer and cannot be installed on other computers without buying additional licenses. If someone were to obtain a copy of Windows XP and load it on his or her computer, and then share it with a second person who loaded it on his or her computer, they would be guilty of casual copying.
 
 Most licenses allow for software to be re-installed and activated on the same computer an unlimited number of times. To make sure that you're using your license correctly, please see your Microsoft Software License Terms or product use rights for more information on a specific product.
 

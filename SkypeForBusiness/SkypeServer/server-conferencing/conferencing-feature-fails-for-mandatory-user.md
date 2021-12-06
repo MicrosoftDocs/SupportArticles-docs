@@ -27,37 +27,37 @@ This issue will occur in the following two scenarios:
 
 This issue can occur using Microsoft Lync 2013 or Microsoft Lync 2010.
 
-1. The Lync client Meet Now feature will open:
+1. The Lync client Meet Now feature will open:
 
     The Lync 2013 Group Conversation window with the following error notification:
 
-    **An error occurred during the Lync meeting**
+    **An error occurred during the Lync meeting**
 
     The Lync 2010 Group Conversation window with the following error notification:
 
-    **An error occurred during the online meeting**
+    **An error occurred during the online meeting**
 
-2. Click on the notification listed above and the following error information will be displayed in a Microsoft Lync dialog:
+2. Click on the notification listed above and the following error information will be displayed in a Microsoft Lync dialog:
 
     **When contacting your support team, reference error ID 16389 (source ID 0)**
 
 ### Scenario 2
 
-This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010or Microsoft Outlook 2007:
+This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010or Microsoft Outlook 2007:
 
 #### Microsoft Outlook 2013 or Microsoft Outlook 2010
 
-1. Open Microsoft Outlook on the Windows client-based computer.
-2. Choose Calendar from the Outlook Navigation menu.
+1. Open Microsoft Outlook on the Windows client-based computer.
+2. Choose Calendar from the Outlook Navigation menu.
 3. On the Outlook Calendar toolbar click on the New Lync Meeting or Lync Online Meeting button.
 
     The following error information will be displayed in a Microsoft Lync 2013 dialog:
 
-    **Create Lync meeting failed. Make sure that Lync is running and signed-in and try again**
+    **Create Lync meeting failed. Make sure that Lync is running and signed-in and try again**
 
     The following error information will be displayed in a Microsoft Lync 2010 dialog:
 
-    **Create online meeting failed. Make sure that Lync is running and signed-in and try again**
+    **Create online meeting failed. Make sure that Lync is running and signed-in and try again**
 
 #### Microsoft Outlook 2007
 
@@ -66,7 +66,7 @@ This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010o
 
     The following error information will be displayed in a Microsoft Lync 2013 Dialog:
 
-    **Create Lync meeting failed. Make sure that Lync is running and signed-in and try again**
+    **Create Lync meeting failed. Make sure that Lync is running and signed-in and try again**
 
     The following error information will be displayed in a Microsoft Lync 2010 Dialog:
 
@@ -74,11 +74,11 @@ This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010o
 
 ## Cause
 
-This issue occurs when users sign into the Lync client using a Windows Active Directory Domain Services mandatory profile. Mandatory profiles are read-only user profiles. Since changes to the mandatory profile cannot be saved, the design of the Public Key Infrastructure (PKI) functionality does not allow this operation. This causes the creation of the secure keys that are needed for the creation of the focus for the Lync conference to fail.
+This issue occurs when users sign into the Lync client using a Windows Active Directory Domain Services mandatory profile. Mandatory profiles are read-only user profiles. Since changes to the mandatory profile cannot be saved, the design of the Public Key Infrastructure (PKI) functionality does not allow this operation. This causes the creation of the secure keys that are needed for the creation of the focus for the Lync conference to fail.
 
 ## Resolution
 
-Do not sign into the Lync client using a Windows Active Directory Domain Services mandatory profile when planning to use the conferencing features of the Lync client.
+Do not sign into the Lync client using a Windows Active Directory Domain Services mandatory profile when planning to use the conferencing features of the Lync client.
 
 ## More Information
 

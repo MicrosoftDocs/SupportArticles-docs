@@ -54,7 +54,7 @@ To resolve this issue, do one or more of the following, as appropriate for your 
 
 ### Scenario 3: Local intranet zone settings aren't set up correctly in Internet Explorer
 
-Make sure that `https://*.outlook.com` is added to the Local intranet zone in Internet Explorer. To do this, follow these steps:
+Make sure that `https://*.outlook.com` is added to the Local intranet zone in Internet Explorer. To do this, follow these steps:
 
 1. In Internet Explorer, click **Internet Options** on the **Tool** menu.
 2. On the **Security** tab, select **Local intranet**.

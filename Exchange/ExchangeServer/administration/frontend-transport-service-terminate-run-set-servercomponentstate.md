@@ -44,7 +44,7 @@ Description:
 The Microsoft Exchange Frontend Transport service terminated unexpectedly. It has done this 1 time(s). The following corrective action will be taken in 5000 milliseconds: Restart the service.
 ```
 
-## Set-ServerComponentState examples that end the Frontend Transport service
+## Set-ServerComponentState examples that end the Frontend Transport service
 
 - `Set-ServerComponentState -Identity <ServerName> -Component ServerWideOffline -State Inactive -Requester Maintenance`
 

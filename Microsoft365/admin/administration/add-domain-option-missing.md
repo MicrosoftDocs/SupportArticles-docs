@@ -23,7 +23,7 @@ appliesto:
 
 The **Add domain** option is missing from the "Manage domains" page of the Microsoft 365 admin center. Therefore, you cannot add a domain to Office 365.
 
-Additionally, if you click **Billing** and then click **Licenses**, the following message is displayed on the licenses page:
+Additionally, if you click **Billing** and then click **Licenses**, the following message is displayed on the licenses page:
 
 **You currently have no licenses. You can purchase a subscription or contact Support to review existing subscriptions.**
 

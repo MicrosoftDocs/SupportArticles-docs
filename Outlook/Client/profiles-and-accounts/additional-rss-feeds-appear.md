@@ -38,19 +38,19 @@ To resolve this issue, follow these steps:
 ## In Outlook 2010
 
 1. Prevent Outlook from synchronizing the RSS feeds with the common feeds list. To do this, follow these steps: 
-   1. In Microsoft Outlook 2010, click **Options** on the **File** tab.   
-   2. Click **Advanced**, and then under **RSS Feeds**, click to clear the **Synchronize RSS Feeds to the Common Feed List (CFL) in Windows** check box.   
+   1. In Microsoft Outlook 2010, click **Options** on the **File** tab.   
+   2. Click **Advanced**, and then under **RSS Feeds**, click to clear the **Synchronize RSS Feeds to the Common Feed List (CFL) in Windows** check box.   
    3. Click **OK**.   
    
 2. Delete the RSS feeds that you don't need or the RSS feeds that you don't own from your account. To do this, follow these steps: 
-   1. In Outlook 2010, on the **File** tab, click **Account Settings**, and then click **Account Settings**.   
-   2. Click the **RSS Feeds** tab.   
-   3. Under **Feed Name**, click the RSS feed you want to delete, click **Remove**, and then when you're prompted, confirm the deletion.
+   1. In Outlook 2010, on the **File** tab, click **Account Settings**, and then click **Account Settings**.   
+   2. Click the **RSS Feeds** tab.   
+   3. Under **Feed Name**, click the RSS feed you want to delete, click **Remove**, and then when you're prompted, confirm the deletion.
 
         > [!NOTE]
         > To cancel multiple RSS feeds, hold down the CTRL key while you click the multiple RSS feed names.   
    4. In your mailbox, expand the RSS Feeds folder.   
-   5. Click the RSS feed that you want to delete, click **Delete**, and then when you're prompted, confirm the deletion.   
+   5. Click the RSS feed that you want to delete, click **Delete**, and then when you're prompted, confirm the deletion.   
    6. Repeat steps 2e for all the feeds.   
    
 ## In Outlook 2007
@@ -64,7 +64,7 @@ To resolve this issue, follow these steps:
 2. Delete the RSS feeds that you don't need or the RSS feeds that you don't own from your account. To do this, follow these steps:
    1. In Outlook 2007, click **Options** on the **Tools** menu.   
    2. Click the **Mail Setup** tab, click **Data Files**, and then click the **RSS Feeds** tab.   
-   3. Under **Feed Name**, click the RSS feed you want to delete, click **Remove**, and then when you're prompted, confirm the deletion.
+   3. Under **Feed Name**, click the RSS feed you want to delete, click **Remove**, and then when you're prompted, confirm the deletion.
 
         > [!NOTE]
         > To cancel multiple RSS feeds, hold down the CTRL key while you click the multiple RSS feed names.   

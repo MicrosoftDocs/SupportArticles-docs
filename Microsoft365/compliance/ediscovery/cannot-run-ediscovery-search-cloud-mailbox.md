@@ -4,13 +4,13 @@ description: When run In-Place eDiscovery search for Exchange Online mailbox in 
 author: MaryQiu1987
 ms.author: akashb
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro 
 ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom:
-- CI 111898
-- CSSTroubleshoot 
+- CI 111898
+- CSSTroubleshoot 
 ms.reviewer: lindabr, akashb
 appliesto:
 - Exchange Online

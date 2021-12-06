@@ -274,7 +274,7 @@ We now have the data collected and we are ready to begin troubleshooting. The fi
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [here](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **SendMail** under **Search raw log data for strings** and select **Search**.
@@ -981,7 +981,7 @@ ActiveSync device requests do not always reach the destination as desired. To en
 
 We need to determine the ConversationID for the item before we search the mailbox log. To do this, follow these steps:
 
-1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi).
+1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi/releases/).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.
@@ -1014,7 +1014,7 @@ To do this, follow these steps:
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found here.
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 
@@ -1416,7 +1416,7 @@ Review the mailbox log to determine that attachment the user is attempting to op
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found in [Exchange ActiveSync Mailbox Logging](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 
@@ -1435,7 +1435,7 @@ Review the mailbox log to determine that attachment the user is attempting to op
 
 We need to determine if the attachment exists within the message. To do this, follow these steps:
 
-1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi).
+1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi/releases/).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.
@@ -1566,7 +1566,7 @@ The request from the ActiveSync client to send this message is not successful. W
     > [!NOTE]
     > This sends the ActiveSync mailbox log to the specified email address. Additional information on mailbox logging can be found in [Exchange ActiveSync Mailbox Logging](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://mailboxlogparser.codeplex.com/) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **SendMail** under **Search raw log data for strings** and select **Search**.
@@ -1738,7 +1738,7 @@ ActiveSync device requests do not always reach the destination as desired. To en
 
 We need to determine the UID for the appointment within the mailbox before we search the mailbox log. To do this, follow these steps:
 
-1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi).
+1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi/releases/).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.
@@ -1769,7 +1769,7 @@ We now have the data collected and we are ready to begin troubleshooting. The fi
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [Exchange ActiveSync Mailbox Logging](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter the UID value you copied earlier under **Search raw log data for strings** and select **Search**.
@@ -2361,7 +2361,7 @@ To resolve this issue, review the mailbox log after attempting another Sync requ
     > [!NOTE]
     > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [here](https://blogs.technet.com/b/jasonsla/archive/2013/03/19/exchange-activesync-mailbox-logging.aspx).
 
-3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
+3. Download [MailboxLogParser](https://github.com/search?q=MailboxLogParser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **Cmd=Sync** under **Search raw log data for strings** and select **Search**.

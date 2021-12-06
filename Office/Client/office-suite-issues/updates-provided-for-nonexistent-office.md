@@ -87,4 +87,4 @@ Install the recommended update even if the feature is not being used.
 To prevent the update from installing on your computer, click to clear the check box for the update on the Microsoft Update or Windows Update detection results list. Only install the updates that you want. The next time that you visit Microsoft Update or Windows Update, the update that you chose not to install will be recommended again.
 
 > [!NOTE]
-> If you apply a security update for a component that is not installed but that is included with your version of the Microsoft Office suite or another Microsoft Office product, there is no adverse effect on the security or performance of the system.
+> If you apply a security update for a component that is not installed but that is included with your version of the Microsoft Office suite or another Microsoft Office product, there is no adverse effect on the security or performance of the system.

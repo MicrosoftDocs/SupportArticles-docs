@@ -56,9 +56,9 @@ To resolve this issue, have the user whom you're calling join the Skype for Busi
 
 ## More Information
 
-The dial-out functionality is supported only for countries where PSTN Conferencing from Microsoft is sold. If you are dialing out to a telephone number that's not on this list, the call won't be successful.
+The dial-out functionality is supported only for countries where PSTN Conferencing from Microsoft is sold. If you are dialing out to a telephone number that's not on this list, the call won't be successful.
 
-For more information about where you can obtain PSTN conferencing, see the following Microsoft website:
+For more information about where you can obtain PSTN conferencing, see the following Microsoft website:
 
 [Country and region availability for Audio Conferencing and Calling Plans](https://support.office.com/article/where-can-you-get-pstn-conferencing-1096d81e-7e14-488c-95d8-b8322e39c059)
 

@@ -23,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-Part of the Project Security model includes checking user permissions to access the Project Web App (PWA) home page and the Project sites (workspaces) associated with project plans.  Whenever a category, group or individual user is modified, Project Server will validate a user's access.  Depending on the number of users and the number of project sites within your PWA instance, the jobs that check user permissions may take a very long time to complete or fail to complete.  Additionally users may see "Access Denied" errors when attempting to access PWA or Project site/workspace. 
+Part of the Project Security model includes checking user permissions to access the Project Web App (PWA) home page and the Project sites (workspaces) associated with project plans.  Whenever a category, group or individual user is modified, Project Server will validate a user's access.  Depending on the number of users and the number of project sites within your PWA instance, the jobs that check user permissions may take a very long time to complete or fail to complete.  Additionally users may see "Access Denied" errors when attempting to access PWA or Project site/workspace. 
 
 ## Cause
 
@@ -41,13 +41,13 @@ There are also network and hardware considerations that also contribute to the t
 
 ## Resolution
 
-- If the queue jobs are processing, then wait and let them complete.  Once the jobs complete all users will again have access to PWA and project sites/workspaces.  
+- If the queue jobs are processing, then wait and let them complete.  Once the jobs complete all users will again have access to PWA and project sites/workspaces.  
 
-- If the queue job has failed, the PWA Admin should review the error message in the queue to gather more information as to the nature of the failure.  The Farm Admin can also collect the ULS logs to gather additional information on the error.  Open a support incident if needed.
+- If the queue job has failed, the PWA Admin should review the error message in the queue to gather more information as to the nature of the failure.  The Farm Admin can also collect the ULS logs to gather additional information on the error.  Open a support incident if needed.
 
-- If there are a large number of users/projects in the PWA instance, there are a number of best practices that can mitigate the performance issues.  In the More Information section are links to a number of detailed articles.  The main point of the articles say to plan/limit the number of users that need access to PWA and Project Sites/workspaces and design security groups and categories to mitigate performance issues. 
+- If there are a large number of users/projects in the PWA instance, there are a number of best practices that can mitigate the performance issues.  In the More Information section are links to a number of detailed articles.  The main point of the articles say to plan/limit the number of users that need access to PWA and Project Sites/workspaces and design security groups and categories to mitigate performance issues. 
 
-   Such as, use the Project Server security to control the number of projects/site a user has access to by setting up Resource Breakdown Structure for users in conjunction with the security category filters to limit which projects users can see. Controlling the number of projects a user can see determines which workspaces the user can access. By using the Project Server security model, users are added to SharePoint groups instead of added individually, to mitigate the chance of hitting the SharePoint limit of 5000 security objects per web application.  This method works well for Project server 2013, 2010 and 2007.
+   Such as, use the Project Server security to control the number of projects/site a user has access to by setting up Resource Breakdown Structure for users in conjunction with the security category filters to limit which projects users can see. Controlling the number of projects a user can see determines which workspaces the user can access. By using the Project Server security model, users are added to SharePoint groups instead of added individually, to mitigate the chance of hitting the SharePoint limit of 5000 security objects per web application.  This method works well for Project server 2013, 2010 and 2007.
 
    Use SharePoint Security mode in Project Server 2013 which does not synchronize users to Project Sites but instead the Project Manager manually shares sites with users.
 
@@ -62,7 +62,7 @@ In the section "Workspace Permissions", clear the box to Check to automatically 
 
 For Project Server 2010:
 
-Go to Server Settings, click Project Site Provisioning Settings.
+Go to Server Settings, click Project Site Provisioning Settings.
 In the section "Project Site Permissions", clear the box to Check to automatically synchronize PWA users...
 
 For Project Server 2013 in Project Server security mode:

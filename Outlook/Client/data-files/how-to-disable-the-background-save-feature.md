@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 319158
 
 ## Summary
 
-When you create an email message that has one or more attachments in Microsoft Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2010, or Outlook for Office 365, the attachments are streamed to Microsoft Exchange Server in the background. This background save feature minimizes the time that you have to wait before you can send the message.
+When you create an email message that has one or more attachments in Microsoft Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2010, or Outlook for Office 365, the attachments are streamed to Microsoft Exchange Server in the background. This background save feature minimizes the time that you have to wait before you can send the message.
 
 In an environment that has a low bandwidth, you can disable the background save feature in these Outlook versions by setting the `DisableBGSave` registry key as follows.
 
@@ -50,5 +50,5 @@ In an environment that has a low bandwidth, you can disable the background save 
 4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 5. Type **DisableBGSave**, and then press Enter.
 6. In the **Details** pane, right-click **DisableBGSave**, and then select **Modify**.
-7. Select **Hexadecimal** for the base, type *1* in the **Value data** box, and then select **OK**.
+7. Select **Hexadecimal** for the base, type *1* in the **Value data** box, and then select **OK**.
 8. Exit Registry Editor.

@@ -23,11 +23,11 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-You start up the Office on a new device and you get a message that "Office isn't entitled on this device" along with the option to try Office, enter a product key or purchase Office. 
+You start up the Office on a new device and you get a message that "Office isn't entitled on this device" along with the option to try Office, enter a product key or purchase Office. 
 
 ## Cause
 
-This may or may not be an error depending on whether Office was entitled to come on the device. PC manufacturers have the option to check for an entitlement for devices that come with Office and for ones that don't, but might have it added later. The message will inform you that your device has been checked and there's no record of Office coming with the device.  
+This may or may not be an error depending on whether Office was entitled to come on the device. PC manufacturers have the option to check for an entitlement for devices that come with Office and for ones that don't, but might have it added later. The message will inform you that your device has been checked and there's no record of Office coming with the device.  
 
 ## Resolution
 

@@ -31,19 +31,19 @@ appliesto:
 
 When you try to preview a document in the Preview pane, you receive an error message that resembles the following:
 
-"This file can't be previewed because of an error in Microsoft **Word** previewer."
+"This file can't be previewed because of an error in Microsoft **Word** previewer."
 
 To work around this issue, preview the document in Windows Explorer or in a different Microsoft Office program. For example, preview a Microsoft Word document in Microsoft Excel or Microsoft PowerPoint. 
 
-For more information about this issue, consider the following scenario: 
+For more information about this issue, consider the following scenario: 
 
-- You start one of the programs that are listed in the "Applies To Products" section.    
+- You start one of the programs that are listed in the "Applies To Products" section.    
 - You click the **Microsoft Office Button** or the File tab, and then you then click Open.    
 - In the Open dialog box, you click Show the preview pane.    
 - You select a document to preview.    
 
 In this scenario, a preview of the document is not displayed. Additionally, you receive an error message in the **Preview** pane that resembles the following:
 
-"This file can't be previewed because of an error in the Microsoft **Word** previewer."
+"This file can't be previewed because of an error in the Microsoft **Word** previewer."
 
 This issue occurs because you must open another instance of the program to preview the document.

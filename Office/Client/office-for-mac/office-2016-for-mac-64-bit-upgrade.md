@@ -32,7 +32,7 @@ Existing Office 2016 for Mac customers will be seamlessly upgraded to 64-bit ver
 ### AutoUpdate (MAU)
 Customers who use Microsoft AutoUpdate (MAU) to keep their Office applications up-to-date will see a "regular" monthly update notification when their selected channel is upgraded to 64-bit builds. Depending on which version is installed on the local computer, MAU will offer either a delta or full update. The update package size does not change between 32-bit and 64-bit versions. Also, MAU can deliver a delta update when applicable to update a user from 32-bit to 64-bit applications. Therefore, customers won't experience a sharp increase in download activity. For the release to the Production channel, customers will see "(64-bit)" in the update title to make them aware that this is a 64-bit update.
 
-For information about how to use the MAU, see [Check for Office for Mac updates automatically](https://support.office.com/article/check-for-office-for-mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1?ui=en-us&rs=en-us&ad=us).
+For information about how to use the MAU, see [Check for Office for Mac updates automatically](https://support.office.com/article/check-for-office-for-mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1?ui=en-us&rs=en-us&ad=us).
 
 :::image type="content" source="media/office-2016-for-mac-64-bit-upgrade/check-update.png" alt-text="Screenshot to use Microsoft AutoUpdate to keep the Office applications up-to-date.":::
 

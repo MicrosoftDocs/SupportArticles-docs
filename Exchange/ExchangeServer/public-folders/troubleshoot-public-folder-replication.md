@@ -119,8 +119,10 @@ To turn on Message Tracking on all servers, you'll be working with. The steps fo
 
 2. You should see output similar to this:
 
-   :::image type="content" source="media/troubleshoot-public-folder-replication/verify-message-tracking-is-on.jpg" alt-text="run cmdlet to verify message tracking is on" border="false":::
+   :::image type="content" source="media/troubleshoot-public-folder-replication/verify-message-tracking-is-on.png" alt-text="Screenshot of running cmdlet to verify message tracking is on.":::
+
 3. Make sure both `MessageTrackingLogEnabled` and `MessageTrackingLogSubjectLoggingEnabled` are set to **True**.
+
 4. Make sure you note the `MessageTrackingLogPath` for the Log Location.
 
 #### For Exchange Server 2003
@@ -171,7 +173,7 @@ Verify that the Replicate Always Interval value is set to 15 or fewer minutes on
     Get-PublicFolderDatabase -Server $env:computername| fl Replication*
     ```
 
-    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolderdatabase.jpg" alt-text="Run Get-PublicFolderDatabase to verify parameters are set" border="false":::
+    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolderdatabase.png" alt-text="Screenshot of running Get-PublicFolderDatabase to verify parameters are set.":::
 
 3. Make sure all public f databases have the same `ReplicationMessageSize`.
 
@@ -184,7 +186,7 @@ Next, verify that the folder in question is configured to use the store schedule
     Get-PublicFolder | fl *Replica*
     ```
 
-    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolder.jpg" alt-text="Run Get-PublicFolder to verify parameters are set" border="false":::
+    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolder.png" alt-text="Screenshot of running Get-PublicFolder to verify parameters are set.":::
 
 3. If `UseDatabaseReplicationSchedule` is set to **False**, make sure `ReplicationSchedule` is set.
 
@@ -255,7 +257,7 @@ Does Event ID 3079 contain EcReplStartup?
 
 ### Application log Event ID 9528
 
-If Event ID 3079 contains EcReplStartup, this indicates that the replication thread is dying at startup. Then, check if Event ID 9528 is recorded in the Application log of the source server.
+If Event ID 3079 contains EcReplStartup, this indicates that the replication thread is dying at startup. Then, check if Event ID 9528 is recorded in the Application log of the source server.
 
 |Event Type|Information|
 |---|---|
@@ -625,7 +627,7 @@ Verify that the Replicate Always Interval value is set to 15 minutes or fewer on
     Get-PublicFolderDatabase -Server $env:computername| fl Replication*
     ```
 
-    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolderdatabase.jpg" alt-text="use Get-PublicFolderDatabase to verify parameters are set" border="false":::
+    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolderdatabase.png" alt-text="Screenshot of using Get-PublicFolderDatabase to verify parameters are set.":::
 
 3. Make sure all public folder databases have the same `ReplicationMessageSize`.
 
@@ -638,7 +640,7 @@ Next, verify that the folder in question is configured to use the store schedule
     Get-PublicFolder | fl *Replica*
     ```
 
-    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolder.jpg" alt-text="use Get-PublicFolder to verify parameters are set" border="false":::
+    :::image type="content" source="media/troubleshoot-public-folder-replication/get-publicfolder.png" alt-text="Screenshot of using Get-PublicFolder to verify parameters are set.":::
 
 3. If `UseDatabaseReplicationSchedule` is set to **False**, make sure that `ReplicationSchedule` is set.
 
@@ -1277,7 +1279,7 @@ For more information, see [Fixing Public Folder Replication Errors From Exchange
 
 ### Remove duplicate accounts
 
-Remove the duplicate accounts mentioned in the event, or delete one of the users, so that the SID can be resolved for a single user in the DS.
+Remove the duplicate accounts mentioned in the event, or delete one of the users, so that the SID can be resolved for a single user in the DS.
 
 Is this information helpful?
 

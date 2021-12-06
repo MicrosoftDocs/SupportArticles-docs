@@ -113,7 +113,7 @@ The registry key value that is required to change the default shared folder cach
 
 #### Outlook 2013 or later versions
 
-The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019 and Outlook for Office 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
+The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019 and Outlook for Office 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
 
 To deploy this setting by using the Outlook Group Policy template, follow these steps:
 
@@ -237,7 +237,7 @@ To deploy this setting in Outlook 2013 or later versions, use the Office Customi
 
 3. In the **Select Product** dialog box, select **Create a new Setup customization file for the following product**.
 4. Select the Office product in the **Select Product** dialog box, and then select **OK**.
-5. In the navigation pane of the OCT, select **Modify user settings**, expand your version of **Microsoft Outlook**, expand **Outlook Options**, and then select **Delegates**.
+5. In the navigation pane of the OCT, select **Modify user settings**, expand your version of **Microsoft Outlook**, expand **Outlook Options**, and then select **Delegates**.
 6. Double-click the **Disable shared mail folder caching**.
 7. Select **Enabled**, and then select **OK**.
 8. Complete any remaining tasks in the OCT, and then save your .msp file.

@@ -79,7 +79,7 @@ $stats = Get-MoveRequestStatistics -identity [user@contoso.com](mailto:user@cont
 $stats.Report.Failures | select -last 2
 ```
 
-In the report, you will usually find keywords with the term *Search* in the DataContext section of the error, such as **IDestinationFolder.SetSearchCriteria**, **Search Folder** etc. that will indicate that your issue is related to Search Folders / Finders.
+In the report, you will usually find keywords with the term *Search* in the DataContext section of the error, such as **IDestinationFolder.SetSearchCriteria**, **Search Folder** etc. that will indicate that your issue is related to Search Folders / Finders.
 
 To provide Microsoft Support with the move report for analysis, export it by using the following command:
 

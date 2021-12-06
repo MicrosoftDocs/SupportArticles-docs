@@ -25,7 +25,7 @@ For an Office 2016 version of this article, see [Unlicensed Product and activati
 
 ## Problem 
 
-When you open a Office Professional Plus 2010 application, many features are disabled. This problem occurs when your Office Professional Plus subscription expires and the application becomes unlicensed. 
+When you open a Office Professional Plus 2010 application, many features are disabled. This problem occurs when your Office Professional Plus subscription expires and the application becomes unlicensed. 
 
 Additionally, you may experience one of the following symptoms:
 
@@ -91,7 +91,7 @@ To have us fix this problem for you, use the following steps:
   
 ### Method 4: Uninstall and reinstall Office 2010
 
-1. Uninstall Office 2010 by using a Microsoft easy fix.    
-1. After the easy fix is complete, sign in to the Microsoft Online Portal to reinstall Office 2010.    
+1. Uninstall Office 2010 by using a Microsoft easy fix.    
+1. After the easy fix is complete, sign in to the Microsoft Online Portal to reinstall Office 2010.    
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

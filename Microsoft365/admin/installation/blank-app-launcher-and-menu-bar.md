@@ -21,7 +21,7 @@ appliesto:
 
 ## Problem
 
-In Office 365, a user experiences the following symptoms:
+In Office 365, a user experiences the following symptoms:
 
 - Icons are missing from the tiles in the Office 365 app launcher.    
 - In Outlook on the web, the icons in the upper-right area of the page are missing. For example, the **Help** and **Settings** icon are missing.    
@@ -38,4 +38,4 @@ Turn off the Untrusted Font Blocking feature. For more information about how to 
 
 For more information, see [Block untrusted fonts in an enterprise](/windows/security/threat-protection/block-untrusted-fonts-in-enterprise).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

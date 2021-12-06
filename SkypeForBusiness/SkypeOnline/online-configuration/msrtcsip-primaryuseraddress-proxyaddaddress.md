@@ -23,7 +23,7 @@ appliesto:
 Administrators may receive the following error message in the Office 365 portal:
 
 ```adoc
-For this user the value of msRTCSIP-PrimaryUserAddress or the SIP address in the ProxyAddresses field in your local Active Directory is not unique. Correct the value in your Active Directory.The users who have duplicate msRTCSIP-PrimaryUserAddress won't be able to sign in to Skype for Business Online (formerly Lync Online) or chat with other contacts.
+For this user the value of msRTCSIP-PrimaryUserAddress or the SIP address in the ProxyAddresses field in your local Active Directory is not unique. Correct the value in your Active Directory.The users who have duplicate msRTCSIP-PrimaryUserAddress won't be able to sign in to Skype for Business Online (formerly Lync Online) or chat with other contacts.
 ```
 
 ## Solution
@@ -79,13 +79,13 @@ If you don't use directory synchronization, contact Office 365 technical support
 This problem occurs if the value of the msRTCSIP-PrimaryUserAddress attribute or the value of the Session Initiation Protocol (SIP) proxy address is the same for two users in Office 365.
 
 > [!NOTE]
-> Even though the error message specifically states that the value in the local Active Directory isn't unique, you may experience this issue even though you aren't using the Microsoft Azure Active Directory Sync Tool. If you don't use Directory Synchronization, contact Office 365 technical support for help with resolving the issue. 
+> Even though the error message specifically states that the value in the local Active Directory isn't unique, you may experience this issue even though you aren't using the Microsoft Azure Active Directory Sync Tool. If you don't use Directory Synchronization, contact Office 365 technical support for help with resolving the issue. 
 
 ## References
 
 For more information about how to detect duplicate or invalid attributes that might prevent synchronization, see the following Microsoft Knowledge Base article:
 
-[2643629 ](https://support.microsoft.com/help/2643629) One or more objects don't sync when using the Azure Active Directory Sync tool 
+[2643629 ](https://support.microsoft.com/help/2643629) One or more objects don't sync when using the Azure Active Directory Sync tool 
 
 For more information about ADSI Edit, go to the following Microsoft website: [https://technet.microsoft.com/en-us/library/cc731547(WS.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731547(v=ws.10))
 

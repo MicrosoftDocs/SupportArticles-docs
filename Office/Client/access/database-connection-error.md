@@ -27,24 +27,24 @@ _Original KB number:_ &nbsp; 2459087
 
 ## Symptoms
 
-When you open your database in Access, you receive the following error message:
+When you open your database in Access, you receive the following error message:
 
 > Method 'Connection' of object '_Current Project' failed.
 
-This failure occurs when the VBA Application.CurrentProject.Connection or Application.CurrentDB.Connection is called.
+This failure occurs when the VBA Application.CurrentProject.Connection or Application.CurrentDB.Connection is called.
 
 ## Cause
 
-The Access Database Engine/Access Connectivity Engine (ACE) is included with a number of products other than Microsoft Access such as Microsoft Visio and Microsoft Project. If you install a version of ACE that's different than that of Access, the ACEOLEDB.DLL path in the registry may not point to the corresponding ACE version.
+The Access Database Engine/Access Connectivity Engine (ACE) is included with a number of products other than Microsoft Access such as Microsoft Visio and Microsoft Project. If you install a version of ACE that's different than that of Access, the ACEOLEDB.DLL path in the registry may not point to the corresponding ACE version.
 
 ## Resolution
 
-You should be able to resolve this issue by running a repair of the Office or Access installation.
+You should be able to resolve this issue by running a repair of the Office or Access installation.
 
 Alternatively, you can modify the registry key changing the dll path to match that of your Access version.
 
 > [!NOTE]
-> Access 2007 - OFFICE12, Access 2010 - OFFICE14, Access 2013 - OFFICE15 and Access 2016 - OFFICE16.
+> Access 2007 - OFFICE12, Access 2010 - OFFICE14, Access 2013 - OFFICE15 and Access 2016 - OFFICE16.
 
 ### MSI installations
 

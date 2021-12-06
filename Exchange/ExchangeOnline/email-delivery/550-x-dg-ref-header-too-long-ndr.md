@@ -28,11 +28,11 @@ When you send mail from Outlook in Exchange Online, you receive a non-delivery r
 
 ## Cause
 
-This issue occurs if you use **Rich Text** formatting in Outlook and the message has at least one attachment. The attachment may also be nested so that it contains another attached message.
+This issue occurs if you use **Rich Text** formatting in Outlook and the message has at least one attachment. The attachment may also be nested so that it contains another attached message.
 
 ## Resolution
 
-To resolve this issue so that the message can be delivered successfully, select the **HTML** option instead of **Rich Text Format** when you compose email messages.
+To resolve this issue so that the message can be delivered successfully, select the **HTML** option instead of **Rich Text Format** when you compose email messages.
 
 The **HTML** option prevents the attachment from being part of the Transport Neutral Encapsulation Format (TNEF) header.
 

@@ -19,13 +19,13 @@ appliesto:
 
 ## Summary
 
-This article describes how to determine the exact version of the copy of Microsoft Skype for Business 2016 that you have installed. 
+This article describes how to determine the exact version of the copy of Microsoft Skype for Business 2016 that you have installed. 
 
-Note In Office 2016, the **Help** > **About** window actually shows the version of the MSO library that's used by that particular application. So that method can no longer be used to find the application version.
+Note In Office 2016, the **Help** > **About** window actually shows the version of the MSO library that's used by that particular application. So that method can no longer be used to find the application version.
 
 ## How to find the version number 
 
-The following methods help you determine the installed version of Skype for Business 2016 on your computer. 
+The following methods help you determine the installed version of Skype for Business 2016 on your computer. 
 
 ### Method 1
 
@@ -39,14 +39,14 @@ The following methods help you determine the installed version of Skype for Bus
 
 1. Open Task Manager while the Skype for Business 2016 is running.
 2. On the **Details** tab, locate **Lync.exe**.   
-3. Right-click **Lync.exe**. and then select **Open file location**. 
-4. In the **Description** list, locate the product version number.
+3. Right-click **Lync.exe**. and then select **Open file location**. 
+4. In the **Description** list, locate the product version number.
 
     :::image type="content" source="./media/check-version-of-skype-for-business-2016/lync-properties.png" alt-text="Screenshot that shows the Lync properties in the Description list.":::
 
 ### Method 3
 
-See the following Microsoft website to learn how to create a PowerShell script to check the version number of Skype for Business:
+See the following Microsoft website to learn how to create a PowerShell script to check the version number of Skype for Business:
 
 [https://gallery.technet.microsoft.com/How-to-check-the-version-bbf20466](https://gallery.technet.microsoft.com/how-to-check-the-version-bbf20466)
 

@@ -47,7 +47,7 @@ First, verify that recording is enabled for user having issues in the Skype for 
 
 Lync 2010 and Lync 2013 include features that allow users to record conferences, audio/video (A/V) conferences and desktop sharing sessions, as long as the session is converted to an online meeting or conference. Recording peer-to-peer IM, Audio, or Video sessions aren't supported.
 
-Users who have started a two-person A/V call won't have recording features available to them until they invite a third participant. This converts the peer-to-peer conversation to a Skype for Business Online conference where recording is allowed.
+Users who have started a two-person A/V call won't have recording features available to them until they invite a third participant. This converts the peer-to-peer conversation to a Skype for Business Online conference where recording is allowed.
 
 ### Scenario 4: IM conversations in meetings aren't being recorded
 
@@ -64,9 +64,9 @@ If you want to distribute the IM conversations together with your recording, mak
 
 ## More Information
 
-- Scenario 1: Usually, this occurs if the recording is disabled on an organization level or if the conversation wasn't converted to a conference.   
-- Scenario 2: Typically, this occurs if audio is muted from the source device or if the Audio Conferencing Provider (ACP) conference isn't associated with the Skype for Business Online conference.   
-- Scenario 3: Recording is disabled on an organization level or on a user level.   
+- Scenario 1: Usually, this occurs if the recording is disabled on an organization level or if the conversation wasn't converted to a conference.   
+- Scenario 2: Typically, this occurs if audio is muted from the source device or if the Audio Conferencing Provider (ACP) conference isn't associated with the Skype for Business Online conference.   
+- Scenario 3: Recording is disabled on an organization level or on a user level.   
 - Scenario 4: The Instant messaging check box in the Recording Options dialog box isn't selected.   
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

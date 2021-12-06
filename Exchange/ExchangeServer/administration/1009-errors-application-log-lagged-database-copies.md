@@ -25,10 +25,10 @@ _Original KB number:_ &nbsp;4023757
 
 Consider the following scenario:
 
-- You have Exchange Database Availability Groups (DAGs) deployed in your organization and enabled lagged database copies configuration.
-- You have Cumulative Update 4 or Cumulative Update 5 installed for Microsoft Exchange Server 2016 installed.
+- You have Exchange Database Availability Groups (DAGs) deployed in your organization and enabled lagged database copies configuration.
+- You have Cumulative Update 4 or Cumulative Update 5 installed for Microsoft Exchange Server 2016 installed.
 
-In this situation, you notice many warning messages with **event ID 1009**  in the Application log in Exchange Server 2016. The message resembles the following:
+In this situation, you notice many warning messages with **event ID 1009**  in the Application log in Exchange Server 2016. The message resembles the following:
 
 ```console
 Log Name: <Log Name>
@@ -48,4 +48,4 @@ The indexing of mailbox database <Database Name> encountered an unexpected excep
 
 ## Resolution
 
-You can safely ignore these logged events. However, [Cumulative Update 6 for Exchange Server 2016](https://support.microsoft.com/help/4012108) includes a change that represses these messages.
+You can safely ignore these logged events. However, [Cumulative Update 6 for Exchange Server 2016](https://support.microsoft.com/help/4012108) includes a change that represses these messages.

@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you try to connect to a Skype for Business Online (formerly Lync Online) conference or make a peer to peer call, the audio or video quality may be choppy, tinny, or delayed. This causes the meeting or call to be unusable.
+When you try to connect to a Skype for Business Online (formerly Lync Online) conference or make a peer to peer call, the audio or video quality may be choppy, tinny, or delayed. This causes the meeting or call to be unusable.
 
 ## Solution
 

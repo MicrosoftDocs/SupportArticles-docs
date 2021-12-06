@@ -45,7 +45,7 @@ List mail-enabled public folders from NON_IPM_SUBTREE:
 $pf=Get-PublicFolder \NON_IPM_Subtree -recurse -ResultSize Unlimited | ? { $_.MailEnabled }; ForEach ($i in $pf) {$mesoObj = Get-MailPublicFolder $i.identity; if ($mesoObj -eq $null) {$i }} 
 ```
 
-Mail-disable the public folders:
+Mail-disable the public folders:
 
 ```powershell
 $pf=Get-PublicFolder \NON_IPM_Subtree -recurse -ResultSize Unlimited | ? { $_.MailEnabled }; ForEach ($i in $pf) {$mesoObj = Get-MailPublicFolder $i.identity; if ($mesoObj -eq $null) { Disable-MailPublicFolder $i -confirm:$False} }
@@ -59,7 +59,7 @@ List Mail-Enabled public folders from NON_IPM_SUBTREE:
 $pf=Get-PublicFolder \NON_IPM_Subtree -recurse -ResultSize Unlimited | ? { $_.MailEnabled }; ForEach ($i in $pf) {$mesoObj = Get-MailPublicFolder $i.identity; if ($mesoObj -eq $null) {$i }}
 ```
 
-Mail-disable the public folders:
+Mail-disable the public folders:
 
 ```powershell
 $pf=Get-PublicFolder \NON_IPM_Subtree -recurse -ResultSize Unlimited | ? { $_.MailEnabled }; ForEach ($i in $pf) {$mesoObj = Get-MailPublicFolder $i.identity; if ($mesoObj -eq $null) { Set-PublicFolder $i -MailEnabled:$false -confirm:$False} }

@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 981245
 
 ## Introduction
 
-Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook for Office 365 let you add multiple Microsoft Exchange accounts to the same profile. You can add an additional Exchange account if one of the following conditions is true:
+Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook for Office 365 let you add multiple Microsoft Exchange accounts to the same profile. You can add an additional Exchange account if one of the following conditions is true:
 
 - You have Full Access permission to the additional Exchange mailbox.
 - You do not have Full Access permission to the Exchange mailbox. However, you know the credentials to access the additional Exchange mailbox.
@@ -42,7 +42,7 @@ This section describes the two scenarios in which unexpected behavior can occur 
 
 ### Scenario 1: The manager and delegate mailboxes are added to the same profile
 
-Outlook 2010, Outlook 2013, and Outlook 2016, Outlook 2019, and Outlook for Office 365 let you add your delegate's account to your own profile and lets your delegate add your account to their profile. However, although there is no warning message or error, this profile configuration is not supported. For example, the following screenshot shows an Outlook 2010 profile that has two Exchange accounts.
+Outlook 2010, Outlook 2013, and Outlook 2016, Outlook 2019, and Outlook for Office 365 let you add your delegate's account to your own profile and lets your delegate add your account to their profile. However, although there is no warning message or error, this profile configuration is not supported. For example, the following screenshot shows an Outlook 2010 profile that has two Exchange accounts.
 
 :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/example-of-email-account-settings.png" alt-text="Screenshot shows the two accounts under Email tab.":::
 
@@ -83,7 +83,7 @@ The following steps demonstrate two problems that may occur if manager and deleg
 > [!NOTE]
 > In this scenario, you are considered the manager account.
 
-1. Using an Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Office 365 profile for your mailbox, configure a delegate for your mailbox, and use default delegate settings.
+1. Using an Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Office 365 profile for your mailbox, configure a delegate for your mailbox, and use default delegate settings.
 
     > [!NOTE]
     > Default delegate settings do not let the delegate see items that are owned by the manager and that are marked as private.

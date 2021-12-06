@@ -25,7 +25,7 @@ appliesto:
 
 ## Problem 
 
-When you try to reset your password by using the self-service password reset for administrators feature in Office 365, Microsoft Intune, or Microsoft Azure, you receive the following error message: 
+When you try to reset your password by using the self-service password reset for administrators feature in Office 365, Microsoft Intune, or Microsoft Azure, you receive the following error message: 
 
 ```asciidoc
 Invalid Security Code

@@ -79,7 +79,7 @@ The following steps show how to remove a meeting reminder that still appears eve
 > [!NOTE]
 > Although the MFCMAPI editor is supported by Exchange Online, use caution when you make changes to mailboxes by using this tool. Using the MFCMAPI editor incorrectly can cause permanent damage to a mailbox. The exact steps may vary, depending on the version of MFCMAPI that you're using.
 
-1. Download **MFCMAPI** from [github](https://github.com/stephenegriffin/mfcmapi) (scroll down and then click **Latest release**).
+1. Download **MFCMAPI** from [github](https://github.com/stephenegriffin/mfcmapi/releases/) (scroll down and then click **Latest release**).
 2. In Outlook, click the **Send/Receive** tab.
 3. In the **Preferences** group, click **Work Offline**, and then exit Outlook.
 4. Double-click the MFCMapi.exe file to start the MFCMAPI editor.

@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 3186812
 
 In Microsoft Outlook 2013 or later versions, you receive the following error message:
 
-> Errors have been detected in the file C:\Users\<name>\AppData\Local\Microsoft\Outlook\user@org.com.ost
+> Errors have been detected in the file C:\Users\<name>\AppData\Local\Microsoft\Outlook\user@org.com.ost
 
 When you examine the application event log, you find an event with ID 2000.
 

@@ -22,19 +22,19 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This issue occurs when you try to use Access 2013 or later version of Microsoft Access to open an Access 97 database. To work around this issue, use a pre-Access 2013 version of Access to save the Access 97 database as an .accdb file: 
+This issue occurs when you try to use Access 2013 or later version of Microsoft Access to open an Access 97 database. To work around this issue, use a pre-Access 2013 version of Access to save the Access 97 database as an .accdb file: 
 
 1. Open the Access 97 database in Access 2003.    
 2. On the Tools menu, click Database Utilities, click Convert Database, and then click to Access 2002-2003 file format.    
 3. Enter a name for the database, and then click Save.    
 4. Exit Access 2003.    
-5. Open the database in Access 2013 or later version of Access.    
+5. Open the database in Access 2013 or later version of Access.    
 6. On the File tab, click Save As, select Access Database (*.accdb), and then click Save As.   
 7. In the Save Asdialog box, click Save.   
 
 ## Cause
 
-This issue occurs because recent versions of Access cannot convert Access 97 files. 
+This issue occurs because recent versions of Access cannot convert Access 97 files. 
 
 ## More Information
 

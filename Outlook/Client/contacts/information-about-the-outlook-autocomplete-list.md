@@ -62,7 +62,7 @@ This section details how to enable or disable the AutoComplete feature.
 
 To access the AutoComplete setting, follow these steps:
 
-1. On the **File**  menu, select **Options**.
+1. On the **File**  menu, select **Options**.
 2. Select the **Mail** tab.
 3. Scroll approximately halfway down until you see **Send messages**. Make sure that the **Use Auto-Complete List to suggest names when typing in the To, Cc, and Bcc lines** box is checked.
 
@@ -75,7 +75,7 @@ To access the AutoComplete settings, follow the steps:
 1. Select **Tools**, and then select **Options**.
 2. Select the **E-mail options** button.
 3. Select the **Advanced E-mail Options** button.
-4. Make sure that the **Suggest names while completing To, Cc, and Bcc fields**  box is checked. (The screenshot for this step follows.)
+4. Make sure that the **Suggest names while completing To, Cc, and Bcc fields**  box is checked. (The screenshot for this step follows.)
 
     :::image type="content" source="media/information-about-the-outlook-autocomplete-list/suggest-names-while-completing-to-cc-and-bcc-fields.png" alt-text="Screenshot of the Advanced E-mail Options window, and the Suggest names while completing To, Cc, and Bcc fields box is checked.":::
 
@@ -83,7 +83,7 @@ To access the AutoComplete settings, follow the steps:
 
 Microsoft Office Outlook 2007 and earlier versions store the AutoComplete list in a nickname (.nk2) file on the disk. Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019 store the AutoComplete list as a hidden message in your primary message store. Outlook 2010, Outlook 2013, Outlook 2016, and outlook 2019 let you import the older .nk2 files.
 
-For more information about how to import .nk2 files in Outlook 2010, see [Import Auto-Complete List from another computer](https://support.microsoft.com/office/import-or-copy-the-auto-complete-list-to-another-computer-83558574-20dc-4c94-a531-25a42ec8e8f0).
+For more information about how to import .nk2 files in Outlook 2010, see [Import Auto-Complete List from another computer](https://support.microsoft.com/office/import-or-copy-the-auto-complete-list-to-another-computer-83558574-20dc-4c94-a531-25a42ec8e8f0).
 
 #### How to copy the AutoComplete list
 
@@ -98,7 +98,7 @@ To copy the AutoComplete list, follow these steps:
 To export the AutoComplete mailbox message, follow these steps:
 
 1. Exit Outlook, and then close Outlook Web Access or Outlook Web App (OWA) on all workstations that are connected to your mailbox.
-2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 3. Run mfcmapi.exe.
 4. On the **Session** menu, select **Logon**.
 5. If you're prompted for a profile, select the desired profile name, and then select **OK**.
@@ -114,7 +114,7 @@ To export the AutoComplete mailbox message, follow these steps:
 To import the AutoComplete mailbox message, follow these steps.
 
 1. Exit Outlook, and then close Outlook Web Access or Outlook Web App (OWA) on all workstations that are connected to your mailbox.
-2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+2. Download and install [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 3. Run mfcmapi.exe.
 4. On the **Session** menu, select **Logon**.
 5. If you're prompted for a profile, select the desired profile name, and then select **OK**.
@@ -214,7 +214,7 @@ This section describes known issues that can occur with the AutoComplete cache. 
 
 ### How to change the limit for the AutoComplete list
 
-Because this configuration is untested, we don't recommend it. If you have a larger AutoComplete list, you could also lose a larger number of cached entries if your AutoComplete cache becomes unusable because of corruption. Given this disclaimer, you can use the following registry data to increase the AutoComplete list limit in Outlook.
+Because this configuration is untested, we don't recommend it. If you have a larger AutoComplete list, you could also lose a larger number of cached entries if your AutoComplete cache becomes unusable because of corruption. Given this disclaimer, you can use the following registry data to increase the AutoComplete list limit in Outlook.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry,see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
@@ -225,7 +225,7 @@ Because this configuration is untested, we don't recommend it. If you have a lar
    - In Windows 7 and Windows Vista, select **Start**, type *regedit* in the **Start Search** box, and then press **Enter**.
 
 3. Locate and then select the following registry subkey:  
-   `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\AutoNameCheck`
+   `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\AutoNameCheck`
 
     > [!NOTE]
     > The placeholder <x.0> in this registry subkey represents your version of Microsoft Office. Use the appropriate value from the following list.

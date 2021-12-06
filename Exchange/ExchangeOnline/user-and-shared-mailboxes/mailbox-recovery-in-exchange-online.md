@@ -89,7 +89,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -115,7 +115,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -141,7 +141,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -339,7 +339,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -365,7 +365,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -391,7 +391,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -730,7 +730,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -756,7 +756,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
@@ -782,7 +782,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
 
 6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 

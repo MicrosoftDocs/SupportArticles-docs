@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Office 365 dedicated/ITAR, you try to remove mailbox permissions from a mailbox by using the `Remove-ADPermission` or `Remove-MailboxPermission` cmdlet in Remote PowerShell. When you do this, you receive an error message that states that the access control entry cannot be removed.
+In Microsoft Office 365 dedicated/ITAR, you try to remove mailbox permissions from a mailbox by using the `Remove-ADPermission` or `Remove-MailboxPermission` cmdlet in Remote PowerShell. When you do this, you receive an error message that states that the access control entry cannot be removed.
 
 For example, you try to use the following cmdlet to remove mailbox permissions:
 

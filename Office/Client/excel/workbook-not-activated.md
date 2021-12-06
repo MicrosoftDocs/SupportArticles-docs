@@ -23,11 +23,11 @@ appliesto:
 
 ## Symptoms 
 
-When you run a macro that calls the [Workbook.Activate](https://msdn.microsoft.com/library/office/ff821837.aspx) method in a Microsoft Excel 2013 workbook, the workbook is not activated if the [ScreenUpdating](https://msdn.microsoft.com/library/office/ff193498.aspx) property is set to False.
+When you run a macro that calls the [Workbook.Activate](https://msdn.microsoft.com/library/office/ff821837.aspx) method in a Microsoft Excel 2013 workbook, the workbook is not activated if the [ScreenUpdating](https://msdn.microsoft.com/library/office/ff193498.aspx) property is set to False.
 
 ## Workaround
 
-To work around this issue, set the ScreenUpdating property to True before you call the Activate method. You can set it back to False, as needed, after the Activate method runs, as in the following code example: 
+To work around this issue, set the ScreenUpdating property to True before you call the Activate method. You can set it back to False, as needed, after the Activate method runs, as in the following code example: 
 
 ```vb
 Application.ScreenUpdating = True

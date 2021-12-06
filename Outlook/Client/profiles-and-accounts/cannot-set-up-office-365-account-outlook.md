@@ -32,7 +32,7 @@ You can't successfully set up an Office 365 Exchange Online email account in Out
 
 This issue might occur if your Exchange administrator enables multi-factor authentication (MFA) for your account, but doesn't enable modern authentication for the Exchange tenant organization.
 
-When this issue occurs, the server returns an HTTP 456 authentication error.
+When this issue occurs, the server returns an HTTP 456 authentication error.
 
 ## Resolution
 
@@ -52,7 +52,7 @@ To fix this issue, disable MFA for the account in the Office 365 admin center. T
 
 To enable MFA for organizations, Exchange administrators must enable modern authentication in Exchange Online. By default, newer Exchange Online tenants have modern authentication enabled.
 
-You can enable modern authentication for tenants as necessary. Before you enable modern authentication for your Exchange organization, take compatibilities into account. Consider that the user experience will change if MFA is enabled in your organization.
+You can enable modern authentication for tenants as necessary. Before you enable modern authentication for your Exchange organization, take compatibilities into account. Consider that the user experience will change if MFA is enabled in your organization.
 
 For more information, see the following websites:
 

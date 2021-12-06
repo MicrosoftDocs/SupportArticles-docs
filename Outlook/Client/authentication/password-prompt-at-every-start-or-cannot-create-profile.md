@@ -25,14 +25,14 @@ _Original KB number:_ &nbsp; 3060280
 
 ## Symptoms
 
-When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft Office 365 mailbox in Microsoft Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Office 365, you experience one of the following symptoms:
+When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft Office 365 mailbox in Microsoft Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Office 365, you experience one of the following symptoms:
 
 - You are prompted for your password every time that Outlook starts, even if you enabled the **Remember my credentials** option.
-- When you start Outlook, it is unable to connect, and it displays **Need Password** in the status bar. When you select **Need Password**, you receive the following message:  
-  **This feature has been disabled by your administrator.**
+- When you start Outlook, it is unable to connect, and it displays **Need Password** in the status bar. When you select **Need Password**, you receive the following message:  
+  **This feature has been disabled by your administrator.**
 
 - When you try to create a new Outlook profile, you receive the following error message:  
-  **We're sorry, we couldn't set up your account automatically, to set it up yourself, click Next.**
+  **We're sorry, we couldn't set up your account automatically, to set it up yourself, click Next.**
 
 ## Cause
 
@@ -60,7 +60,7 @@ Outlook 2013:
 4. Select **OK** two times to close the **Outlook Options** dialog box.
 
     > [!NOTE]
-    > If the Allow Office to connect to the Internet  check box is unavailable, see the More Information section below, for additional details about this setting.
+    > If the Allow Office to connect to the Internet  check box is unavailable, see the More Information section below, for additional details about this setting.
 
 ## More information
 
@@ -73,9 +73,9 @@ If the **Allow Office to connect to the Internet** check box is unavailable, it 
 DWORD: UseOnlineContent  
 Value:
 
-0  - Do not allow user to access Office resources on the Internet (check box is cleared and unavailable).  
-1  - Allows the user to opt in to access of Office resources on the Internet (check box is cleared).  
-2  - (Default) Allows the user to access Office resources on the Internet (check box is selected).
+0  - Do not allow user to access Office resources on the Internet (check box is cleared and unavailable).  
+1  - Allows the user to opt in to access of Office resources on the Internet (check box is cleared).  
+2  - (Default) Allows the user to access Office resources on the Internet (check box is selected).
 
 > [!NOTE]
 >

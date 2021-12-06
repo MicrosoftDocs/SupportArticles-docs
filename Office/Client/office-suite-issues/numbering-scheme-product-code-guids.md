@@ -42,7 +42,7 @@ appliesto:
 
 This article describes how to read the product GUIDs in the Windows registry to determine information about the Microsoft Office 2013 suite, programs, or utilities that you are using. GUIDs contain information about the release type, the release version, and the language of an Office 2013 suite or program. 
 
-**Note** GUIDs are created only when a user installs a Windows Installer (MSI) version of the Office 2013 suite or of an Office 2013 program. GUIDs are not created when a user installs a Click-to-Run version of the Office 2013 suite or of an Office 2013 program.
+**Note** GUIDs are created only when a user installs a Windows Installer (MSI) version of the Office 2013 suite or of an Office 2013 program. GUIDs are not created when a user installs a Click-to-Run version of the Office 2013 suite or of an Office 2013 program.
 
 ##  More Information
 

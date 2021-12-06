@@ -21,11 +21,11 @@ appliesto:
 
 ## Symptoms
 
-Assume that you have custom phone number normalization rules, and you don't use standard extensions. When you hover over a contact, and then click the drop-down menu under the **Call** option in Microsoft Skype for Business 2015 (Lync 2013), you see duplicated working numbers.
+Assume that you have custom phone number normalization rules, and you don't use standard extensions. When you hover over a contact, and then click the drop-down menu under the **Call** option in Microsoft Skype for Business 2015 (Lync 2013), you see duplicated working numbers.
 
 ## Resolution
 
-To fix this issue, install the latest updates, and then apply the *RenormalizeContactModelPhoneNumbersBeforeDisplay* policy either as a Skype for Business Server In-Band policy or as a client policy in the client registry.
+To fix this issue, install the latest updates, and then apply the *RenormalizeContactModelPhoneNumbersBeforeDisplay* policy either as a Skype for Business Server In-Band policy or as a client policy in the client registry.
 
 **Note** Lync 2013 was upgraded to Skype for Business in April 2015.
 
@@ -34,14 +34,14 @@ To fix this issue, install the latest updates, and then apply the *Renormalize
 To set the policy for all users, run the following Windows PowerShell cmdlets: 
 
 ```powershell
-$a = New-CsClientPolicyEntry –Name "RenormalizeContactModelPhoneNumbersBeforeDisplay" –Value $True
+$a = New-CsClientPolicyEntry –Name "RenormalizeContactModelPhoneNumbersBeforeDisplay" –Value $True
  Set-CsClientPolicy –Identity Global –PolicyEntry @{Add=$a}
 ```
 
 To set the policy for specific users, run the following PowerShell cmdlets: 
 
 ```powershell
-$a = New-CsClientPolicyEntry –Name "RenormalizeContactModelPhoneNumbersBeforeDisplay" –Value $True
+$a = New-CsClientPolicyEntry –Name "RenormalizeContactModelPhoneNumbersBeforeDisplay" –Value $True
  new-CsCLientPolicy -Identity TelephoneDisplayNameFromServer
  Set-CsClientPolicy –Identity RenormalizeContactModelPhoneNumbersBeforeDisplay–PolicyEntry @{Add=$a}
  Grant-CsClientPolicy -Identity UserName

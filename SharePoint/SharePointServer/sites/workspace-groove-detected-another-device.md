@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-You install Microsoft SharePoint Workspace 2010 or Microsoft Office Groove 2007 or an earlier version of Groove on a computer and then start SharePoint Workspace or Groove. Then, you create an image from this computer and distribute this image to other computers. When the people who receive the image start SharePoint Workspace or Groove, they may receive one of the following error messages:
+You install Microsoft SharePoint Workspace 2010 or Microsoft Office Groove 2007 or an earlier version of Groove on a computer and then start SharePoint Workspace or Groove. Then, you create an image from this computer and distribute this image to other computers. When the people who receive the image start SharePoint Workspace or Groove, they may receive one of the following error messages:
 
 ```adoc
 SharePoint Workspace has detected another device with the same DeviceURL as yours. The other device is running on your LAN with an IP address of **IP address.** Please contact your administrator or SharePoint Workspace support immediately.
@@ -32,7 +32,7 @@ When this occurs, SharePoint Workspace or Groove may start. However, Groove mess
 
 ## Cause
 
-This issue occurs because the device URL must be unique for each computer. SharePoint Workspace or Groove creates the device URL to identify the computer the first time that SharePoint Workspace or Groove is started. 
+This issue occurs because the device URL must be unique for each computer. SharePoint Workspace or Groove creates the device URL to identify the computer the first time that SharePoint Workspace or Groove is started. 
 
 When SharePoint Workspace or Groove is installed and then started on a computer, and then an image is created from that computer and distributed to other computers on the local area network (LAN), all the installations have the same device URL. Because these installations appear identical in Groove communications, SharePoint Workspace or Groove is unreliable on most of or all the computers that have that image.
 
@@ -40,11 +40,11 @@ Other, less common activities that duplicate configuration can also cause this i
 
 ## Workaround
 
-You cannot change the device URL in an active SharePoint Workspace or Groove installation. To work around this issue, you must remove all SharePoint Workspace or Groove data on each affected computer. This data includes the account and all workspaces. Then, each user must create a new account. 
+You cannot change the device URL in an active SharePoint Workspace or Groove installation. To work around this issue, you must remove all SharePoint Workspace or Groove data on each affected computer. This data includes the account and all workspaces. Then, each user must create a new account. 
 
 **Note** Do not save your account to a file and then restore it. The device URL is saved in the account file. 
 
-You can remove the SharePoint Workspace or Groove data by uninstalling the program and selecting the option to remove all data, or by using the grooveclean.exe or groove.exe options to remove all data. 
+You can remove the SharePoint Workspace or Groove data by uninstalling the program and selecting the option to remove all data, or by using the grooveclean.exe or groove.exe options to remove all data. 
 
 The following procedures will help you recover from this issue with as little data loss as possible. 
 

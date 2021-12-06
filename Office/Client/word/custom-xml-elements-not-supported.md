@@ -38,7 +38,7 @@ During the opening process for Word 2007, for Word 2010 or for Word 2013, you re
 Then when you click **OK**, the custom XML elements don't display.
 
 > [!NOTE]
-> Microsoft Word 2013 displays the error message for the following file formats in addition to the file formats previously listed:
+> Microsoft Word 2013 displays the error message for the following file formats in addition to the file formats previously listed:
 >
 > - Word 97-2003 Document (.DOC)
 > - Word Web Pages (.HTML)

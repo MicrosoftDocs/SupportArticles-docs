@@ -27,11 +27,11 @@ An Office 365 F plan user tries to set up a mail account for Exchange Online in 
 
 Click Next to attempt using an unencrypted connection.
 
-This error message is displayed even though the user entered his or her email address and password correctly on the Auto Account Setup page of the Add New Account Wizard in Outlook.
+This error message is displayed even though the user entered his or her email address and password correctly on the Auto Account Setup page of the Add New Account Wizard in Outlook.
 
 ## Cause
 
-This behavior occurs if the user is trying to connect Outlook to Exchange Online by using Exchange Autodiscover. Office 365 F plans don't support using Outlook to access mail in Exchange Online through an Exchange connection.
+This behavior occurs if the user is trying to connect Outlook to Exchange Online by using Exchange Autodiscover. Office 365 F plans don't support using Outlook to access mail in Exchange Online through an Exchange connection.
 
 ## Solution
 
@@ -42,7 +42,7 @@ To work around this behavior, do one of the following:
 
 ## More Information
 
-For more information about Office 365 F plans, see [Office 365 F1](https://products.office.com/business/office-365-f1?legRedir=true&CorrelationId=b7b7a08f-e568-40de-84d7-fb9d2faaa328).
+For more information about Office 365 F plans, see [Office 365 F1](https://products.office.com/business/office-365-f1?legRedir=true&CorrelationId=b7b7a08f-e568-40de-84d7-fb9d2faaa328).
 
 If Office 365 users who aren't F plan users get this error message, see the following Microsoft Knowledge Base article:
 

@@ -29,7 +29,7 @@ Consider the following scenario:
 - An anonymous response group agent accepts the incoming call.   
 - The agent transfers the call to another response group.   
 
-In this scenario, the call transfer fails. Additionally, the following notification and error message are received:
+In this scenario, the call transfer fails. Additionally, the following notification and error message are received:
 
 ```adoc
 Cannot complete the transfer
@@ -41,10 +41,10 @@ When contacting your support team reference error ID 503 (source ID 239).
 To work around this issue, follow these steps after the anonymous response group agent accepts the incoming call:
 
 1. Click the Transfer call to another person or device button that is located on the Lync 2010 call window.   
-2. In the **Transfer to Others** category, click **Another Person or Number**. 
-3. Use the **Transfer Call** dialog to locate and select the response group contact to transfer the call.   
-4. Click the down arrow and then click **View more** options.   
-5. Click the **Lync Call** feature from the list.   
+2. In the **Transfer to Others** category, click **Another Person or Number**. 
+3. Use the **Transfer Call** dialog to locate and select the response group contact to transfer the call.   
+4. Click the down arrow and then click **View more** options.   
+5. Click the **Lync Call** feature from the list.   
 
 The anonymous transfer for the call will succeed.
 

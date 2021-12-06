@@ -36,8 +36,8 @@ During the installation of Exchange Server 2016, the default domain controller p
 
 ## Workaround
 
-To work around this issue, manually remove the Debug programs user right from the Exchange Servers and Exchange Trusted Subsystem groups.
+To work around this issue, manually remove the Debug programs user right from the Exchange Servers and Exchange Trusted Subsystem groups.
 
 ## Status
 
-Microsoft is aware of this issue and is working on a fix to be released in a future update.
+Microsoft is aware of this issue and is working on a fix to be released in a future update.

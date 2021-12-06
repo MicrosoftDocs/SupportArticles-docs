@@ -81,7 +81,7 @@ To set up email forwarding rules and an Out of Office notification at the same t
 2. To open the Exchange admin center, select **Admin**, and then select **Exchange**.
 3. In the upper-right corner, select your name, and then select **Open Another user**.
 4. Select **Organize Mail**, and then select **Inbox Rules**.
-5. Select **New** (![Plus sign icon: New rule ](./media/senders-not-receiving-out-of-office-notifications/plus-sign-icon.jpg)), and then select **Create a new rule for arriving messages**.
+5. Select **New** (:::image type="icon" source="media/senders-not-receiving-out-of-office-notifications/plus-sign-icon.png" border="false":::), and then select **Create a new rule for arriving messages**.
 6. In the **Name** box, specify a name for the rule, and then select **More options**.
 7. Under **When the Message Arrives**, select **Apply to all messages**.
 8. Under **Do the Following**, point to **Move, copy or delete**, and then select **Copy the Message to the Folder**.

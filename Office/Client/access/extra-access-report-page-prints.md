@@ -57,7 +57,7 @@ Steps to Reproduce:
 4. Click the double arrows above the Navigation Pane bar to expand
 5. Select Reports
 6. Right click the Employee Phone Book and select Design View
-7. Select the File As Header bar 
+7. Select the File As Header bar 
 8. In the Group, Sort, And Total section at the bottom, click More
 
     You may need to right click on the File as Header bar and select Sorting and Grouping to see the Group, Sort, and Total section)

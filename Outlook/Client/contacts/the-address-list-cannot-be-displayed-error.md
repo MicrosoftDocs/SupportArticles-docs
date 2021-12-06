@@ -34,7 +34,7 @@ This issue may occur if the `ExcludeHttpsAutoDiscoverDomain` value under the fol
 
 `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\AutoDiscover\`
 
-In this situation, set the value to **0**, and then restart Outlook 2016, Outlook 2019 or Outlook for Office 365 to fix the issue.
+In this situation, set the value to **0**, and then restart Outlook 2016, Outlook 2019 or Outlook for Office 365 to fix the issue.
 
 Additionally, this issue can occur if any of the Autodiscover endpoints is blocked or if Outlook 2016 can't find the Autodiscover information. You can use one of the following methods to test the Autodiscover connectivity:
 

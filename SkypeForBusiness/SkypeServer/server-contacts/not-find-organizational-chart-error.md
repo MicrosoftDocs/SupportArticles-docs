@@ -1,5 +1,5 @@
 ---
-title: Can't view contact organization information
+title: Can't view contact organization information
 description: Provides a workaround for an issue in which contact organization information cannot be found and you receive a "We didn't find an organizational chart" error message.
 author: simonxjx
 ms.author: v-six
@@ -21,15 +21,15 @@ _Original KB number:_ &nbsp; 4501070
 
 ## Symptoms
 
-You can no longer find contact organization information in Microsoft Skype for Business 2016. When you try to view the information, you receive the following error message:
+You can no longer find contact organization information in Microsoft Skype for Business 2016. When you try to view the information, you receive the following error message:
 
 > We didn't find an organizational chart.
 
-Additionally, MAPI is displayed as disconnected, or you see a "Your Exchange Server is currently unavailable" status in **MAPI Information** in Skype for Business [Configuration Information](../server-configuration/how-to-use-configuration-information.md).  
+Additionally, MAPI is displayed as disconnected, or you see a "Your Exchange Server is currently unavailable" status in **MAPI Information** in Skype for Business [Configuration Information](../server-configuration/how-to-use-configuration-information.md).  
 
 ## Cause
 
-This issue occurs because the Active Directory Authentication Library (ADAL) isn't implemented in Microsoft Office correctly.
+This issue occurs because the Active Directory Authentication Library (ADAL) isn't implemented in Microsoft Office correctly.
 
 ## Workaround
 
@@ -51,4 +51,4 @@ There currently is no workaround to the second variant.
 
 ## More information
 
-This issue will be resolved in version 16.0.11610.10000 and later versions of Skype for Business 2016 client.
+This issue will be resolved in version 16.0.11610.10000 and later versions of Skype for Business 2016 client.

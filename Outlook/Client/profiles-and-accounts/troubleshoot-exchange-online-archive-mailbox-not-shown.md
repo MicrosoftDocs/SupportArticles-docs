@@ -67,7 +67,7 @@ To verify the setting of the option:
   2. Select the **Open proxy settings** button.
   3. If **Automatically detect settings** is set to **On**, set it to **Off**, and then restart Outlook.
 
-To check the if **Automatically detect settings** is checked, refer the following steps:
+To check the if **Automatically detect settings** is checked, refer the following steps:
 
 1. In Internet Explorer, go to **Internet Options**. If yes, clear it then restart Outlook.
 2. In Edge, go to **Settings** then **Advanced** icon on left pane. Select **Open proxy settings**, check whether **Automatically detect settings** is on. If it's checked, clear it then restart Outlook.

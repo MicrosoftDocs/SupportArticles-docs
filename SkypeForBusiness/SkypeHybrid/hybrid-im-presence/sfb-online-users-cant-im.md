@@ -28,14 +28,14 @@ appliesto:
 Consider the following scenario:
 
 - You have a hybrid deployment of on-premises Skype for Business Server or Lync Server 2013.   
-- The contoso.com domain is confirmed in the on-premises topology and verified by the Office 365 organization.   
-- The my.contoso.com domain is verified by the Office 365 organization.   
+- The contoso.com domain is confirmed in the on-premises topology and verified by the Office 365 organization.   
+- The my.contoso.com domain is verified by the Office 365 organization.   
 - Federation DNS records for contoso.com point to the on-premises edge server. 
 - Federation DNS records for my.contoso.com point to Office 365.   
 
-In this scenario, users in the my.contoso.com domain can't see the presence status of users in the contoso.com domain and can't send an instant message (IM) to those users. However, they can receive an IM from a contoso.com domain user. Users in the contoso.com domain can see the presence status of users in the my.contoso.com domain and can also send IMs to those users.
+In this scenario, users in the my.contoso.com domain can't see the presence status of users in the contoso.com domain and can't send an instant message (IM) to those users. However, they can receive an IM from a contoso.com domain user. Users in the contoso.com domain can see the presence status of users in the my.contoso.com domain and can also send IMs to those users.
 
-You may also see the following detail recorded in the client logs: 
+You may also see the following detail recorded in the client logs: 
 
 ```adoc
 ms-diagnostics: 1017; reason="Cannot route From and To domains in this combination"; summary="Domain type analysis indicates that the ms-split-domain-info header in the message is the wrong type"

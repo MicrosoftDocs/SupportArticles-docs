@@ -25,12 +25,12 @@ _Original KB number:_ &nbsp; 2617816
 
 ## Symptoms
 
-When you try to sign in to Outlook on the web or the EAC in Exchange Server, the web browser freezes or reports that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer. For example, the following entry is logged:
+When you try to sign in to Outlook on the web or the EAC in Exchange Server, the web browser freezes or reports that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer. For example, the following entry is logged:
 
 > Event ID: 1003  
 Source: MSExchange Front End HTTPS Proxy  
 [Owa] An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.  
-   at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
+   at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
 
 > [!NOTE]
 > The EAC was introduced in Exchange Server 2013, and replaces the Exchange Management Console (EMC) and the Exchange Control Panel (ECP), which were the two management interfaces in Exchange Server 2010.
@@ -55,7 +55,7 @@ If the command returns an error, or the certificate has expired, use the followi
     New-ExchangeCertificate -KeySize 2048 -PrivateKeyExportable $true -SubjectName "cn=Microsoft Exchange Server Auth Certificate" -FriendlyName "Microsoft Exchange Server Auth Certificate" -DomainName @()
     ```
 
-2. Set the new certificate for server authentication. To do this, run the following commands:
+2. Set the new certificate for server authentication. To do this, run the following commands:
 
     ```powershell
     Set-AuthConfig -NewCertificateThumbprint <ThumbprintFromStep1> -NewCertificateEffectiveDate (Get-Date)
@@ -76,13 +76,13 @@ If the command returns an error, or the certificate has expired, use the followi
 
 ## More information
 
-To check the expiration date of your certificate, follow these steps:
+To check the expiration date of your certificate, follow these steps:
 
-1. Open the Microsoft Management Console. To do this, open the **Run** box (Windows logo key+R), enter *MMC*, and then press Enter.
+1. Open the Microsoft Management Console. To do this, open the **Run** box (Windows logo key+R), enter *MMC*, and then press Enter.
 
     > [!NOTE]
-    > If you are prompted for an administrator password or for confirmation, type the password or select **Yes**.
+    > If you are prompted for an administrator password or for confirmation, type the password or select **Yes**.
 
 1. Select **File** > **Add/Remove Snap-in** > **Select Certificates** > **Add** > **Computer Account**, and then select **Finish** to close the window.
 
-1. Find the **Microsoft Exchange Server Auth Certificate** entry in the **Personal** > **Certificate** folder, and verify the expiration date.
+1. Find the **Microsoft Exchange Server Auth Certificate** entry in the **Personal** > **Certificate** folder, and verify the expiration date.

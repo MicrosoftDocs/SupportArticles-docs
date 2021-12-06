@@ -36,6 +36,9 @@ There are many scenarios that can prompt one of these messages. The most common 
 
 ## Resolution Option 1: Run the Check User Access Diagnostic
 
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user access.
 
 Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
@@ -48,7 +51,7 @@ The diagnostic performs a large range of verifications for internal users or gue
   > [!NOTE]
   > Microsoft is seeking to collect feedback on Microsoft 365 diagnostics. If you choose to run the Check User Access diagnostic, you can provide feedback through the following link:
   >
-  > [Check User Access Diagnostic Feedback](https://forms.office.com/r/Ssrw3ivVA9)
+  > [Check User Access Diagnostic Feedback](https://forms.office.com/r/WBdNADgqXB)
 
 ## Resolution Option 2: Select the most relevant option and follow the steps to fix the issue
 

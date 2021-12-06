@@ -22,7 +22,7 @@ appliesto:
 
 ## Summary
 
-The default Microsoft Lync 2013 client presence configuration displays the presence of all the contacts that are added to the Lync client's contact list. Enabling enhanced presence privacy mode for a Lync Server pool, site, or service will affect the presence state of some of the Lync user's contacts. After the enhanced presence privacy mode is enabled for Lync clients, Lync users will have to add other Lync users with whom they want to share their presence to their Lync client's contact list. If this action is not taken, the user's their contacts will show a presence status of **unavailable** in the contact list of the subscribing Lync client. 
+The default Microsoft Lync 2013 client presence configuration displays the presence of all the contacts that are added to the Lync client's contact list. Enabling enhanced presence privacy mode for a Lync Server pool, site, or service will affect the presence state of some of the Lync user's contacts. After the enhanced presence privacy mode is enabled for Lync clients, Lync users will have to add other Lync users with whom they want to share their presence to their Lync client's contact list. If this action is not taken, the user's their contacts will show a presence status of **unavailable** in the contact list of the subscribing Lync client. 
 
 ### How to determine whether enhanced presence privacy mode is enabled
 
@@ -40,7 +40,7 @@ The information that follows presents the steps that you should follow to confir
 1. Click Start, and then click All Programs.   
 2. Start the installed version of the Lync client.   
 
-To confirm that the enhanced presence privacy mode is enabled on the Lync client, follow these steps:
+To confirm that the enhanced presence privacy mode is enabled on the Lync client, follow these steps:
 
 1. On the Lync **Show** menu, click **Tools**, and then click **Options**.   
 2. Click the **Status** option.   
@@ -50,7 +50,7 @@ To confirm that the enhanced presence privacy mode is enabled on the Lync client
    - **I want everyone to be able to see my presence**   
    
 > [!NOTE]
-> The **I only want people in contacts to see my presence** option is the default for the enhanced presence privacy mode policy.
+> The **I only want people in contacts to see my presence** option is the default for the enhanced presence privacy mode policy.
 
 #### Lync Server
 
@@ -66,7 +66,7 @@ Follow these steps on a computer that supports the installation of the Lync Serv
 **On Windows Server 2008**
 
 1. Click **Start**, and then click **All Programs**.   
-2. Click the Microsoft Lync Server folder, and then double-click the **Lync Server Management Shell** option.   
+2. Click the Microsoft Lync Server folder, and then double-click the **Lync Server Management Shell** option.   
 3. In the Lync Server Management Shell command prompt, type the following command:
 
    Get-CsPrivacyConfiguration   
@@ -78,7 +78,7 @@ EnablePrivacyMode : True
 > [!NOTE]
 > The Lync Server privacy configuration policy can be set at the pool, site, or service (User Services) level.
 
-If **EnablePrivacyMode** is set to false for all its displayed instances that are returned from the Get-CsPrivacyConfiguration Windows PowerShell command, the enhanced presence privacy mode is not the cause of the Lync contact presence issue.
+If **EnablePrivacyMode** is set to false for all its displayed instances that are returned from the Get-CsPrivacyConfiguration Windows PowerShell command, the enhanced presence privacy mode is not the cause of the Lync contact presence issue.
 
 For more information about how to use the Lync Server enhanced presence privacy mode policy configurations, see the following documentations:
 

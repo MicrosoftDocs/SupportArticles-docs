@@ -23,8 +23,8 @@ appliesto:
 
 You experience one of the following problems in the Microsoft Office 365 portal:
 
-- When you add a new domain to Office 365, you see a status of **Setup in progress** or **Fix Issues**.   
-- The status of your primary domain changes from **Active** to **Setup in progress** or **Fix Issues**.    
+- When you add a new domain to Office 365, you see a status of **Setup in progress** or **Fix Issues**.   
+- The status of your primary domain changes from **Active** to **Setup in progress** or **Fix Issues**.    
 
 ## Solution 
 
@@ -32,9 +32,9 @@ To resolve this problem, do one of the following, as appropriate for your situat
 
 ### Standard deployment
 
-Click **Setup in progress**, and then complete the remaining steps in the "Add a domain" wizard. This includes adding all the Domain Name System (DNS) records at your DNS hosting provider or domain registrar that are provided in step 3 of the wizard.
+Click **Setup in progress**, and then complete the remaining steps in the "Add a domain" wizard. This includes adding all the Domain Name System (DNS) records at your DNS hosting provider or domain registrar that are provided in step 3 of the wizard.
 
-After step 1 of the wizard is complete, you can use the new domain in Office 365. Any DNS records that you add for Office 365 work correctly even if the status is displayed as Setup in progress. Consider that it may take as long as 72 hours for the DNS changes that you made to propagate across the Internet.
+After step 1 of the wizard is complete, you can use the new domain in Office 365. Any DNS records that you add for Office 365 work correctly even if the status is displayed as Setup in progress. Consider that it may take as long as 72 hours for the DNS changes that you made to propagate across the Internet.
 
 ### Hybrid deployment
 
@@ -42,7 +42,7 @@ If you chose to implement a hybrid deployment for your organization, select the 
 
 ![Screen shot of the hybrid deployment](./media/setup-in-progress-office-365-portal/hybrid-depolyment.jpg)
 
-Doing this prevents the warning messages from being displayed for this domain. If you later choose not to implement a hybrid deployment, clear the **Don't check this domain for incorrect DNS records** check box.
+Doing this prevents the warning messages from being displayed for this domain. If you later choose not to implement a hybrid deployment, clear the **Don't check this domain for incorrect DNS records** check box.
 
 ## More information
 

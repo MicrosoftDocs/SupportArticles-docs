@@ -55,4 +55,4 @@ For more info about Azure Information Protection, go to the following Microsoft 
 
 [Azure Information Protection Documentation](/information-protection/)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

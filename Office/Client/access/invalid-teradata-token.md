@@ -31,9 +31,9 @@ When you use the Teradata ODBC driver 15.10 or a later version to run outer join
 
 ## Cause
 
-This issue occurs because Teradata created a new SQL parser that more closely aligns to the SQL-92 standard and does not support extended SQL (escape clauses).
+This issue occurs because Teradata created a new SQL parser that more closely aligns to the SQL-92 standard and does not support extended SQL (escape clauses).
 
-Access does not use the SQL-92 standard for queries that are created within the Query Editor. This causes queries that use outer joins to fail because they use the {oj} escape clause.
+Access does not use the SQL-92 standard for queries that are created within the Query Editor. This causes queries that use outer joins to fail because they use the {oj} escape clause.
 
 ## Resolution
 
@@ -44,7 +44,7 @@ To fix the issue, use one of the following methods:
 When you use the Teradata ODBC driver (15.10 or a later version), you can use the **EnableLegacyParser** option to continue using the previous SQL parser.
 
 > [!NOTE]
-> Teradata plans to remove the **EnableLegacyParser** option beginning in driver version 18.
+> Teradata plans to remove the **EnableLegacyParser** option beginning in driver version 18.
 
 ### Method 2
 
