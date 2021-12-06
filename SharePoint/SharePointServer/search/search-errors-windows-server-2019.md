@@ -27,7 +27,7 @@ description: Resolves an issue where Windows Server 2019 on SharePoint throws se
 
 When running SharePoint on Windows Server 2019 you see errors when searching, which include a Correlation ID.
 
-:::image type="content" source="media/search-errors-windows-server-2019/search-errors-windows-server-2019-1.png" alt-text="SharePoint search error with Correlation ID.":::
+:::image type="content" source="media/search-errors-windows-server-2019/search-errors-windows-server-2019-1.png" alt-text="Screenshot of the SharePoint search error with Correlation ID.":::
 
 ## Cause
 

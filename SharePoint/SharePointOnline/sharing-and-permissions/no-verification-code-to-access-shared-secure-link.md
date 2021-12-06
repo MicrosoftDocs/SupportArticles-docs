@@ -21,7 +21,7 @@ appliesto:
 
 Assume that you share a [secure link](/sharepoint/what-s-new-in-sharing-in-targeted-release) from SharePoint Online with users outside your organization. When external recipients access the secure link, they are prompted to provide a verification code, as shown in the following screenshot.
 
-![Enter Verification Code](./media/no-verification-code-to-access-shared-secure-link/type-verification-code.png)
+:::image type="content" source="media/no-verification-code-to-access-shared-secure-link/type-verification-code.png" alt-text="Screenshot of the Enter Verification Code dialog." border="false":::
 
 However, users can't respond to the prompt because they don't receive the indicated email message that contains the verification code. In this situation, users should check their Junk Email or Spam folder to locate the verification message.
 

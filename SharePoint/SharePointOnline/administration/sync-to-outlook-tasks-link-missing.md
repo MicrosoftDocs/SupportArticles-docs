@@ -23,11 +23,11 @@ In Microsoft SharePoint Online, the following options are missing:
 
 - The **Sync to Outlook** button in any SharePoint Online tasks list.
    
-  ![sync to outlook](./media/sync-to-outlook-tasks-link-missing/sync-to-outlook.png)
+  :::image type="content" source="media/sync-to-outlook-tasks-link-missing/sync-to-outlook.png" alt-text="Screenshot of the Sync to Outlook button in the SharePoint Online tasks list." border="false":::
 
 - The **Tasks** link in the **About me** section of the user profile page.
 
-  ![Tasks link in the About me section](./media/sync-to-outlook-tasks-link-missing/tasks-link-about-me-section.jpg)
+  :::image type="content" source="media/sync-to-outlook-tasks-link-missing/tasks-link-about-me-section.png" alt-text="Screenshot of the Tasks link in the About me section." border="false":::
 
 - The **Sync to Outlook** button is present on the personal site tasks list but the control is disabled.
 
@@ -37,15 +37,15 @@ If you want to continue using your **Tasks** page, you have to manually restore 
 
 1. In Office 365, click your profile picture, and then click **About me**.
 
-   ![About me in Office 365](./media/sync-to-outlook-tasks-link-missing/about-me.jpg)
+   :::image type="content" source="media/sync-to-outlook-tasks-link-missing/about-me.png" alt-text="Screenshot to select the About me item after selecting the profile picture." border="false":::
 
 1. On the **Quick Launch** bar, click **EDIT LINKS**.
 
-   ![Edit Links link on the Quick Launch bar](./media/sync-to-outlook-tasks-link-missing/edit-link.jpg)
+   :::image type="content" source="media/sync-to-outlook-tasks-link-missing/edit-links.png" alt-text="Screenshot to select the Edit Links option on the Quick Launch bar." border="false":::
 
 1. Click **link**.
 
-   ![Link for adding a link](./media/sync-to-outlook-tasks-link-missing/add-link.png)
+   :::image type="content" source="media/sync-to-outlook-tasks-link-missing/add-link.png" alt-text="Screenshot to click the link option in Office 365." border="false":::
 
 1. In the **Text to display** box, type Tasks.
 
@@ -57,11 +57,11 @@ If you want to continue using your **Tasks** page, you have to manually restore 
     
     `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com/AllTasks.aspx`
     
-    ![Add a link dialog box](./media/sync-to-outlook-tasks-link-missing/add-link-dialog.png)
+    :::image type="content" source="media/sync-to-outlook-tasks-link-missing/add-a-link-example.png" alt-text="Screenshot shows an example in the Add a link dialog box." border="false":::
 
 1. Click **OK**, and then click **Save** to save your changes.
 
-   ![Save button](./media/sync-to-outlook-tasks-link-missing/save-link.png)
+   :::image type="content" source="media/sync-to-outlook-tasks-link-missing/save-link.png" alt-text="Screenshot to select the Save button to save the changes." border="false":::
 
 ## More information
 

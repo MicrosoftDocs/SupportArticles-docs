@@ -37,15 +37,15 @@ After this change takes effect, the following static layout pages will no longer
 
 Before September 14, users who opted out of the Suite Navigation search box experience will continue to see a search box on their layout pages. For team sites, the search box appears over the navigation pane. For communication sites, it appears on the site header.
 
-:::image type="content" source="media/search-box-removed-from-suite-nav/search-box-removed-from-suite-nav-1.png" alt-text="Team site search box.":::
+:::image type="content" source="media/search-box-removed-from-suite-nav/search-box-team-site.png" alt-text="Screenshot of the search box on team site page.":::
 
-:::image type="content" source="media/search-box-removed-from-suite-nav/search-box-removed-from-suite-nav-2.png" alt-text="Communication site search box.":::
+:::image type="content" source="media/search-box-removed-from-suite-nav/search-box-communication-site.png" alt-text="Screenshot of the search box on communication site page.":::
 
 Starting on September 14, the Suite Navigation search box experience will no longer be provided as part of modern layout pages.
  
-:::image type="content" source="media/search-box-removed-from-suite-nav/search-box-removed-from-suite-nav-3.png" alt-text="Team site without search box.":::
+:::image type="content" source="media/search-box-removed-from-suite-nav/team-site-without-search-box.png" alt-text="Screenshot of a team site page without search box.":::
 
-:::image type="content" source="media/search-box-removed-from-suite-nav/search-box-removed-from-suite-nav-4.png" alt-text="Commmuniation site without search box.":::
+:::image type="content" source="media/search-box-removed-from-suite-nav/communication-site-without-search-box.png" alt-text="Screenshot of a communication site page without search box.":::
 
 Note that future static layouts released in SharePoint will also have the search box disabled if the Suite Navigation search box experience is disabled. 
 
