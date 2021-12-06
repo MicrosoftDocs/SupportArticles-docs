@@ -56,11 +56,11 @@ To configure the Group Policy setting, follow these steps:
 
 2. Expand **Computer Configuration**, expand **Administrative Templates**, and then select **System**. The screenshot for this step is listed below.
 
-    :::image type="content" source="media/dotnet-framework-35-installation-error/system-option.svg" alt-text="Screenshot of the System group policy setting window." border="false":::
+    :::image type="content" source="media/dotnet-framework-35-installation-error/system-option-update.svg" alt-text="Screenshot of the System group policy setting window." border="false":::
 
 3. Open the **Specify settings for optional component installation and component repair** Group Policy setting, and then select **Enabled**. The screenshot for this step is listed below.
 
-    :::image type="content" source="media/dotnet-framework-35-installation-error/enabled-option.svg" alt-text="Screenshot of the Enabled option of the Specify settings for optional component installation and component repair item." border="false":::
+    :::image type="content" source="media/dotnet-framework-35-installation-error/enabled-option-update.svg" alt-text="Screenshot of the Enabled option of the Specify settings for optional component installation and component repair item." border="false":::
 
 4. If you want to specify an alternative source file, in the **Alternate source file path** box, specify a fully qualified path of a shared folder that contains the contents of the `\sources\sxs` folder from the installation media.  
 
