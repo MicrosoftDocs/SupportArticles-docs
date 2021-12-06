@@ -10,16 +10,6 @@ ms.reviewer: jarrettr
 
 This guide helps you understand and troubleshoot VPN profile issues that may occur when you use Microsoft Intune.
 
-This guide is divided into the following sections:
-
-- [Overview of VPN profiles](#overview-of-vpn-profiles)
-- [How to create VPN profiles](#how-to-create-vpn-profiles)
-- [How to assign VPN profiles](#how-to-assign-vpn-profiles)
-- [What successful VPN profiles look like on Android, iOS, and Windows devices](#what-successful-vpn-profiles-look-like)
-- [Company Portal logs of successful VPN profile deployment](#company-portal-logs-of-successful-vpn-profile-deployment)
-- [Troubleshooting common issues](#troubleshooting-common-issues)
-- [How to view logs in the AnyConnect app](#how-to-view-logs-in-the-anyconnect-app)
-
 The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) certificate authentication for profiles. The examples also assume that the Trusted Root and SCEP profiles work correctly on the device. In the examples, the Trusted Root and SCEP profiles are named as follows:
 
 |Profile types|Android|iOS|Windows|
