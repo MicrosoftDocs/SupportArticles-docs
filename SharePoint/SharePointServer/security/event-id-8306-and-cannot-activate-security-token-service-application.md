@@ -17,7 +17,7 @@ appliesto:
 
 # Event ID 8306 when you activate Security Token Service Application
 
-## Symptoms  
+## Symptoms
 
 In SharePoint Foundation 2010, you may experience one or more of the following symptoms:  
 

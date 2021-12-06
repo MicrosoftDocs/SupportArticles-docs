@@ -31,7 +31,7 @@ The model command text becomes unsynchronized with what Excel has for the comman
 
 ## Workaround
 
-To resolve this issue, use Windows authentication to the SQL database and don't save the password to a database. Storing a login ID and password to a database is exceptionally not secure because when the workbook is passed around, the password is visible to anyone who opens the workbook.
+To work around this issue, use Windows authentication to the SQL database and don't save the password to a database. Storing a login ID and password to a database is exceptionally not secure because when the workbook is passed around, the password is visible to anyone who opens the workbook.
 
 If you must use SQL authentication, follow these steps if you have SharePoint and PowerPivot for SharePoint:
 

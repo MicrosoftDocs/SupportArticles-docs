@@ -89,7 +89,7 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
     workbooks?)
 
   - Set "All Documents" to the default view in the PowerPivot Gallery:
-    
+
     1.  Navigate to the list a site owner.    
     2.  Click "Library" \> "Library Settings" from the ribbon menu.  
         ![SharePoint menu showing Library Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)    
