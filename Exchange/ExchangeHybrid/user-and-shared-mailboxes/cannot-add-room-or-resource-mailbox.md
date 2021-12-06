@@ -56,7 +56,7 @@ Add the mailbox as an additional email account. To do this, follow these steps:
 
 4. On the Auto Account Setup page, enter the Room mailbox name, e-mail address, and your account password.
 
-    :::image type="content" source="media/cannot-add-room-or-resource-mailbox/add-account.png" alt-text="Screenshot to enter the account information in the Auto Account Setup page.":::
+    :::image type="content" source="media/cannot-add-room-or-resource-mailbox/add-account.png" alt-text="Screenshot to enter the account information on the Auto Account Setup page.":::
 
 5. Click **Next**.
 
