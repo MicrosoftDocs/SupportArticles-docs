@@ -23,7 +23,7 @@ When you use Skype for Business Online (formerly Lync Online), you receive the f
 
 **Your subscription has expired.**
 
-:::image type="content" source="./media/your-subscription-has-expired/expired-message.png" alt-text="Screenshot that shows the Your subscription has expired message." border="false"":::
+:::image type="content" source="./media/your-subscription-has-expired/expired-message.png" alt-text="Screenshot that shows the Your subscription has expired message." border="false":::
 
 ## Solution 
 
