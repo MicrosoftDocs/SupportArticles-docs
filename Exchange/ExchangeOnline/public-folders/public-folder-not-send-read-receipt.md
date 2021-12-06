@@ -19,19 +19,19 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Read receipt isn't sent from mail-enabled public folder but from public folder mailbox
+# Read receipts are sent from a public folder mailbox instead of the public folder
 
 ## Symptoms
 
-A mail-enabled public folder has the following settings:
+To enable read receipts sent from a mail-enabled public folder, you configure the following settings:
 
-- Set the `PerUserReadStateEnabled` parameter value to `False` to remove read or unread tracking on a per-user basis.
-- Set the public folder to always send a read receipt:
+- Set the `PerUserReadStateEnabled` parameter of the public folder to `False` to remove read or unread tracking on a per-user basis.
+- Enable sending of read receipts in the email client:
 
     - In Outlook, select the **Always send a read receipt** option.
     - In Outlook on the web, select the **Always send a response** option.
 
-When you send an email that requests a read receipt to the mail-enabled public folder, you don't receive the read receipt from the public folder. Instead, the read receipt is sent from the public folder mailbox.
+However, when you send an email that requests a read receipt to the public folder, you don't receive the read receipt from the public folder. Instead, the read receipt is sent from the public folder mailbox.
 
 For example, you send an email to a mail-enabled public folder (named **PF2**).
 
