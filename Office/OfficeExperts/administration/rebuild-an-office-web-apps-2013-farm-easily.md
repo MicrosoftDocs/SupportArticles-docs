@@ -1,4 +1,4 @@
-﻿---
+---
 title: Rebuild an Microsoft Office Web Apps server farm easily
 description: Describes how to rebuild Microsoft Office Web Apps server farm.
 author: helenclu
@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - Office Web Apps
 ---
+
 # Rebuild an Microsoft Office Web Apps server farm easily
 
 This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.

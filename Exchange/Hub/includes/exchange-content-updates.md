@@ -2,6 +2,26 @@
 
 
 
+## Week of November 29, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 12/1/2021 | Exchange Online Message Trace Diagnostic | removed |
+| 12/1/2021 | [Moving mailboxes to Exchange Server 2010 isn't supported](/exchange/troubleshoot/move-mailboxes/cannot-migrate-to-exchange-2010) | added |
+| 12/2/2021 | [Can't migrate on-premises primary mailbox with cloud-based archive to Exchange Online](/exchange/troubleshoot/move-mailboxes/cannot-migrate-on-premises-primary-mailbox) | added |
+| 12/3/2021 | [Delegates not listed correctly after migration](/exchange/troubleshoot/send-emails/delegates-not-listed-correctly-in-outlook-after-migration) | modified |
+| 12/3/2021 | [Overview of delegation in an Office 365 hybrid environment](/exchange/troubleshoot/send-emails/overview-delegation-office-365-hybrid) | modified |
+| 12/3/2021 | [Public folder permissions and settings don't propagate to subfolders in the Exchange admin center (EAC)](/exchange/troubleshoot/public-folders/permissions-settings-not-propagate-eac) | modified |
+| 12/3/2021 | [Incorrect SourcePFPrimaryMailboxGuid causes failed public folder migration](/exchange/troubleshoot/public-folders/pf-migration-fails-sourcepfprimarymailboxguid) | modified |
+| 12/3/2021 | [Restored deleted public folders from dumpster cause a migration batch failure](/exchange/troubleshoot/public-folders/public-folder-migration-batch-error) | modified |
+| 12/3/2021 | [Senders do not receive Out of Office notifications](/exchange/troubleshoot/send-emails/senders-not-receiving-out-of-office-notifications) | modified |
+| 12/3/2021 | [Migration batch fails with error message "No active public folder mailboxes were found" at Complete-MigrationBatch command](/exchange/troubleshoot/public-folders/migrationbatch-fails-no-public-folder-mailboxes) | modified |
+| 12/3/2021 | [Exchange public folder migration stops at 95%](/exchange/troubleshoot/public-folders/public-folder-migration-fails) | modified |
+| 12/3/2021 | [Troubleshoot public folder replication](/exchange/troubleshoot/public-folders/troubleshoot-public-folder-replication) | modified |
+
+
 ## Week of November 22, 2021
 
 

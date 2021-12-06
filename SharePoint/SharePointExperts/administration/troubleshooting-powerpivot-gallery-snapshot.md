@@ -1,4 +1,4 @@
-﻿---
+---
 title: PowerPivot for SharePoint 2016 Gallery Snapshots Fail for SSL Host Header Sites
 description: Describes an issue in which PowerPivot Gallery Snapshots Fail for SSL Host Header Sites.
 author: helenclu  
@@ -23,7 +23,6 @@ If you have been following the multiple threads on issues and changes to the Pow
 
 This issue was discovered back in December 2016 during testing and again in a well-researched blog post by [Brian Laws](https://social.technet.microsoft.com/profile/Brian+H+Laws)
 (<https://info.summit7systems.com/blog/bug-report-powerpivot-for-sharepoint-2016-thumbnails-not-generating>) in February of 2017.
-
 
 ![Display of the issue in PowerPivot Gallery](media/troubleshooting-powerpivot-gallery-snapshot/issue.png)
 
@@ -90,7 +89,7 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
     workbooks?)
 
   - Set "All Documents" to the default view in the PowerPivot Gallery:
-    
+
     1.  Navigate to the list a site owner.    
     2.  Click "Library" \> "Library Settings" from the ribbon menu.  
         ![SharePoint menu showing Library Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)    
