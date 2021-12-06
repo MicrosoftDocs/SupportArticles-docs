@@ -1,4 +1,4 @@
-﻿---
+---
 title: Office doesn't render a custom DUO API multifactor authentication login page
 description: Describes an issue in which Office application doesn't render a custom DUO API multifactor authentication login page.
 author: helenclu
