@@ -1,5 +1,6 @@
 ---
 title: A custom HTML login page doesn't render correctly in an Office application
+description: Describes an issue in which a custom HTML login page doesn't render correctly in an Office application, and provides a workaround.
 author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
@@ -31,15 +32,19 @@ Microsoft 365 Apps for enterprise and Office 2016 use Internet Explorer document
 **Method 1: Use a different document mode for the custom HTML login page**
 
 To make Office use a different document mode for the custom HTML login page, use the following directive in the custom HTML login page:
+
 ```html
 <meta http-equiv="x-ua-compatible" content="IE=9" >
 ```
+
 **Method 2: Stay the correct size and add scroll bars if the page is bigger than the Office Sign In window**
 
 To make the custom HTML login page stay the correct size and display scroll bars, use the code like the following:
+
 ```html
 <DIV STYLE="width: 460px; height: 530px; overflow: scroll">
 ```
+
 > [!NOTE]
 > If you need to dynamically change the style, you can change the token **MSIE 7.0** in the user-agent string.
 

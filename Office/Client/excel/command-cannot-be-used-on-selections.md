@@ -1,5 +1,6 @@
 ---
 title: That command cannot be used on multiple selections
+description: Describes an issue that occurs when you try to copy nonadjacent cell or range selections.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
