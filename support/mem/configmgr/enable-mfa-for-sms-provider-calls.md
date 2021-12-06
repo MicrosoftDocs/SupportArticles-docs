@@ -58,23 +58,25 @@ To enable MFA, follow these steps:
 
 1. select **Execute!**, and then select **Dismiss**.
 
-### PowerShell examples
+## PowerShell cmdlets to set the AuthenticationLevel and ExceptionList properties
 
-You can also use the following PowerShell examples to set the AuthenticationLevel and modify the ExceptionList.
-Retrieve the SID of Active Directory users and groups with the Get-AdUser and Get-ADGroup cmdlets if needed. 
+You can also run PowerShell cmdlets to set the `AuthenticationLevel` and `ExceptionList` properties. For examples, see the following two PowerShell cmdlets.
 
-#### Example 1 Set the AuthenticationLevel and add two SIDs to the ExceptionList
-     > [!NOTE]
-     > The command will overwrite the ExceptionList and will only add the entroes provides in the script. 
-  ```powershell
-    [array]$ExceptionList=@("S-1-5-21-<domain-SID-part>-<user/group-SID-part>","S-1-5-21-<domain-SID-part>-<user/group-SID-part>")
-    [uint32]$AuthenticationLevel=<desired authentication level value>
-    Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
-  ```
+> [!NOTE]
+> To get the security identifier (SID) of Active Directory users and groups, run the [Get-AdUser](/powershell/module/activedirectory/get-aduser) and [Get-ADGroup](/powershell/module/activedirectory/get-adgroup) cmdlets.
 
-#### Example 2 Set the AuthenticationLevel and remove any entries from the ExceptionList
- ```powershell
-    [array]$ExceptionList=@()
-    [uint32]$AuthenticationLevel=<desired authentication level value>
-    Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
-  ```
+#### Example 1: Set the authentication level and add two SIDs to the exception list
+
+```powershell
+[array]$ExceptionList=@("S-1-5-21-<domain-SID-part>-<user/group-SID-part>","S-1-5-21-<domain-SID-part>-<user/group-SID-part>")
+[uint32]$AuthenticationLevel=<Authentication level value>
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+```
+
+#### Example 2: Set the authentication level and remove any entries from the exception list
+
+```powershell
+[array]$ExceptionList=@()
+[uint32]$AuthenticationLevel=<Authentication level value>
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+```
