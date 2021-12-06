@@ -1,4 +1,4 @@
-﻿---
+---
 title: Office doesn't render a custom DUO API multifactor authentication login page
 description: Describes an issue in which Office application doesn't render a custom DUO API multifactor authentication login page.
 author: helenclu
@@ -43,7 +43,7 @@ Because data isn't based on HTTPS, Office can't allow such navigation to occur.
 
 ## Workaround
 
-To resolve this issue, specify the src attribute for the Iframe element as follows. Then the "about:blank" page will no longer load and this issue will no longer occur.
+To work around this issue, specify the src attribute for the Iframe element as follows. Then the "about:blank" page will no longer load and this issue will no longer occur.
 
 ```html
 <iframe id="duo_iframe" src="images/TempImage.gif" width="100%" height="350px" frameborder="0">
