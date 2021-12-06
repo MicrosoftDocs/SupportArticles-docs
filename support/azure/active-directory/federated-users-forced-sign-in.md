@@ -97,6 +97,8 @@ Azure AD Connect implements the synchronization of **PwdLastSet** attribute by u
 
 In the following screen shot, you can see how the attribute flow is implemented in both synchronization rules by using the Azure AD Connect Synchronization Rules Editor.
 
+:::image type="content" source="media/federated-users-forced-sign-in/synchronization-rules.png" alt-text="Screenshot of the Azure AD Connect Synchronization Rules Editor.":::
+
 Customers may disable the synchronization of **PwdLastSet** attribute by disabling these out-of-box sync rules and replacing them with custom sync rules. To enable synchronization of the **PwdLastSet** attribute, consider re-enabling these out-of-box sync rules or implementing the same attribute flow in existing custom sync rules.
 
 For more information about how to implement and verify sync rule changes, see  to article Azure AD Connect sync: How to make a change to the default configuration.

@@ -20,6 +20,8 @@ _Original product version:_&nbsp; Azure Active Directory, Windows Server 2019
 
 You experience one or more of various symptoms, such as password hash sync failures or receiving "staging-error" discovery errors during the import cycle (shown in the following screenshot).
 
+:::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/sync-service-manager-error.png" alt-text="Screenshot of Synchronization Service Manager that shows a staging error.":::
+
 When this problem occurs, Event ID 6301 is logged in the server Application log, as follows:
 
 >Log Name: Application<br>
@@ -56,6 +58,8 @@ For more information about table-valued parameters, see [Use Table-Valued Parame
 
 This problem is caused by incompatible language settings for programs that do not support Unicode.
 
+:::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/region-settings-unicode.png" alt-text="Screenshot of region language settings with the option selected to use Unicode U T F 8 for worldwide language support." border="false":::
+
 The service account defaults to UTF-8 for worldwide language support when it is enabled. The LocalDB database version in Windows Server 2019 does not support this format.
 
 ## Resolution
@@ -66,13 +70,19 @@ To change the setting, follow these steps:
 
 1. On the Azure AD Connect server, open Control Panel, and then select **Clock, Language and Region**.  
 
+    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/control-panel-clock-language.png" alt-text="Screenshot of Control Panel with Clock, Language, and Region selected.":::
+
 2. Select **Region**.
+
+    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/control-panel-region.png" alt-text="Screenshot of Clock, Language, and Region page with Region selected.":::
 
 3. Select the **Administrative** tab, and then select **Change System locale**.
 
-   :::image type="content" source="media/tvp-errors-aadconnect-ws19/administrative-tab.png" alt-text="Screenshot of the Administrative tab of the Region dialog box with the Language for Non-Unicode Programs area highlighted.":::
+   :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/administrative-tab.png" alt-text="Screenshot of the Administrative tab of the Region dialog box with the Language for Non-Unicode Programs area highlighted." border="false":::
 
 4. If the **Use Unicode UTF-8 for worldwide language support** setting is enabled, clear it.
+
+    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/clear-region-settings-unicode.png" alt-text="Screenshot of region language settings with the option unselected to use Unicode U T F 8 for worldwide language support." border="false":::
 
 5. Select **OK**, and then restart the server.
 
