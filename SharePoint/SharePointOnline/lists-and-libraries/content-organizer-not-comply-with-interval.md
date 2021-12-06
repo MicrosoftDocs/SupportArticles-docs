@@ -26,7 +26,7 @@ In Microsoft SharePoint 2013, SharePoint 2010, or SharePoint Online, you use the
 
 - Content is left in the Drop Off Library.
 
-   ![rule managers](./media/content-organizer-not-comply-with-interval/rule-managers.jpg)
+   :::image type="content" source="media/content-organizer-not-comply-with-interval/rule-managers.png" alt-text="Screenshot of Rule Managers page. E-mail rule managers when submissions do not match a rule and when content is left in the Drop Off Library options are selected.":::
 
 Although an email message is sent to the specified rule manager (or managers) when the item does not match any existing rules, the message may not be sent at the interval that's specified by the **Number of days to wait before sending an e-mail** setting.
 

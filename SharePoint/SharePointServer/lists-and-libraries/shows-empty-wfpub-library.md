@@ -25,7 +25,7 @@ Deactivating and then reactivating the site collection feature **Workflows** doe
 
 1. Open the root website of the site collection in SharePoint Designer 2013.
 2. Under **Site Objects**, select **All Files** > **_catalogs** > **wfpub**.   
-   ![The wfpub folder under SharePoint site objects](./media/shows-empty-wfpub-library/wfpub-folder.png)       
+   :::image type="content" source="media/shows-empty-wfpub-library/wfpub-folder.png" alt-text="Screenshot of the wfpub folder under SharePoint site objects." border="false":::       
 
 ## Resolution  
 
@@ -35,12 +35,13 @@ To resolve this issue, follow these steps:
 2. Under **Site Objects**, select **Workflows**.    
 3. In the **New** section of the **Workflows** ribbon, select **Reusable Workflow**.    
 4. On the **Create Reusable Workflow** form, enter the name **Repair2010**. For **Platform Type**, select **SharePoint 2010 Workflow**, and then select **OK**.   
-   ![Workflow name is Repair2010 and Platform Type is SharePoint 2010 Workflow on the Create Reusable Workflow form](./media/shows-empty-wfpub-library/create-reusable-workflow.png)     
-5. Add a single "Log to history list" action to "Step 1" of the workflow.   
-   ![Log your workflow name to the workflow history list under step 1](./media/shows-empty-wfpub-library/log-to-history-list.png)     
-6. In the **Save** section of the **Workflow** ribbon, select **Publish**.    
-7. In the **Manage** section of the **Workflow** ribbon, select **Publish Globally**. In the confirmation dialog box that appears, select **OK**.    
-8. In a web browser, locate the root website of the site collection, and then access **Site Settings **> **Site Collection Features**. Then, toggle the **Workflows** feature:
+   :::image type="content" source="media/shows-empty-wfpub-library/create-reusable-workflow.png" alt-text="Screenshot of the Create Reusable Workflow form when Workflow name is set to Repair2010 and Platform Type is set to SharePoint 2010 Workflow.":::     
+5. Add a single "Log to history list" action to "Step 1" of the workflow.
+   
+   :::image type="content" source="media/shows-empty-wfpub-library/log-to-history-list.png" alt-text="Screenshot shows Log your workflow name to the workflow history list is added under Step 1.":::     
+1. In the **Save** section of the **Workflow** ribbon, select **Publish**.    
+1. In the **Manage** section of the **Workflow** ribbon, select **Publish Globally**. In the confirmation dialog box that appears, select **OK**.    
+1. In a web browser, locate the root website of the site collection, and then access **Site Settings **> **Site Collection Features**. Then, toggle the **Workflows** feature:
    - If the feature is Activated, click **Deactivate**. Then, select **Activate**.     
    - If the feature is Deactivated, select **Activate**.       
 
