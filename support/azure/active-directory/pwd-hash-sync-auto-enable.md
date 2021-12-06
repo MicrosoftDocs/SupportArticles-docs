@@ -58,8 +58,6 @@ To resolve this issue, follow these steps:
 
 1. Run Azure AD Connect, and then select **View current configuration**. In the details pane, check whether **Password synchronization** is **enabled** on your tenant.
 
-   :::image type="content" source="./media/password-hash-sync-auto-enable-pass-through-auth/4051644_en_1.png" alt-text="Screenshot of checking Password synchronization status.":::
-
 2. Disable the **Password synchronization** feature. To do this, follow these steps:
 
    1. Run Azure AD Connect, and then select **Configure**.
