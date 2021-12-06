@@ -28,7 +28,7 @@ Starting with Windows 10, version 1803 and newer based device or computer, you c
 >
 > The error is 0x80071779.
 
-![Error message](./media/cannot-uninstall-client-for-microsoft-networks/error-0x80071779.png)
+:::image type="content" source="media/cannot-uninstall-client-for-microsoft-networks/error-0x80071779.png" alt-text="Screenshot of the 0x80071779 error message.":::
 
 ## Cause
 
