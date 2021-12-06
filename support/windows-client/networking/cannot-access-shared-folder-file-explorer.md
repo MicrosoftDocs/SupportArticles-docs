@@ -33,7 +33,7 @@ _Applies to:_ &nbsp; Windows 10
     2. Select **Programs** > **Programs and Features** > **Turn Windows features on or off** > **SMB 1.0/CIFS File Sharing Support**.
     3. Check **SMB 1.0/CIFS Client**, and then press Enter.
 
-        :::image type="content" source="media/cannot-access-shared-folder-file-explorer/smb-client-feature-on.png" alt-text="Screenshot of the SMB 1.0/CIFS Client box under the  SMB 1.0/CIFS File Sharing Support item in the Windows Features dialog." border="false":::
+        :::image type="content" source="media/cannot-access-shared-folder-file-explorer/smb-client-feature-on.png" alt-text="Screenshot of the SMB 1.0/CIFS Client feature under the SMB 1.0/CIFS File Sharing Support item in the Windows Features dialog." border="false":::
 - Turn on network discovery and file and printer sharing options by following these steps:
     1. Open **Control Panel**.
     2. Select **Network and Internet** > **Network and Sharing Center** > **Advanced sharing settings**.
@@ -41,7 +41,7 @@ _Applies to:_ &nbsp; Windows 10
     4. Select **Turn on file and printer sharing** under **Private**.
     5. Select **Save changes**.
 
-        :::image type="content" source="media/cannot-access-shared-folder-file-explorer/turn-on-network-discovery-share-settings.png" alt-text="Screenshot of the Turn on network discovery and the Turn on file and printer sharing option in Advanced sharing settings.":::
+        :::image type="content" source="media/cannot-access-shared-folder-file-explorer/turn-on-network-discovery-share-settings.png" alt-text="Screenshot of the Turn on network discovery option and the Turn on file and printer sharing option in Advanced sharing settings.":::
 - Set the startup type of specified services to **Automatic** to make the computer visible on the network. Here's how to proceed:
     1. Go to Start.
     2. Go to Search, enter the word *Services*, and press Enter.
@@ -56,7 +56,7 @@ You may receive these error messages:
 
 ## You do not have permission to access \\\\\<IPAddress or Hostname>
 
-:::image type="content" source="media/cannot-access-shared-folder-file-explorer/error-1.png" alt-text="Screenshot of the shared folder error message 1." border="false":::
+:::image type="content" source="media/cannot-access-shared-folder-file-explorer/do-not-have-permission-access-error.png" alt-text="Screenshot of You do not have permission to access the shared folder error." border="false":::
 
 ### Resolution
 
@@ -89,7 +89,7 @@ You may receive these error messages:
 
 ## You can't access this shared folder because your organization's security policies block unauthenticated guest access
 
-:::image type="content" source="media/cannot-access-shared-folder-file-explorer/error-2.png" alt-text="Screenshot of the shared folder error message 2.":::
+:::image type="content" source="media/cannot-access-shared-folder-file-explorer/cannot-access-this-shared-folder-error.png" alt-text="Screenshot of You can't access this shared folder error.":::
 
 ### Resolution
 
@@ -116,7 +116,7 @@ You can enable the guest access from your computer by using one of the following
 
 ## Error code: 0x80004005. Unspecified error
 
-:::image type="content" source="media/cannot-access-shared-folder-file-explorer/error-3.png" alt-text="Screenshot of the shared folder error message 3.":::
+:::image type="content" source="media/cannot-access-shared-folder-file-explorer/error-0x80004005.png" alt-text="Screenshot of the error code 0x80004005.":::
 
 Instead of obtaining an IP address automatically, specify an IP address. Follow these instructions:
 

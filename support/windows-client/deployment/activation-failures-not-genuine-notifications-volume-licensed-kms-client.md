@@ -55,7 +55,7 @@ For Windows editions that experience activation and "not genuine" errors that ar
 
     > Windows is running within the non-genuine notification period. Run 'slui.exe' to go online and validate Windows.
 
-    :::image type="content" source="media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/activation-failure.png" alt-text="Screenshot of the message it returns after using the command.":::
+    :::image type="content" source="media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/activation-failure.png" alt-text="Screenshot of the message that returns after using the command.":::
 
 5. The following events are logged in the event log.
 

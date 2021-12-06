@@ -38,7 +38,7 @@ Restore points after you upgrade to Windows 10:
 
 Querying the System Restore via PowerShell:  
 
-:::image type="content" source="media/system-restore-points-disabled/query-system-restore.png" alt-text="Screenshot of the output of the querying System Restore command in Windows PowerShell.":::
+:::image type="content" source="media/system-restore-points-disabled/query-system-restore.png" alt-text="Screenshot of the output of the querying System Restore command in Windows PowerShell." border="false":::
 
 ## Cause
 

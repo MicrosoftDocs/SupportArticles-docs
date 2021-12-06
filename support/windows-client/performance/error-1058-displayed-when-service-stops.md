@@ -37,7 +37,7 @@ This issue can occur if the service is disabled or if the service is disabled fo
 1. Click **Start**, search for *Services*, and then click **Services** in the search result.
 2. Scroll until you find the service, and then double-click the service.
 
-   :::image type="content" source="media/error-1058-displayed-when-service-stops/service-properties-win10.png" alt-text="Screenshot of Startup type option in the General tab of the Routing and Remote Access Properties (Local Computer) dialog box." border="false":::
+   :::image type="content" source="media/error-1058-displayed-when-service-stops/service-properties-win10.png" alt-text="Screenshot of Startup type option under the General tab of the Routing and Remote Access Properties (Local Computer) dialog box." border="false":::
 
 3. If the service is disabled, click the **Startup type** list, and then select an option other than **Disabled**.
 4. Click **Apply**.
