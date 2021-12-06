@@ -31,7 +31,7 @@ Consider the following scenario:
 In this scenario, the EUDC editor returns the following message:  
 > There is no active TextService that can link to Eudc.
 
-:::image type="content" source="./media/cannot-link-textservice-eudcedit/no-active-textservice.png" alt-text="Private Character Editor." border="false":::
+:::image type="content" source="media/cannot-link-textservice-eudcedit/no-active-textservice.png" alt-text="Screenshot of the error message in Private Character Editor." border="false":::
 
 ## Cause
 
@@ -45,19 +45,19 @@ Turn on the Compatibility option to revert to the previous version Microsoft Bop
 
 1. On the **Settings** page, select **Language**.
 
-    :::image type="content" source="./media/cannot-link-textservice-eudcedit/language.png" alt-text="Language image." border="false":::
+    :::image type="content" source="media/cannot-link-textservice-eudcedit/language.png" alt-text="Screenshot of the Options in the Chinese (Traditional, Taiwan) item under Language page of Settings.":::
 
 2. Select **Options** for Microsoft Bopomofo (**Chinese (Traditional, Taiwan)**).
 
-    :::image type="content" source="./media/cannot-link-textservice-eudcedit/language-options.png" alt-text="Language options image." border="false":::
+    :::image type="content" source="media/cannot-link-textservice-eudcedit/language-options.png" alt-text="Screenshot of the Microsoft Bopomofo option in the Language options: Chinese (Traditional, Taiwan) page.":::
 
 3. Select **General**.
 
-    :::image type="content" source="./media/cannot-link-textservice-eudcedit/bopomofo.png" alt-text="Bopomofo image." border="false":::
+    :::image type="content" source="media/cannot-link-textservice-eudcedit/bopomofo.png" alt-text="Screenshot of the General option in the Microsoft Bopomofo page.":::
 
 4. Turn on the "Use previous version of Microsoft Bopomofo" option.
 
-    :::image type="content" source="./media/cannot-link-textservice-eudcedit/previous-bopomofo.png" alt-text="Previous bopomofo image." border="false":::
+    :::image type="content" source="media/cannot-link-textservice-eudcedit/previous-bopomofo.png" alt-text="Screenshot of the Use previous version of Microsoft Bopomofo option in the General page.":::
 
 ### Method 2
 
@@ -65,7 +65,7 @@ Revert to the previous version of Microsoft Bopomofo by using the following Grou
   
 **User Configuration** > **Administrative Templates** > **Windows Components** > **IME** > **Configure Traditional Chinese IME version**
 
-:::image type="content" source="./media/cannot-link-textservice-eudcedit/ime-version.png" alt-text="Group policy." border="false":::
+:::image type="content" source="media/cannot-link-textservice-eudcedit/ime-version.png" alt-text="Screenshot of the IME group policy setting window." border="false":::
 
 > [!Note]
 > This policy was introduced in Windows 10, version 2004.
