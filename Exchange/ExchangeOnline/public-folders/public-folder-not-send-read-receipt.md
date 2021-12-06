@@ -19,24 +19,23 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Read receipt isn't sent from mail-enabled public folder
+# Read receipt isn't sent from mail-enabled public folder but from public folder mailbox
 
 ## Symptoms
 
 A mail-enabled public folder has the following settings:
 
-- The `PerUserReadStateEnabled` parameter value is set to `False` to remove read or unread tracking on a per-user basis.
-- The **Always send a read receipt** option in Outlook, or the **Always send a response** option in Outlook on the web is selected.
+- Set the `PerUserReadStateEnabled` parameter value to `False` to remove read or unread tracking on a per-user basis.
+- Set the public folder to always send a read receipt:
 
-When you send an email that requests a read receipt to the mail-enabled public folder, you don't receive the read receipt from the public folder, but from the public folder mailbox that is hosting the public folder.
+    - In Outlook, select the **Always send a read receipt** option.
+    - In Outlook on the web, select the **Always send a response** option.
 
-For example, you send an email that requests a read receipt to a mail-enabled public folder (named **PF2**).
+When you send an email that requests a read receipt to the mail-enabled public folder, you don't receive the read receipt from the public folder. Instead, the read receipt is sent from the public folder mailbox.
 
-:::image type="content" source="media/public-folder-not-send-read-receipt/public-folder-name.png" alt-text="Screenshot of an email message that requests a read receipt.":::
+For example, you send an email to a mail-enabled public folder (named **PF2**).
 
-However, you receive the read receipt from the public folder mailbox (named **MSExchangepf2**) that is hosting the public folder.
-
-:::image type="content" source="media/public-folder-not-send-read-receipt/read-receipt-from-mailbox.png" alt-text="Screenshot of a read receipt that comes from the public folder mailbox.":::
+However, you receive the read receipt from the public folder mailbox (named **MSExchangepf2**).
 
 ## Status
 
