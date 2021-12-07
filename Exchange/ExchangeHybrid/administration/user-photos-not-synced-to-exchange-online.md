@@ -32,7 +32,6 @@ Although the `thumbnailPhoto` attribute is synced from the on-premises environme
 
 > [!NOTE]
 > - The `thumbnailPhoto` attribute can store a user photo as large as 100 kilobytes (KB).
-> - The `thumbnailPhoto` attribute is synced only one time between Azure AD and Exchange Online. Any later changes to the attribute from the on-premises environment are not synced to the Exchange Online mailbox.
 > - Exchange Online accepts only a photo that's no larger than 10 KB from Azure AD.
 
 ## Resolution
