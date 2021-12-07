@@ -35,6 +35,8 @@ However, when you send an email that requests a read receipt to the public folde
 
 For example, you send an email to a mail-enabled public folder (named **PF2**).
 
+:::image type="content" source="media/public-folder-not-send-read-receipt/request-read-receipt.png" alt-text="Screenshot of an email to a mail-enabled public folder that requests a read receipt.":::
+
 However, you receive the read receipt from the public folder mailbox (named **MSExchangepf2**).
 
 :::image type="content" source="media/public-folder-not-send-read-receipt/read-receipt-from-mailbox.png" alt-text="Screenshot of a read receipt that comes from the public folder mailbox.":::
