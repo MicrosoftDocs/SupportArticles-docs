@@ -43,14 +43,14 @@ Get-Mailbox <Account> -IncludeInactive
 
 When the license is removed from a mailbox without following other deprovisioning steps, this may leave the mailbox in a hard-deleted state. In order to recover the mailbox, the user must relicense the Azure user object. That will reconnect the mailbox as long as it's within 30 days from the disconnect date.
 
-:::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/assign-license-page.png" alt-text="A screenshot of the Assign License page" border="false":::
+:::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/assign-license-page.png" alt-text="Screenshot of the Assign License page in Microsoft 365.":::
 
 If the on-premises account no longer exists and is not listed in the **Active Users** section of the Microsoft 365 admin center, and the account was deleted less than 30 days earlier, follow these steps:
 
 1. Sign in to the Microsoft 365 admin center.
 2. Locate **Users** > **Deleted Users**.
 
-   :::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/deleted-users-field.png" alt-text="A screenshot of the Deleted Users field":::
+   :::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/deleted-users-field.png" alt-text="Screenshot of the Deleted Users field under the Users tab.":::
 
 3. Search for the user, and then select the account object.
 4. Select the **Restore** option.
@@ -58,7 +58,7 @@ If the on-premises account no longer exists and is not listed in the **Active Us
     > [!NOTE]
     > The user becomes an active user. The **Sync Type** is now listed as **In cloud** instead of **Synced with Active Directory**.
 
-    :::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/sync-type-page.png" alt-text="A screenshot of the Sync Type page" border="false":::
+    :::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/sync-type.png" alt-text="Screenshot shows that the Sync Type is now listed as In cloud.":::
 
 5. Locate **Active Users**, and then add an Exchange license for the user.
 6. After some minutes, the mailbox becomes active in Exchange.
