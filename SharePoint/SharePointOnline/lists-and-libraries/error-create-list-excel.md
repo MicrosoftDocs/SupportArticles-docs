@@ -25,7 +25,7 @@ When you try to create a list from Excel in a SharePoint site, you receive the f
 >
 > The file [xxxx] does not exist.
 
-![Error message that the file does not exist](./media/error-create-list-excel/error-message.png)
+:::image type="content" source="media/error-create-list-excel/error-message.png" alt-text="Screenshot of the error message that the file does not exist." border="false":::
 
 ## Cause
 

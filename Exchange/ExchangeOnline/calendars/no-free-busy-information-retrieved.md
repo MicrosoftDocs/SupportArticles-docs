@@ -73,7 +73,7 @@ This error occurs if the values of any or all the following parameters in the or
 
 1. Run the [Get-FederationInformation](/powershell/module/exchange/get-federationinformation) cmdlet in either Exchange Online or Microsoft Exchange Server on-premises, as appropriate, to get federation information for the user's domain.
 
-    For example, if the user's domain name in Exchange Online is `northamerica.contoso.com`, run the following:
+    For example, if a cloud user is trying to view the free/busy information for an on-premises user, and the user's domain name in Exchange Online is `northamerica.contoso.com`, run the following:
 
     ```powershell
     Get-FederationInformation northamerica.contoso.com
@@ -83,7 +83,7 @@ This error occurs if the values of any or all the following parameters in the or
 
     :::image type="content" source="media/no-free-busy-information-retrieved/output.png" alt-text="Screenshot that shows the federation information of a domain after running the Get-FederationInformation cmdlet in Exchange Online.":::
 
-    If the user's domain is in Exchange Server on-premises, run the `Get-FederationInformation` cmdlet on the routing domain, "`<user's domain name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run the following:
+    If an on-premises user is trying to the view free/busy information for a cloud user, run the `Get-FederationInformation` cmdlet on the routing domain, "`<user's domain name>.mail.onmicrosoft.com`". For example, if the user's domain name is contoso, run the following:
 
     ```powershell
     Get-FederationInformation contoso.mail.onmicrosoft.com

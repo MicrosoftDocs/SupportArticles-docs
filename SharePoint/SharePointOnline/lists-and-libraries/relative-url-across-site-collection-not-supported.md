@@ -22,7 +22,7 @@ In Microsoft SharePoint Online and SharePoint Server, when you specify the **Doc
 
 Specifically, under **Site Content Type** > **Advanced Settings** > **Document Template**, the URL (if any) has to be a URL of an existing content type on the same site collection.
 
-![Enter the URL for Document Template in Site Content Type: Advanced Settings page](./media/relative-url-across-site-collection-not-supported/enter-url.png)
+:::image type="content" source="media/relative-url-across-site-collection-not-supported/enter-url.png" alt-text="Screenshot of Enter the URL for Document Template in Site Content Type option in Advanced Settings page.":::
 
 ## More information
 
