@@ -24,9 +24,9 @@ This article provides steps to resolve issues where the virtual machine (VM) bec
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays that the operating system (OS) was unresponsive during a boot with the message **Applying Audit Policy Configuration policy**.
 
-  ![The OS booting with the message: “Applying Audit Policy Configuration policy”](./media/vm-unresponsive-applying-audit-configuration-policy/1.png)
+  :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/applying-audit-policy-configuration-policy.png" alt-text="Screenshot shows the OS is unresponsive during a boot, with the message: Applying Audit Policy Configuration policy." border="false":::
 
-  ![The OS booting in Windows Server 2012 with the message: “Applying Audit Policy Configuration policy”](./media/vm-unresponsive-applying-audit-configuration-policy/2.png)
+  :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/applying-audit-policy-configuration-policy-windows-server-2012.png" alt-text="Screenshot shows the Windows Server 2012 OS is unresponsive during a boot, with the message: Applying Audit Policy Configuration policy." border="false":::
 
 ## Cause
 
@@ -61,7 +61,7 @@ Here’s the problematic policy:
 1. On the repair VM, open the **Registry Editor**.
 1. Locate the key **HKEY_LOCAL_MACHINE** and select **File > Load Hive** from the menu.
 
-   ![The navigation within Registry Editor to load a hive.](./media/vm-unresponsive-applying-audit-configuration-policy/3.png)
+   :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/load-hive.png" alt-text="Screenshot shows steps to load a hive in the Registry Editor.":::
 
    - You can use Load Hive to load registry keys from an offline system. In this case, the system is the broken disk attached to the repair VM.
    - System-wide settings are stored on **HKEY_LOCAL_MACHINE** and can be abbreviated as **HKLM**.
@@ -97,7 +97,7 @@ Here’s the problematic policy:
 
       - In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder.
 
-        ![Figure 4 shows the output of listing the BCD store in a Generation 1 VM, which lists under Windows Boot Loader the identifier number.](./media/vm-unresponsive-applying-audit-configuration-policy/4.png)
+        :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/command-output.png" alt-text="Screenshot shows the output of the command, which lists the identifier number under the Windows Boot Loader.":::
 
    1. For a Generation 2 VM, enter the following command and note the identifier listed:
 
