@@ -158,7 +158,7 @@ Smsdpprov.log
 
 On the remote DP, we can now see the following values added in `HKEY_LOCAL_MACHINE\Software\Microsoft\SMS\DP`:
 
-![Values added in registry](./media/understand-pxe-boot/18496_en_1.png)
+:::image type="content" source="media/understand-pxe-boot/pxeinstalled-registy.png" alt-text="Screenshot of the values added in registry.":::
 
 > [!NOTE]
 > `PxeInstalled` and `IsPXE` are set to **1**.
@@ -264,7 +264,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
 1. The first thing the PXE firmware does is sending a **DHCPDISCOVER** (a UDP packet) broadcast to get TCP/IP details. This includes a list of parameter requests, and below is a sample network trace with the parameter list from a **DHCPDISCOVER** packet:
 
-   ![a sample network trace with the parameter list from a DHCPDISCOVER packet](./media/understand-pxe-boot/18497_en_1.png)
+    :::image type="content" source="media/understand-pxe-boot/network-trace-dhcpdiscover.png" alt-text="Screenshot of a sample network trace with the parameter list from a DHCPDISCOVER packet.":::
 
    The PXE client then identifies the vendor and machine-specific information so that it can request the location and file name of the appropriate boot image file.
 
@@ -272,23 +272,23 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
    In the example DHCP offer below, it doesn't contain the server name or boot file information because this is the offer from the DHCP server rather than the PXE enabled DP.
 
-   ![DHCP without server name or boot file information](./media/understand-pxe-boot/18498_en_3.png)
+    :::image type="content" source="media/understand-pxe-boot/dhcp-offer.png" alt-text="Screenshot shows DHCP without server name or boot file information.":::
 
 3. The client then replies with a **DHCPREQUEST** once it has selected a **DHCPOFFER**. This contains the IP address from the offer that was selected.
 4. The DHCP server responds to the **DHCPREQUEST** with a **DHCPACK** that contains the same details as the **DHCPOFFER**. The server host name and the boot file name are not provided here:
 
-   ![DHCPACK contains the same details as the DHCPOFFER](./media/understand-pxe-boot/18499_en_3.png)
+    :::image type="content" source="media/understand-pxe-boot/dhcp-request.png" alt-text="Screenshot shows DHCPACK contains the same details as the DHCPOFFER.":::
 
 5. At this point, we still don't have the boot file information, however now the client has an IP address. Next, the PXE client sends a new **DHCPREQUEST** to the PXE-enabled DP after receiving a **DHCPOFFER** from the earlier **DHCPDISCOVER** broadcast.
 6. The PXE-enabled DP sends a **DHCPACK** that contains the BootFileName location and the WDS network boot program (NBP).
 
-   ![DHCPACK contains BootFileName and WDS network boot program](./media/understand-pxe-boot/18500_en_3.png)
+     :::image type="content" source="media/understand-pxe-boot/dhcp-pack.png" alt-text="Screenshot shows DHCPACK contains BootFileName and WDS network boot program.":::
 
 ## Downloading the boot files
 
 1. After the DHCP conversation completes, the client will start the TFTP session with a read request:
 
-   ![TFTP session with a read request](./media/understand-pxe-boot/18501_en_1.png)
+     :::image type="content" source="media/understand-pxe-boot/tftp-session.png" alt-text="Screenshot shows the TFTP session with a read request.":::
 
    The server responds with the tsize and then the blksize. The client will then transfer the file from the server.
 
@@ -297,7 +297,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
    Here we can see the end of the DHCP conversation and the start of the TFTP transfer:
 
-   ![DHCP conversation](./media/understand-pxe-boot/18502_en_2.png)
+    :::image type="content" source="media/understand-pxe-boot/tftp-transfer.png" alt-text="Screenshot shows the end of the DHCP conversation and the start of the TFTP transfer.":::
 
    When the WDS network boot program (NBP) has been transferred to the client computer, it will be executed. In our example, it starts by downloading `wdsnbp.com`. The NBP dictates whether the client can boot from the network, whether the client must press F12 to initiate the boot and which boot image the client will receive.
 
@@ -305,7 +305,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
    In our case (an x64 BIOS machine), the NBP is located in the following directory on the PXE enabled DP: `\\remotedp\c$\RemoteInstall\SMSBoot\x64`
 
-   ![WDS NBP location](./media/understand-pxe-boot/18487_en_1.png)
+    :::image type="content" source="media/understand-pxe-boot/nbp-location.png" alt-text="Screenshot shows the WDS NBP location.":::
 
    The files perform the following functions:
 
@@ -332,7 +332,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
 3. A RAMDISK is created using these files and the WinPE WIM file in memory.
 
-   ![RAMDISK is created](./media/understand-pxe-boot/18488_en_1.png)
+     :::image type="content" source="media/understand-pxe-boot/ram-disk.png" alt-text="Diagram shows RAMDISK is created." border="false":::
 
 4. The client boots from the RAMDISK.
 
@@ -459,7 +459,7 @@ Activating Welcome Page.
 Loading bitmap
 ```
 
-## More Information
+## More information
 
 For more information about troubleshooting PXE boot issues, see the following articles:
 

@@ -4,6 +4,7 @@ description: This article describes a problem that prevents you from successfull
 ms.date: 04/27/2020
 ms.prod-support-area-path: Project/Build system
 ms.reviewer: chrit, meerak
+ms.technology: vs-project-build
 ---
 # Building a Windows 10 driver in Visual Studio 2015 fails
 

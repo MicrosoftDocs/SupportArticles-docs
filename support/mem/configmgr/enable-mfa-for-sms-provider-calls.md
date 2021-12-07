@@ -23,20 +23,20 @@ To enable MFA, follow these steps:
 
 1. Connect to the Configuration Manager primary site namespace `root\sms\site_<site code>`. Then, select **Execute Method**.
 
-    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/execute-method.png" alt-text="Execute Method" border="false":::
+    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/execute-method.png" alt-text="Screenshot of the Execute Method option in Windows Management Instrumentation Tester window." border="false":::
 
 1. In the **Object Path** field, enter **sms_site**, and then select **OK**.
 
 1. In **Method** list, select `SetAuthenticationLevel`, and then select **Edit In Parameters**.
 
-    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/execute-method-dialog-box.png" alt-text="Execute Method dialog box" border="false":::
+    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/edit-in-parameters.png" alt-text="Screenshot of the Execute Method dialog box where you can see the method list and Edit in parameters button." border="false":::
 
 1. Edit the `AuthenticationLevel` and `ExceptionList` properties, and then select **Save Object**.
 
     > [!NOTE]
     > Both `AuthenticationLevel` and `ExceptionList` are global properties that are used on all primary sites.
 
-    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/edit-properties.png" alt-text="Edit properties" border="false":::
+    :::image type="content" source="media/enable-mfa-for-sms-provider-calls/edit-properties.png" alt-text="Screenshot of the AuthenticationLevel and ExceptionList properties." border="false":::
 
    - Edit the `AuthenticationLevel` property.
 
@@ -57,3 +57,26 @@ To enable MFA, follow these steps:
      > Users in the `ExceptionList` can't call the `SetAuthenticationLevel` method.
 
 1. select **Execute!**, and then select **Dismiss**.
+
+### Use PowerShell cmdlets to set the AuthenticationLevel and ExceptionList properties
+
+You can also use PowerShell cmdlets to set the `AuthenticationLevel` and `ExceptionList` properties.
+
+> [!NOTE]
+> To get the security identifier (SID) of Active Directory users and groups, run the [Get-AdUser](/powershell/module/activedirectory/get-aduser) and [Get-ADGroup](/powershell/module/activedirectory/get-adgroup) cmdlets.
+
+#### Example 1: Set the authentication level and add two SIDs to the exception list
+
+```powershell
+[array]$ExceptionList=@("S-1-5-<domain SID>-<RID of the user or group account>","S-1-5-<domain SID>-<RID of the user or group account>")
+[uint32]$AuthenticationLevel=<Authentication level value>
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+```
+
+#### Example 2: Set the authentication level and remove any entries from the exception list
+
+```powershell
+[array]$ExceptionList=@()
+[uint32]$AuthenticationLevel=<Authentication level value>
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+```

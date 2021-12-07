@@ -4,6 +4,7 @@ description: Azure Cloud Service Troubleshooting Series
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: cloud-services
 ---
 # Azure Cloud Service Troubleshooting Series
 

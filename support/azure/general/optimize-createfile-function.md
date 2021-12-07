@@ -4,6 +4,7 @@ description: Introduce a best practice to optimize the performance of the Create
 author: genlin
 ms.author: genli
 ms.service: storage
+ms.subservice: files
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 

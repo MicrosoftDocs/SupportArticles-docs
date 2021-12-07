@@ -33,7 +33,7 @@ The software that you were using together with Windows XP to connect to wireless
 
 To connect to a wireless network in Windows Vista, follow these steps:  
 
-1. Click **Start**![Start button ](./media/connect-to-wireless-network/vista-start-button.jpg), and then click **Connect to**.
+1. Click **Start** :::image type="icon" source="media/connect-to-wireless-network/vista-start-button.png" border="false":::, and then click **Connect to**.
 2. Click the wireless network to which you want to connect, and then click **Connect**.  
 
     >[!NOTE]

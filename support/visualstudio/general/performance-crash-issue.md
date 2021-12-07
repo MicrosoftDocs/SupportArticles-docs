@@ -4,6 +4,7 @@ description: This article discusses intermittent performance issue, product cras
 ms.date: 04/13/2020
 ms.prod-support-area-path: Integrated development environment (IDE)
 ms.reviewer: Ashok Kamath, meyoun
+ms.technology: vs-ide
 ---
 # Performance issues, product crashes, or rendering issues in Visual Studio 2013 and later
 

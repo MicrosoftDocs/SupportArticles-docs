@@ -18,7 +18,7 @@ Consider the following scenario:
 - You have an Android Enterprise Device Owner device that's enrolled in Microsoft Intune.
 - The **Factory reset protection emails** setting is enabled, and an email address is provided, as shown in the following screenshot:
 
-  :::image type="content" source="media/factory-reset-protection-emails-not-enforced/factory-reset-protection-emails.png" alt-text="screenshot of Factory reset protection emails":::
+  :::image type="content" source="media/factory-reset-protection-emails-not-enforced/factory-reset-protection-emails.png" alt-text="Screenshot of Factory reset protection emails setting and a sample email address.":::
 
 - You do a factory reset on the device through the **Settings** menu (for example, tap **Settings** > **General management** > **Reset** > **Factory data reset**), or you wipe the device from Intune in the Azure portal.
 
@@ -32,7 +32,7 @@ This behavior is expected. When you do a factory reset on the device through the
 
 We recommend that you set the **Factory reset** value to **Block** to prevent users from using the factory reset option in the device settings.
 
-:::image type="content" source="media/factory-reset-protection-emails-not-enforced/factory-reset.png" alt-text="screenshot of Factory reset":::
+:::image type="content" source="media/factory-reset-protection-emails-not-enforced/factory-reset.png" alt-text="Screenshot of Factory reset options.":::
 
 Then, use one of the following methods when you reset the device to the factory settings:
 

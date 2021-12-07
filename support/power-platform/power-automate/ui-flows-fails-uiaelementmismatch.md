@@ -17,7 +17,9 @@ _Original KB number:_ &nbsp; 4555810
 
 When trying to run UI flows, you may see this error:
 
-:::image type="content" source="media/ui-flows-fails-uiaelementmismatch/uiaelementmismatch.jpg" alt-text="UIAElementMismatch Error":::
+> UIAElementMismatch.
+
+:::image type="content" source="media/ui-flows-fails-uiaelementmismatch/error-message.png" alt-text="Screenshot of the error when trying to run the U I flows." border="false":::
 
 ## Verifying issue
 

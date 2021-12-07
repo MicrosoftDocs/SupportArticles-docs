@@ -4,6 +4,7 @@ description: Describes how to fix the "Unable to execute the embedded applicatio
 author: genlin
 ms.author: genli
 ms.service: storage
+ms.subservice: common
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: shamv

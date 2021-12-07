@@ -3,6 +3,7 @@ title: ClickOnce can't be used in Terminal Server
 description: ClickOnce can't be used to deploy applications in Windows Terminal Server.
 ms.date: 05/13/2020
 ms.prod-support-area-path: Installation
+ms.technology: dotnet-installation
 ---
 # ClickOnce can't be used in Windows Terminal Server
 
