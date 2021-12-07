@@ -38,4 +38,4 @@ If you have to use the legacy backup behavior, you can re-enable it by configuri
 
 Windows backs up the registry to the RegBack folder when the computer restarts, and creates a RegIdleBackup task to manage subsequent backups. Windows stores the task information in the Scheduled Task Library, in the Microsoft\\Windows\\Registry folder. The task has the following properties:
 
-:::image type="content" source="./media/system-registry-no-backed-up-regback-folder/properties-of-regIdlebackup-task.png" alt-text="Screenshot of RegIdleBackup task properties.":::
+:::image type="content" source="media/system-registry-no-backed-up-regback-folder/properties-of-regIdlebackup-task.png" alt-text="Screenshot of RegIdleBackup task properties.":::
