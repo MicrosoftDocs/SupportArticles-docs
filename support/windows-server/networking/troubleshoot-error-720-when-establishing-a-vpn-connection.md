@@ -23,7 +23,7 @@ When you try to establish a VPN connection, you receive the following error mess
 
 > A connection to the remote computer could not be established. You might need to change the network settings for this connection.
 
-![VPN connection error](./media/troubleshoot-error-720-when-establishing-a-vpn-connection/vpn-error-message.png)
+:::image type="content" source="media/troubleshoot-error-720-when-establishing-a-vpn-connection/vpn-error-message.png" alt-text="Screenshot of the VPN Connection error, which shows Can't connect to VPN Connection.":::
 
 Additionally, RasClient event ID 20227 (that mentions error 720) is recorded in the Application log:
 
