@@ -26,9 +26,9 @@ appliesto:
 
 When you try to run a Microsoft Office 365 ClickOnce application such as Office 365 Desktop Setup or the Office 365 Desktop Readiness Tool, you receive the following error message:
 
-**Application cannot be started. Contact the application vendor.**
+> Application cannot be started. Contact the application vendor.
 
-![A screen shot of the Cannot Start Application dialog box, showing the error message ](./media/office-365-application-cannot-be-started/error.jpg)
+:::image type="content" source="media/office-365-application-cannot-be-started/start-error.png" alt-text="Screenshot of the error message in the Cannot Start Application dialog box." border="false":::
 
 When you click **Details**, you receive a detailed error message that resembles the following:
 

@@ -28,15 +28,15 @@ In Microsoft Office 365, you can't add a security group or user to the permissio
 - You add the room mailbox as a shared Calendar in Outlook.
 - You right-click the Calendar folder and then select the **Permissions** tab:
 
-  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/permissions-tab.png" alt-text="screenshot of the permissions tab":::
+  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/permissions-tab.png" alt-text="Screenshot of the Permissions tab in the Room 1 on-prem Properties window.":::
 
 - You select **Add**, select a user or security group from the People Picker, and then select **OK**. The user or security group is displayed, and you can select a permission level:
 
-  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/added-user-in-permissions-tab.png" alt-text="screenshot of the permissions tab with a new user added":::
+  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/added-user-in-permissions-tab.png" alt-text="Screenshot of the Permissions tab with a new user added.":::
 
 - When you select **Apply** or **OK** and then return to the **Permissions** tab, the user or security group is no longer listed:
 
-  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/permissions-tab-with-no-user-or-security-group.png" alt-text="screenshot of the permissions tab 2":::
+  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/no-user-or-security-group.png" alt-text="Screenshot shows that the user or security group is no longer listed under the Permissions tab.":::
 
 > [!NOTE]
 > This issue can be reproduced if the room mailbox is on-premises and the user is in Exchange Online. This issue also occurs if the room mailbox was moved to Exchange Online and the user has a mailbox on-premises.

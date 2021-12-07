@@ -180,7 +180,7 @@ Restore the AD user and run directory synchronization, which will "soft match" t
 4. Apply a new exchange [online license](/microsoft-365/admin/add-users/add-users) to the newly created Azure AD object.
 5. Use the [New-MailboxRestoreRequest](/powershell/module/exchange/new-mailboxrestorerequest) to merge the content of the **soft deleted** mailbox to the active mailbox. See an example in the screen capture below:
 
-   :::image type="content" source="media/mailbox-recovery-in-exchange-online/new-mailboxrestorerequest-example.jpg" alt-text="example of New-MailboxRestoreRequest" border="false":::
+   :::image type="content" source="media/mailbox-recovery-in-exchange-online/new-mailbox-restore-request.png" alt-text="Screenshot shows an example to use the New-MailboxRestoreRequest command." border="false" lightbox="media/mailbox-recovery-in-exchange-online/new-mailbox-restore-request.png":::
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -205,7 +205,7 @@ Recreate the user and restore the data from the original mailbox.
 
 7. Use the [New-MailboxRestoreRequest](/powershell/module/exchange/new-mailboxrestorerequest) to merge the content of the soft deleted mailbox to the active mailbox. See an example in the screen capture below:
 
-    :::image type="content" source="media/mailbox-recovery-in-exchange-online/new-mailboxrestorerequest-example.jpg" alt-text="example of New-MailboxRestoreRequest" border="false":::
+    :::image type="content" source="media/mailbox-recovery-in-exchange-online/new-mailbox-restore-request.png" alt-text="Screenshot shows an example of using the New-MailboxRestoreRequest command." border="false" lightbox="media/mailbox-recovery-in-exchange-online/new-mailbox-restore-request.png":::
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).

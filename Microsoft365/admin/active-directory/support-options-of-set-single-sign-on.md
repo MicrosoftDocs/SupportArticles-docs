@@ -44,7 +44,7 @@ To request professional support over the web, follow these steps:
 1.	Go to https://support.microsoft.com/assistedsupportproducts, and select **Office Products**.
 2.	In the list of products, select **Office 365**. 
 
-    :::image type="content" source="./media/support-options-of-set-single-sign-on/support-list.png" alt-text="list of products":::
+    :::image type="content" source="media/support-options-of-set-single-sign-on/support-list.png" alt-text="Screenshot to select the Office 365 item in the list of products.":::
 
 3.	Select the [Microsoft 365 Admin Center](https://admin.microsoft.com/) link.
 4.	Sign in by using your Microsoft account.

@@ -26,7 +26,7 @@ search.appverid:
 
 When an SSO is enabled for O365 via ADFS, you should see the Relying Party (RP) trust created for O365.
 
-![A screenshot of AD FS, showing Relying Party (RP) trust created for O365](./media/supportmultipledomain-switch-when-manage-sso/relying-party-trust-created-for-o365.png)
+:::image type="content" source="media/supportmultipledomain-switch-when-manage-sso/relying-party-trust-created-for-o365.png" alt-text="Screenshot shows the Relying Party trust created for O365.":::
 
 ### Commands that would create the RP trust for O365 are below
 
@@ -79,7 +79,7 @@ This rule uses the suffix value of user's UPN and uses that to generate a new cl
 Using [fiddler](https://www.fiddler2.com/fiddler2/), we can trace the token being passed to login.microsoftonline.com/login.srf. After copying the token passed in `wresult`, paste the content in notepad and save that file as .xml.
 Later you can open the token saved as .xml file using IE and see its content.
 
-![A screenshot of fidder](./media/supportmultipledomain-switch-when-manage-sso/fidder.png)
+:::image type="content" source="media/supportmultipledomain-switch-when-manage-sso/fidder-wresult.png" alt-text="Screenshot to copy the security token passed in wresult.":::
 
 It's interesting to note that the rule issues "Issuerid" claim, we don't see this claim in the response token, in fact we see the "Issuer" attribute modified to the newly composed value.
 
@@ -117,7 +117,7 @@ federationServiceIdentifier value for the child domain will also be the same as 
 
   To resolve this issue, modify the third rule such that it ends up generating an Issuer value that matches "FederationServiceIdentifier" for the domain at O365 end. Two different rules that can work in this scenario is below. This rule just picks up the root domain from the UPN suffix to compose the Issuer value. For a UPN suffix child1.contoso.com, it will still generate an Issuer value of `https://contoso.com/adfs/services/trust/` instead of `https://Child1.contoso.com/adfs/services/trust/` (with default rule)
 
-![A screenshot of claim rule](./media/supportmultipledomain-switch-when-manage-sso/claim-rule.png)
+:::image type="content" source="media/supportmultipledomain-switch-when-manage-sso/claim-rule.png" alt-text="Screenshot of selecting the Edit Rule option to modify the third rule." border="false":::
 
 #### Customized third rule
 
