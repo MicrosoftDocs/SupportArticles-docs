@@ -23,7 +23,7 @@ You can reset Remote Desktop Services and credentials in the following ways:
 
 - [Reset by using the Azure portal](#reset-by-using-the-azure-portal)
 
-- [Reset by using the VMAccess extension and PowerShell](#reset-by-using-the-vmaccess-extension-and-powershell)
+- [Reset by using the VM Access extension and PowerShell](#reset-by-using-the-vmaccess-extension-and-powershell)
 
 ## Reset by using the Azure portal
 
@@ -47,7 +47,7 @@ This process will enable Remote Desktop service in the VM, and create a firewall
 
 3. Try connecting to your VM again.
 
-## Reset by using the VMAccess extension and PowerShell
+## Reset by using the VM Access extension and PowerShell
 
 First, make sure that you have  the [latest PowerShell module installed and configured](/powershell/azure/) and are signed in to your Azure subscription by using the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.
 
