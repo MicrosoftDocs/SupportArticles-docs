@@ -4,7 +4,7 @@ description: How to troubleshoot BitLocker encryption issues on the client side 
 ms.author: v-dsindona
 author: dsindona88
 ms.reviewer: luker
-ms.date: 12/01/2021
+ms.date: 12/07/2021
 --- 
 # Troubleshooting BitLocker policies from the client side
 
@@ -26,7 +26,7 @@ The [encryption report](/mem/intune/protect/encryption-monitor) will show encryp
 
 If you've determined that there is no actionable information in the encryption report, you'll need to gather data from the affected device to complete the investigation.
 
-Once you have access to the device, the *first step* is to [initiate a sync](/mem/intune/user-help/sync-your-device-manually-windows) with the Intune service manually before collecting the data. On your Windows device, select **Settings** > **Accounts** > **Access work or school** > **Connect &lt;tenant&gt; Azure AD** > **Info**.
+Once you have access to the device, the *first step* is to [initiate a sync](/mem/intune/user-help/sync-your-device-manually-windows) with the Intune service manually before collecting the data. On your Windows device, select **Settings** > **Accounts** > **Access work or school** > &lt;Select your work or school account&gt; > **Info**. Then under **Device sync status**, select **Sync**.
 
 After the sync is complete, continue to the following sections.
 
@@ -298,11 +298,11 @@ REAgentC.exe is a command-line executable tool that you can use to configure the
 - File system location: C:\Windows\System32\ReAgentC.exe.
 
 > [!TIP]
-> If you see error messages in the BitLocker-API about WinRe not being enabled, run the following command on the device to determine the WinRE status:
+> If you see error messages in the BitLocker-API about WinRe not being enabled, run the **reagnetc /info** command on the device to determine the WinRE status.
 
 :::image type="content" source="media\troubleshoot-bitlocker-policies\reagentc-output.png" alt-text="Output of the ReAgentC.exe command in Command Prompt.":::
 
-If the WinRE status is disabled, it is possible to enable it manually using the following command as an administrator:
+If the WinRE status is disabled, run the **reagentc /enable** command as an administrator to enable it manually:
 
 :::image type="content" source="media\troubleshoot-bitlocker-policies\reagentc-enable.png" alt-text="Example screenshot to enable ReAgentC.exe in Command Prompt. Run the command reagentc /enable":::
 

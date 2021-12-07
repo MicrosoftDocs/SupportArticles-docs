@@ -207,7 +207,6 @@ items:
       href: ios-scep-failure-no-getcacaps.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
-
     - name: Troubleshoot PKCS certificate deployment
       href: troubleshoot-pkcs-certificate-profiles.md
     - name: Troubleshoot SCEP certificate profiles
