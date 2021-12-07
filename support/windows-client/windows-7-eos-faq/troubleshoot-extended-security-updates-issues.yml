@@ -499,7 +499,7 @@ sections:
           
           2. In the command output, verify that ESU key is licensed.  
           
-              ​ ![ESU key is licensed.](./media/troubleshoot-extended-security-updates-issues/esu-key-licensed.gif)
+              ​:::image type="content" source="media/troubleshoot-extended-security-updates-issues/esu-key-licensed.png" alt-text="Screenshot of an example output of the command, which shows ESU key is licensed.":::
           
               On a typical (non-embedded) computer, install the ESU key if you haven't already done so. Then activate the key by using one of the following methods:
           
@@ -559,7 +559,7 @@ sections:
           
           For example, you see the following log entries.  
           
-          ![CBS log no esu key](./media/troubleshoot-extended-security-updates-issues/log-entries-no-esu.png)
+          :::image type="content" source="media/troubleshoot-extended-security-updates-issues/log-entries-no-esu.png" alt-text="Screenshot of an example CBS log entries, which contains ESU: NO ESU KEY FOUND.":::
           
           #### Possible cause
 
@@ -580,7 +580,7 @@ sections:
           
           For example, you see the following log entries.  
           
-          ![CBS log in the range](./media/troubleshoot-extended-security-updates-issues/log-entries-in-range.png)
+          :::image type="content" source="media/troubleshoot-extended-security-updates-issues/log-entries-in-range.png" alt-text="Screenshot of an example CBS log entries for Windows key in range of Windows Embedded keys, which contains the output above.":::
           
           #### Possible cause
 
@@ -601,7 +601,7 @@ sections:
           
           For example, you see the following log entries.
           
-          ![CBS log out of the range](./media/troubleshoot-extended-security-updates-issues/log-entries-out-range.png)
+          :::image type="content" source="media/troubleshoot-extended-security-updates-issues/log-entries-out-range.png" alt-text="Screenshot of an example CBS log entries for Windows key out of range of Windows Embedded keys, which contains the output above.":::
           
           #### Possible cause
 

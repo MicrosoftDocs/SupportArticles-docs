@@ -242,7 +242,7 @@ sections:
         answer: |
             For VL customers and CSP direct partners who have Premier Support plans, the expectations are as follows.
           
-            ![Support expectations for extended security updates.](./media/windows-7-extended-security-updates-faq/expectation-support-plan.png)  
+            :::image type="content" source="media/windows-7-extended-security-updates-faq/expectation-support-plan.png" alt-text="Screenshot of Support expectations for extended security updates." border="false":::  
           
       - question: |
          Is Internet Explorer 11 covered under Windows 7 ESU?
