@@ -33,7 +33,7 @@ To manually fix this issue, follow these steps.
 1. In Skype for Business, click the down arrow next to the gear icon, select **File**, and then **Sign Out**.
 2. Click **Delete my sign-in info**.
 
-   ![Delete my sign-in info](./media/unable-to-sign-in-to-sfb/delete-sign-in-info.png)
+   :::image type="content" source="./media/unable-to-sign-in-to-sfb/delete-sign-in-info.png" alt-text="Screenshot that shows the Delete my sign-in info option in the Sign in page.":::
 3. Click **Sign In**.
 
 If the issue persists, continue to remove the cache.

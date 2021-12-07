@@ -21,9 +21,9 @@ appliesto:
 
 You may see the error message "Sorry, we're unable to reach the server right now. Please try again later." when you attempt to share a OneDrive file from Windows Explorer or SharePoint Online websites.
 
-![Sorry, we're unable to reach the server right now Please try again later Website](./media/share-file-unable-reach-the-server/error-message-website.png)
+:::image type="content" source="media/share-file-unable-reach-the-server/error-message-website.png" alt-text="Screenshot of the error message on SharePoint Online website." border="false":::
 
-![Sorry, we're unable to reach the server right now Please try again later OneDrive Sync Client](./media/share-file-unable-reach-the-server/error-message-onedrive-client.png)
+:::image type="content" source="media/share-file-unable-reach-the-server/error-message-onedrive-client.png" alt-text="Screenshot of the dialog which contains the error message when sharing files from Windows Explorer.":::
 
 > [!NOTE]
 > If the sharing option is missing within the OneDrive folder, refer to [Unable to share OneDrive files](https://support.office.com/article/18755580-24f3-408d-afda-bd8d0f7ed5a2).
@@ -38,7 +38,7 @@ You may see the error message "Sorry, we're unable to reach the server right now
 
 1. Clear the check box titled **Do not save encrypted pages to disk**.
 
-   ![Internet Explorer security options](./media/share-file-unable-reach-the-server/internet-options.png)
+  :::image type="content" source="media/share-file-unable-reach-the-server/internet-options.png" alt-text="Screenshot of the Advanced tab of Internet Options with Do not save encrypted pages to disk option cleared." border="false":::
 
 1. Restart your browser for the settings to take effect.
 
@@ -50,7 +50,7 @@ You may see the error message "Sorry, we're unable to reach the server right now
 
 1. Click in **Access Requests Settings** and enable **Allow members to share the site and individual files and folders**.
 
-   ![Access Request Settings](./media/share-file-unable-reach-the-server/access-request-settings.png)
+   :::image type="content" source="media/share-file-unable-reach-the-server/access-request-settings.png" alt-text="Screenshot of the Access Requests Settings button on the ribbon of the SharePoint Online site.":::
 
 **Unique security scopes per list or library**
 

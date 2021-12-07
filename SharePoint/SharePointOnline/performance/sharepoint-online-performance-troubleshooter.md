@@ -29,7 +29,7 @@ This diagnostic package uploads trace files of up to 2 gigabytes (GB) after the 
 
 The rules in the diagnostic package require that you are the SharePoint Online site collection administrator for the SharePoint Online URL that you enter.
 
-![Type your credentials](./media/sharepoint-online-performance-troubleshooter/credentials.png)
+:::image type="content" source="media/sharepoint-online-performance-troubleshooter/credentials.png" alt-text="Screenshot of the SharePoint Online site collection administrator credentials input dialog." border="false":::
 
 This article describes the information that may be collected from a computer that's trying to connect to SharePoint Online in Office 365.
 

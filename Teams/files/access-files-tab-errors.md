@@ -58,7 +58,7 @@ To resolve this issue, use one of the following methods to revert the name of th
 2. Go to **All Files**.
 3. Locate the document library folder by its new name. For example, in the following screenshot, the default name was changed to "Renamed Documents."
 
-   :::image type="content" source="media/access-files-tab-errors/renamed-documents.png" alt-text="Screenshot of the renamed document library in All Files.":::
+   :::image type="content" source="media/access-files-tab-errors/renamed-documents.png" alt-text="Screenshot that shows the renamed document library in All Files.":::
 
 4. Right-click the folder, select **Rename**, and then change the name to **Shared Documents**.
 

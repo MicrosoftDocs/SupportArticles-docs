@@ -26,7 +26,7 @@ search.appverid: MET150
 
 When you try to upload attachments from Outlook on the web, the **Upload** menu displays two OneDrive accounts instead of one.
 
-:::image type="content" source="media/two-onedrive-accounts-when-uploading-attachments/onedrive-accounts.png" alt-text="Screenshot of two OneDrive accounts in Upload menu.":::
+:::image type="content" source="media/two-onedrive-accounts-when-uploading-attachments/onedrive-accounts.png" alt-text="Screenshot of two OneDrive accounts on the Upload menu.":::
 
 ## Cause
 
