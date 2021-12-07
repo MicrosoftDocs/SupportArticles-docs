@@ -24,7 +24,7 @@ This article shows how to resolve a problem in which you cannot connect to Azure
 
 You cannot make an RDP connection or other connections (such as HTTP) to a VM in Azure because the VM is configured to boot into Safe Mode. When you check the screenshot in the [Boot diagnostics](/azure/virtual-machines/troubleshooting/boot-diagnostics) in the Azure portal, you might see that the VM boots normally, but the network interface is not available:
 
-:::image type="content" source="media/troubleshoot-rdp-safe-mode/network-safe-mode.png" alt-text="Screenshot shows the network interface is not available.":::
+:::image type="content" source="media/troubleshoot-rdp-safe-mode/network-safe-mode.png" alt-text="Screenshot shows the network interface isn't available.":::
 
 ## Cause
 

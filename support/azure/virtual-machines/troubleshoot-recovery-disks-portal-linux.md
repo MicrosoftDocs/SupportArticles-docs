@@ -39,7 +39,7 @@ Examine the boot diagnostics and VM screenshot to determine why your VM is not a
 
 Select your VM in the portal and then scroll down to the **Support + Troubleshooting** section. Click **Boot diagnostics** to view the console messages streamed from your VM. Review the console logs to see if you can determine why the VM is encountering an issue. The following example shows a VM stuck in maintenance mode that requires manual interaction:
 
-:::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/boot-diagnostics-console-logs.png" alt-text="Screenshot of viewing the VM boot diagnostics console logs.":::
+:::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/boot-diagnostics-console-logs.png" alt-text="Screenshot of viewing the V M boot diagnostics console logs.":::
 
 You can also click **Screenshot** across the top of the boot diagnostics log to download a capture of the VM screenshot.
 
