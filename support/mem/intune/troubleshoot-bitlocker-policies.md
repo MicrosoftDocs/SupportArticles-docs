@@ -123,7 +123,7 @@ The task scheduler operational event log is useful for troubleshooting scenarios
 Enable and run the operational log in the following scenarios:
 
 - The BitLocker policy appears in the DeviceManagement-Enterprise-Diagnostics-Provider admin event log, in MDM diagnostics, and the registry.  
-- There are no errors (i.e., the policy has been picked up successfully from Intune).  
+- There are no errors (the policy has been picked up successfully from Intune).  
 - Nothing is logged in the BitLocker-API event log to show that encryption was even attempted.
 
 **LOG** > **Task scheduler operational event**
@@ -179,7 +179,7 @@ You can also use the MDM Diagnostic Report to identify whether a policy has been
 
 MSINFO32 is an information tool that contains device data you can use to determine if a device satisfies BitLocker prerequisites. The required prerequisites will depend on BitLocker policy settings and the required outcome. For example, silent encryption for TPM 2.0 requires a TPM and Unified Extensible Firmware Interface (UEFI).
 
-- Location: In the Search box, enter **msinfo32**, right-click **System Information** in the search results and select **Run as administrator**.
+- Location: In the Search box, enter **msinfo32**, right-click **System Information** in the search results, and select **Run as administrator**.
 - File system location: C:\Windows\System32\Msinfo32.exe.
 
 However, if this item doesn’t meet the prerequisites, it doesn’t necessarily mean that you can’t encrypt the device using an Intune policy.
@@ -294,11 +294,11 @@ Use the [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-c
 
 REAgentC.exe is a command-line executable tool that you can use to configure the Windows Recovery Environment (Windows RE). WinRE is a prerequisite for enabling BitLocker in certain scenarios such as silent or automatic encryption.
 
-- Location: Right-click on **Start** > **Run**, enter **cmd**. Then right-click **cmd** and select **Run as administrator** > **reagnetc /info**.
+- Location: Right-click on **Start** > **Run**, enter **cmd**. Then right-click **cmd** and select **Run as administrator** > **reagentc /info**.
 - File system location: C:\Windows\System32\ReAgentC.exe.
 
 > [!TIP]
-> If you see error messages in the BitLocker-API about WinRe not being enabled, run the **reagnetc /info** command on the device to determine the WinRE status.
+> If you see error messages in the BitLocker-API about WinRe not being enabled, run the **reagentc /info** command on the device to determine the WinRE status.
 
 :::image type="content" source="media\troubleshoot-bitlocker-policies\reagentc-output.png" alt-text="Output of the ReAgentC.exe command in Command Prompt.":::
 
