@@ -10,7 +10,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 159180
 appliesto:
 - Office Professional Plus 2016
 - Office Standard 2016
@@ -38,8 +40,6 @@ appliesto:
 
 # "Microsoft Office cannot verify the license for this product" error when you start an Office app
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 > [!NOTE]
@@ -56,11 +56,38 @@ When you start a Microsoft Office 2016 or Office 2013 application, such as Outlo
 
 ## Cause
 
-The Office application is running in compatibility mode for a different operating system.
+The Office application is running in compatibility mode for a different operating system, or the software protection platform registry key was deleted while updating windows from 1909 to any other build.
 
 ## Resolution
 
-To fix this issue, follow these steps to stop running the application in compatibility mode:
+### Check the software protection platform registry entry
+
+1. From Start, type *regedit*, and then select **Registry Editor** from the search results.
+
+1. Navigate to:
+    `HKEY_USERS\S-1-5-20\Software\Microsoft\Windows NT\CurrentVersion`
+
+1. If there is a **SoftwareProtectionPlatform** value in the **Current Version** folder, skip to <a href="#stop">Stop running the app in compatibility mode</a>, below. If not, continue to step 4.
+
+1. Go to a device that has Office installed and working. Open the Registry Editor on that device, and navigate to:
+    `HKEY_USERS\S-1-5-20\Software\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform`
+
+1. Right-click **SoftwareProtectionPlatform** and select **Export**. Save the registry value to storage media or another location you can access from the original device.
+
+1. Copy the file to the original device, then right-click the file and choose **Merge**.
+
+1. In the Registry Editor on the original device, navigate to:
+    `HKEY_USERS\S-1-5-20\Software\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform`
+
+1. Right-click **SoftwareProtectionPlatform** and select **Permissions**.
+
+1. Under **Group or user names**, if there is an entry for **NETWORK SERVICE**, skip to step 10. If not, select **Add**, type *network service* in the **Enter the object names to select** field, and then select **OK**.
+
+1. Select **NETWORK SERVICE**, make sure the **Allow** checkbox next to **Full control** is checked, and then select **Apply** and **OK**.
+
+1. Restart the device and try opening an Office app again.
+
+<h3 id="stop">Stop running the app in compatibility mode</h3>
 
 1. Exit the Office application that triggers this error.
 2. Locate your Office application, depending on your installation type of Outlook and bit version of Windows and Outlook:
