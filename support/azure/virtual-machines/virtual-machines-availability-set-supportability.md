@@ -18,7 +18,7 @@ You may occasionally encounter limitations when you add new virtual machines (VM
 
 
 ## Reference
-The following chart shows some commom VM series you can mix in the same availability set.
+The following chart shows some common VM series you can mix in the same availability set.
 
 Series & Availability Set|Second VM|A|Av2|D|Dv2|Dv3|
 |---|---|---|---|---|---|---|
