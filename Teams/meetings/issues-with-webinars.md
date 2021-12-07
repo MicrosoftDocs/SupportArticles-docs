@@ -53,6 +53,6 @@ If you want to have the **Webinar** option appeared on the **New meeting** menu,
 - You must have administrative permissions to make this change.
 - This change also enables the **Live event** option to appear on the **New meeting** menu, as shown in the following screenshot.
 
-    :::image type="content" source="media/issues-with-webinars/live-event.png" alt-text="The **Live event** option appears on the menu." border="false":::
+    :::image type="content" source="media/issues-with-webinars/live-event.png" alt-text="Screenshot that shows the Live event option appears on the menu.":::
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

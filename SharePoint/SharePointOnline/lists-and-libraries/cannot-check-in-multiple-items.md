@@ -21,7 +21,7 @@ appliesto:
 
 You select multiple items in a SharePoint Online document library that are checked out, and then you try to click the **Check In** button. However, you discover that the control is disabled.
 
-![The Check In button on the Files tab](./media/cannot-check-in-multiple-items/check-in-button.jpg)
+:::image type="content" source="media/cannot-check-in-multiple-items/check-in-button.png" alt-text="Screenshot of the Check In button under the Files tab.":::
 
 ## Solution/Workaround
 

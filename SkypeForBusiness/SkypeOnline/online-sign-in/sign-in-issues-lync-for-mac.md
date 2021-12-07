@@ -146,19 +146,19 @@ To collect log files and system information for Lync for Mac issues, follow thes
 
    1. On the menu bar in Finder, click **Go**, and then click **Go to Folder**.
 
-       ![Screen shot of Go options, including Go to Folder option ](./media/sign-in-issues-lync-for-mac/go-to-folder.jpg)
+       :::image type="content" source="./media/sign-in-issues-lync-for-mac/go-to-folder.png" alt-text="Screenshot that shows the Go options with the Go to Folder option selected.":::
    2. In the **Go to the folder** box, type the path of the logs folder. For example, type /user/**\<Useraccountfolder\>**/library/logs. Then, click **Go**.
 
-       ![Screen shot the Go to the folder dialog box, showing this example ](./media/sign-in-issues-lync-for-mac/type-folder-path.jpg)
+       :::image type="content" source="./media/sign-in-issues-lync-for-mac/type-folder-path.png" alt-text="Screenshot that shows the the example to type the path of the logs folder in the Go to the folder dialog box.":::
 
         > [!NOTE]
         > **\<Useraccountfolder\>** is usually the same as the user name that the user uses to log on the computer. The user name can also be found next to the House icon at the top of the Finder window.
         >
-        > ![Screen shot of the user name ](./media/sign-in-issues-lync-for-mac/mslync.jpg)
+        > :::image type="content" source="./media/sign-in-issues-lync-for-mac/mslync.png" alt-text="Screenshot that shows the user name in the finder window.":::
 
    3. In the Logs folder, collect the log files.
 
-       ![Screen shot of Log folder and log files in Log folder ](./media/sign-in-issues-lync-for-mac/log-file.jpg)
+       :::image type="content" source="./media/sign-in-issues-lync-for-mac/log-file.png" alt-text="Screenshot that shows the Log folder and log files in Log folder.":::
 
 ### Uninstall and reinstall Lync for Mac 2011
 

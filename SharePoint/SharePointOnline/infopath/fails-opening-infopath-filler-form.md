@@ -38,15 +38,15 @@ To resolve this issue, add the SharePoint site that contains the InfoPath Filler
    - Click the **Tools** menu, and then click **Internet options**.
    - Click the gear icon, and then click **Internet options**.
 
-   ![Go to Internet options](./media/fails-opening-infopath-filler-form/internet-options.png)
+   :::image type="content" source="media/fails-opening-infopath-filler-form/internet-options.png" alt-text="Screenshot to select the Internet options item." border="false":::
 
 1. Click the **Security** tab, click **Trusted sites**, and then click **Sites**.
 
-   ![Go to Sites in Trusted sites](./media/fails-opening-infopath-filler-form/trusted-sites.png)
+   :::image type="content" source="media/fails-opening-infopath-filler-form/trusted-sites.png" alt-text="Screenshot shows steps to select the Sites option under the Security tab." border="false":::
 
 1. In the **Add this website to the zone** box, type the URL for the SharePoint Online site that you want to add to the **Trusted sites** zone, and then click **Add**. For example, type https://**contoso**.sharepoint.com. (Here, the placeholder **contoso** represents the domain that you use for your organization.) Repeat this step for any additional sites that you want to add to this zone.
 
-   ![Add web site to Trusted sites zone](./media/fails-opening-infopath-filler-form/adding-site.png)
+   :::image type="content" source="media/fails-opening-infopath-filler-form/adding-site.png" alt-text="Screenshot shows an example to add the U R L to the Trusted sites zone." border="false":::
 
 1. After you have added each site to the **Websites** list, click **Close**, and then click **OK**.
 

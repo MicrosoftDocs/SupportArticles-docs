@@ -49,8 +49,7 @@ To resolve this issue, grant access to the **Everyone** or **All Users (membersh
 
 8. In the **set Metadata Store permissions** dialog box, add **Everyone** to the permissions box, and then click Add.
 
-   ![set Metadata Store permissions](./media/cannot-add-external-users-to-sharepoint-online-external-content-type/set-metadata-store-permissions.jpg)
-
+   :::image type="content" source="media/cannot-add-external-users-to-sharepoint-online-external-content-type/set-metadata-store-permissions.png" alt-text="Screenshot of the set Metadata Store permissions dialog when you add Everyone to the permissions box." border="false":::
 9. In the list of available accounts for the Metadata Store, select the **Everyone** group, and then make sure that the **Execute** check box is selected.
 
 10. At the bottom of the dialog box, click to select the **Propagate permissions to all BDC Models, External Systems and External Content Types in the BDC Metadata Store** check box, and then click **OK**.

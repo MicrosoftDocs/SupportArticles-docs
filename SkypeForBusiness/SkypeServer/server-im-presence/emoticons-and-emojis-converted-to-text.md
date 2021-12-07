@@ -30,15 +30,15 @@ In this scenario, the emoticons or emojis are converted to text, as shown in the
 
 **Example 1:** Three messages in a single message block that contain a total of nine emoticons or emojis. 
 
-![Three messages](./media/emoticons-and-emojis-converted-to-text/three-messages.png) 
+:::image type="content" source="./media/emoticons-and-emojis-converted-to-text/three-messages.png" alt-text="Screenshot that shows a single message block with nine emojis.":::
 
-**Example 2:** Four messages in a single message block that contain a total of 12 emoticons or emojis. 
+**Example 2:** Four messages in a single message block that contain a total of 12 emoticons or emojis.
 
-![Four messages](./media/emoticons-and-emojis-converted-to-text/four-messages.png) 
+:::image type="content" source="./media/emoticons-and-emojis-converted-to-text/four-messages.png" alt-text="Screenshot that shows all 12 emojis in the message block with four messages are converted to text.":::
 
 **Example 3:** One message that contains 11 emoticons or emojis. 
 
-![Single message](./media/emoticons-and-emojis-converted-to-text/single-message.png) 
+:::image type="content" source="./media/emoticons-and-emojis-converted-to-text/single-message.png" alt-text="Screenshot that shows all 11 emojis in a single message are converted to text.":::
 
 After this behavior occurs, successive messages may also not render emoticons in some scenarios. 
 
