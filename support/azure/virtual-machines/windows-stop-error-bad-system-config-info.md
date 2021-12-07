@@ -29,7 +29,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 > If you call a support person, give them this info:
 > Stop code: BAD_SYSTEM_CONFIG_INFO
 
-  :::image type="content" source="media/windows-stop-error-bad-system-config-info/stop-code.png" alt-text="Screenshot shows the Windows stop code BAD_SYSTEM_CONFIG_INFO." border="false":::
+  :::image type="content" source="media/windows-stop-error-bad-system-config-info/stop-code.png" alt-text="Screenshot of the Windows stop code BAD_SYSTEM_CONFIG_INFO." border="false":::
 
 ## Cause
 
