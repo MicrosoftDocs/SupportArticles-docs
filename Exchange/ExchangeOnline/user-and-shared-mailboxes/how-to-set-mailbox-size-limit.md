@@ -11,7 +11,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six; jhayes
-ms.service: exchange-online 
+ms.service: exchange-online
 ---
 
 # How to increase and set Exchange Online mailbox sizes in Microsoft 365
