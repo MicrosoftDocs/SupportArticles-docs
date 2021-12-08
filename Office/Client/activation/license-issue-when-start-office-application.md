@@ -74,9 +74,9 @@ The Office application is running in compatibility mode for a different operatin
 
     `HKEY_USERS\S-1-5-20\Software\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform`
 
-1. Right-click **SoftwareProtectionPlatform**, and select **Export**. Save the registry value to storage media or another location that you can access from the original device.
+1. Right-click **SoftwareProtectionPlatform**, and select **Export**. Save the registry value as a .reg file to storage media or another location that you can access from the original device.
 
-1. Copy the file to the original device. Then, right-click the file, and select **Merge**.
+1. Copy the .reg file to the original device. Then, right-click the file, and select **Merge**.
 
 1. In Registry Editor on the original device, navigate to the following subkey:
 
