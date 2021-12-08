@@ -121,7 +121,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
 
     Typically, you access a sign-in screen, and then you can sign in by using your credentials.
 
-    :::image type="content" source="./media/this-page-cant-displayed/sign-in-page.png" alt-text="Trying to sign in by using your credentials." border="false":::
+    :::image type="content" source="./media/this-page-cant-displayed/sign-in-page.png" alt-text="Screenshot of the A D F S sign-in page." border="false":::
 
 - How to fix
 
