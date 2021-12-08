@@ -1,46 +1,50 @@
 ---
 title: Troubleshoot Microsoft Teams Chat integration with Dynamics 365
-description: Provides a solution to an error that occurs in opening chat windows when using Teams Chat in Microsoft Dynamics CRM .
+description: Provides a solution to an error that occurs in opening chat windows when using Teams Chat in Microsoft Dynamics 365.
 ms.reviewer: Usha-Rathnavel
 ms.topic: troubleshooting
-ms.date: 11/23/2021
+ms.date: 12/08/2021
 ms.subservice: d365-sales-other-integration
 ---
 
 # Troubleshoot issue with opening chat windows in Dynamics 365
 
-When you try to open a chat or start a new chat from dynamics 365 and you see an error, it might be because your organization uses Trusted Sites and doesn't enable the URLs for Dynamics. To resolve this error, change the settings for your browser using administrator rights or a Group Policy Object (GPO).
+When you try to open an existing chat or start a new chat from Dynamics 365, an error might be displayed. The error might be displayed because your organization uses Trusted Sites and doesn't enable the URLs for Dynamics 365. To resolve this error, change the settings for your browser using administrator rights or a Group Policy Object (GPO).
 
 ## Microsoft Edge
 
-1. In the Edge **Settings** window, select **Cookies and site permissions** then select **Manage and delete cookies and site data** under **Cookies and data stored**.
+1. Select **Settings and more** (**...**) at the upper-right corner of the screen and then select **Settings**. 
 
-2. Turn on **Allow sites to save and read cookie data (recommended)** and make sure **Block third-party cookies** is turned off. Alternatively, follow step 3 if you need to keep third-party cookies blocked.
+2. In the left navigation pane, select **Cookies and site permissions**. 
 
-1. In the same window, under **Allow**, select **Add** to add the following site and then select the Including third-party cookies on this site check box:
+3. Under **Cookies and data stored**, select **Manage and delete cookies and site data**.
 
-- [*.]dynamics.com
+4. Turn on the **Allow sites to save and read cookie data (recommended)** toggle and ensure that the **Block third-party cookies** toggle is turned off. 
+ 
+    If you need to keep the third-party cookies blocked, go the **Allow** section, and then select **Add**. In the **Add a site** dialog box, enter **[\*.]dynamics.com** in the **Site** field, select **Including third-party cookies on this site** check box, and then select **Add**.
 
-![Edge settings](media/dynamics-embed-collab-error/edge-settings-cookies-error-collab.PNG)
+    ![Edge settings](media/dynamics-embed-collab-error/edge-settings-cookies-error-collab.PNG)
 
-To change the settings by using GPO, follow these steps:
+**To change the settings by using GPO**:
 
 1. [Download and install the Microsoft Edge administrative template](/deployedge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
-1. Add the sites listed in step 3 above to the **Content settings > CookiesAllowedForUrls** setting, either with a mandatory or recommended policy. For more information, see [Set mandatory or recommended policies](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) and [CookiesAllowedForUrls setting](/deployedge/microsoft-edge-policies#cookiesallowedforurls).
+
+2. Add the **[\*.]dynamics.com** site to the **Content settings** > **CookiesAllowedForUrls** setting, either with a mandatory or a recommended policy. For more information, see [Set mandatory or recommended policies](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) and [CookiesAllowedForUrls setting](/deployedge/microsoft-edge-policies#cookiesallowedforurls).
 
 ## Google Chrome
 
-1. In the Chrome **Settings** window, on the **Privacy and security** tab, select **Cookies and other site data**.
+1. Select **Customize and control Google Chrome** at the upper-right corner of the screen and then select **Settings**. 
 
-3. Under **General settings**, select **Allow all cookies**. Alternatively, follow step 3 if you need to keep third-party cookies blocked.
+2. In the left navigation pane, select **Privacy and security**, and then select **Cookies and other site data**.
 
-1. Under **Sites that can always use cookies**, select **Add**, and then select the **Including third-party cookies on this site** check box.
+3. Under **General settings**, select **Allow all cookies**. 
 
-1. Add the following site:
-- [*.]dynamics.com
+    If you need to keep the third-party cookies blocked, go to the **Sites that can always use cookies** section, and then select **Add**. In the **Add a site** dialog box, enter **[\*.]dynamics.com** in the **Site** field, select **Including third-party cookies on this site** check box, and then select **Add**.
 
-![Chrome settings](media/dynamics-embed-collab-error/chrome-settings-cookies-error-collab.PNG)
+    ![Chrome settings](media/dynamics-embed-collab-error/chrome-settings-cookies-error-collab.PNG)
 
-To change the settings by using GPO:
+**To change the settings by using GPO**:
+
 1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202).
-1. Add the sites listed in step 3 above to the **Content settings > CookiesAllowedForUrls** setting.
+
+2. Add the **[\*.]dynamics.com** site to the **Content settings > CookiesAllowedForUrls** setting.
