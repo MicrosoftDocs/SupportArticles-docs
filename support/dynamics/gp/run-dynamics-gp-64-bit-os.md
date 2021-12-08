@@ -2,7 +2,6 @@
 title: 64-bit operating systems supported together with Microsoft Dynamics GP
 description: Describes the operating systems, the installation path, and the ODBC DSN to use so that the server list isn't empty when you try to sign in Microsoft Dynamics GP.
 ms.reviewer: kyouells, v-lans
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the 64-bit operating systems that are supported together with Microsoft Dynamics GP

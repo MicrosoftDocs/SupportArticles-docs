@@ -20,11 +20,16 @@ Intune provides app troubleshooting details based on the apps installed on a spe
 3. Click **Select user** to select a user to troubleshoot. The **Select users** pane will be displayed.
 4. Select a user by typing the name or email address. Click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane.
 5. Select the device that you want to troubleshoot from the **Devices** list.
-    ![The Intune Troubleshooting pane.](./media/troubleshoot-app-install/troubleshoot-app-install-01.png)
+
+    :::image type="content" source="media/troubleshoot-app-install/devices.png" alt-text="Screenshot of the Intune Troubleshooting pane." border="false" lightbox="media/troubleshoot-app-install/devices.png":::
+
 6. Select **Managed Apps** from selected device pane. A list of managed apps is displayed.
-    ![Details of a specific device managed by Intune.](./media/troubleshoot-app-install/troubleshoot-app-install-02.png)
+
+    :::image type="content" source="media/troubleshoot-app-install/managed-apps.png" alt-text="Screenshot of the details of a specific device managed by Intune." border="false" lightbox="media/troubleshoot-app-install/managed-apps.png":::
+
 7. Select an app from the list where **Installation Status** indicates a failure.
-    ![A selected app that shows installation failure details.](./media/troubleshoot-app-install/troubleshoot-app-install-03.png)
+
+    :::image type="content" source="media/troubleshoot-app-install/select-app.png" alt-text="Screenshot of a selected app that shows installation failure details." border="false" lightbox="media/troubleshoot-app-install/select-app.png":::
 
     > [!Note]  
     > The same app could be assigned to multiple groups but with different intended actions (intents) for the app. For instance, a resolved intent for an app will show **excluded** if the app is excluded for a user during app assignment. For more information, see [How conflicts between app intents are resolved](/mem/intune/apps/apps-deploy#how-conflicts-between-app-intents-are-resolved).  
@@ -63,7 +68,7 @@ To collect your Win32 app installation logs, first follow the steps provided in 
 
 1. Click the **Collect logs** option on the **Installation details** pane.
 
-    <image alt="Win32 app installation details - Collect log option" src="./media/troubleshoot-app-install/troubleshoot-app-install-04.png" width="500" />
+    :::image type="content" source="media/troubleshoot-app-install/collect-logs.png" alt-text="Screenshot of the Collect log option in the Win32 app installation details pane." border="false":::
 
 2. Provide file paths with log file names to begin the log file collection process and click **OK**.
 
@@ -72,7 +77,7 @@ To collect your Win32 app installation logs, first follow the steps provided in 
 
 3. Once the log files have been collected, you can select the **logs** link to download the log files.
 
-    <image alt="Win32 app log details - Download logs" src="./media/troubleshoot-app-install/troubleshoot-app-install-05.png" width="500" />
+    :::image type="content" source="media/troubleshoot-app-install/download-app-logs.png" alt-text="Screenshot of the Download app logs option in the Win32 installation details pane." border="false":::
 
     > [!NOTE]
     > A notification will be displayed indicating the success of the app log collection.

@@ -2,7 +2,6 @@
 title: The CRM For Outlook button appears
 description: Describes a by design behavior that you may see the Get CRM For Outlook button at the top of the Microsoft Dynamics CRM web client after installing Update Rollup 7 for Microsoft Dynamics CRM 2011.
 ms.reviewer: chanson, mmaasjo
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-server
 ---

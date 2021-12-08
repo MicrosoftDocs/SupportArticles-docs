@@ -2,7 +2,6 @@
 title: Workflow Manager in Microsoft Dynamics GP
 description: Introduces Workflow Manager do in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Workflow Manager in Microsoft Dynamics GP

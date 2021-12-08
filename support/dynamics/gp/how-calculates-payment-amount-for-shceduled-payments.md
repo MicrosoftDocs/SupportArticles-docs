@@ -2,7 +2,6 @@
 title: How calculates payment amount for scheduled payments
 description: How Microsoft Dynamics GP calculates the payment amount for scheduled payments in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: lmuelle
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # How Microsoft Dynamics GP calculates the payment amount for scheduled payments in Payables Management

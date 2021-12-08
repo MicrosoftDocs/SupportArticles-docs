@@ -2,7 +2,6 @@
 title: How PAYG withholding amount is calculated
 description: Describes how the PAYG withholding amount is calculated for the Australian version of Microsoft Dynamics GP.
 ms.reviewer: lmuelle
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # How the PAYG withholding amount is calculated for the Australian version of Microsoft Dynamics GP
