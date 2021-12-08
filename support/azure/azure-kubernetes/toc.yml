@@ -1,12 +1,25 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-- name: Capture a TCP dump from a Windows node in AKS
-  href: capture-tcp-dump-windows-node-aks.md
-- name: Capture a TCP dump from a Linux node in AKS
-  href: capture-tcp-dump-linux-node-aks.md
-- name: Capture TCP packets from a pod
-  href: packet-capture-pod-level.md
-- name: Identify High CPU consuming containers in AKS
-  href: identify-high-cpu-consuming-containers-aks.md
-   
+- name: Can't connect to AKS cluster
+  items:
+  - name: Basic troubleshooting
+    href: troubleshoot-cluster-connection-issues-api-server.md
+  - name: Client IP address can't access API server
+    href: client-ip-address-cannot-access-api-server.md
+  - name: Config file isn't available when connecting
+    href: config-file-is-not-available-when-connecting.md
+  - name: User can't get cluster resources
+    href: user-cannot-get-cluster-resources.md
+- name: Data collection guide
+  items:
+  - name: Capture TCP dump from Linux node
+    href: capture-tcp-dump-linux-node-aks.md
+  - name: Capture TCP dump from Windows node
+    href: capture-tcp-dump-windows-node-aks.md
+  - name: Capture TCP packets from pod
+    href: packet-capture-pod-level.md
+- name: Troubleshoot performance issues
+  items:
+  - name: Identify high CPU consuming containers
+    href: identify-high-cpu-consuming-containers-aks.md
