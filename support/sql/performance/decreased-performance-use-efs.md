@@ -17,16 +17,16 @@ When you use Encrypting File System (EFS) to encrypt database files in SQL Serve
 
 ## Cause
 
-This issue occurs because asynchronous I/O requests coming from SQL Server are turned into synchronous I/O operations on an EFS-encrypted database file. See [Asynchronous disk I/O appears as synchronous on Windows](/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption.md). What this means is during the I/O operation, the worker thread waits until the I/O operation is completed. In contrast, with asynchronous I/O the thread requests the I/O and continues performing other tasks. When the thread is waits for the I/O operation, the SQL Server scheduler will be suspended until the current worker thread continues. Therefore, the worker threads that remain on the scheduler will be pending until the first worker thread continues the I/O operation.
+This issue occurs because asynchronous I/O requests from SQL Server are converted to synchronous I/O operations on an EFS-encrypted database file. See [Asynchronous disk I/O appears as synchronous on Windows](/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption.md). During the I/O operation, the worker thread waits until the I/O operation is complete. When the thread waits for the I/O operation, the SQL Server scheduler will be suspended until the current worker thread continues. Therefore, the worker threads that remain on the scheduler will be pending until the first worker thread continues the I/O operation. However, for asynchronous I/O, the thread requests the I/O and continues performing other tasks.
 
 > [!NOTE]
 > Asynchronous I/O still appears to be synchronous because of the [New Technology File System (NTFS) compression](/windows/win32/asynchronous-disk-io-synchronous.md#compression). The file system driver will not access compressed files asynchronously. Instead, all operations are made synchronous.
 
 ## Workaround
 
-SQL Server offers a rich set of encryption technologies - [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption T-SQL functions. Instead of EFS, consider using these [encryption](/sql/relational-databases/security/encryption/sql-server-encryption) features.
+SQL Server offers many encryption technologies, such as [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption T-SQL functions. Consider using these [encryption](/sql/relational-databases/security/encryption/sql-server-encryption) features instead of EFS.
 
-If you want to use EFS, you can specify the [affinity mask](/sql/database-engine/configure-windows/affinity-input-output-mask-server-configuration-option) option. Then, I/O operation requests will be assigned to a separate scheduler. Although the I/O operations are still synchronous, the worker thread will continue instead of waiting for the I/O operation to complete.
+If you want to use EFS, you can specify the [affinity mask](/sql/database-engine/configure-windows/affinity-input-output-mask-server-configuration-option) option. Then, I/O operation requests are assigned to a separate scheduler. Although the I/O operations are still synchronous, the worker thread will continue instead of waiting for the I/O operation to complete.
 
 > [!NOTE]
 > When you use EFS to encrypt a database file, the whole database file is encrypted, regardless of the actual data and metadata that're contained in the database file. You can also use EFS in case of possible loss of physical media.
