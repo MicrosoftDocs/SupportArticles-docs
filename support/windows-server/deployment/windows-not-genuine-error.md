@@ -33,7 +33,7 @@ Additionally, the desktop background is black, and you receive the following err
 
 > The copy of Windows in not genuine
 
-:::image type="content" source="media/windows-not-genuine-error/copy-windows-not-genuine-error.png" alt-text="Copy of Windows in not genuine error that is shown in the lower-right corner of the screen.":::
+:::image type="content" source="media/windows-not-genuine-error/copy-windows-not-genuine-error.png" alt-text="Copy of Windows is not genuine error shown in the lower-right corner of the screen.":::
 
 When you view the System properties in Control Panel, the following information is displayed:
 
@@ -73,7 +73,7 @@ To resolve the problem in this scenario, use method A or method B.
 
     2. In the navigation pane, expand the following containers: See image
 
-        :::image type="content" source="media/windows-not-genuine-error/system-services.png" alt-text="How to find the System Services in the Resultant Set of Policy wizard." border="false":::
+        :::image type="content" source="media/windows-not-genuine-error/system-services.png" alt-text="Screenshot shows how to find the System Services in the Resultant Set of Policy wizard." border="false":::
 
         - Computer Configuration
         - Windows Settings
@@ -131,7 +131,7 @@ If there are no GPOs in place, the default registry permissions have been change
 
 2. Right-click the registry key `HKEY_USERS\S-1-5-20`, and then click **Permissions**.
 
-    :::image type="content" source="media/windows-not-genuine-error/registry-permissions.png" alt-text="Select the Permissions open by right-clicking the registry key.":::
+    :::image type="content" source="media/windows-not-genuine-error/registry-permissions.png" alt-text="Select the Permissions option by right-clicking the registry key.":::
 
 3. If the NETWORK SERVICE isn't present, click **Add**.
 

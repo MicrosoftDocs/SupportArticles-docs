@@ -97,7 +97,7 @@ _Original KB number:_ &nbsp; 2002013
 
     Buttons in Dialog: **OK**
 
-    :::image type="content" source="media/replication-error-5/replicate-now.png" alt-text="Access is denied this error shows in the Replicate Now dialog box." border="false":::
+    :::image type="content" source="media/replication-error-5/replicate-now.png" alt-text="Access is denied error shows in the Replicate Now dialog box." border="false":::
 
 ## Cause
 
