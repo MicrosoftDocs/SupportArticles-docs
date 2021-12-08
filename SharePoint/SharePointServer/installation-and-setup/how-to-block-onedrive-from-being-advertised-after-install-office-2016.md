@@ -46,9 +46,9 @@ After OneDrive.exe is installed, you will see shortcuts to the product added to 
    
    In Windows 10 and Windows 7, the views of Windows Explorer and the Start menu should resemble the following screen shots after you install Office 2016.  
 
-   ![OneDrive shortcuts in Windows 10](./media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-10.png)
+   :::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-10-explorer-start-menu.png" alt-text="Screenshot shows the views of Windows Explorer and the Start menu, after installing Office 2016 in Windows 10." border="false":::
 
-   ![OneDrive shortcuts in Windows 7](./media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-7.png)  
+   :::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/windows-7-explorer-start-menu.png" alt-text="Screenshot shows the views of Windows Explorer and the Start menu, after installing Office 2016 in Windows 7." border="false":::
 
 ### Method 2: Uninstall OneDrive.exe
 
@@ -63,11 +63,11 @@ OneDriveSetup.exe /uninstall
 
 For example, see the following screen shot:  
 
-![Command to uninstall OneDrive](./media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/command.png)  
+:::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/command-uninstall-onedrive.png" alt-text="Screenshot shows the command to uninstall OneDrive.":::
 
 To download OneDriveSetup.exe, make sure that you use the link under the OneDrive client heading on the [home page of OneDrive](https://onedrive.live.com/about/download/), as shown in the following screen shot.  
 
-![home page of OneDrive](./media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/home-page.png)  
+:::image type="content" source="media/how-to-block-onedrive-from-being-advertised-after-install-office-2016/home-page.png" alt-text="Screenshot to download OneDrive on the home page of OneDrive.":::
 
 If you aren't running Windows 10, [uninstall OneDrive.exe by using Control Panel](https://windows.microsoft.com/windows/uninstall-change-program#uninstall-change-program=windows-7).   
 

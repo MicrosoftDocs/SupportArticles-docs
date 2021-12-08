@@ -27,11 +27,11 @@ When you use one of the following methods to call a user in Microsoft Lync 2013 
 
 - You right-click the contact, as in the following screenshot:
 
-   ![Select Contact card](./media/contacts-telephone-numbers-missing/select-contact.jpg)
+   :::image type="content" source="./media/contacts-telephone-numbers-missing/select-contact.png" alt-text="Screenshot that shows contact options appear without phone number after right-clicking a contact.":::
 
 - You select the call menu, as in the following screenshot:
 
-   ![Select call menu](./media/contacts-telephone-numbers-missing/select-call-menu.jpg)   
+   :::image type="content" source="./media/contacts-telephone-numbers-missing/select-call-menu.png" alt-text="Screenshot that shows phone number not showing when selecting the call menu.":::
 
 
 ## Cause
@@ -53,11 +53,11 @@ To work around this issue, use one of the following methods as a user with admin
 
 - Make sure that the **Show my picture** option is enabled for all users, even if they haven't published a photo:
 
-  ![Enable show my picture](./media/contacts-telephone-numbers-missing/enable-show-my-picture.jpg)
+  :::image type="content" source="./media/contacts-telephone-numbers-missing/enable-show-my-picture.png" alt-text="Screenshot that shows the Show my picture option enabled for in the options window.":::
 
 - Expand the contact card details before you try to call that particular user, as in the following screenshot:
 
-  ![Expand contact card details](./media/contacts-telephone-numbers-missing/expand-contact-card.jpg)
+  :::image type="content" source="./media/contacts-telephone-numbers-missing/expand-contact-card.png" alt-text="Screenshot that shows the Call Work number in the expanded contact card details":::
 
 ## More information
 

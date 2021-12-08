@@ -34,7 +34,7 @@ You see Event ID 4769 repeated multiple times in the SharePoint OnPrem event log
 
 In this scenario, the application event log container on domain controllers (DCs) is flooded with "Audit failure" events that list Event ID 4769 many times per second, as shown in the following screenshot.
 
-:::image type="content" source="media/event-id-4769-error/event-id-4769-error.png" alt-text="Typical Event ID 4769 errors.":::
+:::image type="content" source="media/event-id-4769-error/event-id-4769-error.png" alt-text="Screenshot of the application event log container page listing Event ID 4769 Audit failure many times.":::
 
 The Search Service account is mentioned as the "Service Name," and the farm account is mentioned as the caller account name.
 

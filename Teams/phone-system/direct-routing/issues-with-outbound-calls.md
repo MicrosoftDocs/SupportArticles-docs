@@ -140,7 +140,7 @@ To check the status of the gateway, run the [Get-CsOnlinePSTNGateway](/powershel
 Get-CsOnlinePSTNGateway | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSessions,Enabled
 ```
 
-:::image type="content" source="media/issues-with-outbound-calls/gateway-status-1.png" alt-text="Screenshot of gateway status":::
+:::image type="content" source="media/issues-with-outbound-calls/gateway-status-1.png" alt-text="Screenshot that shows the gateway status.":::
 
 To make sure that the `sbc2.contoso.com` gateway is available to Teams, run the [Set-CsOnlinePSTNGateway](/powershell/module/skype/set-csonlinepstngateway) cmdlet to set the `Enabled` parameter to `True`.
 
@@ -153,7 +153,7 @@ To check whether the `sbc2.contoso.com` gateway is now available, run the `Get-C
 ```powershell
 Get-CsOnlinePSTNGateway -Identity "sbc2.contoso.com" | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSessions,Enabled
 ```
-:::image type="content" source="media/issues-with-outbound-calls/gateway-status-2.png" alt-text="Second screenshot of gateway status":::
+:::image type="content" source="media/issues-with-outbound-calls/gateway-status-2.png" alt-text="Second screenshot that shows the gateway status.":::
 
 For more information, see [Connect your SBC to Direct Routing](/microsoftteams/direct-routing-connect-the-sbc).
 

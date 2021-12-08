@@ -68,7 +68,7 @@ To resolve this issue, follow these steps.
 
 1. If the check mark isn't next to **Local SharePoint Results**, click the drop-down arrow for **Local SharePoint Results**, and then click **Set as Default**.
 
-    ![Choosing Set as Default in Local SharePoint Results](./media/search-results-not-return/set-as-default.jpg)
+    :::image type="content" source="media/search-results-not-return/set-as-default.png" alt-text="Screenshot of the Set as Default option in the drop-down menu of Local SharePoint Results.":::
 
 ## More information
 

@@ -1,6 +1,6 @@
 ---
 title: You can't sync files or folders, or you receive errors when you open files
-description: This article describes an error unable to find specified web in the given URL when you try to use a calendar overlay from one SharePoint Online site collection to another, and provides a solution.
+description: Describes an issue that occurs when you upload or create a folder that's named "_private" in SharePoint Online, and provides a solution.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -27,13 +27,13 @@ After you upload or create a folder that's named "_private" in Microsoft SharePo
 
 - When you synchronize the _private folder by using the OneDrive for Business sync app, you receive the following error message for any files that are in the folder:
 
-    - **This file name contains invalid characters**.
+    > This file name contains invalid characters.
 
 - When you synchronize the _private folder by using the OneDrive for Business sync app, the folder itself is synchronized, but no files in the folder are synchronized.
 
 - You try to open an item that exists in the _private folder in Microsoft Office Online, you receive the following error message:
 
-    - **Sorry, this document can't be opened for editing**.
+    > Sorry, this document can't be opened for editing.
 
 ## Solution
 

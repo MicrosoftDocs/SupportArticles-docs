@@ -28,7 +28,7 @@ When initializing OneDrive for Business, the app might stop for more than 24 hou
 - "Setting up.."
 - "We're still setting up a few things, but feel free to get started."
 
-![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](./media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
+:::image type="content" source="media/one-drive-stopped-at-setting-up-screen/setting-up-screen.png" alt-text="Screenshot of We're still setting up a few things screen when initializing OneDrive for Business.":::
 
 ## Resolutions
 

@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157759
+- CI 159113
 search.appverid: 
 - MET150
 appliesto:
@@ -30,6 +31,7 @@ Try the following troubleshooting methods to solve the problem.
 
 <details>
 <summary><b>Check your Microsoft 365 license</b></summary>
+
 1.	Go to the Microsoft 365 portal: https://portal.office.com/account/?ref=MeControl#installs
 1.	If you see the message "You currently have not been assigned an Office license that includes the Office desktop apps" this means that you are not eligible to install Microsoft 365 Apps.
 1.	If you see "Office" listed with an "Install Office" button, you are eligible for Microsoft 365 Apps.
@@ -37,8 +39,8 @@ Try the following troubleshooting methods to solve the problem.
 </details>
 
 <details>
-<summary><b>Make sure you have the correct Office installed/b></summary>
-  
+<summary><b>Make sure you have the correct Office installed</b></summary>
+
 Go to https://portal.office.com/account to check which Office version and edition you have available.
   
 If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b) 
@@ -76,6 +78,7 @@ If you have a different edition or version installed on your device, run the SaR
 
 <details>
 <summary><b>Check sublicenses</b></summary>
+
 1.	A Microsoft 365 admin needs to go to https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users
 1.	Make sure necessary sublicenses are checked. For example, if **Microsoft 365 Apps for Enterprise** is checked, make sure the **Office 365** sublicense is checked.
 <br/><br/>
