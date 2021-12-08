@@ -20,7 +20,7 @@ When trying to add a second Fibre Channel adapter to a Hyper-V virtual machine i
 > Cannot add Fibre Channel Adapter  
 Maximum of 1 Fibre Channel Adapters per virtual machine
 
-:::image type="content" source="media/cannot-add-second-fibre-channel-adapter-hyperv/add-fibre-channel-adapter.png" alt-text="The screenshot of adding Fibre Channel Adapter under Add Hardware.":::
+:::image type="content" source="media/cannot-add-second-fibre-channel-adapter-hyperv/cannot-add-fibre-channel-adapter-warning.png" alt-text="The warning that occurs when you try to add Fibre Channel Adapter under Add Hardware.":::
 
 Windows Server 2019 allows only one Fibre Channel adapter per virtual machine.
 

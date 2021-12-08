@@ -2,7 +2,6 @@
 title: FAQ about the Windows Installer .msp files
 description: Contains frequently asked questions and the answers about the Windows Installer .msp files for Microsoft Dynamics GP.
 ms.reviewer: kyouells
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Frequently asked questions about the Windows Installer .msp files for Microsoft Dynamics GP

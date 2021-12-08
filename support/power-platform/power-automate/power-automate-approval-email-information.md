@@ -2,7 +2,6 @@
 title: Power Automate Approval Email information
 description: Describes the information about Power Automate approval emails.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
