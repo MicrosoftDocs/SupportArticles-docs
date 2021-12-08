@@ -40,11 +40,7 @@ To determine whether you are experiencing this issue, run the following test:
 
     If any of the SSL certificates displays the "Extra download" message, you are experiencing the issue that's described earlier in this section, per the following screenshot:
 
-    :::image type="content" source="media/adal-authenticate-android-devices-fail/3203935.png" alt-text="Screenshot of extra download." border="false":::
-
     Here's a screenshot showing a certificate with the "Sent by server" message, illustrating successful authentication on an Android device:
-
-    :::image type="content" source="media/adal-authenticate-android-devices-fail/3203936.png" alt-text="Screenshot of Sent by server." border="false":::
 
 ## Cause
 
