@@ -1,5 +1,5 @@
 ---
-title: How to increase and set Exchange Online mailbox sizes and limits in Microsoft 365
+title: How to increase and set Exchange Online mailbox sizes and limits
 description: Describes how to use Exchange Online PowerShell to increase and set mailbox sizes and limits in the Microsoft 365 environment.
 manager: dcscontentpm
 audience: ITPro
