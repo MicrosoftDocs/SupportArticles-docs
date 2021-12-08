@@ -1029,6 +1029,11 @@
       "source_path": "support/mem/intune/software-distribution-best-practices.md",
       "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-extension-package-shows-installation-failed",
+      "redirect_document_id": true
     }
   ]
 }

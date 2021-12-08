@@ -4,13 +4,13 @@ description: Provides a solution to an issue where Microsoft Flow Extension Pack
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: d365-sales-other-functionality
+ms.subservice: power-automate-flows
 ---
 # Microsoft Flow Extension Package shows "Installation failed" on PPAC
 
 This article provides a solution to an issue where Microsoft Flow Extension Package shows Installation failed.
 
-_Applies to:_ &nbsp; Microsoft Power Platform  
+_Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4560419
 
 ## Symptoms
