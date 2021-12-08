@@ -574,7 +574,12 @@
       "source_path": "support/mem/intune/lob-app-versioning.md",
       "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
       "redirect_document_id": false
-    }, 
+    },
+    {
+      "source_path": "support/mem/intune/integrate-cisco-ise-intune.md",
+      "redirect_url": "https://community.cisco.com/t5/security-documents/how-to-integrate-cisco-ise-mdm-with-microsoft-intune/ta-p/4187375",
+      "redirect_document_id": false
+    },
     {
       "source_path": "support/mem/intune/look-up-intune-licenses.md",
       "redirect_url": "/mem/intune/fundamentals/licenses-assign",
@@ -1024,6 +1029,11 @@
       "source_path": "support/mem/intune/software-distribution-best-practices.md",
       "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-extension-package-shows-installation-failed",
+      "redirect_document_id": true
     }
   ]
 }

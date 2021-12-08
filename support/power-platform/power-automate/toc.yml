@@ -75,6 +75,8 @@
       href: known-limitations-selenium-ide.md
     - name: Manage orphan flows when the owner leaves the organization
       href: manage-orphan-flow-when-owner-leaves-org.md
+    - name: Microsoft Flow Extension Package shows Installation failed
+      href: flow-extension-package-shows-installation-failed.md
     - name: Missing runs or triggers history for a flow
       href: missing-runs-or-triggers-history-for-a-flow.md
     - name: Multi-screen recording isn't working
