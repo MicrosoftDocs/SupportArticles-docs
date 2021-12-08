@@ -647,17 +647,22 @@ To check if the claim rules for immutableID and UPN in AD FS matches what Azure 
 1. Get sourceAnchor and UPN in Azure AD Connect.
 
    1. Open Azure AD Connect.
-   2. Click **View current configuration**.  
+   2. Click **View current configuration**.
+
       :::image type="content" source="media/troubleshoot-adfs-sso-issue/microsoft-azure-active-directory-connect.png"  alt-text="Select the View current configuration in the Azure A D Connect additional tasks page." border="false":::
+
    3. On the **Review Your Solution** page, make a note of the values of **SOURCE ANCHOR** and **USER PRINCIPAL NAME**.
+
       :::image type="content" source="media/troubleshoot-adfs-sso-issue/azure-active-directory-connect.png"  alt-text="Get the values of SOURCE ANCHOR and USER PRINCIPAL NAME in the Azure A D Connect page.":::
+
 2. Verify the values of immutableID (sourceAnchor) and UPN in the corresponding claim rule configured in the AD FS server.
 
    1. On the AD FS server, open the AD FS management console.
    2. Click **Relying Party Trusts**.
    3. Right-click the relying party trust with Azure AD, and then click **Edit Claim Issuance Policy**.
    4. Open the claim rule for immutable ID and UPN.
-   5. Verify if the variables queried for values of immutableID and UPN are the same as those appear in Azure AD Connect.  
+   5. Verify if the variables queried for values of immutableID and UPN are the same as those appear in Azure AD Connect.
+
       :::image type="content" source="media/troubleshoot-adfs-sso-issue/edit-rule-issue-upn-and-immutableid.png" alt-text="Verify the values of immutableID and UPN in the corresponding claim rule configured in the A D F S server.":::
 
 3. If there is a difference, use one of the methods below:
@@ -753,14 +758,16 @@ If the two algorithms match, check if the Name ID format matches what the applic
 
    1. Open the AD FS management console.
    2. Click **Relying Party Trusts**, select the appropriate federation partner, and then click **Edit Claims Issuance Policy** in the **Actions** pane.
-   3. Add a new rule if there is no rule to issue the NameIdentifier claim, or update an existing rule. Select **Name ID** for **Incoming claim type**, and then specify the format that the application requires.  
+   3. Add a new rule if there is no rule to issue the NameIdentifier claim, or update an existing rule. Select **Name ID** for **Incoming claim type**, and then specify the format that the application requires.
+
    :::image type="content"  source="media/troubleshoot-adfs-sso-issue/add-transform-claim-rule-wizard.png" alt-text="Add a transform claim rule if there is no rule to issue the NameIdentifier claim, or update an existing rule.":::
 
 If the two algorithms mismatch, update the signing algorithm used by the relying party trust.
 
 1. Open the AD FS management console.
 2. Right-click the relying party trust, and then click **Properties**.
-3. On the **Advanced** tab, select the algorithm to match what the application requires.  
+3. On the **Advanced** tab, select the algorithm to match what the application requires.
+
    :::image type="content" source="media/troubleshoot-adfs-sso-issue/urndumptoken-properties.png" alt-text="Select the algorithm to match what the application requires under the Advanced tab in the Properties setting dialog box.":::
 
 #### About certificate auto renewal
@@ -846,7 +853,8 @@ ADFS provides various endpoints for different functionalities and scenarios. Not
 
 1. On the ADFS server, open the ADFS Management Console.
 2. Expand **Service** > **Endpoints**.
-3. Locate the endpoint and verify if the status is enabled on the **Proxy Enabled** column.  
+3. Locate the endpoint and verify if the status is enabled on the **Proxy Enabled** column.
+
    :::image type="content" source="media/troubleshoot-adfs-sso-issue/adfs-endpoints.png" alt-text="Verify the A D F S endpoints status shown on the Proxy Enabled column.":::
 
 ## Check the proxy trust relationship
