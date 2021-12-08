@@ -60,7 +60,7 @@ This is what occurs in each step.
 1. runs `sudo ufw default allow` command. Because there is no other rule than the default "allow" rule, every port on the VM will be considered to be open.
 
 1. > [!IMPORTANT]
-   > Add the SSH protocol to the "allowed" list by running the `sudo ufw allow ssh` command. Protocol.ssh is a "known" protocol because it is defined in the /etc/services file. Therefore, "ssh" can be used instead of "22". Remember that if you configure the SSH service to listen on a port other than the default port of 22, you should explicitly add the other port. For example, if you configured SSH to listen to port 2222, run the following command: `sudo ufw allow 2222`.
+   > Add the SSH protocol to the allowed list by running the `sudo ufw allow ssh` command. *Protocol.ssh* is a known protocol and it is defined in the */etc/services* file. Therefore, "ssh" can be used instead of "22". Remember that if you configure the SSH service to listen on a port other than the default port of 22, you should explicitly add the other port. For example, if you configure SSH to listen to port 2222, run this command: `sudo ufw allow 2222`.
 
 1. Allow the HTTP protocol by running `sudo ufw allow http`. HTTP is a known protocol that is defined in the /etc/services file. Therefore, the protocol name can be used and the `sudo ufw allow http` command can be run. Running `sudo ufw allow 80` is also perfectly valid.
 
