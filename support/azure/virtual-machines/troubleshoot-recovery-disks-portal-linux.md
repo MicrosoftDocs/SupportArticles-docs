@@ -168,7 +168,7 @@ Azure portal now supports change the OS disk of the VM. To do this, follow these
 
 1. Go to [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has problem.
 1. On the left pane, select **Disks**, and then select **Swap OS disk**.
-        :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/swap-os-disk.png" alt-text="Screenshot of the Swap OS Disk option in the Azure portal.":::
+        :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/swap-os-disk.png" alt-text="Screenshot of the Swap O S Disk option in the Azure portal.":::
 
 1. Choose the new disk that you repaired, and then type the name of the VM to confirm the change. If you do not see the disk in the list, wait 10 ~ 15 minutes after you detach the disk from the troubleshooting VM. Also make sure that the disk is in the same location as the VM.
 1. Select OK.

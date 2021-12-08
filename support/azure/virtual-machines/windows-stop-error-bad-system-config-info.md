@@ -25,7 +25,7 @@ This article provides steps to resolve issues where Windows cannot boot and need
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you'll see that the screenshot displays the Windows stop code **#0x00000074** or **BAD_SYSTEM_CONFIG_INFO**.
 
 > Your PC ran into a problem and needs to restart. You can restart.
-> For more information about this issue and possible fixes, visit http://windows.com/stopcode*
+> For more information about this issue and possible fixes, visit http://windows.com/stopcode
 > If you call a support person, give them this info:
 > Stop code: BAD_SYSTEM_CONFIG_INFO
 

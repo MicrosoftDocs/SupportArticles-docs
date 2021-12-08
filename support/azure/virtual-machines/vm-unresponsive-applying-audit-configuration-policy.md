@@ -24,9 +24,9 @@ This article provides steps to resolve issues where the virtual machine (VM) bec
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays that the operating system (OS) was unresponsive during a boot with the message **Applying Audit Policy Configuration policy**.
 
-  :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/applying-audit-policy-configuration-policy.png" alt-text="Screenshot shows the OS is unresponsive during a boot, with the message: Applying Audit Policy Configuration policy." border="false":::
+  :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/applying-audit-policy-configuration-policy.png" alt-text="Screenshot shows the O S is unresponsive during a boot, with the message: Applying Audit Policy Configuration policy." border="false":::
 
-  :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/applying-audit-policy-configuration-policy-windows-server-2012.png" alt-text="Screenshot shows the Windows Server 2012 OS is unresponsive during a boot, with the message: Applying Audit Policy Configuration policy." border="false":::
+  :::image type="content" source="media/vm-unresponsive-applying-audit-configuration-policy/applying-audit-policy-configuration-policy-windows-server-2012.png" alt-text="Screenshot shows the Windows Server 2012 O S is unresponsive during a boot, with the message: Applying Audit Policy Configuration policy." border="false":::
 
 ## Cause
 
