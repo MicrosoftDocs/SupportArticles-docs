@@ -55,12 +55,7 @@ message returned by the Database Mail system. You can check the Database
 Mail Log if you right-click on Management \> Database Mail, and select
 **View Database Mail Log**
 
- 
-
-![Graphical user interface, application, table Description automatically
-generated](media/image1.png){width="2.6979166666666665in"
-height="1.1770833333333333in"}
-
+:::image type="content" source="media/DBMail-ViewLog.png" alt-text="View Database Mail log":::
  
 
 This executes the following query to **sysmail_event_log.**
@@ -68,27 +63,25 @@ This executes the following query to **sysmail_event_log.**
  
 ```sql
 SELECT er.log_id AS [LogID],
-	er.event_type AS [EventType],
-	er.log_date AS [LogDate],
-	er.description AS [Description],
-	er.process_id AS [ProcessID],
-	er.mailitem_id AS [MailItemID],
-	er.account_id AS [AccountID],
-	er.last_mod_date AS [LastModifiedDate],
-	er.last_mod_user AS [LastModifiedUser]
+  er.event_type AS [EventType],
+  er.log_date AS [LogDate],
+  er.description AS [Description],
+  er.process_id AS [ProcessID],
+  er.mailitem_id AS [MailItemID],
+  er.account_id AS [AccountID],
+  er.last_mod_date AS [LastModifiedDate],
+  er.last_mod_user AS [LastModifiedUser]
 FROM msdb.dbo.sysmail_event_log er
 ORDER BY [LogDate] DESC
 ```
 
-
 The event_type column can have the following values:
 
--   Errors
--   Warnings
--   Information
--   Success
+- Errors
+- Warnings
+- Information
+- Success
 
- 
 
 You can use WHERE clause to filter to only show the event types desired.
 
@@ -118,17 +111,9 @@ ON er.mailitem_id = fi.mailitem_id
 ORDER BY [LogDate] DESC
 ```
 
-When an error is returned specifically from sp_send_dbmail, the e-mail
-is not submitted to the Database Mail system and the error is not
-displayed in sysmail_event_log view.
+When an error is returned specifically from sp_send_dbmail, the e-mail is not submitted to the Database Mail system and the error is not displayed in sysmail_event_log view.
 
-When individual account delivery attempts fail, Database Mail holds the
-error messages during retry attempts until the mail item delivery either
-succeeds or fails. In case of ultimate success, all of the accumulated
-errors get logged as separate warnings including the account_id. This
-can cause warnings to appear, even though the e-mail was sent. In case
-of ultimate delivery failure, all previous warnings get logged as one
-error message without an account_id, since all accounts have failed.
+When individual account delivery attempts fail, Database Mail holds the error messages during retry attempts until the mail item delivery either succeeds or fails. In case of ultimate success, all of the accumulated errors get logged as separate warnings including the account_id. This can cause warnings to appear, even though the e-mail was sent. In case of ultimate delivery failure, all previous warnings get logged as one error message without an account_id, since all accounts have failed.
 
  
 
@@ -156,12 +141,11 @@ Internal tables in the msdb database contain the e-mail messages and attachments
 
 **sysmail_mailitems** is the base table for the other sysmail views. The sysmail_allitems view is built on the sysmail_mailitems table and is a superset of the following views:
 
--   sysmail_unsentitems
+- sysmail_unsentitems
 
--   sysmail_sentitems
+- sysmail_sentitems
 
--   sysmail_faileditems
-
+- sysmail_faileditems
 
 > [!NOTE]
 > If you backup the production msdb database and
@@ -183,11 +167,7 @@ Messages with **unsent** or **retrying** status are still in the mail queue and 
 
 Messages can have the **retrying** status for the following reasons:
 
--   Database Mail has attempted to send the mail, but the SMTP mail server could not be contacted. Database Mail will continue to
-    attempt to send the message using other Database Mail accounts assigned to the profile that sent the message. If no accounts can
-    send the mail, Database Mail will wait for the length of time configured for the Account Retry Delay parameter and then attempt to
-    send the message again. Database Mail uses the Account Retry Attempts parameter to determine how many times to attempt to send
-    the message. Messages retain retrying status as long as Database Mail is attempting to send the message.
+- Database Mail has attempted to send the mail, but the SMTP mail server could not be contacted. Database Mail will continue to attempt to send the message using other Database Mail accounts assigned to the profile that sent the message. If no accounts can send the mail, Database Mail will wait for the length of time configured for the Account Retry Delay parameter and then attempt to send the message again. Database Mail uses the Account Retry Attempts parameter to determine how many times to attempt to send the message. Messages retain retrying status as long as Database Mail is attempting to send the message.
 
 
 ### sysmail_faileditems
@@ -261,17 +241,15 @@ If you haven't already, become familiar with the steps for configuring database 
 
 Of particular interest are:
 
--   Server name and port number. The server name must be a fully qualified domain name and the port number must be accurate. Typically, default SMTP port is 25, you need to confirm.
+- Server name and port number. The server name must be a fully qualified domain name and the port number must be accurate. Typically, default SMTP port is 25, you need to confirm.
 
--   SSL - Verify if the SMTP server requires SSL
+- SSL - Verify if the SMTP server requires SSL
 
--   SMTP authentication. Are you using the Windows authentication of the Database Engine service, Basic authentication with a domain account specified, or anonymous authentication? You need to validate within your own environment what the SMTP server allows. If a domain account is specified (either service account or basic authentication), it must have permissions on the SMTP server.
-
+- SMTP authentication. Are you using the Windows authentication of the Database Engine service, Basic authentication with a domain account specified, or anonymous authentication? You need to validate within your own environment what the SMTP server allows. If a domain account is specified (either service account or basic authentication), it must have permissions on the SMTP server.
 
 You can use this same information to send a test mail with PowerShell see [Send a Test email with PowerShell](#send-a-test-email-with-powershell).
 
  
-
 ### Database Mail system parameters
 
 To check the configuration:
@@ -299,7 +277,6 @@ To send a test database mail:
 1. Right-click on Management \> Database Mail, and select **Send Test E-Mail...**
 
 :::image type="content" source="media/DBMail_SendTestMail.png" alt-text="Database Mail Send Test Mail":::
-
 
 After you send the test mail, then review the Database Mail log and sysmail views for what happened to the test mail. If the test mail isn't sent successfully, review the account configuration and compare to the SMTP server requirements at which point you may need to involve the SMTP server admininstrator. If the test mail is sent successfully,but there are still problems with other mails not being sent, then you need to drill into the specifics of the email messages that aren't getting sent. Review the actual **sp_send_dbmail** command that is being executed. If you don't have the T-SQL command, you can gather an Xevent trace (with sql_batch_completed and sql_batch_started) and look at the batch_text column.
 
@@ -360,9 +337,9 @@ To determine if there are any problems with the Service Broker objects, the best
 
 What to look for here when comparing? -- **Question for Nathan Schoenack**
 
-## Advanced Database Mail Troubleshooting 
+## Advanced Database Mail Troubleshooting
 
-When might you need to do advanced troubleshooting? 
+When might you need to do advanced troubleshooting?
 
 - Database Mail crashes and the cause isn't fully explained when looking at Database Mail Log (sysmail_event_log)
    - You see "DatabaseMail process is started" followed immediately be an Exception Message and then "DatabaseMail process is shutting down"
@@ -375,13 +352,12 @@ When might you need to do advanced troubleshooting?
 Depending on the problem, you may need one or more of these collections.
 These are described in order of what you're most likely to need.
 
-1.  Backup of msdb
-1.  Event Log
-1.  Profiler trace
-1.  Process Monitor (Procmon)
-1.  Procdump
-1.  Time Travel Trace
-
+1. Backup of msdb
+1. Event Log
+1. Profiler trace
+1. Process Monitor (Procmon)
+1. Procdump
+1. Time Travel Trace
 
 ### Msdb backup
 
@@ -393,7 +369,6 @@ See Initial Troubleshooting page Sysmail System Views section for tips regarding
 ### Event Log
 
 In the event that the external **DatabaseMail.exe** program cannot log to the msdb tables, the program logs errors to the Windows application event log. In addition, if **DatabaseMail.exe** encounters some kind of exception, it is often logged to Application event log as well. The exception stack is typically identical, but check the Application event log to see if any additional stack information is present.
-
 
 Sometimes when troubleshooting a DatabaseMail.exe crash, you may find logging that indicates a Windows Error Report dump was created. It will appear something similar to this:
 
