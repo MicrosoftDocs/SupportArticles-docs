@@ -14,7 +14,7 @@ Intune provides the [Windows 10 feature updates (public preview)](/mem/intune/pr
 This article describes an alternative method to restrict the Windows 10 feature update versions that are offered to devices enrolled in Intune.
 
 > [!TIP]  
-> Before using the alternative method offered in this article, review the *Limitations*  section of the [Feature updates policy](/mem/intune/protect/windows-10-feature-updates#limitations-for-feature-updates-for-windows-10-and-later-policy) article for the recommended guidance.
+> Before using the alternative method, see [limitations of feature updates](/mem/intune/protect/windows-10-feature-updates#limitations-for-feature-updates-for-windows-10-and-later-policy) for the recommended guidance.
 
 ## The `TargetReleaseVersion` Policy CSP
 
