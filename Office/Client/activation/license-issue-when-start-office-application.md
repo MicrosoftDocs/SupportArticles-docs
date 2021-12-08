@@ -48,7 +48,7 @@ appliesto:
 > - For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](/azure/active-directory/user-help/multi-factor-authentication-end-user-signin).
 > - To reset your password, see [Reset my Office 365 tenant admin password](/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password&preserve-view=true).
 
-When you start a Microsoft Office 2016 or Office 2013 application, such as Outlook, Word, Excel, or PowerPoint, you may receive the following error message:
+When you start a Microsoft Office 2016 or Office 2013 application, such as Outlook, Word, Excel, or PowerPoint, you might receive the following error message:
 
 > Microsoft Office cannot verify the license for this product. You should repair the Office program by using Control Panel.
 
@@ -56,7 +56,7 @@ When you start a Microsoft Office 2016 or Office 2013 application, such as Outlo
 
 ## Cause
 
-The Office application is running in compatibility mode for a different operating system, or the software protection platform registry key was deleted while updating windows from 1909 to any other build.
+The Office application is running in compatibility mode for a different operating system, or the software protection platform registry key was deleted while updating Windows from 1909 to any other build.
 
 ## Resolution
 
@@ -107,21 +107,21 @@ The Office application is running in compatibility mode for a different operatin
     > [!NOTE]
     > The **1x** placeholder represents your version of Office (16 = Office 2016, 15 = Office 2013)
 
-3. Right-click the Office application that triggers the error, and then click **Properties**.
-4. If the **Compatibility** tab is available, click it, and then follow these steps. If the **Compatibility** tab does not exist, go to step 5.
+3. Right-click the Office application that triggers the error, and then select **Properties**.
+4. If the **Compatibility** tab is available, select it, and then follow these steps. If the **Compatibility** tab isn't available, go to step 5.
 
    1. On the **Compatibility** tab, clear the **Run this program in compatibility mode for** option.
-   2. Click **Change settings for all users**.
+   2. Select **Change settings for all users**.
    3. On the **Compatibility for all users** tab, clear the **Run this program in compatibility mode for** option.
-   4. Click **OK** two times.
+   4. Select **OK** two times.
 
-5. If the **Compatibility** tab does not exist, click **Cancel** on the application Properties page to close it, and then follow these steps:
+5. If the **Compatibility** tab isn't available, select **Cancel** on the application Properties page to close it, and then follow these steps:
 
    1. Right-click Outlook.exe, and then select **Troubleshoot compatibility**.
    2. Select **Troubleshoot Program**.
-   3. Clear all options, and then click **Next**.
-   4. Select the **No, I am done investigating the problem** option, and then click **Next**.
-   5. Click **Close**.
+   3. Clear all options, and then select **Next**.
+   4. Select the **No, I am done investigating the problem** option, and then select **Next**.
+   5. Select **Close**.
 
 ## More Information
 
