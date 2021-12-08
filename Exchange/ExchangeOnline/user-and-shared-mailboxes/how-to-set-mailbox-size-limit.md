@@ -10,7 +10,7 @@ appliesto: Exchange Online
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-six; jhayes
+ms.author: v-six;jhayes
 ms.service: exchange-online
 ---
 
