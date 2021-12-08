@@ -10,8 +10,8 @@ appliesto: Exchange Online
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-sixjhayes
-ms.prod: 
+ms.author: v-six; jhayes
+ms.service: exchange-online 
 ---
 
 # How to increase and set Exchange Online mailbox sizes in Microsoft 365
@@ -22,12 +22,12 @@ _Original KB number:_ &nbsp; 2490230
 
 This article describes how to increase mailbox sizes and use Exchange Online PowerShell to set Exchange Online mailbox sizes and limits in the Microsoft 365 environment.
 
-The size of the Exchange Online mailbox is determined by the mailbox type and the user's subscription license. Please see [Mailbox Storage Limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#mailbox-storage-limits) for more information. In order to permanently increase the mailbox size, a user should be assigned an Exchange Online license that includes larger mailbox size. Microsoft has created an automated diagnostic that will guide you in what you need to do for a particular user to increase their mailbox size. Select the following button to populate the diagnostic in the Microsoft 365 admin center.
+The size of the Exchange Online mailbox is determined by the mailbox type and the user's subscription license. See [Mailbox Storage Limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#mailbox-storage-limits) for more information. To permanently increase the mailbox size, a user should be assigned an Exchange Online license that includes larger mailbox size. Microsoft has created an automated diagnostic that will guide you in what you need to do for a particular user to increase their mailbox size. Select the following button to populate the diagnostic in the Microsoft 365 admin center.
 
 >[!div class="nextstepaction"]
 >[Diag: Mailbox or Message Size](https://aka.ms/PillarMailboxSize)
 
-As an administrator, you also have an option to set mailbox sizes (also known as quotas) to a lower value than the assigned user license allows. Therefore, for example, if your users are licensed for a 50 gigabytes (GB) mailbox size, you can set a custom limit of 20 GB if your business requires it.
+As an administrator, you also have an option to set mailbox sizes (also known as quotas) to a lower value than the assigned user license allows. So, for example, if your users are licensed for a 50 gigabytes (GB) mailbox size, you can set a custom limit of 20 GB if your business requires it.
 
 ## Set custom mailbox size limits
 
@@ -74,7 +74,7 @@ To set custom mailbox size limits for Exchange Online mailboxes, use one of the 
 
 ## Set Microsoft 365 group mailbox quota
 
-To view the current size of an Microsoft 365 group mailbox and increase its quota, follow these steps:
+To view the current size of a Microsoft 365 group mailbox and increase its quota, follow these steps:
 
 ### View Microsoft 365 group mailbox size
 
