@@ -2,7 +2,6 @@
 title: Unable to log into after planned System Maintenance
 description: This article provides a resolution for the problem where you are unable to log into Microsoft Dynamics CRM Online by using the web client.
 ms.reviewer: debrau, chanson
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-access
 ---

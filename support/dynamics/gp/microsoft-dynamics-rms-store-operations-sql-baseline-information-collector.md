@@ -2,7 +2,6 @@
 title: Microsoft Dynamics RMS Store Operations SQL Baseline Information Collector
 description: Describes the information that is collected from a computer when you run the Microsoft Dynamics Retail Management System (RMS) Store Operations SQL Baseline Information Collector for versions of Windows older than Windows 7 and Windows Server 2008.
 ms.reviewer: tberger
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 2][9EDB5129-098B-4784-9116-A0F5BEFE4903] Microsoft Dynamics RMS Store Operations SQL Baseline Information Collector

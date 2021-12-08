@@ -2,7 +2,6 @@
 title: FAQ about the integration of SSRS
 description: Contains answers to frequently asked questions about the integration of SQL Server Reporting Services (SSRS) with Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
 ms.reviewer: lmiller, kyouells
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Frequently asked questions about the integration of SQL Server Reporting Services (SSRS) with Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010

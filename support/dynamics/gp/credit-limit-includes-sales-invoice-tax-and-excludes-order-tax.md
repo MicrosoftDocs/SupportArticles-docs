@@ -2,7 +2,6 @@
 title: Credit limit includes sales invoice tax and excludes order tax
 description: Describes that the credit limit includes sales invoice taxes but excludes order taxes in Sales Order Processing in Microsoft Dynamics GP. Provides a formula to determine whether a document will put a customer over the credit limit.
 ms.reviewer: v-tarak
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # The credit limit includes sales invoice tax and excludes order tax in Sales Order Processing

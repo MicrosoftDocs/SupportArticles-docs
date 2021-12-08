@@ -25,9 +25,9 @@ _Original KB number:_ &nbsp; 2890797
 On a Windows 10 or Windows 8-based laptop computer, you do the following:
 
 1. Plug in an external monitor.
-2. Change the display configuration to **Second screen only** (using the Windows logo key :::image type="content" source="./media/display-configuration-reverts-second-screen-only-resume-standby/windows-logo-key.jpg" alt-text="Windows logo key." border="false":::
+2. Change the display configuration to **Second screen only** (using the Windows logo key :::image type="icon" source="media/display-configuration-reverts-second-screen-only-resume-standby/windows-logo-key.png" border="false":::
 +P keyboard shortcut).
-3. Change the display configuration to **Duplicate** (using the Windows logo key :::image type="content" source="./media/display-configuration-reverts-second-screen-only-resume-standby/windows-logo-key.jpg" alt-text="Windows logo key." border="false":::
+3. Change the display configuration to **Duplicate** (using the Windows logo key :::image type="icon" source="media/display-configuration-reverts-second-screen-only-resume-standby/windows-logo-key.png" border="false":::
 +P keyboard shortcut again).
 4. Close the lid on the laptop computer.
 5. Unplug the external monitor.
@@ -42,5 +42,5 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## Workaround
 
-To work around this problem, use the Windows logo key :::image type="content" source="./media/display-configuration-reverts-second-screen-only-resume-standby/windows-logo-key.jpg" alt-text="Windows logo key." border="false":::)
+To work around this problem, use the Windows logo key :::image type="icon" source="media/display-configuration-reverts-second-screen-only-resume-standby/windows-logo-key.png" border="false":::)
 +P keyboard shortcut to change the display configuration back to **Duplicate** mode.

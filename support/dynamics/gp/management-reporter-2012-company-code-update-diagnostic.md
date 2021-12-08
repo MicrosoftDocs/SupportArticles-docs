@@ -2,7 +2,6 @@
 title: Management Reporter 2012 Company Code Update Diagnostic
 description: Diagnostic tool to change the company code in Microsoft Management Reporter 2012.
 ms.reviewer: kellybj, kevogt
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3.0][f2915ec5-185d-4984-b42e-2e7b30c7f116] Management Reporter 2012 Company Code Update Diagnostic

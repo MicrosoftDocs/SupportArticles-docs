@@ -40,7 +40,7 @@ When you investigate a BitLocker issue on a Windows 10 device, it's important to
 
 As a first step, determine whether the Intune policy successfully deployed to the target device. In the following example, you have a device configuration policy that deploys the Windows Encryption (BitLocker) settings, as shown:
 
-![Windows Encryption device configuration policy with the settings](./media/troubleshooting-bitlocker-policies/settings.png)
+:::image type="content" source="media/troubleshoot-bitlocker-policies/settings.png" alt-text="Windows Encryption device configuration policy with the settings." border="false":::
 
 How do you confirm that the settings have been applied to the targeted device? Following are a few ways to do that.
 
@@ -60,12 +60,13 @@ Remember, there can be a delay between a device receiving a BitLocker policy, an
 
 On a device that has enabled BitLocker and encrypted a drive, you can view the BitLocker status from a devices Control Panel. On the device, open **Control Panel** > **System and Security** > **BitLocker Drive Encryption**. Confirmation appears as seen in the following image.  
 
-![BitLocker is turned on in Control Panel](./media/troubleshooting-bitlocker-policies/control-panel.png)
+:::image type="content" source="media/troubleshoot-bitlocker-policies/control-panel.png" alt-text="BitLocker is turned on in Control Panel." border="false":::
 
 ### Use a command prompt  
 
 On a device that has enabled BitLocker and encrypted a drive, launch Command Prompt with admin credentials, and then run `manage-bde -status`. The results should resemble the following example:  
-![A result of the status command](./media/troubleshooting-bitlocker-policies/command.png)
+
+:::image type="content" source="media/troubleshoot-bitlocker-policies/manage-bde-status-command.png" alt-text="A result of the status command.":::
 
 In the example:
 
@@ -87,9 +88,13 @@ Confirm-SecureBootUEFI
 
 ### Review the devices registry key configuration
 
-After BitLocker policy successfully deploys to a device, view the following registry key on the device where you can review the configuration of BitLocker settings:  *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Here's an example:
+After BitLocker policy successfully deploys to a device, view the following registry key on the device where you can review the configuration of BitLocker settings:
 
-![BitLocker registry key](./media/troubleshooting-bitlocker-policies/registry.png)
+*HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*
+
+Here's an example:
+
+:::image type="content" source="media/troubleshoot-bitlocker-policies/registry.png" alt-text="BitLocker registry key." border="false":::
 
 These values are configured by the BitLocker CSP. Verify that the values of the keys match the settings specified in the source of your Intune Windows Encryption policy. For more information on each of these settings, see [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp).
 
@@ -104,11 +109,11 @@ On a device that has enabled BitLocker, you can generate and view an MDM diagnos
 
 When you analyze the MDM diagnostics report, the contents can seem a little confusing at first. Following is an example that shows how to correlate what's in the report with the settings in a policy:
 
-![MDM diagnostics report example](./media/troubleshooting-bitlocker-policies/report.png)
+:::image type="content" source="media/troubleshoot-bitlocker-policies/report.png" alt-text="Screenshot of the MDM diagnostics report example." border="false":::
 
 The output result shows the values that correspond to the values from your BitLocker policy:
 
-![Output result shows the values ](./media/troubleshooting-bitlocker-policies/output.png)
+:::image type="content" source="media/troubleshoot-bitlocker-policies/output.png" alt-text="Screenshot of the output result that shows the values." border="false":::
 
 MDM diagnostics output results:
 
@@ -120,7 +125,7 @@ EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 
 You can reference the [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-csp) to see what each value means. For this example, a snippet is shared in the following image.
 
-![Purposes of values](./media/troubleshooting-bitlocker-policies/shared-example.png)
+:::image type="content" source="media/troubleshoot-bitlocker-policies/shared-example.png" alt-text="Screenshot shows an example snippet of the purposes of values." border="false":::
 
 Similarly, you can see all the values and verify them from the BitLocker CSP link.
 
@@ -163,21 +168,21 @@ You should now have a good idea how to confirm that the BitLocker policy success
 
 - As the name suggests, this setting allows an administrator to require encryption to be turned on by using *BitLocker > Device Encryption*. Using the troubleshooting tips mentioned earlier, you first check the MDM Diagnostics report. The report confirms that the correct policy was deployed on the device:
 
-  ![Report confirms the correct policy is deployed on the device](./media/troubleshooting-bitlocker-policies/mdm-report.png)
+    :::image type="content" source="media/troubleshoot-bitlocker-policies/mdm-report.png" alt-text="Screenshot shows the report confirms the correct policy is deployed on the device." border="false":::
 
 - You also verify success in the registry:
 
-  ![RequiredDeviceEncryption registry value shows 1](./media/troubleshooting-bitlocker-policies/registry-confirm.png)
+     :::image type="content" source="media/troubleshoot-bitlocker-policies/registry-confirm.png" alt-text="Screenshot shows the RequiredDeviceEncryption registry value is 1." border="false":::
 
 - Next, you check the status of TPM using PowerShell and find that TPM isn't available on the device:
 
-  ![Checked TPM status using PowerShell](./media/troubleshooting-bitlocker-policies/tpm-command.png)
+    :::image type="content" source="media/troubleshoot-bitlocker-policies/get-tpm-command.png" alt-text="Screenshot shows the TPM status is checked using PowerShell." border="false":::
 
 - Because BitLocker relies on TPM, you could conclude that BitLocker doesn't fail because of a problem with Intune or the policy, but rather because the device itself doesn't have a TPM chip or TPM is disabled in the BIOS.
 
   As an additional tip, you can confirm the same in the Windows Event Viewer under **Applications and Services log** > **Microsoft** > **Windows** > **BitLocker API**. In the **BitLocker API** event log, you'll find an Event ID 853 that means TPM isn't available:
 
-  ![Event ID 853](./media/troubleshooting-bitlocker-policies/event-error.png)
+    :::image type="content" source="media/troubleshoot-bitlocker-policies/event-853-error.png" alt-text="Screenshot shows the Event ID 853 information." border="false":::
 
   > [!NOTE]
   > You can also check the TPM status by running **tpm.msc** on the device.

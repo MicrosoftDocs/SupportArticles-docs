@@ -35,7 +35,9 @@ Consider the following scenario:
 
 In this scenario, the sysprep command fails. You receive an error message that resembles the following:
 
-![Sysprep command fails error](./media/miracastview-cause-sysprep-error-upgrade-windows-10-1709/sysprep-command-fails.png)
+> Sysprep was not able to validate your Windows installation. Review the log file at %WINDIR%\System32\Sysprep\Panther\setupact.log for details. After resolving the issue, use Sysprep to validate your installation again.
+
+:::image type="content" source="media/miracastview-cause-sysprep-error-upgrade-windows-10-1709/sysprep-command-fails.png" alt-text="The details of the Sysprep was not able to validate your Windows installation error." border="false":::
 
 Additionally, the setupact log contains error messages that resemble the following:
 
@@ -50,7 +52,7 @@ When you use the Remove-AppxPackage PowerShell command to remove MiracastView, t
 > Deployment Remove operation with target volume C: on Package Windows.MiracastView_6.3.0.0_neutral_neutral_cw5n1h2txyewy from: failed with error 0x80070490.  
 See `http://go.microsoft.com/fwlink/?LinkId=235160` for help diagnosing app deployment issues.
 
-![Error message when you remove miracastview](./media/miracastview-cause-sysprep-error-upgrade-windows-10-1709/error-message-when-you-remove-miracastview.jpg)
+:::image type="content" source="media/miracastview-cause-sysprep-error-upgrade-windows-10-1709/error-message-when-you-remove-miracastview.png" alt-text="The error message that occurs when you use Remove-AppxPackage to remove MiracastView.":::
 
 ## Cause
 

@@ -26,9 +26,9 @@ Assume that you update the ADML and ADMX file to the Windows 10, version 1803 ve
 
 > Resource $(string id="Win7Only)' referenced in attribute displayName could not be found
 
-![Error message 1](./media/resource-stringid-win7only-not-found/error-message-1.png)
+:::image type="content" source="media/resource-stringid-win7only-not-found/resource-referenced-in-attribute-displayname-could-not-be-found-error-1.png" alt-text="The details of the error message that's shown in the Group Policy Management Editor.":::
 
-![Error message 2](./media/resource-stringid-win7only-not-found/error-message-2.png)  
+:::image type="content" source="media/resource-stringid-win7only-not-found/resource-referenced-in-attribute-displayname-could-not-be-found-error-2.png" alt-text="The details of the error message that's shown in User Configuration.":::
 
 ## Cause
 
@@ -55,7 +55,7 @@ To update SearchOCR.adml, follow these steps:
 > This is for the United States English version. Other languages will have similar instructions.
 
 1. Locate the file in the `\path\PolicyDefinitions\en-US` folder.
-2. Make a backup copy of SearchOCR.adml in case that you make a mistake editing the file.
+2. Make a backup copy of SearchOCR.adml in case that you make a mistake when editing the file.
 3. Open the file in a text editor. (If you use notepad.exe, turn on the **Status** Bar on the **View** menu.)
 4. Locate line 26.
 5. Add a blank line. Line 26 should now be blank.
