@@ -13,7 +13,7 @@ When you try to open an existing chat or start a new chat from Dynamics 365, an 
 
 ## Microsoft Edge
 
-1. Select **Settings and more** (**...**) at the upper-right corner of the screen and then select **Settings**. 
+1. Select **Settings and more** (![Edge options](media/dynamics-embed-collab-error/edge-options.png)) at the upper-right corner of the screen and then select **Settings**. 
 
 2. In the left navigation pane, select **Cookies and site permissions**. 
 
@@ -33,7 +33,7 @@ When you try to open an existing chat or start a new chat from Dynamics 365, an 
 
 ## Google Chrome
 
-1. Select **Customize and control Google Chrome** at the upper-right corner of the screen and then select **Settings**. 
+1. Select **Customize and control Google Chrome** (![Google options](media/dynamics-embed-collab-error/google-options.png)) at the upper-right corner of the screen and then select **Settings**. 
 
 2. In the left navigation pane, select **Privacy and security**, and then select **Cookies and other site data**.
 
