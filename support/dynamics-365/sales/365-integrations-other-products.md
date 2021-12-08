@@ -2,7 +2,6 @@
 title: 365 integrations with other products
 description: Describes Microsoft Dynamics 365 integrations with other products.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
 ms.subservice: d365-sales-connectors
 ---

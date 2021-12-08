@@ -1,7 +1,6 @@
 ---
 title: How Manufacturing determines issue-to site for a picklist
 description: Describes how Manufacturing determines the issue-to site for a picklist.
-ms.topic: article
 ms.reviewer: beckyber, aeckman
 ms.date: 03/31/2021
 ---

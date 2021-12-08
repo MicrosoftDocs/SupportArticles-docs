@@ -30,7 +30,7 @@ This issue occurs if you use particular settings for your Remote Desktop connect
 
 1. Before you connect to the remote computer, open the **Local Resources** tab of the **Remote Desktop Connection** dialog box, and set **Apply Windows key combinations** to either **On the remote computer** or **Only when using the full screen**.
 
-    :::image type="content" source="./media/local-computer-behaves-as-if-windows-logo-key-pressed/set-apply-windows-key-combinations.png" alt-text="Setting the Apply Windows key combinations option on the Local Resources tab of the Remote Desktop connection dialog box." border="false":::
+    :::image type="content" source="media/local-computer-behaves-as-if-windows-logo-key-pressed/set-apply-windows-key-combinations.png" alt-text="Screenshot of the Apply Windows key combinations option on the Local Resources tab of the Remote Desktop connection dialog box." border="false":::
 
 2. To start the Remote Desktop session, select **Connect**.
 3. If you selected **Only when using the full screen** in step 1, expand the Remote Desktop session window to full screen. If you selected **On the remote computer**, go to step 4.

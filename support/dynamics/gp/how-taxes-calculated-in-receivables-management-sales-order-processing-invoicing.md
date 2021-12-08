@@ -2,7 +2,6 @@
 title: How taxes are calculated in Receivables Management, Sales Order Processing and Invoicing in Microsoft Dynamics GP
 description: Describes how taxes are calculated in the Receivables Management, Sales Order Processing, and the Invoicing modules in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # How taxes are calculated in Receivables Management, Sales Order Processing, and Invoicing in Microsoft Dynamics GP

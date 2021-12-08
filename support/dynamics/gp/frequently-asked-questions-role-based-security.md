@@ -2,7 +2,6 @@
 title: Frequently asked questions about role-based security
 description: This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
 ms.reviewer: kyouells
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010

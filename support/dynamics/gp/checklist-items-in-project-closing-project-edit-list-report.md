@@ -2,7 +2,6 @@
 title: Checklist items in Project Closing Edit List report
 description: Contains information about the checklist items in the Project Closing Edit List report in Project Accounting in Microsoft Dynamics GP.
 ms.reviewer: ppeterso
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about checklist items in the Project Closing Edit List report in Project Accounting in Microsoft Dynamics GP
