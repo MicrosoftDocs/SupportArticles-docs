@@ -32,31 +32,21 @@ To resolve this problem, follow these steps:
 1. Disable resource disk formatting and swap configuration within waagent configuration because this task is now handled by Cloud-Init. Set the parameters as follows:
 
     ```
-   # Format if unformatted. If 'n', resource disk will not be mounted.
-  ResourceDisk.Format=n
+    # Format if unformatted. If 'n', resource disk will not be mounted.
+    ResourceDisk.Format=n
 
-  # Create and use swapfile on resource disk.
-  ResourceDisk.EnableSwap=n
+    # Create and use swapfile on resource disk.
+    ResourceDisk.EnableSwap=n
 
-  #Mount point for the resource disk
-  ResourceDisk.MountPoint=/mnt
- 
-  #Size of the swapfile.
-  ResourceDisk.SwapSizeMB=0
-    ```
-
-2. Make sure that the Azure Linux Agent is not trying to mount the ephemeral disk. This is because the task is typically handled by cloud-init. Set the parameters as follows:
-
-    ```
-    #Mount point for the resource disk 
-    ResourceDisk.MountPoint=/mnt 
-
-    #Size of the swapfile. 
+    #Mount point for the resource disk
+    ResourceDisk.MountPoint=/mnt
+  
+    #Size of the swapfile.
     ResourceDisk.SwapSizeMB=0
     ```
 
-3. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
-4. Make sure that the VM is configured to create a swap file by using cloud-init:
+1. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
+1. Make sure that the VM is configured to create a swap file by using cloud-init:
   
     1. Add the following script to `/var/lib/cloud/scripts/per-boot`.
 
