@@ -1,6 +1,6 @@
 ---
-title: How to scan Outlook calendar by using Microsoft Support and Recovery Assistant
-description: Describes how to use Microsoft Support and Recovery Assistant to scan the Outlook calendar for known issues and create a detailed report. 
+title: Run CalCheck from Microsoft Support and Recovery Assistant to scan Outlook calendar 
+description: Use the Outlook Calendar diagnostic to scan the Outlook calendar for issues. 
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -35,7 +35,7 @@ To scan an Outlook calendar that's experiencing issues, you can either download 
 
     **Note** After Microsoft Support and Recovery Assistant is installed, the calendar scan begins automatically. The scan is finished when you see **We're done collecting your Outlook configuration details**.
 
-## Start the Outlook Calendar diagnostic from SaRA
+## Run the Outlook Calendar diagnostic from Microsoft Support and Recovery Assistant
 
 1. On the computer that's running the Outlook version that's experiencing the calendar issues, start Microsoft Support and Recovery Assistant.
 
