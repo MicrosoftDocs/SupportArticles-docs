@@ -90,10 +90,10 @@ Search for any matches to folders located recursively under the two folder paths
 
 ### Example 4
 
-Search for any matches that contain either of the two strings, `Agent1` or `Agent2`(case insensitive):
+Search for any matches that contain either of the two strings, `Agent1.contoso.com` or `Agent2.contoso.com` (case insensitive):
 
 ```perl
-^(?i)(agent1)|(?i)(agent2)$
+^(?i)(agent1.contoso.com)|(?i)(agent2.contoso.com)$
 ```
 
 Search for any matches that contain `Agent` (case insensitive):

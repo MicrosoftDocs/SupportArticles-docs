@@ -51,7 +51,8 @@ To resolve the issue that's described in the "Symptoms" section, follow these st
 
 10. Go to **Settings** -> **Network and Internet** -> **Cellular** -> **Connect**.
 11. A retry page that resembles as:
-![network and internet](./media/device-cant-connect-mobile-broadband-over-the-air/network-and-internet.jpg)
+
+:::image type="content" source="media/device-cant-connect-mobile-broadband-over-the-air/network-and-internet.png" alt-text="Screenshot of the Mobile operator network connection retry option in the Cellular page of Network and Internet settings." border="false":::
 
 12. Click **Yes**.  
 Windows can now connect by using the configuration in the modem. This modem configuration overwrites the existing configuration on the operating system.
