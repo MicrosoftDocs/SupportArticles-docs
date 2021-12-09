@@ -87,13 +87,13 @@ Get-Mailbox <User ID> | Select *quota*
 
 To check the size of a group mailbox or group mailboxes, run the following PowerShell cmdlet:
 
-- To view a specific group mailbox:
+- For a specific group mailbox:
 
     ```powershell
     Get-Mailbox -GroupMailbox <name of the group> | Get-MailboxStatistics | fl TotalDeletedItemSize,TotalItemSize
     ```
 
-- To view all group mailboxes:
+- For all group mailboxes:
 
     ```powershell
     Get-Mailbox -GroupMailbox -ResultSize unlimited | Get-MailboxStatistics | ft DisplayName,TotalDeletedItemSize,TotalItemSize
