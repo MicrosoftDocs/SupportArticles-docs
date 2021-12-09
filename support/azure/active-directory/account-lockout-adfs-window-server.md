@@ -92,7 +92,7 @@ We recommend that you enable modern authentication, certificate-based authentica
 
 **Deploy modern authentication** 
 
-In addition to removing one of the attack vectors that are currently being used through Exchange Online, deploying modern authentication for your Office client applications enables your organization to benefit from multi-factor authentication. Modern authentication is supported by all the latest Office applications across the Windows, iOS, and Android platforms.
+In addition to removing one of the attack vectors that are currently being used through Exchange Online, deploying modern authentication for your Office client applications enables your organization to benefit from multifactor authentication. Modern authentication is supported by all the latest Office applications across the Windows, iOS, and Android platforms.
 
 For more information, see [How to deploy modern authentication for Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a#bk_getstarted).
 
@@ -127,7 +127,7 @@ The following non-password-based authentication types are available for AD FS an
 
     Windows Hello for Business is available in Windows 10. Windows Hello for Business enables password-free access from the extranet, based on strong cryptographic keys that are tied to both the user and the device.
 
-    Hello for Business is supported by AD FS in Windows Server 2016. see [Authenticating identities without passwords through Windows Hello for Business](/azure/active-directory/active-directory-azureadjoin-passport).  
+    Windows Hello for Business is supported by AD FS in Windows Server 2016. See [Authenticating identities without passwords through Windows Hello for Business](/azure/active-directory/active-directory-azureadjoin-passport).  
 
 ##### Step 3: Disable legacy authentication and unused endpoints
 
