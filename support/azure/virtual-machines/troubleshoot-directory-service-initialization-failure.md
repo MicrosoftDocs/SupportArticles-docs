@@ -24,7 +24,7 @@ This article provides steps to resolve issues where an Active Directory domain c
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, the screenshot shows that the VM needs to restart because of an error, displaying the stop code **0xC00002E1** in Windows Server 2008 R2, or **0xC00002E2** in Windows Server 2012 or later.
 
-![Windows Server 2012 startup screen states "Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.".](./media/troubleshoot-directory-service-initialization-failure/1.png)
+:::image type="content" source="media/troubleshoot-directory-service-initialization-failure/error-0xc00002e2.png" alt-text="Screenshot of an example of the error screen displaying the stop code 0xC00002E2: Your PC ran into a problem and needs to restart." border="false":::
 
 ## Cause
 
@@ -42,7 +42,7 @@ This error can be caused by any of the following conditions:
 
 ## Solution
 
-### Process overview:
+### Process overview
 
 1. Create and Access a Repair VM.
 1. Free space on disk.
@@ -92,7 +92,7 @@ If there's enough space on the disk, continue to the next task.
 
    1. Determine the drive letter and folder of **NTDS.DIT**:
 
-      ```
+      ```reg
       REG QUERY "HKLM\BROKENSYSTEM\ControlSet001\Services\NTDS\parameters" /v "DSA Working Directory"
       REG QUERY "HKLM\BROKENSYSTEM\ControlSet001\Services\NTDS\parameters" /v "DSA Database file"
       REG QUERY "HKLM\BROKENSYSTEM\ControlSet001\Services\NTDS\parameters" /v "Database backup path"
@@ -121,7 +121,7 @@ Set up the VM to boot on **Directory Services Restore Mode (DSRM)** mode to bypa
 
    Replace `<Drive Letter>` with the letter determined in the previous steps.
 
-   ![The screenshot shows an elevated CMD instance after entering the command, which displays Windows Boot Manager with the identifier.](./media/troubleshoot-directory-service-initialization-failure/2.png)
+   :::image type="content" source="media/troubleshoot-directory-service-initialization-failure/identifier-output.png" alt-text="Screenshot shows the output of an example of the command in CMD, which displays Windows Boot Manager with the identifier.":::
 
 1. Enable the `safeboot DsRepair` flag on the booting partition:
 
@@ -131,7 +131,7 @@ Set up the VM to boot on **Directory Services Restore Mode (DSRM)** mode to bypa
 
 1. Query the booting options again to ensure that your change was properly set.
 
-   ![The screenshot shows an elevated CMD instance after enabling the safeboot DsRepair flag.](./media/troubleshoot-directory-service-initialization-failure/3.png)
+   :::image type="content" source="media/troubleshoot-directory-service-initialization-failure/safeboot-dsrepair-output.png" alt-text="Screenshot shows the output of the query command after enabling the safeboot DsRepair flag.":::
 
 ### Recommended: before you rebuild the VM, enable serial console and memory dump collection
 
@@ -139,7 +139,7 @@ To enable memory dump collection and Serial Console, run the following script by
 
 1. Enable the Serial Console:
 
-  ```
+  ```console
   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON
   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
   ```
@@ -158,7 +158,7 @@ To enable memory dump collection and Serial Console, run the following script by
 
   **Enable on ControlSet001**:
 
-  ```
+  ```reg
   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
@@ -166,7 +166,7 @@ To enable memory dump collection and Serial Console, run the following script by
 
   **Enable on ControlSet002**:
 
-  ```
+  ```reg
   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
@@ -195,7 +195,7 @@ To enable memory dump collection and Serial Console, run the following script by
 
    1. Enter the following commands to select the disk that needs to be brought online and change the SAN policy:
 
-      ```
+      ```console
       DISKPART> select disk 1
       Disk 1 is now the selected disk.
 

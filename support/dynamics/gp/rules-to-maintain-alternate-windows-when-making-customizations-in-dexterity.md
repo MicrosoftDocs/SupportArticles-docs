@@ -2,7 +2,6 @@
 title: Rules to keep alternate windows when making customizations in Dexterity
 description: Describes how to maintain alternate windows when you make customizations in Dexterity in Microsoft Dynamics GP.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Rules to maintain alternate windows when you make customizations in Dexterity in Microsoft Dynamics GP

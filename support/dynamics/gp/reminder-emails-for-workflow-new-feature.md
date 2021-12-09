@@ -2,7 +2,6 @@
 title: Reminder emails for Workflow new feature
 description: Introduces the reminder emails for Workflow this new feature to Microsoft Dynamics GP 2018.
 ms.reviewer: 
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Reminder emails for Workflow - new feature to Microsoft Dynamics GP 2018

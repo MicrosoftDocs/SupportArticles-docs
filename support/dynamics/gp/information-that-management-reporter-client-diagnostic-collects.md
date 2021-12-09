@@ -2,7 +2,6 @@
 title: Management Reporter Client Diagnostic
 description: Describes the information that the Management Reporter Client Diagnostic collects.
 ms.reviewer: davidtre, kevog
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # [SDP 3][032a0446-3340-4560-9544-59b4e70faa7b] Management Reporter Client Diagnostic

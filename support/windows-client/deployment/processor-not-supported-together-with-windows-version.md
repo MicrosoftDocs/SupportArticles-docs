@@ -27,7 +27,7 @@ When you try to scan or download updates through Windows Update, you receive the
 > Unsupported hardware  
 > Your PC uses a processor that is designed for the latest version of Windows. Because the processor is not supported together with the Windows version that you are currently using, your system will miss important security updates.
 
-![unsupported hardware error message](./media/processor-not-supported-together-with-windows-version/unsupported-hardware-error.png)  
+:::image type="content" source="media/processor-not-supported-together-with-windows-version/unsupported-hardware-error.png" alt-text="The details of the Unsupported hardware error message.":::
 
 Additionally, you may see an error message in the Windows Update window that resembles the following:
 > Windows could not search for new updates  

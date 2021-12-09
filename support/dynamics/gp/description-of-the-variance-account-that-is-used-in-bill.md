@@ -2,7 +2,6 @@
 title: Description of the variance account that is used in Bill
 description: Description of the variance account that is used in Microsoft Dynamics GP Bill.
 ms.reviewer: lmuelle
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the variance account that is used in Microsoft Dynamics GP Bill

@@ -19,9 +19,9 @@ By default, appointment records created in the Microsoft Dynamics CRM web client
 
 In the Microsoft Dynamics CRM 2011 Outlook client, this may produce the following error during synchronization:
 
-> An unknown error occurred while synchronizing data to Outlook
+> An unknown error occurred while synchronizing data to Outlook.
 
-:::image type="content" source="media/an-unknown-error-occurred-while-synchronizing-data-to-outlook/error.jpg" alt-text="CRM 2011 sample synchronization error for appointments with blank organizer":::
+:::image type="content" source="media/an-unknown-error-occurred-while-synchronizing-data-to-outlook/error-page.png" alt-text="Screenshot of the error during synchronization in the Microsoft Dynamics C R M 2011 Outlook client.":::
 
 ## Cause
 

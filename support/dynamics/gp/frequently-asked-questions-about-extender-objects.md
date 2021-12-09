@@ -2,7 +2,6 @@
 title: Frequently asked questions about the Extender objects
 description: Provides information about the frequently asked questions about the Extender objects in Microsoft Dynamics GP.
 ms.reviewer: kvogel
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Frequently asked questions about the Extender objects in Microsoft Dynamics GP
