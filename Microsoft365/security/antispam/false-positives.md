@@ -26,7 +26,7 @@ _Original KB number:_&nbsp;3089691
 
 The advanced spam filtering (ASF) option **SPF record: hard fail** generates lots of false positives for users who have the option enabled.
 
-![Screenshot of the SPF record: hard fail option ](./media/false-positives/advanced-options.jpg)
+:::image type="content" source="media/false-positives/hard-fail-option.png" alt-text="Screenshot shows that the S P F record: hard fail option is enabled.":::
 
 ## Cause
 
@@ -38,7 +38,7 @@ This issue occurs for one of the following reasons:
 
     `contoso.com. IN MX 10 contoso-com.mail.protection.outlook.com`
 
-    An MX record for a domain whose primary MX record doesn't point to EOP resembles the following. (The MX record does not contain "mail.protection.outlook.com.")
+    An MX record for a domain whose primary MX record doesn't point to EOP resembles the following. (The MX record doesn't contain "mail.protection.outlook.com.")
 
     `fabrikam.com. IN MX 10 mail.fabrikam.com`
 
@@ -53,9 +53,9 @@ This issue occurs for one of the following reasons:
 
     The message traverses the following path from the Internet to the mailbox:
 
-    ![Screenshot that shows the path of the message from the Internet to the mailbox ](./media/false-positives/path1.jpg)
+    :::image type="content" source="media/false-positives/path-internet-mailbox.png" alt-text="Diagram shows the path of the message from the Internet to the mailbox." border="false":::
 
-    Within EOP, the SPF check is performed on IP address 2. (This is the on-premises mail server's relaying IP address.) However, the SPF check should have been performed on IP address 1. (This is the original connecting IP address.) Because EOP uses IP address 2 instead of IP address 1, any domain that publishes an SPF hard fail will fail SPF and will be marked incorrectly as spam. This occurs even if the domain would originally have passed SPF if the messages had been sent first through EOP and then to the on-premises mail server.
+    Within EOP, the SPF check is performed on IP address 2, which is the on-premises mail server's relaying IP address. However, the SPF check should have been performed on IP address 1, which is the original connecting IP address. Because EOP uses IP address 2 instead of IP address 1, any domain that publishes an SPF hard fail will fail SPF and will be marked incorrectly as spam. This occurs even if the domain would originally have passed SPF if the messages had been sent first through EOP and then to the on-premises mail server.
 
     This occurs if the MX record points to the on-premises mail servers or to a third-party-hosted email filtering service.
 
@@ -63,7 +63,7 @@ This issue occurs for one of the following reasons:
 
     Some organizations route mail in through EOP, then out to an on-premises mail server or third-party filtering service, and then back in through EOP again. In this case, the domain's primary MX record points to EOP. Email is relayed to an on-premises mail server through outgoing connectors and back into EOP through connectors or even through MX-based routing.
 
-    ![Screen shot of the path of the message from the Internet to EOP ](./media/false-positives/path2.jpg)
+    :::image type="content" source="media/false-positives/path-internet-eop.png" alt-text="Diagram shows the path of the message from the Internet to E O P." border="false":::
 
     The typical way to do this is through centralized mail control routing if the on-premises mail server is an Exchange server. If the on-premises mail server isn't an Exchange server, the local version of a connector is used, or mail is relayed back by using MX-based routing.
 

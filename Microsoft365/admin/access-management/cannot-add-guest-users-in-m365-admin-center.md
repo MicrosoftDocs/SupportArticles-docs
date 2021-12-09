@@ -40,7 +40,7 @@ For non-admins (team leaders and other end users) to add guest users, follow the
 3. Select **User settings**. 
 4. Under **External collaboration settings**, set **Members can invite** to **Yes**.
 
-:::image type="content" source="media/cannot-add-guest-users-in-m365-admin-center/cannot-add-guest-users-in-m365-admin-center.png" alt-text="Set Members can invite to Yes. ":::
+:::image type="content" source="media/cannot-add-guest-users-in-m365-admin-center/members-can-invite.png" alt-text="Screenshot shows steps to set the Members can invite option to Yes.":::
 
 Non-admins will then be able to add guest users without admin approval.
 

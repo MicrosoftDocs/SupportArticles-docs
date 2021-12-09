@@ -39,7 +39,7 @@ Not sure which Microsoft 365 plan your organization uses? Go to [http://portal.m
 
 |Small Business: If you see the below administrative interface, then you are using the Small Business plan.|Enterprise \|Midsize \|Education: If you see the below administrative interface, then you are using the Enterprise, Midsize, or Education plan.|
 |---|---|
-|![Small Business plan](./media/create-and-manage-resource-mailboxes/small-business-plan.png)|![Enterprise, Midsize or Education plan](./media/create-and-manage-resource-mailboxes/enterprise-midsize-education-plan.png)|
+|:::image type="content" source="media/create-and-manage-resource-mailboxes/small-business-plan.png" alt-text="Screenshot of the Small Business plan administrative interface." border="false":::|:::image type="content" source="media/create-and-manage-resource-mailboxes/enterprise-midsize-education-plan.png" alt-text="Screenshot of the Enterprise, Midsize, or Education plan administrative interface." border="false":::|
 
 - [Small Business](#use-the-exchange-admin-center-eac-to-create-and-manage-resource-mailboxes)
 - [Enterprise | Midsize | Education](#use-the-exchange-admin-center-eac-to-create-and-manage-resource-mailboxes-for-enterprise-midsize-or-education)

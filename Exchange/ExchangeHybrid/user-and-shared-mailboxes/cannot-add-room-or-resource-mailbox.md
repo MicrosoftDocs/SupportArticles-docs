@@ -26,7 +26,7 @@ When you try to add a cross-forest Room or Resource mailbox in Outlook, you rece
 
 > The name cannot be resolved. The name cannot be matched to a name in the address list.
 
-:::image type="content" source="./media/cannot-add-room-or-resource-mailbox/name-error.png" alt-text="A screenshot of the name error message.":::
+:::image type="content" source="media/cannot-add-room-or-resource-mailbox/name-error.png" alt-text="Screenshot of the name error message when adding a cross-forest Room or Resource mailbox in Outlook.":::
 
 Mail user objects that represent cross-forest Shared and User mailboxes can be successfully added as an additional mailbox in Outlook.
 
@@ -48,15 +48,15 @@ Add the mailbox as an additional email account. To do this, follow these steps:
 1. Select **File** > **Info,** and then select **Account Settings**.
 2. Select **Account Settings**.
 
-    ![A screenshot of the account settings page](./media/cannot-add-room-or-resource-mailbox/account-settings.png)
+    :::image type="content" source="media/cannot-add-room-or-resource-mailbox/account-settings.png" alt-text="Screenshot shows steps to select the Account Setting item.":::
 
 3. On the **E-mail** tab, select **New**.
 
-    :::image type="content" source="./media/cannot-add-room-or-resource-mailbox/new-email.png" alt-text="A screenshot of the new option in the Email Accounts dialog box.":::
+    :::image type="content" source="media/cannot-add-room-or-resource-mailbox/new-email.png" alt-text="Screenshot to select the New option under the E-mail tab.":::
 
 4. On the Auto Account Setup page, enter the Room mailbox name, e-mail address, and your account password.
 
-    :::image type="content" source="./media/cannot-add-room-or-resource-mailbox/add-account.png" alt-text="A screenshot of enter account setup page.":::
+    :::image type="content" source="media/cannot-add-room-or-resource-mailbox/add-account.png" alt-text="Screenshot to enter the account information on the Auto Account Setup page.":::
 
 5. Click **Next**.
 
