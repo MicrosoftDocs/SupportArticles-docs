@@ -31,7 +31,7 @@ Refer to the information in [this article](/azure/active-directory/connect-healt
 
 To collect event logs, you first must configure AD FS servers for auditing. If you have a load balancer for your AD FS farm, you must enable auditing on each AD FS server in the farm. Auditing does not have to be configured on the Web Application Proxy servers.
 
-To configure AD FS servers for auditing, you can use the one of the following method:
+To configure AD FS servers for auditing, you can use the following method:
 
 - [Manually configure AD FS servers for auditing](https://technet.microsoft.com/library/cc738766%28v=ws.10%29.aspx)
 
@@ -46,7 +46,7 @@ For Windows Server 2012 R2 or Windows Server 2016 AD FS, search all AD FS Server
 
 For Windows Server 2008 R2 or Windows Server 2012 AD FS, you won't have the necessary Event 411 details. Instead, download and run the following PowerShell script to correlate security events 4625 (bad password attempts) and 501 (AD FS audit details) to find the details about the affected users.
 
-- You can download the [ADFS Security Audit Events Parser (ADFSSecAuditParse.ps1)](2#adfs-security-audit-events-parser) PowerShell script to search your AD FS servers for events. The script provides a CSV file that contains the UserPrincipalName, IP address of the submitter, and time of all bad credential submissions to your AD FS farm.
+- You can download the [ADFS Security Audit Events Parser (ADFSSecAuditParse.ps1)](#adfs-security-audit-events-parser) PowerShell script to search your AD FS servers for events. The script provides a CSV file that contains the UserPrincipalName, IP address of the submitter, and time of all bad credential submissions to your AD FS farm.
 - You can also use this method to investigate which connections are successful for the users in the "411" events. You can search the AD FS "501" events for more details.
 - When you run the PowerShell script to search the events, pass the UPN of the user who is identified in the "411" events, or search by account lockout reports.
 - The IP address of the malicious submitters is displayed in one of two fields in the "501" events.
