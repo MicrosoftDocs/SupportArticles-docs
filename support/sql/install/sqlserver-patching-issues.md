@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common SQL Server patching issues
 description: This article helps you to troubleshoot common SQL Server patching issues. 
-ms.date: 12/03/2021
+ms.date: 12/09/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.author: v-jayaramanp
 ms.prod: sql
@@ -9,7 +9,7 @@ ms.prod: sql
 
 # Troubleshoot common SQL Server patching issues
 
-This article provides general troubleshooting procedures that you can use when you run into any issue applying a Service Pack (SP) or a Cumulative Update (CU) for your SQL Server instance. It also provides detailed procedures for solving the following failure messages associated with patching:
+This article provides general procedures to troubleshoot any issues that you may run into while applying a Service Pack (SP) or a Cumulative Update (CU) for your SQL Server instance. It also provides detailed procedures for solving the following failure messages associated with patching:
 
 - "Wait on Database Engine recovery handle failed, 912, and 3417 error messages when executing upgrade scripts.
 - Various setup errors that occur due to missing  MSI files or patch files in the Windows installer cache.
@@ -27,7 +27,7 @@ For information on servicing models for different versions of SQL Server, see th
 This section provides information on the CU and SP installation prerequisites.
 
 - For SQL Server 2016 and earlier versions:
-  - Before you install a CU, ensure your SQL instance is at the right SP level for the CU.   For example, you cannot install CU17 for SQL 2016 SP2, before you apply SP2 for the SQL 2016 instance.
+  - Before you install a CU, ensure your SQL instance is at the right SP level for the CU.  For example, you cannot install CU17 for SQL 2016 SP2, before you apply SP2 for the SQL 2016 instance.
   - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL 2016 SP2 instance, you can  directly go to CU17 without applying any of the intermediate CUs.
 - For SQL Server 2017 and later versions, you can always apply the latest CU available.
 - The SQL Server's program files and data files cannot be installed on:
@@ -45,43 +45,44 @@ This section provides information on the CU and SP installation prerequisites.
     1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true) section.
 
 1. Check for a matching scenario in the next few sections and follow associated troubleshooting procedures for the corresponding scenario.
-1. If there is no matching scenario, look for additional pointers in the log files and also review the [CU and SP installation general info](#cu-and-sp-installation-general-info) section.
+1. If there is no matching scenario, look for additional pointers in the log files and also see the [CU and SP installation general info](#cu-and-sp-installation-general-info) section.
 
 ## Wait on Database Engine recovery handle failed, 912, and 3417 errors
 
-Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports  *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?view=sql-server-ver15&preserve-view=true) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error?view=sql-server-ver15&preserve-view=true) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
+Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?view=sql-server-ver15&preserve-view=true) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error?view=sql-server-ver15&preserve-view=true) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
 
 To troubleshoot and fix these errors, do the following steps:
 
 1. Review the SQL Server Errorlogs for details on failure.
 1. Start SQL Server with trace flag 902 to bypass upgrade script execution.
-1. Address the cause of the failure (see different scenarios below).
-1. Restart SQL Server without trace flag 902 to allow upgrade process to complete.
+1. Address the cause of the failure based on different scenarios.
+   Following are some of the common causes of upgrade script failures and corresponding resolutions:
 
-Following are some of the common causes of upgrade script failures and corresponding resolutions:
+    - **SSISDB part of availability group**
 
-- **SSISDB part of Availability group**
+      Remove SQL Server Integration Services (SSIS) Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
 
-  Remove SSIS Catalog database (SSISDB) from AG and after the upgrade completes, add SSISDB back to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
+    - **Misconfigured System user/role in msdb database**
 
-- **Misconfigured System User/Role in msdb database**
+      This section provides steps to resolve misconfigured system user or role in the msdb database:
+        - TargetServersRole Schema/Security role: These are used in multiserver environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
+          
+        1. Back up your msdb database.
+        1. Make a list of users (if any) that are currently part of this role.
+        1. Drop the TargetServersRole using the statement: ```EXECUTE msdb.dbo.sp_droprole @rolename = N'TargetServersRole'```.
+        1. Restart the SQL Server without TF902 and see if the issue is resolved.
+        1. Readd the users from step 2 to TargetServersRole.
 
-  This section provides steps to resolve misconfigured system user or role in the msdb database:
-  - **TargetServersRole Schema/Security role**: These are used in multiserver environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
-    1. Back up your msdb database.
-    1. Make a list of users (if any) that are currently part of this role.
-    1. Drop the TargetServersRole using the statement: ```EXECUTE msdb.dbo.sp_droprole @rolename = N'TargetServersRole'```.
-    1. Restart the SQL Server without TF902 and see if the issue is resolved.
-    1. Readd the users from step 2 to TargetServersRole.
+        - Certificate-based SQL Server logins owning user objects: Principals enclosed by double hash marks (##) are created from certificates when SQL Server is installed and is meant for internal use and should not own any objects in the msdb or other databases. If the error logs indicate a failure related to any of these logins, start SQL server with TF 902, change the ownership of the affected objects to a different user, and then restart SQL Server without TF902 for the upgrade script to complete execution.
 
-  - **Certificate-based SQL Server Logins owning user objects**: Principals enclosed by double hash marks (##) are created from certificates when SQL Server is installed and is meant for internal use and should not own any objects in the msdb or other databases. If the error logs indicate a failure related to any of these logins, start SQL server with TF 902, change the ownership of the affected objects to a different user, and then restart SQL Server without TF902 for the upgrade script to complete execution.
+          >[!NOTE]
+          >Though failure to execute upgrade scripts is one of the common causes for "Wait on Database Engine recovery handle failed" error message, the error can occur because of other reasons. The error means that the patch installer was unable to start the service or bring it online after the patch was installed. In either case, the troubleshooting involves reviewing error logs and setup logs to determine the cause of failure and take appropriate action.
+  1. Restart SQL Server without trace flag 902 to allow upgrade process to complete.
 
-> [!NOTE]
-> Though failure to execute upgrade scripts is one of the common causes for *Wait on Database Engine recovery handle failed" error message, the error can occur because of other reasons. The error means that the patch installer was unable to start the service or bring it online after the patch was installed. In either case the troubleshooting involves reviewing error logs and setup logs to determine the cause of failure and take appropriate action.
 
 ## Setup errors resulting from missing installer files in Windows cache
 
-Applications like SQL Server that use Windows Installer technology for setup process, stores critical files in the Windows Installer Cache (default is C:\Windows\Installer). These files are required for uninstalling and updating applications and are unique to a computer. As such, if these files are either inadvertently deleted or otherwise compromised, subsequent updates will fail. To resolve this condition, review and implement the procedures described in the [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md) section.
+Applications like SQL Server that use Windows Installer technology for setup process, store critical files in the Windows Installer Cache (default is C:\Windows\Installer). These files are required for uninstalling and updating applications and are unique to a computer. As such, if these files are either inadvertently deleted or otherwise compromised, subsequent updates will fail. To resolve this condition, review and implement the procedures described in the [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md) section.
 
 ## Setup failing due to incorrect data or log location in registry
 
