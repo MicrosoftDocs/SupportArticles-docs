@@ -26,7 +26,7 @@ When you check the Active Directory organizational unit (OU), cluster validation
 
 > An error occurred while executing the test. The operation has failed. An error occurred while checking the Active Directory organizational unit for the cluster name resource. The parameter is incorrect.
 
-:::image type="content" source="./media/parameter-incorrect-error-cluster-validation-fails/parameter-incorrect-error.jpg" alt-text="Screenshot of the error message." border="false":::
+:::image type="content" source="media/parameter-incorrect-error-cluster-validation-fails/parameter-incorrect-error.png" alt-text="An error occurred while executing the test. The operation has failed." border="false":::
 
 If you try to create the client access points, the process can still fail if the IP address used is the same as the address in the error message.  
 
