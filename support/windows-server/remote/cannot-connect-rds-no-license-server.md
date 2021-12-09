@@ -83,27 +83,35 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 ### <a id=rdcb></a>Configure licensing for an RDS deployment that includes the RD Connection Broker role
 
 1. On the RD Connection Broker computer, open Server Manager.
-2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.  
+2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.
+
    :::image type="content" source="media/cannot-connect-rds-no-license-server/server-manager-rd-config.png" alt-text="Select the Edit Deployment Properties option to open the Remote Desktop licensing settings in Server Manager.":::
+
 3. Select the Remote Desktop licensing mode (either **Per User** or **Per Device**, as appropriate for your deployment).
 
    > [!NOTE]  
    > If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs are not permitted.
-4. Specify a license server, and then select **Add**.  
+4. Specify a license server, and then select **Add**.
+
    :::image type="content" source="media/cannot-connect-rds-no-license-server/rdlicensing-configure.png" alt-text="Configure the deployment of the RD Licensing.":::
 
 ### <a id=nordcb></a>Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
 
 1. On the RD Session Host computer, select **Start**, and then enter **gpedit.msc** to open Local Group Policy Editor.
 2. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Licensing**.
+
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-editor-licensing-config.png" alt-text="List of policies for Remote Desktop licensing.":::
+
 3. In the policy list, right-click **Use the specified Remote Desktop license servers**, and then select **Properties**.
 4. Select **Enabled**, and then enter the name of the license server under **License servers to use**. If you have more than one license server, use commas to separate their names.
+
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-specify-license-server.png" alt-text="Set the license servers to use in the Use the specified Remote Desktop license servers dialog box.":::
+
 5. Select **OK**.  
 6. In the policy list, right-click **Set the Remote Desktop licensing mode**, and then select **Properties**.
 7. Select **Enabled**.
 8. Under **Specify the licensing mode for the Remote Desktop Session Host server**, select **Per Device** or **Per User**, as appropriate for your deployment.
+
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-specify-licensing-mode.png" alt-text="Specify the licensing mode for the Remote Desktop Session Host server in the Set the Remote Desktop licensing mode dialog box.":::
 
 ## Refresh the X509 Certificate registry keys
@@ -139,7 +147,7 @@ If you verify that the licensing configuration is correct, but the system still 
 
 To open RD Licensing Diagnoser, open Server Manager, and select **Tools** > **Terminal Services** > **RD Licensing Diagnoser**.
 
-:::image type="content" source="media/cannot-connect-rds-no-license-server/rd-licensing-diagnoser-information.png" alt-text="Opening the RD Licensing Diagnoser dialog box.":::
+:::image type="content" source="media/cannot-connect-rds-no-license-server/rd-licensing-diagnoser-information.png" alt-text="Screenshot of the RD Licensing Diagnoser dialog box.":::
 
 The top window of the RD Licensing Diagnoser lists problems that the diagnoser has detected. For example, you might see a message that resembles the following:
 
