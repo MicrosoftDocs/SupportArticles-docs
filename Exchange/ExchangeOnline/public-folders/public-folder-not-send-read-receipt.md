@@ -21,12 +21,10 @@ search.appverid: MET150
 
 # Read receipts are sent from a public folder mailbox instead of the public folder
 
-## Symptoms
-
-To enable read receipts sent from a mail-enabled public folder, you configure the following settings:
+A mail-enabled public folder is configured to send read receipts as follows:
 
 - Set the `PerUserReadStateEnabled` parameter of the public folder to `False` to remove read or unread tracking on a per-user basis.
-- Enable sending of read receipts in the email client:
+- Enable the option to send read receipts from the public folder in the email clients:
 
     - In Outlook, select the **Always send a read receipt** option.
     - In Outlook on the web, select the **Always send a response** option.
@@ -41,12 +39,6 @@ However, you receive the read receipt from the public folder mailbox (named **MS
 
 :::image type="content" source="media/public-folder-not-send-read-receipt/read-receipt-from-mailbox.png" alt-text="Screenshot of a read receipt that comes from the public folder mailbox.":::
 
-## Status
-
-This is a known issue of read receipts. Microsoft is researching this problem and will post more information in this article when the information becomes available.
-
-## More information
-
 To check the `PerUserReadStateEnabled` parameter value of the mail-enabled public folder, run the following cmdlet:
 
 ```powershell
@@ -57,3 +49,7 @@ For more information about how to request a read receipt for your message in Out
 
 - [Add and request read receipts and delivery notifications](https://support.microsoft.com/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141)
 - [Read receipts in Outlook on the web](https://support.microsoft.com/office/read-receipts-in-outlook-on-the-web-e09af74d-3519-45fc-a680-37a538a92157)
+
+## Status
+
+This is a known issue of read receipts. Microsoft is researching this problem and will post more information in this article when the information becomes available.
