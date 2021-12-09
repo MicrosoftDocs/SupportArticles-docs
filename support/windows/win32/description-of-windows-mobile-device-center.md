@@ -54,7 +54,8 @@ If your phone has a touch screen, tap **Start**, tap the **System** tab, and the
 
 - Robust synchronization
 
-  ![Robust synchronization](./media/description-windows-mobile-device-center/windows-mobile-device-center.jpg)  
+  :::image type="content" source="media/description-windows-mobile-device-center/windows-mobile-device-center.png" alt-text="Screenshot of the Windows Mobile Device Center window." border="false":::
+  
 
 - Photo management
 

@@ -46,15 +46,15 @@ In Windows Server 2012 or Windows Server 2012 R2, this MMC snap-in does not exis
 
         The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property.jpg" alt-text="Screenshot of the certificate thumbprint in the Certificate properties.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
 
         If you copy the string into Notepad, it should resemble the following screenshot:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-string-in-notepad.jpg" alt-text="Screenshot of the thumbprint string in Notepad.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-string-in-notepad.png" alt-text="Copy and paste the thumbprint string into Notepad.":::
 
         After you remove the spaces in the string, it still contains the invisible ASCII character that is only visible at the command prompt. The following screenshot is an example:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/ascii-character-in-command-prompt.jpg" alt-text="Screenshot of the invisible ASCII character.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/ascii-character-in-command-prompt.png" alt-text="The invisible ASCII character that is only shown at the command prompt." border="false":::
 
         Make sure that this ASCII character is removed before you run the command to import the certificate.
 
@@ -68,7 +68,7 @@ In Windows Server 2012 or Windows Server 2012 R2, this MMC snap-in does not exis
 
         The following screenshot is a successful example:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/sucessful-example-to-run-wmic-commands.jpg" alt-text="Screenshot of a successful example.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
   
 - Method 2: Use registry editor
 
