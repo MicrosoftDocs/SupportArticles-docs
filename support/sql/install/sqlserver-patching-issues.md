@@ -86,7 +86,7 @@ Applications like SQL Server that use Windows Installer technology for setup pro
 
 ## Setup failing due to incorrect data or log location in registry
 
-The default location that you specify for database's data and log files during installation is saved in corresponding registry entries at HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance. When you install a CU or SP, these locations are validated by the setup process and if the validation fails you can run into errors similar to the following:
+The default location that you specify for database's data and log files during installation is saved in corresponding registry entries at HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance. When you install a CU or SP, these locations are validated by the setup process and if the validation fails you can run into errors similar to the following error messages:
 
 - *Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.*
 - *The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.*
@@ -95,11 +95,11 @@ To fix this issue, connect to the SQL Server instance using SQL Server Managemen
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
-For smooth functioning and maintenance of a SQL Server failover cluster, you must always follow all the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true) sections. If you are running into errors applying a CU or an SP, check the following:
+For smooth functioning and maintenance of a SQL Server failover cluster, you must always follow all the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true) sections. If you are running into errors applying a CU or an SP, check the following scenarios:
 
 - The remote registry service is up and running on all the nodes of the WSFC cluster.
 - If the service account for SQL Server is not an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information, see the [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md) section.
-When these are not properly configured, you may notice one or more of the following symptoms when trying to install a CU or SP:
+When these shares are not properly configured, you may notice one or more of the following symptoms when trying to install a CU or SP:
   - Patch taking a long time to run or does not respond. Setup logs do not reveal any progress.
   - Setup logs show messages like the following:
     - "The network path was not found".
