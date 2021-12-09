@@ -144,7 +144,7 @@ The following steps show how to initialize a fresh disk by using the GPT partiti
 
 3. Check the Disk Management window to verify that the disk is initialized. If it is, the status row for that disk at the bottom of the window should indicate that the disk is **Online**.
 
-    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/check-online-status.png" alt-text="Check the disk status whether it is online." border="false":::
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/check-online-status.png" alt-text="Check whether the disk status is online." border="false":::
 
 4. After the disk is initialized, you must create a partition, and then format that partition by using a file system. It's to be able to store data in that partition, and assign a name and a drive letter to that partition. To do it, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 

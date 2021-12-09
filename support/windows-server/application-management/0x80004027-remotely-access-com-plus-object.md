@@ -41,8 +41,6 @@ To resolve this problem and enable COM+ remote access, follow these steps:
 
 2. In the **Allowed apps and features** list, select the **COM+ Network Access** check box, and then select the appropriate scope that's required for your application. For enterprises, this is typically Domain. However, your application may require additional settings, depending on the scenario.
 
-    ![Allowed apps dialog box](./media/0x80004027-remotely-access-com-plus-object/com-plus-network-access-option.png)
-
     :::image type="content" source="media/0x80004027-remotely-access-com-plus-object/com-plus-network-access-option.png" alt-text="The COM+ Network Access check box in the Allowed apps and features list.":::
 
 3. Set the registry value that allows COM+ remote access. To do this, follow these steps:
