@@ -85,7 +85,7 @@ Get-Mailbox <User ID> | Select *quota*
     Set-Mailbox <group mailbox name> -GroupMailbox -ProhibitSendReceiveQuota 100GB -ProhibitSendQuota 95GB
     ```
 
-To check the size of a group mailbox, run the following PowerShell cmdlet:
+To check the size of a group mailbox or group mailboxes, run the following PowerShell cmdlet:
 
 - To view a specific group mailbox:
 
