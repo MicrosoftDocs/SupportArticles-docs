@@ -225,7 +225,6 @@ items:
       href: ios-scep-failure-no-getcacaps.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
-
     - name: Troubleshoot PKCS certificate deployment
       href: troubleshoot-pkcs-certificate-profiles.md
     - name: Troubleshoot SCEP certificate profiles
@@ -270,10 +269,10 @@ items:
     href: error-deploying-password-policy.md
   - name: Secure boot enabled device shows as Not Compliant
     href: secure-boot-enabled-device-shows-not-compliant.md
-  - name: Support tip - Integrate Cisco ISE with Intune
-    href: integrate-cisco-ise-intune.md
-  - name: Troubleshoot BitLocker policies
+  - name: Troubleshoot encryption on client side
     href: troubleshoot-bitlocker-policies.md
+  - name: Troubleshoot encryption in Intune
+    href: troubleshoot-bitlocker-admin-center.md
   - name: Users are prompted to enroll when accessing Office 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
   - name: Windows 10 devices show incorrect compliance status
