@@ -148,7 +148,7 @@ The VPN connection is listed in **Network Connections**.
 
 ### [Android](#tab/android)
 
-On an Android device, the *Omadmlog.log* file logs detail activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files and the timestamp of the last sync can help you find the related entries.
+On an Android device, the *Omadmlog.log* file logs detailed activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files and the timestamp of the last sync can help you find the related entries.
 
 The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs, and searches for `android.vpn.client`.
 
@@ -264,11 +264,11 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     `<Date Time>    INFO    com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine    14210    00948    Waiting for required certificates for vpn profile 'androidVPN'.`
 
     > [!NOTE]
-    > There is a scenario when the Trusted Root and SCEP profiles are on the device and compliant, but the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be in the certificate template or in the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded, which will result in the skipping of the VPN profile because it doesn't have the right certificate. In this scenario, you see the following entry in the Company Portal log file (*Omadmlog.log*):
+    > It's possible that even though the Trusted Root and SCEP profiles are on the device and they are compliant, the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be in the certificate template or in the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded. Therefore, the VPN profile will be skipped because it doesn't have the correct certificate. In this scenario, you see the following entry in the Company Portal log file (*Omadmlog.log*):
     >
     > `Waiting for required certificates for vpn profile 'androidVPN'.`
 
-    The following sample log shows certificates are excluded because the **Any Purpose** Extended Key Usage (EKU) criteria was specified. But, the certificates assigned to the device don't have that EKU:
+    The following sample log shows that certificates are excluded because the **Any Purpose** Extended Key Usage (EKU) criteria was specified. However, the certificates that are assigned to the device don't have that EKU:
 
     ```output
     <Date Time>    VERB     com.microsoft.omadm.utils.CertUtils      14210    00948    Excluding cert with alias User<ID1> and requestId <requestID1> as it does not have any purpose EKU.
@@ -278,7 +278,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     <Date Time>    INFO     com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine       14210     00948    Waiting for required certificates for vpn profile '<profile name>'.
     ```
 
-    The following sample shows the SCEP profile has the option of **Any Purpose** EKU specified. But, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template. Or, remove the **Any Purpose** option from the SCEP profile.
+    The following sample shows that the SCEP profile has the option of **Any Purpose** EKU specified. However, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template, or remove the **Any Purpose** option from the SCEP profile.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot shows how to add the Any Purpose option.":::
 
@@ -286,7 +286,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the **External Control** option of AnyConnect is enabled.
 
-    The **External Control** option must be enabled before the profile can be created. When the profile is pushed to the device, the user is prompted to enable the **External Control** option.
+    The **External Control** option must be enabled before the profile is created. When the profile is pushed to the device, the user is prompted to enable the **External Control** option.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting.png" alt-text="Screenshot shows how to check the External Control option.":::
 
@@ -345,17 +345,17 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 ### Issue 2: The VPN profile is deployed to the device, but the device can't connect to the network
 
-Typically, this connectivity issue isn't an Intune issue and there can be multiple causes. The following items may help you understand and troubleshoot the issue:
+Typically, this connectivity issue isn't an Intune issue and there can be many causes. The following items may help you understand and troubleshoot the issue:
 
-- Can you manually connect to the network by using a certificate with the same criteria in the VPN profile?
+- Can you manually connect to the network by using a certificate that has the same criteria in the VPN profile?
 
-    If so, check the properties of the certificate that you used in the manual connection, and make change to the Intune VPN profile.
+    If you can, check the properties of the certificate that you used in the manual connection, and make changes to the Intune VPN profile.
 
-- For Android and iOS devices, did the VPN client Application logs show that the device tried to connect with the VPN profile?
+- For Android and iOS devices, did the VPN client Application logs show that the device tried to connect to the VPN profile?
 
     Usually, connectivity errors are logged in VPN client application logs.
 
-- For Windows devices, did the Radius server logs show that the device tried to connect with the VPN profile?
+- For Windows devices, did the Radius server logs show that the device tried to connect to the VPN profile?
 
     Usually, connectivity errors are logged in Radius server logs.
 
