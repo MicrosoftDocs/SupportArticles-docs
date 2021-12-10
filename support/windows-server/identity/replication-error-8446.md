@@ -155,7 +155,7 @@ These steps are not needed for Window Server 2008 and later.
 
     Add the "Database Cache Size" counter.   In the following example, the database cache size grows at an increasing trend of Virtual Bytes and Working Set of the LSASS Process eventually consuming all 2 GB of available virtual memory allocated to the LSASS process.  You will encounter the 8446 replication failure once this virtual address space is consumed.  Refer to the " LSASS ESE Database cache is not limited by default" section of the article for detailed instructions on how to avoid this condition.  
 
-    ![Screenshot of database cache size increasing trend](./media/replication-error-8446/memory.jpg)
+    :::image type="content" source="media/replication-error-8446/memory-lsass-process.png" alt-text="Screenshot of the database cache size which grows at an increasing trend.":::
 
 ### LSASS ESE Database cache is not limited by default
 
