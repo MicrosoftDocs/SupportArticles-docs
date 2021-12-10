@@ -10,6 +10,7 @@ ms.prod: sql
 # Decreased performance in SQL Server when you use EFS to encrypt database files
 
 _Applies to:_ &nbsp; SQL Server
+_Original KB number:_ &nbsp; 922121
 
 ## Symptoms
 
@@ -24,7 +25,7 @@ This issue occurs because asynchronous I/O requests from SQL Server are converte
 
 ## Workaround
 
-SQL Server offers many encryption technologies, such as [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption T-SQL functions. Consider using these [encryption](/sql/relational-databases/security/encryption/sql-server-encryption) features instead of EFS.
+SQL Server offers many encryption technologies, such as [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption Transact-SQL functions. Consider using these [encryption](/sql/relational-databases/security/encryption/sql-server-encryption) features instead of EFS.
 
 If you want to use EFS, you can specify the [affinity mask](/sql/database-engine/configure-windows/affinity-input-output-mask-server-configuration-option) option. Then, I/O operation requests are assigned to a separate scheduler. Although the I/O operations are still synchronous, the worker thread will continue instead of waiting for the I/O operation to complete.
 
