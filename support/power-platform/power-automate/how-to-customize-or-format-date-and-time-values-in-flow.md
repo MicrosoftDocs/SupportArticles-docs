@@ -4,6 +4,7 @@ description: Introduces how to customize or format date and time (for example, D
 ms.reviewer: 
 ms.topic: how-to
 ms.date: 3/31/2021
+ms.subservice: power-automate-admin
 ---
 # How to customize or format Date and Time values in a flow
 

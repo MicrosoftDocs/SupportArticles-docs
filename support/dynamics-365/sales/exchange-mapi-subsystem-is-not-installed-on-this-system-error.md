@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you try to install Microsoft D
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # The Microsoft Exchange MAPI subsystem is not installed on this system error when installing Microsoft Dynamics CRM E-mail Router
 

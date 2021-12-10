@@ -2,6 +2,8 @@
 title: Azure AD Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service
 description: This troubleshooting guide focuses on when the gMSA is set to log on as a service. It helps unblock you to install the Azure AD Connect Provisioning Agent.
 ms.date: 10/13/2021
+ms.service: active-directory
+ms.subservice: hybrid
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service

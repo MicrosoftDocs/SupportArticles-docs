@@ -105,7 +105,7 @@ Starting in Configuration Manager version 1906, a co-managed device running Wind
 
 > Sync wasn't fully successful because we weren't able to verify your credentials. Select Sync to sign in and try again.
 
-:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/device-sync-failure.png" alt-text="Device sync fails":::
+:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/device-sync-failure.png" alt-text="Screenshot of the Sync wasn't fully successful message.":::
 
 When this issue occurs, the following error message is logged in **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin log** in the Event Viewer:
 
@@ -119,7 +119,7 @@ The following error message is logged in **Applications and Services Logs** > **
 
 This issue occurs when MFA is **Enabled** or **Enforced**, or Azure AD Conditional Access policies that require MFA are applied to all cloud apps. It prevents user association with the device in the portal.
 
-:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/user-association-blocked.png" alt-text="User association is prevented":::
+:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/user-association-blocked.png" alt-text="Screenshot shows the user association is prevented.":::
 
 To fix the issue, use one of the following methods:
 
@@ -258,6 +258,6 @@ For more information about Intune and Configuration Manager co-management, see t
 
 If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
-You can also submit feedback and ideas to the Intune development team through our [user voice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
+You can also [send feedback directly to the Microsoft product group](/mem/configmgr/core/understand/product-feedback).
 
 If all else fails and you'd like to open a support case with the Intune support team, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).

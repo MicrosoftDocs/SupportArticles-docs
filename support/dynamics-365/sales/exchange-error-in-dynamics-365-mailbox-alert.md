@@ -4,6 +4,7 @@ description: Exchange Error appears in Alert in a Dynamics 365 mailbox.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Exchange Error appears in Alert in Microsoft Dynamics 365 mailbox
 

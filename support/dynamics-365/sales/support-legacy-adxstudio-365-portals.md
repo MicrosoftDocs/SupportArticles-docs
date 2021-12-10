@@ -2,8 +2,8 @@
 title: Support Legacy Adxstudio and 365 Portals
 description: Legacy Adxstudio Portals and Microsoft Dynamics 365 Portals Supportability.
 ms.reviewer: jbirnbau
-ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-connectors
 ---
 # Microsoft Dynamics 365 Portals, Legacy Adxstudio Portals, and Open Source Portals Supportability
 

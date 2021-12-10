@@ -40,23 +40,23 @@ If you run the tool and then receive a message that the license has expired, ple
 
 The ADREPLSTATUS user interface consists of a toolbar and Microsoft Office-style ribbon to expose different features. The **Replication Status Viewer** tab displays the replication status for all DCs in the forest. The following screenshot shows ADREPLSTATUS highlighting a DC that hasn't replicated in Tombstone Lifetime number of days (identified here by the black color-coding).
 
-:::image type="content" source="./media/get-use-active-directory-replication-status-tool/replication-status-viewer-tab.png" alt-text="The screenshot shows ADREPLSTATUS highlighting a DC that hasn't replicated in Tombstone Lifetime number of days." border="false":::
+:::image type="content" source="media/get-use-active-directory-replication-status-tool/replication-status-viewer-tab.png" alt-text="ADREPLSTATUS highlights a DC that hasn't replicated in Tombstone Lifetime number of days." border="false":::
 
 ### Error only
 
 By using the **Errors Only** button (upper-right of image below), you can filter out healthy DCs to focus on destination DCs that are reporting replication errors:
 
-:::image type="content" source="./media/get-use-active-directory-replication-status-tool/using-errors-only-button.png" alt-text="Filter out healthy DCs by using the Errors Only button." border="false":::
+:::image type="content" source="media/get-use-active-directory-replication-status-tool/using-errors-only-button.png" alt-text="Filter out healthy DCs by using the Errors Only button." border="false":::
 
 ### Replication error analysis
 
 The Replication Error Guide has a **Detected Errors Summary** view that records each unique replication error that occurs on the set of DCs that are targeted by the administrator.
 
-:::image type="content" source="./media/get-use-active-directory-replication-status-tool/detected-errors-summary.png" alt-text="Detected Errors Summary view that records each unique replication error." border="false":::
+:::image type="content" source="media/get-use-active-directory-replication-status-tool/detected-errors-summary.png" alt-text="Detected Errors Summary view that records each unique replication error." border="false":::
 
 Selecting any of the replication error codes loads the recommended troubleshooting content for that error. For example, the following is a screenshot for when the TechNet Article for Active Directory Replication Error 1256 is displayed:
 
-:::image type="content" source="./media/get-use-active-directory-replication-status-tool/ad-replication-error-1256.png" alt-text="Screenshot for when the TechNet Article for Active Directory Replication Error 1256 is displayed." border="false":::
+:::image type="content" source="media/get-use-active-directory-replication-status-tool/ad-replication-error-1256.png" alt-text="The TechNet article for Active Directory Replication Error 1256 is displayed." border="false":::
 
 The goals for this tool are to help administrators identify and fix Active Directory replication errors before they cause user and application failures or outages, or lingering objects cause short or long-term replication failures, and to give administrators more insight into the operation of Active Directory replication in their environments.
 

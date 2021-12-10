@@ -4,6 +4,7 @@ description: This article discusses that you can't dismiss developer license not
 ms.date: 04/27/2020
 ms.prod-support-area-path: Integrated development environment (IDE)
 ms.reviewer: pchapman
+ms.technology: vs-ide
 ---
 # You can't dismiss developer license notifications in Visual Studio 2013 Update 4
 

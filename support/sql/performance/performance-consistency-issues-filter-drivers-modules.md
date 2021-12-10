@@ -54,7 +54,7 @@ SQL Server typically emits a lot of filesystem I/Os (some of which are larger th
 > [!WARNING]
 > This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We don't recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
-To work around these issues, identity the filter driver or the module that is causing the issues. Then, try all or one of the following methods appropriately. To help you identity the filter driver or the module, check the [list of some possible filter drivers and modules](#list-of-filter-drivers-and-modules-that-can-cause-the-issues) for more information.
+To work around these issues, identify the filter driver or the module that is causing the issues. Then, try all or one of the following methods appropriately. To help you identify the filter driver or the module, check the [list of some possible filter drivers and modules](#list-of-filter-drivers-and-modules-that-can-cause-the-issues) for more information.
 
 - Configure the filter driver or the associated application in such a way that it doesn't interfere with the SQL Server workload or operations.
 - Disable the filter driver from loading into the system.
@@ -64,7 +64,7 @@ To work around these issues, identity the filter driver or the module that is ca
 
 ## List of filter drivers and modules that can cause the issues
 
-The following list helps you to identity the filter drivers and modules that can cause the performance issues. You can collect an iterative set of diagnostic and tracing data for the issues.
+The following list helps you to identify the filter drivers and modules that can cause the performance issues. You can collect an iterative set of diagnostic and tracing data for the issues.
 
 - *ENTAPI.DLL*
 

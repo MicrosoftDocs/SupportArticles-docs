@@ -4,6 +4,7 @@ description: Some Outlook 2010 keyboard shortcuts don't work after switching to 
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Outlook 2010 keyboard shortcuts not responding after switching to the next or previous message when Dynamics CRM 2011 add-in is configured
 

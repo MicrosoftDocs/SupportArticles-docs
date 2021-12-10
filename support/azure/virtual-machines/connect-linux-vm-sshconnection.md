@@ -54,7 +54,7 @@ Open the **Properties** window of the VM in the Azure portal to check the agent 
     > [!NOTE]
     > You must update the script to reflect your system distribution. This script runs on Red Hat variants only.
 
-    ```
+    ```bash
     #!/bin/bash
     
     #Script to change permissions on a file
@@ -64,16 +64,16 @@ Open the **Properties** window of the VM in the Azure portal to check the agent 
     ```
 
 2. Go to the Azure portal, locate your VM settings, and then select **Extensions**  > **Add** > **Custom Script For Linux** > **Create**. 
-3. In **Script files**, upload the update_perms.sh file, and then click **OK**.
+3. In **Script files**, upload the *update_perms.sh* file, and then click **OK**.
 
-    :::image type="content" source="media/connect-linux-vm-sshconnection/4093031_en_1.png" alt-text="Screenshot of uploading Linux script":::
+    :::image type="content" source="media/connect-linux-vm-sshconnection/script-file.png" alt-text="Screenshot of uploading the update_perms.sh script." border="false":::
 
 4. After the script is pushed to the VM, the **STATUS** value should be **Success**.
 
-    :::image type="content" source="media/connect-linux-vm-sshconnection/4093032_en_1.png" alt-text="Screenshot of checking the status of the script":::
+    :::image type="content" source="media/connect-linux-vm-sshconnection/success-status.png" alt-text="Screenshot shows a success status of the script." border="false":::
 
 5. The **update_perms.sh** sample script changes the permissions on the /var/empty/sshd file from **777** to **755**  and sets the owner and group to **root:root**. Wait for script to run. This can take several minutes. The Linux Agent receives the request, and then it hands off to the correct extension.
-If you can connect to the VM by using the SSH connection, and you want to see what occurred while the update_params.sh script ran, examine the extension.log file in the `/var/log/azure/Microsoft.OSTCExtensions.CustomScriptForLinux/<version>` directory.
+If you can connect to the VM by using the SSH connection, and you want to see what occurred while the update_params.sh script ran, examine the *extension.log* file in the `/var/log/azure/Microsoft.OSTCExtensions.CustomScriptForLinux/<version>` directory.
 
 ### Manually attach your VM disks to a temporary VM
 
@@ -92,7 +92,7 @@ The following example uses the newer CLI version 2. It resets the `/var/empty/
 
 In this script, replace \<yourvm> with the actual name of the VM, and \<yourrg> with the actual name of the **Resource Group.**  
 
-```
+```azurecli
 vmname=yourvm;rg=yourrg;timestamp=`date +%d%Y%H%M%S`;az vm extension set –resource-group $rg –vm-name $vmname –name customScript –publisher Microsoft.Azure.Extensions –settings "{'commandToExecute': 'bash -c \'chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd;systemctl start sshd;ps -eaf | grep sshd\",'timestamp': "$((timestamp))"}"
 ```
 
@@ -100,4 +100,4 @@ vmname=yourvm;rg=yourrg;timestamp=`date +%d%Y%H%M%S`;az vm extension set –reso
 
 This feature lets you access the VM through a console as a physical server. This scheme allows you to modify files without using a custom script and without having to delete the VM.
 
-:::image type="content" source="media/connect-linux-vm-sshconnection/4093037_en_1.png" alt-text="Screenshot of resetting by using Serial Console":::
+:::image type="content" source="media/connect-linux-vm-sshconnection/serial-console.png" alt-text="Screenshot of resetting by using Serial Console." border="false":::

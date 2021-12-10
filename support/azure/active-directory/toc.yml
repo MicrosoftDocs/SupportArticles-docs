@@ -17,7 +17,10 @@
       href: authentication-fails-with-error.md
 
   - name: Azure AD Hybrid Sync Agent Installation Issues
+
     items:
+    - name: Installation issues overview
+      href: azure-ad-hybrid-sync-agent-install-welcome.md
     - name: No privileges to install MSI
       href: azure-ad-hybrid-sync-no-privileges-install-msi.md
     - name: Cannot start service AADConnectProvisioningAgent
@@ -160,6 +163,8 @@
     href: unexpected-error-reset-pwd.md
   - name: Verify account error when resetting password
     href: cannot-verify-account-reset-pwd.md
+  - name: Cannot receive MFA verification code
+    href: text-voice-call-verification-code-mfa-not-send.md
 
 - name: User Provisioning and Synchronization
   items:
@@ -243,12 +248,12 @@
     href: separate-pwds-required-computer-work-account.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
-  - name: Subdomains and parent domains management
-    href: manage-sub-parent-domain.md
   - name: Sync services don't start
     href: services-sync-not-start.md
   - name: Troubleshoot Azure AD Connect installation issues
     href: installation-issues.md
+  - name: Troubleshoot Azure AD Connect version upgrading issues
+    href: troubleshoot-aad-connect-fails-to-install-upgraded-version.md
   - name: Troubleshoot Azure AD Sync installation issues
     href: installation-configuration-wizard-errors.md
   - name: Troubleshoot Azure AD Connect objects and attributes

@@ -4,6 +4,7 @@ description: An error occurs when you open an XML formatted file downloaded from
 ms.reviewer: v-anlang
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-custom-solutions
 ---
 # Error occurs when opening an XML formatted file downloaded from Microsoft Dynamics CRM 2011 in Excel 2010
 

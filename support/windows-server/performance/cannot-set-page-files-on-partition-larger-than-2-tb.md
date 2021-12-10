@@ -26,7 +26,7 @@ On a Windows-based computer, when you try to set a page file on a partition that
 
 > Drive **X**: is too small for the maximum paging file size specified. Please enter a smaller number.
 
-:::image type="content" source="./media/cannot-set-page-files-on-partition-larger-than-2-tb/drive-too-small.jpg" alt-text="Screenshot of System Properties.":::
+:::image type="content" source="./media/cannot-set-page-files-on-partition-larger-than-2-tb/drive-too-small.jpg" alt-text="The warning message that is shown in the System Properties." border="false":::
 
 This problem occurs when you try to set page files in the Virtual Memory user interface in the **Advanced System Settings**. This is true regardless of whether the page file is a customized page file or a system-managed page file.
 

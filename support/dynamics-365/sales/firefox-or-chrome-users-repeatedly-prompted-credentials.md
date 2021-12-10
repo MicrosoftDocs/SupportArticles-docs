@@ -4,6 +4,7 @@ description: This article describes the resolution for issues pertaining to mult
 ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Firefox or Chrome users are repeatedly prompted for credentials in Microsoft Dynamics CRM 2011
 

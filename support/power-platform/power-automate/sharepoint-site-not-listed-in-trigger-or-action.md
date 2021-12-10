@@ -1,9 +1,10 @@
 ---
 title: SharePoint site not listed in trigger or action
 description: Resolution for SharePoint site not listed in trigger or action in Microsoft Flow.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # SharePoint site not listed in trigger or action in Microsoft Flow
 
@@ -28,7 +29,7 @@ Users can still use SharePoint sites not listed by typing in the using the desir
 
 ### Resolution 1 - Select Enter custom value
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/create-item.png" alt-text="SharePoint screenshot in Flow":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/enter-custom-value.png" alt-text="Screenshot to select the Enter custom value item.":::
 
 ### Resolution 2 - Get the SharePoint site URL
 
@@ -38,10 +39,10 @@ You can also use any URL from your SharePoint site. The Flow designer will clean
 
 ### Resolution 3 - Type the SharePoint URL directly into the dropdown text box
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/long-site-address.png" alt-text="SharePoint screenshot dropdown long url":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/type-url.png" alt-text="Screenshot to type the SharePoint U R L directly into the dropdown text box.":::
 
 The Flow designer will clean up any URL and point it directly to the SharePoint site.
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/short-site-address.png" alt-text="SharePoint screenshot dropdown short url":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/clean-url-sharepoint-site.png" alt-text="Screenshot shows the Flow designer points the U R L directly to the SharePoint site.":::
 
 The dropdown should fill in the SharePoint site automatically. Make sure you have access to the SharePoint site.

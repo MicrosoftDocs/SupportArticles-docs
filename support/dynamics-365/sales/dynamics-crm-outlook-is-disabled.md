@@ -4,6 +4,7 @@ description: Provides a solution to an issue where CRM for Outlook is disabled a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Microsoft Dynamics CRM for Outlook is disabled after CRM instance is updated
 

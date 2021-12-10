@@ -4,6 +4,7 @@ description: Helps resolve issues where Internet Explorer opens, flashes, and th
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: lip, ramakoni
+ms.technology: internet-explorer-stability-performance
 ---
 # Internet Explorer opens, flashes, and then closes immediately when you start it
 

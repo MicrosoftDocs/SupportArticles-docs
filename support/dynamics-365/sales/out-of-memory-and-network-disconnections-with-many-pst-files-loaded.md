@@ -4,6 +4,7 @@ description: Provides a resolution for the out of memory and network disconnecti
 ms.reviewer: ehagen
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Out of memory and network disconnections with many PST files loaded in Microsoft Dynamics CRM Outlook clients
 

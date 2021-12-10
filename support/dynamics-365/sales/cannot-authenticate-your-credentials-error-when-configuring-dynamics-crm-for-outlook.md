@@ -4,6 +4,7 @@ description: This article provides a resolution to an error you may see when con
 ms.reviewer: jowells, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Cannot authenticate your credentials error when configuring the Microsoft Dynamics CRM for Outlook client 2011
 

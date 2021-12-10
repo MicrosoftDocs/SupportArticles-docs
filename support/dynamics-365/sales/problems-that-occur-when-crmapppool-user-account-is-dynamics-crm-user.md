@@ -4,6 +4,7 @@ description: List the issue that may occur when the CRMAppPool account is config
 ms.reviewer: mikehamm
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Problems occur when the CRMAppPool user account is a Microsoft Dynamics CRM user
 

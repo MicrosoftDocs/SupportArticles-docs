@@ -4,6 +4,7 @@ description: Provides a resolution to solve the issues that may occur when a flo
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Issues triggering emails with attachments from shared mailbox
 
@@ -46,10 +47,10 @@ See associated screenshots for the above steps:
 
 Expand the Show Advanced Options by selecting it:
 
-:::image type="content" source="media/issues-triggering-emails-with-attachments-from-shared-mailbox/expand-show-advanced-options.png" alt-text="Power Automate - When a new email arrives in shared mailbox (v2) - Show Advanced Options":::
+:::image type="content" source="media/issues-triggering-emails-with-attachments-from-shared-mailbox/expand-show-advanced-options.png" alt-text="Screenshot to select the Show Advanced Options item to expand it.":::
 
 Set **Include Attachments** to Yes to make the content available to other Power Automate actions.
 
 Set **Only with attachments** to make the flow trigger only on emails with attachments.
 
-:::image type="content" source="media/issues-triggering-emails-with-attachments-from-shared-mailbox/options-for-attachement.png" alt-text="Power Automate - When a new email arrives in a shared mailbox V2 - options for attachments":::
+:::image type="content" source="media/issues-triggering-emails-with-attachments-from-shared-mailbox/options-for-attachement.png" alt-text="Screenshot shows the options for Include Attachments and Only with attachments.":::

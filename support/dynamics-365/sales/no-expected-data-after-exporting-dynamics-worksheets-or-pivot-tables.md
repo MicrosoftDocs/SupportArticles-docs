@@ -4,6 +4,7 @@ description: After exporting Microsoft Dynamics CRM Dynamic Worksheets and/or Dy
 ms.reviewer: jowells, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Cannot see the expected data after exporting Dynamic Worksheets and/or Dynamic Pivot Tables
 

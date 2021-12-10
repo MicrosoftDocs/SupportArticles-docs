@@ -4,6 +4,7 @@ description: OutgoingEmailAuthenticationError error appears in Microsoft Dynamic
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # OutgoingEmailAuthenticationError error shows in Microsoft Dynamics 365 mailbox alert
 

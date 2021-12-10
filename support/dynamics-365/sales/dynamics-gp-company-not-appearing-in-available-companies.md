@@ -4,6 +4,7 @@ description: A Microsoft Dynamics GP company does not show up in the list of ava
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-connectors
 ---
 # A Microsoft Dynamics GP Company not showing in the Dynamics Connector for CRM dropdown as an available Company for integration
 

@@ -4,6 +4,7 @@ description: Describes a product limitation in Windows that restricts the number
 ms.date: 03/12/2020
 ms.prod-support-area-path: Desktop app UI development
 ms.reviewer: davean
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 # Registered icon overlay handlers aren't used by Windows Shell
 

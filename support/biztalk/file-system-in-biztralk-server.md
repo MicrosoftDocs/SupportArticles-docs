@@ -4,6 +4,7 @@ description: Discusses the file systems that are supported when you use the BizT
 ms.date: 03/16/2020
 ms.prod-support-area-path: Adapter
 ms.reviewer: tracey
+ms.technology: biztalk-server-adapter
 ---
 # Supported file systems when you use the BizTalk Server File Receive function and BizTalk Server File Adapter
 

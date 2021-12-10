@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs during installation of 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Unable to install Microsoft Dynamics CRM 2011 server on Windows Server 2012 from Volume Licensing
 

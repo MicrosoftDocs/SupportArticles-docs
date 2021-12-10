@@ -3,7 +3,7 @@ title: Storage account setting is blank in Azure Site Recovery
 description: Fixes an issue in which the Storage Account list is blank when you try to configure protection group settings in Azure Site Recovery.
 ms.date: 10/10/2020
 ms.prod-support-area-path: 
-ms.service: backup
+ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 3093586
 
 When you try to configure protection group settings in Microsoft Azure Site Recovery, the **Storage Account** list may be blank. This issue prevents the wizard from being able to finish.
 
-:::image type="content" source="./media/blank-storage-account-setting-asr/3093587.PNG" alt-text="Specify Protection Group Settings Blank.":::
+:::image type="content" source="media/blank-storage-account-setting-asr/create-protection-group.png" alt-text="Screenshot of specifying Protection Group Settings in Microsoft Azure Site Recover.":::
 
 The setup process is described in the following article: [Set up protection between on-premises VMware virtual machines or physical servers and Azure](/azure/site-recovery/vmware-azure-tutorial).
 

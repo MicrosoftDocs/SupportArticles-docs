@@ -26,7 +26,7 @@ For example, when you try to connect to a listener of SQL Server by using `SQLCM
 
 The following screenshot shows an example of what occurs when you try to ping the listener for the availability of `aglisten`. The screenshot also shows a successful connection to SQL Server by using the `SQLCMD` command when you include the multi-subnet failover parameter `-M`.
 
-![Failure example](./media/listener-connection-times-out/ping-aglisten.jpg)
+:::image type="content" source="media/listener-connection-times-out/ping-aglisten.png" alt-text="Screenshot of the Command Prompt window when you ping the listener for the availability of aglisten.":::
 
 > [!NOTE]
 > You can use the `SQLCMD` command together with the `-M` parameter as shown in the screen shot to connect to the listener.
@@ -53,7 +53,7 @@ You can use one of the following resolutions as applicable to your case:
     Get-ClusterResource <*Your listener name*>|Set-ClusterParameter RegisterAllProvidersIP 0
     ```
 
-    ![Demo](./media/listener-connection-times-out/change-listener-registeraiiprovidersip.jpg)
+    :::image type="content" source="media/listener-connection-times-out/change-listener-registeraiiprovidersip.png" alt-text="Screenshot shows the output of an example of the command in Windows PowerShell.":::
 
 > [!NOTE]
 > After you set the `RegisterAllProvidersIP` value to **0**, the current online IP address must be un-registered from the DNS server and the offline IP address must be registered to the DNS server when a failover occurs. This may cause a connection delay for the next failover.

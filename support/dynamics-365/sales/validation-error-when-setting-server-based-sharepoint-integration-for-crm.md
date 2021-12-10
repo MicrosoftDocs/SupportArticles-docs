@@ -4,6 +4,7 @@ description: Discusses an issue in which you receive a Validation Error error me
 ms.reviewer: tylerol, aaronric
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Validation Error when setting server-based SharePoint integration for Microsoft Dynamics CRM Online and SharePoint Online
 
@@ -83,7 +84,7 @@ To update absolute URLs, follow these steps:
 
 Use this method to remove document locations that are associated with some records. After you do this, a user who is accessing those records will again receive the following prompt to create a document location for the records.
 
-:::image type="content" source="media/validation-error-when-setting-server-based-sharepoint-integration-for-crm/create-folder-prompt.png" alt-text="prompt to create a document location for the records":::
+:::image type="content" source="media/validation-error-when-setting-server-based-sharepoint-integration-for-crm/create-folder-prompt.png" alt-text="Screenshot shows the prompt to create a document location for the records.":::
 
 To delete absolute URLs, follow these steps:
 

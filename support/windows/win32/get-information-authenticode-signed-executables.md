@@ -5,6 +5,7 @@ ms.date: 10/26/2020
 ms.prod-support-area-path: Security Development
 ms.reviewer: clopez
 ms.topic: how-to
+ms.technology: windows-dev-apps-security-dev
 ---
 # Get information from Authenticode Signed Executables
 

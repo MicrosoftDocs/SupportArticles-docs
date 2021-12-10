@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: vaniaf, mmaasjo
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Email is not tracked in Microsoft Dynamics CRM if multiple organizations are configured for one user
 

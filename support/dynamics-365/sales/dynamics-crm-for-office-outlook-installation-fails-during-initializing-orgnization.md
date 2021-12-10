@@ -4,6 +4,7 @@ description: The installation of Microsoft Dynamics CRM for Outlook fails during
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # There is a problem communicating with the Microsoft Dynamics CRM server error when configuring Microsoft Dynamics CRM for Outlook
 
@@ -33,7 +34,7 @@ at Microsoft.Crm.Application.Outlook.Config.ConfigEngine.Configure(Object stateI
 
 This issue is caused by duplicate site-map entries in the site-map XML relative to the \<SubArea Id> tag. A duplicate site-map entry will sometimes contain a trailing **(1)** at the end of the title, as seen in the screenshot below:
 
-:::image type="content" source="media/dynamics-crm-for-office-outlook-installation-fails-during-initializing-orgnization/example.png" alt-text="Accounts(1)":::
+:::image type="content" source="media/dynamics-crm-for-office-outlook-installation-fails-during-initializing-orgnization/duplicate-site-map.png" alt-text="Screenshot shows a duplicate site-map entry will sometimes contain a trailing (1) at the end of the title." border="false":::
 
 However, it also possible to experience this error without seeing a duplicated entity name in the web client UI. Instead, the issue may also occur where the \<SubArea Id> tag references the same name, while the Entity parameter is different, as highlighted below:
 

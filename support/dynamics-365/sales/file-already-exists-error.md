@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you configure CRM 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # File already exists error when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 

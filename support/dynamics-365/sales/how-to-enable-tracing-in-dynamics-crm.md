@@ -4,6 +4,7 @@ description: Describes how to create managed and unmanaged trace files in Micros
 ms.reviewer: clintwa, danhamre, tlemar
 ms.topic: how-to
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # How to enable tracing in Microsoft Dynamics CRM 2013 and 2011
 

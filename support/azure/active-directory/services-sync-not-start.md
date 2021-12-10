@@ -4,6 +4,8 @@ description: Describes an issue that prevents Azure Active Directory synchroniza
 ms.date: 05/12/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # One or more Azure Active Directory sync services don't start
 

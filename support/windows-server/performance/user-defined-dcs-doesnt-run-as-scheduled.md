@@ -2,8 +2,8 @@
 title: User-defined data collector set doesn't run as scheduled
 description: This article provides a workaround for an issue in which a user-defined data collector set that is configured to run on a schedule does not run.
 ms.date: 12/4/2020
-author: Teresa-Motiv
-ms.author: v-tea
+author: v-tappelgate
+ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -28,7 +28,7 @@ During the scheduled running time, you notice that Performance Monitor does not 
 
 In Task Scheduler, if you open the scheduled task and then select **Actions**, the actions list contains **Custom Handler**.
 
-:::image type="content" source="./media/user-defined-dcs-doesnt-run-as-scheduled/scheduled-task-action.png" alt-text="The action of the scheduled task isn't configured correctly.":::
+:::image type="content" source="./media/user-defined-dcs-doesnt-run-as-scheduled/scheduled-task-actions-list.png" alt-text="The action of the scheduled task isn't configured correctly.":::
 
 The list doesn't contain the expected action, **Start a program**, which includes the specific commands and arguments.
 

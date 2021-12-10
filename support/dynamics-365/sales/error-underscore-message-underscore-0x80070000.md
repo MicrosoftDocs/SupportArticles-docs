@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when using Microsoft Dy
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Error_Message_0x80070000 when using Microsoft Dynamics 365 App for Outlook
 
