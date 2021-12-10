@@ -13,18 +13,16 @@ ms.reviewer: kaushika, sandyar, cpuckett
 ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
-# Support policy for third-party, kernel-level software that is signed using the attestation process in Windows  
-
-_Original KB number:_ &nbsp; 4519013
-
-## Summary
+# Support policy for third-party, kernel-level software that is signed using the attestation process in Windows
 
 This article describes the support that Microsoft Support provides for Microsoft software products, such as the Windows Server operating system (all versions), when you run that Microsoft product together with attestation-signed kernel-level drivers and any associated physical adapter, controller, or other device or application.
 
 > [!NOTE]
-> The attestation signing process for a third-party, kernel-level driver does not require that the driver vendor provide test results in order to obtain a driver signature from Microsoft. For more information, see [Attestation signing a kernel driver for public release](/windows-hardware/drivers/dashboard/attestation-signing-a-kernel-driver-for-public-release).
+> The attestation signing process for a third-party, kernel-level driver does not require that the driver vendor provide test results in order to obtain a driver signature from Microsoft. For more information, see [Attestation signing a kernel driver for public release](/windows-hardware/drivers/dashboard/attestation-signing-a-kernel-driver-for-public-release). 
 
-## More information
+_Original KB number:_ &nbsp; 4519013
+
+## Check whether the drivers are fully tested and supported
 
 Except as described in this article, Microsoft Support does not support software that has kernel-level drivers that are attestation-signed. Additionally, Microsoft does not support any physical device, filter driver, or application that is associated with that software.
 
@@ -36,7 +34,7 @@ This can be determined by checking the *Setupapi.dev.log* file that is located a
 
 If any drivers were recently installed, they can be examined to learn whether they were tested and submitted for signature or were signed by using the attestation process.
 
-Microsoft Support Engineer may also check either the [Windows Server Catalog](https://www.windowsservercatalog.com) or the [Windows Compatible Products List](https://partner.microsoft.com/dashboard/hardware/search/cpl) to determine whether the device and driver were tested, submitted, and certified or signed recently. You can do it by searching for the **Vendor Name** value in the Windows Compatible Products List, and entering an asterisk in the **Product Name** field. For example, see the following screenshot.
+Microsoft Support engineer may also check either the [Windows Server Catalog](https://www.windowsservercatalog.com) or the [Windows Compatible Products List](https://partner.microsoft.com/dashboard/hardware/search/cpl) to determine whether the device and driver were tested, submitted, and certified or signed recently. You can do it by searching for the **Vendor Name** value in the Windows Compatible Products List, and entering an asterisk in the **Product Name** field. For example, see the following screenshot.
 
 :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\windows-compatible-products-list.png" alt-text="Screenshot of the Windows Compatible Products List window, in which you can test the hardware to meet Microsoft's compatibility requirements." lightbox="media\support-policy-third-party-kernel-level-attestation\windows-compatible-products-list.png":::
 
@@ -63,7 +61,7 @@ A driver may have been signed by using the attestation process as part of the fo
 
 In this scenario, the driver should be considered as being fully tested and supported.
 
-### Support policy
+## Support policy
 
 A vendor may have an established support relationship with Microsoft for either of the following reasons:
 
@@ -81,7 +79,7 @@ For Microsoft customers who have Premier-level support and have Windows Server s
 
 Regardless of the support relationship between Microsoft and the vendor that is providing the attestation-signed driver, the vendor that provides the kernel driver is ultimately responsible for supporting the product and driver.
 
-### How to determine whether a driver is attestation-signed
+## How to determine whether a driver is attestation-signed
 
 1. In the *%SystemRoot%\\system32\\drivers* directory, right-click the driver file name in question. Select **Properties** from the drop-down list.
 
