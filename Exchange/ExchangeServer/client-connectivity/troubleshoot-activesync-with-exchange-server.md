@@ -1167,7 +1167,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 8. Analyze the results for this query by reviewing the Error and sc-status columns.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="Screenshot of analyzing the results of the Device query" lightbox="error-and-sc-status-columns.png":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="Screenshot of analyzing the results of the Device query" lightbox="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png":::
 
 #### Query results analysis
 
