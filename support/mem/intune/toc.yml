@@ -285,6 +285,8 @@ items:
     href: troubleshoot-company-resource-access-problems.md
   - name: Device-only subscription
     href: device-licenses-introduction.md
+  - name: Can't query the Intune Data Warehouse
+    href: error-query-intune-data-warehouse.md
   - name: Endpoint protection common errors
     href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
   - name: Help and support blade doesn't load
@@ -299,10 +301,6 @@ items:
     href: troubleshooting-blade-fails-loading.md
   - name: Windows 7 devices stop reporting to Intune
     href: troubleshoot-software-updates-in-microsoft-intune.md
-- name: Reporting
-  items:
-  - name: AADSTS50011 query the Intune Data Warehouse
-    href: error-query-intune-data-warehouse.md
 - name: Update management
   items:
   - name: Windows Update
