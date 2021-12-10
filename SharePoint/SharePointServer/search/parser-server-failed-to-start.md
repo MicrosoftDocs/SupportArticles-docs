@@ -60,4 +60,10 @@ To fix the issue, assign the required user rights to the service account by usin
 
 To configure the user rights assignment settings, see [Configure security policy settings](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings). Add the service account to both security policies.
 
+> [!NOTE]
+> The service account also requires the following user rights:
+>
+> - [Impersonate a client after authentication](/windows/security/threat-protection/security-policy-settings/impersonate-a-client-after-authentication) (SeImpersonatePrivilege)
+> - [Log on as a service](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) (SeServiceLogonRight)
+
 For more information about the User Rights Assignment security policy settings, see [User Rights Assignment](/windows/security/threat-protection/security-policy-settings/user-rights-assignment).
