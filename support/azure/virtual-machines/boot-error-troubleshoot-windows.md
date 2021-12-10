@@ -23,7 +23,7 @@ This article provides steps to resolve the issues of "Restarting", "Shutting dow
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you may see that the screenshot displays the message "Restarting", "Shutting down", or "Stopping services".
 
-![Restarting, Shutting Down, and Stopping Services Screens](./media/boot-error-troubleshooting-windows/restart-shut-down-stop-service.png)
+:::image type="content" source="media/boot-error-troubleshooting-windows/restart-shut-down-stop-service.png" alt-text="Screenshot of Restarting, Shutting Down, and Stopping Services Screens." border="false"::: 
  
 ## Cause
 
@@ -144,7 +144,7 @@ To enable dump log and Serial Console, run the following script.
 
 7. Select Send Non-Maskable Interrupt (NMI) to trigger the memory dump.
 
-   ![Send Non-Maskable Interrupt](./media/boot-error-troubleshooting-windows/send-nonmaskable-interrupt.png)
+   :::image type="content" source="media/boot-error-troubleshooting-windows/send-nonmaskable-interrupt.png" alt-text="Screenshot of the Send  Non-Maskable Interrupt (NMI) button on the button bar in the Serial Console window." border="false":::
 
 8. Attach the OS disk to a recovery VM again, collect dump file.
 
