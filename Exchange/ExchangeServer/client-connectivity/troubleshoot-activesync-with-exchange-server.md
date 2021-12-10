@@ -1256,7 +1256,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 5 of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Install LPS; Locate DeviceId for User; Device query; Query results analysis section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Device query** from the Library.
@@ -1386,7 +1386,7 @@ To determine the ActiveSync response that is causing the failure, mailbox loggin
 2. Make a copy of the web.config file.
 3. Open the web.config file in Notepad and modify the following sections with the values below:
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot 3 of the values you need to modify with.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot of the values you need to modify with in the Enable ActiveSync mailbox logging; Analyze mailbox log; Locate attachment section.":::
 
 4. [Open IIS Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 5. Expand the server and select **Application Pools**.
@@ -1420,7 +1420,7 @@ Review the mailbox log to determine that attachment the user is attempting to op
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/import-mailbox-logs-to-grid.png" alt-text="Screenshot 2 of Import Mailbox Logs to Grid button in Mailbox Log Parser.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/import-mailbox-logs-to-grid.png" alt-text="Screenshot of Import Mailbox Logs to Grid button in Mailbox Log Parser in the Analyze ActiveSync mailbox log section.":::
 
 6. Enter **ObjectNotFound** under **Search raw log data for strings** and select **Search**.
 
@@ -1522,7 +1522,7 @@ The first step is to enable mailbox logging on the Client Access Server(s) and t
 2. Make a copy of the web.config file.
 3. Open the web.config file in Notepad and modify the following sections with the values below:
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot 4 of the values you need to modify with.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot of the values you need to modify with in the Enable ActiveSync mailbox logging; Capture Fiddler Trace; mailbox log analysis section.":::
 
 4. [Open IIS Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 5. Expand the server and select **Application Pools**.
@@ -1590,11 +1590,11 @@ We expect the device to send one or more requests to obtain the latest updates f
 4. Review the Result column for any HTTP response values that do not equal 200.
 5. Select requests where the **Body** column has a value.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Screenshot 3 of the fiddler trace result. The requests where the Body column has a value are selected.":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Screenshot of the fiddler trace result in the Fiddler trace analysis for errors (if no errors) section. The requests where the Body column has a value are selected.":::
 
 6. Select the **TextView** tab to view the response for additional details.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Screenshot 3 of the TextView tab, which shows additional details of the response.":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Screenshot of the TextView tab in the Fiddler trace analysis for errors (if no errors) section, which shows additional details of the response.":::
 
 **Were there any errors found in the Fiddler trace?**
 
@@ -1632,7 +1632,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 6 of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Install LPS; SendMail query; Query results analysis (if no user can reproduce) section.":::
 
 4. Verify the file/folder is selected and select OK.
 5. Double-click **ActiveSync: SendMail** from the Library.
@@ -1704,7 +1704,7 @@ The first step is to enable mailbox logging on the Client Access Server(s) and t
 2. Make a copy of the web.config file.
 3. Open the web.config file in Notepad and modify the following sections with the values below:
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot 5 of the values you need to modify with.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot of the values you need to modify with in the Enable ActiveSync mailbox logging; Capture fiddler trace; Locate appointment; Search for UID section.":::
 
 4. [Open IIS Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 5. Expand the server and select **Application Pools**.
@@ -1882,11 +1882,11 @@ We expect the device to send one or more requests to obtain the latest updates f
 4. Review the Result column for any HTTP response values that do not equal 200.
 5. Select requests where the **Body** column has a value.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Screenshot 4 of the fiddler trace result. The requests where the Body column has a value are selected.":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Screenshot of the fiddler trace result in the Fiddler trace analysis for errors section. The requests where the Body column has a value are selected.":::
 
 6. Select the **TextView** tab to view the response for additional details.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Screenshot 4 of the TextView tab, which shows additional details of the response.":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Screenshot of the TextView tab in the Fiddler trace analysis for errors section, which shows additional details of the response.":::
 
 **Were there any errors found in the Fiddler trace for the Calendar requests?**
 
@@ -1924,7 +1924,7 @@ We need to determine if the requests from this ActiveSync client encountered any
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 7 of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Install LPS; Device Calendar requests; Query results analysis; Resync the Calendar folder section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Count Syncs with SyncKey of Zero Per User** from the Library.
@@ -1988,7 +1988,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 8 of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Prepare for Data Analysis; Count Syncs with SyncKey of Zero Per User section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Count Syncs with SyncKey of Zero Per User** from the Library.
@@ -1998,7 +1998,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 
 7. Analyze the results for this query.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/query-results.png" alt-text="Screenshot of the Device Query results.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/query-results.png" alt-text="Screenshot of the Count Syncs with SyncKey of Zero Per User Query results.":::
 
 **Are there any devices with multiple requests using the SyncKey value of 0?**
 
@@ -2016,7 +2016,7 @@ To determine why the device sent a SyncKey of 0, analyze the device activity pri
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 9 of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Prepare for Data Analysis; Log Parser Studio Query - Count Syncs with SyncKey of Zero Per User section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Device query** from the Library.
@@ -2082,7 +2082,7 @@ To determine if a previous request caused the device to send the SyncKey value o
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 10 of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Enable failed request tracing; Failed request trace logging analysis section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Request with ActiveSync errors** from the Library.
@@ -2107,7 +2107,7 @@ To determine what that status response code represents, use the [ActiveSync Comm
 
 Example results from query executed in the previous step:
 
-:::image type="content" source="media/troubleshoot-activesync-with-exchange-server/results-details-1.png" alt-text="Screenshot of query results details example." border="false":::
+:::image type="content" source="media/troubleshoot-activesync-with-exchange-server/results-details-1.png" alt-text="Screenshot of the Request with ActiveSync errors query results details." border="false":::
 
 These results show that a Ping command resulted in a status code of 3. Using the ActiveSync protocol document, this error is caused by the request sent by the device. The device should send another Ping request.
 
@@ -2190,7 +2190,7 @@ To determine if devices are sending the same SyncKey to Exchange for the same fo
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 11 of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Log Parser Studio Query - Count all Syncs per SyncKey section.":::
 
 4. Verify the file/folder is selected and select OK.
 5. Double-click **ActiveSync: Count all Syncs per SyncKey** from the Library.
@@ -2216,7 +2216,7 @@ To determine if the client should be sending the same SyncKey, check the status 
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 12 of the Log file manager window with the file copied earlier selected.":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Device Query (devices send same SyncKey multiple times) section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Device query** from the Library.
@@ -2279,7 +2279,7 @@ To determine if ActiveSync requests are causing resource consumption, run the as
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 13of the Log file manager window with the file copied earlier selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Log Parser Studio Query - High RPC counts or latency section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: High RPC counts or latency** from the Library.
@@ -2334,7 +2334,7 @@ To determine the ActiveSync response that is causing the failure, mailbox loggin
 2. Make a copy of the web.config file.
 3. Open the web.config file in Notepad and modify the following sections with the values below:
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot 6 of the values you need to modify with.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot of the values you need to modify with in the Enable ActiveSync mailbox logging; Analyze ActiveSync mailbox log section.":::
 
 4. [Open IIS Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 5. Expand the server and select **Application Pools**.
@@ -2390,7 +2390,7 @@ To determine if devices are generating errors, run the associated Log Parser que
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 14 of the Log file manager window with the file copied earlier selected.":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Log Parser Studio Query - Count all errors section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Count all errors** from the Library
@@ -2400,7 +2400,7 @@ To determine if devices are generating errors, run the associated Log Parser que
 
 7. Analyze the results for this query.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/count-all-errors.png" alt-text="Screenshot of the result of Count all errors query.":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/count-all-errors.png" alt-text="Screenshot of the result of Count all errors query in the Log Parser Studio Query - Report [Top 20]; Device Query section.":::
 
     > [!NOTE]
     > The following errors can be safely ignored: MissingCscCacheEntry, PingCollisionDetected, SyncCollisionDetected
@@ -2425,7 +2425,7 @@ To determine if one or more users are contributing to the performance issue, run
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 15 of the Log file manager window with the file copied earlier selected.":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Log Parser Studio Query - Report [Top 20] section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Report [Top 20]** from the Library.
@@ -2451,7 +2451,7 @@ To determine device traffic, analyze the device activity using the associated Lo
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 16 of the Log file manager window with the file copied earlier selected.":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Log Parser Studio Query - Device Query section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Device query** from the Library
@@ -2529,7 +2529,7 @@ To determine if these errors are causing a performance issue, run a Log Parser q
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot 17 of the Log file manager window with the file copied earlier selected.":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log file manager window with the file copied earlier selected in the Log Parser Studio query for errors section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Go to the **File** menu and select **New** > **Query**.
