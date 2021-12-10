@@ -99,9 +99,9 @@ Reduce the number of instances of the requested VM size, and then retry the depl
 ## Background information
 ### How allocation works
 The servers in Azure datacenters are partitioned into clusters. Normally, an allocation request is attempted in multiple clusters, but it's possible that certain constraints from the allocation request force the Azure platform to attempt the request in only one cluster. In this article, we'll refer to this as "pinned to a cluster." Diagram 1 below illustrates the case of a normal allocation that is attempted in multiple clusters. Diagram 2 illustrates the case of an allocation that's pinned to Cluster 2 because that's where the existing Cloud Service CS_1 or availability set is hosted.
-![Allocation Diagram](./media/virtual-machines-common-allocation-failure/Allocation1.png)
+:::image type="content" source="media/virtual-machines-common-allocation-failure/how-allocation-works.png" alt-text="Diagram 1 shows allocation attempted in multiple clusters and Diagram 2 shows allocation pinned to one cluster."::: 
 
 ### Why allocation failures happen
 When an allocation request is pinned to a cluster, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is pinned to a cluster but the type of resource you requested is not supported by that cluster, your request will fail even if the cluster has free resources. The following Diagram 3 illustrates the case where a pinned allocation fails because the only candidate cluster does not have free resources. Diagram 4 illustrates the case where a pinned allocation fails because the only candidate cluster does not support the requested VM size, even though the cluster has free resources.
 
-![Pinned Allocation Failure](./media/virtual-machines-common-allocation-failure/Allocation2.png)
+:::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failed-at-pinned-cluster.png" alt-text="Diagram 3 shows allocation failed at pinned cluster: No free resource available and Diagram 4 shows allocation failed at pinned cluster: Size not supported.":::
