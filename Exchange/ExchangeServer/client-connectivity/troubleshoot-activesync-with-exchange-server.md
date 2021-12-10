@@ -1053,7 +1053,7 @@ Now that we know we have the item in our mailbox log, we need to track the actio
 
 2. Scroll up the log and look for either RequestBody or ResponseBody. If the item appears in the response body, then the item was updated from the server. Otherwise the item appears in the request body, which means the item was updated from the client.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/max-document-data-size-value.png" alt-text="Screenshot of the MaxDocumentDataSize value.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/max-document-data-size-value.png" alt-text="Screenshot to modify the MaxDocumentDataSize value.":::
 
 3. Make note of the action (Add, Change, or Delete) and whether the server or client sent the action.
 4. Repeat steps 2-4 until you cannot find any further entries.
@@ -1332,7 +1332,7 @@ To resolve this issue, increase the maximum amount of data transfer for the Acti
 4. Open the web.config file in Notepad.
 5. Locate the MaxDocumentDataSIze and modify the value as needed.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/maxdocumentdatasize-value.png" alt-text="MaxDocumentDataSIze value":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/max-document-data-size-value.png" alt-text="Screenshot of the MaxDocumentDataSIze value.":::
 
     > [!NOTE]
     > This value is in bytes.
@@ -1590,11 +1590,11 @@ We expect the device to send one or more requests to obtain the latest updates f
 4. Review the Result column for any HTTP response values that do not equal 200.
 5. Select requests where the **Body** column has a value.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Select requests where the Body column has a value":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/requsets-body-column-value.png" alt-text="Screenshot to select the requests where the Body column has a value.":::
 
 6. Select the **TextView** tab to view the response for additional details.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Select the TextView tab to view the response for additional details":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/text-view-tab.png" alt-text="Screenshot of the TextView tab in the Fiddler trace analysis for errors section, which shows the response for additional details.":::
 
 **Were there any errors found in the Fiddler trace?**
 
@@ -1882,11 +1882,11 @@ We expect the device to send one or more requests to obtain the latest updates f
 4. Review the Result column for any HTTP response values that do not equal 200.
 5. Select requests where the **Body** column has a value.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Select requests where the Body column has a value":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/requsets-body-column-value.png" alt-text="Screenshot to select the requests where the Body column has the value.":::
 
 6. Select the **TextView** tab to view the response for additional details.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Select the TextView tab to view the response for additional details":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/text-view-tab.png" alt-text="Screenshot of the TextView tab in the Fiddler trace analysis for errors section, showing the response for additional details.":::
 
 **Were there any errors found in the Fiddler trace for the Calendar requests?**
 
