@@ -21,7 +21,7 @@ search.appverid: MET150
 
 # Read receipts are sent from a public folder mailbox instead of the public folder
 
-When you send an email that requests a read receipt to a mail-enabled public folder in [Outlook](https://support.microsoft.com/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141) and [Outlook on the web](https://support.microsoft.com/office/read-receipts-in-outlook-on-the-web-e09af74d-3519-45fc-a680-37a538a92157), you don't receive the read receipt from the public folder. Instead, the read receipt is sent from the public folder mailbox.
+When you send an email that requests a read receipt to a mail-enabled public folder in [Outlook](https://support.microsoft.com/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141) or [Outlook on the web](https://support.microsoft.com/office/read-receipts-in-outlook-on-the-web-e09af74d-3519-45fc-a680-37a538a92157), you don't receive the read receipt from the public folder. Instead, the read receipt is sent from the public folder mailbox.
 
 This issue occurs when the `PerUserReadStateEnabled` parameter of the public folder is set to `False` to remove read or unread tracking on a per-user basis.
 
