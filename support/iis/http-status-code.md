@@ -15,23 +15,23 @@ _Original KB number:_ &nbsp; 943891
 
 ## Introduction
 
-When you try to access content on a server that is running (IIS) 7.0, 7.5 or later versions by using the HTTP protocol, IIS returns a numeric code that indicates the status of the response. The HTTP status code is recorded in the IIS log. Additionally, the HTTP status code may be displayed in the client browser.
+When you try to access content on a server, that is running (IIS) 7.0, 7.5 or later versions, by using the HTTP protocol, IIS returns a numeric code that indicates the status of the response. The HTTP status code is recorded in the IIS log. Additionally, the HTTP status code may be displayed in the client browser.
 
 The HTTP status code may indicate whether a request is successful or unsuccessful. The HTTP status code may also reveal the exact reason that a request is unsuccessful.
 
 ## Log file locations
 
-By default, IIS 7.0 and later versions put log files in the following folder:  
+IIS 7.0 and later versions put log files in the following folder by default:  
 `inetpub\logs\Logfiles`
 
-This folder contains separate directories for each World Wide Web website. By default, the log files are created in the directories daily, and the log files are named by using the date. For example, a log file may be named as *exYYMMDD.log*.
+This folder contains separate directories for each World Wide Web website. The log files are created in the directories daily and are named by using the date by default. For example, a log file may be named as *exYYMMDD.log*.
 
 ## The HTTP status codes
 
 This section describes the HTTP status codes that IIS 7.0 and later versions use.
 
 > [!NOTE]
-> This article does not list every possible HTTP status code as dictated in the HTTP specification. This article includes only the HTTP status codes that IIS 7.0 and later versions can send. For example, a custom Internet Server API (ISAPI) filter or a custom HTTP module can set its own HTTP status code.
+> This article doesn't list every possible HTTP status code as dictated in the HTTP specification. This article includes only the HTTP status codes that IIS 7.0 and later versions can send. For example, a custom Internet Server API (ISAPI) filter or a custom HTTP module can set its own HTTP status code.
 
 ### 1**xx** - Informational
 
@@ -89,7 +89,7 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 
 - 401 - Access denied.
 
-  IIS 7.0 and later versions define several HTTP status codes that indicate a more specific cause of an error 401. The following specific HTTP status codes are displayed in the client browser but are not displayed in the IIS log:
+  IIS 7.0 and later versions define several HTTP status codes that indicate a more specific cause of an error 401. The following specific HTTP status codes are displayed in the client browser but aren't displayed in the IIS log:
 
   - 401.1 - Logon failed.
   - 401.2 - Logon failed due to server configuration.
@@ -169,7 +169,7 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 
 ### 5**xx** - Server error
 
-These HTTP status codes indicate that the server cannot complete the request because the server encounters an error.
+These HTTP status codes indicate that the server can't complete the request because the server encounters an error.
 
 IIS and later versions use the following server error HTTP status codes:
 
@@ -227,31 +227,31 @@ The following table describes the causes of some common HTTP status codes.
 |Code|Description|Notes|
 |---|---|---|
 |200|OK|IIS 7.0 and later versions successfully processed the request.|
-|304|Not modified|The client browser requests a document that is already in the cache, and the document has not been modified since the document was cached. The client browser uses the cached copy of the document instead of downloading the document from the server.|
-|400|Bad request|The Hypertext Transfer Protocol Stack (Http.sys) file blocks IIS 7.0 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains characters or sequences that are not valid or that the request contradicts the security settings in the Http.sys file.|
-|401.1|Logon failed|The logon attempt is unsuccessful probably because of a user name or a password that is not valid.|
+|304|Not modified|The client browser requests a document that is already in the cache. And the document hasn't been modified since it was cached. The client browser uses the cached copy of the document instead of downloading the document from the server.|
+|400|Bad request|The Hypertext Transfer Protocol Stack (*Http.sys*) file blocks IIS 7.0 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the *Http.sys* file.|
+|401.1|Logon failed|The logon attempt is unsuccessful probably because of a user name or a password that is invalid.|
 |401.2|Logon failed due to server configuration|This HTTP status code indicates a problem in the authentication configuration settings on the server.|
-|401.3|Unauthorized due to ACL on resource|This HTTP status code indicates a problem in the NTFS file system permissions. This problem may occur even if the permissions are correct for the file that you are trying to access. For example, this problem occurs if the IUSR account does not have access to the `C:\Winnt\System32\Inetsrv` directory.|
-|401.4|Authorization failed by filter|An Internet Server Application Programming Interface (ISAPI) filter does not let the request be processed because of an authorization problem.|
-|401.5|Authorization failed by ISAPI/CGI application|An ISAPI application or a Common Gateway Interface (CGI) application does not let the request be processed because of an authorization problem.|
-|403.1|Execute access forbidden|The appropriate level of the Execute permission is not granted.|
-|403.2|Read access forbidden|The appropriate level of the Read permission is not granted. Verify that you have set up IIS 7.0 and later versions to grant the Read permission to the directory. Additionally, if you use a default document, verify that the default document exists.|
-|403.3|Write access forbidden|The appropriate level of the Write permission is not granted. Verify that the IIS 7.0 and later versions permissions and the NTFS file system permissions are set up to grant the Write permission to the directory.|
-|403.4|SSL required|The request is made over a nonsecure channel, and the web application requires a Secure Sockets Layer (SSL) connection.|
-|403.5|SSL 128 required|The server is configured to require a 128-bit SSL connection. But, the request is not sent by using 128-bit encryption.|
+|401.3|Unauthorized due to ACL on resource|This HTTP status code indicates a problem in the NTFS file system permissions. This problem may occur even if the permissions are correct for the file that you try to access. For example, this problem occurs if the IUSR account doesn't have access to the *C:\Winnt\System32\Inetsrv* directory.|
+|401.4|Authorization failed by filter|An Internet Server Application Programming Interface (ISAPI) filter doesn't let the request be processed because of an authorization problem.|
+|401.5|Authorization failed by ISAPI/CGI application|An ISAPI application or a Common Gateway Interface (CGI) application doesn't let the request be processed because of an authorization problem.|
+|403.1|Execute access forbidden|The appropriate level of the Execute permission isn't granted.|
+|403.2|Read access forbidden|The appropriate level of the Read permission isn't granted. Verify that you have set up IIS 7.0 and later versions to grant the Read permission to the directory. Additionally, if you use a default document, verify that the default document exists.|
+|403.3|Write access forbidden|The appropriate level of the Write permission isn't granted. Verify that the IIS 7.0 and later versions permissions and the NTFS file system permissions are set up to grant the Write permission to the directory.|
+|403.4|SSL required|The request is made over a non-secure channel, and the web application requires a Secure Sockets Layer (SSL) connection.|
+|403.5|SSL 128 required|The server is configured to require a 128-bit SSL connection. But, the request isn't sent by using 128-bit encryption.|
 |403.6|IP address rejected|The server is configured to deny access to the current IP address.|
-|403.7|Client certificate required|The server is configured to require a certificate for client authentication. But the client browser does not have an appropriate client certificate installed. For more information, see [HTTP error 403.7 when you run a web application that's hosted on a server that is running IIS 7.0](/troubleshoot/iis/http-error-403-7-forbidden-web-app).|
+|403.7|Client certificate required|The server is configured to require a certificate for client authentication. But the client browser doesn't have an appropriate client certificate installed. For more information, see [HTTP error 403.7 when you run a web application that's hosted on a server that is running IIS 7.0](/troubleshoot/iis/http-error-403-7-forbidden-web-app).|
 |403.8|Site access denied|The server is configured to deny requests based on the Domain Name System (DNS) name of the client computer. For more information, see [Dynamic IP Address restrictions](/iis/get-started/whats-new-in-iis-8/iis-80-dynamic-ip-address-restrictions).|
 |403.12|Mapper denied access|The page that you want to access requires a client certificate. But, the user ID that is mapped to the client certificate is denied access to the file.|
 |403.13|Client certificate revoked|The client browser tries to use a client certificate that was revoked by the issuing certification authority.|
-|403.14|Directory listing denied|The server is not configured to display a content directory listing, and a default document is not set. see [HTTP Error 403.14 - Forbidden when you open an IIS Webpage](/troubleshoot/iis/http-403-14-forbidden-webpage).|
-|403.16|Client certificate is untrusted or invalid.|The client browser tries to use a client certificate that is not trusted by the server that is running IIS 7.0 and later versions or that is not valid. For more information, see [HTTP Error 403.16 when you try to access a website that's hosted on IIS 7.0](/troubleshoot/iis/http-403-forbidden-access-website).|
-|403.17|Client certificate has expired or is not yet valid.|The client browser tries to use a client certificate that is expired or that is not yet valid.|
-|403.18|Cannot execute requested URL in the current application pool.|A custom error page is configured, and the custom error page resides in a different application pool than the application pool of the requested URL.|
-|403.19|Cannot execute CGI applications for the client browser in this application pool.|The identity of the application pool does not have the Replace a process level token user right.|
-|404.0|Not found.|The file that you are trying to access was moved or does not exist.|
+|403.14|Directory listing denied|The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14 - Forbidden when you open an IIS Webpage](/troubleshoot/iis/http-403-14-forbidden-webpage).|
+|403.16|Client certificate is untrusted or invalid.|The client browser tries to use an invalid client certificate. Or the server that is running IIS 7.0 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16 when you try to access a website that's hosted on IIS 7.0](/troubleshoot/iis/http-403-forbidden-access-website).|
+|403.17|Client certificate has expired or is not yet valid.|The client browser tries to use a client certificate that is expired or that isn't yet valid.|
+|403.18|Cannot execute requested URL in the current application pool.|A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL.|
+|403.19|Cannot execute CGI applications for the client browser in this application pool.|The identity of the application pool doesn't have the Replace a process level token user right.|
+|404.0|Not found.|The file that you try to access is moved or doesn't exist.|
 |404.2|ISAPI or CGI restriction.|The requested ISAPI resource or the requested CGI resource is restricted on the computer. For more information, see [HTTP Error 404.2 when you visit a web page that is hosted on a computer that is running IIS 7.0](/troubleshoot/iis/http-error-402-webpage).|
-|404.3|MIME type restriction.|The current MIME mapping for the requested extension type is not valid or is not configured.|
+|404.3|MIME type restriction.|The current MIME mapping for the requested extension type is invalid or isn't configured.|
 |404.4|No handler configured.|The file name extension of the requested URL doesn't have a handler that is configured to process the request on the Web server.|
 |404.5|Denied by request filtering configuration.|The requested URL contains a character sequence that is blocked by the server.|
 |404.6|Verb denied.|The request is made by using an HTTP verb that isn't configured or that isn't valid.|
@@ -268,15 +268,15 @@ The following table describes the causes of some common HTTP status codes.
 |405.0|Method not allowed.|The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS](/troubleshoot/iis/http-error-405-website).|
 |406.0|Invalid MIME type.|The request is made by using an `Accept` header that contains a MIME value that isn't valid.|
 |412.0|Precondition failed.|The request is made by using an `If-Match` request header that contains a value that isn't valid.|
-|500|Internal server error.|This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 – Internal Server Error error when you you open an IIS 7.0 Webpage](https://support.microsoft.com/help/942031/http-error-500-0-internal-server-error-error-when-you-you-open-an-iis).|
+|500|Internal server error.|This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error error when you you open an IIS 7.0 Webpage](https://support.microsoft.com/help/942031/http-error-500-0-internal-server-error-error-when-you-you-open-an-iis).|
 |500.11|Application is shutting down on the web server.|The request isn't processed because the destination application pool is shutting down. Wait for the worker process to finish shutting down, and then try the request again. If this problem persists, the web application may be experiencing problems that prevent the web application from shutting down correctly.|
 |500.12|Application is busy restarting on the web server.|The request isn't processed because the destination application pool is restarting. This HTTP status code should disappear when you refresh the page. If this HTTP status code appears again after you refresh the page, the problem may be caused by antivirus software that is scanning the Global.asa file. If this problem persists, the web application may be experiencing problems that prevent the web application from restarting correctly.|
-|500.13|Web server is too busy.|The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS 7.0 and later versions web application can process. This problem may occur because the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS 7.0 and later versions web application. A common troubleshooting method is to generate a memory dump file of the IIS 7.0 and later versions processes when the error is occurring and then to debug the memory dump file.|
-|500.15|Direct requests for Global.asax aren't allowed.|A direct request for the Global.asa file or for the Global.asax file is made.|
-|500.19|Configuration data is invalid.|This HTTP status code occurs because of a problem in the associated applicationhost.config file or in the associated Web.config file. For more information, see [HTTP Error 500.19 when you open an IIS Webpage](/troubleshoot/iis/http-error-500-19-webpage).|
+|500.13|Web server is too busy.|The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS 7.0 and later versions web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS 7.0 and later versions web application. A common troubleshooting method is to generate a memory dump file of the IIS 7.0 and later versions processes when the error is occurring and then to debug the memory dump file.|
+|500.15|Direct requests for Global.asax aren't allowed.|A direct request for the *Global.asa* file or for the *Global.asax* file is made.|
+|500.19|Configuration data is invalid.|This HTTP status code occurs because of a problem in the associated *applicationhost.config* file or in the associated *Web.config* file. For more information, see [HTTP Error 500.19 when you open an IIS Webpage](/troubleshoot/iis/http-error-500-19-webpage).|
 |500.100|Internal ASP error.|An error occurs during the processing of an Active Server Pages (ASP) page. To obtain more specific information about the error, disable friendly HTTP error messages in the web browser. Additionally, the IIS log may show an ASP error number that corresponds to the error that occurs.|
-|503.0|Service unavailable.|The request is sent to an application pool that is currently stopped or that is currently disabled. To resolve this issue, make sure that the destination application pool is started. The event log may give information about why the application pool is stopped or disabled.|
-|503.2|Concurrent request limit exceeded.|The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS 7.0 and later versions do not allow more concurrent requests than the value of the `appConcurrentRequestLimit` property.|
+|503.0|Service unavailable.|The request is sent to an application pool that is currently stopped or disabled. To resolve this issue, make sure that the destination application pool is started. The event log may give information about why the application pool is stopped or disabled.|
+|503.2|Concurrent request limit exceeded.|The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS 7.0 and later versions don't allow more concurrent requests than the value of the `appConcurrentRequestLimit` property.|
 ||||
 
 ## HTTP substatus codes added in IIS 8.0
