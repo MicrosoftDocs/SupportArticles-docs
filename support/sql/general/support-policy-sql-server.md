@@ -172,7 +172,6 @@ SQL Server follows the fixed life-cycle policy for obtaining support and updates
 > [!NOTE]
 > SQL Server 2019 Big Data Clusters is governed by the Fixed Lifecycle Policy.
 
-
 Service Packs are released for SQL Server through version 2016. Support ends 12 months after the next service pack releases or at the end of the product's support life cycle, whichever comes first. For more information, please see the [Fixed Lifecycle Policy](/lifecycle/policies/fixed#service-packs).
 
 No service packs will be released starting from SQL Server 2017. For more information, see [SQL Server Service Packs are discontinued starting from SQL Server 2017](https://support.microsoft.com/help/4041553/sql-server-service-packs-are-discontinued-starting-from-sql-server).
