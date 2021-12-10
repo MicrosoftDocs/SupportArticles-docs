@@ -68,13 +68,13 @@ The delays can be observed in a network trace that shows LDAP clients running Ne
 
 ### Figure A
 
-![Network trace of Windows 7 client performing ldap_connect using ldp.exe](./media/ldap-session-takes-longer-target-host-names/ws08r2-netmon.jpg)
+:::image type="content" source="media/ldap-session-takes-longer-target-host-names/ws08r2-netmon.png" alt-text="Screenshot of the Microsoft Network Monitor window with network trace including 0x1C records.":::
 
 The network trace of a Windows Server 2003 or 2008 LDAP client showed that it directly ran the DNS lookup for the host computer without performing the NetBIOS lookup for the "<0x1C>" record.
 
 ### Figure B
 
-![Network trace of Windows Server 2003 client performing an ldap_connect using ldp.exe](./media/ldap-session-takes-longer-target-host-names/ws03-netmon.jpg)
+:::image type="content" source="media/ldap-session-takes-longer-target-host-names/ws03-netmon.png" alt-text="Screenshot of the Microsoft Network Monitor window with network trace of Windows Server 2003 or 2008 LDAP client.":::
 
 In the case of DNS, you see name queries for names that end in a DC computer name, such as the following:
 

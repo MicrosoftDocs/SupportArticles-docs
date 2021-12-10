@@ -196,7 +196,7 @@ When this problem occurs, you experience one or more of the following symptoms:
     Buttons in Dialog: OK
     ```
 
-    ![Screenshot of the error message](./media/replication-error-8453/error-message-dialog-box.png)
+    :::image type="content" source="media/replication-error-8453/replication-access-was-denied-error.png" alt-text="The Replication access was denied error that occurs after running the replicate now command." border="false":::
 
 - NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events that have the 8453 status are logged in the Active Directory Directive Services (AD DS) event log.
 
@@ -309,7 +309,7 @@ The typical **UserAccountControl** attribute value for a read-only domain contro
     3. Select the **Delegation** tab.
     4. On the domain controller machine account, select the **Trusted this computer for delegation to any service (Kerberos only)** option.
 
-        :::image type="content" source="./media/replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="The Trusted this computer for delegation to any service option.":::
+        :::image type="content" source="./media/replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="The Trusted this computer for delegation to any service option under the Delegation tab in the D C Properties dialog box." border="false":::
 
 ### Fix invalid default security descriptors
 

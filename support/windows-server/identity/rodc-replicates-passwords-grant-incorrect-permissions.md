@@ -64,11 +64,11 @@ Verify the group memberships of the RODC to determine whether **Replicating Dire
 
 To obtain the true membership of the RODC, you can use a query for the **TokenGroups** attribute to retrieve the effective group list of the user by using the LDP tool.
 
-![A query for the TokenGroups attribute](./media/rodc-replicates-passwords-grant-incorrect-permissions/query-for-the-tokengroups-attribute.jpg)
+:::image type="content" source="media/rodc-replicates-passwords-grant-incorrect-permissions/query-for-the-tokengroups-attribute.png" alt-text="Screenshot of the Search window filled with a query for the TokenGroups attribute.":::
 
 Make sure that you select **Base** scope and add the required attribute. When you are scoping the search on an individual user, you get the list for that user. If the user is in many groups, you must extend the amount of data that LDP prints into the window on the right, select **Options\General** from the menu, and adjust the **Chars per**  field to a higher value:
   
-![General Options](./media/rodc-replicates-passwords-grant-incorrect-permissions/general-options.jpg)
+:::image type="content" source="media/rodc-replicates-passwords-grant-incorrect-permissions/general-options-adjust-chars-per.png" alt-text="Screenshot of the General Options window with a Chars per box which can be adjust.":::
 
 ### Step 3
 
