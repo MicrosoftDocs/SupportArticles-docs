@@ -52,7 +52,7 @@ Verify that Autodiscover is working for Microsoft Exchange ActiveSync. To do thi
 2. Select **Exchange ActiveSync Autodiscover** from the **Microsoft Exchange ActiveSync Connectivity Tests** and select **Next**.
 3. Enter all the required fields and select **Perform Test**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/enter-required-fields.png" alt-text="Screenshot to enter all the required fields in the Remote Connectivity Analyzer window." lightbox="media/troubleshoot-activesync-with-exchange-server/enter-required-fields.png" :::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/enter-required-fields.png" alt-text="Screenshot to enter all the required fields in the Remote Connectivity Analyzer window." lightbox="media/troubleshoot-activesync-with-exchange-server/enter-required-fields.png":::
 
 **Did the Connectivity Test fail?**
 
@@ -448,9 +448,9 @@ You did not find any HTTP errors, so you should find a status code for the Activ
 
    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/small-values-in-body-column.png" alt-text="Screenshot of the small values shown in the Body column.":::
 
-5. View the EAS XML tabs for the request from the device and response received
+5. View the EAS XML tab for the request from the device and response received
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/eas-xml-tabs.png" alt-text="Screenshot to view the E A S X M L tabs for the request from the device and response received.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/eas-xml-tabs.png" alt-text="Screenshot to view the E A S X M L tab for the request from the device and response received.":::
 
 **What status code do you see in the response window?**
 
@@ -488,7 +488,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window with the copied file selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window in the SendMail section.":::
 
 4. Verify the file/folder is selected and select OK.
 5. Double-click **ActiveSync: SendMail** from the Library.
@@ -827,7 +827,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window with a copied file selected.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window in the Count Syncs with SyncKey of Zero Per User section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Count Syncs with SyncKey of Zero Per User** from the Library.
@@ -902,7 +902,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
     :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 5. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Log file manager":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window in the DeviceId Query section.":::
 6. Verify the file/folder is selected and select **OK**.
 7. Double-click ActiveSync: Device query from the Library.
 8. Modify the `DeviceId` value in the WHERE clause at the end of the query with the value from step 2.
@@ -1085,11 +1085,11 @@ The activity on the Exchange server indicates that the device should have the co
 3. Enter the namespace for ActiveSync (Example: mail.contoso.com) and select **Find Sessions**.
 4. Select requests where the **Body** column has a value.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/requests-example.png" alt-text="requests where the Body column has a value":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/requsets-body-column-value.png" alt-text="Screenshot shows the requests where the Body column has a value":::
 
-5. Select the **EAS XML** tabs to view the request and response.
+5. Select the **EAS XML** tab to view the request and response.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/request-and-response.png" alt-text="Screenshot to select the E A S X M L tabs to view the request and response.":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/request-and-response.png" alt-text="Screenshot to select the E A S X M L tab to view the request and response.":::
 
 6. Locate all requests and responses for the ServerId found earlier.
 
@@ -1156,7 +1156,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Log file manager":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window in the Device Query section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Device query** from the Library.
@@ -1167,7 +1167,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 8. Analyze the results for this query by reviewing the Error and sc-status columns.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="Screenshot of analyzing the results of the Device query" lightbox="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="Screenshot of analyzing the Device query results." lightbox="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png":::
 
 #### Query results analysis
 
@@ -1256,7 +1256,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Log file manager":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window in the Log Parser Studio Query - Device Query section.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Device query** from the Library.
