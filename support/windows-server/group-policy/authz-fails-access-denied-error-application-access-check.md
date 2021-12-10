@@ -56,7 +56,7 @@ This policy is introduced after the following versions of Windows or Windows upd
 |Registry value|A string that contains the SDDL of the security descriptor to be deployed.|
 |||
 
-:::image type="content" source="./media/authz-fails-access-denied-error-application-access-check/network-access-restrict-clients-allowed-to-make-remote-calls-to-sam-policy.png" alt-text="Network access: Restrict clients allowed to make remote calls to SAM policy screenshot" border="false":::
+:::image type="content" source="media/authz-fails-access-denied-error-application-access-check/network-access-restrict-clients-allowed-to-make-remote-calls-to-sam-policy.png" alt-text="Restrict clients allowed to make remote calls to SAM policy setting dialog box.":::
 
 When you define the policy by using the Windows Server 2016 Admin Tools, the default is to allow only administrators access to this interface.
 

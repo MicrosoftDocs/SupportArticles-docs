@@ -35,7 +35,7 @@ Consider the following scenario:
   
 After you do this, you receive the following error message:
 
-![Screenshot of error message](./media/error-when-burning-files-to-disc/burn-to-disc.PNG)
+:::image type="content" source="media/error-when-burning-files-to-disc/burn-to-disc.png" alt-text="Screenshot of the error message: There was a problem burning this disc. The disc might no longer be usable." border="false":::
 
 ## Cause
 

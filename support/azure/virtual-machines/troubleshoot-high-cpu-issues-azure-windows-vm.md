@@ -95,19 +95,19 @@ When it is [installed through the Azure portal](./performance-diagnostics.md), a
 
 Browse the VM blade, and select the **Performance diagnostics** option. You'll be asked to install the option (uses extensions) on the VM that you selected it for.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/1-install-performance-diagnostics.png" alt-text="Screenshot of the Install performance diagnostics button in the Performance diagnostics option." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/install-performance-diagnostics.png" alt-text="Screenshot of the Install performance diagnostics button in the Performance diagnostics option." border="false":::
 
 #### Azure portal Option 2
 
 Browse to **Diagnose and Solve Problems** in the VM blade, and look for **VM Performance Issues**.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/2-troubleshoot-vm-performance-issues.png" alt-text="Screenshot of the VM Performance Issues in the Diagnose and solve problem option." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/troubleshoot-vm-performance-issues.png" alt-text="Screenshot of the VM Performance Issues in the Diagnose and solve problem option." border="false":::
 
 If you select **Troubleshoot**, the PerfInsights installation screen loads.
 
 If you select **Install**, the installation provides different collection options.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/3-performance-analysis.png" alt-text="Screenshot of the Performance analysis settings in the Performance diagnostics option." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/performance-analysis.png" alt-text="Screenshot of the Performance analysis settings in the Performance diagnostics option." border="false":::
 
 The numbered options in the screenshot relate to the following comments:
 
@@ -145,17 +145,17 @@ After you run the report, the location of the contents depends on whether it was
 
 ### Run through the Azure portal
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/4-high-impact-performance-diagnostics.png" alt-text="Screenshot of a high impact performance diagnostics." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/high-impact-performance-diagnostics.png" alt-text="Screenshot of a high impact performance diagnostics." border="false":::
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/5-download-report.png" alt-text="Screenshot of the Download report button in the Performance diagnostics report page." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/download-report.png" alt-text="Screenshot of the Download report button in the Performance diagnostics report page." border="false":::
 
 #### Run from within VM
 
 Your folder structure should resemble the following images:
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/6-select-output.png" alt-text="Screenshot of the output folder and PerfInsight Report HTML file in your folder structure." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/select-output.png" alt-text="Screenshot of the output folder and PerfInsight Report HTML file in your folder structure." border="false":::
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/7-folder-structure.png" alt-text="Screenshot of the GeneralCounters_000001.blg and System.evtx in your folder structure." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/folder-structure.png" alt-text="Screenshot of the GeneralCounters_000001.blg and System.evtx in your folder structure." border="false":::
 
 1. Any additional collections such as Perfmon, Xperf, Netmon, SMB logs, event logs, and so on, can be found in Output folder.
 
@@ -169,7 +169,7 @@ Your folder structure should resemble the following images:
 
 Open the PerfInsights report. The **Findings** tab logs any outliers in terms of resource consumption. If there are instances of high-CPU usage, the **Findings** tab will categorize it as either High Impact or Medium Impact.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/8-impact-level-resources.png" alt-text="Screenshot of the Findings tab in the CPU part of the PerfInsights Report page. In this example, the Impact Level is Medium.":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/impact-level-resources.png" alt-text="Screenshot of the Findings tab in the CPU part of the PerfInsights Report page. In this example, the Impact Level is Medium.":::
 
 Similar to the previous example, PerfInsights was run for 30 minutes. For half that time, the highlighted process was exhausting CPU on the higher side. If the same process had been running throughout the collection time, the impact level would have changed to **HIGH**.
 
@@ -181,11 +181,11 @@ There is a dedicated subtab under **CPU** that can be used for detailed pattern 
 
 The **Top CPU Consumers** tab has two separate sections of interest, and you can view per processor statistics here. The application design is frequently either Single-Threaded or pins itself to a single processor. In this scenario, one or a few cores run at 100 percent, while other cores run at expected levels. These scenarios are more complex because the average CPU on the server appears to run as expected, but the processes that are pinned on cores that have high usage will be slower than expected.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/9-high-cpu-usage.png" alt-text="Screenshot of the Top CPU Consumers tab in the CPU part of the PerfInsights Report page, which shows the Performance Diagnostics Analysis Period and High CPU Usage Periods.":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/high-cpu-usage.png" alt-text="Screenshot of the Top CPU Consumers tab in the CPU part of the PerfInsights Report page, which shows the Performance Diagnostics Analysis Period and High CPU Usage Periods.":::
 
 The second section (equally important), is **Top Long Running CPU Consumers**. This section shows both the process details and their CPU usage pattern. The list is sorted by having high average CPU consumers at the top.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/10-top-long-running-cpu-consumers.png" alt-text="Screenshot of the Top Long Running CPU Consumers section.":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/top-long-running-cpu-consumers.png" alt-text="Screenshot of the Top Long Running CPU Consumers section.":::
 
 These two tabs will be enough to set the path for the next troubleshooting steps. Depending on the process that's driving the high-CPU condition, you'll have to address the questions that were asked earlier. Processes such as SQL Server (sqlservr.exe) or IIS (w3wp.exe) require a specific drill-down on query or code changes that are causing this condition. For system processes such as WMI or Lsass.exe, you have to follow a different path.
 
@@ -226,11 +226,11 @@ To start, select the **Add Counters** category.
 
 1. Select **Add**. The window shows **%ProcessorTime** under  **Added counters**.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/11-add-processor-time.png" alt-text="Screenshot of the Add Counters dialog in Performance Monitor.":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/add-processor-time.png" alt-text="Screenshot of the Add Counters dialog in Performance Monitor.":::
 
 After the counters are loaded, you'll see line trend charts in the collection time frame. You can select or clear the counters. So far, you have added only one counter.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/12-performance-monitor-1.png" alt-text="Screenshot of the line trend charts in the collection time frame.":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/performance-monitor-1.png" alt-text="Screenshot of the line trend charts in the collection time frame.":::
 
 Every counter will have **Average**, **Minimum**, and **Maximum** values. Focus on both **Average** and **Maximum** values, as the average value can vary depending on the duration of the data collection. If the high-CPU activity was seen for 10 minutes while the overall collection was 40 minutes, the average values will be much lower.
 
@@ -246,7 +246,7 @@ For this task you must clear or remove the **%ProcessorTime** counters previousl
 
 This category will load counters for all the processes running at that time.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/13-add-counters.png" alt-text="Screenshot of the steps to add the new category.":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/add-counters.png" alt-text="Screenshot of the steps to add the new category.":::
 
 On a typical production computer, hundreds or processes can be running. Therefore, it may take a while to clear every counter that seems to have a low or flat trend graph.
 
@@ -254,11 +254,11 @@ To accelerate this process, use the **Histogram** view, and change the view type
 
 Because there will always be a bar for **Total**, focus on bars that are showing a high exhaustion rate. You can delete the other bars to clean the view. Now, shift back to **Line** view.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/14-performance-monitor-2.png" alt-text="Screenshot of the Histogram view button in Performance Monitor and an example chart which contains 2 bars showing a high exhaustion rate." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/performance-monitor-2.png" alt-text="Screenshot of the Histogram view button in Performance Monitor and an example chart which contains 2 bars showing a high exhaustion rate." border="false":::
 
 It's now easier to catch the culprit process. By default, the **Max** and **Min** values are multiples of the number of either the cores on the server, or threads of the process.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/15-performance-monitor-3.png" alt-text="Screenshot of a line trend chart clearly showing the culprit process.":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/performance-monitor-3.png" alt-text="Screenshot of a line trend chart clearly showing the culprit process.":::
 
 The list of available tools doesn't end at PerfInsights for Perfmon. You have access to other tools, such as **ProcessMonitor** (ProcMon) or **Xperf**. There are many third-party tools available to use as necessary.
 
@@ -268,21 +268,21 @@ Azure VMs have reliable metrics that include basic information such as CPU, Netw
 
 #### Basic (default) counters
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/16-chart-metrics.png" alt-text="Screenshot of the Metrics page of Azure Monitor. In this example, the Percentage CPU option in Aggregation setting is selected." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/chart-metrics.png" alt-text="Screenshot of the Metrics page of Azure Monitor. In this example, the Percentage CPU option in Aggregation setting is selected." border="false":::
 
 #### Enabling Azure Monitor
 
 After you enable Azure Monitor metrics, the software installs an extension on the VM, and then starts collecting granular metrics, which includes Perfmon counters.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/17-diagnostics-storage-account.png" alt-text="Screenshot of the Diagnostics storage account field in the Overview tab of the Diagnostic settings page." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/diagnostics-storage-account.png" alt-text="Screenshot of the Diagnostics storage account field in the Overview tab of the Diagnostic settings page." border="false":::
 
 The **Basic** counter categories are set as **default**. However, you can also set a **Custom** collection.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/18-performance-counters.png" alt-text="Screenshot of Basic categories option in the Performance Counters tab of the Diagnostic settings page." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/performance-counters.png" alt-text="Screenshot of Basic categories option in the Performance Counters tab of the Diagnostic settings page." border="false":::
 
 After the settings are enabled, you can view these **Guest** counters in the **Metrics** section. You can also set **Alerts** (including email messages) if the metrics reach a certain threshold.
 
-  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/19-metrics-namespace.png" alt-text="Screenshot of Screenshot of the Metric Namespace field and the New alert rule button in the Metrics page." border="false":::
+  :::image type="content" source="media/troubleshoot-high-cpu-issues-azure-windows-vm/metrics-namespace.png" alt-text="Screenshot of Screenshot of the Metric Namespace field and the New alert rule button in the Metrics page." border="false":::
 
 For more information about how to use Azure monitor to manage Azure VMs, see [Monitoring Azure virtual machines with Azure Monitor](/azure/azure-monitor/insights/monitor-vm-azure).
 

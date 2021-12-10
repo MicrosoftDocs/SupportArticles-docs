@@ -529,7 +529,32 @@
       "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
       "redirect_url": "/mem/intune/apps/app-protection-policies",
       "redirect_document_id": false
-    },  
+    },
+    {
+      "source_path": "support/mem/intune/scep-pkcs-certificate-comparison.md",
+      "redirect_url": "/mem/intune/protect/certificates-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/grouping-targeting-migration-blockers.md",
+      "redirect_url": "/mem/intune/fundamentals/setup-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/intune-account-portal-retired.md",
+      "redirect_url": "/mem/intune/fundamentals/setup-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/assignmentfilter-permissions.md",
+      "redirect_url": "/mem/intune/fundamentals/create-custom-role#custom-role-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/enroll-devices-in-intune-tip.md",
+      "redirect_url": "/mem/intune/enrollment/windows-enrollment-methods",
+      "redirect_document_id": false
+    },
     {
       "source_path": "support/mem/intune/app-protection-options-access-denied.md",
       "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
@@ -549,7 +574,12 @@
       "source_path": "support/mem/intune/lob-app-versioning.md",
       "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
       "redirect_document_id": false
-    }, 
+    },
+    {
+      "source_path": "support/mem/intune/integrate-cisco-ise-intune.md",
+      "redirect_url": "https://community.cisco.com/t5/security-documents/how-to-integrate-cisco-ise-mdm-with-microsoft-intune/ta-p/4187375",
+      "redirect_document_id": false
+    },
     {
       "source_path": "support/mem/intune/look-up-intune-licenses.md",
       "redirect_url": "/mem/intune/fundamentals/licenses-assign",
@@ -993,6 +1023,16 @@
     {
       "source_path": "support/sql/admin/troubleshoot-dbcc-errors.md",
       "redirect_url": "/troubleshoot/sql/admin/troubleshoot-dbcc-checkdb-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/software-distribution-best-practices.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-extension-package-shows-installation-failed",
       "redirect_document_id": true
     }
   ]

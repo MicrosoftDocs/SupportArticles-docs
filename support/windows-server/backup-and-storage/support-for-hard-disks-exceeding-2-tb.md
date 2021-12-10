@@ -135,7 +135,7 @@ The following steps show how to initialize a fresh disk by using the GPT partiti
     > [!NOTE]
     > When a non-initialized disk is detected by Windows, the following window opens to prompt you to initialize the disk.
 
-    ![Screenshot of the Initialize Disk dialog box](./media/support-for-hard-disks-exceeding-2-tb/initialize-disk-window.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/initialize-disk-window.png" alt-text="Initialize the disk in the Initialize Disk dialog box." border="false":::
 
 2. In the **Initialize Disk** dialog box, click **GPT (GUID Partition Table)**, and then press OK.
 
@@ -144,7 +144,7 @@ The following steps show how to initialize a fresh disk by using the GPT partiti
 
 3. Check the Disk Management window to verify that the disk is initialized. If it is, the status row for that disk at the bottom of the window should indicate that the disk is **Online**.
 
-    ![Screenshot of the Online disk status](./media/support-for-hard-disks-exceeding-2-tb/check-online-status.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/check-online-status.png" alt-text="Check whether the disk status is online." border="false":::
 
 4. After the disk is initialized, you must create a partition, and then format that partition by using a file system. It's to be able to store data in that partition, and assign a name and a drive letter to that partition. To do it, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 
@@ -156,7 +156,7 @@ If you have previously initialized the disk by using the MBR partitioning scheme
 
 2. In the Disk Management window, examine the disk status rows at the bottom. In the following example, the user has a 3-TB disk that was previously initialized by using the MBR partitioning scheme. That device is labeled here as *Disk 1*.
 
-    ![Screenshot of the disk status in the Disk Management window](./media/support-for-hard-disks-exceeding-2-tb/disk-status-checking.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/disk-status-checking.png" alt-text="Check the disk status in the Disk Management window." border="false":::
 
 3. Disk 1 contains two separate unallocated sections. This separation indicates that the first 2 TB of the disk space can be used. However, the remaining space is non-addressable because of the 32-bit addressing space limitation of the MBR partitioning scheme. To enable the system to fully address the total capacity of the storage device, you must convert the disk to use the GPT partitioning scheme.
 
@@ -165,7 +165,7 @@ If you have previously initialized the disk by using the MBR partitioning scheme
     > [!NOTE]
     > The display should now show that the full amount of available space in unallocated.
 
-    ![Screenshot of clicking Convert to GPT Disk](./media/support-for-hard-disks-exceeding-2-tb/convert-to-gpt-disk.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/convert-to-gpt-disk.png" alt-text="Full amount of available space in unallocated is shown." border="false":::
 
 5. Now that the disk is initialized to access the full storage capacity, you must create a partition, and then format that partition by using a file system. It's to be able to store data in that partition, and assign a name and a drive letter to that partition. To do it, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 
