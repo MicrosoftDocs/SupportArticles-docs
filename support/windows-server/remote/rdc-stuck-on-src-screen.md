@@ -28,7 +28,7 @@ Assume a scenario in which you use a remote desktop connection for operating sys
 Connecting to:  
 Securing remote connection...
 
-:::image type="content" source="media/rdc-stuck-on-src-screen/remote-desktop-connection.jpg" alt-text="Remote Desktop Connection" border="false":::
+:::image type="content" source="media/rdc-stuck-on-src-screen/remote-desktop-connection.png" alt-text="The connection process of a remote desktop." border="false":::
 
 ## Cause
 

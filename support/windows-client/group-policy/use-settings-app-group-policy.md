@@ -35,20 +35,20 @@ The Settings app Group Policy has two modes. An administrator can either specify
 1. Open the Local Group Policy Editor and then go to **Computer Configuration** > **Administrative Templates** > **Control Panel**.
 2. Double-click the **Settings Page Visibility** policy and then select **Enabled**.
 
-    ![Setting Page Visibility Group Policy](./media/use-settings-app-group-policy/enable-settings-page-visibility-policy.png)
+    :::image type="content" source="media/use-settings-app-group-policy/enable-settings-page-visibility-policy.png" alt-text="Screenshot of the Enabled option in the Settings Page Visibility policy setting page." border="false":::
 3. Depending on your need, specify either a **ShowOnly:** or **Hide:** string.
 
     If you want to show only Proxy and Ethernet, the string would be as follows:
 
     **`ShowOnly:Network-Proxy;Network-Ethernet`**
 
-    ![Using ShowOnly to hide all pages except Proxy and Ethernet](./media/use-settings-app-group-policy/showonly-string-example.png)
+    :::image type="content" source="media/use-settings-app-group-policy/showonly-string-example.png" alt-text="Screenshot of the value input box in the Options area of the Settings Page Visibility policy setting window when you input the above string." border="false":::
 
     If you want to hide Proxy and Ethernet, but enable access to everything else, the string would be as follows:
 
     **`Hide:Network-Proxy;Network-Ethernet`**
 
-    ![Setting App restricted to Proxy and Ethernet only](./media/use-settings-app-group-policy/hidden-proxy-and-ethernet.png)
+    :::image type="content" source="media/use-settings-app-group-policy/hidden-proxy-and-ethernet.png" alt-text="Screenshot of the Ethernet page of the Network and Internet item in Settings app." border="false":::
 
 ## Determine the URI of a Settings app page
 

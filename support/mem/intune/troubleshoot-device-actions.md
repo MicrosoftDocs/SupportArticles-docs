@@ -59,10 +59,6 @@ This behavior is expected. Google doesn't allow Factory Resetting of personally 
 
 Retiring a device doesn't revoke access tokens. You can use Conditional Access policies to mitigate this condition.
 
-### How can I monitor a Retire/Wipe action after it was issued?
-
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**. If the end user initiated the action, we can see it under **Devices** > **Monitor** > **Device actions**.
-
 ### Why do wipes sometimes show as Pending indefinitely?
 
 Devices don't always report their status back to the Intune service before the reset was started. So, the action shows as Pending. If you've confirmed the action was successful, delete the device from the service.

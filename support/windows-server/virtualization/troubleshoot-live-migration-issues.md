@@ -90,7 +90,7 @@ Error Code: 0x80071398
 
 The operation failed because either the specified cluster node isn't the owner of the group, or the node isn't a possible owner of the group.
 
-![The action "Move" did not complete.](./media/troubleshoot-live-migration-issues/error-code-0x80071398.png)
+:::image type="content" source="media/troubleshoot-live-migration-issues/error-code-0x80071398.png" alt-text="Screenshot of The action Move did not complete error.":::
 
 0x1398 5016 ERROR_HOST_NODE_NOT_GROUP_OWNER
 
@@ -129,7 +129,7 @@ Open **Windows PowerShell** with **Run as administrator**  and run the following
 Get-ClusterNetwork
 ```  
 
-![Get-ClusterNetwork command result](./media/troubleshoot-live-migration-issues/get-clusternetwork.png)
+:::image type="content" source="media/troubleshoot-live-migration-issues/get-clusternetwork.png" alt-text="Screenshot of the Get-ClusterNetwork command result." border="false":::
 
 Make sure the cluster network isn't configured and that **Allow cluster network communication on this network** is selected. For more information, see [Configuring Network Prioritization on a Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/configuring-network-prioritization-on-a-failover-cluster/ba-p/371683).  
 
@@ -198,7 +198,7 @@ Need to remove the ISO.
 
 Check the VM setting under the DVD file, make sure the **None** option is selected as shown:
 
-![The None option is selected](./media/troubleshoot-live-migration-issues/select-none.png)  
+:::image type="content" source="media/troubleshoot-live-migration-issues/select-none.png" alt-text="Screenshot shows the None option is selected in the Media area.":::
 
 #### Live migration failed because "Test" failed at migration source "HOST3."
 
@@ -260,7 +260,7 @@ Here's how to fix this issue:
 
 1. Open the **Hyper-V Manager** console and select **Virtual Machine** > **Settings** > **Processor** > **Compatibility > OK.**
 
-    ![Steps to fix this issue](./media/troubleshoot-live-migration-issues/hyper-v-manager-console.png)
+    :::image type="content" source="media/troubleshoot-live-migration-issues/hyper-v-manager-console.png" alt-text="Screenshot shows the options in the Hyper-V Manager console.":::
 
 2. Open **Windows PowerShell** with **Run as administrator** and run the following cmdlet:
 
@@ -345,7 +345,7 @@ Virtual machine migration operation failed at migration Source. Failed to establ
 
 Here's how to fix this issue:
 
-![Step to fix this issue](./media/troubleshoot-live-migration-issues/hyper-v-settings-s2d2.png)
+ :::image type="content" source="media/troubleshoot-live-migration-issues/hyper-v-settings-s2d2.png" alt-text="Screenshot shows steps to fix this issue.":::
 
 See [Live Migration via Constrained Delegation with Kerberos in Windows Server 2016](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) for details.  
 

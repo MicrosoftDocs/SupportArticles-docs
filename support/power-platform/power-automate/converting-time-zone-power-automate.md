@@ -33,11 +33,11 @@ Power Automate has a built-in operation called **Convert time zone**.
 
 Search for **convert time zone** and choose the **Convert time zone** operation.
 
-:::image type="content" source="media/converting-time-zone-power-automate/search-convert-time-zone.png" alt-text="Search convert time zone action in Power Automate.":::
+:::image type="content" source="media/converting-time-zone-power-automate/search-convert-time-zone.png" alt-text="Screenshot to search for the convert time zone action in Power Automate.":::
 
 The **Convert time zone** operation has a few required inputs:
 
-:::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Required inputs in Convert time zone operation.":::
+:::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation.":::
 
 **Base time**: The datetime you wish to convert.
 **Source time zone**: The time zone that the datetime is currently in.
@@ -49,7 +49,7 @@ See the [Notes](#notes) below for ways to find the current time zone.
 
 Power Automate has an expression function for converting time zone.
 
-:::image type="content" source="media/converting-time-zone-power-automate/expression-function.png" alt-text="Convert time zone expression in Power Automate.":::
+:::image type="content" source="media/converting-time-zone-power-automate/expression-function.png" alt-text="Screenshot shows that Power Automate has an expression function for converting the time zone.":::
 
 ```console
 convertTimeZone(timestamp: string, sourceTimeZone: string, destinationTimeZone: string, format?: string)
@@ -96,7 +96,7 @@ If you're unsure what the datetime time zone is currently in, you can run your f
 
 In this example, the **Get forecast for today** operation outputs the timestamp for when we got the forecast.
 
-:::image type="content" source="media/converting-time-zone-power-automate/get-forest-today.png" alt-text="Convert time zone example in Power Automate.":::
+:::image type="content" source="media/converting-time-zone-power-automate/get-forest-today.png" alt-text="Screenshot shows an example of checking the datetime output format.":::
 
 This datetime is using the ISO-8601 datetime format. We can see that this operation outputs the datetime in the UTC timezone.
 

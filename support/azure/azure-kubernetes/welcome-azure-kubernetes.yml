@@ -9,24 +9,44 @@ metadata:
   services: cloud-services
   ms.service: cloud-services #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: v-miegge  #Required; your GitHub user alias, with correct capitalization.
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/08/2021
+  ms.date: 12/02/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Troubleshooting
+  - title: Can't connect to AKS cluster
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Capture a TCP dump from a Windows node in AKS
-            url: ./capture-tcp-dump-windows-node-aks.md
-          - text: Capture a TCP dump from a Linux node in AKS
+          - text: Basic troubleshooting
+            url: ./troubleshoot-cluster-connection-issues-api-server.md
+          - text: Client IP address can't access API server
+            url: ./client-ip-address-cannot-access-api-server.md
+          - text: Config file isn't available when connecting
+            url: ./config-file-is-not-available-when-connecting.md
+          - text: User can't get cluster resources
+            url: ./user-cannot-get-cluster-resources.md
+
+ # Card
+  - title: Data collection guide
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Capture TCP dump from Linux node
             url: ./capture-tcp-dump-linux-node-aks.md
-          - text: Capture TCP packets from a pod in AKS
+          - text: Capture TCP dump from Windows node
+            url: ./capture-tcp-dump-windows-node-aks.md
+          - text: Capture TCP packets from pod
             url: ./packet-capture-pod-level.md
-          - text: Identify High CPU consuming containers in AKS 
+
+ # Card
+  - title: Troubleshoot performance issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Identify high CPU consuming containers
             url: ./identify-high-cpu-consuming-containers-aks.md
