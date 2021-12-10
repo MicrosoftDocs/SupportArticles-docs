@@ -37,7 +37,7 @@ The following files are available for download from the Microsoft Download Cente
 
 Windows Server 2008
 
-![Download ](./media/update-available-integrates-wsus-into-server-manager/download.gif)
+:::image type="icon" source="media/update-available-integrates-wsus-into-server-manager/download-icon.png":::
  [Download the update for Windows Server 2008 Server Manager (KB940518) package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=940518)  
 
 For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base:  
