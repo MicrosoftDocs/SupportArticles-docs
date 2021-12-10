@@ -27,7 +27,7 @@ When [configuring the RD Connection Broker server for high availability](/window
 
 DRIVER=SQL Server Native Client \<VersionNumber>;SERVER=\<SQL Server Name>;Trusted_Connection=Yes;APP=Remote Desktop Services Connection Broker;Database=\<New database file name>
 
-:::image type="content" source="./media/error-configuration-rd-connection-brokers-high-availability/configure-rd-connection-broker-for-high-availability.png" alt-text="Wizard of Configure RD Connection Broker for High Availability." border="false":::
+:::image type="content" source="./media/error-configuration-rd-connection-brokers-high-availability/configure-rd-connection-broker-for-high-availability.png" alt-text="Wizard of Configure RD Connection Broker for High Availability.":::
 
 > [!NOTE]
 >
@@ -44,7 +44,7 @@ Verify that correct permission is assigned to the RD Connection Broker Server on
 3. Go to **Security** > **Logins** in **Object Explorer**, right-click the RD Connection Broker server, and select **Properties**.
 4. Make sure the **dbcreator** and **public** checkboxes are selected under the **Server roles** pane.
 
-:::image type="content" source="./media/error-configuration-rd-connection-brokers-high-availability/grant-permission-for-rdcb.png" alt-text="Microsoft SQL Server Management Studio." border="false":::
+:::image type="content" source="./media/error-configuration-rd-connection-brokers-high-availability/grant-permission-for-rdcb.png" alt-text="Select the dbcreator and public options under the Server roles page in Login Properties of the RD Connection Broker server in SQL Server Management Studio.":::
 
 > [!NOTE]
 > The RD Connection Broker server is now allowed to create databases in the SQL server. The RD Connection Broker service will attempt to migrate Windows Internal Database (WID) to a SQL Server instance when converting the RD Connection Broker server to a high available cluster.

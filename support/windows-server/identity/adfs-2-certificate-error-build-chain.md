@@ -71,7 +71,7 @@ To resolve this problem, follow these steps in the order given. These steps will
 
 Check whether all AD FS certificates (Service communications, token-decrypting, and token-signing) are valid and have a private key associated with them. Also, make sure that the certificate is within its validity period.
 
-![The screenshot about check the certificate](./media/adfs-2-certificate-error-build-chain/check-the-certificate.jpg)
+:::image type="content" source="media/adfs-2-certificate-error-build-chain/check-the-certificate.png" alt-text="Screenshot of the Certificate window showing the validity period.":::
 
 #### Where to find the certificates
 
@@ -81,7 +81,8 @@ Check whether all AD FS certificates (Service communications, token-decrypting, 
     2. In the **Add/Remove Snap-in** dialog box, click **OK**.
     3. On the **Certificates snap-in** screen, click the **Computer account** certificate store.  
 
-        ![Open certificate store ](./media/adfs-2-certificate-error-build-chain/open-certificate-store.jpg)
+        :::image type="content" source="media/adfs-2-certificate-error-build-chain/open-certificate-store.png" alt-text="Screenshot of the Certificate snap-in window with Computer account selected.":::
+
     4. To view the properties of the Service Communications certificate, expand **Certificate (Local Computer)**, expand **Personal**, and then click **Certificates**.  
 
 - For token-signing and token-decrypting certificates:  
@@ -105,7 +106,7 @@ For more information, see [How to Determine if a Certificate is Using a CAPI1 or
 3. Locate your website (typically, it is known as "Default Web Site"), and then select it.
 4. On the **Actions** menu on the right side, click **Bindings**. Make sure that the https biding type is bound to port 443. Otherwise, click **Edit** to change the port.
 
-    ![Site Bindings ](./media/adfs-2-certificate-error-build-chain/site-bindings.png)
+    :::image type="content" source="media/adfs-2-certificate-error-build-chain/site-bindings.png" alt-text="Screenshot of the Site Bindings window which shows that the https biding type is bound to port 443.":::
 
 ### Step 4: Make sure that service communication certificate is valid, trusted, and passes a revocation check  
 
@@ -163,7 +164,7 @@ For more information, see [How to Determine if a Certificate is Using a CAPI1 or
 4. Right-click the AD FS service, point to **All Tasks**, and then click **Manage private keys**.
 5. Check whether the AD FS account has the Read permission.
 
-    ![Check the certificate permission ](./media/adfs-2-certificate-error-build-chain/certificate-permission.jpg)
+    :::image type="content" source="media/adfs-2-certificate-error-build-chain/ad-fs-account-permission.png" alt-text="Screenshot of the permission window which shows that the AD FS account has the Read permission.":::
 
 ### Step 6: Check whether ADFS AutoCertificateRollover feature is enabled for token-signing and token-decrypting certificates
 

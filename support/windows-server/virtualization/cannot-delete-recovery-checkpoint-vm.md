@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3059372
 
 After Data Protection Manager (DPM) backup fails, you can't delete broken recovery checkpoints for a virtual machine that was created by Hyper-V. When you try to do this, you discover that there's no option listed for a virtual machine in the Hyper-V Manager Console GUI.
 
-![No option listed for a virtual machine in the Hyper-V Manager Console GUI.](./media/cannot-delete-recovery-checkpoint-vm/no-vm-listed.jpg)
+:::image type="content" source="media/cannot-delete-recovery-checkpoint-vm/no-vm-listed.png" alt-text="Screenshot of the Checkpoints window, which shows that there's no option listed for a virtual machine in the Hyper-V Manager Console GUI.":::
 
 The following command returns the list of snapshots for the VM and its type:
 
