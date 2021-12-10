@@ -72,17 +72,17 @@ To resolve this issue, follow these steps:
     > [!NOTE]
     > There may be no connections listed here, or there may be manually created connections.
 
-    ![Screenshot of NTDS Settings object](./media/events-6804-2843-rodcs-not-replicate-sysvol/ntds-settings.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/ntds-settings.png" alt-text="Find the NTDS Settings object in the Servers folder by expanding the Default-first-site-name folder under the Sites folder.":::
 
 4. Create a connection object, and give it the same name as the default object. For example, name the object **RODC Connection (FRS)**.
 
-    ![Screenshot of creating a connection object](./media/events-6804-2843-rodcs-not-replicate-sysvol/create-connection-object.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/create-connection-object.png" alt-text="Create a connection object together with the same name as the default object.":::
 
 5. Edit the new connection in Adsiedit .msc or by using the Dssite.msc **Attribute Editor** tab. Navigate to the **options** attribute, and then enter **0x40** in the **Value** field.
 
-    ![Screenshot of editing Options attribute](./media/events-6804-2843-rodcs-not-replicate-sysvol/edit-options-attribute.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/edit-options-attribute.png" alt-text="Edit the Options' attribute in the Attribute Editor tab.":::
 
-    ![Screenshot of Options attribute in FRS properties](./media/events-6804-2843-rodcs-not-replicate-sysvol/options-attribute-in-frs-properties.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/options-attribute-in-frs-properties.png" alt-text="Options' attribute shown in the Attribute Editor tab of the F R S properties dialog box." border="false":::
 
 6. Repeat steps 4 and 5 to create more connections, as necessary.
 7. Force Active Directory replication outbound from this DC to the RODCs, or wait for convergence to occur. When the DFSR service on the RODC sees these connections, SYSVOL begins to replicate again.
