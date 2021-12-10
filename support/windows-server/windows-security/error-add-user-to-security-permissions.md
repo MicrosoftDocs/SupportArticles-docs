@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: jlambert, kaushika
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Maximum number of access control entries in the access control list
@@ -18,7 +18,7 @@ ms.technology: windows-server-security
 This article describes an issue that occurs when you reach the maximum size of the access control list.
 
 _Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;166348
+_Original KB number:_ &nbsp; 166348
 
 ## Symptoms
 

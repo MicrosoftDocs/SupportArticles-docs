@@ -4,6 +4,7 @@ description: Discusses that Internet Explorer crashes or hangs when you try to a
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.technology: internet-explorer-connectivity-navigation
 ---
 # Cannot access some websites in Internet Explorer
 

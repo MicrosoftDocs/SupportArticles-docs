@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # You can't modify the Hosts file or the Lmhosts file in Windows 7

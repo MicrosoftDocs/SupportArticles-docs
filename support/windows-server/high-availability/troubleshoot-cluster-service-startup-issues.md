@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cluster service fails to start
+ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # How to troubleshoot Cluster service startup issues in Windows Server 2003

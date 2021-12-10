@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Error when you edit a policy in Windows: Microsoft.Policies.Sensors.WindowsLocationProvided is already defined
@@ -52,7 +52,7 @@ Namespace 'Microsoft.Policies.Sensors.WindowsLocationProvider' is already define
 
 For example, the error message resembles the message in the following screenshot:
 
-![example](./media/microsoft-policies-sensors-windowslocationprovider-defined/namespace-already-defined-error.png)
+:::image type="content" source="media/microsoft-policies-sensors-windowslocationprovider-defined/namespace-already-defined-error.png" alt-text="Screenshot of the Administrative Templates window which shows the error message.":::
 
 > [!NOTE]
 > You may not notice this issue if you are upgrading from Windows 7 or Windows 8.1 to Windows 10 version 1511 (skipping Windows 10 RTM).

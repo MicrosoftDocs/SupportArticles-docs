@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # A newly promoted domain controller may fail to advertise after completion of DCpromo
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;967336
+_Original KB number:_ &nbsp; 967336
 
 ## Symptoms
 

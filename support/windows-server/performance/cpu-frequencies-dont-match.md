@@ -2,7 +2,7 @@
 title: CPU frequencies shown in System property page do not match
 description: Provides a solution to an issue where the CPU name is shown and two identical frequencies don't match on the System property page.
 ms.date: 09/11/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # CPU frequencies shown in System property page do not match

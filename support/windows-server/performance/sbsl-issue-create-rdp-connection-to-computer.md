@@ -3,14 +3,14 @@ title: SBSL issue when you create an RDP connection to Windows Server 2012 R2
 description: Describes an issue in which computer freezes when you create an RDP connection to Windows Server 2012 R2.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, pranayav, amanjain, vineelko
-ms.prod-support-area-path: Boot is slow
+ms.custom: sap:boot-is-slow, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Server freezes or user logon is slow when connecting to Windows Server 2012 R2 by using RDP
@@ -55,7 +55,7 @@ To make the registry change, follow these steps:
     > [!NOTE]
     > By default, the value for \<Connection Name> is RDP-Tcp. This value RDP-Tcp can be renamed or configured to something else.
 
-    ![Screenshot of configuring RDP-Tcp](./media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.jpg)
+    :::image type="content" source="media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.png" alt-text="Screenshot shows how to configure RDP-Tcp." lightbox="media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.png" border="false":::
 
 3. On the **Edit** menu, select **New**, and then select **DWORD Value**.
 4. Type *fQueryUserConfigFromLocalMachine*.

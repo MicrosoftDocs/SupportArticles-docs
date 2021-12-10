@@ -2,7 +2,7 @@
 title: Windows App cannot start after ADMT 3.2 security translation runs
 description: Provides a solution to an error that occurs when Windows App cannot start after ADMT 3.2 security translation runs.
 ms.date: 09/17/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10
@@ -44,7 +44,7 @@ In this scenario, the following issues occur:
 - Clicking the **Start** button does not open the **Start** menu on Windows 10-based computers.
 - If you switch to Tablet mode and then switch back to the previous mode in Windows 10, the **Start** menu continues to work but other built-in and store applications do not start.
 
-    :::image type="content" source="./media/windows-app-cant-start/fresh-paint.png" alt-text="Fresh Paint.":::
+    :::image type="content" source="./media/windows-app-cant-start/built-in-and-store-applications-do-not-start.png" alt-text="The Start menu continues to work but other built-in and store applications do not start.":::
 
 - Search is unresponsive.
 - The Settings application does not start on Windows 10-based computers when you click the **Settings** icon directly or use the Windows+I keyboard shortcut. This application works the first time that it is started, and it also works when you use the **Display settings** shortcut menu on the desktop.
@@ -52,7 +52,7 @@ In this scenario, the following issues occur:
 
     > Invalid value for registry
 
-    :::image type="content" source="./media/windows-app-cant-start/invalid-value-registry.png" alt-text="Error message when you can't view .jpg files.":::
+    :::image type="content" source="./media/windows-app-cant-start/invalid-value-registry.png" alt-text="The invalid value for registry error that occurs when you can't view jpg files.":::
 
 - When you click the Store application in the Windows taskbar of a Windows 10-based computer, the command fails, and you receive the following error message:
 

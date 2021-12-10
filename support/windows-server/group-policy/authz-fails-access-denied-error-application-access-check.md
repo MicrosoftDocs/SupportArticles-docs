@@ -1,16 +1,16 @@
 ---
-title: Access checks fail because of AuthZ 
+title: Access checks fail because of AuthZ
 description: Addresses an issue in which AuthZ fails and returns an Access Denied error when an application does access checks in Windows Server.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-jesits
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # AuthZ fails with an Access Denied error when an application does access checks in Windows Server
@@ -56,7 +56,7 @@ This policy is introduced after the following versions of Windows or Windows upd
 |Registry value|A string that contains the SDDL of the security descriptor to be deployed.|
 |||
 
-:::image type="content" source="./media/authz-fails-access-denied-error-application-access-check/network-access-restrict-clients-allowed-to-make-remote-calls-to-sam-policy.png" alt-text="Network access: Restrict clients allowed to make remote calls to SAM policy screenshot" border="false":::
+:::image type="content" source="media/authz-fails-access-denied-error-application-access-check/network-access-restrict-clients-allowed-to-make-remote-calls-to-sam-policy.png" alt-text="Restrict clients allowed to make remote calls to SAM policy setting dialog box.":::
 
 When you define the policy by using the Windows Server 2016 Admin Tools, the default is to allow only administrators access to this interface.
 

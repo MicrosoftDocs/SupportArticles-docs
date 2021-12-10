@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-intune.yml
 - name: App management
@@ -18,8 +19,6 @@
       href: apps-appear-unavailable.md
     - name: Deployment, delivery, and processing of a Win32 application
       href: develop-deliver-working-win32-app-via-intune.md
-    - name: Deploy Windows update packages as Win32 apps
-      href: deploy-windows-update-packages-as-win32-apps.md
     - name: Can't save corporate data in WIP-allowed apps
       href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: iOS apps
@@ -64,8 +63,6 @@
       href: only-one-app-policy-applied-edge-managed-browser.md
   - name: General help and troubleshooting
     items:
-    - name: LOB app versioning
-      href: lob-app-versioning.md  
     - name: Save application failed error
       href: save-application-failed-error.md
     - name: Build software inventory using Power BI
@@ -78,16 +75,8 @@
       href: troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
       href: troubleshoot-mam.md   
-    - name: Access Denied when accessing Exchange Online & SharePoint Online
-      href: app-protection-options-access-denied.md
-    - name: Access denied configuring Conditional Access
-      href: configure-app-protection-access-denied.md
-    - name: Devices enrolled in Conditional Access policy prompted to enroll in Intune
-      href: device-enroll-intune-app-management-error.md
     - name: Known issue - Fingerprint authentication on Samsung Note 4
       href: no-prompt-for-fingerprint-identity.md
-    - name: Set up and validate iOS app protection policies
-      href: set-up-app-protection-policies-ios-device.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -178,8 +167,6 @@
       href: intune-connector-for-ad-not-appear.md
     - name: Support tip - Azure AD device registration and Windows Autopilot
       href: azure-ad-device-registration-autopilot.md
-    - name: Support tip - Comparison of methods for enrolling a Windows device in Intune
-      href: enroll-devices-in-intune-tip.md
     - name: Sysprep will not run correctly on MDM enrolled Windows 10 devices
       href: troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
     - name: Troubleshoot Windows device enrollment
@@ -234,10 +221,10 @@
       href: scep-deployment-to-win10-devices-fails.md
     - name: SCEP certificate request fails on CRP
       href: scep-certificate-request-fails.md
+    - name: iOS SCEP failure - no GetCACaps request generated
+      href: ios-scep-failure-no-getcacaps.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
-    - name: Support tip - Choose between SCEP and PKCS
-      href: scep-pkcs-certificate-comparison.md
     - name: Troubleshoot PKCS certificate deployment
       href: troubleshoot-pkcs-certificate-profiles.md
     - name: Troubleshoot SCEP certificate profiles
@@ -282,18 +269,16 @@
     href: error-deploying-password-policy.md
   - name: Secure boot enabled device shows as Not Compliant
     href: secure-boot-enabled-device-shows-not-compliant.md
-  - name: Support tip - Integrate Cisco ISE with Intune
-    href: integrate-cisco-ise-intune.md
-  - name: Troubleshoot BitLocker policies
+  - name: Troubleshoot encryption on client side
     href: troubleshoot-bitlocker-policies.md
+  - name: Troubleshoot encryption in Intune
+    href: troubleshoot-bitlocker-admin-center.md
   - name: Users are prompted to enroll when accessing Office 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
   - name: Windows 10 devices show incorrect compliance status
     href: win10-devices-show-incorrect-compliance-status.md
-- name: General guidance or advisory
+- name: General guidance
   items:
-  - name: AssignmentFilter permissions in Endpoint Manager admin center
-    href: assignmentfilter-permissions.md
   - name: Attributes synced by Intune
     href: intune-synced-attributes-list.md
   - name: Common company resource access error codes
@@ -304,8 +289,6 @@
     href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
   - name: Help and support blade doesn't load
     href: cannot-load-help-and-support-blade.md
-  - name: Intune account portal retired
-    href: intune-account-portal-retired.md
   - name: Script error during Intune setup process
     href: script-error-intune-setup.md  
   - name: Set the MDM authority
@@ -316,20 +299,10 @@
     href: troubleshooting-blade-fails-loading.md
   - name: Troubleshoot software updates
     href: troubleshoot-software-updates-in-microsoft-intune.md
-  - name: Use PowerShell to look up licenses
-    href: look-up-intune-licenses.md
-- name: Migration to the Azure portal
-  items:
-  - name: Migration blockers for grouping and targeting
-    href: grouping-targeting-migration-blockers.md
 - name: Reporting
   items:
   - name: AADSTS50011 query the Intune Data Warehouse
     href: error-query-intune-data-warehouse.md
-- name: Software distribution
-  items:
-  - name: Software distribution tips and practices
-    href: software-distribution-best-practices.md
 - name: Update management
   items:
   - name: Windows Update

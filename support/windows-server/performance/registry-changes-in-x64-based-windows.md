@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joeswart
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Registry changes in x64-based versions of Windows

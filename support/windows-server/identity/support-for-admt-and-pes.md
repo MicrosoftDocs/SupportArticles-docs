@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, Jodyh, kaushika
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Support information for ADMT and PES
@@ -70,11 +70,17 @@ The following guide provides guidance for migration of domains by using the Acti
 
     > Unable to check for failed actions. : DBManager.ImanaDB.1 : [DBNETLIB][ConnectionOpen (SECCreateCredentials()).]SSL Security error.
 
-    ![Screenshot of error message](./media/support-for-admt-and-pes/error-when-tls-disabled.png)
+
+    :::image type="content" source="./media/support-for-admt-and-pes/error-when-tls-disabled.png" alt-text="The Unable to check for failed actions error that occurs when Admin tool doesn't load snap-in." border="false":::
 
     Additionally, if TLS 1.0 is disabled, the Admin tool does not load the snap-in when it opens. You receive a message that resembles the following:
 
-    :::image type="content" source="./media/support-for-admt-and-pes/error-when-snap-in-not-open.png" alt-text="Screenshot of an error that occurs when Admin tool doesn't load snap-in.":::
+    > MMC could not create the snap-in.  
+    > MMC could not create the snap-in. The snap-in might not have been installed correctly.  
+    > Name: Active Directory Migration Tool  
+    > CLSID: {E1975D70-3F8E-11D3-99EE-00C04F39BD92}
+
+    :::image type="content" source="./media/support-for-admt-and-pes/error-when-snap-in-not-open.png" alt-text="The MMC could not create the snap-in error that occurs when Admin tool doesn't load snap-in.":::
 
 - Users running ADMT must not be member of an authentication silo
 

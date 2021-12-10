@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article helps fix an issue where the option to auto-install the DNS Server role is disabled or grayed out in the Active Directory Installation Wizard (DCPROMO) when promoting a Windows Server 2008 or Windows Server 2008 R2 replica domain controller.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2002584
+_Original KB number:_ &nbsp; 2002584
 
 ## Symptoms
 
@@ -30,7 +30,7 @@ Text in the **Additional information** field states:
 
 A screenshot of this condition is shown below:
 
-![DCPROMODNS checkbox greyed out during replica promotion.](./media/auto-install-dns-server-role-disabled-promte-domain-controller/dcpromo-dns-check-box-greyed.jpg)
+:::image type="content" source="media/auto-install-dns-server-role-disabled-promte-domain-controller/dcpromo-dns-check-box-greyed.png" alt-text="Screenshot of the Active Directory Domain Services Installation Wizard window with the DNS server and Read-only domain controller checkbox greyed out.":::
 
 The %windir%\debug\dcpromoui.log file on the replica domain controller being promoted shows the following:  
 

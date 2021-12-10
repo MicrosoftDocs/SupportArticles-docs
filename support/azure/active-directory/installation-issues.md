@@ -4,6 +4,8 @@ description: Describes how to troubleshoot scenarios in which you receive an err
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Troubleshoot Azure AD Connect installation issues
 

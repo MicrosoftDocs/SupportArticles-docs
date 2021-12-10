@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, tidavis
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Stop error 0x113 if you use Intel and AMD graphics adapters on a Windows 8.1-based computer
@@ -18,7 +18,7 @@ ms.technology: windows-client-performance
 This article provides a workaround for an issue where a computer crashes with error code 0x113.
 
 _Applies to:_ &nbsp; Windows 8.1  
-_Original KB number:_ &nbsp;2990029
+_Original KB number:_ &nbsp; 2990029
 
 ## Symptoms  
 

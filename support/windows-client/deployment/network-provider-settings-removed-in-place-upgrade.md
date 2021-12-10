@@ -3,14 +3,14 @@ title: Network provider settings are removed during an in-place upgrade to Windo
 description: Discusses an issue in which network provider settings are removed during an in-place upgrade to Windows 10. Provides workarounds.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Network provider settings are removed during an in-place upgrade to Windows 10
@@ -46,17 +46,16 @@ To work around this issue, use one of the following methods.
 
 If you are experiencing issues that affect the third-party network provider settings after you upgrade, manually restore the registry keys that were deleted by the installer.
 
-## More Information
+## More information
 
 To verify the network providers list, follow these steps:
 
-1. Open the **Run** box. To do this, press the Windows logo key (:::image type="content" source="./media/network-provider-settings-removed-in-place-upgrade/windows-logo-key.jpg" alt-text="Windows logo key" border="false":::)
-+R).
+1. Open the **Run** box. To do this, press the Windows logo key (:::image type="icon" source="media/network-provider-settings-removed-in-place-upgrade/windows-logo-key.png" border="false":::)+R.
 2. Type *ncpa.cpl*, and then press Enter.
 3. Press the Alt key to open the menu bar.
 4. Select **Advanced**, and then click **Advanced Settings**.
 
-    :::image type="content" source="./media/network-provider-settings-removed-in-place-upgrade/advanced-settings.png" alt-text="Advanced Settings" border="false":::
+    :::image type="content" source="media/network-provider-settings-removed-in-place-upgrade/advanced-settings.png" alt-text="Screenshot of the Advanced Settings dialog." border="false":::
 
 This third-party network providers list is stored in the following registry location:  
 `HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order\ProviderOrder`  

@@ -4,6 +4,8 @@ description: Describes how to increase the Active Directory directory service qu
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # An error displays in a directory synchronization report: This company has exceeded the number of objects that can be synchronized
 

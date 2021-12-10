@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Legacy authentication (NTLM)
+ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Domain members fail authentication when domain controller is shut down
@@ -19,7 +19,7 @@ This article fixes an issue where the application can't authenticate users when 
 
 _Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2
 
-_Original KB number:_ &nbsp;2683606
+_Original KB number:_ &nbsp; 2683606
 
 ## Symptoms
 

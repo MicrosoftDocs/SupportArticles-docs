@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # User Profiles and Folder Redirection group policies aren't applied
@@ -18,7 +18,7 @@ ms.technology: windows-server-group-policy
 This article helps fix an issue that prevents User Profiles and folder redirection policies from working in Microsoft System Center Configuration Manager (SCCM).
 
 _Applies to:_ &nbsp; Windows 10  
-_Original KB number:_ &nbsp;3060058
+_Original KB number:_ &nbsp; 3060058
 
 ## Symptoms
 
@@ -26,8 +26,8 @@ Computers running Windows 8 and later versions may not apply User Profiles and F
 
 ## Resolution
 
-To work around this issue, disable the **Enable User Data and Profiles**  device setting in the System Center 2012 Configuration Manager console.
+To work around this issue, disable the **Enable User Data and Profiles** device setting in the System Center 2012 Configuration Manager console.
 
-![Screenshot of the Enable User Data and Profiles option](./media/folder-redirection-group-policy-not-applied.md/enable-user-data-and-profiles-option.jpg)
+:::image type="content" source="media/folder-redirection-group-policy-not-applied.md/enable-user-data-and-profiles-option.png" alt-text="Set the Enable User Data and Profiles option to No.":::
 
 For more information, see [Create user data and profiles configuration items in Configuration Manager](/mem/configmgr/compliance/deploy-use/create-user-data-and-profiles-configuration-items).

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, clfish, jories, jtierney, stsyfuhs, waynmc
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to disable the Subject Alternative Name for UPN mapping

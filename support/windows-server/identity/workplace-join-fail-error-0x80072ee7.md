@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willfid, AAdcontent, rkiran
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # "Workplace Join discovery failed" error with exit code 0x80072EE7

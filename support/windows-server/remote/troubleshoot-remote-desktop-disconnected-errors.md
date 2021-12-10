@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Connecting to a session or desktop
+ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 ms.technology: windows-server-rds
 adobe-target: true
 ---
@@ -368,7 +368,7 @@ To configure authentication and encryption for a connection, follow these steps:
 
 To help troubleshoot this problem, enable CAPI2 event logs on both the client and server computers. This command is shown in the following screenshot.
 
-:::image type="content" source="./media/troubleshoot-remote-desktop-disconnected-errors/enable-log-option.png" alt-text="Screenshot of the Enable Log option.":::
+:::image type="content" source="./media/troubleshoot-remote-desktop-disconnected-errors/enable-log-option.png" alt-text="Expand CAPI2, right-click Operational, and then select the Enable Log option.":::
 
 ### Workaround for the issue (You cannot completely disconnect a Remote Desktop server connection) described in Symptom 3
 

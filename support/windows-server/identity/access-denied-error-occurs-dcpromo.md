@@ -2,7 +2,7 @@
 title: Access is denied error occurs with DCPROMO
 description: Provides a solution to an Access is denied error that occurs with DCPROMO.
 ms.date: 10/12/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # DCPROMO fails with error "Access is denied" if the user does the promotion isn't granted the "trusted for delegation" user right

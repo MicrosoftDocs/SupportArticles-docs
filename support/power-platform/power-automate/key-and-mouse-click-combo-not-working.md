@@ -2,8 +2,8 @@
 title: Key and mouse click combo not working
 description: Key and mouse click combo not working. However, currently keyboard and mouse click combo is not supported.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Keyboard and mouse click combinations not working
 

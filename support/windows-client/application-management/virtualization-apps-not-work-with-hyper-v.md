@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 1st Party Applications
+ms.custom: sap:1st-party-applications, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard
@@ -35,7 +35,7 @@ To determine whether the Hyper-V hypervisor is running, follow these steps:
 
    > A hypervisor has been detected. Features required for Hyper-V will not be displayed.
 
-   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.png" alt-text="screenshot of the detail window of System Information":::
+   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.png" alt-text="screenshot of the detail window of System Information.":::
 
 ## Cause
 
@@ -57,7 +57,7 @@ To disable Hyper-V in Control Panel, follow these steps:
 2. Select **Turn Windows features on or off**.
 3. Expand **Hyper-V**, expand **Hyper-V Platform**, and then clear the **Hyper-V Hypervisor** check box.
 
-    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.png" alt-text="screenshot of the Hyper-V Hypervisor check box" border="false":::
+    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.png" alt-text="screenshot of the Hyper-V Hypervisor check box." border="false":::
 
 ### Disable Hyper-V in PowerShell
 

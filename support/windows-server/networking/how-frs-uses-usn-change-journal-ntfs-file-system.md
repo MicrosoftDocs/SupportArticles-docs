@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # How to troubleshoot journal_wrap errors on Sysvol and DFS replica sets
@@ -21,7 +21,7 @@ This article discusses how to troubleshoot journal_wrap errors on Sysvol and DFS
 > This article applies to Microsoft Windows 2000. Be aware that support for Windows 2000 ended on July 13, 2010. For more information about the Microsoft Support Lifecycle policy, see the following Microsoft website: [Microsoft Support Lifecycle Policy](/lifecycle)
 
 _Applies to:_ &nbsp; Windows 2000  
-_Original KB number:_ &nbsp;292438
+_Original KB number:_ &nbsp; 292438
 
 ## Summary
 

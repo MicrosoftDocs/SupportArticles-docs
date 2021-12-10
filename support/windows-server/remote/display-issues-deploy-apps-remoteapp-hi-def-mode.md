@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: RemoteApp applications
+ms.custom: sap:remoteapp-applications, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Display issues occur when you deploy applications through RemoteApp Hi-Def mode
@@ -18,7 +18,7 @@ ms.technology: windows-server-rds
 This article provides a workaround for display issues when you deploy applications through RemoteApp Hi-Def mode.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 8.1  
-_Original KB number:_ &nbsp;3151708
+_Original KB number:_ &nbsp; 3151708
 
 ## Symptoms
 
@@ -36,7 +36,7 @@ Also, when you hover over or try to click the visible child window, the movement
 
 The following screenshot shows this issue. In this example, the Microsoft Dynamics NAV application is deployed as a remote app.
 
-![Here, Dynamics NAV application is deployed as a RemoteApp.](./media/display-issues-deploy-apps-remoteapp-hi-def-mode/dynamics-nav-remote-app.png)
+:::image type="content" source="media/display-issues-deploy-apps-remoteapp-hi-def-mode/dynamics-nav-remote-app.png" alt-text="Screenshot shows the issue when Microsoft Dynamics NAV application is deployed as a remote app." border="false":::
 
 ## Workaround
 

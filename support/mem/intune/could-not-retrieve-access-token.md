@@ -17,7 +17,7 @@ When you try to [configure Microsoft Intune Integration in Jamf Pro](/mem/intune
 
 > Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.
 
-:::image type="content" source="media/could-not-retrieve-access-token/jamf-error.png" alt-text="screenshot of Jamf error":::
+:::image type="content" source="media/could-not-retrieve-access-token/jamf-error.png" alt-text="Screenshot of the Jamf error.":::
 
 ## Cause
 

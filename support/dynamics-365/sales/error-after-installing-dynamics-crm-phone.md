@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you configure Dyna
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-phones
 ---
 # You receive an error message while configuring Microsoft Dynamics CRM for phones and tablets
 

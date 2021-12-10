@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot Active Directory replication error 5 in Windows Server: Access is denied
@@ -100,7 +100,7 @@ Access is denied.
 
 The following screenshot represents a sample of the error:
 
-![Sample of the error](./media/replications-fail-with-error-5/replicate-now-window.png)
+:::image type="content" source="media/replications-fail-with-error-5/replicate-now-window.png" alt-text="Screenshot of the Replicate Now window which shows a sample of the error.":::
 
 ## Workaround
 

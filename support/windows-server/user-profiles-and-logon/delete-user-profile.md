@@ -10,13 +10,13 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User profiles
-ms.technology: windows-server-user-profiles 
+ms.custom: sap:user-profiles, csstroubleshoot
+ms.technology: windows-server-user-profiles
 ---
 # Delete a user profile in Windows Server 2008 and later
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2462308
+_Original KB number:_ &nbsp; 2462308
 
 ## Steps to delete a user profile
 

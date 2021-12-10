@@ -4,6 +4,8 @@ description: Describes an issue in which you can't connect to a Microsoft cloud 
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Can't connect to Office 365, Azure, or Intune using the Azure Active Directory Module for Windows PowerShell
 

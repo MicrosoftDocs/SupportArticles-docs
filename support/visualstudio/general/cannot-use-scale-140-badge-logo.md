@@ -4,6 +4,7 @@ description: Works around problems in which you can't use the Scale-140 badge lo
 ms.date: 04/27/2020
 ms.prod-support-area-path: Language or compilers
 ms.reviewer: pchapman, rezac, rilee
+ms.technology: vs-language-compilers
 ---
 # You can't use the Scale-140 badge logo in Visual Studio 2012 Update 1
 

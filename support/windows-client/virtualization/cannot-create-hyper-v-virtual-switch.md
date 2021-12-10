@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, bobcombs, ajayps
-ms.prod-support-area-path: Hyper-V Network Virtualization (HNV)
+ms.custom: sap:hyper-v-network-virtualization-hnv, csstroubleshoot
 ms.technology: windows-client-hyper-v
 ---
 # Can't create a Hyper-V virtual switch on 64-bit versions of Windows 10
@@ -28,7 +28,7 @@ After you delete a vSwitch on a computer that has been upgraded to Windows 10, y
 Error applying Virtual Switch Properties changes  
 Failed while adding virtual Ethernet switch connections.
 
-:::image type="content" source="media/cannot-create-hyper-v-virtual-switch/error-applying-virtual-switch-properties-changes.png" alt-text="Alt text here.":::
+:::image type="content" source="media/cannot-create-hyper-v-virtual-switch/error-applying-virtual-switch-properties-changes.png" alt-text="Screenshot of the Virtual Switch Manager error message.":::
 
 It indicates that the vSwitch still exists, even though it's no longer listed in the Hyper-V Virtual Switch Manager.
 

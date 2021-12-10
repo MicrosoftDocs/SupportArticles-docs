@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # You may get VSS warnings in the Application Event log of SBS 2011 Standard

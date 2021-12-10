@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Microsoft Management Console (MMC)
+ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # Error when enabling analytic or debug event log: The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation
@@ -28,7 +28,7 @@ You may receive the following error when you attempt to enable or change the pro
 > One or more logs in the query have errors.  
 > The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation.
 
-![The requested operation cannot be performed over an enabled direct channel](./media/error-when-enabling-analytic-debug-event-log/error-message-dialog-box.png)
+:::image type="content" source="media/error-when-enabling-analytic-debug-event-log/error-message-dialog-box.png" alt-text="Screenshot of the Query Error window which shows One or more logs in the query have errors.":::
 
 When attempting changes with the Wevtutil tool, you may receive the following error:
 

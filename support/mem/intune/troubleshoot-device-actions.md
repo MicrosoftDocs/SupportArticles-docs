@@ -44,10 +44,6 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 
 If you don't see an entry, it means the person who initiated the action is the user of the device. They used the Company Portal app or portal.manage.microsoft.com to perform the action. We can see the details in the console under **Devices** > **Monitor** > **Device actions**.
 
-### How can I monitor a Retire/Wipe action after it was issued?
-
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**. If the end user initiated the action, we can see it under **Devices** > **Monitor** > **Device actions**.
-
 ### What happens if I start a retire/wipe on an offline device or a device that hasn't communicated with the service in a while?
 
 The device will remain in **Retire/Wipe Pending** state until the MDM certificate expires. The MDM certificate lasts for one year from enrollment, and automatically renews every year. If the device checks in before the MDM certificate expires, it will be retired/wiped. If the device doesn't check in before the MDM certificate expires, it won't be able to check in to the service. 180 days after the MDM certificate expires, the device will be automatically removed from the Azure portal.

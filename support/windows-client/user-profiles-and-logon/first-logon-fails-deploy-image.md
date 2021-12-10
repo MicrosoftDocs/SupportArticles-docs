@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-client-user-profiles
 ---
 # First logon fails with error: The universal unique identifier (UUID) type is not supported
@@ -18,7 +18,7 @@ ms.technology: windows-client-user-profiles
 This article describes a situation in which a user receives a UUID error message at the first logon of a Windows 8 or Windows 8.1 image. This issue occurs when the image was deployed by using System Center 2012 Configuration Manager or System Center 2012 R2 Configuration Manager.
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp;2976660
+_Original KB number:_ &nbsp; 2976660
 
 ## Symptoms
 
@@ -26,7 +26,8 @@ Assume that you use System Center 2012 Configuration Manager or System Center 20
 > The Group Policy Client service failed the sign-in.  
 > The universal unique identifier (UUID) type is not supported.
 
-![A screenshot of the error message.](./media/first-logon-fails-deploy-image/error-box.png)
+:::image type="content" source="media/first-logon-fails-deploy-image/group-policy-client-service-failed-error.png" alt-text="Screenshot of the UUID type is not supported error message at the logon screen." border="false":::
+
 
 This error message appears at first user logon after initial deployment of the image. However, in some scenarios, later user logons also result in the error message.
 

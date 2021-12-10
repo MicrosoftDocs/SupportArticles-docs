@@ -4,6 +4,7 @@ description: Describes Dynamics 365 App for Outlook experience without Server-Si
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics 365 App for Outlook experience without Server-Side Synchronization
 
@@ -16,7 +17,7 @@ When you use Dynamics 365 App for Outlook, you might see a notification that say
 
 > Track and Set Regarding are currently disabled. To use these features, please contact your admin. You can still view and interact with your Dynamics 365 data.
 
-:::image type="content" source="media/experience-without-server-side-synchronization/notification.png" alt-text="Screenshot of the notification without Server-Side Synchronization.":::
+:::image type="content" source="media/experience-without-server-side-synchronization/notification.png" alt-text="Screenshot of the notification without Server-Side Synchronization." lightbox="media/experience-without-server-side-synchronization/notification.png":::
 
 Dynamics 365 App for Outlook leverages Server-Side Synchronization to keep your Exchange items in sync with Dynamics 365. For example, if you track a meeting in Outlook, App for Outlook relies on Server-Side Synchronization to create the activity in Dynamics 365 and keep the two items in sync.
 

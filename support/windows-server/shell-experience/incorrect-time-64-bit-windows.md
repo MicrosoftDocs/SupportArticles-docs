@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DST and Timezones
+ms.custom: sap:dst-and-timezones, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # Incorrect time displayed on 64-bit versions of Windows 7 or Windows Server 2008 R2 after in-place upgrade

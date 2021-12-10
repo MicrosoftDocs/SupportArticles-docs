@@ -1,9 +1,10 @@
 ---
 title: Email tracked by Dynamics 365 App for Outlook not showing
 description: An email tracked with Dynamics 365 App for Outlook does not appear in Dynamics 365. Provides a resolution.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # An email or appointment tracked with Microsoft Dynamics 365 App for Outlook shows as Track pending
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, match
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Not able to print with Type 4 or Type 3 XPS printer drivers after a Windows Server is promoted to a Domain Controller
@@ -78,4 +78,4 @@ You can use Print Management to determine whether a printer driver is Type 4 or 
 3. Right-click on a print driver and click "Properties."
 4. The Type # under Version will tell you whether a print driver is Type 4 or Type 3:
 
-    :::image type="content" source="./media/print-fails-on-printer-server-promoted-to-dc/verify-printer-driver-type.png" alt-text="Screenshot of printer driver Version.":::
+    :::image type="content" source="./media/print-fails-on-printer-server-promoted-to-dc/verify-printer-driver-type.png" alt-text="Double checking the printer driver version that's shown in the Driver Properties.":::

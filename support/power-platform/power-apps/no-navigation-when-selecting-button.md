@@ -6,6 +6,7 @@ ms.topic: troubleshooting
 ms.date: 08/10/2021
 author: simonxjx
 ms.author: v-six
+ms.subservice: powerapps-unified-interface
 ---
 # No response from the back button in a Unified Interface app
 
@@ -15,7 +16,7 @@ _Applies to:_ &nbsp; Power Apps
 
 When you select the back button or the **Save & Close** button in a Unified Interface app, there's no response. For example, when you select either button on an entity record page, you expect to be returned to the previous page. However, you might have to select the button several times until the program navigates to the desired page.
 
-:::image type="content" source="media/no-navigation-when-selecting-button/back-button.PNG" alt-text="Screenshot of the back button.":::
+:::image type="content" source="media/no-navigation-when-selecting-button/back-save-close-button.png" alt-text="Screenshot of the back button or the Save & Close button.":::
 
 ## Cause
 

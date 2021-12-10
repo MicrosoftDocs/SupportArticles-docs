@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: .NET Framework installation
+ms.custom: sap:.net-framework-installation, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # Performance of System.Diagnostics.StackFrame decreases in Windows 10 and .NET Framework 4.7.1
@@ -55,18 +55,18 @@ Roll back the system to the previous version of Windows 10 or .NET Framework. To
 1. Open **Settings**, select **Update & Security**, and then select **Recovery**.
 2. Under **Go back to the previous version of Windows 10**, select **Get started**.
 
-    :::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/get-started-button.png" alt-text="Windows 10 Recovery Go back to the previous version.":::
+    :::image type="content" source="media/system-diagnostics-stackframe-performance-degrades/get-started-button.png" alt-text="Screenshot of the Go back to the previous version option in Windows 10 Recovery." border="false":::
 
 3. Select a reason for rolling back, and then select **Next**.
 
-    :::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/next-button.png" alt-text="Windows 10 Recovery Why are you going back.":::
+    :::image type="content" source="media/system-diagnostics-stackframe-performance-degrades/next-button.png" alt-text="Screenshot of the Why are you going back page.":::
 
 4. Select **No, thanks** to skip installing updates.
 5. Select **Next** two times, and then select **Go back to earlier build**.
 
 After you complete these steps, Windows 10 restores the previous version of the system.
 
-:::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/restoring-previous-verion.png" alt-text="Restoring your previous version of Windows.":::
+:::image type="content" source="media/system-diagnostics-stackframe-performance-degrades/restoring-previous-verion.png" alt-text="Screenshot of the Restoring your previous version of Windows screen.":::
 
 ### How to roll back to the previous version of .NET Framework
 
@@ -75,16 +75,16 @@ Steps for Windows 7 SP1 and Windows Server 2008 R2 SP1:
 1. Open the **Programs and Features** item in Control Panel.
 2. In the **Uninstall or change a program** list, locate and select **Microsoft .NET Framework 4.7.1**, and then select **Uninstall/Change**.
 
-    :::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/uninstall-donet-framework-4dot-7dot1.png" alt-text="Uninstall .Net Framework 4.7.1 on Windows 7 SP1 and Windows Server 2008 R2 SP1.":::
+    :::image type="content" source="media/system-diagnostics-stackframe-performance-degrades/uninstall-donet-framework-4dot-7dot1.png" alt-text="Screenshot of Uninstall/Change option of .Net Framework 4.7.1 in Programs and Features in Control Panel." border="false":::
 
 3. Select **Remove .NET Framework 4.7.1 from this computer**, and then select **Next**.
 
-    :::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/remove-dotnet-4dot-7dot-1.png" alt-text="Remove .NET Framework 4.7.1 from this computer.":::
+    :::image type="content" source="media/system-diagnostics-stackframe-performance-degrades/remove-dotnet-4dot-7dot-1.png" alt-text="Screenshot of the Remove .NET Framework 4.7.1 from this computer option." border="false":::
 
 4. Select **Continue** to confirm uninstallation.
 5. Select **Finish** after the uninstallation is finished.
 
-    :::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/select-finish-button.png" alt-text=".NET Framework 4.7.1 has been removed from this computer.":::
+    :::image type="content" source="media/system-diagnostics-stackframe-performance-degrades/select-finish-button.png" alt-text="Screenshot shows .NET Framework 4.7.1 has been removed from this computer.":::
 
 6. Restart your computer if you are prompted to do this.
 
@@ -96,7 +96,7 @@ Steps for Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows 
 1. Open the **Programs and Features** item in Control Panel. To do this, type *appwiz.cpl* in the **Search** box.
 2. Select **View installed updates**.
 
-    :::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/view-installed-updates.png" alt-text="View installed updates - Windows 8.1, Windows Server 2012, Windows Server 2012 R2 and Windows 10.":::
+    :::image type="content" source="media/system-diagnostics-stackframe-performance-degrades/view-installed-updates.png" alt-text="Screenshot of the View installed updates page in Programs and Features." border="false":::
 
 3. Right-click one of the following items, depending on your Windows version, and then click **Uninstall**:
 

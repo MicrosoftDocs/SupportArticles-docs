@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Virtualized domain controller (errors and questions)
+ms.custom: sap:virtualized-domain-controller-errors-and-questions, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments

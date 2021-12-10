@@ -5,6 +5,7 @@ ms.date: 01/04/2021
 ms.prod-support-area-path: System Services Development
 ms.reviewer: franki
 mc.topic: article
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # User32.dll or Kernel32.dll does not initialize
 

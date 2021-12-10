@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, eugenev, austinm
-ms.prod-support-area-path: 'Management and Configuration: General issues'
+ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ms.technology: windows-client-printing
 ---
 # How to Alter Behavior of Printers That Roam with Roaming Profiles

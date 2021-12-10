@@ -1,9 +1,10 @@
 ---
 title: Contacts are duplicated if you recreate a deleted contact
-description: This article provides a resolution for the problem where contacts are duplicated in Microsoft Dynamics CRM if you recreate a deleted contact in Outlook. 
+description: This article provides a resolution for the problem where contacts are duplicated in Microsoft Dynamics CRM if you recreate a deleted contact in Outlook.
 ms.topic: troubleshooting
 ms.reviewer: mmaasjo
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Contacts are duplicated in Microsoft Dynamics CRM if you recreate a deleted contact in Outlook
 

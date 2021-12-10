@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Connection Configuration in Terminal Server
@@ -18,7 +18,7 @@ ms.technology: windows-server-rds
 This article discusses the Terminal Server Administration tool, Connection Configuration.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;186566
+_Original KB number:_ &nbsp; 186566
 
 ## More information
 

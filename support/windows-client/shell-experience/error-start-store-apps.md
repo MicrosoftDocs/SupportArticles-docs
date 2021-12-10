@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
+ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Error when you start Microsoft Store apps: This app has been blocked by your system administrator
@@ -26,7 +26,7 @@ When you try to start a Microsoft Store app in Windows 8 or in Windows Server 20
 
 > This app has been blocked by your system administrator.
 
-![Screenshot of the error message](./media/error-start-store-apps/error-screenshot.jpg)
+:::image type="content" source="media/error-start-store-apps/app-blocked-by-system-administrator-error.png" alt-text="Screenshot of the Microsoft Store apps error message." border="false":::
 
 ## Cause
 

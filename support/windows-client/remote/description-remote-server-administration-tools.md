@@ -1,16 +1,16 @@
 ---
-title: Description of Remote Server Administration Tools 
-description: Describes the tools that are available for installation as part of Remote Server Administration Tools 
+title: Description of Remote Server Administration Tools
+description: Describes the tools that are available for installation as part of Remote Server Administration Tools
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, qianyu
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-client-rds
 ---
 # Description of Remote Server Administration Tools

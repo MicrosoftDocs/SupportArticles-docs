@@ -3,7 +3,7 @@ title: Troubleshoot OS start up – Windows Update installation capacity
 description: Steps to resolve issues where Windows Update (KB) gets an error and becomes unresponsive in an Azure VM.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -13,7 +13,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 08/01/2021
-ms.author: v-miegge
+ms.author: genli
 ---
 
 # Troubleshoot OS start up – Windows Update installation capacity

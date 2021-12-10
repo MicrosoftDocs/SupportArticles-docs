@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
+ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # LDAP queries are executed more slowly than expected in the AD or LDS/ADAM directory service and Event ID 1644 may be logged

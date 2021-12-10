@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Troubleshoot missing SYSVOL and NETLOGON shares on Windows domain controllers

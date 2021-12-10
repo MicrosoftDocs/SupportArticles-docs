@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Command prompt and PowerShell don't open after in-place upgrade of Windows 10 S
@@ -36,7 +36,7 @@ C:\Windows\System32\cmd.exe
 
 Contact your support person for more info.  
 
-![Screenshot of the error message](./media/command-prompt-powershell-not-start/error-message-screenshot.png)
+:::image type="content" source="media/command-prompt-powershell-not-start/organization-used-device-guard-block-app-error.png" alt-text="Screenshot of the Your organization used Device Guard to block this app error." border="false":::
 
 ## Cause
 

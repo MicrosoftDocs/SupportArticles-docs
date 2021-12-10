@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: cpuckett, waltere, kaushika
-ms.prod-support-area-path: File Server Resource Manager (FSRM)
+ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2
@@ -115,7 +115,7 @@ On the server, SMB connections are accepted, and SMB requests are processed as l
 
 The following image provides an overview of the different layers through which a user request on a client computer must go to perform file operations over the network on a remote SMB file server by using SMB 2.0.
 
-:::image type="content" source="./media/file-services-hotfixes-in-windows-server-2008/smb-components.png" alt-text="Screenshot of Windows SMB Components.":::
+:::image type="content" source="media/file-services-hotfixes-in-windows-server-2008/smb-components.png" alt-text="Overview of the Windows Server Message Block Components.":::
 
 ## Services for NFS in a Windows Server 2008 R2 environment
 

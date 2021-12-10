@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robertvi
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Adding Remote Desktop Services role may fail when Firewall Service is stopped
@@ -18,7 +18,7 @@ ms.technology: windows-server-rds
 This article provides help to solve an issue where adding Remote Desktop Services role fails when Firewall Service is stopped.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2802436
+_Original KB number:_ &nbsp; 2802436
 
 ## Symptoms
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
+ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to configure Active Directory and LDS diagnostic event logging

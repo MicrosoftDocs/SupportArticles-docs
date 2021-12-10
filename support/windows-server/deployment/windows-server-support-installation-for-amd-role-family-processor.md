@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, yuvraja
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors
@@ -67,7 +67,7 @@ For servers configured to enable 256 processor threads and that are running eith
 
 For example, see the following figure.
 
-:::image type="content" source="./media/windows-server-support-installation-for-amd-role-family-processor/screenshot-of-l2-l3-cache-size.jpg" alt-text="L2 and L3 cache display issue.":::
+:::image type="content" source="media/windows-server-support-installation-for-amd-role-family-processor/screenshot-of-l2-l3-cache-size.png" alt-text="L2 and L3 cache sizes display incorrect values.":::
 
 ### Task Manager displays an incorrect number of sockets with more than 64 logical processors enabled
 

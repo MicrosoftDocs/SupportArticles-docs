@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803
@@ -38,4 +38,4 @@ If you have to use the legacy backup behavior, you can re-enable it by configuri
 
 Windows backs up the registry to the RegBack folder when the computer restarts, and creates a RegIdleBackup task to manage subsequent backups. Windows stores the task information in the Scheduled Task Library, in the Microsoft\\Windows\\Registry folder. The task has the following properties:
 
-:::image type="content" source="./media/system-registry-no-backed-up-regback-folder/properties-of-regIdlebackup-task.png" alt-text="Screenshot of RegIdleBackup task properties.":::
+:::image type="content" source="media/system-registry-no-backed-up-regback-folder/properties-of-regIdlebackup-task.png" alt-text="Screenshot of RegIdleBackup task properties.":::

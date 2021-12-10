@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, darank
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Recommended hotfixes and updates for Remote Desktop Services in Windows Server 2012 R2
@@ -128,7 +128,7 @@ Before you install the hotfix for any Remote Desktop Services role, you must hav
 
     1. Verify which version of RDP you're using. To do this, start the Remote Desktop Connection client program (mstsc.exe), click the small Remote Desktop icon in the top-left corner of the application dialog box, and then select **About**. Verify that the **About** message indicates *Remote Desktop Protocol 8.1 supported*.
 
-        ![RDP 8.1 supported](./media/remote-desktop-services-updates/verify-rdp-version.jpg)
+        :::image type="content" source="media/remote-desktop-services-updates/verify-rdp-version.png" alt-text="Screenshot of the About Remote Desktop Connection window, which shows Remote Desktop Protocol 8.1 supported.":::
 
     2. If the About message indicates Remote Desktop Protocol 7.1 supported, install the following updates for RDP 8.1:
 

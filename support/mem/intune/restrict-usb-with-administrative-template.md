@@ -24,13 +24,13 @@ This article describes how to configure such controls using the Intune Administr
 
     - Select **Prevent installation of devices not described by other policy settings**, and then select **Enabled**.
 
-      :::image type="content" source="./media/restrict-usb-with-administrative-template/prevent-installation-setting.png" alt-text="Prevent installation of devices not described by other policy settings":::
+      :::image type="content" source="media/restrict-usb-with-administrative-template/prevent-installation-setting.png" alt-text="Screenshot of Prevent installation of devices not described by other policy settings.":::
     - Select **Allow installation of devices using drivers that match these device setup classes**, and then select **Enabled**. Add the [GUID of device classes](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) that you want to allow. In the following example, Keyboard, Mouse, and Multimedia classes are allowed.
 
-      :::image type="content" source="./media/restrict-usb-with-administrative-template/allow-installation-device-class.png" alt-text="Allow installation of devices using drivers that match these device setup classes":::
+      :::image type="content" source="media/restrict-usb-with-administrative-template/allow-installation-device-class.png" alt-text="Screenshot of the Allow installation of devices using drivers that match these device setup classes setting.":::
     - Select **Allow installation of devices that match any of these Device IDs**, and then select **Enabled**. [Look up the device vendor ID or product ID](/windows/security/threat-protection/device-control/control-usb-devices-using-intune#look-up-device-vendor-id-or-product-id) for devices that you want to allow, and then add the IDs to the list.
 
-       :::image type="content" source="./media/restrict-usb-with-administrative-template/allow-installation-device-id.png" alt-text="Allow installation of devices that match any of these Device IDs":::
+       :::image type="content" source="media/restrict-usb-with-administrative-template/allow-installation-device-id.png" alt-text="Screenshot of the Allow installation of devices that match any of these Device IDs setting.":::
 7. In **Assignments**, select the device groups that will receive the profile, and then select **Next**.
 8. In **Review + create**, review your settings. When you select **Create**, your changes are saved and the profile is assigned.
 
@@ -40,19 +40,19 @@ After the device configuration profile is deployed to the targeted Windows 10 de
 
 If a USB device is not allowed to be installed, you see the following message:
 
-:::image type="content" source="./media/restrict-usb-with-administrative-template/installation-forbidden.png" alt-text="The installation of the device is forbidden by system policy":::
+:::image type="content" source="media/restrict-usb-with-administrative-template/installation-forbidden.png" alt-text="The installation of the device is forbidden by system policy message.":::
 
 In the following example, the iPad is blocked because its device ID isn't in the allowed device ID list.
 
-:::image type="content" source="./media/restrict-usb-with-administrative-template/device-status.png" alt-text="Device blocked by group policy":::
+:::image type="content" source="media/restrict-usb-with-administrative-template/device-status.png" alt-text="Device blocked by group policy.":::
 
 ## A device is incorrectly blocked
 
 You may find that USB devices that match the allowed device classes are incorrectly blocked. For example, a camera is blocked although the Multimedia class GUID {4d36e96c-e325-11ce-bfc1-08002be10318} was specified in the **Allow installation of devices using drivers that match these device setup classes** setting.
 
-:::image type="content" source="./media/restrict-usb-with-administrative-template/camera-blocked.png" alt-text="Cannot find your camera":::
+:::image type="content" source="media/restrict-usb-with-administrative-template/camera-blocked.png" alt-text="Cannot find your camera message.":::
 
-:::image type="content" source="./media/restrict-usb-with-administrative-template/cam-blocked.png" alt-text="LifeCam blocked":::
+:::image type="content" source="media/restrict-usb-with-administrative-template/cam-blocked.png" alt-text="LifeCam blocked.":::
 
 To fix this issue, follow these steps:
 
@@ -61,7 +61,7 @@ To fix this issue, follow these steps:
 
    In the following example, locate the line that reads **Class GUID of device changed to: {36fc9e60-c465-11cf-8056-444553540000}**.
 
-   ```
+   ```output
    >>>  [Device Install (Hardware initiated) - USB\VID_046D&PID_C534\5&bd89ed7&0&2]
    >>>  Section start 2020/01/20 17:26:03.547
        dvi: {Build Driver List} 17:26:03.597

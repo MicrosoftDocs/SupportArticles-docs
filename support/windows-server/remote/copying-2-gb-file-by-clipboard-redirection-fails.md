@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Redirection (not printer)
+ms.custom: sap:redirection-not-printer, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Copying files larger than 2 GB over a Remote Desktop Services or Terminal Services session by using Clipboard redirection (copy and paste) fails silently

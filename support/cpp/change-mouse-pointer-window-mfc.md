@@ -5,6 +5,7 @@ ms.date: 04/22/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: anurags
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Change the mouse pointer for a window in MFC by using Visual C++
 

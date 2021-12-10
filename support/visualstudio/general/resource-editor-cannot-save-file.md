@@ -2,8 +2,9 @@
 title: Visual Studio 2012 can't save file
 description: This article describes the problem that VS 2012 can't save file while using Resource Editor, and provides a solution.
 ms.date: 04/23/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: 
 ms.reviewer: ScotBren, NSuhas
+ms.technology: vs-general
 ---
 # Visual Studio 2012 can't save file while you use Resource Editor
 
@@ -16,7 +17,9 @@ _Original KB number:_ &nbsp; 2839032
 
 You're using Visual Studio 2012, where you're editing a Visual C++ project and making changes to a dialog in the Resource Editor. An unexpected message box appears with the error message:
 
-:::image type="content" source="./media/resource-editor-cannot-save-file/error-message.png" alt-text="Can't save file error" border="false":::
+> Cannot save file.
+
+:::image type="content" source="./media/resource-editor-cannot-save-file/error-message.png" alt-text="Screenshot of the Can't save file error dialog." border="false":::
 
 ## Cause
 
@@ -33,7 +36,7 @@ During saving the resource file, it tries to save a file named *resource.hm*. Th
 
     1. Disable the **AutoRecover** option in **Tools** > **Options** > **Environment** > **AutoRecover**, by unselecting the **Save AutoRecover information every:** checkbox:
 
-        :::image type="content" source="./media/resource-editor-cannot-save-file/uncheck-save-autorecover-information-every-option.png" alt-text="unselected Save Auto Recover information every checkbox" border="false":::
+        :::image type="content" source="./media/resource-editor-cannot-save-file/uncheck-save-autorecover-information-every-option.png" alt-text="Screenshot of the Options window to clear the Save Auto Recover information every checkbox." border="false":::
 
     1. Save your edited resources within the specified interval to avoid the triggering of Auto-Save. You may increase the interval, but this interval also increases the risk of losing unsaved work.
 
@@ -41,7 +44,7 @@ During saving the resource file, it tries to save a file named *resource.hm*. Th
 
     1. If you aren't using context help ID, then turning that off for every control would be the easiest solution. Turning it off from the resource editor would be safest. In the resource editor, check for all the controls and one of the properties will be **Help ID**. Set it to **False** for every control where it's **True**.
 
-        :::image type="content" source="./media/resource-editor-cannot-save-file/set-help-id-to-false.png" alt-text="Control properties Help ID" :::
+        :::image type="content" source="./media/resource-editor-cannot-save-file/set-help-id-to-false.png" alt-text="Screenshot of the Properties window under the Resource View tab with Help ID highlighted." :::
 
     2. Instead you could edit the .rc file directly. For instance, removing the last parameter here for every control with a **Help ID** would turn off the feature:
 

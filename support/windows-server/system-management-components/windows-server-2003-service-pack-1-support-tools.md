@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Help and Support
+ms.custom: sap:help-and-support, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # Windows Server 2003 Service Pack 1 Support Tools
@@ -18,7 +18,7 @@ ms.technology: windows-server-system-management-components
 This article describes updates to the Microsoft Windows Server 2003 Support Tools that are included in Microsoft Windows Server 2003 Service Pack 1 (SP1).
 
 _Applies to:_ &nbsp; Windows Server 2003 Service Pack 1
-_Original KB number:_ &nbsp;892777
+_Original KB number:_ &nbsp; 892777
 
 ## Introduction
 

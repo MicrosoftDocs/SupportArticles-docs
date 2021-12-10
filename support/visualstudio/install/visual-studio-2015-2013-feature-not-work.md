@@ -3,6 +3,7 @@ title: Visual Studio 2015 and 2013 features doesn't work
 description: This article provides a resolution for the problem where some Visual Studio 2015 and Visual Studio 2013 features doesn't work as expected if Internet Explorer 10 or a later version is not installed.
 ms.date: 10/27/2020
 ms.prod-support-area-path: installation
+ms.technology: vs-installation-install
 ---
 # Visual Studio 2015 and 2013: Known issues if Internet Explorer 10 or a later version is not installed
 

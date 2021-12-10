@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: RDWeb
+ms.custom: sap:rdweb, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # WinX: Remote Desktop tab in RDWEB is missing from Microsoft Edge browser
@@ -28,7 +28,7 @@ As seen in the following side-by-side images, the **Connect to a remote PC**  ta
 
 When Internet Explorer is configured to work in this scenario, the MsRdpClientShell - MsRdpWebAccess.dll  add-on is loaded as an ActiveX control.
 
-![EDGE and IE with RDWEB ](./media/edge-not-work-run-rdweb-require-activex-controls/edge-ie-rdweb.png)
+:::image type="content" source="media/edge-not-work-run-rdweb-require-activex-controls/edge-ie-rdweb.png" alt-text="Screenshots of two windows, one is RDWEB working in EDGE, and the other one is RDWEB working in IE.":::
 
 ## Cause
 

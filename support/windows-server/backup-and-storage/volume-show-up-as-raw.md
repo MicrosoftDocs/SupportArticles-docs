@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robtm
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # A volume may show up as raw in disk management after you extend the partition, but chkdsk shows the file system as NTFS

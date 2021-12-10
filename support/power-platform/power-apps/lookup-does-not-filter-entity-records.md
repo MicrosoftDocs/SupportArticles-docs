@@ -4,6 +4,7 @@ description: Provides workarounds to an issue in which the lookup displays all r
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 4/12/2021
+ms.subservice: powerapps-others
 ---
 # Lookup doesn't filter records as expected for particular entity in Dynamics 365
 
@@ -16,7 +17,7 @@ _Original KB number:_ &nbsp; 4603850
 
 When you type into a lookup control, the lookup displays all the records in the view instead of only the records that are related to what you typed in. If you scroll through the records, you see record text bolded like normal when the text matches the search text.
 
-:::image type="content" source="./media/lookup-does-not-filter-entity-records/search-result.png" alt-text="Search result":::
+:::image type="content" source="media/lookup-does-not-filter-entity-records/search-result.png" alt-text="Screenshot shows the record text bolded like normal when the text matches the search text.":::
 
 ## Cause
 
@@ -53,11 +54,11 @@ To work around this issue, use one of the following workarounds:
 
 1. Select **Add Find Columns**.
 
-    :::image type="content" source="./media/lookup-does-not-filter-entity-records/add-find-columns.png" alt-text="Add Find Columns":::
+    :::image type="content" source="media/lookup-does-not-filter-entity-records/add-find-columns.png" alt-text="Screenshot to select the Add Find Columns item.":::
 
 1. Add any columns that you want to be searched and matched inside of the lookup control.
 
-    :::image type="content" source="./media/lookup-does-not-filter-entity-records/add-columns-to-find-view.png" alt-text="Add columns to find view":::
+    :::image type="content" source="media/lookup-does-not-filter-entity-records/add-columns-to-find-view.png" alt-text="Screenshot to add any columns that you want to be searched and matched inside of the lookup control.":::
 
 1. Save and publish changes.
 
@@ -69,6 +70,6 @@ You need to add a string type column to the view used by the lookup control.
 
 1. Select **Add Columns**.
 
-    :::image type="content" source="./media/lookup-does-not-filter-entity-records/add-columns.png" alt-text="Add columns":::
+    :::image type="content" source="media/lookup-does-not-filter-entity-records/add-columns.png" alt-text="Screenshot to select the Add columns item in the test view.":::
 
 1. Add at least one string type column.

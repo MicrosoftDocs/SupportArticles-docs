@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where you may no
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Navigation bars do not function on a record form when using CRM 2011 for Outlook
 

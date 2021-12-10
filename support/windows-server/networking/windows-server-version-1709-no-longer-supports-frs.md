@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: FRS
+ms.custom: sap:frs, csstroubleshoot
 ms.technology: networking
 ---
 # Windows Server version 1709 no longer supports FRS

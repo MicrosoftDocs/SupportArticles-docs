@@ -4,6 +4,7 @@ description: This article describes how to configure the ASP.NET Core applicatio
 ms.date: 03/29/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
+ms.technology: aspnetcore-practice-troubleshoot-linux
 ---
 # Part 2.3.1 - [Optional] Configure the ASP.NET Core application in Linux to start automatically under a different user
 

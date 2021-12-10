@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
-ms.technology: windows-client-deployment 
+ms.custom: sap:servicing, csstroubleshoot
+ms.technology: windows-client-deployment
 ---
 # Error on a computer that has a USB device or SD card attached: This PC can't be upgraded to Windows 10
 
@@ -26,7 +26,7 @@ If you are trying to upgrade to the May 2019 Feature Update for Windows 10 (Wind
 
 > This PC can't be upgraded to Windows 10.
 
-![Screenshot of the error message](./media/drive-reassignment-block-update/screenshot-of-error-message.png)
+:::image type="content" source="media/drive-reassignment-block-update/this-pc-cannot-be-upgraded-to-windows-10-error.png" alt-text="The details of the PC can't be upgraded to Windows 10 error." border="false":::
 
 ## Cause
 

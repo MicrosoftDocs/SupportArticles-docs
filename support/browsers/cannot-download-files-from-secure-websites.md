@@ -3,8 +3,9 @@ title: Cannot download files from secure websites
 description: Resolve issues with error message Internet Explorer Cannot Download or Filename couldn't be downloaded when using Internet Explorer 9 and later versions. This can happen on bank websites when downloading .PDF and other forms of tax files.
 ms.prod-support-area-path: 
 ms.date: 04/21/2020
+ms.technology: internet-explorer-development-website
 ---
-# Couldn't be downloaded error when downloading files from secure websites in Internet Explorer 9 and later versions
+# "Couldn't be downloaded" error when downloading files from secure websites in Internet Explorer 9 and later versions
 
 [!INCLUDE [](../includes/browsers-important.md)]
 
@@ -23,7 +24,7 @@ Error message 1
 
 Error message 2
 
-> \<Filename> couldn't be downloaded
+> \<Filename\> couldn't be downloaded
 
 This problem occurs if the **Do not save encrypted pages to disk** option in Internet Explorer is selected.
 
@@ -38,9 +39,10 @@ To download files, Internet Explorer must create a cache or temporary file. In I
 
 To fix this issue, first try method 1. If method 1 fails, go to method 2.
 
-On the **Tools** menu in Internet Explorer 9 or a later version, click **Internet Options**, click the **Advanced** tab, click to clear the check mark from the **Do not save encrypted pages to disk** check box in the **Security** area, and then click **OK**. (This is the default Internet Explorer setting.)
+1. On the **Tools** menu in Internet Explorer 9 or a later version, click **Internet Options**, and then click the **Advanced** tab.
+1. Click to clear the check mark from the **Do not save encrypted pages to disk** check box in the **Security** area, and then click **OK**. (This is the default Internet Explorer setting.)
 
-:::image type="content" source="media/cannot-download-files-from-secure-websites/do-not-save-encrypted-pages-to-disk.png" alt-text="Do not save encrypted pages to disk" border="false":::
+:::image type="content" source="media/cannot-download-files-from-secure-websites/do-not-save-encrypted-pages-to-disk.png" alt-text="Screenshot of the Internet Options window. Under Security, Do not save encrypted pages to disk check box is cleared." border="false":::
 
 ## Resolution - Method 2
 

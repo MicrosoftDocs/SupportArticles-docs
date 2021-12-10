@@ -5,6 +5,7 @@ ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: zakramer
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Make a Visual C# class usable in a foreach statement  
 
@@ -31,7 +32,7 @@ The `IEnumerator` interface provides iterative capability for a collection that 
     }
     public void Reset()
     {
-        position = 0;
+        position = -1;
     }
     public object Current
     {
@@ -159,7 +160,7 @@ The following example demonstrates how to use these interfaces. In this example,
           //IEnumerable
           public void Reset()
           {
-              position = 0;
+              position = -1;
           }
           //IEnumerable
           public object Current

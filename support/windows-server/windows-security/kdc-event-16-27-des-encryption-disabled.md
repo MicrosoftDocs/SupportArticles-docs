@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: michikos, kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # KDC event ID 16 or 27 is logged if DES for Kerberos is disabled

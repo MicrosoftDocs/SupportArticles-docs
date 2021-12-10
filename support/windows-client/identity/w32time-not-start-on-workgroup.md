@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-client-active-directory
 ---
 # Windows Time service doesn't start automatically on a workgroup computer

@@ -1,5 +1,5 @@
 ---
-title: Database backup/restore error 3266/3013 
+title: Database backup/restore error 3266/3013
 description: Resolves error 3266 or 3013 that occurs when you perform a database backup to disk or tape or a database restore from disk or tape.
 ms.date: 10/14/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JHALMANS
-ms.prod-support-area-path: Configuring and using Backup software
+ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Error 3266 or 3013 when you perform a database backup to disk or tape or a database restore from disk or tape

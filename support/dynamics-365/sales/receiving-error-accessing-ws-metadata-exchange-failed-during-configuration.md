@@ -1,9 +1,10 @@
 ---
 title: Receiving error accessing_ws_metadata_exchange_failed when configuring the Microsoft Dynamics 365 Outlook client
 description: You may receive the error - accessing_ws_metadata_exchange_failed when configuring the Microsoft Dynamics 365 Outlook client. Provides a resolution.
-ms.reviewer:  
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Receiving error accessing_ws_metadata_exchange_failed when configuring the Microsoft Dynamics 365 Outlook client
 
@@ -41,4 +42,4 @@ Enable forms authentication within the ADFS Management Console.
 5. Verify that Forms Authentication is checked both in the Extranet and Intranet sections. By default Forms Authentication is unchecked in the Intranet section.
 6. Select **OK**.
 
-:::image type="content" source="media/receiving-error-accessing-ws-metadata-exchange-failed-during-configuration/edit-global-authentication-policy-window.jpg" alt-text="screenshot of ADFS Forms Auth":::
+:::image type="content" source="media/receiving-error-accessing-ws-metadata-exchange-failed-during-configuration/edit-global-authentication-policy-window.png" alt-text="Screenshot to verify that Forms Authentication is checked both in the Extranet and Intranet sections." border="false":::

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: winciccore, kaushika
-ms.prod-support-area-path: Cortana and Search
+ms.custom: sap:cortana-and-search, csstroubleshoot
 ms.technology: windows-client-shell-experience
 adobe-target: true
 ---
@@ -46,7 +46,7 @@ The Indexer can index up to 1 million items. If the Indexer tries to index beyon
 
 To check the number of indexed items, select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**.
 
-![Windows Search settings](./media/windows-search-performance-issues/indexing-status.png)
+:::image type="content" source="media/windows-search-performance-issues/indexing-status.png" alt-text="Screenshot of the Indexing Status value in the Searching Windows page of Settings.":::
 
 #### Size of the index database
 
@@ -60,7 +60,7 @@ By default, Windows.edb is located in the C:\ProgramData\Microsoft\Search\Data\A
 1. Right-click Windows.edb, and select **Properties**.
 2. Check the **Size on disk** value. This property reflects the actual disk space that the database uses.
 
-    ![Size on disk property of the Windows.edb file](./media/windows-search-performance-issues/disk-size.png)
+    :::image type="content" source="media/windows-search-performance-issues/disk-size.png" alt-text="Screenshot of the Size on disk property of the Windows.edb file.":::
 
 #### Tuning methods
 
@@ -99,7 +99,7 @@ To help reduce the content of an Outlook mailbox, you can change the synchroniza
 
 If the Indexer successfully builds the index database, you see the message **Indexing complete** on the Windows Search settings page and in **Indexing Options**.
 
- ‎ ![Indexing Options](./media/windows-search-performance-issues/indexing-complete.png)  
+:::image type="content" source="media/windows-search-performance-issues/indexing-complete.png" alt-text="Screenshot of the Indexing complete message in the Indexing Options dialog.":::
 
 If a different message appears, see the following table for more information about the message and how to respond.
 

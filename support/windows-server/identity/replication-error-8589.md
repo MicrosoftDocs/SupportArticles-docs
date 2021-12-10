@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, apurvash, justinha, justintu
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8589: The DS cannot derive a service principal name (SPN)
@@ -21,7 +21,7 @@ This article describes symptoms, cause, and resolution steps for cases where AD 
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, please [ask the Microsoft Community](https://answers.microsoft.com/en-us).  
 
 _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2703028
+_Original KB number:_ &nbsp; 2703028
 
 ## Symptoms
 
@@ -275,18 +275,18 @@ Active Directory Domain Services failed to construct a mutual authentication ser
 Error value:  
 8589 The DS cannot derive a service principal name (SPN) with which to mutually authenticate the target server because the corresponding server object in the local DS database has no serverReference attribute.
 
-![NTDS Settings Properties](./media/replication-error-8589/ntds-settings-properties.png)
+:::image type="content" source="media/replication-error-8589/ntds-settings-properties.png" alt-text="Screenshot of the Active Directory Sites and Services window with the NTDS Settings Properties window opened.":::
 
 Click Cancel and then view the properties for the server object (5thWardCorpDC in this example) select the Attribute Editor tab (Server 2008 and later) or use ADSIEDIT to edit the object on Server 2003
 
 Notice that the serverReference attribute is not set in the following image
 
-![Domain Controller Attributes](./media/replication-error-8589/serverreference-attribute-not-set.png)
+:::image type="content" source="media/replication-error-8589/serverreference-attribute-not-set.png" alt-text="Screenshot of the 5THWARDCORPDC Properties window with the serverReference attribute selected.":::
 
 Bind to the Source DC using ADSIEDIT or Active Directory Users and Computers and open up the Attribute Editor and copy the value in serverReference. Paste in the value of this attribute on the destination DCs copy of the object.
 
-![Attribute Editor ](./media/replication-error-8589/set-server-reference-attribute.png)
+:::image type="content" source="media/replication-error-8589/set-server-reference-attribute.png" alt-text="Screenshot of the Active Directory Sites and Services window with the 5THWARDCORPDC Properties window opened, and a String Attribute Editor window is opened for editing the value.":::
 
 After the serverReference attribute is set correctly for the domain controller is shows as follows:
 
-![Correct serverReference ](./media/replication-error-8589/check-serverreference-attribute.png)
+:::image type="content" source="media/replication-error-8589/check-serverreference-attribute.png" alt-text="Screenshot of the Active Directory Sites and Services window with the 5THWARDCORPDC Properties window opened, and the serverReference attribute is selected.":::

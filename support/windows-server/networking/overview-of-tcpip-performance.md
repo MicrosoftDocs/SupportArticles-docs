@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rabhardw, anupamk
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Overview of TCP/IP performance
@@ -93,7 +93,7 @@ Here are the steps to measure throughput and create a baseline:
     Ctstraffic.exe -listen:* -consoleverbosity:1 <-pattern:pull>
     ```
 
-    :::image type="content" source="media/overview-of-tcpip-performance/ctstraffic-command-server.PNG" alt-text="The ctsTraffic command on the server side.":::
+    :::image type="content" source="media/overview-of-tcpip-performance/ctstraffic-command-server.png" alt-text="Running the ctsTraffic command on the server side.":::
 
 4. Start the ctsTraffic tool on the client and run the following command:
 
@@ -101,15 +101,15 @@ Here are the steps to measure throughput and create a baseline:
     Ctstraffic.exe -target:<serverip> -consoleverbosity:1 <-pattern:pull> -connections:8 -iterations:10
     ```
 
-    :::image type="content" source="media/overview-of-tcpip-performance/ctstraffic-command-client.png" alt-text="The ctsTraffic command on the client side.":::
+    :::image type="content" source="media/overview-of-tcpip-performance/ctstraffic-command-client.png" alt-text="Running the ctsTraffic command on the client side." border="false":::
 
 5. Make sure the processors of the receiving side are utilized evenly. If they aren't, check the issue with RSS to find out which one doesn't work as expected.
 
-    :::image type="content" source="media/overview-of-tcpip-performance/cpu-usage.png" alt-text="The cpu usage on the receiving side.":::
+    :::image type="content" source="media/overview-of-tcpip-performance/cpu-usage.png" alt-text="The details of the cpu usage on the receiving side.":::
 
 6. Calculate the throughput in bits/second according to the result on the client. Refer to the example in the following screenshot:
 
-    :::image type="content" source="media/overview-of-tcpip-performance/ctstraffic-command-result-client.png" alt-text="The ctsTraffic command result on the client side.":::
+    :::image type="content" source="media/overview-of-tcpip-performance/ctstraffic-command-result-client.png" alt-text="The ctsTraffic command result on the client side." border="false":::
 
     In this example, the throughput is almost 19 Gb/s and is calculated as follows:
 

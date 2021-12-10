@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: smondal, kaushika
-ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
+ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory communication fails on multihomed domain controllers

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # Guest access in SMB2 and SMB3 disabled by default in Windows

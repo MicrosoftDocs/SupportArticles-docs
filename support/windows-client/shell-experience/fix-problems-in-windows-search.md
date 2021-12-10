@@ -8,9 +8,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
-localization_priority: medium
+localization_priority: high
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cortana and Search
+ms.custom: sap:cortana-and-search, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Fix problems in Windows Search

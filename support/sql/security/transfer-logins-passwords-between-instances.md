@@ -108,13 +108,14 @@ To transfer the logins, use one of the following methods, as appropriate for you
             DECLARE @is_expiration_checked    VARCHAR (3)
             Declare @Prefix                   VARCHAR(255)
             DECLARE @defaultdb                SYSNAME
+            DECLARE @defaultlanguage          SYSNAME     
             DECLARE @tmpstrRole               VARCHAR (1024)
          
         IF (@login_name IS NULL)
         BEGIN
             DECLARE login_curs CURSOR 
             FOR 
-                SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin 
+                SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin, p.default_language_name  
                 FROM  sys.server_principals p 
                 LEFT JOIN sys.syslogins     l ON ( l.name = p.name ) 
                 WHERE p.type IN ( 'S', 'G', 'U' ) 
@@ -124,7 +125,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
         ELSE
                 DECLARE login_curs CURSOR 
                 FOR 
-                    SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin 
+                    SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin, p.default_language_name  
                     FROM  sys.server_principals p 
                     LEFT JOIN sys.syslogins        l ON ( l.name = p.name ) 
                     WHERE p.type IN ( 'S', 'G', 'U' ) 
@@ -132,7 +133,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
                     ORDER BY p.name
                 
                 OPEN login_curs 
-                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin
+                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin, @defaultlanguage 
                 IF (@@fetch_status = -1)
                 BEGIN
                       PRINT 'No login(s) found.'
@@ -185,7 +186,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
                                 WHERE name = @name
          
                                 SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' WITH PASSWORD = ' + @PWD_string + ' HASHED, SID = ' 
-                                                + @SID_string + ', DEFAULT_DATABASE = [' + @defaultdb + ']'
+                                                + @SID_string + ', DEFAULT_DATABASE = [' + @defaultdb + ']' + ', DEFAULT_LANGUAGE = [' + @defaultlanguage + ']'
                                  
                                 IF ( @is_policy_checked IS NOT NULL )
                                 BEGIN
@@ -211,22 +212,22 @@ To transfer the logins, use one of the following methods, as appropriate for you
                     SET @tmpstr = @tmpstr + '; ALTER LOGIN ' + QUOTENAME( @name ) + ' DISABLE'
                 END 
         
-                Set @Prefix = '
-                exec master.dbo.sp_addsrvrolemember @loginame='''
+                SET @Prefix = '
+                EXEC master.dbo.sp_addsrvrolemember @loginame='''
         
-                Set @tmpstrRole=''
+                SET @tmpstrRole=''
         
-                Select @tmpstrRole = @tmpstrRole
-                    + Case When sysadmin        = 1 Then @Prefix + [LoginName] + ''', @rolename=''sysadmin'''        Else '' End
-                    + Case When securityadmin   = 1 Then @Prefix + [LoginName] + ''', @rolename=''securityadmin'''   Else '' End
-                    + Case When serveradmin     = 1 Then @Prefix + [LoginName] + ''', @rolename=''serveradmin'''     Else '' End
-                    + Case When setupadmin      = 1 Then @Prefix + [LoginName] + ''', @rolename=''setupadmin'''      Else '' End
-                    + Case When processadmin    = 1 Then @Prefix + [LoginName] + ''', @rolename=''processadmin'''    Else '' End
-                    + Case When diskadmin       = 1 Then @Prefix + [LoginName] + ''', @rolename=''diskadmin'''       Else '' End
-                    + Case When dbcreator       = 1 Then @Prefix + [LoginName] + ''', @rolename=''dbcreator'''       Else '' End
-                    + Case When bulkadmin       = 1 Then @Prefix + [LoginName] + ''', @rolename=''bulkadmin'''       Else '' End
-                  From (
-                            select convert(varchar(100),suser_sname(sid)) as [LoginName],
+                SELECT @tmpstrRole = @tmpstrRole
+                    + CASE WHEN sysadmin        = 1 THEN @Prefix + [LoginName] + ''', @rolename=''sysadmin'''        ELSE '' END
+                    + CASE WHEN securityadmin   = 1 THEN @Prefix + [LoginName] + ''', @rolename=''securityadmin'''   ELSE '' END
+                    + CASE WHEN serveradmin     = 1 THEN @Prefix + [LoginName] + ''', @rolename=''serveradmin'''     ELSE '' END
+                    + CASE WHEN setupadmin      = 1 THEN @Prefix + [LoginName] + ''', @rolename=''setupadmin'''      ELSE '' END
+                    + CASE WHEN processadmin    = 1 THEN @Prefix + [LoginName] + ''', @rolename=''processadmin'''    ELSE '' END
+                    + CASE WHEN diskadmin       = 1 THEN @Prefix + [LoginName] + ''', @rolename=''diskadmin'''       ELSE '' END
+                    + CASE WHEN dbcreator       = 1 THEN @Prefix + [LoginName] + ''', @rolename=''dbcreator'''       ELSE '' END
+                    + CASE WHEN bulkadmin       = 1 THEN @Prefix + [LoginName] + ''', @rolename=''bulkadmin'''       ELSE '' END
+                  FROM (
+                            SELECT CONVERT(VARCHAR(100),SUSER_SNAME(sid)) AS [LoginName],
                                     sysadmin,
                                     securityadmin,
                                     serveradmin,
@@ -235,24 +236,24 @@ To transfer the logins, use one of the following methods, as appropriate for you
                                     diskadmin,
                                     dbcreator,
                                     bulkadmin
-                            from sys.syslogins
-                            where (       sysadmin<>0
-                                    or    securityadmin<>0
-                                    or    serveradmin<>0
-                                    or    setupadmin <>0
-                                    or    processadmin <>0
-                                    or    diskadmin<>0
-                                    or    dbcreator<>0
-                                    or    bulkadmin<>0
+                            FROM sys.syslogins
+                            WHERE (       sysadmin<>0
+                                    OR    securityadmin<>0
+                                    OR    serveradmin<>0
+                                    OR    setupadmin <>0
+                                    OR    processadmin <>0
+                                    OR    diskadmin<>0
+                                    OR    dbcreator<>0
+                                    OR    bulkadmin<>0
                                 ) 
-                                and name=@name 
+                                AND name=@name 
                       ) L 
         
                     PRINT @tmpstr
-                    Print @tmpstrRole
-                    Print 'END'
+                    PRINT @tmpstrRole
+                    PRINT 'END'
                 END 
-                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin 
+                FETCH NEXT FROM login_curs INTO @SID_varbinary, @name, @type, @is_disabled, @defaultdb, @hasaccess, @denylogin, @defaultlanguage 
             END
             CLOSE login_curs
             DEALLOCATE login_curs

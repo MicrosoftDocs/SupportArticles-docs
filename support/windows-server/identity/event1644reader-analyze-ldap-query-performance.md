@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mingchen, nasira, jseifert, deverett, justintu, arrenc, christys
-ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
+ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Use Event1644Reader.ps1 to analyze LDAP query performance in Windows Server
@@ -77,12 +77,13 @@ To better analyze the LDAP queries that are captured in event ID 1644, follow th
 
    The following is the screenshot for this step:
 
-    :::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/run-event1644reader-file.png" alt-text="The screenshot of this step.":::
+    :::image type="content" source="media/event1644reader-analyze-ldap-query-performance/run-event1644reader-file.png" alt-text="Right-click the Event1644Reader.ps1 file, and then select Run with PowerShell.":::
 
 7. Press Y to bypass PowerShell Execution Policy as required.
 8. Specify the path of the EVTX files to be parsed.
 9. When you see the prompt as the following screenshot, take the following actions:
-   :::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/prompt.jpg" alt-text="The screenshot of PowerShell.":::
+
+   :::image type="content" source="media/event1644reader-analyze-ldap-query-performance/event1644reader-prompt.png" alt-text="PowerShell command about running the Event1644Reader.ps1 file.":::
 
    - Press Enter to parse all EVTX files that are located in the same directory as the Enent1644Reader.ps1 file.
    - Type the `drive:\path` path that contains the EVTX files to be parsed.  
@@ -153,7 +154,8 @@ LCID Name DisplayName
 ```
 
 In this situation, numbers in the Excel spreadsheet are rendered as in the following screenshot:  
-:::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/numbers-render-result.png" alt-text="The screenshot for the Excel rendering":::
+
+:::image type="content" source="media/event1644reader-analyze-ldap-query-performance/numbers-render-result.png" alt-text="Numbers in the Excel spreadsheet issue.":::
 
 To resolve this issue, change the **Decimal symbol** to a period (.) in the **Region settings** item in Control Panel.  
 

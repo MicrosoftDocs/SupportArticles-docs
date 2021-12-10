@@ -2,7 +2,7 @@
 title: Can't establish a Remote Desktop session
 description: Provides a solution to an error that occurs when you try to connect to the Terminal service running on one of the affected products.
 ms.date: 10/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MVP
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # You can't establish a Remote Desktop session to a computer running one of the affected products

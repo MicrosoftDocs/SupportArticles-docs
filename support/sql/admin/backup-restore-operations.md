@@ -5,7 +5,6 @@ ms.date: 9/10/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni
 editor: v-jesits
-ms.topic: how-to
 ms.prod: sql
 ---
 # Troubleshoot SQL Server backup and restore operations  
@@ -175,7 +174,7 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 |Symptom/scenario|Remedial actions or additional information|
 |---|---|
-|Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following:<br/><br/>Error: 3999, Severity: 17, State: 1.<br/><br/>< **Time Stamp** t> spid< **spid** > Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for<br/><br/><br/>|See the following Microsoft Knowledge Base articles:<ul><li> [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)</li><li> [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910) </li><li> [2522893 FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)</li><ul> |
+|Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following:<br/><br/>"Error: 3999, Severity: 17, State: 1. <br/><br/>\<Time Stamp\> spid \<spid\> Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for more information."<br/><br/><br/>|See the following Microsoft Knowledge Base articles:<ul><li> [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)</li><li> [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910) </li><li> [2522893 FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)</li><ul> |
 |Issues restoring backups of encrypted databases| [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server) |
 |Trying to restore a CRM backup from the Enterprise edition fails on a Standard edition| [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984) |
 |||

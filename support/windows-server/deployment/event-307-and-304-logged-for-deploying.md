@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Event ID 307 and Event ID 304 are logged after you deploy Windows on a device
@@ -44,7 +44,7 @@ Automatic registration failed at join phase.  Exit code: Unknown HResult Error c
 
 Here is an example of the event IDs:
 
-:::image type="content" source="media/event-307-and-304-logged-for-deploying/event-307.png" alt-text="screenshot of event 307" border="false":::
+:::image type="content" source="media/event-307-and-304-logged-for-deploying/event-307.png" alt-text="Details of the event 307 Automatic registration failed." border="false":::
 
 ## Cause
 

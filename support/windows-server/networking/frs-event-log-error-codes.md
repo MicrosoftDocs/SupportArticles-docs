@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Nedpyle
-ms.prod-support-area-path: FRS
+ms.custom: sap:frs, csstroubleshoot
 ms.technology: networking
 ---
 # FRS event log error codes
@@ -18,7 +18,7 @@ ms.technology: networking
 This article introduces the event log entries that the File Replication Service (FRS) generates.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;308406
+_Original KB number:_ &nbsp; 308406
 
 ## Event ID 13500, 13501, 13502, 13503, 13504, 13505, and 13506
 

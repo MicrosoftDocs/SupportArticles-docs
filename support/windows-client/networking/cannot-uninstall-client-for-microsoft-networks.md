@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Error 0x80071779 when removing network components in Windows 10
@@ -28,7 +28,7 @@ Starting with Windows 10, version 1803 and newer based device or computer, you c
 >
 > The error is 0x80071779.
 
-![Error message](./media/cannot-uninstall-client-for-microsoft-networks/error-0x80071779.png)
+:::image type="content" source="media/cannot-uninstall-client-for-microsoft-networks/error-0x80071779.png" alt-text="Screenshot of the 0x80071779 error message.":::
 
 ## Cause
 

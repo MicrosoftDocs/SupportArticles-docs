@@ -5,6 +5,7 @@ ms.date: 01/26/2021
 author: genlin
 ms.author: genli
 ms.service: storage
+ms.subservice: blobs
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---

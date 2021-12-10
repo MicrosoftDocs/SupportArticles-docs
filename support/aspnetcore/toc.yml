@@ -44,15 +44,15 @@
       href: lab-1-2-analyze-core-dumps-lldb-debugger.md
     - name: Lab 1.3 Capture core crash dumps with createdump tool
       href: lab-1-3-capture-core-crash-dumps.md
-    - name: Lab 2.1 Troubleshooting performance problems by using createdump in Linux
+    - name: Lab 2.1 Troubleshoot performance problems by using createdump in Linux
       href: lab-2-1-capture-dumps-createdump.md
     - name: Lab 2.2 Capture dump files with ProcDump in Linux
       href: lab-2-2-capture-dumps-procdump.md
     - name: Lab 3 Troubleshoot performance and GC issues with dotnet-dump
       href: lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md
-    - name: Lab 4.1 Copying files to another machine 
+    - name: Lab 4.1 Copy files to another machine 
       href: lab-4-1-analyze-core-dumps-another-machine-copy-file.md
-    - name: Lab 4.2 Using WSL to open core dumps in another machine
+    - name: Lab 4.2 Use WSL to open core dumps in another machine
       href: lab-4-2-analyze-core-dumps-another-machine-wsl.md
-    - name: Lab 4.3 Using Docker to open core dumps in another machine
+    - name: Lab 4.3 Use Docker to open core dumps in another machine
       href: lab-4-3-analyze-core-dumps-another-machine-docker.md

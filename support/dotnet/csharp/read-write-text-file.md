@@ -4,6 +4,7 @@ description: This article describes how to read from and write to a text file by
 ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.technology: csharp-general
 ---
 # Use Visual C# to read from and write to a text file
 

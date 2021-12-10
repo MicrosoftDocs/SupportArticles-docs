@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: v-lanac, jamirc, kaushika
-ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
+ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Configure Internet printing

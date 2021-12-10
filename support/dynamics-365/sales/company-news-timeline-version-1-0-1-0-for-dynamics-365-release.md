@@ -2,8 +2,8 @@
 title: Company News Timeline Version 1.0.1.0
 description: Company News Timeline Version 1.0.1.0 for Microsoft Dynamics 365 Release.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Company News Timeline version 1.0.1.0 for Microsoft Dynamics 365 Release
 

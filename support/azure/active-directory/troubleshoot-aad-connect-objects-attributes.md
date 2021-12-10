@@ -5,6 +5,8 @@ ms.date: 2/3/2021
 ms.prod-support-area-path: 
 ms.reviewer: nualex
 editor: v-jesits
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 
 # End-to-end troubleshooting of Azure AD Connect objects and attributes
@@ -529,24 +531,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
   A support engineer can file an internal escalation request to revert the mobile SoA to on-premises by providing the **objectId** of the target users. However, this method is not recommended because this issue might occur again if a user or admin updates the **Mobile** attribute in the Office Portal or through PowerShell.
 
-- **ThumbnailPhoto attribute (KB4518417)**
-
-    There is a general misconception that after you sync **ThumbnailPhoto** from AD for the first time, you can no longer update it, which is only partly true.
-
-    Usually, the **ThumbnailPhoto** in Azure AD is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Azure AD by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Azure AD.
-
-### Basic steps to troubleshoot ThumbnailPhoto
-
-1. Make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
-
-2. Check the image in the Accounts Portal or use **Get-AzureADUserThumbnailPhoto** because these methods read the **ThumbnailPhoto** directly from Azure AD.
-
-3. If the AD (or AzureAD) **thumbnailPhoto** has the correct image but is not correct on other online services, the following conditions might apply:
-
-   - The user's mailbox contains an HD image and is not accepting low-resolution images from Azure AD thumbnailPhoto. The solution is to directly update the user's mailbox image.
-   - The user's mailbox image was updated correctly, but you're still seeing the original image. The solution is to wait at least six hours to see the updated image in the Office 365 User Portal or the Azure portal.
-
-4. **UserPrincipalName changes do not update in Azure AD**
+- **UserPrincipalName changes do not update in Azure AD**
 
    If the **UserPrincipalName** attribute is not updated in Azure AD, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This scenario occurs frequently.
 
@@ -557,7 +542,8 @@ Fortunately, the issues that affect these components usually generate an error i
 
    **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in AAD. Notice that Microsoft does not disable this feature on behalf of the customer.
 
-5. **Invisible characters and ProxyCalc internals**
+
+- **Invisible characters and ProxyCalc internals**
 
    Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will **silently** discard the value from on-premises AD. This situation occurs as follows:
 
@@ -570,6 +556,25 @@ Fortunately, the issues that affect these components usually generate an error i
       To troubleshoot a space character in the **UserPrincipalName** or **ProxyAddress**, examine the value that's stored in the local AD from an LDIFDE or PowerShell exported to a file. An easy trick is to copy the contents of the exported file, and then paste it into a PowerShell window. The invisible character will be replaced by a question mark (?), as shown in the following example.
 
       :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/userprinciplename.png" alt-text="Troubleshoot UserPrincipalName or ProxyAddress.":::
+
+
+- **ThumbnailPhoto attribute (KB4518417)**
+
+    There is a general misconception that after you sync **ThumbnailPhoto** from AD for the first time, you can no longer update it, which is only partly true.
+
+    Usually, the **ThumbnailPhoto** in Azure AD is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Azure AD by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Azure AD.
+
+    Basic steps to troubleshoot ThumbnailPhoto
+
+   1. Make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
+
+   2. Check the image in the Accounts Portal or use **Get-AzureADUserThumbnailPhoto** because these methods read the **ThumbnailPhoto** directly from Azure AD.
+
+   3. If the AD (or AzureAD) **thumbnailPhoto** has the correct image but is not correct on other online services, the following conditions might apply:
+   
+   - The user's mailbox contains an HD image and is not accepting low-resolution images from Azure AD thumbnailPhoto. The solution is to directly update the user's mailbox image.
+   - The user's mailbox image was updated correctly, but you're still seeing the original image. The solution is to wait at least six hours to see the updated image in the Office 365 User Portal or the Azure portal.
+
 
 ## Additional resources
 

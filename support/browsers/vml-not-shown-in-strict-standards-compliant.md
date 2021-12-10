@@ -4,6 +4,7 @@ description: A VML element isn't shown in strict standards-compliant mode when t
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: emmanubo
+ms.technology: internet-explorer-development-website
 ---
 # VML element isn't displayed in strict standards-compliant mode in Internet Explorer 9
 

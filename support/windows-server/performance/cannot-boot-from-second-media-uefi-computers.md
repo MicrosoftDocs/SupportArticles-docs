@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, annsheng, zhaling, aadake
-ms.prod-support-area-path: No Boot (not BugChecks)
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Can't boot Windows from secondary mass storage bootable devices on UEFI-based computers

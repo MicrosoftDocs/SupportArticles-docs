@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: WalterE, cpuckett, kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # List of currently available hotfixes for the File Services technologies
@@ -150,7 +150,7 @@ On the server, SMB connections are accepted, and SMB requests are processed as l
 
 The following screenshot provides an overview of the different layers through which a user request on a client computer must go to perform file operations over the network on a remote SMB file server by using SMB 2.0.
 
-![Screenshot of Windows SMB components](./media/hotfixes-for-file-services-technologies/windows-smb-components.png)
+:::image type="content" source="media/hotfixes-for-file-services-technologies/windows-smb-components.png" alt-text="Screenshot of the SMB components which provides an overview of the different layers.":::
 
 ## Components in services for NFS in a Windows Server 2012 environment
 

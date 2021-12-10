@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Cluster fileshare resource fails on a failover cluster node and the cluster log contains "status 5. Tolerating..."

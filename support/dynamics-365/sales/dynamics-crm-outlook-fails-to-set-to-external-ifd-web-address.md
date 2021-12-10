@@ -4,6 +4,7 @@ description: You can't configure the Microsoft Dynamics CRM Outlook client to th
 ms.reviewer: debrau
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # The Microsoft Dynamics CRM 2011 Outlook client fails to configure to the external IFD web address
 

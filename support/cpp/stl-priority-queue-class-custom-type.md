@@ -4,6 +4,7 @@ description: This article provides a code sample that describes how to use the p
 ms.date: 04/22/2020
 ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
+ms.technology: visual-cpp-libraries
 ---
 # Use the STL PRIORITY_QUEUE class with a custom type
 

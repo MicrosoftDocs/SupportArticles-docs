@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bbrekkan
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Availability and description of Active Directory Federation Services 2.0

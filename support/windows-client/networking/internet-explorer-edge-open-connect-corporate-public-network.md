@@ -3,14 +3,14 @@ title: An Internet Explorer or Edge window opens when your computer connects to 
 description: When you connect a computer that's running Windows 8 or later to a network under certain conditions, you may see a sign-in page or the MSN Portal page.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, dantes, arrenc
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
@@ -30,7 +30,7 @@ You connect a computer that's running Windows 8 (or a later version) to a networ
 You notice the following behavior:
 
 - The default browser (for example, **Internet Explorer** or **Edge**) opens, and shows a web page such as a sign-in page for the network or the MSN portal page.
-- The network icon on the Task Bar shows an alert symbol (for example,:::image type="content" source="./media/internet-explorer-edge-open-connect-corporate-public-network/network-status-alert.png" alt-text="Network status alert" border="false":::). If you hover over the icon, you see a message such as "No connectivity" or "Limited Internet access."
+- The network icon on the Task Bar shows an alert symbol (for example,:::image type="icon" source="media/internet-explorer-edge-open-connect-corporate-public-network/network-status-alert.png" border="false":::). If you hover over the icon, you see a message such as "No connectivity" or "Limited Internet access."
 
 After you sign in to the network, you can use the network in the usual manner. After you use the network for a few seconds, the network alert on the Task Bar disappears.
 

@@ -4,6 +4,8 @@ description: Describes a problem in which you receive an error message when you 
 ms.date: 05/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you reset your password in Azure, Office 365, or Intune: Your request could not be processed
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sashalon
-ms.prod-support-area-path: DPI and Display Issues
+ms.custom: sap:dpi-and-display-issues, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # The DPI adjustment isn't available in a Remote Session (RDP)
@@ -18,7 +18,7 @@ ms.technology: windows-server-shell-experience
 This article describes a technique to make user-interface and font-size adjustments available to users that connect remotely to a Remote Desktop server.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2544872
+_Original KB number:_ &nbsp; 2544872
 
 ## Summary
 

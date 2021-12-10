@@ -4,6 +4,8 @@ description: Describes an error message that occurs when you try to install the 
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you try to install the Azure Active Directory Sync Tool: The computer must be joined to a domain
 

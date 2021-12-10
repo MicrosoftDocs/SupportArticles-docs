@@ -3,14 +3,14 @@ title: lingering objects in AD forest
 description: Contains information about lingering objects in a forest. Specifically, it provides information about events that indicate the presence of lingering objects, the causes of lingering objects, and methods to remove lingering objects.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Information about lingering objects in a Windows Server Active Directory forest

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: jburrage, kaushika
-ms.prod-support-area-path: Errors when running the Validation Wizard
+ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Cluster validation fails the SCSI-3 Persistent Reservation test in Windows Server

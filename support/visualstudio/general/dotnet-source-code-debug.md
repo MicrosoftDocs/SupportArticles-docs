@@ -5,6 +5,7 @@ ms.date: 04/26/2020
 ms.prod-support-area-path: Debuggers and analyzers
 ms.reviewer: gaurap
 ms.topic: how-to
+ms.technology: vs-debuggers
 ---
 # Limitations with Visual Studio .NET source code debugging using Reference Source Code Center
 

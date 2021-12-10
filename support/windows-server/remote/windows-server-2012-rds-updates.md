@@ -1,5 +1,5 @@
 ---
-title: Available updates for Remote Desktop Services 
+title: Available updates for Remote Desktop Services
 description: Lists the available updates for Remote Desktop Services in Windows Server 2012.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Available updates for Remote Desktop Services
@@ -18,7 +18,7 @@ ms.technology: windows-server-rds
 This article lists the available updates for Remote Desktop Services in Windows Server 2012.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2821526
+_Original KB number:_ &nbsp; 2821526
 
 ## Summary
 

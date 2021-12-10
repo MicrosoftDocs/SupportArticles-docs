@@ -2,7 +2,7 @@
 title: This page can't be displayed
 description: Discusses that you receive a "This page cannot be displayed" error message when you try to access an application on a website that uses AD FS 2.0. Provides a resolution.
 ms.date: 09/10/2021
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fszita, maweeras, timccu, abizerh
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 error: This page cannot be displayed
@@ -62,7 +62,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
 
     In the following screenshot, the first URL is for the web application, and the second URL is for the AD FS service.
 
-    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie-developer-tool.png" alt-text="The screenshot for IE Developer tool.":::
+    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie-developer-tool.png" alt-text="The web application url and the A D F S service url listed in the developer tools." border="false":::
 
 - How to fix
 
@@ -86,7 +86,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
     Nslookup sts.contoso.com
     ```  
 
-    :::image type="content" source="./media/this-page-cant-displayed/command-prompt.png" alt-text="The screenshot for nslookup command.":::
+    :::image type="content" source="./media/this-page-cant-displayed/nslookup-command-prompt.png" alt-text="The output returned after running the nslookup command." border="false":::
 
 - How to fix
 
@@ -98,7 +98,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
 
     Use Telnet or [PortQryUI - User Interface for the PortQry Command Line Port Scanner](https://www.microsoft.com/download/details.aspx?id=24009) to query the connectivity of port 443 on the AD FS server. Make sure that 443 port is listening.
 
-    :::image type="content" source="./media/this-page-cant-displayed/query-result.png" alt-text="The screenshot for Port query result.":::
+    :::image type="content" source="./media/this-page-cant-displayed/port-443-query-result.png" alt-text="The Port query result of checking the connectivity of port 443 on the A D F S server." border="false":::
 
 - How to fix
 
@@ -115,12 +115,13 @@ To resolve this problem, follow these steps in the order. These steps will help 
     Start Internet Explorer, and then browse to the following web address. If you receive a certificate warning when you try to open this page, select **Continue**.
 
     http://\<YourADFSServiceName>/adfs/ls/idpinitiatedsignon.aspx
+
     > [!NOTE]
     > In this URL, *\<YourADFSServiceName>* represents the actual AD FS service name.
 
     Typically, you access a sign-in screen, and then you can sign in by using your credentials.
 
-    :::image type="content" source="./media/this-page-cant-displayed/sign-in-page.png" alt-text="The screenshot of ADFS sign-on page.":::
+    :::image type="content" source="./media/this-page-cant-displayed/sign-in-page.png" alt-text="Screenshot of the A D F S sign-in page." border="false":::
 
 - How to fix
 

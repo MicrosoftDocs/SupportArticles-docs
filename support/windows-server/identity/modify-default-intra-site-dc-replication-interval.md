@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to Modify the Default Intra-Site Domain Controller Replication Interval
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes how to modify the default intra-site domain controller replication interval.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;214678
+_Original KB number:_ &nbsp; 214678
 
 ## More information
 

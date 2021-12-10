@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, philh, herbertm
-ms.prod-support-area-path: Active Directory Certificate Services
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Valid root CA certificates distributed using GPO might intermittently appear as untrusted
@@ -87,7 +87,7 @@ certutil -addstore root c:\tmp\rootca.cer
 
 **Method 2:** Start certlm.msc (the certificates management console for local machine) and import the root CA certificate in the **Registry** physical store.
 
-![Registry certificates](./media/valid-root-ca-certificates-untrusted/root-ca-certificate-in-registry.jpg)
+:::image type="content" source="media/valid-root-ca-certificates-untrusted/root-ca-certificate-in-registry.png" alt-text="Screenshot of the certificates management console in which Certificates under Registry is selected.":::
 
 > [!NOTE]
 > The certlm.msc console can be started only by local administrators. Also, the import will affect only single machine.
@@ -101,9 +101,9 @@ To publish the root CA certificate, follow these steps:
 3. Edit the GPO that you would like to use to deploy the registry settings in the following way:
     1. Edit the **Computer Configuration > Group Policy Preferences > Windows Settings > Registry >** path to the root certificate.
     2. Add the root certificate to the GPO as presented in the following screenshot.
-4. Deploy the new GPO to the machines where the root certificate needs to be published. 
+4. Deploy the new GPO to the machines where the root certificate needs to be published.
 
-    ![Group Policy Management Editor - Root Certificate](./media/valid-root-ca-certificates-untrusted/deploy-gpo-to-target-machine.jpg)
+    :::image type="content" source="media/valid-root-ca-certificates-untrusted/deploy-gpo-to-target-machine.png" alt-text="Screenshot of the Group Policy Management Editor window with the root certificate selected.":::
 
 Any other method, tool, or client management solution that distributes root CA certificates by writing them into the location `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\ROOT\Certificates` will work.
 

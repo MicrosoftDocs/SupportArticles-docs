@@ -2,7 +2,7 @@
 title: Error occurs when adding an IPP printer
 description: Provides a solution to an error that occurs when you try to add an IPP printer over HTTPS.
 ms.date: 09/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, mattburr
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
 ms.technology: windows-client-printing
 ---
 # When attempting to add an IPP printer over HTTPS, you receive an error

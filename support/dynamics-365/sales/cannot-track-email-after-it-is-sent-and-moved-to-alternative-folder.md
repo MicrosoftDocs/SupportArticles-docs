@@ -4,6 +4,7 @@ description: You can't track an email in Microsoft Dynamics CRM 2011 for Microso
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-client-outlook
 ---
 # Cannot track email when it is sent and moved to an alternative location other than the Sent Items folder
 

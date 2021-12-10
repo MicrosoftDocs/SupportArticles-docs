@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure
@@ -20,7 +20,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 > The DSA operation is unable to proceed because of a DNS lookup failure.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2021446
+_Original KB number:_ &nbsp; 2021446
 
 **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 
@@ -174,7 +174,7 @@ Microsoft support regularly finds stale metadata for nonexistent DCs, or stale m
 
     The red highlight in the screenshot below shows the NTDS Settings object for CONTOSO-DC2 located below the Default-First-Site-Name site.
 
-    ![NTDS Settings selected](./media//replication-error-8524/ntds-settings.jpg)
+    :::image type="content" source="media/replication-error-8524/ntds-settings-default-first-site-name.png" alt-text="Screenshot of the Active Directory Sites and Services windows with the NTDS Settings selected.":::
 
     Right-click the stale NTDS Settings object you want to remove, then select "Delete."
 

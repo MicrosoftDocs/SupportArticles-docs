@@ -3,14 +3,14 @@ title: Find the current Active Directory Schema Version
 description: Describes how to find the current Schema Version.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Schema update - known issues, best practices, workflow review
+ms.custom: sap:schema-update-known-issues-best-practices-workflow-review, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to find the current Schema Version
@@ -58,6 +58,8 @@ The following information provides a mapping between the **objectVersion** attri
 30 -> Windows Server 2003 RTM, Windows 2003 With Service Pack 1, Windows 2003 With Service Pack 2  
 31 -> Windows Server 2003 R2  
 44 -> Windows Server 2008 RTM
+87 -> Windows Server 2016
+88 -> Windows Server 2019
 
 ## How to find the current Exchange Schema Version
 
