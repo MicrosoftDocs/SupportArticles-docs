@@ -39,7 +39,7 @@ To work around this issue, you can change the adapter that the IP address is sel
 
 To change the binding order, follow these steps:
 
-1. Click **Start**![start button ](./media/incorrect-ip-address-returned-ping-netbios/vista-start-button.jpg), and then click **Control Panel**.
+1. Click **Start** :::image type="icon" source="media/incorrect-ip-address-returned-ping-netbios/vista-start-button.png" border="false":::, and then click **Control Panel**.
 2. Click **Network and Internet**, and then click **Network and Sharing Center**.
 
 3. Change the network adapter settings, depending on your operating system:
@@ -61,11 +61,10 @@ For a hidden adapter, you cannot change the binding order by using the steps in 
 
 To change the Hosts file, follow these steps:
 
-1. Click **Start**![start button ](./media/incorrect-ip-address-returned-ping-netbios/vista-start-button.jpg), and then click **All Programs**.
+1. Click **Start** :::image type="icon" source="media/incorrect-ip-address-returned-ping-netbios/vista-start-button.png" border="false":::, and then click **All Programs**.
 2. Click **Accessories**, right-click **Notepad**, and then click **Run as administrator**.
 
-3. ![UAC ](./media/incorrect-ip-address-returned-ping-netbios/security-shield.jpg)
-If you're prompted for an administrator password or for confirmation, type the password, or provide confirmation.
+3. :::image type="icon" source="media/incorrect-ip-address-returned-ping-netbios/security-shield-button.png" border="false"::: If you're prompted for an administrator password or for confirmation, type the password, or provide confirmation.
 4. At a command prompt, type the following command, and then press ENTER:  
 
     ```console  
