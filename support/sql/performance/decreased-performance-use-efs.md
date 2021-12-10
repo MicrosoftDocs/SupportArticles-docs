@@ -9,7 +9,7 @@ ms.prod: sql
 ---
 # Decreased performance in SQL Server when you use EFS to encrypt database files
 
-_Applies to:_ &nbsp; SQL Server
+_Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 922121
 
 ## Symptoms
