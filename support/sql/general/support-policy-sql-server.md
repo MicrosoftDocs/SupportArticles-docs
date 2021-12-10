@@ -167,7 +167,11 @@ If you deploy SQL Server on other cloud solutions or platforms, check with the c
 
 ## Product life cycle
 
-SQL Server follows the fixed life-cycle policy for obtaining support and updates. See [Search Product and Services Lifecycle Information](/lifecycle/products/) for the life cycle and stage (mainstream, extended, and out-of-support) for each product version. Big Data Clusters is an add-on to SQL Server 2019 and is governed as such under the Fixed Lifecycle Policy.
+SQL Server follows the fixed life-cycle policy for obtaining support and updates. See [Search Product and Services Lifecycle Information](/lifecycle/products/) for the life cycle and stage (mainstream, extended, and out-of-support) for each product version. 
+
+> [!NOTE]
+> SQL Server 2019 Big Data Clusters is governed by the Fixed Lifecycle Policy.
+
 
 Service Packs are released for SQL Server through version 2016. Support ends 12 months after the next service pack releases or at the end of the product's support life cycle, whichever comes first. For more information, please see the [Fixed Lifecycle Policy](/lifecycle/policies/fixed#service-packs).
 
