@@ -179,7 +179,7 @@ A common way for UDF drivers to be blocked is through configs within `/etc/modpr
 AttributeError: 'module' object has no attribute 'JSONDecodeError'
 ```
 
-**Cause**: This happens because VM tags has non-ascii characters and the version of cloud-init is older than 20.3
+**Cause**: This happens because VM tags have non-ascii characters and the version of cloud-init is older than 20.3.
 
 **Solution**: Either use or ensure your image supports cloud-init 20.3 or newer, or remove non-ascii characters from the VM tags.
 
@@ -195,9 +195,9 @@ File "/usr/lib/python2.7/site-packages/cloudinit/sources/DataSourceAzure.py", li
 UnicodeEncodeError: 'ascii' codec can't encode characters in position 10-11: ordinal not in range(128)
 ```
 
-**Cause**: This happens because the provided password had unsupported characters (non-ascii)
+**Cause**: This happens because the provided password has unsupported characters (non-ascii).
 
-**Solution**: Provide a password that only has ascii characters
+**Solution**: Provide a password that only has ascii characters.
 
 #### dhclient permission
 
