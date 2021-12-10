@@ -99,7 +99,7 @@ Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on
 
 ## Customizing SQL Server Containers
 
-Creation of custom SQL Server Linux Containers is supported when customized on top of SQL Server base containers downloaded from MCR (Container Registry), as well as ensuring that you do not modify the `SQL directories/binaries/licenses` located at the locations: /opt/mssql/*, /usr/share/doc/* which when incorrectly modified could result in SQL Server process not starting.
+Creation of custom SQL Server Linux Containers is supported when customized on top of SQL Server base containers downloaded from MCR (Container Registry), as well as ensuring that you do not modify the `SQL directories/binaries/licenses` located at the locations: `/opt/mssql/*` and `/usr/share/doc/*`, which when incorrectly modified could result in SQL Server process not starting.
 
 You can also build your own SQL Server container images from scratch, given that the base image of the Linux OS container used to generate the custom SQL Server container image matches the [supported platforms](/sql/linux/sql-server-linux-release-notes-2019) for SQL Server on Linux and you follow the guidelines mentioned above.  
 
@@ -109,7 +109,7 @@ SQL container customization is not supported for use in other Microsoft products
 
 - **Examples of supported configurations:**
 
-  1. You download SQL Container image from MCR, and then using dockerfile you add features like Polybase, MSDTC, etc., These changes or similar changes are supported to help create your own custom SQL container image.
+  1. You download SQL Container image from MCR, and then using dockerfile you add features like Polybase, MSDTC, etc. These changes or similar changes are supported to help create your own custom SQL container image.
 
   1. You can also build a custom SQL Server 2019 container image on top of a supported Linux OS platform like RHEL 8.2 UBI container image or SLES 12 base images.
 
@@ -125,9 +125,9 @@ If you install SQL Server on Linux, the supported file systems for the volumes t
 
 ## Supported high availability solutions
 
-When you set up a high availability solution for SQL Server on Windows, please refer to the support policies and requirements at [The Microsoft SQL Server support policy for Microsoft Clustering](https://support.microsoft.com/help/327518) and [Prerequisites, Restrictions, and Recommendations for Always On availability groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability).
+When you set up a high availability solution for SQL Server on Windows, refer to the support policies and requirements at [The Microsoft SQL Server support policy for Microsoft Clustering](https://support.microsoft.com/help/327518) and [Prerequisites, Restrictions, and Recommendations for Always On availability groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability).
 
-When you set up a high availability solution for SQL Server on Linux, please review the support policies of the OS vendor that are specific to high availability. Production environments require a fencing agent, such as STONITH, for high availability. A Linux cluster uses fencing to return the cluster to a known state. The correct manner in which to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. For more information, see the following OS vendor policies and recommendations:
+When you set up a high availability solution for SQL Server on Linux, review the support policies of the OS vendor that are specific to high availability. Production environments require a fencing agent, such as STONITH, for high availability. A Linux cluster uses fencing to return the cluster to a known state. The correct manner in which to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. For more information, see the following OS vendor policies and recommendations:
 
 - [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/2912891)
 
@@ -139,7 +139,7 @@ For supported high availability solution in SQL Server on Linux, see [Business c
 
 ## Unsupported features
 
-You can find the current list of SQL Server features that aren't supported in the unsupported features and services section in [Release notes for SQL Server 2017 on Linux](/sql/linux/sql-server-linux-release-notes?view=sql-server-ver15&preserve-view=true). If you try to use components or features that are listed in the notes as unsupported , you might experience unexpected symptoms and errors. When you use a combination of features for your application or solution, make sure that the interoperability between the features is documented as supported. For guidance, see [Always On availability groups: interoperability (SQL Server)](/sql/database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server).
+You can find the current list of SQL Server features that aren't supported in the unsupported features and services section in [Release notes for SQL Server 2017 on Linux](/sql/linux/sql-server-linux-release-notes?view=sql-server-ver15&preserve-view=true). If you try to use components or features that are listed in the notes as unsupported, you might experience unexpected symptoms and errors. When you use a combination of features for your application or solution, make sure that the interoperability between the features is documented as supported. For guidance, see [Always On availability groups: interoperability (SQL Server)](/sql/database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server).
 
 ## Support policy
 
@@ -179,7 +179,7 @@ Operating systems follow their own life cycles. Contact the system vendor about 
 
 ## Obtain support from Microsoft
 
-There are many channels through which you can obtain support for SQL Server. If you encounter a problem that affects an on-premises deployment of SQL Server, you can review [support options for business users](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd)  to obtain assisted support from the Support team. If you deployed SQL Server in an Azure cloud environment, you can submit support requests from the [Help + Support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) blade of the Azure management portal.
+There are many channels through which you can obtain support for SQL Server. If you encounter a problem that affects an on-premises deployment of SQL Server, you can review [support options for business users](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) to obtain assisted support from the Support team. If you deployed SQL Server in an Azure cloud environment, you can submit support requests from the [Help + Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) in the Azure management portal.
 
 You can also submit your problem report or product suggestion to [the Connect site](/collaborate/connect-redirect).
 
