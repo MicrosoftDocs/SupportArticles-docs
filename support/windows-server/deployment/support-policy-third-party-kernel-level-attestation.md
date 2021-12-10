@@ -1,5 +1,5 @@
 ---
-title: Support policy for software using attestation signing 
+title: Support policy for third-party, kernel-level software
 description: Describes the support policy for third-party, kernel-level software that is signed using the attestation process in Windows.
 ms.date: 12/10/2021
 author: Deland-Han
@@ -19,26 +19,26 @@ _Original KB number:_ &nbsp; 4519013
 
 ## Summary
 
-This article describes the support that the Microsoft Windows Server Support organization provides for Microsoft software products, such as the Windows Server operating system (all versions), when you run that Microsoft product together with attestation-signed kernel-level drivers and any associated physical adapter, controller, or other device or application.
+This article describes the support that Microsoft Support provides for Microsoft software products, such as the Windows Server operating system (all versions), when you run that Microsoft product together with attestation-signed kernel-level drivers and any associated physical adapter, controller, or other device or application.
 
 > [!NOTE]
 > The attestation signing process for a third-party, kernel-level driver does not require that the driver vendor provide test results in order to obtain a driver signature from Microsoft. For more information, see [Attestation signing a kernel driver for public release](/windows-hardware/drivers/dashboard/attestation-signing-a-kernel-driver-for-public-release).
 
 ## More information
 
-Except as described in this article, Microsoft Windows Server Support does not support software that has kernel-level drivers that are attestation-signed. Additionally, Microsoft does not support any physical device, filter driver, or application that is associated with that software.
+Except as described in this article, Microsoft Support does not support software that has kernel-level drivers that are attestation-signed. Additionally, Microsoft does not support any physical device, filter driver, or application that is associated with that software.
 
 Microsoft supports drivers for physical devices, filters, and applications that are tested by using the test kit that is appropriate for the version of the Windows Server operating system for which the driver was submitted and then either signed or certified by Microsoft.
 
-If a customer-reported problem is thought to be caused by an attestation-signed kernel driver, Microsoft Support engineers may try to determine the origin of the driver by asking whether any drivers have been recently updated.
+If a customer-reported problem is caused by an attestation-signed kernel driver, Microsoft Support engineers may try to determine the origin of the driver by asking whether any drivers have been recently updated.
 
 This can be determined by checking the *Setupapi.dev.log* file that is located at *%SystemRoot%\\inf*.
 
 If any drivers were recently installed, they can be examined to learn whether they were tested and submitted for signature or were signed by using the attestation process.
 
-Microsoft Support Engineer may also check either the [Windows Server Catalog](https://www.windowsservercatalog.com) or the [Windows Compatible Products List](https://partner.microsoft.com/dashboard/hardware/search/cpl) to determine whether the device and driver were tested, submitted, and certified or signed recently. You can do this by searching for the **Vendor Name** value in the Windows Compatible Products List, and entering an asterisk in the **Product Name** field. For example, see the following screenshot.
+Microsoft Support Engineer may also check either the [Windows Server Catalog](https://www.windowsservercatalog.com) or the [Windows Compatible Products List](https://partner.microsoft.com/dashboard/hardware/search/cpl) to determine whether the device and driver were tested, submitted, and certified or signed recently. You can do it by searching for the **Vendor Name** value in the Windows Compatible Products List, and entering an asterisk in the **Product Name** field. For example, see the following screenshot.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\windows-compatible-products-list.png" alt-text="Screenshot of the Windows Compatible Products List window, in which you can test the hardware to meet Microsoft's compatibility requirements." border="true":::
+:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\windows-compatible-products-list.png" alt-text="Screenshot of the Windows Compatible Products List window, in which you can test the hardware to meet Microsoft's compatibility requirements." lightbox="media\support-policy-third-party-kernel-level-attestation\windows-compatible-products-list.png":::
 
 The **Certifications** column indicates the Windows or Windows Server operating system versions, editions, and processor platforms for which the product was tested and submitted.
 
@@ -50,13 +50,13 @@ You can also use [Windows Server Catalog](https://www.windowsservercatalog.com) 
 :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\windows-server-catalog.png" alt-text="Screenshot of the Windows Server Catalog window with a Search field to check whether a product is using a driver that was recently tested, submitted, and signed." border="true":::
 
 > [!NOTE]
-> A driver may be listed as **Signature Only**. This indicates that the device or driver had no matching defined Product Type. However, the requirements that do apply to that product were validated by the tests in the relevant kit, and the driver was submitted.
+> A driver may be listed as **Signature Only**. It indicates that the device or driver had no matching defined Product Type. However, the requirements that do apply to that product were validated by the tests in the relevant kit, and the driver was submitted.
 
 A driver may have been signed by using the attestation process as part of the following scenario:
 
 - The driver may have been previously tested, and the results submitted for certification or signature. Support may check the sources in the previous section to verify that information.
 - The vendor may have had to provide a hotfixed version of the driver immediately to a customer to mitigate or fix a serious problem for that customer.
-- The vendor may not have been able to take the time to run the full test list that is mandated for that Product type. This is because such a test can take days or even weeks to complete. Therefore, the vendor used the attestation process to provide some relief for that customer.
+- The vendor may not have been able to take the time to run the full test list that is mandated for that Product type. It is because such a test can take days or even weeks to complete. Therefore, the vendor used the attestation process to provide some relief for that customer.
 
     > [!NOTE]
     > In this case, the likelihood is low that a regression occurred from a single hotfix that caused some additional issue in regards to security, reliability, or compatibility.
@@ -83,34 +83,34 @@ Regardless of the support relationship between Microsoft and the vendor that is 
 
 ### How to determine whether a driver is attestation-signed
 
-In the *%SystemRoot%\\system32\\drivers* directory, right-click the driver file name in question. Select and click on **Properties** from the drop-down list.
+1. In the *%SystemRoot%\\system32\\drivers* directory, right-click the driver file name in question. Select **Properties** from the drop-down list.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\drive-properties-general.png" alt-text="Screenshot of the driver's Properties window which shows the General tab information." border="false":::
+    :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\drive-properties-general.png" alt-text="Screenshot of the driver's Properties window, which shows the General tab information." border="false":::
 
-Select the **Digital Signatures** tab.
+2. Select the **Digital Signatures** tab.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\driver-properties-digital-signatures-microsoft.png" alt-text="Screenshot of the driver's Properties window which shows the Digital Signatures tab information." border="false":::
+    :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\driver-properties-digital-signatures-microsoft.png" alt-text="Screenshot of the driver's Properties window, which shows the Digital Signatures tab information." border="false":::
 
-Select the **Microsoft** entry in the **Signature** list, and then select the **Details** button.
+3. Select the **Microsoft** entry in the **Signature** list, and then select the **Details** button.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\driver-properties-digital-signatures.png" alt-text="Screenshot of the Digital Signatures tab of the driver's Properties window which shows a Microsoft entry." border="false":::
+    :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\driver-properties-digital-signatures.png" alt-text="Screenshot of the Digital Signatures tab of the driver's Properties window, which shows a Microsoft entry." border="false":::
 
-In the **Digital Signature Details** window, select the **Advanced** tab.
+4. In the **Digital Signature Details** window, select the **Advanced** tab.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\digital-signature-details-advanced.png" alt-text="Screenshot of the Digital Signatures Details window which shows the Advanced information." border="false":::
+    :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\digital-signature-details-advanced.png" alt-text="Screenshot of the Digital Signatures Details window, which shows the Advanced information." border="false":::
 
-Select the **View Certificate** button.
+5. Select the **View Certificate** button.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\digital-signature-information.png" alt-text="Screenshot of the Digital Signatures Details window with the General tab opened, in which you can select the View Certificate button." border="false":::
+    :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\digital-signature-information.png" alt-text="Screenshot of the Digital Signatures Details window with the General tab opened, in which you can select the View Certificate button." border="false":::
 
-In the **Certificate** window, select the **Details** tab.
+6. In the **Certificate** window, select the **Details** tab.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\digital-signature-details-certificate-information.png" alt-text="Screenshot of the Certificate window with the Certificate Information in the General tab." border="false":::
+    :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\digital-signature-details-certificate-information.png" alt-text="Screenshot of the Certificate window with the Certificate Information in the General tab." border="false":::
 
-In the resulting list box, scroll down to the **Enhanced Key Usage** row.
+7. In the resulting list box, scroll down to the **Enhanced Key Usage** row.
 
-:::image type="content" source="media\support-policy-third-party-kernel-level-attestation\certificate-enhanced-key-usage.png" alt-text="Screenshot of the Certificate window with the Details tab opened, which shows the value of the Enhanced Key Usage." border="false":::
+    :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\certificate-enhanced-key-usage.png" alt-text="Screenshot of the Certificate window with the Details tab opened, which shows the value of the Enhanced Key Usage." border="false":::
 
-If the text in that row includes **Windows Hardware Driver Attested Verification**, the driver was attestation-signed.
+    If the text in that row includes **Windows Hardware Driver Attested Verification**, the driver was attestation-signed.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
