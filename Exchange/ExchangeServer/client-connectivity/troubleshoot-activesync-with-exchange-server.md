@@ -52,7 +52,7 @@ Verify that Autodiscover is working for Microsoft Exchange ActiveSync. To do thi
 2. Select **Exchange ActiveSync Autodiscover** from the **Microsoft Exchange ActiveSync Connectivity Tests** and select **Next**.
 3. Enter all the required fields and select **Perform Test**.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/enter-required-fields.png" alt-text="Enter all the required fields":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/enter-required-fields.png" alt-text="Screenshot to enter all the required fields in the Remote Connectivity Analyzer window." lightbox="media/troubleshoot-activesync-with-exchange-server/enter-required-fields.png" :::
 
 **Did the Connectivity Test fail?**
 
@@ -65,11 +65,11 @@ To resolve this issue, review the results of the test and address any found issu
 
 1. Select **Expand All**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/connectivity-test-fails-error.png" alt-text="details of the Connectivity test fails error 3":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/connectivity-test-fails-error.png" alt-text="Screenshot of the Expand All option in the Remote Connectivity Analyzer window.":::
 
 2. Locate the error within the results (should be near the end) and address the issue.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/additional-details.png" alt-text="additional details of the Connectivity test fails error 2":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/additional-details.png" alt-text="Screenshot shows the additional details of the Connectivity test fails error." lightbox="media/troubleshoot-activesync-with-exchange-server/additional-details.png":::
 
 **Was the issue resolved using the results of the Exchange Remote Connectivity Analyzer results?**
 
@@ -87,7 +87,7 @@ Most Exchange ActiveSync devices request the email address and password to set u
     Get-Mailbox user | fl UserPrincipalName,PrimarySmtpAddress
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-mailbox-example.png" alt-text="example of Get-Mailbox":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-mailbox-example.png" alt-text="Screenshot shows an example of running the Get-Mailbox cmdlet.":::
 
 **Does the UserPrincipalName match the PrimarySmtpAddress for the user?**
 
@@ -102,7 +102,7 @@ Verify that the appropriate domain suffix is available for the UserPrincipalName
 2. Locate the user object and double-click to view the properties.
 3. Go to the **Account** tab and select the drop-down list for the **User logon name**.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/account-tab-of-mailbox-properties.png" alt-text="the Account tab on the Mailbox Properties window." border="false":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/user-logon-name-account.png" alt-text="Screenshot of the drop-down list for the User logon name section under the Account tab." border="false":::
 
 **Is the SMTP address domain listed in drop-down?**
 
@@ -119,7 +119,7 @@ To resolve this issue, you will need to add the primary SMTP address domain to t
 2. Right-click on **Active Directory Domains and Trusts** and select **Properties**.
 3. Enter the primary SMTP address domain and select **Add** and then select **OK**.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/upn-suffixes.png" alt-text="the UPN Suffixes tab of Active Directory Domains and Trusts" border="false":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/upn-suffixes.png" alt-text="Screenshot of the U P N Suffixes tab in the Active Directory Domains and Trusts window." border="false":::
 
 #### Modify User Principal Name
 
@@ -193,7 +193,7 @@ Verify the user object permissions are not preventing connectivity issues. To do
 3. Locate the user object and double-click to view the properties.
 4. Go to the **Security** tab and select the **Advanced** button.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/advanced-security-settings-for-mailbox.png" alt-text="Alt text here 1." border="false":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/advanced-security-settings-for-mailbox.png" alt-text="Screenshot of the Advanced Security Settings for Mailbox window.":::
 
 Is the **Include inheritable permissions from this object's parent** enabled?
 
@@ -210,7 +210,7 @@ To resolve this issue, modify the user object permissions to inherit permissions
 4. Go to the **Security** tab and select the **Advanced** button.
 5. Enable the **Include inheritable permissions from this object's parent** and select **OK** twice.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/advanced-security-settings-for-mailbox.png" alt-text="the permissions tab on the Advanced Security Settings for Mailbox" border="false":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/advanced-security-settings-for-mailbox.png" alt-text="Screenshot to enable the Include inheritable permissions from this object's parent option.":::
 
 **Did modifying the user object's permissions resolve the issue?**
 
@@ -230,7 +230,7 @@ You need to enable ActiveSync mailbox logging on the Client Access Server and th
 2. Make a copy of the web.config file.
 3. Open the web.config file in Notepad and modify the following sections with the values below:
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Alt text here 2.":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot to modify the web.config file in Notepad.":::
 
 4. Open [IIS Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 5. Expand the server and select **Application Pools**.
@@ -279,7 +279,7 @@ We now have the data collected and we are ready to begin troubleshooting. The fi
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **SendMail** under **Search raw log data for strings** and select **Search**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-sendmail.png" alt-text="search SendMail in Search raw log data for strings 1":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-send-mail.png" alt-text="Screenshot to enter SendMail under the Search raw log data for strings section and select the Search option.":::
 
 **Do you see the SendMail command in the log?**
 
@@ -290,7 +290,7 @@ We now have the data collected and we are ready to begin troubleshooting. The fi
 
 The following is an example search result from an ActiveSync mailbox log:
 
-:::image type="content" source="media/troubleshoot-activesync-with-exchange-server/example-search-result.png" alt-text="an example search result" border="false":::
+:::image type="content" source="media/troubleshoot-activesync-with-exchange-server/example-search-result.png" alt-text="Screenshot of an example search result in the ActiveSync mailbox log.":::
 
 **What status code value do you see for the SendMail command in your log?**
 
@@ -309,7 +309,7 @@ The following is an example search result from an ActiveSync mailbox log:
     Get-ActiveSyncOrganizationSettings | ft DefaultAccessLevel
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-activesyncorganizationsettings.png" alt-text="search SendMail in Search raw log data for strings 2":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-active-sync-organization-settings.png" alt-text="Screenshot shows an example of running the Get-ActiveSyncOrganizationSettings cmdlet.":::
 
 **Is the default access level set to Allow?**
 
@@ -344,7 +344,7 @@ The Exchange ActiveSync device access rules allow an administrator to create acc
     Get-ActiveSyncDeviceAccessRule | Where { $_.AccessLevel -eq "Allow" }
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-activesyncdeviceaccessrule.png" alt-text="example of using Get-ActiveSyncDeviceAccessRule":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-active-sync-device-access-rule.png" alt-text="Screenshot shows an example of running the Get-ActiveSyncDeviceAccessRule cmdlet.":::
 
 **Are there any device access rules that match the user's device with the access level set to Block or Quarantine?**
 
@@ -362,7 +362,7 @@ There are two ways to resolve this issue. The first method is to remove the devi
     Remove-ActiveSyncDeviceAccessRule 'WindowsMail (DeviceType)'
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/remove-activesyncdeviceaccessrule.png" alt-text="example of using Remove-ActiveSyncDeviceAccessRule":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/remove-active-sync-device-access-rule.png" alt-text="Screenshot shows an example of running the Remove-ActiveSyncDeviceAccessRule cmdlet.":::
 
 The second way is to modify the AccessLevel for the existing device access rule. To do this, follow these steps:
 
@@ -373,7 +373,7 @@ The second way is to modify the AccessLevel for the existing device access rule.
     Set-ActiveSyncDeviceAccessRule 'WindowsMail (DeviceType)' -AccessLevel Allow
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/set-activesyncdeviceaccessrule.png" alt-text="example of using Set-ActiveSyncDeviceAccessRule":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/set-active-sync-device-access-rule.png" alt-text="Screenshot shows an example of running the Set-ActiveSyncDeviceAccessRule cmdlet.":::
 
 **Did updating the device access rules in your organization resolve the issue?**
 
@@ -391,7 +391,7 @@ An administrator can configure a list of devices that are not allowed to synchro
     Get-CASMailbox user | fl ActiveSyncBlockedDeviceIDs
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/example-get-casmailbox.png" alt-text="example of using Get-CASMailbox":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-cas-mailbox.png" alt-text="Screenshot shows an example of running the Get-CASMailbox cmdlet.":::
 
 **Is the user's device blocked from synchronizing with the user's mailbox?**
 
@@ -426,11 +426,11 @@ You attempted to send a message from the device so you should see the request in
 4. Review the Result column for any HTTP response values that do not equal 200.
 5. Select requests where the **Body** column has a value.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Select requests where the Body column has a value":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/requsets-body-column-value.png" alt-text="Screenshot of the requests where the Body column has a value.":::
 
 6. Select the TextView tab to view the response for additional details.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Select the TextView tab":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/text-view-tab.png" alt-text="Screenshot of the TextView tab, which shows the response for additional details.":::
 
 **Were there any HTTP errors found in the Fiddler trace?**
 
@@ -446,11 +446,11 @@ You did not find any HTTP errors, so you should find a status code for the Activ
 3. Enter **ActiveSync** and select Find Sessions.
 4. Review the **Body** column and look for small values.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/small-values-in-body-column.png" alt-text="small values shown in Body column":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/small-values-in-body-column.png" alt-text="Screenshot of the small values shown in the Body column.":::
 
 5. View the EAS XML tabs for the request from the device and response received
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/eas-xml-tabs.png" alt-text="the EAS XML tabs":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/eas-xml-tabs.png" alt-text="Screenshot to view the E A S X M L tabs for the request from the device and response received.":::
 
 **What status code do you see in the response window?**
 
@@ -484,17 +484,17 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" alt-text="Log folder icon" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Log file manager":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window with the copied file selected.":::
 
 4. Verify the file/folder is selected and select OK.
 5. Double-click **ActiveSync: SendMail** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" alt-text="the exclamation point icon":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query by reviewing the Status, Error, ABQ, and sc-status columns.
 
@@ -502,7 +502,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 
 The following example shows the results from the previous query:
 
-:::image type="content" source="media/troubleshoot-activesync-with-exchange-server/query-results-analysis.png" alt-text="Query results analysis example":::
+:::image type="content" source="media/troubleshoot-activesync-with-exchange-server/query-results-analysis.png" alt-text="Screenshot of the query results analysis example.":::
 
 You need to review the results from your query for any issues. To do this, follow these steps:
 
@@ -526,7 +526,7 @@ To determine if the user can successfully connect to Exchange, run the Exchange 
 1. Select **Exchange ActiveSync** from the **Microsoft Exchange ActiveSync Connectivity Tests** and select **Next**.
 1. Enter all the required fields and select **Perform Test**.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/required-fields.png" alt-text="Enter all the required fields in Microsoft Remote Connectivity Analyzer":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/required-fields.png" alt-text="Screenshot to enter all the required fields in the Microsoft Remote Connectivity Analyzer window." lightbox="media/troubleshoot-activesync-with-exchange-server/required-fields.png":::
 
     > [!NOTE]
     > If needed, manually specify the server settings to bypass the Autodiscover user settings request.
@@ -542,11 +542,11 @@ To resolve this issue, review the results of the test and address any found issu
 
 1. Select **Expand All**.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/connectivity-test-fails-error.png" alt-text="the Connectivity test fails error":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/connectivity-test-fails-error.png" alt-text="Screenshot of the Expand All option in the Microsoft Remote Connectivity Analyzer window.":::
 
 2. Locate the error within the results (should be near the end) and address the issue
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-details.png" alt-text="details of the Connectivity test fails error 1":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-addition-details.png" alt-text="Screenshot shows the details of the Connectivity test fails error.":::
 
 **Was the issue resolved using the results of the Exchange Remote Connectivity Analyzer results?**
 
@@ -560,7 +560,7 @@ Verify that the MSExchangeSyncAppPool is started and that it is running under th
 1. [Open IIS Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 2. Expand the server and select Application Pools.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/application-pools.png" alt-text="the Application Pools":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/application-pools.png" alt-text="Screenshot shows that the status of MSExchangeSyncAppPool is Started in the Application Pools window.":::
 
 **Is the MSExchangeSyncAppPool started using the LocalSystem account?**
 
@@ -576,7 +576,7 @@ To resolve this issue, modify the MSExchangeSyncAppPool to use the LocalSystem a
 3. Right-click on the **MSExchangeSyncAppPool** and select **Advanced Settings**.
 4. Modify the Identity value by select **LocalSystem**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/localsystem.png" alt-text="LocalSystem 1":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/local-system.png" alt-text="Screenshot to modify the Identity value by selecting the LocalSystem item.":::
 
 5. Right-click on the **MSExchangeSyncAppPool** and select **Stop**.
 6. Right-click on the **MSExchangeSyncAppPool** and select **Start**.
@@ -627,7 +627,7 @@ Some devices send only the username value for the credentials, which will cause 
 3. In **Features View**, double-click **Authentication**.
 4. Select **Basic authentication**, and select **Edit** in the **Actions** pane.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/edit-basic-auth-settings.png" alt-text="Edit Basic Authentication Settings window 1" border="false":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/edit-basic-authentication-settings.png" alt-text="Screenshot of the Edit Basic Authentication Settings window.":::
 
 **Is there a value present in the Default domain field?**
 
@@ -644,7 +644,7 @@ To resolve this issue, configure a default domain for the ActiveSync virtual dir
 4. Select **Basic authentication**, and select **Edit** in the **Actions** pane.
 5. Enter a value for the **Default domain** and select **OK**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/edit-basic-auth-settings-2.png" alt-text="Edit Basic Authentication Settings window 2" border="false":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/enter-value-default-domain.png" alt-text="Screenshot to enter a value in the Default domain box.":::
 
 **Did enabling a default domain for the ActiveSync virtual directory resolve the issue?**
 
@@ -659,7 +659,7 @@ Verify that the ActiveSync virtual directory is not configured to require client
 2. Expand the server, expand **Sites**, expand the **Default Web Site**, and select **Microsoft-Server-ActiveSync**.
 3. In **Features View**, double-click **SSL Settings**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/ssl-settings.png" alt-text="SSL Settings":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/ssl-settings.png" alt-text="Screenshot of the S S L Settings page in the I I S Manager window.":::
 
 **Is the SSL Setting for Client certificates set to Ignore?**
 
@@ -675,7 +675,7 @@ To resolve this issue, set the client certificates setting to Ignore. To do this
 3. In **Features View**, double-click **SSL Settings**.
 4. Under **Client certificates**, select **Ignore**
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/ssl-settings-2.png" alt-text="SSL Settings 2":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/ssl-settings-ignore.png" alt-text="Screenshot of the S S L Settings page with the Ignore option selected.":::
 
 **Did changing the SSL setting for Client certificates to Ignore resolve the issue?**
 
@@ -690,7 +690,7 @@ When an HTTP redirect is configured in IIS 7, the redirect setting is inherited 
 2. Expand the server, expand **Sites**, expand the **Default Web Site**, and select **Microsoft-Server-ActiveSync**.
 3. In **Features View**, double-click **HTTP Redirect**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/http-redirect.png" alt-text="HTTP Redirect":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/http-redirect.png" alt-text="Screenshot of the H T T P Redirect page in the I I S Manager window.":::
 
 **Is a redirect configured for the ActiveSync virtual directory?**
 
@@ -706,7 +706,7 @@ To resolve this issue, remove the HTTP redirect from the ActiveSync virtual dire
 3. In **Features View**, double-click **HTTP Redirect**.
 4. Clear the check box for **Redirect requests to this destination**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/redirect-requests-to-this-destination.png" alt-text="the Redirect requests to this destination check box":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/redirect-requests-to-this-destination.png" alt-text="Screenshot to clear the Redirect requests to this destination check box.":::
 
 **Did removing the HTTP redirect from the ActiveSync virtual directory resolve the issue?**
 
@@ -724,7 +724,7 @@ Verify the mailbox is enabled for ActiveSync. To do this, follow these steps:
     Get-CASMailbox user | fl ActiveSyncEnabled
     ```
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-casmailbox.png" alt-text="example of Get-CASMailbox":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-cas-mailbox-cmdlet.png" alt-text="Screenshot shows the example of running the Get-CASMailbox cmdlet.":::
 
 **Is the user enabled for ActiveSync?**
 
@@ -742,7 +742,7 @@ To resolve this issue, enable the user for ActiveSync. To do this, follow these 
     Set-CASMailbox user -ActiveSyncEnabled:$True
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/set-casmailbox.png" alt-text="example of Set-CASMailbox":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/set-cas-mailbox.png" alt-text="Screenshot shows an example of running the Set-CASMailbox cmdlet.":::
 
 **Did enabling the mailbox for ActiveSync resolve the issue?**
 
@@ -772,7 +772,7 @@ The Exchange ActiveSync organization settings allow administrators the ability t
     Get-ActiveSyncOrganizationSettings | ft DefaultAccessLevel
     ```
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-activesyncorganizationsettings.png" alt-text="example of Get-ActiveSyncOrganizationSettings":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-active-sync-organization-settings.png" alt-text="Screenshot shows the example of running the Set-ActiveSyncOrganizationSettings cmdlet.":::
 
 **Is the default access level set to Allow?**
 
@@ -823,21 +823,21 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" alt-text="Log folder icon" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Log file manager":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Screenshot of the Log File Manager window with a copied file selected.":::
 
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: Count Syncs with SyncKey of Zero Per User** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" alt-text="the exclamation point icon":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/query-results.png" alt-text="Analyze the results for this query":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/query-results.png" alt-text="Screenshot to analyze the results for the query.":::
 
 **Are there any devices with multiple requests using the SyncKey value of 0?**
 
@@ -857,7 +857,7 @@ In many cases file-level anti-virus impacts ActiveSync traffic by delaying the p
 
 3. Compare the results to the example filter drivers from [this article](https://support.microsoft.com/kb/816071) or search the web for the Filter Name.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fltmc-output.png" alt-text="output of the fltmc command":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fltmc-output.png" alt-text="Screenshot shows the output of the fltmc command.":::
 
 **Did disabling the anti-virus kernel mode filter driver resolve the issue?**
 
@@ -899,7 +899,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 3. Launch Log Parser Studio by double-clicking LPS.exe.
 4. Select the Log folder icon to select files to process.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" alt-text="Log folder icon" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 5. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-file-manager.png" alt-text="Log file manager":::
@@ -908,10 +908,10 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 8. Modify the `DeviceId` value in the WHERE clause at the end of the query with the value from step 2.
 9. Select the exclamation point icon to execute the query.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" alt-text="the exclamation point icon":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 10. Analyze the results for this query by reviewing the Error and sc-status columns.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="reviewing the Error and sc-status columns":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="Screenshot to analyze the results of the Device query." lightbox="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png":::
 
 #### Query results analysis
 
@@ -947,7 +947,7 @@ The first troubleshooting step is enabling mailbox logging on the Client Access 
 2. Make a copy of the web.config file.
 3. Open the web.config file in Notepad and modify the following sections with the values below:
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Opened web.config file in Notepad":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-web-config-file-in-notepad.png" alt-text="Screenshot to modify the values of the web.config file in Notepad.":::
 
 4. [Open IIS Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 5. Expand the server and select **Application Pools**.
@@ -988,15 +988,15 @@ We need to determine the ConversationID for the item before we search the mailbo
 5. Double-click the mailbox to open.
 6. Expand the **Root Container**, expand **Top of Information Store**, then right-click on the **Inbox** (or other folder where the item is located) and select **Open contents table**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-contents-table.png" alt-text="Open contents table":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/open-contents-table.png" alt-text="Screenshot shows steps to select the Open contents table item.":::
 
 7. Select the item within the table, right-click on the tag 0x00710102 and select **Edit property**.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/edit-property.png" alt-text="Edit property":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/edit-property.png" alt-text="Screenshot shows steps to select the Edit property item.":::
 
 8. Copy the **Binary** value.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/copy-the-binary-value.png" alt-text="Copy the Binary value 1":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/copy-the-binary-value.png" alt-text="Screenshot to copy the Binary value using the MfcMapi tool.":::
 
 #### Search for item in mailbox log
 
@@ -1018,7 +1018,7 @@ To do this, follow these steps:
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/import-mailbox-logs-to-grid.png" alt-text="the Import Mailbox Logs to Grid option":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/import-mailbox-logs-to-grid.png" alt-text="Screenshot of the Import Mailbox Logs to Grid button in the Mailbox Log Parser window.":::
 
 #### Search for item in mailbox log
 
@@ -1027,12 +1027,12 @@ To do this, follow these steps:
 
 2. Enter the value from Step 1 in **Search raw log data for strings** and select **Search**
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-raw-log-data-for-strings.png" alt-text="the Search raw log data for strings box":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-raw-log-data-for-strings.png" alt-text="Screenshot to enter the value in the Search raw log data for strings box.":::
 
 3. Take the next 16 bytes (or 32 characters) from the binary value and compare the value with the ConversationId in the search results.  
    Example: 01**CEC1E829ED44997723AC344564BBEEF22D3A1A3373**
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/raw-log-data-for-strings-search-results.png" alt-text="the raw log data for strings search results":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/raw-log-data-for-strings-search-results.png" alt-text="Screenshot of the raw log data for the strings search results.":::
 
 4. Make note of the ServerId value for the item. The value for the example above is 5:11.
 
@@ -1049,11 +1049,11 @@ Now that we know we have the item in our mailbox log, we need to track the actio
 
 1. Search for the ServerId value found earlier.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-for-the-serverid-value-found-earlier.png" alt-text="Search for the ServerId value found earlier":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/serverid-value-found-earlier.png" alt-text="Screenshot to search for the ServerId value found earlier.":::
 
 2. Scroll up the log and look for either RequestBody or ResponseBody. If the item appears in the response body, then the item was updated from the server. Otherwise the item appears in the request body, which means the item was updated from the client.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/maxdocumentdatasize-value.png" alt-text="the MaxDocumentDataSize value":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/max-document-data-size-value.png" alt-text="Screenshot of the MaxDocumentDataSize value.":::
 
 3. Make note of the action (Add, Change, or Delete) and whether the server or client sent the action.
 4. Repeat steps 2-4 until you cannot find any further entries.
@@ -1089,7 +1089,7 @@ The activity on the Exchange server indicates that the device should have the co
 
 5. Select the **EAS XML** tabs to view the request and response.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/request-and-response.png" alt-text="Select the EAS XML tabs to view the request and response":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/request-and-response.png" alt-text="Screenshot to select the E A S X M L tabs to view the request and response.":::
 
 6. Locate all requests and responses for the ServerId found earlier.
 
@@ -1116,11 +1116,11 @@ We expect the device to send one or more requests to obtain the latest updates f
 4. Review the Result column for any HTTP response values that do not equal 200.
 5. Select requests where the **Body** column has a value.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-1.png" alt-text="Select requests where the Body column has a value":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/requsets-body-column-value.png" alt-text="Screenshot of the requests where the Body column has the value.":::
 
 6. Select the **TextView** tab to view the response for additional details.
 
-     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/fiddler-trace-analysis-2.png" alt-text="Select the TextView tab to view the response for additional details":::
+     :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/text-view-tab.png" alt-text="Screenshot of the TextView tab, showing the response for additional details.":::
 
 **Were there any errors found in the Fiddler trace?**
 
@@ -1152,7 +1152,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" alt-text="Log folder icon" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
@@ -1163,11 +1163,11 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 6. Modify the DeviceId value in the WHERE clause at the end of the query with the value from the previous step.
 7. Select the exclamation point icon to execute the query.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" alt-text="the exclamation point icon":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 8. Analyze the results for this query by reviewing the Error and sc-status columns.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="reviewing the Error and sc-status columns":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/error-and-sc-status-columns.png" alt-text="Screenshot of analyzing the results of the Device query" lightbox="error-and-sc-status-columns.png":::
 
 #### Query results analysis
 
@@ -1241,7 +1241,7 @@ We need to obtain the DeviceId for the ActiveSync client experiencing the issue.
     Get-ActiveSyncDeviceStatistics -Mailbox clt | fl DeviceId,DeviceType
     ```
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-activesyncdevicestatistics.png" alt-text="example of Get-ActiveSyncDeviceStatistics":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/get-active-sync-device-statistics.png" alt-text="Screenshot shows an example of running the Get-ActiveSyncDeviceStatistics cmdlet.":::
 
 3. Make note of the `DeviceID` value.
 
@@ -1252,7 +1252,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" alt-text="Log folder icon" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
@@ -1263,7 +1263,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 6. Modify the DeviceId value in the WHERE clause at the end of the query with the value from the previous step.
 7. Select the exclamation point icon to execute the query.
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" alt-text="the exclamation point icon":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 8. Analyze the results for this query by reviewing the Error and sc-status columns.
 
