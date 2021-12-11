@@ -1,7 +1,7 @@
 ---
 title: Support policy for SQL Server
 description: This article describes the support policy for Microsoft SQL Server.
-ms.date: 12/09/2021
+ms.date: 12/10/2021
 ms.prod-support-area-path: General
 ms.reviewer: sureshka
 ms.prod: sql
@@ -19,13 +19,13 @@ This article describes the support policies and troubleshooting boundaries for S
 
 ## Supported operating systems
 
-Depending on the version and edition of SQL Server, you can install SQL Server on a supported Windows operating system. The exact details are outlined on the [SQL Server 2019 Big Data Clusters release notes](/sql/big-data-cluster/release-notes-big-data-cluster).
+Depending on the version and edition of SQL Server, you can install SQL Server on a supported Windows or Linux operating system. 
 
 This documentation outlines the specific operating systems on which the product is tested and validated. When you install older version of SQL Server on newer Windows operating systems, you have to be on a supported service pack.
 
 Starting in SQL Server 2017, you can install SQL Server on Linux operating systems. [Installation guidance for SQL Server on Linux](/sql/linux/sql-server-linux-setup) outlines the current list of supported Linux operating systems on which you can install and configure SQL Server for production use.
 
-Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on Kubernetes. Review the supported Host OS for Kubernetes in the [SQL Server 2019 Big Data Clusters release notes](/sql/big-data-cluster/release-notes-big-data-cluster) under the **Supportability** section.
+Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on Kubernetes. Review the supported Host OS for Kubernetes in the [SQL Server 2019 Big Data Clusters release notes](/sql/big-data-cluster/release-notes-big-data-cluster) under the **Supportability** section. 
 
 ## Supported hardware
 
