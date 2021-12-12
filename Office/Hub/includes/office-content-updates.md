@@ -2,6 +2,14 @@
 
 
 
+## Week of December 06, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/8/2021 | [Cannot verify the license for this product when you start an Office app](/office/troubleshoot/activation/license-issue-when-start-office-application) | modified |
+
+
 ## Week of November 29, 2021
 
 
