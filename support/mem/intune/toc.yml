@@ -249,22 +249,16 @@ items:
       href: verify-ndes-configuration.md
   - name: Conditional Access
     items:
+    - name: Troubleshoot Conditional Access
+      href: troubleshoot-conditional-access.md
+    - name: Troubleshoot the Exchange Connector
+      href: troubleshoot-exchange-connector.md
+    - name: Common errors with the Exchange Connector
+      href: troubleshoot-exchange-connector-common-errors.md
     - name: Can't move an Intune Exchange connector
       href: fails-moving-intune-exchange-connector.md
     - name: Could not retrieve access token for Graph API
       href: could-not-retrieve-access-token.md
-    - name: Intune Exchange Connector version is not supported
-      href: exchange-connector-version-not-supported.md
-    - name: Troubleshoot Conditional Access
-      href: troubleshoot-conditional-access.md
-    - name: Troubleshoot the Exchange Connector
-      items:
-      - name: Troubleshoot the Exchange connector
-        href: troubleshoot-exchange-connector.md
-      - name: Common problems with the Exchange connector
-        href: troubleshoot-exchange-connector-common-problems.md
-      - name: Common errors with the Exchange connector
-        href: troubleshoot-exchange-connector-common-errors.md
     - name: Troubleshoot Jamf Pro integration
       href: troubleshoot-jamf.md
     - name: Unable to connect Jamf console to Intune
