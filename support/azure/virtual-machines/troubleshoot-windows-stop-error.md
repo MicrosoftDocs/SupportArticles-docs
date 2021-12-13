@@ -131,7 +131,7 @@ Before taking any steps, you should create a copy of the **\windows\system32\con
 1. In Windows search, enter **regedit** and open the Registry Editor application.
 1. In the Registry Editor, highlight the key **HKEY_LOCAL_MACHINE** and select **File > Load Hive...** from the menu.
 
-   :::image type="content" source="media/troubleshoot-windows-stop-error/load-hive.png" alt-text="Screenshot shows steps to load a hive in the Registry Editor.":::
+   :::image type="content" source="media/troubleshoot-windows-stop-error/load-hive.svg" alt-text="Screenshot shows steps to load a hive in the Registry Editor.":::
 
 1. In the Load Hive dialog, select **\windows\system32\config\SYSTEM** and click Open.
    1. You'll be prompted for a name, which you should enter **BROKENSYSTEM**. This name will help differentiate the affected hives while you're troubleshooting.
@@ -162,7 +162,7 @@ To enable memory dump collection and Serial Console, run the following script:
    
    - In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder.
 
-      :::image type="content" source="media/troubleshoot-windows-stop-error/command-output.png" alt-text="Screenshot shows the output of the command, which lists the identifier number under the Windows Boot Loader section.":::
+      :::image type="content" source="media/troubleshoot-windows-stop-error/command-output.svg" alt-text="Screenshot shows the output of the command, which lists the identifier number under the Windows Boot Loader section.":::
 
    1. For a Generation 2 VM, enter the following command and note the identifier listed:
    
