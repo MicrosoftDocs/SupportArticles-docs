@@ -236,8 +236,8 @@ The following table describes the causes of some common HTTP status codes.
 |401.5|Authorization failed by ISAPI/CGI application|An ISAPI application or a Common Gateway Interface (CGI) application doesn't let the request be processed because of an authorization problem.|
 |403.1|Execute access forbidden|The appropriate level of the Execute permission isn't granted.|
 |403.2|Read access forbidden|The appropriate level of the Read permission isn't granted. Verify that you have set up IIS 7.0 and later versions to grant the Read permission to the directory. Additionally, if you use a default document, verify that the default document exists.|
-|403.3|Write access forbidden|The appropriate level of the Write permission isn't granted. Verify that the IIS 7.0 and later versions permissions and the NTFS file system permissions are set up to grant the Write permission to the directory.|
-|403.4|SSL required|The request is made over a non-secure channel, and the web application requires a Secure Sockets Layer (SSL) connection.|
+|403.3|Write access forbidden|The appropriate level of the Write permission isn't granted. Check the IIS 7.0 and later versions permissions and the NTFS file system permissions. Make sure that they are set up to grant the Write permission to the directory.|
+|403.4|SSL required|The request is made over a non-secure channel. But the web application requires a Secure Sockets Layer (SSL) connection.|
 |403.5|SSL 128 required|The server is configured to require a 128-bit SSL connection. But, the request isn't sent by using 128-bit encryption.|
 |403.6|IP address rejected|The server is configured to deny access to the current IP address.|
 |403.7|Client certificate required|The server is configured to require a certificate for client authentication. But the client browser doesn't have an appropriate client certificate installed. For more information, see [HTTP error 403.7 when you run a web application that's hosted on a server that is running IIS 7.0](/troubleshoot/iis/http-error-403-7-forbidden-web-app).|
