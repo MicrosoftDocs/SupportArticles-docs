@@ -48,7 +48,9 @@ A snapshot is a full, read-only copy of a virtual hard drive (VHD). We recommend
 
 1. Go to [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has problem.
 1. On the left pane, select **Disks**, and then select the name of the OS disk.
+
     :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/name-os-disk.png" alt-text="Screenshot shows the name of the operating system disk.":::
+
 1. On the **Overview** page of the OS disk, and then select **Create snapshot**.
 1. Create a snapshot in the same location as the OS disk.
 
@@ -58,6 +60,7 @@ To create a disk from the snapshot, follow these steps:
 1. Select **Cloud Shell** from the Azure portal.
 
     :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/cloud-shell.png" alt-text="Screenshot of the Cloud Shell button in the Azure portal.":::
+
 1. Run the following PowerShell commands to create a managed disk from the snapshot. You should replace these sample names with the appropriate names.
 
     ```powershell
@@ -168,7 +171,8 @@ Azure portal now supports change the OS disk of the VM. To do this, follow these
 
 1. Go to [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has problem.
 1. On the left pane, select **Disks**, and then select **Swap OS disk**.
-        :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/swap-os-disk.png" alt-text="Screenshot of the Swap O S Disk option in the Azure portal.":::
+
+   :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/swap-os-disk.png" alt-text="Screenshot of the Swap O S Disk option in the Azure portal.":::
 
 1. Choose the new disk that you repaired, and then type the name of the VM to confirm the change. If you do not see the disk in the list, wait 10 ~ 15 minutes after you detach the disk from the troubleshooting VM. Also make sure that the disk is in the same location as the VM.
 1. Select OK.
