@@ -17,7 +17,6 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 
 ## Prepare for the update
 
-
 1. Before you begin the manual update process, make sure that you have established a clear servicing maintenance window. When you have successfully completed the procedures, you can let users back onto the system.
 2. On a computer that has the Active Directory Users and Computers  snap-in installed, add the user account that you want to use for updating to the **Prefix** -Setup-Admins group in the organizational unit (OU) for the stamp (Parent OU\StampPrefix OU).
 
@@ -64,12 +63,12 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
        - KB3134222
 
     :::image type="content" source="media/apply-out-of-band-updates-to-cps/add-updates.png" alt-text="Screenshot shows steps to add the updates to the baseline." border="false":::
-    
+
 13. When you have finished, click **Next**.
 14. On the Assignment Scope tab, select the All Hosts  check box and all the check boxes under Infrastructure.
 
     :::image type="content" source="media/apply-out-of-band-updates-to-cps/assignment-scope.png" alt-text="Screenshot of the All Hosts check box and all the check boxes under Infrastructure." border="false":::
-    
+
 15. Click **Next** to continue.
 
     > [!NOTE]
@@ -99,7 +98,7 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 
     > [!NOTE]
     >  Each node may take approximately 10 minutes to be completed.
-    
+
     :::image type="content" source="media/apply-out-of-band-updates-to-cps/cluster-aware-updating.png" alt-text="Screenshot shows the Cluster-Aware Updating process is running." border="false":::
 
 9. Each node is complete when the update status changes to Succeeded. Keep the Cluster-Aware Updating window open for the next procedure.
@@ -118,7 +117,6 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 
 ## Update the infrastructure virtual machines
 
-
 1. In the VMM console, open the VMs and Services  workspace, and then click All Hosts.
 2. On the ribbon (at the top), click **VMs**.
 
@@ -132,7 +130,7 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 
     > [!NOTE]
     > This excludes the Linux VMs hosting the VSA runtime.
-    
+
 3. Right-click a VM (such as **Prefix** APA01), point to Connect or View, and then click **Connect via Console**.
 
     > [!NOTE]
@@ -162,7 +160,7 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 3. Select all the computers except for the compute nodes and the VMM server, right-click the selection, and then click Change Membership.
 4. Clear the SCVMM Managed Computers check box, and then click **OK**.
 5. Refresh the view to make sure the computers are moved back to the Unassigned Computers group.
-    
+
     :::image type="content" source="media/apply-out-of-band-updates-to-cps/update-services.png" alt-text="Screenshot to check the computers are moved back to the Unassigned Computers group.":::
 
 ## Post-update clean up
