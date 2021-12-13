@@ -647,6 +647,8 @@
       href: tools/error-use-configuration-manager-restart-agent-service.md
     - name: The SQLDMO Application object failed to initialize when using Sqlmaint
       href: tools/error-you-run-sqlmaint-utility.md
+    - name: Troubleshoot Database Mail issues
+      href: tools/troubleshoot-database-mail-issues.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
     - name: Use SQLIOSim utility to simulate SQL Server disk activity
