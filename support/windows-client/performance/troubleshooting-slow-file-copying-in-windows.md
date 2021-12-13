@@ -33,7 +33,8 @@ If the speed is normal, use another client computer to copy the files from or to
 ## Client-side troubleshooting
 
 Let's verify the kind of the shared folder. To do so, open the properties of the shared folder. For the Distributed File System (DFS) shared folder, the **DFS** tab is displayed.  
-![3860_image1](./media/troubleshooting-slow-file-copying-in-windows/18541_en_1.png)  
+
+:::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/dfs-tab.png" alt-text="Screenshot of the DFS tab in the shared folder properties window." border="false"::: 
 
 ### The share folder is a DFS shared folder
 
@@ -42,7 +43,8 @@ How to determine the UNC path of the DFS shared folder:
 
 1. Right-click the shared folder, and then select **Properties**.
 2. On the **DFS** tab, you see the UNC path in **Referral list**.  
-   ![3860_image4](./media/troubleshooting-slow-file-copying-in-windows/18542_en_1.png)
+
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/referral-list.png" alt-text="Screenshot of the DFS tab in the shared folder properties window, which shows the UNC path in Referral list.":::
 
 If it is still slow when you use the UNC path, see [slow performance when you copy a single file, a folder, or multiple files](#slow-performance-occurs-when-you-copy-a-single-file-a-folder-or-multiple-files).
 
@@ -68,19 +70,23 @@ If you compare the copying time for a folder that contains multiple files with t
 
 To resolve this issue, follow these steps on the client computer that has the problem:
 1. [Delete the third-part network provider from client computer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732472(v=ws.10)). The default options are as follows. (Any other provider can be considered as a third party.)  
-   ![3860_image5](./media/troubleshooting-slow-file-copying-in-windows/18543_en_1.png)  
+
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/network-provider.png" alt-text="Screenshot of the Provider Order tab in the Advanced Settings window, which shows the default options of Network Providers.":::  
 
 2. Remove additional values from the following registry keys. To do this, open Registry Editor. Located the following keys. Each key contains a Provider Order value.
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\NetworkProvider\HwOrder`
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order`  
    Check to make sure that each Provider Order value has only three values: "`RDPNP`," "`LanmanWorkstation`," and "`webclient`."  
-   ![3860_image6](./media/troubleshooting-slow-file-copying-in-windows/18544_en_1.png)  
 
-3. Compare the settings of **Jumbo Frames** and **Large send offload** with the settings on working computers. and adjust the settings of **Jumbo Frames** and **Large send offload** accordingly. (If it is disabled, enable it, and then check whether that helps)  
-   ![3860_image7](./media/troubleshooting-slow-file-copying-in-windows/18545_en_1.png)   
-4. Make sure that the workstation service is running.
-5. Make sure that **client for Microsoft networking** is selected in the network connection properties.  
-   ![3860_image8](./media/troubleshooting-slow-file-copying-in-windows/18546_en_1.png)  
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/edit-string.png" alt-text="Screenshot of the Edit String dialog of the above registry keys." border="false":::  
+
+3. Compare the settings of **Jumbo Frames** and **Large send offload** with the settings on working computers. and adjust the settings of **Jumbo Frames** and **Large send offload** accordingly. (If it is disabled, enable it, and then check whether that helps) 
+ 
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/jumbo-packet-settings.png" alt-text="Screenshot of the Jumbo Packet settings in the Advanced tab of the network adapter properties.":::   
+1. Make sure that the workstation service is running.
+1. Make sure that **client for Microsoft networking** is selected in the network connection properties.  
+
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/client-microsoft-networks.png" alt-text="Screenshot of the Local Area Connection Properties dialog, in which the Client for Microsoft Networks item is selected." border="false"::::
 
 ## Server-side troubleshooting
 
@@ -98,7 +104,8 @@ If the issue isn't resolved, follow these steps to troubleshoot the issue:
 
 How to determine the referral DFS server to which the clients are connecting:
 1. On a client computer, right-click the shared folder, and then select **Properties**.
-2. On the **DFS** tab, check the referral list. The current DFS server is marked as active. In the following example, the client is connecting to the server HAOMS1.  
-   ![3860_image4](./media/troubleshooting-slow-file-copying-in-windows/18542_en_1.png)  
+2. On the **DFS** tab, check the referral list. The current DFS server is marked as active. In the following example, the client is connecting to the server HAOMS1. 
+ 
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/referral-list.png" alt-text="Screenshot of the DFS tab in the shared folder properties window on a client computer, which shows the UNC path in Referral list.":::
 
 

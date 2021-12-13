@@ -88,6 +88,20 @@ Search for any matches to folders located recursively under the two folder paths
 ^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$
 ```
 
+### Example 4
+
+Search for any matches that contain either of the two strings, `Agent1.contoso.com` or `Agent2.contoso.com` (case insensitive):
+
+```perl
+^(?i)(agent1.contoso.com)|(?i)(agent2.contoso.com)$
+```
+
+Search for any matches that contain `Agent` (case insensitive):
+
+```perl
+^(?i)(agent.*)$
+```
+
 ## Regular expressions via SDK
 
 The Operations Manager SDK has a **Matches** criteria operator for filtering objects. This operator uses the same functionality as `MatchesCriteria` in the GroupCalc case mentioned earlier.

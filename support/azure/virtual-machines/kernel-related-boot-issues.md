@@ -149,28 +149,28 @@ The following are examples of grub files for different versions of the Linux ker
 ```
 title CentOS (2.6.32-504.16.2.el6.x86_64)
 root (hd0,0)
-kernel /boot/vmlinuz-2.6.32-504.16.2.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300 crashkernel=auto
+kernel /boot/vmlinuz-2.6.32-504.16.2.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 crashkernel=auto
 initrd /boot/initramfs-2.6.32-504.16.2.el6.x86_64.img
 ```
 
 ```
 title CentOS (2.6.32-504.12.2.el6.x86_64)
 root (hd0,0)
-kernel /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300 crashkernel=auto
+kernel /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 crashkernel=auto
 initrd /boot/initramfs-2.6.32-504.12.2.el6.x86_64.img
 ```
 
 ```
 title CentOS (2.6.32-504.8.1.el6.x86_64)
 root (hd0,0)
-kernel /boot/vmlinuz-2.6.32-504.8.1.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300 crashkernel=auto
+kernel /boot/vmlinuz-2.6.32-504.8.1.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 crashkernel=auto
 initrd /boot/initramfs-2.6.32-504.8.1.el6.x86_64.img
 ```
 
 ```
 title CentOS (2.6.32-431.29.2.el6.x86_64)
 root (hd0,0)
-kernel /boot/vmlinuz-2.6.32-431.29.2.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300
+kernel /boot/vmlinuz-2.6.32-431.29.2.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 
 initrd /boot/initramfs-2.6.32-431.29.2.el6.x86_64.img
 ```
 
@@ -199,7 +199,7 @@ If the serial console isn't enabled on your VM, or if it doesn't work, you can r
     
     #root (hd0,0)
     
-    #kernel /boot/vmlinuz-2.6.32-504.16.2.el6.x86_64 ro root=UUID=UUID rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300 crashkernel=auto
+    #kernel /boot/vmlinuz-2.6.32-504.16.2.el6.x86_64 ro root=UUID=UUID rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM numa=off console=ttyS0 earlyprintk=ttyS0 crashkernel=auto
     
     #initrd /boot/initramfs-2.6.32-504.16.2.el6.x86_64.img
     ```
@@ -263,5 +263,5 @@ You can follow these steps to rebuild the initramfs file:
 |`ls -ltr /lib/modules/`|`drwxr-xr-x. 7 root root 4096 Date 2.6.32-431.11.2.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date 2.6.32-431.17.1.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date 2.6.32-431.29.2.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date\Time 2.6.32-504.1.3.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date\Time 2.6.32-504.12.2.el6.x86_64`|
 |`dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img 2.6.32-504.12.2.el6.x86_64`<br/>`ls -ltr /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img`| `-rw---. 1 root root 19354168 Date\Time /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img` |
 |`cp /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 /mnt/troubleshootingdisk/boot/`<br/>`ls -ltr /mnt/troubleshootingdisk/boot/vmlinuz*`|`-rwxr-xr-x. 1 root root 4128368 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4128688 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.3.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4129872 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.17.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4131984 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.29.2.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4153008 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.8.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4152720 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.12.2.el6.x86_64`|
-|`vi /mnt/troubleshootingdisk/boot/grub/grub.conf`|title CentOS (2.6.32-504.12.2.el6.x86_64)<br/>root (hd0,0)<br/>`kernel /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 ro root=UUID=UUID rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 crashkernel=auto KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM rhgb quiet numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300`<br/>initrd /boot/initramfs-2.6.32-504.12.2.el6.x86_64.img|
+|`vi /mnt/troubleshootingdisk/boot/grub/grub.conf`|title CentOS (2.6.32-504.12.2.el6.x86_64)<br/>root (hd0,0)<br/>`kernel /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 ro root=UUID=UUID rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 crashkernel=auto KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM rhgb quiet numa=off console=ttyS0 earlyprintk=ttyS0`<br/>initrd /boot/initramfs-2.6.32-504.12.2.el6.x86_64.img|
 |||
