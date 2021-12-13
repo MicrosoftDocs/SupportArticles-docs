@@ -26,7 +26,7 @@ When you try to connect to a VM, you experience the following scenarios:
 
 - The VM screenshot shows the operating system is fully loaded and waiting for credentials.
 
-    ![Screenshot of the VM status](./media/troubleshoot-remote-desktop-services-issues/login-page.png)
+    :::image type="content" source="media/troubleshoot-remote-desktop-services-issues/login-page.png" alt-text="Screenshot shows the operating system is fully loaded and waiting for credentials.":::
 
 - You remotely view the event logs in the VM by using Event Viewer. You see that Remote Desktop Services, TermService, isn't starting or fails to start. The following log is a sample:
 
@@ -146,7 +146,7 @@ To troubleshoot this issue, use the Serial Console. Or else [repair the VM offli
 
 6. Open **ProcMonTrace.PML** by using Process Monitor the working VM. Then filter by **Result is ACCESS DENIED**, as shown in the following screenshot：
 
-    ![Filter by result in Process Monitor](./media/troubleshoot-remote-desktop-services-issues/process-monitor-access-denined.png)
+    :::image type="content" source="media/troubleshoot-remote-desktop-services-issues/process-monitor-access-denined.png" alt-text="Screenshot of filtering by result in the Process Monitor Filter window.":::
 
  
 6. Fix the registry keys, folders, or files that are on the output. Usually, this problem is caused when the sign-in account that's used on the service doesn't have ACL permission to access these objects. To know the correct ACL permission for the sign-in account, you can check on a healthy VM. 

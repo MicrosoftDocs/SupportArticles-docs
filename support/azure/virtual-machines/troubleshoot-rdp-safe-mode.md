@@ -24,7 +24,7 @@ This article shows how to resolve a problem in which you cannot connect to Azure
 
 You cannot make an RDP connection or other connections (such as HTTP) to a VM in Azure because the VM is configured to boot into Safe Mode. When you check the screenshot in the [Boot diagnostics](/azure/virtual-machines/troubleshooting/boot-diagnostics) in the Azure portal, you might see that the VM boots normally, but the network interface is not available:
 
-![Image about network inferce in Safe Mode](./media/troubleshoot-rdp-safe-mode/network-safe-mode.png)
+:::image type="content" source="media/troubleshoot-rdp-safe-mode/network-safe-mode.png" alt-text="Screenshot shows the network interface isn't available.":::
 
 ## Cause
 
@@ -55,7 +55,7 @@ To resolve this issue, use Serial control to configure the VM to boot into norma
 
      In either of these two modes, RDP will not be started. Therefore, the fix remains the same.
 
-     ![Image about the Safe Mode flag](./media/troubleshoot-rdp-safe-mode/safe-mode-tag.png)
+     :::image type="content" source="media/troubleshoot-rdp-safe-mode/safe-mode-flag.png" alt-text="Screenshot shows the safeboot flag value is Minimal.":::
 
 3. Delete the **safemoade** flag, so the VM will boot into normal mode:
 
@@ -125,7 +125,7 @@ To enable dump log and Serial Console, run the following script.
 
     If the VM is configured to boot into Safe Mode, you will see an extra flag under the **Windows Boot Loader** section called **safeboot**. If you do not see the **safeboot** flag, this article does not apply to your scenario.
 
-    ![The image about boot Identifier](./media/troubleshoot-rdp-safe-mode/boot-id.png)
+    :::image type="content" source="media/troubleshoot-rdp-safe-mode/windows-boot-loader-safeboot.png" alt-text="Screenshot of the safeboot flag under the Windows Boot Loader section.":::
 
 3. Remove the **safeboot** flag, so the VM will boot into normal mode:
 

@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4014115
 
 Microsoft Azure Active Directory (Azure AD) Connect doesn't support primary group functionality. Therefore, it does not query the **PrimaryGroupID** attribute to build the group membership of a user. This may cause problems for users who are still using the primary group feature.
 
-![Screenshot of the primary group page](./media/aad-connect-exclude-user-primary-group/4014117_en_1.png)  
+:::image type="content" source="media/aad-connect-exclude-user-primary-group/primary-group.png" alt-text="Screenshot shows that Azure A D Connect doesn't support the primary group functionality." border="false":::
 
 When you set the primary group for a user, that user is excluded from the corresponding group membership in Active Directory. Instead, the **PrimaryGroupID** attribute is set with that group.
 

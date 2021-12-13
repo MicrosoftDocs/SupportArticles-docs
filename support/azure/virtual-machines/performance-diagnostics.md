@@ -51,6 +51,7 @@ You can run performance diagnostics directly from the Azure portal, where you ca
     | Ubuntu                     | 14.04, 16.04, 18.04, 20.04                               |
     | Debian                     | 8, 9, 10 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`]                                      |
+    | AlmaLinux                  | 8.4                                               |
     |                            |                                                   |
 
 >[!Note]
