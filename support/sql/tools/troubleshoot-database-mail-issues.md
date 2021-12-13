@@ -481,8 +481,7 @@ WHERE (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR
 GO
 ```
 
-
-See [sysmail system views](#relevant-logging) section for tips regarding what each sysmail view shows.
+See [sysmail system views](#msdb-sysmail-system-views) section for tips regarding what each sysmail view shows.
 
 ### Event log
 
