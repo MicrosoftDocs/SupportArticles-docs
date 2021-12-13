@@ -2,6 +2,26 @@
 
 
 
+## Week of December 06, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/6/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
+| 12/6/2021 | [ErrorMailRecipientNotFound when viewing free/busy information](/exchange/troubleshoot/calendars/no-free-busy-information-retrieved) | modified |
+| 12/7/2021 | [Two OneDrive accounts when uploading attachments](/exchange/troubleshoot/send-emails/two-onedrive-accounts-when-uploading-attachments) | modified |
+| 12/7/2021 | [Cannot add permissions to user or room mailbox](/exchange/troubleshoot/user-and-shared-mailboxes/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest) | modified |
+| 12/7/2021 | [Name error when adding a Room or Resource mailbox](/exchange/troubleshoot/user-and-shared-mailboxes/cannot-add-room-or-resource-mailbox) | modified |
+| 12/7/2021 | [Create and manage resource mailboxes](/exchange/troubleshoot/user-and-shared-mailboxes/create-and-manage-resource-mailboxes) | modified |
+| 12/7/2021 | [Mailbox recovery in Exchange Online](/exchange/troubleshoot/user-and-shared-mailboxes/mailbox-recovery-in-exchange-online) | modified |
+| 12/7/2021 | [No soft-deleted mailbox after license removal](/exchange/troubleshoot/user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal) | modified |
+| 12/7/2021 | [Cumulative Update 20 shown instead of CU22](/exchange/troubleshoot/setup/cumulative-update-20-is-shown-not-22) | modified |
+| 12/7/2021 | [Installing updates for Mailbox-role server fails](/exchange/troubleshoot/setup/error-occurred-while-configuring-search-foundation) | modified |
+| 12/7/2021 | [User photos aren't synced to Exchange Online](/exchange/troubleshoot/administration/user-photos-not-synced-to-exchange-online) | modified |
+| 12/7/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
+| 12/8/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
+
+
 ## Week of November 29, 2021
 
 
