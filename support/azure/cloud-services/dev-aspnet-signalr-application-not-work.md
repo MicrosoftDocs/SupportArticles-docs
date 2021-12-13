@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4464827
 
 Visitor Tracker is an ASP.NET SignalR application that tracks the number of visitors accessing the website. Each user is given a unique tracking ID that is displayed on the browser as the user moves the mouse pointer. As new users keep on visiting the site, the other users will be able to see new tracking IDs on their browsers. Click on the below image to get an idea of the expected output.
 
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/4464807_en_1.gif" alt-text="Screenshot of opening multiple windows and hovering over the text.":::
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/tracking-id.gif" alt-text="Screenshot of opening multiple windows and hovering over the text.":::
 
 But after few days the application stopped working i.e users are not able to see their tracking IDs as well as for the other users on the browser.
 
@@ -32,7 +32,7 @@ SignalR uses the WebSocket transport where available, and falls back to older tr
 
 Example of F12 developer trace:
 
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/4464816_en_1.png" alt-text="Screenshot of developer trace.":::
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/developer-trace.png" alt-text="Screenshot of the developer trace." lightbox="media/scenario-8-aspnet-signalr-application-not-work/developer-trace.png":::
 
 From the above developer trace, you can see that client tried to connect over number of transports but all of them failed with 404 error. You can check the server response for the first negotiate request for which you got HTTP 200 response.
 
@@ -59,7 +59,7 @@ From the above network trace it's clear that client tried to connect over WebSoc
 
 Expand Web Server (IIS) role verify if WebSocket protocol was enabled:
 
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/4464823_en_1.png" alt-text="Screenshot of WebSocket protocol status.":::
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/websocket-feature.png" alt-text="Screenshot of the Add Roles and Features Wizard that shows the WebSocket protocol status.":::
 
 In order to enable WebSocket feature you can use the below DISM command in a startup task, so that when the role starts it installs the WebSocket feature in IIS.
 
