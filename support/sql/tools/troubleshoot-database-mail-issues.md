@@ -45,7 +45,7 @@ When troubleshooting Database Mail, search the `sysmail_event_log` view for even
 
 `Sysmail_event_log` contains one row for each Windows or SQL Server message returned by the Database Mail system. You can check the Database Mail Log if you right-click on **Management** \> **Database Mail**, and select **View Database Mail Log**.
 
-:::image type="content" source="media/DBMail-ViewLog.png" alt-text="View Database Mail log":::
+:::image type="content" source="media/troubleshoot-database-mail-issues/DBMail-ViewLog.png" alt-text="View Database Mail log":::
 
 This executes the following query to `sysmail_event_log`.
 
@@ -191,12 +191,12 @@ If you haven't already, become familiar with the steps for configuring Database 
 
 1. Right-click on **Management** -> **Database Mail**, and select **Configure Database Mail**
 
-    :::image type="content" source="media/DbMail-Configure.png" alt-text="Configure Database Mail":::
+    :::image type="content" source="media/troubleshoot-database-mail-issues/DbMail-Configure.png" alt-text="Configure Database Mail":::
 
 2. Click **Manage Database Mail accounts and profiles** and select **Next**
 3. If you have an account, select **View, change, or delete an existing account** and select **Next**, otherwise select **create new account**. This will show you the settings the account is using to connect to the SMTP server and send Database Mail.
 
-    :::image type="content" source="media/DbMail Configuration Wizard.png" alt-text="Database mail Configuration Wizard":::
+    :::image type="content" source="media/troubleshoot-database-mail-issues/DbMail Configuration Wizard.png" alt-text="Database mail Configuration Wizard":::
 
 Of particular interest are:
 
@@ -218,7 +218,7 @@ To check the configuration:
 
 This screenshot shows the default settings, you can see the default settings. Make note of any unique system parameters and determine if they could have any relation to the issue you're troubleshooting.
 
-:::image type="content" source="media/DbMail Configuration -SystemParameters.png" alt-text="Database Mail System Parameters":::
+:::image type="content" source="media/troubleshoot-database-mail-issues/DbMail Configuration -SystemParameters.png" alt-text="Database Mail System Parameters":::
 
 ## Send a test mail
 
@@ -230,7 +230,7 @@ It will be useful to send a test email to try to reproduce the issue you are exp
 
 To send a test Database Mail, Right-click on **Management** \> **Database Mail**, and select **Send Test E-Mail...**
 
-:::image type="content" source="media/DBMail_SendTestMail.png" alt-text="Database Mail Send Test Mail":::
+:::image type="content" source="media/troubleshoot-database-mail-issues/DBMail_SendTestMail.png" alt-text="Database Mail Send Test Mail":::
 
 After you send the test mail, then review the Database Mail log and sysmail views for what happened to the test mail. If the test mail isn't sent successfully, review the account configuration and compare to the SMTP server requirements at which point you may need to involve the SMTP server administrator. If the test mail is sent successfully, but there are still problems with other mails not being sent, then you need to drill into the specifics of the email messages that aren't getting sent. Review the actual `sp_send_dbmail` command that is being executed. If you don't have the T-SQL command, you can gather an Xevent trace (with `sql_batch_completed` and `sql_batch_started`) and look at the `batch_text` column.
 
@@ -525,7 +525,7 @@ You can collect a trace of the T-SQL commands that are being executed on the sys
 
 You can use [PSSDiag](https://github.com/microsoft/DiagManager/releases) to gather the Xevent or SQL Server trace using the General Performance template. As shown in the following screenshot, select some additional events, specifically all of the broker events.
 
-:::image type="content" source="media/DBMail-Pssdiag-BrokerEvents.png" alt-text="Pssdiag Enable Broker Events":::
+:::image type="content" source="media/troubleshoot-database-mail-issues/DBMail-Pssdiag-BrokerEvents.png" alt-text="Pssdiag Enable Broker Events":::
 
 #### Analysis
 
@@ -554,7 +554,7 @@ Process Monitor produces a very noisy capture, and it's best to apply filters to
 
 When you start *procmon.exe* it will begin capturing data immediately. The GUI is very straightforward. You will want to stop the capturing of events until you're ready to reproduce the issue, so select **File** -\> **Capturing Events (Ctrl+E)**; this will uncheck the menu item and stop event collection. Select the eraser icon or press Ctrl+X to clear the events already captured:
 
-:::image type="content" source="media/DbMail_ProcMon-Clear.png" alt-text="Procmon clear events":::
+:::image type="content" source="media/troubleshoot-database-mail-issues/DbMail_ProcMon-Clear.png" alt-text="Procmon clear events":::
 
 When you're ready to repro the issue:
 
@@ -570,7 +570,7 @@ Click **Filter -\> Filter...** or click the filter icon to open the filter menu.
 
 Add entries for Process Name is *sqlservr.exe* and *DatabaseMail.exe*:
 
-:::image type="content" source="media/DbMail-ProcMon-Filter.png" alt-text="Procmon filter database mail":::
+:::image type="content" source="media/troubleshoot-database-mail-issues/DbMail-ProcMon-Filter.png" alt-text="Procmon filter database mail":::
 
 As is the case with SQL Xevent or Trace capture, it's not immediately obvious what to looking for. As is typically the case, the best way to start the analysis is to compare it to a Procmon capture for a successfully sent Database Mail. Ideally, compare to a successfully-sent email from the same environment where the issue occurs. But, if no Database Mail can be successfully sent in the specific environment, compare to a successful mail delivery in another environment.
 
