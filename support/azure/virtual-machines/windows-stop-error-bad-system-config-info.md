@@ -24,12 +24,12 @@ This article provides steps to resolve issues where Windows cannot boot and need
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you'll see that the screenshot displays the Windows stop code **#0x00000074** or **BAD_SYSTEM_CONFIG_INFO**.
 
-*Your PC ran into a problem and needs to restart. You can restart.*
-*For more information about this issue and possible fixes, visit http://windows.com/stopcode*
-*If you call a support person, give them this info:*
-*Stop code: BAD_SYSTEM_CONFIG_INFO*
+> Your PC ran into a problem and needs to restart. You can restart.
+> For more information about this issue and possible fixes, visit http://windows.com/stopcode
+> If you call a support person, give them this info:
+> Stop code: BAD_SYSTEM_CONFIG_INFO
 
-  ![The Windows stop code 0x00000074, which is also shown as “BAD_SYSTEM_CONFIG_INFO”. Windows informs the user that their PC has ran into a problem and needs to restart.](./media/windows-stop-error-bad-system-config-info/stop-code-0x00000074.png)
+  :::image type="content" source="media/windows-stop-error-bad-system-config-info/stop-code.png" alt-text="Screenshot of the Windows stop code BAD_SYSTEM_CONFIG_INFO." border="false":::
 
 ## Cause
 
@@ -75,7 +75,7 @@ The instructions below will help you determine if the cause was due to hive corr
 
    1. If the hive fails to open, or if it is empty, then the hive is corrupted. If the hive has been corrupted, [open a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
 
-      ![An error occurs stating that Registry Editor cannot load the hive.](./media/windows-stop-error-bad-system-config-info/cannot-load-hive-error.png)
+      :::image type="content" source="media/windows-stop-error-bad-system-config-info/load-hive-error.png" alt-text="Screenshot shows an error occurs stating that the Registry Editor can't load the hive.":::
 
    1. If the hive opens normally, then the hive wasn’t closed properly. Continue to step 5.
 

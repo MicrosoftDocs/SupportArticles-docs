@@ -39,6 +39,6 @@ If the StorSimple device is running **version 2.1.1.454 or later**, follow these
 1. Log in to the StorSimple CLI by using ssh or a direct serial connection to the controller.
 1. Run the web restart command:
 
-    ![web restart command](./media/storsimple-user-receives-webui/4341088_en_1.png)
+    :::image type="content" source="media/storsimple-user-receives-webui/web-restart-command.png" alt-text="Screenshot of running the web restart command.":::
 
 3. Log on to the WebUI, and then confirm that you no longer receive the error message. If the error persists, open a support case at [https://support2.microsoft.com/gp/storsimple](https://support2.microsoft.com/gp/storsimple).
