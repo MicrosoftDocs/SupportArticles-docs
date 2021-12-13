@@ -100,7 +100,7 @@ Access is denied.
 
 The following screenshot represents a sample of the error:
 
-![Sample of the error](./media/replications-fail-with-error-5/replicate-now-window.png)
+:::image type="content" source="media/replications-fail-with-error-5/replicate-now-window.png" alt-text="Screenshot of the Replicate Now window which shows a sample of the error.":::
 
 ## Workaround
 

@@ -44,7 +44,7 @@ Automatic registration failed at join phase.  Exit code: Unknown HResult Error c
 
 Here is an example of the event IDs:
 
-:::image type="content" source="media/event-307-and-304-logged-for-deploying/event-307.png" alt-text="screenshot of event 307" border="false":::
+:::image type="content" source="media/event-307-and-304-logged-for-deploying/event-307.png" alt-text="Details of the event 307 Automatic registration failed." border="false":::
 
 ## Cause
 

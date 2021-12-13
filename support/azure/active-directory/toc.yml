@@ -252,6 +252,8 @@
     href: services-sync-not-start.md
   - name: Troubleshoot Azure AD Connect installation issues
     href: installation-issues.md
+  - name: Troubleshoot Azure AD Connect version upgrading issues
+    href: troubleshoot-aad-connect-fails-to-install-upgraded-version.md
   - name: Troubleshoot Azure AD Sync installation issues
     href: installation-configuration-wizard-errors.md
   - name: Troubleshoot Azure AD Connect objects and attributes
