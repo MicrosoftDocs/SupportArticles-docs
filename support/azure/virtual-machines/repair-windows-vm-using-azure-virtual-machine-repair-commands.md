@@ -49,8 +49,11 @@ The user running these commands will need to have permissions to create the foll
 * Virtual Machines
 * Resource Tags
 * Virtual Networks
+* Network Security Groups
+* Network Interfaces
 * Snapshots
 * Disks
+* Public IP Addresses (Optional)
 
 ## Repair process example
 
