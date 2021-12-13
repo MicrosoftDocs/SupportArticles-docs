@@ -14,7 +14,7 @@ ms.collection: windows
 
 1. The virtual machine (VM) screenshot shows the operating system (OS) fully loaded and waiting for credentials.
 
-   ![Waiting for credentials](./media/azure-vm-nsi-not-starting/1-waiting.png)
+   :::image type="content" source="media/azure-vm-nsi-not-starting/1-waiting.png" alt-text="Screenshot of the V M screen, which shows the OS fully loaded and waiting for credentials."::: 
 
 2. If you view the Guest OS Logs, you'll see that the core networking service, **Network Store Interface (NSI)**, is not starting or failing to start. This issue could be due to a hang, a crash of this service, or any required service to be run before it.
 
