@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4464827
 
 Visitor Tracker is an ASP.NET SignalR application that tracks the number of visitors accessing the website. Each user is given a unique tracking ID that is displayed on the browser as the user moves the mouse pointer. As new users keep on visiting the site, the other users will be able to see new tracking IDs on their browsers. Click on the below image to get an idea of the expected output.
 
-:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/tracking-id.gif" alt-text="Screenshot of opening multiple windows and hovering over the text.":::
+:::image type="content" source="media/scenario-8-aspnet-signalr-application-not-work/tracking-id.png" alt-text="Screenshot shows a tracking ID when other user moves the mouse pointer.":::
 
 But after few days the application stopped working i.e users are not able to see their tracking IDs as well as for the other users on the browser.
 
@@ -40,7 +40,7 @@ From the above developer trace, you can see that client tried to connect over nu
 
 ## Response
 
-```
+```output
 {
    "Url": "/tracker",
    "ConnectionToken": "w9ppacqBDsP/uF90AZ97VYm6L+PYAz03iQPlEiU0uIwSZwEDXih+XHb0PV/FO9T+/22xmJp+St+tDlDg/cMUy1U9Of382YCNa94RYOOpRmsm8MNofd2eLpPNDFXXXX",

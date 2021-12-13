@@ -21,11 +21,11 @@ You try to change the password of a Microsoft Azure Active Directory (Azure AD) 
 
 When you give the **Read and write directory data** permission to your application or Application Service Principal, the application can change the password of a typical Azure AD user by using Graph API. This setting is shown in the following screenshot.
 
-:::image type="content" source="media/authorization-request-denied-graph-api/application-permission.png" alt-text="Screenshot of application permissions where Read and write directory data permission is selected.":::
+:::image type="content" source="media/authorization-request-denied-graph-api/application-permission.png" alt-text="Screenshot of the application permissions filed where Read and write directory data permission is selected.":::
 
 You can delegate an Azure AD user as an administrator by changing the user's **Organizational Role** setting, as shown in the following screenshot.
 
-:::image type="content" source="media/authorization-request-denied-graph-api/organizational-role.png" alt-text="Screenshot of user's Organizational Role setting.":::
+:::image type="content" source="media/authorization-request-denied-graph-api/organizational-role.png" alt-text="Screenshot shows the Organizational Role option is set to User.":::
 
 ## Cause
 
