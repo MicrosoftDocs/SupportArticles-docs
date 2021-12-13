@@ -53,7 +53,7 @@ The Azure portal provides a quick way to reset the SSH configuration or user cre
 
 To begin, select your VM in the Azure portal. Scroll down to the **Help** section and select **Reset password** as in the following example:
 
-![Reset SSH configuration or credentials in the Azure portal](./media/troubleshoot-ssh-connection/reset-credentials-using-portal.png)
+:::image type="content" source="media/troubleshoot-ssh-connection/reset-credentials-using-portal.png" alt-text="Screenshot to reset the S S H configuration or credentials in the Azure portal.":::
 
 ### Reset the SSH configuration
 To reset the SSH configuration, select `Reset configuration only` in the **Mode** section as in the preceding screenshot, then select **Update**. Once this action has completed, try to access your VM again.
@@ -208,7 +208,7 @@ If you have reset the SSH configuration and user credentials, or encountered an 
 ### Azure portal
 To restart a VM using the Azure portal, select your VM and then select **Restart** as in the following example:
 
-![Restart a VM in the Azure portal](./media/troubleshoot-ssh-connection/restart-vm-using-portal.png)
+:::image type="content" source="media/troubleshoot-ssh-connection/restart-vm-using-portal.png" alt-text="Screenshot to restart a virtual machine in the Azure portal.":::
 
 ### Azure CLI
 The following example uses [az vm restart](/cli/azure/vm) to restart the VM named `myVM` in the resource group named `myResourceGroup`. Use your own values as follows:
@@ -238,7 +238,7 @@ You can redeploy a VM to another node within Azure, which may correct any underl
 ### Azure portal
 To redeploy a VM using the Azure portal, select your VM and scroll down to the **Help** section. Select **Redeploy** as in the following example:
 
-![Redeploy a VM in the Azure portal](./media/troubleshoot-ssh-connection/redeploy-vm-using-portal.png)
+:::image type="content" source="media/troubleshoot-ssh-connection/redeploy-vm-using-portal.png" alt-text="Screenshot to redeploy a virtual machine in the Azure portal.":::
 
 ### Azure CLI
 The following example use [az vm redeploy](/cli/azure/vm) to redeploy the VM named `myVM` in the resource group named `myResourceGroup`. Use your own values as follows:

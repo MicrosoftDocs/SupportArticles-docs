@@ -1,5 +1,5 @@
 ---
-title: Error (The user name or password is incorrect) when running Azure Active Directory Sync tool Configuration Wizard
+title: The user name or password is incorrect error when running Azure Active Directory Sync tool Configuration Wizard
 description: Describes a problem that occurs when you run the Azure Active Directory Sync tool Configuration Wizard, and event ID 611 is logged to the Application log in Event Viewer. Provides a resolution.
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
@@ -18,19 +18,17 @@ When you run the Azure Active Directory Sync tool Configuration Wizard, you rece
 
 > The user name or password is incorrect.
 
-:::image type="content" source="media/user-name-pwd-incorrect/2965670.jpg" alt-text="Screenshot of the error message in the Windows Azure Directory Sync tool Configuration Wizard." border="false":::
+:::image type="content" source="media/user-name-pwd-incorrect/user-name-pwd-incorrect-error.jpg" alt-text="Screenshot of the error message in the Windows Azure Directory Sync tool Configuration Wizard." border="false":::
 
 Additionally, event ID 611 is logged to the Application log in Event Viewer:
 
-```
-Event ID: 611
-Level: Information
-Source: Directory Synchronization
-Description:
-Password synchronization failed for domain: ChildDomain.Contoso.Com. Details:
-Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: ChildDomain.Contoso.Com. Error: An exception occurred while attempting to locate a domain controller for domain ChildDomain.Contoso.Com. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: An exception occurred while attempting to locate a domain controller for domain ChildDomain.Contoso.Com. ---> System.Security.Authentication.AuthenticationException: The user name or password is incorrect.
----> System.Runtime.InteropServices.COMException: The user name or password is incorrect.
-```
+> Event ID: 611  
+> Level: Information  
+> Source: Directory Synchronization  
+> Description:  
+Password synchronization failed for domain: `ChildDomain.Contoso.Com`. Details:
+Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: `ChildDomain.Contoso.Com`. Error: An exception occurred while attempting to locate a domain controller for domain `ChildDomain.Contoso.Com`. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: An exception occurred while attempting to locate a domain controller for domain `ChildDomain.Contoso.Com`. ---> System.Security.Authentication.AuthenticationException: The user name or password is incorrect.  
+> ---> System.Runtime.InteropServices.COMException: The user name or password is incorrect.
 
 ## Cause
 
