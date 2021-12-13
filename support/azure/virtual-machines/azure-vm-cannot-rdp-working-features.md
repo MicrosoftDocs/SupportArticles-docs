@@ -18,7 +18,7 @@ ms.collection: windows
    - ##% complete
    - Don't turn off your computer
 
-   ![Error messages](./media/azure-vm-cannot-rdp-working-features/1-error.png)
+   :::image type="content" source="media/azure-vm-cannot-rdp-working-features/working-on-features-error-message.png" alt-text="Screenshot of the Working on features error message."::: 
 
 ## Cause
 

@@ -44,7 +44,7 @@ To check if the autotuning level is enabled, use the following command:
 netsh int tcp show global
 ```
 
-:::image type="content" source="media/tcpip-performance-known-issues/check-autotuning-level-command-prompt.png" alt-text="Command Prompt command to check the autotunig level.":::
+:::image type="content" source="media/tcpip-performance-known-issues/check-autotuning-level-command-prompt.png" alt-text="Command Prompt command to check the autotunig level." border="false":::
 
 ### Use PowerShell to enable the autotuning level
 
@@ -60,7 +60,8 @@ To check if the autotuning level is enabled, use the following cmdlet:
 Get-NetTCPSetting | Format-List SettingName,Autotuninglevel*
 ```
 
-:::image type="content" source="media/tcpip-performance-known-issues/check-autotuning-level-powershell.png" alt-text="PowerShell cmdlet for checking the autotuning level.":::
+:::image type="content" source="media/tcpip-performance-known-issues/check-autotuning-level-powershell.png" alt-text="PowerShell cmdlet for checking whether the autotuning level is enabled." border="false":::
+
 > [!NOTE]
 > There are five levels for receive window autotuning: Disabled, Highly Restricted, Restricted, Normal, and Experimental. For more information about how autotuning affects the throughput, see [Performance Tuning Network Adapters](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics).
 
@@ -145,20 +146,20 @@ Here's an example showing how to analyze a filtered result. In this scenario, th
 
 3. Right-click the **SequenceNumber** in **Frame Details** and select **Add Selected Value to Display Filter**.
 
-    :::image type="content" source="media/tcpip-performance-known-issues/add-selected-value-to-display-filter.png" alt-text="Add Selected Value to Display Filter.":::
+    :::image type="content" source="media/tcpip-performance-known-issues/add-selected-value-to-display-filter.png" alt-text="Selecting the Add Selected Value to Display Filter option in Frames Details after you right-click the SequenceNumber.":::
 
 4. Disable the previous filter by adding "//" as follows:
 
-    :::image type="content" source="media/tcpip-performance-known-issues/disable-previous-filter.png" alt-text="Disable the previous filter.":::
+    :::image type="content" source="media/tcpip-performance-known-issues/disable-previous-filter.png" alt-text="Disabling the previous filter in Display Filter.":::
 
 5. Select **Apply**. The complete TCP sequence with this sequence number is displayed as follows:
 
-    :::image type="content" source="media/tcpip-performance-known-issues/complete-tcp-sequence.png" alt-text="The complete TCP sequence.":::
+    :::image type="content" source="media/tcpip-performance-known-issues/complete-tcp-sequence.png" alt-text="Selecting the Apply button to show the complete TCP sequence.":::
 
     This result shows that the original frame `#441` isn't received by the server and is retransmitted by the sender. The retransmission of a frame happens if no acknowledgment of the sequence is received. To understand how TCP works, see [The three-way handshake via TCP/IP](three-way-handshake-via-tcpip.md) and [Description of Windows TCP features](description-tcp-features.md#tcp-retransmission-behavior-and-fast-retransmit). Then, copy the `TCP.SequenceNumber == <value>` sequence filter from the client trace and paste it on the server trace.
 
     On the server, only one packet of the given sequence is received, as shown in the following result:
 
-    :::image type="content" source="media/tcpip-performance-known-issues/tcp-sequence-server-side.png" alt-text="The TCP sequence from the server side.":::
+    :::image type="content" source="media/tcpip-performance-known-issues/tcp-sequence-server-side.png" alt-text="The TCP sequence that is shown from the server side.":::
 
     This result proves that there is packet loss from the sender to the receiver on the intermediate network devices. The packets leave the sender but never reach the receiver. It is an issue with underlying networking and it should be resolved by network administrators.

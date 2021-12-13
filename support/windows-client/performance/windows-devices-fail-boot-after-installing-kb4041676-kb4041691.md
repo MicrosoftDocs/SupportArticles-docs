@@ -101,12 +101,12 @@ These steps should only be followed on a device that fails to boot.
 
 2. If the device fails to boot, Windows will attempt to repair your device and enter the Windows 10 Recovery Environment. Select **Advanced options** on the **Automatic Repair** screen.
 
-    :::image type="content" source="./media/windows-devices-fail-boot-after-installing-kb4041676-kb4041691/automatic-repair.png" alt-text="Automatic repair" border="false":::
+    :::image type="content" source="media/windows-devices-fail-boot-after-installing-kb4041676-kb4041691/automatic-repair.png" alt-text="Screenshot of the Automatic repair screen." border="false":::
 
 3. Select **Troubleshoot**, then **Advanced Options**, and then **System Restore**. If a restore point is available prior to the installation of KB4041676 or KB4041691, use the **System Restore** wizard to restore to the earlier Restore Point. If a restore point does not exist, close **System Restore** and continue to the next step.
 4. Select **Troubleshoot**, then **Advanced Options** and then **Command Prompt**. You may be asked to enter a BitLocker Recovery Key or username/password. If prompted for a username/password, you must enter a local account. If you do not have credentials, you many need to create and use a [Recovery Drive](https://support.microsoft.com/help/4026852/windows-create-a-recovery-drive).
 
-    :::image type="content" source="./media/windows-devices-fail-boot-after-installing-kb4041676-kb4041691/advanced-options.png" alt-text="Advanced Options" border="false":::
+    :::image type="content" source="media/windows-devices-fail-boot-after-installing-kb4041676-kb4041691/advanced-options.png" alt-text="Screenshot of the Advanced Options screen." border="false":::
 
 5. After the **Command Prompt** launches, run the following to load the software registry hive:
 
@@ -162,4 +162,4 @@ These steps should only be followed on a device that fails to boot.
 
 10. Close the **Command Prompt** and click **Continue** to exit the recovery environment.
 
-    :::image type="content" source="./media/windows-devices-fail-boot-after-installing-kb4041676-kb4041691/continue-dialog.png" alt-text="Continue dialog" border="false":::
+    :::image type="content" source="media/windows-devices-fail-boot-after-installing-kb4041676-kb4041691/continue-dialog.png" alt-text="Screenshot of the Choose an option screen." border="false":::

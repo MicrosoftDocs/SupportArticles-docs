@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4550446
 
 In ADSI Edit, you change the **msDS-Behavior-Version** attribute of the Partitions container to **7** in order to raise the Active Directory (AD) Lightweight Directory Services (LDS) instance functional level to WIN2016.
 
-:::image type="content" source="./media/lds-service-startup-fails/attribute-editor.png" alt-text="Change the msDS-Behavior-Version attribute.":::
+:::image type="content" source="media/lds-service-startup-fails/attribute-editor.png" alt-text="Change the msDS-Behavior-Version attribute to 7.":::
 
 After you restart the server or stop the LDS service, the LDS service cannot be started. When you try to manually start the service, the following event errors are logged:
 
@@ -49,9 +49,10 @@ Internal ID:
 
 Additionally, you receive the following error message:
 
-> Windows could not start the \<ServiceName> LDS service on Local Computer.
+> Windows could not start the \<ServiceName> LDS service on Local Computer.  
+> Error 0xc0000025: 0xc0000025
 
-:::image type="content" source="./media/lds-service-startup-fails/error-message.png" alt-text="Receive an error message.":::
+:::image type="content" source="media/lds-service-startup-fails/error-message.png" alt-text="Error 0xc0000025 Windows could not start the L D S service on Local Computer.":::
 
 ## Cause
 
@@ -74,7 +75,7 @@ If there are multiple replica servers in that instance (for example, LDSServer1 
     server connections: **q**  
     fsmo maintenance: **seize schema master**
 
-    :::image type="content" source="./media/lds-service-startup-fails/role-seizure-confirmation-dialog.png" alt-text="A Role Seizure Confirmation Dialog displays.":::
+    :::image type="content" source="media/lds-service-startup-fails/role-seizure-confirmation-dialog.png" alt-text="A role seizure confirmation dialog displays.":::
 
 2. Connect to the configuration partition of the server that still runs the LDS instance (for example, LDSServer2), and then roll back the functionality level version by reverting the **msDS-Behavior-Version** attribute value.
 
@@ -122,12 +123,12 @@ If there are multiple replica servers in that instance (for example, LDSServer1 
     select operation target: **q**  
     metadata cleanup: **remove selected server**
 
-    :::image type="content" source="./media/lds-service-startup-fails/server-remove-confirmation-dialog.png" alt-text="Select yes in the dialog.":::
+    :::image type="content" source="media/lds-service-startup-fails/server-remove-confirmation-dialog.png" alt-text="Select Yes to remove the server object in the Server Remove Confirmation Dialog box.":::
 
 4. Log on to LDSServer1, and uninstall the instance:
 
-    :::image type="content" source="./media/lds-service-startup-fails/unstall-program.png" alt-text="Uninstall the instance.":::
+    :::image type="content" source="media/lds-service-startup-fails/uninstall-program.png" alt-text="Select the instance that you want to uninstall in Programs and features window.":::
 
-    :::image type="content" source="./media/lds-service-startup-fails/select-skip-all.png" alt-text="Active Directory Lightweight Directory Services Removal Wizard.":::
+    :::image type="content" source="media/lds-service-startup-fails/select-skip-all.png" alt-text="Select Skip All in the Active Directory Lightweight Directory Services Removal Wizard.":::
 
 5. Run the Active Directory Lightweight Directory Services Setup (C:\Windows\ADAM\adaminstall.exe) on LDSServer1 to install a replica of the existing instance from LDSServer2.
