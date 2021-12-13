@@ -65,7 +65,7 @@ If you're using a Generation 2 VM, the EFI partition of the attached disk may no
 1. Identify the broken disk attached to the repair VM. Typically, this disk is listed last in the console, and has the highest numerical value.
 1. Note if in that disk there's a partition that holds the **EFI System Partition**, which also doesn't have a letter value assigned to it (such as drive *F:*). If all partitions are assigned, you may skip ahead to free up space on the disk. Otherwise, continue to assign a letter to this disk.
 
-   :::image type="content" source="media/troubleshoot-windows-stop-error/disk-management.png" alt-text="Screenshot of the Disk Management window, showing a partition that holds the E F I System Partition.":::
+   :::image type="content" source="media/troubleshoot-windows-stop-error/disk-management.svg" alt-text="Screenshot of the Disk Management window, showing a partition that holds the E F I System Partition.":::
 
 1. Open an elevated command prompt as an administrator and enter `diskpart` to launch the **DISKPART** tool.
 1. Enter the following commands:
