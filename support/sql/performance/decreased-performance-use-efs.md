@@ -1,5 +1,5 @@
 ---
-title: Decreased performance when using EFS to encrypt database files
+title: Decreased performance when using EFS to encrypt database files in SQL Server
 description: Fixes the decreased performance issue in SQL Server when you use Encrypting File System to encrypt database files.
 ms.date: 12/08/2021
 ms.prod-support-area-path: Performance
@@ -18,10 +18,10 @@ When you use Encrypting File System (EFS) to encrypt database files in SQL Serve
 
 ## Cause
 
-This issue occurs because asynchronous I/O requests from SQL Server are converted to synchronous I/O operations on an EFS-encrypted database file. See [Asynchronous disk I/O appears as synchronous on Windows](/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption.md). During the I/O operation, the worker thread waits until the I/O operation is complete. When the thread waits for the I/O operation, the SQL Server scheduler will be suspended until the current worker thread continues. Therefore, the worker threads that remain on the scheduler will be pending until the first worker thread continues the I/O operation. However, for asynchronous I/O, the thread requests the I/O and continues performing other tasks.
+This issue occurs because asynchronous I/O requests from SQL Server are converted to synchronous I/O operations on an EFS-encrypted database file. See Asynchronous disk[Asynchronous disk I/O appears as synchronous on Windows](../../windows/win32/asynchronous-disk-io-synchronous.md#ntfs-encryption) I/O appears as synchronous on Windows for more information. During the I/O operation, the worker thread waits until the I/O operation is complete. When the thread waits for the I/O operation, the SQL Server scheduler will be suspended until the current worker thread continues. Therefore, the worker threads that remain on the scheduler will be pending until the first worker thread continues the I/O operation. However, for asynchronous I/O, the thread requests the I/O and continues performing other tasks.
 
 > [!NOTE]
-> Asynchronous I/O still appears to be synchronous because of the [New Technology File System (NTFS) compression](/windows/win32/asynchronous-disk-io-synchronous.md#compression). The file system driver will not access compressed files asynchronously. Instead, all operations are made synchronous.
+> Asynchronous I/O still appears to be synchronous because of the [New Technology File System (NTFS) compression](../../windows/win32/asynchronous-disk-io-synchronous.md#compression). The file system driver will not access compressed files asynchronously. Instead, all operations are made synchronous.
 
 ## Workaround
 
