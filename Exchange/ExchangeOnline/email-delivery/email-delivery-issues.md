@@ -75,6 +75,16 @@ The service health page lists the status of Office 365 services and indicates if
 
 If there is an indication that ExchangeOnline service is degraded, email delivery might be delayed for your organization, and CompanyName service engineers are already working to restore service. Check the service health page for progress updates. In this case, you don't need to open a service request because CompanyName is already working to resolve the issue.
 
+### Run email delivery troubleshooter
+
+You can run an automated diagnostic that is called E-mail delivery troubleshooter to identify any problems and suggested resolutions.
+
+To run the diagnostic check, go to [Run Tests: E-mail delivery troubleshooter](https://aka.ms/PillarEmailDelivery).
+
+This will populate the diagnostic in the Microsoft 365 admin center. Enter the email address of the sender and recipient and other relevant information, and then select **Run Tests**.
+
+:::image type="content" source="media/email-delivery-issues/email-delivery-troubleshooter.png" alt-text="The Screenshot of an automated diagnostic that is called E-mail delivery troubleshooter.":::
+
 ### Use message trace for in-depth email delivery troubleshooting - 15 minutes
 
 Sometimes an email message gets lost in transit, or it can take a lot longer than expected for delivery, and your users can wonder what happened. The message trace feature lets you follow messages as they pass through your Exchange Online service. Getting detailed information about a specific message lets you efficiently answer your user's questions, troubleshoot mail flow issues, validate policy changes, and can prevent you from needing to contact technical support for assistance.
