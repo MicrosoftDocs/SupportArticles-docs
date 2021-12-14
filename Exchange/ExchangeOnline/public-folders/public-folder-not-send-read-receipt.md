@@ -39,8 +39,6 @@ However, you see that even though both these conditions are met, the read receip
 
 Message sent from user John to the mail-enabled public folder PF2:
 
-:::image type="content" source="media/public-folder-not-send-read-receipt/request-read-receipt.png" alt-text="Screenshot of an email to a mail-enabled public folder that requests a read receipt.":::
-
 Read receipt received from the public folder mailbox **MSExchangepf2** instead of PF2:
 
 :::image type="content" source="media/public-folder-not-send-read-receipt/read-receipt-from-mailbox.png" alt-text="Screenshot of a read receipt that comes from the public folder mailbox.":::
