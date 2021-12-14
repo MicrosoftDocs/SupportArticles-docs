@@ -26,9 +26,9 @@ This article describes the "Getting ready" and "Getting Windows ready" screens t
 
 A Windows VM does not boot. When you use **Boot diagnostics** to get the screenshot of the VM, you may see that the VM displays the message "Getting ready" or "Getting Windows ready".
 
-:::image type="content" source="media/troubleshoot-vm-configure-update-boot/getting-ready.png" alt-text="Screenshot of the Windows Server 2012 R2 V M, showing the message: Getting ready.":::
+:::image type="content" source="media/troubleshoot-vm-boot-configure-update/getting-ready.png" alt-text="Screenshot of the Windows Server 2012 R2 V M, showing the message: Getting ready.":::
 
-:::image type="content" source="media/troubleshoot-vm-configure-update-boot/getting-windows-ready.png" alt-text="Screenshot of the V M, showing the message: Getting Windows ready." border="false":::
+:::image type="content" source="media/troubleshoot-vm-boot-configure-update/getting-windows-ready.png" alt-text="Screenshot of the V M, showing the message: Getting Windows ready." border="false":::
 
 ## Cause
 
@@ -102,7 +102,7 @@ To enable dump log and Serial Console, run the following script.
 4. Start the VM and access the Serial Console.
 5. Select **Send Non-Maskable Interrupt(NMI)** to trigger the memory dump.
 
-    :::image type="content" source="media/troubleshoot-vm-configure-update-boot/run-nmi.png" alt-text="Screenshot of the Send Non-Maskable Interrupt item.":::
+    :::image type="content" source="media/troubleshoot-vm-boot-configure-update/run-nmi.png" alt-text="Screenshot of the Send Non-Maskable Interrupt item.":::
 
 1. Attach the OS disk to a recovery VM again, collect dump file.
 

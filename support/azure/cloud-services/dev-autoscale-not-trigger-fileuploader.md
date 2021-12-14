@@ -24,17 +24,17 @@ One of the FileUploader role instances (FileUploader_IN_1) is consuming 100% CPU
 
 CPU utilization from all the instances:
 
-:::image type="content" source="media/scenario-3-autoscale-not-trigger-fileuploader/cpu-utilization1.png" alt-text="Screenshot of CPU utilization 1.":::
+:::image type="content" source="media/scenario-3-autoscale-not-trigger-fileuploader/cpu-utilization-fileuploader-0.png" alt-text="Screenshot of CPU utilization showing FileUploader_IN_0 instance is consuming 3% CPU.":::
 
-:::image type="content" source="media/scenario-3-autoscale-not-trigger-fileuploader/cpu-utilization2.png" alt-text="Screenshot of CPU utilization 2.":::
+:::image type="content" source="media/scenario-3-autoscale-not-trigger-fileuploader/cpu-utilization-fileuploader-1.png" alt-text="Screenshot of CPU utilization showing FileUploader_IN_1 instance is consuming 100% CPU.":::
 
-:::image type="content" source="media/scenario-3-autoscale-not-trigger-fileuploader/cpu-utilization3.png" alt-text="Screenshot of CPU utilization 3.":::
+:::image type="content" source="media/scenario-3-autoscale-not-trigger-fileuploader/cpu-utilization-fileuploader-2.png" alt-text="Screenshot of CPU utilization showing FileUploader_IN_2 instance is consuming 3% CPU.":::
 
 ## Troubleshoot steps
 
 If you carefully look into the autoscale rule that we have configured, it says the rule will get triggered only if the average CPU utilization of all the role instances is greater than 90, which is not happening in this case.
 
-```
+```xml
 {
    "properties": {
       "name": "Autoscale based on CPU metric",
