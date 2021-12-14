@@ -27,6 +27,9 @@ Microsoft Office 365 provides Data Loss prevention (DLP) services to help organi
 
 This article describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 
+> [!NOTE]
+> It is recommended that you [migrate your DLP policies to the Microsoft 365 Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
+
 ## Common scenarios for troubleshooting DLP policy tips
 
 There are several reasons why DLP policy tips do not work as expected after you configure an Office 365 DLP policy:
