@@ -34,7 +34,7 @@ This can be determined by checking the *Setupapi.dev.log* file that is located a
 
 If any drivers were recently installed, they can be examined to learn whether they were tested and submitted for signature or were signed by using the attestation process.
 
-Microsoft Support engineer may also check either the [Windows Server Catalog](https://www.windowsservercatalog.com) or the [Windows Compatible Products List](https://partner.microsoft.com/dashboard/hardware/search/cpl) to determine whether the device and driver were tested, submitted, and certified or signed recently. You can do it by searching for the **Vendor Name** value in the Windows Compatible Products List, and entering an asterisk in the **Product Name** field. For example, see the following screenshot.
+Microsoft Support engineer may also check either the [Windows Server Catalog](https://www.windowsservercatalog.com) or the [Windows Compatible Products List](https://partner.microsoft.com/dashboard/hardware/search/cpl) to determine whether the device and driver were tested, submitted, and certified or signed recently. You can do it by searching for the vendor name value in the Windows Compatible Products List, and entering an asterisk in the **Product Name** field. For example, see the following screenshot.
 
 :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\windows-compatible-products-list.png" alt-text="Screenshot of the Windows Compatible Products List window, in which you can test the hardware to meet Microsoft's compatibility requirements." lightbox="media\support-policy-third-party-kernel-level-attestation\windows-compatible-products-list.png":::
 
@@ -43,7 +43,7 @@ The **Certifications** column indicates the Windows or Windows Server operating 
 > [!NOTE]
 > The same information is available in the Verification Report.
 
-You can also use [Windows Server Catalog](https://www.windowsservercatalog.com) to check whether a product is using a driver that was recently tested, submitted, and signed. To do this, use the **Search** functionality in Windows Server Catalog for the **Product Name**, **Driver Name**, or **Vendor Name**.
+You can also use [Windows Server Catalog](https://www.windowsservercatalog.com) to check whether a product is using a driver that was recently tested, submitted, and signed. To do this, use the **Search** functionality in Windows Server Catalog for the product name, driver name, or vendor name.
 
 :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\windows-server-catalog.png" alt-text="Screenshot of the Windows Server Catalog window with a Search field to check whether a product is using a driver that was recently tested, submitted, and signed." border="true":::
 
@@ -53,7 +53,7 @@ You can also use [Windows Server Catalog](https://www.windowsservercatalog.com) 
 A driver may have been signed by using the attestation process as part of the following scenario:
 
 - The driver may have been previously tested, and the results submitted for certification or signature. Support may check the sources in the previous section to verify that information.
-- The vendor may have had to provide a hotfixed version of the driver immediately to a customer to mitigate or fix a serious problem for that customer.
+- The vendor may have had to provide the driver with a hotfix immediately to a customer to mitigate or fix a serious problem for that customer.
 - The vendor may not have been able to take the time to run the full test list that is mandated for that Product type. It is because such a test can take days or even weeks to complete. Therefore, the vendor used the attestation process to provide some relief for that customer.
 
     > [!NOTE]
