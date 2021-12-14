@@ -12,7 +12,7 @@ ms.custom:
 
 # Troubleshoot Azure Cloud Services (extended support) roles that fail to start
 
-Here are some common problems and solutions related to Azure Cloud Services (extended support) roles that fail to start.
+Here are some common problems and solutions related to Azure Cloud Services (extended support) roles that fail to start. 
 
 ## Cloud service operation fails with RoleInstanceStartupTimeoutError
 
@@ -38,7 +38,7 @@ You can get the current state and details for a role instance to diagnose errors
 
   :::image type="content" source="media/role-startup-failure/role-startup-failure-portal.png" alt-text="Screenshot that shows a role startup failure in the Azure portal.":::
 
-## Missing DLLs or dependencies
+## Missing DLLs or assemblies
 
 Unresponsive roles and roles that cycle between states might be caused by missing DLLs or assemblies.
 
