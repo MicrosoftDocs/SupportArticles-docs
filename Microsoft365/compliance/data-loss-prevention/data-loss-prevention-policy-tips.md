@@ -45,10 +45,10 @@ There are several reasons why DLP policy tips do not work as expected after you 
 
 ## How to edit a DLP policy in the Security and Compliance Center
 
-1. In the **Security and Compliance Center**, locate **Data loss prevention** in the navigation pane.
-1. Select the policy that requires editing, and then select **Edit policy** or **Edit** in the window that opens.
+1. In the **M365 Compliance Center**, locate **Data loss prevention** in the left pane.
+1. On the **Policies** tab, select the policy that requires editing, and then select **Edit policy**.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot shows steps to edit a D L P policy.":::
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot of the steps of how to edit a D L P policy the M365 Compliance Center." lightbox="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png":::
 
 ## Policy configuration errors
 
@@ -60,15 +60,17 @@ For these scenarios, create only one rule, and use detecting parameters that are
 
 **Figure 1:** Policy configuration by using **User notifications**
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/user-notifications.png" alt-text="Screenshot to turn on User notifications.":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/user-notifications.png" alt-text="Screenshot of User notifications.":::
 
 Policy status
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot shows the Show policy tips while in test mode option isn't checked.":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot of the option where test or turn on the policy you want to select.":::
 
 **Figure 2:** Multiple rules configured to have the same detection based on Sensitive info types that share **Instance count** and **Match accuracy** values.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/multiple-rules.png" alt-text="Screenshot shows multiple rules are configured to have same detecting parameters." border="false":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/ssn-rule.png" alt-text="Screenshot of SSN rule that is configured to have the detection based on Sensitive info types." :::
+
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/ssn-content-rule.png" alt-text="Screenshot of SSN Content rule that is configured to have the detection based on Sensitive info types." :::
 
 ## Policy configurations are not supported (Outlook 2013 and later clients only)
 
@@ -103,7 +105,7 @@ For Outlook 2013 and later clients, make sure that MailTips are enabled. To enab
 1. Click **OK** two times to close the File window.
 1. Restart Outlook.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot shows steps to enable MailTips in Outlook.":::
+    :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot of steps that enables MailTips in Outlook.":::
 
 ## Policy tips are configured in multiple locations
 
@@ -112,13 +114,16 @@ Policy tips don't work as expected if they're configured in multiple locations. 
 - Exchange admin center
 - Security and Compliance Center
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/rule-configuration.png" alt-text="Screenshot to set notify a policy in Exchange admin center rule with the Action.":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/rule-configuration.png" alt-text="Screenshot of Policy tip that sets notify a policy in Exchange admin center rule with the Action.":::
 
 To view unified DLP policy tips, remove the **Notify the sender with a Policy Tip** action from all Transport rules in Exchange admin center.
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/remove-notify-sender.png" alt-text="Screenshot to remove the Notify the sender with a Policy Tip action.":::
 
 ## How to edit a DLP policy in the Exchange admin center
+
+> [!NOTE]
+> If you have DLP policies in both the Exchange Admin Center (EAC) and the Microsoft 365 Compliance center, it is recommended that you [migrate your DLP policies to the Microsoft 365 Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
 
 1. In the Exchange admin center, locate **Compliance Management**, and then select **data loss prevention**.
 1. Select the policy that requires editing, and then select the pencil icon or double-click the policy that has to be changed.
@@ -153,9 +158,9 @@ To resolve this issue, carefully follow the steps in the "Resolution" section of
 
 ## Invalid test data
 
-When you evaluate the **Instance count** and **Match accuracy** of the DLP policy rule, the test data that's being used is not valid based on the information in [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for).
+When you evaluate the **Instance count** and **Match accuracy** of the DLP policy rule, the test data that's being used is not valid based on the information in [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for). Make sure the test data being used is valid.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/invalid-test-data.png" alt-text="Screenshot of invalid Instance count and Match accuracy values.":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/invalid-test-data.png" alt-text="Screenshot of invalid Instance count value.":::
 
 ## References
 
