@@ -41,7 +41,7 @@ When you try to start SQL Server in this scenario, the SQL Server service doesn'
                            An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.
     ```
 
-2. Verify the location of the master.mdf file. If the path is incorrect, fix the path by using SQL Server Configuration Manager or Registry Editor.
+2. Verify the location of the *master.mdf* file. If the path is incorrect, fix the path by using SQL Server Configuration Manager or Registry Editor.
 
     1. **By using SQL Server Configuration Manager**:
 
