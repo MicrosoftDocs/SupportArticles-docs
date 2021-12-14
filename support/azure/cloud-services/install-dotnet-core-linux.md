@@ -34,7 +34,7 @@ To install .NET Core in a Linux environment, follow these steps:
 
     This represents the local path on the Linux virtual machine where the script will be downloaded from the storage account.
 
-    :::image type="content" source="media/install-dotnet-core-linux/4466819_en_1.png" alt-text="Screenshot of create-Azure-Batch-Start-Task.":::
+    :::image type="content" source="media/install-dotnet-core-linux/start-task-pool.png" alt-text="Screenshot of create-Azure-Batch-Start-Task.":::
 
 ## Troubleshoot steps
 
@@ -73,7 +73,7 @@ To prevent the file format mismatch, do one of the following:
 - Create the script in a different Ubuntu environment, and upload the script to the storage explorer by using Storage Explorer for Linux.
 - If you do not have Storage Explorer in your Linux environment, get the script from the VM that was created in the previous step to your Windows environment by using the following Putty command. The Putty tool includes the executable **pscp.exe**.
 
-    :::image type="content" source="media/install-dotnet-core-linux/4466820_en_1.png" alt-text="Screenshot of Putty_pscp.":::
+    :::image type="content" source="media/install-dotnet-core-linux/putty-pscp.png" alt-text="Screenshot of Putty_pscp.":::
 
  After you send the file from Linux to Windows, upload the file to the storage account as is.
  To automate the process of converting files from Windows (DOS) to UNIX format, run the following command:
