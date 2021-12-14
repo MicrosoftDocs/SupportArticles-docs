@@ -549,6 +549,10 @@
       "source_path": "support/mem/intune/grouping-targeting-migration-blockers.md",
       "redirect_url": "/mem/intune/fundamentals/setup-steps",
       "redirect_document_id": false
+    },    {
+      "source_path": "support/mem/intune/create-feature-update-hold-co-managed-devices.md",
+      "redirect_url": "/mem/intune/protect/windows-10-feature-updates",
+      "redirect_document_id": false
     },
     {
       "source_path": "support/mem/intune/intune-account-portal-retired.md",
