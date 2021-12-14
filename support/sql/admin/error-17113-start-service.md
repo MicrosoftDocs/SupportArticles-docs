@@ -15,21 +15,20 @@ _Applies to:_ &nbsp; SQL Server
 
 In Microsoft SQL Server, the `master` database records all the system-level information. The `master` database also records the existence of all other databases, the location of those database files, and the initialization information for SQL Server. Therefore, SQL Server cannot start if the `master` database is unavailable.
 
-When you try to start SQL Server in this scenario, the SQL Server service doesn't start, and you receive the following error message, depending on how you try to start the service:
+When you try to start SQL Server in this scenario, the SQL Server service doesn't start, and you receive one of the following error messages depending on how you try to start the service:
 
 - By using the **Services** applet:
 
     > Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log. If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 17113.
 
 - By using a command prompt:
-- 
-```
+
     > C:\\>NET START MSSQLSERVER  
     The SQL Server (MSSQLSERVER) service is starting.  
     The SQL Server (MSSQLSERVER) service could not be started.  
     A service specific error occurred: 17113.  
     More help is available by typing NET HELPMSG 3547.
-```
+ 
 
 ## Resolution
 
@@ -49,7 +48,7 @@ When you try to start SQL Server in this scenario, the SQL Server service doesn'
         Select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, point to **Configuration Tools**, and then select **SQL Server Configuration Manager**.
 
         > [!NOTE]
-        > Because SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a standalone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows. To open SQL Server Configuration Manager in Windows 11, 10, or 8, follow the steps for your version of Windows.
+        > Because SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a standalone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows. To open SQL Server Configuration Manager in Windows 11, 10, or 8, follow these steps for your version of Windows.
 
         - Windows 10 and 11:  
             1. Select **Start** Page, enter *SQLServerManager13.msc* (for SQL Server 2016 (13.x)). For different versions of SQL Server, replace 13 with the appropriate number.
