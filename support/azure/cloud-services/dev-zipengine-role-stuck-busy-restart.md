@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4464909
 
 **ZipEngine** role instance of Compressor application is constantly looping between **Restarting** and **Busy** state throwing the below unhandled exception in the Azure portal blade:
 
-```
+```output
 Unhandled Exception: Could not load file or assembly 'WorkerAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format. at ZipEngine.WorkerRole.OnStart() at Microsoft.WindowsAzure.ServiceRuntime.RoleEnvironment.InitializeRoleInternal(RoleType roleTypeEnum) at Microsoft.WindowsAzure.ServiceRuntime.Implementation.Loader.RoleRuntimeBridge. <InitializeRole> b__0() at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) at System.Threading.ThreadHelper.ThreadStart()'[2018-08-12T11:28:39Z] Last exit time: [2018/08/12, 11:28:39.434].
 ```
 
@@ -32,7 +32,7 @@ If your role does not start, or is recycling between the initializing, busy, and
 
 System.BadImageFormatException
 
-```
+```output
 Process ID: 5132
 Process Name: WaWorkerHost
 Thread ID: 4
@@ -51,11 +51,11 @@ at System.Threading.ThreadHelper.ThreadStart()
 
 Now you get a bit more detail about the exception from **Microsoft Azure Event Logs** saying that process hosting worker role is not able to load the assembly 'WorkerAssembly' due to **System.BadImageFormatException**. In general when a process is not able to load an assembly, it's always a good practice to capture Fusion logs. Make the following registry key changes under the path `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Fusion` to enable fusion logging. Give **Everyone - Full Control** permission to the fusion log path folder `C:\FusionLogs`.
 
-:::image type="content" source="media/scenario-1-zipengine-role-stuck-busy-restart/registry-key-fusion.png" alt-text="Screenshot of changing registry key under Fusion.":::
+:::image type="content" source="media/scenario-1-zipengine-role-stuck-busy-restart/registry-key-fusion.png" alt-text="Screenshot shows the registry keys under Fusion.":::
 
-Upon checking the fusion log for 'WorkerAssembly', you might get more information for further troubleshooting.
+Upon checking the fusion log for 'WorkerAssembly', you might get more information for further troubleshooting.
 
-```
+```output
 *** Assembly Binder Log Entry  (8/12/2018 @ 12:51:00 PM) ***
 The operation failed.
 Bind result: hr = 0x8007000b. An attempt was made to load a program with an incorrect format.
@@ -94,7 +94,7 @@ In order to find out the bitness of the assembly, you can run any .NET decompile
 
 This is 32-bit assembly (x86).
 
-```
+```output
 // C:\WorkerAssembly.dll
 // WorkerAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // Global type:
@@ -107,7 +107,7 @@ Azure is a 64-bit environment. Therefore, .NET assemblies compiled for a 32-bit 
 
 If you review the code of WorkerRole.cs for ZipEngine role, you would notice below two lines of code that was actually loading the assembly 'WorkerAssembly' and performing some function. Since it was a 32-bit assembly the **WaWorkerHost.exe** was not able to load that assembly.
 
-```
+```output
 WorkerAssembly.WorkerAssembly workerAssembly = new WorkerAssembly.WorkerAssembly();
 workerAssembly.DoWork();
 ```

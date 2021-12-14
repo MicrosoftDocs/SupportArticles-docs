@@ -29,13 +29,13 @@ A problem in the automatic upgrade feature for Azure AD Connect causes the **Mic
 
 Examine the log files in the `%ProgramData%\AADConnect` folder. Log files that have a title of `SyncEngine-AutoUpgrader-[Date]-[Time].log` indicate the time that the automatic upgrade occurred.
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/log-file.png" alt-text="Screenshot of log file that indicates azure ad connect automatic upgrade.":::
+:::image type="content" source="media/cannot-work-automatic-upgrade/log-file.png" alt-text="Screenshot of the log file that indicates the time of the automatic upgrade." border="false":::
 
 ### Step 2: Determine whether Azure AD Connect is partially upgraded
 
 Run the Azure AD Connect wizard. If Azure AD Connect is partially upgraded, you are prompted to upgrade Azure AD Connect.
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/upgrade-aad-connect.png" alt-text="Screenshot of the Azure AD Connect wizard that you are prompted to upgrade Azure AD Connect.":::
+:::image type="content" source="media/cannot-work-automatic-upgrade/upgrade-aad-connect.png" alt-text="Screenshot of the Azure AD Connect wizard that prompts you to upgrade Azure AD Connect." border="false":::
 
 ### Step 3: Compare the installed version of Azure AD Connect with the version in the server configuration
 
@@ -43,7 +43,7 @@ During automatic upgrade, the current installation of Azure AD Connect is upgrad
 
 To check which version of Azure AD Connect is installed, open the **Programs and Features** item in Control Panel, and examine the version number of Azure AD Connect.
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/version-of-azure-ad-connect.png" alt-text="Screenshot of Azure AD Connection version.":::
+:::image type="content" source="media/cannot-work-automatic-upgrade/version-of-azure-ad-connect.png" alt-text="Screenshot shows the Azure AD Connection version." border="false":::
 
 To check the version of Azure AD Connect in the server configuration, run the following command in Windows PowerShell, and look for the value of the **Microsoft.Synchronize.ServerConfigurationVersion** property:
 
@@ -51,7 +51,7 @@ To check the version of Azure AD Connect in the server configuration, run the fo
 (Get-ADSyncGlobalSettings).Parameters | select Name,Value
 ```
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/serverconfigurationversion-property.png" alt-text="Screenshot of Azure AD Connection version in the server configuration.":::
+:::image type="content" source="media/cannot-work-automatic-upgrade/serverconfigurationversion-property.png" alt-text="Screenshot shows the Azure AD Connection version in the server configuration." border="false":::
 
 Check the status of the scheduler by running the following command:
 
@@ -61,13 +61,13 @@ Get-ADSyncScheduler
 
 If the value of **SchedulerSuspended** is **True**, the scheduler is suspended.
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/schedulersuspended-value.png" alt-text="Screenshot of scheduler status of Azure AD Connect.":::
+:::image type="content" source="media/cannot-work-automatic-upgrade/schedulersuspended-value.png" alt-text="Screenshot shows the scheduler status of Azure AD Connect." border="false":::
 
 ### Step 4: Verify that password synchronization and password writeback are enabled
 
 If Azure AD Connect is upgraded correctly, open the Azure AD Connect wizard, and then select **Review your solution** to verify that the password synchronization and password writeback features are enabled.
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/synchronization-settings.png" alt-text="Screenshot of checking if the password synchronization and password writeback features are enabled.":::
+:::image type="content" source="media/cannot-work-automatic-upgrade/synchronization-settings.png" alt-text="Screenshot shows the password synchronization and password writeback features under Review your solution item." border="false":::
 
 ## Workaround
 
@@ -78,7 +78,7 @@ To work around this issue, follow these steps:
 3. If you have previously enabled the password synchronization feature or the password writeback feature, verify that the feature remains enabled after the upgrade is complete.
 4. If any of the features is disabled after the upgrade, select **Customize synchronization options** in the Azure AD Connect wizard, and then manually enable the feature.
 
-    :::image type="content" source="media/cannot-work-automatic-upgrade/optional-features.png" alt-text="Screenshot of manually enable the password synchronization and password writeback features.":::
+    :::image type="content" source="media/cannot-work-automatic-upgrade/optional-features.png" alt-text="Screenshot shows the Password synchronization and Password writeback options are enabled in Optional features page." border="false":::
 
 ## More information
 

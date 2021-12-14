@@ -39,7 +39,7 @@ Keywords:      Classic
 User:          N/A
 Computer:      server1.contoso.com
 Description:   Password hash synchronization failed for domain: contoso.com, domain controller hostname: <not available>, domain controller IP address: <not available>.
-Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: contoso.com. Error: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.
+Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: contoso.com. Error: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 10.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 10.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.
 DrsException:  There was an error creating the connection context. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: RPC Error 1722 : The RPC server is unavailable. Error creating the RPC binding handle
 ```
 
@@ -102,14 +102,14 @@ Level:         Error
 Keywords:      Classic
 User:          N/A
 Computer:      server1.contoso.com
-Description:   Password hash synchronization failed for domain: contoso.com, domain controller hostname: server1.contoso.com, domain controller IP address: 184.198.0.0.
+Description:   Password hash synchronization failed for domain: contoso.com, domain controller hostname: server1.contoso.com, domain controller IP address: 192.168.0.0.
 Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Recovery task failed. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.
 DrsException:  RPC Error 8333 : Directory object not found. There was an error calling _IDL_DRSGetNCChanges.
 ```
 
 Other infrastructure configuration issues may contribute to Remote Procedure Call problems, such as DNS name resolution, Authentication problems, etc.
 
-It’s important to note the error number for appropriate investigation and troubleshooting.
+It's important to note the error number for appropriate investigation and troubleshooting.
 
 ### Troubleshooting Example 2
 
@@ -155,7 +155,7 @@ ERR_: MMS(4984): ..\ma.cpp(8000): ExportPasswordSet failed with 0x80004005
 Azure AD Sync 1.4.18.0"
 ```
 
-It’s important to know that errors can be represented in their hexadecimal code, like in this example.
+It's important to know that errors can be represented in their hexadecimal code, like in this example.
 
 You can also use the hexadecimal error code to search the error symbolic name.
 
