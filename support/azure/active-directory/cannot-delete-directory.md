@@ -48,7 +48,7 @@ To do this, follow these steps:
 
 6. Delete all applications. To do this, select the application, select **Properties**, and then select the **Delete** button.
 
-    :::image type="content" source="media/cannot-delete-directory/delete-applications.png" alt-text="Screenshot of how to delete an app.":::
+    :::image type="content" source="media/cannot-delete-directory/delete-applications.png" alt-text="Screenshot shows how to delete an app.":::
 
 ### Step 2: Delete the Azure AD B2C tenant
 
@@ -57,6 +57,6 @@ To do this, follow these steps:
 1. In the Azure AD B2C directory, locate and select the **Azure Active Directory** blade in the Azure portal.
 2. On the **Overview** menu, select **Delete Directory**.
 
-    :::image type="content" source="media/cannot-delete-directory/overview.png" alt-text="Screenshot of the overview menu.":::
+    :::image type="content" source="media/cannot-delete-directory/overview.png" alt-text="Screenshot shows the Delete Directory option on the Overview menu." border="false":::
 
 3. Follow the instructions in the portal.
