@@ -19,13 +19,13 @@ This article describes the support policies and troubleshooting boundaries for S
 
 ## Supported operating systems
 
-Depending on the version and edition of SQL Server, you can install SQL Server on a supported Windows or Linux operating system. 
+Depending on the version and edition of SQL Server, you can install SQL Server on a supported Windows or Linux operating system.
 
 This documentation outlines the specific operating systems on which the product is tested and validated. When you install older version of SQL Server on newer Windows operating systems, you have to be on a supported service pack.
 
 Starting in SQL Server 2017, you can install SQL Server on Linux operating systems. [Installation guidance for SQL Server on Linux](/sql/linux/sql-server-linux-setup) outlines the current list of supported Linux operating systems on which you can install and configure SQL Server for production use.
 
-Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on Kubernetes. Review the supported Host OS for Kubernetes in the [SQL Server 2019 Big Data Clusters release notes](/sql/big-data-cluster/release-notes-big-data-cluster) under the **Supportability** section. 
+Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on Kubernetes. Review the supported Host OS for Kubernetes in the [SQL Server 2019 Big Data Clusters release notes](/sql/big-data-cluster/release-notes-big-data-cluster) under the **Supportability** section.
 
 ## Supported hardware
 
@@ -165,12 +165,9 @@ If you deployed SQL Server on a virtual machine in Azure, the support policies f
 
 If you deploy SQL Server on other cloud solutions or platforms, check with the cloud solution provider about their specific policies that govern production or commercial support.
 
-## Product life cycle
+## Product lifecycle
 
-SQL Server follows the fixed life-cycle policy for obtaining support and updates. See [Search Product and Services Lifecycle Information](/lifecycle/products/) for the life cycle and stage (mainstream, extended, and out-of-support) for each product version. 
-
-> [!NOTE]
-> SQL Server 2019 Big Data Clusters is governed by the Fixed Lifecycle Policy.
+SQL Server follows the Fixed Lifecycle Policy for obtaining support and updates. See [Search Product and Services Lifecycle Information](/lifecycle/products/) for the lifecycle and stage (mainstream, extended, and out-of-support) for each product version. Big Data Clusters is an add-on to SQL Server 2019 and is governed as such under the Fixed Lifecycle Policy.
 
 Service Packs are released for SQL Server through version 2016. Support ends 12 months after the next service pack releases or at the end of the product's support life cycle, whichever comes first. For more information, please see the [Fixed Lifecycle Policy](/lifecycle/policies/fixed#service-packs).
 
