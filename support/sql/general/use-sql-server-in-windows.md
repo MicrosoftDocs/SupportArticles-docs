@@ -58,7 +58,7 @@ How to use this article:
 
 This section describes the minimum version requirements to install SQL Server on a computer that is running Windows Server 2022 or Windows 11.
  
-Before you install SQL Server on a computer that is running Windows Server 2022 or Windows 11 you must make sure that you fulfill the following minimum requirements, as appropriate for your situation.
+Before you install SQL Server on a computer that is running Windows Server 2022 or Windows 11, you must make sure that you fulfill the following minimum requirements, as appropriate for your situation.
 
 - **For SQL Server 2019 on Windows**
 
