@@ -28,7 +28,7 @@ You are unable to apply the following Windows Update (and particularly after KB5
 
 - When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, the Windows Update (KB) in progress is displayed, but fails with error code: 'C01A001D'.
 
-![unresponsive Windows Update](./media/unresponsive-vm-apply-windows-update/unresponsive-windows-update.png)
+:::image type="content" source="media/unresponsive-vm-apply-windows-update/unresponsive-windows-update.png" alt-text="Screenshot shows the V M fails with the C01A001D error code.":::
 
 ## Cause
 
@@ -47,7 +47,7 @@ To prevent the problem described above from occurring in the first place, comple
     - [April 13, 2021—KB5001347 (OS Build 14393.4350)](https://support.microsoft.com/topic/april-13-2021-kb5001347-os-build-14393-4350-ee0e6301-3428-4a14-8e67-d69c5b31c66a)
     - [May 11, 2021—KB5003197 (OS Build 14393.4402)](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697)
 
-![About Windows dialog box with OS build highlighted](./media/unresponsive-vm-apply-windows-update/about-windows.png)
+:::image type="content" source="media/unresponsive-vm-apply-windows-update/about-windows.png" alt-text="Screenshot of the About Windows dialog box with the O S build number highlighted.":::
 
 3. After the OS build is updated to [April 13, 2021—KB5001347 (OS Build 14393.4350)](https://support.microsoft.com/topic/april-13-2021-kb5001347-os-build-14393-4350-ee0e6301-3428-4a14-8e67-d69c5b31c66a) or [May 11, 2021—KB5003197 (OS Build 14393.4402)](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697), download and run the [Known Issue Rollback 062521 01.msi](https://download.microsoft.com/download/e/c/6/ec684975-1ad7-4d6f-a228-2da17b0a72b3/Windows%2010%20(1607)%20Known%20Issue%20Rollback%20062521%2001.msi) on the VM that applies local or domain policy. This msi file applies to both Windows 10 and Windows Server 2016. Note the appearance of **KB5001347 Issue 001 Evaluation.admx** in the *%systemroot%\policydefinitions* folder after the item is installed.
 4. Open a policy editor and enable the following setting in local or domain policy:

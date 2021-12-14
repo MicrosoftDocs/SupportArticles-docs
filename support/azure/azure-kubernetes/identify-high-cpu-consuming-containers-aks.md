@@ -30,11 +30,11 @@ To identify containers or pods that are driving high CPU consumption:
 
 1. Select **Containers**.
 
-   :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-option.png" alt-text="Screenshot of the Containers option.":::
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-option.png" alt-text="Screenshot of the Containers option.":::
 
 1. Select the Metric **CPU Usage (millicores)**  and set the sample to **Max**.
 
-   :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/cpu-usage-at-max.png" alt-text="Screenshot of the CPU usage set to Max, which is located on the right side of the time options.":::
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/cpu-usage-at-max.png" alt-text="Screenshot of the CPU usage, which is set to Max and is located on the right side of the time options.":::
 
 In the following example, a container named **myapp-container** inside of the **ultrapewpew2** pod has been up for 36 days. For the last six hours, **myapp-container** has been driving roughly two cores (1834 millicores, 1.8 cores to be exact) of Max CPU usage.
 
@@ -49,7 +49,7 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`, depending on whether or not you have **ContainerD**. ContainerD is container runtime that executes containers and [manages container images on a node](/azure/aks/cluster-configuration#container-runtime-configuration).
 
    1. If you don't have **ContainerD**, run this command:
-   
+
       `docker stats --no-stream --format "table {{.ID}}\t{{.CPUPerc}}" | sort -t " " --key=2 -h -r | head`.
 
    1. If you have **ContainerD**, run this command:
@@ -60,7 +60,7 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 
    1. If you don't have **ContainerD**, run this command:
 
-      `docker inspect containerid –format “{{json .Config.Hostname}}”`.
+      `docker inspect containerid –format "{{json .Config.Hostname}}"`.
 
    1. If you have **ContainerD**, run this command:
 
