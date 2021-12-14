@@ -1,7 +1,7 @@
 ---
 title: Support policy for third-party, kernel-level software
-description: Describes the support policy for third-party, kernel-level software that is signed using the attestation process in Windows.
-ms.date: 12/10/2021
+description: Describes the support that Microsoft Support provides for Microsoft software products, when you run that product together with attestation-signed kernel-level drivers and any associated physical devices or applications.
+ms.date: 12/14/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -18,7 +18,7 @@ ms.technology: windows-server-deployment
 This article describes the support that Microsoft Support provides for Microsoft software products, such as the Windows Server operating system (all versions), when you run that Microsoft product together with attestation-signed kernel-level drivers and any associated physical adapter, controller, or other device or application.
 
 > [!NOTE]
-> The attestation signing process for a third-party, kernel-level driver does not require that the driver vendor provide test results in order to obtain a driver signature from Microsoft. For more information, see [Attestation signing a kernel driver for public release](/windows-hardware/drivers/dashboard/attestation-signing-a-kernel-driver-for-public-release). 
+> The attestation signing process for a third-party, kernel-level driver does not require that the driver vendor provide test results in order to obtain a driver signature from Microsoft. For more information, see [Attestation signing a kernel driver for public release](/windows-hardware/drivers/dashboard/attestation-signing-a-kernel-driver-for-public-release).
 
 _Original KB number:_ &nbsp; 4519013
 
@@ -89,7 +89,7 @@ Regardless of the support relationship between Microsoft and the vendor that is 
 
     :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\driver-properties-digital-signatures-microsoft.png" alt-text="Screenshot of the driver's Properties window, which shows the Digital Signatures tab information." border="false":::
 
-3. Select the **Microsoft** entry in the **Signature** list, and then select the **Details** button.
+3. Select the **Microsoft** entry in the **Signature list**, and then select the **Details** button.
 
     :::image type="content" source="media\support-policy-third-party-kernel-level-attestation\driver-properties-digital-signatures.png" alt-text="Screenshot of the Digital Signatures tab of the driver's Properties window, which shows a Microsoft entry." border="false":::
 
