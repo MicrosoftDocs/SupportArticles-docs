@@ -14,20 +14,20 @@ ms.subservice: hybrid
 This article describes how to troubleshoot problems that can occur when you upgrade to the latest version of Azure Active Directory Connect from previous installations of Azure AD Connect, Azure AD Sync, or DirSync.
 
 > [!WARNING]
-> You might find some online documentation with steps that tell you how to directly edit the registry, but this can cause serious problems if you modify the registry incorrectly. The Microsoft Azure Active Directory Connect product team **doesn't support** editing the Windows registry.
+> You might find some online documentation that includes steps to directly edit the Windows registry. However, editing the registry can cause serious problems if you modify the registry incorrectly. The Microsoft Azure Active Directory Connect product team **doesn't support** editing the Windows registry.
 
 *Original product version:* Azure Active Directory  
 *Original KB number:* 4051210  
 
-To resolve other types of installation issues involving Azure AD Connect, see [Troubleshoot Azure AD Connect installation issues](installation-issues.md).
+To resolve other types of installation issues that involve Azure AD Connect, see [Troubleshoot Azure AD Connect installation issues](installation-issues.md).
 
 ## Symptoms
 
-Every time you launch Azure AD Connect setup wizard, it evaluates all the related products and Windows Installer packages (.msi) that are currently installed. To trace this activity, follow these steps:
+Every time that you start the Azure AD Connect setup wizard, the program evaluates all the related products and Windows Installer packages (.msi) that are currently installed. To trace this activity, follow these steps:
 
-1. Launch Azure AD Connect wizard and wait for the first page to open.
+1. Start the Azure AD Connect wizard, and wait for the first page to open.
 
-2. Open the folder `%ProgramData%\AADConnect\` and analyze the latest installation trace log.
+2. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
 
 3. Locate the entries for `GetInstalledPackagesByUpgradeCode`, where the wizard evaluates all the related Windows Installer packages that are installed in Windows. For example:
 
@@ -39,11 +39,11 @@ Every time you launch Azure AD Connect setup wizard, it evaluates all the relate
    [10:44:23.095] [ 1] [INFO ] GetInstalledPackagesByUpgradeCode {bef7e7d9-2ac2-44b9-abfc-3335222b92a7}: no registered products found.
    ```
 
-Two similar symptoms can be found near this part of the trace log:
+You can find two similar symptoms near this part of the trace log:
 
 <details>
 <summary>Product was uninstalled but an inconsistent product code is still present in Windows</summary>
-The wizard is detecting an old installation of the sync engine: `Product Azure AD Sync Engine (version 1.1.343.0) is installed, needs to be upgraded to version 1.1.380.0`.
+The wizard is detecting an old installation of the sync engine: "Product Azure AD Sync Engine (version 1.1.343.0) is installed, needs to be upgraded to version 1.1.380.0."
 
 ```output
 [10:44:23.095] [ 1] [VERB ] Package=Microsoft Azure AD Connect synchronization services, Version=1.1.343.0, ProductCode=7c4397b7-9008-4c23-8cda-3b3b8faf4312, UpgradeCode=545334d7-13cd-4bab-8da1-2775fa8cf7c2
@@ -53,9 +53,9 @@ The wizard is detecting an old installation of the sync engine: `Product Azure A
 [10:44:23.298] [ 1] [INFO ] AzureADSyncEngineComponent: Product Azure AD Sync Engine (version 1.1.343.0) is installed, needs to be upgraded to version 1.1.380.0.
 ```
 
-However, the Windows Installer information might be inconsistent after this product was uninstalled and the sync engine is no longer present.
+However, the Windows Installer information might be inconsistent after this product is uninstalled and the sync engine is no longer present.
 
-Since the setup wizard is still detecting an old product code, it decides to upgrade Azure AD Sync Engine instead of doing a clean install. Later in the upgrade process, while checking for the current service status, the installation fails because the ADSync service isn't present:
+Because the setup wizard is still detecting an old product code, it decides to upgrade Azure AD Sync Engine instead of doing a clean installation. Later in the upgrade process, while the installer is checking for the current service status, the installation fails because the ADSync service isn't present:
 
 ```output
 [10:44:28.260] [ 1] [INFO ] ServiceControllerProvider: verifying ADSync is in state (Running)
@@ -68,7 +68,7 @@ Exception Data (Raw): System.InvalidOperationException: Service ADSync was not f
 <details>
 <summary>Product was uninstalled but a stale product code is still present in Windows</summary>
 
-A stale product code found in Windows Installer packages can also cause upgrade issues.
+A stale product code that you find in Windows Installer packages can also cause upgrade issues.
 
 ```output
 [15:29:06.958] [ 1] [INFO ] Performing direct lookup of upgrade codes for: Azure AD Sync Engine
@@ -82,7 +82,7 @@ A stale product code found in Windows Installer packages can also cause upgrade 
 [15:29:07.059] [ 1] [INFO ] Product Azure AD Sync Engine is not installed.
 ```
 
-Azure AD Connect setup wizard isn't able to detect an Azure AD Sync Engine installed, but setup fails with the following error:
+Azure AD Connect Setup wizard can't detect that an Azure AD Sync Engine is installed. Setup fails and returns the following error message:
 
 ```output
 [15:52:17.674] [ 13] [ERROR] PerformConfigurationPageViewModel: Caught exception while installing synchronization service.
@@ -94,7 +94,7 @@ Action ended 15:52:17: DetectStoreServer.
 ---> Microsoft.Azure.ActiveDirectory.Client.Framework.ProcessExecutionFailedException: Exception: Execution failed with errorCode: 1603.
 ```
 
-This error occurs because the MSIEXEC process still decides to try upgrading Azure AD Sync Engine, as shown in the *Synchronization Service_Install-20170525-155217.log* file:
+This error occurs because the MSIEXEC process still tries to upgrade the Azure AD Sync Engine, as shown in the *Synchronization Service_Install-20170525-155217.log* file:
 
 ```output
 MSI (s) (C0:0C) [15:52:17:386]: PROPERTY CHANGE: Adding WIX_UPGRADE_DETECTED property. Its value is '{7C4397B7-9008-4C23-8CDA-3B3B8FAF4312}'.
@@ -105,20 +105,20 @@ Action start 15:52:17: DetectStoreServer.
 MSI (s) (C0!08) [15:52:17:605]: Product: Microsoft Azure AD Connect synchronization services -- Error 25019.The Microsoft Azure AD Connect synchronization services setup wizard cannot open registry key SYSTEM\CurrentControlSet\Services\ADSync\Parameters. Try verifying the key and running this wizard again. The system cannot find the file specified.
 ```
 
-As in the previous case, the Windows Installer upgrading process fails because the ADSync service entries in the registry aren't present. The product has been previously uninstalled, leaving Windows Installer database inconsistent.
+As in the previous case, the Windows Installer upgrading process fails because the ADSync service entries in the registry aren't present. The product has been previously uninstalled, leaving the Windows Installer database inconsistent.
 </details>
 
 ## Solution
 
-You can clean up the inconsistency on the Windows Installer database for the Azure AD Sync Engine product code that's being identified in the trace log. (For the examples above, the problematic product code is 7c4397b7-9008-4c23-8cda-3b3b8faf4312, but it can vary.)
+You can clean up the inconsistency on the Windows Installer database for the Azure AD Sync Engine product code that's identified in the trace log. (The product code can vary. For the previous examples, the problematic product code is 7c4397b7-9008-4c23-8cda-3b3b8faf4312.)
 
-After identifying the problematic product code from the trace log, follow the resolution steps below.
+After you identify the problematic product code from the trace log, use the following methods, as appropriate.
 
 <details>
 <summary>Fix Windows Installer issues (if applicable)</summary>
-The KB3139923 Windows hotfix can cause these Windows Installer issues, so it's recommended to be uninstalled from Windows.
+The KB3139923 Windows hotfix can cause these Windows Installer issues. Therefore, we recommend that you uninstall it.
 
-You can go to Windows Control Panel to check if KB3139923 is installed. Or use PowerShell to export a list of all installed hotfixes:
+To check whether KB3139923 is installed, go to **Settings** > **Windows Update** > **Update history**. Or use PowerShell to export a list of all installed hotfixes:
 
 ```powershell
 Get-Hotfix |
@@ -127,9 +127,9 @@ Sort-Object –Property InstalledOn –Descending |
 Out-File –FilePath ".\$env:COMPUTERNAME-HotFixes.txt"
 ```
 
-1. If KB3139923 hotfix is present, uninstall it and reboot the server.
+1. If the KB3139923 hotfix is present, uninstall it, and then restart the server.
 
-1. Download and install the [KB3072630 Windows hotfix](https://www.microsoft.com/download/details.aspx?id=47955), and then reboot again.
+1. Download and install the [KB3072630 Windows hotfix](https://www.microsoft.com/download/details.aspx?id=47955), and then restart again.
 
 </details>
 
@@ -138,45 +138,47 @@ Out-File –FilePath ".\$env:COMPUTERNAME-HotFixes.txt"
 
 To uninstall the product code for the Azure AD Sync Engine, run the Windows Installer command-line tool ([MsiExec.exe](/windows-server/administration/windows-commands/msiexec)) as follows:
 
-1. Identify the inconsistent or stale product code from the trace log (GUID) as shown above.
+1. Identify the inconsistent or stale product code from the trace log (GUID), as shown in the "Symptoms" section.
 
-1. Open Command Prompt with "Run as administrator".
+1. Open an administrative Command Prompt window.
 
-1. Type the following line with the GUID of the problematic product code:
+1. Enter the following line by susbtituting the actual GUID of the problematic product code:
 
     ```cmd
-    SET productcode={12345678-0000-abcd-0000-0123456789ab}
+    SET productcode={<12345678-0000-abcd-0000-0123456789ab>}
     ```
 
-1. Repeat the following command a couple of times in a row, and then reboot the server.
+1. Enter the following command, repeat the command, and then restart the server.
 
     > [!NOTE]
-    > You may see numerous errors because of the corrupted Windows Installer database. For any dialog box that appears, select **Yes**.
+    > You might see numerous reported errors because of the corrupted Windows Installer database. For any dialog box that appears, select **Yes**.
 
     ```cmd
     SET /a counter+=1
     & MSIEXEC /x %productcode% /qn /norestart /l*v "%ProgramData%\AADConnect\AADConnect_Uninstall-ForcedUninstall_%counter%.log" EXECUTE_UNINSTALL="1"
     ```
     
-1. Launch Azure AD Connect wizard and wait for the first page to open.
+1. Start the Azure AD Connect wizard, and wait for the first page to open.
 
-1. Open the folder `%ProgramData%\AADConnect\` and analyze the latest installation trace log.
+1. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
 
-1. If the inconsistent or stale product code is no longer preset in the log file, continue the wizard and complete the install. Otherwise, go to the next solution.
+1. If the inconsistent or stale product code is no longer preset in the log file, continue the wizard, and complete the installation. Otherwise, go to the next solution.
 
 </details>
 
 <details>
 <summary>Use Program Install and Uninstall troubleshooter tool</summary>
 
-The Program Install and Uninstall troubleshooter helps you automatically repair issues when you're blocked from installing or removing programs. It also fixes corrupted registry keys.
+The Program Install and Uninstall troubleshooter helps you automatically repair issues if you're blocked from installing or removing programs. It also fixes corrupted registry keys.
 
 [Fix problems that block programs from being installed or removed (microsoft.com)](https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d)
 
-After using this tool, reboot the server and follow the steps below.
+After you run the tool, restart the server, and then follow these steps:
 
-1. Launch Azure AD Connect wizard and wait for the first page to open.
-1. Open the folder `%ProgramData%\AADConnect\` and analyze the latest installation trace log.
-1. If the inconsistent or stale product code is no longer preset in the log file, continue the wizard and complete the install. Otherwise, it's recommended to reinstall the Windows operating system, as the Windows Installer database inconsistency can't be recovered.
+1. Start the Azure AD Connect wizard, and wait for the first page to open.
+
+1. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
+
+1. If the inconsistent or stale product code is no longer present in the log file, continue the wizard, and complete the installation. Otherwise, we recommend that you reinstall the Windows operating system because you can't recover the Windows Installer database from an inconsistent state.
 
 </details>
