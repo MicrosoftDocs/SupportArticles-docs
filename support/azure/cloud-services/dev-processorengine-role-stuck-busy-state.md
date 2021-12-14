@@ -43,7 +43,7 @@ From the above log, it looks like the process is stuck while running a startup s
 
 Microsoft Azure Bootstrapper event viewer log shows the same piece of information:
 
-:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/4464887_en_1.png" alt-text="Screenshot of event viewer log.":::
+:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/event-viewer-log.png" alt-text="Screenshot of the event viewer log.":::
 
 Hence the next step is to check the functionality of this startup script. the script is running an executable 'setup.exe', which takes a command line 'configuration.xml'. The output of the script processing is logged in 'StartupLog.txt' file created under RoleTemp directory.
 
@@ -85,4 +85,4 @@ Navigate to the path `C:\Resources\temp\{Deployment ID}.ProcessorEngine\RoleTemp
 
 In Visual Studio, the **Copy to Output Directory** property for your startup batch file or any other dependent files should be set to **Copy Always** to be sure that your startup batch file is properly deployed to your project on Azure (**approot\bin** for Web roles, and **approot**  for worker roles). However in this case **Copy to Output Directory** was set to **Do not copy** for 'configuration.xml' file.
 
-:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/4464893_en_1.png" alt-text="Screenshot of configuration file.":::
+:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/configurationxml-file.png" alt-text="Screenshot of the configuration.xml file.":::
