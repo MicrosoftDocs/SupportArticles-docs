@@ -24,11 +24,11 @@ This article provides steps to resolve issues where the disk cannot be read in a
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays a prompt with the message "A disk read error occurred. Press Ctrl+Alt+Del to restart".
 
-   :::image type="content" source="media/disk-read-error-occurred/disk-read-error-occurred-message.png" alt-text="Screenshot of A disk read error occurred message.":::  
+   :::image type="content" source="media/boot-error-disk-read-error-occurred/disk-read-error-occurred-message.png" alt-text="Screenshot of A disk read error occurred message.":::  
 
 ## Cause
 
-This error message indicates that the disk structure is corrupted and unreadable. If you are using a Generation 1 VM, it's also possible that the disk partition containing the boot configuration data isn’t set to **Active**.
+This error message indicates that the disk structure is corrupted and unreadable. If you are using a Generation 1 VM, it's also possible that the disk partition containing the boot configuration data isn't set to **Active**.
 
 ## Solution
 
@@ -61,22 +61,22 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
 1. Enter **list disk** to list the disks on the system and identify the attached OS virtual hard disk (VHD).
 1. Once the attached OS VHD is located, enter **sel disk #** to select the disk. See the following image for an example of where Disk 1 is the attached OS VHD.
 
-   :::image type="content" source="media/disk-read-error-occurred/list-select-disk.png" alt-text="Screenshot of the diskpart window, which shows the result of listing and then selecting disk.":::
+   :::image type="content" source="media/boot-error-disk-read-error-occurred/list-select-disk.png" alt-text="Screenshot of the diskpart window, which shows the result of listing and then selecting disk.":::
 
 1. Once the disk is selected, enter **list partition** to list the partitions of the selected disk.
 1. Once the boot partition is identified, enter **sel partition #** to select the partition. The boot partition is often approximately 350 MB in size.  See the following image for example where Partition 1 is the boot partition.
 
-   :::image type="content" source="media/disk-read-error-occurred/list-select-partition.png" alt-text="Screenshot of the diskpart window, which shows the result of listing and then selecting partition.":::
+   :::image type="content" source="media/boot-error-disk-read-error-occurred/list-select-partition.png" alt-text="Screenshot of the diskpart window, which shows the result of listing and then selecting partition.":::
 
 1. Enter **detail partition** to check the status of the partition. See the following screenshots for examples of the partition being set to **Active: No** or **Active: Yes**.
 
    **Active: No**
 
-   :::image type="content" source="media/disk-read-error-occurred/detail-partition-active-no.png" alt-text="Screenshot of the diskpart window with the output of the detail partition command, where Partition 1 is set to Active: No.":::
+   :::image type="content" source="media/boot-error-disk-read-error-occurred/detail-partition-active-no.png" alt-text="Screenshot of the diskpart window with the output of the detail partition command, where Partition 1 is set to Active: No.":::
 
    **Active: Yes**
 
-   :::image type="content" source="media/disk-read-error-occurred/detail-partition-active-yes.png" alt-text="Screenshot of the diskpart window with the output of the detail partition command, where partition 1 is set to Active: Yes.":::
+   :::image type="content" source="media/boot-error-disk-read-error-occurred/detail-partition-active-yes.png" alt-text="Screenshot of the diskpart window with the output of the detail partition command, where partition 1 is set to Active: Yes.":::
 
 1. If the partition is not set to **Active**, enter **active** to change the Active flag.
 1. Enter **detail partition** to check that the status change was completed properly, and verify that the output includes **Active: Yes**. 
@@ -100,7 +100,7 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
 
    **Enable the Serial Console**:
    
-   ```
+   ```console
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
    ```
@@ -113,13 +113,13 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
 
    **Load Registry Hive from the broken OS Disk:**
 
-   ```
+   ```console
    REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM
    ```
 
    **Enable on ControlSet001:**
 
-   ```
+   ```console
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
@@ -127,7 +127,7 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
 
    **Enable on ControlSet002:**
 
-   ```
+   ```console
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
@@ -135,7 +135,7 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
 
    **Unload Broken OS Disk:**
 
-   ```
+   ```console
    REG UNLOAD HKLM\BROKENSYSTEM
    ```
    
