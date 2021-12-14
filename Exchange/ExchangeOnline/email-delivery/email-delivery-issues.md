@@ -79,7 +79,7 @@ If there is an indication that ExchangeOnline service is degraded, email deliver
 
 You can run an automated diagnostic to identify issues with email delivery and find suggested resolutions to fix the issues.
 
-Select the **Diag: Troubleshoot Email Delivery** button to launch the diagnostic in the Microsoft 365 admin center. Enter the email address of the sender, the recipient and other relevant information, and then select **Run Tests**.
+Select **Diag: Troubleshoot Email Delivery** to launch the diagnostic in the Microsoft 365 admin center. Enter the email address of the sender, the recipient and other relevant information, and then select **Run Tests**.
 
 >[!div class="nextstepaction"]
 >[Diag: Troubleshoot Email Delivery](https://aka.ms/PillarEmailDelivery)
