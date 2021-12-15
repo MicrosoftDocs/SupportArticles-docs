@@ -67,7 +67,7 @@ The user running these commands will need a role that can create the following t
 
    If you prefer to install and use the CLI locally, this quickstart requires Azure CLI version 2.0.67 or later. Run ``az --version`` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
    
-   If you need to login to Cloud Shell with a different account than you are currently logged in to the Azure Portal with you can use ``az login`` [az login reference](/cli/azure/reference-index#az-login&preserve-view=true).  To switch between subscriptions associated with your account you can use ``az account set --subscription`` [az account set reference](/cli/azure/account#az-account-set&preserve-view=true).
+   If you need to login to Cloud Shell with a different account than you are currently logged in to the Azure portal with you can use ``az login`` [az login reference](/cli/azure/reference-index#az-login&preserve-view=true).  To switch between subscriptions associated with your account you can use ``az account set --subscription`` [az account set reference](/cli/azure/account#az-account-set&preserve-view=true).
 
 2. If this is the first time you have used the `az vm repair` commands, add the vm-repair CLI extension.
 
@@ -91,7 +91,7 @@ The user running these commands will need a role that can create the following t
    az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password password1234 --verbose
    ```
 
-4. Run `az vm repair run`. This command will run the specified repair script on the attached disk via the repair VM. If the troubleshooting guide you are using specified a run-id please use it here, otherwise you can use az vm repair list-scripts to see available repair scripts. The Resource Group and VM name used here are for the non-functional VM used in step 3. Additional information about the repair scripts can be found in the [repair script library](https://github.com/Azure/repair-script-library).
+4. Run `az vm repair run`. This command will run the specified repair script on the attached disk via the repair VM. If the troubleshooting guide you are using specified a run-id use it here, otherwise you can use az vm repair list-scripts to see available repair scripts. The Resource Group and VM name used here are for the non-functional VM used in step 3. Additional information about the repair scripts can be found in the [repair script library](https://github.com/Azure/repair-script-library).
 
    ```azurecli-interactive
    az vm repair run -g MyResourceGroup -n MyVM --run-on-repair --run-id lin-hello-world --verbose
