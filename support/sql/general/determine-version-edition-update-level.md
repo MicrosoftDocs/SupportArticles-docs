@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 321185
   > The version information and edition information are in the same output string.
 
   > [!NOTE]
-  > For information about SQL Server Support lifecycle, check the [Microsoft SQL Server support lifecycle page](https://support.microsoft.com/lifecycle?c2=1044).
+  > For information about SQL Server Support lifecycle, see [SQL Server support lifecycle information](/lifecycle/products/?products=sql-server&preserve-view=true).
 
 ## Latest updates available for currently supported versions of SQL Server
 
