@@ -24,9 +24,9 @@ search.appverid:
 
 When you try to edit a Microsoft Office file directly in Microsoft Teams, the file's desktop app option is missing.
 
-The following table shows the contrast of opening a word document without and with the **Word desktop app** option.
+The following table shows the behavior when opening a word document without and with the **Word desktop app** option.
 
-|Option is missing |Option isn't missing   |
+|Unexpected behavior without the option|Expected behavior with the option|
 |----------|-----------|
 |Example:<br>:::image type="content" source="media/desktop-app-option-missing/no-desktop-app-option.png" alt-text="Screenshot of opening a word document without the Word desktop app option.":::|Example:<br> :::image type="content" source="media/desktop-app-option-missing/open-in-desktop-app.png" alt-text="Screenshot of opening a word document with the Word desktop app option.":::|
 
@@ -38,19 +38,19 @@ To edit an Office file in its desktop app, you must meet the following prerequis
 
 - Be using the Teams desktop app for Windows or Mac.
 
-- Download the desktop apps for PowerPoint, Word, and Excel (Microsoft Office 2016 or a later version).
+- Download the Office desktop apps such as PowerPoint, Word, and Excel.
 
-- Have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans).
+- Have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans) assigned.
 
 This issue occurs if any of these prerequisites isn't meet.
 
 ## Resolution
 
-To fix this issue, try the following resolutions:
+To fix this issue, verify the following:
 
-- Make sure Teams desktop app is installed. You can download and install [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software) for Windows or Mac.
+- Make sure the Teams desktop app is installed. You can download and install [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software) for Windows or Mac.
 
-- Make sure the Office desktop apps are installed. You can download and install the apps from the [Microsoft 365 portal](https://portal.office.com/account#installs).
+- Make sure the Office desktop apps (Microsoft Office 2016 or a later version) are installed. You can download and install the apps from the [Microsoft 365 portal](https://portal.office.com/account#installs).
 
 - Make sure you have an Office 365 E3 or E5 license assigned from the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users).
 
