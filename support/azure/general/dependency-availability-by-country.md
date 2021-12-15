@@ -25,12 +25,13 @@ Many product features have Azure dependencies that might not be available in all
 
 ## Availability by country
 
-Countries that have Azure dependencies availability as of September 2021:
+Countries that have Azure dependencies availability as of December 2021:
 
 - Australia
 - Brazil
 - Canada
 - France
+- Germany
 - India
 - Japan
 - South Korea
