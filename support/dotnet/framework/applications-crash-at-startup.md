@@ -38,4 +38,4 @@ You can delete the *user.config* file and let the application recreate it.
 
 ## More information
 
-For more information, see [Application Settings Architecture](/dotnet/framework/winforms/advanced/application-settings-architecture).
+For more information, see [Application Settings Architecture](/dotnet/desktop/winforms/advanced/application-settings-architecture).
