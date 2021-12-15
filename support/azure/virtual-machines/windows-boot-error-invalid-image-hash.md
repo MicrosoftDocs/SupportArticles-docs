@@ -25,23 +25,23 @@ This article provides steps to resolve issues where a preview image was used and
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays the Windows Boot Manager with the message:
 
-  `File: \windows\system32\boot\winload.exe`
+  > File: \windows\system32\boot\winload.exe
 
-  `Status: 0xc0000428`
+  > Status: 0xc0000428
 
-  `Info: Windows cannot verify the digital signature for this file.`
+  > Info: Windows cannot verify the digital signature for this file.
 
-  ![Figure 1 displays Windows Boot Manager with the status "Ox0000428", and info "Windows cannot verify the digital signature for this file".](./media/windows-boot-error-invalid-image-hash/1-cannot-verify-signature.png)
+  :::image type="content" source="media/windows-boot-error-invalid-image-hash/verify-signature-failed.png" alt-text="Screenshot of the Windows Boot Manager window, with the status Ox0000428 and the info that windows cannot verify the digital signature for this file.":::
 
 or the message:
 
-  `File: \Windows\system32\winload.exe`
+  > File: \Windows\system32\winload.exe
 
-  `Status: 0xc0000428`
+  > Status: 0xc0000428
 
-  `Info: The digital signature for this file couldn't be verified.`
+  > Info: The digital signature for this file couldn't be verified.
 	
-  ![Figure 2 displays Windows Boot Manager with the status "Ox0000428", and info "The digital signature for this file couldn't be verified".](./media/windows-boot-error-invalid-image-hash/2-digital-signature-not-verified.png)
+  :::image type="content" source="media/windows-boot-error-invalid-image-hash/digital-signature-not-verified.png" alt-text="Screenshot of the Windows Boot Manager window, with the status Ox0000428 and the info that the digital signature for this file couldn't be verified.":::
 
 ## Cause
 

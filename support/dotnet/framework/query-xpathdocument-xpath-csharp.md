@@ -157,7 +157,7 @@ To resolve the exception, use one of the following resolutions:
 
 - [XPathNodeIterator Class](/dotnet/api/system.xml.xpath.xpathnodeiterator)
 
-- [XSLT Transformations with the XslTransform Class](/dotnet/standard/data/xml/xslt-transformations-with-the-xsltransform-class)
+- [XSLT Transformations with the XslTransform Class](/previous-versions/dotnet/framework/data/xml/xslt/xslt-transformations-with-the-xsltransform-class)
 
 - [XPath Syntax](/previous-versions/dotnet/netframework-3.5/ms256471(v%3dvs.90))
 
