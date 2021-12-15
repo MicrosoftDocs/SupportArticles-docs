@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 2681562
 
     For information about how to enable the .NET 3.5 Framework, review the following articles:
 
-    - [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows-10).
+    - [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows).
 
     - [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard)  
 

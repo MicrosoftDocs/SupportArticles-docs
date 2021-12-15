@@ -135,7 +135,7 @@ For an AD FS server that uses SQL Server as configuration database, you must als
 
     In this command, \<Federation service name> represents the fully qualified domain name (FQDN) service name of the AD FS service endpoint. You can find the service name in the **Federation Service Properties** dialog box:
 
-    ![The screenshot for ADFS service name](./media/adfs-2-service-fails-to-start/federation-service-name.png)
+    :::image type="content" source="media/adfs-2-service-fails-to-start/federation-service-name.png" alt-text="Screenshot of the Federation Service Properties window showing the Federation Service name.":::
 
     To add or remove the SPN from the account, follow these steps:
 

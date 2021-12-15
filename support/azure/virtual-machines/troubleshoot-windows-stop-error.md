@@ -25,11 +25,11 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
    **Windows Boot Manager**
 
-   ![Windows Boot Manager stating that "Windows failed to start. A recent hardware or software change might be the cause". Scrolling down, you see the Status code "0xC0000017" as well as info stating that "The application or operating system couldn't be loaded because a required file is missing or contains errors".](./media/troubleshoot-windows-stop-error/windows-boot-manager.svg)
+   :::image type="content" source="media/troubleshoot-windows-stop-error/windows-boot-manager.svg" alt-text="Screenshot of the 0xC0000017 error code in the Windows Boot Manager.":::
 
    **Recovery Screen**
  
-   ![The Recovery screen stating that "Your PC/Device needs to be repaired. There isn't enough memory available to create a ramdisk device". You should also see the error code "0xC0000017".](./media/troubleshoot-windows-stop-error/recovery-screen.svg)
+   :::image type="content" source="media/troubleshoot-windows-stop-error/recovery-screen.svg" alt-text="Screenshot of the 0xC0000017 error code in the Recovery screen." border="false":::
 
 ## Cause
 
@@ -65,7 +65,7 @@ If you're using a Generation 2 VM, the EFI partition of the attached disk may no
 1. Identify the broken disk attached to the repair VM. Typically, this disk is listed last in the console, and has the highest numerical value.
 1. Note if in that disk there's a partition that holds the **EFI System Partition**, which also doesn't have a letter value assigned to it (such as drive *F:*). If all partitions are assigned, you may skip ahead to free up space on the disk. Otherwise, continue to assign a letter to this disk.
 
-   ![The Disk Management console, with the attached disk "Disk 2", as well as the unassigned partition that is 100 MB and is the "EFI System Partition".](./media/troubleshoot-windows-stop-error/3.png)
+   :::image type="content" source="media/troubleshoot-windows-stop-error/disk-management.svg" alt-text="Screenshot of the Disk Management window, showing a partition that holds the E F I System Partition.":::
 
 1. Open an elevated command prompt as an administrator and enter `diskpart` to launch the **DISKPART** tool.
 1. Enter the following commands:
@@ -131,7 +131,7 @@ Before taking any steps, you should create a copy of the **\windows\system32\con
 1. In Windows search, enter **regedit** and open the Registry Editor application.
 1. In the Registry Editor, highlight the key **HKEY_LOCAL_MACHINE** and select **File > Load Hive...** from the menu.
 
-   ![The load Hive menu of the registry editor.](./media/troubleshoot-windows-stop-error/4.png)
+   :::image type="content" source="media/troubleshoot-windows-stop-error/load-hive.svg" alt-text="Screenshot shows steps to load a hive in the Registry Editor.":::
 
 1. In the Load Hive dialog, select **\windows\system32\config\SYSTEM** and click Open.
    1. You'll be prompted for a name, which you should enter **BROKENSYSTEM**. This name will help differentiate the affected hives while you're troubleshooting.
@@ -162,7 +162,7 @@ To enable memory dump collection and Serial Console, run the following script:
    
    - In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder.
 
-      ![The output of listing the BCD store in a Generation 1 VM, which lists under Windows Boot Loader the identifier number.](./media/troubleshoot-windows-stop-error/5.png)
+      :::image type="content" source="media/troubleshoot-windows-stop-error/command-output.svg" alt-text="Screenshot shows the output of the command, which lists the identifier number under the Windows Boot Loader section.":::
 
    1. For a Generation 2 VM, enter the following command and note the identifier listed:
    

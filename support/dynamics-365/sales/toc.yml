@@ -905,11 +905,15 @@
     items:
     - name: Connector doesn't handle null strings and dates correctly
       href: dynamics-connector-does-not-handle-null-strings-and-dates-correctly.md
+  - name: Microsoft Teams Integration
+    items:
+    - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
+      href: troubleshoot-dynamics365-embedcollab-issues.md
   - name: Mobile Apps
     items:
     - name: We can't find any apps for your role
       href: we-cannot-find-any-apps-your-role.md
-  - name: Other Funcationality
+  - name: Other Functionality
     items:
     - name: Business Process Flow deletion fails
       href: business-process-flow-deletion-fails.md
@@ -921,8 +925,6 @@
       href: crm-rule-deployment-wizard-fails-to-apply-rules-to-users.md
     - name: List Component for SharePoint 2013 Configuration is case-sensitive
       href: list-component-case-sensitive.md
-    - name: Microsoft Flow Extension Package shows Installation failed
-      href: flow-extension-package-shows-installation-failed.md
     - name: Online outbound phone calls default to Lync not Skype
       href: dynamics-crm-online-outbound-phone-calls-default-to-lync.md
     - name: Relevance Search doesn't work for sandbox instances

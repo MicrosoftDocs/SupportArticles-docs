@@ -34,9 +34,9 @@ This issue occurs because of increased security in Windows Vista. The method tha
 
 To resolve this issue, modify the user environment variables by using the User Accounts item in Control Panel. You can follow these steps:
 
-1. Click **Start**![Start button ](./media/cannot-modify-user-environment-variables-system-properties/vista-start-button.jpg), type Accounts in the **Start search** box, and then click **User Accounts** under **Programs**.
+1. Click **Start** :::image type="icon" source="media/cannot-modify-user-environment-variables-system-properties/vista-start-button.png" border="false":::, type Accounts in the **Start search** box, and then click **User Accounts** under **Programs**.
 
-    ![User Account Control permission ](./media/cannot-modify-user-environment-variables-system-properties/security-shield.jpg) If you are prompted for an administrator password or for a confirmation, type the password, or click **Allow**.
+    :::image type="icon" source="media/cannot-modify-user-environment-variables-system-properties/security-shield.png" border="false"::: If you are prompted for an administrator password or for a confirmation, type the password, or click **Allow**.
 2. In the **User Accounts** dialog box, click **Change my environment variables** under **Tasks**.
 
 3. Make the changes that you want to the user environment variables for your user account, and then click **OK**.

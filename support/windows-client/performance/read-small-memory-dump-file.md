@@ -52,7 +52,7 @@ To configure startup and recovery options to use the small memory dump file, fol
 3. Click the **Advanced** tab, and then click **Settings** under **Startup and Recovery**.
 4. In the **Write debugging information** list, click **Small memory dump (64k)**.
 
-    ![Startup and Recovery - Small Memory Dump dialog box](./media/read-small-memory-dump-file/small-memory-dump-option.png)  
+    :::image type="content" source="media/read-small-memory-dump-file/small-memory-dump-option.png" alt-text="Screenshot of the Small memory dump (64k) option in the Write debugging information list in the Startup and Recovery window." border="false"::: 
 
 To change the folder location for the small memory dump files, type a new path in the **Dump File** box or in the **Small dump directory** box, depending on your version of Windows).
 

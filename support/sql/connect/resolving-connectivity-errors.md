@@ -251,7 +251,7 @@ If this does not resolve your issue, move to [Still having problems](#still-havi
 Download location: [PortqryUI](https://www.microsoft.com/download/details.aspx?id=24009)
 
 1. Launch PortqryUI tool on your client machine. (the machine where you are having connection issues, for web apps, this could be the IIS server)
-2. Specify server name of the SQL Server instance or the SQL vitutal server name in the **Destination IP** or **FQDN** to query.
+2. Specify server name of the SQL Server instance or the SQL virtual server name in the **Destination IP** or **FQDN** to query.
 3. Select **Query predefined service** and select **SQL Service** in the dropdown list.
 4. Click **Query** and examine the output and use the following table for additional pointers.
 
