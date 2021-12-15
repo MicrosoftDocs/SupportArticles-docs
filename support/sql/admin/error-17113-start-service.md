@@ -1,7 +1,7 @@
 ---
 title: Error 17113 when you start SQL Server service
 description: This article provides resolutions for the Error 17113 problem that occurs when you start SQL Server service.
-ms.date: 12/13/2021
+ms.date: 12/15/2021
 author: v-lianna
 ms.author: v-lianna
 ms.reviewer: ramakoni
