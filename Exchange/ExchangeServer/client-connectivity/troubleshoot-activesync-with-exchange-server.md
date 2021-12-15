@@ -1252,7 +1252,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
@@ -1263,7 +1263,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 6. Modify the DeviceId value in the WHERE clause at the end of the query with the value from the previous step.
 7. Select the exclamation point icon to execute the query.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 8. Analyze the results for this query by reviewing the Error and sc-status columns.
 
@@ -1628,7 +1628,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the **Add Files** or **Add Folder** button, then locate and select the file(s) copied earlier.
 
@@ -1638,7 +1638,7 @@ To determine if any of these ActiveSync requests are resulting in an error, quer
 5. Double-click **ActiveSync: SendMail** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query by searching for any value in the Status or Error columns. Also look for any HTTP status codes that do not equal 200.
 
@@ -1920,7 +1920,7 @@ We need to determine if the requests from this ActiveSync client encountered any
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -1930,7 +1930,7 @@ We need to determine if the requests from this ActiveSync client encountered any
 5. Double-click **ActiveSync: Count Syncs with SyncKey of Zero Per User** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
    **Example results:**
 
@@ -1984,7 +1984,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -1994,7 +1994,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 5. Double-click **ActiveSync: Count Syncs with SyncKey of Zero Per User** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query.
 
@@ -2012,7 +2012,7 @@ To determine why the device sent a SyncKey of 0, analyze the device activity pri
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2023,7 +2023,7 @@ To determine why the device sent a SyncKey of 0, analyze the device activity pri
 6. Modify the DeviceId value in the WHERE clause at the end of the query with the value from the previous step.
 7. Select the exclamation point icon to execute the query.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 
 8. Analyze the results for this query by locating the request where the value in the **SyncKey** column is 0. Then look at the previous requests where the **Cmd=Sync** and check if the sc-status value is 5xx.
@@ -2078,7 +2078,7 @@ To determine if a previous request caused the device to send the SyncKey value o
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2088,7 +2088,7 @@ To determine if a previous request caused the device to send the SyncKey value o
 5. Double-click **ActiveSync: Request with ActiveSync errors** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query by referencing the **Status** response with the device **Cmd**. Use the [ActiveSync protocol documentation](/openspecs/exchange_server_protocols/ms-ascmd/3bc7cad1-daa7-4a18-965b-b5fbf2a3b510) as a reference. For example, any [Ping](/openspecs/exchange_server_protocols/ms-ascmd/cec19b0e-b7f9-4967-9569-39c73746efc4) request that results in a status greater than 2 is an error and should be investigated further. Any [Sync](/openspecs/exchange_server_protocols/ms-ascmd/08151746-faf7-40a3-832b-b42e88a0b729) request that results in a status greater than 1 is an error and should be investigated further.
 
@@ -2186,7 +2186,7 @@ To determine if devices are sending the same SyncKey to Exchange for the same fo
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2196,7 +2196,7 @@ To determine if devices are sending the same SyncKey to Exchange for the same fo
 5. Double-click **ActiveSync: Count all Syncs per SyncKey** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query.
 
@@ -2212,7 +2212,7 @@ To determine if the client should be sending the same SyncKey, check the status 
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2222,7 +2222,7 @@ To determine if the client should be sending the same SyncKey, check the status 
 5. Double-click **ActiveSync: Device query** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query.
 
@@ -2275,7 +2275,7 @@ To determine if ActiveSync requests are causing resource consumption, run the as
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2284,7 +2284,7 @@ To determine if ActiveSync requests are causing resource consumption, run the as
 4. Verify the file/folder is selected and select **OK**.
 5. Double-click **ActiveSync: High RPC counts or latency** from the Library.
 6. Select the exclamation point icon to execute the query.
-   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+   :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query.
 
@@ -2386,7 +2386,7 @@ To determine if devices are generating errors, run the associated Log Parser que
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2396,7 +2396,7 @@ To determine if devices are generating errors, run the associated Log Parser que
 5. Double-click **ActiveSync: Count all errors** from the Library
 6. Select the exclamation point icon to execute the query
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 7. Analyze the results for this query.
 
@@ -2421,7 +2421,7 @@ To determine if one or more users are contributing to the performance issue, run
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2431,7 +2431,7 @@ To determine if one or more users are contributing to the performance issue, run
 5. Double-click **ActiveSync: Report [Top 20]** from the Library.
 6. Select the exclamation point icon to execute the query.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 
 7. Analyze the results for this query
@@ -2447,7 +2447,7 @@ To determine device traffic, analyze the device activity using the associated Lo
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2458,7 +2458,7 @@ To determine device traffic, analyze the device activity using the associated Lo
 6. Modify the DeviceId value in the WHERE clause at the end of the query with the value from the previous step.
 7. Select the exclamation point icon to execute the query.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 8. Analyze the results for this query and look for any trends.
 
@@ -2525,7 +2525,7 @@ To determine if these errors are causing a performance issue, run a Log Parser q
 1. Launch Log Parser Studio by double-clicking LPS.exe.
 2. Select the Log folder icon to select files to process.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/log-folder-icon.png":::
 
 3. Select the Add Files or Add Folder button, then locate and select the file(s) copied earlier.
 
@@ -2544,7 +2544,7 @@ To determine if these errors are causing a performance issue, run a Log Parser q
 
 7. Select the exclamation point icon to execute the query.
 
-    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png" border="false":::
+    :::image type="icon" source="media/troubleshoot-activesync-with-exchange-server/exclamation-point-icon.png":::
 
 8. Analyze the results for this query and try to determine the cause of the error. In the following example, the `KeepAliveFailure` only occurs when requests are have the PrxTo to a CAS server in another site. Here we would want to investigate network connectivity issues between the two sites.
 
