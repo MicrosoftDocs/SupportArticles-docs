@@ -28,6 +28,7 @@ If your Linux virtual machine (VM) in Azure encounters a boot or disk error, you
 > * Only one script may run at a time.
 > * A running script cannot be canceled.
 > * The maximum time a script can run is 90 minutes, after which it will time out.
+> * Do not modify the tags that are created on the Repair VM these are neccessary for the restore command to function correctly.
 > * For VMs using Azure Disk Encryption, only managed disks encrypted with single pass encryption (with or without KEK) are supported.
 
 ## Repair process overview
@@ -42,19 +43,29 @@ Follow these steps to troubleshoot the VM issue:
 4. Run az vm repair run, or perform mitigation steps.
 5. Run az vm repair restore
 
-For additional documentation and instructions, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
+To view all commands and parameters available, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
+
+The user running these commands will need a role that can create the following types of resources in the subscription:
+* Resource Groups
+* Virtual Machines
+* Resource Tags
+* Virtual Networks
+* Network Security Groups
+* Network Interfaces
+* Disks
+* Public IP Addresses (Optional)
 
 ## Repair process example
 
 1. Launch Azure Cloud Shell
 
-   The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It includes common Azure tools preinstalled and configured to use with your account.
+   The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It includes common Azure tools preinstalled and configured to use with your account. If you will be running scripts that take longer than 20 minutes to run you may prefer to run the commands locally, this quickstart requires Azure CLI version 2.0.67 or later. Run ``az --version`` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
    To open the Cloud Shell, select **Try it** from the upper-right corner of a code block. You can also open Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
 
    Select **Copy** to copy the blocks of code, then paste the code into the Cloud Shell, and select **Enter** to run it.
 
-   If you prefer to install and use the CLI locally, this quickstart requires Azure CLI version 2.0.30 or later. Run ``az --version`` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
+   If you prefer to install and use the CLI locally, this quickstart requires Azure CLI version 2.0.67 or later. Run ``az --version`` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
    
    If you need to login to Cloud Shell with a different account than you are currently logged in to the Azure Portal with you can use ``az login`` [az login reference](/cli/azure/reference-index#az-login&preserve-view=true).  To switch between subscriptions associated with your account you can use ``az account set --subscription`` [az account set reference](/cli/azure/account#az-account-set&preserve-view=true).
 
@@ -70,8 +81,12 @@ For additional documentation and instructions, see [az vm repair](/cli/azure/ext
    az extension update -n vm-repair
    ```
 
-3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy.  The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption the command will attempt to unlock the encrypted disk so that it is accessible when attached to the repair VM.
+3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy.  The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption, use `--unlock-encrypted-vm` to unlock the encrypted disk so that it is accessible when attached to the repair VM. For more information, see [confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
 
+> [!IMPORTANT]
+> The run and restore commands will require all inputs to be entered using the same case as used in the create command, make note or refer to the tags on the repair VM to see what was used.
+
+   Repair VM example
    ```azurecli-interactive
    az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password password1234 --verbose
    ```
