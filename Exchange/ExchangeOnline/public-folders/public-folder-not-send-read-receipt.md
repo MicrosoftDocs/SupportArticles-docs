@@ -35,17 +35,13 @@ The output of the cmdlet will resemble the following screenshot.
 
 :::image type="content" source="media/public-folder-not-send-read-receipt/get-publicfolder-cmdlet.png" alt-text="The screenshot of the Get-PublicFolder cmdlet that checks the value of the PerUserReadStateEnabled parameter.":::
 
-However, you see that even though both these conditions are met, the read receipt you receive is not sent by the public folder but by the public folder mailbox that hosts the public folder. This issue is shown in the following examples.
+However, you see that even though both these conditions are met, the read receipt you receive is not sent by the public folder but by the public folder mailbox that hosts the public folder. This issue is shown in the following example:
 
-**Example 1**
-
-Message sent from user John to the mail-enabled public folder PF2
+Message sent from user John to the mail-enabled public folder PF2:
 
 :::image type="content" source="media/public-folder-not-send-read-receipt/request-read-receipt.png" alt-text="Screenshot of an email to a mail-enabled public folder that requests a read receipt.":::
 
-**Example 2**
-
-Read receipt received from the public folder mailbox **MSExchangepf2** instead of from PF2
+Read receipt received from the public folder mailbox **MSExchangepf2** instead of from PF2:
 
 :::image type="content" source="media/public-folder-not-send-read-receipt/read-receipt-from-mailbox.png" alt-text="Screenshot of a read receipt that comes from the public folder mailbox.":::
 
