@@ -66,7 +66,7 @@ To set a custom mailbox quota for Exchange Online mailboxes, use one of the foll
     Get-Mailbox | Set-Mailbox -ProhibitSendQuota <Value> -ProhibitSendReceiveQuota <Value> -IssueWarningQuota <Value>
     ```
 
-    You can apply filters to the Get-Mailbox cmdlet or to the Get-User cmdlet to specify a subset of users for whom the change needs to be applied. In the following example, three cmdlets are used to filter the command to set a quota only for users in the Sales department of an organization:
+    You can apply filters to the `Get-Mailbox` cmdlet or to the `Get-User` cmdlet to specify a subset of users for whom the change needs to be applied. In the following example, three cmdlets are used to filter the command to set a quota only for users in the Sales department of an organization:
 
     ```powershell
     Get-User | where {$_.Department -eq "Sales"} | Get-Mailbox | Set-Mailbox -ProhibitSendQuota <Value> -ProhibitSendReceiveQuota <Value> -IssueWarningQuota <Value>
