@@ -39,7 +39,7 @@ Not sure which Microsoft 365 plan your organization uses? Go to [http://portal.m
 
 |Small Business: If you see the below administrative interface, then you are using the Small Business plan.|Enterprise \|Midsize \|Education: If you see the below administrative interface, then you are using the Enterprise, Midsize, or Education plan.|
 |---|---|
-|![Small Business plan](./media/create-and-manage-resource-mailboxes/small-business-plan.png)|![Enterprise, Midsize or Education plan](./media/create-and-manage-resource-mailboxes/enterprise-midsize-education-plan.png)|
+|:::image type="content" source="media/create-and-manage-resource-mailboxes/small-business-plan.png" alt-text="Screenshot of the Small Business plan administrative interface." border="false":::|:::image type="content" source="media/create-and-manage-resource-mailboxes/enterprise-midsize-education-plan.png" alt-text="Screenshot of the Enterprise, Midsize, or Education plan administrative interface." border="false":::|
 
 - [Small Business](#use-the-exchange-admin-center-eac-to-create-and-manage-resource-mailboxes)
 - [Enterprise | Midsize | Education](#use-the-exchange-admin-center-eac-to-create-and-manage-resource-mailboxes-for-enterprise-midsize-or-education)
@@ -54,12 +54,12 @@ Before you begin, sign in to the [Exchange admin center](http://outlook.office36
 2. To create a room mailbox, select **New+** > **Room mailbox**. To create an equipment mailbox, select **New+** > **Equipment mailbox**.
 3. Use the options on the page to specify the settings for the new resource mailbox.
 
-After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients/room-mailboxes?view=exchserver-2019) and [Manage Equipment Mailboxes](/exchange/recipients/equipment-mailboxes?view=exchserver-2019).
+After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients/room-mailboxes) and [Manage Equipment Mailboxes](/exchange/recipients/equipment-mailboxes).
 
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, sorry, we couldn’t resolve your issue with this guide. Provide feedback on this guide, and then use the resources below to continue troubleshooting.
+- If no, sorry, we couldn't resolve your issue with this guide. Provide feedback on this guide, and then use the resources below to continue troubleshooting.
 
   Visit the [Microsoft 365 and Office Community](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1) for self-help support. Do one of the following:
 
@@ -79,9 +79,9 @@ Before you begin, sign in to the [Exchange admin center](https://outlook.office3
 
 3. Use the options on the page to specify the settings for the new resource mailbox.
 
-After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients/room-mailboxes?view=exchserver-2019) and [Manage Equipment Mailboxes](/exchange/recipients/equipment-mailboxes?view=exchserver-2019).
+After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients/room-mailboxes) and [Manage Equipment Mailboxes](/exchange/recipients/equipment-mailboxes).
 
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, sorry, we couldn’t resolve your issue with this guide. Provide feedback on this guide, and then use the resources below to continue troubleshooting.
+- If no, sorry, we couldn't resolve your issue with this guide. Provide feedback on this guide, and then use the resources below to continue troubleshooting.

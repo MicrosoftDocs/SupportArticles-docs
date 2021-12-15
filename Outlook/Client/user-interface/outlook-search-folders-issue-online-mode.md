@@ -36,7 +36,7 @@ This issue occurs when the hidden SEARCH_RUNNING flag isn't set on some folders 
 
 ## Resolution
 
-To resolve this issue, use the MFCMapi utility to restart the search service for each affected folder. To download MFCMapi, go to [April 2017 Release of MFCMAPI and MrMAPI](https://github.com/stephenegriffin/mfcmapi).
+To resolve this issue, use the MFCMapi utility to restart the search service for each affected folder. To download MFCMapi, go to [April 2017 Release of MFCMAPI and MrMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 
 To configure and use MFCMapi to restart the search service, follow these steps:
 

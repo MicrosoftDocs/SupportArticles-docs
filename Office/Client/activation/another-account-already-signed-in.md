@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 157596
+- CI 159181
 search.appverid: 
 - MET150
 appliesto:
@@ -66,7 +67,7 @@ For manual steps or more information, see [Reset Microsoft 365 Apps for enterpri
 
 <details>
 <summary><b>Sign out of Office and sign back in</b></summary>
-  
+
 1.	Open an Office app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.

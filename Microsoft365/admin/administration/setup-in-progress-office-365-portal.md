@@ -40,7 +40,7 @@ After step 1 of the wizard is complete, you can use the new domain in Office 365
 
 If you chose to implement a hybrid deployment for your organization, select the **Don't check this domain for incorrect DNS records** check box, as shown in the following screen shot.
 
-![Screen shot of the hybrid deployment](./media/setup-in-progress-office-365-portal/hybrid-depolyment.jpg)
+:::image type="content" source="media/setup-in-progress-office-365-portal/hybrid-depolyment.png" alt-text="Screenshot to select the Don't check this domain for incorrect DNS records check box.":::
 
 Doing this prevents the warning messages from being displayed for this domain. If you later choose not to implement a hybrid deployment, clear the **Don't check this domain for incorrect DNS records** check box.
 

@@ -1,5 +1,6 @@
 ---
 title: Description of task panes in Office programs
+description: Describes a new feature in Microsoft Office XP and how to use task panes.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal

@@ -2,59 +2,34 @@
 
 
 
-## Week of October 25, 2021
+## Week of December 06, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 10/27/2021 | [Error code 6031 when buying licenses in Office 365 portal](/office365/troubleshoot/licensing/error-code-6031-buy-licenses-office-365) | added |
+| 12/7/2021 | [Unable to add guest users in M365 admin center](/office365/troubleshoot/access-management/cannot-add-guest-users-in-m365-admin-center) | modified |
+| 12/7/2021 | [How to manage access to Microsoft Fluid Framework preview](/office365/troubleshoot/access-management/manage-fluid-framework-preview-access) | modified |
+| 12/7/2021 | [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](/office365/troubleshoot/active-directory/sign-in-fails-if-federation-endpoint-changes) | modified |
+| 12/7/2021 | [Use Remote Connectivity Analyzer to troubleshoot single sign-on issues](/office365/troubleshoot/active-directory/single-sign-on-issues) | modified |
+| 12/7/2021 | [Support options for setting up single sign-on for Office 365](/office365/troubleshoot/active-directory/support-options-of-set-single-sign-on) | modified |
+| 12/7/2021 | [Cannot continue error when you start the Office 365 Desktop Setup Tool](/office365/troubleshoot/administration/error-when-start-desktop-setup-tool) | modified |
+| 12/7/2021 | [Application cannot be started, contact the application vendor in Office 365](/office365/troubleshoot/administration/office-365-application-cannot-be-started) | modified |
+| 12/7/2021 | [Domain shows a status of Setup in progress in the Office 365 portal](/office365/troubleshoot/administration/setup-in-progress-office-365-portal) | modified |
+| 12/7/2021 | [SupportMultipleDomain switch when managing single sign-on (SSO) to Office 365](/office365/troubleshoot/administration/supportmultipledomain-switch-when-manage-sso) | modified |
+| 12/7/2021 | [Lots of false positives are generated when the SPF record hard fails advanced spam filtering option is enabled.](/office365/troubleshoot/antispam/false-positives) | modified |
 
 
-## Week of October 18, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/20/2021 | [Your organization has disabled this device when trying to activate Microsoft 365 Apps](/office365/troubleshoot/access-management/error-135011-activate-m365-apps) | modified |
-| 10/22/2021 | [User not seeing add-ins](/office365/troubleshoot/access-management/user-not-seeing-add-ins) | modified |
-| 10/22/2021 | [Troubleshoot directory synchronization errors with event 6941](/office365/troubleshoot/active-directory/duplicate-attributes-prevent-dirsync) | modified |
-| 10/22/2021 | [How to run the Fiddler Trace after installing SaRA](/office365/troubleshoot/diagnostic-logs/run-fiddler-trace) | modified |
-| 10/22/2021 | [Distribution group issues](/office365/troubleshoot/groups/distribution-list-issues) | modified |
-| 10/22/2021 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
-| 10/22/2021 | [Determine the license type of your Microsoft Office product](/office365/troubleshoot/licensing/determine-office-license-type) | modified |
-| 10/22/2021 | [Can't Verify Subscription or No Subscription Found in Office Mobile](/office365/troubleshoot/licensing/subscription-issue-in-office-mobile) | modified |
-| 10/22/2021 | [Automatic updating for Microsoft Office is not enabled](/office365/troubleshoot/updates/automatic-updates) | modified |
-
-
-## Week of October 11, 2021
+## Week of November 22, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 10/15/2021 | [How to restore deleted user accounts in Office 365, Azure, and Intune](/office365/troubleshoot/active-directory/restore-deleted-user-accounts) | modified |
-| 10/15/2021 | [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016) | modified |
+| 11/25/2021 | [Open Support cases for GCC High and DoD](/office365/troubleshoot/miscellaneous/support-cases-for-gcc-high-dod) | modified |
 
 
-## Week of October 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2021 | [The remote server returned an error (401) Rbac check failed when you manage disposition of data](/office365/troubleshoot/mrm-rentention-policies/cannot-manage-disposition-reviews) | added |
-| 10/8/2021 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
-| 10/8/2021 | [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run) | modified |
-| 10/8/2021 | [What the UserAgent property value refers to in the unified audit log](/office365/troubleshoot/audit-logs/useragent-property) | modified |
-| 10/8/2021 | [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme) | modified |
-
-
-## Week of September 27, 2021
+## Week of November 15, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/30/2021 | [This feature has been disabled by your administrator error in Microsoft Office](/office365/troubleshoot/access-management/office-feature-disabled) | modified |
-| 9/30/2021 | [We can't start this app when installing an Office add-in](/office365/troubleshoot/installation/cannot-install-office-add-in) | modified |
-| 9/30/2021 | [Office LTSC 2021 and Office 2019 perpetual volume license products available as Click-to-Run](/office365/troubleshoot/installation/office-perpetual-volume-license-products) | modified |
-| 9/30/2021 | [Determine the license type of your Microsoft Office product](/office365/troubleshoot/licensing/determine-office-license-type) | modified |
-| 9/30/2021 | [Automatic updating for Microsoft Office is not enabled](/office365/troubleshoot/updates/automatic-updates) | modified |
-| 9/30/2021 | [Office Feature Updates task description and FAQ](/office365/troubleshoot/updates/office-feature-updates-task-faq) | modified |
+| 11/18/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |

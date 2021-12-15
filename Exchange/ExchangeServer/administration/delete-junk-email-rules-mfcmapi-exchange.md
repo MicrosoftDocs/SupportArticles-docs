@@ -41,7 +41,7 @@ To delete a junk email rule, follow these steps:
 
 2. Export the list of addresses that contain safe senders and blocked senders to a text (.txt) file.
 
-3. Download MFCMAPI from [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
+3. Download MFCMAPI from [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
 
     > [!NOTE]
     > Only an Exchange administrator who has full permissions of a mailbox can use the MFCMAPI tool to remove a junk email rule.

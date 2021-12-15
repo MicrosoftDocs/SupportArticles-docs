@@ -45,7 +45,7 @@ To run Remote Connectivity Analyzer to test SSO authentication, follow these ste
     > - Your user ID is your user principal name (UPN).    
     > - You must enter the actual credentials that are associated with the SSO implementation that you're testing.   
     
-    ![Screen shot of the Remote Connectivity Analyzer page, showing the use account and password fields, the security acknowledgement check box, the verification code, and the Perform Test button highlighted. ](./media/single-sign-on-issues/type-accounts.jpg)   
+    :::image type="content" source="media/single-sign-on-issues/remote-connectivity-analyzer.png" alt-text="Screenshot of the Remote Connectivity Analyzer page.":::
 
 3. If the connectivity test isn't completed successfully, expand the **Test Details** result tree by following the error icons to identify the first error that the test encountered. For any error state that's detected, expand the test result tree to the specific error, and then click **Tell me more about this issue and how to resolve**.
 

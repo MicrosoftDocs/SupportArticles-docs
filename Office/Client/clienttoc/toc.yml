@@ -293,6 +293,14 @@
           href: ../access/your-network-access-was-interrupted-error.md
     - name: Activation
       items:
+        - name: Account or subscription verification errors activating Microsoft 365 Apps
+          href: ../activation/account-or-subscription-errors.md
+        - name: Activating Microsoft 365 Apps for Business with a product key
+          href: ../activation/activate-with-product-key.md
+        - name: Activation error Sorry, we are having some temporary server issues
+          href: ../activation/temporary-server-issues.md
+        - name: Activation error That Microsoft account doesn’t exist
+          href: ../activation/account-doesnt-exist.md
         - name: Activation error Trusted Platform Module malfunctioned
           href: ../activation/tpm-malfunctioned.md
         - name: Can't activate Office on a new computer
@@ -309,14 +317,30 @@
           href: ../activation/issue-when-activate-office-from-office-365.md
         - name: Issue with changing Office 2010 product key
           href: ../activation/office-2010-product-key-change-error.md
+        - name: Issues with shared computer activation for Microsoft 365 Apps
+          href: ../activation/shared-computer-activation.md
         - name: Microsoft 365 Apps activation error 0xCAA50021
           href: ../activation/activation-error-0xcaa50021.md
         - name: Microsoft 365 Apps activation error 0x80070005
           href: ../activation/activation-error-0x80070005.md
         - name: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
           href: ../activation/aadsts9002313-invalid-request.md
+        - name: Microsoft 365 Apps activation error codes 0xCAA70007 and 0xCAA80000
+          href: ../activation/0xcaa70007-and-0xcaa80000.md
+        - name: Microsoft 365 Apps activation error There’s a problem with your account
+          href: ../activation/problem-with-your-account.md
+        - name: Microsoft 365 Apps activation error Your account doesn’t allow editing on a Mac
+          href: ../activation/doesnt-allow-editing-on-mac.md
+        - name: Microsoft 365 Apps activation error Your organization has disabled this device
+          href: ../activation/your-organization-disabled-this-device.md
+        - name: Microsoft 365 Apps activation limits
+          href: ../activation/activation-limits.md
         - name: Microsoft 365 Apps activation network connection issues
           href: ../activation/network-connection-issues.md
+        - name: Microsoft 365 Apps activation Product deactivated
+          href: ../activation/product-deactivated.md
+        - name: Microsoft 365 Apps activation Subscription expired error
+          href: ../activation/subscription-expired.md
         - name: Microsoft 365 Apps activation usage report issues
           href: ../activation/activation-usage-report-issues.md
         - name: Office for Mac activation An unknown error has occurred
@@ -325,10 +349,18 @@
           href: ../activation/sign-in-issues.md
         - name: Sorry, another account from your organization is already signed in on this computer
           href: ../activation/another-account-already-signed-in.md
+        - name: The account isn’t associated with this Office product
+          href: ../activation/account-not-associated-with-office.md
+        - name: The products we found in your account can't be used to activate
+          href: ../activation/cant-be-used-to-activate.md
         - name: Troubleshooting device-based licensing for Microsoft 365 Apps
           href: ../activation/device-based-licensing.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
+        - name: We’ve run into a problem with your Office 365 subscription
+          href: ../activation/run-into-a-problem.md
+        - name: You currently have not been assigned an office license that includes the Office desktop apps
+          href: ../activation/license-not-assigned.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support

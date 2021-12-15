@@ -54,4 +54,4 @@ If the Mailbox Search role is assigned to an account, that account has recipient
 
 - [Add the Mailbox Import Export Role to a Role Group](/previous-versions/office/exchange-server-2010/ee633452(v=exchg.141))
 
-- [New-ManagementRoleAssignment](/powershell/module/exchange/new-managementroleassignment?view=exchange-ps)
+- [New-ManagementRoleAssignment](/powershell/module/exchange/new-managementroleassignment)

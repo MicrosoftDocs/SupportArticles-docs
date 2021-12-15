@@ -49,7 +49,7 @@ To restore AD FS default service endpoint settings, follow these steps on the pr
 
 1. Open the AD FS Management Console, and in the left navigation pane, browse to **AD FS**, then **Service**, and then **Endpoints**.
 
-   ![ADFS Endpoints](./media/sign-in-fails-if-federation-endpoint-changes/adfs-endpoints.png)
+   :::image type="content" source="media/sign-in-fails-if-federation-endpoint-changes/adfs-endpoints.png" alt-text="Screenshot shows steps to check the A D F S default service endpoint settings." lightbox="media/sign-in-fails-if-federation-endpoint-changes/adfs-endpoints.png":::
 2. Examine the endpoints list, and make sure that the entries in this list are enabled as indicated (at a minimum):
 
    |URL Path|Enabled|Proxy enabled |
