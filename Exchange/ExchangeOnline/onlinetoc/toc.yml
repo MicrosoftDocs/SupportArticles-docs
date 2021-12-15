@@ -531,12 +531,12 @@
       href: ../user-and-shared-mailboxes/how-to-access-other-mailboxes.md
     - name: How to create and manage resource mailboxes
       href: ../user-and-shared-mailboxes/create-and-manage-resource-mailboxes.md
-    - name: How to set mailbox sizes
-      href: ../user-and-shared-mailboxes/how-to-set-mailbox-size-limit.md
     - name: HTTP 500 error when publishing calendar of a shared mailbox
       href: ../user-and-shared-mailboxes/http-500-error-when-publishing-calendar-of-shared-mailbox.md
     - name: Item count from Get-MailboxStatistics shows more items
       href: ../user-and-shared-mailboxes/item-count-from-get-mailboxstatistics-shows-more-than-mailboxfolderstatistics.md
+    - name: Increase or customize mailbox size
+      href: ../user-and-shared-mailboxes/increase-or-customize-mailbox-size.md
     - name: Mailbox provision delays
       href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
     - name: No soft-deleted mailbox after license removal
