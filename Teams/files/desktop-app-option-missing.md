@@ -22,52 +22,54 @@ search.appverid:
 
 ## Symptoms
 
-When you try to open a Microsoft Office file in Microsoft Teams, the desktop app option is missing.
+When you try to edit a Microsoft Office file directly in Microsoft Teams, the file's desktop app option is missing.
 
-The following screenshot is an example of opening a word document by using the **Word desktop app** option:
+The following screenshot is an example of opening a word document without the **Word desktop app** option:
 
-:::image type="content" source="media/desktop-app-option-missing/open-in-word-desktop-app.png" alt-text="Screenshot of the Word desktop app option.":::
+:::image type="content" source="media/desktop-app-option-missing/no-desktop-app-option.png" alt-text="Screenshot of opening a word document without the Word desktop app option.":::
 
-Additionally, the **Desktop app** option is also missing for the **File open preference** setting in Teams.
+The following screenshot is an example of opening a word document with the **Word desktop app** option:
 
-The following screenshot shows the **Desktop app** option in Teams **Settings**.
+:::image type="content" source="media/desktop-app-option-missing/open-in-desktop-app.png" alt-text="Screenshot of the Word desktop app option.":::
 
-:::image type="content" source="media/desktop-app-option-missing/desktop-app-in-files-setting.png" alt-text="Screenshot of the Desktop app option in Files tab in settings.":::
+The **Desktop app** option is also missing from the **File open preference** setting in Teams.
 
 ## Cause
 
-This issue can have any of the following causes.
+To edit an Office file in its desktop app, you must meet the following prerequisites:
 
-**Cause 1**: Teams for Windows or Mac isn't installed correctly.
+- Be using the Teams desktop app for Windows or Mac.
 
-**Cause 2**: Microsoft Office 2016 or a later version isn't installed.
+- Download the desktop apps for PowerPoint, Word, and Excel (Microsoft Office 2016 or a later version).
 
-**Cause 3**: You don't have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans) assigned.
+- Have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans).
+
+If any of these prerequisites isn't meet, the file's desktop app option is missing.
 
 ## Resolution
 
-To fix this issue, try the following resolutions.
+To fix this issue, try the following resolutions:
 
-**Resolution 1**: Download and reinstall [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software) for Windows or Mac.
+- Make sure Teams desktop app is installed. You can download and install [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software) for Windows or Mac.
 
-**Resolution 2**: Download and install Office desktop apps (Office 2016 or a later version) in the [Microsoft 365 portal](https://portal.office.com/account#installs).
+- Make sure the Office desktop apps are installed. You can download and install the apps from the [Microsoft 365 portal](https://portal.office.com/account#installs).
 
-**Resolution 3**: Assign an Office 365 E3 or E5 license in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users) as an administrator.
+- Make sure you have an Office 365 E3 or E5 license assigned from the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users).
 
-The administrator can verify if a user has an Office 365 E3 or E5 license assigned. To get a list of the product IDs of the assigned license, run the following PowerShell cmdlet:
+    An administrator can verify if a user has an Office 365 E3 or E5 license assigned. To get a list of the product IDs of the assigned license, run the following PowerShell cmdlet:
 
-```powershell
-$officeLicenseRoot = New-Object -TypeName PSObject
+    ```powershell
+    $officeLicenseRoot = New-Object -TypeName PSObject
+    
+    $officeLicenseRoot | Add-Member -MemberType NoteProperty -Name License -Value $(Get-ItemPropertyValue -Path 'HKLM:\Software\Microsoft\Office\ClickToRun\Configuration' -Name ProductReleaseIds)
+    
+    Write-Host $officeLicenseRoot
+    ```
 
-$officeLicenseRoot | Add-Member -MemberType NoteProperty -Name License -Value $(Get-ItemPropertyValue -Path 'HKLM:\Software\Microsoft\Office\ClickToRun\Configuration' -Name ProductReleaseIds)
+    If the user has a license assigned, the cmdlet output displays the **O365ProPlusRetail** product ID.
 
-Write-Host $officeLicenseRoot
-```
+    The cmdlet output is similar to the following:
 
-If the user has a license assigned, the cmdlet output displays the **O365ProPlusRetail** product ID.
-
-The cmdlet output is similar to the following:
-
-```output
-@{License=OneNoteFreeRetail,ProjectProRetail,VisioProRetail,O365ProPlusRetail}
-```
+    ```output
+    @{License=OneNoteFreeRetail,ProjectProRetail,VisioProRetail,O365ProPlusRetail}
+    ```
