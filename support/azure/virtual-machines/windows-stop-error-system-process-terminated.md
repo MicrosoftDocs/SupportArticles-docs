@@ -25,7 +25,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 > Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart. (##% complete) If you'd like to know more, you can search online later for this error: 0xC000021a.
 
-:::image type="content" source="media/windows-stop-error-system-process-terminated/stop-error.png" alt-text="Screenshot of stop error code: #0xC000021A with the message Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart.":::
+:::image type="content" source="media/windows-stop-error-system-process-terminated/stop-error.png" alt-text="Screenshot of stop error code: #0xC000021A with the message Your PC ran into a problem and needs to restart.":::
 
 ## Cause
 
