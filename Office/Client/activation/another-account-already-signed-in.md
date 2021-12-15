@@ -12,6 +12,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 157596
 - CI 159181
+- CI 159479
 search.appverid: 
 - MET150
 appliesto:
@@ -61,7 +62,7 @@ Run [the SaRA Office sign in issue troubleshooter](https://aka.ms/SaRA-OfficeSig
 
 Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
 
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/reset-office-365-proplus-activation-state.md).
+For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/><br/>
 </details>
 
