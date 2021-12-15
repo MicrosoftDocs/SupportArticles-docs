@@ -24,7 +24,7 @@ Assume that you have Visual Studio 2010 installed on a Windows 8 computer, and t
 
 To resolve this problem, use one of the following methods:
 
-- Install the [Microsoft .NET Framework 3.5](/dotnet/framework/install/dotnet-35-windows-10).
+- Install the [Microsoft .NET Framework 3.5](/dotnet/framework/install/dotnet-35-windows).
 - Repair the Visual Studio installation:
 
   1. Select **Start**, select **Control Panel**, select **Programs**, and then select **Programs and Features**.
