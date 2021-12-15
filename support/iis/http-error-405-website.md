@@ -57,5 +57,5 @@ Send the POST request to a page that's configured to be handled by a handler oth
 Remove WebDAV modules and handlers from the *Web.config* file. Also remove the WebDAV Publishing feature from your computer if it's not being used. To do so, follow these steps:
 
 1. Select **Start**, type *Turn Windows features on or off* in the **Start Search** box, and then select **Turn Windows features on or off**.
-1. In the Windows Features window, expand Internet Information Services -> Would Wide Web Services -> Common HTTP Features.
+1. In the Windows Features window, expand Internet Information Services -> World Wide Web Services -> Common HTTP Features.
 1. Uncheck the **WebDAV Publishing** feature.
