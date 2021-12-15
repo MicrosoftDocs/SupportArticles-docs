@@ -44,14 +44,13 @@ Follow these steps to troubleshoot the VM issue:
 
 To view all commands and parameters available, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
 
-The user running these commands will need to have permissions to create the following types of resources in the subscription:
+The user running these commands will need a role that can create the following types of resources in the subscription:
 * Resource Groups
 * Virtual Machines
 * Resource Tags
 * Virtual Networks
 * Network Security Groups
 * Network Interfaces
-* Snapshots
 * Disks
 * Public IP Addresses (Optional)
 
@@ -59,11 +58,13 @@ The user running these commands will need to have permissions to create the foll
 
 1. Launch Azure Cloud Shell
 
-   The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It includes common Azure tools preinstalled and configured to use with your account. If you will be running scripts that take longer than 20 minutes to run you may prefer to run the commands locally, this quickstart requires Azure CLI version 2.0.30 or later. Run ``az --version`` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
+   The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It includes common Azure tools preinstalled and configured to use with your account. If you will be running scripts that take longer than 20 minutes to run you may prefer to run the commands locally, this quickstart requires Azure CLI version 2.0.67 or later. Run ``az --version`` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
    To open the Cloud Shell, select **Try it** from the upper-right corner of a code block. You can also open Cloud Shell in a separate browser tab by visiting [https://shell.azure.com](https://shell.azure.com).
 
    Select **Copy** to copy the blocks of code, then paste the code into the Cloud Shell, and select **Enter** to run it.
+
+   If you prefer to install and use the CLI locally, this quickstart requires Azure CLI version 2.0.67 or later. Run ``az --version`` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
    If you need to login to Cloud Shell with a different account than you are currently logged in to the Azure portal with you can use ``az login`` [az login reference](/cli/azure/reference-index#az-login&preserve-view=true).  To switch between subscriptions associated with your account you can use ``az account set --subscription`` [az account set reference](/cli/azure/account#az-account-set&preserve-view=true).
 
