@@ -22,11 +22,15 @@ search.appverid:
 
 ## Symptoms
 
-When you try to open a Microsoft Office file in Microsoft Teams, the desktop app option is missing. The following is an example of opening a Microsoft Word file by using the **Word desktop app** option:
+When you try to open a Microsoft Office file in Microsoft Teams, the desktop app option is missing.
+
+The following screenshot is an example of opening a word document by using the **Word desktop app** option:
 
 :::image type="content" source="media/desktop-app-option-missing/open-in-word-desktop-app.png" alt-text="Screenshot of the Word desktop app option.":::
 
-Additionally, the **Desktop app** option is also missing on the **Files** tab in Teams **Settings**.
+Additionally, the **Desktop app** option is also missing for the **File open preference** setting in Teams.
+
+The following screenshot shows the **Desktop app** option in Teams **Settings**.
 
 :::image type="content" source="media/desktop-app-option-missing/desktop-app-in-files-setting.png" alt-text="Screenshot of the Desktop app option in Files tab in settings.":::
 
