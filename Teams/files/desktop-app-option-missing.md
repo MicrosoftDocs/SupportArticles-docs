@@ -28,7 +28,7 @@ The following table shows the contrast of opening a word document without and wi
 
 |Option is missing |Option isn't missing   |
 |----------|-----------|
-|Example:<br>:::image type="content" source="media/desktop-app-option-missing/no-desktop-app-option.png" alt-text="Screenshot of opening a word document without the Word desktop app option.":::<br>|Example:<br> :::image type="content" source="media/desktop-app-option-missing/open-in-desktop-app.png" alt-text="Screenshot of the Word desktop app option.":::|
+|Example:<br>:::image type="content" source="media/desktop-app-option-missing/no-desktop-app-option.png" alt-text="Screenshot of opening a word document without the Word desktop app option.":::|Example:<br> :::image type="content" source="media/desktop-app-option-missing/open-in-desktop-app.png" alt-text="Screenshot of opening a word document with the Word desktop app option.":::|
 
 The **Desktop app** option is also missing from the **File open preference** setting in Teams.
 
