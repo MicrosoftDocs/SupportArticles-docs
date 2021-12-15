@@ -81,7 +81,7 @@ If there's an indication that the ExchangeOnline service is degraded, email deli
 
 You can run an automated diagnostic to identify issues that affect email delivery, and find suggested solutions to fix the issues.
 
-Select **Diag: Troubleshoot Email Delivery** to launch the diagnostic in the Microsoft 365 admin center. Enter the email address of the sender, the recipient and other relevant information, and then select **Run Tests**.
+Select **Diag: Troubleshoot Email Delivery** to start the diagnostic in the Microsoft 365 admin center. Enter the email address of the sender and recipient in addition to other relevant information, and then select **Run Tests**.
 
 >[!div class="nextstepaction"]
 >[Diag: Troubleshoot Email Delivery](https://aka.ms/PillarEmailDelivery)
@@ -129,7 +129,7 @@ By default, message trace is set to search for all messages that were sent or re
 
 3. Select **Search** to run the message trace.
 
-4. The **message trace results** page shows all the messages that match the criteria that you selected. Typical messages are marked **Delivered** in the status column.
+4. The **message trace results** page shows all the messages that match the criteria that you selected. Typical messages are marked **Delivered** in the **STATUS** column.
 
     :::image type="content" source="./media/email-delivery-issues/message-trace-results.png" alt-text="Screenshot shows an example of message trace results." border="false":::
 
