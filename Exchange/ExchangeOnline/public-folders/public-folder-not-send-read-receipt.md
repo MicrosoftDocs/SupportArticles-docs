@@ -1,6 +1,6 @@
 ---
 title: Read receipt is sent from public folder mailbox
-description: Describes a known issue in which a read receipt is sent not from a public folder but from the a public folder mailbox that hosts the folder.
+description: Describes a known issue in which a read receipt is sent not from a public folder but from a public folder mailbox that hosts the folder.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -33,7 +33,7 @@ Get-PublicFolder \<Public Folder Name> | FL Identity,PerUserReadStateEnabled
 
 The output of the cmdlet will resemble the following screenshot.
 
-:::image type="content" source="media/public-folder-not-send-read-receipt/get-publicfolder-cmdlet.png" alt-text="The screenshot of the Get-PublicFolder cmdlet that checks the value of the PerUserReadStateEnabled parameter.":::
+:::image type="content" source="media/public-folder-not-send-read-receipt/get-publicfolder-cmdlet.png" alt-text="Screenshot of the Get-PublicFolder cmdlet that checks the value of the PerUserReadStateEnabled parameter.":::
 
 However, you see that even though both these conditions are met, the read receipt you receive is not sent by the public folder but by the public folder mailbox that hosts the public folder. This issue is shown in the following example:
 
