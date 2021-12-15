@@ -44,6 +44,7 @@ Outlook also displays information about permissions to access the link.
 If you prefer to use the full URL instead of the shortened URL that Outlook inserts automatically, use one of the following methods:
 
 - Right-click the link and select **Show Full URL**.
+
     **Note:** You can also access this menu by pressing the Menu key when the cursor is inside the link.
 - Select the **Undo** button or press Ctrl+Z after the automatically shortened link appears but before you continue to type.
 - Press the Backspace key after the shortened URL displays but before you continue to type.
@@ -116,7 +117,8 @@ The only situation when Outlook can unwrap such a message is if you view or prev
 **A2:** There are several reasons why Outlook might be unable to recognize where the link is pointing to.
 
 - The link isn't shareable. When you first insert the link, Outlook checks with the server about what the link points to. If Outlook can't manage access or check permissions for the location that the link points to, then it appears as a normal hyperlink.
-Note: It's possible that Outlook can't contact the server when you insert the link (for example, if you work offline), but Outlook performs the check later and updates what you see accordingly.
+
+    **Note:** It's possible that Outlook can't contact the server when you insert the link (for example, if you work offline), but Outlook performs the check later and updates what you see accordingly.
 - The link uses a fictitious domain name such as "`contoso.com`". Outlook can only recognize the link if you are also signed in with a OneDrive or SharePoint account using that domain name via **File** > **Office Account** > **Connected Services**.
 - The link is a Safelink, and Outlook can't check whether the link is pointing to OneDrive or SharePoint.
 - The link is for the Consumer version of OneDrive, but only the Business version of One Drive is supported now.
