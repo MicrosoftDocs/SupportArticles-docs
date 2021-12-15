@@ -1426,7 +1426,7 @@ Review the mailbox log to determine that attachment the user is attempting to op
 
 7. Review the search results by finding the error in the log entry. Make note of the attachment number in the FileReference. This is the last number in the value: **5%3a12%3a0**. (The full value is 5:12:0, which is attachment 0 for ServerId 5:12.)
 
-   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-objectnotfound.png" alt-text="Screenshot of the results of searching ObjectNotFound":::
+   :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-objectnotfound.png" alt-text="Screenshot of the results of searching ObjectNotFound.":::
 
 > [!NOTE]
 > For more information about Exchange ActiveSync mailbox logging analysis, see [Under The Hood: Exchange ActiveSync Mailbox Log Analysis](https://techcommunity.microsoft.com/t5/exchange-team-blog/under-the-hood-exchange-activesync-mailbox-log-analysis/ba-p/591224).
