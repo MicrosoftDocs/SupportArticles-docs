@@ -3,7 +3,7 @@ title: Troubleshoot Linux VM deployment| Microsoft Docs
 description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue, azure-resource-manager
@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 03/03/2021
+ms.date: 12/15/2021
 ms.author: danis
 
 ---
@@ -141,7 +141,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 
 ### Common Errors
 
-#### UDF driver Blacklisted
+#### UDF driver Blocklisted
 
 **Error**: In the serial log:
 
@@ -156,7 +156,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 In waagent.log:
 
 ```text
-"UDF driver Blacklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
+"UDF driver Blocklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
 ```
 
 **Cause**: The UDF driver is not loaded in the kernel, this is required for the VM to provision, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
