@@ -1,6 +1,6 @@
 ---
-title: Desktop app option is missing when trying to open files in Teams
-description: Fixes an issue in which you can't find the default desktop app option to open an Office file in Teams.
+title: Desktop app option is missing when trying to edit files in Teams
+description: Fixes an issue in which you can't find the default desktop app option to edit an Office file in Teams.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -18,7 +18,7 @@ search.appverid:
 - MET150
 ---
 
-# Desktop app option is missing when trying to open Office files in Teams
+# Desktop app option is missing when trying to edit Office files in Teams
 
 ## Symptoms
 
