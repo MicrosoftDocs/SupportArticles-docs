@@ -46,7 +46,7 @@ To fix this issue, try the following resolutions.
 
 **Resolution 1**: Download and reinstall [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software) for Windows or Mac.
 
-**Resolution 2**: Download and install Office desktop apps (Office 2016 or a later version) in [Microsoft 365 portal](https://portal.office.com/account#installs).
+**Resolution 2**: Download and install Office desktop apps (Office 2016 or a later version) in the [Microsoft 365 portal](https://portal.office.com/account#installs).
 
 **Resolution 3**: Assign an Office 365 E3 or E5 license in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users) as an administrator.
 
