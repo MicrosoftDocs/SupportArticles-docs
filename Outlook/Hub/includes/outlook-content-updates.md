@@ -2,6 +2,14 @@
 
 
 
+## Week of December 06, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/8/2021 | [Run CalCheck from Microsoft Support and Recovery Assistant to scan Outlook calendar](/outlook/troubleshoot/calendaring/scan-outlook-calendar-using-sara) | modified |
+
+
 ## Week of November 22, 2021
 
 
