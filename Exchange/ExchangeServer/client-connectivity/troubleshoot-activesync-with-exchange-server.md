@@ -1774,7 +1774,7 @@ We now have the data collected and we are ready to begin troubleshooting. The fi
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter the UID value you copied earlier under **Search raw log data for strings** and select **Search**.
 
-      :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-uid-value.png" alt-text="Screenshot of Search raw log data for strings box in Mailbox Log Parser. ":::
+      :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-uid-value.png" alt-text="Screenshot of Search raw log data for strings box in Mailbox Log Parser.":::
 
 7. Review the search results and make note of the ServerId value for this appointment if found
 
@@ -1793,7 +1793,7 @@ Now that we know we have the appointment within our mailbox log, we need to trac
 
 1. Search for the UID value found earlier.
 
-      :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-for-the-UID-value.png" alt-text="Screenshot of the search box in Mailbox Log Parser":::
+      :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/search-for-the-UID-value.png" alt-text="Screenshot of the search box in Mailbox Log Parser.":::
 
 2. Review the results and analyze the log entries. Check the logs and look for either RequestBody or ResponseBody. If the item appears in the response body, then the item was updated from the server. Otherwise the item appears in the request body, which means the item was updated from the client.
 
@@ -2548,7 +2548,7 @@ To determine if these errors are causing a performance issue, run a Log Parser q
 
 8. Analyze the results for this query and try to determine the cause of the error. In the following example, the `KeepAliveFailure` only occurs when requests are have the PrxTo to a CAS server in another site. Here we would want to investigate network connectivity issues between the two sites.
 
-    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-parser-studio-query-for-errors.png" alt-text="Screenshot of Log Parser Studio query for errors":::
+    :::image type="content" source="media/troubleshoot-activesync-with-exchange-server/log-parser-studio-query-for-errors.png" alt-text="Screenshot of Log Parser Studio query for errors.":::
 
 **Were you able to resolve the issue by address ActiveSync errors found in the IIS logs?**
 
