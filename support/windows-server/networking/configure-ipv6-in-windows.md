@@ -116,7 +116,7 @@ For each bit, **0** means false and **1** means true. Refer to the following tab
 
 This registry value doesn't affect the state of the following check box. Even if the registry key is set to disable IPv6, the check box in the **Networking** tab for each interface can be selected. This is an expected behavior.
 
-:::image type="content" source="./media/configure-ipv6-in-windows/network-properties.png" alt-text="Network properties":::
+:::image type="content" source="./media/configure-ipv6-in-windows/network-properties.png" alt-text="The Internet Protocol Version 6 (TCP/IPv6) option in Network properties.":::
 
 ## Reference
 

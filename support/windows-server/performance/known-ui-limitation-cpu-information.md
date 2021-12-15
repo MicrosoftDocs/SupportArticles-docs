@@ -23,7 +23,7 @@ Example:
 
 |Correct information|Incorrect information|
 |:---------:|:---------:|
-|:::image type="content" source="./media/known-ui-limitation-cpu-information/cpu-performance-windows-server-2019.png" alt-text="CPU performance information for Windows Server 2019":::|:::image type="content" source="./media/known-ui-limitation-cpu-information/cpu-performance-windows-server-2016.png" alt-text="CPU performance information for Windows Server 2016":::|
+|:::image type="content" source="./media/known-ui-limitation-cpu-information/cpu-performance-windows-server-2019.png" alt-text="CPU performance information for Windows Server 2019." border="false":::|:::image type="content" source="./media/known-ui-limitation-cpu-information/cpu-performance-windows-server-2016.png" alt-text="CPU performance information for Windows Server 2016." border="false":::|
 
 In this example, the incorrect CPU information is displayed as follows:
 
