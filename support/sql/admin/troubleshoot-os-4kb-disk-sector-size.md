@@ -76,7 +76,7 @@ Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A va
 
 Microsoft is currently investigating this problem and will post updated information in the future. Please use one of the following resolutions: 
 
-- If you have multiple drives on this system, you can specify a different location for the databases. Make sure that drive reflects a 4 KB sector size when querying the `fsutil` command. 
+- If you have multiple drives on this system, you can specify a different location for the database files upon installation of SQL Server. Make sure that drive reflects a supported sector size when querying the `fsutil` command. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes. 
 
 - You can start SQL Server by specifying the trace flag 1800, For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800). This trace flag is not enabled by default.
 
@@ -93,11 +93,13 @@ Windows 11 native NVMe drivers were updated to include the actual sector size re
 
 The Windows 10 drivers do not report the source sector size of the physical storage.  
 
-The improved Windows 11 drivers disregards the emulation common NVMe storage devices are using, and as an example, would expose that the actual sector size is a 8K/16k native sector size rather than emulating the required 4 KB sector size needed by Windows. 
+The improved Windows 11 drivers disregards the emulation that common NVMe storage devices are using. As an example, `fsutil` displays a sector size of 8 KB or 16 KB, rather than emulating the required 4 KB sector size needed by Windows. 
 
-Below is an comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device: 
+Below is an comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the value of `PhysicalBytesPerSectorForAtomicity`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
 
 **Sample output of `fsutil fsinfo sectorinfo <volume pathname>` against Samsung 1TB M.2 PCIe NVMe 980**
+
+
 | **Windows 10** | **Windows 11** | 
 |:-|:-|
 | LogicalBytesPerSector : 512 | LogicalBytesPerSector : 512 |
@@ -110,6 +112,7 @@ Below is an comparison of the sector sizes reported by the operating systems. Th
 | Trim Supported | Trim Supported |
 | Not DAX capable | Not DAX capable |
 | Not Thinly-Provisioned | Not Thinly-Provisioned |
+|:-|:-|
 
 
 ## See also
@@ -118,7 +121,4 @@ Below is an comparison of the sector sizes reported by the operating systems. Th
 - [SQL Server 2019 Storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15#StorageTypes)
 - [KB3009974 - FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c)
 - [SQL Server LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb)
-
- 
-
  
