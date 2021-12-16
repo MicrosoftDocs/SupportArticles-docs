@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Linux Image Provisioning Agent update awareness
