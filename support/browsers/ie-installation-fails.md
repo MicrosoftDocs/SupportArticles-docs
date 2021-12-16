@@ -18,9 +18,9 @@ _Original KB number:_ &nbsp; 2872074
 
 When you try to install Internet Explorer 11, the installation may fail and generate an error message. This can occur for various reasons. To resolve common installation issues, try one or more of the following troubleshooting methods. Here is the checklist before you install Internet Explorer 11:
 
-## Make sure that your system meets the minimum operating system requirements
+## Minimum system requirements
 
-To successfully install Internet Explorer 11, make sure that your system meets one of the following minimum operating system requirements:
+To successfully install Internet Explorer 11, make sure that your device meets one of the following minimum system requirements:
 
 - Windows 7, 32-bit with Service Pack 1 (SP1), or later versions.
 - Windows 7, 64-bit with Service Pack 1 (SP1), or later versions.
