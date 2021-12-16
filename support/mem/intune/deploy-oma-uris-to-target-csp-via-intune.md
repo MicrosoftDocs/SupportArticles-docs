@@ -4,7 +4,7 @@ description: This article describes the significance of CSPs, Open Mobile Allian
 ms.date: 09/28/2020
 ms.prod-support-area-path: device configuration
 ms.reviewer: sausarka
-author: v-miegge
+author: helenclu
 ms.author: sausarka
 ms.custom: 
 - CI 121166
