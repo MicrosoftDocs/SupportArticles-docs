@@ -85,7 +85,7 @@ To verify the kind of drive that you have, follow these steps:
 
   - Make sure that the drivers and firmware for your storage controller and other hardware components are updated. Also, make sure that the drives and firmware support large-sector drives.
 
-  - Use the updated Windows Preinstallation Environment (Windows PE) for SP1 that will be released as part of the updated pieces of the [Windows Automated Installation Kit (AIK) Supplement for Windows® 7 SP1](https://www.microsoft.com/download/details.aspx?id=5188) and of the Windows OEM Preinstallation Kit (OPK). Or, embed update 982018 into Windows PE.
+  - Use the updated Windows Preinstallation Environment (Windows PE) for SP1 that will be released as part of the updated pieces of the [Windows Automated Installation Kit (AIK) Supplement for Windows&reg; 7 SP1](https://www.microsoft.com/download/details.aspx?id=5188) and of the Windows OEM Preinstallation Kit (OPK). Or, embed update 982018 into Windows PE.
 
 ## Application support requirements for large-sector drives
 
@@ -142,7 +142,7 @@ If your storage device and operating system are noted as unsupported, Microsoft 
 
 Microsoft Support will use standard troubleshooting processes to isolate the storage issue. Some typical troubleshooting methods that Microsoft Support will use include:
 
-- Consulting the Microsoft Knowledge Base. The Microsoft Knowledge Base is available to customers through the [website](https://support.microsoft.com/support/).
+- Consulting the Microsoft Knowledge Base. The Microsoft Knowledge Base is available to customers through [Microsoft Support](https://support.microsoft.com).
 
 - Determining whether the problem can be replicated on supported storage (when it's possible).
 

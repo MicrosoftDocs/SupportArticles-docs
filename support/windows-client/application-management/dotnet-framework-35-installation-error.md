@@ -244,6 +244,6 @@ When you install .NET Framework 3.5, you may encounter other error codes that ar
 
 - [Net Framework 3.5 and 4.5 error 0x80070002](https://social.msdn.microsoft.com/Forums/b3175c1d-1eae-414d-91c5-93bfbeba7bb7/net-framework-35-and-45-error-0x80070002?forum=netfxsetup)
 
-- [Install the .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows-10)
+- [Install the .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows)
 
 - [Microsoft .NET Framework 3.5 Deployment Considerations](/previous-versions/windows/it-pro/windows-8.1-and-8/dn482066(v=win.10))
