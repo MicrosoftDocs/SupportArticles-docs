@@ -357,8 +357,8 @@
       href: performance/decreased-performance-run-aggregating-clause.md
     - name: External modules and filter drivers cause performance issues
       href: performance/performance-consistency-issues-filter-drivers-modules.md
-    - name: High CPU use occurs in your queries
-      href: performance/high-cpu-use-occurs-queries.md
+    - name: High CPU or high memory grants with queries that use optimized nested loops
+      href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE

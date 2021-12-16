@@ -1,11 +1,11 @@
 ---
-title: High CPU usage occurs in your queries that use Batch Sort
-description: This article provides a resolution for the problem where high CPU usage occurs when you run queries in SQL Server.
+title: High CPU usage or Memory grants occur in your queries that use Batch Sort
+description: This article provides a resolution for high CPU and memory usage when you run queries with optimized nested loop joins.
 ms.date: 12/16/2021
 ms.prod-support-area-path: Performance
 ms.prod: sql 
 ---
-# High CPU usage occurs when you run queries that use optimized nested loops 
+# High CPU or high memory grants may occur with queries that use optimized nested loops
 
 This article helps you resolve the problem where high CPU usage occurs when you run queries in SQL Server.
 
