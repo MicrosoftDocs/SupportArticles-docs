@@ -48,7 +48,7 @@ To fix this issue:
 
 - Make sure that you're using the [Teams desktop app for Windows or Mac](https://www.microsoft.com/microsoft-teams/download-app).
 
-- Make sure the Office desktop apps (Microsoft Office 2016 or a later version) are installed. You can download and install the apps from the [Microsoft 365 portal](https://portal.office.com/account#installs).
+- Make sure that the corresponding Office desktop apps (Microsoft Office 2016 or a later version) are installed. You can download and install the apps from the [Microsoft 365 portal](https://portal.office.com/account#installs).
 
 - Make sure that you have an Office 365 E3 or E5 license.
 
