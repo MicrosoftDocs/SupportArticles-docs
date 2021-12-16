@@ -42,7 +42,7 @@ Follow these steps to troubleshoot the VM issue:
 4. Run az vm repair run, or perform mitigation steps.
 5. Run az vm repair restore.
 
-To view all commands and parameters available, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
+To view all available VM repair commands and parameters, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
 
 To run the commands, you need a role that can create the following types of resources in the subscription:
 * Resource Groups
@@ -58,7 +58,7 @@ To run the commands, you need a role that can create the following types of reso
 
 1. Launch Azure Cloud Shell
 
-   The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It includes common Azure tools preinstalled and configured to use with your account. If you will be running scripts that take longer than 20 minutes to run, you may prefer to run the commands locally. The quickstart requires Azure CLI version 2.0.67 or later. Run `az --version` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
+   The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It includes common Azure tools preinstalled and configured to use with your account. If you will be running scripts that take longer than 20 minutes to run, you may prefer to run the commands locally. To run the commands locally, it requires Azure CLI version 2.0.67 or later. Run `az --version` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
    To open the Cloud Shell, select **Try it** from the upper-right corner of a code block. You can also open Cloud Shell in a separate browser tab by visiting [https://shell.azure.com](https://shell.azure.com).
 
