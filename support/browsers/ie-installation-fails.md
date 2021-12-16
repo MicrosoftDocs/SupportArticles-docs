@@ -1,6 +1,6 @@
 ---
 title: Cannot install Internet Explorer 11
-description: Discusses how to troubleshoot a Internet Explorer installation that fails. Provides instructions and resources for various issues.
+description: Discusses how to troubleshoot an Internet Explorer installation that fails. Provides instructions and resources for various issues.
 ms.date: 12/16/2021
 ms.prod-support-area-path: 
 ms.technology: internet-explorer-installation
@@ -90,9 +90,9 @@ This issue occurs when the custom text size (DPI) on your computer is larger tha
 
 ### Install Internet Explorer 11 for different languages
 
-The English vesion of the Internet Explorer 11 installer supports all languages version of Windows.
+The English version of the Internet Explorer 11 installer supports all languages version of Windows.
 
-If you don't use the English version installer, make sure that the language version of the installer you downloaded matches the language version of your operating system. If the language versions don't match, Internet Explorer 11 stops the installation. Additionally, you receive the following error message:
+To install non-English version Internet Explorer 11, make sure that the language version of the installer you downloaded matches the language version of your operating system. If the language versions don't match, Internet Explorer 11 stops the installation. Additionally, you receive the following error message:
 
 > Wrong version of Internet Explorer installer.
 
