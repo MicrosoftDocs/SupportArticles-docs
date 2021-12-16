@@ -15,7 +15,7 @@ ms.author: v-yunhya
 
 The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on the average in terms of clock time. The specific Performance monitor counters that measure I/O latency in Windows are **Avg Disk sec/ Read**, **Avg. Disk sec/Write** and **Avg. Disk sec/Transfer** (cumulative of both reads and writes).
 
-In SQL Server things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling Win32 functions - **WriteFile()**, **ReadFile()**, **WriteFileGather()**, **ReadFileScatter()**. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. I/O related waits are:
+In SQL Server things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling Win32 functions - **WriteFile()**, **ReadFile()**, **WriteFileGather()**, **ReadFileScatter()**. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. I/O related waits are:
 
 - [PAGEIOLATCH_SH](#pageiolatch_sh) / [PAGEIOLATCH_EX](#pageiolatch_ex)
 - [WRITELOG](#writelog)
@@ -66,7 +66,7 @@ In some cases, you may observe error 833 `SQL Server has encountered %d occurren
 Longer than 15 secs
   ```
 
-Also, you can review [MSSQLSERVER_833](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) for more details on this error.
+Also, you can review [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) for more details on this error.
 
 
 ### 2. Do Perfmon counters indicate I/O latency?
@@ -162,7 +162,7 @@ Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
 
 If I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at **Buffer Manager: Page Reads/Sec** (most common culprit) and **Page Writes/Sec** (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then you need to work with the Application Development teams (or application vendor) to
  - Tune queries - better indexes, update statistics, rewrite queries, redesign the database, etc. 
- - Also, you can consider increasing [max server memory](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options), or adding more RAM on the system. This will allow more data/index pages to be cached and not re-read from disk frequently, thus reduce I/O activity.
+ - Also, you can consider increasing [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options), or adding more RAM on the system. This will allow more data/index pages to be cached and not re-read from disk frequently, thus reduce I/O activity.
 
 
 ## Causes
@@ -172,10 +172,10 @@ In general there exist three high-level reasons why SQL Server queries suffer fr
 1. **Hardware issues:** There is a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (throughout entire SAN network, not just back-end storage), drivers/firmware bug, and so on. This stage is where the hardware vendor need to be engaged.
 
 
-2. **Query Issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, you likely need to find queries that are causing a large number of logical reads (or writes) and tune the queries them to minimize the disk I/O. Using appropriate indexes helps, and providing the optimizer sufficient information to choose the best plan, that is, keep statistics updated. Also incorrect database design and query design lead to increase in I/O.
+1. **Query Issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, you likely need to find queries that are causing a large number of logical reads (or writes) and tune the queries them to minimize the disk I/O. Using appropriate indexes helps, and providing the optimizer sufficient information to choose the best plan, that is, keep statistics updated. Also incorrect database design and query design lead to increase in I/O.
 
 
-3. **Filter Drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers, which process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendor is recommended to prevent this from happening.
+1. **Filter Drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers, which process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendor is recommended to prevent this from happening.
 
 
 ## Graphical representation of the methodology
@@ -207,7 +207,7 @@ Occurs while waiting for a transaction log flush to complete. A flush occurs whe
 
 - **Too many small Transactions**. While large transactions can lead to blocking, too many small transactions can lead to another set of issues.  If you don't explicitly begin a transaction, any insert, delete, update will result into a transaction (we call this auto transaction).  If you do 1000 inserts in a loop, there will be 1000 transactions generated.  Each transaction in this example needs to commit which results in a transaction log flush. This will result in 1000 transaction flushes.  When possible, group individual update/delete/insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer WRITELOG waits.
 
--  **Scheduling issues causing Log Writer threads to not get scheduled fast enough**. Prior to SQL Server 2016, a single log writer thread to perform all log writes. If there are issues with thread scheduling (e.g. very high CPU) the log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 log writer threads were added to increase the log writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019 up to 8 log writer threads were added. Also in SQL Server 2019 each regular worker thread can do log writes directly instead of posting to Log Writer thread.
+- **Scheduling issues causing Log Writer threads to not get scheduled fast enough**. Prior to SQL Server 2016, a single log writer thread to perform all log writes. If there are issues with thread scheduling (for example, very high CPU) the log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 log writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019 up to 8 log writer threads were added. Also in SQL Server 2019 each regular worker thread can do log writes directly instead of posting to Log Writer thread.
 
 ### ASYNC_IO_COMPLETION
 
@@ -223,7 +223,7 @@ Occurs while waiting for I/O operations to complete. This wait type generally in
 
 - Reads and writes or sort or hash results from/to disk during a spill, check performance for tempdb storage.
 - Reading and writing eager spools to disk, check tempdb storage.
-- Reading log blocks from the transaction log (during any operation that causes the log to be read from disk – e.g. recovery)
+- Reading log blocks from the transaction log (during any operation that causes the log to be read from disk – for example, recovery)
 - Reading a page from disk when database is not set up yet
 - Copying pages to a database snapshot (Copy-on-Write)
 - Closing database file, file uncompression
