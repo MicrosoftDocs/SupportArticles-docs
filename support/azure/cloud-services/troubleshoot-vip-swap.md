@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Cloud Service (classic) VIP swap failures
 description: Troubleshoot cloud service VIP swap failures (VipSwapNotAllowedAsRollingUpgradeIsInProgress exceptions) in Azure Cloud Service (classic).
 ms.service: cloud-services
-ms.date: 12/10/2021
+ms.date: 12/14/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
@@ -17,7 +17,7 @@ This article helps you troubleshoot Azure Cloud Service VIP swap failures (VipSw
 
 ## Symptom
 
-When a VIP swap failure happens, you might receive either of the following internal server errors (HTTP status code 500):
+When a VIP swap failure occurs, you might receive either of the following internal server error messages (HTTP status code 500):
 
 > The server encountered an internal error. Please retry the request.
 
@@ -27,21 +27,9 @@ When a VIP swap failure happens, you might receive either of the following inter
 
 Instances of service roles aren't in a started state (busy, recycling, updating, upgrading, and so on). VIP swap is possible only when all the instances are in a healthy state. You can check the status of the instances from the **Overview** pane on the [Azure portal](https://portal.azure.com).
 
-## Cause 2: A deployment update or upgrade prevented the VIP swap
+### Solution: Check for the compute instances that aren't ready
 
-A VIP swap was attempted when another deployment update or upgrade is in progress.
-
-## Cause 3: A reserved IP address is in use
-
-An attempt to add, change, or remove a reserved IP address was made during an update or upgrade. If you reserve a static IP address for your production slot, you must reserve your staging slots as well.
-
-## Cause 4: A service is in self-healing state
-
-Service self-healing is in progress.
-
-## Solution 1: Make sure compute instances are ready
-
-To resolve a VIP swap failure:
+To check or resolve the state of service role instances:
 
 1. Make sure all compute instances are in a ready state and not a non-ready state.
 
@@ -53,7 +41,11 @@ To resolve a VIP swap failure:
 
     - [Troubleshoot Cloud Service (classic) deployment problems](/azure/cloud-services/cloud-services-troubleshoot-deployment-problems)
 
-## Solution 2: Check for deployment update or upgrade events
+## Cause 2: A deployment update or upgrade prevented the VIP swap
+
+A VIP swap was attempted when another deployment update or upgrade is in progress.
+
+### Solution: Check for deployment update or upgrade events
 
 To find out whether an automatic update is preventing a swap:
 
@@ -66,10 +58,18 @@ To find out whether an automatic update is preventing a swap:
     > [!NOTE]
     > If an automatic update is in process, wait for it to finish before doing the swap.
 
-## Solution 3: Check for static IP address usage
+## Cause 3: A reserved IP address is in use
+
+An attempt to add, change, or remove a reserved IP address was made during an update or upgrade. If you reserve a static IP address for your production slot, be sure to reserve your staging slots as well.
+
+### Solution: Check for static IP address usage
 
 Determine whether the service is using a static IP address for both staging and production environments. Make sure the cloud service’s configuration blade shows the correct value for the deployment's reserved IP addresses. If the reserved IP addresses are incorrect, update the configuration file with the correct values.
 
-## Solution 4: Contact Azure support
+## Cause 4: A service is in self-healing state
+
+Service self-healing is in progress.
+
+### Solution: Contact Azure support
 
 If a VIP swap failed because a self-healing process is underway, contact [Azure support](https://azure.microsoft.com/support/options/) for further assistance.

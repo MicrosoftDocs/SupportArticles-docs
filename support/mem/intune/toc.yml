@@ -249,8 +249,6 @@ items:
       href: fails-moving-intune-exchange-connector.md
     - name: Could not retrieve access token for Graph API
       href: could-not-retrieve-access-token.md
-    - name: Intune Exchange Connector version is not supported
-      href: exchange-connector-version-not-supported.md
     - name: Troubleshoot Conditional Access
       href: troubleshoot-conditional-access.md
     - name: Troubleshoot the Exchange Connector
@@ -285,6 +283,8 @@ items:
     href: troubleshoot-company-resource-access-problems.md
   - name: Device-only subscription
     href: device-licenses-introduction.md
+  - name: Can't query the Intune Data Warehouse
+    href: error-query-intune-data-warehouse.md
   - name: Endpoint protection common errors
     href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
   - name: Help and support blade doesn't load
@@ -297,17 +297,5 @@ items:
     href: before-you-call-intune-support.md
   - name: Troubleshooting blade fails to load
     href: troubleshooting-blade-fails-loading.md
-  - name: Troubleshoot software updates
-    href: troubleshoot-software-updates-in-microsoft-intune.md
-- name: Reporting
-  items:
-  - name: AADSTS50011 query the Intune Data Warehouse
-    href: error-query-intune-data-warehouse.md
-- name: Update management
-  items:
-  - name: Windows Update
-    items:
-    - name: Manage Windows 10 feature updates for co-managed devices
-      href: create-feature-update-hold-co-managed-devices.md
 - name: Get support
   href: /mem/get-support

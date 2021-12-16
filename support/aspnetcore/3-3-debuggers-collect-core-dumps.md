@@ -46,7 +46,7 @@ These defaults settings and some others, such as the size limits, can be set in 
 
 - [Core dumps](https://wiki.archlinux.org/index.php/Core_dump)
 
-- [Ubuntu man page core - core dump file](https://manpages.ubuntu.com/manpages/precise/man5/core.5.html)
+- External link: [Ubuntu man page core - core dump file](https://manpages.ubuntu.com/manpages/jammy/en/man5/core.5.html)
 
 ## Apport: Ubuntu's way to manage core dumps
 
