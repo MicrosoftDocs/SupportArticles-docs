@@ -2,7 +2,7 @@
 title: VM Inspector for Azure Virtual Machines (Preview)
 description: Describes the VM Inspector tool for Azure virtual machines for troubleshooting issues on Windows or Linux virtual machines.
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
 ms.topic: troubleshooting
