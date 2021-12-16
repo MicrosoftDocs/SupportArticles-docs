@@ -94,6 +94,8 @@
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
     href: troubleshoot-dynamic-groups.md
+  - name: Troubleshoot user creation and deletion issues
+    href: troubleshoot-user-creation-deletion-issues.md
 
 - name: Governance, Compliance and Reporting 
   items:
@@ -252,6 +254,8 @@
     href: services-sync-not-start.md
   - name: Troubleshoot Azure AD Connect installation issues
     href: installation-issues.md
+  - name: Troubleshoot Azure AD Connect version upgrading issues
+    href: troubleshoot-aad-connect-fails-to-install-upgraded-version.md
   - name: Troubleshoot Azure AD Sync installation issues
     href: installation-configuration-wizard-errors.md
   - name: Troubleshoot Azure AD Connect objects and attributes

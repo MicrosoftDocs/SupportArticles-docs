@@ -49,7 +49,7 @@ For previous versions:
 You should run the repair from the original installation media by using the following command line: 
 
 ```console
-setup.exe /ACTION=REPAIR/INDICATEPROGRESS=TRUE
+setup.exe /ACTION=REPAIR /INDICATEPROGRESS=TRUE
 ```
 
 Repair the common shared components and features first, and then repeat the command to repair the instances installed. During the process, the setup dialog box disappears. As long as the progress window does not show an error, the process is proceeding as expected. If the installer cache file for a specific component is missing, the repair process will encounter an error.

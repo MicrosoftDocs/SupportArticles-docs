@@ -174,7 +174,7 @@ Microsoft support regularly finds stale metadata for nonexistent DCs, or stale m
 
     The red highlight in the screenshot below shows the NTDS Settings object for CONTOSO-DC2 located below the Default-First-Site-Name site.
 
-    ![NTDS Settings selected](./media//replication-error-8524/ntds-settings.jpg)
+    :::image type="content" source="media/replication-error-8524/ntds-settings-default-first-site-name.png" alt-text="Screenshot of the Active Directory Sites and Services windows with the NTDS Settings selected.":::
 
     Right-click the stale NTDS Settings object you want to remove, then select "Delete."
 

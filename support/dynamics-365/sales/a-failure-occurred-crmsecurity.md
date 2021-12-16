@@ -1,6 +1,6 @@
 ---
 title: A failure occurred in CrmSecurity
-description: Provides a solution to an error that occurs when you select the Approve Email button on a mailbox record in Microsoft Dynamics.
+description: Provides a solution to an error that occurs when you select the Approve Email button on a mailbox record in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
@@ -8,14 +8,14 @@ ms.subservice: d365-sales-email-office-integration
 ---
 # "A failure occurred in CrmSecurity" error occurs when attempting to approve the email address of a mailbox record in Microsoft Dynamics 365
 
-This article provides a solution to an error that occurs when you select the **Approve Email** button on a mailbox record in Microsoft Dynamics.
+This article provides a solution to an error that occurs when you select the **Approve Email** button on a mailbox record in Microsoft Dynamics 365.
 
-_Applies to:_ &nbsp; Microsoft Dynamics, Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
 _Original KB number:_ &nbsp; 4510938
 
 ## Symptoms
 
-When you select the **Approve Email** button on a mailbox record in Microsoft Dynamics, you receive the following error:
+When you select the **Approve Email** button on a mailbox record, you receive the following error:
 
 > "Error  
 A failure occurred in CrmSecurity. If you contact support, please provide the technical details."

@@ -115,7 +115,7 @@ On the server, SMB connections are accepted, and SMB requests are processed as l
 
 The following image provides an overview of the different layers through which a user request on a client computer must go to perform file operations over the network on a remote SMB file server by using SMB 2.0.
 
-:::image type="content" source="./media/file-services-hotfixes-in-windows-server-2008/smb-components.png" alt-text="Screenshot of Windows SMB Components.":::
+:::image type="content" source="media/file-services-hotfixes-in-windows-server-2008/smb-components.png" alt-text="Overview of the Windows Server Message Block Components.":::
 
 ## Services for NFS in a Windows Server 2008 R2 environment
 
