@@ -9,31 +9,56 @@ ms.technology: internet-explorer-installation
 
 [!INCLUDE [](../includes/browsers-important.md)]
 
-This article provides the system requirements before installing Internet Explorer 11 and checks for possible problems that may occur after installation.
+This article provides basic troubleshooting steps to help you resolve the Internet Explorer 11 instalaltion issues.
 
 _Original product version:_ &nbsp; Internet Explorer 11  
 _Original KB number:_ &nbsp; 2872074
 
-## Summary
+## Step 1 Check minimum system requirements
 
-When you try to install Internet Explorer 11, the installation may fail and generate an error message. This can occur for various reasons. To resolve common installation issues, try one or more of the following troubleshooting methods. Here is the checklist before you install Internet Explorer 11:
-
-## Minimum system requirements
-
-To successfully install Internet Explorer 11, make sure that your device meets one of the following minimum system requirements:
+To successfully install Internet Explorer 11, your device must meet one of the following minimum system requirements:
 
 - Windows 7, 32-bit with Service Pack 1 (SP1), or later versions.
 - Windows 7, 64-bit with Service Pack 1 (SP1), or later versions.
 - Windows Server 2008 R2 with Service Pack 1 (SP1), or later versions.
 
-If you're running Windows 7 or Windows Server 2008 R2, make sure that you have installed [Service pack 1 (SP1)](https://support.microsoft.com/help/976932) or a later version.
+If you're running Windows 7 or Windows Server 2008 R2, make sure that the [Service pack 1 (SP1)](https://support.microsoft.com/help/976932) or a later version is installed.
 
 > [!NOTE]
 > Internet Explorer 11 is included with Windows 8.1 and Windows Server 2012 R2. Therefore, you don't have to install Internet Explorer 11 on these operating systems.
 
 For more information, see [System requirements for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/system-requirements-and-language-support-for-ie11).
 
-## Make sure that you have prerequisite updates installed
+## Step 2 Make sure that you use a correct installer
+
+You receive the following error message if you use an incorrect Internet Explorer 11 installer:
+
+> Wrong version of Internet Explorer installer.
+
+This list shows what you need to consider before downloading the installer:
+
+- **32-bit or 64-bit**: The 32-bit Internet Explorer 11 can be installed on both 32-bit and 64-bit operating systems. But, you can only install 64-bit Internet Explorer on 64-bit operating system. To determine whether your system is 32-bit or 64-bit, see [How can I tell if my computer is running a 32-bit or a 64-bit version of Windows](https://support.microsoft.com/help/827218).
+
+- **English or non-English**: The English version of Internet Explorer 11 installer supports all languages version of Windows. After the installation, the Internet Explorer language will automatically match your current language setting of the operating system.
+
+    To install non-English version Internet Explorer 11, make sure that the language version of the installer you downloaded matches the language version of your operating system. For example, we cannot install a Spanish version of Internet Explorer 11 on a computer that is running the Windows Catalan version. Although Spanish is the base language for the Catalan Language Interface Pack (LIP) language, you must use the Catalan language version of Internet Explorer 11  installer for this operating system.
+
+To download the installer, go to [the Internet Explorer 11 download page](https://support.microsoft.com/help/18520), and then locate and download the correct installer for your operating system.
+
+## Step 3 Make sure that Windows update is not installing other updates
+
+If an update installation is in progress or if a system restart is pending, Internet Explorer 11 installer cannot automatically install prerequisites. To check whether you have an ongoing update installation or a pending restart in Windows 7, follow these steps:
+
+1. Open **Control Panel**.
+2. Click **System and Security**.
+3. Click **Windows Update**.
+
+If there is an ongoing activity, take the following actions:
+
+- If an update installation is in progress, let that installation finish.
+- If all updates are installed but a system restart is pending, restart your computer.
+
+## Step 4 Install prerequisite updates
 
 During the installation process, you may receive the following error message:
 
@@ -45,35 +70,13 @@ For more information, see [Prerequisite updates for Internet Explorer 11](https:
 
 Additionally, you may review the *IE11_main.log* file under the Windows folder (for example, *C:\Windows*) to find out what prerequisite update is not installed correctly.
 
-## Make sure that your video card driver is compatible
+## Step 5 Check if your video card driver is compatible with Internet Explorer 11
 
 Some computers that have hybrid video adapters are not yet compatible with Internet Explorer 11 for Windows 7. Internet Explorer 11 will not install on these systems until updated hardware drivers are installed. For more information about this issue, see [Internet Explorer 11 does not install on some hybrid graphics systems](https://support.microsoft.com/help/2823483).
 
-## Make sure that the installation of other updates is complete
+## Step 6 Uninstall Internet Explorer 9 before you install Internet Explorer 11
 
-Internet Explorer 11 for Windows 7 cannot automatically install prerequisites if any update installation is in progress or if a system restart is pending. To check whether you have an ongoing update installation or a pending restart in Windows 7, follow these steps:
-
-1. Open **Control Panel**.
-2. Click **System and Security**.
-3. Click **Windows Update**.
-
-If you have ongoing activity, do the following before you try to install Internet Explorer 11 for Windows 7, as appropriate:
-
-- If an update installation is in progress, let that installation finish.
-- If all updates are installed but a system restart is pending, restart your computer.
-
-## Make sure that you use the correct installer version
-
-You have to use the correct installer version for your operating system version. See [How can I tell if my computer is running a 32-bit or a 64-bit version of Windows?](https://support.microsoft.com/help/827218) to determine whether your system is 32-bit or 64-bit.
-
-Then, download the correct Internet Explorer 11 installer for your system version. To do this, go to [Download Internet Explorer 11 (Offline installer)](https://support.microsoft.com/help/18520), and then locate the download file for 32-bit systems or 64-bit systems, as appropriate.
-
-> [!NOTE]
-> Also make sure that you select the appropriate installer for you active language.
-
-## Uninstall Internet Explorer 9 before you install Internet Explorer 11
-
-During the installation process of Internet Explorer 11, you may receive the *9C59* error. To resolve this issue, you may uninstall Internet Explorer 9, restart your computer, and then install Internet Explorer 11. Steps to uninstall Internet Explorer 9:
+During the installation process of Internet Explorer 11, you may receive the **9C59** error. This issue may occur if the device has Internet Explorer 9 installed. To resolve this issue, uninstall Internet Explorer 9, restart your device, and then install Internet Explorer 11:
 
 1. Click the **Start** button, type *Programs and Features* in the search box, and then click **View installed updates** in the left pane.
 2. Under **Uninstall an update**, scroll down to the **Microsoft Windows** section.
@@ -98,7 +101,7 @@ To install non-English version Internet Explorer 11, make sure that the language
 
 For example, we cannot install a Spanish version of Internet Explorer 11 on a computer that is running the Windows Catalan version. Although Spanish is the base language for the Catalan Language Interface Pack (LIP) language, you must use the Internet Explorer 11 Catalan installer for this operating system.
 
-To install Internet Explorer 11 in your active language, download the correct Internet Explorer 11 installer for your operating system version. To do this, go to [Download Internet Explorer 11 (Offline installer)](https://support.microsoft.com/help/18520), and then locate the download file for 32-bit systems or 64-bit systems, as appropriate.
+To install Internet Explorer 11 in your active language, download the correct Internet Explorer 11 installer for your operating system version. To do this, go to [Internet Explorer 11 download page](https://support.microsoft.com/help/18520), and then locate and download the installer file for your operating system.
 
 > [!NOTE]
 > This information applies only to non-English versions of the Internet Explorer 11 installer. If you use the English version of the installer in a supported non-English environment, the installation process continues in English, but the installed program will match your operating system language.  
