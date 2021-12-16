@@ -54,7 +54,7 @@ To fix this issue:
 
     Administrators can assign the license from the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users).
 
-    To verify that you have the required license (product ID `O365ProPlusRetail`) assigned, run the following PowerShell commands on your device:
+    To verify that you have the required license (product ID `O365ProPlusRetail`) assigned, run the following PowerShell cmdlets on your device:
 
     ```powershell
     $officeLicenseRoot = New-Object -TypeName PSObject
