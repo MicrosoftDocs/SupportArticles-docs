@@ -1,6 +1,6 @@
 ---
 title: The content processing pipeline failed to process the item
-description: SharePoint returns "The content processing pipeline failed to process the item" if the service account for Search Host Controller Service doesn't have the required privileges.
+description: SharePoint returns "The content processing pipeline failed to process the item" if the service account for Search Host Controller Service lacks the required user rights.
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -29,11 +29,11 @@ You can use the [crawl log](/sharepoint/search/view-search-diagnostics#crawl-log
 
 ## Symptoms
 
-On the **Crawl Log - Error Breakdown** page, you receive the following error message:
+On the **Crawl Log - Error Breakdown** page, the following error entry is logged:
 
 > The content processing pipeline failed to process the item.
 
-When you select the value in the **Count** column, it takes you to the **Crawl Log - URL View** page. And you see an error message that resembles the following example:
+When you select the value in the **Count** column, that link takes you to the **Crawl Log - URL View** page. There, you see an error message that resembles the following example:
 
 > \\\fileserver\Folder\Item.txt  
 > The content processing pipeline failed to process the item. ( Error parsing document ssic://72. **It was not possible to acquire a worker. Failed to start acquired worker**; ; SearchID = \<GUID\> )
@@ -47,8 +47,8 @@ In the ULS logs on the server that hosts the content processing component, one o
 
 This issue occurs if the service account for **Windows Service – Search Host Controller Service** doesn't have the following required user rights:
 
-- [Replace a process level token](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) (SeAssignPrimaryTokenPrivilege): It allows the Microsoft SharePoint Search Component (Noderunner.exe) to modify the security access token of the ParserServer.exe process. This means creating the process as a different user from the current user.
-- [Adjust memory quotas for a process](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) (SeIncreaseQuotaPrivilege): It allows the Microsoft SharePoint Search Component (Noderunner.exe) to adjust the memory quota of the ParserServer.exe process. This ensures that the ParserServer.exe process doesn't consume too much memory.
+- [Replace a process level token](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) (SeAssignPrimaryTokenPrivilege): Allows the Microsoft SharePoint Search Component (Noderunner.exe) to modify the security access token of the ParserServer.exe process. This means that the process is created as a different user from the current user.
+- [Adjust memory quotas for a process](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) (SeIncreaseQuotaPrivilege): Allows the Microsoft SharePoint Search Component (Noderunner.exe) to adjust the memory quota of the ParserServer.exe process. This makes sure that the ParserServer.exe process doesn't consume too much memory.
 
 ## Resolution
 
@@ -58,7 +58,7 @@ To fix the issue, assign the required user rights to the service account by usin
 - The Local Group Policy Editor console (gpedit.msc)
 - The Local Security Policy console (secpol.msc)
 
-To configure the user rights assignment settings, see [Configure security policy settings](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings). Add the service account to both security policies.
+To configure the User Rights Assignment settings, see [Configure security policy settings](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings). Add the service account to both security policies.
 
 > [!NOTE]
 > The service account also requires the following user rights:
