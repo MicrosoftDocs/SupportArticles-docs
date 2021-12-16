@@ -2,41 +2,21 @@
 
 
 
-## Week of October 25, 2021
+## Week of December 06, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 10/25/2021 | Renamed Teams folder does not rename the same folder in SharePoint Online | removed |
-| 10/27/2021 | [Settings for Teams calls with Apple CarPlay on iOS device](/microsoftteams/troubleshoot/mobile/settings-teams-calls-carplay) | added |
-| 10/27/2021 | [Resolve sign-in errors in Teams](/microsoftteams/troubleshoot/teams-sign-in/resolve-sign-in-errors) | added |
-| 10/27/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
-| 10/27/2021 | [Dial pad in missing in Teams](/microsoftteams/troubleshoot/teams-conferencing/no-dial-pad) | modified |
-| 10/27/2021 | [Your actual presence status isn't displayed in Teams](/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status) | modified |
-| 10/27/2021 | [Settings for Teams calls with Apple CarPlay on iOS device](/microsoftteams/troubleshoot/mobile/settings-teams-calls-carplay) | modified |
-
-
-## Week of October 18, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/20/2021 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/exchange-integration/teams-exchange-interaction-issue) | modified |
-| 10/20/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
-| 10/20/2021 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer, Google Chrome, Firefox or Safari](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
-
-
-## Week of October 11, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/13/2021 | [Guests can't access Files tab for shared files in Teams](/microsoftteams/troubleshoot/files/guests-cannot-access-files) | added |
-
-
-## Week of October 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/5/2021 | [Error when uploading files to a Teams chat](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
+| 12/6/2021 | [Can't access the Files tab on a Teams channel](/microsoftteams/troubleshoot/files/access-files-tab-errors) | modified |
+| 12/6/2021 | [When setting up a Meet Now in Teams, the CVI information does not autopopulate](/microsoftteams/troubleshoot/known-issues/cvi-info-does-not-populate-in-meet-now) | modified |
+| 12/6/2021 | [Microsoft Teams Channel notifications settings can't be managed](/microsoftteams/troubleshoot/known-issues/notifications-cannot-manage) | modified |
+| 12/6/2021 | [Issues with Teams webinars](/microsoftteams/troubleshoot/meetings/issues-with-webinars) | modified |
+| 12/6/2021 | [Errors when trying to manage dial plans](/microsoftteams/troubleshoot/phone-system/dial-plans/errors-managing-dial-plans) | modified |
+| 12/6/2021 | [Issues with Local Media Optimization](/microsoftteams/troubleshoot/phone-system/direct-routing/issues-with-lmo) | modified |
+| 12/6/2021 | [Issues with outbound calls](/microsoftteams/troubleshoot/phone-system/direct-routing/issues-with-outbound-calls) | modified |
+| 12/6/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 12/6/2021 | [Error (We can't get the activity log) when accessing the Microsoft Teams admin center](/microsoftteams/troubleshoot/teams-administration/cannot-access-admin-center) | modified |
+| 12/6/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | modified |
+| 12/6/2021 | [Error (Failed to send) when sending messages to a group chat in Microsoft Teams](/microsoftteams/troubleshoot/teams-administration/unable-send-message-group-chat) | modified |
+| 12/6/2021 | [Lenovo Yoga L13 might shut down during Teams meetings](/microsoftteams/troubleshoot/teams-conferencing/lenovo-shut-down-during-meeting) | modified |
+| 12/6/2021 | [Teams degraded performance if Teams is remembered as a game by Xbox Game Bar](/microsoftteams/troubleshoot/teams-on-windows/performance-affected-when-teams-remembered-as-game) | modified |
