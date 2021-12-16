@@ -91,22 +91,7 @@ After your computer restarts, try to install Internet Explorer 11.
 
 This issue occurs when the custom text size (DPI) on your computer is larger than the default value. To work around this issue, you can follow the steps in [change the size of text in Windows 10](https://support.microsoft.com/help/4028566) to set the custom text size (DPI) back to Smaller - 100%. Or, you may uninstall Internet Explorer 11 temporarily.
 
-### Install Internet Explorer 11 for different languages
-
-The English version of the Internet Explorer 11 installer supports all languages version of Windows.
-
-To install non-English version Internet Explorer 11, make sure that the language version of the installer you downloaded matches the language version of your operating system. If the language versions don't match, Internet Explorer 11 stops the installation. Additionally, you receive the following error message:
-
-> Wrong version of Internet Explorer installer.
-
-For example, we cannot install a Spanish version of Internet Explorer 11 on a computer that is running the Windows Catalan version. Although Spanish is the base language for the Catalan Language Interface Pack (LIP) language, you must use the Internet Explorer 11 Catalan installer for this operating system.
-
-To install Internet Explorer 11 in your active language, download the correct Internet Explorer 11 installer for your operating system version. To do this, go to [Internet Explorer 11 download page](https://support.microsoft.com/help/18520), and then locate and download the installer file for your operating system.
-
-> [!NOTE]
-> This information applies only to non-English versions of the Internet Explorer 11 installer. If you use the English version of the installer in a supported non-English environment, the installation process continues in English, but the installed program will match your operating system language.  
-
-### Temporarily disabling antispyware and antivirus software
+### The installation is block by the antispyware and antivirus software
 
 > [!WARNING]
 > This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround, but we are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
@@ -123,7 +108,7 @@ If you choose to temporarily disable antispyware or antivirus software before yo
 
 5. Go to Windows Update to install the latest updates for the program and for your system.
 
-## Reinstalling Internet Explorer 11
+### Temporary setup files are not removed
 
 If you try to reinstall Internet Explorer 11 after you recently uninstalled the program, the installation process may not be successful. This issue may occur because the system has not finished removing temporary setup files. So the Internet Explorer 11 installer cannot regenerate these files for installation. If this issue occurs, we recommend that you wait 20 minutes before you try to reinstall Internet Explorer 11.
  
