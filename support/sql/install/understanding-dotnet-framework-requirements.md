@@ -64,7 +64,7 @@ Table 2:
 
 ## How to install or enable .NET Framework 3.5 SP1 on Windows
 
-To install .NET Framework on Windows 8 and later versions of the operating system, review [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows-10).
+To install .NET Framework on Windows 8 and later versions of the operating system, review [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows).
 
 In Windows Server 2008 R2, the .NET Framework is a feature, and installing it is different than previous versions of the Windows operating system. The following procedure explains how to verify that the .NET Framework 3.5.1 is installed. The procedure also explains how to determine whether the .NET Framework is not installed and how you can add it in these environments.
 

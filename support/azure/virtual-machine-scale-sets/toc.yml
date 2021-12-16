@@ -1,6 +1,11 @@
 - name: Welcome
   href: welcome-virtual-machine-scale-sets.yml
 
+- name: Troubleshoot allocation failures
+  items:
+  - name: "Error: AllocationFailed or ZonalAllocationFailed"
+    href: allocationfailed-or-zonalallocationfailed.md
+
 - name: Troubleshoot scaling errors
   items:
   - name: QuotaExceeded error when scaling virtual machine scale sets

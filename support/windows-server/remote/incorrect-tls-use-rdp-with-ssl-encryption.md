@@ -30,12 +30,13 @@ Consider the following scenario:
 
 In this scenario, you may notice that the **Security Layer** list displays **SSL (TLS 1.0)**, even though it's actually using TLS 1.2:
 
-:::image type="content" source="./media/incorrect-tls-use-rdp-with-ssl-encryption/ssl-tsl-1-in-configuration-security-setting.png" alt-text="Screenshot of SSL (TLS 1.0) setting.":::
+:::image type="content" source="./media/incorrect-tls-use-rdp-with-ssl-encryption/ssl-tsl-1-in-configuration-security-setting.png" alt-text="The Security Layer shows SSL (TLS 1.0) in Configure security settings page.":::
 
 You may also notice similar behavior when you try to configure the **Security Layer** settings by applying the following Group Policy setting:  
- Require use of specific security layer for remote (RDP) connections  
 
-:::image type="content" source="./media/incorrect-tls-use-rdp-with-ssl-encryption/configure-security-layer.png" alt-text="Screenshot of Security Layer settings.":::
+Require use of specific security layer for remote (RDP) connections  
+
+:::image type="content" source="./media/incorrect-tls-use-rdp-with-ssl-encryption/configure-security-layer.png" alt-text="The Security Layer settings in the Require use of specific security layer for remote (RDP) connections dialog box.":::
 
 You can find this setting in the following location:  
 

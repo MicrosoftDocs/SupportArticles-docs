@@ -406,7 +406,7 @@ Options to consider:
   - Duration
   - Maximum Size
 
-    ![Screenshot of Overall Duration setting](./media/adrepl-troubleshoot-replication-error-8461/set-overall-duration-option.png)
+    :::image type="content" source="media/adrepl-troubleshoot-replication-error-8461/set-overall-duration-option.png" alt-text="Screenshot of the AD DS Diagnostics Properties window with the Maximum Size set to 100 MB.":::
 
 View Performance Counter Properties for the User Defined Data Collector Set  
 
@@ -417,7 +417,7 @@ Here you have the options of changing the Sample interval and adding or removing
 
 For this scenario, the default-sampling interval of 3 seconds should be sufficient. However, for much longer sampling times, 3 seconds is too frequent an interval.
 
-  ![Screenshot of Sample interval setting](./media/adrepl-troubleshoot-replication-error-8461/sample-interval-setting.png)
+:::image type="content" source="media/adrepl-troubleshoot-replication-error-8461/sample-interval-setting.png" alt-text="Screenshot of the Performance Counter Properties window with 3 seconds set for the interval.":::
 
 All recommended counters are included in the default AD Diagnostic's collector set with three exceptions:
 
@@ -434,10 +434,11 @@ To add the AD DS database counters to the User Defined Data Collection Set
 3. Under Instances of selected object, select lsass/NTDSA  
 4. Select Add,  and then click OK.
 
-    ![Screenshot of selected lsass/NTDSA](./media/adrepl-troubleshoot-replication-error-8461/add-isass-ntdsa.png)  
+    :::image type="content" source="media/adrepl-troubleshoot-replication-error-8461/add-isass-ntdsa.png" alt-text="Screenshot of selected lsass/NTDSA under Instances of selected object.":::  
 
 5. Add the LogicalDisk and Security System-Wide Statistics objects also.  
-    ![Screenshot of LogicalDisk and Security System-Wide Statistics objects](./media/adrepl-troubleshoot-replication-error-8461/add-logicaldisk-security-wide-statistics-objects.png)
+
+    :::image type="content" source="media/adrepl-troubleshoot-replication-error-8461/add-logicaldisk-security-wide-statistics-objects.png" alt-text="Screenshot of the Performance Counter Properties window with the LogicalDisk and Security System-Wide Statistics objects selected.":::
 
 After the settings are configured to your liking, you can run the new data collector set directly from Server Manager or export it and deploy it to specific servers.
 
