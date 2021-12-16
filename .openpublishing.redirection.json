@@ -535,6 +535,16 @@
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
     },
     {
+      "source_path": "support/mem/intune/exchange-connector-version-not-supported.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-software-updates-in-microsoft-intune.md",
+      "redirect_url": "/mem/intune/protect/windows-update-for-business-configure",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/scep-pkcs-certificate-comparison.md",
       "redirect_url": "/mem/intune/protect/certificates-configure",
       "redirect_document_id": false
@@ -542,6 +552,11 @@
     {
       "source_path": "support/mem/intune/grouping-targeting-migration-blockers.md",
       "redirect_url": "/mem/intune/fundamentals/setup-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/create-feature-update-hold-co-managed-devices.md",
+      "redirect_url": "/mem/intune/protect/windows-10-feature-updates",
       "redirect_document_id": false
     },
     {

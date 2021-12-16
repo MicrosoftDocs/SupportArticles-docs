@@ -42,7 +42,7 @@ If you sign in with a "work or school, or personal Microsoft account" that hasn'
 
 If you can't use that "work or school, or personal Microsoft account" to sign in, and you need to **view**, **download**, or **delete** files in your workspace, the Microsoft Support Professional assigned to your service request can provide you with a temporary "work or school Microsoft account" to sign in with.
 
-![Mircosoft Account sign in dialog](./media/secure-file-exchange-transfer-files/4493616_en_1.jpg)  
+:::image type="content" source="media/secure-file-exchange-transfer-files/sign-in-dialog.png" alt-text="Screenshot of the Microsoft Account sign in dialog." border="false":::
 
 #### Authentication (Have you signed in using a "work or school, or personal Microsoft account")
 
@@ -64,7 +64,7 @@ Below is an example of Secure File Exchange being used by a customer:
 - failovercollection.ps was uploaded by a Microsoft Support Professional (`user@microsoft.com`) for the customer to download.
 - Netlogon_netlogon.log was uploaded by the customer (`user@contoso.com`). It's selected and can be downloaded or deleted by the customer.  
 
-    ![Secure File Exchange](./media/secure-file-exchange-transfer-files/4012759_en_3.png)  
+    :::image type="content" source="media/secure-file-exchange-transfer-files/secure-file-exchange.png" alt-text="Screenshot shows an example of the Secure File Exchange page.":::
 
 ## The physical location of your files when you use Secure File Exchange
 
