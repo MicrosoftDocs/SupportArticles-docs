@@ -9,7 +9,7 @@ ms.technology: internet-explorer-installation
 
 [!INCLUDE [](../includes/browsers-important.md)]
 
-This article provides basic troubleshooting steps to help you resolve the Internet Explorer 11 instalaltion issues.
+This article provides basic troubleshooting steps to help you resolve the Internet Explorer 11 installation issues.
 
 _Original product version:_ &nbsp; Internet Explorer 11  
 _Original KB number:_ &nbsp; 2872074
@@ -37,7 +37,7 @@ You receive the following error message if you use an incorrect Internet Explore
 
 This list shows what you need to consider before downloading the installer:
 
-- **32-bit or 64-bit**: The 32-bit Internet Explorer 11 can be installed on both 32-bit and 64-bit operating systems. But, you can only install 64-bit Internet Explorer on 64-bit operating system. To determine whether your system is 32-bit or 64-bit, see [How can I tell if my computer is running a 32-bit or a 64-bit version of Windows](https://support.microsoft.com/help/827218).
+- **32-bit or 64-bit**: The 32-bit Internet Explorer 11 can be installed on both 32-bit and 64-bit operating systems. But, you can only install 64-bit Internet Explorer on 64-bit operating system. To determine whether your system is 32-bit or 64-bit, see [32-bit and 64-bit Windows](https://support.microsoft.com/help/827218).
 
 - **English or non-English**: The English version of Internet Explorer 11 installer supports all languages version of Windows. After the installation, the Internet Explorer language will automatically match your current language setting of the operating system.
 
