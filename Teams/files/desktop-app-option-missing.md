@@ -1,6 +1,6 @@
 ---
-title: Desktop app option is missing when trying to edit files in Teams
-description: Fixes an issue in which you can't find the default desktop app option to edit an Office file in Teams.
+title: Desktop app option is missing when editing Office files in Teams
+description: When you try to edit an Office file in Teams, the file's corresponding desktop app option is missing.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -18,43 +18,43 @@ search.appverid:
 - MET150
 ---
 
-# Desktop app option is missing when trying to edit Office files in Teams
+# The "Desktop app" option is missing when trying to edit an Office file in Teams
 
-## Symptoms
+You can edit an Office file directly in Teams, or the file's corresponding desktop app. However, when you try to edit an Office file in its desktop app, the **Desktop app** option is missing.
 
-When you try to edit a Microsoft Office file directly in Microsoft Teams, the file's desktop app option is missing.
+For example, when you select a Word document, then select **Open in**, the **Word desktop app** option is missing. Below is a screenshot:
 
-The following table shows the behavior when opening a word document without and with the **Word desktop app** option.
-
-|Unexpected behavior without the option|Expected behavior with the option|
-|----------|-----------|
-|Example:<br>:::image type="content" source="media/desktop-app-option-missing/no-desktop-app-option.png" alt-text="Screenshot of opening a word document without the Word desktop app option.":::|Example:<br> :::image type="content" source="media/desktop-app-option-missing/open-in-desktop-app.png" alt-text="Screenshot of opening a word document with the Word desktop app option.":::|
+:::image type="content" source="media/desktop-app-option-missing/no-desktop-app-option.png" alt-text="Screenshot of opening a word document without the Word desktop app option.":::
 
 The **Desktop app** option is also missing from the **File open preference** setting in Teams.
+
+:::image type="content" source="media/desktop-app-option-missing/desktop-app-in-files-setting.png" alt-text="Screenshot of the File open preference setting where Desktop app option is missing.":::
 
 ## Cause
 
 To edit an Office file in its desktop app, you must meet the following prerequisites:
 
-- Be using the Teams desktop app for Windows or Mac.
+- Use the Teams desktop app for Windows or Mac.
 
-- Download the Office desktop apps such as PowerPoint, Word, and Excel.
+- Download the corresponding Office desktop apps (Microsoft Office 2016 or a later version).
 
-- Have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans) assigned.
+- Have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans).
 
-This issue occurs if any of these prerequisites isn't meet.
+This issue occurs if any of these prerequisites aren't met.
 
 ## Resolution
 
-To fix this issue, verify the following:
+To fix this issue:
 
-- Make sure the Teams desktop app is installed. You can download and install [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software) for Windows or Mac.
+- Make sure that you're using the [Teams desktop app for Windows or Mac](https://www.microsoft.com/microsoft-teams/download-app).
 
 - Make sure the Office desktop apps (Microsoft Office 2016 or a later version) are installed. You can download and install the apps from the [Microsoft 365 portal](https://portal.office.com/account#installs).
 
-- Make sure you have an Office 365 E3 or E5 license assigned from the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users).
+- Make sure that you have an Office 365 E3 or E5 license.
 
-    An administrator can verify if a user has an Office 365 E3 or E5 license assigned. To get a list of the product IDs of the assigned license, run the following PowerShell cmdlet:
+    Administrators can assign the license from the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users).
+
+    To verify that you have the required license (product ID `O365ProPlusRetail`) assigned, run the following PowerShell commands on your device:
 
     ```powershell
     $officeLicenseRoot = New-Object -TypeName PSObject
@@ -64,9 +64,7 @@ To fix this issue, verify the following:
     Write-Host $officeLicenseRoot
     ```
 
-    If the user has a license assigned, the cmdlet output displays the **O365ProPlusRetail** product ID.
-
-    The cmdlet output is similar to the following:
+    Make sure that the returned output contains `O365ProPlusRetail`. Below is an example:
 
     ```output
     @{License=OneNoteFreeRetail,ProjectProRetail,VisioProRetail,O365ProPlusRetail}
