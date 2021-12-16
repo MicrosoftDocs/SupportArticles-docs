@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting SQL Server Slow IO issues
-description: Provides a procedure to help you fix high-CPU-usage issues for a server that is running SQL Server.
+description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O 
 ms.date: 12/16/2021
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
@@ -197,7 +197,7 @@ Occurs when a task is waiting on a latch for a data/index page (buffer) that is 
 Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Update mode. Long waits may indicate problems with the disk subsystem.
 
 
-### WRITELOG waittype
+### WRITELOG
 
 Occurs while waiting for a transaction log flush to complete. A flush occurs when the Log Manger writes its temporary contents to disk. Common operations that cause log flushes are transaction commits and checkpoints. Common reasons for long waits on WRITELOG are: 
 
