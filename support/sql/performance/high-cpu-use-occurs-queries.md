@@ -32,7 +32,7 @@ To fix the issue, use trace flag 2340 to disable the optimization. Alternatively
 USE HINT (DISABLE_OPTIMIZED_NESTED_LOOP)
 ```
 
-Before you use this trace flag, you can test your applications thoroughly to make sure that you get the expected performance benefits when you disable this optimization. This is because the sort optimization can be helpful when there is a large increase in the number of rows that are touched by the plan. See [DISABLE_OPTIMIZED_NESTED_LOOP](https://docs.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-ver15#:~:text=Azure%20SQL%20Database-,%27DISABLE_OPTIMIZED_NESTED_LOOP%27,-Instructs%20the%20query)
+Before you use this trace flag, you can test your applications thoroughly to make sure that you get the expected performance benefits when you disable this optimization. This is because the sort optimization can be helpful when there is a large increase in the number of rows that are touched by the plan. See [DISABLE_OPTIMIZED_NESTED_LOOP](/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-ver15#:~:text=Azure%20SQL%20Database-,%27DISABLE_OPTIMIZED_NESTED_LOOP%27,-Instructs%20the%20query)
 
 ## More information
 
