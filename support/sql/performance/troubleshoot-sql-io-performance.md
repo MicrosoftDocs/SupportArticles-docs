@@ -13,7 +13,7 @@ ms.author: v-yunhya
 
 ## Define slow I/O performance:
 
-The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on the average in terms of clock time. The specific Performance monitor counters that measure I/O latency in Windows are **Avg Disk sec/ Read**, **Avg. Disk sec/Write** and **Avg. Disk sec/Transfer** (cumulative of both reads and writes).
+The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on the average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are **Avg Disk sec/ Read**, **Avg. Disk sec/Write** and **Avg. Disk sec/Transfer** (cumulative of both reads and writes).
 
 In SQL Server things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling Win32 functions - **WriteFile()**, **ReadFile()**, **WriteFileGather()**, **ReadFileScatter()**. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. I/O related waits are:
 
@@ -125,7 +125,7 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
 2.1 If, the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike - if it lasted 1 minute or more, then it is more of a plateau than a spike.
 
 
-2.2 If Performance monitor counters do not report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, i.e. filter drivers. The Partition Manager is an I/O layer where the OS collects Perfmon counters. To address the latency, ensure that proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and what volumes they attach to. Then you can look up the driver names and software vendor in this article: [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes)
+2.2 If Performance monitor counters do not report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, i.e. filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure that proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and what volumes they attach to. Then you can look up the driver names and software vendor in this article: [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes)
 
    ```Powershell
    fltmc instances
@@ -207,7 +207,7 @@ Occurs while waiting for a transaction log flush to complete. A flush occurs whe
 
 - **Too many small Transactions**. While large transactions can lead to blocking, too many small transactions can lead to another set of issues.  If you don't explicitly begin a transaction, any insert, delete, update will result into a transaction (we call this auto transaction).  If you do 1000 inserts in a loop, there will be 1000 transactions generated.  Each transaction in this example needs to commit which results in a transaction log flush. This will result in 1000 transaction flushes.  When possible, group individual update/delete/insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer WRITELOG waits.
 
-- **Scheduling issues causing Log Writer threads to not get scheduled fast enough**. Prior to SQL Server 2016, a single log writer thread to perform all log writes. If there are issues with thread scheduling (for example, very high CPU) the log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 log writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019 up to 8 log writer threads were added. Also in SQL Server 2019 each regular worker thread can do log writes directly instead of posting to Log Writer thread.
+- **Scheduling issues causing Log Writer threads to not get scheduled fast enough**. Prior to SQL Server 2016, a single Log writer thread performed all log writes. If there were issues with thread scheduling (for example, very high CPU) the Log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 log writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019 up to 8 Log writer threads were added which improves throughput even more. Also in SQL Server 2019 each regular worker thread can do log writes directly instead of posting to Log Writer thread. With these improvements, WRITELOG waits would rarely be triggered by scheduling issues.
 
 ### ASYNC_IO_COMPLETION
 
@@ -219,10 +219,10 @@ Occur when some of the following I/O activities take place
 
 ### IO_COMPLETION
 
-Occurs while waiting for I/O operations to complete. This wait type generally involves I/Os not related to data pages. Examples including
+Occurs while waiting for I/O operations to complete. This wait type generally involves I/Os not related to data pages (buffers). Examples include:
 
-- Reads and writes or sort or hash results from/to disk during a spill, check performance for tempdb storage.
-- Reading and writing eager spools to disk, check tempdb storage.
+- Reads and writes of sort/ hash results from/to disk during a spill (check performance of *tempdb* storage)
+- Reading and writing eager spools to disk (check *tempdb* storage)
 - Reading log blocks from the transaction log (during any operation that causes the log to be read from disk – for example, recovery)
 - Reading a page from disk when database is not set up yet
 - Copying pages to a database snapshot (Copy-on-Write)
