@@ -23,7 +23,7 @@ When you try to start SQL Server in this scenario, the SQL Server service doesn'
 
 - By using a command prompt:
 
-    ```
+    ```output
     C:\\>NET START MSSQLSERVER  
     The SQL Server (MSSQLSERVER) service is starting.  
     The SQL Server (MSSQLSERVER) service could not be started.  
