@@ -3,6 +3,7 @@ title: Troubleshoot Linux VM deployment| Microsoft Docs
 description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
+
 author: srijang
 manager: dcscontentpm
 editor: ''
@@ -36,7 +37,7 @@ The VM may still finish provisioning successfully. Please check provisioning sta
 Also, make sure the image has been properly prepared (generalized). * Instructions for Windows: https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/ * Instructions for Linux: https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/.
 ```
 
-or:
+Or:
 
 ```text
 Deployment failed. Correlation ID: f9dcb33a-4e6e-45c5-9c9d-b29dd73da2e0. {
@@ -67,7 +68,7 @@ Commonly, provisioning failures can happen for multiple reasons, such as:
 
 - Incorrect image configuration
 
-  - We have guidance on how images should be setup with cloud-init and other [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic), please check this.
+  - We have guidance on how images should be set up with cloud-init and other [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic), please check this.
 
 ### Troubleshoot provisioning failures
 
@@ -118,7 +119,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 | System Events and Key Information | Serial Log | Notes |
 |---|---|---|
 | Kernel release and kernel version | `[    0.000000] Linux version 5.4.0-1031-azure (buildd@lcy01-amd64-021) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #32~18.04.1-Ubuntu SMP Tue Oct 6 10:03:22 UTC 2020 (Ubuntu 5.4.0-1031.32~18.04.1-azure 5.4.65)` | Appears at the beginning of the serial log. |
-| Kernel command line options | `[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.4.0-1031-azure root=UUID=8c0a4742-2f51-40b4-b659-357cfb0bb2a3 ro console=tty1 console=ttyS0 earlyprintk=ttyS0`<br>`[    0.503399] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.0-1031-azure root=UUID=8c0a4742-2f51-40b4-b659-357cfb0bb2a3 ro console=tty1 console=ttyS0 earlyprintk=ttyS0` | Appears at the beginning of the serial log. Search for `command line:`. |
+| Kernel command-line options | `[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.4.0-1031-azure root=UUID=8c0a4742-2f51-40b4-b659-357cfb0bb2a3 ro console=tty1 console=ttyS0 earlyprintk=ttyS0`<br>`[    0.503399] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.0-1031-azure root=UUID=8c0a4742-2f51-40b4-b659-357cfb0bb2a3 ro console=tty1 console=ttyS0 earlyprintk=ttyS0` | Appears at the beginning of the serial log. Search for `command line:`. |
 | Systemd version | `[    8.626739] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)` | Search for `systemd`. |
 | Systemd targets reached | `[ [0;32m  OK   [0m] Reached target Swap.`<br>`[ [0;32m  OK   [0m] Reached target User and Group Name Lookups.`<br>`[ [0;32m  OK   [0m] Reached target Slices.`<br>`[ [0;32m  OK   [0m] Reached target Local File Systems (Pre).`<br>`[ [0;32m  OK   [0m] Reached target Local Encrypted Volumes.`<br>`[ [0;32m  OK   [0m] Reached target Local File Systems.`<br>`[ [0;32m  OK   [0m] Reached target System Time Synchronized.`<br>`[ [0;32m  OK   [0m] Reached target Network (Pre).`<br>`[ [0;32m  OK   [0m] Reached target Network.`<br>`[ [0;32m  OK   [0m] Reached target Host and Network Name Lookups.`<br>`[ [0;32m  OK   [0m] Reached target Cloud-config availability.`<br>`[ [0;32m  OK   [0m] Reached target System Initialization`<br>`[ [0;32m  OK   [0m] Reached target Timers.`<br>`[ [0;32m  OK   [0m] Reached target Paths.`<br>`[ [0;32m  OK   [0m] Reached target Network is Online.`<br>`[ [0;32m  OK   [0m] Reached target Remote File Systems (Pre).`<br>`[ [0;32m  OK   [0m] Reached target Remote File Systems.`<br>`[ [0;32m  OK   [0m] Reached target Sockets.`<br>`[ [0;32m  OK   [0m] Reached target Basic System.`<br>`[ [0;32m  OK   [0m] Reached target Login Prompts.` | Search for `Reached target`. |
 | Common systemd networking targets across different distros | `[ [0;32m  OK   [0m] Reached target Network (Pre).`<br>`[ [0;32m  OK   [0m] Reached target Network.`<br>`[ [0;32m  OK   [0m] Reached target Network is Online.` | Search for `Reached target Network`. |
@@ -141,7 +142,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 
 ### Common Errors
 
-#### UDF driver Blacklisted
+#### UDF driver Blocklisted
 
 **Error**: In the serial log:
 
@@ -156,7 +157,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 In waagent.log:
 
 ```text
-"UDF driver Blacklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
+"UDF driver Blocklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
 ```
 
 **Cause**: The UDF driver is not loaded in the kernel, this is required for the VM to provision, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
@@ -169,7 +170,7 @@ Since the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is requi
 
 A common way for UDF drivers to be blocked is through configs within `/etc/modprobe.d/`. Please work with the customer/image owner to ensure that Linux UDF drivers are present and not blocked. Please consult [this article on blocking/unblocking kernel drivers](https://linux.die.net/man/5/modprobe.d).
 
-#### unicode characters in VM tags issue
+#### Unicode characters in VM tags issue
 
 **Error**: In cloud-init.log:
 
@@ -179,9 +180,9 @@ A common way for UDF drivers to be blocked is through configs within `/etc/modpr
 AttributeError: 'module' object has no attribute 'JSONDecodeError'
 ```
 
-**Cause**: This happens because <>
+**Cause**: This happens because VM tags have non-ascii characters and the version of cloud-init is older than 20.3.
 
-**Solution**: To resolve this <>
+**Solution**: Either use or ensure your image supports cloud-init 20.3 or newer, or remove non-ascii characters from the VM tags.
 
 ### Password with unicode characters
 
@@ -195,11 +196,11 @@ File "/usr/lib/python2.7/site-packages/cloudinit/sources/DataSourceAzure.py", li
 UnicodeEncodeError: 'ascii' codec can't encode characters in position 10-11: ordinal not in range(128)
 ```
 
-**Cause**: This happens because <>
+**Cause**: This happens because the provided password has unsupported characters (non-ascii).
 
-**Solution**: To resolve this <>
+**Solution**: Provide a password that only has ascii characters.
 
-#### dhclient permission
+#### Dhclient permission
 
 **Error**: In cloud-init.log:
 
