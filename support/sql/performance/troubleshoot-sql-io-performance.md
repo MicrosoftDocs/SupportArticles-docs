@@ -180,7 +180,7 @@ In general there exist three high-level reasons why SQL Server queries suffer fr
 
 ## Graphical representation of the methodology
 
-:::image type="content" source="media/troubleshoot-slow-io-sql/Slow_Disk_IO_Issues.svg" alt-text="SlowIO Flow Chart":::
+:::image type="content" source="media/troubleshoot-slow-io-sql/Slow_Disk_IO_Issues.png" alt-text="SlowIO Flow Chart":::
 
 
 ## Description of I/O related Wait types
