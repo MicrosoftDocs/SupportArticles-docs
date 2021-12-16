@@ -94,6 +94,8 @@
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
     href: troubleshoot-dynamic-groups.md
+  - name: Troubleshoot user creation and deletion issues
+    href: troubleshoot-user-creation-deletion-issues.md
 
 - name: Governance, Compliance and Reporting 
   items:
