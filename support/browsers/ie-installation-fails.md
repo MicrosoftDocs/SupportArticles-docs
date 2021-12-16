@@ -31,7 +31,7 @@ If you're running Windows 7 or Windows Server 2008 R2, make sure that you have i
 > [!NOTE]
 > Internet Explorer 11 is included with Windows 8.1 and Windows Server 2012 R2. Therefore, you don't have to install Internet Explorer 11 on these operating systems.
 
-For more information about the minimum operating system requirements for Internet Explorer 11, see [System requirements for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/system-requirements-and-language-support-for-ie11).
+For more information, see [System requirements for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/system-requirements-and-language-support-for-ie11).
 
 ## Make sure that you have prerequisite updates installed
 
@@ -86,17 +86,17 @@ After your computer restarts, try to install Internet Explorer 11.
 
 ### Some gadgets are corrupted or disappear in Windows 10 after you install Internet Explorer 11
 
-This issue occurs when the custom text size (DPI) on your computer is set to a value that is larger than the default value. To work around this issue, you can follow the steps in [change the size of text in Windows 10](https://support.microsoft.com/help/4028566) to set the custom text size (DPI) back to Smaller - 100%. Or, you may uninstall Internet Explorer 11 temporarily.
+This issue occurs when the custom text size (DPI) on your computer is larger than the default value. To work around this issue, you can follow the steps in [change the size of text in Windows 10](https://support.microsoft.com/help/4028566) to set the custom text size (DPI) back to Smaller - 100%. Or, you may uninstall Internet Explorer 11 temporarily.
 
-### Installing a localized version of Internet Explorer 11
+### Install Internet Explorer 11 for different languages
 
-You can install Internet Explorer 11 in your localized environment by using either the English version of the installer or a supported language version of the installer for your localized environment.
+The English vesion of the Internet Explorer 11 installer supports all languages version of Windows.
 
-If you don't use the English version of the Internet Explorer 11 installer, make sure that the language version of the installer matches the active language of your operating system. If the language versions don't match, Internet Explorer 11 stops the installation. Additionally, you receive the following error message:
+If you don't use the English version installer, make sure that the language version of the installer you downloaded matches the language version of your operating system. If the language versions don't match, Internet Explorer 11 stops the installation. Additionally, you receive the following error message:
 
 > Wrong version of Internet Explorer installer.
 
-For example, you experience a language mismatch if you try to install a Spanish version of Internet Explorer 11 on a computer that is running the Catalan-localized version of Windows. Although Spanish is the base language for the Catalan Language Interface Pack (LIP) language, you must use the specific Catalan version of the Internet Explorer 11 installer in this environment.
+For example, we cannot install a Spanish version of Internet Explorer 11 on a computer that is running the Windows Catalan version. Although Spanish is the base language for the Catalan Language Interface Pack (LIP) language, you must use the Internet Explorer 11 Catalan installer for this operating system.
 
 To install Internet Explorer 11 in your active language, download the correct Internet Explorer 11 installer for your operating system version. To do this, go to [Download Internet Explorer 11 (Offline installer)](https://support.microsoft.com/help/18520), and then locate the download file for 32-bit systems or 64-bit systems, as appropriate.
 
@@ -122,4 +122,5 @@ If you choose to temporarily disable antispyware or antivirus software before yo
 
 ## Reinstalling Internet Explorer 11
 
-If you try to reinstall Internet Explorer 11 after you recently uninstalled the program, the installation process may not be successful. This issue may occur because the system has not finished removing temporary setup files that are required for the initial installation of the program. If this issue occurs, we recommend that you wait 20 minutes before you try to reinstall Internet Explorer 11.
+If you try to reinstall Internet Explorer 11 after you recently uninstalled the program, the installation process may not be successful. This issue may occur because the system has not finished removing temporary setup files. So the Internet Explorer 11 installer cannot regenerate these files for installation. If this issue occurs, we recommend that you wait 20 minutes before you try to reinstall Internet Explorer 11.
+ 
