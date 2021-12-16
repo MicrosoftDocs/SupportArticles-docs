@@ -40,8 +40,9 @@ A flow chart at the end of this article provides a visual representation of this
 Determine if there is I/O latency reported by SQL Server wait types. **PAGEIOLATCH_***, **WRITELOG**, **ASYNC_IO_COMPLETION** values, as well as those of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then a I/O performance problem exists and warrants further investigation. The following query may help you gather this diagnostic information on your system:
 
    ```Powershell
-
-   $sqlserver_instance = "server\instance" #or just server for default instance
+   
+   #replace with server\instance or server for default instance
+   $sqlserver_instance = "server\instance" 
 
    for ([int]$i = 0; $i -lt 100; $i++)
     {
@@ -59,14 +60,13 @@ Determine if there is I/O latency reported by SQL Server wait types. **PAGEIOLAT
 
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the Errorlog. You can check SQL Server error logs on your system by running this Powershell command:
 
+
   ```Powershell
   Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than"
 Longer than 15 secs
   ```
 
 Also, you can review [MSSQLSERVER_833](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) for more details on this error.
-
-
 
 
 ### 2. Do Perfmon counters indicate I/O latency?
@@ -109,15 +109,15 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
      }
    }
 
-   write-host "Final_Running_Average: $([Math]::Round( $avg, 5))"
+   write-host "Final_Running_Average: $([Math]::Round( $avg, 5)) sec/transfer`n"
   
    if ($avg -gt 0.01)
    {
-     Write-Host "There is indication of slow I/O performance on your system"
+     Write-Host "There ARE indications of slow I/O performance on your system"
    }
    else
    {
-     Write-Host "There is no indication of slow I/O performance on your system"
+     Write-Host "There is NO indication of slow I/O performance on your system"
    }
    ```
 
@@ -140,7 +140,6 @@ Avoid using file-level encryption (EFS) and file-system compression: both cause 
 If SQL Server and the OS indicate I/O subsystem is slow, then find out if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters **Disk Bytes/Sec** or **Disk Read Bytes/Sec**, **Disk Write Bytes/Sec**. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example you can only push no more than 200 MB/sec of I/O through a 2 Gb/sec HBA card or 2 Gb/sec dedicated port on a SAN switch.  The expected throughput capacity defined by hardware manufacturer defines how you proceed from here.
 
 ```powershell
-
 clear
 $serverName = "severname"
 $Counters = @(
@@ -157,7 +156,6 @@ Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
 	  }
      }
  }
-
 ```
 
 ### 4. Is SQL Server driving the heavy I/O activity?
@@ -181,11 +179,13 @@ In general there exist three high-level reasons why SQL Server queries suffer fr
 
 
 ## Graphical representation of the methodology
+
 :::image type="content" source="media/troubleshoot-slow-io-sql/Slow_Disk_IO_Issues.svg" alt-text="SlowIO Flow Chart":::
 
 
 ## Description of I/O related Wait types
 
+These are descriptions of the common wait types observed in SQL Server when disk I/O issues are reported.
 
 ### PAGEIOLATCH_EX 
 Occurs when a task is waiting on a latch for a data or index page (buffer) that is in an I/O request. The latch request is in Exclusive mode - a mode used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.
