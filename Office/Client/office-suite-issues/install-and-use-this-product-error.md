@@ -76,11 +76,14 @@ Check your computer and determine if you are running one of these minimal requir
 
 If you are not sure how to check the version of Windows installed on your computer, follow the steps  
 
-1. Click **Start,** type msinfo32 in the **Start Search** or **Search programs and files**, then press ENTER.
- :::image type="content" source="media/install-and-use-this-product-error/search-page.png" alt-text="Screenshot of the search page with msinfo32 typed.":::
+1. Click **Start,** type *msinfo32* in the **Start Search** or **Search programs and files**, then press ENTER.
+
+    :::image type="content" source="media/install-and-use-this-product-error/search-page.png" alt-text="Screenshot of the search page with msinfo32 typed.":::
+
 2. Locate your operating system next to the **OS Name** line and your architecture type next to the **System Type** line.
- :::image type="content" source="media/install-and-use-this-product-error/system-information.png" alt-text="Screenshot to check the operating system and the architecture type in the System Information window.":::
-     
+
+    :::image type="content" source="media/install-and-use-this-product-error/system-information.png" alt-text="Screenshot to check the operating system and the architecture type in the System Information window.":::
+
  If the operating system on your computer does not meet the minimum system requirements you will need to update it. The preferred method to update your computer is through automatic updates. However, you can also obtain service pack updates by clicking on the following link:
 
 [Download Windows Vista Service Pack 1 (32-bit) now](https://www.microsoft.com/downloads/details.aspx?familyid=f559842a-9c9b-4579-b64a-09146a0ba746)
@@ -100,16 +103,16 @@ To resolve this issue, you must disable compatibility mode before you try to ins
 1. Right-click the Office 2010 **Setup.exe** file. The screen shot for step 1 and 2 is under the step 2.    
 2. Click **Properties**.
 
-   :::image type="content" source="media/install-and-use-this-product-error/click-properties.png" alt-text="Screenshot to select the Properties option after selecting the Setup.exe file.":::
+   :::image type="content" source="media/install-and-use-this-product-error/setup-properties.png" alt-text="Screenshot to select the Properties option after selecting the Setup.exe file.":::
 
 3. Click the **Compatibility** tab. The screen shot for step 3 ,4 and 5 is under the step 5.    
 4. Click to clear the **Run this program in compatibility mode for** check box.    
 5. Click **Apply**, and then click **OK**.
 
-   :::image type="content" source="media/install-and-use-this-product-error/click-apply-and-then-click-ok.png" alt-text="Screenshot shows steps to clear the Run this program in compatibility mode for check box." border="false":::  
+   :::image type="content" source="media/install-and-use-this-product-error/run-this-program-compatibility-mode.png" alt-text="Screenshot shows steps to clear the Run this program in compatibility mode for check box." border="false":::  
 1. Double-click **Setup.exe** to install Office 2010.    
 
-## More Information
+## More information
 
 - [How to obtain the latest Windows Vista service pack](https://support.microsoft.com/help/935791)
 
