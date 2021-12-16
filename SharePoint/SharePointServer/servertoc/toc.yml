@@ -185,6 +185,8 @@
       href: ../search/item-not-crawled-when-crawl-sites.md
     - name: ContractFilter error when querying from the non-default zone in a farm
       href: ../search/contractfilter-error-when-querying-from-the-non-default-zone.md
+    - name: Crawl error "The content processing pipeline failed to process the item"
+      href: ../Search/parser-server-failed-to-start.md
     - name: Crawler has insufficient permissions
       href: ../Search/crawler-has-insufficient-permissions.md
     - name: Document preview and content type icon aren't displayed
