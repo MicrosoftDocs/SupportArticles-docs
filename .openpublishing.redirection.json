@@ -533,10 +533,6 @@
     {
       "source_path": "support/mem/intune/exchange-connector-version-not-supported.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
-    },
-    {
-      "source_path": "support/mem/intune/exchange-connector-version-not-supported.md",
-      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
     },
     {
