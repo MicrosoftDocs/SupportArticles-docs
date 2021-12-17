@@ -1049,6 +1049,11 @@
       "source_path": "support/dynamics-365/sales/flow-extension-package-shows-installation-failed.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/flow-extension-package-shows-installation-failed",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/high-cpu-use-occurs-queries.md",
+      "redirect_url": "/troubleshoot/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_document_id": true
     }
   ]
 }

@@ -1,9 +1,9 @@
 ---
-title: High CPU usage or Memory grants occur in your queries that use Batch Sort
-description: This article provides a resolution for high CPU and memory usage when you run queries with optimized nested loop joins.
-ms.date: 12/16/2021
+title: High CPU usage or Memory grants occur in queries that use optimized nested loops or batch sort operators
+description: This article provides a resolution for high CPU and memory usage when you run queries with optimized nested loops or batch sort operators.
+ms.date: 12/17/2021
 ms.prod-support-area-path: Performance
-ms.prod: sql 
+ms.prod: sql
 ---
 # High CPU or high memory grants may occur with queries that use optimized nested loops
 
@@ -22,17 +22,29 @@ Additionally, you may notice that query plans for queries that consume lots of C
 
 ## Cause
 
-This issue may occur in some cases where SQL Server query processor introduces an optional sort operation to improve performance. This operation is known as an Optimized Nested Loops or Batch Sort and the query optimizer determines when to best introduce it. In rare cases when the query touches only a small number of rows, but the setup cost for the sort operation may be significant, then the cost of the optimized nested loop may outweigh its benefits. Therefore, in those cases you may observe slower performance compared to what is expected.
+This issue may occur in some cases where SQL Server query processor introduces an optional sort operation to improve performance. This operation is known as an "Optimized Nested Loop" or "Batch Sort" and the query optimizer determines when to best introduce these operators. In rare cases when the query touches only a small number of rows, but the setup cost for the sort operation is significant, then the cost of the optimized nested loop outweighs its benefits. Therefore, in those cases you may observe slower performance compared to what is expected.
 
 ## Resolution
 
-To fix the issue, use trace flag 2340 to disable the optimization. Alternatively, to disable the optimization at the query level, apply the following query hint:
+### Trace flag 2340
+
+To fix the issue, use trace flag 2340 to disable the optimization. Trace flag 2340 instructs the query processor not to use a sort operation (batch sort) for optimized nested loop joins when generating a query plan. This affects the entire instance. 
+
+Before you enable this trace flag, you can test your applications thoroughly to make sure that you get the expected performance benefits when you disable this optimization. This is because the sort optimization can be helpful when there is a large increase in the number of rows that are touched by the plan. 
+
+For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver15#:~:text=2340,a%20sort%20operation).
+
+### Modify code to use the DISABLE_OPTIMIZED_NESTED_LOOP hint
+
+Alternatively, to disable the optimization at the query level, apply the `DISABLE_OPTIMIZED_NESTED_LOOP` query hint, for example:
 
 ```sql
-USE HINT (DISABLE_OPTIMIZED_NESTED_LOOP)
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT (DISABLE_OPTIMIZED_NESTED_LOOP)); 
 ```
 
-Before you use this trace flag, you can test your applications thoroughly to make sure that you get the expected performance benefits when you disable this optimization. This is because the sort optimization can be helpful when there is a large increase in the number of rows that are touched by the plan. See [DISABLE_OPTIMIZED_NESTED_LOOP](/sql/t-sql/queries/hints-transact-sql-query#:~:text=Azure%20SQL%20Database-,%27DISABLE_OPTIMIZED_NESTED_LOOP%27,-Instructs%20the%20query)
+For more information, see [DISABLE_OPTIMIZED_NESTED_LOOP](/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-ver15#:~:text=Azure%20SQL%20Database-,'DISABLE_OPTIMIZED_NESTED_LOOP',Instructs,-the%20query%20processor).
 
 ## More information
 
