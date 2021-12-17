@@ -38,7 +38,7 @@ To edit an Office file in its desktop app, you must meet the following prerequis
 
 - Download the corresponding Office desktop apps (Microsoft Office 2016 or a later version).
 
-- Have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans).
+- Have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans) that includes the `O365ProPlusRetail` product ID.
 
 This issue occurs if any of these prerequisites aren't met.
 
@@ -50,7 +50,7 @@ To fix this issue:
 
 - Make sure that the corresponding Office desktop apps (Microsoft Office 2016 or a later version) are installed. You can download and install the apps from the [Microsoft 365 portal](https://portal.office.com/account#installs).
 
-- Make sure that you have an Office 365 E3 or E5 license.
+- Make sure that you have an Office 365 E3 or E5 license that includes the `O365ProPlusRetail` product ID.
 
     Administrators can assign the license from the [Microsoft 365 admin center](https://portal.office.com/adminportal/home?#/users).
 
