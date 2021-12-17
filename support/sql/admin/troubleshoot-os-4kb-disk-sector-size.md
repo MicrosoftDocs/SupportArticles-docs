@@ -112,7 +112,7 @@ Below is an comparison of the sector sizes reported by the operating systems. Th
 | Trim Supported | Trim Supported |
 | Not DAX capable | Not DAX capable |
 | Not Thinly-Provisioned | Not Thinly-Provisioned |
-|:-|:-|
+|||
 
 
 ## See also
