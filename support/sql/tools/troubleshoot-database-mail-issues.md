@@ -522,7 +522,7 @@ Report Status: 4100
 Hashed bucket:"
 ```
 
-You can retrieve all files showing AppCrash_DatabaseMail.exe_\* in the *..\\WER\\ReportQueue* path. See [Procdump Analysis](#analysis-the-exception-dump) section below for dump analysis suggestions.
+You can retrieve all files showing AppCrash_DatabaseMail.exe_\* in the *..\\WER\\ReportQueue* path. See [Procdump Analysis](#analyze-the-exception-dump) section below for dump analysis suggestions.
 
 ### Method 3: Collect and analyze XEvent or SQL Server Trace
 
