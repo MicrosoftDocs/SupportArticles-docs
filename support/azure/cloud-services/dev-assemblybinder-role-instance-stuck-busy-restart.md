@@ -20,9 +20,9 @@ _Original KB number:_ &nbsp; 4464907
 
 ## Symptoms
 
-**AssemblyBinder** role instance of Compressor application is throwing the below unhandled exception in the Azure portal blade and stuck between Busy and Restarting state.
+**AssemblyBinder** role instance of Compressor application is throwing the below unhandled exception in the Azure portal blade and stuck between Busy and Restarting state.
 
-```
+```output
 Unhandled Exception: There is not enough space on the disk. at System.IO.__Error.WinIOError  (Int32 errorCode, String maybeFullPath) at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count) at Ionic.Zip.ZipEntry.ExtractAndCrc(Stream archiveStream, Stream targetOutput, Int16 compressionMethod, Int64 compressedFileDataSize, Int64 uncompressedSize) at Ionic.Zip.ZipEntry.ExtractToStream(Stream archiveStream, Stream output, EncryptionAlgorithm encryptionAlgorithm, Int32 expectedCrc32) at Ionic.Zip.ZipEntry.InternalExtractToBaseDir(String baseDir, String password, ZipContainer zipContainer, ZipEntrySource zipEntrySource, String fileName) at Ionic.Zip.ZipFile._InternalExtractAll(String path, Boolean overrideExtractExistingProperty) at AssemblyBinder.WorkerRole.OnStart() in D:\compressor\AssemblyBinder\WorkerRole.cs:line 56 at Microsoft.WindowsAzure.ServiceRuntime.RoleEnvironment.InitializeRoleInternal(RoleType roleTypeEnum) at Microsoft.WindowsAzure.ServiceRuntime.Implementation.Loader.RoleRuntimeBridge. <InitializeRole> b__0() at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) at System.Threading.ThreadHelper.ThreadStart()'[2018-08-12T14:47:25Z] Last exit time: [2018/08/12, 14:47:25.965].
 ```
 
@@ -32,7 +32,7 @@ From the error call stack, it looks like this WorkerRole is performing some unzi
 
 In order to find out the answer, use [Process Monitor](/sysinternals/downloads/procmon) tool to take a ProcMon trace and see what you can find.
 
-:::image type="content" source="media/scenario-2-assemblybinder-role-instance-stuck-busy-restart/process-monitor-tool.png" alt-text="Screenshot of ProcMon trace in Process Monitor tool.":::
+:::image type="content" source="media/scenario-2-assemblybinder-role-instance-stuck-busy-restart/process-monitor-tool.png" alt-text="Screenshot of ProcMon trace in Process Monitor.":::
 
 **WaWorkerHost.exe** process is writing some file in its default temporary directory, which has a maximum size of 100 MB, which may become full at some point. Upon navigating to the **RoleTemp** directory, you might find that disk space quota is indeed getting exhausted for that directory.
 
@@ -44,16 +44,16 @@ Therefore, you should configure a local storage resource, and point the TEMP and
 
 The local resource declaration must have been added to the service definition file for AssemblyBinder role.
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <LocalResources>
    <LocalStorage name="FileStorage" cleanOnRoleRecycle="true" sizeInMB="200" />
 </LocalResources>
 ```
 
-This modification should be performed within the [RoleEntryPoint.OnStart](/previous-versions/azure/reference/ee772851(v=azure.100)?redirectedfrom=MSDN)  method.
+This modification should be performed within the [RoleEntryPoint.OnStart](/previous-versions/azure/reference/ee772851(v=azure.100)?redirectedfrom=MSDN) method.
 
-```
+```xml
 localResource = RoleEnvironment.GetLocalResource("FileStorage");
 Environment.SetEnvironmentVariable("TMP", localResource.RootPath);
 Environment.SetEnvironmentVariable("TEMP", localResource.RootPath);

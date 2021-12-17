@@ -3,7 +3,7 @@ title: Windows stop error - Status No Memory
 description: This article provides steps to resolve issues where Windows fails to start and displays the status "Status No Memory".
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -65,7 +65,7 @@ If you're using a Generation 2 VM, the EFI partition of the attached disk may no
 1. Identify the broken disk attached to the repair VM. Typically, this disk is listed last in the console, and has the highest numerical value.
 1. Note if in that disk there's a partition that holds the **EFI System Partition**, which also doesn't have a letter value assigned to it (such as drive *F:*). If all partitions are assigned, you may skip ahead to free up space on the disk. Otherwise, continue to assign a letter to this disk.
 
-   :::image type="content" source="media/troubleshoot-windows-stop-error/disk-management.png" alt-text="Screenshot of the Disk Management window, showing a partition that holds the E F I System Partition.":::
+   :::image type="content" source="media/troubleshoot-windows-stop-error/disk-management.svg" alt-text="Screenshot of the Disk Management window, showing a partition that holds the E F I System Partition.":::
 
 1. Open an elevated command prompt as an administrator and enter `diskpart` to launch the **DISKPART** tool.
 1. Enter the following commands:
@@ -131,7 +131,7 @@ Before taking any steps, you should create a copy of the **\windows\system32\con
 1. In Windows search, enter **regedit** and open the Registry Editor application.
 1. In the Registry Editor, highlight the key **HKEY_LOCAL_MACHINE** and select **File > Load Hive...** from the menu.
 
-   :::image type="content" source="media/troubleshoot-windows-stop-error/load-hive.png" alt-text="Screenshot shows steps to load a hive in the Registry Editor.":::
+   :::image type="content" source="media/troubleshoot-windows-stop-error/load-hive.svg" alt-text="Screenshot shows steps to load a hive in the Registry Editor.":::
 
 1. In the Load Hive dialog, select **\windows\system32\config\SYSTEM** and click Open.
    1. You'll be prompted for a name, which you should enter **BROKENSYSTEM**. This name will help differentiate the affected hives while you're troubleshooting.
@@ -162,7 +162,7 @@ To enable memory dump collection and Serial Console, run the following script:
    
    - In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder.
 
-      :::image type="content" source="media/troubleshoot-windows-stop-error/command-output.png" alt-text="Screenshot shows the output of the command, which lists the identifier number under the Windows Boot Loader section.":::
+      :::image type="content" source="media/troubleshoot-windows-stop-error/command-output.svg" alt-text="Screenshot shows the output of the command, which lists the identifier number under the Windows Boot Loader section.":::
 
    1. For a Generation 2 VM, enter the following command and note the identifier listed:
    

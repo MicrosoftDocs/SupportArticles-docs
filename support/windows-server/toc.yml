@@ -958,6 +958,8 @@
       href: ./deployment/use-recovery-console-replace-driver.md
     - name: How to use Device Manager to configure devices
       href: ./deployment/use-device-manager-configure-devices.md
+    - name: Support policy for third-party, kernel-level software
+      href: ./deployment/support-policy-third-party-kernel-level-attestation.md
     - name: VMware driver installation fails in Windows Server 2008 R2 SP1
       href: ./deployment/virtual-machines-vmware-not-install-update.md
     - name: Windows Deployment Services (WDS) support for UEFI

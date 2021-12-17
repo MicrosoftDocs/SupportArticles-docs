@@ -4,7 +4,7 @@ description: This article highlights and explains the flow that is associated wi
 ms.date: 09/28/2020
 ms.prod-support-area-path: app management
 ms.reviewer: sausarka
-author: v-miegge
+author: helenclu
 ms.author: sausarka
 ms.custom: 
 - CI 121778

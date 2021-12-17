@@ -58,7 +58,7 @@ For more information about table-valued parameters, see [Use Table-Valued Parame
 
 This problem is caused by incompatible language settings for programs that do not support Unicode.
 
-:::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/region-settings-unicode.png" alt-text="Screenshot of region language settings with the option selected to use Unicode U T F 8 for worldwide language support." border="false":::
+:::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/region-settings-unicode.png" alt-text="Screenshot of the Region settings where the Use Unicode U T F 8 for worldwide language support option is selected." border="false":::
 
 The service account defaults to UTF-8 for worldwide language support when it is enabled. The LocalDB database version in Windows Server 2019 does not support this format.
 
@@ -70,11 +70,11 @@ To change the setting, follow these steps:
 
 1. On the Azure AD Connect server, open Control Panel, and then select **Clock, Language and Region**.  
 
-    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/control-panel-clock-language.png" alt-text="Screenshot of Control Panel with Clock, Language, and Region selected.":::
+    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/control-panel-clock-language.png" alt-text="Screenshot of Control Panel with the Clock, Language, and Region option selected.":::
 
 2. Select **Region**.
 
-    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/control-panel-region.png" alt-text="Screenshot of Clock, Language, and Region page with Region selected.":::
+    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/control-panel-region.png" alt-text="Screenshot of Clock, Language, and Region page with the Region item selected.":::
 
 3. Select the **Administrative** tab, and then select **Change System locale**.
 
@@ -82,7 +82,7 @@ To change the setting, follow these steps:
 
 4. If the **Use Unicode UTF-8 for worldwide language support** setting is enabled, clear it.
 
-    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/clear-region-settings-unicode.png" alt-text="Screenshot of region language settings with the option unselected to use Unicode U T F 8 for worldwide language support." border="false":::
+    :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/clear-region-settings-unicode.png" alt-text="Screenshot of the Region settings where the Use Unicode U T F 8 for worldwide language support is unselected." border="false":::
 
 5. Select **OK**, and then restart the server.
 

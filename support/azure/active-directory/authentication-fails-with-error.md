@@ -1,5 +1,5 @@
 ---
-title: The requested federation realm object '<Object ID>' does not exist when authentication fails
+title: The requested federation realm object <Object ID> does not exist when authentication fails
 description: Describes and provides a resolution for an error that occurs when Authentication fails with an error stating 'The requested federation realm object '<Object ID>' does not exist'.
 ms.date: 07/30/2021
 ms.prod-support-area-path: 
@@ -12,9 +12,9 @@ ms.subservice: hybrid
 
 Authentication fails with the error "The requested federation realm object '< Object ID >' does not exist" for users who are part of domain which is federated with a 3rd party identity provider in either [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) or [Microsoft 365](https://www.microsoft.com/microsoft-365).
 
-:::image type="content" source="media/authentication-fails-with-error/authentication-fails-trouble-sign-in.png" alt-text="Screenshot of an error when signing into a federated domain.":::
+:::image type="content" source="media/authentication-fails-with-error/authentication-fails-trouble-sign-in.png" alt-text="Screenshot of the error when signing into a federated domain.":::
 
-:::image type="content" source="media/authentication-fails-with-error/troubleshooting-details.png" alt-text="Screenshot of troubleshooting details of an error when signing into a federated domain.":::
+:::image type="content" source="media/authentication-fails-with-error/troubleshooting-details.png" alt-text="Screenshot of the troubleshooting details of the error.":::
 
 This failure happens when the 3rd Party identity provider returns the wrong *IssuerURI* within the **Issuer** field in the Security Assertion Markup Language (SAML) response.
 
