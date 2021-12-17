@@ -1,9 +1,9 @@
 ---
 title: Event ID 33566 and SQL Server doesn't start 
 description: This article provides resolutions for the problem where SQL Server fails to start and event ID 33566 is logged in the Application event log.
-ms.date: 1/28/2020
-author: MaryQiu1987
-ms.author: v-maqiu
+ms.date: 12/17/2021
+author: cobibi
+ms.author: v-yunhya
 ms.reviewer: ramakoni
 ---
 # Event ID 33566 and SQL Server doesn't start after you enable encryption
