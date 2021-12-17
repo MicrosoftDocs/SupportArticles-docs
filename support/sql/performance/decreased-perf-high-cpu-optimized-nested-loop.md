@@ -32,7 +32,7 @@ To fix the issue, use trace flag 2340 to disable the optimization. Trace flag 23
 
 Before you enable this trace flag, you can test your applications thoroughly to make sure that you get the expected performance benefits when you disable this optimization. This is because the sort optimization can be helpful when there is a large increase in the number of rows that are touched by the plan. 
 
-For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver15#:~:text=2340,a%20sort%20operation).
+For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#:~:text=2340,a%20sort%20operation).
 
 ### Modify code to use the DISABLE_OPTIMIZED_NESTED_LOOP hint
 
