@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 2758876
 
 Programs in Office 2013 and later versions provide add-in resiliency in that the apps will disable an add-in if it performs slowly. However, you can re-enable the add-in and select the **Always enable this add-in** option to prevent the add-in from being auto-disabled by the Office program. For example, the following figure shows an add-in that was disabled because it caused Outlook to shut down slowly. The option to **Always enable this add-in** is shown as well.
 
-:::image type="content" source="media/add-ins-are-user-re-enabled-after-being-disabled/outlook-detected-an-add-in-problem.png" alt-text="Screenshot shows the Always enable this add-in option is shown." border="false":::
+:::image type="content" source="media/add-ins-are-user-re-enabled-after-being-disabled/outlook-detected-an-add-in-problem.png" alt-text="Screenshot shows the Always enable this add-in option is shown.":::
 
 > [!NOTE]
 > If you re-enable an add-in that caused a performance problem at one time, you may experience performance problems in the future in the Office program under which the add-in is loaded. See the More Information section of this article for additional information on ways you can monitor add-in performance in Office programs.
@@ -79,7 +79,7 @@ In this scenario on the next launch of Outlook, the following notification will 
 
 By selecting **View Disabled Add-ins**, the **Disabled Add-ins** dialog box is displayed and you can select the **Always enable this add-in** option to keep the add-in enabled even if it performs slowly.
 
-:::image type="content" source="media/add-ins-are-user-re-enabled-after-being-disabled/always-enable-this-add-in.png" alt-text="Screenshot of the Always enable this add-in option." border="false":::
+:::image type="content" source="media/add-ins-are-user-re-enabled-after-being-disabled/always-enable-this-add-in.png" alt-text="Screenshot of the Always enable this add-in option.":::
 
 If you select **Always enable this add-in**, the registry is updated to include details about the add-in that is to be exempted from this automatic disabling feature.
 
@@ -107,7 +107,7 @@ If you re-enable an add-in by selecting the **Always enable this add-in** option
 
 1. On the **File** tab, select **Slow and Disabled COM Add-ins** in Outlook 2016 or select **Slow and Disabled Add-ins** in Outlook 2013.
 
-    :::image type="content" source="media/add-ins-are-user-re-enabled-after-being-disabled/slow-and-disabled-add-ins.png" alt-text="Screenshot of the Slow and Disabled Add-ins option." border="false":::
+    :::image type="content" source="media/add-ins-are-user-re-enabled-after-being-disabled/slow-and-disabled-add-ins.png" alt-text="Screenshot of the Slow and Disabled Add-ins option.":::
 
 2. Select **Disable this add-in** below the add-in you want to disable.
 
