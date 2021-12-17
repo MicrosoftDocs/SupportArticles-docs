@@ -68,7 +68,7 @@ To work around this behavior, follow these steps:
    :::image type="content" source="media/office-end-user-license-agreement/select-permission.png" alt-text="Screenshot to select Permissions in Registry Editor.":::
 5. Click **Users (Computer_name\Users)**, and then click to select the **Allow** check box for the **Full Control** permission. 
 
-  :::image type="content" source="media/office-end-user-license-agreement/allow-full-control.png" alt-text="Screenshot shows steps to give the Users Full Control permission." border="false":::
+    :::image type="content" source="media/office-end-user-license-agreement/allow-full-control.png" alt-text="Screenshot shows steps to give the Users Full Control permission.":::
 
 6. Click **OK**, and then quit Registry Editor.
 
