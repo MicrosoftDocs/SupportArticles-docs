@@ -77,7 +77,7 @@ Microsoft is currently investigating this problem. Consider the following resolu
 
 - If you have multiple drives on this system, you can specify a different location for the database files upon installation of SQL Server. Make sure that drive reflects a supported sector size when querying the `fsutil` command. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes. 
 
-- You can start SQL Server by specifying the trace flag 1800, For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800). This trace flag is not enabled by default. Trace flag 1800 forces SQL Server to use 4 KB as the sector size for all read and writes. When you are running SQL Server on disks with physical sector size greater than 4 KB, using the trace flag 1800 will simulate a native 4 KB drive which is the supported sector size for SQL Server.
+- You can start SQL Server by specifying the trace flag 1800. For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800). This trace flag is not enabled by default. Trace flag 1800 forces SQL Server to use 4 KB as the sector size for all read and writes. When you are running SQL Server on disks with physical sector size greater than 4 KB, using the trace flag 1800 will simulate a native 4 KB drive which is the supported sector size for SQL Server.
 
 - Install SQL Server on available Windows 10 devices instead.
 
