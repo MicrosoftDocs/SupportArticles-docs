@@ -99,7 +99,7 @@ When an error is returned from `sp_send_dbmail`, the email is not submitted to t
 
 When individual account delivery attempts fail, Database Mail will hold the error messages during retry attempts until the mail item delivery succeeds or fails. If it succeeds in the end, all of the accumulated errors get logged as separate warnings, including the `account_id`. This can cause a warning even if the email was sent. If it fails in the end, all previous warnings get logged as one error message without an `account_id`, because all accounts have failed.
 
-### The kinds of issues might be logged in sysmail_event_log
+### Issues that may be logged in sysmail_event_log
 
 There are following kinds of issues might be logged in sysmail_event_log:
 
@@ -330,7 +330,7 @@ Depending on the issues, you may need one or more of these collections. These ar
 
 ### Method 1: Back up the msdb database
 
-It can be helpful to be query the sysmail in your own environment. In some cases, you can back up the **msdb** database and then restore to another instance. The sysmail views are all defined with reference to msdb, so even when querying in the restored **msdb** backup, the views will reference the **msdb** system database in your instance. You will need to recreate the sysmail views in the user database with following script to recreate sysmail views in the customer **msdb**.
+It can be helpful to query the sysmail views in an environment separate from production. In some cases, you can back up the **msdb** database and then restore to another instance. The sysmail views are all defined with reference to msdb, so even when querying in the restored **msdb** backup, the views will reference the **msdb** system database in your instance. You will need to recreate the sysmail views in the user database with following script to recreate sysmail views from the production **msdb**.
 
 ```sql
 /* sysmail_allitems  */
@@ -492,7 +492,7 @@ See [sysmail system views](#msdb-sysmail-system-views) section for more informat
 
 ### Method 2: Check the Windows application event log
 
-If the external *DatabaseMail.exe* program cannot log to the **msdb** table, the program will log the error to the Windows application event log. In addition, if *DatabaseMail.exe* encounters some kind of exception, it will usually log to the event log as well. The exception stack is typically identical, but check the event log to see if any additional stack information is present.
+If the external *DatabaseMail.exe* program cannot log to the **msdb** table, the program will log the error to the Windows application event log. In addition, if *DatabaseMail.exe* encounters some kind of exception, it will often log to the event log as well. The exception stack is typically identical, but check the event log to see if any additional stack information is present.
 
 Sometimes when troubleshooting a *DatabaseMail.exe* crash, you may find that logging indicates a Windows Error Report dump was created. It will appear similar to the following:
 
@@ -524,7 +524,7 @@ Hashed bucket:"
 
 You can retrieve all files showing AppCrash_DatabaseMail.exe_\* in the *..\\WER\\ReportQueue* path. See [Procdump Analysis](#analysis-the-exception-dump) section below for dump analysis suggestions.
 
-### Method 3: Collect and analysis XEvent or SQL Server Trace
+### Method 3: Collect and analyze XEvent or SQL Server Trace
 
 You can collect a trace of the Transact-SQL commands that are being executed on the system to see if any of them are failing.
 
@@ -534,7 +534,7 @@ You can use [PSSDiag](https://github.com/microsoft/DiagManager/releases) to coll
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-pssdiag-broker-events.png" alt-text="Screenshot of the Pssdiag tool. Enable broker events on the XEvent tab.":::
 
-#### Analysis the trace
+#### Analysis of the Xevent or SQL trace
 
 There are usually five different sessions (SPIDs) that will contain useful information for troubleshooting a Database Mail issue.
 
@@ -550,13 +550,13 @@ There are usually five different sessions (SPIDs) that will contain useful infor
 
 It's difficult to know what exactly you should expect to see unless you've reviewed many of these traces. The best way is to compare with the tracking of successfully sent Database Mail. If your troubleshooting scenario involves sometimes failing to send Database Mail, then compare the problem trace with a successful trace and see the difference in behavior. Check for any errors reported by any of the SPIDs. If you are unable to send any Database Mail, compare to the successful sending in your own test environment.
 
-### Method 4: Collect and analysis the capturing of events by using Process Monitor
+### Method 4: Capture and analyze Process Monitor events
 
 [Process Monitor](/sysinternals/downloads/procmon) (Procmon) is a part of the Windows Sysinternals suite.
 
 Process Monitor produces a noisy capture, and it's best to apply filters to the data after it has been captured rather than as the capture is occurring, so that you don't miss anything. Typically you are able to target the capture around a repro of the Database Mail issue, so the overall data captured would not be too large.
 
-#### Collect capturing events
+#### Capture file, registry, network, process and thread events
 
 When you start *procmon.exe*, it will begin capturing data immediately. The GUI is straightforward. You will want to stop the capturing of events until you're ready to reproduce the issue. Select **File** -> **Capturing Events (Ctrl+E)**, this will uncheck the menu item and stop event collection. Select the eraser icon or press Ctrl+X to clear the events already captured:
 
@@ -569,9 +569,9 @@ To reproduce the issue, follow the steps:
 1. Select **File** -> **Capturing Events (Ctrl+E)** to stop capturing events.
 1. Save the file as *.PML.
 
-#### Analysis the events
+#### Analyze the Process Monitor trace
 
-After you get the captured PML file, open it with Process Monitor again. First filter it to the *DatabaseMail.exe* and *sqlservr.exe* processes. Click **Filter -> Filter...** or click the filter icon to open the filter menu.
+After you get the .PML file, open it with Process Monitor again. First filter it to the *DatabaseMail.exe* and *sqlservr.exe* processes. Click **Filter -> Filter...** or click the filter icon to open the filter menu.
 
 Add entries for Process Name are *sqlservr.exe* and *DatabaseMail.exe*:
 
@@ -581,7 +581,7 @@ As is the case of SQL XEvent or Trace capture, it's not immediately obvious what
 
 When *DatabaseMail.exe* fails to load a DLL or can't find the *DatabaseMail.exe.config* file, this kind of analysis is useful.
 
-### Method 5: Collect and analysis the exception dump by using Procdump tool
+### Method 5: Collect and analyze the exception dump by using Procdump tool
 
 [ProcDump](/sysinternals/downloads/procdump) is also a part of the Windows Sysinternals suite. 
 
@@ -607,7 +607,7 @@ Waiting for process named DatabaseMail.exe...
 
 Then, reproduce the issue. The dump will be created in the same folder where you've executed *procdump.exe*.
 
-#### Analysis the exception dump
+#### Analyze the exception dump
 
 As with any exception dump, find the exception record and examine the call stack that leads to the exception.
 
@@ -616,7 +616,7 @@ As with any exception dump, find the exception record and examine the call stack
 
 Once you have the stack, begin searching for known issues for a matching call stack. If you need further analysis help, you can contact CSS team.
 
-### Method 6: Use time travel debugging tool
+### Method 6: Use Time Travel Debugging tool
 
 Time travel debugging (TTD) capture is usually the last resort for difficult problems. You can use the [WinDbg preview debugger](https://www.microsoft.com/p/windbg-preview/9pgjgd53tn86) to [get it](/windows-hardware/drivers/debugger/windbg-user-mode-preview#launch-executable-advanced). For comprehensive instructions and information on TTD, see [Time Travel Debugging](/windows-hardware/drivers/debugger/time-travel-debugging-overview) on how it works and how to do analysis. If you get to this point, you likely need to contact CSS team. However, this section provides instructions on how to capture the TTD when necessary.
 
