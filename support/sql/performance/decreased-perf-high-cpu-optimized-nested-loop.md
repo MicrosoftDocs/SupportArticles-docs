@@ -44,7 +44,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (USE HINT (DISABLE_OPTIMIZED_NESTED_LOOP)); 
 ```
 
-For more information, see [DISABLE_OPTIMIZED_NESTED_LOOP](/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-ver15#:~:text=Azure%20SQL%20Database-,'DISABLE_OPTIMIZED_NESTED_LOOP',Instructs,-the%20query%20processor).
+For more information, see [DISABLE_OPTIMIZED_NESTED_LOOP](/sql/t-sql/queries/hints-transact-sql-query#:~:text=Azure%20SQL%20Database-,'DISABLE_OPTIMIZED_NESTED_LOOP',Instructs,-the%20query%20processor).
 
 ## More information
 
