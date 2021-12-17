@@ -1,19 +1,16 @@
 ---
-title: Error 806 or 808 when importing CSV files
-description: Describes an issue in which you receive the ZtdDeviceAlreadyAssigned (806) or ZtdDeviceAssignedToOtherTenant (808) error message when you import Windows Autopilot device CSV files in Intune.
-ms.date: 07/24/2020
+title: Troubleshoot error 806 or 808 when importing Windows Autopilot CSV files
+description: Describes an issue in which you receive the ZtdDeviceAlreadyAssigned (806) or ZtdDeviceAssignedToOtherTenant (808) error message when you import Windows Autopilot device CSV files in Microsoft Intune.
+ms.date: 10/06/2021
 ms.prod-support-area-path: Windows enrollment
 ---
 # Error 806 or 808 when you import Windows Autopilot device CSV files in Intune
 
 This article helps you fix an issue where you receive the **ZtdDeviceAlreadyAssigned (806)** or **ZtdDeviceAssignedToOtherTenant (808)** error message when you import Windows Autopilot device CSV files in Microsoft Intune.
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4564066
-
 ## Symptoms
 
-When you try to import a CSV file on the [Windows Autopilot devices](https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/windowsEnrollment) blade in the Azure portal (**Microsoft Intune** > **Device enrollment** > **Windows enrollment** > **Windows Autopilot devices**), you receive an error message that resembles one of the following:
+When you try to import a CSV file on the [Windows Autopilot devices](https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/windowsEnrollment) blade in the Azure portal (**Microsoft Intune** > **Device enrollment** > **Windows enrollment** > **Windows Autopilot devices**), you receive an error message similar to these:
 
 > Error details  
 > Device is already registered to the same Tenant.  
@@ -33,14 +30,14 @@ When you try to import a CSV file on the [Windows Autopilot devices](https://por
 
 The **806 - ZtdDeviceAlreadyAssigned** and **808 - ZtdDeviceAssignedToOtherTenant** errors can occur if a device is already registered in your tenant or if a record of the device already exists in Microsoft Store for Business. The record must be removed before the device's CSV file can be imported in Intune.
 
-## Resolution
+## Solution
 
-To fix the issue, first check whether the device record exists in Microsoft Store for Business:
+To fix the issue, confirm whether the device record exists in Microsoft Store for Business:
 
 1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com/).
-2. Select **Manage**, and then select **Devices**.
-3. Locate the device. If the device record exists, select the device, and then select **Remove devices**.
-4. Return to the [Windows Autopilot devices](https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/windowsEnrollment) blade in the Azure portal, and then reimport the CSV file.
+1. Select **Manage**, and then select **Devices**.
+1. Locate the device. If the device record exists, select the device, and then select **Remove devices**.
+1. Return to the [Windows Autopilot devices](https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/windowsEnrollment) blade in the Azure portal, and then reimport the CSV file.
 
 If the device record doesn't exist in Microsoft Store for Business or Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support):
 

@@ -1,19 +1,17 @@
 ---
-title: Windows failed to apply MDM Policy settings
-description: You receive an error message when you force a Group Policy update on hybrid Azure AD-joined devices.
-ms.date: 05/13/2020
+title: Learn more about the error Windows failed to apply the MDM Policy settings
+description: Information about the error message "Windows failed to apply the MDM Policy settings" when you force a Group Policy update on hybrid Azure AD-joined devices.
+ms.date: 10/06/2021
 ms.prod-support-area-path: Windows enrollment
 ---
-# Windows failed to apply the MDM Policy settings error when running `gpupdate /force` on hybrid Azure AD-joined devices
+
+# Windows failed to apply the MDM Policy settings on hybrid Azure AD-joined devices
 
 This article discusses the **Windows failed to apply the MDM Policy settings** error message that occurs when you run the `gpupdate /force` command on an enrolled Windows device in Microsoft Intune.
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4456826
-
 ## Symptoms
 
-When you run the `gpupdate /force` command on a hybrid Azure Active Directory (Azure AD)-joined Windows device that's enrolled in Microsoft Intune, you receive the following warning message:
+When you run the `gpupdate /force` command on a hybrid Azure Active Directory (Azure AD)-joined Windows device that's enrolled in Intune, you receive the following warning message:
 
 > Updating policy...
 >
