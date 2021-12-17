@@ -295,9 +295,11 @@ items:
     href: script-error-intune-setup.md  
   - name: Set the MDM authority
     href: set-mdm-authority.md
-  - name: Things to try before calling Intune support
-    href: before-you-call-intune-support.md
   - name: Troubleshooting blade fails to load
     href: troubleshooting-blade-fails-loading.md
 - name: Get support
-  href: /mem/get-support
+  items:
+   - name: Things to try before calling Intune support
+     href: before-you-call-intune-support.md
+   - name: Get support in Endpoint Manager
+     href: /mem/get-support
