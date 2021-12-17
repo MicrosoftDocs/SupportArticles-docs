@@ -49,7 +49,7 @@ To work around this issue, use one of the following methods:
 
 - Reinstall the Operations Manager 2016 agent without APM. To do this, run the following command:
 
-  **msiexec /i MonAgent.msi NOAPM=1**
+  **msiexec /i MoMAgent.msi NOAPM=1**
 
   **Note** The NOAPM=1 parameter causes the Operations Manager agent to install without the .NET Framework application performance monitoring. For more information, see [Install Agent Using the Command Line](/previous-versions/system-center/system-center-2012-R2/hh230736(v=sc.12)?f=255&MSPPError=-2147217396).  
 
