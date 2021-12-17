@@ -1,23 +1,20 @@
 ---
-title: Can't configure and assign a certificate profile
+title: Troubleshoot certificate profile failure and HTTP 500 error on incoming SCEP requests
 description: Fixes an issue in which the certificate registration point (CRP) application pool returns HTTP 500 error messages and the request can't be verified.
-ms.date: 05/18/2020
+ms.date: 09/09/2021
 ms.prod-support-area-path: Device protection
 ms.reviewer: joelste, intunecic, alra
 ---
 # HTTP 500 errors on CertificateRegistrationSvc verify request in Intune
 
-This article fixes errors when you configure and assign a certificate profile in Microsoft Intune.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4491077
+This article fixes errors when you configure and assign a Simple Certificate Enrollment Protocol (SCEP) certificate profile in Microsoft Intune.
 
 ## Symptoms
 
-After you configure and assign a certificate profile in Microsoft Intune, you experience the following problems:
+After you configure and assign a SCEP certificate profile in Intune, you experience the following problems:
 
 - Targeted devices do not receive a certificate.
-- The certificate profile shows a status of **Failed** in the Intune admin portal.
+- The certificate profile shows a status of **Failed** in the Microsoft Endpoint Manager admin center.
 - Incoming SCEP requests generate **HTTP 500** error entries in the IIS logs on the computer that's running the Microsoft Intune NDES Connector. These entries resemble the following:
 
     > *DateTime* *IPAddress* GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 -IPAddress profiled/1.0+CFNetwork/975.0.3+Darwin/18.2.0 - 200 0 0 0  
