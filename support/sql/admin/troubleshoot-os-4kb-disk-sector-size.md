@@ -45,6 +45,7 @@ Faulting application path: C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSE
 Faulting module path: C:\Windows\SYSTEM32\ntdll.dll 
 ```
 
+
 > [!Note]
 > You might encounter the failures mentioned in the above scenarios for a SQL Server instance you install manually, or on a LocalDB instance installed by applications. 
  
