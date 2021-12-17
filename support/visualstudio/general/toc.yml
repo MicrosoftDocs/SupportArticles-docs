@@ -105,7 +105,7 @@
     href: setup-project-depend-dotnet-framework.md
 
 
-- name: Team explorer/Version control
+- name: Team Explorer/Version control
   items:
   - name: Excel or Project can't connect to Team Foundation Server
     href: excel-project-cannot-connect-tfs-2010.md
