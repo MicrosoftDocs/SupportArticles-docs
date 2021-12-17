@@ -45,6 +45,20 @@ Faulting application path: C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSE
 Faulting module path: C:\Windows\SYSTEM32\ntdll.dll 
 ```
 
+**Scenario #4:** You install LocalDB on a Windows 11 device. The setup fails and in the SQL Server error log, you notice entries similar to: 
+
+```output
+2021-12-15 23:25:04.28 spid5s      Cannot use file 'C:\Users\Administrator\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\TestInstance\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 16384. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
+```
+
+In the Windows 11 Application Event Log, you notice entries similar to:
+
+```output
+Message            : Windows API call WaitForMultipleObjects returned error code: 575. Windows system error message is: {Application Error}
+                     The application was unable to start correctly (0x%lx). Click OK to close the application.
+                     Reported at line: 3621.
+Source             : SQLLocalDB 11.0
+```
 
 > [!Note]
 > You might encounter the failures mentioned in the above scenarios for a SQL Server instance you install manually, or on a LocalDB instance installed by applications. 
