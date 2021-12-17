@@ -14,7 +14,7 @@ This article provides solutions for troubleshooting errors during installation o
 
 ## Symptoms
 
-**Scenario #1:** When you attempt to install SQL Server (versions 2019, 2017, 2016) on a Windows 11 device. You encounter errors similar to the following for the Database Engine Services component of SQL Server: 
+**Scenario #1:** When you attempt to install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device. You encounter errors similar to the following for the Database Engine Services component of SQL Server: 
 
 ```output
 Feature: Database Engine Services 
@@ -26,16 +26,13 @@ Component error code: 0x851A001A
 Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
 ```
 
-**Scenario #2:** You install SQL Server (versions 2019, 2017) on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server (versions 2019, 2017, 2016) on a Windows 11 device. The service fails to start and in the SQL Server error log, you notice entries similar to: 
+**Scenario #2:** You install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device. The service fails to start and in the SQL Server error log, you notice entries similar to: 
 
 ```output
-2021-11-05 23:42:47.13 spid9s Starting up database 'master'. 
 2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
-2021-11-05 23:42:47.21 Server CLR version v4.0.30319 loaded. 
-2021-11-05 23:42:47.24 Server Common language runtime (CLR) functionality initialized using CLR version v4.0.30319 from C:\Windows\Microsoft.NET\Framework64\v4.0.30319. 
 ```
 
-**Scenario #3:** You install SQL Server (versions 2019, 2017) on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server (versions 2019, 2017, 2016) on a Windows 11 device. The service fails to start and in the SQL Server error log, you notice entries similar to: 
+**Scenario #3:** You install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device. The service fails to start and in the SQL Server error log, you notice entries similar to: 
 
 ```output
 Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
@@ -49,11 +46,11 @@ Faulting module path: C:\Windows\SYSTEM32\ntdll.dll
 ```
 
 > [!Note]
-> You might encounter the failures mentioned in the above scenarios for a SQL Server instance (standalone, failover cluster) you install manually, or on a LocalDB instance installed by applications. 
+> You might encounter the failures mentioned in the above scenarios for a SQL Server instance you install manually, or on a LocalDB instance installed by applications. 
  
 ## Cause
 
-During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves verifying the underlying filesystem before attempting the activity of opening system and user database files.  
+During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves consistency checks on the underlying filesystem before attempting the activity of opening system and user database files.  
 
 On systems running Windows 11, some new storage devices and device drivers will expose a disk sector size greater than the supported 4 KB sector size. 
   
@@ -65,12 +62,13 @@ You can confirm that you encounter this specific issue by executing the command:
 fsutil fsinfo sectorinfo <volume pathname>
 ```
 
-For example, to analyze the E: volume:
+For example, to analyze the E: volume, execute the following command:
+
 ```console
 fsutil fsinfo sectorinfo E:
 ```
 
-Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A value of 4096 indicated a sector storage size of 4 KB.
+Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A value of 4096 indicates a sector storage size of 4 KB.
 
 ## Resolution
 
@@ -85,7 +83,7 @@ Microsoft is currently investigating this problem. Consider the following resolu
 - Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see [Microsoft support policy for 4 KB sector hard drives in Windows](../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md).
 
 > [!NOTE]
-> There is no released version of Windows compatible with sector sizes greater than 4 KB. For more information, see [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046).
+> There is no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046).
 
 ## More information
 
@@ -97,7 +95,7 @@ The improved Windows 11 drivers disregard the emulation that common NVMe storage
 
 Below is a comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the value of `PhysicalBytesPerSectorForAtomicity`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
 
-**Sample output of `fsutil fsinfo sectorinfo <volume pathname>` against Samsung 1TB M.2 PCIe NVMe 980**
+**Sample output of `fsutil fsinfo sectorinfo <volume pathname>`**
 
 
 | **Windows 10** | **Windows 11** | 
