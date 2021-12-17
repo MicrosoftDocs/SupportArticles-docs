@@ -7,10 +7,12 @@ items:
     href: app-management.yml   
   - name: App installation
     items:
-    - name: App installation error codes reference
+    - name: App installation error codes
       href: app-install-error-codes.md
     - name: Troubleshoot app installation issues
       href: troubleshoot-app-install.md
+    - name: Troubleshoot Win32 app installation
+      href: troubleshoot-win32-app-install.md
     - name: Android APK app installation fails
       href: app-installation-failed-error.md
   - name: Windows apps
@@ -29,8 +31,6 @@ items:
       href: onedrive-attaches-corporate-protected-data-imessage.md
     - name: Mismatch between value type and configuration value
       href: mismatch-error-configuration-value-ampersand.md
-    - name: OneDrive for iOS supports Open-in protection on unenrolled devices
-      href: open-in-protection-unenrolled-devices.md
     - name: Saving images locally not restricted
       href: saving-images-locally-not-restricted.md
   - name: macOS apps
@@ -53,6 +53,8 @@ items:
       href: android-enterprise-enrolled-devices-fails-attaching-photo.md
     - name: Can't create messages in Outlook for Android
       href: creating-message-action-not-allowed.md
+    - name: Troubleshoot Managed Google Play apps
+      href: troubleshoot-google-apps.md
   - name: Managed browsers
     items:
     - name: Error when you open a web app on iOS 
@@ -61,7 +63,7 @@ items:
       href: managed-browser-policy-triggers-error-0x87d1fde8.md
     - name: Only one app configuration policy applied to Edge or Managed Browser
       href: only-one-app-policy-applied-edge-managed-browser.md
-  - name: General help and troubleshooting
+  - name: General troubleshooting
     items:
     - name: Save application failed error
       href: save-application-failed-error.md

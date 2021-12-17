@@ -1,17 +1,14 @@
 ---
-title: Can't save corporate data in WIP-allowed apps
-description: Fixes an issue in which you can't save corporate data in WIP-allowed apps on a Windows device that's enrolled in Intune through a hybrid Azure AD join or a Configuration Manager co-management.
-ms.date: 09/11/2020
+title: Can't save corporate data in WIP-allowed apps on an Intune-enrolled Windows device
+description: Fixes an issue in which you can't save corporate data in Windows Information Protection (WIP)allowed apps on a Windows device that's enrolled in Intune through a hybrid Azure AD join or a Configuration Manager co-management.
+ms.date: 10/14/2021
 ms.prod-support-area-path: Use app protection policies
 ---
 # Corporate data unsaved in WIP-allowed apps on hybrid Azure AD join or co-management device in Intune
 
 This article helps you fix an issue in which you can't save corporate data in WIP-allowed apps on a Windows device that's enrolled in Microsoft Intune through a hybrid Azure AD join or co-management.
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4496680
-
-## Symptom
+## Symptoms
 
 Consider the following scenario:
 
@@ -43,7 +40,7 @@ Word cannot complete the save.
 
 These issues occur if the Encrypting File System (EFS) Data Recovery Agent (DRA) certificate in your organization's policy in Group Policy has expired. In this case, you can't encrypt your files by using the certificate.
 
-## Resolution
+## Solution
 
 To fix the issue, follow these steps:
 

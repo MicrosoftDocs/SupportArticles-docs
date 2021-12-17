@@ -7,20 +7,17 @@ ms.reviewer: shhodge
 ---
 # OneDrive with iMessage integration as a managed app attaches corporate protected data to an iMessage
 
-This article fixes an issue in which OneDrive that's configured as a managed app lets users attach corporate protected data to an iMessage.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4023611
+This article fixes an issue in which OneDrive is configured as a managed app, but it lets users attach corporate protected data to an iMessage.
 
 ## Symptoms
 
-When OneDrive is configured as a managed app by using an Intune MAM policy, users can open the Apple iMessage app, go to OneDrive, and then attach corporate protected files.
+OneDrive is configured as a managed app with a Microsoft Intune app protection policy (APP), but users can open the Apple iMessage app, go to OneDrive, and then attach corporate protected files.
 
-## Resolution
+## Solution
 
-To prevent users from attaching deep links, the **General Intune iOS configuration** policy can be changed. Because the app is using the **Open-In** feature that is controlled by the operating system, Microsoft Intune cannot change the behavior by using an MAM policy.
+To prevent users from attaching deep links, the **General Intune iOS configuration** policy can be changed. Because the app is using the **Open-In** feature that is controlled by the operating system, Intune cannot change the behavior by using an app protection policy.
 
-You can change the behavior through a Mobile Device Management (MDM) setting by using the **General Intune iOS Configuration** policy. To do this, change the following settings to **No**:  
+You can change the behavior through a mobile device management (MDM) setting by using the **General Intune iOS Configuration** policy. To do this, change the following settings to **No**:  
 
 - **Allow managed documents in other unmanaged apps** (iOS 8.0.1 and later)
 - **Allow unmanaged documents in other managed apps** (iOS 8.01 and later)
