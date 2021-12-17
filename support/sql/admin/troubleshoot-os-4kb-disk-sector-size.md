@@ -26,7 +26,7 @@ Component error code: 0x851A001A
 Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
 ```
 
-**Scenario #2:** You install SQL Server (versions 2019, 2017) on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server (versions 2019, 2017, 2016) on a this Windows 11 device. The service fails to start and you notice entries similar to these in the SQL Server error log: 
+**Scenario #2:** You install SQL Server (versions 2019, 2017) on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server (versions 2019, 2017, 2016) on a Windows 11 device. The service fails to start and in the SQL Server error log, you notice entries similar to: 
 
 ```output
 2021-11-05 23:42:47.13 spid9s Starting up database 'master'. 
@@ -35,7 +35,7 @@ Error description: Wait on the Database Engine recovery handle failed. Check the
 2021-11-05 23:42:47.24 Server Common language runtime (CLR) functionality initialized using CLR version v4.0.30319 from C:\Windows\Microsoft.NET\Framework64\v4.0.30319. 
 ```
 
-**Scenario #3:** You install SQL Server (versions 2019, 2017) on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server (versions 2019, 2017, 2016) on a this Windows 11 device. The service fails to start and you notice entries similar to these in the Windows Event log:
+**Scenario #3:** You install SQL Server (versions 2019, 2017) on a Windows 10 device. You upgrade the OS on the device to Windows 11. You attempt to start SQL Server (versions 2019, 2017, 2016) on a Windows 11 device. The service fails to start and in the SQL Server error log, you notice entries similar to: 
 
 ```output
 Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
@@ -74,7 +74,7 @@ Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A va
 
 ## Resolution
 
-Microsoft is currently investigating this problem and will post updated information in the future. Please use one of the following resolutions: 
+Microsoft is currently investigating this problem. Consider the following resolutions: 
 
 - If you have multiple drives on this system, you can specify a different location for the database files upon installation of SQL Server. Make sure that drive reflects a supported sector size when querying the `fsutil` command. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes. 
 
@@ -93,9 +93,9 @@ Windows 11 native NVMe drivers were updated to include the actual sector size re
 
 The Windows 10 drivers do not report the source sector size of the physical storage.  
 
-The improved Windows 11 drivers disregards the emulation that common NVMe storage devices are using. As an example, `fsutil` displays a sector size of 8 KB or 16 KB, rather than emulating the required 4 KB sector size needed by Windows. 
+The improved Windows 11 drivers disregard the emulation that common NVMe storage devices are using. As an example, `fsutil` displays a sector size of 8 KB or 16 KB, rather than emulating the required 4 KB sector size needed by Windows. 
 
-Below is an comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the value of `PhysicalBytesPerSectorForAtomicity`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
+Below is a comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the value of `PhysicalBytesPerSectorForAtomicity`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
 
 **Sample output of `fsutil fsinfo sectorinfo <volume pathname>` against Samsung 1TB M.2 PCIe NVMe 980**
 
