@@ -123,7 +123,7 @@ Internal tables in the msdb database contain the email messages and attachments 
 `Sysmail_mailitems` table is the base table for the other sysmail views. The `sysmail_allitems` view is built on the table and is a superset of these views.
 
 > [!NOTE]
-> If you back up the production **msdb** database and restore to another test system as a user database, you can recreate the sysmail system views in the restored backup. The view definitions in the restored backup will reference the **msdb** database on the system where you restored the backup. See the script to recreate sysmail views in customer **msdb** in [Msdb backup](#msdb-backup) section.
+> If you back up the production **msdb** database and restore to another test system as a user database, you can recreate the sysmail system views in the restored backup. The view definitions in the restored backup will reference the **msdb** database on the system where you restored the backup. See the script to recreate sysmail views in customer **msdb** in [Msdb backup](#method-1-back-up-the-msdb-database) section.
 
 ### Sysmail_unsentitems
 
