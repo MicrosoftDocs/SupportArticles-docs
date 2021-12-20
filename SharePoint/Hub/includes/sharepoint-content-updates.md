@@ -2,6 +2,14 @@
 
 
 
+## Week of December 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/15/2021 | [The content processing pipeline failed to process the item](/sharepoint/troubleshoot/search/parser-server-failed-to-start) | added |
+
+
 ## Week of December 06, 2021
 
 

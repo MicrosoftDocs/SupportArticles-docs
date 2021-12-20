@@ -2,6 +2,15 @@
 
 
 
+## Week of December 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/17/2021 | [Pictures cannot be shown but shown as red X](/outlook/troubleshoot/message-body/pictures-not-displayed-and-shown-as-red-x) | modified |
+| 12/17/2021 | [WPF WebBrowser control doesn't display content correctly in an Office application](/outlook/troubleshoot/user-interface/wpf-webbrowser-control-content-not-display-correctly) | modified |
+
+
 ## Week of December 06, 2021
 
 
