@@ -19,14 +19,14 @@ _Original KB number:_ &nbsp; 3139850
 
     3. Select a Report Template to use for your VAT report. This will be the default summary report template used for your VAT Return. Leave blank if you do not have any setup yet.
 
-    4. Mark the Multiple Countries checkbox if you need to register for VAT in another EU country. This will allow you to print the summary reports for different countries.  Refer to the VAT Daybook manual for more information.
+    4. Mark the **Multiple Countries** checkbox if you need to register for VAT in another EU country/region. This will allow you to print the summary reports for different countries/regions.  Refer to the VAT Daybook manual for more information.
 
     5. Select **OK**.
 
 2. Report Setup: Set up report ID's and map column codes as follows:
 
     1. Select **Cards**, point to **Company** and select **VAT Daybook Reports**.
-    2. Enter a **Report ID**, report description, and country code.
+    2. Enter a **Report ID**, report description, and country/region code.
     3. Enter the column code for as many columns as you want on the report. You can have a maximum of 25 column codes each, for Sales and Purchase Tax Detail ID's.
     4. If you mark the **Default on Vat Viewer** checkbox, the Report ID you've selected will be the default ID in all transaction entry windows and VAT Daybook Report Options windows.
     5. If you mark the **Revision Allowed** option, you will access to resubmit the VAT Return.
@@ -48,7 +48,7 @@ _Original KB number:_ &nbsp; 3139850
     >
     > You are responsible to know which tax details to print in what column. Microsoft is unable to advise on this setup. If any questions, contact your local tax authority for any guidance.
 
-3. Calendar: Go to **Cards**, point to **Company** and select **VAT Calendar**. Select the country code, year, Date to Use (choose Document Date, Posting date or Tax date), and define the first and last day of the year and number of periods and select **Calculate**. Once you print the Audit Trail report for the period, the Return Number column will display a Return number comprised of the period, year, and report ID to indicate that the report for this period has been printed.
+3. Calendar: Go to **Cards**, point to **Company** and select **VAT Calendar**. Select the country/region code, year, Date to Use (choose Document Date, Posting date or Tax date), and define the first and last day of the year and number of periods and select **Calculate**. Once you print the Audit Trail report for the period, the Return Number column will display a Return number comprised of the period, year, and report ID to indicate that the report for this period has been printed.
 
 4. Reports: To print the VAT Report:
 
@@ -64,6 +64,6 @@ _Original KB number:_ &nbsp; 3139850
 
     5. The Dates will look to the calendar you set up.
     6. Select Transactions of sales, purchases or both to be included. (The options of Draft+Draft Return or Audit Trail will default to Both.)
-    7.  Select **Print**.
+    7. Select **Print**.
 
 You can also refer to the VAT Daybook manual for more information.

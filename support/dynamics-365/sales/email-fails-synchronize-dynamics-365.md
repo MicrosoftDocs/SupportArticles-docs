@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4490718
 
 What are PEC emails?
 
-PEC emails are certified emails that are used in some countries and they have the same legal validity as registered emails (s/mime).
+PEC emails are certified emails that are used in some countries/regions and they have the same legal validity as registered emails (s/mime).
 
 [S/MIME](/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) (Secure/Multipurpose Internet Mail Extensions) is a widely accepted method, or more precisely a protocol, for sending digitally signed and encrypted messages.
 
