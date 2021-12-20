@@ -58,7 +58,7 @@ To work around this issue, use one of the following methods.
 
 ## Workaround 1 (recommended): Remove %TEMP% entry from Folder value
 
-1. Start Registry Editor. Select **Start** > **Run**, type *regedit*, and then select **OK**.
+1. Start **Registry Editor**. Select **Start** > **Run**, type *regedit*, and then select **OK**.
 1. Locate and then select the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files`
@@ -74,7 +74,7 @@ To work around this issue, use one of the following methods.
 
      `%WINDIR%\Temp|%WINDIR%\Logs|%WINDIR%\System32\LogFiles`
 
-1. Exit Registry Editor.
+1. Exit **Registry Editor**.
 
 > [!NOTE]
 > After you make this configuration, you must manually delete the `%TEMP%` folder to avoid exhausting free space.
@@ -84,14 +84,14 @@ To work around this issue, use one of the following methods.
 > [!NOTE]
 > To follow these steps, install [April cumulative update](https://support.microsoft.com/help/4490481) first.
 
-1. Start Registry Editor. Select **Start** > **Run**, type *regedit*, and then select **OK**.
+1. Start **Registry Editor**. Select **Start** > **Run**, type *regedit*, and then select **OK**.
 1. Locate and then select the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files`
 
 1. Right-click **LastAccess**, and then select **Modify**.
 1. In the **Value data** box, type a value in days. The default value is **7**. The maximum value that can be set is the number of days from January 1, 1601 to the present.
-1. Exit Registry Editor.
+1. Exit **Registry Editor**.
 
 > [!NOTE]
 > After you make this configuration, the **LastAccess** value controls the period during which Cleanmgr.exe deletes files in all temporary folders. If the **LastAccess** value is set too high, this may exhaust free space.
