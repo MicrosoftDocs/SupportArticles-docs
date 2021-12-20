@@ -147,8 +147,6 @@ items:
     href: troubleshoot-email-profiles-in-microsoft-intune.md
   - name: Troubleshoot Wi-Fi profiles
     href: troubleshoot-wi-fi-profiles.md
-  - name: Error 403 inspecting Intune objects in Graph Explorer
-    href: 403-error-graph-explorer-query.md
   - name: Password expiration setting doesn't work
     href: password-expiration-setting-not-working.md
   - name: Windows devices
@@ -317,6 +315,8 @@ items:
     href: set-mdm-authority.md
   - name: Troubleshooting blade fails to load
     href: troubleshooting-blade-fails-loading.md
+  - name: Error 403 inspecting Intune objects in Graph Explorer
+    href: 403-error-graph-explorer-query.md
 - name: Get support
   items:
    - name: Things to try before calling Intune support
