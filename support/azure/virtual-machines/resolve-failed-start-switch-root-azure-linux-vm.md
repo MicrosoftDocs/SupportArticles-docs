@@ -3,7 +3,7 @@ title: Failed to start Switch Root error in an Azure Linux VM
 description: This article shows how to resolve the error "Failed to start Switch Root" for an Azure Linux Virtual Machine (VM).
 services: virtual-machines
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue

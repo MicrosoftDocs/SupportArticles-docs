@@ -279,9 +279,3 @@ items:
     href: before-you-call-intune-support.md
   - name: Troubleshooting blade fails to load
     href: troubleshooting-blade-fails-loading.md
-- name: Update management
-  items:
-  - name: Windows Update
-    items:
-    - name: Manage Windows 10 feature updates for co-managed devices
-      href: create-feature-update-hold-co-managed-devices.md
