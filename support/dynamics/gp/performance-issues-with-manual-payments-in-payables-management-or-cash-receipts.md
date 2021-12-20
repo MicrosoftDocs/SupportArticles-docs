@@ -69,4 +69,4 @@ Method 2: You can manually remove the Payment Document Management module from th
 
 ## More information
 
-The Payment Document Management module was created specifically for countries that use other payment methods other than cash, check or credit card, such as Spain and some other Latin American, Middle Eastern or European countries. This module will change the functionality of payment windows in Payables Management and Receivables Management. Most US installs do not use this module.
+The Payment Document Management module was created specifically for countries/regions that use other payment methods other than cash, check or credit card, such as Spain and some other Latin American, Middle Eastern or European countries/regions. This module will change the functionality of payment windows in Payables Management and Receivables Management. Most US installs do not use this module.

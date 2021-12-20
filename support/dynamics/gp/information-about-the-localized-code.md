@@ -11,7 +11,7 @@ This article outlines the localized code that is added to a Microsoft Dynamics G
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 910128
 
-When you select Australia as your country during the installation of Microsoft Dynamics GP, the following additional code pieces are included together with the standard installation functionality:
+When you select Australia as your country/region during the installation of Microsoft Dynamics GP, the following additional code pieces are included together with the standard installation functionality:
 
 - Auerr.cnk file
 
