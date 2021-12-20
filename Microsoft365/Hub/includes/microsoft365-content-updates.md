@@ -2,6 +2,16 @@
 
 
 
+## Week of December 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/17/2021 | [Support options for setting up single sign-on for Office 365](/office365/troubleshoot/active-directory/support-options-of-set-single-sign-on) | modified |
+| 12/17/2021 | [How to use Fiddler trace logs for MFA in Office 365 and Azure AD](/office365/troubleshoot/diagnostic-logs/fiddler-trace-logs-for-mfa) | modified |
+| 12/17/2021 | [How to run the Fiddler Trace after installing SaRA](/office365/troubleshoot/diagnostic-logs/run-fiddler-trace) | modified |
+
+
 ## Week of December 06, 2021
 
 

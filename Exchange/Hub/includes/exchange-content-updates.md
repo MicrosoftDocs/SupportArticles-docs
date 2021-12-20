@@ -2,6 +2,19 @@
 
 
 
+## Week of December 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/14/2021 | [Read receipt is sent from public folder mailbox](/exchange/troubleshoot/public-folders/public-folder-not-send-read-receipt) | added |
+| 12/14/2021 | [Collect ActiveSync device logs to troubleshoot sync issues for mobile devices](/exchange/troubleshoot/mobile-devices/issues-for-mobile-devices) | modified |
+| 12/15/2021 | [Read receipt is sent from public folder mailbox](/exchange/troubleshoot/public-folders/public-folder-not-send-read-receipt) | modified |
+| 12/15/2021 | [Troubleshoot ActiveSync with Exchange Server](/exchange/troubleshoot/client-connectivity/troubleshoot-activesync-with-exchange-server) | modified |
+| 12/15/2021 | [How to increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | added |
+| 12/17/2021 | [Increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | modified |
+
+
 ## Week of December 06, 2021
 
 

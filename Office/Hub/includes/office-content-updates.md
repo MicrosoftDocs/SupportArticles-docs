@@ -2,6 +2,19 @@
 
 
 
+## Week of December 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/15/2021 | [Microsoft 365 activation usage report issues](/office/troubleshoot/activation/activation-usage-report-issues) | modified |
+| 12/15/2021 | [Sorry, another account from your organization is already signed in on this computer](/office/troubleshoot/activation/another-account-already-signed-in) | modified |
+| 12/17/2021 | [To install and use this product error when you install Office 2010](/office/troubleshoot/office-suite-issues/install-and-use-this-product-error) | modified |
+| 12/17/2021 | [Office End User License Agreement always appears](/office/troubleshoot/office-suite-issues/office-end-user-license-agreement) | modified |
+| 12/17/2021 | [Incompatibilities between Adobe Acrobat PDFMaker Office COM add-in and Office programs](/office/troubleshoot/third-party-add-ins/incompatibilities-between-office-and-adobe) | modified |
+| 12/17/2021 | [Rename Excel sheet with cell contents by using Macro](/office/troubleshoot/excel/use-macro-rename-sheet) | modified |
+
+
 ## Week of December 06, 2021
 
 
