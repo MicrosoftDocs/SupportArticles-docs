@@ -12,11 +12,10 @@ This article shows what a Wi-Fi profile looks like when it successfully applies 
 
 For more information on Wi-Fi profiles in Intune, see [Add and use Wi-Fi settings on your devices](/mem/intune/configuration/wi-fi-settings-configure).
 
-## Before you begin
+> [!NOTE]
+> The examples in this article use SCEP certificate authentication for the Intune profiles. It also assumes that the Trusted Root and SCEP profiles work correctly on the device.
 
-The examples in this article use SCEP certificate authentication for the Intune profiles. It also assumes that the Trusted Root and SCEP profiles work correctly on the device.
-
-## Android
+## Troubleshoot Android Wi-Fi profiles
 
 In this section, we step through the user experience when installing configuration profiles on an Android device. This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on the device, install the Trusted Root and SCEP profiles.
 
@@ -72,7 +71,7 @@ The following log shows your search results, and shows the Wi-Fi profile success
 
 ```
 
-## iOS/iPadOS
+## Troubleshoot iOS/iPadOS Wi-Fi profiles
 
 After the Wi-Fi profile is installed on the device, it's shown in the **Management Profile**:
 
@@ -103,7 +102,7 @@ On iOS/iPadOS devices, the Company Portal app log doesn't include information ab
     Line 392346: default    11:19:59.360460 -0400    profiled    Profile \'93www.windowsintune.com.wifi.Contoso\'94 installed.\
     ```
 
-## Windows
+## Troubleshoot Windows Wi-Fi profiles
 
 After the Wi-Fi profile is installed on the device, go to **Settings** > **Accounts** > **Access work or school** > Select your account > **Info**:
 

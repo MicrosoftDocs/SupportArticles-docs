@@ -97,6 +97,10 @@ items:
     href: connector-setup-wizard-ends-prematurely.md
   - name: Sign in to Intune NDES Connector error 0x80004003
     href: ndes-connector-signin-error-80004003.md
+  - name: Intune Connector for AD doesn't appear
+    href: intune-connector-for-ad-not-appear.md
+  - name: Unexpected error signing in to Intune Connector
+    href: intune-connector-signin-unexpected-error.md
   - name: Troubleshoot PKCS certificate deployment
     href: troubleshoot-pkcs-certificate-profiles.md
   - name: SCEP certificates
@@ -121,6 +125,8 @@ items:
         href: scep-deployment-to-win10-devices-fails.md
       - name: NDES certificate not installed
         href: error-0x80090014-installing-ndes-certificate.md
+      - name: Connectivity issues due to root certificates
+        href: fix-connectivity-issues.md
     - name: SCEP functionality
       items:
       - name: SCEP certificate request fails on CRP
@@ -137,42 +143,46 @@ items:
   items:
   - name: Troubleshoot policies and profiles
     href: troubleshoot-policies-in-microsoft-intune.md
-  - name: Troubleshoot CSP custom settings
-    href: troubleshoot-csp-custom-settings.md
   - name: Troubleshoot email profile issues
     href: troubleshoot-email-profiles-in-microsoft-intune.md
   - name: Troubleshoot Wi-Fi profiles
     href: troubleshoot-wi-fi-profiles.md
-  - name: Connectivity issues due to root certificates
-    href: fix-connectivity-issues.md
-  - name: 2016341112 iOS device is currently busy
-    href: 2016341112-ios-device-is-currently-busy.md
-  - name: Device configuration profile error 2016281112
-    href: device-configuration-profile-reports-error-2016281112.md
-  - name: Device restriction policy doesn't block iOS Personal Hotspot
-    href: restriction-policy-not-blocking-personal-hotspot.md
-  - name: Enterprise Mode site list not deployed
-    href: enterprise-mode-site-list-not-deployed-win10.md
-  - name: Factory reset protection emails setting doesn't work
-    href: factory-reset-protection-emails-not-enforced.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
-  - name: No password prompt after iOS email password change
-    href: no-password-prompt-after-password-change.md
   - name: Password expiration setting doesn't work
     href: password-expiration-setting-not-working.md
-  - name: SIP address and password can't be saved
-    href: sip-address-password-not-saved.md
-  - name: Assign device password settings to Android Enterprise fully managed devices
-    href: assign-password-setting-android-fully-managed.md
-  - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
-    href: users-cannot-logon-windows-multi-app-kiosk.md
-  - name: Windows feature updates are not offered
-    href: windows-feature-updates-never-offered.md
-  - name: Restrict USB devices with administrative templates
-    href: restrict-usb-with-administrative-template.md
-  - name: Deploy OMA-URIs to target a CSP through Intune
-    href: deploy-oma-uris-to-target-csp-via-intune.md
+  - name: Windows devices
+    items:
+    - name: Troubleshoot CSP custom settings
+      href: troubleshoot-csp-custom-settings.md
+    - name: Deploy OMA-URIs to target a CSP through Intune
+      href: deploy-oma-uris-to-target-csp-via-intune.md
+    - name: Device configuration profile error 2016281112
+      href: device-configuration-profile-reports-error-2016281112.md
+    - name: Enterprise Mode site list not deployed
+      href: enterprise-mode-site-list-not-deployed-win10.md
+    - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
+      href: users-cannot-logon-windows-multi-app-kiosk.md
+    - name: Windows feature updates are not offered
+      href: windows-feature-updates-never-offered.md
+    - name: Restrict USB devices with administrative templates
+      href: restrict-usb-with-administrative-template.md
+  - name: iOS devices
+    items:
+    - name: 2016341112 iOS device is currently busy
+      href: 2016341112-ios-device-is-currently-busy.md
+    - name: Device restriction policy doesn't block iOS Personal Hotspot
+      href: restriction-policy-not-blocking-personal-hotspot.md
+    - name: No password prompt after iOS email password change
+      href: no-password-prompt-after-password-change.md
+  - name: Android devices
+    items:
+    - name: Factory reset protection emails setting doesn't work
+      href: factory-reset-protection-emails-not-enforced.md
+    - name: SIP address and password can't be saved
+      href: sip-address-password-not-saved.md
+    - name: Assign device password settings to Android Enterprise fully managed devices
+      href: assign-password-setting-android-fully-managed.md
 - name: Device enrollment
   items:
   - name: Troubleshoot device enrollment
@@ -237,10 +247,6 @@ items:
       href: azure-ad-device-registration-autopilot.md
     - name: Comparison of methods for enrolling a Windows device in Intune
       href: enroll-devices-in-intune-tip.md
-    - name: Intune Connector for AD doesn't appear
-      href: intune-connector-for-ad-not-appear.md
-    - name: Unexpected error signing in to Intune Connector
-      href: intune-connector-signin-unexpected-error.md
 - name: Device management
   items:
   - name: Troubleshoot device actions
