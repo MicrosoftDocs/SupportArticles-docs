@@ -93,7 +93,7 @@ Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm th
 
 For more information, see [Monitor device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-monitor)
 
-## Alert: Saving of Access Rules to Exchange has Failed
+## Saving of Access Rules to Exchange has Failed
 
 **Issue**: You receive the alert **Saving of Access Rules to Exchange has Failed**  in the admin console.
 
@@ -103,8 +103,6 @@ If you create policies in the Exchange On-Premises Policy workspace (Admin conso
 
 ## Can't change security policies for enrolled devices
 
-Windows Phone devices don't allow security policies set using MDM or EAS to be reduced in security once you've set them. For example, you set a **Minimum number of character password** to 8, and then try to reduce it to 4. The more restrictive policy is applied to the device.
-
 Windows 10 devices may not remove security policies when you unassign the policy (stop deployment). You may need to leave the policy assigned, and then change the security settings back to the default values.
 
 Depending on the device platform, if you want to change the policy to a less secure value, you may need to reset the security policies.
@@ -112,5 +110,3 @@ Depending on the device platform, if you want to change the policy to a less sec
 For example, in Windows 8.1, on the desktop, swipe in from right to open the **Charms** bar. Choose **Settings** > **Control Panel** > **User Accounts**. On the left, select **Reset Security Policies** link, and choose **Reset Policies**.
 
 Other platforms, such as Android, and iOS/iPadOS may need to be retired and re-enrolled to apply a less restrictive policy.
-
-[Troubleshoot device enrollment](troubleshoot-device-enrollment-in-intune.md) may be a good resource.
