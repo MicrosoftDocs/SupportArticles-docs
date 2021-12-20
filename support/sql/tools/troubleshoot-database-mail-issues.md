@@ -20,7 +20,7 @@ The basic troubleshooting steps are as follows:
 1. If you suspect that the SMTP server settings are incorrect or there is a problem with the account used to send the mail, use PowerShell to send a test mail.
 1. If you fail to send mail using PowerShell, you're most likely looking at an SMTP configuration issue and you will need to involve an SMTP administrator.
 
-## Msdb sysmail system views
+### Msdb sysmail system views
 
 Before looking at the detailed steps, here is a quick summary of the relevant Database Mail system views.
 
@@ -37,7 +37,7 @@ Before looking at the detailed steps, here is a quick summary of the relevant Da
 
 2. Some errors are logged in the Windows application event log.
 
-## Step 1: Check sysmail_event_log view
+### Step 1: Check sysmail_event_log view
 
 This system view is the starting point for troubleshooting all Database Mail issues.
 
@@ -72,7 +72,7 @@ The `event_type` column can have the following values:
 
 You can use `WHERE` clause to filter to only show the required event types.
 
-### Check the specific failed mail item
+#### Check the specific failed mail item
 
 To search for errors related to specific emails, look up the `mailitem_id` of the failed email in the `sysmail_faileditems` view, and then search the for messages related to `mailitem_id` in `sysmail_event_log`.
 
@@ -99,7 +99,7 @@ When an error is returned from `sp_send_dbmail`, the email is not submitted to t
 
 When individual account delivery attempts fail, Database Mail will hold the error messages during retry attempts until the mail item delivery succeeds or fails. If it succeeds in the end, all of the accumulated errors get logged as separate warnings, including the `account_id`. This can cause a warning even if the email was sent. If it fails in the end, all previous warnings get logged as one error message without an `account_id`, because all accounts have failed.
 
-### Issues that may be logged in sysmail_event_log
+#### Issues that may be logged in sysmail_event_log
 
 There are following kinds of issues might be logged in sysmail_event_log:
 
@@ -114,7 +114,7 @@ There are following kinds of issues might be logged in sysmail_event_log:
 
 If there are no problems with Database Mail external executable, then you can go to the sysmail system views. To search for errors related to specific emails, look up the `mailitem_id` of the failed email in the `sysmail_faileditems` view, and then search the for messages related to `mailitem_id` in `sysmail_event_log`. When an error is returned from `sp_send_dbmail`, the email is not submitted to the Database Mail system and the error is not displayed in `sysmail_event_log` view.
 
-## Step 2: Check sysmail_unsentitems, sysmail_sentitems, sysmail_faileditems views
+### Step 2: Check sysmail_unsentitems, sysmail_sentitems, sysmail_faileditems views
 
 You can check these views for problems with specific emails, check whether database mails are being sent, whether they are stuck in the queue, failing, and so on.
 
@@ -125,7 +125,7 @@ Internal tables in the msdb database contain the email messages and attachments 
 > [!NOTE]
 > If you back up the production **msdb** database and restore to another test system as a user database, you can recreate the sysmail system views in the restored backup. The view definitions in the restored backup will reference the **msdb** database on the system where you restored the backup. See the script to recreate sysmail views in customer **msdb** in [Msdb backup](#method-1-back-up-the-msdb-database) section.
 
-### Sysmail_unsentitems
+#### Sysmail_unsentitems
 
 This view contains one row for each Database Mail message with the **unsent** or **retrying** status.
 
@@ -142,7 +142,7 @@ Messages can have the **retrying** status for the following reason:
 
 Database Mail tried to send the mail, but could not contact the SMTP mail server. Database Mail will continue to try to send the message using other Database Mail accounts assigned to the profile that sent the message. If there is no account can send the mail, Database Mail will wait for the length of time configured for the `Account Retry Delay` parameter, and then attempt to send the message again. Database Mail uses the parameter to determine how many times to try to send the message. As long as Database Mail tries to send the message, messages will retain **retrying** status.
 
-### Sysmail_faileditems
+#### Sysmail_faileditems
 
 If you know that the email failed to be sent, you can query `sysmail_faileditems` directly. For more information about querying `sysmail_faileditems` and filtering for specific messages by recipient, see [Check the Status of EMail Messages Sent With Database Mail](/sql/relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail).
 
@@ -166,7 +166,7 @@ WHERE items.recipients LIKE '%JaneSmith%'
 GO  
 ```
 
-### Sysmail_sentitems
+#### Sysmail_sentitems
 
 If you want to find the time when the last email was sent successfully, you can query `sysmail_sentitems` and order by `sent_date` as follows:
 
@@ -178,19 +178,19 @@ ORDER BY ssi.sent_date DESC
 
 This script will help you understand when things were working. If there are certain types of mails that get successfully sent but others are not, this may give you an idea of what the differences may be.
 
-## Step 3: Check sysmail_mailattachments view
+### Step 3: Check sysmail_mailattachments view
 
 This view contains one row for each attachment submitted to Database Mail. Use this view when you need information about Database Mail attachments.
 
 If there are problems with sending mails with attachments, but some mails with attachments are being sent successfully, this view will be helpful to find out what the differences may be.
 
-## Step 4: Check Database Mail configuration for SMTP server
+### Step 4: Check Database Mail configuration for SMTP server
 
 Another step to help eliminate Database Mail issues is to check the Database Mail configuration for SMTP server and the account used to send Database Mail.
 
 For more information about how to configure Database Mail, see: [Configure Database Mail](/sql/relational-databases/database-mail/configure-database-mail).
 
-### Configure Database Mail
+#### Configure Database Mail
 
 To configure Database Mail, take the following steps:
 
@@ -213,7 +213,7 @@ Pay special attention to:
 
 You can use the configuration to send a test mail with PowerShell, see [Send a test email with PowerShell](#send-a-test-email-with-powershell).
 
-### Check Database Mail system parameters
+#### Check Database Mail system parameters
 
 To check the system parameters, take the following steps:
 
@@ -229,7 +229,7 @@ Following screenshot shows the default settings. Take note of any unique system 
 
 This section will guide you send a test Database Mail by using SSMS and PowerShell.
 
-### Send a test email with Database Mail
+#### Send a test email with Database Mail
 
 It is useful to send a test email to try to reproduce the issue you are experiencing or to verify whether any Database Mail can be sent.
 
@@ -241,7 +241,7 @@ After you send the test mail, check the Database Mail log and sysmail views for 
 - If the test mail isn't sent successfully, check the account configuration and compare with the SMTP server requirements at which point you may need to involve the SMTP server administrator.
 - If the test mail is sent successfully, but there are still problems with other mails not being sent, then you need to drill into the specifics of the email messages that aren't getting sent. Review the actual `sp_send_dbmail` command that is being executed. If you don't have the Transact-SQL command, you can gather an XEvent trace with `sql_batch_completed` and `sql_batch_started` commands and look at the `batch_text` column.
 
-### Send a test email with PowerShell
+#### Send a test email with PowerShell
 
 A good way to exclude Database Mail from the troubleshooting and test the account configuration is to use an external process. For example, use PowerShell to send a test mail. If you fail to send a test mail using PowerShell, then you know that it's not a Database Mail problem.
 
@@ -280,7 +280,7 @@ If the mail sends from PowerShell fails with the same SMTP server settings and c
     $SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body) 
     ```
 
-## Step 6: Check the sysmail Service Broker objects
+### Step 6: Check the sysmail Service Broker objects
 
 If there are problems with the Service Broker objects in **msdb**, this may prevent successful operation of Database Mail. A common problem is when one of the Service Broker queues (`ExternalMailQueue` and `InternalMailQueue`) is disabled. This can be due to a poison message, which is a message that cannot be successfully sent in Service Broker. An example might be malformed XML. If a message is unable to be sent after five attempts, it is considered "poison" and the queue will be disabled until the poison message is removed. Re-enable the queue will not resolve the issue as the poison message is still in the queue and the failure sequence will just repeat. For more information on poison message, see [Poison Message Handling](https://techcommunity.microsoft.com/t5/sql-server-blog/poison-message-handling/ba-p/383454).
 
