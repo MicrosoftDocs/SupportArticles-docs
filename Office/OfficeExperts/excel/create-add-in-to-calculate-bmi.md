@@ -79,7 +79,7 @@ Until this step, we have finished creating a custom function that is saved in Ex
 
 3. Also, you can display the Add-Ins dialog box by click on Developer tab then click Add-Ins.
 
-4. On the Add-Insdialog box, find the Add-In that we want installed to (in this case is BMI calculation), make sure the BMI calculation checkbox is unchecked. Then click OK.
+4. On the Add-Ins dialog box, find the Add-In that we want installed to (in this case is BMI calculation), make sure the BMI calculation checkbox is unchecked. Then click OK.
 
     :::image type="content" source="media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation.png" alt-text="Screenshot shows steps to uncheck the B M I calculation option in the Excel Options dialog box.":::
 
@@ -106,6 +106,6 @@ However, every Add-In that has installed on Excel, will always running when Exce
 
 3. Click OK and Restart your Excel.
 
-    :::image type="content" source="media/create-add-in-to-calculate-bmi/uninstall-add-in.png" alt-text="Screenshot shows steps to uninstall the Add-Ins.":::
+:::image type="content" source="media/create-add-in-to-calculate-bmi/uninstall-add-in.png" alt-text="Screenshot shows steps to uninstall the Add-Ins.":::
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../../includes/community-solution-content-disclaimer.md)]

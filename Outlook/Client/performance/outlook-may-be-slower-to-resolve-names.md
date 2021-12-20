@@ -68,7 +68,7 @@ Use the following steps to determine if you are using the online GAL for name re
 
 4. In the **Global Address List** dialog box, examine the text in **The current server is:** box (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/outlook-may-be-slower-to-resolve-names/general-tab-on-global-address-list.png" alt-text="Screenshot of the Global Address List dialog box." border="false":::
+    :::image type="content" source="media/outlook-may-be-slower-to-resolve-names/general-tab-on-global-address-list.png" alt-text="Screenshot of the Global Address List dialog box.":::
 
    - If you see a local file path, as shown in the above figure, you are downloading the `.oab` files locally.
    - If you see the name of a server, you are currently not downloading `.oab` files locally.

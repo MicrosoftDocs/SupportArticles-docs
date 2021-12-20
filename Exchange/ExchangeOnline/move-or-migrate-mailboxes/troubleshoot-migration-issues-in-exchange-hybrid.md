@@ -191,7 +191,7 @@ In order for IIS to properly respond to a migration request we need to ensure th
 5. Repeat steps 1 through 4, but this time, check the autodiscover virtual directory.
 6. If any of the values are missing, perform the remediation steps 7 and 8.
 
-   :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/handler-mapping.jpg" alt-text="the screenshot of the Handler Mappings page" border="false":::
+   :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/handler-mapping.png" alt-text="Screenshot of the Handler Mappings page under EWS.":::
 
 7. On the Exchange 2010/2013 external facing server(s), open a Command Prompt window, and then move to the following folder:  
    C:\Windows\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\
@@ -413,7 +413,7 @@ In order for IIS to properly respond to a migration request we need to ensure th
 5. Repeat steps 1 through 4, but this time, check the autodiscover virtual directory.
 6. If any of the values are missing, perform the remediation steps 7 and 8.
 
-   :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/handler-mapping.jpg" alt-text="the screenshot of the Handler Mappings page" border="false":::
+   :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/handler-mapping.png" alt-text="Screenshot of the Handler Mappings page showing the correct values.":::
 
 7. On the Exchange Server 2010 or 2013 external facing server(s), open a Command Prompt window, and then move to the following folder:  
    C:\Windows\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\
