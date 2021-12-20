@@ -47,7 +47,7 @@ Use the following steps to determine if you have a Deferred Delivery rule config
 
       Rules that delay delivery on *Send* will have *defer delivery by # minutes* in the rule description.
 
-      :::image type="content" source="./media/emails-remain-in-outbox-deferred-delivery-rule/outlook-2010-rules-and-alerts.png" alt-text="Screenshot of the Rules and Alerts dialog box." border="false":::
+      :::image type="content" source="media/emails-remain-in-outbox-deferred-delivery-rule/outlook-2010-rules-and-alerts.png" alt-text="Screenshot of the Rules and Alerts dialog box.":::
 
   3. Double-click any rule to examine the criteria specified for the rule.
   
@@ -55,7 +55,7 @@ Use the following steps to determine if you have a Deferred Delivery rule config
 
      This setting is shown enabled in the following figure.
 
-     :::image type="content" source="./media/emails-remain-in-outbox-deferred-delivery-rule/outlook-2007-rules-wizard.png" alt-text="Screenshot of the Rules Wizard dialog box. Defer delivery by a number of minutes option is enabled." border="false":::
+     :::image type="content" source="media/emails-remain-in-outbox-deferred-delivery-rule/outlook-2007-rules-wizard.png" alt-text="Screenshot of the Rules Wizard dialog box. Defer delivery by a number of minutes option is enabled." border="false":::
 
 - Outlook 2007 or earlier versions
 

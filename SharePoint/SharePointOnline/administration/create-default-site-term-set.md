@@ -39,7 +39,7 @@ If you need a local term store and don't want to activate the publishing feature
 
 1. On any site, select the **Gear icon** at the top-right corner of the window, and select **Site contents** from the drop-down menu.
 
-  :::image type="content" source="media/create-default-site-term-set/select-site-contents.png" alt-text="Screenshot shows selecting the Gear icon at the top-right corner of the window and selecting Site contents from the drop-down menu.":::
+    :::image type="content" source="media/create-default-site-term-set/select-site-contents.png" alt-text="Screenshot shows selecting the Gear icon at the top-right corner of the window and selecting Site contents from the drop-down menu.":::
   
 2. Find any list or library, and select the **ellipsis**, then select **Settings**.
 
