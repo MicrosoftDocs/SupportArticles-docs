@@ -39,7 +39,7 @@ Example: -> This DNS server `dns1.microsoft.com` is the primary for the zone `mi
 
 ## Cause
 
-This error is caused by a configuration error or is the result of a delegation of a domain (or subdomain) to a server for which there is no zone file (lame delegation).
+This error is caused by a configuration error or is the result of a delegation of a domain (or subdomain) to a server for which there is no zone file.
 
 ## Resolution
 
