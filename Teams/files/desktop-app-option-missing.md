@@ -20,19 +20,19 @@ search.appverid:
 
 # The "Desktop app" option is missing when trying to edit an Office file in Teams
 
-You can edit an Office file directly in Teams, or the file's corresponding desktop app. However, when you try to edit an Office file in its desktop app, the **Desktop app** option is missing.
+A Microsoft Office file can be edited directly in Microsoft Teams or in the file's corresponding desktop app. However, when you try to edit an Office file in its desktop app, the **Desktop app** option is missing.
 
-For example, when you select a Word document, then select **Open in**, the **Word desktop app** option is missing as shown in the following screenshot:
+For example, when you select a Word document, and then you select **Open in**, the **Word desktop app** option is missing, as shown in the following screenshot.
 
 :::image type="content" source="media/desktop-app-option-missing/no-desktop-app-option.png" alt-text="Screenshot of opening a word document without the Word desktop app option.":::
 
 The **Desktop app** option is also missing from the **File open preference** setting in Teams.
 
-:::image type="content" source="media/desktop-app-option-missing/desktop-app-in-files-setting.png" alt-text="Screenshot of the File open preference setting where Desktop app option is missing.":::
+:::image type="content" source="media/desktop-app-option-missing/desktop-app-in-files-setting.png" alt-text="Screenshot of the File open preference setting in which the desktop app option is missing.":::
 
-These options are missing most likely because at least one of the required prerequisites isn't met.
+The most likely reason that these options are missing is because at least one of three prerequisites isn't met.
 
-To fix this issue, make sure the following is true:
+To fix this issue, make sure that the following prerequisite items are true:
 
 - You're using the [Teams desktop app for Windows or Mac](https://www.microsoft.com/microsoft-teams/download-app).
 
@@ -52,7 +52,7 @@ To fix this issue, make sure the following is true:
     Write-Host $officeLicenseRoot
     ```
 
-    Make sure that the returned output contains `O365ProPlusRetail`. Below is an example:
+    Make sure that the returned output contains `O365ProPlusRetail`, as in the following example:
 
     ```output
     @{License=OneNoteFreeRetail,ProjectProRetail,VisioProRetail,O365ProPlusRetail}
