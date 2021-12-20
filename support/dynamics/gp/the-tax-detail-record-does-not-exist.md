@@ -41,7 +41,7 @@ Depending on your requirements and existing setup, here are some potential worka
 1. Rather than editing the tax distributions on the Purchase Order Processing document, edit the distributions once the transaction is in General Ledger.
 2. Set up extra tax details so that separate tax details are used per distribution account.
 3. Post documents with only the same tax detail and account. It may mean only having a single line per document.
-4. If you're using Project Accounting with the **Include Purchase Taxes in Project Cost** option marked in Project Setup, consider unmarking the option. Keep in mind this option may be required to be marked in certain industries and/or countries. A few extra considerations before unmarking are as follows:
+4. If you're using Project Accounting with the **Include Purchase Taxes in Project Cost** option marked in Project Setup, consider unmarking the option. Keep in mind this option may be required to be marked in certain industries and/or countries/regions. A few extra considerations before unmarking are as follows:
     1. The option changes how the total cost on the project is updated and how the cost is recognized on the project.
     1. Depending on the project type and accounting method, it may also have an impact on revenue recognition.
     1. The option may change the account that the tax amount will use to be either the Work In Progress or Cost of Goods Sold.
