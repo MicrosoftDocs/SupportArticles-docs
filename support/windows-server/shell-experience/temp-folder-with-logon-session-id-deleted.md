@@ -1,7 +1,7 @@
 ---
 title: The %TEMP% folder with logon session ID is deleted
-description: Discusses an issue in which the %TEMP% folder that includes the logon session ID is deleted in Windows Server 2019 Desktop Experience.
-ms.date: 09/08/2020
+description: Discusses an issue in which the %TEMP% folder that includes the logon session ID is deleted in Windows Server that has Desktop Experience installed.
+ms.date: 12/20/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
-# %TEMP% folder that includes the logon session ID is deleted unexpectedly in Windows Server 2019
+# %TEMP% folder that includes the logon session ID is deleted unexpectedly
 
-This article provides workarounds for an issue where the `%TEMP%` folder that includes the logon session ID is deleted in Windows Server 2019 Desktop Experience.
+This article provides workarounds for an issue where the `%TEMP%` folder that includes the logon session ID is deleted in Windows Server with Desktop Experience installed.
 
-_Applies to:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019  
 _Original KB number:_ &nbsp; 4506040
 
 ## Symptoms
 
-In Windows Server 2019 that has Desktop Experience installed, the `%TEMP%` folder that includes the session ID is deleted if you remain logged on to the computer for more than seven days. Therefore, some applications that have to access `%TEMP%` don't work correctly after that time.
+In Windows Server that has Desktop Experience installed, the `%TEMP%` folder that includes the session ID is deleted if you remain logged on to the computer for more than seven days. Therefore, some applications that have to access `%TEMP%` don't work correctly after that time.
 
 To determine the `%TEMP%` folder path and verify that the folder was deleted, run the following commands. Example output is shown.
 
@@ -90,7 +90,7 @@ To work around this issue, use one of the following methods.
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files`
 
 1. Right-click **LastAccess**, and then select **Modify**.
-1. In the **Value data** box, type a value in days. The range is **7** (default) through **4294967295** (maximum).
+1. In the **Value data** box, type a value in days. The default value is **7**. The maximum value that can be set is the number of days from January 1, 1601 to the present.
 1. Exit Registry Editor.
 
 > [!NOTE]
