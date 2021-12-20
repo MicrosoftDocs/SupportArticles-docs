@@ -30,7 +30,7 @@ The **Desktop app** option is also missing from the **File open preference** set
 
 :::image type="content" source="media/desktop-app-option-missing/desktop-app-in-files-setting.png" alt-text="Screenshot of the File open preference setting where Desktop app option is missing.":::
 
-The **Desktop app** option is missing most likely because at least one of the following required prerequisites isn't met.
+These options are missing most likely because at least one of the following required prerequisites isn't met.
 
 - Make sure that you're using the [Teams desktop app for Windows or Mac](https://www.microsoft.com/microsoft-teams/download-app).
 
