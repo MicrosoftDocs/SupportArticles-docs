@@ -32,7 +32,7 @@ This issue can occur if all the following conditions are true:
 
 ## Resolution
 
-To work around this issue, set the time zone on the Exchange Server to a region that matches the Coordinated Universal Time (UTC) zone of the country where the server is located. Make sure that the UTC zone for that country does not follow DST.
+To work around this issue, set the time zone on the Exchange Server to a region that matches the Coordinated Universal Time (UTC) zone of the /region where the server is located. Make sure that the UTC zone for that country/region doesn't follow DST.
 
 **[Set Regional Settings in Outlook on the web](/previous-versions/exchange-server/exchangeserver-149/dd188698(v=exchsrvcs.149))**
 

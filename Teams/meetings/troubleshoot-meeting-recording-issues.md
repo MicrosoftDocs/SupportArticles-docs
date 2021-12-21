@@ -50,7 +50,7 @@ Select the **Run Tests** link. This will populate the diagnostic in the Microsof
 
 :::image type="content" source="media/troubleshoot-meeting-recording-issues/diagnostic.png" alt-text="Screenshot of starting the Meeting Recording Support Diagnostic from Need help panel.":::
 
-If the diagnostic reports that your organization is configured for Microsoft Stream storage, but you're in a region or country that isn't supported yet by Stream, use one of the following options:
+If the diagnostic reports that your organization is configured for Microsoft Stream storage, but you're in a country/region that isn't supported yet by Stream, use one of the following options:
 
 - Replace the Stream storage with OneDrive for Business or SharePoint. For more information, see [Use OneDrive for Business and SharePoint or Stream for meeting recordings](/microsoftteams/tmr-meeting-recording-change).
 - Set the meeting policy to save recordings outside the local region by using the `-AllowRecordingStorageOutsideRegion` attribute in the [Set-CsTeamsMeetingPolicy](/powershell/module/skype/set-csteamsmeetingpolicy) cmdlet.

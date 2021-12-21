@@ -95,7 +95,7 @@ Create your own custom holiday set to replace the Holidays that you deleted in s
 5. Press Ctrl+End to position the cursor at the end of the file.
 6. Type a new header and custom events by using the format described here.
 
-    [Country or Description] **###**  
+    [Country/Region or Description] **###**  
     Holiday or event description, yyyy/mm/dd  
     Holiday or event description, yyyy/mm/dd
 
