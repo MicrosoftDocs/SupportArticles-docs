@@ -21,7 +21,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: App management overview
-            url: app-management.md
+            url: app-management.yml
           - text: App installation error reference
             url: app-install-error-codes.md
  # Card
