@@ -27,7 +27,7 @@ When you try to copy, move, or import many items to a public folder in Microsoft
 - > Can't move the items. The item could not be moved. The items may have been already moved or deleted.
 - > Your server administrator has limited the number of items you can open simultaneously. Try closing messages you have opened or removing attachments and images from unsent messages you are composing.
 
-For example, you have a file (such as a .pst or .csv file) that has more than 1000 items. The operation to import the file to a public folder fails in Outlook.
+For example, you have a file (such as a .pst or .csv file) that has more than 1,000 items. The operation to import the file to a public folder fails in Outlook.
 
 If you use a diagnostic tool such as [Fiddler](/office365/troubleshoot/diagnostic-logs/run-fiddler-trace) to collect diagnostic logs, the following exceptions are recorded:
 
