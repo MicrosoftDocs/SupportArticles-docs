@@ -58,7 +58,7 @@ To help resolve these issues, you must perform all the following steps within fi
 
 ### Step 4: Additional precautionary steps
 
-1. Make sure that you verify your sent items. You may have to inform people on your contacts list that your account was compromised. The attacker may have asked them for money, spoofing, for example, that you were stranded in a different country and needed money, or the attacker may send them a virus to also hijack their computers.
+1. Make sure that you verify your sent items. You may have to inform people on your contacts list that your account was compromised. The attacker may have asked them for money, spoofing, for example, that you were stranded in a different country/region and needed money, or the attacker may send them a virus to also hijack their computers.
 1. Any other service that used this Exchange account as its alternative email account may have been compromised. First, perform these steps for your Office 365 subscription, and then perform these steps for your other accounts.
 
 ## More information

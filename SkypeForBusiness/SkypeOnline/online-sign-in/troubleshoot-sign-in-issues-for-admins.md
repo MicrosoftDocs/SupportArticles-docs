@@ -292,7 +292,7 @@ Check for blocked ports or URLs:
     1. Amsterdam, NL: `http://trippams.online.lync.com`
     1. Blue Ridge, VA: `http://trippbl2.online.lync.com`
     1. Dublin, IE: `http://trippdb3.online.lync.com`
-    1. Hong Kong: `http://tripphkn.online.lync.com`
+    1. Hong Kong Special Administrative Region: `http://tripphkn.online.lync.com`
     1. San Antonio, TX: `http://trippsn2.online.lync.com`
     1. Singapore: `http://trippsg1.online.lync.com`
 1. Click **Start Test**.

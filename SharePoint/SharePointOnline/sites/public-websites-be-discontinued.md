@@ -114,7 +114,7 @@ All migration of content and data is a manual process and must be completed by t
 
 No. Content and documentation about these new offerings will be owned and managed by the third-party solution providers.
 
-### Which countries and languages are available?
+### Which countries/regions and languages are available?
 
 Most of the Office 365 customer base and underlying markets are supported.
 
