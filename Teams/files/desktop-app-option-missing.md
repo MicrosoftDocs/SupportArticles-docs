@@ -20,7 +20,7 @@ search.appverid:
 
 # The "Desktop app" option is missing when trying to edit an Office file in Teams
 
-A Microsoft Office file can be edited directly in Microsoft Teams or in the file's corresponding desktop app. However, when you try to edit an Office file in its desktop app, the **Desktop app** option is missing.
+A Microsoft Office file can be edited directly in Microsoft Teams or in the file's corresponding desktop app. However, when you try to edit an Office file in its desktop app, the **\<Office application name\> desktop app** option is missing.
 
 For example, when you select a Word document, and then you select **Open in**, the **Word desktop app** option is missing, as shown in the following screenshot.
 
