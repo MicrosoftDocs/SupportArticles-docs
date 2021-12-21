@@ -263,10 +263,6 @@ items:
     href: cannot-sync-windows-10-devices.md
 - name: Device protection
   items:
-  - name: BitLocker-encrypted device displays as Not compliant
-    href: bitlocker-encrypted-device-not-compliant.md
-  - name: Can't access company resources on DEP devices
-    href: cannot-access-company-resources-on-dep.md
   - name: Conditional Access
     items:
     - name: Troubleshoot Conditional Access
@@ -283,21 +279,25 @@ items:
       href: troubleshoot-jamf.md
     - name: Unable to connect Jamf console to Intune
       href: unable-to-connect-send-inventory-information.md
-  - name: Error -2016281112 deploying a password policy
-    href: error-deploying-password-policy.md
-  - name: Secure boot enabled device shows as Not Compliant
-    href: secure-boot-enabled-device-shows-not-compliant.md
   - name: Troubleshoot encryption on client side
     href: troubleshoot-bitlocker-policies.md
   - name: Troubleshoot encryption in Intune
     href: troubleshoot-bitlocker-admin-center.md
-  - name: Users are prompted to enroll when accessing Office 365 resources
-    href: intune-licensed-users-prompted-to-enroll.md
+  - name: BitLocker-encrypted device shows as Not compliant
+    href: bitlocker-encrypted-device-not-compliant.md
+  - name: Secure boot enabled device shows as Not Compliant
+    href: secure-boot-enabled-device-shows-not-compliant.md
   - name: Windows 10 devices show incorrect compliance status
     href: win10-devices-show-incorrect-compliance-status.md
+  - name: Can't access company resources on ADE devices
+    href: cannot-access-company-resources-on-dep.md
+  - name: Error 2016281112 deploying a password policy
+    href: error-deploying-password-policy.md
+  - name: Users are prompted to enroll when accessing Microsoft 365 resources
+    href: intune-licensed-users-prompted-to-enroll.md
 - name: General guidance
   items:
-  - name: Attributes synced by Intune
+  - name: Attributes synced from AD DS to Intune
     href: intune-synced-attributes-list.md
   - name: Common company resource access error codes
     href: troubleshoot-company-resource-access-problems.md
