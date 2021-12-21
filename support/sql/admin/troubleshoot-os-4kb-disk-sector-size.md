@@ -87,9 +87,40 @@ Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A va
 
 ## Resolution
 
-Microsoft is currently investigating this problem. Consider the following resolutions: 
+Microsoft is currently investigating this problem. Consider _one_ the following resolutions: 
 
 - If you have multiple drives on this system, you can specify a different location for the database files upon installation of SQL Server. Make sure that drive reflects a supported sector size when querying the `fsutil` command. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes. 
+
+- You can add a registry key which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force teh sector size to be emulated as 4 KB in size. To add the registry key, you can run one of the following commands in Admin mode (Command prompt or PowerShell):
+
+  **Command Prompt:**
+  
+  - Add the key
+
+  ```console
+  REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t reg_multi_sz /d "* 4095" /f
+  ```
+  
+
+  - Validate the key was added successfully
+  
+  ```console
+  REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes"
+  ```
+
+  **PowerShell:**
+  
+  - Add the key
+  ```Powershell
+  New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString -Force -Value "* 4095"
+  ```
+  
+  - Validate the key was added successfully
+  
+  ```Powershell
+  Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name "ForcedPhysicalSectorSizeInBytes"
+  ```
+
 
 - You can start SQL Server by specifying the trace flag 1800. For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800). This trace flag is not enabled by default. Trace flag 1800 forces SQL Server to use 4 KB as the sector size for all read and writes. When you are running SQL Server on disks with physical sector size greater than 4 KB, using the trace flag 1800 will simulate a native 4 KB drive which is the supported sector size for SQL Server.
 
