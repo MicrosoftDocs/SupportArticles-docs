@@ -13,16 +13,12 @@ This article helps you resolve the problem when an application using its own mes
 
 _Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1, Windows 10, version 21H2
 
-_Original KB number:_ &nbsp; 
+_Original KB number:_ &nbsp;
 
 ## Symptoms
 
-Consider the following scenario:
-
-1. You run an application on Windows 10 version 2004, version 20H2, version 21H1, or version 21H2.
-1. Your application is using message filters.
-
-In this scenario, your application may become unresponsive.
+Consider the scenario where you run an application on Windows 10 version 2004, 20H2, 21H1, or 21H2, and your application is using message filters.
+In this scenario, the application may become unresponsive.
 
 > [!NOTE]
 > Windows 11 has not observed this problem.
@@ -32,15 +28,14 @@ In this scenario, your application may become unresponsive.
 Windows 10 20H1/20H2/21H1/21H2 adds Windows messages used by the text input systems or Text Services Framework (TSF).
 
 > [!NOTE]
-> Windows 10, version 2004 introduced the new version of TSF.
+> Windows 10 version 2004 introduced the new version of TSF.
 
-If the PeekMessage API or GetMessage API has removed the Windows messages used by the TSF and Windows can't receive the messages to process the TSF, the application that uses message filters may stop responding.
+If the `PeekMessage` API or `GetMessage` API has removed the Windows messages used by the TSF and Windows can't receive the messages to process the TSF, the application that uses message filters may stop responding.
 
 This problem may occur if you run commands similar to the following example, which dispatch `WM_LBUTTONUP` messages only and remove other messages.
 
 ```powershell
 ----
-
 while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 {
 ::TranslateMessage(&msg);
@@ -55,7 +50,7 @@ if (msg.message == WM_LBUTTONUP) {
 
 ## Workaround 1
 
-Run the following command to process the required messages only and to dispatch other messages through the DispatchMessage API:
+Run the following commands to only process the required messages and to dispatch other messages through the `DispatchMessage` API:
 
 ```powershell
 -----
@@ -76,7 +71,7 @@ else {
 
 ## Workaround 2
 
-Enable the previous version of the Microsoft IME by turning on the **Use previous version of \<Microsoft IME\>** toggle for your language in the **Language settings**, if you're using the new Microsoft IME in Windows 10 that may not be compatible.
+Enable the previous version of the Microsoft IME by turning on the **Use previous version of \<Microsoft IME\>** toggle for your language in the **Language settings**, if you're using the new Microsoft IME in Windows 10.
 
 > [!NOTE]
 > We recommend that you use the IME compatibility setting as a temporary workaround.
