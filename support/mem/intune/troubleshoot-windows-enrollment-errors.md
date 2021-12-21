@@ -1,12 +1,12 @@
 ---
 title: Troubleshooting Windows device enrollment problems in Microsoft Intune
-description: Suggestions for troubleshooting some of the most common problems when you enroll Windows devices in Intune.
+description: Suggestions for troubleshooting some of the most common error messages when you enroll Windows devices in Intune.
 ms.date: 10/01/2021
 ms.reviewer: mghadial
 ---
-# Troubleshoot Windows device enrollment error messages in Microsoft Intune
+# Troubleshooting Windows device enrollment errors in Intune
 
-This article helps Intune administrators understand and troubleshoot error messages when enrolling Windows devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
+This article helps Intune administrators understand and troubleshoot error messages when enrolling Windows devices in Microsoft Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
 
 ## Error hr 0x8007064c: The machine is already enrolled
 
