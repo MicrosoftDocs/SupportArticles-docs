@@ -679,10 +679,12 @@
           href: ../infopath/infopath-2013-crashes-when-connecting-to-access-database.md
     - name: Installation
       items:
-        - name: Error starting Microsoft Office third-party .NET add-in
-          href: ../installation/access-denied-error-when-starting-third-party-apps.md
         - name: Error 1935 when install Office 2010
           href: ../installation/error-1935-when-install-office-2010.md
+        - name: Error code 30010-45 or 30088-26 installing Microsoft 365 Apps
+          href: ../installation/error-code-30010-45-or-30088-26.md
+        - name: Error starting Microsoft Office third-party .NET add-in
+          href: ../installation/access-denied-error-when-starting-third-party-apps.md
         - name: Error when you install an Office program
           href: ../installation/error-run-office-setup-program.md
         - name: How to download and run Office LTSC installation files not in VLSC
