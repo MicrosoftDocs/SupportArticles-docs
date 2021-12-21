@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4 KB sector size.
-ms.date: 12/17/2021
+ms.date: 12/21/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth 
 ms.prod: sql
@@ -85,51 +85,62 @@ fsutil fsinfo sectorinfo E:
 
 Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A value of 4096 indicates a sector storage size of 4 KB.
 
+Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see [Microsoft support policy for 4 KB sector hard drives in Windows](../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md).
+
+> [!NOTE]
+> There is no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046).
+
 ## Resolution
 
-Microsoft is currently investigating this problem. Consider _one_ the following resolutions: 
+Microsoft is currently investigating this problem. 
 
-- If you have multiple drives on this system, you can specify a different location for the database files upon installation of SQL Server. Make sure that drive reflects a supported sector size when querying the `fsutil` command. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes. 
+Consider _one_ the following resolutions: 
 
-- You can add a registry key which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB in size. To add the registry key, you can run one of the following commands in Admin mode (Command prompt or PowerShell):
-
-  **Command Prompt:**
-  
-  - Add the key
-
-  ```console
-  REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t REG_MULTI_SZ /d "* 4095" /f
-  ```
-  
-
-  - Validate the key was added successfully
-  
-  ```console
-  REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes"
-  ```
-
-  **PowerShell:**
-  
-  - Add the key
-  ```Powershell
-  New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString -Force -Value "* 4095"
-  ```
-  
-  - Validate the key was added successfully
-  
-  ```Powershell
-  Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name "ForcedPhysicalSectorSizeInBytes"
-  ```
-
+- If you have multiple drives on this system, you can specify a different location for the database files upon installation of SQL Server. Make sure that drive reflects a supported sector size when querying the above `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes. 
 
 - You can start SQL Server by specifying the trace flag 1800. For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800). This trace flag is not enabled by default. Trace flag 1800 forces SQL Server to use 4 KB as the sector size for all read and writes. When you are running SQL Server on disks with physical sector size greater than 4 KB, using the trace flag 1800 will simulate a native 4 KB drive which is the supported sector size for SQL Server.
 
 - Install SQL Server on available Windows 10 devices instead.
 
-- Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see [Microsoft support policy for 4 KB sector hard drives in Windows](../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md).
-
-> [!NOTE]
-> There is no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046).
+- You can add a registry key which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB in size. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the Registry Editor, or you can run one of the following commands in Windows command prompt or PowerShell, executed as an administrator. 
+  
+  > [!IMPORTANT]
+  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur   if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added   protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more   information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry).
+  
+    **Registry Editor**
+  
+    1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
+    1. On the Edit menu, point to New, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
+    1. Modify the new value, type in `4095`. Click **OK** and close the Registry Editor.
+  
+    **Command Prompt as Administrator**
+    
+    1. Add the key
+  
+    ```console
+    REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t   REG_MULTI_SZ /d "* 4095" /f
+    ```
+    
+    2. Validate the key was added successfully
+    
+    ```console
+    REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes"
+    ```
+  
+    **PowerShell as Administrator**
+    
+    1. Add the key
+    
+    ```Powershell
+    New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString -Force -Value "* 4095"
+    ```
+    
+    2. Validate the key was added successfully
+    
+    ```Powershell
+    Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes"
+    ```
+  
 
 ## More information
 
