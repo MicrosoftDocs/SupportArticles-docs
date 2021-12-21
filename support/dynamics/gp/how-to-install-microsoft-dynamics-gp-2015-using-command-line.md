@@ -117,7 +117,7 @@ Example: INSTALLDIR = "C:\Program Files\Microsoft Dynamics\GP"
 Required: Yes  
 Default Value: \<None>  
 Description: Indicates to the install the Country/Region the installation is for  
-Accepted Values: {UI Country/Region List} (Case sensitive) Andean, Argentina, Australia, Austria, Belgium, Canada, Chile, China, France, Germany, Hong Kong, Indonesia, Japan, Latin America, Luxembourg, Malaysia, Middle East, Netherlands, New Zealand, Philippines, Singapore, South Africa, Spain, Taiwan, Thailand, United Kingdom & Ireland or United States  
+Accepted Values: {UI Country/Region List} (Case sensitive) Andean, Argentina, Australia, Austria, Belgium, Canada, Chile, China, France, Germany, Hong Kong SAR, Indonesia, Japan, Latin America, Luxembourg, Malaysia, Middle East, Netherlands, New Zealand, Philippines, Singapore, South Africa, Spain, Taiwan, Thailand, United Kingdom & Ireland or United States  
 Validation: Failure if value specified is not an acceptable value
 
 Example: SELECTED_COUNTRY="United States"
