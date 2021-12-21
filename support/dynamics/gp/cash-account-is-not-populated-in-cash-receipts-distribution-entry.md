@@ -55,7 +55,7 @@ To populate the Customer Account Maintenance window, follow these steps:
 
 ### Resolution 2
 
-Payment Document Management is used in several Latin America and European countries. This functionality lets you enter sales and purchasing transactions by using payment methods other than the following methods:
+Payment Document Management is used in several Latin America and European countries/regions. This functionality lets you enter sales and purchasing transactions by using payment methods other than the following methods:
 
 - Cash
 - Check
