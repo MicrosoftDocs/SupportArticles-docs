@@ -155,7 +155,7 @@ Each rule consists of the following:
 - Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation that provide more information on the finding and/or recommendation.
 - Impact Level: Represents the potential for having an impact on performance.
 
-The following cateogries of rules are currently supported:
+The following categories of rules are currently supported:
 
 - High resource usage:
 
