@@ -109,7 +109,7 @@
   items:
   - name: Associate a custom domain with Azure websites
     href: associate-custom-domain-secure-communication.md
-  - name: Azure dependency availability by country
+  - name: Azure dependency availability by country/region
     href: dependency-availability-by-country.md
   - name: Azure region access request process
     href: region-access-request-process.md
