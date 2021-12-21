@@ -10,7 +10,7 @@ tags: top-support-issue,azure-resource-manager,azure-service-management
 
 ms.service: virtual-machines 
 ms.topic: troubleshooting
-ms.date: 11/06/2020
+ms.date: 12/16/2021
 ms.author: daberry
 
 ---
