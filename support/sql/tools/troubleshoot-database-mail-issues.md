@@ -9,28 +9,28 @@ ms.prod: sql
 ---
 # Troubleshoot Database Mail issues
 
-This article provides a methodology on troubleshooting Database Mail issues. If the [initial troubleshooting](#initial-database-mail-troubleshooting) has not resolved your issue, you can use the [advanced troubleshooting](#advanced-database-mail-troubleshooting).
+This article provides methods of troubleshooting Database Mail issues. If the [initial troubleshooting](#initial-database-mail-troubleshooting) has not resolved your issue, you can use the [advanced troubleshooting](#advanced-database-mail-troubleshooting).
 
 ## Initial Database Mail troubleshooting
 
-The basic troubleshooting steps are as follows:
+Here are basic troubleshooting steps:
 
-1. Review the Database Mail log and sysmail (`sysmail_event_log`) views for mails that have already been sent or attempted to send with *DatabaseMail.exe*.
-1. Next, send a test mail and observe the behavior. If test mail is successfully sent, then focus on the specifics of the messages that aren't getting sent. If test mail isn't getting sent, focus on troubleshooting the test mail and ignore the mails unsuccessfully sent before. Check sysmail items views or problems with specific emails, check if database mails are being sent, stuck in the queue, are failing, and so on.
-1. If you suspect that the SMTP server settings are incorrect or there is a problem with the account used to send the mail, use PowerShell to send a test mail.
-1. If you fail to send mail using PowerShell, you're most likely looking at an SMTP configuration issue and you will need to involve an SMTP administrator.
+1. Review the Database Mail log and sysmail (`sysmail_event_log`) views for mails that have already been sent or attempted to send by using *DatabaseMail.exe*.
+1. Send a test mail. If the test mail is successfully sent, then focus on the specifics of the messages that aren't sent. If the test mail isn't sent, focus on troubleshooting the test mail and ignore the mails that're unsuccessfully sent before.
+1. If you suspect that the SMTP server settings are incorrect or there is a problem with the account that's used to send the mail, use PowerShell to send a test mail.
+1. If you fail to send the mail by using PowerShell, it's likely to be an SMTP configuration issue and you will need to involve an SMTP administrator.
 
-You can use following steps for initial Database Mail troubleshooting.
+You can use the following steps for initial Database Mail troubleshooting.
 
 ### Msdb sysmail system views
 
-Before looking at the detailed steps, here is a quick summary of the relevant Database Mail system views.
+Before looking at detailed steps, here is a quick summary of the relevant Database Mail system views.
 
 1. Most relevant logging occurs in the **msdb** sysmail system view. You can query these directly in your environment.
 
     |Name  |Type  |Description  |
     |---------|---------|---------|
-    |[sysmail_allitems](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql) |View|Lists all messages submitted to Database Mail.|
+    |[sysmail_allitems](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql) |View|Lists all messages that are submitted to Database Mail.|
     |[sysmail_event_log](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql) |View|Lists messages about the behavior of the [Database Mail external program](/sql/relational-databases/database-mail/database-mail-external-program).|
     |[sysmail_faileditems](/sql/relational-databases/system-catalog-views/sysmail-faileditems-transact-sql) |View|    Information about messages that Database Mail could not send.|
     |[sysmail_mailattachments](/sql/relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql) |View    |Information about attachments to Database Mail messages.|
@@ -43,9 +43,9 @@ Before looking at the detailed steps, here is a quick summary of the relevant Da
 
 This system view is the starting point for troubleshooting all Database Mail issues.
 
-When troubleshooting Database Mail, search the `sysmail_event_log` view for events related to email failures. Some messages (such as the failure of the Database Mail external program) are not associated with specific emails.
+When troubleshooting Database Mail, search the `sysmail_event_log` view for events that're related to email failures. Some messages (such as the failure of the Database Mail external program) are not associated with specific emails.
 
-`Sysmail_event_log` contains one row for each Windows or SQL Server message returned by the Database Mail system. In SQL Server Management Studio (SSMS), right-click on **Management** > **Database Mail**, and select **View Database Mail Log** to check the Database Mail Log. The operation is shown as following image:
+`Sysmail_event_log` contains one row for each Windows or SQL Server message that's returned by the Database Mail system. In SQL Server Management Studio (SSMS), right-click **Management** > **Database Mail**, and select **View Database Mail Log** to check the Database Mail log as follows:
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-view-log.png" alt-text="Screenshot of the View Database Mail log item in Database Mail menu.":::
 
@@ -72,11 +72,11 @@ The `event_type` column can have the following values:
 - Information
 - Success
 
-You can use `WHERE` clause to filter to only show the required event types.
+To show only the required event types,you can use the `WHERE` clause to filter.
 
 ### Check the specific failed mail item
 
-To search for errors related to specific emails, look up the `mailitem_id` of the failed email in the `sysmail_faileditems` view, and then search the for messages related to `mailitem_id` in `sysmail_event_log`.
+To search for errors that're related to specific emails, look up the `mailitem_id` of the failed email in the `sysmail_faileditems` view, and then search for messages that're related to `mailitem_id` in `sysmail_event_log`.
 
 ```sql
 SELECT er.log_id AS [LogID], 
@@ -97,13 +97,13 @@ ON er.mailitem_id = fi.mailitem_id
 ORDER BY [LogDate] DESC
 ```
 
-When an error is returned from `sp_send_dbmail`, the email is not submitted to the Database Mail system and the error is not displayed in `sysmail_event_log` view. You should gather statement-level profiler trace and observe what error is encountered, then troubleshoot accordingly. 
+When an error is returned from `sp_send_dbmail`, the email is not submitted to the Database Mail system and the error is not displayed in the `sysmail_event_log` view. You should gather statement-level profiler trace and troubleshoot the error that you encounter. 
 
-When individual account delivery attempts fail, Database Mail will hold the error messages during retry attempts until the mail item delivery succeeds or fails. If it succeeds in the end, all of the accumulated errors get logged as separate warnings, including the `account_id`. This can cause a warning even if the email was sent. If it fails in the end, all previous warnings get logged as one error message without an `account_id`, because all accounts have failed.
+When individual account delivery attempts fail, Database Mail will hold the error messages during retry attempts until the mail item delivery succeeds or fails. If the delivery succeeds in the end, all accumulated errors get logged as separate warnings, including `account_id`. This can cause a warning even if the email was sent. If the delivery fails in the end, all previous warnings get logged as one error message without an `account_id`, because all accounts have failed.
 
 ### Issues that may be logged in sysmail_event_log
 
-There are following kinds of issues might be logged in sysmail_event_log:
+The following issues might be logged in sysmail_event_log:
 
 - Failure of *DatabaseMail.exe* to connect to SQL Server.
 
@@ -112,9 +112,9 @@ There are following kinds of issues might be logged in sysmail_event_log:
   - Failure to contact the SMTP server.
   - Failure to authenticate with the SMTP server.
   - SMTP server refuses the email message.
-- Exceptions in *DatabaseMail.exe*
+- Exceptions in *DatabaseMail.exe*.
 
-If there are no problems with Database Mail external executable, then you can go to the sysmail system views. To search for errors related to specific emails, look up the `mailitem_id` of the failed email in the `sysmail_faileditems` view, and then search the for messages related to `mailitem_id` in `sysmail_event_log`. When an error is returned from `sp_send_dbmail`, the email is not submitted to the Database Mail system and the error is not displayed in `sysmail_event_log` view.
+If there are no problems with Database Mail external executable, go to the sysmail system views. To search for errors that're related to specific emails, look up the `mailitem_id` of the failed email in the `sysmail_faileditems` view, and then search for messages that're related to `mailitem_id` in `sysmail_event_log`. When an error is returned from `sp_send_dbmail`, the email is not submitted to the Database Mail system and the error is not displayed in the `sysmail_event_log` view.
 
 ## Step 2: Check sysmail_unsentitems, sysmail_sentitems, sysmail_faileditems views
 
