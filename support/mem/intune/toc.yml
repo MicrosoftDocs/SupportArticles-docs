@@ -313,7 +313,7 @@ items:
     href: script-error-intune-setup.md  
   - name: Set the MDM authority
     href: set-mdm-authority.md
-  - name: Troubleshooting blade fails to load
+  - name: Troubleshoot pane fails to load
     href: troubleshooting-blade-fails-loading.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
