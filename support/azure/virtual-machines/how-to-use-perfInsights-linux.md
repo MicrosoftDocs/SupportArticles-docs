@@ -258,13 +258,13 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py -r quick -d 1M -a -o /tmp/output
     ```
 
-    You can use the below example to run performance analysis scenario for 5 mins and upload the result tar ball to the storage account:
+    You can use the below example to run performance analysis scenario for 5 mins and upload the result (stores in a TAR file) to the storage account:
 
     ```bash
     sudo python perfinsights.py -r vmslow -d 300S -a -t <StorageAccountName> -k <StorageAccountKey> -i <full resource Uri of the current VM>
     ```
 
-    You can use the below example to run the HPC performance analysis scenario for 1 mins and upload the result tar ball to the storage account:
+    You can use the below example to run the HPC performance analysis scenario for 1 mins and upload the result TAR file to the storage account:
 
     ```bash
     sudo python perfinsights.py -r hpc -d 60S -a -t <StorageAccountName> -k <StorageAccountKey> -i <full resource Uri of the current VM>
