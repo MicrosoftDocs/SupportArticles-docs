@@ -156,10 +156,10 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
     displayName:\<CN_Name\>;  
     st:Colorado;  
     dSCorePropagationData:16010101000000.0Z;  
-    userPrincipalName:Dick@root.contoso.com;  
-    givenName:Dick;  
+    userPrincipalName:\<User_Name\>@root.contoso.com;  
+    givenName:\<User_Name\>;  
     instanceType:0;  
-    sAMAccountName:Dick;  
+    sAMAccountName:\<Account_Name\>;  
     userAccountControl:650;  
     objectGUID:aa76b30b-821c-48a3-997e-5187ff012f4a;  
     value is   :<GUID=70ff33ce-2f41-4bf4-b7ca-7fa71d4ca13e>:<GUID=aa76b30b-821c-48a3-997e-5187ff012f4a>
