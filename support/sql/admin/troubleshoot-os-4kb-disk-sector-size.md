@@ -91,7 +91,7 @@ Microsoft is currently investigating this problem. Consider _one_ the following 
 
 - If you have multiple drives on this system, you can specify a different location for the database files upon installation of SQL Server. Make sure that drive reflects a supported sector size when querying the `fsutil` command. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes. 
 
-- You can add a registry key which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force teh sector size to be emulated as 4 KB in size. To add the registry key, you can run one of the following commands in Admin mode (Command prompt or PowerShell):
+- You can add a registry key which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB in size. To add the registry key, you can run one of the following commands in Admin mode (Command prompt or PowerShell):
 
   **Command Prompt:**
   
