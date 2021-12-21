@@ -62,7 +62,7 @@ Make sure that the new certificate is sent from on-premises Exchange to Exchange
 
 1. In the send connector log, you can check for the thumbprint of the certificate that is given to Exchange Online. The following is a code example from send connector logs.
 
-    ```asciidoc
+    ```output
     Date/Time,Outbound to office 365,SessionID,SequenceNumber,LocalEndpoint,RemoteEndpoint,<,220 2.0.0 SMTP server ready, Date/Time,Outbound to office 365,SessionID,SequenceNumber,LocalEndpoint,RemoteEndpoint,*,,Sending certificate Date/Time,Outbound to office 365,SessionID,SequenceNumber,LocalEndpoint,RemoteEndpoint,*,CN=*.contoso.com,Certificate subject Date/Time,Outbound to office 365,SessionID,SequenceNumber,LocalEndpoint,RemoteEndpoint,*,"CN=CommonName, OU= OrganizationalUnit, O=OrganizationName, L=Location, S=State, C=Country",Certificate issuer name Date/Time,Outbound to office 365,SessionID,SequenceNumber,LocalEndpoint,RemoteEndpoint,*,CertificateSerialNumber,Certificate serial number Date/Time,Outbound to office 365,SessionID,SequenceNumber,LocalEndpoint,RemoteEndpoint,*,CertificateThumbprintNumber,Certificate thumbprint
     ```
 

@@ -40,7 +40,7 @@ A2: Product activation is required for all licenses that are purchased through r
 
 Q3: How does product activation work?
 
-A3: Product activation checks that the product key hasn't been used on more personal computers than are permitted by the Microsoft Software License Terms. You can activate your product either over the Internet or by telephone. If you activate a product by telephone, you provide an installation ID code. In return, you receive a confirmation ID number. A Microsoft customer service representative activates the product by telephone. This process takes several minutes. If you want to activate your product over the Internet, the process is performed automatically. The only information that you must provide is the name of your country and your region.
+A3: Product activation checks that the product key hasn't been used on more personal computers than are permitted by the Microsoft Software License Terms. You can activate your product either over the Internet or by telephone. If you activate a product by telephone, you provide an installation ID code. In return, you receive a confirmation ID number. A Microsoft customer service representative activates the product by telephone. This process takes several minutes. If you want to activate your product over the Internet, the process is performed automatically. The only information that you must provide is the name of your country/region.
 
 > [!NOTE]
 > If you are activating the Product Trial Program version, you can activate the product only over the Internet.
