@@ -4,9 +4,9 @@ description: Get answers to common questions and troubleshooting guidance for de
 ms.date: 09/02/2021
 ms.reviewer: coferro
 ---
-# Troubleshoot device actions in Intune
+# Troubleshooting device actions in Intune
 
-This article gives answers and troubleshooting guidance for issues with device actions in Intune. To learn about using remote actions, see [Remotely run device actions with Intune](/mem/intune/remote-actions/).
+This article gives answers and troubleshooting guidance for issues with device actions in Microsoft Intune. To learn about using remote actions, see [Remotely run device actions with Intune](/mem/intune/remote-actions/).
 
 ## Disable Activation Lock action
 

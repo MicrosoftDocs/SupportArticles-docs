@@ -4,7 +4,7 @@ description: Suggestions for troubleshooting some of the most common problems wh
 ms.date: 12/02/2021
 ms.reviewer: joelste
 ---
-# Troubleshoot Android Enterprise device enrollment in Intune
+# Troubleshooting Android Enterprise device enrollment in Intune
 
 This article helps administrators understand and troubleshoot common scenarios when enrolling Android Enterprise devices in Microsoft Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
 
