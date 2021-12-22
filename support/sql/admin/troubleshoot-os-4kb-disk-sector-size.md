@@ -26,13 +26,13 @@ Component error code: 0x851A001A
 Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
 ```
 
-**Scenario #2:** You install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. You upgrade the OS on the device to Windows 11. When you try to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start and in the SQL Server error log, you notice entries similar to: 
+**Scenario #2:** Consider a scenario where you install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. Then you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start and in the SQL Server error log, you notice entries similar to: 
 
 ```output
 2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
 ```
 
-**Scenario #3:** You install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. You upgrade the OS on the device to Windows 11. When you try to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to: 
+**Scenario #3:** Consider a scenario where you install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. Then you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to: 
 
 ```output
 Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
@@ -71,7 +71,7 @@ On systems running Windows 11, some new storage devices and device drivers will 
   
 When this occurs, SQL Server will be unable to start due to the unsupported file system as SQL Server currently supports sector storage sizes of 512 bytes and 4 KB. 
 
-You can confirm that you encounter this specific issue by executing the command:
+You can confirm that you encounter this specific issue by running the command:
 
 ```console
 fsutil fsinfo sectorinfo <volume pathname>
@@ -82,13 +82,12 @@ For example, to analyze the E: volume, run the following command:
 ```console
 fsutil fsinfo sectorinfo E:
 ```
-
 Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A value of 4096 indicates a sector storage size of 4 KB.
 
-Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see [Microsoft support policy for 4 KB sector hard drives in Windows](../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md).
+Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see the [Microsoft support policy for 4 KB sector hard drives in Windows](../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md) article.
 
 > [!NOTE]
-> There is no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046).
+> There is no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see the [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046) article.
 
 ## Resolutions
 
@@ -105,12 +104,12 @@ Consider _one_ the following resolutions:
 - You can add a registry key which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB in size. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the Registry Editor, or you can run one of the following commands in Windows command prompt or PowerShell, executed as an administrator. 
   
   > [!IMPORTANT]
-  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more   information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) section.
+  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more   information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) article.
   
     **Registry Editor**
   
     1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
-    1. On the Edit menu, point to New, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
+    1. On the **Edit** menu, point to **New**, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
     1. Modify the new value, type in `4095`. Click **OK** and close the Registry editor.
   
     **Command Prompt as Administrator**
@@ -148,7 +147,7 @@ The Windows 10 drivers do not report the source sector size of the physical stor
 
 The improved Windows 11 drivers disregard the emulation that common NVMe storage devices are using. As an example, `fsutil` displays a sector size of 8 KB or 16 KB, rather than emulating the required 4 KB sector size needed by Windows. 
 
-Below is a comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the value of `PhysicalBytesPerSectorForAtomicity`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
+The following table provides a comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the value of `PhysicalBytesPerSectorForAtomicity`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
 
 **Sample output of `fsutil fsinfo sectorinfo <volume pathname>`**
 
