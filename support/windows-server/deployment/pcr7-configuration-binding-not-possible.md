@@ -29,6 +29,15 @@ Consider the following scenario:
 
 In this scenario, when you run *msinfo32* to check the PCR7 Configuration, it is displayed as **Binding not possible**.
 
+## Cause of the unexpected message
+
+Microsoft only accepts the Microsoft Windows PCA 2011 certificate to be used to sign BitLocker binding download components in PCR7. Any other signature present on boot code will cause BitLocker to use TPM profile 0, 2, 4, 11 instead of 7, 11. In some cases, the binaries are signed with UEFI CA 2011 certificate, which will prevent you from binding to PCR7.
+
+> [!Note]
+> UEFI CA can be used to sign third party applications, Option ROMs or even third party boot loaders which can load malicious (UEFI CA signed) code. In this case, BitLocker switched to PCR 0, 2, 4, 11. The exact binary hashes are measured rather than CA certificate, which means less exposure to attacks.
+
+## More Information  
+
 To check whether your device meets the requirements:
 
 1. Open an elevated command prompt, and run the `msinfo32` command.
@@ -48,7 +57,8 @@ To check whether your device meets the requirements:
 
     Verify that the drive is protected by PCR 7.
 
-    PS C:\Windows\system32> manage-bde -protectors -get $env:systemdrive
+    ```powershell
+    PS C:\Windows\system32> manage-bde -protectors -get $env:systemdrive  
     BitLocker Drive Encryption: Configuration Tool version 10.0.22526
     Copyright (C) 2013 Microsoft Corporation. All rights reserved.
 
@@ -56,14 +66,8 @@ To check whether your device meets the requirements:
     All Key Protectors
 
         TPM:
-          ID: <GUID>
-          PCR Validation Profile:
-          7, 11
-          (Uses Secure Boot for integrity validation)
-
-## Cause of the unexpected message
-
-Microsoft only accepts the Microsoft Windows PCA 2011 certificate to be used to sign BitLocker binding download components in PCR7. Any other signature present on boot code will cause BitLocker to use TPM profile 0, 2, 4, 11 instead of 7, 11. In some cases, the binaries are signed with UEFI CA 2011 certificate, which will prevent you from binding to PCR7.
-
-> [!Note]
-> UEFI CA can be used to sign third party applications, Option ROMs or even third party boot loaders which can load malicious (UEFI CA signed) code. In this case, BitLocker switched to PCR 0, 2, 4, 11. The exact binary hashes are measured rather than CA certificate, which means less exposure to attacks.
+         ID: <GUID>
+        PCR Validation Profile:
+        7, 11
+        (Uses Secure Boot for integrity validation)
+    ```
