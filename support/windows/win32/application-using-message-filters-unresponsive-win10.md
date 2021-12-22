@@ -1,6 +1,6 @@
 ---
 title: A user-defined application that uses message filters may become unresponsive in Windows 10 20H1/20H2/21H1/21H2
-description: This article discusses the problem when an application using its own message filters stops responding in Windows 10 because Windows can't receive the messages to process the Text Services Framework (TSF).  
+description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.  
 ms.date: 12/20/2021
 ms.prod-support-area-path: Windows 10
 ms.reviewer: hihayak
@@ -9,7 +9,7 @@ ms.technology: windows-dev-apps-networking-dev
 
 # A user-defined application that uses message filters may become unresponsive in Windows 10 20H1/20H2/21H1/21H2
 
-This article helps you resolve the problem when an application using its own message filters stops responding in Windows 10 because Windows can't receive the messages to process the Text Services Framework (TSF).
+This article helps you resolve the problem when an application using its own message filters stops responding in Windows 10.
 
 _Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1, Windows 10, version 21H2
 
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp;
 
 ## Symptoms
 
-Consider the scenario where you run an application on Windows 10 version 2004, 20H2, 21H1, or 21H2, and your application is using message filters.
+Consider the scenario where you run an application on Windows 10 20H1/20H2/21H1/21H2 and your application is using message filters.
 In this scenario, the application may become unresponsive.
 
 > [!NOTE]
@@ -25,16 +25,16 @@ In this scenario, the application may become unresponsive.
 
 ## Cause
 
-Windows 10 20H1/20H2/21H1/21H2 adds Windows messages used by the text input systems or Text Services Framework (TSF).
+Windows 10 20H1/20H2/21H1/21H2 adds Window messages used by text input systems or Text Services Framework (TSF).
 
 > [!NOTE]
 > Windows 10 version 2004 introduced the new version of TSF.
 
-If the `PeekMessage` API or `GetMessage` API has removed the Windows messages used by the TSF and Windows can't receive the messages to process the TSF, the application that uses message filters may stop responding.
+If the message filter of the application removes Window messages using `PeekMessage` API or `GetMessage` API and doesn't pass messages to `DispatchMessage` API, TSF can’t complete processing the messages and the application may stop responding.
 
-This problem may occur if you run commands similar to the following example, which dispatch `WM_LBUTTONUP` messages only and remove other messages.
+This problem may occur if the application has the message filter similar to the following example, which dispatches `WM_LBUTTONUP` messages only and removes other messages.
 
-```powershell
+```cpp
 ----
 while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 {
@@ -50,15 +50,15 @@ if (msg.message == WM_LBUTTONUP) {
 
 ## Workaround 1
 
-Run the following commands to only process the required messages and to dispatch other messages through the `DispatchMessage` API:
+Modify the message filter to only filter the required messages and to dispatch other messages through `DispatchMessage` API.
 
-```powershell
+```cpp
 -----
 while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 {
 ::TranslateMessage(&msg);
 
-if (msg.message == WM_ WM_LBUTTONDOWN) {
+if (msg.message == WM_LBUTTONDOWN) {
 
 }
 else {
@@ -71,7 +71,10 @@ else {
 
 ## Workaround 2
 
-Enable the previous version of the Microsoft IME by turning on the **Use previous version of \<Microsoft IME\>** toggle for your language in the **Language settings**, if you're using the new Microsoft IME in Windows 10.
+Enable the compatibility mode of the Microsoft IME (Input Method Editor), if you're using the new Microsoft IME in Windows 10.
+
+For more information about how to use previous version of the Microsoft IME, see 
+[Revert to a previous version of an IME (Input Method Editor)](https://support.microsoft.com/windows/revert-to-a-previous-version-of-an-ime-input-method-editor-adcc9caa-17cb-44d8-b46e-f5b473b4dd77).
 
 > [!NOTE]
 > We recommend that you use the IME compatibility setting as a temporary workaround.
