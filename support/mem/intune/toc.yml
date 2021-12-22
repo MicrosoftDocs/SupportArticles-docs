@@ -307,17 +307,17 @@ items:
     href: error-query-intune-data-warehouse.md
   - name: Endpoint protection common errors
     href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
-  - name: Help and support blade doesn't load
-    href: cannot-load-help-and-support-blade.md
   - name: Script error during Intune setup process
     href: script-error-intune-setup.md  
-  - name: Troubleshooting blade fails to load
-    href: troubleshooting-blade-fails-loading.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
-- name: Get support
+- name: Getting support
   items:
-   - name: Things to try before calling Intune support
-     href: before-you-call-intune-support.md
-   - name: Get support in Endpoint Manager
-     href: /mem/get-support
+  - name: Things to try before calling Intune support
+    href: before-you-call-intune-support.md
+  - name: Get support in Endpoint Manager
+    href: /mem/get-support
+  - name: Help and support blade doesn't load
+    href: cannot-load-help-and-support-blade.md
+  - name: Troubleshooting blade fails to load
+    href: troubleshooting-blade-fails-loading.md
