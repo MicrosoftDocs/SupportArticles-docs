@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting SQL Server Slow IO issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O 
-ms.date: 12/16/2021
+ms.date: 12/22/2021
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -13,9 +13,9 @@ ms.author: v-yunhya
 
 ## Define slow I/O performance:
 
-The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on the average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are **Avg Disk sec/ Read**, **Avg. Disk sec/Write** and **Avg. Disk sec/Transfer** (cumulative of both reads and writes).
+The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are **Avg Disk sec/ Read**, **Avg. Disk sec/Write** and **Avg. Disk sec/Transfer** (cumulative of both reads and writes).
 
-In SQL Server things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling Win32 functions - **WriteFile()**, **ReadFile()**, **WriteFileGather()**, **ReadFileScatter()**. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. I/O related waits are:
+In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions - **WriteFile()**, **ReadFile()**, **WriteFileGather()** and **ReadFileScatter()**. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. I/O related waits are:
 
 - [PAGEIOLATCH_SH](#pageiolatch_sh) / [PAGEIOLATCH_EX](#pageiolatch_ex)
 - [WRITELOG](#writelog)
@@ -26,10 +26,10 @@ In SQL Server things work in the same way. Commonly, you look at whether SQL Ser
 If these waits exceed 10-15 milliseconds on a consistent basis, then I/O is considered a bottleneck.
 
 > [!NOTE]
-> To provide context and perspective, in the world of t-shooting SQL Server, CSS has observed cases where an I/O requests took over 1 second and as high as 15 seconds per transfer! Obviously such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is  below 1 millisecond /transfer. With today's SSD/NVMe technology, advertised throughput rates range in the tens of microseconds per transfer.  Therefore, the 10-15 ms/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, once numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors. 
+> To provide context and perspective, in the world of t-shooting SQL Server, CSS has observed cases where an I/O request took over 1 second and as high as 15 seconds per transfer! Obviously such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is below 1 millisecond /transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 ms/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, once numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors. 
 
 
-## Methodology:
+## Methodology
 
 The following is a description of the methodology Microsoft CSS uses to approach slow I/O issues with SQL Server. It is not an exhaustive or exclusive approach, but has proven useful in isolating the issue and resolving it.
 
