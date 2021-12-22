@@ -32,7 +32,7 @@ Error description: Wait on the Database Engine recovery handle failed. Check the
 2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
 ```
 
-**Scenario #3:** You install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. You upgrade the OS on the device to Windows 11. When you attempt to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start and in the SQL Server error log and you notice entries similar to: 
+**Scenario #3:** You install SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. You upgrade the OS on the device to Windows 11. When you try to start SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to: 
 
 ```output
 Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
