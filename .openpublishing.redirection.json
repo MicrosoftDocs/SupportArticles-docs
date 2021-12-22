@@ -536,6 +536,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/set-mdm-authority.md",
+      "redirect_url": "/mem/intune/fundamentals/mdm-authority-set",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/troubleshoot-software-updates-in-microsoft-intune.md",
       "redirect_url": "/mem/intune/protect/windows-update-for-business-configure",
       "redirect_document_id": false
