@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article introduces the **Binding not possible** issue in msinfo32 and the cause of the issue.
 
-## PCR7 Configuration is displayed as "Binding not possible" in msinfo32
+## PCR7 Configuration in msinfo32
 
 Consider the following scenario:
 
@@ -28,6 +28,38 @@ Consider the following scenario:
 - You also run *tpm.msc* to make sure that the TPM status is normal. The status displays **The TPM is ready for use**.
 
 In this scenario, when you run *msinfo32* to check the PCR7 Configuration, it is displayed as **Binding not possible**.
+
+To check whether your device meets the requirements:
+
+1. Open an elevated command prompt, and run the `msinfo32` command.
+2. In **System Summary**, verify that **BIOS Mode** is **UEFI**, and **PCR7 Configuration** is **Bound**.
+3. Open an elevated PowerShell command prompt, and run the following command:
+
+    ```powershell
+    Confirm-SecureBootUEFI
+    ```
+    Verify that it returns the value of **True**.
+
+4. Run the following PowerShell command:
+
+    ```powershell
+    manage-bde -protectors -get $env:systemdrive
+    ```
+
+    Verify that the drive is protected by PCR 7.
+
+    PS C:\Windows\system32> manage-bde -protectors -get $env:systemdrive
+    BitLocker Drive Encryption: Configuration Tool version 10.0.22526
+    Copyright (C) 2013 Microsoft Corporation. All rights reserved.
+
+    Volume C: [OSDisk]
+    All Key Protectors
+
+        TPM:
+          ID: <GUID>
+          PCR Validation Profile:
+          7, 11
+          (Uses Secure Boot for integrity validation)
 
 ## Cause of the unexpected message
 
