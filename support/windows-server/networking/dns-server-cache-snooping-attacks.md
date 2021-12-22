@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 2678371
 This may reveal information about the DNS server's owner, such as what vendor, bank, service provider, etc. they use. Especially if this is confirmed (snooped) multiple times over a period.  
 This method could even be used to gather statistical information - for example at what time does the DNS server's owner typically access his net bank etc. The cached DNS record's remaining TTL value can provide very accurate data for this.
 >
-> DNS cache snooping is possible even if the DNS server is not configured to resolve recursively for 3rd parties, as long as it provides records from the cache also to 3rd parties (a.k.a. "lame requests").
+> DNS cache snooping is possible even if the DNS server is not configured to resolve recursively for 3rd parties, as long as it provides records from the cache also to third parties.
 
 Security audits may report that various DNS Server implementations are vulnerable to cache snooping attacks that allow a remote attacker to identify which domains and hosts have [recently] been resolved by a given name server.
 
