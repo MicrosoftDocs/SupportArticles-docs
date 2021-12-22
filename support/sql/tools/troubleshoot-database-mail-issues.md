@@ -9,14 +9,14 @@ ms.prod: sql
 ---
 # Troubleshoot Database Mail issues
 
-This article provides methods of troubleshooting Database Mail issues. If [initial troubleshooting](#initial-database-mail-troubleshooting) has not resolved your issue, use [advanced troubleshooting](#advanced-database-mail-troubleshooting).
+This article provides methods for troubleshooting Database Mail issues. If [initial troubleshooting](#initial-database-mail-troubleshooting) has not resolved your issue, use [advanced troubleshooting](#advanced-database-mail-troubleshooting).
 
 ## Initial Database Mail troubleshooting
 
 Here are basic troubleshooting steps:
 
 1. Review the Database Mail log and sysmail (`sysmail_event_log`) views for mails that have already been sent or attempted to send by using *DatabaseMail.exe*.
-1. Send a test mail. If the test mail is successfully sent, then focus on the specifics of the messages that aren't sent. If the test mail isn't sent, focus on troubleshooting the test mail and ignore the mails that're unsuccessfully sent before.
+1. Send a test mail. If the test mail is successfully sent, then focus on the details of the messages that aren't sent. If the test mail isn't sent, focus on troubleshooting the test mail and ignore the mails that're unsuccessfully sent before.
 1. If you suspect that the SMTP server settings are incorrect or there is a problem with the account that's used to send the mail, use PowerShell to send a test mail.
 1. If you fail to send the mail by using PowerShell, it's likely to be an SMTP configuration issue and you will need to involve an SMTP administrator.
 
@@ -116,9 +116,9 @@ The following issues might be logged in sysmail_event_log:
 
 If there are no problems with Database Mail external executable, go to the sysmail system views. To search for errors that're related to specific emails, look up the `mailitem_id` of the failed email in the `sysmail_faileditems` view, and then search for messages that're related to `mailitem_id` in `sysmail_event_log`. When an error is returned from `sp_send_dbmail`, the email is not submitted to the Database Mail system and the error is not displayed in the `sysmail_event_log` view.
 
-## Step 2: Check sysmail_unsentitems, sysmail_sentitems, sysmail_faileditems views
+## Step 2: Check sysmail_unsentitems, sysmail_sentitems, and sysmail_faileditems views
 
-You can check these views for problems with specific emails, check whether database mails are being sent, whether they are stuck in the queue, failing, and so on.
+You can check these views for problems with specific emails to see whether database mails are being sent, are stuck in the queue, or fail to be sent.
 
 Internal tables in the msdb database contain the email messages and attachments that're sent from Database Mail, together with their current status. Database Mail updates these tables when the message are processed.
 
@@ -241,7 +241,7 @@ To send a test Database Mail, right-click on **Management** \> **Database Mail**
 
 After you send the test mail, check the Database Mail log and sysmail views for what happened to the test mail.
 - If the test mail isn't sent successfully, check the account configuration and compare with the SMTP server requirements at which point you may need to involve the SMTP server administrator.
-- If the test mail is sent successfully, but there are still problems with other mails not being sent, drill into the details of the email messages that aren't getting sent. Review the actual `sp_send_dbmail` command that is being executed. If you don't have the Transact-SQL command, gather an XEvent trace by using `sql_batch_completed` and `sql_batch_started` commands and look at the `batch_text` column.
+- If the test mail is sent successfully, but there are still problems with other mails that're not sent, focus on the details of the email messages that aren't getting sent. Review the actual `sp_send_dbmail` command that is being executed. If you don't have the Transact-SQL command, gather an XEvent trace by using `sql_batch_completed` and `sql_batch_started` commands and look at the `batch_text` column.
 
 ### Send a test email with PowerShell
 
@@ -323,7 +323,7 @@ You can use the following methods for advanced Database Mail troubleshooting.
 
 ### The collections for advanced troubleshooting
 
-Depending on the issues, you may need one or more of these collections. These are described in the order you most likely need.
+To solve the issues, you may need one or more of these collections. These are described in the order you most likely need.
 
 - Backup of msdb
 - Event log
@@ -498,7 +498,7 @@ For more information about sysmail views, see the [sysmail system views](#msdb-s
 
 If the external *DatabaseMail.exe* program cannot log to the **msdb** table, the program will log the error to the Windows application event log. In addition, if *DatabaseMail.exe* encounters exception, the exception will also be logged. Although the exception stack is typically identical, check the event log to see whether amy additional stack information exists.
 
-Sometimes when you troubleshoot a *DatabaseMail.exe* crash, you may find that logging indicates a Windows Error Report dump was created. It will appear similar to the following:
+Sometimes when you troubleshoot a *DatabaseMail.exe* crash, you may find that logging indicates a Windows Error Report dump was created as follows:
 
 ```output
 <datetime stamp>,Information,0,1001,Windows Error Reporting,Viewpoint.contoso.com,"Fault bucket , type 0
@@ -534,7 +534,7 @@ You can collect a trace of the Transact-SQL commands that are being executed on 
 
 ### Configure PSSDiag tool
 
-You can use [PSSDiag](https://github.com/microsoft/DiagManager/releases) to collect the XEvent or SQL Server trace with the General Performance template. As shown in the following screenshot, select some additional events, especially all the broker events.
+You can use [PSSDiag](https://github.com/microsoft/DiagManager/releases) to collect the XEvent or SQL Server trace under the General Performance template. As shown in the following screenshot, select some additional events, especially all the broker events.
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-pssdiag-broker-events.png" alt-text="Screenshot of the Pssdiag tool. Enable broker events on the XEvent tab.":::
 
@@ -558,7 +558,7 @@ It's difficult to know what exactly you should expect to see unless you've revie
 
 [Process Monitor](/sysinternals/downloads/procmon) (Procmon) is a part of the Windows Sysinternals suite.
 
-Process Monitor produces a noisy capture, and it's best to apply filters to the data after it has been captured rather than as the capture is occurring, so that you don't miss anything. Typically, you can target the capture around a repro of the Database Mail issue, so the overall data captured would not be too large.
+Process Monitor produces a noisy capture. In order not to miss anything, it's better to apply filters to the data after it is captured rather than during the capture process. Typically, you can target the capture around a repro of the Database Mail issue, so the overall data captured would not be too large.
 
 ### Capture file, registry, network, process and thread events
 
@@ -576,7 +576,7 @@ To reproduce the issue, follow the steps:
 
 After you get the .PML file, open it by using Process Monitor again. First, filter the file to the *DatabaseMail.exe* and *sqlservr.exe* processes. Then, click **Filter -> Filter...** or click the filter icon to open the filter menu.
 
-Add entries for Process Name are *sqlservr.exe* and *DatabaseMail.exe*:
+For Process Name, select *sqlservr.exe* and *DatabaseMail.exe*, and then add these entries:
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-procmon-filter.png" alt-text="Screenshot of the procmon tool. It shows filtering Database Mail.":::
 
