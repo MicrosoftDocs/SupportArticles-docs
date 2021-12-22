@@ -18,7 +18,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Errors when trying to copy, move, or import many items to public folders
+# Can't copy, move, or import many items to public folders in Outlook
 
 ## Symptoms
 
@@ -27,7 +27,7 @@ When you try to copy, move, or import many items to a public folder in Microsoft
 - > Can't move the items. The item could not be moved. The items may have been already moved or deleted.
 - > Your server administrator has limited the number of items you can open simultaneously. Try closing messages you have opened or removing attachments and images from unsent messages you are composing.
 
-For example, you have a large .pst or .csv file that has more than 1,000 items, only about 400 items are imported to a public folder in Outlook.
+For example, you try to import a large .pst or .csv file that contains more than 1,000 items. However, only about 400 items are imported to a public folder in Outlook.
 
 If you use a diagnostic tool such as [Fiddler](/office365/troubleshoot/diagnostic-logs/run-fiddler-trace) to collect diagnostic logs, the following exceptions are recorded:
 
@@ -36,7 +36,7 @@ If you use a diagnostic tool such as [Fiddler](/office365/troubleshoot/diagnosti
 
 ## Cause
 
-Exchange Server has [open item limits](/exchange/architecture/mailbox-servers/managed-store/managed-store-limits#open-item-limits) for each Outlook session. When you try to copy, move, or import many items in Outlook by using Online mode, it exceeds the open item limits.
+Exchange Server has [open item limits](/exchange/architecture/mailbox-servers/managed-store/managed-store-limits#open-item-limits) for each Outlook session. When the number of items to be processed exceeds the limits, the operation fails.
 
 ## Workaround
 
