@@ -313,13 +313,13 @@ To determine whether there are any problems with the Service Broker objects, it'
 
 ## Advanced Database Mail troubleshooting
 
-You can do advanced troubleshooting in following scenarios:
+Advanced troubleshooting applies to the following scenarios:
 
-- When looking at Database Mail log, Database Mail crashes and the cause isn't fully explained. You see **DatabaseMail process is started** followed immediately by an exception message, and then **DatabaseMail process is shutting down** is displayed.
-- Database Mail doesn't successfully start. You don't see **DatabaseMail process is started** in `sysmail_event_log` view.
+- When you look at the Database Mail log, Database Mail crashes and the cause isn't fully explained. You see that **DatabaseMail process is started** is followed immediately by an exception message, and then **DatabaseMail process is shutting down** is displayed.
+- Database Mail doesn't successfully start. You don't see **DatabaseMail process is started** in the `sysmail_event_log` view.
 - [Initial troubleshooting](#initial-database-mail-troubleshooting) doesn't help you resolve the problem.
 
-You can use following methods for advanced Database Mail troubleshooting.
+You can use the following methods for advanced Database Mail troubleshooting.
 
 ### The collections for advanced troubleshooting
 
@@ -334,7 +334,7 @@ Depending on the issues, you may need one or more of these collections. These ar
 
 ## Method 1: Back up the msdb database
 
-It can be helpful to query the sysmail views in an environment separate from production. In some cases, you can back up the **msdb** database and then restore to another instance. The sysmail views are all defined with reference to msdb, so even when querying in the restored **msdb** backup, the views will reference the **msdb** system database in your instance. You will need to recreate the sysmail views in the user database with following script to recreate sysmail views from the production **msdb**.
+It can be helpful to query the sysmail views in an environment that's separate from production. In some cases, you can back up the **msdb** database and then restore to another instance. The sysmail views are all defined with reference to msdb, so even when querying in the restored **msdb** backup, the views will reference the **msdb** system database in your instance. To re-create sysmail views from the production **msdb**, re-create the sysmail views in the user database by using the following script.
 
 ```sql
 /* sysmail_allitems  */
@@ -492,13 +492,13 @@ WHERE (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR
 GO
 ```
 
-See [sysmail system views](#msdb-sysmail-system-views) section for more information on each sysmail view.
+For more information about sysmail views, see the [sysmail system views](#msdb-sysmail-system-views) section.
 
 ## Method 2: Check the Windows application event log
 
-If the external *DatabaseMail.exe* program cannot log to the **msdb** table, the program will log the error to the Windows application event log. In addition, if *DatabaseMail.exe* encounters some kind of exception, it will often log to the event log as well. The exception stack is typically identical, but check the event log to see if any additional stack information is present.
+If the external *DatabaseMail.exe* program cannot log to the **msdb** table, the program will log the error to the Windows application event log. In addition, if *DatabaseMail.exe* encounters exception, the exception will also be logged. Although the exception stack is typically identical, check the event log to see whether amy additional stack information exists.
 
-Sometimes when troubleshooting a *DatabaseMail.exe* crash, you may find that logging indicates a Windows Error Report dump was created. It will appear similar to the following:
+Sometimes when you troubleshoot a *DatabaseMail.exe* crash, you may find that logging indicates a Windows Error Report dump was created. It will appear similar to the following:
 
 ```output
 <datetime stamp>,Information,0,1001,Windows Error Reporting,Viewpoint.contoso.com,"Fault bucket , type 0
@@ -526,31 +526,31 @@ Report Status: 4100
 Hashed bucket:"
 ```
 
-You can retrieve all files showing AppCrash_DatabaseMail.exe_\* in the *..\\WER\\ReportQueue* path. See [Procdump Analysis](#analyze-the-exception-dump) section below for dump analysis suggestions.
+You can retrieve all files that show AppCrash_DatabaseMail.exe_\* in the *..\\WER\\ReportQueue* path. See the [Procdump Analysis](#analyze-the-exception-dump) section for dump analysis suggestions.
 
 ## Method 3: Collect and analyze XEvent or SQL Server Trace
 
-You can collect a trace of the Transact-SQL commands that are being executed on the system to see if any of them are failing.
+You can collect a trace of the Transact-SQL commands that are being executed on the system to see whether any of them fail.
 
 ### Configure PSSDiag tool
 
-You can use [PSSDiag](https://github.com/microsoft/DiagManager/releases) to collect the XEvent or SQL Server trace with the General Performance template. As shown in the following screenshot, select some additional events, specifically all of the broker events.
+You can use [PSSDiag](https://github.com/microsoft/DiagManager/releases) to collect the XEvent or SQL Server trace with the General Performance template. As shown in the following screenshot, select some additional events, especially all the broker events.
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-pssdiag-broker-events.png" alt-text="Screenshot of the Pssdiag tool. Enable broker events on the XEvent tab.":::
 
-### Analysis of the Xevent or SQL trace
+### Analyze the Xevent or SQL trace
 
-There are usually five different sessions (SPIDs) that will contain useful information for troubleshooting a Database Mail issue.
+Fve different sessions (SPIDs) usually contain useful information about troubleshooting a Database Mail issue.
 
-- **sp_send_dbmail**: After you execute Transact-SQL statement, you will see the Service Broker events used to put the messages on the `ExternalMailQueue` queue.
+- **sp_send_dbmail**: After you run the Transact-SQL statement, you see the Service Broker events that're used to put the messages on the `ExternalMailQueue` queue.
 
-- **Service Broker Activation for sending messages** to SMTP server through *DatabaseMail.exe*. The application name will be "Microsoft SQL Server Service Broker Activation".
+- **Service Broker Activation for sending messages** to SMTP server through *DatabaseMail.exe*. The application name is "Microsoft SQL Server Service Broker Activation".
 
-- **Database Mail External Program**: This is the external Database Mail program that receives messages from the `ExternalMailQueue` queue and prepares the messages to send to the SMTP server. The application name will be "DatabaseMail - DatabaseMail - Id\<PID\>".
+- **Database Mail External Program**: This is the external Database Mail program that receives messages from the `ExternalMailQueue` queue and prepares messages to send to the SMTP server. The application name is "DatabaseMail - DatabaseMail - Id\<PID\>".
 
-- **Database Mail External Program**: This is another connection from Database Mail. After the first connection processes the existing messages on the `ExternalMailQueue` queue, the connection will be created to listen for additional messages to be placed on the queue. If there are no additional messages on the queue, *DatabaseMail.exe* will terminate and close this connection.
+- **Database Mail External Program**: This is another connection from Database Mail. After the first connection processes the existing messages on the `ExternalMailQueue` queue, the connection is created to listen for additional messages to be placed on the queue. If there are no additional messages on the queue, *DatabaseMail.exe* will terminate and close this connection.
 
-- **Service Broker Activation for receiving response messages** from SMTP server through *DatabaseMail.exe*. This will update the sysmail tables for logging results of mail sending.
+- **Service Broker Activation for receiving response messages** from SMTP server through *DatabaseMail.exe*. It updates the sysmail tables to log results of mails that're sent.
 
 It's difficult to know what exactly you should expect to see unless you've reviewed many of these traces. The best way is to compare with the tracking of successfully sent Database Mail. If your troubleshooting scenario involves sometimes failing to send Database Mail, then compare the problem trace with a successful trace and see the difference in behavior. Check for any errors reported by any of the SPIDs. If you are unable to send any Database Mail, compare to the successful sending in your own test environment.
 
@@ -558,24 +558,23 @@ It's difficult to know what exactly you should expect to see unless you've revie
 
 [Process Monitor](/sysinternals/downloads/procmon) (Procmon) is a part of the Windows Sysinternals suite.
 
-Process Monitor produces a noisy capture, and it's best to apply filters to the data after it has been captured rather than as the capture is occurring, so that you don't miss anything. Typically you are able to target the capture around a repro of the Database Mail issue, so the overall data captured would not be too large.
+Process Monitor produces a noisy capture, and it's best to apply filters to the data after it has been captured rather than as the capture is occurring, so that you don't miss anything. Typically, you can target the capture around a repro of the Database Mail issue, so the overall data captured would not be too large.
 
 ### Capture file, registry, network, process and thread events
 
-When you start *procmon.exe*, it will begin capturing data immediately. The GUI is straightforward. You will want to stop the capturing of events until you're ready to reproduce the issue. Select **File** -> **Capturing Events (Ctrl+E)**, this will uncheck the menu item and stop event collection. Select the eraser icon or press Ctrl+X to clear the events already captured:
+When you start *procmon.exe*, it begins capturing data immediately. The GUI is straightforward. You need to stop the capturing of events until you're ready to reproduce the issue. Select **File** -> **Capturing Events (Ctrl+E)** to uncheck the menu item and stop event collection. Select the eraser icon or press Ctrl+X to clear the events that're already captured:
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-procmon-clear.png" alt-text="Screenshot of the procmon tool. It shows you that clears the events.":::
 
 To reproduce the issue, follow the steps:
 
-1. Select **File** -> **Capturing Events (Ctrl+E)** to start capturing events
-1. It will reproduce the issue.
+1. Select **File** -> **Capturing Events (Ctrl+E)** to start capturing events, which reproduces the issue.
 1. Select **File** -> **Capturing Events (Ctrl+E)** to stop capturing events.
 1. Save the file as *.PML.
 
 ### Analyze the Process Monitor trace
 
-After you get the .PML file, open it with Process Monitor again. First filter it to the *DatabaseMail.exe* and *sqlservr.exe* processes. Click **Filter -> Filter...** or click the filter icon to open the filter menu.
+After you get the .PML file, open it by using Process Monitor again. First, filter the file to the *DatabaseMail.exe* and *sqlservr.exe* processes. Then, click **Filter -> Filter...** or click the filter icon to open the filter menu.
 
 Add entries for Process Name are *sqlservr.exe* and *DatabaseMail.exe*:
 
@@ -583,17 +582,17 @@ Add entries for Process Name are *sqlservr.exe* and *DatabaseMail.exe*:
 
 As is the case of SQL XEvent or Trace capture, it's not immediately obvious what to looking for. Usually, the best way to start the analysis is to compare it to a Procmon capture for a successfully sent Database Mail. Ideally, compare to a successfully-sent email from the same environment where the issue occurs. However, if no Database Mail can be successfully sent in the specific environment, compare it with a successfully-sent email in another environment.
 
-When *DatabaseMail.exe* fails to load a DLL or can't find the *DatabaseMail.exe.config* file, this kind of analysis is useful.
+When *DatabaseMail.exe* fails to load a DLL or can't find the *DatabaseMail.exe.config* file, the analysis is useful.
 
 ## Method 5: Collect and analyze the exception dump by using Procdump tool
 
 [ProcDump](/sysinternals/downloads/procdump) is also a part of the Windows Sysinternals suite. 
 
-Procdump is most useful when trying to capture a memory dump of the *DatabaseMail.exe* external program, typically in the context of troubleshooting when *DatabaseMail.exe* encounters an unhandled exception.
+Procdump is useful when you try to capture a memory dump of the *DatabaseMail.exe* external program. Typically, you use Procdup for troubleshooting when *DatabaseMail.exe* encounters an unhandled exception.
 
 ### Configure Procdump
 
-To configure Procdump to capture a dump of *DatabaseMail.exe* when encountering an unhandled exception, open a command prompt with administrator privileges firstly. Then, use the following command to enable Procdump to capture the dump of the *DatabaseMail.exe* process:
+To configure Procdump to capture a dump of *DatabaseMail.exe* when encountering an unhandled exception, open a command prompt with administrator privileges firstly. Then, enable Procdump to capture the dump of the *DatabaseMail.exe* process by using the following command:
 
 ```console
 c:\Sysinternals> procdump -ma -t DatabaseMail.exe -w e2
@@ -613,17 +612,17 @@ Then, reproduce the issue. The dump will be created in the same folder where you
 
 ### Analyze the exception dump
 
-As with any exception dump, find the exception record and examine the call stack that leads to the exception.
+Find the exception record and examine the call stack that leads to the exception.
 
 1. Open the dump file in WinDbg ([Download Debugging Tools for  Windows - WinDbg - Windows drivers](/windows-hardware/drivers/debugger/debugger-download-tools)).
-1. Switch to exception record by using `.ecxr` or `!analyze -v` command.
+1. Switch to the exception record by using the `.ecxr` or `!analyze -v` command.
 
-Once you have the stack, begin searching for known issues for a matching call stack. If you need further analysis help, you can contact CSS team.
+When you have the stack, begin searching for known issues for a matching call stack. If you need further help, contact CSS team.
 
 ## Method 6: Use Time Travel Debugging tool
 
-Time travel debugging (TTD) capture is usually the last resort for difficult problems. You can use the [WinDbg preview debugger](https://www.microsoft.com/p/windbg-preview/9pgjgd53tn86) to [get it](/windows-hardware/drivers/debugger/windbg-user-mode-preview#launch-executable-advanced). For comprehensive instructions and information on TTD, see [Time Travel Debugging](/windows-hardware/drivers/debugger/time-travel-debugging-overview) on how it works and how to do analysis. If you get to this point, you likely need to contact CSS team. However, this section provides instructions on how to capture the TTD when necessary.
+Time travel debugging (TTD) capture is usually the last resort for difficult problems. You can use the [WinDbg preview debugger](https://www.microsoft.com/p/windbg-preview/9pgjgd53tn86) to [get it](/windows-hardware/drivers/debugger/windbg-user-mode-preview#launch-executable-advanced). For comprehensive instructions and information on TTD, see [Time Travel Debugging](/windows-hardware/drivers/debugger/time-travel-debugging-overview) on how it works and how to do analysis. If you get to this point, you need to contact CSS team. However, this section provides instructions on how to capture the TTD when necessary.
 
 ### Configure TTD
 
-For several different reasons, TTD capture of *DatabaseMail.exe* may be a bit challenging. First, *DatabaseMail.exe* doesn't run as a service indefinitely, but is invoked by SQL Server (*sqlservr.exe*) process. Therefore, you can't attach to it, but you must configure TTD with the `-onLaunch` parameter to start capturing when *DatabaseMail.exe* starts. Second, because *DatabaseMail.exe* is invoked by another process, you need to use the [Debug child processes](/windows-hardware/drivers/debugger/-childdbg--debug-child-processes-).
+For several reasons, TTD capture of *DatabaseMail.exe* may be a bit challenging. First, *DatabaseMail.exe* doesn't run as a service indefinitely, but it is invoked by SQL Server (*sqlservr.exe*) process. Therefore, you can't attach to it, but you must configure TTD by using the `-onLaunch` parameter to start capturing it when *DatabaseMail.exe* starts. Second, because *DatabaseMail.exe* is invoked by another process, you need to use the [Debug child processes](/windows-hardware/drivers/debugger/-childdbg--debug-child-processes-).
