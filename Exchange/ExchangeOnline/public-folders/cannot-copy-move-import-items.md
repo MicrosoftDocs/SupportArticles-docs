@@ -1,6 +1,6 @@
 ---
 title: Can't copy, move, or import many items to a public folder in Outlook
-description: When you try to copy, move, or import many items to a public folder in Outlook, the operation fails with the error messages. 
+description: When you try to copy, move, or import many items to a public folder in Outlook, the operation fails with the error messages.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
