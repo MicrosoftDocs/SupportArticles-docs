@@ -63,11 +63,11 @@ The following is a list of time zones that do not observe daylight saving time.
 - (UTC+04:00) Tbilisi
 - (UTC+04:30) Kabul
 - (UTC+05:00) Islamabad, Karachi
-- (UTC+05:00) Tashkent
+- (UTC+05:00) Toshkent
 - (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi
 - (UTC+05:30) Sri Jayawardenepura
 - (UTC+05:45) Kathmandu
-- (UTC+06:00) Astana
+- (UTC+06:00) Nur-Sultan
 - (UTC+06:00) Dhaka
 - (UTC+06:30) Yangon (Rangoon)
 - (UTC+07:00) Bangkok, Hanoi, Jakarta
@@ -84,7 +84,7 @@ The following is a list of time zones that do not observe daylight saving time.
 - (UTC+11:00) Magadan, Solomon Is., New Caledonia
 - (UTC+12:00) Coordinated Universal Time+12
 - (UTC+13:00) Nuku'alofa
-- (UTC-01:00) Cape Verde Is.
+- (UTC-01:00) Cabo Verde Is.
 - (UTC-02:00) Coordinated Universal Time-02
 - (UTC-03:00) Buenos Aires
 - (UTC-03:00) Cayenne, Fortaleza
