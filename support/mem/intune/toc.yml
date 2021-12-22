@@ -273,8 +273,6 @@ items:
     href: cannot-load-help-and-support-blade.md
   - name: Script error during Intune setup process
     href: script-error-intune-setup.md  
-  - name: Set the MDM authority
-    href: set-mdm-authority.md
   - name: Things to try before calling Intune support
     href: before-you-call-intune-support.md
   - name: Troubleshooting blade fails to load
