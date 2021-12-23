@@ -13,9 +13,9 @@ ms.author: v-yunhya
 
 ## Define slow I/O performance
 
-The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are **Avg Disk sec/ Read**, **Avg. Disk sec/Write** and **Avg. Disk sec/Transfer** (cumulative of both reads and writes).
+The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are `Avg Disk sec/ Read`, `Avg. Disk sec/Write` and `Avg. Disk sec/Transfer` (cumulative of both reads and writes).
 
-In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions - **WriteFile()**, **ReadFile()**, **WriteFileGather()** and **ReadFileScatter()**. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. I/O related waits are:
+In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions - `WriteFile()`, `ReadFile()`, `WriteFileGather()` and `ReadFileScatter()`. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. The I/O related waits are:
 
 - [PAGEIOLATCH_SH](#pageiolatch_sh) / [PAGEIOLATCH_EX](#pageiolatch_ex)
 - [WRITELOG](#writelog)
@@ -36,7 +36,7 @@ A flow chart at the end of this article provides a visual representation of this
 
 ### Is SQL Server reporting slow I/O?
 
-Determine if there is I/O latency reported by SQL Server wait types. **PAGEIOLATCH_***, **WRITELOG**, **ASYNC_IO_COMPLETION** values, and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and warrants further investigation. The following query may help you gather this diagnostic information on your system:
+Determine if there is I/O latency reported by SQL Server wait types. The values `PAGEIOLATCH_*`, `WRITELOG` and `ASYNC_IO_COMPLETION` and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and warrants further investigation. The following query may help you gather this diagnostic information on your system:
 
    ```Powershell
    
@@ -56,7 +56,7 @@ Determine if there is I/O latency reported by SQL Server wait types. **PAGEIOLAT
    }
    ```
 
-In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the Errorlog. You can check SQL Server error logs on your system by running this PowerShell command:
+In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the Errorlog. You can check SQL Server error logs on your system by running the following PowerShell command:
 
   ```Powershell
   Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than"
@@ -67,9 +67,9 @@ Also, refer to the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mss
 
 ### Do Perfmon counters indicate I/O latency?
 
-If SQL Server reports I/O latency, then refer to OS counters. You can determine if there is an I/O problem, by examining the latency counter **Avg Disk Sec/Transfer**. The following code snippet indicates one way to collect this information through PowerShell. It gathers counters on all disk volumes: "_total". Please change to a specific drive volume (for example "D:"). To find which volumes host your database files, run the following query in your SQL Server:
+If SQL Server reports I/O latency, then refer to OS counters. You can determine if there is an I/O problem, by examining the latency counter `Avg Disk Sec/Transfer`. The following code snippet indicates one way to collect this information through PowerShell. It gathers counters on all disk volumes: "_total". Please change to a specific drive volume (for example "D:"). To find which volumes host your database files, run the following query in your SQL Server:
 
-   ```SQL 
+   ```SQL
    SELECT distinct volume_mount_point 
    FROM sys.master_files f
    CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
@@ -130,7 +130,7 @@ Avoid using file-level encryption (EFS) and file-system compression because they
 
 ### Is the I/O subsystem overwhelmed beyond capacity?
 
-If SQL Server and the OS indicate I/O subsystem is slow, then find out if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters **Disk Bytes/Sec**, **Disk Read Bytes/Sec**, or **Disk Write Bytes/Sec**. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can only push no more than 200 MB/sec of I/O through a 2 Gb/sec HBA card or 2 Gb/sec dedicated port on a SAN switch.  The expected throughput capacity defined by hardware manufacturer defines how you proceed from here.
+If SQL Server and the OS indicate I/O subsystem is slow, then find out if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can only push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch.  The expected throughput capacity defined by hardware manufacturer defines how you proceed from here.
 
 ```powershell
 clear
@@ -153,7 +153,7 @@ Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
 
 ### Is SQL Server driving the heavy I/O activity?
 
-If I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at **Buffer Manager: Page Reads/Sec** (most common culprit) and **Page Writes/Sec** (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then you need to work with the Application Development teams (or application vendor) to
+If I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then you need to work with the Application Development teams (or application vendor) to
 
 - Tune queries - better indexes, update statistics, rewrite queries, redesign the database, etc.
 - Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options), or add more RAM on the system. This will allow more data/index pages to be cached and not re-read from disk frequently, thus reduce I/O activity.
@@ -192,7 +192,7 @@ Occurs when a task is waiting on a latch for a buffer that is in an I/O request.
 
 Occurs while waiting for a transaction log flush to complete. A flush occurs when the Log Manger writes its temporary contents to disk. Common operations that cause log flushes are transaction commits and checkpoints.
 
-Common reasons for long waits on WRITELOG are:
+Common reasons for long waits on `WRITELOG` are:
 
  - **Transaction log disk latency**: This is the most common cause of WRITELOG waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while read/writing data from data file is random. Mixing these two on one drive volume (especially conventional spinning disk drives) will cause contention in terms of disk movement.
 
