@@ -25,9 +25,9 @@ Renew the APNs certificate, and then re-enroll the device.<br/>**Important:** Ma
 |UserLicenseTypeInvalid|The device can't be enrolled because the user's account isn't yet a member of a required user group or the user does not have the correct license.<br/><br/>|Users must have the correct license type for the mobile device management authority. For example, they'll see this error if Intune has been set as the MDM authority, but the user has a System Center 2012 R2 Configuration Manager license.<br/>Review [Set up iOS/iPadOS and Mac management with Microsoft Intune](/mem/intune/enrollment/ios-enroll) and information about how to set up users in [Sync Active Directory and add users to Intune](/mem/intune/fundamentals/users-add) and [organizing users and devices](/mem/intune/fundamentals/groups-add).|
 |MdmAuthorityNotDefined|The mobile device management authority hasn't been defined.<br /><br />|The mobile device management authority hasn't been set in Intune.<br /><br />Review item #1 in the **Step 6: Enroll mobile devices and install an app** section in [Get started with a 30-day trial of Microsoft Intune](/mem/intune/fundamentals/free-trial-sign-up).|
 
-## Sync token errors between Intune and ADE (DEP)
+## Sync token errors between Intune and ADE
 
-This section includes token sync errors with:
+This section includes token sync errors related to Apple Automated Device Enrollment (ADE):
 
 - Apple Business Manager (ABM)
 - Apple School Manager (ASM)

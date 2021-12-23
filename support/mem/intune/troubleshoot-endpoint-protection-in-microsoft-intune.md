@@ -4,9 +4,9 @@ description: See common messages and possible solution when using and troublesho
 ms.date: 11/09/2021
 ms.reviewer: tscott
 ---
-# Endpoint protection issues and possible solutions in Microsoft Intune
+# Endpoint protection issues and possible solutions in Intune
 
-This article describes potential errors and solutions when using Intune endpoint protection.
+This article describes potential errors and solutions when using Microsoft Intune endpoint protection.
 
 For troubleshooting guidance specific to Microsoft Defender, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
 

@@ -52,17 +52,17 @@ The first step in troubleshooting is to check whether all prerequisites are met.
   > [!NOTE]
   > The Office mobile apps currently support only SharePoint Online and not SharePoint on-premises.
 
-- If you use Intune app protection policies together with on-premises resources (Microsoft Skype for Business and Microsoft Exchange Server), you must enable [Hybrid Modern Authentication (HMA) for Skype for Business and Exchange](/microsoft-365/enterprise/hybrid-modern-auth-overview).
+- If you use Intune app protection policies together with on-premises resources (Microsoft Skype for Business and Microsoft Exchange Server), you must enable [Hybrid Modern Authentication for Skype for Business and Exchange](/microsoft-365/enterprise/hybrid-modern-auth-overview).
 
 Intune app protection policies require that the identity of the user is consistent between the app and [Intune App SDK](/mem/intune/developer/app-sdk-get-started). The only way to guarantee this consistency is through modern authentication. There are scenarios in which apps may work in an on-premises configuration without modern authentication. However, the outcomes are not consistent or guaranteed.
 
-For more information about how to enable HMA for Skype for Business hybrid and on-premises configurations, see the following articles:
+For more information about how to enable modern authentication for Skype for Business hybrid and on-premises configurations, see the following articles:
 
 - **Hybrid**  
-  [Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
+  [Hybrid Modern Authentication for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **On-premises**  
-  [Modern Auth for SfB OnPrem with Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+  [Modern authentication for SfB OnPrem with Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### Solution 2: Check app protection policy status
 
@@ -110,7 +110,7 @@ When you assign the policy to a user group, make sure that the user is in the us
 >
 > - The Intune app protection policy must be assigned to user groups and not device groups.
 > - If the affected device uses Android Enterprise, only personally-owned work profiles will support app protection policies.
-> - If the affected device uses Apple's Automated Device Enrollment (ADE), make sure that **User Affinity** is enabled. User Affinity is required for any app that requires user authentication under ADE. For more information on iOS/iPadOS DEP enrollment, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
+> - If the affected device uses Apple's Automated Device Enrollment (ADE), make sure that **User Affinity** is enabled. User Affinity is required for any app that requires user authentication under ADE. For more information on iOS/iPadOS ADE enrollment, see [Automatically enroll iOS/iPadOS devices](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
 
 ### Solution 5: Verify that the managed app is targeted
 
