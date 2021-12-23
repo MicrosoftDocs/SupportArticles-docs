@@ -536,6 +536,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/set-mdm-authority.md",
+      "redirect_url": "/mem/intune/fundamentals/mdm-authority-set",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/troubleshoot-software-updates-in-microsoft-intune.md",
       "redirect_url": "/mem/intune/protect/windows-update-for-business-configure",
       "redirect_document_id": false
@@ -1051,9 +1056,15 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-server/networking/description-dnslint-utility.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/description-dnslint-utility",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/sql/performance/high-cpu-use-occurs-queries.md",
       "redirect_url": "/troubleshoot/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
       "redirect_document_id": true
     }
+
   ]
 }

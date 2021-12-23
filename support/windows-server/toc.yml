@@ -842,6 +842,8 @@
       href: ./backup-and-storage/event-id-51-information.md
     - name: Pass-through disk in highly available VM is read-only
       href: ./backup-and-storage/add-pass-through-disk-to-high-available-vm.md
+    - name: Replicated Cluster Shared Volumes are offline
+      href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
     - name: USB Device not recognized error
@@ -1506,8 +1508,6 @@
       href: ./networking/exchange-compatibility-single-label-domains.md
     - name: Configure a secondary name server
       href: ./networking/configure-secondary-name-server.md
-    - name: Description of the DNSLint utility
-      href: ./networking/description-dnslint-utility.md
     - name: DNS client resolution timeouts
       href: ./networking/dns-client-resolution-timeouts.md
     - name: DNS namespace planning

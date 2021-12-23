@@ -84,7 +84,7 @@ Sub SetLCID()
         Case "zh-cn"
           strLCID = 2052 ' Chinese(PRC)
         Case "zh-hk"
-          strLCID = 3076 ' Chinese(Hong Kong)
+          strLCID = 3076 ' Chinese(Hong Kong SAR)
         Case "zh-sg"
           strLCID = 4100 ' Chinese(Singapore)
         Case "hr"
@@ -126,7 +126,7 @@ Sub SetLCID()
         Case "fo"
           strLCID = 1080 ' Faeroese
         Case "fa"
-          strLCID = 1065 ' Farsi
+          strLCID = 1065 ' Persian
         Case "fi"
           strLCID = 1035 ' Finnish
         Case "fr"
@@ -140,9 +140,9 @@ Sub SetLCID()
         Case "fr-lu"
           strLCID = 5132 ' French(Luxembourg)
         Case "mk"
-          strLCID = 1071 ' Macedonian (FYROM)
+          strLCID = 1071 ' Macedonian
         Case "gd"
-          strLCID = 1084 ' Gaelic(Scots)
+          strLCID = 1084 ' Scottish Gaelic
         Case "de"
           strLCID = 1031 ' German(Standard)
         Case "de-ch"
@@ -198,11 +198,11 @@ Sub SetLCID()
         Case "ro"
           strLCID = 1048 ' Romanian
         Case "ro-mo"
-          strLCID = 2072 ' Romanian(Moldavia)
+          strLCID = 2072 ' Romanian(Moldova)
         Case "ru"
           strLCID = 1049 ' Russian
         Case "ru-mo"
-          strLCID = 2073 ' Russian(Moldavia)
+          strLCID = 2073 ' Russian(Moldova)
         Case "sz"
           strLCID = 1083 ' Sami(Lappish)
         Case "sr"

@@ -15,14 +15,13 @@ ms.technology: windows-client-user-profiles
 ---
 # Renaming a user account doesn't automatically change the profile path
 
-This article provides a workaround for an issue where renaming a user account doesn't automatically change the profile path.
+When you rename a user account on a computer that is running Windows 7 or Windows Server 2008 R2, the user profile path isn't changed automatically. It may cause some confusion when the `%SystemDrive%\users` folder is viewed. This article provides a workaround for this issue.
+
+> [!IMPORTANT]
+> Don't applies the workaround to computers that are running Windows 10 or a later version of Windows. It can cause the `winget` command to stops working.
 
 _Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2454362
-
-## Summary
-
-When you rename a user account on a computer that is running Windows 7 or Windows Server 2008 R2, the user profile path isn't changed automatically. It may cause some confusion when the `%SystemDrive%\users` folder is viewed
 
 ## Status
 

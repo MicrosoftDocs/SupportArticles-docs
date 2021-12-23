@@ -21,13 +21,13 @@ To do this, select **United Kingdom & Ireland** in the **Country/Region** list d
 ## Step 2 - Enable VAT Daybook reporting
 
 1. On the **Tools** menu, point to **Setup**, point to **System**, and then select **Use VAT Daybook**.
-2. Select a report template for each company. For example, if you want to generate the VAT Daybook report for Great Britain, select **GB** in the **Report Template** list.
+2. Select a report template for each company. For example, if you want to generate the VAT Daybook report for United Kingdom, select **GB** in the **Report Template** list.
 
 ## Step 3 - Set up VAT Daybook report IDs and VAT Daybook column codes
 
 1. On the **Cards** menu, point to **Company**, and then select **VAT Daybook Reports**.
 2. In the **Report ID** field, type a report ID, and then type a description in the **Report Description** field.
-3. In the **Country Code** list, select a country code that is based on the country for which you are reporting VAT. For example, select **GB** for the country code for Great Britain.
+3. In the **Country Code** list, select a code that is based on the country/region for which you are reporting VAT. For example, select **GB** for the country/region code for United Kingdom.
 4. In the **Column Code** field, type column codes for each column that you want to display in the VAT Daybook report. Include the **European Union (EU) transactions** column and the **VAT reclaimed** column.
 5. Select **Add** when you are prompted to add the column code. The VAT Daybook Column Codes window automatically opens.
 6. Type descriptions in the **Description 1** field and in the **Description 2** field.
