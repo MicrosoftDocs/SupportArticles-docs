@@ -285,7 +285,7 @@ If the mail that's sent from PowerShell fails with the same SMTP server settings
 
 ## Step 6: Check the sysmail Service Broker objects
 
-Problems with the Service Broker objects in **msdb** may cause unsuccessful operation of Database Mail. A common problem is that one of the Service Broker queues (`ExternalMailQueue` and `InternalMailQueue`) is disabled. This problem can be caused by a poison message that can't be successfully sent in Service Broker. For example, malformed XML. If a message can't be sent after five attempts, it's considered "poison" and the queue will be disabled until the poison message is removed. Re-enabling the queue wonn't resolve the issue because the poison message is still in the queue and the failure sequence will just repeat. For more information about poison message, see [Poison Message Handling](https://techcommunity.microsoft.com/t5/sql-server-blog/poison-message-handling/ba-p/383454).
+Problems with the Service Broker objects in **msdb** may cause unsuccessful operation of Database Mail. A common problem is that one of the Service Broker queues (`ExternalMailQueue` and `InternalMailQueue`) is disabled. This problem can be caused by a poison message that can't be successfully sent in Service Broker. For example, malformed XML. If a message can't be sent after five attempts, it's considered "poison" and the queue will be disabled until the poison message is removed. Re-enabling the queue won't resolve the issue because the poison message is still in the queue and the failure sequence will just repeat. For more information about poison message, see [Poison Message Handling](https://techcommunity.microsoft.com/t5/sql-server-blog/poison-message-handling/ba-p/383454).
 
 One of the other Service Broker objects (such as `Message Type`, `Contract`, `Service`, and `Route`) may also be disabled or missing. The Service Broker queues have an activation procedure that's associated with the queue, so it's a possible point of failure. You can check the `activation_procedure` column in `msdb.sys.service_queues`, and then use `sp_helptext` to check whether there are any problems.
 
@@ -560,7 +560,7 @@ For Process Name, select *sqlservr.exe* and *DatabaseMail.exe*, and then add the
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-procmon-filter.png" alt-text="Screenshot of the procmon tool. It shows filtering Database Mail.":::
 
-As is the case of SQL XEvent or Trace capture, it's not immediately obvious what to looking for. Usually, the best way to start the analysis is to compare it to a Procmon capture for a successfully sent Database Mail. Ideally, compare to a successfully sent email from the same environment where the issue occurs. However, if no Database Mail can be successfully sent in the specific environment, compare it with a successfully sent email in another environment.
+Just as the case of SQL XEvent or Trace capture, it's not immediately obvious what to look for. Usually, the best way to start analysis is to compare your trace with a Procmon capture for a successfully sent Database Mail. Ideally, compare the trace to a successfully sent email from the same environment where the issue occurs. However, if no Database Mail is successfully sent in the specific environment, compare the trace with a successfully sent email in another environment.
 
 When *DatabaseMail.exe* fails to load a DLL or can't find the *DatabaseMail.exe.config* file, the analysis is useful.
 
