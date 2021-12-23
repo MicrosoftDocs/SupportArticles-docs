@@ -74,11 +74,13 @@ If SQL Server reports I/O latency, then refer to OS counters. You can determine 
    FROM sys.master_files f
    CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
   ```
- Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
+
+Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
 
    ```Powershell
    clear
    $cntr = 0 
+
 
    # replace with your server
    $serverName = "rabotenlaptop" 
@@ -118,7 +120,7 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
 
 If the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike - if it lasted 1 minute or more, then it is more of a plateau than a spike.
 
-If Performance monitor counters do not report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, i.e. filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure that proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and what volumes they attach to. Then you can look up the driver names and software vendor in this article: [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes).
+If `Performance monitor` counters do not report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, i.e. filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and the volumes they attach to. Then you can look up the driver names and software vendor in the [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes) article.
 
    ```Powershell
    fltmc instances
@@ -126,11 +128,11 @@ If Performance monitor counters do not report latency, but SQL Server does, then
 
 For more information, see the [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/en-us/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b) article.
 
-Avoid using file-level encryption (EFS) and file-system compression because they cause asynchronous I/O to become synchronous and therefore slower. For more information, see the [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#compression) article.
+Avoid using Encrypting File System (EFS) and file-system compression because they cause asynchronous I/O to become synchronous and therefore slower. For more information, see the [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#compression) article.
 
 ### Is the I/O subsystem overwhelmed beyond capacity?
 
-If SQL Server and the OS indicate I/O subsystem is slow, then find out if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can only push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch.  The expected throughput capacity defined by hardware manufacturer defines how you proceed from here.
+If SQL Server and the OS indicate I/O subsystem is slow, then find out if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
 
 ```powershell
 clear
@@ -153,20 +155,20 @@ Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
 
 ### Is SQL Server driving the heavy I/O activity?
 
-If I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then you need to work with the Application Development teams (or application vendor) to
+If I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then you need to work with the Application Development teams (or application vendor) to:
 
 - Tune queries - better indexes, update statistics, rewrite queries, redesign the database, etc.
 - Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options), or add more RAM on the system. This will allow more data/index pages to be cached and not re-read from disk frequently, thus reduce I/O activity.
 
 ## Causes
 
-In general there exist three high-level reasons why SQL Server queries suffer from I/O latency:
+In general, there exist three high-level reasons why SQL Server queries suffer from I/O latency and they are:
 
- - **Hardware issues:** There is a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (throughout entire SAN network, not just back-end storage), drivers/firmware bug, and so on. This stage is where the hardware vendor need to be engaged.
+ - **Hardware issues:** There is a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (throughout entire SAN network, not just back-end storage), drivers/firmware bug, and so on. This stage is where a hardware vendor needs to be engaged.
 
- - **Query Issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, you likely need to find queries that are causing a large number of logical reads (or writes) and tune the queries them to minimize the disk I/O. Using appropriate indexes helps in providing the optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also incorrect database design and query design lead to increase in I/O.
+ - **Query Issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, you will need to find queries that are causing a large number of logical reads (or writes) and tune the queries them to minimize the disk I/O. Using appropriate indexes helps in providing the optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also incorrect database design and query design lead to increase in I/O.
 
- - **Filter Drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers, which process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendor is recommended to prevent this from happening.
+ - **Filter Drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendor is recommended to prevent this from happening.
 
 ## Graphical representation of the methodology
 
@@ -178,11 +180,11 @@ Following are descriptions of the common wait types observed in SQL Server when 
 
 ### PAGEIOLATCH_EX
 
-Occurs when a task is waiting on a latch for a data or index page (buffer) that is in an I/O request. The latch request is in Exclusive mode - a mode used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.
+Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in Exclusive mode - a mode used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.
 
 ### PAGEIOLATCH_SH
 
-Occurs when a task is waiting on a latch for a data/index page (buffer) that is in an I/O request. The latch request is in Shared mode - a mode used when the buffer is being read from disk. Long waits may indicate problems with the disk subsystem.
+Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in Shared mode - a mode used when the buffer is being read from disk. Long waits may indicate problems with the disk subsystem.
 
 ### PAGEIOLATCH_UP
 
@@ -190,7 +192,7 @@ Occurs when a task is waiting on a latch for a buffer that is in an I/O request.
 
 ### WRITELOG
 
-Occurs while waiting for a transaction log flush to complete. A flush occurs when the Log Manger writes its temporary contents to disk. Common operations that cause log flushes are transaction commits and checkpoints.
+Occurs while waiting for a transaction log flush to complete. A flush occurs when the Log Manager writes its temporary contents to disk. Common operations that cause log flushes are transaction commits and checkpoints.
 
 Common reasons for long waits on `WRITELOG` are:
 
@@ -200,7 +202,7 @@ Common reasons for long waits on `WRITELOG` are:
 
  - **Too many small Transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, update will result into a transaction (we call this auto transaction). If you do 1000 inserts in a loop, there will be 1000 transactions generated. Each transaction in this example needs to commit which results in a transaction log flush. This will result in 1000 transaction flushes. When possible, group individual update/delete/insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer WRITELOG waits.
 
- - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log writer thread performed all log writes. If there were issues with thread scheduling (for example, very high CPU) the Log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 log writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019 up to 8 Log writer threads were added which improves throughput even more. Also in SQL Server 2019 each regular worker thread can do log writes directly instead of posting to Log Writer thread. With these improvements, WRITELOG waits would rarely be triggered by scheduling issues.
+ - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log writer thread performed all log writes. If there were issues with thread scheduling (for example, very high CPU) the Log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 log writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to 8 Log writer threads were added which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log Writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
 
 ### ASYNC_IO_COMPLETION
 
@@ -208,7 +210,7 @@ Occurs when some of the following I/O activities happen:
 
 - Bulk Insert Provider ("Insert Bulk") uses when performing I/O
 - Reading Undo file in LogShipping and direct Async I/O for Log Shipping
-- Reading the actual data from the data files during a data backup 
+- Reading the actual data from the data files during a data backup
 
 ### IO_COMPLETION
 
@@ -223,4 +225,4 @@ Occurs while waiting for I/O operations to complete. This wait type generally in
 
 ### BACKUPIO
 
-Occurs when a backup task is waiting for data, or is waiting for a buffer in which to store data. This type is not typical, except when a task is waiting for a tape mount.
+Occurs when a backup task is waiting for data, or is waiting for a buffer to store data. This type is not typical, except when a task is waiting for a tape mount.
