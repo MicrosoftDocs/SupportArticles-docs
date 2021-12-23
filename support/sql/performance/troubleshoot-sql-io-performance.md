@@ -15,7 +15,7 @@ ms.author: v-yunhya
 
 The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are `Avg Disk sec/ Read`, `Avg. Disk sec/Write` and `Avg. Disk sec/Transfer` (cumulative of both reads and writes).
 
-In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions - `WriteFile()`, `ReadFile()`, `WriteFileGather()` and `ReadFileScatter()`. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. TheI/O related waits are:
+In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions - `WriteFile()`, `ReadFile()`, `WriteFileGather()` and `ReadFileScatter()`. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. The I/O related waits are:
 
 - [PAGEIOLATCH_SH](#pageiolatch_sh) / [PAGEIOLATCH_EX](#pageiolatch_ex)
 - [WRITELOG](#writelog)
@@ -32,11 +32,11 @@ If these waits exceed 10-15 milliseconds on a consistent basis, then I/O is cons
 
 The following is a description of the methodology Microsoft CSS uses to approach slow I/O issues with SQL Server. It is not an exhaustive or exclusive approach, but has proven useful in isolating the issue and resolving it.
 
-A flow chart at the end of this article provides a visual representation of this methodology.
+A [flow chart](#graphical-representation-of-the-methodology) at the end of this article provides a visual representation of this methodology.
 
 ### Is SQL Server reporting slow I/O?
 
-Determine if there is I/O latency reported by SQL Server wait types. The values `PAGEIOLATCH_*`, `WRITELOG` and `ASYNC_IO_COMPLETION` and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and warrants further investigation. The following query may help you gather this diagnostic information on your system:
+Determine if there is I/O latency reported by SQL Server wait types. The values `PAGEIOLATCH_*`, `WRITELOG`, and `ASYNC_IO_COMPLETION` and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and warrants further investigation. The following query may help you gather this diagnostic information on your system:
 
    ```Powershell
    
