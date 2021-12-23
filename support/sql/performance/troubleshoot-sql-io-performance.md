@@ -11,7 +11,7 @@ ms.author: v-yunhya
 
 # Troubleshooting SQL Server Slow Performance Caused by IO issues
 
-## Define slow I/O performance:
+## Define slow I/O performance
 
 The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are **Avg Disk sec/ Read**, **Avg. Disk sec/Write** and **Avg. Disk sec/Transfer** (cumulative of both reads and writes).
 
@@ -28,15 +28,12 @@ If these waits exceed 10-15 milliseconds on a consistent basis, then I/O is cons
 > [!NOTE]
 > To provide context and perspective, in the world of t-shooting SQL Server, CSS has observed cases where an I/O request took over 1 second and as high as 15 seconds per transfer! Obviously such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is below 1 millisecond /transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 ms/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, once numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors. 
 
-
 ## Methodology
-
 The following is a description of the methodology Microsoft CSS uses to approach slow I/O issues with SQL Server. It is not an exhaustive or exclusive approach, but has proven useful in isolating the issue and resolving it.
 
 A flow chart at the end of this article provides a visual representation of this methodology.
 
-
-### 1. Is SQL Server reporting slow I/O?
+### Is SQL Server reporting slow I/O?
 Determine if there is I/O latency reported by SQL Server wait types. **PAGEIOLATCH_***, **WRITELOG**, **ASYNC_IO_COMPLETION** values, and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and warrants further investigation. The following query may help you gather this diagnostic information on your system:
 
    ```Powershell
@@ -65,8 +62,7 @@ Longer than 15 secs
 
 Also, you can review [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) for more details on this error.
 
-
-### 2. Do Perfmon counters indicate I/O latency?
+### Do Perfmon counters indicate I/O latency?
 
 If SQL Server reports I/O latency, then refer to OS counters. You can determine if there is an I/O problem, by examining the latency counter **Avg Disk Sec/Transfer**. Below is one way to collect this information through PowerShell; it gathers counters on all disk volumes: "_total". Please change to a specific drive volume (for example "D:"). To find which volumes host your database files, run this query in your SQL Server:
 
@@ -75,8 +71,7 @@ If SQL Server reports I/O latency, then refer to OS counters. You can determine 
    FROM sys.master_files f
    CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
   ```
-
-Gather Avg Disk Sec/Transfer metrics on your volume of choice:
+   Gather Avg Disk Sec/Transfer metrics on your volume of choice:
 
    ```Powershell
    clear
@@ -117,12 +112,9 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
      Write-Host "There is NO indication of slow I/O performance on your system"
    }
    ```
+If, the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike - if it lasted 1 minute or more, then it is more of a plateau than a spike.
 
-
-2.1 If, the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike - if it lasted 1 minute or more, then it is more of a plateau than a spike.
-
-
-2.2 If Performance monitor counters do not report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, i.e. filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure that proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and what volumes they attach to. Then you can look up the driver names and software vendor in this article: [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes)
+If Performance monitor counters do not report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, i.e. filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure that proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and what volumes they attach to. Then you can look up the driver names and software vendor in this article: [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes).
 
    ```Powershell
    fltmc instances
