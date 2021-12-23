@@ -15,7 +15,7 @@ ms.author: v-yunhya
 
 The metric commonly used to measure slow I/O performance is the one that measures how fast the I/O subsystem is servicing each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are `Avg Disk sec/ Read`, `Avg. Disk sec/Write` and `Avg. Disk sec/Transfer` (cumulative of both reads and writes).
 
-In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions - `WriteFile()`, `ReadFile()`, `WriteFileGather()` and `ReadFileScatter()`. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. The I/O related waits are:
+In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions - `WriteFile()`, `ReadFile()`, `WriteFileGather()` and `ReadFileScatter()`. When it posts an I/O request, SQL Server times the request and reports how long that request took using [Wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses Wait Types to indicate I/O waits at different places in the product. TheI/O related waits are:
 
 - [PAGEIOLATCH_SH](#pageiolatch_sh) / [PAGEIOLATCH_EX](#pageiolatch_ex)
 - [WRITELOG](#writelog)
@@ -74,7 +74,7 @@ If SQL Server reports I/O latency, then refer to OS counters. You can determine 
    FROM sys.master_files f
    CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
   ```
-   Gather Avg Disk Sec/Transfer metrics on your volume of choice:
+ Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
 
    ```Powershell
    clear
@@ -116,7 +116,7 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
    }
    ```
 
-If, the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike - if it lasted 1 minute or more, then it is more of a plateau than a spike.
+If the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike - if it lasted 1 minute or more, then it is more of a plateau than a spike.
 
 If Performance monitor counters do not report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, i.e. filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure that proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and what volumes they attach to. Then you can look up the driver names and software vendor in this article: [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes).
 
