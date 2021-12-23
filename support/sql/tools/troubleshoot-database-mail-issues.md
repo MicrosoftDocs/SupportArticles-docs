@@ -140,9 +140,13 @@ You can also check mails in `sysmail_unsentitems` if there are problems with the
 - The message is new. Although the message has been placed on the mail queue, Database Mail is working on other messages and has not yet reached this message.
 - The Database Mail external program is not running, and no mail is sent.
 
-Messages can have the **retrying** status for the following reason:
+Messages can have the **retrying** status for the following reasons:
 
-Database Mail tried to send the mail, but could not contact the SMTP mail server. Database Mail continues to try to send the message by using other Database Mail accounts that are assigned to the profile which sent the message. If no account can send the mail, Database Mail will wait for the length of time that's configured for the `Account Retry Delay` parameter, and then try to send the message again. Database Mail uses the parameter to determine how many times are tried to send the message. When Database Mail tries to send the message, the message remains the **retrying** status.
+- Database Mail tried to send the mail, but could not contact the SMTP mail server. Database Mail continues to try to send the message by using other Database Mail accounts that are assigned to the profile, which sent the message. If no account can send the mail, Database Mail will wait for the length of time that's configured for the `Account Retry Delay` parameter, and then try to send the message again. Database Mail uses the parameter to determine how many times are tried to send the message. When Database Mail tries to send the message, the message remains the **retrying** status.
+- Database Mail connects to SMTP server but encounters an error. The SMTP error code returned by SMTP server and any accompanying error message can be used for further troubleshooting.
+
+> [!NOTE]
+> It would be could to provide a link of SMTP error codes, but not sure what resource would be best. [Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online) might be worth considering because there's also articles for fixing the different errors. But, this is for Exchange Online and there's a ton of error codes that we wouldn't see with Database Mail. Plus, even for same SMTP error code, the error language is different. In lieu of finding another resource for SMTP error codes, you could reference the different scenarios in the Common Scenarios tab of the Database Mail workflow. But that's not a comprehensive list by any means.
 
 ### Sysmail_faileditems
 
@@ -209,7 +213,7 @@ Pay special attention to:
 
 - Server name and port number. The server name must be a fully qualified domain name and the port number must be accurate. Generally, the default SMTP port is 25, but you need to check the current SMTP configuration.
 
-- SSL. Verify whether the SMTP server requires Secure Sockets Layer (SSL) and Transport Layer Security (TLS).
+- SSL. Verify whether the SMTP server requires Secure Sockets Layer (SSL) or Transport Layer Security (TLS).
 
 - SMTP authentication. Are you using the Windows authentication of the Database Engine service, basic authentication with a domain account specified, or anonymous authentication? You need to validate what the SMTP server allows in your own environment. If a domain account is specified (either service account or basic authentication), it must have the permissions on the SMTP server.
 
@@ -223,7 +227,7 @@ To check the system parameters, follow the steps:
 
 1. Click **View or change system parameters**.
 
-The following screenshot shows the default settings. Notice any unique system parameters and determine whether they are related to the issue that you're troubleshooting.
+The following screenshot shows the default values for the system parameters. Notice any unique system parameters and determine whether they are related to the issue that you're troubleshooting. 
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-configuration-systemparameters.png" alt-text="Screenshot of configure system parameters in Database mail Configuration Wizard.":::
 
@@ -240,7 +244,7 @@ To send a test Database Mail, right-click on **Management** \> **Database Mail**
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail_send-test-mail.png" alt-text="Screenshot of sending test mail with Database Mail.":::
 
 After you send the test mail, check the Database Mail log and sysmail views for what happened to the test mail.
-- If the test mail isn't sent successfully, check the account configuration and compare with the SMTP server requirements at which point you may need to involve the SMTP server administrator.
+- If the test mail isn't sent successfully, use this document to troubleshoot why it's not being sent.
 - If the test mail is sent successfully, but there are still problems with other mails that are not sent, focus on the details of the email messages that aren't getting sent. Review the actual `sp_send_dbmail` command that is being executed. If you don't have the Transact-SQL command, gather an XEvent trace by using `sql_batch_completed` and `sql_batch_started` commands and look at the `batch_text` column.
 
 ### Send a test email with PowerShell
@@ -254,7 +258,7 @@ If the mail that's sent from PowerShell fails with the same SMTP server settings
     ```PowerShell
     $EmailFrom = "dbmail@contoso.com"
     $EmailPass = "Y0reP@ssw0rd"
-    $EmailTo = email_alias@contoso.com
+    $EmailTo = "email_alias@contoso.com"
     $Port = 587
     $Subject = "Test From PowerShell"
     $Body = "Did this work?"
@@ -270,7 +274,7 @@ If the mail that's sent from PowerShell fails with the same SMTP server settings
 
     ```PowerShell
     $EmailFrom = "dbmail@contoso.com"
-    $EmailTo = email_alias@contoso.com
+    $EmailTo = "email_alias@contoso.com"
     $Port = 25
     $Subject = "Test From PowerShell (Anonymous Auth, no SSL)"
     $Body = "Did this work?"
@@ -329,7 +333,7 @@ To solve the issues, you may need one or more of these collections. These are de
 - Event log
 - XEvent or SQL Server Trace
 - Process Monitor ([Procmon](/sysinternals/downloads/procmon))
-- [Procdump](/sysinternals/downloads/procdump)
+- [ProcDump](/sysinternals/downloads/procdump)
 - [Time travel debugging](/windows-hardware/drivers/debugger/debugger-download-tools)
 
 ## Method 1: Back up the msdb database
@@ -337,24 +341,24 @@ To solve the issues, you may need one or more of these collections. These are de
 It can be helpful to query the sysmail views in an environment that's separate from production. In some cases, you can back up the **msdb** database and then restore to another instance. The sysmail views are all defined with reference to msdb, so even when querying in the restored **msdb** backup, the views will reference the **msdb** system database in your instance. To re-create sysmail views from the production **msdb**, re-create the sysmail views in the user database by using the following script.
 
 ```sql
-/* sysmail_allitems  */
+/* sysmail_allitems_event_log */
 
 USE [msdb_customer]
 GO
 
 PRINT ''
-PRINT 'Creating view sysmail_allitems in msdb backup from customer...'
+PRINT 'Creating view sysmail_allitems_event_log in msdb backup from customer...'
 GO
 IF (EXISTS (SELECT *
             FROM [msdb_customer].dbo.sysobjects
-            WHERE (NAME = N'sysmail_allitems')
+            WHERE (NAME = N'sysmail_allitems_event_log')
               AND (TYPE = 'V')))
-  DROP VIEW sysmail_allitems
+  DROP VIEW sysmail_allitems_event_log
 GO
 
-CREATE VIEW sysmail_allitems
+CREATE VIEW sysmail_allitems_event_log
 AS
-SELECT mailitem_id,
+SELECT sm.mailitem_id,
        profile_id,
        recipients,
        copy_recipients,
@@ -384,10 +388,25 @@ SELECT mailitem_id,
           ELSE 'failed' 
        END AS sent_status,
        sent_date,
-       last_mod_date,
-       last_mod_user
-FROM [msdb_customer].dbo.sysmail_mailitems
-WHERE (send_request_user = SUSER_SNAME()) OR (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1)
+       sm.last_mod_date,
+       sm.last_mod_user,
+       log_id,
+       CASE event_type 
+          WHEN 0 THEN 'success' 
+          WHEN 1 THEN 'information' 
+          WHEN 2 THEN 'warning' 
+          ELSE 'error' 
+       END as event_type,
+       log_date,
+       description,
+       process_id,
+       sl.mailitem_id,
+       account_id,
+       sl.last_mod_date,
+       sl.last_mod_user
+FROM msdb.dbo.sysmail_mailitems sm LEFT JOIN msdb.[dbo].[sysmail_log] sl on sm.mailitem_id=sl.mailitem_id
+WHERE (send_request_user = SUSER_SNAME()) OR (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) and ((ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR 
+      (EXISTS ( SELECT mailitem_id FROM msdb.[dbo].[sysmail_allitems] ai WHERE sl.mailitem_id = ai.mailitem_id )))
 
 GO
 
@@ -453,43 +472,6 @@ AS
 SELECT * FROM [msdb_customer].dbo.sysmail_allitems WHERE sent_status = 'failed'
 
 GO
-
-/* sysmail_event_log */
-
-USE [msdb_customer]
-GO
-
-PRINT ''
-PRINT 'Creating view sysmail_event_log in msdb backup from customer...'
-GO
-IF (EXISTS (SELECT *
-            FROM [msdb_customer].dbo.sysobjects
-            WHERE (NAME = N'sysmail_event_log')
-              AND (TYPE = 'V')))
-  DROP VIEW sysmail_event_log
-GO
-
-CREATE VIEW sysmail_event_log
-AS
-SELECT log_id,
-       CASE event_type 
-          WHEN 0 THEN 'success' 
-          WHEN 1 THEN 'information' 
-          WHEN 2 THEN 'warning' 
-          ELSE 'error' 
-       END as event_type,
-       log_date,
-       description,
-       process_id,
-       sl.mailitem_id,
-       account_id,
-       sl.last_mod_date,
-       sl.last_mod_user
-FROM [msdb_customer].[dbo].[sysmail_log]  sl
-WHERE (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR 
-      (EXISTS ( SELECT mailitem_id FROM [msdb_customer].[dbo].[sysmail_allitems] ai WHERE sl.mailitem_id = ai.mailitem_id ))
-
-GO
 ```
 
 For more information about sysmail views, see the [sysmail system views](#msdb-sysmail-system-views) section.
@@ -526,7 +508,7 @@ Report Status: 4100
 Hashed bucket:"
 ```
 
-You can retrieve all files that show AppCrash_DatabaseMail.exe_\* in the *..\\WER\\ReportQueue* path. See the [Procdump Analysis](#analyze-the-exception-dump) section for dump analysis suggestions.
+You can retrieve all files that show AppCrash_DatabaseMail.exe_\* in the *..\\WER\\ReportQueue* path. See the [ProcDump Analysis](#analyze-the-exception-dump) section for dump analysis suggestions.
 
 ## Method 3: Collect and analyze XEvent or SQL Server Trace
 
@@ -540,7 +522,7 @@ You can use [PSSDiag](https://github.com/microsoft/DiagManager/releases) to coll
 
 ### Analyze the Xevent or SQL trace
 
-Five different sessions (SPIDs) usually contain useful information about troubleshooting a Database Mail issue.
+When a Database Mail is sent, there are typically five different sessions (SPIDs) that you will see in an Xevent or Profiler capture.
 
 - **sp_send_dbmail**: After you run the Transact-SQL statement, you see the Service Broker events that are used to put the messages on the `ExternalMailQueue` queue.
 
@@ -560,15 +542,16 @@ It's difficult to know what exactly you should expect to see unless you've revie
 
 Process Monitor produces a noisy capture. In order not to miss anything, it's better to apply filters to the data after it is captured rather than during the capture process. Typically, you can target the capture around a repro of the Database Mail issue, so the overall data captured would not be too large.
 
-### Capture file, registry, network, process and thread events
+### Capture file, registry, network, process, and thread events
 
 When you start *procmon.exe*, it begins capturing data immediately. The GUI is straightforward. You need to stop the capturing of events until you're ready to reproduce the issue. Select **File** > **Capturing Events (Ctrl+E)** to uncheck the menu item and stop event collection. Select the eraser icon or press Ctrl+X to clear the events that are already captured:
 
 :::image type="content" source="media/troubleshoot-database-mail-issues/db-mail-procmon-clear.png" alt-text="Screenshot of the procmon tool. It shows you that clears the events.":::
 
-To reproduce the issue, follow the steps:
+When you're ready to reproduce the Database Mail problem:
 
-1. Select **File** > **Capturing Events (Ctrl+E)** to start capturing events, which reproduces the issue.
+1. Select **File** > **Capturing Events (Ctrl+E)** to start capturing events.
+1. Try to send the Database Mail to reproduce the issue.
 1. Select **File** > **Capturing Events (Ctrl+E)** to stop capturing events.
 1. Save the file as *.PML.
 
@@ -584,15 +567,15 @@ As is the case of SQL XEvent or Trace capture, it's not immediately obvious what
 
 When *DatabaseMail.exe* fails to load a DLL or can't find the *DatabaseMail.exe.config* file, the analysis is useful.
 
-## Method 5: Collect and analyze the exception dump by using Procdump tool
+## Method 5: Collect and analyze the exception dump by using ProcDump tool
 
 [ProcDump](/sysinternals/downloads/procdump) is also a part of the Windows Sysinternals suite. 
 
-Procdump is useful when you try to capture a memory dump of the *DatabaseMail.exe* external program. Typically, you use Procdup for troubleshooting when *DatabaseMail.exe* encounters an unhandled exception.
+ProcDump is useful when you try to capture a memory dump of the *DatabaseMail.exe* external program. Typically, you use ProcDump for troubleshooting when *DatabaseMail.exe* encounters an unhandled exception.
 
-### Configure Procdump
+### Configure ProcDump
 
-To configure Procdump to capture a dump of *DatabaseMail.exe* when encountering an unhandled exception, open a command prompt with administrator privileges firstly. Then, enable Procdump to capture the dump of the *DatabaseMail.exe* process by using the following command:
+To configure ProcDump to capture a dump of *DatabaseMail.exe* when encountering an unhandled exception, open a command prompt with administrator privileges firstly. Then, enable ProcDump to capture the dump of the *DatabaseMail.exe* process by using the following command:
 
 ```console
 c:\Sysinternals> procdump -ma -t DatabaseMail.exe -w e2
@@ -608,7 +591,7 @@ Sysinternals - www.sysinternals.com
 Waiting for process named DatabaseMail.exe...
 ```
 
-Then, reproduce the issue. The dump will be created in the same folder where you've executed *procdump.exe*.
+Then, reproduce the issue. The dump will be created in the same folder where you've executed *ProcDump.exe*.
 
 ### Analyze the exception dump
 
