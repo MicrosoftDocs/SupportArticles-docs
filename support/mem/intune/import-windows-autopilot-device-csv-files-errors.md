@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot error 806 or 808 when importing Windows Autopilot CSV files
 description: Describes an issue in which you receive the ZtdDeviceAlreadyAssigned (806) or ZtdDeviceAssignedToOtherTenant (808) error message when you import Windows Autopilot device CSV files in Microsoft Intune.
-ms.date: 10/06/2021
+ms.date: 12/23/2021
 ms.prod-support-area-path: Windows enrollment
 ---
 # Error 806 or 808 when you import Windows Autopilot device CSV files in Intune
@@ -10,7 +10,7 @@ This article helps you fix an issue where you receive the **ZtdDeviceAlreadyAssi
 
 ## Symptoms
 
-When you try to import a CSV file on the [Windows Autopilot devices](https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/windowsEnrollment) blade in the Azure portal (**Microsoft Intune** > **Device enrollment** > **Windows enrollment** > **Windows Autopilot devices**), you receive an error message similar to these:
+When you try to import a CSV file in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**), , you receive an error message similar to these:
 
 > Error details  
 > Device is already registered to the same Tenant.  
@@ -37,9 +37,9 @@ To fix the issue, confirm whether the device record exists in Microsoft Store fo
 1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com/).
 1. Select **Manage**, and then select **Devices**.
 1. Locate the device. If the device record exists, select the device, and then select **Remove devices**.
-1. Return to the [Windows Autopilot devices](https://portal.azure.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/windowsEnrollment) blade in the Azure portal, and then reimport the CSV file.
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then reimport the CSV file.
 
-If the device record doesn't exist in Microsoft Store for Business or Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support):
+If the device record doesn't exist in Microsoft Store for Business or Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support in Microsoft Endpoint Manager admin center](/mem/intune/fundamentals/get-support):
 
 - **Device CSV**: A copy of the device CSV file that generates the error.
 - **Proof of ownership**: Typically, this is a bill of sale or an invoice in PDF format.

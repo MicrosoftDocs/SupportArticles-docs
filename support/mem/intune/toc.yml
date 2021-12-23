@@ -209,16 +209,28 @@ items:
       href: device-stuck-in-enrollment.md
     - name: Profile installation failed
       href: profile-installation-failed.md
-    - name: Auto-enrollment doesn't start on Apple DEP devices
+    - name: Auto-enrollment doesn't start on Apple ADE devices
       href: apple-dep-device-fails-auto-enrollment.md
-    - name: DEP enrollment error XPC_TYPE_ERROR
+    - name: ADE enrollment error XPC_TYPE_ERROR
       href: dep-enrollment-xpc-type-error.md
+  - name: macOS enrollment
+    items:
+    - name: Troubleshoot macOS virtual machine enrollment
+      href: troubleshoot-macos-vm-enrollment.md
     - name: Keychain error -25244 during enrollment
       href: keychain-error-enrolling-macos-devices.md
-  - name: Troubleshoot macOS virtual machine enrollment
-    href: troubleshoot-macos-vm-enrollment.md
   - name: Windows enrollment
     items:
+    - name: Windows Autopilot
+      items:
+      - name: Troubleshoot the Enrollment Status Page
+        href: understand-troubleshoot-esp.md
+      - name: Troubleshoot Azure AD device registration and Windows Autopilot
+        href: azure-ad-device-registration-autopilot.md
+      - name: Error importing Windows Autopilot CSV files
+        href: import-windows-autopilot-device-csv-files-errors.md
+      - name: Can't delete Windows Autopilot deployment profile
+        href: cannot-delete-autopilot-deployment-profile.md
     - name: Troubleshoot Windows enrollment errors
       href: troubleshoot-windows-enrollment-errors.md
     - name: Windows user not authorized to enroll
@@ -235,16 +247,6 @@ items:
       href: troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
     - name: Windows failed to apply the MDM Policy settings
       href: windows-failed-to-apply-mdm-policy.md
-    - name: Can't delete Windows Autopilot deployment profile
-      href: cannot-delete-autopilot-deployment-profile.md
-    - name: Troubleshoot the Enrollment Status Page
-      href: understand-troubleshoot-esp.md
-    - name: Error importing Windows Autopilot CSV files
-      href: import-windows-autopilot-device-csv-files-errors.md
-    - name: Troubleshoot Azure AD device registration and Windows Autopilot
-      href: azure-ad-device-registration-autopilot.md
-    - name: Comparison of methods for enrolling a Windows device in Intune
-      href: enroll-devices-in-intune-tip.md
 - name: Device management
   items:
   - name: Troubleshoot device actions

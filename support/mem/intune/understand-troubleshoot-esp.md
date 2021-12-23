@@ -4,7 +4,7 @@ description: General troubleshooting guide for the Enrollment Status Page (ESP) 
 author: helenclu
 ms.author: luche
 ms.reviewer: ybao
-ms.date: 10/06/2021
+ms.date: 12/23/2021
 ms.prod-support-area-path: Windows enrollment
 ---
 # Troubleshooting the Enrollment Status Page
@@ -13,7 +13,7 @@ This article gives guidance for troubleshooting the Enrollment Status Page (ESP)
 
 To troubleshoot ESP issues, it's important to get more information about the ESP settings that are received by the device, and the applications and policies that are tracked at each stage. All ESP settings and tracking information are logged in the device registry. In this article, we'll show you how to collect MDM diagnostic log files and look for information in the registry.
 
-See the Microsoft Intune documentation for a list of [known issues](/mem/intune/enrollment/windows-enrollment-status#known-issues) related to the ESP.
+See the Windows Autopilot documentation for a list of [known issues](/mem/autopilot/known-issues) and additional [troubleshooting guidance](/windows/deployment/windows-autopilot/troubleshooting).
 
 ## Collect logs
 
@@ -206,7 +206,7 @@ This subkey is created during the account setup phase if the device setup phase 
 
 :::image type="content" source="media/understand-troubleshoot-esp/usersid.png" alt-text="Screenshot shows the information of the user SID subkey.":::
 
-## Common questions for troubleshooting ESP-related issues
+## Common questions for ESP troubleshooting
 
 ### Why were my applications not installed and tracked by using the ESP?
 
