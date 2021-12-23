@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 943891
 
 ## Introduction
 
-When you try to access content on a server, that is running (IIS) 7.0, 7.5 or later versions, by using the HTTP protocol, IIS returns a numeric code that indicates the status of the response. The HTTP status code is recorded in the IIS log. Additionally, the HTTP status code may be displayed in the client browser.
+When you try to access content on a server that is running (IIS) 7.0, 7.5 or later versions by using the HTTP protocol, IIS returns a numeric code that indicates the status of the response. The HTTP status code is recorded in the IIS log. Additionally, the HTTP status code may be displayed in the client browser.
 
 The HTTP status code may indicate whether a request is successful or unsuccessful. The HTTP status code may also reveal the exact reason that a request is unsuccessful.
 
