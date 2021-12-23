@@ -1058,7 +1058,7 @@
     {
       "source_path": "support/windows-server/networking/description-dnslint-utility.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/description-dnslint-utility",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
