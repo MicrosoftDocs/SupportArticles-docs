@@ -41,9 +41,9 @@ Typically, the following information about your computer is included in the CSR 
 
 - Organization
 - Organizational unit
-- Country
-- State
-- Locality
+- Country/region
+- State/province
+- City/locality
 - Common name
 
 > [!NOTE]
@@ -63,7 +63,7 @@ Typically, the following information about your computer is included in the CSR 
 
 7. In the **Organization Information** section, enter your organization and organizational unit information. This must be accurate, because you are presenting these credentials to a third-party CA and you must comply with their licensing of the certificate. Select **Next** to access the **Your Site's Common Name** section.
 8. The **Your Site's Common Name** section is responsible for binding the certificate to your Web site. For SSL certificates, enter the host computer name with the domain name. For Intranet servers, you may use the NetBIOS name of the computer that is hosting the site. Select **Next** to access geographical information.
-9. Enter your country, state or province, and country or region information. Completely spell out your state or province and country or region; don't use abbreviations. Select **Next**.
+9. Enter your country or region, state or province, and city or locality information. Completely spell out your state or province and city or locality. And don't use abbreviations. Select **Next**.
 10. Save the file as a .txt file.
 11. Confirm your request details. Select **Next** to finish, and exit the Web Server Certificate Wizard.
 

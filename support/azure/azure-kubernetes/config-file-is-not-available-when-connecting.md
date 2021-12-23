@@ -1,7 +1,7 @@
 ---
 title: Config file isn't available when connecting
 description: Troubleshoot issues caused by a missing config file when you attempt to connect to an Azure Kubernetes Service (AKS) cluster.
-ms.date: 12/06/2021
+ms.date: 12/10/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "rissing,chiragpa"
@@ -27,7 +27,7 @@ Unable to connect to the server: dial tcp [::1]:8080: connectex: No connection c
 error: You must be logged in to the server (the server has asked for the client to provide credentials)
 ```
 
-## Cause
+## Causes
 
 The [kubectl tool](https://kubernetes.io/docs/reference/kubectl/overview/) and other Kubernetes connection tools use a local configuration file named *config*. The *config* file contains authentication credentials and details to connect to the cluster. By default:
 
@@ -35,7 +35,7 @@ The [kubectl tool](https://kubernetes.io/docs/reference/kubectl/overview/) and o
 
 - The kubectl command uses the [kubeconfig (kubectl configuration) file](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) in the *$HOME/.kube* directory.
 
-So what happens during an attempted Kubernetes session depends on the user who's running the kubectl command. If you have signed in as user A, and executed both commands:
+So what happens during an attempted Kubernetes session depends on the user who's running the kubectl command. If you've signed in as user A, and executed both commands, here's what happens:
 
 - The `az aks get-credentials` command tries to add the new kubeconfig parameters in the *C:\\Users\\A\\.kube\\config* file.
 
@@ -48,25 +48,13 @@ But for kubectl, if the pointer to the kubeconfig file has changed, the file tha
 
 The error occurs if one of the following scenarios occurs:
 
-### Cause 1: The *config* file doesn't exist
+## Cause 1: The *config* file doesn't exist
 
 The *config* file doesn't exist on your machine.
 
-### Cause 2: The *config* file is in the wrong directory
+### Solution: Save the credentials
 
-The *config* file is on your machine. But it's in a different directory from where the `az aks get-credentials` command and/or the kubectl tool expects it to be.
-
-### Cause 3: The *config* file has expired or is corrupted
-
-The *config* file is on your machine. It's also in the expected directory for the `az aks get-credentials` command and the kubectl tool. But the file is expired or corrupted.
-
-## Solution
-
-Check your expected location for the *config* file. Then follow the appropriate solution steps for your scenario.
-
-### Solution 1: If the *config* file doesn't exist
-
-Load the file by running the `az aks get-credentials` command in Azure CLI. If you don't want to use the default location, specify the `--file <config-file-location>` parameter with the location of *config* (for example, *~/Dir1/Dir2/config* or *C:\\Dir1\\Dir2\\config*).
+Load the *config* file by running the `az aks get-credentials` command in Azure CLI, which saves the credentials. If you don't want to use the default location, specify the `--file <config-file-location>` parameter with the location of *config* (for example, *~/Dir1/Dir2/config* or *C:\\Dir1\\Dir2\\config*).
 
 ```azurecli
 az aks get-credentials --resource-group <cluster-resource-group> \
@@ -74,11 +62,15 @@ az aks get-credentials --resource-group <cluster-resource-group> \
     [--file <config-file-location>]
 ```
 
-### Solution 2: If the *config* file is in the wrong directory
+## Cause 2: The *config* file is in the wrong directory
+
+The *config* file is on your machine, but it's in a different directory from where the `az aks get-credentials` command and/or the kubectl tool expects it to be.
+
+### Solution: Move the *config* file, save the credentials again, or change the KUBECONFIG environment variable
 
 Take one or more of the following actions:
 
-- Move the file to the directory you want *config* to be in.
+- Move the *config* file to the directory you want it to be in.
 
 - Run the `az aks get-credentials` command. Specify the location you want if it isn't the default location.
 
@@ -88,13 +80,17 @@ Take one or more of the following actions:
       [--file <config-file-location>]
   ```
 
-- Using one of the following options, change where kubectl looks for configuration parameters by:
+- Use one of the following options to change where kubectl looks for configuration parameters:
 
-  - Modifying the `KUBECONFIG` environment variable to point to the *config* file's current location. For more information, see [Set the KUBECONFIG environment variable](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable).
+  - Modify the `KUBECONFIG` environment variable to point to the *config* file's current location. For more information, see [Set the KUBECONFIG environment variable](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable).
 
-  - Running the [kubectl config](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config) command with the `--kubeconfig=<config-file-location>` parameter.
+  - Run the [kubectl config](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config) command with the `--kubeconfig=<config-file-location>` parameter.
 
-### Solution 3: If the *config* file has expired or is corrupted
+## Cause 3: The *config* file has expired or is corrupted
+
+The *config* file is on your machine. It's also in the expected directory for the `az aks get-credentials` command and the kubectl tool. But the file is expired or corrupted.
+
+### Solution: Reestablish the credentials
 
 Reestablish the credentials, because the existing credentials might be expired or corrupted. In that case, you may run the `az aks get-credentials` command with the `--overwrite-existing` parameter.
 
