@@ -1062,7 +1062,7 @@
     },
     {
       "source_path": "support/sql/performance/high-cpu-use-occurs-queries.md",
-      "redirect_url": "support/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_url": "/troubleshoot/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
       "redirect_document_id": true
     }
 
