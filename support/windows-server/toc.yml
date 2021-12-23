@@ -1510,8 +1510,6 @@
       href: ./networking/exchange-compatibility-single-label-domains.md
     - name: Configure a secondary name server
       href: ./networking/configure-secondary-name-server.md
-    - name: Description of the DNSLint utility
-      href: ./networking/description-dnslint-utility.md
     - name: DNS client resolution timeouts
       href: ./networking/dns-client-resolution-timeouts.md
     - name: DNS namespace planning

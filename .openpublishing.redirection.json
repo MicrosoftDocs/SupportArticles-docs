@@ -1054,6 +1054,11 @@
       "source_path": "support/dynamics-365/sales/flow-extension-package-shows-installation-failed.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/flow-extension-package-shows-installation-failed",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/description-dnslint-utility.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/description-dnslint-utility",
+      "redirect_document_id": true
     }
   ]
 }
