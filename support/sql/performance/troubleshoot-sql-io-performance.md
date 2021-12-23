@@ -56,10 +56,7 @@ Determine if there is I/O latency reported by SQL Server wait types. **PAGEIOLAT
        Start-Sleep -s 2
    }
    ```
-
-
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the Errorlog. You can check SQL Server error logs on your system by running this PowerShell command:
-
 
   ```Powershell
   Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than"
