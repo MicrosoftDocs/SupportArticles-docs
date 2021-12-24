@@ -32,7 +32,9 @@ There are several reasons why you may be unable to delete a file. Try each of th
 
 - Ensure the item is not [checked out](https://support.office.com/article/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de) to another user.
 - Always make sure you have the [appropriate permissions](/sharepoint/default-sharepoint-groups) to delete the item or have a [site collection administrator](/sharepoint/customize-sharepoint-site-permissions#add-change-or-remove-a-site-collection-administrator) attempt remove the item.
-- Retention policies can cause this. You might have to either disable or exclude the respective hold policy that's causing the issue. After a retention policy or hold is removed, it may take up to 24 hours for the change to take effect. Ensure that there is not a [retention policy](/office365/securitycompliance/retention-policies) set up on the item.
+- Retention label policies can cause this. For more information about the restrictions on which actions are allowed or blocked, see this [comparison table](/microsoft-365/compliance/records-management?view=o365-worldwide&preserve-view=true#compare-restrictions-for-what-actions-are-allowed-or-blocked).
+
+   **Note** Folder deletion can be prevented due to retention policies. In this situation, first move or delete any files in the folder that are subject to retention.   
 - The site might have exceeded its storage limit. [Increase the site quota](/powershell/module/sharepoint-online/set-sposite) and delete the item.
 - Administrators can use [SharePoint Patterns and Practices](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets#installation) (PnP), which contains a library of PowerShell commands that allows you to perform complex management actions such as force the deletion of items you cannot otherwise delete.
 
