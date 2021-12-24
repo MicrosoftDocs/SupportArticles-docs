@@ -1059,6 +1059,12 @@
       "source_path": "support/windows-server/networking/description-dnslint-utility.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/description-dnslint-utility",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/high-cpu-use-occurs-queries.md",
+      "redirect_url": "/troubleshoot/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_document_id": true
     }
+
   ]
 }
