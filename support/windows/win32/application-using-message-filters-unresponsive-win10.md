@@ -1,5 +1,5 @@
 ---
-title: A user-defined application that uses message filters may become unresponsive in Windows 10 20H1/20H2/21H1/21H2
+title: A user-defined application that uses message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2
 description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.  
 ms.date: 12/20/2021
 ms.prod-support-area-path: Windows 10
@@ -7,17 +7,15 @@ ms.reviewer: hihayak
 ms.technology: windows-dev-apps-networking-dev
 ---
 
-# A user-defined application that uses message filters may become unresponsive in Windows 10 20H1/20H2/21H1/21H2
+# A user-defined application that uses message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2
 
 This article helps you resolve the problem when an application using its own message filters stops responding in Windows 10.
 
 _Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1, Windows 10, version 21H2
 
-_Original KB number:_ &nbsp;
-
 ## Symptoms
 
-Consider the scenario where you run an application on Windows 10 20H1/20H2/21H1/21H2 and your application is using message filters.
+Consider the scenario where you run an application on Windows 10, version 2004/20H2/21H1/21H2 and your application is using message filters.
 In this scenario, the application may become unresponsive.
 
 > [!NOTE]
@@ -25,10 +23,10 @@ In this scenario, the application may become unresponsive.
 
 ## Cause
 
-Windows 10 20H1/20H2/21H1/21H2 adds Window messages used by text input systems or Text Services Framework (TSF).
+Windows 10 adds Window messages used by text input systems or Text Services Framework (TSF).
 
 > [!NOTE]
-> Windows 10 version 2004 introduced the new version of TSF.
+> Windows 10, version 2004 introduced the new version of TSF.
 
 If the message filter of the application removes Window messages using `PeekMessage` API or `GetMessage` API and doesn't pass messages to `DispatchMessage` API, TSF can’t complete processing the messages and the application may stop responding.
 
