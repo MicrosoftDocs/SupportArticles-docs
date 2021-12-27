@@ -338,72 +338,34 @@ To solve the issues, you may need one or more of these collections.
 It can be helpful to query the sysmail views in an environment that's separate from production. In some cases, you can back up the **msdb** database and then restore to another instance. The sysmail views are all defined with reference to msdb, so even when querying in the restored **msdb** backup, the views will reference the **msdb** system database in your instance. To re-create sysmail views from the production **msdb**, re-create the sysmail views in the user database by using the following script.
 
 ```sql
-/* sysmail_allitems_event_log */
+/* sysmail_allitems */
 
 USE [msdb_customer]
 GO
 
-PRINT ''
-PRINT 'Creating view sysmail_allitems_event_log in msdb backup from customer...'
+PRINT 'Creating view sysmail_allitems in msdb backup from customer...'
 GO
 IF (EXISTS (SELECT *
             FROM [msdb_customer].dbo.sysobjects
-            WHERE (NAME = N'sysmail_allitems_event_log')
+            WHERE (NAME = N'sysmail_allitems')
               AND (TYPE = 'V')))
-  DROP VIEW sysmail_allitems_event_log
+  DROP VIEW sysmail_allitems
 GO
 
-CREATE VIEW sysmail_allitems_event_log
+CREATE VIEW sysmail_allitems
 AS
-SELECT sm.mailitem_id,
-       profile_id,
-       recipients,
-       copy_recipients,
-       blind_copy_recipients,
-       subject,
-       body,
-       body_format,
-       importance,
-       sensitivity,
-       file_attachments,
-       attachment_encoding,
-       query,
-       execute_query_database,
-       attach_query_result_as_file,
-       query_result_header,
-       query_result_width,
-       query_result_separator,
-       exclude_query_output,
-       append_query_error,
-       send_request_date,
-       send_request_user,
-       sent_account_id,
+SELECT mailitem_id, profile_id, recipients, copy_recipients, blind_copy_recipients, subject, body, body_format, importance, sensitivity, file_attachments,
+       attachment_encoding, query, execute_query_database, attach_query_result_as_file, query_result_header, query_result_width, query_result_separator,
+       exclude_query_output, append_query_error, send_request_date, send_request_user, sent_account_id,
        CASE sent_status 
           WHEN 0 THEN 'unsent' 
           WHEN 1 THEN 'sent' 
           WHEN 3 THEN 'retrying' 
           ELSE 'failed' 
        END AS sent_status,
-       sent_date,
-       sm.last_mod_date,
-       sm.last_mod_user,
-       log_id,
-       CASE event_type 
-          WHEN 0 THEN 'success' 
-          WHEN 1 THEN 'information' 
-          WHEN 2 THEN 'warning' 
-          ELSE 'error' 
-       END as event_type,
-       log_date,
-       description,
-       process_id,
-       sl.mailitem_id,
-       account_id,
-       sl.last_mod_date,
-       sl.last_mod_user
-FROM msdb.dbo.sysmail_mailitems sm LEFT JOIN msdb.[dbo].[sysmail_log] sl on sm.mailitem_id=sl.mailitem_id
-WHERE (send_request_user = SUSER_SNAME()) OR (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) and ((ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR 
-      (EXISTS ( SELECT mailitem_id FROM msdb.[dbo].[sysmail_allitems] ai WHERE sl.mailitem_id = ai.mailitem_id )))
+       sent_date, last_mod_date, last_mod_user       
+FROM [msdb_customer].dbo.sysmail_mailitems 
+WHERE (send_request_user = SUSER_SNAME()) OR (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) 
 
 GO
 
@@ -412,7 +374,6 @@ GO
 USE [msdb_customer]
 GO
 
-PRINT ''
 PRINT 'Creating view sysmail_sentitems in msdb backup from customer...'
 GO
 IF (EXISTS (SELECT *
@@ -420,7 +381,7 @@ IF (EXISTS (SELECT *
             WHERE (NAME = N'sysmail_sentitems')
               AND (TYPE = 'V')))
   DROP VIEW sysmail_sentitems
-go
+GO
 
 CREATE VIEW sysmail_sentitems
 AS
@@ -433,7 +394,6 @@ GO
 USE [msdb_customer]
 GO
 
-PRINT ''
 PRINT 'Creating view sysmail_unsentitems in msdb backup from customer...'
 GO
 IF (EXISTS (SELECT *
@@ -454,7 +414,6 @@ GO
 USE [msdb_customer]
 GO
 
-PRINT ''
 PRINT 'Creating view sysmail_faileditems in msdb backup from customer...'
 GO
 IF (EXISTS (SELECT *
@@ -467,6 +426,33 @@ GO
 CREATE VIEW sysmail_faileditems
 AS
 SELECT * FROM [msdb_customer].dbo.sysmail_allitems WHERE sent_status = 'failed'
+
+GO
+
+/* sysmail_event_log */
+USE [msdb_customer]
+GO
+PRINT 'Creating view sysmail_event_log in msdb backup from customer...'
+GO
+IF (EXISTS (SELECT *
+            FROM [msdb_customer].dbo.sysobjects
+            WHERE (NAME = N'sysmail_event_log')
+              AND (TYPE = 'V')))
+  DROP VIEW sysmail_event_log
+GO
+CREATE VIEW sysmail_event_log
+AS
+SELECT log_id,
+       CASE event_type 
+          WHEN 0 THEN 'success' 
+          WHEN 1 THEN 'information' 
+          WHEN 2 THEN 'warning' 
+          ELSE 'error' 
+       END as event_type,
+       log_date, description, process_id, sl.mailitem_id, account_id, sl.last_mod_date, sl.last_mod_user
+FROM [msdb_customer].[dbo].[sysmail_log]  sl
+WHERE (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR 
+      (EXISTS ( SELECT mailitem_id FROM [msdb_customer].[dbo].[sysmail_allitems] ai WHERE sl.mailitem_id = ai.mailitem_id ))
 
 GO
 ```
