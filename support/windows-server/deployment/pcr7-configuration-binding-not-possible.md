@@ -27,14 +27,14 @@ Consider the following scenario:
 - You install chipset drivers and update the latest Microsoft Monthly Rollup.
 - You also run *tpm.msc* to make sure that the TPM status is normal. The status displays **The TPM is ready for use**.
 
-In this scenario, when you run *msinfo32* to check the PCR7 Configuration, it is displayed as **Binding not possible**.
+In this scenario, when you run *msinfo32* to check the PCR7 Configuration, it's displayed as **Binding not possible**.
 
 ## Cause of the unexpected message
 
 Microsoft only accepts the Microsoft Windows PCA 2011 certificate to be used to sign BitLocker binding download components in PCR7. Any other signature present on boot code will cause BitLocker to use TPM profile 0, 2, 4, 11 instead of 7, 11. In some cases, the binaries are signed with UEFI CA 2011 certificate, which will prevent you from binding to PCR7.
 
 > [!Note]
-> UEFI CA can be used to sign third party applications, Option ROMs or even third party boot loaders which can load malicious (UEFI CA signed) code. In this case, BitLocker switched to PCR 0, 2, 4, 11. The exact binary hashes are measured rather than CA certificate, which means less exposure to attacks.
+> UEFI CA can be used to sign third-party applications, Option ROMs or even third-party boot loaders that can load malicious (UEFI CA signed) code. In this case, BitLocker switches to PCR 0, 2, 4, 11. The exact binary hashes are measured rather than CA certificate, which means less exposure to attacks.
 
 ## More Information  
 
@@ -47,7 +47,7 @@ To check whether your device meets the requirements:
     ```powershell
     Confirm-SecureBootUEFI
     ```
-    Verify that it returns the value of **True**.
+    Verify that the value of **True** is returned.
 
 4. Run the following PowerShell command:
 
