@@ -13,15 +13,13 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 03/23/2018
+ms.date: 12/27/2021
 ms.author: genli
 ---
 # Troubleshoot Remote Desktop connections to an Azure virtual machine
 The Remote Desktop Protocol (RDP) connection to your Windows-based Azure virtual machine (VM) can fail for various reasons, leaving you unable to access your VM. The issue can be with the Remote Desktop service on the VM, the network connection, or the Remote Desktop client on your host computer. This article guides you through some of the most common methods to resolve RDP connection issues. 
 
-If you need more help at any point in this article, you can contact the Azure experts on [the MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**.
-
- 
+If you need more help at any point in this article, you can contact the Azure experts on [the MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**
 
 <a id="quickfixrdp"></a>
 
@@ -78,11 +76,8 @@ After each troubleshooting step, try connecting to your VM again. If you still c
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Reset password** button. Make sure the **Mode** is set to **Reset password** and then enter your username and a new password. Finally, click the **Update** button:
    
     :::image type="content" source="media/troubleshoot-rdp-connection/reset-password.png" alt-text="Screenshot of the setting window of Reset Password when the Mode is set to Reset password." border="false":::
-7. **Restart your VM**. This troubleshooting step can correct any underlying issues the VM itself is having.
+7. **Restart your VM**. This troubleshooting step can correct any underlying issues the VM itself is having. Select your VM in the Azure portal and click the **Overview** tab. Click the **Restart** button.
    
-    Select your VM in the Azure portal and click the **Overview** tab. Click the **Restart** button:
-   
-    :::image type="content" source="media/troubleshoot-rdp-connection/restart-vm.png" alt-text="Screenshot of the Restart button in the Overview tab." border="false":::
 8. **Redeploy your VM**. This troubleshooting step redeploys your VM to another host within Azure to correct any underlying platform or networking issues.
    
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Redeploy** button, and then click **Redeploy**:
