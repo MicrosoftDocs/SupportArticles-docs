@@ -6,7 +6,7 @@ ms.reviewer: mghadial
 ---
 # Intune app installation error reference
 
-This article lists common app installation errors for Android, iOS, and other scenarios. Use the following reference to troubleshoot application errors and to get more information aboutspecific app errors based on returned error codes.
+This article lists common app installation errors for Android, iOS, and other scenarios. Use the following reference to troubleshoot application errors and to get more information about specific app errors based on returned error codes.
 
 ## Android app installation errors
 
