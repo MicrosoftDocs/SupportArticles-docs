@@ -2,6 +2,15 @@
 
 
 
+## Week of December 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/20/2021 | [Desktop app option is missing when editing Office files in Teams](/microsoftteams/troubleshoot/files/desktop-app-option-missing) | added |
+| 12/21/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
+
+
 ## Week of December 06, 2021
 
 

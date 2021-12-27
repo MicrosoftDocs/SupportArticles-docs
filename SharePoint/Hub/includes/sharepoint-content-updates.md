@@ -2,6 +2,18 @@
 
 
 
+## Week of December 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/20/2021 | [Create a default Site collection Term Set if none is present](/sharepoint/troubleshoot/administration/create-default-site-term-set) | modified |
+| 12/21/2021 | [Can't change the default language for a site](/sharepoint/troubleshoot/sites/change-default-language-site-collection) | modified |
+| 12/21/2021 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |
+| 12/22/2021 | [Unable to delete items in SharePoint and OneDrive](/sharepoint/troubleshoot/administration/unable-to-delete-files) | modified |
+| 12/23/2021 | [Users are redirected when browsing to a SharePoint or OneDrive site](/sharepoint/troubleshoot/administration/access-to-sharepoint-online-is-monitored) | modified |
+
+
 ## Week of December 13, 2021
 
 
@@ -93,20 +105,3 @@
 | 11/23/2021 | [Unexpected error in SharePoint admin center Content type gallery](/sharepoint/troubleshoot/administration/content-type-gallery-error) | added |
 | 11/23/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
 | 11/25/2021 | [Error 404 File/Page not found in OneDrive or SharePoint](/sharepoint/troubleshoot/administration/error-404-onedrive-sharepoint) | modified |
-
-
-## Week of November 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/15/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
-| 11/15/2021 | [Error 403 Forbidden in OneDrive or SharePoint](/sharepoint/troubleshoot/sharing-and-permissions/error-403-forbidden) | modified |
-| 11/15/2021 | [SharePoint or OneDrive read-only error messages](/sharepoint/troubleshoot/sites/site-is-read-only) | modified |
-| 11/17/2021 | [Access Denied or You need permission to access this site](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business) | modified |
-| 11/17/2021 | [Profile picture not showing in SharePoint Online](/sharepoint/troubleshoot/administration/profile-picture-not-showing) | modified |
-| 11/17/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
-| 11/17/2021 | [Classic site collection search usage reports](/sharepoint/troubleshoot/sites/classic-site-collection-search-usage-reports) | modified |
-| 11/18/2021 | [Profile picture not showing in SharePoint Online](/sharepoint/troubleshoot/administration/profile-picture-not-showing) | modified |
-| 11/18/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
-| 11/18/2021 | [Classic site collection search usage reports](/sharepoint/troubleshoot/sites/classic-site-collection-search-usage-reports) | modified |
