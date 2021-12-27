@@ -1,14 +1,14 @@
 ### YamlMime:Landing
 
 title: App management troubleshooting documentation
-summary: These articles explain how to determine, diagnose, and fix Intune app management issues. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+summary: These articles explain how to determine, diagnose, and fix Intune app management issues. In the navigation pane on the left, browse through the articles or use the search box to find issues and solutions.
 
 metadata:
   title: Intune app management issues
   description: Documentation for troubleshooting common issues with app management in Intune
   ms.service: microsoft-intune 
   ms.topic: landing-page
-  ms.date: 07/29/2021
+  ms.date: 12/27/2021
 
 landingContent:
   - title: Troubleshoot app installation
@@ -30,8 +30,6 @@ landingContent:
             url: apps-appear-unavailable.md
           - text: Deployment, delivery, and processing of a Win32 application
             url: develop-deliver-working-win32-app-via-intune.md
-          - text: Deploy Windows update packages as Win32 apps
-            url: deploy-windows-update-packages-as-win32-apps.md
           - text: Can't save corporate data in WIP-allowed apps
             url: corporate-data-unsaved-in-wip-allowed-apps.md
 
@@ -45,8 +43,6 @@ landingContent:
             url: onedrive-attaches-corporate-protected-data-imessage.md
           - text: Mismatch between value type and configuration value
             url: mismatch-error-configuration-value-ampersand.md
-          - text: OneDrive for iOS supports Open-in protection on unenrolled devices
-            url: open-in-protection-unenrolled-devices.md
           - text: Saving images locally not restricted
             url: saving-images-locally-not-restricted.md
 
@@ -87,12 +83,10 @@ landingContent:
           - text: Only one app configuration policy applied to Edge or Managed Browser
             url: only-one-app-policy-applied-edge-managed-browser.md
 
-  - title: General help & troubleshooting
+  - title: General troubleshooting
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: LOB app versioning
-            url: lob-app-versioning.md
           - text: Save application failed error
             url: save-application-failed-error.md
           - text: Build software inventory using Power BI
