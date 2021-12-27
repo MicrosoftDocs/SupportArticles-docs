@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3144065
 
 ## Symptoms
 
-In a transactional replication in Microsoft SQL Server, an article in an SQL query has an empty string in a destination table (@destination_table = N"") in a Transact-SQL statement. In this situation, you may receive the following error messages in the specified locations:
+In a transactional replication in Microsoft SQL Server, an article in a SQL query has an empty string in a destination table (@destination_table = N"") in a Transact-SQL statement. In this situation, you may receive the following error messages in the specified locations:
 
 - In the Snapshot agent:
 

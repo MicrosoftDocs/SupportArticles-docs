@@ -207,7 +207,6 @@ items:
       href: ios-scep-failure-no-getcacaps.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
-
     - name: Troubleshoot PKCS certificate deployment
       href: troubleshoot-pkcs-certificate-profiles.md
     - name: Troubleshoot SCEP certificate profiles
@@ -232,8 +231,6 @@ items:
       href: fails-moving-intune-exchange-connector.md
     - name: Could not retrieve access token for Graph API
       href: could-not-retrieve-access-token.md
-    - name: Intune Exchange Connector version is not supported
-      href: exchange-connector-version-not-supported.md
     - name: Troubleshoot Conditional Access
       href: troubleshoot-conditional-access.md
     - name: Troubleshoot the Exchange Connector
@@ -252,8 +249,10 @@ items:
     href: error-deploying-password-policy.md
   - name: Secure boot enabled device shows as Not Compliant
     href: secure-boot-enabled-device-shows-not-compliant.md
-  - name: Troubleshoot BitLocker policies
+  - name: Troubleshoot encryption on client side
     href: troubleshoot-bitlocker-policies.md
+  - name: Troubleshoot encryption in Intune
+    href: troubleshoot-bitlocker-admin-center.md
   - name: Users are prompted to enroll when accessing Office 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
   - name: Windows 10 devices show incorrect compliance status
@@ -266,27 +265,15 @@ items:
     href: troubleshoot-company-resource-access-problems.md
   - name: Device-only subscription
     href: device-licenses-introduction.md
+  - name: Can't query the Intune Data Warehouse
+    href: error-query-intune-data-warehouse.md
   - name: Endpoint protection common errors
     href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
   - name: Help and support blade doesn't load
     href: cannot-load-help-and-support-blade.md
   - name: Script error during Intune setup process
     href: script-error-intune-setup.md  
-  - name: Set the MDM authority
-    href: set-mdm-authority.md
   - name: Things to try before calling Intune support
     href: before-you-call-intune-support.md
   - name: Troubleshooting blade fails to load
     href: troubleshooting-blade-fails-loading.md
-  - name: Troubleshoot software updates
-    href: troubleshoot-software-updates-in-microsoft-intune.md
-- name: Reporting
-  items:
-  - name: AADSTS50011 query the Intune Data Warehouse
-    href: error-query-intune-data-warehouse.md
-- name: Update management
-  items:
-  - name: Windows Update
-    items:
-    - name: Manage Windows 10 feature updates for co-managed devices
-      href: create-feature-update-hold-co-managed-devices.md

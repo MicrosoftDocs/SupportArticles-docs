@@ -4,7 +4,7 @@ description: Describes that A Linux VM does not start correctly with kernel 3.10
 ms.date: 11/26/2020
 ms.prod-support-area-path: 
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: delhan, craigw
 ms.service: virtual-machines
 ms.collection: linux

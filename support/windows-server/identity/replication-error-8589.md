@@ -275,18 +275,18 @@ Active Directory Domain Services failed to construct a mutual authentication ser
 Error value:  
 8589 The DS cannot derive a service principal name (SPN) with which to mutually authenticate the target server because the corresponding server object in the local DS database has no serverReference attribute.
 
-![NTDS Settings Properties](./media/replication-error-8589/ntds-settings-properties.png)
+:::image type="content" source="media/replication-error-8589/ntds-settings-properties.png" alt-text="Screenshot of the Active Directory Sites and Services window with the NTDS Settings Properties window opened.":::
 
 Click Cancel and then view the properties for the server object (5thWardCorpDC in this example) select the Attribute Editor tab (Server 2008 and later) or use ADSIEDIT to edit the object on Server 2003
 
 Notice that the serverReference attribute is not set in the following image
 
-![Domain Controller Attributes](./media/replication-error-8589/serverreference-attribute-not-set.png)
+:::image type="content" source="media/replication-error-8589/serverreference-attribute-not-set.png" alt-text="Screenshot of the 5THWARDCORPDC Properties window with the serverReference attribute selected.":::
 
 Bind to the Source DC using ADSIEDIT or Active Directory Users and Computers and open up the Attribute Editor and copy the value in serverReference. Paste in the value of this attribute on the destination DCs copy of the object.
 
-![Attribute Editor ](./media/replication-error-8589/set-server-reference-attribute.png)
+:::image type="content" source="media/replication-error-8589/set-server-reference-attribute.png" alt-text="Screenshot of the Active Directory Sites and Services window with the 5THWARDCORPDC Properties window opened, and a String Attribute Editor window is opened for editing the value.":::
 
 After the serverReference attribute is set correctly for the domain controller is shows as follows:
 
-![Correct serverReference ](./media/replication-error-8589/check-serverreference-attribute.png)
+:::image type="content" source="media/replication-error-8589/check-serverreference-attribute.png" alt-text="Screenshot of the Active Directory Sites and Services window with the 5THWARDCORPDC Properties window opened, and the serverReference attribute is selected.":::

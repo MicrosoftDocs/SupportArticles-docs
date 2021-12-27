@@ -6,7 +6,7 @@ ms.prod-support-area-path:  Virtual Machine running Linux
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: Timothy.Basham, Scott.L.Roberts
 ---
 # Cloud-init writes virtual machine's host keys as ec2

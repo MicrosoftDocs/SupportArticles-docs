@@ -9,6 +9,8 @@
     href: maximum-number-of-devices-joined-workplace.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md
+  - name: Understand AD FS sign-in events in Azure AD with Connect Health
+    href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
   - name: Understand Azure AD Connect 1.4 and device disappearance
     href: reference-connect-device-disappearance.md
   - name: Sign-in and Multi-factor Authentication
@@ -94,6 +96,8 @@
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
     href: troubleshoot-dynamic-groups.md
+  - name: Troubleshoot user creation and deletion issues
+    href: troubleshoot-user-creation-deletion-issues.md
 
 - name: Governance, Compliance and Reporting 
   items:

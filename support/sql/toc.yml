@@ -339,6 +339,8 @@
       href: install/error-upgrade-cluster-node.md
     - name: Warning about network binding order
       href: install/warning-about-network-binding.md
+    - name: Troubleshoot errors related to system disk sector size greater than 4 KB
+      href: admin/troubleshoot-os-4kb-disk-sector-size.md
   - name: Machine Learning Services (in database)
     items:
     - name: Inconsistent results in MKL computations
@@ -349,14 +351,16 @@
       href: performance/blocked-column-populated-latch-waits.md
     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+    - name: Decreased performance when using EFS to encrypt database files
+      href: performance/decreased-performance-use-efs.md
     - name: Decreased performance when querying view across linked servers
-      href: performance/decreased-performance-linkedserver-views.md      
+      href: performance/decreased-performance-linkedserver-views.md            
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
     - name: External modules and filter drivers cause performance issues
       href: performance/performance-consistency-issues-filter-drivers-modules.md
-    - name: High CPU use occurs in your queries
-      href: performance/high-cpu-use-occurs-queries.md
+    - name: High CPU or high memory grants with queries that use optimized nested loops
+      href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE

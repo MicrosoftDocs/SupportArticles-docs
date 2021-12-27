@@ -1,7 +1,7 @@
 ---
 title: User can't get cluster resources
 description: Troubleshoot issues that are caused when a user can't list a resource within an API group in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 12/06/2021
+ms.date: 12/10/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "rissing,chiragpa"
@@ -28,26 +28,18 @@ $ kubectl get nodes
 Error from server (Forbidden): nodes is forbidden: User "aaaa11111-11aa-aa11-a1a1-111111aaaaa" cannot list resource "nodes" in API group "" at the cluster scope
 ```
 
-## Cause
-
-There are two possible causes that prevent a user from getting cluster resource details.
-
-### Cause 1: Incorrect role and role binding permissions
+## Cause 1: Incorrect role and role binding permissions
 
 When you enable role-based access control (RBAC) for your AKS cluster, you control the permissions for a User through Role and RoleBinding (or ClusterRole and ClusterRoleBinding) settings. If a User hasn't defined the correct permissions, the User sees errors when it tries to get the details of a resource in the cluster.
 
-### Cause 2: Incorrect access assignments within a security group
-
-If AKS manages integration with Azure Active Directory (Azure AD), the user might not have the correct assignment for the security group.
-
-## Solution
-
-Shown below are the respective solutions for getting cluster resource details.
-
-### Solution 1: Set the correct roles and role bindings
+### Solution: Set the correct roles and role bindings
 
 Make sure you set the correct Role and RoleBinding for the User. For detailed examples, see [Use Kubernetes RBAC with Azure AD integration](/azure/aks/azure-ad-rbac).
 
-### Solution 2: Have the security group admin assign the correct access level
+## Cause 2: Incorrect access assignments within a security group
+
+If AKS manages integration with Azure Active Directory (Azure AD), the user might not have the correct assignment for the security group.
+
+### Solution: Have the security group admin assign the correct access level
 
 Make sure the security group's administrator has given your account an Active  or Conditional Access assignment. See [AKS-managed Azure Active Directory integration](/azure/aks/managed-aad). This article has instructions for setting either [Active assignment](/azure/aks/managed-aad#configure-just-in-time-cluster-access-with-azure-ad-and-aks) or [Conditional Access assignment](/azure/aks/managed-aad#use-conditional-access-with-azure-ad-and-aks).

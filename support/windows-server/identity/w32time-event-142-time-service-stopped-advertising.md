@@ -87,7 +87,7 @@ The dominant error string logged by Microsoft-Windows-Time-Service Event 142 is 
 
 4. Verify that the DC logging the 142 event can discovery a time server using `DCLocator`
 
-    >nltest /dsgetdc:\<dns domain> /timeserver /force  
+    >nltest /dsgetdc:\<dns domain> /timeserv /force  
     >nltest /dsgetdc:\<dns domain> /gtimeserv /force <- if a gtimesrv is configured in the environment
 
 5. Verify port and protocol connectivity to peer time servers
