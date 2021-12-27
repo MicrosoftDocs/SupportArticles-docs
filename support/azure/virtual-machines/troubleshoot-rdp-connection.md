@@ -13,15 +13,13 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 03/23/2018
+ms.date: 12/27/2021
 ms.author: genli
 ---
 # Troubleshoot Remote Desktop connections to an Azure virtual machine
 The Remote Desktop Protocol (RDP) connection to your Windows-based Azure virtual machine (VM) can fail for various reasons, leaving you unable to access your VM. The issue can be with the Remote Desktop service on the VM, the network connection, or the Remote Desktop client on your host computer. This article guides you through some of the most common methods to resolve RDP connection issues. 
 
-If you need more help at any point in this article, you can contact the Azure experts on [the MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**.
-
- 
+If you need more help at any point in this article, you can contact the Azure experts on [the MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**
 
 <a id="quickfixrdp"></a>
 
@@ -60,7 +58,7 @@ After each troubleshooting step, try connecting to your VM again. If you still c
    
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Reset password** button. Set the **Mode** to **Reset configuration only** and then click the **Update** button:
    
-    :::image type="content" source="media/troubleshoot-rdp-connection/reset-rdp.png" alt-text="Screenshot of the Mode setting window of the Reset password tab, in which the Reset configuration only option is selected." border="false":::
+    :::image type="content" source="media/troubleshoot-rdp-connection/reset-rdp.png" alt-text="Screenshot of the Mode setting window of the Reset password tab, in which the Reset configuration only option is selected." border="true":::
 2. **Verify Network Security Group rules**. Use [IP flow verify](/azure/network-watcher/diagnose-vm-network-traffic-filtering-problem) to confirm if a rule in a Network Security Group is blocking traffic to or from a virtual machine. You can also review effective security group rules to ensure inbound "Allow" NSG rule exists and is prioritized for RDP port(default 3389). For more information, see [Using Effective Security Rules to troubleshoot VM traffic flow](/azure/virtual-network/diagnose-network-traffic-filter-problem).
 
 3. **Review VM boot diagnostics**. This troubleshooting step reviews the VM console logs to determine if the VM is reporting an issue. Not all VMs have boot diagnostics enabled, so this troubleshooting step may be optional.
@@ -72,22 +70,19 @@ After each troubleshooting step, try connecting to your VM again. If you still c
    
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Resource health** button. A healthy VM reports as being **Available**:
    
-    :::image type="content" source="media/troubleshoot-rdp-connection/check-resource-health.png" alt-text="Screenshot of a healthy V M report, which shows There aren't any known Azure platform problems affecting this virtual machine." border="false":::
+    :::image type="content" source="media/troubleshoot-rdp-connection/check-resource-health.png" alt-text="Screenshot of a healthy V M report, which shows There aren't any known Azure platform problems affecting this virtual machine." border="true":::
 6. **Reset user credentials**. This troubleshooting step resets the password on a local administrator account when you are unsure or have forgotten the credentials.  Once you have logged into the VM, you should reset the password for that user.
    
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Reset password** button. Make sure the **Mode** is set to **Reset password** and then enter your username and a new password. Finally, click the **Update** button:
    
-    :::image type="content" source="media/troubleshoot-rdp-connection/reset-password.png" alt-text="Screenshot of the setting window of Reset Password when the Mode is set to Reset password." border="false":::
-7. **Restart your VM**. This troubleshooting step can correct any underlying issues the VM itself is having.
+    :::image type="content" source="media/troubleshoot-rdp-connection/reset-password.png" alt-text="Screenshot of the setting window of Reset Password when the Mode is set to Reset password." border="true":::
+7. **Restart your VM**. This troubleshooting step can correct any underlying issues the VM itself is having. Select your VM in the Azure portal and click the **Overview** tab. Click the **Restart** button.
    
-    Select your VM in the Azure portal and click the **Overview** tab. Click the **Restart** button:
-   
-    :::image type="content" source="media/troubleshoot-rdp-connection/restart-vm.png" alt-text="Screenshot of the Restart button in the Overview tab." border="false":::
 8. **Redeploy your VM**. This troubleshooting step redeploys your VM to another host within Azure to correct any underlying platform or networking issues.
    
     Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Redeploy** button, and then click **Redeploy**:
    
-    :::image type="content" source="media/troubleshoot-rdp-connection/redeploy-vm.png" alt-text="Screenshot of the Redeploy button in the setting window of the Redeploy tab." border="false":::
+    :::image type="content" source="media/troubleshoot-rdp-connection/redeploy-vm.png" alt-text="Screenshot of the Redeploy button in the setting window of the Redeploy tab." border="true":::
    
     After this operation finishes, ephemeral disk data is lost and dynamic IP addresses that are associated with the VM are updated.
 
