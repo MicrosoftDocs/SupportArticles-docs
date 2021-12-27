@@ -42,6 +42,11 @@ If you can't use the Azure Serial Console, go to the "[Offline repair](#offline-
     chmod –R 644 /etc/ssh
     chmod 600 /etc/ssh/ssh_host*key
     chmod 600 /etc/ssh/sshd_config
+    chmod 755 /home/username
+    chmod 700 /home/username/.ssh
+    chmod 600 /home/username/.ssh/authorized_keys
+    cd /home
+    chown username username
     ```
 1.	Restart the sshd service, and try again to connect to the VM by using ssh.
     ```bash
@@ -71,6 +76,11 @@ If you can't access the VM by using the Azure Serial Console, then the repair mu
     chmod –R 644 /repair/etc/ssh
     chmod 600 /repair/etc/ssh/ssh_host*key
     chmod 600 /repair/etc/ssh/sshd_config
+    chmod 755 /home/username
+    chmod 700 /home/username/.ssh
+    chmod 600 /home/username/.ssh/authorized_keys
+    cd /home
+    chown username username
     ```
 1. Unmount the boot partition:
 
