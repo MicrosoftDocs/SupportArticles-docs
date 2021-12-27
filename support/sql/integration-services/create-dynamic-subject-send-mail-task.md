@@ -8,7 +8,7 @@ ms.prod: sql
 ---
 # Create a dynamic subject or message for the Send Mail task in SQL Server Integration Services
 
-This article shows how to update the property of an SQL Server Integration Services (SSIS) object at runtime by creating a property expression.
+This article shows how to update the property of a SQL Server Integration Services (SSIS) object at runtime by creating a property expression.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 906547
