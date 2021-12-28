@@ -1,8 +1,11 @@
 ---
-title: A user-defined application that uses message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2
+title: Message filters for some apps may become unresponsive in some versions of Win10
 description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.  
 ms.date: 12/20/2021
-ms.prod-support-area-path: Windows 10
+author: dipeshchoubisa
+ms.author: v-dchoubisa
+manager: dcscontentpm
+ms.prod: windows-client
 ms.reviewer: hihayak
 ms.technology: windows-dev-apps-networking-dev
 ---
@@ -19,11 +22,11 @@ Consider the scenario where you run an application on Windows 10, version 2004/2
 In this scenario, the application may become unresponsive.
 
 > [!NOTE]
-> Windows 11 has not observed this problem.
+> This issue is not observed in Windows 11.
 
 ## Cause
 
-Windows 10 adds Window messages used by text input systems or Text Services Framework (TSF).
+Windows 10 adds Windows messages used by text input systems or Text Services Framework (TSF).
 
 > [!NOTE]
 > Windows 10, version 2004 introduced the new version of TSF.
@@ -33,7 +36,7 @@ If the message filter of the application removes Window messages using `PeekMess
 This problem may occur if the application has the message filter similar to the following example, which dispatches `WM_LBUTTONUP` messages only and removes other messages.
 
 ```cpp
-----
+
 while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 {
 ::TranslateMessage(&msg);
@@ -43,7 +46,7 @@ if (msg.message == WM_LBUTTONUP) {
 ::DispatchMessage(&msg);
 }
 }
------
+
 ```
 
 ## Workaround 1
@@ -51,7 +54,7 @@ if (msg.message == WM_LBUTTONUP) {
 Modify the message filter to only filter the required messages and to dispatch other messages through `DispatchMessage` API.
 
 ```cpp
------
+
 while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 {
 ::TranslateMessage(&msg);
@@ -64,7 +67,7 @@ else {
 ::DispatchMessage(&msg);
 }
 }
------
+
 ```
 
 ## Workaround 2
