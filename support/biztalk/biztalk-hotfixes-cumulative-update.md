@@ -32,9 +32,9 @@ Make sure that you [back up all the databases for BizTalk Server](#backing-up-th
 
 ## Restart requirements
 
-If the hotfix includes an SQL (.sql) script, you must stop the BizTalk Server services and SQL Server Agent before you install the hotfix. After the hotfix installation is complete, restart the BizTalk Server services and SQL Server Agent.
+If the hotfix includes a SQL (.sql) script, you must stop the BizTalk Server services and SQL Server Agent before you install the hotfix. After the hotfix installation is complete, restart the BizTalk Server services and SQL Server Agent.
 
-If the hotfix doesn't include an SQL script, you must restart the BizTalk Server host instance after the hotfix installation is complete.
+If the hotfix doesn't include a SQL script, you must restart the BizTalk Server host instance after the hotfix installation is complete.
 
 > [!NOTE]
 > You can review the Setup.xml file to determine which files will be updated.
@@ -54,14 +54,14 @@ When multiple computers running BizTalk Server are configured in a group, you mu
 
 ## Uninstallation and rollback
 
-A BizTalk Server hotfix might update .dll files, and it might run SQL scripts. If the hotfix contains only .dll files, and if it doesn't include an SQL script, you can roll it back by using the uninstall command in Add or Remove Programs. You can review the Setup.xml file to determine which files will be updated.
+A BizTalk Server hotfix might update .dll files, and it might run SQL scripts. If the hotfix contains only .dll files, and if it doesn't include a SQL script, you can roll it back by using the uninstall command in Add or Remove Programs. You can review the Setup.xml file to determine which files will be updated.
 
-If the hotfix contains an SQL script, it will run the script against a BizTalk Server database or databases. In this case, uninstalling doesn't roll back the hotfix. Uninstalling by using Add or Remove Programs won't roll back the database changes, and it might leave the BizTalk Server environment in an inconsistent state.
+If the hotfix contains a SQL script, it will run the script against a BizTalk Server database or databases. In this case, uninstalling doesn't roll back the hotfix. Uninstalling by using Add or Remove Programs won't roll back the database changes, and it might leave the BizTalk Server environment in an inconsistent state.
 
 ## Backing up the BizTalk Server databases
 
 > [!NOTE]
-> Before you apply a hotfix that includes an SQL script, you must back up all the BizTalk Server databases.
+> Before you apply a hotfix that includes a SQL script, you must back up all the BizTalk Server databases.
 
 To force a full backup of the data and log files, execute the `BizTalkMgmtDb.dbo.sp_ForceFullBackup` stored procedure. Then, run the **Backup BizTalk Server** SQL Agent job.
 
@@ -73,7 +73,7 @@ For more information about how to back up and restore the BizTalk Server databas
 
 - [BizTalk Server 2004](https://www.microsoft.com/download/details.aspx?id=56488)
 
-To roll back a hotfix that includes an SQL script, follow these steps:
+To roll back a hotfix that includes a SQL script, follow these steps:
 
 1. Stop all BizTalk Server hosts, services, custom isolated adapters, along with SQL Server Agent. If you use the HTTP, SOAP, or WCF adapters, restart the IIS services. If you use the isolated host heavily, you might want to consider stopping the IIS services.
 2. Uninstall the hotfix by using Add or Remove Programs.
