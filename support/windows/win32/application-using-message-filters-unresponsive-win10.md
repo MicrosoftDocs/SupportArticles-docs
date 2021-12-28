@@ -1,13 +1,13 @@
 ---
-title: Message filters for some apps may become unresponsive in some versions of Win10
+title: Apps using message filters may become unresponsive Win 10 versions
 description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.  
 ms.date: 12/20/2021
-author: dipeshchoubisa
+author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 manager: dcscontentpm
 ms.prod: windows-client
 ms.reviewer: hihayak
-ms.technology: windows-dev-apps-networking-dev
+ms.technology: windows-client-performance
 ---
 
 # A user-defined application that uses message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2
