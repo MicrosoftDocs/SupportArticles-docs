@@ -2,6 +2,15 @@
 
 
 
+## Week of December 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/21/2021 | [Use third-party network devices or solutions with Microsoft 365](/office365/troubleshoot/miscellaneous/office-365-third-party-network-devices) | modified |
+| 12/21/2021 | [Determine whether Office 365 account is compromised](/office365/troubleshoot/sign-in/determine-account-is-compromised) | modified |
+
+
 ## Week of December 13, 2021
 
 
@@ -35,11 +44,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 11/25/2021 | [Open Support cases for GCC High and DoD](/office365/troubleshoot/miscellaneous/support-cases-for-gcc-high-dod) | modified |
-
-
-## Week of November 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/18/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |

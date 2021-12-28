@@ -2,6 +2,18 @@
 
 
 
+## Week of December 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/20/2021 | [Create An Excel Add-In to Calculate Body Mass Index (BMI)](/office/troubleshoot/excel/create-add-in-to-calculate-bmi) | modified |
+| 12/20/2021 | [Error code 30010-45 or 30088-26 when installing Microsoft 365 Apps](/office/troubleshoot/installation/error-code-30010-45-or-30088-26) | added |
+| 12/21/2021 | [Formula errors when list separator is not set correctly](/office/troubleshoot/excel/formula-errors) | modified |
+| 12/21/2021 | [FAQ about Office Activation Wizard](/office/troubleshoot/office-suite-issues/faq-about-office-activation-wizard) | modified |
+| 12/21/2021 | [Activate Office 2010 KMS host through phone activation](/office/troubleshoot/activation/activate-office-2010-kms-host-via-phone-activation) | modified |
+
+
 ## Week of December 13, 2021
 
 
@@ -93,24 +105,3 @@
 | 11/23/2021 | [We’ve run into a problem with your Office 365 subscription](/office/troubleshoot/activation/run-into-a-problem) | added |
 | 11/25/2021 | [Error "We couldn't start OneNote the last time we tried"](/office/troubleshoot/onenote/couldnt-start-onenote-the-last-time-error) | modified |
 | 11/25/2021 | [File size limit error when you upload files to Sway](/office/troubleshoot/sway/sway-file-size-limit-error) | modified |
-
-
-## Week of November 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/17/2021 | [You receive a Too many different cell formats error message in Excel](/office/troubleshoot/excel/too-many-different-cell-formats-in-excel) | modified |
-| 11/18/2021 | [Microsoft 365 Apps activation network connection issues](/office/troubleshoot/activation/network-connection-issues) | added |
-| 11/18/2021 | [Sign in issues when activating Microsoft 365 Apps](/office/troubleshoot/activation/sign-in-issues) | added |
-| 11/18/2021 | [Microsoft 365 Apps activation error Trusted Platform Module malfunctioned](/office/troubleshoot/activation/tpm-malfunctioned) | added |
-| 11/18/2021 | [Microsoft 365 Apps activation Unlicensed product error](/office/troubleshoot/activation/unlicensed-product-error) | added |
-| 11/18/2021 | [Microsoft 365 Apps activation error AADSTS9002313 Invalid Request](/office/troubleshoot/activation/aadsts9002313-invalid-request) | added |
-| 11/18/2021 | [Microsoft 365 Apps activation error 0x80070005](/office/troubleshoot/activation/activation-error-0x80070005) | added |
-| 11/18/2021 | [Microsoft 365 Apps activation error 0xCAA50021](/office/troubleshoot/activation/activation-error-0xcaa50021) | added |
-| 11/18/2021 | [Microsoft 365 activation usage report issues](/office/troubleshoot/activation/activation-usage-report-issues) | added |
-| 11/18/2021 | [Sorry, another account from your organization is already signed in on this computer](/office/troubleshoot/activation/another-account-already-signed-in) | added |
-| 11/18/2021 | [Troubleshooting device-based licensing for Microsoft 365 Apps](/office/troubleshoot/activation/device-based-licensing) | added |
-| 11/18/2021 | [Office for Mac activation An unknown error has occurred](/office/troubleshoot/activation/mac-unknown-error) | added |
-| 11/18/2021 | [Microsoft 365 Apps activation error Trusted Platform Module malfunctioned](/office/troubleshoot/activation/tpm-malfunctioned) | modified |
-| 11/18/2021 | [Microsoft 365 Apps activation Unlicensed product error](/office/troubleshoot/activation/unlicensed-product-error) | modified |
