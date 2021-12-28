@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4502458
 
 ## Symptoms
 
-Assume that you set up an SQL Server audit to have a server audit specification that uses the `DATABASE_CHANGE_GROUP` event. When a user runs `RESTORE VERIFYONLY` on a database backup file, the `CREATE DATABASE` permission is logged to the Audit log.
+Assume that you set up a SQL Server audit to have a server audit specification that uses the `DATABASE_CHANGE_GROUP` event. When a user runs `RESTORE VERIFYONLY` on a database backup file, the `CREATE DATABASE` permission is logged to the Audit log.
 
 ## Cause
 

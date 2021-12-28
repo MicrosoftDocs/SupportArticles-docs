@@ -6,7 +6,7 @@ ms.prod-support-area-path: Integration Services
 ms.reviewer: craigg
 ms.prod: sql
 ---
-# You receive an 'Error loading' error message when you try to run an SQL Server Integration Services package
+# You receive an 'Error loading' error message when you try to run a SQL Server Integration Services package
 
 This article helps you resolve package load failures that occure when SSIS cannot decrypt the password stored in the package.
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 904800
 
 ## Symptoms
 
-In Microsoft SQL Server, when you try to run an SQL Server Integration Services (SSIS) package from inside Microsoft SQL Server Business Intelligence Studio or by using the SQL Server Execute Package Utility (Dtexec.exe) command-line tool, you receive the following error message:
+In Microsoft SQL Server, when you try to run a SQL Server Integration Services (SSIS) package from inside Microsoft SQL Server Business Intelligence Studio or by using the SQL Server Execute Package Utility (Dtexec.exe) command-line tool, you receive the following error message:
 
 > Error loading **PackageName**: Failed to decrypt protected XML node "PackagePassword" with error 0x8009000B "Key not valid for use in specified state."  
 You may not be authorized to access this information. This error occurs when there is a cryptographic error. Verify that the correct key is available.

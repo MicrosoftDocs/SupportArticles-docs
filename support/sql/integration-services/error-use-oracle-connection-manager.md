@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2009312
 
 Consider the following scenario for either SQL Server:
 
-- You design an SQL Server Integration Services (SSIS) package using Business Intelligence Development Studio (BIDS).
+- You design a SQL Server Integration Services (SSIS) package using Business Intelligence Development Studio (BIDS).
 - In your package, you connect to an Oracle server using an OLEDB provider for Oracle and use either Oracle client 10G or 11G.
 - You use package configuration file to set all the connection properties for the Oracle connection at runtime.
 
