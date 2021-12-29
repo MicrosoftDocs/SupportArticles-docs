@@ -57,7 +57,9 @@ When the agent is running, it will log a summary of extensions operations. This 
 - Enable
 - Install
 - Start
-- DisableYou can find the summary log at `C:\WindowsAzure\logs\WaAppAgent.log`.
+- Disable
+
+You can find the summary log at `C:\WindowsAzure\logs\WaAppAgent.log`.
 
 To determine which extension is failing, open the log, and then look for the word "error" in the log.
 
