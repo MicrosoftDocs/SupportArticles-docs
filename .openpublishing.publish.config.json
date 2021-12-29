@@ -12,6 +12,10 @@
         "Conceptual": "Content"
       },
       "build_entry_point": "docs",
+      "redirection_files": [
+        ".openpublishing.redirection.json",
+        ".openpublishing.redirection.developer.json"
+      ]
       "template_folder": "_themes"
     }
   ],
