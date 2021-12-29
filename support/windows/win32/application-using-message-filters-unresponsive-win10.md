@@ -1,16 +1,16 @@
 ---
-title: Apps using message filters may become unresponsive Win 10 versions
+title: Apps using message filters may become unresponsive in Windows 10 versions
 description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.  
 ms.date: 12/20/2021
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 manager: dcscontentpm
-ms.prod: windows-client
+ms.prod: windows-dev-apps
 ms.reviewer: hihayak
-ms.technology: windows-client-performance
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 
-# A user-defined application that uses message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2
+# A user-defined application using message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2
 
 This article helps you resolve the problem when an application using its own message filters stops responding in Windows 10.
 
@@ -39,11 +39,11 @@ This problem may occur if the application has the message filter similar to the 
 
 while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 {
-::TranslateMessage(&msg);
-
-// Dispatch only specific messages.
-if (msg.message == WM_LBUTTONUP) {
-::DispatchMessage(&msg);
+    ::TranslateMessage(&msg);
+    
+    // Dispatch only specific messages.
+    if (msg.message == WM_LBUTTONUP) {
+    ::DispatchMessage(&msg);
 }
 }
 
@@ -57,14 +57,14 @@ Modify the message filter to only filter the required messages and to dispatch o
 
 while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 {
-::TranslateMessage(&msg);
-
-if (msg.message == WM_LBUTTONDOWN) {
-
-}
-else {
-// Dispatches all non-filtered messages
-::DispatchMessage(&msg);
+    ::TranslateMessage(&msg);
+    
+    if (msg.message == WM_LBUTTONDOWN) {
+    
+    }
+    else {
+    // Dispatches all non-filtered messages
+    ::DispatchMessage(&msg);
 }
 }
 
