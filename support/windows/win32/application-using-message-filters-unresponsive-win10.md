@@ -1,11 +1,11 @@
 ---
-title: Apps using message filters may become unresponsive in Windows 10 versions
-description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.  
-ms.date: 12/20/2021
+title: Apps using message filters may become unresponsive in Windows 10
+description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.
+ms.date: 12/29/2021
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 manager: dcscontentpm
-ms.prod: windows-dev-apps
+ms.prod-support-area-path: Desktop app UI development
 ms.reviewer: hihayak
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
@@ -43,8 +43,8 @@ while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
     
     // Dispatch only specific messages.
     if (msg.message == WM_LBUTTONUP) {
-    ::DispatchMessage(&msg);
-}
+        ::DispatchMessage(&msg);
+    }
 }
 
 ```
@@ -63,9 +63,9 @@ while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
     
     }
     else {
-    // Dispatches all non-filtered messages
-    ::DispatchMessage(&msg);
-}
+        // Dispatches all non-filtered messages
+        ::DispatchMessage(&msg);
+    }
 }
 
 ```

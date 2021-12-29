@@ -22,7 +22,7 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
-    - name: Apps using message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2
+    - name: Apps using message filters may become unresponsive in Windows 10
       href: application-using-message-filters-unresponsive-win10.md
     - name: Three- or four-finger touch interactions doesn't work in Windows 11
       href: finger3or4-touch-interaction-no-longer-works.md
@@ -116,8 +116,8 @@
     items:
     - name: Changing krbtgt password fails
       href: change-krbtgt-password-may-fail.md
-    - name: Get information from Authenticode Signed Executables
-      href: get-information-authenticode-signed-executables.md
+    - name: Get information from Authenticity Signed Executables
+      href: get-information-authentic-signed-executables.md
     - name: Limitation of 10 smart card readers in Windows
       href: limitation-10-smart-card-readers.md
     - name: SignTool may corrupt PowerShell script file
