@@ -55,13 +55,13 @@ items:
       href: creating-message-action-not-allowed.md
     - name: Troubleshoot Managed Google Play apps
       href: troubleshoot-google-apps.md
-  - name: Managed browsers
+  - name: Managed Edge
     items:
     - name: Error when you open a web app on iOS 
       href: invalid-address-open-web-app.md
     - name: Managed Browser policy triggers error 0x87D1FDE8
       href: managed-browser-policy-triggers-error-0x87d1fde8.md
-    - name: Only one app configuration policy applied to Edge or Managed Browser
+    - name: Only one app configuration policy applied to Edge
       href: only-one-app-policy-applied-edge-managed-browser.md
   - name: General troubleshooting
     items:
@@ -77,7 +77,7 @@ items:
       href: troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
       href: troubleshoot-mam.md   
-    - name: Known issue - Fingerprint authentication on Samsung Note 4
+    - name: Fingerprint authentication on Samsung Note 4
       href: no-prompt-for-fingerprint-identity.md
 - name: Certificates
   items:
@@ -117,6 +117,8 @@ items:
         href: troubleshoot-scep-certificate-reporting.md
       - name: Verify on-premises NDES configuration
         href: verify-ndes-configuration.md
+  - name: Troubleshoot PKCS certificate deployment
+    href: troubleshoot-pkcs-certificate-profiles.md
   - name: Intune Certificate Connector events and diagnostic codes
     href: troubleshoot-certificate-connector-events.md
   - name: Reinstall the Intune Certificate Connector
@@ -129,8 +131,6 @@ items:
     href: intune-connector-for-ad-not-appear.md
   - name: Unexpected error signing in to Intune Connector
     href: intune-connector-signin-unexpected-error.md
-  - name: Troubleshoot PKCS certificate deployment
-    href: troubleshoot-pkcs-certificate-profiles.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -303,14 +303,14 @@ items:
     href: intune-synced-attributes-list.md
   - name: Common company resource access error codes
     href: troubleshoot-company-resource-access-problems.md
-  - name: Device-only subscription
-    href: device-licenses-introduction.md
-  - name: Can't query the Intune Data Warehouse
-    href: error-query-intune-data-warehouse.md
   - name: Endpoint protection common errors
     href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
+  - name: Device-only subscription
+    href: device-licenses-introduction.md
   - name: Script error during Intune setup process
-    href: script-error-intune-setup.md  
+    href: script-error-intune-setup.md
+  - name: Can't query the Intune Data Warehouse
+    href: error-query-intune-data-warehouse.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
 - name: Getting support
