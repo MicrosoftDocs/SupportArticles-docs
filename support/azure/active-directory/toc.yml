@@ -44,6 +44,8 @@
         href: error-code-AADSTS50003-cert-or-key-not-configured.md
       - name: Error AADSTS50011 - reply URL mismatch
         href: error-code-AADSTS50011-reply-url-mismatch.md
+      - name: Error AADSTS50020 - guest sign-in to resource tenant fails
+        href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS50105 - user not assigned a role
         href: error-code-AADSTS50105-user-not-assigned-role.md
       - name: Error AADSTS650056 - misconfigured app
