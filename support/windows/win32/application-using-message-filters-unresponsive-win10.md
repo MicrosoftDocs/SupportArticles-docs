@@ -1,5 +1,5 @@
 ---
-title: Apps using message filters may become unresponsive in Windows 10
+title: Apps using message filters may not respond in Windows 10
 description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.
 ms.date: 12/29/2021
 author: Dipesh-Choubisa
@@ -74,7 +74,7 @@ while(::PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 
 Enable the compatibility mode of the Microsoft IME (Input Method Editor), if you're using the new Microsoft IME in Windows 10.
 
-For more information about how to use previous version of the Microsoft IME, see 
+For more information about how to use previous version of the Microsoft IME, see
 [Revert to a previous version of an IME (Input Method Editor)](https://support.microsoft.com/windows/revert-to-a-previous-version-of-an-ime-input-method-editor-adcc9caa-17cb-44d8-b46e-f5b473b4dd77).
 
 > [!NOTE]

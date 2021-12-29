@@ -22,7 +22,7 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
-    - name: Apps using message filters may become unresponsive in Windows 10
+    - name: Apps using message filters may not respond in Windows 10
       href: application-using-message-filters-unresponsive-win10.md
     - name: Three- or four-finger touch interactions doesn't work in Windows 11
       href: finger3or4-touch-interaction-no-longer-works.md
