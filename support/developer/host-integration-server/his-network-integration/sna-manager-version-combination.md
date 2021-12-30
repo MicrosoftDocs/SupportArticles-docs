@@ -4,7 +4,6 @@ description: This article introduces the information of SNA Manager version comb
 ms.date: 05/11/2020
 ms.prod-support-area-path: SNA Manager
 ms.topic: article
-ms.technology: his-network-integration
 ---
 # SNA Manager version combinations
 
