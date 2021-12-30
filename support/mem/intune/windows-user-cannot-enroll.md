@@ -21,10 +21,10 @@ When a user tries to enroll a Windows device, they see one of the following erro
 
 These errors can result from any of the following conditions:
 
-- The user has already enrolled the maximum number of devices allowed in Intune. (See (Solution 1)[#solution-1] and (Solution 2)[#solution-2].)
-- The device is blocked by the device type restrictions. (See (Solution 3)[#solution-3].)
-- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure Active Directory (Azure AD) is only supported on Windows 10 Pro and higher editions. (See (Solution 4)[#solution-4].)
-- The Azure AD setting **Users may join devices to Azure AD** is set to **None**, which prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails. (See (Solution 5)[#solution-5].)
+- The user has already enrolled the maximum number of devices allowed in Intune. (See [Solution 1](#solution-1) and [Solution 2](#solution-2).)
+- The device is blocked by the device type restrictions. (See [Solution 3](#solution-3).)
+- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure Active Directory (Azure AD) is only supported on Windows 10 Pro and higher editions. (See [Solution 4](#solution-4).)
+- The Azure AD setting **Users may join devices to Azure AD** is set to **None**, which prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails. (See [Solution 5](#solution-5).)
 
 Try the following solutions, depending on your scenario.
 
@@ -33,9 +33,9 @@ Try the following solutions, depending on your scenario.
 If your user has reached the maximum number of allowed devices, use these steps to remove unused devices.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Users** > **All Users**.
-3. Select the affected user account, and then click **Devices**.
-4. Select any unused or unwanted devices, and then click **Delete**.
+1. Go to **Users** > **All Users**.
+1. Select the affected user account, and then click **Devices**.
+1. Select any unused or unwanted devices, and then click **Delete**.
 
 ## Solution 2
 
@@ -52,13 +52,12 @@ If there are no unused devices to remove, use these steps to increase the device
 Check if device enrollment is blocked by device type restrictions.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
-2. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.
-3. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
+1. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.
+1. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
 
     > [!IMPORTANT]
     > If the current setting is already **Allow**, change it to **Block**, save the setting, and then change it back to **Allow** and save the setting again. This resets the enrollment setting.
-
-4. Wait for approximately 15 minutes, and then enroll the affected device again.
+1. Wait for approximately 15 minutes, and then enroll the affected device again.
 
 ## Solution 4
 

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot when Android Enterprise device ownership is changed from Personal to Corporate and enrollment in Intune,
+title: Android device ownership changed from Personal to Corporate
 description: Describes an issue in which the ownership of an Android Enterprise work profile device is automatically changed to Corporate after an enrollment in Microsoft Intune.
 ms.date: 10/06/2021
 ms.prod-support-area-path: Android enrollment

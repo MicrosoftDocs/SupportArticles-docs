@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot certificate profile failure and HTTP 500 error on incoming SCEP requests
+title: Troubleshoot HTTP 500 error on SCEP requests in Intune
 description: Fixes an issue in which the certificate registration point (CRP) application pool returns HTTP 500 error messages and the request can't be verified.
 ms.date: 09/09/2021
 ms.prod-support-area-path: Device protection

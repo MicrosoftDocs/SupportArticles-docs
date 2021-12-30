@@ -1,6 +1,6 @@
 ---
-title: Learn more about the error Windows failed to apply the MDM Policy settings
-description: Information about the error message "Windows failed to apply the MDM Policy settings" when you force a Group Policy update on hybrid Azure AD-joined devices.
+title: Windows failed to apply the MDM Policy settings error
+description: Information about the error message "Windows failed to apply the MDM Policy settings" when you force a Group Policy update on Intune-enrolled hybrid Azure AD-joined devices.
 ms.date: 10/06/2021
 ms.prod-support-area-path: Windows enrollment
 ---
@@ -32,7 +32,7 @@ This behavior is expected. You can safely ignore the warning message.
 
 ## More information
 
-Below is an example of the `%windir%\debug\usermode\Gpsvc.log` file entry when you enable Group Policy Service debug logging by following the steps in [A Treatise on Group Policy Troubleshooting–now with GPSVC Log Analysis!](/archive/blogs/askds/a-treatise-on-group-policy-troubleshootingnow-with-gpsvc-log-analysis):
+Below is an example of the `%windir%\debug\usermode\Gpsvc.log` file entry when you enable Group Policy Service debug logging by following the steps in [A Treatise on Group Policy Troubleshooting–now with GPSVC Log Analysis!](/archive/blogs/askds/a-treatise-on-group-policy-troubleshootingnow-with-gpsvc-log-analysis)
 
 ```output
 ProcessGPOs(Machine): Processing extension MDM Policy  

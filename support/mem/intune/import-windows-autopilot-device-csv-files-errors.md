@@ -10,7 +10,7 @@ This article helps you fix an issue where you receive the **ZtdDeviceAlreadyAssi
 
 ## Symptoms
 
-When you try to import a CSV file in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**), , you receive an error message similar to these:
+When you try to import a CSV file in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**), you receive an error message similar to these:
 
 > Error details  
 > Device is already registered to the same Tenant.  
@@ -37,7 +37,7 @@ To fix the issue, confirm whether the device record exists in Microsoft Store fo
 1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com/).
 1. Select **Manage**, and then select **Devices**.
 1. Locate the device. If the device record exists, select the device, and then select **Remove devices**.
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then reimport the CSV file.
+1. Return to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then reimport the CSV file.
 
 If the device record doesn't exist in Microsoft Store for Business or Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support in Microsoft Endpoint Manager admin center](/mem/intune/fundamentals/get-support):
 

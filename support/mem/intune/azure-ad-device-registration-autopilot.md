@@ -1,6 +1,6 @@
 ---
-title: troubleshoot Azure AD device registration and Windows Autopilot
-description: Provides tips for troubleshooting Azure AD device registration and Windows Autopilot.
+title: Troubleshoot Azure AD device registration and Windows Autopilot
+description: Provides tips for troubleshooting Azure Active Directory (Azure AD) device registration and Windows Autopilot.
 author: helenclu
 ms.author: luche
 ms.reviewer: horemaw

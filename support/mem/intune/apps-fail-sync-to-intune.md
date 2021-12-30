@@ -15,7 +15,7 @@ Microsoft Store for Business apps that are volume-purchased do not synchronize a
 
 ## Cause
 
-This issue occurs if the apps use the encrypted app package format (EAppxBundle). apps that have encrypted app packages are currently not supported and do not synchronize to Intune.
+This issue occurs if the apps use the encrypted app package format (EAppxBundle). Apps that have encrypted app packages are currently not supported and do not synchronize to Intune.
 
 ## Solution
 

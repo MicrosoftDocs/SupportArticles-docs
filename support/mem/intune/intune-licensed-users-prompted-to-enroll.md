@@ -1,5 +1,5 @@
 ---
-title: Intune-licensed users prompted for enrollment when trying to access Microsoft 365 resources
+title: Licensed user accessing Microsoft 365 prompted to enroll in Intune
 description: Describes a behavior that causes Intune-licensed users to be prompted for enrollment when they are targeted by Basic Mobility and Security for Microsoft 365 security policies.
 ms.date: 12/20/2021
 ms.prod-support-area-path: Create and assign Conditional Access policy

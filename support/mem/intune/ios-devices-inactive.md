@@ -1,10 +1,10 @@
 ---
-title: Troubleshooting steps for iOS/iPadOS devices that won't check in with Microsoft Intune
+title: iOS or iPadOS devices won't check in with Microsoft Intune
 description: Resolves an issue where iOS/iPadOS devices are inactive or won't check in with Intune.
 ms.date: 09/30/2021
 ---
 
-# iOS or iPadOS devices aren't checking in with the Intune service.
+# iOS or iPadOS devices aren't checking in with the Intune service
 
 This article fixes an issue where iOS/iPadOS devices are inactive or the Microsoft Endpoint Manager admin console can't communicate with them. Devices must check in periodically with Intune to maintain access to protected corporate resources. If devices don't check in:
 

@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting a missing certificate when enrolling Android devices in Intune
-description: Troubleshoot when a user's Android device is missing a require certificate and can't enroll in Microsoft Intune.
+title: Troubleshooting a missing Android certificate in Intune
+description: Troubleshoot when a user's Android device is missing a required certificate and can't enroll in Microsoft Intune.
 ms.date: 09/30/2021
 ---
 
 # Android device is missing a required certificate
 
-When a user tries to sign in to the Company Portal app on Intune-managed Android device, they receive the error message "You can't sign in because your device is missing a required certificate."
+When a user tries to sign in to the Company Portal app on Microsoft Intune-managed Android device, they receive the error message "You can't sign in because your device is missing a required certificate."
 
 ## Cause
 
@@ -18,7 +18,7 @@ The user might be able to retrieve the missing certificate. Ask the user to comp
 
 ## Solution 2
 
-After entering their corporate credentials and getting redirected for federated login, users might still see the missing certificate error. In this case, the error may mean that an intermediate certificate is missing from your Active Directory Federation Services (AD FS) server
+After entering their corporate credentials and getting redirected for federated login, users might still see the missing certificate error. In this case, the error may mean that an intermediate certificate is missing from your Active Directory Federation Services (AD FS) server.
 
 The certificate error occurs because Android devices require intermediate certificates to be included in an [SSL Server hello](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Currently, a default AD FS server or WAP - AD FS Proxy server installation sends only the AD FS service SSL certificate in the SSL server hello response to an SSL Client hello.
 
@@ -27,7 +27,7 @@ To fix the issue, import the certificates into the Computers Personal Certificat
 1. On the AD FS and proxy servers, right-click **Start** > **Run** > **certlm.msc** to launch the Local Machine Certificate Management Console.
 1. Expand **Personal** and choose **Certificates**.
 1. Find the certificate for your AD FS service communication (a publicly signed certificate), and double-click to view its properties.
-1. Choose the **Certification Path** tab to see the certificate's parent certificate/s.
+1. Choose the **Certification Path** tab to see the certificate's parent certificate(s).
 1. On each parent certificate, choose **View Certificate**.
 1. Choose **Details** > **Copy to file…**.
 1. Follow the wizard prompts to export or save the public key of the parent certificate to the file location of your choice.

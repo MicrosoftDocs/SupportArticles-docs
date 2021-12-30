@@ -92,7 +92,7 @@ The error "User Name Not Recognized. This user account is not authorized to use 
 
 ### XPC_TYPE_ERROR Connection invalid
 
-When you turn on a ADE-managed device that is assigned an enrollment profile, enrollment fails, and you receive the following error message:
+When you turn on an ADE-managed device that is assigned an enrollment profile, enrollment fails, and you receive the following error message:
 
 ```output
 asciidoc
@@ -119,7 +119,7 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 
 ### ADE enrollment doesn't start
 
-When you turn on a ADE-managed device that is assigned an enrollment profile, the Intune enrollment process isn't initiated.
+When you turn on an ADE-managed device that is assigned an enrollment profile, the Intune enrollment process isn't initiated.
 
 **Cause:** The enrollment profile is created before the ADE token is uploaded to Intune.
 
@@ -130,7 +130,7 @@ When you turn on a ADE-managed device that is assigned an enrollment profile, th
 
 ### ADE enrollment stuck at user login
 
-When you turn on a ADE-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
+When you turn on an ADE-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
 
 **Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on ADE devices.
 

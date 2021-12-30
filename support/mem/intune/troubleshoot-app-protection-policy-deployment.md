@@ -1,5 +1,5 @@
 ---
-title: How to troubleshoot Microsoft Intune app protection policy deployment
+title: Troubleshoot Microsoft Intune app protection policy deployment
 description: This articles gives troubleshooting guidance for IT Admins for issues when you deploying Intune app protection policies. 
 ms.date: 09/03/2021
 ms.topic: troubleshooting
@@ -23,7 +23,7 @@ Collect the following information:
 - How many users are affected? Are all devices or only some devices affected?
 - How many devices are affected? Are all devices or only some devices affected?
 - Although Intune app protection policies don't require a mobile device management (MDM) service, are affected users using Intune or a third-party MDM solution?
-- Are all managed apps or only specific apps affected? For example, are line-of-business (LOB) apps build with the [Intune App SDK](/mem/intune/developer/app-sdk-get-started) affected but store apps are not?
+- Are all managed apps or only specific apps affected? For example, are line-of-business (LOB) apps built with the [Intune App SDK](/mem/intune/developer/app-sdk-get-started) affected but store apps are not?
 
 Now, you can start troubleshooting based on the answers to these questions.
 

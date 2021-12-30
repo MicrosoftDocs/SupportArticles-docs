@@ -12,7 +12,7 @@ This article explains how to remove an orphaned device in Intune if its owner ha
 
 ## Symptoms
 
-If you view an enrolled device in the Microsoft Endpoint Manage admin center under **Devices** > **All Devices**, you see that the UPN is **None**.
+If you view an enrolled device in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **All Devices**, you see that the UPN is **None**.
 
 ## Cause
 

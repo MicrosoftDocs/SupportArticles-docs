@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot error 0x80004003 signing in to the Intune NDES Connector UI
-description: Resolves an issue in which you receive an unexpected error and an 0x80004003 error during the sign-in to the Intune Certificate CNDES UI when you configure NDES.
+title: Error 0x80004003 signing in to the Intune NDES Connector UI
+description: Troubleshoot an unexpected error and an 0x80004003 error during sign-in to the Intune Certificate NDES UI when you configure NDES.
 ms.date: 05/11/2020
 ms.prod-support-area-path: iOS app configuration profiles
 ms.reviewer: luche
@@ -11,7 +11,7 @@ This article fixes an issue in which you receive an unexpected error and and err
 
 ## Symptoms
 
-When you configure NDES for Simple Certificate Enrollment Protocol (SCEP) certificate deployment in Microsoft Intune, you receive the following error message when you sing in to the NDES Connector UI (NDESConnectorUI.exe):
+When you configure NDES for Simple Certificate Enrollment Protocol (SCEP) certificate deployment in Microsoft Intune, you receive the following error message when you sign in to the NDES Connector UI (NDESConnectorUI.exe):
 
 > An unexpected error has occurred
 

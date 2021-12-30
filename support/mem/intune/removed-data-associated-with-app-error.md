@@ -1,5 +1,5 @@
 ---
-title: Your organization has removed its data associated with this app - Outlook for Android error in Intune
+title: Your organization removed Outlook app data for Android
 description: Describes an issue in which you receive the Your organization has removed its data associated with this app error message when you open the Outlook for Android app that's managed by Intune.
 ms.date: 10/19/2021
 ms.prod-support-area-path:
@@ -49,4 +49,4 @@ If the issue persists, follow these steps to get support:
    1. Provide the incident ID to Microsoft Support.
 
 1. Collect Android debug log information.
-1. Create a service request. To do this, follow the steps in [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).
+1. Create a service request. To do this, follow the steps in [How to get support in Microsoft Endpoint Manager admin center](/mem/intune/fundamentals/get-support).
