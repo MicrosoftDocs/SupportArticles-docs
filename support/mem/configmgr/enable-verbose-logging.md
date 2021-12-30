@@ -42,7 +42,7 @@ To enable verbose logging for State System (StateSys), set the **REG_DWORD** val
 
 ## Enable verbose logging for WSUS Synchronization Manager (WSYNCMGR)
 
-To enable verbose logging for WsyncMgr.log, create or modify the following registry value on the site server and set the **REG_DWORD** value to **4**:
+To enable verbose logging for WsyncMgr.log, create or modify the following registry value on the site server and set the **REG_DWORD** value to **0**:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_WSUS_SYNC_MANAGER\LogLevel`
 

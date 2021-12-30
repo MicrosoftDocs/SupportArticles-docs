@@ -49,7 +49,7 @@ productDirectory:
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"
     summary: Troubleshooting articles for Host Integration Server
-    url: host-integration-server/welcome-host-integration-server.md
+    url: developer/host-integration-server/welcome-host-integration-server.md
       
   - title: Web Apps
     imageSrc: "media/hub-landing/app-service-web.svg"

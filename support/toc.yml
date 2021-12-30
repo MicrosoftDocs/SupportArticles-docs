@@ -3,7 +3,7 @@
 - name: Welcome
   href: dotnet/welcome-dotnet.md
 - name: Welcome
-  href: host-integration-server/welcome-host-integration-server.md
+  href: developer/host-integration-server/welcome-host-integration-server.md
 - name: Welcome
   href: visualstudio/welcome-visual-studio.md
 - name: Welcome
