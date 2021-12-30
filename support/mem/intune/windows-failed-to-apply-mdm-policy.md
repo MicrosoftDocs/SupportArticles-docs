@@ -32,7 +32,7 @@ This behavior is expected. You can safely ignore the warning message.
 
 ## More information
 
-Below is an example of the `%windir%\debug\usermode\Gpsvc.log` file entry when you enable Group Policy Service debug logging by following the steps in [A Treatise on Group Policy Troubleshooting–now with GPSVC Log Analysis!](/archive/blogs/askds/a-treatise-on-group-policy-troubleshootingnow-with-gpsvc-log-analysis):
+Below is an example of the `%windir%\debug\usermode\Gpsvc.log` file entry when you enable Group Policy Service debug logging by following the steps in [A Treatise on Group Policy Troubleshooting–now with GPSVC Log Analysis!](/archive/blogs/askds/a-treatise-on-group-policy-troubleshootingnow-with-gpsvc-log-analysis)
 
 ```output
 ProcessGPOs(Machine): Processing extension MDM Policy  
