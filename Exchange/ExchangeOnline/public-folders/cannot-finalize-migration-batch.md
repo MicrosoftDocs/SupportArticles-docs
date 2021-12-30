@@ -44,12 +44,14 @@ To fix this issue, follow these steps:
 
    - For the migration batch, run the [Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch) cmdlet.
 
-     The following screenshot is an example of the output:
-    :::image type="content" source="media/cannot-finalize-migration-batch/get-migrationbatch-cmdlet.png" alt-text="Screenshot of the output for the Get-MigrationBatch cmdlet.":::
+        The following screenshot is an example of the output:
+
+        :::image type="content" source="media/cannot-finalize-migration-batch/get-migrationbatch-cmdlet.png" alt-text="Screenshot of the output for the Get-MigrationBatch cmdlet.":::
    - For all public folder mailbox migration requests, run the [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/get-publicfoldermailboxmigrationrequest) cmdlet.
 
-     The following screenshot is an example of the output:
-    :::image type="content" source="media/cannot-finalize-migration-batch/get-publicfoldermailboxmigrationrequest-cmdlet.png" alt-text="Screenshot of the output for the Get-PublicFolderMailboxMigrationRequest cmdlet.":::
+        The following screenshot is an example of the output:
+
+        :::image type="content" source="media/cannot-finalize-migration-batch/get-publicfoldermailboxmigrationrequest-cmdlet.png" alt-text="Screenshot of the output for the Get-PublicFolderMailboxMigrationRequest cmdlet.":::
 
     If the status isn't displayed as **Synced**, wait until the status is displayed as **Synced**. If the status is displayed as **Failed**, investigate why the status is failed.
 
@@ -62,7 +64,8 @@ To fix this issue, follow these steps:
         ```
 
      The following screenshot is an example of the output:
-    :::image type="content" source="media/cannot-finalize-migration-batch/lastsynceddatetime-value.png" alt-text="Screenshot of the LastSyncedDateTime value.":::
+
+        :::image type="content" source="media/cannot-finalize-migration-batch/lastsynceddatetime-value.png" alt-text="Screenshot of the LastSyncedDateTime value.":::
 
    - For all public folder mailbox migration requests, run the following [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/get-publicfoldermailboxmigrationrequest) cmdlet:
 
@@ -71,12 +74,15 @@ To fix this issue, follow these steps:
         ```
 
      The following screenshot is an example of the output:
-    :::image type="content" source="media/cannot-finalize-migration-batch/lastsuccessfulsynctimestamp-value.png" alt-text="Screenshot of the LastSuccessfulSyncTimestamp value":::
+
+        :::image type="content" source="media/cannot-finalize-migration-batch/lastsuccessfulsynctimestamp-value.png" alt-text="Screenshot of the LastSuccessfulSyncTimestamp value":::
 
     The `LastSyncedDateTime` value and the `LastSuccessfulSyncTimestamp` value should be within seven days. If not, review and ensure all public folder mailbox migration requests are synced successfully and recently.
 
 Sometimes, the status of the migration batch and all public folder mailbox migration requests are displayed as **Synced**. However, the `LastSyncedDateTime` value of the migration batch is displayed as an old date.
 
 See the following screenshot for an example:
+
 :::image type="content" source="media/cannot-finalize-migration-batch/old-date.png" alt-text="Screenshot of the LastSyncedDateTime value that is displayed as an old date.":::
+
 In this scenario, wait up to an hour because the migration batch has not been updated by the Mailbox Replication Service. Then, check the `LastSyncedDateTime` value again. If the synced date is updated, use the `Complete-MigrationBatch` cmdlet to finalize the migration batch.
