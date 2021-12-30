@@ -1080,6 +1080,8 @@
       href: ./deployment/windows-deployment-service-not-start.md
     - name: Windows Internal Database (WID) installation fails
       href: ./deployment/error-install-windows-internal-database.md
+    - name: PCR7 configuration "Binding not possible" error
+      href: ./deployment/pcr7-configuration-binding-not-possible.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./deployment/windows-server-support-installation-for-amd-role-family-processor.md
     - name: WSUS clients can't install updates
