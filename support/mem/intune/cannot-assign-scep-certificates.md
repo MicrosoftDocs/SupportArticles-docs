@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot when ou are unable to assign SCEP certificates to devices
+title: You can't assign SCEP certificates to devices in Intune
 description: Fixes an issue in which you can't assign SCEP certificates to devices in Microsoft Intune after you renew an expired certificate.
 ms.date: 09/09/2021
 ms.prod-support-area-path: Device protection

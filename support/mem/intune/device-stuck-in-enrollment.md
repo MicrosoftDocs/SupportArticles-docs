@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting steps for iOS/iPadOS devices that are stuck in the enrollment screen
-description: Resolves an issue where iOS/iPadOS devices are stuck on an enrollment screen during Intune enrollment.
+title: iOS or iPadOS device stuck on Intune enrollment screen
+description: Resolves an issue where iOS/iPadOS devices are stuck on an enrollment screen during Microsoft Intune enrollment.
 ms.date: 09/30/2021
 ---
 
 # iOS or iPadOS device is stuck on an enrollment screen
 
-This article fixes an issue where iOS/iPadOS devices are stuck on an enrollment screen for more than 10 minutes. An enrolling device may get stuck in either of two screens:
+This article fixes an issue where iOS/iPadOS devices are stuck on a Microsoft Intune enrollment screen for more than 10 minutes. An enrolling device may get stuck in either of two screens:
 
 - Awaiting final configuration from "Microsoft"
 - Guided Access app unavailable. Please contact your administrator.

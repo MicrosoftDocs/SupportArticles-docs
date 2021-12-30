@@ -1,5 +1,5 @@
 ---
-title: Managed Browser policy triggers 0x87D1FDE8 error in Itune
+title: Managed Browser policy triggers 0x87D1FDE8 error in Intune
 description: Describes an issue in which you receive error 0x87D1FDE8 after you deploy a Managed Browser policy in Microsoft Intune.
 ms.date: 05/11/2020
 ms.prod-support-area-path: App management

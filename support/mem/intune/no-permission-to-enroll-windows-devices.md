@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot when you don't have permissions to enroll a Windows device in Intune
-description: Rsolves the issue in which you can't enroll a Windows device in Microsoft Intune if you don't log on to Windows as a local administrator.
+title: You don't have permissions to enroll a Windows device in Intune
+description: Troubleshoot when you don't have the right privileges to enroll a Windows device in Microsoft Intune.
 ms.date: 10/06/2021
 ms.prod-support-area-path: Windows enrollment
 ---

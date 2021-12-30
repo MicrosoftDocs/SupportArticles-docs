@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot when the Intune Connector for Active Directory is installed but doesn't appear
+title: Intune Connector for Active Directory installed but doesn't appear
 description: Describes an issue in which the Intune Connector for Active Directory is installed but doesn't appear in Intune, and you receive an error message.
 ms.date: 10/06/2021
 ms.prod-support-area-path: Windows enrollment
 ---
-# The Intune Connector for Active Directory is installed but doesn't appear in Intune
+# Intune Connector for Active Directory is installed but doesn't appear in Intune
 
 This article provides a solution for the issue that the Intune Connector for Active Directory doesn't appear after it is installed in Microsoft Intune.
 

@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting Windows device enrollment problems in Microsoft Intune
-description: Suggestions for troubleshooting some of the most common error messages when you enroll Windows devices in Intune.
+title: Troubleshooting Windows device enrollment problems in Intune
+description: Suggestions for troubleshooting some of the most common error messages when you enroll Windows devices in Microsoft Intune.
 ms.date: 10/01/2021
 ms.reviewer: mghadial
 ---
@@ -21,11 +21,11 @@ Enrollment fails with the error "The machine is already enrolled." The enrollmen
 **Solution:**
 
 1. From the **Start** menu, type **Run** -> **MMC**.
-1. Choose **File** > **Add/ Remove Snap-ins**.
+1. Choose **File** > **Add/Remove Snap-ins**.
 1. Double-click **Certificates**, choose **Computer account** > **Next**, and select **Local Computer**.
-1. Double-click **Certificates (Local computer)** and choose **Personal/ Certificates**.
+1. Double-click **Certificates (Local computer)** and choose **Personal** > **Certificates**.
 1. Look for the Intune cert issued by Sc_Online_Issuing, and delete it, if present.
-1. If the following registry key exists, delete it: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** and all sub keys.
+1. If the following registry key exists, delete it: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement** and all sub keys.
 1. Try to re-enroll.
 1. If the PC still can't enroll, look for and delete this key, if it exists: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
 1. Try to re-enroll.

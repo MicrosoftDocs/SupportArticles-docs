@@ -10,7 +10,7 @@ This article provides two methods to solve the error that occurs when you can't 
 
 ## Symptoms
 
-You have a ADE device that's enrolled in Microsoft Intune and has Conditional Access policies applied. When you try to access a cloud app on the device, you receive the following error message:
+You have an ADE device that's enrolled in Microsoft Intune and has Conditional Access policies applied. When you try to access a cloud app on the device, you receive the following error message:
 
 > Your sign-in was successful but your admin requires your device to be managed by <*CompanyName*> to access this resource.
 

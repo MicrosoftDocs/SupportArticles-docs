@@ -54,7 +54,7 @@ A user receives an error during enrollment, such as "DeviceCapReached" or a gene
 
 **Cause:** This error indicates that a user is trying to enroll more devices than the device enrollment limit.
 
-**Solution:** Check and adjust number of devices enrolled and allowed. Use these steps to make sure hte user isn't assigned more than the maximum number of devices.
+**Solution:** Check and adjust number of devices enrolled and allowed. Use these steps to make sure the user isn't assigned more than the maximum number of devices.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices the user has enrolled.
@@ -130,7 +130,7 @@ A [rollup for AD FS 2.0](https://support.microsoft.com/help/2607496) works in co
 1. Confirm that the user is assigned an appropriate license for the version of the Intune service that you're using.
 1. Confirm that the device isn't already enrolled with another MDM provider.
 1. Confirm that the device doesn't already have a management profile installed.
-1. For iOS/iPadOD devices, confirm that Safari is the default browser and that cookies are enabled. For Android devices, confirm that Chrome is the default browser and that cookies are enabled.
+1. For iOS/iPadOS devices, confirm that Safari is the default browser and that cookies are enabled. For Android devices, confirm that Chrome is the default browser and that cookies are enabled.
 
 ## IT admin needs to assign license for access
 
