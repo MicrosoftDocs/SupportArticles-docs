@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "support/host-integration-server/welcome-host-integration-server.md",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/welcome-host-integration-server",
+      "redirect_document_id": true
+    }    
+  ]
+}
