@@ -30,14 +30,14 @@ This issue might occur if the /etc/ssh configuration directory or the files in t
 
 ## Resolution
 
-To resolve the issue, restore the appropriate permissions to the configuration directory. To do this, follow the steps in the [online repair](#online-repair-by-using-azure-serial-console) section.
+To resolve the issue, restore the appropriate permissions to the configuration directory. To do this, follow the steps in the [online repair](#online-repair) section.
 If you can't use the Run Command feature or the Azure Serial Console, go to the [Offline repair](#offline-repair) section.
 
 ### Online repair
 
 **Run Command by using VM agent**
 
-If the [VM agent](windows-azure-guest-agent#checking-agent-status-and-version) is installed on the VM, you can use the **Run Command** feature to run the restoring script:
+If the [VM agent](windows-azure-guest-agent.md#checking-agent-status-and-version) is installed on the VM, you can use the **Run Command** feature to run the restoring script:
 
 1. Sign in to the [Azure portal](https://portal.azure.com), and then go to the VM page.
 1. In the **Operation** section, select **Run Command** > **RunScriptShell**, and then run the following script. Replace `<username>` with your user name.
