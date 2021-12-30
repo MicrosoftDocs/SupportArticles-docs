@@ -29,4 +29,4 @@ In this scenario, you should not provide high availability by clustering the MQS
 
 To provide high availability for the MQSAgent or MQSAgent2 COM+ application in a clustered environment, you must install the COM+ application locally on each cluster node. Don't cluster this component. If the COM+ application stops for any reason, the next call to the application from BizTalk Server automatically restarts the application. This behavior makes sure that you provide high availability without clustering this component.
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
