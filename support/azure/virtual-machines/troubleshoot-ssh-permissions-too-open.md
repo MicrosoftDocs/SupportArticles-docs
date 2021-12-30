@@ -40,7 +40,7 @@ If you can't use the Run Command feature or the Azure Serial Console, go to the 
 If the [VM agent](windows-azure-guest-agent.md#checking-agent-status-and-version) is installed on the VM, you can use the **Run Command** feature to run the restoring script:
 
 1. Sign in to the [Azure portal](https://portal.azure.com), and then go to the VM page.
-1. In the **Operation** section, select **Run Command** > **RunScriptShell**, and then run the following script. Replace `<username>` with your user name.
+1. In the **Operations** section, select **Run Command** > **RunScriptShell**, and then run the following script. Replace `<username>` with your user name.
 
     ``` bash
     chmod –R 644 /etc/ssh
