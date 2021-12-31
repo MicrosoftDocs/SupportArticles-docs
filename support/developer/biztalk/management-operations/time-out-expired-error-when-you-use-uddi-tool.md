@@ -4,7 +4,6 @@ description: This article provides resolutions for time-out expired error that o
 ms.date: 08/25/2020
 ms.prod-support-area-path: Management and Operations
 ms.reviewer: Mstern
-ms.technology: biztalk-server-management-operations
 ---
 # Time-out expired error when you use the UDDI tool in BizTalk Server 2013
 

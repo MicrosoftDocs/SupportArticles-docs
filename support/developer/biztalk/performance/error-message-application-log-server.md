@@ -3,8 +3,6 @@ title: Error message in the application log of a server
 description: This article explains possible causes and resolutions for the error message in the application log of a server that is running Microsoft BizTalk Server 2006 or BizTalk Server 2004.
 ms.date: 09/27/2020
 ms.prod-support-area-path: Performance
-ms.prod: biztalk-server
-ms.technology: biztalk-server-performance
 ---
 # Error message in the application log of a computer that is running BizTalk Server
 

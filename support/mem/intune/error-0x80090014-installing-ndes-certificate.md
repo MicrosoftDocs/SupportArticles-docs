@@ -1,6 +1,6 @@
 ---
 title: Error 0x80090014 installing NDES certificate
-description: Describes an issue that causes the installation of the NDES connector for Intune to fail to install the NDES certificate. Provides a resolution.
+description: Gives the resolution for an issue where the NDES connector for Microsoft Intune fails to install because the NDES certificate isn't installed.
 ms.date: 05/11/2020
 ms.prod-support-area-path: Device protection
 ms.reviewer: jchornbe, joelste, anziob, luche
@@ -8,9 +8,6 @@ ms.reviewer: jchornbe, joelste, anziob, luche
 # Installing NDES connector for Intune fails to install NDES certificate
 
 This article fixes an issue in which you can't install the Network Device Enrollment Service (NDES) connector for Intune because the NDES certificate is not installed.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4018130
 
 ## Symptoms
 
@@ -21,7 +18,7 @@ When you try to install the Network Device Enrollment Service (NDES) connector f
 > AddNDESToCertPrivKey: Error 0x80090014: CryptAcquireContext failed. Error hr = 80090014lx  
 > CustomAction AddNDESToCertPrivKey returned actual error code 1603
 
-## Resolution
+## Solution
 
 To resolve this issue, the NDES certificate must be created as a v2 certificate.
 
@@ -29,7 +26,3 @@ To resolve this issue, the NDES certificate must be created as a v2 certificate.
 
 > [!NOTE]
 > The webserver template is a good example of this situation, although it should have **Client Authentication** added as an **Enhanced Key Usage** value.
-
-## References
-
-[Use certificates for authentication in Microsoft Intune](/mem/intune/protect/certificates-configure)
