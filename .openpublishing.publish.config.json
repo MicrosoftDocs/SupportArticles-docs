@@ -1,4 +1,9 @@
 {
+  "build_entry_point": "docs",
+  "redirection_files": [
+    ".openpublishing.redirection.json",
+    ".openpublishing.redirection.developer.json"
+  ],
   "docsets_to_publish": [
     {
       "docset_name": "support1-docset",
@@ -11,11 +16,6 @@
       "type_mapping": {
         "Conceptual": "Content"
       },
-      "build_entry_point": "docs",
-      "redirection_files": [
-        ".openpublishing.redirection.json",
-        ".openpublishing.redirection.developer.json"
-      ],
       "template_folder": "_themes"
     }
   ],

@@ -7,78 +7,283 @@
     },
     {
       "source_path": "support/host-integration-server/no-template-visual-studio-2013.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-app-integration/no-template-visual-studio-2013",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/app-integration/no-template-visual-studio-2013",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/invokable-transaction-program-registry-locations.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-app-integration/invokable-transaction-program-registry-locations",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/app-integration/invokable-transaction-program-registry-locations",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/access-violations-cancel-query.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-data-integration/access-violations-cancel-query",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/data-integration/access-violations-cancel-query",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/configure-data-sources.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-data-integration/configure-data-sources",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/data-integration/configure-data-sources",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/creating-linked-server-db2.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-data-integration/creating-linked-server-db2",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/data-integration/creating-linked-server-db2",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/error-insert-data-ibm-db2-database.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-data-integration/error-insert-data-ibm-db2-database",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/data-integration/error-insert-data-ibm-db2-database",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/maximum-number-statements-reach.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-data-integration/maximum-number-statements-reach",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/data-integration/maximum-number-statements-reach",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/storing-db2-connection-strings.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-data-integration/storing-db2-connection-strings",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/data-integration/storing-db2-connection-strings",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/change-enterprise-sso-service-account.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-setup-configuration/change-enterprise-sso-service-account",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/setup-configuration/change-enterprise-sso-service-account",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/troubleshoot-event-23-warning.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-network-integration/troubleshoot-event-23-warning",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/network-integration/troubleshoot-event-23-warning",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/troubleshoot-event-230-warning.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-network-integration/troubleshoot-event-230-warning",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/network-integration/troubleshoot-event-230-warning",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/sna-lu6-2-resync-tp-fails-start.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-network-integration/sna-lu6-2-resync-tp-fails-start",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/network-integration/sna-lu6-2-resync-tp-fails-start",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/sna-manager-version-combination.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-network-integration/sna-manager-version-combination",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/network-integration/sna-manager-version-combination",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/unable-stop-start-connections-service.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-network-integration/unable-stop-start-connections-service",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/network-integration/unable-stop-start-connections-service",
       "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/use-session-request-types-control-access.md",
-      "redirect_url": "/troubleshoot/developer/host-integration-server/his-network-integration/use-session-request-types-control-access",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/network-integration/use-session-request-types-control-access",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "support/biztalk/999-acknowledgments-hipaa-5010.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/999-acknowledgments-hipaa-5010",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/adta03-file-biztalk-accelerator-hl7.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/adta03-file-biztalk-accelerator-hl7",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/call-hl7-pipelines-orchestration-fail.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/call-hl7-pipelines-orchestration-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-edias2-runtime-feature-fails.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/biztalk-edias2-runtime-feature-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/fail-install-security-post-2871997-update.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/fail-install-security-post-2871997-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/isa16-cannot-part-payload.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/isa16-cannot-part-payload",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/messagestolob-messagecontent-btarn.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/messagestolob-messagecontent-btarn",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/override-edi-header-values.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/override-edi-header-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/send-edi-interchange.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/send-edi-interchange",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/segment-terminator-x12-encoded-interchange.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/accelerators/segment-terminator-x12-encoded-interchange",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/adapter-mqseries-cannot-retrieves-messages.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/adapter/adapter-mqseries-cannot-retrieves-messages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-adapter-tibco-ems-text-message-type.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/adapter/biztalk-adapter-tibco-ems-text-message-type",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-adapter-trace-utility.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/adapter/biztalk-adapter-trace-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/http-error-biztalk-sharepoint-adapter.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/adapter/http-error-biztalk-sharepoint-adapter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/file-system-in-biztralk-server.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/adapter/file-system-in-biztralk-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-server-supportability-on-vm.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/biztalk-server-supportability-on-vm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/sql-server-agent-jobs-biztalk.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/sql-server-agent-jobs-biztalk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-default-whitespace-behavior.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/biztalk-default-whitespace-behavior",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/cannot-configure-biztalk-server.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/cannot-configure-biztalk-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/availability-for-mqsagent-com-plus.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/availability-for-mqsagent-com-plus",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-host-instance-cannot-start.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/biztalk-host-instance-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-hotfixes-cumulative-update.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/biztalk-hotfixes-cumulative-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-message-queuing-configuration.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/setup-config/biztalk-message-queuing-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/add-generated-items-not-generate-xsd.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/dev-deploy/add-generated-items-not-generate-xsd",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/build-failed-error-when-you-use-64-bit-version.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/dev-deploy/build-failed-error-when-you-use-64-bit-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/change-scripting-function-boolean-parameter.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/dev-deploy/change-scripting-function-boolean-parameter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/systems-sql-server-biztalk.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/dev-deploy/systems-sql-server-biztalk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/upgrading-not-upgrade-enterprise-sso.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/entsso/upgrading-not-upgrade-enterprise-sso",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/call-into-pipelineobjects-fails.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/esb-toolkit/call-into-pipelineobjects-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/esb-configuration-fails.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/esb-toolkit/esb-configuration-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalk-explorer-operations-fails.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/management-operations/biztalk-explorer-operations-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/biztalkmsgboxdb-connection-issue.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/management-operations/biztalkmsgboxdb-connection-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/common-issues-resolutions-biztalk.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/management-operations/common-issues-resolutions-biztalk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/maintain-troubleshoot-database.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/management-operations/maintain-troubleshoot-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/time-out-expired-error-when-you-use-uddi-tool.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/management-operations/time-out-expired-error-when-you-use-uddi-tool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/tracking-profiles-global-tracking-enabled.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/management-operations/tracking-profiles-global-tracking-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/known-issues-biztalk-server-2013.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/performance/known-issues-biztalk-server-2013",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/error-message-application-log-server.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/performance/error-message-application-log-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/high-cpu-execute-bre-policy.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/performance/high-cpu-execute-bre-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/troubleshoot-memory-leak.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/performance/troubleshoot-memory-leak",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/biztalk/welcome-biztalk-server.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/welcome-biztalk-server",
+      "redirect_document_id": true
+    }  
   ]
 }

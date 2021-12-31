@@ -4,46 +4,46 @@
 - name: Application integration (Transaction Integrator)
   items:
   - name: HIS 2013 doesn't work with Visual Studio 2013
-    href: his-app-integration/no-template-visual-studio-2013.md
+    href: app-integration/no-template-visual-studio-2013.md
   - name: Invokable Transaction Program registry locations
-    href: his-app-integration/invokable-transaction-program-registry-locations.md
+    href: app-integration/invokable-transaction-program-registry-locations.md
 
 - name: Data integration (DB2, host files)
   items:
   - name: Access violations when you cancel a DB2 query
-    href: his-data-integration/access-violations-cancel-query.md
+    href: data-integration/access-violations-cancel-query.md
   - name: Configure data sources
-    href: his-data-integration/configure-data-sources.md
+    href: data-integration/configure-data-sources.md
   - name: Creating a linked server to DB2
-    href: his-data-integration/creating-linked-server-db2.md
+    href: data-integration/creating-linked-server-db2.md
   - name: Error when you insert data into IBM DB2 database
-    href: his-data-integration/error-insert-data-ibm-db2-database.md
+    href: data-integration/error-insert-data-ibm-db2-database.md
   - name: Maximum number of statements has reached
-    href: his-data-integration/maximum-number-statements-reach.md
+    href: data-integration/maximum-number-statements-reach.md
   - name: Storing DB2 connection strings
-    href: his-data-integration/storing-db2-connection-strings.md
+    href: data-integration/storing-db2-connection-strings.md
 
 - name: Setup and configuration
   items:
   - name: Change Enterprise SSO service account
-    href: his-setup-configuration/change-enterprise-sso-service-account.md
+    href: setup-configuration/change-enterprise-sso-service-account.md
 
 - name: Network integration (SNA gateway)
   items:
   - name: Other
     items:
     - name: Troubleshoot Event 23 warnings
-      href: his-network-integration/troubleshoot-event-23-warning.md
+      href: network-integration/troubleshoot-event-23-warning.md
     - name: Troubleshoot Event 230 warnings
-      href: his-network-integration/troubleshoot-event-230-warning.md
+      href: network-integration/troubleshoot-event-230-warning.md
   - name: SNA LU6.2 Resync TP fails to start
-    href: his-network-integration/sna-lu6-2-resync-tp-fails-start.md
+    href: network-integration/sna-lu6-2-resync-tp-fails-start.md
   - name: SNA Manager
     items:
     - name: SNA Manager version combinations
-      href: his-network-integration/sna-manager-version-combination.md
+      href: network-integration/sna-manager-version-combination.md
     - name: Unable to stop or start connections or service
-      href: his-network-integration/unable-stop-start-connections-service.md
+      href: network-integration/unable-stop-start-connections-service.md
   - name: Use session request types to control access
-    href: his-network-integration/use-session-request-types-control-access.md
+    href: network-integration/use-session-request-types-control-access.md
 

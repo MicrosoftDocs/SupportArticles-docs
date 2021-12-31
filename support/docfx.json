@@ -104,7 +104,7 @@
       },
 
       "ms.prod": {
-        "biztalk/**/*.md": "biztalk-server",
+        "developer/biztalk/**/*.md": "biztalk-server",
         "dotnet/**/*.md": ".net",
         "aspnet/**/*.md": "asp.net",
         "aspnetcore/**/*.md": "aspnet-core",
@@ -123,13 +123,20 @@
         "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
-        "biztalk/**/*.md": "",
+        "developer/biztalk/accelerators/*.md": "biztalk-server-accelerators",
+        "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
+        "developer/biztalk/setup-config/*.md": "biztalk-server-setup-config",
+        "developer/biztalk/dev-deploy/*.md": "biztalk-server-dev-deploy",
+        "developer/biztalk/entsso/*.md": "biztalk-server-entsso",
+        "developer/biztalk/esb-toolkit/*.md": "biztalk-server-esb-toolkit",
+        "developer/biztalk/management-operations/*.md": "biztalk-server-management-operations",
+        "developer/biztalk/performance/*.md": "biztalk-server-performance",
         "dotnet/**/*.md": "",
         "aspnet/**/*.md": "",
-        "developer/host-integration-server/his-app-integration/*.md": "his-app-integration",
-        "developer/host-integration-server/his-data-integration/*.md": "his-data-integration",
-        "developer/host-integration-server/his-setup-configuration/*.md": "his-setup-configuration",
-        "developer/host-integration-server/his-network-integration/*.md": "his-network-integration",
+        "developer/host-integration-server/app-integration/*.md": "his-app-integration",
+        "developer/host-integration-server/data-integration/*.md": "his-data-integration",
+        "developer/host-integration-server/setup-configuration/*.md": "his-setup-configuration",
+        "developer/host-integration-server/network-integration/*.md": "his-network-integration",
         "visualstudio/**/*.md": "",
         "webapps/**/*.md": "",
         "windows/win32/**/*.md": "",
@@ -177,13 +184,13 @@
       },
 
       "titleSuffix": {
-        "biztalk/**/*.md": "BizTalk Server",
+        "developer/biztalk/**/*.md": "BizTalk Server",
         "dotnet/**/*.md": ".NET",
         "dotnet/csharp/**/*.md": "C#",
         "dotnet/framework/**/*.md": ".NET Framework",
         "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
         "dotnet/visual-basic/**/*.md": "Visual Basic",
-        "host-integration-server/**/*.md": "Host Integration Server",
+        "developer/host-integration-server/**/*.md": "Host Integration Server",
         "aspnet/**/*.md": "ASP.NET",
         "sql/**/*.md": "SQL Server",
         "visualstudio/**/*.md": "Visual Studio",
@@ -217,9 +224,9 @@
         "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
-        "biztalk/**/*.md": [ "BizTalk Server" ],
+        "developer/biztalk/**/*.md": [ "BizTalk Server" ],
         "dotnet/**/*.md": [ ".NET" ],
-        "host-integration-server/**/*.md": [ "Host Integration Server" ],
+        "developer/host-integration-server/**/*.md": [ "Host Integration Server" ],
         "visualstudio/**/*.md": [ "VS IDE" ],
         "cpp/**/*.md": [ "VS IDE" ],
         "iis/**/*.md": [ "IIS" ],
