@@ -5,8 +5,6 @@ ms.date: 09/27/2020
 ms.prod-support-area-path: Accelerators
 ms.reviewer: mquian
 ms.topic: article
-ms.prod: biztalk-server
-ms.technology: biztalk-server-accelerators
 ---
 # ISA16 component element separator cannot be part of the payload
 
