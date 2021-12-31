@@ -4,8 +4,6 @@ description: This article provides a workaround for the problem where the builds
 ms.date: 09/27/2020
 ms.prod-support-area-path: Development and Deployment
 ms.reviewer: zoltank
-ms.prod: biztalk-server
-ms.technology: biztalk-server-dev-deploy
 ---
 # Error when you use a 64-bit version of MSBuild to build a BizTalk project
 
