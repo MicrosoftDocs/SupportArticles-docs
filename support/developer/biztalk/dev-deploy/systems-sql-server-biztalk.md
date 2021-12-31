@@ -4,7 +4,6 @@ description: A summary of the operating systems, SQL Server, Visual Studio, and 
 ms.date: 03/17/2020
 ms.prod-support-area-path: Development and Deployment
 ms.reviewer: mandia
-ms.technology: biztalk-server-dev-deploy
 ---
 # Summary of 64-bit support, operating systems and SQL Server versions supported by BizTalk Server
 

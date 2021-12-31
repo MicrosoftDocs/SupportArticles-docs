@@ -4,8 +4,6 @@ description: This article provides a resolution for the problem when you install
 ms.date: 09/27/2020
 ms.prod-support-area-path: Accelerators
 ms.reviewer: mquian, mandia
-ms.prod: biztalk-server
-ms.technology: biztalk-server-accelerators
 ---
 # Error when you try to install the BizTalk Server Accelerator for HL7
 
