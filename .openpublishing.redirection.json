@@ -521,6 +521,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/open-in-protection-unenrolled-devices.md",
+      "redirect_url": "/mem/intune/apps/data-transfer-between-apps-manage-ios",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/index.md",
       "redirect_url": "/support/mem/intune/welcome-intune",
       "redirect_document_id": false
@@ -529,7 +534,7 @@
       "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
       "redirect_url": "/mem/intune/apps/app-protection-policies",
       "redirect_document_id": false
-    },
+    }, 
     {
       "source_path": "support/mem/intune/exchange-connector-version-not-supported.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
@@ -603,6 +608,11 @@
     {
       "source_path": "support/mem/intune/look-up-intune-licenses.md",
       "redirect_url": "/mem/intune/fundamentals/licenses-assign",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector-common-problems.md",
+      "redirect_url": "/mem/intune/troubleshoot-exchange-connector",
       "redirect_document_id": false
     },
     {
