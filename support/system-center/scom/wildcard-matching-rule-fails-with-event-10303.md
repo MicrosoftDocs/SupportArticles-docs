@@ -1,7 +1,7 @@
 ---
 title: A wildcard matching rule fails with event 10303
 description: Fixes an issue in which a wildcard matching rule fails and event ID 10303 is logged in System Center Operations Manager.
-ms.date: 06/30/2020
+ms.date: 01/03/2022
 ms.prod-support-area-path: 
 ms.reviewer: adoyle, jchornbe, delhan
 ---
@@ -53,3 +53,6 @@ To resolve this problem, follow these steps:
 2. Under this subkey, create a DWORD value.
 3. Type the `MaxExpressionDepth` name for the DWORD value.
 4. Assign a data value that is between 500 and 100000. The default value is **2000**.
+
+>[!NOTE]
+>After you change the registry, MonitoringHost.exe can crash and you would see an event 4000 in the OperationsManager event log. In this case, try to use a different Operator in *Rule* filter. For example, instead of using Regular Expression or Wildcard, try *Contains*. If this doesn't solve the problem, contact Microsoft Support.
