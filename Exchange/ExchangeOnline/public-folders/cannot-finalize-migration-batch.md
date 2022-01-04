@@ -77,7 +77,7 @@ To fix this issue, follow these steps:
 
         :::image type="content" source="media/cannot-finalize-migration-batch/lastsuccessfulsynctimestamp-value.png" alt-text="Screenshot of the LastSuccessfulSyncTimestamp value":::
 
-    The value of`LastSyncedDateTime` (for the migration batch) and `LastSuccessfulSyncTimestamp` (for each migration request) should be within the past seven days. If not, review the migration request(s) and make sure that all migration requests have been successfully synchronized recently.
+    The value of `LastSyncedDateTime` (for the migration batch) and `LastSuccessfulSyncTimestamp` (for each migration request) should be within the past seven days. If not, review the migration request(s) and make sure that all migration requests have been successfully synchronized recently.
 
     **Note:** In some cases, the status of the migration batch and all migration requests is **Synced**, but the value of `LastSyncedDateTime` is a very old time, such as "01-01-1601 00:00:00". The reason is that the Mailbox Replication Service hasn't updated the migration batch. In this case, wait up to an hour, and then recheck the value of `LastSyncedDateTime`.
 
