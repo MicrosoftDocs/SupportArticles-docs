@@ -55,4 +55,4 @@ To resolve this problem, follow these steps:
 4. Assign a data value that is between 500 and 100000. The default value is **2000**.
 
 > [!NOTE]
-> After you change the registry, the MonitoringHost.exe process may crash and you will see an event 4000 in the Operations Manager event log. In this case, try to use a different operator in **Rule** filter. For example, try **Contains** instead of using regular expression or wildcard. If it doesn't solve the problem, contact Microsoft Support.
+> After you change the registry, the MonitoringHost.exe process may crash and you will see an event 4000 in the Operations Manager event log. In this case, try to use a different operator in the **Rule** filter. For example, try the **Contains** operator instead of using regular expression or wildcard. If it doesn't solve the problem, contact Microsoft Support.
