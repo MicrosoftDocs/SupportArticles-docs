@@ -34,7 +34,7 @@ The migration batch can't be completed due to one or more users having a last sy
 
 ## Cause
 
-To be able to finalize the migration, a check is made to ensure that all public folder migration requests have been successfully synchronized recently. If there is any problem preventing a migration job from completing the synchronization, it will cause a huge delay during the completion of the migration job, and may prevent the batch migration from being completed. In this situation, the check will fail and return an error.
+To be able to finalize the migration, a check is made to ensure that all public folder migration requests have been successfully synchronized recently. If there is any problem preventing the migration requests from completing the synchronization, it will cause a huge delay during the completion of the batch migration, and may prevent the batch migration from being completed. In this situation, the check will fail and return an error.
 
 ## Resolution
 
