@@ -1,6 +1,6 @@
 ---
-title: Can't finalize a public folder migration batch
-description: When you use the Complete-MigrationBatch cmdlet to finalize a public folder migration batch, you receive "The migration batch can't be completed" error message.
+title: Can't finalize a public folder batch migration
+description: When you use the Complete-MigrationBatch cmdlet to finalize a public folder batch migration, you receive "The migration batch can't be completed" error message.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -18,11 +18,11 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Error when finalizing a migration batch of public folders to Exchange Online
+# Error when finalizing a batch migration of public folders to Exchange Online
 
 ## Symptoms
 
-You start a migration batch of public folders to Exchange Online. When you use the [Complete-MigrationBatch](/powershell/module/exchange/complete-migrationbatch) cmdlet to finalize the migration batch, you receive the following error message:
+You're using batch migration to migrate Exchange Server public folders to Exchange Online. When you use the [Complete-MigrationBatch](/powershell/module/exchange/complete-migrationbatch) cmdlet to finalize the migration, you receive the following error message:
 
 ```output
 The migration batch can't be completed due to one or more users having a last sync date older than 7 days.
@@ -34,13 +34,13 @@ The migration batch can't be completed due to one or more users having a last sy
 
 ## Cause
 
-The finalization fails because stale public folder mailbox migration requests aren't synced successfully and recently. The stale requests cause delay and failure of the completion of the migration batch. If any request isn't synced successfully within seven days, a check that ensures all requests are in the healthy state fails.
+To be able to finalize the migration, a check is made to ensure that all public folder migration requests have been successfully synchronized recently. If there is any problem preventing a migration job from completing the synchronization, it will cause a huge delay during the completion of the migration job, and may prevent the batch migration from being completed. In this situation, the check will fail and return an error.
 
 ## Resolution
 
 To fix this issue, follow these steps:
 
-1. Run the following cmdlets to check the status of the migration batch and all public folder mailbox migration requests.
+1. Make sure that the status of the migration batch and all public folder mailbox migration requests is **Synced**. To check the status, run the following PowerShell cmdlets.
 
    - For the migration batch, run the [Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch) cmdlet.
 
@@ -53,9 +53,9 @@ To fix this issue, follow these steps:
 
         :::image type="content" source="media/cannot-finalize-migration-batch/get-publicfoldermailboxmigrationrequest-cmdlet.png" alt-text="Screenshot of the output for the Get-PublicFolderMailboxMigrationRequest cmdlet.":::
 
-    If the status isn't displayed as **Synced**, wait until the status is displayed as **Synced**. If the status is displayed as **Failed**, investigate why the status is failed.
+    If the status of any migration request isn't **Synced**, wait until the status changes to **Synced**. If the status of any migration request is **Failed**, investigate the reason for the failure.
 
-1. Run the following cmdlets to check the last synced date of the migration batch and all public folder mailbox migration requests.
+1. Check the last synchronization time of the migration batch and all public folder mailbox migration requests.
 
    - For the migration batch, run the following [Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch) cmdlet:
 
@@ -77,14 +77,8 @@ To fix this issue, follow these steps:
 
         :::image type="content" source="media/cannot-finalize-migration-batch/lastsuccessfulsynctimestamp-value.png" alt-text="Screenshot of the LastSuccessfulSyncTimestamp value":::
 
-    The `LastSyncedDateTime` value and the `LastSuccessfulSyncTimestamp` value should be within seven days. If not, review and ensure all public folder mailbox migration requests are synced successfully and recently.
+    The value of`LastSyncedDateTime` (for the migration batch) and `LastSuccessfulSyncTimestamp` (for each migration request) should be within the past seven days. If not, review the migration request(s) and make sure that all migration requests have been successfully synchronized recently.
+
+    **Note:** In some cases, the status of the migration batch and all migration requests is **Synced**, but the value of `LastSyncedDateTime` is a very old time, such as "01-01-1601 00:00:00". The reason is that the Mailbox Replication Service hasn't updated the migration batch. In this case, wait up to an hour, and then recheck the value of `LastSyncedDateTime`.
 
 1. Use the `Complete-MigrationBatch` cmdlet to finalize the migration batch.
-
-Sometimes, the status of the migration batch and all public folder mailbox migration requests are displayed as **Synced**. However, the `LastSyncedDateTime` value of the migration batch is displayed as an old date.
-
-See the following screenshot for an example:
-
-:::image type="content" source="media/cannot-finalize-migration-batch/old-date.png" alt-text="Screenshot of the LastSyncedDateTime value that is displayed as an old date.":::
-
-In this scenario, wait up to an hour because the migration batch has not been updated by the Mailbox Replication Service. Then, check the `LastSyncedDateTime` value again. If the synced date is updated, use the `Complete-MigrationBatch` cmdlet to finalize the migration batch.
