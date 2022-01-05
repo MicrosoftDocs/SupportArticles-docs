@@ -47,7 +47,7 @@ This issue can occur if the **Logon network security** setting on the **Security
 Microsoft 365 users have access to diagnostics that can be run to verify possible issues with Outlook password prompts. To do this, select **Run Tests: Outlook keeps asking for my password** to launch a diagnostic. The diagnostic does automated checks and returns possible solutions for you to use to try to fix any detected issues.
 
 >[!div class="nextstepaction"]
->[Outlook Keeps asking for my password](https://aka.ms/SaRA-OutlookPwdPrompt)
+>[Run Tests: Outlook Keeps asking for my password](https://aka.ms/SaRA-OutlookPwdPrompt)
 
 If you are connecting to an Exchange On-Premises mailbox, see the following articles for additional troubleshooting:
 
