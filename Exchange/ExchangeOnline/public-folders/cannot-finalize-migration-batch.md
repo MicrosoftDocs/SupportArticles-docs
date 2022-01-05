@@ -22,7 +22,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-You're using batch migration to migrate Exchange Server public folders to Exchange Online. When you use the [Complete-MigrationBatch](/powershell/module/exchange/complete-migrationbatch) cmdlet to finalize the migration, you receive the following error message:
+You're using batch migration to migrate Exchange Server public folders to Exchange Online. When you finalize the migration by using the [Complete-MigrationBatch](/powershell/module/exchange/complete-migrationbatch) cmdlet or from the Exchange admin center, you receive the following error message:
 
 ```output
 The migration batch can't be completed due to one or more users having a last sync date older than 7 days.
