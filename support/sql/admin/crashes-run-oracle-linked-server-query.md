@@ -19,12 +19,7 @@ Consider the following scenario:
 
 - You install SQL Server on a computer that is running Windows Server.
 - You create a linked server for an Oracle database.
-- You enable the **Allow inprocess** option in the options dialog box for the linked server provider.
-
-  > [!NOTE]
-  > By default, the option is not selected.
-
-- You run a linked server query using the OraOLEDB provider.
+- You run a linked server query using the OraOLEDB provider (OLEDB Provider for Oracle).
 
 In this scenario, the SQL Server service crashes, and no results are returned for the query. Additionally, you may encounter the following issues:
 
@@ -45,31 +40,31 @@ In this scenario, the SQL Server service crashes, and no results are returned fo
     OraOLEDBrst11
     OraOLEDBrst10
 
-    Full Call Stack: Function Arg 1 Arg 2 Arg 3 Arg 4
+    Full Call Stack:
 
-    ntdll!RtlReportCriticalFailure+62 00000000`00000002 00000000`00000023 00000000`403cc8a2 00000000`00000003
-    ntdll!RtlpReportHeapFailure+26 00000000`403c95f0 00000000`403d7a78 00000000`403d7ab0 00000000`4d200e30
-    ntdll!RtlpHeapHandleError+12 00000000`04180000 00000000`00000000 00000000`00000000 00000000`00000000
-    ntdll!RtlpLogHeapFailure+a4 00000000`403d7b40 00000000`04180000 00000000`403d7b50 00000000`00000008
-    ntdll!RtlFreeHeap+1aa8f 00000000`00000020 00000000`403cd850 00000000`00000001 00000000`403d0024
-    ole32!CoTaskMemFree+36 00000000`403d6b00 00000000`00000001 00000000`4d200e30 00000000`00000024
-    OraOLEDButl11+1a5f 00000000`00000001 00000000`4d200e30 00000000`00000024 00000000`403d7ab8
-    0x403d6b00 00000000`4d200e30 00000000`00000024 00000000`403d7ab8 00000000`24492843
-    0x00000001 00000000`00000024 00000000`403d7ab8 00000000`24492843 00000000`403b8c00
-    0x4d200e30 00000000`403d7ab8 00000000`24492843 00000000`403b8c00 00000000`403c95f0
-    0x00000024 00000000`24492843 00000000`403b8c00 00000000`403c95f0 00000000`403ca610
-    0x403d7ab8 00000000`403b8c00 00000000`403c95f0 00000000`403ca610 00000000`403ca610
-    OraOLEDBrst11+12843 00000000`403c95f0 00000000`403ca610 00000000`403ca610 00000000`403c95f0
-    0x403b8c00 00000000`403ca610 00000000`403ca610 00000000`403c95f0 00000000`244928b1
-    0x403c95f0 00000000`403ca610 00000000`403c95f0 00000000`244928b1 00000000`403d7ab8
-    0x403ca610 00000000`403c95f0 00000000`244928b1 00000000`403d7ab8 00000000`403c95f0
-    0x403ca610 00000000`244928b1 00000000`403d7ab8 00000000`403c95f0 00000000`4966a260
-    0x403c95f0 00000000`403d7ab8 00000000`403c95f0 00000000`4966a260 00000000`05cd21e0
-    OraOLEDBrst11+128b1 00000000`403c95f0 00000000`4966a260 00000000`05cd21e0 00000000`00000000
-    0x403d7ab8 00000000`4966a260 00000000`05cd21e0 00000000`00000000 00000000`2449ca03
-    0x403c95f0 00000000`05cd21e0 00000000`00000000 00000000`2449ca03 00000000`4d200e30
-    0x4966a260 00000000`00000000 00000000`2449ca03 00000000`4d200e30 00000000`00000001
-    0x05cd21e0 00000000`2449ca03 00000000`4d200e30 00000000`00000001 00000000`05cd21e0
+    ntdll!RtlReportCriticalFailure+62 
+    ntdll!RtlpReportHeapFailure+26 
+    ntdll!RtlpHeapHandleError+12 
+    ntdll!RtlpLogHeapFailure+a4 
+    ntdll!RtlFreeHeap+1aa8f 
+    ole32!CoTaskMemFree+36 
+    OraOLEDButl11+1a5f 
+    0x403d6b00 
+    0x00000001 
+    0x4d200e30 
+    0x00000024 
+    0x403d7ab8 
+    OraOLEDBrst11+12843 
+    0x403b8c00 
+    0x403c95f0 
+    0x403ca610 
+    0x403ca610 
+    0x403c95f0 
+    OraOLEDBrst11+128b1 
+    0x403d7ab8 
+    0x403c95f0 
+    0x4966a260 
+    0x05cd21e0 
     ```
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
@@ -82,11 +77,11 @@ The SQL Server process crashes because the third-party linked server provider is
 
 ## Workaround
 
-To work around this issue, use one of the following methods:
+In some cases, the one of the following methods works around the issue:
 
 - Remove the comments symbol.
 - Replace the comments symbol with the comments symbol: `/* */`.
 
-## More information
+## Resolution
 
-Contact the third-party provider for information and fixes. For latest OLEDB provider version, see [64-bit Oracle Data Access Components (ODAC) Downloads](https://www.oracle.com/database/technologies/odac-downloads.html).
+Contact the third-party provider for information and latest fixes. For latest OLEDB provider version, see [64-bit Oracle Data Access Components (ODAC) Downloads](https://www.oracle.com/database/technologies/odac-downloads.html).
