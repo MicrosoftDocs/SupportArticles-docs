@@ -106,3 +106,6 @@ To deploy the Simple MAPI settings by using a custom Group Policy template, foll
 
    > [!NOTE]
    > The **Outlook Security Mode** Group Policy setting that you set in step 6 created the **AdminSecurityMode** value and set it to **3**. This indicates that Outlook will use Group Policy for managing programmatic security.
+
+   > [!NOTE]
+   > Setting the registry values PromptSimpleMAPISend, PromptSimpleMAPINameResolve, and PromptSimpleMAPIOpenMessage to a value of **2** may be used to allow Microsoft Word to send email via Outlook when using the Mail Merge feature.
