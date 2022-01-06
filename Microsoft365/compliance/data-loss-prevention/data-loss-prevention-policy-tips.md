@@ -123,7 +123,7 @@ To view unified DLP policy tips in the Microsoft 365 compliance center, remove t
 ## How to edit a DLP policy in the Exchange admin center
 
 > [!NOTE]
-> If you have DLP policies in both the Exchange Admin Center (EAC) and the Microsoft 365 compliance center, it is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
+> If you have DLP policies in both the Exchange admin center (EAC) and the Microsoft 365 compliance center, it is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
 
 1. In the Exchange admin center, locate **compliance management**, and then select **data loss prevention**.
 1. Select the policy that requires editing, and then select the pencil icon or double-click the policy that has to be changed.
