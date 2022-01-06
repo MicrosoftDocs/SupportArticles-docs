@@ -28,6 +28,9 @@ The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to
 
 :::image type="content" source="media/linux-upgrade-suse-15sp1/upgrade-path.png" alt-text="Diagram shows the supported upgrade path. Only SLES 12 SP4 or 12 SP5 can upgrade to SLES 15 SP1." border="false":::
 
+> [!Note]
+> The steps in this article also apply to upgrading SLES SAP 12 SP4 or 12 SP5 to SLES SAP 15 SP1.
+
 ## Prerequisites
 
 - Plan the migration activity as per the approved downtime window. This is because the VM reboots during the migration.
