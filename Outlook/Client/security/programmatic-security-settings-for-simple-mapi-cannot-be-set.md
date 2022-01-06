@@ -85,6 +85,9 @@ To deploy the Simple MAPI settings by using a custom Group Policy template, foll
 6. For **Exchange Security Form** settings to be set by using Group Policy, you must set the **Outlook Security Mode** setting to **Use Outlook Security Group Policy**. To locate that policy setting, expand **Classic Administrative Templates (ADM)**, expand **Microsoft Outlook 2010**, expand **Security**, and then select **Security Form Settings**. In the details pane, double-click **Outlook Security Mode**. Enable the policy, and then set it to **Use Outlook Security Group Policy**, as is shown in the following screen shot.
 
    :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/outlook-security-mode-window.png" alt-text="Screenshot for setting Use Outlook Security Group Policy." border="false":::
+   
+   > [!NOTE]
+   > The **Outlook Security Mode** Group Policy setting creates the **AdminSecurityMode** value and set it to **3**. This indicates that Outlook will use Group Policy for managing programmatic security.
 
 7. The Simple MAPI options are located in the navigation pane (the left pane) under **Security Forms Settings**, in the **Programmatic Security** node, as shown in the following screenshot. To configure the Simple MAPI options, double-click any policy setting in the details pane. For example, double-click **Configure Simple MAPI sending prompt** to configure what happens when a program tries to send mail programmatically by using SimpleMAPI.
 
@@ -105,4 +108,8 @@ To deploy the Simple MAPI settings by using a custom Group Policy template, foll
    :::image type="content" source="media/programmatic-security-settings-for-simple-mapi-cannot-be-set/registry-settings-for-simple-mapi-policies.png" alt-text="Screenshot for all three Simple MAPI policies are configured." border="false":::
 
    > [!NOTE]
-   > The **Outlook Security Mode** Group Policy setting that you set in step 6 created the **AdminSecurityMode** value and set it to **3**. This indicates that Outlook will use Group Policy for managing programmatic security.
+   > Setting the following registry values to **2** may be used to allow Microsoft Word to send emails through Outlook when using the mail merge feature.
+   > - PromptSimpleMAPISend
+   > - PromptSimpleMAPINameResolve
+   > - PromptSimpleMAPIOpenMessage
+  
