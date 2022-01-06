@@ -39,6 +39,6 @@ In this scenario, the message tracking logs show the message that was forwarded 
 
 This behavior is by design. To forward the message, an exact copy of the original message is created and sent to the external recipient. Mail routing logic sees that this new message originated in the on-premises environment and therefore doesn't send the message back to the on-premises environment. Instead, it's routed directly to the external recipient domain through Exchange Online Protection.
 
-This behavior also applies to other similar scenarios. For example, an email is sent from on-premises to a distribution group hosted in Exchange Online, and there is an external recipient in the distribution group. In this scenario, the email sent to that external recipient will be routed directly instead of following centralized mail routing, because the message originates from the on-premises environment.
+This behavior also applies to other similar scenarios. For example, email is sent from on-premises to a distribution group hosted in Exchange Online, and there is an external recipient in the distribution group. In this scenario, the email sent to that external recipient will be routed directly instead of following centralized mail routing, because the message originates from the on-premises environment.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
