@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS50020 - User account from identity provider does not exist in tenant
 description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned.
-ms.date: 12/31/2021
+ms.date: 01/05/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.editor: v-jsitser
@@ -19,11 +19,11 @@ This article helps you troubleshoot error code `AADSTS50020` that's returned if 
 
 When a guest user tries to access an application or resource in the resource tenant, the sign-in fails, and the following error message is displayed:
 
-> "AADSTS50020: User account 'user@domain.com' from identity provider {IdentityProviderURL} does not exist in tenant {ResourceTenantName}."
+> AADSTS50020: User account 'user@domain.com' from identity provider {IdentityProviderURL} does not exist in tenant {ResourceTenantName}.
 
 When an administrator reviews the sign-in logs on the home tenant, a "90072" error code entry indicates a sign-in failure. The error message states:
 
-> "User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account."
+> User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account.
 
 ## Cause 1: Used unsupported account type (multitenant and personal accounts)
 
@@ -137,17 +137,15 @@ When a guest user accepts an invitation, the user's `LiveID` attribute (the uniq
 
 1. In the home tenant, retrieve the value of the `LiveID` attribute using the `Get-MsolUser` PowerShell cmdlet:
 
-    ```AzurePowerShell
-       Get-MsolUser -SearchString tuser1 | Select-Object -ExpandProperty LiveID
-    ```
-
+   ```AzurePowerShell
+   Get-MsolUser -SearchString tuser1 | Select-Object -ExpandProperty LiveID
+   ```
 1. In the resource tenant, convert the value of the `key` attribute within `AlternativeSecurityIds` to a base64-encoded string:
 
    ```AzurePowerShell
-        [convert]::ToBase64String((Get-MsolUser -ObjectId 01234567-89ab-cdef-0123-456789abcdef
-        ).AlternativeSecurityIds.key)
+   [convert]::ToBase64String((Get-MsolUser -ObjectId 01234567-89ab-cdef-0123-456789abcdef
+          ).AlternativeSecurityIds.key)
    ```
-
 1. Convert the base64-encoded string to a hexadecimal value by using an online converter (such as [base64.guru](https://base64.guru/converter/decode/hex)).
 1. Compare the values from step 1 and step 3 to verify that they're different. The `NetID` of the user account in the home tenant changed when the account was deleted and re-created.
 
