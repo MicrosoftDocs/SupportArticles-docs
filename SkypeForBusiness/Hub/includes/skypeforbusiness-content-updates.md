@@ -2,6 +2,15 @@
 
 
 
+## Week of December 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/21/2021 | [Error when you dial out to a telephone number from a PSTN Conferencing meeting](/skypeforbusiness/troubleshoot/online-conferencing/dial-out-to-telephone-from-pstn-meeting) | modified |
+| 12/21/2021 | [Troubleshoot sign-in issues for admins](/skypeforbusiness/troubleshoot/online-sign-in/troubleshoot-sign-in-issues-for-admins) | modified |
+
+
 ## Week of December 06, 2021
 
 

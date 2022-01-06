@@ -45,14 +45,14 @@ To resolve this problem, make sure that the Temporary Internet Files folder is v
    Office 2007: `HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Outlook\Security`  
    Office 2003: `HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Outlook\Security`
 
-   :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/locate-security-registry-subkey.png" alt-text="Screenshot of the Security subkey in the registry subkey list and its path in the bottom of the window." border="false":::
+   :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/locate-security-registry-subkey.png" alt-text="Screenshot of the Security subkey in the registry subkey list and its path in the bottom of the window.":::
 
 3. In the right side window, double-click **OutlookSecureTempFolder**. Verify whether the folder noted is valid. You can copy and paste the folder path in Windows Explorer to verify this.
 
    - If you do not see the `OutlookSecureTempFolder` entry, go to the next step.
    - If the folder does not exist on your computer, change the **OutlookSecureTempFolder** value to a valid folder path, for example **C:\temp0\**.
 
-   :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/change-the-outlooksecuretempfolder-value.png" alt-text="Screenshot of the value of OutlookSecureTempFolder registry key." border="false":::
+   :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/change-the-outlooksecuretempfolder-value.png" alt-text="Screenshot of the value of OutlookSecureTempFolder registry key.":::
 
    :::image type="content" source="media/pictures-not-displayed-and-shown-as-red-x/path.png" alt-text="Screenshot of the Windows Explorer.":::
 

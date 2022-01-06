@@ -36,7 +36,7 @@ This article describes how to activate the Office 2010 KMS host through telephon
    020362-296235-955944-683420-831782-XXXXXX-XXXXXX-XXXXXX-XXXXXX
 
 1. If you are in United States, you can dial phone # 888-725-1047 to input your installation ID.
-1. If you are NOT in United States, at a command prompt, type **c:\windows\system32\slui.exe 4**, and then select your country to get the phone #. After you get your phone # from this screen, close the activation window, as we only wanted the phone #.
+1. If you are NOT in United States, at a command prompt, type **c:\windows\system32\slui.exe 4**, and then select your country/region to get the phone #. After you get your phone # from this screen, close the activation window, as we only wanted the phone #.
 1. After you give the automated voice your installation ID, it will return with a confirmation ID.
 
    For example, a confirmation ID resembles the following:

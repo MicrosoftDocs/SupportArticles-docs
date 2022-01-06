@@ -25,7 +25,7 @@ search.appverid:
 
 ## Symptoms
 
-After your country makes time zone or daylight saving time changes, some of your Microsoft Outlook calendar items that are scheduled for the next year may be displayed at an incorrect time when you view them in Outlook.
+After your country/region makes time zone or daylight saving time changes, some of your Microsoft Outlook calendar items that are scheduled for the next year may be displayed at an incorrect time when you view them in Outlook.
 
 ## Cause
 
