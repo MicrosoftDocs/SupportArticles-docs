@@ -1,7 +1,7 @@
 ---
 title: Crashes when you run an Oracle linked server query
 description: This article provides workarounds to the problem that occurs when you run an Oracle linked server query.
-ms.date: 06/01/2022
+ms.date: 01/06/2022
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni
 ms.prod: sql
