@@ -93,4 +93,4 @@ For more information, visit below sites:
 
 For a Visual Basic .NET version of this article, see [How To Write Binary Files to the Browser Using ASP.NET and Visual C# .NET](https://support.microsoft.com/help/306654/how-to-write-binary-files-to-the-browser-using-asp-net-and-visual-c-ne).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

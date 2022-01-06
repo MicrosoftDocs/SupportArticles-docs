@@ -111,7 +111,7 @@
         "sql/**/*.md": "sql",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "visualstudio/**/*.md": "visual-studio-family",
-        "webapps/**/*.md": "web-apps-server",
+        "developer/webapps/**/*.md": "web-apps-server",
         "cpp/**/*.md": "visual-cpp",
         "iis/**/*.md": "iis",
         "windows/win32/**/*.md": "windows-dev-apps",
