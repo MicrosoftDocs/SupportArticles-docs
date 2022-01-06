@@ -13,7 +13,7 @@ This article helps you resolve a problem that can occur when you run an Oracle l
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2295405
 
-## Symptom
+## Symptoms
 
 Consider the following scenario:
 
@@ -21,19 +21,19 @@ Consider the following scenario:
 - You create a linked server for an Oracle database.
 - You run a linked server query using the OraOLEDB provider (OLEDB Provider for Oracle).
 
-In this scenario, the SQL Server service crashes, and no results are returned for the query. Additionally, you may encounter the following issues:
+In this scenario, the SQL Server service crashes, and no results are returned for the query. Additionally, you may notice the following issues:
 
 - You receive the following error message in the Windows system event log:
 
   > The SQL Server (MSSQLSERVER) service terminated unexpectedly. It has done this 1 time(s).
 
-- A minidump file of the SQL Server process is generated with heap corruption, and you receive an exception message that resembles the following:
+- A minidump file of the SQL Server process is generated with heap corruption and you receive an exception message that resembles the following:
 
   > In minidump.mdmp the assembly instruction at ntdll!RtlReportCriticalFailure+62 in C:\Windows\System32\ntdll.dll from Microsoft Corporation has caused an unknown exception (0xc0000374) on thread 235  
   OR sometimes alternatively in errorlog can be seen another exception:  
   SqlDumpExceptionHandler: Process 74 generated fatal exception c0000005 EXCEPTION_ACCESS_VIOLATION. SQL Server is terminating this process.
 
-- The stack of the minidump file contains third-party modules inside the *Sqlserver.exe* process. For example, the minidump file contains the following information in Oracle modules:
+- The stack of the minidump file contains third-party modules inside the *Sqlserver.exe* process. For example, the minidump file contains the following information in the Oracle modules:
 
     ```console
     OraOLEDButl11
