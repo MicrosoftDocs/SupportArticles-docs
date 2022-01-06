@@ -27,7 +27,7 @@ appliesto:
 
 When you try to create an Outlook profile or connect to a Microsoft Office 365 mailbox, you're continually prompted for credentials while the client displays a "trying to connect..." message. If you cancel the credentials prompt, you receive the following error message:
 
-**The connection to Microsoft Exchange is unavailable. Outlook must be online or connected to complete this action.**
+> The connection to Microsoft Exchange is unavailable. Outlook must be online or connected to complete this action.
 
 ## Cause
 
@@ -42,9 +42,12 @@ This issue can occur if the **Logon network security** setting on the **Security
 
 ### For newer versions of Outlook
 
-You may be an Office 365 customer who is experiencing the error that is described in the "Symptoms" section when you try to connect to an Exchange Online mailbox. You may also already be running newer versions of Outlook 2013 or Outlook 2016. If both conditions are true,it is highly recommended that you use the [Outlook keeps asking for my password](https://aka.ms/SaRA-OutlookPwdPrompt) diagnostic to troubleshoot issues in which Outlook continually prompts for a password.
+**Run a self-diagnostics tool**
 
-This diagnostic does automated checks and returns possible solutions for you to use to try to fix any detected issues.
+You may be an Office 365 customer who is experiencing the error that is described in the "Symptoms" section when you try to connect to an Exchange Online mailbox. You may also already be running newer versions of Outlook 2013 or Outlook 2016. If both conditions are true, you can run diagnostics to determine the issue that might cause the error. The diagnostics will perform automated checks and provide possible solutions to fix the detected issue. Select **Diag: Outlook keeps asking for my password** to launch the diagnostic.
+
+>[!div class="nextstepaction"]
+>[Diag: Outlook keeps asking for my password](https://aka.ms/SaRA-OutlookPwdPrompt)
 
 If you are connecting to an Exchange On-Premises mailbox, see the following articles for additional troubleshooting:
 
@@ -74,7 +77,7 @@ If you have an older version of Outlook, change the **Logon network security** s
 10. Click **Next**, click **Finish**, and then click **Close** on the **Account Settings** dialog box.
 11. Click **Close** on the **Mail Setup** dialog box, and then click **OK** to close the **Mail control** panel.
   
-## More Information
+## More information
 
 To locate and view the registry setting for Anonymous Authentication in the Outlook profile, follow these steps.
 
