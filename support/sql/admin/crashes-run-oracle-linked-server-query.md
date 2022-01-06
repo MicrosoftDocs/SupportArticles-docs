@@ -1,7 +1,7 @@
 ---
 title: Crashes when you run an Oracle linked server query
 description: This article provides workarounds to the problem that occurs when you run an Oracle linked server query.
-ms.date: 09/07/2020
+ms.date: 06/01/2022
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni
 ms.prod: sql
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2295405
 
 Consider the following scenario:
 
-- You install SQL Server on a computer that is running Windows Server.
+- You install SQL Server on a computer that is running the Windows Server.
 - You create a linked server for an Oracle database.
 - You run a linked server query using the OraOLEDB provider (OLEDB Provider for Oracle).
 
@@ -33,7 +33,7 @@ In this scenario, the SQL Server service crashes, and no results are returned fo
   OR sometimes alternatively in errorlog can be seen another exception:  
   SqlDumpExceptionHandler: Process 74 generated fatal exception c0000005 EXCEPTION_ACCESS_VIOLATION. SQL Server is terminating this process.
 
-- The stack of the minidump file contains third-party modules inside the Sqlserver.exe process. For example, the minidump file contains the following information in Oracle modules:
+- The stack of the minidump file contains third-party modules inside the *Sqlserver.exe* process. For example, the minidump file contains the following information in Oracle modules:
 
     ```console
     OraOLEDButl11
@@ -71,16 +71,16 @@ In this scenario, the SQL Server service crashes, and no results are returned fo
 
 ## Cause
 
-This issue occurs because the special characters `--` exist in the query to the Oracle linked server. These characters are used as a comment symbol.
+This issue occurs because the special characters `--` exist in the query to the Oracle linked server. These characters are used to denote a comment symbol.
 
-The SQL Server process crashes because the third-party linked server provider is loaded inside SQL Server process and it incorrectly modifies heap memory that does not belong to it. If the [Heap Functions](/windows/win32/memory/heap-functions) inside a process is unstable, for protection from data corruption, the process is automatically shut down by the OS. If the third-party linked server provider is enabled together with the **Allow inprocess** option, the SQL Server process crashes when this third-party linked server experiences the described issue.
+The SQL Server process crashes because the third-party linked server provider is loaded inside SQL Server process and it incorrectly modifies heap memory that does not belong to it. If the [Heap Functions](/windows/win32/memory/heap-functions) inside a process is unstable, for protection from data corruption, the process is automatically shut down by the OS. If the third-party linked server provider is enabled together with the **Allow inprocess** option, the SQL Server process crashes when the third-party linked server experiences the described issue.
 
 ## Workaround
 
-In some cases, the one of the following methods works around the issue:
+In some cases, one of the following methods works around the issue:
 
 - Remove the comments symbol.
-- Replace the comments symbol with the comments symbol: `/* */`.
+- Replace the comments symbol with `/* */`.
 
 ## Resolution
 
