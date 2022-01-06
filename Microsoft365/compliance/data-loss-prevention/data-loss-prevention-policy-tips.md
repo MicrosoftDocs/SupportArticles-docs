@@ -48,7 +48,7 @@ There are several reasons why DLP policy tips do not work as expected after you 
 1. In the Microsoft 365 compliance center, locate **Data loss prevention** in the left pane.
 1. On the **Policies** tab, select the policy that requires editing, and then select **Edit policy**.
 
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot of the steps of how to edit a D L P policy the M365 Compliance Center." lightbox="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png":::
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot of the steps of how to edit a D L P policy in the Microsoft 365 Compliance Center." lightbox="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png":::
 
 ## Policy configuration errors
 
