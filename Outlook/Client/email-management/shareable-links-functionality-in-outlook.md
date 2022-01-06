@@ -1,6 +1,6 @@
 ---
 title: Shareable links overview and troubleshooting
-description: Provides an overview of shareable links in Outlook and a troubleshooting guide for common issues.
+description: Provides an overview of shareable links in Outlook and resolutions for common issues.
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm 
@@ -39,7 +39,7 @@ Outlook also displays information about permissions to access the link.
 
 **Tip:** If you use a screen-reading app such as [Windows Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1), the information about access permissions will be read out to you after you navigate the cursor into the link.
 
-## Undo link shortening and show the full URL
+## Undo link shortening 
 
 If you prefer to use the full URL instead of the shortened URL that Outlook inserts automatically, use one of the following methods:
 
@@ -57,21 +57,19 @@ Select the permission information displayed in the link to manage who will have 
 
 After you select your options and select **Apply**, Outlook will check whether the recipients of your message will be able to access the shareable link. If you try to send a message while the check is in progress, Outlook will display the following warning:
 
-### We are still checking if recipients can access links in this message
-
 :::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-warning.png" alt-text="Error message for still checking if the recipients can access links in this message.":::
 
 You can choose to skip the remaining checks and send the email anyway or not send it. Select either option to continue.
 
 If you choose to not send the message, and wait for the checks to complete, Outlook will display the result of the checks.
 
-### All recipients can access the link
+#### Result: All recipients can access the link
 
 If Outlook confirms that the links can be accessed by all recipients, you'll see the following confirmation message.
 
 :::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-complete.png" alt-text="Screenshot of the message that Recipients can access links in your message.":::
 
-### One or more recipients can't access the link
+#### Result: One or more recipients can't access the link
 
 If Outlook determines that one or more recipients can't access the shareable link, it changes the color of the shareable link to red and displays a red exclamation mark in the upper right corner of the link text. When you left-click the link, you'll see information about the cause of the access issue.
 
@@ -89,7 +87,7 @@ If you don't left-click the link to see the cause of the access issue, you won't
 
 This provides you an opportunity to fix your recipient list to ensure everyone can access the link before you send the message.
 
-### Recipient access can't be verified
+#### Result: Recipient access can't be verified
 
 If Outlook is unable to verify whether recipients have access to the link, it will display the following warning:
 
@@ -123,22 +121,22 @@ The only situation when Outlook can unwrap such a message is if you view or prev
 - The link is a Safelink, and Outlook can't check whether the link is pointing to OneDrive or SharePoint.
 - The link is for the Consumer version of OneDrive, but only the Business version of One Drive is supported now.
 
-**Q3:** What warnings might Outlook display if it can't check whether the recipients can access the links in a message?
+**Q3:** In which situations might Outlook not be able to check whether the recipients can access the links in a message, and display warnings?
 
-**A3:** Here are some common warnings you'll see when Outlook can't check whether your recipients have access to the links:
+**A3:** Here are some common situiations:
 
-- Outlook is working offline
+- You're working offline
 
-    Outlook can't communicate with the server if you [work offline](https://support.microsoft.com/office/work-offline-in-outlook-f3a1251c-6dd5-4208-aef9-7c8c9522d633). If you add a link or recipients while you are offline, Outlook will automatically communicate with the server after you are online.
-- Not signed in to an account associated with a link
+    Outlook can't communicate with the server when you [work offline](https://support.microsoft.com/office/work-offline-in-outlook-f3a1251c-6dd5-4208-aef9-7c8c9522d633). If you add a link or recipients while you're working offline, Outlook will automatically communicate with the server after you're online.
+- You're not signed in with an account associated with a link
 
-    If you add a link to a site (such as `sharepoint.com`) Outlook can generally recognize it, but if you're not signed in to an account on the tenant that the link is hosted on, then Outlook will not communicate with the server.  For example, a link might point to `contoso.sharepoint.com`, but you might not be signed in with a Contoso company account. Outlook only sends requests to tenants that you are signed in to.
-- Sending account is not associated with the link
+    If you add a link to a site (such as `sharepoint.com`) but you're not signed in to an account on the tenant that hosts the link, then Outlook will not communicate with the server.  For example, a link might point to `contoso.sharepoint.com`, but you might not be signed in with a Contoso company account. Outlook only sends requests to tenants that you are signed in to.
+- Your sending account is not associated with the link
 
-    You're signed in to an account associated with the link, but you don't send the link from that account but send it from a different email account instead. In this case, Outlook will shorten the URL,provide the correct file icon and the current link information, but it will not check whether your recipients have access to the link or allow you to manage their access.
-- Too many recipients
+    You're signed in to an account associated with the link, but you don't send the link from that account but send it from a different email account instead. In this case, Outlook will shorten the URL, provide the correct file icon and the current link information, but  will not check whether your recipients have access to the link or allow you to manage their access.
+- Your message has too many recipients  
 
-    Outlook limits the number of recipients it can check per email message. If the number of recipients in a message exceeds the limit, Outlook can't check whether the recipients have access to the links in the message.
+    Outlook limits the number of recipients whose access it can check per email message to 100. If the number of recipients in your message exceeds that limit, Outlook can't check whether the recipients have access to the links in the message.
 
     **Note:** Each recipient inside of a distribution list counts towards the limit as well.
 
@@ -148,7 +146,7 @@ The only situation when Outlook can unwrap such a message is if you view or prev
 
 If you reply to the original sender, Outlook doesn't warn you about the link before you send the reply. However, if you add more links, make changes to the existing links, or add new recipients, then Outlook will check all the links and warn you before sending the message if there are links that won't work for your recipients.
 
-**Q5:** The **Recipients of this message** option doesn't display for a link in a meeting invitation.
+**Q5:** The **Recipients of this message** option doesn't display for a link added in a meeting invitation.
 
 **A5:** The option is not available currently.
 
