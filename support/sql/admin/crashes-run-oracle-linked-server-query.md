@@ -1,7 +1,7 @@
 ---
-title: Crashes when you run an Oracle linked server query
+title: SQL Server service crashes when you run an Oracle linked server query
 description: This article provides workarounds to the problem that occurs when you run an Oracle linked server query.
-ms.date: 01/06/2022
+ms.date: 01/07/2022
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni
 ms.prod: sql
@@ -77,7 +77,7 @@ The SQL Server process crashes because the third-party linked server provider is
 
 ## Workaround
 
-In some cases, one of the following methods works around the issue:
+In some cases, one of the following methods solves the problem:
 
 - Remove the comments symbol.
 - Replace the comments symbol with `/* */`.
