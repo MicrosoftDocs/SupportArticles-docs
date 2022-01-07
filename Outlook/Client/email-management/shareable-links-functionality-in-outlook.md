@@ -99,7 +99,7 @@ If Outlook is unable to verify whether recipients have access to the link, it wi
 
 > We couldn't verify that recipients can access this link because you're offline.
 
-:::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-can-not-verify-recipients.png" alt-text="Screenshot ot the error that We couldn't verify that recipients can access this link because you're offline.":::
+:::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-can-not-verify-recipients.png" alt-text="Screenshot of the error that We couldn't verify that recipients can access this link because you're offline.":::
 
 A gray exclamation mark is displayed in the upper right corner of the link text and the reason for Outlook not being able to check for recipient access is displayed as well. Select **Ignore** to ignore the error so that no warnings are displayed when you try to send the message.
 
