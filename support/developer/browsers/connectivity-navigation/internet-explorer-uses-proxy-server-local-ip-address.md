@@ -9,7 +9,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article helps you resolve the problem that occurs when you connect to a Web server using the Internet Protocol (IP) address or Fully Qualified Domain Name (FQDN) on the local network.
 

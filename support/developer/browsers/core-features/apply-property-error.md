@@ -7,7 +7,7 @@ ms.technology: internet-explorer-core-features
 ---
 # Apply Property Error when modifying Ratings, Description or Notes of a Favorite shortcut
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the workaround to help you to solve the problem that an error message **Apply Property Error** occurs when you change the **Ratings**, **Description**, or **Notes** fields of a Favorite shortcut in Internet Explorer.
 

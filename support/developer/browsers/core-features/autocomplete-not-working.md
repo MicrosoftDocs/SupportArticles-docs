@@ -8,7 +8,7 @@ ms.technology: internet-explorer-core-features
 ---
 # Autocomplete functionality not working
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 You can't save passwords in a web site by using the InPrivate Browsing functionality of Internet Explorer. This article introduces a method to solve the issue.
 

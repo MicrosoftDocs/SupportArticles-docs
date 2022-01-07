@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Cannot access some websites in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides methods to solve the issue that Internet Explorer can't access certain websites and provides solutions.
 

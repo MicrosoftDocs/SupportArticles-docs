@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # ActiveX control is not loaded with modified CODEBASE value in the registry
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about resolving how to modify the registry value to load ActiveX controls.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # Internet Explorer does not support user names and passwords in Web site addresses (HTTP or HTTPS URLs)
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article is intended to notify Web site administrators and IT professionals about the behavior of Internet Explorer when user information is included in a Web site address (HTTP or HTTPS URL).
 

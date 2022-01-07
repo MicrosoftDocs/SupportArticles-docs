@@ -8,7 +8,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # Standard users can't turn off Internet Explorer Enhanced Security feature
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information on troubleshooting the issues in which you can't turn off Internet Explorer Enhanced Security.
 
@@ -102,4 +102,4 @@ In this scenario, follow these steps:
 
 For more information, see [Internet Explorer Enhanced Security Configuration changes the browsing experience](/troubleshoot/browsers/enhanced-security-configuration-faq).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

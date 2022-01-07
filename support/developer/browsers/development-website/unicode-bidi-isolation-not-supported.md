@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Unicode BiDi isolation in CSS dir property doesn't work in Internet Explorer and Microsoft Edge
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article discusses a by design behavior that Unicode BiDi isolation in CSS `dir` property does not work Internet Explorer and Microsoft Edge.
 

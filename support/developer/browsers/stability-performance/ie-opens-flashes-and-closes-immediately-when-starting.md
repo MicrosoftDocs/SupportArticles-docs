@@ -8,7 +8,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Internet Explorer opens, flashes, and then closes immediately when you start it
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a resolution for the issue that Internet Explorer opens, flashes, and then closes immediately when you start it.
 

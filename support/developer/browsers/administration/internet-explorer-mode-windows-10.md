@@ -9,7 +9,7 @@ ms.technology: internet-explorer-administration
 ---
 # How Enterprise Mode works in Windows 10
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes how Internet Explorer Enterprise Mode works in Windows 10.
 

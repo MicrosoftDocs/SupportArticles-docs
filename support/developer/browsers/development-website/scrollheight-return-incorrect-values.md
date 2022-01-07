@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # The scrollHeight property may return incorrect values in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides an example to call the Scroll height property to set the height of the web page.
 

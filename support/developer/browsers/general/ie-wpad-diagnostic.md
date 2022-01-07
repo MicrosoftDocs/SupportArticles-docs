@@ -8,7 +8,7 @@ ms.technology: internet-explorer-general
 ---
 # Internet Explorer WPAD Diagnostic - All versions
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 The Internet Explorer WPAD Diagnostic was designed to reset and collect data related to Internet Explorer's Automatically Detect Settings activity used to troubleshoot Internet Explorer connectivity issues related to Proxy Automatic Discovery.
 

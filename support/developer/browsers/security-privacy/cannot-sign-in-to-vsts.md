@@ -8,7 +8,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # Can't sign in to Visual Studio Team Services through Internet Explorer or Microsoft Edge
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the workaround to solve the issue that you cannot sign in to Visual Studio Team Services by using Microsoft Edge, Internet Explorer 11, Internet Explorer 10, or Internet Explorer 9.
 

@@ -7,7 +7,7 @@ ms.technology: internet-explorer-development-website
 ---
 # .NET control does not load in Internet Explorer in Internet Zone
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 With Internet Explorer 8 and later versions, it is no longer possible to load .NET controls in Internet zone under the default(medium-high) security setting.
 

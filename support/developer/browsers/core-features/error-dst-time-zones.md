@@ -7,7 +7,7 @@ ms.technology: internet-explorer-core-features
 ---
 # Error in Date value at beginning of DST in certain time zones
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes the error report when converting from standard time to Daylight Saving Time (DST) and provides a solution.
 

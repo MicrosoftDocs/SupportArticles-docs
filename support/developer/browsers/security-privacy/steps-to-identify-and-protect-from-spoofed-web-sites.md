@@ -8,7 +8,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # Steps to help identify and protect yourself from deceptive (spoofed) Web sites and malicious hyperlinks
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 When you point to a hyperlink in Internet Explorer, Outlook, the address of the Web site typically appears in the Status bar at the bottom of the window. After you select a link that opens in Internet Explorer, the address of the Web site typically appears in the Internet Explorer Address bar, and the title of the Web page typically appears in the Title bar of the window.
 
@@ -132,4 +132,4 @@ Although these actions do not help you to identify a deceptive (spoofed) Web sit
 
 For more information about Uniform Resource Locators (URLs), see [https://www.w3.org/Addressing/URL/url-spec.txt](https://www.w3.org/Addressing/URL/url-spec.txt).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

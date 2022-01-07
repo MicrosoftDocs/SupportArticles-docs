@@ -7,7 +7,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # How to prevent caching in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes the use of HTTP headers to control the caching of Web pages in Internet Explorer.
 

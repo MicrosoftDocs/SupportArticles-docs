@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Internet Explorer uses wrong character set when it renders an HTML page
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the methods for you to solve the issue that Internet Explorer renders an HTML page by using the incorrect character set.
 

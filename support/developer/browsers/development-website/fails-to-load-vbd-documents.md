@@ -7,7 +7,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Internet Explorer 9 fails to load VBD documents
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article introduces the steps for you to make sure the VBD documents can be loaded successfully in Internet Explorer 9.
 

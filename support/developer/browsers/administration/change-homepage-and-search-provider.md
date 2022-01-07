@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # How to change the home page and the search provider in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a solution to change the homepage and search provider in Internet Explorer.
 

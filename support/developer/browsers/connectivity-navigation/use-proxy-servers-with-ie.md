@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Using Proxy Servers together with Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article discusses how to use Microsoft Internet Explorer in proxy environments.
 
@@ -105,4 +105,4 @@ function FindProxyForURL(url, host)
 - [How to configure a proxy server URL and Port using GPP Registry?](/archive/blogs/askie/how-to-configure-a-proxy-server-url-and-port-using-gpp-registry)
 - [How to configure Group Policy Preference settings for Internet Explorer 11 in Windows 8.1 or Windows Server 2012 R2](https://support.microsoft.com/kb/2898604)
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

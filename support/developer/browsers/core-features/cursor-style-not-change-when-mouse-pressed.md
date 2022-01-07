@@ -8,7 +8,7 @@ ms.technology: internet-explorer-core-features
 ---
 # Cursor style does not change when the mouse button gets pressed in Internet Explorer 9 and later versions
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about solving the issue that the cursor style of a hovered DOM element does not change when the mouse button remains pressed in Internet Explorer 9 and later versions.
 

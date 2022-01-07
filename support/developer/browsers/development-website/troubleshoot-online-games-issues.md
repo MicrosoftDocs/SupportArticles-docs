@@ -7,7 +7,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Troubleshoot problems playing online games using Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about resolving various errors reported by online games in Internet Explorer.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # The Microsoft Silverlight add-on is listed as not verified in Microsoft Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 _Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2406108

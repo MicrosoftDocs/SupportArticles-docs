@@ -9,7 +9,7 @@ ms.technology: internet-explorer-installation
 ---
 # Disable and enable Internet Explorer on Windows
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes how to disable and enable any supported version of Internet Explorer on Windows.
 

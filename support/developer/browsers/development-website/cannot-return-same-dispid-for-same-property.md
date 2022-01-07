@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Internet Explorer may not return the same DISPID for the same property
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about resolving Internet Explorer may not return the same `DISPID` with the same property.
 

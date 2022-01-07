@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Open in new tab or Open in new window do not work in Internet Explorer 8 and later versions
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 Often due to the installation of other applications that either re-register or update existing interface registrations, Internet Explorer fails to perform the **Open in new window** and **Open in new tab** functions properly. This article will aid you in re-registering the supporting binaries to attempt to restore the missing functionality.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-general
 ---
 # Information about Internet Explorer versions
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article contains version information about Internet Explorer. This article also discusses how to determine which version of Internet Explorer is installed on your computer.
 

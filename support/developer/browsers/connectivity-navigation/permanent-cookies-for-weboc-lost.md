@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Permanent cookies for WebOC application lost when user closes Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a solution for applications that rely on permanent cookies. You can choose to keep the website's cookies and temporary Internet files in Internet Explorer favorites.
 

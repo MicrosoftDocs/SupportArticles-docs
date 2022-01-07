@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Optimizing performance with automatic proxy-configuration scripts (PAC)
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This topic explains how to optimize the performance of an automatic proxy-configuration script (PAC file, also known as Wpad.dat). This document focuses on how to resolve issues with the intranet servers directly and external internal traffic through a proxy-server.
 
@@ -192,4 +192,4 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-[!INCLUDE [Third party disclaimer](../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

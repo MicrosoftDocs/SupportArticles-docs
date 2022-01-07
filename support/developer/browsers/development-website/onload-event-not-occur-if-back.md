@@ -7,7 +7,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Onload event does not occur when clicking the Back button to a previous page in Internet Explorer 11
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the methods to help you solve the issue that the `Onload` event does not occur when clicking the **Back** button to go back to a page in Internet Explorer 11.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # How to raise a File Download dialog box for a known MIME type
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the information about how to raise a **File Download** dialog box for known MIME types in Microsoft Edge and Internet Explorer.
 

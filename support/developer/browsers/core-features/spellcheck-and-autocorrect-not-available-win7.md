@@ -8,7 +8,7 @@ ms.technology: internet-explorer-core-features
 ---
 # Spell Check and Auto Correct features are not available for applications hosting WebBrowserControl on Windows 7
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about Spell Check and Automatic Correct introduced in Internet Explorer 10, but this feature is applicable to other applications that host Web browser controls on Windows 8.1 and later versions. Not for Windows 7.
 

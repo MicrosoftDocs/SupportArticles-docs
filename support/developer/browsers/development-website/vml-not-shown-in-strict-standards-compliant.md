@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # VML element isn't displayed in strict standards-compliant mode in Internet Explorer 9
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 A Vector Markup Language (VML) element isn't displayed in strict standards-compliant mode when an HTML page uses the `!DOCTYPE` element in Internet Explorer 9.
 

@@ -7,7 +7,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Internet Explorer may flicker on computers with hybrid graphics
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides steps to solve the flickering issue that occurs on certain computers with *hybrid graphics*.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-installation
 ---
 # How to troubleshoot Internet Explorer 9 installation problems
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 When you are installing Internet Explorer 9, you may receive an error message such as **0x800F081E**. In this situation, the installation process doesn't finish. To troubleshoot this problem, go to the following section.
 

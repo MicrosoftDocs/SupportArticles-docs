@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # XMLHttpRequest cannot correctly send FormData that has an empty file element in Microsoft Edge
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the workaround to solve the issue that `FormData` that contains an empty file element cannot be sent correctly by `XMLHttpRequest` in Microsoft Edge for Windows 10, version 1809.
 

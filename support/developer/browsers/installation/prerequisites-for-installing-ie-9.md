@@ -8,7 +8,7 @@ ms.technology: internet-explorer-installation
 ---
 # Prerequisites for installing Internet Explorer 9
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article helps you resolve the problem that some prerequisites of Internet Explorer 9 can't be installed automatically.
 

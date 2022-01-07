@@ -9,7 +9,7 @@ ms.technology: internet-explorer-administration
 ---
 # Customized settings in an IEAK installation package override setting defined in Internet Explorer Maintenance Policy
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article introduces a by design behavior that customized Internet Explorer settings that are defined in an IEAK installation package override the settings defined in Internet Explorer Maintenance Policy.
 

@@ -7,7 +7,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # How to change the default keep-alive time-out value in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes how to change the default HTTP `keep-alive` value in Microsoft Internet Explorer.
 

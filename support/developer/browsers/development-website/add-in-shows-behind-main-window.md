@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Add-in window appears behind the main window in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the information to solve the issue that an add-in window appears behind the main window in Internet Explorer 9 and later versions.
 

@@ -7,7 +7,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Internal clients cannot use Internet Explorer to access FTP sites through Web proxies
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the steps to solve the error message that occurs when you use internal clients to visit a File Transfer Protocol (FTP) site in Internet Explorer.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # A web page may fail to get focus in Internet Explorer 9
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information on resolving webpage issues that can't get focus in Internet Explorer 9.
 

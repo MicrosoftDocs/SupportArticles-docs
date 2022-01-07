@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # Policy reporting tools indicate empty Internet Explorer Maintenance policy as winning
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article discusses information about manually deleting extensions in Group Policy after you delete the client's IEM settings.
 

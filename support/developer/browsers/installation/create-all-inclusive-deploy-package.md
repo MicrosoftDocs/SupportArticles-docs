@@ -7,7 +7,7 @@ ms.technology: internet-explorer-installation
 ---
 # How to create an all-inclusive deployment package for Internet Explorer 11
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes how to create an installation package for Internet Explorer 11. The installation package can apply all the prerequisite updates, language packs, and spelling dictionaries and also the latest cumulative security updates in a single restart.
 

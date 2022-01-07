@@ -7,7 +7,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # You cannot view a secure Web site in Internet Explorer 8 and later versions
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article introduces many methods to solve the issue that you cannot view a secure web site in Internet Explorer 8 and later versions of Internet Explorer.
 

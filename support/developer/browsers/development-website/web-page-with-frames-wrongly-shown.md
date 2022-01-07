@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Web page with frames isn't displayed properly in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article introduces the resolution to fix the issue that a web page that contains frames is shown as a blank page in Internet Explorer.
 

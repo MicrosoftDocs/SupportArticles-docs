@@ -8,7 +8,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # We were unable to return you to your webpage error occurs in Internet Explorer 9
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a resolution for the issue that you receive the **We were unable to return you to \<your webpage>** error when you try to visit a website by using Internet Explorer 9.
 

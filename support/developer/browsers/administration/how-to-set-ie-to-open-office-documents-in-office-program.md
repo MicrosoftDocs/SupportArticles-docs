@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # How to configure Internet Explorer to open Office documents in the appropriate Office program
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides methods to set Internet Explorer to open Office documents in the appropriate Office program.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Compatibility View is used for Trusted sites in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article introduces the resolution to solve the issue that Compatibility View instead of standards mode is used for Trusted sites in Internet Explorer.
 

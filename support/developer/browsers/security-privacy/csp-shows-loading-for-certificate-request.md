@@ -8,7 +8,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # CSP shows Loading when using Advanced Certificate Request to submit a request to an enterprise CA
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a solution to enable active scripting in the Internet Explorer security zone so that the webpage can receive your instruction to issue a certificate request.
 

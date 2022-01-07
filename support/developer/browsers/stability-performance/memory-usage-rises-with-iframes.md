@@ -8,7 +8,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Memory usage rises due to iframes with orphaned elements with circular references in Internet Explorer 8
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article discusses the issue that memory usage rises when you navigate away from an HTML page that contains an iframe in Internet Explorer 8.
 

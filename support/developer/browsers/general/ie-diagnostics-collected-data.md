@@ -8,7 +8,7 @@ ms.technology: internet-explorer-general
 ---
 # Collected information by Internet Explorer Diagnostics
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article lists the information that can be collected by running Internet Explorer Diagnostics.
 

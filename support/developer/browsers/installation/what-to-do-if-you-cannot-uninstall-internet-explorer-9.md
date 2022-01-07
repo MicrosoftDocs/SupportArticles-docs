@@ -8,7 +8,7 @@ ms.technology: internet-explorer-installation
 ---
 # What to do if you can't uninstall Internet Explorer 9
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 If the Uninstall a Program feature doesn't uninstall Internet Explorer 9 correctly, try these solutions in the order in which they're presented.
 

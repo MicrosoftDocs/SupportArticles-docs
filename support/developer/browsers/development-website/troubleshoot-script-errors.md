@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # How to troubleshoot script errors in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article solves the problem that the webpage can't be displayed when a script error occurs in Internet Explorer.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Table text overlaps table borders or is missing in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides solutions to solve the situation where the table text overlaps the border or is lost on the webpage because of the table height in Internet Explorer can't adjust the block-level elements that have been set.
 

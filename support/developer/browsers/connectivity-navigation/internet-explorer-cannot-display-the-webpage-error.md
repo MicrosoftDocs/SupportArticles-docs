@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Internet Explorer cannot display the webpage error when you try to access a webpage
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article helps you solve the problem that Internet Explorer can't display the webpage. If you're successfully connected to the Internet but can't view any webpages in Internet Explorer, use one of the following troubleshooting procedures, as appropriate for your operating system.
 

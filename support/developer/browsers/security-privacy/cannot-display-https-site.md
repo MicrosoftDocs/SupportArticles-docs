@@ -7,7 +7,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # Internet Explorer can't display an HTTPS site when SSL 2.0 and TLS 1.2 are selected
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a solution for Internet Explorer unable to display HTTPS websites.
 

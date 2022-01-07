@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # Only secure content is displayed notification in Internet Explorer 9 or later versions
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about resolving issues with web pages that only display secure content.
 

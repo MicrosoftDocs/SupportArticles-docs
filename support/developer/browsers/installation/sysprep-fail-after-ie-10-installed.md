@@ -8,7 +8,7 @@ ms.technology: internet-explorer-installation
 ---
 # Sysprep in Windows 7 may fail after Internet Explorer 10 is installed
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information on how to change the registry to ensure that **Sysprep** can be successfully executed after installing Internet Explorer 10 on Windows 7.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # 32-bit browser applications may not work as expected in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a workaround to solve the issue that some 32-bit browser applications not working as expected in Internet Explorer.
 

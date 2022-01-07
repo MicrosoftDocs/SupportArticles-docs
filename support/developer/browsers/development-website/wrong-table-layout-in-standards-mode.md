@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Unexpected table height calculation in Internet Explorer standards mode
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article discusses a by design behavior that a table is resized if you use relative height for a `<div>` tag within a table cell in Internet Explorer.
 

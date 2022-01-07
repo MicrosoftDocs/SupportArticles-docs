@@ -8,7 +8,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Internet Explorer 11 stops responding when selecting strings with the selection gripper
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 _Original product version:_ &nbsp; Internet Explorer 11 on Windows 10
 

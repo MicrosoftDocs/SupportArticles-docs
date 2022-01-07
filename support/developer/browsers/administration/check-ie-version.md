@@ -7,7 +7,7 @@ ms.technology: internet-explorer-administration
 ---
 # How to check Internet Explorer version on local and remote computer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article explains the methods you can use to check the Internet Explorer version on local and remote computers.
 

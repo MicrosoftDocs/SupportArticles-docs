@@ -9,7 +9,7 @@ ms.technology: internet-explorer-administration
 ---
 # K-12 assessment unexpectedly reports apps running in the background in Windows 10
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article helps you work around the problem where K-12 assessments test unexpectedly reports that Apps are running in the background in Windows 10.
 

@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Session variables do not persist between requests after you install Internet Explorer security Patch
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides methods to solve the problem of missing session variables in Internet Explorer.
 

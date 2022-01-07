@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # How to connect to a running instance of Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 You can use the **SHDocVw.ShellWindows** collection to connect to a running instance of Internet Explorer.
 

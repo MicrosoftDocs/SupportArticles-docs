@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # How to configure Group Policy Preference settings for Internet Explorer 11 in Windows
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article explains how to configure Internet Explorer 11 Group Policy Preference (GPP) settings to apply on computers running Windows operating system.
 

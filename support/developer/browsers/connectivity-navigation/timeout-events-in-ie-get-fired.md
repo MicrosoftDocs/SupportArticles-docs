@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # Time-out events in Internet Explorer get fired multiple times when the system uptime is near 49.7 days
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about you clicking on the webpage will cause a time-out event when the uptime of the operating system reaches a predetermined value.
 

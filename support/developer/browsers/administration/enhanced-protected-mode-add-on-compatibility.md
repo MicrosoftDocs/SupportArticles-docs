@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # Enhanced Protected Mode add-on compatibility
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article introduces the Enhanced Protected Mode feature in Internet Explorer 11.
 

@@ -9,7 +9,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Slow browsing in Internet Explorer because of multiple isInNet function calls
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article helps you resolve the problem where an issue causes Internet Explorer to browse more slowly than expected.
 

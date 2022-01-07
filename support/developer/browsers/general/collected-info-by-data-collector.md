@@ -8,7 +8,7 @@ ms.technology: internet-explorer-general
 ---
 # Information collected by Internet Explorer Data Collector
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes the information that may be collected from a computer when running Internet Explorer Diagnostics for Windows Client and Server as well as a description of the Interactive troubleshooting tasks performed.
 

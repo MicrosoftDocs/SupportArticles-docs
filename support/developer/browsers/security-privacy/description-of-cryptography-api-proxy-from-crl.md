@@ -8,7 +8,7 @@ ms.technology: internet-explorer-security-privacy
 ---
 # Description of the Cryptography API proxy detection mechanism when downloading a Certificate Revocation List (CRL) from a CRL distribution point
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 The purpose of this article is to explain how the Crypto API tries to find a route by which it can successfully download a HTTP-based CRL distribution point URL, and meant to help in troubleshooting scenarios related to network retrieval of CRLs.
 

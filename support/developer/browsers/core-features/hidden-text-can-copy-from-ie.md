@@ -8,7 +8,7 @@ ms.technology: internet-explorer-core-features
 ---
 # When copying text from webpage, Hidden text may be copied too
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about hidden text that can be copied from a webpage and provides solutions to prevent this behavior.
 

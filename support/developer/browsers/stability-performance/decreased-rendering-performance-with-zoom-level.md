@@ -8,7 +8,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Decreased rendering performance in Internet Explorer when adjusting zoom level in Quirks mode
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides information about the reduction of web page zoom performance when Quirks mode is enabled in the web browser and provides suggestions.
 

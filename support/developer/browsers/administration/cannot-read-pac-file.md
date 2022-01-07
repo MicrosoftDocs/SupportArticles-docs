@@ -8,7 +8,7 @@ ms.technology: internet-explorer-administration
 ---
 # Windows 10 doesn't read a PAC file referenced by a file protocol
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article solves an issue where Internet Explorer or Microsoft Edge can't read a proxy auto-configuration (PAC) file referenced by a file protocol.
 

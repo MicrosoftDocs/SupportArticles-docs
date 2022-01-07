@@ -8,7 +8,7 @@ ms.technology: internet-explorer-development-website
 ---
 # How to use FTP with a CERN-based proxy using WinInet APIs
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 A CERN-based Web proxy server uses HTTP for all communications with its clients. Therefore the FTP set of Wininet functions cannot be used to download resources on an FTP server if the FTP server is accessed through a CERN-based proxy on the client behalf. Instead, the client has to use general Wininet functions such as `InternetOpenUrl` and `InternetReadFile` to properly retrieve the data from the HTTP stream sent from the CERN-based proxy server.
 

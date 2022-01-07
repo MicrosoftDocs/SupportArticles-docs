@@ -8,7 +8,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Typed characters are slow or fail to appear in Internet Explorer
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a solution to solve the problem of losing characters typed in web pages due to frequent calls to JavaScript to detect the connection status of the client.
 

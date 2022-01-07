@@ -8,7 +8,7 @@ ms.technology: internet-explorer-stability-performance
 ---
 # Slow rendering in Internet Explorer 11 for document modes from before Internet Explorer 9
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides the information to solve a slow rendering issue in Internet Explorer 11.
 

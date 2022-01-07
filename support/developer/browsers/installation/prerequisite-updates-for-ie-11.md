@@ -8,7 +8,7 @@ ms.technology: internet-explorer-installation
 ---
 # Prerequisite updates for Internet Explorer 11
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a list of prerequisite updates and optional updates for Internet Explorer 11.
 

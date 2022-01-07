@@ -9,7 +9,7 @@ ms.technology: internet-explorer-development-website
 ---
 # Browser default action for CTRL+P cannot be prevented
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article describes that browser default action for **CTRL**+**P** cannot be prevented.
 

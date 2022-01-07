@@ -8,7 +8,7 @@ ms.technology: internet-explorer-connectivity-navigation
 ---
 # You are repeatedly prompted for credentials to use a proxy server in Internet Explorer Service Pack 1
 
-[!INCLUDE [](../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 This article provides a resolution to solve the issue that you're repeatedly prompted for credentials even if you have entered the credentials to use a proxy server to view a Web site in Internet Explorer.
 
