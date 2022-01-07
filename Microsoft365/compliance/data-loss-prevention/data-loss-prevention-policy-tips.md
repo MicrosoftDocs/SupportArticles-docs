@@ -166,3 +166,4 @@ When you evaluate the **Instance count** and confidence level of the DLP policy 
 
 - [Data loss prevention reference](/microsoft-365/compliance/data-loss-prevention-policies)
 - [Send email notifications and show policy tips for DLP policies](/microsoft-365/compliance/use-notifications-and-policy-tips)
+- [Migrate Exchange Online data loss prevention policies to Compliance center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp)
