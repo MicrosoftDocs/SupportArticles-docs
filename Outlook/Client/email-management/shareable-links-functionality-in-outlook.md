@@ -57,6 +57,8 @@ Select the permission information displayed in the link to manage who will have 
 
 After you select your options and select **Apply**, Outlook will check whether the recipients of your message will be able to access the shareable link. If you try to send a message while the check is in progress, Outlook will display the following warning:
 
+> We are still checking if recipients can access links in this message.
+
 :::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-warning.png" alt-text="Error message for still checking if the recipients can access links in this message.":::
 
 You can choose to skip the remaining checks and send the email anyway or not send it. Select either option to continue.
@@ -66,6 +68,8 @@ If you choose to not send the message, and wait for the checks to complete, Outl
 #### Result: All recipients can access the link
 
 If Outlook confirms that the links can be accessed by all recipients, you'll see the following confirmation message.
+
+> Recipients can access links in your message.
 
 :::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-complete.png" alt-text="Screenshot of the message that Recipients can access links in your message.":::
 
@@ -83,6 +87,8 @@ In this screenshot, the recipient is determined to be outside the organization a
 
 If you don't left-click the link to see the cause of the access issue, you won't see these three options. When you try to send the message, Outlook will display the following warning:
 
+> Some recipients don't have access to links in your message.
+
 :::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-warning-before-sending.png" alt-text="Error message for some recipients don't have access to links in your message.":::
 
 This provides you an opportunity to fix your recipient list to ensure everyone can access the link before you send the message.
@@ -90,6 +96,8 @@ This provides you an opportunity to fix your recipient list to ensure everyone c
 #### Result: Recipient access can't be verified
 
 If Outlook is unable to verify whether recipients have access to the link, it will display the following warning:
+
+> We couldn't verify that recipients can access this link because you're offline.
 
 :::image type="content" source="media\shareable-links-functionality-in-outlook\link-permission-checking-can-not-verify-recipients.png" alt-text="Screenshot ot the error that We couldn't verify that recipients can access this link because you're offline.":::
 
