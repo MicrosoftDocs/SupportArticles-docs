@@ -11,7 +11,7 @@ ms.technology: internet-explorer-general
 
 # Edge icon is incorrectly shown for URL shortcut on Start menu in Windows 10
 
-[!INCLUDE [](../../includes/browsers-important.md)]
+[!INCLUDE [](../../../includes/browsers-important.md)]
 
 _Applies to:_ &nbsp; Microsoft Edge, Windows 10  
 

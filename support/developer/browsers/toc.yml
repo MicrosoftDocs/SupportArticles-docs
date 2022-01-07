@@ -312,7 +312,7 @@
 - name: General
   items:
     - name: Collected data by diagnostics
-      href: ie-diagnostics-collected-data.md
+      href: general/ie-diagnostics-collected-data.md
 
     - name: Collected data by data collector
       href: general/collected-info-by-data-collector.md
