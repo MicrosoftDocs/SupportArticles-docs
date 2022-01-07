@@ -22,7 +22,7 @@
 - name: Application Request and Routing (ARR)
   items:
   - name: SSL Common Names aren't enforced
-    href: application-request-routing/ffinity-not-honored-ssl-common-names-arr.md
+    href: application-request-routing/affinity-not-honored-ssl-common-names-arr.md
 
 - name: Development
   items:

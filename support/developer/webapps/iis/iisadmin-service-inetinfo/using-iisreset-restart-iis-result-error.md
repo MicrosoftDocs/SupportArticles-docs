@@ -12,7 +12,7 @@ This article helps you resolve the problem that occurs when you use the IISReset
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 969864
 
-[!INCLUDE [Rapid Publishing Disclaimer](../includes/rapid-publishing-disclaimer.md)]
+[!INCLUDE [Rapid Publishing Disclaimer](../../../../includes/rapid-publishing-disclaimer.md)]
 
 ## Symptom
 
@@ -79,4 +79,4 @@ The World Wide Web Publishing Service service was started successfully.
 
 There are two benefits to using the `NET STOP/NET START` commands to restart the IIS Services as opposed to using the IISReset.exe tool. First, it is possible for IIS configuration changes that are in the process of being saved when the IISReset.exe command is run to be lost. Second, using IISReset.exe can make it difficult to identify which dependent service or services failed to stop when this problem occurs. Using the NET STOP commands to stop each individual dependent service will allow you to identify which service fails to stop, so you can then troubleshoot its failure accordingly.
 
-[!INCLUDE [Community Solutions Content Disclaimer](../includes/community-solutions-content-disclaimer.md)]
+[!INCLUDE [Community Solutions Content Disclaimer](../../../../includes/community-solutions-content-disclaimer.md)]
