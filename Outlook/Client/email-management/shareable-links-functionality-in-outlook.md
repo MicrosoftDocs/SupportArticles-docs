@@ -114,7 +114,7 @@ Here are resolutions to common issues you might experience with shareable links.
 - The original sender of the link manually applied a gray background to it.
 - Your Outlook client doesn't recognize the service that the link points to. For example, if the sender hosts their SharePoint site on a custom domain instead of sharepoint.com, then Outlook can't recognize the site unless you're signed into an account associated with the domain under **File** > **Office Account** > **Connected Services**.
 
-The link is a Safelink that is [wrapped](https://support.microsoft.com/office/advanced-outlook-com-security-for-microsoft-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2) using the Microsoft standard URL prefix: `https://nam01.safelinks.protection.outlook.com`. If you copy a wrapped link from an email message and paste it into a new email message, Outlook can't unwrap it to recognize the file that is stored on OneDrive or SharePoint.
+The link is a Safelink that is [wrapped](/microsoft-365/security/office-365-security/safe-links#safe-links-settings-for-email-messages) using the Microsoft standard URL prefix: `https://nam01.safelinks.protection.outlook.com`. If you copy a wrapped link from an email message and paste it into a new email message, Outlook can't unwrap it to recognize the file that is stored on OneDrive or SharePoint.
 
 The only situation when Outlook can unwrap such a message is if you view or preview the message and then reply or forward it.
 
