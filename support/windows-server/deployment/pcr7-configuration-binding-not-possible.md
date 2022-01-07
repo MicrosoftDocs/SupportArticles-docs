@@ -36,7 +36,7 @@ Microsoft only accepts the Microsoft Windows PCA 2011 certificate to be used to 
 > [!Note]
 > UEFI CA can be used to sign third-party applications, Option ROMs or even third-party boot loaders that can load malicious (UEFI CA signed) code. In this case, BitLocker switches to PCR 0, 2, 4, 11. The exact binary hashes are measured rather than CA certificate, which means less exposure to attacks.
 >
-> Servers are secure regardless of using TPM 0, 2, 4, 11 or 7, 11.
+> Servers are secure regardless of using TPM profile 0, 2, 4, 11 or profile 7, 11.
 
 ## More information  
 
