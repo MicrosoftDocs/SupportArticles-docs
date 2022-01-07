@@ -21,7 +21,7 @@ The proxyAddresses attribute in Active Directory is a multi-value property that 
 The following terminology is used in this article:
 
 - Initial domain: It's the first provisioned domain in the tenant. For example, `contoso.onmicrosoft.com`.
-- Microsoft Online Email Routing Address (MOERA): The MOERA is constructed from the user's userPrincipalName attribute in Active Directory and is automatically assigned to the cloud account during the initial sync. For example, `user@contoso.onmicrosoft.com`.
+- Microsoft Online Email Routing Address (MOERA): The MOERA is constructed from the user's userPrincipalName attribute in Active Directory and is automatically assigned to the cloud account during the initial sync. For example, `user@contoso.onmicrosoft.com`. The synchronized user object can only have one MOERA.
 - Primary SMTP address: It's the primary email address of an Exchange recipient object. For example, SMTP:`user@contoso.com`.
 - Secondary SMTP address: It's the secondary email address of an Exchange recipient object, which can have multiple secondary email addresses. For example, smtp:`user@contoso.com`.
 - User principal name (UPN): The UPN can be the sign-in name of the user.
