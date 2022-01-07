@@ -119,7 +119,7 @@
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "browsers/**/*.md": "internet-explorer",
+        "developer/browsers/**/*.md": "internet-explorer",
         "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
@@ -202,7 +202,7 @@
         "windows-hardware/drivers/**/*.md": "Hardware Developer",
         "windows-server/**/*.md": "Windows Server",
         "windows-client/**/*.md": "Windows Client",
-        "browsers/**/*.md": "Browsers",
+        "developer/browsers/**/*.md": "Browsers",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
         "system-center/dpm/**/*.md": "Data Protection Manager",
@@ -237,7 +237,7 @@
         "windows-hardware/drivers/**/*.md": [ "Drivers" ],
         "windows-server/**/*.md": [ "Windows Server" ],
         "windows-client/**/*.md": [ "Windows Client" ],
-        "browsers/**/*.md": [ "Browsers" ],
+        "developer/browsers/**/*.md": [ "Browsers" ],
         "azure/**/*.md": [ "Azure" ],
         "mem/intune/**/*.md": [ "Intune" ],
         "mem/configmgr/**/*.md": [ "ConfigMgr" ],
