@@ -276,4 +276,4 @@ However, if the ASP.NET Core application doesn't start after a restart, what wil
 
 [Part 2.3 - Configure the ASP.NET Core application to start automatically](2-3-configure-aspnet-core-application-start-automatically.md)
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

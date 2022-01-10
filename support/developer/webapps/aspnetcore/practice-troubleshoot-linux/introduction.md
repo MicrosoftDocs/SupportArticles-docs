@@ -65,4 +65,4 @@ The troubleshooting labs in this series are based on a sample application, Buggy
   - Windows Subsystem for Linux (WSL2)
   - Docker containers
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
