@@ -4,7 +4,7 @@ description: Problem with the deployment for Microsoft Dynamics 365 Marketing ap
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: d365-sales-apps-addons
+ms.subservice: d365-marketing-marketing
 ---
 # Problem with the deployment for Microsoft Dynamics 365 Marketing application
 
