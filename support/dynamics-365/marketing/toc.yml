@@ -1,5 +1,6 @@
 - name: Dynamics 365 Marketing
   href: welcome-marketing.yml
+  items:
   - name: Applications and Add-ons
     items:
     - name: Organization entitlement doesn't match your tenant
