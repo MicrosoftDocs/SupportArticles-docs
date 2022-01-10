@@ -82,7 +82,7 @@ To work around this issue, use one of the following methods.
 ## Workaround 2: Modify the LastAccess value
 
 > [!NOTE]
-> To follow these steps, install [April cumulative update](https://support.microsoft.com/help/4490481) first.
+> For Windows Server 2019, install [April cumulative update](https://support.microsoft.com/help/4490481) first, and then follow these steps.
 
 1. Start **Registry Editor**. Select **Start** > **Run**, type *regedit*, and then select **OK**.
 1. Locate and then select the following registry subkey:
