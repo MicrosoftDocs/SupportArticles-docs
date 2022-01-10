@@ -1,5 +1,11 @@
 - name: Dynamics 365 Marketing
   href: welcome-marketing.yml
+  - name: Applications and Add-ons
+    items:
+    - name: Organization entitlement doesn't match your tenant
+      href: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
+    - name: Problem with deploying Marketing application
+      href: dynamics-365-marketing-problem-with-deployment.md
 - name: Marketing
   items:
     - name: The Campaign Activity can be distributed only once
