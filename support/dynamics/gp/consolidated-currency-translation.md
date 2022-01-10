@@ -62,7 +62,7 @@ Section 2: Management Reporter Consolidated Report
     Confirm the functional currency in both companies.  
     **Microsoft Dynamics GP menu >> Tools >> Setup >> Financial >> Multicurrency**
 
-    :::image type="content" source="media/consolidated-currency-translation/multicurrency-setup.png" alt-text="Screenshot of the Multicurrency Setup window.":::
+    :::image type="content" source="media/consolidated-currency-translation/multicurrency-setup.png" alt-text="Screenshot of Functional Currency in the Multicurrency Setup window.":::
 
     > [!NOTE]
     > All remaining steps in this section must be done in the company where the conversion will happen. In this example, the CAD company will be used.
