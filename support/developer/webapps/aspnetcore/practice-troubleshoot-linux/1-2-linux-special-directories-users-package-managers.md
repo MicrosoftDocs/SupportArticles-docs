@@ -285,4 +285,4 @@ As final step, run the `apt purge` command to see its effect. You can run a purg
 
 [Part 1.3 - Install .NET Core in Linux](1-3-install-dotnet-core-linux.md)
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

@@ -91,4 +91,4 @@ In addition, ensure that Adobe Acrobat Reader is installed on the client compute
 
 - [.NET Framework Class Library](/previous-versions/ms229335(v=vs.100))
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

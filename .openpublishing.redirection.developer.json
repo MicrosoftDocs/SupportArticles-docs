@@ -284,6 +284,446 @@
       "source_path": "support/biztalk/welcome-biztalk-server.md",
       "redirect_url": "/troubleshoot/developer/biztalk/welcome-biztalk-server",
       "redirect_document_id": true
-    }  
+    },
+    {
+      "source_path": "support/aspnet/format-datetime-values-xml-dataset.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/active-server-pages/format-datetime-values-xml-dataset",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/aspnet-35-aspnet-2-not-work.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/aspnet-35-aspnet-2-not-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/cannot-debug-application.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/cannot-debug-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/fail-write-event-log.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/fail-write-event-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/cache-trimming-occurs.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/cache-trimming-occurs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/asp-com-objects-fail-to-print.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/asp-com-objects-fail-to-print",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/code-behind-model.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/code-behind-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/build-cascading-drop-down-list.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/build-cascading-drop-down-list",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/custom-error-reporting-page.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/custom-error-reporting-page",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/datagrid-control-display-incorrectly.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/datagrid-control-display-incorrectly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/disable-asp-session-state.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/disable-asp-session-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/http-modules-handlers.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/http-modules-handlers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/inline-expressions.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/inline-expressions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/application-directory-configuration.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/application-directory-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/mvc-installation-failed.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/mvc-installation-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/mvc-nuget-missing.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/mvc-nuget-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/perform-fragment-caching.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/perform-fragment-caching",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/permissions-connect-a-remote-access-database.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/permissions-connect-a-remote-access-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/register-assembly-webform-custom-control.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/register-assembly-webform-custom-control",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/servervariables-logon-user-return-empty.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/servervariables-logon-user-return-empty",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/response-filterer-post-cache-not-compatible.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/response-filterer-post-cache-not-compatible",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/security-overview.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/security-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/server-controls.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/server-controls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/set-current-culture.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/set-current-culture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/session-data-lost-inproc-mode.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/session-data-lost-inproc-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/spawn-process-under-impersonated-user.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/spawn-process-under-impersonated-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/support-lifecycle-web-stack.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/support-lifecycle-web-stack",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/tilde-notation-maps-original-url.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/tilde-notation-maps-original-url",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/threadabortexception-occurs-you-use-response-end.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/threadabortexception-occurs-you-use-response-end",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/cannot-use-session-state-server.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/cannot-use-session-state-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/upload-file-to-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/upload-file-to-web-site",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/use-app-resx-create-web-app.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/use-app-resx-create-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/forms-based-authentication.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/forms-based-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/code-behind-class-files.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/code-behind-class-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/write-binary-files-browser-csharp.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/write-binary-files-browser-csharp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/write-binary-files-browser-vb.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/write-binary-files-browser-vb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/configure-sql-store-session-state.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/ftp-authentication-authorization/configure-sql-store-session-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/disable-debugging-application.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/ftp-authentication-authorization/disable-debugging-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/edit-web-config.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/ftp-authentication-authorization/edit-web-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/implement-impersonation.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/ftp-authentication-authorization/implement-impersonation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/create-web-config.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/health-diagnostic-performance/create-web-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/iis-and-aspnet-diagnostic.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/health-diagnostic-performance/iis-and-aspnet-diagnostic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/performance-call-web-service.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/health-diagnostic-performance/performance-call-web-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/troubleshoot-outofmemoryexception.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/health-diagnostic-performance/troubleshoot-outofmemoryexception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/troubleshooting-view-state-is-invalid-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/health-diagnostic-performance/troubleshooting-view-state-is-invalid-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/disable-documentation-protocol.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/iisadmin-service-process/disable-documentation-protocol",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/application-fail-ssl-web.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/application-fail-ssl-web",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/error-executing-child-request.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/error-executing-child-request",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/system-security-securityexception.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/system-security-securityexception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/request-timed-out-dataadapter.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/request-timed-out-dataadapter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/debug-mode-applications.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/debug-mode-applications",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/error-logging-http-apis.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/error-logging-http-apis",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/exceptions-cause-apps-quit.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/exceptions-cause-apps-quit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/filenotfindexception-call-web-service.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/filenotfindexception-call-web-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/state-server-event-1072-1076.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/state-server-event-1072-1076",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/high-memory-level.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/high-memory-level",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/system-threading-threadabortexception.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/system-threading-threadabortexception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/uninstallation-wow64-support-component-fails.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/site-behavior-performance/uninstallation-wow64-support-component-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/exclude-folders-antivirus-scanning.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/www-administration-management/exclude-folders-antivirus-scanning",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/back-up-configuration-files.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/www-administration-management/back-up-configuration-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/install-aspnet-45-windows-8-server-2012.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/www-administration-management/install-aspnet-45-windows-8-server-2012",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/restrict-users-access-web-resource.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/www-administration-management/restrict-users-access-web-resource",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/authorization-permissions.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/www-authentication-authorization/authorization-permissions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/troubleshoot-permissions-security-issues.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/www-authentication-authorization/troubleshoot-permissions-security-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnet/applicationpoolidentity-write-app-data.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/www-authentication-authorization/applicationpoolidentity-write-app-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/1-1-creating-vm.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/1-1-creating-vm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/1-2-linux-special-directories-users-package-managers.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/1-2-linux-special-directories-users-package-managers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/1-3-install-dotnet-core-linux.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/1-3-install-dotnet-core-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-1-create-configure-aspnet-core-applications.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-1-create-configure-aspnet-core-applications",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-2-install-nginx-configure-it-reverse-proxy.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-2-install-nginx-configure-it-reverse-proxy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-3-1-configure-aspnet-core-application-start-automatically.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-3-1-configure-aspnet-core-application-start-automatically",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-3-configure-aspnet-core-application-start-automatically.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-3-configure-aspnet-core-application-start-automatically",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-4-use-local-firewall-allowing-http-access.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-4-use-local-firewall-allowing-http-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-5-copy-file-linux-vm-extract-file.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-5-copy-file-linux-vm-extract-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-6-run-two-aspnetcore-applications-same-time.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-6-run-two-aspnetcore-applications-same-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/2-7-configure-second-nginx-site-hostname.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-7-configure-second-nginx-site-hostname      ",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/3-1-get-ready-troubleshooting.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/3-1-get-ready-troubleshooting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/3-2-task-managers-top-htop.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/3-2-task-managers-top-htop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/3-3-debuggers-collect-core-dumps.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/3-3-debuggers-collect-core-dumps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-1-1-reproduce-troubleshoot.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-1-1-reproduce-troubleshoot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-1-2-analyze-core-dumps-lldb-debugger.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-1-2-analyze-core-dumps-lldb-debugger",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-1-3-capture-core-crash-dumps.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-1-3-capture-core-crash-dumps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-2-1-capture-dumps-createdump.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-2-1-capture-dumps-createdump",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-2-2-capture-dumps-procdump.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-2-2-capture-dumps-procdump",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-3-troubleshoot-crash-gc-issues-dotnet-dump",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-4-1-analyze-core-dumps-another-machine-copy-file.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-4-1-analyze-core-dumps-another-machine-copy-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-4-2-analyze-core-dumps-another-machine-wsl.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-4-2-analyze-core-dumps-another-machine-wsl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/aspnetcore/lab-4-3-analyze-core-dumps-another-machine-docker.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/lab-4-3-analyze-core-dumps-another-machine-docker",
+      "redirect_document_id": true
+    }
   ]
 }
