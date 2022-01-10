@@ -26,9 +26,8 @@ appliesto:
 ## Symptoms
 
 When entering a formula an error will occur if trying to use a symbol that is not the default 'list separator' in the Windows Regional settings.
-```adoc
-"We found a problem with this formula. Try clicking Insert Function on the Formulas tab to fix it, or click Help for more info on common formula problems."
-```
+
+> "We found a problem with this formula. Try clicking Insert Function on the Formulas tab to fix it, or click Help for more info on common formula problems."
 
 ## Cause
 
@@ -47,7 +46,7 @@ To work around the error message follow the following steps:
 
 2. Use the same character as the designated list separator in Windows settings when creating the formula(s).
 
-3. Use the Reset button to reset the options to match the default for the selected country or modify the Windows List Separator to a different character (some special characters cannot be used).
+3. Use the Reset button to reset the options to match the default for the selected country/region or modify the Windows List Separator to a different character (some special characters cannot be used).
 
 > [!NOTE]
 > By default, Microsoft Excel uses the system separators that are defined in the regional settings in Control Panel. If you sometimes need to display numbers with different separators for thousands or decimals, you can temporarily replace the system separators with custom separators. To do that please follow the steps in the following [article](https://support.office.com/article/c093b545-71cb-4903-b205-aebb9837bd1e).

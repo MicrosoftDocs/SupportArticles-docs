@@ -1,6 +1,6 @@
 ---
 title: Error when you dial out to a telephone number from a PSTN Conferencing meeting
-description: Discusses an issue that limits PSTN Conferencing users to dialing out only to the countries where this service is sold. If a user dials a country that's not in the list, they receive a generic error message and may hear a fast busy signal.
+description: Discusses an issue that limits PSTN Conferencing users to dialing out only to the countries/regions where this service is sold. If a user dials a country/region that's not in the list, they receive a generic error message and may hear a fast busy signal.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -22,28 +22,28 @@ appliesto:
 
 Consider the following scenario:
 
-- You're enabled for Skype for Business public switched telephone network (PSTN) conferencing with Microsoft as the dial-in conferencing provider.   
-- While you're connected to a Skype for Business meeting through PSTN conferencing, you try to dial-out to a telephone number so that you can add another person to the meeting.   
-- The telephone number that you're dialing is in a country that's not in the following list:
-  - Belgium   
-  - Canada   
-  - Denmark   
-  - Finland   
-  - France   
-  - Germany   
-  - Italy   
-  - Netherlands   
-  - Norway   
-  - South Africa   
-  - Spain   
-  - Sweden   
-  - Switzerland   
-  - United Kingdom   
-  - United States   
-   
-When you do this, you receive the following error message: 
+- You're enabled for Skype for Business public switched telephone network (PSTN) conferencing with Microsoft as the dial-in conferencing provider.
+- While you're connected to a Skype for Business meeting through PSTN conferencing, you try to dial-out to a telephone number so that you can add another person to the meeting.
+- The telephone number that you're dialing is in a country/region that's not in the following list:
+  - Belgium
+  - Canada
+  - Denmark
+  - Finland
+  - France
+  - Germany
+  - Italy
+  - Netherlands
+  - Norway
+  - South Africa
+  - Spain
+  - Sweden
+  - Switzerland
+  - United Kingdom
+  - United States
 
-```adoc
+When you do this, you receive the following error message:
+
+```output
 <number> cannot be reached.
 ```
 
@@ -52,11 +52,11 @@ When you do this, you receive the following error message:
 To resolve this issue, have the user whom you're calling join the Skype for Business meeting by using a Skype for Business client or by calling directly into the dial-in conference. For more information about how to join or call in to a Skype for Business meeting, see the following Microsoft websites:
 
 - [Joining a Skype for Business (Lync) Meeting](https://support.office.com/article/joining-a-skype-for-business-lync-meeting-538716dc-f4f2-48c2-af96-587c62387b87)
-- [Call into a Skype for Business (Lync) Meeting](https://support.office.com/article/call-into-a-skype-for-business-lync-meeting-3eba526a-667c-4a53-927d-329737fc202b)   
+- [Call into a Skype for Business (Lync) Meeting](https://support.office.com/article/call-into-a-skype-for-business-lync-meeting-3eba526a-667c-4a53-927d-329737fc202b)
 
 ## More Information
 
-The dial-out functionality is supported only for countries where PSTN Conferencing from Microsoft is sold. If you are dialing out to a telephone number that's not on this list, the call won't be successful.
+The dial-out functionality is supported only for countries/regions where PSTN Conferencing from Microsoft is sold. If you are dialing out to a telephone number that's not on this list, the call won't be successful.
 
 For more information about where you can obtain PSTN conferencing, see the following Microsoft website:
 

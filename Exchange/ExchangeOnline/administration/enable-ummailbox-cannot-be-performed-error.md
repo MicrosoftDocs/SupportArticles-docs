@@ -38,8 +38,8 @@ The issue occurs if user's `UsageLocation` attribute is set to one of the follow
 - South Sudan (SS)
 - Western Sahara (EH)
 
-These countries are blocked for the Unified Messaging online feature.
+These countries/regions are blocked for the Unified Messaging online feature.
 
 ## More information
 
-For the complete list of countries in which Exchange Online Core Features are available, see [International availability](https://www.microsoft.com/microsoft-365/business/international-availability).
+For the complete list of countries/regions in which Exchange Online Core Features are available, see [International availability](https://www.microsoft.com/microsoft-365/business/international-availability).

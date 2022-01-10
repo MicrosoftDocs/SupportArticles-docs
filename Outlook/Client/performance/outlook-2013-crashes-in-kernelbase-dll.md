@@ -64,8 +64,10 @@ Use the steps below to create a new Outlook profile.
 
     > [!NOTE]
     > If you have more than one version of Outlook installed you may see two icons labeled **Mail** in Control Panel, as shown in the following figure.
-
-    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.png" alt-text="Screenshot of two icons labeled Mail in Control Panel 1.":::
+    >
+    > :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.png" alt-text="Screenshot of two icons labeled Mail in Control Panel 1.":::
+    >
+    > In this situation, double-click the icon for the version of Outlook that is crashing
 
 5. Select **Show Profiles**, and select **Add**.
 6. Enter a name for the new profile and select **OK**.
@@ -104,10 +106,10 @@ If you have one or more pst files in your profile, you can use the following ste
 
     > [!NOTE]
     > If you have more than one version of Outlook installed you may see two icons labeled **Mail** in Control Panel, as shown in the following figure.
-
-    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.png" alt-text="Screenshot of two icons labeled Mail in Control Panel 2.":::
-
-    In this situation, double-click the icon for the version of Outlook that is crashing.
+    >
+    > :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.png" alt-text="Screenshot of two icons labeled Mail in Control Panel 2.":::
+    >
+    > In this situation, double-click the icon for the version of Outlook that is crashing.
 
 5. Select **Show Profiles**, select the affected Outlook profile, and then select **Properties**.
 6. Select **Data Files**, and then note the location of any PST files you have in the list.
@@ -142,10 +144,10 @@ If you have one or more pst files in your profile, you can use the following ste
 
     > [!NOTE]
     > If you have more than one version of Outlook installed you may see two icons labeled **Mail** in Control Panel, as shown in the following figure.
-
-    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.png" alt-text="Screenshot of two icons labeled Mail in Control Panel 3.":::
-
-    In this situation, double-click the icon for the version of Outlook that is crashing
+    >
+    > :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.png" alt-text="Screenshot of two icons labeled Mail in Control Panel 3.":::
+    >
+    > In this situation, double-click the icon for the version of Outlook that is crashing.
 
 5. Select **Show Profiles**, select the affected Outlook profile, and then select **Properties**.
 6. Select **Data Files** and then note the location of the OST file in the list.

@@ -475,6 +475,8 @@
       href: ../public-folders/error-create-migration-endpoint.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
+    - name: Can't finalize a public folder batch migration
+      href: ../public-folders/cannot-finalize-migration-batch.md
     - name: Can't send email to public folder contact list
       href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
     - name: Duplicate PF mailbox migration requests
@@ -535,6 +537,8 @@
       href: ../user-and-shared-mailboxes/http-500-error-when-publishing-calendar-of-shared-mailbox.md
     - name: Item count from Get-MailboxStatistics shows more items
       href: ../user-and-shared-mailboxes/item-count-from-get-mailboxstatistics-shows-more-than-mailboxfolderstatistics.md
+    - name: Increase or customize mailbox size
+      href: ../user-and-shared-mailboxes/increase-or-customize-mailbox-size.md
     - name: Mailbox provision delays
       href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
     - name: No soft-deleted mailbox after license removal

@@ -112,7 +112,7 @@ Add an intermediary form between the CustomTaskPane and the actual WebBrowser or
 
 For more information on adding a custom task pane to an application, see [Add a custom task pane to an application](/visualstudio/vsto/how-to-add-a-custom-task-pane-to-an-application).
 
-For WPF rendering issues, the workaround consists of hosting a WPF UserControl inside a WindowsForm as described in [Walkthrough: Hosting a 3-D WPF Composite Control in Windows Forms](/dotnet/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms).
+For WPF rendering issues, the workaround consists of hosting a WPF UserControl inside a WindowsForm as described in [Walkthrough: Host a 3D WPF Composite Control in Windows Forms](/dotnet/desktop/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms).
 
 Here is an example of a user control called MyUserControl that implements this workaround:
 
