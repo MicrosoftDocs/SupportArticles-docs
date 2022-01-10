@@ -367,9 +367,9 @@
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 
-- name: Troubleshoot Shared Image Galleries
+- name: Troubleshoot Azure Compute Gallery
   items:
-  - name: Troubleshoot Shared Image Gallery - Windows/Linux
+  - name: Troubleshoot Azure Compute Gallery - Windows/Linux
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Backup and restore
