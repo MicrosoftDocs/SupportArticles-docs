@@ -175,4 +175,4 @@ If the application requires constant uptime, running .NET Core application withi
 
 Make sure that the web application starts automatically. Install and configure Nginx as a reverse proxy to route HTTP requests that are made to port 80 to the dotnet application instead (so that clients can connect without having to provide the port number).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

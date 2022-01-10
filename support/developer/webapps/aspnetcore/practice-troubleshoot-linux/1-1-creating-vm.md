@@ -220,4 +220,4 @@ To convert files, follow these steps:
 
 [Part 1.2 - Basic operations on Linux](1-2-linux-special-directories-users-package-managers.md)
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
