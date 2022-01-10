@@ -15,7 +15,7 @@ appliesto:
 - Microsoft 365 Data Loss Prevention
 ---
 
-# Troubleshooting Data Loss prevention (DLP) policy tips
+# Troubleshooting data loss prevention (DLP) policy tips
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -23,7 +23,7 @@ appliesto:
 
 The detection and protection of data is among the most important tasks that any business has today. As more and more organizations move their services to the cloud to store data, solutions to protect data flow and access are becoming increasingly important.
 
-Microsoft 365 provides Data Loss prevention (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
+Microsoft 365 provides data loss prevention (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
 
 This article describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 
@@ -32,7 +32,7 @@ This article describes how to troubleshoot some issues that occur if DLP policy 
 
 ## Common scenarios for troubleshooting DLP policy tips
 
-There are several reasons why DLP policy tips do not work as expected after you configure an Microsoft 365 DLP policy:
+There are several reasons why DLP policy tips do not work as expected after you configure a Microsoft 365 DLP policy:
 
 - There are policy configuration errors.
 - Policy configurations are not supported (client only).
@@ -99,10 +99,10 @@ This reason primarily occurs if policy tips are not working as expected in Share
 For Outlook 2013 and later clients, make sure that MailTips are enabled. To enable MailTips in Outlook, make sure that policy tips are enabled. To do this, follow these steps:
 
 1. In Outlook, select **File** > **Options** > **Mail**.
-1. Scroll to the **MailTips** section, and then click **MailTips Options**.
+1. Scroll to the **MailTips** section, and then select **MailTips Options**.
 1. In the **Select MailTips to be displayed selection** dialog box, make sure that the **Policy tip notification** option is selected.
 1. Under **MailTip bar display options**, make sure that the **Display automatically when MailTips apply** option is selected.
-1. Click **OK** two times to close the File window.
+1. Select **OK** two times to close the File window.
 1. Restart Outlook.
 
     :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot of steps that enables MailTips in Outlook.":::
@@ -140,10 +140,10 @@ To view unified DLP policy tips in the Microsoft 365 compliance center, remove t
 
 ## Client doesn't support MailTips
 
-There are several Outlook client licenses that don't support policy tips. [This article](https://support.microsoft.com/office/outlook-license-requirements-for-exchange-features-46b6b7c5-c3ca-43e5-8424-1e2807917c99?ui=zh-cn&rs=zh-cn&ad=cn) lists the Outlook client licenses that support DLP policy tips.
+There are several Outlook client licenses that don't support policy tips. [Outlook license requirements for Exchange features](https://support.microsoft.com/office/outlook-license-requirements-for-exchange-features-46b6b7c5-c3ca-43e5-8424-1e2807917c99) lists the Outlook client licenses that support DLP policy tips.
 
 > [!NOTE]
-> Policy tips are currently not supported for Outlook for Mac iOS clients. Although our Product Engineering teams know about this functionality gap between the Windows Outlook and Outlook for Mac clients, there's currently no set timeframe to add this functionality to a future release of Outlook for Mac. As a workaround, you can add text to the NDR response for your DLP policy rule that tells users to re-create their messages in the OWA client if they originally submitted the message by using Outlook for Mac. Use OWA client to expose the policy tips functionality to users and enable them to override, report a false positive, or enter a business justification (depending on the "Notify" action that"s specified in the DLP Policy rule). Users can then submit messages for delivery.
+> Policy tips are currently not supported for Outlook for Mac iOS clients. Although our Product Engineering teams know about this functionality gap between the Windows Outlook and Outlook for Mac clients, there's currently no set timeframe to add this functionality to a future release of Outlook for Mac. As a workaround, you can add text to the NDR response for your DLP policy rule that tells users to re-create their messages in the OWA client if they originally submitted the message by using Outlook for Mac. Use OWA client to expose the policy tips functionality to users and enable them to override, report a false positive, or enter a business justification (depending on the "Notify" action that's specified in the DLP Policy rule). Users can then submit messages for delivery.
 
 ## Windows 7 and Adobe PDF
 
