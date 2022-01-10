@@ -32,7 +32,7 @@ manager: dcscontentpm
 appliesto:
 - Exchange Online
 ---
-# Fix Outlook connection problems in Exchange Online
+# Fix Outlook connection problems for Microsoft 365 account
 
 If you're using Outlook to access your Microsoft 365 email account or another Exchange-based email account, and you're having problems, we want to get you back to sending and receiving email as quickly as possible.
 
@@ -55,7 +55,7 @@ Out-of-date software and corrupted Outlook profiles are two of the most common i
 
 <table>
 <tr><td><img src="media/outlook-connection-issues/monitor-icon.png" alt="Monitor icon."/></td><td><b>Run Windows Update</b></td><td>If your Outlook client software or Windows operating system software is out of date, you might have problems sending and receiving email. Run Windows Update to make sure that you have the latest updates for Outlook and other Microsoft Office applications. For Windows Update instructions, see <a href="https://support.microsoft.com/help/12373/windows-update-faq">Windows Update: FAQ</a>.</td></tr>
-<tr><td><img src="media/outlook-connection-issues/screwdriver-wrench-symbol.png" alt="Screwdriver wrench symbol."/></td><td><b>Run the Microsoft Support and Recovery Assistant</b></td><td>The Microsoft Support and Recovery Assistant can diagnose and fix several Outlook issues, including fixing the Outlook profile. The diagnostic will perform automated checks and provide possible solutions to fix the detected issue. Select <b>Diag: Outlook User Connectivity</b> to launch the diagnostic.</a></br></br>
+<tr><td><img src="media/outlook-connection-issues/screwdriver-wrench-symbol.png" alt="Screwdriver wrench symbol."/></td><td><b>Run the Microsoft Support and Recovery Assistant</b></td><td>The Microsoft Support and Recovery Assistant can diagnose and fix several Outlook issues, including fixing the Outlook profile. The diagnostic will perform automated checks and provide possible solutions to fix the detected issue. Select <b>Diag: Outlook User Connectivity</b> to download and install the diagnostic.</a></br></br>
 
 >[!div class="nextstepaction"]
 >[Diag: Outlook User Connectivity](https://aka.ms/SaRA-OutlookDisconnect)</td></tr>
