@@ -55,31 +55,31 @@ After the diagnostic checks finish and the configuration issue is found, the sys
 
 The following diagnostics are currently available with brief scenario descriptions and shortcut commands:
 
-| Category | Diagnostic | Description | Shortcut Link |
-|---|---|---|---|
-| Authentication | Teams Sign-in | Validates that a user can sign in to the Teams app. | [Run Tests: Teams Sign-In](https://aka.ms/TeamsSignInDiag) |
-| Authentication | Teams Federation | Validates that the Teams user can communicate with a federated Teams user. | [Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag) |
-| Authentication | Unable to Invite Guest Users to Teams | Validates that a specific guest can sign into Teams.	| [Run Tests: Teams Guest Access](https://aka.ms/TeamsGuestAccessDiag) |
-| Files | Teams Files Guest Access | Validates that guest users can be added to Teams and the Team is shared with the user. | [Run Tests: Teams Files Guest Access](https://aka.ms/TeamsFilesGuestAccessDiag) |
-| Files | Unable to upload files to Teams chat | Validates if the specified user can upload files in Teams chat. | [Run Tests: Unable to upload files to Teams chat](https://aka.ms/TeamsUploadFilesInChat) |
-| Files | Unable to access files shared in Teams chat | Validated that a specified user being unable to access files shared by another user in chats. | [Run Tests: Unable to access files shared in Teams chat](https://aka.ms/TeamsSharedFilesInChat) |
-| Files | Unable to access files in a team | Validates that a specified user has access to files in the Team. | [Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat) |
-| Files | We Can't Get Your Files | Validates that a Team is provisioned and accessible by the specified user. | [Run Tests: Teams Files Error](https://aka.ms/TeamsCannotGetFiles) |
-| Meetings | Teams Calendar App | Validates that the pre-requisites are properly configured for the Microsoft Teams calendar app to function. | [Run Tests: Teams Calendar App](https://aka.ms/TeamsCalendarDiag) |
-| Meetings | Meeting Recording Missing | Attempts to locate a missing Teams Meeting Recording | [Run Tests: Missing Recording](https://aka.ms/MissingRecordingDiag) |
-| Meetings | 1:1 Call Recording | Checks a user's policy for 1:1 Call Recording capability | [Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag) |
-| Meetings | Teams Add-in is Missing in Outlook | Validates that a user has the correct policies to enable the Teams Outlook add-in. | [Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag) |
-| Meetings | Teams Live Events | Validates that a user is able to schedule Teams live events. | [Run Tests: Teams Live Events](https://aka.ms/TeamsLiveEventsDiag) |
-| Meetings | Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag) |
-| Presence | Teams presence | Validates that a user's Teams presence can be correctly displayed. | [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag) |
-| Voice | Teams Direct Routing | Validates that a user is correctly configured for direct routing. | [Run Tests: Teams Direct Routing](https://aka.ms/TeamsDirectRoutingDiag) |
-| Voice | Teams Call Queue | Validates that a call queue is able to receive calls. | [Run Tests: Teams Call Queue](https://aka.ms/TeamsCallQueueDiag) |
-| Voice | Teams Dial Pad is Missing | Validates that the dial pad is visible within Teams. | [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag) |
-| Voice | Unable to Make Domestic or International PSTN calls in Teams | Validates that a user has the ability to make or receive domestic or international PSTN calls. | [Run Tests: Teams PSTN](https://aka.ms/TeamsPSTNDiag) |
-| Voice | Unable to Join or Create a Teams Conference Call | Validates that a user has the ability to create or join a PSTN conference call. | [Run Tests: Teams Conference](https://aka.ms/TeasConfDiag) |
-| Voice | Teams Auto-Attendant | Validates that an auto attendant is able to receive calls. | [Run Tests: Teams Auto Attendant](https://aka.ms/TeamsAADiag) |
-| Voice | Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams. | [Run Tests: Voicemail](https://aka.ms/TeamsVoicemailDiag) |
-| Voice | Teams Call Forwarding | Validates that a user is properly configured to forward calls to a specified number. | [Run Tests: Teams Call Forwarding](https://aka.ms/TeamsCallForwardingDiag) |
+| Category | Diagnostic | Description | Shortcut Link | Support Article |
+|---|---|---|---|---|
+| Authentication | Teams Sign-in | Validates that a user can sign in to the Teams app. | [Run Tests: Teams Sign-In](https://aka.ms/TeamsSignInDiag) | [Resolve sign-in errors in Teams](https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/teams-sign-in/resolve-sign-in-errors) |
+| Authentication | Teams Federation | Validates that the Teams user can communicate with a federated Teams user. | [Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag) | [Manage external access (federation)]( https://docs.microsoft.com/en-us/microsoftteams/manage-external-access#federation-diagnostic-tool) |
+| Authentication | Unable to Invite Guest Users to Teams | Validates that a specific guest can sign into Teams.	| [Run Tests: Teams Guest Access](https://aka.ms/TeamsGuestAccessDiag) | [Guest access in Microsoft Teams](https://docs.microsoft.com/en-us/MicrosoftTeams/guest-access) |
+| Files | Teams Files Guest Access | Validates that guest users can be added to Teams and the Team is shared with the user. | [Run Tests: Teams Files Guest Access](https://aka.ms/TeamsFilesGuestAccessDiag) | [Guests can't access Files tab for shared files in Teams](https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/files/guests-cannot-access-files) |
+| Files | Unable to upload files to Teams chat | Validates if the specified user can upload files in Teams chat. | [Run Tests: Unable to upload files to Teams chat](https://aka.ms/TeamsUploadFilesInChat) | [Error when uploading files to a Teams chat](https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | 
+| Files | Unable to access files shared in Teams chat | Validated that a specified user being unable to access files shared by another user in chats. | [Run Tests: Unable to access files shared in Teams chat](https://aka.ms/TeamsSharedFilesInChat) | [Error (You don't have access to this file) when opening a file in Teams](https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/known-issues/do-not-have-access-to-this-file-teams) |
+| Files | Unable to access files in a team | Validates that a specified user has access to files in the Team. | [Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat) | [Can't access the Files tab on a Teams channel]( https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/files/access-files-tab-errors) |
+| Files | We Can't Get Your Files | Validates that a Team is provisioned and accessible by the specified user. | [Run Tests: Teams Files Error](https://aka.ms/TeamsCannotGetFiles) | |
+| Meetings | Teams Calendar App | Validates that the pre-requisites are properly configured for the Microsoft Teams calendar app to function. | [Run Tests: Teams Calendar App](https://aka.ms/TeamsCalendarDiag) | |
+| Meetings | Meeting Recording Missing | Attempts to locate a missing Teams Meeting Recording | [Run Tests: Missing Recording](https://aka.ms/MissingRecordingDiag) | [Teams cloud meeting recording](https://docs.microsoft.com/en-us/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools) |
+| Meetings | 1:1 Call Recording | Checks a user's policy for 1:1 Call Recording capability | [Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag) | |
+| Meetings | Teams Add-in is Missing in Outlook | Validates that a user has the correct policies to enable the Teams Outlook add-in. | [Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag) | |
+| Meetings | Teams Live Events | Validates that a user is able to schedule Teams live events. | [Run Tests: Teams Live Events](https://aka.ms/TeamsLiveEventsDiag) | |
+| Meetings | Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag) | [Teams cloud meeting recording](https://docs.microsoft.com/en-us/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools) |
+| Presence | Teams presence | Validates that a user's Teams presence can be correctly displayed. | [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag) | [Your actual presence status isn't displayed in Teams](https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status) |
+| Voice | Teams Direct Routing | Validates that a user is correctly configured for direct routing. | [Run Tests: Teams Direct Routing](https://aka.ms/TeamsDirectRoutingDiag) | [Monitor and troubleshoot Direct Routing](https://docs.microsoft.com/en-us/microsoftteams/direct-routing-monitor-and-troubleshoot) |
+| Voice | Teams Call Queue | Validates that a call queue is able to receive calls. | [Run Tests: Teams Call Queue](https://aka.ms/TeamsCallQueueDiag) | [Create a call queue in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/create-a-phone-system-call-queue#call-queue-diagnostic-tool) |
+| Voice | Teams Dial Pad is Missing | Validates that the dial pad is visible within Teams. | [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag) | [Dial pad in missing in Teams](https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/teams-conferencing/no-dial-pad) |
+| Voice | Unable to Make Domestic or International PSTN calls in Teams | Validates that a user has the ability to make or receive domestic or international PSTN calls. | [Run Tests: Teams PSTN](https://aka.ms/TeamsPSTNDiag) | |
+| Voice | Unable to Join or Create a Teams Conference Call | Validates that a user has the ability to create or join a PSTN conference call. | [Run Tests: Teams Conference](https://aka.ms/TeasConfDiag) | |
+| Voice | Teams Auto-Attendant | Validates that an auto attendant is able to receive calls. | [Run Tests: Teams Auto Attendant](https://aka.ms/TeamsAADiag) | [Set up an auto attendant for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/create-a-phone-system-auto-attendant#auto-attendant-diagnostic-tool) |
+| Voice | Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams. | [Run Tests: Voicemail](https://aka.ms/TeamsVoicemailDiag) | |
+| Voice | Teams Call Forwarding | Validates that a user is properly configured to forward calls to a specified number. | [Run Tests: Teams Call Forwarding](https://aka.ms/TeamsCallForwardingDiag) | |
 
 More diagnostics will be added at a future date.
 
