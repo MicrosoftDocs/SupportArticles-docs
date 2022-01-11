@@ -1366,6 +1366,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/browsers/welcome-browsers.md",
+      "redirect_url": "/troubleshoot/developer/browsers/welcome-browsers",
+      "redirect_document_id": true
+    },    
+    {
       "source_path": "support/browsers/cannot-add-favorites-in-enhanced-protected-mode.md",
       "redirect_url": "/troubleshoot/developer/browsers/administration/cannot-add-favorites-in-enhanced-protected-mode",
       "redirect_document_id": true
