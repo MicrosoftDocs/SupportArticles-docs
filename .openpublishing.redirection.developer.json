@@ -867,7 +867,7 @@
     },
     {
       "source_path": "support/iis/expression-web-faq.yml",
-      "redirect_url": "/troubleshoot/developer/webapps/iis/general/expression-web-faq.yml",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/expression-web-faq",
       "redirect_document_id": true
     },
     {
