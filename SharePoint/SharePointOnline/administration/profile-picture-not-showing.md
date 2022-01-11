@@ -23,6 +23,9 @@ Your SharePoint Online profile picture isn't displayed on SharePoint sites or in
 
 ## Resolution Option 1: Run the Picture Sync diagnostic
 
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user photos.
 
 Select **Run Tests**, which will populate the diagnostic in the Microsoft 365 Admin Center.
@@ -32,10 +35,6 @@ Select **Run Tests**, which will populate the diagnostic in the Microsoft 365 Ad
 
 The diagnostic performs a large range of verifications for users who may not be seeing an updated profile picture.
 
-  > [!NOTE]
-  > Microsoft is seeking to collect feedback on Microsoft 365 diagnostics. If you choose to run the Picture Sync diagnostic, you can provide feedback through the following link: 
-  >
-  > [Picture Sync Diagnostic Feedback](https://forms.office.com/r/1TLidCz9VX)
 
 ## Resolution Option 2: Select the most relevant option below and follow the steps
 
