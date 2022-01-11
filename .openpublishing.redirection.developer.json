@@ -726,6 +726,646 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/aspnetcore/introduction.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/introduction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/cannot-create-object-asp-applications-run.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/cannot-create-object-asp-applications-run",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/create-guids-asp.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/create-guids-asp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/display-images-stored-blob-field.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/display-images-stored-blob-field",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/server-object-error-asp-0178-occurs.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/server-object-error-asp-0178-occurs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/read-and-display-binary-data-serverxmlhttp.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/read-and-display-binary-data-serverxmlhttp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/run-sql-server-stored-procedures-asp-page.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/run-sql-server-stored-procedures-asp-page",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/set-asp-locale-id-browser-language.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/set-asp-locale-id-browser-language",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/vbscript-type-mismatch-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/vbscript-type-mismatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/xmlhttprequest-setrequestheader-method-cookies.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/xmlhttprequest-setrequestheader-method-cookies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/affinity-not-honored-ssl-common-names-arr.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/application-request-routing/affinity-not-honored-ssl-common-names-arr",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/add-http-response-header-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/add-http-response-header-web-site",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/assign-certificate-private-key.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/assign-certificate-private-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/duplicate-aspnet-events.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/duplicate-aspnet-events",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/cookie-unavailable-ihttpmodules-ihttphandler.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/cookie-unavailable-ihttpmodules-ihttphandler",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/error-0x80004005-register-webclass-dll.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/error-0x80004005-register-webclass-dll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/upload-to-webdav-directory-fails.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/upload-to-webdav-directory-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/403-6-forbidden-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/403-6-forbidden-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/make-get-request.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/make-get-request",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/cannot-use-web-deploy.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/deployment-migration/cannot-use-web-deploy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/web-deploy-error-non-admin-user.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/deployment-migration/web-deploy-error-non-admin-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/webdeploy-publishing-endpoint-wap.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/deployment-migration/webdeploy-publishing-endpoint-wap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/ftp-authorization-rules-not-inherited.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-authentication-authorization/ftp-authorization-rules-not-inherited",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/error-530-anonymous-ftp-sites.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-authentication-authorization/error-530-anonymous-ftp-sites",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/how-to-use-ftp-utility.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-authentication-authorization/how-to-use-ftp-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/changes-in-ftp-7-5.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-service-svchost-inetinfo/changes-in-ftp-7-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/ftp-download-session-fails.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-service-svchost-inetinfo/ftp-download-session-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/error-create-ftp-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-service-svchost-inetinfo/error-create-ftp-site",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/ftp-status-codes-iis-7-and-later-versions.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-service-svchost-inetinfo/ftp-status-codes-iis-7-and-later-versions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/expression-web-faq.yml",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/expression-web-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/asp-support-windows.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/asp-support-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/use-registry-keys.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/use-registry-keys",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/customize-iis-log-file-field-names.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/customize-iis-log-file-field-names",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/express-not-supported-production-environment.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/express-not-supported-production-environment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/instances-httpsys-not-cache.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/instances-httpsys-not-cache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/users-cannot-access-web-sites-when-log-full.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/general/users-cannot-access-web-sites-when-log-full",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/application-pool-exceed-time-limits.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/application-pool-exceed-time-limits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/data-collection-strategies.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/data-collection-strategies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/debugdiag-collected-information.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/debugdiag-collected-information",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/enable-schannel-event-logging.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/enable-schannel-event-logging",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/etw-log-diagnostic.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/etw-log-diagnostic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/hidden-static-files-http-404-access-denied.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/hidden-static-files-http-404-access-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/clm-http-bad-request.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/clm-http-bad-request",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-error-403-404-frx-webport.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-error-403-404-frx-webport",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-403-14-forbidden-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-403-14-forbidden-webpage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-403-forbidden-access-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-403-forbidden-access-website",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-error-403-7-forbidden-web-app.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-error-403-7-forbidden-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/troubleshoot-404-file-not-found-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/troubleshoot-404-file-not-found-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-404-13-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-404-13-website",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/error-message-you-visit-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/error-message-you-visit-web-site",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-error-405-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-error-405-website",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-error-500-19-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-error-500-19-webpage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-error-501-not-implemented.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-error-501-not-implemented",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/error-503-event-5189-web-application.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/error-503-event-5189-web-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/iis-logs-contain-dots.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/iis-logs-contain-dots",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/cannot-access-site-using-https.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/cannot-access-site-using-https",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/ssl-diagnostic-tool-sdp.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/ssl-diagnostic-tool-sdp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/time-taken-field-http-log.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/time-taken-field-http-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/troubleshoot-abo-mapper-errors.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/troubleshoot-abo-mapper-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/web-application-performance-data-collector.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/web-application-performance-data-collector",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/administration-cmdlets-slow.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/administration-cmdlets-slow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/using-iisreset-restart-iis-result-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/using-iisreset-restart-iis-result-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/fim-password-reset-issue.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/fim-password-reset-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-service-fail-stopped.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/http-service-fail-stopped",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/httpsys-registry-windows.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/httpsys-registry-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/processor-affinity-not-work.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/processor-affinity-not-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/ssl-multiple-web-sites-shared-configuration.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/ssl-multiple-web-sites-shared-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/events-not-detected-scom.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/extensions-tools/events-not-detected-scom",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/no-cs-username-data-advanced-logging.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/extensions-tools/no-cs-username-data-advanced-logging",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/0-byte-file-compression-enabled.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/0-byte-file-compression-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/exception-integrated-pipeline-mode.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/exception-integrated-pipeline-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/authorization-fails-default-documents.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/authorization-fails-default-documents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/cannot-view-website-using-ssl.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/cannot-view-website-using-ssl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/calling-postcompletion-cause-crash.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/calling-postcompletion-cause-crash",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/server-execution-fail-call-mts-com-asp.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/server-execution-fail-call-mts-com-asp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/default-maximum-stack-size-thread.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/default-maximum-stack-size-thread",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/event-handles-leaked.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/event-handles-leaked",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/event-115-connect-https-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/event-115-connect-https-website",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/expression-encoder-crash-live-broadcasting.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/expression-encoder-crash-live-broadcasting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/failed-generate-certificate-request.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/failed-generate-certificate-request",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/ftpputfile-success-451-status.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/ftpputfile-success-451-status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-error-402-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-error-402-webpage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-500-response-binarywrite.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-500-response-binarywrite",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/internet-printing-fails.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/internet-printing-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/page-cannot-displayed-when-you-connect-ssl.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/page-cannot-displayed-when-you-connect-ssl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/stale-content-when-content-store-vhd.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/stale-content-when-content-store-vhd",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/work-process-takes-much-memory.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/work-process-takes-much-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/remote-resources-fails-requested-iis.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/remote-resources-fails-requested-iis",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/configure-default-document-iis.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/configure-default-document-iis",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/content-types-http-compression.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/content-types-http-compression",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/enable-ssl-all-customers.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/enable-ssl-all-customers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/error-when-you-configure-32-bit-handlers.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/error-when-you-configure-32-bit-handlers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-bad-request-response-kerberos.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/http-bad-request-response-kerberos",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-error-500-when-you-visit-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/http-error-500-when-you-visit-web-site",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-status-code.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/http-status-code",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/https-connections-fail-ssl-bindings-deleted.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/https-connections-fail-ssl-bindings-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/iis-events-not-display-remotely.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/iis-events-not-display-remotely",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/access-denied-call-web-service.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/access-denied-call-web-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/change-ip-port-wildcard-certificate-site-fail.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/change-ip-port-wildcard-certificate-site-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/cannot-import-ssl-pfx-local-certificate.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/cannot-import-ssl-pfx-local-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/0x80090016-change-application-pool-identity.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/0x80090016-change-application-pool-identity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/configure-w3svc-wsfc.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/configure-w3svc-wsfc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/configure-intermediate-certificates.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/configure-intermediate-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/configure-many-to-one-client-mappings.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/configure-many-to-one-client-mappings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/default-permissions-user-rights.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/default-permissions-user-rights",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/digest-authentication.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/digest-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/service-reference-endpointconfigurationname.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/service-reference-endpointconfigurationname",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/error-install-certificate.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/error-install-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/configuration-files-cannot-exported.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/configuration-files-cannot-exported",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/401-error-preauthentication-header.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/401-error-preauthentication-header",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/http-403-forbidden-open-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/http-403-forbidden-open-webpage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/iis-authenticates-browser-client.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/iis-authenticates-browser-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/errors-403-7-reject-client-certificate-rquest.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/errors-403-7-reject-client-certificate-rquest",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/information-associated-iis-site-is-not-deleted.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/information-associated-iis-site-is-not-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/impersonation-fails-uac-enabled.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/impersonation-fails-uac-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/kerberos-double-hop-authentication-edge-chromium.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/analyze-client-certificate.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/analyze-client-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/not-start-reenable-shared-configuration.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/not-start-reenable-shared-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/shared-configuration-require-same-version.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/shared-configuration-require-same-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/shutdowntimelimit-not-apply-to-wcf.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/shutdowntimelimit-not-apply-to-wcf",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/troubleshoot-kerberos-failures-ie.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/troubleshoot-kerberos-failures-ie",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/understanding-identities.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/understanding-identities",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/add-remove-global-modules.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/add-remove-global-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/disable-save-embedded-files-dialog.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/disable-save-embedded-files-dialog",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/request-restrictions-not-set-isapi.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/request-restrictions-not-set-isapi",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/websocketmodule-is-not-loaded.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/websocketmodule-is-not-loaded",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/iis/disable-winhttp-tracing-sdp.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-service-svchost/disable-winhttp-tracing-sdp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/webapps/welcome-webapps.md",
+      "redirect_url": "/troubleshoot/developer/webapps/welcome-webapps",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/browsers/cannot-add-favorites-in-enhanced-protected-mode.md",
       "redirect_url": "/troubleshoot/developer/browsers/administration/cannot-add-favorites-in-enhanced-protected-mode",
       "redirect_document_id": true
