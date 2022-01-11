@@ -726,6 +726,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/aspnetcore/introduction.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/introduction",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/iis/cannot-create-object-asp-applications-run.md",
       "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/cannot-create-object-asp-applications-run",
       "redirect_document_id": true
