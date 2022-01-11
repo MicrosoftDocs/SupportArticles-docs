@@ -41,11 +41,12 @@ Starting September 1, 2021, we're hiding user information by default for all rep
 
 ## Resolution
 
-To resolve this issue, change the following account setting in the Microsoft 365 admin center.
+To fix this issue, change the following setting in the Microsoft 365 admin center.
 
 > [!NOTE]
-> You must be a Microsoft 365 tenant administrator.
+> You must be a Microsoft 365 global administrator.
 
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
-1. Go to **Settings** > **Org settings** > **Reports**.
-1. Clear the **In all reports, display de-identified names for users, groups, and sites.** option.
+1. Go to **Settings** > **Org Settings** > **Services**.
+1. Select **Reports**.  
+1. Clear **Display concealed user, group, and site names in all reports**, and then select **Save**. 
