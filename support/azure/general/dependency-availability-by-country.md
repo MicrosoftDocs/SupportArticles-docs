@@ -39,7 +39,7 @@ Countries/regions that have Azure dependencies availability as of December 2021:
 - United Kingdom
 - United States of America
 
-\* These regions recently obtained Azure dependencies. All solutions are working on unlocking their features in these regions. Please check Microsoft Center posts to see when specific solutions will go live for that region.
+The regions with an asterisk (\*) appended have recently obtained Azure dependencies. All solutions are working on unlocking their features in these regions. Check Microsoft Center documentations to see when specific solutions will go live for these regions.
 
 Countries/regions that are planned to get Azure dependencies availability soon:
 
