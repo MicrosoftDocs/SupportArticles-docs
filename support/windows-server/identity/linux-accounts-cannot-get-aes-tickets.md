@@ -1,7 +1,7 @@
 ---
 title: Linux accounts cannot get AES tickets
 description: Provides some methods to an issue that Linux integrated accounts can't get AES encrypted tickets in AD DS, but get RC4 tickets instead.
-ms.date: 06/11/2021
+ms.date: 01/31/2022
 author: v-lianna
 ms.author: delhan
 manager: dcscontentpm
@@ -68,7 +68,9 @@ In an Active Directory Domain Services (AD DS) environment, Linux integrated acc
 
 ## Cause
 
-This issue occurs because the **operatingSystemVersion** attribute value of Linux is set to *3.10.0x*. If the first character of the value is a digit and smaller than six, the system will be treated as an operating system anterior to Windows Vista/Windows Server 2008, which doesn't support the **msDS-SupportedEncryptionTypes** attribute and the AES encryption type. That causes the KDC to return an RC4 encrypted ticket. This is part of Windows design and noted in the specifications as follows:<a id="1"></a>
+This issue occurs because the **operatingSystemVersion** attribute value of Linux is set to *3.10.0x*. AD DS reads the attribute value from left to right, stopping at the first decimal point (.) If the first character of the value is a digit and smaller than six (in this case, the value is 3), the KDC determines that the requesting operating system might not support newer encryption types. As a result, the KDC ignores **msDS-SupportedEncryptionTypes** and uses RC4 to encrypt the ticket.
+
+This behavior is by design. It accommodates older versions of Windows (Windows 2000 Server, Windows Server 2003, and Windows XP) that do not support the **msDS-SupportedEncryptionTypes** attribute and the AES encryption type. The following specifications describe this design:<a id="1"></a>
 
 - If the server or [service](/openspecs/windows_protocols/ms-kile/e720dd17-0703-4ce4-ab66-7ccf2d72c579#gt_2dc07ca2-2b40-437e-a5ec-ed28ebfb116a) has a **KerbSupportedEncryptionTypes** populated with supported encryption types,[<58>](/openspecs/windows_protocols/ms-kile/1163bb03-7035-433e-b5a4-802247262d18#Appendix_A_58) then the KDC SHOULD[<59>](/openspecs/windows_protocols/ms-kile/1163bb03-7035-433e-b5a4-802247262d18#Appendix_A_59) return in the encrypted part ([[Referrals-11]](https://tools.ietf.org/internet-drafts/draft-ietf-krb-wg-kerberos-referrals-11) Appendix A) of **TGS-REP** message, a **PA-DATA** structure with padata-type set to **PA-SUPPORTED-ENCTYPES** [165] to indicate what encryption types (section [2.2.7](/openspecs/windows_protocols/ms-kile/6cfc7b50-11ed-4b4d-846d-6f08f0812919)) are supported by the server or service. If not, the KDC SHOULD[<60>](/openspecs/windows_protocols/ms-kile/1163bb03-7035-433e-b5a4-802247262d18#Appendix_A_60) check the server or service account's UseDESOnly flag.
 
