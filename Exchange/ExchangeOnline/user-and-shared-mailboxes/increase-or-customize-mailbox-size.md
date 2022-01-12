@@ -23,10 +23,13 @@ As a tenant administrator, if one of your users runs out of storage space in the
 
 ## Increase mailbox size
 
-To increase a specific user's mailbox size, select **Diag: Mailbox or message size** to launch a diagnostic in the Microsoft 365 admin center. The diagnostic will guide you through the process of assigning a different subscription license to the user.
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+To increase a specific user's mailbox size, select the button below to launch a diagnostic in the Microsoft 365 admin center. The diagnostic will guide you through the process of assigning a different subscription license to the user.
 
 >[!div class="nextstepaction"]
->[Diag: Mailbox or message size](https://aka.ms/PillarMailboxSize)
+>[Run Tests: Mailbox or message size](https://aka.ms/PillarMailboxSize)
 
 ## Customize mailbox size
 
