@@ -25,7 +25,7 @@ See the below screenshots:
 
 2. Then set up a relief income code to be used against the banked time. This code will be an Income Code with a reference of Banked Sick Pay. (**Tools**/**Setup**/**Payroll Canada**/**Income Code**) This code will be used to remove time from the banked display window.
 
-    :::image type="content" source="media/banked-sick-pay-accrual-based-on-dollars-in-canadian-payroll/banked-sick-pay-relief.png" alt-text="Screenshot of the Payroll Income Paycode Setup window. The Description field is Banked Sick Pay Relief. The Reference field is Banked Sick Pay.":::
+    :::image type="content" source="media/banked-sick-pay-accrual-based-on-dollars-in-canadian-payroll/banked-sick-pay-relief.png" alt-text="Screenshot of the Payroll Income Paycode Setup window. The Description field is Banked Sick Pay Relief. The Reference field is Banked Sick Pay." border="false":::
 
 3. Under **Tools**/**Setup**/**payroll Canada**/**Control**/**Banked**, set up your banked options for either **Stat time**, **Sick Pay**, **Overtime**, or **Leave**:
 
@@ -48,11 +48,11 @@ See the below screenshots:
 7. Then I'll calculate a salary payrun for this salaried employee.
 8. Now on the employee's Banked tab, you can see the employee got 1 unit for $20.00.
 
-    :::image type="content" source="media/banked-sick-pay-accrual-based-on-dollars-in-canadian-payroll/unit-values-on-employee-banked-tab.png" alt-text="Screenshot shows 1 unit for 20 dollars on the employee's Banked tab.":::
+    :::image type="content" source="media/banked-sick-pay-accrual-based-on-dollars-in-canadian-payroll/unit-values-on-employee-banked-tab.png" alt-text="Screenshot shows 1 unit for 20 dollars on the employee's Banked tab." border="false":::
 
 9. Since this is a banked code, if I key a quick transaction for 1 unit for $20.00 for 6/1/2017, then it adds it to the banked time and the banked window will show this:
 
-    :::image type="content" source="media/banked-sick-pay-accrual-based-on-dollars-in-canadian-payroll/quick-transaction-on-employee-banked-tab.png" alt-text="Screenshot shows quick transaction entries on the Banked tab.":::
+    :::image type="content" source="media/banked-sick-pay-accrual-based-on-dollars-in-canadian-payroll/quick-transaction-on-employee-banked-tab.png" alt-text="Screenshot shows quick transaction entries on the Banked tab." border="false":::
 
     > [!NOTE]
     > You can add or delete to the banked code right in this window. (If you are also accruing to GL, then it will not let you add this way.) You can delete a line item in this window

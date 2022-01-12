@@ -24,15 +24,15 @@ It's often caused by the Debit Account not being set up for CSSTDR.
 
 1. Setup your CSST Deduction and make sure that you select **Gross Pay** for the Calculate Rate on, and select **CSST Premiums** for the Further Identification.
 
-    :::image type="content" source="media/csst-setup-canadian-payroll/csst-deduction.png" alt-text="Screenshot of CSST Deduction Paycode Setup window with the Further Identification selected.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/csst-deduction.png" alt-text="Screenshot of Payroll Deduction Deduction Paycode Setup window with the Further Identification selected." border="false":::
 
 1. Enter the Deduction Percentage that you need to have calculate under the **Amounts** button.
 
-    :::image type="content" source="media/csst-setup-canadian-payroll/deduction-percentage.png" alt-text="Screenshot of the Payroll Deduction Other Amounts window.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/deduction-percentage.png" alt-text="Screenshot of the Payroll Deduction Other Amounts window." border="false":::
 
 1. Setup a CSSTDR code. It doesn't need to have the Further Identification selected. It's used to read to the account for the debit portion of your CSST code.
 
-    :::image type="content" source="media/csst-setup-canadian-payroll/csstdr-code.png" alt-text="Screenshot of CSST Deduction Paycode Setup window with no Further Identification selected.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/csstdr-code.png" alt-text="Screenshot of CSST Deduction Paycode Setup window with no Further Identification selected." border="false":::
 
     Here's an example of the Debit and Credit on the Poster File based on the setups above.
 

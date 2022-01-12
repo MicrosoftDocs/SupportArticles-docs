@@ -195,25 +195,25 @@ Section 2: Management Reporter Consolidated Report
 
         **File >> New >> Row**
 
-        :::image type="content" source="media/consolidated-currency-translation/create-row.png" alt-text="Screenshot of example rows created in the desired accounts.":::
+        :::image type="content" source="media/consolidated-currency-translation/create-row.png" alt-text="Screenshot of an example row created in the desired accounts.":::
 
     2. Create a tree that links to both companies. Dimensions aren't required unless you want to break out the data.
 
         **File >> New >> Tree**
 
-        :::image type="content" source="media/consolidated-currency-translation/tree-links-both-companies.png" alt-text="Screenshot of example trees link to both companies with the Dimensions field empty.":::
+        :::image type="content" source="media/consolidated-currency-translation/tree-links-both-companies.png" alt-text="Screenshot of an example tree links to both companies with the Dimensions field empty.":::
 
     3. Create a column that handles the translation and breaks each company into its own column. In this example, there's a CAD Translated and a CAD Non-Translated column to show the translation in action. The only cell that tells Management Reporter to translate is the Currency Source cell.
 
         **File >> New >> Column**
 
-        :::image type="content" source="media/consolidated-currency-translation/column-handles-translation.png" alt-text="Screenshot of an example column handles the translation.":::
+        :::image type="content" source="media/consolidated-currency-translation/column-handles-translation.png" alt-text="Screenshot of an example column that handles the translation.":::
 
     4. Create a report definition.
 
         **File >> New >> Report Definition**
 
-        :::image type="content" source="media/consolidated-currency-translation/report-definition.png" alt-text="Screenshot of the Report tab of an example report definition.":::
+        :::image type="content" source="media/consolidated-currency-translation/report-definition.png" alt-text="Screenshot of an example report definition on the Report tab.":::
 
     5. Generate the report and note the translated results.
 
@@ -241,7 +241,7 @@ Section 2: Management Reporter Consolidated Report
 
     After you set up a translation, beginning balances along with translated beginning balances for the translation currencies are created by closing a year.
 
-    :::image type="content" source="media/consolidated-currency-translation/currency-translation.png" alt-text="Screenshot of the Currency translation window.":::
+    :::image type="content" source="media/consolidated-currency-translation/currency-translation.png" alt-text="Screenshot of the Currency translation window." border="false":::
 
     To enter translated beginning balance information:
 
