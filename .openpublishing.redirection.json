@@ -1074,6 +1074,16 @@
       "source_path": "support/sql/performance/high-cpu-use-occurs-queries.md",
       "redirect_url": "/troubleshoot/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-marketing-entitlement-does-not-match-your-tenant.md",
+      "redirect_url": "/troubleshoot/dynamics-365/marketing/dynamics-365-marketing-entitlement-does-not-match-your-tenant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-marketing-problem-with-deployment.md",
+      "redirect_url": "/troubleshoot/dynamics-365/marketing/dynamics-365-marketing-problem-with-deployment",
+      "redirect_document_id": true
     }
 
   ]
