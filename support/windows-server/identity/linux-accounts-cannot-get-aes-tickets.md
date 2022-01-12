@@ -63,12 +63,12 @@ In an Active Directory Domain Services (AD DS) environment, Linux integrated acc
     Kdc Called: MyDC.Contoso.com  
     ```
 
-> [!NOTE]
-> Setting the **msDS-SupportedEncryptionTypes** attribute value to *24 (0x18)* to force AES256/AES128 encryption won't solve the issue, nor will changing the encryption type allowed for Kerberos using the **Network security: Configure encryption types allowed for Kerberos** GPO to disable the RC4 encryption and enable the AES encryption type.
+> [!NOTE]  
+> Setting the **msDS-SupportedEncryptionTypes** attribute value to *24 (0x18)* to force AES256/AES128 encryption doesn't solve the issue. Similarly, disabling RC4 encryption and enabling AES encryption by using the **Network security: Configure encryption types allowed for Kerberos** GPO doesn't solve the issue.
 
 ## Cause
 
-This issue occurs because the **operatingSystemVersion** attribute value of Linux is set to *3.10.0x*. AD DS reads the attribute value from left to right, stopping at the first decimal point (.) If the first character of the value is a digit and smaller than six (in this case, the value is 3), the KDC determines that the requesting operating system might not support newer encryption types. As a result, the KDC ignores **msDS-SupportedEncryptionTypes** and uses RC4 to encrypt the ticket.
+This issue occurs because the **operatingSystemVersion** attribute value of Linux is set to *3.10.0x*. AD DS reads the attribute value from left to right, stopping at the first decimal point (.) If the first character of the value is a digit and the value is less than six (in this case, the value is 3), the KDC determines that the requesting operating system might not support newer encryption types. As a result, the KDC ignores **msDS-SupportedEncryptionTypes** and uses RC4 to encrypt the ticket.
 
 This behavior is by design. It accommodates older versions of Windows (Windows 2000 Server, Windows Server 2003, and Windows XP) that do not support the **msDS-SupportedEncryptionTypes** attribute and the AES encryption type. The following specifications describe this design:<a id="1"></a>
 
