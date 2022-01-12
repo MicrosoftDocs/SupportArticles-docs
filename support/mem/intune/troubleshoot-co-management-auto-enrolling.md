@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot auto-enrolling existing devices 
+title: Troubleshoot auto-enrolling existing Configuration Manager devices in Intune
 description: Helps you understand and troubleshoot issues when you set up co-management by taking Path 1 - Auto-enroll existing Configuration Manager-managed devices into Intune.
 ms.date: 04/16/2020
 ms.prod-support-area-path: Co-management with Configuration Manager
@@ -11,15 +11,12 @@ This article helps you understand and troubleshoot issues that you may encounter
 
 In this scenario, you can continue to manage Windows 10 devices by using Configuration Manager, or you can selectively move workloads to Microsoft Intune as you want. For more information about how to configure workloads, see [Support Tip: Configuring workloads in a co-managed environment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Configuring-workloads-in-a-co-managed-environment/ba-p/707221).
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4519160
-
 ## Before you start
 
 Before you start troubleshooting, it's important to collect some basic information about the issue and make sure that you follow all required configuration steps. It helps you better understand the problem and reduce the time to find a resolution. To do this, follow this checklist of pre-troubleshooting questions:
 
 - Did you have the required [permissions and roles](/mem/configmgr/comanage/overview#permissions-and-roles) to configure co-management?
-- Which [Azure AD hybrid identity option](/azure/active-directory/hybrid/plan-connect-user-signin#choosing-the-user-sign-in-method-for-your-organization) did you select?
+- Which [Azure Active Directory (Azure AD) hybrid identity option](/azure/active-directory/hybrid/plan-connect-user-signin#choosing-the-user-sign-in-method-for-your-organization) did you select?
 - What is your [current MDM authority](/mem/intune/fundamentals/mdm-authority-set)?
 - Did you [install and configure Azure AD Connect](/mem/configmgr/comanage/tutorial-co-manage-clients#set-up-azure-ad-connect)?
 - Did you [assign an Azure AD Premium license](/azure/active-directory/fundamentals/license-users-groups) to the UPN that you used for configuration?
@@ -255,9 +252,3 @@ For more information about Intune and Configuration Manager co-management, see t
 - [Getting Started: Paths to co-management](/mem/configmgr/comanage/quickstart-paths#bkmk_path1)
 - [Quickstarts for co-management](/mem/configmgr/comanage/quickstarts)
 - [Tutorial: Enable co-management for existing Configuration Manager clients](/mem/configmgr/comanage/tutorial-co-manage-clients)
-
-If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
-
-You can also [send feedback directly to the Microsoft product group](/mem/configmgr/core/understand/product-feedback).
-
-If all else fails and you'd like to open a support case with the Intune support team, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).

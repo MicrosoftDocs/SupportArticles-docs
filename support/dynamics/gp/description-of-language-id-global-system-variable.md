@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 942751
 
 ## More information
 
-Microsoft Dynamics GP uses the Language ID global variable to specify the language and the country of the current application instance. When tables contain text that can be displayed to a user, the tables frequently have the Language ID field in the primary key. Therefore, the text can appear in the appropriate language or with the appropriate terminology.
+Microsoft Dynamics GP uses the Language ID global variable to specify the language and the country/region of the current application instance. When tables contain text that can be displayed to a user, the tables frequently have the Language ID field in the primary key. Therefore, the text can appear in the appropriate language or with the appropriate terminology.
 
 For example, the `SY_Error_Messages_MSTR (DYNAMICS.dbo.SY01700)` table has the Language ID field as its first field. This field handles warning dialog boxes in multiple languages.
 
@@ -48,7 +48,7 @@ The following table lists the values of the Language ID global variable and the 
 |22|Arabic-Saudi Arabia|
 |23|Chinese-China|
 |24|Chinese-Singapore|
-|25|Chinese-Hong Kong|
+|25|Chinese-Hong Kong SAR|
 |26|Japanese-Japan|
 |27|French-France|
 |28|French-Canada|

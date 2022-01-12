@@ -1,19 +1,16 @@
 ---
-title: The Discovered apps list seems to list personal apps
-description: Describes a behavior that the Discovered apps list seems to list personal apps on Android work profile devices.
-ms.date: 05/20/2020
+title: The Intune discovered apps list seems to include personal apps
+description: Describes a behavior that the Microsoft Intune discovered apps list seems to show personal apps on Android work profile devices.
+ms.date: 10/19/2021
 ms.prod-support-area-path: Monitor apps 
 ---
-# Intune Discovered apps list seems to list personal apps on Android work profile devices
+# Intune discovered apps list seems to list personal apps on Android work profile devices
 
-This article describes a by design behavior that the **Discovered apps** list seems to show personal apps on an Android Enterprise work profile device.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4508002
+This article describes a by-design behavior that the [discovered apps](/mem/intune/apps/app-discovered-apps) list in Microsoft Intune seems to show personal apps on an Android Enterprise work profile device.
 
 ## Symptoms
 
-When you view the details of an Android Enterprise work profile device in Microsoft Intune in the Azure portal, some of the apps that you see in **Discovered apps** seem to be personal apps.
+When you view the details of an Android Enterprise work profile device in the Microsoft Endpoint Manager admin center, some of the apps that you see in **Discovered apps** seem to be personal apps.
 
 The following screenshot shows an example **Discovered apps** list.
 

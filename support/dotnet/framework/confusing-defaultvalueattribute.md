@@ -56,7 +56,7 @@ Because you can display components in a designer such as Visual Studio .NET or V
 
 To display your control and its members correctly at design time, design-time attributes are essential because they provide valuable information to a visual design tool. For example, in the following code fragment, the `CategoryAttribute` attribute enables the property browser to display the `TextAlignment` property in the `Alignment` category. The `DescriptionAttribute` attribute enables the property browser to provide a brief description of the property when a user clicks it.
 
-```vb
+```csharp
 [
     Category ("Alignment"),
     Description ("Specifies the alignment of text.")

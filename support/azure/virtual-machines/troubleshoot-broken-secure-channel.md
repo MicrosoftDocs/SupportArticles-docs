@@ -3,7 +3,7 @@ title: Troubleshoot a failed trust relationship in an Azure Windows VM
 description: This article shows how to troubleshoot a failed trust relationship between the workstation and primary domain in an Azure Windows virtual machine (VM).
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue, azure-resource-manager
