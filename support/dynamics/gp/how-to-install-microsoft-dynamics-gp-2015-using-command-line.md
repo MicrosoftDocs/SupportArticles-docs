@@ -215,8 +215,8 @@ Validation: Failure if value specified is not an acceptable value.
 
 Example: SBA_USERPASSWORD="Password"
 
-:::image type="content" source="media/how-to-install-microsoft-dynamics-gp-2015-using-command-line/feature-details-1.jpg" alt-text="Feature details 1":::
+:::image type="content" source="media/how-to-install-microsoft-dynamics-gp-2015-using-command-line/feature-details-1.png" alt-text="Screenshot of Feature list 1, which shows Feature ID, Feature Parent, Feature Name and Country/Region." border="false":::
 
-:::image type="content" source="media/how-to-install-microsoft-dynamics-gp-2015-using-command-line/feature-details-2.jpg" alt-text="Feature details 2":::
+:::image type="content" source="media/how-to-install-microsoft-dynamics-gp-2015-using-command-line/feature-details-2.png" alt-text="Screenshot of Feature list 2, which shows Feature ID, Feature Parent, Feature Name and Country/Region." border="false":::
 
-:::image type="content" source="media/how-to-install-microsoft-dynamics-gp-2015-using-command-line/feature-details-3.jpg" alt-text="Feature details 3":::
+:::image type="content" source="media/how-to-install-microsoft-dynamics-gp-2015-using-command-line/feature-details-3.png" alt-text="Screenshot of Feature list 3, which shows Feature ID, Feature Parent, Feature Name and Country/Region." border="false":::
