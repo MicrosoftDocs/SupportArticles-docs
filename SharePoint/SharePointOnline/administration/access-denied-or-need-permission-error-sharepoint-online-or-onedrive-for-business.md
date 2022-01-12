@@ -48,10 +48,6 @@ Select **Run Tests** below, which will populate the diagnostic in the Microsoft 
 
 The diagnostic performs a large range of verifications for internal users or guests who try to access SharePoint and OneDrive sites.
 
-  > [!NOTE]
-  > Microsoft is seeking to collect feedback on Microsoft 365 diagnostics. If you choose to run the Check User Access diagnostic, you can provide feedback through the following link:
-  >
-  > [Check User Access Diagnostic Feedback](https://forms.office.com/r/WBdNADgqXB)
 
 ## Resolution Option 2: Select the most relevant option and follow the steps to fix the issue
 
