@@ -24,7 +24,7 @@ It's often caused by the Debit Account not being set up for CSSTDR.
 
 1. Setup your CSST Deduction and make sure that you select **Gross Pay** for the Calculate Rate on, and select **CSST Premiums** for the Further Identification.
 
-    :::image type="content" source="media/csst-setup-canadian-payroll/csst-deduction.png" alt-text="Screenshot of Payroll Deduction Deduction Paycode Setup window with the Further Identification selected." border="false":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/csst-deduction.png" alt-text="Screenshot of Payroll Deduction Paycode Setup window with the Further Identification selected." border="false":::
 
 1. Enter the Deduction Percentage that you need to have calculate under the **Amounts** button.
 

@@ -201,7 +201,7 @@ Section 2: Management Reporter Consolidated Report
 
         **File >> New >> Tree**
 
-        :::image type="content" source="media/consolidated-currency-translation/tree-links-both-companies.png" alt-text="Screenshot of an example tree links to both companies with the Dimensions field empty.":::
+        :::image type="content" source="media/consolidated-currency-translation/tree-links-both-companies.png" alt-text="Screenshot of an example tree that links to both companies with the Dimensions field empty.":::
 
     3. Create a column that handles the translation and breaks each company into its own column. In this example, there's a CAD Translated and a CAD Non-Translated column to show the translation in action. The only cell that tells Management Reporter to translate is the Currency Source cell.
 
