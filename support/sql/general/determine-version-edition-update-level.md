@@ -446,7 +446,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|14.0.3430.2|None| CU28| [5008084](https://support.microsoft.com/help/5008084)|January 14, 2021|
+|14.0.3430.2|None| CU28| [5008084](https://support.microsoft.com/help/5008084)|January 13, 2021|
 |14.0.3421.10|None| CU27| [5006944](https://support.microsoft.com/help/5006944)|October 27, 2021|
 |14.0.3411.3|None| CU26| [5005226](https://support.microsoft.com/help/5005226)|September 14, 2021|
 |14.0.3401.7|None| CU25| [5003830](https://support.microsoft.com/help/5003830)|July 12, 2021|
