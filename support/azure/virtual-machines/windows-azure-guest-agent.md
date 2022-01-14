@@ -102,7 +102,7 @@ The Windows Azure Guest Agent has an auto-update feature. It will automatically 
 1. Install Guest Agent by using the following command:
 
     ```
-    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
+    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /L*v C:\Windows\Panther\msiexec.log
     ```
     Then check whether the Guest Agent Services start correctly.
  
