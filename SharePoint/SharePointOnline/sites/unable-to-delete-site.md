@@ -31,7 +31,9 @@ When trying to delete a SharePoint site, you might get an error stating the site
 The above errors are a sample of the possible errors. There are several other errors that will state the site can’t be deleted.
 
 Microsoft 365 admins can use the following diagnostic tool to help determine why the site can’t be deleted.
-**Note** This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Site deletion](https://aka.ms/PillarSiteDeletion)
