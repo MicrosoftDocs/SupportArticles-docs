@@ -5,7 +5,7 @@ ms.date: 01/13/2022
 ---
 # Known issues with Intune
 
-This page lists the most recent known issues with Microsoft Intune. For information on best practices, how to use new features, and other know issues and support tips, see the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess). For a list of weekly announcements about new features, see the [What's new in Microsoft Intune]/mem/intune/fundamentals/whats-new) in the Intune product documentation.
+This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see the [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, as well as a backlog of past known issues.
 
 ## Smart card removal behavior for Lock workstation has the wrong behavior applied on Windows 10 devices
 
@@ -70,3 +70,22 @@ Check your device configuration profiles to see if you are using a deprecated se
 |Microsoft Publisher 2016\Security\Trust Center|Disable Trust Bar Notification for unsigned application add-ins (User)|
 |Microsoft Word 2016\Word Options\Security\Trust Center|Disable Trust Bar Notification for unsigned application add-ins and block them (User)|
 |Microsoft Visio 2016\Visio Options\Security\Trust Center|Disable Trust Bar Notification for unsigned application add-ins and block them (User)|
+
+## Long sync times in Intune for Managed Google Play private apps and web apps
+
+This issue affects Managed Google Play web apps and private line-of-business (LOB) apps. If you recently created or have been added to a web app and sync your tenant, it may take three to six hours or longer for you to see the apps in Intune. Google is aware of this issue and their engineering team is currently working on a fix.
+
+### Who is impacted
+
+Admins who recently published a new Managed Google Play web or LOB app via one of the available publishing methods (iFrame in the Microsoft Endpoint Manager admin center, the custom app publishing API, or the Google Play Console external to Intune), will notice delays for those apps to sync to Intune. After selecting **Sync** from either the Microsoft Endpoint Manager admin center or the Google Play console, it can take hours for the new apps to appear in the app list in Intune. 
+
+> [!NOTE]
+> Existing web and private apps are not affected, including updates or edits to those apps.
+
+### Available workarounds
+
+There is one available workaround for web apps for dedicated devices using Microsoft Managed Home Screen by creating and deploying web links instead of Managed Google Play web apps. In the Microsoft Endpoint Manager admin center, go to Apps > All apps, select Add, and then choose web link as the app type.
+
+:::image type="content" source="media/known-issues/long-sync-time.png" alt-text="Microsoft Endpoint Manager admin center > All apps blade with the "Add" and "web link" options highlighted.":::
+
+There is no workaround for any other app type or enrollment scenario at this time.
