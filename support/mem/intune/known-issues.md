@@ -86,6 +86,6 @@ Admins who recently published a new Managed Google Play web or LOB app via one o
 
 There is one available workaround for web apps for dedicated devices using Microsoft Managed Home Screen by creating and deploying web links instead of Managed Google Play web apps. In the Microsoft Endpoint Manager admin center, go to Apps > All apps, select Add, and then choose web link as the app type.
 
-:::image type="content" source="media/known-issues/long-sync-time.png" alt-text="Microsoft Endpoint Manager admin center > All apps blade with the "Add" and "web link" options highlighted.":::
+:::image type="content" source="media/known-issues/long-sync-time.png" alt-text="Microsoft Endpoint Manager admin center - All apps blade with the "Add" and "web link" options highlighted.":::
 
 There is no workaround for any other app type or enrollment scenario at this time.

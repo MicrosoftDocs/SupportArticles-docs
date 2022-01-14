@@ -27,7 +27,7 @@ To resolve this issue, users must use the following steps to identify their enro
 2. Select **My Devices**.
 3. On the **My Devices** screen, select **Tap here**.
 
-   :::image type="content" source="media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of the Tap here link in my devices page.":::
+   :::image type="content" source="media/apps-appear-unavailable/my-device.png" alt-text="Screenshot of the Tap here link in my devices page.":::
 
 4. On the next screen, select your device to enroll it.
 
@@ -35,7 +35,7 @@ To resolve this issue, users must use the following steps to identify their enro
 
 5. You are returned to **My Devices**. The device should show a green check, as shown in the following screenshot.
 
-   :::image type="content" source="media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices page with a green check in the selected device.":::
+   :::image type="content" source="media/apps-appear-unavailable/my-device.png" alt-text="Screenshot of my devices page with a green check in the selected device.":::
 
 6. Return to the **Apps** screen. The applications should now be visible.
 
