@@ -82,10 +82,22 @@ Admins who recently published a new Managed Google Play web or LOB app via one o
 > [!NOTE]
 > Existing web and private apps are not affected, including updates or edits to those apps.
 
-### Available workarounds
+### Available workaround
 
 There is one available workaround for web apps for dedicated devices using Microsoft Managed Home Screen by creating and deploying web links instead of Managed Google Play web apps. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > All **apps**, select **Add**, and then choose **web link** as the app type.
 
 :::image type="content" source="media/known-issues/long-sync-time.png" alt-text="Microsoft Endpoint Manager admin center - All apps blade with the Add and web link options highlighted.":::
 
 There is no workaround for any other app type or enrollment scenario at this time.
+
+## Fully managed Samsung devices are noncompliant after managed update
+
+Samsung devices provisioned as Android Enterprise fully managed devices running Android 11 and later show as noncompliant after a managed update is applied. This could potentially affect access to corporate resources, depending on the Conditional Access policies set by the IT administrator. We are working to resolve this issue with Samsung, but we have workaround instructions to help you bring devices back into compliance.
+
+> [!NOTE]
+> As of January 7, 2022, this issue only applies to Android Enterprise fully managed Samsung devices. In December, Samsung released a fix in December 2020 (CP Version 5.0.5358.0) for Android device administrator (DA) management and Android Enterprise personally-owned work profiles.
+
+### Available workaround
+
+Users need to unlock the phone, open the Device Policy Controller app, and trigger a sync. Once the sync is completed, the device should show as compliant in Intune and access to corporate resources should be restored.
+
