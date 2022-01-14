@@ -19,15 +19,16 @@ search.appverid:
 ---
 # Resolve sign-in errors in Teams
 
-**Note:** This article is intended for tenant administrators.
-
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> 
 If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem:
 
 1. Run the Teams Sign-in diagnostic:
 
     1. Select the following button to populate the diagnostic in the Microsoft 365 admin center:
         >[!div class="nextstepaction"]
-        >[Diag: Teams Sign-in](https://aka.ms/TeamsSignInDiag)
+        >[Run Tests: Teams Sign-in](https://aka.ms/TeamsSignInDiag)
     1. In the **User Name or Email Address field**, enter the email address of the user who's experiencing the Teams sign-in issue.
 
 1. If the diagnostic detects an issue that affects the instance of Teams on the tenant, follow the provided solution to fix the issue. If the diagnostic doesn't detect an issue, check whether the user's [Teams client is running the latest update](https://support.microsoft.com/en-us/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1). Select the **Settings and more** menu next to the user's profile picture at the top right of the Teams window, and then select **Check for updates**.
