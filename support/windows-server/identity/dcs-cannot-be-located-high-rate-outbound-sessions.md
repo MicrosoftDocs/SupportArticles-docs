@@ -109,7 +109,7 @@ When a DC isn't responsive (for example, DCs are offline or blocked by a firewal
 
 ## Allow more UDP sockets and reuse old sockets earlier
 
-Configure the registry to allow more UDP sockets to be used for application requests. In addition, shorten the length of time that a connection stays in the TIME_WAIT state, so that the Transmission Control Protocol/Internet Protocol (TCP/IP) protocol can reuse old sockets earlier. Here're the steps:
+Configure the registry to allow more UDP sockets to be used for application requests. In addition, shorten the length of time that a connection stays in the TIME_WAIT state, so that the Transmission Control Protocol/Internet Protocol (TCP/IP) protocol can reuse old sockets earlier. Here are the steps:
 
 1. Open **Registry Editor**.
 2. Go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`.
