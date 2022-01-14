@@ -420,7 +420,7 @@
       href: ./identity/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
-    - name: Can't locate DCs and high-rate outbound sessions
+    - name: DCs can't be located and high-rate outbound sessions
       href: ./identity/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Enable LDAP over SSL
       href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
