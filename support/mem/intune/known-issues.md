@@ -77,14 +77,14 @@ This issue affects Managed Google Play web apps and private line-of-business (LO
 
 ### Who is impacted
 
-Admins who recently published a new Managed Google Play web or LOB app via one of the available publishing methods (iFrame in the Microsoft Endpoint Manager admin center, the custom app publishing API, or the Google Play Console external to Intune), will notice delays for those apps to sync to Intune. After selecting **Sync** from either the Microsoft Endpoint Manager admin center or the Google Play console, it can take hours for the new apps to appear in the app list in Intune. 
+Admins who recently published a new Managed Google Play web or LOB app via one of the available publishing methods (iFrame in the Microsoft Endpoint Manager admin center, the custom app publishing API, or the Google Play Console external to Intune), will notice delays for those apps to sync to Intune. After selecting **Sync** from either the Microsoft Endpoint Manager admin center or the Google Play console, it can take hours for the new apps to appear in the app list in Intune.
 
 > [!NOTE]
 > Existing web and private apps are not affected, including updates or edits to those apps.
 
 ### Available workarounds
 
-There is one available workaround for web apps for dedicated devices using Microsoft Managed Home Screen by creating and deploying web links instead of Managed Google Play web apps. In the Microsoft Endpoint Manager admin center, go to Apps > All apps, select Add, and then choose web link as the app type.
+There is one available workaround for web apps for dedicated devices using Microsoft Managed Home Screen by creating and deploying web links instead of Managed Google Play web apps. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > All **apps**, select **Add**, and then choose **web link** as the app type.
 
 :::image type="content" source="media/known-issues/long-sync-time.png" alt-text="Microsoft Endpoint Manager admin center - All apps blade with the Add and web link options highlighted.":::
 
