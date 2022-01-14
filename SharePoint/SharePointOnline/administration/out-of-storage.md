@@ -33,7 +33,8 @@ Your organization has total storage of 1 TB plus 10 GB per license of eligible
 
 If you suspect you should have more storage than is displayed in the Microsoft 365 admin center, Microsoft 365 admins can run the following diagnostic tool. It will identify any issues with your SharePoint Online tenant storage quota, and show how the quota is allocated.
 
-**Note** This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Tenant Storage](https://aka.ms/PillarTenantStorage)
