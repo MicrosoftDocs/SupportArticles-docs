@@ -1,6 +1,6 @@
 ---
-title: Verify 6to4 adapter for troubleshooting Direct Access
-description: This article introduces how to verify 6to4 adapter for Direct Access issue troubleshooting.
+title: Verify 6to4 adapter for DirectAccess server troubleshooting
+description: This article introduces how to verify 6to4 adapter for DirectAccess server troubleshooting.
 ms.date: 01/14/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,13 +13,13 @@ ms.reviewer: kaushika, MASOUDH
 ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
-# Verify 6to4 adapter for troubleshooting Direct Access
+# Verify 6to4 adapter for DirectAccess server troubleshooting
 
-DirectAccess leverages IPv6 transition protocols to enable clients to connect to the DirectAccess server when both are located on the IPv4 Internet. When the DirectAccess server is in a perimeter or DMZ network behind a NAT device, only the IP-HTTPS IPv6 transition protocol is used. When the DirectAccess server is edge facing with public IPv4 addresses assigned to the external interface, the 6to4 and Teredo IPv6 transition protocols are also supported.
+DirectAccess uses IPv6 transition protocols to enable clients to connect to the DirectAccess server when both are located on the IPv4 Internet. When the DirectAccess server is in a perimeter or DMZ network behind a NAT device, only the IP-HTTPS IPv6 transition protocol is used. When the DirectAccess server is edge facing with public IPv4 addresses assigned to the external interface, the 6to4 and Teredo IPv6 transition protocols are also supported.
 
 ## Verify 6to4 adapter status for troubleshooting
 
-Typical errors on the console regarding 6to4 can say that forwarding or advertising is not enabled. If we are not using 6to4, these errors should only be graphical without any impact on the deployment.
+Typical errors on the console about 6to4 can say that forwarding or advertising isn't enabled. If you aren't using 6to4, these errors should only be graphical without any impact on the deployment.
 
 The following command provides you with information of the interfaces and their index.
 
@@ -27,7 +27,7 @@ The following command provides you with information of the interfaces and their 
 netsh int ipv6 show int
 ```
 
-See the second line, Idx 14.
+See the second line, **Idx** 14.
 
 ```output
 Idx       Met          MTU          State                 Name 
