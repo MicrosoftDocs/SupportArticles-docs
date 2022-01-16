@@ -2,6 +2,14 @@
 
 
 
+## Week of January 10, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/10/2022 | [Shareable links overview and troubleshooting](/outlook/troubleshoot/email-management/shareable-links-functionality-in-outlook) | modified |
+
+
 ## Week of January 03, 2022
 
 
@@ -34,11 +42,3 @@
 |------|------------|--------|
 | 12/17/2021 | [Pictures cannot be shown but shown as red X](/outlook/troubleshoot/message-body/pictures-not-displayed-and-shown-as-red-x) | modified |
 | 12/17/2021 | [WPF WebBrowser control doesn't display content correctly in an Office application](/outlook/troubleshoot/user-interface/wpf-webbrowser-control-content-not-display-correctly) | modified |
-
-
-## Week of December 06, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/8/2021 | [Run CalCheck from Microsoft Support and Recovery Assistant to scan Outlook calendar](/outlook/troubleshoot/calendaring/scan-outlook-calendar-using-sara) | modified |
