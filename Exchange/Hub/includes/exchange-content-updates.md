@@ -2,6 +2,19 @@
 
 
 
+## Week of January 10, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/11/2022 | [Can't copy, move, or import more than 1,000 items to a public folder](/exchange/troubleshoot/public-folders/cannot-copy-move-import-items) | added |
+| 1/11/2022 | [Fix Outlook connection problems in Microsoft 365](/exchange/troubleshoot/outlook-issues/outlook-connection-issues) | modified |
+| 1/12/2022 | [Find and fix email delivery issues as an Office 365 for business admin](/exchange/troubleshoot/email-delivery/email-delivery-issues) | modified |
+| 1/12/2022 | [Fix Outlook connection problems in Microsoft 365](/exchange/troubleshoot/outlook-issues/outlook-connection-issues) | modified |
+| 1/12/2022 | [Increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | modified |
+| 1/14/2022 | [Fix Outlook connection problems in Microsoft 365](/exchange/troubleshoot/outlook-issues/outlook-connection-issues) | modified |
+
+
 ## Week of January 03, 2022
 
 
@@ -34,23 +47,3 @@
 | 12/15/2021 | [Troubleshoot ActiveSync with Exchange Server](/exchange/troubleshoot/client-connectivity/troubleshoot-activesync-with-exchange-server) | modified |
 | 12/15/2021 | [How to increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | added |
 | 12/17/2021 | [Increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | modified |
-
-
-## Week of December 06, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/6/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
-| 12/6/2021 | [ErrorMailRecipientNotFound when viewing free/busy information](/exchange/troubleshoot/calendars/no-free-busy-information-retrieved) | modified |
-| 12/7/2021 | [Two OneDrive accounts when uploading attachments](/exchange/troubleshoot/send-emails/two-onedrive-accounts-when-uploading-attachments) | modified |
-| 12/7/2021 | [Cannot add permissions to user or room mailbox](/exchange/troubleshoot/user-and-shared-mailboxes/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest) | modified |
-| 12/7/2021 | [Name error when adding a Room or Resource mailbox](/exchange/troubleshoot/user-and-shared-mailboxes/cannot-add-room-or-resource-mailbox) | modified |
-| 12/7/2021 | [Create and manage resource mailboxes](/exchange/troubleshoot/user-and-shared-mailboxes/create-and-manage-resource-mailboxes) | modified |
-| 12/7/2021 | [Mailbox recovery in Exchange Online](/exchange/troubleshoot/user-and-shared-mailboxes/mailbox-recovery-in-exchange-online) | modified |
-| 12/7/2021 | [No soft-deleted mailbox after license removal](/exchange/troubleshoot/user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal) | modified |
-| 12/7/2021 | [Cumulative Update 20 shown instead of CU22](/exchange/troubleshoot/setup/cumulative-update-20-is-shown-not-22) | modified |
-| 12/7/2021 | [Installing updates for Mailbox-role server fails](/exchange/troubleshoot/setup/error-occurred-while-configuring-search-foundation) | modified |
-| 12/7/2021 | [User photos aren't synced to Exchange Online](/exchange/troubleshoot/administration/user-photos-not-synced-to-exchange-online) | modified |
-| 12/7/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
-| 12/8/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
