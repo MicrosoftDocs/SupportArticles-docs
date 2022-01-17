@@ -64,7 +64,7 @@ Use the following procedure:
     > [!NOTE]
     > For this command to succeed, the *Sqlmgmproviderxpsp2up.mof* file must be present in the `%programfiles(x86)%\Microsoft SQL Server\nnn\Shared` folder.
 
-1. After you run the mofcomp tool, restart the WMI service for the changes to take effect. To do this, open **Services** application, select **Windows Management Instrumentation**, and then select **Restart**. You can also restart the service by running the following PowerShell command as administrator:
+1. After you run the mofcomp tool, restart the WMI service for the changes to take effect. To do this, open **Services** application, select **Windows Management Instrumentation**, and then select **Restart**. You can also restart the WMI service by running the following PowerShell command as administrator:
 
     ```PowerShell
     Get-Service winmgmt | Restart-Service -Force
