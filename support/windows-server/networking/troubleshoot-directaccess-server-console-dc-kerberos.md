@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Troubleshoot DC and Kerberos for DirectAccess troubleshooting
+description: This article introduces how to troubleshoot DC and Kerberos for DirectAccess server troubleshooting.
 ms.date: 01/14/2022
 author: Deland-Han
 ms.author: delhan

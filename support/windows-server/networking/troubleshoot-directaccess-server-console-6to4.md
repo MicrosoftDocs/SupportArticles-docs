@@ -32,13 +32,13 @@ See the second line, **Idx** 14.
 ```output
 Idx       Met          MTU          State                 Name 
 ---   ----------   ----------   ------------   --------------------------- 
-1        50        4294967295      connected      Loopback Pseudo-Interface 1 
-14       45              1280      connected      6TO4 Adapter 
-15        5              1280      connected      isatap.{Interface Guid} 
+1        50        4294967295      connected   Loopback Pseudo-Interface 1 
+14       45              1280      connected                  6TO4 Adapter 
+15        5              1280      connected       isatap.{Interface Guid} 
 16        5              1280      connected      isatap.{{Interface Guid}
-17       50              1280      connected      IPHTTPSInterface 
-12        5              1500      connected      Internal 
-13        5              1500      connected      External
+17       50              1280      connected              IPHTTPSInterface 
+12        5              1500      connected                      Internal 
+13        5              1500      connected                      External
 ```
 
 The following command shows you the configuration for 6to4 adapter.
