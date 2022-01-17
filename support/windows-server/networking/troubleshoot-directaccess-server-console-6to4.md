@@ -13,7 +13,7 @@ ms.reviewer: kaushika, MASOUDH
 ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
-# Verify 6to4 adapter for DirectAccess server troubleshooting
+# Troubleshoot DirectAccess Server console: 6to4
 
 DirectAccess uses IPv6 transition protocols to enable clients to connect to the DirectAccess server when both are located on the IPv4 Internet. When the DirectAccess server is in a perimeter or DMZ network behind a NAT device, only the IP-HTTPS IPv6 transition protocol is used. When the DirectAccess server is edge facing with public IPv4 addresses assigned to the external interface, the 6to4 and Teredo IPv6 transition protocols are also supported.
 
