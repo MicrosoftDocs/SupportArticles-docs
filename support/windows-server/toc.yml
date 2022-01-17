@@ -1664,6 +1664,14 @@
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
     - name: 'Troubleshoot DirectAccess Server console: 6to4'
       href: ./networking/troubleshoot-directaccess-server-console-6to4.md
+    - name: 'Troubleshoot DirectAccess Server console: DNS'
+      href: ./networking/troubleshoot-directaccess-server-console-dns.md
+    - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
+      href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
+    - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
+      href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
+    - name: 'Troubleshoot DirectAccess Server console: Networking'
+      href: ./networking/troubleshoot-directaccess-server-console-networking.md
   - name: TCP/IP communications
     items:
     - name: A SMB server is unresponsive
