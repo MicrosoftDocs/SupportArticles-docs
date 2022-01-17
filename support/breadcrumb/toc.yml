@@ -95,6 +95,9 @@
       - name: Active Directory
         tocHref: /troubleshoot/azure/active-directory/
         topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+      - name: Azure Log Analytics
+        tocHref: /troubleshoot/azure/log-analytics/
+        topicHref: /troubleshoot/azure/log-analytics/welcome-log-analytics
       - name: Cloud Services
         tocHref: /troubleshoot/azure/cloud-services/
         topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services
