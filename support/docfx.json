@@ -105,6 +105,7 @@
 
       "ms.prod": {
         "developer/biztalk/**/*.md": "biztalk-server",
+        "dotnet/**/*.md": ".net",
         "developer/dotnet/**/*.md": ".net",
         "developer/webapps/**/*.md": "web-apps-server",
         "developer/webapps/aspnet/**/*.md": "asp.net",
@@ -123,7 +124,7 @@
         "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
-        "developer/dotnet/**/*.md": "",
+        "dotnet/**/*.md": "",
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
         "developer/dotnet/framework/general/**/*.md": "dotnet-general",
         "developer/dotnet/framework/installation/**/*.md": "dotnet-installation",
