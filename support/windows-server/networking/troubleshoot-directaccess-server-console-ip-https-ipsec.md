@@ -29,7 +29,7 @@ Viewing the detailed Operations Status shows the following error message.
 > Error:  
 > The IP-HTTPS route does not have published property enabled.
 
-### Causes
+### Cause
 
 The publish property of the IP-HTTPS route has not been enabled. This is required for DirectAccess to work as expected.
 
