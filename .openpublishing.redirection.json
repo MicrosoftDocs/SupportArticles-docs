@@ -521,6 +521,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/open-in-protection-unenrolled-devices.md",
+      "redirect_url": "/mem/intune/apps/data-transfer-between-apps-manage-ios",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/index.md",
       "redirect_url": "/support/mem/intune/welcome-intune",
       "redirect_document_id": false
@@ -529,10 +534,15 @@
       "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
       "redirect_url": "/mem/intune/apps/app-protection-policies",
       "redirect_document_id": false
-    },
+    }, 
     {
       "source_path": "support/mem/intune/exchange-connector-version-not-supported.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/set-mdm-authority.md",
+      "redirect_url": "/mem/intune/fundamentals/mdm-authority-set",
       "redirect_document_id": false
     },
     {
@@ -599,6 +609,11 @@
       "source_path": "support/mem/intune/look-up-intune-licenses.md",
       "redirect_url": "/mem/intune/fundamentals/licenses-assign",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector-common-problems.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector",
+      "redirect_document_id": true
     },
     {
       "source_path": "support/mem/intune/deploy-windows-update-packages-as-win32-apps.md",
@@ -1049,6 +1064,27 @@
       "source_path": "support/dynamics-365/sales/flow-extension-package-shows-installation-failed.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/flow-extension-package-shows-installation-failed",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/description-dnslint-utility.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/description-dnslint-utility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/high-cpu-use-occurs-queries.md",
+      "redirect_url": "/troubleshoot/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-marketing-entitlement-does-not-match-your-tenant.md",
+      "redirect_url": "/troubleshoot/dynamics-365/marketing/dynamics-365-marketing-entitlement-does-not-match-your-tenant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-marketing-problem-with-deployment.md",
+      "redirect_url": "/troubleshoot/dynamics-365/marketing/dynamics-365-marketing-problem-with-deployment",
+      "redirect_document_id": true
     }
+
   ]
 }

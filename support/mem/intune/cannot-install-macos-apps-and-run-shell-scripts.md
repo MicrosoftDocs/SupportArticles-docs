@@ -51,8 +51,8 @@ When these issues occur, entries that resemble the following example are logged 
 
 ## Cause
 
-It's a known issue in macOS 11.2._x_.
+This is a known issue in macOS 11.2._x_.
 
-## Resolution
+## Solution
 
 To fix this issue, upgrade the device to macOS 11.3 or a later version.

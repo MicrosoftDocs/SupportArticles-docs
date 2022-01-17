@@ -339,6 +339,8 @@
       href: install/error-upgrade-cluster-node.md
     - name: Warning about network binding order
       href: install/warning-about-network-binding.md
+    - name: Troubleshoot errors related to system disk sector size greater than 4 KB
+      href: admin/troubleshoot-os-4kb-disk-sector-size.md
   - name: Machine Learning Services (in database)
     items:
     - name: Inconsistent results in MKL computations
@@ -357,8 +359,8 @@
       href: performance/decreased-performance-run-aggregating-clause.md
     - name: External modules and filter drivers cause performance issues
       href: performance/performance-consistency-issues-filter-drivers-modules.md
-    - name: High CPU use occurs in your queries
-      href: performance/high-cpu-use-occurs-queries.md
+    - name: High CPU or high memory grants with queries that use optimized nested loops
+      href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE
@@ -649,6 +651,8 @@
       href: tools/error-use-configuration-manager-restart-agent-service.md
     - name: The SQLDMO Application object failed to initialize when using Sqlmaint
       href: tools/error-you-run-sqlmaint-utility.md
+    - name: Troubleshoot Database Mail issues
+      href: tools/troubleshoot-database-mail-issues.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
     - name: Use SQLIOSim utility to simulate SQL Server disk activity

@@ -29,12 +29,12 @@ productDirectory:
   - title: Microsoft Edge and Internet Explorer
     imageSrc: "media/hub-landing/Edge.jpg"
     summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
-    url: browsers/welcome-browsers.md
+    url: developer/browsers/welcome-browsers.md
       
   - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
     summary: Troubleshooting articles for BizTalk Server
-    url: biztalk/welcome-biztalk-server.md
+    url: developer/biztalk/welcome-biztalk-server.md
       
   - title: .NET
     imageSrc: "media/hub-landing/logo_NET.svg"
@@ -49,12 +49,12 @@ productDirectory:
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"
     summary: Troubleshooting articles for Host Integration Server
-    url: host-integration-server/welcome-host-integration-server.md
+    url: developer/host-integration-server/welcome-host-integration-server.md
       
   - title: Web Apps
     imageSrc: "media/hub-landing/app-service-web.svg"
     summary: Troubleshooting articles for Web Apps
-    url: webapps/welcome-webapps.md
+    url: developer/webapps/welcome-webapps.md
 
   - title: SQL Server 
     imageSrc: "media/hub-landing/sql-database-blue.svg"

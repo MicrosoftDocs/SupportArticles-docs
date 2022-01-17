@@ -35,14 +35,14 @@ When you have HRM/Payroll Extensions installed, it automatically takes over the 
     1. Mark **Microsoft Dynamics GP** option
     1. Save.
 
-    :::image type="content" source="./media/get-the-shift-code-work-payroll/alternate-modified-forms-reports.jpg" alt-text="Set Security back.":::
+    :::image type="content" source="media/get-the-shift-code-work-payroll/alternate-modified-forms-reports.png" alt-text="Screenshot of the Alternate/Modified forms and reports window with Microsoft Dynamics GP option marked.":::
 
 2. Set up the shift code:
     1. Go to **Tools | Setup | Payroll | Shift Code.**  
     1. Enter the **Shift Premium** by Amount or Percent as needed, and enter the amount or percent.
     1. Save.
 
-    :::image type="content" source="./media/get-the-shift-code-work-payroll/shift-code-setup.jpg" alt-text="Set up the shift code.":::
+    :::image type="content" source="media/get-the-shift-code-work-payroll/shift-code-setup.png" alt-text="Screenshot of the Shift Code Setup window.":::
 
 3. Assign the Shift Code to a Paycode:  
     1. Go to **Cards | Payroll | Paycode**.
