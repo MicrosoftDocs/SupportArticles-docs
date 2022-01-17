@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: 'Troubleshoot IP-HTTPS and IPSec for DirectAccess server troubleshooting'
+description: This article introduces how to troubleshoot IP-HTTPS and IPSec for DirectAccess server troubleshooting.
 ms.date: 01/14/2022
 author: Deland-Han
 ms.author: delhan

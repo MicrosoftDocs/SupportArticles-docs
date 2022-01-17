@@ -44,11 +44,11 @@ There are several things that can contribute to this problem. A common cause is 
 
 The best way to ensure that the DNS server is configured correctly for DirectAccess is to delete the existing entry and then select **Detect**.
 
-:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/detect-dns-server-correct-for-directaccess.png" alt-text="Screenshot of XXXXXX." border="false":::
+:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/detect-dns-server-correct-for-directaccess.png" alt-text="Screenshot of clicking detect in DNS Server Addresses." border="false":::
 
 An IPv6 address will be added automatically. This is the IPv6 address of the DNS64 service that is running on the DirectAccess server, which is how the DNS server should be configured for proper DirectAccess operation.
 
-:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/ipv6-address-of-dns64-service.png" alt-text="Screenshot of XXXXXX." border="false":::
+:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/ipv6-address-of-dns64-service.png" alt-text="Screenshot of IPv6 that is added automatically." border="false":::
 
 After the changes have been saved and applied, the DNS server should once again respond, and the status should return to **Working**.
 
@@ -56,7 +56,7 @@ After the changes have been saved and applied, the DNS server should once again 
 
 DirectAccess is an IPv6 only technology. DirectAccess clients talk to DirectAccess server by using IPv6 technologies. This communication happens by using IPv6 transition technologies, for example, IPV6 encapsulation in IPv4 packets.
 
-Communication between client to server happens by using IPv6. Name lookup also happens using IPv6 and AAAA query. So, if an internal server has IPv6 address, it is easy for the client to start communication. 
+Communication between client to server happens by using IPv6. Name lookup also happens using IPv6 and AAAA query. So, if an internal server has IPv6 address, it is easy for the client to start communication.
 
 However, if the internal server only has IPv4 configured, NAT64 or DNS64 are needed when you want to have IPv6 communication over IPv4 network.
 
