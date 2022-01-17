@@ -25,25 +25,20 @@ After installing and configuring DirectAccess in Windows Server you may encounte
 
 Viewing the detailed Operations Status shows the following error message.
 
-Details:  
-IP-HTTPS: Not working properly
-
-Error:  
-The IP-HTTPS route does not have published property enabled.
+> IP-HTTPS: Not working properly
+> The IP-HTTPS route does not have published property enabled.
 
 ### Causes
 
-The Publish property of the IP-HTTPS route has not been enabled. This is required for DirectAccess to work as expected.
+The publish property of the IP-HTTPS route has not been enabled. This is required for DirectAccess to work as expected.
 
 ### Resolution
 
-Set the property on the route.
+To fix this issue, set the property on the route.
 
-To fix the Missing Route
+To fix the Missing Route, check the routing table on the DirectAccess server. You will find that a route to the client IPv6 prefix is indeed missing.
 
-Looking at the routing table on the DirectAccess server reveals that a route to the client IPv6 prefix is indeed missing.
-
-To get information on the ClientIPv6Prefix run the following command in the elevated version of the PowerShell:
+To get information on the ClientIPv6Prefix, run the following command in the elevated version of the PowerShell:
 
 ```powershell
 Get-RemoteAccess | Select-Object ClientIPv6Prefix.
@@ -55,7 +50,7 @@ To validate if the route is present then issue the following command:
 Get-NetRoute -AddressFamily IPv6
 ```
 
-If you don't see the entry for the route then that is not present and needs to be added.
+If you don't see the entry for the route, it indicate that the route is not present and needs to be added.
 
 To resolve this error message, add the client IPv6 route to the DirectAccess server’s routing table and publish it. This is accomplished by running the following PowerShell commands on the DirectAccess server.
 
@@ -74,14 +69,10 @@ Restart-Service RaMgmtSvc -PassThru
 
 On other occasions the issue can be related to the certificate itself and in this case since it has expired.
 
-Error:  
+> IP-HTTPS: Not working properly
 > The IP-HTTPS certificate is not valid.
 
-### Causes
-
-The certificate has expired.
-
-### Resolution
+This issue occurs because the certificate has expired.
 
 To resolve this issue, ensure that the certificate has not expired. Renew the certificate if it is.
 
@@ -94,7 +85,7 @@ IP-HTTPS: Not working property
 Error:  
 > Route advertisement is disabled on the IP-HTTPS adapter.
 
-### Causes
+### Cause
 
 Route advertisement is disabled on the IP-HTTPS. This is required for DirectAccess to work as expected.
 
@@ -157,26 +148,16 @@ To be able to connect to internal resources, two connection security tunnels are
 
 One of the typical errors is the invalidity of the IP-HTTPS certificate installed on the Direct Access Server.
 
-IPsec: Not working properly
-
-Error:  
+> IPsec: Not working properly
 > There is no valid certificate to be used by Ipsec which chains to the root/intermediate certificate configured to be used by Ipsec in the DirectAccess configuration.
 
-### Causes
+### Cause
 
-The certificate has not been installed or is not valid. 
+This issue occurs because the certificate has not been installed or is not valid.
 
 ### Resolution
 
-Please ensure that a valid certificate is present in the machine store and DA server is configured to use the corresponding root certificate.
-The valid certificate must satisfy the following:
-
-- Should not be expired.
-- Should have a private key.
-- Should be configured to be used for client authentication.
-- Should chain to the configured root/intermediate cert.
-
-To fix this error we need to make sure that the iphttps certificate (Or machine certificate) on the client has not expired and its meets the criteria mentioned below: 
+To fix this error we need to make sure that the iphttps certificate (Or machine certificate) on the client has not expired and its meets the criteria mentioned below:
 
 - Should not be expired.
 - Should have a private key.
