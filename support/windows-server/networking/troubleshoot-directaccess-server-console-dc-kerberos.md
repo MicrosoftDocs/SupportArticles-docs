@@ -13,11 +13,11 @@ ms.reviewer: asvaidya, anupamk
 ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
-# Troubleshoot DirectAccess Server console: DC and Kerberos
+# Troubleshoot DirectAccess Server console: domain controller and Kerberos
 
 ## Domain Controller
 
-Direct Access writes all configuration on group policies. The loss of access to the domain controller would show up on the operation console if the DA cannot reach it.
+DirectAccess writes all configuration on group policies. The loss of access to the domain controller would show up on the operation console if the DA cannot reach it.
 
 Error:  
 > The corporate domain for is <!-- missing words -->
@@ -37,13 +37,10 @@ You can use network traces tools to validate the communication happening with th
 
 Kerberos errors are not so commonly seen on the console but normally guiding on the resolution addresses the issues.
 
-Example KDC proxy service is not running:
+Here is an example when KDC proxy service is not running. KDC Proxy Server service runs on edge servers to proxy Kerberos protocol messages to domain controllers on the corporate network.
 
-> KDC Proxy Server service runs on edge servers to proxy Kerberos protocol messages to domain controllers on the corporate network.
-
-Kerberos: Not working properly
-
-Error:  
+> Kerberos: Not working properly  
+> Error:  
 > A network authentication service (kpssvc) is not available. This service helps in authenticating DirectAccess clients when they connect to the corporate network via DirectAccess.
 
 This issue can be caused when the kpssvc service was stopped or the service stopped responding.

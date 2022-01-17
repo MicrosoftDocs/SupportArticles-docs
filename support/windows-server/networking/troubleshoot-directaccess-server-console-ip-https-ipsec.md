@@ -25,7 +25,8 @@ After installing and configuring DirectAccess in Windows Server you may encounte
 
 Viewing the detailed Operations Status shows the following error message.
 
-> IP-HTTPS: Not working properly
+> IP-HTTPS: Not working properly  
+> Error:  
 > The IP-HTTPS route does not have published property enabled.
 
 ### Causes
@@ -69,7 +70,8 @@ Restart-Service RaMgmtSvc -PassThru
 
 On other occasions the issue can be related to the certificate itself and in this case since it has expired.
 
-> IP-HTTPS: Not working properly
+> IP-HTTPS: Not working properly  
+> Error:  
 > The IP-HTTPS certificate is not valid.
 
 This issue occurs because the certificate has expired.
@@ -80,9 +82,8 @@ To resolve this issue, ensure that the certificate has not expired. Renew the ce
 
 As the error is clear, we can double check if the route advertisement is disabled so we can enable it.
 
-IP-HTTPS: Not working property
-
-Error:  
+> IP-HTTPS: Not working property  
+> Error:  
 > Route advertisement is disabled on the IP-HTTPS adapter.
 
 ### Cause
@@ -148,7 +149,8 @@ To be able to connect to internal resources, two connection security tunnels are
 
 One of the typical errors is the invalidity of the IP-HTTPS certificate installed on the Direct Access Server.
 
-> IPsec: Not working properly
+> IPsec: Not working properly  
+> Error:  
 > There is no valid certificate to be used by Ipsec which chains to the root/intermediate certificate configured to be used by Ipsec in the DirectAccess configuration.
 
 ### Cause
@@ -157,7 +159,7 @@ This issue occurs because the certificate has not been installed or is not valid
 
 ### Resolution
 
-To fix this error we need to make sure that the iphttps certificate (Or machine certificate) on the client has not expired and its meets the criteria mentioned below:
+To fix this error, we need to make sure that the iphttps certificate or the machine certificate on the client has not expired and its meets the criteria mentioned below:
 
 - Should not be expired.
 - Should have a private key.

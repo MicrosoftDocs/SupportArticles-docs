@@ -23,10 +23,8 @@ When doing the initial configuration of DirectAccess or making any later changes
 
 :::image type="content" source="media/troubleshoot-directaccess-server-console-dns/dns-server-error.png" alt-text="Screenshot of the DNS server responsiveness error." border="false":::
 
-Details:  
-> DNS: Not working properly
-
-Error:  
+> DNS: Not working properly  
+> Error:  
 > None of the enterprise DNS servers \<ipv6_address_of_the_DNS_server\> used by DirectAccess clients for name resolution are responding.
 
 This issue may affect DirectAccess client connectivity to corporate resources.
