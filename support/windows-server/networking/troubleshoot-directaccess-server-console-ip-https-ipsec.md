@@ -15,11 +15,11 @@ ms.technology: networking
 ---
 # Troubleshoot DirectAccess Server console: IP-HTTPS and IPSec
 
-For this we may see different errors and some of them are mentioned below.
+This article introduces how to troubleshoot some IP-HTTPS and IPSec errors for DirectAccess Server console errors.
 
 ## IP-HTTPS: Route Issue
 
-After installing and configuring DirectAccess in Windows Server you may encounter an error message indicating that IP-HTTPS is not working properly. Looking at the Operations Status overview in the Dashboard of the Remote Access Management console shows that the IP-HTTPS interface is in error. 
+After installing and configuring DirectAccess in Windows Server, you may encounter an error message indicating that IP-HTTPS is not working properly. Looking at the Operations Status overview in the Dashboard of the Remote Access Management console shows that the IP-HTTPS interface is in error.
 
 :::image type="content" source="media/troubleshoot-directaccess-server-console-ip-https-ipsec/ip-https-error.png" alt-text="Screenshot of XXX" border="false":::
 
@@ -35,8 +35,6 @@ The publish property of the IP-HTTPS route has not been enabled. This is require
 
 ### Resolution
 
-To fix this issue, set the property on the route.
-
 To fix the Missing Route, check the routing table on the DirectAccess server. You will find that a route to the client IPv6 prefix is indeed missing.
 
 To get information on the ClientIPv6Prefix, run the following command in the elevated version of the PowerShell:
@@ -45,13 +43,13 @@ To get information on the ClientIPv6Prefix, run the following command in the ele
 Get-RemoteAccess | Select-Object ClientIPv6Prefix.
 ```
 
-To validate if the route is present then issue the following command:
+To validate if the route is present, run the following command:
 
 ```powershell
 Get-NetRoute -AddressFamily IPv6
 ```
 
-If you don't see the entry for the route, it indicate that the route is not present and needs to be added.
+If you don't see the entry for the route, it indicates that the route is not present and needs to be added.
 
 To resolve this error message, add the client IPv6 route to the DirectAccess server’s routing table and publish it. This is accomplished by running the following PowerShell commands on the DirectAccess server.
 
@@ -68,7 +66,7 @@ Restart-Service RaMgmtSvc -PassThru
 
 ## IP-HTTPS: Certificate Issue
 
-On other occasions the issue can be related to the certificate itself and in this case since it has expired.
+On other occasions, the issue can be related to the certificate itself and in this case since it has expired.
 
 > IP-HTTPS: Not working properly  
 > Error:  
@@ -88,7 +86,7 @@ As the error is clear, we can double check if the route advertisement is disable
 
 ### Cause
 
-Route advertisement is disabled on the IP-HTTPS. This is required for DirectAccess to work as expected.
+This issue occurs because route advertisement is disabled on the IP-HTTPS. This feature is required for DirectAccess to work as expected.
 
 ### Resolution
 
@@ -145,9 +143,9 @@ netsh int ipv6 set int 17 forwarding=enabled
 
 ## IPSec
 
-To be able to connect to internal resources, two connection security tunnels are configured by the remote access wizard, thru GPO, and deployed on the DA clients & DA Servers.
+To be able to connect to internal resources, two connection security tunnels are configured by the remote access wizard, through GPO, and deployed on the DA clients & DA Servers.
 
-One of the typical errors is the invalidity of the IP-HTTPS certificate installed on the Direct Access Server.
+One of the typical errors is the invalidity of the IP-HTTPS certificate installed on the DirectAccess Server.
 
 > IPsec: Not working properly  
 > Error:  
@@ -155,7 +153,7 @@ One of the typical errors is the invalidity of the IP-HTTPS certificate installe
 
 ### Cause
 
-This issue occurs because the certificate has not been installed or is not valid.
+This issue occurs because the certificate hasn't been installed or isn't valid.
 
 ### Resolution
 
