@@ -114,11 +114,11 @@ There is a PPV for the 5 cents (difference between the cost of the shipment rece
 
 Upon posting the Invoice in Purchase Order Processing, a General Ledger cost adjustment is automatically created in a Financials GLTRX batch. A Purchase Receipts Update Detail Report (PRUD) (seen below) will print after the Cost Variance Journal indicating a cost adjustment was present.
 
-:::image type="content" source="./media/gltrx-batch-not-originate-in-general-ledger/purchase-receipts-update-by-document.png" alt-text="Purchase Receipts Update by Document.":::
+:::image type="content" source="media/gltrx-batch-not-originate-in-general-ledger/purchase-receipts-update-by-document.png" alt-text="Screenshot of the Purchase Receipts Update Detail for Purchase Order.":::
 
 The journal entry created will appear in General Ledger like the following screenshot:
 
-:::image type="content" source="./media/gltrx-batch-not-originate-in-general-ledger/transaction-entry.png" alt-text="Transaction Entry.":::
+:::image type="content" source="media/gltrx-batch-not-originate-in-general-ledger/transaction-entry.png" alt-text="Screenshot of the Transaction Entry window for Purchase Order.":::
 
 Source Document = GJ  
 Batch ID begins with GLTRX  
@@ -134,11 +134,11 @@ Assume you performed the following 2 transaction in the following order:
 
 Upon posting the increase adjustment in Inventory, a General Ledger cost adjustment is automatically created in a Financials GLTRX batch. PRUD report below:
 
-:::image type="content" source="./media/gltrx-batch-not-originate-in-general-ledger/purchase-receipts-update-detail-by-customer.png" alt-text="Purchase Receipts Update Detail by Customer.":::
+:::image type="content" source="media/gltrx-batch-not-originate-in-general-ledger/purchase-receipts-update-detail-by-customer.png" alt-text="Screenshot of Purchase Receipts Update Detail for Inventory.":::
 
 The journal entry created will appear in General Ledger like the following screenshot:
 
-:::image type="content" source="./media/gltrx-batch-not-originate-in-general-ledger/journal-entry created-appear-in-general-ledger.png" alt-text="Journal entry appears in General Ledger.":::
+:::image type="content" source="media/gltrx-batch-not-originate-in-general-ledger/journal-entry created-appear-in-general-ledger.png" alt-text="Screenshot of the Transaction Entry window for Inventory.":::
 
 Source Document = GJ  
 Batch ID begins with GLTRX  

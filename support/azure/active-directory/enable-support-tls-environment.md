@@ -281,7 +281,6 @@ To download sign-in logs as JSON:
 1. Choose each category of logs:
     - User interactive
     - User non-interactive
-    - Service principal
     - Managed identity
 
 ### View the JSON files

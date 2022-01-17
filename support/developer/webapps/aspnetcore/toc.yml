@@ -1,0 +1,58 @@
+- name: Practice and troubleshoot on Linux
+  items: 
+  - name: Overview
+    href: practice-troubleshoot-linux/introduction.md
+  - name: Part 1 Prepare the environment
+    items: 
+    - name: Part 1.1 Create Linux VM
+      href: practice-troubleshoot-linux/1-1-creating-vm.md
+    - name: Part 1.2 Basic operations on Linux
+      href: practice-troubleshoot-linux/1-2-linux-special-directories-users-package-managers.md
+    - name: Part 1.3 Install .NET Core on Linux
+      href: practice-troubleshoot-linux/1-3-install-dotnet-core-linux.md
+  - name: Part 2 Create and run ASP.NET Core apps
+    items:
+    - name: Part 2.1 Create and configure an app
+      href: practice-troubleshoot-linux/2-1-create-configure-aspnet-core-applications.md
+    - name: Part 2.2 Install and configure Nginx
+      href: practice-troubleshoot-linux/2-2-install-nginx-configure-it-reverse-proxy.md
+    - name: Part 2.3 Configure an app to start automatically
+      href: practice-troubleshoot-linux/2-3-configure-aspnet-core-application-start-automatically.md
+    - name: Part 2.3.1 [Optional] Configure an app to start automatically under a different user
+      href: practice-troubleshoot-linux/2-3-1-configure-aspnet-core-application-start-automatically.md
+    - name: Part 2.4 Secure VM by configuring a firewall
+      href: practice-troubleshoot-linux/2-4-use-local-firewall-allowing-http-access.md
+    - name: Part 2.5 Copy and extract files from development environment to Linux
+      href: practice-troubleshoot-linux/2-5-copy-file-linux-vm-extract-file.md
+    - name: Part 2.6 Run two ASP.NET Core applications at the same time
+      href: practice-troubleshoot-linux/2-6-run-two-aspnetcore-applications-same-time.md
+    - name: Part 2.7 Configure a second web site with hostname in Nginx
+      href: practice-troubleshoot-linux/2-7-configure-second-nginx-site-hostname.md            
+  - name: Part 3 - Troubleshooting issues
+    items:
+    - name: Part 3.1 Get ready
+      href: practice-troubleshoot-linux/3-1-get-ready-troubleshooting.md
+    - name: Part 3.2 Monitor processes on Linux
+      href: practice-troubleshoot-linux/3-2-task-managers-top-htop.md
+    - name: Part 3.3 Collect core dumps
+      href: practice-troubleshoot-linux/3-3-debuggers-collect-core-dumps.md
+  - name: Lab - Troubleshooting labs
+    items:
+    - name: Lab 1.1 Reproduce and troubleshoot a crash problem
+      href: practice-troubleshoot-linux/lab-1-1-reproduce-troubleshoot.md
+    - name: Lab 1.2 Analyze system-generated core dump files in lldb debugger
+      href: practice-troubleshoot-linux/lab-1-2-analyze-core-dumps-lldb-debugger.md
+    - name: Lab 1.3 Capture core crash dumps with createdump tool
+      href: practice-troubleshoot-linux/lab-1-3-capture-core-crash-dumps.md
+    - name: Lab 2.1 Troubleshoot performance problems by using createdump in Linux
+      href: practice-troubleshoot-linux/lab-2-1-capture-dumps-createdump.md
+    - name: Lab 2.2 Capture dump files with ProcDump in Linux
+      href: practice-troubleshoot-linux/lab-2-2-capture-dumps-procdump.md
+    - name: Lab 3 Troubleshoot performance and GC issues with dotnet-dump
+      href: practice-troubleshoot-linux/lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md
+    - name: Lab 4.1 Copy files to another machine 
+      href: practice-troubleshoot-linux/lab-4-1-analyze-core-dumps-another-machine-copy-file.md
+    - name: Lab 4.2 Use WSL to open core dumps in another machine
+      href: practice-troubleshoot-linux/lab-4-2-analyze-core-dumps-another-machine-wsl.md
+    - name: Lab 4.3 Use Docker to open core dumps in another machine
+      href: practice-troubleshoot-linux/lab-4-3-analyze-core-dumps-another-machine-docker.md

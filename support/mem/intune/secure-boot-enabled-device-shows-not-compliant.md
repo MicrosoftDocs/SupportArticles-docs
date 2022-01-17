@@ -1,15 +1,12 @@
 ---
-title: Windows 10 device shows Not Compliant
+title: Secure boot enabled Windows 10 device shows Not Compliant in Intune
 description: Describes a behavior that a Windows 10 device that has secure boot enabled is displayed as Not Compliant in Intune.
-ms.date: 05/13/2020
+ms.date: 12/20/2021
 ms.prod-support-area-path: Create Windows policy
 ---
-# A Windows 10 device with secure boot enabled shows as Not Compliant in Intune
+# Windows 10 device with secure boot enabled shows as Not Compliant in Intune
 
-This article discusses a behavior that a Windows 10 device that has secure boot enabled is shown as **Not Compliant** in Intune.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4456680
+This article expains a scenario where a Windows 10 device with secure boot enabled is shown as **Not Compliant** in Microsoft Intune.
 
 ## Symptom
 
@@ -27,11 +24,11 @@ The **Require Secure Boot to be enabled on the device** setting is supported on 
 
 For more information about supported versions, see [Supported versions for device health attestation](/windows/security/information-protection/tpm/trusted-platform-module-overview#supported-versions-for-device-health-attestation).
 
-For more information about how MDM uses the Health Attestation Service, see [Protect, control, and report on the security status of Windows 10-based devices](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices#protect-control-and-report-on-the-security-status-of-windows-10-based-devices).
+For more information about how mobile device management (MDM) solutions use the Health Attestation Service, see [Protect, control, and report on the security status of Windows 10-based devices](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices#protect-control-and-report-on-the-security-status-of-windows-10-based-devices).
 
 ## More information
 
-To check whether your device meets the hardware requirements for the health attestation feature:
+Use these steps to check whether your device meets the hardware requirements for the health attestation feature.
 
 1. Check the TPM version.
 

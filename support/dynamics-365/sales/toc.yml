@@ -45,12 +45,8 @@
       href: lookup-fields-fail-to-save-or-provide-results-with-google-chrome-38.md
     - name: New button is disabled when adding a new user
       href: new-button-disabled-you-add-new-user.md
-    - name: Organization entitlement doesn't match your tenant
-      href: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
     - name: Perform specific operations
       href: dynamics-365-how-to-articles.md
-    - name: Problem with deploying Marketing application
-      href: dynamics-365-marketing-problem-with-deployment.md
     - name: Something went wrong while initializing the app
       href: error-occurs-child-business-units.md
     - name: The record could not be deleted because of an association
@@ -905,11 +901,15 @@
     items:
     - name: Connector doesn't handle null strings and dates correctly
       href: dynamics-connector-does-not-handle-null-strings-and-dates-correctly.md
+  - name: Microsoft Teams Integration
+    items:
+    - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
+      href: troubleshoot-dynamics365-embedcollab-issues.md
   - name: Mobile Apps
     items:
     - name: We can't find any apps for your role
       href: we-cannot-find-any-apps-your-role.md
-  - name: Other Funcationality
+  - name: Other Functionality
     items:
     - name: Business Process Flow deletion fails
       href: business-process-flow-deletion-fails.md
@@ -921,8 +921,6 @@
       href: crm-rule-deployment-wizard-fails-to-apply-rules-to-users.md
     - name: List Component for SharePoint 2013 Configuration is case-sensitive
       href: list-component-case-sensitive.md
-    - name: Microsoft Flow Extension Package shows Installation failed
-      href: flow-extension-package-shows-installation-failed.md
     - name: Online outbound phone calls default to Lync not Skype
       href: dynamics-crm-online-outbound-phone-calls-default-to-lync.md
     - name: Relevance Search doesn't work for sandbox instances

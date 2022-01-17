@@ -9,6 +9,8 @@
     href: maximum-number-of-devices-joined-workplace.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md
+  - name: Understand AD FS sign-in events in Azure AD with Connect Health
+    href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
   - name: Understand Azure AD Connect 1.4 and device disappearance
     href: reference-connect-device-disappearance.md
   - name: Sign-in and Multi-factor Authentication
@@ -42,6 +44,8 @@
         href: error-code-AADSTS50003-cert-or-key-not-configured.md
       - name: Error AADSTS50011 - reply URL mismatch
         href: error-code-AADSTS50011-reply-url-mismatch.md
+      - name: Error AADSTS50020 - guest sign-in to resource tenant fails
+        href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS50105 - user not assigned a role
         href: error-code-AADSTS50105-user-not-assigned-role.md
       - name: Error AADSTS650056 - misconfigured app
@@ -94,6 +98,8 @@
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
     href: troubleshoot-dynamic-groups.md
+  - name: Troubleshoot user creation and deletion issues
+    href: troubleshoot-user-creation-deletion-issues.md
 
 - name: Governance, Compliance and Reporting 
   items:
@@ -170,6 +176,8 @@
   items:
   - name: Administrator credentials error
     href: admin-credentials-supplied-not-valid.md
+  - name: Azure AD Connect services don't start
+    href: services-sync-not-start.md
   - name: Azure AD Connect hangs during importing
     href: aad-management-agent-hangs-during-import.md
   - name: Azure AD Connect won't work after upgrading
@@ -248,8 +256,6 @@
     href: separate-pwds-required-computer-work-account.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
-  - name: Sync services don't start
-    href: services-sync-not-start.md
   - name: Troubleshoot Azure AD Connect installation issues
     href: installation-issues.md
   - name: Troubleshoot Azure AD Connect version upgrading issues

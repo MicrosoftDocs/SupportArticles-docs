@@ -1,15 +1,15 @@
 ---
-title: Tips for assigning device password settings to Android Enterprise fully managed devices
+title: Tips for assigning device password settings to Android Enterprise fully managed devices in Intune
 description: Describes different behavior when a device restrictions profile that includes password settings is assigned to Android Enterprise fully managed devices before and after enrollment. 
 author: helenclu
 ms.author: luche
 ms.reviewer: anziob
-ms.date: 11/03/2020
+ms.date: 12/20/2021
 ms.prod-support-area-path: 
 ---
-# Support tip: Assign device password settings to Android Enterprise fully managed devices
+# Assigning device password settings to Android Enterprise fully managed devices in Intune
 
-When you assign a device restrictions profile that includes password settings to Android Enterprise fully managed (formerly known as Corporate Owned Business Only, or COBO) devices, a different behavior occurs depending on whether the profile is assigned before or after the devices are enrolled in Microsoft Intune.
+When you assign a device restrictions profile that includes password settings to Android Enterprise fully managed (formerly known as Corporate Owned Business Only) devices, a different behavior occurs depending on whether the profile is assigned before or after the devices are enrolled in Microsoft Intune.
 
 ## Behavior if the profile is assigned before enrollment
 
@@ -25,7 +25,7 @@ If the profile is assigned after the device is enrolled, you aren't prompted to 
 
 When the profile is assigned to the device, you won't be notified or prompted to set a password. The password settings deployment will report as failed until you manually set a password that meets the requirements.
 
-## Tips
+## Recommendation
 
 Because of the OS limitation on Android Enterprise fully managed devices, we recommend that you assign the device restrictions profile that includes password settings to the devices before enrollment.
 

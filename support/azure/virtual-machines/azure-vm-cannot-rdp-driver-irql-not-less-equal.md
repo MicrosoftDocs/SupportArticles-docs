@@ -23,7 +23,7 @@ When you pull the screenshot of the virtual machine (VM), the operating system (
 
 `What failed: myfault.sys`
 
-![Error messages](./media/azure-vm-cannot-rdp-driver-irql-not-less-equal/1-error.png)
+:::image type="content" source="media/azure-vm-cannot-rdp-driver-irql-not-less-equal/pc-needs-to-restart-error.png" alt-text="Screenshot of Your PC ran into a problem and needs to restart error message." border="false"::: 
 
 ## Cause
 

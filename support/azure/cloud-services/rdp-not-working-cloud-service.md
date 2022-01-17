@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 4464927
 
 This article discusses one of the most common scenarios faced by the Azure customers who are using classic cloud service resource - RDP is not working with this error:
 
-:::image type="content" source="media/rdp-not-working-cloud-service/4464925_en_1.png" alt-text="Screenshot of RDP error.":::
+:::image type="content" source="media/rdp-not-working-cloud-service/rdp-error.png" alt-text="Screenshot of the RDP error.":::
 
 Sometimes you will not be able to download the RDP file itself and will get this error:
 
@@ -92,7 +92,7 @@ Write-Host (Get-Date).ToString()" : Remote desktop extension applied successful
 
 Output of the script will be something like below:
 
-:::image type="content" source="media/rdp-not-working-cloud-service/4464926_en_1.png" alt-text="Screenshot of PowerShell outputs.":::
+:::image type="content" source="media/rdp-not-working-cloud-service/powershell-outputs.png" alt-text="Screenshot of an example output of the PowerShell script." border="false":::
 
 If you are not able to RDP after running the above script, then definitely it's a networking issue. There are few possible reasons:
 
