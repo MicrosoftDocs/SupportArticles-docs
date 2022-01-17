@@ -17,13 +17,13 @@ ms.technology: networking
 
 This article introduces how to troubleshoot some IP-HTTPS and IPSec errors for DirectAccess Server console errors.
 
-## IP-HTTPS: Route Issue
+## IP-HTTPS: Route error
 
-After installing and configuring DirectAccess in Windows Server, you may encounter an error message indicating that IP-HTTPS is not working properly. Looking at the Operations Status overview in the Dashboard of the Remote Access Management console shows that the IP-HTTPS interface is in error.
+After installing and configuring DirectAccess in Windows Server, you may encounter an error message indicating that IP-HTTPS is not working properly. When you view the Operations Status overview in the Dashboard of the Remote Access Management console, it shows that the IP-HTTPS interface is in error.
 
 :::image type="content" source="media/troubleshoot-directaccess-server-console-ip-https-ipsec/ip-https-error.png" alt-text="Screenshot of XXX" border="false":::
 
-Viewing the detailed Operations Status shows the following error message.
+When you view the detailed Operations Status, the following error message is displayed.
 
 > IP-HTTPS: Not working properly  
 > Error:  
@@ -64,7 +64,7 @@ Next, restart the Remote Access Management service (RaMgmtSvc) using the followi
 Restart-Service RaMgmtSvc -PassThru 
 ```
 
-## IP-HTTPS: Certificate Issue
+## IP-HTTPS: Certificate error
 
 On other occasions, the issue can be related to the certificate itself and in this case since it has expired.
 
@@ -76,7 +76,7 @@ This issue occurs because the certificate has expired.
 
 To resolve this issue, ensure that the certificate has not expired. Renew the certificate if it is.
 
-## IP-HTTPS: Route Advertisement
+## IP-HTTPS: Route Advertisement error
 
 As the error is clear, we can double check if the route advertisement is disabled so we can enable it.
 
@@ -141,7 +141,7 @@ If you see advertising disabled, then you can issue the following command to ena
 netsh int ipv6 set int 17 forwarding=enabled
 ```
 
-## IPSec
+## IPSec error
 
 To be able to connect to internal resources, two connection security tunnels are configured by the remote access wizard, through GPO, and deployed on the DA clients & DA Servers.
 

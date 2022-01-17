@@ -17,7 +17,7 @@ ms.technology: networking
 
 Name resolution and proper DNS server configuration are vital to the functionality of DirectAccess.
 
-## "DNS: Not working properly" error
+## DNS not working properly error
 
 When doing the initial configuration of DirectAccess or making any later changes to the DNS server configuration after initial configuration, you may notice the operations status for DNS indicates critical and that the operations state shows Server responsiveness.
 
@@ -52,13 +52,13 @@ An IPv6 address will be added automatically. This is the IPv6 address of the DNS
 
 After the changes have been saved and applied, the DNS server should once again respond, and the status should return to **Working**.
 
-## DNS64
+## DNS64 error
 
 DirectAccess is an IPv6 only technology. DirectAccess clients talk to DirectAccess server by using IPv6 technologies. This communication happens by using IPv6 transition technologies, for example, IPV6 encapsulation in IPv4 packets.
 
 Communication between client to server happens by using IPv6. Name lookup also happens using IPv6 and AAAA query. So, if an internal server has IPv6 address, it is easy for the client to start communication.
 
-However, if the internal server only has IPv4 configured, NAT64 or DNS64 are needed when you want to have IPv6 communication over IPv4 network.
+However, if the internal server only has IPv4 configured, NAT64 or DNS64 are required when you want to have IPv6 communication over IPv4 network.
 
 You can verify the DNS64 configuration on the server by checking the following registry key:  
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\RemoteAccess\Config\DefaultDnsServers`
