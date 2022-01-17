@@ -68,34 +68,34 @@ In a memory dump of the LSASS process, threads are waiting with stack as follows
 
 ```output
 # Call Site
-0 ntdll!RtlLeaveCriticalSection+0x29  ** Note this is leaving the critical section of a specific request objects lock (NOT THE CONNECTLIST LOCK that everyone else is waiting on)
-1 Wldap32!ReferenceLdapRequest+0x44
-2 Wldap32!LdapGetResponseFromServer+0x207
-3 Wldap32!LdapWaitForResponseFromServer+0x27a
-4 Wldap32!ldap_result_with_error+0x293
-5 Wldap32!ldap_result+0x74
-6 netlogon!NetpDcGetPingResponse+0xec
-7 netlogon!NetpDcPingListIp+0x1df
-8 netlogon!NetpDcGetNameSiteIp+0xa3
-9 netlogon!NetpDcGetNameIp+0x188
-a netlogon!NetpDcGetName+0x11bb
-b netlogon!DsIGetDcName+0x463
-c netlogon!DsrGetDcNameEx2+0x3a0 
- d kerberos!KerbGetKdcBinding+0x8e8
-e kerberos!KerbMakeSocketCall+0x165
-f 0000000026bed2c0 000007fefc684518 kerberos!KerbGetTgsTicketEx+0x9ee
-10 0000000026bed620 000007fefc68472f kerberos!KerbGetTgsTicket+0x84
-11 0000000026bed6b0 000007fefc67637e kerberos!KerbGetServiceTicketInternal+0x739
-12 0000000026bed890 000007fefc6d883f kerberos!KerbGetServiceTicket+0xca
-13 0000000026bed950 000007fefc6b7270 kerberos!KerbILogonUserEx2+0x1b2f
-14 0000000026beded0 000007fefcaa61c1 kerberos!LsaApLogonUserEx2+0xa6
-15 0000000026bedf70 000007fefcaa6f5d lsasrv!NegLogonUserEx2Worker+0x7c7
-16 0000000026bee0e0 000007fefca8a390 lsasrv!NegLogonUserEx2+0x673
-17 0000000026bee220 000007fefca8c03d lsasrv!LsapCallAuthPackageForLogon+0xd0
-18 0000000026bee2c0 000007fefca8c4e6 lsasrv!LsapAuApiDispatchLogonUser+0x4ab
-19 0000000026bee5a0 000007fefcc018bb lsasrv!SspiExLogonUser+0x20e
-1a 0000000026bee8b0 000007fefe50ef85 sspisrv!SspirLogonUser+0x1eb
-1b 0000000026bee9d0 000007fefe5bb57e rpcrt4!Invoke+0x65 
+00 ntdll!RtlLeaveCriticalSection+0x29
+01 Wldap32!ReferenceLdapRequest+0x44
+02 Wldap32!LdapGetResponseFromServer+0x207
+03 Wldap32!LdapWaitForResponseFromServer+0x27a
+04 Wldap32!ldap_result_with_error+0x293
+05 Wldap32!ldap_result+0x74
+06 netlogon!NetpDcGetPingResponse+0xec
+07 netlogon!NetpDcPingListIp+0x1df
+08 netlogon!NetpDcGetNameSiteIp+0xa3
+09 netlogon!NetpDcGetNameIp+0x188
+0a netlogon!NetpDcGetName+0x11bb
+0b netlogon!DsIGetDcName+0x463
+0c netlogon!DsrGetDcNameEx2+0x3a0 
+0d kerberos!KerbGetKdcBinding+0x8e8
+0e kerberos!KerbMakeSocketCall+0x165
+0f kerberos!KerbGetTgsTicketEx+0x9ee
+10 kerberos!KerbGetTgsTicket+0x84
+11 kerberos!KerbGetServiceTicketInternal+0x739
+12 kerberos!KerbGetServiceTicket+0xca
+13 kerberos!KerbILogonUserEx2+0x1b2f
+14 kerberos!LsaApLogonUserEx2+0xa6
+15 lsasrv!NegLogonUserEx2Worker+0x7c7
+16 lsasrv!NegLogonUserEx2+0x673
+17 lsasrv!LsapCallAuthPackageForLogon+0xd0
+18 lsasrv!LsapAuApiDispatchLogonUser+0x4ab
+19 lsasrv!SspiExLogonUser+0x20e
+1a sspisrv!SspirLogonUser+0x1eb
+1b rpcrt4!Invoke+0x65 
 ```
 
 ## UDP sockets exhaustion
