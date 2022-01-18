@@ -76,13 +76,13 @@ To resolve this issue, follow these steps:
   
 Be sure to also verify the **Remote Access Server administrative channel** event log. You should find messages related to the monitor of the network interfaces passing from **UNHEALTHY** to **HEALTHY**.
 
-## Network Location Server issue
+## Network location server issue
 
 You configure a Windows Server DirectAccess server to use an intranet-based Network Location Server (NLS). Then, you may notice that the operations status in the remote access management console indicates a critical problem with NLS. However, you can browse the NLS server from the DirectAccess server.
 
 The issue is that the DirectAccess server, in addition to being able to successfully connect to the NLS using an HTTP GET, must also be able to ping the NLS server. However, inbound Internet Control Message Protocol (ICMP) is often blocked on web servers. Therefore, the DirectAccess server marking the service as failed. The issue can be resolved by modifying the host firewall policy to allow inbound ICMPv4 echo requests.
 
-## **Network Security** error
+## Network security error
 
 The reason of this warning is written in the **Details** section of the **RA Monitor**.
 
@@ -106,7 +106,7 @@ You can start a trace on it the server and stop it based on event 10039 - Micros
 
 Adding more servers is also helpful.
 
-## **High Availability** error
+## High availability error
 
 This error will show up in **Operation Status** only if we are setting up a high availability solution using Microsoft NLB or an external Load Balancer to load the traffic across two or more Direct Access Servers.
 

@@ -17,7 +17,7 @@ ms.technology: networking
 
 DirectAccess writes all configuration on group policies. The loss of access to the domain controller would show up on the operation console.
 
-## Domain Controller error
+## Domain controller error
 
 Error:  
 > The corporate domain controller for contoso.local is not available.

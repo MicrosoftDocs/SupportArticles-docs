@@ -76,7 +76,7 @@ This issue occurs because the certificate has expired.
 
 To resolve this issue, ensure that the certificate has not expired. Renew the certificate if it is.
 
-## IP-HTTPS: Route Advertisement error
+## IP-HTTPS: Route advertisement error
 
 As the error is clear, we can double check if the route advertisement is disabled so we can enable it.
 
