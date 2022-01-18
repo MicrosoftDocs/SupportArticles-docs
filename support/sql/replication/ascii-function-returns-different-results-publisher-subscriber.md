@@ -25,7 +25,7 @@ Consider the following scenario:
 
 - In the publisher database, the column that is defined as character data type includes a value of `char(0)`.
 
-In this scenario, when you use the `ASCII` function to convert the column from the publisher and subscriber database tables, different results are returned. You can refer to the following sample.
+In this scenario, when you use the `ASCII` function to convert the column from the publisher and subscriber database tables, different results are returned. You can refer to the following sample:
 
 - Publisher database table
 
