@@ -78,9 +78,9 @@ Make sure that you also verify the **Remote Access Server administrative channel
 
 ## Network location server issue
 
-You configure a Windows Server DirectAccess server to use an intranet-based Network Location Server (NLS). Then, you might notice that the operations status in the remote access management console indicates a critical problem that affects NLS. However, you can browse the NLS server from the DirectAccess server.
+You configure a Windows Server DirectAccess server to use an intranet-based Network Location Server (NLS). In this situation, you might notice that the operations status in the remote access management console indicates a critical problem that affects NLS. However, you can browse the NLS server from the DirectAccess server.
 
-The issue in this situation is that the DirectAccess server must be able to ping the NLS server in addition to being able to successfully connect to the NLS by using an HTTP GET. However, inbound Internet Control Message Protocol (ICMP) is often blocked on web servers. Therefore, the DirectAccess server marking the service as failed. The issue can be resolved by modifying the host firewall policy to allow inbound ICMPv4 echo requests.
+The DirectAccess server must be able to ping the NLS server in addition to being able to successfully connect to the NLS by using an HTTP GET. However, inbound Internet Control Message Protocol (ICMP) is often blocked on web servers. Therefore, the DirectAccess server tags the service as failed. The issue can be resolved by modifying the host firewall policy to allow inbound ICMPv4 echo requests.
 
 ## Network security error
 
