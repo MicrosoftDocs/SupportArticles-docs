@@ -13,21 +13,21 @@ ms.reviewer: kaushika
 ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
-# Troubleshoot DirectAccess Server console: 6to4
+# Troubleshoot DirectAccess server console: 6to4
 
-DirectAccess uses IPv6 transition protocols to enable clients to connect to the DirectAccess server when both are located on the IPv4 Internet. When the DirectAccess server is in a perimeter or DMZ network behind a NAT device, only the IP-HTTPS IPv6 transition protocol is used. When the DirectAccess server is edge facing with public IPv4 addresses assigned to the external interface, the 6to4 and Teredo IPv6 transition protocols are also supported.
+DirectAccess uses IPv6 transition protocols to enable clients to connect to the DirectAccess server when both the clients and server are communicating through the IPv4 protocol. If the DirectAccess server is in a perimeter or DMZ network behind an NAT device, only the IP-HTTPS IPv6 transition protocol is used. If the DirectAccess server is edge-facing and has public IPv4 addresses assigned to the external interface, the 6to4 and Teredo IPv6 transition protocols are also supported.
 
 ## Verify 6to4 adapter status
 
-Typical errors on the console about 6to4 can say that forwarding or advertising isn't enabled. If you aren't using 6to4, these errors should only be graphical without any impact on the deployment.
+Typical errors about 6to4 that are reported on the console might indicate that forwarding or advertising isn't enabled. If you aren't using 6to4, these errors should only be graphical without any effect on the deployment.
 
-The following command provides you with information of the interfaces and their index.
+The following command provides information about the interfaces and their indexes:
 
 ```console
 netsh int ipv6 show int
 ```
 
-See the second line, **Idx** 14.
+See the second line, **Idx - 14**.
 
 ```output
 Idx       Met          MTU          State                 Name 
@@ -41,13 +41,13 @@ Idx       Met          MTU          State                 Name
 13        5              1500      connected                      External
 ```
 
-The following command shows you the configuration for 6to4 adapter.
+The following command provides the configuration for the 6to4 adapter.
 
 ```console
 netsh int ipv6 show int "int idx for 6to4 Adapter"
 ```
 
-See the second line **Forwarding: disabled**.
+See the second line, **Forwarding: disabled**.
 
 ```output
 Interface 6to4 Parameters 
@@ -60,13 +60,13 @@ Router Discovery: enabled
 
 ## Enable IPv6 forwarding or advertising
 
-Once we have the information on the index, we execute the following command to enable the forwarding.
+After you have information about the index, run the following command to enable forwarding:
 
 ```console
 netsh int ipv6 set int 14 forwarding=enabled 
 ```
 
-If you see advertising disabled, then you can issue the following command to enable advertising:
+If you see that advertising is disabled, run the following command to enable it:
 
 ```console
 netsh int ipv6 set int 14 forwarding=enabled
