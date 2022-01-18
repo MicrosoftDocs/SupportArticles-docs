@@ -9,7 +9,7 @@ ms.reviewer: akbarf, valcan, tzakir, maarumug
 ms.prod: sql
 ---
 
-# ASCII conversion shows different results in publisher and subscriber database tables
+# ASCII function returns different results in publisher and subscriber database tables
 
 _Applies to:_ &nbsp; SQL Server 2019
 
