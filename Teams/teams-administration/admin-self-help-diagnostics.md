@@ -47,6 +47,10 @@ After the diagnostic checks finish and the configuration issue is found, the sys
 
 > [!NOTE]
 > If a diagnostic detects an issue, and you've implemented a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved. 
+
+IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging a support request and Microsoft will donate to global non-profits.
+
+For more information, visit [https://aka.ms/DiagnosticsforSocialGood](https://aka.ms/DiagnosticsforSocialGood)
  
 ### What scenarios are currently covered?
 
