@@ -100,7 +100,7 @@ Many packets that have bad SPIs within a short amount of time might indicate a p
 
 Monitor the server for signs of a spoofing attack. If an attack is detected, apply mitigation measures to stop it.
 
-Some clients send ESP packets that have incorrect SPIs (outdated SAs) or the Load Balancer-forwarding Encapsulating Security Payload (ESP) packets that have an incorrect SPI. Only a wfpdiag trace will show what is occurring, and stop the attack based on event 10039 - Microsoft-Windows-RemoteAccess-RemoteAccessServer.
+Some clients send ESP packets that have incorrect SPIs (outdated SAs) or the Load Balancer-forwarding Encapsulating Security Payload (ESP) packets that have an incorrect SPI. Run a wfpdiag trace to show what is occurring, and stop the attack based on event 10039 - Microsoft-Windows-RemoteAccess-RemoteAccessServer.
 
 Adding more servers is also helpful.
 
