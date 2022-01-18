@@ -1,6 +1,6 @@
 ---
-title: ASCII conversion shows different results in publisher and subscriber
-description: This article provides workarounds for the problem where ASCII conversion shows different results in publisher and subscriber database tables.
+title: ASCII function returns different results in publisher and subscriber
+description: This article provides workarounds for the problem where ASCII function returns different results in the publisher and subscriber database tables.
 ms.date: 01/20/2022
 ms.prod-support-area-path: Replication, change tracking, change data capture
 author: sevend2
@@ -9,9 +9,11 @@ ms.reviewer: akbarf, valcan, tzakir, maarumug
 ms.prod: sql
 ---
 
-# ASCII conversion shows different results in the publisher and subscriber database tables
+# ASCII conversion shows different results in publisher and subscriber database tables
 
-This article provides workarounds for the problem where `ASCII` conversion shows different results in the publisher and subscriber database tables.
+_Applies to:_ &nbsp; SQL Server 2019
+
+This article provides workarounds for the problem where `ASCII` function returns different results in the publisher and subscriber database tables.
 
 ## Symptoms
 
@@ -21,9 +23,9 @@ Consider the following scenario:
 
 - Initial schema and data are applied through Snapshot Agent.
 
-- On the publisher database, the column that is defined as character data type includes a value of char(0).
+- In the publisher database, the column that is defined as character data type includes a value of `char(0)`.
 
-In this scenario, when you use the `ASCII` function to convert the column from the publisher and subscriber database tables, different results are returned:
+In this scenario, when you use the `ASCII` function to convert the column from the publisher and subscriber database tables, different results are returned. You can refer to the following sample.
 
 - Publisher database table
 
@@ -45,11 +47,13 @@ In this scenario, when you use the `ASCII` function to convert the column from t
 
 - To work around this issue for transactional replication, follow these steps:
 
-    1. Open SQL Server Management Studio. Under **Object Explorer**, expand **SQL Server Agent**.
+    1. Open SQL Server Management Studio.
+
+    1. Under **Object Explorer**, expand **SQL Server Agent**.
 
     1. Right-click **Jobs**, select **New Job...** > **Steps** > **Step 2**, and then select **Edit**.
 
-    1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of command for the **Command** field.
+    1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of command.
 
     1. If the distribution agent runs for push subscriptions, apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server) on the distributor server. If the distribution agent runs for pull subscriptions, apply the [OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server) on the subscriber.
 
