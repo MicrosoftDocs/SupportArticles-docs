@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: 'Troubleshoot networking issues for DirectAccess server troubleshooting'
+description: This article introduces how to troubleshoot networking issues for DirectAccess server troubleshooting.
 ms.date: 01/14/2022
 author: Deland-Han
 ms.author: delhan
