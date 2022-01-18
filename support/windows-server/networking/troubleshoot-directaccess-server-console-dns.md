@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: asvaidya, anupamk
+ms.reviewer: kaushika
 ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
@@ -31,7 +31,9 @@ This issue may affect DirectAccess client connectivity to corporate resources.
 
 ### Causes
 
-This issue occurs because enterprise DNS servers \<ipv6_address_of_the_DNS_server\> aren't responding.
+There are several things that can contribute to this problem. 
+1. A common cause is an error occurred when you assign a DNS server to a specific DNS suffix. If DirectAccess administrator specifies the IPv4 address of an internal corporate DNS server, which is incorrect. The DNS server IPv4 address should be the address assigned to the DirectAccess server’s internal network interface.
+2. This issue can occur because enterprise DNS servers \<ipv6_address_of_the_DNS_server\> aren't responding.
 
 ### Resolution
 
@@ -40,7 +42,6 @@ To resolve this issue, ensure the DNS server is online and responding to name re
 > [!Note]
 > Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.
 
-There are several things that can contribute to this problem. A common cause is an error occurred when you assign a DNS server to a specific DNS suffix. An inexperienced DirectAccess administrator may specify the IPv4 address of an internal corporate DNS server, which is incorrect. The DNS server IPv4 address should be the address assigned to the DirectAccess server’s internal network interface.
 
 The best way to ensure that the DNS server is configured correctly for DirectAccess is to delete the existing entry and then select **Detect**.
 

@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: asvaidya, anupamk
+ms.reviewer: kaushika
 ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
@@ -17,7 +17,7 @@ ms.technology: networking
 
 DirectAccess uses IPv6 transition protocols to enable clients to connect to the DirectAccess server when both are located on the IPv4 Internet. When the DirectAccess server is in a perimeter or DMZ network behind a NAT device, only the IP-HTTPS IPv6 transition protocol is used. When the DirectAccess server is edge facing with public IPv4 addresses assigned to the external interface, the 6to4 and Teredo IPv6 transition protocols are also supported.
 
-## Verify 6to4 adapter status for troubleshooting
+## Verify 6to4 adapter status
 
 Typical errors on the console about 6to4 can say that forwarding or advertising isn't enabled. If you aren't using 6to4, these errors should only be graphical without any impact on the deployment.
 

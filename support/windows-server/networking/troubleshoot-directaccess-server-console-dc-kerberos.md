@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: asvaidya, anupamk
+ms.reviewer: kaushika
 ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
@@ -20,7 +20,7 @@ DirectAccess writes all configuration on group policies. The loss of access to t
 ## Domain Controller error
 
 Error:  
-> The corporate domain for is <!-- missing words -->
+> The corporate domain controller for contoso.local is not available.
 
 ### Causes
 
