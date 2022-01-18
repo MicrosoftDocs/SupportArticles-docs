@@ -1,15 +1,18 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 01/13/2022
+ms.date: 01/18/2022
 ---
-# Known issues with Intune
+# Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see the [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, as well as a backlog of past known issues.
 
 ## Smart card removal behavior for Lock workstation has the wrong behavior applied on Windows 10 devices
 
-We recently discovered a bug in the [Smart card removal behavior setting](/mem/intune/protect/endpoint-protection-windows-10#interactive-logon) for Windows 10 devices where the underlying setting values in Microsoft Intune for **Lock workstation** has the **No Action** behavior applied. We are rolling out a fix in Intune’s January (2201) service release, which is expected to be completed by end of the month.
+- **Date identified:** December 2021
+- **Status:** In progress (2201 service release)
+
+We've identified a bug in the [Smart card removal behavior setting](/mem/intune/protect/endpoint-protection-windows-10#interactive-logon) for Windows 10 devices where the underlying setting values in Microsoft Intune for **Lock workstation** has the **No Action** behavior applied.
 
 ### Who is impacted
 
@@ -24,7 +27,10 @@ Check the value selected for the Smart card removal behavior setting for existin
 
 ## Several Office settings in the settings catalog need parent settings enabled
 
-We recently identified several Office settings in the settings catalog that, when enabled, do not automatically enable the required parent setting. This can lead to the policy not applying as expected if you did not configure the parent setting.
+- **Date identified:** November 2021
+- **Status:** Active
+
+We identified several Office settings in the settings catalog that, when enabled, do not automatically enable the required parent setting. This can lead to the policy not applying as expected if you did not configure the parent setting.
 
 To help identify which configuration settings have this behavior, we recently made a user interface (UI) change to mark them as **(deprecated)** in the Settings catalog (preview) page. We have also included a full list below.
 
@@ -73,7 +79,10 @@ Check your device configuration profiles to see if you are using a deprecated se
 
 ## Long sync times in Intune for Managed Google Play private apps and web apps
 
-This issue affects Managed Google Play web apps and private line-of-business (LOB) apps. If you recently created or have been added to a web app and sync your tenant, it may take three to six hours or longer for you to see the apps in Intune. Google is aware of this issue and their engineering team is currently working on a fix.
+- **Date identified:** December 2021
+- **Status:** Active
+
+This issue affects Managed Google Play web apps and private line-of-business (LOB) apps. If you recently created or have been added to a web app and sync your tenant, it may take three to six hours or longer for you to see the apps in Intune. Google is aware of this issue and their engineering team is currently working on a fix. For more information, see the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-long-sync-times-in-intune-for-managed-google-play/ba-p/3039795).
 
 ### Who is impacted
 
@@ -92,7 +101,10 @@ There is no workaround for any other app type or enrollment scenario at this tim
 
 ## Fully managed Samsung devices are noncompliant after managed update
 
-Samsung devices provisioned as Android Enterprise fully managed devices running Android 11 and later show as noncompliant after a managed update is applied. This could potentially affect access to corporate resources, depending on the Conditional Access policies set by the IT administrator. We are working to resolve this issue with Samsung, but we have workaround instructions to help you bring devices back into compliance.
+- **Date identified:** November 2021
+- **Status:** Active
+
+Samsung devices provisioned as Android Enterprise fully managed devices running Android 11 and later show as noncompliant after a managed update is applied. This could potentially affect access to corporate resources, depending on the Conditional Access policies set by the IT administrator. We are working to resolve this issue with Samsung, but we have workaround instructions to help you bring devices back into compliance. For more information, see the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-samsung-devices-are-noncompliant-after-restart-or/ba-p/2952544).
 
 > [!NOTE]
 > As of January 7, 2022, this issue only applies to Android Enterprise fully managed Samsung devices. In December, Samsung released a fix in December 2020 (CP Version 5.0.5358.0) for Android device administrator (DA) management and Android Enterprise personally-owned work profiles.
@@ -100,4 +112,3 @@ Samsung devices provisioned as Android Enterprise fully managed devices running 
 ### Available workaround
 
 Users need to unlock the phone, open the Device Policy Controller app, and trigger a sync. Once the sync is completed, the device should show as compliant in Intune and access to corporate resources should be restored.
-
