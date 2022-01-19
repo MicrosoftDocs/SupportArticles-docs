@@ -27,7 +27,7 @@ Consider the following scenario:
 
 In this scenario, when you use the `ASCII` function to convert the column in the publisher and subscriber database tables, different results are returned. You can refer to the following sample:
 
-- Convert the column (`col1`) in publisher database table:
+- Convert the column (`col1`) in the publisher database table:
 
     ```sql
     SELECT id, col1, ASCII(col1) FROM PublisherTable
@@ -35,7 +35,7 @@ In this scenario, when you use the `ASCII` function to convert the column in the
 
     :::image type="content" source="media/ascii-conversion-shows-different-results-publisher-subscriber/publisher-result.png" alt-text="Screenshot of the results for the publisher table.":::
 
-- Convert the column (`col1`) in subscriber database table:
+- Convert the column (`col1`) in the subscriber database table:
 
     ```sql
     SELECT id, col1, ASCII(col1) FROM SubscriberTable
