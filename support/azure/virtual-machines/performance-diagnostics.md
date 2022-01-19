@@ -163,6 +163,10 @@ You can select an insight to view more details about the affected resources, sug
 
 You can use the **Download report** button to download an HTML report that contains additional rich diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report may contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
 
+> [!NOTE]
+> Performance diagnostics reports can be donwloaded from the Performance Diagnostics blade upto 30 days from the time the report was created. After 30 days, if you try to download the report from the Performance Diagnostics blade, you could get an error. To download a report older than 30 days, you can go to the storage account (you can view the storage account information by using the Settings button on the toolbar). In the storage account, the report is stored in a binary large object (BLOB) container that is named azdiagextnresults.
+
+
 ## Manage performance diagnostics reports
 
 You can delete one or more performance diagnostics reports by using the **Delete report** button.
