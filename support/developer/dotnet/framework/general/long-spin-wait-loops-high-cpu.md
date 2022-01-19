@@ -76,4 +76,4 @@ For the timer fix, the call stack would show that `clr!AwareLock::Contention` is
 
 It's also possible to monitor lock contention rates by using Performance Monitor. For more information, see the **Contention Rate / Sec** and **Total # of Contentions** entries for **.NET CLR LocksAndThreads** in the **Lock and thread performance counters** section in [Performance Counters in the .NET Framework](/dotnet/framework/debug-trace-profile/performance-counters#lock-and-thread-performance-counters).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
