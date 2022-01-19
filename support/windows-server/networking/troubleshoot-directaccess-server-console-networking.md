@@ -110,4 +110,4 @@ This error appears as the operation status only if you're setting up a high-avai
 
 If the default NLB deployment method is selected, and the DirectAccess server is deployed on a virtual machine that's running in Microsoft Hyper-V, make sure that you select the **Enable MAC address spoofing** option.
 
-:::image type="content" source="media/troubleshoot-directaccess-server-console-networking/hyper-v-enable-mac-spoofing.png" alt-text="Screenshot of Hyper-V settings." border="false":::
+:::image type="content" source="media/troubleshoot-directaccess-server-console-networking/hyper-v-enable-mac-spoofing.png" alt-text="Screenshot of Hyper-V settings." :::
