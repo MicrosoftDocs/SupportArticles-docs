@@ -21,7 +21,7 @@ Consider the following scenario:
 
 - You use transactional or merge replication in SQL Server 2019.
 
-- Initial schema and data are applied through Replication Snapshot Agent.
+- Initial schema and data are applied through the Replication Snapshot Agent.
 
 - In the publisher database, a column that is defined as character data type includes a value of `char(0)`.
 
