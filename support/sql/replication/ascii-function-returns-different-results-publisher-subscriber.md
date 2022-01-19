@@ -21,13 +21,13 @@ Consider the following scenario:
 
 - You use transactional or merge replication in SQL Server 2019.
 
-- Initial schema and data are applied through Snapshot Agent.
+- Initial schema and data are applied through Replication Snapshot Agent.
 
-- In the publisher database, the column that is defined as character data type includes a value of `char(0)`.
+- In the publisher database, a column that is defined as character data type includes a value of `char(0)`.
 
-In this scenario, when you use the `ASCII` function to convert the column from the publisher and subscriber database tables, different results are returned. You can refer to the following sample:
+In this scenario, when you use the `ASCII` function to convert the column in the publisher and subscriber database tables, different results are returned. You can refer to the following sample:
 
-- Publisher database table
+- Convert the column (`col1`) in publisher database table:
 
     ```sql
     SELECT id, col1, ASCII(col1) FROM PublisherTable
@@ -35,7 +35,7 @@ In this scenario, when you use the `ASCII` function to convert the column from t
 
     :::image type="content" source="media/ascii-conversion-shows-different-results-publisher-subscriber/publisher-result.png" alt-text="Screenshot of the results for the publisher table.":::
 
-- Subscriber database table
+- Convert the column (`col1`) in subscriber database table:
 
     ```sql
     SELECT id, col1, ASCII(col1) FROM SubscriberTable
@@ -55,9 +55,15 @@ In this scenario, when you use the `ASCII` function to convert the column from t
 
     1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of command.
 
-    1. If the distribution agent runs for push subscriptions, apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server) on the distributor server. If the distribution agent runs for pull subscriptions, apply the [OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server) on the subscriber.
+    1. Apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server) accordingly:
 
-    1. Rename *msoledbsql.dll* present in *C:\Program Files\Microsoft SQL Server\150\COM* and paste latest version of *msoledbsql.dll* from *c:\Windows\System32\\* to *C:\Program Files\Microsoft SQL Server\150\COM*.
+        - If the distribution agent runs for push subscriptions, apply it on the distributor server.
+
+        - If the distribution agent runs for pull subscriptions, apply it on the subscriber server.
+
+    1. Rename the *msoledbsql.dll* file in the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
+
+    1. Copy the *msoledbsql.dll* file from *C:\Windows\System32\\* folder and paste it to the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
 
 - To work around this issue for merge replication, follow these steps:
 
