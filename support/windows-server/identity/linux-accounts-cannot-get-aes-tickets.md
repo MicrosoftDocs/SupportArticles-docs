@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
-# Linux accounts can't get AES encrypted tickets in AD DS
+# Linux accounts can't get AES-encrypted tickets in AD DS
 
 ## Symptoms
 
