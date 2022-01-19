@@ -4,7 +4,7 @@ description: Troubleshoot allocation failure in Azure Cloud Services (extended s
 ms.topic: article
 ms.service: cloud-services-extended-support
 author: surbhijain16
-ms.author: surbhijain16
+ms.author: surbhijain
 ms.reviewer: surbhijain16
 ms.date: 01/07/2022
 ms.custom: 
@@ -17,12 +17,12 @@ When you deploy instances to a Cloud Service (extended support) or add new web o
 ## Background – How allocation works
 The servers in Azure datacenters are partitioned into clusters. A new cloud service allocation request is attempted in multiple clusters. When the first instance is deployed to a cloud service, that cloud service gets pinned to a cluster. Any further deployments for the cloud service will happen in the same cluster. In this article, we'll refer to this as "pinned to a cluster". Diagram 1 below illustrates the case of a normal allocation which is attempted in multiple clusters; Diagram 2 illustrates the case of an allocation that's pinned to Cluster 2 because that's where the existing Cloud Service CS_1 is hosted.
 
-   :::image type="content" source="media/allocation-failure/allocation-failure-1.png" alt-text="Screenshot that shows cluster allocation":::
+   :::image type="content" source="media/allocation-failure-1.png" alt-text="Screenshot that shows cluster allocation":::
 
 ## Why allocation failure happens
 When an allocation request is pinned to a cluster, there's a higher chance of failing to find free resources since the available resource pool is limited to a cluster. Furthermore, if your allocation request is pinned to a cluster but the type of resource you requested is not supported by that cluster, your request will fail even if the cluster has free resource. Diagram 3 below illustrates the case where a pinned allocation fails because the only candidate cluster does not have free resources. Diagram 4 illustrates the case where a pinned allocation fails because the only candidate cluster does not support the requested VM size, even though the cluster has free resources.
 
-   :::image type="content" source="media/allocation-failure/allocation-failure-2.png" alt-text="Screenshot that shows cluster allocation":::
+   :::image type="content" source="media/allocation-failure-2.png" alt-text="Screenshot that shows cluster allocation failure":::
 
 ## Troubleshooting allocation failure for cloud services
 The following list highlights the error messages for allocation failure and their solutions.
