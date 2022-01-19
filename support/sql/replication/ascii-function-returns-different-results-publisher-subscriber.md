@@ -55,7 +55,7 @@ In this scenario, when you use the `ASCII` function to convert the column in the
 
     1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of command.
 
-    1. Apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server) accordingly:
+    1. Apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server):
 
         - If the distribution agent runs for push subscriptions, apply it on the distributor server.
 
