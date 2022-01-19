@@ -30,6 +30,10 @@ Currently, we provide diagnostics through text analytics. It's important to note
 |----------|----------|
 |:::image type="content" source="media/self-help-diagnostics/diagnostics-exchange.png" alt-text="Screenshot of the diagnostics for an Exchange Online issue.":::|:::image type="content" source="media/self-help-diagnostics/diagnostics-outlook.png" alt-text="Screenshot of the diagnostics for an Outlook issue.":::|
 
+When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft will make donations to global nonprofit organizations.
+
+For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood).
+
 ## What scenarios are currently covered?
 
 Several diagnostics currently cover the various areas within Exchange Online and Outlook. Each diagnostic is listed below together with a brief description of its function and shortcut command.
