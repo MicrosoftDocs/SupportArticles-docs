@@ -30,9 +30,9 @@ Currently, we provide diagnostics through text analytics. It's important to note
 |----------|----------|
 |:::image type="content" source="media/self-help-diagnostics/diagnostics-exchange.png" alt-text="Screenshot of the diagnostics for an Exchange Online issue.":::|:::image type="content" source="media/self-help-diagnostics/diagnostics-outlook.png" alt-text="Screenshot of the diagnostics for an Outlook issue.":::|
 
-IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging a support request and Microsoft will donate to global non-profits.
+When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft will make donations to global nonprofit organizations.
 
-For more information, visit [https://aka.ms/DiagnosticsforSocialGood](https://aka.ms/DiagnosticsforSocialGood)
+For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood).
 
 ## What scenarios are currently covered?
 
