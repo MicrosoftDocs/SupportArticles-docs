@@ -1,6 +1,6 @@
 ---
 title: ASCII function returns different results in publisher and subscriber
-description: This article provides workarounds for the problem where ASCII function returns different results in the publisher and subscriber database tables.
+description: This article provides workarounds for the issue that the ASCII function returns different results in the publisher and subscriber database tables.
 ms.date: 01/20/2022
 ms.prod-support-area-path: Replication, change tracking, change data capture
 author: sevend2
@@ -13,7 +13,7 @@ ms.prod: sql
 
 _Applies to:_ &nbsp; SQL Server 2019
 
-This article provides workarounds for the problem where `ASCII` function returns different results in the publisher and subscriber database tables.
+This article provides workarounds for the issue that the `ASCII` function returns different results in the publisher and subscriber database tables.
 
 ## Symptoms
 
@@ -25,7 +25,7 @@ Consider the following scenario:
 
 - In the publisher database, a column that is defined as character data type includes a value of `char(0)`.
 
-In this scenario, when you use the `ASCII` function to convert the column in the publisher and subscriber database tables, different results are returned. You can refer to the following sample:
+In this scenario, when you use the `ASCII` function to convert the column in the publisher and subscriber database tables, different results are returned. You can refer to the following example:
 
 - Convert the column (`col1`) in the publisher database table:
 
@@ -53,7 +53,7 @@ In this scenario, when you use the `ASCII` function to convert the column in the
 
     1. Right-click **Jobs**, select **New Job...** > **Steps** > **Step 2**, and then select **Edit**.
 
-    1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of command.
+    1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of the command.
 
     1. Apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server):
 
@@ -63,10 +63,10 @@ In this scenario, when you use the `ASCII` function to convert the column in the
 
     1. Rename the *msoledbsql.dll* file in the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
 
-    1. Copy the *msoledbsql.dll* file from *C:\Windows\System32\\* folder and paste it to the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
+    1. Copy the *msoledbsql.dll* file from the *C:\Windows\System32\\* folder and paste it to the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
 
 - To work around this issue for merge replication, follow these steps:
 
     1. Apply [SQL Server 2019 Cumulative Update 15 (CU15)](https://support.microsoft.com/help/5008996) or a later version on the distributor server.
 
-    1. Follow all of the preceding steps applied to transactional replication issue.
+    1. Follow all the steps that are applied to the transactional replication issue.
