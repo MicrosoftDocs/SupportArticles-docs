@@ -21,7 +21,7 @@ Name resolution and correct DNS server configuration are vital to the functional
 
 When you first configure of DirectAccess or make any later changes to the DNS server configuration, you might notice that the operations status for DNS is shown as **Critical** and the operations state is shown as **Server responsiveness**.
 
-:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/dns-server-error.png" alt-text="Screenshot of the DNS server responsiveness error." border="false":::
+:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/dns-server-error.png" alt-text="Screenshot of the DNS server responsiveness error." :::
 
 > DNS: Not working properly  
 > Error:  
@@ -43,11 +43,11 @@ To resolve this issue, make sure that the DNS server is online and responding to
 
 The best way to make sure that the DNS server is configured correctly for DirectAccess is to delete the existing entry, and then select **Detect**.
 
-:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/detect-dns-server-correct-for-directaccess.png" alt-text="Screenshot of clicking detect in DNS Server Addresses." border="false":::
+:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/detect-dns-server-correct-for-directaccess.png" alt-text="Screenshot of clicking detect in DNS Server Addresses." :::
 
 An IPv6 address will be added automatically. This is the IPv6 address of the DNS64 service that is running on the DirectAccess server. This is how the DNS server should be configured for correct DirectAccess operation.
 
-:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/ipv6-address-of-dns64-service.png" alt-text="Screenshot of IPv6 that is added automatically." border="false":::
+:::image type="content" source="media/troubleshoot-directaccess-server-console-dns/ipv6-address-of-dns64-service.png" alt-text="Screenshot of IPv6 that is added automatically." :::
 
 After the changes are saved and applied, the DNS server should respond again, and the status should return to **Working**.
 
