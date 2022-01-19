@@ -1,11 +1,48 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 01/18/2022
+ms.date: 01/19/2022
 ---
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see the [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, as well as a backlog of past known issues.
+
+## Missing certificates after updating Samsung work profile devices to Android 12
+
+- **Date identified:** December 2021
+- **Status:** Active
+
+We are aware of an issue that affects Samsung devices enrolled with a work profile. After updating to Android 12, these devices are missing certificates when a user tries to access Gmail or AnyConnect VPN. We are working closely with Samsung to resolve this issue, but have provided temporary workarounds below to help users access their VPN apps. 
+
+### AnyConnect VPN
+
+Users will see a prompt from the AnyConnect VPN app stating that the client certificate needed to make the connection could not be found and a valid certificate should be chosen. To address this issue, clear out the app data cache.  
+
+1. Go to **Settings** > **Work Profile** > **Apps** > **AnyConnect VPN** > **Storage** > **Clear Data**.
+1. Upon opening AnyConnect VPN again, the app will request the certificates again in a pop-up prompt.
+1. Select the certificate to fix the problem.
+
+### Gmail
+
+Users attempting to access Gmail are prompted to select a certificate and then will see a “Can’t reach server” message. In this scenario, there are two different approaches you can use to work around the issue; one is user-driven on the device and the other option is administrator-driven in the Microsoft Endpoint Manager admin center.
+
+#### Option 1: On a device - Remove and reinstall the work profile and Company Portal
+
+1. Open the Company Portal app > Menu > tap **Remove Company Portal**.
+1. Open Google Play app > select the Intune Company Portal app > **Uninstall** the app.
+1. In Google Play, install the Intune Company Portal app.
+1. Open and sign in to the Company Portal.
+1. Gmail in the work profile now works as expected.
+
+#### Option 2 (IT administrators only): Remove and re-add the Gmail device configuration
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an [exclusion group](/mem/intune/apps/apps-inc-exl-assignments) for the Gmail app.
+1. Add the user(s) to the exclusion group.
+1. Sync the policy on the Android device.
+1. Confirm Gmail is removed from the device.
+1. Remove the user from the exclusion group.
+1. Confirm Gmail is added to the device.
+1. Gmail in the work profile now works as expected.
 
 ## Smart card removal behavior for Lock workstation has the wrong behavior applied on Windows 10 devices
 
