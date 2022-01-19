@@ -115,6 +115,32 @@ To work around this issue, follow these steps:
    Get-PublicFolder \Root1 -Recurse | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "10.00:00:00"}
    ```
 
+## RetainDeletedItemsFor settings not applied to subfolders
+
+When you apply RetainDeletedItemsFor settings to a public folder and its subfolders by selecting the **Apply setting to this folder and all its subfolders** check box in the EAC, you receive the following error message:
+
+> The operation couldn't be performed because '\public folder identity' couldn't be found.
+:::image type="content" source="media/permissions-settings-not-propagate-eac/set-age-limit-error.png" alt-text="Screenshot of the error when you apply age limit settings.":::
+
+### Workaround
+
+To work around this issue, follow these steps:
+
+1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+2. Run the following cmdlet to apply RetainDeletedItemsFor settings to subfolders:
+
+   ```powershell
+   Get-PublicFolder "<\ParentPF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -RetainDeletedItemsFor "<newRetainDeletedItemsFor>"}
+   ```
+
+   **Note**: Replace \<\ParentPF> with your parent public folder identity.
+
+   For example, the following command applies RetainDeletedItemsFor 10 days to all subfolders under Root1:
+
+   ```powershell
+   Get-PublicFolder \Root1 -Recurse | foreach {Set-PublicFolder -Identity $_.identity -RetainDeletedItemsFor "10.00:00:00"}
+   ```
+   
 ## Status
 
 Microsoft is aware of these issues and will post more information in this article when a fix becomes available.
