@@ -50,7 +50,7 @@ After the diagnostic checks finish and the configuration issue is found, the sys
 
 When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft will make donations to global nonprofit organizations.
 
-For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood)
+For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood).
  
 ### What scenarios are currently covered?
 
