@@ -331,7 +331,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
   Here are some examples of **Export-ADsyncObject** syntax:
 
-  - `Import-Module .\Export-ADsyncObject.psm1`
+  - `Import-Module "C:\Program Files\Microsoft Azure Active Directory Connect\Tools\AdSyncTools.psm1" `
   - `Export-ADsyncObject -DistinguishedName 'CN=TestUser,OU=Sync,DC=Domain,DC=Contoso,DC=com' -ConnectorName 'Domain.Contoso.com'`
   - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
 
@@ -439,7 +439,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
    Here are some examples of **Export-ADsyncObject** syntax:
 
-   - `Import-Module .\Export-ADsyncObject.psm1`
+   - `Import-Module "C:\Program Files\Microsoft Azure Active Directory Connect\Tools\AdSyncTools.psm1" `
    - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
    - `Export-ADsyncObject -DistinguishedName 'CN={2B4B574735713744676B53504C39424D4C72785247513D3D}' -ConnectorName 'Contoso.onmicrosoft.com - AAD'`
 

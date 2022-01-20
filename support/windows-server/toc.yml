@@ -1666,8 +1666,8 @@
       href: ./networking/troubleshoot-directaccess-server-console-6to4.md
     - name: 'Troubleshoot DirectAccess Server console: DNS'
       href: ./networking/troubleshoot-directaccess-server-console-dns.md
-    - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
-      href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
+    - name: 'Troubleshoot DirectAccess Server console: domain controller and Kerberos'
+      href: ./networking/troubleshoot-directaccess-server-console-dc-kerberos.md
     - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
       href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
     - name: 'Troubleshoot DirectAccess Server console: Network and high availability'

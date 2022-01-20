@@ -21,7 +21,7 @@ This article discusses how to troubleshoot some IP-HTTPS and IPSec errors for Di
 
 After you install and configure DirectAccess in Windows Server, you may receive an error message that indicates that IP-HTTPS is not working correctly. When you view the **Operations Status** overview in the Dashboard of the Remote Access Management console, the display shows that the IP-HTTPS interface is in error.
 
-:::image type="content" source="media/troubleshoot-directaccess-server-console-ip-https-ipsec/ip-https-error.png" alt-text="Screenshot of XXX" border="false":::
+:::image type="content" source="media/troubleshoot-directaccess-server-console-ip-https-ipsec/ip-https-error.png" alt-text="Screenshot of the Operations Status." :::
 
 The Operations Status details show the following error message:
 

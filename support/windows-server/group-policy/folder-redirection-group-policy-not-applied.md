@@ -28,6 +28,6 @@ Computers running Windows 8 and later versions may not apply User Profiles and F
 
 To work around this issue, disable the **Enable User Data and Profiles** device setting in the System Center 2012 Configuration Manager console.
 
-:::image type="content" source="media/folder-redirection-group-policy-not-applied.md/enable-user-data-and-profiles-option.png" alt-text="Set the Enable User Data and Profiles option to No.":::
+:::image type="content" source="media/folder-redirection-group-policy-not-applied/enable-user-data-and-profiles-option.png" alt-text="Set the Enable User Data and Profiles option to No.":::
 
 For more information, see [Create user data and profiles configuration items in Configuration Manager](/mem/configmgr/compliance/deploy-use/create-user-data-and-profiles-configuration-items).
