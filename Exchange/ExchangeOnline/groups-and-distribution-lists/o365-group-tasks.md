@@ -489,6 +489,7 @@ The size limit of Microsoft 365 group mailboxes is 50 GB by default. The followi
    ```powershell
    Get-Mailbox -GroupMailbox -ResultSize unlimited | Get-MailboxStatistics | ft DisplayName,TotalDeletedItemSize,TotalItemSize
    ```
+
 #### Increase group mailbox quota
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
@@ -505,8 +506,8 @@ The size limit of Microsoft 365 group mailboxes is 50 GB by default. The followi
    ````
 
 ### Microsoft 365 Group usage report
-You can get report of Microsoft 365 group usage on various metrics like Emails by the group, Members of the group etc. Please check [this artile](https://aka.ms/M365GroupUsageReport)
 
+In the Microsoft 365 groups report, you can gain insights into the activity of groups in your organization, such as Emails received in Exchange, Messages in Yammer. For more information, see [Microsoft 365 Reports in the admin center](https://aka.ms/M365GroupUsageReport).
 
 [Back to top](#summary)
 
