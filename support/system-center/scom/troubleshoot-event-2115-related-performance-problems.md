@@ -297,12 +297,12 @@ Event ID 2115 is logged and a management server generates an **unable to write d
   > Keywords:      Classic  
   > User:          N/A  
   > Computer:      \<ManagementServerFQDN>  
-  > Description:
+  > Description:  
   > Failed to store data in the Data Warehouse. The operation will be retried.  
   > Exception 'SqlException': Cannot open database "OperationsManagerDW" requested by the login. The login failed.  
   > Login failed for user 'CONTOSO\Action_Account'.  
   >  
-  > One or more workflows were affected by this.    
+  > One or more workflows were affected by this.  
   >  
   > Workflow name: Microsoft.SystemCenter.DataWarehouse.CollectPerformanceData  
   > Instance name: \<ManagementServerFQDN>  
