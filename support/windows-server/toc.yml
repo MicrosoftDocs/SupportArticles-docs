@@ -1664,6 +1664,16 @@
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
     - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
+    - name: 'Troubleshoot DirectAccess Server console: 6to4'
+      href: ./networking/troubleshoot-directaccess-server-console-6to4.md
+    - name: 'Troubleshoot DirectAccess Server console: DNS'
+      href: ./networking/troubleshoot-directaccess-server-console-dns.md
+    - name: 'Troubleshoot DirectAccess Server console: domain controller and Kerberos'
+      href: ./networking/troubleshoot-directaccess-server-console-dc-kerberos.md
+    - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
+      href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
+    - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
+      href: ./networking/troubleshoot-directaccess-server-console-networking.md
   - name: TCP/IP communications
     items:
     - name: A SMB server is unresponsive
