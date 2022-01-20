@@ -288,42 +288,42 @@ Event ID 2115 is logged and a management server generates an **unable to write d
 
 - The management server generates one or more alerts that resemble the following:
 
-  > Log Name:      Operations Manager
-  > Source:        Health Service Modules
-  > Date:          1/1/2022 12:00:00 PM
-  > Event ID:      31551
-  > Task Category: Data Warehouse
-  > Level:         Error
-  > Keywords:      Classic
-  > User:          N/A
-  > Computer:      \<ManagementServerFQDN>
+  > Log Name:      Operations Manager  
+  > Source:        Health Service Modules  
+  > Date:          1/1/2022 12:00:00 PM  
+  > Event ID:      31551  
+  > Task Category: Data Warehouse  
+  > Level:         Error  
+  > Keywords:      Classic  
+  > User:          N/A  
+  > Computer:      \<ManagementServerFQDN>  
   > Description:
-  > Failed to store data in the Data Warehouse. The operation will be retried.
-  > Exception 'SqlException': Cannot open database "OperationsManagerDW" requested by the login. The login failed.
-  > Login failed for user 'CONTOSO\Action_Account'. 
+  > Failed to store data in the Data Warehouse. The operation will be retried.  
+  > Exception 'SqlException': Cannot open database "OperationsManagerDW" requested by the login. The login failed.  
+  > Login failed for user 'CONTOSO\Action_Account'.  
   >  
-  > One or more workflows were affected by this.  
+  > One or more workflows were affected by this.    
   >  
-  > Workflow name: Microsoft.SystemCenter.DataWarehouse.CollectPerformanceData 
-  > Instance name: \<ManagementServerFQDN>
-  > Instance ID: {AEC38E5Z-67A9-0406-20DB-ACC33BB9C494} 
+  > Workflow name: Microsoft.SystemCenter.DataWarehouse.CollectPerformanceData  
+  > Instance name: \<ManagementServerFQDN>  
+  > Instance ID: {AEC38E5Z-67A9-0406-20DB-ACC33BB9C494}  
   > Management group: \<ManagementGroupName>
 
 - The following event is logged in the Operations Manager event log on the management server:
 
-  > Log Name:      Operations Manager
-  > Source:        HealthService
-  > Date:          1/1/2022 12:00:00 PM
-  > Event ID:      2115
-  > Task Category: None
-  > Level:         Warning
-  > Keywords:      Classic
-  > User:          N/A
-  > Computer:      \<ManagementServerFQDN>
-  > Description:
-  > A Bind Data Source in Management Group \<ManagementGroupName> has posted items to the workflow, but has not received a response in 22560 seconds.  This indicates a performance or functional problem with the workflow.
-  > Workflow Id : Microsoft.SystemCenter.DataWarehouse.CollectPerformanceData
-  > Instance    : \<ManagementServerFQDN>
+  > Log Name:      Operations Manager  
+  > Source:        HealthService  
+  > Date:          1/1/2022 12:00:00 PM  
+  > Event ID:      2115  
+  > Task Category: None  
+  > Level:         Warning  
+  > Keywords:      Classic  
+  > User:          N/A  
+  > Computer:      \<ManagementServerFQDN>  
+  > Description:  
+  > A Bind Data Source in Management Group \<ManagementGroupName> has posted items to the workflow, but has not received a response in 22560 seconds.  This indicates a performance or functional problem with the workflow.  
+  > Workflow Id : Microsoft.SystemCenter.DataWarehouse.CollectPerformanceData  
+  > Instance    : \<ManagementServerFQDN>  
   > Instance Id : {AEC38E5Z-67A9-0406-20DB-ACC33BB9C494}
 
 **Resolution**
