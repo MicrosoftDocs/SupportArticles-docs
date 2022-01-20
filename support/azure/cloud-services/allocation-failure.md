@@ -29,7 +29,7 @@ The following table highlights the error messages for allocation failure and the
 
 | Error code | Error message |
 |-------|----------------------|
-| AllocationFailed | Allocation failed. We do not have sufficient capacity for the requested VM size in this region. Read more about improving likelihood of allocation success at https://aka.ms/allocation-guidance|
+| AllocationFailed | Allocation failed. We do not have sufficient capacity for the requested VM size in this region. Read more about improving likelihood of allocation success at https://aka.ms/allocation-guidance |
 | OverconstrainedAllocationRequest | Allocation failed. VM(s) with the following constraints cannot be allocated, because the condition is too restrictive. Please remove some constraints and try again|
 | ServiceAllocationFailure | Operation failed with error code 'InternalError' and error message 'An internal execution error occurred. Please retry later'|
 
