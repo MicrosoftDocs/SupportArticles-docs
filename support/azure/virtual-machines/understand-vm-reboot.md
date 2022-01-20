@@ -36,7 +36,7 @@ If Azure has further information about the root cause of a platform-initiated un
 
 ## VM Downtimes in Activity Log 
 
-[Resource Health alerts](https://docs.microsoft.com/azure/service-health/resource-health-alert-monitor-guide) are emitted based on [Activity Log](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log) information. Under some circumstances, VM downtimes may not be shown in activity log, which will also prevent Resource Health alerts for firing for the downtime. The downtime will still be visible in resource health. 
+[Resource Health alerts](/azure/service-health/resource-health-alert-monitor-guide) are emitted based on [Activity Log](/azure/azure-monitor/essentials/activity-log) information. Under some circumstances, VM downtimes may not be shown in activity log, which will also prevent Resource Health alerts for firing for the downtime. The downtime will still be visible in resource health. 
 
 This circumstance occurs if VM availability status changes from Available to Unavailble back to Available in less than 35 seconds. These instances are filtered from Activity Log on the Azure platform side in order to prevent transient errors from showing false downtimes to customers. With ongoing VM health quality investments, we have determined these filters may no longer be needed and may also be responsible for rapid changes in VM health to remain unreported. Our engineering team is working on a phase out plan to ensure we deliver the best experience possible.
 
