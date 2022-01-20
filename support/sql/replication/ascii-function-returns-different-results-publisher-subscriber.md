@@ -1,6 +1,6 @@
 ---
-title: ASCII function returns different results in publisher and subscriber
-description: This article provides workarounds for the issue that the ASCII function returns different results in the publisher and subscriber database tables.
+title: ASCII function returns different results in Publisher and Subscriber
+description: This article provides workarounds for the issue that the ASCII function returns different results in the Publisher and Subscriber database tables.
 ms.date: 01/20/2022
 ms.prod-support-area-path: Replication, change tracking, change data capture
 author: sevend2
@@ -9,11 +9,11 @@ ms.reviewer: akbarf, valcan, tzakir, maarumug
 ms.prod: sql
 ---
 
-# ASCII function returns different results in publisher and subscriber database tables
+# ASCII function returns different results in Publisher and Subscriber database tables
 
 _Applies to:_ &nbsp; SQL Server 2019
 
-This article provides workarounds for the issue that the `ASCII` function returns different results in the publisher and subscriber database tables.
+This article provides workarounds for the issue that the `ASCII` function returns different results in the Publisher and Subscriber database tables.
 
 ## Symptoms
 
@@ -23,11 +23,11 @@ Consider the following scenario:
 
 - Initial schema and data are applied through the Replication Snapshot Agent.
 
-- In the publisher database, a column that is defined as character data type includes a value of `char(0)`.
+- In the Publisher database, a column that is defined as character data type includes a value of `char(0)`.
 
-In this scenario, when you use the `ASCII` function to convert the column in the publisher and subscriber database tables, different results are returned. You can refer to the following sample:
+In this scenario, when you use the `ASCII` function to convert the column in the Publisher and Subscriber database tables, different results are returned. You can refer to the following sample:
 
-- Convert the column (`col1`) in the publisher database table:
+- Convert the column (`col1`) in the Publisher database table:
 
     ```sql
     SELECT id, col1, ASCII(col1) FROM PublisherTable
@@ -35,7 +35,7 @@ In this scenario, when you use the `ASCII` function to convert the column in the
 
     :::image type="content" source="media/ascii-conversion-shows-different-results-publisher-subscriber/publisher-result.png" alt-text="Screenshot of the results for the publisher table.":::
 
-- Convert the column (`col1`) in the subscriber database table:
+- Convert the column (`col1`) in the Subscriber database table:
 
     ```sql
     SELECT id, col1, ASCII(col1) FROM SubscriberTable
@@ -47,21 +47,25 @@ In this scenario, when you use the `ASCII` function to convert the column in the
 
 - To work around this issue for transactional replication, follow these steps:
 
-    1. Open SQL Server Management Studio.
+    1. Open SQL Server Management Studio and connect to the server acting as a Distributor.
 
-    1. Under **Object Explorer**, expand **SQL Server Agent**.
+    1. Under **Object Explorer**, expand **SQL Server Agent**, and then expand **Jobs**.
 
-    1. Right-click **Jobs**, select **New Job...** > **Steps** > **Step 2**, and then select **Edit**.
+    1. Select the snapshot agent job for the affected publication, right-click it, and then select **Properties** > **Steps** > **Step 2** > **Edit**.
 
-    1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of the command.
+    1. In the **Job Step Properties** window, add `-NativeBcpFileFormatVersion 100` at the end of the command and select **OK** to save the changes.
 
     1. Apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server):
 
-        - If the distribution agent runs for push subscriptions, apply it on the distributor server.
+        - If the distribution agent runs for push subscriptions, apply it on the Distributor server.
 
-        - If the distribution agent runs for pull subscriptions, apply it on the subscriber server.
+        - If the distribution agent runs for pull subscriptions, apply it on the Subscriber server.
 
-    1. Rename the *msoledbsql.dll* file in the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
+    1. Rename the *msoledbsql.dll* file in the *C:\Program Files\Microsoft SQL Server\150\COM* folder:
+
+        - If it's a push subscription, rename the file in the folder on the Distributor server.
+
+        - If it's a pull subscription, rename the file in the folder on the Subscriber server.
 
     1. Copy the *msoledbsql.dll* file from the *C:\Windows\System32\\* folder and paste it to the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
 
