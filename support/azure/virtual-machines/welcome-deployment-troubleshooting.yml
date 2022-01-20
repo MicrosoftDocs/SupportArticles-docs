@@ -50,6 +50,8 @@ landingContent:
             url: /azure/virtual-machines/windows/create-vm-generalized-managed
           - text: Share VM images with Shared Galleries
             url: /azure/virtual-machines/shared-image-galleries
+          - text: Cloud-init enabled deployment takes more than 120 seconds to start
+            url: /azure/virtual-machines/Cloud-init-deployment-delay
           
   # Card (optional)
   - title: Troubleshoot Deployment Failures
