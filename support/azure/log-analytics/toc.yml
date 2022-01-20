@@ -1,5 +1,6 @@
 - name: Welcome
   href: welcome-log-analytics.yml
-
-- name: Error code 0x80090016 - keyset doesn't exist
-  href: ./error-code-0x80090016-keyset-does-not-exist.md
+- name: Troubleshoot Log Analytics
+  items:
+  - name: Error code 0x80090016 - keyset doesn't exist
+    href: ./error-code-0x80090016-keyset-does-not-exist.md
