@@ -17,6 +17,17 @@ ms.author: diambroi
 
 This article describes how to unlock an Azure Disk Encryption (ADE)-enabled OS disk for offline repair.
 
+## Azure Disk Encryption overview
+
+In Azure, disk encryption is supported for Microsoft endorsed Linux VMs. There are few basic requirements to enable Azure disk encryption in Linux VMs like.
+- Azure Key Vault
+- CLI or Powershell cmdlets
+- Device-Mapper DM Crypt
+
+### DM Crypt
+Device-mapper is infrastructure in the linux kernel that provides a generic way to create virtual layers of block devices. Device-mapper crypt target provides transparent encryption of block devices using the kernel crypto API. To gather more information about the functioning of DM-Crypt , please refer https://gitlab.com/cryptsetup/cryptsetup/-/wikis/DMCrypt
+
+
 ## Symptoms
 
 If ADE is enabled on the OS disk, you might receive the following error messages after you try to mount the disk on a repair VM:  
@@ -197,6 +208,8 @@ You must have both the key file and the header file to unlock the encrypted disk
     -rwxr-xr-x 1 root root 148 Aug  4 01:04 CRITICAL_DATA_WARNING_README.txt 
     -r-xr-xr-x 1 root root 172 Aug  4 01:04 LinuxPassPhraseFileName
     ```
+  
+There could be multiple **LinuxPassPhraseFileName** if there are more than one disk in the VM which are encrypted. The LinuxPassPhraseFileName will be enumerated in accordance with the number of disks attached with the VM in the similar order as their LUN numbers.
   
 ### Identify the header file
 
