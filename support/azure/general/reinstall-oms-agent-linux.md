@@ -64,7 +64,7 @@ To verify that the installation finished successfully, run a script that starts
    If the agent is running **python3**, run this command:
 
    ```bash
-   sudo su omsagent -c 'python3 /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py'
+   sudo su omsagent -c 'python3 /opt/microsoft/omsconfig/Scripts/Python3/PerformRequiredConfigurationChecks.py'
    ```
 
 If the script runs successfully, you'll get a result similar to this output:
