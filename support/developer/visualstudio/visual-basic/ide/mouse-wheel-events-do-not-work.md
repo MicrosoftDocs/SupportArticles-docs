@@ -68,4 +68,4 @@ Mouse wheel support in Visual Basic 6.0 is a function of the mouse driver. The `
 
 For additional information about `WM_MOUSEWHEEL` notification, see [WM_MOUSEWHEEL message](/windows/win32/inputdev/wm-mousewheel).
 
-[!INCLUDE [Virus scan claim](../../includes/virus-scan-claim.md)]
+[!INCLUDE [Virus scan claim](../../../../includes/virus-scan-claim.md)]

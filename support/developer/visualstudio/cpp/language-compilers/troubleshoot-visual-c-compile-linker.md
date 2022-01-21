@@ -65,6 +65,6 @@ When investigating a possible problem with the Microsoft Visual C++ compiler or 
 
 ## Disclaimer
 
-[!INCLUDE [Rapid Publishing Disclaimer](../includes/rapid-publishing-disclaimer.md)]
+[!INCLUDE [Rapid Publishing Disclaimer](../../../../includes/rapid-publishing-disclaimer.md)]
 
-[!INCLUDE [Disclaimer](../includes/publishing-disclaimer.md)]
+[!INCLUDE [Disclaimer](../../../../includes/publishing-disclaimer.md)]
