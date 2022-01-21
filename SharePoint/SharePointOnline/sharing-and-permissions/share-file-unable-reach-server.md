@@ -48,9 +48,9 @@ This issue may occur if the **Do not save encrypted pages to disk** option is ch
 
 ## Make sure the items being shared don't reach a limit
 
-There is a limit of 50,000 items that can be shared in a folder and any sub-folders.
+There is a limit of 50,000 items that can be shared in a folder and any subfolders.
 
-If the items in a folder that you try to share reach the limit, move some items out of the folder, or select individual files in the folder to share.  
+If the items that you try to share reach the limit in a folder, move some items out of the folder, or select individual files to share.
 
 To learn more about large lists and libraries, see [Manage large lists and libraries](https://support.microsoft.com/office/manage-large-lists-and-libraries-b8588dae-9387-48c2-9248-c24122f07c59).
 
