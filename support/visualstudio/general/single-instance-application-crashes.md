@@ -2,7 +2,7 @@
 title: Single instance application crashes
 description: This article provides a resolution to solve the problem that single instance application crashes. This problem occurs if the application uses the WindowsFormsApplicationBase.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Language or compilers
+ms.custom: sap:Language or compilers
 ms.reviewer: rachanr
 ms.technology: vs-language-compilers
 ---

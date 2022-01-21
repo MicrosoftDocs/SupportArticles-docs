@@ -2,7 +2,7 @@
 title: Detect project memory errors by using PageHeap
 description: This article describes how to use the PageHeap utility to automatically monitor memory errors in a Microsoft Visual C++ project.
 ms.date: 04/24/2020
-ms.prod-support-area-path: C and C++ Libraries
+ms.custom: sap:C and C++ Libraries
 ms.reviewer: JULIAJ
 ms.topic: how-to
 ms.technology: visual-cpp-libraries

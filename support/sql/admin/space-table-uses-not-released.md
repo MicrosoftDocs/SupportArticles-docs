@@ -2,7 +2,7 @@
 title: Space used by a table is not released
 description: This article provides workaround for the problem that a table uses cannot be released after you use a DELETE statement to delete all data from the table.
 ms.date: 01/20/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: georgel, haiwxu, willchen
 ---
 # Space that a table uses is not completely released after you use a DELETE statement to delete data from the table in SQL Server

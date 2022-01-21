@@ -2,7 +2,6 @@
 title: Access Violation when you call Ping.send
 description: Describes a problem where Access Violation Exception may be thrown when you call the Ping.send method repeatedly. Provides workarounds.
 ms.date: 03/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: tomioy
 ms.technology: dotnet-general
 ---

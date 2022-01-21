@@ -2,7 +2,7 @@
 title: ASR Agent or non-component VSS Backup fails
 description: This article provides a workaround for the problem in which a non-component VSS Backup, such as ASR Agent, fails for a server that is hosting SQL Server 2008 R2.
 ms.date: 09/02/2020
-ms.prod-support-area-path:  Administration and Management
+ms.custom: sap: Administration and Management
 ms.reviewer: gfourrat
 ms.prod: sql
 ---

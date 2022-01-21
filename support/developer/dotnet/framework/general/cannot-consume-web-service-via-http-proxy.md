@@ -2,7 +2,6 @@
 title: Can't consume web services via an HTTP proxy server
 description: This article provides a resolution to fix the error that occurs on a .NET client that consumes a Web service via an HTTP proxy server.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: ryankiv, sulabhs
 ms.technology: dotnet-general
 ---

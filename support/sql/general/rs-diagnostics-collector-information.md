@@ -2,7 +2,6 @@
 title: RS Diagnostics Collector collects information 
 description: This article describes the information that may be collected from a computer when the SQL RS Diagnostics Collector tool is running.
 ms.date: 08/19/2020
-ms.prod-support-area-path:
 ms.reviewer: ramakoni
 ms.topic: article
 ms.prod: sql

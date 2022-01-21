@@ -2,7 +2,7 @@
 title: Format strings to Right-Justify when an app calls printing
 description: This article describes how to format strings to Right-Justify when an application calls printing.
 ms.date: 12/10/2020
-ms.prod-support-area-path: Visual Basic
+ms.custom: sap:Visual Basic
 ms.topic: how-to
 ms.technology: visual-basic-language-compilers
 ---

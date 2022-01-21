@@ -2,7 +2,7 @@
 title: HTTP 400 error responses to HTTP requests
 description: Works around an HTTP 400 error that the HTTP request header is too long.
 ms.date: 05/14/2021
-ms.prod-support-area-path: WWW administration and management
+ms.custom: sap:WWW administration and management
 ms.reviewer: ivanpash
 ms.technology: iis-www-administration-management
 ---

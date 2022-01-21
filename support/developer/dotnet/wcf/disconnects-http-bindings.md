@@ -2,7 +2,6 @@
 title: Disconnects HTTP bindings for WCF services
 description: This article provides workarounds for the issue that causes a Windows Server 2012 R2-based server to drop an underlying TCP connection.
 ms.date: 08/24/2020
-ms.prod-support-area-path: 
 ms.reviewer: pupanda, meerak, amymcel
 ms.technology: dotnet-wcf
 ---

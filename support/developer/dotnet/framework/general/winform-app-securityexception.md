@@ -2,7 +2,6 @@
 title: Windows Forms app throws SecurityException
 description: You have a Windows Forms application that uses the System.Net.HttpWebRequest class to send HTTP requests to a server (even calling a WebService). You experience that the application will intermittently throw a System.Security.SecurityException.
 ms.date: 05/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: pphadke, chrross
 ms.technology: dotnet-general
 ---
