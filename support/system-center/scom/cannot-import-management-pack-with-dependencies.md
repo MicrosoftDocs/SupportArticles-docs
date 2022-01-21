@@ -2,7 +2,6 @@
 title: Can't import a management pack with dependencies
 description: Fixes an issue that importing a management pack in System Center Operations Manager fails when a dependent management pack isn't imported.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ---
 # Importing a management pack fails in Operations Manager if a dependent management pack isn't imported
 

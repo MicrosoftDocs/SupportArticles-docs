@@ -2,7 +2,6 @@
 title: Windows Server Update Services (WSUS) best practices
 description: Describes best practices for WSUS to avoid configurations that experience poor performance.
 ms.date: 05/25/2020
-ms.prod-support-area-path:
 ms.reviewer: sccmcsscontent, erice
 ---
 # Windows Server Update Services best practices

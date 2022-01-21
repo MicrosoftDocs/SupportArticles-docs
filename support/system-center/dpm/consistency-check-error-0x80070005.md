@@ -2,7 +2,6 @@
 title: DPM 2010 Consistency check fails with error 0x80070005
 description: Fixes an issue where consistency check on the primary Data Protection Manager server fails and you receive the Access Denied (0x80070005) error.
 ms.date: 07/24/2020
-ms.prod-support-area-path:
 ms.reviewer: anjanik
 ---
 # An unexpected error occurred while the job was running error when DPM 2010 consistency check fails

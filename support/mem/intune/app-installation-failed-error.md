@@ -2,7 +2,7 @@
 title: App installation failed error after updating Android APK app - Intune
 description: Describes an issue in which you receive the App installation failed error message after an Android APK app is updated in the Intune portal. This issue occurs if you have removed the app from the device.
 ms.date: 10/11/2021
-ms.prod-support-area-path: Assign apps
+ms.custom: sap:Assign apps
 ---
 # App installation failed error after an Android APK app is updated
 

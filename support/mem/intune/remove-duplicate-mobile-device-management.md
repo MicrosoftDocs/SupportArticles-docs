@@ -2,7 +2,6 @@
 title: How to remove duplicate mobile device management objects in Azure Active Directory
 description: Describes how to remove duplicate mobile device management objects in Azure AD that are not automatically removed.
 ms.date: 09/02/2021
-ms.prod-support-area-path: 
 ms.reviewer: anthonge, willfid
 ---
 # How to remove duplicate mobile device management objects in Azure Active Directory

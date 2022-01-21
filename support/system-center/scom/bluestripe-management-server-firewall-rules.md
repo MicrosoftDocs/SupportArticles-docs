@@ -2,7 +2,6 @@
 title: BlueStripe management server firewall rules
 description: Describes firewall rules for the BlueStripe management server.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # BlueStripe management server firewall rules
 
