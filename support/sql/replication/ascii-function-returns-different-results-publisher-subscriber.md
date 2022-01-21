@@ -23,7 +23,7 @@ Consider the following scenario:
 
 - Initial schema and data are applied through the Replication Snapshot Agent.
 
-- In the Publisher database, a column that is defined as character data type includes a value of `char(0)`.
+- In the Publisher database, a column that is defined as character data type includes a NULL value - ASCII character 0 `char(0)`.
 
 In this scenario, when you use the `ASCII` function to convert the column in the Publisher and Subscriber database tables, different results are returned. You can refer to the following sample:
 
