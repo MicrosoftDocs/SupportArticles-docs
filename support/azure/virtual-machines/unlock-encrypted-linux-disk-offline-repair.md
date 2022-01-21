@@ -17,16 +17,11 @@ ms.author: diambroi
 
 This article describes how to unlock an Azure Disk Encryption (ADE)-enabled OS disk for offline repair.
 
-## Azure Disk Encryption overview
+Azure Disk Encryption can be applied to Microsoft endorsed Linux virtual machines (VMs). Here are some basic requirements to enable Azure Disk Encryption in Linux VMs:
 
-In Azure, disk encryption is supported for Microsoft endorsed Linux VMs. There are few basic requirements to enable Azure disk encryption in Linux VMs like.
-- Azure Key Vault
-- CLI or Powershell cmdlets
-- Device-Mapper DM Crypt
-
-### DM Crypt
-Device-mapper is infrastructure in the linux kernel that provides a generic way to create virtual layers of block devices. Device-mapper crypt target provides transparent encryption of block devices using the kernel crypto API. To gather more information about the functioning of DM-Crypt , please refer https://gitlab.com/cryptsetup/cryptsetup/-/wikis/DMCrypt
-
+- Azure Key Vault 
+- Azure CLI or Windows PowerShell cmdlets 
+- [Device-mapper (DM)-Crypt](https://gitlab.com/cryptsetup/cryptsetup/-/wikis/DMCrypt)
 
 ## Symptoms
 
@@ -209,7 +204,7 @@ You must have both the key file and the header file to unlock the encrypted disk
     -r-xr-xr-x 1 root root 172 Aug  4 01:04 LinuxPassPhraseFileName
     ```
   
-There could be multiple **LinuxPassPhraseFileName** if there are more than one disk in the VM which are encrypted. The LinuxPassPhraseFileName will be enumerated in accordance with the number of disks attached with the VM in the similar order as their LUN numbers.
+   You may see multiple "LinuxPassPhraseFileName" if more than one disk is attached to the encrypted VM. The "LinuxPassPhraseFileName" will be enumerated according to the number of disks in the same order as their Logical Unit Numbers (LUNs).
   
 ### Identify the header file
 
