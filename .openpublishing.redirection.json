@@ -1084,6 +1084,306 @@
       "source_path": "support/dynamics-365/sales/dynamics-365-marketing-problem-with-deployment.md",
       "redirect_url": "/troubleshoot/dynamics-365/marketing/dynamics-365-marketing-problem-with-deployment",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/404-error-when-accessing-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/adapter-is-not-of-type-gpadapter-error-when-activating-map-in-the-connector.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/alerts-occur-when-you-go-offline.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appdata-redirect-causes-lookup-fields-to-break.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-sync-exchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/business-object-not-found-error-when-running-account-to-customer-map.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-add-a-new-deployment-administrator.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-add-crm-add-in-to-favorites-pane-in-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-authenticate-your-credentials-error-when-configuring-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-configure-crm-2011-outlook-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-configure-dynamics-crm-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-dynamics-crm-server-because-credentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-go-offline-configure-crm-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-load-counter-name-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-resynchronize-contacts-from-dynamics-crm-to-outlook-after-being-removed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-sign-in-to-office-365-services-crm-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-track-email-after-it-is-sent-and-moved-to-alternative-folder.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/change-that-limits-editable-crm-forms.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/chrome-becomes-unresponsive.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/configuration-outlook-client-fails-with-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/configuration-tool-creates-duplicate-configuration-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/contacts-duplicated-if-recreate-deleted-contact.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/convert-lead-dialog-box-no-longer-shows-duriing-lead-qualification.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/could-not-establish-trust-relationship-for-the-ssltls-secure-channel-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-app-crash-internet-explorer-reloads.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-mobile-client-offline-online-access-modes.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-rule-deployment-wizard-fails-to-apply-rules-to-users.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/currency-data-type-not-available-import-data-wizard.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-access-dynamics-crm-website-after-repair.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-access-dynamics-crm-website-after-repair",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-add-crm-application-pool-account-as-a-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-add-crm-application-pool-account-as-a-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-open-database-requested-by-the-login-error-when-signing-in.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-open-database-requested-by-the-login-error-when-signing-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-accessing-internal-url-with-claims-based-authentication.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-accessing-internal-url-with-claims-based-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-503-service-unavailable-error-when-accessing-federation-metadata-url.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/http-503-service-unavailable-error-when-accessing-federation-metadata-url",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/problems-that-occur-when-crmapppool-user-account-is-dynamics-crm-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/problems-that-occur-when-crmapppool-user-account-is-dynamics-crm-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/company-news-timeline-version-1-0-1-0-for-dynamics-365-release.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/company-news-timeline-version-1-0-1-0-for-dynamics-365-release",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-dynamics-crm-2016.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-dynamics-crm-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-with-dynamics-crm-2011.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-with-dynamics-crm-2011",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-with-dynamics-crm-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-with-dynamics-crm-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-with-dynamics-crm-2015.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-with-dynamics-crm-2015",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/database-cannot-be-started-in-this-edition-of-sql-error-when-restoring.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/database-cannot-be-started-in-this-edition-of-sql-error-when-restoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-enable-and-disable-scheduled-tracing.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-enable-and-disable-scheduled-tracing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-enable-tracing-in-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-enable-tracing-in-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-item-with-same-key-has-been-added.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-item-with-same-key-has-been-added",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/access-is-denied-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/access-is-denied-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/alerts-about-mailbox-requires-approval-by-office-365-administrator.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/alerts-about-mailbox-requires-approval-by-office-365-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-impersonation-error-occurred-when-connecting-dynamics-365-to-exchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-impersonation-error-occurred-when-connecting-dynamics-365-to-exchange",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-unknown-error-occurred-while-synchronizing-data-to-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-unknown-error-occurred-while-synchronizing-data-to-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/automatic-record-creation-rules-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/automatic-record-creation-rules-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/blank-page-appears.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/blank-page-appears",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-access-these-records.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-access-these-records",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-to-dynamics-crm-server-because-we-cannot-authenticate-credentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-connect-to-dynamics-crm-server-because-we-cannot-authenticate-credentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-send-email-as-another-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-track-emails-in-crm-app-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-track-emails-in-crm-app-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/communication-was-blocked-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/communication-was-blocked-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/could-not-load-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/could-not-load-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/culture-not-supported-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/culture-not-supported-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-because-associated-user-does-not-have-valid-license-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-cannot-be-received-because-associated-user-does-not-have-valid-license-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-sent.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-cannot-be-sent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/401-unauthorized-access-is-denied.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/401-unauthorized-access-is-denied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-dynamics-365-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-connect-dynamics-365-online",
+      "redirect_document_id": false
     }
 
   ]
