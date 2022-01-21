@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, feshehad
-ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
+ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # License attributes aren't updated after installing 2019 license server
