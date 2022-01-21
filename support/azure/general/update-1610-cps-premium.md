@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.prod-support-area-path: 
 ms.reviewer: ashtons
 ---
 # Update 1610 for Cloud Platform System (CPS) Premium

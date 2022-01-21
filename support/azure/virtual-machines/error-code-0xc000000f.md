@@ -2,7 +2,6 @@
 title: Windows Boot BCD error 0xc000000f in the Azure VM
 description: Provides a solution to an issue where Windows VM doesn't start with error code 0xc000000f.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

@@ -2,7 +2,6 @@
 title: Cannot RDP into Azure VM because of a brute force attack
 description: Troubleshoot RDP failures because of brute force attack in Microsoft Azure.
 ms.date: 12/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: automation
-ms.prod-support-area-path: 
 ms.reviewer: pfreitas
 ---
 # Modifications to the configuration mode of an Azure Automation Configuration Node aren't reflected in the portal

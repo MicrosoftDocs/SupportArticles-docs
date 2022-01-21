@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: azure
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # StorSimple: User receives WebUI "Oops" error message
