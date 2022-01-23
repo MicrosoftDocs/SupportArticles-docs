@@ -201,6 +201,12 @@ If the technical problem that you experience doesn't exist in the SQL Server pro
 - [Red Hat Operating System](https://access.redhat.com/support/customer-service)
 - [SUSE Operating System](https://www.suse.com/support/)
 
+## Obtain support from SQL Server-based PaaS vendors
+
+If the technical problem that you experience exists in a third-party cloud PaaS offering, please work directly with the solution vendor to troubleshoot the problem. Here are examples of such:
+- [Amazon RDS (Amazon Web Services))](https://aws.amazon.com/rds/)
+- [Cloud SQL: for PostgreSQL, MySQL & SQL Server (Google Cloud)](https://cloud.google.com/sql/)
+
 ## Third-party information disclaimer
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
