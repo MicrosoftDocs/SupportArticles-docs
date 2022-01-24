@@ -48,7 +48,7 @@ To learn how Outlook detects your antivirus status, follow these steps:
 
 ## Resolution Method 2 - Change the Programmatic Access Security setting in the registry
 
-1. From Start, type *regedit*. Right-click **Registry Editor** in the search results, and then select **Run as administrator**.
+1. Select **Start**, and then type *regedit* in the search box. Right-click **Registry Editor** in the search results, and then select **Run as administrator**.
 1. In Registry Editor, navigate to the appropriate registry subkey as follows:
 
     - Different bitness (32-bit Office running on 64-bit Windows):
@@ -77,7 +77,7 @@ To learn how Outlook detects your antivirus status, follow these steps:
 
 1. Close the Registry Editor.
 
-After updating the registry, you can check Outlook to make sure the change is shown in the settings:
+After updating the registry, you can check Outlook to make sure the change is shown correctly in the Programmatic Access settings:
 
 1. In Outlook, select **File**, and then select **Options**.
 2. Select **Trust Center**, and then select **Trust Center Settings**.
