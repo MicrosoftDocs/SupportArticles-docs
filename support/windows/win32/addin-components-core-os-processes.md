@@ -20,6 +20,7 @@ _Original KB number:_ &nbsp; 841927
 The behavior of any high-level language, framework, or runtime in the components that are loaded by core operating system processes is undefined. For example, Microsoft .NET Framework and the common language runtime weren't designed to run in the context of core operating system processes.
 
 Here is a partial list of high-level languages, frameworks, and runtimes for which behavior is undefined in the context of core OS processes:
+
 - .NET and .NET Framework
 - .NET and .NET Framework languages
     - C#
