@@ -21,7 +21,7 @@ appliesto:
 - Outlook for Office 365
 search.appverid: MET150
 ---
-# A program is trying to send an e-mail message on your behalf warning in Outlook
+# "A program is trying to send an e-mail message on your behalf" warning in Outlook
 
 _Original KB number:_ &nbsp; 3189806
 
