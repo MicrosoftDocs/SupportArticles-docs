@@ -2,7 +2,6 @@
 title: Error (This company has exceeded the number of objects that can be synchronized) displays in a directory synchronization report
 description: Describes how to increase the Active Directory directory service quota for directory synchronization in an Office 365, Azure, or Microsoft Intune environment.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

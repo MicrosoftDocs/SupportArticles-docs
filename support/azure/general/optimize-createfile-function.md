@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: storage
 ms.subservice: files
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Best practice to optimize CreateFile() function performance in Azure

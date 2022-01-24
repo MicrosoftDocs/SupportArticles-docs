@@ -2,7 +2,6 @@
 title: Error (Your request could not be processed) message when you reset your password in Azure, Office 365, or Intune
 description: Describes a problem in which you receive an error message when you reset your password in Microsoft Azure, Office 365, or Microsoft Intune. To resolve this problem, work with your administrator to update your telephone number(s).
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users

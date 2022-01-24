@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: site-recovery
-ms.prod-support-area-path: 
 ms.reviewer: saurse
 ---
 # Error when you try to upgrade the MARS Agent: The Microsoft Azure Recovery Services Agent update failed
