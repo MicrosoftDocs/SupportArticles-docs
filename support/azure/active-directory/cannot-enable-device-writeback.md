@@ -2,7 +2,6 @@
 title: Can't enable the Device writeback option in Azure AD Connect
 description: Describes an issue in which you can't enable the Device writeback option in Azure AD Connect. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

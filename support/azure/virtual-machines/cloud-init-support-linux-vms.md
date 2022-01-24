@@ -2,7 +2,6 @@
 title: Azure cloud-init support for Linux VMs
 description: This article explains the support scenario for cloud-init in Azure. 
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: genli

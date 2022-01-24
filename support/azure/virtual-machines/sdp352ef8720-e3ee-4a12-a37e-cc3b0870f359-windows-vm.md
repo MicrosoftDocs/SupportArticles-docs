@@ -2,7 +2,6 @@
 title: Microsoft Azure PaaS VM logs
 description: Describes how to gather the most common log files and diagnostics information from an Azure PaaS VM.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.author: genli
 author: genlin

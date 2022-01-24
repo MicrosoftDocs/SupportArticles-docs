@@ -2,7 +2,6 @@
 title: Error (Could not load file or assembly) when you run DirSyncConfigShell.psc1 in Windows Server 2008 R2
 description: Describes a scenario in which you receive an error when you run DirSyncConfigShell.psc1 after you install version 6765.0006 of the Directory Sync tool on a Windows Server 2008 R2-based computer.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: arrenc, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 4 - Performance hit in API calls
 description: Provides troubleshooting guide to an error in which some performance issues and exceptions occur while invoking the API operations.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
 author: genlin
