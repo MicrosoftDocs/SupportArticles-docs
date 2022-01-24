@@ -2,7 +2,6 @@
 title: Azure Active Directory (Azure AD) Connect excludes a user's primary group from its group membership
 description: Describes an issue that causes Azure AD Connect to exclude a user's primary group from its group membership.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users

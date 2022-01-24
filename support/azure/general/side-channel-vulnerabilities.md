@@ -2,7 +2,6 @@
 title: Azure Stack guidance to protect against the speculative execution side-channel vulnerabilities
 description: Provides Azure Stack guidance to protect against the speculative execution side-channel vulnerabilities.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: azure-stack
 ms.author: genli
 author: genlin

@@ -2,7 +2,6 @@
 title: Swap file is not re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
 ms.date: 12/09/2021
-ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: srijangupta
