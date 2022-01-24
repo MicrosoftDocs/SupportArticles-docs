@@ -2,7 +2,6 @@
 title: Can't sign up for a Microsoft Azure subscription
 description: Discusses that you receive an error message when signing up for a Microsoft Azure subscription.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
 author: genlin

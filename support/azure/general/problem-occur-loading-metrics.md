@@ -2,7 +2,6 @@
 title: Can't access [Host] ConsumedCredit or [Host] Credit in Azure
 description: Discusses that you receive an error message when you are trying to access [Host] ConsumedCredit or [Host] Credit in Azure.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
 author: genlin

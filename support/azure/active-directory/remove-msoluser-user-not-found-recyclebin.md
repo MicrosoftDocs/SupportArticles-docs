@@ -2,7 +2,6 @@
 title: Error (Remove-MsolUser User Not Found) when you try to remove a user from the recycle bin
 description: Describes an issue that occurs when you try to remove a user from the recycle bin. Provides a resolution.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: domain-services

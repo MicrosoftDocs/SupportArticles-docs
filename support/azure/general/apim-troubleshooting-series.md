@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Series
 description: A brief description about troubleshooting series articles for API Management (APIM).
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
 author: genlin

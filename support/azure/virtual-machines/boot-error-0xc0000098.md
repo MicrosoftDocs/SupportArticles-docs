@@ -2,7 +2,6 @@
 title: Windows boot error 0xc0000098 on an Azure VM
 description: Provides the resolution for the error code 0xc0000098.
 ms.date: 11/15/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

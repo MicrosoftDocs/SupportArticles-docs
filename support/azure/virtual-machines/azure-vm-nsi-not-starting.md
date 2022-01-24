@@ -2,7 +2,6 @@
 title: Azure Virtual Machine - Network Store Interface service is not starting
 description: Troubleshoot Network Store Interface service not starting
 ms.date: 12/20/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

@@ -5,7 +5,6 @@ ms.date: 05/27/2021
 author: genlin
 ms.author: genli
 ms.service: azure
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Apache Spark diagnostic logs in Azure Synapse Analytics
