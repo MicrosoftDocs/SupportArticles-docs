@@ -5,7 +5,6 @@ author: genlin
 ms.author: genli
 ms.service: app-service
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Azure App Service Compliance with PCI Standards 3.0 and 3.1
