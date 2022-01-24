@@ -2,7 +2,6 @@
 title: A federated user is prompted unexpectedly to enter their work or school account credentials
 description: Describes a scenario in which a federated user is prompted unexpectedly to enter their work or school account credentials when they access Office 365, Azure, or Microsoft Intune. Provides resolutions.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication

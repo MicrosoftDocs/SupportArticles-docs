@@ -2,7 +2,6 @@
 title: Linux Image Provisioning Agent update awareness
 description: Provides the update awareness and frequently asked questions about Linux Image Provisioning Agent.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: genli

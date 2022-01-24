@@ -2,7 +2,6 @@
 title: The user name or password is incorrect error when running Azure Active Directory Sync tool Configuration Wizard
 description: Describes a problem that occurs when you run the Azure Active Directory Sync tool Configuration Wizard, and event ID 611 is logged to the Application log in Event Viewer. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: arrenc, willfid
 ms.service: active-directory
 ms.subservice: authentication

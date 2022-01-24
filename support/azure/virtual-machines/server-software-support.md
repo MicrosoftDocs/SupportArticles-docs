@@ -2,7 +2,6 @@
 title: Microsoft server software support for Microsoft Azure Virtual Machines
 description: Discusses the support policy for Microsoft server software in a Microsoft Azure Virtual Machine environment.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: drewm, coreysa
 ms.service: virtual-machines
 ms.collection: windows

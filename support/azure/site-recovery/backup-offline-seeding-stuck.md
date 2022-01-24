@@ -2,7 +2,6 @@
 title: Microsoft Azure Backup offline seeding is stuck at waiting for Azure import job to complete
 description: Describes an issue that occurs when you try to use the Microsoft Azure Backup (MAB) offline seeding feature.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
 ms.service: site-recovery
 ms.author: genli
 author: genlin

@@ -2,7 +2,6 @@
 title: Identify the containers consuming high CPU in an AKS cluster
 description: Describes how to identify the containers consuming high CPU in an AKS cluster
 ms.date: 07/08/2021
-ms.prod-support-area-path: 
 ms.reviewer: chiragpa
 ms.service: container-service
 ---
