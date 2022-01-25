@@ -2,7 +2,6 @@
 title: Troubleshoot end-user recovery issues
 description: Troubleshoots end-user recovery issues in System Center 2012 Data Protection Manager or System Center 2012 R2 Data Protection Manager.
 ms.date: 08/22/2020
-ms.prod-support-area-path:
 ---
 # Troubleshoot end-user recovery issues in Data Protection Manager 2012
 

@@ -2,7 +2,6 @@
 title: VMM console crashes with apostrophe characters
 description: Fixes an issue in which a Virtual Machine Manager console crashes when you add a custom property that contains an apostrophe character to the virtual machine.
 ms.date: 04/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: markstan, jeffpatt
 ---
 # Adding a custom property with an apostrophe in SCVMM 2012 causes the VMM console to crash

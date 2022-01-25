@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: ybao
 ms.date: 12/23/2021
-ms.prod-support-area-path: Windows enrollment
+ms.custom: sap:Windows enrollment
 ---
 # Troubleshooting the Enrollment Status Page
 

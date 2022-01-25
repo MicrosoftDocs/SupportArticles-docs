@@ -2,7 +2,6 @@
 title: The Discovery Wizard stops responding
 description: Fixes an issue in which the Discovery Wizard in Microsoft System Center Operations Manager stops responding (hangs) during the discovery process.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ms.reviewer: v-jomcc
 ---
 # The Discovery Wizard may stop responding during the discovery process in Operations Manager

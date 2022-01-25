@@ -2,7 +2,6 @@
 title: Can't create a protection group in ASR
 description: Work around an issue in which you can't create a protection group in Azure Site Recovery because an error occurred while retrieving the list of servers.
 ms.date: 04/26/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # Error retrieving the list of servers when you create a protection group in Azure Site Recovery

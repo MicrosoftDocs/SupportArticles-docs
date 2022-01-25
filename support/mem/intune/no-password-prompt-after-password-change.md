@@ -2,7 +2,7 @@
 title: No password prompt after iOS email profile change in Intune
 description: Fixes an issue in which there is no password prompt for iOS email profiles in Microsoft Intune after the password is changed.
 ms.date: 10/07/2021
-ms.prod-support-area-path: Configure device profiles
+ms.custom: sap:Configure device profiles
 ms.reviewer: intunecic, waluja
 ---
 # No password prompt for iOS email profiles in Intune after password change

@@ -2,7 +2,6 @@
 title: Clients don't get software updates
 description: Fixes an issue in which Configuration Manager version 1702 clients can't get updates from the software update point.
 ms.date: 06/09/2020
-ms.prod-support-area-path:
 ---
 # Configuration Manager clients don't get software updates
 

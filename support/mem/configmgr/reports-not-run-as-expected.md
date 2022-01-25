@@ -2,7 +2,6 @@
 title: Reports don't run as expected
 description: Fixes a problem that blocks reports from running in System Center 2012 R2 Configuration Manager.
 ms.date: 06/09/2020
-ms.prod-support-area-path:
 ms.reviewer: brianhun, midi, jchornbe, delhan
 ---
 # Reports don't run in System Center 2012 R2 Configuration Manager

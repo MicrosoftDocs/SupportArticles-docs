@@ -2,7 +2,6 @@
 title: Error 4323 installing DPM 2012 R2
 description: Fixes an issue in which you get the DPM Setup failed to add a user to the local group error message when you install System Center 2012 R2 Data Protection Manager.
 ms.date: 09/11/2020
-ms.prod-support-area-path:
 ---
 # DPM 2012 R2 installation fails and generates error 4323: A member could not be added
 

@@ -2,7 +2,6 @@
 title: Error 0x800f0831 installing an update
 description: Describes an issue in which you receive the CBS called Error with 0x800f083 error when you install a cumulative update.
 ms.date: 05/25/2020
-ms.prod-support-area-path:
 ---
 # Error 0x800f0831 when you install an update
 

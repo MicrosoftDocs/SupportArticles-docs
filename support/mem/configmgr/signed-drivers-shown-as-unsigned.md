@@ -2,7 +2,6 @@
 title: Signed drivers are displayed as unsigned
 description: Fixes an issue in which signed drivers imported into Configuration Manager are listed as unsigned.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: frankroj
 ---
 # Signed drivers are displayed as unsigned in Configuration Manager
