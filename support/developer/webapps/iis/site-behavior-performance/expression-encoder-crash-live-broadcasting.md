@@ -2,7 +2,7 @@
 title: Expression Encoder crashes
 description: This article provides resolutions for the problem where Expression Encoder might crash.
 ms.date: 03/20/2020
-ms.prod-support-area-path: Site behavior and performance
+ms.custom: sap:Site behavior and performance
 ms.reviewer: dbristol, marashid
 ms.technology: iis-site-behavior-performance
 ---

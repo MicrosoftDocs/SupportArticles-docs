@@ -2,7 +2,7 @@
 title: Instrumenting a signed assembly would throw warning message
 description: This article provides two resolutions for the problem where error message XXX.DLL/XXX.EXE has been signed. Instrumenting will break verification occurs.
 ms.date: 01/04/2021
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.topic: troubleshooting
 ms.technology: vs-language-compilers
 ---

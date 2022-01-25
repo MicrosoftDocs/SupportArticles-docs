@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot data freshness alerts in Azure AD Connect Health
 description: Troubleshoot data freshness alerts in Azure Active Directory (Azure AD) Connect Health. Use agents for Sync, Azure AD Domain Services, and AD Federation Services.
-ms.date: 1/21/2021
+ms.date: 1/27/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "brheld,calazlo"
@@ -50,21 +50,29 @@ If you use an HTTP proxy, follow these steps:
 
 1. Use a PowerShell cmdlet to find connectivity issues. You can [run the Test-AzureADConnectHealthConnectivity cmdlet](/azure/active-directory/hybrid/how-to-connect-health-agent-install#test-connectivity-to-azure-ad-connect-health-service) successfully as a regular user. However, if all data types are missing, the proxy setting might be correct for the user but not for **Local System** (the context that the service runs under). In that case, run the appropriate Test-AzureADConnectHealthConnectivityAsSystem cmdlet instead:
 
+    ## [Sync](#tab/sync)
+
     ```powershell
-    Test-AzureADConnectHealthConnectivityAsSystem -Role Sync  # For Sync
-
-    Test-AzureADConnectHealthConnectivityAsSystem -Role ADDS  # For AD DS
-
-    Test-AzureADConnectHealthConnectivityAsSystem -Role ADFS  # For AD FS
+    Test-AzureADConnectHealthConnectivityAsSystem -Role Sync
     ```
+
+    ## [AD DS](#tab/azure-ad-ds)
+
+    ```powershell
+    Test-AzureADConnectHealthConnectivityAsSystem -Role ADDS
+    ```
+
+    ## [AD FS](#tab/ad-fs)
+
+    ```powershell
+    Test-AzureADConnectHealthConnectivityAsSystem -Role ADFS
+    ```
+
+    ---
 
 1. To check whether the proxy settings are correct for **Local System**:
 
-    1. Run the following PsExec command to view the settings remotely:
-
-        ```console
-        psexec -s -i "start ms-settings:"
-        ```
+    1. Enter the `PsExec.exe -i -s "start ms-settings:"` command, which lets you view the Windows settings remotely.
 
     1. Select **Network & internet** > **Proxy**, and then select **Edit** under the **Manual proxy setup** heading.
 
@@ -271,11 +279,7 @@ Begin by following the instructions in [Connect Health for AD FS data freshness 
 
 If the dashboard isn't helping, collect the agent logs. The relevant service can be run in the console to get more information.
 
-Begin by using the PsExec command to run the command prompt remotely:
-
-```console
-PsExec.exe -i -s cmd
-```
+Begin by entering the `PsExec.exe -i -s cmd` command, so you can run the command prompt remotely.
 
 Then, collect the agent logs for the Monitoring and Insights services of Sync, AD DS, or AD FS, as described in the next section.
 

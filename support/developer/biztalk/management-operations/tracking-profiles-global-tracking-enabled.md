@@ -2,7 +2,7 @@
 title: Wrong behavior of tracking profiles
 description: Explains the behavior of tracking profiles when Global Tracking is turned off.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Management and Operations
+ms.custom: sap:Management and Operations
 ms.reviewer: xuehongg
 ---
 # Tracking profiles behavior when more than one tracking profile associate with an entity and global tracking is turned off

@@ -2,7 +2,6 @@
 title: Query excel data with an ASP.NET page
 description: Describes how to display data from an Excel worksheet through an ASP.NET (.aspx) page by using Visual C# .NET. Includes an ASP.NET example.
 ms.date: 04/13/2020
-ms.prod-support-area-path: 
 ms.reviewer: michmo
 ms.topic: how-to
 ms.technology: csharp-general

@@ -2,7 +2,6 @@
 title: Workarounds for Visual Studio 2022 on unsupported operating systems
 description: This article describes known issues and workarounds for Visual Studio 2022 when installed on unsupported operating systems.
 ms.date: 08/20/2021
-ms.prod-support-area-path: 
 ms.reviewer: pchapman
 ms.technology: vs-general
 ---

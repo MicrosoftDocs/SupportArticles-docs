@@ -2,7 +2,6 @@
 title: Optimize performance with automatic proxy-configuration scripts
 description: This article describes how to optimize the performance of an automatic proxy-configuration script (PAC file, also known as Wpad.dat).
 ms.date: 9/10/2020
-ms.prod-support-area-path: 
 ms.reviewer: heikom
 ms.technology: internet-explorer-connectivity-navigation
 ---

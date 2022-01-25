@@ -2,7 +2,6 @@
 title: NullReferenceException if you use CommandBuilder
 description: This article explains why you receive an error message when you use the CommandBuilder object, and provides two methods to resolve this problem.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
 ms.reviewer: jayapst
 ---
 # System.NullReferenceException occurs when you use the CommandBuilder object
