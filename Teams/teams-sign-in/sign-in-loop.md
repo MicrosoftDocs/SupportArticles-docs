@@ -1,5 +1,5 @@
 ---
-title: Teams is stuck in a login loop in browsers
+title: Microsoft Teams is stuck in a login loop in Edge, Internet Explorer, Google Chrome, Firefox or Safari
 description: Microsoft Teams continually loops in Edge, Internet Explorer, Google Chrome, Firefox or safari when you try to sign in to teams.microsoft.com. 
 author: helenclu
 manager: dcscontentpm
