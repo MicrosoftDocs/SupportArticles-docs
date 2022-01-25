@@ -2,7 +2,6 @@
 title: Wait for shelled apps to finish by Visual C#
 description: Describes how to wait for a shelled application to finish by using Visual C#. Also provides a code sample to illustrate how to do this task.
 ms.date: 04/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: BRODER
 ms.topic: how-to
 ms.technology: csharp-general

@@ -2,7 +2,7 @@
 title: Perform a distributed query with OLAP Server
 description: This article describes how to perform a SQL Server distributed query with OLAP Server.
 ms.date: 09/21/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.topic: how-to
 ms.prod: sql
 ---

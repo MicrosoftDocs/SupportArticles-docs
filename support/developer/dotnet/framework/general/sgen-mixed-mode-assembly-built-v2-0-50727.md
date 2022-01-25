@@ -2,7 +2,6 @@
 title: Fail to build mixed mode assemblies
 description: An error occurs when you build .NET 3.5 or lower projects on .NET 4.0 MSBuild. This article provides a resolution.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: teodoras
 ms.technology: dotnet-general
 ---

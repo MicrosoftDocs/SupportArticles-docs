@@ -2,7 +2,6 @@
 title: Known issues when you install Release Management
 description: This article describes the known issues that may occur after you install Release Management for Visual Studio 2013.
 ms.date: 04/24/2020
-ms.prod-support-area-path: 
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
 ms.technology: vs-installation-general
 ---

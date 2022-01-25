@@ -2,7 +2,7 @@
 title: GetMessage ignores posted messages
 description: This article discusses a problem where GetMessage doesn't receive messages posted while a WinEvent callback function is being executed. Provides resolutions.
 ms.date: 03/10/2020
-ms.prod-support-area-path: Desktop app UI development
+ms.custom: sap:Desktop app UI development
 ms.reviewer: davean
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---

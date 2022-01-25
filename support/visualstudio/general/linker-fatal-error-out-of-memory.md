@@ -2,7 +2,7 @@
 title: LNK1102 error out of memory
 description: This article provides workarounds for linker out of memory problems.
 ms.date: 04/23/2020
-ms.prod-support-area-path: Language or compilers
+ms.custom: sap:Language or compilers
 ms.reviewer: yongzhu, corob
 ms.technology: vs-language-compilers
 ---

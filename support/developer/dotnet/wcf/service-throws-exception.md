@@ -2,7 +2,6 @@
 title: .NET 4.5 WCF service throws exception
 description: This article provides resolutions for the exception AddressAlreadyInUseException that occurs when .NET 4.0 Windows Communication Foundation service is moved to .NET 4.5.
 ms.date: 08/24/2020
-ms.prod-support-area-path: 
 ms.reviewer: piyushjo
 ms.technology: dotnet-wcf
 ---

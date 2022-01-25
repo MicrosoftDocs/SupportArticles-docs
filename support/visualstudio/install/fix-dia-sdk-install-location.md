@@ -2,7 +2,7 @@
 title: Fix Visual Studio DIA SDK install location
 description: Describes a workaround for a DIA SDK install location problem. Specifically the DIA SDK folder for the pre-existing Visual Studio 2012 installation is overwritten with files that are supposed to be installed in a separate Visual Studio 2013 DIA SDK folder.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Installation
+ms.custom: sap:Installation
 ms.reviewer: aasthana
 ms.technology: vs-installation-install
 ---

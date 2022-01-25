@@ -2,7 +2,7 @@
 title: Start a process as another user
 description: This article describes how to redirect the input and the output of a child process that receives input from the standard input handle or that sends output to the standard output handle.
 ms.date: 10/14/2020
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.topic: how-to
 ms.technology: visual-basic-language-compilers
 ---

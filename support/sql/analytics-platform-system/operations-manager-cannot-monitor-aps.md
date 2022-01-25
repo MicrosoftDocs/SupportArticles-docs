@@ -2,7 +2,7 @@
 title: Operations Manager can't monitor APS appliance
 description: This article provides resolutions for the error where the SQL Server Analytics Platform System appliance isn't monitored in System Center Operations Manager.
 ms.date: 08/05/2020
-ms.prod-support-area-path: Parallel Data Warehouse (APS)
+ms.custom: sap:Parallel Data Warehouse (APS)
 ms.reviewer: krlange
 ms.prod: sql
 ---
