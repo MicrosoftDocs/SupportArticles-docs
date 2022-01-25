@@ -2,7 +2,7 @@
 title: Manage the error log
 description: This article describes how to manage the SQL Server error log.
 ms.date: 11/05/2020
-ms.prod-support-area-path: Database Engine
+ms.custom: sap:Database Engine
 ms.reviewer: SureshKa
 ms.topic: how-to
 ms.prod: sql

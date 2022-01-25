@@ -2,7 +2,7 @@
 title: Display images stored in a BLOB field
 description: This article introduces how to display images stored in a BLOB field.
 ms.date: 09/24/2020
-ms.prod-support-area-path: Active Server Pages
+ms.custom: sap:Active Server Pages
 ms.reviewer: jlewis
 ms.prod: iis
 ms.technology: iis-active-server-pages

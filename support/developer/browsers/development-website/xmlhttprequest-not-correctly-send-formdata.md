@@ -2,7 +2,6 @@
 title: XMLHttpRequest cannot correctly send FormData
 description: Describes an issue in which XMLHttpRequest cannot correctly send FormData containing empty file elements in Microsoft Edge for Windows 10, version 1809.
 ms.date: 03/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: DEV_Triage, yuhara
 ms.technology: internet-explorer-development-website
 ---

@@ -2,7 +2,7 @@
 title: VBScript type mismatch error
 description: This article provides resolutions for the type mismatch error that occurs when field type is adNumeric.
 ms.date: 09/24/2020
-ms.prod-support-area-path: Active Server Pages
+ms.custom: sap:Active Server Pages
 ms.prod: iis
 ms.technology: iis-active-server-pages
 ---

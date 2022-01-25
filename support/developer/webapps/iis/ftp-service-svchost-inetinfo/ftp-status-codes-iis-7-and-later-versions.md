@@ -2,7 +2,7 @@
 title: The FTP status codes in IIS 7.0 and later versions
 description: This article describes the FTP status codes in IIS 7.0.
 ms.date: 12/11/2020
-ms.prod-support-area-path: FTP Service and Svchost or Inetinfo Process Operation
+ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation
 ms.reviewer: mlaing
 ms.technology: iis-ftp-service-svchost-inetinfo
 ---

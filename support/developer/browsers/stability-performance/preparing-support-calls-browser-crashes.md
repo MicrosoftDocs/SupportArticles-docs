@@ -2,7 +2,7 @@
 title: Preparing for support calls for browser crashes
 description: This article describes how to prepare for a call to Microsoft Support to resolve browser crashes.
 ms.date: 01/21/2021
-ms.prod-support-area-path: Stability and Performance
+ms.custom: sap:Stability and Performance
 ms.reviewer: ramakoni
 ms.topic: how-to
 ms.technology: internet-explorer-stability-performance

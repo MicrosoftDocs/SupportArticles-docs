@@ -2,7 +2,7 @@
 title: DQS Export to 64-bit Excel file fails with error
 description: This article provides a resolution for the problem where File Download Failed, Check that the export destination file does not already exist error occurs. 
 ms.date: 01/14/2021
-ms.prod-support-area-path: Data Quality Services
+ms.custom: sap:Data Quality Services
 ms.reviewer: JasonH, MatthewL
 ms.topic: troubleshooting
 ms.prod: sql 

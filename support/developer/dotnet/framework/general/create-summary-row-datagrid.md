@@ -2,7 +2,6 @@
 title: Create summary row for DataGrid by VB .NET
 description: This article provides code samples to describe how to create a summary row for a DataGrid in ASP.NET by using Visual Basic .NET.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: EARLB
 ms.topic: how-to
 ms.technology: dotnet-general

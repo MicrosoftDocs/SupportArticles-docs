@@ -2,7 +2,6 @@
 title: Query XPathDocument by using an XPath expression
 description: Demonstrates how to query an XPathDocument object with an XML Path Language (XPath) expression using the XPathNavigator class.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: JAYAPST
 ms.topic: how-to
 ms.technology: dotnet-general

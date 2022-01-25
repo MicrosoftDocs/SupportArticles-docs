@@ -2,7 +2,7 @@
 title: GDI APIs may fail when large pages are used
 description: This article describes that GDI APIs fails when large pages or VAD spanning are used.
 ms.date: 01/29/2021
-ms.prod-support-area-path: Graphics and Multimedia development
+ms.custom: sap:Graphics and Multimedia development
 ms.reviewer: roriddle, daleche
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---

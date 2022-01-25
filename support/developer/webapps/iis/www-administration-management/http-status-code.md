@@ -2,7 +2,7 @@
 title: HTTP status code overview
 description: This article provides a list of the HTTP status codes in IIS 7.0 and later versions.
 ms.date: 07/21/2020
-ms.prod-support-area-path: WWW Administration and Management
+ms.custom: sap:WWW Administration and Management
 ms.reviewer: v-jayc
 ms.technology: iis-www-administration-management
 ---

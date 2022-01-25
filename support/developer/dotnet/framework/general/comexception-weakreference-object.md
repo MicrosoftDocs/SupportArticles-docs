@@ -2,7 +2,6 @@
 title: COMException when you use WeakReference<T>
 description: Works around an issue in which a COMException exception occurs when you create a WeakReference<T> object in a .NET Framework-based application.
 ms.date: 05/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: rachanr, leecow
 ms.technology: dotnet-general
 ---

@@ -2,7 +2,6 @@
 title: Patching of .NET Framework fails
 description: .NET Framework patches fail if assemblies are in use or locked. This article provides resolutions for this problem.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: kelho
 ms.technology: dotnet-general
 ---

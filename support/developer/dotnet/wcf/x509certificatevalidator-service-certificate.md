@@ -2,7 +2,6 @@
 title: Use X509CertificateValidator with WCF
 description: This article provides a guide to enable customers to use an X509CertificateValidator while they work with an IIS hosted WCF service and self-signed certificates.
 ms.date: 04/17/2020
-ms.prod-support-area-path: 
 ms.reviewer: piyushjo, fabianm
 ms.topic: how-to
 ms.technology: dotnet-wcf

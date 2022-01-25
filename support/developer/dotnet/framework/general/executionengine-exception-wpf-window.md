@@ -2,7 +2,6 @@
 title: Exception when a WPF window is displayed
 description: This article provides a resolution for the problem where attempting to instantiate another WPF Window results in an unhandled exception after closing one Windows Presentation Foundation (WPF) Window.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: Tatkins
 ms.technology: dotnet-general
 ---

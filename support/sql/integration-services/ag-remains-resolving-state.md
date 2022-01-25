@@ -2,7 +2,7 @@
 title: AG remains in the resolving state
 description: This article provides a workaround for the problem where AlwaysOn Availability Group that contains the SSISDB database remains in the resolving state after a failover in SQL Server.
 ms.date: 09/22/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.prod: sql
 ---
 # AlwaysOn Availability Group remains in the resolving state after a failover in SQL Server

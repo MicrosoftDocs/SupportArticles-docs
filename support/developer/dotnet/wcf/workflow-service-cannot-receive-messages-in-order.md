@@ -2,7 +2,6 @@
 title: Workflow service may not receive messages in order
 description: This article provides resolutions for the problem where Windows Workflow Services service may not receive messages in order when it has multiple sequential Receives.
 ms.date: 08/24/2020
-ms.prod-support-area-path: 
 ms.reviewer: smason
 ms.technology: dotnet-wcf
 ---
