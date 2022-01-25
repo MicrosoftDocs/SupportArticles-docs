@@ -1,6 +1,6 @@
 ---
 title: Error 2767 when query against the secondary replica fails
-description: This article provides workarounds for the issue that query against the secondary replica fails with the error 2767 "Could not locate statistics".
+description: This article provides workarounds for the issue that a query against the secondary replica fails with the error 2767 "Could not locate statistics".
 ms.date: 
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -55,7 +55,7 @@ To work around the issue, you can use one of the following methods as required:
 
     For a more permanent workaround, follow these steps:
 
-    1. To determine the column and table where the query-generated statistics are created, run [DBCC SHOW_STATISTICS](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql) against the primary replica by using the name of the table and statistics reported in the error 2767. For example:
+    1. To determine the column where the query-generated statistics are created, run [DBCC SHOW_STATISTICS](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql) against the primary replica by using the name of the table and statistics reported in the error 2767. For example:
 
         ```sql
         DBCC SHOW_STATISTICS('t1', '_WA_Sys_00000011_37C5420D')
@@ -74,14 +74,14 @@ To work around the issue, you can use one of the following methods as required:
         |0.5|4|c1|
         |||
 
-    1. Drop the query-generated statistics.
+    1. To drop the query-generated statistics in the table `t1` on the primary replica, run the following command:
 
         ```sql
         DROP STATISTICS t1._WA_Sys_00000011_37C5420D
         GO
         ```
 
-    1. Create permanent statistics in the column `c1` of the table `t1` on the primary replica.
+    1. To create the permanent statistics in the column `c1` of the table `t1` on the primary replica, run the following command:
 
         ```sql
         CREATE STATISTICS t1c1 ON t1(c1)
