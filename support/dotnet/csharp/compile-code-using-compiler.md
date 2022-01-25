@@ -2,7 +2,6 @@
 title: Compile code by using C# compiler
 description: Describes how to compile code from a text source by using C# compiler.
 ms.date: 04/13/2020
-ms.prod-support-area-path: 
 ms.topic: how-to
 ms.technology: csharp-general
 ---

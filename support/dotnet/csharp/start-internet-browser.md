@@ -2,7 +2,6 @@
 title: Use Visual C# method to start browser
 description: Describes how to start the default Internet browser programmatically by using Visual C#. Also provides a code example to illustrate how to do this task.
 ms.date: 04/20/2020
-ms.prod-support-area-path: 
 ms.reviewer: BRODER
 ms.topic: how-to
 ms.technology: csharp-general

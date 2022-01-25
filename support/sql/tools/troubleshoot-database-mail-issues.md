@@ -2,7 +2,7 @@
 title: Troubleshoot Database Mail issues
 description: Describes how to configure Database Mail and send the test mail. Provides troubleshooting methods for the Database Mail issues.
 ms.date: 12/22/2021
-ms.prod-support-area-path: Other tools
+ms.custom: sap:Other tools
 author: cobibi
 ms.author: v-yunhya
 ms.prod: sql

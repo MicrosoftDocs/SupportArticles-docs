@@ -2,7 +2,6 @@
 title: Make a class usable in a foreach statement
 description: Describes how to make a Visual C# class usable in a foreach statement. Also describes a code sample to explain the methods.
 ms.date: 04/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: zakramer
 ms.topic: how-to
 ms.technology: csharp-general

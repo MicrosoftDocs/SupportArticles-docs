@@ -2,7 +2,7 @@
 title: SQL Server replication agents can't run
 description: This article provides workarounds for the problem that occurs when you configure many SQL Server replication agents to run on a server, and some replication agents can't run.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: akshaym
 ms.prod: sql
 ---

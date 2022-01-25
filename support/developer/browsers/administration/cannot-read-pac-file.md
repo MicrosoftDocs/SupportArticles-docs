@@ -2,7 +2,6 @@
 title: Can't read PAC files referenced by file protocol
 description: Describes an issue in which Windows 10 doesn't read automatic proxy configuration file referenced using the file protocol.
 ms.date: 03/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: Aloot, pierrelc
 ms.technology: internet-explorer-administration
 ---

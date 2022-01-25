@@ -2,7 +2,7 @@
 title: Use SQL 2016 in FIPS 140-2-compliant mode
 description: This article discusses the FIPS 140-2 instructions and how to use SQL Server2016 in FIPS 140-2-compliant mode.
 ms.date: 02/17/2020
-ms.prod-support-area-path: Security Issues
+ms.custom: sap:Security Issues
 ms.prod: sql
 ---
 # Use SQL Server 2016 in FIPS 140-2-compliant mode

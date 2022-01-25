@@ -2,7 +2,7 @@
 title: Processor affinity doesn't work on NUMA
 description: Discusses that the IIS 10.0 processor affinity does not work on NUMA hardware. Provides a resolution.
 ms.date: 04/07/2020
-ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
+ms.custom: sap:IISAdmin service and Inetinfo process operation
 ms.reviewer: yashi
 ms.technology: iis-iisadmin-service-inetinfo
 ---

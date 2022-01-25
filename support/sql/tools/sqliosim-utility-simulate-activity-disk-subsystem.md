@@ -2,7 +2,7 @@
 title: SQLIOSim utility simulates disk subsystem activity
 description: This article describes how to use the SQLIOSim utility to perform stress tests on disk subsystems to simulate SQL Server activity.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Other tools
+ms.custom: sap:Other tools
 ms.reviewer: rdorr, bobward
 ms.topic: how-to
 ms.prod: sql

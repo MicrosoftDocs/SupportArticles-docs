@@ -2,7 +2,6 @@
 title: Display hierarchical data with Repeater controls
 description: Describes how to display hierarchical data by using nested Repeater Controls and Visual C# .NET.
 ms.date: 04/20/2020
-ms.prod-support-area-path: 
 ms.reviewer: patcole, jallen
 ms.topic: how-to
 ms.technology: csharp-general
