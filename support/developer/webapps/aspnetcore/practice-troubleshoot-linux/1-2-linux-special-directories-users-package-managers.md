@@ -5,7 +5,7 @@ ms.date: 03/08/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ms.technology: aspnetcore-practice-troubleshoot-linux
-Co-Authored-By: ahmetmithat
+co-authored-by: ahmetmithat
 ---
 # Part 1.2 - Basic operations on Linux
 
