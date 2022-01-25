@@ -11,7 +11,7 @@ ms.prod: sql
 
 # ASCII function returns different results in Publisher and Subscriber database tables
 
-_Applies to:_ &nbsp; SQL Server 2019
+_Applies to:_&nbsp; SQL Server 2019
 
 This article provides workarounds for the issue that the `ASCII` function returns different results in the Publisher and Subscriber database tables.
 
