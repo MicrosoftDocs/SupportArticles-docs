@@ -2,7 +2,7 @@
 title: Fail to generate the certificate request
 description: This article discusses an error that occurs when you try to create a certificate request in IIS.
 ms.date: 03/30/2020
-ms.prod-support-area-path: Site behavior and performance
+ms.custom: sap:Site behavior and performance
 ms.reviewer: v-jomcc
 ms.technology: iis-site-behavior-performance
 ---

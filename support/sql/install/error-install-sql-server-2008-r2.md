@@ -2,7 +2,7 @@
 title: Error when you install SQL Server 2008 R2
 description: This article provides a resolution for various errors that occur when you try to install SQL Server 2008 R2.
 ms.date: 10/22/2020
-ms.prod-support-area-path: Database Engine
+ms.custom: sap:Database Engine
 ms.prod: sql
 ---
 # Error message when you try to install SQL Server 2008 R2

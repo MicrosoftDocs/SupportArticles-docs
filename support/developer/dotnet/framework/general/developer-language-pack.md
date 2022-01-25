@@ -2,7 +2,6 @@
 title: .NET Framework 4.6.1 Developer Pack
 description: This article describes the .NET Framework 4.6.1 Developer Pack and language packs.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.topic: article
 ms.technology: dotnet-general
 ---

@@ -2,7 +2,7 @@
 title: Error 9002 when transaction log is large
 description: This article describes troubleshooting steps that may help resolve problems that occur when the transaction log becomes large or runs out of space in SQL Server.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Availability Groups
+ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, amamun
 ms.prod: sql
 ---

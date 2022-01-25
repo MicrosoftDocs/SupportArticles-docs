@@ -2,7 +2,6 @@
 title: Remote Desktop app in Microsoft Store doesn't support custom virtual channels
 description: Describes a scenario where there is a limitation in Universal Windows Platform apps and the Remote Desktop app in Microsoft Store doesn't support custom virtual channels.
 ms.date: 7/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: davean, franki
 ms.technology: windows-dev-apps-system-services-dev
 ---

@@ -2,7 +2,6 @@
 title: Expand an array pointer in VC++ debugger
 description: Describes how to expand an array pointer to view all array elements in the Visual C++ Debugger Watch window.
 ms.date: 04/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: shaunm
 ms.topic: how-to
 ms.technology: visual-cpp-general
