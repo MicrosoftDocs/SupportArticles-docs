@@ -10,6 +10,7 @@ ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
+  - CI 160271
 ms.reviewer: divyarp, romccart
 appliesto:
 - Exchange Online
@@ -39,11 +40,11 @@ This issue may occur if the recipient domain doesn't comply with Domain Keys Ide
 
 Do one of the following:
 
-- Recommended method: Enable DKIM by creating a CNAME record for your domain in Office 365. For more information, see [Use DKIM to validate outbound email sent from your custom domain in Office 365](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email?preserve-view=true&view=o365-worldwide).
+- Recommended method: Enable DKIM by creating a CNAME record for your domain in Office 365. For more information, see [Use DKIM to validate outbound email sent from your custom domain in Office 365](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email).
 - Contact the recipient domain and suggest that they comply with DKIM RFC 6376. Consider the message to be unsigned if a DKIM authentication failure occurs.
 
 ## More information
 
-For more information about DKIM RFC 6376, see [http://www.rfc-editor.org/rfc/rfc6376.txt](http://www.rfc-editor.org/rfc/rfc6376.txt).
+For more information about DKIM RFC 6376, see [https://www.rfc-editor.org/rfc/rfc6376.txt](https://www.rfc-editor.org/rfc/rfc6376.txt).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
