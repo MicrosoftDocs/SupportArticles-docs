@@ -1,6 +1,6 @@
 ---
 title: Program is trying to send an e-mail message on your behalf
-description: Discusses an issue in which you receive an error when you send an email message from another program such as Microsoft Excel. Provides a resolution.
+description: Discusses an issue in which you receive an error when you send an email message from another program, such as Microsoft Excel. Provides a resolution.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot
+- CI 160073
 ms.reviewer: tasitae
 appliesto:
 - Outlook LTSC 2021
@@ -20,13 +21,13 @@ appliesto:
 - Outlook for Office 365
 search.appverid: MET150
 ---
-# A program is trying to send an e-mail message on your behalf warning in Outlook
+# "A program is trying to send an e-mail message on your behalf" warning in Outlook
 
 _Original KB number:_ &nbsp; 3189806
 
 ## Symptoms
 
-In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook for Office 365, Outlook 2016, and Outlook 2013, when you send an email message from another program such as Microsoft Excel, you receive the following warning message:
+In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook for Office 365, Outlook 2016, and Outlook 2013, when you send an email message from another program, such as Microsoft Excel, you receive the following warning message:
 
 > A program is trying to send an e-mail message on your behalf. If this is unexpected, click Deny and verify your antivirus software is up-to-date.
 
@@ -41,65 +42,45 @@ To learn how Outlook detects your antivirus status, follow these steps:
 1. In Outlook, select **File**, and then select **Options**.
 2. Select **Trust Center**, and then select **Trust Center Settings**.
 3. Select **Programmatic Access**.
-4. View the **Antivirus status** that's listed in this window. If the status is anything other than **Valid**, follow the appropriate steps to enable your antivirus program, or update your antivirus program as necessary.
+4. View the **Antivirus status** information that's listed in this window. If the status is anything other than **Valid**, follow the appropriate steps to enable your antivirus program, or update your antivirus program as necessary.
 
-   :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/antivirus-status.png" alt-text="Screenshot of the Trust Center dialog, where Antivirus status valid is highlighted in Programmatic Access entry.":::
+   :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/antivirus-status.png" alt-text="Screenshot of the Trust Center dialog box, where Antivirus status valid is highlighted in Programmatic Access entry.":::
 
-## Resolution Method 2 - Change the Programmatic Access Security setting in Outlook
+## Resolution Method 2 - Change the Programmatic Access Security setting in the registry
+
+1. Select **Start**, and then enter *regedit*. Right-click **Registry Editor** in the search results, and then select **Run as administrator**.
+1. In Registry Editor, navigate to the appropriate registry subkey, as follows:
+
+    - Different bitness (32-bit Office running on 64-bit Windows):
+    HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\<x.0>\Outlook\Security
+    - Same bitness (32-bit Office running on 32-bit Windows or 64-bit Office running on 64-bit Windows):
+    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\<x.0>\Outlook\Security
+
+    **Notes:**
+
+    - In these subkeys, the <*x.0*> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, and 15.0 = Office 2013).
+    - If the indicated registry subkey isn’t present, right-click the last subkey in the path, select **New** > **Key**, and then create the necessary subkey.
+
+1. Right-click the registry subkey, and then select **New** > **DWORD**.
+1. Name the DWORD as `ObjectModelGuard`.
+1. Set the value of the DWORD to the behavior that you want:
+
+    - DWORD: ObjectModelGuard
+
+    - Values:
+
+        **0** = Warn me about suspicious activity when my antivirus software is inactive or out-of-date (recommended) 
+
+        **1** = Always warn me about suspicious activity 
+
+        **2** = Never warn me about suspicious activity (not recommended) 
+
+1. Exit Registry Editor.
+
+After you update the registry, check Outlook to make sure that the change is shown correctly in the **Programmatic Access** settings:
 
 1. In Outlook, select **File**, and then select **Options**.
 2. Select **Trust Center**, and then select **Trust Center Settings**.
 3. Select **Programmatic Access**.
-4. Select the option that you prefer. If you want to stop these warning messages permanently, select the **Never warn me about suspicious activity (not recommended)** option.
 
-    :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/never-warn-me-about-suspicious-activity-not-recommended-option.png" alt-text="Screenshot shows the Never warn me about suspicious activity (not recommended) option is selected in Programmatic Access Security area.":::
-
-    > [!NOTE]
-    > If these options are not available, exit Outlook, and then start Outlook again in elevated mode. To do this, type Outlook on the desktop or in the **Start Search** box, right-click the **Microsoft Outlook** search result, select **Properties**, select the **Compatibility** tab, and then select **Run this program as an administrator**.
-
-5. Select **OK** two times.
-
-The registry data that is associated with the Programmatic Access Security options is as follows.
-
-**Office Click-to-Run Installations:**
-
-Same Bitness (32-bit Office running on 32-bit Windows or 64-bit Office running on 64-bit Windows):
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\<x.0>\Outlook\Security`
-
-Different Bitness (32-bit Office running on 64-bit Windows):
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\<x.0>\Outlook\Security`
-
-**Office MSI-Based installations:**
-
-Different Bitness (32-bit Office running on 64-bit Windows):
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\<x.0>\Outlook\Security`
-
-Same bitness (32-bit Office running on 32-bit Windows or 64-bit Office running on 64-bit Windows):
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\<x.0>\Outlook\Security`
-
-> [!NOTE]
-> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, 15.0 = Office 2013)
-
-DWORD: **ObjectModelGuard**  
-
-Values:  
-**0** = Warn me about suspicious activity when my antivirus software is inactive or out-of-date (recommended)  
-**1** = Always warn me about suspicious activity  
-**2** = Never warn me about suspicious activity (not recommended)
-
-## More information
-
-To determine whether your Office installation is Click-to-Run or MSI-based, follow these steps:
-
-1. Start Outlook.
-2. On the **File** menu, select **Office Account**.
-3. For Office Click-to-Run installations, an **Update Options** item is displayed. For MSI-based installations, the **Update Options** item isn't displayed.
-
-    |Click-to-Run Office installation|MSI-based Office installation|
-    |---|---|
-    |  :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/click-to-run-office-installation.png" alt-text="Screenshot of the Click-to-Run Office installation information, showing the Update Options item.":::|:::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/msi-based-office-installation.png" alt-text="Screenshot of the MSI-based Office installation information. No Update Options item.":::|
-    |||
+    :::image type="content" source="media/a-program-is-trying-to-send-an-email-message-on-your-behalf/never-warn-me-about-suspicious-activity-not-recommended-option.png" alt-text="Screenshot showing that the Never warn me about suspicious activity (not recommended) option is selected in the Programmatic Access Security area.":::
