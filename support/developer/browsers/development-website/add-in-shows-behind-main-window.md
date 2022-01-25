@@ -2,7 +2,6 @@
 title: Add-in window appears behind the main window
 description: Fixes an issue in which an add-in for Internet Explorer displays its window behind the main window.
 ms.date: 04/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: bachoang, joelba
 ms.technology: internet-explorer-development-website
 ---

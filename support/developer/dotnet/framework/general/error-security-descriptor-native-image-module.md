@@ -2,7 +2,6 @@
 title: Fail to get security descriptor from native image
 description: Fatal exception occurs when an instantiated generic type in a domain-neutral native image is accessed from an application domain. This problem occurs in a .NET Framework environment if the native image hasn't been loaded and if the CLR tries to obtain a security descriptor.
 ms.date: 05/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: leecow, davidwr
 ms.technology: dotnet-general
 ---

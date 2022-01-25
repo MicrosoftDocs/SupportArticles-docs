@@ -2,7 +2,7 @@
 title: Web application Performance Data Collector
 description: This article describes the web application Performance Data Collector.
 ms.date: 12/11/2020
-ms.prod-support-area-path: Health, Diagnostic, and Performance Features
+ms.custom: sap:Health, Diagnostic, and Performance Features
 ms.topic: article
 ms.technology: iis-health-diagnostic-performance
 ---

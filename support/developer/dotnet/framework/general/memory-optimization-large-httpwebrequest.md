@@ -2,7 +2,7 @@
 title: Memory optimization for HTTP POST or PUT
 description: This article provides a resolution for the problem that occurs when you use the HttpWebRequest class to send lots of data for an HTTP POST or PUT request.
 ms.date: 10/26/2020
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: huizhu, pphadke
 ms.technology: dotnet-general
 ---

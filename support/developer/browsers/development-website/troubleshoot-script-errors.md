@@ -2,7 +2,6 @@
 title: Script errors in Internet Explorer
 description: A script error occurs in Internet Explorer, the webpage cannot be displayed correctly and you receive an error message.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.technology: internet-explorer-development-website
 ---

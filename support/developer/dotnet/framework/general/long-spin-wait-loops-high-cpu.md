@@ -2,7 +2,7 @@
 title: High CPU or memory usage in applications on VMs
 description: This article fixes a problem in which high CPU or memory usage occurs in the .NET Framework because of the Pause Latency change.
 ms.date: 07/15/2020
-ms.prod-support-area-path: .NET Framework, Virtual Machine running Windows
+ms.custom: sap:.NET Framework, Virtual Machine running Windows
 ms.reviewer: joelpell
 ms.technology: dotnet-general
 ---

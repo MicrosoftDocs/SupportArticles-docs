@@ -2,7 +2,7 @@
 title: Change in default whitespace behavior in BizTalk Server
 description: BizTalk Server 2006 R2 SP1 CU4, 2009 CU3, and 2010 CU1 changed default whitespace behavior. This article describes how to revert to the previous behavior if needed.
 ms.date: 03/04/2020
-ms.prod-support-area-path: BizTalk Server Setup and Configuration
+ms.custom: sap:BizTalk Server Setup and Configuration
 ---
 # Change in default whitespace behavior in BizTalk Server
 

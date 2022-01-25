@@ -2,7 +2,7 @@
 title: Error when you run the DBCC CHECKDB statement
 description: This article describes a problem where you receive an error message when you try to run the DBCC CHECKDB statement on a database that contains a large table in SQL Server.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: keithelm
 ms.prod: sql
 ---

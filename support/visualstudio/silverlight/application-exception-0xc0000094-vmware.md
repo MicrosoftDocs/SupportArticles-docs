@@ -2,7 +2,7 @@
 title: 0xC0000094 exception in Silverlight 5 app
 description: This article introduces that in the VMware environment, Silverlight application that uses client network stack may crash due to an unhandled divide by zero exception.
 ms.date: 04/30/2020
-ms.prod-support-area-path: Silverlight
+ms.custom: sap:Silverlight
 ms.reviewer: enamulkh, tref, ppratap, huanchix
 ms.technology: vs-silverlight
 ---

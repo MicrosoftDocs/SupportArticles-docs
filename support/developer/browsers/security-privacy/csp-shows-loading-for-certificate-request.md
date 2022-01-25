@@ -2,7 +2,6 @@
 title: Failed to submit certificate application
 description: Describes a problem that occurs because active scripting is disabled for the security zone to which the application enterprise CA belongs. A resolution is provided.
 ms.date: 06/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: okang
 ms.technology: internet-explorer-security-privacy
 ---

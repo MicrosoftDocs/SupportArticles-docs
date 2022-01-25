@@ -2,7 +2,7 @@
 title: Disable and enable Internet Explorer on Windows
 description: This article describes how to disable and enable any supported version of Internet Explorer on Windows.
 ms.date: 01/21/2021
-ms.prod-support-area-path: installation
+ms.custom: sap:installation
 ms.reviewer: 
 ms.topic: how-to
 ms.technology: internet-explorer-installation

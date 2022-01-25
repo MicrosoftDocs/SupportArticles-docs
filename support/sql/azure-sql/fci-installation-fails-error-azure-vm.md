@@ -2,7 +2,7 @@
 title: FCI installation fails with error on Azure VM
 description: This article provides a resolution for the problem that occurs when you try to install a Microsoft SQL Server Failover Clustered Instance (FCI) in Windows Server 2019 on a Microsoft Azure virtual machine (VM).
 ms.date: 01/15/2021
-ms.prod-support-area-path: Azure SQL virtual machine
+ms.custom: sap:Azure SQL virtual machine
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.prod: sql 

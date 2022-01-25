@@ -2,7 +2,6 @@
 title: Spell Check and Auto Correct features issue
 description: This article describes other applications that host web browser controls on Windows 7 that don't support Internet Explorer's Spell Check and Auto Correct features.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: sansom
 ms.technology: internet-explorer-core-features
 ---

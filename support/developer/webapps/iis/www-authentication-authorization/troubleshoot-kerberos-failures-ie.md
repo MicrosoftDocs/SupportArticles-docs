@@ -2,7 +2,7 @@
 title: Troubleshoot Kerberos failures
 description: Provides symptoms and various steps you can take to solve them, depending on the scenario.
 ms.date: 07/13/2020
-ms.prod-support-area-path: Internet Explorer
+ms.custom: sap:Internet Explorer
 ms.reviewer: ramakoni, paulboc, dili
 ms.technology: iis-www-authentication-authorization
 ---
