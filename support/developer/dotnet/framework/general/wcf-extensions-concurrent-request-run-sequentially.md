@@ -2,7 +2,6 @@
 title: WCF extensions force concurrent operations to run sequentially
 description: This article describes a .NET Framework-based problem in which custom WCF extensions force concurrent operations to run sequentially. Therefore, you may experience client time-outs or long latency periods. Provides a resolution.
 ms.date: 05/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: amymcel, mconnew
 ms.technology: dotnet-general
 ---

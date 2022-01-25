@@ -2,7 +2,7 @@
 title: Modify printer settings with the DocumentProperties
 description: This article describes how to modify printer settings with the DocumentProperties function.
 ms.date: 09/24/2020
-ms.prod-support-area-path: Graphics and Multimedia development
+ms.custom: sap:Graphics and Multimedia development
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # Modify printer settings with the DocumentProperties() Function

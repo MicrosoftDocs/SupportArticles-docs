@@ -2,7 +2,6 @@
 title: Upload a file to a Web site by using Visual C#
 description: This article describes how to upload a file by using Visual C#.
 ms.date: 07/28/2020
-ms.prod-support-area-path: 
 ms.topic: how-to
 ---
 # Use Visual C# to upload a file to a Web site

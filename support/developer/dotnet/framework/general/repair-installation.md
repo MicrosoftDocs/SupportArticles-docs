@@ -2,7 +2,6 @@
 title: Repair an installation of .NET Framework
 description: Describes how to repair the installation of the .NET Framework if you upgrade your operating system.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: V-JEFFBO
 ms.topic: how-to
 ms.technology: dotnet-general

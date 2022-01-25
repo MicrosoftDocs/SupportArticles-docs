@@ -2,7 +2,7 @@
 title: Enable Tablet press-and-hold gesture in MFC
 description: Tablet Windows will send WM_TABLET_QUERYSYSTEMGESTURESTATUS message to inquire about gestures desired. By default, MFC will disable the press-and-hold gesture. There is an easy way to enable that.
 ms.date: 04/22/2020
-ms.prod-support-area-path: Microsoft Foundation Classes (MFC)
+ms.custom: sap:Microsoft Foundation Classes (MFC)
 ms.reviewer: scotbren
 ms.topic: how-to
 ms.technology: visual-cpp-language-compilers

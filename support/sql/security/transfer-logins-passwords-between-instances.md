@@ -2,7 +2,7 @@
 title: Transfer logins and passwords between instances
 description: This article describes how to transfer the logins and the passwords between different instances of SQL Server running on Windows.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Security Issues
+ms.custom: sap:Security Issues
 ms.reviewer: bartd
 ms.topic: how-to
 ms.prod: sql

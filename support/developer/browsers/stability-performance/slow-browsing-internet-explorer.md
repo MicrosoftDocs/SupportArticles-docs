@@ -2,7 +2,6 @@
 title: Slow browsing in Internet Explorer
 description: This article provides a resolution for the problem where an issue causes Internet Explorer to browse more slowly than expected.
 ms.date: 01/04/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: internet-explorer-stability-performance

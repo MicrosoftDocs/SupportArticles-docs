@@ -2,7 +2,6 @@
 title: Compute/compare hash values by using C#
 description: Describes how to obtain a hash value and how to compare two hash values by using Visual C#.
 ms.date: 04/13/2020
-ms.prod-support-area-path: 
 ms.reviewer: v-ingor
 ms.topic: how-to
 ms.technology: csharp-general

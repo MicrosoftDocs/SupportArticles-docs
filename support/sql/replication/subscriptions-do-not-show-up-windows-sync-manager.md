@@ -2,7 +2,7 @@
 title: Pull subscriptions do not show up in Windows Synchronization Manager
 description: This article provides a workaround for the problem that pull subscriptions are not displaying in Windows Synchronization Manager.
 ms.date: 05/26/2021
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 author: cobibi
 ms.author: v-yunhya
 ms.reviewer: mathoma, tzakir, akbarf, maarumug, brcarrig

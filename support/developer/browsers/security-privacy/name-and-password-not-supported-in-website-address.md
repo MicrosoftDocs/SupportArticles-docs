@@ -2,7 +2,6 @@
 title: URL syntax doesn't contain a username and password
 description: Discusses the default behavior of Internet Explorer for handling user information, such as user name and password, in HTTP and in HTTPS URLs.
 ms.date: 06/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: josborne, ericlaw, gsilva
 ms.technology: internet-explorer-security-privacy
 ---

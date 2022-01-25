@@ -2,7 +2,6 @@
 title: Application that uses ToolTip doesn't release memory
 description: A .NET Windows Forms application may not release memory if using the ToolTip.SetToolTip method incorrectly.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: Tatkins
 ms.technology: dotnet-general
 ---

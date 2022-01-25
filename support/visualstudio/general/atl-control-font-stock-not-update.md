@@ -2,7 +2,7 @@
 title: ATL control font stock property doesn't update
 description: You create an ATL ActiveX control with a Font stock property. When this control is added to a dialog in the Visual Studio dialog editor and you change the font with the dialog editor properties window, the ATL control does not update with the new font.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Integrated development environment (IDE)
+ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: shorne, scotbren
 ms.technology: vs-ide
 ---

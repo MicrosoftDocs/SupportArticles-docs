@@ -2,7 +2,7 @@
 title: Error may be logged after you run a DBCC CHECK command
 description: This article describes how to interpret "Error:17053" and other error messages that may be reported when you run a DBCC command in SQL Server.
 ms.date: 11/03/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: sureshka
 ms.prod: sql
 ---

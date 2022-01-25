@@ -2,7 +2,6 @@
 title: Can't use Ed25519 SSH keys for Azure Linux VMs
 description: Describes an issue that prevents you from using Ed25519 SSH keys in Azure Linux VMs. These keys aren't supported in Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: linux

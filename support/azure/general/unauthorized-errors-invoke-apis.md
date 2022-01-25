@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 3 - Receiving unauthorized errors (401) while invoking APIs
 description: Provides troubleshooting steps to an issue in which you are getting unauthorized errors (401) while invoking APIs.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 author: genlin
 ms.author: genli
 ms.service: api-management

@@ -2,7 +2,7 @@
 title: Create a DCOM client server application
 description: This article describes how to create, package, and deploy a Distributed Component Object Model (DCOM) client/server application by using Visual Basic.
 ms.date: 10/12/2020
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.topic: how-to
 ms.technology: visual-basic-language-compilers
 ---

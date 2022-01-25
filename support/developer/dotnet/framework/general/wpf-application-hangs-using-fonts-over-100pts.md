@@ -2,7 +2,6 @@
 title: WPF application hangs when you use fonts over 100 pts in size
 description: This article provides a resolution for the problem where application becomes unresponsive and hangs indefinitely.
 ms.date: 01/07/2021
-ms.prod-support-area-path: 
 ms.reviewer: Tatkins
 ms.topic: troubleshooting
 ms.technology: dotnet-general

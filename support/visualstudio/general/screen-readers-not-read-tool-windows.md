@@ -2,7 +2,7 @@
 title: Screen readers can't read tool windows
 description: Visual Studio 2012 tool windows no longer accessible via screen reader software, due to scrollbar theming.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Integrated development environment (IDE)
+ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: eddo, cbrochu
 ms.technology: vs-ide
 ---

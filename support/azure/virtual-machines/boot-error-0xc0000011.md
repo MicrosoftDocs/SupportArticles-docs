@@ -2,7 +2,6 @@
 title: Boot error code 0xc0000011 on an Azure VM
 description: Provides the resolution for the error code 0xc0000011 in the Azure VM.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.collection: windows
