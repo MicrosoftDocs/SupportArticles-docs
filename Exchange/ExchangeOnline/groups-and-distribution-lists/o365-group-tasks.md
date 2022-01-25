@@ -48,7 +48,8 @@ Tenant administrators perform many common tasks to manage Microsoft 365 groups. 
   - [Microsoft 365 group migration](#microsoft-365-group-migration-between-tenants)
   - [Microsoft 365 group deletion](#microsoft-365-group-deletion)
   - [Export Microsoft 365 Groups information](#export-microsoft-365-groups-information)
-  - [Microsoft 365 group mailbox size](#microsoft-365-group-mailbox-size)]
+  - [Microsoft 365 group mailbox size](#microsoft-365-group-mailbox-size)
+  - [Microsoft 365 group usage report](#microsoft-365-group-usage-report)
 - Useful scripts for Microsoft 365 Groups management
   - [Sample 1: See all the groups together with created date, owner, and membership count](#sample-1-see-all-the-groups-together-with-created-date-owner-and-membership-count)
   - [Sample 2: Create a report for users in a group](#sample-2-create-a-report-for-users-in-a-group)
@@ -503,6 +504,10 @@ The size limit of Microsoft 365 group mailboxes is 50 GB by default. The followi
    ```powershell
    Set-Mailbox Marketing -GroupMailbox -ProhibitSendReceiveQuota 100GB -ProhibitSendQuota 95GB
    ````
+
+### Microsoft 365 Group usage report
+
+In the Microsoft 365 groups report, you can gain insights into the activity of groups in your organization, such as Emails received in Exchange, Messages in Yammer. For more information, see [Microsoft 365 Reports in the admin center](https://aka.ms/M365GroupUsageReport).
 
 [Back to top](#summary)
 
