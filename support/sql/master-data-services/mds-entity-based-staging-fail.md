@@ -2,7 +2,7 @@
 title: MDS entity-based staging may fail
 description: This article provides resolutions for the problem where MDS entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server 2012.
 ms.date: 02/22/2021
-ms.prod-support-area-path: Master Data Services
+ms.custom: sap:Master Data Services
 ms.prod: sql
 ---
 # MDS entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server 2012

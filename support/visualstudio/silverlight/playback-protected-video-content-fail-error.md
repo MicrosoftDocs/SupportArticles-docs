@@ -2,7 +2,6 @@
 title: Playback of protected video content fails
 description: This article provides a resolution for the problem that occurs when you attempt to play a video containing DRM-protected content.
 ms.date: 01/04/2021
-ms.prod-support-area-path: 
 ms.reviewer: jebishop
 ms.topic: troubleshooting
 ms.technology: vs-silverlight

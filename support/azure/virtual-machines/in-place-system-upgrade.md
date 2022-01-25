@@ -2,7 +2,6 @@
 title: Steps for in-place system upgrades for supported Windows 10 Azure VMs and workarounds for unsupported versions
 description: Describes how to work around the unsupported in-place system upgrade on a Windows Azure VM.
 ms.date: 06/29/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

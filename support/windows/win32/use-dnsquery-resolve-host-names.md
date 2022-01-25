@@ -2,7 +2,7 @@
 title: Use the DnsQuery to resolve host names
 description: This article provides a Win32 console application sample that illustrates how to use the DnsQuery function to send a query to a DNS server.
 ms.date: 01/29/2021
-ms.prod-support-area-path: Networking Development
+ms.custom: sap:Networking Development
 ms.topic: how-to
 ms.technology: windows-dev-apps-networking-dev
 ---

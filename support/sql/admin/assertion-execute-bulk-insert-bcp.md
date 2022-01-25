@@ -2,7 +2,7 @@
 title: Assertion when you execute Bulk Insert or BCP 
 description: This article provides a workaround for the problem that occurs when you try to execute a Bulk Insert or BCP operation.
 ms.date: 12/01/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
 ms.prod: sql
 ---

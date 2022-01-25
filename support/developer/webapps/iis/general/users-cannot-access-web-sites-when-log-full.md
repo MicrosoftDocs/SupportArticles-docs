@@ -2,7 +2,6 @@
 title: Can't access Web sites when security event log is full
 description: This article provides resolutions for the problems that a user may experience when the user tries to access a Web site. IIS may return HTTP 500 errors or user logon failures when CrashOnAuditFail is enabled and the security event log is full.
 ms.date: 12/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: LPrete
 ms.technology: iis-general
 ---

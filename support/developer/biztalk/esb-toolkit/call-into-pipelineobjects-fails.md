@@ -2,7 +2,7 @@
 title: Call into PipelineObjects fails
 description: When you make a call into the PipelineObjects assembly from your own application, it may fail with an exception.
 ms.date: 03/18/2020
-ms.prod-support-area-path: ESB Toolkit
+ms.custom: sap:ESB Toolkit
 ---
 # Call into PipelineObjects fails with exception
 

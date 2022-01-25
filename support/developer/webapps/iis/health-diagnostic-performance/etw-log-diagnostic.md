@@ -2,7 +2,7 @@
 title: IIS ETW logs diagnostic
 description: This article describes the information that may be collected from a machine when running the IIS logs diagnostic.
 ms.date: 04/07/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.custom: sap:Health, diagnostic, and performance features
 ms.topic: article
 ms.technology: iis-health-diagnostic-performance
 ---

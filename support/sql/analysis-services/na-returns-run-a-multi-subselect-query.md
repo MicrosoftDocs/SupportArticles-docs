@@ -2,7 +2,7 @@
 title: NA returns when you run a multi-subselect query
 description: This article discusses a problem that occurs when you run a multi subselect query in SQL Server Analysis Services.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.reviewer: Yinn Wong, Ramu Konidena
 ms.prod: sql
 ---

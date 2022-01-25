@@ -2,7 +2,6 @@
 title: Can't run scripts in Azure Active Directory Module for Windows PowerShell
 description: Describes an issue in which you receive an error message when you try to run scripts in Azure Active Directory Module for Windows PowerShell. Provides a resolution.
 ms.date: 10/26/2021
-ms.prod-support-area-path: 
 ms.reviewer: willfid, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

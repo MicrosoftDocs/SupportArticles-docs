@@ -2,7 +2,6 @@
 title: Error when browsing your website over the default cloud service domain url
 description: Provides information about troubleshooting issues in which you get an error (HTTP Error 503. The service is unavailable.) when accessing your cloud service application.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 author: genlin
 ms.author: genli

@@ -2,7 +2,6 @@
 title: Azure Stack Edge support package and device logs
 description: Provides guidance for capturing diagnostic information from Azure Stack Edge.
 ms.date: 04/02/2021
-ms.prod-support-area-path: 
 ms.service: databox
 ms.author: chawon
 author: genlin

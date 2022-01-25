@@ -2,7 +2,7 @@
 title: Kerberos Configuration Manager is available
 description: This article describes the diagnostic tool Kerberos Configuration Manager for SQL Server that is now available.
 ms.date: 01/14/2021
-ms.prod-support-area-path: Connection issues
+ms.custom: sap:Connection issues
 ms.reviewer: sunilbs, asaxton, daleche
 ms.topic: article
 ms.technology: sql-engine-connectionissues 

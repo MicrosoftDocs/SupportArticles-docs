@@ -2,7 +2,6 @@
 title: Can't join a device to a Workplace by using Device Registration Services
 description: Resolves an error when a user can't join a device to a Workplace by using Device Registration Services.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services

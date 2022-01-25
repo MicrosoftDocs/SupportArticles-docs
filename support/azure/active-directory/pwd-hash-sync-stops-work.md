@@ -2,7 +2,6 @@
 title: Password hash synchronization for Azure AD stops working and event ID 611 is logged
 description: Describes an issue in which password hash synchronization for Microsoft Azure Active Directory stops working. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
