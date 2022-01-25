@@ -2,7 +2,6 @@
 title: Out of memory error occurs in Linux Azure virtual machine
 description: Describes how to add swap space in Linux Azure virtual machines.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: linux

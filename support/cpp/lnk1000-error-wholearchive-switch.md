@@ -2,7 +2,7 @@
 title: Link.exe crashes when you use /WHOLEARCHIVE
 description: Fixes an issue in which link.exe crashes with a fatal LNK1000 error when you use /WHOLEARCHIVE switch.
 ms.date: 04/20/2020
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.reviewer: kgao, denizd
 ms.technology: visual-cpp-language-compilers
 ---

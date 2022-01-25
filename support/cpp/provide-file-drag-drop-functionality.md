@@ -2,7 +2,7 @@
 title: Provide file drag and drop functionality
 description: This article describes how to provide file drag-and-drop functionality in a Visual C# application. A ListBox control is used as the destination of the file drag-and-drop procedure. This article also provides a code sample to show how to perform this task.
 ms.date: 09/24/2020
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.topic: how-to
 ms.prod: visual-cpp
 ms.technology: visual-cpp-language-compilers

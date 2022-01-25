@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: azure
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # How to use Secure File Exchange to exchange files with Microsoft Support
@@ -80,11 +79,11 @@ When you open a support case and the country that you specify is:
 
 |Purpose|Endpoint|
 |---|---|
-|Secure File Exchange| [https://support.microsoft.com](https://support.microsoft.com) |
-|Personal Microsoft account sign-in| [https://login.live.com](https://login.live.com) |
-|Work or school Microsoft account sign-in| [https://login.microsoftonline.com](https://login.microsoftonline.com) |
-|Other| [https://api.dtmnebula.microsoft.com](https://api.dtmnebula.microsoft.com/) |
-|Other (Microsoft Cloud Deutschland) - For Germany only| [https://dtmbf​prodapi.azuretrafficmanager.de](https://dtmbfprodapi.azuretrafficmanager.de/) |
+|Secure File Exchange| `https://support.microsoft.com` |
+|Personal Microsoft account sign-in| `https://login.live.com` |
+|Work or school Microsoft account sign-in| `https://login.microsoftonline.com` |
+|Other| `https://api.dtmnebula.microsoft.com` |
+|Other (Microsoft Cloud Deutschland) - For Germany only| `https://dtmbfprodapi.azuretrafficmanager.de`|
 |||
 
 ## What happens when my case is closed?

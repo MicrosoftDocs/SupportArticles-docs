@@ -2,7 +2,7 @@
 title: Support policy for SQL Server
 description: This article describes the support policy for Microsoft SQL Server.
 ms.date: 12/10/2021
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: sureshka
 ms.prod: sql
 ---

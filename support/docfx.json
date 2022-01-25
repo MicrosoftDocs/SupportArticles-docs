@@ -106,6 +106,7 @@
       "ms.prod": {
         "developer/biztalk/**/*.md": "biztalk-server",
         "dotnet/**/*.md": ".net",
+        "developer/dotnet/**/*.md": ".net",
         "developer/webapps/**/*.md": "web-apps-server",
         "developer/webapps/aspnet/**/*.md": "asp.net",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
@@ -124,6 +125,10 @@
       },
       "ms.technology": {
         "dotnet/**/*.md": "",
+        "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
+        "developer/dotnet/framework/general/**/*.md": "dotnet-general",
+        "developer/dotnet/framework/installation/**/*.md": "dotnet-installation",
+        "developer/dotnet/framework/language-compilers/**/*.md": "dotnet-language-compilers",
         "developer/webapps/**/*.md": "",
         "developer/webapps/aspnet/active-server-pages/**/*.md": "aspnet-active-server-pages",
         "developer/webapps/aspnet/development/**/*.md": "aspnet-development",
@@ -206,6 +211,7 @@
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
+        "power-platform/admin/*.md": "power-platform",
         "power-platform/power-apps/*.md": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
@@ -216,10 +222,10 @@
 
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
-        "dotnet/**/*.md": ".NET",
+        "developer/dotnet/**/*.md": ".NET",
         "dotnet/csharp/**/*.md": "C#",
-        "dotnet/framework/**/*.md": ".NET Framework",
-        "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
+        "developer/dotnet/framework/**/*.md": ".NET Framework",
+        "developer/dotnet/wcf/**/*.md": "Windows Communication Foundation",
         "dotnet/visual-basic/**/*.md": "Visual Basic",
         "developer/host-integration-server/**/*.md": "Host Integration Server",
         "developer/webapps/**/*.md": "Web Apps",
@@ -257,7 +263,7 @@
       },
       "searchScope": {
         "developer/biztalk/**/*.md": [ "BizTalk Server" ],
-        "dotnet/**/*.md": [ ".NET" ],
+        "developer/dotnet/**/*.md": [ ".NET" ],
         "developer/host-integration-server/**/*.md": [ "Host Integration Server" ],
         "visualstudio/**/*.md": [ "VS IDE" ],
         "cpp/**/*.md": [ "VS IDE" ],

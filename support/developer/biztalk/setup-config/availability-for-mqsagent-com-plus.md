@@ -2,7 +2,7 @@
 title: High availability for MQSAgent COM+
 description: This article explains that you must install the MQSAgent or MQSAgent2 COM+ application on each cluster node to provide high availability in a clustered environment.
 ms.date: 03/17/2020
-ms.prod-support-area-path: BizTalk Server Setup and Configuration
+ms.custom: sap:BizTalk Server Setup and Configuration
 ms.reviewer: shaheera
 ---
 # Provide high availability for the MQSAgent or MQSAgent2 COM+ application in a clustered environment

@@ -2,7 +2,6 @@
 title: Type many characters into a Silverlight TextBox or RichTextBox
 description: This article provides a resolution for the problem that occurs when you type many characters into a Silverlight TextBox or RichTextBox by using Chinese or Japanese IMEs.
 ms.date: 01/04/2021
-ms.prod-support-area-path: 
 ms.reviewer: MarkRi
 ms.topic: troubleshooting
 ms.technology: vs-silverlight

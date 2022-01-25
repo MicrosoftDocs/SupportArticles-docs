@@ -2,7 +2,6 @@
 title: Azure region access request process
 description: Describes the process to request access for certain Azure regions.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
 author: genlin

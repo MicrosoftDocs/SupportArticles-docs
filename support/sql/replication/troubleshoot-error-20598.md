@@ -2,7 +2,7 @@
 title: Troubleshoot error 20598 
 description: This article describes how to troubleshoot error 20598 in transactional replication and provides workarounds for the problem.
 ms.date: 11/05/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: SYELE, TZAKIR
 ms.prod: sql
 ---

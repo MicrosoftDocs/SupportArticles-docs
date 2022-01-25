@@ -2,7 +2,6 @@
 title: Object deletions aren't synchronized to Azure AD when using the Azure Active Directory Sync tool
 description: Describes an issue in which a deleted on-premises Active Directory object isn't removed from Azure AD when directory synchronization is used in Office 365, Azure, or Microsoft Intune.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users

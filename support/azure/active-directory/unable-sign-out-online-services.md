@@ -2,7 +2,6 @@
 title: Unable to sign out of online services that use Azure AD
 description: Describes a sign-out problem that occurs when you try to sign out of services that use Azure AD. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ---

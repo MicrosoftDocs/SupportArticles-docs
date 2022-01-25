@@ -2,7 +2,7 @@
 title: Visual Studio setup crashes due to fonts
 description: This article works around a problem in which Visual Studio setup crashes. This problem occurs because of a font issue.
 ms.date: 04/22/2020
-ms.prod-support-area-path: Installation
+ms.custom: sap:Installation
 ms.reviewer: selmai, nahals, shibanib, rflaming
 ms.technology: vs-installation-install
 ---

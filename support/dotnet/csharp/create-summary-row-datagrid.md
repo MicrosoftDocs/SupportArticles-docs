@@ -2,7 +2,6 @@
 title: Create a summary row for a DataGrid control
 description: Describes how to create a summary row for a DataGrid control in ASP.NET by using Visual C#.
 ms.date: 04/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: anandh
 ms.topic: how-to
 ms.technology: csharp-general

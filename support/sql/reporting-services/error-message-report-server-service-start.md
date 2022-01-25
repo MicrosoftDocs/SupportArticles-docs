@@ -2,7 +2,7 @@
 title: Error message when Report Server service starts
 description: This article helps you resolve the problem that occurs when you reset Report Server service account. 
 ms.date: 09/21/2020
-ms.prod-support-area-path: Reporting Services
+ms.custom: sap:Reporting Services
 ms.reviewer: lukaszp
 ms.prod: sql
 ---

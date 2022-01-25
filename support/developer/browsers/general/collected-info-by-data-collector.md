@@ -2,7 +2,6 @@
 title: Internet Explorer data collector collected data
 description: Provides the information that's collected by the Internet Explorer Data Collector and the interactive troubleshooting tasks performed in Internet Explorer 9.
 ms.date: 04/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: louiss
 ms.technology: internet-explorer-general
 ---

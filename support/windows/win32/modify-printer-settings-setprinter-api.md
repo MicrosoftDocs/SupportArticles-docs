@@ -2,7 +2,7 @@
 title: Modify printer settings by SetPrinter API
 description: This article introduces that you should do some preparations to properly call SetPrinter API.
 ms.date: 03/09/2020
-ms.prod-support-area-path: Graphics and multimedia development
+ms.custom: sap:Graphics and multimedia development
 ms.reviewer: kayda
 ms.topic: how-to
 ms.technology: windows-dev-apps-graphics-multimedia-dev

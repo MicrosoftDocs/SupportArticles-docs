@@ -2,7 +2,6 @@
 title: Failed to get focus in Internet Explorer 9
 description: This article describes some known problems with Internet Explorer 9's Hang Resistance Feature.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: bachoang
 ms.technology: internet-explorer-development-website
 ---

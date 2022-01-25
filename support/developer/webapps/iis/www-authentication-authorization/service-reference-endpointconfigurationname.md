@@ -2,7 +2,7 @@
 title: EndpointConfigurationName isn't updated
 description: This article describes the problem where EndpointConfigurationName properties in the activities that are added to the workflow aren't updated when you use Update Service Reference feature to update the client proxy and the configuration file.
 ms.date: 03/24/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.custom: sap:WWW authentication and authorization
 ms.reviewer: weixi, lezha, smason
 ms.technology: iis-www-authentication-authorization
 ---

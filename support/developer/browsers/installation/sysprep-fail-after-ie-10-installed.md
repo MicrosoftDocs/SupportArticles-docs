@@ -2,7 +2,6 @@
 title: Sysprep may fail after Internet Explorer 10 is installed
 description: After installing Internet Explorer 10 on Windows 7, Sysprep may fail to execute, since iesysprep.dll registry configurations are point to SysWOW64, instead of System32.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.technology: internet-explorer-installation
 ---

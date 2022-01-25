@@ -2,7 +2,6 @@
 title: Azure AD Connect is not working correctly after an automatic upgrade
 description: Discusses an issue in which Azure AD Connect is only partially upgraded or the password synchronization and the password writeback features are disabled. Provides a workaround.
 ms.date: 05/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users

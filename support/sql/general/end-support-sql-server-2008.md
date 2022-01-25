@@ -2,7 +2,6 @@
 title: End support SQL Server 2008 R2 (KB 4456242)
 description: SQL Server 2008 and SQL Server 2008 R2 are approaching the end of their support life cycle.
 ms.date: 02/12/2020
-ms.prod-support-area-path:
 ms.reviewer: sureshka, suehar
 ms.prod: sql
 ---

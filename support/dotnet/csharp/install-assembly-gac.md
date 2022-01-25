@@ -2,7 +2,6 @@
 title: Install an assembly into GAC
 description: Describes how to install an assembly into the Global Assembly Cache in Visual C#. This article also gives some sample steps to explain related information.
 ms.date: 04/13/2020
-ms.prod-support-area-path: 
 ms.topic: how-to
 ms.technology: csharp-general
 ---

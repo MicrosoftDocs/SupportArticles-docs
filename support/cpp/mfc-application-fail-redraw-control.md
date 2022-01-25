@@ -2,7 +2,7 @@
 title: MFC application can't redraw controls
 description: MFC Windows application fails to redraw the control when it is resized if the control is multiply nested.
 ms.date: 04/22/2020
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.reviewer: gaurap, hihayak, juesaigo
 ms.technology: visual-cpp-language-compilers
 ---
