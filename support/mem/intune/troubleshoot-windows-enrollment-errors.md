@@ -343,3 +343,7 @@ Try one of the following methods:
 
 - Target your Intune compliance policies to devices. Make sure that compliance can be determined before the user logs on.
 - Use offline licensing for store apps. This way, the Windows client doesn't have to check with the Microsoft Store before determining device compliance.
+
+   > [!IMPORTANT]
+    > The following scenario is unsupported.
+    > We have 2 domains- A and B and there is no link between Domain A and Domain B. We have Machines which are local domain joined to Domain A. We donot support scenarios wherein attempts are made to DRS/WPJ these machines + MDM enrol in Domain B that is linked to Azure AD via AAD connect
