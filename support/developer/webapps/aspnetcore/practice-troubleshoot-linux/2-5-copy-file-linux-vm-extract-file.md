@@ -5,6 +5,7 @@ ms.date: 03/29/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
 ms.technology: aspnetcore-practice-troubleshoot-linux
+author: ahmetmithat
 ---
 # Part 2.5 - Copy and extract files from your development environment to Linux
 

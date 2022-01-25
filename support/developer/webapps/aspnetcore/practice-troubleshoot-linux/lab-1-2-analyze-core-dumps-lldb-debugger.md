@@ -5,6 +5,7 @@ ms.date: 04/07/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
 ms.technology: aspnetcore-practice-troubleshoot-linux
+author: ahmetmithat
 ---
 # Lab 1.2 Troubleshooting crashes - analyze system-generated core dump files in lldb debugger
 
