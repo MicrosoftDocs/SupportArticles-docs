@@ -33,7 +33,7 @@ In this scenario, when you use the `ASCII` function to convert the column in the
     SELECT id, col1, ASCII(col1) FROM PublisherTable
     ```
 
-    :::image type="content" source="media/ascii-conversion-shows-different-results-publisher-subscriber/publisher-result.png" alt-text="Screenshot of the results for the publisher table.":::
+    :::image type="content" source="media/ascii-function-returns-different-results-publisher-subscriber/publisher-result.png" alt-text="Screenshot of the results for the publisher table.":::
 
 - Convert the column (`col1`) in the Subscriber database table:
 
@@ -41,7 +41,7 @@ In this scenario, when you use the `ASCII` function to convert the column in the
     SELECT id, col1, ASCII(col1) FROM SubscriberTable
     ```
 
-    :::image type="content" source="media/ascii-conversion-shows-different-results-publisher-subscriber/subscriber-result.png" alt-text="Screenshot of the results for the subscriber tables.":::
+    :::image type="content" source="media/ascii-function-returns-different-results-publisher-subscriber/subscriber-result.png" alt-text="Screenshot of the results for the subscriber tables.":::
 
 ## Workaround
 
