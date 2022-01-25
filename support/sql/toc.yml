@@ -379,6 +379,8 @@
       href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
+    - name: performance/Troubleshooting SQL Server Slow Performance Caused by IO issues
+      href: troubleshoot-sql-io-performance.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
     - name: Understand and resolve blocking problems
