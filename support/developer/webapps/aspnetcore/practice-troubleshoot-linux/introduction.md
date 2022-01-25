@@ -4,6 +4,7 @@ description: This article provides an overview of how to troubleshoot ASP.NET Co
 ms.date: 03/08/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
+author: ahmetmithat
 ---
 # Overview of ASP.NET Core on Linux troubleshooting
 
