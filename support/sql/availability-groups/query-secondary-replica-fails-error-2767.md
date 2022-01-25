@@ -30,7 +30,7 @@ This issue occurs for the reason that an active transaction prevents the log rec
 
 ## Workaround
 
-This problem exists in SQL Server and Azure SQL Database. To work around the issue, you can use one of the following methods as required:
+This problem exists in SQL Server on-premise and Azure SQL Database. To work around the issue, you can use one of the following methods as required:
 
 - If the issue occurs in SQL Server on-premise:
 
