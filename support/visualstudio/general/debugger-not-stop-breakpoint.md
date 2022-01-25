@@ -2,7 +2,7 @@
 title: Visual Studio debugger doesn't stop on breakpoints
 description: Describes the debugger may not stop on breakpoints when you debug ASP.NET applications in Visual Studio .NET.
 ms.date: 04/20/2020
-ms.prod-support-area-path: Debuggers and analyzers
+ms.custom: sap:Debuggers and analyzers
 ms.reviewer: V-KIMWA
 ms.technology: vs-debuggers
 ---

@@ -2,7 +2,7 @@
 title: Installing VC Runtime fails
 description: This article provides the resolution to avoid the filename, directory name, or volume label syntax is incorrect error message that occurs when installing VC Runtime.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Installation
+ms.custom: sap:Installation
 ms.reviewer: smondal
 ms.technology: visual-cpp-installation
 ---

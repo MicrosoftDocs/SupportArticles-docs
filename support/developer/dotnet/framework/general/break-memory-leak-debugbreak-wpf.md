@@ -2,7 +2,6 @@
 title: Break on Memory Leaks check fails in WPF
 description: Works around the problem where the Break on Memory Leaks runtime check fails in WPF applications.
 ms.date: 05/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: vamsp
 ms.technology: dotnet-general
 ---

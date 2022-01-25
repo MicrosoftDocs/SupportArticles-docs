@@ -2,7 +2,7 @@
 title: Create databases or change disk file locations
 description: This article describes how to create databases or change disk file locations on a shared cluster drive on which SQL Server was not originally installed.
 ms.date: 10/30/2020
-ms.prod-support-area-path: Failover Clusters
+ms.custom: sap:Failover Clusters
 ms.reviewer: MICHWE
 ms.topic: how-to
 ms.prod: sql

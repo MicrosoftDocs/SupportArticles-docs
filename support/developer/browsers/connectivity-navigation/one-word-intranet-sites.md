@@ -2,7 +2,6 @@
 title: Access intranet sites via one-word
 description: In order to get an excellent search experience, we are changing the behavior for corporate users, who only need to enter one-word to access intranet sites without entering http://.
 ms.date: 04/20/2020
-ms.prod-support-area-path: 
 ms.reviewer: bhaskerk, davidcon, axelr, joelba, jmann
 ms.technology: internet-explorer-connectivity-navigation
 ---

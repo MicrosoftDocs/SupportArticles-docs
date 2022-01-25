@@ -2,7 +2,6 @@
 title: Web page with frames wrongly shown in Internet Explorer
 description: Provides the solution to solve the problem that the web page that has frames is not displayed correctly in Internet Explorer.
 ms.date: 02/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: davidg
 ms.technology: internet-explorer-development-website
 ---

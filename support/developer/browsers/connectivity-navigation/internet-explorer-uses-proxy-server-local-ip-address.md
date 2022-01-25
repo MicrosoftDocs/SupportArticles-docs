@@ -2,7 +2,7 @@
 title: Internet Explorer uses proxy server for local IP address
 description: This article provides a resolution for the problem that occurs when you connect to a Web server using the Internet Protocol (IP) address or Fully Qualified Domain Name (FQDN) on the local network.
 ms.date: 01/21/2021
-ms.prod-support-area-path: Connectivity and Navigation
+ms.custom: sap:Connectivity and Navigation
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: internet-explorer-connectivity-navigation

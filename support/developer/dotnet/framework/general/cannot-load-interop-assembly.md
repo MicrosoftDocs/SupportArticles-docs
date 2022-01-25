@@ -2,7 +2,7 @@
 title: Can't build a .NET Framework-based project
 description: This article provides a workaround for the problem where you cannot build a .NET Framework-based project in Visual Studio.
 ms.date: 10/27/2020
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: irfanahm
 ms.technology: dotnet-general
 ---

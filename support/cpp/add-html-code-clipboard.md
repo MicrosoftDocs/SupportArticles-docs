@@ -2,7 +2,6 @@
 title: Send HTML code to clipboard by Visual C++
 description: This article describes how to add Hypertext Markup Language (HTML) to the Microsoft Windows clipboard by using Visual C++.
 ms.date: 04/24/2020
-ms.prod-support-area-path: 
 ms.topic: how-to
 ms.technology: visual-cpp-general
 ---

@@ -2,7 +2,6 @@
 title: Error when you use WCF Discovery over UDP
 description: This article provides resolutions for the error that occurs when you use Windows Communication Foundation (WCF) support for WS-Discovery over UDP.
 ms.date: 08/25/2020
-ms.prod-support-area-path: 
 ms.reviewer: rviana, jasonpa
 ms.technology: dotnet-wcf
 ---

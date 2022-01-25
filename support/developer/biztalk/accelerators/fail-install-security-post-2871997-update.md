@@ -2,7 +2,7 @@
 title: Fail to install security or post-2871997 update
 description: This article provides a resolution for the problem when you install security update or any post-2871997 update in Microsoft BizTalk Server 2013, Microsoft BizTalk Server 2010, or Microsoft BizTalk Server 2009.
 ms.date: 09/27/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ms.reviewer: mquian, mandia
 ---
 # Error when you try to install the BizTalk Server Accelerator for HL7

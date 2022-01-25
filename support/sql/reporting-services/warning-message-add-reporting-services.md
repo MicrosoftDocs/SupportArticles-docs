@@ -2,7 +2,7 @@
 title: Warning message when you add a Reporting Services
 description: This article  helps you understand the warning messages that occur when adding a reference to reporting services assemblies when developing custom report project using SQL Server Business Intelligence Development Studio.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Reporting Services
+ms.custom: sap:Reporting Services
 ms.reviewer: ralfks
 ms.prod: sql
 ---
