@@ -2,7 +2,7 @@
 title: Update is replicated as DELETE/INSERT pairs
 description: This article describes that Update statements may be replicated as DELETE/INSERT pairs.
 ms.date: 09/21/2020
-ms.prod-support-area-path: Replication
+ms.custom: sap:Replication
 ms.reviewer: RAJUGIRD
 ms.topic: reference-architecture
 ms.prod: sql

@@ -3,7 +3,7 @@ metadata:
   title: FAQs about C++ library
   description: Answers common questions about the Standard C++ library.
   ms.date: 04/20/2020
-  ms.prod-support-area-path: C and C++ Libraries
+  ms.custom: sap:C and C++ Libraries
   ms.reviewer: JIANGES
   ms.topic: article
   ms.technology: visual-cpp-libraries

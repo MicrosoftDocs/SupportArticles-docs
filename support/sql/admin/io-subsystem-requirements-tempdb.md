@@ -2,7 +2,7 @@
 title: I/O subsystem requirements for the tempdb
 description: This article describes the I/O subsystem requirements for the tempdb database in SQL Server.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: rdorr
 ms.topic: article
 ms.prod: sql

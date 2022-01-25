@@ -2,7 +2,7 @@
 title: Failed state and does not come online
 description: This article provides a resolution for the problem that occurs if resource-specific registry keys are missing.
 ms.date: 10/30/2020
-ms.prod-support-area-path: Failover Clusters
+ms.custom: sap:Failover Clusters
 ms.prod: sql
 ---
 # A SQL Server cluster resource goes to a "failed" state when you try to bring the resource online in SQL Server

@@ -2,7 +2,7 @@
 title: Configure the home page URL takes no effect
 description: This article provides a resolution for the problem where the Policy Configure the home page URL takes no effect in Microsoft Edge.
 ms.date: 01/29/2021
-ms.prod-support-area-path: Administration
+ms.custom: sap:Administration
 ms.reviewer: heikom, daleche
 ms.topic: troubleshooting
 ms.technology: internet-explorer-administration

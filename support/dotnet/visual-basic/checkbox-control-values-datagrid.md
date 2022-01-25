@@ -2,7 +2,6 @@
 title: Examine CheckBox control values in a DataGrid column
 description: This article describes how to loop through each row of an ASP.NET DataGrid control. It also describes how to determine if the ASP.NET CheckBox server control that is used to identify the row has been selected.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
 ms.reviewer: RADOMIRZ
 ms.topic: how-to
 ---

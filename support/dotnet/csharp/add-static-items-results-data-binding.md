@@ -2,7 +2,6 @@
 title: Add static items from data binding to DropDownList
 description: This article describes how to add static items and results from data binding to a DropDownList control by using Visual C#.
 ms.date: 04/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: josborne, earlb
 ms.topic: how-to
 ms.technology: csharp-general

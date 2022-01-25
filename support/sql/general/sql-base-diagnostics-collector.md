@@ -2,7 +2,7 @@
 title: SQL Base Diagnostics Collector
 description: This article describes the information that may be collected from a computer when the SQL Base Diagnostics Collector tool is running.
 ms.date: 11/11/2020
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: ramakoni, dansha
 ms.prod: sql
 ---

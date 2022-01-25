@@ -2,7 +2,7 @@
 title: Statistics for Log Reader and Distribution agents
 description: This article introduces the performance statistics tools for Replication Log Reader and Distribution Agent in SQL Server.
 ms.date: 12/01/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: ramakoni, syele
 ms.prod: sql
 ---

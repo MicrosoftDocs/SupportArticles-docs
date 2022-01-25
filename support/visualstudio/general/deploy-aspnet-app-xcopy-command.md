@@ -2,7 +2,7 @@
 title: Deploy ASP.NET applications by using Xcopy
 description: Describes how to use the MS-DOS Xcopy command to deploy a Microsoft ASP.NET Web application.
 ms.date: 04/22/2020
-ms.prod-support-area-path: Language or compilers
+ms.custom: sap:Language or compilers
 ms.topic: how-to
 ms.technology: vs-language-compilers
 ---

@@ -2,7 +2,6 @@
 title: Internet Explorer 11 doesn't download new Enterprise Mode site list XML file
 description: This article provides a resolution for the problem where IE11 can't download a new Enterprise Mode site list XML file.
 ms.date: 01/04/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: internet-explorer-administration

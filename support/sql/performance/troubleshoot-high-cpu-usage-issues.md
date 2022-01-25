@@ -2,7 +2,7 @@
 title: Troubleshoot high-CPU-usage issues
 description: Provides a procedure to help you fix high-CPU-usage issues for a server that is running SQL Server.
 ms.date: 11/05/2021
-ms.prod-support-area-path: Performance
+ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
 author: cobibi 

@@ -2,7 +2,7 @@
 title: Pass array of values into stored procedure
 description: This article describes how to pass array of values into SQL Server stored procedure using XML and Visual Basic .NET.
 ms.date: 10/26/2020
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.topic: how-to
 ms.technology: visual-basic-language-compilers
 ---

@@ -2,7 +2,7 @@
 title: Configure the default document in IIS
 description: This article describes how to configure the default document in Internet Information Services.
 ms.date: 01/29/2021
-ms.prod-support-area-path: WWW Administration and Management
+ms.custom: sap:WWW Administration and Management
 ms.topic: how-to
 ms.technology: iis-www-administration-management
 ---
