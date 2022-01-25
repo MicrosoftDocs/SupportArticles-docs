@@ -81,9 +81,7 @@ To work around the issue, you can use one of the following methods as required:
         GO
         ```
 
-    1. Create permanent statistics on the primary replica.
-
-         You can run the following commands to drop the query-generated statistics, and then create statistics in the column `c1` of the table `t1`.
+    1. Create permanent statistics in the column `c1` of the table `t1` on the primary replica.
 
         ```sql
         CREATE STATISTICS t1c1 ON t1(c1)
