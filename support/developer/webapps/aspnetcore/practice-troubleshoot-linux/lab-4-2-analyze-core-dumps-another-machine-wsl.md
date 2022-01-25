@@ -5,6 +5,7 @@ ms.date: 06/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
 ms.technology: aspnetcore-practice-troubleshoot-linux
+author: ahmetmithat
 ---
 # Lab 4.2 Analyze core dump files on another machine - Using WSL to open core dump files
 

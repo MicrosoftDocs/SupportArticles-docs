@@ -5,7 +5,7 @@ ms.date: 03/08/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
 ms.technology: aspnetcore-practice-troubleshoot-linux
-coauthors: ahmetmithat
+author: ahmetmithat
 ---
 # Part 1.3 - Install .NET Core in Linux
 
