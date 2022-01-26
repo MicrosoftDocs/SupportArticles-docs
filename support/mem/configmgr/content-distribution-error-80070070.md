@@ -2,7 +2,7 @@
 title: Content distribution to a CMG or cloud DP fails 
 description: Describes an issue in which content distribution to a Configuration Manager CMG or cloud DP fails with error 80070070 when the BranchCache feature is enabled.
 ms.date: 06/15/2020
-ms.prod-support-area-path: Boot images
+ms.custom: sap:Boot images
 ---
 # Error 80070070 during content distribution to a CMG or cloud DP in Configuration Manager
 

@@ -2,7 +2,6 @@
 title: Health Service doesn't process configuration files
 description: Fixes an issue where Health Service doesn't process configuration files on a domain controller that's running the Operations Manager agent.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # Operations Manager Health Service doesn't process configuration files and logs events 7022 and 1220
 

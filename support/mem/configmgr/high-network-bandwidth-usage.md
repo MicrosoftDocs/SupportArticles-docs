@@ -2,7 +2,6 @@
 title: High network bandwidth usage
 description: Unexpectedly high network bandwidth consumption occurs when clients scan for updates from the local Windows Server Update Services server.
 ms.date: 08/12/2020
-ms.prod-support-area-path:
 ms.reviewer: rshastri, wesk, lamosley, v-jeffbo, jarrettr, yvetteo, brianhun
 ---
 # Unexpected high network bandwidth consumption when clients scan for updates from local WSUS server

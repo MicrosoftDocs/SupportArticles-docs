@@ -2,7 +2,6 @@
 title: Antivirus exclusions recommendations
 description: Describes some recommendations for antivirus exclusions that relate to Operations Manager. These exclusions include process-based exclusions, directory-specific exclusions, and file name extension-specific exclusions.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: adoyle, adoyle
 ---
 # Recommendations for antivirus exclusions that relate to Operations Manager
