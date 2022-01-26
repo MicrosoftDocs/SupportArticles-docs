@@ -34,3 +34,5 @@ Microsoft Teams released the device log feature that can help you troubleshoot T
 5. Extract the downloaded folder, and then check the file that's named staring with **Skylib**. This file is the media log that contains diagnostic data.
 
    :::image type="content" source="media/collect-device-logs/skylib-file.png" alt-text="Screenshot of the extracted files. The file that's named staring with Skylib is highlighted.":::
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
