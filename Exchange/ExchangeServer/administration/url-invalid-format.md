@@ -4,7 +4,7 @@ description: Describes an issue in which you receive an error message when you t
 author: simonxjx
 audience: ITPro
 ms.service: o365-administration
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 

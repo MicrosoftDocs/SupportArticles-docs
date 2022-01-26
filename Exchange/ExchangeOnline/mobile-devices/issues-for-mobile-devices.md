@@ -4,7 +4,7 @@ description: Describes how to collect ActiveSync device logs to troubleshoot syn
 author: simonxjx
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Online

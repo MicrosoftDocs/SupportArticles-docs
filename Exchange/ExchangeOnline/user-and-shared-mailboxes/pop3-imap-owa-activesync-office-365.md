@@ -4,7 +4,7 @@ description: Describes how to enable or disable POP3, IMAP, MAPI, Outlook Web Ap
 author: simonxjx
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 

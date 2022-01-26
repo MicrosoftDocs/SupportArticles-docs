@@ -4,7 +4,7 @@ description: Describes scenarios that requires you to take action before Februar
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Online
