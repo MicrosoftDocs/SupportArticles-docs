@@ -2,7 +2,6 @@
 title: Changes to Deployment Type are deployed unexpectedly
 description: Describes a behavior that Deployment Type changes are deployed unexpectedly and can't be rolled back.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: ErinWi, prakask, keiththo
 ---
 # Changes to the Deployment Type are deployed unexpectedly and cannot be rolled back

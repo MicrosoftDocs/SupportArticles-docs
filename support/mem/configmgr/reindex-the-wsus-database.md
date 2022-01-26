@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: vinpa
 ms.date: 02/09/2021
-ms.prod-support-area-path: WSUS
+ms.custom: sap:WSUS
 ---
 # Reindex the WSUS database
 

@@ -5,7 +5,7 @@ author: helenclu
 ms.author: jchornbe
 ms.reviewer: jchornbe
 ms.date: 10/06/2021
-ms.prod-support-area-path: Windows enrollment
+ms.custom: sap:Windows enrollment
 ---
 
 # Sysprep will not run correctly on a Windows 10 device that has been MDM enrolled

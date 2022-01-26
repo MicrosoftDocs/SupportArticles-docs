@@ -2,7 +2,7 @@
 title: Site upgrade gets stuck at database update
 description: Describes an issue that Configuration Manager upgrade gets stuck at the Upgrade ConfigMgr Database step due to many Software Center requests.
 ms.date: 06/04/2020
-ms.prod-support-area-path: SQL Server is slow or unresponsive
+ms.custom: sap:SQL Server is slow or unresponsive
 ---
 # Configuration Manager upgrade gets stuck at Upgrade ConfigMgr Database
 

@@ -2,7 +2,6 @@
 title: A shared nothing live migration fails with error 0x8007274D
 description: Fixes an issue where a live migration of a virtual machine fails with error 0x8007274D in System Center 2012 Virtual Machine Manager SP1.
 ms.date: 08/18/2020
-ms.prod-support-area-path:
 ms.reviewer: msadoff, dewitth
 ---
 # A VM live migration fails with error 0x8007274D in System Center 2012 Virtual Machine Manager SP1

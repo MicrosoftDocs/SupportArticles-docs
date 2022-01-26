@@ -2,7 +2,6 @@
 title: The Create Virtual Machine Wizard fails if the cloud contains special characters
 description: Fixes an issue where the Create Virtual Machine Wizard fails when you try to deploy the new VM to a cloud that has special characters in its name.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # The Create Virtual Machine Wizard fails if the cloud contains special characters

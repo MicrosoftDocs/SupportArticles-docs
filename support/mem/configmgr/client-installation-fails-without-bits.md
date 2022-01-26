@@ -2,7 +2,6 @@
 title: Can't install Configuration Manager client without BITS
 description: Describes a problem in which the System Center 2012 Configuration Manager client installation fails when BITS is not installed.
 ms.date: 06/09/2020
-ms.prod-support-area-path:
 ms.reviewer: keiththo, erinwi
 ---
 # Configuration Manager client installation fails when BITS is not installed

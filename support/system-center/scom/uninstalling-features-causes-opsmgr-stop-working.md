@@ -2,7 +2,6 @@
 title: OpsMgr stops working after uninstalling features
 description: Fixes an issue where Operations Manager stops working after you use msiexec.exe to manually uninstall some features on the Operations Manager management servers.
 ms.date: 07/07/2020
-ms.prod-support-area-path: 
 ms.reviewer: adoyle, jchornbe, mihsar, delhan
 ---
 # Operations Manager stops working after you use msiexec.exe to uninstall features on management servers

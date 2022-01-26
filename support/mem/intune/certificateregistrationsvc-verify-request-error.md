@@ -2,7 +2,7 @@
 title: Troubleshoot HTTP 500 error on SCEP requests in Intune
 description: Fixes an issue in which the certificate registration point (CRP) application pool returns HTTP 500 error messages and the request can't be verified.
 ms.date: 09/09/2021
-ms.prod-support-area-path: Device protection
+ms.custom: sap:Device protection
 ms.reviewer: joelste, intunecic, alra
 ---
 # HTTP 500 errors on CertificateRegistrationSvc verify request in Intune

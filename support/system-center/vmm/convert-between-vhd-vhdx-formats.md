@@ -2,7 +2,6 @@
 title: Convert between VHD and VHDX formats
 description: Fixes an issue in which a Virtual Machine Manager template referencing a VHDX cannot be deployed to a Windows Server 2008 Hyper-V server.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ---
 # How to convert between VHD and VHDX formats in System Center 2012 Virtual Machine Manager
 

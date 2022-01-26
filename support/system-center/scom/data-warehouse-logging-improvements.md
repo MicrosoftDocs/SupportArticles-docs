@@ -2,7 +2,6 @@
 title: Data warehouse logging improvements
 description: Introduces data warehouse logging improvements in System Center 2012 R2 Operations Manager Update Rollup 5.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ---
 # Data warehouse logging improvements that help troubleshoot SQL Server time-out issues
 

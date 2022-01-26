@@ -2,7 +2,6 @@
 title: Operations Manager setup cannot be completed
 description: Describes an installation failure with the Setup Cannot be Completed error when you install System Center Operations Manager.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # Setup Cannot be Completed error when installing System Center Operations Manager
 
