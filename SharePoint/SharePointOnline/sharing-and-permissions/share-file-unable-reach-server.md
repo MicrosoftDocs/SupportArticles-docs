@@ -64,9 +64,9 @@ To change the site storage limits, see [Manage individual site storage limits](/
 
 In some situations, when you share files or folders with users in the classic experience of a SharePoint site, you might receive the following error message:
 
-> You cannot break inheritance for this item because there are too many items with unique permission in this list.
+> You cannot break inheritance for this item because there are too many items with unique permissions in this list.
 
-This message indicates that the list or library reaches the unique security scopes.
+This message indicates that the list or library reaches the limit of the unique permissions. To learn more, see [Unique security scopes per list or library](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#unique-security-scopes-per-list-or-library).
 
 To fix this error, follow the resolution at ["You can't share this folder because there are too many items in the folder" error when trying to share or break inheritance](../lists-and-libraries/error-share-break-inheritance.md).
 
