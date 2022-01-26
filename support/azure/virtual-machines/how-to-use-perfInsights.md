@@ -253,7 +253,7 @@ To run the PerfInsights tool, follow these steps:
     ```console
     PerfInsights /run advanced xp /d 300 /AcceptDisclaimerAndShareDiagnostics
     ```
-    You can use the below example to run Benchmark scenario for 5 mins:
+    You can use the following example to run the benchmark scenario for 5 mins:
     
     ```console
     PerfInsights /run benchmark /d 300 /AcceptDisclaimerAndShareDiagnostics
