@@ -4,7 +4,7 @@ description: Describes an issue in which you receive a "You don't have permissio
 author: MaryQiu1987
 audience: ITPro
 ms.service: o365-administration
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 manager: dcscontentpm
 ms.custom: CSSTroubleshoot

@@ -5,7 +5,7 @@ author: simonxjx
 manager: dcscontentpm
 ms.date: 12/17/2020
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: skype-for-business-online
 localization_priority: Normal
 search.appverid:

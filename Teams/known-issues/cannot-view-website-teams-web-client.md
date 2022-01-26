@@ -5,7 +5,7 @@ author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.prod: microsoft-teams
 ms.technology: microsoft-graph
 localization_priority: Normal

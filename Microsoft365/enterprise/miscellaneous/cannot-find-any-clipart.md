@@ -5,7 +5,7 @@ author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
 ms.service: sharepoint-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 localization_priority: Normal

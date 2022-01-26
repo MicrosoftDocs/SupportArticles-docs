@@ -9,7 +9,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 appliesto:

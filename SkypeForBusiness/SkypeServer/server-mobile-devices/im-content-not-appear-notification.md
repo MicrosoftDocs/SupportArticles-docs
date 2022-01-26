@@ -5,7 +5,7 @@ author: simonxjx
 ms.author: vliorgu
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.prod: skype-for-busines-itpro
 localization_priority: Normal
 ms.custom: 

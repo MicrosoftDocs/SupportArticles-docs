@@ -5,7 +5,7 @@ author: helenclu
 ms.reviewer: sohailta
 manager: serdars
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: msteams
 f1.keywords:
 - NOCSH

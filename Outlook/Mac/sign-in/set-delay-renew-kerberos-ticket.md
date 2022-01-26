@@ -11,7 +11,7 @@ ms.custom:
 - Outlook for Mac
 - CSSTroubleshoot
 ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - Outlook 2016 for Mac

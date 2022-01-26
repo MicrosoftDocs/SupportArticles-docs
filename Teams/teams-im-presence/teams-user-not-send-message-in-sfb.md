@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: skype-for-business-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: dahans, cbland
 ms.custom: CSSTroubleshoot

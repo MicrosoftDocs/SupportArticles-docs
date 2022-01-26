@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: sharepoint-powershell
 ms.custom: CSSTroubleshoot
 search.appverid:

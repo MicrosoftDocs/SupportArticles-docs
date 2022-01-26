@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: o365-administration
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto:
 - Office 365 User and Domain Management

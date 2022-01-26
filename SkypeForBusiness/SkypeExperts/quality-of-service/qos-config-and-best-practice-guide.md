@@ -6,7 +6,7 @@ author: simonxjx
 manager: dcscontentpm
 ms.date: 8/27/2019
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: skype-for-business-itpro
 localization_priority: Normal
 search.appverid:

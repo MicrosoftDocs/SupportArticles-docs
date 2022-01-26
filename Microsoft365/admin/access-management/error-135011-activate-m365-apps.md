@@ -5,7 +5,7 @@ author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 9/4/2020
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: microsoft-365
 localization_priority: Normal
 search.appverid:

@@ -5,7 +5,7 @@ author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
 ms.service: o365-solutions
-ms.topic: article
+ms.topic: landing-page
 ms.author: v-maqiu
 localization_priority: Normal
 ms.custom:

@@ -5,7 +5,7 @@ author: v-matthamer
 manager: dcscontentpm
 ms.date: 3/8/2021
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: sharepoint
 localization_priority: Normal
 search.appverid:

@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 9/11/2019
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: excel
 localization_priority: Normal
 ms.custom: 

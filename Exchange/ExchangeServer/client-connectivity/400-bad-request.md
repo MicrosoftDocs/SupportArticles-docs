@@ -4,7 +4,7 @@ description: Describes a situation in which you receive an "HTTP 400 Bad Request
 author: simonxjx
 audience: ITPro
 ms.service: exchange-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Server
