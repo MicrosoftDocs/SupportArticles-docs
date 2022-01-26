@@ -34,7 +34,7 @@ This document contains troubleshooting steps for common issues with syncing list
     :::image type="content" source="./media/common-sync-issues/background-processes.png" alt-text="Microsoft SharePoint shows as a background process.":::
 
     - If SharePoint is running, continue to step 2.
-    - If SharePoint isn't running, List sync isn't running. Your SharePoint site might not have List sync yet because we are still rolling out the feature. Please wait for the rollout to complete, and then List sync will be available.
+    - If SharePoint isn't running, List sync isn't running. Your orgnization might have prevented it from synching, see [Lists sync policies](https://docs.microsoft.com/sharepoint/lists-sync-policies). 
 
 1. <a href=#logging>Enable Web App Logging</a>.  
 1. Check the console log for a line that includes "Found list". It will look similar to this example:
@@ -133,3 +133,4 @@ Select **Contact Support**.
 ## References
 
 - [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9)
+- [Lists sync policies](https://docs.microsoft.com/sharepoint/lists-sync-policies)
