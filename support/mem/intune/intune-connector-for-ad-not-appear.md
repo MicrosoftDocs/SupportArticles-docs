@@ -2,7 +2,7 @@
 title: Intune Connector for Active Directory installed but doesn't appear
 description: Describes an issue in which the Intune Connector for Active Directory is installed but doesn't appear in Intune, and you receive an error message.
 ms.date: 10/06/2021
-ms.prod-support-area-path: Windows enrollment
+ms.custom: sap:Windows enrollment
 ---
 # Intune Connector for Active Directory is installed but doesn't appear in Intune
 

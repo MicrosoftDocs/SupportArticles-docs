@@ -2,7 +2,7 @@
 title: Enable BitLocker task fails with error 80070057
 description: Describes an issue in which the Enable BitLocker task fails with error 80070057 in Configuration Manager.
 ms.date: 06/04/2020
-ms.prod-support-area-path: BitLocker and MBAM
+ms.custom: sap:BitLocker and MBAM
 ---
 # Enable BitLocker task fails with error 80070057 in Configuration Manager
 

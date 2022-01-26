@@ -2,7 +2,6 @@
 title: Troubleshoot software update scan failures
 description: Describes how to troubleshoot software update scan failures in Configuration Manager.
 ms.date: 05/25/2020
-ms.prod-support-area-path:
 ---
 # Troubleshoot software update scan failures in Configuration Manager
 

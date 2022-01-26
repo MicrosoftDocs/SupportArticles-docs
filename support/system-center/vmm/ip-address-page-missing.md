@@ -2,7 +2,6 @@
 title: The IP Address page is missing when creating a cluster
 description: Fixes an issue where the IP Address page is missing in the cluster creation wizard.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # The IP Address page in the System Center 2012 Virtual Machine Manager cluster creation wizard is missing

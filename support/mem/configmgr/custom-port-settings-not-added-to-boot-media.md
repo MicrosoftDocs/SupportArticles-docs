@@ -2,7 +2,6 @@
 title: Custom port settings aren't added to boot media
 description: Describes an issue in which custom port settings aren't added to boot media in Configuration Manager.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: brianhun
 ---
 # Custom port settings aren't added to boot media in Configuration Manager

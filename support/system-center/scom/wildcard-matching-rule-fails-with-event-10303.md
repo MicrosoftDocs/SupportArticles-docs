@@ -2,7 +2,6 @@
 title: A wildcard matching rule fails with event 10303
 description: Fixes an issue in which a wildcard matching rule fails and event ID 10303 is logged in System Center Operations Manager.
 ms.date: 01/03/2022
-ms.prod-support-area-path: 
 ms.reviewer: adoyle, jchornbe, delhan
 ---
 # A Wildcard matching rule fails and event ID 10303 is logged in Operations Manager

@@ -2,7 +2,6 @@
 title: Logical disks and network adapters incorrectly marked as deleted
 description: Fixes an issue in which logical disk and network adapter objects are marked for deletion in Service Manager, even though those items still exist in Operations Manager.
 ms.date: 08/04/2020
-ms.prod-support-area-path: 
 ms.reviewer: scottwal, veharshv
 ---
 # Logical disks and network adapters marked deleted in Service Manager still exist in Operations Manager

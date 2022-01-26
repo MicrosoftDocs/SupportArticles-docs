@@ -2,7 +2,6 @@
 title: Configure operating system deployment
 description: Describes the step-by-step process for configuring System Center 2012 Configuration Manager to capture, deploy and install an existing Windows image.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ---
 # Configure operating system deployment in System Center 2012 Configuration Manager

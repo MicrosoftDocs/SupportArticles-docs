@@ -2,7 +2,6 @@
 title: Which ConfigMgr version to deploy a particular Windows version
 description: Provides an overview of the versions of Configuration Manager that correspond to particular versions of Windows in a Windows installation scenario.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: kimmar
 ---
 # Which version of Configuration Manager to deploy a particular version of Windows
