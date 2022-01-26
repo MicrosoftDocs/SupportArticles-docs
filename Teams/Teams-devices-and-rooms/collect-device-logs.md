@@ -1,5 +1,5 @@
 ---
-title: How to collect device logs
+title: Collect Teams device logs
 description: Describes the detailed steps to collect device logs in Teams admin center.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -17,21 +17,20 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# How to collect device logs in Teams admin center
+# Collect Teams device logs
 
-Microsoft Teams released the device log feature that can help you troubleshoot Teams issues. This article provides the detailed steps to collect the device logs.
+If you're having issues with Microsoft Teams devices, you'll need diagnostic logs from them to troubleshoot the issues. Here's how you can collect the device logs.
 
-1. Open [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
-2. In the left navigation, go to **Teams devices**, and then select the category of devices (such as **Phones**).
-3. Select the name of the device from which you want to download logs, and then select **Download device logs**.
+1. In the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Teams devices** from the navigation menu on the left, and then select the category of devices (such as **Phones**).
+2. Select the name of the device from which you want to download logs, and then select **Download device logs**.
 
    :::image type="content" source="media/collect-device-logs/teams-devices.png" alt-text="Screenshot of the Teams device field. The feature titled Download device logs is highlighted.":::
 
-4. After a few minutes, select the **History** tab, and then select the **Download** link under **Diagnostics file**.
+3. After a few minutes, select the **History** tab, and then select the **Download** link under **Diagnostics file**.
 
    :::image type="content" source="media/collect-device-logs/history.png" alt-text="Screenshot of the History menu. The Download link is highlighted.":::
 
-5. Extract the downloaded folder, and then check the file that's named staring with **Skylib**. This file is the media log that contains diagnostic data.
+4. Extract the downloaded folder, and then look for a file with a name that begins with Skylib. This file is the media log that contains diagnostic data.
 
    :::image type="content" source="media/collect-device-logs/skylib-file.png" alt-text="Screenshot of the extracted files. The file that's named staring with Skylib is highlighted.":::
 
