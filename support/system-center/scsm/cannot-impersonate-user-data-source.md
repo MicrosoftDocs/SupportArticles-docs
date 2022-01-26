@@ -2,7 +2,6 @@
 title: Can't impersonate user for data source 
 description: Fixes an issue where you receive the Cannot impersonate user for data source error when selecting a report in the Service Manager console.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ---
 # Cannot impersonate user for data source error when selecting a report in Service Manager
 

@@ -2,7 +2,6 @@
 title: New databases from a secondary DPM server aren't automatically added
 description: Fixes an issue in which new databases from a secondary DPM server aren't automatically added for protection to a SQL Server instance.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ---
 # New databases from a secondary DPM server aren't automatically added to a SQL Server instance
 
@@ -31,11 +30,11 @@ To resolve this problem, enable SQL Server auto protection on the secondary DPM 
 4. Select the SQL Server instance by selecting the check box next to the name, and then right-click the name.
 5. Select the **Turn on auto protection** pop-up window, as shown in the following screenshot.
 
-    ![turn on auto protection](./media/new-databases-not-automatically-added/turn-on-auto-protection.jpg)  
+    :::image type="content" source="media/new-databases-not-automatically-added/turn-on-auto-protection.png" alt-text="Turn on the SQL Server auto protection on the secondary DPM server." border="false":::
 
     After auto protection is turned on, the screen resembles the following:
 
-    ![auto protection on](./media/new-databases-not-automatically-added/auto-protection-on.jpg)
+    :::image type="content" source="media/new-databases-not-automatically-added/auto-protection-on.png" alt-text="The SQL Server auto protection on the secondary DPM server is turned on." border="false":::
 
 6. Select **Next**, and then continue the **Modify Protection Group** wizard to save the change.
 

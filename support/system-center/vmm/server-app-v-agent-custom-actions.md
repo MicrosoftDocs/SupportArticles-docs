@@ -2,7 +2,6 @@
 title: Server App-V Agent installer custom actions
 description: Describes a list of the custom actions for the Server Application Virtualization (Server App-V) Agent installer package.
 ms.date: 04/29/2020
-ms.prod-support-area-path: 
 ms.reviewer: jeffpatt
 ---
 # Custom actions for the Server Application Virtualization (Server App-V) Agent installer package

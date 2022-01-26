@@ -2,7 +2,6 @@
 title: Option isn't available to reprotect VMware VMs
 description: The option to reprotect VMware VMs on a new DPM or MABS server isn't available.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ---
 # Option isn't available to reprotect VMware VMs on a new DPM or MABS server
 
@@ -40,7 +39,7 @@ VCenter has a custom attribute called **DPMServer** that's used to specify the n
 
 The following example shows the properties of a virtual machine called *ir-dr-cc-1disk*. The `DPMserver` attribute shows the name of the current DPM server owner.
 
-![Using VMware vCenter console](./media/option-unavailable-to-reprotect-vm/properties.png)
+:::image type="content" source="media/option-unavailable-to-reprotect-vm/properties.png" alt-text="An example shows the properties of a virtual machine and the DPMserver attribute shows the name of the current DPM server owner.":::
 
 ## Resolution 2: Use VMware PowerCli
 

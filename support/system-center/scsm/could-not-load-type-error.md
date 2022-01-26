@@ -2,7 +2,6 @@
 title: Could not load type error
 description: Fixes an issue where you get the Could not load type error when you try to create an Exchange Connector in System Center 2016 Service Manager.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: austinm, luche
 ---
 # Could not load type error when creating an Exchange Connector in System Center 2016 Service Manager

@@ -2,7 +2,6 @@
 title: Error 25310 when creating a cluster
 description: Fixes an issue in which you can't create a cluster with the recently created hosts and receive error 25310.
 ms.date: 04/26/2020
-ms.prod-support-area-path: 
 ---
 # Creating a cluster in System Center 2012 Virtual Machine Manager fails with error 25310
 

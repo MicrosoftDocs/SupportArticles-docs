@@ -2,8 +2,9 @@
 title: Azure Active Directory is sending the token to an incorrect reply URL endpoint or localhost.
 description: Describes a problem in which Azure Active Directory is sending the token to an incorrect reply URL endpoint or localhost.
 ms.date: 03/15/2021
-ms.prod-support-area-path: 
 ms.reviewer: bernawy
+ms.service: active-directory
+ms.subservice: app-mgmt
 ---
 # Azure Active Directory is sending the token to an incorrect reply URL endpoint or localhost
 

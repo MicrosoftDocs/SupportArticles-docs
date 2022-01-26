@@ -2,8 +2,9 @@
 title: Fail to connect to the Microsoft Azure Information Protection by using Windows PowerShell with error (The attempt to connect to the Windows Azure AD Rights Management
 description: Describes an issue in which you can't connect to the Azure Information Protection by using Windows PowerShell in Office 365. Provides a resolution.
 ms.date: 10/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Unable to connect to Azure Information Protection using Windows PowerShell
 

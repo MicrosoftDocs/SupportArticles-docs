@@ -1,28 +1,28 @@
 ---
-title: Error 0x87D13BA2 deploying a macOS LOB app
-description: Fixes the 0x87D13BA2 error when you deploy a macOS LOB app that contains multiple components.
+title: Error 0x87D13BA2 deploying a macOS LOB app in Intune
+description: Fixes the 0x87D13BA2 error when you deploy a macOS LOB app that contains multiple components in Microsoft Intune.
 author: helenclu
 ms.author: luche
 ms.reviewer: markstan
-ms.date: 02/18/2021
-ms.prod-support-area-path: App management
+ms.date: 10/18/2021
+ms.custom: sap:App management
 ---
 # Error 0x87D13BA2 when you deploy a macOS LOB app
 
-This article fixes a problem that occurs when you deploy a macOS LOB app in Microsoft Intune, and you receive the following error message:
+This article gives a solution to the following error message when you deploy a macOS line-of-business (LOB) app in Microsoft Intune:
 
 > One or more apps contain invalid bundleIds. (0x87D13BA2)
 
 ## Symptoms
 
-You publish a macOS line-of-business (LOB) app by using Intune. When you select the app in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the **Device install status** shows the following information about the app:
+You publish a macOS LOB app using Intune. When you select the app in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the **Device install status** shows the following information about the app:
 
 - **Status**: Failed
 - **Status details**: One or more apps contain invalid bundleIds. (0x87D13BA2)
 
 Here's an example of Cisco AnyConnect VPN:
 
-:::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error.png" alt-text="Error 0x87D13BA2 ":::
+:::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error-0x87d13ba2.png" alt-text="Screenshot of error 0x87D13BA2 in the Cisco AnyConnect VPN.":::
 
 This problem can occur even if the app is successfully installed on the device.
 
@@ -35,9 +35,9 @@ This problem occurs under the following conditions:
 
 Any app that has multiple components, such as Cisco AnyConnect VPN, can generate this error message.
 
-## Resolution
+## Solution
 
-To fix this problem and enable the macOS LOB app to correctly report its status, follow these steps:
+Use the following steps to fix this problem and enable the macOS LOB app to correctly report its status.
 
 1. Copy the [wrapped application](/mem/intune/apps/lob-apps-macos) in `.intunemac` format to a macOS device. Put the `.intunemac` file into a temporary folder.
 2. Run the following command to extract the `.intunemac` file:
@@ -48,7 +48,7 @@ To fix this problem and enable the macOS LOB app to correctly report its status,
 
    In our example, run `unzip AnyConnect.pkg.intunemac`.
   
-   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/unzip.png" alt-text="Extract the file":::
+   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/unzip.png" alt-text="Extract the file using unzip command.":::
 
    The content of the package will be extracted to a child folder that's named IntuneMacPackage under the temporary folder.
 3. Open the IntuneMacPackage/Metadata/Detection.xml file in a text editor.

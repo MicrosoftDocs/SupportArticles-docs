@@ -1,15 +1,12 @@
 ---
-title: Intune Connector Setup wizard ends prematurely
-description: Describes an issue in which the Microsoft Intune Connector Setup wizard ends prematurely when you install the Intune Certificate Connector (NDESConnectorSetup.exe).
-ms.date: 05/13/2020
-ms.prod-support-area-path: NDES configuration
+title: Troubleshoot when the Intune Connector Setup Wizard ends prematurely
+description: Resolves an issue in which the Microsoft Intune Connector Setup Wizard ends prematurely when you install the Intune Certificate Connector (NDESConnectorSetup.exe).
+ms.date: 09/09/2021
+ms.custom: sap:NDES configuration
 ---
-# The Microsoft Intune Connector Setup wizard ends prematurely
+# The Microsoft Intune Connector Setup Wizard ends prematurely
 
 This article provides the resolution to solve the error message that occurs when you install the Intune Certificate Connector (NDESConnectorSetup.exe).
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4458731
 
 ## Symptoms
 
@@ -17,7 +14,7 @@ When you try to install the Intune Certificate Connector (NDESConnectorSetup.exe
 
 > Microsoft Intune Connector Setup Wizard ended prematurely because of an error.
 
-:::image type="content" source="media/connector-setup-wizard-ends-prematurely/intune-connector-setup-error.png" alt-text="screenshot of Intune Connector setup error" border="false":::
+:::image type="content" source="media/connector-setup-wizard-ends-prematurely/intune-connector-setup-error.png" alt-text="Screenshot of Intune Connector setup ended error." border="false":::
 
 You also find entries that resemble the following in the SetupMSI.log file:
 
@@ -38,11 +35,11 @@ This issue occurs if the **Default Web Site** name in Internet Information Servi
 
 The following is an example that shows that the name was changed to **Default Web Site1**:
 
-:::image type="content" source="media/connector-setup-wizard-ends-prematurely/default-web-site-name.png" alt-text="screenshot of Default Web Site name":::
+:::image type="content" source="media/connector-setup-wizard-ends-prematurely/default-web-site-name.png" alt-text="Screenshot of the Default Web Site name under Sites folder.":::
 
-## Resolution
+## Solution
 
-To fix the issue, follow these steps to restore the **Default Web Site** name to its default value:
+To fix the issue, follow these steps to restore the **Default Web Site** name to its default value.
 
 1. Open IIS Manager.
 2. Expand \<*Server Name*>\\**Sites**, and then locate the default website.
@@ -53,11 +50,11 @@ To fix the issue, follow these steps to restore the **Default Web Site** name to
 
     Find the default website whose ID is **1**.  
 
-    :::image type="content" source="media/connector-setup-wizard-ends-prematurely/web-site-id.png" alt-text="screenshot of Web site ID" border="false":::
+    :::image type="content" source="media/connector-setup-wizard-ends-prematurely/web-site-id.png" alt-text="Screenshot of Web site ID in Advanced Settings window." border="false":::
 
 3. Right-click the default web site, select **Rename**, and then change the name to **Default Web Site**.
 
     > [!NOTE]
-    > You may receive an error message that resembles **Unable to connect to Default Web Site1**. This message can be safely ignored.
+    > You might receive an error message that resembles **Unable to connect to Default Web Site1**. You can ignore this message.
 
 4. After you change the **Default Web Site** name, restart NDESConnectorSetup.exe to install the Intune Certificate Connector.

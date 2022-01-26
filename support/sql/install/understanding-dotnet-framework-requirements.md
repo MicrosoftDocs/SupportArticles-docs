@@ -2,7 +2,7 @@
 title: Understand the .NET Framework requirements
 description: This article introduces that the .NET Framework requirements for various SQL versions starting with SQL Server 2005.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: uttamkp, ramakoni
 ms.topic: article
 ms.prod: sql
@@ -64,7 +64,7 @@ Table 2:
 
 ## How to install or enable .NET Framework 3.5 SP1 on Windows
 
-To install .NET Framework on Windows 8 and later versions of the operating system, review [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows-10).
+To install .NET Framework on Windows 8 and later versions of the operating system, review [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows).
 
 In Windows Server 2008 R2, the .NET Framework is a feature, and installing it is different than previous versions of the Windows operating system. The following procedure explains how to verify that the .NET Framework 3.5.1 is installed. The procedure also explains how to determine whether the .NET Framework is not installed and how you can add it in these environments.
 
@@ -87,7 +87,7 @@ If .NET Framework 3.5.1 is not listed as an installed feature, use one of the fo
     > [!NOTE]
     > If you do not expand the **.NET Framework 3.5.1 Features**  item and check it, the following Add Features Wizard  is started:
 
-    ![Add features wizard](./media/understanding-dotnet-framework-requirements/2014321a.PNG)
+    :::image type="content" source="media/understanding-dotnet-framework-requirements/add-features-wizard.png" alt-text="Screenshot of the Add Features Wizard window." border="false":::
 
     If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then click to select the .NET Framework 3.5.1  check box.
 
@@ -109,7 +109,7 @@ Add-WindowsFeature as-net-framework
 > [!NOTE]
 > See the screen shot for more information:
 
-![PowerShell screen shot](./media/understanding-dotnet-framework-requirements/2014321a.PNG)
+:::image type="content" source="media/understanding-dotnet-framework-requirements/windows-powershell.png" alt-text="Screenshot shows the output of the command in Windows PowerShell." border="false":::
 
 ## References  
 

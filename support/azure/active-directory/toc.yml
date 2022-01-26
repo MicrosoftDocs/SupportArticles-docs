@@ -7,8 +7,12 @@
     href: could-not-verify-account-reset-pwd.md
   - name: Maximum number of devices is reached
     href: maximum-number-of-devices-joined-workplace.md
+  - name: Troubleshoot data freshness alerts in Azure AD Connect Health
+    href: aad-connect-health-data-freshness.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md
+  - name: Understand AD FS sign-in events in Azure AD with Connect Health
+    href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
   - name: Understand Azure AD Connect 1.4 and device disappearance
     href: reference-connect-device-disappearance.md
   - name: Sign-in and Multi-factor Authentication
@@ -17,7 +21,10 @@
       href: authentication-fails-with-error.md
 
   - name: Azure AD Hybrid Sync Agent Installation Issues
+
     items:
+    - name: Installation issues overview
+      href: azure-ad-hybrid-sync-agent-install-welcome.md
     - name: No privileges to install MSI
       href: azure-ad-hybrid-sync-no-privileges-install-msi.md
     - name: Cannot start service AADConnectProvisioningAgent
@@ -39,6 +46,8 @@
         href: error-code-AADSTS50003-cert-or-key-not-configured.md
       - name: Error AADSTS50011 - reply URL mismatch
         href: error-code-AADSTS50011-reply-url-mismatch.md
+      - name: Error AADSTS50020 - guest sign-in to resource tenant fails
+        href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS50105 - user not assigned a role
         href: error-code-AADSTS50105-user-not-assigned-role.md
       - name: Error AADSTS650056 - misconfigured app
@@ -91,6 +100,8 @@
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
     href: troubleshoot-dynamic-groups.md
+  - name: Troubleshoot user creation and deletion issues
+    href: troubleshoot-user-creation-deletion-issues.md
 
 - name: Governance, Compliance and Reporting 
   items:
@@ -160,11 +171,15 @@
     href: unexpected-error-reset-pwd.md
   - name: Verify account error when resetting password
     href: cannot-verify-account-reset-pwd.md
+  - name: Cannot receive MFA verification code
+    href: text-voice-call-verification-code-mfa-not-send.md
 
 - name: User Provisioning and Synchronization
   items:
   - name: Administrator credentials error
     href: admin-credentials-supplied-not-valid.md
+  - name: Azure AD Connect services don't start
+    href: services-sync-not-start.md
   - name: Azure AD Connect hangs during importing
     href: aad-management-agent-hangs-during-import.md
   - name: Azure AD Connect won't work after upgrading
@@ -243,12 +258,10 @@
     href: separate-pwds-required-computer-work-account.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
-  - name: Subdomains and parent domains management
-    href: manage-sub-parent-domain.md
-  - name: Sync services don't start
-    href: services-sync-not-start.md
   - name: Troubleshoot Azure AD Connect installation issues
     href: installation-issues.md
+  - name: Troubleshoot Azure AD Connect version upgrading issues
+    href: troubleshoot-aad-connect-fails-to-install-upgraded-version.md
   - name: Troubleshoot Azure AD Sync installation issues
     href: installation-configuration-wizard-errors.md
   - name: Troubleshoot Azure AD Connect objects and attributes

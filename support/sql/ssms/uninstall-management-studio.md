@@ -2,7 +2,7 @@
 title: Uninstall SQL Server Management Studio
 description: This article describes how to uninstall the Microsoft SQL Server Management Studio that is included with SQL Server 2014 and earlier versions of the product.
 ms.date: 11/19/2020
-ms.prod-support-area-path: Management Studio
+ms.custom: sap:Management Studio
 ms.topic: how-to
 ms.prod: sql
 ---
@@ -36,7 +36,7 @@ To uninstall SQL Server Management Studio from Windows 10, Windows Server 2016, 
 
 1. Select **Remove** on the SQL Server dialog pop-up to launch the SQL Server installation wizard.
 
-   ![Remove product image](./media/uninstall-management-studio/remove-product.png)
+   :::image type="content" source="media/uninstall-management-studio/remove-product.png" alt-text="Screenshot of the Remove option on the SQL Server dialog pop-up." border="false":::
 
 1. On the **Select Instance** page, use the drop-down box to specify an instance of SQL Server to remove, or specify the option to remove only the SQL Server shared features and management tools. To continue, select **Next**.
 
@@ -52,11 +52,11 @@ To uninstall SQL Server from Windows Server 2008, Windows Server 2012 and Window
 
 1. Right-click **Microsoft SQL Server (Version) (Bit)** and **select Uninstall**. For example, SQL Server 2012 (64-bit).
 
-   ![Uninstall change image](./media/uninstall-management-studio/uninstall-change.png)
+   :::image type="content" source="media/uninstall-management-studio/uninstall-change.png" alt-text="Screenshot of Programs and features dialog box in Control Panel." border="false":::
 
 1. Select **Remove** on the SQL Server dialog pop-up to launch the SQL Server installation wizard.
 
-   ![Remove product image](./media/uninstall-management-studio/remove-product.png)
+   :::image type="content" source="media/uninstall-management-studio/remove-product.png" alt-text="Screenshot of the Remove option on the SQL Server dialog pop-up in Windows 2008 - 2012 R2." border="false":::
 
 1. On the **Select Instance** page, use the drop-down box to specify an instance of [!INCLUDEssNoVersion] to remove, or specify the option to remove only the [!INCLUDEssNoVersion] shared features and management tools. To continue, select **Next**.
 

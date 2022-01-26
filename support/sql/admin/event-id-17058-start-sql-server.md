@@ -1,9 +1,9 @@
 ---
 title: Event ID 17058 and SQL Server doesn't start
 description: This article provides resolutions for the problem where SQL Server fails to start and event ID 17058 is logged in the Application event log.
-ms.date: 1/28/2020
-author: MaryQiu1987
-ms.author: v-maqiu
+ms.date: 12/17/2021
+author: cobibi
+ms.author: v-yunhya
 ms.reviewer: ramakoni
 ---
 # Event ID 17058 and SQL Server doesn't start
@@ -12,7 +12,7 @@ _Applies to:_ &nbsp; SQL Server
 
 ## Symptoms
 
-If the Microsoft SQL Server service can’t find the path that's configured to create error logs, the service doesn't start, and you receive  the following error message, depending on how you try to start the service:
+If the Microsoft SQL Server service can't find the path that's configured to create error logs, the service doesn't start, and you receive  the following error message, depending on how you try to start the service:
 
 - By using the Services applet:
 
@@ -47,7 +47,7 @@ If the Microsoft SQL Server service can’t find the path that's configured to c
 
 2. Verify the path that's set for the ErrorLog file by using SQL Server Configuration Manager.
 
-   ![Screenshot of checking the path in SQL Server Configuration Manager.](./media/event-id-17058-start-sql-server/verify-path.png)
+   :::image type="content" source="media/event-id-17058-start-sql-server/verify-path.png" alt-text="Screenshot of the Startup Parameters tab of the SQL Server (MSSQLSERVER) Properties dialog box.":::
 
    You can also verify the path in the following registry entry:
 
@@ -84,6 +84,6 @@ If the Microsoft SQL Server service can’t find the path that's configured to c
 
 4. Update the path to a valid folder in which the SQL Server startup account has permissions to create, read, write, and update files.
 
-   ![Screenshot of updating the path.](./media/event-id-17058-start-sql-server/update-path.png)
+   :::image type="content" source="media/event-id-17058-start-sql-server/update-path.png" alt-text="Screenshot of the Startup Parameters tab which shows the folder path can be updated by using the Update button.":::
 
 5. Restart the SQL Server service.

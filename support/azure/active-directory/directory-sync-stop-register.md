@@ -2,8 +2,9 @@
 title: Directory synchronization to Azure Active Directory stops or you're warned that sync hasn't registered in more than a day
 description: Describes a performance problem in Azure Active Directory Sync Tool. The tool either stops syncing or reports that sync hasn't run in more than 24 hours. Provides a resolution.
 ms.date: 05/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Directory synchronization to Azure Active Directory stops or you're warned that sync hasn't registered in more than a day
 

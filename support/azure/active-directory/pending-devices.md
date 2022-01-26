@@ -4,7 +4,8 @@ description: Explains why a device is in the pending state in Azure Active Direc
 author: genlin
 ms.author: genli
 ms.date: 08/17/2021
-ms.services: active-directorygit 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Pending devices in Azure Active Directory
 
@@ -16,6 +17,10 @@ Pending devices are devices that are synced to Azure Active Directory (Azure AD)
 ## Why a device might be in a pending state
 
 When you configure a **Hybrid Azure AD join** task in the Azure AD Connect Sync for your on-premises devices, the task will sync the device objects to Azure AD, and temporarily set the registered state of the devices to "pending" before the device completes the device registration. This is because the device must be added to the Azure AD directory before it can be registered. For more information about the device registration process, see [How it works: Device registration](/azure/active-directory/devices/device-registration-how-it-works#hybrid-azure-ad-joined-in-managed-environments).
+
+For more information about how to troubleshoot pending devices, see the following video:
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/QBR1c81kaxA]
 
 ## How a device gets stuck in a pending state
 

@@ -1,10 +1,10 @@
 ---
 title: Pushing large files by Git client hangs
 description: This article provides resolutions for the problem that hangs when you use Git push to push large files to Team Foundation Server on Windows Server 2008 R2.
-ms.prod: devops
 ms.date: 08/14/2020
-ms.prod-support-area-path: Repos
+ms.custom: sap:Repos
 ms.reviewer: Matt Cooper
+ms.service: az-devops-project
 ---
 # Pushing large files to Team Foundation Server by Git client hangs
 

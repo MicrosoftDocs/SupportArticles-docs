@@ -2,7 +2,8 @@
 title: LWF could cause 90-second delay
 description: This article describes the Optional NDIS LWF could cause 90-second delay in network availability.
 ms.date: 09/04/2020
-ms.prod-support-area-path: Network Driver
+ms.custom: sap:Network Driver
+ms.technology: windows-hardware-network-driver
 ---
 # Optional NDIS LWF could cause 90-second delay in network availability
 

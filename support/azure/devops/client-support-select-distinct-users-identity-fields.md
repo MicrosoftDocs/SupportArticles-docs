@@ -1,10 +1,10 @@
 ---
 title: Selecting distinct users in identity fields
 description: This article describes the new identity control for work items and queries in Visual Studio 2015 and the web portal. This feature is available through Team Foundation Server 2015.
-ms.prod: devops
 ms.date: 08/14/2020
-ms.prod-support-area-path: Server Administration
+ms.custom: sap:Server Administration
 ms.topic: article
+ms.service: az-devops-project
 ---
 # Client support for selecting distinct users in identity fields in Team Foundation Server 2015
 

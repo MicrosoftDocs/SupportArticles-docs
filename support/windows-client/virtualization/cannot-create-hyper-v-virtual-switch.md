@@ -28,7 +28,7 @@ After you delete a vSwitch on a computer that has been upgraded to Windows 10, y
 Error applying Virtual Switch Properties changes  
 Failed while adding virtual Ethernet switch connections.
 
-:::image type="content" source="media/cannot-create-hyper-v-virtual-switch/error-applying-virtual-switch-properties-changes.png" alt-text="Alt text here.":::
+:::image type="content" source="media/cannot-create-hyper-v-virtual-switch/error-applying-virtual-switch-properties-changes.png" alt-text="Screenshot of the Virtual Switch Manager error message.":::
 
 It indicates that the vSwitch still exists, even though it's no longer listed in the Hyper-V Virtual Switch Manager.
 

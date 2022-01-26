@@ -4,6 +4,7 @@ description: Fixes an issue in which a button in the command bar is visible when
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/19/2021
+ms.subservice: powerapps-ribbons-commanding
 ---
 # A button on the command bar is visible when it should be hidden
 
@@ -21,7 +22,7 @@ The in-app tool, Command Checker, will be used to inspect the ribbon component d
 
 To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
-:::image type="content" source="media/ribbon-issues-button-visible/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
+:::image type="content" source="media/ribbon-issues-button-visible/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to your Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-visible/enable-command-checker.png":::
 
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
@@ -33,15 +34,15 @@ Once the Command Checker tool has been enabled, within the application in each o
 1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-visible/command-checker-button-icon.png" border="false"::: button (it may be listed in the **More** overflow flyout menu).
 1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. The following example shows there are two **Appointment** buttons on the activities grid page, and one is expected to be hidden.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/appointment.png" alt-text="Appointment example.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/appointment-button.png" alt-text="Screenshot shows there are two Appointment buttons on the activities grid page.":::
 
 1. Click the **Command Properties** tab to display the details of the command for this button. This will display the actions, enable rules, and display rules, along with the result (**True**, **False**, **Skipped**) of each rule evaluation. Review the enable rules and display rules, if you expect a particular rule should be evaluating to false, then it is possible the rule is incorrectly customized or the necessary circumstances to return a false result are not met. If so, skip to step 9, otherwise it is possible then that the command is missing a rule or rules and we will view the command solution layers for further analysis.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/command-properties.png" alt-text="Screenshot of command properties.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/command-properties.png" alt-text="Screenshot to select the Command Properties tab to display the details of the command for this button.":::
 
 1. Click the **View command definition solution layers** link below the command name to view the solution(s) that installed a definition of the command.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/view-command-definition-solution-layers.png" alt-text="View command definition solution layers.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/view-command-definition-solution-layers.png" alt-text="Screenshot of the View command definition solution layers link below the command name.":::
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
@@ -53,11 +54,11 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     If there is only one solution layer, skip to step 9, otherwise, select the top two solution layers (If you have a layer in the Active solution, but it is not listed at the top, select the Active solution layer and then the top row) and click **Compare**.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/compare-solution.png" alt-text="Compare solution.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/compare-solution.png" alt-text="Screenshot to select the top two solution layers and select the Compare option.":::
 
 1. The comparison of the current active definition and the previous inactive definition will be displayed showing the differences, if any. The following example shows the unmanaged Active definition to have been customized with the removal of a display rule `Mscrm.HideOnModern` that is included in the inactive `msdynce_ActivitiesPatch` Microsoft published solution layer.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/comparison.png" alt-text="Comparison.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/comparison.png" alt-text="Screenshot shows the comparison of the current active definition and the previous inactive definition.":::
 
 1. The approach needed to fix a button's visibility will depend on the various customizations in your specific scenario. If you determined that a rule is incorrectly evaluating to false, and if the rule definition is incorrectly defined, then you should modify the rule definition and make changes that would permit the rule to evaluate to false under the proper circumstances. If the rule definition is correct, then it is possible that the requirements that would make the rule return false are not met, such as a field value or security privilege is not correctly assigned. Depending on your rule definition, the requirements can vary greatly, please refer to [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). Considering our example, the command was customized with the removal of a `Mscrm.HideOnModern` display rule. This display rule is intended to hide this particular button from being displayed in Unified Interface applications and only be visible in the legacy Web Client interface. We could modify the custom version of the command and add the missing the `Mscrm.HideOnModern` display rule to the command definition. Since this is a custom override of a Microsoft published definition and there are no other intentional modifications, it is recommended that this custom version of the command be deleted to restore the default functionality.
 
@@ -100,11 +101,11 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate it's child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node (In our example, ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`, so we would locate the following node).
 
-    :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example.png" alt-text="commanddefinition example.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/locate-node.png" alt-text="Screenshot shows the location of the CommandDefinition node.":::
 
 1. Edit the `<RibbonDiffXml>` node and remove the specific `<CommandDefinition>` node that has the ID of the command you wish to delete. Make sure you don't unintentionally delete other `<CommandDefinition>` nodes that may be present. (Based on our example, we would delete the `<CommandDefinition>` node in which ID is `Mscrm.CreateAppointment`.)
 
-    :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-2.png" alt-text="Second command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/delete-node.png" alt-text="Screenshot shows an example to delete the CommandDefinition node.":::
 
 1. Save the *customizations.xml* file.
 1. Add the modified *customizations.xml* file back to the solution .zip file.
@@ -191,11 +192,11 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. In the example, the ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`. Therefore, you would locate the following node:
 
-    :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-3.png" alt-text="Third command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/locate-example-node.png" alt-text="Screenshot shows the location of the example CommandDefinition node.":::
 
 1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more informatioin about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands). (Based on our example, we would modify the `<CommandDefinition>` node by adding the `Mscrm.HideOnModern` display rule that will correctly hide this button.)
 
-    :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-4.png" alt-text="Fourth command definition example.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/modify-node.png" alt-text="Screenshot to modify the CommandDefinition node by adding the Mscrm.HideOnModern display rule.":::
 
 1. Restore the modified *customizations.xml* file to the solution .zip file.
 1. Import the solution file.
@@ -262,7 +263,7 @@ To fix a command that was installed by a Microsoft published managed solution, y
 
 1. Click the **View rule definition solution layers** link below the rule name to view the solution(s) that installed a definition of the rule.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/view-rule-definition-solution-layers.png" alt-text="Link of view rule definition solution layers.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/view-rule-definition-solution-layers.png" alt-text="Screenshot shows the View rule definition solution layers link below the rule name.":::
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
@@ -274,7 +275,7 @@ To fix a command that was installed by a Microsoft published managed solution, y
 
     The following image shows the solution layers for the enable rule in our example, and indicates that there is one solution layer in this case, and that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 
-    :::image type="content" source="media/ribbon-issues-button-visible/solution-layer-example.png" alt-text="Example of solution layer.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/solution-layer-example.png" alt-text="Screenshot shows an example of the solution layer.":::
 
 1. Now that we have reviewed the solution layers and identified the solution that installed the customization, we must fix the definition in the appropriate solution.
 
@@ -305,11 +306,11 @@ Based on our example scenario, we identified the entity is **contact** and the e
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
 1. Locate the enable/display rule. In the example, the ID of the enable rule is `new.contact.EnableRule.EntityRule`. Therefore, you would locate the following node:
 
-    :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-5.png" alt-text="Fifth example of command definition.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/locate-enable-display-rule.png" alt-text="Screenshot shows the location of the enable/display rule.":::
 
 1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the enable/display rule that will enable the rule to evaluate to True under the correct circumstances to fix the rule. For more information about how to declare rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
 
-    :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-6.png" alt-text="Sixth example of command definition.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/rule-definition.png" alt-text="Screenshot shows an example of the rule definition.":::
 
 1. Add the modified *customizations.xml* file back to the solution .zip file.
 1. Import the solution file.

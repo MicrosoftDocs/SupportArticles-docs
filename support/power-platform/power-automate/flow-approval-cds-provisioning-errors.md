@@ -4,6 +4,7 @@ description: Common error cases and configuration that can result in Flow Approv
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Flow Approval CDS Provisioning errors and recommendations
 
@@ -55,7 +56,7 @@ These errors occur if the Dynamics CRM Online / Common Data Service applications
 
 To resolve, tenant administrators will need to go to the **Enterprise Applications** tab under **Azure Active Directory** on [Microsoft Azure](https://ms.portal.azure.com) to ensure application 00000007-0000-0000-c000-000000000000 (Common Data Service / Dynamics CRM Online) is enabled for users to sign in, and any relevant Conditional Access policies grant the necessary access to users expecting to use Flow Approvals.
 
-:::image type="content" source="./media/flow-approval-cds-provisioning-errors/properties-settings.png" alt-text="Set the Enabled for users to sign-in option to Yes.":::
+:::image type="content" source="media/flow-approval-cds-provisioning-errors/properties-settings.png" alt-text="Screenshot to set the Enabled for users to sign-in option to Yes.":::
 
 ## Error "Database is disabled"
 

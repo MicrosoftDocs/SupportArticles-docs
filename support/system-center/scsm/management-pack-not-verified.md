@@ -2,7 +2,6 @@
 title: The management pack could not be verified 
 description: Fixes an issue where The management pack could not be verified error occurs when adding a custom property to a UNIX class extension.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # The management pack could not be verified error when adding a custom property to a UNIX class extension
 

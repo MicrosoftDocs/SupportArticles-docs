@@ -2,7 +2,7 @@
 title: Execution of CLR fails with TypeInitializationException
 description: This article provides workarounds for the problem where the execution of SQL Server CLR objects fails and returns a System.TypeInitializationException exception.
 ms.date: 01/15/2021
-ms.prod-support-area-path: Database Design and Development
+ms.custom: sap:Database Design and Development
 ms.technology: 
 ms.reviewer: 
 ms.topic: article
@@ -69,7 +69,7 @@ For applications that deserialize untrusted XML data into an instance of either 
 
     Change the start of the SQL CLR object code to set the **Switch.System.Data.AllowArbitraryDataSetTypeInstantiation** switch to **true**. You have to do this for every applicable SQL CLR object. See the following example.
 
-    ![AppContext.SetSwitch](./media/execution-clr-fails-typeInitializationexception/code-image.png)
+    :::image type="content" source="media/execution-clr-fails-typeInitializationexception/code.png" alt-text="Screenshot shows an example of the SQL CLR object code change.":::
 
     For more information, see [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
 
@@ -94,7 +94,7 @@ For applications that deserialize untrusted XML data into an instance of either 
 
        See the following example of a SQL Server 2016 instance.
 
-       ![Code example](./media/execution-clr-fails-typeInitializationexception/config-image.png)
+       :::image type="content" source="media/execution-clr-fails-typeInitializationexception/config.png" alt-text="Screenshot shows an example of SQL Server 2016 instance.":::
 
 - Workaround 3: Create the System.Drawing assembly
 
@@ -128,7 +128,7 @@ For applications that deserialize untrusted XML data into an instance of either 
 
        See the following example.
 
-       ![Key example](./media/execution-clr-fails-typeInitializationexception/appcontext-image.png)
+       :::image type="content" source="media/execution-clr-fails-typeInitializationexception/appcontext.png" alt-text="Screenshot of the AppContext registry key in Registry Editor.":::
 
 ## More information
 

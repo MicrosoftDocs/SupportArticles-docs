@@ -21,11 +21,11 @@ Currently WSUS uses the following endpoints to synchronize metadata:
 - [https://sws.update.microsoft.com](https://sws.update.microsoft.com)
 
   Most WSUS servers should synchronize with this new endpoint. Starting from July 2020, this endpoint accepts only Transport Layer Security (TLS) 1.2 connections. And some ciphers were disabled.
-- [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com)
+- `https://sws1.update.microsoft.com`
   
   This old endpoint will be decommissioned eventually. For more information, see [End of synchronization for WSUS 3.0 SP2](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/end-of-synchronization-for-wsus-3-0-sp2/ba-p/2371993). This endpoint supports TLS 1.2, TLS 1.1, and TLS 1.0 connections.
   
-- [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com)
+- `https://fe2.update.microsoft.com`
   
   This old endpoint is decommissioned, connections to it will fail.
 
@@ -41,13 +41,13 @@ When you experience WSUS synchronization or manual import problems, first check 
    $config.MUUrl
    ```
 
-Windows Server 2012 and later versions should be configured to use the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint. If you're still using [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com) or [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com), change to the new endpoint by following the steps in [WSUS synchronization fails with SoapException](wsus-synchronization-fails-with-soapexception.md#resolution). If necessary, troubleshoot connection issues with the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint.
+Windows Server 2012 and later versions should be configured to use the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint. If you're still using `https://sws1.update.microsoft.com` or `https://fe2.update.microsoft.com`, change to the new endpoint by following the steps in [WSUS synchronization fails with SoapException](wsus-synchronization-fails-with-soapexception.md#resolution). If necessary, troubleshoot connection issues with the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint.
 
 ## Issue 1: Manual import fails, but synchronization succeeds
 
 Many users import updates into WSUS manually, and some updates must be imported manually. For example, preview updates that are released in the third and fourth weeks of the month must be manually imported. Starting at the end of July 2020, you might have found you can't manually import updates.
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/import-failure.png" alt-text="Import fails":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/import-failure.png" alt-text="Screenshot of an update import failure.":::
 
 However, some WSUS servers can still import updates successfully. And the usual synchronization with WU and MU continues to work.
 
@@ -55,7 +55,7 @@ This issue occurs on WSUS servers that are running Windows Server 2012, Windows 
 
 ### Troubleshoot issue 1
 
-1. Run the PowerShell script in [Endpoints](#endpoints) to determine which endpoints the WSUS servers use. You'll probably find that working servers are communicating with [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com) or [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com), and failing servers are communicating with [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
+1. Run the PowerShell script in [Endpoints](#endpoints) to determine which endpoints the WSUS servers use. You'll probably find that working servers are communicating with `https://fe2.update.microsoft.com` or `https://sws1.update.microsoft.com`, and failing servers are communicating with [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
 2. Check the `%Program Files%\Update Services\LogFiles\SoftwareDistribution.log` file for errors when you manually import updates. Look for errors that resemble the following example:
 
    ```output
@@ -75,7 +75,7 @@ The following message in the error indicates that the WSUS server tried to conne
 
 The following screenshot shows a network capture of the connection attempt.
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-1.png" alt-text="Network capture 1":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-1.png" alt-text="Screenshot of the first network capture of the connection attempt." lightbox="media/troubleshoot-wsus-import-sync-issues/network-capture-1.png":::
 
 In the network capture, frame 874 is the Client Hello packet that uses TLS 1.0. Frame 877 is the server response. The response includes the ACK (A) and RST (R) flags. Because the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint supports only TLS 1.2 connections, it denies the connection, and issues a reset response.
 
@@ -152,7 +152,7 @@ ProcessWebServiceProxyException found Exception was WebException. Action: Retry.
 
 The following screenshot shows a network capture of the connection attempt.
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-2.png" alt-text="Network capture 2":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-2.png" alt-text="Screenshot of the second network capture." lightbox="media/troubleshoot-wsus-import-sync-issues/network-capture-2.png":::
 
 In the network capture, frames 1518-1520 show the three-way handshake (SYN, SYN ACK, ACK) between the client and server. Frame 1536 is an ACK FIN packet from the WSUS server.
 
@@ -198,12 +198,12 @@ If the WSUS server has the correct updates installed, WSUS will log which SSL/TL
 When synchronization fails, SoftwareDistribution.log logs the following error message:
 
 ```output
-WebServiceCommunicationHelper.ProcessWebServiceProxyException	ProcessWebServiceProxyException found Exception was WebException. Action: Retry. Exception Details: System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+WebServiceCommunicationHelper.ProcessWebServiceProxyException    ProcessWebServiceProxyException found Exception was WebException. Action: Retry. Exception Details: System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
 ```
 
 The following screenshot shows a network capture of the connection attempt.
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-3.png" alt-text="Network capture 3":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-3.png" alt-text="Screenshot of the third network capture." lightbox="media/troubleshoot-wsus-import-sync-issues/network-capture-3.png":::
 
 In the network capture, frame 95 is the Client Hello packet that uses TLS 1.0. Frame 96 is the RST packet from [https://sws.update.microsoft.com](https://sws.update.microsoft.com). Because the endpoint supports only TLS 1.2 connections, it denies the connection, and then issues a reset response. The WSUS server will try several times before it gives up. Therefore, this sequence is repeated.
 
@@ -263,7 +263,7 @@ gpresult /scope computer /h GPReport.html
 
 Open GPReport.html in a browser.
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/gpreport.png" alt-text="Group Policy information":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/gpreport.png" alt-text="Screenshot of the Group Policy information." lightbox="media/troubleshoot-wsus-import-sync-issues/gpreport.png":::
 
 Search for **SSL Cipher Suite Order**, and the **SSL Cipher Suites** setting. Usually this setting isn't configured. If it's configured, the issue may occur because there's no common cipher with WU/MU.
 
@@ -281,7 +281,7 @@ If the GPO is applied, and it doesn't specify one of these ciphers, communicatio
 
 The following screenshot shows a network capture.
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-4.png" alt-text="Network capture 4":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-4.png" alt-text="Screenshot of the fourth network capture." lightbox="media/troubleshoot-wsus-import-sync-issues/network-capture-4.png":::
 
 In the network capture, frame 400 is the Client Hello packet that uses TLS 1.2. The frame detail shows which ciphers were sent by the client. Frame 404 is the RST packet from [https://sws.update.microsoft.com](https://sws.update.microsoft.com). Because there's no common cipher, the synchronization fails.
 
@@ -317,9 +317,9 @@ To prevent manual import failures, also apply [Resolution for issue 1](#resoluti
 
 The following screenshots show a successful connection when a Windows Server 2016 WSUS server synchronizes updates.
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-5.png" alt-text="Network capture 5":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-5.png" alt-text="Screenshot of the fifth network capture." lightbox="media/troubleshoot-wsus-import-sync-issues/network-capture-5.png":::
 
-:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-6.png" alt-text="Network capture 6":::
+:::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-6.png" alt-text="Screenshot of the sixth network capture." lightbox="media/troubleshoot-wsus-import-sync-issues/network-capture-6.png":::
 
 In the network capture, frame 191 is the Client Hello packet that uses TLS 1.2. The frame detail shows which ciphers were sent by the client. Frame 195 is the Server Hello packet from the endpoint. The TLSCipherSuite that's chosen by WU is TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384. The server certificate is also sent in the Server Hello packet.
 
@@ -327,7 +327,7 @@ Additional connection setup occurs in frames 196-203. The data transfer by the a
 
 ## A note about proxy servers
 
-If you use a proxy server, the network capture will look different. The WSUS server connects to the proxy, and you may see a CONNECT request with the destination [https://sws.update.microsoft.com](https://sws.update.microsoft.com), [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com), or [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com). WSUS will issue a Client Hello packet with the ciphers it supports. If the connection isn't successful because of wrong TLS version, or if there is no common cipher, you may or may not see an RST packet. Proxies tend to return an FIN to the client to indicate the end of the connection. But this might not be true for every proxy server. Some proxy servers send an RST packet, or something else.
+If you use a proxy server, the network capture will look different. The WSUS server connects to the proxy, and you may see a CONNECT request with the destination [https://sws.update.microsoft.com](https://sws.update.microsoft.com), `https://sws1.update.microsoft.com`, or `https://fe2.update.microsoft.com`. WSUS will issue a Client Hello packet with the ciphers it supports. If the connection isn't successful because of wrong TLS version, or if there is no common cipher, you may or may not see an RST packet. Proxies tend to return an FIN to the client to indicate the end of the connection. But this might not be true for every proxy server. Some proxy servers send an RST packet, or something else.
 
 When you use a proxy, you have to know the IP address of the internal interface of the proxy server, because WSUS isn't communicating directly with the WU endpoints. If you can't get the IP address of the proxy server, search the network capture for CONNECT requests, and search for the URL of the Windows Update endpoint.
 

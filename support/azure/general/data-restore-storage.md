@@ -5,7 +5,7 @@ ms.date: 01/26/2021
 author: genlin
 ms.author: genli
 ms.service: storage
-ms.prod-support-area-path: 
+ms.subservice: blobs
 ms.reviewer: 
 ---
 # Data restore scenarios for Azure Storage service

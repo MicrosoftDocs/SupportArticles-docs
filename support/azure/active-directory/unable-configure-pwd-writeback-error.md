@@ -2,8 +2,9 @@
 title: Error (Unable to configure password writeback) when you run the Azure AD Connect wizard
 description: Describes an issue that triggers an error when you run the Azure AD Connect wizard to set up password writeback. Provides a solution.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: vimals, willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you run the Azure AD Connect wizard: Unable to configure password writeback
 

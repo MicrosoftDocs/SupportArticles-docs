@@ -420,6 +420,8 @@
       href: ./identity/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
+    - name: DCs can't be located and high-rate outbound sessions
+      href: ./identity/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Enable LDAP over SSL
       href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: How to enable LDAP signing in Windows Server
@@ -842,6 +844,8 @@
       href: ./backup-and-storage/event-id-51-information.md
     - name: Pass-through disk in highly available VM is read-only
       href: ./backup-and-storage/add-pass-through-disk-to-high-available-vm.md
+    - name: Replicated Cluster Shared Volumes are offline
+      href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
     - name: USB Device not recognized error
@@ -958,6 +962,8 @@
       href: ./deployment/use-recovery-console-replace-driver.md
     - name: How to use Device Manager to configure devices
       href: ./deployment/use-device-manager-configure-devices.md
+    - name: Support policy for third-party, kernel-level software
+      href: ./deployment/support-policy-third-party-kernel-level-attestation.md
     - name: VMware driver installation fails in Windows Server 2008 R2 SP1
       href: ./deployment/virtual-machines-vmware-not-install-update.md
     - name: Windows Deployment Services (WDS) support for UEFI
@@ -1076,6 +1082,8 @@
       href: ./deployment/windows-deployment-service-not-start.md
     - name: Windows Internal Database (WID) installation fails
       href: ./deployment/error-install-windows-internal-database.md
+    - name: PCR7 configuration "Binding not possible" error
+      href: ./deployment/pcr7-configuration-binding-not-possible.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./deployment/windows-server-support-installation-for-amd-role-family-processor.md
     - name: WSUS clients can't install updates
@@ -1504,8 +1512,6 @@
       href: ./networking/exchange-compatibility-single-label-domains.md
     - name: Configure a secondary name server
       href: ./networking/configure-secondary-name-server.md
-    - name: Description of the DNSLint utility
-      href: ./networking/description-dnslint-utility.md
     - name: DNS client resolution timeouts
       href: ./networking/dns-client-resolution-timeouts.md
     - name: DNS namespace planning
@@ -1658,6 +1664,16 @@
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
     - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
+    - name: 'Troubleshoot DirectAccess Server console: 6to4'
+      href: ./networking/troubleshoot-directaccess-server-console-6to4.md
+    - name: 'Troubleshoot DirectAccess Server console: DNS'
+      href: ./networking/troubleshoot-directaccess-server-console-dns.md
+    - name: 'Troubleshoot DirectAccess Server console: domain controller and Kerberos'
+      href: ./networking/troubleshoot-directaccess-server-console-dc-kerberos.md
+    - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
+      href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
+    - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
+      href: ./networking/troubleshoot-directaccess-server-console-networking.md
   - name: TCP/IP communications
     items:
     - name: A SMB server is unresponsive
@@ -1732,10 +1748,8 @@
       href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
     - name: "Part 3: TCP/IP performance known issues"
       href: ./networking/tcpip-performance-known-issues.md
-    - name: PortQry version 2.0 features and functions
+    - name: Using the PortQry command-line tool
       href: ./networking/portqry-command-line-port-scanner-v2.md
-    - name: Portqry.exe command-line utility
-      href: ./networking/portqry-exe-command-line-utility.md
     - name: Process of the TCP three-way handshake
       href: ./networking/three-way-handshake-via-tcpip.md
     - name: Receive Window Auto-Tuning feature for HTTP traffic
@@ -1986,6 +2000,14 @@
   items:
   - name: 'Printing'
     href: ./printing/printing-overview.md
+  - name: Troubleshoot printing issues
+    items:
+    - name: Troubleshoot printing and best practices
+      href: ./printing/troubleshoot-printing-and-best-practices.md
+    - name: Troubleshoot printing scenarios
+      href: ./printing/troubleshoot-printing-scenarios.md
+    - name: Troubleshoot printing known issues
+      href: ./printing/troubleshoot-printing-known-issues.md
   - name: Management and Configuration of installing print drivers
     items:
     - name: Print Spooler errors
@@ -2234,6 +2256,8 @@
       href: ./remote/install-and-configure-the-external-connector.md
     - name: How to move Terminal Services CALs
       href: ./remote/move-terminal-services-client-access-licenses.md
+    - name: License attributes aren't updated
+      href: ./remote/license-attributes-not-updated-rdsh-server.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
     - name: Remove Terminal Server licenses from RDP client
@@ -2642,6 +2666,8 @@
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
       href: ./virtualization/fcoe-io-failures-hyper-v-guests.md
+    - name: Virtual machine LUNs disappear after you configure them as MPIO devices
+      href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
     - name: Error when you manage a VHD file

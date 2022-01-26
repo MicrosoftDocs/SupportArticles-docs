@@ -1,9 +1,10 @@
 ---
 title: Error (This user can't sign in because this account is currently disabled) when syncing settings of Windows 10
-description: Describes an issue in which (Event ID 6065:80070533 This user can't sign in because this account is currently disabled) is logged when Windows 10 settings fail to sync. 
+description: "Describes an issue in which (Event ID 6065:80070533 This user can't sign in because this account is currently disabled) is logged when Windows 10 settings fail to sync."
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: cpuckett
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Error when Windows 10 devices settings fail to sync: This user can't sign in because this account is currently disabled
 

@@ -2,6 +2,8 @@
 title: RPC errors affecting AADConnect
 description: This article describes common examples of AADConnect features affected by RPC errors.
 ms.date: 11/05/2020
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 
 # RPC errors affecting AADConnect
@@ -22,7 +24,7 @@ For these types of errors, Application events include information about the RPC 
 
 ### Example 1
 
-![Application events include information about the RPC error](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-error-1722.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/rpc-error-1722.png" alt-text="Screenshot shows the application events include information about the R P C error 1722." lightbox="media/rpc-errors-aadconnect/rpc-error-1722.png":::
 
 Snippet from the Application error event seen in the previous image:
 
@@ -37,7 +39,7 @@ Keywords:      Classic
 User:          N/A
 Computer:      server1.contoso.com
 Description:   Password hash synchronization failed for domain: contoso.com, domain controller hostname: <not available>, domain controller IP address: <not available>.
-Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: contoso.com. Error: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.
+Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: contoso.com. Error: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 10.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 10.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.
 DrsException:  There was an error creating the connection context. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: RPC Error 1722 : The RPC server is unavailable. Error creating the RPC binding handle
 ```
 
@@ -53,7 +55,7 @@ The error in Example 1 is a common networking related error for which troublesho
 
 In this scenario, investigating a network trace reveals retransmit packets being sent for communication with destination **port 135**, so traffic on this port is being blocked on the destination server.
 
-![Traffic is being blocked on the destination server](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-bad-checksum.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/traffic-block.png" alt-text="Screenshot shows that traffic is being blocked on the destination server." lightbox="media/rpc-errors-aadconnect/traffic-block.png":::
 
 These errors can manifest intermittently, which adds complexity to the process of collecting data, like a network trace, for investigation and troubleshooting.
 
@@ -82,11 +84,11 @@ The following steps allow you to automatically collect a network trace, when the
 
 3. Attach a task that runs the cmd file created in the previous step to the event that is generated when the issue reproduces. That will trigger the ping command that stops the trace.
 
-   ![Attach a task to an event](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-attach-task.jpg)
+   :::image type="content" source="media/rpc-errors-aadconnect/attach-task.png" alt-text="Screenshot to attach a task that runs the cmd file created in the previous step to the event.":::
 
 ### Example 2
 
-   ![Event Properties - Event 611](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-error-8333.jpg)
+   :::image type="content" source="media/rpc-errors-aadconnect/rpc-error-8333.png" alt-text="Screenshot shows the application events include information about the R P C error 8333.":::
 
 Snippet from the Application error event seen in the previous image:
 
@@ -100,14 +102,14 @@ Level:         Error
 Keywords:      Classic
 User:          N/A
 Computer:      server1.contoso.com
-Description:   Password hash synchronization failed for domain: contoso.com, domain controller hostname: server1.contoso.com, domain controller IP address: 184.198.0.0.
+Description:   Password hash synchronization failed for domain: contoso.com, domain controller hostname: server1.contoso.com, domain controller IP address: 192.168.0.0.
 Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Recovery task failed. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.
 DrsException:  RPC Error 8333 : Directory object not found. There was an error calling _IDL_DRSGetNCChanges.
 ```
 
 Other infrastructure configuration issues may contribute to Remote Procedure Call problems, such as DNS name resolution, Authentication problems, etc.
 
-It’s important to note the error number for appropriate investigation and troubleshooting.
+It's important to note the error number for appropriate investigation and troubleshooting.
 
 ### Troubleshooting Example 2
 
@@ -121,7 +123,7 @@ More detailed information and troubleshooting guidance can be found in [Windows 
 
 ### Example 3
 
-![An unexpected error occurred during a password set operation](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-failed-0x6ba.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/error-failed-0x6ba.png" alt-text="Screenshot shows an unexpected error occurred during a password setting operation.":::
 
 Snippet from the Application error event seen in the previous image:
 
@@ -153,7 +155,7 @@ ERR_: MMS(4984): ..\ma.cpp(8000): ExportPasswordSet failed with 0x80004005
 Azure AD Sync 1.4.18.0"
 ```
 
-It’s important to know that errors can be represented in their hexadecimal code, like in this example.
+It's important to know that errors can be represented in their hexadecimal code, like in this example.
 
 You can also use the hexadecimal error code to search the error symbolic name.
 
@@ -165,7 +167,7 @@ The error **"0x6ba"** translates to an **"RPC Server Unavailable" error 1722**. 
 
 Another example with the RPC error represented in its hexadecimal form:
 
-![The RPC error represented in its hexadecimal form](./media/rpc-errors-aadconnect/rpc-errors-affecting-aadconnect-failed-0x5.jpg)
+:::image type="content" source="media/rpc-errors-aadconnect/error-failed-0x5.png" alt-text="Screenshot shows an example with the R P C error represented in its hexadecimal form.":::
 
 In this case, the error returned **"0x5"** translates to an access denied error:
 

@@ -2,7 +2,6 @@
 title: Windows can't boot with (An operating system wasn't found) error 
 description: Provides a solution to an issue where Windows VM doesn't start with (An operating system wasn't found) error.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
@@ -89,7 +88,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
         detail partition
         ```
 
-        :::image type="content" source="media/os-not-found/4018937_en_1.png" alt-text="Screenshot of disk partition output":::
+        :::image type="content" source="media/os-not-found/detail-partition.png" alt-text="Screenshot of disk partition output, showing partition 1 is not active.":::
 
         If the partition is active, go to "Step 2: Repair the Boot Configuration data."
 

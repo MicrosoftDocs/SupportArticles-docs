@@ -2,8 +2,9 @@
 title: Password hash synchronization stops working after you update Azure Active Directory credentials in FIM
 description: Describes a problem that prevents password hash synchronization from working in an Azure environment. Occurs after you update your global administrator credentials in Forefront Identity Manager (FIM).
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Password hash synchronization stops working after updating Azure Active Directory credentials in FIM
 

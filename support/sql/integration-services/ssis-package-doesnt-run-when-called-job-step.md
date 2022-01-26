@@ -1,7 +1,7 @@
 ---
 title: SSIS package does not run when called from a job step
 description: This article provides resolutions for the problem that occurs when you call an SSIS package from a SQL Server Agent job step.
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.reviewer: craigg
 ms.prod: sql
 ---
@@ -113,7 +113,7 @@ Log: Name: OnError Computer: COMPUTERNAME Operator: DOMAINNAME\username Source N
 
 ## References
 
-- For more information about a similar problem, see [You receive an "Error loading" error message when you try to run an SQL Server 2005 Integration Services package in SQL Server 2005](https://support.microsoft.com/help/904800)
+- For more information about a similar problem, see [You receive an "Error loading" error message when you try to run a SQL Server 2005 Integration Services package in SQL Server 2005](https://support.microsoft.com/help/904800)
 
 - For more information about how to use the Dtutil.exe utility in batch operations, see [How to use the dtutil utility (Dtutil.exe) to set the protection level of a batch of SQL Server Integration Services (SSIS) packages in SQL Server 2005](https://support.microsoft.com/help/906562)
 

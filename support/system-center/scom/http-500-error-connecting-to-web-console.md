@@ -2,7 +2,6 @@
 title: HTTP 500 error connecting to the OpsMgr web console
 description: Fixes an issue in which you receive HTTP 500 error when you remotely connect to a stand-alone Operations Manager web console.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ---
 # HTTP 500 error when you connect to the Operations Manager web console
 
@@ -92,7 +91,7 @@ To fix the issue, verify the following settings, and then connect to the web con
       4. Select the **Delegation** tab.
       5. Select **Trust this computer for delegation to specified services only**, select **Use any authentication protocol**, and then select **Add**.
 
-          :::image type="content" source="media/http-500-error-connecting-to-web-console/delegation.png" alt-text="screenshot of the options on Delegation ":::
+          :::image type="content" source="media/http-500-error-connecting-to-web-console/delegation.png" alt-text="Screenshot of the options on the Delegation tab.":::
 
       6. In the **Add Services** dialog box, select **Users or Computers**.
 

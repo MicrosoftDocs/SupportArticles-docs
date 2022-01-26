@@ -80,7 +80,7 @@
       - name: Error 1068 when starting SQL Server
         href: admin/agent-service-fails-start-stand-alone-server.md
       - name: Error 1069 when starting SQL Server
-        href: admin/error-password-service-account-changed.md
+        href: admin/error-1069-service-cannot-start.md
       - name: Event ID 17058 and SQL Server doesn't start
         href: admin/event-id-17058-start-sql-server.md
       - name: Event ID 1814 and SQL Server doesn't start
@@ -91,12 +91,12 @@
         href: admin/event-id-33566-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
-    - name: 1450 and 665 errors when running DBCC
-      href: admin/1450-and-665-errors-running-dbcc.md
-    - name: 17053 and 926 errors when running DBCC
-      href: admin/17053-and-926-errors-running-dbcc.md
-    - name: 8967 and 8921 errors when running DBCC
-      href: admin/8967-8921-errors-running-dbcc.md
+    - name: 1450 and 665 errors when running DBCC CHECKDB
+      href: admin/1450-and-665-errors-running-dbcc-checkdb.md
+    - name: 17053 and 926 errors when running DBCC CHECK
+      href: admin/17053-and-926-errors-running-dbcc-check.md
+    - name: 8967 and 8921 errors when running DBCC CHECKDB
+      href: admin/8967-8921-errors-running-dbcc-checkdb.md
     - name: A nonrecoverable I/O error when you use Backup to URL
       href: admin/nonrecoverable-io-error-backup-url.md
     - name: A TDE-enabled database may not recover
@@ -157,12 +157,14 @@
       href: admin/io-subsystem-requirements-tempdb.md
     - name: Improve the performance of full-text queries
       href: admin/improve-performance-full-text-queries.md
-    - name: Latch timeout when running DBCC
-      href: admin/latch-timeout-running-dbcc.md
+    - name: Latch timeout when running DBCC CHECKDB
+      href: admin/latch-timeout-running-dbcc-checkdb.md
     - name: Logging and data storage algorithms
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
       href: admin/manage-error-log.md
+    - name: Non-yielding error if the lock pages in memory option is disabled
+      href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
       href: admin/pass-variable-linked-server-query.md
     - name: Performance issues when using Columstore indexes with large pages
@@ -191,8 +193,8 @@
       href: admin/transaction-log-file-not-grow.md
     - name: Troubleshoot backup and restore operation issues
       href: admin/backup-restore-operations.md
-    - name: Troubleshoot DBCC errors
-      href: admin/troubleshoot-dbcc-errors.md
+    - name: Troubleshoot DBCC CHECKDB errors
+      href: admin/troubleshoot-dbcc-checkdb-errors.md
     - name: Unable to begin a distributed transaction
       href: admin/error-message-ole-db-provider.md
     - name: Virtual host drivers lead to data consistency problems
@@ -247,6 +249,8 @@
         href: availability-groups/error-9002-transaction-log-large.md
       - name: AlwaysOn DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+      - name: Issues after changing the hostname 
+        href: availability-groups/error-41041-change-hostname.md
       - name: Listener connection times out in multi-subnet
         href: availability-groups/listener-connection-times-out.md
       - name: Query performance degradation on secondary replicas
@@ -335,6 +339,8 @@
       href: install/error-upgrade-cluster-node.md
     - name: Warning about network binding order
       href: install/warning-about-network-binding.md
+    - name: Troubleshoot errors related to system disk sector size greater than 4 KB
+      href: admin/troubleshoot-os-4kb-disk-sector-size.md
   - name: Machine Learning Services (in database)
     items:
     - name: Inconsistent results in MKL computations
@@ -343,16 +349,18 @@
     items:
     - name: Blocked column is populated for latch waits
       href: performance/blocked-column-populated-latch-waits.md
-    - name: Buffer pool scan runs slowly on large memory machines
+    - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+    - name: Decreased performance when using EFS to encrypt database files
+      href: performance/decreased-performance-use-efs.md
+    - name: Decreased performance when querying view across linked servers
+      href: performance/decreased-performance-linkedserver-views.md            
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
-    - name: External modules can cause performance issues
-      href: performance/performance-consistency-issues.md
-    - name: Filter drivers cause performance and consistency issues
-      href: performance/filter-drivers-lead-to-sql-performance-consistency.md
-    - name: High CPU use occurs in your queries
-      href: performance/high-cpu-use-occurs-queries.md
+    - name: External modules and filter drivers cause performance issues
+      href: performance/performance-consistency-issues-filter-drivers-modules.md
+    - name: High CPU or high memory grants with queries that use optimized nested loops
+      href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE
@@ -367,8 +375,12 @@
       href: performance/schemamgr-store-degrades-performance.md
     - name: Troubleshoot blocking caused by compile locks
       href: performance/troubleshoot-blocking-caused-compile-locks.md
+    - name: Troubleshoot high-CPU-usage issues
+      href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
+    - name: Troubleshoot query time-out errors
+      href: performance/troubleshoot-query-timeouts.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
@@ -397,6 +409,8 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
+    - name: ASCII funtion returns different results
+      href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
     - name: CDC capture job fails when processing changes
@@ -489,7 +503,7 @@
   - name: SQL Base Diagnostics Collector
     href: general/sql-base-diagnostics-collector.md
   - name: SQL Server in Windows operating system
-    href: general/sql-server-windows-8-later-versions.md
+    href: general/use-sql-server-in-windows.md
   - name: Support policy for hardware virtualization product
     href: general/support-policy-hardware-virtualization-product.md
   - name: Support policy for SQL Server
@@ -639,6 +653,8 @@
       href: tools/error-use-configuration-manager-restart-agent-service.md
     - name: The SQLDMO Application object failed to initialize when using Sqlmaint
       href: tools/error-you-run-sqlmaint-utility.md
+    - name: Troubleshoot Database Mail issues
+      href: tools/troubleshoot-database-mail-issues.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
     - name: Use SQLIOSim utility to simulate SQL Server disk activity

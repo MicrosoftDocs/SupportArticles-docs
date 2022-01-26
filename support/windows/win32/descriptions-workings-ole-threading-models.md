@@ -2,7 +2,8 @@
 title: Descriptions and workings of OLE threading models
 description: This article describes OLE threading models.
 ms.date: 10/13/2020
-ms.prod-support-area-path: Component development
+ms.custom: sap:Component development
+ms.technology: windows-dev-apps-component-dev
 ---
 # Descriptions and workings of OLE threading models
 

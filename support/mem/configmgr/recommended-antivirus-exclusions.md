@@ -2,7 +2,6 @@
 title: Recommended antivirus exclusions for Configuration Manager
 description: Lists the recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients.
 ms.date: 06/21/2021
-ms.prod-support-area-path:
 ms.reviewer: jarrettr, jrosse, keiththo
 ---
 # Recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients
@@ -37,17 +36,23 @@ Possible symptoms include:
 - Software that is deployed to clients cannot be installed.
 - Compliance data for software deployments is inaccurate.
 
-## Exclusions
+## Default installation folders
 
-We recommend that you add the following real-time protection exclusions to prevent these problems.
+Use the following installation folder paths as variables for the recommended exclusions that are provided in this article.
 
-### Default installation folders
+> [!NOTE]
+> The following paths are the default installation paths and may vary depending on the environment. We recommend that you review the environment and configuration to ensure you have the correct paths in place.
 
 | Folder | Path |
 | --- | --- |
-| Configuration Manager installation folder | %ProgramFiles%\Microsoft Configuration Manager |
-| MP installation folder | %ProgramFiles%\SMS_CCM |
-| Client installation folder | %Windir%\CCM |
+| *ConfigMgr installation folder* | %ProgramFiles%\Microsoft Configuration Manager |
+| *MP installation folder* | %ProgramFiles%\SMS_CCM |
+| *Client installation folder* | %Windir%\CCM |
+| *ContentLib_drive* | The path will vary. The default path is the C:\ drive. |
+
+## Exclusions
+
+We recommend that you add the following real-time protection exclusions to prevent these problems.
 
 ### Folder exclusions for site servers
 

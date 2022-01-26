@@ -2,7 +2,6 @@
 title: Windows Server Update Services (WSUS) best practices
 description: Describes best practices for WSUS to avoid configurations that experience poor performance.
 ms.date: 05/25/2020
-ms.prod-support-area-path:
 ms.reviewer: sccmcsscontent, erice
 ---
 # Windows Server Update Services best practices
@@ -49,7 +48,7 @@ Here's a summary of recommended changes, and a related screenshot. For more info
 |Regular Time Interval (minutes)|**0** (to prevent a recycle, and modified from the default of 1740)|
 |||
 
-:::image type="content" source="media/windows-server-update-services-best-practices/advanced-settings.png" alt-text="Alt text here." border="false":::
+:::image type="content" source="media/windows-server-update-services-best-practices/advanced-settings.png" alt-text="Screenshot of the settings in the Advanced Settings window.":::
 
 In an environment that has around 17,000 updates cached, more than 24 GB of memory may be needed as the cache is built until it stabilizes (at around 14 GB).
 

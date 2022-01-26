@@ -2,7 +2,7 @@
 title: Error when you install SQL Server 2008 R2
 description: This article provides a resolution for various errors that occur when you try to install SQL Server 2008 R2.
 ms.date: 10/22/2020
-ms.prod-support-area-path: Database Engine
+ms.custom: sap:Database Engine
 ms.prod: sql
 ---
 # Error message when you try to install SQL Server 2008 R2
@@ -112,7 +112,7 @@ To resolve the problem, use one of the following methods:
 
        See image
 
-       ![Rename image](./media/error-install-sql-server-2008-r2/rename.png)
+       :::image type="content" source="media/error-install-sql-server-2008-r2/rename.png" alt-text="Screenshot shows the Rename option of Setup.rll in Windows Explorer." border="false":::
 
     4. Type *setup.rll.old*, and then press **Enter**.
 

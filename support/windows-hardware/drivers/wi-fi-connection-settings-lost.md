@@ -2,8 +2,8 @@
 title: Wi-Fi connection settings are lost
 description: This article provides a workaround for the issue that occurs when you configure the Wi-Fi connection settings in the Network Connections item in Control Panel on a Windows Embedded Compact 7 device.
 ms.date: 08/27/2020
-ms.prod-support-area-path: 
 ms.reviewer: riwaida
+ms.technology: windows-hardware-network-driver
 ---
 # Wi-Fi connection settings are lost after a Windows Embedded Compact 7 device restarts
 
@@ -24,17 +24,17 @@ For example, this problem occurs when you configure following settings:
 **EAP type:** PEAP  
 **Authentication method:** Username and Password
 
-![Control Panel](./media/wi-fi-connection-settings-lost/security-properties.png)
+:::image type="content" source="media/wi-fi-connection-settings-lost/security-properties.png" alt-text="Screenshot of the example of the configuration settings in security properties." border="false":::
 
 **Validate server:** Cleared
 
-![Authentication Method](./media/wi-fi-connection-settings-lost/authetication-method-username.png)  
+:::image type="content" source="media/wi-fi-connection-settings-lost/authentication-method-username.png" alt-text="Select the Username and Password option in Authentication Method." border="false":::
 
 **Domain\Username:** *wpa2user*
 
 **Password:** *123456#*
 
-![Password](./media/wi-fi-connection-settings-lost/username-and-password.png)  
+:::image type="content" source="media/wi-fi-connection-settings-lost/username-and-password.png" alt-text="Screenshot of the username and password dialog box." border="false":::
 
 ## Cause
 

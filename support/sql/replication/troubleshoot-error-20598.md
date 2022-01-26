@@ -2,9 +2,8 @@
 title: Troubleshoot error 20598 
 description: This article describes how to troubleshoot error 20598 in transactional replication and provides workarounds for the problem.
 ms.date: 11/05/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: SYELE, TZAKIR
-ms.topic: how-to
 ms.prod: sql
 ---
 # Troubleshoot error 20598 in transactional replication
@@ -20,22 +19,22 @@ To troubleshoot this issue, follow these steps:
 
 1. In the replication monitor on the Distribution Agent for the subscriber, extract the transaction sequence number and command ID that encountered the error:
 
-   ![Error Message](./media/troubleshoot-error-20598/error-message-image.png)
+   :::image type="content" source="media/troubleshoot-error-20598/error-message.png" alt-text="Screenshot of the error message in the replication monitor." border="false":::
 
    > [!NOTE]
    > You can obtain the same transaction sequence number from the distributor server by using the following query:
 
-   ![Get error message from query](./media/troubleshoot-error-20598/error-message-from-query.png)
+   :::image type="content" source="media/troubleshoot-error-20598/error-message-from-query.png" alt-text="Screenshot of the query entry and the result.":::
 
 2. Extract the commands that map to the transaction sequence number on the distributor server. Use the transaction sequence number from step 1 as the parameter for this command:
 
-   ![Get the command](./media/troubleshoot-error-20598/get-command-image.png)
+   :::image type="content" source="media/troubleshoot-error-20598/get-command.png" alt-text="Screenshot of the commands that map to the transaction sequence number on the distributor server.":::
 
 3. From the output of step 2, identify the command that is failing by using the command ID from step 1. Refer to the **command_id** column in the result set.
 
 4. Validate the article information on the publisher. Use the article ID that you obtain from step 2, and check the details of the article that you are trying to update:
 
-   ![Check the details](./media/troubleshoot-error-20598/check-detail-image.jpg)
+   :::image type="content" source="media/troubleshoot-error-20598/check-detail.png" alt-text="Screenshot of the article information detail on the publisher.":::
 
 5. Validate the primary key on the publisher.
 

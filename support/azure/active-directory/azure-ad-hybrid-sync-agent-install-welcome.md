@@ -2,6 +2,8 @@
 title: Azure AD Hybrid Sync Agent Installation Issues - Welcome page
 description: This welcome page focuses on situations where you can't start or complete the installation of the Azure AD Hybrid Sync Agent.
 ms.date: 09/15/2021
+ms.service: active-directory
+ms.subservice: hybrid
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues
@@ -20,4 +22,4 @@ This troubleshooting doc applies to configuring the agent for [Azure AD Connect 
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites)
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).

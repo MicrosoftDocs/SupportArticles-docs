@@ -2,7 +2,6 @@
 title: TLS 1.2 Protocol Support Deployment Guide for Microsoft Azure Pack
 description: Describes how to deploy the TLS 1.2 protocol in Microsoft Azure Pack.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
 author: genlin
@@ -32,7 +31,7 @@ The following are prerequisites for supporting the TLS 1.2 protocol in Microsof
 3. Configure the settings required for supporting the TLS 1.2 protocol. To do this, see the [Setting Microsoft Azure Pack to support the TLS 1.2 protocol](#setting-microsoft-azure-pack-to-support-the-tls-12-protocol) section.
 
     > [!NOTE]
-    > These settings should be configured on the systems that run Windows Azure Pack. 
+    > These settings should be configured on the systems that run Windows Azure Pack.
 
 ## Hardening the system to use the TLS 1.2 protocol
 
@@ -55,9 +54,9 @@ Use the following steps to enable/disable all SCHANNEL protocols system-wide. We
 
 3. Right-click the **Protocol** key, point to **New**, and then click **Key**.
 
-    :::image type="content" source="./media/tls-1.2-support-deployment-guide/4043980_en_2.png" alt-text="Screenshot of Registry key.":::
+    :::image type="content" source="media/tls-1.2-support-deployment-guide/protocol-key.png" alt-text="Screenshot of Protocols key in Registry Editor.":::
 
-4. Type **SSL 3**, and then press Enter. 
+4. Type **SSL 3**, and then press Enter.
 5. Repeat steps 3 and 4 to create keys for TLS 0, TLS 1.1, and TLS 1.2. These keys resemble directories.
 6. Create a **Client** key and a **Server** key under each of the **SSL 3**, **TLS 1.0**, **TLS 1.1**, and **TLS 1.2** keys.
 7. To enable a protocol, create the DWORD value under each Client and Server key as follows:

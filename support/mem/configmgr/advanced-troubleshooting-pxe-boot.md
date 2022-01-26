@@ -2,7 +2,7 @@
 title: Advanced troubleshooting for PXE boot issues
 description: Advance troubleshooting techniques to help administrators diagnose and resolve PXE boot failures in Configuration Manager.
 ms.date: 03/27/2020
-ms.prod-support-area-path: PXE
+ms.custom: sap:PXE
 ms.reviewer: frankroj
 ---
 # Advanced troubleshooting for PXE boot issues in Configuration Manager
@@ -103,7 +103,7 @@ The typical procedure is to start the network traces on both the DP and the comp
 
 Here is a sample trace of a DHCP conversation that was captured from the PXE-enabled DP:
 
-![Trace of a DHCP conversation](./media/advanced-troubleshooting-pxe-boot/18489_en_1.png)
+:::image type="content" source="media/advanced-troubleshooting-pxe-boot/dhcp-conversation-trace.png" alt-text="Screenshot of the trace of a DHCP conversation.":::
 
 You can see that the initial **DHCPDISCOVER** by the PXE client is followed by a **DHCPOFFER** from the DHCP server and the PXE DP. The request from the client (0.0.0.0) is made and then acknowledged by the DHCP server (10.238.0.14). After the PXE client has an IP address (10.238.0.3), it sends a request to the PXE DP (10.238.0.2). That DP then acknowledges the request by returning the network boot program details.
 
@@ -128,11 +128,11 @@ If the error on PXE boot refers to TFTP, you may be unable to transfer the boot 
 
 A good way to troubleshoot these errors is to monitor the network by using Netmon or Wireshark. Below is an example of the data captured from a PXE client when a TFTP Open time-out occurs.
 
-![Data when a TFTP Open time-out occurs](./media/advanced-troubleshooting-pxe-boot/18490_en_1.png)
+:::image type="content" source="media/advanced-troubleshooting-pxe-boot/pxe-client-data.png" alt-text="Screenshot shows the data when a TFTP Open time-out occurs.":::
 
 Here the client is sending read requests for the Wdsnbp.com file, but it isn't receiving a response. It indicates that something is preventing the acknowledgment from being received by the client. Here's what the data should look like.
 
-![Data for sending read requests without receiving a response](./media/advanced-troubleshooting-pxe-boot/18491_en_1.png)
+:::image type="content" source="media/advanced-troubleshooting-pxe-boot/send-read-request-data.png" alt-text="Screenshot shows the data for sending read requests without receiving a response.":::
 
 In this situation, you can try the following troubleshooting methods:
 
@@ -143,15 +143,15 @@ In this situation, you can try the following troubleshooting methods:
 - Check the WDS logs for other TFTP errors.
 - Verify that the `RemoteInstall\SMSBoot\x86` and `RemoteInstall\SMSBoot\x64` folders contain the following files:
 
-  ![Files in the x64 folders](./media/advanced-troubleshooting-pxe-boot/18492_en_1.png)
+    :::image type="content" source="media/advanced-troubleshooting-pxe-boot/files.png" alt-text="Screenshot of the files in the RemoteInstall\SMSBoot folder.":::
 
 - Make sure that the fonts exist in `SMSBoot\Fonts` folder:
 
-  ![Fonts folder](./media/advanced-troubleshooting-pxe-boot/18493_en_1.png)
+    :::image type="content" source="media/advanced-troubleshooting-pxe-boot/fonts.png" alt-text="Screenshot of the SMSBoot\Fonts folder.":::
 
 - Make sure that the Boot.sdi file exists in the `RemoteInstall\SMSBoot` folder:
 
-  ![Boot.sdi file](./media/advanced-troubleshooting-pxe-boot/18494_en_1.png)
+    :::image type="content" source="media/advanced-troubleshooting-pxe-boot/boot-sdi-file.png" alt-text="Screenshot of the RemoteInstall\SMSBoot folder.":::
 
 ## Windows PE startup issues - drivers
 
@@ -181,7 +181,7 @@ Make sure that **Deploy this boot image from the PXE-enabled distribution point*
 
 Another common issue that affects PXE boot involves Task Sequence deployments. In the following example, the Task Sequence is deployed to an unknown computer, but it's already in the database. The first symptom is that the PXE boot is aborted.
 
-![Task Sequence is deployed to an unknown computer](./media/advanced-troubleshooting-pxe-boot/18495_en_3.png)
+:::image type="content" source="media/advanced-troubleshooting-pxe-boot/task-sequence-deployment.png" alt-text="Screenshot shows the Task Sequence is deployed to an unknown computer.":::
 
 Upon further investigation, you notice the following entry in the SMSPXE log:
 

@@ -2,7 +2,6 @@
 title: Troubleshoot database replication service issues
 description: Describes how to diagnose and resolve database replication service problems in Configuration Manager.
 ms.date: 08/22/2020
-ms.prod-support-area-path:
 ---
 # Troubleshoot database replication service issues in Configuration Manager
 
@@ -19,7 +18,7 @@ Start by gathering information related to the history of the problem. Many times
 
 Once you've investigated environmental changes and made sure that your updates are in order, the next step is to run the Replication Link Analyzer (RLA). To launch RLA, open the **Monitoring** workspace and select the **Database Replication** node, then right-click the link that is having a problem and select **Replication Link Analyzer**, as shown in the following example:
 
-:::image type="content" source="media/troubleshoot-database-replication-service-issues/replication-link-analyzer.png" alt-text="Screenshot of Replication Link Analyzer.":::
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/replication-link-analyzer.png" alt-text="Screenshot of Replication Link Analyzer in the Database Replication node.":::
 
 > [!NOTE]
 > RLA runs within the context of whomever launches it from the console, so be sure that the account you use has administrative privileges on both SQL Server and site servers.
@@ -42,7 +41,7 @@ RLA will check the following on both sites:
 
 If RLS finds known problems, it will offer to fix them for you. The RLA output report is also straightforward. It tells you what it checked and what rules were run in addition to whether they passed or failed. Here is an example:
 
-![Screenshot of the RLA output report example](./media/troubleshoot-database-replication-service-issues/output-report.png)  
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/output-report.png" alt-text="Screenshot of the RLA output report example.":::
 
 ## Get details with SPDiagDRS
 
@@ -52,7 +51,7 @@ To run `SPDiagDRS`, open SQL Server Management Studio and connect to the two ser
 
 The following is a breakdown of the various `SPDiagDRS` sections and some common places to look for problems. A simple search for error messages and codes found here often guides you to the source of the problem.
 
-![Screenshot of a breakdown of the various SPDiagDRS sections](./media/troubleshoot-database-replication-service-issues/sections.png)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/sections.png" alt-text="Screenshot of a breakdown of the various SPDiagDRS sections with section number added." lightbox="media/troubleshoot-database-replication-service-issues/sections.png":::
 
 ### Section 1
 
@@ -60,7 +59,7 @@ The following is a breakdown of the various `SPDiagDRS` sections and some common
 
 - **CertificateThumbprint**: The thumbprint of the certificate used for authentication that contains the site's public key (local DB trusts remote DB).
 
-![Screenshot of the SiteStatus and CertificateThumbprint fields](./media/troubleshoot-database-replication-service-issues/section-1.png)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/section-1.png" alt-text="Screenshot of the SiteStatus and CertificateThumbprint fields.":::
 
 ### Section 2
 
@@ -68,7 +67,7 @@ The following is a breakdown of the various `SPDiagDRS` sections and some common
 
 - **OutgoingMessageInQueue**: This tells us the backlog that has yet to clear as we wait for the sites to receive the messages. This generally fluctuates, however if it continues to grow then this can represent a problem. Further troubleshooting should be performed to determine which site is not getting the messages.
 
-![Screenshot of the IncomingMessageInQueue and OutgoingMessageInQueue fields](./media/troubleshoot-database-replication-service-issues/section-2.png)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/section-2.png" alt-text="Screenshot of the IncomingMessageInQueue and OutgoingMessageInQueue fields.":::
 
 ### Section 3
 
@@ -88,17 +87,17 @@ This section has some important and useful information about the sites we are co
 
 Primary site 002 example:
 
-![Screenshot of the primary site 002 example](./media/troubleshoot-database-replication-service-issues/primary-site-example.jpg)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/primary-site-example.png" alt-text="Screenshot of the primary site 002 example.":::
 
 Central administration site 001 example:
 
-![Screenshot of the central administration site example](./media/troubleshoot-database-replication-service-issues/cas-example.jpg)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/cas-example.png" alt-text="Screenshot of the central administration site example.":::
 
 ### Section 6
 
 This provides the general information of the sites in the hierarchy, the `SiteServerName` and `DBServer` names, as well as the status and version. You can see here that a different primary site (003) is showing as being in **Maintenance Mode**. On working systems, Section 6 should be identical between the central administration site and all primary sites in the hierarchy.
 
-![Screenshot of a primary site in Maintenance Mode](./media/troubleshoot-database-replication-service-issues/primary-site-in-maintenance-mode.png)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/primary-site-in-maintenance-mode.png" alt-text="Screenshot of a primary site in Maintenance Mode.":::
 
 ### Section 7
 
@@ -139,18 +138,18 @@ Is sender throttled to this site and perhaps this is slowing down the BCP transf
 
 To verify, open the console and go to **Administration** > **Overview** > **Hierarchy Configuration** > **File Replication**, then right-click the site that would be sending the data. Verify that the schedule availability is set to **Open for all Priorities**, and that **Rate Limits** is set to **Unlimited to this Site**.
 
-![Verify site in File Replication](./media/troubleshoot-database-replication-service-issues/file-replication.png)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/file-replication.png" alt-text="Verify site in File Replication.":::
 
 If things are working but the data set from the BCP process is large and taking a long time to send, you can increase the number of sender threads to speed things up. The defaults are listed below. If your sender log is consistently advising **no more threads available** or **Using 5 or 5** or **Using 3 of 3**, this is a good indication that you may want to increase the sender threads.
 
 > [!NOTE]
 > If increased, the setting takes effect in real time with no restart of anything required.
 
-![Increase the number of sender threads](./media/troubleshoot-database-replication-service-issues/number.png)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/number.png" alt-text="Increase the number of sender threads.":::
 
 Also if you have a rate limit set to **Limited to specified maximum transfer rates by hour** (as shown below), Configuration Manager will only use one sender thread at a time when transferring to that site regardless of what the number of sender threads are set to. The default setting of **Unlimited When Sending to this destination** will use all the configured sender threads.
 
-![Screenshot of rate limit setting](./media/troubleshoot-database-replication-service-issues/rate-limit.png)
+:::image type="content" source="media/troubleshoot-database-replication-service-issues/rate-limit.png" alt-text="Screenshot of the rate limit setting.":::
 
 ## More information
 

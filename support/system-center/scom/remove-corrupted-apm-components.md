@@ -2,7 +2,6 @@
 title: Remove corrupted APM components
 description: Describes how to resolve issues that may affect IIS and SharePoint servers by removing possibly corrupted APM components in System Center 2016 Operations Manager.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: michjohn, jarrettr
 ---
 # Resolve issues by removing APM components in System Center 2016 Operations Manager
@@ -32,7 +31,7 @@ Typically, you can uninstall the Operations Manager agent and then reinstall it 
 
 This management pack has a class property in the state view that is named **APM Installed** to help you determine which agents still have the APM components installed (installed by default).
 
-:::image type="content" source="media/remove-corrupted-apm-components/apm-installed.png" alt-text="Screenshot of the APM Installed property.":::
+:::image type="content" source="media/remove-corrupted-apm-components/apm-installed.png" alt-text="Screenshot of the APM Installed property that shows which agents have APM installed.":::
 
 ## Repair or upgrade an agent
 

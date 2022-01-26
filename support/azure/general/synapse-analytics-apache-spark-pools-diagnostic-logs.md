@@ -4,8 +4,7 @@ description: Lists the Apache Spark diagnostic logs that's collected during trou
 ms.date: 05/27/2021
 author: genlin
 ms.author: genli
-ms.service: synapse-analytics
-ms.prod-support-area-path: 
+ms.service: azure
 ms.reviewer: 
 ---
 # Apache Spark diagnostic logs in Azure Synapse Analytics

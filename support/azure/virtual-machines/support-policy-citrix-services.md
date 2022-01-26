@@ -2,8 +2,8 @@
 title: Support policy for Citrix services on Azure
 description: Describes the Microsoft support policy that applies when you run Citrix services on Microsoft Azure. Also describes related Citrix support policies.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
 ---
 # Support policy for Citrix services on Azure
 

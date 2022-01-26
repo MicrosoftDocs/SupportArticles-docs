@@ -1,9 +1,9 @@
 ---
 title: System Restore is unable to complete Restoration
-description: This article provides resolutions for the problem where System Restore is unable to complete restoration and terminates. 
+description: This article provides resolutions for the problem where System Restore is unable to complete restoration and terminates.
 ms.date: 09/01/2020
-ms.prod-support-area-path:
 ms.reviewer: twarwick
+ms.technology: windows-hardware-general
 ---
 # System Restore is unable to complete Restoration
 

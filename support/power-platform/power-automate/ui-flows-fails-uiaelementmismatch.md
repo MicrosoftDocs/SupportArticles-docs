@@ -4,6 +4,7 @@ description: UI flows fails with the UIAElementMismatch error. Provides steps to
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # UI flows fails with error UIAElementMismatch
 
@@ -16,7 +17,9 @@ _Original KB number:_ &nbsp; 4555810
 
 When trying to run UI flows, you may see this error:
 
-:::image type="content" source="media/ui-flows-fails-uiaelementmismatch/uiaelementmismatch.jpg" alt-text="UIAElementMismatch Error":::
+> UIAElementMismatch.
+
+:::image type="content" source="media/ui-flows-fails-uiaelementmismatch/error-message.png" alt-text="Screenshot of the error when trying to run the U I flows." border="false":::
 
 ## Verifying issue
 

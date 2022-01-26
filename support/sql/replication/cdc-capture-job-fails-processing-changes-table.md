@@ -2,9 +2,8 @@
 title: CDC capture job fails when processing changes
 description: This article provides two workarounds for the problem where a CDC capture job fails when you process changes for a table that has a system CLR datatype (geometry, geography or hierarchyid).
 ms.date: 01/15/2021
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: akbarf
-ms.topic: troubleshooting
 ms.prod: sql 
 ---
 # CDC capture job fails when processing changes for a table with system CLR datatype (geometry, geography, or hierarchyid)

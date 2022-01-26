@@ -2,8 +2,8 @@
 title: How to enable and disable a trace for the Microsoft Online Services Sign-in Assistant
 description: Describes how to enable and disable a trace for the Microsoft Online Services Sign-in Assistant in order to troubleshoot non-browser based sign-in issues.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: dahans
+ms.service: active-directory
 ---
 # How to enable and disable a trace for the Microsoft Online Services Sign-in Assistant
 

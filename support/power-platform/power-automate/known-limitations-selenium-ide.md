@@ -2,8 +2,8 @@
 title: Known limitations of Selenium IDE
 description: Describes the known limitations of Selenium IDE.
 ms.reviewer: 
-ms.topic: article
 ms.date: 3/31/2021
+ms.subservice: power-automate-flows
 ---
 # Known limitations of Selenium IDE
 

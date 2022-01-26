@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 1 - API returning blank response
 description: Provides troubleshooting steps to an issue in which Azure API is returning blank response.
 ms.date: 03/04/2021
-ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
 author: genlin
@@ -17,9 +16,9 @@ _Original KB number:_ &nbsp; 4464936
 
 ## Symptoms
 
-The API **Blank API** consists of two operations **GetHeaders** and **GetMyIp**. **GetMyIp**  returns the value of X-FORWARDED-FOR header value and **GetHeaders**  returns all the request header values. **GetMyIp**  returns expected output but suddenly **GetHeaders**  started returning a blank response (no response body).
+The API **Blank API** consists of two operations **GetHeaders** and **GetMyIp**. **GetMyIp** returns the value of X-FORWARDED-FOR header value and **GetHeaders** returns all the request header values. **GetMyIp** returns expected output but suddenly **GetHeaders** started returning a blank response (no response body).
 
-:::image type="content" source="./media/api-return-blank-response/4464935_en_1.png" alt-text="blank response.":::
+:::image type="content" source="media/api-return-blank-response/blank-response.png" alt-text="Screenshot of a blank response.":::
 
 Expected output of **GetHeaders**  API should be something like below:
 
@@ -49,4 +48,3 @@ To debug this kind of issues, the best approach is collect [APIM inspector trace
 - Add the forward-request policy in the backend section or add **\<base />** element so that it inherits forward-request policy from the parent level (i.e. from the API level), which should resolve the problem.
 
 Read about the [forward-request](/azure/api-management/api-management-advanced-policies#ForwardRequest) policy to know more about it.
-

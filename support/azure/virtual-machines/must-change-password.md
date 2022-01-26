@@ -3,7 +3,7 @@ title: Azure virtual machine error You must change your password before logging 
 description: When using Remote Desktop Protocol to connect to a virtual machine, you might have to change the password of the account first.
 services: virtual-machines
 documentationcenter: ''
-author: chelche
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: virtual-machines
@@ -14,7 +14,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 09/10/2019
-ms.author: v-matham
+ms.author: genli
 ---
 
 # Azure virtual machine error: “You must change your password before logging on the first time”

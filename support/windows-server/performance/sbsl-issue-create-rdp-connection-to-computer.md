@@ -55,7 +55,7 @@ To make the registry change, follow these steps:
     > [!NOTE]
     > By default, the value for \<Connection Name> is RDP-Tcp. This value RDP-Tcp can be renamed or configured to something else.
 
-    ![Screenshot of configuring RDP-Tcp](./media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.jpg)
+    :::image type="content" source="media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.png" alt-text="Screenshot shows how to configure RDP-Tcp." lightbox="media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.png" border="false":::
 
 3. On the **Edit** menu, select **New**, and then select **DWORD Value**.
 4. Type *fQueryUserConfigFromLocalMachine*.

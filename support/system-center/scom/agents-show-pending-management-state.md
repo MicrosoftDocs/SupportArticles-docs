@@ -2,7 +2,6 @@
 title: Agents show the Pending Management state
 description: Fixes an issue in which Operations Manager agents are still in the Pending Management state even though they don't appear under Pending Management in the Operations Manager console.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # Remove orphaned Operations Management agents using PowerShell
 

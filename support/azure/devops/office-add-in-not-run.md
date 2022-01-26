@@ -1,10 +1,10 @@
 ---
 title: Office Integration add-in does not run
 description: This article provides resolutions for the error that occurs where the Team Foundation Server 2015 Office add-in doesn't work.
-ms.prod: devops
 ms.date: 08/18/2020
-ms.prod-support-area-path: Client Connectivity
+ms.custom: sap:Client Connectivity
 ms.reviewer: beccam
+ms.service: az-devops-project
 ---
 # Team Foundation Server Office Integration add-in doesn't run
 
@@ -27,7 +27,7 @@ You discover that the Team Foundation Server 2015 Office add-in doesn't work bec
 
 This issue occurs if there are quotation marks in the add-in's **Location** field. This prevents Office from verifying the publisher. To confirm that this is the cause of your problem, go to **File** -> **Options** -> **Add-ins**, select the Team Foundation Add-in, and then view the **Location** field to see whether the location path is inside quotation marks.
 
-![Office add-in ](./media/office-add-in-not-run/office-add-in.jpg)
+:::image type="content" source="media/office-add-in-not-run/office-add-in.png" alt-text="Screenshot shows an example to check the add-in's Location field." border="false":::
 
 ## Resolution
 

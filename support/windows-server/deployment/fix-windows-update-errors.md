@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
-localization_priority: medium
+localization_priority: high
 ms.reviewer: kaushika, chkeen, cgibson, jesko
 ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
@@ -70,15 +70,15 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
       - To install the tool later, select **Save**, and then download the installation file to your computer. When you're ready to install the tool, double-select the file.
    2. In the Windows Update Standalone Installer dialog box, select **Yes**.
 
-      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.png" alt-text="Windows Update Standalone Installer dialog box" border="false":::
+      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.png" alt-text="Select Yes to install hotfix for Windows KB947821 in the Windows Update Standalone Installer dialog box." border="false":::
 
 3. When the tool is being installed, it automatically runs. Although it typically takes less than 15 minutes to run, it might take much longer on some computers. Even if the progress bar seems to stop, the scan is still running, so don't select **Cancel**.
 
-    :::image type="content" source="media/fix-windows-update-errors/updates-are-being-installed-progress-window.png" alt-text="Download and Install updates - The updates are being installed progress window" border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/updates-are-being-installed-progress-window.png" alt-text="Download and Install updates window that shows the updates are being installed progress." border="false":::
 
 4. When you see Installation complete, select **Close**.
 
-    :::image type="content" source="media/fix-windows-update-errors/installation-complete.png" alt-text="Download and install Updates - Installation complete" border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/installation-complete.png" alt-text="Download and install Updates window shows the installation complete." border="false":::
 
 5. Reinstall the update or service pack you were trying to install previously.
 
@@ -92,27 +92,27 @@ For example, you may have problems when you try to install updates from Windows 
 
 1. Open [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx) in Internet Explorer.
 
-    :::image type="content" source="media/fix-windows-update-errors/microsoft-update-catalog.jpg" alt-text="Microsoft Update Catalog in Internet Explorer" border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/microsoft-update-catalog.png" alt-text="Microsoft Update Catalog in Internet Explorer." border="false":::
 
 2. In the search box, input the update number that you want to download. In this example, input 3006137. Then, select **Search**.
 
-    :::image type="content" source="media/fix-windows-update-errors/search-in-microsoft-update-catalog.jpg" alt-text="Microsoft Update Catalog - Search" border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/search-in-microsoft-update-catalog.png" alt-text="Search in Microsoft Update Catalog by inputting the update number. " border="false":::
 
 3. Find the update that applies to your operating system appropriately in the search results, and then select **Add** to add the update to your basket.
 
-    :::image type="content" source="media/fix-windows-update-errors/search-results-in-microsoft-update-catalog.jpg" alt-text="Microsoft Update Catalog search results" border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/search-results-in-microsoft-update-catalog.png" alt-text="Microsoft Update Catalog shows the search results.":::
 
 4. Select **view basket** to open your basket.
 
-    :::image type="content" source="media/fix-windows-update-errors/view-basket.jpg" alt-text="Microsoft Update Catalog - view basket" border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/view-basket.png" alt-text="Select the view basket button in Microsoft Update Catalog." border="false":::
 
 5. Select **Download** to download the update in your basket.
 
-    :::image type="content" source="media/fix-windows-update-errors/download-the-update-in-your-basket.jpg" alt-text="Microsoft Update Catalog - your basket":::
+    :::image type="content" source="media/fix-windows-update-errors/download-the-update-in-your-basket.png" alt-text="Microsoft Update Catalog shows your basket." border="false":::
 
 6. Select **Browse** to choose a location for the update you are downloading, and then select **Continue**.
 
-    :::image type="content" source="media/fix-windows-update-errors/download-options.jpg" alt-text="Microsoft Update Catalog - Download Options":::
+    :::image type="content" source="media/fix-windows-update-errors/download-options.png" alt-text="Select a location for the update you are downloading." border="false":::
 
 7. Select **Close** after the download process is done. Then, you can find a folder that contains the update package in the location that you specified.
 8. Open the folder, and then double-select the update package to install the update.

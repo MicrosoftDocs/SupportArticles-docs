@@ -2,7 +2,6 @@
 title: No available connection to selected VM Network can be found
 description: Fixes an issue in which all hosts receive a zero rating when you place a virtual machine on a Hyper-V cluster in Virtual Machine Manager.
 ms.date: 09/11/2020
-ms.prod-support-area-path:
 ms.reviewer: msadoff
 ---
 # All hosts receive a zero rating when you place a virtual machine on a Hyper-V cluster in VMM

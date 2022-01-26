@@ -2,7 +2,7 @@
 title: Troubleshoot software update synchronization
 description: Helps diagnose and resolve some common issues with software update synchronization in Configuration Manager.
 ms.date: 05/25/2020
-ms.prod-support-area-path: Software update point synchronization
+ms.custom: sap:Software update point synchronization
 ---
 # Troubleshoot software update synchronization in Configuration Manager
 
@@ -69,7 +69,7 @@ WSUS Configuration Manager configures the WSUS server once every hour. It does s
 
 If WCM fails to configure the WSUS server properly, synchronization attempts can fail with an error similar to the following screenshot:
 
-:::image type="content" source="media/troubleshoot-software-update-synchronization/fail-error.png" alt-text="Fail error in Status Message Details." border="false":::
+:::image type="content" source="media/troubleshoot-software-update-synchronization/fail-error.png" alt-text="Screenshot of the fail error in Status Message Details dialog box." border="false":::
 
 You'll also find the following error in the WsyncMgr.log file on the site server (located in `\Logs`):
 

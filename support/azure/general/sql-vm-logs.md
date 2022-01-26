@@ -2,8 +2,7 @@
 title: SQL Server on Azure Virtual Machines logs
 description: Lists the SQL Server on Azure Virtual Machines logs and diagnostic information that's collected during troubleshooting by Microsoft Support.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
-ms.service: virtual-machines-sql
+ms.service: azure
 ms.author: genli
 author: genlin
 ms.reviewer: 

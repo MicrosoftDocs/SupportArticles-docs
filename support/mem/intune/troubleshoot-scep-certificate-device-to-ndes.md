@@ -1,22 +1,22 @@
 ---
 title: Troubleshoot managed device to Network Device Enrollment Service (NDES) communication in Microsoft Intune
 description: Troubleshoot managed device to NDES server communication when using Simple Certificate Enrollment Protocol (SCEP) certificate profiles to deploy certificates with Intune.
-ms.date: 08/28/2020
+ms.date: 09/10/2021
 ms.reviewer: lacranda
 ---
-# Troubleshoot device to NDES server communication for SCEP certificate profiles in Microsoft Intune
+# Troubleshooting device to NDES server communication for SCEP certificate profiles in Microsoft Intune
 
-Use the following information to determine if a device that received and processed an Intune Simple Certificate Enrollment Protocol (SCEP) certificate profile can successfully contact Network Device Enrollment Service (NDES) to present a challenge. On the device, a private key is generated and the Certificate Signing Request (CSR) and challenge are passed from the device to the NDES server. To contact the NDES server, the device uses the URI from the SCEP certificate profile.
+Use the following information to determine if a device that received and processed an Intune Simple Certificate Enrollment Protocol (SCEP) certificate profile can successfully contact Network Device Enrollment Service (NDES) to present a challenge. On the device, a private key is generated and the certificate signing request (CSR) and challenge are passed from the device to the NDES server. To contact the NDES server, the device uses the URI from the SCEP certificate profile.
 
 This article references Step 2 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md).
 
 ## Review IIS logs for a connection from the device
 
-IIS logs include the same type of entries for all platforms.
+Internet Information Services (IIS) log files include the same type of entries for all platforms.
 
 1. On the NDES server, open the most recent IIS log file found in the following folder:   *%SystemDrive%\inetpub\logs\logfiles\w3svc1*
 
-2. Search the log for entries similar to the following examples. Both examples contain a status **200**, which appears near the end:
+1. Search the log for entries similar to the following examples. Both examples contain a status **200**, which appears near the end:
 
    `fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe operation=GetCACaps&message=default 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 186 0.`
 
@@ -24,14 +24,14 @@ IIS logs include the same type of entries for all platforms.
 
    `fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe operation=GetCACert&message=default 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 3567 0`
 
-3. When the device contacts IIS, an HTTP GET request for mscep.dll is logged.
+1. When the device contacts IIS, an HTTP GET request for mscep.dll is logged.
 
    Review the status code near the end of this request:
    - **Status code of 200**: This status indicates the connection with the NDES server is successful.
-   - **Status code of 500**: The IIS_IURS group might lack correct permissions. See [Status code 500](#status-code-500), later in this article.
+   - **Status code of 500**: The IIS_IURS group might lack correct permissions. See [Troubleshoot status code 500](#troubleshoot-status-code-500), later in this article.
    - If the status code isn't 200 or 500:
 
-     - See [Test the SCEP server URL](#test-the-scep-server-url) later in this article to help validate the configuration.
+     - See [Test and troubleshoot the SCEP server URL](#test-and-troubleshoot-the-scep-server-url) later in this article to help validate the configuration.
 
      - See [The HTTP status code in IIS 7 and later versions](https://support.microsoft.com/help/943891) for information about less common error codes.
 
@@ -110,11 +110,7 @@ To open the log:
    SCEP: Certificate request generated successfully. Enhanced Key Usage: (1.3.6.1.5.5.7.3.2), NDES URL: (https://<server>/certsrv/mscep/mscep.dll/pkiclient.exe), Container Name: (), KSP Setting: (0x2), Store Location: (0x1).
    ```
 
-## Troubleshoot common errors
-
-The following sections can help with common connection issues from all device platforms to NDES.
-
-### Status code 500
+## Troubleshoot status code 500
 
 Connections that resemble the following example, with a status code of 500, indicate the *Impersonate a client after authentication* user right isn't assigned to the IIS_IURS group on the NDES server. The status value of **500** appears at the end:
 
@@ -122,7 +118,7 @@ Connections that resemble the following example, with a status code of 500, indi
 2017-08-08 20:22:16 IP_address GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 - 10.5.14.22 profiled/1.0+CFNetwork/811.5.4+Darwin/16.6.0 - 500 0 1346 31
 ```
 
-**To fix this issue**:
+Complete the following steps to fix this issue:
 
 1. On the NDES server, run **secpol.msc** to open the Local Security Policy.
 2. Expand **Local Policies**, and then select **User Rights Assignment**.
@@ -131,7 +127,7 @@ Connections that resemble the following example, with a status code of 500, indi
 5. Select **OK**.
 6. Restart the computer, and then try the connection from the device again.
 
-### Test the SCEP server URL
+## Test and troubleshoot the SCEP server URL
 
 Use the following steps to test the URL that is specified in the SCEP certificate profile.
 
@@ -147,17 +143,17 @@ Use the following steps to test the URL that is specified in the SCEP certificat
    - [I receive "This page can't be displayed"](#this-page-cant-be-displayed)
    - [I receive "500 - Internal server error"](#internal-server-error)
 
-#### General NDES message
+### General NDES message
 
 When you browse to the SCEP server URL, you receive the following Network Device Enrollment Service message:
 
-![SCEP server URL](./media/troubleshoot-scep-certificate-device-to-ndes/ndes-server-url-message.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/ndes-server-url-message.png" alt-text="Screenshot of the Network Device Enrollment Service message.":::
 
 - **Cause**: This problem is usually an issue with the Microsoft Intune Connector installation.
 
   Mscep.dll is an ISAPI extension that intercepts incoming request and displays the HTTP 403 error if it's installed correctly.
   
-  **Resolution**: Examine the *SetupMsi.log* file to determine whether Microsoft Intune Connector is successfully installed. In the following example, *Installation completed successfully* and *Installation success or error status: 0* indicate a successful installation:
+  **Solution**: Examine the *SetupMsi.log* file to determine whether Microsoft Intune Connector is successfully installed. In the following example, *Installation completed successfully* and *Installation success or error status: 0* indicate a successful installation:
 
   ```output
   MSI (c) (28:54) [16:13:11:905]: Product: Microsoft Intune Connector -- Installation completed successfully.
@@ -167,11 +163,11 @@ When you browse to the SCEP server URL, you receive the following Network Device
   If the installation fails, remove the Microsoft Intune Connector and then reinstall it.
   If the installation was successful and you continue to receive the General NDES message, run the **iisreset** command to restart IIS.
 
-#### HTTP Error 503
+### HTTP Error 503
 
 When you browse to the SCEP server URL, you receive the following error:
 
-![HTTP Error 503. The service is unavailable](./media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png" alt-text="Screenshot of the HTTP Error 503. The service is unavailable."  border="false":::
 
 This issue is usually because the **SCEP** application pool in IIS isn't started. On the NDES server, open **IIS Manager** and go to **Application Pools**. Locate the **SCEP** application pool and confirm it's started.
 
@@ -193,11 +189,11 @@ If the SCEP application pool isn't started, check the application event log on t
    Exception code: 0xc0000005
    ```
 
-**Common causes for an application pool crash**:
+#### Common causes for an application pool crash
 
 - **Cause 1**: There are intermediate CA certificates (not self-signed) in the NDES server's Trusted Root Certification Authorities certificate store.
 
-  **Resolution**: Remove intermediate certificates from the Trusted Root Certification Authorities certificate store, and then restart the NDES server.
+  **Solution**: Remove intermediate certificates from the Trusted Root Certification Authorities certificate store, and then restart the NDES server.
   
   To identify all intermediate certificates in the Trusted Root Certification Authorities certificate store, run the following PowerShell cmdlet: `Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
 
@@ -207,22 +203,22 @@ If the SCEP application pool isn't started, check the application event log on t
 
 - **Cause 2**: The URLs in the Certificate Revocation List (CRL) are blocked or unreachable for the certificates that are used by the Intune Certificate Connector.
 
-  **Resolution**: Enable additional logging to collect more information:
+  **Solution**: Enable additional logging to collect more information:
   1. Open Event Viewer, select **View**, make sure that **Show Analytic and Debug Logs** option is checked.
   2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **CAPI2** > **Operational**, right-click **Operational**, then select **Enable Log**.
   3. After CAPI2 logging is enabled, reproduce the problem, and examine the event log to troubleshoot the issue.
 
 - **Cause 3**: IIS permission on **CertificateRegistrationSvc** has **Windows Authentication** enabled.
 
-  **Resolution**: Enable **Anonymous Authentication** and disable **Windows Authentication**, and then restart the NDES server.
+  **Solution**: Enable **Anonymous Authentication** and disable **Windows Authentication**, and then restart the NDES server.
 
-  ![IIS permissions](./media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
+  :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png" alt-text="Screenshot of the Anonymous Authentication and Windows Authentication permissions.":::
 
 - **Cause 4**: The NDESPolicy module certificate has expired.
 
-  The CAPI2 log (see Cause 2's resolution) will show errors relating to the certificate referenced by `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint` being outside of the certificate's validity period.
+  The CAPI2 log (see Cause 2's solution) will show errors relating to the certificate referenced by `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint` being outside of the certificate's validity period.
 
-  **Resolution**: Renew the certificate and reinstall the connector.
+  **Solution**: Renew the certificate and reinstall the connector.
 
    1. Use `certlm.msc` to open the local computer certificate store, expand **Personal**, and then select **Certificates**.
    1. In the list of certificates, find an expired certificate that satisfies the following conditions:
@@ -245,23 +241,23 @@ If the SCEP application pool isn't started, check the application event log on t
    1. Reinstall the Intune Certificate Connector to link it to the newly created certificate. For more information, see [How to reinstall the Intune Certificate Connector](./reinstall-the-intune-connector.md).
    1. After you close the Certificate Connector UI, restart the Intune Connector Service and the World Wide Web Publishing Service.
 
-#### GatewayTimeout
+### GatewayTimeout
 
 When you browse to the SCEP server URL, you receive the following error:
 
-![Gatewaytimeout error](./media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png" alt-text="Screenshot of the Gatewaytimeout error." border="false":::
 
 - **Cause**: The **Microsoft Azure AD Application Proxy Connector** service isn't started.
 
-  **Resolution**:  Run **services.msc**, and then make sure that the **Microsoft Azure AD Application Proxy Connector** service is running and **Startup Type** is set to **Automatic**.
+  **Solution**:  Run **services.msc**, and then make sure that the **Microsoft Azure AD Application Proxy Connector** service is running and **Startup Type** is set to **Automatic**.
 
-#### HTTP 414 Request-URI Too Long
+### HTTP 414 Request-URI Too Long
 
 When you browse to the SCEP server URL, you receive the following error: `HTTP 414 Request-URI Too Long`
 
 - **Cause**: IIS request filtering isn't configured to support the long URLs (queries) that the NDES service receives. This support is configured when you [configure the NDES service](/mem/intune/protect/certificates-scep-configure#configure-the-ndes-service) for use with your infrastructure for SCEP.
 
-- **Resolution**: Configure support for long URLs.
+- **Solution**: Configure support for long URLs.
 
   1. On the NDES server, open IIS manager, select **Default Web Site** > **Request Filtering** > **Edit Feature Setting** to open the **Edit Request Filtering Settings** page.
 
@@ -281,7 +277,7 @@ When you browse to the SCEP server URL, you receive the following error: `HTTP 4
 
   5. Restart the NDES server.
 
-#### This page can't be displayed
+### This page can't be displayed
 
 You have Azure AD Application Proxy configured. When you browse to the SCEP server URL, you receive the following error:
 
@@ -289,21 +285,21 @@ You have Azure AD Application Proxy configured. When you browse to the SCEP serv
 
 - **Cause**: This issue occurs when the SCEP external URL is incorrect in the Application Proxy configuration. An example of this URL is `https://contoso.com/certsrv/mscep/mscep.dll`.
 
-  **Resolution**: Use the default domain of *yourtenant.msappproxy.net* for the SCEP external URL in the Application Proxy configuration.
+  **Solution**: Use the default domain of *yourtenant.msappproxy.net* for the SCEP external URL in the Application Proxy configuration.
 
-#### <a name="internal-server-error"></a>500 - Internal server error
+### <a name="internal-server-error"></a>500 - Internal server error
 
 When you browse to the SCEP server URL, you receive the following error:
 
-![500 - Internal server error](./media/troubleshoot-scep-certificate-device-to-ndes/500-internal-server-error.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/500-internal-server-error.png" alt-text="Screenshot of the 500 - Internal server error." border="false":::
 
 - **Cause 1**: The NDES service account is locked or its password is expired.
 
-  **Resolution**: Unlock the account or reset the password.
+  **Solution**: Unlock the account or reset the password.
 
 - **Cause 2**: The MSCEP-RA certificates are expired.
 
-  **Resolution**: If the MSCEP-RA certificates are expired, reinstall the NDES role or request new CEP Encryption and Exchange Enrollment Agent (Offline request) certificates.
+  **Solution**: If the MSCEP-RA certificates are expired, reinstall the NDES role or request new CEP Encryption and Exchange Enrollment Agent (Offline request) certificates.
 
   To request new certificates, follow these steps:
 
@@ -313,7 +309,8 @@ When you browse to the SCEP server URL, you receive the following error:
   4. Expand **Personal**, right-click **Certificates**, then select **All Tasks** > **Request New Certificate**.
   5. On the **Request Certificate** page, select **CEP Encryption**, then select **More information is required to enroll for this certificate. Click here to configure settings**.
   
-     ![Select CEP Encryption](./media/troubleshoot-scep-certificate-device-to-ndes/select-scep-encryption.png)
+     :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/select-scep-encryption.png" alt-text="Screenshot of the Request Certificate page, where CEP Encryption is selected.":::
+
   6. In **Certificate Properties**, select the **Subject** tab, fill the **Subject name** with the information that you collected during step 2, select **Add**, then select **OK**.
   7. Complete the certificate enrollment.
   8. Open the Certificates MMC for **My user account**.
@@ -322,14 +319,16 @@ When you browse to the SCEP server URL, you receive the following error:
   9. Expand **Personal**, right-click **Certificates**, then select **All Tasks** > **Request New Certificate**.
   10. On the **Request Certificate** page, select **Exchange Enrollment Agent (Offline request)**, then select **More information is required to enroll for this certificate. Click here to configure settings**.
 
-      ![Select Exchange Enrollment Agent](./media/troubleshoot-scep-certificate-device-to-ndes/select-exchange-enrollment-agent.png)
+      :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/select-exchange-enrollment-agent.png" alt-text="Screenshot of the Request Certificate page, where Exchange Enrollment Agent (Offline request) is selected.":::
+
   11. In **Certificate Properties**, select the **Subject** tab, fill the **Subject name** with the information that you collected during step 2, select **Add**.
 
-      ![Certificate properties](./media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png)
+      :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png" alt-text="Screenshot of the Subject tab in Certificate properties window.":::
 
       Select the **Private Key** tab, select **Make private key exportable**, then select **OK**.
 
-      ![Private key](./media/troubleshoot-scep-certificate-device-to-ndes/private-key.png)
+      :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/private-key.png" alt-text="Screenshot of the Private key tab in Certificate properties window." border="false":::
+
   12. Complete the certificate enrollment.
   13. Export the Exchange Enrollment Agent (Offline request) certificate from the current user certificate store. In the Certificate Export Wizard, select **Yes, export the private key**.
   14. Import the certificate to the local machine certificate store.

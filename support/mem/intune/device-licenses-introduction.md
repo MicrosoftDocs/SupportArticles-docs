@@ -2,7 +2,7 @@
 title: Purchase device licenses in Microsoft Intune
 description: Introduces a new device-only subscription service that helps organizations manage devices that are not affiliated with specific users.
 ms.date: 05/25/2021
-ms.prod-support-area-path: Microsoft Intune
+ms.custom: sap:Microsoft Intune
 ---
 # Introduction to device licenses in Microsoft Intune
 
@@ -10,9 +10,6 @@ Microsoft Intune offers a device-only subscription service that helps organizati
 You can't assign an Intune device license, usage is based on trust.
 
 The Intune device subscription is licensed per device at a cost of $2 a month. For more information about the purpose of Intune device licensing, see [Microsoft Intune announces device-only subscription for shared resources](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Microsoft-Intune-announces-device-only-subscription-for-shared/ba-p/280817).
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4514392
 
 ## How to purchase the device-only subscription
 

@@ -4,7 +4,8 @@ description: This article introduces how to send Raw Data to a Printer by using 
 ms.date: 02/28/2020
 ms.reviewer: jhornick
 ms.topic: how-to
-ms.prod-support-area-path: Developer Tools
+ms.custom: sap:Developer Tools
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # Send raw data to a printer by using the Win32 API
 

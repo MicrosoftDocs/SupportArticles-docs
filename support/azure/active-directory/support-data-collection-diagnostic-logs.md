@@ -2,8 +2,8 @@
 title: Support data collection for troubleshooting Azure Active Directory issues
 description: Describes the support data that will be collected for troubleshooting your support incidents related to Azure Active Directory (Azure AD).
 ms.date: 07/20/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
 ---
 # Microsoft Azure Active Directory diagnostic logs
 

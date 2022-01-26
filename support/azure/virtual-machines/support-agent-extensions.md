@@ -2,10 +2,8 @@
 title: Support for VM agent extensions in Microsoft Azure
 description: Discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on IaaS for Microsoft Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: extensions
 ---
 # Support for VM agent extensions in Microsoft Azure
 
@@ -58,7 +56,9 @@ When the agent is running, it will log a summary of extensions operations. This 
 - Enable
 - Install
 - Start
-- DisableYou can find the summary log at `C:\WindowsAzure\logs\WaAppAgent.log`.
+- Disable
+
+You can find the summary log at `C:\WindowsAzure\logs\WaAppAgent.log`.
 
 To determine which extension is failing, open the log, and then look for the word "error" in the log.
 

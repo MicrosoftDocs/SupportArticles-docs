@@ -6,10 +6,10 @@ summary: Welcome to Azure Virtual Machines troubleshooting. These articles expla
 metadata:
   title: Troubleshoot common issues with Azure Virtual Machines
   description: Documentation for troubleshooting common issues with Azure Virtual Machines. # Required; article description that is displayed in search results. < 160 chars.
-  services: virtual-machine
-  ms.service: virtual-machine #Required; service per approved list. service slug assigned to your service by ACOM.
+  services: virtual-machines
+  ms.service: virtual-machines #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: v-miegge  #Required; your GitHub user alias, with correct capitalization.
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
   ms.date: 08/26/2021
 

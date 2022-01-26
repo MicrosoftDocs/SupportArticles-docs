@@ -2,8 +2,7 @@
 title: How to troubleshoot Azure Recovery Services
 description: Describes how to troubleshoot Azure Recovery Services (ASR).
 ms.date: 03/05/2021
-ms.prod-support-area-path: 
-ms.service: backup
+ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan

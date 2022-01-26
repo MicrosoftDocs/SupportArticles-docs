@@ -2,8 +2,9 @@
 title: Users in a federated domain see a yellow exclamation mark in Office 2013 apps
 description: Describes an issue in which users in a federated domain who aren't synced to Azure AD see a yellow exclamation mark in Office 2013 apps. Provides solutions.
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: adrianp, willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Users in a federated domain see a yellow exclamation mark in Office 2013 applications
 

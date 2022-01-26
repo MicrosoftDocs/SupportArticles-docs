@@ -2,7 +2,6 @@
 title: Upgrade Data Protection Manager (DPM) 2012 R2 to DPM 2016 with VMware VM protection
 description: Describes how to upgrade from DPM 2012 R2 to DPM 2016 if protection groups contain VMware virtual machines (VMs).
 ms.date: 01/22/2021
-ms.prod-support-area-path:
 ms.reviewer: digan; jarrettr; cbutch
 ---
 # How to upgrade DPM 2012 R2 to DPM 2016 if DPM 2012 R2 is used to protect VMware VMs
@@ -11,7 +10,7 @@ If you use Microsoft System Center 2012 R2 Data Protection Manager (DPM) to prot
 
 > 34517 - DPM 2016 does not support VMware VM Backup yet.
 
-![Select start job at step](./media/upgrade-dpm-vmware-vm-protection/dpm-protection-manager-setup.png)
+:::image type="content" source="media/upgrade-dpm-vmware-vm-protection/34517-dpm-2016-not-support-vmware-vm-backup-error.png" alt-text="Screenshot of the error when you try to upgrade to System Center 2016 Data Protection Manager." border="false":::
 
 To fix this issue, follow the upgrade procedure in this article.
 

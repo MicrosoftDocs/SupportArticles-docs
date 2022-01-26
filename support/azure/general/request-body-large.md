@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: storage
-ms.prod-support-area-path: 
+ms.subservice: files
 ms.reviewer: 
 ---
 # Error when you write more than 4 MB of data to Azure Storage: Request body is too large

@@ -2,7 +2,6 @@
 title: Fail to ping a Clustered Name that runs on Azure IaaS VMs
 description: Discusses an issue in which you can't ping a Clustered Name that runs on Azure IaaS virtual machines. Provides a resolution.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: mariliu
 ms.service: virtual-machines
 ---

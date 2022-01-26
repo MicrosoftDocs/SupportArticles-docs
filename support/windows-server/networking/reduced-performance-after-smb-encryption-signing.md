@@ -98,7 +98,7 @@ If you are deploying in a highly secure environment with Windows Server 2016 and
 
 2. Based on the SMB client and SMB server version, evaluate the most appropriate solution to optimize performance. Be aware that SMB Signing provides message integrity, and SMB Encryption provides message integrity plus privacy to provide the highest level of security.
 
-    - **SMB 3.0 (Windows Server 2012/Windows 8.1)** - SMB Signing will deliver better performance than SMB Encryption.
-    - **SMB 3.1 (Windows Server 2016/Windows 10)** - SMB Encryption will deliver better performance than SMB Signing, and has the added benefit of increased security together with message privacy in addition to message integrity guarantees.
+    - **SMB 3.0 (introduced with Windows Server 2012/Windows 8)** - SMB Signing will deliver better performance than SMB Encryption.
+    - **SMB 3.1 (introduced with Windows Server 2016/Windows 10)** - SMB Encryption will deliver better performance than SMB Signing, and has the added benefit of increased security together with message privacy in addition to message integrity guarantees.
 
 

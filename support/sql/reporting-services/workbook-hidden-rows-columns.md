@@ -2,7 +2,7 @@
 title: Workbook contains hidden rows and columns
 description: This article provides a workaround for the problem where hidden rows or columns are inserted in an Excel workbook when you export reports from SQL Server Reporting Services to Excel.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Reporting Services
+ms.custom: sap:Reporting Services
 ms.reviewer: kayokon, shink, ramakoni
 ms.prod: sql
 ---
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2777223
 
 When you export a Microsoft SSRS report to an Excel workbook, there are hidden rows or columns in the workbook. The following image is an example of this problem:
 
-![an example of hidden rows ](./media/workbook-hidden-rows-columns/2777238.PNG)
+:::image type="content" source="media/workbook-hidden-rows-columns/hidden-rows-example.png" alt-text="Screenshot shows an example of hidden rows, where the 8th row height is too small (hidden row).":::
 
 ## Cause
 

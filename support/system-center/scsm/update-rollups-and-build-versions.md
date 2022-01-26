@@ -2,7 +2,6 @@
 title: System Center Service Manager build versions
 description: Lists the update rollups and build versions of System Center 2016 Service Manager and System Center 2012 R2 Service Manager.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: luche
 ---
 # System Center Service Manager build versions

@@ -2,9 +2,9 @@
 title: Number added to user names and email addresses when users are synced to Azure AD
 description: Provides information about troubleshooting an issue in which a number is added to user names and email addresses when users are synced to Azure AD.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
-ms.technology: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Number added to user names and email addresses when users are synced to Azure AD
 

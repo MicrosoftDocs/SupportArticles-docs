@@ -2,8 +2,9 @@
 title: Troubleshoot Azure AD Certificate-Based Authentication issues
 description: Provides information to help you troubleshoot Certificate-Based Authentication issues in Azure AD.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Troubleshoot Azure AD Certificate-Based Authentication issues
 

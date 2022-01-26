@@ -2,7 +2,7 @@
 title: Error occurs when you open Configuration Manager
 description: This article provides workarounds for the problem that occurs when you open SQL Server Configuration Manager.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Other tools
+ms.custom: sap:Other tools
 ms.reviewer: yongzhe
 ms.prod: sql
 ---
@@ -53,7 +53,7 @@ Use the following procedure:
     |Microsoft SQL Server 2005|90|
     |||
 
-1. Open an elevated  command prompt, and change the directory to the folder location from Step1.  
+1. Open an elevated command prompt, and change the directory to the folder location from Step1.  
 
 1. Then type the following command, and then press **ENTER**:
 
@@ -64,7 +64,11 @@ Use the following procedure:
     > [!NOTE]
     > For this command to succeed, the *Sqlmgmproviderxpsp2up.mof* file must be present in the `%programfiles(x86)%\Microsoft SQL Server\nnn\Shared` folder.
 
-1. After you run the mofcomp tool, restart the WMI service for the changes to take effect. The service name is Windows management Instrumentation.
+1. After you run the mofcomp tool, restart the WMI service for the changes to take effect. To do this, open **Services** application, select **Windows Management Instrumentation**, and then select **Restart**. You can also restart the WMI service by running the following PowerShell command as administrator:
+
+    ```PowerShell
+    Get-Service winmgmt | Restart-Service -Force
+    ```
 
 ### Option 2:  Repair your SQL Server installation. For further information review Repair a Failed SQL Server Installation
 

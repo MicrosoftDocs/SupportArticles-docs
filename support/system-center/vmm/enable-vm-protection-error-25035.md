@@ -2,7 +2,6 @@
 title: Error 25035 when enabling a VM protection
 description: Fixes an issue that occurs when you try to turn on protection for a virtual machine in Azure Site Recovery. This triggers error code that indicates cluster resource could not be found.
 ms.date: 04/26/2020
-ms.prod-support-area-path:
 ms.reviewer: anbacker, markstan
 ---
 # ASR: The cluster resource could not be found when you enable protection for a virtual machine
@@ -45,6 +44,6 @@ Azure Site Recovery portal error details display a message that resembles the fo
 > **Recommendation**  
 > Resolve the issue and retry the operation.
 
-Azure Site Recovery portal error details:
+The screenshot of the Azure Site Recovery portal error details:
 
-![Enable protection error details](./media/enable-vm-protection-error-25035/error.png)
+:::image type="content" source="media/enable-vm-protection-error-25035/error-25035.png" alt-text="DRA could not prepare for initial replication error code 25035.":::

@@ -1,13 +1,16 @@
 ---
-title: Enable support for TLS 1.2 in your environment for upcoming Azure AD TLS 1.0/1.1 deprecation
-description: Describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 05/26/2021
-ms.prod-support-area-path: 
-ms.reviewer: dahans
+title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
+description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
+ms.date: 11/16/2021
+author: DennisLee-DennisLee
+ms.author: v-dele
+ms.reviewer: "dahans,abizerh"
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
 
-To improve the security posture of your tenant, and to remain in compliance with industry standards, Microsoft Azure Active directory (Azure AD) will soon stop supporting the following Transport Layer Security (TLS) protocols and ciphers:
+To improve the security posture of your tenant, and to remain in compliance with industry standards, Microsoft Azure Active Directory (Azure AD) will soon stop supporting the following Transport Layer Security (TLS) protocols and ciphers:
 
 - TLS 1.1
 - TLS 1.0
@@ -15,23 +18,30 @@ To improve the security posture of your tenant, and to remain in compliance with
 
 ## How this change might affect your organization
 
-Applications that are communicating with or authenticating against Azure Active Directory might not work as expected if they are NOT able to use TLS 1.2 to communicate. This situation includes Azure AD Connect, Azure AD PowerShell, Azure AD Application Proxy connectors, PTA agents, legacy browsers, and applications that are integrated with Azure AD.
+Do your applications communicate with or authenticate against Azure Active Directory? Then those applications might not work as expected if they can't use TLS 1.2 to communicate. This situation includes:
+
+- Azure AD Connect
+- Azure AD PowerShell
+- Azure AD Application Proxy connectors
+- PTA agents
+- Legacy browsers
+- Applications that are integrated with Azure AD
 
 ## Why this change is being made
 
 These protocols and ciphers are being deprecated for the following reasons:
 
-- To comply with the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
+- To follow the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
 - To improve security when users interact with our cloud services.
 
 The services are being deprecated on the following dates:
 
 - **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**. (This date has been postponed from **June 30th, 2021** to **January 31st, 2022**, to give administrators more time to remove the dependency on legacy TLS protocols and ciphers (TLS 1.0,1.1 and 3DES)).
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**. (This date has been postponed from **June 30th, 2021** to **January 31st, 2022**, to give administrators more time to remove the dependency on legacy TLS protocols and ciphers (TLS 1.0,1.1 and 3DES).)
 
 ## Enable support for TLS 1.2 in your environment
 
-To maintain a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services, make sure that your client apps and client and server operating system (OS) are enabled for TLS 1.2 and modern cipher suites.
+How do you maintain a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services? You enable your client apps and client and server operating system (OS) for TLS 1.2 and modern cipher suites.
 
 ### Guidelines for enabling TLS 1.2 on clients
 
@@ -39,7 +49,7 @@ To maintain a secure connection to Azure Active Directory (Azure AD) and Microso
 - Identify and reduce you dependency on the client apps and operating systems that don't support TLS 1.2.
 - Enable TLS 1.2 for applications and services that communicate with Azure AD.
 - Update and configure your .NET Framework installation to support TLS 1.2.
-- Make sure that applications and PowerShell (that use [Azure AD Graph](https://graph.windows.net) and [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
+- Make sure that applications and PowerShell (that use [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
 - Make sure that your web browser has the latest updates. We recommend that you use the new Microsoft Edge browser (based on Chromium). For more information, see the [Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel).
 - Make sure that your web proxy supports TLS 1.2. For more information about how to update a web proxy, check with the vendor of your web proxy solution.
 
@@ -50,9 +60,22 @@ For more information, see the following articles:
 
 ### Update the Windows OS and the default TLS that you use for WinHTTP
 
-Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, and later versions of Windows and Windows Server natively support TLS 1.2 for client-server communications over WinHTTP. Verify that you have not explicitly disabled TLS 1.2 on these platforms.
+These operating systems natively support TLS 1.2 for client-server communications over WinHTTP:
 
-By default, earlier versions of Windows, such as Windows 8 and Windows Server 2012, don't enable TLS 1.2 or TLS 1.1 for secure communications by using WinHTTP. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) and enable the registry values from the "[Enable TLS 1.2 on client or server operating systems](#enable-tls-12)" section. You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure protocols list for WinHTTP.
+- Windows 10
+- Windows 8.1
+- Windows Server 2016
+- Windows Server 2012 R2
+- Later versions of Windows and Windows Server
+
+Verify that you haven't explicitly disabled TLS 1.2 on these platforms.
+
+By default, earlier versions of Windows (such as Windows 8 and Windows Server 2012) don't enable TLS 1.2 or TLS 1.1 for secure communications by using WinHTTP. For these earlier versions of Windows:
+
+1. Install [Update 3140245](https://support.microsoft.com/help/3140245).
+1. Enable the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12) section.
+
+You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure protocols list for WinHTTP.
 
 For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
 
@@ -71,7 +94,7 @@ For more information, see [Handshake Simulation for various clients connecting t
 ### Enable TLS 1.2 common server roles that communicate with Azure AD
 
 - Azure AD Connect (install the latest version)
-  - If you also want to enable TLS 1.2 between the sync engine server and a remote SQL Server, make sure that you have the required versions installed for [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe)
+  - Do you also want to enable TLS 1.2 between the sync engine server and a remote SQL Server? Then make sure you have the required versions installed for [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe).
 - Azure AD Connect Authentication Agent (pass-through authentication) (version 1.5.643.0 and later versions)
 - Azure Application Proxy (version 1.5.1526.0 and later versions enforce TLS 1.2)
 - Active Directory Federation Services (AD FS) for servers that are configured to use Azure Multi-Factor Authentication (Azure MFA)
@@ -84,9 +107,9 @@ For more information, see [Handshake Simulation for various clients connecting t
   1. We highly recommend that you run the latest version of the agent, service, or connector.
   2. By default, TLS 1.2 is enabled on Windows Server 2012 R2 and later versions. In rare instances, the default OS configuration might have been modified to disable TLS 1.
 
-      In order to make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the "[Enable TLS 1.2 on client or server operating systems](#enable-tls-12)" section on servers that are running Windows Server and that communicate with Azure AD.
+      To make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the "[Enable TLS 1.2 on client or server operating systems](#enable-tls-12)" section on servers that are running Windows Server and that communicate with Azure AD.
 
-  3. Most of the previously listed services are dependent on .Net Framework. Ensure that it's updated as the following section, [Update and configure .NET Framework to support TLS 1.2](#update-configure-tls-12)
+  3. Most of the previously listed services are dependent on .NET Framework. Make sure it's updated as described in the [Update and configure .NET Framework to support TLS 1.2](#update-configure-tls-12) section.
 
   For more information, see the following articles:
   - [TLS 1.2 enforcement - Enforce TLS 1.2 for the Azure AD Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
@@ -112,7 +135,7 @@ To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforce
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
-Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Azure AD Graph](https://graph.windows.net/), or [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
+Managed Azure AD-integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Microsoft Graph](https://graph.microsoft.com)) may use .NET Framework.
 
 ### Install .NET updates to enable strong cryptography
 
@@ -128,16 +151,16 @@ Install the .NET updates so that you can enable strong cryptography. Some versio
 
 Use these guidelines:
 
-- NET Framework 4.6.2 and later versions support TLS 1.2 and TLS 1.1. Check the registry settings. No other changes are required.
+- .NET Framework 4.6.2 and later versions support TLS 1.2 and TLS 1.1. Check the registry settings. No other changes are required.
 
-- Update NET Framework 4.6 and earlier versions to support TLS 1.2 and TLS 1.1.
+- Update .NET Framework 4.6 and earlier versions to support TLS 1.2 and TLS 1.1.
 
   For more information, see [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies).
-- If you're using .NET Framework 4.5.2 or 4.5.1 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=2898850).
+- Do you use .NET Framework 4.5.2 or 4.5.1 on Windows 8.1 or Windows Server 2012? Then the relevant updates and details are also available from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=2898850).
 
-  - Also see [Microsoft Security Advisory 2960358](/security-updates/SecurityAdvisories/2015/2960358)
+  - Also see [Microsoft Security Advisory 2960358](/security-updates/SecurityAdvisories/2015/2960358).
 
-Set the following registry DWORD values on any computer that communicates across the network and runs a TLS 1.2-enabled system. For example, set these values on Configuration Manager clients, on remote site system roles that are not installed on the site server, and on the site server itself.
+For any computer that communicates across the network and runs a TLS 1.2-enabled system, set the following registry DWORD values.
 
 - For 32-bit applications that are running on a 32-bit OS and 64-bit applications that are running on a 64-bit OS, update the following subkey values:
 
@@ -156,8 +179,212 @@ Set the following registry DWORD values on any computer that communicates across
     - "SystemDefaultTlsVersions": **dword:00000001**
     - "SchUseStrongCrypto": **dword:00000001**
 
+For example, set these values on:
+
+- Configuration Manager clients
+- Remote site system roles that aren't installed on the site server
+- The site server itself
+
 For more information, see the following articles:
 
+- [TLS Cipher Suites supported by Azure AD](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)
 - [Solving the TLS 1.0 Problem - Security documentation](/security/engineering/solving-tls1-problem)
+
+## Overview of new telemetry in the sign-in logs
+
+To help you identify any clients or apps that still use legacy TLS in your environment, view the Azure AD sign-in logs. For clients or apps that sign in over legacy TLS, Azure AD marks the **Legacy TLS** field in **Additional Details** with **True**. The Legacy TLS field only appears if the sign-in occurred over legacy TLS. If you don’t see any legacy TLS in your logs, you're ready to switch to TLS 1.2.
+
+To find the sign-in attempts that used legacy TLS protocols, an administrator can review the logs by:
+
+- Exporting and querying the logs in Azure Monitor.
+- Downloading the last seven days of logs in JavaScript Object Notation (JSON) format.
+- Filtering and exporting sign-in logs using PowerShell.
+
+These methods are described below.
+
+## [Azure Monitor](#tab/azure-monitor)
+
+You can query the sign-in logs using Azure Monitor. Azure Monitor is a powerful log analysis, monitoring, and alerting tool. Use Azure Monitor for:
+
+- Azure AD logs
+- Azure resources logs
+- Logs from independent software tools
+
+> [!NOTE]
+> You need an Azure AD Premium license to export reporting data to Azure Monitor.
+
+To query for legacy TLS entries using Azure Monitor:
+
+1. In [Integrate Azure AD logs with Azure Monitor logs](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), follow the instructions to let you access the Azure AD sign-in logs in Azure Monitor.
+
+1. In the query definition area, paste the following Kusto Query Language query:
+
+    ```kusto
+    // Interactive sign-ins only
+    SigninLogs
+    | where AuthenticationProcessingDetails has "Legacy TLS"
+        and AuthenticationProcessingDetails has "True"
+    | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
+    | mv-apply JsonAuthProcDetails on (
+        where JsonAuthProcDetails.key startswith "Legacy TLS"
+        | project HasLegacyTls=JsonAuthProcDetails.value
+    )
+    | where HasLegacyTls == true
+
+    // Non-interactive sign-ins
+    AADNonInteractiveUserSignInLogs
+    | where AuthenticationProcessingDetails has "Legacy TLS"
+        and AuthenticationProcessingDetails has "True"
+    | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
+    | mv-apply JsonAuthProcDetails on (
+        where JsonAuthProcDetails.key startswith "Legacy TLS"
+        | project HasLegacyTls=JsonAuthProcDetails.value
+    )
+    | where HasLegacyTls == true
+    ```
+
+1. Select **Run** to execute the query. The log entries that match the query appear in the **Results** tab below the query definition.
+
+1. To learn more about the source of the legacy TLS request, look for the following fields:
+
+    - **UserDisplayName**
+    - **AppDisplayName**
+    - **ResourceDisplayName**
+    - **UserAgent**
+
+## [JSON](#tab/json)
+
+To see the Legacy TLS flag, you may download the last seven days of sign-in logs in JSON format.
+
+> [!NOTE]
+>
+> 1. The Legacy TLS flag only appears if legacy TLS is used for the request to sign in.
+>
+> 1. If you download the sign-in logs in comma-separated value (CSV) format instead, the legacy TLS flag doesn't appear.
+
+### Download JSON logs
+
+To download sign-in logs as JSON:
+
+1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
+
+1. In the **Overview** page menu, select **Sign-in logs**.
+
+1. Clear all filters except the **Date** filter.
+
+1. Set the **Date** filter to **Last 7 days**.
+
+1. Select **Download**.
+
+1. Choose each category of logs:
+    - User interactive
+    - User non-interactive
+    - Managed identity
+
+### View the JSON files
+
+Now you can review the JSON logs by using a JSON viewer of your choice.
+
+> [!NOTE]
+> If you need a JSON viewer, you can [download Visual Studio Code](https://code.visualstudio.com/Download).
+
+To review the JSON logs:
+
+1. Open the JSON log files your JSON viewer.
+
+1. Search for the term *legacy TLS*.
+
+1. If you find a log file with *legacy TLS*, review that sign-in log entry to learn more about the source of the legacy TLS request. Look for the following fields:
+    - **UserDisplayName**
+    - **AppDisplayName**
+    - **ResourceDisplayName**
+    - **UserAgent**
+
+## [PowerShell](#tab/powershell)
+
+Use PowerShell to filter and export sign-in log entries where legacy TLS is used.
+
+> [!NOTE]
+> You need an Azure AD Premium license to call the [Microsoft Graph API](/graph/use-the-api) through PowerShell.
+
+To filter and export the sign-in log entries:
+
+1. Using the **Run as administrator** option, open Windows PowerShell from the Start menu.
+
+1. Run the following commands to install the [Microsoft Graph SDKs](/graph/sdks/sdk-installation) and set the execution policy:
+
+    ```powershell
+    Install-Module Microsoft.Graph -Scope AllUsers
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+    ```
+
+1. Save the following script to a PowerShell script (.ps1) file.
+
+    ```powershell
+    $tId = "<your tenant ID>"  # Add tenant ID from Azure Active Directory page on portal.
+    $agoDays = 4  # Will filter the log for $agoDays from the current date and time.
+    $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filter start date.
+    $pathForExport = "./"  # The path to the local filesystem for export of the CSV file.
+    
+    Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId  # Or use Directory.Read.All.
+    Select-MgProfile "beta"  # Low TLS is available in Microsoft Graph preview endpoint.
+    $signInsInteractive = Get-MgAuditLogSignIn -Filter "createdDateTime ge $startDate" -All
+    $signInsNonInteractive = Get-MgAuditLogSignIn -Filter ("createdDateTime ge $startDate " +
+        "and signInEventTypes/any(t: t eq 'nonInteractiveUser')") -All
+    
+    $signInsInteractive | Foreach-Object {
+        foreach ($authDetail in $_.AuthenticationProcessingDetails)
+        {
+            if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
+            {
+                $_ | select CorrelationId, createdDateTime, userPrincipalName, userId,
+                            UserDisplayName, AppDisplayName, AppId, IPAddress, isInteractive,
+                            ResourceDisplayName, ResourceId, UserAgent 
+            }
+        }
+    } | Export-Csv -Path ($pathForExport + "Interactive_lowTls_$tId.csv") -NoTypeInformation
+    
+    $signInsNonInteractive | Foreach-Object {
+        foreach ($authDetail in $_.AuthenticationProcessingDetails)
+        {
+            if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
+            {
+                $_ | select CorrelationId, createdDateTime, userPrincipalName, userId,
+                            UserDisplayName, AppDisplayName, AppId, IPAddress, isInteractive,
+                            ResourceDisplayName, ResourceId, UserAgent 
+            }
+        }
+    } | Export-Csv -Path ($pathForExport + "NonInteractive_lowTls_$tId.csv") -NoTypeInformation
+    ```
+
+1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
+
+1. Copy the **Tenant ID** value from the Azure Active Directory page into the first statement of the PowerShell script, assigning it to the `$tId` variable.
+
+1. Save and run the script. If you're prompted when the script is running, sign in as a global administrator. Then give your consent to let Microsoft Graph read the audit log information.
+
+1. To learn about the source of the legacy TLS request, search the script output files (*Interactive_lowTls_\<Tenant-ID>.csv* and *NonInteractive_lowTls_\<Tenant-ID>.csv*) for these fields:
+    - **UserDisplayName**
+    - **AppDisplayName**
+    - **ResourceDisplayName**
+    - **UserAgent**
+
+---
+
+### View details about log entries in the Azure AD portal
+
+After you obtain the logs, you can get more details about legacy TLS-based sign-in log entries in the Azure AD portal. Follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
+
+1. In the **Overview** page menu, select **Sign-in logs**.
+
+1. Select a sign-in log entry for a user.
+
+1. Select the **Additional details** tab. (If you don't see this tab, first select the ellipsis (**...**) in the right corner to view the full list of tabs.)
+
+1. Check for a **Legacy TLS (TLS 1.0, 1.1, or 3DES)** value that's set to **True**. If you see that particular field and value, the sign-in attempt was made using legacy TLS. If the sign-in attempt was made using TLS 1.2, that field doesn't appear.
+
+For more information, see [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).

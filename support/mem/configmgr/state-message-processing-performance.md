@@ -2,7 +2,6 @@
 title: Troubleshoot state message backlog
 description: Describes how to troubleshoot state messaging performance issues in Configuration Manager.
 ms.date: 09/02/2021
-ms.prod-support-area-path: 
 ms.reviewer: buzb, lamosley
 author: helenclu
 ms.author: luche
@@ -45,7 +44,7 @@ StateSys is designed to pick up files in batches, parse XML files, and update th
 
 At the same time, StateSys has some designs that may prevent it from catching up with a backlog of nearly millions of files: 
 
-- Files are processed in alphabetical order, but not in "first in first out (FIFO)" order. Because the management point generates random names for the files, new messages might be processed before old messages. StateSys is resilient to this situation.
+- Files are processed in alphabetical order, not in "first in first out (FIFO)" order. Because the management point generates random names for the files, new messages might be processed before old messages. StateSys is resilient to this situation.
 - Each message contains a sequence number. StateSys maintains a list of missing ranges that are stored in the `SR_MissingRanges` table. When a missing range becomes older than two days (default), StateSys issues a resynchronization for the client. The resynchronization causes the client to send a large XML file that goes to the same queue as all other messages. If new status messages are always processed two days earlier than old messages, this condition can become a vicious cycle for some clients and cause frequent resynchronization.
 
 ## Resolution

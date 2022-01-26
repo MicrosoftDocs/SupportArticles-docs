@@ -4,6 +4,7 @@ description: When you use Microsoft Dynamics 365 App for Outlook, you receive a 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
+ms.subservice: d365-sales-email-office-integration
 ---
 # Can't connect to Exchange message appears when using Microsoft Dynamics 365 App for Outlook
 

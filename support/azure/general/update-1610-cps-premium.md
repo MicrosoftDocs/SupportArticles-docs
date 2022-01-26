@@ -4,8 +4,7 @@ description: Describes Update 1610 for Cloud Platform System (CPS) Premium and p
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: azure-stack
-ms.prod-support-area-path: 
+ms.service: cloud-services
 ms.reviewer: ashtons
 ---
 # Update 1610 for Cloud Platform System (CPS) Premium
@@ -63,7 +62,7 @@ Follow the steps in the "Update serial port concentrator firmware" section of th
 Download the following:
 
 - Avocent ACS 6000 Series
-- [Digi CM 48](http://ftp1.digi.com/support/firmware/80007070_u.bin) 
+- [Digi CM 48](https://ftp1.digi.com/support/firmware/80007070_u.bin) 
 
 The following table lists the recommended firmware versions that the serial port concentrator should run after the update.
 

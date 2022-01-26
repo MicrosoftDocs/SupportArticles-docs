@@ -2,7 +2,6 @@
 title: Windows boot error 0xc0000225 on an Azure VM
 description: Fixes an issue that triggers error 0xc0000225 when you try to start an Azure-based virtual machine.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.collection: windows
@@ -122,7 +121,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-0xc0000225/4015973_en_1.png" alt-text="Sceenshot of sample of the DIR command":::
+    :::image type="content" source="media/boot-error-0xc0000225/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 

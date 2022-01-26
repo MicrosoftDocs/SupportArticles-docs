@@ -2,8 +2,9 @@
 title: A faulty split-brain DNS configuration can prevent a seamless SSO sign-in experience
 description: Describes the conditions in which Active Directory Federation Services (AD FS) doesn't behave as expected when you sign in to Office 365 services by using a single sign-on (SSO)-enabled user ID. Provides a resolution.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # A faulty split-brain DNS configuration can prevent a seamless SSO sign-in experience
 

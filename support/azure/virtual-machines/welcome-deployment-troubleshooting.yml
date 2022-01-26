@@ -6,10 +6,10 @@ summary: Welcome to VM deployment issues. These articles explain how to determin
 metadata:
   title: VM deployment issues
   description: Documentation for troubleshooting common issues with deploying an Azure Virtual Machine.
-  services: virtual-machine
-  ms.service: virtual-machine #Required; service per approved list. service slug assigned to your service by ACOM.
+  services: virtual-machines
+  ms.service: virtual-machines #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: v-miegge  #Required; your GitHub user alias, with correct capitalization.
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: Travis.Maier #Required; microsoft alias of author; optional team alias.
   ms.date: 05/18/2021
 

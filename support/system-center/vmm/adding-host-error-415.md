@@ -2,7 +2,6 @@
 title: Error 415 adding hosts to SCVMM
 description: Fixes an issue in which you can't add hosts to System Center 2012 Virtual Machine Manager Service Pack 1 and receive error 415.
 ms.date: 04/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: dewitth, markstan
 ---
 # Adding a Host to System Center 2012 Virtual Machine Manager SP1 fails with error 415
@@ -49,11 +48,11 @@ Log on to the target host and examine the local users and groups. Verify that th
 
 To open the required ports, open **Advanced Firewall** settings, choose **Inbound Rules** and scroll down to the bottom of the list. Make sure that the five items below are all enabled. In the first image below, only **Windows Remote Management** is enabled.
 
-![Windows Remote Management is enabled](./media/adding-host-error-415/wf1.png)
+:::image type="content" source="media/adding-host-error-415/enable-windows-remote-management.png" alt-text="Only the Windows Remote Management is enabled in Inbound Rules.":::
 
 The image below shows all items enabled.
 
-![All items are enabled](./media/adding-host-error-415/wf2.png)
+:::image type="content" source="media/adding-host-error-415/windows-remote-management-and-management-instrumentation-are-enabled.png" alt-text="All the Windows Remote Management and Windows Management Instrumentation are enabled in Inbound Rules.":::
 
 You can automate this by running the following commands:
 
@@ -69,4 +68,4 @@ netsh advfirewall firewall set rule group="Windows Remote Management" new enable
 
 If step 1 above did not resolve the issue, enable the **File Server** role. In **Roles and Features**, place a check in **File Server**. Reboot is optional but recommended.
 
-![Enable the File Server role](./media/adding-host-error-415/role.png)
+:::image type="content" source="media/adding-host-error-415/enable-file-server-role.png" alt-text="Enable the File Server role in the Add Roles and Features Wizard window.":::

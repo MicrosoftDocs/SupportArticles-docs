@@ -2,8 +2,8 @@
 title: How to troubleshoot Azure Information Protection policy issues
 description: Discusses how to troubleshoot Azure Information Protection policy issues.
 ms.date: 08/14/2020
-ms.prod-support-area-path:  Azure\Azure Information Protection\AIP Service\Policy issues
-ms.service: azure-advanced-threat-protection
+ms.custom: sap:Azure\Azure Information Protection\AIP Service\Policy issues
+ms.service: information-protection
 ms.author: genli
 author: genlin
 ms.reviewer: 

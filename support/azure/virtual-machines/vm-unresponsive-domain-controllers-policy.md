@@ -4,7 +4,7 @@ titlesuffix: Azure Virtual Machines
 description: This article provides steps to resolve issues where the Default Domain Controllers Policy prevents the booting of an Azure VM.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -14,7 +14,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 09/08/2020
-ms.author: v-miegge
+ms.author: genli
 ---
 
 # VM is unresponsive while applying default domain controllers policy
@@ -25,7 +25,7 @@ This article provides steps to resolve issues where the Default Domain Controlle
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays the OS becoming unresponsive while booting with the message **Default Domain Controllers Policy**.
 
-  ![Figure 1 displays the OS stuck with the message 'Default Domain Controllers Policy'](./media/vm-unresponsive-domain-controllers-policy/1-default-domain-controllers-policy.png)
+  :::image type="content" source="media/vm-unresponsive-domain-controllers-policy/default-domain-controllers-policy.png" alt-text="Screenshot shows that the O S is stuck, with the message: Default Domain Controllers Policy." border="false":::
 
 ## Cause
 

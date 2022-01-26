@@ -2,7 +2,6 @@
 title: Understand components and threads
 description: Helps administrators understand components and threads for content distribution.
 ms.date: 03/30/2020
-ms.prod-support-area-path: 
 ---
 # Components and threads for content distribution
 
@@ -32,7 +31,7 @@ Here's a quick list of the primary components used for content distribution:
 
 Distribution Manager (DistMgr) performs a variety of operations to distribute content to the distribution points (DPs). These operations are handled by the different types of threads, and the diagram below explains the DistMgr thread hierarchy for the default thread configuration:
 
-![Distribution Manager thread hierarchy](./media/components-and-threads/4000597_en_2.png)
+:::image type="content" source="media/components-and-threads/distmgr-thread-hierarchy.png" alt-text="Diagram shows the Distribution Manager thread hierarchy." lightbox="media/components-and-threads/distmgr-thread-hierarchy.png":::
 
 - **Main DistMgr thread**
 
@@ -150,7 +149,7 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
 
 All Configuration Manager sites (including the central administration site) allow configuring the number of threads that can be used for distributing content to the distribution points (DPs). This configuration is specific to each site and can be accessed by right-clicking the site under the **Sites** node and selecting **Configure Site Components** > **Software Distribution**. Here's a look at the default configuration:
 
-![Software Distribution Component Properties window](./media/components-and-threads/4000598_en-us_1.png)
+:::image type="content" source="media/components-and-threads/software-distribution.png" alt-text="Screenshot of the Software Distribution Component Properties window." border="false":::
 
 In most cases, you would only be concerned with the **Maximum number of packages** and **Maximum threads per package** settings.
 
@@ -165,7 +164,7 @@ The default configuration of **Maximum number of packages=3** and **Maximum thre
 
 With the default thread configuration of **3x5**, DistMgr can simultaneously process three packages and use up to five threads for each package, allowing it to use up to a total of 15 threads to perform work. Here's how this breaks down assuming we have more than three packages that need to get distributed to more than 5 DPs:  
 
-![Thread Configuration = 3x5](./media/components-and-threads/4000599_en-us_1.png)
+:::image type="content" source="media/components-and-threads/default-thread-configuration.png" alt-text="Diagram shows how DistMgr process three packages at the same time when Thread Configuration = 3x5." lightbox="media/components-and-threads/default-thread-configuration.png":::
 
 To process each individual package, a package processing thread is spawned by the main DistMgr thread. This package processing thread uses one out of three package processing slots from the **Maximum number of packages** setting. There is a unique package processing thread per package - DistMgr does not start multiple package processing threads for the same package. This means that three unique packages will utilize three unique package processing threads. Each of these package processing threads can spawn up to five DP threads to distribute the package to five DPs simultaneously.
 
@@ -224,7 +223,7 @@ By default, sender writes data to a destination site by using multiple concurren
 
 All Configuration Manager sites allow you to configure the number of threads that can be used by the Sender component to send data concurrently to other sites. This configuration is specific to each site, and can be accessed from the **Site Properties** under the **Sites** node by selecting the **Sender** tab. Here's a look at the default configuration:
 
-![ConfigMgr Primary Site Properties](./media/components-and-threads/4000600_en-us_1.png)
+:::image type="content" source="media/components-and-threads/configmgr-primary-site.png" alt-text="Screenshot shows information under the Sender tab in the ConfigMgr Primary Site Properties window." border="false":::
 
 **All sites**: The maximum number of simultaneous communications allowed for this sender. The default value is **5**. These communications can be destined for different sites or all for the same site, except as restricted by the maximum value specified in **Per site**.
 

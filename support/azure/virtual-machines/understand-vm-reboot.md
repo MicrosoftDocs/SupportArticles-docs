@@ -32,6 +32,16 @@ For more information about availability sets, see [Manage the availability of VM
 
 Azure Resource Health is a service that exposes the health of individual Azure resources and provides actionable guidance for troubleshooting problems. In a cloud environment where it isn’t possible to directly access servers or infrastructure elements, the goal of Resource Health is to reduce the time that you spend on troubleshooting. In particular, the aim is to reduce the time that you spend determining whether the root of the problem lies in the application or in an event inside the Azure platform. For more information, see [Understand and use Resource Health](/azure/service-health/resource-health-overview).
 
+If Azure has further information about the root cause of a platform-initiated unavailability for a Virtual Machine, that information may be posted in resource health up to 72 hours after the initial unavailability.
+
+## VM downtimes in activity log 
+
+[Resource Health alerts](/azure/service-health/resource-health-alert-monitor-guide) are sent based on the [activity Log](/azure/azure-monitor/essentials/activity-log) information. In some cases, VM downtimes may not show in the activity log. If the downtime doesn't show in the activity log, Resource Health alerts won't be sent for the downtime. The downtime is still visible in Resource Health.
+
+For example, when the VM availability status changes from Available to Unavailable and then goes back to Available within 35 seconds, the downtime doesn't show in the activity log. This case won't occur if a correlated downtime is sent within 15 minutes before the occurrence of the first transition. 
+
+The VM downtimes that don't show in the activity log are filtered on the Azure platform side to prevent transient errors from showing incorrect downtimes to customers. With ongoing investments in VM health quality, the filters may no longer be necessary and may cause quick changes in VM health to remain unreported. Microsoft is working on a phase-out plan to deliver the best customer experience.
+
 ## Actions and events that can cause the VM to reboot
 
 ### Planned maintenance
@@ -49,7 +59,7 @@ To understand what Azure planned maintenance is and how it can affect the availa
 
 For this class of updates in Microsoft Azure, users experience no impact on their running VMs. Many of these updates are to components or services that can be updated without interfering with the running instance. Some are platform infrastructure updates on the host operating system that can be applied without a reboot of the VMs.
 
-These memory-preserving updates are accomplished with technology that enables in-place live migration. When it is being updated, the VM is placed in a *paused* state. This state preserves the memory in RAM while the underlying host operating system receives the necessary updates and patches. The VM is resumed within 30 seconds of being paused. After the VM is resumed, its clock is automatically synchronized.
+These memory-preserving updates are accomplished with technology that enables in-place live migration. When it is being updated, the VM is placed in a *paused* state. This state preserves the memory in RAM while the underlying host operating system receives the necessary updates and patches. The VM is resumed typically within 30 seconds of being paused. After the VM is resumed, its clock is automatically synchronized.
 
 Because of the short pause period, deploying updates through this mechanism greatly reduces the impact on the VMs. However, not all updates can be deployed in this way. 
 
@@ -110,3 +120,7 @@ VMs in Azure rely on virtual disks for operating system and data storage that is
 ### Other incidents
 
 In rare circumstances, a widespread issue can affect multiple servers in an Azure datacenter. If this issue occurs, the Azure team sends email notifications to the affected subscriptions. You can check the [Azure Service Health dashboard](https://azure.microsoft.com/status/) and the Azure portal for the status of ongoing outages and past incidents.
+
+## Diagnose VM Restarts
+
+You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. 

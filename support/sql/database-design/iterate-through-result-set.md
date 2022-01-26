@@ -2,7 +2,7 @@
 title: Iterate through a result set by using Transact-SQL
 description: This article describes various methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
 ms.date: 10/29/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.topic: how-to
 ms.prod: sql
 ---
@@ -42,7 +42,7 @@ select * from #mytemp where au_id = @au_id
 delete #mytemp where au_id = @au_id
 
 set rowcount 1
-select @au_id = au_id from #mytemp<BR/>
+select @au_id = au_id from #mytemp
 end
 set rowcount 0
 

@@ -84,7 +84,7 @@ You must add the extensible counters again from the list of services. Before you
 To rebuild all Performance counters including extensible and third-party counters in Windows Server type the following commands at a command prompt. Press ENTER after each command.
 
 ```console
-cd\windows\system32
+cd \windows\system32
 lodctr /R
 ```
 

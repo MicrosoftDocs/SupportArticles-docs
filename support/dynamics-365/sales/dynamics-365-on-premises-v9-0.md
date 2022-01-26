@@ -1,9 +1,9 @@
 ---
 title: Microsoft Dynamics 365 (on-premises) v9.0
 description: Article for initial release of the Microsoft Dynamics 365 (on-premises) v9.0 product.
-ms.reviewer:  
-ms.topic: article
+ms.reviewer: 
 ms.date: 3/31/2021
+ms.subservice: d365-sales-server
 ---
 # Microsoft Dynamics 365 (on-premises) v9.0
 

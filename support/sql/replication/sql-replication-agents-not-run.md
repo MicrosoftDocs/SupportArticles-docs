@@ -2,7 +2,7 @@
 title: SQL Server replication agents can't run
 description: This article provides workarounds for the problem that occurs when you configure many SQL Server replication agents to run on a server, and some replication agents can't run.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: akshaym
 ms.prod: sql
 ---
@@ -204,7 +204,7 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
     5. Double-click the entry that contains 997.
     6. Select **UUID** in the object editor, and then click **Associators** to show the actual logon name. Refer to the following screenshot:
 
-        ![Select UUID, click Associators to show the actual logon name](./media/sql-replication-agents-not-run/select-uuid-click-associators.png)
+        :::image type="content" source="media/sql-replication-agents-not-run/select-uuid-click-associators.png" alt-text="Screenshot of the steps to locate the actual logon name." :::
 
 ## Considerations if you use Remote Desktop Protocol
 

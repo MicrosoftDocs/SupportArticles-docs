@@ -1,18 +1,15 @@
 ---
-title: Troubleshoot bootstrap with modern provisioning
+title: Troubleshoot Configuration Management bootstrap with modern provisioning
 description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2 - Bootstrap the Configuration Manager client with modern provisioning.
 ms.date: 04/16/2020
-ms.prod-support-area-path: Co-management with Configuration Manager
+ms.custom: sap:Co-management with Configuration Manager
 ms.reviewer: luche
 ---
 # Troubleshoot co-management: Bootstrap with modern provisioning
 
 This article helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2: [Bootstrap the Configuration Manager client with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2).
 
-This scenario occurs when you have new Windows 10 devices that join Azure AD and automatically enroll to Intune, and then you install the Configuration Manager client to reach a co-management state.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4520150
+This scenario occurs when you have new Windows 10 devices that join Azure Active Directory (Azure AD) and automatically enroll to Intune, and then you install the Configuration Manager client to reach a co-management state.
 
 ## Before you start
 
@@ -48,17 +45,17 @@ If you are experiencing issues that affect hybrid Azure AD join for managed doma
 
 ## Frequently asked questions  
 
-### Question 1: What roles do I need to configure co-management?
+### What roles do I need to configure co-management?
 
 Here are the required [permissions and roles](/mem/configmgr/comanage/overview#permissions-and-roles) to configure co-management.  
 
-### Question 2: What log can I use to validate workloads and determine where policies and apps come from in a co-management scenario?
+### What log can I use to validate workloads and determine where policies and apps come from in a co-management scenario?
 
 You can use the following log file on Windows 10 devices:
 
 `%WinDir%\CCM\logs\CoManagementHandler.log`
 
-### Question 3: How do I validate that my cloud service has a unique DNS name?
+### How do I validate that my cloud service has a unique DNS name?
 
 To do this, follow these steps:
 
@@ -67,13 +64,13 @@ To do this, follow these steps:
 3. When you have a name that is available for you to use, note it without creating it in the **Cloud Service** pane.
 4. Create a CNAME record that maps your domain to *\<name>.cloudapp.net* in both internal and external DNS servers.
 
-### Question 4: Where can I find the Configuration Manager client setup MSI?
+### Where can I find the Configuration Manager client setup MSI?
 
 You can find the **ccmsetup.msi** file in the following folder on the Configuration Manager site server:
 
 `<ConfigMgr installation directory>\bin\i386`
 
-### Question 5: How do I verify the Configuration Manager client deployment from Intune to the managed Windows 10 devices?
+### How do I verify the Configuration Manager client deployment from Intune to the managed Windows 10 devices?
 
 To verify the deployment, follow these steps on the Windows 10 device:
 
@@ -220,7 +217,7 @@ Additionally, if you enable verbose logging by setting the `HKEY_LOCAL_MACHINE\S
 
 We recommend that, instead of automatically disabling CRL checking, you first make sure that it works. However, if you can't get CRL checking to work correctly, temporarily disable CRL checking for CMG connection points. This lets a client certificate be selected without performing CRL checking, and enables communication with the management point.
 
-## References
+## More information
 
 For more information about troubleshooting co-management issues, see the following articles:
 
@@ -234,9 +231,3 @@ For more information about Intune and Configuration Manager co-management, see t
 - [Quickstarts for co-management](/mem/configmgr/comanage/quickstarts)
 - [Tutorial: Enable co-management for existing Configuration Manager clients](/mem/configmgr/comanage/tutorial-co-manage-clients)
 - [How to prepare internet-based devices for co-management](/mem/configmgr/comanage/how-to-prepare-Win10)
-
-If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
-
-You can also submit feedback and ideas to the Intune development team through our [uservoice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
-
-If all else fails and you want to open a support case with the Intune Support team, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).

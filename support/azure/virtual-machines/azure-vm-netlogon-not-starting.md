@@ -2,7 +2,6 @@
 title: Azure Virtual Machine - Netlogon service is not starting
 description: Troubleshoot Netlogon service not starting
 ms.date: 01/11/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
@@ -14,7 +13,7 @@ ms.collection: windows
 
 1. The virtual machine (VM) screenshot shows the operating system (OS) fully loaded and waiting for the credentials:
 
-   ![Waiting for credentials](./media/azure-vm-netlogon-not-starting/1-waiting.png)
+   :::image type="content" source="media/azure-vm-netlogon-not-starting/1-waiting.png" alt-text="Screenshot of the V M screen, which shows the OS fully loaded and waiting for the credentials."::: 
 
 2. If you view the Guest OS Logs, you'll see that DNS Client service is either not starting, or is failing to start. This could be due to a hang, a crash of this service, or any required service to be run before it.
 
