@@ -1,6 +1,6 @@
 ---
 title: Unable to reach the server when sharing files
-description: This article fixes an issue in which you receive the "Unable to reach the serve" error when you share files or folders.
+description: This article fixes an issue in which you receive an "Unable to reach the server" message when you share files or folders.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -25,48 +25,48 @@ When you try to share files or folders in Microsoft SharePoint Online or Microso
 
 > Sorry, we're unable to reach the server right now.
 
-This issue occurs for various reasons. To resolve this issue, try the following solutions. After you try one solution, check if the issue is resolved. If the issue persists, continue with other solutions.
+This issue occurs for various reasons. To resolve this issue, try the following solutions in the given order. 
 
 ## Check the access request settings
 
-This issue may occur if the access request settings of the SharePoint site don't allow members to share files and folders.  
+This issue might occur if the access request settings of the SharePoint site don't allow members to share files and folders.  
 
 To change the settings, follow the steps at [Change access requests settings](https://support.microsoft.com/office/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3#bk_enableallow_sponline).
 
 ## Check the settings in Internet Options
 
-This issue may occur if the **Do not save encrypted pages to disk** option is checked in Internet Options. To clear the option, follow these steps:
+This issue might occur if the **Do not save encrypted pages to disk** option is selected in Internet Options. To clear the option, follow these steps:
 
 1. Open Internet Explorer, and then select **Tools** > **Internet Options** > **Advanced**.
 1. In the **Settings** field, scroll to the **Security** section.
 1. Clear the **Do not save encrypted pages to disk** check box.
 
-   :::image type="content" source="media/share-file-unable-reach-server/change-security-setting.png" alt-text="Screenshot of the Security Settings under the Internet Options Advanced tab. The setting titled Do not save encrypted pages to disk are highlighted.":::
+   :::image type="content" source="media/share-file-unable-reach-server/change-security-setting.png" alt-text="Screenshot of the security settings on the Internet Options Advanced tab. The setting that's labeled Do not save encrypted pages to disk is highlighted.":::
 
 1. Select **Apply**, and then select **OK**.
 1. Restart your browser for the settings to take effect.
 
 ## Make sure the items being shared don't reach a limit
 
-There is a limit of 50,000 items that can be shared in a folder and any subfolders.
+There is a limit of 50,000 items that can be shared in a folder or any subfolders.
 
-If the items that you try to share reach the limit in a folder, move some items out of the folder, or select individual files to share.
+If the items that you try to share in any folder reach the capacity limit, move some items out of the folder, or select individual files to share.
 
 To learn more about large lists and libraries, see [Manage large lists and libraries](https://support.microsoft.com/office/manage-large-lists-and-libraries-b8588dae-9387-48c2-9248-c24122f07c59).
 
 ## Check the site storage
 
-This issue may occur if the site has insufficient storage space.  
+This issue might occur if the site has insufficient storage space.  
 
 To change the site storage limits, see [Manage individual site storage limits](/sharepoint/manage-site-collection-storage-limits#manage-individual-site-storage-limits).
 
 ## Check the unique security scopes per list or library
 
-In some situations, when you share files or folders with users in the classic experience of a SharePoint site, you may receive the following error message:
+In some situations, when you share files or folders with users in the classic experience of a SharePoint site, you might receive the following error message:
 
 > You cannot break inheritance for this item because there are too many items with unique permission in this list.
 
-This error means that the list or library reaches the unique security scopes.
+This message indicates that the list or library reaches the unique security scopes.
 
 To fix this error, follow the resolution at ["You can't share this folder because there are too many items in the folder" error when trying to share or break inheritance](../lists-and-libraries/error-share-break-inheritance.md).
 
