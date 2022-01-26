@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: msteams
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto:

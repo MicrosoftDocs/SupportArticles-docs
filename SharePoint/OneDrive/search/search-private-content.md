@@ -11,7 +11,7 @@ ms.service: one-drive
 ms.custom: 
 - CSSTroubleshoot
 - CI-156789
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-matthamer
 appliesto:
 - OneDrive

@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: sharepoint-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: randring
 appliesto:

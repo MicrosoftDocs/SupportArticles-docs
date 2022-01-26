@@ -4,7 +4,7 @@ description: Connecting to the remote server failed with the following error mes
 author: simonxjx
 audience: ITPro
 ms.service: exchange-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

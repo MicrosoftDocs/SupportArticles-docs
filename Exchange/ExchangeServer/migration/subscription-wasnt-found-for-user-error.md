@@ -5,7 +5,7 @@ author: simonxjx
 manager: dcscontentpm
 ms.date: 10/7/2020
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: exchange-online
 localization_priority: Normal
 search.appverid:

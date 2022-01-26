@@ -4,7 +4,7 @@ description: Describes how to use Outlook policy to prevent users from adding ne
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Online

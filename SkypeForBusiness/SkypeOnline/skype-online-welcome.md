@@ -5,7 +5,7 @@ author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.service: skype-for-business-online
-ms.topic: article
+ms.topic: landing-page
 ms.author: v-six
 localization_priority: Normal
 ms.custom:

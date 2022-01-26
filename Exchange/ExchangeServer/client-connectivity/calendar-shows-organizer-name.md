@@ -4,7 +4,7 @@ description: Describes behavior in which the resource mailbox's calendar shows t
 author: simonxjx
 audience: ITPro
 ms.service: exchange-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Server

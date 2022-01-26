@@ -9,7 +9,7 @@ search.appverid:
 - MET150
 - SPO160
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
 - CSSTroubleshoot
 - CI 113561

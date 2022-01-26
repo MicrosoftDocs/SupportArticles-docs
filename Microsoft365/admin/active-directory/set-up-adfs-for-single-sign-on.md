@@ -6,7 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.reviewer: abizerh, willfid, rkiran
 ms.custom: CSSTroubleshoot

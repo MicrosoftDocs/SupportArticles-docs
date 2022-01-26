@@ -4,7 +4,7 @@ description: Describes how to configure Kerberos authentication for MAPI clients
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

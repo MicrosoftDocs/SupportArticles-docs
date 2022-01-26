@@ -9,7 +9,7 @@ search.appverid:
 ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - Microsoft Office
