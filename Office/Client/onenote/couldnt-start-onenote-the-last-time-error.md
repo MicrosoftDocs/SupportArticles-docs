@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 4/28/2020
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: onenote
 localization_priority: Normal
 search.appverid:

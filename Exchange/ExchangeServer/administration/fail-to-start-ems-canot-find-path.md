@@ -4,7 +4,7 @@ description: This article describes an issue that Exchange Management Shell fail
 author: simonxjx
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: batre
 manager: dcscontentpm
 localization_priority: Normal

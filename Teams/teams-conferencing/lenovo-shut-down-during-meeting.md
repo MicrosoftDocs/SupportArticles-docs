@@ -5,7 +5,7 @@ author: lauram
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: msteams
 localization_priority: Normal
 ms.custom: 

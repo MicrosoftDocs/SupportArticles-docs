@@ -8,7 +8,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 appliesto:

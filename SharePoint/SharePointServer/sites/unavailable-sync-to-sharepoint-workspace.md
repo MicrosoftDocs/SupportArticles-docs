@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: gregjo
 ms.custom: CSSTroubleshoot

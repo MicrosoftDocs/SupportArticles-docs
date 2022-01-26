@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 9/21/2020
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: o365-proplus-itpro
 localization_priority: Normal
 search.appverid:

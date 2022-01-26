@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 12/18/2019
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: onedrive
 localization_priority: Normal
 search.appverid:

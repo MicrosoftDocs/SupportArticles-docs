@@ -11,7 +11,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: JMACLEOD 
 appliesto:

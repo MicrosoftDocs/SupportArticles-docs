@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.service: o365-solutions
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: thempel
 appliesto:
 - Excel Online

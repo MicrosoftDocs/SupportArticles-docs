@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: one-drive
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - OneDrive

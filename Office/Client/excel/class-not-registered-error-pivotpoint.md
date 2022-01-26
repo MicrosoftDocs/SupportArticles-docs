@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 1/12/2021
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:

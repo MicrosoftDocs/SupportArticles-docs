@@ -8,7 +8,7 @@ search.appverid:
 author: helenclu
 audience: ITPro
 ms.service: project-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:

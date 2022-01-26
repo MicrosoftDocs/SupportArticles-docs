@@ -12,7 +12,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 147067
 ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - Excel for Microsoft 365

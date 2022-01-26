@@ -9,7 +9,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: o365-solutions
 appliesto:
 - Office 365

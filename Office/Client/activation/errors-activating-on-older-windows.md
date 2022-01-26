@@ -5,7 +5,7 @@ author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: viwoods, libbyu
