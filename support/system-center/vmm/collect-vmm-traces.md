@@ -2,7 +2,6 @@
 title: Collect Virtual Machine Manager traces
 description: Describes how to enable logging for the System Center 2012 R2 Virtual Machine Manager Storage Management Service.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ---
 # How to collect Virtual Machine Manager traces
 

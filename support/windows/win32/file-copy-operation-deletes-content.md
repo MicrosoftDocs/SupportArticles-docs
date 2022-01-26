@@ -2,7 +2,6 @@
 title: File copy operation overwritten content in write-sharing mode
 description: File content is overwritten if the file is locked by the LockFileEx function in write-sharing mode (FILE_SHARE_WRITE).
 ms.date: 9/8/2020
-ms.prod-support-area-path: 
 ms.reviewer: soshogoh
 ms.technology: windows-dev-apps-system-services-dev
 ---

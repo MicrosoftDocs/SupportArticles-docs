@@ -2,7 +2,7 @@
 title: Access to remote resources fails
 description: This article provides resolutions for the problem that when you request access to remote resources through IIS, it may fail.
 ms.date: 12/11/2020
-ms.prod-support-area-path: WWW Administration and Management
+ms.custom: sap:WWW Administration and Management
 ms.reviewer: jamesche, mlaing
 ms.technology: iis-www-administration-management
 ---

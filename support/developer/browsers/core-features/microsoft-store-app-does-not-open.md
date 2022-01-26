@@ -2,7 +2,7 @@
 title: Microsoft Store app does not open
 description: This article provides a workaround for the problem where the Microsoft Store device app does not open.
 ms.date: 01/21/2021
-ms.prod-support-area-path: Core Features
+ms.custom: sap:Core Features
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: internet-explorer-core-features

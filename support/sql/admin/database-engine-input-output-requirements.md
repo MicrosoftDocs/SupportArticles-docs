@@ -2,7 +2,7 @@
 title: Database Engine Input/Output requirements
 description: This article describes the SQL Server Database Engine Input/Output requirements.
 ms.date: 09/07/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.topic: article
 ms.prod: sql
 ---

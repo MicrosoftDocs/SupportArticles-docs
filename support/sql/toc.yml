@@ -409,6 +409,8 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
+    - name: ASCII funtion returns different results
+      href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
     - name: CDC capture job fails when processing changes

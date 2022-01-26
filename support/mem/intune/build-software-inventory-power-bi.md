@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: samustaf
 ms.date: 10/10/2020
-ms.prod-support-area-path: app management
+ms.custom: sap:app management
 ---
 # Support Tip: Build software inventory using Power BI
 

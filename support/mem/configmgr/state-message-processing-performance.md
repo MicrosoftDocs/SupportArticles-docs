@@ -2,7 +2,6 @@
 title: Troubleshoot state message backlog
 description: Describes how to troubleshoot state messaging performance issues in Configuration Manager.
 ms.date: 09/02/2021
-ms.prod-support-area-path: 
 ms.reviewer: buzb, lamosley
 author: helenclu
 ms.author: luche

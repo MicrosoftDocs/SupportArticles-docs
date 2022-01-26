@@ -2,7 +2,7 @@
 title: Warning 1946 when you install an Installer package
 description: This article discusses a problem in which you receive a Warning 1946 message when you install a Windows Installer package in Windows 7.
 ms.date: 08/28/2020
-ms.prod-support-area-path: installation
+ms.custom: sap:installation
 ms.reviewer: viveksi
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---

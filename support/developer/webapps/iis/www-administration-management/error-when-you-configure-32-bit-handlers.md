@@ -2,7 +2,7 @@
 title: Error when you configure 32-bit managed handlers
 description: This article provides workarounds for the problem that occurs when you try to add a managed module or handler to a website or web application configuration through IIS Manager. You encounter an error when you try this on a 64-bit computer.
 ms.date: 12/11/2020
-ms.prod-support-area-path: WWW Administration and Management
+ms.custom: sap:WWW Administration and Management
 ms.reviewer: paulboc
 ms.technology: iis-www-administration-management
 ---

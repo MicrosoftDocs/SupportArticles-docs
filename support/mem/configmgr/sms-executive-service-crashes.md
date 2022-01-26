@@ -2,7 +2,6 @@
 title: SMS_EXECUTIVE service crashes
 description: Fixes an issue in which the SMS_EXECUTIVE service crashes when a SQL Server certificate can't be found in the certificate store.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ---
 # SMS_EXECUTIVE service crashes when a SQL Server certificate can't be found
 
