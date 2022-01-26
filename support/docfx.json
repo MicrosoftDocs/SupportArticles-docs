@@ -293,7 +293,6 @@
         "developer/dotnet/**/*.md": [ ".NET" ],
         "developer/host-integration-server/**/*.md": [ "Host Integration Server" ],
         "developer/visualstudio/**/*.md": [ "VS IDE" ],
-        "developer/visualstudio/cpp/**/*.md": [ "VS IDE" ],
         "developer/webapps/iis/**/*.md": [ "IIS" ],
         "developer/webapps/aspnet/**/*.md": [ "ASP.NET","ASP.NET Core" ],
         "developer/webapps/aspnetcore/**/*.md": [ "ASP.NET","ASP.NET Core" ],
