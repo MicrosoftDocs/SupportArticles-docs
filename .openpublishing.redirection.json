@@ -1386,8 +1386,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/troubleshoot/windows/win32/kb841927.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/addin-components-core-os-processes",
+      "source_path": "support/windows/win32/kb841927.md",
+      "redirect_url": "/troubleshoot/windows/win32/addin-components-core-os-processes",
       "redirect_document_id": false
     }
   ]
