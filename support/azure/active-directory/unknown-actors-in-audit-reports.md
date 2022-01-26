@@ -2,7 +2,6 @@
 title: Unknown Actors in Audit Reports
 description: Describes common examples of Microsoft 1st party service principal actors that may be found in Azure Active Directory audit logs.
 ms.date: 3/29/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: compliance

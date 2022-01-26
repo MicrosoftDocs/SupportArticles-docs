@@ -2,7 +2,6 @@
 title: Password in ICredentials isn't passed to Windows Communication Foundation (WCF) service
 description: When you try to pass an `ICredentials` object to the WCF service, the serialized object will no longer contain the password value. This behavior is by design.
 ms.date: 05/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: amymcel
 ms.technology: dotnet-general
 ---

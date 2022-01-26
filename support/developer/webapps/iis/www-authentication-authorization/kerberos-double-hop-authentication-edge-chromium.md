@@ -2,7 +2,7 @@
 title: Kerberos double-hop authentication with Microsoft Edge (Chromium)
 description: This article introduces extra steps to set up integrated Windows authentication with Microsoft Edge (Chromium).
 ms.date: 6/30/2021
-ms.prod-support-area-path: WWW authentication and authorization
+ms.custom: sap:WWW authentication and authorization
 ms.reviewer: aartigoyle, dili
 author: cobibi
 ms.author: v-yunhya

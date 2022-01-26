@@ -2,7 +2,7 @@
 title: Page can't be displayed when you connect through SSL
 description: This article provides resolutions for the problem where page can't be displayed when you connect through SSL.
 ms.date: 12/11/2020
-ms.prod-support-area-path: Site Behavior and Performance
+ms.custom: sap:Site Behavior and Performance
 ms.reviewer: MAJEDA
 ms.technology: iis-site-behavior-performance
 ---

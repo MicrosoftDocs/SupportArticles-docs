@@ -2,7 +2,6 @@
 title: HttpWebRequest throws different WebExceptionStatus
 description: This article provides a resolution to resolve the problem that different WebExceptionStatus will be shown for SSL and non-SSL requests.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: pphadke
 ms.technology: dotnet-general
 ---

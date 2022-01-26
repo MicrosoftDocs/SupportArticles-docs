@@ -2,7 +2,6 @@
 title: The problem of missing persistent cookies
 description: Describes an issue that occurs when you use hyperlinks to open Office documents in Internet Explorer beginning with version 7. Resolution is provided.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: rtaylor, klaw
 ms.technology: internet-explorer-connectivity-navigation
 ---

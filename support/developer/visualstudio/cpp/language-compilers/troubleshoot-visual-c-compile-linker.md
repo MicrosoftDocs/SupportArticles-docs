@@ -2,7 +2,7 @@
 title: Troubleshoot Visual C++ Compiler or Visual C++ Linker
 description: This article provides resolutions for troubleshooting for Visual C++ Compiler or Visual C++ Linker.
 ms.date: 01/04/2021
-ms.prod-support-area-path: Language or Compilers
+ms.custom: sap:Language or Compilers
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: visual-cpp-language-compilers

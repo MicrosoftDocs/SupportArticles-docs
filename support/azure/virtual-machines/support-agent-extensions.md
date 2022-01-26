@@ -2,7 +2,6 @@
 title: Support for VM agent extensions in Microsoft Azure
 description: Discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on IaaS for Microsoft Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ---

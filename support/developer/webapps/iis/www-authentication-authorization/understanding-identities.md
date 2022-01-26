@@ -2,7 +2,7 @@
 title: Understanding identities in IIS
 description: This article provides background information about identities in Internet Information Services.
 ms.date: 10/09/2020
-ms.prod-support-area-path: WWW Authentication and Authorization
+ms.custom: sap:WWW Authentication and Authorization
 ms.reviewer: prchanda, jarrettr
 ms.prod: iis
 ms.technology: iis-www-authentication-authorization

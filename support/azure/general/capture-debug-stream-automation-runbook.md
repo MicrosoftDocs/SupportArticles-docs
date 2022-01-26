@@ -2,7 +2,6 @@
 title: How to capture debug stream in Azure Automation runbooks
 description: Describes how to capture debug stream in Azure Automation runbooks.
 ms.date: 11/26/2020
-ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
 author: genlin

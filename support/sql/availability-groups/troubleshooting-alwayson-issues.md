@@ -2,7 +2,7 @@
 title: Troubleshooting on AlwaysOn issues
 description: This article provides resolutions for the common problem about AlwaysOn configuration on SQL server.
 ms.date: 08/03/2020
-ms.prod-support-area-path: Availability Groups
+ms.custom: sap:Availability Groups
 ms.prod: sql
 ---
 # Troubleshoot SQL Server AlwaysOn issues

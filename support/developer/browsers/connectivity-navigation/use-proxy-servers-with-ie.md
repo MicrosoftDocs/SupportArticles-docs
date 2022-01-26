@@ -2,7 +2,6 @@
 title: Use Proxy Servers with Internet Explorer
 description: Discusses how to use Internet Explorer in Proxy environments.
 ms.date: 07/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: ramakoni
 ms.technology: internet-explorer-connectivity-navigation
 ---

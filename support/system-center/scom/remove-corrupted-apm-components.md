@@ -2,7 +2,6 @@
 title: Remove corrupted APM components
 description: Describes how to resolve issues that may affect IIS and SharePoint servers by removing possibly corrupted APM components in System Center 2016 Operations Manager.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: michjohn, jarrettr
 ---
 # Resolve issues by removing APM components in System Center 2016 Operations Manager

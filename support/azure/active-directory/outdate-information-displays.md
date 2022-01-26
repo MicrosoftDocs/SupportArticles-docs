@@ -2,7 +2,6 @@
 title: Azure AD Connect Health shows old information about on-premises server
 description: Discusses an issue in which Azure AD Connect Health shows outdated information about the on-premises Azure AD Connect server. Provides a resolution.
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: cychua, arrenc
 ms.service: active-directory
 ms.subservice: enterprise-users

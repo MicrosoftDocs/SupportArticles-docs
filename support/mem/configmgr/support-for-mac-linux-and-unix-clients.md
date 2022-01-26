@@ -2,7 +2,6 @@
 title: Support for Mac and Linux/UNIX clients
 description: Describes the supported versions of System Center 2012 Configuration Manager SP1 and System Center 2012 Endpoint Protection SP1 running on various Macintosh and Linux/UNIX operating systems.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: anglatim
 ---
 # Support for Mac and Linux/UNIX clients in System Center 2012 Configuration Manager and System Center 2012 Endpoint Protection

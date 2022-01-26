@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 ms.reviewer: jesantae
 ms.date: 09/08/2021
-ms.prod-support-area-path: 
 ---
 # How to reinstall the Intune Certificate Connector
 

@@ -2,7 +2,6 @@
 title: Minimum BlueStripe Collector version required
 description: Describes the minimum version of the BlueStripe Collector required for a particular OS version.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # BlueStripe Collector support by operating system
 

@@ -2,7 +2,6 @@
 title: Track software update synchronization
 description: Describes the synchronization process on the top-level site and on a child primary site or secondary site.
 ms.date: 09/16/2020
-ms.prod-support-area-path:
 ---
 # Track software update synchronization
 

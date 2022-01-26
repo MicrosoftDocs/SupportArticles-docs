@@ -2,7 +2,6 @@
 title: DPM service crashes with event ID 917
 description: Describes a crash issue in System Center 2012 Data Protection Manager that affects only protection groups that are configured for long-term protection.
 ms.date: 07/23/2020
-ms.prod-support-area-path: 
 ---
 # The DPM service crashes with Event ID 917 after you change a protection group
 

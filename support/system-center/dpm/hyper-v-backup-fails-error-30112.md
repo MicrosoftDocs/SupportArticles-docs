@@ -2,7 +2,6 @@
 title: Hyper-V backup fails with error 30112
 description: Fixes an issue where you can't initiate a Hyper-V backup using a child partition for a guest and receive error 30112.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: mjacquet
 ---
 # A DPM 2010 initiated Hyper-V backup using a child partition for a guest fails with error 30112

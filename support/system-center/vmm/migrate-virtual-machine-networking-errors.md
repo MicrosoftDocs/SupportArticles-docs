@@ -2,7 +2,6 @@
 title: Errors 23801 and 23753 when migrating a virtual machine
 description: Describes networking errors when you use System Center 2012 R2 Virtual Machine Manager to migrate a virtual machine.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ---
 # Networking errors (23801, 23753) when a virtual machine is assigned a static IPv4 address through System Center 2012 R2 Virtual Machine Manager
 

@@ -2,7 +2,7 @@
 title: Troubleshoot user issues for Microsoft Intune app protection policies
 description: This article gives troubleshooting guidance for error messages and other common issues when using Intune app protection policies for mobile application management (MAM).
 ms.date: 08/02/2021
-ms.prod-support-area-path: App management
+ms.custom: sap:App management
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.reviewer: mghadial

@@ -2,7 +2,6 @@
 title: Error in the XAML or WPF designer view
 description: This article resolves an error (Cannot find resource named) when you open an XAML or WPF file in Design view in Visual Studio 2017.
 ms.date: 04/20/2020
-ms.prod-support-area-path: 
 ms.reviewer: tatkins
 ms.technology: vs-general
 ---

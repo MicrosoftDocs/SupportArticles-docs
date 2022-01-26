@@ -2,7 +2,6 @@
 title: Use FTP WinInet APIs in VB with SimpleFtp
 description: Provides the sample file that describes how to use FTP WinInet APIs in a Visual Basic (VB) application with SimpleFtp.
 ms.date: 02/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: sangchoe
 ms.technology: internet-explorer-development-website
 ---

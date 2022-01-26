@@ -2,7 +2,6 @@
 title: High memory when you use EnlistDurable
 description: Describes high memory usage when using EnlistDurable.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: jcarley
 ms.technology: dotnet-general
 ---

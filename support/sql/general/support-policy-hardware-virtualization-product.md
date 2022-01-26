@@ -2,7 +2,7 @@
 title: Support policy for hardware virtualization product
 description: This article describes the support policy for SQL Server products that are running in a hardware virtualization environment.
 ms.date: 11/09/2020
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: bobward
 ms.prod: sql
 ---

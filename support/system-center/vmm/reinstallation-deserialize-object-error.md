@@ -2,7 +2,6 @@
 title: Reinstallation of VMM 2012 R2 fails
 description: Discusses a problem in which reinstalling System Center 2012 R2 Virtual Machine Manager fails and returns the deserializing the object of type Microsoft.VirtualManager.Utils.ErrorInfo error message. Provides a workaround.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # Deserializing the object of type Microsoft.VirtualManager.Utils.ErrorInfo error when reinstalling VMM 2012 R2

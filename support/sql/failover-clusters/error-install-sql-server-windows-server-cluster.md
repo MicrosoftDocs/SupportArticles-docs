@@ -2,7 +2,7 @@
 title: Install SQL Server on Windows Server cluster
 description: This article provides a workaround for the problem that occurs when you install SQL Server on Windows Server cluster.
 ms.date: 11/19/2020
-ms.prod-support-area-path: Failover Clusters
+ms.custom: sap:Failover Clusters
 ms.prod: sql
 ---
 # Error message when you install SQL Server on a Windows Server cluster

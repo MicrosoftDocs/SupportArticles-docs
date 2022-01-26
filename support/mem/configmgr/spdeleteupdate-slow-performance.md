@@ -5,7 +5,6 @@ ms.date: 11/04/2020
 author: helenclu
 ms.author: luche
 ms.reviewer: lamosley
-ms.prod-support-area-path:
 ---
 # The spDeleteUpdate stored procedure runs slowly
 

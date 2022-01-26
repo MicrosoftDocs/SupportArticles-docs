@@ -2,7 +2,6 @@
 title: Improve string concatenation performance in C#
 description: Describes the benefits of using the StringBuilder class over traditional concatenation techniques.
 ms.date: 04/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: BRODER
 ms.topic: how-to
 ms.technology: csharp-general

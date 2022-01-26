@@ -2,7 +2,6 @@
 title: The requested federation realm object <Object ID> does not exist when authentication fails
 description: Describes and provides a resolution for an error that occurs when Authentication fails with an error stating 'The requested federation realm object '<Object ID>' does not exist'.
 ms.date: 07/30/2021
-ms.prod-support-area-path: 
 ms.reviewer: fszita
 ms.service: active-directory
 ms.subservice: hybrid

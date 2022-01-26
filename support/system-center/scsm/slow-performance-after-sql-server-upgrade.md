@@ -2,7 +2,6 @@
 title: Service Manager console becomes slow after SQL Server upgrade
 description: System Center Service Manager console becomes slow after you upgrade to SQL Server 2014 or a later version.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # System Center Service Manager Console is slow after SQL Server upgrade
 

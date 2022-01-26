@@ -2,7 +2,6 @@
 title: Regular expression support in Operations Manager
 description: This article describes regular expression matching in discoveries and groups when you author management packs in System Center Operations Manager.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ---
 # Regular expression support in System Center Operations Manager
 

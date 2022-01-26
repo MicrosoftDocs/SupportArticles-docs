@@ -2,7 +2,7 @@
 title: Support for SQL Server on iSCSI technology components
 description: This article describes the support for SQL Server on iSCSI technology components.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, rdorr, sureshka
 ms.prod: sql
 ---

@@ -2,7 +2,6 @@
 title: Running Windows Server 2003 on Microsoft Azure
 description: Provides information about Windows Server 2003 support and answers some of the most common questions about running Windows Server 2003 on Microsoft Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
