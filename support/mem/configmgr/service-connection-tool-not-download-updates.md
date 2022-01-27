@@ -27,18 +27,19 @@ _Original KB number:_ &nbsp; 4561945
 
 This issue occurs because TLS 1.2 isn't enabled for the .NET Framework on the computer that's running the online service connection point or service connection tool. TLS 1.2 is required to download the .cab file.
 
+There is also a possibility that you have not whitelisted/enabled all the Microsoft URLs from proxy/firewall
+
 ## Resolution
-
-On the computer that runs the online service connection point or service connection tool, [enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server).
-
+1. On the computer that runs the online service connection point or service connection tool, [enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server).
 In particular, if .NET Framework updates are installed, set the following registry values, and then restart the computer:
-
 Subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
 Values:
-
 - `SystemDefaultTlsVersions` = **DWORD:00000001**  
 - `SchUseStrongCrypto` = **DWORD:00000001**
+
+2. Please follow below link to enable all the Microsoft endpoints from your proxy/firewall
+[https://docs.microsoft.com/en-us/mem/configmgr/core/plan-design/network/internet-endpoints#service-connection-point]
 
 ## Workaround
 
