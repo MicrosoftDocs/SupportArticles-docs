@@ -1,5 +1,5 @@
 ---
-title: Resource Monitor nony-ielding condition
+title: Resource Monitor non-yielding condition
 description: This article provides more information regarding non yielding Resource Monitor..
 ms.date: 02/12/2020
 ms.custom: sap:Performance
