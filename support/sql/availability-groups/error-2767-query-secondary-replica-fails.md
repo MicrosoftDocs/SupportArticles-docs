@@ -53,9 +53,15 @@ To work around the issue, you can use one of the following methods as required:
 
 - SQL Server on-premises or Azure SQL Database
 
-    For a more permanent workaround, follow these steps:
+    For a more permanent workaround, replace the query-generated statistics with the permanent statistics. Follow these steps:
 
-    1. To determine the column where the query-generated statistics are created, run [DBCC SHOW_STATISTICS](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql) against the primary replica by using the name of the table and statistics reported in the error 2767. For example:
+    1. To determine the table where the query-generated statistics are defined, run the following command against the primary replica by using the statistics name in the error 2767:
+
+        ```sql
+        select object_name([object_id]) from sys.stats where name='_WA_Sys_00000011_37C5420D'
+        ```
+
+    1. Once the table object is identified, run the [DBCC SHOW_STATISTICS](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql) command by using the name of the table and statistics to determine the column name. For example:
 
         ```sql
         DBCC SHOW_STATISTICS('t1', '_WA_Sys_00000011_37C5420D')
