@@ -2,7 +2,6 @@
 title: Can't restore the DPMDB.bak file
 description: Fixes an issue that triggers an error when you use the DpmSync.exe command-line tool to restore the DPMDB.bak database file.
 ms.date: 07/23/2020
-ms.prod-support-area-path: 
 ---
 # The system cannot find the file specified error when you use DPM to restore DPMDB.bak
 

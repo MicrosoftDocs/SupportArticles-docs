@@ -2,7 +2,6 @@
 title: Call window open() function
 description: Describes an issue in which a window that is opened by the window.open() function don't reflect the specified size and position in Microsoft Edge.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.technology: internet-explorer-development-website
 ---

@@ -2,7 +2,7 @@
 title: Error when you use Oracle connection manager
 description: This article provides a resolution for the problem that occurs when you use Oracle connection manager.
 ms.date: 09/15/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.prod: sql
 ---
 # DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER when you use Oracle connection manager

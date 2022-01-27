@@ -2,7 +2,7 @@
 title: Can't move an on-premises Intune Exchange connector
 description: Fixes the Microsoft Intune Exchange Connector version is not supported error when you try to move the connector to a new Exchange server.
 ms.date: 12/20/2021
-ms.prod-support-area-path: Exchange on-premises connector
+ms.custom: sap:Exchange on-premises connector
 ---
 # Microsoft Intune Exchange Connector version is not supported error when moving the connector
 

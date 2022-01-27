@@ -2,7 +2,6 @@
 title: How to raise file download dialog box for known MIME types
 description: Introduces how to change the default behavior to raise a file download dialog box for known MIME types to save a file in Microsoft Edge and Internet Explorer.
 ms.date: 03/24/2020
-ms.prod-support-area-path: 
 ms.reviewer: JAYALLEN
 ms.technology: internet-explorer-development-website
 ---

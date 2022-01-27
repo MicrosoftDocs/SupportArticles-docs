@@ -2,7 +2,6 @@
 title: Troubleshoot event 2115-related performance problems
 description: Discusses how to troubleshoot event ID 2115-related performance problems in Systems Center Operations Manager.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: nicholad
 ---
 # Troubleshoot event ID 2115-related performance problems in Operations Manager

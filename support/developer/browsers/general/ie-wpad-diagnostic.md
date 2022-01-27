@@ -2,7 +2,6 @@
 title: Internet Explorer WPAD Diagnostic
 description: This article describes the actions that may occur and the information that may be collected from a machine when running Internet Explorer WPAD Data Collection.
 ms.date: 04/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: aanders
 ms.technology: internet-explorer-general
 ---

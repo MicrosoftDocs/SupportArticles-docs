@@ -2,7 +2,6 @@
 title: Error when you try to migrate a virtual machine between two stand-alone hosts
 description: Error occurs when trying to migrate a virtual machine between two stand-alone hosts.
 ms.date: 07/09/2020
-ms.prod-support-area-path: 
 ---
 # The host does not have access to sufficient storage of the requested classification error when migrating a VM
 

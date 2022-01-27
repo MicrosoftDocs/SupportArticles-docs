@@ -2,7 +2,6 @@
 title: Microsoft Silverlight add-on issue
 description: This article describes that in the add-on management item function of Internet Explorer, the Microsoft Silverlight add-on is listed as not verified, which is by design.
 ms.date: 06/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: yechen
 ms.technology: internet-explorer-development-website
 ---

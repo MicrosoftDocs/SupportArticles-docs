@@ -2,7 +2,7 @@
 title: XMLHttpRequest setRequestHeader method and Cookies
 description: This article provides resolutions for the problem when you use XMLHttpRequest setRequestHeader method and Cookies.
 ms.date: 09/24/2020
-ms.prod-support-area-path: Active Server Pages
+ms.custom: sap:Active Server Pages
 ms.prod: iis
 ms.technology: iis-active-server-pages
 ---

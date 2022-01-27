@@ -5,7 +5,6 @@ ms.date: 10/22/2020
 author: helenclu
 ms.author: vinpa
 ms.reviewer: vinpa
-ms.prod-support-area-path:
 ---
 
 # Connectivity issues if the DigiCert Global Root G2 root certificate is not installed

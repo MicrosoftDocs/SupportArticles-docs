@@ -2,7 +2,7 @@
 title: Stale content when you store the content on a VHD
 description: This article provides workaround for the problem where IIS serves stale content when you store the content on a VHD.
 ms.date: 12/11/2020
-ms.prod-support-area-path: Site Behavior and Performance
+ms.custom: sap:Site Behavior and Performance
 ms.reviewer: mlaing, robmcm, romanf
 ms.technology: iis-site-behavior-performance
 ---

@@ -2,7 +2,6 @@
 title: Check BlueStripe Collector version
 description: Describes how to check the BlueStripe Collector version.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # How to check the BlueStripe Collector version
 

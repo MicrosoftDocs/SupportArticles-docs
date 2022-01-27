@@ -2,7 +2,6 @@
 title: Connection status isn't displayed correctly on the Azure Management Portal
 description: Describes an issue that occurs when a site-to-site connection is configured to use a Standard-size gateway.
 ms.date: 11/26/2020
-ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
 author: genlin

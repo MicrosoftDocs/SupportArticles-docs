@@ -2,7 +2,7 @@
 title: Office Integration add-in does not run
 description: This article provides resolutions for the error that occurs where the Team Foundation Server 2015 Office add-in doesn't work.
 ms.date: 08/18/2020
-ms.prod-support-area-path: Client Connectivity
+ms.custom: sap:Client Connectivity
 ms.reviewer: beccam
 ms.service: az-devops-project
 ---

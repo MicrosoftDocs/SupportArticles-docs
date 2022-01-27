@@ -2,7 +2,6 @@
 title: How to reinstall Operations Management Suite (OMS) Agent for Linux
 description: Describes how to reinstall Operations Management Suite (OMS) Agent for Linux.
 ms.date: 01/14/2021
-ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
 author: genlin
@@ -64,7 +63,7 @@ To verify that the installation finished successfully, run a script that starts
    If the agent is running **python3**, run this command:
 
    ```bash
-   sudo su omsagent -c 'python3 /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py'
+   sudo su omsagent -c 'python3 /opt/microsoft/omsconfig/Scripts/Python3/PerformRequiredConfigurationChecks.py'
    ```
 
 If the script runs successfully, you'll get a result similar to this output:

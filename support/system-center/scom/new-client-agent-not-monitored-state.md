@@ -2,7 +2,6 @@
 title: The Windows Operating System column has a Not monitored state
 description: Describes an issue that occurs after you delete an agent and then create a new agent that has the same NetBIOS name in System Center Operations Manager.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ms.reviewer: adoyle, jchornbe
 ---
 # The Windows Operating System column has a Not monitored state for a new Operations Manager agent

@@ -2,7 +2,7 @@
 title: Can't open a web app on iOS
 description: Fixes an issue in which you can't open a web app on an iOS device with the 'Safari cannot open the page because the address is invalid' error message.
 ms.date: 10/20/2021
-ms.prod-support-area-path: App management
+ms.custom: sap:App management
 ms.reviewer: joelste, intunecic, stephgil
 ---
 # Address is invalid error when opening a web app on iOS

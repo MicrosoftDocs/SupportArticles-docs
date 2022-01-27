@@ -2,7 +2,6 @@
 title: Update 1606 for Cloud Platform System (CPS) Premium
 description: Discusses Update 1606 for Cloud Platform System (CPS) Premium for Windows Server, Microsoft System Center, and hardware components.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
 ms.service: cloud-services
 ms.author: genli
 author: genlin

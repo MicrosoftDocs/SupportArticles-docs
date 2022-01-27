@@ -2,7 +2,7 @@
 title: Error occurs when you open Configuration Manager
 description: This article provides workarounds for the problem that occurs when you open SQL Server Configuration Manager.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Other tools
+ms.custom: sap:Other tools
 ms.reviewer: yongzhe
 ms.prod: sql
 ---

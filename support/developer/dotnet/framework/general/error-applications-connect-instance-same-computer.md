@@ -2,7 +2,6 @@
 title: Error when applications connect to an instance
 description: This article provides three workarounds for the problem that occurs when applications connect to an instance of Microsoft SQL Server on the same computer.
 ms.date: 01/07/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: dotnet-general
