@@ -77,7 +77,7 @@ To work around the issue, you can use one of the following methods as required:
 
         |All density|Average Length|Columns|
         |-|-|-|
-        |0.5|4|c1|
+        |0.5|4|`c1`|
         |||
 
     1. To drop the query-generated statistics in the table `t1` on the primary replica, run the following command:
