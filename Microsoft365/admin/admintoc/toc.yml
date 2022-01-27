@@ -19,8 +19,6 @@
       href: ../access-management/grant-everyone-claim-to-external-users.md
     - name: Issue with reset admin password
       href: ../access-management/issue-with-reset-admin-password.md
-    - name: Manage Fluid Framework preview access
-      href: ../access-management/manage-fluid-framework-preview-access.md
     - name: Office add-ins
       href: ../access-management/user-not-seeing-add-ins.md
     - name: Office applications periodically prompt for credentials

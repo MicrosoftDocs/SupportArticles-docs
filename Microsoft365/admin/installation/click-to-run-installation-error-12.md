@@ -4,7 +4,7 @@ ms.author: v-maqiu
 author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 10/22/2020
-ms.topic: article
+ms.topic: troubleshooting
 audience: ITPro
 ms.prod: office-perpetual-itpro
 localization_priority: Normal

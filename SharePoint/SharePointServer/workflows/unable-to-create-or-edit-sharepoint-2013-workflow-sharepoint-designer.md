@@ -6,7 +6,7 @@ ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro 
 ms.custom: CSSTroubleshoot
 search.appverid: 

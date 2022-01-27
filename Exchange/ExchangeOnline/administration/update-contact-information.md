@@ -4,7 +4,7 @@ description: Describes the kind of contact information that administrators and u
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot

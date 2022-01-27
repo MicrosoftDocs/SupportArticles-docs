@@ -9,7 +9,7 @@ ms.custom:
 - Exchange Server
 - CSSTroubleshoot
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: batre
 search.appverid: 
 - MET150

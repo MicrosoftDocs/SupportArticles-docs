@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:

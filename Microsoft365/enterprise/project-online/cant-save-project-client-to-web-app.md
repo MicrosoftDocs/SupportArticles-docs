@@ -6,7 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro 
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: o365-solutions
 search.appverid: 
 - MET150

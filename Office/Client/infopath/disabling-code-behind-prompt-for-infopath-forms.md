@@ -10,7 +10,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 appliesto:
 - Microsoft InfoPath

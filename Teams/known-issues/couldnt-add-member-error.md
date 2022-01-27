@@ -4,7 +4,7 @@ ms.author: luche
 author: helenclu
 ms.date: 4/8/2020
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 manager: dcscontentpm
 ms.service: msteams
 localization_priority: Normal

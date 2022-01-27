@@ -5,7 +5,7 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
+ms.topic: conceptual
 ms.service: sharepoint-online
 localization_priority: Normal
 search.appverid:
