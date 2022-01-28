@@ -8,7 +8,7 @@ audience: ITPro
 search.appverid: 
 - MET150
 ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:

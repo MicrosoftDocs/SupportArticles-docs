@@ -9,7 +9,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
 - CSSTroubleshoot
 - CI 109573

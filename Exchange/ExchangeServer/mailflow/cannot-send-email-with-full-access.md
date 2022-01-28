@@ -4,7 +4,7 @@ description: Describes an issue that prevents email from being sent in an Exchan
 author: simonxjx
 audience: ITPro
 ms.service: exchange-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

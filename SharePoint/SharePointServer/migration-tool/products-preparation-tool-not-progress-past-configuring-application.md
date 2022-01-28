@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.service: sharepoint-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - SharePoint Server 2013

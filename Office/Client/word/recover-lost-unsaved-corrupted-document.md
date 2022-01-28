@@ -13,7 +13,7 @@ ms.custom:
 - CI 118866
 - CI 150212
 - CI 155568
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - Word for Office 365

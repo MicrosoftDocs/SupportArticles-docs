@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 9/11/2020
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: sharepoint
 search.appverid:
 - SPO160

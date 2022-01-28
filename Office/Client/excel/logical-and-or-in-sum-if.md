@@ -6,7 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: SISHAM
 ms.custom: CSSTroubleshoot

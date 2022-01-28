@@ -4,7 +4,7 @@ description: Describes how to control the blocking of OLE/COM components in Micr
 author: MaryQiu1987
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 manager: dcscontentpm
 ms.custom: CSSTroubleshoot

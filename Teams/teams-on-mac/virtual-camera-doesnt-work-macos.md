@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 05/06/2021
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: msteams
 localization_priority: Normal
 search.appverid:

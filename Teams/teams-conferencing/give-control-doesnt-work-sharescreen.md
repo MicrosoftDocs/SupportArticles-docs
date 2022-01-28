@@ -5,7 +5,7 @@ author: helenclu
 ms.author: sarvdon
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: msteams
 localization_priority: Normal
 ms.custom: 

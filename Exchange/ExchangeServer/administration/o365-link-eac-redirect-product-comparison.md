@@ -4,7 +4,7 @@ description: Describes a scenario where the Office 365 link in the on-premises E
 author: simonxjx
 audience: ITPro
 ms.service: o365-administration
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

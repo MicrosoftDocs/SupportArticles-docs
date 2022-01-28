@@ -9,7 +9,7 @@ audience: Admin
 search.appverid: 
 - MET150
 ms.prod: skype-for-business-itpro
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.date: 04/17/2019
 appliesto:

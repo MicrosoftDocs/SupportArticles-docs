@@ -7,7 +7,7 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.date: 02/03/2021
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 search.appverid:

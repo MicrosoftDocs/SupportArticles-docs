@@ -4,7 +4,7 @@ description: Describes an issue in which only one reply is sent to each sender w
 author: simonxjx
 audience: ITPro
 ms.service: exchange-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
