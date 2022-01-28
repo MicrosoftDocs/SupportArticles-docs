@@ -203,8 +203,6 @@
       href: ../migration-tool/content-manual-migration.md
   - name: Performance
     items:
-    - name: Can't reach the server when sharing files
-      href: ../Performance/share-file-unable-reach-the-server.md
     - name: Performance troubleshooter for SharePoint Online
       href: ../Performance/sharepoint-online-performance-troubleshooter.md
     - name: Publishing pages take longer than expected to load
@@ -294,7 +292,9 @@
     - name: SSL certificate authentication issues 
       href: ../sharing-and-permissions/ssl-certificate-authentication.md
     - name: Unable to access SharePoint Online
-      href: ../sharing-and-permissions/sharepoint-online-inaccessible.md 
+      href: ../sharing-and-permissions/sharepoint-online-inaccessible.md
+    - name: Unable to reach the server when sharing files
+      href: ../sharing-and-permissions/share-file-unable-reach-server.md
     - name: You are not allowed to create team sites
       href: ../sharing-and-permissions/issue-when-you-click-new-site-on-followed-sites-page.md
   - name: Sites
