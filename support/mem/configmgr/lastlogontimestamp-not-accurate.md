@@ -2,7 +2,6 @@
 title: lastLogonTimestamp is not accurate
 description: Describes a problem in which the lastLogonTimestamp attribute may not be accurate in Configuration Manager.
 ms.date: 06/01/2020
-ms.prod-support-area-path: 
 ms.reviewer: erinwi, brshaw
 ---
 # The lastLogonTimestamp attribute in System Center 2012 Configuration Manager may not be accurate

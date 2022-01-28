@@ -2,7 +2,6 @@
 title: HostAgentFail (2912) error in SCVMM activities
 description: Describes a problem in which an error occurs when any System Center Virtual Machine Manager activity that involves moving data fails. Provides a resolution.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ms.reviewer: ctimon
 ---
 # HostAgentFail (2912) error when any SCVMM activity that involves moving data fails

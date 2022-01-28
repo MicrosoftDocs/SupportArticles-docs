@@ -2,7 +2,7 @@
 title: Troubleshoot PXE boot issues
 description: Helps administrators diagnose and resolve PXE boot failures in Configuration Manager.
 ms.date: 03/27/2020
-ms.prod-support-area-path: PXE
+ms.custom: sap:PXE
 ---
 # Troubleshooting PXE boot issues in Configuration Manager
 

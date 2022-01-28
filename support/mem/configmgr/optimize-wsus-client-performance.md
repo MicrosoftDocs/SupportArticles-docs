@@ -2,7 +2,6 @@
 title: Optimize WSUS client performance
 description: This article provides general guidelines for optimizing the performance of the WSUS clients and for fixing scan failure issues.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: jchornbe
 ---
 # General guidance on optimizing WSUS client performance

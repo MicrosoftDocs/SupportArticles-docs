@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: kufang
 ms.date: 08/27/2020
-ms.prod-support-area-path: Device configuration
+ms.custom: sap:Device configuration
 ---
 # Restrict USB devices by using Intune Administrative Templates
 

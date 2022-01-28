@@ -5,7 +5,6 @@ ms.date: 09/03/2021
 ms.reviewer: payur
 author: simonxjx
 ms.author: v-six
-ms.prod-support-area-path:
 ---
 # Some devices are reported as failed on the client health dashboard
 

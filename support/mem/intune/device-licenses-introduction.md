@@ -2,7 +2,7 @@
 title: Purchase device licenses in Microsoft Intune
 description: Introduces a new device-only subscription service that helps organizations manage devices that are not affiliated with specific users.
 ms.date: 05/25/2021
-ms.prod-support-area-path: Microsoft Intune
+ms.custom: sap:Microsoft Intune
 ---
 # Introduction to device licenses in Microsoft Intune
 
