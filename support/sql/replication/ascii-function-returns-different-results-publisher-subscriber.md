@@ -68,3 +68,9 @@ In this scenario, when you use the `ASCII` function to convert the column in the
         - If it's a pull subscription, rename the file in the folder on the Subscriber server.
 
     1. Copy the *msoledbsql.dll* file from the *C:\Windows\System32\\* folder and paste it to the *C:\Program Files\Microsoft SQL Server\150\COM* folder.
+
+- To work around this issue for merge replication, follow these steps:
+
+    1. Apply [SQL Server 2019 Cumulative Update 15 (CU15)](https://support.microsoft.com/help/5008996) or a later version on the Distributor server.
+
+    1. Follow all the steps that are applied to the transactional replication issue.
