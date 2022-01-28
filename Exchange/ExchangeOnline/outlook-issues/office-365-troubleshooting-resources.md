@@ -4,7 +4,7 @@ description: Lists links to technical resources and support information for trou
 author: simonxjx
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

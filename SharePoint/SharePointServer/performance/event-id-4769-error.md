@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 8/27/2020
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: sharepoint
 localization_priority: Normal
 search.appverid:

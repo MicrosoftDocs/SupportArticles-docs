@@ -4,7 +4,7 @@ description: Explains that RPC over HTTP in Office 365 will be deprecated on Oct
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
 - Exchange Hybrid
 - CSSTroubleshoot

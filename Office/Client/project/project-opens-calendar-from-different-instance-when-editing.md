@@ -10,7 +10,7 @@ ms.date: 2/5/2019
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - Microsoft Project

@@ -8,7 +8,7 @@ search.appverid:
 localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:

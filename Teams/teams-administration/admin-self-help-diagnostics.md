@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 10/13/2020
 audience: Admin|ITPro|Developer
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: microsoft-teams
 ms.technology: microsoft-graph
 localization_priority: Normal

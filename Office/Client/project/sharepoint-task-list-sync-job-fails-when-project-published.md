@@ -5,7 +5,7 @@ author: krishnp
 manager: dcscontentpm
 ms.date: 11/20/2019
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: project-server-itpro
 localization_priority: Normal
 search.appverid:

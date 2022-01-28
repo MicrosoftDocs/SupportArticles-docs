@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: sharepoint-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: dakova, clake, v-thomr
 ms.custom: 

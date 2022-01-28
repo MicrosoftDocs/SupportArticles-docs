@@ -11,7 +11,7 @@ ms.prod: office-perpetual-itpro
 ms.custom: 
 - CSSTroubleshoot
 - CI 158345
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-matthamer
 appliesto:
 - Microsoft Excel
