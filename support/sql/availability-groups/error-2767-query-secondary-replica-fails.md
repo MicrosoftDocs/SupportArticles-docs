@@ -30,11 +30,11 @@ This issue occurs because an active transaction prevents the log record of cache
 
 ## Workaround
 
-To work around the issue, you can use one of the following methods as required:
+To work around the issue, use one of the following methods as required:
 
 - SQL Server
 
-    If the issue occurs in SQL Server, you can run the following command against the secondary replica to synchronize the cached statistics with the statistics on disk:
+    If the issue occurs in SQL Server, run the following command against the secondary replica to synchronize the cached statistics with the statistics on disk:
 
     ```sql
     DBCC FREESYSTEMCACHE('ALL')
@@ -68,7 +68,7 @@ To work around the issue, you can use one of the following methods as required:
         GO
         ```
 
-        The following results display the contents of the statistics `_WA_Sys_00000011_37C5420D` in the table `t1`, and you can see the statistics are created in the column `c1` of the table `t1`.
+        The following results display the contents of the statistics `_WA_Sys_00000011_37C5420D` in the table `t1`, and you can see that the statistics are created in the column `c1` of the table `t1`.
 
         |Name|Updated|
         |-|-|
