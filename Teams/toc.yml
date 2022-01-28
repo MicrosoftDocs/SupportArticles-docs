@@ -187,8 +187,10 @@
     items:
     - name: Known issues in Rooms
       href: ./known-issues/rooms-known-issues.md
-    - name: Resolve common issues related to SIP Gateway
-      href: ./phone-system/sip-gateway/sip-gateway-issues.md
+    - name: SIP Gateway
+      items:  
+      - name: Common issues related to SIP Gateway
+        href: ./phone-system/sip-gateway/sip-gateway-issues.md
   - name: Sign-in
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store

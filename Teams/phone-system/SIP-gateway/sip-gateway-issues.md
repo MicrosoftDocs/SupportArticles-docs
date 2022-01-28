@@ -15,7 +15,7 @@ search.appverid:
 appliesto:
 - Microsoft Teams
 ms.custom: CI159602
-ms.reviewer: scapero
+ms.reviewer: scapero, chasing
 ---
 
 # Troubleshoot common issues related to SIP Gateway
