@@ -8,6 +8,13 @@ ms.reviewer: mghadial
 
 This article helps Intune administrators understand and troubleshoot error messages when enrolling Windows devices in Microsoft Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
 
+> [!IMPORTANT]
+> The following scenario isn't supported:
+> 
+> - Your organizaion has two on-premises domains, Domain A and Domain B. There is no connection between Domain A and Domain B.
+> - Domain B is connected to your Azure AD tenant through Azure AD Connect.
+> - You have devices that are joined to Domain A. You try to join these devices by using Device Registration Service (DRS) or Workplace Join and set up MDM enrollment in domain B.
+ 
 ## Error hr 0x8007064c: The machine is already enrolled
 
 Enrollment fails with the error "The machine is already enrolled." The enrollment log shows error **hr 0x8007064c**.
@@ -343,7 +350,3 @@ Try one of the following methods:
 
 - Target your Intune compliance policies to devices. Make sure that compliance can be determined before the user logs on.
 - Use offline licensing for store apps. This way, the Windows client doesn't have to check with the Microsoft Store before determining device compliance.
-
-   > [!IMPORTANT]
-    > The following scenario is unsupported.
-    > We have 2 domains- A and B and there is no link between Domain A and Domain B. We have Machines which are local domain joined to Domain A. We donot support scenarios wherein attempts are made to DRS/WPJ these machines + MDM enrol in Domain B that is linked to Azure AD via AAD connect
