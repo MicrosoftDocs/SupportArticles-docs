@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting SQL Server Slow IO issues
+title: Troubleshooting SQL Server slow performance caused by IO issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O 
-ms.date: 12/22/2021
+ms.date: 01/28/2021
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -9,7 +9,9 @@ author: pijocoder
 ms.author: v-yunhya
 ---
 
-# Troubleshooting SQL Server Slow Performance Caused by IO issues
+# Troubleshooting SQL Server slow performance caused by IO issues
+
+This article provides guidance on what IO issues cause slow SQL server performance and how to troubleshoot the issues.
 
 ## Define slow I/O performance
 
@@ -26,7 +28,7 @@ In SQL Server, things work in the same way. Commonly, you look at whether SQL Se
 If these waits exceed 10-15 milliseconds on a consistent basis, then I/O is considered a bottleneck.
 
 > [!NOTE]
-> To provide context and perspective, in the world of t-shooting SQL Server, CSS has observed cases where an I/O request took over 1 second and as high as 15 seconds per transfer! Obviously such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is below 1 millisecond /transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 ms/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, once numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors.
+> To provide context and perspective, in the world of trouble shooting SQL Server, CSS has observed cases where an I/O request took over 1 second and as high as 15 seconds per transfer! Obviously such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is below 1 millisecond /transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 ms/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, once numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors.
 
 ## Methodology
 
@@ -166,9 +168,9 @@ In general, there exist three high-level reasons why SQL Server queries suffer f
 
  - **Hardware issues:** There’s a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (throughout entire SAN network, not just back-end storage), drivers/firmware bug, and so on. This stage is where a hardware vendor needs to be engaged.
 
- - **Query Issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, you will need to find queries that are causing a large number of logical reads (or writes) and tune the queries them to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also incorrect database design and query design lead to increase in I/O.
+ - **Query issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, you will need to find queries that are causing a large number of logical reads (or writes) and tune the queries them to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also incorrect database design and query design lead to increase in I/O.
 
- - **Filter Drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendor are recommended to prevent impact on I/O performance.
+ - **Filter drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendor are recommended to prevent impact on I/O performance.
 
 ## Graphical representation of the methodology
 
@@ -200,9 +202,9 @@ Common reasons for long waits on `WRITELOG` are:
 
  - **Too many VLFs**: Too many virtual log files (VLFs) can cause `WRITELOG` waits. Too many VLFs can cause other type of issues such as long recovery as well.
 
- - **Too many small Transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, update will result into a transaction (we call this auto transaction). If you do 1000 inserts in a loop, there will be 1000 transactions generated. Each transaction in this example needs to commit which results in a transaction log flush. This will result in 1000 transaction flushes. When possible, group individual update/delete/insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer `WRITELOG` waits.
+ - **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, update will result into a transaction (we call this auto transaction). If you do 1000 inserts in a loop, there will be 1000 transactions generated. Each transaction in this example needs to commit which results in a transaction log flush. This will result in 1000 transaction flushes. When possible, group individual update/delete/insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer `WRITELOG` waits.
 
- - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU) the Log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 log writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to 8 Log writer threads were added which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log Writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
+ - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log Writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU) the Log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 Log Writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to 8 Log writer threads were added which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log Writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
 
 ### ASYNC_IO_COMPLETION
 
