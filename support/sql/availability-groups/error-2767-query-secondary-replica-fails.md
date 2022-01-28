@@ -9,7 +9,7 @@ ms.prod: sql
 
 # Error 2767 "Could not locate statistics" when query against the secondary replica fails
 
-_Applies to:_&nbsp; SQL Server on-premises, Azure SQL Database
+_Applies to:_&nbsp; SQL Server, Azure SQL Database
 
 This article provides workarounds for the issue that a query against the secondary replica fails with error 2767 "Could not locate statistics".
 
@@ -32,9 +32,9 @@ This issue occurs because an active transaction prevents the log record of cache
 
 To work around the issue, you can use one of the following methods as required:
 
-- SQL Server on-premises
+- SQL Server
 
-    If the issue occurs in SQL Server on-premises, you can run the following command against the secondary replica to synchronize the cached statistics with the statistics on disk:
+    If the issue occurs in SQL Server, you can run the following command against the secondary replica to synchronize the cached statistics with the statistics on disk:
 
     ```sql
     DBCC FREESYSTEMCACHE('ALL')
@@ -51,7 +51,7 @@ To work around the issue, you can use one of the following methods as required:
 
     This cmdlet fails over the readable secondary replica of the database named `Database01` on the server named `Server01`.
 
-- SQL Server on-premises or Azure SQL Database
+- SQL Server or Azure SQL Database
 
     For a more permanent workaround, replace the query-generated statistics with the permanent statistics. Follow these steps:
 
