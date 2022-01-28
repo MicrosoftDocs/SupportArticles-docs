@@ -2,7 +2,6 @@
 title: Exchange 2010 management pack guidance
 description: Describes some best practice guidance along with workarounds to known issues involving the Exchange 2010 management pack running on System Center Operations Manager.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # Guidance, tuning and known issues for the Exchange 2010 management pack for Operations Manager
 

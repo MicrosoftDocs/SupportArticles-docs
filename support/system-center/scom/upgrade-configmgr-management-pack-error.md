@@ -2,7 +2,6 @@
 title: Can't upgrade the Configuration Manager management pack
 description: Fixes an issue where upgrading the Configuration Manager management pack for Operations Manager fails with the could not be imported error.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ---
 # Could not be imported error when upgrading Configuration Manager management pack for Operations Manager
 

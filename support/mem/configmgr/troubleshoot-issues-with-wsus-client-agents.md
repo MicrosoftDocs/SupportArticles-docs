@@ -2,7 +2,6 @@
 title: Troubleshoot issues with Windows Server Update Services (WSUS) client agents
 description: Diagnose and resolve issues with the WSUS client agents.
 ms.date: 03/04/2021
-ms.prod-support-area-path:
 ---
 # Troubleshoot issues with WSUS client agents
 

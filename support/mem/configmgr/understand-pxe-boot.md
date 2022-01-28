@@ -2,7 +2,7 @@
 title: PXE boot in Configuration Manager
 description: Introduces basic processes of PXE boot in Configuration Manager, how they work, and how they interoperate with each other.
 ms.date: 03/27/2020
-ms.prod-support-area-path: PXE
+ms.custom: sap:PXE
 ---
 # Understand PXE boot in Configuration Manager
 

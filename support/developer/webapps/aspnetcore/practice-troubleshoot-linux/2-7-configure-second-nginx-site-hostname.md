@@ -5,6 +5,7 @@ ms.date: 09/03/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
 ms.technology: aspnetcore-practice-troubleshoot-linux
+author: ahmetmithat
 ---
 # Part 2.7 - Configure a second website by using hostname in Nginx
 

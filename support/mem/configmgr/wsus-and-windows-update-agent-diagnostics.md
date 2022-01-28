@@ -2,7 +2,6 @@
 title: WSUS and Windows Update Agent diagnostics
 description: This diagnostic package is designed to collect information used to troubleshoot most Windows Update issues.
 ms.date: 08/12/2020
-ms.prod-support-area-path:
 ---
 # [SDP3][721e15b6-76f5-43d0-a435-191d3474a359] Windows Server Update Services and Windows Update Agent diagnostics
 
