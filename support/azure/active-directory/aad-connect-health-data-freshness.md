@@ -48,7 +48,7 @@ If you use an HTTP proxy, follow these steps:
 
 1. If Secure Sockets Layer (SSL) inspection is turned on, make sure that you've added the policy key service endpoint (`policykeyservice.dc.ad.msft.net`) to the allow list.
 
-1. Use a PowerShell cmdlet to find connectivity issues. You can [run the Test-AzureADConnectHealthConnectivity cmdlet](/azure/active-directory/hybrid/how-to-connect-health-agent-install#test-connectivity-to-azure-ad-connect-health-service) successfully as a regular user. However, if all data types are missing, the proxy setting might be correct for the user but not for **Local System** (the context that the service runs under). In that case, run the appropriate Test-AzureADConnectHealthConnectivityAsSystem cmdlet instead:
+1. Use a PowerShell cmdlet to find connectivity issues. You can [run the Test-AzureADConnectHealthConnectivity cmdlet](/azure/active-directory/hybrid/how-to-connect-health-agent-install#test-connectivity-to-azure-ad-connect-health-service) successfully as a regular user. However, if all data types are missing, the proxy setting might be correct for the user but not for **Local System** (the context that the service runs under). In that case, run the appropriate `Test-AzureADConnectHealthConnectivityAsSystem` cmdlet instead:
 
     ## [Sync](#tab/sync)
 
@@ -72,7 +72,11 @@ If you use an HTTP proxy, follow these steps:
 
 1. To check whether the proxy settings are correct for **Local System**:
 
-    1. Enter the `PsExec.exe -i -s "start ms-settings:"` command, which lets you view the Windows settings remotely.
+    1. Enter the following `PsExec` command to view the Windows settings remotely:
+
+        ```console
+        PsExec.exe -i -s "start ms-settings:"
+        ```
 
     1. Select **Network & internet** > **Proxy**, and then select **Edit** under the **Manual proxy setup** heading.
 
@@ -279,7 +283,11 @@ Begin by following the instructions in [Connect Health for AD FS data freshness 
 
 If the dashboard isn't helping, collect the agent logs. The relevant service can be run in the console to get more information.
 
-Begin by entering the `PsExec.exe -i -s cmd` command, so you can run the command prompt remotely.
+Begin by entering the following `PsExec` command to run the command prompt remotely:
+
+```console
+PsExec.exe -i -s cmd
+```
 
 Then, collect the agent logs for the Monitoring and Insights services of Sync, AD DS, or AD FS, as described in the next section.
 
