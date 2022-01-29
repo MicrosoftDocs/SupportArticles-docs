@@ -1,6 +1,6 @@
 ---
-title: Collect Teams device logs
-description: Provides detailed steps to collect device logs in the Teams admin center.
+title: Collect Android Teams device logs
+description: Describes how to use Teams admin center to collect Android device logs that run Teams.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -17,9 +17,9 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# How to collect Teams device logs
+# Collect device logs for Android Teams devices
 
-If you experience issues when you try to use Microsoft Teams devices, you'll have to collect diagnostic logs to be able to troubleshoot the issues. Here's how you can collect the device logs:
+If you experience issues when you try to use Android devices that run Microsoft Teams, you'll have to collect diagnostic logs to be able to troubleshoot the issues. Here's how you can collect the device logs:
 
 1. In the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Teams devices** on the navigation menu in the left pane, and then select the category of devices (such as **Phones**).
 2. Select the name of the device from which you want to download logs, and then select **Download device logs**.
