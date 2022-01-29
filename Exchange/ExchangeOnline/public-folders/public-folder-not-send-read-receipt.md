@@ -21,9 +21,12 @@ search.appverid: MET150
 
 # Read receipts are sent from a public folder mailbox instead of from a public folder
 
-When you send a message to a mail-enabled public folder, you can request that a read receipt be sent to you after the message is marked as **Read**. In your email client, such as [Microsoft Outlook](https://support.microsoft.com/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141) or [Outlook on the web](https://support.microsoft.com/office/read-receipts-in-outlook-on-the-web-e09af74d-3519-45fc-a680-37a538a92157), you can select the option to request a read receipt before you send the message & ensure that email client "OWA/Outlook" used has adjusted the response to the read receipt requests setting to be Always send a response(OWA) or Always send a read recipt(Outlook).
+When you send a message to a mail-enabled public folder, you can request that a read receipt be sent to you after the message is marked as **Read**. In your email client, such as [Microsoft Outlook](https://support.microsoft.com/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141) or [Outlook on the web](https://support.microsoft.com/office/read-receipts-in-outlook-on-the-web-e09af74d-3519-45fc-a680-37a538a92157), you can select the option to request a read receipt before you send the message. Also make sure that you enable the following setting in your email client for any message received that includes a read receipt request:
 
-For the public folder to comply with your read receipt request,the value of the `PerUserReadStateEnabled` parameter on the public folder must be set to **False**. This value indicates that data should not be maintained about which messages are read and unread by each user who has permissions to the public folder.
+- In Outlook, select **Always send a read receipt**.
+- In Outlook on the web, select **Always send a response**.
+
+For the public folder to comply with your read receipt request, the value of the `PerUserReadStateEnabled` parameter on the public folder must be set to **False**. This value indicates that data should not be maintained about which messages are read and unread by each user who has permissions to the public folder.
 
 To check the current value of the `PerUserReadStateEnabled` parameter on the public folder, run the following cmdlet:
 
