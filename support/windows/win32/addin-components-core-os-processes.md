@@ -1,15 +1,17 @@
 ---
 title: Add-in component guidelines for core OS processes
 description: Avoid using high-level languages, libraries, or frameworks when building add-in components loaded by system processes.
-ms.date: 01/26/2022
+ms.date: 01/29s/2022
 ms.prod-support-area-path: System Services Development
+author: davean
+ms.author: davean
 ms.reviewer: davean
-mc.topic: article
+ms.topic: troubleshooting
 ms.technology: windows-dev-apps-system-services-dev
 ---
 # Add-in component guidelines for core OS processes
 
-_Applies to:_ &nbsp; Microsoft Windows  
+_Applies to:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 841927
 
 ## Introduction
