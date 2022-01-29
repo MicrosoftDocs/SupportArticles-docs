@@ -1,6 +1,6 @@
 ---
-title: Excel Online updates file stored in document library without user interaction
-description: Describes why some files automatically update in Excel Online when no changes have been made.
+title: Excel files are updated without user interaction
+description: Describes why Excel files are updated automatically when no changes are initiated by a user.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,26 +15,12 @@ appliesto:
 - Excel for the web
 ---
 
-# Excel Online updates a file stored in the document library without user interaction
+# Excel files are updated without user interaction
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## Summary
+The first time that you use either Excel Online or a recent version of the Microsoft Excel application to open an Excel workbook that’s stored in the document library, you notice that some fields such as **Modified**, **Modified By**, and **Version** are updated even though you didn’t make the updates.
 
-When you use Excel Online to open an Excel file stored in the document library, the fields such as Modified, Modified By, and Version are updated without user interaction in the following cases: 
+This behavior is by design. Excel applications have an internal calculation engine for each version. Excel workbooks contain information about the version of the calculation engine that was used to create them.
 
-- The file was created in Excel 2010, 2013, or 2016 MSI.    
-- You open the file with Excel Online for the first time after uploading it to the document library.
-
-## More information
-
-This is by design. Excel applications have an internal calculation engine for each version, and Excel files contain information about which version of the calculation engine is used to create the file. The first time you open a file created in an earlier version of Excel using Excel Online, the recalculation is processed automatically. Due to this behavior, the file is updated without user interaction.
-
-### Steps to Reproduce Behavior
-
-1. Create a new file in Excel 2010, 2013, or 2016 MSI.    
-2. Upload the file to the document library.    
-3. Open the file with Excel Online.    
-4. Close the file without any changes.    
-
-The result is an updated file.
+If a file was created in a version of Excel that’s older than the version that you’re using to open it, a recalculation is processed automatically the first time that you open the file. This recalculation updates the fields without user interaction.
