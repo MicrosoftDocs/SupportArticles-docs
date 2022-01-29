@@ -120,7 +120,6 @@ To work around this issue, follow these steps:
 When you apply RetainDeletedItemsFor settings to a public folder and its subfolders by selecting the **Apply setting to this folder and all its subfolders** check box in the EAC, you receive the following error message:
 
 > The operation couldn't be performed because '\public folder identity' couldn't be found.
-:::image type="content" source="media/permissions-settings-not-propagate-eac/set-age-limit-error.png" alt-text="Screenshot of the error when you apply age limit settings.":::
 
 ### Workaround
 
