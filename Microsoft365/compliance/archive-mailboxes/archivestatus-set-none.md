@@ -36,7 +36,7 @@ The output of the cmdlet resembles the following:
 `ArchiveStatus: None`
 
 > [!NOTE]
-> Although **ArchiveStatus** hows "None," the user can access the online archive, and valid **ArchiveGuid** and **ArchiveDatabase** properties are set.
+> Although **ArchiveStatus** shows "None," the user can access the online archive, and valid **ArchiveGuid** and **ArchiveDatabase** properties are set.
 
 ## Cause
 
