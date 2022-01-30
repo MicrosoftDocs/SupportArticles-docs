@@ -41,7 +41,7 @@
       href: ./known-issues/teams-defaults-to-domain-joined-account.md
     - name: Modern authentication failure
       href: ./known-issues/modern-authentication-failure-teams.md
-    - name: Stops working when joining from Edge or Internet Explorer 
+    - name: Stops working when joining from Microsoft Edge or Internet Explorer 
       href: ./known-issues/teams-stops-working-when-joining-from-edge.md
   - name: Channels
     items:
@@ -61,7 +61,7 @@
       href: ./known-issues/teams-meetings-capped-at-250.md
     - name: Can't open PowerPoint presentations after disabling TLS 1.0/1.1
       href: ./teams-conferencing/teams-room-cant-open-powerpoint-presentations-tls.md
-    - name: CVI information doesn't auto-populate in a Meet Now instance 
+    - name: CVI information doesn't autopopulate in a Meet Now instance 
       href: ./known-issues/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out requires five or more digits 
       href: ./known-issues/teams-call-requires-five-or-more-digits.md
@@ -95,7 +95,7 @@
       href: ./known-issues/exchange-users-cant-access-meetings.md
   - name: Exchange integration
     items:
-    - name: External federated contacts don’t appear in Teams search
+    - name: External federated contacts don't appear in Teams search
       href: ./exchange-integration/external-contacts-not-in-search.md
     - name: Teams and Exchange interaction issues
       href: ./exchange-integration/teams-exchange-interaction-issue.md
@@ -141,7 +141,7 @@
       href: ./meetings/issues-with-webinars.md
   - name: Mobile
     items:
-    - name: Can't see auto-favorited channels in mobile app
+    - name: Can't see autofavorited channels in mobile app
       href: ./known-issues/cant-see-auto-favorited-channels-in-mobile.md
     - name: A website with Conditional Access doesn't display when viewed on the Website tab 
       href: ./known-issues/websites-with-conditional-access-dont-display.md
@@ -183,10 +183,6 @@
       href: ./known-issues/deleting-team-also-deletes-group.md
     - name: Incorrect user listed as SharePoint site creator
       href: ./known-issues/wrong-teams-user-listed-as-site-creator.md
-  - name: Rooms
-    items:
-    - name: Known issues in Rooms
-      href: ./known-issues/rooms-known-issues.md
   - name: Sign-in
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
@@ -199,7 +195,7 @@
       href: ./teams-sign-in/someone-has-already-setup-teams.md
     - name: Stuck in login loop
       href: ./teams-sign-in/sign-in-loop.md
-    - name: Teams does not automatically update
+    - name: Teams doesn't automatically update
       href: ./known-issues/teams-doesnt-automatically-update.md
     - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
       href: ./known-issues/symlink-or-drivemap-causes-white-screen.md
@@ -225,15 +221,21 @@
       href: ./known-issues/tabs-dont-work-after-enabling-conditional-access.md
     - name: Task buckets don't appear in Teams Planner online
       href: ./known-issues/task-buckets-do-not-appear-in-planner.md
-    - name: Teams website tabs leads to customer confusion
+    - name: Teams website tabs lead to customer confusion
       href: ./known-issues/website-tabs-cause-confusion-teams.md
+  - name: Teams devices and rooms
+    items:
+    - name: Collect Android Teams device logs
+      href: ./Teams-devices-and-rooms/collect-device-logs.md
+    - name: Known issues in Rooms
+      href: ./known-issues/rooms-known-issues.md
   - name: Teams on Linux
     items: 
-    - name: Known issues in Linux
+    - name: Known issues at Linux
       href: ./known-issues/linux-known-issues.md
   - name: Teams on Mac
     items:
-    - name: Virtual Camera stops working on MacOS desktop client
+    - name: Virtual Camera stops working on macOS desktop client
       href: ./teams-on-mac/virtual-camera-doesnt-work-macos.md
   - name: Teams on Windows
     items:
