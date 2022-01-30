@@ -22,7 +22,7 @@ search.appverid:
 If you experience issues when you try to use Android devices that run Microsoft Teams, you'll have to collect diagnostic logs to be able to troubleshoot the issues. Here's how you can collect the device logs:
 
 1. In the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Teams devices** on the navigation menu in the left pane, and then select the category of devices (such as **Phones**).
-2. Select the name of the device from which you want to download logs, and then select **Download device logs**.
+2. Select the Android device from which you want to download logs, and then select **Download device logs**.
 
    :::image type="content" source="media/collect-device-logs/teams-devices.png" alt-text="Screenshot of the Teams device field. The feature that's named Download device logs is highlighted.":::
 
