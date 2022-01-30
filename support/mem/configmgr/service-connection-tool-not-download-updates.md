@@ -32,15 +32,17 @@ This issue occurs in one of the following situations:
 
 ## Resolution
 
+To enable TLS 1.2:
+
 - On the computer that runs the online service connection point or service connection tool, [enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server).
-In particular, if .NET Framework updates are installed, set the following registry values, and then restart the computer:
-Subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
+In particular, if .NET Framework updates are installed, set the following registry values, and then restart the computer:  
+   Subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`  
+   Values:
+   
+   - `SystemDefaultTlsVersions` = **DWORD:00000001**  
+   - `SchUseStrongCrypto` = **DWORD:00000001**
 
-Values:
-- `SystemDefaultTlsVersions` = **DWORD:00000001**  
-- `SchUseStrongCrypto` = **DWORD:00000001**
-
-- For more information about the specific URLs required by the service connection point, see [Service connection point](/mem/configmgr/core/plan-design/network/internet-endpoints#service-connection-point).
+For more information about the specific URLs required by the service connection point, see [Service connection point](/mem/configmgr/core/plan-design/network/internet-endpoints#service-connection-point).
 
 ## Workaround
 
