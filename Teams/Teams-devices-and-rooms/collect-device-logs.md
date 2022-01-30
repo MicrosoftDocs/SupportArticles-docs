@@ -30,7 +30,7 @@ If you experience issues when you try to use Android devices that run Microsoft 
 
    :::image type="content" source="media/collect-device-logs/history.png" alt-text="Screenshot of the History menu. The Download link is highlighted.":::
 
-4. Extract the downloaded folder, and then look for a file that has a name that has "Skylib" at the beginning. This file is the media log that contains diagnostic data.
+4. Extract the downloaded folder and look for a file name that begins with "Skylib". This file is the media log that contains diagnostic data.
 
    :::image type="content" source="media/collect-device-logs/skylib-file.png" alt-text="Screenshot of the extracted files. The file that has a name that begins as Skylib is highlighted.":::
 
