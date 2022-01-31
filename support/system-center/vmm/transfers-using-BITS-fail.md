@@ -2,7 +2,6 @@
 title: Transfers using BITS fail with errors
 description: Fixes an issue in which error 12700, 2927, or 2912 occurs when you transfer content between the Virtual Machine Manager (VMM) server, the library server(s), and the virtualization hosts.
 ms.date: 07/15/2020
-ms.prod-support-area-path: 
 ---
 # Transfers between VMM servers, library servers, and virtualization hosts fail with error 12700, 2927, or 2912
 

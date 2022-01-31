@@ -2,7 +2,6 @@
 title: Installation flags of BlueStripe Collector
 description: Describes how to see the installation flags of BlueStripe Collector on Linux, Solaris, and AIX.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # The installation flags of BlueStripe Collector on Linux, Solaris and AIX
 

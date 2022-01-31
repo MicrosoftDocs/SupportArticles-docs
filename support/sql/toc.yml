@@ -249,6 +249,8 @@
         href: availability-groups/error-9002-transaction-log-large.md
       - name: AlwaysOn DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+      - name: Error 2767 on secondary replica
+        href: availability-groups/error-2767-query-secondary-replica-fails.md
       - name: Issues after changing the hostname 
         href: availability-groups/error-41041-change-hostname.md
       - name: Listener connection times out in multi-subnet
@@ -379,6 +381,8 @@
       href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
+    - name: Troubleshooting SQL Server Slow Performance Caused by IO issues
+      href: performance/troubleshoot-sql-io-performance.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
     - name: Understand and resolve blocking problems
@@ -409,6 +413,8 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
+    - name: ASCII funtion returns different results
+      href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
     - name: CDC capture job fails when processing changes

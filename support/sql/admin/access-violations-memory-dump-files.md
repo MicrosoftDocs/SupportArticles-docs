@@ -2,7 +2,7 @@
 title: Access violations and memory dump files
 description: This article provides a workaround for the problem that occurs when you use an XEvent session that has a sqlos.wait_info event in SQL Server.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
 # Access violations and memory dump files when you use XEvent session with sqlos.wait_info event in SQL Server

@@ -2,7 +2,6 @@
 title: Clients send multiple Topic ID 611 state messages
 description: Describes an issue in which clients send multiple Topic ID 611 state messages when you try to service a server group on a child primary site. Provides a workaround.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: kerwinm, yuexia, cmkbreview
 ---
 # Clients send multiple Topic ID 611 state messages when you service a server group on a child primary site

@@ -38,6 +38,8 @@
   items:
   - name: Roles that fail to start
     href: role-startup-failure.md
+  - name: Allocation failure
+    href: allocation-failure.md
 
 - name: Reference
   items:

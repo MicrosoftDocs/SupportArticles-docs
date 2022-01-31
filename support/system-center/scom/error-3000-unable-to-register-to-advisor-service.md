@@ -2,7 +2,6 @@
 title: Unable to register to Advisor Service
 description: Fixes an issue that prevents you from registering to the Advisor Service in System Center 2012 R2 Operations Manager.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # Error 3000: Unable to register to Advisor Service in System Center 2012 R2 Operations Manager
 

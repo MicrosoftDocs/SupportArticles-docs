@@ -2,7 +2,7 @@
 title: Manually remove replication
 description: This article explains how to manually remove replication in SQL Server.
 ms.date: 09/22/2020
-ms.prod-support-area-path: Replication
+ms.custom: sap:Replication
 ms.prod: sql
 ---
 # Manually remove replication in SQL Server

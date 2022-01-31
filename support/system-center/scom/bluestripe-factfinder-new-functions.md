@@ -2,7 +2,6 @@
 title: New functions in BlueStripe FactFinder 8.1
 description: Describes the Web console and FactFinder Rest API in BlueStripe FactFinder 8.1.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # What's new in BlueStripe FactFinder 8.1
 

@@ -2,7 +2,7 @@
 title: HTTP error 501 when you use unknown methods
 description: This article discusses a by-design HTTP 501 error when you use an unknown method from an Internet client.
 ms.date: 07/17/2020
-ms.prod-support-area-path: Health, Diagnostic, and Performance Features
+ms.custom: sap:Health, Diagnostic, and Performance Features
 ms.reviewer: robmcm
 ms.technology: iis-health-diagnostic-performance
 ---

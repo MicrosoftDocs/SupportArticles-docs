@@ -19,14 +19,14 @@ This article explains how to resolve error code 0x80090016 - "Keyset does not ex
 
 When you try to connect to a Log Analytics workspace through the Microsoft Monitoring Agent (MMA), the connection fails, and one of the following error entries is logged in the Operations Manager event viewer log:
 
-```
+```output
 Event ID:      7022 
 Description:   The Health Service has downloaded secure configuration for management
                group AOI-00000000-0000-0000-0000-000000000000, and processing the 
                configuration failed with error code Keyset does not exist(0x80090016). 
 ```
 
-``` 
+```output
 Event ID:      3009  
 Description:   Loading the private key for the client authentication certificate for
                service "Log Analytics - ed4Customer-WorkspaceID" failed with error 
@@ -64,7 +64,7 @@ To resolve these errors, clean and refresh the MMA certificates, as follows:
 
 1. After you export backup copies of the certificates that are listed in the middle pane as described in step 6, delete the certificates from MMC. Keep the console open.
 
-1. In the **Services** snap-in, select **Microsoft Monitoring Agent**, and then select the **Start Service** icon to restart it.  
+1. In the Services snap-in, select **Microsoft Monitoring Agent**, and then select the **Start Service** icon to restart it.  
 
 1. Wait one minute. Then, in MMC, select the Certificates snap-in, and select the **Refresh** icon or F5 to refresh. You should see new certificates.
 

@@ -2,7 +2,6 @@
 title: Data Protection Manager SP1 error codes
 description: This article summarizes error codes that may occur in System Center 2012 Data Protection Manager Service Pack 1.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: aaronmax
 ---
 # System Center 2012 Data Protection Manager SP1 error codes

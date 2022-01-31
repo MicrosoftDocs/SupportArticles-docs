@@ -2,7 +2,6 @@
 title: Can't enable Azure Disk Encryption
 description: Works around a problem in which you receive an Extension version '2.2' is not supported error when you enable Azure Disk Encryption.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: Ejarvi, devtiw, scotro
 ms.service: virtual-machines
 ---

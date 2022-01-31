@@ -2,7 +2,6 @@
 title: Windows boot error 0xc0000034 on an Azure VM
 description: Fixes an issue that triggers Boot or BCD error 0xc0000034 when you try to start Windows on an Azure virtual machine (VM).
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.collection: windows

@@ -2,7 +2,7 @@
 title: Considerations when using the Full-Text
 description: This article describes the considerations that apply when you use the SQL Server Full-Text Search engine for the Japanese language.
 ms.date: 01/15/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: kayokon
 ms.topic: article
 ms.prod: sql 

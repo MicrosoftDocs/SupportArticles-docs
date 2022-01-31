@@ -88,9 +88,6 @@ Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm th
 
     - **Pending**: The profile is sent to the device, but hasn't reported the status to Intune. For example, encryption on Android requires the user to enable encryption, and might show as pending.
 
-> [!NOTE]
-> When two policies with different levels of restriction apply to the same device or user, the more restrictive policy applies.
-
 For more information, see [Monitor device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-monitor)
 
 ## Saving of Access Rules to Exchange has Failed

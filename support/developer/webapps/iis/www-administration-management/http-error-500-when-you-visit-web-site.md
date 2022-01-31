@@ -2,7 +2,7 @@
 title: HTTP Error 500.0 error
 description: This article provides resolutions for the HTTP 500.0 error that occurs when you visit a Web site that is hosted on IIS.
 ms.date: 12/29/2020
-ms.prod-support-area-path: WWW Administration and Management
+ms.custom: sap:WWW Administration and Management
 ms.reviewer: nitgupta
 ms.technology: iis-www-administration-management
 ---

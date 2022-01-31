@@ -2,7 +2,6 @@
 title: Error 2409 selecting a storage location
 description: Fixes an issue in which you can't specify the storage location in System Center 2012 Virtual Machine Manager and receive error 2409.
 ms.date: 04/29/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # Error 2409 in SCVMM 2012 when selecting a storage location on a cluster

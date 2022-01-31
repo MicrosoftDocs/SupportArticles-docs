@@ -2,7 +2,6 @@
 title: Error 2901 adding a Citrix XenServer as a host
 description: Fixes an issue in which you get error 2901 when you add a Citrix XenServer to Virtual Machine Manager.
 ms.date: 09/11/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # Adding a Citrix XenServer to Virtual Machine Manager fails with error 2901

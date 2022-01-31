@@ -2,7 +2,6 @@
 title: Animated GIF is not animated in separate instances
 description: This article provides a workaround for the problem where an animated GIF is not animated in separate instances of the WebBrowser control in the same process.
 ms.date: 01/04/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: internet-explorer-development-website
