@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting SQL Server slow performance caused by IO issues
+title: Troubleshoot SQL Server slow performance caused by IO issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O 
-ms.date: 01/28/2021
+ms.date: 01/31/2021
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
 ms.prod: sql
-author: pijocoder 
-ms.author: v-yunhya
+author: padmajayaraman 
+ms.author: v-jayaramanp
 ---
 
 # Troubleshooting SQL Server slow performance caused by IO issues
@@ -134,7 +134,7 @@ Avoid using Encrypting File System (EFS) and file-system compression because the
 
 ### Is the I/O subsystem overwhelmed beyond capacity?
 
-If SQL Server and the OS indicate I/O subsystem is slow, then find out if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
+If SQL Server and the OS indicate I/O subsystem is slow, then check if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
 
 ```powershell
 clear
@@ -174,7 +174,7 @@ In general, there exist three high-level reasons why SQL Server queries suffer f
 
 ## Graphical representation of the methodology
 
-:::image type="content" source="media/troubleshoot-slow-io-sql/Slow_Disk_IO_Issues.png" alt-text="SlowIO Flow Chart":::
+:::image type="content" source="media/troubleshoot-slow-io-sql/slow_disk_io_issues.png" alt-text="a flow chart that shows slow io flow chart":::
 
 ## I/O related Wait types
 
@@ -210,20 +210,20 @@ Common reasons for long waits on `WRITELOG` are:
 
 Occurs when some of the following I/O activities happen:
 
-- Bulk Insert Provider ("Insert Bulk") uses this wait type when performing I/O
-- Reading Undo file in LogShipping and direct Async I/O for Log Shipping
-- Reading the actual data from the data files during a data backup
+- Bulk Insert Provider ("Insert Bulk") uses this wait type when performing I/O.
+- Reading Undo file in LogShipping and direct Async I/O for Log Shipping.
+- Reading the actual data from the data files during a data backup.
 
 ### IO_COMPLETION
 
 Occurs while waiting for I/O operations to complete. This wait type generally involves I/Os not related to data pages (buffers). Examples include:
 
-- Reads and writes of sort/ hash results from/to disk during a spill (check performance of *tempdb* storage)
-- Reading and writing eager spools to disk (check *tempdb* storage)
-- Reading log blocks from the transaction log (during any operation that causes the log to be read from disk – for example, recovery)
-- Reading a page from disk when database isn’t set up yet
-- Copying pages to a database snapshot (Copy-on-Write)
-- Closing database file, file uncompression
+- Reads and writes of sort/ hash results from/to disk during a spill (check performance of *tempdb* storage).
+- Reading and writing eager spools to disk (check *tempdb* storage).
+- Reading log blocks from the transaction log (during any operation that causes the log to be read from disk – for example, recovery).
+- Reading a page from disk when database isn’t set up yet.
+- Copying pages to a database snapshot (Copy-on-Write).
+- Closing database file, file uncompression.
 
 ### BACKUPIO
 
