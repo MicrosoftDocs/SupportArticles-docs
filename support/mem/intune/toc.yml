@@ -235,6 +235,8 @@ items:
       href: troubleshoot-windows-enrollment-errors.md
     - name: Windows user not authorized to enroll
       href: windows-user-cannot-enroll.md
+    - name: “Set up for work or school” enrollment is blocked
+      href: troubleshoot-windows-work-school.md
     - name: Troubleshoot Windows 10 group policy-based auto-enrollment
       href: troubleshoot-windows-auto-enrollment.md
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
