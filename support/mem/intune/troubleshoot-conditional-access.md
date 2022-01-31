@@ -88,6 +88,6 @@ If a device  isn't compliant but continues to have access, take the following ac
   
   - If the device is listed, use the 'Get-CASmailbox -identity:'upn' | fl' cmdlet to get detailed information about its access state, and provide that information to Microsoft Support. For more info, see the [Exchange PowerShell docs](/powershell/module/exchange/get-casmailbox).
 
-## Sign-in problems with app-based Conditional Access
+## Sign-in errors with app-based Conditional Access
 
 Intune app protection policies help you protect company data at the app level, even on devices that you don't manage in Intune. If your users cannot sign in to protected applications, there might be an issue with your app-based Conditional Access policies. See [Troubleshooting sign-in problems with Conditional Access](/azure/active-directory/conditional-access/troubleshoot-conditional-access) for detailed guidance.
