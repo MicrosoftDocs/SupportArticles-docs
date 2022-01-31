@@ -275,8 +275,6 @@ items:
       href: troubleshoot-exchange-connector.md
     - name: Common errors with the Exchange Connector
       href: troubleshoot-exchange-connector-common-errors.md
-    - name: Can't move an Intune Exchange connector
-      href: fails-moving-intune-exchange-connector.md
     - name: Could not retrieve access token for Graph API
       href: could-not-retrieve-access-token.md
     - name: Troubleshoot Jamf Pro integration
