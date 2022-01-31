@@ -9,7 +9,7 @@ author: padmajayaraman
 ms.author: v-jayaramanp
 ---
 
-# Troubleshooting SQL Server slow performance caused by IO issues
+# Troubleshoot SQL Server slow performance caused by IO issues
 
 This article provides guidance on what IO issues cause slow SQL Server performance and how to troubleshoot the issues.
 
