@@ -6,14 +6,21 @@ ms.date: 01/31/2022
 
 # Unblock Windows “Set up for work or school” enrollment
 
-This article gives troubleshooting guidance..
-Some customers run into issues during the out-of-box experience (OOBE) when enrolling Windows devices, specifically when the device is recognized as a *personal* device and the tenant does not allow for this device type. This scenario can occur during device setup when the user chooses **Set up for work or school** and then signs in with an organization-linked Azure Active Directory (Azure AD) account.
+This article helps troubleshoot an enrollment failure during the out-of-box experience (OOBE) when enrolling Windows devices with a work or school account.
+
+## Symptom
+
+This issue can occur during device setup when the user chooses **Set up for work or school** and then signs in with an organization-linked Azure Active Directory (Azure AD) account. The enrollment fails and you might see associated error code 80180014.
 
 :::image type="content" source="media/windows-work-school-enroll/windows-setup.png" alt-text="Windows setup screen showing options for setting up the device":::
 
 :::image type="content" source="media/windows-work-school-enroll/windows-setup-2.png" alt-text="Windows sign-in screen for setting up a work or school account.":::
 
-If you have personal device enrollment blocked for your tenant, this enrollment method will result in a failure. The associated error code you might see is 80180014.
+## Cause
+
+In this scenario, the device is recognized as a *personal* device. If you have personal device enrollment blocked for your tenant, this enrollment method will result in a failure.
+
+## Solution
 
 To fix this, you can allow personal enrollment of Windows devices either for all users or for a subset of users you want to be allowed to enroll personal devices. We recommend limiting the number of users you allow to enroll personal windows devices to only the users who will need this capability. This will ensure that other users in your organization do not accidentally enroll their personal devices.
 
