@@ -45,8 +45,12 @@ The user account used to execute DCPROMO hasn't been granted the "Enable compute
     If the domain controller policy doesn't exist, evaluate whether that condition is because of simple replication latency, an AD replication failure or whether the policy has been deleted from Active Directory. If the policy has been deleted, contact Microsoft Support to recreate the missing policy with the default policy GUID (Globally Unique Identifier). Don't manually recreate the policy with the same name and settings as the default.
 
     If the default domain controllers policy exists in Active Directory on some domain controllers but not others, evaluate whether that inconsistency is due simple replication latency or a replication failure. Resolve as required.
+    
+2. Verify that the server account is not "Protected from accidental deletion".
 
-2. Verify that the user account does the DCPROMO operation has been granted the "Enable computer and user accounts to be trusted for delegation" user right in the default domain controllers policy.
+    In the process of elevation to Domain Controller, the computer account for the server is deleted, and re-added as a Domain Controller. If this checkbox is clicked, this can't happen. Go to the "Active Directory Administrative Center" and find your server under the "Servers" listing within your domain. open the properties and in the first section, right under the OS info, is a checkbox labelled "Protect from accidental deletion". Make sure this is unchecked.
+
+3. Verify that the user account does the DCPROMO operation has been granted the "Enable computer and user accounts to be trusted for delegation" user right in the default domain controllers policy.
 
     Run "whoami /all" to verify that the "Enable computer and user accounts to be trusted for delegation" user right exists in the users security token.
 
@@ -57,17 +61,17 @@ The user account used to execute DCPROMO hasn't been granted the "Enable compute
     - "Enable computer and user accounts to be trusted for delegation" was recently modified, or the policy granting the DCPROMO user account exists on some domain controllers in the domain but not others, check for simple replication latency or a replication failure in both Active Directory and File System Replication (FSR) / Distributed File System Replication (DFSR).
     - If the policy was recently modified, have the DCPROMO user account sign out and sign in.
 
-3. Verify that the default domain controllers policy is linked to the domain controllers OU and that all DC machine accounts stay in that OU.
+4. Verify that the default domain controllers policy is linked to the domain controllers OU and that all DC machine accounts stay in that OU.
 
     If DC machine accounts stay in an alternate OU container, either move all DC machine accounts to the domain controllers OU or link the default domain controllers policy to the alternate OU container.
-4. Verify that the file system portion of default domain controllers policy exists in the SYSVOL share of the DC being used to apply policy on the computer being promoted or demoted.
+5. Verify that the file system portion of default domain controllers policy exists in the SYSVOL share of the DC being used to apply policy on the computer being promoted or demoted.
 
     If not present, it can be because of one or more of the following reasons:
     - Replication latency in FRS / DFSR
     - A replication failure in FRS / DFSR
     - The policy has been deleted from the SYSVOL. If the policy has been deleted, contact Microsoft Support to recreate the missing policy with the default policy GUID. Don't manually recreate the policy with the same name and settings as the default.
 
-5. The default domain policy or policy in general isn't applying to the logged on user
+6. The default domain policy or policy in general isn't applying to the logged on user
 
     To check for policy inheritance, Windows Management Instrumentation (WMI) filtering or security descriptor problem that may be preventing policy from applying, run the following command:
 
