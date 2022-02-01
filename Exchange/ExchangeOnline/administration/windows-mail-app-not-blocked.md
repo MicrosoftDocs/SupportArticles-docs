@@ -1,6 +1,6 @@
 ---
 title: Windows Mail app not blocked despite ActiveSync organization settings
-description: The Exchange ActiveSync settings for your organization are set to block access to all devices, but you're still able to access mailboxes by using the Windows Mail app. 
+description: The Exchange ActiveSync settings for your organization are set to block access to all devices, but you can still access mailboxes in Windows Mail.
 author: kellybos
 ms.author: v-matthamer
 manager: dcscontentpm
@@ -21,44 +21,46 @@ search.appverid: MET150
 
 ## Symptoms
 
-The Exchange ActiveSync settings for your organization are set to block access to all devices, but you're still able to access mailboxes by using the Windows Mail app. This happens despite the mobile device details indicating that mailbox connections made using the Windows Mail app will be blocked.
+The Exchange ActiveSync settings for your organization are set to block access to all devices. However, you can still access mailboxes by using the Windows Mail app. This occurs even though the mobile device details indicate that mailbox connections that are made by using Windows Mail will be blocked.
 
-To check your organization’s Exchange ActiveSync settings:
+Use the following methods to verify that Exchange ActiveSync is correctly configured.
 
-`Get-ActiveSyncOrganizationSettings | ft DefaultAccessLevel`
+- To check your organization’s ActiveSync settings:
 
-If ActiveSync is set to block devices, this command will return:
+   `Get-ActiveSyncOrganizationSettings | ft DefaultAccessLevel`
 
-`DefaultAccessLevel : Block`
+   If ActiveSync is set to block devices, this command returns the following output:
 
-To check the details of the devices that are configured to sync with a specific mailbox:
+   `DefaultAccessLevel : Block`
 
-`Get-MobileDeviceStatistics -Mailbox <MailboxID> | fl DeviceUserAgent,DeviceType,deviceos,deviceaccessstate`
+- To check devices that are configured to sync with a specific mailbox:
 
-This command will return:
+   `Get-MobileDeviceStatistics -Mailbox <MailboxID> | fl DeviceUserAgent,DeviceType,deviceos,deviceaccessstate`
 
-```powershell
-DeviceType        : UniversalOutlook
-DeviceOS          : WINDOWS
-DeviceAccessState : Unknown
-```
+   This command returns the following output:
 
-To check the devices that are associated with a specific mailbox:
+   ```powershell
+   DeviceType        : UniversalOutlook
+   DeviceOS          : WINDOWS
+   DeviceAccessState : Unknown
+   ```
 
-`Get-MobileDevice -Mailbox <MailboxID> | fl DeviceUserAgent,DeviceType,deviceos,deviceaccessstate`
+- To check devices that are associated with a specific mailbox:
 
-This command will return:
+   `Get-MobileDevice -Mailbox <MailboxID> | fl DeviceUserAgent,DeviceType,deviceos,deviceaccessstate`
 
-```powershell
-DeviceUserAgent   : microsoft.windowscommunicationsapps
-DeviceType        : UniversalOutlook
-DeviceOS          : WINDOWS
-DeviceAccessState : Blocked
-```
+   This command returns the following output:
+
+   ```powershell
+   DeviceUserAgent   : microsoft.windowscommunicationsapps
+   DeviceType        : UniversalOutlook
+   DeviceOS          : WINDOWS
+   DeviceAccessState : Blocked
+   ```
 
 ## Cause
-The Windows Mail app uses a native Microsoft sync technology that isn’t blocked by ActiveSync device access rules. Your organization’s ActiveSync settings and device access rules are used to manage Outlook for mobile and ActiveSync connections only.
+The Windows Mail app uses a native Microsoft sync technology that isn’t blocked by ActiveSync device access rules. Your organization’s ActiveSync settings and device access rules are used to manage Microsoft Outlook for mobile and ActiveSync connections only.
 
 ## Resolution
 
-To block the Windows Mail app from accessing mailboxes, you can use [Client Access Rules](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) or the UniversalOutlookEnabled parameter of the [Set-CASMailbox](/powershell/module/exchange/set-casmailbox) cmdlet.
+To block the Windows Mail app from accessing mailboxes, use [Client Access Rules](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) or the **UniversalOutlookEnabled** parameter of the [Set-CASMailbox](/powershell/module/exchange/set-casmailbox) cmdlet.
