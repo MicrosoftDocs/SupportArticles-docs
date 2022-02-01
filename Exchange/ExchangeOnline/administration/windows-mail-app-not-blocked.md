@@ -23,7 +23,7 @@ search.appverid: MET150
 
 The Exchange ActiveSync settings for your organization are set to block access to all devices. However, you can still access mailboxes by using the Windows Mail app. This occurs even though the mobile device details indicate that mailbox connections that are made by using Windows Mail will be blocked.
 
-Use the following methods to verify that Exchange ActiveSync is correctly configured.
+Use the following methods to verify that Exchange ActiveSync is configured correctly.
 
 - To check your organization’s ActiveSync settings:
 
