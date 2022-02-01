@@ -27,4 +27,5 @@ landingContent:
             url: ./windows-could-not-start-mma.md
           - text: Resolve Windows Agent installation issues
             url: ./resolve-windows-agent-installation-issues.md            
-    
+          - text: Troubleshoot erased proxy settings in the Microsoft Monitoring Agent
+            url: ./erased-proxy-settings-microsoft-monitoring-agent.md
