@@ -37,7 +37,7 @@ For examples, see the following screenshots:
 > [!NOTE]
 > In the examples, the connection type for Android and iOS VPN profile is Cisco AnyConnect, and the one for Windows 10 is Automatic. And the VPN profile is linked to the SCEP profile.
 
-### [Android](#tab/android)
+### [Android (Personally owned work profile)](#tab/android)
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-android.png" alt-text="Screenshot shows how to create a VPN profile for Android.":::
 
@@ -57,27 +57,18 @@ For information about how to create an Extensible Authentication Protocol (EAP) 
 
 After you create a VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
 
-For examples, see the following screenshots:
+> [!NOTE]
+> Group type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP and VPN). It will depend on the type of certificate you’re deploying. If you’re deploying a user certificate, then all the deployments should be to a user group, and vice versa. If the certificate deployed is a device type one, then use a device group.
 
-### [Android](#tab/android)
+For examples, see the following screenshot:
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-android.png" alt-text="Screenshot shows how to assign a profile for Android.":::
-
-### [iOS](#tab/ios)
-
-:::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-ios.png" alt-text="Screenshot shows how to assign a profile for iOS.":::
-
-### [Windows](#tab/windows)
-
-:::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot shows how to assign a profile for Windows.":::
-
----
+:::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile.png" alt-text="Screenshot shows how to assign a profile.":::
 
 ## What successful VPN profiles look like
 
 ### [Android](#tab/android)
 
-This scenario uses a Nokia 6.1 device. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
+This scenario uses an Android device enrolled as Personally owned work profile. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
 
 1. You receive a notification to install the corporate VPN profile:
 
