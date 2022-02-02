@@ -1,7 +1,7 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 02/01/2022
+ms.date: 02/02/2022
 ---
 # Known issues
 
@@ -11,9 +11,18 @@ This page lists recent known issues with Microsoft Intune. For a list of weekly 
 
 - **Status:** Active
 
-We are aware of an issue where granular OS filtering is not working as expected for corporate-owned... waiting on final edits...
+We are aware of an issue where granular OS filtering is not working as expected for corporate-owned Android Enterprise devices when exporting the [All devices report](/mem/intune/fundamentals/reports#all-devices-report-operational) from the Microsoft Endpoint Manager admin center, when exporting the [DevicesWithInventory](/mem/intune/fundamentals/reports-export-graph-available-reports) and [Devices](/mem/intune/fundamentals/reports-export-graph-available-reports) reports using the Export API, or when making native calls to the [/deviceManagement/managedDevices](/graph/api/intune-devices-manageddevice-list) API.
 
-### Available workaround
+> [!NOTE]
+> This issue does not affect device filtering in the Endpoint Manager admin center UI.
+
+The Export API does not distinguish between Android Enterprise OSes (device types) and will instead group them together. This issue affects exported report data and managedDevices API calls for the following device types:
+
+- [Android Enterprise dedicated devices](/mem/intune/fundamentals/deployment-guide-enrollment-android#android-enterprise-dedicated-devices)
+- [Android Enterprise fully managed devices](/mem/intune/fundamentals/deployment-guide-enrollment-android#android-enterprise-fully-managed)
+- [Android Enterprise corporate-owned devices with a work profile](/mem/intune/fundamentals/deployment-guide-enrollment-android#android-enterprise-corporate-owned-work-profile)
+
+If you want to include any Android Enterprise dedicated devices, fully managed devices, or corporate-owned devices with a work profile, all three types will be included regardless of the OS you filter to. For example, if a customer exports a report with the **OS** filter set to **Android Enterprise (corporate-owned work profile)**, the report will also include all dedicated devices and fully managed devices. The other filter parameters will apply accurately to the exported file.
 
 Until we release a fix, you can search/filter by OS on the exported report file for more granular results.
 
