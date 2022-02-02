@@ -2,7 +2,6 @@
 title: Cannot RDP into Azure VM because of a brute force attack
 description: Troubleshoot RDP failures because of brute force attack in Microsoft Azure.
 ms.date: 12/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
@@ -25,9 +24,9 @@ Open ports on Internet-facing virtual machines are targets for brute force attac
 
    - Events 4625 from the logon is logged almost every second, with the failure reason **Bad Username Or Password**.
 
-   ![Events Log](./media/cannot-rdp-azure-vm-brute-force/events-log-1.png)
+   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/events-log.png" alt-text="Screenshot of failed logon attempts Events 4625 in the Security Event Logs."::: 
 
-   ![Events Log 2](./media/cannot-rdp-azure-vm-brute-force/events-log-2.png)
+   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/event-properties.png" alt-text="Screenshot of the Event Properties - Event 4625 window, which shows the Failure Reason is Unknown users name or bad password." border="false":::
 
 ### Connect to the VM using Serial console
 
@@ -64,7 +63,7 @@ In this scenario the RDP TCP Port 3389 is exposed to the internet, please use on
 
 5. Use [Run Command](/azure/virtual-machines/windows/run-command) to change the default RDP port from 3389 to a less common port number. This is not suggested as a long-term fix, but may help to temporarily mitigate the attack and regain access to the VM, we suggest using [Just-In-Time access](/azure/security-center/just-in-time-explained), [Azure Bastion](/azure/bastion/), or [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
-   ![Run Command](./media/cannot-rdp-azure-vm-brute-force/run-command-1.png)
+   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/setrdpport-command.png" alt-text="Screenshot of the description of the SetRDPPort command in the Run command page of Azure Portal.":::
 
 > [!NOTE]
 > Use [Azure Security Centre](https://azure.microsoft.com/services/security-center/) to assess the security state of your cloud resources. Visualize your security state, and improve your security posture by using [Azure Secure Score](/azure/security-center/secure-score-security-controls) recommendations.

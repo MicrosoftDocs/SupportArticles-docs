@@ -2,7 +2,6 @@
 title: DNS management pack discovery fails with event 1155
 description: Fixes an issue in which DNS management pack discovery fails and event 1155 is logged in the Operations Manager event log.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ---
 # DNS management pack discovery fails with event ID 1155 in System Center Operations Manager
 

@@ -2,7 +2,7 @@
 title: Error 1069 when starting SQL Server service
 description: Provides resolutions for the error 1069 when starting the SQL Server or the SQL Server Agent service. The resolutions for event ID 7041 and event ID 7038 are different.
 ms.date: 10/29/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
 # Error 1069 occurs when you start SQL Server service

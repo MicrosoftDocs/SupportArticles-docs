@@ -2,7 +2,7 @@
 title: OS errors 1450 and 665 are reported
 description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for database files during DBCC CHECKDB or Database Snapshot Creation.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
 # OS errors 1450 and 665 are reported for database files during DBCC CHECKDB or Database Snapshot Creation

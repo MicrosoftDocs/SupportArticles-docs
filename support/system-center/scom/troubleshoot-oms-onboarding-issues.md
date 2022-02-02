@@ -2,7 +2,6 @@
 title: Troubleshoot OMS onboarding issues
 description: Describes how to troubleshoot onboarding issues in integrated Operations Manager attach mode clients and Direct Agent access in Operations Management Suite (OMS).
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ---
 # Troubleshoot Operations Management Suite onboarding issues
 

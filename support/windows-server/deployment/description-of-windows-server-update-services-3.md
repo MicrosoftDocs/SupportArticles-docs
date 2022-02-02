@@ -30,7 +30,7 @@ Microsoft has released a service pack for Microsoft Windows Server Update Servic
 
 The following file is available for download from the Microsoft Download Center:  
 
-![Download ](./media/description-of-windows-server-update-services-3/download.gif)
+:::image type="icon" source="media/description-of-windows-server-update-services-3/download-icon.png":::
  [Download the WSUS 3.0 Service Pack 1 package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=Windows%20Server%20Update%20Services%203.0%20sp2)  
 
 For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base:  

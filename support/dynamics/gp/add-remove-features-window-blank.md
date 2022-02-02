@@ -18,11 +18,11 @@ When attempting to add or remove a feature for Microsoft Dynamics GP 2010 throug
 
 ## Cause
 
-The 'Country' entry in the Microsoft Dynamics GP 2010 Registry key is missing a value. This entry is required to view the list of features into the 'Select Features' window.
+The **Country** entry in the Microsoft Dynamics GP 2010 Registry key is missing a value. This entry is required to view the list of features into the 'Select Features' window.
 
 ## Resolution
 
-Enter the appropriate country in Microsoft Dynamics GP 2010 Registry key. Follow the steps below:
+Enter the appropriate country/region in Microsoft Dynamics GP 2010 Registry key. Follow the steps below:
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
@@ -41,7 +41,7 @@ Enter the appropriate country in Microsoft Dynamics GP 2010 Registry key. Follow
 
 5. Click the *SETUP* folder to view the contents in the right-hand pane.
 
-6. Double-click the **County** key and enter the appropriate value. The **Country** value should match the country/region that was selected during the installation of Microsoft Dynamics GP 2010. For example, for a United States install enter *United States*.
+6. Double-click the **Country** key and enter the appropriate value. The **Country** value should match the country/region that was selected during the installation of Microsoft Dynamics GP 2010. For example, for a United States install enter *United States*.
 
 7. Click **OK**.
 

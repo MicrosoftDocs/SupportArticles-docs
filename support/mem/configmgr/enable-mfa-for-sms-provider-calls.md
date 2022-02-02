@@ -2,7 +2,6 @@
 title: Enable MFA for SMS Provider calls
 description: Describes a new feature that you can enable multi-factor authentication for SMS Provider calls to protect administrative actions.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: preetir, prabagar, yuexia
 ---
 # Enable multi-factor authentication for SMS Provider calls
@@ -57,3 +56,26 @@ To enable MFA, follow these steps:
      > Users in the `ExceptionList` can't call the `SetAuthenticationLevel` method.
 
 1. select **Execute!**, and then select **Dismiss**.
+
+### Use PowerShell cmdlets to set the AuthenticationLevel and ExceptionList properties
+
+You can also use PowerShell cmdlets to set the `AuthenticationLevel` and `ExceptionList` properties.
+
+> [!NOTE]
+> To get the security identifier (SID) of Active Directory users and groups, run the [Get-AdUser](/powershell/module/activedirectory/get-aduser) and [Get-ADGroup](/powershell/module/activedirectory/get-adgroup) cmdlets.
+
+#### Example 1: Set the authentication level and add two SIDs to the exception list
+
+```powershell
+[array]$ExceptionList=@("S-1-5-<domain SID>-<RID of the user or group account>","S-1-5-<domain SID>-<RID of the user or group account>")
+[uint32]$AuthenticationLevel=<Authentication level value>
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+```
+
+#### Example 2: Set the authentication level and remove any entries from the exception list
+
+```powershell
+[array]$ExceptionList=@()
+[uint32]$AuthenticationLevel=<Authentication level value>
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+```

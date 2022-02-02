@@ -2,7 +2,6 @@
 title: How to troubleshoot password synchronization when using an Azure AD sync appliance
 description: Troubleshoots common issues when you're using an Azure Active Directory (Azure AD) sync appliance together with password synchronization.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -31,6 +30,7 @@ To resolve this issue, follow these steps:
 1. Take one of the following actions:
    - In the user account properties in Active Directory Users and Computers, clear the **User must change password at next logon** check box.
    - Have the user change their on-premises user account password.
+   - Enable the [ForcePasswordChangeOnLogOn](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon) feature on the Azure AD Connect server.
 2. Wait a few minutes for the change to sync between the on-premises Active Directory Domain Services (AD DS) and Azure AD.
 
 ### Scenario 2: The user changed their password in the cloud service portal

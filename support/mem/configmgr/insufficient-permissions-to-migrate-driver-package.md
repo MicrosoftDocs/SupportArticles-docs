@@ -2,7 +2,6 @@
 title: Insufficient permissions to migrate a driver package
 description: Fixes an issue where you can't migrate a driver package due to missing privileges for the driver package source path.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: marcoh, erinwi, jarrettr
 ---
 # Migrating a driver package fails with the SCCM Provider is missing read, write, or delete privilege error

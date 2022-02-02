@@ -2,7 +2,6 @@
 title: Troubleshoot Azure AD Connect installation issues
 description: Describes how to troubleshoot scenarios in which you receive an error message that prevents you from installing Azure AD Connect. For example, you may receive error code 1603.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

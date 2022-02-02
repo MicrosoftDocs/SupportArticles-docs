@@ -2,7 +2,6 @@
 title: System Center App Controller basic troubleshooter
 description: Describes the information that may be collected from a machine when running the System Center App Controller basic troubleshooter for Windows Server 2008 R2 Diagnostic Platform. 
 ms.date: 08/18/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # [SDP 3][d2fe092f-bbe3-4e0b-88af-166e91e7e289]System Center App Controller basic troubleshooter

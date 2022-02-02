@@ -2,7 +2,6 @@
 title: Email addresses aren't synced to Azure Active Directory
 description: Describes an issue in which users are synced to Azure AD but one or more SMTP proxy addresses aren't synced.  This issue occurs if duplicate SMTP proxy addresses exist. Provides a resolution.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

@@ -2,7 +2,6 @@
 title: Monitor text and CSV log files in Operations Manager
 description: Describes how to configure System Center Operations Manager to monitor plain text and delimited text log files.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: lamosley
 ---
 # Monitor text and CSV log files in System Center Operations Manager

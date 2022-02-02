@@ -2,7 +2,6 @@
 title: Azure VM cannot RDP - working on features
 description: Troubleshoot Azure VM cannot RDP - working on features.
 ms.date: 12/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
@@ -18,7 +17,7 @@ ms.collection: windows
    - ##% complete
    - Don't turn off your computer
 
-   ![Error messages](./media/azure-vm-cannot-rdp-working-features/1-error.png)
+   :::image type="content" source="media/azure-vm-cannot-rdp-working-features/working-on-features-error-message.png" alt-text="Screenshot of the Working on features error message."::: 
 
 ## Cause
 

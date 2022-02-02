@@ -2,7 +2,6 @@
 title: Password Hash Synchronization is automatically enabled in Azure AD connector
 description: Fixes a problem in which Password Hash Synchronization is automatically enabled in Azure AD connector.
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -58,7 +57,7 @@ To resolve this issue, follow these steps:
 
 1. Run Azure AD Connect, and then select **View current configuration**. In the details pane, check whether **Password synchronization** is **enabled** on your tenant.
 
-   :::image type="content" source="./media/password-hash-sync-auto-enable-pass-through-auth/4051644_en_1.png" alt-text="Screenshot of checking Password synchronization status.":::
+    :::image type="content" source="media/pwd-hash-sync-auto-enable/password-synchronization.png" alt-text="Screenshot shows the Password synchronization status is enabled.":::
 
 2. Disable the **Password synchronization** feature. To do this, follow these steps:
 

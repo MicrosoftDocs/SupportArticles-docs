@@ -2,7 +2,6 @@
 title: Mac client enrollment fails
 description: This article provides a workaround to solve the issue that Configuration Manager CMEnroll tool fails on a Mac client computer.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: erinwi
 ---
 # Mac client enrollment fails if passwords contain special characters

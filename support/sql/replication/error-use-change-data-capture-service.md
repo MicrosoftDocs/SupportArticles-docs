@@ -2,7 +2,7 @@
 title: Error when you use Change Data Capture Service
 description: This article provides resolution for the problem that occurs when you use the Change Data Capture Service for Oracle by Attunity.
 ms.date: 11/10/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: JasonH, jasonh
 ms.prod: sql
 ---

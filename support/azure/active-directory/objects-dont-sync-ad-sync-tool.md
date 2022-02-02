@@ -2,7 +2,6 @@
 title: One or more objects don't sync when the Azure Active Directory Sync tool is used
 description: Describes an issue in which one or more AD DS object attributes don't sync to Azure AD through the Azure Active Directory Sync tool. Provides resolutions.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -94,7 +93,7 @@ To determine attribute conflicts caused by user objects that were created by usi
    4. Select **View**, select **Tree View**, select the AD DS domain in the **BaseDN** drop-down list, and then select **OK**.
    5. In the navigation pane, locate and then double-click the object that isn't syncing correctly. The Details pane on the right side of the window lists all object attributes. The following example shows the object attributes:
 
-        :::image type="content" source="media/objects-dont-sync-active-directory-sync-tool/4016705_en_1.jpg" alt-text="Screenshot of navigation and details pane of the Windows Support Tools.":::
+        :::image type="content" source="media/objects-dont-sync-ad-sync-tool/object-attributes.png" alt-text="Screenshot of navigation and details pane of the Windows Support Tools that listed all object attributes.":::
 
    6. Record the values of the userPrincipalName attribute and each SMTP address in the multivalue proxyAddresses attribute. You'll need these values later.
 

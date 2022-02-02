@@ -2,7 +2,6 @@
 title: HTTP 500 error connecting to the OpsMgr web console
 description: Fixes an issue in which you receive HTTP 500 error when you remotely connect to a stand-alone Operations Manager web console.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ---
 # HTTP 500 error when you connect to the Operations Manager web console
 

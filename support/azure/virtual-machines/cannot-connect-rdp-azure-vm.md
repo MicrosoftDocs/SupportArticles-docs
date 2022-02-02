@@ -2,7 +2,6 @@
 title: Troubleshoot authentication errors when you use RDP to connect to Azure VM
 description: This article can help you troubleshoot authentication errors that occur when you use Remote Desktop Protocol (RDP) connection to connect to an Azure virtual machine (VM).
 ms.date: 12/10/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

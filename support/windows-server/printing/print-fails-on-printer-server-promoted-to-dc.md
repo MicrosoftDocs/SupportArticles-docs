@@ -78,4 +78,4 @@ You can use Print Management to determine whether a printer driver is Type 4 or 
 3. Right-click on a print driver and click "Properties."
 4. The Type # under Version will tell you whether a print driver is Type 4 or Type 3:
 
-    :::image type="content" source="./media/print-fails-on-printer-server-promoted-to-dc/verify-printer-driver-type.png" alt-text="Screenshot of printer driver Version.":::
+    :::image type="content" source="./media/print-fails-on-printer-server-promoted-to-dc/verify-printer-driver-type.png" alt-text="Double checking the printer driver version that's shown in the Driver Properties.":::

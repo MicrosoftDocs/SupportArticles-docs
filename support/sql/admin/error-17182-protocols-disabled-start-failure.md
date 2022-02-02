@@ -1,9 +1,9 @@
 ---
 title: Error 17182 when you start SQL Server service
 description: This article provides resolutions for the problem where SQL Server fails to start when all the protocols are disabled.
-ms.date: 1/28/2020
-author: MaryQiu1987
-ms.author: v-maqiu
+ms.date: 12/17/2021
+author: cobibi
+ms.author: v-yunhya
 ms.reviewer: ramakoni
 ---
 # SQL Server can't start if all the protocols are disabled
@@ -12,7 +12,7 @@ _Applies to:_ &nbsp; SQL Server
 
 ## Symptoms
 
-If all network protocols for a Microsoft SQL Server instance are disabled, SQL Server doesn’t start, and you receive  the following error message, depending on how you try to start the service:
+If all network protocols for a Microsoft SQL Server instance are disabled, SQL Server doesn't start, and you receive  the following error message, depending on how you try to start the service:
 
 - By using the Services applet:
 

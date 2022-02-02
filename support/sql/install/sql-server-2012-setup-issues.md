@@ -2,7 +2,7 @@
 title: SQL Server 2012 setup and migration issues
 description: This article describes the SQL Server 2012 setup and migration issues.
 ms.date: 09/17/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 2681562
 
     For information about how to enable the .NET 3.5 Framework, review the following articles:
 
-    - [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows-10).
+    - [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows).
 
     - [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard)  
 

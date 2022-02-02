@@ -1,15 +1,13 @@
 ---
-title: Unable to connect or send inventory information
-description: Provides a solution for Microsoft Intune notification - Unable to connect to Microsoft Intune. Check your Microsoft Intune Integration configuration in the Jamf console.
-ms.date: 05/13/2020
-ms.prod-support-area-path: Mac management Jamf
+title: Unable to connect Jamf console to Intune
+description: Resolves the Jamf console notification - Unable to connect or send inventory information to Microsoft Intune. Check the status of your Jamf license.
+ms.date: 12/06/2021
+ms.reviewer: taveil
+ms.custom: sap:Mac management Jamf
 ---
 # Unable to connect (send inventory information) to Microsoft Intune in the Jamf console
 
 This article solves the notification that occurs in the Jamf console.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4466369
 
 ## Symptoms
 
@@ -33,7 +31,7 @@ To resolve this issue, contact [Jamf Software](https://www.jamf.com/) for assist
 
 ## More information
 
-You may also notice that the connection status for Jamf is inactive or shows **Terminated** in the Intune Admin console.
+You may also notice that the connection status for Jamf is inactive or shows **Terminated** in the Intune Admin console. This is expected behavior once the connector is disabled between Jamf Pro and Intune.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
