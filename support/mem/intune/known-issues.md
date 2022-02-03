@@ -1,7 +1,7 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 02/02/2022
+ms.date: 02/03/2022
 ---
 # Known issues
 
@@ -16,7 +16,7 @@ We are aware of an issue where granular OS filtering is not working as expected 
 > [!NOTE]
 > This issue does not affect device filtering in the Endpoint Manager admin center UI.
 
-The Export API does not distinguish between Android Enterprise OSes (device types) and will instead group them together. This issue affects exported report data and managedDevices API calls for the following device types:
+The Export API does not distinguish between Android Enterprise management modes and will instead group them together. This issue affects exported report data and managedDevices API calls for the following device types:
 
 - [Android Enterprise dedicated devices](/mem/intune/fundamentals/deployment-guide-enrollment-android#android-enterprise-dedicated-devices)
 - [Android Enterprise fully managed devices](/mem/intune/fundamentals/deployment-guide-enrollment-android#android-enterprise-fully-managed)
@@ -32,17 +32,6 @@ Until we release a fix, you can search/filter by OS on the exported report file 
 - **Blog post:** [Known Issue: Missing certificates after updating Samsung work profile devices to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-missing-certificates-after-updating-samsung-work/ba-p/3039834)
 
 We are aware of an issue that affects Samsung devices enrolled with a work profile. After updating to Android 12, these devices are missing certificates when a user tries to access Gmail or AnyConnect VPN. For more information and temporary workarounds, see [Known Issue: Missing certificates after updating Samsung work profile devices to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-missing-certificates-after-updating-samsung-work/ba-p/3039834) on the Intune Customer Success blog.
-
-## Office settings in the settings catalog need parent settings enabled
-
-- **Status:** Active
-- **Blog post:** [NEED TO UPDATE](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess)
-
-We identified several Office settings in the settings catalog that, when enabled, do not automatically enable the required parent setting. This can lead to the policy not applying as expected if you did not configure the parent setting.
-
-To help identify which configuration settings have this behavior, we have marked them as **(deprecated)** in the Settings catalog (preview) page. For the full list of settings, see [NEED TO UPDATE](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) on the Intune Customer Success blog.
-
-New device configuration settings (with the same name) are available and will automatically enforce the dependencies. As a recommended action, check your device configuration profiles to see if you are using a deprecated setting and update to the new setting.
 
 ## Long sync times in Intune for Managed Google Play private apps and web apps
 
