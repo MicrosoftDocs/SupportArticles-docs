@@ -39,4 +39,3 @@ To resolve this issue, enable the Sales Insights processes that are disabled. Fo
 5. Select the processes that are in **Draft** state and activate.
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
