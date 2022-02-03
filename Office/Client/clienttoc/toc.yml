@@ -371,8 +371,6 @@
       items:
         - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
           href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
-        - name: A file is updated without user interaction
-          href: ../excel/file-updated-without-user-interaction.md
         - name: 'A formula returns "#VALUE!" Error'
           href: ../excel/formula-returns-value-error.md
         - name: Access data connections are slow to refresh
@@ -503,6 +501,8 @@
           href: ../excel/f4-keyboard-shortcut-not-work.md
         - name: FALSE result with the ISBLANK() function
           href: ../excel/isblank-function-return-false.md
+        - name: File updated without user interaction
+          href: ../excel/file-updated-without-user-interaction.md
         - name: First sheet name displays different language
           href: ../excel/first-sheet-name-displays-different-language.md
         - name: Floating-point arithmetic gives inaccurate results
