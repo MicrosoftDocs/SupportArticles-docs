@@ -63,7 +63,6 @@ SIP device state isn't reflected when the device's user isn't signed in. Therefo
 
 1. Verify that [SIP Gateway is enabled for the users in your organization](/microsoftteams/sip-gateway-configure#enable-sip-gateway-for-the-users-in-your-organization).
 1. Check if your settings have been changed. For example, your phone number has been removed.
-1. Check if you connect the device to a new IP address.
 
 ## My device displays the wrong time
 
