@@ -40,7 +40,7 @@ Update the VM objects and properties by running the `reapply` command in the Azu
 
 ### [CLI](#tab/cli)
 
-Update the VM objects and properties by running the [az vm reapply](/cli/azure/vm?view=azure-cli-latest#az_vm_reapply&preserve-view=true) command:
+Update the VM objects and properties by running the [az vm reapply](/cli/azure/vm#az_vm_reapply) command:
 
 ```azurecli-interactive
 az vm reapply -g MyResourceGroup -n MyVm
