@@ -451,3 +451,14 @@
     items:
     - name: Installing Reporting Extensions can't locate SSRS instance
       href: installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md
+  - name: Sales
+    items:
+    - name: Troubleshooting the sales pipeline chart
+      href: ts-sales-pipeline.md
+    - name: Troubleshooting email
+      href: ts-email.md
+    - name: Troubleshooting Sales Premium
+      href: troubleshooting-sp.md
+    - name: Troubleshooting Dynamics 365 Sales Professional
+      href: troubleshooting-spro.md
+
