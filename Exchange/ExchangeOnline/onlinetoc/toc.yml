@@ -129,6 +129,8 @@
       href: ../administration/view-update-address-list-membership.md
     - name: Voice mail settings are missing from Options
       href: ../administration/voice-mail-settings-missing-from-options.md
+    - name: Windows Mail app not blocked by ActiveSync settings
+      href: ../administration/windows-mail-app-not-blocked.md
     - name: WinRM client cannot process the request
       href: ../administration/winrm-cannot-process-request.md
     - name: Wrong output if running Get-CASMailbox for HasActiveSyncDevicePartnership
