@@ -1,24 +1,24 @@
 ---
 title: Intune Company Portal apps don't appear as Available
-description: Fixes an issue in which applications are not displayed as Available in the Intune Company Portal app on a Windows 10 device.
+description: Fixes an issue in which applications aren't displayed as Available in the Intune Company Portal app on a Windows 10 device.
 ms.date: 05/11/2020
 ms.custom: sap:App management
 ---
-# Applications do not appear as Available in the Intune Company Portal app on Windows 10
+# Applications don't appear as Available in the Intune Company Portal app on Windows 10
 
-This article fixes an issue in which the Intune Company Portal apps are not displayed as **Available** on a Windows 10 device.
+This article fixes an issue in which the Intune Company Portal apps aren't displayed as **Available** on a Windows 10 device.
 
 ## Symptoms
 
-After you deploy applications to Windows 10 devices, the apps are not displayed as **Available** in the Company Portal app.
+After you deploy applications to Windows 10 devices, the apps aren't displayed as **Available** in the Company Portal app.
 
 ## Cause
 
-This issue occurs if users do not identify their device in the Information Worker portal (IW portal) at [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com).
+This issue occurs if users don't identify their device in the Information Worker portal (IW portal) at [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com).
 
 ## Solution
 
-To resolve this issue, users must use the following steps to identify their enrolled device.
+To fix this issue, users must use the following steps to identify their enrolled device.
 
 1. Go to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com), and then log in by using your account. You should see something similar to the following.
 
@@ -33,7 +33,7 @@ To resolve this issue, users must use the following steps to identify their enro
 
    :::image type="content" source="media/apps-appear-unavailable/select-device.png" alt-text="Screenshot of selecting device.":::
 
-5. You are returned to **My Devices**. The device should show a green check, as shown in the following screenshot.
+5. You're returned to **My Devices**. The device should show a green check, as shown in the following screenshot.
 
    :::image type="content" source="media/apps-appear-unavailable/my-device.png" alt-text="Screenshot of my devices page with a green check in the selected device.":::
 
