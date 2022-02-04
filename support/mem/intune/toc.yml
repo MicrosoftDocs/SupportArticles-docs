@@ -1,6 +1,8 @@
 items:
 - name: Welcome
   href: welcome-intune.yml
+- name: Known issues with Intune
+  href: known-issues.md
 - name: App management
   items:
   - name: App management overview
