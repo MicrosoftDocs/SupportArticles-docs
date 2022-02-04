@@ -44,13 +44,15 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Cloud-init-enabled VM takes a long time to start up
+            url: cloud-init-deployment-delay.md
           - text: Prepare a Windows VHD to upload to Azure
             url: /azure/virtual-machines/windows/prepare-for-upload-vhd-image
           - text: Create VM from a managed image in Azure
             url: /azure/virtual-machines/windows/create-vm-generalized-managed
           - text: Share VM images with Shared Galleries
             url: /azure/virtual-machines/shared-image-galleries
-          
+
   # Card (optional)
   - title: Troubleshoot Deployment Failures
     linkLists:
