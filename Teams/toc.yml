@@ -227,12 +227,10 @@
     items:
     - name: Collect Android Teams device logs
       href: ./Teams-devices-and-rooms/collect-device-logs.md
+    - name: Issues related to SIP Gateway
+      href: ./Teams-devices-and-rooms/sip-gateway-issues.md
     - name: Known issues in Rooms
       href: ./known-issues/rooms-known-issues.md
-    - name: SIP Gateway
-      items:  
-      - name: Issues related to SIP Gateway
-        href: ./Teams-devices-and-rooms/sip-gateway-issues.md
   - name: Teams on Linux
     items: 
     - name: Known issues at Linux
