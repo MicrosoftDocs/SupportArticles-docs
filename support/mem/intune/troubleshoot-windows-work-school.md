@@ -1,14 +1,12 @@
 ---
-title: Troubleshoot “Set up for work or school” enrollment in Intune
-description: Troubleshoot blocked Microsoft Intune enrollment for Windows devices when the user chooses "Set up for work or school" and signs in with Azure AD. The device is recognized as a personal device and the tenant does not allow for this device type.
+title: Troubleshoot "Set up for work or school" enrollment in Intune
+description: Troubleshoot blocked Microsoft Intune enrollment for Windows devices when the user chooses "Set up for work or school" and signs in with Azure AD. The device is recognized as a personal device and the tenant doesn't allow for this device type.
 ms.date: 01/31/2022
 ---
 
-# Unblock Windows “Set up for work or school” enrollment
+# Unblock Windows "Set up for work or school" enrollment
 
 This article helps troubleshoot an enrollment failure during the out-of-box experience (OOBE) when enrolling Windows devices with a work or school account.
-
-## Symptom
 
 This issue can occur during device setup when the user chooses **Set up for work or school** and then signs in with an organization-linked Azure Active Directory (Azure AD) account. The enrollment fails and you might see associated error code 80180014.
 
@@ -22,7 +20,7 @@ In this scenario, the device is recognized as a *personal* device. If you have p
 
 ## Solution
 
-To fix this, you can allow personal enrollment of Windows devices either for all users or for a subset of users you want to be allowed to enroll personal devices. We recommend limiting the number of users you allow to enroll personal windows devices to only the users who will need this capability. This will ensure that other users in your organization do not accidentally enroll their personal devices.
+To fix this issue, you can allow personal enrollment of Windows devices either for all users or for a subset of users you want to be allowed to enroll personal devices. We recommend limiting the number of users you allow to enroll personal windows devices to only the users who will need this capability. This will ensure that other users in your organization don't accidentally enroll their personal devices.
 
 To allow personal device enrollment, sign-in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
 
