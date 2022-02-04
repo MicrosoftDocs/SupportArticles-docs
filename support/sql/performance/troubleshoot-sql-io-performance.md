@@ -15,7 +15,7 @@ This article provides guidance on what I/O issues cause slow SQL Server performa
 
 ## Define slow I/O performance
 
-A metric (performance monitor counter) which is generally used to determine slow I/O performance is the one that measures how fast the I/O subsystem services each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are `Avg Disk sec/ Read`, `Avg. Disk sec/Write`, and `Avg. Disk sec/Transfer` (cumulative of both reads and writes).
+Performance monitor counters are used to determine slow I/O performance. These counters measure how fast the I/O subsystem services each I/O request on an average in terms of clock time. The specific [Performance monitor](/windows-server/administration/windows-commands/perfmon) counters that measure I/O latency in Windows are `Avg Disk sec/ Read`, `Avg. Disk sec/Write`, and `Avg. Disk sec/Transfer` (cumulative of both reads and writes).
 
 In SQL Server, things work in the same way. Commonly, you look at whether SQL Server reports any I/O bottlenecks measured in clock time (milliseconds). SQL Server makes I/O requests to the OS by calling the Win32 functions such as `WriteFile()`, `ReadFile()`, `WriteFileGather()`, and `ReadFileScatter()`. When it posts an I/O request, SQL Server times the request and reports the duration of the request using [wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). SQL Server uses wait types to indicate I/O waits at different places in the product. The I/O related waits are:
 
