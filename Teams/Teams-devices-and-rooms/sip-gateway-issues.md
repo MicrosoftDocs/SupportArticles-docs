@@ -1,6 +1,6 @@
 ---
 title: Resolve common issues related to SIP Gateway
-description: Lists common issues when you use compatible SIP devices with Teams. Provides resolutions.
+description: Lists common issues when you use compatible SIP devices with Teams. Provides steps to troubleshoot these issues.
 ms.date: 01/17/2022
 author: helenclu
 ms.author: luche
@@ -18,16 +18,16 @@ ms.custom: CI159602
 ms.reviewer: scapero, chasing
 ---
 
-# Troubleshoot common issues related to SIP Gateway
+# Common issues when you use SIP devices with Teams
 
-SIP Gateway enables your organization to use any compatible SIP device with Microsoft Teams. This article lists some common issues that may occur when you use an SIP device, and provides solutions that you can try.
+SIP Gateway enables your organization to use any compatible SIP device with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Microsoft Teams, and provides steps to help you troubleshoot these issues.
 
 ## I can't onboard my device
 
-1. Verify that you're using a [compatible device](/microsoftteams/sip-gateway-plan#compatible-devices).
+1. Verify that you're using a [compatible SIP device](/microsoftteams/sip-gateway-plan#compatible-devices).
 1. Make sure that you've reset the device to factory default settings.
-1. Verify that [the SIP Gateway provisioning server's URL is correctly set](/microsoftteams/sip-gateway-configure#set-the-sip-gateway-provisioning-server-url) to the HTTP URL.
-1. Check if the device can connect to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
+1. Verify that [the SIP Gateway provisioning server's URL](/microsoftteams/sip-gateway-configure#set-the-sip-gateway-provisioning-server-url) begins with HTTP, not HTTPS. For example, use `http://noam.ipp.sdg.teams.microsoft.com`, not `https://noam.ipp.sdg.teams.microsoft.com`.
+1. Check if the device can connect to SIP Gateway. Verify that connection isn't blocked by your firewall and proxy, and the required https endpoints and TCP/UDP ports are open. For more information, see the **Before you can configure SIP Gateway** part in [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
 
 ## Web app authentication fails when I try to sign in
 
@@ -39,11 +39,11 @@ SIP Gateway enables your organization to use any compatible SIP device with Micr
 1. Check if the [requirements to use SIP Gateway](/microsoftteams/sip-gateway-plan#requirements-to-use-sip-gateway) are met. Teams users must have a phone number with PSTN calling enabled to use SIP Gateway.
 1. Check if SIP Gateway policy is set correctly. For more information, see [Enable SIP Gateway for the users in your organization](/microsoftteams/sip-gateway-configure#enable-sip-gateway-for-the-users-in-your-organization).
 1. Check if another user from a different tenant signed in to the device, but didn't sign out gracefully. If so, have that user sign in, then sign out.
-1. Check if the device can connect to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
+1. Check if the device can connect to SIP Gateway. Verify that the connection isn't blocked by your firewall and proxy, and the required https endpoints and TCP/UDP ports are open. For more information, see the **Before you can configure SIP Gateway** part in [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
 
 ## My device isn't listed in the Teams admin center
 
-1. Make sure that you're using a [compatible device](/microsoftteams/sip-gateway-plan#compatible-devices).
+1. Make sure that you're using a [compatible SIP device](/microsoftteams/sip-gateway-plan#compatible-devices).
 1. Verify that you've successfully onboarded the device to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
 1. Make sure that you've [signed in](/microsoftteams/sip-gateway-configure#user-pairing-and-sign-in) to the device at least once.
 
@@ -76,20 +76,20 @@ SIP device state isn't reflected when the device's user isn't signed in. Therefo
 
 ## I can't register my device to Teams
 
-1. Check if the device can connect to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
+1. Check if the device can connect to SIP Gateway. Verify that connection isn't blocked by your firewall and proxy, and the required https endpoints and TCP/UDP ports are open. For more information, see the **Before you can configure SIP Gateway** part in [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
 1. Check if other SIP devices experience the same issue. If so, service may not be available.
-1. Restart your device and try again.
+1. [Restart your device](/microsoftteams/sip-gateway-configure#restart-a-sip-device) and try again.
 
 ## I can't make calls
 
 1. Check if your device is registered.
-1. Restart your device and try again.
+1. [Restart your device](/microsoftteams/sip-gateway-configure#restart-a-sip-device) and try again.
 1. Test if you can make the same call (to the same remote address) in the Teams app.
 
 ## I can't receive calls
 
 1. Check if your device is registered.
-1. Restart your device and try again.
+1. [Restart your device](/microsoftteams/sip-gateway-configure#restart-a-sip-device) and try again.
 1. Test if you can receive the same call (from the same remote address) in the Teams app.
 
 ## More information

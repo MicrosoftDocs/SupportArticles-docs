@@ -231,8 +231,8 @@
       href: ./known-issues/rooms-known-issues.md
     - name: SIP Gateway
       items:  
-      - name: Common issues related to SIP Gateway
-        href: ./Teams-devices-and-rooms/sip-gateway/sip-gateway-issues.md
+      - name: Issues related to SIP Gateway
+        href: ./Teams-devices-and-rooms/sip-gateway-issues.md
   - name: Teams on Linux
     items: 
     - name: Known issues at Linux
