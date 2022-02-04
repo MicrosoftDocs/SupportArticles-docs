@@ -11,7 +11,7 @@ ms.author: v-jayaramanp
 
 # Troubleshoot SQL Server slow performance caused by IO issues
 
-This article provides guidance on what IO issues cause slow SQL Server performance and how to troubleshoot the issues.
+This article provides guidance on what I/O issues cause slow SQL Server performance and how to troubleshoot the issues.
 
 ## Define slow I/O performance
 
@@ -122,7 +122,7 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
 
 If the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike. If the spike lasted 1 minute or more, then it’s more of a plateau than a spike.
 
-If `Performance monitor` counters don’t report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, that is, filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and the volumes they attach to. Then you can look up the driver names and software vendor in the [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes) article.
+If the `Performance monitor` counters don’t report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, that is, filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and the volumes they attach to. Then, you can look up the driver names and software vendors in the [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes) article.
 
    ```Powershell
    fltmc instances
@@ -157,20 +157,20 @@ Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
 
 ### Is SQL Server driving the heavy I/O activity?
 
-If I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then you need to work with the Application Development teams (or application vendor) to:
+If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams (or application vendor) to:
 
 - Tune queries, for example: better indexes, update statistics, rewrite queries, and redesign the database.
-- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options), or add more RAM on the system. More RAM will allow more data or index pages to be cached and not re-read from disk frequently, which will reduce I/O activity.
+- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will allow more data or index pages to be cached and not re-read from disk frequently, which will reduce I/O activity.
 
 ## Causes
 
 In general, there exist three high-level reasons why SQL Server queries suffer from I/O latency and they are:
 
- - **Hardware issues:** There’s a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (throughout entire SAN network, not just back-end storage), drivers/firmware bug, and so on. This stage is where a hardware vendor needs to be engaged.
+ - **Hardware issues:** There’s a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (throughout entire SAN network, not just back-end storage), drivers/firmware bugs, and so on. This is the stage at which a hardware vendor needs to be engaged.
 
- - **Query issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, you will need to find queries that are causing a large number of logical reads (or writes) and tune the queries them to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also incorrect database design and query design lead to increase in I/O.
+ - **Query issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, find the queries that are causing a large number of logical reads (or writes) and tune the queries to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also, incorrect database design and query design lead to increase in I/O issues.
 
- - **Filter drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendor are recommended to prevent impact on I/O performance.
+ - **Filter drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendors are recommended to prevent impact on I/O performance.
 
 ## Graphical representation of the methodology
 
@@ -182,11 +182,11 @@ Following are descriptions of the common wait types observed in SQL Server when 
 
 ### PAGEIOLATCH_EX
 
-Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in Exclusive mode. An Exclusive mode is used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.
+Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in the Exclusive mode. An Exclusive mode is used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.
 
 ### PAGEIOLATCH_SH
 
-Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in Shared mode. A Shared mode is used when the buffer is being read from disk. Long waits may indicate problems with the disk subsystem.
+Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in the Shared mode. A Shared mode is used when the buffer is being read from the disk. Long waits may indicate problems with the disk subsystem.
 
 ### PAGEIOLATCH_UP
 
@@ -194,36 +194,36 @@ Occurs when a task is waiting on a latch for a buffer that is in an I/O request.
 
 ### WRITELOG
 
-Occurs while waiting for a transaction log flush to complete. A flush occurs when the Log Manager writes its temporary contents to disk. Common operations that cause log flushes are transaction commits and checkpoints.
+Occurs when a task is waiting for a transaction log flush to complete. A flush occurs when the Log Manager writes its temporary contents to disk. Common operations that cause log flushes are transaction commits and checkpoints.
 
 Common reasons for long waits on `WRITELOG` are:
 
- - **Transaction log disk latency**: This is the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading/writing data from data file is random. Mixing these two on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
+ - **Transaction log disk latency**: This is the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading or writing data from a data file is random. Mixing these two on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
 
- - **Too many VLFs**: Too many virtual log files (VLFs) can cause `WRITELOG` waits. Too many VLFs can cause other type of issues such as long recovery as well.
+ - **Too many VLFs**: Too many virtual log files (VLFs) can cause `WRITELOG` waits. Too many VLFs can cause other type of issues such as long recovery.
 
- - **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, or update will result into a transaction (we call this auto transaction). If you do 1000 inserts in a loop, there will be 1000 transactions generated. Each transaction in this example needs to commit which results in a transaction log flush. This will result in 1000 transaction flushes. When possible, group individual update, delete, or insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer `WRITELOG` waits.
+ - **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, or update will result into a transaction (we call this auto transaction). If you do 1000 inserts in a loop, there will be 1000 transactions generated. Each transaction in this example needs to commit, which results in a transaction log flush. This will result in 1000 transaction flushes. When possible, group individual update, delete, or insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer `WRITELOG` waits.
 
- - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log Writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU) the Log writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 Log Writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to 8 Log writer threads were added which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log Writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
+ - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log Writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU) the Log Writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 Log Writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to 8 Log Writer threads were added, which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
 
 ### ASYNC_IO_COMPLETION
 
 Occurs when some of the following I/O activities happen:
 
-- Bulk Insert Provider ("Insert Bulk") uses this wait type when performing I/O.
-- Reading Undo file in LogShipping and direct Async I/O for Log Shipping.
+- The Bulk Insert Provider ("Insert Bulk") uses this wait type when performing I/O.
+- Reading Undo file in LogShipping and directs Async I/O for Log Shipping.
 - Reading the actual data from the data files during a data backup.
 
 ### IO_COMPLETION
 
 Occurs while waiting for I/O operations to complete. This wait type generally involves I/Os not related to data pages (buffers). Examples include:
 
-- Reads and writes of sort/ hash results from/to disk during a spill (check performance of *tempdb* storage).
+- Reading and writing of sort/hash results from/to disk during a spill (check performance of *tempdb* storage).
 - Reading and writing eager spools to disk (check *tempdb* storage).
 - Reading log blocks from the transaction log (during any operation that causes the log to be read from disk – for example, recovery).
 - Reading a page from disk when database isn’t set up yet.
 - Copying pages to a database snapshot (Copy-on-Write).
-- Closing database file, file uncompression.
+- Closing database file and file uncompression.
 
 ### BACKUPIO
 
