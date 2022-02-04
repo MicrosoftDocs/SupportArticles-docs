@@ -32,7 +32,7 @@ If these waits exceed 10-15 milliseconds on a consistent basis, then I/O is cons
 
 ## Methodology
 
-The following is a description of the methodology Microsoft CSS uses to approach slow I/O issues with SQL Server. It isn’t an exhaustive or exclusive approach, but has proven useful in isolating the issue and resolving it.
+The following flow chart is a description of the methodology Microsoft CSS uses to approach slow I/O issues with SQL Server. It isn’t an exhaustive or exclusive approach, but has proven useful in isolating the issue and resolving it.
 
 A [flow chart](#graphical-representation-of-the-methodology) at the end of this article provides a visual representation of this methodology.
 
@@ -134,7 +134,7 @@ Avoid using Encrypting File System (EFS) and file-system compression because the
 
 ### Is the I/O subsystem overwhelmed beyond capacity?
 
-If SQL Server and the OS indicate I/O subsystem is slow, then check if that is caused by the system being overwhelmed beyond capacity. You can do this by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
+If SQL Server and the OS indicate I/O subsystem is slow, then check if that is caused by the system being overwhelmed beyond capacity. You can check capacity by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
 
 ```powershell
 clear
@@ -157,7 +157,7 @@ Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
 
 ### Is SQL Server driving the heavy I/O activity?
 
-If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams (or application vendor) to:
+If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
 - Tune queries, for example: better indexes, update statistics, rewrite queries, and redesign the database.
 - Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will allow more data or index pages to be cached and not re-read from disk frequently, which will reduce I/O activity.
@@ -204,14 +204,14 @@ Common reasons for long waits on `WRITELOG` are:
 
  - **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, or update will result into a transaction (we call this auto transaction). If you do 1000 inserts in a loop, there will be 1000 transactions generated. Each transaction in this example needs to commit, which results in a transaction log flush. This will result in 1000 transaction flushes. When possible, group individual update, delete, or insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer `WRITELOG` waits.
 
- - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log Writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU) the Log Writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to 4 Log Writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to 8 Log Writer threads were added, which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
+ - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log Writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU) the Log Writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to four Log Writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to eight Log Writer threads were added, which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
 
 ### ASYNC_IO_COMPLETION
 
 Occurs when some of the following I/O activities happen:
 
 - The Bulk Insert Provider ("Insert Bulk") uses this wait type when performing I/O.
-- Reading Undo file in LogShipping and directs Async I/O for Log Shipping.
+- Reading Undo file in LogShipping and directing Async I/O for Log Shipping.
 - Reading the actual data from the data files during a data backup.
 
 ### IO_COMPLETION
