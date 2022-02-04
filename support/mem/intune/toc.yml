@@ -237,6 +237,8 @@ items:
       href: troubleshoot-windows-enrollment-errors.md
     - name: Windows user not authorized to enroll
       href: windows-user-cannot-enroll.md
+    - name: '"Set up for work or school" enrollment is blocked'
+      href: troubleshoot-windows-work-school.md
     - name: Troubleshoot Windows 10 group policy-based auto-enrollment
       href: troubleshoot-windows-auto-enrollment.md
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
@@ -275,8 +277,6 @@ items:
       href: troubleshoot-exchange-connector.md
     - name: Common errors with the Exchange Connector
       href: troubleshoot-exchange-connector-common-errors.md
-    - name: Can't move an Intune Exchange connector
-      href: fails-moving-intune-exchange-connector.md
     - name: Could not retrieve access token for Graph API
       href: could-not-retrieve-access-token.md
     - name: Troubleshoot Jamf Pro integration
