@@ -28,7 +28,7 @@ To resolve this issue, check whether you have any Exchange mail flow rules (also
 
 ### Exchange mail flow rules
 
-These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. It means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SPF failures will be delivered to Exchange, but mail flow rules that anlyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
+These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. It means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SPF failures will be delivered to Exchange, but mail flow rules that analyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
 
 ### Third-party email systems
 
@@ -42,22 +42,32 @@ Add the Cloud Service IP addresses listed at [Office 365 URLs and IP address ran
 
 ## Symptom 2
 
-Voicemails are delivered to email clients (such as Outlook), but don't appear in the Skype for Business or Teams client. Only voicemails from internal users are delivered. Voicemails that are created by calling from PSTN endpoints (that is, regular telephone calls) are not delivered.
+Voicemails are delivered to email clients (such as Outlook), but don't appear in the Teams or Skype for Business client. 
+
+### Use Microsoft Remote Connectivity Analyzer to diagnose
+
+Go to [Microsoft Remote Connectivity Analyzer for Teams](https://testconnectivity.microsoft.com/tests/teams), select **Teams Voicemail** to run the test.
+
+If the Teams Voicemail test doesn't return any errors, but the Teams client isn't retrieving any or all voicemails that are received in email (for example, the Teams client may retrieve voicemails from internal callers, but not from external PSTN callers due to Exchange mail flow rules), try the following resolution.
 
 ## Resolution For symptom 2
 
+### Exchange Client Access Rules
+
+Make sure that there are no [Exchange Client Access Rules](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules#client-access-rules-and-middle-tier-applications) that block access. 
+
 ### Exchange Email Connector
 
-A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct.
+A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct. For voicemail messages to show in the Teams client, the message class must be IPM.Note.Microsoft.Voicemail.UM.
 
 > [!NOTE]
 > - Teams users with on-premises Exchange mailboxes can use voicemail with Teams and receive voicemail messages in Outlook, but voicemail messages aren't available 
 to view or play within the Teams client.
-> - Voicemail messages protected with Rights Management Services will be viewable in Teams, but can only be played using the Outlook Web client (OWA), and transcriptions can only be read in either Outlook or OWA. 
+> - Voicemail messages protected with Rights Management Services won't be viewable in Teams, will be viewable in Outlook, but can only be played using the Outlook Web client (OWA), and transcriptions can only be read in either Outlook or OWA. 
 
 ### Exchange mail flow rules
 
-Exchange mail flow rules can also impact availability of messages in Skype for Business or Teams. If changes are made to headers, the messages won't be available in the voicemail folder used by these clients for retrieval. If voicemail messages are visible in Outlook but not Teams, the problem is likely caused by changes to the message content preventing the messages from being deposited in the voicemail folder. To investigate, use [MFCMAPI from Github](https://github.com/stephenegriffin/mfcmapi/releases) to view the contents of the user's Outlook **Voice Mail** folder. 
+Exchange mail flow rules can also impact availability of messages in Skype for Business or Teams. If changes are made to headers, the messages won't be available in the voicemail folder used by these clients for retrieval. If voicemail messages are visible in Outlook but not Teams, the problem is likely caused by changes to the message content preventing the messages from being deposited in the voicemail folder. To investigate, use [MFCMAPI from GitHub](https://github.com/stephenegriffin/mfcmapi/releases) to view the contents of the user's Outlook **Voice Mail** folder. 
 
 > [!NOTE]
 > The bit version of MFCMAPI must match the bit version of Outlook
