@@ -28,7 +28,7 @@ To resolve this issue, check whether you have any Exchange mail flow rules (also
 
 ### Exchange mail flow rules
 
-These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. It means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SPF failures will be delivered to Exchange, but mail flow rules that anlyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
+These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. It means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SPF failures will be delivered to Exchange, but mail flow rules that analyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
 
 ### Third-party email systems
 
@@ -67,7 +67,7 @@ to view or play within the Teams client.
 
 ### Exchange mail flow rules
 
-Exchange mail flow rules can also impact availability of messages in Skype for Business or Teams. If changes are made to headers, the messages won't be available in the voicemail folder used by these clients for retrieval. If voicemail messages are visible in Outlook but not Teams, the problem is likely caused by changes to the message content preventing the messages from being deposited in the voicemail folder. To investigate, use [MFCMAPI from Github](https://github.com/stephenegriffin/mfcmapi/releases) to view the contents of the user's Outlook **Voice Mail** folder. 
+Exchange mail flow rules can also impact availability of messages in Skype for Business or Teams. If changes are made to headers, the messages won't be available in the voicemail folder used by these clients for retrieval. If voicemail messages are visible in Outlook but not Teams, the problem is likely caused by changes to the message content preventing the messages from being deposited in the voicemail folder. To investigate, use [MFCMAPI from GitHub](https://github.com/stephenegriffin/mfcmapi/releases) to view the contents of the user's Outlook **Voice Mail** folder. 
 
 > [!NOTE]
 > The bit version of MFCMAPI must match the bit version of Outlook
