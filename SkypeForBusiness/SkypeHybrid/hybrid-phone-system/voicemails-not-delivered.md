@@ -44,24 +44,26 @@ Add the Cloud Service IP addresses listed at [Office 365 URLs and IP address ran
 
 Voicemails are delivered to email clients (such as Outlook), but don't appear in the Teams or Skype for Business client. 
 
-### Use Microsoft Remote Connectivity Analyzer for Teams to investigate symptom 2 
-To help diagnose the problem, please run the **Teams Voicemail** [Microsoft Remote Connectivity Analyzer for Teams](https://testconnectivity.microsoft.com/tests/teams).
+### Use Microsoft Remote Connectivity Analyzer to diagnose
 
-Please check the the following resolution steps below if the Teams Voicemail analyzer does not return any errors but the Teams client is not retrieving any or all voicemails that are received in email. For example, the Teams client may retrieve voicemail from internal callers, but not from external PSTN callers due to Exchange mail flow rules. 
+Go to [Microsoft Remote Connectivity Analyzer for Teams](https://testconnectivity.microsoft.com/tests/teams), select **Teams Voicemail** to run the test.
+
+If the Teams Voicemail test doesn't return any errors, but the Teams client isn't retrieving any or all voicemails that are received in email (for example, the Teams client may retrieve voicemails from internal callers, but not from external PSTN callers due to Exchange mail flow rules), try the following resolution.
 
 ## Resolution For symptom 2
 
-### Exxhange Client Access Rules
-Confirm that there are no [Exchange Client Access Rules](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules#client-access-rules-and-middle-tier-applications) restricting access. 
+### Exchange Client Access Rules
+
+Make sure that there are no [Exchange Client Access Rules](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules#client-access-rules-and-middle-tier-applications) that block access. 
 
 ### Exchange Email Connector
 
-A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct. For voicemail messages to show in the Teams client, the message class must = IPM.Note.Microsoft.Voicemail.UM.
+A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct. For voicemail messages to show in the Teams client, the message class must be IPM.Note.Microsoft.Voicemail.UM.
 
 > [!NOTE]
 > - Teams users with on-premises Exchange mailboxes can use voicemail with Teams and receive voicemail messages in Outlook, but voicemail messages aren't available 
 to view or play within the Teams client.
-> - Voicemail messages protected with Rights Management Services will **not** be viewable in Teams, will be viewable in Outlook, but can only be played using the Outlook Web client (OWA), and transcriptions can only be read in either Outlook or OWA. 
+> - Voicemail messages protected with Rights Management Services won't be viewable in Teams, will be viewable in Outlook, but can only be played using the Outlook Web client (OWA), and transcriptions can only be read in either Outlook or OWA. 
 
 ### Exchange mail flow rules
 
