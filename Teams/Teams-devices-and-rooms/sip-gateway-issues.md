@@ -1,6 +1,6 @@
 ---
-title: Resolve common issues related to SIP Gateway
-description: Troubleshoots common issues that occur when you use compatible SIP devices in Teams.
+title: Common issues when using SIP devices with Teams
+description: Troubleshoots common issues that occur when you use compatible SIP devices with Microsoft Teams.
 ms.date: 01/17/2022
 author: helenclu
 ms.author: luche
@@ -18,25 +18,25 @@ ms.custom: CI159602
 ms.reviewer: scapero, chasing
 ---
 
-# Common issues when you use SIP devices in Teams
+# Common issues when you use SIP devices with Teams
 
-SIP Gateway enables your organization to use any compatible SIP device in Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
+SIP Gateway enables your organization to use any compatible SIP device with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
 
 ## I can't onboard my device
 
 1. Verify that you're using a [compatible SIP device](/microsoftteams/sip-gateway-plan#compatible-devices).
 1. Make sure that you reset the device to the factory default settings.
-1. Verify that [the SIP Gateway provisioning server's URL](/microsoftteams/sip-gateway-configure#set-the-sip-gateway-provisioning-server-url) begins in "HTTP," not "HTTPS." For example, use `http://noam.ipp.sdg.teams.microsoft.com`, not `https://noam.ipp.sdg.teams.microsoft.com`.
+1. Verify that [the SIP Gateway provisioning server's URL](/microsoftteams/sip-gateway-configure#set-the-sip-gateway-provisioning-server-url) begins in "HTTP", not "HTTPS". For example, use `http://noam.ipp.sdg.teams.microsoft.com`, not `https://noam.ipp.sdg.teams.microsoft.com`.
 1. Check whether the device can connect to SIP Gateway. Verify that the connection isn't blocked by your firewall or proxy server, and that the required HTTPS endpoints and TCP/UDP ports are open. For more information, see the list of items that follows "Before you can configure SIP Gateway" in [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
 
 ## Web app authentication fails when I try to sign in
 
-1. Make sure that you're using the correct credentials. Sign in to the Teams app by using the same credentials to verify.
+1. Make sure that you're using the correct credentials. Sign in to the Teams app by using the same credentials to check whether the credentials are correct.
 1. If your organization uses Conditional Access, make sure that the IP address of SIP Gateway is excluded. For more information, see [Configure conditional access](/microsoftteams/sip-gateway-configure#configure-conditional-access).
 
 ## My device doesn't update after I sign in successfully
 
-1. Check whether the [requirements to use SIP Gateway](/microsoftteams/sip-gateway-plan#requirements-to-use-sip-gateway) are met. To use SIP Gateway, teams users must have a phone number that has PSTN calling enabled.
+1. Check whether the [requirements to use SIP Gateway](/microsoftteams/sip-gateway-plan#requirements-to-use-sip-gateway) are met. To use SIP Gateway, Teams users must have a phone number that has PSTN calling enabled.
 1. Check whether SIP Gateway policy is set correctly. For more information, see [Enable SIP Gateway for the users in your organization](/microsoftteams/sip-gateway-configure#enable-sip-gateway-for-the-users-in-your-organization).
 1. Check whether another user from a different tenant signed in to the device, but didn't sign out gracefully. If they didn't, have that user sign in and sign out again.
 1. Check whether the device can connect to SIP Gateway. Verify that the connection isn't blocked by your firewall or proxy server, and that the required HTTPS endpoints and TCP/UDP ports are open. For more information, see the list of items that follows "Before you can configure SIP Gateway" in [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
