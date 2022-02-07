@@ -1,8 +1,8 @@
-# SQL 2019 Memory Optimized Tempdb Metadata (HkTempDB) Out of memory errors
-
+# Memory Optimized Tempdb Metadata (HkTempDB) Out of memory errors
 
 ## Problem Description
-After enabling HkTempDB - Memory Optimized TempDB Metadata, error 701 - Out of Memory exceptions for TempDB Allocations are observed and could crash SQL Server Service.
+
+After enabling Memory-Optimized TempDB Metadata (HkTempDB), error 701 - Out of Memory exceptions for TempDB Allocations are observed and could crash SQL Server Service.
 
 ### Observations:
 
@@ -31,59 +31,65 @@ Pages Allocated                            60104496
 
 ## Cause
 
-This is currently due to possible HK Memory Leaks and a limitation where the Cleanup of the Hekaton memory kicks in only when SQL OS detects memory-pressure and notify Hekaton to cleanup.
-Or due to explicit long running transactions with DDL on temp tables.
+This issue could be caused by In-Memory OLTP (Hekaton) memory leaks and a limitation where the Cleanup of the Hekaton memory is triggered only when SQL OS detects memory-pressure and notifies Hekaton to cleanup. Alternatively, this could be caused by an explicit long-running transactions with DDL on temp tables.
 
-### Different variations of this issue: 
+### Different variations of this issue:
 
-Slow Gradual Increase in XTP memory consumption
+There are two main symtom-based variation of this issue:
 
-1. tempdb.sys.dm_xtp_system_memory_consumers or tempdb.sys.dm_db_xtp_memory_consumers will show high difference in Allocated Bytes and Used Bytes
-	- SQL19 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following:
+1. Gradual increase in XTP memory consumption
+1. Sudden spike or rapid increase in XTP memory consumption
 
-```sql
-/* Yes, 2 times for both*/
-Exec sys.sp_xtp_force_gc 'tempdb'
-GO
-Exec sys.sp_xtp_force_gc 'tempdb'
-GO
-Exec sys.sp_xtp_force_gc
-GO
-Exec sys.sp_xtp_force_gc
-```
-	
-1. tempdb.sys.dm_xtp_system_memory_consumers will show high Allocated/Used bytes for VARHEAP LOOKASIDE
-	- Waiting on PG for further analysis and updates RFC 14327018:
-	Hotfix 14508625: This is to backport improvements done by Hugh for sys.dm_xtp_system_memory_consumers and improvements that can shrink LOOKASIDES.
-	DMV improvements should help narrow down the consumers at granular level for further troubleshooting
-	- Check for Long running Transactions, we can repro this internally with explicit BEGIN TRAN with DDL on temp table
-	
-1. tempdb.sys.dm_db_xtp_memory_consumers will show high Allocated/Used bytes for LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
-	- Waiting on PG to confirm if the fixes will be part of CU16
-	- Ref: hkruntime.cpp - OpenGrok cross reference for /Sql/Ntdbms/Hekaton/runtime/src/hkruntime.cpp
-	Hotfix 14535149: Opened for the same. Root cause identified by PG.
+#### Gradual increase in XTP memory consumption
 
-1. Hotfix 14332252:Port from SQL17 RTM CU25 to SQL19 RTM CU15: Evergrowing "VARHEAP\Storage internal heap" XTP DB memory consumer brings OOM error 41805
+1. The stored procedures **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers** may show high difference between Allocated Bytes and Used Bytes
+  Resolution: SQL Server 2019 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following:
 
+   ```sql
+   /* Yes, 2 times for both*/
+   Exec sys.sp_xtp_force_gc 'tempdb'
+   GO
+   Exec sys.sp_xtp_force_gc 'tempdb'
+   GO
+   Exec sys.sp_xtp_force_gc
+   GO
+   Exec sys.sp_xtp_force_gc
+   ```
 
-Sudden Spike/Rapid Increase in XTP memory consumption
-	A. tempdb.sys.dm_db_xtp_memory_consumers will show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL
-	- Most likely due to long running open explicit transaction with DDL on temp table
-	- For e.g.
-	
-```sql
-BEGIN TRAN
-	CREATE TABLE #T(sn int)
-	…
-	…
-COMMIT
-```
-	
-- Explicit open transaction with DDL on temp tables will not allow Table Heap and possibly Varheap: Lookaside Heap to be freed up for subsequent transactions utilizing TempDB metadata
+1. The stored procedure **tempdb.sys.dm_xtp_system_memory_consumers** may show high Allocated/Used bytes for VARHEAP LOOKASIDE
+  Resolution: Check for Long running Transactions and resolve this from application side. Microsoft can reproduce this by creating an explicit BEGIN TRAN with DDL on a temp table
+
+1. The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
+  Resolution: Root cause has been identified on this issue and a product fix is being examined
+
+1. Issue [14087445](https://support.microsoft.com/en-us/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in SQL Server 17 CU25 is under examination to be ported over to SQL Server 2019: Contniously-growing "VARHEAP\Storage internal heap" XTP DB memory consumer leads to out-of-memory error 41805.
 
 
-**INTERNALS HERE???**
-**ARE THEY REALLY SO SECRETIVE INTERNAL?**
+#### Sudden spike or rapid increase in XTP memory consumption
+
+The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL. The most common cause for this is a long-running, explicitly-open transaction with DDL on temp table(s). For example:
+
+   ```sql
+   BEGIN TRAN
+   	CREATE TABLE #T(sn int)
+   	…
+   	…
+   COMMIT
+   ```
+
+Explicit open transaction with DDL on temp tables will not allow Table Heap and possibly Varheap: Lookaside Heap to be freed up for subsequent transactions utilizing TempDB metadata
+
+### Internal details
+
+#### System-Level Consumers: **tempdb.sys.dm_xtp_system_memory_consumers**
+
+About 25 LOOKASIDE memory consumer types are capped so when threads need more memory from those LookAsides, the memory spills over to and is satisfied from Varheap: LookAside Heap. High Used Bytes could be an indicator of constant heavy TempDB workload and/or long-running open transaction using Temp objects.
+
+#### Database-Level Consumers: **tempdb.sys.dm_db_xtp_memory_consumers**
+
+- LOB_Allocator is used for system tables LOB/Off-row data
+- Table Heap: Used for system tables rows
+
 
 ## Resolution
 
@@ -91,26 +97,27 @@ The following steps will highlight what data to collect to diagnose the problem 
 
 ### Data to Collect
 
-If you face similar issue
-1. Collect a Light weight PSSDIAG or Trace/XE to understand TempDB workload + if the workload has any explicit long running transactions with DDL on temp tables
-1. Collect the below DMVs to analyze further
+If you face the issues described:
 
-```sql
-select * from sys.dm_os_memory_clerks
-select * from sys.dm_tran_database_transactions
-select * from sys.dm_tran_active_transactions
--- from tempdb
-select * from tempdb.sys.dm_xtp_system_memory_consumers 
-select * from tempdb.sys.dm_xtp_transaction_stats
-select * from tempdb.sys.dm_xtp_gc_queue_stats
-select * from tempdb.sys.dm_db_xtp_object_stats
-Select * from tempdb.sys.dm_db_xtp_memory_consumers
-select OBJECT_NAME(object_id),(rows_expired-rows_expired_removed) DIF,* from tempdb.sys.dm_db_xtp_index_stats
-```
+1. Collect a light Trace/XE to understand TempDB workload and find out if the workload has any explicit long-running transactions with DDL on temp tables
+1. Collect the output of these DMVs to analyze further
 
-### Mitigation Steps to try to keep HkTempDB memory in check:
+   ```sql
+   SELECT * FROM  sys.dm_os_memory_clerks
+   SELECT * FROM  sys.dm_tran_database_transactions
+   SELECT * FROM  sys.dm_tran_active_transactions
+   -- from tempdb
+   SELECT * FROM  tempdb.sys.dm_xtp_system_memory_consumers 
+   SELECT * FROM  tempdb.sys.dm_xtp_transaction_stats
+   SELECT * FROM  tempdb.sys.dm_xtp_gc_queue_stats
+   SELECT * FROM  tempdb.sys.dm_db_xtp_object_stats
+   SELECT * FROM  tempdb.sys.dm_db_xtp_memory_consumers
+   SELECT OBJECT_NAME(object_id),(rows_expired-rows_expired_removed) DIF,* from tempdb.sys.dm_db_xtp_index_stats
+   ```
 
-1. Avoid long running transactions doing temp table DDL operations 
-1. Bump up max server memory so that we have enough room to operate in the presence of Tempdb-heavy workloads. 
-1. Executing sys.sp_xtp_force_gc 
-1. SQL Service Restart or Disabling HkTempDB feature
+### Mitigation Steps to try to keep memory-optimized tempdb metadata memory in check:
+
+1. Avoid long-running transactions that perform temp table DDL operations
+1. Increase `max server memory` to allow for enough memory to operate in the presence of Tempdb-heavy workloads
+1. Execute sys.sp_xtp_force_gc periodically
+1. Last resort: restart SQL Service or Disabling HkTempDB feature
