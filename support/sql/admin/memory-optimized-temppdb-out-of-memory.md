@@ -51,7 +51,7 @@ There are two main symtom-based variations of this issue:
 
 #### Gradual increase in XTP memory consumption
 
-1. The stored procedures **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers** may show high difference between Allocated Bytes and Used Bytes
+1. The DMVs **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers** may show high difference between Allocated Bytes and Used Bytes
   
    **Resolution**: SQL Server 2019 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following commands:
 
@@ -66,11 +66,11 @@ There are two main symtom-based variations of this issue:
    Exec sys.sp_xtp_force_gc
    ```
 
-1. The stored procedure **tempdb.sys.dm_xtp_system_memory_consumers** may show high Allocated/Used bytes for VARHEAP LOOKASIDE
+1. The DMV **tempdb.sys.dm_xtp_system_memory_consumers** may show high Allocated/Used bytes for VARHEAP LOOKASIDE
 
    **Resolution**: Check for Long running Transactions and resolve this from application side. Microsoft can reproduce this by creating an explicit BEGIN TRAN with DDL on a temp table
 
-1. The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
+1. The DMV **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
 
    **Resolution**: Root cause has been identified on this issue and a product fix is being examined
 
@@ -79,7 +79,7 @@ There are two main symtom-based variations of this issue:
 
 #### Sudden spike or rapid increase in XTP memory consumption
 
-The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL. The most common cause for this is a long-running, explicitly open transaction with DDL on temp table(s). For example:
+The DMV **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL. The most common cause for this is a long-running, explicitly open transaction with DDL on temp table(s). For example:
 
    ```sql
    BEGIN TRAN
@@ -125,7 +125,6 @@ If you face the issues described:
    SELECT * FROM  tempdb.sys.dm_xtp_gc_queue_stats
    SELECT * FROM  tempdb.sys.dm_db_xtp_object_stats
    SELECT * FROM  tempdb.sys.dm_db_xtp_memory_consumers
-   SELECT OBJECT_NAME(object_id),(rows_expired-rows_expired_removed) DIF,* from tempdb.sys.dm_db_xtp_index_stats
    ```
 
 ### Mitigation Steps to try to keep memory-optimized tempdb metadata memory in check:
@@ -133,4 +132,4 @@ If you face the issues described:
 1. Avoid long-running transactions that perform temp table DDL operations
 1. Increase `max server memory` to allow for enough memory to operate in the presence of Tempdb-heavy workloads
 1. Execute sys.sp_xtp_force_gc periodically
-1. Last resort: restart SQL Service or Disabling HkTempDB feature
+1. Last resort: restart SQL Service or Disabling Memory-optimized tempDB metadata feature
