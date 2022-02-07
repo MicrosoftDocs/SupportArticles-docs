@@ -163,6 +163,8 @@
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
       href: admin/manage-error-log.md
+    - name: Memory-optimized temppdb metadata out-of-memory errors
+      href: admin/memory-optimized-temppdb-out-of-memory.md
     - name: Non-yielding error if the lock pages in memory option is disabled
       href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
