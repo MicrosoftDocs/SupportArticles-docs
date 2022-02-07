@@ -43,7 +43,8 @@ There are two main symtom-based variation of this issue:
 #### Gradual increase in XTP memory consumption
 
 1. The stored procedures **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers** may show high difference between Allocated Bytes and Used Bytes
-  Resolution: SQL Server 2019 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following:
+  
+   **Resolution**: SQL Server 2019 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following:
 
    ```sql
    /* Yes, 2 times for both*/
@@ -57,10 +58,12 @@ There are two main symtom-based variation of this issue:
    ```
 
 1. The stored procedure **tempdb.sys.dm_xtp_system_memory_consumers** may show high Allocated/Used bytes for VARHEAP LOOKASIDE
-  Resolution: Check for Long running Transactions and resolve this from application side. Microsoft can reproduce this by creating an explicit BEGIN TRAN with DDL on a temp table
+
+   **Resolution**: Check for Long running Transactions and resolve this from application side. Microsoft can reproduce this by creating an explicit BEGIN TRAN with DDL on a temp table
 
 1. The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
-  Resolution: Root cause has been identified on this issue and a product fix is being examined
+
+   **Resolution**: Root cause has been identified on this issue and a product fix is being examined
 
 1. Issue [14087445](https://support.microsoft.com/en-us/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in SQL Server 17 CU25 is under examination to be ported over to SQL Server 2019: Contniously-growing "VARHEAP\Storage internal heap" XTP DB memory consumer leads to out-of-memory error 41805.
 
