@@ -16,11 +16,11 @@ After enabling Memory-Optimized TempDB Metadata (HkTempDB), error 701 - Out of M
 ### Observations:
 
 - You may observe the memory clerk for hekaton- MEMORYCLERK_XTP  is growing steadily or rapidly and doesn’t shrink back
-- As the XTP grows (with no cap) you may observe out-of-memory issues on the SQL Server overall
-- Currently, other than sys.sp_xtp_force_gc there is no way to free up HK Memory manually (will not help if the difference between Used Bytes and Allocated Bytes is not huge)
+- As the XTP memory grows with no cap, you may observe out-of-memory issues on the SQL Server overall
+- Currently, other than sys.sp_xtp_force_gc there's no way to free up HK Memory manually. However it won't help if the difference between Used Bytes and Allocated Bytes isn't large
 
 ### Error Message
-You will see messages similar to below where MEMORYCLERK_XTP will be the major culprit
+You'll see messages similar to below where MEMORYCLERK_XTP will be the major culprit
  
 `2021-03-19 14:17:33.20 spid21s     Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'default'. See 'http://go.microsoft.com/fwlink/?LinkId=510837' for more information. `
 
@@ -40,11 +40,11 @@ Pages Allocated                            60104496
 
 ## Cause
 
-This issue could be caused by In-Memory OLTP (Hekaton) memory leaks and a limitation where the Cleanup of the Hekaton memory is triggered only when SQL OS detects memory-pressure and notifies Hekaton to cleanup. Alternatively, this could be caused by an explicit long-running transactions with DDL on temp tables.
+This issue could be caused by In-Memory OLTP (Hekaton) memory leaks and a limitation where the Cleanup of the Hekaton memory is triggered only when SQL OS detects memory-pressure and notifies Hekaton to clean up. Alternatively, the issue could be caused by explicit long-running transactions with DDL on temp tables.
 
 ### Different variations of this issue:
 
-There are two main symtom-based variation of this issue:
+There are two main symtom-based variations of this issue:
 
 1. Gradual increase in XTP memory consumption
 1. Sudden spike or rapid increase in XTP memory consumption
@@ -53,7 +53,7 @@ There are two main symtom-based variation of this issue:
 
 1. The stored procedures **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers** may show high difference between Allocated Bytes and Used Bytes
   
-   **Resolution**: SQL Server 2019 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following:
+   **Resolution**: SQL Server 2019 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following commands:
 
    ```sql
    /* Yes, 2 times for both*/
@@ -74,12 +74,12 @@ There are two main symtom-based variation of this issue:
 
    **Resolution**: Root cause has been identified on this issue and a product fix is being examined
 
-1. Issue [14087445](https://support.microsoft.com/en-us/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in SQL Server 17 CU25 is under examination to be ported over to SQL Server 2019: Contniously-growing "VARHEAP\Storage internal heap" XTP DB memory consumer leads to out-of-memory error 41805.
+1. Issue [14087445](https://support.microsoft.com/en-us/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in SQL Server 17 CU25 is under examination to be ported over to SQL Server 2019: Continuously-growing "VARHEAP\Storage internal heap" XTP DB memory consumer leads to out-of-memory error 41805.
 
 
 #### Sudden spike or rapid increase in XTP memory consumption
 
-The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL. The most common cause for this is a long-running, explicitly-open transaction with DDL on temp table(s). For example:
+The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL. The most common cause for this is a long-running, explicitly open transaction with DDL on temp table(s). For example:
 
    ```sql
    BEGIN TRAN
@@ -89,7 +89,7 @@ The stored procedure **tempdb.sys.dm_db_xtp_memory_consumers** may show high All
    COMMIT
    ```
 
-Explicit open transaction with DDL on temp tables will not allow Table Heap and possibly Varheap: Lookaside Heap to be freed up for subsequent transactions utilizing TempDB metadata
+Explicit open transaction with DDL on temp tables won't allow Table Heap and possibly Varheap: Lookaside Heap to be freed up for subsequent transactions utilizing TempDB metadata
 
 ### Internal details
 
