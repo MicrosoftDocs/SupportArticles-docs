@@ -3,7 +3,7 @@ title: Memory Optimized Tempdb Metadata (HkTempDB) Out of memory errors
 description: This article describes how to troubleshoot out-of-memory (OOM) issues with Memory-Optimized Tempdb Metadata
 ms.date: 11/05/2020
 ms.custom: sap:Database Engine
-ms.reviewer: JoPilov
+ms.reviewer: PijoCoder, Hemin-MSFT
 ms.prod: sql
 ---
 
