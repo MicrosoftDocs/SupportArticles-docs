@@ -2,7 +2,6 @@
 title: Tape is labeled as Unrecognized in DPM
 description: Fixes an issue in which tapes are labeled as Unrecognized after you add a tape to the tape library in System Center Data Protection Manager.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ---
 # Tape labeled as Unrecognized in System Center Data Protection Manager
 

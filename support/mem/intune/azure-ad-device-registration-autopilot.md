@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: horemaw
 ms.date: 10/06/2021
-ms.prod-support-area-path: Windows enrollment
+ms.custom: sap:Windows enrollment
 ---
 # Troubleshooting Azure AD device registration and Windows Autopilot
 

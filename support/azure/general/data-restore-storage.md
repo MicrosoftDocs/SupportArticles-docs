@@ -6,7 +6,6 @@ author: genlin
 ms.author: genli
 ms.service: storage
 ms.subservice: blobs
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Data restore scenarios for Azure Storage service

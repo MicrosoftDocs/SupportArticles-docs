@@ -2,7 +2,7 @@
 title: Enable SSL for all customers
 description: This article introduces how to enable SSL for all customers who interact with your Web site in IIS.
 ms.date: 03/24/2020
-ms.prod-support-area-path: WWW administration and management
+ms.custom: sap:WWW administration and management
 ms.topic: how-to
 ms.technology: iis-www-administration-management
 ---

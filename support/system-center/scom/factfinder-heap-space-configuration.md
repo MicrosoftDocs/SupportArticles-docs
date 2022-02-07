@@ -2,7 +2,6 @@
 title: FactFinder heap space configuration
 description: Describes some basic guidelines to configure FactFinder heap space.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # FactFinder heap space configuration suggestions
 

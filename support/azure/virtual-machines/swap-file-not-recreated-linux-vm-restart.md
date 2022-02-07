@@ -2,7 +2,6 @@
 title: Swap file is not re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
 ms.date: 12/09/2021
-ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: srijangupta
@@ -107,7 +106,7 @@ fs_setup:
     filesystem: swap
 mounts:
   - ["ephemeral0.1", "/mnt"]
-  - ["ephemeral0.2", "none", "swap", "sw,nofail,x-systemd.requires=cloud-init.service", "0", "0"]
+  - ["ephemeral0.2", "none", "swap", "sw,nofail,x-systemd.requires=cloud-init.service,x-systemd.device-timeout=2", "0", "0"]
 ```
 
 The mount is created with the `nofail` option to ensure that the boot will continue even if the mount is not completed successfully.

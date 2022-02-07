@@ -2,7 +2,7 @@
 title: Error when you run the DBCC CHECKDB command
 description: This article provides a workaround for the problem that occurs when you run the DBCC CHECKDB command on a computer that contains a SQL Server database.
 ms.date: 11/03/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: sureshka, ryanston, sunila, davco
 ms.prod: sql
 ---

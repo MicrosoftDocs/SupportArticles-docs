@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: markstan
 ms.date: 10/18/2021
-ms.prod-support-area-path: App management
+ms.custom: sap:App management
 ---
 # Error 0x87D13BA2 when you deploy a macOS LOB app
 

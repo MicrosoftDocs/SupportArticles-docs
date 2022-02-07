@@ -2,7 +2,7 @@
 title: Cardinality Estimator degrades query performance
 description: This article helps you resolve performance problems that can occur in SQL Server 2014 and later versions when you compile your queries using the new cardinality estimator.
 ms.date: 09/09/2020
-ms.prod-support-area-path: Performance
+ms.custom: sap:Performance
 ms.prod: sql
 ---
 # Join containment assumption in the New Cardinality Estimator degrades query performance

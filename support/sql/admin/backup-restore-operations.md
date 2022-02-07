@@ -2,7 +2,7 @@
 title: SQL Server backup and restore operation issues
 description: This article troubleshoots SQL Server backup and restore operation issues, such as the operation taking a long time, issues between different SQL Server versions.
 ms.date: 9/10/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
 editor: v-jesits
 ms.prod: sql

@@ -2,7 +2,6 @@
 title: FAQs for Azure Disks
 description: This article answers some frequently asked questions about Azure Managed Disks and Azure Premium SSD disks.
 ms.date: 08/24/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

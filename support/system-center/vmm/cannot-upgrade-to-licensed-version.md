@@ -2,7 +2,6 @@
 title: Can't upgrade App Controller to a licensed version
 description: Fixes a problem that prevents you from upgrading the evaluation version of System Center 2012 App Controller to the licensed version.
 ms.date: 08/18/2020
-ms.prod-support-area-path:
 ms.reviewer: sturwale, richrund
 ---
 # You can't upgrade an evaluation version of App Controller to a licensed version

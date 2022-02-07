@@ -2,7 +2,6 @@
 title: Regional settings are default to English
 description: Fixes an issue in which the regional settings are default to English when deploying a virtual machine by using a template in Virtual Machine Manager.
 ms.date: 07/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: jeffpatt
 ---
 # Regional settings default to English when deploying a virtual machine using a template

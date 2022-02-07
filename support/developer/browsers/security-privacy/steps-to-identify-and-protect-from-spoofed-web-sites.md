@@ -2,7 +2,6 @@
 title: Protect yourself from spoofed Web sites
 description: Describes ways that you can help identify and protect your computer from deceptive Web sites and malicious hyperlinks.
 ms.date: 10/13/2020
-ms.prod-support-area-path: 
 ms.reviewer: ramakoni
 ms.technology: internet-explorer-security-privacy
 ---

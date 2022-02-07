@@ -2,7 +2,6 @@
 title: An object of type MonitoringClass was not found
 description: Fixes a problem in which An object of type MonitoringClass error occurs when you work with an Operations Manager connector in the System Center Service Manager console.
 ms.date: 08/04/2020
-ms.prod-support-area-path: 
 ms.reviewer: austinm, luche
 ---
 # An object of type MonitoringClass was not found error when you work with an Operations Manager connector

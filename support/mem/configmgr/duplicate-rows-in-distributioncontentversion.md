@@ -2,7 +2,7 @@
 title: Duplicate rows in the DistributionContentVersion table
 description: Describes an issue in which duplicate rows for packages on a distribution point are generated in the DistributionContentVersion table after you reassign the DP to another primary site.
 ms.date: 06/09/2020
-ms.prod-support-area-path: Distribution point migration
+ms.custom: sap:Distribution point migration
 ---
 # Duplicate rows in the DistributionContentVersion table after you reassign a DP in Configuration Manager
 

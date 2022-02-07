@@ -2,7 +2,6 @@
 title: SocketException when WCF use connection pooling
 description: This article describes you receive a SocketException when Windows Communication Foundation application uses connection pooling.
 ms.date: 08/24/2020
-ms.prod-support-area-path: 
 ms.reviewer: broder, jasonpa
 ms.topic: article
 ms.technology: dotnet-wcf

@@ -2,7 +2,6 @@
 title: How to capture Azure Automation-scripted diagnostics
 description: Provides guidance for capturing diagnostic information for Microsoft Support engineers. 
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
 author: genlin

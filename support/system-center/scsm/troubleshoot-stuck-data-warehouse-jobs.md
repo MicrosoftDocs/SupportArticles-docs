@@ -2,7 +2,6 @@
 title: Troubleshoot stuck data warehouse jobs
 description: Provides suggestions for troubleshooting issues that certain data warehouse jobs freeze or hang in System Center 2012 Service Manager and later versions.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ---
 # Troubleshoot stuck data warehouse jobs in System Center Service Manager
 

@@ -2,7 +2,6 @@
 title: Making VSS shadow copy fails with error
 description: This article provides a workaround for the problem that occurs when you try to make a VSS shadow copy.
 ms.date: 01/04/2021
-ms.prod-support-area-path: 
 ms.reviewer: danielwh
 ms.topic: troubleshooting
 ms.technology: windows-hardware-general

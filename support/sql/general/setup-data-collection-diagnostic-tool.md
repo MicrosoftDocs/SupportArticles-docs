@@ -2,7 +2,6 @@
 title: Setup data collection diagnostic tool
 description: This article describes the information that may be collected from a computer when the SQL Server Setup data-collection diagnostic tool is running.
 ms.date: 08/19/2020
-ms.prod-support-area-path: 
 ms.reviewer: amitban, dansha, shonh
 ms.topic: article
 ms.prod: sql

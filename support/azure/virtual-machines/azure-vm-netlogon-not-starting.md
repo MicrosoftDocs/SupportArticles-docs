@@ -2,7 +2,6 @@
 title: Azure Virtual Machine - Netlogon service is not starting
 description: Troubleshoot Netlogon service not starting
 ms.date: 01/11/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

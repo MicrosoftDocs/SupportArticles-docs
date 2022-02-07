@@ -2,7 +2,6 @@
 title: The Delete button may not work in some Azure portal blades
 description: Describes an issue that the Delete button does not work in some Azure portal blades.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
 author: genlin

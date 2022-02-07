@@ -2,7 +2,6 @@
 title: Cannot open certain files in Windows 7
 description: Fixes a problem in which you receive an error message when you try to open .exe files by using Internet Explorer in Windows 7.
 ms.date: 03/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: Joel
 ms.technology: internet-explorer-security-privacy
 ---

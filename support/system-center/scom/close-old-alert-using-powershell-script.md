@@ -2,7 +2,6 @@
 title: Close old alerts using a PowerShell script
 description: Describes a PowerShell script that can help clean up some Operations Manager environments with old alerts that are still active.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # PowerShell script to automatically close old alerts in System Center Operations Manager
 

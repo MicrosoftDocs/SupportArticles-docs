@@ -2,7 +2,7 @@
 title: Open ADO connection and Recordset objects
 description: This article describes how to open ADO connection and Recordset objects.
 ms.date: 09/25/2020
-ms.prod-support-area-path: MDAC and ADO
+ms.custom: sap:MDAC and ADO
 ms.prod: sql
 ms.topic: how-to
 ---

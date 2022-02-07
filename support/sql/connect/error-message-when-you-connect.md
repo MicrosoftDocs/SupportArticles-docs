@@ -2,7 +2,7 @@
 title: Error message when you connect to SQL Server 
 description: This article provides resolutions for the problem that occurs when you connect to SQL Server using SSL.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Connection issues
+ms.custom: sap:Connection issues
 ms.reviewer: kayokon, masank
 ms.technology: sql-engine-connectionissues
 ---

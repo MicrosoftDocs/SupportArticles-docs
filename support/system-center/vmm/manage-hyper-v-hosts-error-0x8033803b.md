@@ -2,7 +2,6 @@
 title: Managing Hyper-V hosts fails with error 0x8033803b
 description: Fixes an issue in which you receive error 0x8033803b when you manage a Hyper-V host in Virtual Machine Manager.
 ms.date: 07/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: jeffpatt
 ---
 # Managing Hyper-V hosts using VMM fails with error 0x8033803b after installing WMF 3.0

@@ -2,7 +2,6 @@
 title: Error (Failed to get address for method) when you run the Azure Active Directory Sync tool configuration wizard
 description: Describes an error message that you receive when you run the Azure Active Directory Sync tool configuration wizard. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: aconkle
 ms.service: active-directory
 ms.subservice: enterprise-users

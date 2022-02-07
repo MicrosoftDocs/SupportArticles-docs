@@ -2,7 +2,7 @@
 title: Default maximum stack size of a thread
 description: This article describes the default maximum stack size of a thread that is created by a native IIS process.
 ms.date: 12/29/2020
-ms.prod-support-area-path: Site Behavior and Performance
+ms.custom: sap:Site Behavior and Performance
 ms.reviewer: mlaing
 ms.technology: iis-site-behavior-performance
 ---

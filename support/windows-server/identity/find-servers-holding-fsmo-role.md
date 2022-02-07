@@ -28,7 +28,9 @@ Active Directory defines five FSMO roles:
 - Domain naming master
 - RID master
 - PDC master
-- Infrastructure masterThe schema master and the domain naming master are per-forest roles. Therefore, there is only one schema master and one domain naming master per forest.
+- Infrastructure master
+
+The schema master and the domain naming master are per-forest roles. Therefore, there is only one schema master and one domain naming master per forest.
 
 The RID master, the PDC master, and the infrastructure master are per-domain roles. Each domain has its own RID master, PDC master, and infrastructure master. Therefore, if a forest has three domains, there are three RID masters, three PDC masters, and three infrastructures masters.
 

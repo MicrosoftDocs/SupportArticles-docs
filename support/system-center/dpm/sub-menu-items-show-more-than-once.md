@@ -2,7 +2,6 @@
 title: Sub menu items may show up more than once
 description: Describes a known issue in which System Center 2012 Data Protection Manager console sub menu items may show up more than once.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: anjanik
 ---
 # System Center 2012 Data Protection Manager console sub menu items may show up more than once

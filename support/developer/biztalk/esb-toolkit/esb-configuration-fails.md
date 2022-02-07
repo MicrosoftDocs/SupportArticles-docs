@@ -2,7 +2,7 @@
 title: ESB configuration fails
 description: BizTalk ESB configuration fails because of problems in ESB.config.
 ms.date: 03/16/2020
-ms.prod-support-area-path: ESB Toolkit
+ms.custom: sap:ESB Toolkit
 ms.reviewer: shaheera
 ---
 # ESB configuration fails with unrecognized element typeConfig
