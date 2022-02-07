@@ -2,7 +2,6 @@
 title: Required updates for Internet Explorer 11
 description: Describes the prerequisite updates for Internet Explorer 11.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.technology: internet-explorer-installation
 ---

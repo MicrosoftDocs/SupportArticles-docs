@@ -2,7 +2,6 @@
 title: Cluster overcommit algorithm approaches
 description: Describes the slot-simple, slot-full, proof-simple, and proof-full approaches for the cluster overcommit algorithm in System Center 2012 R2 Virtual Machine Manager.
 ms.date: 04/29/2020
-ms.prod-support-area-path:
 ms.reviewer: hilange
 ---
 # Details of the cluster overcommit algorithm in System Center 2012 R2 Virtual Machine Manager

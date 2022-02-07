@@ -7,6 +7,8 @@
     href: could-not-verify-account-reset-pwd.md
   - name: Maximum number of devices is reached
     href: maximum-number-of-devices-joined-workplace.md
+  - name: Troubleshoot data freshness alerts in Azure AD Connect Health
+    href: aad-connect-health-data-freshness.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md
   - name: Understand AD FS sign-in events in Azure AD with Connect Health

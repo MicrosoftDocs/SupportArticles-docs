@@ -2,7 +2,6 @@
 title: Troubleshoot DPM console crashes
 description: Diagnose and resolve crash-related issues with the admin console in Data Protection Manager.
 ms.date: 08/22/2020
-ms.prod-support-area-path:
 ---
 # Troubleshoot Data Protection Manager console crashes
 

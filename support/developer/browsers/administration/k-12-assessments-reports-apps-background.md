@@ -2,7 +2,7 @@
 title: K-12 assessments unexpectedly report apps running in background
 description: This article provides a workaround for the problem where K-12 assessments test unexpectedly reports that Apps are running in the background in Windows 10.
 ms.date: 01/21/2021
-ms.prod-support-area-path: Administration
+ms.custom: sap:Administration
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.technology: internet-explorer-administration

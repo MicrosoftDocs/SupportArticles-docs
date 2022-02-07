@@ -2,7 +2,6 @@
 title: The Path My Documents contains an invalid character
 description: Fixes an issue in which you can't install the AVIcode agent because of an invalid character in the user profile.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ms.reviewer: jfanjoy
 ---
 # AVIcode agent installation fails with error: 1324 Error The Path contains an invalid character

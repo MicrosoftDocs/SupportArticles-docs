@@ -2,7 +2,6 @@
 title: Windows boot error 0xc0000359 in an Azure VM
 description: Provides the resolution for the Windows boot error code 0xc0000359 in an Azure VM.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.collection: windows

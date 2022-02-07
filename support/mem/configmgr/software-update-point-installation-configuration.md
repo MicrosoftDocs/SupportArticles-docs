@@ -2,7 +2,6 @@
 title: Software update point installation and configuration
 description: Describes how to tack the software update point installation and how to configure Software update point. 
 ms.date: 09/16/2020
-ms.prod-support-area-path:
 ---
 # Software update point installation and configuration
 

@@ -2,7 +2,6 @@
 title: Password Hash Synchronization is automatically enabled in Azure AD connector
 description: Fixes a problem in which Password Hash Synchronization is automatically enabled in Azure AD connector.
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users

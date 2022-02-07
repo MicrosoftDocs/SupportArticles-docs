@@ -2,7 +2,6 @@
 title: Run Program activity returns error
 description: Fixes an issue where you receive the Process creation failed - The system cannot find the file specified error when executing the Run Program activity.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # The Run Program activity returns the Process creation failed error
 

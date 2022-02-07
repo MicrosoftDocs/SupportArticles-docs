@@ -2,7 +2,6 @@
 title: One or more objects don't sync when the Azure Active Directory Sync tool is used
 description: Describes an issue in which one or more AD DS object attributes don't sync to Azure AD through the Azure Active Directory Sync tool. Provides resolutions.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users

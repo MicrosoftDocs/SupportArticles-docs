@@ -2,7 +2,6 @@
 title: Contributor role is no longer assigned for a web app at the subscription level
 description: Introduces a change to Contributor role assignment when you create CMG with ARM deployment in Configuration Manager current branch version 1810 and later versions.
 ms.date: 06/16/2020
-ms.prod-support-area-path:
 ---
 # Contributor role is no longer assigned for a web app at the subscription level in Azure
 

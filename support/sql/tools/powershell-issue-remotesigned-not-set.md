@@ -2,7 +2,7 @@
 title: PowerShell issue when RemoteSigned is not set
 description: This article provides workarounds for the problem that occurs when machine policy of the domain controller is not set to RemoteSigned by GPO for SQL Server.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Other tools
+ms.custom: sap:Other tools
 ms.reviewer: desalg, daleche
 ms.prod: sql
 ---

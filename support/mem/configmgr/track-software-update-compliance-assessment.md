@@ -2,7 +2,6 @@
 title: Track software update compliance assessment
 description: Describes how to track a software updates compliance assessment so that you can deploy only the updates that are required on the clients.
 ms.date: 09/16/2020
-ms.prod-support-area-path:
 ---
 # Track software update compliance assessment
 

@@ -5,7 +5,6 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Firmware version matrix for Cloud Platform System (CPS) Premium

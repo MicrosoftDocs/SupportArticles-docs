@@ -2,7 +2,6 @@
 title: Design customization IIS log file field names
 description: This article describes how to add a custom field to the IIS log file by using Advanced Logging.
 ms.date: 10/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: prchanda, jarrettr
 ms.topic: how-to
 ms.prod: iis

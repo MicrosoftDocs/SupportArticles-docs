@@ -2,7 +2,6 @@
 title: ZipEngine role is stuck between Restarting and Busy state
 description: Provides information about troubleshooting issues in which ZipEngine role is looping between Restarting and Busy state and throwing an exception
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 author: genlin
 ms.author: genli

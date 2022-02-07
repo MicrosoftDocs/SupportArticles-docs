@@ -2,7 +2,7 @@
 title: Parameter pane is not visible in drillThrough report
 description: This article helps you workaround the problem in which the parameter pane of a child report is permanently hidden.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Reporting Services
+ms.custom: sap:Reporting Services
 ms.reviewer: selvar, Matt Jones
 ms.prod: sql
 ---
