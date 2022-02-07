@@ -90,6 +90,7 @@ About 25 LOOKASIDE memory consumer types are capped so when threads need more me
 - LOB_Allocator is used for system tables LOB/Off-row data
 - Table Heap: Used for system tables rows
 
+High Used Bytes could be the indicator of constant heavy TempDB workload and/or long running open transaction using Temp objects.
 
 ## Resolution
 
