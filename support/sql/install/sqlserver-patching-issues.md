@@ -17,14 +17,14 @@ This article provides general steps to troubleshoot issues that you may run into
 - "Network path was not found" and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AG).
 
 
-## Cumulative Updates and Service Pack installation prerequisites information
+## Cumulative Updates and Service Pack installation information
 
-This section provides information on the CU and SP installation prerequisites.
+This section provides information on the CU and SP installation 
 
 - For SQL Server 2016 and earlier versions:
-  - Before you install a CU, ensure your SQL instance is at the right SP level for the CU.  For example, you cannot install CU17 for SQL 2016 SP2, before you apply SP2 for the SQL 2016 instance.
+  - Before you install a Cumulative Update (CU), ensure your SQL instance is at the right SP level for the CU.  For example, you cannot install CU17 for SQL 2016 SP2, before you apply SP2 for the SQL 2016 instance.
   - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL 2016 SP2 instance, you can  directly go to CU17 without applying any of the intermediate CUs.
-- For SQL Server 2017 and later versions, you can always apply the latest CU available.
+- For SQL Server 2017 and later versions, you can always apply the latest CU available (no Service Packs)
 - The SQL Server's program files and data files cannot be installed on:
     - a removable disk drive,
     - a file system that uses compression,
@@ -39,17 +39,17 @@ This section provides information on the CU and SP installation prerequisites.
     1. Check **Details** in the **Failure** screen of the setup process.
     1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true) section.
 
-1. Check for a matching scenario in the next few sections and follow associated troubleshooting procedures for the corresponding scenario.
-1. If there is no matching scenario, look for additional pointers in the log files and also see the [CU and SP installation general info](#cu-and-sp-installation-general-info) section.
+1. Check for a matching scenario in the next few sections and follow associated troubleshooting steps for the corresponding scenario.
+1. If there is no matching scenario, look for additional pointers in the log files and also see the [CU and SP installation general info](#cumulative-updates-and-service-pack installation-information) section.
 
-## Wait on Database Engine recovery handle failed, 912, and 3417 errors
+## Wait on Database Engine recovery handle failed, 912 and 3417 errors
 
-Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
+Upgrade scripts are shipped with each SQL Server update and are executed after the SQL Server binaries have been upgraded. When these scripts fail to execute, the setup program reports *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
 
 To troubleshoot and fix these errors, do the following steps:
 
 1. Review the SQL Server Errorlogs for details on failure.
-1. Start SQL Server with trace flag 902 to bypass upgrade script execution.
+1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902) to bypass upgrade script execution.
 1. Address the cause of the failure based on different scenarios.
    Following are some of the common causes of upgrade script failures and corresponding resolutions:
 
