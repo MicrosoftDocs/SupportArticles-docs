@@ -42,20 +42,20 @@ Determine if there’s I/O latency reported by SQL Server wait types. The values
 
 ```Powershell
    
-   #replace with server\instance or server for default instance
-   $sqlserver_instance = "server\instance" 
+#replace with server\instance or server for default instance
+$sqlserver_instance = "server\instance" 
 
-   for ([int]$i = 0; $i -lt 100; $i++)
-    {
-    
-       sqlcmd -E -S $sqlserver_instance -Q "select r.session_id, r.wait_type, r.wait_time as wait_time_ms`
-                                            from sys.dm_exec_requests r join sys.dm_exec_sessions s `
-                                            on r.session_id = s.session_id `
-                                            where wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
-                                             and is_user_process = 1"
+for ([int]$i = 0; $i -lt 100; $i++)
+{
+   
+sqlcmd -E -S $sqlserver_instance -Q "select r.session_id, r.wait_type, r.wait_time as wait_time_ms`
+                                    from sys.dm_exec_requests r join sys.dm_exec_sessions s `
+                                    on r.session_id = s.session_id `
+                                    where wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
+                                    and is_user_process = 1"
 
-       Start-Sleep -s 2
-   }
+Start-Sleep -s 2
+}
 ```
 
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the error log. You can check SQL Server error logs on your system by running the following PowerShell command:
@@ -79,30 +79,30 @@ CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
 Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
 
 ```Powershell
-   clear
-   $cntr = 0 
+clear
+$cntr = 0 
 
-   # replace with your server
-   $serverName = "rabotenlaptop" 
-   
-   # replace with your volume name - C: , D:, etc
-   $volumeName = "_total"
+# replace with your server
+$serverName = "rabotenlaptop" 
+
+# replace with your volume name - C: , D:, etc
+$volumeName = "_total"
 
 $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfer"))
 
-   $disksectransfer = Get-Counter -Counter $Counters -MaxSamples 1 
-   $avg = $($disksectransfer.CounterSamples | Select-Object CookedValue).CookedValue
- 
-   Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 30 | ForEach {
-	 $_.CounterSamples | ForEach {
-		  [pscustomobject]@{
-			  TimeStamp = $_.TimeStamp
-			  Path = $_.Path
-			  Value = ([Math]::Round($_.CookedValue, 5))
-              turn = $cntr = $cntr +1
-              running_avg = [Math]::Round(($avg = (($_.CookedValue + $avg) / 2)), 5)  
-              
-       } | Format-Table
+$disksectransfer = Get-Counter -Counter $Counters -MaxSamples 1 
+$avg = $($disksectransfer.CounterSamples | Select-Object CookedValue).CookedValue
+
+Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 30 | ForEach {
+$_.CounterSamples | ForEach {
+   [pscustomobject]@{
+      TimeStamp = $_.TimeStamp
+      Path = $_.Path
+      Value = ([Math]::Round($_.CookedValue, 5))
+         turn = $cntr = $cntr +1
+         running_avg = [Math]::Round(($avg = (($_.CookedValue + $avg) / 2)), 5)  
+         
+   } | Format-Table
      }
    }
 
@@ -123,7 +123,7 @@ If the values of this counter are consistently above 10-15 milliseconds, then yo
 If the `Performance monitor` counters don’t report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, that is, filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and the volumes they attach to. Then, you can look up the driver names and software vendors in the [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes) article.
 
 ```Powershell
-   fltmc instances
+fltmc instances
 ```
 
 For more information, see the [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/en-us/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b) article.
@@ -138,19 +138,19 @@ If SQL Server and the OS indicate I/O subsystem is slow, then check if that is c
 clear
 $serverName = "severname"
 $Counters = @(
-        ("\\$serverName" +"\PhysicalDisk(*)\Disk Bytes/sec"),
-        ("\\$serverName" +"\PhysicalDisk(*)\Disk Read Bytes/sec"),
-        ("\\$serverName" +"\PhysicalDisk(*)\Disk Write Bytes/sec")
+   ("\\$serverName" +"\PhysicalDisk(*)\Disk Bytes/sec"),
+   ("\\$serverName" +"\PhysicalDisk(*)\Disk Read Bytes/sec"),
+   ("\\$serverName" +"\PhysicalDisk(*)\Disk Write Bytes/sec")
    )
 Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
- 	  $_.CounterSamples | ForEach 	  {
- 		  [pscustomobject]@{
- 			  TimeStamp = $_.TimeStamp
- 			  Path = $_.Path
- 			  Value = ([Math]::Round($_.CookedValue, 3))
-	  }
-     }
- }
+$_.CounterSamples | ForEach 	  {
+   [pscustomobject]@{
+      TimeStamp = $_.TimeStamp
+      Path = $_.Path
+      Value = ([Math]::Round($_.CookedValue, 3))
+}
+}
+}
 ```
 
 ### Is SQL Server driving the heavy I/O activity?
