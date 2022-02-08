@@ -174,4 +174,9 @@ If you face the issues described:
 1. Avoid or resolve long-running transactions that perform temp table DDL operations. General guidance is to keep transactions short.
 1. Increase `max server memory` to allow for enough memory to operate in the presence of Tempdb-heavy workloads
 1. Execute sys.sp_xtp_force_gc periodically
+1. To protect the server from potential out-of-memory conditions, you can bind tempdb to a resource pool. This is done through the ALTER SERVER command. This change also requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled. For more information see [Configuring memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configuring-and-using-memory-optimized-tempdb-metadata)
+   ```sql
+   ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+   ```
 1. Memory-optimized tempDB metadata feature is not for every workload. For example, using explicit transactions with DDL on temp tables that run for a long time will lead to many of the scenarios described. If you have such transactions in your workload and you cannot control their duration, then perhaps this features is not appropriate for your environment. You should test extensively before using HkTempDB.
+
