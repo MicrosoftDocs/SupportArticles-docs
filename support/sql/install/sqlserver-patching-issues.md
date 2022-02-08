@@ -40,7 +40,7 @@ This section provides information on the CU and SP installation
     1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true) section.
 
 1. Check for a matching scenario in the next few sections and follow associated troubleshooting steps for the corresponding scenario.
-1. If there is no matching scenario, look for additional pointers in the log files and also see the [CU and SP installation general info](#cumulative-updates-and-service-pack installation-information) section.
+1. If there is no matching scenario, look for additional pointers in the log files and also see the [CU and SP installation information](#cumulative-updates-and-service-pack-installation-information) section.
 
 ## Wait on Database Engine recovery handle failed, 912 and 3417 errors
 
