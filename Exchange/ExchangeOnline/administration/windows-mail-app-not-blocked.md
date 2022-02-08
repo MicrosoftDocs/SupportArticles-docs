@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 160116
+- CI 160572
 ms.reviewer: aruiz
 appliesto:
 - Exchange Online
@@ -39,7 +40,7 @@ Use the following methods to verify that Exchange ActiveSync is configured corre
 
    This command returns the following output:
 
-   ```powershell
+   ```output
    DeviceType        : UniversalOutlook
    DeviceOS          : WINDOWS
    DeviceAccessState : Unknown
@@ -51,7 +52,7 @@ Use the following methods to verify that Exchange ActiveSync is configured corre
 
    This command returns the following output:
 
-   ```powershell
+   ```output
    DeviceUserAgent   : microsoft.windowscommunicationsapps
    DeviceType        : UniversalOutlook
    DeviceOS          : WINDOWS
