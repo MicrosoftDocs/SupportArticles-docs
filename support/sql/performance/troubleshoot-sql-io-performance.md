@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot SQL Server slow performance caused by IO issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O 
-ms.date: 02/04/2022
+ms.date: 02/08/2022
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -49,10 +49,10 @@ Determine if there’s I/O latency reported by SQL Server wait types. The values
     {
     
        sqlcmd -E -S $sqlserver_instance -Q "select r.session_id, r.wait_type, r.wait_time as wait_time_ms`
-                                           from sys.dm_exec_requests r join sys.dm_exec_sessions s `
-                                            on r.session_id = s.session_id `
-                                            where wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
-                                            and is_user_process = 1"
+        from sys.dm_exec_requests r join sys.dm_exec_sessions s `
+        on r.session_id = s.session_id `
+        where wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
+         and is_user_process = 1"
 
        Start-Sleep -s 2
    }
@@ -61,8 +61,7 @@ Determine if there’s I/O latency reported by SQL Server wait types. The values
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the error log. You can check SQL Server error logs on your system by running the following PowerShell command:
 
   ```Powershell
-  Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than"
-Longer than 15 secs
+  Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than" Longer than 15 secs
   ```
 
 Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) section.
