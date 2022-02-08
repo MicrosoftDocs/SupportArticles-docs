@@ -40,7 +40,7 @@ A [flow chart](#graphical-representation-of-the-methodology) at the end of this 
 
 Determine if there’s I/O latency reported by SQL Server wait types. The values `PAGEIOLATCH_*`, `WRITELOG`, and `ASYNC_IO_COMPLETION` and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and requires further investigation. The following query may help you gather this diagnostic information on your system:
 
-   ```Powershell
+```Powershell
    
    #replace with server\instance or server for default instance
    $sqlserver_instance = "server\instance" 
@@ -49,20 +49,20 @@ Determine if there’s I/O latency reported by SQL Server wait types. The values
     {
     
        sqlcmd -E -S $sqlserver_instance -Q "select r.session_id, r.wait_type, r.wait_time as wait_time_ms`
-        from sys.dm_exec_requests r join sys.dm_exec_sessions s `
-        on r.session_id = s.session_id `
-        where wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
-         and is_user_process = 1"
+                                            from sys.dm_exec_requests r join sys.dm_exec_sessions s `
+                                            on r.session_id = s.session_id `
+                                            where wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
+                                             and is_user_process = 1"
 
        Start-Sleep -s 2
    }
-   ```
+```
 
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the error log. You can check SQL Server error logs on your system by running the following PowerShell command:
 
-  ```Powershell
+```Powershell
   Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than" Longer than 15 secs
-  ```
+```
 
 Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) section.
 
@@ -70,15 +70,15 @@ Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relatio
 
 If SQL Server reports I/O latency, then refer to OS counters. You can determine if there's an I/O problem by examining the latency counter `Avg Disk Sec/Transfer`. The following code snippet indicates one way to collect this information through PowerShell. It gathers counters on all disk volumes: "_total". Change to a specific drive volume (for example "D:"). To find which volumes host your database files, run the following query in your SQL Server:
 
-   ```SQL
-   SELECT distinct volume_mount_point 
-   FROM sys.master_files f
-   CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
-  ```
+```SQL
+SELECT distinct volume_mount_point 
+FROM sys.master_files f
+CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
+```
 
 Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
 
-   ```Powershell
+```Powershell
    clear
    $cntr = 0 
 
@@ -116,15 +116,15 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
    {
      Write-Host "There is NO indication of slow I/O performance on your system"
    }
-   ```
+```
 
 If the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike. If the spike lasted one minute or more, then it’s more of a plateau than a spike.
 
 If the `Performance monitor` counters don’t report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, that is, filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and the volumes they attach to. Then, you can look up the driver names and software vendors in the [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes) article.
 
-   ```Powershell
+```Powershell
    fltmc instances
-   ```
+```
 
 For more information, see the [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/en-us/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b) article.
 
