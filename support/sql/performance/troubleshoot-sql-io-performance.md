@@ -28,7 +28,7 @@ In SQL Server, things work in the same way. Commonly, you look at whether SQL Se
 If these waits exceed 10-15 milliseconds on a consistent basis, then I/O is considered a bottleneck.
 
 > [!NOTE]
-> To provide context and perspective, in the world of troubleshooting SQL Server, CSS has observed cases where an I/O request took over 1 second and as high as 15 seconds per transfer. Such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is below 1 millisecond /transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 ms/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, when numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors.
+> To provide context and perspective, in the world of troubleshooting SQL Server, CSS has observed cases where an I/O request took over one second and as high as 15 seconds per transfer. Such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is below 1 millisecond/transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 millisecond/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, when numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors.
 
 ## Methodology
 
@@ -83,7 +83,6 @@ Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
    clear
    $cntr = 0 
 
-
    # replace with your server
    $serverName = "rabotenlaptop" 
    
@@ -120,7 +119,7 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
    }
    ```
 
-If the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike. If the spike lasted 1 minute or more, then it’s more of a plateau than a spike.
+If the values of this counter are consistently above 10-15 milliseconds, then you need to take a look at the issue further. Occasional spikes don't count in most cases but be sure to double-check the duration of a spike. If the spike lasted one minute or more, then it’s more of a plateau than a spike.
 
 If the `Performance monitor` counters don’t report latency, but SQL Server does, then the problem is between SQL Server and the Partition Manager, that is, filter drivers. The Partition Manager is an I/O layer where the OS collects [Perfmon](/windows-server/administration/windows-commands/perfmon) counters. To address the latency, ensure proper exclusions of filter drivers and resolve filter driver issues. Filter drivers are used by programs like [Anti-virus software](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus), [Backup solutions](/windows-hardware/drivers/ifs/allocated-altitudes#280000---289998-fsfilter-continuous-backup), [Encryption](/windows-hardware/drivers/ifs/allocated-altitudes#140000---149999-fsfilter-encryption), [Compression](/windows-hardware/drivers/ifs/allocated-altitudes#160000---169999-fsfilter-compression), and so on. You can use this command to list filter drivers on the systems and the volumes they attach to. Then, you can look up the driver names and software vendors in the [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes) article.
 
@@ -136,7 +135,7 @@ Avoid using Encrypting File System (EFS) and file-system compression because the
 
 If SQL Server and the OS indicate I/O subsystem is slow, then check if that is caused by the system being overwhelmed beyond capacity. You can check capacity by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
 
-```powershell
+```Powershell
 clear
 $serverName = "severname"
 $Counters = @(
@@ -174,7 +173,7 @@ In general, there exist three high-level reasons why SQL Server queries suffer f
 
 ## Graphical representation of the methodology
 
-:::image type="content" source="media/troubleshoot-slow-io-sql/slow_disk_io_issues.png" alt-text="visual representation of the methodology to correct slow I/O issues with SQL Server":::
+:::image type="content" source="media/troubleshoot-slow-io-sql/Slow-Disk-IO-Issues.png" alt-text="Visual representation of the methodology to correct slow I/O issues with SQL Server.":::
 
 ## I/O related wait types
 
