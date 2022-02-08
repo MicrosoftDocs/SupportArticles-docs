@@ -24,34 +24,40 @@ You'll see messages similar to below where MEMORYCLERK_XTP will be the major cul
  
 `2021-03-19 14:17:33.20 spid21s     Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'default'. See 'http://go.microsoft.com/fwlink/?LinkId=510837' for more information. `
 
-DBCC MEMORYSTATUS may show Pages Allocated to be very high for MEMORYCLERK_XTP
+A query on **sys.dm_os_memory_clerks** may show Pages allocated to be very high for MEMORYCLERK_XTP
+
+```sql
+SELECT type, memory_node_id, pages_kb 
+FROM sys.dm_os_memory_clerks
+WHERE type = 'MEMORYCLERK_XTP'
+```
+
+Result:
  
 ```output
-MEMORYCLERK_XTP (Total)                         KB
----------------------------------------- ----------
-VM Reserved                                       0
-VM Committed                                      0
-Locked Pages Allocated                            0
-SM Reserved                                       0
-SM Committed                                      0
-Pages Allocated                            60104496
-2021-03-19 14:17:33.21 spid70      
+type                                                         memory_node_id pages_kb
+------------------------------------------------------------ -------------- --------------------
+MEMORYCLERK_XTP                                              0              60104496
+MEMORYCLERK_XTP                                              64             0
 ```
 
 ## Cause
 
-This issue could be caused by In-Memory OLTP (Hekaton) memory leaks and a limitation where the Cleanup of the Hekaton memory is triggered only when SQL OS detects memory-pressure and notifies Hekaton to clean up. Alternatively, the issue could be caused by explicit long-running transactions with DDL on temp tables.
+Several scenarios have been identified that could lead to the symptoms described:
 
-### Different variations of this issue:
+- Situations with gradual increase in XTP memory consumption
+   - Scenario 1 large difference between Allocated Bytes and Used Bytes as show by **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers**
+   - Scenario 2 high values for Allocated and Used bytes in VARHEAP LOOKASIDE as show by **tempdb.sys.dm_xtp_system_memory_consumers**
+   - Scenario 3 high values for Allocated and Used bytes in LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
+   - Scenario 4 Continuously-growing "VARHEAP\Storage internal heap" XTP DB memory consumer
+- Situations with sudden spike or rapid increase in XTP memory consumption
+   - Scenario 5 high values for Allocated and Used bytes in TABLE HEAP where Object_ID IS NOT NULL.
 
-There are two main symtom-based variations of this issue:
 
-1. Gradual increase in XTP memory consumption
-1. Sudden spike or rapid increase in XTP memory consumption
 
 #### Gradual increase in XTP memory consumption
 
-1. The DMVs **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers** may show high difference between Allocated Bytes and Used Bytes
+1. The DMVs **tempdb.sys.dm_xtp_system_memory_consumers** or **tempdb.sys.dm_db_xtp_memory_consumers** may show large difference between Allocated Bytes and Used Bytes
   
    **Resolution**: SQL Server 2019 CU13 has sys.sp_xtp_force_gc to free up Allocated but Unused bytes on demand by running the following commands:
 
@@ -66,20 +72,20 @@ There are two main symtom-based variations of this issue:
    Exec sys.sp_xtp_force_gc
    ```
 
-1. The DMV **tempdb.sys.dm_xtp_system_memory_consumers** may show high Allocated/Used bytes for VARHEAP LOOKASIDE
+1. The DMV **tempdb.sys.dm_xtp_system_memory_consumers** may show high values for Allocated and Used bytes for VARHEAP LOOKASIDE
 
-   **Resolution**: Check for Long running Transactions and resolve this from application side. Microsoft can reproduce this by creating an explicit BEGIN TRAN with DDL on a temp table
+   **Resolution**: Check for Long running Transactions and resolve from application side by keeping transactions short. You can easily reproduce this issue in a test environment by creating an explicit BEGIN TRAN with DDL on a temp table and leaving it open for a long time while other activity takes place.
 
-1. The DMV **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
+1. The DMV **tempdb.sys.dm_db_xtp_memory_consumers** may show high values for Allocated and Used bytes in LOB_ALLOCATOR/TABLE HEAP where Object_ID, XTP_Object_ID and Index_ID are NULL
 
    **Resolution**: Root cause has been identified on this issue and a product fix is being examined
 
-1. Issue [14087445](https://support.microsoft.com/en-us/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in SQL Server 17 CU25 is under examination to be ported over to SQL Server 2019: Continuously-growing "VARHEAP\Storage internal heap" XTP DB memory consumer leads to out-of-memory error 41805.
+1. Issue [14087445](https://support.microsoft.com/en-us/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in SQL Server 17 CU25 is under examination to be ported over to SQL Server 2019: Continuously growing "VARHEAP\Storage internal heap" XTP DB memory consumer leads to out-of-memory error 41805.
 
 
 #### Sudden spike or rapid increase in XTP memory consumption
 
-The DMV **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL. The most common cause for this is a long-running, explicitly open transaction with DDL on temp table(s). For example:
+The DMV **tempdb.sys.dm_db_xtp_memory_consumers** may show high Allocated/Used bytes for TABLE HEAP where Object_ID IS NOT NULL. The most common cause for this issue is a long-running, explicitly open transaction with DDL on temp table(s). For example:
 
    ```sql
    BEGIN TRAN
@@ -96,6 +102,40 @@ Explicit open transaction with DDL on temp tables won't allow Table Heap and pos
 #### System-Level Consumers: **tempdb.sys.dm_xtp_system_memory_consumers**
 
 About 25 LOOKASIDE memory consumer types are capped so when threads need more memory from those LookAsides, the memory spills over to and is satisfied from Varheap: LookAside Heap. High Used Bytes could be an indicator of constant heavy TempDB workload and/or long-running open transaction using Temp objects.
+
+```output
+memory_consumer_type_desc memory_consumer_desc                       allocated_bytes      used_bytes
+------------------------- ------------------------------------------ -------------------- --------------------
+VARHEAP                   Lookaside heap                             0                    0
+PGPOOL                    256K page pool                             0                    0
+PGPOOL                    4K page pool                               0                    0
+VARHEAP                   System heap                                458752               448000
+LOOKASIDE                 Transaction list element                   0                    0
+LOOKASIDE                 Delta tracker cursor                       0                    0
+LOOKASIDE                 Transaction delta tracker                  0                    0
+LOOKASIDE                 Creation Statement Id Map Entry            0                    0
+LOOKASIDE                 Creation Statement Id Map                  0                    0
+LOOKASIDE                 Log IO proxy                               0                    0
+LOOKASIDE                 Log IO completion                          0                    0
+LOOKASIDE                 Sequence object insert row                 0                    0
+LOOKASIDE                 Sequence object map entry                  0                    0
+LOOKASIDE                 Sequence object values map                 0                    0
+LOOKASIDE                 Redo transaction map entry                 0                    0
+LOOKASIDE                 Transaction recent rows                    0                    0
+LOOKASIDE                 Heap cursor                                0                    0
+LOOKASIDE                 Range cursor                               0                    0
+LOOKASIDE                 Hash cursor                                0                    0
+LOOKASIDE                 Transaction dependent ring buffer          0                    0
+LOOKASIDE                 Transaction save-point set entry           0                    0
+LOOKASIDE                 Transaction FK validation sets             0                    0
+LOOKASIDE                 Transaction partially-inserted rows set    0                    0
+LOOKASIDE                 Transaction constraint set                 0                    0
+LOOKASIDE                 Transaction save-point set                 0                    0
+LOOKASIDE                 Transaction write set                      0                    0
+LOOKASIDE                 Transaction scan set                       0                    0
+LOOKASIDE                 Transaction read set                       0                    0
+LOOKASIDE                 Transaction                                0                    0
+```
 
 #### Database-Level Consumers: **tempdb.sys.dm_db_xtp_memory_consumers**
 
