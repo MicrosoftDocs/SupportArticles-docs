@@ -5,7 +5,6 @@ author: genlin
 ms.author: genli
 ms.service: service-fabric
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Microsoft Azure Service Fabric Logs

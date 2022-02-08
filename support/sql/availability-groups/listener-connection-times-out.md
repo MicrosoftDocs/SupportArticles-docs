@@ -2,7 +2,7 @@
 title: Listener connection times out
 description: This article provides resolutions for the timeout error that occurs when you connect to a SQL Server 2012 AlwaysOn availability group listener in a multi-subnet environment.
 ms.date: 08/04/2020
-ms.prod-support-area-path: High Availability and Disaster Recovery features
+ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
 ms.prod: sql
 ---

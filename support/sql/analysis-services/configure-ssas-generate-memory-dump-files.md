@@ -2,7 +2,7 @@
 title: Configure SSAS to generate memory dump files
 description: This article describes how to configure SQL Server Analysis Services to automatically generate memory dump files.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.reviewer: lisaliu
 ms.topic: how-to
 ms.prod: sql

@@ -1,20 +1,20 @@
 ---
 title: Exception when you execute a query
-description: This article provides workarounds for the problem that occurs when you use SQL Server Management Studio (SSMS) to run an SQL query that returns a large amount of data.
+description: This article provides workarounds for the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
 ms.date: 10/29/2020
-ms.prod-support-area-path: Management Studio
+ms.custom: sap:Management Studio
 ms.prod: sql
 ---
 # Exception when you execute a query in SQL Server Management Studio
 
-This article helps you resolve the problem that occurs when you use SQL Server Management Studio (SSMS) to run an SQL query that returns a large amount of data.
+This article helps you resolve the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
 
 _Original product version:_ &nbsp; SQL Server 2012, SQL Server 2008, SQL Server 2005  
 _Original KB number:_ &nbsp; 2874903
 
 ## Symptoms
 
-When you use SSMS to run an SQL query that returns a large amount of data, you receive an error message that resembles the following:
+When you use SSMS to run a SQL query that returns a large amount of data, you receive an error message that resembles the following:
 
 > An error occurred while executing batch. Error message is: Exception of type 'System.OutOfMemoryException' was thrown
 

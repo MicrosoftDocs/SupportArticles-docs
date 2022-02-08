@@ -2,7 +2,7 @@
 title: DirectShow can't connect to downstream filter
 description: DirectShow filter does not connect to the downstream filter on Windows 8 and Windows 7 SP1 after installing KB 2670838.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Graphics and multimedia development
+ms.custom: sap:Graphics and multimedia development
 ms.reviewer: dbristol
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---

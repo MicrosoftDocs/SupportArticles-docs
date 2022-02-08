@@ -420,6 +420,8 @@
       href: ./identity/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
+    - name: DCs can't be located and high-rate outbound sessions
+      href: ./identity/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Enable LDAP over SSL
       href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: How to enable LDAP signing in Windows Server
@@ -842,6 +844,8 @@
       href: ./backup-and-storage/event-id-51-information.md
     - name: Pass-through disk in highly available VM is read-only
       href: ./backup-and-storage/add-pass-through-disk-to-high-available-vm.md
+    - name: Replicated Cluster Shared Volumes are offline
+      href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
     - name: USB Device not recognized error
@@ -1078,6 +1082,8 @@
       href: ./deployment/windows-deployment-service-not-start.md
     - name: Windows Internal Database (WID) installation fails
       href: ./deployment/error-install-windows-internal-database.md
+    - name: PCR7 configuration "Binding not possible" error
+      href: ./deployment/pcr7-configuration-binding-not-possible.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./deployment/windows-server-support-installation-for-amd-role-family-processor.md
     - name: WSUS clients can't install updates
@@ -1506,8 +1512,6 @@
       href: ./networking/exchange-compatibility-single-label-domains.md
     - name: Configure a secondary name server
       href: ./networking/configure-secondary-name-server.md
-    - name: Description of the DNSLint utility
-      href: ./networking/description-dnslint-utility.md
     - name: DNS client resolution timeouts
       href: ./networking/dns-client-resolution-timeouts.md
     - name: DNS namespace planning
@@ -1660,6 +1664,16 @@
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
     - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
+    - name: 'Troubleshoot DirectAccess Server console: 6to4'
+      href: ./networking/troubleshoot-directaccess-server-console-6to4.md
+    - name: 'Troubleshoot DirectAccess Server console: DNS'
+      href: ./networking/troubleshoot-directaccess-server-console-dns.md
+    - name: 'Troubleshoot DirectAccess Server console: domain controller and Kerberos'
+      href: ./networking/troubleshoot-directaccess-server-console-dc-kerberos.md
+    - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
+      href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
+    - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
+      href: ./networking/troubleshoot-directaccess-server-console-networking.md
   - name: TCP/IP communications
     items:
     - name: A SMB server is unresponsive

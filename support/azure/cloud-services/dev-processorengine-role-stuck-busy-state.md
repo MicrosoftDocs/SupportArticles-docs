@@ -2,7 +2,6 @@
 title: ProcessorEngine role is stuck in Busy state
 description: Provide information about troubleshooting issues in which the ProcessorEngine role is stuck in Busy state when deploying cloud service application to Azure.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 author: genlin
 ms.author: genli

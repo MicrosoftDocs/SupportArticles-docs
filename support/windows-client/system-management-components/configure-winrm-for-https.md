@@ -57,9 +57,7 @@ winrm quickconfig
 
 ## More information
 
-By default WinRM HTTP uses port 80. On Windows 7 and higher, the default port is 5985.
-
-By default WinRM HTTPS uses port 443. On Windows 7 and higher, the default port is 5986.
+By default, on Windows 7 and later versions, WinRM HTTP uses port 5985 and WinRM HTTPS uses port 5986. On earlier versions of Windows, WinRM HTTP uses port 80 and WinRM HTTPS uses port 443.
 
 To confirm WinRM is listening on HTTPS, type the following command:
 

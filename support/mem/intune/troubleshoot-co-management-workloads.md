@@ -1,16 +1,13 @@
 ---
-title: Troubleshooting co-management workloads
+title: Troubleshooting Intune and Configuration Manager co-management workloads
 description: Helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment.
 ms.date: 04/28/2021
-ms.prod-support-area-path: Co-management with Configuration Manager
+ms.custom: sap:Co-management with Configuration Manager
 ms.reviewer: luche
 ---
 # Troubleshoot co-management workloads
 
 This article helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment. For more information about how to configure workloads, see [Support Tip: Configuring workloads in a co-managed environment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Configuring-workloads-in-a-co-managed-environment/ba-p/707221).
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4520147
 
 ## Before you start
 
@@ -27,25 +24,25 @@ Most issues occur because one or more of these steps were not completed. If you 
 
 ## Frequently asked questions  
 
-### Question 1: What roles do I need to configure co-management?
+### What roles do I need to configure co-management?
 
 Here are the required [permissions and roles](/mem/configmgr/comanage/overview#permissions-and-roles) to configure co-management.
 
-### Question 2: What log can I use to validate workloads and determine where policies and apps come from in a co-management scenario?
+### What log can I use to validate workloads and determine where policies and apps come from in a co-management scenario?
 
 You can use the following log file on Windows 10 devices:
 
 `%WinDir%\CCM\logs\CoManagementHandler.log`
 
-### Question 3: What workloads are currently supported by co-management?
+### What workloads are currently supported by co-management?
 
 You can find the supported workloads [here](/mem/configmgr/comanage/workloads).  
 
-### Question 4: Which workload does the resource access policies workload belong to?
+### Which workload does the resource access policies workload belong to?
 
 The [resource access policies workload](/mem/configmgr/comanage/workloads#resource-access-policies) is part of the device configuration workload.  
 
-### Question 5: What logs can be used to verify that workloads are working correctly?
+### What logs can be used to verify that workloads are working correctly?
 
 You can use the following logs in the `%WinDir%\CCM\logs\` folder on the Windows 10 devices:
 
@@ -100,7 +97,7 @@ You can use the following logs in the `%WinDir%\CCM\logs\` folder on the Windows
   > Feature flag is OFF, should be SCCM managed.  
   > SourceManager::GetIsWUfBEnabled - There is no Windows Update for Business settings assignment. Windows Update for Business is not enabled through ConfigMgr
 
-### Question 6: What's the difference between Pilot Intune and Intune when I switch workloads?
+### What's the difference between Pilot Intune and Intune when I switch workloads?
 
 The difference between Pilot Intune and Intune is subtle but important. Both allow Intune to control a configured workload.
 
@@ -134,7 +131,7 @@ In this case, do the following:
 
 Intune doesn't revert settings ([tattoo removal](/mem/intune/configuration/device-profile-troubleshoot)) if the Device Configuration workload is set to Configuration Manager. To enable tattoo removal, configure the workload in Configuration Manager, and refresh policy on the device.
 
-## References
+## More information
 
 For more information about troubleshooting co-management issues, see the following articles:
 
@@ -150,9 +147,3 @@ For more information about Intune and Configuration Manager co-management and wo
 - [How to prepare internet-based devices for co-management](/mem/configmgr/comanage/how-to-prepare-Win10)
 - [How to enable co-management in Configuration Manager](/mem/configmgr/comanage/how-to-enable)
 - [How to switch Configuration Manager workloads to Intune](/mem/configmgr/comanage/how-to-switch-workloads)
-
-If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
-
-You can also [send feedback directly to the Microsoft product group](/mem/configmgr/core/understand/product-feedback).
-
-If all else fails and you'd like to open a support case with the Intune support team, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).

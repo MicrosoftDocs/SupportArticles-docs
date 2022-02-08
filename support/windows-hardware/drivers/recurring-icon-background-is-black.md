@@ -2,7 +2,7 @@
 title: Recurring icon is black when printing a calendar
 description: Provides workarounds for an issue in which the background of a recurring icon is black when printing an Outlook calendar.
 ms.date: 09/30/2020
-ms.prod-support-area-path: Print driver
+ms.custom: sap:Print driver
 ms.reviewer: riwaida
 ms.technology: windows-hardware-print-driver
 ---

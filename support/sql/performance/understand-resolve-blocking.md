@@ -2,7 +2,7 @@
 title: Understand and resolve blocking problems
 description: This article provides instruction on first understanding what blocking is in terms of SQL Server and furthermore how to investigate its occurrence.
 ms.date: 04/14/2021
-ms.prod-support-area-path: Performance
+ms.custom: sap:Performance
 ms.reviewer: ramakoni
 ms.prod: sql
 ms.technology: performance 

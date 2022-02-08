@@ -2,7 +2,7 @@
 title: WMI Provider Error and 0x80004005 code
 description: This article provides a resolution for the problem that occurs when you change the service account that was specified during SQL Server setup to a new domain account using SQL Server Configuration Manager.
 ms.date: 11/09/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.prod: sql
 ---
 # Can't start SQL Server Analysis Services clustered instance after changing service account

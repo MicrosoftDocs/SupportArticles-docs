@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: azure
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # How to use Secure File Exchange to exchange files with Microsoft Support
@@ -70,21 +69,21 @@ Below is an example of Secure File Exchange being used by a customer:
 
 All files are physically located in the location of the workspace. The location where a workspace is physically created is as follows.
 
-When you open a support case and the country that you specify is:
+When you open a support case and the country/region that you specify is:
 
 - In Europe, Secure File Exchange will physically create the workspace in Europe.
 - In the United States, Secure File Exchange will physically create the workspace in the United States.
-- In any other country, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace. And it's where the workspace will be physically created.  
+- In any other country/region, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace. And it's where the workspace will be physically created.  
 
 ## The endpoints that are required to be open on your intranet
 
 |Purpose|Endpoint|
 |---|---|
-|Secure File Exchange| [https://support.microsoft.com](https://support.microsoft.com) |
-|Personal Microsoft account sign-in| [https://login.live.com](https://login.live.com) |
-|Work or school Microsoft account sign-in| [https://login.microsoftonline.com](https://login.microsoftonline.com) |
-|Other| [https://api.dtmnebula.microsoft.com](https://api.dtmnebula.microsoft.com/) |
-|Other (Microsoft Cloud Deutschland) - For Germany only| [https://dtmbf​prodapi.azuretrafficmanager.de](https://dtmbfprodapi.azuretrafficmanager.de/) |
+|Secure File Exchange| `https://support.microsoft.com` |
+|Personal Microsoft account sign-in| `https://login.live.com` |
+|Work or school Microsoft account sign-in| `https://login.microsoftonline.com` |
+|Other| `https://api.dtmnebula.microsoft.com` |
+|Other (Microsoft Cloud Deutschland) - For Germany only| `https://dtmbfprodapi.azuretrafficmanager.de`|
 |||
 
 ## What happens when my case is closed?

@@ -2,7 +2,6 @@
 title: Error after you enter enterprise administrator credentials in the Azure Active Directory Sync tool Configuration Wizard
 description: Describes an issue that occurs after you enter enterprise admin credentials in the Azure Active Directory Sync tool Configuration Wizard. You receive error code 1789. A resolution is provided.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

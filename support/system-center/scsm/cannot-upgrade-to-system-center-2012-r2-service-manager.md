@@ -2,7 +2,6 @@
 title: Can't upgrade to System Center 2012 R2 Service Manager
 description: Fixes an issue in which an upgrade from System Center 2012 Service Manager SP1 to System Center 2012 Service Manager R2 fails and returns a ReportLibrary.mpb error.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: adoyle
 ---
 # Upgrade to System Center 2012 R2 Service Manager fails and returns a ReportLibrary.mpb error

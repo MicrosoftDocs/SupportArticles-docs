@@ -2,7 +2,6 @@
 title: Can't launch Service Manager console in Windows 7 32-bit
 description: Describes an issue in which the System Center Service Manager console fails to launch on a system running Windows 7 32-bit.
 ms.date: 08/04/2020
-ms.prod-support-area-path: 
 ms.reviewer: manojpa, jchornbe
 ---
 # The Service Manager console fails to launch on a computer running Windows 7 32-bit

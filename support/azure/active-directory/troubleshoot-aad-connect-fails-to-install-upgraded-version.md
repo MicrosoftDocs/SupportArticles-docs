@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure AD Connect upgrade issues
 description: Troubleshoot why you can't upgrade to the latest version of Azure AD Connect on a server that has previous installations of Connect, AD Sync, or DirSync.
-ms.date: 12/06/2021
+ms.date: 12/15/2021
 author: nualex
 ms.author: nualex
 ms.reviewer: DennisLee-DennisLee
@@ -162,7 +162,7 @@ To uninstall the product code for the Azure AD Sync Engine, run the Windows Inst
 
 1. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
 
-1. If the inconsistent or stale product code is no longer preset in the log file, continue the wizard, and complete the installation. Otherwise, go to the next solution.
+1. If the inconsistent or stale product code is no longer present in the log file, continue the wizard, and complete the installation. Otherwise, go to the next solution.
 
 </details>
 
@@ -179,6 +179,6 @@ After you run the tool, restart the server, and then follow these steps:
 
 1. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
 
-1. If the inconsistent or stale product code is no longer present in the log file, continue the wizard, and complete the installation. Otherwise, we recommend that you reinstall the Windows operating system because you can't recover the Windows Installer database from an inconsistent state.
+1. If the inconsistent or stale product code is no longer present in the log file, continue the wizard, and complete the installation. If the stale product code is present, we recommend that you reinstall the Windows operating system because you can't recover the Windows Installer database from an inconsistent state.
 
 </details>

@@ -2,10 +2,9 @@
 title: Troubleshoot performance and isolate bottlenecks in Linux
 description: Troubleshoot CPU, memory, and disk input and output performance, and isolate bottlenecks in Linux virtual machines
 ms.date: 05/27/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
-author: v-miegge
+author: genlin
 ms.author: esflores
 ---
 # Troubleshoot performance and isolate bottlenecks in Linux

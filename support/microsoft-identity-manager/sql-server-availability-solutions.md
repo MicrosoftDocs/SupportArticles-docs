@@ -2,7 +2,6 @@
 title: SQL Server availability solutions
 description: Describes SQL Server availability solutions for the Identity Manager service (FIMService) and the Synchronization service (FIMSynchronizationService) databases.
 ms.date: 08/18/2020
-ms.prod-support-area-path: 
 ms.reviewer: jchornbe, stevekl, mwahl, midi, stlieber
 ---
 # SQL Server availability solutions for Microsoft Identity Manager services databases

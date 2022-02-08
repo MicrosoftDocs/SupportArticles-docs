@@ -3,7 +3,7 @@ title: Reset the network interface for Azure Linux VM
 description: This article describes how to reset the network interface for Azure Linux VM
 services: virtual-machines
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
 editor: ''
 ms.service: virtual-machines
@@ -49,7 +49,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
 1. Open [Azure Cloud Shell](/azure/cloud-shell/overview) or preferred shell. Run the following commands:
 
-   ```azurepowershell
+   ```azurecli
    #Log in to the subscription  
 
    az login 

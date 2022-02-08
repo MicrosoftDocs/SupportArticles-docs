@@ -2,7 +2,6 @@
 title: Active users and groups are unexpectedly deleted by the Delete Aged Discovery Data task
 description: Fixes an issue in which some active users and groups are unexpectedly deleted by the Delete Aged Discovery Data task in Configuration Manager.
 ms.date: 09/11/2020
-ms.prod-support-area-path:
 ---
 # Active users and groups are unexpectedly deleted by the Delete Aged Discovery Data task in Configuration Manager
 
