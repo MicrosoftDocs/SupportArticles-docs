@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp; 2734782
 
 > [!NOTE]
 > Installation of the .NET Framework may throw errors that are not listed in this article, but you might be able to try the following steps to fix those errors as well.
+> Microsoft is releasing Out-of-band (OOB) updates for .NET Framework. [.NET Framework Out-of-band update to address issues after installing the January 11, 2022 Windows update](https://docs.microsoft.com/windows/release-health/windows-message-center#359)
 
 ## Resolutions for Windows Server
 
