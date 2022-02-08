@@ -18,7 +18,7 @@ appliesto:
 
 # Teams web client is stuck in a login loop
 
-When you try to sign in to Microsoft Teams in Microsoft Edge, Google Chrome, Mozilla Firefox, Safari, or Internet Explorer the site continually loops, and you're not able to sign in.
+When you try to sign in to Microsoft Teams in Microsoft Edge, Google Chrome, Mozilla Firefox, Safari, or Internet Explorer the site continually loops and you're not able to sign in.
 
 This issue occurs if you use the **Trusted Sites** feature in your browser and don't add the URLs for Microsoft Teams to the list of sites that your browser should trust. Therefore the Teams web client is not able to sign in.
 
