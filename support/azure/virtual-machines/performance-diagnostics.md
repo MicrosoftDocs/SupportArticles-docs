@@ -124,7 +124,7 @@ A notification is displayed as performance diagnostics starts to install. After 
 After the analysis is complete, the following items are uploaded to Azure tables and a binary large object (BLOB) container in the specified storage account:
 
 * All the insights and related information about the run
-* An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip** ) on Windows and a tar ball file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
+* An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip** ) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
 * An HTML report
 
 After the upload, a new diagnostics report is listed in the Azure portal.
