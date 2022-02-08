@@ -99,6 +99,8 @@ Explicit open transaction with DDL on temp tables won't allow Table Heap and pos
 
 ### Internal details
 
+Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve fast transaction processing. Each thread object contains a collection of lookaside memory allocators. Each lookaside associated with each thread has a pre-defined upper limit on how much memory it can allocate. Once the limit is reached, the thread allocates memory from a spill-over shared memory pool (VARHEAP). The DMV **sys.dm_xtp_system_memory_consumers**  aggregates data for each lookaside type (memory_consumer_type_desc = 'LOOKASIDE') and the shared memory pool (memory_consumer_type_desc = 'VARHEAP' AND memory_consumer_desc = 'Lookaside heap')
+
 #### System-Level Consumers: **tempdb.sys.dm_xtp_system_memory_consumers**
 
 About 25 LOOKASIDE memory consumer types are capped so when threads need more memory from those LookAsides, the memory spills over to and is satisfied from Varheap: LookAside Heap. High Used Bytes could be an indicator of constant heavy TempDB workload and/or long-running open transaction using Temp objects.
@@ -169,7 +171,7 @@ If you face the issues described:
 
 ### Mitigation Steps to try to keep memory-optimized tempdb metadata memory in check:
 
-1. Avoid long-running transactions that perform temp table DDL operations. General guidance is to keep transactions short.
+1. Avoid or resolve long-running transactions that perform temp table DDL operations. General guidance is to keep transactions short.
 1. Increase `max server memory` to allow for enough memory to operate in the presence of Tempdb-heavy workloads
 1. Execute sys.sp_xtp_force_gc periodically
 1. Memory-optimized tempDB metadata feature is not for every workload. For example, using explicit transactions with DDL on temp tables that run for a long time will lead to many of the scenarios described. If you have such transactions in your workload and you cannot control their duration, then perhaps this features is not appropriate for your environment. You should test extensively before using HkTempDB.
