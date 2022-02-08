@@ -9,20 +9,15 @@ ms.prod: sql
 
 # Troubleshoot common SQL Server patching issues
 
-This article provides general procedures to troubleshoot any issues that you may run into while applying a Service Pack (SP) or a Cumulative Update (CU) for your SQL Server instance. It also provides detailed procedures for solving the following failure messages associated with patching:
+This article provides general steps to troubleshoot issues that you may run into while applying a Service Pack (SP) or a Cumulative Update (CU) for your SQL Server instance. It also provides details for solving the following error messages associated with patching:
 
-- "Wait on Database Engine recovery handle failed, 912, and 3417 error messages when executing upgrade scripts.
-- Various setup errors that occur due to missing  MSI files or patch files in the Windows installer cache.
+- "Wait on Database Engine recovery handle failed" and errors [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error), and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error)  when executing upgrade scripts.
+- Setup errors that occur due to missing MSI files or patch files in the Windows installer cache.
 - "The Database Engine system data directory in the registry is not valid" or "the User Log directory in the registry is not valid".
 - "Network path was not found" and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AG).
 
-For a complete list of currently available updates for your SQL version and download locations, see the [Determine the version, edition, and update level - SQL Server](../general/determine-version-edition-update-level.md) section.
 
-For more information about supportability and servicing timelines for your SQL version, see the [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql) section.
-
-For information on servicing models for different versions of SQL Server, see the [Incremental Servicing Model for SQL Server Updates](https://support.microsoft.com/topic/an-incremental-servicing-model-is-available-from-the-sql-server-team-to-deliver-hotfixes-for-reported-problems-6209f7b4-20a5-1a45-5042-5df411263e8b) and [Modern Servicing Model for SQL 2017 and later versions](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server) sections.
-
-## CU and SP installation general info
+## Cumulative Updates and Service Pack installation prerequisites information
 
 This section provides information on the CU and SP installation prerequisites.
 
@@ -49,7 +44,7 @@ This section provides information on the CU and SP installation prerequisites.
 
 ## Wait on Database Engine recovery handle failed, 912, and 3417 errors
 
-Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?view=sql-server-ver15&preserve-view=true) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error?view=sql-server-ver15&preserve-view=true) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
+Upgrade scripts are shipped with each SQL Server update and are executed after the binaries have been upgraded. When these scripts fail to execute, the setup program for update reports *Wait on Database Engine recovery handle failed* error in the error details section and logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server Error log. The 912 and 3417 are generic errors associated with database script upgrade failures and the messages preceding 912 error usually provides information on what exactly failed during the execution of these scripts.
 
 To troubleshoot and fix these errors, do the following steps:
 
@@ -105,8 +100,11 @@ When these shares are not properly configured, you may notice one or more of the
     - "The network path was not found".
     - "System.UnauthorizedAccessException: Attempted to perform an unauthorized operation".
 
-## See Also
 
+## Available Updates, Servicing Model, Security Updates
+- For a complete list of currently available updates for your SQL version and download locations, see the [Determine the version, edition, and update level - SQL Server](../general/determine-version-edition-update-level.md) section.
+- For more information about supportability and servicing timelines for your SQL version, see the [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql) section.
+- For information on servicing models for different versions of SQL Server, see the [Incremental Servicing Model for SQL Server Updates](https://support.microsoft.com/topic/an-incremental-servicing-model-is-available-from-the-sql-server-team-to-deliver-hotfixes-for-reported-problems-6209f7b4-20a5-1a45-5042-5df411263e8b) and [Modern Servicing Model for SQL 2017 and later versions](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server) sections.
 - For general information on updating SQL Server, see the [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15&preserve-view=true) section.
 - For information on security updates for SQL Server and other products, see the [Security Update Guide](https://msrc.microsoft.com/update-guide) section.
 - For information on standard terminology associated with Microsoft updates, see the [Description of the standard terminology that is used to describe Microsoft software updates](/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15&preserve-view=true) section.
