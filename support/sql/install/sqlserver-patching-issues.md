@@ -14,16 +14,15 @@ This article provides general steps to troubleshoot issues that you may run into
 - "Wait on Database Engine recovery handle failed" and errors [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error), and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error)  when executing upgrade scripts.
 - Setup errors that occur due to missing MSI files or patch files in the Windows installer cache.
 - "The Database Engine system data directory in the registry is not valid" or "the User Log directory in the registry is not valid".
-- "Network path was not found" and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AG).
-
+- "Network path was not found" and other errors that can occur when Remote Registry Service or Admin shares are disabled on your Always On Failover Cluster instance (FCI) or Always On Availability Groups (AAG).
 
 ## Cumulative Updates and Service Pack installation information
 
-This section provides information on the CU and SP installation 
+This section provides information on the CU and SP installation.
 
 - For SQL Server 2016 and earlier versions:
-  - Before you install a Cumulative Update (CU), ensure your SQL instance is at the right SP level for the CU.  For example, you cannot install CU17 for SQL 2016 SP2, before you apply SP2 for the SQL 2016 instance.
-  - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL 2016 SP2 instance, you can  directly go to CU17 without applying any of the intermediate CUs.
+  - Before you install a Cumulative Update (CU), ensure your SQL instance is at the right SP level for the CU. For example, you can't install CU17 for SQL 2016 SP2, before you apply SP2 for the SQL 2016 instance.
+  - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL 2016 SP2 instance, you can directly go to CU17 without applying any of the intermediate CUs.
 - For SQL Server 2017 and later versions, you can always apply the latest CU available (no Service Packs)
 - The SQL Server's program files and data files cannot be installed on:
     - a removable disk drive,
@@ -60,7 +59,7 @@ To troubleshoot and fix these errors, do the following steps:
     - **Misconfigured System user/role in msdb database**
 
       This section provides steps to resolve misconfigured system user or role in the msdb database:
-       - TargetServersRole Schema/Security role: These are used in multiserver environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
+       - TargetServersRole Schema/Security role: These are used in multi-server environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
           
          1. Back up your msdb database.
          1. Make a list of users (if any) that are currently part of this role.
@@ -71,9 +70,8 @@ To troubleshoot and fix these errors, do the following steps:
         - Certificate-based SQL Server logins owning user objects: Principals enclosed by double hash marks (##) are created from certificates when SQL Server is installed and is meant for internal use and should not own any objects in **msdb** or other databases. If the error logs indicate a failure related to any of these logins, start SQL server with TF 902, change the ownership of the affected objects to a different user, and then restart SQL Server without TF902 for the upgrade script to complete execution.
 
           >[!NOTE]
-          >Though failure to execute upgrade scripts is one of the common causes for "Wait on Database Engine recovery handle failed" error message, the error can occur because of other reasons. The error means that the patch installer was unable to start the service or bring it online after the patch was installed. In either case, the troubleshooting involves reviewing error logs and setup logs to determine the cause of failure and take appropriate action.
+          >Though failure to execute upgrade scripts is one of the common causes for "Wait on Database Engine recovery handle failed" error, the error can occur because of other reasons. The error means that the patch installer was unable to start the service or bring it online after the patch was installed. In either case, the troubleshooting involves reviewing error logs and setup logs to determine the cause of failure and take appropriate action.
   1. Restart SQL Server without trace flag 902 to allow upgrade process to complete.
-
 
 ## Setup errors resulting from missing installer files in Windows cache
 
@@ -93,15 +91,15 @@ To fix this issue, connect to the SQL Server instance using SQL Server Managemen
 For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), you must always follow the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true) sections. If you are running into errors applying a CU or an SP, check the following scenarios:
 
 - The remote registry service is up and running on all the nodes of the WSFC cluster.
-- If the service account for SQL Server is not an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information, see the [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md) section.
+- If the service account for SQL Server isn't an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information, see the [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md) section.
 When these shares are not properly configured, you may notice one or more of the following symptoms when trying to install a CU or SP:
-  - Patch taking a long time to run or does not respond. Setup logs do not reveal any progress.
+  - Patch takes a long time to run or does not respond. Setup logs do not reveal any progress.
   - Setup logs show messages like the following:
     - "The network path was not found".
     - "System.UnauthorizedAccessException: Attempted to perform an unauthorized operation".
 
-
 ## Additional Resources: available updates, SQL Server servicing model, security updates
+
 - For a complete list of currently available updates for your SQL version and download locations, see the [Determine the version, edition, and update level - SQL Server](../general/determine-version-edition-update-level.md) section.
 - For more information about supportability and servicing timelines for your SQL version, see the [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql) section.
 - For information on servicing models for different versions of SQL Server, see the [Incremental Servicing Model for SQL Server Updates](https://support.microsoft.com/topic/an-incremental-servicing-model-is-available-from-the-sql-server-team-to-deliver-hotfixes-for-reported-problems-6209f7b4-20a5-1a45-5042-5df411263e8b) and [Modern Servicing Model for SQL 2017 and later versions](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server) sections.
