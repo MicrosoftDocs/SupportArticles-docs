@@ -10,8 +10,9 @@ search.appverid:
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: troubleshooting
-ms.custom: 
+ms.custom:
 - CSSTroubleshoot
+- sap: office-experts
 - CI 113644
 ms.author: ericspli
 appliesto:

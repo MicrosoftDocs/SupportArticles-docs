@@ -10,7 +10,9 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: randring
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
 appliesto:
 - SharePoint Server 2016
 ---

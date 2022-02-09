@@ -18,6 +18,7 @@ appliesto:
 ms.custom: 
 - CI 103849
 - CSSTroubleshoot
+- sap: sfbexperts
 ms.reviewer: meerak
 ---
 
@@ -53,7 +54,7 @@ Listed in the table below are the port ranges and DSCP values associated with th
 | Media Type | Communication |Port Range | Port Count | DSCP Values |
 |--| -- |--| -- |--|
 | Audio | Conferencing Server | 49152-57500 | 8348 | 46 |
-| Audio | Mediation Server | 49152-57500 | 	8348 | |
+| Audio | Mediation Server | 49152-57500 |     8348 | |
 | Audio | Clients | 50020-50059 | 40 | 46 |
 | Video | Conferencing Server | 57501-65535 | 8034 | 34 |
 | Video | Clients | 58000-58019 | 20 | 34 |
@@ -67,7 +68,7 @@ Listed in the table below are the port ranges and DSCP values associated with th
 
 Let us start with QoS configuration:  
 
-1.	**Enable QoS for all clients, which are disabled by default:**<br/>
+1.    **Enable QoS for all clients, which are disabled by default:**<br/>
 QoS is not enabled by default on Skype for Business/Lync servers. <br/><br/>
 You can run the Get-CsMediaConfiguration command from PowerShell to see if "EnableQoS" shows "True" or "False". By default, it shows as **False**.<br/><br/> 
 To Enable QoS globally, run the following PowerShell command: 
@@ -82,7 +83,7 @@ In case you want to enable QoS site wide, run the following commandlet:
 Set-CsMediaConfiguration -Identity Site:<sitename> -EnableQoS $True
 ``` 
  
-2.	**Configure the port ranges for conferencing and peer-to-peer media traffic:** <br/>
+2.    **Configure the port ranges for conferencing and peer-to-peer media traffic:** <br/>
 For QoS to work correctly, configure identical port ranges for audio, video, file transfer, and app sharing on your Conferencing, Application, and Mediation servers. These port ranges must not overlap in any ways. (For example, if you use ports 57501 through 65535 for video on your Conferencing servers, then you must also reserve ports 57501 through 65535 for video on your application servers. If you do not, QoS will not work as expected.) <br/><br/>
 You must use PowerShell to configure port ranges. You can verify the existing port ranges for your Conferencing, Application, and Mediation servers by running PowerShell commands.
 
@@ -246,9 +247,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS<br/><br/> The Front-E
 :::image type="content" source="./media/front-end-server.png" alt-text="Screenshot that shows how the Front-End Server should appear." border="false":::
 
 ## Best practices
-1.	Audit QoS policies every quarter and observe the tagging. 
-2.	Check with the WAN provider (MPLS) for the QoS plane. 
-3.	We recommend that you validate the QoS end-to-end because sometimes incorrectly configured network devices (such as routers, wireless access points, or switches) might be set or change DSCP markings to something you did not intend, or even strip DSCP markings set to 0. 
+1.    Audit QoS policies every quarter and observe the tagging. 
+2.    Check with the WAN provider (MPLS) for the QoS plane. 
+3.    We recommend that you validate the QoS end-to-end because sometimes incorrectly configured network devices (such as routers, wireless access points, or switches) might be set or change DSCP markings to something you did not intend, or even strip DSCP markings set to 0. 
 
 ## More information
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

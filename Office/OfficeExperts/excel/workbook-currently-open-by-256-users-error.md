@@ -8,8 +8,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: excel
 localization_priority: Normal
-ms.custom: 
+ms.custom:
 - CSSTroubleshoot
+- sap: office-experts
 - CI 106765
 search.appverid:
 - SPO160
