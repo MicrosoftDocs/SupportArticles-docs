@@ -6,7 +6,7 @@ ms.author: vliorgu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: skype-for-busines-itpro
+ms.prod: skype-for-business-itpro
 localization_priority: Normal
 ms.custom: 
 - CI 109367
