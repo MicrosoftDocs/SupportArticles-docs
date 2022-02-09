@@ -40,20 +40,20 @@ Target files will be locked when the antivirus software is scanning. You may enc
 
 You may have to configure your antivirus software to exclude the following processes, folders and their sub-folders from antivirus scanning:
 
-- :::no-loc text="C:\Users\\<TFS_Service_Account\>\AppData\Local\Temp"
-- :::no-loc text="C:\inetpub\temp"
-- :::no-loc text="%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\bin"
-- :::no-loc text="%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\_tfs_data"
+- :::no-loc text="C:\Users\\<TFS_Service_Account\>\AppData\Local\Temp":::
+- :::no-loc text="C:\inetpub\temp":::
+- :::no-loc text="%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\bin":::
+- :::no-loc text="%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\_tfs_data":::
 - TFS Client Cache
-  - On TFS server: :::no-loc text="C:\Users\\<TFS_Service_Account\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache"
-  - On Client: :::no-loc text="C:\Users\\<UserName\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache"
+  - On TFS server: :::no-loc text="C:\Users\\<TFS_Service_Account\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache":::
+  - On Client: :::no-loc text="C:\Users\\<UserName\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache":::
 - TFS application tier Cache Location
 - Pipeline agent folders
-- :::no-loc text="\Builds, \Symbols, \Drop"
-- :::no-loc text="%ProgramFiles%\Microsoft Visual Studio \<VersionNumber\>"
-- :::no-loc text="C:\Windows\Microsoft.NET\Framework"
-- :::no-loc text="C:\Windows\Microsoft.NET\Framework\\<VersionNumber\>\Temporary ASP.NET Files"
-- :::no-loc text="C:\Windows\Microsoft.NET\Framework64\\<VersionNumber\>\Temporary ASP.NET Files"
+- :::no-loc text="\Builds, \Symbols, \Drop":::
+- :::no-loc text="%ProgramFiles%\Microsoft Visual Studio \<VersionNumber\>":::
+- :::no-loc text="C:\Windows\Microsoft.NET\Framework":::
+- :::no-loc text="C:\Windows\Microsoft.NET\Framework\\<VersionNumber\>\Temporary ASP.NET Files":::
+- :::no-loc text="C:\Windows\Microsoft.NET\Framework64\\<VersionNumber\>\Temporary ASP.NET Files":::
 - `TFSJobAgent.exe` process that is typically located at `%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe`
 
 ## More information
