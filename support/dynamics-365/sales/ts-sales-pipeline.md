@@ -13,7 +13,7 @@ This article helps you troubleshoot and resolve issues related to the Sales Pipe
 The Sales Pipeline chart consists of pipeline phases of an opportunity. The phase is based on the stage of the business process flow the opportunity is in, such as 1-Qualify, 2-Develop, and so on. More information: [Understand the sales pipeline chart and its phases](/dynamics365/sales/sales-pipeline-chart) 
 
 <a name="different_sequence"> </a>
-## Issue: I see multiple pipeline phases with different sequences, such as 6-Close and 7-Close.
+## I see multiple pipeline phases with different sequences, such as 6-Close and 7-Close.
 
 ### Cause
 
@@ -24,7 +24,7 @@ This can happen if you've changed the sequence of a stage category option (for e
 You can resolve this issue by resetting  the values for older opportunities either by changing the stage of the business process flow to some other stage and then bringing it back to the **Close** stage, or by updating the **stepname** attribute of the opportunity programmatically. 
 
 <a name="values_from_multiple_bpfs"> </a>
-## Issue: I see pipeline phase values from multiple business process flow definitions.
+## I see pipeline phase values from multiple business process flow definitions.
 
 ### Cause
 
@@ -35,11 +35,11 @@ This is to be expected if you use multiple business process flow definitions for
 If you have multiple business process flows, consider adding a custom field to the Opportunity Sales Process and setting its value programmatically for the stage changes you require in the business process flow for the opportunity. 
 
 <a name="different_ordering"> </a>
-## Issue: The sales pipeline chart ordering is displayed differently in Unified Interface vs. the legacy web client.
+## The sales pipeline chart ordering is displayed differently in Unified Interface vs. the legacy web client.
 
 The legacy web client displays the chart by using the value of the associated category option, whereas in Unified Interface the stages are displayed alphabetically. Because the pipeline phases are prefixed with the order defined in the **Stage category** option set, they're displayed according to the category option sequence (1, 2, and so on).
 
-## Issue: I see that the stages are not sorted numerically when the number of stages are beyond 9.
+## I see that the stages are not sorted numerically when the number of stages are beyond 9.
 
 ### Cause
 

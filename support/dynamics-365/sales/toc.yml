@@ -453,6 +453,12 @@
       href: installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md
   - name: Sales
     items:
+    - name: Troubleshooting forecasts
+      href: ts-forecasts.md
+    - name: Troubleshooting in-app marketing
+      href: ts-inapp-marketing.md
+    - name: Troubleshooting Unified Interface
+      href: ts-unified-interface.md
     - name: Troubleshooting the sales pipeline chart
       href: ts-sales-pipeline.md
     - name: Troubleshooting email
