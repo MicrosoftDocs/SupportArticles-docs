@@ -10,7 +10,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.service: sharepoint-online
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
 appliesto:
 - SharePoint Server 2016
 - SharePoint Server 2013

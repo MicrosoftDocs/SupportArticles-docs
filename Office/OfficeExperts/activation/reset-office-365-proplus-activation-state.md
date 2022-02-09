@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.custom: 
 - CI 114181, CI 115742
 - CSSTroubleshoot
+- sap: office-experts
 ms.author: mattphil
 appliesto:
 - Microsoft 365 Apps for enterprise

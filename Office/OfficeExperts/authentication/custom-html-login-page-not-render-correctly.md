@@ -10,7 +10,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 appliesto:
 - Microsoft Office
 ---
