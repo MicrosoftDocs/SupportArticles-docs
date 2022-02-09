@@ -1,5 +1,5 @@
 ---
-title: 0xC004F038 computer could not be activated
+title: 0xC004F038 computer couldn't be activated
 description: Describes the Office 2010 and Office 2013 Activation troubleshooter for the "0xC004F038" error message. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
@@ -19,7 +19,7 @@ appliesto:
 - Office Standard 2013
 ---
 
-# "0xC004F038: The computer could not be activated" error in KMS activation
+# "0xC004F038: The computer couldn't be activated" error in KMS activation
 
 This article was written by [Eric Ashton](https://social.technet.microsoft.com/profile/EricAshton), Senior Support Escalation Engineer.
 
@@ -48,13 +48,13 @@ To resolve this problem, increase the number of client computers in the Office K
 >
 > `Cscript slmgr.vbs -dlv all >c:\temp\KMSInfo.txt`
 
-Go to c:\temp (or any custom location where you put the output), and then open KMSInfo.txt. Search for Office to find your Office KMS host installation details. Check the **Current Count** value. If the Office KMS count value is less than **5**, Office clients will not activate.
+Go to c:\temp (or any custom location where you put the output), and then open KMSInfo.txt. Search for Office to find your Office KMS host installation details. Check the **Current Count** value. If the Office KMS count value is less than **5**, Office clients won't activate.
 
 When the Office KMS pool contains five or more client computers, try to activate Office by using the Office activation wizard, [OSPP.vbs](/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office), or VAMT.
 
-If you use System Preparation (Sysprep) in your environment, it is possible that Office was not rearmed before the image creation. Therefore, computers may have the same client computer ID (CMID) for Office.
+If you use System Preparation (Sysprep) in your environment, it's possible that Office wasn't rearmed before the image creation. Therefore, computers may have the same client computer ID (CMID) for Office.
 
-If you have more than five computers that are trying to activate, and you still see this error message, check the KMS host log on Event Viewer on the KMS server. For example, you see entries that resembles the following:
+If you've more than five computers that are trying to activate, and you still see this error message, check the KMS host logon Event Viewer on the KMS server. For example, you see entries that resemble the following:
 
 - 0x0,5,Ignite1.ignite.local,930bd202-a335-4c7e-bd9d-7305361f0d37,Date/Time,0,5,0,6f327760-8c5c-417c-9b61-836a98287e0c
 - 0x0,5,Ignite2.ignite.local,2f362dd3-fb39-4d18-94e6-de1d30dd27d5,Date/Time,0,5,0,6f327760-8c5c-417c-9b61-836a98287e0c
