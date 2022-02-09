@@ -11,7 +11,7 @@ ms.service: az-devops-project
 
 This article describes the system processes that you should consider excluding from antivirus scanning on computers that are running Team Foundation Server.
 
-_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server
+_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server  
 _Original KB number:_ &nbsp; 2636507
 
 ## Summary
