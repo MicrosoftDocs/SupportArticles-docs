@@ -9,7 +9,9 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 ms.author: jalalb
 appliesto:
 - Office 2013

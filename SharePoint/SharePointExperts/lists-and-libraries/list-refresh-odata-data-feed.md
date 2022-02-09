@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
 ms.author: zakirh
 appliesto:
 - SharePoint Server 2013

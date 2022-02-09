@@ -9,7 +9,9 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
 ms.service: sharepoint-online
 appliesto:
 - Microsoft SharePoint

@@ -8,7 +8,9 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-solutions
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 ms.topic: troubleshooting
 ms.author: ericspli
 appliesto:

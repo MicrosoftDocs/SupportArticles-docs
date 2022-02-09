@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
 ms.author: randring
 appliesto:
 - SharePoint Server 2016

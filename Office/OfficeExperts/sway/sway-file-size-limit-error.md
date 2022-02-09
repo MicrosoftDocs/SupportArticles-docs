@@ -10,7 +10,9 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: troubleshooting
 ms.author: zakirh
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 appliesto:
 - Microsoft Sway
 ---

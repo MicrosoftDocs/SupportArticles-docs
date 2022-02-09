@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 ms.author: randring
 appliesto:
 - Excel Online
