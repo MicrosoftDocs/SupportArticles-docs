@@ -39,7 +39,7 @@ This section provides information on the CU and SP installation.
     1. Check *Summary.txt* and other setup log files that are by default present in the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder. For more information, see the [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true) section.
 
 1. Check for a matching scenario in the next few sections and follow associated troubleshooting steps for the corresponding scenario.
-1. If there is no matching scenario, look for additional pointers in the log files and also see the [CU and SP installation information](#cumulative-updates-and-service-pack-installation-information) section.
+1. If there's no matching scenario, look for additional pointers in the log files and also see the [CU and SP installation information](#cumulative-updates-and-service-pack-installation-information) section.
 
 ## Wait on Database Engine recovery handle failed, 912 and 3417 errors
 
@@ -59,7 +59,7 @@ To troubleshoot and fix these errors, do the following steps:
     - **Misconfigured System user/role in msdb database**
 
       This section provides steps to resolve misconfigured system user or role in the msdb database:
-       - TargetServersRole Schema/Security role: These are used in multi-server environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you are installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
+       - TargetServersRole Schema/Security role: These are used in multi-server environments and by default, the *TargetServersRole* security role is owned by dbo and the role owns TargetServersRole schema. If you inadvertently change this association, and the patch that you're installing includes updates to either of these, setup may fail with *Error 2714: There is already an object named 'TargetServersRole' in the database*. To resolve this error, after starting SQL Server TF902, use the following steps:
           
          1. Back up your msdb database.
          1. Make a list of users (if any) that are currently part of this role.
@@ -67,7 +67,7 @@ To troubleshoot and fix these errors, do the following steps:
          1. Restart the SQL Server without TF902 and see if the issue is resolved.
          1. Re-add the users from step 2 to TargetServersRole.
 
-        - Certificate-based SQL Server logins owning user objects: Principals enclosed by double hash marks (##) are created from certificates when SQL Server is installed and is meant for internal use and should not own any objects in **msdb** or other databases. If the error logs indicate a failure related to any of these logins, start SQL server with TF 902, change the ownership of the affected objects to a different user, and then restart SQL Server without TF902 for the upgrade script to complete execution.
+        - Certificate-based SQL Server logins owning user objects: Principals enclosed by double hash marks (##) are created from certificates when SQL Server is installed and is meant for internal use and shouldn't own any objects in **msdb** or other databases. If the error logs indicate a failure related to any of these logins, start SQL server with TF 902, change the ownership of the affected objects to a different user, and then restart SQL Server without TF902 for the upgrade script to complete execution.
 
           >[!NOTE]
           >Though failure to execute upgrade scripts is one of the common causes for "Wait on Database Engine recovery handle failed" error, the error can occur because of other reasons. The error means that the patch installer was unable to start the service or bring it online after the patch was installed. In either case, the troubleshooting involves reviewing error logs and setup logs to determine the cause of failure and take appropriate action.
@@ -88,12 +88,12 @@ To fix this issue, connect to the SQL Server instance using SQL Server Managemen
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
-For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), you must always follow the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true) sections. If you are running into errors applying a CU or an SP, check the following scenarios:
+For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), you must always follow the best practices noted in the [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true) sections. If you're running into errors applying a CU or an SP, check the following scenarios:
 
 - The remote registry service is up and running on all the nodes of the WSFC cluster.
 - If the service account for SQL Server isn't an administrator in your cluster, ensure administrative shares (C$ etc.) are enabled on all the nodes. For more information, see the [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md) section.
-When these shares are not properly configured, you may notice one or more of the following symptoms when trying to install a CU or SP:
-  - Patch takes a long time to run or does not respond. Setup logs do not reveal any progress.
+When these shares aren't properly configured, you may notice one or more of the following symptoms when trying to install a CU or SP:
+  - Patch takes a long time to run or doesn't respond. Setup logs don't reveal any progress.
   - Setup logs show messages like the following:
     - "The network path was not found".
     - "System.UnauthorizedAccessException: Attempted to perform an unauthorized operation".
