@@ -83,7 +83,7 @@ clear
 $cntr = 0 
 
 # replace with your server
-$serverName = "rabotenlaptop" 
+$serverName = "servername" 
 
 # replace with your volume name - C: , D:, etc
 $volumeName = "_total"
@@ -93,8 +93,8 @@ $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfe
 $disksectransfer = Get-Counter -Counter $Counters -MaxSamples 1 
 $avg = $($disksectransfer.CounterSamples | Select-Object CookedValue).CookedValue
 
-Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 30 | ForEach {
-$_.CounterSamples | ForEach {
+Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 30 | ForEach-Object {
+$_.CounterSamples | ForEach-Object {
    [pscustomobject]@{
       TimeStamp = $_.TimeStamp
       Path = $_.Path
@@ -142,8 +142,8 @@ $Counters = @(
    ("\\$serverName" +"\PhysicalDisk(*)\Disk Read Bytes/sec"),
    ("\\$serverName" +"\PhysicalDisk(*)\Disk Write Bytes/sec")
    )
-Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach  {
-$_.CounterSamples | ForEach 	  {
+Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach-Object  {
+$_.CounterSamples | ForEach-Object 	  {
    [pscustomobject]@{
       TimeStamp = $_.TimeStamp
       Path = $_.Path
