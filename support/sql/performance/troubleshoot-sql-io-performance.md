@@ -1,15 +1,15 @@
 ---
-title: Troubleshoot SQL Server slow performance caused by IO issues
+title: Troubleshoot SQL Server slow performance caused by I/O issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O 
-ms.date: 02/08/2022
+ms.date: 02/09/2022
 ms.prod-support-area-path: Performance
 ms.topic: troubleshooting
 ms.prod: sql
-author: padmajayaraman 
+author: PijoCoder 
 ms.author: v-jayaramanp
 ---
 
-# Troubleshoot SQL Server slow performance caused by IO issues
+# Troubleshoot SQL Server slow performance caused by I/O issues
 
 This article provides guidance on what I/O issues cause slow SQL Server performance and how to troubleshoot the issues.
 
@@ -61,7 +61,7 @@ Start-Sleep -s 2
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the error log. You can check SQL Server error logs on your system by running the following PowerShell command:
 
 ```Powershell
-  Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than" Longer than 15 secs
+Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than" Longer than 15 secs
 ```
 
 Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) section.
