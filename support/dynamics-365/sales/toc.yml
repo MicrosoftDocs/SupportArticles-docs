@@ -453,6 +453,12 @@
       href: installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md
   - name: Sales
     items:
+    - name: Troubleshooting common tables
+      href: ts-oqoi.md
+    - name: Troubleshooting currency and price lists
+      href: ts-currency-pricelist.md
+    - name: Troubleshooting views
+      href: ts-views.md
     - name: Troubleshooting forecasts
       href: ts-forecasts.md
     - name: Troubleshooting in-app marketing
