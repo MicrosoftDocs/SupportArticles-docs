@@ -8,7 +8,6 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: sharepoint-powershell
 ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto:

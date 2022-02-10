@@ -3,7 +3,6 @@ title: Error using Remote Connectivity Analyzer to troubleshoot Exchange ActiveS
 description: Describes an issue in which you receive an error message when you try to use the Remote Connectivity Analyzer tool to troubleshoot Exchange ActiveSync in Office 365. Provides a resolution.
 author: simonxjx
 audience: ITPro
-ms.service: o365-administration
 ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm

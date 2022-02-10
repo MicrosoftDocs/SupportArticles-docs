@@ -8,8 +8,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: o365-solutions
+ms.topic: troubleshooting
 description: Users from multiple federated domain (top level or child domains) are unable to sign in to office 365
 appliesto:
 - Office 365 Identity Management

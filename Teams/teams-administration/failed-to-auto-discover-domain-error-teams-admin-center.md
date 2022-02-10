@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 3/19/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: msteams
+ms.service: msteams
 localization_priority: Normal
 search.appverid:
 - SPO160

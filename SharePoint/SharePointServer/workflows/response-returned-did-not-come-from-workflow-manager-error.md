@@ -7,7 +7,7 @@ localization_priority: Normal
 ms.date: 8/1/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-powershell
+ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160

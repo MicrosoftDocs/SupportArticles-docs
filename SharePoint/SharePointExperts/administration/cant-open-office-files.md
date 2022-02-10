@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 2/7/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
+ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

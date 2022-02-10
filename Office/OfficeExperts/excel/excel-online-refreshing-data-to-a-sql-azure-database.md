@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom:
 - CSSTroubleshoot
 - sap: office-experts
-ms.service: o365-solutions
+ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: thempel
 appliesto:

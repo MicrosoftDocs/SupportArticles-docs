@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 02/10/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint
+ms.service: sharepoint-online
 localization_priority: Normal
 search.appverid:
 - SPO160

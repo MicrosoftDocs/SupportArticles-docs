@@ -7,7 +7,6 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu

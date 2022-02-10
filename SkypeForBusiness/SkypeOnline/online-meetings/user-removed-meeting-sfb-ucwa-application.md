@@ -6,7 +6,7 @@ ms.author: gclark
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: skype-for-business-itpro
+ms.service: skype-for-business-online
 localization_priority: Normal
 ms.custom: 
 - CI 117592

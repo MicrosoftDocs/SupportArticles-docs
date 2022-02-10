@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 12/12/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: skype-for-business
+ms.service: skype-for-business-online
 localization_priority: Normal
 search.appverid:
 - SPO160

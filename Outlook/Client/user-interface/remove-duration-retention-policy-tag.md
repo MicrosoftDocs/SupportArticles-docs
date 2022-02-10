@@ -6,7 +6,7 @@ ms.author: sfellman
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.service: o365-proplus-itpro
+ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
 - Outlook for Windows

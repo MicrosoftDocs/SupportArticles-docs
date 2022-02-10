@@ -5,7 +5,7 @@ author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
+ms.service: microsoft-365-enterprise
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 

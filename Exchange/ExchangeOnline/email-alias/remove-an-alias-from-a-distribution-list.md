@@ -13,7 +13,6 @@ f1_keywords:
 - 'O365M_AdminDistList_TSAlias'
 - 'O365E_AdminDistList_TSAlias'
 - 'AdminDistList_TSAlias'
-ms.service: o365-administration
 localization_priority: Normal
 ms.collection: 
 - M365-subscription-management 

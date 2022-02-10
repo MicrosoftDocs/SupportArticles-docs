@@ -7,7 +7,7 @@ localization_priority: Normal
 ms.date: 06/10/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: onedrive
+ms.service: one-drive
 ms.custom: 
 - CSSTroubleshoot
 - CI 119743

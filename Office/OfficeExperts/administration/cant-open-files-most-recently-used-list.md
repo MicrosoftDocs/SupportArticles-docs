@@ -12,7 +12,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: o365-solutions
+ms.prod: office-perpetual-itpro
 appliesto:
 - Office 365
 ---

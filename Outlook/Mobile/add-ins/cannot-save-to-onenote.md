@@ -6,7 +6,7 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
+ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
 - Outlook for iOS and Android

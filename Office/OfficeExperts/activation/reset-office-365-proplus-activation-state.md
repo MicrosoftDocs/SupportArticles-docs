@@ -6,7 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: MET150
 audience: ITPro
-ms.service: o365-solutions
+ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: 
 - CI 114181, CI 115742

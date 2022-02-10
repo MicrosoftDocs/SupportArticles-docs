@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
+ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto:

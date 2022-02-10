@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.custom:
 - CSSTroubleshoot
 - sap: spsexperts
-ms.service: sharepoint-online
+ms.prod: sharepoint-server-itpro
 appliesto:
 - Microsoft SharePoint
 ---

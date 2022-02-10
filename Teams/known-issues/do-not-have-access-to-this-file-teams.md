@@ -7,7 +7,7 @@ manager: dcscontentpm
 ms.date: 11/26/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: onedrive
+ms.service: msteams
 localization_priority: Normal
 search.appverid:
 - SPO160

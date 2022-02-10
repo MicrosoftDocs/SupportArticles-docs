@@ -11,7 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro 
+ms.prod: office-perpetual-itpro
 appliesto:
 - Microsoft Word
 ---

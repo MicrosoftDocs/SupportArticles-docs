@@ -8,7 +8,7 @@ search.appverid:
 - SPO160 
 - MET150
 audience: ITPro
-ms.prod: office 365
+ms.service: microsoft-365-security
 ms.topic: troubleshooting
 ms.custom: 
 - CSSTroubleshoot

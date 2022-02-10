@@ -6,7 +6,7 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: office 365
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
