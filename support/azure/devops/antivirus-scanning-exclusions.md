@@ -40,27 +40,27 @@ Target files will be locked when the antivirus software is scanning. You may enc
 
 You may have to configure your antivirus software to exclude the following processes, folders and their sub-folders from antivirus scanning:
 
-- `C:\Users\<TFS_Service_Account>\AppData\Local\Temp`
-- `C:\inetpub\temp"`
-- `%ProgramFiles%\Microsoft Team Foundation Server <VersionNumber>\Application Tier\Web Services\bin`
-- `%ProgramFiles%\Microsoft Team Foundation Server <VersionNumber>\Application Tier\Web Services\_tfs_data`
+- _C:\Users\\<TFS_Service_Account\>\AppData\Local\Temp_
+- _C:\inetpub\temp_
+- _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\bin_
+- _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\_tfs_data_
 - TFS Client Cache
-  - On TFS server: `C:\Users\<TFS_Service_Account>\AppData\Local\Microsoft\Team Foundation\<VersionNumber>\Cache`
-  - On Client: `C:\Users\<UserName>\AppData\Local\Microsoft\Team Foundation\<VersionNumber>\Cache`
+  - On TFS server: _C:\Users\\<TFS_Service_Account\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache_
+  - On Client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache_
 - TFS application tier Cache Location
 - Pipeline agent folders
-- `\Builds`, `\Symbols`, `\Drop`
-- `%ProgramFiles%\Microsoft Visual Studio <VersionNumber>`
-- `C:\Windows\Microsoft.NET\Framework`
-- `C:\Windows\Microsoft.NET\Framework\<VersionNumber>\Temporary ASP.NET Files`
-- `C:\Windows\Microsoft.NET\Framework64\<VersionNumber>\Temporary ASP.NET Files`
-- `TFSJobAgent.exe` process that is typically located at `%ProgramFiles%\Microsoft Team Foundation Server <VersionNumber>\Application Tier\TFSJobAgent\TFSJobAgent.exe`
+- _\Builds, \Symbols, \Drop_
+- _%ProgramFiles%\Microsoft Visual Studio \<VersionNumber\>_
+- _C:\Windows\Microsoft.NET\Framework_
+- _C:\Windows\Microsoft.NET\Framework\\<VersionNumber\>\Temporary ASP.NET Files_
+- _C:\Windows\Microsoft.NET\Framework64\\<VersionNumber\>\Temporary ASP.NET Files_
+- `TFSJobAgent.exe` process that is typically located at _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_
 
 ## More information
 
 For better performance of source control and other Team Foundation Server operations, we recommend adding the Internet Information Services (IIS) worker process (w3wp.exe) to the list of antivirus exclusions. This is not a requirement for Team Foundation Server.
 
-The w3wp.exe process is typically located at `C:\Windows\System32\inetsrv\w3wp.exe`. You can also locate this process by following these steps:
+The w3wp.exe process is typically located at _C:\Windows\System32\inetsrv\w3wp.exe_. You can also locate this process by following these steps:
 
 1. Make a Team Foundation Server web request such as by connecting to Team Foundation Server through Team Explorer.
 2. On the Team Foundation Server application tier or the Team Foundation Server proxy machine, open **Task Manager**, and then click the **Details** tab.
