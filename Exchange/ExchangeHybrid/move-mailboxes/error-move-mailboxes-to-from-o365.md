@@ -10,7 +10,7 @@ ms.custom:
 - Exchange Hybrid
 - CSSTroubleshoot
 audience: ITPro
-ms.prod: office 365
+ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: v-six
 appliesto:

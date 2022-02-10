@@ -5,7 +5,7 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office 365
+ms.service: exchange-online
 ms.topic: troubleshooting
 ms.custom: 
 - Exchange Online

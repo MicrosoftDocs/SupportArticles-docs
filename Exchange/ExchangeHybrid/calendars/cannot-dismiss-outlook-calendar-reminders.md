@@ -3,7 +3,7 @@ title: Calendar reminders in Outlook can't be dismissed or keep reappearing
 description: Describes an issue that prevents you from dismissing calendar reminders in Outlook. Provides a resolution.
 author: simonxjx
 audience: ITPro
-ms.prod: exchange-server-it-pro
+ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
