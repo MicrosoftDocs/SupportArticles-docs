@@ -1,46 +1,50 @@
 ---
-title: Dropdown does not load items
-description: Resolution for dropdown not loading items in trigger and actions.
+title: Dropdown list does not load items
+description: Provides steps to solve the issue where dropdown doesn't load items in triggers or actions in Microsoft Flow.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
-# SharePoint site not listed in trigger or action in Microsoft Flow
+# SharePoint site isn't listed in a trigger or an action in Microsoft Flow
 
-This article provides resolutions for the issue that dropdown is not loading items.
+This article provides a resolution for the issue that dropdown doesn't load items.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4527556
 
 ## Symptoms
 
-In Flow, you can select a SharePoint site, Onedrive path, SQL/Dataverse table in certain triggers or actions. You may open this dropdown and not be able to find your specific item for eg SharePoint site, SQL table, etc.
+In Microsoft Flow, you can select a SharePoint site, OneDrive path, and a SQL Server or Dataverse table in certain triggers or actions from the dropdown list. However, when you open the dropdown list, you may not be able to find a specific item, for example, a SharePoint site, a SQL Server table and so on.
 
 ## Cause
 
-Users may not be able to see items listed in the dropdown list in Flow. Sometimes, when you have too many SharePoint items on a SharePoint site or too many files in a Onedrive folder path, the dropdown will timeout after 35 seconds trying to fetch all the items and will not load any items for you to select one from.
+You may not be able to see items listed in the dropdown list in Flow. Sometimes, when you have too many SharePoint items on a SharePoint site or too many files in a OneDrive folder path, the dropdown will time out after 35 seconds when trying to fetch all the items and won't load any items for you to select one from.
 
 ## Resolution
 
-Users can still use _Enter Custom Value_ option to manually type the SharePoint list name, or SQL table name or Onedrive file name and run the flow.
+Before you run the flow, you can use the **Enter custom value** option to manually type the SharePoint list name, SQL Server table name, or OneDrive file name as follows.
 
-### Resolution 1 - Select Enter custom value
+### Step 1 - Select Enter custom value
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/enter-custom-value.png" alt-text="Screenshot to select the Enter custom value item.":::
+In the **Site Address** text box dropdown list, select the **Enter custom Value** option.
 
-### Resolution 2 - Get the SharePoint site URL
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/enter-custom-value.png" alt-text="Screenshot to select the Enter custom value item." border="false":::
+
+### Step 2 - Get the SharePoint site URL
 
 You can find the SharePoint site URL by going to the desired site in SharePoint and copying the url from the browser. Make sure you have access to the SharePoint site.
 
-You can also use any URL from your SharePoint site. The Flow designer will clean up the URL once it is pasted in.
+You can also use any URL from your SharePoint site. The Flow designer will clean up the URL once it's pasted in.
 
-### Resolution 3 - Type the SharePoint URL directly into the dropdown text box
+### Step 3 - Type the SharePoint site URL into Site Address
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/type-url.png" alt-text="Screenshot to type the SharePoint U R L directly into the dropdown text box.":::
+In the **Site Address** text box, type the SharePoint site URL.
+
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/type-url.png" alt-text="Screenshot to type the SharePoint U R L directly into the dropdown text box." border="false":::
 
 The Flow designer will clean up any URL and point it directly to the SharePoint site.
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/clean-url-sharepoint-site.png" alt-text="Screenshot shows the Flow designer points the U R L directly to the SharePoint site.":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/clean-url-sharepoint-site.png" alt-text="Screenshot shows the Flow designer points the U R L directly to the SharePoint site." border="false":::
 
-The dropdown should fill in the SharePoint site automatically. Make sure you have access to the SharePoint site. Follow similar steps for other connectors like Onedrive, SQL, Dataverse, etc. 
+The dropdown list should fill in the SharePoint site automatically. Make sure you have access to the SharePoint site. You can follow the similar steps for other connectors such as OneDrive, SQL Server, and Dataverse.
