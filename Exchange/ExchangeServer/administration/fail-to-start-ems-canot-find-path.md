@@ -3,7 +3,6 @@ title: Exchange Management Shell fails to start with error Cannot find path beca
 description: This article describes an issue that Exchange Management Shell fails to start with error "Cannot find path because it does not exist"
 author: simonxjx
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: batre
 manager: dcscontentpm

@@ -13,7 +13,6 @@ f1_keywords:
 - 'O365M_AdminGroups_TSAlias'
 - 'O365E_AdminGroups_TSAlias'
 - 'AdminGroups_TSAlias'
-ms.service: o365-administration
 localization_priority: None
 ms.collection: 
 - M365-subscription-management 
