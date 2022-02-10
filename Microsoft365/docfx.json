@@ -110,7 +110,44 @@
       "searchScope": "Office 365 Support",
       "titleSuffix": "Office 365"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "admin/**/*.md": "microsoft-365-admin",
+        "enterprise/**/*.md":	"microsoft-365-enterprise",
+        "security/**/*.md":	"microsoft-365-security",
+        "compliance/**/*.md":	"microsoft-365-compliance"      
+      },
+      "ms.subservice": {
+        "admin/access-management/**/*.md": "access-management",
+        "admin/active-directory/**/*.md": "active-directory",
+        "admin/administration/**/*.md": "administration",
+        "admin/authentication/**/*.md": "authentication",
+        "admin/diagnostic-logs/**/*.md": "diagnostic-logs",
+        "admin/domain-management/**/*.md": "domain-management",
+        "admin/group-policy/**/*.md": "group-policy",
+        "admin/groups/**/*.md": "groups",
+        "admin/installation/**/*.md": "installation",
+        "admin/licensing/**/*.md": "licensing",
+        "admin/miscellaneous/**/*.md": "miscellaneous",
+        "admin/sign-in/**/*.md": "sign-in",
+        "admin/updates/**/*.md": "updates",
+        "enterprise/administration/**/*.md": "administration",
+        "enterprise/authentication/**/*.md": "authentication",
+        "enterprise/miscellaneous/**/*.md": "miscellaneous",
+        "enterprise/project-online/**/*.md": "project-online",
+        "security/antispam/**/*.md": "antispam",
+        "security/o365-security/**/*.md": "o365-security",
+        "compliance/archive-mailboxes/**/*.md": "archive-mailboxes",
+        "compliance/audit-logs/**/*.md": "audit-logs",
+        "compliance/data-loss-preventiones/**/*.md": "data-loss-prevention",
+        "compliance/ediscovery/**/*.md": "ediscovery",
+        "compliance/holds/**/*.md": "holds",
+        "compliance/information-barriers/**/*.md": "information-barriers",
+        "compliance/office-message-encryption/**/*.md": "office-message-encryption",
+        "compliance/pst-import-service/**/*.md": "pst-import-services",
+        "compliance/retention/**/*.md": "retention"
+      }
+    },
     "template": [],
     "dest": "OfficeDocs-Support-Office365",
     "markdownEngineName": "markdig"
