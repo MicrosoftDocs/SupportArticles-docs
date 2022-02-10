@@ -8,7 +8,7 @@ author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office 365
+ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.collection: M365-security-compliance 
 search.appverid: 

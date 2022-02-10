@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 9/4/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: microsoft-365
+ms.service: microsoft-365-admin
 localization_priority: Normal
 search.appverid:
 - SPO160

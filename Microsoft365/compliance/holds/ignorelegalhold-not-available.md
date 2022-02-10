@@ -6,7 +6,7 @@ ms.author: lindabr
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: office 365
+ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
 - CI 121741

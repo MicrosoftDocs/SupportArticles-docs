@@ -4,7 +4,6 @@ description: Describes a problem in which you cannot find any clip art when you 
 author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
-ms.service: sharepoint-powershell
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot

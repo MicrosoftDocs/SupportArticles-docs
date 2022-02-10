@@ -3,7 +3,7 @@ title: Cannot create appointment or all day event in the calendar of a shared ma
 description: Resolves an issue in which a user cannot create an appointment or all day event in the calendar of a shared mailbox. This issue occurs after the user opens the shared mailbox by using Outlook or Outlook Web App in an Exchange Server 2007 or 2010 environment.
 author: simonxjx
 audience: ITPro
-ms.service: exchange-powershell
+ms.prod: exchange-server-it-pro
 ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
