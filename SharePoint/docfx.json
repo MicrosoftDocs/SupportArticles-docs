@@ -126,8 +126,8 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "SharePointServer/**/*.md":	"sharepoint-server-itpro",
-        "SharePointExperts/**/*.md":	"sharepoint-server-itpro"
+        "SharePointServer/**/*.md": "sharepoint-server-itpro",
+        "SharePointExperts/**/*.md": "sharepoint-server-itpro"
       },
       "ms.technology": {
         "SharePointServer/administration/**/*.md": "administration",
@@ -155,9 +155,9 @@
         "SharePointExperts/web-parts/**/*.md": "web-parts"
       },
       "ms.service": {
-        "SharePointHybrid/**/*.md":	"sharepoint-online",
-        "SharePointOnline/**/*.md":	"sharepoint-online",
-        "OneDrive/**/*.md":	"one-drive"       
+        "SharePointHybrid/**/*.md": "sharepoint-online",
+        "SharePointOnline/**/*.md": "sharepoint-online",
+        "OneDrive/**/*.md": "one-drive"       
       },
       "ms.subservice": {
         "SharePointOnline/administration/**/*.md": "administration",

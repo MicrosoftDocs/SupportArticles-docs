@@ -113,9 +113,9 @@
     "fileMetadata": {
       "ms.service": {
         "admin/**/*.md": "microsoft-365-admin",
-        "enterprise/**/*.md":	"microsoft-365-enterprise",
-        "security/**/*.md":	"microsoft-365-security",
-        "compliance/**/*.md":	"microsoft-365-compliance"      
+        "enterprise/**/*.md": "microsoft-365-enterprise",
+        "security/**/*.md": "microsoft-365-security",
+        "compliance/**/*.md": "microsoft-365-compliance"      
       },
       "ms.subservice": {
         "admin/access-management/**/*.md": "access-management",

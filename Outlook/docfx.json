@@ -113,7 +113,7 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "**/*.md":	"outlook"
+        "**/*.md": "outlook"
       },
       "ms.technology": {
         "Client/authentication/**/*.md": "authentication",

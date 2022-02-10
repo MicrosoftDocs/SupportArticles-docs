@@ -94,7 +94,7 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "ExchangeServer/**/*.md":	"exchange-server-it-pro"     
+        "ExchangeServer/**/*.md": "exchange-server-it-pro"     
       },
       "ms.technology": {
         "ExchangeServer/administration/**/*.md": "administration",
@@ -108,8 +108,8 @@
         "ExchangeServer/setup/**/*.md": "setup"
       },
       "ms.service": {
-        "ExchangeOnline/**/*.md":	"exchange-online",
-        "ExchangeHybrid/**/*.md":	"exchange-online"        
+        "ExchangeOnline/**/*.md": "exchange-online",
+        "ExchangeHybrid/**/*.md": "exchange-online"        
       },
       "ms.subservice": {
         "ExchangeHybrid/administration/**/*.md": "administration",

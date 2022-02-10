@@ -110,8 +110,8 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "SkypeServer/**/*.md":	"skype-for-business-itpro",
-        "SkypeExperts/**/*.md":	"skype-for-business-itpro"
+        "SkypeServer/**/*.md": "skype-for-business-itpro",
+        "SkypeExperts/**/*.md": "skype-for-business-itpro"
       },
       "ms.technology": {
         "SkypeExperts/performance-issues/**/*.md": "",
@@ -128,8 +128,8 @@
         "SkypeServer/server-sign-in/**/*.md": "sign-in"
       },
       "ms.service": {
-        "SkypeOnline/**/*.md":	"skype-for-business-online",
-        "SkypeHybrid/**/*.md":	"skype-for-business-online"        
+        "SkypeOnline/**/*.md": "skype-for-business-online",
+        "SkypeHybrid/**/*.md": "skype-for-business-online"     
       },
       "ms.subservice": {
         "SkypeHybrid/hybrid-conferencing/**/*.md": "conferencing",

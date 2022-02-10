@@ -78,7 +78,7 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "**/*.md":	"office-perpetual-itpro"     
+        "**/*.md": "office-perpetual-itpro"     
       },
       "ms.technology": {
         "Client/access/**/*.md": "access",
