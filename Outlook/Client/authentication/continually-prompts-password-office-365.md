@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
+ms.prod: outlook
 ms.topic: troubleshooting
 ms.custom: 
 - Outlook for Windows

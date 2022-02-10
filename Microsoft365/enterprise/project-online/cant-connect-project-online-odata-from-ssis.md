@@ -9,7 +9,6 @@ search.appverid:
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.service: o365-solutions
 description: OData Connection to Project Online from SSIS is failing if TLS is not enabled.
 appliesto:
 - Project Online

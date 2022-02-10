@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office 365
+ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: eileenor, jhayes

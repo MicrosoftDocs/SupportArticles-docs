@@ -144,7 +144,7 @@
         "compliance/holds/**/*.md": "holds",
         "compliance/information-barriers/**/*.md": "information-barriers",
         "compliance/office-message-encryption/**/*.md": "office-message-encryption",
-        "compliance/pst-import-service/**/*.md": "pst-import-services",
+        "compliance/pst-import-service/**/*.md": "pst-import-service",
         "compliance/retention/**/*.md": "retention"
       }
     },
