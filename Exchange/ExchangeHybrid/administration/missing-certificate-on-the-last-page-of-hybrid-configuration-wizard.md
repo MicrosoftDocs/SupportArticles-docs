@@ -33,7 +33,7 @@ This issue occurs if the root certification authority (CA) wasn't imported succe
 
 ## Resolution
 
-To resolve this issue, check the value of the `RootCAType` property. To do this, use the Exchange Management Shell on the hybrid server to run the following command:
+To resolve this issue, check the value of the `RootCAType` property. To do so, use the Exchange Management Shell on the hybrid server to run the following command:
 
 ```powershell
 Get-ExchangeCertificate | FL
@@ -41,7 +41,7 @@ Get-ExchangeCertificate | FL
 
 The `RootCAType` property identifies the kind of CA that issued the certificate. It should return a value of **ThirdParty**.
 
-If it instead returns a value of either **Registry** or **None**, reimport the certificate on the hybrid server, and then configure the certificate for an Exchange hybrid deployment. For more information about how to do this, see [Configure Exchange Certificates for an Exchange 2007 Hybrid Deployment](/previous-versions/exchange-server/exchange-141/gg981497(v=exchg.141)).
+If it instead returns a value of either **Registry** or **None**, reimport the certificate on the hybrid server, and then configure the certificate for an Exchange hybrid deployment. For more information, see [Configure Exchange Certificates for an Exchange 2007 Hybrid Deployment](/previous-versions/exchange-server/exchange-141/gg981497(v=exchg.141)).
 
 ## More information
 
