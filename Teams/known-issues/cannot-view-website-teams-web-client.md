@@ -7,7 +7,6 @@ manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
 ms.service: msteams
-ms.technology: microsoft-graph
 localization_priority: Normal
 ms.custom: 
 - CI 122983

@@ -7,7 +7,6 @@ ms.date: 10/13/2020
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 ms.service: msteams
-ms.technology: microsoft-graph
 localization_priority: Normal
 search.appverid:
 - SPO160
