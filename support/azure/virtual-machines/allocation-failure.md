@@ -46,7 +46,7 @@ A request to resize a VM or add a VM to an existing availability set must be tri
 
 If the VM can be part of a different availability set, create a VM in a different availability set (in the same region). This new VM can then be added to the same virtual network.
 
-Stop (deallocate) all VMs in the same availability set, then start all applicable VMs as a single operation.
+Stop (deallocate) all VMs in the same availability set, then start all applicable VMs in batch.
 To stop: Click Resource groups > [your resource group] > Resources > [your availability set] > Virtual Machines > [your virtual machine] > Stop.
 After all VMs stop, navigate to **Home** > **Virtual machines**, add an **Availability set** filter and then select **Group by availability set**. Select all applicable VMs and click **Start**.
 This step makes sure that a new allocation attempt is run and that a new cluster can be selected that has sufficient capacity.
@@ -59,7 +59,7 @@ Partial deallocation means that you stopped (deallocated) one or more, but not a
 
 ### Workaround
 
-Stop (deallocate) all VMs in the same availability set, then start all applicable VMs as a single operation.
+Stop (deallocate) all VMs in the same availability set, then start all applicable VMs in batch.
 To stop: Click Resource groups > [your resource group] > Resources > [your availability set] > Virtual Machines > [your virtual machine] > Stop.
 After all VMs stop, navigate to **Home** > **Virtual machines**, add an **Availability set** filter and then select **Group by availability set**. Select all applicable VMs and click **Start**.
 This will make sure that a new allocation attempt is run and that a new cluster can be selected that has sufficient capacity.
