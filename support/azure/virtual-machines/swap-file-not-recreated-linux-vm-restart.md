@@ -60,7 +60,8 @@ To resolve this problem, follow these steps:
         else
         swapon /mnt/swapfile; fi
         ```
-> [!NOTE] Under some conditions, fallocate will not create a swap file properly. If this occurs, you can use this alternate script:
+> [!NOTE] 
+> Under some conditions, fallocate will not create a swap file properly. If this occurs, you can use this alternate script:
 
 ```
 dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048
