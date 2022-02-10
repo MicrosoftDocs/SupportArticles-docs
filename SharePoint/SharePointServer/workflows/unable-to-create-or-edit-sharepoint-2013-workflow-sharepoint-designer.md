@@ -7,7 +7,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro 
+ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150

@@ -7,7 +7,7 @@ manager: dcscontentpm
 editor: v-jesits
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: microsoft-teams
+ms.service: msteams
 ms.technology: microsoft-graph
 localization_priority: Normal
 ms.custom: 

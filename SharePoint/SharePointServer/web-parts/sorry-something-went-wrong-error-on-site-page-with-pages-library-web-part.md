@@ -9,7 +9,7 @@ search.appverid:
 - MET150
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro 
+ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

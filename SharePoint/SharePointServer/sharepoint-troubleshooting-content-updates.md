@@ -6,7 +6,7 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: conceptual
-ms.service: sharepoint-powershell
+ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 search.appverid:
 - MET150

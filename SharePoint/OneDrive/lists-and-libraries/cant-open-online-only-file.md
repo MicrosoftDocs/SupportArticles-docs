@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 02/06/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: onedrive
+ms.service: one-drive
 localization_priority: Normal
 search.appverid:
 - SPO160

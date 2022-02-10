@@ -6,7 +6,7 @@ ms.author: kellybos
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: microsoft-teams
+ms.service: msteams
 ms.technology: microsoft-graph
 localization_priority: Normal
 ms.custom: 

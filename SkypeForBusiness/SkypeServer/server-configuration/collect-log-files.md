@@ -6,7 +6,7 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
+ms.prod: skype-for-business-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
