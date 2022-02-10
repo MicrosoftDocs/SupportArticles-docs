@@ -5,6 +5,8 @@ ms.date: 09/22/2021
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
+author: pijocoder
+ms.author: jopilov
 ---
 
 # Troubleshoot query time-out errors
