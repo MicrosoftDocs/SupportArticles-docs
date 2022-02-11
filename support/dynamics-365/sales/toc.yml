@@ -453,6 +453,20 @@
       href: installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md
   - name: Sales
     items:
+    - name: Troubleshooting leads
+      items:
+      - name: Lead qualification issues and resolution for salespeople
+        href: ts-leads-salespeople.md
+      - name: Lead qualification issues and resolution for system administrators
+        href: ts-leads-sys-admin.md
+      - name: Automatic generation of contact or company-related fields
+        href: ts-leads-auto-generate-contact.md
+    - name: Troubleshooting opportunities
+      href: ts-opportunities.md
+    - name: Troubleshooting orders
+      href: ts-orders.md
+    - name: Troubleshooting products
+      href: ts-products.md
     - name: Troubleshooting common tables
       href: ts-oqoi.md
     - name: Troubleshooting currency and price lists
