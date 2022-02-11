@@ -1,0 +1,31 @@
+### YamlMime:Landing
+
+title: Internet Information Service troubleshooting # < 60 chars
+summary: Welcome to Internet Information Service troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Internet Information Service. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Internet Information Service troubleshooting
+  description: Landing page for Internet Information Service troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: iis  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author:   #Required; your GitHub user alias, with correct capitalization.
+  ms.author:  #Required; microsoft alias of author; optional team alias.
+  ms.date: 02/11/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Most Popular Topics
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: HTTP Status Code
+            url: www-administration-management/http-status-code.md
+          - text: HTTP error 500.19
+            url: health-diagnostic-performance/http-error-500-19-webpage.md
+          - text: HTTP error 403.14
+            url: health-diagnostic-performance/http-403-14-forbidden-webpage.md
+          - text: HTTP error 500.0 when you visit a Web site
+            url: www-administration-management/http-error-500-when-you-visit-web-site.md
+            
