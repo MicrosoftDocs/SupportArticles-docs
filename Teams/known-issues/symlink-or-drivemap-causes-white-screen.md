@@ -1,5 +1,5 @@
 ---
-title: "Using symlink or drivemap to C:\users causes Teams to open with white screen"
+title: 'Using symlink or drivemap to C:\users causes Teams to open with white screen'
 ms.author: luche
 author: helenclu
 ms.date: 4/9/2020
@@ -16,7 +16,7 @@ ms.custom:
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero
-description: "Resolves an issue where Teams will open with a white screen when mapped to C:\users."
+description: 'Resolves an issue where Teams will open with a white screen when mapped to C:\users.'
 ---
 
 # Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
