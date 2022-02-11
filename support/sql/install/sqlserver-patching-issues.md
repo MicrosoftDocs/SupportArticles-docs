@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common SQL Server update issues
 description: This article helps you to troubleshoot common SQL Server update issues. 
-ms.date: 11/02/2022
+ms.date: 02/11/2022
 ms.prod-support-area-path: Installation, Patching and Upgrade
 author: ramakoni
 ms.author: v-jayaramanp
