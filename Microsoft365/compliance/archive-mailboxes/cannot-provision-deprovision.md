@@ -6,14 +6,13 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: kellybos
 appliesto: 
-- Microsoft Business Productivity Online Dedicated
-- Microsoft Business Productivity Online Suite Federal
+  - Microsoft Business Productivity Online Dedicated
+  - Microsoft Business Productivity Online Suite Federal
 search.appverid: MET150
 ---
 

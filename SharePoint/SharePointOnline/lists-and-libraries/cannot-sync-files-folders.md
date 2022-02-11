@@ -1,19 +1,18 @@
 ---
 title: You can't sync files or folders, or you receive errors when you open files
-description: Describes an issue that occurs when you upload or create a folder that's named "_private" in SharePoint Online, and provides a solution.
+description: Describes an issue that occurs when you upload or create a folder that's named _private in SharePoint Online, and provides a solution.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- OneDrive for Business
+appliesto: 
+  - SharePoint Online
+  - OneDrive for Business
 ---
 
 # You can't sync files or folders in Office 365, or receive errors when you open files in Office Online

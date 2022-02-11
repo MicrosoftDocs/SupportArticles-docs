@@ -5,21 +5,20 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Office 365
-- Microsoft Intune
-- CRM Online via Office 365 E Plans  
-- Azure Backup
-- Office 365 User and Domain Management
-- Office 365 Identity Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Office 365
+  - Microsoft Intune
+  - CRM Online via Office 365 E Plans
+  - Azure Backup
+  - Office 365 User and Domain Management
+  - Office 365 Identity Management
 ---
 
 # "The user name or password is incorrect" when you use connect-MSOLService to connect to Office 365

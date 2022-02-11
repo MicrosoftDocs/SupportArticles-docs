@@ -5,19 +5,18 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 search.appverid: 
-- MET150
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 User and Domain Management
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 User and Domain Management
+  - Office 365 Identity Management
 ---
 
 # "Sorry, but we're having trouble signing you in" when a user signs in to Office 365, Azure, or Intune

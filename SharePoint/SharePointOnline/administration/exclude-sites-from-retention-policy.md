@@ -8,15 +8,14 @@ localization_priority: Normal
 ms.date: 05/19/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 ms.custom: 
-- CSSTroubleshoot
-- CI 149492
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+  - CSSTroubleshoot
+  - CI 149492
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ---
 
 # Exclude or remove sites from a SharePoint Online retention policy

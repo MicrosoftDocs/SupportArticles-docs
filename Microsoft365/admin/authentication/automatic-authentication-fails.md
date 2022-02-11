@@ -1,24 +1,23 @@
 ---
 title: Authentication automatically fails in Office 365 services
-description: Learn how to reinstall packages for ADAL and Live ID to troubleshoot authentication issues and Outlook issues that may go into the "Need Password" state.
+description: Learn how to reinstall packages for ADAL and Live ID to troubleshoot authentication issues and Outlook issues that may go into the Need Password state.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
+manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 109229
-- CSSTroubleshoot
+  - CI 109229
+  - CSSTroubleshoot
 ms.reviewer: dthayer
-appliesto:
-- Office 365
-- Outlook for Office 365
-- Word for Office 365
-- Excel for Office 365
-- PowerPoint for Office 365
-- OneNote for Office 365
+appliesto: 
+  - Office 365
+  - Outlook for Office 365
+  - Word for Office 365
+  - Excel for Office 365
+  - PowerPoint for Office 365
+  - OneNote for Office 365
 search.appverid: MET150
 ---
 

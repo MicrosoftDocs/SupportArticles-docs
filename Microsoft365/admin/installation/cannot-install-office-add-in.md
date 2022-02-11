@@ -5,18 +5,17 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Microsoft 365 Apps
-- Office LTSC 2021
-- Office 2019
-- Office 2016
-- Office 2013
+appliesto: 
+  - Microsoft 365 Apps
+  - Office LTSC 2021
+  - Office 2019
+  - Office 2016
+  - Office 2013
 ---
 # "We can't start this app..." error installing an Office add-in
 

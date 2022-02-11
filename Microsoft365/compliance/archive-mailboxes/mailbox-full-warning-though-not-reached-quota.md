@@ -1,19 +1,18 @@
 ---
 title: (Mailbox is full) warning when it hasn't reached quota
-description: Fixes an issue in which your receive receives a "mailbox is full" warning even if the mailbox hasn't reached the quota. Also you may not delete message and not change or accept any calendar invitation.
+description: Fixes an issue in which your receive receives a mailbox is full warning even if the mailbox hasn't reached the quota. Also you may not delete message and not change or accept any calendar invitation.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-ms.custom:
-- CI 125840
-- CSSTroubleshoot
+ms.custom: 
+  - CI 125840
+  - CSSTroubleshoot
 ms.reviewer: wesmils
 appliesto: 
-- Exchange Online
+  - Exchange Online
 search.appverid: MET150
 ---
 # "Mailbox is full" warning even if the mailbox hasn't reached the storage limit

@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server 2013
 ---
 
 # Workflow problems after you connect to a SharePoint Online or SharePoint Server 2013 site

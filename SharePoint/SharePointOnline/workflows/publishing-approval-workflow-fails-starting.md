@@ -1,19 +1,18 @@
 ---
 title: Publishing approval workflow doesn't automatically start
-description: A Publishing Approval workflow doesn't start automatically with the error "The workflow could not update the item, possibly because one or more columns for the item require a different type of information." 
+description: A Publishing Approval workflow doesn't start automatically with the error The workflow could not update the item, possibly because one or more columns for the item require a different type of information.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Server
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server
 ---
 
 # Publishing Approval workflow doesn't automatically start in SharePoint Online or in SharePoint Server on-premises

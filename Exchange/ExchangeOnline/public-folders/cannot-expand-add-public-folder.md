@@ -5,20 +5,19 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: haembab
 ms.custom: 
-- CSSTroubleshoot
-- CI 125428
-- Exchange Online
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - CSSTroubleshoot
+  - CI 125428
+  - Exchange Online
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 
 # Can't expand or add public folders in Outlook or OWA

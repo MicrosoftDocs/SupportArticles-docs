@@ -4,18 +4,17 @@ description: Microsoft Teams users cannot make outbound calls to external phone 
 author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 112082, 120059
-- CSSTroubleshoot
+  - CI 112082, 120059
+  - CSSTroubleshoot
 ms.reviewer: kellybos
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Dial pad is missing in Teams

@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: jmartin
-appliesto:
-- Outlook for iOS
-- Outlook for Android
-- Exchange Online
+appliesto: 
+  - Outlook for iOS
+  - Outlook for Android
+  - Exchange Online
 search.appverid: MET150
 ---
 # Outlook app access may end after June 1 if EWS application policies are not set up correctly

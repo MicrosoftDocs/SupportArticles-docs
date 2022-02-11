@@ -4,18 +4,17 @@ description: Fixes some meeting chat issues when you join a Teams meeting. For e
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 154689
-- CSSTroubleshoot
+  - CI 154689
+  - CSSTroubleshoot
 ms.reviewer: sylviebo; meerak
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Chat issues in Teams meeting

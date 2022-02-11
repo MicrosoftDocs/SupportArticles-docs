@@ -6,13 +6,12 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 ms.reviewer: umeshk
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # You can't search inactive mailboxes in Exchange Online

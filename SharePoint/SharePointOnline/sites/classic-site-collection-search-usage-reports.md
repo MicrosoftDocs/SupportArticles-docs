@@ -2,19 +2,18 @@
 title: Classic site collection search usage reports
 description: This article provides information about usage and popularity reports in SharePoint Online.
 author: wbaer
-ms.custom:
-- CI 109958 
-- CSSTroubleshoot 
+ms.custom: 
+  - CI 109958
+  - CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: wbaer
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Classic site collection search usage reports

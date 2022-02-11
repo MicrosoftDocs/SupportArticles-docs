@@ -4,20 +4,19 @@ description: When run In-Place eDiscovery search for Exchange Online mailbox in 
 author: MaryQiu1987
 ms.author: akashb
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-ms.custom:
-- CI 111898
-- CSSTroubleshoot 
+ms.custom: 
+  - CI 111898
+  - CSSTroubleshoot
 ms.reviewer: lindabr, akashb
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-search.appverid:
-- MET150
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+search.appverid: 
+  - MET150
 ---
 
 # Can't run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC

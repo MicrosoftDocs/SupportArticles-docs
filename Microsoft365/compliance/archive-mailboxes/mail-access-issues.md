@@ -6,20 +6,19 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 - 'Associated content asset: 4555316'
 ms.reviewer: timothyh, bilong
 appliesto: 
-- Exchange Online,Exchange Online Archiving
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+  - Exchange Online,Exchange Online Archiving
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Mail access issues in a hybrid Exchange deployment with cloud-based archive

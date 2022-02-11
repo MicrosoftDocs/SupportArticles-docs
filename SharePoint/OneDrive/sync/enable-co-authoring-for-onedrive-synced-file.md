@@ -4,15 +4,14 @@ description: Explains how to enable coauthoring for OneDrive-synced files in Off
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: one-drive
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- OneDrive for Business
+  - MET150
+appliesto: 
+  - OneDrive for Business
 ---
 
 # How to enable coauthoring for OneDrive-synced files in Office 365

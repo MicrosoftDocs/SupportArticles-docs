@@ -4,17 +4,16 @@ description: Describes an issue that you cannot connect to the Azure Information
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- office 365
-- Azure Information Protection
-- Azure Active Directory
+  - MET150
+appliesto: 
+  - office 365
+  - Azure Information Protection
+  - Azure Active Directory
 ---
 
 # You can't connect to the Azure Information Protection service in Office 365

@@ -4,18 +4,17 @@ description: Describes how to use Teams admin center to collect Android device l
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: article 
-ms.service: msteams
+audience: ITPro
+ms.topic: article
 localization_priority: Normal
 ms.custom: 
-- CI 160238
-- CSSTroubleshoot
+  - CI 160238
+  - CSSTroubleshoot
 ms.reviewer: miaitelh
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Collect device logs for Android Teams devices
 

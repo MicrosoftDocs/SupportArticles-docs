@@ -6,17 +6,16 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-security
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: rorylen
 appliesto: 
-- Exchange Online
-- Exchange Online Protection
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
+  - Exchange Online
+  - Exchange Online Protection
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ---
 

@@ -1,26 +1,25 @@
 ---
 title: Manage Federation Wizard can't roll to a new certificate
-description: Fixes an issue in which the Manage Federation Wizard doesn't update the certificate in Office 365 after you select the "Roll certificate to make the next certificate as the current certificate" check box.
+description: Fixes an issue in which the Manage Federation Wizard doesn't update the certificate in Office 365 after you select the Roll certificate to make the next certificate as the current certificate check box.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
-- CI 160743
+  - Exchange Hybrid
+  - CSSTroubleshoot
+  - CI 160743
 ms.reviewer: chrisbur, jhayes
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Exchange Online
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Exchange Online
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Federation certificate with the thumbprint cannot be found when using the next certificate

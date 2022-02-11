@@ -6,13 +6,12 @@ ms.author: cmahoo
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Create a default Site collection Term Set if none is present

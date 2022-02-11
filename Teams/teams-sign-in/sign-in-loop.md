@@ -1,19 +1,18 @@
 ---
-title: Teams web client is stuck in a login loop 
-description: The Teams web client continually loops when you try to sign in. 
+title: Teams web client is stuck in a login loop
+description: The Teams web client continually loops when you try to sign in.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: msteams
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft Teams
-- Skype for Business Online
+appliesto: 
+  - Microsoft Teams
+  - Skype for Business Online
 ---
 
 # Teams web client is stuck in a login loop

@@ -5,19 +5,18 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: v-tain, corbinm, dahans
-appliesto:
-- Skype for Business Online
-- Skype for Business Server 2015
-- Lync Server 2013
-- Lync Server 2010 Enterprise Edition
-- Lync Server 2010 Standard Edition
+appliesto: 
+  - Skype for Business Online
+  - Skype for Business Server 2015
+  - Lync Server 2013
+  - Lync Server 2010 Enterprise Edition
+  - Lync Server 2010 Standard Edition
 ---
 
 # "There is a duplicate key sequence" in Lync or Skype for Business after you run the New-CSHostingProvider cmdlet

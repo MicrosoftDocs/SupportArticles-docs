@@ -4,16 +4,15 @@ description: Resolves an issue that occurs if the user's UPN in the on-premises 
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Azure Active Directory
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Azure Active Directory
+  - Office 365 Identity Management
 ---
 
 # "This doesn't look like a valid user ID" error when a user tries to sign in to Office 365

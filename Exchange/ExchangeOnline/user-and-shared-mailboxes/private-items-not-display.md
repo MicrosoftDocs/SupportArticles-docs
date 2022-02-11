@@ -6,19 +6,18 @@ ms.author: shmcdani
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
   - CI 123194
 ms.reviewer: shmcdani
-appliesto:
-- Outlook for Microsoft 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Exchange Online
+appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Exchange Online
 search.appverid: MET150
 ---
 

@@ -6,23 +6,22 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: alinastr
-appliesto:
-- Exchange Online
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Outlook for Office 365
-- Outlook 2019
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Outlook for Office 365
+  - Outlook 2019
 search.appverid: MET150
 ---
 # Meeting request isn't processed by the room mailbox in Exchange Online

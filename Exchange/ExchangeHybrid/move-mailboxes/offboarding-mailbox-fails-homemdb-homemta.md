@@ -3,18 +3,17 @@ title: Target user already has a primary mailbox
 description: Describes an error message that you receive when you Offboard mailboxes from your on-premises environment to Office 365 in a hybrid deployment. Provides a resolution.
 author: simonxjx
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: rrajan
 manager: dcscontentpm
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
+  - MET150
+appliesto: 
+  - Exchange Online
 ---
 
 # Offboarding mailbox fails with error: MigrationPermanentException Target user already has a primary mailbox

@@ -1,19 +1,18 @@
 ---
-title: Can't add yourself to Members list in the "Event team" area
-description: Describes an issue in which you can't add yourself to the Members list in the "Event team" area when you create a Skype Meeting Broadcast.
+title: Can't add yourself to Members list in the Event team area
+description: Describes an issue in which you can't add yourself to the Members list in the Event team area when you create a Skype Meeting Broadcast.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, dougl
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # You can't add yourself to the Members list in the "Event team" area when you create a Skype Meeting Broadcast

@@ -6,14 +6,13 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-security
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: victwa, v-lanac
-appliesto:
-- Exchange Online
-- Exchange Online Protection
+appliesto: 
+  - Exchange Online
+  - Exchange Online Protection
 search.appverid: MET150
 ---
 # Users in an Exchange Online Protection environment receive NDRs when they send mail to a recipient environment that uses the China Anti-Spam Alliance service

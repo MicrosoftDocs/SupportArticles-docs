@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Azure Active Directory
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Azure Active Directory
 ---
 
 # Troubleshoot sign-in issues with Office modern authentication when you use AD FS

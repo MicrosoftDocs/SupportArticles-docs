@@ -1,23 +1,22 @@
 ---
-title: A user who's been removed in Teams appears as "unknown user"
+title: A user who's been removed in Teams appears as unknown user
 ms.author: luche
 author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 113425
-- CSSTroubleshoot 
+  - CI 113425
+  - CSSTroubleshoot
 ms.reviewer: scapero
-description: Explains why a removed user still appears in Teams as "unknown." 
+description: Explains why a removed user still appears in Teams as unknown.
 ---
 
 # Removed user appears as "Unknown user" in Microsoft Teams 

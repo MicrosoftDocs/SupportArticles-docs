@@ -4,18 +4,17 @@ description: Discusses an issue that Microsoft Teams Channel notifications can't
 author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 121590
-- CSSTroubleshoot
+  - CI 121590
+  - CSSTroubleshoot
 ms.reviewer: kellybos
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Microsoft Teams Channel notifications settings can't be managed

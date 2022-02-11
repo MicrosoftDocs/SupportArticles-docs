@@ -4,16 +4,15 @@ description: Describes an issue in which you can't activate or sign in to any of
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: balram
 search.appverid: 
-- MET150
-appliesto:
-- office 2016
+  - MET150
+appliesto: 
+  - office 2016
 ---
 
 # You can't activate or sign-in after you update to Office 2016 for Mac version 15.33

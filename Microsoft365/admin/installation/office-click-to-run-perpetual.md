@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft 365 Apps for enterprise
+appliesto: 
+  - Microsoft 365 Apps for enterprise
 ---
 
 # Office Click-to-Run Perpetual (C2R-P) release for Project 2016 and Visio 2016

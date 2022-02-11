@@ -1,18 +1,17 @@
 ---
 title: Access Denied when you connect to Office 365
-description: Describes a scenario in which users are repeatedly prompted to enter their credentials or they receive an "Access Denied" error message when they try to connect to Office 365 from a rich client application. Provides a resolution.
+description: Describes a scenario in which users are repeatedly prompted to enter their credentials or they receive an Access Denied error message when they try to connect to Office 365 from a rich client application. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Office 365 User and Domain Management
+appliesto: 
+  - Office 365 User and Domain Management
 ---
 
 # "Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365

@@ -4,17 +4,16 @@ description: Describes fix for error Sorry, OneDrive can't add your folder right
 author: PramodBalusu
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: one-drive
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 149486
+  - CSSTroubleshoot
+  - CI 149486
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- OneDrive for Business
+  - MET150
+appliesto: 
+  - OneDrive for Business
 ---
 
 # OneDrive sync error “Sorry, OneDrive can’t add your folder right now”

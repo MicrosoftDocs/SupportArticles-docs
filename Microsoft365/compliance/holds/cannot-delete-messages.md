@@ -6,16 +6,15 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 - 'Associated content asset: 4555317'
 ms.reviewer: benjak
 appliesto: 
-- Microsoft Business Productivity Online Dedicated
-- Microsoft Business Productivity Online Suite Federal
-- Exchange Online
+  - Microsoft Business Productivity Online Dedicated
+  - Microsoft Business Productivity Online Suite Federal
+  - Exchange Online
 search.appverid: MET150
 ---
 

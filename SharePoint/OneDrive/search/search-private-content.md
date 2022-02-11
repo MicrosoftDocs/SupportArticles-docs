@@ -5,16 +5,15 @@ author: knutb
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: one-drive
 ms.custom: 
-- CSSTroubleshoot
-- CI-156789
+  - CSSTroubleshoot
+  - CI-156789
 ms.topic: troubleshooting
 ms.author: v-matthamer
-appliesto:
-- OneDrive
+appliesto: 
+  - OneDrive
 ---
 
 # Searching private content in Microsoft 365 OneDrive for Business

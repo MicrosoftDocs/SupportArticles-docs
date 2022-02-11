@@ -5,16 +5,15 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 365 Business
-- Office 365 Home
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 365 Business
+  - Office 365 Home
 ---
 
 # Office 365 subscription automatic license renewal fails when sppcext.dll is missing

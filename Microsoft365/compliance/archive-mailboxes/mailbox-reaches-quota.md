@@ -6,14 +6,13 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-ms.custom:
-- CI 125839
-- CSSTroubleshoot
+ms.custom: 
+  - CI 125839
+  - CSSTroubleshoot
 ms.reviewer: wesmils
 appliesto: 
-- Exchange Online
+  - Exchange Online
 search.appverid: MET150
 ---
 # Your mailbox reaches its quota even if the Archive feature is enabled

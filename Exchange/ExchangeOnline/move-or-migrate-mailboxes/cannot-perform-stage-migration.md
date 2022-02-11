@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: timothyh
-appliesto:
-- Exchange Online
-- Azure Active Directory
+appliesto: 
+  - Exchange Online
+  - Azure Active Directory
 search.appverid: MET150
 ---
 # Mailboxes listed in the following table can't be migrated when you perform a staged Exchange migration

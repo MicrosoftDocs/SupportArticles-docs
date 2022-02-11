@@ -6,13 +6,12 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-security
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: rrajan
 appliesto: 
-- Exchange Online
+  - Exchange Online
 search.appverid: MET150
 ---
 

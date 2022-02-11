@@ -4,18 +4,17 @@ description: Fixes an issue in which the presence of a contact is displayed as S
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 126266
-- CSSTroubleshoot
+  - CI 126266
+  - CSSTroubleshoot
 ms.reviewer: sylviebo, premgan
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # A contact's presence status is unknown in Teams
 

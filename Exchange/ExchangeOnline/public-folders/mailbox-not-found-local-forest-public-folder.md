@@ -4,19 +4,18 @@ description: When you try to access public folders by using EAC or Exchange Onli
 author: simonxjx
 ms.author: batre
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 111727
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 111727
+  - CSSTroubleshoot
 ms.reviewer: batre, EXOL_Triage
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # (The mailbox is not found in the local forest) error when you access public folders
 

@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 12/17/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: skype-for-business-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Skype for Business 2015
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Skype for Business 2015
 ms.custom: 
-- CI 120490
-- CSSTroubleshoot 
+  - CI 120490
+  - CSSTroubleshoot
 ms.reviewer: pareshj
-description: Explains why only the first IM is received in Skype for Business 2015 on a Mac when the device is locked or hibernating. 
+description: Explains why only the first IM is received in Skype for Business 2015 on a Mac when the device is locked or hibernating.
 ---
 
 # Only the first IM is received in Skype for Business 2015 on Mac when device is locked or hibernating

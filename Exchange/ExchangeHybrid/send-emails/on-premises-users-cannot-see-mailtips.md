@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Outlook 2010
-- Exchange Online
+appliesto: 
+  - Microsoft Outlook 2010
+  - Exchange Online
 search.appverid: MET150
 ---
 # On-premises users are unable to see MailTips of Exchange Online users in Outlook 2010

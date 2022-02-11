@@ -4,16 +4,15 @@ description: Explains why you might receive a Microsoft account security alert e
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-security
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: kerbo
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 365
+  - MET150
+appliesto: 
+  - Office 365
 ---
 
 # You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)

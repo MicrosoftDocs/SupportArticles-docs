@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 6/12/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- OneDrive
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - OneDrive
 ms.custom: 
-- CI 117857
-- CSSTroubleshoot 
+  - CI 117857
+  - CSSTroubleshoot
 ms.reviewer: paulpa
-description: Describes how to restore the Sharing setting for OneDrive in the Office 365 admin center. 
+description: Describes how to restore the Sharing setting for OneDrive in the Office 365 admin center.
 ---
 
 # Restore the OneDrive Sharing settings in Office 365 admin center

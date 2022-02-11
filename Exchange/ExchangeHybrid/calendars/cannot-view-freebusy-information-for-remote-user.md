@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: jmartin, rayfong, austinmc, wduff, jhayes, timothyh
-appliesto:
-- Exchange Online
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard 
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # User can't view free/busy information for a remote user in a hybrid deployment of Exchange Server

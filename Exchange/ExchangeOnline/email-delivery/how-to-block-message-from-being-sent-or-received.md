@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Online
+  - Exchange Online
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # How to block a message from being sent or received based on the file name extension of the attachment in Microsoft 365

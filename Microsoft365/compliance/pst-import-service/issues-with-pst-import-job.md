@@ -6,16 +6,15 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-ms.custom:
-- CI 143255
-- CSSTroubleshoot
+ms.custom: 
+  - CI 143255
+  - CSSTroubleshoot
 ms.reviewer: lindabr, andreza
 appliesto: 
-- Microsoft 365 (Enterprise, Business, Government, Education)
-- O365 Modern Support
-- Office 365
+  - Microsoft 365 (Enterprise, Business, Government, Education)
+  - O365 Modern Support
+  - Office 365
 search.appverid: MET150
 ---
 # Issues that affect PST import jobs

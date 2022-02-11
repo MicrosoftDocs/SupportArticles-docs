@@ -6,16 +6,15 @@ manager: dcscontentpm
 ms.date: 6/10/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 119405
-- CSSTroubleshoot 
+  - CI 119405
+  - CSSTroubleshoot
 ms.reviewer: prbalusu
 description: Describes a resolution to an access denied error received when trying to access PIM-managed accounts in SharePoint or OneDrive admin center.
 ---

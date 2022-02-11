@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: one-drive
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- OneDrive for Business
+appliesto: 
+  - OneDrive for Business
 ---
 
 # OneDrive for Business sync returns the error "We can't connect to the specified SharePoint site"

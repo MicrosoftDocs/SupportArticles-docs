@@ -3,18 +3,17 @@ title: Deploy the SaRA tool using Microsoft Intune
 description: Learn how to deploy SaRA to multiple users using Microsoft Intune.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-admin
 localization_priority: Normal
 ms.custom: 
-- CI 120765
-- CSSTroubleshoot
+  - CI 120765
+  - CSSTroubleshoot
 ms.reviewer: gregmans
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Outlook
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Outlook
 search.appverid: MET150
 ---
 # How to deploy the Microsoft Support and Recovery Assistant (SaRA) using Microsoft Intune

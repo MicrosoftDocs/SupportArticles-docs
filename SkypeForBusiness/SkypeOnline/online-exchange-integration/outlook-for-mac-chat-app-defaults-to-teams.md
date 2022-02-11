@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 12/12/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.service: skype-for-business-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Skype for Business
-- Outlook for Mac
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Skype for Business
+  - Outlook for Mac
 ms.custom: 
-- CI 104345
-- CSSTroubleshoot 
-ms.reviewer: premgan  
+  - CI 104345
+  - CSSTroubleshoot
+ms.reviewer: premgan
 description: Outlines what to do when the chat app in Outlook for Mac will not default to Skype for Business.
 ---
 

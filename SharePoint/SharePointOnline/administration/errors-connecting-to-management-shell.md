@@ -8,16 +8,15 @@ localization_priority: Normal
 ms.date: 06/04/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 ms.custom: 
-- CSSTroubleshoot
-- CI 150508
-search.appverid:
-- SPO160
-- MET150
+  - CSSTroubleshoot
+  - CI 150508
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Errors when connecting to SharePoint Online Management Shell
