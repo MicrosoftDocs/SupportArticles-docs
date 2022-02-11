@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 4/1/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: onenote
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

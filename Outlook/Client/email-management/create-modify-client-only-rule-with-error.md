@@ -6,7 +6,7 @@ ms.author: tasitae
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro 
+ms.prod: outlook
 localization_priority: Normal
 search.appverid: 
 - MET150

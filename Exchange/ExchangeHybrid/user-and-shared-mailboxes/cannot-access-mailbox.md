@@ -3,7 +3,7 @@ title: Users in a hybrid deployment can't access a shared mailbox in Exchange On
 description: Describes an issue in which users in an Exchange hybrid deployment are unable to access, view free/busy information, or send mail to a shared mailbox that was created in Exchange Online.
 author: simonxjx
 audience: ITPro
-ms.prod: exchange-server-it-pro
+ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 

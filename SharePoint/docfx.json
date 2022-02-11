@@ -125,6 +125,68 @@
       "titleSuffix": "SharePoint"
     },
     "fileMetadata": {
+      "ms.prod": {
+        "SharePointServer/**/*.md": "sharepoint-server-itpro",
+        "SharePointExperts/**/*.md": "sharepoint-server-itpro"
+      },
+      "ms.technology": {
+        "SharePointServer/administration/**/*.md": "administration",
+        "SharePointServer/apps/**/*.md": "apps",
+        "SharePointServer/designer/**/*.md": "designer",
+        "SharePointServer/infopath/**/*.md": "infopath",
+        "SharePointServer/installation-and-setup/**/*.md": "installation-and-setup",
+        "SharePointServer/lists-and-libraries/**/*.md": "lists-and-libraries",
+        "SharePointServer/migration-tool/**/*.md": "migration-tool",
+        "SharePointServer/people-pickers/**/*.md": "people-picker",
+        "SharePointServer/performance/**/*.md": "performance",
+        "SharePointServer/powershell/**/*.md": "powershell",
+        "SharePointServer/records-management/**/*.md": "records-management",
+        "SharePointServer/search/**/*.md": "search",
+        "SharePointServer/security/**/*.md": "security",
+        "SharePointServer/sharing-and-permissions/**/*.md": "sharing-and-permissions",
+        "SharePointServer/sites/**/*.md": "sites",
+        "SharePointServer/sync/**/*.md": "synchronization",
+        "SharePointServer/web-parts/**/*.md": "web-parts",
+        "SharePointServer/workflows/**/*.md": "workflows",
+        "SharePointExperts/administration/**/*.md": "administration",
+        "SharePointExperts/lists-and-libraries/**/*.md": "lists-and-libraries",
+        "SharePointExperts/security/**/*.md": "security",
+        "SharePointExperts/sharing-and-permissions/**/*.md": "sharing-and-permissions",
+        "SharePointExperts/web-parts/**/*.md": "web-parts"
+      },
+      "ms.service": {
+        "SharePointHybrid/**/*.md": "sharepoint-online",
+        "SharePointOnline/**/*.md": "sharepoint-online",
+        "OneDrive/**/*.md": "one-drive"       
+      },
+      "ms.subservice": {
+        "SharePointOnline/administration/**/*.md": "administration",
+        "SharePointOnline/apps/**/*.md": "apps",
+        "SharePointOnline/diagnostics/**/*.md": "diagnostics",
+        "SharePointOnline/infopath/**/*.md": "infopath",
+        "SharePointOnline/lists-and-libraries/**/*.md": "lists-and-libraries",
+        "SharePointOnline/migration-tools/**/*.md": "migration-tool",
+        "SharePointOnline/performance/**/*.md": "performance",
+        "SharePointOnline/search/**/*.md": "search",
+        "SharePointOnline/security/**/*.md": "security", 
+        "SharePointOnline/sharing-and-permissions/**/*.md": "sharing-and-permissions",
+        "SharePointOnline/sites/**/*.md": "sites",
+        "SharePointOnline/sync/**/*.md": "synchronization",
+        "SharePointOnline/video/**/*.md": "video",
+        "SharePointOnline/web-parts/**/*.md": "web-parts",
+        "SharePointOnline/workflows/**/*.md": "workflows",
+        "SharePointHybrid/infopath/**/*.md": "infopath",
+        "SharePointHybrid/search/**/*.md": "search",
+        "SharePointHybrid/workflows/**/*.md": "workflows",
+        "OneDrive/administration/**/*.md": "administration",
+        "OneDrive/lists-and-libraries/**/*.md": "lists-and-libraries",
+        "OneDrive/search/**/*.md": "search",
+        "OneDrive/security/**/*.md": "security",
+        "OneDrive/setup/**/*.md": "setup",
+        "OneDrive/sharing-and-permissions/**/*.md": "sharing-and-permissions",
+        "OneDrive/storage/**/*.md": "storage",
+        "OneDrive/sync/**/*.md": "synchronization"
+      },      
       "feedback_product_url": {
         "OneDrive/**.md": "https://onedrive.uservoice.com/"
       }

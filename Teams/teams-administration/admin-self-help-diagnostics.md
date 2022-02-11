@@ -6,8 +6,7 @@ manager: dcscontentpm
 ms.date: 10/13/2020
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
-ms.prod: microsoft-teams
-ms.technology: microsoft-graph
+ms.service: msteams
 localization_priority: Normal
 search.appverid:
 - SPO160

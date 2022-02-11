@@ -4,7 +4,7 @@ description: This article lists Skype for Business Hybrid related issues.
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
-ms.prod: skype-for-business-itpro
+ms.service: skype-for-business-online
 ms.topic: landing-page
 ms.author: v-six
 localization_priority: Normal

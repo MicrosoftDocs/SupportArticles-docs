@@ -6,7 +6,7 @@ ms.author: cowitkow
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.service: o365-proplus-itpro
+ms.service: msteams
 localization_priority: Normal
 ms.custom: 
 - CI 120274

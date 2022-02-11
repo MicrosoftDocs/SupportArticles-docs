@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: arhinesm
 ms.custom:

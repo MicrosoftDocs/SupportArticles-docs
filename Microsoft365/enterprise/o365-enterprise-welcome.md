@@ -4,7 +4,6 @@ description: This article lists Office 365-related issues.
 author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
-ms.service: o365-solutions
 ms.topic: landing-page
 ms.author: v-maqiu
 localization_priority: Normal

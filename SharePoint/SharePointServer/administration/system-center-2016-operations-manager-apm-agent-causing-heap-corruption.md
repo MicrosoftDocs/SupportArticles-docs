@@ -7,7 +7,7 @@ search.appverid:
 - MET150
 localization_priority: Normal
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche

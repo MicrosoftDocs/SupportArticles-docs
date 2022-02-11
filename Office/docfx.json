@@ -76,7 +76,40 @@
       "hideEdit": true,
       "searchScope": ["Office Support"] 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.prod": {
+        "**/*.md": "office-perpetual-itpro"     
+      },
+      "ms.technology": {
+        "Client/access/**/*.md": "access",
+        "Client/activation/**/*.md": "activation",
+        "Client/excel/**/*.md": "excel",
+        "Client/infopath/**/*.md": "infopath",
+        "Client/installation/**/*.md": "installation",
+        "Client/office-for-mac/**/*.md": "office-for-mac",
+        "Client/office-suite-issues/**/*.md": "office-suites-issues",
+        "Client/onenote/**/*.md": "onenote",
+        "Client/performance/**/*.md": "performance",
+        "Client/planner/**/*.md": "planner",
+        "Client/powerpoint/**/*.md": "powerpoint",
+        "Client/project/**/*.md": "project",
+        "Client/publisher/**/*.md": "publisher",
+        "Client/settings/**/*.md": "settings",
+        "Client/third-party-add-ins/**/*.md": "third-party-add-ins",
+        "Client/visio/**/*.md": "visio",
+        "Client/word/**/*.md": "word",
+        "OfficeExperts/activation/**/*.md": "activation",
+        "OfficeExperts/administration/**/*.md": "",
+        "OfficeExperts/authentication/**/*.md": "",
+        "OfficeExperts/diagnostic-logs/**/*.md": "",
+        "OfficeExperts/excel/**/*.md": "excel",
+        "OfficeExperts/installation/**/*.md": "installation",
+        "OfficeExperts/microsoft-forms/**/*.md": "",
+        "OfficeExperts/powerpivot/**/*.md": "",
+        "OfficeExperts/sway/**/*.md": "",
+        "OfficeExperts/word/**/*.md": "word"
+      }
+    },
     "template": [],
     "dest": "OfficeDocs-Support-Office",
     "markdownEngineName": "markdig"

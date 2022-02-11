@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.reviewer: 
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
+ms.prod: outlook
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot

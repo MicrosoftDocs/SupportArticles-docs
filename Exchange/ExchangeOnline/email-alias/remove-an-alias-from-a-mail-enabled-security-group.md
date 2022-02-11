@@ -13,7 +13,6 @@ f1_keywords:
 - 'O365M_AdminMESG_TSAlias'
 - 'O365E_AdminMESG_TSAlias'
 - 'AdminMESG_TSAlias'
-ms.service: o365-administration
 localization_priority: Normal
 ms.collection: 
 - M365-subscription-management 

@@ -14,7 +14,7 @@ ms.custom:
 - CI 100405
 ms.reviewer: doug.mahugh
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro 
+ms.prod: office-perpetual-itpro
 appliesto:
 - Microsoft InfoPath 2013
 ---

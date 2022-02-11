@@ -7,7 +7,7 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
+ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
 - Outlook for Windows

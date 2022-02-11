@@ -6,7 +6,6 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: o365-administration
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot

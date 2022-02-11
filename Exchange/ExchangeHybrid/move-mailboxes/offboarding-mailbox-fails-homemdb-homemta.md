@@ -3,7 +3,7 @@ title: Target user already has a primary mailbox
 description: Describes an error message that you receive when you Offboard mailboxes from your on-premises environment to Office 365 in a hybrid deployment. Provides a resolution.
 author: simonxjx
 audience: ITPro
-ms.prod: office 365
+ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: rrajan
 manager: dcscontentpm

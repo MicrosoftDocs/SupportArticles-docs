@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 9/21/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: o365-proplus-itpro
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

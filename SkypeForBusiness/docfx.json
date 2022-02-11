@@ -108,7 +108,51 @@
       "titleSuffix": "Skype for Business",
       "searchScope": ["Skype for Business Support"] 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.prod": {
+        "SkypeServer/**/*.md": "skype-for-business-itpro",
+        "SkypeExperts/**/*.md": "skype-for-business-itpro"
+      },
+      "ms.technology": {
+        "SkypeExperts/performance-issues/**/*.md": "",
+        "SkypeExperts/quality-of-service/**/*.md": "",
+        "SkypeServer/server-conferencing/**/*.md": "conferencing",
+        "SkypeServer/server-configuration/**/*.md": "configuration",
+        "SkypeServer/server-contacts/**/*.md": "contacts",
+        "SkypeServer/server-exchange-integration/**/*.md": "exchange-integration",
+        "SkypeServer/server-im-presence/**/*.md": "im-presence",
+        "SkypeServer/server-install-or-uninstall/**/*.md": "install-or-uninstall",
+        "SkypeServer/server-meetings/**/*.md": "meetings",
+        "SkypeServer/server-mobile-devices/**/*.md": "mobile-devices",
+        "SkypeServer/server-phone-system/**/*.md": "phone-system",
+        "SkypeServer/server-sign-in/**/*.md": "sign-in"
+      },
+      "ms.service": {
+        "SkypeOnline/**/*.md": "skype-for-business-online",
+        "SkypeHybrid/**/*.md": "skype-for-business-online"     
+      },
+      "ms.subservice": {
+        "SkypeHybrid/hybrid-conferencing/**/*.md": "conferencing",
+        "SkypeHybrid/hybrid-exchange-integration/**/*.md": "exchange-integration",
+        "SkypeHybrid/hybrid-im-presence/**/*.md": "im-presence",
+        "SkypeHybrid/hybrid-meetings/**/*.md": "meetings",
+        "SkypeHybrid/hybrid-move-sfb-online/**/*.md": "move-sfb-online",
+        "SkypeHybrid/hybrid-phone-system/**/*.md": "phone-system",
+        "SkypeHybrid/hybrid-sign-in/**/*.md": "sign-in",
+        "SkypeOnline/online-attachments/**/*.md": "attachments",
+        "SkypeOnline/online-conferencing/**/*.md": "conferencing", 
+        "SkypeOnline/online-configuration/**/*.md": "configuration",
+        "SkypeOnline/online-contacts/**/*.md": "contacts",
+        "SkypeOnline/online-exchange-integration/**/*.md": "exchange-integration",
+        "SkypeOnline/online-im-presence/**/*.md": "im-presence",
+        "SkypeOnline/online-install-or-uninstall/**/*.md": "install-or-uninstall",
+        "SkypeOnline/online-meeting-broadcast/**/*.md": "meeting-broadcast",
+        "SkypeOnline/online-meetings/**/*.md": "meetings",
+        "SkypeOnline/online-phone-system/**/*.md": "phone-system",
+        "SkypeOnline/online-sign-in/**/*.md": "sign-in",
+        "SkypeOnline/online-subscription/**/*.md": "subscription"
+      }      
+    },
     "template": [],
     "dest": "OfficeDocs-Support-Skype",
     "markdownEngineName": "markdig"

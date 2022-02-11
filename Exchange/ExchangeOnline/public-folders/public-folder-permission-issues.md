@@ -47,7 +47,7 @@ This issue typically occurs because the public folder hierarchy replication isn'
     b) Check the permissions on the folder for the user on the public folder mailbox that you got from step 1 (for example).
 
     ```powershell
-    Get-PublicFolderClientPermission "\puf1" -User1 -Mailbox pubmbx1
+    Get-PublicFolderClientPermission "\puf1" -User User1 -Mailbox pubmbx1
     ```
 
     This cmdlet returns the following output:

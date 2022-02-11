@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: exchange-server-it-pro
+ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: haembab
 ms.custom: 

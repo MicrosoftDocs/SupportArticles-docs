@@ -11,7 +11,7 @@ search.appverid:
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
+ms.prod: sharepoint-server-itpro
 appliesto:
 - Microsoft SharePoint
 ---

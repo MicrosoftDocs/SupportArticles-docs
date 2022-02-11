@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: 
 - CSSTroubleshoot
 - CI 113561
-ms.prod: sharepoint
+ms.service: sharepoint-online
 appliesto:
 - Microsoft SharePoint
 - OneDrive for Business

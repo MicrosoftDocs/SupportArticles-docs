@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: sharepoint-powershell
+ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 appliesto:

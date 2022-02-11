@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 10/7/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: exchange-online
+ms.prod: exchange-server-it-pro
 localization_priority: Normal
 search.appverid:
 - SPO160

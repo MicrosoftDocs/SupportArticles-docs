@@ -9,7 +9,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: sharepoint-online
+ms.prod: office-perpetual-itpro
 ms.custom:
 - CSSTroubleshoot
 - sap: office-experts

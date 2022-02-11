@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: 
 - Outlook for Mac
 - CSSTroubleshootCSSTroubleshoot
-ms.prod: office-perpetual-itpro
+ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 appliesto:
