@@ -36,7 +36,8 @@ This section provides information about CU and SP installations.
 ## General troubleshooting methodology
 
 Isolate the error by following these steps:
-   1. On the **Failure** screen of the setup process, select **Details**.
+
+   1. In the **Failure** screen of the setup process, select **Details**.
    1. In the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder, check *Summary.txt* and other default setup log files. For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true).
 
 In the following sections, check for a scenario that corresponds to your situation, and then follow the associated troubleshooting steps.
@@ -54,14 +55,14 @@ To troubleshoot and fix these errors, follow these steps:
 
 The following errors are some of the common causes of upgrade script failures and their corresponding resolutions:
 
-   - **SSISDB part of availability group**
+  - **SSISDB part of availability group**
 
    Remove the SQL Server Integration Services (SSIS) Catalog database (SSISDB) from the availability group. After the upgrade finishes, restore SSISDB to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
 
-   - **Misconfigured System user/role in msdb database**
+  - **Misconfigured System user/role in msdb database**
 
-   This section provides steps to resolve a misconfigured system user or role in the **msdb** database:
-   - TargetServersRole Schema/Security role: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the dbo, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, Setup may fail and return Error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag 902:
+    This section provides steps to resolve a misconfigured system user or role in the **msdb** database:
+    - **TargetServersRole Schema/Security role**: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the dbo, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, Setup may fail and return Error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag 902:
           
       1. Back up your **msdb** database.
       1. Make a list of users (if any) who are currently part of this role.
@@ -70,12 +71,12 @@ The following errors are some of the common causes of upgrade script failures an
       1. Restart the SQL Server instance without using trace flag 902 to check whether the issue is resolved.
       1. Restore the users from step 2 to *TargetServersRole*.
 
-   - Certificate-based SQL Server logins that own user objects: Principals that are enclosed by double hash marks (##) are created from certificates when SQL Server is installed. These are intended for internal use. They shouldn't own any objects in **msdb** or other databases. If the error logs indicate a failure that is related to any of these logins, start SQL Server by using trace flag 902, change the ownership of the affected objects to a different user, and then restart SQL Server without trace flag 902 so that the upgrade script can finish running.
+     - **Certificate-based SQL Server logins that own user objects**: Principals that are enclosed by double hash marks (##) are created from certificates when SQL Server is installed. These are intended for internal use. They shouldn't own any objects in **msdb** or other databases. If the error logs indicate a failure that is related to any of these logins, start SQL Server by using trace flag 902, change the ownership of the affected objects to a different user, and then restart SQL Server without trace flag 902 so that the upgrade script can finish running.
 
-        >[!NOTE]
-        >Although a failure to run upgrade scripts is one of the common causes of the the "Wait on Database Engine recovery handle failed" error, this error can also occur for other reasons. The error means that the update installer could not start the service or bring it online after the update was installed. In either case, troubleshooting involves a review of error logs and Setup logs to determine the cause of the failure and take appropriate action.
+      >[!NOTE]
+      >Although a failure to run upgrade scripts is one of the common causes of the the "Wait on Database Engine recovery handle failed" error, this error can also occur for other reasons. The error means that the update installer could not start the service or bring it online after the update was installed. In either case, troubleshooting involves a review of error logs and Setup logs to determine the cause of the failure and take appropriate action.
   
-   To let the upgrade process finish, restart SQL Server without trace flag 902.
+   To let the upgrade process finish, restart the SQL Server without trace flag 902.
 
 ## Setup errors caused by missing installer files in Windows cache
 
