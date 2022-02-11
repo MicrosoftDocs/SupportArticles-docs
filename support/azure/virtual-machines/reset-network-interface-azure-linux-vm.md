@@ -49,7 +49,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
 1. Open [Azure Cloud Shell](/azure/cloud-shell/overview) or preferred shell. Run the following commands:
 
-   ```azurepowershell
+   ```azurecli
    #Log in to the subscription  
 
    az login 

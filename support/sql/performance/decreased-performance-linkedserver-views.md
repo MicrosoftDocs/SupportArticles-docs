@@ -4,6 +4,8 @@ description: This article provides explanation and resolution on decreased perfo
 ms.date: 09/21/2021
 ms.custom: sap:Performance
 ms.reviewer: ramakoni, jopilov
+author: pijocoder
+ms.author: jopilov
 ms.prod: sql
 ms.topic: troubleshooting
 ---

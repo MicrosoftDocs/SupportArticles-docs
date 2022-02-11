@@ -76,7 +76,7 @@ To identify the reason for failed provisioning you will need to start with the s
 
 You will need to deploy a new VM with [boot diagnostics enabled](/cli/azure/vm/boot-diagnostics) for the VM with the failing image to access provisioning events in the serial log.
 
-```bash
+```azurecli
 # create resource group
 resourceGroup=myBrokenImageRG
 location=westus2
@@ -108,7 +108,7 @@ az vm create \
 
 To view the serial log, you can go to the Portal, or run the command below to download the 'serialConsoleLogBlobUri' log:
 
-```bash
+```azurecli
 az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resourceGroup
 ```
 
@@ -220,7 +220,7 @@ Cloud-init versions >= 20.3 contain a fix which falls back and executes `dhclien
 
 If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](/cli/azure/ext/vm-repair/vm/repair#ext_vm_repair_az_vm_repair_create) which will mount the OS disk of the VM that failed to provision, to another VM.
 
-```bash
+```azurecli
 az vm repair create  \
     --resource-group $resourceGroup \
     --name $vmName \
