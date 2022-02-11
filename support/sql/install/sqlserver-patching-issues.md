@@ -25,7 +25,7 @@ This section provides information about CU and SP installations.
   - Before you install a CU, make sure that your SQL Server instance is at the right SP level for that CU. For example, you can't apply CU17 for SQL 2016 SP2 before you apply SP2 for the SQL Server 2016 instance.
   - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL Server 2016 SP2 instance, you can skip to CU17 without applying any of the intermediate CUs.
 - For Microsoft SQL Server 2017 and later versions, you can always apply the latest CU available (no service packs).
-- The SQL Server program files and data files cannot be installed on:
+- The SQL Server program files and data files can't be installed on:
     - A removable disk drive
     - A file system that uses compression
     - A directory in which system files are located
@@ -40,11 +40,11 @@ Isolate the error by following these steps:
    1. In the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder, check *Summary.txt* and other default setup log files. For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true).
 
 In the following sections, check for a scenario that corresponds to your situation, and then follow the associated troubleshooting steps.
-If there's no matching scenario, look for additional pointers in the log files.
+If there's no matching scenario, look for more pointers in the log files.
 
 ## "Wait on Database Engine recovery handle failed" and "912" and "3417" errors
 
-Upgrade scripts are shipped together with every SQL Server update. They are run after the SQL Server binaries are upgraded. If these scripts don't run, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section, and it logs ["912"](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and ["3417"](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. "912" and "3417" are generic errors that are associated with database script upgrade failures. The messages that precede the "912" error usually provide information about what exactly failed when these scripts ran.
+Upgrade scripts are shipped together with every SQL Server update. They're run after the SQL Server binaries are upgraded. If these scripts don't run, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs ["912"](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and ["3417"](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. "912" and "3417" are generic errors that are associated with database script upgrade failures. The messages that precede the "912" error usually provide information about what exactly failed when these scripts ran.
 
 To troubleshoot and fix these errors, follow these steps:
 
@@ -79,7 +79,7 @@ The following errors are some of the common causes of upgrade script failures an
 
 ## Setup errors caused by missing installer files in Windows cache
 
-Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is C:\Windows\Installer. These files are required for uninstalling and updating applications. They are unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition, review and implement the procedures that are described in [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md).
+Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is C:\Windows\Installer. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition, review and implement the procedures that are described in [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md).
 
 ## Setup fails because of incorrect data or log location in registry
 
