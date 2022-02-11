@@ -24,7 +24,7 @@ This section provides information about CU and SP installations.
   - Before you install a CU, make sure that your SQL Server instance is at the right SP level for that CU. For example, you can't apply CU17 for SQL 2016 SP2 before you apply SP2 for the SQL Server 2016 instance.
   - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL Server 2016 SP2 instance, you can skip to CU17 without applying any of the intermediate CUs.
 - For Microsoft SQL Server 2017 and later versions, you can always apply the latest CU available (no service packs).
-- The SQL Server program files and data files cannot be installed in the following situations:
+- The SQL Server program files and data files cannot be installed on:
     - A removable disk drive
     - A file system that uses compression
     - A directory in which system files are located
