@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot common SQL Server update issues
 description: This article helps you to troubleshoot common SQL Server update issues. 
-ms.date: 12/09/2021
+ms.date: 11/02/2022
 ms.prod-support-area-path: Installation, Patching and Upgrade
+author: ramakoni
 ms.author: v-jayaramanp
 ms.prod: sql
 ---
@@ -30,7 +31,7 @@ This section provides information about CU and SP installations.
     - A directory in which system files are located
     - Shared drives on a failover cluster instance
 - Before you apply a CU or SP, make sure that the program instance that is being updated is configured appropriately for that update.
-- If you add a new [database engine feature](/sql/database-engine/install-windows/install-sql-server-database-engine) after you apply a CU or an SP to the program instance, you should update the new feature to the same level as others before you apply a new CU or SP.
+- If you add a new [database engine feature](/sql/database-engine/install-windows/install-sql-server-database-engine) after you apply a CU or an SP to the program instance, you should update the new feature to the same level as the program instance before you apply a new CU or SP.
 
 ## General troubleshooting methodology
 
@@ -39,7 +40,7 @@ Isolate the error by following these steps:
    1. In the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder, check *Summary.txt* and other default setup log files. For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true).
 
 In the following sections, check for a scenario that corresponds to your situation, and then follow the associated troubleshooting steps.
-If there's no matching scenario, look for additional pointers in the log files. 
+If there's no matching scenario, look for additional pointers in the log files.
 
 ## "Wait on Database Engine recovery handle failed" and "912" and "3417" errors
 
@@ -60,7 +61,7 @@ The following errors are some of the common causes of upgrade script failures an
    - **Misconfigured System user/role in msdb database**
 
    This section provides steps to resolve a misconfigured system user or role in the **msdb** database:
-   - TargetServersRole Schema/Security role: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the database operator, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, Setup may fail and return Error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag 902:
+   - TargetServersRole Schema/Security role: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the dbo, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, Setup may fail and return Error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag 902:
           
       1. Back up your **msdb** database.
       1. Make a list of users (if any) who are currently part of this role.
