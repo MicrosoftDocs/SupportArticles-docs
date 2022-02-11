@@ -5,8 +5,8 @@ author: PramodBalusu
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.prod: office 365
+ms.topic: troubleshooting 
+ms.service: one-drive
 ms.custom: 
 - CSSTroubleshoot
 - CI 149486

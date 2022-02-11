@@ -7,9 +7,9 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: o365-solutions
+ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto:
 - SharePoint Online

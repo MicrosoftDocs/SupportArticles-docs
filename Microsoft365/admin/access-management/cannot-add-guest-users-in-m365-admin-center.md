@@ -5,8 +5,8 @@ author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 3/25/2020
 audience: Admin
-ms.topic: article
-ms.prod: microsoft-365
+ms.topic: troubleshooting
+ms.service: microsoft-365-admin
 localization_priority: High
 search.appverid:
 - SPO160

@@ -7,9 +7,9 @@ ms.reviewer:
 manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
+ms.service: sharepoint-online
 search.appverid:
 - SPO160
 - MET150

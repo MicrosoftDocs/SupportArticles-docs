@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 04/13/2021
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: msteams
 localization_priority: Normal
 search.appverid:
@@ -33,7 +33,7 @@ To prevent any interference of Teams, add the following items to the "exclusion 
 
 - `C:\Users\*\AppData\Local\Microsoft\Teams\current\teams.exe`
 - `C:\Users\*\AppData\Local\Microsoft\Teams\update.exe`
-- `C:\Users\*\AppData\Local\Microsoft\Teams\stage\squirrel.exe`
+- `C:\Users\*\AppData\Local\Microsoft\Teams\current\squirrel.exe`
 
 Or, you can add the items to the "safe" ("allowlisted") programs list in the DLP application. (The method to accomplish this varies. For specific instructions, contact the application manufacturer.)
 

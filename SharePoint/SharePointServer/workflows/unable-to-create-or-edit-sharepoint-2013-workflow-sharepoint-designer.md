@@ -6,8 +6,8 @@ ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
-ms.topic: article
-ms.prod: office-perpetual-itpro 
+ms.topic: troubleshooting
+ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150

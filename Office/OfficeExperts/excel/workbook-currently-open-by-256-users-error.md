@@ -5,11 +5,12 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 9/11/2019
 audience: ITPro
-ms.topic: article
-ms.prod: excel
+ms.topic: troubleshooting
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
-ms.custom: 
+ms.custom:
 - CSSTroubleshoot
+- sap: office-experts
 - CI 106765
 search.appverid:
 - SPO160

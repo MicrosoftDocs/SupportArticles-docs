@@ -4,8 +4,8 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
-ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
+ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
 - Outlook for Windows

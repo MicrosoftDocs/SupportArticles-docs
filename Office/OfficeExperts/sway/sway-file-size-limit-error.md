@@ -7,10 +7,12 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: o365-solutions
-ms.topic: article
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.author: zakirh
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 appliesto:
 - Microsoft Sway
 ---

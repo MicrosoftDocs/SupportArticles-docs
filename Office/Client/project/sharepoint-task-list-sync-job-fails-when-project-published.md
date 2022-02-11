@@ -5,8 +5,8 @@ author: krishnp
 manager: dcscontentpm
 ms.date: 11/20/2019
 audience: ITPro
-ms.topic: article
-ms.prod: project-server-itpro
+ms.topic: troubleshooting
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

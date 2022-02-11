@@ -4,8 +4,8 @@ description: This article lists Hybrid deployment related issues.
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
-ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.service: exchange-online
+ms.topic: landing-page
 ms.author: v-six
 localization_priority: Normal
 ms.custom:

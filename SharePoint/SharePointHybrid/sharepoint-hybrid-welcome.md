@@ -4,8 +4,8 @@ description: This article lists SharePoint hybrid related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: sharepoint-server-itpro
-ms.topic: article
+ms.service: sharepoint-online
+ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
 ms.custom:

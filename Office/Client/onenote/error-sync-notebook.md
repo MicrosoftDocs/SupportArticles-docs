@@ -5,8 +5,8 @@ author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
-ms.topic: article
-ms.prod: office-perpetual-itpro 
+ms.topic: troubleshooting
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
 - CI 114993

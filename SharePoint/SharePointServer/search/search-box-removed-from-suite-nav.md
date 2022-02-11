@@ -5,8 +5,8 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 9/11/2020
 audience: Admin
-ms.topic: article
-ms.prod: sharepoint
+ms.topic: troubleshooting
+ms.prod: sharepoint-server-itpro
 search.appverid:
 - SPO160
 - MET150

@@ -10,8 +10,8 @@ search.appverid:
 - MET150
 audience: Admin
 ms.custom: CSSTroubleshoot
-ms.topic: article
-ms.prod: office-perpetual-itpro 
+ms.topic: troubleshooting
+ms.prod: sharepoint-server-itpro
 appliesto:
 - SharePoint Server 2013
 ---

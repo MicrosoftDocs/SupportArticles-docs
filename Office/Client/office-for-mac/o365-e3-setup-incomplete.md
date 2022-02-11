@@ -7,8 +7,8 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: office 365
-ms.topic: article
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: jalalb

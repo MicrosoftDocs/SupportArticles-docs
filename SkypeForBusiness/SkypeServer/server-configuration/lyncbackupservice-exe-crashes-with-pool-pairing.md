@@ -5,8 +5,8 @@ author: simonxjx
 manager: dcscontentpm
 ms.date: 10/4/2019
 audience: Admin
-ms.topic: article
-ms.service: sharepoint-online
+ms.topic: troubleshooting
+ms.prod: skype-for-business-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

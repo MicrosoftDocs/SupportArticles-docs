@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.prod: sharepoint-server-itpro
-ms.topic: article
+ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
 ms.custom:

@@ -3,8 +3,8 @@ title: How to disable public folder Conflict Message notification
 description: Explains how to disable public folder Conflict Message notification in Exchange Server.
 author: simonxjx
 audience: ITPro
-ms.service: exchange-powershell
-ms.topic: article
+ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Server

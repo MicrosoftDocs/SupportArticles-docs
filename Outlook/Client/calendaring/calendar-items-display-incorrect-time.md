@@ -5,8 +5,8 @@ author: helenclu
 ms.author: tasitae
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting 
+ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
 - Outlook for Windows

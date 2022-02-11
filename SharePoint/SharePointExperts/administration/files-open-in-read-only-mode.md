@@ -8,9 +8,11 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.topic: article
-ms.service: sharepoint-online
-ms.custom: CSSTroubleshoot
+ms.topic: troubleshooting
+ms.prod: sharepoint-server-itpro
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
 appliesto:
 - SharePoint Server 2013
 ---

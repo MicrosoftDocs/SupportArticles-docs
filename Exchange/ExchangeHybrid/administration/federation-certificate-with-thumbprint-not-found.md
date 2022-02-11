@@ -6,11 +6,12 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
+ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
 - Exchange Hybrid
 - CSSTroubleshoot
+- CI 160743
 ms.reviewer: chrisbur, jhayes
 appliesto:
 - Cloud Services (Web roles/Worker roles)
@@ -29,7 +30,7 @@ _Original KB number:_ &nbsp; 2810692
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
-## Problem
+## Symptoms
 
 Consider the following scenario in a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365:
 
@@ -49,7 +50,7 @@ In this scenario, the wizard doesn't update the certificate as expected. When yo
 
 This issue occurs if the new certificate is missing from the certificate store. In this case, the Manage Federation Wizard can't roll to the new certificate.
 
-## Solution
+## Resolution
 
 To fix this issue, update the Active Directory object for the federation trust by adding the thumbprint for the next federation certificate to the object. This lets the Manage Federation Wizard or the `Set-FederationTrust` cmdlet successfully process the rollover request.
 
@@ -60,7 +61,7 @@ To do this, follow these steps:
 3. After the ADSI Edit window is loaded, right-click **ADSI Edit** in the navigation pane, and then click **Connect To**.
 4. In the Connection Settings window, click **Select a well known Naming Context** in the **Connection Point** area, and then click **Configuration**.
 5. In the **Computer** area, select **Default (Domain or server that you are logged into)**, and then click **OK**.
-6. Locate **CN=Configuration, DC=\<DOMAIN>, DC=\<COM>, CN=Services, CN=Microsoft Exchange, CN=\<ORGANIZAION NAME>, CN=Federation Trusts**.
+6. Locate **CN=Configuration, DC=\<DOMAIN>, DC=\<COM>, CN=Services, CN=Microsoft Exchange, CN=\<ORGANIZATION NAME>, CN=Federation Trusts**.
 
     > [!NOTE]
     > Replace the values in the placeholders (\< >) with the values that are specific to your environment.

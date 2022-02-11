@@ -5,8 +5,8 @@ author: v-matthamer
 ms.author: aruiz
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.prod: office-perpetual-itpro 
+ms.topic: troubleshooting 
+ms.prod: outlook
 localization_priority: Normal
 search.appverid: 
 - MET150

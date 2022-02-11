@@ -8,8 +8,10 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
-ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.topic: troubleshooting
+ms.custom:
+- CSSTroubleshoot
+- sap: sfbexperts
 ms.author: kenguil
 appliesto:
 - Skype for Business

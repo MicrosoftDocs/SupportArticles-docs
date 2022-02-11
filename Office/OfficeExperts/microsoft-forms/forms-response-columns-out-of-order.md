@@ -7,9 +7,11 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: o365-solutions
-ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.prod: office-perpetual-itpro
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
+ms.topic: troubleshooting
 ms.author: zakirh
 appliesto:
 - Microsoft Forms

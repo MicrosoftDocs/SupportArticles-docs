@@ -3,7 +3,7 @@ title: On-premises distribution group owner can't manage the group in Exchange O
 description: Describes an issue in which the owner of a distribution group that's synced to Office 365 can no longer manage the distribution group. A resolution is provided.
 author: simonxjx
 audience: ITPro
-ms.prod: exchange-server-it-pro
+ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm

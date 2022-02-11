@@ -5,12 +5,14 @@ author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 search.appverid: 
 - MET150
 audience: ITPro
-ms.topic: article
-ms.service: o365-solutions
+ms.topic: troubleshooting
+ms.prod: office-perpetual-itpro
 appliesto:
 - Office 365
 ---

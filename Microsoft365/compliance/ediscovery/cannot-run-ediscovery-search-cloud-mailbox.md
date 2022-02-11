@@ -5,8 +5,8 @@ author: MaryQiu1987
 ms.author: akashb
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article
-ms.prod: office 365
+ms.topic: troubleshooting
+ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom:
 - CI 111898

@@ -7,8 +7,8 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: exchange-powershell
-ms.topic: article
+ms.prod: outlook
+ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
 - Outlook for Windows

@@ -8,8 +8,8 @@ ms.date: 06/04/2021
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: o365-solutions
-ms.topic: article
+ms.service: sharepoint-online
+ms.topic: troubleshooting
 ms.custom: 
 - CSSTroubleshoot
 - CI 150328

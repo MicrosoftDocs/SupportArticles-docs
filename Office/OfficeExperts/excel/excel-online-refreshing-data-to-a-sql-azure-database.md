@@ -7,9 +7,11 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.custom: CSSTroubleshoot
-ms.service: o365-solutions
-ms.topic: article
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.author: thempel
 appliesto:
 - Excel Online

@@ -5,8 +5,8 @@ author: v-matthamer
 manager: dcscontentpm
 ms.date: 10/22/2021
 audience: Admin
-ms.topic: article
-ms.prod: sharepoint-server-itpro
+ms.topic: troubleshooting
+ms.service: sharepoint-online
 localization_priority: Normal
 search.appverid:
 - SPO160

@@ -5,8 +5,8 @@ author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
-ms.topic: article
-ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
+ms.service: microsoft-365-admin
 localization_priority: Normal
 search.appverid:
 - SPO160

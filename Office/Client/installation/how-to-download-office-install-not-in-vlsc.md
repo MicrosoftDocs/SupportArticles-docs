@@ -5,7 +5,7 @@ ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:

@@ -6,8 +6,8 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.date: 06/10/2020
 audience: Admin
-ms.topic: article
-ms.prod: onedrive
+ms.topic: troubleshooting
+ms.service: one-drive
 ms.custom: 
 - CSSTroubleshoot
 - CI 119743

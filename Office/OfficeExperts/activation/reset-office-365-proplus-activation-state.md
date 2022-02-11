@@ -6,11 +6,12 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: MET150
 audience: ITPro
-ms.service: o365-solutions
-ms.topic: article
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.custom: 
 - CI 114181, CI 115742
 - CSSTroubleshoot
+- sap: office-experts
 ms.author: mattphil
 appliesto:
 - Microsoft 365 Apps for enterprise

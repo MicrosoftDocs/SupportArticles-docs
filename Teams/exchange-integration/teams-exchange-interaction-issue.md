@@ -6,9 +6,8 @@ ms.author: chunlli
 manager: dcscontentpm
 editor: v-jesits
 audience: ITPro 
-ms.topic: article 
-ms.prod: microsoft-teams
-ms.technology: microsoft-graph
+ms.topic: troubleshooting 
+ms.service: msteams
 localization_priority: Normal
 ms.custom: 
 - CI 121615

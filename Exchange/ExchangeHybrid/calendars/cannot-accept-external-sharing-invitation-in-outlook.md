@@ -5,8 +5,8 @@ author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
+ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
 - Exchange Hybrid

@@ -5,8 +5,8 @@ author: helenclu
 ms.author: tasitae
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.prod: office-perpetual-itpro 
+ms.topic: troubleshooting 
+ms.prod: outlook
 localization_priority: Normal
 search.appverid: 
 - MET150

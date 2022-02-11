@@ -8,8 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: sharepoint-powershell
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto:
 - Office 365 Small Business

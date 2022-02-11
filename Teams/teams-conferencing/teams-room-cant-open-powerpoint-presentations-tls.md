@@ -5,8 +5,8 @@ author: helenclu
 ms.author: nichburk
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.service: o365-proplus-itpro
+ms.topic: troubleshooting 
+ms.service: msteams
 localization_priority: Normal
 ms.custom: 
 - CI 117306

@@ -5,8 +5,8 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 9/21/2020
 audience: Admin
-ms.topic: article
-ms.service: o365-proplus-itpro
+ms.topic: troubleshooting
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

@@ -5,8 +5,8 @@ author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
-ms.topic: article
-ms.prod: sharepoint-server-itpro
+ms.topic: troubleshooting
+ms.service: sharepoint-online
 localization_priority: Normal
 ms.custom: 
 - CI113890 

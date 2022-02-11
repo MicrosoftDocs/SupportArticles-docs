@@ -6,7 +6,7 @@ ms.author: shmcdani
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
+ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
 - Exchange Online

@@ -6,7 +6,7 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot

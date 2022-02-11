@@ -5,8 +5,8 @@ author: helenclu
 ms.author: gbratton
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.service: o365-proplus-itpro
+ms.topic: troubleshooting 
+ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
 - Outlook for Windows

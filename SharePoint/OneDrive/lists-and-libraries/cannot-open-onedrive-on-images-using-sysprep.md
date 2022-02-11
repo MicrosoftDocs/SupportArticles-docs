@@ -6,7 +6,7 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
+ms.service: one-drive
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot

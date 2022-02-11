@@ -8,8 +8,10 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
-ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
+ms.topic: troubleshooting
 ms.author: arhinesm
 appliesto:
 - Microsoft SharePoint

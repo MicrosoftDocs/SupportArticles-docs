@@ -7,9 +7,11 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: sharepoint-powershell
-ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.prod: sharepoint-server-itpro
+ms.topic: troubleshooting
+ms.custom:
+- CSSTroubleshoot
+- sap: spsexperts
 ms.author: randring
 appliesto:
 - SharePoint Server 2016

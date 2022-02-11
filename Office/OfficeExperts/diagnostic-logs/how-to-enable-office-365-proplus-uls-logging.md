@@ -8,10 +8,11 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: o365-solutions
-ms.topic: article
-ms.custom: 
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
+ms.custom:
 - CSSTroubleshoot
+- sap: office-experts
 - CI 113644
 ms.author: ericspli
 appliesto:

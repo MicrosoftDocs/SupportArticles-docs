@@ -4,8 +4,8 @@ description: This article lists Exchange Server related issues.
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
-ms.service: exchange-powershell
-ms.topic: article
+ms.prod: exchange-server-it-pro
+ms.topic: landing-page
 ms.author: v-six
 localization_priority: Normal
 ms.custom: 

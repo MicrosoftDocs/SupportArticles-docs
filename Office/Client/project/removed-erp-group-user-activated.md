@@ -7,8 +7,8 @@ search.appverid:
 - MET150
 author: helenclu
 audience: ITPro
-ms.service: project-online
-ms.topic: article
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:

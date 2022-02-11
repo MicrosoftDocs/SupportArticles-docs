@@ -6,8 +6,8 @@ manager: dcscontentpm
 date: 3/16/2020
 localization_priority: Normal
 audience: ITPro
-ms.prod: office 365
-ms.topic: article
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
 - CI 115151

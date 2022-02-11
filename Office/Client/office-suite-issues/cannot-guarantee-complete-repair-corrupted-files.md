@@ -7,9 +7,9 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
+ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - Microsoft 365 Personal

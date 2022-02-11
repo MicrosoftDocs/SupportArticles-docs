@@ -6,8 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro 
 ms.custom: CSSTroubleshoot
-ms.topic: article
-ms.service: o365-solutions
+ms.topic: troubleshooting
 search.appverid: 
 - MET150
 description: Unable to save a project from a Project client to PWA with the error ID 12005(0xEE5)

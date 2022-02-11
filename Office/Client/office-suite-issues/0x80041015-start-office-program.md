@@ -8,8 +8,8 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office 365
-ms.topic: article
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.author: luche
 appliesto:
 - Microsoft 365 Apps for enterprise

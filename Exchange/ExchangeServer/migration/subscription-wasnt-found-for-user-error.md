@@ -5,8 +5,8 @@ author: simonxjx
 manager: dcscontentpm
 ms.date: 10/7/2020
 audience: Admin
-ms.topic: article
-ms.service: exchange-online
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
 localization_priority: Normal
 search.appverid:
 - SPO160

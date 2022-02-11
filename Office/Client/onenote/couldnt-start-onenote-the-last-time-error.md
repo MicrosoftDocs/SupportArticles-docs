@@ -5,8 +5,8 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 4/28/2020
 audience: Admin
-ms.topic: article
-ms.prod: onenote
+ms.topic: troubleshooting
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

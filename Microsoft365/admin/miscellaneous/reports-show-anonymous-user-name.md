@@ -7,8 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: o365-administration
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto:

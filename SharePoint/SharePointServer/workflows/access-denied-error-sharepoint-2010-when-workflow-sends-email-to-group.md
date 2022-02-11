@@ -5,8 +5,8 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
-ms.topic: article
-ms.service: sharepoint-powershell
+ms.topic: troubleshooting
+ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160

@@ -6,7 +6,7 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
+ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: sercast, tasitae
 ms.custom: 

@@ -8,8 +8,10 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.topic: troubleshooting
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
 ms.author: luche
 appliesto:
 - Excel for Office 365

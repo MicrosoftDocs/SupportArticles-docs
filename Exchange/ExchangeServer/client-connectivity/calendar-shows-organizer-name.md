@@ -3,8 +3,8 @@ title: Resource mailbox's calendar shows the organizer's name instead of the sub
 description: Describes behavior in which the resource mailbox's calendar shows the organizer's name in place of the subject in an Exchange Server environment. Provides a resolution.
 author: simonxjx
 audience: ITPro
-ms.service: exchange-powershell
-ms.topic: article
+ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Server

@@ -4,8 +4,8 @@ description: This article lists Outlook for iOS and Android related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: office-perpetual-itpro
-ms.topic: article
+ms.prod: outlook
+ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
 ms.custom:

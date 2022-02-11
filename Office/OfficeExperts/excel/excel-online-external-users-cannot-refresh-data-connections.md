@@ -1,21 +1,23 @@
 ---
-title: External users cannot refresh data connections from Excel Online
-description: One or more data connections in this workbook can not be refreshed or Failed to update the data connections when external users refresh a workbook from Excel Online
+title: External users can't refresh data connections from Excel Online
+description: One or more data connections in this workbook can't be refreshed or Failed to update the data connections when external users refresh a workbook from Excel Online
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.custom: CSSTroubleshoot
-ms.service: o365-solutions
-ms.topic: article
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
+ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
 ms.author: warrenr
 appliesto:
 - Excel Online
 ---
 
-# External users cannot refresh data connections from Excel Online
+# External users can't refresh data connections from Excel Online
 
 This article was written by [Ricardo Rocha](https://social.technet.microsoft.com/profile/Ricardo+R.+-+MSFT), Escalation Engineer.
 
@@ -23,7 +25,7 @@ This article was written by [Ricardo Rocha](https://social.technet.microsoft.com
 
 You're using a Microsoft Excel workbook that contains an Excel Power Pivot Model with external data connections. Currently, the data refresh in Excel Online is working without any issues for the internal users of the organization tenant.
 
-However, when you share this Excel workbook with external users of the tenant, the users cannot refresh the file from Excel Online. Additionally, they may receive an error message that resembles the following:
+However, when you share this Excel workbook with external users of the tenant, the users can't refresh the file from Excel Online. Additionally, they may receive an error message that resembles as follows:
 
 **An error occurred while working on the data model in the workbook. Try again.**
 **One or more data connections in this workbook can not be refreshed.**

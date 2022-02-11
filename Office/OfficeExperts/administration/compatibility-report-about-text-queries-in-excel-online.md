@@ -8,9 +8,11 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.topic: article
-ms.custom: CSSTroubleshoot
-ms.service: sharepoint-online
+ms.topic: troubleshooting
+ms.custom:
+- CSSTroubleshoot
+- sap: office-experts
+ms.prod: office-perpetual-itpro
 appliesto:
 - Excel Online
 ---

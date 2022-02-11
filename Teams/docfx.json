@@ -43,7 +43,29 @@
       "titleSuffix": "Microsoft Teams",
       "searchScope": ["Teams Support"] 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "msteams"
+      },
+      "ms.subservice": {
+        "channels/**/*.md": "channels",
+        "context/**/*.md": "",
+        "exchange-integration/**/*.md": "exchange-integration",
+        "files/**/*.md": "files",
+        "known-issues/**/*.md": "",
+        "meetings/**/*.md": "meetings",
+        "mobile/**/*.md": "mobile-devices",
+        "phone-system/**/*.md": "phone-system",
+        "teams-administration/**/*.md": "administration",
+        "teams-conferencing/**/*.md": "conferencing",
+        "Teams-devices-and-rooms/**/*.md": "devices-and-rooms",
+        "teams-im-presence/**/*.md": "im-and-presence",
+        "teams-on-mac/**/*.md": "teams-on-mac",
+        "teams-on-windows/**/*.md": "teams-on-windows",
+        "teams-onenote-integration/**/*.md": "onenote-integration",
+        "teams-sign-in/**/*.md": "sign-in"
+      }
+    },
     "template": [],
     "dest": "OfficeDocs-Support-MicrosoftTeams",
     "markdownEngineName": "markdig"

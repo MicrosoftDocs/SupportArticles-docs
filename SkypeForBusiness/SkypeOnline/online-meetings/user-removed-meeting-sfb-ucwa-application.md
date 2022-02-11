@@ -5,8 +5,8 @@ author: simonxjx
 ms.author: gclark
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.prod: skype-for-business-itpro
+ms.topic: troubleshooting 
+ms.service: skype-for-business-online
 localization_priority: Normal
 ms.custom: 
 - CI 117592

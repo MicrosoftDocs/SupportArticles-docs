@@ -5,9 +5,8 @@ author: helenclu
 manager: dcscontentpm
 ms.date: 10/13/2020
 audience: Admin|ITPro|Developer
-ms.topic: article
-ms.prod: microsoft-teams
-ms.technology: microsoft-graph
+ms.topic: troubleshooting
+ms.service: msteams
 localization_priority: Normal
 search.appverid:
 - SPO160

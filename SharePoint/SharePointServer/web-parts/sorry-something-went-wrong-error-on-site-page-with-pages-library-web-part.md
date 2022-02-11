@@ -8,8 +8,8 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: Admin
-ms.topic: article
-ms.prod: office-perpetual-itpro 
+ms.topic: troubleshooting
+ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

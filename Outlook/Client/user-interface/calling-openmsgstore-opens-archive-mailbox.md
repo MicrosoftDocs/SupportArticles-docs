@@ -5,8 +5,8 @@ author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
-ms.topic: article 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting 
+ms.prod: outlook
 localization_priority: Normal
 search.appverid: 
 - MET150

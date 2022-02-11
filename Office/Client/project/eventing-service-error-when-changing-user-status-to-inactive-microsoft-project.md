@@ -10,8 +10,8 @@ search.appverid:
 - MET150
 audience: Admin
 ms.custom: CSSTroubleshoot
-ms.topic: article
-ms.prod: office-perpetual-itpro 
+ms.topic: troubleshooting
+ms.prod: office-perpetual-itpro
 appliesto:
 - Microsoft Project
 ---

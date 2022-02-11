@@ -5,8 +5,8 @@ author: helenclu
 manager: dcscontentpm
 ms.reviewer: 
 audience: ITPro
-ms.topic: article
-ms.prod: office-perpetual-itpro
+ms.topic: troubleshooting
+ms.prod: outlook
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot

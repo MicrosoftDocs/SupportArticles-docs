@@ -6,7 +6,7 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
+ms.service: microsoft-365-enterprise
 localization_priority: Normal
 ms.custom:
 - CI 148047
@@ -141,6 +141,8 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRACmd.exe version|
 |--------|--------|
+|Feb 8, 2022|17.00.7971.000|
+|Nov 9, 2021|17.00.7513.000|
 |May 26, 2021|17.00.6665.000|
 |||
 

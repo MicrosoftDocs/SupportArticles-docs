@@ -8,8 +8,7 @@ search.appverid:
 - MET150
 ms.custom: CSSTroubleshoot
 audience: ITPro
-ms.service: o365-administration
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto:
 - Azure Active Directory

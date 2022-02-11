@@ -5,8 +5,8 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
-ms.service: sharepoint-powershell
+ms.topic: conceptual
+ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 search.appverid:
 - MET150

@@ -7,8 +7,8 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience:  Admin|ITPro|Developer
-ms.prod: sharepoint-server-itpro
-ms.topic: article
+ms.service: sharepoint-online
+ms.topic: troubleshooting
 ms.author: v-tappelgate
 ms.custom: CSSTroubleshoot
 appliesto:

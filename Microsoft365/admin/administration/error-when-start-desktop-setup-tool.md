@@ -5,8 +5,8 @@ author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.prod: office 365
+ms.topic: troubleshooting 
+ms.service: microsoft-365-admin
 localization_priority: Normal
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot

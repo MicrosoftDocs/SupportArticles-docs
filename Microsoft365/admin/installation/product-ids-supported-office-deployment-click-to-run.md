@@ -12,8 +12,7 @@ audience: ITPro
 ms.custom: 
 - CSSTroubleshoot
 - CI 114638
-ms.service: o365-solutions
-ms.topic: article
+ms.topic: troubleshooting
 ms.reviewer: vikkarti
 appliesto:
 - Microsoft Office Deployment Tool

@@ -6,7 +6,7 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office 365
+ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.collection:
 - M365-security-compliance
