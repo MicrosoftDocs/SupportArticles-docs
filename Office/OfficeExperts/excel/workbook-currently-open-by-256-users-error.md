@@ -8,8 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
-ms.custom: sap:office-experts, CSSTroubleshoot
-- CI 106765
+ms.custom: sap:office-experts, CSSTroubleshoot, CI 106765
 search.appverid:
 - SPO160
 - MET150
