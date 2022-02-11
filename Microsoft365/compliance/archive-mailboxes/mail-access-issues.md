@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-- 'Associated content asset: 4555316'
+  - 'Associated content asset: 4555316'
 ms.reviewer: timothyh, bilong
 appliesto: 
   - Exchange Online,Exchange Online Archiving

@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-- 'Associated content asset: 4555315'
+  - 'Associated content asset: 4555315'
 appliesto: 
   - Exchange Online
 search.appverid: MET150
