@@ -32,7 +32,7 @@ If the appearance of **In Context Form** leads to confusion, you can deactivate 
 
 ### Symptom
 
-While working on tables (such as opportunities, quote, order, invoice, quote product, and order product), you observe unexpected behavior or an error in [!INCLUDE[pn_sales_business_doc_name](../includes/pn-sales-business-doc-name.md)]. The following are some of the errors that you might encounter while working on opportunities, and they might apply to other tables:
+While working on tables (such as opportunities, quote, order, invoice, quote product, and order product), you observe unexpected behavior or an error in Dynamics 365 for Sales. The following are some of the errors that you might encounter while working on opportunities, and they might apply to other tables:
 
 - "Extended Amount is wrong after revising quote"- this error might occur due to a custom plug-in.
 - "Error while saving the opportunity" - this error might occur due to custom JavaScript.
