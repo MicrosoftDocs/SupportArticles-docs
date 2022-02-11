@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-enterprise
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 ms.reviewer: anitao, jenl, tomol, dkuy
 search.appverid: 
-- MET150
-appliesto:
-- Office 2013
+  - MET150
+appliesto: 
+  - Office 2013
 ---
 
 # Cannot insert certain scriptable ActiveX controls into Office 2013 documents
