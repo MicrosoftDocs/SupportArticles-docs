@@ -22,7 +22,7 @@ Virtual machines that have Microsoft.Azure.Extensions.CustomScript 2.0.x instal
 To determine the script version, open the Azure portal, select the virtual machine, select **Extensions** > **Custom Script Extension**, and then select the extension to view its version properties.
 You can also query for the full version information by running the following command at a command prompt:
 
-```console
+```azurecli
 az vm get-instance-view -g resourceGroupName -n vmName --query "instanceView.extensions[?type == 'Microsoft.Azure.Extensions.CustomScript']"
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 04/02/2021
+ms.date: 02/09/2022
 ms.reviewer: jafritts
 ms.service: active-directory
 ms.subservice: compliance
@@ -66,6 +66,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Application Name|Application IDs|
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
+|Azure Advanced Threat Protection|7b7531ad-5926-4f2d-8a1d-38495ad33e17|
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
 |Azure Lab Services Portal|835b2a73-6e10-4aa5-a979-21dfda45231c|
 |Azure Portal|c44b4083-3bb0-49c1-b47d-974e53cbdf3c|
