@@ -7,9 +7,8 @@ ms.topic: troubleshooting
 ms.date: 02/02/2022
 ---
 
-<a name="auto-generation-of-fields"> </a>
-
 # Troubleshooting issues with automatic generation of contact or company-related fields
+<a name="auto-generation-of-fields"> </a>
 
 When you select an existing account or contact at the time of creating a new lead, the fields related to the account or contact are automatically populated. 
 - For the contact-related fields to be automatically populated, the default fields such as Name, Job title, Business phone, Mobile phone, and Email must be empty.

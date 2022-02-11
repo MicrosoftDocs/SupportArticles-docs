@@ -7,9 +7,8 @@ ms.topic: troubleshooting
 ms.date: 02/02/2022
 ---
 
-<a name="lead_qualification"> </a>
-
 # Troubleshooting lead qualification issues for salespeople
+<a name="lead_qualification"> </a>
 
 This article helps you troubleshoot and resolve lead qualification issues for salespeople.
 

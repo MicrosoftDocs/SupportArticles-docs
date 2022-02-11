@@ -7,12 +7,10 @@ ms.topic: troubleshooting
 ms.date: 02/02/2022
 ---
 
+# Troubleshooting lead qualification issues for system administrators
 <a name="lead_qualification_for_admins"> </a> 
 
-# Troubleshooting lead qualification issues for system administrators
-
 <a name="insufficientpermissions"> </a> 
-
 ## Issue: Insufficient permissions or Access denied error when a user is trying to qualify a lead.
 
 How you resolve this error depends on the following ownership scenarios for the lead records. 
