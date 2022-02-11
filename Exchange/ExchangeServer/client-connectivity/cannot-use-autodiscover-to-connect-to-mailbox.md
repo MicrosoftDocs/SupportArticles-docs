@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: ninob, opereira, wirall
-appliesto:
-- Exchange Server 2010 Service Pack 1
+appliesto: 
+  - Exchange Server 2010 Service Pack 1
 search.appverid: MET150
 ---
 # Unable to open your default e-mail folders error when using Autodiscover if user is moved cross forest

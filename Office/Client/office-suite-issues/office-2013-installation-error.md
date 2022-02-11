@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: gregak, mmaxey, tomol
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 2013
+  - MET150
+appliesto: 
+  - Office 2013
 ---
 
 # "Error 25004. The product key you entered cannot be used on this machine" when you install Office 2013

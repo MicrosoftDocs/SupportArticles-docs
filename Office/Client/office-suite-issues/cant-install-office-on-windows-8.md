@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: patdav, viwoods
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # You can't install Office Starter 2010 on Windows 8

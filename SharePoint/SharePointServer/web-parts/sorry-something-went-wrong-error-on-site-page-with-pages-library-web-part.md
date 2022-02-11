@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Designer
-- SharePoint Foundation
-- SharePoint Server
+appliesto: 
+  - SharePoint Online
+  - SharePoint Designer
+  - SharePoint Foundation
+  - SharePoint Server
 ---
 
 # "Sorry, something went wrong" error on a Site Page with a Pages library web part added

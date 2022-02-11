@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Microsoft PowerPoint
+appliesto: 
+  - Microsoft PowerPoint
 ---
 
 # "Hlink.dll Can't Be Loaded" or "PowerPoint Failed to Load Hlink.dll" in a PowerPoint presentation

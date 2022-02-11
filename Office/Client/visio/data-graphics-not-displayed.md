@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Visio Premium 2010
-- Visio Professional 2010
-- Visio Standard 2010
-- Microsoft Office Visio Professional 2007
+appliesto: 
+  - Visio Premium 2010
+  - Visio Professional 2010
+  - Visio Standard 2010
+  - Microsoft Office Visio Professional 2007
 ms.reviewer: johnlan
 ---
 # Data graphics applied to images or objects are not displayed in Visio 2010 and Visio 2007

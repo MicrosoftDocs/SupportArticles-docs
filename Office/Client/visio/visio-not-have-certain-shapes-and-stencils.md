@@ -4,17 +4,16 @@ description: Explains that Visio 2010 or 2013 does not have certain shapes and s
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: poyant, Arykhus, Kemille, barbway
 search.appverid: 
-- MET150
-appliesto:
-- Visio 2013
-- Visio 2010
+  - MET150
+appliesto: 
+  - Visio 2013
+  - Visio 2010
 ---
 
 # Visio 2010 or 2013 does not have certain shapes and stencils included with the product

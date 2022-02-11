@@ -6,13 +6,12 @@ ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- Office Web Apps
+appliesto: 
+  - Office Web Apps
 ---
 
 # A SharePoint file is downloaded instead of opening the Office application with a direct connection to it

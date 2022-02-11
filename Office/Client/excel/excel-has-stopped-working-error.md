@@ -4,15 +4,14 @@ description: Fixes the error message Microsoft Excel has stopped working, which 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2016
+  - MET150
+appliesto: 
+  - Excel 2016
 ---
 
 # Error message "Microsoft Excel has stopped working" after installing KB3118373

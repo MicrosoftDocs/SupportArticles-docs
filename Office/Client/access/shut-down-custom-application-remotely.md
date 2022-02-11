@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 111294
-- CSSTroubleshoot
+  - CI 111294
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: JMACLEOD 
-appliesto:
-- Access 2007
-- Access 2003
-- Access 2002
+ms.reviewer: JMACLEOD
+appliesto: 
+  - Access 2007
+  - Access 2003
+  - Access 2002
 ---
 
 # How to shut down a custom Access application remotely

@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: kartik
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2010 with Business Contact Manager
-- Outlook 2010
+  - MET150
+appliesto: 
+  - Outlook 2010 with Business Contact Manager
+  - Outlook 2010
 ---
 # Outlook 2010 Room Finder doesn't show any conference rooms
 

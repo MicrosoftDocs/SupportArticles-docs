@@ -6,20 +6,19 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: sfellman, genli
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook for Office 365
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise CAL
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Office 365
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise CAL
 search.appverid: MET150
 ---
 # Synchronization is unsuccessful after mailbox items are changed through EWS calls in cached-mode Outlook client

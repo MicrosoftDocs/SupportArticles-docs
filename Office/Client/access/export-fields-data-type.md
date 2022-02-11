@@ -3,19 +3,18 @@ title: Can't export fields with data type single or double
 description: Fixes an issue in which you may receive an error in Access 2002, in Access 2003, or in Access 2007 when you export fields with data type single or double to Oracle.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
-- Microsoft Office Access 2002
+  - CI 114797
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
+  - Microsoft Office Access 2002
 search.appverid: MET150
 ---
 # Access causes an error when you export fields with data type single or double to Oracle

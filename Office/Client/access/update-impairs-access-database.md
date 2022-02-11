@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Access 2010
-- Access 2007
-- Access 2003
+appliesto: 
+  - Access 2010
+  - Access 2007
+  - Access 2003
 ---
 
 # Security Update MS12-060 Impairs Functionality of Access Database

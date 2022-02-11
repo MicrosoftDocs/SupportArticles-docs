@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Access
+appliesto: 
+  - Microsoft Access
 ---
 
 # Microsoft OLE DB Provider for Jet and Jet ODBC driver are available in 32-bit versions only

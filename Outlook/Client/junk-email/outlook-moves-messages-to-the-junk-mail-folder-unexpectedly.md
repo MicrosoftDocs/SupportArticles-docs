@@ -6,20 +6,19 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: macien, wbrandt, tmoore
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
-- Exchange Online
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Microsoft Business Productivity Online Dedicated
-- Microsoft Business Productivity Online Suite Federal
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Exchange Online
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Microsoft Business Productivity Online Dedicated
+  - Microsoft Business Productivity Online Suite Federal
 search.appverid: MET150
 ---
 # Outlook moves messages to the Junk Mail Folder even if the Spam Confidence Level (SCL) is -1

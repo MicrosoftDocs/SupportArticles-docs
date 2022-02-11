@@ -4,18 +4,17 @@ description: Describes an Office 2013 activation issue in which you receive an I
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Office Standard 2013
-- Office Professional Plus 2013
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Datacenter
+  - MET150
+appliesto: 
+  - Office Standard 2013
+  - Office Professional Plus 2013
+  - Windows Server 2012 Datacenter
+  - Windows Server 2012 Datacenter
 ---
 
 # "Invalid product key or license mismatch" error message when you try to activate Office 2013

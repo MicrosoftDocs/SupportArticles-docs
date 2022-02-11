@@ -3,20 +3,19 @@ title: Exchange Server 2019 setup does not run as expected if started from Power
 description: Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe
 author: simonxjx
 audience: ITPro
-ms.prod: exchange-server-it-pro
 ms.topic: troubleshooting
 ms.author: lusassl
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - MET150
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 
 # Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe

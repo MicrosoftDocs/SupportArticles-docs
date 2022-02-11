@@ -4,18 +4,17 @@ description: Describes errors that can occur during Windows apps activation if T
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: viwoods, libbyu
 ms.custom: 
-- CSSTroubleshoot
-- CI 155558
+  - CSSTroubleshoot
+  - CI 155558
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Errors activating Microsoft 365 on older Windows versions

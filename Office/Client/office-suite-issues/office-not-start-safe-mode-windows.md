@@ -6,26 +6,25 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: tasitae
-ms.custom:
-- CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2016
-- Word 2016
-- Excel 2016
-- OneNote 2016
-- PowerPoint 2016
-- Access 2016
-- Outlook 2013
-- Word 2013
-- Excel 2013
-- OneNote 2013
-- PowerPoint 2013
-- Access 2013
+  - MET150
+appliesto: 
+  - Outlook 2016
+  - Word 2016
+  - Excel 2016
+  - OneNote 2016
+  - PowerPoint 2016
+  - Access 2016
+  - Outlook 2013
+  - Word 2013
+  - Excel 2013
+  - OneNote 2013
+  - PowerPoint 2013
+  - Access 2013
 ---
 # Office applications don't start when Windows is running in safe mode
 

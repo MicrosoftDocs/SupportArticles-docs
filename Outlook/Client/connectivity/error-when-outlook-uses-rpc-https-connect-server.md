@@ -1,22 +1,21 @@
 ---
 title: Outlook can't connect to a server by an RPC or HTTPS connection
-description: Describes an issue where you receive a "There is a problem with the proxy server's security certificate" error when Outlook tries to connect to a server by using an RPC connection or an HTTPS connection. Provides a resolution.
+description: Describes an issue where you receive a There is a problem with the proxy server's security certificate error when Outlook tries to connect to a server by using an RPC connection or an HTTPS connection. Provides a resolution.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: ronnap, twalker
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Exchange Online 
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Exchange Online
 search.appverid: MET150
 ---
 # Error when Outlook tries to connect to a server by using an RPC connection or an HTTPS connection: There is a problem with the proxy server's security certificate

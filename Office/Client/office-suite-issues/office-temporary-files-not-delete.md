@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: CSSTroubleshoot
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: debbiery, jenl
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # Document files in the Office Document Cache are not deleted when you run the Windows Disk Cleanup utility on a computer that is running a 64-bit version of Windows

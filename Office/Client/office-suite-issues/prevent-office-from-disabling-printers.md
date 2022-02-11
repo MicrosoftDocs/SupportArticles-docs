@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: jgordner, sfrancis, sloanc, andyfel, djess, arykhus, mosesma, ryanwei, tomol
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # How to prevent Office 2010 from disabling printers

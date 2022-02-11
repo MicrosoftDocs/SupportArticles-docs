@@ -3,19 +3,18 @@ title: Use BeforeUpdate to prompt you to verify save operation
 description: Describes how to use a BeforeUpdate event procedure to prompt you to verify the save operation before Access automatically saves changes.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
-ms.reviewer: chriswy 
-appliesto:
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+  - CI 114797
+  - CSSTroubleshoot
+ms.reviewer: chriswy
+appliesto: 
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # How to prompt user to save changes to record in a form in Access

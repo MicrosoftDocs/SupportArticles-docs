@@ -6,16 +6,15 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 106818
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 106818
+  - CSSTroubleshoot
 ms.reviewer: gbratton
-appliesto:
-- Word
-- Outlook
+appliesto: 
+  - Word
+  - Outlook
 ---
 
 # Two or more consecutive slashes in a hyperlink are changed to one slash

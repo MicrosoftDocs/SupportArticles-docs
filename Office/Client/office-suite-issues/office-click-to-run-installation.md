@@ -1,18 +1,17 @@
 ---
 title: Information about Office Click-to-Run installation
-description: Discusses Click-to-Run and how it interacts with some anti-malware applications. 
+description: Discusses Click-to-Run and how it interacts with some anti-malware applications.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # Information about Office Click-to-Run installations and about related anti-malware applications

@@ -6,21 +6,20 @@ manager: dcscontentpm
 ms.date: 10/7/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Exchange Server Online
-- Exchange Server 2019
-- Exchange Server 2016
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Exchange Server Online
+  - Exchange Server 2019
+  - Exchange Server 2016
 ms.custom: 
-- Exchange Server
-- CI 123889
-- CSSTroubleshoot 
+  - Exchange Server
+  - CI 123889
+  - CSSTroubleshoot
 ms.reviewer: batre
-description: Describes the resolution to the Exchange error "A subscription wasn't found for this user" when trying to migrate a public batch folder.
+description: Describes the resolution to the Exchange error A subscription wasn't found for this user when trying to migrate a public batch folder.
 ---
 
 # Error (A subscription wasn't found for this user) when migrating a public folder batch

@@ -4,15 +4,14 @@ description: Describes an issue in which macros in Excel 2013 may run slower tha
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel 2013
 ---
 
 # Excel macros that protect and unprotect worksheets may run slowly

@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
+appliesto: 
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
 ---
 
 # Formula errors in Excel when list separator is not set correctly

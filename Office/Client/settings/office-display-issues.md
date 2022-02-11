@@ -5,32 +5,31 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Outlook 2016
-- Excel 2016
-- Word 2016
-- PowerPoint 2016
-- OneNote 2016
-- Microsoft Publisher 2016
-- Visio Professional 2016
-- Access 2016
-- Project Professional 2016
-- Word 2013
-- Excel 2013
-- Microsoft Lync 2013
-- Outlook 2013
-- PowerPoint 2013
-- OneNote 2013
-- Publisher 2013
-- Visio Professional 2013
-- Access 2013
-- Project Professional 2013
+appliesto: 
+  - Outlook 2016
+  - Excel 2016
+  - Word 2016
+  - PowerPoint 2016
+  - OneNote 2016
+  - Microsoft Publisher 2016
+  - Visio Professional 2016
+  - Access 2016
+  - Project Professional 2016
+  - Word 2013
+  - Excel 2013
+  - Microsoft Lync 2013
+  - Outlook 2013
+  - PowerPoint 2013
+  - OneNote 2013
+  - Publisher 2013
+  - Visio Professional 2013
+  - Access 2013
+  - Project Professional 2013
 ---
 
 # Display issues in Office client applications

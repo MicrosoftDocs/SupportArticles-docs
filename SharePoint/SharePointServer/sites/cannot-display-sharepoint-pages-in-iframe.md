@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- SharePoint Online 
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Online
+search.appverid: MET150
 ---
 # Unable to display SharePoint pages from a different domain in iFrame
 

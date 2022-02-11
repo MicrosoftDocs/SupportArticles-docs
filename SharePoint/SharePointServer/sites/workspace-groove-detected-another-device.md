@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: lgreer
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Workspace 2010
+appliesto: 
+  - SharePoint Workspace 2010
 ---
 
 # Error message when you start SharePoint Workspace or Groove: "SharePoint Workspace/Groove has detected another device with the same DeviceURL as yours"

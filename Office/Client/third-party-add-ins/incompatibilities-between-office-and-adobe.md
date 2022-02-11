@@ -4,34 +4,33 @@ description: This article describes how to verify that the PDFMaker add-in is in
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: gregmans
 search.appverid: 
-- MET150
-appliesto:
-- Access 2016
-- Excel 2016
-- Outlook 2016
-- PowerPoint 2016
-- Word 2016
-- Excel 2013
-- Word 2013
-- Outlook 2013
-- Access 2013
-- Visio Professional 2013
-- Visio Standard 2013
-- Excel 2010
-- Microsoft Word 2010
-- PowerPoint 2010
-- Microsoft Outlook 2010
-- Access 2010
-- Publisher 2010
-- Visio Professional 2010
-- Visio Standard 2010
+  - MET150
+appliesto: 
+  - Access 2016
+  - Excel 2016
+  - Outlook 2016
+  - PowerPoint 2016
+  - Word 2016
+  - Excel 2013
+  - Word 2013
+  - Outlook 2013
+  - Access 2013
+  - Visio Professional 2013
+  - Visio Standard 2013
+  - Excel 2010
+  - Microsoft Word 2010
+  - PowerPoint 2010
+  - Microsoft Outlook 2010
+  - Access 2010
+  - Publisher 2010
+  - Visio Professional 2010
+  - Visio Standard 2010
 ---
 
 # Incompatibilities between Office programs and Adobe Acrobat PDFMaker Office COM Add-in

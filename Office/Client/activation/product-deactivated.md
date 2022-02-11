@@ -4,18 +4,17 @@ description: Troubleshooting for Microsoft 365 Apps activation error Product dea
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157753
-- CI 159131
+  - CSSTroubleshoot
+  - CI 157753
+  - CI 159131
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation error: “Product deactivated"

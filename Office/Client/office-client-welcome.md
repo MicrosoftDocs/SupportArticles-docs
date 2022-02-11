@@ -4,14 +4,13 @@ description: Lists Office client related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot 
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
-- Microsoft Office
+  - Microsoft Office
 ---
 
 # Office products troubleshooting

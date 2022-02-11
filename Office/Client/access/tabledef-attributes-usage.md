@@ -3,19 +3,18 @@ title: Use the Attributes property for TableDef objects
 description: Describes the usage and code example of Attributes property for TableDef objects in Access.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
-ms.reviewer: chriswy 
-appliesto:
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+  - CI 114797
+  - CSSTroubleshoot
+ms.reviewer: chriswy
+appliesto: 
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # How to use the Attributes property for TableDef objects in Access

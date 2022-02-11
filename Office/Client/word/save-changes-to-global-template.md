@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mmaxey
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Word 2010
-- Word 2007
+  - MET150
+appliesto: 
+  - Word 2010
+  - Word 2007
 ---
 
 # You are prompted to save the changes to the global template every time that you exit Word 2007 or Word 2010

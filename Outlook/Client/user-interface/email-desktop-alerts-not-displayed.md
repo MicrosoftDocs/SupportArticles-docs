@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 Standard  
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Windows Server 2012 R2 Standard
+  - Windows Server 2012 Standard
 search.appverid: MET150
 ---
 # Email desktop alerts (toast notifications) aren't displayed in Outlook on Windows Server 2012

@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: dakova, clake, v-thomr
 ms.custom: 
-- CSSTroubleshoot
-- CI 110752
-appliesto:
-- FAST Search Server 2010 for SharePoint
+  - CSSTroubleshoot
+  - CI 110752
+appliesto: 
+  - FAST Search Server 2010 for SharePoint
 ---
 
 # "A privilege that the service requires to function properly does not exist in the service account configuration" error in FAST Search Server 2010 for SharePoint

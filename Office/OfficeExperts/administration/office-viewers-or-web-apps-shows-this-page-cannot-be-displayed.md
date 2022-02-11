@@ -1,18 +1,17 @@
 ---
-title: Office viewers or Microsoft Offices Online shows the "This page can't be displayed" error
-description: Office viewers don't work with the "This page can't be displayed" error when you use Microsoft .NET Framework 4.6.
+title: Office viewers or Microsoft Offices Online shows the This page can't be displayed error
+description: Office viewers don't work with the This page can't be displayed error when you use Microsoft .NET Framework 4.6.
 author: helenclu
 ms.author: arhinesm
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Office Online Server
+appliesto: 
+  - Office Online Server
 ---
 
 # Office viewers or Microsoft Offices Online shows the "This page can't be displayed" error

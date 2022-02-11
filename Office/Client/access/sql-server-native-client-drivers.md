@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Access 2010
+  - MET150
+appliesto: 
+  - Access 2010
 ---
 
 # Download information about the SQL Server Native Client drivers that are used by Access

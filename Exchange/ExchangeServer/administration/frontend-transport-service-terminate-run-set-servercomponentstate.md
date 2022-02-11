@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: jaburn, ninob, marcn
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+search.appverid: MET150
 ---
 # Event 7031 when you run Exchange maintenance scripts or Set-ServerComponentState
 

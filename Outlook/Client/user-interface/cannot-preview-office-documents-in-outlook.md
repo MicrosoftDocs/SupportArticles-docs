@@ -6,30 +6,29 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: vivekst, akeeler
-appliesto:
-- Outlook 2019
-- Word 2019
-- Word 2019
-- Excel 2019
-- PowerPoint 2019
-- Outlook 2016
-- Excel 2016
-- Word 2016
-- PowerPoint 2016
-- Outlook 2013
-- PowerPoint 2013
-- Excel 2013
-- Word 2013
-- Outlook for Office 365
-- Word for Office 365
-- Excel for Office 365
-- PowerPoint for Office 365
+appliesto: 
+  - Outlook 2019
+  - Word 2019
+  - Word 2019
+  - Excel 2019
+  - PowerPoint 2019
+  - Outlook 2016
+  - Excel 2016
+  - Word 2016
+  - PowerPoint 2016
+  - Outlook 2013
+  - PowerPoint 2013
+  - Excel 2013
+  - Word 2013
+  - Outlook for Office 365
+  - Word for Office 365
+  - Excel for Office 365
+  - PowerPoint for Office 365
 search.appverid: MET150
 ---
 # Can't preview Office documents in Outlook if Windows Firewall Service is disabled

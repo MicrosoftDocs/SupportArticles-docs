@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
-ms.prod: outlook
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Outlook 2016 for Mac
+appliesto: 
+  - Outlook 2016 for Mac
 ---
 
 # How to set Outlook 2016 for Mac to delay trying to renew a Kerberos ticket

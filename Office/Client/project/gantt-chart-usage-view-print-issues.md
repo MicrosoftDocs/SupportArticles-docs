@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: timj 
+ms.reviewer: timj
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Project Professional 2003
-- Microsoft Office Project Standard 2003
-- Project Professional 2010
-- Project Standard 2010
-- Project Professional 2013
-- Project 2013 Standard
+  - MET150
+appliesto: 
+  - Microsoft Office Project Professional 2003
+  - Microsoft Office Project Standard 2003
+  - Project Professional 2010
+  - Project Standard 2010
+  - Project Professional 2013
+  - Project 2013 Standard
 ---
 
 # Gantt Chart view or Usage view print on too many pages in Project

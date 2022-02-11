@@ -6,19 +6,18 @@ ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- CI 146711
-- CI 147050
-- Exchange Server
-- CSSTroubleshoot
+  - CI 146711
+  - CI 147050
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: taruns, daweiler, jeffkalv
-appliesto:
-- Outlook for iOS
-- Outlook for Android
-- Exchange Server 2013
-- Exchange Server 2010
+appliesto: 
+  - Outlook for iOS
+  - Outlook for Android
+  - Exchange Server 2013
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 

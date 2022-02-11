@@ -3,18 +3,17 @@ title: You're prompted for a username and password
 description: Describes a problem where you're prompted for a username and a password without setting up security in Access. Also describes how to reset the workgroup information.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: ritan
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # You're prompted for username and password though you don't set up security in Access

@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: aruiz
-appliesto:
-- Outlook 2016
-- Outlook 2013
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
 search.appverid: MET150
 ---
 # Outlook 2013 or Outlook 2016 IMAP account can't download messages because of UID SEARCH command

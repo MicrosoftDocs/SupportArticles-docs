@@ -5,20 +5,19 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: outlook
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: aruiz
 ms.custom: 
-- Outlook for Windows
-- CI 119623
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 119623
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013  
+  - MET150
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 # You can't set up an Office 365 account in Outlook
 

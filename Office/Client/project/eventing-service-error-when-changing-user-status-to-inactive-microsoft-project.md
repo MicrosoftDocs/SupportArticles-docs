@@ -7,13 +7,12 @@ ms.reviewer:
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: Admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
-appliesto:
-- Microsoft Project
+appliesto: 
+  - Microsoft Project
 ---
 
 # "Eventing service" error message when changing the status of users to inactive in Microsoft Project

@@ -6,21 +6,20 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: robevans, gregmans
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
-- Word 2013
-- Microsoft Word 2010
-- Excel 2013
-- Excel 2010
-- PowerPoint 2013
-- PowerPoint 2010
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Word 2013
+  - Microsoft Word 2010
+  - Excel 2013
+  - Excel 2010
+  - PowerPoint 2013
+  - PowerPoint 2010
 search.appverid: MET150
 ---
 # Office program errors when DisableThemes is configured in the __COMPAT_LAYER environment variable

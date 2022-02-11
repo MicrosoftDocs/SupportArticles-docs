@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: CSSTroubleshoot
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: wbrandt, abraeg
-appliesto:
-- Office 2007
+appliesto: 
+  - Office 2007
 ---
 
 # Loss of image quality after you save in Word, Excel, or PowerPoint 2007

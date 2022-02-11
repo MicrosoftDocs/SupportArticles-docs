@@ -7,13 +7,12 @@ ms.reviewer:
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: Admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
-appliesto:
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2013
 ---
 
 # "Requested registry access is not allowed" error in SharePoint 2013 OOB workflow creation

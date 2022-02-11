@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Microsoft Exchange Server
-- Microsoft Outlook
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Microsoft Exchange Server
+  - Microsoft Outlook
 ---
 
 # Microsoft doesn't expose permissions to generate OAuth tokens for Extended MAPI access to mailboxes

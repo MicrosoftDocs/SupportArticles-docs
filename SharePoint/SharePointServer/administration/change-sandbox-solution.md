@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Server
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server
 ---
 
 # Remove the assembly reference from your Sandbox solution created in Visual Studio

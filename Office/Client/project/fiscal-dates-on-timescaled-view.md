@@ -4,19 +4,18 @@ description: Describes how Fiscal Dates are shown on a timescaled view.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: v-abrudv, adrianje
 ms.custom: 
-- CI 112121
-- CSSTroubleshoot
+  - CI 112121
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Standard 2010
-- Project Professional 2010
+  - MET150
+appliesto: 
+  - Project Standard 2010
+  - Project Professional 2010
 ---
 
 

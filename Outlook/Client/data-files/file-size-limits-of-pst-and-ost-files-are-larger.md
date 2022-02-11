@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans, aruiz, tsimon, laurentc, amkanade, doakm, randyto, gbratton, bobcool, sercast
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # The file size limits of .pst and .ost files are larger in Outlook 2010 and Outlook 2013

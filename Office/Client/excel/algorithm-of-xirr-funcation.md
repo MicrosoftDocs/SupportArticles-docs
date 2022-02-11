@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel 2000
-- Excel 2002
-- Excel 2003
-- Excel 2007
+appliesto: 
+  - Excel 2000
+  - Excel 2002
+  - Excel 2003
+  - Excel 2007
 ---
 
 # Description of the algorithm used by the XIRR() function in Excel

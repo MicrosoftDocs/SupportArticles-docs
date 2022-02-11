@@ -3,18 +3,17 @@ title: Common Dialog API usage in an Access database
 description: Discusses how to use the Common Dialog API in an Access database to replace the Common Dialog functionality.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # How to use the Common Dialog API in a database in Access 2003 or Access 2007

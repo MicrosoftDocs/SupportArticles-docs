@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Access 2010
-- Office Access 2007
+appliesto: 
+  - Access 2010
+  - Office Access 2007
 ---
 
 # You cannot use the mouse wheel to scroll through records in an Access 2007 or Access 2010 form

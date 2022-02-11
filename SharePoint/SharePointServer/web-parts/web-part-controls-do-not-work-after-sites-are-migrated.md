@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Server 2016
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2016
+  - SharePoint Server 2013
 ---
 
 # Web part controls don't work after sites are migrated to SharePoint Server 2016  

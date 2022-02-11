@@ -7,23 +7,22 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Enterprise
-- Windows Server 2012 R2 Essentials
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 Essentials
-- Windows Server 2012 Standard
-- Windows Server 2008 R2 Enterprise
-- Windows Server 2008 R2 Standard
-- Windows Server 2008 Enterprise
+  - Exchange Server
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Enterprise
+  - Windows Server 2012 R2 Essentials
+  - Windows Server 2012 R2 Standard
+  - Windows Server 2012 Essentials
+  - Windows Server 2012 Standard
+  - Windows Server 2008 R2 Enterprise
+  - Windows Server 2008 R2 Standard
+  - Windows Server 2008 Enterprise
 search.appverid: MET150
 ---
 # You can't create multiple System.Management.Automation runspaces in a web app for two or more different users

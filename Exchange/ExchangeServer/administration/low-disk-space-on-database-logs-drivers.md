@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: brianpr
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010
+  - MET150
+appliesto: 
+  - Exchange Server 2010
 ---
 # Low disk space on database logs or database drives
 

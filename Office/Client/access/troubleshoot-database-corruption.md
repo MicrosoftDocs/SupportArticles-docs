@@ -3,19 +3,18 @@ title: How to troubleshoot database corruption
 description: Provides a list of reference to Microsoft Knowledge Base articles that may help you to resolve corruption in a database.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # Description of troubleshooting corruption in an Office Access 2003 database

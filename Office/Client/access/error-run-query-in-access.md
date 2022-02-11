@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: cochen, mattbum
-appliesto:
-- Access 2010
+appliesto: 
+  - Access 2010
 ---
 
 # You receive an error message when you run a query in Microsoft Access because of a double-byte Arabic number

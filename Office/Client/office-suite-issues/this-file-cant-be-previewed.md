@@ -5,22 +5,21 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: zeyadr, brandes
 search.appverid: 
-- MET150
-appliesto:
-- Word 2013
-- Microsoft Word 2010
-- Excel 2013
-- Excel 2010
-- Microsoft Office Excel 2007
-- PowerPoint 2013
-- PowerPoint 2010
-- Microsoft Office PowerPoint 2007
+  - MET150
+appliesto: 
+  - Word 2013
+  - Microsoft Word 2010
+  - Excel 2013
+  - Excel 2010
+  - Microsoft Office Excel 2007
+  - PowerPoint 2013
+  - PowerPoint 2010
+  - Microsoft Office PowerPoint 2007
 ---
 
 # "This file can't be previewed" error in Word, Excel, or PowerPoint

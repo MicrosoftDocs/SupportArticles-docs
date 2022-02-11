@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: rtaylor
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # "Compile Error: Procedure too large" when you try to run a VBA macro in a 32-bit version of an Office 2010 program

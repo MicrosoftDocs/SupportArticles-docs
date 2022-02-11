@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Lync Server
+appliesto: 
+  - Microsoft Lync Server
 ---
 
 # Call to Microsoft Lync Server Response Group Agent fails

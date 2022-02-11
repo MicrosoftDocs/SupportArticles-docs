@@ -5,34 +5,33 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CSSTroubleshoot
-- CI 105976
-appliesto:
-- Microsoft Office 2016
-- Microsoft Office 2013
-- Microsoft Office Access 2007
-- Microsoft Office Excel 2007
-- Microsoft Office InfoPath 2007
-- Microsoft Office Outlook 2007
-- Microsoft Office PowerPoint 2007
-- Microsoft Office Publisher 2007
-- Microsoft Office Visio Professional 2007
-- Microsoft Office Visio Standard 2007
-- Office Professional Academic 2010
-- Office Home and Business 2010
-- Office Home and Student 2010
-- IIS Media Services 2.0
-- Office Professional 2010
-- Office Professional Plus 2010
-- Office Professional Plus 2010 Home Use Program
-- Office Standard 2010
-- Office Starter 2010
+  - CSSTroubleshoot
+  - CI 105976
+appliesto: 
+  - Microsoft Office 2016
+  - Microsoft Office 2013
+  - Microsoft Office Access 2007
+  - Microsoft Office Excel 2007
+  - Microsoft Office InfoPath 2007
+  - Microsoft Office Outlook 2007
+  - Microsoft Office PowerPoint 2007
+  - Microsoft Office Publisher 2007
+  - Microsoft Office Visio Professional 2007
+  - Microsoft Office Visio Standard 2007
+  - Office Professional Academic 2010
+  - Office Home and Business 2010
+  - Office Home and Student 2010
+  - IIS Media Services 2.0
+  - Office Professional 2010
+  - Office Professional Plus 2010
+  - Office Professional Plus 2010 Home Use Program
+  - Office Standard 2010
+  - Office Starter 2010
 ---
 
 # Error 1935 when you try to install Microsoft Office

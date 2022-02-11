@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: clayj 
+ms.reviewer: clayj
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2010
-- Excel 2013
-- Excel for Office 365
-- Microsoft Excel for Mac 2011
-- Excel for Mac for Office 365
+  - MET150
+appliesto: 
+  - Excel 2010
+  - Excel 2013
+  - Excel for Office 365
+  - Microsoft Excel for Mac 2011
+  - Excel for Mac for Office 365
 ---
 
 # Floating-point arithmetic may give inaccurate results in Excel

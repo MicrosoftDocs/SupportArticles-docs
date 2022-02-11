@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Service Pack 1
-- Exchange Server 2013 Standard Edition 
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Service Pack 1
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # Outlook clients repeatedly disconnect from and reconnect to Exchange Server 2013

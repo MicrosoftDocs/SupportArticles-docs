@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 ms.author: arhinesm
-appliesto:
-- Office Online Server
+appliesto: 
+  - Office Online Server
 ---
 
 # Behavior when using Office Online Server and SharePoint with multiple zones

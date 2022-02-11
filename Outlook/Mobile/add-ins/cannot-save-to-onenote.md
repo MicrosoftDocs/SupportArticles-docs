@@ -6,16 +6,15 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for iOS and Android
-- CSSTroubleshoot
-- CI 154609
+  - Outlook for iOS and Android
+  - CSSTroubleshoot
+  - CI 154609
 ms.reviewer: meerak; mhaque; subhbasu
-appliesto:
-- Outlook for iOS
-- OneNote for iPhone
+appliesto: 
+  - Outlook for iOS
+  - OneNote for iPhone
 search.appverid: MET150
 ---
 

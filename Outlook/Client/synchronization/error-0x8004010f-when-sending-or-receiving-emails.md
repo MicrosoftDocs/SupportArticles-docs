@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: danv
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # Error 0x8004010F when you try to send or receive email in Outlook 2010 or Outlook 2013

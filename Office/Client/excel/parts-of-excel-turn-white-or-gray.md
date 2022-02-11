@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: xl15beta, anitao, jenl, anatolyg
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel 2013
 ---
 
 # Parts of Excel turn white or gray when you run VBA code in Excel 2013

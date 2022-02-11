@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Foundation 2013
-- SharePoint Server 2013
-- Microsoft SharePoint Server 2013 Service Pack 1
+appliesto: 
+  - SharePoint Foundation 2013
+  - SharePoint Server 2013
+  - Microsoft SharePoint Server 2013 Service Pack 1
 ---
 
 # Incomplete search results for choice type columns with multiple values  

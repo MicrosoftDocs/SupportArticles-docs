@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- PowerPoint for Mac
+appliesto: 
+  - PowerPoint for Mac
 ---
 
 # PowerPoint for Mac closes or quit unexpectedly when you start it or open a new presentation

@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: TasitaE, GregMans
-appliesto:
-- Outlook 2010 with Business Contact Manager
+appliesto: 
+  - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
 ---
 # How to enable the add-in for Business Contact Manager in Outlook

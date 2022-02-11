@@ -1,18 +1,17 @@
 ---
-title: People Picker field embedded in Office documents does not show "Add People" dialog box in SharePoint 2013
-description: Discusses a problem in which the embedded People Picker field in Office documents does not show the "Add People" dialog box in SharePoint 2013.
+title: People Picker field embedded in Office documents does not show Add People dialog box in SharePoint 2013
+description: Discusses a problem in which the embedded People Picker field in Office documents does not show the Add People dialog box in SharePoint 2013.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft SharePoint
+appliesto: 
+  - Microsoft SharePoint
 ---
 
 # People Picker field embedded in Office documents does not show "Add People" dialog box

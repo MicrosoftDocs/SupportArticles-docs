@@ -7,15 +7,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: sidd
-appliesto:
-- Exchange Server 2010
-- Exchange Server 2007
+appliesto: 
+  - Exchange Server 2010
+  - Exchange Server 2007
 search.appverid: MET150
 ---
 # You cannot restore an individual database by using Windows Server Backup in Exchange Server

@@ -7,18 +7,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Service Pack 3
-- Exchange Server 2007
-- Exchange Server 2003 Service Pack 2
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Service Pack 3
+  - Exchange Server 2007
+  - Exchange Server 2003 Service Pack 2
 search.appverid: MET150
 ---
 # Troubleshoot public folder replication for Exchange Server

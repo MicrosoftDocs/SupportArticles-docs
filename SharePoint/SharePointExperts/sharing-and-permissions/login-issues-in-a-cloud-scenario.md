@@ -6,14 +6,13 @@ ms.author: joergsi
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
-ms.prod: sharepoint-server-itpro
-appliesto:
-- SharePoint Designer 2013
-- SharePoint Online
+appliesto: 
+  - SharePoint Designer 2013
+  - SharePoint Online
 ---
 
 # SharePoint Designer 2013 login Issues in a cloud scenario

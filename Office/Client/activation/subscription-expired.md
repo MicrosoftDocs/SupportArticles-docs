@@ -4,18 +4,17 @@ description: Troubleshooting steps for Microsoft 365 Apps activation Subscriptio
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157754
-- CI 159067
+  - CSSTroubleshoot
+  - CI 157754
+  - CI 159067
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation Subscription expired error

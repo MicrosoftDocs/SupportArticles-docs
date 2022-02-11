@@ -6,21 +6,20 @@ manager: dcscontentpm
 ms.date: 11/20/2019
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Server
-- Project Server 2019
-- Project Server 2016
-- Project Server 2013
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Server
+  - Project Server 2019
+  - Project Server 2016
+  - Project Server 2013
 ms.custom: 
-- CI 109543
-- CSSTroubleshoot 
-ms.reviewer: krishnp 
-description: Desribes how to resolve an issue where the SharePoint task list sync job fails when published from Project Professional or PWA. 
+  - CI 109543
+  - CSSTroubleshoot
+ms.reviewer: krishnp
+description: Desribes how to resolve an issue where the SharePoint task list sync job fails when published from Project Professional or PWA.
 ---
 
 # SharePoint task list sync job fails when Project is published

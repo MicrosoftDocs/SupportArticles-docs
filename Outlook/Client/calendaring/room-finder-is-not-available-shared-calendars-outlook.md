@@ -4,19 +4,18 @@ description: When you access an existing meeting on a shared calendar that you a
 author: helenclu
 ms.author: gabesl
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 111779
-- CSSTroubleshoot 
+  - Outlook for Windows
+  - CI 111779
+  - CSSTroubleshoot
 ms.reviewer: gabesl, aruiz
-appliesto:
-- Outlook for Office 365
-search.appverid:
-- MET150
+appliesto: 
+  - Outlook for Office 365
+search.appverid: 
+  - MET150
 ---
 
 # Room Finder isn't available on shared calendars when multiple Exchange accounts are added to the same Outlook profile

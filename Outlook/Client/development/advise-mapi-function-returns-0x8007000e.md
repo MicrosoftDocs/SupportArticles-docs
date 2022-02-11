@@ -6,13 +6,12 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Microsoft Office Outlook 2007
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ms.reviewer: baijun, sgriffin
 ---

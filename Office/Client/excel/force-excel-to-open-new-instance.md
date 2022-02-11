@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel for Office 365
-- Excel 2016
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel for Office 365
+  - Excel 2016
+  - Excel 2013
 ---
 
 # How to force Excel to open in a new instance by default

@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Office Outlook 2007
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Office Outlook 2007
 ---
 
 # Unexpected Autodiscover behavior when you have registry settings under the \Autodiscover key

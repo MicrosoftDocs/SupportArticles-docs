@@ -3,19 +3,18 @@ title: Unable to save design changes to Access objects
 description: Explains that you cannot save design changes if Access is unable to obtain an exclusive lock on the database. You must implement source code control using Visual SourceSafe add-in or distribute local working copies of the database to each developer.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: keithf, REBC
-appliesto:
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # Exclusive lock is required for saving design changes to Access objects

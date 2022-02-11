@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: of12sstr
-appliesto:
-- Office 2010
-- Office 2007
+appliesto: 
+  - Office 2010
+  - Office 2007
 ---
 
 # How to manage templates in 2007 Office programs and in 2010 Office programs

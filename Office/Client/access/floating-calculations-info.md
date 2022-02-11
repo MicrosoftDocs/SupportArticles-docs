@@ -3,17 +3,16 @@ title: Precision and accuracy in floating-point calculations
 description: Describes the rules that should be followed for floating-point calculations.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
-ms.reviewer: stuk 
-appliesto:
-- Access
+  - CI 114797
+  - CSSTroubleshoot
+ms.reviewer: stuk
+appliesto: 
+  - Access
 search.appverid: MET150
 ---
 # Precision and accuracy in floating-point calculations

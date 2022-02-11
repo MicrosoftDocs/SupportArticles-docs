@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: elizs
-appliesto:
-- Outlook 2019 for Mac
-- Outlook for Mac for Office 365
-- Outlook 2016 for Mac
+appliesto: 
+  - Outlook 2019 for Mac
+  - Outlook for Mac for Office 365
+  - Outlook 2016 for Mac
 search.appverid: MET150
 ---
 # Cannot save a meeting as a draft in Outlook for Mac by using Office JS API

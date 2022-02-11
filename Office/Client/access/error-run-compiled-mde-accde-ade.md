@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Access 2010
+appliesto: 
+  - Access 2010
 ---
 
 # "The database cannot be opened because the VBA project contained in it cannot be read" when you run a compiled Microsoft Access MDE, ACCDE, or ADE file in Access 2010

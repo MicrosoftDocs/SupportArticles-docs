@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-appliesto:
-- Lync Server 2010
-- Outlook 2010
-- Outlook 2007
-- Outlook 2003 Service Pack 2
+appliesto: 
+  - Lync Server 2010
+  - Outlook 2010
+  - Outlook 2007
+  - Outlook 2003 Service Pack 2
 ---
 
 # The presence information for a user of Lync Server 2010 or of Communications Server may not be displayed in Outlook 2003 SP2, in Outlook 2007, or in Outlook 2010

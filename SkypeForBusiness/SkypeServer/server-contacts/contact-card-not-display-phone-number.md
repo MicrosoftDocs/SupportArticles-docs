@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: jaym, carlsh
-ms.custom: CSSTroubleshoot 
-appliesto:
-- Skype for Business 2016
+ms.custom: CSSTroubleshoot
+appliesto: 
+  - Skype for Business 2016
 ---
 
 # Contact card displays phone number instead of name in Skype for Business 2016

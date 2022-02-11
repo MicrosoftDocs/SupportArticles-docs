@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: haidongh, lauraho
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2010
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel 2010
+  - Excel 2013
 ---
 
 # Connection to ODBC driver fails in PowerPivot for Excel 2010 or PowerPivot for Excel 2013

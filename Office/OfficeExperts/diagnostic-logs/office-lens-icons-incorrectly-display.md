@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Office Lens
+appliesto: 
+  - Office Lens
 ---
 
 # Office Lens icons on Windows 10 do not display correctly after registering private characters

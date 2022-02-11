@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: klaw
-appliesto:
-- Microsoft Office
+appliesto: 
+  - Microsoft Office
 ---
 
 # You are redirected to a logon page or an error page, or you are prompted for authentication information when you click a hyperlink to a SSO Web site in an Office document

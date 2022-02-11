@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: sudeepg, troymoen, shaunbe, pelopes, sureshka, josack, alexek, rainera, abloesch, jopilov
-appliesto:
-- SQL Server 2019 on Windows
-- SQL Server 2017 on Windows
-- SQL Server 2016
-- SharePoint Server Subscription Edition
-- SharePoint Server 2019
-- SharePoint Server 2016
+appliesto: 
+  - SQL Server 2019 on Windows
+  - SQL Server 2017 on Windows
+  - SQL Server 2016
+  - SharePoint Server Subscription Edition
+  - SharePoint Server 2019
+  - SharePoint Server 2016
 search.appverid: MET150
 ---
 # Supported SQL Server database compatibility level for SharePoint Server installations

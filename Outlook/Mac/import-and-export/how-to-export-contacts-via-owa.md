@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: dahans
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # How to export contacts from Outlook 2011 for Mac to Exchange Online by using OWA in Office 365

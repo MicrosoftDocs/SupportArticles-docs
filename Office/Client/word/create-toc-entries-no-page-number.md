@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Word for Microsoft 365
-- Word 2019
-- Word 2016
-- Microsoft Word 2013
-- Microsoft Word 2010
+appliesto: 
+  - Word for Microsoft 365
+  - Word 2019
+  - Word 2016
+  - Microsoft Word 2013
+  - Microsoft Word 2010
 ms.reviewer: 
 ---
 # How to create table of contents entries without a page number in Word

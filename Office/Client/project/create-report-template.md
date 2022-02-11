@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: AikChen, TBennett, xl15beta
-appliesto:
-- Project Professional 2013
-- Project 2013 Standard
+appliesto: 
+  - Project Professional 2013
+  - Project 2013 Standard
 ---
 
 # How to create a report template in Project 2013

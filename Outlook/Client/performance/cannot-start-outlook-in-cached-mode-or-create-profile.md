@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
 search.appverid: MET150
 ---
 # You cannot start Outlook in cached mode or create a new cached mode profile

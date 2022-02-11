@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Outlook
-- Outlook Development
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Outlook
+  - Outlook Development
 search.appverid: MET150
 ---
 # Office add-ins are not displayed correctly in Outlook

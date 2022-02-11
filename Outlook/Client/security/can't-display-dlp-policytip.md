@@ -4,20 +4,19 @@ description: This article describes an issue in which Outlook for Windows can't 
 author: helenclu
 ms.author: aruiz
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: 
-- Outlook for Windows
-- CI 106436
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 106436
+  - CSSTroubleshoot
 ms.reviewer: aruiz, EXOL_Triage
-appliesto:
-- Outlook 2019
-- Outlook 2016
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
 ---
 
 # DLP Policy Tip notifications are not displayed in Outlook for Windows

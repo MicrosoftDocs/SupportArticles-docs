@@ -5,22 +5,21 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office Professional 2013
-- Office Standard 2013
-- Office Home and Business 2013
-- Office Home and Student 2013
-- Office Standard 2010
-- Office Professional 2010
-- Office Professional Plus 2010
-- SharePoint Foundation 2010
-- SharePoint Server 2010
+appliesto: 
+  - Office Professional 2013
+  - Office Standard 2013
+  - Office Home and Business 2013
+  - Office Home and Student 2013
+  - Office Standard 2010
+  - Office Professional 2010
+  - Office Professional Plus 2010
+  - SharePoint Foundation 2010
+  - SharePoint Server 2010
 ---
 
 # Office applications open blank from SharePoint WebDAV or sites

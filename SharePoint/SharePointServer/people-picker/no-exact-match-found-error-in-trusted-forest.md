@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: joroar, mikedem
-appliesto:
-- SharePoint Server 2010
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2010
+search.appverid: MET150
 ---
 # Users in any domain in the trusted forest receive No exact match was found People Picker error
 

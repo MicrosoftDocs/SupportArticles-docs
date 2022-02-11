@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel 2007
-- Excel 2003
-- Excel 2001
-- Excel 98
+appliesto: 
+  - Excel 2007
+  - Excel 2003
+  - Excel 2001
+  - Excel 98
 ---
 
 # How to create and use two-input data tables in Microsoft Excel

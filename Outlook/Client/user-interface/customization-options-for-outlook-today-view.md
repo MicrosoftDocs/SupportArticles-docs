@@ -1,23 +1,22 @@
 ---
-title: Customization options for Today view 
+title: Customization options for Today view
 description: Describes the options available to customize startup, messages, calendars, tasks, and styles for the Outlook Today view.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Outlook for Office 365
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # The customization options that are available for your Outlook Today view in Outlook

@@ -6,23 +6,22 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tmoore, gregmans
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Outlook for Microsoft 365
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
-- Exchange Server 2010
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Outlook for Microsoft 365
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Default folder is missing in Outlook and Outlook on the web

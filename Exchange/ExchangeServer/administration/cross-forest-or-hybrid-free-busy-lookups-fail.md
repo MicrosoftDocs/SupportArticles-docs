@@ -6,20 +6,19 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: brianday, grtaylor, wduff
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Microsoft Exchange Server 2010 Service Pack 2 (SP2) Update Rollup 1 and later versions
-- Microsoft Exchange Server 2007 Service Pack 3 (SP3) Update Rollup 6 and later versions
-- Microsoft Exchange Online
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Microsoft Exchange Server 2010 Service Pack 2 (SP2) Update Rollup 1 and later versions
+  - Microsoft Exchange Server 2007 Service Pack 3 (SP3) Update Rollup 6 and later versions
+  - Microsoft Exchange Online
 search.appverid: MET150
 ---
 # Cross-forest or Hybrid free/busy availability lookups fail in Exchange Server

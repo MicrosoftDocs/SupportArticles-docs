@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: randring
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- SharePoint Server 2016
+appliesto: 
+  - SharePoint Server 2016
 ---
 
 # SharePoint 2016 Microsoft Excel Online Web Part error "We couldn't find the file you wanted"

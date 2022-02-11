@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft Excel
+appliesto: 
+  - Microsoft Excel
 ---
 
 # The SpecialCells(xlCellTypeBlanks) VBA function does not work as expected in Excel
