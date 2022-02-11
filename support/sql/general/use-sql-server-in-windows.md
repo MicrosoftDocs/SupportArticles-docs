@@ -101,7 +101,7 @@ Before you install SQL Server on a computer that is running Windows Server 2019 
     > [!NOTE]
     >
     > - Make sure that you check known setup issues when you install SQL Server 2012 on Windows 10 or Windows Server 2016.
-    > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016.
+    > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016 and Windows Server 2019.
 
 - **For SQL Server 2008 R2**
 
@@ -141,7 +141,7 @@ Before you install SQL Server on a computer that is running Windows 10 or Window
   >
   > - Make sure that you check known setup issues when you install SQL Server 2012 on Windows 10 or Windows Server 2016.
   >
-  > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016.
+  > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016 and Windows Server 2019.
 
 - **For SQL Server 2008 R2**
 
