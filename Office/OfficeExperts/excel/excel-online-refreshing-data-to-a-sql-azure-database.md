@@ -7,9 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: thempel

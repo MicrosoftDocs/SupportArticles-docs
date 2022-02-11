@@ -10,9 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto:
 - Excel 2016
 ---

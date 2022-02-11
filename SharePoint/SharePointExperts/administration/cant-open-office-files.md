@@ -13,10 +13,7 @@ search.appverid:
 - MET150
 appliesto:
 - SharePoint Online 
-ms.custom: 
-- CI 113496
-- CSSTroubleshoot
-- sap: spsexperts
+ms.custom: sap:spsexperts, CSSTroubleshoot, CI 113496
 ms.reviewer: salarson
 description: "What to do if you can't open Office files from a SharePoint Online repository."
 ---
