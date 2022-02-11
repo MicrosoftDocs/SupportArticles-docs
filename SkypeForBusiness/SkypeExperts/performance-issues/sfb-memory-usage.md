@@ -9,9 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
-ms.custom:
-- CSSTroubleshoot
-- sap: sfbexperts
+ms.custom: sap:sfbexperts, CSSTroubleshoot
 ms.author: kenguil
 appliesto:
 - Skype for Business

@@ -15,10 +15,7 @@ search.appverid:
 ms.assetid: 
 appliesto:
 - Skype for Business
-ms.custom: 
-- CI 103849
-- CSSTroubleshoot
-- sap: sfbexperts
+ms.custom: sap:sfbexperts, CSSTroubleshoot, CI 103849
 ms.reviewer: meerak
 ---
 

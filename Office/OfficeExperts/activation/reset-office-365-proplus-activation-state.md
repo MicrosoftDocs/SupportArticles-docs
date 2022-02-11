@@ -8,10 +8,7 @@ search.appverid: MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
-ms.custom: 
-- CI 114181, CI 115742
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot, CI 114181, CI 115742
 ms.author: mattphil
 appliesto:
 - Microsoft 365 Apps for enterprise
