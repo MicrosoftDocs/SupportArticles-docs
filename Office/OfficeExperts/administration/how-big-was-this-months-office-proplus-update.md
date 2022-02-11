@@ -8,9 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: ericspli
 appliesto:

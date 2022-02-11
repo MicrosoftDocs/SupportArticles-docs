@@ -9,9 +9,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 appliesto:
 - Excel Online
