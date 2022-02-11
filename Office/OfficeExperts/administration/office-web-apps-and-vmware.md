@@ -10,9 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: arhinesm
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto:
 - Office Online Server
 ---

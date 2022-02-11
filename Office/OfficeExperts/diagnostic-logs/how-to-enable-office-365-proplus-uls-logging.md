@@ -10,10 +10,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
-- CI 113644
+ms.custom: sap:office-experts, CSSTroubleshoot, CI 113644
 ms.author: ericspli
 appliesto:
 - Microsoft 365 Apps for enterprise

@@ -9,9 +9,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom:
-- CSSTroubleshoot
-- sap: spsexperts
+ms.custom: sap:spsexperts, CSSTroubleshoot
 ms.prod: sharepoint-server-itpro
 appliesto:
 - SharePoint Designer 2013

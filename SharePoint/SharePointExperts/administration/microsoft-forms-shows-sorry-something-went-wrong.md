@@ -11,9 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: spsexperts
+ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - Microsoft Forms

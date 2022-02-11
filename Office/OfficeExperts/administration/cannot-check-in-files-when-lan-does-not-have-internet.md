@@ -5,9 +5,7 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 search.appverid: 
 - MET150
 audience: ITPro
