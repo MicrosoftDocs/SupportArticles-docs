@@ -214,8 +214,8 @@ When capturing a SQL Server process dump file (especially a filtered dump file o
 
 - For failover clustered instance (FCI): 
   - Right-click SQL Server resource in **Cluster Administrator**, select **If resource fails, do not restart** on the **Policies** tab.
-  - On the **Properties** tab, increase the **HealthCheck Timeout**, for example, to 180 seconds or higher. If this timeout is reached, the policy above **If resource fails, do not restart** will be ignored and the resource will be restarted anyway
-  - Also on the **Properties** tab, change the **FailureConditionLevel** to zero
+  - On the **Properties** tab, increase the **HealthCheck Timeout**. For example, set the property value to 180 seconds or higher. If this timeout is reached, the policy **If resource fails, do not restart** will be ignored and the resource will be restarted anyway.
+  - Also on the **Properties** tab, change the **FailureConditionLevel** value to zero.
 - For AG, apply all the following settings:
   - Increase session-timeout, for example, 120 seconds for all replicas. In SQL Server Management Studio (SSMS), right-click the replica to be configured, and then select **Properties**. Change the **Session timeout (seconds)** field to *120* seconds. For more information, see [Change the Session-Timeout Period for an Availability Replica (SQL Server)](/sql/database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server).
   - Change the auto failover of all replicas to manual failover. In SSMS, right-click replica, select **Properties** and change the **auto failover** of all replicas to manual failover on the **Properties** tab. For more information, see [Change the Failover Mode of an Availability Replica (SQL Server)](/sql/database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server).
