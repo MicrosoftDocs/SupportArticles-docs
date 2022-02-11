@@ -60,18 +60,18 @@ To resolve this problem, follow these steps:
         else
         swapon /mnt/swapfile; fi
         ```
-> [!NOTE] 
-> Under some conditions, fallocate will not create a swap file properly. If this occurs, you can use this alternate script:
+        
+        In some cases, the `fallocate` command won't create a swap file properly. If a swap file isn't created properly, you can use the alternate script below:
+        
+        ```
+        dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048
+        ```
 
-```
-dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048
-```
-
-2. Make the file executable by using the `# chmod +x create_swapfile.sh` command.
-3. Stop and Start the VM or Redeploy it from the portal, and check for swap enablement.
+    1. Make the file executable by using the `# chmod +x create_swapfile.sh` command.
+    1. Stop and Start the VM or Redeploy it from the portal, and check for swap enablement.
         Here is an example of how to enable the swap capability: 
 
-        ```    
+        ``` 
         root@ub1804-ephemeral:/var/lib/cloud/scripts/per-boot# free -m 
         total used free shared buff/cache available 
         Mem: 7953 296 7384 0 272 7412 
