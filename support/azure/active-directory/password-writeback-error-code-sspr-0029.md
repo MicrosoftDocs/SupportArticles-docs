@@ -38,7 +38,7 @@ The synchronized user is missing the correct permissions in Active Directory.
 
 ### Solution: Resolve Active Directory permission issues
 
-To resolve issues that affect Active Directory permissions, see Password Writeback access rights and permissions][access-rights-permissions].
+To resolve issues that affect Active Directory permissions, see [Password Writeback access rights and permissions][access-rights-permissions].
 
 > [!NOTE]
 > If you're a Synchronized Windows Active Directory admin who belongs (or used to belong) to an on-premises Active Directory protected group, you can't use SSPR and password writeback to reset your on-premises password. For security, Administrator accounts that exist within a local Active Directory protected group can't be used together with password writeback. Administrators can change their password in the cloud but can't use password reset to reset a forgotten password. For more information, see [Protected Accounts and Groups in Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory).
