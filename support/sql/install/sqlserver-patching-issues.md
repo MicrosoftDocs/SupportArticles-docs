@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot common SQL Server update issues
+title: Troubleshoot common SQL Server Cumulative Update installation issues
 description: This article helps you to troubleshoot common SQL Server update issues. 
 ms.date: 02/11/2022
 ms.prod-support-area-path: Installation, Patching and Upgrade
-author: PijoCoder
+author: prmadhes-msft
 ms.author: v-jayaramanp
 ms.prod: sql
 ---
 
-# Troubleshoot common SQL Server update issues
+# Troubleshoot common SQL Server Cumulative Update installation issues
 
 This article provides general steps to troubleshoot issues that you may experience when you apply a cumulative update (CU) or service pack (SP) to your Microsoft SQL Server instance. It also provides details for solving the following error messages that are associated with updating:
 
