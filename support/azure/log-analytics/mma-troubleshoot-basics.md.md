@@ -13,7 +13,7 @@ ms.service: log-analytics
 
 This article provides basic guide for troubleshooting Microsoft Monitoring Agent (MMA) problems with Azure Log Analytics.
 
-## Basic requirements for Monitoring Agent
+## Basic requirements for MMA
 
 - For supported operating systems, see [Log Analytics Agent support operating systems](/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems).
 
