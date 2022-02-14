@@ -3,22 +3,21 @@ title: Install the latest applicable updates for Outlook
 description: Describes the most recent updates and service packs that apply to Outlook. Because some Outlook functionalities are dependent on Word and Office components, updates for those applications are also listed in this article.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 116784
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 116784
+  - CSSTroubleshoot
 ms.reviewer: aruiz, gregmans, tasitae
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Microsoft Office Outlook 2003
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Microsoft Office Outlook 2003
 search.appverid: MET150
 ---
 # How to install the latest applicable updates for Microsoft Outlook (US English only)

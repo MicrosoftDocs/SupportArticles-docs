@@ -4,16 +4,15 @@ description: This article describes an issue in which drop-down for Give control
 author: helenclu
 ms.author: sarvdon
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 107235
-- CSSTroubleshoot
+  - CI 107235
+  - CSSTroubleshoot
 ms.reviewer: sarvdon, SfB_Triage
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 ---
 
 # "Give Control" doesn't work when you share a screen in Teams

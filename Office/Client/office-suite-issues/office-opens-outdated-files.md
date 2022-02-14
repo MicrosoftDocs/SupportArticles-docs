@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 3/8/2021
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Server
-- Microsoft 365
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Server
+  - Microsoft 365
 ms.custom: 
-- CI 144436
-- CSSTroubleshoot 
+  - CI 144436
+  - CSSTroubleshoot
 ms.reviewer: sharepoint_triage
 description: When you open a Word or PowerPoint file from SharePoint on-premises in a Microsoft 365 desktop app, you see the local cached file instead of the current server document contents.
 ---

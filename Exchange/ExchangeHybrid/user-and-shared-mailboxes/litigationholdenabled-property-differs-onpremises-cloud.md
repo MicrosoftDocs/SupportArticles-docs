@@ -4,19 +4,18 @@ description: After you onboard an on-premises mailbox to Exchange Online, you no
 author: simonxjx
 ms.author: alinastr
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CI 109236
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CI 109236
+  - CSSTroubleshoot
 ms.reviewer: alinastr, ninob
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # LitigationHoldEnabled property differs between on-premises and Exchange Online
 

@@ -4,15 +4,14 @@ description: Works around an issue in which the operation has timed out when con
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- office 365
+  - MET150
+appliesto: 
+  - office 365
 ---
 
 # The operation has timed out when connecting to OData by using SSIS in Project Online

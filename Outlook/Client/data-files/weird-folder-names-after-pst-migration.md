@@ -7,15 +7,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
+appliesto: 
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
 search.appverid: MET150
 ---
 # Weird folder names after PST migration from Exchange Server 2003 to Exchange Server 2013

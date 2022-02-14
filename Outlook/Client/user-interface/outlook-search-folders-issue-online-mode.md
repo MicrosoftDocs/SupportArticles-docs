@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: comat
-appliesto:
-- Microsoft Outlook 2010
-- Outlook 2013
-- Microsoft Office Outlook 2007
+appliesto: 
+  - Microsoft Outlook 2010
+  - Outlook 2013
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ---
 # Outlook search folders aren't populated in Online mode after migration from Exchange 2013 to Exchange 2010

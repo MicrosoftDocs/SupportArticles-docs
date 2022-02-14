@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: levaznis
-appliesto:
-- SharePoint Server 2019
-- SharePoint Server 2016
-- SharePoint Server 2013
-- SharePoint Server 2010
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2019
+  - SharePoint Server 2016
+  - SharePoint Server 2013
+  - SharePoint Server 2010
+search.appverid: MET150
 ---
 # SharePoint server configuration requirements to support Kerberos AES encryption if errors occur
 

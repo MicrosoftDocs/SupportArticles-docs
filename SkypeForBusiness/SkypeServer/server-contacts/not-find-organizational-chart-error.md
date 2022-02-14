@@ -1,19 +1,18 @@
 ---
 title: Can't view contact organization information
-description: Provides a workaround for an issue in which contact organization information cannot be found and you receive a "We didn't find an organizational chart" error message.
+description: Provides a workaround for an issue in which contact organization information cannot be found and you receive a We didn't find an organizational chart error message.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: skype-for-business-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: kenguil, bwilson
-appliesto:
-- SharePoint Server 2016
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2016
+search.appverid: MET150
 ---
 # Didn't find an organizational chart error when you view a contact card in Skype for Business 2016
 

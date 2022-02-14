@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-appliesto:
-- Skype for Business Web App
-- Lync Web App
+appliesto: 
+  - Skype for Business Web App
+  - Lync Web App
 ---
 
 # Black screen during desktop sharing in Skype for Business or Lync Web App on macOS High Sierra

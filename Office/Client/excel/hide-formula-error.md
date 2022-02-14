@@ -6,17 +6,16 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 search.appverid: 
-- MET150
-ms.prod: office-perpetual-itpro
+  - MET150
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel 2007
-- Excel 2003
-- Excel 2002
-- Excel 2000
-- Excel 97
+appliesto: 
+  - Excel 2007
+  - Excel 2003
+  - Excel 2002
+  - Excel 2000
+  - Excel 97
 ---
 
 # Sample user-defined function to hide formula errors in Excel

@@ -1,23 +1,22 @@
-﻿---
-title: SharePoint files open as read-only 
+---
+title: SharePoint files open as read-only
 author: helenclu
 ms.author: warrenr
 ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
-- SPO160
+  - MET150
+  - SPO160
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 113561
-ms.service: sharepoint-online
-appliesto:
-- Microsoft SharePoint
-- OneDrive for Business
-- SharePoint Online
+  - CSSTroubleshoot
+  - CI 113561
+appliesto: 
+  - Microsoft SharePoint
+  - OneDrive for Business
+  - SharePoint Online
 description: Describes how to resolve an issue where a SharePoint file checked out from an online or local folder opens as read only.
 ---
 # SharePoint files open as read-only

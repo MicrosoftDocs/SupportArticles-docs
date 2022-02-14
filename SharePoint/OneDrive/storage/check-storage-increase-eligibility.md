@@ -8,18 +8,17 @@ localization_priority: Normal
 ms.date: 02/01/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 ms.custom: 
-- CSSTroubleshoot
-- CI 136478
-- CI 148890
-- CI 149065
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
-- OneDrive for Business
+  - CSSTroubleshoot
+  - CI 136478
+  - CI 148890
+  - CI 149065
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
+  - OneDrive for Business
 ---
 
 # Check OneDrive site eligibility for increased storage

@@ -5,18 +5,17 @@ author: helenclu
 ms.author: chunlli
 manager: dcscontentpm
 editor: v-jesits
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 121615
-- CSSTroubleshoot
+  - CI 121615
+  - CSSTroubleshoot
 ms.reviewer: chunlli
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150 
+  - MET150
 ---
 # Troubleshoot Microsoft Teams and Exchange Server interaction issues
 

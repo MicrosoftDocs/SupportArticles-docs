@@ -6,16 +6,15 @@ ms.author: v-lianna
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-- CI 147160
+  - Exchange Server
+  - CSSTroubleshoot
+  - CI 147160
 ms.reviewer: mhaque
-appliesto:
-- Outlook on the web
-- Exchange Server 2016 RTM
+appliesto: 
+  - Outlook on the web
+  - Exchange Server 2016 RTM
 search.appverid: MET150
 ---
 # Add-ins will stop working in Outlook on the web for Exchange Server 2016 RTM

@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: v-venum, mhaque, catagh
-appliesto:
-- Office Products
-- Outlook Development
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010  
+appliesto: 
+  - Office Products
+  - Outlook Development
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
 search.appverid: MET150
 ---
 # WebBrowser or WPF control doesn't display content correctly in an Office application when hosted inside a CustomTaskPane control

@@ -1,40 +1,39 @@
 ---
-title: Determine the license type of your Microsoft Office product 
+title: Determine the license type of your Microsoft Office product
 ms.author: v-maqiu
 author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 04/02/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: microsoft-365-admin
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft 365
-- Office LTSC 2021 suites
-- Office 2019 suites
-- Office 2016 suites
-- Office 2013 suites
-- Excel for Microsoft 365 for Mac 
-- Word for Microsoft 365 for Mac 
-- Outlook for Microsoft 365 for Mac
-- PowerPoint for Microsoft 365 for Mac
-- Office LTSC 2021 for Mac
-- Office 2019 for Mac 
-- Excel 2019 for Mac 
-- PowerPoint 2019 for Mac 
-- Word 2019 for Mac
-- Office for Business 
-- Microsoft 365 for Home 
-- Office 365 Small Business 
-- Office 2016 for Mac 
-- Microsoft 365 for Mac 
-- Outlook 2019 for Mac
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft 365
+  - Office LTSC 2021 suites
+  - Office 2019 suites
+  - Office 2016 suites
+  - Office 2013 suites
+  - Excel for Microsoft 365 for Mac
+  - Word for Microsoft 365 for Mac
+  - Outlook for Microsoft 365 for Mac
+  - PowerPoint for Microsoft 365 for Mac
+  - Office LTSC 2021 for Mac
+  - Office 2019 for Mac
+  - Excel 2019 for Mac
+  - PowerPoint 2019 for Mac
+  - Word 2019 for Mac
+  - Office for Business
+  - Microsoft 365 for Home
+  - Office 365 Small Business
+  - Office 2016 for Mac
+  - Microsoft 365 for Mac
+  - Outlook 2019 for Mac
 ms.custom: 
-- CI 122291
-- CSSTroubleshoot 
+  - CI 122291
+  - CSSTroubleshoot
 ms.reviewer: joselr
 description: Describes how to determine the license type of your Microsoft Office product.
 ---

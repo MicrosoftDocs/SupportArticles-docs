@@ -4,21 +4,20 @@ description: Get-ServerHealth shows health sets in an Unhealthy state because th
 author: simonxjx
 ms.author: cmcgurk
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 115307
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 115307
+  - CSSTroubleshoot
 ms.reviewer: chris.mcgurk
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Unhealthy state of Exchange servers when monitoring mailboxes are deleted

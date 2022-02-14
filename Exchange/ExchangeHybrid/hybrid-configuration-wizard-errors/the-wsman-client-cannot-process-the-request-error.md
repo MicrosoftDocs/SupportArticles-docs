@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: scotro
-appliesto:
-- Exchange Online
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # (The WSMan client cannot process the request) error when you run Hybrid Configuration wizard

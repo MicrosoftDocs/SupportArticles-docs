@@ -6,19 +6,18 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: jhayes
-appliesto:
-- Exchange Online
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Microsoft 365 Apps for enterprise 
+appliesto: 
+  - Exchange Online
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
 # Email messages are sent to the wrong account when multiple accounts are associated with an Outlook profile

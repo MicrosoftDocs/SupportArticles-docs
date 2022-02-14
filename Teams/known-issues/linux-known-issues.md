@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 7/1/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 120622
-- CSSTroubleshoot 
-ms.reviewer:  billw
+  - CI 120622
+  - CSSTroubleshoot
+ms.reviewer: billw
 description: Known issues for Teams when run on a Linux system.
 ---
 

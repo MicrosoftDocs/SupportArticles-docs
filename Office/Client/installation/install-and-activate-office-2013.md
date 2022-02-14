@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Office Professional Plus 2013
+appliesto: 
+  - Office Professional Plus 2013
 ---
 
 # How to install and activate Office Professional Plus 2013 on a terminal server

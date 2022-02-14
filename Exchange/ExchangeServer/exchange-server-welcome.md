@@ -4,15 +4,14 @@ description: This article lists Exchange Server related issues.
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
-ms.prod: exchange-server-it-pro
 ms.topic: landing-page
 ms.author: v-six
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-appliesto:
-- Exchange Server
+  - Exchange Server
+  - CSSTroubleshoot
+appliesto: 
+  - Exchange Server
 ---
 
 # Exchange Server troubleshooting

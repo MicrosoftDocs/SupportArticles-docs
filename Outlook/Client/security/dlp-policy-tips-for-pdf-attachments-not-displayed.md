@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: robevans, tasitae, meshel
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Outlook for Office 365
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Outlook doesn't display DLP policy tips for PDF attachments in Windows 7

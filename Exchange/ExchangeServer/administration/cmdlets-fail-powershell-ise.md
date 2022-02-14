@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: kartik
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010 Service Pack 3
+  - MET150
+appliesto: 
+  - Exchange Server 2010 Service Pack 3
 ---
 # Some cmdlets fail in PowerShell ISE after an upgrade to Exchange Server 2010 SP3
 

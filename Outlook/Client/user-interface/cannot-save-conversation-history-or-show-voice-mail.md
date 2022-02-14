@@ -6,14 +6,13 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: alinastr
-appliesto:
-- Skype for Business
+appliesto: 
+  - Skype for Business
 search.appverid: MET150
 ---
 # Skype for Business can't save conversation history or show voice mail

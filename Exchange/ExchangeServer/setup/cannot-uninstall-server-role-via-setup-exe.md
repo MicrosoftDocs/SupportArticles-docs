@@ -7,15 +7,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: batre, serdars
-appliesto:
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
+appliesto: 
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
 search.appverid: MET150
 ---
 # The parameter roles is not valid error message when trying to uninstall Exchange Server 2013 server role

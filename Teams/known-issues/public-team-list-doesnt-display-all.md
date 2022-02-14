@@ -6,18 +6,17 @@ ms.date: 4/9/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 113425
-- CSSTroubleshoot 
+  - CI 113425
+  - CSSTroubleshoot
 ms.reviewer: scapero
-description: Explains why the public team list in Teams doesn't show all teams. 
+description: Explains why the public team list in Teams doesn't show all teams.
 ---
 
 # Public team list does not display all teams in Teams

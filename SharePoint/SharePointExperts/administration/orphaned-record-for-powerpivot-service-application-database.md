@@ -6,13 +6,12 @@ ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
-ms.prod: sharepoint-server-itpro
-appliesto:
-- Microsoft SharePoint
+appliesto: 
+  - Microsoft SharePoint
 ---
 
 # Orphaned record for PowerPivot service application database

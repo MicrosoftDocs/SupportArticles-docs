@@ -6,21 +6,20 @@ manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- OneNote Online (OneNote on the Web)
-- OneNote for Win 10
-- OneNote App on Teams Client
-- OneNote for Mac
-- OneNote on Devices
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - OneNote Online (OneNote on the Web)
+  - OneNote for Win 10
+  - OneNote App on Teams Client
+  - OneNote for Mac
+  - OneNote on Devices
 ms.custom: 
-- CI 117004
-- CSSTroubleshoot 
-description: Describes resolutions to the OneNote error message "Content Not Yet Available."
+  - CI 117004
+  - CSSTroubleshoot
+description: Describes resolutions to the OneNote error message Content Not Yet Available.
 ---
 
 # OneNote error: "Content Not Yet Available"

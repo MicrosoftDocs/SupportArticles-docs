@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: dabarre, mhaque
-appliesto:
-- Exchange Server 2013
+appliesto: 
+  - Exchange Server 2013
 search.appverid: MET150
 ---
 # 404 error and a call to makeEwsRequestAsync fails from a server that has split CAS/MBX roles in Exchange Server 2013

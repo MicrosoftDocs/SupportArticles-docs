@@ -6,18 +6,17 @@ ms.date: 4/9/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 113425
-- CSSTroubleshoot 
+  - CI 113425
+  - CSSTroubleshoot
 ms.reviewer: scapero
-description: Describes how to resolve an issue where Teams uses a domain-joined account if another is available when connecting. 
+description: Describes how to resolve an issue where Teams uses a domain-joined account if another is available when connecting.
 ---
 
 #  Teams will always log into the domain-joined PC account

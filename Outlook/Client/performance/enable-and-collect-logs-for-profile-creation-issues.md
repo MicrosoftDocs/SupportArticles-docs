@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Outlook
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Outlook
 search.appverid: MET150
 ---
 # Enable and collect Outlook logs to troubleshoot profile creation issues

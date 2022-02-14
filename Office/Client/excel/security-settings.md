@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel for Office 365
-- Excel 2019
+appliesto: 
+  - Excel for Office 365
+  - Excel 2019
 ---
 
 # Security settings for Dynamic Data Exchange in Excel Trust Center in Office 365

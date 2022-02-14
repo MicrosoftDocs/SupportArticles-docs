@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel for Microsoft 365
-- Excel 2019
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
+  - MET150
+appliesto: 
+  - Excel for Microsoft 365
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
 ---
 
 # How to use defined names to automatically update a chart range in Excel

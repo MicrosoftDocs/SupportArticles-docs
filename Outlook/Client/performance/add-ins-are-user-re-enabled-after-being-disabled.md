@@ -6,21 +6,20 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans
-appliesto:
-- Outlook 2016
-- Excel 2016
-- Word 2016
-- PowerPoint 2016
-- Outlook 2013
-- Excel 2013
-- Word 2013
-- PowerPoint 2013
+appliesto: 
+  - Outlook 2016
+  - Excel 2016
+  - Word 2016
+  - PowerPoint 2016
+  - Outlook 2013
+  - Excel 2013
+  - Word 2013
+  - PowerPoint 2013
 search.appverid: MET150
 ---
 # Add-ins are user re-enabled after being disabled by Office programs

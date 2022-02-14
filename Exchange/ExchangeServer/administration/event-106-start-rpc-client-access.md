@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: v-michse
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+search.appverid: MET150
 ---
 # Event ID 106 is logged when you start the RPC Client Access service on Exchange Server 2010
 

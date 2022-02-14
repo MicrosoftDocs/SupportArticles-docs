@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # You receive the error message "You cannot install the 64-bit version of Office 2010 because you have 32-bit Office products installed"

@@ -1,18 +1,17 @@
 ---
 title: External Data Refresh Failed when refresh Project Online data in Excel Online
-description: You can't refresh Project Online data in Excel Online with an "External Data Refresh Failed" error message. 
+description: You can't refresh Project Online data in Excel Online with an External Data Refresh Failed error message.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: sap:office-experts, CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: thempel
-appliesto:
-- Excel Online
+appliesto: 
+  - Excel Online
 ---
 
 # "External Data Refresh Failed" when refreshing Project Online data in Excel Online

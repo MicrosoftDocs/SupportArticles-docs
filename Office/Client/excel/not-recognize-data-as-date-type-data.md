@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: jenl
-appliesto:
-- Excel 2013
+appliesto: 
+  - Excel 2013
 ---
 
 # Excel 2013 does not recognize data as Date type data after you import the data from a SQL Server data source to an Excel workbook

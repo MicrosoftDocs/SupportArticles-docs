@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: lukeds
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # Mailbox move request that you created by using the New-MoveRequest cmdlet isn't displayed in EAC in an Exchange Server 2013 environment

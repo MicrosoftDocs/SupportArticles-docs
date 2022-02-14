@@ -6,15 +6,14 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- CI 149096
-- Exchange Online
-- CSSTroubleshoot
+ms.custom: 
+  - CI 149096
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: haembab
 appliesto: 
-- Exchange Online
+  - Exchange Online
 search.appverid: MET150
 ---
 # "550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder" error for messages sent to a mail-enabled public folder

@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Office Home and Student 2010
-- Office Home and Business 2010
-- Office Professional 2010
-- Office Professional Plus 2010
+appliesto: 
+  - Office Home and Student 2010
+  - Office Home and Business 2010
+  - Office Professional 2010
+  - Office Professional Plus 2010
 ---
 
 # Office 2010 product key change error step by step

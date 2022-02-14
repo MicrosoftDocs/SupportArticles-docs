@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Outlook
-- Outlook Mail & Calendar Apps for Windows 10
-- Outlook 2019
-- Outlook 2016
-- Office 365
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Outlook
+  - Outlook Mail & Calendar Apps for Windows 10
+  - Outlook 2019
+  - Outlook 2016
+  - Office 365
 search.appverid: MET150
 ---
 # Attached Outlook items not retained in Office 365 Group Calendar meeting or appointment

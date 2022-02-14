@@ -1,18 +1,17 @@
 ---
 title: PowerPivot data model does not refresh for the SQL Server authentication
-description: Describes an issue in which PowerPivot data model doesn't refresh when the SQL Server authentication and "Save Password" are used.
+description: Describes an issue in which PowerPivot data model doesn't refresh when the SQL Server authentication and Save Password are used.
 author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Microsoft Excel
+appliesto: 
+  - Microsoft Excel
 ---
 
 # PowerPivot data model does not refresh when the SQL Server authentication and "Save Password" are used

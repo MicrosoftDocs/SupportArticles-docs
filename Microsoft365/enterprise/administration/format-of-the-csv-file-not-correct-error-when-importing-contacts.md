@@ -6,13 +6,12 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-enterprise
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # Format of the CSV file isn't correct error when an Office 365 user tries to import contacts

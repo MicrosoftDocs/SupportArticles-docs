@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Server
+  - Exchange Server
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Server
 search.appverid: MET150
 ---
 # Error when you try to perform Exchange Server management tasks: Insufficient access rights to perform the operation  

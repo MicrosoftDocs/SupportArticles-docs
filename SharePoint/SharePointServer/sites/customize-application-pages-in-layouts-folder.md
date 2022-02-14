@@ -6,13 +6,12 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: sridhara
-appliesto:
-- SharePoint Server 2010
+appliesto: 
+  - SharePoint Server 2010
 search.appverid: MET150
 ---
 # How to customize application pages in the Layouts folder in SharePoint

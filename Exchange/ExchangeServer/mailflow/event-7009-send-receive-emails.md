@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: stephgil
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise Edition
+  - MET150
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise Edition
 ---
 # Event 7009 when users try to send or receive email in Exchange Server 2013 or Exchange Server 2016
 

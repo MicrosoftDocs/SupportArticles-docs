@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: dpaul, cmcgurk
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
+  - MET150
+appliesto: 
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
 ---
 # Mailboxes are quarantined and databases fail over unexpectedly in Exchange Server 2013
 

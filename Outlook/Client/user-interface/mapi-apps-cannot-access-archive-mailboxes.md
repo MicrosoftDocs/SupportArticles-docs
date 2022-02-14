@@ -7,14 +7,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # MAPI applications cannot access archive mailboxes in Recovery Databases

@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 2016
-- Office 2013
+  - MET150
+appliesto: 
+  - Office 2016
+  - Office 2013
 ---
 
 # Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online

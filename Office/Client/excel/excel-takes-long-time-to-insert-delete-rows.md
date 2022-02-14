@@ -4,16 +4,15 @@ description: Describes an issue in which it takes a very long time to insert or 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: chadmat, jenl
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel 2013
 ---
 
 # Excel 2013 takes a very long time to insert or delete rows after a custom sort on many named columns

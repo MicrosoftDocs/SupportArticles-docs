@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: sap:office-experts, CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: thempel
-appliesto:
-- Excel Online
+appliesto: 
+  - Excel Online
 ---
 
 # How to refresh data to a SQL Azure Database in Excel Online

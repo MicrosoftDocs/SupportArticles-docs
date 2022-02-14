@@ -5,14 +5,13 @@ author: v-tappelgate
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
-audience:  Admin|ITPro|Developer
-ms.service: sharepoint-online
+  - MET150
+audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 ms.author: v-tappelgate
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # "Access Denied" error (Event ID 5566) when you open a form in the browser

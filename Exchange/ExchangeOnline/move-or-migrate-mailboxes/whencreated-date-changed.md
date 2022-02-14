@@ -4,19 +4,18 @@ description: The user, mailbox, contact, or distribution group WhenCreated date 
 author: simonxjx
 ms.author: namin
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 111129
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 111129
+  - CSSTroubleshoot
 ms.reviewer: namin
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # The value of WhenCreated is changed in Exchange Online
 

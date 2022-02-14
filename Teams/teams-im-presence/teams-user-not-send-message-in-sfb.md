@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: msteams
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: dahans, cbland
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
-- Teams
+appliesto: 
+  - Skype for Business Online
+  - Teams
 ---
 
 # Microsoft Teams user cannot send a message in Skype for Business

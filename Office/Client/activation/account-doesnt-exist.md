@@ -4,18 +4,17 @@ description: Troubleshooting the Microsoft 365 activation error That Microsoft a
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157598
-- CI 159117
+  - CSSTroubleshoot
+  - CI 157598
+  - CI 159117
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation error: “That Microsoft account doesn’t exist. Enter a different account or get a new one.”

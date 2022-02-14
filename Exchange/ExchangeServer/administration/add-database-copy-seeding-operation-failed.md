@@ -1,23 +1,22 @@
 ---
 title: Error (The seeding operation failed) when running Add-MailboxDatabaseCopy command
-description: Provide a workaround to an issue in which you receive an error message stating "The seeding operation failed" when running Add-MailboxDatabaseCopy command.
+description: Provide a workaround to an issue in which you receive an error message stating The seeding operation failed when running Add-MailboxDatabaseCopy command.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: exchange-server-it-pro
 ms.topic: troubleshooting
 ms.author: dpaul
 ms.custom: 
-- CSSTroubleshoot
-- CI 124887
-- Exchange Server
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - CSSTroubleshoot
+  - CI 124887
+  - Exchange Server
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 
 # Error when running Add-MailboxDatabaseCopy command: The seeding operation failed

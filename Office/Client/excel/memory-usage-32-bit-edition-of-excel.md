@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
-- Excel 2016
+  - MET150
+appliesto: 
+  - Excel 2013
+  - Excel 2016
 ---
 
 # Memory usage in the 32-bit edition of Excel 2013 and 2016

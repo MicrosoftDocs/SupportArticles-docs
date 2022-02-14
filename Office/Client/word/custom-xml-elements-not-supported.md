@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 search.appverid: 
-- MET150
+  - MET150
 appliesto: 
-- Word 2010
-- Word 2013
+  - Word 2010
+  - Word 2013
 ---
 
 # "The file contains custom XML elements which are no longer supported by Word" when you try to open a document in Word

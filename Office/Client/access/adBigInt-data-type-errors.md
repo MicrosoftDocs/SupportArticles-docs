@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Access for Office 365
-- Access 2019 
+appliesto: 
+  - Access for Office 365
+  - Access 2019
 ---
 
 # Access ADODB code errors when you use the adBigInt data type

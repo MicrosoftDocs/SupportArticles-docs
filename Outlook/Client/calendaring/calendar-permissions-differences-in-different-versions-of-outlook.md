@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae, aruiz, meshel
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ---
 # Calendar permissions differences in Outlook 2013, 2010, and 2007

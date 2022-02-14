@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2013
 ---
 
 # SharePoint Server 2013 crawler has insufficient permissions to crawl file shares

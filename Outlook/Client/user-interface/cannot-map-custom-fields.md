@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: danv, brunosg
-appliesto:
-- Microsoft Outlook 2010
-- Outlook 2010 with Business Contact Manager
+appliesto: 
+  - Microsoft Outlook 2010
+  - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
 ---
 # Can't map custom fields when importing an XLS or CSV file in the Hebrew version of Outlook 2010

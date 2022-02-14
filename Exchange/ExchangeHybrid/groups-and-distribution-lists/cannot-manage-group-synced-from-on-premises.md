@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: danielsl; Robwhal
-appliesto:
-- Exchange Online
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # Users can't manage group synced from on-premises to Microsoft 365 in a hybrid environment

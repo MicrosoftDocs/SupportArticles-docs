@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshootCSSTroubleshoot
-ms.prod: outlook
+  - Outlook for Mac
+  - CSSTroubleshootCSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Exchange Online
-- Outlook 2016 for Mac
+appliesto: 
+  - Exchange Online
+  - Outlook 2016 for Mac
 ---
 
 # Outlook 2016 for Mac repeatedly prompts for authentication

@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
+  - Exchange Server
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
 search.appverid: MET150
 ---
 # Error in Outlook Web App after an upgrade to Exchange Server 2013 CU 11 or later: Your request cannot be completed right now

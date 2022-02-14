@@ -6,14 +6,13 @@ ms.author: jhaak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Office Online Server
-- Office Web Apps
+appliesto: 
+  - Office Online Server
+  - Office Web Apps
 ---
 
 # Office Online limitations and features with Information Rights Management (IRM)

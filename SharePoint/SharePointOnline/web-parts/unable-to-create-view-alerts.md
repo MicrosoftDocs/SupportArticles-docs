@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 6/4/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint
 ms.custom: 
-- CI 119396
-- CSSTroubleshoot 
+  - CI 119396
+  - CSSTroubleshoot
 ms.reviewer: prbalusu
-description: Describes a resolution to an issue where a view doesn't appear in the option "Someone changes an item that appears in the following view". 
+description: Describes a resolution to an issue where a view doesn't appear in the option Someone changes an item that appears in the following view.
 ---
 
 # Unable to create alerts for views in SharePoint

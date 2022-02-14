@@ -4,19 +4,18 @@ description: This article describes an issue in which you are unable to open EMS
 author: simonxjx
 ms.author: cmcgurk
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 106819
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 106819
+  - CSSTroubleshoot
 ms.reviewer: cmcgurk, EXOL_Triage
-appliesto:
-- Exchange Server 2019
+appliesto: 
+  - Exchange Server 2019
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Can't open EMS on an Exchange Server 2019 Edge Transport server by using the LaunchEMS command

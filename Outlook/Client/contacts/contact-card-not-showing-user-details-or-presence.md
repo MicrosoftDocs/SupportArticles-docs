@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- CI 142155
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - CI 142155
 ms.reviewer: bobz, tasitae
-appliesto:
-- Outlook 2016
+appliesto: 
+  - Outlook 2016
 search.appverid: MET150
 ---
 # A recipient's photo, details, or presence doesn't appear in Outlook contact card

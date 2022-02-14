@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: tasitae, tsimon
-appliesto:
-- Outlook 2016 for Mac
-- Outlook for Mac 2011
-- Outlook for Mac for Office 365
+appliesto: 
+  - Outlook 2016 for Mac
+  - Outlook for Mac 2011
+  - Outlook for Mac for Office 365
 search.appverid: MET150
 ---
 # Added appointments and contacts in Outlook for Mac do not synchronize to Outlook Web App

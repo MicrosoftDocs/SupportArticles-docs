@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: abarglo, aruiz
-appliesto:
-- Outlook 2010
+appliesto: 
+  - Outlook 2010
 search.appverid: MET150
 ---
 # Exchange Server dialog box does not include a Connection tab in Outlook 2010

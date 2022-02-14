@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010
-- Exchange Server 2007
+  - MET150
+appliesto: 
+  - Exchange Server 2010
+  - Exchange Server 2007
 ---
 # 550 550 5.1.1 or 550 5.7.1 NDR message when an external user sends an email message to a Universal Distribution Group
 

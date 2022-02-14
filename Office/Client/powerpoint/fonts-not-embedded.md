@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- PowerPoint for Microsoft 365
-- PowerPoint 2019
-- PowerPoint 2016
-- PowerPoint 2013
-- PowerPoint 2010
+appliesto: 
+  - PowerPoint for Microsoft 365
+  - PowerPoint 2019
+  - PowerPoint 2016
+  - PowerPoint 2013
+  - PowerPoint 2010
 ms.reviewer: johnlan
 ---
 # Some fonts are not embedded when you save a PowerPoint 2010 or later presentation in an earlier format

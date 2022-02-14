@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: charray, russwill, v-9sidal
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Error when you create a mailbox in Exchange Server 2010: The term New-Mailbox is not recognized

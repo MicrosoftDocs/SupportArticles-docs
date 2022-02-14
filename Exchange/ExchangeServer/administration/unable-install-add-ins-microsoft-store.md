@@ -6,16 +6,15 @@ ms.author: cmcgurk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
   - CI 122584
 ms.reviewer: cmcgurk
-appliesto:
-- Exchange Server 2016
-- Exchange Server 2013
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2013
 search.appverid: MET150
 ---
 

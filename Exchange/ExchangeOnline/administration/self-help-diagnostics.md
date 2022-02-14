@@ -3,19 +3,18 @@ title: Self-help diagnostics for issues in Exchange Online and Outlook
 description: Lists diagnostics to troubleshoot issues in Exchange Online and Outlook.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 148463
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 148463
+  - CSSTroubleshoot
 ms.reviewer: mhaque, ninob
-appliesto:
-- Exchange Online
-- Outlook
+appliesto: 
+  - Exchange Online
+  - Outlook
 search.appverid: MET150
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook

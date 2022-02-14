@@ -4,19 +4,18 @@ description: Cannot determine group type error occurs in Office 365 admin center
 author: simonxjx
 ms.author: aubelin
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 114841
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 114841
+  - CSSTroubleshoot
 ms.reviewer: aubelin
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # (Cannot determine group type) error when checking group in Office 365 admin center
 

@@ -5,21 +5,20 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Access 2016
-- Access 2013
-- Access for Office 365
-- Access 2019
-- Excel 2013
-- Excel 2016
-- Excel 2019
-- Excel for Office 365
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access for Office 365
+  - Access 2019
+  - Excel 2013
+  - Excel 2016
+  - Excel 2019
+  - Excel for Office 365
 ---
 
 # Unable to use the Access ODBC, OLEDB or DAO interfaces outside Office Click-to-Run applications

@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for iOS and Android
-- CSSTroubleshoot
+  - Outlook for iOS and Android
+  - CSSTroubleshoot
 ms.reviewer: jmartin
-appliesto:
-- Exchange Online
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # Meeting invitations are forwarded by an attendee for an existing meeting

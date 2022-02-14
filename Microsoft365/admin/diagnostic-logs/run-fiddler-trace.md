@@ -3,20 +3,19 @@ title: How to run the Fiddler Trace after installing SaRA
 description: Describes how to install Microsoft Support and Recovery Assistant (SaRA) and run the Fiddler Trace.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 109036
-- CSSTroubleshoot
-- SaRA-Assisted
+  - CI 109036
+  - CSSTroubleshoot
+  - SaRA-Assisted
 ms.reviewer: akit
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # How to run (SaRA) Fiddler Trace

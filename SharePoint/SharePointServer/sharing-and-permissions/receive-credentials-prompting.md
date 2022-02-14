@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Server 2016
+appliesto: 
+  - SharePoint Server 2016
 ---
 
 # You're prompted for credentials when you open documents anonymously in SharePoint Server 2016

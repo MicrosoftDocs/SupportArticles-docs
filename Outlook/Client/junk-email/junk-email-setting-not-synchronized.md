@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: aruiz, v-matham
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Outlook 2013
 ---
 # Junk email message settings aren't synchronized when you use Outlook 2013 to connect to an Outlook.com account
 

@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: microsoft-365-admin
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Office
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Office
 ms.custom: 
-- CI 117023
-- CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: Explains why disabling ADAL or WAM authentication to fix Office sign-in issues is not recommended and offers possible resolutions. 
+  - CI 117023
+  - CSSTroubleshoot
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
+description: Explains why disabling ADAL or WAM authentication to fix Office sign-in issues is not recommended and offers possible resolutions.
 ---
 
 # Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues

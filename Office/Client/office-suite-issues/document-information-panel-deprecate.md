@@ -4,16 +4,15 @@ description: Describes a method to access and edit properties of documents in Of
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office Professional Plus 2016
-- Office Standard 2016
+  - MET150
+appliesto: 
+  - Office Professional Plus 2016
+  - Office Standard 2016
 ---
 
 # The Document Information Panel (DIP) is deprecated in Office 2016 applications

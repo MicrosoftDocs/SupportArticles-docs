@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 5/28/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 118775
-- CSSTroubleshoot 
-ms.reviewer: arkumar  
+  - CI 118775
+  - CSSTroubleshoot
+ms.reviewer: arkumar
 description: How to resolve an issue where you are at or near the metadata limit for your SharePoint site.
 ---
 

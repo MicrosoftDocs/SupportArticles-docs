@@ -6,34 +6,33 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: kelvinlo
-appliesto:
-- Microsoft SharePoint Foundation 2010
-- SharePoint Server 2010
-- SharePoint Foundation 2013
-- SharePoint Server 2013
-- SQL Server 2014 Developer
-- SQL Server 2014 Developer
-- SQL Server 2014 Enterprise
-- SQL Server 2014 Enterprise
-- SQL Server 2014 Express
-- SQL Server 2014 Express
-- SQL Server 2014 Standard
-- SQL Server 2014 Standard
-- SQL Server 2014 Web
-- SQL Server 2014 Web
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Express
-- SQL Server 2012 Standard
-- SQL Server 2012 Web
-- SQL Server 2014 Reporting Services
-- SQL Server 2012 Reporting Services
-search.appverid: MET150 
+appliesto: 
+  - Microsoft SharePoint Foundation 2010
+  - SharePoint Server 2010
+  - SharePoint Foundation 2013
+  - SharePoint Server 2013
+  - SQL Server 2014 Developer
+  - SQL Server 2014 Developer
+  - SQL Server 2014 Enterprise
+  - SQL Server 2014 Enterprise
+  - SQL Server 2014 Express
+  - SQL Server 2014 Express
+  - SQL Server 2014 Standard
+  - SQL Server 2014 Standard
+  - SQL Server 2014 Web
+  - SQL Server 2014 Web
+  - SQL Server 2012 Developer
+  - SQL Server 2012 Enterprise
+  - SQL Server 2012 Express
+  - SQL Server 2012 Standard
+  - SQL Server 2012 Web
+  - SQL Server 2014 Reporting Services
+  - SQL Server 2012 Reporting Services
+search.appverid: MET150
 ---
 # Configure SQL Server Reporting Services in SharePoint Server for Kerberos authentication
 

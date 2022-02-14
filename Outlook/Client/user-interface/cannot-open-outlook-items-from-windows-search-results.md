@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae, aruiz
-appliesto:
-- Microsoft Outlook 2010
-- Microsoft Lync 2013
+appliesto: 
+  - Microsoft Outlook 2010
+  - Microsoft Lync 2013
 search.appverid: MET150
 ---
 # Unable to open Outlook items from Windows Search results after installing Lync 2013

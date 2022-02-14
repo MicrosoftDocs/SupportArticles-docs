@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: Ermink, Dougand
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business 2015
-- Skype for Business 2016
-- Lync 2010
+appliesto: 
+  - Skype for Business 2015
+  - Skype for Business 2016
+  - Lync 2010
 ---
 
 # Skype for Business video calls not working with Logitech BRIO Webcam

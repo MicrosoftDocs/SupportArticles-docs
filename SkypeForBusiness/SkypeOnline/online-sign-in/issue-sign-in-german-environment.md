@@ -5,14 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business
+appliesto: 
+  - Skype for Business
 ---
 
 # Error when you sign in to Skype for Business in a German Office 365 environment

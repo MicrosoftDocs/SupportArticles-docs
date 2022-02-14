@@ -3,23 +3,22 @@ title: Unable to save a database as an accde or mde file
 description: There is an error in the VBA code that prevents you from compiling a database or project or there is a reference.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: cathmill
-appliesto:
-- Access for Office 365
-- Access 2019
-- Access 2016
-- Access 2013
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Access for Office 365
+  - Access 2019
+  - Access 2016
+  - Access 2013
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # "Unable to create an MDE, ACCDE, or ADE database" error with a database that you can't compile

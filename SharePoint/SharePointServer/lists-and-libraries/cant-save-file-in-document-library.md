@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: erica, harikumh, markmead, russmax, sheyia, zsolti, rrogers, christwe, darinr, majoshi, sridhara, rrogers
-appliesto:
-- SharePoint Foundation 2010
-- SharePoint Server 2010
+appliesto: 
+  - SharePoint Foundation 2010
+  - SharePoint Server 2010
 ---
 
 # You cannot save a document in a SharePoint 2010 document library when the document library contains a required Business data field

@@ -5,22 +5,21 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Microsoft Office Outlook 2007
-- Exchange Online
-- Microsoft Exchange Online Dedicated
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Exchange Online
+  - Microsoft Exchange Online Dedicated
 ---
 
 # Folder names are incorrect or displayed in an incorrect language in Outlook

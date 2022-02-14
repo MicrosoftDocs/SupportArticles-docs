@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Microsoft Business Productivity Online Dedicated
-- Microsoft Business Productivity Online Suite Federal
+appliesto: 
+  - Microsoft Business Productivity Online Dedicated
+  - Microsoft Business Productivity Online Suite Federal
 ---
 
 # Full Access permissions are not working after a migration to Office 365 dedicated/ITAR (vNext)

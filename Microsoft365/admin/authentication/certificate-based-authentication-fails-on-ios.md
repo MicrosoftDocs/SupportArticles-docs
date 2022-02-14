@@ -4,16 +4,15 @@ description: Fixes an issue that federated users on iOS devices cannot use Certi
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Azure Active Directory
-- Office 365
+  - MET150
+appliesto: 
+  - Azure Active Directory
+  - Office 365
 ---
 
 # Certificate-based authentication for iOS fails to prompt for user certificates

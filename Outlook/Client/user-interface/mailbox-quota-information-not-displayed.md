@@ -5,22 +5,21 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: outlook
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 119623
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: gregmans
 search.appverid: 
-- MET150
-appliesto:
-- Outlook for Office 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
+  - MET150
+appliesto: 
+  - Outlook for Office 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
 ---
 # Mailbox Quota Information is not displayed on the Status bar in Outlook
 

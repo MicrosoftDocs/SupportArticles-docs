@@ -1,21 +1,20 @@
 ---
 title: The request failed with HTTP status 403
-description: Describes an issue in which you receive a "The request failed with HTTP status 403" error message when you run the Hybrid Configuration wizard.
+description: Describes an issue in which you receive a The request failed with HTTP status 403 error message when you run the Hybrid Configuration wizard.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: scotro
-appliesto:
-- Exchange Online
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # The request failed with HTTP status 403: Forbidden when you run the Hybrid Configuration wizard

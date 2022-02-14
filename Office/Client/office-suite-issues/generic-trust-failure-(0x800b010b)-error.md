@@ -4,17 +4,16 @@ description: Fixes an issue in which you receive a Generic Trust Failure (0x800B
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: praveenb, sakris
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office 2013 Service Pack 1
-- Microsoft Office 2010 Service Pack 2
+  - MET150
+appliesto: 
+  - Microsoft Office 2013 Service Pack 1
+  - Microsoft Office 2010 Service Pack 2
 ---
 
 # "Generic Trust Failure (0x800B010B)" error when you install Visual Studio 2010 Tools for Office Runtime

@@ -4,15 +4,14 @@ description: This article lists Outlook for Windows related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: outlook
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 appliesto: 
-- Microsoft Outlook
+  - Microsoft Outlook
 ---
 
 # Outlook for Windows troubleshooting

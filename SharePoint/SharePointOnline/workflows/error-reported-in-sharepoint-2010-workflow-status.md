@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Designer 2013
+appliesto: 
+  - SharePoint Designer 2013
 ---
 
 # A Workflow Status error is reported when a SharePoint 2010 workflow stops

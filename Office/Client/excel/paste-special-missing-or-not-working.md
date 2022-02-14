@@ -4,15 +4,14 @@ description: If your Paste Special option is missing,  look here. Paste Special 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- office
+  - MET150
+appliesto: 
+  - office
 ---
 
 # Paste Special option is missing or not working in Microsoft Office

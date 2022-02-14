@@ -6,19 +6,18 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: batre
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
+  - MET150
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
 ---
 # Error (HTTP 400 Bad Request) when you try to open another user's mailbox in Outlook Web App in an Exchange Server environment
 

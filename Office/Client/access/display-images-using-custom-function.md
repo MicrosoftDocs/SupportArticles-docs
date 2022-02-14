@@ -1,21 +1,20 @@
 ---
 title: Create a custom function to display images
-description: Describes how to manage and store images when you have lots of images or when the images are very large. 
+description: Describes how to manage and store images when you have lots of images or when the images are very large.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: cmathews
-appliesto:
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 

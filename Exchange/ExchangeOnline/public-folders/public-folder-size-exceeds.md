@@ -6,17 +6,16 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- CI 156853
-- Exchange Online
-- CSSTroubleshoot
+ms.custom: 
+  - CI 156853
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: meerak; batre
 editor: v-jesits
 appliesto: 
-- Exchange Online via Office 365 E Plans
-- Exchange Online via Office 365 P Plans
+  - Exchange Online via Office 365 E Plans
+  - Exchange Online via Office 365 P Plans
 search.appverid: MET150
 ---
 

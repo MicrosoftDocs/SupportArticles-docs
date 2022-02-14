@@ -6,19 +6,18 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: akashb
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
 search.appverid: MET150
 ---
 # EAC is slow to display recipients if PowerShell Transcription is turned on

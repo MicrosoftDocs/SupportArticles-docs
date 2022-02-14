@@ -5,21 +5,20 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: plammer 
+ms.reviewer: plammer
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Professional 2013
-- Project 2013 Standard
-- Project Professional 2010
-- Project Server 2010
-- Project Standard 2010
-- Microsoft Office Project Professional 2003
-- Microsoft Office Project Standard 2003
+  - MET150
+appliesto: 
+  - Project Professional 2013
+  - Project 2013 Standard
+  - Project Professional 2010
+  - Project Server 2010
+  - Project Standard 2010
+  - Microsoft Office Project Professional 2003
+  - Microsoft Office Project Standard 2003
 ---
 
 # Tasks don't schedule as expected in Microsoft Project

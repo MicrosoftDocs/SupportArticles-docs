@@ -6,13 +6,12 @@ ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Microsoft Excel
+appliesto: 
+  - Microsoft Excel
 ---
 
 # PowerPivot does not work with .atomsvc files

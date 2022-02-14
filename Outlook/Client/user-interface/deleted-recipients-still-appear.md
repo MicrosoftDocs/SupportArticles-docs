@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: jmartine, excontent
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # Deleted recipients still appear in the list view of the Drafts folder in Outlook Online mode

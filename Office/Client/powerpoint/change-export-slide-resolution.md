@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- PowerPoint for Microsoft 365
-- PowerPoint 2019
-- PowerPoint 2016
-- PowerPoint 2013
-- PowerPoint 2010
-- Microsoft Office PowerPoint 2007
-- Microsoft Office PowerPoint 2003
+appliesto: 
+  - PowerPoint for Microsoft 365
+  - PowerPoint 2019
+  - PowerPoint 2016
+  - PowerPoint 2013
+  - PowerPoint 2010
+  - Microsoft Office PowerPoint 2007
+  - Microsoft Office PowerPoint 2003
 ---
 
 # How to export high-resolution (high-dpi) slides from PowerPoint

@@ -6,13 +6,12 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-appliesto:
-- Exchange Online
+  - Exchange Online
+  - CSSTroubleshoot
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # (Encrypted connection to your mail server is not available) error when Office 365 F plan users try to set up an Outlook profile for Exchange Online in Office 365

@@ -1,18 +1,17 @@
 ---
 title: How to automate the uninstallation of an Office update programmatically
-description: Describes how to uninstall an Office update programmatically by using a command with Office GUID and the update GUID. 
+description: Describes how to uninstall an Office update programmatically by using a command with Office GUID and the update GUID.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
-ms.author: ericspli 
-appliesto:
-- Microsoft Office
+ms.author: ericspli
+appliesto: 
+  - Microsoft Office
 ---
 
 # How to automate the uninstallation of an Office update programmatically

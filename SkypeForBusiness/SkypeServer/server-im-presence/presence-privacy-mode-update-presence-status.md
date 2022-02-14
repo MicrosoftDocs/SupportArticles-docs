@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-appliesto:
-- Lync Server 2013
-- Lync Server 2010 Enterprise Edition
-- Lync Server 2010 Standard Edition
+appliesto: 
+  - Lync Server 2013
+  - Lync Server 2010 Enterprise Edition
+  - Lync Server 2010 Standard Edition
 ---
 
 # Enabling Lync Server enhanced presence privacy mode updates the presence status of some Lync contacts to "unavailable"

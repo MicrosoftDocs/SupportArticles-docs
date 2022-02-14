@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho, ammert
 search.appverid: 
-- MET150
-appliesto:
-- Excel for Office 365
-- Excel 2016
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel for Office 365
+  - Excel 2016
+  - Excel 2013
 ---
 
 # Large Address Aware capability change for Excel

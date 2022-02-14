@@ -4,19 +4,18 @@ description: Describes a scenario that prevents a user from changing his office 
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 Identity Management
 ---
 
 # Users can't change their office phone number when they set up Azure Multi-Factor Authentication

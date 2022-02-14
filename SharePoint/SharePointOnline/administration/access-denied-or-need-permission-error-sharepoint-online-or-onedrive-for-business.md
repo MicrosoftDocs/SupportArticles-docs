@@ -7,17 +7,16 @@ localization_priority: Normal
 ms.date: 10/26/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 ms.custom: 
-- CSSTroubleshoot
-- CI 153997
-search.appverid:
-- SPO160
-- MET150
+  - CSSTroubleshoot
+  - CI 153997
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
 description: When you use SharePoint Online or OneDrive for Business, you may receive certain access or permission errors, such as   Access Denied, You need permission to access this site, or User not found in the directory.
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # "Access Denied" or "You need permission to access this site" errors in SharePoint Online and OneDrive for Business

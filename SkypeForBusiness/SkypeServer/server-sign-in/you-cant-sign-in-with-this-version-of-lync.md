@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-ms.reviewer: corbinm， mirung， daveh， msp， jasco， rischwen， amitpeer， landerl 
-appliesto:
-- Lync 2013 for iPhone
-- Lync 2013 for iPad
+ms.reviewer: corbinm， mirung， daveh， msp， jasco， rischwen， amitpeer， landerl
+appliesto: 
+  - Lync 2013 for iPhone
+  - Lync 2013 for iPad
 ---
 
 # "You can't sign in with this version of Lync" error in Lync for iPad or Lync for iPhone on iOS 9

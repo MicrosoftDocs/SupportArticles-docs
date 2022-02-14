@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appiesto:
-- Sway
+appiesto: 
+  - Sway
 ---
 
 # Office 365 Sway tile continues to appear in App Launcher even after it's disabled

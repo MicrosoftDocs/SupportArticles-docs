@@ -5,16 +5,15 @@ author: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 151596
+  - CSSTroubleshoot
+  - CI 151596
 ms.author: v-matthamer
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # SharePoint 2013 Workflow Error: “To try again, reload the page and then start the workflow”

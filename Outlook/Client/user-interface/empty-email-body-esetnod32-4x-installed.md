@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: v-9kach
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Emails have empty bodies when ESET NOD32 4.x is installed on client machines on Exchange Server 2010

@@ -5,19 +5,18 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: v-six
-appliesto:
-- Office Products
-- Exchange Online
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Office Products
+  - Exchange Online
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Enterprise
 ---
 # (Exception has been thrown by the target) error when moving mailboxes to or from Office 365 in a hybrid deployment
 

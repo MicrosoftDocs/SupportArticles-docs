@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Enterprise
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Enterprise
 ---
 # Federation trust and sharing errors for federated Exchange 2010 organizations
 

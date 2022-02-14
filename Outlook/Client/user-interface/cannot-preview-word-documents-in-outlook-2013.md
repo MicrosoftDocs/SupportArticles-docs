@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: robevans
-appliesto:
-- Outlook 2013
+appliesto: 
+  - Outlook 2013
 search.appverid: MET150
 ---
 # You can't preview Word documents in Outlook 2013

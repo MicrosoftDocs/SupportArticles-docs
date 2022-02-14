@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 122287
+  - CSSTroubleshoot
+  - CI 122287
 ms.author: scapero
 ms.reviewer: scapero
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # Error when adding a new derived SBC for Direct Routing: Cannot find specified Gateway 

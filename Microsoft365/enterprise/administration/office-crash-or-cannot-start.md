@@ -5,22 +5,21 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-enterprise
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel 2016
-- Outlook 2016
-- Skype for Business 2016
-- Word 2016
-- PowerPoint 2016
-- Microsoft Publisher 2016
-- Access 2016
-- OneNote 2016
-- Project Standard 2016
+appliesto: 
+  - Excel 2016
+  - Outlook 2016
+  - Skype for Business 2016
+  - Word 2016
+  - PowerPoint 2016
+  - Microsoft Publisher 2016
+  - Access 2016
+  - OneNote 2016
+  - Project Standard 2016
 ---
 
 # Office Applications crash or cannot start

@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tmoore, gregmans
-appliesto:
-- Microsoft Outlook 2010
+appliesto: 
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # Outlook 2010 performance issues in Cached Mode on Citrix Virtual Desktop

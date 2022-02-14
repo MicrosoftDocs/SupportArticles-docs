@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel 2010
-- Word 2010
-- PowerPoint 2010
+appliesto: 
+  - Excel 2010
+  - Word 2010
+  - PowerPoint 2010
 ---
 
 # Office files that have RMS protection seem to crash

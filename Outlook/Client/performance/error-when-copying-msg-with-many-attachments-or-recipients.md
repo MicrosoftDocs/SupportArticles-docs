@@ -6,19 +6,18 @@ manager: dcscontentpm
 ms.date: 2/26/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- All versions of Outlook
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - All versions of Outlook
 ms.custom: 
-- Outlook for Windows
-- CI 111840
-- CSSTroubleshoot 
-ms.reviewer: sgriffin 
-description: Explains why you may receive error messages when trying to copy emails in MSG format that contain a large number of attachments or recipients. 
+  - Outlook for Windows
+  - CI 111840
+  - CSSTroubleshoot
+ms.reviewer: sgriffin
+description: Explains why you may receive error messages when trying to copy emails in MSG format that contain a large number of attachments or recipients.
 ---
 
 # Error when you copy MSG email message files in Outlook containing multiple attachments or recipients

@@ -1,19 +1,18 @@
 ---
-title: Emoticons and emojis converted to text if more than 10 are sent in a message 
+title: Emoticons and emojis converted to text if more than 10 are sent in a message
 description: Describes an issue that causes emoticons and emojis to be converted to text if more than 10 are sent in a single message block in Skype for Business.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business 2016
-- Skype for Business 2015
+appliesto: 
+  - Skype for Business 2016
+  - Skype for Business 2015
 ---
 
 # Emoticons and emojis converted to text if more than 10 are sent in a single message block in Skype for Business 2015 or 2016 clients

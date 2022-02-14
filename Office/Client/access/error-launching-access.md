@@ -3,18 +3,17 @@ title: Unable to start Access
 description: Fixes an issue in which you can't launch Access because There is a permissions issue in the registry.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Access 2010
-- Microsoft Office Access 2007
+appliesto: 
+  - Access 2010
+  - Microsoft Office Access 2007
 search.appverid: MET150
 ---
 # "Access can't start because there is no license for it on this machine" error when launching Access

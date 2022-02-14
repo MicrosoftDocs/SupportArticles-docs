@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: arhinesm
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Office Online Server
+appliesto: 
+  - Office Online Server
 ---
 
 # Microsoft Office Web Apps and VMware

@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Outlook for Office 365
-- Outlook LTSC 2021
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Outlook for Office 365
+  - Outlook LTSC 2021
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 
 # Only a subset of your Exchange mailbox items are synchronized in Outlook

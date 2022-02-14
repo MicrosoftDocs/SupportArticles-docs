@@ -4,20 +4,19 @@ description: Describes an issue in which a federated user receives an error mess
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: willfid
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 Identity Management
 ---
 
 # "There is a problem with this website's security certificate" error when a federated user signs out of Office 365, Intune, or Azure

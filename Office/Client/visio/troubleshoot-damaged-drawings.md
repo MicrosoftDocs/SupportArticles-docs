@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: v-dahedm
 search.appverid: 
-- MET150
-appliesto:
-- Visio 2013
-- Visio 2010
-- Visio 2007
-- Visio 2003
+  - MET150
+appliesto: 
+  - Visio 2013
+  - Visio 2010
+  - Visio 2007
+  - Visio 2003
 ---
 
 # How to troubleshoot damaged drawings in Visio

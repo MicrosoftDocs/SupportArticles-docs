@@ -4,18 +4,17 @@ description: This article will help you troubleshoot network connection issues w
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157601
-- CI 159070
+  - CSSTroubleshoot
+  - CI 157601
+  - CI 159070
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Sign in issues when activating Microsoft 365 Apps

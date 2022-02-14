@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-ms.reviewer: seemarah; corbinm; mshaikh  
-appliesto:
-- Exchange Online
+ms.reviewer: seemarah; corbinm; mshaikh
+appliesto: 
+  - Exchange Online
 ---
 
 # Calls to UM Auto Attendant fail when custom greetings are used

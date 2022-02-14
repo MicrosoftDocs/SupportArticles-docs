@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: skype-for-business-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: v-gregl, v-jastho
-appliesto:
-- Microsoft Office Communicator 2007 R2
-- Lync 2010
-search.appverid: MET150 
+appliesto: 
+  - Microsoft Office Communicator 2007 R2
+  - Lync 2010
+search.appverid: MET150
 ---
 # Collect log files from Office Communicator, Lync, and Skype for Business Client
 

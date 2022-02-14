@@ -4,16 +4,15 @@ description: Describes an error that occurs when you try to sign in to or authen
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Azure Active Directory
-- Microsoft Intune
+  - MET150
+appliesto: 
+  - Azure Active Directory
+  - Microsoft Intune
 ---
 
 # "AADSTS65005" error when you try to sign in to Microsoft Cloud services

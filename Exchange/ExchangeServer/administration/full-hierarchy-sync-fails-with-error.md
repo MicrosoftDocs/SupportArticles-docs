@@ -1,5 +1,5 @@
 ---
-title: Full hierarchy sync fails with error 
+title: Full hierarchy sync fails with error
 description: Describes an issue that occurs when the sync state of the public folder hierarchy exceeds the maximum message size.
 ms.date: 08/05/2020
 author: simonxjx
@@ -7,15 +7,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: jmartin
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # Full hierarchy sync fails with Microsoft.Mapi.MapiExceptionMaxSubmissionExceeded

@@ -5,27 +5,26 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Microsoft 365 Personal
-- Microsoft 365 Home
-- Microsoft 365 Apps for enterprise
-- Microsoft Office Professional 2019
-- Microsoft Office Professional Plus 2019
-- Microsoft Office Professional 2016
-- Microsoft Office Professional Plus 2016
-- Microsoft Office Professional 2013
-- Microsoft Office Professional Plus 2013
-- Microsoft Office Professional Plus 2010
-- Microsoft Office Professional 2010
-- Microsoft Office Home and Business 2010
-- Microsoft Office Home and Student 2010
-- Microsoft Office Standard 2010
+appliesto: 
+  - Microsoft 365 Personal
+  - Microsoft 365 Home
+  - Microsoft 365 Apps for enterprise
+  - Microsoft Office Professional 2019
+  - Microsoft Office Professional Plus 2019
+  - Microsoft Office Professional 2016
+  - Microsoft Office Professional Plus 2016
+  - Microsoft Office Professional 2013
+  - Microsoft Office Professional Plus 2013
+  - Microsoft Office Professional Plus 2010
+  - Microsoft Office Professional 2010
+  - Microsoft Office Home and Business 2010
+  - Microsoft Office Home and Student 2010
+  - Microsoft Office Standard 2010
 ms.reviewer: 
 ---
 

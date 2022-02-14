@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: parida, Arykhus, kevinmil, barbway, emilcico
-appliesto:
-- Visio Standard 2010
-- Visio Premium 2010
-- Visio Professional 2013
-- Visio Standard 2013
+appliesto: 
+  - Visio Standard 2010
+  - Visio Premium 2010
+  - Visio Professional 2013
+  - Visio Standard 2013
 ---
 
 # Visio Services does not render diagrams that are hosted on servers that have IDNs

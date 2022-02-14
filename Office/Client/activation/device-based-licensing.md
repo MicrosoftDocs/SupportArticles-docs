@@ -1,20 +1,19 @@
 ---
-title: Troubleshooting device-based licensing for Microsoft 365 Apps 
+title: Troubleshooting device-based licensing for Microsoft 365 Apps
 description: Describes issues you might encounter with Microsoft 365 device-based licensing.
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157764
+  - CSSTroubleshoot
+  - CI 157764
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Troubleshooting device-based licensing for Microsoft 365 Apps

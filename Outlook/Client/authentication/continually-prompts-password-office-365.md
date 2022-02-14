@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- OutlookPwdPrompt
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - OutlookPwdPrompt
 ms.author: luche
-appliesto:
-- Outlook 2013
-- Outlook 2010
-- Office Outlook 2007
-- Exchange Online
+appliesto: 
+  - Outlook 2013
+  - Outlook 2010
+  - Office Outlook 2007
+  - Exchange Online
 ---
 
 # Outlook continually prompts for your password when you try to connect to Office 365

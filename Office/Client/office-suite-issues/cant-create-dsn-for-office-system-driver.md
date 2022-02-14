@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: CSSTroubleshoot
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Access 2010
-- Office Access 2007
-- Excel 2010
-- Office Excel 2007
-- Office Excel 2007 (Home and Student version)
-- Office Access 2003
-- Office Excel 2003
+appliesto: 
+  - Access 2010
+  - Office Access 2007
+  - Excel 2010
+  - Office Excel 2007
+  - Office Excel 2007 (Home and Student version)
+  - Office Access 2003
+  - Office Excel 2003
 ---
 
 # Unable to create DSN for Microsoft Office System Driver on 64-bit versions of Windows

@@ -7,15 +7,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: catagh
-appliesto:
-- Exchange Server
-- Exchange Online
+appliesto: 
+  - Exchange Server
+  - Exchange Online
 search.appverid: MET150
 ---
 # Exchange Web Services notification events can sometimes return an UnreadCount of -1

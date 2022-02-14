@@ -6,15 +6,14 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: chrisbur
 appliesto: 
-- Exchange Online
-- Exchange Server 2003 Service Pack 2
-- Exchange Server 2010 Enterprise
+  - Exchange Online
+  - Exchange Server 2003 Service Pack 2
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 

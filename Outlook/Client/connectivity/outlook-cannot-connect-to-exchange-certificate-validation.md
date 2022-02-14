@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: sfellman, jonl
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - MET150
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 # Outlook can't connect to an Exchange server that uses certificate validation on a network device
 

@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: lauraho, jenl
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Power BI for Office 365
-- Excel 2016
-- Excel 2013
+  - MET150
+appliesto: 
+  - Power BI for Office 365
+  - Excel 2016
+  - Excel 2013
 ---
 
 # COM add-ins are not displayed in the COM Add-Ins dialog box in Excel 2013 and Excel 2016

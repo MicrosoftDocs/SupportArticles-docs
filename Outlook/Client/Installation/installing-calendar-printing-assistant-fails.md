@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook for Office 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - MET150
+appliesto: 
+  - Outlook for Office 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 # Error when you try to install the Calendar Printing Assistant for Outlook: Setup cannot complete
 

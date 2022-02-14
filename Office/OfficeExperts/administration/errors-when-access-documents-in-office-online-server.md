@@ -6,13 +6,12 @@ ms.author: thempel
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
-ms.prod: office-perpetual-itpro
-appliesto:
-- Office Online Server
+appliesto: 
+  - Office Online Server
 ---
 
 # Errors when you access documents in Office Online Server

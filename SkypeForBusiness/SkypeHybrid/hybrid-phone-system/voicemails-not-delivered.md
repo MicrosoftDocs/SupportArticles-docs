@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business
-- Microsoft Teams
+appliesto: 
+  - Skype for Business
+  - Microsoft Teams
 ---
 
 # Voicemail messages aren't delivered in Teams or Skype for Business client

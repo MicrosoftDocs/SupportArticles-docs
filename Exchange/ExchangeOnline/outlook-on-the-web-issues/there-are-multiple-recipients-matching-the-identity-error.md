@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: amyluu
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
-- Exchange Server 2010
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # There are multiple recipients matching the identity error when creating inbox rules in OWA or EMS

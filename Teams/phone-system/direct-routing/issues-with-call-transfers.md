@@ -4,18 +4,17 @@ description: Troubleshoot issues affecting call transfers that are initiated by 
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 150733
-- CSSTroubleshoot
+  - CI 150733
+  - CSSTroubleshoot
 ms.reviewer: mikebis
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Issues that affect call transfers
 

@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Excel
-- Visual Studio 2008
+appliesto: 
+  - Microsoft Excel
+  - Visual Studio 2008
 ---
 
 # "Unable to cast COM object..." when exporting to Excel from Team Explorer 2008

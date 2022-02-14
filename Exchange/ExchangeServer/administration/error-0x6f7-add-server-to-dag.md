@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: mnanjund, benwinz
-appliesto:
-- Exchange Server  
+appliesto: 
+  - Exchange Server
 search.appverid: MET150
 ---
 # Operation failed with message: Error 0x6f7 when adding a server to a database availability group in Exchange Server

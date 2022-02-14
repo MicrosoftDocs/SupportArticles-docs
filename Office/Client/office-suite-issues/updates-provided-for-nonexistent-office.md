@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: v-chasec
 search.appverid: 
-- MET150
-appliesto:
-- Office 2013
-- Office 2010
-- Office 2007
-- Office 2003
+  - MET150
+appliesto: 
+  - Office 2013
+  - Office 2010
+  - Office 2007
+  - Office 2003
 ---
 
 # Microsoft Update and Windows Update offer updates for Office programs that you do not have installed

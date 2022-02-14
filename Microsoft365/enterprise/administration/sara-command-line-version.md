@@ -6,14 +6,13 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-enterprise
 localization_priority: Normal
-ms.custom:
-- CI 148047
-- CSSTroubleshoot
+ms.custom: 
+  - CI 148047
+  - CSSTroubleshoot
 ms.reviewer: zebamehdi; brandisi
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
 search.appverid: MET150
 ---
 # Command-line version of Microsoft Support and Recovery Assistant

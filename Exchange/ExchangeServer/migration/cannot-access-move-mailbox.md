@@ -6,15 +6,14 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 156012
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 156012
+  - CSSTroubleshoot
 ms.reviewer: dpaul; batre; meerak
-appliesto:
-- Exchange Server 2019
+appliesto: 
+  - Exchange Server 2019
 search.appverid: MET150
 ---
 

@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: v-miazha, chtart, anirudd, terrya, lcse, rtcse, uckbprev, acorman
-appliesto:
-- Lync Server 2010 Enterprise Edition
-- Lync Server 2010 Standard Edition
+appliesto: 
+  - Lync Server 2010 Enterprise Edition
+  - Lync Server 2010 Standard Edition
 ---
 
 # Users cannot join a meeting that is created by a user whose SIP address contains an apostrophe in a Lync Server 2010 environment

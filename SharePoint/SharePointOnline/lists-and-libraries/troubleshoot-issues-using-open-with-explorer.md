@@ -1,21 +1,20 @@
 ---
-title: Troubleshoot "View In File Explorer" issues in SharePoint Online
-description: Discusses how to troubleshoot issues that you may experience when you use the "View In File Explorer" command.
+title: Troubleshoot View In File Explorer issues in SharePoint Online
+description: Discusses how to troubleshoot issues that you may experience when you use the View In File Explorer command.
 author: helenclu
 manager: dcscontentpm
 ms.date: 02/14/2020
 localization_priority: High
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 113862
-- CSSTroubleshoot 
+  - CI 113862
+  - CSSTroubleshoot
 ---
 
 # Troubleshoot "View in File Explorer" issues in SharePoint Online

@@ -6,22 +6,21 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: djball, tasitae, djball, nasira
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Exchange Server 2007
-- Outlook 2016 for Mac
-- Outlook for Mac for Office 365
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Exchange Server 2007
+  - Outlook 2016 for Mac
+  - Outlook for Mac for Office 365
 ---
 # Email messages that you send from a shared mailbox aren't saved in the Sent Items folder in Outlook for Mac
 

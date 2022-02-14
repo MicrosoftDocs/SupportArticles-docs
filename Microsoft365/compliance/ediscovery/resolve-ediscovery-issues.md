@@ -1,25 +1,24 @@
 ---
 title: Troubleshooting common eDiscovery issues
 description: Learn about basic troubleshooting steps you can take to resolve common issues in Office 365 eDiscovery.
-f1.keywords:
-- NOCSH
+f1.keywords: 
+  - NOCSH
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-ms.custom:
-- CI 157398
-- CSSTroubleshoot
-- seo-marvel-apr2020
+ms.custom: 
+  - CI 157398
+  - CSSTroubleshoot
+  - seo-marvel-apr2020
 ms.collection: 
-- Strat_O365_IP
-- M365-security-compliance
+  - Strat_O365_IP
+  - M365-security-compliance
 search.appverid: 
-- MOE150
-- MET150
+  - MOE150
+  - MET150
 siblings_only: true
 ---
 # Resolve common eDiscovery issues

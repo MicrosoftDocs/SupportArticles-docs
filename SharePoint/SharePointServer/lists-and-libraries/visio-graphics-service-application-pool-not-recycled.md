@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: vrunge
-appliesto:
-- SharePoint Server 2013
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2013
+search.appverid: MET150
 ---
 # Unable to retrieve data from the server when you display Visio files in SharePoint Server 2013
 
