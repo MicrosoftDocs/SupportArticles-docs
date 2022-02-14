@@ -1,7 +1,7 @@
 ---
 title: Add-in component guidelines for core OS processes
 description: Avoid using high-level languages, libraries, or frameworks when building add-in components loaded by system processes.
-ms.date: 01/29/2022
+ms.date: 02/14/2022
 ms.prod-support-area-path: System Services Development
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -13,8 +13,6 @@ ms.technology: windows-dev-apps-system-services-dev
 
 _Applies to:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 841927
-
-## Introduction
 
 > [!IMPORTANT]
 > We recommend that you use only C or C++ languages and Win32 APIs for any add-in components that are loaded by core OS processes such as *lsass.exe*, *winlogon.exe*, and *logout.exe*.
@@ -37,9 +35,9 @@ Here is a partial list of high-level languages, frameworks, and runtimes for whi
 
 ## More information
 
-For more information about add-in components that are loaded by core OS processes, see the following Docs articles:
+For more information about add-in components that are loaded by core OS processes, see the following articles:
 
-- [Credential providers](/windows/win32/secauthn/winlogon-and-credential-providers)
+- [Winlogon and Credential providers](/windows/win32/secauthn/winlogon-and-credential-providers)
 - [Graphical Identification and Authentication (GINA) DLL](/windows/win32/secauthn/winlogon-and-gina)
 - [Winlogon notification packages](/windows/win32/secauthn/winlogon-notification-packages)
 - [Password filters](/windows/win32/secmgmt/password-filters)
