@@ -133,6 +133,8 @@
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
   - name: Meetings
     items:
+    - name: External users appear as Unknown in meeting details
+      href: ./meetings/external-user-shown-as-unknown.md
     - name: Issues with meeting chat
       href: ./meetings/meeting-chat-issues.md
     - name: Issues with meeting recordings
