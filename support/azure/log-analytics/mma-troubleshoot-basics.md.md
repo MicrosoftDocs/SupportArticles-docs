@@ -3,8 +3,8 @@ title: Basic troubleshooting Azure Log Analytics Monitoring Agent problems
 description: This article covers the basic aspects of the Microsoft Monitoring Agent (MMA) from Azure Log Analytics.
 ms.date: 01/24/2022
 author: genlin
-ms.author: armand.boisselle
-ms.reviewer: armand.boisselle
+ms.author: arboisse
+ms.reviewer: arboisse
 editor: v-jsitser
 ms.service: log-analytics
 ---
@@ -27,7 +27,7 @@ This article provides basic guide for troubleshooting Microsoft Monitoring Agent
 
 ## How to find the agent version
 
-There are two ways to find the vresion of :
+There are two ways to find the version of Monitoring Agent:
 
 **On the VM or on-premises server with MMA**
 
@@ -41,9 +41,7 @@ You can also query the version by running the following PowerShell command:
 
 **Azure portal**
 
-In the Log Analytics that the Monitoring Agent connected to, select **Logs**, and run the following Heartbeat query:
-
-Run the following query, expand Query result.  and look at the version column:
+In the Log Analytics that the Monitoring Agent connected to, select **Logs**, and run the following query, expand Query result,  and then look at the version column:
  ```PowerShell
 Heartbeat | summarize arg_max(TimeGenerated, *) by Computer`
 ```
@@ -53,19 +51,19 @@ When you submit a support ticket for a Monitoring Agent problem, Microsoft suppo
 
 If the script does not work, use the following steps to collect an ETL trace manually.
 
-1. Select **Start**, enter *cmd* and then select *Command Prompt* from the results to open a command prompt window.
+1. Select **Start**, enter **cmd** and then select **Command Prompt** from the results to open a command prompt window.
 
 1. At the command prompt, go to the following directory: `%programfiles%\Microsoft Monitoring Agent\Agent\Tools`.
 
 1. Run the following command to stop trace logging: `StopTracing.cmd`.
 
-1. Run the following command to enable verbose trace logging: `StartTracing.cmd INF`. *Note*: INF must be uppercase.
+1. Run the following command to enable verbose trace logging: `StartTracing.cmd INF`. In the command, INF must be uppercase.
 
 1. Reproduce the issue.
 
 1. At the command prompt, run the following command to stop trace logging: `StopTracing.cmd`.
 
-1. Run this command: `FormatTracing.cmd"`, and then wait until all the traces get converted.
+1. Run this command: `FormatTracing.cmd`, and then wait until all the traces get converted.
 
 1. Collect the traces (*.log files) from the %windowsroot%\Logs\OpsMgrTrace folder.
 
