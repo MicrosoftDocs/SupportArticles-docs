@@ -6,7 +6,7 @@ author: genli
 ms.author: Armand.Boisselle
 ms.reviewer: armand.boisselle
 editor: v-jsitser
-ms.service: azure-other-services
+ms.service: log-analytics
 ms.subservice: virtual-network
 keywords: 
 ---
