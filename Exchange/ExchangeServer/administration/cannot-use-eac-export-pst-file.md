@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
+  - Exchange Server
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
 search.appverid: MET150
 ---
 # Can't use EAC to export to a PST file when the target user belongs to a child domain in Exchange Server 2013

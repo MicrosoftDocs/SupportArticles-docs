@@ -3,19 +3,18 @@ title: Errors when you change or delete data in tables
 description: Fixes an issue in which you can't update the data in tables that are linked to an Excel workbook in Access.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
-- Microsoft Office Access 2002
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
+  - Microsoft Office Access 2002
 search.appverid: MET150
 ---
 # You cannot change, add, or delete data in tables that are linked to an Excel workbook in Access

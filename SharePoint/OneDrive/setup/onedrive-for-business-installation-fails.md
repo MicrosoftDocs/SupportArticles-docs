@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: fselkirk
-appliesto:
-- OneDrive for Business
-- SharePoint Online
-- SharePoint Server 2013
-search.appverid: MET150 
+appliesto: 
+  - OneDrive for Business
+  - SharePoint Online
+  - SharePoint Server 2013
+search.appverid: MET150
 ---
 # A OneDrive for Business installation fails for users confined to an internal network
 

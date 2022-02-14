@@ -5,17 +5,16 @@ author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-enterprise
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 
-- CSSTroubleshoot
-- CI 146798
+  - CSSTroubleshoot
+  - CI 146798
 ms.reviewer: roclemen, mattphil, micsmith
 search.appverid: 
-- MET150
-appliesto:
-- Office 365
+  - MET150
+appliesto: 
+  - Office 365
 ---
 
 # COM and .NET errors after Office architecture migration

@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: tmoore, gregmans
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2013
-- Outlook 2010
-- Exchange Server 2013 Enterprise 
+  - MET150
+appliesto: 
+  - Outlook 2013
+  - Outlook 2010
+  - Exchange Server 2013 Enterprise
 ---
 # The Send button is missing from a delayed delivery message in Outlook
 

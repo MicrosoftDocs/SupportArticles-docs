@@ -5,18 +5,17 @@ author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: pattim
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server
+  - MET150
+appliesto: 
+  - Exchange Server
 ---
 # How to determine the version number, the build number, and the service pack level of Exchange Server
 

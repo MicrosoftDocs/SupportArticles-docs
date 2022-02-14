@@ -4,14 +4,13 @@ description: This article lists SharePoint Server-related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- SharePoint Server
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - SharePoint Server
 ---
 
 # SharePoint Server troubleshooting

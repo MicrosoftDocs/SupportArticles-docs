@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel 2010
-- Excel 2013
+appliesto: 
+  - Excel 2010
+  - Excel 2013
 ---
 
 # [SDP 3][7b5791e2-2449-4351-867a-a22d34449d15] Data that is collected by the Excel Support Diagnostic

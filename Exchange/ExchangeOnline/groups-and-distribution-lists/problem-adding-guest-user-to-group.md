@@ -1,19 +1,18 @@
 ---
 title: Can't add a guest user to an Office 365 group
-description: Fixes an issue in which you receive a "There was a problem adding one or more people to the group" error message when you try to add a guest user to an Office 365 group.
+description: Fixes an issue in which you receive a There was a problem adding one or more people to the group error message when you try to add a guest user to an Office 365 group.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: kunalsh, ninob
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # Problem adding one or more people to the group when you add an external contact as a guest in Office 365

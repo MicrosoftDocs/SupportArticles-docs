@@ -1,22 +1,21 @@
 ---
 title: Error when uploading files to a Teams chat
-description: Troubleshooting steps for when you get the "file is locked" error when uploading a file to a Teams chat.
+description: Troubleshooting steps for when you get the file is locked error when uploading a file to a Teams chat.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 125872
-- CI 147731
-- CSSTroubleshoot
+  - CI 125872
+  - CI 147731
+  - CSSTroubleshoot
 ms.reviewer: prbalusu
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Error when uploading files to a Teams chat
 

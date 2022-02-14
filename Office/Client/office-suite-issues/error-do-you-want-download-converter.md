@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Microsoft Word 2010
-- Microsoft Excel 2010
-- Microsoft PowerPoint 2010
+appliesto: 
+  - Microsoft Word 2010
+  - Microsoft Excel 2010
+  - Microsoft PowerPoint 2010
 ms.reviewer: jenl
 ---
 # "Do you want to download the converter" error when trying to open a file in Word, Excel, or PowerPoint

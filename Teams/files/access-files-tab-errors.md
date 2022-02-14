@@ -4,19 +4,18 @@ description: Fixes error messages that you receive when you access the Files tab
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 149476
-- CI 143097
-- CSSTroubleshoot
+  - CI 149476
+  - CI 143097
+  - CSSTroubleshoot
 ms.reviewer: prbalusu
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Errors when selecting the Files tab on a Teams channel
 

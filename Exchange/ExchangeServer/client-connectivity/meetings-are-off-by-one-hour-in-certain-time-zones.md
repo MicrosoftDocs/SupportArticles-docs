@@ -7,15 +7,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: jmartin
-appliesto:
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # Meetings are off by one hour in certain time zones

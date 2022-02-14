@@ -5,16 +5,15 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.reviewer: willfid, v-chblod
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Azure Active Directory
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Azure Active Directory
+  - Office 365 Identity Management
 ---
 
 # "We don't recognize this user ID or password" error when a user tries to sign in to the Office 365 portal

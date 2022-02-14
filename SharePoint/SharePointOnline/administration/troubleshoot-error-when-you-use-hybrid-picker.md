@@ -1,18 +1,17 @@
-﻿---
+---
 title: error when you use the SharePoint Hybrid Picker
 description: Describes an issue when you use the SharePoint Hybrid Picker.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # "My site URL or team site URL from Discovery Service is null or empty" error when you use the SharePoint Hybrid Picker

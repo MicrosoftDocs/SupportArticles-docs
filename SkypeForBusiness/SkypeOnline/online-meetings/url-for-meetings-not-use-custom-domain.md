@@ -1,19 +1,18 @@
 ---
 title: URL for meetings doesn't use the custom domain
-description: Describes an issue in which the "Meet Now" URL fails to reflect a custom domain that you set up in Skype for Business Online. Provides a solution.
+description: Describes an issue in which the Meet Now URL fails to reflect a custom domain that you set up in Skype for Business Online. Provides a solution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # URL for meetings in Skype for Business Online doesn't use the custom domain that you created

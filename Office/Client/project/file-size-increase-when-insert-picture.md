@@ -4,20 +4,19 @@ description: Provides the workaround to resolve the file size increases greatly 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: v-dahedm
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Project Standard 2003
-- Project Professional 2010
-- Project Standard 2010
-- Project Professional 2013
-- Project 2013 Standard
+  - MET150
+appliesto: 
+  - Microsoft Office Project Standard 2003
+  - Project Professional 2010
+  - Project Standard 2010
+  - Project Professional 2013
+  - Project 2013 Standard
 ---
 
 # File size increases greatly when you insert a picture into a Project plan

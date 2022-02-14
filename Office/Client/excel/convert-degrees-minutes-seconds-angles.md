@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-ms.reviewer: garymu 
+ms.reviewer: garymu
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2010
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
+  - MET150
+appliesto: 
+  - Excel 2010
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
 ---
 
 # How to convert degrees/minutes/seconds angles to or from decimal angles in Excel

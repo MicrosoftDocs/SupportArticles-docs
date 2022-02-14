@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 3/25/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: microsoft-365-admin
 localization_priority: High
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft 365
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft 365
 ms.custom: 
-- CI 115922
-- CSSTroubleshoot 
+  - CI 115922
+  - CSSTroubleshoot
 ms.reviewer: alhopper
-description: Describes a workaround for adding guest users to the Microsoft 365 admin center. 
+description: Describes a workaround for adding guest users to the Microsoft 365 admin center.
 ---
 
 # Enabling guest users to access resources through the Microsoft 365 admin center

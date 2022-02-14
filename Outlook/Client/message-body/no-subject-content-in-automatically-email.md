@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Microsoft Outlook 2016
-- Microsoft Outlook 2013 Service Pack 1
-- Microsoft Outlook 2013
-- Microsoft Outlook 2010
-- Internet Explorer 10
-- Internet Explorer 11
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Microsoft Outlook 2016
+  - Microsoft Outlook 2013 Service Pack 1
+  - Microsoft Outlook 2013
+  - Microsoft Outlook 2010
+  - Internet Explorer 10
+  - Internet Explorer 11
 search.appverid: MET150
 ms.reviewer: 
 ---

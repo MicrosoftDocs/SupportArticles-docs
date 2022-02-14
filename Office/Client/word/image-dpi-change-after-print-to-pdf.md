@@ -4,17 +4,16 @@ description: Works around an issue in which the image DPI is changed after you c
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: Laura Holzwarth (STRUCK), Fish Ge
 search.appverid: 
-- MET150
-appliesto:
--  Microsoft Word 2010
--  Word 2013
+  - MET150
+appliesto: 
+  - Microsoft Word 2010
+  - Word 2013
 ---
 
 # Image DPI is changed after you print to PDF from Word 2013 or Word 2010

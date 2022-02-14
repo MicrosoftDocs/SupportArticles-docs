@@ -5,20 +5,19 @@ author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: dpaul, honche, jarrettr, genli, christys
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2019 Standard Edition
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2016 Standard Edition 
+  - MET150
+appliesto: 
+  - Exchange Server 2019 Standard Edition
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2016 Standard Edition
 ---
 # Exchange Server 2013, 2016 and 2019 Standard Edition can't mount databases that are larger than 1024 GB
 

@@ -4,17 +4,16 @@ description: Provides workarounds for an issue in which heap corruption occurs i
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
-- MET150
+  - MET150
 localization_priority: Normal
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Server 2010
-- SharePoint Server 2013
-- SharePoint Server 2016
+appliesto: 
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
 ---
 
 # System Center 2016 Operations Manager APM Agent causing heap corruption in SharePoint  

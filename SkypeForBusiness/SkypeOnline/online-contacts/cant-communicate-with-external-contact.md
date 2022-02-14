@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
-- Lync 2013
-- Lync 2010
+appliesto: 
+  - Skype for Business Online
+  - Lync 2013
+  - Lync 2010
 ---
 
 # Lync users can't communicate with external contacts who have Microsoft accounts that have a custom (EASI) domain

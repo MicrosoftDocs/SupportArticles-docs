@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 search.appverid: 
-- MET150
-appliesto:
-- OneNote 2013
+  - MET150
+appliesto: 
+  - OneNote 2013
 ---
 
 # Warning in OneNote 2013 when a notebook is in an offline location

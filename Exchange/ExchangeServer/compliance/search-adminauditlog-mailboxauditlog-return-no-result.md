@@ -1,25 +1,24 @@
 ---
-title:  Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
-description: Workaround for an issue that returns empty results when you run Search-AdminAuditLog and Search-MailboxAuditLog cmdlets with parameters. 
+title: Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
+description: Workaround for an issue that returns empty results when you run Search-AdminAuditLog and Search-MailboxAuditLog cmdlets with parameters.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: excontent, dkhrebin, genli, christys
-appliesto:
-- Exchange Server 2019 Enterprise Edition
-- Exchange Server 2019 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise Edition
-- Exchange Server 2013 Standard Edition
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2019 Enterprise Edition
+  - Exchange Server 2019 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise Edition
+  - Exchange Server 2013 Standard Edition
+search.appverid: MET150
 ---
 # Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
 

@@ -1,19 +1,18 @@
 ---
 title: Users are redirected when browsing to a SharePoint or OneDrive site
-description: Users are redirected in SharePoint with a warning message saying "Access to Microsoft SharePoint Online is monitored."
+description: Users are redirected in SharePoint with a warning message saying Access to Microsoft SharePoint Online is monitored.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.collection: SPO_Content
 ms.author: v-maqiu
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # "Access to Microsoft SharePoint Online is monitored" when browsing to a SharePoint site

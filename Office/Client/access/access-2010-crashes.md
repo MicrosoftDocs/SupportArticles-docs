@@ -6,13 +6,12 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Access 2010
+appliesto: 
+  - Access 2010
 ---
 
 # Access 2010 crashes after you install Office 2010 Service Pack 1, and the error signature in Event Viewer points to the Vbe7.dll file

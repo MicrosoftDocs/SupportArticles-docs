@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Word 2019
-- Word 2016
-- Word 2013
-- Word 2010
+appliesto: 
+  - Word 2019
+  - Word 2016
+  - Word 2013
+  - Word 2010
 ---
 
 # "Word cannot open this file because it is larger than 512 Megabytes" when opening a document in Word 

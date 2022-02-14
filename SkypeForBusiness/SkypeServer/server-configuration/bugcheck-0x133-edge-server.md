@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Lync Server 2013
-- Skype for Business Server 2015
-- Windows Server 2012 R2 Standard
+appliesto: 
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Windows Server 2012 R2 Standard
 ---
 
 # Bug Check 0x133 DPC_WATCHDOG_VIOLATION error on Lync/Skype for Business Edge server

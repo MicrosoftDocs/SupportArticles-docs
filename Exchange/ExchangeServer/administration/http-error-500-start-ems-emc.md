@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: benwinz
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010
+  - MET150
+appliesto: 
+  - Exchange Server 2010
 ---
 # HTTP server error status (500) when you try to start Exchange Management Shell or Exchange Management Console
 

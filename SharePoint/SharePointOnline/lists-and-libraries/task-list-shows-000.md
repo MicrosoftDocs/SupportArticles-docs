@@ -1,20 +1,19 @@
 ---
-title: Task list shows item title as .000 
+title: Task list shows item title as .000
 description: This article describes an issue where the Task List displays a title as .000 instead of the actual title.
 author: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 
-- CSSTroubleshoot
-- CI 156281
-appliesto:
-- SharePoint Online
+  - CSSTroubleshoot
+  - CI 156281
+appliesto: 
+  - SharePoint Online
 ---
 
 # Task list shows item title as .000

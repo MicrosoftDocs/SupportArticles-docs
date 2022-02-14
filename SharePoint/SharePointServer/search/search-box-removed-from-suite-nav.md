@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 9/11/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint
 ms.custom: 
-- CI 122435
-- CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: Customers who switch off the search control in SharePoint Suite Navigation will no longer see the search box. 
+  - CI 122435
+  - CSSTroubleshoot
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
+description: Customers who switch off the search control in SharePoint Suite Navigation will no longer see the search box.
 ---
 
 # Search box removed for customers with Suite Navigation search control turned off

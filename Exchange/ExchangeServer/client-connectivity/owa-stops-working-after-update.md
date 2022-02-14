@@ -6,21 +6,20 @@ ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: batre; ninob
 ms.custom: 
-- CI 144977
-- CI 147050
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2019 
-- Exchange Server 2016 
-- Exchange Server 2013
-- Exchange Server 2010 Service Pack 3
+  - CI 144977
+  - CI 147050
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010 Service Pack 3
 ---
 
 # OWA or ECP stops working after you install a security update

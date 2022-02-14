@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: nichburk
-appliesto:
-- Lync 2013
-- Skype for Business 2015
+appliesto: 
+  - Lync 2013
+  - Skype for Business 2015
 ---
 
 # No delegation relationship in Lync 2013 (Skype for Business) even though you're a delegate in Outlook 2013

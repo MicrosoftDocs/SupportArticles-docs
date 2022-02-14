@@ -1,22 +1,21 @@
 ---
 title: The name on the security certificate is invalid
-description: Fixes an issue in which you receive a "The name on the security certificate is invalid or does not match the name of the site" error message when you start Outlook that has one or more Microsoft SharePoint calendars or lists.
+description: Fixes an issue in which you receive a The name on the security certificate is invalid or does not match the name of the site error message when you start Outlook that has one or more Microsoft SharePoint calendars or lists.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: sercast, aruiz
-appliesto:
-- SharePoint Server 2010
-- SharePoint Server 2013
-- SharePoint Server 2016
-- SharePoint Server 2019
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+search.appverid: MET150
 ---
 # Certificate security warning for a SharePoint site when you start Outlook
 

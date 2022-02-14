@@ -1,24 +1,23 @@
 ---
 title: Hybrid search fails to crawl or return results
-description: Hybrid search fails to crawl or return results. Or, it returns the error "An existing connection was forcibly closed". 
+description: Hybrid search fails to crawl or return results. Or, it returns the error An existing connection was forcibly closed.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.reviewer: salarson
-ms.custom:
-- CSSTroubleshoot
-- CI 151765
-appliesto:
-- SharePoint Server 2019
-- SharePoint Server 2016
-- SharePoint Server 2013
-- SharePoint in Microsoft 365
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 151765
+appliesto: 
+  - SharePoint Server 2019
+  - SharePoint Server 2016
+  - SharePoint Server 2013
+  - SharePoint in Microsoft 365
 ---
 
 # Hybrid search fails to crawl or return results

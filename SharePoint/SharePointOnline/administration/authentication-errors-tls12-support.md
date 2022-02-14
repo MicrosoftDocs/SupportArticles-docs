@@ -5,20 +5,19 @@ author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 144545
-- CI 147050
-- CI 152523
+  - CSSTroubleshoot
+  - CI 144545
+  - CI 147050
+  - CI 152523
 ms.collection: SPO_Content
 ms.author: v-matthamer
-appliesto:
-- SharePoint Online
-- Microsoft 365
+appliesto: 
+  - SharePoint Online
+  - Microsoft 365
 ---
 
 # Authentication errors occur when client doesn't have TLS 1.2 support

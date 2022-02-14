@@ -4,18 +4,17 @@ description: Discusses an issue that user is unable to view some websites using 
 author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 122983
-- CSSTroubleshoot
+  - CI 122983
+  - CSSTroubleshoot
 ms.reviewer: kellybos
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Unable to view websites using Teams on the web

@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office 2010
-- Office 2007
-- Office 2003
+appliesto: 
+  - Office 2010
+  - Office 2007
+  - Office 2003
 ---
 
 # Error 1401, 1402 or 1406 when you install an Office program or open an Office program or document

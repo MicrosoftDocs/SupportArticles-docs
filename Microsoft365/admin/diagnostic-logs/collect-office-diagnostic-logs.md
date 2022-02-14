@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Microsoft 365 Apps for enterprise
+appliesto: 
+  - Microsoft 365 Apps for enterprise
 ---
 
 # How to enable ULS logging for Microsoft 365 Apps for enterprise

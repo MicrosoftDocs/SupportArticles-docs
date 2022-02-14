@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: gabesl
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- CI 124779
-appliesto:
-- Outlook for Microsoft 365
-- Outlook 2016
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - CI 124779
+appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2016
 ---
 
 # Strange characters are displayed in meeting requests, read receipts, and IRM messages

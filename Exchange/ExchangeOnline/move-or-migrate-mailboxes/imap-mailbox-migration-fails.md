@@ -3,19 +3,18 @@ title: Unable to migrate mailboxes using IMAP
 description: Fixes an issue in which you can't create an IMAP migration endpoint when you migrate mailboxes to Exchange Online by using the IMAP4 protocol.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 147284
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 147284
+  - CSSTroubleshoot
 ms.reviewer: mireb
-appliesto:
-- Exchange Server 2010
-- Exchange Online 
+appliesto: 
+  - Exchange Server 2010
+  - Exchange Online
 search.appverid: MET150
 ---
 # Can't migrate IMAP mailboxes from Exchange Server 2010 to Exchange Online

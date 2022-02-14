@@ -6,15 +6,14 @@ ms.author: v-lianna
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI
-- CSSTroubleshoot
+  - Exchange Online
+  - CI
+  - CSSTroubleshoot
 ms.reviewer: mhaque, meerak, desingh, danab, v-kwaddo, danba, dechiang
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # POX Autodiscover not supported with OAuth client credentials grant

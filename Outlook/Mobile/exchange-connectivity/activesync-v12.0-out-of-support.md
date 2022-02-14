@@ -4,20 +4,19 @@ description: This article announces that the Exchange ActiveSync protocol v12.0 
 author: helenclu
 ms.author: grtaylor
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for iOS and Android
-- CI 114951
-- CSSTroubleshoot
+  - Outlook for iOS and Android
+  - CI 114951
+  - CSSTroubleshoot
 ms.reviewer: grtaylor
-appliesto:
-- Outlook for iOS
-- Outlook for Android
+appliesto: 
+  - Outlook for iOS
+  - Outlook for Android
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Exchange ActiveSync protocol v12.0 is out-of-support for Outlook for iOS and Android

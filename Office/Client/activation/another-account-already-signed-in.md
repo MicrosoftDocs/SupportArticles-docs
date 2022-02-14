@@ -4,19 +4,18 @@ description: Troubleshooting steps for Microsoft 365 Apps activation error Sorry
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157596
-- CI 159181
-- CI 159479
+  - CSSTroubleshoot
+  - CI 157596
+  - CI 159181
+  - CI 159479
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation error: “Sorry, another account from your organization is already signed in on this computer”

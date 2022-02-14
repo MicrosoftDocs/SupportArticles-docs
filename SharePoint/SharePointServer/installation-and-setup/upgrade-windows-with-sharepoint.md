@@ -5,16 +5,15 @@ author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 
-- CSSTroubleshoot
-- CI 152110
-appliesto:
-- SharePoint Server
+  - CSSTroubleshoot
+  - CI 152110
+appliesto: 
+  - SharePoint Server
 ---
 
 # Upgrade Windows on a server that has SharePoint Server installed

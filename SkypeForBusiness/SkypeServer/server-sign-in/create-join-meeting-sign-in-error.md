@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: skype-for-business-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: balram, jalalb
-appliesto:
-- Microsoft 365 (Enterprise, Business, Government, Education)
-search.appverid: MET150 
+appliesto: 
+  - Microsoft 365 (Enterprise, Business, Government, Education)
+search.appverid: MET150
 ---
 # It might be your sign-in address or logon credentials error in Skype for Business
 

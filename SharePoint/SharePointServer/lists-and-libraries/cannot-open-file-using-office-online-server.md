@@ -1,19 +1,18 @@
 ---
-title: Can't open a file using OW or Office Online Server 
+title: Can't open a file using OW or Office Online Server
 description: Provides a workaround for an issue in which you receive an error message when you use an Office Web App to open a file on a SharePoint Server 2013 site.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: nsimons
-appliesto:
-- SharePoint Server 2013
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2013
+search.appverid: MET150
 ---
 # Something went wrong when you open a file by using an Office Web App or Office Online Server
 

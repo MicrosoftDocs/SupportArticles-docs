@@ -5,18 +5,17 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 User and Domain Management
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 User and Domain Management
+  - Office 365 Identity Management
 ---
 
 # Problems when signing out of Office 365, Azure, or Intune in a web browser

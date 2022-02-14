@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Microsoft Outlook 2010
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Microsoft Outlook 2010
+  - Outlook 2013
 search.appverid: MET150
 ---
 # Can't use Group Policy to disable items in Backstage view in Outlook

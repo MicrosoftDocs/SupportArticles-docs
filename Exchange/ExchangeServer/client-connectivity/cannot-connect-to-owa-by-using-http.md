@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Users can't connect to Outlook Web App by using the HTTP protocol in Exchange Server 2010

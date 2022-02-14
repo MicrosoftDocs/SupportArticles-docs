@@ -6,15 +6,14 @@ ms.author: randring
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- SharePoint Server 2016
-- SharePoint Server 2013
-- SharePoint Server 2010
+appliesto: 
+  - SharePoint Server 2016
+  - SharePoint Server 2013
+  - SharePoint Server 2010
 ---
 
 # Schedule data refresh to a data source with non-Windows Authentication

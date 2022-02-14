@@ -6,13 +6,12 @@ ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Microsoft Word
+appliesto: 
+  - Microsoft Word
 ---
 
 # Force a Word document to open in edit mode from an email link

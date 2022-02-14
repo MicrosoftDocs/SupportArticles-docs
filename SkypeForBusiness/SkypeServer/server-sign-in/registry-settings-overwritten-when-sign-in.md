@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-ms.reviewer: pankajr， genli 
-appliesto:
-- Office Communicator 2007 R2
-- Lync 2010
-- Lync 2013
+ms.reviewer: pankajr， genli
+appliesto: 
+  - Office Communicator 2007 R2
+  - Lync 2010
+  - Lync 2013
 ---
 
 # Lync 2013, Lync 2010, or Office Communicator 2007 R2 becomes the default application for protocols after user signs in

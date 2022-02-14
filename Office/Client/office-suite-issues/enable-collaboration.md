@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: ambroset
 search.appverid: 
-- MET150
-appliesto:
-- Office 2013
-- Office 2010
-- Office 2007
-- Office 2003
+  - MET150
+appliesto: 
+  - Office 2013
+  - Office 2010
+  - Office 2007
+  - Office 2003
 ---
 
 # Description of Office features that are intended to enable collaboration and that are not intended to increase security

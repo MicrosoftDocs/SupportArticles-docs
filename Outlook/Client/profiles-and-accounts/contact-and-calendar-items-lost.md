@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae, aruiz, naokon
-appliesto:
-- Microsoft Office 2013 Service Pack 1
-- Outlook 2013
+appliesto: 
+  - Microsoft Office 2013 Service Pack 1
+  - Outlook 2013
 search.appverid: MET150
 ---
 # Contact and Calendar items are lost after you delete an IMAP account in Outlook 2013

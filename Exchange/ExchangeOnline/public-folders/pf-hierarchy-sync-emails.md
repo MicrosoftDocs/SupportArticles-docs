@@ -6,19 +6,18 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- CI 150753
-- Exchange Online
-- CSSTroubleshoot
+ms.custom: 
+  - CI 150753
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: batre
 editor: v-jesits
 appliesto: 
-- Exchange Online via Office 365 E Plans
-- Exchange Online via Office 365 P Plans
-- Exchange Server 2016
-- Exchange Server 2019 
+  - Exchange Online via Office 365 E Plans
+  - Exchange Online via Office 365 P Plans
+  - Exchange Server 2016
+  - Exchange Server 2019
 search.appverid: MET150
 ---
 # Email messages with the "HierarchySync_" subject in message tracking

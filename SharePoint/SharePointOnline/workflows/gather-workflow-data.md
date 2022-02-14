@@ -5,16 +5,15 @@ author: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 151719
+  - CSSTroubleshoot
+  - CI 151719
 ms.author: v-matthamer
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Gather SharePoint 2013 Workflow troubleshooting data with ShowScopeDebugInfo

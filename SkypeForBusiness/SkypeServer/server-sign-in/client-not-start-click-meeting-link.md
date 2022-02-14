@@ -5,19 +5,18 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-appliesto:
-- Skype for Business Online
-- Skype for Business Server 2015
-- Lync Server 2013
-- Microsoft Lync Online
-- Lync Server 2010 Enterprise Edition
-- Lync Server 2010 Standard Edition
+appliesto: 
+  - Skype for Business Online
+  - Skype for Business Server 2015
+  - Lync Server 2013
+  - Microsoft Lync Online
+  - Lync Server 2010 Enterprise Edition
+  - Lync Server 2010 Standard Edition
 ---
 
 # Lync or Skype for Business client does not start when you click a meeting link if the default browser is Google Chrome

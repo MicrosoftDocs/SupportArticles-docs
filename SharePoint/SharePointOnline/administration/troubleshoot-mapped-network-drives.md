@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 5/14/2020
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 117634
+  - CSSTroubleshoot
+  - CI 117634
 ms.author: luche
 ms.reviewer: prbalusu
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Troubleshoot mapped network drives that connect to SharePoint Online

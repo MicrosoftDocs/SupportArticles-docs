@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 ms.author: ericspli
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # Activate Office 2010 KMS host through phone activation

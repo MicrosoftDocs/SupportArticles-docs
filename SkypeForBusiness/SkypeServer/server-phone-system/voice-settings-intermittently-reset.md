@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Server 2015
-- Skype for Business for iOS
-- Skype for Business for Android
+appliesto: 
+  - Skype for Business Server 2015
+  - Skype for Business for iOS
+  - Skype for Business for Android
 ---
 
 # Voice settings are intermittently reset in Skype for Business app

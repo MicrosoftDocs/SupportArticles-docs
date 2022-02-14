@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: monish, bobz
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Exchange Online
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Exchange Online
 search.appverid: MET150
 ---
 # Outlook doesn't display your manager's team calendars

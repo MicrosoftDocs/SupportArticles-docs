@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: abarglo
-appliesto:
-- Outlook 2010
-- Outlook 2007
-- Exchange Server 2013
-- Exchange Server 2010
-- Exchange Server 2007
+appliesto: 
+  - Outlook 2010
+  - Outlook 2007
+  - Exchange Server 2013
+  - Exchange Server 2010
+  - Exchange Server 2007
 search.appverid: MET150
 ---
 # Options in Outlook's Resource Scheduling dialog box are disabled

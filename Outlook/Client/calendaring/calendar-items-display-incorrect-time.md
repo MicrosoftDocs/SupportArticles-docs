@@ -4,21 +4,20 @@ description: After time zone or daylight savings time changes, some calendar ite
 author: helenclu
 ms.author: tasitae
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 109336
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 109336
+  - CSSTroubleshoot
 ms.reviewer: tasitae, sbradley, randyto, gbratton
-appliesto:
-- Outlook 2013
-- Outlook 2016
-- Outlook 2019
+appliesto: 
+  - Outlook 2013
+  - Outlook 2016
+  - Outlook 2019
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Calendar items for next year may display an incorrect time in Outlook

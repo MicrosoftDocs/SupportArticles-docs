@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: sschiem
-appliesto:
-- Exchange Server 2016 
-- Exchange Server 2013
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Event ID 2080 from MSExchangeDSAccess

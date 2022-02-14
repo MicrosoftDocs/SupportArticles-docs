@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft Office Visio Professional 2007
-- Microsoft Office Visio Standard 2003
-- Visio
+appliesto: 
+  - Microsoft Office Visio Professional 2007
+  - Microsoft Office Visio Standard 2003
+  - Visio
 ---
 
 # Search for Shapes feature on the Internet is discontinued

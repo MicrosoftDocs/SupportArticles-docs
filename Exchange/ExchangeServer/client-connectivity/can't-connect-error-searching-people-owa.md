@@ -4,19 +4,18 @@ description: Describes an issue in which you are unable to search people in OWA 
 author: simonxjx
 ms.author: jcoiffin
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 116313
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 116313
+  - CSSTroubleshoot
 ms.reviewer: jcoiffin
-appliesto:
-- Exchange Server 2019
+appliesto: 
+  - Exchange Server 2019
 search.appverid: 
-- MET150
+  - MET150
 ---
 # "Can't connect. Please try again later" error when searching people in OWA in Exchange Server 2019
 

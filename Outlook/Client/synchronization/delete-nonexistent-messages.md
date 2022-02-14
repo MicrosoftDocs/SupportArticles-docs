@@ -4,19 +4,18 @@ description: Outlook keeps trying to send a nonexistent message while Outbox fol
 author: helenclu
 ms.author: gbratton
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 112768
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 112768
+  - CSSTroubleshoot
 ms.reviewer: gbratton
-appliesto:
-- Outlook for Office 365
+appliesto: 
+  - Outlook for Office 365
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Outlook keeps trying to send a nonexistent message while Outbox folder shows zero messages

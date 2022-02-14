@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mikestow
 search.appverid: 
-- MET150 
-appliesto:
-- Excel 2019
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Office Excel 2007
-- Excel for Macintosh
+  - MET150
+appliesto: 
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Office Excel 2007
+  - Excel for Macintosh
 ---
 
 # Differences between the 1900 and the 1904 date system in Excel

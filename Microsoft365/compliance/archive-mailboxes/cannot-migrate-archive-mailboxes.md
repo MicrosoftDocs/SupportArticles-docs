@@ -6,17 +6,16 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: alinastr
 appliesto: 
-- Exchange Online
-- Exchange Server 2013
-- Exchange Server 2010
-- Exchange Server 2016
-- Exchange Server 2019
+  - Exchange Online
+  - Exchange Server 2013
+  - Exchange Server 2010
+  - Exchange Server 2016
+  - Exchange Server 2019
 search.appverid: MET150
 ---
 

@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel 2016
-- Excel 2013
+appliesto: 
+  - Excel 2016
+  - Excel 2013
 ---
 
 # Description of formulas to count the occurrences of text, characters, and words in Excel

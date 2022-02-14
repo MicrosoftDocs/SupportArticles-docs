@@ -6,20 +6,19 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: danba, brijs, catagh, gbratton, dvespa
-appliesto:
-- Microsoft Outlook 2010
-- Outlook 2013
-- Outlook 2016
-- Exchange Server 2010 Standard
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2016 Standard Edition
-search.appverid: MET150 
+appliesto: 
+  - Microsoft Outlook 2010
+  - Outlook 2013
+  - Outlook 2016
+  - Exchange Server 2010 Standard
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2016 Standard Edition
+search.appverid: MET150
 ---
 # Developer Support limitations for public protocols
 

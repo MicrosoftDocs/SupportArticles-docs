@@ -4,22 +4,21 @@ description: Provides information about how to hide or display the Room Finder i
 author: helenclu
 ms.author: gabesl
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 113857
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 113857
+  - CSSTroubleshoot
 ms.reviewer: gabesl
-appliesto:
-- Outlook for Microsoft 365
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
+appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # How to control the Room Finder in Outlook

@@ -1,23 +1,22 @@
 ---
-title: Unable to delete a SharePoint site 
+title: Unable to delete a SharePoint site
 ms.author: prbalusu
 author: v-matthamer
 manager: dcscontentpm
 ms.date: 10/22/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint
 ms.custom: 
-- CI 157730
-- CSSTroubleshoot 
-ms.reviewer: prbalusu 
-description: Troubleshooting SharePoint sites that can't be deleted. 
+  - CI 157730
+  - CSSTroubleshoot
+ms.reviewer: prbalusu
+description: Troubleshooting SharePoint sites that can't be deleted.
 ---
 
 # Unable to delete a SharePoint site

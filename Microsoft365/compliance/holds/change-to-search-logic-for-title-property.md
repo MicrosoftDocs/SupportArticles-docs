@@ -1,21 +1,20 @@
 ---
-title: Search logic change to "Title" property in the Security and Compliance Centerx
-description: Describes a change to the "Title" property when conducting eDiscovery searches in the Security and Compliance Center. 
+title: Search logic change to Title property in the Security and Compliance Centerx
+description: Describes a change to the Title property when conducting eDiscovery searches in the Security and Compliance Center.
 ms.author: v-maqiu
 author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 applies to: Office 365 Security & Compliance Center
 ms.custom: 
-- CI 115091
-- CSSTroubleshoot 
-ms.reviewer: markjjo 
+  - CI 115091
+  - CSSTroubleshoot
+ms.reviewer: markjjo
 ---
 
 # Change to search logic for the "Title" property in the Security and Compliance Center

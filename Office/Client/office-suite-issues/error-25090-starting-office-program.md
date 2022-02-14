@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Office 2007
-- Microsoft Office 2003
+appliesto: 
+  - Microsoft Office 2007
+  - Microsoft Office 2003
 ---
 
 # "Error 25090" error message when you start an Office program

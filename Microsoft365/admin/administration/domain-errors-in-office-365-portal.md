@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Azure Active Directory
-- Office 365 User and Domain Management
+appliesto: 
+  - Azure Active Directory
+  - Office 365 User and Domain Management
 ---
 
 # Domain errors in the Office 365 portal

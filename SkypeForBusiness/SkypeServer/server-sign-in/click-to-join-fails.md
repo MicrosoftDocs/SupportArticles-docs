@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: kkodali
-appliesto:
-- Office Professional 2013
-- Office Professional Plus 2013
-- Office Home and Business 2013
+appliesto: 
+  - Office Professional 2013
+  - Office Professional Plus 2013
+  - Office Home and Business 2013
 ---
 
 # "Click to Join" fails to invoke Skype for Business on computers that use Application Virtualization

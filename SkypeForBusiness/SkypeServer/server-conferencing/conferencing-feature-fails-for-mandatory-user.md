@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Lync 2010
-- Lync 2010 Attendee
-- Microsoft Lync 2013
+appliesto: 
+  - Lync 2010
+  - Lync 2010 Attendee
+  - Microsoft Lync 2013
 ---
 
 # Lync conferencing feature fails when the user is signed in using a mandatory user profile

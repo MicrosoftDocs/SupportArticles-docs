@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2016 for Mac 
-- Outlook for Mac for Office 365
+appliesto: 
+  - Outlook 2016 for Mac
+  - Outlook for Mac for Office 365
 search.appverid: MET150
 ---
 # Category colors are different after you migrate from Outlook for Mac 2011 to Outlook 2016 for Mac

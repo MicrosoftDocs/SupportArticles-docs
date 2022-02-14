@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office Web Apps
+appliesto: 
+  - Office Web Apps
 ---
 
 # "We can't open this add-in from localhost" when loading an Office Add-in or using Fiddler

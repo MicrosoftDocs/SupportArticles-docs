@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: sercast
-appliesto:
-- Outlook 2013
+appliesto: 
+  - Outlook 2013
 search.appverid: MET150
 ---
 # An image in an HTML-formatted email message is not displayed in Outlook 2013 when you use a proxy server that is configured to use basic authentication

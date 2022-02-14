@@ -5,14 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-appliesto:
-- Skype for Business Server 2015
+appliesto: 
+  - Skype for Business Server 2015
 ---
 
 # Windows Fabric, Front-end services won't start after Skype for Business Server 2015 installed on Windows Server 2016 or Server 2012 R2 system with 4K native disk

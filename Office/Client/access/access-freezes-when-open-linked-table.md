@@ -4,19 +4,18 @@ description: Describes an issue in which Microsoft Access hangs when you open a 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: suesch
 search.appverid: 
-- MET150
-appliesto:
-- Access 2016
-- Access 2013
-- Access for Office 365
-- Access 2019
+  - MET150
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access for Office 365
+  - Access 2019
 ---
 
 # Access freezes when you open a linked table to a SharePoint list

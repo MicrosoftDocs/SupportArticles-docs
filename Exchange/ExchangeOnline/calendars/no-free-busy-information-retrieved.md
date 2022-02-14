@@ -1,24 +1,23 @@
 ---
 title: ErrorMailRecipientNotFound when viewing free/busy information
-description: Fixes the "ErrorMailRecipientNotFound" response that occurs when viewing free/busy information of a user in another organization.
+description: Fixes the ErrorMailRecipientNotFound response that occurs when viewing free/busy information of a user in another organization.
 author: v-charloz
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: v-chazhang
 ms.custom: 
-- CI 157711
-- Exchange Online
-- CSSTroubleshoot
+  - CI 157711
+  - Exchange Online
+  - CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - MET150
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 
 # ErrorMailRecipientNotFound response when viewing free/busy information

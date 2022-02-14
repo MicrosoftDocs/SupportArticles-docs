@@ -1,27 +1,26 @@
 ---
-title: Edge Transport server version isn't updated 
+title: Edge Transport server version isn't updated
 description: Discusses an issue in which the Exchange Server version for an Edge Server isn't updated in the Exchange Control Panel after upgrade.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: v-six, genli, christys, btalb
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Enterprise
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Enterprise
 ---
 # The Exchange Edge Transport server version is incorrect in EAC or ECP after an upgrade
 

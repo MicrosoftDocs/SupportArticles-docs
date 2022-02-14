@@ -5,20 +5,18 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 365 Business
-- Office Professional 2016
-- Office Professional Plus 2016
-- Visio Professional 2016
-- Project Professional 2016
-
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 365 Business
+  - Office Professional 2016
+  - Office Professional Plus 2016
+  - Visio Professional 2016
+  - Project Professional 2016
 ---
 
 # How to prioritize the use of BITS by Office 2016 clients for downloading updates

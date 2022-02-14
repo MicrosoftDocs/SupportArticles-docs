@@ -7,18 +7,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Outlook 2016
-- Outlook 2013 
-- Outlook 2010
-- Outlook 2016 for Mac
-- Outlook.com 
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Outlook 2016 for Mac
+  - Outlook.com
 search.appverid: MET150
 ---
 # How to open a shared calendar from an Outlook sharing invitation

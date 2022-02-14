@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: Rtaylor
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # Office 2010 Help Files: Win32API_PtrSafe with 64-bit Support

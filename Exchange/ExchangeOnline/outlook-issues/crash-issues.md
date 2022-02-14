@@ -3,24 +3,23 @@ title: Outlook crash or stop responding when used with Office 365
 description: Describes how to troubleshoot issues that trigger Outlook crashes when you use Outlook in an Office 365 environment.
 author: simonxjx
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-- SaRA-OutlookWontStart
-- OutlookAdvDiagnostics
+  - Exchange Online
+  - CSSTroubleshoot
+  - SaRA-OutlookWontStart
+  - OutlookAdvDiagnostics
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
+  - MET150
+appliesto: 
+  - Exchange Online
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
 ---
 # How to troubleshoot issues that cause Outlook to crash or stop responding when used with Office 365
 

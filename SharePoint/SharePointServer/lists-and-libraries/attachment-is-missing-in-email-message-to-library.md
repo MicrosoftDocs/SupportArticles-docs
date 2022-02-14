@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Windows SharePoint Services 3.0
+appliesto: 
+  - Windows SharePoint Services 3.0
 ---
 
 # Attachment is missing from an e-mail message that is sent to a document library  

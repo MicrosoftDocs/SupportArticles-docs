@@ -6,21 +6,20 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tmoore, tasitae, gregmans
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook for Office 365
-- Windows Server 2012 Standard
-- Windows Server 2012 R2 Standard
-- Windows 8
-- Windows 8.1
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Office 365
+  - Windows Server 2012 Standard
+  - Windows Server 2012 R2 Standard
+  - Windows 8
+  - Windows 8.1
 search.appverid: MET150
 ---
 # No desktop alerts (toast notifications) if the Outlook Start menu shortcut is missing

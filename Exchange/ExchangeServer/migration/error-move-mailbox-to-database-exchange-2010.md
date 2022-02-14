@@ -1,20 +1,19 @@
 ---
 title: Could not find part of the path error when you move a mailbox to a database in Exchange Server 2010
-description: Resolves an issue in which you can't move a mailbox between mailbox databases in Exchange Server 2010. Additionally, you receive a "Could not find a part of the path" error message.
+description: Resolves an issue in which you can't move a mailbox between mailbox databases in Exchange Server 2010. Additionally, you receive a Could not find a part of the path error message.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: v-9prpra, charray
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Error when you move a mailbox to a database in Exchange Server 2010: Could not find part of the path D:\Temp

@@ -6,15 +6,14 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".
-appliesto:
-- Exchange Online
-- Outlook for Mac 2011
-- Outlook 2016 for Mac
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
+appliesto: 
+  - Exchange Online
+  - Outlook for Mac 2011
+  - Outlook 2016 for Mac
 search.appverid: MET150
 ---
 # Can't set up Outlook for Mac 2011 to use the archive mailbox feature in Exchange Online

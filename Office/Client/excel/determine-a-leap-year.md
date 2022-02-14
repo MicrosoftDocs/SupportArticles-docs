@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: akeeler
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2016
-- Excel 2016 for Mac
-- Excel 2013
-- Excel 2010
-- Excel 2007
-- Excel 2003
+  - MET150
+appliesto: 
+  - Excel 2016
+  - Excel 2016 for Mac
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
+  - Excel 2003
 ---
 
 # Method to determine whether a year is a leap year

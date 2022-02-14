@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: ninob, dpaul
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2016
-- Exchange Server 2013  
+  - MET150
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 # Unwanted Automapping results occur when you add or remove mailbox permissions in Exchange Admin Center
 

@@ -4,18 +4,17 @@ description: Describes and provides a workaround for an issue in which you recei
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150 
-appliesto:
-- Excel 2013
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Standard
-- Power BI for Office 365
+  - MET150
+appliesto: 
+  - Excel 2013
+  - SQL Server 2012 Enterprise
+  - SQL Server 2012 Standard
+  - Power BI for Office 365
 ---
 
 # "Index was outside the bounds of the array" error when you import data from multiple tables in a SQL Server database to an Excel 2013 workbook

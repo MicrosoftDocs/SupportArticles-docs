@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Access 2016
-- Access 2013
-- Access 2010
+  - MET150
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access 2010
 ---
 
 # "Database you are trying to open requires a newer version of Microsoft Access" error in Access

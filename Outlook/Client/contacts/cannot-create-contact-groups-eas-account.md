@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: aruiz, doakm
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 # You can't create Outlook Contact Groups when connected to an EAS account
 

@@ -4,22 +4,21 @@ description: Explains why the year 1900 is treated as a leap year in Excel 2000.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: bradthor 
+ms.reviewer: bradthor
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Excel for Mac 2011
-- Excel for Mac for Office 365
-- Microsoft Office Excel 2003
-- Microsoft Office Excel 2007
-- Excel 2010
-- Excel 2013
-- Excel 2016
+  - MET150
+appliesto: 
+  - Microsoft Excel for Mac 2011
+  - Excel for Mac for Office 365
+  - Microsoft Office Excel 2003
+  - Microsoft Office Excel 2007
+  - Excel 2010
+  - Excel 2013
+  - Excel 2016
 ---
 
 # Excel incorrectly assumes that the year 1900 is a leap year

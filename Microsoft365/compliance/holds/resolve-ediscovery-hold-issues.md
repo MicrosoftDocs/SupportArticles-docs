@@ -1,23 +1,22 @@
 ---
 title: Troubleshoot eDiscovery hold errors
 description: Troubleshoot errors related to legal holds applied to custodians and non-custodial data sources in Core eDiscovery.
-f1.keywords:
-- NOCSH
+f1.keywords: 
+  - NOCSH
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-ms.collection: M365-security-compliance 
+ms.collection: M365-security-compliance
 search.appverid: 
-- MOE150
-- MET150
-ms.custom:
-- CI 157398
-- seo-marvel-apr2020
-- CSSTroubleshoot
+  - MOE150
+  - MET150
+ms.custom: 
+  - CI 157398
+  - seo-marvel-apr2020
+  - CSSTroubleshoot
 ---
 # Resolve eDiscovery hold errors
 

@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 111294
-- CSSTroubleshoot
+  - CI 111294
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: robdil 
-appliesto:
-- Access 2007
-- Access 2002
+ms.reviewer: robdil
+appliesto: 
+  - Access 2007
+  - Access 2002
 ---
 
 # You cannot add records or delete records with the ADO AddNew method or with the Delete method

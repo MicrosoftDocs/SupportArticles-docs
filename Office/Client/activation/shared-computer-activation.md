@@ -4,17 +4,16 @@ description: Troubleshooting steps for issues with shared computer activation fo
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157761
+  - CSSTroubleshoot
+  - CI 157761
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Troubleshoot issues with shared computer activation for Microsoft 365 Apps

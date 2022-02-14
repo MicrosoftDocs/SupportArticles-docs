@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2016 for Mac
+appliesto: 
+  - Outlook 2016 for Mac
 search.appverid: MET150
 ---
 # Manage the Google sign-in prompt in Outlook 2016 for Mac

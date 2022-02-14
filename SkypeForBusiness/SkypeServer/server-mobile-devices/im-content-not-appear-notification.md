@@ -4,18 +4,17 @@ description: The message content is missing for a Microsoft Skype for Business m
 author: simonxjx
 ms.author: vliorgu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: skype-for-business-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 109367
-- CSSTroubleshoot 
+  - CI 109367
+  - CSSTroubleshoot
 ms.reviewer: vliorgu, Claudia.Lake, premgan
-appliesto:
-- Skype for Business for iOS
+appliesto: 
+  - Skype for Business for iOS
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Mobile Skype for Business message content does not appear in Apple push notifications

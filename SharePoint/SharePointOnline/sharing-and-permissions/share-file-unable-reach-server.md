@@ -1,22 +1,21 @@
 ---
 title: Unable to reach the server when sharing files
-description: This article fixes an issue in which you receive an "Unable to reach the server" message when you share files or folders.
+description: This article fixes an issue in which you receive an Unable to reach the server message when you share files or folders.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CSSTroubleshoot
-- CI 160069
+  - CSSTroubleshoot
+  - CI 160069
 ms.reviewer: salarson
-appliesto:
-- SharePoint Online
-- OneDrive
+appliesto: 
+  - SharePoint Online
+  - OneDrive
 ---
 
 # "Unable to reach the server" error when sharing files or folders in SharePoint or OneDrive

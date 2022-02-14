@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: eileenor, jhayes
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook for Office 365
+  - MET150
+appliesto: 
+  - Outlook for Office 365
 ---
 
 # How to remove automapping for a shared mailbox in Outlook for Office 365

@@ -6,17 +6,16 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
-- CI 151458
-- Exchange Server
-- CSSTroubleshoot
+ms.custom: 
+  - CI 151458
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: meerak; batre; jcoiffin
 appliesto: 
-- Exchange Server 2013
-- Exchange Server 2016
-- Exchange Server 2019
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
 search.appverid: MET150
 ---
 # "MapiExceptionCorruptData" error when moving a mailbox to an Exchange Server 2013 database

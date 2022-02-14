@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gbratton, gdowling
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-search.appverid: MET150 
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+search.appverid: MET150
 ---
 # Error when running macros that are assigned a Digital Signature certificate in Outlook: The macros in this project are disabled
 

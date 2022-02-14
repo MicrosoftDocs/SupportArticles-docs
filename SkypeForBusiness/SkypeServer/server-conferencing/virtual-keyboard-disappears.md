@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: chanh
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype Room System v2
+appliesto: 
+  - Skype Room System v2
 ---
 
 # The on-screen keyboard disappears in Skype Room Systems v2

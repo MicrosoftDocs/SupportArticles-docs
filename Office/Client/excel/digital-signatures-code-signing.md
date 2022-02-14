@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel 2007
-- Excel 2003
+appliesto: 
+  - Excel 2007
+  - Excel 2003
 ---
 
 # Description of digital signatures and code signing in workbooks in Excel

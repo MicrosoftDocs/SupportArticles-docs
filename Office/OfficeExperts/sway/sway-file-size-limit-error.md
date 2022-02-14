@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: zakirh
 ms.custom: sap:office-experts, CSSTroubleshoot
-appliesto:
-- Microsoft Sway
+appliesto: 
+  - Microsoft Sway
 ---
 
 # File size limit error when you upload files to Sway

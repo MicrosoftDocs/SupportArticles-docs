@@ -4,19 +4,18 @@ description: The transport rule doesn't honor the exclusions, and it rejects the
 author: simonxjx
 ms.author: arindamt
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 116057
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 116057
+  - CSSTroubleshoot
 ms.reviewer: arindamt
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # A transport rule doesn't match if user mailbox rules automatically forward messages
 

@@ -4,15 +4,14 @@ description: If the Office365 Administrator has purchased just one license for y
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-enterprise
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Online
+  - MET150
+appliesto: 
+  - Project Online
 ---
 
 # Cannot Access Newly Purchased Project Online with One License

@@ -1,25 +1,24 @@
 ---
 title: The content processing pipeline failed to process the item
-description: SharePoint returns "The content processing pipeline failed to process the item" if the service account for Search Host Controller Service lacks the required user rights.
+description: SharePoint returns The content processing pipeline failed to process the item if the service account for Search Host Controller Service lacks the required user rights.
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 12/09/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Server Subscription Edition
-- SharePoint Server 2019
-- SharePoint Server 2016
-- SharePoint Server 2013
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Server Subscription Edition
+  - SharePoint Server 2019
+  - SharePoint Server 2016
+  - SharePoint Server 2013
 ms.custom: 
-- CI 158351
-- CSSTroubleshoot 
+  - CI 158351
+  - CSSTroubleshoot
 ms.reviewer: holutz
 ---
 

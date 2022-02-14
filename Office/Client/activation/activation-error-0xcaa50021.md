@@ -1,20 +1,19 @@
 ---
-title: Microsoft 365 Apps activation error 0xCAA50021 
+title: Microsoft 365 Apps activation error 0xCAA50021
 description: Troubleshooting steps for Microsoft 365 Apps activation error 0xCAA50021
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157595
+  - CSSTroubleshoot
+  - CI 157595
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation error 0xCAA50021

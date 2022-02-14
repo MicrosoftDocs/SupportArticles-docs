@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, oscarr, nmurav, lynnroe, cbland, rischwen, Leonarwo, msp, romanma, tonyq
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # Meeting organizer isn't prompted for leader PIN when joining Skype for Business Online meeting

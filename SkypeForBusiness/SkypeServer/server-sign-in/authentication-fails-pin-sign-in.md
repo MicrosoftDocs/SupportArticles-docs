@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: jefzhang
 ms.custom: CSSTroubleshoot
-appliesto:
-- Lync Phone Edition
+appliesto: 
+  - Lync Phone Edition
 ---
 
 # Authentication fails during Lync Phone Edition PIN sign-in

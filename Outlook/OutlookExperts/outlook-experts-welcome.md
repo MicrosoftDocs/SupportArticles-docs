@@ -4,14 +4,13 @@ description: This article lists Outlook related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: outlook
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- Microsoft Outlook
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - Microsoft Outlook
 ---
 
 # Outlook Experts

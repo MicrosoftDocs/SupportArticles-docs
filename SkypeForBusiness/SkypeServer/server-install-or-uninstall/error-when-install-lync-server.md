@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: miadkins
-appliesto:
-- Lync Server 2013
+appliesto: 
+  - Lync Server 2013
 ---
 
 # "Cannot find any suitable disks for database files" error message when you try to install or update Lync Server 2013 or Lync Server 2013 databases

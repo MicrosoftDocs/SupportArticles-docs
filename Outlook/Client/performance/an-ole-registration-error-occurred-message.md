@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook for Office 365
-- Microsoft Outlook 2010
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook for Office 365
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # An OLE registration error occurred message when you access an InfoPath Forms folder in Outlook

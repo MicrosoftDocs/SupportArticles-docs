@@ -1,21 +1,20 @@
 ---
-title: SharePoint or OneDrive read-only error messages 
-description: Provides solutions for error messages that indicate SharePoint sites in read-only mode. The most common cause is that the site has been locked or closed.  
+title: SharePoint or OneDrive read-only error messages
+description: Provides solutions for error messages that indicate SharePoint sites in read-only mode. The most common cause is that the site has been locked or closed.
 author: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 
-- CSSTroubleshoot
-- CI 158141
-appliesto:
-- SharePoint Online
-- OneDrive for Business
+  - CSSTroubleshoot
+  - CI 158141
+appliesto: 
+  - SharePoint Online
+  - OneDrive for Business
 ---
 
 # SharePoint or OneDrive read-only error messages

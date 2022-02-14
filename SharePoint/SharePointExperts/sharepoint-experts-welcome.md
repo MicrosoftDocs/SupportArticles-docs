@@ -4,14 +4,13 @@ description: This article lists SharePoint related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- Microsoft SharePoint
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - Microsoft SharePoint
 ---
 
 # SharePoint Experts

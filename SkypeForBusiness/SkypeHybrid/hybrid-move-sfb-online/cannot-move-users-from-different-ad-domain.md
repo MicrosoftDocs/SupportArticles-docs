@@ -5,14 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Server 2015
+appliesto: 
+  - Skype for Business Server 2015
 ---
 
 # You cannot move users from a different AD domain in hybrid Skype for Business Server to Skype for Business Online from Control Panel

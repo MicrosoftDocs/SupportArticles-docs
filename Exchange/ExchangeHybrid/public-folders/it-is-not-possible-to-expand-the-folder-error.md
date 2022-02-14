@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: jmartin, dpaul
-appliesto:
-- Exchange Online
-- Outlook 2016
-- Outlook 2013
+appliesto: 
+  - Exchange Online
+  - Outlook 2016
+  - Outlook 2013
 search.appverid: MET150
 ---
 # It is not possible to expand the folder error when accessing public folders in Exchange Online

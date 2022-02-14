@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- SharePoint Server 2013
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2013
+search.appverid: MET150
 ---
 # Total Size from Storage Metrics shows full size file version in SharePoint 2013
 

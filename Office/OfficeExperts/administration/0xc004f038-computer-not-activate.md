@@ -1,20 +1,19 @@
 ---
 title: 0xC004F038 computer couldn't be activated
-description: Describes the Office 2010 and Office 2013 Activation troubleshooter for the "0xC004F038" error message. Provides a workaround.
+description: Describes the Office 2010 and Office 2013 Activation troubleshooter for the 0xC004F038 error message. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: sap:office-experts, CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office Professional Plus 2016
-- Office Professional Plus 2013
-- Office Standard 2013
+appliesto: 
+  - Office Professional Plus 2016
+  - Office Professional Plus 2013
+  - Office Standard 2013
 ---
 
 # "0xC004F038: The computer couldn't be activated" error in KMS activation

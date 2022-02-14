@@ -3,22 +3,21 @@ title: Unable to access shared mailboxes through POP/IMAP
 description: Fixes a problem in which users can't access shared mailboxes through POP/IMAP when they use an account that isn't mail-enabled but has permissions to the shared mailboxes.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 113906
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 113906
+  - CSSTroubleshoot
 ms.reviewer: cmcgurk
-appliesto:
-- Exchange Server 2010 Service Pack 3
-- Exchange Server 2013
-- Exchange Server 2013 Service Pack 1
-- Exchange Server 2016
-- Exchange Server 2019
+appliesto: 
+  - Exchange Server 2010 Service Pack 3
+  - Exchange Server 2013
+  - Exchange Server 2013 Service Pack 1
+  - Exchange Server 2016
+  - Exchange Server 2019
 search.appverid: MET150
 ---
 

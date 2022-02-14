@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: sercast
-appliesto:
-- Outlook LTSC 2021
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook for Office 365
+appliesto: 
+  - Outlook LTSC 2021
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Attachment size exceeds the allowable limit error when you add a large attachment to an email message in Outlook

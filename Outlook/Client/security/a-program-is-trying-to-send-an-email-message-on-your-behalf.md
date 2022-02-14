@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- CI 160073
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - CI 160073
 ms.reviewer: tasitae
-appliesto:
-- Outlook LTSC 2021
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook for Office 365
+appliesto: 
+  - Outlook LTSC 2021
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # "A program is trying to send an e-mail message on your behalf" warning in Outlook

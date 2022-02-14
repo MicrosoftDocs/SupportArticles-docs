@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: evsung, rachaudh, brianja, jasonjoh
-appliesto:
-- Power Automate  
+appliesto: 
+  - Power Automate
 search.appverid: MET150
 ---
 # REST API is not yet supported for this mailbox error for request to a mailbox
