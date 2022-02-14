@@ -7,6 +7,7 @@ ms.author: Armand.Boisselle
 ms.reviewer: armand.boisselle
 editor: v-jsitser
 ms.service: azure-other-services
+ms.subservice: virtual-network
 keywords: 
 ---
 
