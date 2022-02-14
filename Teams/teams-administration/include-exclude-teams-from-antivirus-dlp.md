@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 04/13/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- Teams
+appliesto: 
+  - Teams
 ms.custom: 
-- CI 106370
-- CSSTroubleshoot
+  - CI 106370
+  - CSSTroubleshoot
 ms.reviewer: davidsle
 description: How to add Teams to antivirus or DLP to allow Teams to start correctly.
 ---

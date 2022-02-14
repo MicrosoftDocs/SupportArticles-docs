@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Excel for Office 365
-- Excel 2019
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Excel 2007
+appliesto: 
+  - Excel for Office 365
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
 ---
 
 # How to troubleshoot "available resources" errors in Excel

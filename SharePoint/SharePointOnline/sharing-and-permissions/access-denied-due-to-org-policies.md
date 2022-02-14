@@ -1,5 +1,5 @@
 ---
-title: SharePoint Online or OneDrive for Business access denied due to organizational policies error message 
+title: SharePoint Online or OneDrive for Business access denied due to organizational policies error message
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -7,18 +7,17 @@ localization_priority: Normal
 ms.date: 11/24/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 ms.custom: 
-- CSSTroubleshoot
-- CI 125266
-search.appverid:
-- SPO160
-- MET150
+  - CSSTroubleshoot
+  - CI 125266
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
 description: Describe a resolution to an (Access Denied due to organizational policies) error in SharePoint and OneDrive
-appliesto:
-- SharePoint Online
-- OneDrive for Business
+appliesto: 
+  - SharePoint Online
+  - OneDrive for Business
 ---
 
 # (Access Denied due to organizational policies) error in SharePoint or OneDrive

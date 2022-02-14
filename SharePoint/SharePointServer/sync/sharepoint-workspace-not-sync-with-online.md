@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Workspace 2010
-- SharePoint Online
+appliesto: 
+  - SharePoint Workspace 2010
+  - SharePoint Online
 ---
 
 # SharePoint Workspace does not always sync with SharePoint Online automatically

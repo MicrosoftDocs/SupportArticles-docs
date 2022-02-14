@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Server
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server
 ---
 
 # Rich Text fields don't respond when you use Internet Explorer to access a SharePoint site

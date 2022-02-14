@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: a-kyoy
-appliesto:
-- Access 2016
-- Access 2013
-- Access 2010
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access 2010
 ---
 
 # Memory leak when Access continually connects to database files

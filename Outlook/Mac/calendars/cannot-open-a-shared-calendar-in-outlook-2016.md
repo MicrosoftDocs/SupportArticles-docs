@@ -1,20 +1,19 @@
 ---
-title: Open Shared Calendar option is unavailable 
+title: Open Shared Calendar option is unavailable
 description: Describes a scenario in which you cannot open a shared calendar in Outlook 2016 for Mac. Provides several workarounds.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2016 for Mac
-- Outlook for Mac for Office 365
+appliesto: 
+  - Outlook 2016 for Mac
+  - Outlook for Mac for Office 365
 search.appverid: MET150
 ---
 # You can't open a shared calendar in Outlook 2016 for Mac

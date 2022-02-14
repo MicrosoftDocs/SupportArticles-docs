@@ -1,18 +1,17 @@
 ---
 title: A user with this name already exists. in Office 365 portal
-description: Describes an issue in which you receive an "A user with this name already exists. Use a different name" error message in the Microsoft Office 365 portal. Provides a resolution.
+description: Describes an issue in which you receive an A user with this name already exists. Use a different name error message in the Microsoft Office 365 portal. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
 ---
 
 # "A user with this name already exists. Use a different name." error in the Office 365 portal

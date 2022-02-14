@@ -1,19 +1,18 @@
 ---
-title: Cannot continue error when you start the Office 365 Desktop Setup Tool 
+title: Cannot continue error when you start the Office 365 Desktop Setup Tool
 description: Describes a scenario in which you receive an error message when you try to start the Office 365 Desktop Setup Tool. Provides a resolution.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 365 User and Domain Management
+  - MET150
+appliesto: 
+  - Office 365 User and Domain Management
 ---
 
 # Cannot continue error when you start the Office 365 Desktop Setup Tool

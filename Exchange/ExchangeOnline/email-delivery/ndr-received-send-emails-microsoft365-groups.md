@@ -4,19 +4,18 @@ description: Provides a workaround to an issue in which an NDR is received when 
 author: simonxjx
 ms.author: batre
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 125861
-- CSSTroubleshoot
-- Exchange Online
+  - CI 125861
+  - CSSTroubleshoot
+  - Exchange Online
 ms.reviewer: batre
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Error (AggregateGroupMailbox full) when sending emails to Microsoft 365 Groups

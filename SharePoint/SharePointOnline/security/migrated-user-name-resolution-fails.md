@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Server 2016
-- SharePoint Server 2013
-- SharePoint Server 2010
-- SharePoint Online
+appliesto: 
+  - SharePoint Server 2016
+  - SharePoint Server 2013
+  - SharePoint Server 2010
+  - SharePoint Online
 ---
 
 # User accounts migrated with their SID history across forests are not resolved in SharePoint

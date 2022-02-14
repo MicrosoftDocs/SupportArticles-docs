@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: mhaque, daweiler
-appliesto:
-- Outlook for iOS
-- Outlook for Android
+appliesto: 
+  - Outlook for iOS
+  - Outlook for Android
 search.appverid: MET150
 ---
 # Error when Outlook for iOS or Android connects to Exchange Server: Insecure connection or Secure connection unavailable

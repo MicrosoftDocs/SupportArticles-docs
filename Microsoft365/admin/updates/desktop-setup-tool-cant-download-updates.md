@@ -4,15 +4,14 @@ description: Describes an issue in which Office Desktop Setup can't download and
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 365 User and Domain Management
+  - MET150
+appliesto: 
+  - Office 365 User and Domain Management
 ---
 
 # Office 365 Desktop Setup Tool cannot download updates or you receive an "Your computer is not allowed to connect to the Microsoft Update service" error message

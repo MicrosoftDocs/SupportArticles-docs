@@ -6,22 +6,21 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: 
-- CSSTroubleshoot
-- CI 147067
-ms.prod: office-perpetual-itpro
+  - CSSTroubleshoot
+  - CI 147067
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Excel for Microsoft 365
-- Excel LTSC 2021
-- Excel 2019
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Excel 2007
+appliesto: 
+  - Excel for Microsoft 365
+  - Excel LTSC 2021
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
 ---
 
 # Troubleshoot opening a blank screen when you double-click a file icon or file name in Excel

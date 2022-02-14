@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 111294
-- CSSTroubleshoot
+  - CI 111294
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mattbum
-appliesto:
-- Access 2007
-- Access 2003
-- Access 2002
-- Access 2000
+appliesto: 
+  - Access 2007
+  - Access 2003
+  - Access 2002
+  - Access 2000
 ---
 
 # How to retrieve the selected items in a multiple selection List Box as a comma-delimited string in Microsoft Access

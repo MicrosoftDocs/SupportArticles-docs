@@ -6,14 +6,13 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Online
-- Exchange Online Archiving
+appliesto: 
+  - Exchange Online
+  - Exchange Online Archiving
 search.appverid: MET150
 ---
 # Contents of cloud-based archive are the same as contents of on-premises primary mailbox

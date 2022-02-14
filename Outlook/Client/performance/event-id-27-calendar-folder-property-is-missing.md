@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: abarglo, gbratton, aruiz
-appliesto:
-- Microsoft Outlook 2010
+appliesto: 
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # Event ID 27 and Calendar Folder property is missing error occurs after you apply Office 2010 SP2

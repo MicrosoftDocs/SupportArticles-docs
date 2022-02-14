@@ -4,15 +4,14 @@ description: Describes an issue that triggers a Cannot use object linking and em
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Excel 2016 for Mac
+  - MET150
+appliesto: 
+  - Microsoft Excel 2016 for Mac
 ---
 
 # "Cannot use object linking and embedding" error in Excel 2016 for Mac

@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: balinger, christys, wsvexse, v-zht, v-lmengy, Bilong, paololin
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2016
-- Exchange Server 2013  
+  - MET150
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 # ActiveSync clients cannot connect or synchronizing is delayed in an Exchange Server environment
 

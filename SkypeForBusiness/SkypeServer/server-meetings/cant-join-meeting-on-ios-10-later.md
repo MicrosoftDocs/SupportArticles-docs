@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-ms.reviewer: jaredgo, pmaloo, jasco, rischwen, amitpeer, mirung, corbinm, landerl  
-appliesto:
-- Lync 2013 for iPad
-- Lync 2013 for iPhone
-- Skype for Business for iOS
+ms.reviewer: jaredgo, pmaloo, jasco, rischwen, amitpeer, mirung, corbinm, landerl
+appliesto: 
+  - Lync 2013 for iPad
+  - Lync 2013 for iPhone
+  - Skype for Business for iOS
 ---
 
 # You can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 10.0 and later

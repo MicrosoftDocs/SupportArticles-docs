@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: CSSTroubleshoot
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: amaniah
-appliesto:
-- Office 2013
+appliesto: 
+  - Office 2013
 ---
 
 # In the Research pane in an Office application, a service is listed two times, or a service returns no result

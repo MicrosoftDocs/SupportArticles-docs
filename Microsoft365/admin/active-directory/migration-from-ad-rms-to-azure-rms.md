@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Microsoft Azure Active Directory Rights Management
-- Active Directory Rights Management Services Client 2.0
+appliesto: 
+  - Microsoft Azure Active Directory Rights Management
+  - Active Directory Rights Management Services Client 2.0
 ---
 
 # An update is available for Office to support migrations from AD RMS to Azure RMS

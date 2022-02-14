@@ -1,18 +1,17 @@
 ---
 title: Unable to remove this domain when remove a domain from Office 365
-description: Describes an issue in which you receive an "Unable to remove this domain" error message when you try to delete a domain from Office 365 by using Windows PowerShell. Provides a resolution.
+description: Describes an issue in which you receive an Unable to remove this domain error message when you try to delete a domain from Office 365 by using Windows PowerShell. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Office 365 User and Domain Management
+appliesto: 
+  - Office 365 User and Domain Management
 ---
 
 # "Unable to remove this domain" when you try to remove a domain from Office 365

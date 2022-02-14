@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: aruiz
-appliesto:
-- Outlook for Microsoft 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Outlook 2007
+appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Outlook 2007
 search.appverid: MET150
 ---
 # How to control Outlook AutoDiscover by using Group Policy

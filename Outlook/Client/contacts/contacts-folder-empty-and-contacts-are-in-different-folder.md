@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: cuturn, carlzern
-appliesto:
-- Outlook for Office 365
-- Exchange Online
+appliesto: 
+  - Outlook for Office 365
+  - Exchange Online
 search.appverid: MET150
 ---
 # Contacts folder empty and contacts are in a different folder in Outlook for Microsoft 365

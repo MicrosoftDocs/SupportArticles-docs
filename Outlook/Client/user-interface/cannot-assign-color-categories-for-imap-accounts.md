@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: talmagev, aruiz
-appliesto:
-- Outlook 2016
+appliesto: 
+  - Outlook 2016
 search.appverid: MET150
 ---
 # You can't assign color categories for IMAP accounts in Outlook 2016

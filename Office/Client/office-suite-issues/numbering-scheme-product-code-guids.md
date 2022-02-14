@@ -4,34 +4,33 @@ description: Describes how to read the product GUIDs in the Windows registry to 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: doakm
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office Standard 2013
-- Office Professional 2013
-- Office Professional Plus 2013
-- Office Home and Business 2013Office Home and Student 2013
-- Access 2013
-- Excel 2013
-- Word 2013
-- InfoPath 2013
-- OneNote 2013
-- Outlook 2013
-- PowerPoint 2013
-- Project Professional 2013
-- Visio Standard 2013
-- Visio Professional 2013
-- Publisher 2013
-- SharePoint Designer 2013
-- Project 2013 Standard
-- Project Server 2013
-- SharePoint Server 2013
+  - MET150
+appliesto: 
+  - Office Standard 2013
+  - Office Professional 2013
+  - Office Professional Plus 2013
+  - Office Home and Business 2013Office Home and Student 2013
+  - Access 2013
+  - Excel 2013
+  - Word 2013
+  - InfoPath 2013
+  - OneNote 2013
+  - Outlook 2013
+  - PowerPoint 2013
+  - Project Professional 2013
+  - Visio Standard 2013
+  - Visio Professional 2013
+  - Publisher 2013
+  - SharePoint Designer 2013
+  - Project 2013 Standard
+  - Project Server 2013
+  - SharePoint Server 2013
 ---
 
 # Description of the numbering scheme for product code GUIDs in Office 2013

@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: aruiz, lpen
-appliesto:
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
+appliesto: 
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ---
 # Shrink to Fit is not available when you print an email message in Outlook

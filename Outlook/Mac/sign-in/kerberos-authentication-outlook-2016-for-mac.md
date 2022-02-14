@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.collection: Ent_Office_Outlook
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 description: Provides information for IT Pros about using Kerberos authentication with Outlook 2016 for Mac
 appliesto: 
-- Outlook 2016 for Mac
-search.appverid:  
-- MET150 
+  - Outlook 2016 for Mac
+search.appverid: 
+  - MET150
 ---
 
 # Use Kerberos authentication with Outlook 2016 for Mac

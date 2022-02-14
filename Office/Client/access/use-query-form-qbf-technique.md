@@ -3,17 +3,16 @@ title: Use a form to specify the criteria for a query
 description: Describes how to use a form to specify the criteria for a query. This technique is called query by form (QBF).
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
-ms.reviewer: tado, WADEJACK 
-appliesto:
-- Microsoft Office Access 2007
+  - CI 114797
+  - CSSTroubleshoot
+ms.reviewer: tado, WADEJACK
+appliesto: 
+  - Microsoft Office Access 2007
 search.appverid: MET150
 ---
 # How to use the query by form (QBF) technique in Microsoft Access

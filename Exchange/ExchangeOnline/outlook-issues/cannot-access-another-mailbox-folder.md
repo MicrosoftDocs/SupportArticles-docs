@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: jhayes
-appliesto:
-- Exchange Online
-- Microsoft 365 Apps for enterprise
+appliesto: 
+  - Exchange Online
+  - Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
 # Unable to open default folders-you do not have permissions to logon error when accessing another user's mailbox folder

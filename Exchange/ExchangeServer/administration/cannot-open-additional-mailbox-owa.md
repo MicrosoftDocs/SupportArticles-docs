@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: shashikg
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010 Service Pack 2
+  - MET150
+appliesto: 
+  - Exchange Server 2010 Service Pack 2
 ---
 # You can't open an additional mailbox in Outlook Web App after you install Update Rollup 4 for Exchange Server 2010 SP2
 

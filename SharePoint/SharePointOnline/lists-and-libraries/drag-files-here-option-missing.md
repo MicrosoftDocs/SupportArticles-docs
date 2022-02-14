@@ -1,18 +1,17 @@
 ---
-title: The "drag files here" option is missing for a list
-description: The option to "drag files here" for a list is missing in SharePoint Online or SharePoint 2013 on-premises.
+title: The drag files here option is missing for a list
+description: The option to drag files here for a list is missing in SharePoint Online or SharePoint 2013 on-premises.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # The "drag files here" option is missing for a list in SharePoint Online or SharePoint 2013 on-premises

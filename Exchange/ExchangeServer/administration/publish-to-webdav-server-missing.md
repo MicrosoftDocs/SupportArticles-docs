@@ -6,19 +6,18 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: gregmans, alinastr
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Enterprise
-- Exchange Online
-- Outlook 2013
-- Outlook 2010
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Enterprise
+  - Exchange Online
+  - Outlook 2013
+  - Outlook 2010
 search.appverid: MET150
 ---
 # The Publish to WebDAV Server option is missing from the Calendar folder shortcut menu

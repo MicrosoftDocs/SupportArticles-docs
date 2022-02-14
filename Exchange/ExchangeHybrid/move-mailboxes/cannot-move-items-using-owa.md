@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: danielsl
-appliesto:
-- Exchange Online
-- Exchange Online Archiving
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Service Pack 3
+appliesto: 
+  - Exchange Online
+  - Exchange Online Archiving
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
 ---
 # Can't move items between on-premises Exchange mailboxes and their cloud-based archive in OWA

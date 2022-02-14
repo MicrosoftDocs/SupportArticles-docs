@@ -1,19 +1,18 @@
 ---
 title: SharePoint 2013 workflow isn't visible in IRM retention policy
-description: You cannot view SharePoint 2013 workflows created by using the SharePoint 2013 Workflow Platform content type in IRM policies. 
+description: You cannot view SharePoint 2013 workflows created by using the SharePoint 2013 Workflow Platform content type in IRM policies.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Online
-- SharePoint Server
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server
 ---
 
 # SharePoint 2013 workflows aren't available for IRM policies in SharePoint Online or SharePoint Server on-premises

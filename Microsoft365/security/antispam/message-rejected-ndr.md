@@ -6,15 +6,14 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-security
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- 'Associated content asset: 4555314'
+  - CSSTroubleshoot
+  - 'Associated content asset: 4555314'
 ms.reviewer: rymcgrat, romccart
 appliesto: 
-- Exchange Online Protection
-- Exchange Online
+  - Exchange Online Protection
+  - Exchange Online
 search.appverid: MET150
 ---
 

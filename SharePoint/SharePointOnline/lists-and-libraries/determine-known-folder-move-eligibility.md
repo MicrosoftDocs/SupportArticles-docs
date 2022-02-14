@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- OneDrive
-- SharePoint Online
-search.appverid: MET150 
+appliesto: 
+  - OneDrive
+  - SharePoint Online
+search.appverid: MET150
 ---
 # Check for Known Folder Move eligibility in OneDrive for SharePoint
 

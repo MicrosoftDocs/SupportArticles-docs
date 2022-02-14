@@ -4,18 +4,17 @@ description: Fixes an issue in which Teams experiences performance issues if it'
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 126346
-- CSSTroubleshoot
+  - CI 126346
+  - CSSTroubleshoot
 ms.reviewer: samcos
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Teams performance is affected if it's remembered as a game by Xbox Game Bar
 

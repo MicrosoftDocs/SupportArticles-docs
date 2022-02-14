@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: wduff, mhaque, timothyh
-appliesto:
-- Exchange Server 2010 Service Pack 1
+appliesto: 
+  - Exchange Server 2010 Service Pack 1
 search.appverid: MET150
 ---
 # You have tried to select too many rows error when selecting many items in a folder in OWA

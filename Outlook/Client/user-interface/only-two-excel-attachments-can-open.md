@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: rschaffr
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- CI 124895
-appliesto:
-- Outlook for Microsoft 365
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - CI 124895
+appliesto: 
+  - Outlook for Microsoft 365
 ---
 
 # You can open only two identically named Excel attachments from different email messages

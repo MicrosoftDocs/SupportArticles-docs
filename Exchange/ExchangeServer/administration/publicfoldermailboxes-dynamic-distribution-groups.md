@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: batre
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2016 Enterprise Edition
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
 ---
 # Unexpected PublicFolderMailBoxes dynamic distribution groups in Exchange Server 2016
 

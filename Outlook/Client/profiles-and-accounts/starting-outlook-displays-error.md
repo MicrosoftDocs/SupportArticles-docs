@@ -1,23 +1,22 @@
 ---
 title: Outlook fails to start
-description: This article describes the error that occurs when Outlook fails to start, and provides a resolution. 
+description: This article describes the error that occurs when Outlook fails to start, and provides a resolution.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: aruiz, twalker
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Outlook 2013
-- Outlook 2010
-- Outlook 2007
+  - Outlook for Windows
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Outlook 2013
+  - Outlook 2010
+  - Outlook 2007
 ---
 # Starting Outlook displays error: This information service is not installed on your computer
 

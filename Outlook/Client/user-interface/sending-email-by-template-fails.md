@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: tasitae, paololin
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2010
-- Exchange Online
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Standard Edition
+  - MET150
+appliesto: 
+  - Outlook 2010
+  - Exchange Online
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Standard Edition
 ---
 # Email messages aren't sent when you use a template file in Outlook 2010
 

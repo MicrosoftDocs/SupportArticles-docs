@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.author: v-six
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Exchange Online Dedicated
+  - MET150
+appliesto: 
+  - Microsoft Exchange Online Dedicated
 ---
 # Can't remove mailbox permissions in Office 365 dedicated/ITAR
 

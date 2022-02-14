@@ -5,20 +5,19 @@ author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: tmoore, gregmans
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - MET150
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 # Exchange Server doesn't display all OUs when it creates a new mailbox
 

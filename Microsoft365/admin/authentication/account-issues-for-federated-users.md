@@ -4,17 +4,16 @@ description: Describes how to troubleshoot single sign-on (SSO) user account iss
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Azure Active Directory
-- Microsoft IntuneAzure Backup
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Azure Active Directory
+  - Microsoft IntuneAzure Backup
+  - Office 365 Identity Management
 ---
 
 # Troubleshoot account issues for federated users in Office 365, Azure, or Intune

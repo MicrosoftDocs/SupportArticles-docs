@@ -5,18 +5,17 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 Identity Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 Identity Management
 ---
 
 # Update or repair the settings of a federated domain in Office 365, Azure, or Intune

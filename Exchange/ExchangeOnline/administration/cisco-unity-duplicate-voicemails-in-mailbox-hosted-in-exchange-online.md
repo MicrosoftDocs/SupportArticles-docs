@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: logonzal
-appliesto:
-- MSfC O365-Exchange Online
+appliesto: 
+  - MSfC O365-Exchange Online
 search.appverid: MET150
 ---
 # Cisco Unity duplicate voicemails appear if VoiceMessages search folder uses content indexing

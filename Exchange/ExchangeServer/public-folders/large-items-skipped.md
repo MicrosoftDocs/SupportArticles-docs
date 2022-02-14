@@ -1,24 +1,23 @@
 ---
 title: Large items are skipped during public folder migration
-description: Fixes an issue in which large items are skipped during a public folder migration and you receive the "Failed to recopy large item" error in the migration report.
+description: Fixes an issue in which large items are skipped during a public folder migration and you receive the Failed to recopy large item error in the migration report.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 141831
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 141831
+  - CSSTroubleshoot
 ms.reviewer: mireb
-appliesto:
-- Exchange Server 2010
-- Exchange Server 2013
-- Exchange Server 2016
-- Exchange Server 2019
-- Exchange Online
+appliesto: 
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
 search.appverid: MET150
 ---
 # Large items are skipped during public folder migration

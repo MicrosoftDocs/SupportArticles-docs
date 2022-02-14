@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- SharePoint Server 2010
-- SharePoint Server 2013
-- SharePoint Server 2016
-- SharePoint Server 2019
+appliesto: 
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
 search.appverid: MET150
 ---
 # Columns published from InfoPath fields are recreated when the same InfoPath form template is republished

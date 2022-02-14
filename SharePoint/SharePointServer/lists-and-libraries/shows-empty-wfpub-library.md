@@ -1,18 +1,17 @@
 ---
 title: SharePoint Designer 2013 shows empty wfpub library
-description: You can't add a globally reusable workflow (such as "Approval - SharePoint 2010") to a SharePoint list or library, and the wfpub library is empty.
+description: You can't add a globally reusable workflow (such as Approval - SharePoint 2010) to a SharePoint list or library, and the wfpub library is empty.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Designer 2013
+appliesto: 
+  - SharePoint Designer 2013
 ---
 
 # SharePoint Designer 2013 shows empty wfpub library  

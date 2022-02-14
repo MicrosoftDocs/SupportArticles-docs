@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: scottlan
-appliesto:
-- Exchange Online Protection
+appliesto: 
+  - Exchange Online Protection
 search.appverid: MET150
 ---
 # 550 5.6.0 APPROVAL.InvalidExpiry Cannot read expiry policy when sending messages to moderated distribution group

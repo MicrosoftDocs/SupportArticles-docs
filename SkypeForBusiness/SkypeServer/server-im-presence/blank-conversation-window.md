@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: tyryan
 ms.custom: CSSTroubleshoot
-appleisto:
-- Lync 2010
-- Lync 2013
+appleisto: 
+  - Lync 2010
+  - Lync 2013
 ---
 
 # Lync client has a blank conversation window after joining an instant messaging conference

@@ -4,16 +4,15 @@ description: Provides solutions for the issue where users removed from Enterpris
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 author: helenclu
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Project Online
-- Project Server 2013
+appliesto: 
+  - Project Online
+  - Project Server 2013
 ---
 
 # Users removed from the Enterprise Resource Pool group sync are not inactivated

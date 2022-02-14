@@ -5,14 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business 2015
+appliesto: 
+  - Skype for Business 2015
 ---
 
 # Video is missing in a Skype for Business 2015 meeting recording after the latest update is installed

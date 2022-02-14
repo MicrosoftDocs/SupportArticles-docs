@@ -1,19 +1,18 @@
 ---
 title: You are prompted with You have been added as a delegate for %User%
-description: Fixes an issue in which a Skype for Business or Lync user is prompted with a "You have been added as a delegate for %User%" notification. The user previously dismissed the delegator that's described in the notification.
+description: Fixes an issue in which a Skype for Business or Lync user is prompted with a You have been added as a delegate for %User% notification. The user previously dismissed the delegator that's described in the notification.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Lync 2013
-- Skype for Business 2016
+appliesto: 
+  - Microsoft Lync 2013
+  - Skype for Business 2016
 ---
 
 # Lync 2013 and Skype for Business 2016 users are prompted with "You have been added as a delegate for %User%" notice that was previously dismissed

@@ -1,19 +1,18 @@
 ---
 title: People Picker doesn't resolve users from other domains
-description: Fixes an issue in which you receive the "No match found" error when you try to resolve users from other domains from People Picker.
+description: Fixes an issue in which you receive the No match found error when you try to resolve users from other domains from People Picker.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- SharePoint Server 2007
-search.appverid: MET150 
+ms.reviewer: 
+appliesto: 
+  - SharePoint Server 2007
+search.appverid: MET150
 ---
 # SharePoint People Picker stops resolving users from other domains with one-way trust
 

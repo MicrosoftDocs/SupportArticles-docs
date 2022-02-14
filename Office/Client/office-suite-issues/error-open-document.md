@@ -1,20 +1,19 @@
 ---
 title: You receive error messages when opening an Office document
-description: Describes the issue that occurs when you receive an error message after you open a specific file in an Office program. 
+description: Describes the issue that occurs when you receive an error message after you open a specific file in an Office program.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Office Products
-- Access 2010
-- Microsoft Office Access 2007
+appliesto: 
+  - Office Products
+  - Access 2010
+  - Microsoft Office Access 2007
 ms.reviewer: 
 ---
 # You receive an error message when you try to open an Office document

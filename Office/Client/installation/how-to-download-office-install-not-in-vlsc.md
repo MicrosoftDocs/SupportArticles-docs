@@ -6,17 +6,16 @@ author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Office
-ms.custom:
-- CI 157620
-- CI 113921
-- CSSTroubleshoot 
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Office
+ms.custom: 
+  - CI 157620
+  - CI 113921
+  - CSSTroubleshoot
 ms.reviewer: joselr
 ---
 # How to install Office LTSC installation files not found in VLSC

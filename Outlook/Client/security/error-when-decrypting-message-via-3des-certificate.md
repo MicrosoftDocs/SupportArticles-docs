@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae, gbratton
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook for Office 365
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Your Digital ID name cannot be found error when decrypting a message by using a 3DES certificate

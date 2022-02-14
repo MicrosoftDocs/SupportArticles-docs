@@ -4,23 +4,22 @@ description: Discusses a scenario in which you experience authentication issues 
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Microsoft Windows XP Professional
-- Microsoft Windows XP Home Edition
-- Office 365 User and Domain Management
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Microsoft Windows XP Professional
+  - Microsoft Windows XP Home Edition
+  - Office 365 User and Domain Management
+  - Office 365 Identity Management
 ---
 
 # You receive a "There was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled" error

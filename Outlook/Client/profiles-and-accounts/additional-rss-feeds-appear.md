@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Exchange Online
-- Outlook
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Exchange Online
+  - Outlook
 ---
 
 # Additional RSS feeds appear in Outlook after a user signs in to Office 365 on a new computer

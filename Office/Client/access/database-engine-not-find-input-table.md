@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: wouterst, tputt, krislill, jenl
-appliesto:
-- Access 2010
+appliesto: 
+  - Access 2010
 ---
 
 # "The Microsoft Office Access database engine cannot find the input table" when you try to open a table in an Access 2010 template

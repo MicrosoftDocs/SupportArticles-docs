@@ -6,18 +6,17 @@ ms.date: 4/9/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 113425
-- CSSTroubleshoot 
+  - CI 113425
+  - CSSTroubleshoot
 ms.reviewer: scapero
-description: Some Teams users can't sign into apps when using Chrome version 80. 
+description: Some Teams users can't sign into apps when using Chrome version 80.
 ---
 
 # Chrome version 80 users unable to sign in to some apps on the Teams platform

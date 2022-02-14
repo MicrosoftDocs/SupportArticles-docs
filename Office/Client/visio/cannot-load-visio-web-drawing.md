@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: parida, Arykhus, Kemille, barbway
-appliesto:
-- Visio Premium 2010
-- Visio Professional 2010
-- Visio Standard 2010
-- Visio Services in Microsoft SharePoint Server 2010
-- Visio Professional 2013
-- Visio Standard 2013
+appliesto: 
+  - Visio Premium 2010
+  - Visio Professional 2010
+  - Visio Standard 2010
+  - Visio Services in Microsoft SharePoint Server 2010
+  - Visio Professional 2013
+  - Visio Standard 2013
 ---
 
 # "Visio Services was unable to load this Web Drawing" when you load a Visio web drawing hosted on a different SharePoint farm

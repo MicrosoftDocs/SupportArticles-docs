@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Online
-- Project Server 2019
-- Project Server 2016
-- Project Server 2013
+  - MET150
+appliesto: 
+  - Project Online
+  - Project Server 2019
+  - Project Server 2016
+  - Project Server 2013
 ms.reviewer: 
 ---
 # Resource Plan FTE doesn't calculate as expected when Max Units are 0 or 0%

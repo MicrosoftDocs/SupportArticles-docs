@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Server
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server
 ---
 
 # Access error when a user tries to activate or deactivate the SharePoint Server Publishing feature

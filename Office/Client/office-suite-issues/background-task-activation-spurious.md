@@ -5,32 +5,31 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 365 Home
-- Office 365 Personal
-- Office 365 Business
-- SharePoint Online
-- Exchange Online
-- Office Professional Plus 2016
-- Office Standard 2016
-- Access 2016
-- Excel 2016
-- OneNote 2016
-- OneDrive for Business
-- Outlook 2016
-- PowerPoint 2016
-- Project Standard 2016
-- Publisher 2016
-- Visio Professional 2016
-- Visio Standard 2016
-- Word 2016
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 365 Home
+  - Office 365 Personal
+  - Office 365 Business
+  - SharePoint Online
+  - Exchange Online
+  - Office Professional Plus 2016
+  - Office Standard 2016
+  - Access 2016
+  - Excel 2016
+  - OneNote 2016
+  - OneDrive for Business
+  - Outlook 2016
+  - PowerPoint 2016
+  - Project Standard 2016
+  - Publisher 2016
+  - Visio Professional 2016
+  - Visio Standard 2016
+  - Word 2016
 ---
 
 # "Background task activation is spurious" when you use an Office 2016 application to access Office 365 resources

@@ -1,20 +1,19 @@
 ---
 title: No verification code when external recipients access shared secure links
-description: Provides a solution to resolve the verification code not being received from shared secure links. 
+description: Provides a solution to resolve the verification code not being received from shared secure links.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: sharepoint-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 105797
-- CSSTroubleshoot
+  - CI 105797
+  - CSSTroubleshoot
 ms.reviewer: salarson, CLAKE
 search.appverid: MET150
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # No verification code when external recipients access shared secure links

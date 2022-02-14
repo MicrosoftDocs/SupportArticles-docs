@@ -6,19 +6,18 @@ manager: dcscontentpm
 ms.date: 8/28/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
-- OneDrive
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
+  - OneDrive
 ms.custom: 
-- CI 122279
-- CSSTroubleshoot 
+  - CI 122279
+  - CSSTroubleshoot
 ms.reviewer: salarson
-description: SharePoint Online and OneDrive Diagnostics 
+description: SharePoint Online and OneDrive Diagnostics
 ---
 
 # How to troubleshoot issues in SharePoint Online and OneDrive using diagnostics

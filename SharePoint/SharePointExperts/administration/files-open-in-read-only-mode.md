@@ -6,15 +6,12 @@ ms.author: arhinesm
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: spsexperts
-appliesto:
-- SharePoint Server 2013
+ms.custom: sap:spsexperts, CSSTroubleshoot
+appliesto: 
+  - SharePoint Server 2013
 ---
 
 # Some Office files open in read-only mode in SharePoint Server 2013

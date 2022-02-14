@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: aruiz, gregmans, tsimon, laurentc, amkanade, doakm, randyto, gbratton, bobcool, sercast
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # You don't have permission to create an entry in this folder error even if you have permissions to the folder

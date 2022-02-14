@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2016 for Mac
-- Outlook for Mac for Office 365
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Outlook 2016 for Mac
+  - Outlook for Mac for Office 365
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # Error code 19738 when you use Outlook for Mac to send a large email message through Exchange Server

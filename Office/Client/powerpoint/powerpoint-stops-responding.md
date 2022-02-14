@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft PowerPoint for Mac
+appliesto: 
+  - Microsoft PowerPoint for Mac
 ---
 
 # PowerPoint stops responding (spinning wheel)

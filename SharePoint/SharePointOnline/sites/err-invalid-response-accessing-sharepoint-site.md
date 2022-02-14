@@ -5,18 +5,17 @@ author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 144604
-- CI 147050
+  - CSSTroubleshoot
+  - CI 144604
+  - CI 147050
 ms.author: v-matthamer
-appliesto:
-- SharePoint Online
-- Microsoft Teams
+appliesto: 
+  - SharePoint Online
+  - Microsoft Teams
 ---
 
 # "This site can't be reached" and ERR_INVALID_RESPONSE error when accessing a SharePoint site

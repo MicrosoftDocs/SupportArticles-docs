@@ -4,20 +4,19 @@ description: You can't migrate Exchange Online mailboxes to Exchange Server 2010
 author: v-charloz
 ms.author: v-chazhang
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom:
-- CI 158896
-- Exchange Online
-- CSSTroubleshoot
+ms.custom: 
+  - CI 158896
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: meerak; rroddy; bradhugh; ninob
 search.appverid: MET150
-appliesto:
-- Exchange Online
-- Exchange Server 2010
-- MSfC O365-Exchange Online
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2010
+  - MSfC O365-Exchange Online
 ---
 
 # Can't move Exchange Online mailboxes to Exchange Server 2010

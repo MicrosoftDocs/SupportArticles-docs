@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans, PhilClod
-appliesto:
-- Microsoft Outlook 2010
+appliesto: 
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # How to resolve the Microsoft Outlook can not be started error that occurs when opening Outlook 2010

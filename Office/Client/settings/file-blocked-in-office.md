@@ -5,23 +5,22 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Word 2016
-- Excel 2016
-- PowerPoint 2016
-- Visio 2016
-- PowerPoint 2019
-- Excel 2019
-- Word 2019
-- PowerPoint LTSC 2021
-- Excel LTSC 2021
-- Word LTSC 2021
+appliesto: 
+  - Word 2016
+  - Excel 2016
+  - PowerPoint 2016
+  - Visio 2016
+  - PowerPoint 2019
+  - Excel 2019
+  - Word 2019
+  - PowerPoint LTSC 2021
+  - Excel LTSC 2021
+  - Word LTSC 2021
 ---
 
 # Error message in Office when a file is blocked by registry policy settings

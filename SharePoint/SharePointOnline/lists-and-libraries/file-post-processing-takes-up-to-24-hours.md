@@ -6,16 +6,15 @@ manager: dcscontentpm
 ms.date: 11/20/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 125085
-- CSSTroubleshoot 
+  - CI 125085
+  - CSSTroubleshoot
 ms.reviewer: shahna
 description: Explains why post-processing of files in SharePoint Online can take up to 24 hours to complete.
 ---

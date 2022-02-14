@@ -6,25 +6,24 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: nathanad
-appliesto:
-- Outlook 2013
-- Word 2013
-- PowerPoint 2013
-- Excel 2013
-- Microsoft Outlook 2010
-- Microsoft Word 2010
-- PowerPoint 2010
-- Excel 2010
-- Excel 2016
-- Outlook 2016
-- PowerPoint 2016
-- Word 2016  
+appliesto: 
+  - Outlook 2013
+  - Word 2013
+  - PowerPoint 2013
+  - Excel 2013
+  - Microsoft Outlook 2010
+  - Microsoft Word 2010
+  - PowerPoint 2010
+  - Excel 2010
+  - Excel 2016
+  - Outlook 2016
+  - PowerPoint 2016
+  - Word 2016
 search.appverid: MET150
 ---
 # Office program crashes caused by Btmofficea.dll or Btmoffice.dll

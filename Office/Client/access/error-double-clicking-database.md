@@ -1,22 +1,21 @@
 ---
 title: Errors when double-clicking to open a database
-description: Fixes an issue in which you can't open a database by double-clicking it in Windows Explorer with the error message about invalid Win32 application or about file association. 
+description: Fixes an issue in which you can't open a database by double-clicking it in Windows Explorer with the error message about invalid Win32 application or about file association.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Access 2016
-- Access 2013
-- Access 2010
-- Microsoft Office Access 2007
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access 2010
+  - Microsoft Office Access 2007
 search.appverid: MET150
 ---
 # File association errors opening databases by double-clicking in Access

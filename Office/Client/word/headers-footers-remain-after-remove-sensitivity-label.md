@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 10/8/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Word for Office 365
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Word for Office 365
 ms.custom: 
-- CI 122599
-- CSSTroubleshoot 
-ms.reviewer:  amdey
-description: Describes a resolution an issue where header and footer artifacts remain after changing the sensitivity label in a Word for Office 365 document. 
+  - CI 122599
+  - CSSTroubleshoot
+ms.reviewer: amdey
+description: Describes a resolution an issue where header and footer artifacts remain after changing the sensitivity label in a Word for Office 365 document.
 ---
 
 # Headers and footers remain after removing sensitivity label in Word for Office 365

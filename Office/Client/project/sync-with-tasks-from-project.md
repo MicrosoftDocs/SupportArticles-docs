@@ -5,21 +5,20 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Server 2019
-- Project Professional 2019
-- SharePoint Server 2016
-- Project Professional 2016
-- Project Professional 2013
-- SharePoint Server 2013
-- Project Online Desktop Client
-- SharePoint Online
+appliesto: 
+  - SharePoint Server 2019
+  - Project Professional 2019
+  - SharePoint Server 2016
+  - Project Professional 2016
+  - Project Professional 2013
+  - SharePoint Server 2013
+  - Project Online Desktop Client
+  - SharePoint Online
 ---
 
 # Sync with SharePoint tasks list from Project Professional

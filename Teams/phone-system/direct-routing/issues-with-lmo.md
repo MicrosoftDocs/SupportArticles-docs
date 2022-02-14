@@ -4,16 +4,15 @@ description: Fixes issues in which Local Media Optimization (LMO) for Direct Rou
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CI-126688,CSSTroubleshoot,scenario:Direct-Routing-2
 ms.reviewer: mikebis
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Issues with Local Media Optimization for Direct Routing
 

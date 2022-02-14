@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: sens, exchblt
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard  
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+search.appverid: MET150
 ---
 # The value for nondefault attribute added to the Outlook Details Template isn't displayed in Exchange Server 2010
 

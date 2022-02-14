@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ---
 # The OpenSharedItem method for Outlook holds a file handle on signed .msg files

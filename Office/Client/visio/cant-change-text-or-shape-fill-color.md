@@ -4,18 +4,17 @@ description: Describes an issue that may occur in Visio 2013 or Visio 2010 when 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Visio Professional 2013
-- Visio Standard 2013
-- Visio Professional 2010
-- Visio Standard 2010
+  - MET150
+appliesto: 
+  - Visio Professional 2013
+  - Visio Standard 2013
+  - Visio Professional 2010
+  - Visio Standard 2010
 ---
 
 # You cannot change the text or shape fill color in Visio when using a High Contrast Windows theme

@@ -5,20 +5,19 @@ author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: benwinz
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2016
-- Exchange Server 2013
-- Exchange Server 2010
+  - MET150
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 ---
 # Error (The connection to the specified remote host was refused) when you try to start Exchange Management Shell or Exchange Management Console
 

@@ -4,20 +4,19 @@ description: Describes an issue in which you can't see the chat history in Skype
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-ms.prod: skype-for-business-itpro
 localization_priority: Normal
 search.appverid: 
-- MET150
-audience: ITPro 
+  - MET150
+audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: meerak, randyto, scapero
 ms.custom: 
-- CI 153765
-- CSSTroubleshoot
-appliesto:
-- Skype for Business 2019
-- Skype for Business 2016
-- Skype for Business 2015
+  - CI 153765
+  - CSSTroubleshoot
+appliesto: 
+  - Skype for Business 2019
+  - Skype for Business 2016
+  - Skype for Business 2015
 ---
 
 # Chat history doesn't show in conversation window in Skype for Business 

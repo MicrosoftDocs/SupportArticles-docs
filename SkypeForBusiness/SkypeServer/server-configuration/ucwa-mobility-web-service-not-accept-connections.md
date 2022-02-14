@@ -5,14 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Lync Server 2013
+appliesto: 
+  - Lync Server 2013
 ---
 
 # Lync Server 2013 UCWA mobility web service does not accept connections from Lync 2013 mobile clients

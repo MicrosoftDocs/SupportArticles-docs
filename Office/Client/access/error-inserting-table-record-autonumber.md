@@ -3,24 +3,23 @@ title: Error (The changes you requested to the table were not successful) when y
 description: Describes an issue in which you receive a (The changes you requested to the table were not successful) message when you insert a new record in a table that contains an Autonumber field.
 author: helenclu
 ms.author: luche
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-ms.custom:
-- CI 120588
-- CSSTroubleshoot
+ms.custom: 
+  - CI 120588
+  - CSSTroubleshoot
 ms.reviewer: v-kirkp
-appliesto:
-- Access for Office 365
-- Access 2019
-- Access 2016
-- Access 2013
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
-- Microsoft Office Access 2000
+appliesto: 
+  - Access for Office 365
+  - Access 2019
+  - Access 2016
+  - Access 2013
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
+  - Microsoft Office Access 2000
 search.appverid: MET150
 ---
 # You may receive an error message when you try to insert a new record in a table that contains an Autonumber field in Access

@@ -6,17 +6,16 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: sercast, tasitae
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Online
-- Outlook 2016 for Mac
+  - Outlook for Mac
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Online
+  - Outlook 2016 for Mac
 ---
 # You're repeatedly prompted for credentials when using modern authentication in Outlook 2016 for Mac
 

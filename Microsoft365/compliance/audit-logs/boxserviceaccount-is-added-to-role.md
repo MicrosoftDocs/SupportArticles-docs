@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-compliance
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Office 365 Security & Compliance Center
+appliesto: 
+  - Office 365 Security & Compliance Center
 ---
 
 # BOXServiceAccount is added to a role in Office 365 alerts

@@ -2,31 +2,30 @@
 localization_priority: Normal
 ms.topic: troubleshooting
 author: simonxjx
-f1_keywords:
-- O365P_MessageTrace
+f1_keywords: 
+  - O365P_MessageTrace
 ms.author: v-six
 ms.assetid: e7758b99-1896-41db-bf39-51e2dba21de6
 ms.reviewer: 
 description: Admins can learn how to fix email delivery issues in Exchange Online.
 title: Find and fix email delivery issues as an Office 365 for business admin
 ms.collection: 
-- exchange-online
-- M365-email-calendar
-search.appverid:
-- BCS160
-- MOE150
-- MED150
-- MBS150
-- MET150
+  - exchange-online
+  - M365-email-calendar
+search.appverid: 
+  - BCS160
+  - MOE150
+  - MED150
+  - MBS150
+  - MET150
 audience: Admin
-ms.custom:
-- MiniMaven
-- CSSTroubleshoot
-- SaRASetup
-ms.service: exchange-online
+ms.custom: 
+  - MiniMaven
+  - CSSTroubleshoot
+  - SaRASetup
 manager: dcscontentpm
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 ---
 # Find and fix email delivery issues as an Office 365 for business admin
 

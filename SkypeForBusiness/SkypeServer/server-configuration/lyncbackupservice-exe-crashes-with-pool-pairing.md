@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 10/4/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: skype-for-business-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Skype for Business 2019
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Skype for Business 2019
 ms.custom: 
-- CI 108454
-- CSSTroubleshoot
+  - CI 108454
+  - CSSTroubleshoot
 ms.reviewer: joaol
-description: "How to resolve an issue where LyncBackupService.exe stops responding after enabling pool pairing on a Skype for Business 2019 server."
+description: How to resolve an issue where LyncBackupService.exe stops responding after enabling pool pairing on a Skype for Business 2019 server.
 ---
 
 # LyncBackupService.exe stops responding after pool pairing Skype for Business Server 2019

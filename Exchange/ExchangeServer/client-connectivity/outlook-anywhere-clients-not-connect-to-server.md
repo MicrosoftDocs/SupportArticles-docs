@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: davidsan, nasira, wduff
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2010 Service Pack 3
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Server 2010 Service Pack 3
 ---
 # Outlook Anywhere clients can't connect to an Exchange server after you install Exchange Server 2010 SP3
 

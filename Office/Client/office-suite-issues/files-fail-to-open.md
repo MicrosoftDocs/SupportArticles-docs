@@ -4,16 +4,15 @@ description: Can't open Office documents from SharePoint because of Network List
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: zakirh
 search.appverid: 
-- MET150
-appliesto:
-- Office 2016
+  - MET150
+appliesto: 
+  - Office 2016
 ---
 
 # Office files in SharePoint fail to open from an Office 2016 client

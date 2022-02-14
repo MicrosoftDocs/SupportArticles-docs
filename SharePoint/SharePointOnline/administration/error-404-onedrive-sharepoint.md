@@ -7,17 +7,16 @@ manager: dcscontentpm
 ms.date: 7/26/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 153762
-- CI 154562
-- CSSTroubleshoot 
+  - CI 153762
+  - CI 154562
+  - CSSTroubleshoot
 ms.reviewer: salarson
 ---
 

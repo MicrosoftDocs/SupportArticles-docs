@@ -6,15 +6,12 @@ ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: spsexperts
-appliesto:
-- Microsoft SharePoint
+ms.custom: sap:spsexperts, CSSTroubleshoot
+appliesto: 
+  - Microsoft SharePoint
 ---
 
 # PowerPivot Performance Counter errors

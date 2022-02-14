@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for iOS and Android
-- CSSTroubleshoot
+  - Outlook for iOS and Android
+  - CSSTroubleshoot
 ms.reviewer: jchenau
-appliesto:
-- Outlook for iOS
-- Outlook for Android
-- Exchange Online
+appliesto: 
+  - Outlook for iOS
+  - Outlook for Android
+  - Exchange Online
 search.appverid: MET150
 ---
 # Users who use Outlook for iOS and Android and Device Access (ABQ) rules are unexpectedly quarantined

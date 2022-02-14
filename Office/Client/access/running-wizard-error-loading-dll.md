@@ -3,21 +3,20 @@ title: Error in loading dll when running wizards
 description: Fixes an issue in which you receive the error 'Error in loading dll' or 'Object library not registered' when you run wizards in Access.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 106913
-- CSSTroubleshoot
+  - CI 106913
+  - CSSTroubleshoot
 ms.reviewer: denniwil
-appliesto:
-- Access 2010
-- Access 2013
-- Access 2016
-- Access 2019
-- Access for Office 365
+appliesto: 
+  - Access 2010
+  - Access 2013
+  - Access 2016
+  - Access 2019
+  - Access for Office 365
 search.appverid: MET150
 ---
 # Microsoft Office Access: 'Error in loading dll'

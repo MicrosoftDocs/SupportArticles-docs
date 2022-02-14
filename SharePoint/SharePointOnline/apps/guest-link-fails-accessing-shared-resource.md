@@ -4,15 +4,14 @@ description: You can't click a guest link to a SharePoint Online app item when y
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
-- MET150
+  - MET150
 localization_priority: Normal
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # "Couldn't connect to the catalog server for this app" error when you click a guest link to a SharePoint Online item

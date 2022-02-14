@@ -1,20 +1,17 @@
 ---
-title: Office can't check in files 
+title: Office can't check in files
 description: Fixes an issue in which Office can't check in files when LAN doesn't have Internet access
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
-appliesto:
-- Office 2013
+appliesto: 
+  - Office 2013
 ---
 
 # Office 2013 can't check in files when LAN doesn't have Internet access or over some VPNs

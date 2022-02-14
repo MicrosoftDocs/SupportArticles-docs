@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office 365
-- Office 2013
+appliesto: 
+  - Office 365
+  - Office 2013
 ---
 
 # "Sorry, another account from your organization is already signed in on this computer" in Office 2013

@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Enterprise Edition
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
 ---
 # Active Directory error 0x52 at Exchange Server 2016 Edge role installation

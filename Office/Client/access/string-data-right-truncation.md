@@ -5,18 +5,17 @@ author: denniwil
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 152768
-- CSSTroubleshoot
+  - CI 152768
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: v-matthamer
-appliesto:
-- Access for Office 365
-- Access 2019
-- Access 2016
+appliesto: 
+  - Access for Office 365
+  - Access 2019
+  - Access 2016
 ---
 
 # Access error: "String data, right truncation (#0)"

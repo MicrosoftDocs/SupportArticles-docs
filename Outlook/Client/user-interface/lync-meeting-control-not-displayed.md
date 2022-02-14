@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Outlook 2010
-- Outlook 2013
+appliesto: 
+  - Outlook 2010
+  - Outlook 2013
 ---
 
 # Lync Meeting control is not displayed on the Outlook 2013 ribbon

@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016 
-- Exchange Server 2013 
-- Exchange Server 2010
+  - Exchange Server
+  - CSSTroubleshoot
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 ms.reviewer: 
 ---
 # The Get-DistributionGroupMember command does not return all the members of distribution group if there are multiple Active Directory domains in your topology environment

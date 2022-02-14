@@ -4,21 +4,20 @@ description: More details about the issue that task progress bars not working as
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: timj
 search.appverid: 
-- MET150 
-appliesto:
-- Microsoft Office Project Professional 2003
-- Microsoft Office Project Standard 2003
-- Project Professional 2010
-- Project Standard 2010
-- Project Professional 2013
-- Project 2013 Standard
+  - MET150
+appliesto: 
+  - Microsoft Office Project Professional 2003
+  - Microsoft Office Project Standard 2003
+  - Project Professional 2010
+  - Project Standard 2010
+  - Project Professional 2013
+  - Project 2013 Standard
 ---
 
 # Progress bars not drawn for tasks that are in progress in Project

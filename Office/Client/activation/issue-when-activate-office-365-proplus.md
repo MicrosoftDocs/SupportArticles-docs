@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 365 Identity Management
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 365 Identity Management
 ---
 
 # "We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise

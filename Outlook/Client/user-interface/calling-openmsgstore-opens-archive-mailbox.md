@@ -3,22 +3,21 @@ title: Calling OpenMsgStore opens the archive mailbox instead of the primary mai
 description: The Autodiscover service returns the primary SMTP address in the AutoDiscoverSMTPAddress XML element for both the primary mailbox and the archive mailbox. Calling OpenMsgStore to open the primary mailbox may open the archive mailbox instead.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: 
-- Outlook for Windows
-- CI 106387
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 106387
+  - CSSTroubleshoot
 ms.reviewer: Andrei.Ghita
-appliesto:
-- Outlook 2016
-- Outlook 2019
-- Outlook Development
+appliesto: 
+  - Outlook 2016
+  - Outlook 2019
+  - Outlook Development
 ---
 
 # Calling OpenMsgStore in Outlook opens the archive mailbox instead of the primary mailbox

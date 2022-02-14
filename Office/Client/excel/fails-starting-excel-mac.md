@@ -1,18 +1,17 @@
 ---
 title: Unable to start Excel for Mac
-description: Cannot start Excel for Mac with the error "Excel has encountered a problem and needs to close."
+description: Cannot start Excel for Mac with the error Excel has encountered a problem and needs to close.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel for Mac
+appliesto: 
+  - Excel for Mac
 ---
 
 # "Microsoft Excel has encountered a problem and needs to close" when starting Excel for Mac

@@ -5,14 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
-appliesto:
-- Skype for Business 2016
+appliesto: 
+  - Skype for Business 2016
 ---
 
 # How to disable Automatic Gain Control in Skype for Business on Windows

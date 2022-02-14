@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: Entirenet, lthurman, jesko, sloanc, chikae, evasand
-appliesto:
-- Office 2010
-- Office 2007
+appliesto: 
+  - Office 2010
+  - Office 2007
 ---
 
 # Information about the ability to uninstall Office updates

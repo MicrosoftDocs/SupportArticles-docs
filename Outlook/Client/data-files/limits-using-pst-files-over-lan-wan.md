@@ -5,30 +5,29 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: outlook
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 119623
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: aruiz, cherryc, gbratton, gregmans, sercast
 search.appverid: 
-- MET150
-appliesto:
-- Outlook for Office 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Office Outlook 2007
-- Office Outlook 2003
-- Windows Server 2008 R2
-- Windows Server 2008
-- Windows 7
-- Windows Server 2003
-- Windows Vista
-- Windows XP
+  - MET150
+appliesto: 
+  - Outlook for Office 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Office Outlook 2007
+  - Office Outlook 2003
+  - Windows Server 2008 R2
+  - Windows Server 2008
+  - Windows 7
+  - Windows Server 2003
+  - Windows Vista
+  - Windows XP
 ---
 # Limits to using personal folders files over LAN and WAN links
 

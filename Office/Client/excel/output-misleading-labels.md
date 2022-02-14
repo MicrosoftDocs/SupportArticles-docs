@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Office Excel 2003
-- Excel 2004 for Mac
+appliesto: 
+  - Microsoft Office Excel 2003
+  - Excel 2004 for Mac
 ---
 
 # Misleading labels in the output of the Analysis ToolPak t-Test tools in Excel

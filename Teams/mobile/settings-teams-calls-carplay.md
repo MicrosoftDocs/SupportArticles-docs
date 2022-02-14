@@ -4,18 +4,17 @@ description: Describes if you're unable to use Apple CarPlay in Teams, ask your 
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 157482
-- CSSTroubleshoot
+  - CI 157482
+  - CSSTroubleshoot
 ms.reviewer: alicelu; meerak
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Settings for Teams calls with Apple CarPlay

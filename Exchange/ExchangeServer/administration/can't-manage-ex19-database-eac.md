@@ -4,20 +4,19 @@ description: This article describes an issue in which Exchange 2013 Administrato
 author: simonxjx
 ms.author: sasta
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 106436
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 106436
+  - CSSTroubleshoot
 ms.reviewer: sasta, EXOL_Triage
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2013
-- Exchange Server 2019
+  - MET150
+appliesto: 
+  - Exchange Server 2013
+  - Exchange Server 2019
 ---
 
 # "Your request couldn't be completed. Please try again in a few minutes" error when Exchange 2013 Administrator can't manage Exchange 2019 databases in EAC

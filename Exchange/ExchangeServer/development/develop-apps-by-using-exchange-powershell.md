@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: dvespa
-appliesto:
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Developing apps by using Exchange 2010 PowerShell and the .NET Framework

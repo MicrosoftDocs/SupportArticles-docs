@@ -4,15 +4,14 @@ description: Describes a scenario in which you can't verify a domain in Office 3
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- office 365
+  - MET150
+appliesto: 
+  - office 365
 ---
 
 # "Can't verify domain" error message when you try to verify a domain in Office 365

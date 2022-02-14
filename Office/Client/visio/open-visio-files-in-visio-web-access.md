@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: elzhou, genli, christys
-appliesto:
-- Visio Pro for Office 365
-- Visio 2019
-- Visio 2016
-- Visio 2013
+appliesto: 
+  - Visio Pro for Office 365
+  - Visio 2019
+  - Visio 2016
+  - Visio 2013
 ---
 
 # You can't open Visio files in Visio Web Access even if Visio Viewer is installed

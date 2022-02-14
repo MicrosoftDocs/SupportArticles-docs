@@ -4,14 +4,13 @@ description: This article lists Exchange Online related issues.
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
-ms.service: exchange-online
 ms.topic: landing-page
 ms.author: v-six
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- Exchange Online
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - Exchange Online
 ---
 
 # Exchange Online troubleshooting

@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom:
-- CI 109532
-- CSSTroubleshoot
+ms.custom: 
+  - CI 109532
+  - CSSTroubleshoot
 ms.reviewer: clake
-appliesto:
-- SharePoint Server 2016
+appliesto: 
+  - SharePoint Server 2016
 ---
 
 # Error 2711 when installing RBS client for SQL server 2016 with SharePoint Server 2016

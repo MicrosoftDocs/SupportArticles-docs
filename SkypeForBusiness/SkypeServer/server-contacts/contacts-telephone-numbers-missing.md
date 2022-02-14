@@ -5,18 +5,17 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: premgan
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Lync 2013
-- Lync Basic 2013
-- Skype for Business
-- Skype for Business Online
+appliesto: 
+  - Microsoft Lync 2013
+  - Lync Basic 2013
+  - Skype for Business
+  - Skype for Business Online
 ---
 
 # Telephone numbers of contacts are missing in Lync 2013 or Skype for Business

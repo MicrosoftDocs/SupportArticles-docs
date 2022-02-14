@@ -6,22 +6,21 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: gregmans
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook for Office 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Office Outlook 2007
-- Office Outlook 2003
+  - MET150
+appliesto: 
+  - Outlook for Office 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Office Outlook 2007
+  - Office Outlook 2003
 ---
 # Email messages remain in the Outbox because of Deferred Delivery rule
 

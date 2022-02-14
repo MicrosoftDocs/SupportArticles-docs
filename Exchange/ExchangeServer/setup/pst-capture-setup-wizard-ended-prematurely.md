@@ -6,19 +6,18 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: sidd
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Windows Server 2008 R2 Standard
-- Windows Server 2008 R2 Foundation
-- Windows Server 2008 R2 Enterprise
-- Windows Server 2008 R2 Datacenter
+  - MET150
+appliesto: 
+  - Windows Server 2008 R2 Standard
+  - Windows Server 2008 R2 Foundation
+  - Windows Server 2008 R2 Enterprise
+  - Windows Server 2008 R2 Datacenter
 ---
 # Error when you install the PST Capture tool in Windows Server 2008 R2: Setup wizard ended prematurely because of an error
 

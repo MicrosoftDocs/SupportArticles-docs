@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: rtaylor
-appliesto:
-- Microsoft Office
+appliesto: 
+  - Microsoft Office
 ---
 
 # GetObject and CreateObject behavior of Office automation servers

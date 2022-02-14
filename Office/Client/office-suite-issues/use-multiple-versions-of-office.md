@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: doakm, offspms, tomol, Jenl
 search.appverid: 
-- MET150
-appliesto:
-- Office 2013
+  - MET150
+appliesto: 
+  - Office 2013
 ---
 
 # How to use Office 2013 suites and programs (MSI deployment) on a computer running another version of Office

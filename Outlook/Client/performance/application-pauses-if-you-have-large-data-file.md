@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ---
 # You may experience application pauses if you have a large Outlook data file

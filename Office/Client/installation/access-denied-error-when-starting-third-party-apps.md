@@ -1,23 +1,22 @@
 ---
-title: Starting third-party add-in causes "Access Denied" error
+title: Starting third-party add-in causes Access Denied error
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 4/29/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Office
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Office
 ms.custom: 
-- CI 115993
-- CSSTroubleshoot 
+  - CI 115993
+  - CSSTroubleshoot
 ms.reviewer: rycarter
-description: What to do if you get an "Access Denied" error when starting third-party add-ins, which rely on .NET framework. 
+description: What to do if you get an Access Denied error when starting third-party add-ins, which rely on .NET framework.
 ---
 
 # Error message when starting a Microsoft Office third-party add-in that relies on .NET binaries

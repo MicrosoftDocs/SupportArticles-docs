@@ -6,18 +6,17 @@ ms.date: 4/9/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 113425
-- CSSTroubleshoot 
+  - CI 113425
+  - CSSTroubleshoot
 ms.reviewer: scapero
-description: Describes why you may be unable to enable archiving or increase quota for Group mailboxes in Teams. 
+description: Describes why you may be unable to enable archiving or increase quota for Group mailboxes in Teams.
 ---
 
 # You can't enable archiving or increase the mailbox quota for an Office 365 Group mailbox used by Microsoft Teams

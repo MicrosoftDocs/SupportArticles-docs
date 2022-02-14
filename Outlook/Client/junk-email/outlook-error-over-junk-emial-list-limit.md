@@ -5,23 +5,22 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: outlook
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 119623
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: gregmans, wbrandt
 search.appverid: 
-- MET150
-appliesto:
-- Outlook for Microsoft 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Office Outlook 2007
+  - MET150
+appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Office Outlook 2007
 ---
 # Outlook error indicates that you are over the Junk E-mail list limit
 

@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2016 for Mac
-- Exchange Online
+appliesto: 
+  - Outlook 2016 for Mac
+  - Exchange Online
 search.appverid: MET150
 ---
 # How to suppress the Microsoft 365 AutoDiscover redirect warning in Outlook 2016 for Mac

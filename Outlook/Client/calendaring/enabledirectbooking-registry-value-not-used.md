@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans, aruiz
-appliesto:
-- Outlook 2013
+appliesto: 
+  - Outlook 2013
 search.appverid: MET150
 ---
 # The EnableDirectBooking registry value isn't used by Outlook 2013

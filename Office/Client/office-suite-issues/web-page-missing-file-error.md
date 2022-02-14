@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft Excel
-- Microsoft PowerPoint
-- Microsoft Word
+appliesto: 
+  - Microsoft Excel
+  - Microsoft PowerPoint
+  - Microsoft Word
 ---
 
 # "The page cannot be found" or "Missing file" error when you view or change an Office document

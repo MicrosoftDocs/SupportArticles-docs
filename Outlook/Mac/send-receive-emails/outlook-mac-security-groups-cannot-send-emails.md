@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: tsimon, tasitae
-appliesto:
-- Outlook for Mac for Office 365
-- Outlook 2019 for Mac
-- Outlook 2016 for Mac
+appliesto: 
+  - Outlook for Mac for Office 365
+  - Outlook 2019 for Mac
+  - Outlook 2016 for Mac
 search.appverid: MET150
 ---
 # Errors when sending emails from security groups, distribution lists, or mail-enabled Public Folders in Outlook for Mac

@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: delaja
-appliesto:
-- Exchange Online
-- Exchange Online Protection
+appliesto: 
+  - Exchange Online
+  - Exchange Online Protection
 search.appverid: MET150
 ---
 # SMTPSEND.BareLineFeedsAreIllegal NDR received by Exchange Online or EOP users in Office 365 Dedicated/ITAR

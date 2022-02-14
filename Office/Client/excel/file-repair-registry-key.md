@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel 2007
-- Excel 2003
-- Excel 2002
+appliesto: 
+  - Excel 2007
+  - Excel 2003
+  - Excel 2002
 ---
 
 # Registry keys that control the File Repair feature in Excel

@@ -4,18 +4,17 @@ description: Troubleshooting Microsoft 365 activation error The products we foun
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157756
-- CI 159132
+  - CSSTroubleshoot
+  - CI 157756
+  - CI 159132
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation error: "The products we found in your account can't be used to activate"

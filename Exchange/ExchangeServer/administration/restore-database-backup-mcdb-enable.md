@@ -4,19 +4,18 @@ description: When you try to restore a mailbox database with MCDB enabled to a r
 author: simonxjx
 ms.author: jeffrem
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 111330
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 111330
+  - CSSTroubleshoot
 ms.reviewer: jeffrem,robwhal
-appliesto:
-- Exchange Server 2019
+appliesto: 
+  - Exchange Server 2019
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Can't restore a database from a backup if MCDB is enabled in Exchange Server 2019

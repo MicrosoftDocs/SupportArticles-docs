@@ -4,16 +4,15 @@ description: Explanation and resolution steps if you receive an error when you a
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Online
-- Project Server 2013
+  - MET150
+appliesto: 
+  - Project Online
+  - Project Server 2013
 ---
 
 # Error occurs when you add or edit a Resource in Enterprise Resource Pool

@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: joelric
-appliesto:
-- Exchange Online
-- Outlook 2019
-- Outlook 2016
-- Outlook for Office 365
+appliesto: 
+  - Exchange Online
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Users in an Exchange hybrid deployment can't access Office 365 groups in Outlook 2016, Outlook 2019, and Outlook for Office 365

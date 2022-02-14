@@ -6,19 +6,15 @@ manager: dcscontentpm
 ms.date: 2/7/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online 
-ms.custom: 
-- CI 113496
-- CSSTroubleshoot
-- sap: spsexperts
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
+ms.custom: sap:spsexperts, CSSTroubleshoot, CI 113496
 ms.reviewer: salarson
-description: "What to do if you can't open Office files from a SharePoint Online repository."
+description: What to do if you can't open Office files from a SharePoint Online repository.
 ---
 
 # Can't open Office files from SharePoint Online

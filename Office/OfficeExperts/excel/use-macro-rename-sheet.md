@@ -5,22 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel for Office 365
-- Excel 2019
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Excel 2007
-- Excel 2003
+appliesto: 
+  - Excel for Office 365
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
+  - Excel 2003
 ---
 
 # Step by step: Rename Excel sheet with cell contents by using Macro
