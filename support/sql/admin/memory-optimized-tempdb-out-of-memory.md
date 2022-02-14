@@ -5,7 +5,7 @@ ms.date: 11/05/2020
 ms.custom: sap:Database Engine
 ms.reviewer: PiJoCoder, Hemin-MSFT
 metadata author: PiJoCoder
-ms.author: PiJoCoder
+ms.author: jopilov
 ms.prod: sql
 ---
 
@@ -60,16 +60,16 @@ Several scenarios that could lead to the symptoms are identified:
 
      **Resolution**: [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535) has `sys.sp_xtp_force_gc` to free up allocated but unused bytes on demand by running the following commands:
 
-        ```sql
-        /* Yes, 2 times for both*/
-        Exec sys.sp_xtp_force_gc 'tempdb'
-        GO
-        Exec sys.sp_xtp_force_gc 'tempdb'
-        GO
-        Exec sys.sp_xtp_force_gc
-        GO
-        Exec sys.sp_xtp_force_gc
-        ```
+     ```sql
+     /* Yes, 2 times for both*/
+     Exec sys.sp_xtp_force_gc 'tempdb'
+     GO
+     Exec sys.sp_xtp_force_gc 'tempdb'
+     GO
+     Exec sys.sp_xtp_force_gc
+     GO
+     Exec sys.sp_xtp_force_gc
+     ```
 
    - Scenario 2
 
@@ -93,13 +93,13 @@ Several scenarios that could lead to the symptoms are identified:
 
      The DMV `tempdb.sys.dm_db_xtp_memory_consumers` may show high allocated/used bytes for table heap where `Object_ID` isn't `NULL`. The most common cause for this issue is a long-running, explicitly open transaction with DDL in temporal table(s). For example:
         
-        ```sql
-        BEGIN TRAN
-            CREATE TABLE #T(sn int)
-            …
-            …
-        COMMIT
-        ```
+     ```sql
+     BEGIN TRAN
+         CREATE TABLE #T(sn int)
+         …
+         …
+     COMMIT
+     ```
 
      Explicit open transaction with DDL in temporal tables won't allow table heap and possibly Varheap: Lookaside Heap to be freed up for subsequent transactions utilizing TempDB metadata.
 
