@@ -38,10 +38,10 @@ Here is a partial list of high-level languages, frameworks, and runtimes for whi
 For more information about add-in components that are loaded by core OS processes, see the following articles:
 
 - [Winlogon and Credential providers](/windows/win32/secauthn/winlogon-and-credential-providers)
-- [Graphical Identification and Authentication (GINA) DLL](/windows/win32/secauthn/winlogon-and-gina)
-- [Winlogon notification packages](/windows/win32/secauthn/winlogon-notification-packages)
-- [Password filters](/windows/win32/secmgmt/password-filters)
+- [Winlogon and GINA](/windows/win32/secauthn/winlogon-and-gina)
+- [Winlogon Notification Packages](/windows/win32/secauthn/winlogon-notification-packages)
+- [Password Filters](/windows/win32/secmgmt/password-filters)
 - [Security Support Providers (SSPs)](/windows/win32/rpc/security-support-providers-ssps-)
-- [Custom authentication packages](/windows/win32/secauthn/authentication-packages)
-- [Custom subauthentication packages](/windows/win32/secauthn/subauthentication-packages)
-- [Local Security Authority (LSA) mode Cryptographic Service Providers (CSPs), such as the Secure Channel (SChannel) CSP](/windows/win32/seccrypto/cryptographic-service-providers)
+- [Authentication Packages](/windows/win32/secauthn/authentication-packages)
+- [Subauthentication Packages](/windows/win32/secauthn/subauthentication-packages)
+- [Cryptographic Service Providers](/windows/win32/seccrypto/cryptographic-service-providers)
