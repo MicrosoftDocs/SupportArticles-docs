@@ -24,7 +24,7 @@ Consider the following scenario:
   Under **Users** > **Manage Users**, you select the user, and then select the **Meetings & calls** tab on the user's profile page.
 - You select a meeting ID to view details.
 
-In this scenario, the user name is displayed as **Unknown** on the **Overview** page. The following screenshot shows an example:
+In this scenario, the username is displayed as **Unknown** on the **Overview** page. The following screenshot shows an example:
 
 :::image type="content" source="media/external-user-shown-as-unknown/user-name-unknown.png" alt-text="Screenshot that shows the user name is displayed as Unknown.":::
 
