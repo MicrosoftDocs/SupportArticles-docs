@@ -78,7 +78,7 @@ You can find the date and version of the network driver. To do this, follow thes
 
 The **Driver**  tab has the following information:
 
-![Network adapter driver information ](./media/troubleshoot-network-performance-features-rss-netdma/driver-tab-info.jpg)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/driver-tab-info.png" alt-text="Screenshot of the Device Manager pane under Computer Management with a network adapter properties window opened, which shows the Driver information.":::
 
 For Windows Server 2003, follow these steps to access Device Manager:
 
@@ -88,11 +88,11 @@ For Windows Server 2003, follow these steps to access Device Manager:
 
 If updating the network drivers doesn't work, you might want to try disabling the improved features and see whether the issue resolves. Use this as a last resort or a troubleshooting step and not as the solution unless your network adapter was confirmed not to support the features in question. The improved networking features can be enabled or disabled in the operating system and also in the network adapter's advanced settings. Here you can see the **Advanced** tab in the network adapter properties that shows the TCP Connection Offload and Receive Side Scaling (RSS) settings.
 
-![TCP Connection Offload- RSS settings ](./media/troubleshoot-network-performance-features-rss-netdma/tcp-connection-offload-rss-settings.png)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/tcp-connection-offload-rss-settings.png" alt-text="Screenshot of the Server Manager window with a network adapter properties window opened, which shows the TCP Connection Offload and Receive Side Scaling (RSS) settings in the Advanced tab." border="false":::
 
 To see the settings for the operating system, use net shell command `netsh interface tcp show global` command as follows:
 
-![netsh global command ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-interface-tcp-show-global-cmd.png)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/netsh-interface-tcp-show-global-cmd.png" alt-text="Screenshot of the output of the netsh interface tcp show global command." border="false":::
 
 You can check the following two other settings that affect TCPchimney offloading:
 
@@ -105,7 +105,7 @@ These commands enable TCP offloading to be set up specifically for a certain app
 > [!NOTE]
 > This operation requires elevated privileges (Run as administrator).
 
-![chimney settings ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-cmd-output.png)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/netsh-cmd-output.png" alt-text="Screenshot of the netsh command output which shows the chimney settings." border="false":::
 
 If they're blank, no applications or ports were added to the chimney offload settings.
 
