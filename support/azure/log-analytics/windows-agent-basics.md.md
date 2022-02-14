@@ -2,13 +2,11 @@
 title: Basic troubleshooting Azure Log Analytics Monitoring Agent problems
 description: This article covers the basic aspects of the Microsoft Monitoring Agent (MMA) from Azure Log Analytics.
 ms.date: 01/24/2022
-author: genli 
+author: genlin
 ms.author: armand.boisselle
 ms.reviewer: armand.boisselle
 editor: v-jsitser
 ms.service: log-analytics
-ms.subservice: virtual-network
-keywords: 
 ---
 
 # Azure Log Analytics Monitoring Agent troubleshooting basics
