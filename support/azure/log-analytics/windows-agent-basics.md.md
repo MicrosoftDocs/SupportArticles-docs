@@ -13,9 +13,9 @@ keywords:
 
 # Azure Log Analytics Monitoring Agent troubleshooting basics
 
-This article provides basic information for troubleshooting Microsoft Monitoring Agent (MMA) with Azure Log Analytics.
+This article provides basic guide for troubleshooting Microsoft Monitoring Agent (MMA) problems with Azure Log Analytics.
 
-## Basic requirements for running MMA
+## Basic requirements for Monitoring Agent
 
 - For supported operating systems, see [Log Analytics Agent support operating systems](/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems).
 
@@ -25,11 +25,11 @@ This article provides basic information for troubleshooting Microsoft Monitoring
 
 - You must have a Monitoring Agent certificate with the correct Hostname of your server. Generally, the certificate is generated automatically when you install the Monitoring Agent. The certificate is located in **Computer Certificate\Microsoft Monitoring Agent\Certificates**.
 
-- If a proxy is used, the proxy settings of the MMA agent must be via either Log Analytics gateway or your proxy server.
+- If a proxy is used, the proxy settings of the Monitoring Agent must be via either Log Analytics gateway or your proxy server.
 
 ## How to find the agent version
 
-There are two ways you can do this:
+There are two ways to find the vresion of :
 
 **On the VM or on-premises server with MMA**
 
@@ -51,7 +51,9 @@ Heartbeat | summarize arg_max(TimeGenerated, *) by Computer`
 ```
 ## Collect ETL trace for troubleshooting
 
-When you submit a support ticket for a MMA problem, Microsoft support team might ask for an ETL trace to collect information for troubleshooting. Use the following steps to collect an ETL trace.
+When you submit a support ticket for a Monitoring Agent problem, Microsoft support team might ask for an ETL trace to collect information for troubleshooting. Usually, you can use the [GetAgentInfo.ps1 script](/azure/azure-monitor/agents/agent-windows-troubleshoot) to collect the ETL trace.
+
+If the script does not work, use the following steps to collect an ETL trace manually.
 
 1. Select **Start**, enter *cmd* and then select *Command Prompt* from the results to open a command prompt window.
 
