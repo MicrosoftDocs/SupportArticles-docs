@@ -1576,6 +1576,8 @@
       href: ./networking/how-to-use-netmask-ordering-round-robin-feature.md
     - name: Troubleshoot DNS Event ID 4013
       href: ./networking/troubleshoot-dns-event-id-4013.md
+    - name: Guidelines of DNS issues troubleshooting
+      href: ./networking/troubleshoot-dns-issues-guidelines.md
     - name: Troubleshoot DNS name resolution on the Internet
       href: ./networking/troubleshoot-dns-name-resolution.md
     - name: Verify that SRV DNS records have been created
@@ -1604,6 +1606,8 @@
       href: ./networking/dhcp-servers-report-different-failover-states.md
     - name: PXE clients don't start
       href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
+    - name: Guidelines of DHCP issues troubleshooting
+      href: ./networking/troubleshoot-dhcp-guidelines.md
     - name: Use Netsh utility to export and import DHCP scopes
       href: ./networking/netsh-utility-export-import-dhcp-scopes.md
   - name: FRS
@@ -1678,6 +1682,8 @@
       href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
     - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
       href: ./networking/troubleshoot-directaccess-server-console-networking.md
+    - name: Guidelines of DirectAccess issues troubleshooting
+      href: ./networking/troubleshoot-directaccess-issues-guidelines.md
   - name: TCP/IP communications
     items:
     - name: A SMB server is unresponsive

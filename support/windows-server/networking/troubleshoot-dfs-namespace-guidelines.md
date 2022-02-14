@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: ms.custom: sap:dfs-namespace, csstroubleshoot
+ms.custom: sap:dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # DFSN issues troubleshooting guidelines
