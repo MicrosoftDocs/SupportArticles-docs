@@ -75,7 +75,7 @@ Several scenarios that could lead to the symptoms are identified:
 
      The DMV `tempdb.sys.dm_xtp_system_memory_consumers` may show high values for allocated and used bytes for VARHEAP and LOOKASIDE.
 
-     **Resolution**: Check for Long running Transactions and resolve from application side by keeping transactions short. You can easily reproduce this issue in a test environment by creating an explicit BEGIN TRAN with DDL in a temporal table and leaving it open for a long time while other activity takes place.
+     **Resolution**: Check for Long running Transactions and resolve from application side by keeping transactions short. You can easily reproduce this issue in a test environment by creating an explicit [BEGIN TRANSACTION ](/sql/t-sql/language-elements/begin-transaction-transact-sql) with DDL in a temporal table and leaving it open for a long time while other activity takes place.
 
    - Scenario 3
 
