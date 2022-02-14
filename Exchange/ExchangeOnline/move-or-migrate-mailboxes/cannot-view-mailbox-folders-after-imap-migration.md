@@ -6,23 +6,22 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: santoshp
-appliesto:
-- Exchange Online
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Outlook for Office 365
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # You can't view mailbox folders on an Exchange ActiveSync or Outlook client after an IMAP migration

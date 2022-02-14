@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: ccorp
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+search.appverid: MET150
 ---
 # Event ID 106 errors after you install an Exchange Server 2013 cumulative update: Performance counter updating error
 

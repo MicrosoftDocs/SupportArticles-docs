@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel 2000
+appliesto: 
+  - Excel 2000
 ---
 
 # Columns and rows are labeled numerically in Excel

@@ -6,13 +6,12 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 ms.reviewer: kerbo
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # How to use the Problem Steps Recorder in Microsoft 365

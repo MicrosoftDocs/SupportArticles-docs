@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: timothyh
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # You can't disable Facebook contact sync for your Office 365 organization

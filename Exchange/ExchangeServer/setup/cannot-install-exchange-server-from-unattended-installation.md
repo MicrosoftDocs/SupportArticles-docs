@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: anfowler, gugavaro
-appliesto:
-- Exchange Server 2010 Service Pack 1
+appliesto: 
+  - Exchange Server 2010 Service Pack 1
 search.appverid: MET150
 ---
 # You cannot install an Exchange Server 2010 SP1 server from an unattended installation

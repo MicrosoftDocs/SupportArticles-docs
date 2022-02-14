@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel 2007
-- Excel 2003
-- Excel 2002
-- Excel 2000
-- Excel 97
+appliesto: 
+  - Excel 2007
+  - Excel 2003
+  - Excel 2002
+  - Excel 2000
+  - Excel 97
 ---
 
 # The result is "FALSE" when you use the ISBLANK() function in an Excel spreadsheet

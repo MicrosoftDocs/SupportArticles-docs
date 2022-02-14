@@ -6,20 +6,19 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: mbro; robwhal; batre
 ms.custom: 
-- CI 145217
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2019 
-- Exchange Server 2016 
-- Exchange Server 2013
-- Exchange Server 2010 Service Pack 3
+  - CI 145217
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010 Service Pack 3
 ---
 
 # Repair failed installations of Exchange Cumulative and Security updates

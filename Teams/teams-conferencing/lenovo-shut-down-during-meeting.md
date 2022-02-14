@@ -4,16 +4,15 @@ description: This article describes an issue in which Lenovo Yoga L13 devices so
 author: lauram
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 144509
-- CSSTroubleshoot
+  - CI 144509
+  - CSSTroubleshoot
 ms.reviewer: SfB_Triage
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 ---
 
 # Lenovo Yoga L13 might shut down during Teams meetings

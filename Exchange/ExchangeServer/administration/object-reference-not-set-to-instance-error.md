@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: bilong, ninob
-appliesto:
-- Exchange Server 2016
-- Exchange Server 2013
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Object reference not set to an instance of an object error and message trace fails in an Exchange hybrid environment

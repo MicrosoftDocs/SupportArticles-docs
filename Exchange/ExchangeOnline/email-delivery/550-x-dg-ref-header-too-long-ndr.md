@@ -1,19 +1,18 @@
 ---
 title: Can't send mail with 550 5.0.350 NDR
-description: Fixes an issue in which you can't send mail and you receive a "550 x-dg-ref header is too long" non-delivery report when you use Rich Text formatting in Outlook.
+description: Fixes an issue in which you can't send mail and you receive a 550 x-dg-ref header is too long non-delivery report when you use Rich Text formatting in Outlook.
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: braalf
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # 550 x-dg-ref header is too long NDR when you send mail in Exchange Online

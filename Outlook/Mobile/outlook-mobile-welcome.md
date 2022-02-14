@@ -4,14 +4,13 @@ description: This article lists Outlook for iOS and Android related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.prod: outlook
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- Microsoft Outlook for iOS and Android
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - Microsoft Outlook for iOS and Android
 ---
 
 # Outlook for iOS and Android troubleshooting

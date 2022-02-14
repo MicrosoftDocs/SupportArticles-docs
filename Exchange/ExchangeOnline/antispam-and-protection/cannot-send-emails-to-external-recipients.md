@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Online
-- Exchange Online Protection
+  - Exchange Online
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Online
+  - Exchange Online Protection
 search.appverid: MET150
 ---
 # Recipient rejects mail from Exchange Online or Exchange Online Protection and host name does not match IP address error

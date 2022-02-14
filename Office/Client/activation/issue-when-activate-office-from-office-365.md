@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Microsoft Visio Pro for Office 365
-- Project Online Desktop Client
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Microsoft Visio Pro for Office 365
+  - Project Online Desktop Client
 ---
 
 # "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365

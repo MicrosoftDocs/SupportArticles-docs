@@ -6,14 +6,13 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 151537
+  - CSSTroubleshoot
+  - CI 151537
 ms.reviewer: kellybos, lindabr, meerak
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 

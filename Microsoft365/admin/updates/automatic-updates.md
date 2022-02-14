@@ -4,26 +4,25 @@ description: Provides the steps to re-enable the automatic updates for Office 20
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: gregmans
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365 Apps
-- Office LTSC Standard 2021
-- Office LTSC Professional Plus 2021
-- Office Standard 2019
-- Office Professional Plus 2016
-- Office Standard 2016
-- Office Home and Business 2013
-- Office Home and Student 2013
-- Office Professional 2013
-- Office Professional Plus 2013
-- Office Standard 2013
+  - MET150
+appliesto: 
+  - Microsoft 365 Apps
+  - Office LTSC Standard 2021
+  - Office LTSC Professional Plus 2021
+  - Office Standard 2019
+  - Office Professional Plus 2016
+  - Office Standard 2016
+  - Office Home and Business 2013
+  - Office Home and Student 2013
+  - Office Professional 2013
+  - Office Professional Plus 2013
+  - Office Standard 2013
 ---
 
 # Automatic updating for Microsoft Office is not enabled

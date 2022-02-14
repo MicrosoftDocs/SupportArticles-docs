@@ -5,22 +5,21 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 111294
-- CSSTroubleshoot
+  - CI 111294
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: SHAYDEN 
-appliesto:
-- Access 2016
-- Access 2013
-- Access 2010
-- Access 2007
-- Access 2003
-- Access 2002
+ms.reviewer: SHAYDEN
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access 2010
+  - Access 2007
+  - Access 2003
+  - Access 2002
 ---
 
 # "There isn't enough disk space or memory" error when you perform an operation on an Access table

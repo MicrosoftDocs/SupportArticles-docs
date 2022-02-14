@@ -1,20 +1,19 @@
 ---
-title: Can't run a query in a database 
+title: Can't run a query in a database
 description: Fixes an issue in which you receive an error message when you run a query in an Access database that uses an aggregate function.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # "Cannot group on fields selected with '*'" error when you run a query in Access

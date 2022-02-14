@@ -3,18 +3,17 @@ title: FirstDay property is set incorrectly
 description: Fixes an issue in which the FirstDay property is not correctly set when you use the numeric constants.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: suesch
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # Microsoft Calendar Control 10.0 and later versions use an incorrect value for the FirstDay property

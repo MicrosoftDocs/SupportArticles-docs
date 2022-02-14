@@ -4,18 +4,17 @@ description: Describes an issue in Word 2010 in which you cannot use the mouse t
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: wdkbprem, ctrword
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Word 2016
-- Word 2013
-- Microsoft Word 2010
+  - MET150
+appliesto: 
+  - Word 2016
+  - Word 2013
+  - Microsoft Word 2010
 ---
 
 # You cannot use the mouse to draw a selection rectangle around multiple AutoShape objects in Microsoft Word

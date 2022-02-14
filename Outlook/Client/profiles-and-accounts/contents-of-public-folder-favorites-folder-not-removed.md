@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: shanw
-appliesto:
-- Outlook 2007
-- Outlook 2003
+appliesto: 
+  - Outlook 2007
+  - Outlook 2003
 search.appverid: MET150
 ---
 # Contents of Public Folder Favorites folder not removed from offline folder files if Download Public Folder Favorites is turn off

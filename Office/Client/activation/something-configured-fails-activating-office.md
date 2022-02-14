@@ -1,19 +1,18 @@
 ---
 title: Can't activate Office 2013 because something on the server isn't configured
-description: A user receives an error message when they try to activate Office 2013 if modern authentication isn't enabled.  
+description: A user receives an error message when they try to activate Office 2013 if modern authentication isn't enabled.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Azure Active Directory
-- Office 2013
+appliesto: 
+  - Azure Active Directory
+  - Office 2013
 ---
 
 # "We can't sign you into your company portal" when activating Office 2013

@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Server 2013
-- Microsoft SharePoint Server 2013 Service Pack 1
-- SharePoint Online
+appliesto: 
+  - SharePoint Server 2013
+  - Microsoft SharePoint Server 2013 Service Pack 1
+  - SharePoint Online
 ---
 
 # Can't open SharePoint documents in a local client (rich client) from Chrome when NPAPI plug-in is missing

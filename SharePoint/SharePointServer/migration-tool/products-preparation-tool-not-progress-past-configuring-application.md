@@ -1,18 +1,17 @@
 ---
-title: The Products Preparation Tool in SharePoint Server 2013 may not progress past "Configuring Application Server Role, Web Server (IIS) Role"
-description: Describes a problem in which the Products Preparation Tool in SharePoint Server 2013 may not progress past "Configuring Application Server Role, Web Server (IIS) Role." A workaround is provided.
+title: The Products Preparation Tool in SharePoint Server 2013 may not progress past Configuring Application Server Role, Web Server (IIS) Role
+description: Describes a problem in which the Products Preparation Tool in SharePoint Server 2013 may not progress past Configuring Application Server Role, Web Server (IIS) Role. A workaround is provided.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2013
 ---
 
 # Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"  

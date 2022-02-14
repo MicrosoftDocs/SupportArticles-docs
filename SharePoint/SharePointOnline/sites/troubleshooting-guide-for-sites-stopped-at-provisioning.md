@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 12/18/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- OneDrive for Business
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - OneDrive for Business
 ms.custom: 
-- CI 112027
-- CSSTroubleshoot 
-ms.reviewer: prbalusu 
-description: Guide to troubleshooting provisioning issues in OneDrive for Business sites. 
+  - CI 112027
+  - CSSTroubleshoot
+ms.reviewer: prbalusu
+description: Guide to troubleshooting provisioning issues in OneDrive for Business sites.
 ---
 
 # Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage

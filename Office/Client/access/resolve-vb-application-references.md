@@ -3,18 +3,17 @@ title: Resolve Visual Basic for Applications references
 description: Describes steps that Access takes to resolve the references in Visual Basic for Applications (VBA). Also discusses the BrokenReference property that you can use to check broken references.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # How Access resolves Visual Basic for Applications references

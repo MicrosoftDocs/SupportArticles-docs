@@ -6,25 +6,24 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
-ms.custom:
-- Outlook for Windows
-- Outlook for Mac
-- CI 118817
-- CSSTroubleshoot
+ms.custom: 
+  - Outlook for Windows
+  - Outlook for Mac
+  - CI 118817
+  - CSSTroubleshoot
 ms.reviewer: abarglo
 appliesto: 
-- Outlook 2019
-- Outlook 2019 for Mac
-- Outlook for Office 365
-- Outlook 2016 for Mac
-- Outlook 2016
-- Outlook 2013
-- Outlook on the web
-- Outlook.com
-- Outlook for iOS
-- Outlook for Android
+  - Outlook 2019
+  - Outlook 2019 for Mac
+  - Outlook for Office 365
+  - Outlook 2016 for Mac
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook on the web
+  - Outlook.com
+  - Outlook for iOS
+  - Outlook for Android
 search.appverid: MET150
 ---
 # Unintentional emails received in Outlook

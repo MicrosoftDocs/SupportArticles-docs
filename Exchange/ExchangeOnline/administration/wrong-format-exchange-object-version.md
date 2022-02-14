@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: timothyh
-appliesto:
-- Exchange Online
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Service Pack 3
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
 ---
 # Format of the Exchange object version is wrong when you connect to Exchange Online in EMC

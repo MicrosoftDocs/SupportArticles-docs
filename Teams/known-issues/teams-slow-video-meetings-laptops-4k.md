@@ -4,16 +4,15 @@ description: This article provides resolutions when Microsoft Teams is slow duri
 author: helenclu
 ms.author: sgorantl
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 107235
-- CSSTroubleshoot
+  - CI 107235
+  - CSSTroubleshoot
 ms.reviewer: SfB_Triage
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 ---
 
 # Teams is slow during video meetings on laptops docked to 4K/UHD monitors

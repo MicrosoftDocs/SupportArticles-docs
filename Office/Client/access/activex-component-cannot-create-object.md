@@ -3,23 +3,22 @@ title: Error message (ActiveX component can't create object) when using Access
 description: You receive a (ActiveX component can't create object) error when using Access.
 author: helenclu
 ms.author: luche
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 120588
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Access for Office 365
-- Access 2019
-- Access 2016
-- Access 2013
-- Access 2010
-- Access 2007
-- Access 2003
+  - CI 120588
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Access for Office 365
+  - Access 2019
+  - Access 2016
+  - Access 2013
+  - Access 2010
+  - Access 2007
+  - Access 2003
 search.appverid: MET150
 ---
 

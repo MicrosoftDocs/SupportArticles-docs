@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: jalalb
-appliesto:
-- Office 365 for Mac
+appliesto: 
+  - Office 365 for Mac
 ---
 
 # "Office 365 Enterprise E3 setup is incomplete" error in Office 365 for Mac

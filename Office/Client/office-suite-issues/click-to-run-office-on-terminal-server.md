@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: offspms, andyfel
 search.appverid: 
-- MET150
-appliesto:
-- Office Professional Plus 2016
-- Office Standard 2016
-- Office Professional 2013
-- Office Home and Business 2013
-- Office Home and Student 2013
+  - MET150
+appliesto: 
+  - Office Professional Plus 2016
+  - Office Standard 2016
+  - Office Professional 2013
+  - Office Home and Business 2013
+  - Office Home and Student 2013
 ---
 
 # Error when opening the Click-to-Run version of an Office program or suite on a terminal server

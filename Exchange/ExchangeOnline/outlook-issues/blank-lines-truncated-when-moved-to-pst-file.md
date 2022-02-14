@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: michxu, rschaffr
-appliesto:
-- Exchange Online
-- Exchange Server
+appliesto: 
+  - Exchange Online
+  - Exchange Server
 search.appverid: MET150
 ---
 # Blank lines are truncated when a message is moved from online mode to a PST file

@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - MET150
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 # Error when you move mailboxes from on-premises to Exchange Online in a hybrid deployment: User is already being moved‎
 

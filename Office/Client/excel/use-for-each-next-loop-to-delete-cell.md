@@ -1,21 +1,20 @@
 ---
 title: Delete cells by using a For Each Next loop
-description: Provides a macro example that illustrates how to delete cells by using a "For Each...Next" loop.
+description: Provides a macro example that illustrates how to delete cells by using a For Each...Next loop.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
-- Microsoft Office Excel 2002
-- Excel 97
+appliesto: 
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
+  - Microsoft Office Excel 2002
+  - Excel 97
 ---
 
 # Delete cells by using a "For Each...Next" loop in Excel

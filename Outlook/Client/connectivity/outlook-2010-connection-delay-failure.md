@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: aruiz, gbratton
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Outlook 2010
+  - MET150
+appliesto: 
+  - Microsoft Outlook 2010
 ---
 # You may experience Outlook 2010 connection delays or failures when Outlook 2010 is configured to connect to two Office 365 accounts
 

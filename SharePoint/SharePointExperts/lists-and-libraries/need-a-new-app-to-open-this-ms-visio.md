@@ -6,14 +6,13 @@ ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- Microsoft SharePoint Server
-- SharePoint Online
+appliesto: 
+  - Microsoft SharePoint Server
+  - SharePoint Online
 ---
 
 # "You'll need a new app to open this ms-visio" when you open Visio files

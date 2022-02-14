@@ -1,19 +1,18 @@
 ---
 title: Unable to install SharePoint Server 2019
-description: Fixes an issue in which SharePoint Server 2019 Setup fails if the required version of Visual C++ Redistributable Package for Visual Studio 2017 isn't installed. 
+description: Fixes an issue in which SharePoint Server 2019 Setup fails if the required version of Visual C++ Redistributable Package for Visual Studio 2017 isn't installed.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.prod: sharepoint-server-itpro
 ms.custom: 
-- CI 114542
-- CSSTroubleshoot
+  - CI 114542
+  - CSSTroubleshoot
 ms.reviewer: troys
-appliesto:
-- SharePoint Server 2019
+appliesto: 
+  - SharePoint Server 2019
 search.appverid: MET150
 ---
 

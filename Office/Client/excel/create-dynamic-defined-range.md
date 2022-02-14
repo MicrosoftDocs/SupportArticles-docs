@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: v-barryb
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
-- Excel 2010
-- Excel 2007
-- Excel 2003
+  - MET150
+appliesto: 
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
+  - Excel 2003
 ---
 
 # How to create a dynamic defined range in an Excel worksheet

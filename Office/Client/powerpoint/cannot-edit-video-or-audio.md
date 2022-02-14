@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- PowerPoint 2013
-- PowerPoint 2010
-- Microsoft Office PowerPoint 2007
+appliesto: 
+  - PowerPoint 2013
+  - PowerPoint 2010
+  - Microsoft Office PowerPoint 2007
 ---
 
 # You cannot edit video or audio in PowerPoint if Desktop Experience is not installed

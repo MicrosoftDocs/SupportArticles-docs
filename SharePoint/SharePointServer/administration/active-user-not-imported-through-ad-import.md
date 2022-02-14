@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CI 109531
-- CSSTroubleshoot
+  - CI 109531
+  - CSSTroubleshoot
 ms.reviewer: bpeterse, dhirmeht
-appliesto:
-- SharePoint Server 2019
-- SharePoint Server 2016
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2019
+  - SharePoint Server 2016
+  - SharePoint Server 2013
 ---
 
 # Can't import active users through AD Import in a User Profile application in SharePoint

@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: gabesl
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Outlook 2016
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Outlook 2016
 ---
 
 # "The Calendar folder cannot be found" or "The Tasks folder cannot be found" error when you use Quick Steps in Outlook

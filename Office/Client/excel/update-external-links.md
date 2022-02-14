@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel for Office 365
-- Excel 2019
-- Excel 2016
-- Excel 2013
+appliesto: 
+  - Excel for Office 365
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
 ---
 
 # Error message when you update external links that contain a three-dimensional reference

@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Server 2013
-- Workflow Manager 1.0
+appliesto: 
+  - SharePoint Server 2013
+  - Workflow Manager 1.0
 ms.reviewer: valerieg, christys
 ---
 # (Specified RunAs account is invalid) error when you configure Workflow Manager 1.0

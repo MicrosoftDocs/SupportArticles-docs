@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mikestow
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
-- Excel 2010
+  - MET150
+appliesto: 
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
+  - Excel 2010
 ---
 
 # How to loop through a list of data on a worksheet by using macros in Excel

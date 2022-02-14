@@ -4,21 +4,20 @@ description: Describes an issue in which an Exchange public folder migration sto
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 112320
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 112320
+  - CSSTroubleshoot
 ms.reviewer: batre
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Service Pack 3
-- Exchange Server 2010 Standard
-- Exchange Online via Office 365 E Plans
-- Exchange Online via Office 365 P Plans
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Service Pack 3
+  - Exchange Server 2010 Standard
+  - Exchange Online via Office 365 E Plans
+  - Exchange Online via Office 365 P Plans
 search.appverid: MET150
 ---
 # Exchange public folder migration stops at 95% with error "There are [xx] Public Folders that could not be mail-enabled"

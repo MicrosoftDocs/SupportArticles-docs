@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
-- Exchange Online
+appliesto: 
+  - Skype for Business Online
+  - Exchange Online
 ---
 
 # Incoming Lync To Phone calls aren't transferred to Exchange Online Unified Messaging voice mail

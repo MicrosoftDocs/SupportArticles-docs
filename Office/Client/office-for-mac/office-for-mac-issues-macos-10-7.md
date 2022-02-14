@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Office for Mac 2004
-- Office for Mac 2008
-- Office for Mac 2011
+appliesto: 
+  - Office for Mac 2004
+  - Office for Mac 2008
+  - Office for Mac 2011
 ---
 
 # Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher

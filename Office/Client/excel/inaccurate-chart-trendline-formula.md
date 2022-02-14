@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel 2010
-- Microsoft Office Excel 2007
+appliesto: 
+  - Excel 2010
+  - Microsoft Office Excel 2007
 ms.reviewer: 
 ---
 # Chart trendline formula is inaccurate in Excel

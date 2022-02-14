@@ -6,20 +6,19 @@ ms.author: v-lianna
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI
-- CSSTroubleshoot
+  - Exchange Online
+  - CI
+  - CSSTroubleshoot
 ms.reviewer: meerak, joew, gbratton
-appliesto:
-- Exchange Online
-- Outlook for Android
-- Outlook for iOS
-- Outlook for Mac for Office 365
-- Outlook for Office 365
-- Outlook on the web
+appliesto: 
+  - Exchange Online
+  - Outlook for Android
+  - Outlook for iOS
+  - Outlook for Mac for Office 365
+  - Outlook for Office 365
+  - Outlook on the web
 search.appverid: MET150
 ---
 

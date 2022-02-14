@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Excel 2016 for Mac 
-- Outlook 2016 for Mac
-- Microsoft Excel for Mac 2011
-- Outlook 2011 for Mac
+appliesto: 
+  - Microsoft Excel 2016 for Mac
+  - Outlook 2016 for Mac
+  - Microsoft Excel for Mac 2011
+  - Outlook 2011 for Mac
 ---
 
 # Excel/Outlook for Mac: Border missing when pasting table in email

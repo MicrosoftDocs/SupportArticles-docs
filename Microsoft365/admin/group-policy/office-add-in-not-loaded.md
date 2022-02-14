@@ -5,22 +5,21 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.reviewer: gregmans
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2016
-- Outlook 2016
-- PowerPoint 2016
-- Word 2016
-- Word 2013
-- Outlook 2013
-- Excel 2013
-- PowerPoint 2013
+  - MET150
+appliesto: 
+  - Excel 2016
+  - Outlook 2016
+  - PowerPoint 2016
+  - Word 2016
+  - Word 2013
+  - Outlook 2013
+  - Excel 2013
+  - PowerPoint 2013
 ---
 
 # No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs

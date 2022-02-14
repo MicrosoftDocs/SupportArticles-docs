@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Office 365 User and Domain Management
+appliesto: 
+  - Office 365 User and Domain Management
 ---
 
 # Error message when you run the Office 365 Desktop Setup Tool: "Application configuration incomplete"

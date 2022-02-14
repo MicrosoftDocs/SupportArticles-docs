@@ -4,18 +4,17 @@ description: Describes an issue in which Teams owner unable to create a Planner 
 author: helenclu
 ms.author: cowitkow
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 120274
-- CSSTroubleshoot
+  - CI 120274
+  - CSSTroubleshoot
 ms.reviewer: cowitkow
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Teams owner unable to create a Planner tab

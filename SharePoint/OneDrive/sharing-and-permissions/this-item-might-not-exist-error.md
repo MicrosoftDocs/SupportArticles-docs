@@ -1,24 +1,23 @@
 ---
-title: (This item might not exist or is no longer available) error when using OneDrive 
+title: (This item might not exist or is no longer available) error when using OneDrive
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 12/16/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- OneDrive
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - OneDrive
 ms.custom: 
-- CI 125780
-- CI 147421
-- CSSTroubleshoot 
+  - CI 125780
+  - CI 147421
+  - CSSTroubleshoot
 ms.reviewer: prbalusu
-description: Describes a solution to the error "This item might not exist or is no longer available" when accessing OneDrive.
+description: Describes a solution to the error This item might not exist or is no longer available when accessing OneDrive.
 ---
 
 # "This item might not exist" error when accessing OneDrive

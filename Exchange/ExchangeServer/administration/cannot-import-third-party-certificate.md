@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: batre, skumarg, batre
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Certificate status could not be determined because revocation check failed when importing third-party certificate

@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel 2013
-- Excel 2010
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
-ms.reviewer:
+appliesto: 
+  - Excel 2013
+  - Excel 2010
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
+ms.reviewer: 
 ---
 # Last digits are changed to zeros when you type long numbers in cells of Excel
 

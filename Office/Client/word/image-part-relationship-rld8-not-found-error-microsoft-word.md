@@ -7,13 +7,12 @@ ms.reviewer: shraycha
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
-appliesto:
-- Microsoft Word
+appliesto: 
+  - Microsoft Word
 ---
 
 # "The image part with relationship rID8 was not found" error in Microsoft Word

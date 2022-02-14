@@ -1,24 +1,23 @@
 ---
-title: Known issues in Rooms 
+title: Known issues in Rooms
 ms.author: luche
 author: helenclu
 ms.reviewer: sohailta
 manager: serdars
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: msteams
-f1.keywords:
-- NOCSH
+f1.keywords: 
+  - NOCSH
 localization_priority: Normal
 ms.collection: 
   - M365-collaboration
 description: Admin can learn about a list of known issues for Microsoft Teams Rooms, including update, user interface, hardware, and limitations and expected behaviors.
 ms.custom: 
-- seo-marvel-apr2020
-- CSSTroubleshoot
-- CI 121996
+  - seo-marvel-apr2020
+  - CSSTroubleshoot
+  - CI 121996
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Known issues in Rooms
 

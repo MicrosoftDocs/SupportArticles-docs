@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: sloanc, briance
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Excel 2007
-- Excel 2010
-- Excel 2013
-- Excel 2016
+  - MET150
+appliesto: 
+  - Microsoft Office Excel 2007
+  - Excel 2010
+  - Excel 2013
+  - Excel 2016
 ---
 
 # Method to calculate interpolation step value in Excel

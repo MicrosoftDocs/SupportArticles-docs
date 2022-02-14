@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft 365
+appliesto: 
+  - Microsoft 365
 search.appverid: MET150
 ---
 # Create and manage resource mailboxes in Microsoft 365

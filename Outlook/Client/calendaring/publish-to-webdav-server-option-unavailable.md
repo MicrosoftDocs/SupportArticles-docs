@@ -1,19 +1,18 @@
 ---
 title: The Publish to WebDAV Server option is unavailable
-description: Work around an issue in which the "Publish to WebDAV Server" option is unavailable for a calendar after you install the October cumulative update 2825825 for Outlook 2010.
+description: Work around an issue in which the Publish to WebDAV Server option is unavailable for a calendar after you install the October cumulative update 2825825 for Outlook 2010.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gbratton
-appliesto:
-- Microsoft Outlook 2010
+appliesto: 
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # Publish to WebDAV Server option is unavailable for a calendar in Outlook 2010

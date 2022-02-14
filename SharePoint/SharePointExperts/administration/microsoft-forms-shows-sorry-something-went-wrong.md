@@ -1,20 +1,19 @@
 ---
-title: Microsoft Forms shows "Sorry, something went wrong"
-description: This article explains how to resolve the Microsoft Forms error, "Sorry, something went wrong".
+title: Microsoft Forms shows Sorry, something went wrong
+description: This article explains how to resolve the Microsoft Forms error, Sorry, something went wrong.
 author: helenclu
 ms.author: warrenr
 ms.date: 02/08/2021
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- Microsoft Forms
+appliesto: 
+  - SharePoint Online
+  - Microsoft Forms
 ---
 
 # Microsoft Forms shows "Sorry, something went wrong"

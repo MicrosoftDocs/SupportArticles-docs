@@ -5,18 +5,17 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 Identity Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 Identity Management
 ---
 
 # How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure

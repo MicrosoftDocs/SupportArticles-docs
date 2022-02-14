@@ -7,14 +7,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft 365
+appliesto: 
+  - Microsoft 365
 search.appverid: MET150
 ---
 # Sharing calendar and contacts in Microsoft 365

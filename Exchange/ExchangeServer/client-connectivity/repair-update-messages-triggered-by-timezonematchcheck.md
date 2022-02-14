@@ -7,20 +7,19 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: jmartin
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Exchange Online
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Exchange Online
 search.appverid: MET150
 ---
 # Repair update messages are triggered by TimeZoneMatchCheck failures in Exchange Server

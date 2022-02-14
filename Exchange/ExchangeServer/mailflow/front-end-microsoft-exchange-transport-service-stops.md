@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2016 Enterprise Edition
+  - Exchange Server
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
 ---
 # The front-end Microsoft Exchange Transport service stops and doesn't restart in Exchange Server 2013 SP1 or Exchange Server 2016

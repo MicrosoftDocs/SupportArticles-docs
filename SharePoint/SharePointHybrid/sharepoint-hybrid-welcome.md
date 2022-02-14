@@ -4,15 +4,14 @@ description: This article lists SharePoint hybrid related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Server
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server
 ---
 
 # Hybrid deployment troubleshooting

@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 365
+  - MET150
+appliesto: 
+  - Office 365
 ---
 
 # How to set language and region settings for Office 365

@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Excel 2007
-- Excel 2003
+appliesto: 
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
+  - Excel 2003
 ---
 
 # Recalculation of a worksheet that contains a SUMIF formula takes longer than expected to finish

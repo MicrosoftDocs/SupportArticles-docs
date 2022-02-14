@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: wlong, sidd
-appliesto:
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Cannot reset the value of the Local replica age limit (days) setting to 0 or to NULL

@@ -6,19 +6,18 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- Exchange Online
-- CSSTroubleshoot
-- CI 126427
+ms.custom: 
+  - Exchange Online
+  - CSSTroubleshoot
+  - CI 126427
 ms.reviewer: ddenson
-appliesto:
-- Exchange Server 2019
-- Exchange Online
-- Exchange Server 2010
-- Exchange Server 2013
-- Exchange Server 2016
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Online
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
 search.appverid: MET150
 ---
 # Inline UUEncoded attachments of email messages from a UNIX-based application are garbled or are unreadable

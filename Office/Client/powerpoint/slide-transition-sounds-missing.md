@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 search.appverid: 
-- MET150
-appliesto:
-- PowerPoint 2010
-- PowerPoint Home and Student 2010
-- PowerPoint 2013
+  - MET150
+appliesto: 
+  - PowerPoint 2010
+  - PowerPoint Home and Student 2010
+  - PowerPoint 2013
 ---
 
 # Sounds missing after a PowerPoint presentation is saved as video

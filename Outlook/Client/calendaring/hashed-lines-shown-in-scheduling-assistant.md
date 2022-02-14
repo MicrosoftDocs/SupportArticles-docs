@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: balinger, v-shum, v-huzhan
-appliesto:
-- Exchange Server 2016
+appliesto: 
+  - Exchange Server 2016
 search.appverid: MET150
 ---
 # Hashed lines shown in scheduling assistant when Exchange Server 2016 tries to retrieve free/busy information across untrusted forests

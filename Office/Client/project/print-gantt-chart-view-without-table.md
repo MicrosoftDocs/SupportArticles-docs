@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: adrianje
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150 
-appliesto:
-- Project Professional 2010
-- Microsoft Office Project Professional 2003
-- Microsoft Office Project Standard 2003
+  - MET150
+appliesto: 
+  - Project Professional 2010
+  - Microsoft Office Project Professional 2003
+  - Microsoft Office Project Standard 2003
 ---
 
 # How to print a Gantt Chart view without table information

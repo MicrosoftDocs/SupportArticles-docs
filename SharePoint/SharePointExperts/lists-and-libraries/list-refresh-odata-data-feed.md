@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 ms.author: zakirh
-appliesto:
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2013
 ---
 
 # PowerPivot scheduled data refresh from a SharePoint list by using OData data feed connection (PowerPivot 2012 SP1 for SharePoint 2013)

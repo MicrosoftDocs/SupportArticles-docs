@@ -4,19 +4,18 @@ description: Describes an issue in which provisioning of user/mailbox or synchro
 author: simonxjx
 ms.author: rroddy
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 120630
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 120630
+  - CSSTroubleshoot
 ms.reviewer: rroddy
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
 

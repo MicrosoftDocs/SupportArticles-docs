@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: scotlanw
-appliesto:
-- Office Professional Plus 2013
-- SharePoint Online
-- OneDrive for Business
+appliesto: 
+  - Office Professional Plus 2013
+  - SharePoint Online
+  - OneDrive for Business
 ---
 
 # Office 365 users cannot open or synchronize SharePoint files after the Office 2013: March 12, 2013 update is installed

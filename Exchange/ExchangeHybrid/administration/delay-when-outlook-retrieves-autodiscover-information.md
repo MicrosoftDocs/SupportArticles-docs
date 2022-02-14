@@ -6,20 +6,19 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: andypunt, jmartin
-appliesto:
-- Exchange Online
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Delay when Outlook retrieves Autodiscover information for an Exchange Online mailbox in a hybrid environment

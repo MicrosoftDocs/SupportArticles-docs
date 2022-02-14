@@ -4,18 +4,17 @@ description: If a user account is re-enabled for logon, the user may not see pre
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
 ms.custom: 
-- CI 141869
-- CSSTroubleshoot
+  - CI 141869
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # You don't see team members after your account is re-enabled
 

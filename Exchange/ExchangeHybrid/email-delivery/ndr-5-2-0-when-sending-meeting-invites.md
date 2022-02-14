@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: kellybos
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # Users receive NDR 5.2.0 when they send meeting invites in Microsoft 365 hybrid environment

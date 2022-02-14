@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: luche
 ms.editor: v-jesits
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-appliesto:
-- Outlook for Microsoft 365
-- Outlook 2016
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2016
+  - Outlook 2013
 ---
 
 # Can't send or receive email in Outlook and "Metered Connection Warning" is triggered

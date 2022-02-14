@@ -5,19 +5,18 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
-- Lync 2010
-- Lync 2013
-- Microsoft Office Communications Online Dedicated
-- Microsoft Business Productivity Online Dedicated
+appliesto: 
+  - Skype for Business Online
+  - Lync 2010
+  - Lync 2013
+  - Microsoft Office Communications Online Dedicated
+  - Microsoft Business Productivity Online Dedicated
 ---
 
 # You can't set your location in Lync from a virtual machine or remote desktop connection

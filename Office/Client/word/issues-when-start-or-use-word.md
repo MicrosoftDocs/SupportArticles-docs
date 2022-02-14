@@ -6,22 +6,21 @@ manager: dcscontentpm
 ms.date: 5/5/2020
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: 
-- CI 117479
-- CSSTroubleshoot
+  - CI 117479
+  - CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Word for Microsoft 365
-- Word 2019
-- Word 2016
-- Word 2013
-- Word 2010
-- Word 2007
-- Word 2003
+appliesto: 
+  - Word for Microsoft 365
+  - Word 2019
+  - Word 2016
+  - Word 2013
+  - Word 2010
+  - Word 2007
+  - Word 2003
 ---
 
 # Troubleshoot problems that occur when you start or use Word

@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: v-six, genli, christys, meerak, anthonge, ninob
-appliesto:
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2016 Enterprise Edition
+appliesto: 
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
 ---
 # 1009 errors flood Application log for lagged database copies in Exchange Server 2016

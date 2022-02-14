@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 111294
-- CSSTroubleshoot
+  - CI 111294
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: KSWALLOW 
-appliesto:
-- Access 2007
+ms.reviewer: KSWALLOW
+appliesto: 
+  - Access 2007
 ---
 
 # How to determine who is logged on to a database by using Microsoft Jet UserRoster in Access

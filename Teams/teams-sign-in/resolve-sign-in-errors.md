@@ -1,21 +1,20 @@
 ---
 title: Resolve sign-in errors in Teams
-description: Provides troubleshooting steps if you encounter errors when trying to sign in to Microsoft Teams. 
+description: Provides troubleshooting steps if you encounter errors when trying to sign in to Microsoft Teams.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 156289
-- CSSTroubleshoot
+  - CI 156289
+  - CSSTroubleshoot
 ms.reviewer: billkau; meerak
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Resolve sign-in errors in Teams
 

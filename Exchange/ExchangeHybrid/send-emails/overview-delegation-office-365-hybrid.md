@@ -4,18 +4,17 @@ description: Describes the Full Access, Send As, Send on Behalf of, and Folder p
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
-ms.service: exchange-online
+  - Exchange Hybrid
+  - CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: kellybos
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
+  - MET150
+appliesto: 
+  - Exchange Online
 ---
 # Overview of delegation in an Office 365 hybrid environment
 

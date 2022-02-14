@@ -7,15 +7,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # The Have replies sent to option does not work when your mailbox has server autoreply configured

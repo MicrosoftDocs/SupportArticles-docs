@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: patrigan, fselkirk
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Server 2013
-- SharePoint Workspace 2010
+appliesto: 
+  - SharePoint Server 2013
+  - SharePoint Workspace 2010
 ---
 
 # You cannot connect a SharePoint workspace in SharePoint Workspace 2010 to an Office SharePoint Server 2007 site

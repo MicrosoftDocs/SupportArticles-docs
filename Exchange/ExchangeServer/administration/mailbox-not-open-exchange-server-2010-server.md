@@ -5,19 +5,18 @@ author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: batre, batre, wduff
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard 
+  - MET150
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 ---
 # You can't open your mailbox on an Exchange Server 2010 server by using Outlook
 

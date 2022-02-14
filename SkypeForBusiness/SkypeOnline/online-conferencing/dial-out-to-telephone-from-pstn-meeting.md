@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, kristinw, oscarr, nmurav, lynnroe, cbland, rischwen, leonarwo
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # "Cannot be reached" when you dial out to a telephone number from a PSTN Conferencing meeting in Skype for Business Online

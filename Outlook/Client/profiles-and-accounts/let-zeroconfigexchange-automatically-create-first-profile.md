@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Outlook 2019
-- Outlook 2016
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
 search.appverid: MET150
 ---
 # How to manually create additional Outlook 2016 profiles with ZeroConfigExchange in place

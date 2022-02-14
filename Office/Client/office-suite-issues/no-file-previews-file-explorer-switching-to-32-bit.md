@@ -7,19 +7,18 @@ manager: dcscontentpm
 ms.date: 06/4/2021
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Office
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Office
 ms.custom: 
-- CI 113658
-- CI 146008
-- CI 150116
-- CSSTroubleshoot 
-ms.reviewer: salarson 
+  - CI 113658
+  - CI 146008
+  - CI 150116
+  - CSSTroubleshoot
+ms.reviewer: salarson
 ---
 
 # "Could not create the work file” error in Office

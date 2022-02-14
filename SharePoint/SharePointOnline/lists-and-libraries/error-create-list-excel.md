@@ -6,13 +6,12 @@ ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Error when creating a list from Excel: Something went wrong. The file does not exist

@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: akeeler
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
-- Excel 2010
-- Excel 2007
+  - MET150
+appliesto: 
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
 ---
 
 # How Excel determines the current mode of calculation

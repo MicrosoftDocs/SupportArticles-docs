@@ -3,19 +3,18 @@ title: List of reserved words in Access
 description: Lists the reserved words that you should not use in field, object, and variable names. It is not practical to provide a list of all reserved words, such as built-in function names or Access user-defined names.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: markdun, robdil
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
-- Microsoft Office Access 2002
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
+  - Microsoft Office Access 2002
 search.appverid: MET150
 ---
 # List of reserved words in Access 2002 and in later versions of Access

@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: sbradley, gbratton
-appliesto:
-- Outlook 2016
-- Outlook for Office 365
+appliesto: 
+  - Outlook 2016
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Various attachment saving scenarios do not work as expected in Outlook 2016

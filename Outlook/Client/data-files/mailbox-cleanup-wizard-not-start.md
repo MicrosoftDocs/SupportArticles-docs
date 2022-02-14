@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: aruiz, sercast
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # The Mailbox Cleanup Wizard doesn't start in Outlook 2010 or Outlook 2013 when the mailbox is full

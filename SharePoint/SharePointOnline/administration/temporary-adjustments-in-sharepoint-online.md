@@ -1,23 +1,22 @@
 ---
-title: SharePoint Online service process schedule temporary change 
+title: SharePoint Online service process schedule temporary change
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 03/25/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 115969
-- CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: Microsoft is temporarily restricting some SharePoint Online processes to operate only during off-peak hours. 
+  - CI 115969
+  - CSSTroubleshoot
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
+description: Microsoft is temporarily restricting some SharePoint Online processes to operate only during off-peak hours.
 ---
 
 # Temporary changes in process schedule for SharePoint Online services

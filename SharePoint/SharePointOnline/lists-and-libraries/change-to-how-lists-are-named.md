@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 11/9/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 124631
-- CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
+  - CI 124631
+  - CSSTroubleshoot
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
 description: Describes a change to how lists are named in Microsoft Lists, Teams, and SharePoint.
 ---
 

@@ -7,17 +7,16 @@ localization_priority: Normal
 ms.date: 06/10/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 ms.custom: 
-- CSSTroubleshoot
-- CI 119743
-search.appverid:
-- SPO160
-- MET150
+  - CSSTroubleshoot
+  - CI 119743
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
 description: A retention policy continues to delete documents even after workloads are removed from the policy
-appliesto:
-- OneDrive for Business
+appliesto: 
+  - OneDrive for Business
 ---
 
 # A retention policy deletes documents after workload is removed from the policy

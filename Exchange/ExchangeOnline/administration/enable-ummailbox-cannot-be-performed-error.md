@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Online
-- Skype for Business Online
+appliesto: 
+  - Exchange Online
+  - Skype for Business Online
 search.appverid: MET150
 ---
 # Enable-UMMailbox... cannot be performed error in Exchange Online

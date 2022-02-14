@@ -3,18 +3,17 @@ title: Shareable links overview and troubleshooting
 description: Provides an overview of shareable links in Outlook and resolutions for common issues.
 author: v-lianna
 ms.author: v-lianna
-manager: dcscontentpm 
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 155669
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 155669
+  - CSSTroubleshoot
 ms.reviewer: meerak; stevenle; gbratton; aruiz; vijayde
-appliesto:
-- Outlook for Office 365
+appliesto: 
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Shareable links in Outlook

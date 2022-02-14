@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # User can still access their on-premises mailbox after it is moved to Exchange Online in a hybrid deployment

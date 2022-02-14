@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: jhayes
-appliesto:
-- Exchange Online
-- Exchange Server 2010 Enterprise 
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # Subtask CheckPrereqs execution failed error when you run the Hybrid Configuration wizard

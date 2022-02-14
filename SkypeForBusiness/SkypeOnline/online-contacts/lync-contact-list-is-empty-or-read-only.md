@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans, pankajr
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # Lync contact list is empty or read-only after a user's Exchange mailbox is disconnected, unlicensed, or moved

@@ -1,20 +1,19 @@
 ---
 title: Insufficient access rights to perform the operation when move or enable user
-description: Lync Server Control Panel returns that error "Insufficient access rights move user or enable user command. This issue occurs when the user account t to perform the operation" when attempting a hat needs to be enabled for Lync or moved to a Lync registrar pool is a member of a protected Windows security group.
+description: Lync Server Control Panel returns that error Insufficient access rights move user or enable user command. This issue occurs when the user account t to perform the operation when attempting a hat needs to be enabled for Lync or moved to a Lync registrar pool is a member of a protected Windows security group.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Lync Server 2010 Enterprise Edition 
-- Lync Server 2010 Standard Edition 
-- Lync Server 2013
+appliesto: 
+  - Lync Server 2010 Enterprise Edition
+  - Lync Server 2010 Standard Edition
+  - Lync Server 2013
 ---
 
 # Lync Server Control Panel returns that error "Insufficient access rights to perform the operation" when attempting a move user or enable user command

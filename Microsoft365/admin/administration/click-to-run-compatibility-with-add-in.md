@@ -4,16 +4,15 @@ description: Discusses Office 2010 Click-to-Run compatibility with add-ins.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: gquintin
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 2010
+  - MET150
+appliesto: 
+  - Office 2010
 ---
 
 # Office 2010 Click-to-Run compatibility with add-ins

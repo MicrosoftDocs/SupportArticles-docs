@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Project Online
-- Project Server 2013
+appliesto: 
+  - Project Online
+  - Project Server 2013
 ---
 
 # Project Publish jobs remain at 80 percent for a long time before completing

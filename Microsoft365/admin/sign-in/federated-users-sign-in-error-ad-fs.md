@@ -5,19 +5,18 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.reviewer: v-jocomf
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Azure Backup
-- Microsoft Intune
-- Office 365 Identity Management
+  - MET150
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Azure Backup
+  - Microsoft Intune
+  - Office 365 Identity Management
 ---
 
 # "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune

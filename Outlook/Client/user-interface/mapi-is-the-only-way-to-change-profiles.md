@@ -7,16 +7,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: danba, brijs, Andrei.Ghita, gbratton, dvespa
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 search.appverid: MET150
 ---
 # MAPI is the only supported way to programmatically change profiles

@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: daveh
-appliesto:
-- Lync Server 2013
+appliesto: 
+  - Lync Server 2013
 ---
 
 # You cannot start a front-end server when a SQL Server transaction log reaches maximum capacity in a Lync Server 2013 environment

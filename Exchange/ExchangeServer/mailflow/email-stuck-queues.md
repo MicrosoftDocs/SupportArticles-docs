@@ -5,20 +5,19 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: exchange-server-it-pro
 ms.topic: troubleshooting
 ms.author: sesteven
 ms.custom: 
-- CSSTroubleshoot
-- CI 124314
-- Exchange Server
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - CSSTroubleshoot
+  - CI 124314
+  - Exchange Server
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 
 # Email messages are stuck in Exchange Server queues for several minutes

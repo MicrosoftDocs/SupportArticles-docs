@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: robwhal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Online
+  - MET150
+appliesto: 
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Online
 ---
 # Error (Method not found or Can't generate Export-Module) in Exchange Management Shell and remote PowerShell
 

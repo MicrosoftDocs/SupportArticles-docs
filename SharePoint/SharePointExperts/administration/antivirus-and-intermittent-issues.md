@@ -6,13 +6,12 @@ ms.author: jhaak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- Office Online Server
+appliesto: 
+  - Office Online Server
 ---
 
 # Antivirus and intermittent issues when you view Office documents by using Office Online Server

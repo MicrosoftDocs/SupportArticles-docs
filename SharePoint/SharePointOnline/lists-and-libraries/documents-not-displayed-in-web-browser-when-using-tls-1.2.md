@@ -1,18 +1,17 @@
-﻿---
+---
 title: Documents aren't displayed in web browser when you're using TLS 1.2
 description: Describes an issue that blocks Microsoft Office Online documents from being displayed in a web browser. Occurs because Office Online Server does not support TLS 1.2 when rendering documents on HTTPS SharePoint sites. A resolution is offered.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Office Online Server
+appliesto: 
+  - Office Online Server
 ---
 
 # Documents aren't displayed in web browser when you're using TLS 1.2  

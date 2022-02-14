@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: dkuy, nathanad
 search.appverid: 
-- MET150
-appliesto:
-- Visio Professional 2013
-- Visio Standard 2013
+  - MET150
+appliesto: 
+  - Visio Professional 2013
+  - Visio Standard 2013
 ---
 
 # Error message when you open a file type that is blocked by registry policy settings in Visio 2013

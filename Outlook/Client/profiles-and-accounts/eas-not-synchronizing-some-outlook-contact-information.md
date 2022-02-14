@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: wduff, sudhakr
-appliesto:
-- Exchange Server 2010
-- Exchange Server 2007
+appliesto: 
+  - Exchange Server 2010
+  - Exchange Server 2007
 search.appverid: MET150
 ---
 # Exchange ActiveSync does not synchronize some Outlook contact information as expected

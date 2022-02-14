@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Access for Office 365
-- Access LTSC 2021
-- Access 2019
-- Access 2016
-- Access 2013
+appliesto: 
+  - Access for Office 365
+  - Access LTSC 2021
+  - Access 2019
+  - Access 2016
+  - Access 2013
 ---
 
 # Access linked table to SQL Server database returns "#Deleted"

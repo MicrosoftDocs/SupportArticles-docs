@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 8/29/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- PowerPoint
+appliesto: 
+  - PowerPoint
 ms.custom: 
-- CI 106705
-- CSSTroubleshoot
+  - CI 106705
+  - CSSTroubleshoot
 ms.reviewer: randring
 description: Describes how to resolve an issue where PowerPoint files do not render correctly after installing a security update.
 ---

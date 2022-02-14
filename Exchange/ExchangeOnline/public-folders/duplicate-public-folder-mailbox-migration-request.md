@@ -3,19 +3,18 @@ title: Duplicate public folder mailbox migration request
 description: Fixes an issue in which you can't remove a failed public folder mailbox migration request because it's orphaned or a duplicate.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 149097
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 149097
+  - CSSTroubleshoot
 ms.reviewer: haembab
 editor: v-jesits
-appliesto:
-- Exchange Online 
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # "DestinationADNotUpToDatePermanentException" error in a public folder mailbox migration request

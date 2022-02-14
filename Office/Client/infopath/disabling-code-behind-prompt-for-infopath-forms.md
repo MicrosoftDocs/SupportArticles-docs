@@ -1,6 +1,6 @@
 ---
 title: Disabling code-behind prompt for InfoPath forms
-description: Describes how to resolve an InfoPath issue where you are prompted for confirmation before running code in a form. 
+description: Describes how to resolve an InfoPath issue where you are prompted for confirmation before running code in a form.
 author: helenclu
 ms.author: luche
 ms.reviewer: dmahugh
@@ -8,12 +8,11 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
-appliesto:
-- Microsoft InfoPath
+appliesto: 
+  - Microsoft InfoPath
 ---
 # Disabling code-behind prompt for InfoPath forms
 

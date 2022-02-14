@@ -6,21 +6,20 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: sercast
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Microsoft Office Outlook 2003
-- Outlook for Office 365
-- Outlook 2010 with Business Contact Manager
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Microsoft Office Outlook 2003
+  - Outlook for Office 365
+  - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
 ---
 # Description of the AutoArchive feature in Outlook

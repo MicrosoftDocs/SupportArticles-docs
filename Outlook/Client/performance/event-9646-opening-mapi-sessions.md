@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: sschiem
-appliesto:
-- Exchange Server 2013 Enterprise Edition
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Exchange Server 2013 Enterprise Edition
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # Event ID 9646 when a service account opens many MAPI sessions

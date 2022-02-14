@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Office 365 Identity Management
+appliesto: 
+  - Office 365 Identity Management
 ---
 
 # "Your account has been locked. Contact your support person to unlock it, then try again." error when signing in to Microsoft 365

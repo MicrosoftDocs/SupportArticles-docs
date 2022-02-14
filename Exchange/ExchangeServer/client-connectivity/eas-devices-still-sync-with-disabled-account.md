@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: austinmc, pabbott
-appliesto:
-- Exchange Server
+appliesto: 
+  - Exchange Server
 search.appverid: MET150
 ---
 # EAS devices still sync after an account is disabled or a password is changed

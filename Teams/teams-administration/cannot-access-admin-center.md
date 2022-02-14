@@ -4,18 +4,17 @@ description: Describes an issue in which you are not able to access Microsoft Te
 author: helenclu
 ms.author: scapero
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 121035
-- CSSTroubleshoot
+  - CI 121035
+  - CSSTroubleshoot
 ms.reviewer: scapero
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Error when accessing the Microsoft Teams admin center: We can't get the activity log

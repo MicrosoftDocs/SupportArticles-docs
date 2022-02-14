@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: arhinesm
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- PowerPoint Web App
+appliesto: 
+  - PowerPoint Web App
 ---
 
 # Increasing the size limit of embedded media for the Microsoft PowerPoint Online

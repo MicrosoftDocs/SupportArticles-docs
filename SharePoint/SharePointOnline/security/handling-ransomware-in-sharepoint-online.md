@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 2/18/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online 
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 113549
-- CSSTroubleshoot 
-ms.reviewer: salarson 
-description: Ways to handle ransomware issues in SharePoint Online. 
+  - CI 113549
+  - CSSTroubleshoot
+ms.reviewer: salarson
+description: Ways to handle ransomware issues in SharePoint Online.
 ---
 
 # Handling ransomware in Sharepoint Online

@@ -6,13 +6,12 @@ ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: sap:spsexperts, CSSTroubleshoot
-appliesto:
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2013
 ---
 
 # "Call to Excel Services failed" error when you run a scheduled data refresh by using PowerPivot

@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Server 2010
+appliesto: 
+  - SharePoint Server 2010
 ---
 
 # A user's display name is incorrect on a company's SharePoint MySite page

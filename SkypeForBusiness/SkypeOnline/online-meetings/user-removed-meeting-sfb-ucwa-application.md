@@ -1,23 +1,22 @@
 ---
 title: Users are removed from a meeting while using Skype for Business UCWA applications
-description: This article describes an issue where users are removed from a meeting while using Skype for Business UCWA applications. 
+description: This article describes an issue where users are removed from a meeting while using Skype for Business UCWA applications.
 author: simonxjx
 ms.author: gclark
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: skype-for-business-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 117592
-- CSSTroubleshoot
+  - CI 117592
+  - CSSTroubleshoot
 ms.reviewer: gclark
-appliesto:
-- Skype for Business Online
-- Skype for Business 2019
-- Skype for Business 2015
+appliesto: 
+  - Skype for Business Online
+  - Skype for Business 2019
+  - Skype for Business 2015
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Users are removed from a meeting while using Skype for Business UCWA applications

@@ -6,17 +6,16 @@ manager: dcscontentpm
 date: 3/16/2020
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CI 115151
-- CSSTroubleshoot
+  - CI 115151
+  - CSSTroubleshoot
 ms.reviewer: timball
 search.appverid: 
-- MET150
-appliesto:
-- Office 365 User and Domain Management
+  - MET150
+appliesto: 
+  - Office 365 User and Domain Management
 ---
 
 # "Invalid user name" when you try to create a user name that contains a special character in Office 365

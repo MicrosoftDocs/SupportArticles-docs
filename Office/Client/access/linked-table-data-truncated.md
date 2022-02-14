@@ -1,25 +1,24 @@
 ---
-title: Data is truncated to 255 characters in a linked table 
+title: Data is truncated to 255 characters in a linked table
 description: Data in a linked table that's linked to an Excel spreadsheet is limited to 255 characters in an Access database. Import the Excel spreadsheet rather than linking to the spreadsheet in your database.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Access for Office 365
-- Access 2019
-- Access 2016
-- Access 2013
-- Access 2010
-- Access 2007
-- Access 2003
+appliesto: 
+  - Access for Office 365
+  - Access 2019
+  - Access 2016
+  - Access 2013
+  - Access 2010
+  - Access 2007
+  - Access 2003
 search.appverid: MET150
 ---
 

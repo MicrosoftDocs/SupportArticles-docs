@@ -5,22 +5,21 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: outlook
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 119623
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: sercast
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Office Outlook 2007
-- Office Outlook 2003
+  - MET150
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Office Outlook 2007
+  - Office Outlook 2003
 ---
 # Some rules are disabled, and you receive an error message when you try to create or enable rules in Outlook
 

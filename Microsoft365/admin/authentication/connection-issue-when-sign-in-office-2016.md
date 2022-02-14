@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 2016
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 2016
 ---
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10

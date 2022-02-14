@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tafa
-appliesto:
-- Outlook
-- Office 365
+appliesto: 
+  - Outlook
+  - Office 365
 search.appverid: MET150
 ---
 # You don't have permission to create an entry in this folder error when you add contacts to a contacts folder

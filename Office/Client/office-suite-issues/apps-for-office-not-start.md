@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: pconlan, misaun
 search.appverid: 
-- MET150
-appliesto:
-- Office 2013
+  - MET150
+appliesto: 
+  - Office 2013
 ---
 
 # Office Add-in doesn't start if you disable protected mode for the Restricted Sites zone in Internet Explorer

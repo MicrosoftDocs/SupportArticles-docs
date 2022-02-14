@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Lync Server 2010 Enterprise Edition 
-- Lync Server 2010 Standard Edition 
-- Lync Server 2013
+appliesto: 
+  - Lync Server 2010 Enterprise Edition
+  - Lync Server 2010 Standard Edition
+  - Lync Server 2013
 ---
 
 # Lync Server Central Management Store replication failures

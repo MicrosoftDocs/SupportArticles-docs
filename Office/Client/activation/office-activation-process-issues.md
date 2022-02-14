@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: sfrancis, sloanc, andyfel, djess, arykhus, mosesma, ryanwei, tomol, joanned
 search.appverid: 
-- MET150
-appliesto:
-- Office 2016
-- Office 2013
-- Office 2010
+  - MET150
+appliesto: 
+  - Office 2016
+  - Office 2013
+  - Office 2010
 ---
 
 # Information about the error codes and corresponding descriptions of Microsoft Office activation process issues that can be repaired by using the Office Repair tool

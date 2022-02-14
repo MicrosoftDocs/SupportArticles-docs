@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office Excel 2007
-- Office Excel 2003
-- Excel 2002
+appliesto: 
+  - Office Excel 2007
+  - Office Excel 2003
+  - Excel 2002
 ---
 
 # Procedure to export a text file with both comma and quote delimiters in Excel

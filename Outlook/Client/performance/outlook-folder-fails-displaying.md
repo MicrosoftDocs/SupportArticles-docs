@@ -1,23 +1,22 @@
 ---
 title: Outlook has insufficient memory to display a folder
-description: Fixes an issue in which Outlook folder can't be displayed because of insufficient memory. This issue occurs more frequently if you use add-ins in Outlook. 
+description: Fixes an issue in which Outlook folder can't be displayed because of insufficient memory. This issue occurs more frequently if you use add-ins in Outlook.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 112697
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 112697
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2010
-- Outlook 2013
-- Outlook 2016
-- Outlook 2019
+appliesto: 
+  - Outlook 2010
+  - Outlook 2013
+  - Outlook 2016
+  - Outlook 2019
 search.appverid: MET150
 ---
 

@@ -4,22 +4,21 @@ description: This article describes an issue in which users cannot create or cha
 author: helenclu
 ms.author: tasitae
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: 
-- Outlook for Windows
-- CI 105069
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 105069
+  - CSSTroubleshoot
 ms.reviewer: gquintin,tasitae,EXOL_Triage
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
 ---
 
 # Error in Outlook when you create or change client-only rules that apply to messages from 20 or more people

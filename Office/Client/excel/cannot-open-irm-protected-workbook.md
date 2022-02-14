@@ -4,16 +4,15 @@ description: Works around an issue in which you receive an error message and you
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-ms.reviewer: anitao, jenl 
+ms.reviewer: anitao, jenl
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel 2013
 ---
 
 # You cannot open an IRM protected workbook in Protected View in Excel 2013

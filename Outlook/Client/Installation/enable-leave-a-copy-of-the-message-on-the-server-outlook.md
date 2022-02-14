@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: v-kimhal
-appliesto:
-- Microsoft Outlook 2010
-- Outlook 2010 with Business Contact Manager
-- Outlook 2013
-- Outlook 2016
-- Outlook for Office 365
-- Outlook 2019  
+appliesto: 
+  - Microsoft Outlook 2010
+  - Outlook 2010 with Business Contact Manager
+  - Outlook 2013
+  - Outlook 2016
+  - Outlook for Office 365
+  - Outlook 2019
 search.appverid: MET150
 ---
 # Leave a copy of the message on the server is missing in Outlook

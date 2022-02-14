@@ -4,18 +4,17 @@ description: Troubleshooting the Microsoft 365 Apps activation error The account
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157755
-- CI 159112
+  - CSSTroubleshoot
+  - CI 157755
+  - CI 159112
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation error “The account isn’t associated with this Office product”

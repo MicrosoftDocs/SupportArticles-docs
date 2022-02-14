@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: mahesha, miadkins, rdubois, premgan, landerl, bwilson, brandber, dahans
-appliesto:
-- Lync Server 2013
+appliesto: 
+  - Lync Server 2013
 ---
 
 # Can't sign in to a Lync client or signs in to the client in limited functionality mode in a Lync Server 2013 environment

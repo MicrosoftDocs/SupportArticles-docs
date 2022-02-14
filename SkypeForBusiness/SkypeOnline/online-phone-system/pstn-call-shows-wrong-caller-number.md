@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, corbinm, cbland, lynnroe, nmurav, yoren
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # PSTN call from Skype for Business mobile client shows wrong caller number in Cloud Connector Edition

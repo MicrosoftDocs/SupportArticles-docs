@@ -4,16 +4,15 @@ description: Describes an issue that occurs when you try to remove Microsoft 365
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: jalalb
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365 Apps for enterprise
+  - MET150
+appliesto: 
+  - Microsoft 365 Apps for enterprise
 ---
 
 # "Something went wrong 30016-4" error when you try to uninstall Microsoft 365 Apps for enterprise

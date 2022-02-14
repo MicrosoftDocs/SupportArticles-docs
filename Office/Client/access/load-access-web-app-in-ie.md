@@ -6,16 +6,15 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 search.appverid: 
-- MET150
-ms.prod: office-perpetual-itpro
+  - MET150
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Access for Office 365
-- Access 2019
-- Access 2016
-- Access 2013
+appliesto: 
+  - Access for Office 365
+  - Access 2019
+  - Access 2016
+  - Access 2013
 ---
 
 # "An error has occurred" message when you load an Access web app in Internet Explorer

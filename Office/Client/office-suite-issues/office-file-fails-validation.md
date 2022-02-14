@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mdandige
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 2010
+  - MET150
+appliesto: 
+  - Office 2010
 ---
 
 # "Office has detected a problem with this file" error in Microsoft Office 2010

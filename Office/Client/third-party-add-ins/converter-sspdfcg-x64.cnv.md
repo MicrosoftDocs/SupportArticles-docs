@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Word for Office 365
-- Word 2016
-- Word 2013
+appliesto: 
+  - Word for Office 365
+  - Word 2016
+  - Word 2013
 ---
 
 # "Word cannot start the converter SSPDFCG_X64.cnv" error when you start Word

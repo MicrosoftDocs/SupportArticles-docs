@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.collection: Ent_Office_Outlook
 description: Helps IT Pros learn about planning and configuring Cached Exchange Mode in Outlook 2016 for Windows
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2016
+  - MET150
+appliesto: 
+  - Outlook 2016
 ---
 
 # Plan and configure Cached Exchange Mode in Outlook 2016 for Windows

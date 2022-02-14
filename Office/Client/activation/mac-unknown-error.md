@@ -4,17 +4,16 @@ description: Troubleshooting steps when an error occurs when trying to activate 
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157588
+  - CSSTroubleshoot
+  - CI 157588
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Office for Mac activation error: “An unknown error has occurred”

@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- office 2016
-- Office 2013
-- Office 2010
+appliesto: 
+  - office 2016
+  - Office 2013
+  - Office 2010
 ---
 
 # Saving Office documents to a network server is slow when using EFS

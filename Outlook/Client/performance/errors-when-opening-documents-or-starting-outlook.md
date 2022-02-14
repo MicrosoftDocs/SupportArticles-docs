@@ -6,22 +6,21 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Office Outlook 2007
-- Microsoft Office PowerPoint 2007
-- Microsoft Office Excel 2007
-- Microsoft Office Publisher 2007
-- Microsoft Office Access 2007
-- Microsoft Office PowerPoint 2003
-- Microsoft Office Publisher 2003
-- Microsoft Office Access 2003
-- Microsoft Office Outlook 2003
+appliesto: 
+  - Microsoft Office Outlook 2007
+  - Microsoft Office PowerPoint 2007
+  - Microsoft Office Excel 2007
+  - Microsoft Office Publisher 2007
+  - Microsoft Office Access 2007
+  - Microsoft Office PowerPoint 2003
+  - Microsoft Office Publisher 2003
+  - Microsoft Office Access 2003
+  - Microsoft Office Outlook 2003
 search.appverid: MET150
 ---
 # An out-of-date antivirus program may cause errors when you try to open an Office document or to start Outlook

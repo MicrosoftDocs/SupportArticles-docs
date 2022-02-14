@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Office Online Server
+appliesto: 
+  - Office Online Server
 ---
 
 # Mobile viewing PDF files with Office Web Apps

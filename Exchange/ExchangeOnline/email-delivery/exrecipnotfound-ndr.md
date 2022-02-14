@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-- 'Associated content asset: 4555312'
+  - Exchange Online
+  - CSSTroubleshoot
+  - 'Associated content asset: 4555312'
 ms.reviewer: jmartin
 appliesto: 
-- Exchange Online
-- Microsoft 365 Apps for enterprise
+  - Exchange Online
+  - Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
 # (550 5.1.1 RESOLVER.ADR.ExRecipNotFound) NDR error message when you send email messages by using Outlook in Office 365

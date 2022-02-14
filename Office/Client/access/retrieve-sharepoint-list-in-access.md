@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 search.appverid: 
-- MET150
-appliesto:
-- Access 2016
-- Access 2013
-- Access 2010
-- Access for Office 365
+  - MET150
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access 2010
+  - Access for Office 365
 ---
 
 # Issues when you retrieve SharePoint list data in Access

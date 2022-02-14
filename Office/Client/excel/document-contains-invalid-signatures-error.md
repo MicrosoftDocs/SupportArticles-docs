@@ -4,19 +4,18 @@ description: Describes a problem in which you receive an error message when you 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: hgkim，gaberry, akeeler
 ms.custom: 
-- CI 114484
-- CSSTroubleshoot
+  - CI 114484
+  - CSSTroubleshoot
 search.appverid: MET150
-appliesto:
-- Excel 2016
-- Excel 2013Excel 2010
-- Microsoft Office Excel 2007
+appliesto: 
+  - Excel 2016
+  - Excel 2013Excel 2010
+  - Microsoft Office Excel 2007
 ---
 
 # "This document contains invalid signatures" error when opening Excel workbooks that were digitally signed in an earlier version

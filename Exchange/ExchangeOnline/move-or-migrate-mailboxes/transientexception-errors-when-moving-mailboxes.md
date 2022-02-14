@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Online
-- Exchange Server 2010
+  - Exchange Online
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # TransientException when moving mailboxes from Exchange Online to Exchange Server 2010 in on-premises

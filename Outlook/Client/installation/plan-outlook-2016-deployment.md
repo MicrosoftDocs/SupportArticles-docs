@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.reviewer: 
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 localization_priority: Normal
 ms.collection: Ent_Office_Outlook
 description: Helps IT Pros learn about what they should consider when they deploy Outlook 2016 for Windows to users in their organization
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2010, Outlook 2013, Outlook 2016, Office 365
+  - MET150
+appliesto: 
+  - Outlook 2010, Outlook 2013, Outlook 2016, Office 365
 ---
 
 # Planning considerations for deploying Outlook 2016 for Windows

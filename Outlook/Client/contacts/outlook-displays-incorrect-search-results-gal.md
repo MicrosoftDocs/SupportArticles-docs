@@ -6,21 +6,20 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: kazuyou
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-- Microsoft Office Outlook 2007
-- Microsoft Outlook 2010
-- Outlook 2013 
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+  - Microsoft Office Outlook 2007
+  - Microsoft Outlook 2010
+  - Outlook 2013
+search.appverid: MET150
 ---
 # Outlook displays incorrect search results of the GAL in Exchange Server
 

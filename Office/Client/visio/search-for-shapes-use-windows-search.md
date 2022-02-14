@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: nathanad, jennc
 search.appverid: 
-- MET150
-appliesto:
-- Visio Standard 2010
-- Visio Professional 2010
-- Visio Standard 2013
-- Visio Professional 2013
+  - MET150
+appliesto: 
+  - Visio Standard 2010
+  - Visio Professional 2010
+  - Visio Standard 2013
+  - Visio Professional 2013
 ---
 
 # Enable the Windows Search service if you want to use the Search for Shapes feature in Visio 2010 or in Visio 2013

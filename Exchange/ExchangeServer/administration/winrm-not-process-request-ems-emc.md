@@ -5,18 +5,17 @@ author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: benwinz
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010
+  - MET150
+appliesto: 
+  - Exchange Server 2010
 ---
 # Error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell/Console
 

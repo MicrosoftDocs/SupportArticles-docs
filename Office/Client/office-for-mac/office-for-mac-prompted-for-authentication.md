@@ -5,16 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Office Home & Business 2016 for Mac
-- Office Home & Student 2016 for Mac
-
+appliesto: 
+  - Office Home & Business 2016 for Mac
+  - Office Home & Student 2016 for Mac
 ---
 
 # Office 2016 for Mac 16.x prompts you for authentication when you open a URL

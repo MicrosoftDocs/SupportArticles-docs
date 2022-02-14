@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: willfid
-appliesto:
-- Exchange Online
-- Azure Active Directory
-- Office 365 Identity Management
+appliesto: 
+  - Exchange Online
+  - Azure Active Directory
+  - Office 365 Identity Management
 search.appverid: MET150
 ---
 # Mail-enabled groups that have an email address aren't synchronized to Office 365
