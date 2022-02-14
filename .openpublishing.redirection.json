@@ -541,6 +541,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/fails-moving-intune-exchange-connector.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/set-mdm-authority.md",
       "redirect_url": "/mem/intune/fundamentals/mdm-authority-set",
       "redirect_document_id": false
