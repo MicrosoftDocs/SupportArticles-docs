@@ -2,7 +2,7 @@
 title: Configuring permissions to access remote data
 description: This article describes how to disable ad hoc queries that use the OPENROWSET or the OPENDATASOURCE functionality in SQL Server.
 ms.date: 12/02/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: ericbu
 ms.prod: sql
 ---

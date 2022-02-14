@@ -2,7 +2,6 @@
 title: Remove VMware virtual machine (VM) protection references from DPMDB
 description: Provides a SQL script to remove VMware VM protection references from the DPM database.
 ms.date: 06/21/2021
-ms.prod-support-area-path:
 ms.reviewer: v-jysur; jarrettr; sudesai
 author: simonxjx
 ms.author: v-six

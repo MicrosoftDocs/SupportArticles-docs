@@ -2,7 +2,7 @@
 title: Error when you process a dimension
 description: This article provides a resolution for the problem that occurs when you process a dimension in SQL Server Analysis Service.
 ms.date: 11/05/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.prod: sql
 ---
 # Error message when processing a dimension

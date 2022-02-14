@@ -2,7 +2,6 @@
 title: Determine VMM versions and update rollups
 description: Describes how to determine the version and update rollups of System Center 2012 Virtual Machine Manager and System Center 2012 R2 Virtual Machine Manager.
 ms.date: 08/18/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # Determine the version of Virtual Machine Manager

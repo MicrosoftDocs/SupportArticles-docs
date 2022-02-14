@@ -2,7 +2,7 @@
 title: SQL Server in Windows operating system
 description: This article describes how to use SQL Server in Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 environments.
 ms.date: 12/15/2021
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
@@ -101,7 +101,7 @@ Before you install SQL Server on a computer that is running Windows Server 2019 
     > [!NOTE]
     >
     > - Make sure that you check known setup issues when you install SQL Server 2012 on Windows 10 or Windows Server 2016.
-    > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016.
+    > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016 and Windows Server 2019.
 
 - **For SQL Server 2008 R2**
 
@@ -141,7 +141,7 @@ Before you install SQL Server on a computer that is running Windows 10 or Window
   >
   > - Make sure that you check known setup issues when you install SQL Server 2012 on Windows 10 or Windows Server 2016.
   >
-  > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016.
+  > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016 and Windows Server 2019.
 
 - **For SQL Server 2008 R2**
 

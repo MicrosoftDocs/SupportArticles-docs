@@ -2,7 +2,7 @@
 title: Default permissions and user rights in IIS
 description: This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed in IIS 7.0 and later.
 ms.date: 04/01/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.custom: sap:WWW authentication and authorization
 ms.reviewer: mlaing
 ms.topic: article
 ms.technology: iis-www-authentication-authorization
@@ -120,7 +120,7 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|IIS_USRS|Special permissions|Special permissions include the following: <ul><li>List folder / read data</li><li>Create files / write data</li><li>Create folders / append data</li><li>Write attributes</li><li>Write extended attributes</li><li>Delete subfolders and files</li><li>Delete</li></ul>|
+|IIS_IUSRS|Special permissions|Special permissions include the following: <ul><li>List folder / read data</li><li>Create files / write data</li><li>Create folders / append data</li><li>Write attributes</li><li>Write extended attributes</li><li>Delete subfolders and files</li><li>Delete</li></ul>|
 |SYSTEM|Full control||
 |Administrators|Full control||
 ||||
@@ -155,7 +155,7 @@ The tables in this section list the default New Technology File System (NTFS) pe
 |CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
-|IIS_USRS|Read & execute|Inherited from `\inetpub`.|
+|IIS_IUSRS|Read & execute|Inherited from `\inetpub`.|
 ||||
 
 ### \inetpub\temp\ASP Compiled Templates
@@ -171,7 +171,7 @@ The tables in this section list the default New Technology File System (NTFS) pe
 |---|---|---|
 |SYSTEM|Full control||
 |Administrators|Full control||
-|IIS_USRS|Full control||
+|IIS_IUSRS|Full control||
 ||||
 
 ### \inetpub\wwwroot
@@ -182,7 +182,7 @@ The tables in this section list the default New Technology File System (NTFS) pe
 |SYSTEM|Full control|Inherited from `\inetpub`.|
 |Administrators|Full control|Inherited from `\inetpub`.|
 |Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub`.|
-|IIS_USRS|Read & execute||
+|IIS_IUSRS|Read & execute||
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
 

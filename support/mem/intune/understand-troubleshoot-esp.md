@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: ybao
 ms.date: 12/23/2021
-ms.prod-support-area-path: Windows enrollment
+ms.custom: sap:Windows enrollment
 ---
 # Troubleshooting the Enrollment Status Page
 
@@ -233,6 +233,6 @@ ESP policy is set on a device at the time of enrollment. To disable the ESP, you
 
   Name:  Disable User ESP (choose any name that you want)  
   Description:  (enter a description)  
-  OMA-URI:  ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus/SkipUserStatusPage  
+  OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage  
   Data type:  Boolean  
   Value:  True  

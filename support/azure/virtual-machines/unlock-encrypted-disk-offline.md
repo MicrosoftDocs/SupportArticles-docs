@@ -65,8 +65,11 @@ For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Ge
 
 You can use the `az vm encryption show` command in Azure CLI with the query `disks[].encryptionSettings[].enabled` appended to determine whether ADE is enabled on a VM's disks. The following output indicates that ADE encryption is enabled.
 
-```console
-C:\Users\admin1>az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
+```azurecli
+az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
+```
+
+```output
 [
   true
 ]
@@ -251,7 +254,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
 1. In the Azure portal, navigate to the key vault that was used to encrypt the source VM. If you don't know the name of the key vault, enter the following command at the prompt in Azure Cloud Shell, and look for the value next to "sourceVault" in the output:
 
-    ```console
+    ```azurecli
     az vm encryption show --name MyVM --resource-group MyResourceGroup
     ```
 

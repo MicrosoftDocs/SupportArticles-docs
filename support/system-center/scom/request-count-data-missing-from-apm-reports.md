@@ -2,7 +2,6 @@
 title: Request Count data is missing from APM reports
 description: Fixes an issue in which the Request Count and Request Time (sec) values are missing from APM reports after you upgrade to System Center 2012 R2 Operations Manager.
 ms.date: 07/07/2020
-ms.prod-support-area-path: 
 ms.reviewer: scottwal, lamosley
 ---
 # Request Count data is missing from APM reports after upgrading to Operations Manager 2012 R2

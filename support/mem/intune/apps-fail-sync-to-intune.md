@@ -2,7 +2,7 @@
 title: Microsoft Store for Business apps don't sync to Intune
 description: Discusses an issue in which applications don't synchronize from Microsoft Store for Business to Intune. Provides a workaround.
 ms.date: 05/18/2020
-ms.prod-support-area-path: Work with volume-purchased apps and books
+ms.custom: sap:Work with volume-purchased apps and books
 ms.reviewer: intunecic, waluja
 ---
 # Apps don't synchronize from Microsoft Store for Business to Intune

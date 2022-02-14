@@ -2,7 +2,6 @@
 title: Can't create a Capacity Reservation
 description: The following article discusses the reasons why you are not able to create Capacity Reservation.
 ms.date: 08/26/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

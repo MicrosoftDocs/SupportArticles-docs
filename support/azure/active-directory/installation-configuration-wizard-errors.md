@@ -2,7 +2,6 @@
 title: How to troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors
 description: Describes how to troubleshoot Azure Active Directory Sync tool installation and Directory Sync tool Configuration Wizard error messages.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: jhayes, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

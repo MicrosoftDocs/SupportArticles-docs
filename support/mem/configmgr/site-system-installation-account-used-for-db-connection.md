@@ -2,7 +2,6 @@
 title: Site system installation account is incorrectly used for database connection
 description: Describes a problem in which Configuration Manager may incorrectly try to use the site system installation account for a remote site system to connect to the SQL Server database.
 ms.date: 06/01/2020
-ms.prod-support-area-path: 
 ms.reviewer: erinwi, prakask, keiththo
 ---
 # Site system installation account is incorrectly used for a remote site system to connect to SQL Server database

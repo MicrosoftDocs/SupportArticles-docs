@@ -2,7 +2,6 @@
 title: Warning (Pending service account password expiration) in Azure Stack
 description: Provides information to an issue in which you receive a warning message in Microsoft Azure Stack.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: azure-stack
 ms.author: genli
 author: genlin

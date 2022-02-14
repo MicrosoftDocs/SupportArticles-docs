@@ -2,7 +2,6 @@
 title: Orchestrator runbooks, folders, or statistics aren't displayed or updated
 description: Fixes an issue in which Orchestrator runbooks, folders, or statistics aren't displayed or updated in the System Center Orchestration console.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # Orchestrator runbooks, folders, or statistics aren't displayed or updated in the Orchestration console
 

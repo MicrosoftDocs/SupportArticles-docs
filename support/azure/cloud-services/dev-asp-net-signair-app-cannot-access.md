@@ -2,7 +2,6 @@
 title: ASP.NET SignalR application cannot be accessed although all role instances are in running state
 description: Provides information about troubleshooting issues in which the ASP.NET SignalR application is not able to access with error "Can't reach this page".
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 author: genlin
 ms.author: genli

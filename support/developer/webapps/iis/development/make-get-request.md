@@ -2,7 +2,7 @@
 title: Use Visual C# to make a GET request
 description: This article describes how to make a GET request to retrieve a web page from the Internet by using Visual C#.
 ms.date: 07/17/2020
-ms.prod-support-area-path: Development
+ms.custom: sap:Development
 ms.reviewer: duncanma
 ms.technology: iis-development
 ---

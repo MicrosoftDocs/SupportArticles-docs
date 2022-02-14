@@ -2,7 +2,6 @@
 title: An Orchestrator runbook isn't created
 description: Describes an issue in which an Orchestrator runbook isn't created when a Service Manager service request passes an unsupported character.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # An Orchestrator runbook isn't created when users submit a Service Manager service request form
 

@@ -1,7 +1,7 @@
 ---
 title: No prompt for fingerprint identity for Intune-managed apps on Samsung Note 4
 description: Describes an issue where users aren't prompted for fingerprint when they use Intune app protection policy managed apps on a Samsung Galaxy Note 4 devices.
-ms.prod-support-area-path: App management
+ms.custom: sap:App management
 ms.date: 12/20/2021
 ---
 # Users aren't prompted for fingerprint identity for managed apps on Samsung Note 4

@@ -2,7 +2,6 @@
 title: Error (An unknown error occurred with the Microsoft Online Services Sign-in Assistant) when you run the Azure Active Directory Sync Tool Configuration Wizard
 description: Describes an error that you receive when you run the Azure Active Directory Sync Tool Configuration Wizard. Provides a resolution.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
