@@ -4,24 +4,23 @@ description: Provides methods to troubleshoot and resolve the error to install a
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: chhavil, aldox, bobcool
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office Professional Academic 2010
-- Office Home and Business 2010
-- Office Home and Student 2010
-- IIS Media Services 2.0
-- Office Professional 2010
-- Office Professional Plus 2010
-- Office Professional Plus 2010 Home Use Program
-- Office Standard 2010
-- Office Starter 2010
+  - MET150
+appliesto: 
+  - Office Professional Academic 2010
+  - Office Home and Business 2010
+  - Office Home and Student 2010
+  - IIS Media Services 2.0
+  - Office Professional 2010
+  - Office Professional Plus 2010
+  - Office Professional Plus 2010 Home Use Program
+  - Office Standard 2010
+  - Office Starter 2010
 ---
 
 # "To install and use this product..." error when you install Office 2010

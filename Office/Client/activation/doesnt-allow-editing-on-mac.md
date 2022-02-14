@@ -4,18 +4,17 @@ description: Troubleshooting the error Your account doesn’t allow editing on a
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157760
-- CI 159114
+  - CSSTroubleshoot
+  - CI 157760
+  - CI 159114
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Microsoft 365 Apps activation error: “Your account doesn’t allow editing on a Mac”

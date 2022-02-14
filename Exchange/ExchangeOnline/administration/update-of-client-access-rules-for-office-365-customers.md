@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: jmartin, meerak
-appliesto:
-- Exchange Online
-- Microsoft Exchange Online Dedicated
+appliesto: 
+  - Exchange Online
+  - Microsoft Exchange Online Dedicated
 search.appverid: MET150
 ---
 # Updates to Client Access Rules in Office 365

@@ -4,15 +4,14 @@ description: This article describes an issue where SharePoint Online site doesn'
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
-- MET150
+  - MET150
 localization_priority: Normal
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # SharePoint Online site doesn't use the site theme for the Office 365 top navigation bar

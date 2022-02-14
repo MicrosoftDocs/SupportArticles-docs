@@ -1,20 +1,19 @@
 ---
 title: Can't create too large transport rules
-description: Fixes an issue in which you receive a "The rule can't be created because it is too large" error message when you try to create or change a transport rule in Exchange Online or in Exchange Online Protection.
+description: Fixes an issue in which you receive a The rule can't be created because it is too large error message when you try to create or change a transport rule in Exchange Online or in Exchange Online Protection.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: sathyana
-appliesto:
-- Exchange Online
-- Exchange Online Protection
+appliesto: 
+  - Exchange Online
+  - Exchange Online Protection
 search.appverid: MET150
 ---
 # The rule can't be created because it is too large when you create or change a transport rule

@@ -1,20 +1,19 @@
 ---
 title: WinRM client cannot process the request when connect to Exchange Online
-description: The "WinRM client cannot process the request because the server name cannot be resolved" error occurs when you connect Exchange Online through remote Windows PowerShell.
+description: The WinRM client cannot process the request because the server name cannot be resolved error occurs when you connect Exchange Online through remote Windows PowerShell.
 author: simonxjx
 audience: ITPro
-ms.service: exchange-online
 ms.topic: troubleshooting
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
+  - MET150
+appliesto: 
+  - Exchange Online
 ---
 # (WinRM client cannot process the request) error when you connect to Exchange Online through remote Windows PowerShell
 

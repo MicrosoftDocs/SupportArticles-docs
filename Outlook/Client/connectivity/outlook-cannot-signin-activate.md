@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: aruiz
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- CI 124876
-appliesto:
-- Outlook for Microsoft 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - CI 124876
+appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 
 # Can't sign in or activate Outlook and Microsoft 365 applications

@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: danba, brijs, catagh, gbratton, dvespa
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
 search.appverid: MET150
 ---
 # The Outlook Object Model is unsuitable to run in a Windows service

@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: doakm
-appliesto:
-- Office 2010
-- Office 2013
+appliesto: 
+  - Office 2010
+  - Office 2013
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # "This 64-bit product may not be installed with Microsoft Office Click-to-Run" when you install a 64-bit version of Office

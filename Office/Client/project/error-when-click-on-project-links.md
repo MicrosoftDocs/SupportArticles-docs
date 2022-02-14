@@ -4,15 +4,14 @@ description: Fixes the error that occurs when you click the Project link if your
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Online
+  - MET150
+appliesto: 
+  - Project Online
 ---
 
 # Project Online: Error when you click on the Projects link in the top navigation bar

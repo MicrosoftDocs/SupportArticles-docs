@@ -4,16 +4,15 @@ description: Describes an issue in Office 365, Microsoft Intune, or Azure in whi
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: v-chblod
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 365
+  - MET150
+appliesto: 
+  - Office 365
 ---
 
 # User passwords aren't synced, and "Password Synchronization has not been activated for this company" error is logged in Event Viewer

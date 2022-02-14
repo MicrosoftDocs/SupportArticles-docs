@@ -4,15 +4,14 @@ description: The intention of this article is to identify reasons why paid subsc
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365 Apps for enterprise
+  - MET150
+appliesto: 
+  - Microsoft 365 Apps for enterprise
 ---
 
 # Office 365 subscription automatic license renewal fails when heartbeatcache is in wrong location

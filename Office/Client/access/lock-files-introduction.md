@@ -3,17 +3,16 @@ title: Description of Access lock files (laccdb and ldb)
 description: Describes automatic creation and deletion, required permissions, contents, and usage for lock files (laccdb and ldb).
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 111390
-- CSSTroubleshoot
+  - CI 111390
+  - CSSTroubleshoot
 ms.reviewer: denniwil
-appliesto:
-- Access
+appliesto: 
+  - Access
 search.appverid: MET150
 ---
 

@@ -4,16 +4,15 @@ description: Describes different scenarios for upgrading the global template whe
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project 2013 Standard
-- Project Professional 2013
+  - MET150
+appliesto: 
+  - Project 2013 Standard
+  - Project Professional 2013
 ---
 
 # How to upgrade your Project global template after you install Project 2013

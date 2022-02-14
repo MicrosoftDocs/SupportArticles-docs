@@ -5,20 +5,19 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 ms.reviewer: johnlan, of12sstr
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office 2007
-- Microsoft Office 2010
-- Microsoft Office 2013
-- Microsoft Office 2016
-- Microsoft Office 2019
-- Microsoft 365 Apps for Enterprise
+  - MET150
+appliesto: 
+  - Microsoft Office 2007
+  - Microsoft Office 2010
+  - Microsoft Office 2013
+  - Microsoft Office 2016
+  - Microsoft Office 2019
+  - Microsoft 365 Apps for Enterprise
 ---
 
 # Enable or disable hyperlink warning messages in Office programs

@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: jashinba, mhaque
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Can't sign in to Outlook on the web or EAC if Exchange Server OAuth certificate is expired

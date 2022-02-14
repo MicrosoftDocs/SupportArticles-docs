@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- SharePoint Server 2010
-- SharePoint Server 2013
-search.appverid: MET150 
+ms.reviewer: 
+appliesto: 
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+search.appverid: MET150
 ---
 # SharePoint Server doesn't support export/import of subsites with Publishing templates
 

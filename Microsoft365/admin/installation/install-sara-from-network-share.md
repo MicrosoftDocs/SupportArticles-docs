@@ -3,19 +3,18 @@ title: Install and maintain SaRA tool from a network share
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-admin
 localization_priority: Normal
 ms.custom: 
-- CI 110828, CI 114761, CI 115829, CI 116348, CI 117120
-- CSSTroubleshoot
-- SaRANetworkInstallFiles
+  - CI 110828, CI 114761, CI 115829, CI 116348, CI 117120
+  - CSSTroubleshoot
+  - SaRANetworkInstallFiles
 ms.reviewer: gregmans
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Outlook
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Outlook
 search.appverid: MET150
 ---
 # How to install and maintain Microsoft Support and Recovery Assistant (SaRA) from a network share

@@ -1,19 +1,18 @@
 ---
 title: SBC connectivity issues
-description: Describes how to diagnose SIP options or TLS certificate issues with SBC. 
+description: Describes how to diagnose SIP options or TLS certificate issues with SBC.
 ms.date: 2/5/2021
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: CI-124780,CSSTroubleshoot,scenario:Direct-Routing-1
 ms.reviewer: mikebis
 ---

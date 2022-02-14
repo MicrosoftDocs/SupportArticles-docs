@@ -1,19 +1,18 @@
 ---
 title: Status codes 401 and 200 with MAPI over HTTP
-description: Works around an expected behavior in which "401" and "200" HTTP status codes are continually logged in the server's IIS log or the network capture of client traffic.
+description: Works around an expected behavior in which 401 and 200 HTTP status codes are continually logged in the server's IIS log or the network capture of client traffic.
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: meerak, jonl, gbratton, mhaque
-appliesto:
-- Outlook for Office 365
+appliesto: 
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Repeated status codes "401" and "200" when using MAPI over HTTP

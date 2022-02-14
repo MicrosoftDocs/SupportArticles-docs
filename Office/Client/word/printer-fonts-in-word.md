@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 9/1/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Word
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Word
 ms.custom: 
-- CI 122387
-- CSSTroubleshoot 
+  - CI 122387
+  - CSSTroubleshoot
 ms.reviewer: sergeym
-description: Explains how to use printer fonts in Microsoft Word after the feature has been deprecated. 
+description: Explains how to use printer fonts in Microsoft Word after the feature has been deprecated.
 ---
 
 # Information about using printer fonts in Microsoft Word

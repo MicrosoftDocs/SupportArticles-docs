@@ -4,16 +4,15 @@ description: Describes an error message that you receive when you try view a tim
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: v-dahedm
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Project
+  - MET150
+appliesto: 
+  - Microsoft Project
 ---
 
 # "Iexplorer.exe has encountered a problem and needs to close" error when you try to view a timesheet in Project Web Access

@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 keyword: modern view
 ms.custom: 
-- CSSTroubleshoot
-- CI-158475
-appliesto:
-- SharePoint Online
+  - CSSTroubleshoot
+  - CI-158475
+appliesto: 
+  - SharePoint Online
 ---
 
 # SharePoint Online Lists and Libraries Modern View Compatibility check

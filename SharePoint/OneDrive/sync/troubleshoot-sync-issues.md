@@ -6,12 +6,11 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-appliesto:
-- OneDrive for Business
+appliesto: 
+  - OneDrive for Business
 search.appverid: MET150
 ---
 # Troubleshooting OneDrive for Business sync issues

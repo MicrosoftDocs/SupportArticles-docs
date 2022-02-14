@@ -5,17 +5,16 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.service: msteams
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 120062
-- CSSTroubleshoot
+  - CI 120062
+  - CSSTroubleshoot
 ms.reviewer: clake
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>

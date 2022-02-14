@@ -4,16 +4,15 @@ description: SupportMultipleDomain switch when managing SSO to Office 365.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- office 365
+appliesto: 
+  - office 365
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # SupportMultipleDomain switch when managing SSO to Office 365

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cannot access directory when change the default save location in Excel 2016
 description: Fixes the error of cannot access directory when you change the default save location to a SharePoint location.
 author: helenclu
@@ -6,15 +6,12 @@ ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
-appliesto:
-- Excel 2016
+ms.custom: sap:office-experts, CSSTroubleshoot
+appliesto: 
+  - Excel 2016
 ---
 
 # "Cannot access directory" error when you change the default save location in Excel 2016

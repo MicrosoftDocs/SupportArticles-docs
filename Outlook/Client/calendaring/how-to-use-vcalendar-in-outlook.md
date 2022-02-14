@@ -6,21 +6,20 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: aruiz, sercast
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Microsoft Office Outlook 2003
-- Microsoft Exchange Server 2003 Standard Edition
-- Microsoft Exchange Server 2003 Enterprise Edition
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Enterprise 
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Microsoft Office Outlook 2003
+  - Microsoft Exchange Server 2003 Standard Edition
+  - Microsoft Exchange Server 2003 Enterprise Edition
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # How to use vCalendar in Outlook

@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: tmoore, gregmans
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Outlook 2013
-- Outlook 2010
+  - MET150
+appliesto: 
+  - Outlook 2013
+  - Outlook 2010
 ---
 # Event ID 27 when sending attachments outside of Outlook fails
 

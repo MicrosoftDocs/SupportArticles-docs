@@ -6,18 +6,17 @@ ms.date: 4/9/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 113425
-- CSSTroubleshoot 
+  - CI 113425
+  - CSSTroubleshoot
 ms.reviewer: scapero
-description: Explains why a meeting organizer may not be able to start the meeting or be stuck in the virtual lobby. 
+description: Explains why a meeting organizer may not be able to start the meeting or be stuck in the virtual lobby.
 ---
 
 # Organizer unable to start Outlook meeting and stuck in virtual lobby

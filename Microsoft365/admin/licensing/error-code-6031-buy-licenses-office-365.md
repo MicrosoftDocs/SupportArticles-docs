@@ -5,14 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-six
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
 ---
 
 # "Sorry! We can't process your request right now" error code 6031 message when you buy licenses

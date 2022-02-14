@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: alfong
-appliesto:
-- PowerPoint for the web
-search.appverid: MET150 
+appliesto: 
+  - PowerPoint for the web
+search.appverid: MET150
 ---
 # Missing an argument for parameter when you use the Set-SPPowerPointServiceApplication command
 

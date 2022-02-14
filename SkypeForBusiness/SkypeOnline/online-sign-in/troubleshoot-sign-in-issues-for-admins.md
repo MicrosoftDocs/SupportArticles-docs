@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: skype-for-business-online
 localization_priority: Normal
-ms.custom:
-- CI 150322
-- CSSTroubleshoot
+ms.custom: 
+  - CI 150322
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Skype for Business Online
+  - MET150
+appliesto: 
+  - Skype for Business Online
 ---
 # Troubleshoot Skype for Business Online sign-in issues for admins
 

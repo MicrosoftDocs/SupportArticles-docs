@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions about SharePoint Domain renames 
+title: Frequently asked questions about SharePoint Domain renames
 description: Answers questions about renaming a SharePoint domain.
 author: pramodbalusu
 ms.author: v-matthamer
@@ -8,15 +8,14 @@ localization_priority: Normal
 ms.date: 11/1/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 ms.custom: 
-- CSSTroubleshoot
-- CI 158146
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+  - CSSTroubleshoot
+  - CI 158146
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ---
 
 # Frequently asked questions about SharePoint Domain renames

@@ -4,26 +4,25 @@ description: Fixes an issue that occurs after a user inserts a hyperlink to a fi
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2007 (Home and Student version)
-- Excel 2010
-- Microsoft Word 2010
-- Word 2013OneNote 2013
-- Microsoft Office Outlook 2007
-- Microsoft Outlook 2010
-- Outlook 2013
-- Excel 2016
-- Outlook 2016
-- Word 2016
+  - MET150
+appliesto: 
+  - Excel 2013
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2007 (Home and Student version)
+  - Excel 2010
+  - Microsoft Word 2010
+  - Word 2013OneNote 2013
+  - Microsoft Office Outlook 2007
+  - Microsoft Outlook 2010
+  - Outlook 2013
+  - Excel 2016
+  - Outlook 2016
+  - Word 2016
 ---
 
 # Network Mapped Drive Hyperlinks resolve as UNC in Office Products

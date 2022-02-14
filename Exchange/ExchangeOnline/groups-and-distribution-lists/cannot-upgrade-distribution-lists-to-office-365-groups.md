@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: subansal, ninob
-appliesto:
-- Exchange Online
-- MSfC O365-Exchange Online
+appliesto: 
+  - Exchange Online
+  - MSfC O365-Exchange Online
 search.appverid: MET150
 ---
 # Unable to upgrade distribution lists to Office 365 groups

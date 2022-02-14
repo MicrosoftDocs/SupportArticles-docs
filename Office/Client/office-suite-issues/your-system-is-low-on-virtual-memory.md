@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Office 2010
-- Office 2007
-- Office 2003
+appliesto: 
+  - Office 2010
+  - Office 2007
+  - Office 2003
 ---
 
 # "Your system is low on virtual memory" error message when you try to start an Office program

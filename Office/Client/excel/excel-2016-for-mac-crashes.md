@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho
-appliesto:
-- Excel for Mac for Office 365
+appliesto: 
+  - Excel for Mac for Office 365
 ---
 
 # Excel 2016 for Mac crashes when you click the From Database option

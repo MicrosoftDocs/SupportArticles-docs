@@ -4,20 +4,19 @@ description: Resolves the  This product key is for Microsoft Office <Edition Nam
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: viwoods, libbyu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office Professional Plus 2013
-- Office Professional 2013
-- Office Home and Business 2013
-- Office Home and Student 2013
-- Office Standard 2013
+  - MET150
+appliesto: 
+  - Office Professional Plus 2013
+  - Office Professional 2013
+  - Office Home and Business 2013
+  - Office Home and Student 2013
+  - Office Standard 2013
 ---
 
 # Cannot activate Office 2013 on a new computer

@@ -1,18 +1,17 @@
 ---
 title: eDiscovery searches are queued indefinitely
-description: Describes an issue in which the status of an eDiscovery search in Exchange Online remains in a"search has been queued state. Provides a workaround.
+description: Describes an issue in which the status of an eDiscovery search in Exchange Online remains in asearch has been queued state. Provides a workaround.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # eDiscovery searches in Exchange Online are queued indefinitely

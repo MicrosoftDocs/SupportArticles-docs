@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Excel 2013
+appliesto: 
+  - Excel 2013
 ---
 
 # "The following connection failed to refresh" error in an Excel 2013 workbook on a WAC server

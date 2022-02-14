@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Foundation 2010
-- SharePoint Server 2010
-- InfoPath Designer 2010
+appliesto: 
+  - SharePoint Foundation 2010
+  - SharePoint Server 2010
+  - InfoPath Designer 2010
 ms.reviewer: jbooze, fselkirk
 ---
 # (Invalid form template) error message when you run the InfoPath Designer 2010 design checker on a form

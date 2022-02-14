@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 4/16/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 115576
-- CSSTroubleshoot 
-ms.reviewer: lucaband 
-description: Explains why you receive the error "Something went wrong" when configuring an SPFx component on a page in SharePoint Online.
+  - CI 115576
+  - CSSTroubleshoot
+ms.reviewer: lucaband
+description: Explains why you receive the error Something went wrong when configuring an SPFx component on a page in SharePoint Online.
 ---
 
 # Unable to drag and drop web parts onto classic pages in SharePoint Online

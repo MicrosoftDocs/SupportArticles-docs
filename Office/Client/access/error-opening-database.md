@@ -1,21 +1,20 @@
 ---
 title: Unable to open an Access database on a server
-description: Fixes an issue in which you may receive a "file already in use" error message when you open an Access database.
+description: Fixes an issue in which you may receive a file already in use error message when you open an Access database.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: chriswy
-appliesto:
-- Access 2010
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Access 2010
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # "File already in use" error when you try to open an Access database that's located on a server

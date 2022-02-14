@@ -6,16 +6,15 @@ manager: dcscontentpm
 ms.date: 3/4/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Word for Office 365
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Word for Office 365
 ms.custom: 
-- CI 113851
-- CSSTroubleshoot 
+  - CI 113851
+  - CSSTroubleshoot
 ms.reviewer: mmaxey
 description: Describes how to troubleshoot problems when printing documents from Word for Office 365 running on Windows 10.
 ---

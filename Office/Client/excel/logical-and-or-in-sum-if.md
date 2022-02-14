@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: SISHAM
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Excel 2003
-- Microsoft Office Excel 2007
-- Excel 2010
+  - MET150
+appliesto: 
+  - Microsoft Office Excel 2003
+  - Microsoft Office Excel 2007
+  - Excel 2010
 ---
 
 # How to use a logical AND or OR in a SUM+IF statement in Excel

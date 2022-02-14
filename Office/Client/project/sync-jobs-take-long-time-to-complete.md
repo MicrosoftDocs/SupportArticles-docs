@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Project Server 2013
-- Project Server 2010
-- Microsoft Office Project Server 2007
+appliesto: 
+  - Project Server 2013
+  - Project Server 2010
+  - Microsoft Office Project Server 2007
 ---
 
 # Project Server Sync Jobs take a long time to complete and users get Access Denied

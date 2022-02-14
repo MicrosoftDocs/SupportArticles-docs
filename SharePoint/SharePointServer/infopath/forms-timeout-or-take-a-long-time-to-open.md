@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: TAPANM
-appliesto:
-- InfoPath 2010
-- InfoPath 2013
-search.appverid: MET150 
+appliesto: 
+  - InfoPath 2010
+  - InfoPath 2013
+search.appverid: MET150
 ---
 # Forms time out or take a long time to open in InfoPath 2010 or InfoPath 2013
 

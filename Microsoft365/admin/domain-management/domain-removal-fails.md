@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Azure Active Directory Directories, Domains, and Objects
+appliesto: 
+  - Azure Active Directory Directories, Domains, and Objects
 ---
 
 # "An Error Occurred" error and domain removal fails in Office 365

@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: aldoug
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365 Business
-- Outlook
+  - MET150
+appliesto: 
+  - Microsoft 365 Business
+  - Outlook
 ---
 # Can't view Office 365 IRM-encrypted message for dynamic distribution group
 

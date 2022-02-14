@@ -4,19 +4,18 @@ description: Fixes an issue in which the status of a user presence is displayed 
 author: helenclu
 ms.author: premgan
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 126269
-- CSSTroubleshoot
+  - CI 126269
+  - CSSTroubleshoot
 ms.reviewer: sylviebo
-appliesto:
-- Microsoft Teams
-- Outlook
+appliesto: 
+  - Microsoft Teams
+  - Outlook
 search.appverid: 
-- MET150
+  - MET150
 ---
 # User presence status issues in Outlook
 

@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 111294
-- CSSTroubleshoot
+  - CI 111294
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mattbum
-appliesto:
-- Access 2010
-- Access 2007
-- Access 2003
-- Access 2002
+appliesto: 
+  - Access 2010
+  - Access 2007
+  - Access 2003
+  - Access 2002
 ---
 
 # "The expression you entered has a function containing the wrong number of arguments" when you use CDec() function in an Access query

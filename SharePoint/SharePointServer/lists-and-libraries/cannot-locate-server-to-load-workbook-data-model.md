@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: Jenl
-appliesto:
-- Excel 2013
-search.appverid: MET150 
+appliesto: 
+  - Excel 2013
+search.appverid: MET150
 ---
 # Cannot locate a server to load the workbook Data Model when you refresh a PivotTable in an Excel 2013 workbook
 

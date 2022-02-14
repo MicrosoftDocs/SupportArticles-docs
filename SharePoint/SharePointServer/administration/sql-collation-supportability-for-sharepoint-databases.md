@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- SharePoint Services 3.0
-search.appverid: MET150 
+ms.reviewer: 
+appliesto: 
+  - SharePoint Services 3.0
+search.appverid: MET150
 ---
 # Supportability regarding SQL Server collation for SharePoint databases and TempDB
 

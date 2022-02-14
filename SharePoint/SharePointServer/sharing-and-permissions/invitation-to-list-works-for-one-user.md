@@ -6,19 +6,18 @@ manager: dcscontentpm
 ms.date: 10/8/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Server
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Server
+  - SharePoint Online
 ms.custom: 
-- CI 123888
-- CSSTroubleshoot 
+  - CI 123888
+  - CSSTroubleshoot
 ms.reviewer: pamgreen
-description: Describes a resolution to an issue where an invitation sent to a distribution list that is accessed by an external user prevents other users from accessing the SharePoint resource. 
+description: Describes a resolution to an issue where an invitation sent to a distribution list that is accessed by an external user prevents other users from accessing the SharePoint resource.
 ---
 
 # SharePoint invitation sent to a distribution list works for only one user

@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
 ---
 
 # "The Installation of This Package Failed" When you install Office Pro Plus 2010 from Office 365 Subscription Portal

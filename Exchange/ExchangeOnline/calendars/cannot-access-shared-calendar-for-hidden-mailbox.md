@@ -6,20 +6,19 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: alinastr
-appliesto:
-- Exchange Online
-- Windows 7 Starter N
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
-- Microsoft 365 Apps for enterprise 
+appliesto: 
+  - Exchange Online
+  - Windows 7 Starter N
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
+  - Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
 # You can't access a shared calendar by using Outlook for a hidden mailbox

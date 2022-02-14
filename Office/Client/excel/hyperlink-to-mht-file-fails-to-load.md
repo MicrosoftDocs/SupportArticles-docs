@@ -4,26 +4,25 @@ description: Fixes the issue that MHT file can't be loaded when you click the hy
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
-- Excel 2010
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
-- Word 2013
-- Microsoft Word 2010
-- Microsoft Office Word 2003
-- PowerPoint 2013
-- PowerPoint 2010
-- Microsoft Office PowerPoint 2007
-- Microsoft Office PowerPoint 2003
-- Internet Explorer 9
+  - MET150
+appliesto: 
+  - Excel 2013
+  - Excel 2010
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
+  - Word 2013
+  - Microsoft Word 2010
+  - Microsoft Office Word 2003
+  - PowerPoint 2013
+  - PowerPoint 2010
+  - Microsoft Office PowerPoint 2007
+  - Microsoft Office PowerPoint 2003
+  - Internet Explorer 9
 ---
 
 # Hyperlink to MHT File in Office Documents Fails to Load in Internet Explorer

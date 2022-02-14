@@ -1,23 +1,22 @@
 ---
-title: OneDrive for Business stopped at "Setting up..." screen
+title: OneDrive for Business stopped at Setting up... screen
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 2/20/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online 
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 112359
-- CSSTroubleshoot 
-ms.reviewer: Daniel.Teixeira 
-description: Ways to resolve an issue where provisioning OneDrive for Business stops with a "Setting up" or "We're still setting up a few things" message.
+  - CI 112359
+  - CSSTroubleshoot
+ms.reviewer: Daniel.Teixeira
+description: Ways to resolve an issue where provisioning OneDrive for Business stops with a Setting up or We're still setting up a few things message.
 ---
 
 # OneDrive for Business stopped at "Setting up..." or "We're still setting up a few things" screen

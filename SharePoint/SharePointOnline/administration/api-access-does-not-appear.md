@@ -1,23 +1,22 @@
 ---
-title: The SharePoint Online Modern admin center does not display (Advanced) and (API access) 
+title: The SharePoint Online Modern admin center does not display (Advanced) and (API access)
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 11/2/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 124612
-- CSSTroubleshoot 
+  - CI 124612
+  - CSSTroubleshoot
 ms.reviewer: najagdis
-description: How to resolve an issue where "API access" and the "Advanced" tab don't appear in the Modern admin center.
+description: How to resolve an issue where API access and the Advanced tab don't appear in the Modern admin center.
 ---
 
 # (Advanced) and (API access) do not appear in the SharePoint Online Modern admin center

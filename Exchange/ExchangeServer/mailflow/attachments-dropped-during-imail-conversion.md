@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: michlee
-appliesto:
-- Exchange Server
+appliesto: 
+  - Exchange Server
 search.appverid: MET150
 ---
 # Attachments intermittently dropped during IMAIL conversion

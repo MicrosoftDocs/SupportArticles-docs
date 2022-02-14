@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 2/18/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online 
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 113694
-- CSSTroubleshoot 
-ms.reviewer: lucaband 
-description: How to resolve an issue where a .NET update in SharePoint causes an add-in running on Azure to stop working. 
+  - CI 113694
+  - CSSTroubleshoot
+ms.reviewer: lucaband
+description: How to resolve an issue where a .NET update in SharePoint causes an add-in running on Azure to stop working.
 ---
 
 # A SharePoint provider-hosted add-in running on Azure stops working after a .NET update

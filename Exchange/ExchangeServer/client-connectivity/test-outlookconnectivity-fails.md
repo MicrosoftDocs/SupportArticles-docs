@@ -1,5 +1,5 @@
 ---
-title: Cannot run Test-OutlookConnectivity 
+title: Cannot run Test-OutlookConnectivity
 description: Describes an issue that causes the Test-OutlookConnectivity cmdlet to fail in Exchange 2016 or Exchange 2013. This issue is caused by a case-sensitive parameter. A resolution is provided.
 ms.date: 08/10/2020
 author: simonxjx
@@ -7,17 +7,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # Test-OutlookConnectivity cmdlet fails with Sequence contains no elements error in Exchange Server

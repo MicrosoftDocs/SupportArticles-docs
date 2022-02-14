@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: bobcool
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # An overview of Microsoft Office Click-to-Run for Office 2010

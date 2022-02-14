@@ -1,23 +1,22 @@
 ---
-title:  An error message when you sort a range that contains merged cells in Excel
+title: An error message when you sort a range that contains merged cells in Excel
 description: Discusses a problem in which you may receive an error message when you sort a range that contains merged cells in Excel.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Excel for Office 365
-- Excel 2019
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Excel 2007
+appliesto: 
+  - Excel for Office 365
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Excel 2007
 ---
 
 # You may receive an error message when you sort a range that contains merged cells in Excel

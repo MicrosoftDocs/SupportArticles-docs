@@ -1,23 +1,22 @@
 ---
-title: F4 keyboard shortcut does not work as expected in Excel 
+title: F4 keyboard shortcut does not work as expected in Excel
 description: Describes an issue in which the F4 keyboard shortcut does not work consistently in Excel 2013, Excel 2010, and Excel 2007. This issue occurs when you try to use the F4 shortcut to repeat your last command or action.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: Jenl
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2007 (Home and Student version)
-- Excel 2010
-- Excel Home and Student 2010
-- Excel 2013
+  - MET150
+appliesto: 
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2007 (Home and Student version)
+  - Excel 2010
+  - Excel Home and Student 2010
+  - Excel 2013
 ---
 
 # F4 keyboard shortcut does not work as expected in Excel 2013, Excel 2010, and Excel 2007

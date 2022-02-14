@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft Office Excel 2007
-- Microsoft Word 2002
-- Microsoft PowerPoint 2002
-- Microsoft Access 2002
-- Microsoft Excel 2002
-- Microsoft Outlook 2002
+appliesto: 
+  - Microsoft Office Excel 2007
+  - Microsoft Word 2002
+  - Microsoft PowerPoint 2002
+  - Microsoft Access 2002
+  - Microsoft Excel 2002
+  - Microsoft Outlook 2002
 ---
 
 # Error message when you open an Office file that has a long folder name

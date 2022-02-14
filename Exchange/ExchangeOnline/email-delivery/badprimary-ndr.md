@@ -1,19 +1,18 @@
 ---
 title: Remote Server returned 550 5.2.0 RESOLVER.ADR.BadPrimary in Office 365
-description: Describes that Exchange Online users receive a "Remote Server returned '550 5.2.0 RESOLVER.ADR.BadPrimary'" error message when they send mail to a recipient outside of the organization. Provides a resolution.
+description: Describes that Exchange Online users receive a Remote Server returned '550 5.2.0 RESOLVER.ADR.BadPrimary' error message when they send mail to a recipient outside of the organization. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: pramods
 appliesto: 
-- Exchange Online
+  - Exchange Online
 search.appverid: MET150
 ---
 # (Remote Server returned 550 5.2.0 RESOLVER.ADR.BadPrimary) error when an Exchange Online user sends mail to an external contact

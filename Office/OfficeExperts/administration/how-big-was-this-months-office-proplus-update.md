@@ -5,16 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: ericspli
-appliesto:
-- Microsoft 365 Apps for enterprise
+appliesto: 
+  - Microsoft 365 Apps for enterprise
 ---
 
 # How to check the size of this month's Office ProPlus update

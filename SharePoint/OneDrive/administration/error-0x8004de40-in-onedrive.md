@@ -1,5 +1,5 @@
 ---
-title: Error Code 0x8004de40 when signing in to OneDrive 
+title: Error Code 0x8004de40 when signing in to OneDrive
 description: Describes how to resolve an issue when unable to sign in to OneDrive
 author: salarson
 ms.author: v-matthamer
@@ -8,16 +8,15 @@ localization_priority: Normal
 ms.date: 05/28/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 ms.custom: 
-- CSSTroubleshoot
-- CI 149475
-search.appverid:
-- SPO160
-- MET150
+  - CSSTroubleshoot
+  - CI 149475
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- OneDrive for Business
+appliesto: 
+  - OneDrive for Business
 ---
 
 # Error Code 0x8004de40 when signing in to OneDrive

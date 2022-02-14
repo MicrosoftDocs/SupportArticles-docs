@@ -1,19 +1,18 @@
 ---
 title: Workflow contains blank values in output from Multiple lines of text column
-description: A Workflow designed to collect information from the "Multiple lines of text" column contains blank values in output.
+description: A Workflow designed to collect information from the Multiple lines of text column contains blank values in output.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
-- SharePoint Server
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server
 ---
 
 # Workflow that uses the SharePoint 2013 Workflow Platform Type contains blank values in output from the "Multiple lines of text" column

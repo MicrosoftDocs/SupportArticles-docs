@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 04/28/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: High
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 115921
-- CSSTroubleshoot 
-ms.reviewer: alhopper  
-description: Describes how to enable guest user access in Teams for remote workers. 
+  - CI 115921
+  - CSSTroubleshoot
+ms.reviewer: alhopper
+description: Describes how to enable guest user access in Teams for remote workers.
 ---
 
 # Activate guest user access in the Microsoft Teams admin center

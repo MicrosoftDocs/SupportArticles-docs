@@ -1,21 +1,20 @@
 ---
 title: Policy to prevent saving credentials doesn't work
-description: When you configure Outlook 2010 and Outlook 2013 policy setting not to save Basic Authentication credentials, the credentials dialog shows the "Remember my credentials" option. However, the policy does prevent saving credentials.
+description: When you configure Outlook 2010 and Outlook 2013 policy setting not to save Basic Authentication credentials, the credentials dialog shows the Remember my credentials option. However, the policy does prevent saving credentials.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 116784
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 116784
+  - CSSTroubleshoot
 ms.reviewer: aruiz
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # Policy to prevent Outlook from saving basic authentication credentials seems not to work

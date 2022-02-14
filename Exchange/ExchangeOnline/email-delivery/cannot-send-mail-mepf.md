@@ -4,19 +4,18 @@ description: Email is not able to be delivered to mail-enabled public folders in
 author: simonxjx
 ms.author: haembab
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 123399
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 123399
+  - CSSTroubleshoot
 ms.reviewer: haembab
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Error when sending email to mail-enabled public folders in Office 365: 554 5.2.2 mailbox full
 

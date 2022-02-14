@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 3/19/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150'
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150'
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 115814
-- CSSTroubleshoot 
-ms.reviewer: prbalusu 
-description: Methods to resolve the error FAILED_TO_AUTO_DISCOVER_DOMAIN in the Microsoft Teams admin center. 
+  - CI 115814
+  - CSSTroubleshoot
+ms.reviewer: prbalusu
+description: Methods to resolve the error FAILED_TO_AUTO_DISCOVER_DOMAIN in the Microsoft Teams admin center.
 ---
 
 # FAILED_TO_AUTO_DISCOVER_DOMAIN error in Microsoft Teams admin center

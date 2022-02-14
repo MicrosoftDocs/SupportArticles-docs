@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: tehnoonr
-appliesto:
-- SharePoint Server 2010
-- Microsoft SharePoint Foundation 2010
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2010
+  - Microsoft SharePoint Foundation 2010
+search.appverid: MET150
 ---
 # Administrative timer jobs aren't running after an upgrade
 

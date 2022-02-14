@@ -6,16 +6,15 @@ manager: dcscontentpm
 ms.date: 8/27/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Server
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Server
 ms.custom: 
-- CI 122278
-- CSSTroubleshoot 
+  - CI 122278
+  - CSSTroubleshoot
 ms.reviewer: flaviuc
 description: How to resolve an issue where Event ID 4769 appears multiple times in the SharePoint audit log.
 ---

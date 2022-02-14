@@ -4,18 +4,17 @@ description: Provides guides to troubleshoot meeting recording issues. For examp
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 125645
-- CSSTroubleshoot
+  - CI 125645
+  - CSSTroubleshoot
 ms.reviewer: corbinm
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Issues with meeting recordings
 

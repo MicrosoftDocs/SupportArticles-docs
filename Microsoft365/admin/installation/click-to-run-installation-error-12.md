@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 10/22/2020
 ms.topic: troubleshooting
 audience: ITPro
-ms.service: microsoft-365-admin
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Office Click-to-Run
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Office Click-to-Run
 ms.custom: 
-- CI 124231
-- CSSTroubleshoot 
+  - CI 124231
+  - CSSTroubleshoot
 ms.reviewer: dhirenb
-description: How to resolve a Microsoft Office Click-to-Run installation when an error code containing the number 12 is received. 
+description: How to resolve a Microsoft Office Click-to-Run installation when an error code containing the number 12 is received.
 ---
 
 # Click-to-Run error (12) when installing Microsoft Office

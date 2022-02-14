@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Office Home and Business 2010
-- Office Home and Student 2010
-- Office Professional 2010
-- Office Professional Plus 2010
-- Office Standard 2010
+appliesto: 
+  - Office Home and Business 2010
+  - Office Home and Student 2010
+  - Office Professional 2010
+  - Office Professional Plus 2010
+  - Office Standard 2010
 ms.reviewer: 
 ---
 # How to determine the license type for Microsoft Office 2010 and 2007 products

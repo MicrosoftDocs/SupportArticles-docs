@@ -4,21 +4,20 @@ description: Provides the workaround to remove a leading split in a task in Micr
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: dday
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Project Professional 2003
-- Microsoft Office Project Standard 2003
-- Project Professional 2010
-- Project Standard 2010
-- Project Professional 2013
-- Project 2013 Standard
+  - MET150
+appliesto: 
+  - Microsoft Office Project Professional 2003
+  - Microsoft Office Project Standard 2003
+  - Project Professional 2010
+  - Project Standard 2010
+  - Project Professional 2013
+  - Project 2013 Standard
 ---
 
 # How to Remove a Leading Split in a Task

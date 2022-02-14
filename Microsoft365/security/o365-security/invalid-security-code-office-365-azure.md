@@ -5,18 +5,17 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-security
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Azure Active Directory 
-- Microsoft Intune 
-- Azure Backup 
-- Office 365 User and Domain Management 
-- Office 365 Identity Management
+appliesto: 
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 User and Domain Management
+  - Office 365 Identity Management
 ---
 
 # "Invalid Security Code" error when you reset your admin password for Office 365, Intune, or Azure

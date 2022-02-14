@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 05/06/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Teams for MacOS
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Teams for MacOS
 ms.custom: 
-- CI 122178
-- CSSTroubleshoot 
+  - CI 122178
+  - CSSTroubleshoot
 ms.reviewer: sakoho
-description: Addresses an issue in Teams on the MacOS where the Virtual Camera stops working after a security update. 
+description: Addresses an issue in Teams on the MacOS where the Virtual Camera stops working after a security update.
 ---
 
 # Virtual cameras stop working on MacOS Teams desktop client

@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: benwinz, aruiz, gbratton, gabesl
-appliesto:
-- Outlook 2016
+appliesto: 
+  - Outlook 2016
 search.appverid: MET150
 ---
 # The operation cannot be performed because the message has been changed error when a delegate creates a Skype or Teams meeting in Outlook

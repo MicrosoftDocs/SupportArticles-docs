@@ -4,22 +4,21 @@ description: Describes an issue in which you can't connect to a Microsoft cloud 
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
-search.appverid:
-- SPO160 
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 audience: ITPro
-ms.service: microsoft-365-security
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 109573
+  - CSSTroubleshoot
+  - CI 109573
 ms.author: v-maqiu
-appliesto:
-- Cloud Services (Web roles/Worker roles) 
-- Azure Active Directory 
-- Microsoft Intune 
-- Azure Backup 
-- Office 365 User and Domain Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 User and Domain Management
 ---
 
 # "Access Denied" error when you use the connect-MSOLService cmdlet to connect to Office 365

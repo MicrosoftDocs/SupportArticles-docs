@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: anthonge, nbanup
-appliesto:
-- Exchange Server 2010 Service Pack 3
+appliesto: 
+  - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
 ---
 # Event ID 9875 source MSExchangeIS Mailbox Store error

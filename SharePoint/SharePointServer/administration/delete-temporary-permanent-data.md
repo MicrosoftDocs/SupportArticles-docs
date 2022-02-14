@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: clake, fselkirk, patrigan, v-chsu
 ms.custom: 
-- CSSTroubleshoot
-- CI 110761
-appliesto:
-- SharePoint Workspace 2010
+  - CSSTroubleshoot
+  - CI 110761
+appliesto: 
+  - SharePoint Workspace 2010
 ---
 
 # How to delete temporary and permanent data in SharePoint Workspace 2010

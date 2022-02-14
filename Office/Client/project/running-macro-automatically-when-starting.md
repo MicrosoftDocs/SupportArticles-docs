@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Online Desktop Client
-- Project Professional 2019
-- Project Standard 2019
-- Project Professional 2016
-- Project Standard 2016
-- Project Professional 2013
-- Project Standard 2013
+  - MET150
+appliesto: 
+  - Project Online Desktop Client
+  - Project Professional 2019
+  - Project Standard 2019
+  - Project Professional 2016
+  - Project Standard 2016
+  - Project Professional 2013
+  - Project Standard 2013
 ms.reviewer: 
 ---
 # Running a macro automatically when you start Project

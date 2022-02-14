@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Foundation 2013
-- SharePoint Server 2013
-- SharePoint Server 2010
-- SharePoint Online
+appliesto: 
+  - SharePoint Foundation 2013
+  - SharePoint Server 2013
+  - SharePoint Server 2010
+  - SharePoint Online
 ---
 
 # Permissions required for managing the Secure Store Service app

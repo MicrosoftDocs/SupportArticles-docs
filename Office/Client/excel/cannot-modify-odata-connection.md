@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: lauraho
-appliesto:
-- Excel 2013
+appliesto: 
+  - Excel 2013
 ---
 
 # Cannot modify the oData connections in an Excel 2013 PowerPivot workbook

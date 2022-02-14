@@ -5,20 +5,19 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
-- Skype for Business 2015
-- Skype for Business Server 2015
-- Skype for Business 2016
-- Lync 2013
-- Lync Server 2013
+appliesto: 
+  - Skype for Business Online
+  - Skype for Business 2015
+  - Skype for Business Server 2015
+  - Skype for Business 2016
+  - Lync 2013
+  - Lync Server 2013
 ---
 
 # Skype for Business Online users in an Office 365 domain can't IM or detect users in an on-premises domain

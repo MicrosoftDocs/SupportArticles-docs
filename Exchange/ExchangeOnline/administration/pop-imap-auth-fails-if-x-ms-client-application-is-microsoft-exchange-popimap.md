@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: kezuo
-appliesto:
-- Exchange Online
-- Office 365 Identity Management
+appliesto: 
+  - Exchange Online
+  - Office 365 Identity Management
 search.appverid: MET150
 ---
 # POP/IMAP client authenticate fails if X-MS-Client-Application in the AD FS claim rule is set to Microsoft.Exchange.PopImap

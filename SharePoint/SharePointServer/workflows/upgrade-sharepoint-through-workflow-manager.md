@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft SharePoint Server 2013 Service Pack 1
-- SharePoint Server 2013
-- Workflow Manager 1.0  
-search.appverid: MET150 
+appliesto: 
+  - Microsoft SharePoint Server 2013 Service Pack 1
+  - SharePoint Server 2013
+  - Workflow Manager 1.0
+search.appverid: MET150
 ---
 # Upgrade SharePoint 2013 to SharePoint 2016 through Workflow Manager
 

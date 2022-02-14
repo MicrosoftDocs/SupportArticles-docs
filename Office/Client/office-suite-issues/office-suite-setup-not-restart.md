@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: off12set
-appliesto:
-- Office 2010
-- IIS Media Services 2.0
+appliesto: 
+  - Office 2010
+  - IIS Media Services 2.0
 ---
 
 # The 2010 Office suite Setup program will not restart after an initial installation is interrupted

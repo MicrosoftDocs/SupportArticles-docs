@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Server
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Server
+  - Skype for Business Online
 ---
 
 # Online users can't present content in on-premises hosted meetings in a Skype for Business hybrid deployment

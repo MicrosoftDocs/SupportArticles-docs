@@ -1,22 +1,21 @@
 ---
 title: How to remove duration from retention policy tags in Outlook
-description:  Outlook introduced a change that enables administrators and users to remove the duration information from the retention policy tag view by setting a registry key. 
+description: Outlook introduced a change that enables administrators and users to remove the duration information from the retention policy tag view by setting a registry key.
 author: helenclu
 ms.author: sfellman
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 114394
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 114394
+  - CSSTroubleshoot
 ms.reviewer: sfellman
-appliesto:
-- Outlook for Office 365
+appliesto: 
+  - Outlook for Office 365
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # How to remove duration from retention policy tags in Outlook

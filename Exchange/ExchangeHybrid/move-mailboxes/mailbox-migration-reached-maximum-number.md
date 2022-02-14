@@ -1,23 +1,22 @@
 ---
 title: Mailbox migration number exceeds the default limit
-description: Fixes an issue in which you receive a "Mailbox Replication Proxy Service can't process this request because it has reached the maximum number of active MRS connections allowed" error message when moving mailboxes between on-premises and Exchange Online.
+description: Fixes an issue in which you receive a Mailbox Replication Proxy Service can't process this request because it has reached the maximum number of active MRS connections allowed error message when moving mailboxes between on-premises and Exchange Online.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: timothyh
-appliesto:
-- Exchange Online
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Request has reached the maximum number of active MRS connections allowed during a hybrid mailbox move

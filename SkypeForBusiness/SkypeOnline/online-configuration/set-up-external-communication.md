@@ -6,12 +6,11 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: skype-for-business-online
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 search.appverid: MET150
 ---
 # Set up Skype for Business Online external communications

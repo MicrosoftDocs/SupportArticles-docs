@@ -6,18 +6,17 @@ ms.date: 5/8/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 117744
-- CSSTroubleshoot 
+  - CI 117744
+  - CSSTroubleshoot
 ms.reviewer: scapero
-description: Explains why documents 
+description: Explains why documents
 ---
 
 # Documents downloaded from Teams desktop client open in protected view

@@ -6,18 +6,17 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- CI 147728
-- Exchange Hybrid
-- CSSTroubleshoot
+ms.custom: 
+  - CI 147728
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: mmason, salarson
 appliesto: 
-- OneDrive for Business
-- Outlook on the web
-- Exchange Server 2016
-- Exchange Server 2019
+  - OneDrive for Business
+  - Outlook on the web
+  - Exchange Server 2016
+  - Exchange Server 2019
 search.appverid: MET150
 ---
 # Two OneDrive accounts appear when uploading attachments from Outlook on the web

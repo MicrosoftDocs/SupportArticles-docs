@@ -7,15 +7,14 @@ ms.author: v-lianna
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: meerak, akashb, ninob
-appliesto:
-- Exchange Server 2019 
-- Exchange Server 2016  
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
 ---
 # Can't use EAC to add remote shared mailbox to delivery management of distribution group

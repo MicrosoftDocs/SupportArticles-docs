@@ -4,18 +4,17 @@ description: Troubleshooting steps for account or subscription errors when activ
 author: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 157752
-- CI 159119
+  - CSSTroubleshoot
+  - CI 157752
+  - CI 159119
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365
+  - MET150
+appliesto: 
+  - Microsoft 365
 ---
 
 # Account or subscription verification errors activating Microsoft 365 Apps

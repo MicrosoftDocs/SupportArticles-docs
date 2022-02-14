@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: robevans
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Outlook 2010
+  - Outlook for Windows
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook 2010
 ---
 # Connection issues between Outlook and Exchange when MAPI is disabled for a user
 

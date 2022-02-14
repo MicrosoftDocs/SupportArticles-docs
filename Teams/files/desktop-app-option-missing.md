@@ -4,18 +4,17 @@ description: When you try to edit an Office file by using its corresponding desk
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 159208
-- CSSTroubleshoot
+  - CI 159208
+  - CSSTroubleshoot
 ms.reviewer: prbalusu; meerak
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # The "Desktop app" option is missing when trying to edit an Office file in Teams

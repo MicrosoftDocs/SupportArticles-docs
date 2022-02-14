@@ -6,18 +6,17 @@ ms.author: akashb
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 116132
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 116132
+  - CSSTroubleshoot
 ms.reviewer: akashb
-appliesto:
-- Exchange Server 2016
-- Exchange Server 2010
-search.appverid:
-- MET150
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2010
+search.appverid: 
+  - MET150
 ---
 
 # IMAP clients fail to logon when Exchange Server 2010 coexists with Exchange Server 2016

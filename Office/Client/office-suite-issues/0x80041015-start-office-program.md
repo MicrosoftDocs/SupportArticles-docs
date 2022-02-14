@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 365 Home
-- Office 365 Personal
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 365 Home
+  - Office 365 Personal
 ---
 
 # You receive a "0x80041015" error message when you try to start an Office program

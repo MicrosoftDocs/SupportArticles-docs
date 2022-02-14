@@ -1,21 +1,20 @@
 ---
-title: Performance issues if UseLowPriorityConfiguration is 0 
+title: Performance issues if UseLowPriorityConfiguration is 0
 description: This article introduces the way to resolve some possible computer performance issues that are caused by modifying the UseLowPriorityConfiguration value in the registry.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans
-appliesto:
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
+appliesto: 
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
 search.appverid: MET150
 ---
 # Possible computer performance issues if UseLowPriorityConfiguration is set to 0 in the registry

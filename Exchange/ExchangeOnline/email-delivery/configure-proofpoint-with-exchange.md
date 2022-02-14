@@ -6,21 +6,20 @@ manager: dcscontentpm
 ms.date: 10/22/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.collection: 
-- exchange-online
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Exchange Online
+  - exchange-online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Exchange Online
 ms.custom: 
-- Exchange Online
-- CI 123370
-- CSSTroubleshoot 
+  - Exchange Online
+  - CI 123370
+  - CSSTroubleshoot
 ms.reviewer: stanalek
-description: Describes how to configure Proofpoint Email Protection and other Sendmail-based applications with Exchange Online. 
+description: Describes how to configure Proofpoint Email Protection and other Sendmail-based applications with Exchange Online.
 ---
 # Configure Proofpoint Email Protection to work with Exchange Online
 

@@ -4,16 +4,15 @@ description: Introduces how to give access to PWA and permissions.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Server 2013
-- Project Online
+  - MET150
+appliesto: 
+  - Project Server 2013
+  - Project Online
 ---
 
 # Error occurs when accessing Project Web App

@@ -4,20 +4,19 @@ description: Discusses the conversion of Office 2016 for Mac to 64-bit in the Au
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: lauraho
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel for Mac for Office 365
-- OneNote for Mac for Office 365
-- Outlook for Mac for Office 365
-- PowerPoint for Mac for Office 365
-- Word for Mac for Office 365
+  - MET150
+appliesto: 
+  - Excel for Mac for Office 365
+  - OneNote for Mac for Office 365
+  - Outlook for Mac for Office 365
+  - PowerPoint for Mac for Office 365
+  - Word for Mac for Office 365
 ---
 # Office 2016 for Mac 64-bit upgrade
 

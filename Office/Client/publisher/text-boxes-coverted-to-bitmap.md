@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: lisyu, RichPo, ARykhus, debbiery
-appliesto:
-- Publisher 2010
-- Publisher 2013
+appliesto: 
+  - Publisher 2010
+  - Publisher 2013
 ---
 
 # Text boxes in a Publisher 2010 and 2013-created email message are converted to bitmap images when the email is sent

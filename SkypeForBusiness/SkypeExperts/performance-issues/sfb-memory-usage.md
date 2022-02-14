@@ -5,16 +5,13 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
-ms.custom:
-- CSSTroubleshoot
-- sap: sfbexperts
+ms.custom: sap:sfbexperts, CSSTroubleshoot
 ms.author: kenguil
-appliesto:
-- Skype for Business
+appliesto: 
+  - Skype for Business
 ---
 
 # The Great Skype for Business Memory Mystery

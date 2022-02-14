@@ -6,15 +6,14 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- 'Associated content asset: 4555332'
+  - CSSTroubleshoot
+  - 'Associated content asset: 4555332'
 ms.reviewer: kerbo
 appliesto: 
-- Exchange Online
-- Microsoft Exchange Online Dedicated
+  - Exchange Online
+  - Microsoft Exchange Online Dedicated
 search.appverid: MET150
 ---
 

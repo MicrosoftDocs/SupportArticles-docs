@@ -3,18 +3,17 @@ title: Unable to import, export, or link to FoxPro databases
 description: Describes a problem in which you can't import, export, or link to FoxPro databases directly in Access. Use Microsoft Visual FoxPro ODBC driver to resolve this problem.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114797
-- CSSTroubleshoot
+  - CI 114797
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Office Access 2007
-- Microsoft Office Access 2003
+appliesto: 
+  - Microsoft Office Access 2007
+  - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # You cannot connect directly to FoxPro databases in Access 2007 and in Access 2003

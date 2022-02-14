@@ -5,19 +5,18 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: emmersp
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Office Excel 2007
-- Office Excel 2003
+  - MET150
+appliesto: 
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Office Excel 2007
+  - Office Excel 2003
 ---
 
 # How to control and understand settings in the Format Cells dialog box in Excel

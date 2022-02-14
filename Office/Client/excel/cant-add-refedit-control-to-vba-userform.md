@@ -4,16 +4,15 @@ description: Fixes the issue that you can't add a refedit control on a VBA userf
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
-- Excel 2010
+  - MET150
+appliesto: 
+  - Excel 2013
+  - Excel 2010
 ---
 
 # Unable to add refedit control to VBA userform

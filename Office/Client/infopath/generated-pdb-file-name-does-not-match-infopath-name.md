@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
-- SPO160
+  - MET150
+  - SPO160
 audience: Admin
 ms.custom: 
-- CSSTroubleshoot
-- CI 100405
+  - CSSTroubleshoot
+  - CI 100405
 ms.reviewer: doug.mahugh
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
-appliesto:
-- Microsoft InfoPath 2013
+appliesto: 
+  - Microsoft InfoPath 2013
 ---
 # Generated .PDB file name does not match InfoPath form name
 

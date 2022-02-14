@@ -6,20 +6,19 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans, aruiz
-appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Service Pack 1
-- Outlook 2016
-- Microsoft Outlook 2013 Service Pack 1
-- Outlook 2019
-- Outlook for Office 365  
+appliesto: 
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Service Pack 1
+  - Outlook 2016
+  - Microsoft Outlook 2013 Service Pack 1
+  - Outlook 2019
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Outlook 2010, 2013, 2016, or Outlook for Office 365 doesn't connect Exchange using MAPI over HTTP as expected

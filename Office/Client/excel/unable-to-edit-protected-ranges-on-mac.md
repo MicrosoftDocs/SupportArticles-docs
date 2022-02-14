@@ -5,16 +5,15 @@ author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 150452
+  - CSSTroubleshoot
+  - CI 150452
 ms.author: v-matthamer
-appliesto:
-- Excel for Mac
+appliesto: 
+  - Excel for Mac
 ---
 
 # Can’t edit certain cells in a protected worksheet in Excel for Mac

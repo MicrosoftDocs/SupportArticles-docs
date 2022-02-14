@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae, rakeshs
-appliesto:
-- Outlook 2013
-- Outlook 2010
+appliesto: 
+  - Outlook 2013
+  - Outlook 2010
 search.appverid: MET150
 ---
 # Looking for credential tiles message when launching Outlook 2013 or 2010

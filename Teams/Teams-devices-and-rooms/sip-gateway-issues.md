@@ -7,13 +7,12 @@ ms.author: luche
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: CI159602
 ms.reviewer: scapero, chasing
 ---

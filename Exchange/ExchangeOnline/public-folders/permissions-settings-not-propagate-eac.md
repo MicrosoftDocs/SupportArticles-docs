@@ -4,22 +4,21 @@ description: When you apply permissions to a public folder and its subfolders in
 author: helenclu
 ms.author: batre
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 150274
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 150274
+  - CSSTroubleshoot
 ms.reviewer: batre
-appliesto:
-- Exchange Online
-- Exchange Server 2013
-- Exchange Server 2016
-- Exchange Server 2019
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Public folder permissions and settings don't propagate in EAC
 

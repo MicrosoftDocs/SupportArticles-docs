@@ -6,15 +6,14 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- CI 144749
-- Outlook for iOS
-- CSSTroubleshoot
+ms.custom: 
+  - CI 144749
+  - Outlook for iOS
+  - CSSTroubleshoot
 ms.reviewer: dlaughli
-appliesto:
-- Outlook for iOS
+appliesto: 
+  - Outlook for iOS
 search.appverid: MET150
 ---
 # Duplicate Outlook contacts appear in iOS Contacts app

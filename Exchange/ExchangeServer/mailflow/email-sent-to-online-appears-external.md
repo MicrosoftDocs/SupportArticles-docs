@@ -6,18 +6,17 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2016 Enterprise Edition
+  - MET150
+appliesto: 
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
 ---
 # Emails sent from on-premises to Exchange Online appears to be external after running HCW
 
