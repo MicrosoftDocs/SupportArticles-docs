@@ -58,7 +58,7 @@ Microsoft may offer support for the following specific open-source technologies 
 
 - Languages: PHP, Java, Python, Node.JS
 - Database: MySQL
-- Web and application servers: Apache, Tomcat
+- Web and application servers: Apache HTTP Server, Apache Tomcat
 - Frameworks: WordPress
 
 ## Open-source technology support scope
