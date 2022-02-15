@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting DFSN issues
-description: Learn how to troubleshoot scenarios related to DFSN.
+title: Guidelines of troubleshooting DFSN issues
+description: Introduces general guide troubleshoot scenarios related to DFSN.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
