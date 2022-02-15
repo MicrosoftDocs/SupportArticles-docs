@@ -5,7 +5,7 @@ ms.date: 11/05/2020
 ms.custom: sap:Database Engine
 ms.reviewer: PiJoCoder, Hemin-MSFT
 metadata author: PiJoCoder
-ms.author: JosephPilov-msft
+ms.author: jopilov
 ms.prod: sql
 ---
 
