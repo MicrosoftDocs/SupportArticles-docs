@@ -2,7 +2,7 @@
 title: Troubleshoot common SQL Server Cumulative Update installation issues
 description: This article helps you to troubleshoot common SQL Server update issues. 
 ms.date: 02/11/2022
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.prod-support-area-path: Installation, Patching, and Upgrade
 author: prmadhes-msft
 ms.author: v-jayaramanp
 ms.prod: sql
@@ -15,7 +15,7 @@ This article provides general steps to troubleshoot issues that you may experien
 - "Wait on Database Engine recovery handle failed" and errors [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) when you run upgrade scripts.
 - Setup errors that occur because of missing MSI files or update files in the Windows Installer cache.
 - "The Database Engine system data directory in the registry is not valid" or "the User Log directory in the registry is not valid."
-- "Network path was not found" and other error messages that you receive if Remote Registry Service or admin shares are disabled on an Always On Failover Cluster instance (FCI) or Always On Availability Groups (AAG).
+- "Network path was not found" and other error messages that you receive if Remote Registry Service or admin shares are disabled on an Always On Failover Cluster instance (FCI) or Always On Availability Groups.
 
 ## Cumulative update and service pack installation information
 
@@ -23,15 +23,15 @@ This section provides information about CU and SP installations.
 
 - For Microsoft SQL Server 2016 and earlier versions:
   - Before you install a CU, make sure that your SQL Server instance is at the right SP level for that CU. For example, you can't apply CU17 for SQL 2016 SP2 before you apply SP2 for the SQL Server 2016 instance.
-  - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL Server 2016 SP2 instance, you can skip to CU17 without applying any of the intermediate CUs.
-- For Microsoft SQL Server 2017 and later versions, you can always apply the latest CU available (no service packs).
+  - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL Server 2016 SP2 instance, you can skip applying to CU14, CU15, and CU16 and go to CU17 directly.
+- For Microsoft SQL Server 2017 and later versions, you can always apply the latest CU available (no service packs exist in SQL Server 2017 and later).
 - The SQL Server program files and data files can't be installed on:
     - A removable disk drive
     - A file system that uses compression
     - A directory in which system files are located
     - Shared drives on a failover cluster instance
 - Before you apply a CU or SP, make sure that the program instance that is being updated is configured appropriately for that update.
-- If you add a new [database engine feature](/sql/database-engine/install-windows/install-sql-server-database-engine) after you apply a CU or an SP to the program instance, you should update the new feature to the same level as the program instance before you apply a new CU or SP.
+- If you add a new [database engine feature](/sql/database-engine/install-windows/install-sql-server-database-engine) after you apply a CU or an SP to an instance, you should update the new feature to the same level as the program instance before you apply any new CUs or SPs.
 
 ## General troubleshooting methodology
 
@@ -45,7 +45,7 @@ If there's no matching scenario, look for more pointers in the log files.
 
 ## "Wait on Database Engine recovery handle failed" and "912" and "3417" errors
 
-Upgrade scripts are shipped together with every SQL Server update. They're run after the SQL Server binaries are upgraded. If these scripts don't run, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs ["912"](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and ["3417"](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. "912" and "3417" are generic errors that are associated with database script upgrade failures. The messages that precede the "912" error usually provide information about what exactly failed when these scripts ran.
+Upgrade T-SQL scripts are shipped together with every SQL Server update. They are executed after the SQL Server binaries are upgraded. If these scripts don't run, for some reason, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs _912_(/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and _3417_(/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. Errors _912_ and _3417_ are generic errors that are associated with database script upgrade failures. The messages that precede the _912_ errors usually provide information about what exactly failed when these scripts ran.
 
 To troubleshoot and fix these errors, follow these steps:
 
@@ -57,7 +57,7 @@ The following errors are some of the common causes of upgrade script failures an
 
   - **SSISDB part of availability group**
 
-   Remove the SQL Server Integration Services (SSIS) Catalog database (SSISDB) from the availability group. After the upgrade finishes, restore SSISDB to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
+  Remove the SQL Server Integration Services (SSIS) Catalog database (SSISDB) from the availability group. After the upgrade finishes, restore SSISDB to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
 
   - **Misconfigured System user/role in msdb database**
 
@@ -80,7 +80,16 @@ The following errors are some of the common causes of upgrade script failures an
 
 ## Setup errors caused by missing installer files in Windows cache
 
-Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is C:\Windows\Installer. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition, review and implement the procedures that are described in [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md).
+Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is C:\Windows\Installer. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition,
+
+- Repair the SQL Server installation
+- Use the [FixMissingMSI tool](https://github.com/suyouquan/SQLSetupTools/releases/)
+- Use the [FindSQLInstalls.vbs script](https://raw.githubusercontent.com/suyouquan/SQLSetupTools/master/FixMissingMSI/FindSQLInstalls.vbs).
+- Manually restore the files
+- Restore files from system state backups
+review and implement the procedures that are described in [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md).
+
+For detailed instructions, see [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md).
 
 ## Setup fails because of incorrect data or log location in registry
 
@@ -95,8 +104,8 @@ To fix this issue, connect to the SQL Server instance by using SQL Server Manage
 
 For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), you must always follow the best practices that are described in [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true). If you're experiencing errors when you apply a CU or an SP, check the following conditions:
 
-- Determine whether the remote registry service is active and running on all nodes of the WSFC cluster.
-- If the service account for SQL Server isn't an administrator in your cluster, make sure that administrative shares (C$ and so on) are enabled on all the nodes. For more information, see [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md).
+- Ensure that the **Remote Registry** service is active and running on all nodes of the WSFC cluster.
+- If the service account for SQL Server isn't an administrator in your Windows cluster, make sure that administrative shares (C$ and so on) are enabled on all the nodes. For more information, see [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md).
 If these shares aren't configured correctly, you might notice one or more of the following symptoms when you try to install a CU or SP:
   - The update takes a long time to run or doesn't respond. Setup logs don't reveal any progress.
   - Setup logs contain messages such as the following:
