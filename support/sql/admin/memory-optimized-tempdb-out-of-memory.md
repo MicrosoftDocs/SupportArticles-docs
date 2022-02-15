@@ -25,7 +25,7 @@ After you enable the memory-optimized tempdb metadata (HkTempDB) feature, error 
 
 ### Error message
 
-You can see the following error messages where `MEMORYCLERK_XTP` is the major cause.
+You can see the following error message where `MEMORYCLERK_XTP` is the major cause.
  
 > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'default'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information.
 
