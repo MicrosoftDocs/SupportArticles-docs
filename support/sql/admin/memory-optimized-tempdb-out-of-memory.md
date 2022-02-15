@@ -48,9 +48,9 @@ You can see the following error messages where `MEMORYCLERK_XTP` is the major ca
 
 ## Cause and resolution
 
-Several causes that could lead to the symptoms are identified:
+The causes of the symptoms can be divided into the following two categories:
 
-### Cause with gradual increase in XTP memory consumption
+### Gradual increase in XTP memory consumption
 
 - Cause 1
 
@@ -90,7 +90,7 @@ Several causes that could lead to the symptoms are identified:
 
     **Resolution** The issue [14087445](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in [SQL Server 17 CU25](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9) and later versions is under examination to be ported over to SQL Server 2019.
 
-### Scenario with sudden spike or rapid increase in XTP memory consumption
+### Sudden spike or rapid increase in XTP memory consumption
 
    - Cause 5
 
