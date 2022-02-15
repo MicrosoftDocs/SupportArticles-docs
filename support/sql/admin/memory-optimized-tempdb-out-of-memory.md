@@ -4,7 +4,7 @@ description: Provides resolutions to troubleshoot out of memory issues with memo
 ms.date: 2/22/2022
 ms.custom: sap:Database Engine
 ms.reviewer: jopilov, hesha
-author: PiJoCoder
+author: hesha
 ms.author: jopilov
 ms.prod: sql
 ---
