@@ -91,8 +91,8 @@
       href: reset-ui-flow-service-when-bad-state.md
     - name: Send an email with an embedded image
       href: how-to-send-email-with-embedded-image.md
-    - name: SharePoint site isn't listed in trigger or action
-      href: sharepoint-site-not-listed-in-trigger-or-action.md
+    - name: Dropdown list doesn't load items in triggers or actions
+      href: dropdown-does-not-list-items-in-trigger-or-action.md
     - name: There is a problem with the flow's trigger
       href: there-is-a-problem-with-the-flows-trigger.md
     - name: Troubleshoot Flow Connections
