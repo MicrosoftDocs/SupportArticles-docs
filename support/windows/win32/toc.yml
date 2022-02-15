@@ -128,6 +128,8 @@
       href: access-violation-bex-appcrash.md
     - name: Asynchronous disk I/O appears synchronous
       href: asynchronous-disk-io-synchronous.md
+    - name: Add-in component guidelines for core OS processes
+      href: addin-components-core-os-processes.md
     - name: CD-ROM notifications
       href: receive-cd-rom-notification.md
     - name: CreateProcess can't eliminate duplicated variables
