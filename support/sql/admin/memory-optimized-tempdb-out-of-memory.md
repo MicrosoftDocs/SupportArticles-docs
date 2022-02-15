@@ -5,7 +5,7 @@ ms.date: 2/22/2022
 ms.custom: sap:Database Engine
 ms.reviewer: pijocoder, Hemin-msft
 author: Hemin-msft
-ms.author: pijocoder
+ms.author: jopilov
 ms.prod: sql
 ---
 
