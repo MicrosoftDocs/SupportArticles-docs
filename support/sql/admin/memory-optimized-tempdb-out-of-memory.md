@@ -1,10 +1,10 @@
 ---
 title: Memory optimized tempdb metadata out of memory errors
 description: Provides resolutions to troubleshoot out of memory issues with memory-optimized tempdb metadata.
-ms.date: 11/05/2020
+ms.date: 2/22/2022
 ms.custom: sap:Database Engine
-ms.reviewer: PiJoCoder, Hemin-MSFT
-author: PiJoCoder, Hemin-MSFT
+ms.reviewer: jopilov, hesha
+author: PiJoCoder
 ms.author: jopilov
 ms.prod: sql
 ---
