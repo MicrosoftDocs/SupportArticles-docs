@@ -2339,7 +2339,11 @@
       "source_path": "support/dynamics-365/marketing/the-campaign-activity-can-be-distributed-only-once-error.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-campaign-activity-can-be-distributed-only-once-error",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/kb841927.md",
+      "redirect_url": "/troubleshoot/windows/win32/addin-components-core-os-processes",
+      "redirect_document_id": false
     }
-
   ]
 }
