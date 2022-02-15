@@ -41,6 +41,8 @@
     
 - name: Azure Stack
   items:
+  - name: Kernel Soft Reboot error c0000034 on Dell EMC server
+    href: azure-stack-hci-kernel-soft-reboot-error-c0000034.md
   - name: Side-channel vulnerabilities protection
     href: side-channel-vulnerabilities.md
   - name: Warning message in Azure Stack
