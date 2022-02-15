@@ -24,7 +24,7 @@ DHCP is a standard protocol that's defined by RFC 1541 (which is superseded by R
 - Default gateway
 - Other information, such as Domain Name Service (DNS) server addresses and Windows Internet Name Service (WINS) server addresses. The system administrator configures the DHCP server by using the options that are parsed out to the client.
 
-For more information, see [DHCP Basics](https://docs.microsoft.com/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics).
+For more information, see [DHCP Basics](/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics).
 
 ## Troubleshoot DHCP clients
 
@@ -42,7 +42,7 @@ For DHCP clients, check the following devices and settings:
 For DHCP servers, check the following devices and settings:
 
 - The DHCP server service is started and running. To check this setting, run the `net start` command, and look for **DHCP Server**.
-- The DHCP server is authorized. See [Windows DHCP Server Authorization in Domain Joined Scenario](https://docs.microsoft.com/openspecs/windows_protocols/ms-dhcpe/56f8870b-a7c1-4db1-8a86-f69079fe5077).
+- The DHCP server is authorized. See [Windows DHCP Server Authorization in Domain Joined Scenario](/openspecs/windows_protocols/ms-dhcpe/56f8870b-a7c1-4db1-8a86-f69079fe5077).
 - Verify that IP address leases are available in the DHCP server scope for the subnet that the DHCP client is on. To do this, see the statistic for the appropriate scope in the DHCP server management console.
 - Check whether any **BAD_ADDRESS** listings can be found in the **Address Leases** section.
 - Check whether any devices on the network have static IP addresses that have not been excluded from the DHCP scope.
@@ -54,8 +54,8 @@ For DHCP servers, check the following devices and settings:
 
 ## Reference
 
-- [Troubleshooting guide for DHCP](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-dhcp-issue)
-- [Use automatic TCP/IP addressing without a DHCP server](https://docs.microsoft.com/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh)
+- [Troubleshooting guide for DHCP](/windows-server/troubleshoot/troubleshoot-dhcp-issue)
+- [Use automatic TCP/IP addressing without a DHCP server](/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh)
 
 ### Event logs
 
@@ -63,14 +63,14 @@ Check the System and DHCP Server service event logs (**Applications and Services
 
 Depending on the kind of issue, an event is logged to one of the following event channels:
 
-- [DHCP Server Operational Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
-- [DHCP Server Administrative Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
-- [DHCP Server System Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
-- [DHCP Server Filter Notification Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
-- [DHCP Server Audit Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
+- [DHCP Server Operational Events](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
+- [DHCP Server Administrative Events](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
+- [DHCP Server System Events](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
+- [DHCP Server Filter Notification Events](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
+- [DHCP Server Audit Events](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668%28v=ws.11%29)
 
 ### DHCP Server log
 
 The DHCP Server service debug logs provide more information about the IP address lease assignment and the DNS dynamic updates that are done by the DHCP server. By default, these logs are located in *%windir%\\System32\\Dhcp*.
 
-For more information, see [Analyze DHCP Server Log Files](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd183591%28v=ws.10%29).
+For more information, see [Analyze DHCP Server Log Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd183591%28v=ws.10%29).

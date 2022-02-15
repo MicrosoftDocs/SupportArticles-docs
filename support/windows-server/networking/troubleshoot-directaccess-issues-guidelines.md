@@ -56,7 +56,7 @@ The best troubleshooting approach is the "incremental ramp, test, and monitor" m
 
 A good starting point is to use at least four CPUs and more than eight gigabyte (GB) of RAM. A better choice would be eight CPUs, more than 12 GB of RAM, and more than 80 GB of disk space. There is no programmatic preference for physical or virtual servers. Either would work well if correctly sized.
 
-For more information, see [DirectAccess Capacity Planning](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess-capacity-planning).
+For more information, see [DirectAccess Capacity Planning](/windows-server/remote/remote-access/directaccess/directaccess-capacity-planning).
 
 ### Limit
 
@@ -73,18 +73,18 @@ The NetNat configuration can be viewed by running the `Get-NetNatTransitionConfi
 
 Troubleshoot DirectAccess server console issues:
 
-- [6to4](https://docs.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-6to4)
-- [DNS](https://docs.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dns)
-- [Domain controller and Kerberos](https://docs.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dc-kerberos)
-- [IP-HTTPS and IPSec](https://docs.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-ip-https-ipsec)
-- [Network and high availability](https://docs.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-networking)
+- [6to4](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-6to4)
+- [DNS](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dns)
+- [Domain controller and Kerberos](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dc-kerberos)
+- [IP-HTTPS and IPSec](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-ip-https-ipsec)
+- [Network and high availability](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-networking)
 
 ## Reference
 
-- [DirectAccess Unsupported Configurations](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess-unsupported-configurations)
-- [Problems with the DirectAccess Setup Wizard](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ee844200%28v=ws.10%29)
-- [Problems with DirectAccess Connections](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ee844125%28v=ws.10%29)
-- [Fixing Issues with Network Location Detection](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ee844116%28v=ws.10%29)
-- [DirectAccess Offline Domain Join](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess-offline-domain-join)
-- [Deploy a Single DirectAccess Server Using the Getting Started Wizard](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/single-server-wizard/deploy-a-single-directaccess-server-using-the-getting-started-wizard)
-- [Deploy a Single DirectAccess Server with Advanced Settings](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings)
+- [DirectAccess Unsupported Configurations](/windows-server/remote/remote-access/directaccess/directaccess-unsupported-configurations)
+- [Problems with the DirectAccess Setup Wizard](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ee844200%28v=ws.10%29)
+- [Problems with DirectAccess Connections](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ee844125%28v=ws.10%29)
+- [Fixing Issues with Network Location Detection](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ee844116%28v=ws.10%29)
+- [DirectAccess Offline Domain Join](/windows-server/remote/remote-access/directaccess/directaccess-offline-domain-join)
+- [Deploy a Single DirectAccess Server Using the Getting Started Wizard](/windows-server/remote/remote-access/directaccess/single-server-wizard/deploy-a-single-directaccess-server-using-the-getting-started-wizard)
+- [Deploy a Single DirectAccess Server with Advanced Settings](/windows-server/remote/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings)

@@ -42,7 +42,7 @@ This issue can be caused by one of the following situations:
 
 Cause: DNS scavenging is misconfigured. If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers will register their records every 24 hours. Check whether the NoRefresh and Refresh intervals are too low. For example, if these values are both "less than 24 hours," you'll lose DNS records.
 
-Troubleshooting: See [Using DNS aging and scavenging](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
+Troubleshooting: See [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
 
 #### Situation 2
 
@@ -98,18 +98,18 @@ Troubleshooting: A DNS query request may time out if the DNS server forwards the
 
 Message: DNS server was unable to open Active Directory. This DNS server is configured to use directory service information and cannot operate without access to the directory. The DNS server will wait for the directory to start. If the DNS server is started but the appropriate event has not been logged, then the DNS server is still waiting for the directory to start.
 
-Troubleshooting: See [Troubleshoot AD DS and restart the DNS Server service](https://docs.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-dns-event-id-4013#resolution)
+Troubleshooting: See [Troubleshoot AD DS and restart the DNS Server service](/troubleshoot/windows-server/networking/troubleshoot-dns-event-id-4013#resolution)
 
 ## Reference
 
-- [Troubleshooting DNS clients](https://docs.microsoft.com/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
-- [Troubleshooting DNS Servers](https://docs.microsoft.com/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
-- [DNS logging and diagnostics](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669%28v=ws.11%29)
-- [Understanding Aging and Scavenging](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759204%28v%3dws.10%29)
-- [Enable DNS dynamic updates for clients](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757445%28v%3dws.10%29)
-- [DNS Policies overview](https://docs.microsoft.com/windows-server/networking/dns/deploy/dns-policies-overview)
-- [DNS Active Directory-Integrated Zones](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/active-directory-integrated-dns-zones)
-- [DNS zone replication in Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc779655%28v%3dws.10%29)
-- [Verify that SRV DNS records have been created](https://docs.microsoft.com/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created)
-- [Configure DNS dynamic updates](https://docs.microsoft.com/troubleshoot/windows-server/networking/configure-dns-dynamic-updates-windows-server-2003)
-- [Reviewing DNS concepts](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/reviewing-dns-concepts)
+- [Troubleshooting DNS clients](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
+- [Troubleshooting DNS Servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
+- [DNS logging and diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669%28v=ws.11%29)
+- [Understanding Aging and Scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc759204%28v%3dws.10%29)
+- [Enable DNS dynamic updates for clients](/previous-versions/windows/it-pro/windows-server-2003/cc757445%28v%3dws.10%29)
+- [DNS Policies overview](/windows-server/networking/dns/deploy/dns-policies-overview)
+- [DNS Active Directory-Integrated Zones](/windows-server/identity/ad-ds/plan/active-directory-integrated-dns-zones)
+- [DNS zone replication in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc779655%28v%3dws.10%29)
+- [Verify that SRV DNS records have been created](/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created)
+- [Configure DNS dynamic updates](/troubleshoot/windows-server/networking/configure-dns-dynamic-updates-windows-server-2003)
+- [Reviewing DNS concepts](/windows-server/identity/ad-ds/plan/reviewing-dns-concepts)
