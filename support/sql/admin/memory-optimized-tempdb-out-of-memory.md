@@ -3,7 +3,7 @@ title: Memory optimized tempdb metadata out of memory errors
 description: Provides resolutions to troubleshoot out of memory issues with memory-optimized tempdb metadata.
 ms.date: 2/22/2022
 ms.custom: sap:Database Engine
-ms.reviewer: pijocoder, Hemin-msft
+ms.reviewer: jopilov, hesha
 author: Hemin-msft
 ms.author: jopilov
 ms.prod: sql
@@ -15,12 +15,12 @@ This article provides resolutions to troubleshoot out of memory issues related t
 
 ## Symptoms
 
-After you enable the memory-optimized tempdb metadata (HkTempDB) feature, you may see error 701 indicating out of memory exceptions for tempdb allocations and SQL Server Service crashes. In addition, you may observe the memory clerk `MEMORYCLERK_XTP` for In-Memory OLTP (Hekaton) is growing gradually or rapidly and doesn't shrink back. As the XTP memory grows without an upper limit, you see the following error message in SQL Server:
+After you enable the memory-optimized tempdb metadata (HkTempDB) feature, you may see error [701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error) indicating out of memory exceptions for tempdb allocations and SQL Server Service crashes. In addition, you may observe the memory clerk `MEMORYCLERK_XTP` for In-Memory OLTP (Hekaton) is growing gradually or rapidly and doesn't shrink back. As the XTP memory grows without an upper limit, you see the following error message in SQL Server:
  
 > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'default'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information.
 
 > [!NOTE]
-> When running a query on the DMV `dm_os_memory_clerks`, you can see that pages memory allocated is high for memory clerk `MEMORYCLERK_XTP`. For example:
+> When running a query on the [DMV](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) [dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql), you can see that pages memory allocated is high for memory clerk `MEMORYCLERK_XTP`. For example:
 > 
 > ```sql
 > SELECT type, memory_node_id, pages_kb 
@@ -38,13 +38,13 @@ After you enable the memory-optimized tempdb metadata (HkTempDB) feature, you ma
 
 ## Cause and resolution
 
-The causes of the symptoms can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to mitigate the problem, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
+The causes of the symptoms can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to diagnose and alleviate the issue, see [Diagnose and alleviate the issue](#diagnose-and-alleviate-the-issue).
 
 ### Gradual increase in XTP memory consumption
 
 - Cause 1
 
-    The DMV `tempdb.sys.dm_xtp_system_memory_consumers` or `tempdb.sys.dm_db_xtp_memory_consumers` shows large difference between allocated bytes and used bytes.
+    The DMV [tempdb.sys.dm_xtp_system_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql) or [tempdb.sys.dm_db_xtp_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql) shows large difference between allocated bytes and used bytes.
 
     **Resolution**: To resolve the issue, you can run the following commands in [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535) or a later version that has a new procedure `sys.sp_xtp_force_gc` to free up allocated but unused bytes.
 
@@ -66,7 +66,7 @@ The causes of the symptoms can be divided into the following two categories. To 
     **Resolution**: Check for long running transactions and resolve from application side by keeping transactions short.
 
     > [!NOTE]
-    > To reproduce this issue in a test environment, you can create an explicit [BEGIN TRANSACTION](/sql/t-sql/language-elements/begin-transaction-transact-sql) by using Data Definition Language (DDL) in a temporal table and leave it open for a long time while other activity takes place.
+    > To reproduce this issue in a test environment, you can create an explicit [BEGIN TRANSACTION](/sql/t-sql/language-elements/begin-transaction-transact-sql) statement by using Data Definition Language (DDL) statements in a [temporal table](/sql/relational-databases/tables/temporal-tables) and leave it open for a long time while other activity takes place.
 
 - Cause 3
 
@@ -84,7 +84,7 @@ The causes of the symptoms can be divided into the following two categories. To 
 
    - Cause 5
 
-     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high allocated or used bytes for table heap where `Object_ID` isn't `NULL`. The most common cause for this issue is a long-running, explicitly open transaction with DDL in temporal table(s). For example:
+     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high allocated or used bytes for table heap where `Object_ID` isn't `NULL`. The most common cause for this issue is a long-running, explicitly open transaction with DDL statements in temporal table(s). For example:
         
      ```sql
      BEGIN TRAN
@@ -94,7 +94,7 @@ The causes of the symptoms can be divided into the following two categories. To 
      COMMIT
      ```
 
-     Explicit open transaction with DDL in temporal tables won't allow table heap and Lookaside heap to be freed up for subsequent transactions using TempDB metadata.
+     Explicit open transaction with DDL statements in temporal tables won't allow table heap and Lookaside heap to be freed up for subsequent transactions using TempDB metadata.
      
      **Resolution** Try to keep transactions short.
 
@@ -162,7 +162,7 @@ The following steps highlight what data to collect to diagnose the problem and h
 
 To collect data to diagnose the problem, run the following steps:
 
-1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL in temporal tables.
+1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL statements in temporal tables.
 
 1. Collect the output of the following DMVs to analyze further.
 
@@ -180,22 +180,28 @@ To collect data to diagnose the problem, run the following steps:
 
 ### Mitigation steps to keep memory-optimized tempdb metadata memory in check
 
-1. To avoid or resolve long-running transactions that use DDL in temporal tables, the general guidance is to keep transactions short.
+1. To avoid or resolve long-running transactions that use DDL statements in temporal tables, the general guidance is to keep transactions short.
 
 1. Increase **max server memory** to allow for enough memory to operate in the presence of tempdb-heavy workloads.
 
 1. Execute `sys.sp_xtp_force_gc` periodically.
 
-1. To protect the server from potential out of memory conditions, you can bind tempdb to a Resource Governor resource pool. For example, create a resource pool by using `MAX_MEMORY_PERCENT = 30`. Then use the following [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) command to bind the resource pool to memory-optimized tempdb metadata. This change requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled. For more information, see [Configuring memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configuring-and-using-memory-optimized-tempdb-metadata).
+1. To protect the server from potential out of memory conditions, you can bind tempdb to a [Resource Governor resource pool](/sql/relational-databases/resource-governor/resource-governor-resource-pool). For example, create a resource pool by using `MAX_MEMORY_PERCENT = 30`. Then use the following [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) command to bind the resource pool to memory-optimized tempdb metadata. 
 
    ```sql
-   ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
-    ```
+   ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = '<PoolName>');
+   ```
+
+   This change requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled. For more information, see:
+
+    - [Configuring memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configuring-and-using-memory-optimized-tempdb-metadata)
+    
+    - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool)
 
    > [!WARNING]
    > After binding HktempDB to a pool, the pool may reach its maximum setting and any queries using tempdb may fail with out of memory errors. SQL Service will continue functioning but tempdb-heavy workload may be impacted. You may see the following error:
    >
    > > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'HkTempDB'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information. XTP failed page allocation due to memory pressure: FAIL_PAGE_ALLOCATION 8
 
-1. Memory-optimized tempdb metadata feature isn't for every workload. For example, using explicit transactions with DDL in temporal tables that run for a long time will lead to many of the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
+1. Memory-optimized tempdb metadata feature isn't for every workload. For example, using explicit transactions with DDL statements in temporal tables that run for a long time will lead to many of the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
 
