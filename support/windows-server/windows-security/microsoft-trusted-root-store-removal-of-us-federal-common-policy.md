@@ -77,7 +77,7 @@ The following steps directly configure the Windows registry to a pre-release or 
    - **EncodedCtl**
    - **LastSyncTime**
 
-4. Delete all registry values for cached certificates under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. <!-- key or values? -->
+4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all cached certificates.
 
 5. Validate all scenarios that chain to the G1 including those listed in [Potential issues](#potential-issues).
 
@@ -99,7 +99,7 @@ The following steps directly configure the Windows registry to use production ve
    - **EncodedCtl**
    - **LastSyncTime**
 
-4. Delete all registry values for cached certificates under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`.
+4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all cached certificates.
 
 ### Implement the G2 root CA certificate
 
