@@ -13,7 +13,7 @@ ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
 ---
-# Microsoft Trusted Root Store removal of US Federal Common Policy
+# Removal of US Federal Common Policy from Microsoft Trusted Root Store
 
 This article introduces the removal of the US Federal Common Policy certificate and how to fix the issues that occur after the removal.
 
