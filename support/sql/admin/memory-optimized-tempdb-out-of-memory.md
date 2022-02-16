@@ -76,7 +76,7 @@ The causes of the symptoms can be divided into the following two categories. To 
 
 - Cause 4
 
-    Continuously growing "VARHEAP\Storage internal heap" XTP DB memory consumer leads to out of memory error 41805.
+    Continuously growing "VARHEAP\Storage internal heap" XTP database memory consumer leads to out of memory error 41805.
 
     **Resolution** The issue [14087445](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in [SQL Server 17 CU25](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9) and later versions is under examination to be ported over to SQL Server 2019.
 
