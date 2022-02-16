@@ -15,7 +15,7 @@ ms.date: 02/16/2022
 ---
 # Removal of US Federal Common Policy from Microsoft Trusted Root Store
 
-This article introduces the removal of the US Federal Common Policy certificate and how to fix the issues that occur after the removal.
+This article introduces the removal of the US Federal Common Policy certificate and the solutions for the issues that occur after the removal.
 
 _Applies to:_ &nbsp; Windows Server - all editions, Windows 11 - all editions, Windows 10 - all editions
 
@@ -26,7 +26,7 @@ The [United States Federal PKI](https://www.idmanagement.gov/) Team governing th
 Certificate Name: US Federal Common Policy  
 SHA1 Thumbprint: 905F942FD9F28F679B378180FD4F846347F645C1
 
-Applications and operations that depend on the US Federal Common Policy (FCPCA) Root will fail after receiving the Root Certificate update 1 to 18 days after <!-- release date -->. Administrators should migrate from the existing FCPCA "G1" Root CA to the following RootCA as your agency's federal trust anchor:
+Applications and operations that depend on the US Federal Common Policy (FCPCA) Root will fail after receiving the Root Certificate update 1 to 18 days after <!-- release date -->. Administrators should migrate from the existing FCPCA "G1" Root certificate authority (CA) to the following RootCA as your agency's federal trust anchor:
 
 Certificate Name: US Federal Common Policy G2 Root  
 SHA1 Thumbprint: 99B4251E2EEE05D8292E8397A90165293D116028
@@ -101,7 +101,7 @@ The following steps directly configure the Windows registry to use production ve
 
 4. Delete all registry values for cached certificates under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`.
 
-
+### Implement the G2 root CA certificate
 
 Administrators should implement G2 root CA as per the instructions below before the G1 root CA is removed by the OOB Root Certificate update.
 
@@ -115,21 +115,18 @@ Administrators should implement G2 root CA as per the instructions below before 
 >
 > > Important! To ensure PIV credential certificates issued by the Entrust Federal SSP before August 13, 2019 validate to the Federal Common Policy CA G2, you'll need to distribute an additional intermediate CA certificate to systems that are unable to perform dynamic path validation. Learn more on our Frequently Asked Questions page.
 
-
-
 ### Manual steps to get the Certificate Trust list
 
 For disconnected environments where Windows devices are not allowed to access Windows Update or the internet, follow these steps to manually get the Certificate Trust list:
 
 1. Download Certificate Trust List:
    1. Run `certutil -generateSSTFromWU c:\roots\trustedcerts.sst`
-   2. When clicking on the **trustedcerts.sst** file it should open up CertMgr and display the complete Certificate Trust List
+   2. When clicking on the **trustedcerts.sst** file, it should open up CertMgr and display the complete Certificate Trust List
 2. Download Certificate Disallowed List:
    1. Run `certutil -syncwithwu c:\roots`
    2. Run `certutil -verifyctl -v c:\rootsdisallowedstl.cab c:\roots\disallowedcert.sst`
-   3. When clicking on disallowedcert.sst it should open up CertMgr and display all roots in the disallowed list.
-3. Convert SST file to Text File:  
-   To evaluate settings not shown in the UI, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`
+   3. When clicking on disallowedcert.sst, it should open up CertMgr and display all roots in the disallowed list.
+3. To evaluate settings not shown in the UI, convert SST file to a text file. To do so, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`
 4. Download and add the US Federal Common Policy G2 Root to your personal CTL.
    - Download [US Federal Common Policy G2 Root](http://http.fpki.gov/fcpca/fcpca.crt).
    - Follow the guidance in FICAM Playbooks: [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/) for each operating systems that are deployed in your enterprise.
