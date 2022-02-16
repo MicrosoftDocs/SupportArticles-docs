@@ -41,7 +41,6 @@ If both of the above conditions are met, then the connection is marked as having
 
 It's possible to set up a local NCIS server (Network Connection Status Indicator) on your LAN that will respond to the Office Clients request and allow the Office feature to work.
 
-See posts below for related information and directions:
+See post below for related information and directions:
 
-- [What do Microsoft and NCSI have in common?](https://www.techrepublic.com/blog/data-center/what-do-microsoft-and-ncsi-have-in-common/)
 - [The Network Connection Status Icon](https://web.archive.org/web/20150316185207/http://blogs.technet.com/b/networking/archive/2012/12/20/the-network-connection-status-icon.aspx)
