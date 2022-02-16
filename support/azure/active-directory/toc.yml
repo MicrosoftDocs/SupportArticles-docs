@@ -176,6 +176,16 @@
 
 - name: User Provisioning and Synchronization
   items:
+  - name: Password writeback
+    items:
+    - name: Error code 8023062C - insecure password reset or change
+      href: password-writeback-error-code-8023062c.md
+    - name: Error code SSPR_009 - synced Azure AD admin can't do cloud reset
+      href: password-writeback-error-code-sspr-009.md
+    - name: Error code SSPR_0029 - on-premises configuration not set up
+      href: password-writeback-error-code-sspr-0029.md
+    - name: On-premises policy disallows password reset
+      href: password-writeback-not-compliant-on-premises-ad-pwd-policy.md
   - name: Administrator credentials error
     href: admin-credentials-supplied-not-valid.md
   - name: Azure AD Connect services don't start
