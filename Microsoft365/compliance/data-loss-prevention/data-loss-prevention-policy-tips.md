@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Data Loss Prevention (DLP) policy tips
+title: Issues with Data Loss Prevention (DLP) policy tips
 description: Describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 author: MaryQiu1987
 manager: dcscontentpm
@@ -9,7 +9,11 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-ms.custom: CSSTroubleshoot
+ms.reviewer: chgary, lindabr, sathyana
+ms.custom: 
+- CSSTroubleshoot
+- CI 100086
+- CI 160472
 appliesto:
 - Microsoft 365 Data Loss Prevention
 ---
@@ -18,18 +22,20 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## Summary
-
 The detection and protection of data is among the most important tasks that any business has today. As more and more organizations move their services to the cloud to store data, solutions to protect data flow and access are becoming increasingly important.
 
 Microsoft 365 provides data loss prevention (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
 
 This article describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 
-> [!NOTE]
-> It is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
+**Note:** It's recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp). To edit a DLP policy in the Microsoft 365 compliance center, follow these steps:
 
-## Common scenarios for troubleshooting DLP policy tips
+1. In the Microsoft 365 compliance center, locate **Data loss prevention** in the left pane.
+1. On the **Policies** tab, select the policy that requires editing, and then select **Edit policy**.
+
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot of the steps of how to edit a D L P policy in the Microsoft 365 Compliance Center." lightbox="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png":::
+
+## Common scenarios of DLP policy tips not working
 
 There are several reasons why DLP policy tips do not work as expected after you configure a Microsoft 365 DLP policy:
 
@@ -38,16 +44,10 @@ There are several reasons why DLP policy tips do not work as expected after you 
 - All policy conditions are not met.
 - MailTips are not enabled (client only).
 - Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center.
+- The `GetDLPPolicyTip` call isn't found and the rule match is empty in Fiddler Trace.
 - The client doesn't support MailTips (Mac only).
 - The file-system configuration is not supported (PDFs on Windows 7 only).
 - There is invalid test data.
-
-## How to edit a DLP policy in the Microsoft 365 compliance center
-
-1. In the Microsoft 365 compliance center, locate **Data loss prevention** in the left pane.
-1. On the **Policies** tab, select the policy that requires editing, and then select **Edit policy**.
-
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot of the steps of how to edit a D L P policy in the Microsoft 365 Compliance Center." lightbox="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png":::
 
 ## Policy configuration errors
 
@@ -119,7 +119,7 @@ To view unified DLP policy tips in the Microsoft 365 compliance center, remove t
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/remove-notify-sender.png" alt-text="Screenshot to remove the Notify the sender with a Policy Tip action.":::
 
-## How to edit a DLP policy in the Exchange admin center
+## Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center
 
 > [!NOTE]
 > If you have DLP policies in both the Exchange admin center (EAC) and the Microsoft 365 compliance center, it is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
@@ -136,6 +136,29 @@ To view unified DLP policy tips in the Microsoft 365 compliance center, remove t
 1. In the next window that opens, you can edit the rule.
 
    :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/detailed-fields.png" alt-text="Screenshot to edit the detailed fields.":::
+
+## The `GetDLPPolicyTip` call isn't found in Fiddler Trace
+
+If DLP policy tips don't work as expected, Fiddler Trace is a useful tool to help you diagnose the issue. Here's how to use Fiddler Trace to troubleshoot DLP policy tips.
+
+1. Collect the Fiddler Trace file when you reproduce the issue. Here's an example in which the DLP policy tip is triggered as expected.
+
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-tip-working.png" alt-text="A screenshot of DLP policy tip working example when sending an email message.":::
+
+1. In the POST request, check if the `GetDLPPolicyTip` call is made in the Trace file. For the above example, you can see the `GetDLPPolicyTip` call.
+
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/request.png" alt-text="A screenshot of POST request in which the GetDLPPolicyTip call is highlighted.":::
+
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/request-headers.png" alt-text="A screenshot of POST request headers in which the GetDLPPolicyTip call is highlighted.":::
+
+1. In the Response, check the `DetectedClassificationIds` value. If the value isn't empty, it indicates that the DLP policy matches the policy rule.
+
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/response.png" alt-text="A screenshot of Response in which the DetectedClassificationIds value is highlighted.":::
+
+If you don't find the `GetDLPPolicyTip` call, and if the `DetectedClassificationIds` value is empty in the response, follow these steps to troubleshoot this issue:
+
+1. Check if the DLP policy is enabled and configured correctly.
+2. Check if your users enter the proper sensitive information and valid recipients or senders to trigger the policy.
 
 ## Client doesn't support MailTips
 
