@@ -18,7 +18,7 @@ appliesto:
 - Microsoft 365 Data Loss Prevention
 ---
 
-# Troubleshooting data loss prevention (DLP) policy tips
+# Issues with data loss prevention (DLP) policy tips
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -39,15 +39,15 @@ This article describes how to troubleshoot some issues that occur if DLP policy 
 
 There are several reasons why DLP policy tips do not work as expected after you configure a Microsoft 365 DLP policy:
 
-- There are policy configuration errors.
-- Policy configurations are not supported (client only).
-- All policy conditions are not met.
-- MailTips are not enabled (client only).
-- Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center.
-- The `GetDLPPolicyTip` call isn't found and the rule match is empty in Fiddler Trace.
-- The client doesn't support MailTips (Mac only).
-- The file-system configuration is not supported (PDFs on Windows 7 only).
-- There is invalid test data.
+- [There are policy configuration errors](#policy-configuration-errors).
+- [Policy configurations are not supported (client only)](#policy-configurations-are-not-supported-outlook-2013-and-later-clients-only).
+- [All policy conditions are not met](#all-policy-conditions-are-not-met).
+- [MailTips are not enabled (client only)](#mailtips-are-not-enabled-outlook-2013-and-later-clients-only).
+- [Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center](#policy-tips-are-configured-in-multiple-locations).
+- [The GetDLPPolicyTip call isn't found and the rule match is empty in Fiddler Trace](#the-getdlppolicytip-call-isnt-found-in-fiddler-trace).
+- [The client doesn't support MailTips (Mac only)](#client-doesnt-support-mailtips).
+- [The file-system configuration is not supported (PDFs on Windows 7 only)](#windows-7-and-adobe-pdf).
+- [There is invalid test data](#invalid-test-data).
 
 ## Policy configuration errors
 
@@ -119,10 +119,10 @@ To view unified DLP policy tips in the Microsoft 365 compliance center, remove t
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/remove-notify-sender.png" alt-text="Screenshot to remove the Notify the sender with a Policy Tip action.":::
 
-## Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center
-
 > [!NOTE]
 > If you have DLP policies in both the Exchange admin center (EAC) and the Microsoft 365 compliance center, it is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
+
+Additionally, to edit a DLP policy in the Exchange admin center, follow these steps:
 
 1. In the Exchange admin center, locate **compliance management**, and then select **data loss prevention**.
 1. Select the policy that requires editing, and then select the pencil icon or double-click the policy that has to be changed.
