@@ -19,22 +19,22 @@ After you enable the memory-optimized tempdb metadata (HkTempDB) feature, you ma
  
 > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'default'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information.
 
-> [!NOTE]
-> When running a query on the [DMV](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) [dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql), you can see that pages memory allocated is high for memory clerk `MEMORYCLERK_XTP`. For example:
-> 
-> ```sql
-> SELECT type, memory_node_id, pages_kb 
-> FROM sys.dm_os_memory_clerks
-> WHERE type = 'MEMORYCLERK_XTP'
-> ```
-> Result:
->  
-> ```output
-> type                    memory_node_id                     pages_kb
-> ------------------------------------------------------------ -------------- --------------------
-> MEMORYCLERK_XTP         0                                  60104496
-> MEMORYCLERK_XTP         64                                 0
-> ```
+
+When running a query on the [DMV](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) [dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql), you can see that pages memory allocated is high for memory clerk `MEMORYCLERK_XTP`. For example:
+ 
+ ```sql
+ SELECT type, memory_node_id, pages_kb 
+ FROM sys.dm_os_memory_clerks
+ WHERE type = 'MEMORYCLERK_XTP'
+ ```
+ Result:
+  
+ ```output
+ type                    memory_node_id                     pages_kb
+ ------------------------------------------------------------ -------------- --------------------
+ MEMORYCLERK_XTP         0                                  60104496
+ MEMORYCLERK_XTP         64                                 0
+ ```
 
 ## Cause and resolution
 
@@ -98,62 +98,6 @@ The causes of the symptoms can be divided into the following two categories. To 
      
      **Resolution** Try to keep transactions short.
 
-## More information about lookaside
-
-Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve fast transaction processing. Each thread object contains a collection of lookaside memory allocators. Each lookaside associated with each thread has a pre-defined upper limit on how much memory it can allocate. Once the limit is reached, the thread allocates memory from a spill-over shared memory pool (VARHEAP). The DMV `sys.dm_xtp_system_memory_consumers` aggregates data for each lookaside type (`memory_consumer_type_desc = 'LOOKASIDE'`) and the shared memory pool (`memory_consumer_type_desc = 'VARHEAP'` and  `memory_consumer_desc = 'Lookaside heap'`).
-
-## System-level consumers: tempdb.sys.dm_xtp_system_memory_consumers
-
-About 25 lookaside memory consumer types are the upper limit, when threads need more memory from those lookasides, the memory spills over to and is satisfied from lookaside heap. High used bytes could be an indicator of constant heavy tempdb workload and/or long-running open transaction using temporary objects.
-
-```sql
--- system memory consumers @ instance  
-SELECT memory_consumer_type_desc, memory_consumer_desc, allocated_bytes, used_bytes
-FROM sys.dm_xtp_system_memory_consumers 
-```
-
-```output
-memory_consumer_type_desc     memory_consumer_desc                   allocated_bytes      used_bytes
-------------------------- ------------------------------------------ -------------------- --------------------
-VARHEAP                       Lookaside heap                             0                    0
-PGPOOL                        256K page pool                             0                    0
-PGPOOL                        4K page pool                               0                    0
-VARHEAP                       System heap                                458752               448000
-LOOKASIDE                     Transaction list element                   0                    0
-LOOKASIDE                     Delta tracker cursor                       0                    0
-LOOKASIDE                     Transaction delta tracker                  0                    0
-LOOKASIDE                     Creation Statement Id Map Entry            0                    0
-LOOKASIDE                     Creation Statement Id Map                  0                    0
-LOOKASIDE                     Log IO proxy                               0                    0
-LOOKASIDE                     Log IO completion                          0                    0
-LOOKASIDE                     Sequence object insert row                 0                    0
-LOOKASIDE                     Sequence object map entry                  0                    0
-LOOKASIDE                     Sequence object values map                 0                    0
-LOOKASIDE                     Redo transaction map entry                 0                    0
-LOOKASIDE                     Transaction recent rows                    0                    0
-LOOKASIDE                     Heap cursor                                0                    0
-LOOKASIDE                     Range cursor                               0                    0
-LOOKASIDE                     Hash cursor                                0                    0
-LOOKASIDE                     Transaction dependent ring buffer          0                    0
-LOOKASIDE                     Transaction save-point set entry           0                    0
-LOOKASIDE                     Transaction FK validation sets             0                    0
-LOOKASIDE                     Transaction partially-inserted rows set    0                    0
-LOOKASIDE                     Transaction constraint set                 0                    0
-LOOKASIDE                     Transaction save-point set                 0                    0
-LOOKASIDE                     Transaction write set                      0                    0
-LOOKASIDE                     Transaction scan set                       0                    0
-LOOKASIDE                     Transaction read set                       0                    0
-LOOKASIDE                     Transaction                                0                    0
-```
-
-## Database-level consumers: tempdb.sys.dm_db_xtp_memory_consumers
-
-- LOB allocator is used for system tables LOB/Off-row data.
-
-- Table heap is used for system tables rows.
-
-High used bytes could be the indicator of constant heavy tempdb workload and/or long running open transaction using temporary objects.
-
 ## Diagnose and alleviate the issue
 
 The following steps highlight what data to collect to diagnose the problem and how to alleviate the issue.
@@ -204,4 +148,65 @@ To collect data to diagnose the problem, run the following steps:
    > > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'HkTempDB'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information. XTP failed page allocation due to memory pressure: FAIL_PAGE_ALLOCATION 8
 
 1. Memory-optimized tempdb metadata feature isn't for every workload. For example, using explicit transactions with DDL statements in temporal tables that run for a long time will lead to many of the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
+
+
+## More information 
+
+These sections provide more details about the some of the memory components involved in Memory optimized tempdb metadata
+
+### Lookaside memory allocator
+Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve fast transaction processing. Each thread object contains a collection of lookaside memory allocators. Each lookaside associated with each thread has a pre-defined upper limit on how much memory it can allocate. Once the limit is reached, the thread allocates memory from a spill-over shared memory pool (VARHEAP). The DMV `sys.dm_xtp_system_memory_consumers` aggregates data for each lookaside type (`memory_consumer_type_desc = 'LOOKASIDE'`) and the shared memory pool (`memory_consumer_type_desc = 'VARHEAP'` and  `memory_consumer_desc = 'Lookaside heap'`).
+
+### System-level consumers: tempdb.sys.dm_xtp_system_memory_consumers
+
+About 25 lookaside memory consumer types are the upper limit, when threads need more memory from those lookasides, the memory spills over to and is satisfied from lookaside heap. High used bytes could be an indicator of constant heavy tempdb workload and/or long-running open transaction using temporary objects.
+
+```sql
+-- system memory consumers @ instance  
+SELECT memory_consumer_type_desc, memory_consumer_desc, allocated_bytes, used_bytes
+FROM sys.dm_xtp_system_memory_consumers 
+```
+
+```output
+memory_consumer_type_desc     memory_consumer_desc                   allocated_bytes      used_bytes
+------------------------- ------------------------------------------ -------------------- --------------------
+VARHEAP                       Lookaside heap                             0                    0
+PGPOOL                        256K page pool                             0                    0
+PGPOOL                        4K page pool                               0                    0
+VARHEAP                       System heap                                458752               448000
+LOOKASIDE                     Transaction list element                   0                    0
+LOOKASIDE                     Delta tracker cursor                       0                    0
+LOOKASIDE                     Transaction delta tracker                  0                    0
+LOOKASIDE                     Creation Statement Id Map Entry            0                    0
+LOOKASIDE                     Creation Statement Id Map                  0                    0
+LOOKASIDE                     Log IO proxy                               0                    0
+LOOKASIDE                     Log IO completion                          0                    0
+LOOKASIDE                     Sequence object insert row                 0                    0
+LOOKASIDE                     Sequence object map entry                  0                    0
+LOOKASIDE                     Sequence object values map                 0                    0
+LOOKASIDE                     Redo transaction map entry                 0                    0
+LOOKASIDE                     Transaction recent rows                    0                    0
+LOOKASIDE                     Heap cursor                                0                    0
+LOOKASIDE                     Range cursor                               0                    0
+LOOKASIDE                     Hash cursor                                0                    0
+LOOKASIDE                     Transaction dependent ring buffer          0                    0
+LOOKASIDE                     Transaction save-point set entry           0                    0
+LOOKASIDE                     Transaction FK validation sets             0                    0
+LOOKASIDE                     Transaction partially-inserted rows set    0                    0
+LOOKASIDE                     Transaction constraint set                 0                    0
+LOOKASIDE                     Transaction save-point set                 0                    0
+LOOKASIDE                     Transaction write set                      0                    0
+LOOKASIDE                     Transaction scan set                       0                    0
+LOOKASIDE                     Transaction read set                       0                    0
+LOOKASIDE                     Transaction                                0                    0
+```
+
+### Database-level consumers: tempdb.sys.dm_db_xtp_memory_consumers
+
+- LOB allocator is used for system tables LOB/Off-row data.
+
+- Table heap is used for system tables rows.
+
+High used bytes could be the indicator of constant heavy tempdb workload and/or long running open transaction using temporary objects.
+
 
