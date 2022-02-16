@@ -15,22 +15,12 @@ This article provides resolutions to troubleshoot out of memory issues related t
 
 ## Symptoms
 
-After you enable the memory-optimized tempdb metadata (HkTempDB) feature, error 701 - out of memory exceptions for tempdb allocations are observed and SQL Server Service crashes.
-
-### Observations
-
-- You may observe the memory clerk `MEMORYCLERK_XTP` for In-Memory OLTP (Hekaton) is growing steadily or rapidly and doesn't shrink back.
-
-- As the XTP memory grows without an upper limit, you may observe the out of memory issues in SQL Server.
-
-### Error message
-
-You can see the following error message where `MEMORYCLERK_XTP` is the major cause.
+After you enable the memory-optimized tempdb metadata (HkTempDB) feature, you may see error 701 indicating out of memory exceptions for tempdb allocations and SQL Server Service crashes. In addition, you may observe the memory clerk `MEMORYCLERK_XTP` for In-Memory OLTP (Hekaton) is growing gradually or rapidly and doesn't shrink back. As the XTP memory grows without an upper limit, you see the following error message in SQL Server:
  
 > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'default'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information.
 
 > [!NOTE]
-> A query on the DMV `dm_os_memory_clerks` may show pages memory allocated to be high for memory clerk `MEMORYCLERK_XTP`. For example:
+> When running a query on the DMV `dm_os_memory_clerks`, you can see that pages memory allocated is high for memory clerk `MEMORYCLERK_XTP`. For example:
 > 
 > ```sql
 > SELECT type, memory_node_id, pages_kb 
@@ -48,7 +38,7 @@ You can see the following error message where `MEMORYCLERK_XTP` is the major cau
 
 ## Cause and resolution
 
-The causes of the symptoms can be divided into the following two categories:
+The causes of the symptoms can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to mitigate the problem, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
 
 ### Gradual increase in XTP memory consumption
 
@@ -105,8 +95,10 @@ The causes of the symptoms can be divided into the following two categories:
      ```
 
      Explicit open transaction with DDL in temporal tables won't allow table heap and Lookaside heap to be freed up for subsequent transactions using TempDB metadata.
+     
+     **Resolution** Try to keep transactions short.
 
-## Internal details
+## More information about lookaside
 
 Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve fast transaction processing. Each thread object contains a collection of lookaside memory allocators. Each lookaside associated with each thread has a pre-defined upper limit on how much memory it can allocate. Once the limit is reached, the thread allocates memory from a spill-over shared memory pool (VARHEAP). The DMV `sys.dm_xtp_system_memory_consumers` aggregates data for each lookaside type (`memory_consumer_type_desc = 'LOOKASIDE'`) and the shared memory pool (`memory_consumer_type_desc = 'VARHEAP'` and  `memory_consumer_desc = 'Lookaside heap'`).
 
@@ -168,7 +160,7 @@ The following steps highlight what data to collect to diagnose the problem and h
 
 ### Data to collect
 
-To diagnose the problem, run the following steps:
+To collect data to diagnose the problem, run the following steps:
 
 1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL in temporal tables.
 
@@ -188,7 +180,7 @@ To diagnose the problem, run the following steps:
 
 ### Mitigation steps to keep memory-optimized tempdb metadata memory in check
 
-1. Avoid or resolve long-running transactions that use DDL in temporal tables. General guidance is to keep transactions short.
+1. To avoid or resolve long-running transactions that use DDL in temporal tables, the general guidance is to keep transactions short.
 
 1. Increase **max server memory** to allow for enough memory to operate in the presence of tempdb-heavy workloads.
 
