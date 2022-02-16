@@ -8,7 +8,7 @@ ms.author: delhan
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.prod: windows-server
-ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg
+ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
@@ -23,13 +23,15 @@ _Applies to:_ &nbsp; Windows Server - all editions, Windows 11 - all editions, W
 
 The [United States Federal PKI](https://www.idmanagement.gov/) Team governing the Federal Common Policy Root Certificate Authority, formally requested the removal of the following root certificate from the Microsoft Trusted Root Program:
 
-Certificate Name: US Federal Common Policy  
-SHA1 Thumbprint: 905F942FD9F28F679B378180FD4F846347F645C1
+| Certificate Name  | US Federal Common Policy                 |
+|-------------------|------------------------------------------|
+| SHA1 Thumbprint:  | 905F942FD9F28F679B378180FD4F846347F645C1 |
 
 Applications and operations that depend on the US Federal Common Policy (FCPCA) Root will fail after receiving the Root Certificate update 1 to 18 days after <!-- release date -->. Administrators should migrate from the existing FCPCA "G1" Root certificate authority (CA) to the following RootCA as your agency's federal trust anchor:
 
-Certificate Name: US Federal Common Policy G2 Root  
-SHA1 Thumbprint: 99B4251E2EEE05D8292E8397A90165293D116028
+| Certificate Name  | US Federal Common Policy G2 Root         |
+|-------------------|------------------------------------------|
+| SHA1 Thumbprint:  | 99B4251E2EEE05D8292E8397A90165293D116028 |
 
 > [!Note]
 > The US Federal Common Policy G2 Root can be obtained from [here](http://repo.fpki.gov/fcpca/fcpcag2.crt)
@@ -53,7 +55,7 @@ The following Errors may be seen in pop-up and other dialog boxes.
 - > The certificate chain was issued by an authority that is not trusted.
 - > The certificate or associated chain is invalid.
 
-## How to fix the issues
+## Fix the issues
 
 1. Validate changes in the [Set up test configuration](#set-up-test-configuration) section being made to your root certificate between now and <!-- release date -->.
 2. After verifying that all relevant scenarios work with the [Set up test configuration](#set-up-test-configuration) section, implement steps in the [set up production configuration](#set-up-production-configuration) section in your production configuration.
@@ -62,7 +64,7 @@ The following Errors may be seen in pop-up and other dialog boxes.
 > [!Note]
 > Application-as-a-service scenarios like Azure SQL or Azure App Service that chain to the G1 root Will be blocked because the root will be available after removal.
 
-### Set up test configuration
+## Test configuration setup
 
 The following steps directly configure the Windows registry to a pre-release or staged location of the latest root update. You can also configure the settings by using group policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
 
@@ -84,7 +86,7 @@ The following steps directly configure the Windows registry to a pre-release or 
 > [!Note]
 > The URL above never changes. However, the changes that are staged change from month to month. As of February 15, 2022, the testing URL above is staged with about 20 continuous deprecation changes that do not currently include the removal of hte US Federal Common Policy G1 Root. That change will be staged in March 2022. This article will be updated with the exact staging date. <!-- remove it after we have the date -->
 
-### Set up production configuration
+## Production configuration Set up
 
 The following steps directly configure the Windows registry to use production version of the certificate trust list (CTL) if the testing URL above is used:
 
@@ -101,7 +103,7 @@ The following steps directly configure the Windows registry to use production ve
 
 4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all cached certificates.
 
-### Implement the G2 root CA certificate
+## Implement the G2 root CA certificate
 
 Administrators should implement G2 root CA as per the instructions below before the G1 root CA is removed by the OOB Root Certificate update.
 
@@ -131,7 +133,7 @@ For disconnected environments where Windows devices are not allowed to access Wi
    - Download [US Federal Common Policy G2 Root](http://http.fpki.gov/fcpca/fcpca.crt).
    - Follow the guidance in FICAM Playbooks: [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/) for each operating systems that are deployed in your enterprise.
 
-## How to collect and analyze troubleshooting data
+## Collect and analyze troubleshooting data
 
 The following data can help you troubleshoot this issue:
 
