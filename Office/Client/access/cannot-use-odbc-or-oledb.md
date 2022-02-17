@@ -58,8 +58,9 @@ Use the following table to understand if additional components are necessary to 
 
 | Current Office Installation |    Additional components needed |    Recommended Additional Installation |
 |:----------------------------|:----------------------------:|:-----------------------------------:|
-| Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Version 2009 or later |    No    | - |
+| Microsoft 365 Apps for Enterprise, Office 2016/2019/2021 Consumer Version 2009 or later |    No    | - |
 | Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Prior to Version 2009 | Yes |    [Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
+| Office LTSC 2021 (Volume License) |    No    | - |
 | Office 2016/2019 Pro Plus C2R (Volume License) |    Yes |    [Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
 | Office 2010/2013/2016 MSI |    No |    - |
 | No Office installation |    Yes |    [Microsoft 365 Access Runtime](https://support.microsoft.com/en-us/office/download-and-install-microsoft-365-access-runtime-185c5a32-8ba9-491e-ac76-91cbe3ea09c9) |
