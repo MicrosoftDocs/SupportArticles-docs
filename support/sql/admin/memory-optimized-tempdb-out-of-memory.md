@@ -201,4 +201,4 @@ LOOKASIDE                     Transaction                                0      
 
 - Table heap is used for system tables rows.
 
-High values for used bytes could be the indicator of constant heavy tempdb workload and/or long running open transaction that uses temporary objects.
+High values for used bytes could be the indicator of constant heavy tempdb workload and/or long-running open transaction that uses temporary objects.
