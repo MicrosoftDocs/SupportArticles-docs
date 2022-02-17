@@ -50,12 +50,17 @@ After the US FCPCA G1 root certificate is removed, you may encounter issues with
 
 The following Errors may be seen in pop-up and other dialog boxes.
 
-- > The site's security certificate is not trusted.
-- > The security certificate presented by this website was not issued by a trusted CA.
-- > A certificate chain processed, but terminated in a ROOT certificate that is not trusted by the trust provider.
-- > Certificate Chaining Error.
-- > The certificate chain was issued by an authority that is not trusted.
-- > The certificate or associated chain is invalid.
+> The site's security certificate is not trusted.
+
+> The security certificate presented by this website was not issued by a trusted CA.
+
+> A certificate chain processed, but terminated in a ROOT certificate that is not trusted by the trust provider.
+
+> Certificate Chaining Error.
+
+> The certificate chain was issued by an authority that is not trusted.
+
+> The certificate or associated chain is invalid.
 
 ## Steps to avoid these issues
 
