@@ -57,7 +57,7 @@ To collect data to diagnose the issue, follow the steps:
 
 ## Cause and resolution
 
-By using the DMVs to verify the cause, you can see different scenarios for the issue. These scenarios can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each scenario. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
+By using the DMVs to verify the cause, you can see different scenarios of the issue. These scenarios can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each scenario. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
 
 ### Gradual increase in XTP memory consumption
 
@@ -142,7 +142,7 @@ By using the DMVs to verify the cause, you can see different scenarios for the i
    >
    > > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'HkTempDB'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information. XTP failed page allocation due to memory pressure: FAIL_PAGE_ALLOCATION 8
 
-1. The memory-optimized tempdb metadata feature doesn't support every workload. For example, using explicit transactions with DDL statements in temporal tables that run for a long time will lead to many of the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
+1. The memory-optimized tempdb metadata feature doesn't support every workload. For example, using explicit transactions with DDL statements in temporal tables that run for a long time will lead to the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
 
 ## More information
 
