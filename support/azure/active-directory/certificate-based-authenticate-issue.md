@@ -40,7 +40,7 @@ _Original KB number:_ &nbsp; 4032987
 1. Run the following PowerShell command to Install the Azure Active Directory PowerShell (Preview) module:
 
     ```powershell
-    Install-ModuleAzureAD
+    Install-Module AzureAD
     ```
 
 2. To create a trusted certificate authority, use the [New-AzureADTrustedCertificateAuthority](/powershell/module/azuread/new-azureadtrustedcertificateauthority?view=azureadps-2.0&preserve-view=true) cmdlet, and set the **crlDistributionPoint** attribute to a correct value.
