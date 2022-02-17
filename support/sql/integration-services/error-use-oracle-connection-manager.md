@@ -68,4 +68,4 @@ For example, the fixed version of the example Configuration file shown in the Ca
 
 ## More information
 
-[INFO: Limitations of Microsoft Oracle ODBC Driver and OLEDB Provider](http://c-bit.org/kb/244661/EN-US/)
+[Known Limitations of the OLE DB Provider for ODBC](/previous-versions/windows/desktop/ms719628(v=vs.85))
