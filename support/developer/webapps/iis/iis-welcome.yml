@@ -41,7 +41,7 @@ landingContent:
         links:
           - text: Recover a private key of a deleted certificate
             url: development/assign-certificate-private-key.md
-          - text: Add an HTTP response header to a web site
+          - text: Add a custom HTTP response header to a web site
             url: development/add-http-response-header-web-site.md
 
   - title: Authentication and Authorization
