@@ -77,7 +77,7 @@ The data is cached or buffered for a maximum of 8.5 hours. The Monitoring Agent 
 
 The default minimum setting is 100 MB, and the maximum is 1.5 GB. This setting can be modified in the following registry value:
 
-- Key: HKLM\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\Management Groups<Management Group Name>
+- Key: HKLM\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\Management Groups&#92;&lt;Management Groups ID&gt;
 - Value: MaximumQueueSizeKb
 - Type: DWORD
 - Default: 102400 (that means 100MB)
