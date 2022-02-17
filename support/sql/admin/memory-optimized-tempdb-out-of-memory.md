@@ -57,7 +57,7 @@ To collect data to diagnose the issue, follow the steps:
 
 ## Cause and resolution
 
-By using the DMVs to verify the cause, you can see different scenarios for the issue. These scenarios can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
+By using the DMVs to verify the cause, you can see different scenarios for the issue. These scenarios can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each scenario. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
 
 ### Gradual increase in XTP memory consumption
 
