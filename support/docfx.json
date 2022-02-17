@@ -1,6 +1,5 @@
 {
   "build": {
-
     "content": [
       {
         "files": [
@@ -21,7 +20,6 @@
         ]
       }
     ],
-
     "resource": [
       {
         "files": [
@@ -41,19 +39,18 @@
         ]
       }
     ],
-
     "overwrite": [],
     "externalReference": [],
-
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None", 
-      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
-      "searchScope": ["Troubleshoot"],
+      "feedback_system": "None",
+      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs",
+      "searchScope": [
+        "Troubleshoot"
+      ],
       "recommendations": true
     },
-
     "fileMetadata": {
       "feedback_system": {
         "azure/*.md": "GitHub",
@@ -62,7 +59,6 @@
       "layout": {
         "**/index.yml": "LandingPage"
       },
-
       "manager": {
         "**/*.md": "dcscontentpm"
       },
@@ -75,9 +71,9 @@
         "azure/cloud-services/*.md": "genlin",
         "azure/virtual-machines/*.md": "genlin",
         "mem/**/*.md": "helenclu",
-        "system-center/**/*.md":"helenclu",
-        "dynamics-365/**/*.md":"David-Pack",
-        "power-platform/**/*.md":"David-Pack",
+        "system-center/**/*.md": "helenclu",
+        "dynamics-365/**/*.md": "David-Pack",
+        "power-platform/**/*.md": "David-Pack",
         "dynamics/gp/*.md": "David-Pack"
       },
       "ms.author": {
@@ -102,7 +98,6 @@
       "ms.topic": {
         "**/*.md": "troubleshooting"
       },
-
       "ms.prod": {
         "developer/biztalk/**/*.md": "biztalk-server",
         "developer/dotnet/**/*.md": ".net",
@@ -118,7 +113,7 @@
         "developer/visualstudio/visual-basic/**/*.md": ".net",
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "windows/win32/**/*.md": "windows-dev-apps",
-        "windows-hardware/drivers/**/*.md": "windows-hardware",        
+        "windows-hardware/drivers/**/*.md": "windows-hardware",
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
@@ -232,7 +227,7 @@
         "sql/reporting-services/**/*.md": "sql-reporting-services-ssrs",
         "sql/security/**/*.md": "sql-engine-security",
         "sql/ssms/**/*.md": "sql-tools",
-        "sql/tools/**/*.md": "sql-tools"        
+        "sql/tools/**/*.md": "sql-tools"
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
@@ -246,7 +241,6 @@
         "dynamics-365/sales/*.md": "dynamics-365-sales",
         "mem/intune/**/*.md": "microsoft-intune"
       },
-
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
         "developer/dotnet/**/*.md": ".NET",
@@ -289,41 +283,102 @@
         "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
-        "developer/biztalk/**/*.md": [ "BizTalk Server" ],
-        "developer/dotnet/**/*.md": [ ".NET" ],
-        "developer/host-integration-server/**/*.md": [ "Host Integration Server" ],
-        "developer/visualstudio/**/*.md": [ "VS IDE" ],
-        "developer/webapps/iis/**/*.md": [ "IIS" ],
-        "developer/webapps/aspnet/**/*.md": [ "ASP.NET","ASP.NET Core" ],
-        "developer/webapps/aspnetcore/**/*.md": [ "ASP.NET","ASP.NET Core" ],
-        "sql/**/*.md": [ "sql" ],
-        "developer/webapps/**/*.md": [ "Web Apps" ],
-        "windows/win32/**/*.md": [ "Windows", "Desktop" ],
-        "windows-hardware/drivers/**/*.md": [ "Drivers" ],
-        "windows-server/**/*.md": [ "Windows Server" ],
-        "windows-client/**/*.md": [ "Windows Client" ],
-        "developer/browsers/**/*.md": [ "Browsers" ],
-        "azure/**/*.md": [ "Azure" ],
-        "mem/intune/**/*.md": [ "Intune" ],
-        "mem/configmgr/**/*.md": [ "ConfigMgr" ],
-        "system-center/**/*.md": [ "System Center" ],
-        "dynamics-365/supply-chain/**/*.md": [ "dynamics365-supplychain", "Dynamics 365", "Unified Operations", "Supply Chain" ],
-        "power-platform/power-apps/*.md": [ "Power Apps" ],
-        "power-platform/power-automate/*.md": [ "Power Automate" ]
+        "developer/biztalk/**/*.md": [
+          "Troubleshoot",
+          "BizTalk Server"
+        ],
+        "developer/dotnet/**/*.md": [
+          ".NET"
+        ],
+        "developer/host-integration-server/**/*.md": [
+          "Host Integration Server"
+        ],
+        "developer/visualstudio/**/*.md": [
+          "VS IDE"
+        ],
+        "developer/webapps/iis/**/*.md": [
+          "IIS"
+        ],
+        "developer/webapps/aspnet/**/*.md": [
+          "ASP.NET",
+          "ASP.NET Core"
+        ],
+        "developer/webapps/aspnetcore/**/*.md": [
+          "ASP.NET",
+          "ASP.NET Core"
+        ],
+        "sql/**/*.md": [
+          "sql"
+        ],
+        "developer/webapps/**/*.md": [
+          "Web Apps"
+        ],
+        "windows/win32/**/*.md": [
+          "Windows",
+          "Desktop"
+        ],
+        "windows-hardware/drivers/**/*.md": [
+          "Drivers"
+        ],
+        "windows-server/**/*.md": [
+          "Windows Server"
+        ],
+        "windows-client/**/*.md": [
+          "Windows Client"
+        ],
+        "developer/browsers/**/*.md": [
+          "Browsers"
+        ],
+        "azure/**/*.md": [
+          "Azure"
+        ],
+        "mem/intune/**/*.md": [
+          "Intune"
+        ],
+        "mem/configmgr/**/*.md": [
+          "ConfigMgr"
+        ],
+        "system-center/**/*.md": [
+          "System Center"
+        ],
+        "dynamics-365/supply-chain/**/*.md": [
+          "dynamics365-supplychain",
+          "Dynamics 365",
+          "Unified Operations",
+          "Supply Chain"
+        ],
+        "power-platform/power-apps/*.md": [
+          "Power Apps"
+        ],
+        "power-platform/power-automate/*.md": [
+          "Power Automate"
+        ]
       },
-      "ms.search.scope":{
-        "dynamics-365/supply-chain/**/*.md": ["Core","Operations","Supply Chain","ShowInHelp"],
-        "dynamics-365/finance/**/*.md": ["Core","Operations", "Finance","ShowInHelp"]
+      "ms.search.scope": {
+        "dynamics-365/supply-chain/**/*.md": [
+          "Core",
+          "Operations",
+          "Supply Chain",
+          "ShowInHelp"
+        ],
+        "dynamics-365/finance/**/*.md": [
+          "Core",
+          "Operations",
+          "Finance",
+          "ShowInHelp"
+        ]
       },
-      "search.app":{
-        "power-platform/power-apps/*.md": ["PowerApps"],
-        "power-platform/power-automate/*.md": [ "Flow" ]
+      "search.app": {
+        "power-platform/power-apps/*.md": [
+          "PowerApps"
+        ],
+        "power-platform/power-automate/*.md": [
+          "Flow"
+        ]
       }
     },
-
     "template": [],
     "dest": "support1-docset",
     "markdownEngineName": "markdig"
-
   }
 }
