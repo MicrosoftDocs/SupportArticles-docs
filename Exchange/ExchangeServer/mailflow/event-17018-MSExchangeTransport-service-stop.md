@@ -18,14 +18,18 @@ appliesto:
 search.appverid: MET150
 ---
 # Microsoft Exchange Transport service stops with event ID 17018
+
 ## Symptoms
+
 On a Microsoft Exchange server that has a high CPU core count and a high transport load, the Microsoft Exchange Transport service keeps stopping and restarting. Additionally, the following event is logged in the Application log:
+
 > Source: MSExchangeTransport  
 > Event ID: 17018  
 > Transport Mail Database: There are insufficient resources to perform a database operation. The Microsoft Exchange Transport service is shutting down.  
 > Exception details: Microsoft.Isam.Esent.Interop.**EsentOutOfSessionsException: Out of sessions**
 at Microsoft.Isam.Esent.Interop.Api.JetBeginSession(JET_INSTANCE instance, JET_SESID& sesid, String username, String password)
 at Microsoft.Exchange.Transport.Storage.DataConnection..ctor(JET_INSTANCE instance, IDataSource source)
+
 ## Cause
 
 This issue occurs because a high number of incoming connections can exhaust the session limit too quickly.
@@ -33,17 +37,25 @@ This issue occurs because a high number of incoming connections can exhaust the 
 ## Resolution
 
 To fix this issue, decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange server as follows:
+
 1. Run the [Get-ReceiveConnector](/powershell/module/exchange/get-receiveconnector) cmdlet to check the current value of the `MaxInboundConnection` parameter.
+
     ```powershell
     Get-ReceiveConnector -Server <Server Name> | Format-Table Identity,MaxInboundConnection -Auto
     ```
+
     **Note**: The default value for this limit is 5000 concurrent connections.
+
 1. Run the following cmdlet to set the limit to a value of 1000 concurrent connections.
+
     ```powershell
     Get-ReceiveConnector -Server <Server Name> | Set-ReceiveConnector -MaxInboundConnection 1000
     ```
+
     Run the [Set-ReceiveConnector](/powershell/module/exchange/set-receiveconnector) cmdlet to set each Receive connector limit individually:
+
     ```powershell
     Set-ReceiveConnector -Identity "<Receive Connector Identity>" -MaxInboundConnection 1000
     ```
+
 1. Restart the Microsoft Exchange Transport service.
