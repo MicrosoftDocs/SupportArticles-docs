@@ -57,11 +57,11 @@ To collect data to diagnose the issue, follow the steps:
 
 ## Cause and resolution
 
-The causes of the symptoms can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
+By using the DMVs to verify the cause, you can see different scenarios for the issue. These scenarios can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
 
 ### Gradual increase in XTP memory consumption
 
-- Cause 1
+- Scenario 1
 
     The DMV [tempdb.sys.dm_xtp_system_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql) or [tempdb.sys.dm_db_xtp_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql) shows a large difference between allocated bytes and used bytes.
 
@@ -78,7 +78,7 @@ The causes of the symptoms can be divided into the following two categories. To 
     Exec sys.sp_xtp_force_gc
     ```
 
-- Cause 2
+- Scenario 2
 
     The DMV `tempdb.sys.dm_xtp_system_memory_consumers` shows high values for allocated and used bytes for memory consumer types VARHEAP and LOOKASIDE.
 
@@ -87,13 +87,13 @@ The causes of the symptoms can be divided into the following two categories. To 
     > [!NOTE]
     > To reproduce this issue in a test environment, you can create an explicit [transaction](/sql/t-sql/language-elements/begin-transaction-transact-sql) by using Data Definition Language (DDL) statements in a [temporal table](/sql/relational-databases/tables/temporal-tables) and leave it open for a long time while other activity takes place.
 
-- Cause 3
+- Scenario 3
 
     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated and used bytes in a large object (LOB) allocator or table heap where `Object_ID`, `XTP_Object_ID` and `Index_ID` are `NULL`.
 
     **Resolution**: The root cause has been identified and a product fix is being examined.
 
-- Cause 4
+- Scenario 4
 
     Continuously growing "VARHEAP\Storage internal heap" XTP database memory consumer leads to out of memory error 41805.
 
@@ -101,7 +101,7 @@ The causes of the symptoms can be divided into the following two categories. To 
 
 ### Sudden spike or rapid increase in XTP memory consumption
 
-- Cause 5
+- Scenario 5
 
      The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated or used bytes in a table heap where `Object_ID` isn't `NULL`. The most common cause of this issue is a long-running, explicitly open transaction with DDL statements in temporal table(s). For example:
 
