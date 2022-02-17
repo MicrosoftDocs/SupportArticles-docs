@@ -79,8 +79,8 @@ The following steps directly configure the Windows registry to a pre-release or 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
 
 2. Add or modify the following registry values:
-   - Set **RootDirUrl** to **http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/test**.
-   - Set **SyncFromDirUrl** to **http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/test**
+   - Set **RootDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/test`.
+   - Set **SyncFromDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/test`.
 
 3. Delete the following registry values:
    - **EncodedCtl**
@@ -101,8 +101,8 @@ The following steps directly configure the Windows registry to use production ve
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
 
 2. Add or modify the following registry values:
-   - Set **RootDirUrl** to **http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en**.
-   - Set **SyncFromDirUrl** to **http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en**
+   - Set **RootDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en`.
+   - Set **SyncFromDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en`.
 
 3. Delete the following registry values:
    - **EncodedCtl**
