@@ -103,7 +103,7 @@ The causes of the symptoms can be divided into the following two categories. To 
 
 - Cause 5
 
-     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated or used bytes in table heap where `Object_ID` isn't `NULL`. The most common cause for this issue is a long-running, explicitly open transaction with DDL statements in temporal table(s). For example:
+     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated or used bytes in a table heap where `Object_ID` isn't `NULL`. The most common cause for this issue is a long-running, explicitly open transaction with DDL statements in temporal table(s). For example:
 
      ```sql
      BEGIN TRAN
@@ -113,7 +113,7 @@ The causes of the symptoms can be divided into the following two categories. To 
      COMMIT
      ```
 
-     Explicit open transaction with DDL statements in temporal tables won't allow table heap and lookaside heap to be freed up for subsequent transactions using TempDB metadata.
+     An explicit open transaction with DDL statements in temporal tables won't allow the table heap and lookaside heap to be freed up for subsequent transactions using TempDB metadata.
 
      **Resolution**: Try to keep transactions short.
 
