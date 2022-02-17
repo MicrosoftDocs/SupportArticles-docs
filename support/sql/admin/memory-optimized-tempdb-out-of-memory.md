@@ -35,10 +35,29 @@ type                    memory_node_id                     pages_kb
 MEMORYCLERK_XTP         0                                  60104496
 MEMORYCLERK_XTP         64                                 0
 ```
+## Diagnose the issue
+
+To collect data to diagnose the problem, run the following steps:
+
+1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL statements in temporal tables.
+
+1. Collect the output of the following DMVs to analyze further.
+
+   ```sql
+   SELECT * FROM  sys.dm_os_memory_clerks
+   SELECT * FROM  sys.dm_tran_database_transactions
+   SELECT * FROM  sys.dm_tran_active_transactions
+   -- from tempdb
+   SELECT * FROM  tempdb.sys.dm_xtp_system_memory_consumers 
+   SELECT * FROM  tempdb.sys.dm_xtp_transaction_stats
+   SELECT * FROM  tempdb.sys.dm_xtp_gc_queue_stats
+   SELECT * FROM  tempdb.sys.dm_db_xtp_object_stats
+   SELECT * FROM  tempdb.sys.dm_db_xtp_memory_consumers
+   ```
 
 ## Cause and resolution
 
-The causes of the symptoms can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to diagnose and alleviate the issue, see [Diagnose and alleviate the issue](#diagnose-and-alleviate-the-issue).
+The causes of the symptoms can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each cause. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
 
 ### Gradual increase in XTP memory consumption
 
@@ -66,7 +85,7 @@ The causes of the symptoms can be divided into the following two categories. To 
     **Resolution**: Check for long running transactions and resolve from application side by keeping transactions short.
 
     > [!NOTE]
-    > To reproduce this issue in a test environment, you can create an explicit [BEGIN TRANSACTION](/sql/t-sql/language-elements/begin-transaction-transact-sql) statement by using Data Definition Language (DDL) statements in a [temporal table](/sql/relational-databases/tables/temporal-tables) and leave it open for a long time while other activity takes place.
+    > To reproduce this issue in a test environment, you can create an explicit [transaction](/sql/t-sql/language-elements/begin-transaction-transact-sql) by using Data Definition Language (DDL) statements in a [temporal table](/sql/relational-databases/tables/temporal-tables) and leave it open for a long time while other activity takes place.
 
 - Cause 3
 
@@ -98,31 +117,7 @@ The causes of the symptoms can be divided into the following two categories. To 
 
      **Resolution** Try to keep transactions short.
 
-## Diagnose and alleviate the issue
-
-The following steps highlight what data to collect to diagnose the problem and how to alleviate the issue.
-
-### Data to collect
-
-To collect data to diagnose the problem, run the following steps:
-
-1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL statements in temporal tables.
-
-1. Collect the output of the following DMVs to analyze further.
-
-   ```sql
-   SELECT * FROM  sys.dm_os_memory_clerks
-   SELECT * FROM  sys.dm_tran_database_transactions
-   SELECT * FROM  sys.dm_tran_active_transactions
-   -- from tempdb
-   SELECT * FROM  tempdb.sys.dm_xtp_system_memory_consumers 
-   SELECT * FROM  tempdb.sys.dm_xtp_transaction_stats
-   SELECT * FROM  tempdb.sys.dm_xtp_gc_queue_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_object_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_memory_consumers
-   ```
-
-### Mitigation steps to keep memory-optimized tempdb metadata memory in check
+## Mitigation steps to keep memory-optimized tempdb metadata memory in check
 
 1. To avoid or resolve long-running transactions that use DDL statements in temporal tables, the general guidance is to keep transactions short.
 
