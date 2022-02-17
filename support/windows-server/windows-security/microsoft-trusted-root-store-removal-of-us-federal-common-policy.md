@@ -71,7 +71,7 @@ The following Errors may be seen in pop-up and other dialog boxes.
 > [!Note]
 > Application-as-a-service scenarios like Azure SQL or Azure App Service that chain to the G1 root certificate will be blocked because the root certificate will be available after removal.
 
-## Test configuration setup
+### Test configuration setup
 
 The following steps directly configure the Windows registry to a pre-release or staged location of the latest root certificate update. You can also configure the settings by using group policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
 
