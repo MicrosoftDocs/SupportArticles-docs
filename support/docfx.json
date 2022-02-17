@@ -296,6 +296,9 @@
         "developer/visualstudio/**/*.md": [
           "VS IDE"
         ],
+        "developer/webapps/**/*.md": [
+          "Web Apps"
+        ],
         "developer/webapps/iis/**/*.md": [
           "IIS"
         ],
@@ -309,9 +312,6 @@
         ],
         "sql/**/*.md": [
           "sql"
-        ],
-        "developer/webapps/**/*.md": [
-          "Web Apps"
         ],
         "windows/win32/**/*.md": [
           "Windows",
