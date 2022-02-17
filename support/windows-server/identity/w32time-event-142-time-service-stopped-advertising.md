@@ -308,4 +308,4 @@ Recommendations from the Microsoft Windows time team to correct this environment
  [Configuring the Windows time service on the PDC emulator in the Forest root domain](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Configuring the Windows Time service for Windows Server 2008 and Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Running Domain Controllers in Hyper-V](https://go.microsoft.com/fwlink/?LinkID=139651)  
- [Configuring the Windows time service for Windows Server](http://msmvps.com/blogs/acefekay/archive/2009/09/18/configuring-the-windows-time-service-for-windows-server.aspx) - Ace Fekay's blog post  
+ [Configuring the Windows time service for Windows Server](https://blogs.msmvps.com/acefekay/2009/09/18/configuring-the-windows-time-service-for-windows-server/) - Ace Fekay's blog post  
