@@ -16,7 +16,7 @@ metadata:
 landingContent:
 
  # Card
-  - title: Diagnostics and Performance
+  - title: HTTP Status Code
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -43,6 +43,8 @@ landingContent:
             url: development/assign-certificate-private-key.md
           - text: Add a custom HTTP response header to a web site
             url: development/add-http-response-header-web-site.md
+          - text: Make a GET request in C#
+            url: development/make-get-request.md
 
   - title: Authentication and Authorization
     linkLists:
@@ -56,5 +58,17 @@ landingContent:
             url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
           - text: Understand application pool identities
             url: www-authentication-authorization/understanding-identities.md
+          - text: Configure intermediate certificates
+            url: www-authentication-authorization/configure-intermediate-certificates.md
 
+  - title: Administration and Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure the default document
+            url: www-administration-management/configure-default-document-iis.md
+          - text: Fail to request access to remote resources
+            url: www-administration-management/remote-resources-fails-requested-iis.md
+          - text: Enable SSL for customers
+            url: www-administration-management/enable-ssl-all-customers.md
             
