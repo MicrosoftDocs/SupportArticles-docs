@@ -71,13 +71,20 @@ If the script does not work, use the following steps to collect an ETL trace man
 
 **How long is the data cached/buffered?**
 
-The data is cached or buffered for a maximum of 8.5 hours. The agent tries to upload every 20 seconds. If it can't upload, it will wait 30 seconds, and then try to upload again. After that, the wait time goes from 30s->60s->120s-> etc.), up to a maximum of a 9-minute wait between retries. The agent will retry 10 times for a given "chunk" of data before discarding it and moving to the next “chunk.” This cycle continues until the agent can successfully upload again. In practice, this means data is buffered for up to 8.5 hours before being discarded. Any data that has been uploaded is cleared. The retry time is slightly randomized to avoid all agents retrying at the same time.
+The data is cached or buffered for a maximum of 8.5 hours. The Monitoring Agent tries to upload every 20 seconds. If it can't upload, it will wait 30 seconds, and then try to upload again. After that, the wait time goes from 30s->60s->120s-> etc.), up to a maximum of a 9-minute wait between retries. The agent will retry 10 times for a given "chunk" of data before discarding it and moving to the next “chunk.” This cycle continues until the agent can successfully upload again. In practice, this means data is buffered for up to 8.5 hours before being discarded. Any data that has been uploaded is cleared. The retry time is slightly randomized to avoid all agents retrying at the same time.
 
 **What's the minimum and maximum size of the cache/buffer?**
 
-100 MB The default minimum setting is 100 MB, and the maximum is 1.5 GB. This setting can be modified in the registry by following the tuning parameters section on [Windows Agent - Rate Limits, Caching, Tuning Parameters](Windows Agent - Rate Limits, Caching, Tuning Parameters).
+The default minimum setting is 100 MB, and the maximum is 1.5 GB. This setting can be modified in the following registry value:
 
-**What happens if the link or network to LAW is down?**
+- Key: HKLM\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\Management Groups<Management Group Name>
+- Value: MaximumQueueSizeKb
+- Type: DWORD
+- Default: 102400 (that means 100MB)
+    - Min Value: 5120
+    - Max Value: 1536000
+
+**What happens if the connection to the Log Analytics workspace isn't available?**
 
 As described above, the agent backs off retrying exponentially for up to 8.5 hours per retry. It will continue to retry every 8.5 hours indefinitely and discard the oldest data when the buffer limit is reached. When the agent can successfully connect, it will upload data until it's back to processing the latest data.
 
