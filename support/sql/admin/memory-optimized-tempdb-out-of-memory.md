@@ -94,7 +94,7 @@ The causes of the symptoms can be divided into the following two categories. To 
      COMMIT
      ```
 
-     Explicit open transaction with DDL statements in temporal tables won't allow table heap and Lookaside heap to be freed up for subsequent transactions using TempDB metadata.
+     Explicit open transaction with DDL statements in temporal tables won't allow table heap and lookaside heap to be freed up for subsequent transactions using TempDB metadata.
 
      **Resolution** Try to keep transactions short.
 
