@@ -121,7 +121,6 @@
         "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
-        "dotnet/**/*.md": "",
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
         "developer/dotnet/framework/general/**/*.md": "dotnet-general",
         "developer/dotnet/framework/installation/**/*.md": "dotnet-installation",
