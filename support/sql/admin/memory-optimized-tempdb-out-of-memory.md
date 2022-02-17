@@ -97,13 +97,13 @@ The causes of the symptoms can be divided into the following two categories. To 
 
     Continuously growing "VARHEAP\Storage internal heap" XTP database memory consumer leads to out of memory error 41805.
 
-    **Resolution** The issue [14087445](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in [SQL Server 17 CU25](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9) and later versions is under examination to be ported over to SQL Server 2019.
+    **Resolution**: The issue [14087445](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9#bkmk_14087445) already identified and resolved in [SQL Server 17 CU25](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9) and later versions is under examination to be ported over to SQL Server 2019.
 
 ### Sudden spike or rapid increase in XTP memory consumption
 
 - Cause 5
 
-     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high allocated or used bytes for table heap where `Object_ID` isn't `NULL`. The most common cause for this issue is a long-running, explicitly open transaction with DDL statements in temporal table(s). For example:
+     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated or used bytes in table heap where `Object_ID` isn't `NULL`. The most common cause for this issue is a long-running, explicitly open transaction with DDL statements in temporal table(s). For example:
 
      ```sql
      BEGIN TRAN
@@ -115,7 +115,7 @@ The causes of the symptoms can be divided into the following two categories. To 
 
      Explicit open transaction with DDL statements in temporal tables won't allow table heap and lookaside heap to be freed up for subsequent transactions using TempDB metadata.
 
-     **Resolution** Try to keep transactions short.
+     **Resolution**: Try to keep transactions short.
 
 ## Mitigation steps to keep memory-optimized tempdb metadata memory in check
 
@@ -153,7 +153,7 @@ Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve f
 
 ### System-level consumers: tempdb.sys.dm_xtp_system_memory_consumers
 
-About 25 lookaside memory consumer types are the upper limit, when threads need more memory from those lookasides, the memory spills over to and is satisfied from lookaside heap. High used bytes could be an indicator of constant heavy tempdb workload and/or long-running open transaction using temporary objects.
+About 25 lookaside memory consumer types are the upper limit, when threads need more memory from those lookasides, the memory spills over to and is satisfied from lookaside heap. High values for used bytes could be an indicator of constant heavy tempdb workload and/or long-running open transaction using temporary objects.
 
 ```sql
 -- system memory consumers @ instance  
@@ -201,4 +201,4 @@ LOOKASIDE                     Transaction                                0      
 
 - Table heap is used for system tables rows.
 
-High used bytes could be the indicator of constant heavy tempdb workload and/or long running open transaction using temporary objects.
+High values for used bytes could be the indicator of constant heavy tempdb workload and/or long running open transaction using temporary objects.
