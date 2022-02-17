@@ -71,7 +71,7 @@ If the script does not work, use the following steps to collect an ETL trace man
 
 **How long is the data cached/buffered?**
 
-The data is cached or buffered for a maximum of 8.5 hours. The Monitoring Agent tries to upload every 20 seconds. If it can't upload, it will wait 30 seconds, and then try to upload again. After that, the wait time goes from 30s->60s->120s-> etc.), up to a maximum of a 9-minute wait between retries. The agent will retry 10 times for a given "chunk" of data before discarding it and moving to the next “chunk.” This cycle continues until the agent can successfully upload again. In practice, this means data is buffered for up to 8.5 hours before being discarded. Any data that has been uploaded is cleared. The retry time is slightly randomized to avoid all agents retrying at the same time.
+The data is cached or buffered for a maximum of 8.5 hours. The Monitoring Agent tries to upload every 20 seconds. If it can't upload, it will wait 30 seconds, and then try to upload again. After that, the wait time goes from 30 seconds to 60 seconds to 120 seconds,etc.), up to a maximum of a 9-minute wait between retries. The agent will retry 10 times for a given "chunk" of data before discarding it and moving to the next “chunk.” This cycle continues until the agent can successfully upload again. In practice, this means data is buffered for up to 8.5 hours before being discarded. Any data that has been uploaded is cleared. The retry time is slightly randomized to avoid all agents retrying at the same time.
 
 **What's the minimum and maximum size of the cache/buffer?**
 
@@ -80,7 +80,7 @@ The default minimum setting is 100 MB, and the maximum is 1.5 GB. This setting c
 - Key: HKLM\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\Management Groups&#92;&lt;Management Groups ID&gt;
 - Value: MaximumQueueSizeKb
 - Type: DWORD
-- Default: 102400 (that means 100MB)
+- Default: 102400 (that means 100 MB)
     - Min Value: 5120
     - Max Value: 1536000
 
