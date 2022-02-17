@@ -93,7 +93,7 @@ The following steps directly configure the Windows registry to a pre-release or 
 > [!Note]
 > The link above never changes. However, the changes that are staged change from month to month. As of February 15, 2022, the testing URL above is staged with about 20 continuous deprecation changes that do not currently include the removal of the US FCPCA G1 root certificate. That change will be staged in March 2022. This article will be updated with the exact staging date. <!-- remove it after we have the date -->
 
-## Production configuration setup
+### Production configuration setup
 
 The following steps directly configure the Windows registry to use production version of the certificate trust list (CTL) if the testing URL above is used:
 
