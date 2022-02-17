@@ -55,6 +55,10 @@ If the Teams Voicemail test doesn't return any errors, but the Teams client isn'
 
 Make sure that there are no [Exchange Client Access Rules](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules#client-access-rules-and-middle-tier-applications) that block access. 
 
+### Exchange Web Access Rules
+
+Make sure that there are no [Exchange Web Access Policies](/exchange/client-developer/exchange-web-services/how-to-control-access-to-ews-in-exchange) that block access. 
+
 ### Exchange Email Connector
 
 A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct. For voicemail messages to show in the Teams client, the message class must be IPM.Note.Microsoft.Voicemail.UM.
