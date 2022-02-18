@@ -36,7 +36,7 @@ Applications and operations that depend on the G1 certificate will fail after re
 |||
 
 > [!Note]
-> The FCPCA G2 certificate can be obtained from the [download link](http://repo.fpki.gov/fcpca/fcpcag2.crt).
+> The FCPCA G2 certificate can be obtained from [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify/#download-a-copy-of-fcpca-g2).
 
 ## Potential issues
 
@@ -109,7 +109,7 @@ The following steps directly configure the Windows registry to use production ve
 
 Administrators should implement the FCPCA G2 certificate as per the instructions below before the G1 certificate is removed by the Out-of-Band (OOB) Root Certificate update.
 
-1. Follow the guidance in [2: Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify/) to download and install the [Federal Common Policy CA G2 certificate](http://repo.fpki.gov/fcpca/fcpcag2.crt) on all Windows workgroup, member and domain controller computers.
+1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the FCPCA G2 certificate on all Windows workgroup, member and domain controller computers.
 2. There are multiple ways to deploy CA certificates to enterprise devices. See the "Microsoft Solutions" section in [3: Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
 
 > [!Note]
@@ -132,7 +132,7 @@ For disconnected environments where Windows devices are not allowed to access Wi
    3. When clicking on disallowedcert.sst, it should open up CertMgr and display all roots in the disallowed list.
 3. To evaluate settings not shown in the UI, convert the SST file to a text file. To do so, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`
 4. Download and add the FCPCA G2 certificate to your personal CTL.
-   - Download the [FCPCA G2 certificate](http://http.fpki.gov/fcpca/fcpca.crt).
+   - Download the FCPCA G2 certificate from [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify/#download-a-copy-of-fcpca-g2).
    - Follow the guidance in FICAM Playbooks: [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/) for each operating systems that are deployed in your enterprise.
 
 ## Troubleshoot and analyze root chaining issues
