@@ -118,3 +118,22 @@ https://www.rarlab.com/rar/UnRARDLL.exe
 https://www.7-zip.org/a/7z1900-x64.exe
 
 https://www.nuget.org/packages/Xceed.Products.Zip.Full/
+
+## Examples
+
+The following examples illustrate how to use some of the RML utilities
+
+### A. Using ReadTrace.exe to import Xevent data in a database
+Uses ReadTrace.exe to import a series of Xevent files collected via tools like PSSDIAG/[SQLDiag.exe](/sql/tools/sqldiag-utility) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases). Use the -I parameter to point to the first .XEL file that was collected in time, if multiple files are present. For all command-line switches use `ReadTrace.exe /?`
+
+```console
+ReadTrace.exe -Iserver_instance_20220211T1319480819_xevent_LogScout_target_0_132890707717540000.xel -oc:\temp\output -f -dPerfAnalysisDb -S.
+```
+
+### B. Using Ostress.exe to stress test a query
+
+Uses Ostress to submit a query against a SQL Server by running 30 simultaneous connections and executing the query 10 times on each connection. For all command-line switches use `Ostress.exe /?`
+
+```console
+ostress.exe -E -dmaster -Q"select name from sys.databases" -n30 -r10
+```
