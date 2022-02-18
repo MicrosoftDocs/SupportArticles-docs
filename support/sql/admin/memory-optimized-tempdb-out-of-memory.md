@@ -39,7 +39,7 @@ MEMORYCLERK_XTP         64                                 0
 
 To collect data to diagnose the issue, follow the steps:
 
-1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL statements in temporal tables.
+1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL statements in temporary tables.
 
 1. Collect the output of the following DMVs to analyze further.
 
@@ -82,10 +82,10 @@ By using the DMVs to verify the cause, you can see different scenarios of the is
 
     The DMV `tempdb.sys.dm_xtp_system_memory_consumers` shows high values for allocated and used bytes for memory consumer types VARHEAP and LOOKASIDE.
 
-    **Resolution**: Check for long-running transactions and resolve from the application side by keeping transactions short.
+    **Resolution**: Check for long-running explicit transactions involving DDL on temporary tables and resolve from the application side by keeping transactions short.
 
     > [!NOTE]
-    > To reproduce this issue in a test environment, you can create an explicit [transaction](/sql/t-sql/language-elements/begin-transaction-transact-sql) by using Data Definition Language (DDL) statements in a [temporal table](/sql/relational-databases/tables/temporal-tables) and leave it open for a long time while other activity takes place.
+    > To reproduce this issue in a test environment, you can create an explicit [transaction](/sql/t-sql/language-elements/begin-transaction-transact-sql) by using Data Definition Language (DDL) statements in temporary table(s) and leave it open for a long time while other activity takes place.
 
 - Scenario 3
 
@@ -103,7 +103,7 @@ By using the DMVs to verify the cause, you can see different scenarios of the is
 
 - Scenario 5
 
-     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated or used bytes in a table heap where `Object_ID` isn't `NULL`. The most common cause of this issue is a long-running, explicitly open transaction with DDL statements in temporal table(s). For example:
+     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated or used bytes in a table heap where `Object_ID` isn't `NULL`. The most common cause of this issue is a long-running, explicitly open transaction with DDL statements in temporary table(s). For example:
 
      ```sql
      BEGIN TRAN
@@ -113,13 +113,13 @@ By using the DMVs to verify the cause, you can see different scenarios of the is
      COMMIT
      ```
 
-     An explicit open transaction with DDL statements in temporal tables won't allow the table heap and lookaside heap to be freed up for subsequent transactions by using TempDB metadata.
+     An explicit open transaction with DDL statements in temporary tables won't allow the table heap and lookaside heap to be freed up for subsequent transactions by using TempDB metadata.
 
-     **Resolution**: Try to keep transactions short.
+     **Resolution**: Check for long-running explicit transactions involving DDL on temporary tables and resolve from the application side by keeping transactions short.
 
 ## Mitigation steps to keep memory-optimized tempdb metadata memory in check
 
-1. To avoid or resolve long-running transactions that use DDL statements in temporal tables, the general guidance is to keep transactions short.
+1. To avoid or resolve long-running transactions that use DDL statements in temporary tables, the general guidance is to keep transactions short.
 
 1. Increase **max server memory** to allow for enough memory to operate in the presence of tempdb-heavy workloads.
 
@@ -142,7 +142,7 @@ By using the DMVs to verify the cause, you can see different scenarios of the is
    >
    > > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'HkTempDB'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information. XTP failed page allocation due to memory pressure: FAIL_PAGE_ALLOCATION 8
 
-1. The memory-optimized tempdb metadata feature doesn't support every workload. For example, using explicit transactions with DDL statements in temporal tables that run for a long time will lead to the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
+1. The memory-optimized tempdb metadata feature doesn't support every workload. For example, using explicit transactions with DDL statements in temporary tables that run for a long time will lead to the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
 
 ## More information
 
