@@ -34,9 +34,9 @@ In a public folder migration, you may experience one of the following issues:
 
     When you try to create a public folder migration endpoint, you receive the following error message:
 
-    An item with the same key has already been added.
+    > An item with the same key has already been added.
 
-## cause
+## Cause
 
 These issues occur if either the primary public folder mailbox or the secondary public folder mailbox has an orphaned object.
 
@@ -44,7 +44,7 @@ These issues occur if either the primary public folder mailbox or the secondary 
 
 To resolve this issue, find and remove all existing orphaned public folder mailboxes by following these steps:
 
-1. Connect to Exchange Online PowerShell.
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Find orphaned public folder mailboxes by running the following cmdlets:
 
     ```powershell
@@ -52,7 +52,7 @@ To resolve this issue, find and remove all existing orphaned public folder mailb
     Get-Mailbox -PublicFolder -SoftDeletedMailbox | fl Name,Identity,ExchangeGuid,Guid
     ```
 
-    If the cmdlets doesn't report any orphaned public folder mailboxes, you can run the following cmdlet:
+    If the cmdlets don't report any orphaned public folder mailboxes, you can run the following cmdlet:
 
     ```powershell
     Get-Recipient -RecipientTypeDetails PublicFolderMailbox -IncludeSoftDeletedRecipients | fl Name,Identity,ExchangeGuid,Guid
