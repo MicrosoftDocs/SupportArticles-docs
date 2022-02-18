@@ -1,10 +1,10 @@
 ---
 title: Server can't make an insecure setting of passwords or requires 128-bit TLS/SSL
-description: 'Error: "8023062C: The password could not be set because the server is not configured for insecure setting of passwords, or a 128 bit TLS or SSL connection is required."'
-ms.date: 2/11/2021
+description: 'Error: 8023062C: The password could not be set because the server is not configured for insecure setting of passwords, or a 128 bit TLS or SSL connection is required.'
+ms.date: 2/11/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.reviewer: "jarrettr,nualex"
+ms.reviewer: jarrettr, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
@@ -24,7 +24,7 @@ When a user or administrator tries to change or reset a password in Azure AD, pa
 
 [Microsoft Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-roadmap) has been configured not to require that Lightweight Directory Access Protocol (LDAP) traffic be signed and encrypted.
 
-### Solution
+## Solution
 
 Make sure that the **Sign and Encrypt LDAP Traffic** setting is enabled in three places within Synchronization Service Manager by following these steps:
 
