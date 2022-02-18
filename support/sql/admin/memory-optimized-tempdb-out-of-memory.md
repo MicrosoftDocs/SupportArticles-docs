@@ -39,7 +39,7 @@ MEMORYCLERK_XTP         64                                 0
 
 To collect data to diagnose the issue, follow these steps:
 
-1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL statements in temporary tables.
+1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any long-running explicit transactions with DDL statements in temporary tables.
 
 1. Collect the output of the following DMVs to analyze further.
 
@@ -57,7 +57,7 @@ To collect data to diagnose the issue, follow these steps:
 
 ## Cause and resolution
 
-By using the DMVs to verify the cause, you can see different scenarios of the issue. These scenarios can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each scenario. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
+By using the DMVs to verify the cause, you may see different scenarios of the issue. These scenarios can be divided into the following two categories. To resolve the issue, you can use the corresponding resolution for each scenario. For more information on how to alleviate the issue, see [Mitigation steps to keep memory-optimized tempdb metadata memory in check](#mitigation-steps-to-keep-memory-optimized-tempdb-metadata-memory-in-check).
 
 ### Gradual increase in XTP memory consumption
 
@@ -113,7 +113,7 @@ By using the DMVs to verify the cause, you can see different scenarios of the is
      COMMIT
      ```
 
-     An explicit open transaction with DDL statements in temporary tables won't allow the table heap and lookaside heap to be freed up for subsequent transactions by using TempDB metadata.
+     An explicitly open transaction with DDL statements in temporary tables won't allow the table heap and lookaside heap to be freed up for subsequent transactions by using TempDB metadata.
 
      **Resolution**: Check for long-running explicit transactions involving DDL statements on temporary tables and resolve from the application side by keeping transactions short.
 
