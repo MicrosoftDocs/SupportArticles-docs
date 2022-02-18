@@ -1,11 +1,20 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 02/03/2022
+ms.date: 02/18/2022
 ---
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
+
+## Several Office settings in settings catalog do not automatically enable the parent setting
+
+- **Status:** Active
+- **Blog post:** [Support tip: Several Office settings in settings catalog may need parent settings enabled](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-several-office-settings-in-settings-catalog-may-need/ba-p/3075669)
+
+We recently identified several Office settings in the settings catalog that, when enabled, do not automatically enable the required parent setting. This can lead to the policy not applying as expected if you did not configure the parent setting.
+
+To help identify which configuration settings have this behavior, we recently made a user interface (UI) change to mark them as **(deprecated)** in the Settings catalog (preview) page. We will release new device configuration settings (with the same name) that will automatically enforce the dependencies. For updates, recommended actions, and a full list of settings, see [Support tip: Several Office settings in settings catalog may need parent settings enabled](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-several-office-settings-in-settings-catalog-may-need/ba-p/3075669)on the Intune Customer Success blog.
 
 ## Android Enterprise device filtering not supported in some reports
 
