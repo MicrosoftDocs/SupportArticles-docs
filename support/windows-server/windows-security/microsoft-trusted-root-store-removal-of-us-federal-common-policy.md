@@ -28,7 +28,7 @@ The [United States Federal PKI](https://www.idmanagement.gov/) team governing th
 |Federal Common Policy CA G1|905F942FD9F28F679B378180FD4F846347F645C1|
 |||
 
-Applications and operations that depend on the G1 certificate will fail after receiving the certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing G1 certificate to the replacement the FCPCA G2 certificate as your agency's federal trust anchor:
+Applications and operations that depend on the FCPCA G1 certificate will fail after receiving the certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing FCPCA G1 certificate to the replacement the FCPCA G2 certificate as your agency's federal trust anchor:
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
@@ -64,7 +64,7 @@ The following Errors may be seen in pop-up and other dialog boxes.
 3. If you experience outages caused by the removal of certificate authority (CA) certificate after <!-- release date -->, manually download the FCPCA G2 certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
 > [!Note]
-> Application-as-a-service scenarios like Azure SQL or Azure App Service that chain to the G1 certificate will be blocked because the certificate will be available after removal.
+> Application-as-a-service scenarios like Azure SQL or Azure App Service that chain to the FCPCA G1 certificate will be blocked because the certificate will be available after removal.
 
 ### Test configuration setup
 
@@ -107,7 +107,7 @@ The following steps directly configure the Windows registry to use production ve
 
 ### Implement the FCPCA G2 certificate
 
-Administrators should implement the FCPCA G2 certificate as per the instructions below before the G1 certificate is removed by the Out-of-Band (OOB) Root Certificate update.
+Administrators should implement the FCPCA G2 certificate as per the instructions below before the FCPCA G1 certificate is removed by the Out-of-Band (OOB) Root Certificate update.
 
 1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the FCPCA G2 certificate on all Windows workgroup, member and domain controller computers.
 2. There are multiple ways to deploy CA certificates to enterprise devices. See the "Microsoft Solutions" section in [3: Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
@@ -137,7 +137,7 @@ For disconnected environments where Windows devices are not allowed to access Wi
 
 ## Troubleshoot and analyze root chaining issues
 
-The following data can help you troubleshoot operations impacted by the removal of the G1 certificate:
+The following data can help you troubleshoot operations impacted by the removal of the FCPCA G1 certificate:
 
 1. Enable CAPI2 logging. See [Windows PKI Troubleshooting and CAPI2 Diagnostics](https://social.technet.microsoft.com/wiki/contents/articles/242.windows-pki-troubleshooting-capi2-diagnostics.aspx).
 2. Create filters in Event Viewer on the following event logs, event sources and event IDs:
