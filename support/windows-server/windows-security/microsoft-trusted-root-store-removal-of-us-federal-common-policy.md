@@ -25,14 +25,14 @@ The [United States Federal PKI](https://www.idmanagement.gov/) team governing th
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
-|Federal Common Policy G1|905F942FD9F28F679B378180FD4F846347F645C1|
+|Federal Common Policy CA G1|905F942FD9F28F679B378180FD4F846347F645C1|
 |||
 
 Applications and operations that depend on the G1 root certificate will fail after receiving the root certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing G1 root certificate to the replacement US FCPCA G2 root certificate as your agency's federal trust anchor:
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
-|Federal Common Policy G2|99B4251E2EEE05D8292E8397A90165293D116028|
+|Federal Common Policy CA G2|99B4251E2EEE05D8292E8397A90165293D116028|
 |||
 
 > [!Note]
