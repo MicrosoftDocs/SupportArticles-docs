@@ -34,11 +34,15 @@ Azure Resource Health is a service that exposes the health of individual Azure r
 
 If Azure has further information about the root cause of a platform-initiated unavailability for a Virtual Machine, that information may be posted in resource health up to 72 hours after the initial unavailability.
 
-## VM downtimes in activity log 
+## Missing VM downtimes in activity log 
 
 [Resource Health alerts](/azure/service-health/resource-health-alert-monitor-guide) are sent based on the [activity Log](/azure/azure-monitor/essentials/activity-log) information. In some cases, VM downtimes may not show in the activity log. If the downtime doesn't show in the activity log, Resource Health alerts won't be sent for the downtime. The downtime is still visible in Resource Health.
 
-For example, when the VM availability status changes from Available to Unavailable and then goes back to Available within 35 seconds, the downtime doesn't show in the activity log. This case won't occur if a correlated downtime is sent within 15 minutes before the occurrence of the first transition. 
+Circumstances where downtimes are not visible in Activity Log, which will prevent Resource Health Alerts from firing, include:
+
+* During resource creation, or when the VM is being is migrated to a new host, the platform cannot confidently attribute the state of the VM. Consequently, the VM transitions to the Unknown state and only transitions to Available after all network connectivity and node processes are established. This prolonged period of Unknown state is filtered out of the activity log. 
+* When the VM availability status changes from Available to Unavailable and then goes back to Available within 35 seconds, the downtime doesn't show in the activity log. This case won't occur if a correlated downtime is sent within 15 minutes before the occurrence of the first transition. 
+* If the VM health begins in a state, transitions to Unknown, then back to the original state, the intermittent Unknown state and related transitions are filtered out of Activity Log due to the transient nature of the state change. 
 
 The VM downtimes that don't show in the activity log are filtered on the Azure platform side to prevent transient errors from showing incorrect downtimes to customers. With ongoing investments in VM health quality, the filters may no longer be necessary and may cause quick changes in VM health to remain unreported. Microsoft is working on a phase-out plan to deliver the best customer experience.
 
