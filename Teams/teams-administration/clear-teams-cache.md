@@ -16,20 +16,20 @@ search.appverid:
 ---
 # Clear the Teams client cache
 
-If you're experiencing issues with Microsoft Teams, clearing the cache on your device may help. After you clear the cache, relaunch Teams.
+If you're experiencing issues that affect Microsoft Teams, clearing the cache on your device may help. After you clear the cache, restart Teams.
 
 > [!NOTE]
 >
 > - You won't lose any user data by clearing the cache.
-> - Relaunching Teams after clearing the cache may take longer than usual because the Teams cache files need to be rebuilt.
+> - Restarting Teams after you clear the cache might take longer than usual because the Teams cache files have to be rebuilt.
 
 ## Clear Teams cache in Windows
 
 1. If Teams is still running, right-click the Teams icon in the taskbar, and then select **Quit**.
-2. Open the **Run** dialog box by pressing the Windows logo key :::image type="icon" source="media\clear-teams-cache\windows-logo-key.png"::: + R.
-3. Enter *%appdata%\Microsoft\Teams* in the **Run** dialog box, and then select **OK**.
+2. Open the **Run** dialog box by pressing the Windows logo key :::image type="icon" source="media\clear-teams-cache\windows-logo-key.png"::: +R.
+3. In the **Run** dialog box, enter *%appdata%\Microsoft\Teams*, and then select **OK**.
 4. Delete all files and folders in the %appdata%\Microsoft\Teams directory.
-5. Relaunch Teams.
+5. Restart Teams.
 
 ## Clear Teams cache in macOS
 
@@ -41,4 +41,4 @@ If you're experiencing issues with Microsoft Teams, clearing the cache on your d
    rm -r ~/Library/Application\ Support/Microsoft/Teams
    ```
 
-4. Relaunch Teams.
+4. Restart Teams.
