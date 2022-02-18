@@ -14,7 +14,7 @@ This page lists recent known issues with Microsoft Intune. For a list of weekly 
 
 We recently identified several Office settings in the settings catalog that, when enabled, do not automatically enable the required parent setting. This can lead to the policy not applying as expected if you did not configure the parent setting.
 
-To help identify which configuration settings have this behavior, we recently made a user interface (UI) change to mark them as **(deprecated)** in the Settings catalog (preview) page. We will release new device configuration settings (with the same name) that will automatically enforce the dependencies. For updates, recommended actions, and a full list of settings, see [Support tip: Several Office settings in settings catalog may need parent settings enabled](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-several-office-settings-in-settings-catalog-may-need/ba-p/3075669)on the Intune Customer Success blog.
+To help identify which configuration settings have this behavior, we recently made a user interface (UI) change to mark them as **(deprecated)** in the Settings catalog (preview) page. For updates, recommended actions, and a full list of settings, see [Support tip: Several Office settings in settings catalog may need parent settings enabled](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-several-office-settings-in-settings-catalog-may-need/ba-p/3075669)on the Intune Customer Success blog.
 
 ## Android Enterprise device filtering not supported in some reports
 
