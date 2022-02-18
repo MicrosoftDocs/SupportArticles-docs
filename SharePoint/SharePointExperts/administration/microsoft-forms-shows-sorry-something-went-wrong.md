@@ -22,7 +22,7 @@ appliesto:
 
 - Microsoft Forms shows the following error for all users in a Microsoft 365 tenant:  
   > **Sorry, something went wrong.**
-- Forms within Teams show the following error for all users in a Microsoft 365 tenant:  
+- Forms within Teams shows the following error for all users in a Microsoft 365 tenant:  
   > **Contact the form owner’s administrator to let them know there’s an issue in the Forms product configuration.**
 - Polls in Team meetings show the following error for all users in a Microsoft 365 tenant:  
   > **An error has occurred. Please try again.**
