@@ -13,26 +13,26 @@ ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
 ---
-# Removal of US Federal Common Policy from Microsoft Trusted Root Store
+# Removal of US FCPCA G1 root certificate from Microsoft Trusted Root Store
 
-This article introduces the removal of the US Federal Common Policy certificate authority (FCPCA) certificate and the solutions for the issues that occur after the removal.
+This article introduces the removal of the US Federal Common Policy certificate authority (FCPCA) G1 root certificate and the solutions for the issues that occur after the removal.
 
 _Applies to:_ &nbsp; All versions of Windows
 
 ## Introduction of the change
 
-The [United States Federal PKI](https://www.idmanagement.gov/) team governing the FCPCA, formally requested the removal of the following root certificate from the Microsoft Trusted Root Program:
+The [United States Federal PKI](https://www.idmanagement.gov/) team governing the FCPCA, formally requested the removal of the US FCPCA G1 root certificate from the Microsoft Trusted Root Program:
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
-|US Federal Common Policy|905F942FD9F28F679B378180FD4F846347F645C1|
+|Federal Common Policy G1|905F942FD9F28F679B378180FD4F846347F645C1|
 |||
 
-Applications and operations that depend on the US FCPCA root certificate will fail after receiving the root certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing FCPCA G1 root certificate to the replacement G2 root certificate as your agency's federal trust anchor:
+Applications and operations that depend on the G1 root certificate will fail after receiving the root certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing G1 root certificate to the replacement US FCPCA G2 root certificate as your agency's federal trust anchor:
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
-|US Federal Common Policy G2 Root|99B4251E2EEE05D8292E8397A90165293D116028|
+|Federal Common Policy G2|99B4251E2EEE05D8292E8397A90165293D116028|
 |||
 
 > [!Note]
@@ -50,17 +50,12 @@ After the US FCPCA G1 root certificate is removed, you may encounter issues with
 
 The following Errors may be seen in pop-up and other dialog boxes.
 
-> The site's security certificate is not trusted.
-
-> The security certificate presented by this website was not issued by a trusted CA.
-
-> A certificate chain processed, but terminated in a ROOT certificate that is not trusted by the trust provider.
-
-> Certificate Chaining Error.
-
-> The certificate chain was issued by an authority that is not trusted.
-
-> The certificate or associated chain is invalid.
+- > The site's security certificate is not trusted.
+- > The security certificate presented by this website was not issued by a trusted CA.
+- > A certificate chain processed, but terminated in a ROOT certificate that is not trusted by the trust provider.
+- > Certificate Chaining Error.
+- > The certificate chain was issued by an authority that is not trusted.
+- > The certificate or associated chain is invalid.
 
 ## Steps to avoid these issues
 
@@ -135,7 +130,7 @@ For disconnected environments where Windows devices are not allowed to access Wi
    1. Run `certutil -syncwithwu c:\roots`
    2. Run `certutil -verifyctl -v c:\rootsdisallowedstl.cab c:\roots\disallowedcert.sst`
    3. When clicking on disallowedcert.sst, it should open up CertMgr and display all roots in the disallowed list.
-3. To evaluate settings not shown in the UI, convert SST file to a text file. To do so, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`
+3. To evaluate settings not shown in the UI, convert the SST file to a text file. To do so, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`
 4. Download and add the US FCPCA G2 root certificate to your personal CTL.
    - Download [US Federal Common Policy G2 Root](http://http.fpki.gov/fcpca/fcpca.crt).
    - Follow the guidance in FICAM Playbooks: [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/) for each operating systems that are deployed in your enterprise.
