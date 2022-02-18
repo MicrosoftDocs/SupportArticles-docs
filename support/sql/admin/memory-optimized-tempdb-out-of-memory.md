@@ -37,7 +37,7 @@ MEMORYCLERK_XTP         64                                 0
 ```
 ## Diagnose the issue
 
-To collect data to diagnose the issue, follow the steps:
+To collect data to diagnose the issue, follow these steps:
 
 1. Collect a lightweight trace or extended event (XEvent) to understand tempdb workload, and find out if the workload has any explicit long-running transactions with DDL statements in temporary tables.
 
