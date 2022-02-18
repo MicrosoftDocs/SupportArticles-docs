@@ -20,18 +20,16 @@ appliesto:
 
 ## Symptoms
 
-1. Microsoft Forms shows the following error for all users in a Microsoft 365 tenant:
-     **Sorry, something went wrong.**
-
-2. Forms within Teams shows the following error for all users in a Microsoft 365 tenant:
-     **Contact the form owner’s administrator to let them know there’s an issue in the Forms product configuration.**
-
-3. Polls in Team meetings show the following error for all users in a Microsoft 365 tenant:
-     **An error has occurred. Please try again.**
+- Microsoft Forms shows the following error for all users in a Microsoft 365 tenant:  
+  > **Sorry, something went wrong.**
+- Forms within Teams shows the following error for all users in a Microsoft 365 tenant:  
+  > **Contact the form owner’s administrator to let them know there’s an issue in the Forms product configuration.**
+- Polls in Team meetings show the following error for all users in a Microsoft 365 tenant:  
+  > **An error has occurred. Please try again.**
 
 You may see the following error in a web traffic trace captured when the error occurs:
 
-**Required resource is disabled. Inner Message: AADSTS500014: The service principal for resource 'https://lists.office.com' is disabled. This indicates that a subscription within the tenant has lapsed, or that the administrator for this tenant has disabled the application, preventing tokens from being issued for it.**
+> **Required resource is disabled. Inner Message: AADSTS500014: The service principal for resource 'https://lists.office.com' is disabled. This indicates that a subscription within the tenant has lapsed, or that the administrator for this tenant has disabled the application, preventing tokens from being issued for it.**
 
 ## Resolution
 
@@ -40,7 +38,7 @@ To resolve this issue, enable the **Office Hive / CollabDBService** service for 
 1. Sign in to [Microsoft Azure](https://portal.azure.com/).
 2. In the left pane, select **Azure Active Directory**.
 3. Select **Enterprise Applications**.
-4. 4.	Click the **X** next to the option **Application Type == EnterpriseApplications** to remove the filter.
+4. Select the **X** next to the **Application Type == EnterpriseApplications** option to remove the filter.
 5. In the **Search** field, type **Office Hive**.
 6. Select **Office Hive** in the result list.
 7. Under **MANAGE**, select **Properties**.
