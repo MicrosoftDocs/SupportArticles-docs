@@ -21,14 +21,14 @@ _Applies to:_ &nbsp; All versions of Windows
 
 ## Introduction of the change
 
-The [United States Federal PKI](https://www.idmanagement.gov/) team governing the FCPCA, formally requested the removal of the US FCPCA G1 root certificate from the Microsoft Trusted Root Program:
+The [United States Federal PKI](https://www.idmanagement.gov/) team governing the FCPCA, formally requested the removal of the FCPCA G1 root certificate from the Microsoft Trusted Root Program:
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
 |Federal Common Policy CA G1|905F942FD9F28F679B378180FD4F846347F645C1|
 |||
 
-Applications and operations that depend on the G1 root certificate will fail after receiving the root certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing G1 root certificate to the replacement US FCPCA G2 root certificate as your agency's federal trust anchor:
+Applications and operations that depend on the G1 root certificate will fail after receiving the root certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing G1 root certificate to the replacement FCPCA G2 root certificate as your agency's federal trust anchor:
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
@@ -36,11 +36,11 @@ Applications and operations that depend on the G1 root certificate will fail aft
 |||
 
 > [!Note]
-> The US FCPCA G2 root certificate can be obtained from the [download link](http://repo.fpki.gov/fcpca/fcpcag2.crt).
+> The FCPCA G2 root certificate can be obtained from the [download link](http://repo.fpki.gov/fcpca/fcpcag2.crt).
 
 ## Potential issues
 
-After the US FCPCA G1 root certificate is removed, you may encounter issues with the following scenarios:
+After the FCPCA G1 root certificate is removed, you may encounter issues with the following scenarios:
 
 - TLS or SSL connections
 - Secure/Multipurpose internet Mail Extensions (S/MIME) or secure email
@@ -61,7 +61,7 @@ The following Errors may be seen in pop-up and other dialog boxes.
 
 1. Validate changes in the [Test configuration setup](#test-configuration-setup) section being made to your root certificate between now and <!-- release date -->.
 2. After verifying that all relevant scenarios work with the [Test configuration setup](#test-configuration-setup) section, implement steps in the [Production configuration setup](#production-configuration-setup) section in your production configuration.
-3. If you experience outages caused by the removal of root certificate authority (CA) certificate after <!-- release date -->, manually download the G2 root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
+3. If you experience outages caused by the removal of root certificate authority (CA) certificate after <!-- release date -->, manually download the FCPCA G2 root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
 > [!Note]
 > Application-as-a-service scenarios like Azure SQL or Azure App Service that chain to the G1 root certificate will be blocked because the root certificate will be available after removal.
@@ -86,7 +86,7 @@ The following steps directly configure the Windows registry to a pre-release or 
 5. Validate all scenarios that chain to the G1 including those listed in [Potential issues](#potential-issues).
 
 > [!Note]
-> The link above never changes. However, the changes that are staged change from month to month. As of February 15, 2022, the testing URL above is staged with about 20 continuous deprecation changes that do not currently include the removal of the US FCPCA G1 root certificate. That change will be staged in March 2022. This article will be updated with the exact staging date. <!-- remove it after we have the date -->
+> The link above never changes. However, the changes that are staged change from month to month. As of February 15, 2022, the testing URL above is staged with about 20 continuous deprecation changes that do not currently include the removal of the FCPCA G1 root certificate. That change will be staged in March 2022. This article will be updated with the exact staging date. <!-- remove it after we have the date -->
 
 ### Production configuration setup
 
@@ -105,9 +105,9 @@ The following steps directly configure the Windows registry to use production ve
 
 4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all cached certificates.
 
-### Implement the G2 root certificate
+### Implement the FCPCA G2 root certificate
 
-Administrators should implement the G2 root certificate as per the instructions below before the G1 root certificate is removed by the Out-of-Band (OOB) Root Certificate update.
+Administrators should implement the FCPCA G2 root certificate as per the instructions below before the G1 root certificate is removed by the Out-of-Band (OOB) Root Certificate update.
 
 1. Follow the guidance in [2: Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify/) to download and install the [Federal Common Policy CA G2 certificate](http://repo.fpki.gov/fcpca/fcpcag2.crt) on all Windows workgroup, member and domain controller computers.
 2. There are multiple ways to deploy CA root certificates to enterprise devices. See the "Microsoft Solutions" section in [3: Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
@@ -131,8 +131,8 @@ For disconnected environments where Windows devices are not allowed to access Wi
    2. Run `certutil -verifyctl -v c:\rootsdisallowedstl.cab c:\roots\disallowedcert.sst`
    3. When clicking on disallowedcert.sst, it should open up CertMgr and display all roots in the disallowed list.
 3. To evaluate settings not shown in the UI, convert the SST file to a text file. To do so, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`
-4. Download and add the US FCPCA G2 root certificate to your personal CTL.
-   - Download [US Federal Common Policy G2 Root](http://http.fpki.gov/fcpca/fcpca.crt).
+4. Download and add the FCPCA G2 root certificate to your personal CTL.
+   - Download [FCPCA G2 root certificate](http://http.fpki.gov/fcpca/fcpca.crt).
    - Follow the guidance in FICAM Playbooks: [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/) for each operating systems that are deployed in your enterprise.
 
 ## Troubleshoot and analyze root chaining issues
