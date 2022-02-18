@@ -20,8 +20,12 @@ _Original KB number:_ &nbsp; 4013567
 
 To disable Internet Explorer, use one of the following methods.
 
+If you want to restore the program on your computer, we recommend to use the method that you've used before (Control Panel or DISM).
+
+If you disable by using DISM, the entry point *iexplore.exe* removes from the file system but the rendering engine remains on the system. You should continue installing security updates that apply to Internet Explorer because the program will still be installed on your computer after disabling it.
+
 > [!NOTE]
-> If you want to restore the program on the same computer, we recommend that you use the same method that you first used (Control Panel or DISM). Because Internet Explorer remains installed on the computer after you disable it, you should continue to install security updates that apply to Internet Explorer.
+> If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode won't be available in Microsoft Edge. To continue using IE mode in Microsoft Edge to access legacy applications, see [Disable Internet Explorer 11 as a standalone browser](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11#disable-internet-explorer-11-as-a-standalone-browser).
 
 ## Method 1 - Use Control Panel (client systems only), Feature On Demand
 
