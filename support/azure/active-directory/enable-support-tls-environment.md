@@ -1,10 +1,10 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 11/16/2021
+ms.date: 02/16/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.reviewer: "dahans,abizerh"
+ms.reviewer: dahans, abizerh
 ms.service: active-directory
 ms.subservice: authentication
 ---
@@ -73,7 +73,7 @@ Verify that you haven't explicitly disabled TLS 1.2 on these platforms.
 By default, earlier versions of Windows (such as Windows 8 and Windows Server 2012) don't enable TLS 1.2 or TLS 1.1 for secure communications by using WinHTTP. For these earlier versions of Windows:
 
 1. Install [Update 3140245](https://support.microsoft.com/help/3140245).
-1. Enable the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12) section.
+1. Enable the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems-) section.
 
 You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure protocols list for WinHTTP.
 
@@ -107,9 +107,9 @@ For more information, see [Handshake Simulation for various clients connecting t
   1. We highly recommend that you run the latest version of the agent, service, or connector.
   2. By default, TLS 1.2 is enabled on Windows Server 2012 R2 and later versions. In rare instances, the default OS configuration might have been modified to disable TLS 1.
 
-      To make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the "[Enable TLS 1.2 on client or server operating systems](#enable-tls-12)" section on servers that are running Windows Server and that communicate with Azure AD.
+      To make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems-) section on servers that are running Windows Server and that communicate with Azure AD.
 
-  3. Most of the previously listed services are dependent on .NET Framework. Make sure it's updated as described in the [Update and configure .NET Framework to support TLS 1.2](#update-configure-tls-12) section.
+  3. Most of the previously listed services are dependent on .NET Framework. Make sure it's updated as described in the [Update and configure .NET Framework to support TLS 1.2](#update-and-configure-net-framework-to-support-tls-12-) section.
 
   For more information, see the following articles:
   - [TLS 1.2 enforcement - Enforce TLS 1.2 for the Azure AD Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
@@ -217,7 +217,7 @@ You can query the sign-in logs using Azure Monitor. Azure Monitor is a powerful 
 
 To query for legacy TLS entries using Azure Monitor:
 
-1. In [Integrate Azure AD logs with Azure Monitor logs](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), follow the instructions to let you access the Azure AD sign-in logs in Azure Monitor.
+1. In [Integrate Azure AD logs with Azure Monitor logs](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), follow the instructions for how to access the Azure AD sign-in logs in Azure Monitor.
 
 1. In the query definition area, paste the following Kusto Query Language query:
 
@@ -330,30 +330,41 @@ To filter and export the sign-in log entries:
     
     Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId  # Or use Directory.Read.All.
     Select-MgProfile "beta"  # Low TLS is available in Microsoft Graph preview endpoint.
-    $signInsInteractive = Get-MgAuditLogSignIn -Filter "createdDateTime ge $startDate" -All
-    $signInsNonInteractive = Get-MgAuditLogSignIn -Filter ("createdDateTime ge $startDate " +
-        "and signInEventTypes/any(t: t eq 'nonInteractiveUser')") -All
-    
-    $signInsInteractive | Foreach-Object {
+
+    # Define the filtering strings for interactive and non-interactive sign-ins.
+    $procDetailFunction = "x: x/key eq 'legacy tls (tls 1.0, 1.1, 3des)' and x/value eq '1'"
+    $clauses = (
+        "createdDateTime ge $startDate",
+        "signInEventTypes/any(t: t eq 'nonInteractiveUser')",
+        "(authenticationProcessingDetails/any($procDetailFunction))"
+    )
+
+    # Get the interactive and non-interactive sign-ins based on filtering clauses.
+    $signInsInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,2] -Join " and ") -All
+    $signInsNonInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,1,2] -Join " and ") -All
+
+    $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
+        Property = "CorrelationId", "createdDateTime", "userPrincipalName", "userId",
+                   "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
+                   "ResourceDisplayName", "ResourceId", "UserAgent"
+    }
+
+    $signInsInteractive | ForEach-Object {
         foreach ($authDetail in $_.AuthenticationProcessingDetails)
         {
             if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
             {
-                $_ | select CorrelationId, createdDateTime, userPrincipalName, userId,
-                            UserDisplayName, AppDisplayName, AppId, IPAddress, isInteractive,
-                            ResourceDisplayName, ResourceId, UserAgent 
+                $_ | Select-Object @columnList
             }
         }
     } | Export-Csv -Path ($pathForExport + "Interactive_lowTls_$tId.csv") -NoTypeInformation
     
-    $signInsNonInteractive | Foreach-Object {
+    $signInsNonInteractive | ForEach-Object {
         foreach ($authDetail in $_.AuthenticationProcessingDetails)
         {
             if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
             {
-                $_ | select CorrelationId, createdDateTime, userPrincipalName, userId,
-                            UserDisplayName, AppDisplayName, AppId, IPAddress, isInteractive,
-                            ResourceDisplayName, ResourceId, UserAgent 
+                $_ | Select-Object @columnList
             }
         }
     } | Export-Csv -Path ($pathForExport + "NonInteractive_lowTls_$tId.csv") -NoTypeInformation
