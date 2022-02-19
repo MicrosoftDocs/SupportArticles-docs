@@ -1,7 +1,7 @@
 ---
 title: Disable and enable Internet Explorer on Windows
 description: This article describes how to disable and enable any supported version of Internet Explorer on Windows.
-ms.date: 01/21/2021
+ms.date: 02/19/2022
 ms.custom: sap:installation
 ms.reviewer: 
 ms.topic: how-to
@@ -20,12 +20,12 @@ _Original KB number:_ &nbsp; 4013567
 
 To disable Internet Explorer, use one of the following methods.
 
-If you want to restore the program on your computer, we recommend to use the method that you've used before (Control Panel or DISM).
+If you remove Internet Explorer by using DISM, the entry point iexplore.exe is removed from the file system but its rendering engine remains on the system. Therefore, you should continue installing security updates that apply to Internet Explorer even after disabling it, where applicable.
 
-If you disable by using DISM, the entry point *iexplore.exe* removes from the file system but the rendering engine remains on the system. You should continue installing security updates that apply to Internet Explorer because the program will still be installed on your computer after disabling it.
+To restore the program on your computer, we recommend that you use the same method that you used for disabling (Control Panel or DISM).
 
-> [!NOTE]
-> If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode won't be available in Microsoft Edge. To continue using IE mode in Microsoft Edge to access legacy applications, see [Disable Internet Explorer 11 as a standalone browser](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11#disable-internet-explorer-11-as-a-standalone-browser).
+> > [!IMPORTANT]
+> If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode in Microsoft Edge also won't be available. To continue using IE mode in Microsoft Edge to access legacy applications, disable Internet Explorer using group policy instead, as described in [Disable Internet Explorer 11 as a standalone browser](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11#disable-internet-explorer-11-as-a-standalone-browser).
 
 ## Method 1 - Use Control Panel (client systems only), Feature On Demand
 
