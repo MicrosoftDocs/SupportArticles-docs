@@ -90,7 +90,11 @@ ORDER BY r.cpu_time DESC
 
 ## Step 3: Update statistics
 
-After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries.
+After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries. You can use the following stored procedure to update the statistics of all user-defined and internal tables in the current database. 
+
+```sql
+exec sp_updatestats
+```
 
 If SQL Server is still using high CPU, go to the next step.
 
@@ -125,7 +129,7 @@ If SQL Server is still using high CPU, go to the next step.
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
-1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes that have high improvement measurements.
+1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check for missing indexes and apply recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendation from the output with the higest improvement_measure value; those indexes are likely to have the most significant positive impact on performance. Evaluate if these indexes make sense for the application and ensure performance testing is done with the application. Then continue to apply missing-index recommendations until you achive the desired application performance results. 
 
     ```sql
     SELECT CONVERT (VARCHAR(30),
