@@ -24,8 +24,9 @@ If you remove Internet Explorer by using DISM, the entry point iexplore.exe is r
 
 To restore the program on your computer, we recommend that you use the same method that you used for disabling (Control Panel or DISM).
 
-> > [!IMPORTANT]
+> [!IMPORTANT]
 > If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode in Microsoft Edge also won't be available. To continue using IE mode in Microsoft Edge to access legacy applications, disable Internet Explorer using group policy instead, as described in [Disable Internet Explorer 11 as a standalone browser](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11#disable-internet-explorer-11-as-a-standalone-browser).
+> 
 
 ## Method 1 - Use Control Panel (client systems only), Feature On Demand
 
