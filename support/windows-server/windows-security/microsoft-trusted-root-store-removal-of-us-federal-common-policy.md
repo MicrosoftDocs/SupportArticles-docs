@@ -118,10 +118,10 @@ The following steps directly configure the Windows registry to use production ve
 Administrators should implement the FCPCA G2 certificate as per the instructions below before the FCPCA certificate is removed by the Out-of-Band (OOB) Root Certificate update.
 
 1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the FCPCA G2 certificate on all Windows workgroup, member and domain controller computers.
-2. There are multiple ways to deploy CA certificates to enterprise devices. See the "Microsoft Solutions" section in [3: Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
+2. There are multiple ways to deploy CA certificates to enterprise devices. See the "Microsoft Solutions" section in [Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
 
 > [!Note]
-> In enterprises that have cross-certification dependencies for smartcard logons or other scenarios on Windows devices but do not have internet-access, see the "Do I Need to Distribute the Intermediate CA Certificates?" and "Certificates Issued by the Federal Common Policy CA G2" sections of [Section 6: Distribute the CA certificates issued by the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/certificates/).
+> In enterprises that have cross-certification dependencies for smartcard logons or other scenarios on Windows devices but do not have internet-access, see the "Do I Need to Distribute the Intermediate CA Certificates?" and "Certificates Issued by the Federal Common Policy CA G2" sections of [Distribute the CA certificates issued by the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/certificates/).
 >
 > Many federal enterprises will either need the US Treasury CA certificates, or the Entrust Managed Services CA certificates. Both CA certificates are documented in Section 6 with the following text:
 >
