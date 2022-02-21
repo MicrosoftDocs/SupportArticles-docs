@@ -2,10 +2,10 @@
 title: Cannot pull images from Azure container registry to Azure Kubernetes Service cluster
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from an ACR to an AKS cluster fails.
 ms.date: 02/19/2022
-author: lin.gen
-ms.author: lin.gen
-ms.reviewer: chirag.pavecha
-ms.service: container-service
+author: genlin
+ms.author: genli
+ms.reviewer: chiragpa
+ms.service:
 ---
 # Fail to pull images from Azure container registry to Azure Kubernetes Service cluster
 
@@ -53,7 +53,7 @@ This section will help you troubleshoot the most common errors you might encount
 
 An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. No matter what the identity is, the proper authorization that's used to pull an image from ACR is necessary. Otherwise, you may get the following "401 Unauthorized" error:
 
-> Failed to pull image "\<acrname>.azurecr.io/\<repository:tag>": [rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository:tag>": failed to authorize: failed to fetch oauth token: unexpected status: 401 Unauthorized
+> Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch oauth token: unexpected status: 401 Unauthorized
 
 #### Solution 1: Ensure AcrPull role assignment is created for identity
 
@@ -126,7 +126,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 ### Image not found error
 
-> Failed to pull image "\<acrname>.azurecr.io/\<repository:tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository:tag>": \<acrname>.azurecr.io/\<repository:tag>: not found
+> Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": \<acrname>.azurecr.io/\<repository\:tag>: not found
 
 #### Solution: Ensure image name is correct
 
@@ -137,7 +137,7 @@ If you get this error, ensure that the image name is fully correct. You should c
 
 ### 403 Forbidden error
 
-> Failed to pull image "\<acrname>.azurecr.io/\<repository:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository:tag>": failed to authorize: failed to fetch anonymous token: unexpected status: 403 Forbidden
+> Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: unexpected status: 403 Forbidden
 
 > [!NOTE]
 > This error happens only if you [connect privately to ACR by using Azure Private Link](/azure/container-registry/container-registry-private-link).
@@ -155,7 +155,7 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 
 ### 443 timeout error
 
-> Failed to pull image "\<acrname>.azurecr.io/\<repository:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:tag>": failed to resolve reference "\<acrname>.azurecr.io/<repository:tag>": failed to do request: Head "https://\<acrname>.azurecr.io/v2/\<repository>/manifests/v1": dial tcp \<acrprivateipaddress>:443: i/o timeout
+> Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/<repository\:tag>": failed to do request: Head "https://\<acrname>.azurecr.io/v2/\<repository>/manifests/v1": dial tcp \<acrprivateipaddress>:443: i/o timeout
 
 > [!NOTE]
 > This error happens only if you [connect privately to ACR by using Azure Private Link](/azure/container-registry/container-registry-private-link).
