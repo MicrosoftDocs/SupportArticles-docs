@@ -85,10 +85,10 @@ The following steps directly configure the Windows registry to a pre-release or 
    - **EncodedCtl**
    - **LastSyncTime**
 
-4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all cached certificates.
+4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all stored certificates.
 
    > [!Note]
-   > Deleting certificates from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` ensures that all cached roots are removed. This operation forces Windows to download new root when associated public key infrastructure (PKI) chains are used with new properties (if modified). Since FCPCA is being removed, this root will not be downloaded.
+   > Deleting certificates from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` ensures that all stored roots are removed. This operation forces Windows to download new root when associated public key infrastructure (PKI) chains are used with new properties (if modified). Since FCPCA is being removed, this root will not be downloaded.
 
 5. Validate all scenarios that chain to the G1 including those listed in [Potential issues](#potential-issues).
 
@@ -110,7 +110,7 @@ The following steps directly configure the Windows registry to use production ve
    - **EncodedCtl**
    - **LastSyncTime**
 
-4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all cached certificates.
+4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all stored certificates.
 
 ### Implement the G2 certificate
 
@@ -154,7 +154,7 @@ The following data can help you troubleshoot operations impacted by the removal 
    - Event ID 11: This event shows you chaining failures.
    - Event ID 30: This event shows you Policy chain failures, such as NTAuth failures, SSL Policy check and so on.
    - Event ID 90: This event shows you all certificates that were used to build all possible certificate chains on the system.
-   - Event ID 40 - 43: This event series shows all cached CRL's and event certificates that are accessed via AIA paths.
+   - Event ID 40 - 43: This event series shows all stored CRL's and event certificates that are accessed via AIA paths.
    - Event ID 50 - 53: This event series shows all attempts to access the CRLs from the network. The event is related to the following error:  
      > A certificate chain processed, but terminated in a ROOT certificate that is not trusted by the trust provider
 
