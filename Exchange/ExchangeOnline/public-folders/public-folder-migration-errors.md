@@ -38,27 +38,27 @@ In a public folder migration, you may experience one of the following issues:
 
 ## Cause
 
-These issues occur if either the primary public folder mailbox or the secondary public folder mailbox has an orphaned object.
+These issues occur if either the primary public folder mailbox or the secondary public folder mailbox has an CNF orphaned object.
 
 ## Resolution
 
 To resolve this issue, find and remove all existing orphaned public folder mailboxes by following these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-2. Find orphaned public folder mailboxes by running the following cmdlets:
+2. Find orphaned CNF public folder mailboxes by running the following cmdlets:
 
     ```powershell
     Get-Mailbox –PublicFolder | fl Name,Identity,ExchangeGuid,Guid
     Get-Mailbox -PublicFolder -SoftDeletedMailbox | fl Name,Identity,ExchangeGuid,Guid
     ```
 
-    If the cmdlets don't report any orphaned public folder mailboxes, you can run the following cmdlet:
+    If the cmdlets don't report any CNF orphaned public folder mailboxes, you can run the following cmdlet:
 
     ```powershell
     Get-Recipient -RecipientTypeDetails PublicFolderMailbox -IncludeSoftDeletedRecipients | fl Name,Identity,ExchangeGuid,Guid
     ```
 
-    Here's an example of the output:
+    Here's an example of the output in which the object has the CNF value in the name and identity:
 
      :::image type="content" source="media/public-folder-migration-errors/command-output.png" alt-text="Screenshot of the command output in which ExchangeGuid is highlighted.":::
 
