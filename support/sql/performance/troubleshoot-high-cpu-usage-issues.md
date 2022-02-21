@@ -10,7 +10,7 @@ ms.author: v-yunhya
 ---
 # Troubleshoot high-CPU-usage issues in SQL Server
 
-_Applies to:_ &nbsp; SQL Server
+_Applies to:_ &nbsp;SQL Server
 
 This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server.
 
@@ -129,7 +129,7 @@ If SQL Server is still using high CPU, go to the next step.
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
-1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendations from the output with the highest improvement_measure value; those indexes that have the most significant positive impact on performance. Check if you want to apply these indexes and ensure performance testing is done with the application. Then, continue to apply missing-index recommendations until you acheive the desired application performance results. 
+1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendations from the output with the highest improvement_measure value; those indexes that have the most significant positive impact on performance. Check if you want to apply these indexes and make sure performance testing is done for the application. Then, continue to apply missing-index recommendations until you acheive the desired application performance results. 
 
     ```sql
     SELECT CONVERT (VARCHAR(30),
