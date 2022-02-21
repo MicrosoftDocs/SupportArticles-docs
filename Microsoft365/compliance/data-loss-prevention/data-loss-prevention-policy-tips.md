@@ -122,7 +122,7 @@ To view unified DLP policy tips in the Microsoft 365 compliance center, remove t
 > [!NOTE]
 > If you have DLP policies in both the Exchange admin center (EAC) and the Microsoft 365 compliance center, it is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
 
-Additionally, to edit a DLP policy in the Exchange admin center, follow these steps:
+For more information about how to edit a DLP policy in the Exchange admin center, follow these steps:
 
 1. In the Exchange admin center, locate **compliance management**, and then select **data loss prevention**.
 1. Select the policy that requires editing, and then select the pencil icon or double-click the policy that has to be changed.
@@ -155,7 +155,7 @@ If DLP policy tips don't work as expected, Fiddler Trace is a useful tool to hel
 
    :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/response.png" alt-text="A screenshot of Response in which the DetectedClassificationIds value is highlighted.":::
 
-If you don't find the `GetDLPPolicyTip` call, and if the `DetectedClassificationIds` value is empty in the response, follow these steps to troubleshoot this issue:
+If you don't find the `GetDLPPolicyTip` call, and if the `DetectedClassificationIds` value is empty in the response, follow these steps to resolve this issue:
 
 1. Check if the DLP policy is enabled and configured correctly.
 2. Check if your users enter the proper sensitive information and valid recipients or senders to trigger the policy.
