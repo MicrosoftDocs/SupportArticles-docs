@@ -36,14 +36,14 @@ To disable automapping on a mailbox, use Exchange Online PowerShell to remove th
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. To remove the user's full access permission from the mailbox, use the following syntax:
+2. To remove the user's full access permission from the mailbox, run the following command:
 
     ```powershell
     Remove-MailboxPermission -Identity <MailboxIdentity> -User <UserIdentity> -AccessRights FullAccess
     ```
 
-    - _Identity_ is the name, alias, or email address of the mailbox where the permissions are being removed from.
-    - _User_ is the name, alias, or email address of the mailbox user who's losing the permissions on the mailbox.
+    - _MailboxIdentity_ is the name, alias, or email address of the mailbox where the permissions are being removed from.
+    - _UserIdentity_ is the name, alias, or email address of the mailbox user who's losing the permissions on the mailbox.
 
    This example removes full access permissions from Kathleen Reiter's mailbox for the admin account.
 
@@ -54,14 +54,14 @@ To disable automapping on a mailbox, use Exchange Online PowerShell to remove th
    > [!NOTE]
    > After you run this command, you receive a confirmation prompt to continue. To prevent the confirmation prompt, add `-Confirm:$false` to the end of the command.
 
-3. To grant full access permissions back to the user on the mailbox with automapping disabled, use the following syntax:
+3. To grant full access permissions back to the user on the mailbox with automapping disabled, run the following command:
 
     ```powershell
     Add-MailboxPermission -Identity <MailboxIdentity> -User <UserIdentity> -AccessRights FullAccess -AutoMapping $false
     ```
 
-    - _Identity_ specifies the name, alias, or email address of the mailbox where the permissions are being added.
-    - _User_ specifies the name, alias, or email address of the mailbox user who's getting the permissions on the mailbox.
+    - _MailboxIdentity_ specifies the name, alias, or email address of the mailbox where the permissions are being added.
+    - _UserIdentity_ specifies the name, alias, or email address of the mailbox user who's getting the permissions on the mailbox.
 
    This example adds the full access permissions to Kathleen Reiter's mailbox with automapping disabled for the admin account.
 
@@ -71,7 +71,7 @@ To disable automapping on a mailbox, use Exchange Online PowerShell to remove th
 
    After you run this command, the following output is displayed:
 
-   ```powershell
+   ```output
    Identity          User                               AccessRights    IsInherited    Deny
    --------          ----                               -----------     -----------    ----
    KathleenR         <DCServer>\<AdminSAMAccountName>   {FullAccess}    False          False
