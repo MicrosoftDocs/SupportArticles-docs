@@ -40,7 +40,7 @@ Applications and operations that depend on the G1 certificate will fail after re
 |||
 
 > [!Note]
-> The G2 certificate can be obtained from [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify/#download-a-copy-of-fcpca-g2).
+> The G2 certificate can be obtained from http://repo.fpki.gov/fcpca/fcpcag2.crt.
 
 ## Potential issues
 
