@@ -1,7 +1,7 @@
 ---
 title: Managing the Teams Chat icon on Windows 11
 description: This article helps you to manage the Chat icon on Windows 11. 
-ms.date: 02/18/2022
+ms.date: 02/21/2022
 author: kaushika
 ms.author: v-jayaramanp
 ms.topic: troubleshooting
@@ -16,6 +16,8 @@ This article describes how to manage the Chat icon on Windows 11.
 
 _Applies to:_ &nbsp; Windows 11  
 
+## Introduction to Teams Chat icon on Windows 11
+
 > [!NOTE]
 > This article is intended for use by IT professionals who want to manage the Chat icon on Windows 11. If you're looking for more information about Chat in Windows 11, see [Get started with Chat in Windows 11](https://support.microsoft.com/office/get-started-with-chat-in-windows-11-e6b36559-3ddd-4b10-a36f-b09bc96480a6).
 
@@ -29,7 +31,7 @@ After Windows 11 is installed, you can start using the default version of Teams 
 > [!NOTE]
 > The Teams for work app is not included in the Windows 11 installer and will not be installed until you set it up. Before you install the Teams app, there will be an app icon (small camera) on the taskbar.
 
-**Scenario 1: Chat icon is present on the Taskbar, but Teams isn’t installed.**
+### Scenario 1: Chat icon is present on the Taskbar, but Teams isn’t installed.
 
 If you see the Chat icon on the Taskbar but you don’t see the Teams app, select the **Chat** icon, and then check whether the following screen appears.
 
@@ -42,13 +44,15 @@ If you see this screen, select **Continue** to set up Teams.
 
 Run the following PowerShell cmdlet to check whether the Windows 11-based device has Teams installed:
 
-`Get-AppxPackage -name '*teams'`
+```PowerShell
+Get-AppxPackage -name '*teams'
+```
 
 If this command displays no results, the Teams app isn’t installed.
 
 :::image type="content" source="media/windows-teams-chat-icon/scenario-1-commandline.png" alt-text="Command to check whether Windows 11 based device has Teams installed.":::
 
-**Scenario 2: Chat icon is turned on, but Teams isn’t configured.**
+### Scenario 2: Chat icon is turned on, but Teams isn’t configured.
 
 If you see the Chat icon on the taskbar, select the **Chat** icon, and then check whether the following screen appears.
 
@@ -58,7 +62,9 @@ This screen indicates that Teams is installed, but not configured for the logged
 
 Alternatively, users can also run the following PowerShell cmdlet to confirm the installation status of Teams:
 
-`Get-AppxPackage -name '*teams'`
+```PowerShell
+Get-AppxPackage -name '*teams'
+```
 
 If this command returns the installation status, the Teams app is installed.
 
@@ -69,13 +75,15 @@ You’ll see the same results when you configure Teams. Also, you should see a l
 > [!NOTE]
 > When you select **Get Started** and complete the configuration of Teams, a list of contacts appears in place of the Get Started screen which means that Teams is installed and fully configured.  
 
-**Scenario 3: Chat icon is turned off and Teams app is installed.**
+### Scenario 3: Chat icon is turned off and Teams app is installed.
 
 Admins can choose to disable the Chat icon on the taskbar. If the Teams app is installed, the app will appear on **Start > All apps > Microsoft Teams**.
 
 You can also verify the installation by running the following PowerShell cmdlet:
 
-`Get-AppxPackage -name '*teams'`
+```PowerShell
+Get-AppxPackage -name '*teams'
+```
 
 :::image type="content" source="media/windows-teams-chat-icon/scenario-3-select-teams.png" alt-text="Verify the installation of the Teams app.":::
 
@@ -96,12 +104,11 @@ You can configure the Chat icon on the taskbar using the following dialog box.
 
 ## Removing the Chat Icon using Intune
 
-Use the new CSP setting, “Experience/ConfigureChatIcon” which removes the Chat Icon. 
-Note it requires Enterprise or Education edition. See, [Policy CSP – Experience – Windows Client Management | Microsoft Docs](/windows/client-management/mdm/policy-csp-experience) for more information.
+Use the new CSP setting, "Experience/ConfigureChatIcon", which removes the Chat Icon. This requires the Enterprise or Education edition. For more information, see [Policy CSP – Experience – Windows Client Management | Microsoft Docs](/windows/client-management/mdm/policy-csp-experience).
 
 Create a new Configuration Profile for Windows 10 and later, type Custom and use the following setting:
 
-`OMA-URI = “. /Device/Vendor/MSFT/Policy/Config/Experience/ConfigureChatIcon”`
+`OMA-URI = ". /Device/Vendor/MSFT/Policy/Config/Experience/ConfigureChatIcon"`
 
 The values for this policy are 0, 1, 2, and 3. This policy defaults to 0 if not enabled.
 
@@ -122,9 +129,11 @@ To remove the Chat Icon using Intune – Settings Catalog, do the following step
 
 ### As an admin, how do I uninstall the Teams app if users have installed it?
 
-If Teams was installed, use this PowerShell command to uninstall it:
+If Teams was installed, use this PowerShell cmdlet to uninstall it:
 
-`remove-appxpackage -package "MicrosoftTeams_21302.202.1065.6968_x64__8wekyb3d8bbwe"`
+```PowerShell
+remove-appxpackage -package "MicrosoftTeams_21302.202.1065.6968_x64__8wekyb3d8bbwe"
+```
 
 ### Can I remove the Teams app from the default Windows image?
 
