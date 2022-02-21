@@ -2,9 +2,8 @@
 title: Cannot pull images from Azure container registry to Azure Kubernetes Service cluster
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from an ACR to an AKS cluster fails.
 ms.date: 02/19/2022
-author: genlin
-ms.author: genlin
-ms.reviewer: 
+author: lin.gen
+ms.author: lin.gen
 ms.reviewer: chirag.pavecha
 ms.service: container-service
 ---
@@ -44,7 +43,7 @@ If a problem is detected, it provides an error code and description. For more in
 > [!NOTE]
 > If you get Helm or Notary related errors, they don't mean that you have an issue with ACR or AKS. They only mean that Helm or Notary isn't installed, Azure CLI isn't compatible with the current installed version of Helm or Notary, and so on.
 
-To validate the ACR is accessible from the AKS cluster, use the [az aks check-acr](/cli/azure/aks?view=azure-cli-latest#az-aks-check-acr) command.
+To validate the ACR is accessible from the AKS cluster, use the [az aks check-acr](/cli/azure/aks#az-aks-check-acr) command.
 
 ## Common errors and solutions
 
@@ -152,7 +151,7 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
     > [!NOTE]
     > It's optional to check **Enable auto registration**.
 
-- [Create a virtual network link to the specified Private DNS zone](/azure/network/private-dns/link/vnet?view=azure-cli-latest#az-network-private-dns-link-vnet-create) by using Azure CLI.
+- [Create a virtual network link to the specified Private DNS zone](/azure/network/private-dns/link/vnet#az-network-private-dns-link-vnet-create) by using Azure CLI.
 
 ### 443 timeout error
 
