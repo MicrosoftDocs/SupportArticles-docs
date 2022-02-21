@@ -23,3 +23,6 @@
   items:
   - name: Identify high CPU consuming containers
     href: identify-high-cpu-consuming-containers-aks.md
+
+- name: Errors when pulling images from ACR to AKS cluster fails
+    href: cannot-pull-image-from-acr-to-aks-cluster.md
