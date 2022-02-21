@@ -10,7 +10,7 @@ ms.author: v-yunhya
 ---
 # Troubleshoot high-CPU-usage issues in SQL Server
 
-_Applies to:_ &nbsp;SQL Server
+_Applies to:_ &nbsp; SQL Server
 
 This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server.
 
