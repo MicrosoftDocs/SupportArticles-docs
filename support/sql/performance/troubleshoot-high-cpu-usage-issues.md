@@ -58,7 +58,7 @@ Use one of the following tools to check whether the SQL Server process is actual
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the Sqlservr.exe process is causing high CPU, identify the queries that are responsible for this by using the following query:
+If the sqlservr.exe process is causing high CPU, identify the queries that are responsible for this by using the following query:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -129,7 +129,7 @@ If SQL Server is still using high CPU, go to the next step.
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
-1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check for missing indexes and apply recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendation from the output with the higest improvement_measure value; those indexes are likely to have the most significant positive impact on performance. Evaluate if these indexes make sense for the application and ensure performance testing is done with the application. Then continue to apply missing-index recommendations until you achive the desired application performance results. 
+1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendations from the output with the highest improvement_measure value; those indexes that have the most significant positive impact on performance. Check if you want to apply these indexes and ensure performance testing is done with the application. Then, continue to apply missing-index recommendations until you acheive the desired application performance results. 
 
     ```sql
     SELECT CONVERT (VARCHAR(30),
@@ -166,7 +166,7 @@ If the issue still exists, you can add a `RECOMPILE` query hint to each of the h
 
 If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here is an example of how you can apply this to your query.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here's an example of how you can apply this to your query.
 
   ```sql
   SELECT * FROM Person.Person 
@@ -174,7 +174,7 @@ If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, a
   OPTION (RECOMPILE)
   ```
 
-- Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here is an example how to use this hint in your query.
+- Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here's an example how to use this hint in your query.
 
   ```sql
   DECLARE @LastName Name = 'Frintu'
@@ -183,9 +183,9 @@ If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, a
   OPTION (OPTIMIZE FOR (@LastName = 'Wood'))
   ```
 
-- Use the [option (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
+- Use the [option (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with density vector average. You can also do this by capturing the incoming parameter values in local variables, and then use the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
 
-- Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing entirely. Here is an example of how to use it in a query:
+- Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing entirely. Here's an example of how to use it in a query:
 
   ```sql
   SELECT * FROM Person.Address  
@@ -195,7 +195,7 @@ If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, a
 
 - Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the "good enough" common plan is the one that's already in cache. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
 
-- Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed. You can use `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the Person.Person table in AdventureWorks, you can use this query to look up the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query result.
+- Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed. You can use `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the Person.Person table in AdventureWorks, you can use this query to find the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query result.
 
   ```sql
   SELECT text, 'DBCC FREEPROCCACHE (0x' + CONVERT(VARCHAR (512), plan_handle, 2) + ')' AS dbcc_freeproc_command FROM sys.dm_exec_cached_plans
@@ -279,7 +279,7 @@ GO
 
 ## Step 7: Fix SOS_CACHESTORE spinlock contention
 
-If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often evicted on ad hoc query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
+If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often evicted on unplanned query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
 [FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68).
 
