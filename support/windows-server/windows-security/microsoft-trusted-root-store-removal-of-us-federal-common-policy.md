@@ -41,7 +41,7 @@ Applications and operations that depend on the FCPCA certificate will fail after
 |||
 
 > [!Note]
-> The FCPCA G2 certificate can be obtained from http://repo.fpki.gov/fcpca/fcpcag2.crt.
+> The FCPCA G2 certificate can be obtained from the [FCPCA G2 certificate crt file download link](http://repo.fpki.gov/fcpca/fcpcag2.crt).
 
 ## Potential issues
 
