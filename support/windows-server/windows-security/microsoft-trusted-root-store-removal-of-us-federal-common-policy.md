@@ -123,7 +123,7 @@ Administrators should implement the FCPCA G2 certificate as per the instructions
 > [!Note]
 > In enterprises that have cross-certification dependencies for smartcard logons or other scenarios on Windows devices but do not have internet-access, see the "Do I Need to Distribute the Intermediate CA Certificates?" and "Certificates Issued by the Federal Common Policy CA G2" sections of [Distribute the CA certificates issued by the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/certificates/).
 >
-> Many federal enterprises will either need the US Treasury CA certificates, or the Entrust Managed Services CA certificates. Both CA certificates are documented in Section 6 with the following text:
+> Many federal enterprises will either need the US Treasury CA certificates, or the Entrust Managed Services CA certificates. Both CA certificates are documented in the above article with the following text:
 >
 > > Important! To ensure PIV credential certificates issued by the Entrust Federal SSP before August 13, 2019 validate to the Federal Common Policy CA G2, you'll need to distribute an additional intermediate CA certificate to systems that are unable to perform dynamic path validation. Learn more on our Frequently Asked Questions page.
 
