@@ -54,7 +54,7 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-  If you notice that `% User Time` is consistently greater than 90 percent, this would confirm that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software or other drivers or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+  If `% User Time` is consistently greater than 90 percent, it means that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software, other drivers, or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -125,11 +125,11 @@ If SQL Server is still using high CPU, go to the next step.
             //qplan:MissingIndexes')=1
     ```
 
-1. Review the execution plans for the queries identified, and tune the query by implementing the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another window in SSMS.
+1. Review the execution plans for the queries identified, and tune the query by making the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another window in SSMS.
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
-1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendations from the output with the highest improvement_measure value; those indexes that have the most significant positive impact on performance. Check if you want to apply these indexes and make sure performance testing is done for the application. Then, continue to apply missing-index recommendations until you acheive the desired application performance results. 
+1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendations from the output with the highest improvement_measure value; those indexes that have the most significant positive impact on performance. Check if you want to apply these indexes and make sure performance testing is done for the application. Then, continue to apply missing-index recommendations until you achieve the desired application performance results. 
 
     ```sql
     SELECT CONVERT (VARCHAR(30),
@@ -164,9 +164,9 @@ Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeprocc
 
 If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
-If the issue is fixed, it's an indication of parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
+If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint at each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here's an example of how you can apply this to your query.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint for each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here's an example of how you can apply this to your query.
 
   ```sql
   SELECT * FROM Person.Person 
