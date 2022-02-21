@@ -1,6 +1,6 @@
 ---
-title: Microsoft Trusted Root Store removal of US Federal Common Policy
-description: US Government Common Policy Root Removal.
+title: Microsoft Trusted Root Store removal of the FCPCA certificate
+description: Introduces the removal of US FCPCA certificate and the solutions to prevent issues.
 localization_priority: medium
 audience: itpro
 author: Deland-Han
@@ -13,9 +13,9 @@ ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
 ---
-# Removal of US Federal Common Policy Certificate Authority (FCPCA) from the Microsoft Trusted Root Store
+# Removal of the US Federal Common Policy Certificate Authority (FCPCA) certificate from the Microsoft Trusted Root Store
 
-This article introduces the removal of the US FCPCA certificate and the solutions to prevent issues that will  occur if enterprises don't transition to the FCPCA G2 certificate by March 22, 2022.
+This article introduces the removal of the US FCPCA certificate and the solutions to prevent issues that will occur if enterprises don't transition to the FCPCA G2 certificate by March 22, 2022.
 
 > [!Note]
 > The certificate name for the root certificate being removed is "Federal Common Policy CA". The certificate is often referenced as "G1" short name even though "G1" does appear in the certificate name.
