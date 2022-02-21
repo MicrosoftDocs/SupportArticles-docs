@@ -26,7 +26,7 @@ The detection and protection of data is among the most important tasks that any 
 
 Microsoft 365 provides data loss prevention (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
 
-This article describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
+This article lists some common scenarios in which DLP policy tips are not working as expected, and it provides resolutions that you can try.
 
 **Note:** It's recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp). To edit a DLP policy in the Microsoft 365 compliance center, follow these steps:
 
@@ -53,7 +53,7 @@ There are several reasons why DLP policy tips do not work as expected after you 
 
 Policy is configured by using User notifications, but the status of the policy doesn't match the settings in the rule (Figure 1). A policy configuration error may also occur if the policy is configured by using two or more rules that detect the same sensitive data types that have the same **Instance count** value and confidence level (Figure 2). This kind of setup is unnecessary and problematic. Only one rule is required.
 
-### Troubleshooting tip
+### Resolution
 
 For these scenarios, create only one rule, and use detecting parameters that are based on the same sensitive data types.
 
@@ -80,7 +80,7 @@ A policy is configured by using conditions and actions that are currently not su
 > [!NOTE]
 > All these conditions and actions work in Outlook. They will match content and enforce protective actions on content. However, policy tips are not yet supported.
 
-### Troubleshooting tip
+### Resolution
 
 In Outlook, test conditions and actions that are supported in Outlook. Content matching and enforcement will still work.
 
@@ -174,7 +174,7 @@ No policy tip is displayed if the following conditions are true:
 - You are running Outlook 2013 or later clients on Windows 7.
 - You try to attach a file of Adobe PDF version 10 or later versions to an email message that should trigger a DLP policy tip.
 
-### Troubleshooting tip
+### Resolution
 
 To resolve this issue, carefully follow the steps in the "Resolution" section of [Outlook doesn't display DLP policy tips for PDF attachments in Windows 7](https://support.microsoft.com/help/3001881/outlook-doesn-t-display-dlp-policy-tips-for-pdf-attachments-in-windows).
 
