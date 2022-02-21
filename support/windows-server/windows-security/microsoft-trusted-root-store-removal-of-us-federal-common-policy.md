@@ -13,9 +13,11 @@ ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
 ---
-# Removal of US FCPCA G1 certificate from Microsoft Trusted Root Store
+# Removal of US Federal Common Policy Certificate Authority (FCPCA) from the Microsoft Trusted Root Store
 
-This article introduces the removal of the US Federal Common Policy certificate authority (FCPCA) G1 certificate and the solutions for the issues that occur after the removal.
+This article introduces the removal of the US FCPCA and the solutions to prevent issues that will  occur if enterprises don't transition to the Federal Common Policy CA G2 (FCPA G2) root certificate by March 22, 2022.
+
+Note: The certificate name for the root CA being removed is “Federal Common Policy CA”. The name of the certificate that is replacing it is "Federal Common Policy CA G2". These certificate roots are often referenced by their "G1" and "G2" short names even though “G1” does appear in the name of the certificate being removed.
 
 _Applies to:_ &nbsp; All versions of Windows
 
@@ -25,10 +27,10 @@ The [United States Federal PKI](https://www.idmanagement.gov/) team governing th
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
-|Federal Common Policy CA G1|905F942FD9F28F679B378180FD4F846347F645C1|
+|Federal Common Policy CA|905F942FD9F28F679B378180FD4F846347F645C1|
 |||
 
-Applications and operations that depend on the FCPCA G1 certificate will fail after receiving the certificate update one to seven days after <!-- release date -->. Administrators should migrate from the existing FCPCA G1 certificate to the replacement the FCPCA G2 certificate as your agency's federal trust anchor:
+Applications and operations that depend on the FCPCA G1 certificate will fail after receiving the certificate update one to seven days after March 22, 2022. Administrators should migrate from the existing FCPCA G1 certificate to the replacement the FCPCA G2 certificate as your agency's federal trust anchor:
 
 |Certificate Name|SHA1 Thumbprint|
 |---|---|
@@ -59,9 +61,9 @@ The following Errors may be seen in pop-up and other dialog boxes.
 
 ## Steps to avoid these issues
 
-1. Validate changes in the [Test configuration setup](#test-configuration-setup) section being made to your certificate between now and <!-- release date -->.
+1. Validate changes in the [Test configuration setup](#test-configuration-setup) section being made to your certificate between now and March 22, 2022.
 2. After verifying that all relevant scenarios work with the [Test configuration setup](#test-configuration-setup) section, implement steps in the [Production configuration setup](#production-configuration-setup) section in your production configuration.
-3. If you experience outages caused by the removal of certificate authority (CA) certificate after <!-- release date -->, manually download the FCPCA G2 certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
+3. If you experience outages caused by the removal of certificate authority (CA) certificate after March 22, 2022, manually download the FCPCA G2 certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
 > [!Note]
 > Application-as-a-service scenarios like Azure SQL or Azure App Service that chain to the FCPCA G1 certificate will be blocked because the certificate will be available after removal.
@@ -83,10 +85,13 @@ The following steps directly configure the Windows registry to a pre-release or 
 
 4. Delete the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`. This step deletes all cached certificates.
 
+   > [!Note]
+   > Deleting certificates from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` ensures that all cached roots are removed. This operation forces Windows to download new root when associated public key infrastructure (PKI) chains are used with new properties (if modified). Since FCPCA is being removed, this root will not be downloaded.
+
 5. Validate all scenarios that chain to the G1 including those listed in [Potential issues](#potential-issues).
 
 > [!Note]
-> The link above never changes. However, the changes that are staged change from month to month. As of February 15, 2022, the testing URL above is staged with about 20 continuous deprecation changes that do not currently include the removal of the FCPCA G1 certificate. That change will be staged in March 2022. This article will be updated with the exact staging date. <!-- remove it after we have the date -->
+> The link above never changes. However, the changes that are staged change from month to month. As of February 15, 2022, the testing URL above is staged with about 20 continuous deprecation changes that do not currently include the removal of the FCPCA G1 certificate. That change will be staged in March 2022. This article will be updated with the exact staging date March 22, 2022.
 
 ### Production configuration setup
 
