@@ -20,7 +20,7 @@ This article assumes that you have an existing AKS cluster and an existing ACR. 
 - If you need an AKS cluster, deploy an Azure Kubernetes Service cluster [using the Azure CLI](/azure/aks/kubernetes-walkthrough) or [using the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 - If you need an ACR, create a private container registry [using the Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli) or [using the Azure portal](/azure/container-registry/container-registry-get-started-portal).
 
-You also need the Azure CLI version 2.0.59 or later installed and configured. Run [az version](/cli/azure/reference-index#az_version) to find the version. If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
+You also need the Azure CLI version 2.0.59 or later installed and configured. Run [az version](/cli/azure/reference-index#az-version) to find the version. If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
 ## Symptoms and initial troubleshooting
 
@@ -149,9 +149,9 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 - In the Azure portal, select the private DNS zone "privatelink.azurecr.io", select **Virtual network links** > **Add** under the **Settings** panel, then select a name and the virtual network of the AKS cluster. Select **OK**.
 
     > [!NOTE]
-    > It's optional to check **Enable auto registration**.
+    > It's optional to check the ["Enable auto registration"](/azure/dns/private-dns-autoregistration) feature.
 
-- [Create a virtual network link to the specified Private DNS zone](/azure/network/private-dns/link/vnet#az-network-private-dns-link-vnet-create) by using Azure CLI.
+- [Create a virtual network link to the specified Private DNS zone by using Azure CLI](/cli/azure/network/private-dns/link/vnet#az-network-private-dns-link-vnet-create).
 
 ### 443 timeout error
 
@@ -162,7 +162,7 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 
 #### Solution 1: Ensure VNET peering is used
 
-If the network interface of ACR's private endpoint and the AKS cluster are in different Virtual Networks (VNETs), ensure that [VNET peering](/azure/virtual-network/virtual-network-peering-overview) is used for both VNETs. You can check VNET peering by using the Azure CLI command `az network vnet peering list -g <MyResourceGroup> --vnet-name <MyVnet> -o table` or in the Azure portal by selecting the **VNETs** > **Peerings** under the **Settings** panel.
+If the network interface of ACR's private endpoint and the AKS cluster are in different Virtual Networks (VNETs), ensure that [VNET peering](/azure/virtual-network/virtual-network-peering-overview) is used for both VNETs. You can check VNET peering by using the Azure CLI command `az network vnet peering list -g <MyResourceGroup> --vnet-name <MyVnet> -o table` or in the Azure portal by selecting the **VNETs** > **Peerings** under the **Settings** panel. For more information about listing peerings, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
 
 If the VNET peering is used for both VNETs, ensure that the status is "Connected". If the status is [Disconnected](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-disconnected), delete the peering from both VNETs, and then re-create it. If the status is "Connected", see the troubleshooting guide: [The peering status is "Connected"](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-connected).
 
