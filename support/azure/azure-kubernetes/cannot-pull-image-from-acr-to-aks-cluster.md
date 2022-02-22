@@ -1,17 +1,17 @@
 ---
-title: Cannot pull images from Azure container registry to Azure Kubernetes Service cluster
-description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from an ACR to an AKS cluster fails.
+title: Can't pull images from Azure Container Registry to Azure Kubernetes Service cluster
+description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from an ACR to an AKS cluster.
 ms.date: 02/19/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa
 ms.service: container-service
 ---
-# Fail to pull images from Azure container registry to Azure Kubernetes Service cluster
+# Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster
 
 According to [Authenticate with Azure Container Registry from Azure Kubernetes Services](/azure/aks/cluster-container-registry-integration?tabs=azure-cli), when you're using Azure Container Registry (ACR) with Azure Kubernetes Service (AKS), an authentication mechanism needs to be established. You can set up the AKS to ACR integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the identity associated with the AKS cluster to pull images from an ACR.
 
-In some cases, pulling images from an ACR to an AKS cluster fails. This article provides guidance on how to troubleshoot the most common errors that you may encounter when you fail to pull images from an ACR to an AKS cluster.
+In some cases, pulling images from an ACR to an AKS cluster fails. This article provides guidance for troubleshooting the most common errors that you encounter when you pull images from an ACR to an AKS cluster.
 
 ## Before you begin
 
@@ -24,7 +24,7 @@ You also need the Azure CLI version 2.0.59 or later to be installed and configur
 
 ## Symptoms and initial troubleshooting
 
-The Kubernetes pod's STATUS is **ImagePullBackOff** or **ErrImagePull**. To get detailed errors, run the following command and then check the **Events** from the output.
+The Kubernetes pod's **STATUS** is **ImagePullBackOff** or **ErrImagePull**. To get detailed errors, run the following command and check **Events** from the output.
 
 ```console
 kubectl describe pod <podname> -n <namespace>
@@ -41,13 +41,13 @@ az acr check-health --name <myregistry> --ignore-errors --yes
 If a problem is detected, it provides an error code and description. For more information about the errors and possible solutions, see [Health check error reference](/azure/container-registry/container-registry-health-error-reference).
 
 > [!NOTE]
-> If you get Helm or Notary related errors, it doesn't mean that you have an issue with ACR or AKS. It only means that Helm or Notary isn't installed, Azure CLI isn't compatible with the current installed version of Helm or Notary, and so on.
+> If you get Helm or Notary related errors, it doesn't mean that you have an issue with ACR or AKS. It only indicates that Helm or Notary isn't installed, Azure CLI isn't compatible with the current installed version of Helm or Notary, and so on.
 
 To validate whether the ACR is accessible from the AKS cluster, run the [az aks check-acr](/cli/azure/aks#az-aks-check-acr) command.
 
 ## Common errors and solutions
 
-This section helps you troubleshoot the following most common errors that are displayed in the **Events** in the output of the `kubectl describe pod` command:
+This section helps you troubleshoot the following most common errors that are displayed in **Events** in the output of the `kubectl describe pod` command:
 
 - [401 Unauthorized error](#401unauthorizederror)
 - [Image not found error](#imagenotfounderror)
@@ -106,7 +106,7 @@ If the secret is expired, [update the credentials for the AKS cluster](/azure/ak
 > [!NOTE]
 > This solution is applicable only to [AKS clusters which use service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli).
 
-In some cases, when the service principal of the AKS cluster is replaced with another one, the ACR role assignment still refers to the old one. To ensure that the ACR role assignment refers to the correct service principal, follow the steps:
+In some cases, for example, when the service principal of the AKS cluster is replaced with a new one, the ACR role assignment still refers to the old service principal. To ensure that the ACR role assignment refers to the correct service principal, follow the steps:
 
 1. To check the service principal that's used by the AKS cluster, run the following command:
 
@@ -135,7 +135,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 #### Solution: Ensure image name is correct
 
-If you get this error, ensure that the image name is fully correct. You should check the registry name, registry login server, the repository name, and the tag. A common mistake is that the login server "azureacr.io" is specified instead of "azurecr.io".
+If you get this error, ensure that the image name is fully correct. You should check the registry name, registry login server, the repository name, and the tag. A common mistake is that the login server is specified as "azureacr.io" instead of "azurecr.io".
 
 > [!NOTE]
 > When the image name isn't fully correct, the [401 Unauthorized error](#401unauthorizederror) may also occur because AKS always tries anonymous pull no matter whether the container registry has enabled anonymous pull access.
@@ -167,11 +167,11 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 
 #### Solution 1: Ensure VNET peering is used
 
-If the network interface of ACR's private endpoint and the AKS cluster are in different Virtual Networks (VNETs), ensure that [VNET peering](/azure/virtual-network/virtual-network-peering-overview) is used for both VNETs. You can check VNET peering by running the Azure CLI command `az network vnet peering list -g <MyResourceGroup> --vnet-name <MyVnet> -o table` or in the Azure portal by selecting the **VNETs** > **Peerings** under the **Settings** panel. For more information about listing peerings, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
+If the network interface of ACR's private endpoint and the AKS cluster are in different Virtual Networks (VNETs), ensure that [VNET peering](/azure/virtual-network/virtual-network-peering-overview) is used for both VNETs. You can check VNET peering by running the Azure CLI command `az network vnet peering list -g <MyResourceGroup> --vnet-name <MyVnet> -o table` or in the Azure portal by selecting the **VNETs** > **Peerings** under the **Settings** panel. For more information about listing all peerings of a specified virtual network, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
 
 If the VNET peering is used for both VNETs, ensure that the status is "Connected". If the status is [Disconnected](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-disconnected), delete the peering from both VNETs, and then re-create it. If the status is "Connected", see the troubleshooting guide: [The peering status is "Connected"](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-connected).
 
-For further troubleshooting, you can connect to one of the AKS nodes or [pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec), and then test the connectivity with the ACR at TCP level by using Telnet or Netcat utility. You can check the IP address with the `nslookup <acrname>.azurecr.io` command, and then run the `telnet <ip address of ACR> 443` command.
+For further troubleshooting, connect to one of the AKS nodes or [pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec), and then test the connectivity with the ACR at TCP level by using Telnet or Netcat utility. Check the IP address with the `nslookup <acrname>.azurecr.io` command, and then run the `telnet <ip address of ACR> 443` command.
 
 For more information about connecting to AKS nodes, see [Connect with SSH to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/ssh).
 
@@ -183,6 +183,6 @@ If the network interface of ACR's private endpoint and the AKS cluster are in di
 
 If the troubleshooting guidance in this article doesn't help you resolve the issue, here are some other things to consider:
 
-- Check network security groups and route tables associated with subnets if you have any.
-- If the traffic between subnets is controlled by a virtual appliance like a firewall, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
+- Check the network security groups and route tables associated with subnets if you have any.
+- If a virtual appliance like a firewall controls the traffic between subnets, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
 - [Contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
