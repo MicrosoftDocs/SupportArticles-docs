@@ -1690,6 +1690,10 @@
       href: ./networking/troubleshoot-directaccess-guidance.md
   - name: TCP/IP communications
     items:
+    - name: 'Troubleshooting guidance: TCP/IP communication'
+      href: ./networking/troubleshoot-tcp-ip-communication-guidance.md
+    - name: 'Troubleshooting guidance: TCP/IP performance'
+      href: ./networking/troubleshoot-tcp-ip-performance-guidance.md
     - name: A SMB server is unresponsive
       href: ./networking/smb-server-unresponsive.md
     - name: Accessing websites hosted on Akamai CDN fails
@@ -1854,6 +1858,8 @@
       href: ./performance/values-process-control-parameters.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: 'Troubleshooting guidance: stop errors and unexpected restart'
+      href: ./performance/troubleshoot-stop-errors-guidance.md
     - name: '"Stop 0x0000000A" error for processor resumes from C1 idle state'
       href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
     - name: Disable or enable Dr. Watson program
