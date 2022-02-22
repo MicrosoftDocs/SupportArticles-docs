@@ -6,7 +6,7 @@ ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
 ms.reviewer: jopilov
-author: , prmadhes-msft
+author: prmadhes-msft
 ms.author: v-jayaramanp, v-yunhya
 ---
 # Troubleshoot high-CPU-usage issues in SQL Server
