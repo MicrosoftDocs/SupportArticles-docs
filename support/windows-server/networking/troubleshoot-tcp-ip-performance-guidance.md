@@ -19,7 +19,7 @@ Transmission Control Protocol/Internet Protocol (TCP/IP) performance is a compar
 
 ## Troubleshooting checklist
 
-TCP settings are predefined in modern Windows operating systems. Use the [Get-NetTCPSettings](/powershell/module/nettcpip/get-nettcpsetting?view=windowsserver2022-ps) cmdlet to get the TCP settings.
+TCP settings are predefined in modern Windows operating systems. Use the [Get-NetTCPSettings](/powershell/module/nettcpip/get-nettcpsetting) cmdlet to get the TCP settings.
 
 Tips to enhance the throughput:
 
