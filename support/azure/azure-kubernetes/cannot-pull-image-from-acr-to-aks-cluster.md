@@ -54,7 +54,7 @@ This section will help you troubleshoot the following most common errors that ar
 - [403 Forbidden error](#403forbiddenerror)
 - [443 timeout error](#443timeouterror)
 
-### <a id="401unauthorizederror" />401 Unauthorized error
+### <a id="401unauthorizederror"></a>401 Unauthorized error
 
 An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. No matter what the identity is, the proper authorization that's used to pull an image from ACR is necessary. Otherwise, you may get the following "401 Unauthorized" error:
 
@@ -129,7 +129,7 @@ In some cases, for example when the service principal of the AKS cluster is repl
 
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), ensure that the associated service principal is correct and the secret is still valid.
 
-### <a id="imagenotfounderror" />Image not found error
+### <a id="imagenotfounderror"></a>Image not found error
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": \<acrname>.azurecr.io/\<repository\:tag>: not found
 
@@ -140,7 +140,7 @@ If you get this error, ensure that the image name is fully correct. You should c
 > [!NOTE]
 > When the image name isn't fully correct, the [401 Unauthorized error](#401unauthorizederror) also may happen because AKS always tries anonymous pull no matter whether the container registry has enabled anonymous pull access.
 
-### <a id="403forbiddenerror" />403 Forbidden error
+### <a id="403forbiddenerror"></a>403 Forbidden error
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: unexpected status: 403 Forbidden
 
@@ -158,7 +158,7 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 
 - [Create a virtual network link to the specified Private DNS zone by using Azure CLI](/cli/azure/network/private-dns/link/vnet#az-network-private-dns-link-vnet-create).
 
-### <a id="443timeouterror" />443 timeout error
+### <a id="443timeouterror"></a>443 timeout error
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/<repository\:tag>": failed to do request: Head "https://\<acrname>.azurecr.io/v2/\<repository>/manifests/v1": dial tcp \<acrprivateipaddress>:443: i/o timeout
 
