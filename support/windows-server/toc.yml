@@ -1646,6 +1646,8 @@
       href: ./networking/certificate-requirements-eap-tls-peap.md
   - name: Remote access
     items:
+    - name: 'Troubleshooting guidance: Remote access (VPN and AOVPN)'
+      href: ./networking/troubleshoot-remote-access-vpn-and-aovpn-guidance.md
     - name: Can't connect to Internet on a VPN server
       href: ./networking/cannot-connect-to-internet-vpn-server.md
     - name: Configure remote access client account lockout
@@ -2248,6 +2250,8 @@
       href: ./remote/remotefx-usb-redirected-scanner-not-start.md
   - name: Remote Desktop Services (Terminal Services) licensing
     items:
+    - name: 'Troubleshooting guidance: RDS Licensing'
+      href: ./remote/troubleshoot-rds-licensing-guidance.md
     - name: Cannot connect to RDS because no RD Licensing servers are available
       href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
@@ -2280,6 +2284,8 @@
       href: ./remote/terminal-server-licensing.md
   - name: Remote desktop sessions
     items:
+    - name: 'Troubleshooting guidance: RDS session connectivity'
+      href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: '"System error 67 has occurred" when using FQDN to connect a remote computer'
       href: ./remote/network-name-cannot-found-fqdn-remote-computer.md
     - name: Applications crash if another user logs off
@@ -2658,6 +2664,8 @@
       href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
   - name: Live Migration
     items:
+    - name: 'Troubleshooting guidance: Live Migration'
+      href: ./virtualization/troubleshoot-live-migration-guidance.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
