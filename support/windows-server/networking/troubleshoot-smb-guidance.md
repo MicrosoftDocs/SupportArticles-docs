@@ -77,7 +77,7 @@ SMB prefers to use the slower physical network adapter over the virtual network 
 
 Cause: The virtual network adapter on the host is not RSS-capable. The physical network adapter is RSS-capable. SMB always uses the RSS-capable network adapter over the non-RSS network adapter even when the RSS network adapter is slower.
 
-Troubleshooting: You should disable the RSS capability on the physical network adapter, or use SMB Multichannel constraints to restrict SMB communication to one or more defined network interfaces. For more information, see the [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint?view=windowsserver2019-ps) SMB Share cmdlet in Windows PowerShell.
+Troubleshooting: You should disable the RSS capability on the physical network adapter, or use SMB Multichannel constraints to restrict SMB communication to one or more defined network interfaces. For more information, see the [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint) SMB Share cmdlet in Windows PowerShell.
 
 ### Issue 3
 

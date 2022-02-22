@@ -119,7 +119,7 @@ To do this, start the Remote Desktop Licensing Manager console on the licensing 
 
 - Check the minimal TCP ports.
 
-  Verify that the minimal TCP ports are open. For more information, see [RD Licensing Network Port Requirements](../networking/service-overview-and-network-port-requirements#terminal-services-licensing.md)
+  Verify that the minimal TCP ports are open. For more information, see [RD Licensing Network Port Requirements](../networking/service-overview-and-network-port-requirements.md#terminal-services-licensing)
 
 - Use the event log to determine the behavior of the licensing server.
   - On the licensing server, start Event Viewer.
