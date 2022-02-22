@@ -34,7 +34,7 @@ Additionally, if you check the Exchange Server log (ExchangeInstallDirectory\Log
 
 Here's an example of the detailed error message:
 
-> "RpcDispatch: [LoginPermException] 'User SID: \<SID number>' can't act as owner of a MailUser object '/o=ExchangeLabs/ou=Exchange Administrative Group (\<Group name>)/cn=Recipients/cn=\<User identity>-OnPrem' with : \<SID number> and MasterAccountSid  (StoreError=LoginPerm)   at M.E.R.Server.UserManager.User.CorrelateIdentityWithLegacyDN(ClientSecurityContext clientSecurityContext)     at M.E.R.Server.RpcDispatch.<>c__DisplayClassc.\<Connect>b__8()     at M.E.R.Server.RpcDispatch.ExecuteWrapper(Func\`1 getExecuteParameters, Func\`1 executeDelegate, Action\`1"
+> "RpcDispatch: [LoginPermException] 'User SID: \<SID number>' **can't act as owner of a MailUser object** '/o=ExchangeLabs/ou=Exchange Administrative Group (\<Group name>)/cn=Recipients/cn=\<User identity>-OnPrem' with : \<SID number> and MasterAccountSid  (StoreError=LoginPerm)   at M.E.R.Server.UserManager.User.CorrelateIdentityWithLegacyDN(ClientSecurityContext clientSecurityContext)     at M.E.R.Server.RpcDispatch.<>c__DisplayClassc.\<Connect>b__8()     at M.E.R.Server.RpcDispatch.ExecuteWrapper(Func\`1 getExecuteParameters, Func\`1 executeDelegate, Action\`1"
 
 ## Cause
 
