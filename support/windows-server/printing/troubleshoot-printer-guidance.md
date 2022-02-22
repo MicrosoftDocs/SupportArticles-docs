@@ -89,7 +89,7 @@ After installation of [KB5006674](https://support.microsoft.com/help/5006674), W
 
 The printer connection issues described in this issue are specific to print servers and are not commonly observed in devices designed for home use. Printing environments affected by this issue are more commonly found in enterprises and organizations.
 
-Workaround: You can take steps to workaround this issue on print servers that meet the prerequisite. See https://docs.microsoft.com/windows/release-health/status-windows-11-21h2#2737msgdesc
+Workaround: You can take steps to workaround this issue on print servers that meet the prerequisite. See [Windows 11 known issues and notifications](/windows/release-health/status-windows-11-21h2#2737msgdesc)
 
 ### Point and Print default behavior change requires Administrator credentials to print
 
@@ -124,5 +124,5 @@ Resolution: For more information, see [KB5005010: Restricting installation of ne
 - [Known issues for printing](troubleshoot-printing-known-issues.md)
 - [Point and Print Default Behavior Change](https://msrc-blog.microsoft.com/2021/08/10/point-and-print-default-behavior-change/)
 - [Windows Print Spooler Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527)
-- [Windows Release Health: Take action: Out-of-band update to address a remote code execution exploit in the Windows Print Spooler service](https://docs.microsoft.com/windows/release-health/windows-message-center#1646)
+- [Windows Release Health: Take action: Out-of-band update to address a remote code execution exploit in the Windows Print Spooler service](/windows/release-health/windows-message-center#1646)
 - [Windows Key Distribution Center Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33764)

@@ -1396,6 +1396,8 @@
     href: ./networking/networking-overview.md
   - name: Access to remote file shares (SMB or DFS Namespace)
     items:
+    - name: 'Troubleshooting guidance: SMB'
+      href: ./networking/troubleshoot-smb-guidance.md
     - name: '"Delayed Write Failed" error'
       href: ./networking/delayed-write-failed-error-data-lost.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'

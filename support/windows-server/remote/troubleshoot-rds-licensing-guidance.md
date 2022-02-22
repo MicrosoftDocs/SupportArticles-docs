@@ -23,8 +23,8 @@ The listed resources in this article can help you resolve Remote Desktop Service
 
 The 120-day licensing grace period value is decremented to 0 (zero) as soon as a license server is configured. For more information, see the following articles:
 
-- [License your RDS deployment with client access licenses (CALs)](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-client-access-license)
-- [Troubleshooting specific RDP error messages to a Windows VM in Azure](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-specific-rdp-errors)
+- [License your RDS deployment with client access licenses (CALs)](/windows-server/remote/remote-desktop-services/rds-client-access-license)
+- [Troubleshooting specific RDP error messages to a Windows VM in Azure](/azure/virtual-machines/troubleshooting/troubleshoot-specific-rdp-errors)
 
 The current grace period on a computer can be read by running the following command:
 
@@ -51,7 +51,7 @@ $obj.GetSpecifiedLicenseServerList()
 $obj.LicensingType
 ```
 
-[LicensingMode values](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-terminalservices-remoteconnectionmanager-licensingmode#values)
+[LicensingMode values](/windows-hardware/customize/desktop/unattend/microsoft-windows-terminalservices-remoteconnectionmanager-licensingmode#values)
 
 ### Set the method for how the license server and the licensing mode will be applied on the RDSH server.
 
@@ -95,6 +95,7 @@ The policy configuration are stored in the following registry entries on the ses
 
 Registry subkey: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`  
 Registry values:
+
 - LicenseServers
 - LicensingMode
 
@@ -118,13 +119,13 @@ To do this, start the Remote Desktop Licensing Manager console on the licensing 
 
 - Check the minimal TCP ports.
 
-  Verify that the minimal TCP ports are open. For more information, see [RD Licensing Network Port Requirements](https://docs.microsoft.com/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements#terminal-services-licensing)
+  Verify that the minimal TCP ports are open. For more information, see [RD Licensing Network Port Requirements](../networking/service-overview-and-network-port-requirements#terminal-services-licensing.md)
 
 - Use the event log to determine the behavior of the licensing server.
   - On the licensing server, start Event Viewer.
   - Access *Application and Services Logs\\Windows\\TerminalServices-Licensing\\Operational*.
   - The following article contains a list of Remote Desktop Services events that can appear in the event log on a computer that has the RD Licensing role service installed.  
- [Remote Desktop Licensing](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404145%28v=ws.10%29#remote-desktop-licensing)
+ [Remote Desktop Licensing](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404145%28v=ws.10%29#remote-desktop-licensing)
 
 ## Common errors and solutions
 
@@ -148,7 +149,6 @@ Troubleshooting: This issue is fixed in update [KB 4457127](https://support.micr
 
 ## Reference
 
-- [Remote Desktop Services overview](https://docs.microsoft.com/troubleshoot/windows-server/remote/remote-desktop-services-overview)
-- [Troubleshooting Remote Desktop Licensing Issues](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/hh553162%28v=ws.10%29)
+- [Troubleshooting Remote Desktop Licensing Issues](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/hh553162%28v=ws.10%29)
 - [Remote Desktop Licensing Demystified](https://social.technet.microsoft.com/wiki/contents/articles/21180.remote-desktop-licensing-demystified.aspx)
 - [RDS and TS CAL Interoperability Matrix](https://social.technet.microsoft.com/wiki/contents/articles/14988.rds-and-ts-cal-interoperability-matrix.aspx)

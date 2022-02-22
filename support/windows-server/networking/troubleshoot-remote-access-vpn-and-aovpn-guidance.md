@@ -33,9 +33,9 @@ The listed resources in this article can help you resolve issues that you experi
 
 - [Can't connect to the Internet after connecting to a VPN server](cannot-connect-to-internet-vpn-server.md) - This issue prevents you from connecting to the internet after you log on to a server that's running Routing and Remote Access by using VPN. This issue might occur if you configure the VPN connection to use the default gateway on the remote network. That setting overrides the default gateway settings that you specify in the Transmission Control Protocol/Internet Protocol (TCP/IP) settings.
 
-- [Can't establish a remote access VPN connection](install-configure-virtual-private-network-server#cant-establish-a-remote-access-vpn-connection.md) - Information to help you troubleshoot typical problems the prevent clients from connecting to the VPN server.
+- [Can't establish a remote access VPN connection](install-configure-virtual-private-network-server.md#cant-establish-a-remote-access-vpn-connection) - Information to help you troubleshoot typical problems the prevent clients from connecting to the VPN server.
 
-- [Can't send and receive data](install-configure-virtual-private-network-server#cant-send-and-receive-data.md) - Information about common causes and solutions for two-way Remote Access VPN connection failures (legacy OS).
+- [Can't send and receive data](install-configure-virtual-private-network-server.md#cant-send-and-receive-data) - Information about common causes and solutions for two-way Remote Access VPN connection failures (legacy OS).
 
 ## Troubleshoot AOVPN issues
 
