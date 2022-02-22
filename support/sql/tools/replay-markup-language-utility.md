@@ -1,7 +1,7 @@
 ---
 title: Replay Markup Language Utilities
 description: This article describes a group of utilities that support professionals use to troubleshoot SQL Server.
-ms.date: 09/03/2020
+ms.date: 22/02/2022
 ms.custom: sap:Tools
 ms.reviewer: sureshka, jopilov, toddhayn, troymoen
 author: 
@@ -30,10 +30,10 @@ You can use the RML Utilities for SQL Server to perform the following tasks:
 
 After you capture a trace for an instance of SQL Server, you can use the RML Utilities for SQL Server to replay the trace file against another instance of SQL Server. If you also capture the trace during the replay, you can use the RML Utilities for SQL Server to compare the new trace file to the original trace file. You can use this technique to test how SQL Server behaves after you apply changes. For example, you can use this technique to test how SQL Server behaves after you do the following:
 
-- You install a SQL Server service pack.
-- You install a SQL Server hotfix.
-- You update a stored procedure or a function.
-- You update an index or create an index.
+- Install a SQL Server service pack.
+- Install a SQL Server hotfix.
+- Update a stored procedure or a function.
+- Update an index or create an index.
 
 ## Version history
 
@@ -64,7 +64,7 @@ The RML Utilities for SQL Server is available for download from the [Download Ce
 
 ## Benefits of the RML Utilities for SQL Server
 
-The RML Utilities for SQL Server are useful if you want to simulate application testing when it is impractical or impossible to test by using the real application. For example, in a test environment, it may be difficult to generate the same user load that exists in the production environment. You can use the RML Utilities for SQL Server to replay a production workload in a test environment and assess the performance impact of changes, such as an upgrade to SQL Server 2008 or the application of a SQL Server service pack. Additionally you can use the RML Utilities for SQL Server to analyze and compare various replay workloads. This kind of regression analysis would otherwise be a difficult process that you would have to perform manually.
+The RML Utilities for SQL Server are useful if you want to simulate application testing when it is impractical or impossible to test by using the real application. For example, in a test environment, it may be difficult to generate the same user load that exists in the production environment. You can use the RML Utilities for SQL Server to replay a production workload in a test environment and assess the performance impact of changes, such as an upgrade to SQL Server 2008 or the application of a SQL Server service pack. Additionally, you can use the RML Utilities for SQL Server to analyze and compare various replay workloads. This kind of regression analysis would otherwise be a difficult process that you would have to perform manually.
 
 The Help file contains a Quick Start topic. This topic includes a brief exercise that will familiarize you with each RML utility. To open the Help file, click **Start**, point to **All Programs**, point to **RML Utilities for SQL Server**, point to **Help**, and then click **RML Help**.
 
@@ -84,13 +84,13 @@ For a complete description of each utility and sample usage, see the RML Help th
 > The applications provided as part of the RML Utility suite requires several additional dependencies to be available. 
 > 
 ### Dependencies for Reporter
-You need to make sure the Report Viewer controls are available either in the same folder as Reporter.exe or in the GAC. The dll's that Reporter.exe needs are
-Microsoft.ReportViewer.Common.dll
-Microsoft.ReportViewer.DataVisualization.dll
-Microsoft.ReportViewer.ProcessingObjectModel.dll
-Microsoft.ReportViewer.WinForms.dll
+You need to make sure the Report Viewer controls are available either in the same folder as Reporter.exe or in the GAC. The DLLs that *Reporter.exe* needs are:
+- Microsoft.ReportViewer.Common.dll
+- Microsoft.ReportViewer.DataVisualization.dll
+- Microsoft.ReportViewer.ProcessingObjectModel.dll
+- Microsoft.ReportViewer.WinForms.dll
 
-You can get these dll's using the following powershell script:
+You can download these DLLs using the following PowerShell script:
 ```powershell
 Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
 Get-PackageSource
@@ -109,24 +109,26 @@ Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.Rep
 ```
 
 ### Dependencies for Expander
-You need to make sure the compression/uncompression controls are available either in the same folder as Expander.exe or in the GAC. The dll's that Expander.exe needs are
-BRICOLSOFTZipx64.dll
-UnRar64.dll
-XceedZipX64.dll
 
-You can obtain these dll's from the respective software packages of the vendors.
-https://www.rarlab.com/rar/UnRARDLL.exe
+You need to make sure the compression/uncompression controls are available either in the same folder as Expander.exe or in the GAC. The DLLs that Expander.exe needs are:
+- BRICOLSOFTZipx64.dll
+- UnRar64.dll
+- XceedZipX64.dll
 
-https://www.7-zip.org/a/7z1900-x64.exe
+You can obtain these DLLs from the respective software packages of the vendors.
+- https://www.rarlab.com/rar/UnRARDLL.exe
 
-https://www.nuget.org/packages/Xceed.Products.Zip.Full/
+- https://www.7-zip.org/a/7z1900-x64.exe
+
+- https://www.nuget.org/packages/Xceed.Products.Zip.Full/
 
 ## Examples
 
-The following examples illustrate how to use some of the RML utilities
+The following examples illustrate how to use some of the RML utilities.
 
 ### A. Using ReadTrace.exe to import Xevent data in a database
-Uses ReadTrace.exe to import a series of Xevent files collected via tools like PSSDIAG/[SQLDiag.exe](/sql/tools/sqldiag-utility) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases). Use the -I parameter to point to the first .XEL file that was collected in time, if multiple files are present. For all command-line switches use `ReadTrace.exe /?`
+
+Uses ReadTrace.exe to import a series of Xevent files collected using tools like PSSDIAG/[SQLDiag.exe](/sql/tools/sqldiag-utility) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases). Use the `-I` parameter to point to the first .XEL file that was collected in time, if multiple files are present. For all command-line switches use `ReadTrace.exe /?`
 
 ```console
 ReadTrace.exe -Iserver_instance_20220211T1319480819_xevent_LogScout_target_0_132890707717540000.xel -oc:\temp\output -f -dPerfAnalysisDb -S.
@@ -134,7 +136,7 @@ ReadTrace.exe -Iserver_instance_20220211T1319480819_xevent_LogScout_target_0_132
 
 ### B. Using Ostress.exe to stress test a query
 
-Uses Ostress to submit a query against a SQL Server by running 30 simultaneous connections and executing the query 10 times on each connection. For all command-line switches use `Ostress.exe /?`
+Uses Ostress to submit a query against a SQL Server by running 30 simultaneous connections and executing the query 10 times on each connection. For all command-line switches, use `Ostress.exe /?`
 
 ```console
 ostress.exe -E -dmaster -Q"select name from sys.databases" -n30 -r10
