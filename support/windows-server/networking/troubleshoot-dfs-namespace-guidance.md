@@ -1,6 +1,6 @@
 ---
-title: Guidelines of troubleshooting DFSN issues
-description: Introduces general guide troubleshoot scenarios related to DFSN.
+title: Guidance of troubleshooting DFSN
+description: Introduces general guidance of troubleshooting scenarios related to DFSN.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
-# DFSN issues troubleshooting guidelines
+# DFSN troubleshooting guidance
 
 Distributed File System Namespace (DFSN) is a Windows technology designed to provide distributed namespace access to file shares across an enterprise.
 

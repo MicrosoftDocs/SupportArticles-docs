@@ -196,8 +196,8 @@
       href: ./identity/windows-app-cant-start.md
   - name: Active Directory replication
     items:
-    - name: Guidelines of Active Directory replication issues troubleshooting
-      href: ./identity/troubleshoot-adreplication-issues-guidelines.md
+    - name: 'Troubleshooting guidance: Active Directory replication'
+      href: ./identity/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
       href: ./identity/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
@@ -1458,8 +1458,8 @@
       href: ./networking/system-error-67-network-name-cannot-be-found.md
     - name: Troubleshoot DFSN access failures
       href: ./networking/dfsn-access-failures.md
-    - name: Guidelines of DFSN issues troubleshooting
-      href: ./networking/troubleshoot-dfs-namespace-guidelines.md
+    - name: 'Troubleshooting guidance: DFSN'
+      href: ./networking/troubleshoot-dfs-namespace-guidance.md
     - name: Troubleshoot event ID 1020 on a file server
       href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
   - name: Background Intelligent Transfer Service (BITS)
@@ -1576,8 +1576,8 @@
       href: ./networking/how-to-use-netmask-ordering-round-robin-feature.md
     - name: Troubleshoot DNS Event ID 4013
       href: ./networking/troubleshoot-dns-event-id-4013.md
-    - name: Guidelines of DNS issues troubleshooting
-      href: ./networking/troubleshoot-dns-issues-guidelines.md
+    - name: 'Troubleshooting guidance: DNS'
+      href: ./networking/troubleshoot-dns-guidance.md
     - name: Troubleshoot DNS name resolution on the Internet
       href: ./networking/troubleshoot-dns-name-resolution.md
     - name: Verify that SRV DNS records have been created
@@ -1606,8 +1606,8 @@
       href: ./networking/dhcp-servers-report-different-failover-states.md
     - name: PXE clients don't start
       href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
-    - name: Guidelines of DHCP issues troubleshooting
-      href: ./networking/troubleshoot-dhcp-guidelines.md
+    - name: 'Troubleshooting guidance: DHCP'
+      href: ./networking/troubleshoot-dhcp-guidance.md
     - name: Use Netsh utility to export and import DHCP scopes
       href: ./networking/netsh-utility-export-import-dhcp-scopes.md
   - name: FRS
@@ -1682,8 +1682,8 @@
       href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
     - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
       href: ./networking/troubleshoot-directaccess-server-console-networking.md
-    - name: Guidelines of DirectAccess issues troubleshooting
-      href: ./networking/troubleshoot-directaccess-issues-guidelines.md
+    - name: 'Troubleshooting guidance: DirectAccess'
+      href: ./networking/troubleshoot-directaccess-guidance.md
   - name: TCP/IP communications
     items:
     - name: A SMB server is unresponsive

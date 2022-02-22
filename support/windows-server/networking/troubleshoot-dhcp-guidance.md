@@ -1,6 +1,6 @@
 ---
-title: Guidelines of troubleshooting DHCP issues
-description: Introduces general guide troubleshoot scenarios related to DHCP.
+title: Guidance of troubleshooting DHCP
+description: Introduces general guidance of troubleshooting scenarios related to DHCP.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
 ms.technology: networking
 ---
-# DHCP issues troubleshooting guidelines
+# DHCP troubleshooting guidance
 
 Devices must be assigned an IP address to be able to operate in a network. You can assign an IP address manually or automatically. The automatic assignment is handled by the Dynamic Host Configuration Protocol (DHCP) service (Microsoft or third-party server).
 

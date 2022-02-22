@@ -1,6 +1,6 @@
 ---
-title: Guidelines of troubleshooting Active Directory replication issues
-description: Introduces general guide troubleshoot scenarios related to Active Directory replication.
+title: Guidance of troubleshooting Active Directory replication
+description: Introduces general guidance of troubleshooting scenarios related to Active Directory replication.
 ms.date: 03/03/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
-# Active Directory replication issues troubleshooting guidelines
+# Active Directory replication troubleshooting guidance
 
 This article is designed to help get you started troubleshooting Active Directory replication issues.
 

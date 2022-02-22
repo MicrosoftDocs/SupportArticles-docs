@@ -1,6 +1,6 @@
 ---
-title: Guidelines of troubleshooting DNS issues
-description: Introduces general guide troubleshoot scenarios related to DNS.
+title: Guidance of troubleshooting DNS
+description: Introduces general guidance of troubleshooting scenarios related to DNS.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
-# DNS issues troubleshooting guidelines
+# DNS troubleshooting guidance
 
 This solution is designed to help you troubleshoot Domain Name System (DNS) scenarios. DNS troubleshooting can be broken down into server-side and client-side issues.
 

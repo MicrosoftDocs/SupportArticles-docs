@@ -1,6 +1,6 @@
 ---
-title: Guidelines of troubleshooting DirectAccess issues
-description: Introduces general guide troubleshoot scenarios related to DirectAccess.
+title: Guidance of troubleshooting DirectAccess
+description: Introduces general guidance of troubleshooting scenarios related to DirectAccess.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:directaccess, csstroubleshoot
 ms.technology: networking
 ---
-# DirectAccess issues troubleshooting guidelines
+# DirectAccess troubleshooting guidance
 
 This guide provides troubleshooting information for DirectAccess in the Windows operating systems. It's designed to help you identify and resolve problems that are related to DirectAccess.
 
