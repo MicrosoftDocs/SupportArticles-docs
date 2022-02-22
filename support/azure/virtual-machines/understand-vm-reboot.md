@@ -38,11 +38,11 @@ If Azure has further information about the root cause of a platform-initiated un
 
 [Resource Health alerts](/azure/service-health/resource-health-alert-monitor-guide) are sent based on the [activity Log](/azure/azure-monitor/essentials/activity-log) information. In some cases, VM downtimes may not show in the activity log. If the downtime doesn't show in the activity log, Resource Health alerts won't be sent for the downtime. The downtime is still visible in Resource Health.
 
-Cases where VM downtimes don't show in the activity log include:
+Here are the cases where VM downtimes don't show in the activity log:
 
-- When a VM is created, or migrated to a new host, Azure platform can't display VM state correctly. The VM state changes to Unknown and it changes to Available only after all network connectivity and node processes are established. The prolonged period of the Unknown state is filtered out of the activity log.
+- When a VM is created or migrated to a new host, Azure platform doesn't display VM state correctly and the state changes to Unknown. Only after all network connectivity and node processes are established, the VM state changes to Available. The prolonged period of the Unknown state is filtered out of the activity log.
 - When the VM availability state changes from Available to Unavailable and then goes back to Available within 35 seconds, the downtime doesn't show in the activity log. This case won't occur if a correlated downtime is sent within 15 minutes before the occurrence of the first transition. 
-- If the VM health begins in a state, changes to Unknown, then goes back to the original state, the intermittent Unknown state and related transitions are filtered out of the activity Log.
+- If the VM health changes from a state to Unknown and then goes back to the original state, the intermittent Unknown state and related transitions are filtered out of the activity log.
 
 The VM downtimes that don't show in the activity log are filtered on the Azure platform side to prevent transient errors from showing incorrect downtimes to customers. With ongoing investments in VM health quality, the filters may no longer be necessary and may cause quick changes in VM health to remain unreported. Microsoft is working on a phase-out plan to deliver the best customer experience.
 
