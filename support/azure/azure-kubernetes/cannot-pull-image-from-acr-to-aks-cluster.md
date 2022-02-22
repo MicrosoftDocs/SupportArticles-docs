@@ -54,11 +54,16 @@ This section helps you troubleshoot the following most common errors that are di
 - [403 Forbidden error](#403forbiddenerror)
 - [443 timeout error](#443timeouterror)
 
+> [!NOTE]
+> The "403 Forbidden" error and "443 timeout" error only occur when you [connect privately to ACR by using Azure Private Link](/azure/container-registry/container-registry-private-link).
+
 ### <a id="401unauthorizederror"></a>401 Unauthorized error
 
 An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. No matter what the identity is, the proper authorization that's used to pull an image from ACR is necessary. Otherwise, you may get the following "401 Unauthorized" error:
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch oauth token: unexpected status: 401 Unauthorized
+
+The following solutions help you resolve this error. Solution 2 to 4 are applicable only to [AKS clusters which use service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli).
 
 #### Solution 1: Ensure AcrPull role assignment is created for identity
 
@@ -74,8 +79,7 @@ To check if the AcrPull role assignment is created, use one of the following way
 
 - Check in the Azure portal by selecting **Azure Container Registry** > **Access control (IAM)** > **Role assignments**. For more information, see [List Azure role assignments using the Azure portal](/azure/role-based-access-control/role-assignments-list-portal).
 
-> [!NOTE]
-> Besides the AcrPull role, some [built-in roles](/azure/role-based-access-control/built-in-roles) and [custom roles](/azure/role-based-access-control/custom-roles) can also contain the "[Microsoft.ContainerRegistry](/azure/role-based-access-control/resource-provider-operations#microsoftcontainerregistry)/registries/pull/read" action. Check them if you have any.
+Besides the AcrPull role, some [built-in roles](/azure/role-based-access-control/built-in-roles) and [custom roles](/azure/role-based-access-control/custom-roles) can also contain the "[Microsoft.ContainerRegistry](/azure/role-based-access-control/resource-provider-operations#microsoftcontainerregistry)/registries/pull/read" action. Check them if you have any.
 
 If the AcrPull role assignment isn't created, create it by [configuring ACR integration for the AKS cluster](/azure/aks/cluster-container-registry-integration?tabs=azure-cli#configure-acr-integration-for-existing-aks-clusters) with the following command:
 
@@ -84,9 +88,6 @@ az aks update -n <myAKSCluster> -g <myResourceGroup> --attach-acr <acr-resource-
 ```
 
 #### Solution 2: Ensure service principal isn't expired
-
-> [!NOTE]
-> This solution is applicable only to [AKS clusters which use service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli).
 
 Ensure that the secret of the service principal that's associated with the AKS cluster isn't expired. To check the expiration date of your service principal, run the following commands:
 
@@ -102,9 +103,6 @@ For more information, see [Check the expiration date of your service principal](
 If the secret is expired, [update the credentials for the AKS cluster](/azure/aks/update-credentials).
 
 #### Solution 3: Ensure AcrPull role is assigned to correct service principal
-
-> [!NOTE]
-> This solution is applicable only to [AKS clusters which use service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli).
 
 In some cases, for example, when the service principal of the AKS cluster is replaced with a new one, the ACR role assignment still refers to the old service principal. To ensure that the ACR role assignment refers to the correct service principal, follow the steps:
 
@@ -124,9 +122,6 @@ In some cases, for example, when the service principal of the AKS cluster is rep
 
 #### Solution 4: Ensure service principal is correct and secret is valid
 
-> [!NOTE]
-> This solution is applicable only to [AKS clusters which use service principal](/azure/aks/kubernetes-service-principal?tabs=azure-cli).
-
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), ensure that the associated service principal is correct and the secret is still valid.
 
 ### <a id="imagenotfounderror"></a>Image not found error
@@ -137,15 +132,11 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 If you get this error, ensure that the image name is fully correct. You should check the registry name, registry login server, the repository name, and the tag. A common mistake is that the login server is specified as "azureacr.io" instead of "azurecr.io".
 
-> [!NOTE]
-> When the image name isn't fully correct, the [401 Unauthorized error](#401unauthorizederror) may also occur because AKS always tries anonymous pull no matter whether the container registry has enabled anonymous pull access.
+When the image name isn't fully correct, the [401 Unauthorized error](#401unauthorizederror) may also occur because AKS always tries anonymous pull no matter whether the container registry has enabled anonymous pull access.
 
 ### <a id="403forbiddenerror"></a>403 Forbidden error
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: unexpected status: 403 Forbidden
-
-> [!NOTE]
-> This error only occurs when you [connect privately to ACR by using Azure Private Link](/azure/container-registry/container-registry-private-link).
 
 #### Solution: Ensure AKS virtual network link is set in ACR Private DNS zone
 
@@ -161,9 +152,6 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 ### <a id="443timeouterror"></a>443 timeout error
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/<repository\:tag>": failed to do request: Head "https://\<acrname>.azurecr.io/v2/\<repository>/manifests/v1": dial tcp \<acrprivateipaddress>:443: i/o timeout
-
-> [!NOTE]
-> This error only occurs when you [connect privately to ACR by using Azure Private Link](/azure/container-registry/container-registry-private-link).
 
 #### Solution 1: Ensure VNET peering is used
 
