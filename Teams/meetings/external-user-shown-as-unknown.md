@@ -19,15 +19,16 @@ search.appverid:
 Consider the following scenario:
 
 - An external (federated) user joins meetings and calls by using the Teams client.
-- In the [Teams admin center](https://admin.teams.microsoft.com/), you open the Call Analytics for the user:
+- In the [Teams admin center](https://admin.teams.microsoft.com/), you access the call analytics information for the user:
   
-  Under **Users** > **Manage Users**, you select the user, and then select the **Meetings & calls** tab on the user's profile page.
-- You select a meeting ID to view details.
+     - Under **Users** > **Manage Users**, you select the user.
+     - On the user's profile page, you select the **Meetings & calls** tab.
+- You select a meeting ID to view the details.
 
-In this scenario, the username is displayed as **Unknown** on the **Overview** page. The following screenshot shows an example:
+In this scenario, the username is displayed as **Unknown** on the **Overview** page. The following screenshot shows an example.
 
-:::image type="content" source="media/external-user-shown-as-unknown/user-name-unknown.png" alt-text="Screenshot that shows the user name is displayed as Unknown.":::
+:::image type="content" source="media/external-user-shown-as-unknown/user-name-unknown.png" alt-text="Screenshot that shows the username displayed as Unknown.":::
 
-This behavior is by design. On the meeting details page, the Teams admin center UI uses the Microsoft Graph API to query the Azure Active Directory tenant for user properties such as displayName. As external users aren't available for queries, the username is displayed as **Unknown**.
+This behavior is by design. On the meeting details page, the Teams admin center UI uses the Microsoft Graph API to query the Azure Active Directory (Azure AD) tenant for user properties, such as **displayName**. Because external users aren't available for queries, the username is displayed as **Unknown**.
 
 For more information about call analytics, see [Set up call analytics for Microsoft Teams](/microsoftteams/set-up-call-analytics).
