@@ -5,7 +5,7 @@ ms.date: 22/02/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
-author: cobibi 
+author: cobibi, prmadhes-msft, pijocoder 
 ms.author: v-jayaramanp
 ---
 # Troubleshoot high-CPU-usage issues in SQL Server
