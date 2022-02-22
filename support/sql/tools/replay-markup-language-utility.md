@@ -4,7 +4,6 @@ description: This article describes a group of utilities that support profession
 ms.date: 22/02/2022
 ms.custom: sap:Tools
 ms.reviewer: sureshka, jopilov, toddhayn, troymoen
-author: 
 ms.author: v-jayaramanp
 ms.topic: article
 ms.prod: sql
