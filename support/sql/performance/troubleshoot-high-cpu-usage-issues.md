@@ -6,7 +6,7 @@ ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
 author: cobibi 
-ms.author: v-yunhya
+ms.author: v-jayaramanp
 ---
 # Troubleshoot high-CPU-usage issues in SQL Server
 
@@ -314,5 +314,5 @@ OPTION (RECOMPILE)
 ## See also
 
 - [High CPU or memory grants may occur with queries that use optimized nested loop or batch sort](decreased-perf-high-cpu-optimized-nested-loop.md)
-- [Updates and configuration for workloads](recommended-updates-configuration-options.md) (SQL Server 2014 and SQL Server 2012 versions)
-- [Recommended updates and configuration options for SQL Server 2016 and later versions with high-performance workloads](recommended-updates-configuration-workloads.md)
+- [Recommended updates and configuration options for SQL Server with high-performance workloads](recommended-updates-configuration-options.md)
+- [Recommended updates and configuration options for SQL Server 2017 and 2016 with high-performance workloads](recommended-updates-configuration-workloads.md)
