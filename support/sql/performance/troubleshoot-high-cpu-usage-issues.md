@@ -54,7 +54,7 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-  If `% User Time` is consistently greater than 90 percent, it means that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software, other drivers, or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+If `% User Time` is consistently greater than 90 percent, it means that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software, other drivers, or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -195,7 +195,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 - Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the "good enough" common plan is the one that's already in cache. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
 
-- Using the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command is a temporary solution until the application code is fixed. You can use `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the Person.Person table in AdventureWorks, you can use this query to find the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query result.
+- Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command as a temporary solution until the application code is fixed. You can use the `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the `Person.Person` table in AdventureWorks, you can use this query to find the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query result.
 
   ```sql
   SELECT text, 'DBCC FREEPROCCACHE (0x' + CONVERT(VARCHAR (512), plan_handle, 2) + ')' AS dbcc_freeproc_command FROM sys.dm_exec_cached_plans
@@ -206,7 +206,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 ## Step 6: Disable heavy tracing
 
-Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects SQL Server performance and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
+Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
 
 Run the following queries to identify active XEvent or Server traces:
 
@@ -276,10 +276,9 @@ INNER JOIN sys.trace_xe_event_map xemap
   ON evt.event_name = xemap.xe_event_name
 GO
 ```
-
 ## Step 7: Fix SOS_CACHESTORE spinlock contention
 
-If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often evicted on unplanned query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
+If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often removed on unplanned query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using the SQL Server Configuration Manager.
 
 [FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68).
 
@@ -289,7 +288,7 @@ If you are using a virtual machine, make sure that you aren't overprovisioning C
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to help you determine how many queries have exceeded a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values of the two variables to match your environment.
+If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to find the number of queries that have exceeded a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values of the two variables to match your environment.
 
 ```sql
 -- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
