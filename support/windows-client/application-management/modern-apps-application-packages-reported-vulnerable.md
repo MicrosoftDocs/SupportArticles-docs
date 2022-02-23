@@ -1,6 +1,6 @@
 ---
 title: Modern apps or application packages are reported as vulnerable
-description: Provides resolutions for the issue in which modern apps or application packages are reported by vulnerability scans.
+description: Provides resolutions for the issue in which modern apps or application packages are reported by vulnerability scanning.
 ms.date: 02/21/2022
 author: Deland-Han
 ms.author: delhan
@@ -15,11 +15,11 @@ ms.technology: windows-client-application-compatibility
 ---
 # Modern apps or application packages are reported as vulnerable
 
-This article provides resolutions for the issue in which modern apps or application packages are reported by vulnerability scans.
+This article provides resolutions for the issue in which modern apps or application packages are reported by vulnerability scanning.
 
 _Original KB number:_ &nbsp; 5011324
 
-Some modern apps or application packages are reported as vulnerable by system vulnerability scans, and can't be resolved by updating to the latest version.
+Some modern apps or application packages are reported as vulnerable by system vulnerability scanning, and can't be resolved by updating to the latest version.
 
 ## Multiple app folders in the system
 
@@ -36,10 +36,10 @@ In these scenarios, there are multiple versions of the app per users in the syst
 
 ## Update the app for all users or remove the old packages
 
-To resolve this issue, use the following methods appropriately:
+To resolve this issue, use one or more of the following methods:
 
-- Ensure the app is updated for all users in the system.
-- Remove the old packages (`.appx`) by using the following cmdlets:
+- Ensure that the app is updated for all users in the system.
+- Remove the old packages (`.appx`) by using one of the following cmdlets:
   - The Deployment Image Servicing and Management (DISM) cmdlet [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage):
 
     ```powershell
@@ -54,4 +54,4 @@ To resolve this issue, use the following methods appropriately:
 
 - Delete the user profiles pointing to the old version of the app.
 
-To confirm that the app is updated for all users and the old packages are removed, run the scan again or check the *C:\\Program Files\\WindowsApps* folder. If you don't have the permission to check the folder, create a copy in another location and check inside.
+To confirm that the app is updated for all users and the old packages are removed, scan again or check the *C:\\Program Files\\WindowsApps* folder. If you don't have the permission to check the folder, create a copy in another location and check inside.
