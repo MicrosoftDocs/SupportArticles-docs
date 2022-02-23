@@ -15,11 +15,11 @@ author: pijocoder
 ASYNC_NETWORK_IO is a wait type that can occurs when the database client application fetches results from SQL Server and SQL Server is waiting for acknowledgment that all the results were received. When SQL Server produces result sets, it needs to send them to client application by putting the results in an output buffer. The client then fetches them from the output buffer. If client application stops or doesn't fetch the results fast enough, SQL Server has to wait before sending more results. This wait will show up as ASYNC_NETWORK_IO.
 
 Excessive waits in this category cause two issues.
-	1. The query or queries will slow down; total duration of the query will be longer. 
-	2. When SQL Server waits for client(s) to fetch results, it cannot release locks acquired. This may cause blocking of other sessions on the SQL Server.
+1. The query or queries will slow down; total duration of the query will be longer. 
+1. When SQL Server waits for client(s) to fetch results, it cannot release locks acquired. This may cause blocking of other sessions on the SQL Server.
 
 
-## Causes & Resolutions
+## Causes & resolutions
 
 The following sections provide a list of common causes for this wait type and steps you can take to resolve them. 
 
