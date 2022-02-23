@@ -21,8 +21,8 @@ Consider the following scenario:
 - An external (federated) user joins meetings and calls by using the Teams client.
 - In the [Teams admin center](https://admin.teams.microsoft.com/), you access the call analytics information for the user:
   
-     - Under **Users** > **Manage Users**, you select the user.
-     - On the user's profile page, you select the **Meetings & calls** tab.
+     1. Under **Users** > **Manage Users**, you select the user.
+     1. On the user's profile page, you select the **Meetings & calls** tab.
 - You select a meeting ID to view the details.
 
 In this scenario, the username is displayed as **Unknown** on the **Overview** page. The following screenshot shows an example.
