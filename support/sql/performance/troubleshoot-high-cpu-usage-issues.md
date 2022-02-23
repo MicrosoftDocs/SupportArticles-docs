@@ -89,7 +89,7 @@ ORDER BY r.cpu_time DESC
 
 ## Step 3: Update statistics
 
-After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries. You can use the following stored procedure to update the statistics of all user-defined and internal tables in the current database. 
+After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries. You can use the `sp_updatestats` system stored procedure to update the statistics of all user-defined and internal tables in the current database, as in the following example. For more information, see [sp_updatestats](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).
 
 ```sql
 exec sp_updatestats
