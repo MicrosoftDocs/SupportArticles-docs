@@ -136,7 +136,7 @@ TCP/IP connection to a host appears to have stopped.
 
 Cause: Either data is blocked in TCP and UDP queues or there are network or user-level software delay problems.
 
-Troubleshooting: Use the **netstat -a** command to show the status of all activity on TCP and UDP ports on the local computer.  
+Troubleshooting: Use the `netstat -a` command to show the status of all activity on TCP and UDP ports on the local computer.  
 The state of a good TCP connection is established while having zero (0) bytes in the send and receive queues. If data is blocked in either queue, or if the state is irregular, the connection is probably at fault. If not, you're probably experiencing a network or user-level software delay.
 
 ### Issue 2
@@ -153,7 +153,7 @@ System error 53 occurred.
 
 Cause: System error 53 is returned if name resolution fails for a particular computer name when the `net use` command is used.
 
-Troubleshooting: If the computer is on the local subnet, verify that the name is spelled correctly and that the target computer is also running TCP/IP. If the computer isn't on the local subnet, make sure that its name and IP address mapping are available in the Lmhosts file or the WINS database. If all TCP/IP elements appear to be installed properly, use the **ping** command together with the remote computer to verify that its TCP/IP software is working.
+Troubleshooting: If the computer is on the local subnet, verify that the name is spelled correctly and that the target computer is also running TCP/IP. If the computer isn't on the local subnet, make sure that its name and IP address mapping are available in the Lmhosts file or the WINS database. If all TCP/IP elements appear to be installed properly, use the `ping` command together with the remote computer to verify that its TCP/IP software is working.
 
 ### Issue 4
 
@@ -161,8 +161,8 @@ Can’t connect to a specific server.
 
 Cause: Either NetBIOS name resolution isn't resolving the name or the wrong IP address is being resolved.
 
-Troubleshooting: Use the **nbtstat -n** command on the server to determine which names the server registered on the network. The computer name of the computer that you're trying to connect to should be on the displayed list. If the name isn't listed, try one of the other unique computer names that are displayed by **nbtstat**.
-If the name that's used by a remote computer is the same as the name that's displayed by the **nbtstat -n** command, make sure that the remote computer has an entry for the server name that's on the WINS server or in its Lmhosts file.
+Troubleshooting: Use the `nbtstat -n` command on the server to determine which names the server registered on the network. The computer name of the computer that you're trying to connect to should be on the displayed list. If the name isn't listed, try one of the other unique computer names that are displayed by `nbtstat`.
+If the name that's used by a remote computer is the same as the name that's displayed by the `nbtstat -n` command, make sure that the remote computer has an entry for the server name that's on the WINS server or in its Lmhosts file.
 
 ### Issue 5
 
@@ -171,7 +171,7 @@ Unable to add a default gateway.
 Cause: The IP address of the default gateway isn't on the same IP network ID as your IP address.
 
 Troubleshooting: Determine whether the default gateway is located on the same logical network as the network adapter of the computer by comparing the IP address of the default gateway with the network IDs of any of the network adapters of the computer.  
-For example, a computer has a single network adapter that's configured with an IP address of 192.168.0.33 and a subnet mask of 255.255.0.0. This requires that the default gateway to be of the form "192.168.*y*.*z*" because the network ID portion of the IP interface is 192.168.0.0.
+For example, a computer has a single network adapter that's configured with an IP address of 192.168.0.33 and a subnet mask of 255.255.0.0. This requires that the default gateway to be of the form "192.168./<y/>./<z/>" because the network ID portion of the IP interface is 192.168.0.0.
 
 ## Reference
 

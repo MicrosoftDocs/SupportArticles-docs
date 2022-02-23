@@ -23,8 +23,8 @@ TCP settings are predefined in modern Windows operating systems. Use the [Get-Ne
 
 Tips to enhance the throughput:
 
-- Make sure there are no underlying network issues (packet loss).
-- Enable advanced properties of NIC for performance features (such as Jumbo frames, RSS/VMQ, offload features, and RSC), except if there's an underlying network compatibility issue or for troubleshooting purpose.
+- Make sure there are no underlying network issues, such as packet loss.
+- Enable advanced properties of network interface for performance features (such as Jumbo frames, RSS/VMQ, offload features, and RSC), except if there's an underlying network compatibility issue or for troubleshooting purpose.
 - Make sure the TCP is configured to use autotuning level to normal.
 - Use Performance Monitor analysis to make sure there's no CPU or storage bottleneck.
 - Select security features based on the actual organizations' requirements.
@@ -32,7 +32,7 @@ Tips to enhance the throughput:
 
 See this page to learn more about [Bottlenecks for TCP throughput](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#bottlenecks-for-tcp-throughput)
 
-On how to create a baseline, visit the following URL: [How to create a baseline](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#how-to-create-a-baseline)
+For more information on how to create a baseline, see [How to create a baseline](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#how-to-create-a-baseline)
 
 When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues. [Use the ctsTraffic tool to analyze the network trace](/troubleshoot/windows-server/networking/troubleshooting-tcpip-performance-underlying-network#use-the-ctstraffic-tool-to-analyze-the-network-trace)
 

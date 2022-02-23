@@ -15,81 +15,56 @@ ms.technology: windows-server-deployment
 ---
 # Windows Server update troubleshooting guidance
 
-This solution is designed to get you started on Windows Update troubleshooting scenarios. Most users are able to resolve their issue using the solutions mentioned below
+This solution is designed to get you started on Windows Update troubleshooting scenarios.
 
-## Troubleshooting checklist
+## General troubleshooting
 
-For Windows 7: run the System Readiness (Checksur tool) - Windows 7,  Windows 2008 R2 or Windows 2008 SP2:  
-[Fix errors that are found in the CheckSUR log file](fix-windows-update-errors.md#how-to-fix-errors-that-are-found-in-the-checksur-log-file)
+We recommend using DISM or System Update Readiness tool to troubleshoot Windows Update issue.
 
-For Windows 8 and later version of Windows: run this command from an administrative CMD prompt:  
-`Dism /online /cleanup-image /restorehealth`
+See [Fix Windows Update errors by using the DISM or System Update Readiness tool](fix-windows-update-errors.md) for more information.
 
-Pending Reboot:  If the computer hasn't been restarted, pending actions might have to be completed.
-
-Services Stack update: Install the latest servicing stack update. [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001).
-
-Fix Windows file corruption: See [Fix Windows file corruption](fix-windows-update-errors.md#resolution-for-windows-81-windows-10-and-windows-server-2012-r2).
-
-Install the update package manually: Download the update package and try to install the update manually. Here's how to do this:
-
-1. Open [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx).
-2. In the search box, type the update number that you want to download and then select Search.
-3. Find the update that applies to your operating system in the search results and select Add to add the update to your basket.
-4. Select view basket to open your basket.
-5. Select Download to download the update in your basket.
-6. Select Browse to choose a location for the update you are downloading, and then select Continue.
-7. Select **Close** when the download process is done. Browse to the location that you specified for the download.
-8. Open the folder that contains the update package and double-select the update package to install the update.
-
-## Common errors and solutions
-
-### Issue 1
+## Issue 1
 
 > The update is not applicable to your computer.
 
-#### Cause 1
+### Cause 1
 
 Update is superseded.
 
-Troubleshooting:  
-Check that the package that you are installing contains newer versions of the binaries. Alternatively, check that the package is superseded by another new package.
+Troubleshooting: Check that the package that you are installing contains newer versions of the binaries. Alternatively, check that the package is superseded by another new package.
 
-#### Cause 2
+### Cause 2
 
 Update is already installed.
 
-Troubleshooting:  
-Verify that the package that you are trying to install isn't already installed.
+Troubleshooting: Verify that the package that you are trying to install isn't already installed.
 
-#### Cause 3
+### Cause 3
 
 Wrong update for architecture.
 
-Troubleshooting:  
-Verify that the package that you're trying to install matches the Windows version that you are using. The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates cannot be installed on Windows Server 2012 R2-based computers.  
+Troubleshooting: Verify that the package that you're trying to install matches the Windows version that you are using. The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates cannot be installed on Windows Server 2012 R2-based computers.  
 Verify that the package you want to install matches the processor architecture of the Windows version that you are using. For example, an x86-based update can't be installed on x64-based installations of Windows.
 
-#### Cause 4
+### Cause 4
 
 Missing prerequisite update.
 
-Troubleshooting:  
-Read the package’s related article to find out whether the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424).  
+Troubleshooting: Read the package’s related article to find out whether the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424).  
 To determine if these prerequisite updates are installed, run this PowerShell command:  
 `get-hotfix KB3173424, KB2919355, KB2919442`  
 If the updates are installed, the command returns the installed date in the InstalledOn section of the output.
 
-### Issue 2
+## Issue 2
 
-Updates aren't downloading from WSUS or Configuration Manager
+Updates aren't downloading from Windows Server Update Services (WSUS) or Configuration Manager.
 
 Error message:  
 > Failed to connect to Mux due to network or cert errors  
 
 Troubleshooting: Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.)
 
-### Issue 3
+## Issue 3
 
 The device isn't receiving an update that you deployed.
 
@@ -107,7 +82,7 @@ Troubleshooting:
    Get-WmiObject -Class Win32\_Product \| Where-Object {$\_.Name -amatch "Microsoft Update Health Tools"}
    ```
 
-### Issue 4
+## Issue 4
 
 The device is receiving an update that you didn't deploy.
 
@@ -116,7 +91,7 @@ Troubleshooting:
 1. Check that the device is scanning the Windows Update service and not a different endpoint. If the device is scanning for updates from a WSUS endpoint, for example, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 2. Feature updates only: Check that the device is successfully enrolled in feature update management by the deployment service. A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
 
-## Windows Server Update Services (WSUS) Troubleshooting  
+## WSUS Troubleshooting  
 
 ### WSUS connection failures
 

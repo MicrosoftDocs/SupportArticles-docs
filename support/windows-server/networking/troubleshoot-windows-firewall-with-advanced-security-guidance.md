@@ -15,9 +15,11 @@ ms.technology: networking
 ---
 # Windows Firewall with Advanced Security troubleshooting guidance
 
+This article is designed to help you troubleshoot issues that are related to Windows Firewall with Advanced Security.
+
 ## Considerations for firewall rules
 
-Only one firewall rule is used to determine if a network packet is allowed or dropped. If the network packet matches multiple rules, then the rule that is used is selected using the following precedence:
+Only one firewall rule is used to determine if a network packet is allowed or dropped. If the network packet matches multiple rules, the rule that is used is selected using the following precedence:
 
 1. Rules that specify the action Allow if Secure and also the option Block Override
 2. Rules that specify the action Block
@@ -36,26 +38,40 @@ By default, the firewall rules in the groups identified in the following list ar
 
 ## Enable audit events
 
-use **auditpol.exe** to modify audit polices of the local computer. You can use the auditpol command-line tool to enable or disable the various categories and subcategories of events and then view the events in the Event Viewer snap-in.
+Use **auditpol.exe** to modify audit polices of the local computer. You can use the `auditpol` command-line tool to enable or disable the various categories and subcategories of events and then view the events in the Event Viewer snap-in.
 
-1. To get the list of event categories recognized by the auditpol tool, type the following at the command prompt: **auditpol.exe /list /category**
-2. To get the list of subcategories under a category (this example uses the category Policy Change), type the following at the command prompt: **auditpol.exe /list /category:"Policy Change"**
-3. To set a category and a subcategory to enable, type the following at the command prompt: **auditpol.exe /set /category:"CategoryName" /SubCategory:"SubcategoryName"**
+- To get the list of event categories recognized by the auditpol tool, run the following command at the command prompt:
+
+  ```console
+  auditpol.exe /list /category
+  ```
+
+- To get the list of subcategories under a category (this example uses the category Policy Change), run the following command at the command prompt: 
+
+  ``` console
+  auditpol.exe /list /category:"Policy Change"
+  ```
+
+- To set a category and a subcategory to enable, type the following at the command prompt: 
+
+  ```console
+  auditpol.exe /set /category:"CategoryName" /SubCategory:"SubcategoryName"
+  ```
 
 ## Configure the firewall log file for a profile
 
-1. In the console tree of the Windows Firewall with Advanced Security snap-in, click Windows Firewall with Advanced Security, and then click Properties in the Actions pane.
-2. Click the tab of the profile for which you want to configure logging (Domain, Private, or Public), and then click Customize.
+1. In the console tree of the Windows Firewall with Advanced Security snap-in, select **Windows Firewall with Advanced Security**, and then select **Properties** in the **Actions** pane.
+2. Select the tab of the profile for which you want to configure logging (Domain, Private, or Public), and then select **Customize**.
 3. Specify a name and location.
 4. Specify a log file size limit (Between 1 and 32767 Kbytes).
-5. Click Yes for Log dropped packets.
-6. Click Yes for Log successful connections and then click OK.
+5. Select **Yes** for Log dropped packets.
+6. Select **Yes** for Log successful connections and then select OK.
 
 ## Create network statistics and task list text files
 
-1. At the command prompt, type **netstat -ano** > **netstat.txt**, and then press Enter.
-2. At the command prompt, type **tasklist** > **tasklist.txt**, and then press Enter.  
-   If you want to create a text file for services rather than programs, at the command prompt, type **tasklist /svc** > **tasklist.txt**.
+1. At the command prompt, type `netstat -ano > netstat.txt`, and then press Enter.
+2. At the command prompt, type `tasklist > tasklist.txt`, and then press Enter.  
+   If you want to create a text file for services rather than programs, at the command prompt, type `tasklist /svc > tasklist.txt`.
 3. Open the tasklist.txt and the netstat.txt files.
 4. In the tasklist.txt file, write down the Process Identifier (PID) for the process you are troubleshooting. Compare the PID with that in the Netstat.txt file. Write down the protocol that is used. The information about the protocol used can be useful when reviewing the information in the firewall log file.
 

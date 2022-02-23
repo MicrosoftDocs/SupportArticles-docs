@@ -100,7 +100,9 @@ Error code:
 Error message:  
 > MUX is Unhealthy (Common case is BGPRouter disconnected)
 
-Troubleshooting: Credible Border Gateway Protocol (CBGP) peer on the Routing and Remote Access Service (RRAS) (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource and BGP peer (ToR or RRAS VM).
+Troubleshooting:
+
+Credible Border Gateway Protocol (CBGP) peer on the Routing and Remote Access Service (RRAS) (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource and BGP peer (ToR or RRAS VM).
 
 ### Error 2
 
@@ -113,7 +115,9 @@ Error message:
 
 > Failed to connect to Mux due to network or cert errors
 
-Troubleshooting: Check the numeric code that's provided in the error message code. This corresponds to the winsock error code. Certificate errors are granular (for example, the certificate cannot be verified, or the certificate is not authorized).
+Troubleshooting:
+
+Check the numeric code that's provided in the error message code. This corresponds to the winsock error code. Certificate errors are granular (for example, the certificate cannot be verified, or the certificate is not authorized).
 
 ### Error 3
 
@@ -136,7 +140,8 @@ Error code:
 Error message:  
 > Failed to configure the Distributed router settings on the host vNic
 
-Troubleshooting:  
+Troubleshooting:
+
 TCPIP stack error. This might require cleaning up the Peer Authentication (PA) and Destination Rule (DR) Host Virtual Network Interface Cards (VNICs) on the server on which this error was reported.
 
 ### Error 5
@@ -150,7 +155,8 @@ Error message:
 - > Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors
 - > Failed to push virtual network (VNet) policies for a VmNic due to certificate errors or connectivity errors
 
-Troubleshooting:  
+Troubleshooting:
+
 Check whether the appropriate certificates were deployed (the certificate subject name must match the FQDN of the host). Also, verify the host connectivity with the network controller.
 
 ## Reference
