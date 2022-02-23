@@ -1,5 +1,5 @@
 ---
-title: Removal of the U.S. Federal Common Policy CA certificate from the Microsoft Trusted Root Program
+title: Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 description: Discusses the removal of U.S. "G1" certificate and provides solutions to avoid issues.
 localization_priority: medium
 audience: itpro
@@ -13,7 +13,7 @@ ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
 ---
-# Removal of the U.S. Federal Common Policy CA certificate from the Microsoft Trusted Root Program
+# Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 
 This article discusses the removal of the U.S. Federal Common Policy CA certificate and provides solutions to avoid issues that will occur if enterprises don't transition to the Federal Common Policy CA G2 root certificate by March 29, 2022.
 
