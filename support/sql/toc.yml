@@ -163,8 +163,6 @@
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
       href: admin/manage-error-log.md
-    - name: Memory-optimized temppdb metadata out-of-memory errors
-      href: admin/memory-optimized-tempdb-out-of-memory.md
     - name: Non-yielding error if the lock pages in memory option is disabled
       href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
@@ -548,6 +546,21 @@
     href: master-data-services/mds-entity-based-staging-fail.md
   - name: MDS Validate Version command fails
     href: master-data-services/mds-validate-version-command-fails.md
+
+- name: Connection Issues
+  items:
+  - name: Common Connection Issues
+    items:
+    - name: Troubleshooting for "Login Failed for User" error messages
+      href: connect/login-failed-for-user.md
+  - name: Connectivity How Tos
+    items: 
+    - name: Using Kerberos Configuration Manager for SQL Server
+      href: connect/using-kerberosmngr-sqlserver.md
+    - name: How to check SQL Dynamic vs. Static ports
+      href: connect/static-or-dynamic-port-config.md
+    - name: Using the PortQryUI Tool with SQL Server
+      href: connect/using-portqrytool-sqlserver.md
 
 - name: MDAC and ADO
   items:
