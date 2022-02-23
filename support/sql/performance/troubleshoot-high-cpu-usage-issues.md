@@ -95,6 +95,8 @@ After you identify the queries that have the highest CPU consumption, [update st
 exec sp_updatestats
 ```
 
+> [!NOTE]
+> The `sp_updatestats` system stored procedure runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database. For regular maintenance, you should make sure that regularly schedule maintenance is keeping statistics up to date. Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold. 
 If SQL Server is still using high CPU, go to the next step.
 
 ## Step 4: Add potentially missing indexes
