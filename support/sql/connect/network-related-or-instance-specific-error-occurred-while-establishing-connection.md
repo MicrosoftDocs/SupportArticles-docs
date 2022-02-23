@@ -249,7 +249,7 @@ The above indicates that `prodsql` is an alias for a SQL Server called `prod_sql
 ### Option 3: Check aliases in SQL Server Client Network Utility
 
 1. Open [SQL Server Client Network Utility](/previous-versions/windows/desktop/odbc/dn170535(v%3dvs.85)) by typing *cliconfg.exe* in your Run command.
-2. Follow step 2 in [Check aliases in SQL Server Configuration Manager](#check-aliases-in-sql-server-configuration-manager).
+2. Follow step 2 in [Option 2: Check aliases in SQL Server Configuration Manager](#option-2-check-aliases-in-sql-server-configuration-manager).
 
 ## Step 5: Verify the firewall configuration
 
@@ -383,7 +383,7 @@ If you can't install Management Studio, you can test the connection by using the
    |Default instance|`tcp:<computer name>`|`tcp:ACCNT27`|
    |Named Instance|`tcp:<computer name/instance name>`|`tcp:ACCNT27\PAYROLL`|
 
-1. If you can connect by using shared memory but not TCP, you must fix the TCP problem. The most likely issue is that TCP isn't enabled. To enable TCP, see [Step 6: Verify the enabled protocols](#step-6-verify-the-enabled-protocols).
+1. If you can connect by using shared memory but not TCP, you must fix the TCP problem. The most likely issue is that TCP isn't enabled. To enable TCP, see [Step 6: Verify the enabled protocols on SQL Server](#step-6-verify-the-enabled-protocols-on-sql-server).
 1. If your goal is to connect by using an account other than an administrator account, once you can connect as an administrator, try the connection again to use the Windows Authentication login or the SQL Server Authentication login that the client application is using.
 
 ## Step 9: Test remote connection
@@ -394,7 +394,7 @@ Once you can connect by using TCP on the same computer, it's time to try to conn
 
     - `ping` of the IP address doesn't work, indicating a general TCP configuration problem. Go back to the section [Step 7: Test TCP/IP connectivity](#step-7-test-tcpip-connectivity).
 
-    - SQL Server isn't listening on the TCP protocol. Go back to the section [Step 6: Verify the enabled protocols on SQL Server](#step-6-verify-the-enabled-protocols).
+    - SQL Server isn't listening on the TCP protocol. Go back to the section [Step 6: Verify the enabled protocols on SQL Server](#step-6-verify-the-enabled-protocols-on-sql-server).
 
     - SQL Server is listening on a port other than the port that you specified. Go back to the section [Get the TCP port](#get-the-tcp-port-of-the-instance).
 

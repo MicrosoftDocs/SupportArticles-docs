@@ -67,7 +67,7 @@ The following topics provide details on various tools and procedures that are us
 
   Provides steps to check whether SQL Server is listening on dynamic or static ports.
 
-- [Use Kerberos Configuration Manager to fix SPN issues](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).
+- [Use Kerberos Configuration Manager to fix SPN issues](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
   Describes how to use Kerberos Configuration Manager to fix Service Principal Name (SPN) issues.
 
