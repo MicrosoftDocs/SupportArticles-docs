@@ -976,6 +976,8 @@
       href: ./deployment/multicast-deployment-fails-from-wds.md
   - name: Servicing
     items:
+    - name: 'Troubleshooting guidance: Windows Server update'
+      href: ./deployment/troubleshoot-windows-server-update-guidance.md
     - name: Can't connect to WSUS Administration Website
       href: ./deployment/cannot-connect-to-wsus-administration-website.md
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -1806,6 +1808,8 @@
       href: ./networking/credentials-prompt-access-webdav-fqdn-sites.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
+    - name: 'Troubleshooting guidance: Windows Firewall with Advanced Security'
+      href: ./networking/troubleshoot-windows-firewall-with-advanced-security-guidance.md
     - name: Error 0x000006D9 when you share a printer
       href: ./networking/error-0x000006d9-when-you-share-printer.md
     - name: How to disable stealth mode
@@ -2756,6 +2760,8 @@
       href: ./windows-security/use-eventcombmt-to-search-logs-for-account-lockout.md
   - name: Bitlocker
     items:
+    - name: 'Troubleshooting guidance: MBAM'
+      href: ./windows-security/troubleshoot-mbam-guidance.md
     - name: How to configure MBAM with Secure Network Communication
       href: ./windows-security/mbam-secure-network-communication.md
     - name: How to use BitLocker Recovery Password Viewer
