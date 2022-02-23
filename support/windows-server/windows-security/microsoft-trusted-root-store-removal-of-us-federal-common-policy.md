@@ -1,5 +1,5 @@
 ---
-title: Microsoft trusted root store removal of the "G1" root certificate
+title: Removal of the US Federal Common Policy CA certificate from the Microsoft Trusted Root Program
 description: Discusses the removal of US "G1" certificate and provides solutions to avoid issues.
 localization_priority: medium
 audience: itpro
@@ -13,12 +13,12 @@ ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
 ---
-# Removal of US Federal Common Policy CA certificate from the Microsoft trusted root store
+# Removal of the US Federal Common Policy CA certificate from the Microsoft Trusted Root Program
 
 This article discusses the removal of the US Federal Common Policy Certificate Authority (CA) certificate and provides solutions to avoid issues that will occur if enterprises don't transition to the Federal Common Policy CA G2 root certificate by March 29, 2022.
 
 > [!Note]
-> The root certificate that's being removed is named "Federal Common Policy CA" and is commonly referred to as the "G1" root certificate.
+> The root certificate that's being removed by the Microsoft Root Certificate Update is named "Federal Common Policy CA" and is commonly referred to as the "G1" root certificate even though "G1" does appear in the certificate name.
 >
 > The root certificate that replaces the "G1" root certificate is named "Federal Common Policy CA G2" and is commonly referred to as the "G2" root certificate.
 
@@ -26,7 +26,7 @@ _Applies to:_ &nbsp; All versions of Windows
 
 ## Introduction
 
-The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that governs the US Federal Common Policy CA formally requested that the "G1" root certificate be removed from the Microsoft Trusted Root Program.
+The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that governs the US Federal Common Policy CA formally requested the removal of the "G1" root certificate from the Microsoft Trusted Root Program.
 
 |Certificate name|SHA1 thumbprint|
 |---|---|
@@ -55,12 +55,12 @@ After the "G1" root certificate is removed, you may experience issues that affec
 
 The following error messages may be displayed in pop-up windows and dialog boxes:
 
-- The site's security certificate is not trusted.
-- The security certificate presented by this website was not issued by a trusted CA.
-- A certificate chain processed but terminated in a ROOT certificate that is not trusted by the trust provider.
-- Certificate Chaining Error.
-- The certificate chain was issued by an authority that is not trusted.
-- The certificate or associated chain is invalid.
+- > The site's security certificate is not trusted.
+- > The security certificate presented by this website was not issued by a trusted CA.
+- > A certificate chain processed but terminated in a ROOT certificate that is not trusted by the trust provider.
+- > Certificate Chaining Error.
+- > The certificate chain was issued by an authority that is not trusted.
+- > The certificate or associated chain is invalid.
 
 ## Steps to avoid these issues
 
@@ -94,7 +94,7 @@ The following steps directly configure the Windows registry to a prerelease or s
 5. Verify all scenarios that chain to the "G1" root certificate, including those that are listed in [Potential issues](#potential-issues).
 
 > [!Note]
-> This link never changes. However, the changes that are staged change from month to month. As of February 15, 2022, this testing URL is staged by having about 20 continuous deprecation changes that don't currently include removing the "G1" root certificate. That change will be staged in March 2022. This article will be updated to include the exact staging date March 29, 2022.
+> This link never changes. However, the changes that are staged change from month to month. As of February 24, 2022, this testing URL is staged by having about 20 continuous deprecation changes that don't currently include removing the "G1" root certificate. That change will be staged in March 2022. This article will be updated to include the exact staging date March 29, 2022.
 
 ### Production configuration setup
 
