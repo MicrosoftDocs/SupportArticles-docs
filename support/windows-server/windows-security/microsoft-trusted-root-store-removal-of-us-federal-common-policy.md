@@ -1,6 +1,6 @@
 ---
-title: Removal of the US Federal Common Policy CA certificate from the Microsoft Trusted Root Program
-description: Discusses the removal of US "G1" certificate and provides solutions to avoid issues.
+title: Removal of the U.S. Federal Common Policy CA certificate from the Microsoft Trusted Root Program
+description: Discusses the removal of U.S. "G1" certificate and provides solutions to avoid issues.
 localization_priority: medium
 audience: itpro
 author: Deland-Han
@@ -13,9 +13,9 @@ ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ms.date: 02/16/2022
 ---
-# Removal of the US Federal Common Policy CA certificate from the Microsoft Trusted Root Program
+# Removal of the U.S. Federal Common Policy CA certificate from the Microsoft Trusted Root Program
 
-This article discusses the removal of the US Federal Common Policy Certificate Authority (CA) certificate and provides solutions to avoid issues that will occur if enterprises don't transition to the Federal Common Policy CA G2 root certificate by March 29, 2022.
+This article discusses the removal of the U.S. Federal Common Policy Certificate Authority (CA) certificate and provides solutions to avoid issues that will occur if enterprises don't transition to the Federal Common Policy CA G2 root certificate by March 29, 2022.
 
 > [!Note]
 > The root certificate that's being removed by the Microsoft Root Certificate Update is named "Federal Common Policy CA" and is commonly referred to as the "G1" root certificate even though "G1" does appear in the certificate name.
@@ -26,7 +26,7 @@ _Applies to:_ &nbsp; All versions of Windows
 
 ## Introduction
 
-The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that governs the US Federal Common Policy CA formally requested the removal of the "G1" root certificate from the Microsoft Trusted Root Program.
+The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that governs the U.S. Federal Common Policy CA formally requested the removal of the "G1" root certificate from the Microsoft Trusted Root Program.
 
 |Certificate name|SHA1 thumbprint|
 |---|---|
@@ -75,7 +75,7 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 
 The following steps directly configure the Windows registry to a prerelease or staged location of the latest certificate update. You can also configure the settings by using Group Policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
 
-1. Open *regedit*, and then navigate to the following registry subkey:  
+1. Open _regedit_, and then navigate to the following registry subkey:  
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
 
 2. Add or modify the following registry values:
@@ -123,9 +123,9 @@ Administrators should implement the "G2" root certificate per the following inst
 > [!Note]
 > In enterprises that have cross-certification dependencies for smart card logons or other scenarios on Windows devices but do not have internet access, see the "Do I Need to Distribute the Intermediate CA Certificates?" and "Certificates Issued by the Federal Common Policy CA G2" sections of [Distribute the CA certificates issued by the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/certificates/).
 >
-> Many federal enterprises must have either the US Treasury CA certificates or the Entrust Managed Services CA certificates. Both CA certificates are documented in the "Distribute the CA certificates" article, as follows:
+> Many federal enterprises must have either the U.S. Treasury CA certificates or the Entrust Managed Services CA certificates. Both CA certificates are documented in the "Distribute the CA certificates" article, as follows:
 >
->  > Important! To ensure PIV credential certificates issued by the Entrust Federal SSP before August 13, 2019 validate to the Federal Common Policy CA G2, you'll need to distribute an additional intermediate CA certificate to systems that are unable to perform dynamic path validation. Learn more on our Frequently Asked Questions page.
+> > Important! To ensure PIV credential certificates issued by the Entrust Federal SSP before August 13, 2019 validate to the Federal Common Policy CA G2, you'll need to distribute an additional intermediate CA certificate to systems that are unable to perform dynamic path validation. Learn more on our Frequently Asked Questions page.
 
 ### Manual steps to get the Certificate Trust list
 
