@@ -26,4 +26,4 @@ This follows Apple requirements, as described in the following excerpt from [thi
 
 Prior to Office for iOS version 2.57, Office apps for iOS allowed connections that are not protected by TLS to create a smooth transition for our customers. Since the release of version 2.57, Office for iOS requires an HTTPS connection to access server resources.
 
-> [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+> [!INCLUDE [Third-party disclaimer](../../includes/third-party-information-disclaimer.md)]
