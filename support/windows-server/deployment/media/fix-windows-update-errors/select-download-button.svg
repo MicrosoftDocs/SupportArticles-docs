@@ -4,7 +4,7 @@
 <mask id="path-3-inside-1_116_5" fill="white">
 <rect x="747" y="28" width="132" height="24" rx="2"/>
 </mask>
-<rect x="747" y="28" width="132" height="24" rx="2" stroke="#E91C1C" stroke-width="6" mask="url(#path-3-inside-1_116_5)"/>
+<rect x="747" y="28" width="132" height="24" rx="2" stroke="black" stroke-width="6" mask="url(#path-3-inside-1_116_5)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_116_5" transform="scale(0.00113636 0.0188679)"/>
