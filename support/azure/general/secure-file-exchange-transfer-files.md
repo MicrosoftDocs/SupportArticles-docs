@@ -69,11 +69,11 @@ Below is an example of Secure File Exchange being used by a customer:
 
 All files are physically located in the location of the workspace. The location where a workspace is physically created is as follows.
 
-When you open a support case and the country that you specify is:
+When you open a support case and the country/region that you specify is:
 
 - In Europe, Secure File Exchange will physically create the workspace in Europe.
 - In the United States, Secure File Exchange will physically create the workspace in the United States.
-- In any other country, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace. And it's where the workspace will be physically created.  
+- In any other country/region, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace. And it's where the workspace will be physically created.  
 
 ## The endpoints that are required to be open on your intranet
 
