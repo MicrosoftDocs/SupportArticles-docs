@@ -30,7 +30,7 @@ The Kubernetes pod's **STATUS** is **ImagePullBackOff** or **ErrImagePull**. To 
 kubectl describe pod <podname> -n <namespace>
 ```
 
-No matter what the error is, we recommend that you start troubleshooting by checking [ACR's health](/azure/container-registry/container-registry-check-health) and validating whether the ACR is accessible from the AKS cluster.
+We recommend that you start troubleshooting by checking [ACR's health](/azure/container-registry/container-registry-check-health) and validating whether the ACR is accessible from the AKS cluster.
 
 To check ACR's health, run the following command:
 
