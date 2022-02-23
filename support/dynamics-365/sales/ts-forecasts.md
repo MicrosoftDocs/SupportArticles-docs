@@ -78,7 +78,7 @@ The following image is an example of the previous version of forecasting home pa
 
 ### Solution
 
-To resolve this issue, update the forecasting site map entry to the latest forecast entry grid. More information: [Add forecast grid and configuration options in site map](add-forecast-site-map.md)   
+To resolve this issue, update the forecasting site map entry to the latest forecast entry grid. More information: [Add forecast grid and configuration options in site map](/dynamics365/sales/add-forecast-site-map)   
 
 <a name="unable_load_forecast_grid"> </a>
 ## Unable to load the forecast grid, and an error is displayed
