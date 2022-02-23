@@ -1,7 +1,7 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 02/18/2022
+ms.date: 02/23/2022
 ---
 # Known issues
 
@@ -61,3 +61,27 @@ Samsung devices provisioned as Android Enterprise fully managed devices running 
 
 > [!NOTE]
 > As of January 7, 2022, this issue only applies to Android Enterprise fully managed Samsung devices. In December, we released a fix in December 2021 (CP Version 5.0.5358.0) for Android device administrator (DA) management and Android Enterprise personally-owned work profiles.
+
+## Common issues with Intune policy reports
+
+- **Status:** Active
+- **Blog post:** [Support Tip: Known Issues with Intune policy reports](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-known-issues-with-intune-policy-reports/ba-p/2676483)
+
+We are aware of some common issue with Intune policy reports, including multiple records for a single device, inaccurate "pending" status, and inconsistencies between data in report lists and in summary charts. We are working on reporting improvements for better performance and new capabilities for search, sort, filtering, and other functionality. For detailed information and updates, see [Support Tip: Known Issues with Intune policy reports](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-known-issues-with-intune-policy-reports/ba-p/2676483).
+
+## Users are signed out of managed iOS Office apps
+
+- **Status:** Active
+- **Blog post:** [Support Tip: Known Issue occasionally occurring with iOS MAM and Office apps](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-known-issue-occasionally-occurring-with-ios-mam-and/ba-p/2617909)
+
+We are aware of an issue that can affect organization use=ing app protection policies (APP, also known as MAM) to manage their mobile Office apps. In this scenario, users are signed out of *all* Office mobile apps once they sign out of a single Office app (or if they are automatically signed out of an app). Once a user is signed out, they are forced to reauthenticate so that policies can be applied before they access the managed apps. This can sometimes lead to an authentication loop.
+
+For more information and a workaround, see [Support Tip: Known Issue occasionally occurring with iOS MAM and Office apps](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-known-issue-occasionally-occurring-with-ios-mam-and/ba-p/2617909).
+
+## Known issues with filters in Microsoft Endpoint Manager
+
+- **Status:** Active
+- **Blog post:** [Filters Public Preview - Overview and Known Issues](https://techcommunity.microsoft.com/t5/intune-customer-success/filters-public-preview-overview-and-known-issues/ba-p/2346835)
+
+There are some known issues with filters in Microsoft Endpoint Manager. This feature became generally available in February 2021. We are tracking remaining known issues with this feature in [Filters Public Preview - Overview and Known Issues](https://techcommunity.microsoft.com/t5/intune-customer-success/filters-public-preview-overview-and-known-issues/ba-p/2346835), which also includes common questions and documentation links.
+
