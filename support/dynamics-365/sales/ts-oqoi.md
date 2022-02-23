@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting common issues across multiple tables
+title: Troubleshoot common issues related to multiple tables
 description: Learn how to troubleshoot issues with multiple tables such as opportunity, quote, order, or invoice in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
-# Troubleshooting common issues across multiple tables  
+# Troubleshoot common issues with multiple tables  
 
 This article helps you troubleshoot and resolve common issues across multiple tables like opportunity, quote, order, or invoice.
 

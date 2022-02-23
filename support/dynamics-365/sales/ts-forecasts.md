@@ -1,13 +1,13 @@
 ---
-title: "Troubleshooting forecasting in Dynamics 365 Sales"
+title: "Troubleshoot issues related to forecasting in Dynamics 365 Sales"
 description: "Learn how to troubleshoot issues with forecasting in Dynamics 365 Sales."
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting forecasting  
+# Troubleshoot issues with forecasting 
 
 This article helps you troubleshoot and resolve issues related to forecasting.
 

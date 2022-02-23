@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting and resolving lead qualification issues for salespeople
+title: Troubleshoot issues related to lead qualification issues for salespeople
 description: Learn how to troubleshoot and resolve lead qualification issues in Dynamics 365 Sales for salespeople.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting lead qualification issues for salespeople
+# Troubleshoot issues with lead qualification issues for salespeople
 <a name="lead_qualification"> </a>
 
 This article helps you troubleshoot and resolve lead qualification issues for salespeople.

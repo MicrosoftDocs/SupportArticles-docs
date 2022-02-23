@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting guide for Dynamics 365 Sales Professional
+title: Troubleshoot issues related to Dynamics 365 Sales Professional
 description: Follow the instructions in this topic to troubleshoot the issues your users might face while working on Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting Dynamics 365 Sales Professional
+# Troubleshoot Dynamics 365 Sales Professional
 
 Use the following troubleshooting topics to quickly find information to solve your users' issues.
 

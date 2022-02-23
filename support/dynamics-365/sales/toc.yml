@@ -451,9 +451,9 @@
     items:
     - name: Installing Reporting Extensions can't locate SSRS instance
       href: installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md
-  - name: Sales
+  - name: Sales Hub
     items:
-    - name: Troubleshooting leads
+    - name: Troubleshoot leads
       items:
       - name: Lead qualification issues and resolution for salespeople
         href: ts-leads-salespeople.md
@@ -461,30 +461,30 @@
         href: ts-leads-sys-admin.md
       - name: Automatic generation of contact or company-related fields
         href: ts-leads-auto-generate-contact.md
-    - name: Troubleshooting opportunities
+    - name: Troubleshoot opportunities
       href: ts-opportunities.md
-    - name: Troubleshooting orders
+    - name: Troubleshoot orders
       href: ts-orders.md
-    - name: Troubleshooting products
+    - name: Troubleshoot products
       href: ts-products.md
-    - name: Troubleshooting common tables
+    - name: Troubleshoot common tables
       href: ts-oqoi.md
-    - name: Troubleshooting currency and price lists
+    - name: Troubleshoot currency and price lists
       href: ts-currency-pricelist.md
-    - name: Troubleshooting views
+    - name: Troubleshoot views
       href: ts-views.md
-    - name: Troubleshooting forecasts
+    - name: Troubleshoot forecasts
       href: ts-forecasts.md
-    - name: Troubleshooting in-app marketing
+    - name: Troubleshoot in-app marketing
       href: ts-inapp-marketing.md
-    - name: Troubleshooting Unified Interface
+    - name: Troubleshoot Unified Interface
       href: ts-unified-interface.md
-    - name: Troubleshooting the sales pipeline chart
+    - name: Troubleshoot the sales pipeline chart
       href: ts-sales-pipeline.md
-    - name: Troubleshooting email
+    - name: Troubleshoot email
       href: ts-email.md
-    - name: Troubleshooting Sales Premium
+    - name: Troubleshoot Sales Premium
       href: troubleshooting-sp.md
-    - name: Troubleshooting Dynamics 365 Sales Professional
+    - name: Troubleshoot Dynamics 365 Sales Professional
       href: troubleshooting-spro.md
 

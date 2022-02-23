@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting and resolving issues with automatic generation of contact or company-related fields
+title: Troubleshoot issues related to automatic generation of contact or company-related fields
 description: Learn how to troubleshoot and resolve issues with automatic generation of contact or company-related fields
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting issues with automatic generation of contact or company-related fields
+# Troubleshoot issues with automatic generation of contact or company-related fields
 <a name="auto-generation-of-fields"> </a>
 
 When you select an existing account or contact at the time of creating a new lead, the fields related to the account or contact are automatically populated. 

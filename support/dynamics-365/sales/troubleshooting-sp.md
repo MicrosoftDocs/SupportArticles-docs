@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting the Sales Insights features
-description: Know about the issues that are related to the Sales Insights features, and how to troubleshoot them.
+title: Troubleshoot issues related to the Sales Premium features
+description: Know about the issues that are related to the Sales Premium features, and how to troubleshoot them.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting Sales Premium 
+# Troubleshoot Sales Premium features
 
 This article helps you troubleshoot and resolve issues related to the Sales Premium features.
 

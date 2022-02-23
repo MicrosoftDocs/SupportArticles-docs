@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting issues while working with an opportunity
+title: Troubleshoot issues related to an opportunity
 description: Learn how to troubleshoot issues you might face while working with opportunities in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting opportunities  
+# Troubleshoot issues with opportunities  
 
 Follow the instructions in this article to troubleshoot the issues you might face while working with opportunities in Dynamics 365 Sales.
 

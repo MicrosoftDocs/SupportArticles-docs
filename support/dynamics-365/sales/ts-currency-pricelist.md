@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting issues related to currency and price list
+title: Troubleshoot issues related to currency and price list
 description: Learn how to troubleshoot issues with currency and price list in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting currency and price lists 
+# Troubleshoot issues with currency and price lists 
 
 This article helps you troubleshoot and resolve issues related to currency and price lists.
 

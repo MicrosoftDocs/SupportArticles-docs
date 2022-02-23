@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting issues with views
+title: Troubleshoot issues related to table views
 description: Learn how to troubleshoot issues with table views in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting table views  
+# Troubleshoot issues with table views  
 
 This article helps you troubleshoot and resolve issues related to table views.
 

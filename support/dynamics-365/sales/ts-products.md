@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting issues while working with a product
+title: Troubleshoot issues related to a product
 description: Learn how to troubleshoot issues you might face while working with products in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting products
+# Troubleshoot issues with products
 
 Follow the instructions in this article to troubleshoot the issues you might face while working with products in Dynamics 365 Sales.
 

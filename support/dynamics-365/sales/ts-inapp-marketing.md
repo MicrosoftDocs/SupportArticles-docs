@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot in-app marketing issues 
+title: Troubleshoot issues related to in-app marketing issues 
 description: Learn how to troubleshoot issues for in-app marketing in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting in-app marketing 
+# Troubleshoot issues with in-app marketing 
 
 This article helps you troubleshoot and resolve issues related to in-app marketing.
 

@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting and resolving lead qualification issues for system administrators
+title: Troubleshoot issues related to lead qualification issues for system administrators
 description: Learn how to troubleshoot and resolve lead qualification issues in Dynamics 365 Sales for system administrators.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting lead qualification issues for system administrators
+# Troubleshoot issues with lead qualification issues for system administrators
 <a name="lead_qualification_for_admins"> </a> 
 
 <a name="insufficientpermissions"> </a> 

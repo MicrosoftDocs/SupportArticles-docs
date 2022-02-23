@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting issues with Unified Interface
+title: Troubleshoot issues related to Unified Interface
 description: Learn how to troubleshoot issues with Unified Interface in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting issues with Unified Interface 
+# Troubleshoot issues with Unified Interface 
 
 This article helps you troubleshoot and resolve issues related to Unified Interface.
 

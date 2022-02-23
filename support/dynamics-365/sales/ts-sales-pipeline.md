@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting the Sales Pipeline chart and its phases
+title: Troubleshoot issues related to the Sales Pipeline chart and its phases
 description: Follow the instructions in this article to troubleshoot issues you might face while working with the sales pipeline chart or its phases in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
-# Troubleshooting the Sales Pipeline chart and its phases in Dynamics 365 Sales 
+# Troubleshoot issues with the Sales Pipeline chart and its phases in Dynamics 365 Sales 
 
 This article helps you troubleshoot and resolve issues related to the Sales Pipeline chart and its phases.
 

@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting issues with email
+title: Troubleshoot issues related to email
 description: Learn how to troubleshoot issues with email in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/02/2022
+ms.date: 02/23/2022
 ---
 
-# Troubleshooting issues with email 
+# Troubleshoot issues with email 
 
 This article helps you troubleshoot and resolve issues related to emails in Dynamics 365 Sales.
 
