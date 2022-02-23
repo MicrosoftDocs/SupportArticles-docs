@@ -20,48 +20,48 @@ _Original KB number:_ &nbsp; 4013567
 
 To disable Internet Explorer, use one of the following methods.
 
-If you remove Internet Explorer by using DISM, the *Iexplore.exe* entry point is removed from the file system, but its rendering engine remains on the system. Therefore, you should continue to install security updates that apply to Internet Explorer even after you disable it, as applicable.
+If you remove Internet Explorer by using DISM, the iexplore.exe entry point is removed from the file system, but its rendering engine remains on the system. Therefore, you should continue to install security updates that apply to Internet Explorer even after you disable it, as applicable.
 
 To restore the program on your computer, we recommend that you use the same method that you used to disable it (Control Panel or DISM).
 
 > [!IMPORTANT]
-> If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode in Microsoft Edge also won't be available. To continue using IE mode in Microsoft Edge to access legacy applications, disable Internet Explorer by using Group Policy instead, as described in [Disable Internet Explorer 11 as a standalone browser](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11#disable-internet-explorer-11-as-a-standalone-browser).
+> If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode in Microsoft Edge also won't be available. To continue using IE mode in Microsoft Edge to access legacy applications, disable Internet Explorer by using group policy instead, as described in [Disable Internet Explorer 11 as a standalone browser](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11#disable-internet-explorer-11-as-a-standalone-browser).
 
 ## Method 1 - Use Control Panel (client systems only), Feature On Demand
 
-_Applies to:_ &nbsp; Windows 10, version 1703 and later versions  
+_Applies to:_ &nbsp; Windows 10, version 1703 and higher  
 
-We recommend that you use the Feature On Demand method for devices on which it's available.
+Using the Feature On Demand method is recommended for devices where it is available.
 
 On client systems, you can use the **Program and Features** item in Control Panel to disable Internet Explorer. To do this, follow these steps:
 
-1. Select **Start** > **Settings** (gear icon).
-1. Select **Apps**.
-1. Select **Optional features**.
-1. In the list of installed features, locate **Internet Explorer 11**. Select the entry, and then Select **Uninstall**.
-1. Wait for the "Recent Actions" section to indicate that a restart is required.
+1. Click **Start** and open **Settings**.
+1. Click **Apps**.
+1. Click **Optional features**.
+1. In the list of installed features, locate **Internet Explorer 11**. Click on the entry, then click **Uninstall**.
+1. Wait for the Latest Actions section to indicate reboot required.
 1. Restart the computer.
 
 To enable Internet Explorer:
 
-1. Select **Start** > **Settings** (gear icon).
-1. Select **Apps**.
-1. Select **Optional features**.
-1. Select **Add a feature**.
-1. Select the box next to **Internet Explorer 11**.
-1. Select **Install (1)**.
-1. Wait for the Recent Actions section to indicate a restart is required.
+1. Click **Start** and open **Settings**.
+1. Click **Apps**.
+1. Click **Optional features**.
+1. Click **Add a feature**.
+1. Check the box next to **Internet Explorer 11**.
+1. Click **Install (1)**.
+1. Wait for the Latest Actions section to indicate reboot required.
 1. Restart the computer.
 
 ## Method 2 - Use DISM (client and server systems), Feature On Demand
 
-_Applies to:_ &nbsp; Windows 10, version 1703 and later versions  
+_Applies to:_ &nbsp; Windows 10, version 1703 and higher  
 
-We recommend that you use the Feature On Demand method for devices on which it's available.
+Using the Feature On Demand method is recommended for devices where it is available.  
 
 On client and server systems, you can use the Deployment Image Servicing and Management (DISM) command-line tool to disable Internet Explorer. For example, to disable Internet Explorer 11, follow these steps.
 
-- **Disable the feature**
+- Disable the feature
 
     To disable Internet Explorer 11, run the following command at an elevated command prompt: `dism /online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0`.
 
@@ -77,9 +77,9 @@ On client and server systems, you can use the Deployment Image Servicing and Man
     Do you want to restart the computer now? (Y/N)
     ```
 
-- **Enable the feature**
+- Enable the feature
 
-    To re-enable Internet Explorer 11, run the following command at an elevated command prompt: `dism /online /Add-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0`.
+    If you want to re-enable Internet Explorer 11, run the following command at an elevated command prompt: `dism /online /Add-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0`.
 
     The following message is returned:
 
@@ -98,7 +98,7 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 On client systems, you can use the **Program and Features** item in Control Panel to disable Internet Explorer. To do this, follow these steps:
 
 1. Press the Windows logo key+R to open the **Run** box.
-1. Enter *appwiz.cpl*, and then select **OK**.
+1. Type *appwiz.cpl*, and then select **OK**.
 1. In the **Programs and Features** item, select **Turn Window features on or off**.
 1. In the **Windows Features** dialog box, locate the entry for the installed version of Internet Explorer. For example, locate the **Internet Explorer 11** entry. Then, clear the check box.
 1. Select **OK** to commit the change.
@@ -130,7 +130,7 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 
 - Enable the feature
 
-    To re-enable Internet Explorer 11, run the following command at an elevated command prompt: `dism /online /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64`.
+    If you want to re-enable Internet Explorer 11, run the following command at an elevated command prompt: `dism /online /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64`.
 
     The following message is returned:
 
