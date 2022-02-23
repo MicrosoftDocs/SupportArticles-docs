@@ -211,6 +211,26 @@
     items:
     - name: Can't connect remotely using TCP/IP
       href: connect/cannot-connect-remotely.md
+    - name: Common Connection Issues
+      items:
+      - name: Troubleshoot connectivity issues
+        href: connect/resolve-connectivity-errors-overview.md
+      - name: Prerequisites and checklist for resolving connectivity errors
+        href: connect/resolve-connectivity-errors-checklist.md
+      - name: An existing connection was forcibly closed
+        href: connect/tls-exist-connection-closed.md
+      - name: Troubleshoot cannot generate SSPI context error
+        href: connect/cannot-generate-sspi-context-error.md
+      - name: Troubleshoot network-related errors
+        href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+      - name: Troubleshoot timeout expired errors
+        href: connect/timeout-expired-error.md
+    - name: Connectivity How Tos
+      items:
+      - name: Configure the Windows Firewall to allow SQL Server access
+        href: https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access
+      - name: Test OLE DB connectivity
+        href: connect/test-oledb-connectivity-use-udl-file.md
     - name: Kerberos Configuration Manager is available
       href: connect/kerberos-configuration-manager-available.md
     - name: Resolving connectivity errors
