@@ -213,24 +213,22 @@
       items:
       - name: Troubleshoot connectivity issues
         href: connect/resolve-connectivity-errors-overview.md
-      - name: Resolving connectivity errors
-        href: connect/resolving-connectivity-errors.md
-    - name: Cannot generate SSPI context
-      href: connect/cannot-generate-sspi-context-error.md
-    - name: Existing connection forcibly closed
-      href: connect/tls-exist-connection-closed.md
-    - name: Login failed for user
-      href: connect/login-failed-for-user.md
-    - name: Network-related or instance-specific error
-      href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
-    - name: Pre-reqs for connectivity troubleshooting
-      href: connect/resolve-connectivity-errors-checklist.md
-    - name: Timeout expired errors
-      href: connect/timeout-expired-error.md
-    - name: Token-based server access validation failed
-      href: connect/cannot-connect-remotely.md
-    - name: Untrusted certificate authority error
-      href: connect/error-message-when-you-connect.md
+      - name: Pre-reqs for connectivity troubleshooting
+        href: connect/resolve-connectivity-errors-checklist.md
+      - name: Cannot generate SSPI context
+        href: connect/cannot-generate-sspi-context-error.md
+      - name: Existing connection forcibly closed
+        href: connect/tls-exist-connection-closed.md
+      - name: Login failed for user
+        href: connect/login-failed-for-user.md
+      - name: Network-related or instance-specific error
+        href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+      - name: Timeout expired errors
+        href: connect/timeout-expired-error.md
+      - name: Token-based server access validation failed
+        href: connect/cannot-connect-remotely.md
+      - name: Untrusted certificate authority error
+        href: connect/error-message-when-you-connect.md
     - name: Connectivity How Tos
       items:
       - name: Configuring firewalls
