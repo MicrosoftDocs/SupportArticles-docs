@@ -49,7 +49,7 @@ TFS/Azure DevOps Server:
   - On the client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
 - `TFSJobAgent.exe` process that is typically located at _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_
 
- Azure DevOps Server/Azure DevOps Services
+Azure DevOps Server/Azure DevOps Services:
 
 - Pipeline agent folders
 - `TFSbuildServicehost.exe` process for XAML builds
