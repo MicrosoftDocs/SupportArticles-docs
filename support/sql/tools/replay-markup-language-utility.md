@@ -83,7 +83,7 @@ For a complete description of every tool and sample usage, see the RML Help file
 > The applications that are provided as part of the RML tool suite require that several additional dependencies be available. 
 > 
 ### Dependencies for Reporter
-You have to make sure that the Report Viewer controls are available either in the same folder as Reporter.exe or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are as follows:
+You have to make sure that the Report Viewer controls are available either in the same folder as Reporter.exe or in the Global Assembly Cache (GAC). The DLLs that Reporter.exe requires are:
 - Microsoft.ReportViewer.Common.dll
 - Microsoft.ReportViewer.DataVisualization.dll
 - Microsoft.ReportViewer.ProcessingObjectModel.dll
