@@ -86,9 +86,9 @@ This error usually means that the client can't find the SQL Server instance. Thi
 > [!NOTE]
 > For troubleshooting connectivity issues in high availability scenarios review the following topics:
 >
-> - Availability group listener
+> - [Availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
 >
-> - Failover cluster instances
+> - [Failover cluster instances](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)
 
 ## Gather information for troubleshooting the error
 
@@ -96,7 +96,7 @@ To help with troubleshooting, we recommend that you gather the information liste
 
 ### Option 1: Use SQL Check tool to gather the required information
 
-If you can login locally to SQL Server computer and have administrator access to the computer use  SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki) to get most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the information in the tool's home page or check the recommended [prerequisites](/troubleshoot/sql/connect/resolve-connectivity-errors-checklist) and checklist page.
+If you can login locally to SQL Server computer and have administrator access to the computer use  SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki) to get most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the information in the tool's home page or check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page.
 
 ### Option 2: Collect the data individually using the following procedures
 
@@ -286,7 +286,7 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
         - If it doesn't work, it indicates one of the following situations:
 
-          - Either UDP port 1434 is blocked or the static port is blocked, or both. To confirm whether it's the UDP port or the static port, use [Portqry](/windows-server/networking/portqry-command-line-port-scanner-v2.md).
+          - Either UDP port 1434 is blocked or the static port is blocked, or both. To confirm whether it's the UDP port or the static port, use [Portqry](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
 
           - The instance is [hidden](/sql/database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine) from the SQL Server Browser service.
 

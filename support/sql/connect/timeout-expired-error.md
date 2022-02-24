@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; SQL Server
 > [!NOTE]
 > Before you start troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
-A timeout error means that certain operation takes longer than it is needed. The client application stops the operation (instead of waiting indefinitely), which may block other operations and suspend an application. This article provides resolutions of the command-timeout and connection-timeout errors when you connect to SQL Server.
+A timeout error means that certain operation takes longer than needed. The client application stops the operation (instead of waiting indefinitely), which may block other operations and suspend an application. This article provides resolutions of the command-timeout and connection-timeout errors when you connect to SQL Server.
 
 ## Verify timeout expired errors
 
@@ -39,7 +39,7 @@ The duration spent while attempting to connect to this server was [Pre-Login] in
 
 - > System.InvalidOperationException: Timeout expired. The timeout period elapsed prior to obtaining a connection from the pool.
 
-  If connections are not closed correctly, the error may occur. This is because all pooled connections were in use and max pool size was reached. The error can be avoided if you follow the steps that are described in [exhausted the connection pool](/archive/blogs/spike/timeout-expired-the-timeout-period-elapsed-prior-to-obtaining-a-connection-from-the-pool) article.
+  If connections aren't closed correctly, the error may occur. This is because all pooled connections were in use and max pool size was reached. The error can be avoided if you follow the steps that are described in [exhausted the connection pool](/archive/blogs/spike/timeout-expired-the-timeout-period-elapsed-prior-to-obtaining-a-connection-from-the-pool) article.
 
 > [!NOTE]
 > The second and the third error occur when .NET Framework 4.5 or a later version is installed.
@@ -80,7 +80,7 @@ Before troubleshooting, view the complete call stack of the error messages to de
     at System.Data.SqlClient.SqlConnection.Open()  
     ```
 
-    `SqlConnection.Open` indicates that the client is trying to open a connection. Therefore, this is not related to a query.
+    `SqlConnection.Open` indicates that the client is trying to open a connection. Therefore, this isn't related to a query.
 
 - See the following example of a call stack of a query or command timeout:
 
@@ -114,7 +114,7 @@ Before troubleshooting, view the complete call stack of the error messages to de
 
         - If you use SQL Server Management Studio (SSMS), select the **Connection Properties** tab in the **Connect to Server** dialog box, and set **Connection time-out setting** to a higher value.
 
-    1. If the connection eventually succeeds, it is a network issue. You need to work with your network administrator to resolve the issue. After it is resolved, you can revert to default settings in your application.
+    1. If the connection eventually succeeds, it's a network issue. You need to work with your network administrator to resolve the issue. After it's resolved, you can revert to default settings in your application.
 
         > [!NOTE]
         > Increasing the connection timeout in the application is a possible method, but it isn't a long-term resolution. This is because the connection occurs quickly (usually within a few milliseconds) when you try to connect to a data source.
@@ -126,10 +126,10 @@ The following table lists the typical causes and resolutions of the timeout expi
 |Typical causes  |Resolutions  |
 |---------|---------|
 |Server name was typed incorrectly.     | Try again with the correct server name.        |
-|The SQL Server service on the server is not running.     | Start the instance of the SQL Server Database Engine.        |
+|The SQL Server service on the server isn't running.     | Start the instance of the SQL Server Database Engine.        |
 |The TCP/IP port for the Database Engine instance is blocked by a firewall.     | Configure the firewall to permit access to the Database Engine.        |
-|The Database Engine is not listening on port 1433. This is because the port is changed, or it is not the default instance and the SQL Server Browser service is not running.     | Start the SQL Server Browser service or specify a TCP/IP port number to connect with the `Sqlcmd -S <ip_addres>,<port>` command. In the error log, find the port number that SQL Server is listening on.    |
+|The Database Engine isn't listening on port 1433. This is because the port is changed, or it isn't the default instance and the SQL Server Browser service isn't running.     | Start the SQL Server Browser service or specify a TCP/IP port number to connect with the `Sqlcmd -S <ip_addres>,<port>` command. In the error log, find the port number that SQL Server is listening on.    |
 |The SQL Server Browser service is running but UDP port 1434 is blocked by a firewall.     | Configure the firewall to permit access to UPD port 1434 on the server or specify the TCP/IP port number to connect.        |
-|The client and server are not configured to use the same network protocol.     | Make sure that both the server and the client computers have at least one enabled protocol in common by using SQL Server Configuration Manager. For example, if the client is connecting by using TCP/IP sockets but SQL Server is only listening on named pipes, no connectivity can be established.        |
-|The network cannot resolve the server name to an IP address. This can be tested by using the ping or telnet programs.     | Fix the computer name resolution problem on your network or connect to the server by using the IP address. This is not a SQL Server problem. For assistance, see your Windows documentation or contact your network administrator. Use the following command to test connectivity:<br/>`telnet <ServerName> [<Port>]`<br/> `telnet <IP_Address> <Port>` <br/> If using an IP address works, but the server name does not work, it's a name resolution issue.        |
-|The network cannot connect by using the IP address. This can be tested by using the ping, telnet, or [tracert](/windows-server/administration/windows-commands/tracert) program.     | Fix the TCP/IP problem on your network. This is not a SQL Server problem. For assistance, see your Windows documentation or contact your network administrator.<br/> For more advanced network troubleshooting, see [0300 Intermittent or Periodic Network Issue](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue).         |
+|The client and server aren't configured to use the same network protocol.     | Make sure that both the server and the client computers have at least one enabled protocol in common by using SQL Server Configuration Manager. For example, if the client is connecting by using TCP/IP sockets but SQL Server is only listening on named pipes, no connectivity can be established.        |
+|The network can't resolve the server name to an IP address. This can be tested by using the ping or telnet programs.     | Fix the computer name resolution problem on your network or connect to the server by using the IP address. This isn't a SQL Server problem. For assistance, see your Windows documentation or contact your network administrator. Use the following command to test connectivity:<br/>`telnet <ServerName> [<Port>]`<br/> `telnet <IP_Address> <Port>` <br/> If using an IP address works, but the server name doesn't work, it's a name resolution issue.        |
+|The network can't connect by using the IP address. This can be tested by using the ping, telnet, or [tracert](/windows-server/administration/windows-commands/tracert) program.     | Fix the TCP/IP problem on your network. This isn't a SQL Server problem. For assistance, see your Windows documentation or contact your network administrator.<br/> For more advanced network troubleshooting, see [0300 Intermittent or Periodic Network Issue](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue).         |
