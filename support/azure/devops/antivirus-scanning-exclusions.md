@@ -39,12 +39,12 @@ If you encounter the issue described above, you may have to configure your antiv
 TFS/Azure DevOps Server:
 
 - _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>_
-- _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>\Application Tier\TfsJobAgent_
+- _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>\Application Tier\TFSJobAgent_
 - _C:\Users\\<TFS_Service_Account\>\AppData\Local\Temp_
 - _C:\inetpub\temp_
 - _%ProgramFiles%\Azure DevOps Server <VersionNumber\>\Application Tier\Web Services\bin_
 - _C:\AzureDevOpsData\ApplicationTier\_fileCache_
-- TFS/Azure DevOps Server Client Cache folder
+- TFS/Azure DevOps Server cache folder
   - On the server: _C:\Users\\<ServiceAccountName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
   - On the client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
 - `TFSJobAgent.exe` process that is typically located at _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_
