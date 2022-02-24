@@ -224,6 +224,3 @@ If you use **Impersonate** as the authentication option on the **Security** page
 - [SSPI client tool](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SSPICLIENT)
 - [Enable Kerberos event logging](../../windows-server/identity/enable-kerberos-event-logging.md)
 - [How to force Kerberos to use TCP instead of UDP in Windows](../../windows-server/windows-security/force-kerberos-use-tcp-instead-udp.md)
-
-> [!NOTE]
-> If this article has not resolved your issue, you can check if the [common connectivity issues articles](resolve-connectivity-errors-overview.md#common-connectivity-issues) can help.

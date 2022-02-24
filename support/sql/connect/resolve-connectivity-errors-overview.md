@@ -25,7 +25,7 @@ Before you start troubleshooting, check [Recommended prerequisites and checklist
 
 Use the list below to navigate to the appropriate topic page for detailed troubleshooting steps for your scenario:
 
-- [A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md).
+- [A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 
 - [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
 
