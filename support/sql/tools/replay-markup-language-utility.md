@@ -38,21 +38,21 @@ After you capture a trace for an instance of SQL Server, you can use RML Utiliti
 
 |Version number|Description|
 |---|---|
-|9.04.0100|The current web release that's available from the Microsoft Download Center that supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
-|9.04.0098|The current release packaged that includes the Database Experimentation Assistant tool that supports all released versions of SQL Server.|
-|9.04.0097|The current release available from the SQL Nexus site that supports all released versions of SQL Server.|
-|9.04.0051|The previous web release that's available from the Microsoft Download Center that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.04.0004|The previous web release that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.01.0109|The previous web release that supports SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.00.0023|The previous web release that supports SQL Server 2005 and SQL Server 2000.|
-|8.10.0010|The initial web release that supports SQL Server 2000 and SQL Server 7.0.|
+|9.04.0100| Indicates the current web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
+|9.04.0098| Indicates the current release package, which includes the Database Experimentation Assistant tool. It supports all the released versions of SQL Server.|
+|9.04.0097| Indicates current release available from the SQL Nexus site that supports all released versions of SQL Server.|
+|9.04.0051| Is the previous web release that's available from the Microsoft Download Center that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.04.0004| Is the previous web release that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.01.0109| Is the previous web release that supports SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.00.0023| Is the previous web release that supports SQL Server 2005 and SQL Server 2000.|
+|8.10.0010| Is the initial web release that supports SQL Server 2000 and SQL Server 7.0.|
 |||
 
 The current version of RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of RML Utilities for SQL Server before you install the current version. The current version of the tool suite contains important software updates, improved features (process .trc and .xel files) and reports, and performance and scalability improvements.
 
 ## Obtain the RML Utilities for SQL Server
 
-When you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090) you can get the RML tools (ReadTrace and OStress) from the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
+After you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090), you will find the RML tools (ReadTrace and OStress) present in the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
 
 If you're using the RML tools together with the [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) tool, you can obtain `ReadTrace` and `ostress` from https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097.
 
