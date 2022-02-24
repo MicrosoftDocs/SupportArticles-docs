@@ -15,7 +15,7 @@ ms.date: 02/16/2022
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 
-This article discusses the removal of the U.S. Federal Common Policy CA root certificate and provides solutions to avoid issues that will occur if enterprises don't transition to the Federal Common Policy CA G2 root certificate that is tentatively scheduled for release on March 29, 2022.
+This article discusses the removal of the U.S. Federal Common Policy CA root certificate. This article also provides solutions to avoid issues that will occur if enterprises haven't transition to the Federal Common Policy CA G2 root certificate before the removal of the Federal Common Policy CA root certificate from the Microsoft Certificate Trust List that is tentatively scheduled on March 29, 2022.
 
 > [!Note]
 > The root certificate that's being removed by the Microsoft Root Certificate Update is named "Federal Common Policy CA" and is commonly referred to as the "G1" root certificate even though "G1" does appear in the certificate name.
@@ -33,7 +33,7 @@ The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that 
 |Federal Common Policy CA|905F942FD9F28F679B378180FD4F846347F645C1|
 |||
 
-Applications and operations that depend on the "G1" root certificate will fail one to seven days after they receive the root certificate update after March 29, 2022. Administrators should migrate from the existing "G1" root certificate to the replacement "G2" root certificate listed below as your agency's federal trust anchor.
+Applications and operations that depend on the "G1" root certificate will fail one to seven days after they receive the root certificate update on March 29, 2022. Administrators should migrate from the existing "G1" root certificate to the replacement "G2" root certificate listed below as your agency's federal trust anchor.
 
 |Certificate name|SHA1 thumbprint|
 |---|---|
