@@ -176,7 +176,7 @@ Verify that the domain to which you log on can communicate with the domain of th
 
 ### Step 3: Verify SQL Server SPNs using SQLCheck and Setspn tools
 
-If you're able to login locally to SQL Server computer and have administrator access to the computer, use SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki) to get most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the information in the tool's home page or check the recommended [prerequisites][prerequisites](/troubleshoot/sql/connect/resolve-connectivity-errors-checklist)(/troubleshoot/sql/connect/resolve-connectivity-errors-checklist) and checklist page. Once you generate the output file, review SPN configuration for your SQL Server instance under **SQL Server Information** section of the output file.
+If you're able to login locally to SQL Server computer and have administrator access to the computer, use SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki) to get most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the information in the tool's home page or check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page. Once you generate the output file, review SPN configuration for your SQL Server instance under **SQL Server Information** section of the output file.
 
 Example output:
 

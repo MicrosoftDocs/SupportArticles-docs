@@ -33,7 +33,7 @@ To effectively use these troubleshooters, you may want to gather the following i
 
 1. If the connections are failing from an application, the connection string from the application. These are typically found in *Web.config* files for ASP.NET applications.
 
-1. Optionally, you may want to collect and review SQL Server error logs for presence of additional error messages, exceptions etc. that may be contributing to connectivity issues with SQL server.
+1. Optionally, you may want to collect and review SQL Server error logs for presence of other error messages, exceptions etc. that may be contributing to connectivity issues with SQL server.
 
 ## Quick checklist for troubleshooting connectivity issues
 
@@ -47,16 +47,16 @@ If you have access to the output of SQLCheck tool from Prerequisites section, re
 |Section in the file |Text to search for |Potential action |Can help troubleshoot (examples) |
 |-|-|-|-|
 |Computer Information |Warning: Network driver may be out of date. |Check online for new drivers if any. |Various connectivity errors |
-|Client Security and Driver Information |Diffie-Hellman cipher suites are enabled. Possible risk of intermittent TLS failures if the algorithm version is different between clients and servers |If you are having intermittent connectivity issues, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors)|[An existing connection was forcibly closed by the remote host](/troubleshoot/sql/connect/tls-exist-connection-closed) |
-|Client Security and Driver Information |SQL Aliases |If present, ensure they are configured properly and pointing to correct server/IP addresses |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection) |
-|SQL Server Information |Services of Interest |If your SQL service  is not started, start it. If you are having issues connecting to a named instance, ensure SQL Server Browser service is started or try restarting browser service. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection) |
-|SQL Server Information |Domain Service Account Properties |If you configured linked servers from your SQL server and Trust for Del value is set to false, then you can run into authentication issues with your linked server queries. |Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'<br/>Login failed for user '(null)' |
-|SQL Server Information |SPN does not exist. |Check this table to see if SPNs for your SQL server are properly configured and fix any issues identified. |[Cannot generate SSPI contex](/troubleshoot/sql/connect/cannot-generate-sspi-context-error)|
-|SQL Server Information |Details for SQL Server Instance: |Check values of TCP Enabled, TCP Ports etc. to check TCP/IP is enabled on the server side and to check if your SQL default instance is listening on 1433 or a different port.  |Various connectivity errors |
+|Client Security and Driver Information |Diffie-Hellman cipher suites are enabled. Possible risk of intermittent TLS failures if the algorithm version is different between clients and servers |If you're having intermittent connectivity issues, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).|[An existing connection was forcibly closed by the remote host](tls-exist-connection-closed.md)|
+|Client Security and Driver Information |SQL Aliases |If present, ensure they're configured properly and pointing to correct server/IP addresses. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
+|SQL Server Information |Services of Interest |If your SQL service  isn't started, start it. If you're having issues connecting to a named instance, ensure SQL Server Browser service is started or try restarting browser service. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
+|SQL Server Information |Domain Service Account Properties |If you configure linked servers from your SQL server and Trust for Del value is set to false, then you can run into authentication issues with your linked server queries. |[Troubleshooting "Login failed for user" errors](login-failed-for-user.md)<br/>Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'<br/>Login failed for user '(null)' |
+|SQL Server Information |SPN does not exist |Check this table to see if SPNs for your SQL server are properly configured and fix any issues identified. |[Cannot generate SSPI context](cannot-generate-sspi-context-error.md)|
+|SQL Server Information |Details for SQL Server Instance |Check values of TCP Enabled, TCP Ports etc. to check TCP/IP is enabled on the server side and to check if your SQL default instance is listening on 1433 or a different port.  |Various connectivity errors |
 
 ### Option 2
 
-If you are not able to run SQLCheck on your SQL server computer, consider checking the following items before doing in-depth troubleshooting of your SQL connectivity issue:
+If you aren't able to run SQLCheck on your SQL server computer, consider checking the following items before doing in-depth troubleshooting of your SQL connectivity issue:
 
 1. Make sure that SQL Server is started, and that you see the following message in the SQL Server error log:
 
@@ -87,7 +87,7 @@ If you are not able to run SQLCheck on your SQL server computer, consider checki
     Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog |select-string "Server is listening on" , "ready to accept connection on" -AllMatches
    ```
 
-1. Check whether you're able to connect to SQL Server by using a UDL file. If it works, then there may be an issue with the connection string. For instructions on the procedure about UDL test, see [Test OLE DB connectivity to SQL Server by using a UDL file](/troubleshoot/sql/connect/test-oledb-connectivity-use-udl-file). Alternately you can use the following script to create and launch a *UDL-Test.udl* file (stored in the *%TEMP%* folder).
+1. Check whether you're able to connect to SQL Server by using a UDL file. If it works, then there may be an issue with the connection string. For instructions on the procedure about UDL test, see [Test OLE DB connectivity to SQL Server by using a UDL file](test-oledb-connectivity-use-udl-file.md). Alternately you can use the following script to create and launch a *UDL-Test.udl* file (stored in the *%TEMP%* folder).
 
     ```Powershell
     clear
@@ -138,9 +138,8 @@ If you are not able to run SQLCheck on your SQL server computer, consider checki
     sqlcmd -E -S $server_name -d $database_name -Q ("exec sp_helplogins '" + $server_principal + "'")
     ```
 
-1. If you are troubleshooting Kerberos related issues, you can use the scripts at [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication) to determine if Kerberos is properly configured on your SQL Servers.
+1. If you're troubleshooting Kerberos related issues, you can use the scripts at [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication) to determine if Kerberos is properly configured on your SQL Servers.
 
 ## Common connectivity issues
 
 When you've gone through the prerequisite and checklist, see [common connectivity issues](resolve-connectivity-errors-overview.md#common-connectivity-issues) and select the corresponding error message for detailed troubleshooting steps.
-

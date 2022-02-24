@@ -29,7 +29,7 @@ Use the list below to navigate to the appropriate topic page for detailed troubl
 
 - [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
 
-- Login failed for user.
+- [Login failed for user](login-failed-for-user.md)
 
   Covers the following Login errors:
   - > Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'
@@ -51,23 +51,23 @@ Use the list below to navigate to the appropriate topic page for detailed troubl
 
 The following topics provide details on various tools and procedures that are used when troubleshooting various connectivity errors
 
-- [Configure firewalls to work with SQL Server](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
+- [Configure firewalls to work with SQL Server](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context)
 
   Describes how to configure Windows firewall for successful connections to instances.
 
-- [Test connections to SQL Server by using Universal Data Link (UDL) files](test-oledb-connectivity-use-udl-file.md).
+- [Test connections to SQL Server by using Universal Data Link (UDL) files](test-oledb-connectivity-use-udl-file.md)
   
   Describes how to test connections between SQL Server and clients using UDL files.
 
-- [Use PortqryUI tool with SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md#sql-server-with-named-instance).
+- [Use PortqryUI tool with SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md#sql-server-with-named-instance)
 
   Describes how to use the PortqryUI tool, which is a graphical user interface (GUI) port scanner to help troubleshoot connectivity issues.
 
-- Check whether SQL Server is listening on dynamic or static ports.
+- [Check whether SQL Server is listening on dynamic or static ports](static-or-dynamic-port-config.md)
 
   Provides steps to check whether SQL Server is listening on dynamic or static ports.
 
-- [Use Kerberos Configuration Manager to fix SPN issues](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+- [Use Kerberos Configuration Manager to fix SPN issues](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended)
 
   Describes how to use Kerberos Configuration Manager to fix Service Principal Name (SPN) issues.
 

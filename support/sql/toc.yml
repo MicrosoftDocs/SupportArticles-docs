@@ -236,7 +236,7 @@
       - name: Dynamic vs Static ports
         href: connect/static-or-dynamic-port-config.md
       - name: Kerberos Configuration Manager
-        href: connect/kerberos-configuration-manager-available.md
+        href: connect/using-kerberosmngr-sqlserver.md
       - name: Testing using UDL file 
         href: connect/test-oledb-connectivity-use-udl-file.md
       - name: Using PortqryUI tool 
