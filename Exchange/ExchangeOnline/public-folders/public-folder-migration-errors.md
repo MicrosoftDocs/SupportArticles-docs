@@ -24,7 +24,7 @@ In a public folder migration, you may experience one of the following issues:
 
 - **Unable to remove a primary public folder mailbox**
 
-    When you try to [roll back a public folder migration](/exchange/collaboration/public-folders/roll-back-exchange-online-migration), you're stuck in the step of removing the primary public folder mailbox. Additionally, you receive one of the following error messages:
+    When you try to [roll back a public folder migration](/exchange/collaboration/public-folders/roll-back-exchange-online-migration), you become stuck in the step to remove the primary public folder mailbox. Additionally, you receive one of the following error messages:
 
     > The operation couldn't be performed because 'Mailbox1' matches multiple entries.
 
@@ -38,11 +38,11 @@ In a public folder migration, you may experience one of the following issues:
 
 ## Cause
 
-These issues occur if either the primary public folder mailbox or the secondary public folder mailbox has an CNF orphaned object.
+These issues occur if either the primary public folder mailbox or the secondary public folder mailbox has an orphaned CNF (conflict) object.
 
 ## Resolution
 
-To resolve this issue, find and remove all existing orphaned public folder mailboxes by following these steps:
+To resolve this issue, find and remove all existing orphaned public folder mailboxes. To do this, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Find orphaned CNF public folder mailboxes by running the following cmdlets:
@@ -62,15 +62,15 @@ To resolve this issue, find and remove all existing orphaned public folder mailb
 
      :::image type="content" source="media/public-folder-migration-errors/command-output.png" alt-text="Screenshot of the command output in which ExchangeGuid is highlighted.":::
 
-3. Remove an individual orphaned public folder mailbox by running the following cmdlet:
+3. To remove an individual orphaned public folder mailbox, run the following cmdlet:
 
     ```powershell
     Remove-Mailbox -PublicFolder -RemoveCNFPublicFolderMailboxPermanently <ExchangeGuid> 
     ```
 
-    **Note:** Replace \<ExchangeGuid> with the value that you get from the cmdlet output in step 2 for mailbox objects that have the CNF value in **Name** and **Identity**.
+    **Note:** Replace \<ExchangeGuid> with the value that you get from the cmdlet output in step 2 for mailbox objects that have the "CNF" value in **Name** and **Identity**.
 
-    If the cmdlet in the step 2 reports multiple orphaned public folder mailboxes, you can also find and remove them in a batch by running the following cmdlet:
+    If the cmdlet in step 2 reports multiple orphaned public folder mailboxes, you can find and remove them in a batch by running the following cmdlet:
 
     ```powershell
     $soft= Get-Recipient -RecipientTypeDetails PublicFolderMailbox –IncludeSoftDeletedRecipients ; foreach ($mbx in $soft){if ($mbx.Name -like "*CNF:*" -or $mbx.identity -like "*CNF:*") {Remove-Mailbox -PublicFolder $mbx.ExchangeGUID.GUID -RemoveCNFPublicFolderMailboxPermanently}}
