@@ -9,18 +9,14 @@ ms.service: az-devops-project
 ---
 # Antivirus exclusions for Azure DevOps
 
-This article describes the system processes that you should consider excluding from antivirus scanning on computers that are running Team Foundation Server (TFS), Azure DevOps Server or Azure DevOps Services.
+This article provides information about the processes and folders that may have to be excluded from antivirus scanning on computers that are running Team Foundation Server (TFS), Azure DevOps Server or Azure DevOps Services. It also provides links to Microsoft knowledge base articles that cover antivirus exclusions that may be defined on servers that are running deployments of Microsoft SQL Server and SharePoint Server that have been integrated with Azure DevOps Server.
 
 _Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server, Azure DevOps Services   
 _Original KB number:_ &nbsp; 2636507
 
-## Summary
-
-This article provides information about the processes that may have to be excluded from antivirus scanning on computers that are running Team Foundation Server, Azure DevOps Server or Azure DevOps Services. It also provides links to Microsoft knowledge base articles that cover antivirus exclusions that may be defined on servers that are running deployments of Microsoft SQL Server and SharePoint Server that have been integrated with Azure DevOps Server.
-
 ## Symptoms
 
-Target files will be locked when the antivirus software is scanning. Builds may take longer time to complete and you may encounter errors if proper folders are not added to the antivirus software's directory exclusion list. These errors may include intermittent instances where the Team Foundation Server Application Pool crashes. The following list includes errors that you might encounter when this behavior occurs:
+Target files will be locked when the antivirus software is scanning. Builds may take longer time to complete and you may encounter errors if proper folders aren't added to the antivirus software's directory exclusion list. These errors may include intermittent instances where the Team Foundation Server Application Pool crashes. The following list includes errors that you might encounter when this behavior occurs:
 
 - The following event is added to the system's Application log:
 
@@ -42,8 +38,8 @@ If you encounter the issue described above, you may have to configure your antiv
 
 TFS/Azure DevOps Server:
 
-- _%ProgramFiles%\Azure DevOps Server <VersionNumber>_
-- _%ProgramFiles%\Azure DevOps Server <VersionNumber>\Application Tier\TfsJobAgent_
+- _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>_
+- _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>\Application Tier\TfsJobAgent_
 - _C:\Users\\<TFS_Service_Account\>\AppData\Local\Temp_
 - _C:\inetpub\temp_
 - _%ProgramFiles%\Azure DevOps Server <VersionNumber\>\Application Tier\Web Services\bin_
