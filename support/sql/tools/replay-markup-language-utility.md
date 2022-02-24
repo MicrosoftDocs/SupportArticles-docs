@@ -54,7 +54,7 @@ The current version of RML Utilities for SQL Server supersedes any earlier versi
 
 When you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090) you can get the RML tools (ReadTrace and OStress) from the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
 
-If you are using the RML tools together with the [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) tool, you can obtain `ReadTrace` and `ostress` from https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097.
+If you're using the RML tools together with the [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) tool, you can obtain `ReadTrace` and `ostress` from https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097.
 
 RML Utilities for SQL Server is available for download from the [Microsoft Download Center](https://download.microsoft.com/download/7/A/D/7ADE5D8B-47AB-4E94-BAD0-5416D6B6D383/RMLSetup.msi).
 
@@ -63,7 +63,7 @@ RML Utilities for SQL Server is available for download from the [Microsoft Downl
 
 ## Benefits of RML Utilities for SQL Server
 
-RML Utilities for SQL Server is useful if you want to simulate application testing when it is impractical or impossible to test by using the real application. In a test environment, it may be difficult to generate the same user load that exists in the production environment. You could use RML Utilities for SQL Server to replay a production workload in a test environment and assess the performance effect of changes. For example, you could test an upgrade to SQL Server 2008 or the application of a SQL Server service pack. Additionally, you can use RML Utilities for SQL Server to analyze and compare various replay workloads. This kind of regression analysis would otherwise be a difficult process that you would have to do manually.
+RML Utilities for SQL Server is useful if you want to simulate application testing when it's impractical or impossible to test by using the real application. In a test environment, it may be difficult to generate the same user load that exists in the production environment. You could use RML Utilities for SQL Server to replay a production workload in a test environment and assess the performance effect of changes. For example, you could test an upgrade to SQL Server 2008 or the application of a SQL Server service pack. Additionally, you can use RML Utilities for SQL Server to analyze and compare various replay workloads. This kind of regression analysis would otherwise be a difficult process that you would have to do manually.
 
 The Help file contains a Quick Start topic. This topic includes a brief exercise that will familiarize you with every RML tool. To open the Help file, select **Start**, point to **All Programs**, point to **RML Utilities for SQL Server**, point to **Help**, and then select **RML Help**.
 
