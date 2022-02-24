@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
 description: This artilce provides a procedure to help you fix high-CPU-usage issues for a server that is running SQL Server.
-ms.date: 02/22/2022
+ms.date: 02/24/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: v-jayaramanp
 
 _Applies to:_ &nbsp; SQL Server
 
-This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU that occur in SQL Server, the following are the most common ones:
+This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU that occur in SQL Server, the following causes are the most common ones:
 
 - High logical reads that are caused by table or index scans because of the following:
   - Out-of-date statistics
@@ -33,7 +33,7 @@ Use one of the following tools to check whether the SQL Server process is actual
   - Counter: `Process/%User Time`, `% Privileged Time`
   - Instance: sqlservr
   
-- You can use the following Powershell script to collect the counter data over 60 sec period:
+- You can use the following Powershell script to collect the counter data over a 60 sec period:
 
   ```PowerShell
       $serverName = "YourServerName"
