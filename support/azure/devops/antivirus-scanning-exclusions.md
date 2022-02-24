@@ -7,20 +7,20 @@ ms.reviewer: chandrur
 ms.topic: article
 ms.service: az-devops-project
 ---
-# Antivirus exclusions for Azure DevOps Server
+# Antivirus exclusions for Azure DevOps
 
-This article describes the system processes that you should consider excluding from antivirus scanning on computers that are running Team Foundation Server.
+This article describes the system processes that you should consider excluding from antivirus scanning on computers that are running Team Foundation Server (TFS), Azure DevOps Server or Azure DevOps Services.
 
-_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server  
+_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server, Azure DevOps Services   
 _Original KB number:_ &nbsp; 2636507
 
 ## Summary
 
-This article provides information about the processes that may have to be excluded from antivirus scanning on computers that are running Team Foundation Server 2010, Team Foundation Server Proxy 2010, Team Foundation Server 2012, and Team Foundation Server Proxy 2012, Azure DevOps Server. It also provides links to Microsoft knowledge base articles that cover antivirus exclusions that may be defined on servers that are running deployments of Microsoft SQL Server and SharePoint Server that have been integrated with Team Foundation Server.
+This article provides information about the processes that may have to be excluded from antivirus scanning on computers that are running Team Foundation Server, Azure DevOps Server or Azure DevOps Services. It also provides links to Microsoft knowledge base articles that cover antivirus exclusions that may be defined on servers that are running deployments of Microsoft SQL Server and SharePoint Server that have been integrated with Azure DevOps Server.
 
 ## Symptoms
 
-Target files will be locked when the antivirus software is scanning. You may encounter errors if proper folders are not added to the antivirus software's directory exclusion list. These errors may include intermittent instances where the Team Foundation Server Application Pool crashes. The following list includes errors that you might encounter when this behavior occurs:
+Target files will be locked when the antivirus software is scanning. Builds may take longer time to complete and you may encounter errors if proper folders are not added to the antivirus software's directory exclusion list. These errors may include intermittent instances where the Team Foundation Server Application Pool crashes. The following list includes errors that you might encounter when this behavior occurs:
 
 - The following event is added to the system's Application log:
 
@@ -38,36 +38,44 @@ Target files will be locked when the antivirus software is scanning. You may enc
 
 ## Exclusion list
 
-You may have to configure your antivirus software to exclude the following processes, folders and their sub-folders from antivirus scanning:
+If you encounter the issue described above, you may have to configure your antivirus software to exclude the following processes, folders and their sub-folders from antivirus scanning.
 
+TFS/Azure DevOps Server:
+
+- _%ProgramFiles%\Azure DevOps Server <VersionNumber>_
+- _%ProgramFiles%\Azure DevOps Server <VersionNumber>\Application Tier\TfsJobAgent_
 - _C:\Users\\<TFS_Service_Account\>\AppData\Local\Temp_
 - _C:\inetpub\temp_
-- _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\bin_
-- _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\Web Services\_tfs_data_
-- TFS Client Cache
-  - On TFS server: _C:\Users\\<TFS_Service_Account\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache_
-  - On Client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Team Foundation\\<VersionNumber\>\Cache_
-- TFS application tier Cache Location
+- _%ProgramFiles%\Azure DevOps Server <VersionNumber\>\Application Tier\Web Services\bin_
+- _C:\AzureDevOpsData\ApplicationTier\_fileCache_
+- TFS/Azure DevOps Server Client Cache folder
+  - On the server: _C:\Users\\<ServiceAccountName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
+  - On the client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
+- `TFSJobAgent.exe` process that is typically located at _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_
+
+ Azure DevOps Server/Azure DevOps Services
+
 - Pipeline agent folders
-- _\Builds, \Symbols, \Drop_
+- `TFSbuildServicehost.exe` process for XAML builds
+- Processes for vNext builds like `Agent.Listener.exe`, `Agent.Worker.exe` and `AgentService.exe`
+- Self-Hosted Agent folders like _\Builds, \Symbols, \Drop, \bin, \_diag, \_work_
 - _%ProgramFiles%\Microsoft Visual Studio \<VersionNumber\>_
 - _C:\Windows\Microsoft.NET\Framework_
 - _C:\Windows\Microsoft.NET\Framework\\<VersionNumber\>\Temporary ASP.NET Files_
 - _C:\Windows\Microsoft.NET\Framework64\\<VersionNumber\>\Temporary ASP.NET Files_
-- `TFSJobAgent.exe` process that is typically located at _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_
 
 ## More information
 
-For better performance of source control and other Team Foundation Server operations, we recommend adding the Internet Information Services (IIS) worker process (w3wp.exe) to the list of antivirus exclusions. This is not a requirement for Team Foundation Server.
+For better performance of source control and other TFS/Azure DevOps Server operations, we recommend adding the Internet Information Services (IIS) worker process (w3wp.exe) to the list of antivirus exclusions. This is not a requirement for TFS/Azure DevOps Server.
 
 The w3wp.exe process is typically located at _C:\Windows\System32\inetsrv\w3wp.exe_. You can also locate this process by following these steps:
 
-1. Make a Team Foundation Server web request such as by connecting to Team Foundation Server through Team Explorer.
-2. On the Team Foundation Server application tier or the Team Foundation Server proxy machine, open **Task Manager**, and then click the **Details** tab.
+1. Make a TFS/Azure DevOps Server web request such as by connecting to the server through Team Explorer.
+2. On the TFS/Azure DevOps Server application tier or the TFS/Azure DevOps Server proxy machine, open **Task Manager**, and then select the **Details** tab.
 3. Find **w3wp.exe** in the list of items that are running.
 4. Right-click **w3wp.exe**, and then select **Open file location**.
 
-For more information about SQL Server folder exclusions, see the following:
+For more information about SQL Server and SharePoint Server folder exclusions, see the following:
 
 - [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422)
 
