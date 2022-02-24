@@ -31,6 +31,12 @@ This issue occurs in one of the following situations:
 - The specific URLs that are required by the service connection point aren't included in the allowlist on your firewall or proxy server.
 
 ## Resolution
+- If you don't have already, Please consider upgrading the server to Server 2016 or above, 
+- Please make sure you have all the internet rules and exceptions in place for your proxy/firewall to allow the traffic, 
+- Related docs
+[Internet Access Requirement](https://docs.microsoft.com/en-us/mem/configmgr/core/plan-design/network/internet-endpoints). 
+[ConfigMgr Proxy Exceptions](https://docs.microsoft.com/en-us/archive/blogs/configmgrdogs/configuration-manager-proxy-exceptions)
+
 
 On the computer that runs the online service connection point or service connection tool, [enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server).
 In particular, if .NET Framework updates are installed, set the following registry values, and then restart the computer:
@@ -44,5 +50,7 @@ In particular, if .NET Framework updates are installed, set the following regist
 For more information about the specific URLs that are required by the service connection point, see [Service connection point](/mem/configmgr/core/plan-design/network/internet-endpoints#service-connection-point).
 
 ## Workaround
+From the error on the DMPDownloader.log, Take the URL and manually download the cab file, Then copy the cab file over to <ConfigMgr Install Dir>\Inboxes\HMAN.box\CFD folder
+Watch HMAN.log for processing details.
 
-If you use the service connection tool, manually download the *ConfigMgr.AdminUIContent.cab* file from [https://go.microsoft.com/fwlink/?LinkID=619849](https://go.microsoft.com/fwlink/?LinkID=619849). Save the file to the folder that's specified by the `-updatepackdest` parameter when you run the `serviceconnectiontool.exe` command. Then, rename the *ConfigMgr.AdminUIContent.cab* file to *ConfigMgr.AdminUIContent.auc*.
+
