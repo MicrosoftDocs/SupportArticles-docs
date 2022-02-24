@@ -26,14 +26,14 @@ _Applies to:_ &nbsp; All versions of Windows
 
 ## Introduction
 
-The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that governs the U.S. Federal Common Policy CA formally requested the removal of the "G1" root certificate from the Microsoft Trusted Root Program.
+The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that governs the U.S. Federal Common Policy CA formally requested the removal of the "G1" root certificate listed below from the Microsoft Trusted Root Program.
 
 |Certificate name|SHA1 thumbprint|
 |---|---|
 |Federal Common Policy CA|905F942FD9F28F679B378180FD4F846347F645C1|
 |||
 
-Applications and operations that depend on the "G1" root certificate will fail after they receive the certificate update within one to seven days after March 29, 2022. Administrators should migrate from the existing "G1" root certificate to the replacement "G2" root certificate as your agency's federal trust anchor.
+Applications and operations that depend on the "G1" root certificate will fail one to seven days after they receive the root certificate update after March 29, 2022. Administrators should migrate from the existing "G1" root certificate to the replacement "G2" root certificate listed below as your agency's federal trust anchor.
 
 |Certificate name|SHA1 thumbprint|
 |---|---|
@@ -64,7 +64,7 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 
 ## Steps to avoid these issues
 
-1. Verify changes in the [Test configuration setup](#test-configuration-setup) section that are being made to your certificate between now and March 29, 2022.
+1. Verify changes in the [Test configuration setup](#test-configuration-setup) section to test what occurs with the removal of the "G1" from the certificate trust list (CTL) between now and March 29, 2022.
 2. After you use the [test configuration setup](#test-configuration-setup) section to verify that all relevant scenarios work, follow the steps in the "[Production configuration setup](#production-configuration-setup)" section in your production configuration.
 3. If you experience outages that are caused by the removal of the "G1" root certificates after March 29, 2022, manually download the "G2" root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
@@ -73,7 +73,7 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 
 ### Test configuration setup
 
-The following steps directly configure the Windows registry to a prerelease or staged location of the latest certificate update. You can also configure the settings by using Group Policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
+Before March 29, 2022, administrators can use the following steps to directly configure the Windows registry to a prerelease or staged location of the latest certificate update. You can also configure the settings by using Group Policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
 
 1. Open _regedit_, and then navigate to the following registry subkey:  
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
@@ -89,16 +89,16 @@ The following steps directly configure the Windows registry to a prerelease or s
 4. Delete the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` subkey. This step deletes all stored root certificates.
 
    > [!Note]
-   > By deleting certificates from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`, you can make sure that all stored root certificates are removed. This operation forces Windows to download new root certificates if associated public key infrastructure (PKI) chains are used that have new properties (if modified). Because the "G1" root certificate is being removed, this root certificate will not be downloaded.
+   > By deleting all stored root certificates from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`, you can make sure that all stored root certificates are removed. This operation forces Windows to download new root certificates if associated public key infrastructure (PKI) chains are used that have new properties (if modified). Because the "G1" root certificate is being removed, this root certificate will not be downloaded.
 
 5. Verify all scenarios that chain to the "G1" root certificate, including those that are listed in [Potential issues](#potential-issues).
 
 > [!Note]
-> This link never changes. However, the changes that are staged change from month to month. As of February 24, 2022, this testing URL is staged by having about 20 continuous deprecation changes that don't currently include removing the "G1" root certificate. That change will be staged in March 2022. This article will be updated to include the exact staging date March 29, 2022.
+> The link to the test site never changes. However, the changes that are staged on the test site change from month to month. As of February 24, 2022, this testing URL is staged with 20 continuous deprecation changes that don't currently include removing the "G1" root certificate. That change will be staged in March 2022. This article will be updated noting when the removal of the "G1" root certificate has been staged on the test site.
 
 ### Production configuration setup
 
-The following steps directly configure the Windows registry to use the production version of the certificate trust list (CTL) if the testing URL from the previous section is used:
+The following steps directly configure the Windows registry to use the production version of the CTL if the testing URL from the previous section is used:
 
 1. Open _regedit_, and then navigate to the following registry subkey:
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
@@ -113,9 +113,9 @@ The following steps directly configure the Windows registry to use the productio
 
 4. Delete the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` registry subkey. This step deletes all stored root certificates.
 
-### Implement the "G2" root certificate
+### Configure the "G2" root certificate
 
-Administrators should implement the "G2" root certificate per the following instructions before the "G1" root certificate is removed by the out-of-band (OOB) root certificate update.
+Administrators should configure the "G2" root certificate per the following instructions before the "G1" root certificate is removed by the out-of-band (OOB) root certificate update.
 
 1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the "G2" root certificate on all Windows workgroup, member, and domain controller computers.
 2. There are multiple ways to deploy the root store to enterprise devices. See the "Microsoft Solutions" section in [Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
