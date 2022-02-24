@@ -38,14 +38,14 @@ To resolve connectivity issues on your computer or a remote computer, follow the
 1. Select **Query predefined service**, and then select **SQL Service**.
    The ports on the computer are grouped by the type of service that they're used for. You can query by the service type. The predefined services are as follows:
 
-  - Domains and Trusts
-  - DNS Queries
-  - NetBIOS communication
-  - IPSEC
-  - SQL Service
-  - WEB Service
-  - Exchange Server
-  - Netmeeting and other services
+   - Domains and Trusts
+   - DNS Queries
+   - NetBIOS communication
+   - IPSEC
+   - SQL Service
+   - WEB Service
+   - Exchange Server
+   - Netmeeting and other services
 
 1. After you specify the information, select **Query**, and then check the output. For more information about how to decode the output that's shown by the PortQryUI tool, see the [Possible causes of SQL Server connection issues and suggested workarounds](#possible-causes-of-sql-server-connection-issues-and-suggested-workarounds) section.
 
@@ -108,7 +108,7 @@ To resolve connectivity issues on your computer or a remote computer, follow the
 
 **Possible causes**: This issue indicates that the client library can connect to the SQL Server-based computer. However, something else in the application layer could be causing the problem.
 
-**Suggested workarounds**": Try the following workarounds:
+**Suggested workarounds**: Try the following workarounds:
 
 - Make sure that the server name and port number are specified correctly in the connection string.
 - Make sure that there aren't any old aliases defined on the client computers. Do check for the presence of an alias to your SQL Server instance either in SQL Server Configuration Manager or the **Alias** tab in the SQL Server Client Network Utility (*Cliconfg.exe*) on your client system.

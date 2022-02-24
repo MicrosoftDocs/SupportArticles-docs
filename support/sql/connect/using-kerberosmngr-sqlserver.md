@@ -116,10 +116,10 @@ The `generateSPNss.cmd` file is created, and you can run this file at a command 
 
 - Use **Fix** to fix issues and add SPNs. You can add an SPN only if you have the required permissions. When you select **Fix**, the following tool tip is displayed:
 
-  :::image type="content" source="media/using-kerberos-config-mngr/fix-option-add-spn.png" alt-text="Screenshot of the Fix option to add SPN":::
+  :::image type="content" source="media/using-kerberos-config-mngr/fix-option-add-spn.png" alt-text="Screenshot of the Fix option to add SPN.":::
 
    > [!NOTE]
-   > The tool provides the **Fix** and **Generate** command only for default instances and named instances that have static ports. For named instances that use dynamic ports, we recommend that you switch from dynamic to static ports or provide necessary permissions for the service account to register and unregister the SPN every time that the SQL service is started. Otherwise, you have to manually unregister and re-register the corresponding SPNs whenever the service is started. For more information, see [Register a Service Principal Name for Kerberos Connections - SQL Server | Microsoft Docs](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections?view=sql-server-ver15&preserve-view=true).
+   > The tool provides the **Fix** and **Generate** commands only for default instances and named instances that have static ports. For named instances that use dynamic ports, we recommend that you switch from dynamic to static ports or provide necessary permissions for the service account to register and unregister the SPN every time that the SQL service is started. Otherwise, you have to manually unregister and re-register the corresponding SPNs whenever the service is started. For more information, see [Register a Service Principal Name for Kerberos Connections - SQL Server | Microsoft Docs](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections?view=sql-server-ver15&preserve-view=true).
 
 - **Delegation**: Use **Delegation** to identify any issues that affect the service account's configuration for delegation. This is especially useful in troubleshooting linked server issues. For example, if the SPN checkout is fine but you still experience issues that affect linked server queries, this might indicate that the service account is not configured to delegate credentials. For more information, see the Books online topic at [Configuring Linked Servers for Delegation](/previous-versions/sql/sql-server-2008-r2/ms189580(v=sql.105)).
 
@@ -131,15 +131,15 @@ Review the diagnosis from the tool by referring the **Status** column. Based on 
 
 - **Status - Good**
 
-  More information: The checked item is configured correctly. Go to the next item in the output.
+  **More information**: The checked item is configured correctly. Go to the next item in the output.
 
-  Action: No action is required.
+  **Action**: No action is required.
 
 - **Status - Required SPN is missing**
 
-  More information: This status is reported if the Service Principal Name (SPN) that's mentioned in the **Required SPN** column is missing for the SQL Server startup account in Active Directory.
+  **More information**: This status is reported if the Service Principal Name (SPN) that's mentioned in the **Required SPN** column is missing for the SQL Server startup account in Active Directory.
 
-  Action: Follow these steps to check whether the SPN issues are resolved:
+  **Action**: Follow these steps to check whether the SPN issues are resolved:
 
     1. Select **Fix** to review the information in the **Warning** dialog box.
     1. Select **Yes** to add the missing SPN to Active Directory.
@@ -149,9 +149,9 @@ Review the diagnosis from the tool by referring the **Status** column. Based on 
 
 - **Status - TCP must be enabled to use Kerberos configuration.**
 
-  More information: This status is shown if TCP is not enabled on the client computer.
+  **More information**: This status is shown if TCP is not enabled on the client computer.
 
-  Action: Follow these steps to enable the TCP/IP protocol for the SQL Server instance:
+  **Action**: Follow these steps to enable the TCP/IP protocol for the SQL Server instance:
 
     1. In **SQL Server Configuration Manager - Console**, expand **SQL Server Network Configuration**.
   
@@ -167,13 +167,11 @@ Review the diagnosis from the tool by referring the **Status** column. Based on 
 
 - **Status - Dynamic Port**
 
-  More information:
-
-  This status is displayed for named instances that use dynamic ports (default configuration). In environments where you need to use Kerberos to connect to SQL Server, you should set your named instance to use a static port, and use that port when you register the SPN. Otherwise, the SPN that's registered in Active Directory will become invalid the next time that a named instance starts listening on a new port other than the one that the SPN was registered under.
+  **More information**: This status is displayed for named instances that use dynamic ports (default configuration). In environments where you need to use Kerberos to connect to SQL Server, you should set your named instance to use a static port, and use that port when you register the SPN. Otherwise, the SPN that's registered in Active Directory will become invalid the next time that a named instance starts listening on a new port other than the one that the SPN was registered under.
   > [!NOTE]
   > This recommendation applies only to environments that depend on manual SPN registration.
 
-  Action: Follow these steps to configure the SQL Server instance to use a static port:
+  **Action**: Follow these steps to configure the SQL Server instance to use a static port:
 
   1. In **SQL Server Configuration Manager - Console**, expand **SQL Server Network Configuration**, expand **Protocols** for `<instance name>`, and then double-click **TCP/IP**.
   1. In **TCP/IP Properties**, select **Listen All** in the **Protocol**.
@@ -185,9 +183,10 @@ Review the diagnosis from the tool by referring the **Status** column. Based on 
   
 - **Status - Duplicate SPN**
 
-  More information: You might encounter this scenario if the same SPN is registered under different accounts in Active Directory.
+  **More information**: You might encounter this scenario if the same SPN is registered under different accounts in Active Directory.
 
-  Actions: Follow these steps to add an SPN to Active Directory:
+  **Actions**: Follow these steps to add an SPN to Active Directory:
+
   1. Select **Fix**.
   1. Check the information in the **Warning** dialog box.
   1. Select **Yes** to add the missing SPN to Active Directory.
@@ -196,7 +195,7 @@ Review the diagnosis from the tool by referring the **Status** column. Based on 
 
       - If your domain account does not have necessary permissions to update Active Directory, use **Generate** or **Generate All** to generate the necessary script that you can provide to your Active Directory administrator to remove the duplicate SPNs.
 
-  1. After the SPNs are removed, rerun Kerberos Configuration Manager to verify that the SPN issues are resolved.
+  1. After the SPNs are removed, re-run Kerberos Configuration Manager to verify that the SPN issues are resolved.
 
    > [!NOTE]
    > When an instance of the SQL Server Database Engine starts, SQL Server tries to register the SPN for the SQL Server service. When the instance is stopped, SQL Server tries to unregister the SPN. For this to occur, the SQL Server service account requites the appropriate permissions in Active Directory. But if the service account does not have these rights, the automatic SPN registration does not occur, and you must work with your Active Directory administrator to register these SPN so that the SQL instances can enable Kerberos authentication. For more information, see [Register a Service Principal Name for Kerberos Connections - SQL Server | Microsoft Docs](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections?view=sql-server-ver15&preserve-view=true).
