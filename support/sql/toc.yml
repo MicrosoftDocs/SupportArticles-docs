@@ -226,7 +226,7 @@
     - name: Connectivity How Tos
       items:
       - name: Configure the Windows Firewall to allow SQL Server access
-        href: https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access
+        href: /sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context
       - name: Test OLE DB connectivity
         href: connect/test-oledb-connectivity-use-udl-file.md
     - name: Kerberos Configuration Manager is available
