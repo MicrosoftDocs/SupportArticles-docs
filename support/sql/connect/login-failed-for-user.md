@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting information for login failed for user errors
-description: Provides troubleshooting information for various “Login failed for user” errors that appear when connecting to an instance of SQL Server.  
+description: Provides troubleshooting information for various "Login failed for user" errors that appear when connecting to an instance of SQL Server.  
 ms.date: 02/23/2022
 author: ramakoni1
 ms.author: v-jayaramanp
@@ -15,7 +15,7 @@ ms.prod: sql
 
 _Applies to:_ &nbsp; SQL Server
 
-This article provides troubleshooting information that you can use if you receive various “Login failed for user” error messages when you try to connect to an instance of Microsoft SQL Server. User logins can fail for many reasons, such as invalid credentials, password expiration, and enabling the wrong authentication mode. In many cases, error codes include descriptions. The following examples are some of the common login failures. Select the exact error that you're experiencing to troubleshoot the issue.
+This article provides troubleshooting information that you can use if you receive various "Login failed for user" error messages when you try to connect to an instance of Microsoft SQL Server. User logins can fail for many reasons, such as invalid credentials, password expiration, and enabling the wrong authentication mode. In many cases, error codes include descriptions. The following examples are some of the common login failures. Select the exact error that you're experiencing to troubleshoot the issue.
 
 - [Login failed for user 'NT AUTHORITY\ANONYMOUS' LOGON](#login-failed-for-user-nt-authorityanonymous-logon)
 - [Login failed for user '(null)'](#login-failed-for-user-null)
@@ -85,3 +85,7 @@ If the domain name isn't specified, the problem is a failing SQL Server login at
 For other tips, see [Books Online topic MSSQLSERVER 18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver15&preserve-view=true). This topic contains more information about error codes. Also, check the extensive list of error codes at [Troubleshooting Error 18456.](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) (external link).
 
 For more troubleshooting help, see [Troubleshooting Consistent Authentication issues – CSS SQL wiki](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0000-Troubleshooting-Workflows).
+
+## See also
+
+- [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)

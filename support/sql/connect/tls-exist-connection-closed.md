@@ -99,6 +99,8 @@ For more information about this scenario, see [Applications experience forcibly 
 
 ## See also
 
+- [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+
 - [Error for SSIS packages on SQL servers configured to use encryption and network packet size](/troubleshoot/sql/integration-services/use-encryption-network-packet-size)
 
 - [Recommended prerequisites and checklist for troubleshooting connectivity issues](resolve-connectivity-errors-checklist.md)

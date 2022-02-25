@@ -418,6 +418,8 @@ Once you can connect by using TCP on the same computer, it's time to try to conn
 
 ## See also
 
+- [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+
 - [Consistent network Issue troubleshooting on CSS SQL Wiki](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0200-Consistent-Network-Issue)
 
 - [Availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
