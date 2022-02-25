@@ -29,6 +29,7 @@ ALAR covers the following repair scenarios:
    - Missing disk
 - Damaged initrd or missing initrd line in the /boot/grub/grub.cfg file
 - Startup problems caused by a corrupted kernel image
+- Incorrect setup, for either the Linux kernel or GRUB serial console configuration
 
 ## The ALAR scripts
 
@@ -59,22 +60,28 @@ In both cases, the following information is logged before the error entries are 
 
 ![Unpacking failed](media/repair-linux-vm-using-ALAR/unpacking-failed.png)
 
+**serialconsole**
+This action corrects an incorrect or malformed serials console configuration for either GRUB or the Linux kernel. 
+This action is recommended to run in the following cases
+   - No GRUB menu is displayed at startup of the VM
+   - No OS related information is written to the serial console 
+
 ## How to use ALAR
-The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar-fki**. For example:
+The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. For example:
 
 ```azurecli-interactive
 az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234’
  ```
 
 ```azurecli-interactive
-az vm repair run --verbose -g centos7 -n cent7 --run-id linux-alar-fki --parameters initrd --run-on-repair
+az vm repair run --verbose -g centos7 -n cent7 --run-id linux-alar2 --parameters initrd --run-on-repair
  ```
 
 ```azurecli-interactive
 az vm repair restore --verbose -g centos7 -n cent7
  ```
 
-These steps create a repair task. In the next step, you will use the `initrd` script to fix an initrd-related startup problem. In the last step, you will run the restore operation.
+These steps create a repair task. In the next step, you'll use the `initrd` script to fix an initrd-related startup problem. In the last step, you'll run the restore operation.
 
   [!NOTE]
 > You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
