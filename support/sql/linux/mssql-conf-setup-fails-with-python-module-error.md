@@ -22,11 +22,11 @@ You try to run the `mssql-conf` setup after installing SQL Server 2019. In this 
 
 ## Supported environment
 
-For Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-ver15#supportedplatforms).
+For Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).
 
 ## Details information
 
-1. Install the SQL Server on Linux by reviewing [installation guidance for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-ver15).  
+1. Install the SQL Server on Linux by reviewing [installation guidance for SQL Server on Linux](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).  
 
 1. Run the `/opt/mssql/bin/mssql-conf` setup. You might experience a module dependency.
 
