@@ -1,7 +1,7 @@
 ---
 title: Site storage notification emails for group-connected sites not received 
 description: This article describes an issue that prevents site storage notification email messages for group-connected sites from being received.
-author: prbalusu
+author: PramodBalusu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
