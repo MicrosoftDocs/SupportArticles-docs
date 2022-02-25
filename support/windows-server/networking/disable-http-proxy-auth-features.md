@@ -1,6 +1,6 @@
 ---
 title: How to disable HTTP proxy features
-description: 
+description: Describes how to disable specific features of Windows HTTP proxies.
 ms.date: 3/2/2022
 author: v-tappelgate
 ms.author: v-tappelgate
@@ -12,16 +12,14 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
-keywords: 
+keywords: http proxy, authentication, loopback, WPAD
 ---
 
 # How to disable HTTP proxy features
 
-This article 
+This article describes how to disable specific features of Windows HTTP proxies.
 
 _Applies to:_ &nbsp; Windows Server 2022, all editions, Windows 11, all editions
-
-Enterprise administrators may wish to disable certain HTTP proxy functionality. 
 
 ## How to disable an authentication protocol
 
