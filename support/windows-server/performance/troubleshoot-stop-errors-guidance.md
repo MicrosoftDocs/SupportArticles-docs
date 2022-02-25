@@ -34,7 +34,7 @@ There's no simple explanation for the cause of Stop errors (also known as blue s
 6. Run any relevant hardware and memory tests.
 7. Run [Microsoft Safety Scanner](https://www.microsoft.com/security/scanner/en-us/default.aspx) or any other virus detection program that includes checks of the Master Boot Record for infections.
 
-## Stop error name: KMODE_EXCEPTION_NOT_HANDLED
+## Bug check code: KMODE_EXCEPTION_NOT_HANDLED
 
 Stop error code:  
 > 0x0000001E
@@ -45,14 +45,14 @@ Troubleshooting: If a driver is identified in the Stop error message, disable or
 2. After your PC restarts to the **Choose an option** screen, select **Troubleshoot** > **Advanced options** > **Startup Settings** > **Restart**.
 3. After the computer restarts, you'll see a list of options. Press 4 or F4 to start the computer in Safe mode. Or, if you intend to use the internet while in Safe mode, press 5 or F5 for the **Safe Mode with Networking** option.
 
-## Stop error name: MEMORY_MANAGEMENT
+## Bug check code: MEMORY_MANAGEMENT
 
 Stop error code:  
 > 0x0000001A
 
 Troubleshooting: Running the Windows Memory Diagnostic tool could also be useful to exclude any kind of problem that affects the physical memory modules. See [Bug Check 0x1A: MEMORY_MANAGEMENT](/windows-hardware/drivers/debugger/bug-check-0x1a--memory-management).
 
-## Stop error name: SYSTEM_SERVICE_EXCEPTION
+## Bug check code: SYSTEM_SERVICE_EXCEPTION
 
 Stop error code:  
 > 0x0000003B
@@ -64,7 +64,7 @@ Troubleshooting: Indicates that the executing code had an exception, and the thr
 3. Check the System Log in Event Viewer for additional error messages that might help pinpoint the device or driver that's causing the error. Look for critical errors in the system log that occurred around the same time as the Stop error.
 4. If you recently added hardware to the system, try removing or replacing it. Or check with the manufacturer to see whether any updates are available.
 
-## Stop error name: DRIVER_IRQL_NOT_LESS_OR_EQUAL
+## Bug check code: DRIVER_IRQL_NOT_LESS_OR_EQUAL
 
 Stop error code:  
 > 0x000000D1
@@ -80,7 +80,7 @@ Troubleshooting: A driver has tried to access an address that's pageable (or tha
 
 Check the System log in Event Viewer for additional error messages that might help identify the device or driver that's causing this Stop error. If a driver is identified in the error message, disable the driver or check with the manufacturer for driver updates. Verify that any new hardware that's installed is compatible with the installed version of Windows.
 
-## Stop error name: DRIVER_POWER_STATE_FAILURE
+## Bug check code: DRIVER_POWER_STATE_FAILURE
 
 Stop error code:  
 > 0x0000009F
@@ -97,7 +97,7 @@ Troubleshooting: Indicates that the driver is in an inconsistent or invalid powe
 
 For advanced debugging, see [Bug Check 0x9F](/windows-hardware/drivers/debugger/bug-check-0x9f--driver-power-state-failure#resolution).
 
-## Stop error name: SYSTEM_THREAD_EXCEPTION_NOT_HANDLED
+## Bug check code: SYSTEM_THREAD_EXCEPTION_NOT_HANDLED
 
 Stop error code:  
 > 0x0000007E
@@ -111,7 +111,7 @@ Indicates that a system thread generated an exception that the error handler did
 4. You can also disable memory caching (shadowing) of the BIOS to try to resolve the error. Also run hardware diagnostics that the system manufacturer supplies.
 5. Verify that any added hardware is compatible with the installed version of Windows.
 
-## Stop error name: Inaccessible_Boot_Device
+## Bug check code: Inaccessible_Boot_Device
 
 Stop error code:  
 > 0x0000007B

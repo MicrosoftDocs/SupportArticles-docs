@@ -137,7 +137,7 @@ Troubleshooting: Redeploy the host pools so that the grace period gets reset. Th
 
 ### Issue 2
 
-RDLS stops responding on Windows Server 2016 when Windows Server 2019 CALs are requested.
+Remote Desktop Licensing service (RDLS) stops responding on Windows Server 2016 when Windows Server 2019 CALs are requested.
 
 Troubleshooting: Configuring a Windows Server 2019 version RDSH to use a Windows Server 2016 version RDLS is not supported. A Windows Server 2016 version RDLS cannot issue or handle Windows Server 2019 RDS CALs. This problem was fixed in RDLS 2012 R2. It does not occur in RDLS 2019.
 

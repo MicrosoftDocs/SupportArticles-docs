@@ -17,7 +17,7 @@ ms.technology: networking
 
 This solution is designed to help you troubleshoot Domain Name System (DNS) scenarios. DNS troubleshooting can be broken down into server-side and client-side issues.
 
-## Troubleshooting checklist 
+## Troubleshooting checklist
 
 ### Server-side issues
 
@@ -34,7 +34,7 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 
 ## Issue: DNS records are missing in a DNS zone
 
-This issue can be caused by one of the following situations:
+This issue can be caused by one of the following causes:
 
 ### Cause 1
 

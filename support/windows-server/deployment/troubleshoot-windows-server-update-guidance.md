@@ -19,56 +19,65 @@ This solution is designed to get you started on Windows Update troubleshooting s
 
 ## Troubleshooting checklist
 
-We recommend using DISM or System Update Readiness tool to troubleshoot Windows Update issue.
+### Step 1: Identify the issue by examining the event log for specific errors
+
+1. Open Event Viewer from the **Control Panel** > **Administrative Tools**.
+2. Look for Windows Update Agent events in the System log, and the errors in the System and Application logs around the same time that updates were applied.
+3. Expand the Event Viewer tree to **Application and Service Logs** > **Microsoft** > **Windows** > **WindowsUpdateClient** > **Operational**.
+4. Identify the Update that is failing to install and the failure code.
+5. Find the error and the resolution in [Common Windows Update errors](/windows/deployment/update/windows-update-errors) or [Windows Update error codes by component](/windows/deployment/update/windows-update-error-reference).
+
+### Step 2: Check for Pending Reboot state
+
+If the computer hasn't been restarted, restart the computer.
+
+### Step 3: Services Stack update
+
+Install the latest servicing stack update. See [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001).
+
+### Step 4: Run the Windows Update troubleshooter for Windows
+
+1. Download the troubleshooter, and select **Open** or **Save** in the pop-up window. (If you choose **Save**, you'll need to open the troubleshooter from the save location.)
+2. Select **Next** to start the troubleshooter, and follow the steps to identify and fix any issues.
+3. After the troubleshooter finishes, try running Windows Update again. From the **Start** button, select **Settings** > **Update & security** > **Windows Update** > **Check for updates**, and  install any available updates.
+4. If applicable, [Reset windows update components](http://support.microsoft.com/kb/971058).
+
+### Step 5: Use DISM or System Update Readiness tool to troubleshoot Windows Update issue
 
 See [Fix Windows Update errors by using the DISM or System Update Readiness tool](fix-windows-update-errors.md) for more information.
 
-## Issue 1
+## Issue: Error message "The update is not applicable to your computer"
 
-> The update is not applicable to your computer.
+### Cause 1: Update is superseded
 
-### Cause 1
+To troubleshoot this issue, check that the package that you are installing contains newer versions of the binaries. Alternatively, check that the package is superseded by another new package.
 
-Update is superseded.
+### Cause 2: Update is already installed
 
-Troubleshooting: Check that the package that you are installing contains newer versions of the binaries. Alternatively, check that the package is superseded by another new package.
+To troubleshoot this issue, verify that the package that you are trying to install isn't already installed.
 
-### Cause 2
+### Cause 3: Wrong update for architecture
 
-Update is already installed.
-
-Troubleshooting: Verify that the package that you are trying to install isn't already installed.
-
-### Cause 3
-
-Wrong update for architecture.
-
-Troubleshooting: Verify that the package that you're trying to install matches the Windows version that you are using. The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates cannot be installed on Windows Server 2012 R2-based computers.  
+To troubleshoot this issue, verify that the package that you're trying to install matches the Windows version that you are using. The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates cannot be installed on Windows Server 2012 R2-based computers.  
 Verify that the package you want to install matches the processor architecture of the Windows version that you are using. For example, an x86-based update can't be installed on x64-based installations of Windows.
 
-### Cause 4
+### Cause 4: Missing prerequisite update
 
-Missing prerequisite update.
-
-Troubleshooting: Read the package’s related article to find out whether the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424).  
+To troubleshoot this issue, read the package’s related article to find out whether the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424).  
 To determine if these prerequisite updates are installed, run this PowerShell command:  
 `get-hotfix KB3173424, KB2919355, KB2919442`  
 If the updates are installed, the command returns the installed date in the InstalledOn section of the output.
 
-## Issue 2
-
-Updates aren't downloading from Windows Server Update Services (WSUS) or Configuration Manager.
+## Issue: Updates aren't downloading from Windows Server Update Services (WSUS) or Configuration Manager
 
 Error message:  
 > Failed to connect to Mux due to network or cert errors  
 
-Troubleshooting: Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.)
+To troubleshoot this issue, check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.)
 
-## Issue 3
+## Issue: The device isn't receiving an update that you deployed
 
-The device isn't receiving an update that you deployed.
-
-Troubleshooting:
+To troubleshoot this issue, follow these steps:
 
 1. Check that the device’s updates for the relevant category aren’t paused. See [Pause feature updates](/windows/deployment/update/waas-configure-wufb#pause-feature-updates) and [Pause quality updates](/windows/deployment/update/waas-configure-wufb#pause-quality-updates).
 2. Feature updates only: The device might have a safeguard hold applied for the given feature update version. For more information about safeguard holds, see [Safeguard holds](/windows/deployment/update/safeguard-holds) and [Opt out of safeguard holds](/windows/deployment/update/safeguard-opt-out).
@@ -82,11 +91,9 @@ Troubleshooting:
    Get-WmiObject -Class Win32\_Product \| Where-Object {$\_.Name -amatch "Microsoft Update Health Tools"}
    ```
 
-## Issue 4
+## Issue: The device is receiving an update that you didn't deploy
 
-The device is receiving an update that you didn't deploy.
-
-Troubleshooting:
+To troubleshoot this issue, follow these steps:
 
 1. Check that the device is scanning the Windows Update service and not a different endpoint. If the device is scanning for updates from a WSUS endpoint, for example, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 2. Feature updates only: Check that the device is successfully enrolled in feature update management by the deployment service. A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
