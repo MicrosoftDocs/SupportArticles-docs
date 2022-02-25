@@ -171,7 +171,7 @@ Unable to add a default gateway.
 Cause: The IP address of the default gateway isn't on the same IP network ID as your IP address.
 
 Troubleshooting: Determine whether the default gateway is located on the same logical network as the network adapter of the computer by comparing the IP address of the default gateway with the network IDs of any of the network adapters of the computer.  
-For example, a computer has a single network adapter that's configured with an IP address of 192.168.0.33 and a subnet mask of 255.255.0.0. This requires that the default gateway to be of the form "192.168./<y/>./<z/>" because the network ID portion of the IP interface is 192.168.0.0.
+For example, a computer has a single network adapter that's configured with an IP address of 192.168.0.33 and a subnet mask of 255.255.0.0. This requires that the default gateway to be of the form "192.168.\<y\>.\<z\>" because the network ID portion of the IP interface is 192.168.0.0.
 
 ## Reference
 
