@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
-description: This artilce provides a procedure to help you fix high-CPU-usage issues for a server that is running SQL Server.
+description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
 ms.date: 02/24/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
@@ -13,9 +13,9 @@ ms.author: v-jayaramanp
 
 _Applies to:_ &nbsp; SQL Server
 
-This article provides a step-by-step procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU that occur in SQL Server, the following causes are the most common ones:
+This article provides a procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU usage that occur in SQL Server, the following causes are the most common:
 
-- High logical reads that are caused by table or index scans because of the following:
+- High logical reads that are caused by table or index scans because of the following conditions:
   - Out-of-date statistics
   - Missing indexes
   - [Parameter sensitive plan (PSP) issues](/azure/azure-sql/identify-query-performance-issues)
@@ -24,16 +24,16 @@ This article provides a step-by-step procedure to diagnose and fix issues that a
 
 You can use the following steps to troubleshoot high-CPU-usage issues in SQL Server.
 
-## Step 1: Verify that SQL Server is causing high CPU
+## Step 1: Verify that SQL Server is causing high CPU usage
 
-Use one of the following tools to check whether the SQL Server process is actually contributing to high CPU:
+Use one of the following tools to check whether the SQL Server process is actually contributing to high CPU usage:
 
-- Task Manager (On the **Process** tab, check whether the CPU value for **SQL Server Windows NT-64 Bit** is close to 100 percent)
+- Task Manager: On the **Process** tab, check whether the **CPU** column value for **SQL Server Windows NT-64 Bit** is close to 100 percent.
 - Performance and Resource Monitor ([perfmon](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731067(v=ws.11)))
   - Counter: `Process/%User Time`, `% Privileged Time`
   - Instance: sqlservr
   
-- You can use the following Powershell script to collect the counter data over a 60 sec period:
+- You can use the following PowerShell script to collect the counter data over a 60-second span:
 
   ```PowerShell
       $serverName = "YourServerName"
@@ -53,11 +53,11 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-If `% User Time` is consistently greater than 90 percent, it means that the SQL Server process is causing high CPU. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this would indicate that either anti-virus software, other drivers, or another OS component on the computer are contributing to high CPU. You should work with your system administrator to analyze the root cause of this behavior.
+If `% User Time` is consistently greater than 90 percent, this indicates that the SQL Server process is causing high CPU usage. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this indicates that either antivirus software, other drivers, or another OS component on the computer are contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the sqlservr.exe process is causing high CPU, identify the queries that are responsible for this by using the following query:
+If the Sqlservr.exe process is causing high CPU usage, identify the queries that are responsible for this activity by running the following query:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -89,19 +89,22 @@ ORDER BY r.cpu_time DESC
 
 ## Step 3: Update statistics
 
-After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries. You can use the `sp_updatestats` system stored procedure to update the statistics of all user-defined and internal tables in the current database, as in the following example. For more information, see [sp_updatestats](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).
+After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries. You can use the `sp_updatestats` system stored procedure to update the statistics of all user-defined and internal tables in the current database, as in the following example:
 
 ```sql
 exec sp_updatestats
 ```
 
 > [!NOTE]
-> The `sp_updatestats` system stored procedure runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database. For regular maintenance, you should make sure that regularly schedule maintenance is keeping statistics up to date. Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold. 
-If SQL Server is still using high CPU, go to the next step.
+> The `sp_updatestats` system stored procedure runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database. For regular maintenance, you should make sure that regularly schedule maintenance is keeping statistics up to date. Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, among other parameters, and update statistics with a linear threshold.
 
-## Step 4: Add potentially missing indexes
+For more information about `sp_updatestats`, see [sp_updatestats](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).
 
-1. Use the following query to identify queries with high CPU usage that contain at least one missing index in the query plan.
+If SQL Server is still using excessive CPU capacity, go to the next step.
+
+## Step 4: Add possibly missing indexes
+
+1. Run the following query to identify queries that cause high CPU usage and that contain at least one missing index in the query plan:
 
     ```sql
     -- Captures the Total CPU time spent by a query along with the query plan and total executions
@@ -126,11 +129,11 @@ If SQL Server is still using high CPU, go to the next step.
             //qplan:MissingIndexes')=1
     ```
 
-1. Review the execution plans for the queries identified, and tune the query by making the required changes. The following is an example where SQL Server will point out a missing index for your query. Right-click on the Missing index portion of the query plan and choose **Missing Index Details** to create the index in another window in SSMS.
+1. Review the execution plans for the queries that are identified, and tune the query by making the required changes. The following screenshot shows an example in which SQL Server will point out a missing index for your query. Right-click the Missing index portion of the query plan, and then select **Missing Index Details** to create the index in another window in SQL Server Management Studio.
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
-1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check the missing indexes and apply any recommended indexes with high improvement measure values. Start with the top 5 or 10 recommendations from the output with the highest improvement_measure value; those indexes that have the most significant positive impact on performance. Check if you want to apply these indexes and make sure performance testing is done for the application. Then, continue to apply missing-index recommendations until you achieve the desired application performance results. 
+1. Use the following [Dynamic Management View](/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) query to check for the missing indexes and apply any recommended indexes that have high improvement measure values. Start with the top 5 or 10 recommendations from the output that have the highest **improvement_measure** value. Those indexes have the most significant positive effect on performance. Decide whether you want to apply these indexes and make sure that performance testing is done for the application. Then, continue to apply missing-index recommendations until you achieve the desired application performance results. 
 
     ```sql
     SELECT CONVERT (VARCHAR(30),
@@ -163,11 +166,11 @@ If SQL Server is still using high CPU, go to the next step.
 
 Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high-CPU-usage issue is fixed.
 
-If the issue still exists, you can add a `RECOMPILE` query hint to each of the high CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
+If the issue still exists, you can add a `RECOMPILE` query hint to each of the high-CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
 If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint for each query execution. This workaround balances compilation time and increased CPU for better plan quality. Here's an example of how you can apply this to your query.
+- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint for each query execution. This workaround balances compilation time and increased CPU usage for better plan quality. Here's an example of how you can apply this to your query.
 
   ```sql
   SELECT * FROM Person.Person 
@@ -175,7 +178,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
   OPTION (RECOMPILE)
   ```
 
-- Use the [option (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value with a typical parameter value that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here's an example how to use this hint in your query.
+- Use the [(OPTIMIZE FOR)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value by using a typical parameter value that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here's an example of how to use this hint in your query.
 
   ```sql
   DECLARE @LastName Name = 'Frintu'
@@ -184,9 +187,9 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
   OPTION (OPTIMIZE FOR (@LastName = 'Wood'))
   ```
 
-- Use the [option (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with density vector average. You can also do this by capturing the incoming parameter values in local variables, and then use the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
+- Use the [(OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with the density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
 
-- Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing entirely. Here's an example of how to use it in a query:
+- Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing completely. Here's an example of how to use it in a query:
 
   ```sql
   SELECT * FROM Person.Address  
@@ -196,7 +199,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 - Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the "good enough" common plan is the one that's already in cache. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
 
-- Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command as a temporary solution until the application code is fixed. You can use the `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the `Person.Person` table in AdventureWorks, you can use this query to find the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query result.
+- Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command as a temporary solution until the application code is fixed. You can use the `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the `Person.Person` table in AdventureWorks, you can use this query to find the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query results.
 
   ```sql
   SELECT text, 'DBCC FREEPROCCACHE (0x' + CONVERT(VARCHAR (512), plan_handle, 2) + ')' AS dbcc_freeproc_command FROM sys.dm_exec_cached_plans
@@ -207,7 +210,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 ## Step 6: Disable heavy tracing
 
-Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, the events are SQL Audit, events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
+Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, you find that SQL Audit events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
 
 Run the following queries to identify active XEvent or Server traces:
 
@@ -279,9 +282,11 @@ GO
 ```
 ## Step 7: Fix SOS_CACHESTORE spinlock contention
 
-If your SQL Server experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often removed on unplanned query workloads, review the following article and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command. If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using the SQL Server Configuration Manager.
+If your SQL Server instance experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often removed on unplanned query workloads, review the following topic, and enable trace flag T174 by using the `DBCC TRACEON (174, -1)` command:
 
 [FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68).
+
+If the high-CPU condition is resolved by using T174, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
 ## Step 8: Configure your virtual machine
 
@@ -289,7 +294,7 @@ If you are using a virtual machine, make sure that you aren't overprovisioning C
 
 ## Step 9: Scale up SQL Server
 
-If individual query instances are using little CPU, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to find the number of queries that have exceeded a certain threshold of average and maximum CPU consumption per execution and have executed many times on the system. Be sure to modify the values of the two variables to match your environment.
+If individual query instances are using little CPU capacity, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to find the number of queries that have exceeded a certain threshold of average and maximum CPU consumption per execution and have run many times on the system (make sure that you modify the values of the two variables to match your environment):
 
 ```sql
 -- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
