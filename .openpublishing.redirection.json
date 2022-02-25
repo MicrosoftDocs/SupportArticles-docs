@@ -2349,6 +2349,21 @@
       "source_path": "support/windows/win32/kb841927.md",
       "redirect_url": "/troubleshoot/windows/win32/addin-components-core-os-processes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/connect/resolving-connectivity-errors.md",
+      "redirect_url": "/troubleshoot/sql/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
+      "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/sql/connect/cannot-connect-remotely.md",
+      "redirect_url": "/troubleshoot/sql/connect/cannot-connect-remotely",
+      "redirect_document_id": false
     }
   ]
 }

@@ -571,21 +571,6 @@
   - name: MDS Validate Version command fails
     href: master-data-services/mds-validate-version-command-fails.md
 
-- name: Connection Issues
-  items:
-  - name: Common Connection Issues
-    items:
-    - name: Troubleshooting for "Login Failed for User" error messages
-      href: connect/login-failed-for-user.md
-  - name: Connectivity How Tos
-    items: 
-    - name: Using Kerberos Configuration Manager for SQL Server
-      href: connect/using-kerberosmngr-sqlserver.md
-    - name: How to check SQL Dynamic vs. Static ports
-      href: connect/static-or-dynamic-port-config.md
-    - name: Using the PortQryUI Tool with SQL Server
-      href: connect/using-portqrytool-sqlserver.md
-
 - name: MDAC and ADO
   items:
   - name: 80020009 error when you retrieve data
