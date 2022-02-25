@@ -85,3 +85,39 @@ For more information and a workaround, see [Support Tip: Known Issue occasionall
 
 There are some known issues with filters in Microsoft Endpoint Manager. This feature became generally available in February 2021. We are tracking remaining known issues with this feature in [Filters Public Preview - Overview and Known Issues](https://techcommunity.microsoft.com/t5/intune-customer-success/filters-public-preview-overview-and-known-issues/ba-p/2346835), which also includes common questions and documentation links.
 
+## App install lifecycle or app install history status might be inaccurate
+
+- **Status:** Engineering actively working on fix
+- **Blog post:** [Known Issue: Status reporting for App install lifecycle and App install history](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-status-reporting-for-app-install-lifecycle-and-app/ba-p/2147870)
+
+We are aware of an issue within the Troubleshooting + support blade where the Devices table > column **App install lifecycle** might show a status of "Failure" even if there are no issues with the apps on the device. Additionally, if you load the Managed Apps view fo the impacted device, and select a targeted app, the app install history might show "Failed to install"&mdash;even though the app has installed correctly on the device.
+
+This issue appears to occur at random. For more information, see [Known Issue: Status reporting for App install lifecycle and App install history](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-status-reporting-for-app-install-lifecycle-and-app/ba-p/2147870) on the Intune Customer Success blog.
+
+## Launching protected apps on Samsung A10 with biometric authorization cause the device to crash
+
+- **Status:** Active
+- **Blog post:** [Known Issue: Android 10 Samsung A10 Biometric Authentication](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-android-10-samsung-a10-biometric-authentication/ba-p/2002610)
+
+There is a known issue with the Android 10 Samsung A10 biometric authorization (face recognition/thumbprint). Launching any apps with app protection policies (APP, also known as MAM) on an Android 10 Samsung A10 with biometric authorization enabled will cause the device to crash. We have disabled biometric authentication for affected devices. For more information, see [Known Issue: Android 10 Samsung A10 Biometric Authentication](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-android-10-samsung-a10-biometric-authentication/ba-p/2002610).
+
+## Password reset issues for Intune-enrolled devices with iOS 13+
+
+- **status:** Active
+- **Blog post:** [Support Tip: PowerShell Script now available for iOS Passcode Reset Token Known Issue](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-powershell-script-now-available-for-ios-passcode/ba-p/1250875)
+
+Intune shared a known issue in MC203629, whereby about 1% of devices Intune enrolled with iOS 13+ do not return the token needed to allow a password reset. Apple addressed the bug in 13.3.1 and higher, however, simply updating to 13.3.1 cannot fix already-enrolled devices. Devices without a password reset token will need to update to 13.3.1, then remove and then re-enroll in Intune. For more information and instructions to help you identify and fix affected devices, see [Support Tip: PowerShell Script now available for iOS Passcode Reset Token Known Issue](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-powershell-script-now-available-for-ios-passcode/ba-p/1250875) on the Intune Customer Success blog.
+
+## Profile error enrolling iOS devices with Apple Configurator
+
+- **Status:** Active
+- **Blog post:** [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412)
+
+We are aware of an issue when [enrolling and iOS devices with Apple Configurator](/mem/intune/enrollment/apple-configurator-enroll-ios) for Setup Assistant enrollment. After accepting **Apply configuration** on the device, you might see the error: “Invalid Profile: The configuration for your iPad/iPhone could not be downloaded from [Your Organization Name].” This is due to an invalid enrollment URL. For more information and a workaround, see [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412) on the Intune Customer Success blog.
+
+## iOS certificate-based authentication issue with Pulse Secure 7.0.0 and Check Point Capsule Connect versions 1.600
+
+- **Status:** Active
+- **Blog post:** [Known issue: Certificate-based authentication issue with Pulse Secure 7.0.0 for iOS and Check Point Capsule Connect versions 1.600 for iOS](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-certificate-based-authentication-issue-with-pulse/ba-p/280162)
+
+There are issues with certificate-based authentication when using the Pulse Secure VPN client for iOS, version 7.0 and Check Point Capsule Connect version 1.600 for iOS. Specifically, both VPN clients may report that the certificate is missing from the device, even when the certificate has been properly delivered. These issues impact Intune in addition to other Enterprise Mobility Management providers. For more information and workarounds, see [Known issue: Certificate-based authentication issue with Pulse Secure 7.0.0 for iOS and Check Point Capsule Connect versions 1.600 for iOS](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-certificate-based-authentication-issue-with-pulse/ba-p/280162) on the Intune Customer Success blog.
