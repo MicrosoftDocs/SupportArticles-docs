@@ -3586,22 +3586,22 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/webapps/aspnet/ftp-authentication-authorization/configure-sql-store-session-state.md",
+      "source_path": "support/developer/webapps/aspnet/ftp-authentication-authorization/configure-sql-store-session-state.md",
       "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/configure-sql-store-session-state",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/webapps/aspnet/ftp-authentication-authorization/disable-debugging-application.md",
+      "source_path": "support/developer/webapps/aspnet/ftp-authentication-authorization/disable-debugging-application.md",
       "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/disable-debugging-application",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/webapps/aspnet/ftp-authentication-authorization/edit-web-config.md",
+      "source_path": "support/developer/webapps/aspnet/ftp-authentication-authorization/edit-web-config.md",
       "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/edit-web-config",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/webapps/aspnet/ftp-authentication-authorization/implement-impersonation.md",
+      "source_path": "support/developer/webapps/aspnet/ftp-authentication-authorization/implement-impersonation.md",
       "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/implement-impersonation",
       "redirect_document_id": true
     }
