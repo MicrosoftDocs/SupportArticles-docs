@@ -41,7 +41,7 @@ After you rule out intentional disconnections and hardware failures, the replica
 - Authentication and authorization: Authentication and authorization problems cause "access denied" errors when a domain controller tries to connect to its replication partner.
 - Directory database store: The directory database might not be able to process transactions fast enough to keep up with replication time-outs.
 
-## Common solutions for replication issues
+## Common solutions for Active Directory replication issues
 
 - Monitor replication health daily, or use `Repadmin` to retrieve replication status daily.
 - Try to resolve any reported failure in a timely manner by using the methods that are described in the event messages and this guide. If software is causing the problem, uninstall the software before you continue to try other solutions.
@@ -50,7 +50,7 @@ After you rule out intentional disconnections and hardware failures, the replica
   - Force AD DS removal in Directory Services Restore Mode (DSRM), clean up server metadata, and then reinstall AD DS.
   - Reinstall the operating system, and rebuild the domain controller.
 
-## Common issues and solutions for event IDs
+## Common issues and solutions
 
 Most replication problems are identified in the event messages that are logged in the Directory Service event log. Replication problems might also be identified in the form of error messages in the output of the `repadmin /showrepl` command.
 
