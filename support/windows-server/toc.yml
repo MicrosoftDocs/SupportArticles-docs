@@ -2814,6 +2814,8 @@
       href: ./windows-security/install-imported-certificates.md
     - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
       href: ./windows-security/kdc-err-c-principal-unknown-s4u2self-request.md
+    - name: Removal of US Federal Common Policy from Microsoft Trusted Root Store
+      href: ./windows-security/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
     - name: Remote Desktop server certificates are renewed two times daily
       href: ./windows-security/remote-desktop-server-certificates-renewed.md
     - name: Renewal of Enrollment Agent certificate fails
