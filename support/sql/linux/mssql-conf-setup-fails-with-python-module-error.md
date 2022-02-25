@@ -22,7 +22,7 @@ You try to run the `mssql-conf` setup after installing SQL Server 2019. In this 
 
 ## Supported environment
 
-For Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15#supportedplatforms).
+For Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-ver15#supportedplatforms).
 
 ## Details information
 
