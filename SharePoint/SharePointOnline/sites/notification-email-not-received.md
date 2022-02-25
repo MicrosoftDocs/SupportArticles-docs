@@ -1,6 +1,6 @@
 ---
 title: Site storage notification emails for group-connected sites not received 
-description: This article describes an issue that causes site storage notification emails for group-connected sites to not be received.
+description: This article describes an issue that prevents site storage notification email messages for group-connected sites from being received.
 author: pramod.balusu
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,11 +16,11 @@ appliesto:
   - SharePoint Online
 ---
 
-# Site storage notification emails for group-connected SharePoint sites aren't received
+# Site storage notifications for group-connected SharePoint sites aren't received
 
-Site storage notification emails are sent from 'no-reply@sharepointonline.com'. Microsoft 365 treats it as external address. By default, Microsoft 365 groups don’t allow emails from external addresses, and block the email notification.
+Site storage notification email messages that are sent to group-connected SharePoint sites are sent from 'no-reply@sharepointonline.com'. Microsoft 365 treats this address as external. By default, Microsoft 365 groups don’t allow email messages from external addresses. Therefore, the groups block these notifications.
 
-To make sure site storage notification emails are received, change your Microsoft 365 group settings to allow email from external addresses:
+To make sure that site storage notification email messages are received, change your Microsoft 365 group settings to allow email to be sent from an external address:
 
 1. Open the [Microsoft 365 admin center](https://admin.microsoft.com).
 
@@ -36,6 +36,7 @@ To make sure site storage notification emails are received, change your Microsof
 
 **Notes:**
 
-- Enabling external senders for the group will allow any external address to send email to the group.
+- This change to enable external senders will allow mail from any external address to be sent to the group.
 
-- Make sure to check your Junk mail folder in case the emails are being marked as junk. 
+- Make sure that you check your Junk mail folder in case the external messages are marked as junk.
+ 
