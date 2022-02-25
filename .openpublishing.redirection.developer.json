@@ -3584,6 +3584,26 @@
       "source_path": "support/visualstudio/welcome-visual-studio.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/webapps/aspnet/development/configure-sql-store-session-state.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/configure-sql-store-session-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/webapps/aspnet/development/disable-debugging-application.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/disable-debugging-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/webapps/aspnet/development/edit-web-config.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/edit-web-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/webapps/aspnet/development/implement-impersonation.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/implement-impersonation",
+      "redirect_document_id": true
     }
   ]
 }
