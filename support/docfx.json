@@ -275,7 +275,7 @@
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",
         "azure/active-directory/*.md": "Active Directory",
-        "azure/devops/*.md": "Active DevOps",
+        "azure/devops/*.md": "Azure DevOps",
         "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
