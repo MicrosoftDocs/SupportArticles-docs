@@ -17,9 +17,9 @@ ms.technology: windows-server-active-directory
 
 This article is designed to help get you started troubleshooting Active Directory replication issues.
 
-## Troubleshoot guidelines
+## Troubleshoot checklist
 
-Use the following guidelines to troubleshoot these replication issues:
+Use the following checklist to troubleshoot these replication issues:
 
 - The error and warning events in the Directory Service event log indicate the specific constraint that's causing replication failure on the source or destination domain controller. If the event message suggests steps for a solution, try the steps that are described in the event.
 - Diagnostic tools such as `Repadmin` also provide information that can help you resolve replication failures. To help monitor replication and diagnose errors, use either of the following methods:

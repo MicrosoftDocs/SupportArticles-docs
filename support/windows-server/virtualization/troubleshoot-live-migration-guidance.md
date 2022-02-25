@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting live migration
-description: Introduces general guidance of troubleshooting scenarios related to live migration.
+title: Guidance of troubleshooting virtual machine live migration
+description: Introduces general guidance of troubleshooting scenarios related to virtual machine live migration.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.custom: sap:live-migration, csstroubleshoot
 ms.technology: hyper-v
 ---
-# Live migration troubleshooting guidance
+# Virtual machine live migration troubleshooting guidance
 
-This article is designed to get you started on troubleshooting issues encountered during live migration.
+This article is designed to get you started on troubleshooting issues encountered during virtual machine live migration.
 
 ## Troubleshooting checklist
 
@@ -47,4 +47,4 @@ This article is designed to get you started on troubleshooting issues encountere
 
 ## Common issues and solutions
 
-For more information about the common issues and solutions for live migration, see [Troubleshoot live migration issues](troubleshoot-live-migration-issues.md).
+For more information about the common issues and solutions for virtual machine live migration, see [Troubleshoot live migration issues](troubleshoot-live-migration-issues.md).
