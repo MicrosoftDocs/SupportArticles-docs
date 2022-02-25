@@ -1,4 +1,4 @@
-- name: Internet Information Service
+- name: Internet Information Services
   href: iis-welcome.yml
 - name: Active Server Pages
   items:
