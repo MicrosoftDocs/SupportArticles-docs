@@ -26,17 +26,6 @@ DHCP is a standard protocol that's defined by RFC 1541 (which is superseded by R
 
 For more information, see [DHCP Basics](/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics).
 
-## Troubleshoot DHCP clients
-
-For DHCP clients, check the following devices and settings:
-
-- Cables are connected and working.
-- MAC filtering is enabled on the switches to which the client is connected.
-- The network adapter is enabled.
-- The correct network adapter driver is installed and updated.
-- The DHCP Client service is started and running. To check this, run the net start command, and look for DHCP Client.
-- There is no firewall blocking ports 67 and 68 UDP on the client computer.
-
 ## Troubleshoot DHCP servers
 
 For DHCP servers, check the following devices and settings:
@@ -51,6 +40,17 @@ For DHCP servers, check the following devices and settings:
 - If you are dealing with an IPsec-deployed environment, verify that the DHCP server IPsec exemption is added.
 - Verify that the relay agent IP address can be pinged from the DHCP server.
 - Enumerate and check configured DHCP policies and filters.
+
+## Troubleshoot DHCP clients
+
+For DHCP clients, check the following devices and settings:
+
+- Cables are connected and working.
+- MAC filtering is enabled on the switches to which the client is connected.
+- The network adapter is enabled.
+- The correct network adapter driver is installed and updated.
+- The DHCP Client service is started and running. To check this, run the net start command, and look for DHCP Client.
+- There is no firewall blocking ports 67 and 68 UDP on the client computer.
 
 ## Reference
 

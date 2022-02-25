@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting printer
-description: Introduces general guidance of troubleshooting scenarios related to printer.
+title: Guidance of troubleshooting printing issues
+description: Introduces general guidance of troubleshooting scenarios related to printers.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,11 +13,11 @@ ms.reviewer: kaushika
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: windows-server-printing
 ---
-# Printer troubleshooting guidance
+# Printing issue troubleshooting guidance
 
 This article is designed to get you started on troubleshooting issues encountered when using printers.
 
-## Printer issues troubleshooting checklist
+## Printing issues troubleshooting checklist
 
 Here's a list of basic steps to resolve most printing issues:
 

@@ -34,7 +34,7 @@ This article is designed to help you troubleshoot Remote Desktop Session (RDS) c
 - [Check that another application isn't trying to use the same port](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-that-another-application-isnt-trying-to-use-the-same-port)
 - [Check whether a firewall is blocking the RDP port](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-whether-a-firewall-is-blocking-the-rdp-port)
 
-## Issue 1: Credential limit per app
+## Issue: Credential limit per app
 
 Windows allows only up to 20 credentials per app. If you have to have more than 20 credentials per app, follow these steps to bypass the 20-credential limit:
 
@@ -48,13 +48,13 @@ Potential risks: When you change this registry setting, it's important to keep t
 - This is an admin operation. Any errors that are introduced into the registry could cause your computer to become unstable. Non-admin users change the registry entries at their own risk.
 - This registry change will affect all apps that are installed on the computer.  
 
-## Issue 2: Clients can't connect, and "Class not registered" error returned
+## Issue: Clients can't connect, and "Class not registered" error returned
 
 When you try to connect to a remote computer by using a client that's running Windows 10, version 1709 or a later version, the client might not connect if the Remote Desktop Session Host server displays the "Class not registered (0x80040154)" error code.
 
 This issue occurs if the user who's trying to connect has a mandatory user profile. To resolve this issue, install the [July 24, 2018—KB4338817 (OS Build 16299.579)](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) Windows update.
 
-## Issue 3: Remote laptop disconnects from wireless network
+## Issue: Remote laptop disconnects from wireless network
 
 This issue might occur when a Remote Desktop client connects to a laptop computer by using an 802.1x wireless network. The laptop intermittently disconnects from the wireless network and doesn't automatically reconnect.
 

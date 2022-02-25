@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This solution is designed to get you started on Windows Update troubleshooting scenarios.
 
-## General troubleshooting
+## Troubleshooting checklist
 
 We recommend using DISM or System Update Readiness tool to troubleshoot Windows Update issue.
 

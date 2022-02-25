@@ -92,24 +92,17 @@ Get-PACAMapping
 
 ## Common errors and solutions based on the configuration state
 
-### Error 1
+### Error code: HostUnreachable
 
-Error code:  
-> HostUnreachable
+Error message:
 
-Error message:  
 > MUX is Unhealthy (Common case is BGPRouter disconnected)
 
 Troubleshooting:
 
 Credible Border Gateway Protocol (CBGP) peer on the Routing and Remote Access Service (RRAS) (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource and BGP peer (ToR or RRAS VM).
 
-### Error 2
-
-Error code:
-
-- > CertificateNotTrusted
-- > CertificateNotAuthorized
+### Error code: CertificateNotTrusted and CertificateNotAuthorized
 
 Error message:
 
@@ -119,12 +112,10 @@ Troubleshooting:
 
 Check the numeric code that's provided in the error message code. This corresponds to the winsock error code. Certificate errors are granular (for example, the certificate cannot be verified, or the certificate is not authorized).
 
-### Error 3
+### Error code: HostNotConnectedToController
 
-Error code:  
-> HostNotConnectedToController
+Error message:
 
-Error message:  
 > SLB host agent is not connected
 
 Troubleshooting:
@@ -132,22 +123,17 @@ Troubleshooting:
   1. Verify that the software load balancers (SLB) Host Agent service is running.
   2. Refer to the SLB host agent logs (auto running) for the causes. If the Software Load Balancer Manager (SLBM) (NC) rejected the certificate that was presented by the host agent, the running state can show nuanced information.
 
-### Error 4
+### Error code: DistributedRouterConfigurationFailure
 
-Error code:  
-> DistributedRouterConfigurationFailure
+Error message:
 
-Error message:  
 > Failed to configure the Distributed router settings on the host vNic
 
 Troubleshooting:
 
 TCPIP stack error. This might require cleaning up the Peer Authentication (PA) and Destination Rule (DR) Host Virtual Network Interface Cards (VNICs) on the server on which this error was reported.
 
-### Error 5
-
-Error code:  
-> PolicyConfigurationFailure
+### Error code: PolicyConfigurationFailure
 
 Error message:
 

@@ -1400,7 +1400,7 @@
     items:
     - name: 'Troubleshooting guidance: SMB'
       href: ./networking/troubleshoot-smb-guidance.md
-    - name: 'Troubleshooting guidance: DFSN'
+    - name: 'Troubleshooting guidance: DFS Namespace'
       href: ./networking/troubleshoot-dfs-namespace-guidance.md
     - name: '"Delayed Write Failed" error'
       href: ./networking/delayed-write-failed-error-data-lost.md
@@ -2024,7 +2024,7 @@
   items:
   - name: 'Printing'
     href: ./printing/printing-overview.md
-  - name: 'Troubleshooting guidance: Printer'
+  - name: 'Troubleshooting guidance: Printing'
     href: ./printing/troubleshoot-printer-guidance.md
   - name: Troubleshoot printing issues
     items:

@@ -25,7 +25,7 @@ Keep DirectAccess servers and DirectAccess client devices updated. You have to r
 
 ### OS version
 
-Use a current operating system version: at least Windows Server 2016 or Windows Server 2019 for the DirectAccess Servers. DirectAccess clients should run a recent version of Windows 10.
+Use a current operating system version: at least Windows Server 2016 or Windows Server 2019 for the DirectAccess Servers. DirectAccess clients should run a recent version of Windows 10 or Windows 11.
 
 ### Monitor
 

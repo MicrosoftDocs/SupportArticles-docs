@@ -130,43 +130,33 @@ If the source node can ping, Telnet, or PsPing to other nodes on the destination
 
 ## Common issues and solutions
 
-### Issue 1
-
-TCP/IP connection to a host appears to have stopped.
+### Issue: TCP/IP connection to a host appears to have stopped
 
 Cause: Either data is blocked in TCP and UDP queues or there are network or user-level software delay problems.
 
 Troubleshooting: Use the `netstat -a` command to show the status of all activity on TCP and UDP ports on the local computer.  
 The state of a good TCP connection is established while having zero (0) bytes in the send and receive queues. If data is blocked in either queue, or if the state is irregular, the connection is probably at fault. If not, you're probably experiencing a network or user-level software delay.
 
-### Issue 2
-
-Long connect times when using Lmhosts for name resolution.
+### Issue: Long connect times when using Lmhosts for name resolution
 
 Cause: The Lmhosts file is parsed sequentially to locate entries without the \#PRE option.
 
 Troubleshooting: Put frequently used entries near the top of the file and the \#PRE entries near the bottom. If an entry is added to the end of a large Lmhosts file, mark the entry in Lmhosts as a preloaded entry by using the \#PRE option. Then, run the `nbtstat -R` command to update the local name cache immediately.
 
-### Issue 3
-
-System error 53 occurred.
+### Issue: System error 53 occurred
 
 Cause: System error 53 is returned if name resolution fails for a particular computer name when the `net use` command is used.
 
 Troubleshooting: If the computer is on the local subnet, verify that the name is spelled correctly and that the target computer is also running TCP/IP. If the computer isn't on the local subnet, make sure that its name and IP address mapping are available in the Lmhosts file or the WINS database. If all TCP/IP elements appear to be installed properly, use the `ping` command together with the remote computer to verify that its TCP/IP software is working.
 
-### Issue 4
-
-Can’t connect to a specific server.
+### Issue: Can’t connect to a specific server
 
 Cause: Either NetBIOS name resolution isn't resolving the name or the wrong IP address is being resolved.
 
 Troubleshooting: Use the `nbtstat -n` command on the server to determine which names the server registered on the network. The computer name of the computer that you're trying to connect to should be on the displayed list. If the name isn't listed, try one of the other unique computer names that are displayed by `nbtstat`.
 If the name that's used by a remote computer is the same as the name that's displayed by the `nbtstat -n` command, make sure that the remote computer has an entry for the server name that's on the WINS server or in its Lmhosts file.
 
-### Issue 5
-
-Unable to add a default gateway.
+### Issue: Unable to add a default gateway
 
 Cause: The IP address of the default gateway isn't on the same IP network ID as your IP address.
 

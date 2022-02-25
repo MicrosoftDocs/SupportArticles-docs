@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting DFSN
-description: Introduces general guidance of troubleshooting scenarios related to DFSN.
+title: Guidance of troubleshooting DFS Namespace
+description: Introduces general guidance of troubleshooting scenarios related to DFS Namespace.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,28 +13,28 @@ ms.reviewer: kaushika
 ms.custom: sap:dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
-# DFSN troubleshooting guidance
+# DFS Namespace troubleshooting guidance
 
-Distributed File System Namespace (DFSN) is a Windows technology designed to provide distributed namespace access to file shares across an enterprise.
+Distributed File System (DFS) Namespace is a Windows technology designed to provide distributed namespace access to file shares across an enterprise.
 
 ## Troubleshooting checklist
 
 Examine the SMB traffic to see if the issue is with getting the referral list from the namespace server or connecting to the referred file server. To do so, follow these steps:
 
-First, filter the trace by the SMB traffic for the DFSN IP address. Example filter: `tcp.port==445`.
+First, filter the trace by the SMB traffic for the DFS Namespace IP address. Example filter: `tcp.port==445`.
 
 Then, look for the DFS referral. Follow these steps:
 
 1. The protocol is named DFSC by packet capture parsers. Look for the DFSC traffic in the filtered results or append the filter with `DFSC` in netmon or MA: `tcp.port==445 and DFSC`.
-2. The client should send a DFS referral request to the DFSN server. If no DFS referral is being sent, and there's no indication of a firewall or anti-virus block, restart the DFS client to clear any DFS referral caching. Then, start the data collection steps over again.
+2. The client should send a DFS referral request to the DFS Namespace server. If no DFS referral is being sent, and there's no indication of a firewall or anti-virus block, restart the DFS client to clear any DFS referral caching. Then, start the data collection steps over again.
 3. The server should send a DFS referral response to the DFS client.
 4. The referral step has completed successfully if a referral list has been returned. Skip to step 4 <!-- What's step 4? --> if the referral process completed successfully.
-5. Verify whether the DFS Referral Request arrived at the DFSN server. Standard TCP/IP and firewall troubleshooting applies if the referral doesn't arrive. The most likely cause is the traffic being dropped or blocked somewhere.
+5. Verify whether the DFS Referral Request arrived at the DFS Namespace server. Standard TCP/IP and firewall troubleshooting applies if the referral doesn't arrive. The most likely cause is the traffic being dropped or blocked somewhere.
 
    If the referral request arrives but no response is sent:
 
    1. Make sure the Windows Firewall or another network security application isn't blocking the request.
-   2. Verify Active Directory works correctly to troubleshoot the DFSN server.
+   2. Verify Active Directory works correctly to troubleshoot the DFS Namespace server.
 
 Look for the DFS client to resolve DNS (assuming it isn't cached) and make a connection to a file server.
 

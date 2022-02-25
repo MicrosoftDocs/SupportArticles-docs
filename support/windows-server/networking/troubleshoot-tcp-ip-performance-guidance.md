@@ -30,9 +30,9 @@ Tips to enhance the throughput:
 - Select security features based on the actual organizations' requirements.
 - Create a baseline.
 
-See this page to learn more about [Bottlenecks for TCP throughput](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#bottlenecks-for-tcp-throughput)
+For more information, see [Bottlenecks for TCP throughput](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#bottlenecks-for-tcp-throughput).
 
-For more information on how to create a baseline, see [How to create a baseline](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#how-to-create-a-baseline)
+For more information on how to create a baseline, see [How to create a baseline](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#how-to-create-a-baseline).
 
 When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues. [Use the ctsTraffic tool to analyze the network trace](/troubleshoot/windows-server/networking/troubleshooting-tcpip-performance-underlying-network#use-the-ctstraffic-tool-to-analyze-the-network-trace)
 
