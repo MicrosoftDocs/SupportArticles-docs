@@ -2359,11 +2359,6 @@
       "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
       "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "https://support.microsoft.com/topic/03d15ff2-e062-e023-272c-d5cd413c37b3",
-      "redirect_url": "/troubleshoot/sql/connect/cannot-generate-sspi-context-error",
-      "redirect_document_id": false
     }
   ]
 }
