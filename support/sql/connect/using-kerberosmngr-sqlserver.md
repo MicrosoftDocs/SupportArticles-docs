@@ -10,9 +10,9 @@ ms.prod: sql
 
 # Overview of the Kerberos Configuration Manager for SQL Server
 
-**_Applies to*: _ &nbsp;SQL Server
+_Applies to:_&nbsp;SQL Server
 
-*Original KB number*: 2985455
+_Original KB number:_ 2985455
 
 An incorrect Kerberos configuration in your network can cause various connectivity errors in Microsoft SQL Server. Kerberos Configuration Manager for SQL Server is a diagnostic tool that helps you troubleshoot Kerberos-related connectivity issues that affect SQL Server, SQL Server Reporting Services (SSRS), and SQL Server Analysis Services (SSAS). This article provides information about how to use the Kerberos Configuration Manager tool and how to interpret the output from the tool to fix Kerberos issues that affect SQL Server.
 
@@ -55,16 +55,13 @@ This tool is available for download from the Microsoft Download Center:
 
 To troubleshoot connectivity issues that affect SQL, SSRS, and SSAS, connect to the destination computer (that's hosting the service) by using a domain user account that has administrative permissions to that computer.
 
-**Optional**: If you want to use the tool to fix any SPN issues that are identified by the tool, the domain account should have a valid *write to service principle name* permission.
+**Optional**: If you want to use the tool to fix any SPN issues that are identified by the tool, the domain account should have the **Validated write to service principle name** permission.
 
 ## Using the tool
 
 After the installation is finished, start the *KerberosConfigMgr.exe* binary by navigating to the installation folder. By default, the location is C:\Program Files\Microsoft\Kerberos Configuration Manager for SQL Server\.
 
 For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin - Windows Server `|` Microsoft Docs](/troubleshoot/windows-server/shell-experience/use-run-as-start-app-admin).
-
-> [!NOTE]
-> The Kerberos Configuration Manager tool uses a Windows API to query and display information about Kerberos configuration for the SQL Server-based computer. Therefore, always enter the name of the computer that hosts the SQL Server instance, even if you are troubleshooting Kerberos-related issues for a named instance.
 
 Use one of the following options to start troubleshooting:
 

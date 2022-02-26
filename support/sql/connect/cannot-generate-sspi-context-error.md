@@ -9,10 +9,11 @@ ms.prod: sql
 ---
 # Cannot generate SSPI context error when using Windows authentication to connect SQL Server
 
-_Applies to:_ &nbsp; SQL Server
+_Applies to:_ &nbsp; SQL Server  
+_Original KB number:_ 811889
 
 > [!NOTE]
-> Before you start troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before you start troubleshooting, we recommend that you check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 When you use Windows authentication to connect a SQL Server instance remotely, you may receive the following error message:
 
@@ -72,6 +73,8 @@ SELECT net_transport, auth_scheme
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```
+
+For more information, see [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication).
 
 ### How to create SPNs for SQL Server?
 

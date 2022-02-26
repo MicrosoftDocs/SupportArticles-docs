@@ -133,7 +133,7 @@ In most cases, you connect to the Database Engine from another computer by using
 2. In the **Log File Viewer**, select the **Filter** button on the toolbar. In the **Message contains text** box, type *server is listening on*, select **Apply filter**, and then select **OK**.
 3. A message like **Server is listening on [ 'any' \<ipv4> 1433]** should be listed.
 
-    This message indicates that the instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port that's used by the Database Engine or the default instance of SQL Server. Only one instance of SQL Server can use a port, so if more than one instance of SQL Server is installed, some instances must use other port numbers.) Note down the port number used by the SQL Server instance that you're trying to connect to.
+    This message indicates that the instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port that's used by the Database Engine or the default instance of SQL Server. Only one instance of SQL Server can use this port, so if more than one instance of SQL Server is installed, some instances must use other port numbers.) Note down the port number used by the SQL Server instance that you're trying to connect to.
 
     > [!NOTE]
     >
@@ -258,7 +258,7 @@ You can verify the firewall configuration depending on the default instance or n
 > [!NOTE]
 > If you are using third party firewalls in your network, the concepts still apply, but you may have to work with your network administrator or consult firewall product's documentation for more information on how to configure firewall to allow necessary ports for communication with SQL server.
 
-### SQL Server with default instance
+### Default instance of SQL Server
 
 A default instance typically runs on port 1433. Some installations also use a non-standard port (other than 1433) to run SQL instances. The firewall may block either port. To check the port number further, follow these steps:
 
@@ -272,7 +272,7 @@ A default instance typically runs on port 1433. Some installations also use a no
 
     - If it does work, it indicates that the firewall is allowing communication through that port. You need to change your connection string in order to use the port number and your server name in the connection string of your application.
 
-### SQL Server with named instance
+### Named instance of SQL Server
 
 If your SQL instance is a named instance, it may be configured to use either dynamic ports or a static port. In either case, the underlying network libraries query the SQL Server Browser service running on your SQL Server machine through UDP port 1434 to enumerate the port number for the named instance. If a firewall between the client and the server blocks this UDP port, the client library can't determine the port (a requirement for connection) and the connection fails. To check the connection, you can use one of the following methods:
 
@@ -294,7 +294,7 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
     Use PortqryUI tool with your named instance and observe the resulting output. If you see the message that the UDP port 1434 is filtered, it indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](/troubleshoot/sql/connect/using-portqrytool-sqlserver).
 
-    Determine whether the SQL Server instance is listening on dynamic or static ports. And then use the following method that is relevant to your scenario. If you aren't sure, see [How to check SQL Server dynamic vs. static ports](/troubleshoot/sql/connect/startic-or-dynamic-port-config).
+    Determine whether the SQL Server instance is listening on dynamic or static ports. And then use the following method that is relevant to your scenario. If you aren't sure, see [How to check if SQL Server is listening on a dynamic port or static port](static-or-dynamic-port-config.md).
 
     - Scenario 1: Dynamic ports. In this case, make sure that the SQL Server Browser service is started and UDP port 1434 isn't blocked on the firewall between the client and the server. If you can't do either of them, you should switch your SQL Server instance to a static port and use the procedure documented in [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).
 

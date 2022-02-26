@@ -8,7 +8,7 @@ ms.prod-support-area-path: Connection Issues
 ms.prod: sql
 ---
 
-# How to check SQL Server dynamic versus static ports
+# How to check if SQL Server is listening on a dynamic port or static port
 
 This article discusses how to determine whether your Microsoft SQL Server named instance is listening on a dynamic port versus a static port. This information can be helpful when you troubleshoot different connection issues that are related to SQL Server.
 
