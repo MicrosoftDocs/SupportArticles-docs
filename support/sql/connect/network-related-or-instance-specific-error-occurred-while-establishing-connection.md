@@ -292,7 +292,7 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
 - Method 2: Check connection by using PortqryUI tool.
 
-    Use PortqryUI tool with your named instance and observe the resulting output. If you see the message that the UDP port 1434 is filtered, it indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](/troubleshoot/sql/connect/using-portqrytool-sqlserver).
+    Use PortqryUI tool with your named instance and observe the resulting output. If you see the message that the UDP port 1434 is filtered, it indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
 
     Determine whether the SQL Server instance is listening on dynamic or static ports. And then use the following method that is relevant to your scenario. If you aren't sure, see [How to check if SQL Server is listening on a dynamic port or static port](static-or-dynamic-port-config.md).
 
