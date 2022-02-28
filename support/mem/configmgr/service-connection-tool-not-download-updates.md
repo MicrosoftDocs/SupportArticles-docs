@@ -54,7 +54,6 @@ For more information about the specific URLs that are required by the service co
 
 ## Workaround
 
-From the error on the DMPDownloader.log, copy the URL and manually download the .cab file. Then copy the .cab file to the \<ConfigMgr Install Dir\>\Inboxes\HMAN.box\CFD folder.
-Monitor the HMAN.log file for processing details.
-
-
+1. From the error in the DMPDownloader.log file, copy the URL and manually download the .cab file.
+2. Copy the .cab file to the \<ConfigMgr Install Dir\>\Inboxes\HMAN.box\CFD folder.
+3. Monitor the HMAN.log file for processing details.
