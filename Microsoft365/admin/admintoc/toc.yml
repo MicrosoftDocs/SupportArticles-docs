@@ -245,7 +245,7 @@
       href: ../licensing/subscription-license-renewal-fail.md
     - name: Use Office 365 PowerShell to manage Microsoft Planner licenses
       href: ../licensing/how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md
-  - name: Lighthouse
+  - name: Microsoft 365 Lighthouse
     items:
     - name: Known issues with Microsoft 365 Lighthouse
       href: ../lighthouse/lighthouse-known-issues.md
