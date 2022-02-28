@@ -69,10 +69,11 @@ Note that the audit logs themselves will be fully displayed; only the ability to
 
 **Note:** GDAP is currently in [Technical Preview](/partner-center/announcements/2022-february#6) (Public Preview) to allow partners to assign granular permissions before GDAP is generally available.
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Various GDAP permission issues across Lighthouse</b></td><td><ul><li>GDAP Security Administrators are unable to view risky users, dismiss risks, or confirm compromised users.
-<li>GDAP Security Readers are unable to view risky users.
-<li>GDAP Global Administrators see an error message when trying to view service health.</ul></td><td>Before GDAP General Availability, the workaround is to assign the user a Global Administrator GDAP role or Admin Agent DAP role. For instructions on how to assign the Global Administrator GDAP role, see <a href=https://docs.microsoft.com/partner-center/gdap-obtain-admin-permissions-to-manage-customer>Obtain granular admin permissions to manage a customer's service</a>. For instructions on how to assign the Admin Agent DAP role, see <a href=https://docs.microsoft.com/partner-center/permissions-overview>Assign roles and permissions to users</a>. For a list of actions in Lighthouse that require certain Azure Active Directory roles in the partner tenant, see <a href=https://docs.microsoft.com/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security>Configure Microsoft 365 Lighthouse portal security</a>.</td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Various GDAP permission issues across Lighthouse** | <ol> <li> GDAP Security Administrators are unable to view risky users, dismiss risks, or confirm compromised users. </li>
+<li> GDAP Security Readers are unable to view risky users. </li>
+<li> GDAP Global Administrators see an error message when trying to view service health. </li> </ol> | Before GDAP General Availability, the workaround is to assign the user a Global Administrator GDAP role or Admin Agent DAP role. For instructions on how to assign the Global Administrator GDAP role, see [Obtain granular admin permissions to manage a customer's service](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). For instructions on how to assign the Admin Agent DAP role, see [Assign roles and permissions to users](/partner-center/permissions-overview). For a list of actions in Lighthouse that require certain Azure Active Directory roles in the partner tenant, see [Configure Microsoft 365 Lighthouse portal security](/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security) |
 
 ## Localization
 
