@@ -95,9 +95,7 @@ These steps create a repair task. In the next step, you'll use the `initrd` scri
 
 ## Limitations
 
-- Encrypted images aren't supported.
 - Classic VMs aren't supported.
-- EFI-based images aren't supported.
 
 ## Next steps
 
