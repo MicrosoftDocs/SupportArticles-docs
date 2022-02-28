@@ -52,6 +52,3 @@ Turn on the **Compatibility** option to revert to the previous version of Micros
 1. Turn on the **Use previous version of \<YourIME\>** option, and then select **OK** in the window that opens.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/turn-on-compatibility.png" alt-text="Turn on the compatibility mode and confirm the IME version change." border="true":::
-
-> [!Note]
-> We recommend that you don't use the compatibility setting as a permanent solution. Instead, use it as a temporary workaround for users who are affected by this issue.
