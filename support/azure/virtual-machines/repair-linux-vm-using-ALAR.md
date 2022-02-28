@@ -29,22 +29,25 @@ ALAR covers the following repair scenarios:
    - Missing disk
 - Damaged initrd or missing initrd line in the /boot/grub/grub.cfg file
 - Startup problems caused by a corrupted kernel image
-- Incorrect setup, for either the Linux kernel or GRUB serial console configuration
+- Incorrect setup for the Linux kernel or GRUB serial console configuration
 
 ## The ALAR scripts
 
-**fstab**
+### FSTAB
+
 This script strips off any lines in the /etc/fstab file that the system doesn't need to start successfully. The system first makes a copy of the original file.
 After the system restarts, the /etc/fstab file can be updated to add lines for the correct mount options.
 
 For more information about problems that are caused by a bad /etc/fstab file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md). 
 
-**kernel**
+### Kernel
+
 This script changes the default kernel. The script replaces the broken kernel with the previously installed version.
 
 For more information about messages that might be logged on the serial console for kernel-related startup events, see [How to recover an Azure Linux virtual machine from kernel-related boot issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues).
 
-**initrd**
+### Initrd
+
 This script corrects two problems that might occur when a new kernel is installed:
    - The Grub.cfg file is missing an `initrd` line.
    - The initrd image is missing.
@@ -60,13 +63,15 @@ In both cases, the following information is logged before the error entries are 
 
 ![Unpacking failed](media/repair-linux-vm-using-ALAR/unpacking-failed.png)
 
-**serialconsole**
-This action corrects an incorrect or malformed serials console configuration for either GRUB or the Linux kernel. 
-This action is recommended to run in the following cases
-   - No GRUB menu is displayed at startup of the VM
-   - No OS related information is written to the serial console 
+### Serialconsole
+
+This action corrects an incorrect or malformed serial console configuration for GRUB or the Linux kernel. We recommend that you run this action in the following cases
+ 
+- No GRUB menu is displayed at VM startup
+- No operating system related information is written to the serial console
 
 ## How to use ALAR
+
 The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. For example:
 
 ```azurecli-interactive
@@ -89,6 +94,7 @@ These steps create a repair task. In the next step, you'll use the `initrd` scri
    > - ‘fstab,initrd’
 
 ## Limitations
+
 - Encrypted images aren't supported.
 - Classic VMs aren't supported.
 - EFI-based images aren't supported.
