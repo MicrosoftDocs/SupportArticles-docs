@@ -248,7 +248,7 @@
   - name: Microsoft 365 Lighthouse
     items:
     - name: Known issues with Microsoft 365 Lighthouse
-      href: ../lighthouse/lighthouse-known-issues.md
+      href: ../microsoft-365-lighthouse/lighthouse-known-issues.md
   - name: Miscellaneous
     items:
     - name: Can't connect to the Azure Information Protection service
