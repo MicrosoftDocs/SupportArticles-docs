@@ -1,18 +1,17 @@
 ---
-title: Troubleshoot issues related to currency and price list
-description: Learn how to troubleshoot issues with currency and price list in Dynamics 365 Sales.
+title: Troubleshoot issues with currency and price lists
+description: Provides resolutions for the known issues that are related to currency and price lists in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/23/2022
+ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with currency and price lists 
+# Troubleshoot issues with currency and price lists in Dynamics 365 Sales
 
-This article helps you troubleshoot and resolve issues related to currency and price lists.
+This article helps you troubleshoot and resolve issues related to currency and price lists in Dynamics 365 Sales.
 
-<a name="update_currency_existing-oqoi"> </a>
-## Issue: I can't update the currency or price list for an opportunity, quote, order, or invoice
+## Issue: Can't update the currency or price list for an opportunity, quote, order, or invoice
 
 ### Cause
 
@@ -22,11 +21,13 @@ The error occurs because the associated product record or quote record is alread
 
 The following are the few error messages that will be displayed depending on the entity:
 
-- For an opportunity, the error message is "The currency cannot be changed because the opportunity has opportunity products, quotes, orders, or invoices associated with it. Remove the associated records and then change the currency."
+- For an opportunity, the error message is:
+  > The currency cannot be changed because the opportunity has opportunity products, quotes, orders, or invoices associated with it. Remove the associated records and then change the currency.
 
-- For a quote, the error message is "The currency cannot be changed because the quote has quote products associated with it. Remove the associated records and then change the currency."
+- For a quote, the error message is:
+  > The currency cannot be changed because the quote has quote products associated with it. Remove the associated records and then change the currency.
 
-### Solution
+### Resolution
 
 To resolve this issue, you must remove the product records or quote records, change the currency, and then add back the product records or quote records.
 
@@ -50,25 +51,20 @@ You can change the currency and price list for the entities in the following sta
 || Paid | No | No |
 || Canceled | No | No |
 
-**To update the currency or price list**
+#### To update the currency or price list
 
 1. Open the opportunity, quote, order, or invoice for which you want to change the currency or price list.
 
 2. For an opportunity: go to the **Product Line Items** tab, and then delete the products from the list.
 
-    > [!div class="mx-imgBorder"]
-    > ![Delete products from the product list in an opportunity form.](media/sales/ts-currency-opportunity-product-list.png "Delete products from the product list in an opportunity form")
+    :::image type="content" source="media/troubleshoot-currency-and-price-lists-issues/currency-opportunity-product-list.png" alt-text="Delete products from the product list in an opportunity form." border="false":::
 
     For a quote, order, or invoice: On the **Summary** tab, go to the **PRODUCTS** section, and delete the products from the list.
 
-    > [!div class="mx-imgBorder"]
-    > ![Delete products from the product list in quote, order, or invoice forms.](media/sales/ts-currency-qoi-product-list.png "Delete products from the product list in quote, order, or invoice forms")
+    :::image type="content" source="media/troubleshoot-currency-and-price-lists-issues/currency-quote-order-or-invoice-product-list.png" alt-text="Delete products from the product list in quote, order, or invoice forms.":::
 
-3. On the **Summary** tab, change the currency to the value you want, and then save the form. 
-
+3. On the **Summary** tab, change the currency to the value you want, and then save the form.
 4. Add back the product records or quote records, and then save the form.
 
 > [!NOTE]
 > You can change currency by using the entity attribute. To learn more, see [Transaction Currency (currency) entity](/dynamics365/customerengagement/on-premises/developer/transaction-currency-currency-entity).
-
-
