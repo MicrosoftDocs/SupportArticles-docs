@@ -10,7 +10,7 @@ ms.technology: dotnet-general
 # PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps
 
 > [!NOTE]
-> The issue that is described in this article is a bug on Windows 10, version 2004/20H2/21H1/21H2. The bug has been fixed on Windows 11. So you can upgrade your system to Windows 11 to avoid the issue.
+> The issue that is described in this article is a bug on Windows 10, version 2004/20H2/21H1/21H2 and it won't be fixed. But it has been fixed on Windows 11. So you can upgrade your system to Windows 11 to avoid the issue.
 
 This article discusses an issue that prevents [PreviewKeyDown](/dotnet/api/system.windows.forms.control.previewkeydown) events of TextBox controls from being triggered by some Microsoft  input method editors (IMEs) in Windows Presentation Foundation (WPF) applications.
 
