@@ -1,0 +1,74 @@
+---
+title: Known issues with Microsoft 365 Lighthouse
+description: Describes known issues with the Microsoft 365 Lighthouse admin portal for Managed Service Providers.
+author: jhayes
+manager: dcscontentpm
+localization_priority: Normal
+search.appverid: 
+- MET150
+audience: ITPro
+ms.custom: 
+- CSSTroubleshoot
+- CI 160989
+ms.topic: troubleshooting
+ms.author: v-matthamer
+appliesto:
+- Microsoft 365 Lighthouse
+---
+
+# Known issues with Microsoft 365 Lighthouse
+
+This article lists the known issues for Microsoft 365 Lighthouse by feature area. For more information about Lighthouse, visit the [Microsoft 365 Lighthouse help library](/microsoft-365/lighthouse/m365-lighthouse-overview).
+
+## Users
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Helpdesk Agent is unable to reset a user password</b></td><td>Managed Service Provider (MSP) technicians who are members of the Helpdesk Agent group are unable to reset passwords for users in customer tenants. When they try to reset the password for a user, they get the following error message: You don’t have permission to do this. <a href=https://docs.microsoft.com/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security>Learn more</a></td><td>To work around the permissions issue, Helpdesk Agents should reset passwords by using the Microsoft 365 admin center or Azure Active Directory.</td></tr></table>
+
+## Devices
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Deleted policy appears</b></td><td>After a device compliance policy has been deleted from Intune, it will temporarily continue to be visible in Lighthouse. If MSP technicians attempt to do a policy comparison that includes a policy that’s been deleted, the technicians get the following error: “Something went wrong. Please refresh the page and try again.”</td><td>To resolve the error, clear the deleted policy from the policy comparison and compare only existing policies.</td></tr></table>
+
+## Threat management
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Threat name is missing</b></td><td>When MSP technicians view the list of threats from the Threat Management page, some threats may be missing the name of the threat. This will occur when the device that the threat was detected on was recently removed from Intune.</td><td>The issue will resolve within 48 hours. No additional steps are required.</td></tr></table>
+
+## Baselines
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Conflicting settings when comparing block legacy authentication and MFA deployment steps</b></td><td>If a customer tenant has deployed block legacy authentication and one of the MFA deployment steps, a comparison test will erroneously describe these settings as conflicting.</td><td>No workaround is required. The settings do not actually conflict and users in the customer tenant are not impacted. </td></tr></table>
+
+## Windows 365
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Retry provisioning error</b></td><td>MSP technicians get a "You don't have permissions to do this” error message when attempting to retry provisioning of a Cloud PC.</td><td>To work around this issue, log in to the customer tenant and then reprovision Cloud PCs from the Microsoft Endpoint Manger admin center. For instructions, see <a href=https://docs.microsoft.com/windows-365/enterprise/reprovision-cloud-pc>Reprovision a Cloud PC</a>.</td></tr></table>
+
+## Audit logs
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Deactivate and Reactivate actions are not listed in audit logs</b></td><td>The following activities are currently not reported on the Audit logs page in  Lighthouse:
+<ul><li>Name: offboardTenant | Action: Inactivate a customer
+<li>Name: resetTenantOnboardingStatus | Action: Reactive customer</ul></td><td>There’s no workaround, but we’re working on a fix. These activities will appear in audit logs once the fix is deployed in the service.</td></tr><tr><td><b>Filter is not showing all users</b></td><td>When MSP technicians try to filter by using <b>Initiated By</b>, the list of all User Principal Names (UPNs) – corresponding to email IDs of the technicians who initiated actions generating audit logs – isn’t fully displayed under the filter.
+
+Note that the audit logs themselves will be fully displayed; only the ability to filter them by using <b>Initiated By</b> is impacted.</td><td>There’s no workaround, but we're working on a fix. The filter will revert to its expected behavior – displaying the full list of UPNs to filter by – once the fix is deployed in the service.</td></tr></table>
+
+## Delegated Admin Permissions (DAP)
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Permissions delay when changing DAP roles</b></td><td>If an MSP technician is added to or removed from the Admin Agent or Helpdesk Agent group, there may be a delay in reflecting the appropriate permissions within Lighthouse.</td><td>The issue will resolve within 30 minutes. No additional steps are required.</td></tr></table>
+
+## Granular Delegated Admin Permissions (GDAP)
+
+**Note:** GDAP is currently in [Technical Preview](/partner-center/announcements/2022-february#6) (Public Preview) to allow partners to assign granular permissions before GDAP is generally available.
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Various GDAP permission issues across Lighthouse</b></td><td><ul><li>GDAP Security Administrators are unable to view risky users, dismiss risks, or confirm compromised users.
+<li>GDAP Security Readers are unable to view risky users.
+<li>GDAP Global Administrators see an error message when trying to view service health.</ul></td><td>Before GDAP General Availability, the workaround is to assign the user a Global Administrator GDAP role or Admin Agent DAP role. For instructions on how to assign the Global Administrator GDAP role, see <a href=https://docs.microsoft.com/partner-center/gdap-obtain-admin-permissions-to-manage-customer>Obtain granular admin permissions to manage a customer's service</a>. For instructions on how to assign the Admin Agent DAP role, see <a href=https://docs.microsoft.com/partner-center/permissions-overview>Assign roles and permissions to users</a>. For a list of actions in Lighthouse that require certain Azure Active Directory roles in the partner tenant, see <a href=https://docs.microsoft.com/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security>Configure Microsoft 365 Lighthouse portal security</a>.</td></tr></table>
+
+## Localization
+
+<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
+<tr><td><b>Translation issues</b></td><td>Users may experience language translation issues when the language of their browser, or their language selection in Lighthouse, is anything other than English.</td><td>To minimize translation issues in Lighthouse, make sure that the browser’s language selection matches that of the language setting in the Lighthouse portal. To change the language selection in Lighthouse, log in to Lighthouse and select the gear icon at the top of the page to open the Portal settings page, select <b>Language + region</b>, and then select the appropriate language and regional formats.</td></tr></table>
