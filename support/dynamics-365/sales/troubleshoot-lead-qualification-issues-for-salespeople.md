@@ -31,7 +31,7 @@ There are multiple errors or issues that occur when you qualify a lead:
 4. [Error 4 - Access denied or Insufficient permissions](#error-4---access-denied-or-insufficient-permissions)
 5. [Error 5 - The lead is closed and you cannot convert or qualify a lead that is already closed](#error-5---the-lead-is-closed-and-you-cannot-convert-or-qualify-a-lead-that-is-already-closed)
 6. [Error 6 - Invalid status code error for a contact or an opportunity](#error-6---invalid-status-code-error-for-a-contact-or-an-opportunity)
-7. [Issue: Can't proceed to the next stage when I select Next stage on the business process flow](#issue-cannot-proceed-to-the-next-stage-when-i-select-next-stage-on-the-business-process-flow)
+7. [Issue: Can't proceed to the next stage when you select Next stage on the business process flow](#issue-cannot-proceed-to-the-next-stage-when-you-select-next-stage-on-the-business-process-flow)
 
 The following sections describe each of these errors and how you can resolve them.
 
