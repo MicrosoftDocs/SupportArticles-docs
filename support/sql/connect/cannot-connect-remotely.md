@@ -14,6 +14,20 @@ _Original KB number:_ &nbsp; 2018930
 
 ## Symptoms
 
+
+<details>
+
+<summary>Login timeout expired</summary>
+  
+> SQL Server Native Client Data Link Error
+> [Microsoft SQL Server Native Client 10.0]: Login timeout expired
+
+> [Microsoft SQL Server Native Client 10.0]: A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online.
+
+> [Microsoft SQL Server Native Client 10.0]: SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].
+
+</details>
+
 When using Microsoft SQL Server, you may see one or more of the following symptoms:
 
 - Only the users that have [CONTROL SERVER](/sql/relational-databases/security/permissions-database-engine) permission (for example members of **syadmin** fixed server role) are able to connect via TCP/IP. Users who do not have this permission cannot connect remotely via TCP/IP protocol either using Windows or SQL Server authentication.
