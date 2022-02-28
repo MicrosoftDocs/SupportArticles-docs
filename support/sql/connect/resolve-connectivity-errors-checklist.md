@@ -16,24 +16,24 @@ _Original KB number:_ &nbsp; 4009936
 
 To effectively use these troubleshooters, you may want to gather the following information.
 
-1. The text of the error message and the error codes. Check whether the error is intermittent (happens only sometimes) or consistent (happens all the time).
+- The text of the error message and the error codes. Check whether the error is intermittent (happens only sometimes) or consistent (happens all the time).
 
-1. If you have administrator access to SQL Server computer, gather and review current computer settings and service accounts using the following procedure.
+- If you have administrator access to SQL Server computer, gather and review current computer settings and service accounts using the following procedure.
 
     1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
 
     1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
 
-    1. Run the command prompt as an administrator to collect the data and save to a file: for example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
+    1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
 
     > [!NOTE]
-    > If you are troubleshooting connectivity issue from a remote client or troubleshooting linked server queries, run SQLCheck tool on all the systems involved.
+    > If you are troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run SQLCheck tool on all the systems involved.
 
-1. Application and system event logs from SQL Server and client systems. This can help check if there are any system wide issues occurring on your SQL server.
+- Application and system event logs from SQL Server and client systems. This can help check if there are any system wide issues occurring on your SQL Server.
 
-1. If the connections are failing from an application, the connection string from the application. These are typically found in *Web.config* files for ASP.NET applications.
+- If the connections are failing from an application, the connection string from the application. These are typically found in *Web.config* files for ASP.NET applications.
 
-1. Optionally, you may want to collect and review SQL Server error logs for presence of other error messages, exceptions etc. that may be contributing to connectivity issues with SQL server.
+- Optionally, you may want to collect and review SQL Server error logs for presence of other error messages, exceptions etc. that may be contributing to connectivity issues with SQL Server.
 
 ## Quick checklist for troubleshooting connectivity issues
 
@@ -50,25 +50,25 @@ If you have access to the output of SQLCheck tool from Prerequisites section, re
 |Client Security and Driver Information |Diffie-Hellman cipher suites are enabled. Possible risk of intermittent TLS failures if the algorithm version is different between clients and servers |If you're having intermittent connectivity issues, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).|[An existing connection was forcibly closed by the remote host](tls-exist-connection-closed.md)|
 |Client Security and Driver Information |SQL Aliases |If present, ensure they're configured properly and pointing to correct server/IP addresses. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
 |SQL Server Information |Services of Interest |If your SQL service  isn't started, start it. If you're having issues connecting to a named instance, ensure SQL Server Browser service is started or try restarting browser service. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
-|SQL Server Information |Domain Service Account Properties |If you configure linked servers from your SQL server and Trust for Del value is set to false, then you can run into authentication issues with your linked server queries. |[Troubleshooting "Login failed for user" errors](login-failed-for-user.md)<br/>Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'<br/>Login failed for user '(null)' |
-|SQL Server Information |SPN does not exist |Check this table to see if SPNs for your SQL server are properly configured and fix any issues identified. |[Cannot generate SSPI context](cannot-generate-sspi-context-error.md)|
-|SQL Server Information |Details for SQL Server Instance |Check values of TCP Enabled, TCP Ports etc. to check TCP/IP is enabled on the server side and to check if your SQL default instance is listening on 1433 or a different port.  |Various connectivity errors |
+|SQL Server Information |Domain Service Account Properties |If you configure linked servers from your SQL Server and **Trust for Del** value is set to false, then you can run into authentication issues with your linked server queries. |[Troubleshooting "Login failed for user" errors](login-failed-for-user.md)<br/>Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'<br/>Login failed for user '(null)' |
+|SQL Server Information |SPN does not exist |Check this table to see if SPNs for your SQL Server are properly configured and fix any issues identified. |[Cannot generate SSPI context](cannot-generate-sspi-context-error.md)|
+|SQL Server Information |Details for SQL Server Instance |Check values of TCP Enabled, TCP Ports and so on to review whether TCP/IP is enabled on the server side and if your SQL default instance is listening on 1433 or a different port.  |Various connectivity errors |
 
 ### Option 2
 
-If you aren't able to run SQLCheck on your SQL server computer, consider checking the following items before doing in-depth troubleshooting of your SQL connectivity issue:
+If you aren't able to run SQLCheck on your SQL Server computer, consider checking the following items before doing in-depth troubleshooting of your SQL connectivity issue:
 
 1. Make sure that SQL Server is started, and that you see the following message in the SQL Server error log:
 
     > SQL Server is now ready for client connections. This is an informational message; no user action is required.
 
-   You can use the following command in PowerShell to check the status of SQL Server services on the system:
+   Use the following command in PowerShell to check the status of SQL Server services on the system:
   
     ```PowerShell
     Get-Service | Where {$_.status -eq 'running' -and $_.DisplayName -match "sql server*"}
     ```
 
-   You can use the following command to search the error log file for the specific string "SQL Server is now ready for client connections. This is an informational message; no user action is required.":
+   Use the following command to search the error log file for the specific string "SQL Server is now ready for client connections. This is an informational message; no user action is required.":
   
     ```Powershell
     Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog |select-string "SQL Server is now ready for client connections."

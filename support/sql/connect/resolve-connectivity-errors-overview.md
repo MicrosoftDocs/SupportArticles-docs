@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4009936
 You may experience connectivity issues in SQL Server because of various causes. This article series help you troubleshoot the most common SQL Server connectivity issues, and describes the tools and methods that you can use for troubleshooting.
 
 > [!NOTE]
-> If multiple SQL Server instances in your environment are impacted or the issue is intermittent, it usually indicates that Windows policy or networking issue. Therefore, although these series of articles can provide some guidance, it may not effectively troubleshoot those scenarios.
+> If multiple SQL Server instances in your environment are impacted or the issue is intermittent, it usually indicates a Windows policy or networking issue. Therefore, although these series of articles can provide some guidance, it may not effectively troubleshoot those scenarios.
 
 ## Preparation
 
@@ -49,7 +49,7 @@ Use the list below to navigate to the appropriate topic page for detailed troubl
 
 ## Tools and methods that help you troubleshoot connectivity issues
 
-The following topics provide details on various tools and procedures that are used when troubleshooting various connectivity errors
+The following topics provide details on various tools and procedures that are used when troubleshooting various connectivity errors:
 
 - [Configure firewalls to work with SQL Server](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context)
 

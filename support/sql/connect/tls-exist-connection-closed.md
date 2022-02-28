@@ -14,14 +14,14 @@ _Applies to:_ &nbsp; SQL Server
 > [!NOTE]
 > Before you start troubleshooting, we recommend that you check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
-This topic provides various causes and associated resolutions of the following errors:
+This topic provides various causes and associated resolutions for the following errors:
 
 - > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - **An existing connection was forcibly closed by the remote host**.)
 - > A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - **An existing connection was forcibly closed by the remote host**.)
 
 ## When do you see the error?
 
-Secure Channel, also known as [Schannel](/windows/win32/com/schannel), is a [security support provider](/windows/win32/rpc/security-support-providers-ssps-) (SSP). It contains a set of security protocols that provide identity authentication and secure, private communication through encryption. One function of Schannel SSP is to implement different versions of the [Transport Layer Security (TLS) protocol](/windows-server/security/tls/transport-layer-security-protocol). This protocol is an industry standard that is designed to protect the privacy of information communicated over the Internet.
+Secure Channel, also known as [Schannel](/windows/win32/com/schannel), is a [Security Support Provider](/windows/win32/rpc/security-support-providers-ssps-) (SSP). It contains a set of security protocols that provide identity authentication and secure, private communication through encryption. One function of Schannel SSP is to implement different versions of the [Transport Layer Security (TLS) protocol](/windows-server/security/tls/transport-layer-security-protocol). This protocol is an industry standard that is designed to protect the privacy of information communicated over the Internet.
 
 The TLS Handshake Protocol is responsible for the key exchange that is necessary to establish or resume secure sessions between two applications communicating over TCP. During the pre-login phase of the connection process, SQL Server and client applications use the TLS protocol to establish a secure channel for transmitting credentials.
 
@@ -38,7 +38,7 @@ Connectivity errors occur when your application uses an earlier version of Open 
 To resolve this issue, use one of the following methods:
 
 - Upgrade your SQL Server or your client providers to a version that supports TLS 1.2. For more information, see [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe).
-- Ask your system administrators to temporarily enable TLS 1.0 or TLS 1.1 on both the client and the server computers by taking one of the following actions:
+- Ask your system administrators to temporarily enable TLS 1.0 or TLS 1.1 on both the client and the server computers by performing one of the following actions:
   - Use the [IIS Crypto](https://www.nartac.com/Products/IISCrypto/) tool (Ciphers suites section) to validate and make changes to the current TLS settings.
   - Start Registry Editor, and locate the Schannel-specific registry keys: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`.  
       For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [SSL Errors after Upgrading to TLS 1.2](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0710-SSL-Errors-after-Upgrading-to-TLS-1.2).
