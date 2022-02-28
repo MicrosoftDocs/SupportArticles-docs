@@ -1,7 +1,7 @@
 ---
 title: mssql-conf setup fails with python module error
 description: This article helps you to troubleshoot version  the python requirement for SQL on Linux and the workaround if you are using a lower python version while configuring SQL Server on Linux.
-ms.date: 02/25/2022
+ms.date: 02/27/2022
 ms.custom: sap:SQL Server 2019 on Linux 
 ms.technology: 
 ms.reviewer: 
@@ -11,7 +11,7 @@ ms.prod: sql
 
 # mssql-conf setup fails with python module error
 
-This article describes the python requirement for SQL on Linux and the workaround if you are experiencing lower python version while configure SQL Server on Linux.
+This article helps you resolve the mssql-conf setup with python module error. It also  describes the python requirement for SQL on Linux and the workaround if you are experiencing lower python version while configure SQL Server on Linux.
 
 _Applies to: SQL Server 2019 on Linux  
 _Original KB number:
@@ -20,11 +20,7 @@ _Original KB number:
 
 You try to run the `mssql-conf` setup after installing SQL Server 2019. In this scenario, you might see the error "module object has no attribute 'run'", if you are using a Python version lower than 3.5.
 
-## Supported environment
-
-For Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).
-
-## Details information
+Consider the following scenario:
 
 1. Install the SQL Server on Linux by reviewing [installation guidance for SQL Server on Linux](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).  
 
@@ -41,7 +37,6 @@ Traceback (most recent call last):
     import typing
 ImportError: No module named 'typing'
 ```
-
 You may receive the following error even after you fix the 'typing' module dependency issue:
 
 ```bash
@@ -64,6 +59,9 @@ Traceback (most recent call last):
     process = subprocess.run([pathToScript], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 AttributeError: 'module' object has no attribute 'run'
 ```
+
+> [!NOTE]
+> The mssql-conf setup error may occur on systems with Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).
 
 ## Cause
 
