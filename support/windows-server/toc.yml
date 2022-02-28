@@ -1696,6 +1696,8 @@
       href: ./networking/direct-hosting-of-smb-over-tcpip.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
       href: ./networking/directaccess-clients-unable-connect-static-proxy-configured.md
+    - name: Disable HTTP proxy features
+      href: ./networking/disable-http-proxy-auth-features.md
     - name: Disable Media Sensing feature for TCP/IP
       href: ./networking/disable-media-sensing-feature-for-tcpip.md
     - name: Disable NetBIOS over TCP/IP by using DHCP server options
