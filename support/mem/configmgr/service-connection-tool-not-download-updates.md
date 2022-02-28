@@ -1,7 +1,7 @@
 ---
 title: Error downloading the ConfigMgr.AdminUIContent.cab file
 description: An AdminUIContentDownload error occurs when you download updates for Configuration Manager by using service connection point online mode or ServiceConnectionTool.exe.
-ms.date: 01/28/2022
+ms.date: 02/28/2022
 ---
 # Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe
 
@@ -32,6 +32,15 @@ This issue occurs in one of the following situations:
 
 ## Resolution
 
+> [!NOTE]
+> - If you haven't already, consider upgrading the server that hosts the service connection point to Windows Server 2016 or later versions. 
+> - Make sure you have all internet rules and exceptions set up for your proxy or firewall to allow the service connection point to access internet endpoints. For more information, see [Internet Access Requirement](/mem/configmgr/core/plan-design/network/internet-endpoints) and [Configuration Manager proxy exceptions](/archive/blogs/configmgrdogs/configuration-manager-proxy-exceptions).
+> - Make sure the following cipher suites are [enabled](/windows-server/identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs#enabling-or-disabling-additional-cipher-suites) on the server that hosts the service connection point:
+>   - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xc030)
+>   - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xc02f)
+>   - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (0x9f)
+>   - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (0x9e)
+
 On the computer that runs the online service connection point or service connection tool, [enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server).
 In particular, if .NET Framework updates are installed, set the following registry values, and then restart the computer:
 
@@ -45,4 +54,6 @@ For more information about the specific URLs that are required by the service co
 
 ## Workaround
 
-If you use the service connection tool, manually download the *ConfigMgr.AdminUIContent.cab* file from [https://go.microsoft.com/fwlink/?LinkID=619849](https://go.microsoft.com/fwlink/?LinkID=619849). Save the file to the folder that's specified by the `-updatepackdest` parameter when you run the `serviceconnectiontool.exe` command. Then, rename the *ConfigMgr.AdminUIContent.cab* file to *ConfigMgr.AdminUIContent.auc*.
+1. From the error in the DMPDownloader.log file, copy the URL and manually download the .cab file.
+2. Copy the .cab file to the \<ConfigMgr Install Dir\>\Inboxes\HMAN.box\CFD folder.
+3. Monitor the HMAN.log file for processing details.
