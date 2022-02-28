@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with the Sales Premium features in Dynamics 365 Sales
+# Troubleshoot issues with the Sales Premium features
 
-This article helps you troubleshoot and resolve issues related to the Sales Premium features in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve issues related to the Sales Premium features.
 
 ## Issue: Can't install or Sales Insights features doesn't work as defined
 

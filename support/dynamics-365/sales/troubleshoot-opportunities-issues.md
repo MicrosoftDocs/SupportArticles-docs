@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with opportunities in Dynamics 365 Sales
+# Troubleshoot issues with opportunities
 
-Follow the instructions in this article to troubleshoot the issues you might face when you work with opportunities in Dynamics 365 Sales.
+Follow the instructions in this article to troubleshoot the issues you might face when you work with opportunities.
 
 ## Opportunity issues and resolution for salespeople
 
@@ -136,7 +136,7 @@ The user trying to close the opportunity doesn't have sufficient permissions on 
 
 #### Cause
 
-The out-of-the-box **Stakeholders** subgrid only shows connections that have a connection role category of **Stakeholder**. Foe more information, see [How are stakeholders and sales team members tracked for opportunities?](/dynamics365/sales/stakeholders-sales-team-members).
+The out-of-the-box **Stakeholders** subgrid only shows connections that have a connection role category of **Stakeholder**. For more information, see [How are stakeholders and sales team members tracked for opportunities?](/dynamics365/sales/stakeholders-sales-team-members).
 
 #### Resolution
 

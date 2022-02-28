@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with in-app marketing in Dynamics 365 Sales
+# Troubleshoot issues with in-app marketing
 
-This article helps you troubleshoot and resolve issues related to in-app marketing in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve issues related to in-app marketing.
 
 ## Issue 1 - Members view isn't available when you open the Marketing List form
 

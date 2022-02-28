@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with emails in Dynamics 365 Sales
+# Troubleshoot issues with emails
 
 This article helps you troubleshoot and resolve issues related to emails in Dynamics 365 Sales.
 

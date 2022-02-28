@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot issues with automatic creation of contact or company-related fields
-description: Provides resolutions for the issues with automatic generation of contact or company-related fields.
+description: Provides resolutions for the issues with automatic generation of contact or company-related fields in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with automatic generation of contact or company-related fields in Dynamics 365 Sales
+# Troubleshoot issues with automatic generation of contact or company-related fields
 
 When you select an existing account or contact at the time of creating a new lead, the fields related to the account or contact are automatically populated.
 

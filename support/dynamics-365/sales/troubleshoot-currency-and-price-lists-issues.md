@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with currency and price lists in Dynamics 365 Sales
+# Troubleshoot issues with currency and price lists
 
-This article helps you troubleshoot and resolve issues related to currency and price lists in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve issues related to currency and price lists.
 
 ## Issue: Can't update the currency or price list for an opportunity, quote, order, or invoice
 

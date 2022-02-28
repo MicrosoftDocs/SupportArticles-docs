@@ -9,7 +9,7 @@ ms.date: 02/28/2022
  
 # Troubleshoot issues with Dynamics 365 Sales Professional
 
-Use the following troubleshooting topics to quickly find information to solve your users' issues in Dynamics 365 Sales Professional.
+Use the following troubleshooting topics to quickly find information to solve your users' issues.
 
 ## Issue 1 - Can't sign up for a Sales Professional trial
 

@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with Unified Interface in Dynamics 365 Sales
+# Troubleshoot issues with Unified Interface
 
-This article helps you troubleshoot and resolve issues related to Unified Interface in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve issues related to Unified Interface.
 
 ## Issue: Out-of-the-box or custom entities appear as read-only in Unified Interface apps
 

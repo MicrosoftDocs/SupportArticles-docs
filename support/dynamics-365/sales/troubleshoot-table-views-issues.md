@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with table views in Dynamics 365 Sales
+# Troubleshoot issues with table views
 
-This article helps you troubleshoot and resolve issues related to table views in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve issues related to table views.
 
 ## Issue 1 - Can't see data in certain columns in table views
 

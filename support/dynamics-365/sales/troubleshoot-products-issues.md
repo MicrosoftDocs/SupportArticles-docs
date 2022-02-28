@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with products in Dynamics 365 Sales
+# Troubleshoot issues with products
 
 Follow the instructions in this article to troubleshoot the issues you might face when working with products in Dynamics 365 Sales.
 

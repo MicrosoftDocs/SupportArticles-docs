@@ -6,9 +6,9 @@ ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
-# Troubleshoot common issues with multiple tables in Dynamics 365 Sales
+# Troubleshoot common issues with multiple tables
 
-This article helps you troubleshoot and resolve common issues across multiple tables like opportunity, quote, order, or invoice in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve common issues across multiple tables like opportunity, quote, order, or invoice.
 
 ## Issue 1 - In Context Form may appear in the form selector
 

@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with forecasting in Dynamics 365 Sales
+# Troubleshoot issues with forecasting
 
-This article helps you troubleshoot and resolve issues related to forecasting in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve issues related to forecasting.
 
 ## Issue 1 - An error is displayed when you try to create a territory-based forecast
 

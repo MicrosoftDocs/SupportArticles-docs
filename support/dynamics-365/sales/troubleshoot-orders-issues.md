@@ -7,9 +7,9 @@ ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with orders in Dynamics 365 Sales
+# Troubleshoot issues with orders
 
-Follow the instructions in this article to troubleshoot the issues you might face when working with orders in Dynamics 365 Sales.
+Follow the instructions in this article to troubleshoot the issues you might face when working with orders.
 
 ## Issue: Can't see the Create invoice button on order forms
 

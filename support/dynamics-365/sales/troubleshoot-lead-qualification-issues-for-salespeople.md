@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot issues with lead qualification for salespeople
-description: Provides resolutions for the lead qualification issues in Dynamics 365 Sales for salespeople.
+description: Provides resolutions for the lead qualification issues for salespeople in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with lead qualification issues for salespeople in Dynamics 365 Sales
+# Troubleshoot issues with lead qualification issues for salespeople
 
-This article helps you troubleshoot and resolve lead qualification issues for salespeople in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve lead qualification issues for salespeople.
 
 ## How do I convert or qualify my leads?
 
@@ -142,7 +142,7 @@ Ensure that the status codes of Lead and Contact entities, or Lead and Opportuni
 > - If you're still getting the error, remove the mapping of the status code between the Lead entity and the target entity (Account, Contact, or Opportunity).
 > - To add new status codes that have the same values, import the new option set values through a managed solution for the Contact or Opportunity entity.
 
-### Issue: Cannot proceed to the next stage when I select Next stage on the business process flow
+### Issue: Cannot proceed to the next stage when you select Next stage on the business process flow
 
 #### Cause
 

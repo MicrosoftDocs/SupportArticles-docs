@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot issues with lead qualification for system admins
-description: Provides resolutions for the lead qualification issues in Dynamics 365 Sales for system administrators.
+description: Provides resolutions for the lead qualification issues for system administrators in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
 ---
 
-# Troubleshoot issues with lead qualification for system administrators in Dynamics 365 Sales
+# Troubleshoot issues with lead qualification for system administrators
 
 ## Issue 1 - Insufficient permissions or Access denied error when a user is trying to qualify a lead
 

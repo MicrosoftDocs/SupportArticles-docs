@@ -8,7 +8,7 @@ ms.date: 02/28/2022
 ---
 # Troubleshoot issues with the Sales Pipeline chart and its phases in Dynamics 365 Sales
 
-This article helps you troubleshoot and resolve issues related to the Sales Pipeline chart and its phases in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve issues related to the Sales Pipeline chart and its phases.
 
 The Sales Pipeline chart consists of pipeline phases of an opportunity. The phase is based on the stage of the business process flow the opportunity is in, such as 1-Qualify, 2-Develop, and so on. For more information, see [Understand the sales pipeline chart and its phases](/dynamics365/sales/sales-pipeline-chart).
 
