@@ -453,37 +453,37 @@
           href: installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md
     - name: Sales Hub
       items:
+        - name: Troubleshoot common tables
+          href: troubleshoot-multiple-tables-issues.md
+        - name: Troubleshoot currency and price lists
+          href: troubleshoot-currency-and-price-lists-issues.md
+        - name: Troubleshoot emails
+          href: troubleshoot-emails-issues.md
+        - name: Troubleshoot forecasts
+          href: troubleshoot-forecast-issues.md
+        - name: Troubleshoot in-app marketing
+          href: troubleshoot-in-app-marketing-issues.md
         - name: Troubleshoot leads
           items:
-            - name: Lead qualification issues and resolution for salespeople
-              href: troubleshoot-lead-qualification-issues-for-salespeople.md
-            - name: Lead qualification issues and resolution for system administrators
-              href: troubleshoot-lead-qualification-issues-for-system-admin.md
-            - name: Automatic generation of contact or company-related fields
+            - name: Troubleshoot automatic generation of contact or company-related fields
               href: troubleshoot-lead-form-auto-generated-contact-company-fields.md
+            - name: Troubleshoot lead qualification issues for salespeople
+              href: troubleshoot-lead-qualification-issues-for-salespeople.md
+            - name: Troubleshoot lead qualification for system administrators
+              href: troubleshoot-lead-qualification-issues-for-system-admin.md
         - name: Troubleshoot opportunities
           href: troubleshoot-opportunities-issues.md
         - name: Troubleshoot orders
           href: troubleshoot-orders-issues.md
         - name: Troubleshoot products
           href: troubleshoot-products-issues.md
-        - name: Troubleshoot common tables
-          href: troubleshoot-multiple-tables-issues.md
-        - name: Troubleshoot currency and price lists
-          href: troubleshoot-currency-and-price-lists-issues.md
-        - name: Troubleshoot views
-          href: troubleshoot-table-views-issues.md
-        - name: Troubleshoot forecasts
-          href: troubleshoot-forecast-issues.md
-        - name: Troubleshoot in-app marketing
-          href: troubleshoot-in-app-marketing-issues.md
-        - name: Troubleshoot Unified Interface
-          href: troubleshoot-unified-interface-issues.md
         - name: Troubleshoot Sales Pipeline chart
           href: troubleshoot-sales-pipeline-issues.md
-        - name: Troubleshoot emails
-          href: troubleshoot-emails-issues.md
         - name: Troubleshoot Sales Premium
           href: troubleshoot-sales-premium-issues.md
         - name: Troubleshoot Sales Professional
           href: troubleshoot-sales-professional-issues.md
+        - name: Troubleshoot Unified Interface
+          href: troubleshoot-unified-interface-issues.md
+        - name: Troubleshoot views
+          href: troubleshoot-table-views-issues.md

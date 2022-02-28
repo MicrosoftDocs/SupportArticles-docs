@@ -69,7 +69,7 @@ To resolve this issue, you must edit or remove filters for the view. This will e
 
     The view edit page opens.
 
-    :::image type="content" source="media/troubleshoot-table-views-issues/record-edit-view.png" alt-text="Open the view edit page to edit a view." border="false":::
+    :::image type="content" source="media/troubleshoot-table-views-issues/record-edit-view.png" alt-text="Open the view edit page to edit or remove the filters." border="false":::
 
 4. Select **Edit Filter Criteria** and recheck the filter condition either by updating or deleting.
 

@@ -65,7 +65,7 @@ The issue occurs because the attribute **TmpRegardingObjectId** has been removed
 2. From the site map, open **Entities** > **Campaign** > **Forms**.
 3. From the list of forms, select the **Campaign** form.
 
-   :::image type="content" source="media/troubleshoot-in-app-marketing-issues/select-campaign-form.png" alt-text="Empty campaign list in the Marketing List form in Unified Interface.":::
+   :::image type="content" source="media/troubleshoot-in-app-marketing-issues/select-campaign-form.png" alt-text="Select the Campaign form from the form list.":::
 
 4. From the **Field Explorer** pane displayed on the right side of the page, add the field **TmpRegardingObjectId** to the form.
 

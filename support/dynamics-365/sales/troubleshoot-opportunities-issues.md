@@ -30,7 +30,7 @@ To close an opportunity, open the opportunity record, and on the command bar, se
 
 Here are some errors you might see when you close an opportunity:
 
-1. [Error 1 - The opportunity can't be closed](#error-1---the-opportunity-can't-be-closed)
+1. [Error 1 - The opportunity can't be closed](#error-1---the-opportunity-cant-be-closed)
 2. [Error 2 - Access denied or Insufficient permissions](#error-2---access-denied-or-insufficient-permissions)
 3. [Error 3 - The opportunity has already been closed](#error-3---the-opportunity-has-already-been-closed)
 
