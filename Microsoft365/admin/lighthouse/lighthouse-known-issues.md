@@ -22,28 +22,33 @@ This article lists the known issues for Microsoft 365 Lighthouse by feature area
 
 ## Users
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Helpdesk Agent is unable to reset a user password</b></td><td>Managed Service Provider (MSP) technicians who are members of the Helpdesk Agent group are unable to reset passwords for users in customer tenants. When they try to reset the password for a user, they get the following error message: You don’t have permission to do this. <a href=https://docs.microsoft.com/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security>Learn more</a></td><td>To work around the permissions issue, Helpdesk Agents should reset passwords by using the Microsoft 365 admin center or Azure Active Directory.</td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Helpdesk Agent is unable to reset a user password** | Managed Service Provider (MSP) technicians who are members of the Helpdesk Agent group are unable to reset passwords for users in customer tenants. When they try to reset the password for a user, they get the following error message: You don’t have permission to do this. [Learn more](/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security) | To work around the permissions issue, Helpdesk Agents should reset passwords by using the Microsoft 365 admin center or Azure Active Directory. |
 
 ## Devices
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Deleted policy appears</b></td><td>After a device compliance policy has been deleted from Intune, it will temporarily continue to be visible in Lighthouse. If MSP technicians attempt to do a policy comparison that includes a policy that’s been deleted, the technicians get the following error: “Something went wrong. Please refresh the page and try again.”</td><td>To resolve the error, clear the deleted policy from the policy comparison and compare only existing policies.</td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Deleted policy appears** | After a device compliance policy has been deleted from Intune, it will temporarily continue to be visible in Lighthouse. If MSP technicians attempt to do a policy comparison that includes a policy that’s been deleted, the technicians get the following error: “Something went wrong. Please refresh the page and try again.” | To resolve the error, clear the deleted policy from the policy comparison and compare only existing policies. |
 
 ## Threat management
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Threat name is missing</b></td><td>When MSP technicians view the list of threats from the Threat Management page, some threats may be missing the name of the threat. This will occur when the device that the threat was detected on was recently removed from Intune.</td><td>The issue will resolve within 48 hours. No additional steps are required.</td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Threat name is missing** | When MSP technicians view the list of threats from the Threat Management page, some threats may be missing the name of the threat. This will occur when the device that the threat was detected on was recently removed from Intune. | The issue will resolve within 48 hours. No additional steps are required. |
 
 ## Baselines
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Conflicting settings when comparing block legacy authentication and MFA deployment steps</b></td><td>If a customer tenant has deployed block legacy authentication and one of the MFA deployment steps, a comparison test will erroneously describe these settings as conflicting.</td><td>No workaround is required. The settings do not actually conflict and users in the customer tenant are not impacted. </td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Conflicting settings when comparing block legacy authentication and MFA deployment steps** | If a customer tenant has deployed block legacy authentication and one of the MFA deployment steps, a comparison test will erroneously describe these settings as conflicting. | No workaround is required. The settings do not actually conflict and users in the customer tenant are not impacted. |
 
 ## Windows 365
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Retry provisioning error</b></td><td>MSP technicians get a "You don't have permissions to do this” error message when attempting to retry provisioning of a Cloud PC.</td><td>To work around this issue, log in to the customer tenant and then reprovision Cloud PCs from the Microsoft Endpoint Manger admin center. For instructions, see <a href=https://docs.microsoft.com/windows-365/enterprise/reprovision-cloud-pc>Reprovision a Cloud PC</a>.</td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Retry provisioning error** | MSP technicians get a "You don't have permissions to do this” error message when attempting to retry provisioning of a Cloud PC. | To work around this issue, log in to the customer tenant and then reprovision Cloud PCs from the Microsoft Endpoint Manger admin center. For instructions, see [Reprovision a Cloud PC](/windows-365/enterprise/reprovision-cloud-pc). |
 
 ## Audit logs
 
@@ -56,8 +61,9 @@ Note that the audit logs themselves will be fully displayed; only the ability to
 
 ## Delegated Admin Permissions (DAP)
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Permissions delay when changing DAP roles</b></td><td>If an MSP technician is added to or removed from the Admin Agent or Helpdesk Agent group, there may be a delay in reflecting the appropriate permissions within Lighthouse.</td><td>The issue will resolve within 30 minutes. No additional steps are required.</td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Permissions delay when changing DAP roles** | If an MSP technician is added to or removed from the Admin Agent or Helpdesk Agent group, there may be a delay in reflecting the appropriate permissions within Lighthouse. | The issue will resolve within 30 minutes. No additional steps are required. |
 
 ## Granular Delegated Admin Permissions (GDAP)
 
@@ -70,5 +76,6 @@ Note that the audit logs themselves will be fully displayed; only the ability to
 
 ## Localization
 
-<table><tr><th>Issue</th><th>Description</th><th>Solution</th></tr>
-<tr><td><b>Translation issues</b></td><td>Users may experience language translation issues when the language of their browser, or their language selection in Lighthouse, is anything other than English.</td><td>To minimize translation issues in Lighthouse, make sure that the browser’s language selection matches that of the language setting in the Lighthouse portal. To change the language selection in Lighthouse, log in to Lighthouse and select the gear icon at the top of the page to open the Portal settings page, select <b>Language + region</b>, and then select the appropriate language and regional formats.</td></tr></table>
+| Issue | Description | Solution |
+| ---------------- | ---------------- | ---------------- |
+| **Translation issues** | Users may experience language translation issues when the language of their browser, or their language selection in Lighthouse, is anything other than English. | To minimize translation issues in Lighthouse, make sure that the browser’s language selection matches that of the language setting in the Lighthouse portal. To change the language selection in Lighthouse, log in to Lighthouse and select the gear icon at the top of the page to open the Portal settings page, select **Language + region**, and then select the appropriate language and regional formats. |
