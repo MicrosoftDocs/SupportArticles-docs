@@ -1,5 +1,5 @@
 ---
-title: How to enable diagnostic logging for Windows Security Center
+title: How to enable diagnostic logging for the Windows Security app
 description: Describes how to enable diagnostic logging for Windows Security
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,23 +13,23 @@ ms.reviewer: kaushika
 ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
 ms.technology: windows-client-security
 ---
-# How to enable diagnostic logging for Windows Security Center
+# How to enable diagnostic logging for the Windows Security app
 
-This article describes how to enable diagnostic logging for Windows Security Center.
+This article describes how to enable diagnostic logging for the Windows Security app.
 
 _Applies to:_ &nbsp; Windows Server 2016, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 3155606
 
 ## Summary
 
-This article describes how to enable diagnostic logging for Windows Security Center in Windows 10.
+This article describes how to enable diagnostic logging for the Windows Security app in Windows 10.
 
 ## More information
 
 > [!IMPORTANT]
 >Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur. 
 
-To enable diagnostic logging for Windows Security Center, save the following content as a *.reg file, and then import the key:
+To enable diagnostic logging for the Windows Security app, save the following content as a *.reg file, and then import the key:
 ```
 Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WscLogger]
