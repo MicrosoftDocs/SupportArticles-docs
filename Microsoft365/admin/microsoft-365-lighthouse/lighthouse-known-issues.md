@@ -67,7 +67,8 @@ Note that the audit logs themselves will be fully displayed; only the ability to
 
 ## Granular Delegated Admin Permissions (GDAP)
 
-**Note:** GDAP is currently in [Technical Preview](/partner-center/announcements/2022-february#6) (Public Preview) to allow partners to assign granular permissions before GDAP is generally available.
+> [!NOTE]
+> GDAP is currently in [Technical Preview](/partner-center/announcements/2022-february#6) (Public Preview) to allow partners to assign granular permissions before GDAP is generally available.
 
 | Issue | Description | Solution |
 | ---------------- | ---------------- | ---------------- |
