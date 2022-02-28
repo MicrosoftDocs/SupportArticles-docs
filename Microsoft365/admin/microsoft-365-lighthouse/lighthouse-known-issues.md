@@ -24,7 +24,7 @@ This article lists the known issues for Microsoft 365 Lighthouse by feature area
 
 | Issue | Description | Solution |
 | ---------------- | ---------------- | ---------------- |
-| **Helpdesk Agent is unable to reset a user password** | Managed Service Provider (MSP) technicians who are members of the Helpdesk Agent group are unable to reset passwords for users in customer tenants. When they try to reset the password for a user, they get the following error message: You don’t have permission to do this. [Learn more](/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security) | To work around the permissions issue, Helpdesk Agents should reset passwords by using the Microsoft 365 admin center or Azure Active Directory. |
+| **Helpdesk Agent is unable to reset a user password** | Managed Service Provider (MSP) technicians who are members of the Helpdesk Agent group are unable to reset passwords for users in customer tenants. When they try to reset the password for a user, they get the following error message: "You don’t have permission to do this. [Learn more](/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security)" | To work around the permissions issue, Helpdesk Agents should reset passwords by using the Microsoft 365 admin center or Azure Active Directory. |
 
 ## Devices
 
