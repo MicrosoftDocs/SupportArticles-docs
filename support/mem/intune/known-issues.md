@@ -1,7 +1,7 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 02/23/2022
+ms.date: 02/28/2022
 ---
 # Known issues
 
@@ -74,7 +74,7 @@ We are aware of some common issue with Intune policy reports, including multiple
 - **Status:** Active
 - **Blog post:** [Support Tip: Known Issue occasionally occurring with iOS MAM and Office apps](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-known-issue-occasionally-occurring-with-ios-mam-and/ba-p/2617909)
 
-We are aware of an issue that can affect organization use=ing app protection policies (APP, also known as MAM) to manage their mobile Office apps. In this scenario, users are signed out of *all* Office mobile apps once they sign out of a single Office app (or if they are automatically signed out of an app). Once a user is signed out, they are forced to reauthenticate so that policies can be applied before they access the managed apps. This can sometimes lead to an authentication loop.
+We are aware of an issue that can affect organization using app protection policies (APP, also known as MAM) to manage their mobile Office apps. In this scenario, users are signed out of *all* Office mobile apps once they sign out of a single Office app (or if they are automatically signed out of an app). Once a user is signed out, they are forced to reauthenticate so that policies can be applied before they access the managed apps. This can sometimes lead to an authentication loop.
 
 For more information and a workaround, see [Support Tip: Known Issue occasionally occurring with iOS MAM and Office apps](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-known-issue-occasionally-occurring-with-ios-mam-and/ba-p/2617909).
 
@@ -90,7 +90,7 @@ There are some known issues with filters in Microsoft Endpoint Manager. This fea
 - **Status:** Engineering actively working on fix
 - **Blog post:** [Known Issue: Status reporting for App install lifecycle and App install history](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-status-reporting-for-app-install-lifecycle-and-app/ba-p/2147870)
 
-We are aware of an issue within the Troubleshooting + support blade where the Devices table > column **App install lifecycle** might show a status of "Failure" even if there are no issues with the apps on the device. Additionally, if you load the Managed Apps view fo the impacted device, and select a targeted app, the app install history might show "Failed to install"&mdash;even though the app has installed correctly on the device.
+We are aware of an issue within the Troubleshooting + support blade where the Devices table > column **App install lifecycle** might show a status of "Failure" even if there are no issues with the apps on the device. Additionally, if you load the Managed Apps view for the impacted device and select a targeted app, the app install history might show "Failed to install"&mdash;even though the app has installed correctly on the device.
 
 This issue appears to occur at random. For more information, see [Known Issue: Status reporting for App install lifecycle and App install history](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-status-reporting-for-app-install-lifecycle-and-app/ba-p/2147870) on the Intune Customer Success blog.
 
@@ -106,7 +106,7 @@ There is a known issue with the Android 10 Samsung A10 biometric authorization (
 - **status:** Active
 - **Blog post:** [Support Tip: PowerShell Script now available for iOS Passcode Reset Token Known Issue](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-powershell-script-now-available-for-ios-passcode/ba-p/1250875)
 
-Intune shared a known issue in MC203629, whereby about 1% of devices Intune enrolled with iOS 13+ do not return the token needed to allow a password reset. Apple addressed the bug in 13.3.1 and higher, however, simply updating to 13.3.1 cannot fix already-enrolled devices. Devices without a password reset token will need to update to 13.3.1, then remove and then re-enroll in Intune. For more information and instructions to help you identify and fix affected devices, see [Support Tip: PowerShell Script now available for iOS Passcode Reset Token Known Issue](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-powershell-script-now-available-for-ios-passcode/ba-p/1250875) on the Intune Customer Success blog.
+Intune shared a known issue in MC203629, whereby approximately 1% of devices Intune enrolled with iOS 13+ do not return the token needed to allow a password reset. Apple addressed the bug in 13.3.1 and higher, however, simply updating to 13.3.1 cannot fix already-enrolled devices. Devices without a password reset token will need to update to 13.3.1, then remove and then re-enroll in Intune. For more information and instructions to help you identify and fix affected devices, see [Support Tip: PowerShell Script now available for iOS Passcode Reset Token Known Issue](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-powershell-script-now-available-for-ios-passcode/ba-p/1250875) on the Intune Customer Success blog.
 
 ## Profile error enrolling iOS devices with Apple Configurator
 
@@ -121,3 +121,10 @@ We are aware of an issue when [enrolling and iOS devices with Apple Configurator
 - **Blog post:** [Known issue: Certificate-based authentication issue with Pulse Secure 7.0.0 for iOS and Check Point Capsule Connect versions 1.600 for iOS](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-certificate-based-authentication-issue-with-pulse/ba-p/280162)
 
 There are issues with certificate-based authentication when using the Pulse Secure VPN client for iOS, version 7.0 and Check Point Capsule Connect version 1.600 for iOS. Specifically, both VPN clients may report that the certificate is missing from the device, even when the certificate has been properly delivered. These issues impact Intune in addition to other Enterprise Mobility Management providers. For more information and workarounds, see [Known issue: Certificate-based authentication issue with Pulse Secure 7.0.0 for iOS and Check Point Capsule Connect versions 1.600 for iOS](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-certificate-based-authentication-issue-with-pulse/ba-p/280162) on the Intune Customer Success blog.
+
+## "Rename device" setting disabled for hybrid Azure AD joined Windows devices
+
+- **Status:** Feature disabled
+- **Blog post:** [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
+
+In the Endpoint Manager admin center, we’ve disabled the "Rename device setting" for Windows devices that are hybrid Azure AD joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Azure AD joined. For details, see [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
