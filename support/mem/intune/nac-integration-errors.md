@@ -1,11 +1,11 @@
 ---
 title: Troubleshooting 503 errors for Microsoft Intune NAC integration
 description: Troubleshoot 503 errors that network access control (NAC) partners receive from Intune, and learn about the four-hour throttle window for unfiltered queries.
-ms.date: 02/28/2022
+ms.date: 03/01/2022
 ---
 # Troubleshooting 503 errors for Intune NAC integration
 
-The article explains 503 errors that network access control (NAC) partners receive from Microsoft Intune. Additionally, it describes the recommended best practice of limiting broad, unfiltered queries to the Intune service to once every four hours, as noted in [Network access control (NAC) integration with Intune](/mem/intune/protect/network-access-control-integrate).
+The article explains 503 errors that network access control (NAC) partners receive from Microsoft Intune. Additionally, it describes the recommended best practice of limiting broad, unfiltered queries to the Intune service to the first hour of every four-hour throttle window, as noted in [Network access control (NAC) integration with Intune](/mem/intune/protect/network-access-control-integrate).
 
 NAC partner solutions typically send two different types of queries to Intune to determine the device compliance state:
 
