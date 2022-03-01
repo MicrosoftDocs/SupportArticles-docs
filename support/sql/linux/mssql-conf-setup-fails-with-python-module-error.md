@@ -1,7 +1,7 @@
 ---
 title: mssql-conf setup fails with python module error
-description: This article helps you to troubleshoot version  the python requirement for SQL on Linux and the workaround if you are using a lower python version while configuring SQL Server on Linux.
-ms.date: 02/27/2022
+description: This article helps you to troubleshoot version the python requirement for SQL on Linux and the workaround if you are using a lower python version while configuring SQL Server on Linux.
+ms.date: 02/28/2022
 ms.custom: sap:SQL Server 2019 on Linux 
 ms.technology: 
 ms.reviewer: 
