@@ -8,7 +8,7 @@ ms.technology: windows-dev-apps-desktop-app-ui-dev
 
 # Chinese IME dictionaries are not ready yet in Windows Server 2022
 
-This article provides a workaround to resolve the issue that occurs when you enable the Chinese keyboard layouts by using the function `InstallLayoutOrTip`.
+This article provides a workaround to resolve the issue that occurs when a Standard user enables the Chinese keyboard layouts by using the function `InstallLayoutOrTip`.
 
 ## Symptoms
 
@@ -22,18 +22,18 @@ In Windows Server 2022, when a Standard user uses the function `InstallLayoutOrT
 The issue occurs because the Chinese IME dictionaries are included in [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) (FODs) instead of Windows image files.
 
 > [!NOTE]
-> Adding the FODs requires administrator permission.
+> Adding the FODs "basic typing" requires administrator permission.
 
 ## Workarounds
 
-To work around the issue, follow these steps:
+To work around the issue, use one of the following methods:
 
-1. Pre-install the FODs in the Windows image.
+- Pre-install the FODs in the Windows image.
 
-1. Use the [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command to add FODs with administrator privilege.
+- Use the [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command to add FODs with administrator privilege.
 
     |Command|Description|Example|
     |-|-|-|
     |`/add-package`|Adds a package, including a FOD .cab to an image. `add-package` can only be used to add FODs that don't have satellite packages.|`DISM.exe /image:C:\mount\Windows /add-package /packagepath:E:\Microsoft-Windows-Holographic-Desktop-FOD-Package~31bf3856ad364e35~amd64~~.cab`|
 
-    For more information, see: [Adding or removing Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#adding-or-removing-features-on-demand).
+    For more information, see [Adding or removing Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#adding-or-removing-features-on-demand).
