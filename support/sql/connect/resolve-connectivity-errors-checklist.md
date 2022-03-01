@@ -24,11 +24,11 @@ To effectively troubleshoot these connectivity issues, gather the following info
 
 If you have administrator access to the SQL Server computer, gather and review current computer settings and service accounts using the following procedure:
 
-    1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
+ 1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
 
-    1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
+ 1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
 
-    1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
+ 1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
 
     
 > [!NOTE]
