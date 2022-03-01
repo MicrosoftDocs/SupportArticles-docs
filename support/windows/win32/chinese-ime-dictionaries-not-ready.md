@@ -30,10 +30,10 @@ To work around the issue, use one of the following methods:
 
 - Pre-install the FODs in the Windows image.
 
-- Use the [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command to add FODs with administrator privilege.
+- Run the following [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command to add FODs with administrator privilege:
 
-    |Command|Description|Example|
-    |-|-|-|
-    |`/add-package`|Adds a package, including a FOD .cab to an image. `add-package` can only be used to add FODs that don't have satellite packages.|`DISM.exe /image:C:\mount\Windows /add-package /packagepath:E:\Microsoft-Windows-Holographic-Desktop-FOD-Package~31bf3856ad364e35~amd64~~.cab`|
+    ```cmd
+    DISM.exe /image:C:\mount\Windows /add-package /packagepath:E:\Microsoft-Windows-Holographic-Desktop-FOD-Package~31bf3856ad364e35~amd64~~.cab`
+    ```
 
     For more information, see [Adding or removing Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#adding-or-removing-features-on-demand).
