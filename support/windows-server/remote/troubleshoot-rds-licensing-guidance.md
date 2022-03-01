@@ -130,7 +130,7 @@ To do this, start the Remote Desktop Licensing Manager console on the licensing 
 
 ## Common errors and solutions
 
-### WVD are getting logged out after 60 minutes with error error 0x80070057
+### WVD are getting logged out after 60 minutes with error 0x80070057
 
 Windows Virtual Desktop (WVD) users are getting logged out after 60 minutes because of an invalid license and licensing error 0x80070057.
 

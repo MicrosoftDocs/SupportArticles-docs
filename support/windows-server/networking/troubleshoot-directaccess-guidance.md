@@ -71,7 +71,7 @@ The NetNat configuration can be viewed by running the `Get-NetNatTransitionConfi
 
 ## Common issues and solutions
 
-Troubleshoot DirectAccess server console issues:
+See the following articles to troubleshoot DirectAccess server console issues:
 
 - [6to4](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-6to4)
 - [DNS](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dns)

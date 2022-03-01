@@ -27,7 +27,7 @@ The ping command is useful to test basic connectivity. However, you shouldn't re
 
 ## Troubleshooting checklist
 
-### Step 1
+### Step 1: Capture a network diagram
 
 Capture a network diagram that details the devices that are in the path to the affected area. Specifically, note the following devices:
 
@@ -38,11 +38,11 @@ Capture a network diagram that details the devices that are in the path to the a
 
 The diagram can help you visualize and identify where to look for the cause of the issue.
 
-### Step 2
+### Step 2: Networking traces
 
 Networking traces are useful to see what's occurring at the network level when the issue occurs.
 
-### Step 3
+### Step 3: Ping the computer's local IP address
 
 Try to ping the computer's local IP address.
 
@@ -83,7 +83,7 @@ If the NSCI fails its probe check (yellow exclamation mark), this doesn't necess
 - If so, the investigation should focus specifically on why the NCSI is failing its probe checks. The details for this are covered in a separate topic.
 - If not, investigate the connectivity issues first because this would likely get corrected after connectivity is restored.
 
-### Step 4
+### Step 4: Troubleshoot error messages that occurs during the ping or telnet test
 
 If the node can ping or telnet to nodes on the same subnet or network segment, this would confirm that external connectivity is working. Further testing is still required to understand whether a basic connectivity issue exists.
 
@@ -102,11 +102,11 @@ If the node can’t ping/telnet to nodes on the same subnet/network segment. Not
    2. If step 1 is successful, external connectivity is working. Continue testing basic connectivity.
    3. If step 1 isn't successful (and if firewall profiles are disabled), gather a two-sided `netsh netconnection` scenario trace to troubleshoot further.
 
-### Step 5
+### Step 5: Ping or Telnet to the default gateway
 
 When the node can ping its default gateway, then external connectivity (such as off-box connectivity) is possible from the source node. Further testing would still be required to understand whether a basic connectivity issue exists. If the node can’t ping or Telnet to its default gateway, this means that the ICMP replies are disabled on the router.
 
-### Step 6
+### Step 6: Check issues that affects the specific destination node
 
 If the source node can ping, Telnet, or PsPing to other nodes on the destination subnet, then basic connectivity and routing within the infrastructure is working. This outcome points to an issue that affects the specific destination node.
 

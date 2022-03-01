@@ -38,29 +38,29 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 
 This issue can be caused by one of the following causes:
 
-#### Cause: DNS scavenging is misconfigured
+#### DNS scavenging is misconfigured
 
 If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers will register their records every 24 hours. Check whether the NoRefresh and Refresh intervals are too low. For example, if these values are both "less than 24 hours," you'll lose DNS records.
 
 To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
 
-#### Cause: Host "A" record is deleted when the IP address is changed
+#### Host "A" record is deleted when the IP address is changed
 
 Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends an SOA update to delete its "A" record from the old DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
 The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced up, registration won't occur. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory.
 
-#### Cause: DHCP clients that have Option 81 configured unregister host "A" records during host "AAAA" registration
+#### DHCP clients that have Option 81 configured unregister host "A" records during host "AAAA" registration
 
 This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are present. The DNS Dynamic Update Protocol update incorrectly sets TTL to **0**. This triggers record deletion for IPv6 record registration.
 
-#### Cause: The DNS Dynamic Update Protocol update to existing records fails
+#### The DNS Dynamic Update Protocol update to existing records fails
 
 The DNS Dynamic Update Protocol update to existing records fails and causes these records to be deleted by the scavenging process as aged records.
 
 NETLOGON "event 577X" events are logged for record registration failures of SRV records by the NETLOGON service. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. Such events may be logged by a client that registers these records. Or they may be logged by the DHCP servers that register the records on the client's behalf.
 
-#### Cause: Converting an active dynamic lease to a reservation deletes the "A" and PTR records for that client
+#### Converting an active dynamic lease to a reservation deletes the "A" and PTR records for that client
 
 This behavior is by design. The DNS records ("A" or PTR) are automatically updated during the next DHCP renewal request from the client.
 
