@@ -74,6 +74,8 @@
     items:
     - name: Microsoft Store app package updates are available
       href: ./application-management/windows-81-microsoft-store-app-package-updates.md
+    - name: Modern apps or application packages are reported as vulnerable
+      href: ./application-management/modern-apps-application-packages-reported-vulnerable.md
   - name: MSI
     items:
     - name: 0x80070BC9 error when installing MSI package

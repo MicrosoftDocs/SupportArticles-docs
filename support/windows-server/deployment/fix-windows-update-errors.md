@@ -70,15 +70,15 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
       - To install the tool later, select **Save**, and then download the installation file to your computer. When you're ready to install the tool, double-select the file.
    2. In the Windows Update Standalone Installer dialog box, select **Yes**.
 
-      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.png" alt-text="Select Yes to install hotfix for Windows KB947821 in the Windows Update Standalone Installer dialog box." border="false":::
+      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.svg" alt-text="Select Yes to install hotfix for Windows KB947821 in the Windows Update Standalone Installer dialog box." border="false":::
 
 3. When the tool is being installed, it automatically runs. Although it typically takes less than 15 minutes to run, it might take much longer on some computers. Even if the progress bar seems to stop, the scan is still running, so don't select **Cancel**.
 
-    :::image type="content" source="media/fix-windows-update-errors/updates-are-being-installed-progress-window.png" alt-text="Download and Install updates window that shows the updates are being installed progress." border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/updates-are-being-installed-progress-window.svg" alt-text="Download and Install updates window that shows the updates are being installed progress." border="false":::
 
 4. When you see Installation complete, select **Close**.
 
-    :::image type="content" source="media/fix-windows-update-errors/installation-complete.png" alt-text="Download and install Updates window shows the installation complete." border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/installation-complete.svg" alt-text="Download and install Updates window shows the installation complete." border="false":::
 
 5. Reinstall the update or service pack you were trying to install previously.
 
@@ -93,11 +93,11 @@ For example, you may have problems when you try to install updates from Windows 
 1. Open [Microsoft Update Catalog page for KB3006137](https://www.catalog.update.microsoft.com/Search.aspx?q=3006137).
 2. Find the update that applies to your operating system appropriately in the search results, and then select the **Download** button.
 
-   :::image type="content" source="./media/fix-windows-update-errors/select-download-button.jpg" alt-text="Microsoft Update Catalog select the Download button.":::
+   :::image type="content" source="./media/fix-windows-update-errors/select-download-button.svg" alt-text="Microsoft Update Catalog select the Download button.":::
 
 3. Select the link of the file to download the update.
 
-   :::image type="content" source="./media/fix-windows-update-errors/download-update-link.jpg" alt-text="Microsoft Update Catalog select file download link.":::
+   :::image type="content" source="./media/fix-windows-update-errors/download-update-link.svg" alt-text="Microsoft Update Catalog select file download link.":::
 
 4. Select **Close** after the download process is done. Then, you can find a folder that contains the update package in the location that you specified.
 5. Open the folder, and then double-select the update package to install the update.
