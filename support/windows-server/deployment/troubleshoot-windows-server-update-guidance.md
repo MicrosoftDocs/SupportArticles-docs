@@ -40,7 +40,7 @@ Install the latest servicing stack update. See [Latest Servicing Stack Updates](
 1. Download the troubleshooter, and select **Open** or **Save** in the pop-up window. (If you choose **Save**, you'll need to open the troubleshooter from the save location.)
 2. Select **Next** to start the troubleshooter, and follow the steps to identify and fix any issues.
 3. After the troubleshooter finishes, try running Windows Update again. From the **Start** button, select **Settings** > **Update & security** > **Windows Update** > **Check for updates**, and  install any available updates.
-4. If applicable, [Reset windows update components](http://support.microsoft.com/kb/971058).
+4. If applicable, [Reset windows update components](https://support.microsoft.com/kb/971058).
 
 ### Step 5: Use DISM or System Update Readiness tool to troubleshoot Windows Update issue
 
