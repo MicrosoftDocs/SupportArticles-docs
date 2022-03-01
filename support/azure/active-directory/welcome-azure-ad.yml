@@ -51,6 +51,8 @@ landingContent:
         links:
           - text: General troubleshooting steps
             url: ./password-writeback-general-troubleshooting-steps.md
+          - text: Access rights and permissions
+            url: ./password-writeback-access-rights-permissions.md
           - text: Error code 8023062C - insecure password reset or change
             url: ./password-writeback-error-code-8023062c.md
           - text: Error code SSPR_009 - synced Azure AD admin can't do cloud reset

@@ -79,7 +79,7 @@ These troubleshooting articles for specific password writeback issues contain ma
 
 ## Identify the exact account name for the AD DS Connector
 
-Recheck the name of the current account for the Active Directory Domain Connector. Make sure that this account has the same name as the account that the Azure AD Connect server uses. To find this account name, see [Identify the AD DS Connector account](welcome-azure-ad.yml).
+Recheck the name of the current account for the Active Directory Domain Connector. Make sure that this account has the same name as the account that the Azure AD Connect server uses. To find this account name, see [Identify the AD DS Connector account](password-writeback-access-rights-permissions.md#identify-the-ad-ds-connector-account).
 
 ## Learn which writeback operations are supported or unsupported
 
