@@ -83,7 +83,8 @@ Registry values:
 - LicenseServers  
 - LicensingMode
 
-**Note**: This configuration will apply before the one that's mentioned in "Using GUI". This means that the "Using GUI" configuration will have no effect when a local policy is configured because the registry values will not be taken into account. In this situation, you can't use RDSM to configure the license servers and licensing mode.
+> [!Note]
+> This configuration will apply before the one that's mentioned in "Using GUI". This means that the "Using GUI" configuration will have no effect when a local policy is configured because the registry values will not be taken into account. In this situation, you can't use RDSM to configure the license servers and licensing mode.
 
 #### Using GPO
 
@@ -129,23 +130,21 @@ To do this, start the Remote Desktop Licensing Manager console on the licensing 
 
 ## Common errors and solutions
 
-### Issue 1
+### WVD are getting logged out after 60 minutes with error error 0x80070057
 
 Windows Virtual Desktop (WVD) users are getting logged out after 60 minutes because of an invalid license and licensing error 0x80070057.
 
-Troubleshooting: Redeploy the host pools so that the grace period gets reset. This is the only supported workaround.
+To troubleshoot this issue, redeploy the host pools so that the grace period gets reset. This is the only supported workaround.
 
-### Issue 2
+### RDLS stops responding on Windows Server 2016 when Windows Server 2019 CALs are requested
 
 Remote Desktop Licensing service (RDLS) stops responding on Windows Server 2016 when Windows Server 2019 CALs are requested.
 
-Troubleshooting: Configuring a Windows Server 2019 version RDSH to use a Windows Server 2016 version RDLS is not supported. A Windows Server 2016 version RDLS cannot issue or handle Windows Server 2019 RDS CALs. This problem was fixed in RDLS 2012 R2. It does not occur in RDLS 2019.
+Configuring a Windows Server 2019 version RDSH to use a Windows Server 2016 version RDLS is not supported. A Windows Server 2016 version RDLS cannot issue or handle Windows Server 2019 RDS CALs. This problem was fixed in RDLS 2012 R2. It does not occur in RDLS 2019.
 
-### Issue 3
+### Report date is displayed as "Unknown" in Remote Desktop Licensing Manager
 
-The report date is displayed as "Unknown" in Remote Desktop Licensing Manager.
-
-Troubleshooting: This issue is fixed in update [KB 4457127](https://support.microsoft.com/topic/september-20-2018-kb4457127-os-build-14393-2515-87a49477-8434-8014-623a-17f003a383c0).
+This issue is fixed in update [KB 4457127](https://support.microsoft.com/topic/september-20-2018-kb4457127-os-build-14393-2515-87a49477-8434-8014-623a-17f003a383c0).
 
 ## Reference
 

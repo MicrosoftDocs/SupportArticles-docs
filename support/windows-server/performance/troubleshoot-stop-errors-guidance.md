@@ -39,7 +39,7 @@ There's no simple explanation for the cause of Stop errors (also known as blue s
 Stop error code:  
 > 0x0000001E
 
-Troubleshooting: If a driver is identified in the Stop error message, disable or remove that driver. Disable or remove any drivers or services that were recently added. If the error occurs during the startup sequence, and the system partition is formatted by using the NTFS file system, you might be able to use Safe mode to disable the driver in Device Manager. To do this, follow these steps:
+If a driver is identified in the Stop error message, disable or remove that driver. Disable or remove any drivers or services that were recently added. If the error occurs during the startup sequence, and the system partition is formatted by using the NTFS file system, you might be able to use Safe mode to disable the driver in Device Manager. To do this, follow these steps:
 
 1. Go to **Settings** > **Update & security** > **Recovery**. Under **Advanced startup**, select **Restart now**.
 2. After your PC restarts to the **Choose an option** screen, select **Troubleshoot** > **Advanced options** > **Startup Settings** > **Restart**.
@@ -50,14 +50,14 @@ Troubleshooting: If a driver is identified in the Stop error message, disable or
 Stop error code:  
 > 0x0000001A
 
-Troubleshooting: Running the Windows Memory Diagnostic tool could also be useful to exclude any kind of problem that affects the physical memory modules. See [Bug Check 0x1A: MEMORY_MANAGEMENT](/windows-hardware/drivers/debugger/bug-check-0x1a--memory-management).
+When you troubleshoot this issue, running the Windows Memory Diagnostic tool could be useful to exclude any kind of problem that affects the physical memory modules. See [Bug Check 0x1A: MEMORY_MANAGEMENT](/windows-hardware/drivers/debugger/bug-check-0x1a--memory-management).
 
 ## Bug check code: SYSTEM_SERVICE_EXCEPTION
 
 Stop error code:  
 > 0x0000003B
 
-Troubleshooting: Indicates that the executing code had an exception, and the thread that was below it is a system thread. Follow these steps:
+This error code indicates that the executing code had an exception, and the thread that was below it is a system thread. Follow these steps:
 
 1. If new device drivers or system services have been added recently, try removing or updating them. 
 2. Look in Device Manager to see whether any devices are marked with an exclamation point (!) to indicate a problem. Review the events log that's displayed in the properties for any faulting device driver. Try to update the related driver.
@@ -69,7 +69,7 @@ Troubleshooting: Indicates that the executing code had an exception, and the thr
 Stop error code:  
 > 0x000000D1
 
-Troubleshooting: A driver has tried to access an address that's pageable (or that's completely invalid) while the interrupt request level (IRQL) was too high. This can be caused by the following actions:
+This error code indicates that a driver has tried to access an address that's pageable (or that's completely invalid) while the interrupt request level (IRQL) was too high. This can be caused by the following actions:
 
 - Dereferencing a bad pointer (such as a NULL or freed pointer) while executing at or above DISPATCH_LEVEL.
 - Accessing pageable data at or above DISPATCH_LEVEL.
@@ -78,14 +78,14 @@ Troubleshooting: A driver has tried to access an address that's pageable (or tha
 > [!NOTE]
 > If a driver that's responsible for the error can be identified, its name is displayed on screen.
 
-Check the System log in Event Viewer for additional error messages that might help identify the device or driver that's causing this Stop error. If a driver is identified in the error message, disable the driver or check with the manufacturer for driver updates. Verify that any new hardware that's installed is compatible with the installed version of Windows.
+To troubleshoot this issue, check the System log in Event Viewer for additional error messages that might help identify the device or driver that's causing this Stop error. If a driver is identified in the error message, disable the driver or check with the manufacturer for driver updates. Verify that any new hardware that's installed is compatible with the installed version of Windows.
 
 ## Bug check code: DRIVER_POWER_STATE_FAILURE
 
 Stop error code:  
 > 0x0000009F
 
-Troubleshooting: Indicates that the driver is in an inconsistent or invalid power state. Follow these steps:
+This error code indicates that the driver is in an inconsistent or invalid power state. Follow these steps:
 
 1. If new device drivers or system services have been added recently, try removing or updating them. Try to determine what changed in the system that caused the new error code to appear.
 2. Look in Device Manager to see if any devices are marked with the exclamation point (!). Review the event log that's displayed in the driver properties window for any faulting driver. Try updating the related driver.
@@ -102,8 +102,7 @@ For advanced debugging, see [Bug Check 0x9F](/windows-hardware/drivers/debugger/
 Stop error code:  
 > 0x0000007E
 
-Troubleshooting:  
-Indicates that a system thread generated an exception that the error handler didn't catch. To interpret it, you must identify which exception was generated. Follow these steps:
+This error code indicates that a system thread generated an exception that the error handler didn't catch. To interpret it, you must identify which exception was generated. Follow these steps:
 
 1. Check the system log in Event Viewer for additional error messages that might help identify the device or driver that's causing Stop error 0x7E.
 2. If a driver is identified in the error message, disable the driver or check with the manufacturer for driver updates.
@@ -116,8 +115,7 @@ Indicates that a system thread generated an exception that the error handler did
 Stop error code:  
 > 0x0000007B
 
-Troubleshooting:  
-See [Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device](/windows/client-management/troubleshoot-inaccessible-boot-device).
+To troubleshoot this issue, see [Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device](/windows/client-management/troubleshoot-inaccessible-boot-device).
 
 ## Reference
 

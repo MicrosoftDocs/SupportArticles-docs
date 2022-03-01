@@ -19,12 +19,9 @@ This topic is intended to get you started on troubleshooting scenarios for Micro
 
 ## Event ID: 401
 
-Event symbol: ConfiguratorUnexpectedError
-
-Message:  
-> Unexpected Configurator error.
-
-Troubleshooting:
+- Event symbol: ConfiguratorUnexpectedError
+- Message:  
+  > Unexpected Configurator error.
 
 This event indicates that a terminating error occurred during an MBAM Configurator task. The message will contain more details about the error. Inspect other entries in the event log to further diagnose MBAM setup. Known errors include the following:
 
@@ -34,12 +31,9 @@ This event indicates that a terminating error occurred during an MBAM Configurat
 
 ## Event ID: 500
 
-Event symbol: WebProviderUnexpectedError
-
-Message:  
-> Web application provider unexpected error.
-
-Troubleshooting:
+- Event symbol: WebProviderUnexpectedError
+- Message:  
+  > Web application provider unexpected error.
 
 This event indicates that an error occurred while you enabled and configured an MBAM website or web service in IIS. Known errors include the following:
 
@@ -52,12 +46,9 @@ This event is also logged if MBAM cannot access Active Directory to validate use
 
 ## Event ID: 501
 
-Event symbol: WebProviderError
-
-Message:  
-> Web application provider unexpected error.
-
-Troubleshooting:
+- Event symbol: WebProviderError
+- Message:  
+  > Web application provider unexpected error.
 
 This event indicates that an error occurred while you enabled, disabled, or configured an MBAM website or web service in IIS. Known errors include the following:
 
@@ -71,12 +62,9 @@ Verify that IIS is installed and correctly configured. Verify that the `HKEY_LOC
 
 ## Event ID: 600
 
-Event symbol: SetupUnexpectedError
-
-Message:  
-> Unexpected setup error.
-
-Troubleshooting:
+- Event symbol: SetupUnexpectedError
+- Message:  
+  > Unexpected setup error.
 
 This event indicates that a terminating error occurred while you enabled, disabled, or configured an MBAM feature. Known errors include the following:
 
@@ -90,12 +78,9 @@ The event entry will contain more information about the specific error. Verify t
 
 ## Event ID: 601
 
-Event symbol: SetupError
-
-Message:  
-> Setup error.
-
-Troubleshooting:
+- Event symbol: SetupError
+- Message:  
+  > Setup error.
 
 This event entry indicates that a terminating error occurred while you enabled, disabled, or configured an MBAM feature. Known errors include the following:
 
@@ -109,12 +94,9 @@ The event entry will contain more information about the specific error. Verify t
 
 ## Event ID: 607
 
-Event symbol: SetupParameterValidationFailureWithError
-
-Message:  
-> Error encountered while trying to validate specified parameter that is needed to enable the server feature.
-
-Troubleshooting:
+- Event symbol: SetupParameterValidationFailureWithError
+- Message:  
+  > Error encountered while trying to validate specified parameter that is needed to enable the server feature.
 
 This event indicates that an error was encountered while you tried to validate a specified parameter that is required to enable the server feature.
 
@@ -122,27 +104,20 @@ This event indicates that an error was encountered while you tried to validate a
 
 ## Event ID: 104
 
-Event symbol: StatusServiceComplianceDbConfigError
-
-Message:  
-> The Compliance database connection string in the registry is empty.
-
-Troubleshooting:
+- Event symbol: StatusServiceComplianceDbConfigError
+- Message:  
+  > The Compliance database connection string in the registry is empty.
 
 This event is logged whenever the compliance db connection string is invalid. Verify the value in the  `HKEY_LOCAL_MACHINE\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` registry subkey.
 
 ## Event ID: 106
 
-Event symbol: HelpdeskError
+- Event symbol: HelpdeskError
+- You receive one of the following error messages:
 
-Message:  
-> You receive one of the following error messages:
-
-- The request to URL \{url\} caused an internal error.
-- An error occurred while obtaining execution context information. Unable to verify Service Principal Name (SPN) registration.
-- An error occurred while verifying Service Principal Name (SPN) registration.
-
-Troubleshooting:
+  - > The request to URL \{url\} caused an internal error.
+  - > An error occurred while obtaining execution context information. Unable to verify Service Principal Name (SPN) registration.
+  - > An error occurred while verifying Service Principal Name (SPN) registration.
 
 Use the following information to troubleshoot this issue:
 
@@ -152,16 +127,12 @@ Use the following information to troubleshoot this issue:
 
 ## Event ID: 107
 
-Event symbol: SelfServicePortalError
+- Event symbol: SelfServicePortalError
+- You receive one of the following error messages:
 
-Message:  
-> You receive one of the following error messages:
-
-- An error occurred while getting recovery key for a user. EventDetails:\{ExceptionMessage\}
-- An error occurred while obtaining execution context information. Unable to verify Service Principal Name (SPN) registration. EventDetails: User: \{username Identity\} Application:\{SiteName\\ApplicationVirtualPath\}
-- An error occurred while verifying Service Principal Name (SPN) registration. EventDetails:\{ExceptionMessage\}
-
-Troubleshooting:
+  - > An error occurred while getting recovery key for a user. EventDetails:\{ExceptionMessage\}
+  - > An error occurred while obtaining execution context information. Unable to verify Service Principal Name (SPN) registration. EventDetails: User: \{username Identity\} Application:\{SiteName\\ApplicationVirtualPath\}
+  - > An error occurred while verifying Service Principal Name (SPN) registration. EventDetails:\{ExceptionMessage\}
 
 Use the following information to troubleshoot this issue:
 
@@ -171,15 +142,11 @@ Use the following information to troubleshoot this issue:
 
 ## Event ID: 108
 
-Event symbol: DomainControllerError
+- Event symbol: DomainControllerError
+- You receive one of the following error messages:
 
-Message:  
-> You receive one of the following error messages:
-
-- An error occurred while resolving domain name \{DomainName\}, A memory allocation failure occurred.
-- Could not invoke DsGetDcName method. EventDetails:\{ExceptionMessage\}
-
-Troubleshooting:
+  - > An error occurred while resolving domain name \{DomainName\}, A memory allocation failure occurred.
+  - > Could not invoke DsGetDcName method. EventDetails:\{ExceptionMessage\}
 
 Use the following information to troubleshoot this issue:
 
@@ -188,12 +155,9 @@ Use the following information to troubleshoot this issue:
 
 ## Event ID: 4
 
-Event symbol: PerformanceCounterError
-
-Message:  
-> An error occurred while retrieving a performance counter.
-
-Troubleshooting:
+- Event symbol: PerformanceCounterError
+- Message:  
+  > An error occurred while retrieving a performance counter.
 
 The message contained in the event entry will provide more details about the exception that was thrown. If a System.UnauthorizedAccessException was thrown, verify that the MBAM execution account (app pool) has access to performance counter APIs.
 

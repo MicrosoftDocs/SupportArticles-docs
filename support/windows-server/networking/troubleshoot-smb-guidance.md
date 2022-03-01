@@ -63,42 +63,43 @@ We recommend that you update the following components before you troubleshoot SM
 
 ## Common issues and solutions
 
-### Issue: When you access a Scale-Out File Server, performance is limited
+### When you access a Scale-Out File Server, performance is limited
 
-Cause: The client access network uses high speed RDMA, but the cluster network does not. This causes redirection to occur only over the cluster network (which is usually a 1 GbE network adapter).
+The client access network uses high speed RDMA, but the cluster network does not. This causes redirection to occur only over the cluster network (which is usually a 1 GbE network adapter).
 
-Troubleshooting: You can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2. That system automatically redirects clients to the cluster node that has the best access to the volume that's used by the file share. For more information, see the following blog article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](https://blogs.technet.com/b/josebda/archive/2013/10/30/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2.aspx).
+To troubleshoot this issue, you can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2. That system automatically redirects clients to the cluster node that has the best access to the volume that's used by the file share. For more information, see the following blog article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](https://blogs.technet.com/b/josebda/archive/2013/10/30/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2.aspx).
 
-### Issue: SMB prefers to use the slower physical network adapter over the virtual network adapter
+### SMB prefers to use the slower physical network adapter over the virtual network adapter
 
-Cause: The virtual network adapter on the host is not RSS-capable. The physical network adapter is RSS-capable. SMB always uses the RSS-capable network adapter over the non-RSS network adapter even when the RSS network adapter is slower.
+The virtual network adapter on the host is not RSS-capable. The physical network adapter is RSS-capable. SMB always uses the RSS-capable network adapter over the non-RSS network adapter even when the RSS network adapter is slower.
 
-Troubleshooting: You should disable the RSS capability on the physical network adapter, or use SMB Multichannel constraints to restrict SMB communication to one or more defined network interfaces. For more information, see the [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint) SMB Share cmdlet in Windows PowerShell.
+To troubleshoot this issue, you should disable the RSS capability on the physical network adapter, or use SMB Multichannel constraints to restrict SMB communication to one or more defined network interfaces. For more information, see the [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint) SMB Share cmdlet in Windows PowerShell.
 
-### Issue: SMB reports that the network adapter is not RDMA-capable, even though I'm using an RDMA-capable network adapter
+### SMB reports that the network adapter is not RDMA-capable, even though I'm using an RDMA-capable network adapter
 
-Cause: RDMA-capable network adapters that have older drivers or firmware may not correctly identify themselves as being RDMA-capable.
+This issue occurs because RDMA-capable network adapters that have older drivers or firmware may not correctly identify themselves as being RDMA-capable.
 
-Troubleshooting: Update the network adapter firmware and driver from the manufacturer’s website.
+To troubleshoot this issue, update the network adapter firmware and driver from the manufacturer’s website.
 
-### Issue: What is the required amount of network traffic before SMB Multichannel starts?
+### The required amount of network traffic before SMB Multichannel starts
 
-Cause: SMB Multichannel is used to discover the RSS and RDMA capabilities of network adapters. On server operating systems, SMB Multichannel starts when the initial read/write operation occurs. On client operating systems, SMB Multichannel does not start until a certain amount of network traffic occurs.
+SMB Multichannel is used to discover the RSS and RDMA capabilities of network adapters. On server operating systems, SMB Multichannel starts when the initial read or write operation occurs. On client operating systems, SMB Multichannel does not start until a certain amount of network traffic occurs.
 
-Troubleshooting: On server operating systems, SMB Multichannel starts quickly only one time per session. On client operating systems, you can configure a registry entry to start SMB Multichannel more quickly. For more information, see the following blog article: [How much traffic needs to pass between the SMB Client and Server before Multichannel actually starts?](https://blogs.technet.com/b/josebda/archive/2013/01/18/how-much-traffic-needs-to-pass-between-the-smb-client-and-server-before-multichannel-actually-starts.aspx).
+On server operating systems, SMB Multichannel starts quickly only one time per session. On client operating systems, you can configure a registry entry to start SMB Multichannel more quickly. For more information, see the following blog article: [How much traffic needs to pass between the SMB Client and Server before Multichannel actually starts?](https://blogs.technet.com/b/josebda/archive/2013/01/18/how-much-traffic-needs-to-pass-between-the-smb-client-and-server-before-multichannel-actually-starts.aspx).
 
-### Issue: SMB Multichannel does not aggregate multiple 10 GbE network adapters
+### SMB Multichannel does not aggregate multiple 10 GbE network adapters
 
-Cause: An RSS-capable 10 GbE network adapter is sometimes identified as non-RSS-capable. When this occurs, SMB uses only one TCP connection. When using both RSS-capable and non-RSS network adapters, SMB Multichannel should use only the RSS-capable network adapters.
+An RSS-capable 10 GbE network adapter is sometimes identified as non-RSS-capable. When this occurs, SMB uses only one TCP connection. When using both RSS-capable and non-RSS network adapters, SMB Multichannel should use only the RSS-capable network adapters.
 
-Troubleshooting: Server-class network adapters should appear as RSS-capable. If they don’t, you should update the network adapter driver from the manufacturer’s website, and then recheck the RSS settings.  
-  You may have to disable RSS on both network adapters to aggregate throughput. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](https://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx).
+Server-class network adapters should appear as RSS-capable. If they don't, you should update the network adapter driver from the manufacturer’s website, and then recheck the RSS settings.  
 
-### Issue: The virtual network adapter on the host does not perform well
+You may have to disable RSS on both network adapters to aggregate throughput. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](https://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx).
 
-Cause: The virtual network adapter on the host is not RSS-capable. Without an RSS-capable network adapter, SMB uses only one TCP connection. This occurs when using 10 GbE network adapters, RSS-capable network adapters, and NIC Teaming.
+### The virtual network adapter on the host does not perform well
 
-Troubleshooting: Use multiple virtual network adapters to make sure that you have multiple TCP connections. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](https://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx).
+The virtual network adapter on the host is not RSS-capable. Without an RSS-capable network adapter, SMB uses only one TCP connection. This occurs when using 10 GbE network adapters, RSS-capable network adapters, and NIC Teaming.
+
+To troubleshoot this issue, use multiple virtual network adapters to make sure that you have multiple TCP connections. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](https://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx).
 
 ## SMB known issues
 

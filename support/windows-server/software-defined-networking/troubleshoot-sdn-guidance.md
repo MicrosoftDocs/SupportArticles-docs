@@ -98,9 +98,7 @@ Error message:
 
 > MUX is Unhealthy (Common case is BGPRouter disconnected)
 
-Troubleshooting:
-
-Credible Border Gateway Protocol (CBGP) peer on the Routing and Remote Access Service (RRAS) (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource and BGP peer (ToR or RRAS VM).
+This error occurs because Credible Border Gateway Protocol (CBGP) peer on the Routing and Remote Access Service (RRAS) (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource and BGP peer (ToR or RRAS VM).
 
 ### Error code: CertificateNotTrusted and CertificateNotAuthorized
 
@@ -108,9 +106,7 @@ Error message:
 
 > Failed to connect to Mux due to network or cert errors
 
-Troubleshooting:
-
-Check the numeric code that's provided in the error message code. This corresponds to the winsock error code. Certificate errors are granular (for example, the certificate cannot be verified, or the certificate is not authorized).
+To troubleshoot this issue, check the numeric code that's provided in the error message code. This corresponds to the winsock error code. Certificate errors are granular. For example, the certificate cannot be verified, or the certificate is not authorized.
 
 ### Error code: HostNotConnectedToController
 
@@ -118,10 +114,10 @@ Error message:
 
 > SLB host agent is not connected
 
-Troubleshooting:
+To troubleshoot this issue, follow these step:
 
-  1. Verify that the software load balancers (SLB) Host Agent service is running.
-  2. Refer to the SLB host agent logs (auto running) for the causes. If the Software Load Balancer Manager (SLBM) (NC) rejected the certificate that was presented by the host agent, the running state can show nuanced information.
+1. Verify that the software load balancers (SLB) Host Agent service is running.
+2. Refer to the SLB host agent logs (auto running) for the causes. If the Software Load Balancer Manager (SLBM) (NC) rejected the certificate that was presented by the host agent, the running state can show nuanced information.
 
 ### Error code: DistributedRouterConfigurationFailure
 
@@ -129,9 +125,7 @@ Error message:
 
 > Failed to configure the Distributed router settings on the host vNic
 
-Troubleshooting:
-
-TCPIP stack error. This might require cleaning up the Peer Authentication (PA) and Destination Rule (DR) Host Virtual Network Interface Cards (VNICs) on the server on which this error was reported.
+This error is a TCP/IP stack error. This might require cleaning up the Peer Authentication (PA) and Destination Rule (DR) Host Virtual Network Interface Cards (VNICs) on the server on which this error was reported.
 
 ### Error code: PolicyConfigurationFailure
 
@@ -141,9 +135,7 @@ Error message:
 - > Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors
 - > Failed to push virtual network (VNet) policies for a VmNic due to certificate errors or connectivity errors
 
-Troubleshooting:
-
-Check whether the appropriate certificates were deployed (the certificate subject name must match the FQDN of the host). Also, verify the host connectivity with the network controller.
+To troubleshoot this issue, check whether the appropriate certificates were deployed. The certificate subject name must match the FQDN of the host. Also, verify the host connectivity with the network controller.
 
 ## Reference
 
