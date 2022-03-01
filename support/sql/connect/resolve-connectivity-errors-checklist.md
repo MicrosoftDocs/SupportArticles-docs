@@ -30,11 +30,8 @@ If you have administrator access to the SQL Server computer, gather and review c
 
  1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
 
-    
 > [!NOTE]
-    > If you are troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run the SQLCheck tool on all systems involved.
-
-
+  > If you are troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run the SQLCheck tool on all systems involved.
 
 ## Quick checklist for troubleshooting connectivity issues
 
