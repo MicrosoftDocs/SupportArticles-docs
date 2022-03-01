@@ -19,18 +19,18 @@ In Windows Server 2022, when a Standard user uses the function `InstallLayoutOrT
 
 ## Cause
 
-The issue occurs because the Chinese IME dictionaries are included in [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) (FODs) package instead of Windows image files.
+The issue occurs because the Chinese IME dictionaries are included in [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) (FODs) instead of Windows image files.
 
 > [!NOTE]
-> Adding the FODs package requires administrator permission.
+> Adding the FODs requires administrator permission.
 
 ## Workarounds
 
 To work around the issue, follow these steps:
 
-1. Pre-install the FODs package in the Windows image.
+1. Pre-install the FODs in the Windows image.
 
-1. Use the [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command to add the package with administrator privilege.
+1. Use the [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command to add FODs with administrator privilege.
 
     |Command|Description|Example|
     |-|-|-|
