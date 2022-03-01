@@ -135,5 +135,5 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
     > [!NOTE]
     > If you delete the **RestrictRemoteSam** registry entry without removing the Domain GPO setting, this registry entry will be re-created on the next Group Policy refresh cycle, and the `SSPR_0029` error will reoccur.
 
-[access-rights-permissions]: welcome-azure-ad.yml
-[identify-ad-ds-connector]: welcome-azure-ad.yml
+[access-rights-permissions]: password-writeback-access-rights-permissions.md
+[identify-ad-ds-connector]: password-writeback-access-rights-permissions.md#identify-the-ad-ds-connector-account
