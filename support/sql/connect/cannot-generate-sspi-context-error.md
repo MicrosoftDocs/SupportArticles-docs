@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; SQL Server
 _Original KB number:_ 811889
 
 > [!NOTE]
-> Before troubleshooting, please check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 When you use Windows authentication to connect an SQL Server instance remotely, you receive the following error message:
 
