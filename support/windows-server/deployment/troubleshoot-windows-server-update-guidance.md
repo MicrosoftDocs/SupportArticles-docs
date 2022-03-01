@@ -46,36 +46,41 @@ Install the latest servicing stack update. See [Latest Servicing Stack Updates](
 
 See [Fix Windows Update errors by using the DISM or System Update Readiness tool](fix-windows-update-errors.md) for more information.
 
-## Issue: Error message "The update is not applicable to your computer"
+## Common Issues and Solutions
 
-### Cause 1: Update is superseded
+### You receive "Update not applicable" error message
+
+Error message  
+> The update is not applicable to your computer.
+
+#### Cause 1: Update is superseded
 
 To troubleshoot this issue, check that the package that you are installing contains newer versions of the binaries. Alternatively, check that the package is superseded by another new package.
 
-### Cause 2: Update is already installed
+#### Cause 2: Update is already installed
 
 To troubleshoot this issue, verify that the package that you are trying to install isn't already installed.
 
-### Cause 3: Wrong update for architecture
+#### Cause 3: Wrong update for architecture
 
 To troubleshoot this issue, verify that the package that you're trying to install matches the Windows version that you are using. The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates cannot be installed on Windows Server 2012 R2-based computers.  
 Verify that the package you want to install matches the processor architecture of the Windows version that you are using. For example, an x86-based update can't be installed on x64-based installations of Windows.
 
-### Cause 4: Missing prerequisite update
+#### Cause 4: Missing prerequisite update
 
 To troubleshoot this issue, read the package’s related article to find out whether the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424).  
 To determine if these prerequisite updates are installed, run this PowerShell command:  
 `get-hotfix KB3173424, KB2919355, KB2919442`  
 If the updates are installed, the command returns the installed date in the InstalledOn section of the output.
 
-## Issue: Updates aren't downloading from Windows Server Update Services (WSUS) or Configuration Manager
+### Updates aren't downloading from Windows Server Update Services (WSUS) or Configuration Manager
 
 Error message:  
 > Failed to connect to Mux due to network or cert errors  
 
 To troubleshoot this issue, check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.)
 
-## Issue: The device isn't receiving an update that you deployed
+### The device isn't receiving an update that you deployed
 
 To troubleshoot this issue, follow these steps:
 
@@ -91,7 +96,7 @@ To troubleshoot this issue, follow these steps:
    Get-WmiObject -Class Win32\_Product \| Where-Object {$\_.Name -amatch "Microsoft Update Health Tools"}
    ```
 
-## Issue: The device is receiving an update that you didn't deploy
+### The device is receiving an update that you didn't deploy
 
 To troubleshoot this issue, follow these steps:
 
@@ -131,7 +136,7 @@ To troubleshoot connection failures, follow these steps:
 Error message:  
 > SyncUpdates_WithRecovery failed
 
-Troubleshooting: To fix the issue, follow these steps on the WSUS server:
+To fix the issue, follow these steps on the WSUS server:
 
 1. Open an elevated Command Prompt window and go to the following location:  
    *%programfiles%\\Update Services\\WebServices\\ClientWebService*
