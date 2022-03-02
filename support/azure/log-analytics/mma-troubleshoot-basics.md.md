@@ -21,7 +21,7 @@ This article is a basic guide for troubleshooting Microsoft Monitoring Agent (MM
 
 - Your Workspace ID must be configured for the Monitoring Agent when you connect to the Log Analytics workspace.
 
-- You must have a Monitoring Agent certificate that has the correct hostname of your server. The certificate is generated automatically when you install the Monitoring Agent. The certificate is located in **Computer Certificate\Microsoft Monitoring Agent\Certificates**.
+- You must have a Monitoring Agent certificate that has the correct hostname of your server. The certificate is generated automatically when you install the Monitoring Agent. The certificate is located in **Computer Certificate\Microsoft Monitoring Agent\Certificates** (certlm.msc).
 
 - If a proxy is used, the proxy settings of the Monitoring Agent must be made through either the Log Analytics gateway or your proxy server.
 
@@ -43,7 +43,7 @@ You can also query the version by running the following PowerShell cmdlet:
 
 **Azure portal**
 
-1. In the Log Analytics that the Monitoring Agent is connected to, select **Logs**.
+1. In the Log Analytics workspace that the Monitoring Agent is connected to, select **Logs**.
 
 1. Run the following query:
 
@@ -51,7 +51,7 @@ You can also query the version by running the following PowerShell cmdlet:
 Heartbeat | summarize arg_max(TimeGenerated, *) by Computer`
 ```
 
-Expand the query results, and then examine the version column.
+Expand the query results, and then examine the **Version** column.
 
 ## Collect ETL trace for troubleshooting
 
