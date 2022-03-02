@@ -93,9 +93,9 @@ These steps create a repair task. In the next step, you'll use the `initrd` scri
    > - ‘fstab’
    > - ‘fstab,initrd’
 
-## Limitations
+## Limitation
 
-- Classic VMs aren't supported.
+Classic VMs aren't supported.
 
 ## Next steps
 
