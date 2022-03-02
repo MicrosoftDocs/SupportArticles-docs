@@ -25,7 +25,7 @@ This section provides information about CU and SP installations.
   - Before you install a CU, make sure that your SQL Server instance is at the right SP level for that CU. For example, you can't apply CU17 for SQL 2016 SP2 before you apply SP2 for the SQL Server 2016 instance.
   - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL Server 2016 SP2 instance, you can skip applying to CU14, CU15, and CU16 and go to CU17 directly.
 - For Microsoft SQL Server 2017 and later versions, you can always apply the latest CU available (no service packs exist in SQL Server 2017 and later).
-- Before you apply a CU or SP, make sure that the instance being updated is meets the following requirement: the SQL Server program files and data files can't be installed on:
+- Before you apply a CU or SP, make sure that the instance being updated meets the following requirement. The SQL Server program files and data files can't be installed on:
     - A removable disk drive
     - A file system that uses compression
     - A directory in which system files are located
@@ -40,7 +40,7 @@ Isolate the error by following these steps:
    1. In the **Failure** screen of the setup process, select **Details**.
    1. In the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder, check *Summary.txt* and other default setup log files. For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true).
 
-In the following sections, check for a scenario that corresponds to your situation, and then follow the associated troubleshooting steps.
+In the next few sections, check for a scenario that corresponds to your situation, and then follow the associated troubleshooting steps.
 If there's no matching scenario, look for more pointers in the log files.
 
 ## "Wait on Database Engine recovery handle failed" and "912" and "3417" errors
@@ -62,25 +62,25 @@ The following errors are some of the common causes of upgrade script failures an
   - **Misconfigured System user/role in msdb database**
 
     This section provides steps to resolve a misconfigured system user or role in the **msdb** database:
-    - **TargetServersRole Schema/Security role**: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the dbo, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, Setup may fail and return Error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag 902:
+    - **TargetServersRole Schema/Security role**: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the dbo, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, setup may fail and return error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag 902:
           
       1. Back up your **msdb** database.
       1. Make a list of users (if any) who are currently part of this role.
       1. Drop the *TargetServersRole* role by using the following statement:
          ```EXECUTE msdb.dbo.sp_droprole @rolename = N'TargetServersRole'```
-      1. Restart the SQL Server instance without using trace flag 902 to check whether the issue is resolved.
+      1. Restart the SQL Server instance without using trace flag `902` to check whether the issue is resolved.
       1. Restore the users from step 2 to *TargetServersRole*.
 
-     - **Certificate-based SQL Server logins that own user objects**: Principals that are enclosed by double hash marks (##) are created from certificates when SQL Server is installed. These are intended for internal use. They shouldn't own any objects in **msdb** or other databases. If the error logs indicate a failure that is related to any of these logins, start SQL Server by using trace flag 902, change the ownership of the affected objects to a different user, and then restart SQL Server without trace flag 902 so that the upgrade script can finish running.
+     - **Certificate-based SQL Server logins that own user objects**: Principals that are enclosed by double hash marks (##) are created from certificates when SQL Server is installed. These are intended for internal use. They shouldn't own any objects in **msdb** or other databases. If the error logs indicate a failure that is related to any of these logins, start SQL Server by using trace flag `902`, change the ownership of the affected objects to a different user, and then restart SQL Server without trace flag `902` so that the upgrade script can finish running.
 
       >[!NOTE]
-      >Although a failure to run upgrade scripts is one of the common causes of the the "Wait on Database Engine recovery handle failed" error, this error can also occur for other reasons. The error means that the update installer could not start the service or bring it online after the update was installed. In either case, troubleshooting involves a review of error logs and Setup logs to determine the cause of the failure and take appropriate action.
+      >Although a failure to run upgrade scripts is one of the common causes of the "Wait on Database Engine recovery handle failed" error, this error can also occur for other reasons. The error means that the update installer could not start the service or bring it online after the update was installed. In either case, troubleshooting involves a review of error logs and Setup logs to determine the cause of the failure and take appropriate action.
   
-   To let the upgrade process finish, restart the SQL Server without trace flag 902.
+   To let the upgrade process finish, restart the SQL Server without trace flag `902`.
 
 ## Setup errors caused by missing installer files in Windows cache
 
-Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is C:\Windows\Installer. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition,
+Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is C:\Windows\Installer. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition:
 
 - Repair the SQL Server installation
 - Use the [FixMissingMSI tool](https://github.com/suyouquan/SQLSetupTools/releases/)
@@ -93,12 +93,12 @@ For detailed instructions, see [Restore the missing Windows Installer cache file
 
 ## Setup fails because of incorrect data or log location in registry
 
-The default location that you specify during installation for database data and log files is saved in the registry at HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors messages that resemble the following messages:
+The default location that you specify during installation for database data and log files is saved in the registry at `HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance`. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors messages that resemble the following messages:
 
-- `Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.`
-- `The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.`
+- "Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid."
+- "The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory."
 
-To fix this issue, connect to the SQL Server instance by using SQL Server Management Studio (SSMS), open **Properties** for the instance, select **Database Settings**, and make sure that the **Database Default locations** for Data and Log point to the correct folders. Then, retry the CU or SP installation.
+To fix this issue, connect to the SQL Server instance by using SQL Server Management Studio (SSMS), open **Properties** for the instance, select **Database Settings**, and ensure that the **Database Default locations** for Data and Log point to the correct folders. Then, retry the CU or SP installation.
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
