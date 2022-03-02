@@ -65,7 +65,7 @@ In both cases, the following information is logged before the error entries are 
 
 ### Serialconsole
 
-This action corrects the incorrect or malformed serial console configuration of GRUB or the Linux kernel. We recommend that you run this action in the following cases:
+This action corrects an incorrect or malformed serial console configuration for the Linux kernel or GRUB. We recommend that you run this action in the following cases:
  
 - No GRUB menu is displayed at VM startup.
 - No operating system related information is written to the serial console.
