@@ -57,7 +57,7 @@ If `% User Time` is consistently greater than 90 percent, this indicates that th
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the Sqlservr.exe process is causing high CPU usage, identify the queries that are responsible for this activity by running the following query:
+If the `Sqlservr.exe` process is causing high CPU usage, identify the queries that are responsible for this activity by running the following query:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -96,7 +96,7 @@ exec sp_updatestats
 ```
 
 > [!NOTE]
-> The `sp_updatestats` system stored procedure runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database. For regular maintenance, you should make sure that regularly schedule maintenance is keeping statistics up to date. Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, among other parameters, and update statistics with a linear threshold.
+> The `sp_updatestats` system stored procedure runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database. For regular maintenance, ensure that regularly schedule maintenance is keeping statistics up to date. Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, among other parameters, and update statistics with a linear threshold.
 
 For more information about `sp_updatestats`, see [sp_updatestats](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).
 
