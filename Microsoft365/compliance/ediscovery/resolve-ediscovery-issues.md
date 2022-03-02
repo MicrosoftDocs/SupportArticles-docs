@@ -229,10 +229,11 @@ eDiscovery Case Hold Policy Sync Distribution error. The error reads:
 
 ## Error/issue: Holds stuck in PendingDeletion
 
-eDiscovery Case Hold Policies may be stuck in PendingDeletion and are not able to be removed.
+eDiscovery Case Hold Policies may be stuck in PendingDeletion and can't be removed.
 
 ### Resolution
 
+1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 1. Try running the RetryDistribution parameter on the policy in question:
 
    For eDiscovery case holds:
@@ -246,24 +247,20 @@ eDiscovery Case Hold Policies may be stuck in PendingDeletion and are not able t
    ```powershell
    Set-RetentionCompliancePolicy <policyname> -RetryDistribution
    ```
-2. Try to delete the policy using PowerShell and the -ForceDeletion parameter
    
-   For eDiscovery case holds
+2. Try to delete the policy using PowerShell and the `-ForceDeletion` parameter:
+   
+   For eDiscovery case holds, use the [Remove-CaseHoldPolicy](/powershell/module/exchange/remove-caseholdpolicy?view=exchange-ps&preserve-view=true) cmdlet:
    
    ```powershell
    Remove-CaseHoldPolicy <policyname> -ForceDeletion
    ```
   
-   https://docs.microsoft.com/en-us/powershell/module/exchange/remove-caseholdpolicy?view=exchange-ps
-  
-   For retention policies
+   For retention policies, use the [Remove-RetentionCompliancePolicy](/powershell/module/exchange/remove-retentioncompliancepolicy?view=exchange-ps&preserve-view=true) cmdlet:
   
    ```powershell
    Remove-RetentionCompliancePolicy <policyname> -ForceDeletion
-   ```
-  
-   https://docs.microsoft.com/en-us/powershell/module/exchange/remove-retentioncompliancepolicy?view=exchange-ps
-  
+   ```  
   
 3. Contact Microsoft Support.
 
