@@ -24,11 +24,11 @@ To effectively troubleshoot these connectivity issues, gather the following info
 
 If you have administrator access to the SQL Server computer, gather and review current computer settings and service accounts using the following procedure:
 
- 1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
+1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
 
- 1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
+1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
 
- 1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
+1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
 
 > [!NOTE]
   > If you are troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run the SQLCheck tool on all systems involved.
@@ -40,12 +40,12 @@ If you have administrator access to the SQL Server computer, gather and review c
 
 ### Option 1
 
-Use the SQLCheck tool mentioned above and review information in the output file (Computer, Client Security and SQL Server). Use the information to address the issues contributing to your problem. See the examples below:
+Use the SQLCheck tool mentioned in the Prerequisites section and review information in various sections in the output file (Computer, Client Security and SQL Server). Use the information to address the issues contributing to your problem. See the examples below:
 
 |Section in the file |Text to search for |Potential action |Can help troubleshoot (examples) |
 |-|-|-|-|
 |Computer Information |Warning: Network driver may be out of date |Check online for new drivers. |Various connectivity errors |
-|Client Security and Driver Information |Diffie-Hellman cipher suites are enabled. Possible risk of intermittent TLS failures if the algorithm version is different between clients and servers |If you're having intermittent connectivity issues, see [Applications forcibly closed TLS connection errors when connecting to SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).|[An existing connection was forcibly closed by the remote host](tls-exist-connection-closed.md)|
+|Client Security and Driver Information |Diffie-Hellman cipher suites are enabled. Possible risk of intermittent TLS failures if the algorithm version is different between clients and servers |If you're having intermittent connectivity issues, see [Applications experience forcibly closed TLS connection errors when connecting to SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).|[An existing connection was forcibly closed by the remote host](tls-exist-connection-closed.md)|
 |Client Security and Driver Information |SQL Aliases |If present, ensure aliases are configured properly and pointing to the correct server and IP addresses. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
 |SQL Server Information |Services of Interest |If your SQL service  isn't started,  start it. If you're having issues connecting to a named instance, ensure SQL Server Browser service is started or try restarting the browser service. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
 |SQL Server Information |Domain Service Account Properties |If you configure linked servers from your SQL Server and the **Trust for Del** value is set to false, then you may run into authentication issues with your linked server queries. |[Troubleshooting "Login failed for user" errors](login-failed-for-user.md) |
@@ -54,7 +54,7 @@ Use the SQLCheck tool mentioned above and review information in the output file 
 
 ### Option 2
 
-If you aren't able to run SQLCheck on your SQL Server computer, check the following items before troubleshooting:
+If you aren't able to run SQLCheck on your SQL Server computer, you can check the following items before doing in-depth troubleshooting:
 
 1. Make sure that SQL Server is started, and that you see the following message in the SQL Server error log:
 
