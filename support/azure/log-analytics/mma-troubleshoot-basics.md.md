@@ -31,7 +31,7 @@ There are two ways to find the version of Monitoring Agent:
 
 **On the VM or on-premises server with MMA**
 
-Log on to the server, and go to **Control Panel** > **System and Security**. Select **Microsoft Monitoring Agent** and then select the **Properties** tab. The version should be listed there. 
+Log on to the server, and go to **Control Panel** > **System and Security**. Select **Microsoft Monitoring Agent** and then select the **Properties** tab. The version should be listed there.
 
 You can also query the version by running the following PowerShell command:
 
