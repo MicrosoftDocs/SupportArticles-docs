@@ -12,28 +12,39 @@ This article provides a workaround to resolve the issue that occurs when a Stand
 
 ## Symptoms
 
-In Windows Server 2022, when a Standard user uses the function `InstallLayoutOrTip` to enable the Chinese keyboard layouts (CHS or CHT), the user can't input Chinese and sees an error message that resembles the following one:
+In Windows Server 2022, when a Standard user uses the function `InstallLayoutOrTip` to enable one of the Chinese keyboard layouts, like **Chinese (Simplified, China)**, **Chinese (Traditional, HongKong SAR)** or **Chinese (Traditional, Taiwan)**, the user can't input Chinese and sees an error message that resembles the following one:
 
 > Simplified Chinese IME dictionaries are not ready yet.  
   Please check the status from language setting.
 
 ## Cause
 
-The issue occurs because the Chinese IME dictionaries are included in [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) (FODs) instead of Windows image files.
+The issue occurs because the Chinese IME dictionaries are included in **basic typing** package of [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) (FODs) instead of Windows image files.
 
 > [!NOTE]
-> Adding the FODs "basic typing" requires administrator permission.
+> Adding the **basic typing** package of FODs requires administrator permission.
 
 ## Workarounds
 
-To work around the issue, use one of the following methods:
+To work around the issue, use one of the following methods as an administrator:
 
 - Pre-install the FODs in the Windows image.
 
-- Run the following [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command to add FODs with administrator privilege:
-
     ```cmd
-    DISM.exe /image:C:\mount\Windows /add-package /packagepath:E:\Microsoft-Windows-Holographic-Desktop-FOD-Package~31bf3856ad364e35~amd64~~.cab`
+    Dism /Image:"C:\mount\windows" /Add-Package /PackagePath:"<FilePath>\<PackageName>.cab"
     ```
 
-    For more information, see [Adding or removing Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#adding-or-removing-features-on-demand).
+- Run the [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command `Dism /online /Add-Package /PackagePath: "<FilePath>\<PackageName>.cab"` to add FODs. For example:
+
+    ```cmd
+    Dism /online /Add-Package /PackagePath: "C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
+    ```
+
+    > [!NOTE]
+    > When running the command, use your own file path and the cab package that you have downloaded.
+
+## More information
+
+- [Add languages to Windows images](/windows-hardware/manufacture/desktop/add-language-packs-to-windows)
+
+- [Adding or removing Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#adding-or-removing-features-on-demand)
