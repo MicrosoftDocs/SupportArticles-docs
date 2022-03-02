@@ -19,7 +19,7 @@ This topic will help you troubleshoot scenarios for the Software Defined Network
 
 ## Troubleshooting checklist
 
-### Check IP Configuration and Virtual Subnets that are referencing the ACL
+### Check IP configuration and virtual subnets that are referencing the ACL
 
 1. Run the `Get-ProviderAddress` command on both Hyper-V hosts that host the two affected tenant virtual machines (VM). Then, run `Test-LogicalNetworkConnection` or `ping -c <compartment>` from the Hyper-V host to verify connectivity on the HNV Provider logical network.
 2. Make sure that the MTU settings are correct on the Hyper-V hosts and on any Layer-2 switching devices that are between the Hyper-V Hosts. Run `Test-EncapOverheadValue` on all affected Hyper-V hosts. Also check whether all Layer-2 switches between the hosts have MTU set to least 1,674 bytes to account for a maximum overhead of 160 bytes.
@@ -36,7 +36,7 @@ Run the `netstat` command to verify that there are three established connections
 - Two established connections from Hyper-V host IP on port 6640 to NC node IP on ephemeral ports (The port number is higher than 32000)
 - One established connection from Hyper-V host IP on ephemeral port to Network Controller REST IP on port 6640
 
-### Check Host Agent services
+### Check host agent services
 
 The network controller communicates with two host agent services on the Hyper-V hosts: SLB Host Agent and NC Host Agent. It's possible that one or both of these services are not running. Check their state, and restart them if they're not running:
 
@@ -79,7 +79,7 @@ Get-NetworkControllerReplica
 
 Verify that the **Replica Status** is **Ready** for each service.
 
-#### Check MTU and Jumbo Frame support on HNV Provider logical network
+#### Check MTU and Jumbo Frame support on HNV provider logical network
 
 Another common problem in the HNV Provider logical network is that the physical network ports or Ethernet card do not have a large enough MTU configured to handle the overhead from VXLAN (or NVGRE) encapsulation.
 

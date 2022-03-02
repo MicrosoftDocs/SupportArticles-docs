@@ -53,7 +53,7 @@ $obj.LicensingType
 
 [LicensingMode values](/windows-hardware/customize/desktop/unattend/microsoft-windows-terminalservices-remoteconnectionmanager-licensingmode#values)
 
-### Set the method for how the license server and the licensing mode will be applied on the RDSH server.
+### Set the method for how the license server and the licensing mode will be applied on the RDSH server
 
 You can use any of the following methods to implement this configuration.
 

@@ -91,7 +91,7 @@ The printer connection issues described in this issue are specific to print serv
 
 Workaround: You can take steps to workaround this issue on print servers that meet the prerequisite. See [Windows 11 known issues and notifications](/windows/release-health/status-windows-11-21h2#2737msgdesc)
 
-### Point and Print default behavior change requires Administrator credentials to print
+### Point and Print default behavior change requires administrator credentials to print
 
 After installing [KB5005033](https://support.microsoft.com/topic/kb5005652-manage-new-point-and-print-default-driver-installation-behavior-cve-2021-34481-873642bf-2634-49c5-a23b-6d8e9a302872) or a later update, certain printer drivers using Point and Print might be prompted for administrator credentials every time an app attempts to print to a print server or a print client connects to a print server. This is caused by a print driver on the print client and the print server using the same filename, but the server has a newer version of the driver file. When the print client connects to the print server, it finds a newer driver file and is prompted to update the drivers on the print client, but the file in the package it is offered for installation does not include the later file version. 
 

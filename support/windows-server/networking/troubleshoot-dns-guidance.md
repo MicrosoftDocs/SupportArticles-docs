@@ -50,7 +50,7 @@ Sometimes, the host "A" record is deleted on the original DNS server after the h
 
 The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced up, registration won't occur. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory.
 
-#### DHCP clients that have Option 81 configured unregister host "A" records during host "AAAA" registration
+#### DHCP clients that have option 81 configured unregister host "A" records during host "AAAA" registration
 
 This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are present. The DNS Dynamic Update Protocol update incorrectly sets TTL to **0**. This triggers record deletion for IPv6 record registration.
 
@@ -82,7 +82,7 @@ A DNS query request may time out if the DNS server forwards the query to unreach
 1. Open the DNS console on the DNS server, and check whether Forwarders or Conditional Forwarders are reachable. If some of the forwarders are unreachable, remove them.
 2. If the DNS server does not have to use Forwarders and Root Hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This also disables Forwarders.)
 
-### Event ID 4004 and Event ID 4013
+### Event ID 4004 and event ID 4013
 
 Event message:  
 > DNS server was unable to open Active Directory. This DNS server is configured to use directory service information and cannot operate without access to the directory. The DNS server will wait for the directory to start. If the DNS server is started but the appropriate event has not been logged, then the DNS server is still waiting for the directory to start.

@@ -82,7 +82,7 @@ Repadmin message:
 
 The domain controller computer account might not be synchronized with the Key Distribution Center (KDC). Fix replication security issues.
 
-### Event ID 1925 and Event ID 2087
+### Event ID 1925 and event ID 2087
 
 Repadmin message:  
 > Cannot open LDAP connection to local host.
@@ -92,7 +92,7 @@ The administration tool couldn't contact AD DS. See the following articles:
 - [Active Directory replication Event ID 1925](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1925-dns-lookup)
 - [Active Directory replication Event ID 2087](/troubleshoot/windows-server/identity/active-directory-replication-event-id-2087)
 
-### Event ID 1925, Event ID 2087 and Event ID 2088
+### Event ID 1925, event ID 2087 and event ID 2088
 
 Repadmin message:  
 > Last attempt at \<date - time\> failed with the "Target account name is incorrect."

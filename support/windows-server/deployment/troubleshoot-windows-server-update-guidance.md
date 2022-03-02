@@ -103,7 +103,7 @@ To troubleshoot this issue, follow these steps:
 1. Check that the device is scanning the Windows Update service and not a different endpoint. If the device is scanning for updates from a WSUS endpoint, for example, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 2. Feature updates only: Check that the device is successfully enrolled in feature update management by the deployment service. A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
 
-## WSUS Troubleshooting  
+## WSUS troubleshooting  
 
 ### WSUS connection failures
 

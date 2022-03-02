@@ -77,7 +77,7 @@ Use **auditpol.exe** to modify audit polices of the local computer. You can use 
 3. Open the tasklist.txt and the netstat.txt files.
 4. In the tasklist.txt file, write down the Process Identifier (PID) for the process you are troubleshooting. Compare the PID with that in the Netstat.txt file. Write down the protocol that is used. The information about the protocol used can be useful when reviewing the information in the firewall log file.
 
-### Verifying Firewall and IPsec Services are Working
+### Verifying firewall and IPsec services are working
 
 For Windows Firewall with Advanced Security to operate correctly, the following services must be started:
 
