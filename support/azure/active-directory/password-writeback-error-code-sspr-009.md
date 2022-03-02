@@ -1,10 +1,10 @@
 ---
 title: Azure AD Administrators can't reset their own password from cloud
 description: "Troubleshoot error SSPR_009: You can't reset your own password because password reset isn't turned on for your organization."
-ms.date: 2/11/2021
+ms.date: 2/11/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.reviewer: "jarrettr,nualex"
+ms.reviewer: jarrettr, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
@@ -33,7 +33,7 @@ SSPR for Administrators isn't enabled on the tenant. SSPR for Administrators (SS
 
 The old SSPR-A implementation is used when an Azure AD account has an admin role, such as Global Administrator or Billing Administrator. However, the SSPR management on the Azure portal is for SSPR-U only. Therefore, SSPR-A might not be enabled on the tenant.
 
-### Solution
+## Solution
 
 Enable SSPR-A on the tenant by running the [Set-MsolCompanySettings](/powershell/module/msonline/set-msolcompanysettings) PowerShell cmdlet, as follows:
 

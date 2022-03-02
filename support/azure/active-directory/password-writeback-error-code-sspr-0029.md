@@ -1,16 +1,16 @@
 ---
 title: SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset
-description: "Troubleshoot password writeback generic error code SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset."
-ms.date: 2/11/2021
+description: Troubleshoot password writeback generic error code SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset.
+ms.date: 2/11/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.reviewer: "jarrettr,nualex"
+ms.reviewer: jarrettr, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
 #Customer intent: As an Azure Active Directory administrator, I want to fix the on-premises configuration for password reset so that users can successfully reset or change their password.
 ---
-# Troubleshoot error SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset
+# Troubleshoot error SSPR_0029: Your organization hasn't properly set up the on-premises configuration for password reset
 
 This article helps you troubleshoot the self-service password reset (SSPR) error "SSPR_0029: Your organization hasn't properly set up the on-premises configuration for password reset" that occurs after the user or admin enters and confirms a new password on the SSPR page.
 
@@ -135,5 +135,5 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
     > [!NOTE]
     > If you delete the **RestrictRemoteSam** registry entry without removing the Domain GPO setting, this registry entry will be re-created on the next Group Policy refresh cycle, and the `SSPR_0029` error will reoccur.
 
-[access-rights-permissions]: welcome-azure-ad.yml
-[identify-ad-ds-connector]: welcome-azure-ad.yml
+[access-rights-permissions]: password-writeback-access-rights-permissions.md
+[identify-ad-ds-connector]: password-writeback-access-rights-permissions.md#identify-the-ad-ds-connector-account
