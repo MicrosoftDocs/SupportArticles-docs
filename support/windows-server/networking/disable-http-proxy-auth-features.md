@@ -23,7 +23,7 @@ _Applies to:_ &nbsp; Windows Server 2022, all editions, Windows 11, all editions
 
 ## How to disable an authentication protocol
 
-HTTP proxies can use any of several different authentication protocols. Some of these protocols are considered to be unsecure. You should support such protocols only if you have to provide backward compatibility with earlier versions of Windows.
+HTTP proxies can use any of several different authentication protocols. Some of these protocols are considered to be not secure. You should support such protocols only if you have to provide backward compatibility with earlier versions of Windows.
 
 Starting in Windows Server 2022 and Windows 11, you can disable individual authentication protocols. To disable protocols, configure the value of the following registry subkey:
 
