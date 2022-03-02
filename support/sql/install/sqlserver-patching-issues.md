@@ -45,7 +45,7 @@ If there's no matching scenario, look for more pointers in the log files.
 
 ## "Wait on Database Engine recovery handle failed" and "912" and "3417" errors
 
-Upgrade T-SQL scripts are shipped together with every SQL Server update. They are executed after the SQL Server binaries are upgraded. If these scripts don't run, for some reason, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs _912_(/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and _3417_(/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. Errors _912_ and _3417_ are generic errors that are associated with database script upgrade failures. The messages that precede the _912_ errors usually provide information about what exactly failed when these scripts ran.
+Upgrade T-SQL scripts are shipped together with every SQL Server update. They are executed after the SQL Server binaries are upgraded. If these scripts don't run, for some reason, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs _912_ (/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and _3417_ (/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. Errors _912_ and _3417_ are generic errors that are associated with database script upgrade failures. The messages that precede the _912_ errors usually provide information about what exactly failed when these scripts were run.
 
 To troubleshoot and fix these errors, follow these steps:
 
@@ -57,12 +57,12 @@ The following errors are some of the common causes of upgrade script failures an
 
   - **SSISDB part of availability group**
 
-  Remove the SQL Server Integration Services (SSIS) Catalog database (SSISDB) from the availability group. After the upgrade finishes, restore SSISDB to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
+    Remove the SQL Server Integration Services (SSIS) and Catalog database (SSISDB) from the availability group. After the upgrade finishes, restore SSISDB to the availability group. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog?view=sql-server-ver15&preserve-view=true) section.
 
   - **Misconfigured System user/role in msdb database**
 
     This section provides steps to resolve a misconfigured system user or role in the **msdb** database:
-    - **TargetServersRole Schema/Security role**: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the dbo, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, setup may fail and return error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag 902:
+    - **TargetServersRole Schema/Security role**: These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the *dbo*, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes updates to either of these, setup may fail and return error ID 2714: "There is already an object named 'TargetServersRole' in the database." To resolve this error, follow these steps after you start SQL Server trace flag `902`:
           
       1. Back up your **msdb** database.
       1. Make a list of users (if any) who are currently part of this role.
