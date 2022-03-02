@@ -13,9 +13,9 @@ _Applies to:_ &nbsp; SQL Server
 _Original KB number:_ 811889
 
 > [!NOTE]
-> Before troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before you start troubleshooting, you can check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
-When you use Windows authentication to connect an SQL Server instance remotely, you receive the following error message:
+When you use Windows authentication to connect a SQL Server instance remotely, you receive the following error message:
 
 > The target principal name is incorrect. Cannot generate SSPI context.
 
@@ -35,7 +35,7 @@ This error means that SSPI tried but couldn't use Kerberos authentication to del
 
 ### What is SPN?
 
-A [Service Principal Names (SPN)](/windows/win32/ad/service-principal-names) is a unique identifier of a service instance. SPNs are used by [Kerberos authentication](/windows/win32/ad/mutual-authentication-using-kerberos) to associate a service instance with a service logon account. SPNs allow a client application to request the service to authenticate an account even if the client doesn't have an account name.
+A [Service Principal Names (SPN)](/windows/win32/ad/service-principal-names) is a unique identifier of a service instance. SPNs are used by [Kerberos authentication](/windows/win32/ad/mutual-authentication-using-kerberos) to associate a service instance with a service logon account. This association process allows a client application to request the service to authenticate an account even if the client doesn't have an account name.
 
 For example, a typical SPN for a server that is running an instance of SQL Server is as follows:
 
@@ -47,9 +47,9 @@ The format of an SPN for a default instance is the same as an SPN for a named in
 
 Windows authentication is the preferred method for users to authenticate to SQL Server. Clients that use Windows authentication are authenticated by using [NTLM](/windows-server/security/kerberos/ntlm-overview) or Kerberos.
 
-An SQL Server client may try to use integrated security over TCP/IP sockets to a remote server running SQL Server. The SQL Server client network library uses the SSPI API to perform security delegation. The SQL Server network client makes a call to the [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) function and passes in "negotiate" for the `pszPackage` parameter. This call notifies the underlying security provider to negotiate delegation. In this context, "negotiate" means to try Kerberos or NTLM authentication on Windows-based computers. In other words, Windows uses Kerberos delegation if the destination computer running SQL Server has an associated and correctly configured SPN. Otherwise, Windows uses NTLM delegation.
+When a SQL Server client uses integrated security over TCP/IP sockets to a remote server that's running SQL Server, the SQL Server client network library uses the SSPI API to perform security delegation. The SQL Server network client makes a call to the [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) function and passes in "negotiate" for the `pszPackage` parameter. This process notifies the underlying security provider to negotiate delegation. In this context, "negotiate" means to try Kerberos or NTLM authentication on Windows-based computers. In other words, Windows uses Kerberos delegation if the destination computer running SQL Server has an associated and correctly configured SPN. Otherwise, Windows uses NTLM delegation.
 
-### Why doesn't the connection failover to NTLM after running into issues with Kerberos?
+### Why doesn't the connection fail over to NTLM after running into issues with Kerberos?
 
 The SQL Server driver code uses the WinSock network API to resolve the fully qualified DNS of the server when the driver uses Windows authentication to connect to SQL Server. To perform this operation, the driver code calls the `gethostbyname` and `gethostbyaddr` WinSock APIs. If integrated security is used, the driver will try to resolve the server's fully qualified DNS. The driver resolves the fully qualified DNS even if an IP address or a host name is passed as the name of the server.
 
@@ -85,7 +85,7 @@ When an instance of the SQL Server Database Engine starts, SQL Server tries to a
 > [!NOTE]
 > This procedure applies only to situations where you receive these error messages all the time, not intermittently.
 
-There are various reasons Kerberos connections fail, such as misconfigured SPNs, or name resolution issues. Additionally, insufficient rights for SQL Server service startup accounts can also cause a connection failure. Microsoft Kerberos Configuration Manager (KCM) is a tool that can help check the causes of the error. KCM also provides options to fix any identified issues in the process.
+There are various reasons why Kerberos connections fail, such as misconfigured SPNs, or name resolution issues. Additionally, insufficient rights for SQL Server service startup accounts can also cause a connection failure. Microsoft Kerberos Configuration Manager (KCM) is a tool that can help check the causes of the error. KCM also provides options to fix any identified issues in the process.
 
 Perform the following steps to fix the error by KCM.
 
@@ -155,7 +155,7 @@ C:\>
 
 When the command `ping -a <IPAddress>` resolves to the correct fully qualified DNS of the computer that is running SQL Server, the client-side resolution is also successful.
 
-For detailed diagnostics, use either [Test-NetConnection](/previous-versions/windows/powershell-scripting/dn372891(v=wps.630)) for previous versions of PowerShell or the [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection) cmdlet for the latest version. These cmdlets test TCP connectivity. For more information on PowerShell cmdlet, see [Cmdlet Overview](/powershell/scripting/developer/cmdlet/cmdlet-overview).
+For detailed diagnostics, use either [Test-NetConnection](/previous-versions/windows/powershell-scripting/dn372891(v=wps.630)) or [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection) cmdlet to test TCP connectivity according to the PowerShell version that's installed on the computer. For more information on PowerShell cmdlet, see [Cmdlet Overview](/powershell/scripting/developer/cmdlet/cmdlet-overview).
 
 > [!NOTE]
 > Name resolution methods may include DNS, WINS, Hosts files, and Lmhosts files. For more information about name resolution problems and troubleshooting, review the following links:
@@ -163,7 +163,7 @@ For detailed diagnostics, use either [Test-NetConnection](/previous-versions/win
 > - [Troubleshooting TCP/IP](/previous-versions/tn-archive/bb727023(v=technet.10))
 > - [Advanced troubleshooting for TCP/IP issues](/windows/client-management/troubleshoot-tcpip)
 
-Check whether any aliases for the destination SQL Server exist in SQL Server Configuration Manager and in the SQL Server Client Network utility. If such an alias exists, ensure it's configured correctly. Check server names, network protocols, port numbers, and so on.
+Check whether any aliases for the destination SQL Server exist in SQL Server Configuration Manager and in the SQL Server Client Network utility. If such an alias exists, ensure it's configured correctly by checking server names, network protocol, the port number, and so on.
 
 ### Step 2: Verify communication between domains
 
@@ -175,7 +175,7 @@ Verify that the domain you sign in to can communicate with the server's domain t
     - You didn't restart the SQL Server service after the password of the account was changed.
 
 1. If your logon domain differs from the domain of the server that is running SQL Server, check the trust relationship between the domains.
-1. Check whether the domain that the server belongs to and the domain account that you use to connect are in the same forest. Both need to be in the same forest for SSPI to work.
+1. Check whether the domain that the server belongs to and the domain account that you use to connect are in the same forest. This step is required for SSPI to work.
 
 ### Step 3: Verify SQL Server SPNs using SQLCheck and Setspn tools
 
