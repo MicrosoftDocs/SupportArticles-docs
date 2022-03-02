@@ -34,7 +34,7 @@ This article is designed to help you troubleshoot Remote Desktop Session (RDS) c
 - [Check that another application isn't trying to use the same port](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-that-another-application-isnt-trying-to-use-the-same-port)
 - [Check whether a firewall is blocking the RDP port](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-whether-a-firewall-is-blocking-the-rdp-port)
 
-## Common errors and solutions
+## Common issues and solutions
 
 ### Credential limit per app
 

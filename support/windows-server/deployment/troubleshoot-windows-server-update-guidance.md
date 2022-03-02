@@ -46,7 +46,7 @@ Install the latest servicing stack update. See [Latest Servicing Stack Updates](
 
 See [Fix Windows Update errors by using the DISM or System Update Readiness tool](fix-windows-update-errors.md) for more information.
 
-## Common Issues and Solutions
+## Common issues and solutions
 
 ### You receive "Update not applicable" error message
 

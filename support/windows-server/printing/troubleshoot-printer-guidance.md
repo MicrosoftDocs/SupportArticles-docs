@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article is designed to get you started on troubleshooting issues encountered when using printers.
 
-## Printing issues troubleshooting checklist
+## Troubleshooting checklist
 
 Here's a list of basic steps to resolve most printing issues:
 

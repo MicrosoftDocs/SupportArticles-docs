@@ -128,7 +128,7 @@ To do this, start the Remote Desktop Licensing Manager console on the licensing 
   - The following article contains a list of Remote Desktop Services events that can appear in the event log on a computer that has the RD Licensing role service installed.  
  [Remote Desktop Licensing](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404145%28v=ws.10%29#remote-desktop-licensing)
 
-## Common errors and solutions
+## Common issues and solutions
 
 ### WVD are getting logged out after 60 minutes with error 0x80070057
 
