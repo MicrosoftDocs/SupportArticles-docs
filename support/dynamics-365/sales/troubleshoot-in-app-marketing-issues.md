@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot issues with in-app marketing issues 
+title: Troubleshoot issues with in-app marketing 
 description: Provides resolutions for the known issues that are related to in-app marketing in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
