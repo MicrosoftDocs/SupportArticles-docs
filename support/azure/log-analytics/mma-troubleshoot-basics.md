@@ -11,7 +11,7 @@ ms.service: log-analytics
 
 # Azure Log Analytics Monitoring Agent troubleshooting basics
 
-This article is a basic guide for troubleshooting Microsoft Monitoring Agent (MMA) problems that affect Azure Log Analytics.
+This article is a basic guide for troubleshooting Microsoft Monitoring Agent (MMA) problems.
 
 ## Basic requirements for MMA
 
