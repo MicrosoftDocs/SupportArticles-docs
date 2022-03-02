@@ -1,7 +1,7 @@
 ---
-title: mssql-conf setup fails with python module error
-description: This article helps you to troubleshoot version the python requirement for SQL on Linux and the workaround if you are using a lower python version while configuring SQL Server on Linux.
-ms.date: 02/28/2022
+title: mssql-conf setup fails with Python module error
+description: This article helps you to resolve the `mssql-conf` setup fails with Python module error. 
+ms.date: 03/02/2022
 ms.custom: sap:SQL Server 2019 on Linux 
 ms.technology: 
 ms.reviewer: 
@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: sql 
 ---
 
-# mssql-conf setup fails with python module error
+# `mssql-conf` setup fails with Python module error
 
-This article helps you resolve the mssql-conf setup with python module error. It also  describes the python requirement for SQL on Linux and the workaround if you are experiencing lower python version while configure SQL Server on Linux.
+This article helps you to resolve the `mssql-conf` setup fails with Python module error. It also describes the Python requirements for SQL on Linux and the workaround if you are experiencing lower Python version while configuring SQL Server on Linux.
 
 _Applies to: SQL Server 2019 on Linux  
 _Original KB number:
@@ -61,11 +61,11 @@ AttributeError: 'module' object has no attribute 'run'
 ```
 
 > [!NOTE]
-> The mssql-conf setup error may occur on systems with Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).
+> The `mssql-conf` setup error may occur on systems with Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) whose Python 3 version is lower than 3.5. For SQL Server on Linux supported platform, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).
 
 ## Cause
 
-The error occurs because the version of SQL Server and mssql-conf code rely on the Python 3.5+ functions.
+The error occurs because the version of SQL Server and `mssql-conf` code rely on the Python 3.5+ functions.
 
 ## Workaround
 
@@ -111,14 +111,14 @@ Use the following steps to create a session-specific symlink where Python 3 poin
     Python 3.6.15
     ```
 
-1. Now run the `mssql-conf` setup or any other mssql-conf based commands under the above session:
+1. Now run the `mssql-conf` setup or any other `mssql-conf` based commands as shown in the previous step:
 
      ```bash
      /opt/mssql/bin/mssql-conf setup
      ```
 
-1. In future, if you want to run the `mssql-conf` command to configure SQL Server, switch to the root user as shown in step 4. Then, run the command `PATH=$(pwd):$PATH`, which adds the current path to the `$PATH` environment variable and then execute the `mssql-conf` command as shown in step 4.
+1. In future, if you want to run the `mssql-conf` command to configure SQL Server, switch to the root user as shown in step 4. Then, run the command `PATH=$(pwd):$PATH`, which adds the current path to the `$PATH` environment variable and then run the `mssql-conf` command as shown in step 4.
 
 ## See also
 
-Since python 3.4 has already EOL (End of Life) and will no longer receive security updates, as documented in this article [Python | endoflife.date](https://endoflife.date/python), we suggest you to use a supported newer version of Python.
+Since Python 3.4 has already EOL (End of Life) and will no longer receive security updates, as documented in this article [Python | endoflife.date](https://endoflife.date/python), we suggest you to use a supported newer version of Python.
