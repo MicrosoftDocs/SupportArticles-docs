@@ -114,8 +114,8 @@
         "SkypeExperts/**/*.md": "skype-for-business-itpro"
       },
       "ms.technology": {
-        "SkypeExperts/performance-issues/**/*.md": "",
-        "SkypeExperts/quality-of-service/**/*.md": "",
+        "SkypeExperts/performance-issues/**/*.md": "performance",
+        "SkypeExperts/quality-of-service/**/*.md": "quality-of-service",
         "SkypeServer/server-conferencing/**/*.md": "conferencing",
         "SkypeServer/server-configuration/**/*.md": "configuration",
         "SkypeServer/server-contacts/**/*.md": "contacts",
