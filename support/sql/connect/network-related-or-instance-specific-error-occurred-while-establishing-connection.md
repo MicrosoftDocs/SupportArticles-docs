@@ -11,7 +11,7 @@ ms.prod: sql
 
 _Applies to:_ &nbsp; SQL Server
 
-When connecting to a SQL Server instance, you may encounter one or more of the [error messages](#error-messages) below. The article provides some steps to help you troubleshoot these errors, which are provided in order of the issues from simple to complex.
+When connecting to a SQL Server instance, you may encounter one or more of the [error messages](#error-messages) below. The article provides some steps to help you troubleshoot these errors, hich are provided in order of the issues from simple to complex.
 
 ## Error messages
 
