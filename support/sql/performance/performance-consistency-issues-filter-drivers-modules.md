@@ -20,13 +20,15 @@ Consider one of the following scenarios:
 
 In the scenarios, you may experience performance degradation and consistency issues of SQL Server Database Engine.
 
-- Reports of various hang-related error messages and conditions (SQL Server scheduler message such as [17883](/sql/relational-databases/errors-events/mssqlserver-17883-database-engine-error), application time-out messages, severe blocking within SQL Server).
+- Reports of various unresponsive-related error messages and conditions (SQL Server scheduler message such as [17883](/sql/relational-databases/errors-events/mssqlserver-17883-database-engine-error), application time-out messages, severe blocking within SQL Server).
 - Slow response from SQL Server even if the concurrent amount of load or activity isn't unusually heavy.
 - Exceptions (such as access violations), critical error messages about database consistency, assertion messages or unexpected process termination.
 - 100% CPU utilization and long database recovery times when you use In-Memory OLTP tables in SQL Server.
 - High CPU usage for the SQL Server process, especially privileged processor time.
 - Unexpected or unexplained failures when SQL Server processes make Windows API calls.
 - Memory dumps triggered for SQLDumper.exe may fail to complete hindering any troubleshooting activity.
+
+Because of the nature of these issues, root cause identification often requires significant troubleshooting time and low level tracing. 
 
 ## Causes
 
@@ -56,10 +58,10 @@ SQL Server typically emits a lot of filesystem I/Os (some of which are larger th
 
 To work around these issues, identify the filter driver or the module that is causing the issues. Then, try all or one of the following methods appropriately. To help you identify the filter driver or the module, check the [list of some possible filter drivers and modules](#list-of-filter-drivers-and-modules-that-can-cause-the-issues) for more information.
 
+- Contact the vendor of the module, filter driver, or application to check for updates. Apply any updates that are available.
 - Configure the filter driver or the associated application in such a way that it doesn't interfere with the SQL Server workload or operations.
 - Disable the filter driver from loading into the system.
 - Configure the application not to load the specific module into the SQL Server process.
-- Contact the vendor of the module, filter driver, or application to check for updates. Apply any updates that are available.
 - In some rare situations, you may have to remove the module or the filter driver, and its associated application to restore stability to the SQL Server process and the system.
 
 ## List of filter drivers and modules that can cause the issues
@@ -84,7 +86,7 @@ The following list helps you to identify the filter drivers and modules that can
 
 - *UMPPC\*.DLL* and *SCRIPTCONTROL\*.DLL*
 
-    These DLL files are loaded into the SQL Server or SQL Server Agent address space if you enable the **Additional User Mode Data** prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might encounter failures while attempting to launch SQL Server Management Studio. You might also see that SQL Server fails to launch SQLDumper.exe to generate memory dumps.
+    These DLL files are loaded in to the address space of SQL Server related processes if you enable the **Additional User Mode Data** prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might encounter failures while attempting to launch SQL Server Management Studio. You might also see that SQL Server fails to launch SQLDumper.exe to generate memory dumps. We recommend you contact Crowdstrike support with information related to your issue and ask if a fix is available. 
 
 - Carbon black relative dll
 
