@@ -4,7 +4,7 @@ description: When you use discrete device assignment to connect a LUN to a virtu
 ms.date: 11/03/2021
 author: v-tappelgate
 ms.author: v-tappelgate
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
