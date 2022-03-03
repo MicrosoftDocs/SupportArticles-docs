@@ -368,9 +368,11 @@
           "Supply Chain"
         ],
         "power-platform/power-apps/*.md": [
+           "Troubleshoot",
           "Power Apps"
         ],
         "power-platform/power-automate/*.md": [
+           "Troubleshoot",
           "Power Automate"
         ]
       },
