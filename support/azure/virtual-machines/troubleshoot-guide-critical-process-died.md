@@ -6,7 +6,6 @@ documentationcenter: ''
 author: genlin
 ms.author: genli
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows

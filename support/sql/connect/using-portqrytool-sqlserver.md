@@ -4,7 +4,7 @@ description: PortQryUI is a UI tool for SQL Server that helps you view the open 
 ms.date: 02/23/2022
 author: ramakoni1
 ms.author: v-jayaramanp
-ms.prod-support-area-path: Connection Issues
+ms.custom: sap:Connection Issues
 ms.prod: sql
 ---
 

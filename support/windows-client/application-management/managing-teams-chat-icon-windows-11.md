@@ -5,7 +5,7 @@ ms.date: 02/21/2022
 author: kaushika
 ms.author: v-jayaramanp
 ms.topic: troubleshooting
-ms.reviewers: warren-msft, kimberj
+ms.reviewer: warren-msft, kimberj
 ms.prod: windows-client
 ms.custom: sap:windows-script-host-cscript-or-wscript, csstroubleshoot
 ms.technology: windows-client-application-compatibility

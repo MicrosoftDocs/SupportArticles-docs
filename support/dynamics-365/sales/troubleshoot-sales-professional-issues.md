@@ -23,8 +23,8 @@ If your Microsoft 365 tenant administrator has disabled trial sign-up for your o
 
 There are two ways that the tenant administrator can prevent users from performing self-service sign-up:
 
-- Prevent email sign-ups for the tenant by using the *AdHocSubscriptionsNotAllowed* parameter
-- Prevent new users to be created within the tenant (NewUsersNotAllowed).
+- Prevent email sign-ups for the tenant by using the `AdHocSubscriptionsNotAllowed` parameter
+- Prevent new users to be created within the tenant (`NewUsersNotAllowed`).
 
 ### Resolution
 
