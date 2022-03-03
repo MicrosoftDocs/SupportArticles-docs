@@ -13,14 +13,14 @@ ms.author: v-jayaramanp
 
 _Applies to:_ &nbsp; SQL Server
 
-This article provides a procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU usage that occur in SQL Server, the following causes are the most common:
+This article provides a procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU usage that occur in SQL Server, the following are the most common causes:
 
 - High logical reads that are caused by table or index scans because of the following conditions:
   - Out-of-date statistics
   - Missing indexes
   - [Parameter sensitive plan (PSP) issues](/azure/azure-sql/identify-query-performance-issues)
   - Poorly designed queries
-- Increases in workload
+- Increase in workload
 
 You can use the following steps to troubleshoot high-CPU-usage issues in SQL Server.
 
@@ -180,7 +180,7 @@ Here's an example of how you can apply this to your query.
   OPTION (RECOMPILE)
   ```
 
-- Use the [(OPTIMIZE FOR)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value by using a typical parameter value that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here's an example of how to use this hint in your query.
+- Use the [OPTIMIZE FOR](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value by using a typical parameter value that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here's an example of how to use this hint in your query.
 
   ```sql
   DECLARE @LastName Name = 'Frintu'
@@ -189,7 +189,7 @@ Here's an example of how you can apply this to your query.
   OPTION (OPTIMIZE FOR (@LastName = 'Wood'))
   ```
 
-- Use the [(OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with the density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
+- Use the [OPTIMIZE FOR UNKNOWN](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with the density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
 
 - Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing completely. Here's an example of how to use it in a query:
 
@@ -282,7 +282,7 @@ INNER JOIN sys.trace_xe_event_map xemap
   ON evt.event_name = xemap.xe_event_name
 GO
 ```
-## Step 7: Fix SOS_CACHESTORE spinlock contention
+## Step 7: Fix `SOS_CACHESTORE spinlock` contention
 
 If your SQL Server instance experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often removed on unplanned query workloads, review the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
 
@@ -292,7 +292,7 @@ If the high-CPU condition is resolved by using `T174`, enable it as a [startup p
 
 ## Step 8: Configure your virtual machine
 
-If you are using a virtual machine, make sure that you aren't overprovisioning CPUs and that they are configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
+If you are using a virtual machine, ensure that you aren't overprovisioning CPUs and that they are configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
 
 ## Step 9: Scale up SQL Server
 
