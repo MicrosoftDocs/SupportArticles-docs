@@ -1,5 +1,5 @@
 - name: Welcome
-  href: aspnet-welcome.md
+  href: aspnet-welcome.yml
 
 - name: ASP.NET
   href: aspnet/toc.yml
