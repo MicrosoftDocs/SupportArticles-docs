@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: amkarmak
 manager: dcscontentpm
-editor: ''
 tags: virtual-machines
 ms.service: virtual-machines
 ms.collection: linux

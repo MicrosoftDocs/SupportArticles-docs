@@ -6,7 +6,6 @@ documentationcenter: ''
 
 author: srijang
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
 ms.collection: linux

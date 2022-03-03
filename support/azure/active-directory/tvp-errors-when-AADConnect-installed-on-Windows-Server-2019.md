@@ -5,7 +5,6 @@ ms.date: 3/10/2021
 author: genlin
 ms.author: genli
 ms.reviewer: riantu, nualex, wufrank
-editor: 
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
