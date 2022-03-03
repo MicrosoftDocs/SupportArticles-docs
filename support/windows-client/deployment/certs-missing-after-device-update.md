@@ -4,7 +4,7 @@ description: Works around an issue in which a device loses its system and user c
 ms.date: 03/30/2021
 author: v-tappelgate
 ms.author: v-tappelgate
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
