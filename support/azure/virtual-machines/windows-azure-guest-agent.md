@@ -6,7 +6,6 @@ ms.service: virtual-machines
 ms.collection: windows
 author: dkdiksha
 manager: dcscontentpm
-editor: 
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure

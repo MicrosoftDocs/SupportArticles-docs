@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
