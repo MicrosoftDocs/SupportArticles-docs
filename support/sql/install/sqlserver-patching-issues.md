@@ -45,7 +45,7 @@ If there's no matching scenario, look for more pointers in the log files.
 
 ## "Wait on Database Engine recovery handle failed" and "912" and "3417" errors
 
-Upgrade T-SQL scripts are shipped together with every SQL Server update. They are executed after the SQL Server binaries are upgraded. If these scripts don't run, for some reason, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs _912_ (/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and _3417_ (/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. Errors _912_ and _3417_ are generic errors that are associated with database script upgrade failures. The messages that precede the _912_ errors usually provide information about what exactly failed when these scripts were run.
+Upgrade T-SQL scripts are shipped together with every SQL Server update. They are executed after the SQL Server binaries are upgraded. If these scripts don't run, for some reason, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs _912_ (*/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error*) and _3417_ (*/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error*) errors in the latest SQL Server error log. Errors _912_ and _3417_ are generic errors that are associated with database script upgrade failures. The messages that precede the _912_ errors usually provide information about what exactly failed when these scripts were run.
 
 To troubleshoot and fix these errors, follow these steps:
 
@@ -80,7 +80,7 @@ The following errors are some of the common causes of upgrade script failures an
 
 ## Setup errors caused by missing installer files in Windows cache
 
-Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is C:\Windows\Installer. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition:
+Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is *C:\Windows\Installer*. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition:
 
 - Repair the SQL Server installation
 - Use the [FixMissingMSI tool](https://github.com/suyouquan/SQLSetupTools/releases/)
@@ -93,7 +93,7 @@ For detailed instructions, see [Restore the missing Windows Installer cache file
 
 ## Setup fails because of incorrect data or log location in registry
 
-The default location that you specify during installation for database data and log files is saved in the registry at `HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance`. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors messages that resemble the following messages:
+The default location that you specify during installation for database data and log files is saved in the registry at *HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance*. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors messages that resemble the following messages:
 
 - "Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid."
 - "The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory."
