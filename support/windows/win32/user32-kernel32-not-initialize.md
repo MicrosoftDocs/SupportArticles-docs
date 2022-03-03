@@ -4,7 +4,7 @@ description: This article describes an issue in which an application that is exe
 ms.date: 01/04/2021
 ms.custom: sap:System Services Development
 ms.reviewer: franki
-mc.topic: article
+ms.topic: troubleshooting
 ms.technology: windows-dev-apps-system-services-dev
 ---
 # User32.dll or Kernel32.dll does not initialize

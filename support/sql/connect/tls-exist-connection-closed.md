@@ -2,7 +2,7 @@
 title: An existing connection was forcibly closed
 description: Describes the scenarios when an existing connection was forcibly closed by the remote host. Provides the resolution to the scenarios.
 ms.date: 11/14/2021
-ms.prod-support-area-path: Connection issues
+ms.custom: sap:Connection issues
 author: cobibi
 ms.author: v-yunhya
 ms.prod: sql
