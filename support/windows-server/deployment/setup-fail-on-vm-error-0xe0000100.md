@@ -31,7 +31,7 @@ Consider the following scenario:
 In this scenario, the setup fails, and you receive the following error message:
 > Windows installation encountered an unexpected error. Verify that the installation sources are accessible, and restart the installation.  
 >
-> Error code: 0xE0000100"
+> Error code: 0xE0000100
 
 ## Cause
 
