@@ -493,6 +493,8 @@
       href: ../public-folders/public-folder-migration-errors.md
     - name: Migration fails with mailbox GUID
       href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
+    - name: Can't access on-premises PFs from Outlook for Mac
+      href: ../public-folders/outlook-for-mac-unable-access-public-folders.md
     - name: Permissions and settings don't propagate in EAC
       href: ../public-folders/permissions-settings-not-propagate-eac.md
     - name: Public folder couldn't be mail-enabled
