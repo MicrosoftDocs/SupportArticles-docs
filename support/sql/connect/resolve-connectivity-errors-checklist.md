@@ -16,22 +16,20 @@ _Original KB number:_ &nbsp; 4009936
 
 To effectively troubleshoot these connectivity issues, gather the following information:
 
-- The text of the error message and the error codes.
-- Whether the error is intermittent or consistent.
-- Application and system event logs from SQL Server and client systems—these logs can help check if there are any system wide issues occurring on your SQL Server.
-- The connection string from the application—these strings are typically found in *Web.config* files for ASP.NET applications.
+- The text of the error message and the error codes. Check whether the error is intermittent (happens only sometimes) or consistent (happens all the time).
+- Application and system event logs from SQL Server and client systems. These logs can help check if there are any system wide issues occurring on your SQL Server.
+- If the connections are failing from an application, the connection strings from the application. These strings are typically found in *Web.config* files for ASP.NET applications. 
 - Collect and review SQL Server error logs for other error messages, exceptions, and so on.
+- If you have administrator access to the SQL Server computer, gather and review current computer settings and service accounts by using the following procedure:
 
-If you have administrator access to the SQL Server computer, gather and review current computer settings and service accounts using the following procedure:
+  1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
 
-1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
+  1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
 
-1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
+  1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
 
-1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
-
-> [!NOTE]
-  > If you are troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run the SQLCheck tool on all systems involved.
+    > [!NOTE]
+    > If you are troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run the SQLCheck tool on all systems involved.
 
 ## Quick checklist for troubleshooting connectivity issues
 
@@ -40,7 +38,7 @@ If you have administrator access to the SQL Server computer, gather and review c
 
 ### Option 1
 
-Use the SQLCheck tool mentioned in the Prerequisites section and review information in various sections in the output file (Computer, Client Security and SQL Server). Use the information to address the issues contributing to your problem. See the examples below:
+If you have access to the output of SQLCheck tool mentioned in the Prerequisites section and review information in various sections in the output file (Computer, Client Security and SQL Server). Use the information to address the issues contributing to your problem. See the examples below:
 
 |Section in the file |Text to search for |Potential action |Can help troubleshoot (examples) |
 |-|-|-|-|
