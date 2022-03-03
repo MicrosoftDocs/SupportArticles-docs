@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4009936
 There are various causes for connectivity issues in SQL Server. This article series helps you troubleshoot the most common SQL Server connectivity issues and describes the tools and methods you can use for troubleshooting.
 
 > [!NOTE]
-> If multiple SQL Server instances in your environment are impacted, or the issue is intermittent, it usually indicates a Windows policy or networking issue. Although this series of articles provides guidance, it may not effectively troubleshoot some specific scenarios.
+> If multiple SQL Server instances in your environment are impacted, or the issue is intermittent, it usually indicates Windows policy or networking issues. Although this series of articles provides guidance, it may not effectively troubleshoot some specific scenarios.
 
 ## Preparation
 
