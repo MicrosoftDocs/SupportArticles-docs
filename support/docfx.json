@@ -369,10 +369,12 @@
         ],
         "power-platform/power-apps/*.md": [
           "Troubleshoot",
+          "Power Platform", 
           "Power Apps"
         ],
         "power-platform/power-automate/*.md": [
           "Troubleshoot",
+          "Power Platform", 
           "Power Automate"
         ]
       },
