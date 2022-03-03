@@ -6,7 +6,6 @@ ms.collection: linux
 ms.service: virtual-machines
 author: axelg
 manager: dcscontentpm
-editor: 
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
