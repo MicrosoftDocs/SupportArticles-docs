@@ -299,7 +299,7 @@ items:
     href: error-deploying-password-policy.md
   - name: Users are prompted to enroll when accessing Microsoft 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
-- name: General guidance
+- name: Additional guidance
   items:
   - name: Attributes synced from AD DS to Intune
     href: intune-synced-attributes-list.md
@@ -315,6 +315,8 @@ items:
     href: error-query-intune-data-warehouse.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
+  - name: Troubleshoot 503 errors for Intune NAC integration
+    href: nac-integration-errors.md
 - name: Getting support
   items:
   - name: Things to try before calling Intune support

@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: kailashmsft
 manager: dcscontentpm
-editor: ''
 tags: ''
 
 ms.service: virtual-machines

@@ -247,4 +247,4 @@ For Android Enterprise fully managed, dedicated, and corporate-owned work profil
 
 ### A Wi-Fi profile reports as failing, but seems to be working
 
-If a Wi-Fi profile is working correctly on a device, but reports as failing, it may be a reporting error. To fix this, update to the Intune app version 2021.05.02 or later.
+If a Wi-Fi profile is working correctly on an Android device, but reports as failing, it may be a reporting error. To fix this, update to the Intune app version 2021.05.02 or later.

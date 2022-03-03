@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: changov
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager,azure-service-management
 ms.service: virtual-machines
 ms.topic: troubleshooting

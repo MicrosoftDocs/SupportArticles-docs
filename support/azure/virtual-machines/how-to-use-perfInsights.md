@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
-editor: na
 tags: ''
 ms.service: virtual-machines
 ms.collection: windows
