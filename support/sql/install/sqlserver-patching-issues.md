@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot common SQL Server Cumulative Update installation issues
 description: This article helps you to troubleshoot common SQL Server update issues. 
-ms.date: 02/11/2022
-ms.prod-support-area-path: Installation, Patching, and Upgrade
+ms.date: 03/03/2022
+ms.custom: Installation, Patching, and Upgrade
 author: prmadhes-msft
 ms.author: v-jayaramanp
 ms.prod: sql
