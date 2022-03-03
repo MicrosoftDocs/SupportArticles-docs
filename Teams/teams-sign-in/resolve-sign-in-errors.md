@@ -20,7 +20,7 @@ search.appverid:
 
 > [!NOTE]
 > This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
-> 
+>
 If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem:
 
 1. Run the Teams Sign-in diagnostic:
