@@ -25,8 +25,8 @@ productDirectory:
     links:
     - url: devops/welcome-azure-devops.yml
       text: Troubleshooting articles for Azure DevOps
-  - title: Azure Log Analytics
-    imageSrc: "https://static.docs.com/ui/media/product/azure/log-analytics.svg "
+  - title: Azure Monitor
+    imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
     - url: log-analytics/welcome-log-analytics.yml
       text: Troubleshooting articles for Azure Log Analytics
