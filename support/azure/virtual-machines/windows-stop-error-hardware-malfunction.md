@@ -4,7 +4,6 @@ description: This article provides steps to resolve issues where Windows Server 
 services: virtual-machines
 documentationcenter: ''
 author: mibufo
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
