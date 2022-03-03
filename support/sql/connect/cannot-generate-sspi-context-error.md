@@ -7,13 +7,13 @@ author: cobibi
 ms.author: v-yunhya
 ms.prod: sql
 ---
-# "Cannot generate SSPI context" error when using Windows authentication to connect an SQL Server
+# "Cannot generate SSPI context" error when using Windows authentication to connect SQL Server
 
 _Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ 811889
 
 > [!NOTE]
-> Before you start troubleshooting, you can check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before you start troubleshooting, we recommend that you check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 When you use Windows authentication to connect a SQL Server instance remotely, you receive the following error message:
 
@@ -31,7 +31,7 @@ Kerberos v5 protocol is an industry-standard security package and is one of the 
 
 ### What does the "Cannot generate SSPI context" error mean?
 
-This error means that SSPI tried but couldn't use Kerberos authentication to delegate client credentials through TCP/IP or Named Pipes to SQL Server. In most cases, a misconfigured Service Principal Name (SPN) causes this error.
+This error means that SSPI tries but can't use Kerberos authentication to delegate client credentials through TCP/IP or Named Pipes to SQL Server. In most cases, a misconfigured Service Principal Name (SPN) causes this error.
 
 ### What is SPN?
 
