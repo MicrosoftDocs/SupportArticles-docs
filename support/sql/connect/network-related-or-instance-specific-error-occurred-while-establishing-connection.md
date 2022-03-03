@@ -11,13 +11,13 @@ ms.prod: sql
 
 _Applies to:_ &nbsp; SQL Server
 
-When connecting to a SQL Server instance, you may encounter one or more of the [error messages](#error-messages) below. The article provides some steps to help you troubleshoot these errors, hich are provided in order of the issues from simple to complex.
+When connecting to a SQL Server instance, you may encounter one or more of the [error messages](#error-messages) below. This article provides some steps to help you troubleshoot these errors. The issues are ordered from simple to complex.
 
 ## Error messages
 
 The complete error messages vary depending on the client library that is used in the application and the server environment. You can check the following details to see if you're encountering one of the following error messages:
 
-### A network-related or instance-specific error occurred while establishing a connection to SQL Server. Verify that the instance name is correct and that SQL Server is configured to allow remote connections
+### "A network-related or instance-specific error occurred while establishing a connection to SQL Server. Verify that the instance name is correct and that SQL Server is configured to allow remote connections"
 
 <details>
 <summary>provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server (Microsoft SQL Server, Error: 53)</summary>
@@ -56,11 +56,11 @@ Microsoft SQL Server, Error: 10060
 </details>
 
 <details>
-<summary>provider: Named Pipes Provider, error:40 - Could not open a connection to SQL Server</summary>
+<summary>provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server</summary>
   
 A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections.<br/>
-provider: Named Pipes Provider, error:40 - Could not open a connection to SQL Server<br/>
-Microsoft SQL Server, Error:53<br/>
+provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server<br/>
+Microsoft SQL Server, Error: 53<br/>
 The network path was not found
 <br/><br/>
 </details>
@@ -75,7 +75,7 @@ SQL Server Native Client Data Link Error<br/>
 <br/><br/>
 </details>
 
-### SQL Server does not exist or access denied
+### "SQL Server does not exist or access denied"
   
 This error usually means that the client can't find the SQL Server instance. This issue occurs when at least one of the following problems exists:
 
@@ -84,11 +84,11 @@ This error usually means that the client can't find the SQL Server instance. Thi
 - The TCP port number isn't specified correctly.
 
 > [!NOTE]
-> For troubleshooting connectivity issues in high availability scenarios review the following topics:
+> For troubleshooting connectivity issues in high availability scenarios review the following articles:
 >
-> - [Availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
+> - [Connect to an Always On availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
 >
-> - [Failover cluster instances](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)
+> - [Always On Failover Cluster Instances (SQL Server)](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)
 
 ## Gather information for troubleshooting the error
 
@@ -96,7 +96,7 @@ To help with troubleshooting, we recommend that you gather the information liste
 
 ### Option 1: Use SQL Check tool to gather the required information
 
-If you can login locally to SQL Server computer and have administrator access to the computer use  SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki) to get most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the information in the tool's home page or check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page.
+If you can sign in locally to SQL Server computer and have administrator access, use  SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki). This tool provides most of the information required for troubleshooting in one file. Review the tool's home page for more information on using the tool and what information it gathers.  You can also check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page.
 
 ### Option 2: Collect the data individually using the following procedures
 
@@ -130,10 +130,10 @@ You can use the following steps to get the IP address of the computer hosting th
 In most cases, you connect to the Database Engine from another computer by using the TCP protocol. To get the TCP port of the instance, follow these steps:
 
 1. Use SQL Server Management Studio on the computer running SQL Server and connect to the instance of SQL Server. In **Object Explorer**, expand **Management**, expand **SQL Server Logs**, and then double-click the current log.
-2. In the **Log File Viewer**, select the **Filter** button on the toolbar. In the **Message contains text** box, type *server is listening on*, select **Apply filter**, and then select **OK**.
+2. In the **Log File Viewer**, select **Filter** on the toolbar. In the **Message contains text** box, type *server is listening on*, select **Apply filter**, and then select **OK**.
 3. A message like **Server is listening on [ 'any' \<ipv4> 1433]** should be listed.
 
-    This message indicates that the instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port that's used by the Database Engine or the default instance of SQL Server. Only one instance of SQL Server can use this port, so if more than one instance of SQL Server is installed, some instances must use other port numbers.) Note down the port number used by the SQL Server instance that you're trying to connect to.
+    This message indicates that the instance of SQL Server is listening on all IP addresses on this computer (for IP version 4) and TCP port 1433. (TCP port 1433 is usually the port that's used by the Database Engine or the default instance of SQL Server. Only one instance of SQL Server can use this port. If more than one instance of SQL Server is installed, some need other port numbers.) Note down the port number used by the SQL Server instance that you're trying to connect to.
 
     > [!NOTE]
     >
@@ -182,7 +182,7 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 
 1. Search the output from SQLCheck file for "SQL Server Information".
 
-1. In the section titled "Services of Interest", search for SQLBrowser in **Name** column and check its status using **Started** column. If the value is True, the services is started. Otherwise, the service is currently not running, and you need to start the same. For more information, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
+1. In the section titled "Services of Interest", search for SQLBrowser in the **Name** column and check its status using the **Started** column. If the value is True, the service is started. Otherwise, the service is currently not running, and you need to start it. For more information, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
 
 ### Option 2: Use SQL Server Configuration Manager
 
@@ -190,7 +190,7 @@ To connect to a named instance, the SQL Server Browser service must be running. 
 
 For more information on using SQL Server Browser service in your environment, see [SQL Server Browser service](/sql/tools/configuration-manager/sql-server-browser-service).
 
-For more information, on stopping and starting SQL Services see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
+For more information on stopping and starting SQL Services, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
 
 > [!NOTE]
 > If you can't have the SQL Server Browser service running in your environment, see [Connecting to SQL server named instance without SQL Server browser service](https://social.msdn.microsoft.com/Forums/en-US/edeab7bc-300d-4e19-8767-1c299970d841/connecting-to-sql-server-intance-without-browser-running).
@@ -200,7 +200,7 @@ For more information, on stopping and starting SQL Services see [Start, stop, pa
 You often encounter errors when an incorrect server name is specified in the connection string. Make sure that the server name matches the one that you retrieved in the previous steps.
 
 > [!NOTE]
-> If you are using SQLCheck tool, review **NetBios Name/FQDN** values in **Computer Information** section of the output file.
+> If you are using the SQLCheck tool, review the **NetBios Name/FQDN** values in the **Computer Information** section of the output file.
 
 - For examples on connection strings, see [SQL Server Connection Strings](https://www.connectionstrings.com/sql-server/).
 - For more detailed examples, see [Proof of concept connecting to SQL using ADO.NET](/sql/connect/ado-net/step-3-connect-sql-ado-net) under [Homepage for SQL client programming](/sql/connect/homepage-sql-connection-programming).
@@ -214,9 +214,9 @@ Aliases are often used in client environments when you connect to SQL Server wit
 
 ### Option 1: Using the output file from SQLCheck tool
 
-1. In the SQLCheck output file, search for the string SQL Aliases. (This will be inside **Client Security and Driver Information** section of the file)
+1. In the SQLCheck output file, search for the string SQL Aliases. (This string will be inside the **Client Security and Driver Information** section of the file)
 
-1. Review the entries in the table. If there is none present, it means there are no aliases on the computer. If there is an entry, review the information to ensure the servername and port number are set to correct values.
+1. Review the entries in the table. If there's none present, there are no aliases on the computer. If there's an entry, review the information to ensure the server name and port number are set to correct values.
 
 Example output:  
 SQL Aliases:
@@ -241,7 +241,7 @@ The above indicates that `prodsql` is an alias for a SQL Server called `prod_sql
    1. Check the connection parameters for the alias and make sure that they're correct. The following common scenarios can cause connectivity problems:
       - Incorrect IP address for the **Server** field. Make sure that the IP address matches the entry in the SQL Server error log file.
       - Incorrect server name in the **Server** field. For example, your server alias points to the correct server name. However, the connections will fail if the value of the server name parameter is incorrect.
-      - Incorrect pipe name format (assume that you use a named pipes alias).
+      - Incorrect pipe name format (assuming that you use a named pipes alias).
 
         - For connecting to a default instance named *Mydefaultinstance*, the pipe name should be *\\\\Mydefaultinstance\pipe\sql\query*.
         - For connecting to a named instance *MySQL\Named*, the pipe name should be *\\\\MySQL\pipe\MSSQL$Named\sql\query*.
@@ -256,7 +256,7 @@ The above indicates that `prodsql` is an alias for a SQL Server called `prod_sql
 You can verify the firewall configuration depending on the default instance or named instance.
 
 > [!NOTE]
-> If you are using third party firewalls in your network, the concepts still apply, but you may have to work with your network administrator or consult firewall product's documentation for more information on how to configure firewall to allow necessary ports for communication with SQL server.
+> If you are using third party firewalls in your network, the concepts still apply. However, you may have to work with your network administrator or consult the firewall product's documentation for more information on configuring the firewall to allow necessary ports for communication with the SQL server.
 
 ### Default instance of SQL Server
 
@@ -268,7 +268,7 @@ A default instance typically runs on port 1433. Some installations also use a no
 
    - If your SQL Server default instance isn't using 1433, try to append the port number of SQL Server to the server name by using the format `<servername>,<portnumber>` and see whether it works. For example, if your SQL instance name is *MySQLDefaultinstance* and it's running on port 2000, specify the server name as *MySQLServer, 2000* and see whether it works.
 
-1. - If it doesn't work, it indicates the firewall is blocking the port. You need to add the port to firewall exclusion list either by using the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or by working with your network administrator.
+1. - If it doesn't work, it indicates the firewall is blocking the port. You need to add the port to the firewall exclusion list either. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or by working with your network administrator.
 
     - If it does work, it indicates that the firewall is allowing communication through that port. You need to change your connection string in order to use the port number and your server name in the connection string of your application.
 
@@ -290,23 +290,23 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
           - The instance is [hidden](/sql/database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine) from the SQL Server Browser service.
 
-- Method 2: Check connection by using PortqryUI tool.
+- Method 2: Check the connection by using the PortqryUI tool.
 
-    Use PortqryUI tool with your named instance and observe the resulting output. If you see the message that the UDP port 1434 is filtered, it indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
+    Use the PortqryUI tool with your named instance and observe the resulting output. You may see a message that the UDP port 1434 is filtered. This message indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
 
     Determine whether the SQL Server instance is listening on dynamic or static ports. And then use the following method that is relevant to your scenario. If you aren't sure, see [How to check if SQL Server is listening on a dynamic port or static port](static-or-dynamic-port-config.md).
 
-    - Scenario 1: Dynamic ports. In this case, make sure that the SQL Server Browser service is started and UDP port 1434 isn't blocked on the firewall between the client and the server. If you can't do either of them, you should switch your SQL Server instance to a static port and use the procedure documented in [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).
+    - Scenario 1: Dynamic ports. In this case, ensure that the SQL Server Browser service is started. Also, check if the UDP port 1434 isn't blocked on the firewall between the client and the server. If you can't do either of these things, you should switch your SQL Server instance to a static port. Then, use the procedure documented in [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).
 
     - Scenario 2: Static port configuration. Either SQL Server Browser isn't running or UDP 1434 can't be opened on the firewall. In this case, make sure that the static port is specified in your connection string and that the port isn't blocked by the firewall. For more information, review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access).
 
 ## Step 6: Verify the enabled protocols on SQL Server
 
-In some installations of SQL Server, connections to the Database Engine from another computer are not enabled unless an administrator manually enables them. You can use one of the following options to check and enable the necessary protocols to allow remote connections to SQL Server Database Engine.
+In some installations of SQL Server, connections to the Database Engine from another computer aren't enabled unless an administrator manually enables them. You can use one of the following options to check and enable the necessary protocols to allow remote connections to SQL Server Database Engine.
 
 ### Option 1: Using the output file from SQLCheck tool
 
-1. Search SQLCheck output file for Details for SQL Server Instance and locate the information for your SQL Server instance.
+1. Search the SQLCheck output file for Details for SQL Server Instance and locate the information for your SQL Server instance.
 
 1. Review the values for the following table:
 
@@ -314,9 +314,9 @@ In some installations of SQL Server, connections to the Database Engine from ano
     |-|-|-|
     |Shared Memory Enabled |Can either be true of false - only affects local connections. |[Creating a Valid Connection String Using Shared Memory Protocol](/sql/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol)|
     |Named Pipes Enabled |If false, both local and remote connections using Named pipes will fail |[Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))|
-    |TCP Enabled |If false, both local and remote connections using TCP/IP will fail. <br/>**Note** Majority of the SQL Server installations use TCP/IP as the communication protocol between server and the client.|[Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))|
+    |TCP Enabled |If false, both local and remote connections using TCP/IP will fail. <br/>**Note** The majority of the SQL Server installations use TCP/IP as the communication protocol between server and the client.|[Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))|
 
-1. Enable required protocols by using SQL Server Configuration Manager or SQL Server PowerShell. For more information on how to do this, see [Enable or Disable a Server Network Protocol](/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol).
+1. Enable required protocols by using SQL Server Configuration Manager or SQL Server PowerShell. For more information, see [Enable or Disable a Server Network Protocol](/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol).
 
     > [!NOTE]
     > After enabling a protocol, the Database Engine must be stopped and restarted for the change to take effect.
@@ -343,7 +343,7 @@ Connecting to SQL Server by using TCP/IP requires that Windows establish the con
 1. If your network is configured properly, `ping` returns `Reply from <IP address>` followed by some additional information. If `ping` returns `Destination host unreachable` or `Request timed out`, TCP/IP isn't correctly configured. Errors at this point indicate a problem with the client computer, the server computer, or something about the network such as a router. To troubleshoot network problems, see [Advanced troubleshooting for TCP/IP issues](/windows/client-management/troubleshoot-tcpip).
 1. If the `ping` test succeeds by using the IP address, test whether the computer name can be resolved to the TCP/IP address. On the client computer, in the **Command Prompt** window, type *ping* and the name of the computer that's running SQL Server. For example, `ping newofficepc`.
 1. If ping to the IP address succeeds, but ping to the computer name returns `Destination host unreachable` or `Request timed out`, you might have old (stale) name resolution information cached on the client computer. Type `ipconfig /flushdns` to clear the DNS (Dynamic Name Resolution) cache. Then ping the computer by name again. When the DNS cache is empty, the client computer checks the latest information about the IP address for the server computer.
-1. If your network is configured properly, `ping` returns `Reply from <IP address>` followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as `Destination host unreachable` or `Request timed out` when pinging by computer name, then name resolution isn't correctly configured. For more information, see how to [Troubleshoot Basic TCP/IP Problems](/previous-versions/tn-archive/bb727023(v=technet.10)). Successful name resolution isn't required to connect to SQL Server, but if the computer name can't be resolved to an IP address, connections must be made to specify the IP address. Name resolution can be fixed later.
+1. If your network is configured properly, `ping` returns `Reply from <IP address>` followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as `Destination host unreachable` or `Request timed out` when pinging by computer name, then name resolution isn't correctly configured. For more information, see how to [Troubleshoot Basic TCP/IP Problems](/previous-versions/tn-archive/bb727023(v=technet.10)). Successful name resolution isn't required to connect to SQL Server. However, if the computer name can't be resolved to an IP address, connections must be made to specify the IP address. Name resolution can be fixed later.
 
 > [!NOTE]
 > You can also use either [Test-NetConnection](/previous-versions/windows/powershell-scripting/dn372891(v=wps.630)) or [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection) cmdlet to test TCP connectivity according to the PowerShell version that's installed on the computer. For more information on PowerShell cmdlet, see [Cmdlet Overview](/powershell/scripting/developer/cmdlet/cmdlet-overview).
