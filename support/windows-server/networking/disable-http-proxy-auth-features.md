@@ -57,4 +57,4 @@ Starting in Windows Server 2019 and Windows 10, version 1809, you can disable WP
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\DisableWpad
 ```
 
-When you disable WPAD, you have to manually configure all proxies.
+After you disable WPAD, you have to manually configure all proxies.
