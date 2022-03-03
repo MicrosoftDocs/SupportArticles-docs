@@ -47,7 +47,17 @@
 
     - name: Web Apps
       tocHref: /troubleshoot/developer/webapps/
-      topicHref: /troubleshoot/developer/webapps/welcome-webapps
+      topicHref: /troubleshoot/developer/webapps
+      items:
+      - name: ASP.NET
+        tocHref: /troubleshoot/developer/webapps/aspnet
+        topicHref: /troubleshoot/developer/webapps/aspnet-welcome.yml
+      - name: ASP.NET Core
+        tocHref: /troubleshoot/developer/webapps/aspnetcore
+        topicHref: /troubleshoot/developer/webapps/aspnet-welcome.yml
+      - name: Internet Information Services
+        tocHref: /troubleshoot/developer/webapps/iis/
+        topicHref: /troubleshoot/developer/webapps/iis/iis-welcome.yml
 
     - name: SQL Server
       tocHref: /troubleshoot/sql/

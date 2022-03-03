@@ -11,12 +11,12 @@ metadata:
 productDirectory:
   items:
   - title: ASP.NET
-    imageSrc: "../media/hub-landing/logo_NET.svg"
+    imageSrc: "../../media/hub-landing/logo_NET.svg"
     summary: Troubleshooting articles for ASP.NET
     url: aspnet-welcome.yml
 
   - title: Internet Information Services
-    imageSrc: "../media/hub-landing/iis.jpg"
+    imageSrc: "../../media/hub-landing/iis.jpg"
     summary: Troubleshooting articles for Internet Information Services
     url: /iis/iis-welcome.yml
 
