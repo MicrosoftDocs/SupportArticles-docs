@@ -1,8 +1,8 @@
 ---
 title: Managing the Teams Chat icon on Windows 11
 description: This article helps you to manage the Chat icon on Windows 11. 
-ms.date: 02/21/2022
-author: kaushika
+ms.date: 03/03/2022
+author: kaushika-msft
 ms.author: v-jayaramanp
 ms.topic: troubleshooting
 ms.reviewers: warren-msft, kimberj
@@ -40,7 +40,7 @@ If you see the Chat icon on the Taskbar but you don’t see the Teams app, selec
 If you see this screen, select **Continue** to set up Teams.
 
 > [!NOTE]
-> This indicates that Teams is not installed. Clicking Continue will proceed with installing the app for the logged-on user.
+> This indicates that Teams is not installed. Selecting **Continue** will proceed with installing the app for the logged-on user.
 
 Run the following PowerShell cmdlet to check whether the Windows 11-based device has Teams installed:
 
@@ -104,9 +104,9 @@ You can configure the Chat icon on the taskbar using the following dialog box.
 
 ## Removing the Chat Icon using Intune
 
-Use the new CSP setting, "Experience/ConfigureChatIcon", which removes the Chat Icon. This requires the Enterprise or Education edition. For more information, see [Policy CSP – Experience – Windows Client Management | Microsoft Docs](/windows/client-management/mdm/policy-csp-experience).
+Use the new CSP setting, "Experience/ConfigureChatIcon", which removes the Chat Icon. This requires the Enterprise or Education edition. For more information, see [Policy CSP – Experience](/windows/client-management/mdm/policy-csp-experience).
 
-Create a new Configuration Profile for Windows 10 and later, type Custom and use the following setting:
+Create a new Configuration Profile for Windows 10 and later, type *Custom* and use the following setting:
 
 `OMA-URI = ". /Device/Vendor/MSFT/Policy/Config/Experience/ConfigureChatIcon"`
 
@@ -117,9 +117,9 @@ The values for this policy are 0, 1, 2, and 3. This policy defaults to 0 if not 
 - **2 – Hide**: The Chat icon doesn’t appear by default. You can show or hide it in Settings.
 - **3 – Disabled**: The Chat icon doesn’t appear on the taskbar. Settings are not available to show or hide the icon.
 
-## Removing the Chat Icon using Intune – Settings Catalog
+## Removing the Chat icon using Intune – Settings Catalog
 
-To remove the Chat Icon using Intune – Settings Catalog, do the following steps:
+To remove the Chat icon using Intune – Settings Catalog, do the following steps:
 
 1. Create a new Configuration Policy.
 1. Search for Experience.
