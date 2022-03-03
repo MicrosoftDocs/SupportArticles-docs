@@ -5,7 +5,6 @@ services: azure-service-management
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue,azure-resource-manager,azure-service-management
 
 ms.service: virtual-machines

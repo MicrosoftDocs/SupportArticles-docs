@@ -5,7 +5,6 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: DavidCBerry13
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
