@@ -10,3 +10,5 @@
     href: resolve-windows-agent-installation-issues.md
   - name: Troubleshoot erased proxy settings
     href: erased-proxy-settings-microsoft-monitoring-agent.md
+  - name: Troubleshoot MMA Agent problems
+    href: mma-troubleshoot-basics.md

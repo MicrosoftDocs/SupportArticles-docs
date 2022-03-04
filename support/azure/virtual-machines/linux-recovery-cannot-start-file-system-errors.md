@@ -1,11 +1,10 @@
 ---
-title: Troubleshoot Linux VM starting issues due to file system errors | Microsoft Docs
-description: Learn how to troubleshoot Linux VM starting issues due to file system errors
+title: Troubleshoot Linux VM startup issues due to file system errors | Microsoft Docs
+description: Learn how to troubleshoot Linux VM not starting due to file system errors
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: ''
 ms.service: virtual-machines
 ms.collection: linux
@@ -18,7 +17,7 @@ ms.author: v-six
 
 ---
 
-# Troubleshoot Linux VM starting issues due to file system errors
+# Symptom
 
 You cannot connect to an Azure Linux virtual machine (VM) by using Secure Shell (SSH). When you run the Boot Diagnostics feature on [Azure portal](https://portal.azure.com/), you see log entries that resemble the following examples.
 
@@ -65,8 +64,11 @@ Checking all file systems.
 /dev/sdc1: clean, 12/1048576 files, 109842/4192957 blocks
 /dev/sde1 : clean, 51/67043328 files, 4259482/268173037 blocks
 ```
+## Cause
+This problem can occur if the file system was not shut down cleanly or storage related issues. The issues include hardware or software errors, issues with drivers or programs, write errors, etc. 
 
-This problem may occur if the file system was not shut down cleanly or storage related issues. The issues include hardware or software errors, issues with drivers or programs, write errors, etc. It is always important to have a backup of critical data. The tools that describe in this article may help recover file systems, but it is data loss can still occur.
+> [!NOTE]
+> It is always important to have a backup of critical data. The tools described in this article may help recover file systems, but data loss can still occur.
 
 Linux has several file system checkers available. The most common for the distributions in Azure are: [FSCK](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/fsck-fs-specific), [E2FSCK](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/fsck-fs-specific), and [Xfs_repair](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/xfsrepair).
 
