@@ -17,6 +17,8 @@
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name:  Can't send messages to a group chat
       href: ./teams-administration/unable-send-message-group-chat.md
+    - name: Clear the Teams client cache
+      href: ./teams-administration/clear-teams-cache.md  
     - name: Error switching a tenant to Teams Only mode
       href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
@@ -133,6 +135,8 @@
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
   - name: Meetings
     items:
+    - name: External users appear as Unknown
+      href: ./meetings/external-user-shown-as-unknown.md
     - name: Issues with meeting chat
       href: ./meetings/meeting-chat-issues.md
     - name: Issues with meeting recordings
