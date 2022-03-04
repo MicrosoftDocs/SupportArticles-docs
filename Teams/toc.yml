@@ -26,7 +26,7 @@
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Public team list doesn't display all teams
-      href: ./teams-administrations/public-team-list-doesnt-display-all.md
+      href: ./teams-administration/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: Troubleshoot connectivity issues
