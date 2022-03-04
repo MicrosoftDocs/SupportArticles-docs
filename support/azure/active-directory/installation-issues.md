@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 3121701
 
 1. Identify the error message. To do this, follow these steps:
 
-    1. Go to the `%localappdata%\AADConnect` folder, and then open the Synchronization Service_install.txt file.
+    1. Go to the `%ProgramData%\AADConnect` folder, and then open the Synchronization Service_install.txt file.
     2. Search for this string: **value 3**
     3. Locate the error message just before the **value 3** string in the file.
 
