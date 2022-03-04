@@ -1,6 +1,6 @@
 ---
 title: Chinese IME dictionaries are not ready yet in Windows Server 2022
-description:  Provides a workaround to fix the issue that occurs in Windows Server 2022 when you enable Chinese keyboard layouts by using the function InstallLayoutOrTip.
+description: Provides a workaround to fix the issue that occurs in Windows Server 2022 when you enable Chinese keyboard layouts by using the function InstallLayoutOrTip.
 ms.date: 03/09/2022
 ms.reviewer: yyan
 ms.technology: windows-dev-apps-desktop-app-ui-dev
@@ -8,11 +8,11 @@ ms.technology: windows-dev-apps-desktop-app-ui-dev
 
 # Chinese IME dictionaries are not ready yet in Windows Server 2022
 
-This article provides a workaround to resolve the issue that occurs when a standard user enables the Chinese keyboard layouts by using the function `InstallLayoutOrTip`.
+This article provides a workaround to resolve the issue that occurs when a Standard user enables the Chinese keyboard layouts by using the function `InstallLayoutOrTip`.
 
 ## Symptoms
 
-In Windows Server 2022, when a standard user uses the function `InstallLayoutOrTip` to enable a Chinese keyboard layout, like **Chinese (Simplified, China)**, **Chinese (Traditional, HongKong SAR)** or **Chinese (Traditional, Taiwan)**, the user can't input Chinese characters and sees an error message that resembles the following one:
+In Windows Server 2022, when a Standard user uses the function `InstallLayoutOrTip` to enable a Chinese keyboard layout, like **Chinese (Simplified, China)**, **Chinese (Traditional, HongKong SAR)** or **Chinese (Traditional, Taiwan)**, the user can't input Chinese characters and sees an error message that resembles the following one:
 
 > Simplified Chinese IME dictionaries are not ready yet.  
   Please check the status from language setting.
