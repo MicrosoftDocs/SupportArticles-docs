@@ -23,7 +23,7 @@ description: Explains why a Teams group is deleted when the team is deleted.
 
 ## Summary
 
-When deleting a team in Microsoft Teams, the group associated with it's also deleted.
+When deleting a team in Microsoft Teams, the group associated with the team is also deleted.
 
 ## More information
 
