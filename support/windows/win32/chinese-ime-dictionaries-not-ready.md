@@ -30,20 +30,20 @@ To work around the issue, use one of the following methods as an administrator:
 
 - To use the offline command to work around the issue, follow these steps:
 
-    1. Use [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) to mount your Windows image:
+    1. Run the following [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command in your **Command Prompt** window to mount your Windows image:
 
         ```cmd
         md C:\mount\windows
         Dism /Mount-Image /ImageFile:install.wim /Index:1 /MountDir:"C:\mount\windows"
         ```
 
-    1. Add the FODs package by using the command `Dism /Image:"C:\mount\windows" /Add-Package /PackagePath="<FilePath>\<PackageName>.cab"`. For example:
+    1. Add the FODs package by running the command `Dism /Image:"C:\mount\windows" /Add-Package /PackagePath="<FilePath>\<PackageName>.cab"` in your **Command Prompt** window. For example:
 
         ```cmd
         Dism /Image:"C:\mount\windows" /Add-Package /PackagePath="C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
         ```
 
-    1. Unmount the image:
+    1. Unmount the image by running the following command in your **Command Prompt** window:
 
         ```cmd
         Dism /Unmount-Image /MountDir:C:\mount\windows /Commit
