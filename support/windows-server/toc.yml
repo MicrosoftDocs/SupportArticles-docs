@@ -196,6 +196,8 @@
       href: ./identity/windows-app-cant-start.md
   - name: Active Directory replication
     items:
+    - name: 'Troubleshooting guidance: Active Directory replication'
+      href: ./identity/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
       href: ./identity/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
@@ -974,6 +976,8 @@
       href: ./deployment/multicast-deployment-fails-from-wds.md
   - name: Servicing
     items:
+    - name: 'Troubleshooting guidance: Windows Server update'
+      href: ./deployment/troubleshoot-windows-server-update-guidance.md
     - name: Can't connect to WSUS Administration Website
       href: ./deployment/cannot-connect-to-wsus-administration-website.md
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -1394,6 +1398,10 @@
     href: ./networking/networking-overview.md
   - name: Access to remote file shares (SMB or DFS Namespace)
     items:
+    - name: 'Troubleshooting guidance: SMB'
+      href: ./networking/troubleshoot-smb-guidance.md
+    - name: 'Troubleshooting guidance: DFS Namespace'
+      href: ./networking/troubleshoot-dfs-namespace-guidance.md
     - name: '"Delayed Write Failed" error'
       href: ./networking/delayed-write-failed-error-data-lost.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
@@ -1496,6 +1504,8 @@
       href: ./networking/support-policy-for-dfsr-dfsn-deployment.md
   - name: DNS
     items:
+    - name: 'Troubleshooting guidance: DNS'
+      href: ./networking/troubleshoot-dns-guidance.md
     - name: Accessing a server locally by using its FQDN or CNAME alias fails
       href: ./networking/accessing-server-locally-with-fqdn-cname-alias-denied.md
     - name: Active Directory-integrated DNS zone serial number behavior
@@ -1580,6 +1590,8 @@
       href: ./networking/wins-registration-fails-if-server-point-to-itself-for-wins-name-resolution.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     items:
+    - name: 'Troubleshooting guidance: DHCP'
+      href: ./networking/troubleshoot-dhcp-guidance.md
     - name: Can't add a DHCP reservation
       href: ./networking/cant-add-dhcp-reservation.md
     - name: DHCP client can't get a DHCP-assigned IP address
@@ -1638,6 +1650,10 @@
       href: ./networking/certificate-requirements-eap-tls-peap.md
   - name: Remote access
     items:
+    - name: 'Troubleshooting guidance: Remote access (VPN and AOVPN)'
+      href: ./networking/troubleshoot-remote-access-vpn-and-aovpn-guidance.md
+    - name: 'Troubleshooting guidance: DirectAccess'
+      href: ./networking/troubleshoot-directaccess-guidance.md
     - name: Can't connect to Internet on a VPN server
       href: ./networking/cannot-connect-to-internet-vpn-server.md
     - name: Configure remote access client account lockout
@@ -1676,6 +1692,10 @@
       href: ./networking/troubleshoot-directaccess-server-console-networking.md
   - name: TCP/IP communications
     items:
+    - name: 'Troubleshooting guidance: TCP/IP communication'
+      href: ./networking/troubleshoot-tcp-ip-communication-guidance.md
+    - name: 'Troubleshooting guidance: TCP/IP performance'
+      href: ./networking/troubleshoot-tcp-ip-performance-guidance.md
     - name: A SMB server is unresponsive
       href: ./networking/smb-server-unresponsive.md
     - name: Accessing websites hosted on Akamai CDN fails
@@ -1790,6 +1810,8 @@
       href: ./networking/credentials-prompt-access-webdav-fqdn-sites.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
+    - name: 'Troubleshooting guidance: Windows Firewall with Advanced Security'
+      href: ./networking/troubleshoot-windows-firewall-with-advanced-security-guidance.md
     - name: Error 0x000006D9 when you share a printer
       href: ./networking/error-0x000006d9-when-you-share-printer.md
     - name: How to disable stealth mode
@@ -1842,6 +1864,8 @@
       href: ./performance/values-process-control-parameters.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: 'Troubleshooting guidance: stop errors and unexpected restart'
+      href: ./performance/troubleshoot-stop-errors-guidance.md
     - name: '"Stop 0x0000000A" error for processor resumes from C1 idle state'
       href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
     - name: Disable or enable Dr. Watson program
@@ -2002,6 +2026,8 @@
   items:
   - name: 'Printing'
     href: ./printing/printing-overview.md
+  - name: 'Troubleshooting guidance: Printing'
+    href: ./printing/troubleshoot-printer-guidance.md
   - name: Troubleshoot printing issues
     items:
     - name: Troubleshoot printing and best practices
@@ -2240,6 +2266,8 @@
       href: ./remote/remotefx-usb-redirected-scanner-not-start.md
   - name: Remote Desktop Services (Terminal Services) licensing
     items:
+    - name: 'Troubleshooting guidance: RDS Licensing'
+      href: ./remote/troubleshoot-rds-licensing-guidance.md
     - name: Cannot connect to RDS because no RD Licensing servers are available
       href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
@@ -2272,6 +2300,8 @@
       href: ./remote/terminal-server-licensing.md
   - name: Remote desktop sessions
     items:
+    - name: 'Troubleshooting guidance: RDS session connectivity'
+      href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: '"System error 67 has occurred" when using FQDN to connect a remote computer'
       href: ./remote/network-name-cannot-found-fqdn-remote-computer.md
     - name: Applications crash if another user logs off
@@ -2402,6 +2432,8 @@
   items:
   - name: Software Defined Networking
     href: ./software-defined-networking/software-defined-networking-overview.md
+  - name: 'Troubleshooting guidance: SDN'
+    href: ./software-defined-networking/troubleshoot-sdn-guidance.md
   - name: Internal DNS Server for SDN
     items:
     - name: Software Defined Data Center and Software Defined Networking
@@ -2650,6 +2682,8 @@
       href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
   - name: Live Migration
     items:
+    - name: 'Troubleshooting guidance: Live Migration'
+      href: ./virtualization/troubleshoot-live-migration-guidance.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
@@ -2732,6 +2766,8 @@
       href: ./windows-security/use-eventcombmt-to-search-logs-for-account-lockout.md
   - name: Bitlocker
     items:
+    - name: 'Troubleshooting guidance: MBAM'
+      href: ./windows-security/troubleshoot-mbam-guidance.md
     - name: How to configure MBAM with Secure Network Communication
       href: ./windows-security/mbam-secure-network-communication.md
     - name: How to use BitLocker Recovery Password Viewer
