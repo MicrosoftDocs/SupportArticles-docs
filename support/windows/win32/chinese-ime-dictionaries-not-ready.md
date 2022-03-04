@@ -28,16 +28,31 @@ The issue occurs because the Chinese IME dictionaries are included in **basic ty
 
 To work around the issue, use one of the following methods as an administrator:
 
-- Pre-install the FODs in the Windows image.
+- To use the offline command to work around the issue, follow these steps:
+
+    1. Use [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) to mount your Windows image:
+
+        ```cmd
+        md C:\mount\windows
+        Dism /Mount-Image /ImageFile:install.wim /Index:1 /MountDir:"C:\mount\windows"
+        ```
+
+    1. Add FODs package by using the command `Dism /Image:"C:\mount\windows" /Add-Package /PackagePath="<FilePath>\<PackageName>.cab"`. For example:
+
+        ```cmd
+        Dism /Image:"C:\mount\windows" /Add-Package /PackagePath="C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
+        ```
+
+    1. Unmount the image:
+
+        ```cmd
+        Dism /Unmount-Image /MountDir:C:\mount\windows /Commit
+        ```
+
+- To work around the issue by using the online command, run the command `Dism /online /Add-Package /PackagePath: "<FilePath>\<PackageName>.cab"` in your **Command Prompt** window to add FODs. For example:
 
     ```cmd
-    Dism /Image:"C:\mount\windows" /Add-Package /PackagePath:"<FilePath>\<PackageName>.cab"
-    ```
-
-- Run the [Deployment Image Servicing and Management](/windows-hardware/manufacture/desktop/what-is-dism) (DISM) command `Dism /online /Add-Package /PackagePath: "<FilePath>\<PackageName>.cab"` to add FODs. For example:
-
-    ```cmd
-    Dism /online /Add-Package /PackagePath: "C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
+    Dism /online /Add-Package /PackagePath:"C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
     ```
 
     > [!NOTE]
