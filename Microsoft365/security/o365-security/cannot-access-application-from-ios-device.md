@@ -10,9 +10,9 @@ localization_priority: Normal
 ms.custom: 
   - CI 160266
   - CSSTroubleshoot
-ms.reviewer: jmartin
+ms.reviewer: jmartin, aruiz
 appliesto: 
-  - Exchange Online
+  - Microsoft 365 for enterprise
 search.appverid: MET150
 ---
 
