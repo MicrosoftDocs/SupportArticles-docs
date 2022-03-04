@@ -1,6 +1,6 @@
 ---
 title: Timeout expired messages when connecting to SQL Server
-description: Fixes the timeout expired errors when you connect to SQL Server. Helps you verify and troubleshoot the error.
+description: Fixes timeout expired errors when connecting to SQL Server and helps you verify and troubleshoot the errors.
 ms.date: 11/14/2021
 ms.prod-support-area-path: Connection issues
 author: cobibi
@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; SQL Server
 > [!NOTE]
 > Before you start troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
-A timeout error means that certain operation takes longer than needed. The client application stops the operation (instead of waiting indefinitely), which may block other operations and suspend an application. This article provides resolutions of the command-timeout and connection-timeout errors when you connect to SQL Server.
+A timeout error means that a certain operation takes longer than needed. The client application stops the operation (instead of waiting indefinitely), which may block other operations and suspend an application. This article provides resolutions for the **command-timeout** and **connection-timeout** errors you receive when connecting to SQL Server.
 
 ## Verify timeout expired errors
 
@@ -39,7 +39,7 @@ The duration spent while attempting to connect to this server was [Pre-Login] in
 
 - > System.InvalidOperationException: Timeout expired. The timeout period elapsed prior to obtaining a connection from the pool.
 
-  If connections aren't closed correctly, the error may occur. This is because all pooled connections were in use and max pool size was reached. The error can be avoided if you follow the steps that are described in [exhausted the connection pool](/archive/blogs/spike/timeout-expired-the-timeout-period-elapsed-prior-to-obtaining-a-connection-from-the-pool) article.
+  If connections aren't closed correctly, an error may occur. An error occurs because all pooled connections were in use, and max pool size was reached. You can avoid these errors if you follow the steps described in the [exhausted the connection pool](/archive/blogs/spike/timeout-expired-the-timeout-period-elapsed-prior-to-obtaining-a-connection-from-the-pool) article.
 
 > [!NOTE]
 > The second and the third error occur when .NET Framework 4.5 or a later version is installed.
@@ -52,7 +52,7 @@ From a connectivity perspective, you encounter the following timeout issues:
 - Query or command timeout (30 seconds by default)
 
 > [!NOTE]
-> The default values can be set through code, connecting string or other methods.
+> The default values can be set through code, connecting string, or other methods.
 
 Before troubleshooting, view the complete call stack of the error messages to determine the error type.
 
@@ -80,7 +80,7 @@ Before troubleshooting, view the complete call stack of the error messages to de
     at System.Data.SqlClient.SqlConnection.Open()  
     ```
 
-    `SqlConnection.Open` indicates that the client is trying to open a connection. Therefore, this isn't related to a query.
+    `SqlConnection.Open` indicates that the client is trying to open a connection and therefore isn't related to a query.
 
 - See the following example of a call stack of a query or command timeout:
 
