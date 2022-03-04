@@ -25,7 +25,7 @@ If you remove Internet Explorer by using DISM, the iexplore.exe entry point is r
 To restore the program on your computer, we recommend that you use the same method that you used to disable it (Control Panel or DISM).
 
 > [!IMPORTANT]
-> If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode in Microsoft Edge also won't be available. To continue using IE mode in Microsoft Edge to access legacy applications, disable Internet Explorer by using group policy instead, as described in [Disable Internet Explorer 11 as a standalone browser](/deployedge/edge-ie-disable-ie11).
+> If you disable Internet Explorer by using any of the following methods, the Internet Explorer (IE) mode in Microsoft Edge also won't be available. To continue using IE mode in Microsoft Edge to access legacy applications, disable Internet Explorer by using group policy instead, as described in [Disable Internet Explorer 11 as a standalone browser](/deployedge/edge-ie-disable-ie11#disable-internet-explorer-11-as-a-standalone-browser).
 
 ## Method 1 - Using Features On Demand in Control Panel (client systems only)
 
@@ -51,7 +51,7 @@ To enable Internet Explorer, follow these steps:
 1. Select **Install (1)**.
 1. Restart the computer when prompted to reboot.
 
-## Method 2 - Using Features On Demand in DISM (client and server systems)
+## Method 2 - Using Features On Demand with DISM (client and server systems)
 
 _Applies to:_ &nbsp; Windows 10, version 1703 and later versions  
 
@@ -98,7 +98,7 @@ For example, follow these steps for Internet Explorer 11:
 On client systems, follow these steps to disable Internet Explorer by using **Windows Features** in Control Panel:
 
 1. Press **Windows logo key+R**.
-1. In the **Run** box, enter *appwiz.cpl*, and then select **OK**.
+1. In the **Run**, enter *appwiz.cpl*, and then select **OK**.
 1. In the **Programs and Features**, select **Turn Window features on or off**.
 1. In the **Windows Features** dialog box, clear the checkbox for the installed version of Internet Explorer. For example, find **Internet Explorer 11** and then clear its check box.
 1. Select **OK**.
