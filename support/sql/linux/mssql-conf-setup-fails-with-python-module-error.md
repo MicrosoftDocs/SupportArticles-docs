@@ -1,7 +1,7 @@
 ---
 title: mssql-conf setup fails with Python module error
 description: This article helps you resolve the `mssql-conf` setup fails with Python module error. 
-ms.date: 03/02/2022
+ms.date: 03/04/2022
 ms.custom: sap:SQL Server 2019 on Linux 
 ms.technology: 
 ms.reviewer: 
@@ -62,11 +62,11 @@ AttributeError: 'module' object has no attribute 'run'
 ```
 
 > [!NOTE]
-> The `mssql-conf` Setup error can occur on systems on which the Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) includes Python 3 or another version that is earlier than 3.5. For more information about SQL Server on Linux-supported platforms, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).
+> The `mssql-conf` Setup error can occur on systems on which the Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) includes Python 3 or another version that is earlier than 3.5. For more information about SQL Server on Linux-supported platforms, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true#supportedplatforms).
 
 ## Cause
 
-The error occurs because the version of SQL Server and `mssql-conf` code rely on the Python 3.5+ functions.
+The error occurs because SQL Server 2019 and `mssql-conf` code rely on the Python 3.5+ functions.
 
 ## Workaround
 
@@ -97,7 +97,7 @@ Follow these steps to create a session-specific symlink in which Python 3 points
     sudo zypper install -y mssql-server
     ```
 
-1. Switch to the root user, create the symlink in any folder, and then add the current path to `$PATH`. For example, the `/usr/bin/env python3 -V` symlink points to Python 3.6 instead of Python 3.4, as shown in the following code snippet:
+1. Switch to the root user, create the symlink in any folder, and then add the current path to `$PATH`. For example, the */usr/bin/env python3 -V* symlink points to Python 3.6 instead of Python 3.4, as shown in the following code snippet:
 
     ```bash
     $sudo su
