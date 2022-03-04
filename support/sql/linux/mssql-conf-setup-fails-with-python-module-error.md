@@ -20,7 +20,7 @@ _Original KB number:
 
 When you try to run `mssql-conf` Setup after you install Microsoft SQL Server 2019, you receive a "module object has no attribute 'run'" error message if you're using a Python version that's earlier than 3.5.
 
-Consider the following scenario:
+Consider the following scenarios:
 
 - You install SQL Server on Linux by following the steps in [Installation guidance for SQL Server on Linux](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).  
 
@@ -76,11 +76,11 @@ You have two options to work around this issue:
 
    **Note:** We have observed that some system functions that rely on Python versions that are earlier than 3.5 stop working after this upgrade. To avoid this problem, use the next option.
 
-- Create a symlink in your session that points Python 3 to Python 3.5 or 3.5+, and then run the `mssql-conf` commands to configure SQL Server. For the steps to do this, see the next section.
+- Create a symlink in your session that points Python 3 to Python 3.5 or 3.5+, and then run the `mssql-conf` commands to configure SQL Server. For more information, see the next section.
 
 ## Create symlink (soft link) of Python 3
 
-Follow these steps to create a session-specific symlink in which Python 3 points to Python 3.5 or a later version, and then runs `mssql-conf` Setup.
+Follow these steps to create a session-specific symlink in which Python 3 points to Python 3.5 or a later version, and then run the `mssql-conf` Setup.
 
 1. Install Python 3.5 or a later version. In this example, install Python 3.6:
 
@@ -114,7 +114,7 @@ Follow these steps to create a session-specific symlink in which Python 3 points
     Python 3.6.15
     ```
 
-1. Run the `mssql-conf` Setup program or any other `mssql-conf`-based commands:
+1. Run the `mssql-conf` Setup or any other `mssql-conf`-based commands:
 
      ```bash
      /opt/mssql/bin/mssql-conf setup
