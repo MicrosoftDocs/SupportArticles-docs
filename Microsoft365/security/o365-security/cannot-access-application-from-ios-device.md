@@ -16,15 +16,15 @@ appliesto:
 search.appverid: MET150
 ---
 
-# "You can't get there from here" error when accessing an application from iOS devices
+# "You can't get there from here" error when accessing applications from iOS devices
 
 ## Symptoms
 
-When you try to start an application from an iOS device, you receive the following error message:
+When you try to start a web application from an iOS device, you receive the following error message:
 
 > You can't get there from here
 
-:::image type="content" source="media/cannot-access-application-from-ios-device/access-error.png" alt-text="Screenshot of the error that states you must use Microsoft Edge to access this resource.":::
+:::image type="content" source="media/cannot-access-application-from-ios-device/access-error.png" alt-text="Screenshot of an error message that states you must use Microsoft Edge to access the resource.":::
 
 ## Cause
 
@@ -32,18 +32,18 @@ This error occurs if your organization has deployed a Conditional Access policy 
 
 ## Resolution
 
-To resolve this issue, find out which Conditional Access policy causing the error and then change the corresponding policy.
+To resolve this issue, determine which Conditional Access policy causes the error, and then change the corresponding policy.
 
 **Note:** You must have administrator permissions to change the Conditional Access policy.
 
-Here's how to find the Conditional Access policy:
+Here's how to identify the problematic Conditional Access policy:
 
-1. Click **More details** in the error message, select **User sign-ins (interactive)**, and then you'll see the **Request ID** of the failed request.
+1. In the error message, select **More details** > **User sign-ins (interactive)** to see the **Request ID** of the failed request.
 
     :::image type="content" source="media/cannot-access-application-from-ios-device/sign-in-details.png" alt-text="Screenshot of the sign-in log in which the Request ID of the failed request is highlighted.":::
 
-2. Select the failed request, select **Basic info** and **Conditional Access**, and then you'll respectively see the failure reason and the policy causing the failure.
+2. Select the failed request, and then select both **Basic info** and **Conditional Access** to respectively see the failure reason and the policy that is causing the failure.
 
-    :::image type="content" source="media/cannot-access-application-from-ios-device/basic-info.png" alt-text="Screenshot of the information under the Basic info tab, and the failure reason is highlighted.":::
+    :::image type="content" source="media/cannot-access-application-from-ios-device/basic-info.png" alt-text="Screenshot of the information on the Basic info tab that shows the failure reason highlighted.":::
 
-    :::image type="content" source="media/cannot-access-application-from-ios-device/conditional-access.png" alt-text="Screenshot of the information under the Conditional Access tab, and the policy name which causes the error is highlighted.":::
+    :::image type="content" source="media/cannot-access-application-from-ios-device/conditional-access.png" alt-text="Screenshot of the information on the Conditional Access tab that shows the policy name highlighted.":::
