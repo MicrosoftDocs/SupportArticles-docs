@@ -227,6 +227,43 @@ eDiscovery Case Hold Policy Sync Distribution error. The error reads:
 
 4. Contact Microsoft Support.
 
+## Error/issue: Holds stuck in PendingDeletion
+
+eDiscovery Case Hold Policies may be stuck in PendingDeletion and can't be removed.
+
+### Resolution
+
+1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. Try running the RetryDistribution parameter on the policy in question:
+
+   For eDiscovery case holds:
+
+   ```powershell
+   Set-CaseHoldPolicy <policyname> -RetryDistribution
+   ```
+
+   For retention policies:
+
+   ```powershell
+   Set-RetentionCompliancePolicy <policyname> -RetryDistribution
+   ```
+   
+2. Try to delete the policy using PowerShell and the `-ForceDeletion` parameter:
+   
+   For eDiscovery case holds, use the [Remove-CaseHoldPolicy](/powershell/module/exchange/remove-caseholdpolicy?view=exchange-ps&preserve-view=true) cmdlet:
+   
+   ```powershell
+   Remove-CaseHoldPolicy <policyname> -ForceDeletion
+   ```
+  
+   For retention policies, use the [Remove-RetentionCompliancePolicy](/powershell/module/exchange/remove-retentioncompliancepolicy?view=exchange-ps&preserve-view=true) cmdlet:
+  
+   ```powershell
+   Remove-RetentionCompliancePolicy <policyname> -ForceDeletion
+   ```  
+  
+3. Contact Microsoft Support.
+
 ## Error/issue: "The condition specified using HTTP conditional header(s) is not met"
 
 When downloading search results using the eDiscovery Export Tool, you might receive the following error message:
