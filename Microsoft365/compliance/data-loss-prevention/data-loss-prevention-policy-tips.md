@@ -1,5 +1,5 @@
 ---
-title: Issues with Data Loss Prevention (DLP) policy tips
+title: Issues with DLP policy tips
 description: Describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 author: MaryQiu1987
 manager: dcscontentpm
@@ -18,40 +18,23 @@ appliesto:
 - Microsoft 365 Data Loss Prevention
 ---
 
-# Issues with data loss prevention (DLP) policy tips
+# Resolve issues with DLP policy tips
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+This article describes common scenarios in which Data Loss Prevention (DLP) policy tips don't work as expected, and it provides resolutions that you can try.
 
-The detection and protection of data is among the most important tasks that any business has today. As more and more organizations move their services to the cloud to store data, solutions to protect data flow and access are becoming increasingly important.
-
-Microsoft 365 provides data loss prevention (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
-
-This article lists some common scenarios in which DLP policy tips are not working as expected, and it provides resolutions that you can try.
-
-**Note:** It's recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp). To edit a DLP policy in the Microsoft 365 compliance center, follow these steps:
-
-1. In the Microsoft 365 compliance center, locate **Data loss prevention** in the left pane.
-1. On the **Policies** tab, select the policy that requires editing, and then select **Edit policy**.
-
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot of the steps of how to edit a D L P policy in the Microsoft 365 Compliance Center." lightbox="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png":::
-
-## Common scenarios of DLP policy tips not working
-
-There are several reasons why DLP policy tips do not work as expected after you configure a Microsoft 365 DLP policy:
-
-- [There are policy configuration errors](#policy-configuration-errors).
-- [Policy configurations are not supported (client only)](#policy-configurations-are-not-supported-outlook-2013-and-later-clients-only).
-- [All policy conditions are not met](#all-policy-conditions-are-not-met).
-- [MailTips are not enabled (client only)](#mailtips-are-not-enabled-outlook-2013-and-later-clients-only).
-- [Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center](#policy-tips-are-configured-in-multiple-locations).
-- [The GetDLPPolicyTip call isn't found and the rule match is empty in Fiddler Trace](#the-getdlppolicytip-call-isnt-found-in-fiddler-trace).
-- [The client doesn't support MailTips (Mac only)](#client-doesnt-support-mailtips).
-- [The file-system configuration is not supported (PDFs on Windows 7 only)](#windows-7-and-adobe-pdf).
-- [There is invalid test data](#invalid-test-data).
+- There are policy configuration errors.
+- Policy configurations are not supported (client only).
+- All policy conditions are not met.
+- MailTips are not enabled (client only).
+- Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center.
+- The `GetDLPPolicyTip` call isn't found and the rule match is empty in the Fiddler Trace.
+- The client doesn't support MailTips (Mac only).
+- The file-system configuration is not supported (PDFs on Windows 7 only).
+- There is invalid test data.
 
 ## Policy configuration errors
 
-Policy is configured by using User notifications, but the status of the policy doesn't match the settings in the rule (Figure 1). A policy configuration error may also occur if the policy is configured by using two or more rules that detect the same sensitive data types that have the same **Instance count** value and confidence level (Figure 2). This kind of setup is unnecessary and problematic. Only one rule is required.
+Policy is configured by using **User notifications**, but the status of the policy doesn't match the settings in the rule (Figure 1). A policy configuration error may also occur if the policy is configured by using two or more rules that detect the same sensitive data types that have the same **Instance count** value and confidence level (Figure 2). This kind of setup is unnecessary and problematic. Only one rule is required.
 
 ### Resolution
 
