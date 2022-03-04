@@ -57,7 +57,7 @@
       href: ../calendars/freebusy-lookups-stop-working.md
     - name: Only see availability info of resource when scheduling meeting
       href: ../calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting.md
-    - name: Policy not allow granting permissions
+    - name: Policy doesn't allow granting permissions
       href: ../calendars/policy-permissions-issue.md
     - name: 'Troubleshoot free/busy issues'
       href: ../calendars/troubleshoot-freebusy-issues-in-exchange-hybrid.md
