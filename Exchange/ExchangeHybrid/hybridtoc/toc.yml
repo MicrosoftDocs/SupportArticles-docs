@@ -57,7 +57,7 @@
       href: ../calendars/freebusy-lookups-stop-working.md
     - name: Only see availability info of resource when scheduling meeting
       href: ../calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting.md
-    - name: Policy not allow granting permissions
+    - name: Policy doesn't allow granting permissions
       href: ../calendars/policy-permissions-issue.md
     - name: 'Troubleshoot free/busy issues'
       href: ../calendars/troubleshoot-freebusy-issues-in-exchange-hybrid.md
@@ -123,11 +123,11 @@
       href: ../hybrid-configuration-wizard-errors/request-was-aborted-could-not-create-ssl-tls-secure-channel.md
     - name: DataStrings.InvalidSmtpDomainName(domain) error
       href: ../hybrid-configuration-wizard-errors/hcw-invalidsmtpdomainname-error.md
-    - name: Default Receive Connector cannot be found on server
+    - name: Default Receive Connector can't be found on server
       href: ../hybrid-configuration-wizard-errors/hcw8010-default-receive-connector-not-found.md
     - name: Domains already exist in another organization relationship error
       href: ../hybrid-configuration-wizard-errors/the-domains-already-exist-in-another-organization-error.md
-    - name: Edge Transport servers cannot be specified
+    - name: Edge Transport servers can't be specified
       href: ../hybrid-configuration-wizard-errors/hcw8043-edge-transport-servers-not-specified.md
     - name: Error running the Hybrid Configuration wizard
       href: ../hybrid-configuration-wizard-errors/run-hybrid-configuration-wizard-error.md
@@ -175,7 +175,7 @@
       href: ../hybrid-configuration-wizard-errors/requiredtls-flag-should-be-set-to-true-if-tlscertificatename-is-specified-error.md
     - name: Running Hybrid Configuration Wizard returns error
       href: ../hybrid-configuration-wizard-errors/running-hybrid-configuration-wizard-fails.md
-    - name: Same URI cannot be attached to different AppId on a single day
+    - name: Same URI can't be attached to different AppId on a single day
       href: ../hybrid-configuration-wizard-errors/same-uri-not-attached-to-different-appid-on-single-day.md
     - name: Secure Mail Certificate on server is not bound to the SMTP Service error
       href: ../hybrid-configuration-wizard-errors/secure-mail-certificate-on-server-is-not-bound-to-smtp-service-error.md
@@ -225,7 +225,7 @@
       href: ../move-mailboxes/cannot-move-items-using-owa.md
     - name: Error when you move mailboxes to or from Office 365
       href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
-    - name: Extension number can‎'t be generated
+    - name: Extension number can't be generated
       href: ../move-mailboxes/extension-number-not-generated-error.md
     - name: Hybrid deployment errors
       href: ../move-mailboxes/hybrid-deployment-errors.md
@@ -247,6 +247,8 @@
     items:
     - name: Can't access legacy on-premises public folders
       href: ../public-folders/cannot-access-legacy-on-premises-public-folders.md
+    - name: Can't access on-premises PFs from Outlook for Mac
+      href: ../public-folders/outlook-for-mac-unable-access-public-folders.md
     - name: It is not possible to expand the folder error
       href: ../public-folders/it-is-not-possible-to-expand-the-folder-error.md
   - name: Send Emails
