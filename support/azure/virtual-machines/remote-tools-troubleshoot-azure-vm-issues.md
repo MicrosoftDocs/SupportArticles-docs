@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
-editor: ''
 tags: ''
 ms.collection: windows
 ms.topic: troubleshooting

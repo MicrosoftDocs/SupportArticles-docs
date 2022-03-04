@@ -2,7 +2,7 @@
 title: ASCII function returns different results in Publisher and Subscriber
 description: This article provides workarounds for the issue that the ASCII function returns different results in the Publisher and Subscriber database tables.
 ms.date: 01/20/2022
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 author: sevend2
 ms.author: v-sidong
 ms.reviewer: akbarf, valcan, tzakir, maarumug

@@ -5,7 +5,6 @@ services: virtual-machines-windows
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
-editor: ''
 tags: ''
 
 ms.service: virtual-machines

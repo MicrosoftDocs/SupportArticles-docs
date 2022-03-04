@@ -4,7 +4,6 @@ description: Overview of the two debugging features for virtual machines in Azur
 services: virtual-machines
 author: Deland-Han
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 
 ms.service: virtual-machines
