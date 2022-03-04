@@ -93,7 +93,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
-|January 25, 2022|17.00.8006.010|
+|February 25, 2022|17.00.8006.010|
 |January 13, 2022|17.00.7792.012|
 |November 10, 2021|17.00.7513.007|
 |October 20, 2021|17.00.7405.002|
