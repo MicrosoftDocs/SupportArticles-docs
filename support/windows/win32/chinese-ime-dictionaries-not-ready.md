@@ -1,6 +1,6 @@
 ---
 title: Chinese IME dictionaries are not ready yet
-description: This workaround resolves the issue that occurs in Windows Server 2022 when you enable Chinese keyboard layouts by using the function InstallLayoutOrTip.
+description:  Provides a workaround to fix the issue that occurs in Windows Server 2022 when you enable Chinese keyboard layouts by using the function InstallLayoutOrTip.
 ms.date: 03/09/2022
 ms.reviewer: yyan
 ms.technology: windows-dev-apps-desktop-app-ui-dev
