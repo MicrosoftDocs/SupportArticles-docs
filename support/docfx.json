@@ -289,57 +289,74 @@
           "BizTalk Server"
         ],
         "developer/dotnet/**/*.md": [
+          "Troubleshoot",
           ".NET"
         ],
         "developer/host-integration-server/**/*.md": [
+          "Troubleshoot",
           "Host Integration Server"
         ],
         "developer/visualstudio/**/*.md": [
+          "Troubleshoot",
           "VS IDE"
         ],
         "developer/webapps/**/*.md": [
+          "Troubleshoot",
           "Web Apps"
         ],
         "developer/webapps/iis/**/*.md": [
+          "Troubleshoot",
           "IIS"
         ],
         "developer/webapps/aspnet/**/*.md": [
+          "Troubleshoot",
           "ASP.NET",
           "ASP.NET Core"
         ],
         "developer/webapps/aspnetcore/**/*.md": [
+          "Troubleshoot",
           "ASP.NET",
           "ASP.NET Core"
         ],
         "sql/**/*.md": [
+          "Troubleshoot",
           "sql"
         ],
         "windows/win32/**/*.md": [
+          "Troubleshoot",
           "Windows",
           "Desktop"
         ],
         "windows-hardware/drivers/**/*.md": [
+          "Troubleshoot",
           "Drivers"
         ],
         "windows-server/**/*.md": [
+          "Troubleshoot",
           "Windows Server"
         ],
         "windows-client/**/*.md": [
+          "Troubleshoot",
           "Windows Client"
         ],
         "developer/browsers/**/*.md": [
+          "Troubleshoot",
           "Browsers"
         ],
         "azure/**/*.md": [
+          "Troubleshoot",
           "Azure"
         ],
         "mem/intune/**/*.md": [
+          "Troubleshoot",
           "Intune"
         ],
         "mem/configmgr/**/*.md": [
+          "Troubleshoot",
           "ConfigMgr"
         ],
         "system-center/**/*.md": [
+          "Troubleshoot",
           "System Center"
         ],
         "dynamics-365/**/*.md": [
@@ -362,6 +379,7 @@
           "Fraud protection"
         ],
         "dynamics-365/supply-chain/**/*.md": [
+          "Troubleshoot",
           "dynamics365-supplychain",
           "Dynamics 365",
           "Unified Operations",
@@ -369,12 +387,12 @@
         ],
         "power-platform/power-apps/*.md": [
           "Troubleshoot",
-          "Power Platform", 
+          "Power Platform",
           "Power Apps"
         ],
         "power-platform/power-automate/*.md": [
           "Troubleshoot",
-          "Power Platform", 
+          "Power Platform",
           "Power Automate"
         ]
       },
