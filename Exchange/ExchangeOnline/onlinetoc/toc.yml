@@ -491,6 +491,8 @@
       href: ../public-folders/pf-hierarchy-sync-emails.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
+    - name: Migration errors due to orphaned objects
+      href: ../public-folders/public-folder-migration-errors.md
     - name: Migration fails with mailbox GUID
       href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
     - name: Permissions and settings don't propagate in EAC

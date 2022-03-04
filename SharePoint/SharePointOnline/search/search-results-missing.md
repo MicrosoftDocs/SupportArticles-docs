@@ -28,7 +28,7 @@ This issue may occur even though the site was crawled and indexed by the Search 
 
 ## Cause
 
-There are various reasons why expected results maybe be missing that are related to crawl latency or settings in SharePoint Online.
+There are various reasons why expected results may be missing that are related to crawl latency or settings in SharePoint Online.
 
 ## Solution
 
