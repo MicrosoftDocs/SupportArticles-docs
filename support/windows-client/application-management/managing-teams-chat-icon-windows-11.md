@@ -89,7 +89,7 @@ Get-AppxPackage -name '*teams'
 
 To turn on Chat, right-click the taskbar, select **Taskbar settings**, and then move the Chat slider to **On**.
 
-:::image type="content" source="media/windows-teams-chat-icon/scenario-3-chat-slider.png" alt-text="Move the chat slider to On.":::
+:::image type="content" source="media/windows-teams-chat-icon/scenario-3-chat-slider.png" alt-text="Move the Chat slider to On.":::
 
 ## Using Group Policy settings
 
@@ -104,7 +104,7 @@ You can configure the Chat icon on the taskbar using the following dialog box.
 
 ## Removing the Chat icon using Intune
 
-Use the new CSP setting, "Experience/ConfigureChatIcon", which removes the Chat Icon. This requires the Enterprise or Education edition. For more information, see [Policy CSP – Experience](/windows/client-management/mdm/policy-csp-experience).
+Use the new CSP setting, "Experience/ConfigureChatIcon", which removes the Chat icon. This requires the Enterprise or Education edition. For more information, see [Policy CSP – Experience](/windows/client-management/mdm/policy-csp-experience).
 
 Create a new Configuration Profile for Windows 10 and later, type *Custom* and use the following setting:
 
