@@ -28,7 +28,7 @@ When you try to start a web application from an iOS device, you receive the foll
 
 ## Cause
 
-This error occurs if your organization has deployed a Conditional Access policy that prevents access by using the application on iOS devices.
+This error occurs if your organization has configured a Conditional Access policy that prevents access to the application from iOS devices.
 
 ## Resolution
 
