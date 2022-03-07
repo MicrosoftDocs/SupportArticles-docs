@@ -56,21 +56,34 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 
 ## Limitations and expected behaviors
 
-- Front row is marked as Preview in the layout picker in the Front of Room display.
-- Front row layout shows up to 4 video participants on a Front of Room single display. It shows up to 9 videos on dual Front of Room. These participants are chosen from the last active speakers.
-- Front row requires 1080p displays with 100% scaling. If a font size on your Front of Room display is too small or large for a room's need, see [Change scale and resolution for Front of Room](/microsoftteams/rooms/rooms-operations#change-scale-and-resolution) to adjust your display settings.
+- Front row is a new layout for Microsoft Teams Rooms, it's currently labeled as **Preview** on the layout picker in the Front of Room display. Microsoft will add more features and improvements in the future. 
 
-- Microsoft Teams Rooms doesn't support HDCP input, which has been observed to cause issues with High-Definition Multimedia Interface (HDMI) ingest functionality (video, audio). Make sure that switches connected to Microsoft Teams Rooms have HDCP options turned off.
+   The following limitation will be addressed post-release:
 
-- If your Microsoft Teams Rooms device loses trust with the domain, you can't authenticate into the device and open **Settings**. For example, if you remove the Microsoft Teams Rooms from the domain after it's domain joined, trust is lost. You can sign in by using a local Admin account to authenticate into the device.
+   - Front row layout displays up to 4 video participants on a single Front of Room display and up to 9 video participants on dual Front of Room displays. These participants are chosen from the last active speakers.
+   - Front row requires 1080p displays with 100% scaling. If a font size on your Front of Room display is too small or too large for a room's need, [change scale and resolution for Front of Room](/microsoftteams/rooms/rooms-operations#change-scale-and-resolution) to adjust your display settings.
 
-- If you want a Front of Room display to switch automatically to an active video source, such as an MTR console, when the source wakes from the standby mode, certain conditions must be met. This feature is optional but supported by Microsoft Teams Rooms, provided underlying hardware supports the feature. A consumer TV used as a Front of Room display needs to support the Consumer Electronics Control (CEC) feature of HDMI. Depending on the dock or console selected, a controller such as an [HD-RX-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-201-C-E) from Crestron or [Extron HD CTL 100](https://www.extron.com/article/hdctl100ad) from Extron may be needed. Refer to the manufacturer's support documentation to confirm the dock or console supports CEC.
+- Microsoft Teams Rooms doesn't support HDCP input, which has been observed to cause issues with High-Definition Multimedia Interface (HDMI) ingest functionality (video, audio). To avoid these issues, make sure that switches connected to Microsoft Teams Rooms have HDCP options turned off.
 
-- A consumer TV used as the Front of Room display may cause stability issues with Microsoft Teams Rooms. This behavior is caused by inconsistent implementation of standby modes, active video source selection, and communicating faulty EDID information to the Microsoft Teams Rooms device. Known symptoms are a black or gray screen on the Front of Room display or the Microsoft Teams Rooms console becoming unresponsive after waking from the standby mode. If you experience issues when you use consumer TVs, we recommend you install a configurable EDID controller or EDID emulator, such as the [HD-RX-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-201-C-E) from Crestron or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/dr-edid-manager-learner/category_pathway-143) from FSR Video Products Group.
+- If your Microsoft Teams Rooms device loses trust with the domain, you won't be able to authenticate into the device and open settings. For example, if you remove Microsoft Teams Rooms from the domain after it's domain joined, trust is lost. In this situation, sign in to the device with a local administrator account.
 
-- Always use a wired 1-Gbps network connection to make sure you have the needed bandwidth.
+- If you want a Front of Room display to switch automatically to an active video source, such as an MTR console, when the source wakes from the standby mode, certain conditions must be met. This feature is optional, but supported by Microsoft Teams Rooms, provided underlying hardware supports the feature:
 
-- Microsoft Teams Rooms is a multi-window application and requires a Front of Room display to be connected to the HDMI port of the device, for the app to function correctly. Make sure that you either have an HDMI display connected or use a dummy HDMI plug if you are testing and don't have a display purchased yet.
+  - A consumer TV used as a Front of Room display must support the Consumer Electronics Control (CEC) feature of HDMI.
+  - Depending on the dock or console selected, a controller such as an [HD-RX-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-201-C-E) from Crestron, or [Extron HD CTL 100](https://www.extron.com/article/hdctl100ad) from Extron may be needed to enable the desired behavior. Refer to the manufacturer's support documentation to confirm that the dock or console supports CEC.
+
+  > [!NOTE]
+  > A consumer TV used as the Front of Room display may cause stability issues with Microsoft Teams Rooms for the following reasons:
+  > 
+  > - Inconsistent implementation of standby modes.
+  > - Active video source selection.
+  > - Incorrect EDID information is communicated to the Microsoft Teams Rooms device. 
+  > 
+  > Known symptoms include a black or gray screen on the Front of Room display, or the Microsoft Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when using consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-201-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/dr-edid-manager-learner/category_pathway-143) from FSR Video Products Group.
+
+- Always use a wired 1 Gbps network connection to make sure that you have the required bandwidth.
+
+- Microsoft Teams Rooms is a multi-window application. For the application to work correctly, a Front of Room display must be connected to the device's HDMI port. Make sure that you have an HDMI display connected. If you're testing and haven't purchased a display, use an HDMI dummy plug.
 
 ## See also
 
