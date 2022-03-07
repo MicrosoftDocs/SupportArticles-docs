@@ -47,6 +47,6 @@ Here's how to identify the problematic Conditional Access policy:
 
     :::image type="content" source="media/cannot-access-application-from-ios-device/basic-info.png" alt-text="Screenshot of the information on the Basic info tab that shows the failure reason highlighted.":::
 
-1. Select the failed request, and then select **Conditional Access** to see the policy that is causing the failure.
+1. Select **Conditional Access** to see the policy that is causing the failure.
 
     :::image type="content" source="media/cannot-access-application-from-ios-device/conditional-access.png" alt-text="Screenshot of the information on the Conditional Access tab that shows the policy name highlighted.":::
