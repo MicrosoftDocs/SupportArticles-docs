@@ -38,15 +38,15 @@ To resolve this issue, determine which Conditional Access policy causes the erro
 
 Here's how to identify the problematic Conditional Access policy:
 
-1. Select **More details** in the error message to open the Azure Active Directory **Sign-in logs**.
-1. Select **User sign-ins (interactive)** to see the **Request ID** of the failed request.
+1. In the error message, select **More details** to open the Azure Active Directory **Sign-in logs**.
+1. To see the **Request ID** of the failed request, select **User sign-ins (interactive)**.
 
     :::image type="content" source="media/cannot-access-application-from-ios-device/sign-in-details.png" alt-text="Screenshot of the sign-in log in which the Request ID of the failed request is highlighted.":::
 
-1. Select the failed request, and then select **Basic info** to see the failure reason.
+1. To see the failure reason, select the failed request, and then select **Basic info**.
 
     :::image type="content" source="media/cannot-access-application-from-ios-device/basic-info.png" alt-text="Screenshot of the information on the Basic info tab that shows the failure reason highlighted.":::
 
-1. Select **Conditional Access** to see the policy that is causing the failure.
+1. To see the policy that is causing the failure, select **Conditional Access**.
 
     :::image type="content" source="media/cannot-access-application-from-ios-device/conditional-access.png" alt-text="Screenshot of the information on the Conditional Access tab that shows the policy name highlighted.":::
