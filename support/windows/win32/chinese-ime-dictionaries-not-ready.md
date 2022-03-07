@@ -37,10 +37,10 @@ To work around the issue, use one of the following methods as an administrator:
         Dism /Mount-Image /ImageFile:install.wim /Index:1 /MountDir:"C:\mount\windows"
         ```
 
-    1. Add the FODs package by running the command `Dism /Image:"C:\mount\windows" /Add-Package /PackagePath="<FilePath>\<PackageName>.cab"` in your **Command Prompt** window. For example:
+    1. Add the FODs package by running the command `Dism /Image:"C:\mount\windows" /Add-Package /PackagePath:"<FilePath>\<PackageName>.cab"` in your **Command Prompt** window. For example:
 
         ```cmd
-        Dism /Image:"C:\mount\windows" /Add-Package /PackagePath="C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
+        Dism /Image:"C:\mount\windows" /Add-Package /PackagePath:"C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
         ```
 
     1. Unmount the image by running the following command in your **Command Prompt** window:
@@ -49,7 +49,7 @@ To work around the issue, use one of the following methods as an administrator:
         Dism /Unmount-Image /MountDir:C:\mount\windows /Commit
         ```
 
-- To work around the issue by using the online command, run the command `Dism /online /Add-Package /PackagePath: "<FilePath>\<PackageName>.cab"` in your **Command Prompt** window to add FODs. For example:
+- To work around the issue by using the online command, run the command `Dism /online /Add-Package /PackagePath:"<FilePath>\<PackageName>.cab"` in your **Command Prompt** window to add FODs. For example:
 
     ```cmd
     Dism /online /Add-Package /PackagePath:"C:\users\Administrator\Desktop\Microsoft-Windows-LanguageFeatures-Basic-zh-cn-Package~31bf3856ad364e35~amd64~~.cab"
