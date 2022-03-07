@@ -104,7 +104,7 @@ On client systems, follow these steps to disable Internet Explorer by using **Wi
 1. Select **OK**.
 1. Restart the computer.
 
-## Method 4 - Using Windows Features in DISM (client and server systems)
+## Method 4 - Using Windows Features with DISM (client and server systems)
 
 On client and server systems, use the Deployment Image Servicing and Management (DISM) command-line tool to disable Internet Explorer.
 
