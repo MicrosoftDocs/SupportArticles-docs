@@ -85,7 +85,7 @@ You can also verify the installation by running the following PowerShell cmdlet:
 Get-AppxPackage -name '*teams'
 ```
 
-:::image type="content" source="media/windows-teams-chat-icon/scenario-3-select-teams.png" alt-text="Verify the installation of the Teams app.":::
+:::image type="content" source="media/windows-teams-chat-icon/scenario-3-select-teams1.png" alt-text="Verify the installation of the Teams app.":::
 
 To turn on Chat, right-click the taskbar, select **Taskbar settings**, and then move the Chat slider to **On**.
 
@@ -102,7 +102,7 @@ You can configure the Chat icon on the taskbar using the following dialog box.
 
 :::image type="content" source="media/windows-teams-chat-icon/group-policy-setting.png" alt-text="Customize Group Policy settings.":::
 
-## Removing the Chat Icon using Intune
+## Removing the Chat icon using Intune
 
 Use the new CSP setting, "Experience/ConfigureChatIcon", which removes the Chat Icon. This requires the Enterprise or Education edition. For more information, see [Policy CSP – Experience](/windows/client-management/mdm/policy-csp-experience).
 
@@ -123,7 +123,7 @@ To remove the Chat icon using Intune – Settings Catalog, do the following step
 
 1. Create a new Configuration Policy.
 1. Search for Experience.
-1. Select **Configure Chat Icon**.
+1. Select **Configure Chat icon**.
 
 ## Frequently asked questions (FAQ)
 
