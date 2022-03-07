@@ -1,11 +1,20 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 02/28/2022
+ms.date: 03/07/2022
 ---
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
+
+## 
+
+- **Status:** Active
+- **Blog post:** [Known Issue: Android devices lose access to Intune-managed resources after upgrading to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-android-devices-lose-access-to-intune-managed/ba-p/3249657)
+
+We are aware of an issue where customers lose access to Microsoft Intune-managed resources or are prevented from completing enrollment after upgrading certain devices from Android 11 to Android 12. Currently, this includes some OPPO, OnePlus, and Realme devices enrolled as Android Enterprise personally-owned work profile. 
+
+Device OEMs are working with Google to identify and deploy fixes, so make sure to install the latest OS updates as they are released. For more information, see [Known Issue: Android devices lose access to Intune-managed resources after upgrading to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-android-devices-lose-access-to-intune-managed/ba-p/3249657) on the Intune Customer Success blog. 
 
 ## Several Office settings in settings catalog do not automatically enable the parent setting
 
