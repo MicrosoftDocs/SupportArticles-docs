@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot slow queries resulting from ASYNC_NETWORK_IO
-description: Provides resolutions to troubleshoot slow query issues that result from ASYNC_NETWORK_IO wait type.
+description: Provides resolutions to slow query issues that result from ASYNC_NETWORK_IO wait type.
 ms.date: 02/22/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
@@ -14,9 +14,9 @@ author: pijocoder
 
 When SQL Server produces result sets and sends them to a client application by putting the results in an output buffer, the client application fetches them from the output buffer. If the client application stops or doesn't fetch the results fast enough, SQL Server has to wait for acknowledgment that the client application has received all the results before sending more results. This wait will show up as `ASYNC_NETWORK_IO`. For more information, see the [video](/shows/SQL-Workshops/Understanding-ASYNCNETWORKIO-Waits-in-SQL-Server).
 
-In addition, excessive waits in the symptom cause two issues:
+Excessive ASYNC_NETWORK_IO waits can cause two issues:
 
-- All the queries will slow down, and total duration of these queries will be longer.
+- Queries may slow down because their total duration will be longer.
 
 - When SQL Server waits for the client to fetch results, it can't release locks acquired. If the lock isn't released for a long time, other sessions will be blocked on SQL Server.
 
@@ -44,11 +44,7 @@ To illustrate using ADO.NET, by default, [DataSet](/dotnet/framework/data/adonet
 
 **Resolution:** To resolve the issue, follow these steps:
 
-1. Fetch all results as fast as the client can.
-
-1. Use a tight WHILE/FOR loop.
-
-1. Store them in memory and only then do more processing.
+Fetch all results as fast as the client can by using a tight WHILE/FOR loop. That means, store results in memory and only then do more processing.
 
 ### Client application machine is under stress (I/O, memory, or CPU)
 
@@ -62,7 +58,7 @@ The application may not be able to quickly fetch results if the machine that run
 
 - Slow I/O (perhaps the application writes results or logs)
 
-This case can also lead to slow processing of incoming results and cause the SQL Server to wait with `ASYNC_NETWORK_IO`.
+This resource constraint can also lead to slow processing of incoming results and cause the SQL Server to wait with `ASYNC_NETWORK_IO`.
 
 **Resolution:** To resolve this issue, use tools like [Performance Monitor](https://techcommunity.microsoft.com/t5/ask-the-performance-team/windows-performance-monitor-overview/ba-p/375481) to diagnose the system that runs the application, and then eliminate any resource constraints. One of the following methods may work for you:
 
@@ -74,7 +70,7 @@ This case can also lead to slow processing of incoming results and cause the SQL
 
 ### NIC/Network
 
-Slow network or broken Network Interface Card (NIC) can cause delay in network traffic, and this case will naturally delay fetching the results and communicating with SQL Server. Network delays are typically caused by the following issues:
+Slow network or Network Interface Cards (NIC) can cause delay in network traffic and will naturally delay fetching the results and communicating with SQL Server. Network delays are typically caused by the following issues:
 
 - Network adapter driver issues
 
@@ -84,9 +80,9 @@ Slow network or broken Network Interface Card (NIC) can cause delay in network t
 
 - Routers issues
 
-- Overloaded networks due to traffic (less commonly)
+- Overloaded networks due to traffic (less common)
 
-**Resolution:** To diagnose and resolve these issues, you can [collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and look for packet resets and retransmits.
+**Resolution:** To diagnose and resolve these issues, you can [collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and look for packet resets and retransmits. Then resolve the network-related issue to eliminate packet resets/retransmits.
 
 ## See also
 
