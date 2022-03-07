@@ -54,13 +54,13 @@ To illustrate using ADO.NET, by default, [DataSet](/dotnet/framework/data/adonet
 
 Even if application code is developed to fetch results as fast as possible, system resource issues can cause the entire client process to be slow. For example:
 
-The application may not be able to quickly fetch results if the machine that runs the client application is constrained on the following resources:
+The application may not be able to quickly fetch results if the machine that runs the client application is constrained on resources as follows:
 
 - 100% CPU utilization
 
 - Insufficient memory (all memory is consumed)
 
-- slow I/O where perhaps the application writes results or logs
+- Slow I/O (perhaps the application writes results or logs)
 
 This case can also lead to slow processing of incoming results and cause the SQL Server to wait with `ASYNC_NETWORK_IO`.
 
