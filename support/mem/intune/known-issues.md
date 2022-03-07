@@ -7,7 +7,7 @@ ms.date: 03/07/2022
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
 
-## 
+## Android devices lose access to Intune-managed resources after upgrading to Android 12
 
 - **Status:** Active
 - **Blog post:** [Known Issue: Android devices lose access to Intune-managed resources after upgrading to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-android-devices-lose-access-to-intune-managed/ba-p/3249657)
