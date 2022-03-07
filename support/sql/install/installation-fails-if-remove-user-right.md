@@ -7,8 +7,6 @@ ms.prod: sql
 ---
 # SQL Server installation fails if the Setup account doesn't have certain user rights
 
-[!INCLUDE [SQL Server No Version](../../includes/applies-to-version/_ssnoversion.md)]
-
 This article helps you resolve a problem that may occur when you install or upgrade Microsoft SQL Server after tightening security.
 
 _Original KB number:_ &nbsp; 2000257
