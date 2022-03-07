@@ -85,7 +85,7 @@ You can also verify the installation by running the following PowerShell cmdlet:
 Get-AppxPackage -name '*teams'
 ```
 
-:::image type="content" source="media/windows-teams-chat-icon/scenario-3-select-teams1.png" alt-text="Verify the installation of the Teams app.":::
+:::image type="content" source="media/windows-teams-chat-icon/scenario-3-select-teams.png" alt-text="Verify the installation of the Teams app.":::
 
 To turn on Chat, right-click the taskbar, select **Taskbar settings**, and then move the Chat slider to **On**.
 
