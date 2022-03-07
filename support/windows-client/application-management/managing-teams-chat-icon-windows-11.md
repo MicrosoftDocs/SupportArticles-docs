@@ -40,7 +40,7 @@ If you see the Chat icon on the Taskbar but you don’t see the Teams app, selec
 If you see this screen, select **Continue** to set up Teams.
 
 > [!NOTE]
-> This indicates that Teams is not installed. Selecting **Continue** will proceed with installing the app for the logged-on user.
+> This indicates that Teams is not installed. Select **Continue** to proceed with installing the app for the logged-on user.
 
 Run the following PowerShell cmdlet to check whether the Windows 11-based device has Teams installed:
 
