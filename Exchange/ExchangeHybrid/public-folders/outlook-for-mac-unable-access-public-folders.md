@@ -44,7 +44,7 @@ This issue occurs if the mailbox GUID of the Exchange Online mailbox isn't stamp
 
 ## Resolution
 
-To resolve this issue, set the on-premises remote mailbox to use the Exchange Online mailbox GUID by following these steps:
+To resolve this issue, set the `ExchangeGUID` property on the associated on-premises remote mailbox by following these steps:
 
 1. Open [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) on the on-premises server, and then run the following command to check whether the `ExchangeGUID` property of the on-premises remote mailbox is set:
 
