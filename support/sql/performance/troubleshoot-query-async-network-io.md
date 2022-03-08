@@ -72,7 +72,7 @@ Slow network or Network Interface Cards (NIC) can cause delays in network traffi
 
 - Network adapter driver issues
 
-- Network filter driver issues
+- Network filter drivers issues
 
 - Misconfigured or faulty firewalls
 
