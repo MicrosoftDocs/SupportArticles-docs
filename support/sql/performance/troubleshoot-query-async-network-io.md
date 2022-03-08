@@ -28,11 +28,11 @@ The following sections list the common causes for this wait type and the corresp
 
 Some application clients request thousands or millions of rows and then process the result by applying filters, sorting and aggregations. Large result sets may lead to unnecessary network utilization and client application processing.
 
-**Resolution:** Application developers must carefully balance the processing between SQL Server and clients. Filtering or aggregations can be performed by SQL Server and the final result set can be small. Limit the results set that arrives to the clients. Any more computations over the data, presentation and formatting are more appropriate on the client side, once the data is received.  
+**Resolution:** Application developers must carefully balance the processing between SQL Server and clients. Filtering or aggregations can be performed by SQL Server and the final result set can be small. Limit the result set that arrives to the clients. Any more computations over the data, presentation and formatting are more appropriate on the client side, once the data is received.  
 
 ### Application doesn't fetch results fast enough
 
-If the client application doesn't fetch results fast enough and doesn't notify SQL Server that the results set has been received, the `ASYNC_NETWORK_IO` wait will occur on the server.
+If the client application doesn't fetch results fast enough and doesn't notify SQL Server that the result set has been received, the `ASYNC_NETWORK_IO` wait will occur on the server.
 
 To illustrate using ADO.NET, by default, [DataSet](/dotnet/framework/data/adonet/ado-net-datasets) and [DataTable](/dotnet/api/system.data.datatable) will fetch all rows to completion before client can access it. However, classes like [SqlDataReader](/dotnet/api/system.data.sqlclient.sqldatareader) allow the application developer to choose what to do after each row is fetched from the server. An application can fetch one row at a time and then process this row according to business requirements. For example:
 
