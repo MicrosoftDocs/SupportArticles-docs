@@ -3,18 +3,17 @@ title: mssql-conf setup fails with Python module error
 description: This article helps you resolve the `mssql-conf` setup fails with Python module error. 
 ms.date: 03/04/2022
 ms.custom: sap:SQL Server 2019 on Linux 
-ms.technology: 
-ms.reviewer: 
-ms.topic: article
+author: ronking-zhu
+ms.author: v-jayaramanp
+ms.reviewer: rl-msft
 ms.prod: sql 
 ---
 
-# "Module object has no attribute 'run'" error in `mssql-conf` Setup using Python module
+# "Module object has no attribute run" error in mssql-conf Setup using Python module
 
 This article helps you to resolve an error that occurs when you try to run `mssql-conf` Setup by using the Python module. This article also describes the Python requirements for Microsoft SQL Server on Linux, and provides a workaround if you're using an early Python version when you try to configure SQL Server on Linux.
 
-_Applies to: SQL Server 2019 on Linux  
-_Original KB number:
+_Applies to_: SQL Server 2019 on Linux  
 
 ## Symptoms
 
