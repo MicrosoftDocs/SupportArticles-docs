@@ -14,7 +14,7 @@ ms.custom: sap:.net-framework-installation, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 adobe-target: true
 
-Internal note: The graphics in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the graphics.
+Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 ---
 # .NET Framework 3.5 installation errors: 0x800F0906, 0x800F081F, 0x800F0907, 0x800F0922
 
