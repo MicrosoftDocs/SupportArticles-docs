@@ -1,7 +1,7 @@
 ---
 title: Azure Virtual Desktop sign-in screen is blank
 description: Troubleshoot when Azure Virtual Desktop sign-in screen is blank
-author: v-miegge
+author: genlin
 ms.author: jerrycif
 ms.service: virtual-desktop
 manager: dcscontentpm

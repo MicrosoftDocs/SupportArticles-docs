@@ -6,7 +6,6 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.service: virtual-machines
 ms.collection: linux
@@ -24,7 +23,7 @@ There are many possible reasons that the SSH client might not be able to reach t
 ## Take preliminary steps
 The following diagram shows the components that are involved.
 
-![Diagram that shows components of SSH service](./media/detailed-troubleshoot-ssh-connection/ssh-tshoot1.png)
+:::image type="content" source="media/detailed-troubleshoot-ssh-connection/components-of-ssh-service.png" alt-text="Diagram that shows components of SSH service."::: 
 
 The following steps help you isolate the source of the failure and figure out solutions or workarounds.
 
@@ -53,7 +52,7 @@ The SSH client on your computer might fail to connect to the SSH service on the 
 ## Source 1: SSH client computer
 To eliminate your computer as the source of the failure, verify that it can make SSH connections to another on-premises, Linux-based computer.
 
-![Diagram that highlights SSH client computer components](./media/detailed-troubleshoot-ssh-connection/ssh-tshoot2.png)
+:::image type="content" source="media/detailed-troubleshoot-ssh-connection/ssh-client-computer-components.png" alt-text="Diagram that highlights SSH client computer components.":::
 
 If the connection fails, check for the following issues on your computer:
 
@@ -74,7 +73,7 @@ If you are using certificate authentication, verify that you have these permissi
 ## Source 2: Organization edge device
 To eliminate your organization edge device as the source of the failure, verify that a computer directly connected to the Internet can make SSH connections to your Azure VM. If you are accessing the VM over a site-to-site VPN or an Azure ExpressRoute connection, skip to [Source 4: Network security groups](#nsg).
 
-![Diagram that highlights organization edge device](./media/detailed-troubleshoot-ssh-connection/ssh-tshoot3.png)
+:::image type="content" source="media/detailed-troubleshoot-ssh-connection/organization-edge-device.png" alt-text="Diagram that highlights organization edge device.":::
 
 If you don't have a computer that is directly connected to the Internet, create a new Azure VM in its own resource group or cloud service and use that new VM. For more information, see [Create a virtual machine running Linux in Azure](/azure/virtual-machines/linux/quick-create-cli). Delete the resource group or VM and cloud service when you're done with your testing.
 
@@ -95,7 +94,7 @@ Work with your network administrator to correct the settings of your organizatio
 
 To eliminate the cloud service endpoint and ACL as the source of the failure, verify that another Azure VM in the same virtual network can connect using SSH.
 
-![Diagram that highlights cloud service endpoint and ACL](./media/detailed-troubleshoot-ssh-connection/ssh-tshoot4.png)
+:::image type="content" source="media/detailed-troubleshoot-ssh-connection/cloud-service-endpoint-acl.png" alt-text="Diagram that highlights cloud service endpoint and ACL.":::
 
 If you don't have another VM in the same virtual network, you can easily create one. For more information, see [Create a Linux VM on Azure using the CLI](/azure/virtual-machines/linux/quick-create-cli). Delete the extra VM when you are done with your testing.
 
@@ -117,7 +116,7 @@ You can also use IP Verify to validate the NSG configuration. For more informati
 ## Source 5: Linux-based Azure virtual machine
 The last source of possible problems is the Azure virtual machine itself.
 
-![Diagram that highlights Linux-based Azure virtual machine](./media/detailed-troubleshoot-ssh-connection/ssh-tshoot5.png)
+:::image type="content" source="media/detailed-troubleshoot-ssh-connection/linux-based-azure-virtual-machine.png" alt-text="Diagram that highlights Linux-based Azure virtual machine.":::
 
 If you haven't done so already, follow the instructions [to reset a password Linux-based virtual machines](./reset-password.md).
 

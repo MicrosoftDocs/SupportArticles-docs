@@ -7,14 +7,13 @@ metadata:
   ms.author: delhan
   manager: dcscontentpm
   audience: itpro
-  ms.topic: troubleshooting
+  ms.topic: faq
   ms.prod: windows-client
   localization_priority: medium
   ms.reviewer: v-elj, chawong, winciccore, kaushika
   ms.custom: sap:windows-7-extended-security-updates-esu
   ms.technology: windows-client-eos
   adobe-target: true
-    
 title: FAQ about Windows 7 ESU
 summary: |
   This article describes the frequently asked questions about the extended security updates for Windows 7.
@@ -242,7 +241,7 @@ sections:
         answer: |
             For VL customers and CSP direct partners who have Premier Support plans, the expectations are as follows.
           
-            ![Support expectations for extended security updates.](./media/windows-7-extended-security-updates-faq/expectation-support-plan.png)  
+            :::image type="content" source="media/windows-7-extended-security-updates-faq/expectation-support-plan.png" alt-text="Screenshot of Support expectations for extended security updates." border="false":::  
           
       - question: |
          Is Internet Explorer 11 covered under Windows 7 ESU?

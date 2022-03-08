@@ -72,8 +72,8 @@ ManagedDisk             : Microsoft.Azure.Management.Compute.Models.ManagedDiskP
 
 You can use the **az vm show** command with the appended query **"storageProfile.osDisk.managedDisk"** to determine whether the disk has managed disks, as in the following example:
 
-```console
-C:\Users\admin1>az vm show -n MyVM -g MyResourceGroup --query "storageProfile.osDisk.managedDisk"
+```azurecli
+az vm show -n MyVM -g MyResourceGroup --query "storageProfile.osDisk.managedDisk"
 ```
 
 If the disks are unmanaged, the command will generate no output. If the disks are managed, it will generate output like in the following example:
@@ -160,7 +160,7 @@ After you finish repairing the disk, follow these steps:
 
     Use the [az vm unmanaged-disk detach](/cli/azure/vm/unmanaged-disk#az_vm_unmanaged_disk_detach) command, as in the following example:
 
-    ```console
+    ```azurecli
     az vm unmanaged-disk detach -g MyResourceGroup --vm-name MyVm -n disk_name
     ```
 

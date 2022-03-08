@@ -2,7 +2,6 @@
 title: Unable to authenticate your credentials error when you connect to Azure Active Directory
 description: Describes an issue that triggers an Unable to authenticate your credentials. Make sure that your user name is in the format <username>@<domain> error. Occurs when you use the Azure Active Directory Module for Windows PowerShell to connect to Azure Active Directory.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users

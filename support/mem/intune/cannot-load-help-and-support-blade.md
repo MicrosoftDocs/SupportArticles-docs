@@ -1,15 +1,11 @@
 ---
-title: Cannot load Help and support in Intune portal
-description: Provides a solution for an issue in which the Help and support blade doesn't load correctly.
-ms.date: 05/20/2020
-ms.prod-support-area-path: General Guidance or Advisory
+title: Cannot load the Microsoft Intune Help and support blade
+description: Provides a solution for when the Intune Help and support blade doesn't load correctly in the Microsoft Endpoint Manager admin center.
+ms.date: 11/09/2021
 ---
-# You cannot load the Help and support blade in the Intune portal
+# You cannot load the Microsoft Intune Help and support blade
 
-This article provides the resolution to solve the issue that the **Help and support** blade cannot be loaded in Intune portal.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4493802
+This article gives a solution for when the **Help and support** blade doesn't load in the Microsoft Endpoint Manager admin center.
 
 ## Symptoms
 
@@ -26,7 +22,7 @@ The exact symptom may differ depending on the browser. However, the overall prob
 
 This issue may occur if your browser is configured to block third-party cookies.
 
-## Resolution
+## Solution
 
 To resolve this issue, configure your browser to allow third-party cookies. To do this, follow these steps.
 

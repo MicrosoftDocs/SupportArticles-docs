@@ -2,7 +2,7 @@
 title: Use DBCC MEMORYSTATUS to monitor memory usage
 description: This article describes how to use the DBCC MEMORYSTATUS command to monitor memory usage.
 ms.date: 11/09/2020
-ms.prod-support-area-path: Performance
+ms.custom: sap:Performance
 ms.reviewer: BorisB, Borisb, Bobward
 ms.topic: how-to
 ms.prod: sql

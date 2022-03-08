@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot and review Wi-Fi device profile logs
+title: Troubleshoot and review Wi-Fi device configuration profiles in Intune
 description: Understand and troubleshoot Wi-Fi device configuration profile issues on Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Review logs, and see some common issues and possible resolutions.
-ms.date: 07/20/2020
+ms.date: 10/08/2021
 ms.reviewer: tycast
 ---
-# Troubleshoot Wi-Fi device configuration profiles in Microsoft Intune
+# Troubleshooting Wi-Fi device configuration profiles in Microsoft Intune
 
 In Intune, you can create device configuration profiles that include connection settings for your WiFi network. Use these settings to connect users' Android, iOS/iPadOS, and Windows devices to the organization network.
 
@@ -12,19 +12,14 @@ This article shows what a Wi-Fi profile looks like when it successfully applies 
 
 For more information on Wi-Fi profiles in Intune, see [Add and use Wi-Fi settings on your devices](/mem/intune/configuration/wi-fi-settings-configure).
 
-## Before you begin
+> [!NOTE]
+> The examples in this article use SCEP certificate authentication for the Intune profiles. It also assumes that the Trusted Root and SCEP profiles work correctly on the device.
 
-The examples in this article use SCEP certificate authentication for the Intune profiles. It also assumes that the Trusted Root and SCEP profiles work correctly on the device.
+## Troubleshoot Android Wi-Fi profiles
 
-## Android
+In this section, we step through the user experience when installing configuration profiles on an Android device. This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on the device, install the Trusted Root and SCEP profiles.
 
-In this section, we step through the end user experience when installing the configuration profiles on an Android device.
-
-### End-user experience example
-
-This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on the device, install the Trusted Root and SCEP profiles.
-
-1. End users receive a notification to install the Trusted Root certificate profile:
+1. Users receive a notification to install the Trusted Root certificate profile:
 
     :::image type="content" source="media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png" alt-text="Screenshot of a notification to install Trusted Root certificate profile.":::
 
@@ -76,7 +71,7 @@ The following log shows your search results, and shows the Wi-Fi profile success
 
 ```
 
-## iOS/iPadOS
+## Troubleshoot iOS/iPadOS Wi-Fi profiles
 
 After the Wi-Fi profile is installed on the device, it's shown in the **Management Profile**:
 
@@ -107,9 +102,9 @@ On iOS/iPadOS devices, the Company Portal app log doesn't include information ab
     Line 392346: default    11:19:59.360460 -0400    profiled    Profile \'93www.windowsintune.com.wifi.Contoso\'94 installed.\
     ```
 
-## Windows
+## Troubleshoot Windows Wi-Fi profiles
 
-After the Wi-Fi profile is installed on the device, go to **Settings** > **Accounts** > **Access work or school**. Select your account > **Info**:
+After the Wi-Fi profile is installed on the device, go to **Settings** > **Accounts** > **Access work or school** > Select your account > **Info**:
 
 :::image type="content" source="media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png" alt-text="Screenshot of the Access work or school pane. Info button is highlighted on Windows device.":::
 
@@ -146,6 +141,14 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 ```
 
 ## Common issues
+
+This section provides troubleshooting guidance for the following scenarios:
+
+- [The Wi-Fi profile isn't deployed to the device](#the-wi-fi-profile-isnt-deployed-to-the-device)
+- [The Wi-Fi profile is deployed to the device, but the device can't connect to the network](#the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network)
+- [Users don't get new profile after changing password on existing profile](#users-dont-get-new-profile-after-changing-password-on-existing-profile)
+- [All Wi-Fi profiles report as failing](#all-wi-fi-profiles-report-as-failing)
+- [A Wi-Fi profile reports as failing, but seems to be working](#a-wi-fi-profile-reports-as-failing-but-seems-to-be-working)
 
 ### The Wi-Fi profile isn't deployed to the device
 
@@ -244,22 +247,4 @@ For Android Enterprise fully managed, dedicated, and corporate-owned work profil
 
 ### A Wi-Fi profile reports as failing, but seems to be working
 
-If a Wi-Fi profile is working correctly on a device, but reports as failing, it may be a reporting error. To fix this, update to the Intune app version 2021.05.02 or later.
-
-## Need more help
-
-- Use the [Intune user forums](/answers/products/mem) or [get support from Microsoft](/mem/get-support).
-
-- For more information about Wi-Fi profiles in Microsoft Intune, see the following articles:
-
-  - Add Wi-Fi settings for devices running [Android](/mem/intune/configuration/wi-fi-settings-android), [iOS/iPadOS](/mem/intune/configuration/wi-fi-settings-ios), and [Windows 10 and later](/mem/intune/configuration/wi-fi-settings-windows).
-  - [Support Tip - How to configure NDES for SCEP certificate deployments in Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-How-to-configure-NDES-for-SCEP-certificate/ba-p/455125)
-  - Troubleshoot the [SCEP certificate profile deployment](troubleshoot-scep-certificate-profiles.md) and [NDES configuration](/mem/intune/protect/certificates-scep-configure).
-
-- For the latest news, information, and tech tips, see the official blogs:
-  - [Microsoft Intune Support Team blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
-  - [Microsoft Enterprise Mobility and Security blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity)
-
-## Next steps
-
-[Monitor your profiles](/mem/intune/configuration/device-profile-monitor).
+If a Wi-Fi profile is working correctly on an Android device, but reports as failing, it may be a reporting error. To fix this, update to the Intune app version 2021.05.02 or later.

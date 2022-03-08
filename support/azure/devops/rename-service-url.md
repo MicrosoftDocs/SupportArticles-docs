@@ -2,7 +2,7 @@
 title: Rename the Azure DevOps Service URL
 description: This article provides the steps to rename the URL of your Azure DevOps Service.
 ms.date: 10/15/2020
-ms.prod-support-area-path: Client Connectivity
+ms.custom: sap:Client Connectivity
 ms.topic: how-to
 ms.service: az-devops-project
 ---

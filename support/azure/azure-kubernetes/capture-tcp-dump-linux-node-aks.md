@@ -5,9 +5,6 @@ ms.date: 11/15/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: erbookbi
-manager: gwallace
-audience: itpro
-ms.topic: troubleshooting
 ms.service: container-service
 ---
 # Capture a TCP dump from a Linux node in an AKS cluster

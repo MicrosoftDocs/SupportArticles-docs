@@ -2,7 +2,6 @@
 title: Troubleshoot dynamic groups
 description: Diagnose and resolve issues with dynamic groups.
 ms.date: 12/10/2020
-ms.prod-support-area-path: 
 ms.service: active-directory
 ms.subservice: domain-services
 ---
@@ -209,7 +208,7 @@ First, [install the Azure AD PowerShell module](/azure/active-directory/users-gr
    1. Read the directory setting of the tenant: [Read settings at the directory level](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#read-settings-at-the-directory-level).
    2. Check the guest user setting: As shown in the following image, if **AllowToAddGuests** is **true**, check the setting in that particular group. If **AllowToAddGuests** is **false**, no matter what group level setting is, guest users can't be added.
 
-   ![check the Allow to Add Guests setting](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-allow-to-add-guests.png)
+   :::image type="content" source="media/troubleshoot-dynamic-groups/allow-to-add-guests.png" alt-text="Screenshot to check the AllowToAddGuests setting.":::
 
 3. Update the setting at the tenant level. To change the guest user setting at the tenant level, visit: [How to update setting at tenant level using PowerShell](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#update-settings-at-the-directory-level).
 
@@ -221,7 +220,7 @@ This is expected behavior. Existing members of the group are removed when a rule
 
 ### You don't see membership changes instantly after updating a rule<a id="17"></a>
 
-Membership evaluation is done periodically in an background process. How long the process takes is determined by multiple factors.
+Membership evaluation is done periodically in a background process. How long the process takes is determined by multiple factors.
 
 ### Force the group to be processed now<a id="18"></a>
 

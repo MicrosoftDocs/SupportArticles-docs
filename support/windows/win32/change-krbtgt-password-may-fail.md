@@ -2,7 +2,7 @@
 title: Changing krbtgt password may fail
 description: Changing the krbtgt password may fail with STATUS_PASSWORD_RESTRICTION if a custom password filter is installed. This article provides a workaround for this problem.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Security development
+ms.custom: sap:Security development
 ms.reviewer: msmall
 ms.technology: windows-dev-apps-security-dev
 ---

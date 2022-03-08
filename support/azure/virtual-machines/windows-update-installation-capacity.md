@@ -5,7 +5,6 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
@@ -22,9 +21,9 @@ This article provides steps to resolve issues in an Azure virtual machine (VM) w
 
 ## Symptom
 
-When you use Boot diagnostics to view the screenshot of the VM, you will see that the screenshot displays Windows Update (KB) in progress, but failing with the error code: **C01A001D**. The following image shows Windows Update (KB) stuck with the message “Error C01A001D applying update operation ##### of ##### (######)”:
+When you use Boot diagnostics to view the screenshot of the VM, you will see that the screenshot displays Windows Update (KB) in progress, but failing with the error code: **C01A001D**. The following image shows Windows Update (KB) stuck with the message "Error C01A001D applying update operation ##### of ##### (######)":
 
-![Windows Update (KB) is stuck with the message, “Error C01A001D applying update operation X of Y (Z)”.](./media/troubleshoot-windows-update-installation-capacity/1.png)
+:::image type="content" source="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png" alt-text="Screenshot of error code: C01A001D when applying Windows Update.":::
 
 ## Cause
 
@@ -32,7 +31,7 @@ In this situation, the operating system (OS) is unable to complete a Windows Upd
 
 ## Solution
 
-### Process Overview:
+### Process Overview
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
@@ -63,7 +62,7 @@ To solve the issue:
    1. Use the [Disk Cleanup tool](https://support.microsoft.com/help/4026616/windows-10-disk-cleanup) to free up space.
 1. Once resizing and clean-up are finished, de-fragment the drive using the following command:
 
-   ```
+   ```console
    defrag <LETTER ASSIGN TO THE OS DISK>: /u /x /g
    ```
    
@@ -78,7 +77,7 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
 
    **Enable the Serial Console**:
    
-   ```
+   ```console
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
    ```
@@ -91,13 +90,13 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
 
     **Load the broken OS Disk:**
 
-   ```
+   ```console
    REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM 
    ```
    
    **Enable on ControlSet001**:
 
-   ```
+   ```console
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
@@ -105,7 +104,7 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
    
    **Enable on ControlSet002**:
 
-   ```
+   ```console
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
@@ -113,7 +112,7 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
    
    **Unload Broken OS Disk**:
 
-   ```
+   ```console
    REG UNLOAD HKLM\BROKENSYSTEM
    ```
    

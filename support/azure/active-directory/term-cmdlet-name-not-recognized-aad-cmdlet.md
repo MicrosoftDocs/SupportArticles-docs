@@ -2,7 +2,6 @@
 title: Error (The term \<cmdlet name> is not recognized) when you try to run Azure Active Directory for Windows PowerShell cmdlets
 description: Describes an issue in which you receive an error message when you try to run Azure Active Directory Module for Windows PowerShell cmdlets. Resolutions are provided.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services

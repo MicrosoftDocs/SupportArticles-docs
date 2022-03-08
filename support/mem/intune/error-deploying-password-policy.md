@@ -1,15 +1,12 @@
 ---
-title: Error -2016281112 deploying password policy
+title: Error -2016281112 deploying password policy in Intune
 description: Describes error -2016281112 when you deploy a password policy in Microsoft Intune.
-ms.date: 05/11/2020
-ms.prod-support-area-path: Device protection
+ms.date: 12/20/2021
+ms.custom: sap:Device protection
 ---
 # Error -2016281112 when you deploy password policy in Microsoft Intune
 
 This article fixes an issue in which you receive error -2016281112 when you deploy a password policy in Microsoft Intune.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4095085
 
 ## Symptom
 
@@ -21,16 +18,16 @@ Here is an example case in which you specify the **Required password type** sett
 
 ## Cause
 
-For Android and Windows desktop devices, password policies can't be immediately enforced on the users by using device restriction policies. If the user doesn't change the password as required by the policy, the error remains.
+For Android and Windows desktop devices, password policies can't be immediately enforced on users by using device restriction policies. If the user doesn't change the password as required by the policy, the error remains.
 
-## Resolution
+## Solution
 
 To fix the issue, direct the users to change their password.
 
 > [!NOTE]
 >
-> - On the Android platform, the end user must accept the password change notification.
-> - On the Windows MDM desktop platform, the user must press CTRL+ALT+DEL and click **Change Password**, and then the new password rules will be enforced.
+> - On the Android platform, the user must accept the password change notification.
+> - On the Windows MDM desktop platform, the user must press CTRL+ALT+DEL and select **Change Password**, and then the new password rules will be enforced.
 
 ## More information
 

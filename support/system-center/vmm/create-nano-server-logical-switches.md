@@ -2,7 +2,6 @@
 title: Create logical switches on Nano Servers
 description: Describes how to create logical switches on Nano Servers through System Center 2016 Virtual Machine Manager.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ---
 # How to create the logical switch on Nano Servers through VMM 2016
 

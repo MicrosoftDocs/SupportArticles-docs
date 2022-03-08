@@ -2,7 +2,6 @@
 title: Federated users in Azure AD are forced to sign in frequently
 description: Discusses an issue in which federated users in Azure AD are forced to sign in frequently. Provides a resolution.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
@@ -97,7 +96,7 @@ Azure AD Connect implements the synchronization of **PwdLastSet** attribute by u
 
 In the following screen shot, you can see how the attribute flow is implemented in both synchronization rules by using the Azure AD Connect Synchronization Rules Editor.
 
-:::image type="content" source="media/federated-users-azure-ad-forced-signin/4032264_en_1.png" alt-text="Screenshot of Sync Rules Editor.":::
+:::image type="content" source="media/federated-users-forced-sign-in/synchronization-rules.png" alt-text="Screenshot of the Azure AD Connect Synchronization Rules Editor.":::
 
 Customers may disable the synchronization of **PwdLastSet** attribute by disabling these out-of-box sync rules and replacing them with custom sync rules. To enable synchronization of the **PwdLastSet** attribute, consider re-enabling these out-of-box sync rules or implementing the same attribute flow in existing custom sync rules.
 

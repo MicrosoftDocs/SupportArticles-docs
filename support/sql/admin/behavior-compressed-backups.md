@@ -2,7 +2,7 @@
 title: Behavior of compressed backups
 description: This article describes the behavior of compressed backups when appending backups to an existing media set. 
 ms.date: 07/22/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: denzilr
 ms.topic: article
 ms.prod: sql

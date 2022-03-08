@@ -71,7 +71,7 @@ On Windows 7 clients, verify your time zone selection during the OOBE phase of S
 
 ### Dynamic DST
 
-In some countries, the DST dates differ from year to year and cannot be defined by a single rule. Therefore, Windows includes the Dynamic DST feature that stores per-year rules in the registry. When the year changes, the current time zone information is refreshed by using the correct DST information for that year.
+In some countries/regions, the DST dates differ from year to year and cannot be defined by a single rule. Therefore, Windows includes the Dynamic DST feature that stores per-year rules in the registry. When the year changes, the current time zone information is refreshed by using the correct DST information for that year.
 
 Dynamic DST depends on the following registry value being set to the name of the time zone key where the Dynamic DST data resides (for example, "Israel Standard Time"):
 

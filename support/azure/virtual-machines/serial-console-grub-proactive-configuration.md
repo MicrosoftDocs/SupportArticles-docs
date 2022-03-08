@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: mimckitt
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: linux
@@ -238,7 +237,7 @@ GRUB_DEFAULT=saved
 GRUB_DISABLE_SUBMENU=true
 GRUB_TERMINAL="serial console"
 GRUB_SERIAL_COMMAND="serial"
-GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300"
+GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0"
 GRUB_DISABLE_RECOVERY="true"
 ```
 
@@ -258,7 +257,7 @@ GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
 GRUB_DEFAULT=saved
 GRUB_DISABLE_SUBMENU=true
 GRUB_TERMINAL_OUTPUT="console"
-GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300"
+GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0"
 GRUB_DISABLE_RECOVERY="true"
 ```
 
@@ -294,7 +293,7 @@ GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
 GRUB_DEFAULT=saved
 GRUB_DISABLE_SUBMENU=true
 GRUB_TERMINAL="serial console"
-GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300"
+GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0"
 GRUB_DISABLE_RECOVERY="true"
 ```
  
@@ -385,7 +384,7 @@ terminal --timeout=5 serial console
 
 root (hd0,0)
 kernel /boot/vmlinuz-3.0.101-108.74-default root=/dev/disk/by-uuid/ab6b62bb--
-1a8c-45eb-96b1-1fbc535b9265 disk=/dev/sda  USE_BY_UUID_DEVICE_NAMES=1 earlyprinttk=ttyS0 console=ttyS0 rootdelay=300  showopts vga=0x314
+1a8c-45eb-96b1-1fbc535b9265 disk=/dev/sda  USE_BY_UUID_DEVICE_NAMES=1 earlyprinttk=ttyS0 console=ttyS0 showopts vga=0x314
 ```
 
  This configuration will enable the message **Press any key to continue** to appear on the console for 5 seconds 
@@ -430,5 +429,4 @@ For more information on how to access single user mode, see [this doc](./serial-
 :::image type="content" source="media/serial-console-grub-proactive-configuration/single-user-ubuntu.png" alt-text="Screenshot of the *Ubuntu entry in the boot the selected OS screen in GRUB.":::
 
 ## Next steps
-
-Learn more about [Azure Serial Console]( ./serial-console-linux.md)
+Learn more about [Azure Serial Console](./serial-console-linux.md)

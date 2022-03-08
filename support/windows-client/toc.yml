@@ -46,6 +46,8 @@
     items:
     - name: 64-bit versions of Windows don't support 16-bit applications
       href: ./application-management/x64-windows-not-support-16-bit-programs.md
+    - name: Managing the Teams Chat icon on Windows 11
+      href: ./application-management/managing-teams-chat-icon-windows-11.md
     - name: Third-party virtualization applications don't work with Hyper-V
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
     - name: Registering OCX and DLL files as System Globals
@@ -72,6 +74,8 @@
     items:
     - name: Microsoft Store app package updates are available
       href: ./application-management/windows-81-microsoft-store-app-package-updates.md
+    - name: Modern apps or application packages are reported as vulnerable
+      href: ./application-management/modern-apps-application-packages-reported-vulnerable.md
   - name: MSI
     items:
     - name: 0x80070BC9 error when installing MSI package
@@ -492,6 +496,8 @@
       href: ./networking/dns-requests-random-network-properties-change.md
     - name: URI-encoding in UNC paths interpreted literally
       href: ./networking/url-encoding-unc-paths-not-url-decoded.md
+    - name: Support policy for DNS client-side caching
+      href: ./networking/support-policy-for-dns-client-side-caching.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     items:
     - name: DHCP clients are blocked when DAI-enabled network device is used

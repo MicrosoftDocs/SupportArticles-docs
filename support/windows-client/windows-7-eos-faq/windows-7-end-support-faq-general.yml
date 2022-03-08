@@ -2,18 +2,17 @@
 metadata:
   title: FAQ about the end of support for Windows 7
   description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7 for home users.
-  ms.date: 09/21/2020
+  ms.date: 12/16/2021
   author: Deland-Han
   ms.author: delhan
   manager: dcscontentpm
   audience: itpro
-  ms.topic: troubleshooting
+  ms.topic: faq
   ms.prod: windows-client
   localization_priority: medium
   ms.reviewer: v-elj, chawong, winciccore, kaushika
   ms.custom: sap:general-information, csstroubleshoot
   ms.technology: windows-client-eos
-    
 title: Frequently asked questions about the Windows 7 end of support
 summary: |
   This article describes the frequently asked questions about the end of support for Windows 7.
@@ -92,7 +91,7 @@ sections:
 
           **FastTrack deployment guidance for Windows 10** helps you to envision a technical plan, determine how to onboard and deploy new services and users, and provides support as you deploy to get the most value out of your technology investments. This assistance is available at no additional cost for those who have 150 or more licenses of an eligible service or plan. For more information, see [FastTrack Center Benefit for Windows 10](/fasttrack/win-10-fasttrack-benefit-for-windows-10).
 
-          **App Assure service from FastTrack** is a new service from Microsoft FastTrack that is designed to address app compatibility issues for Windows 10, Microsoft 365 Apps for enterprise, and Microsoft Edge. If you find any app compatibility issues after you update to Microsoft 365 Apps for enterprise or Windows 10, or after you switch to Edge from Internet Explorer or Chrome (including issues about macros and add-ins), App Assure helps you fix them. Simply let us know [by filing a FastTrack ticket](https://support.microsoft.com/aka.ms/desktopappassurerequest), and a Microsoft engineer will follow up to work with you until the issue is resolved.
+          **App Assure service from FastTrack** is a new service from Microsoft FastTrack that is designed to address app compatibility issues for Windows 10, Microsoft 365 Apps for enterprise, and Microsoft Edge. If you find any app compatibility issues after you update to Microsoft 365 Apps for enterprise or Windows 10, or after you switch to Edge from Internet Explorer or Chrome (including issues about macros and add-ins), App Assure helps you fix them. Simply let us know [by filing a FastTrack ticket](https://go.microsoft.com/fwlink/?linkid=2022721), and a Microsoft engineer will follow up to work with you until the issue is resolved.
 
           **Ready for Microsoft 365**: The [Ready for Microsoft 365](https://developer.microsoft.com/windows/ready-for-windows/#/) directory lists software solutions that are supported and in use on commercial devices running Windows 10 and Microsoft 365 Apps for enterprise. The directory is intended for IT managers at companies and organizations worldwide who are considering the latest versions of Windows 10 and Office 365 for their deployments.
       

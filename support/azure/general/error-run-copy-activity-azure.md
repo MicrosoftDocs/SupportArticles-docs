@@ -2,7 +2,7 @@
 title: Error when you try to copy content to Azure
 description: This article provides a resolution for the problem that occurs when you try to copy content to Microsoft Azure by using a Java-based tool or program.
 ms.date: 10/22/2020
-ms.prod-support-area-path: Data Factory, V2 - Azure-SSIS Integration Runtime
+ms.custom: sap:Data Factory, V2 - Azure-SSIS Integration Runtime
 ms.service: azure
 ---
 # UserErrorJreNotFound error message when you run a copy activity to Azure
@@ -49,21 +49,21 @@ To fix this issue, follow these steps to verify the status of the JRE installat
 
       In the **Details** pane, there should be a Current Version entry that shows the JRE version (for example, 1.8).
 
-      ![Java Runtime Environment version in registry](./media/error-run-copy-activity-azure/java-runtime-environment-image.png)  
+      :::image type="content" source="media/error-run-copy-activity-azure/java-runtime-environment-image.png" alt-text="Screenshot of the Java Runtime Environment version in the registry.":::
 
    1. In the navigation pane, locate a subkey that is an exact match for the version (for example 1.8) under the JRE folder. In the details pane, there should be a **JavaHome** entry. The value of this entry is the JRE installation path.
 
-      ![Java Home Entry](./media/error-run-copy-activity-azure/java-home-entry-image.png)  
+      :::image type="content" source="media/error-run-copy-activity-azure/java-home-entry-image.png" alt-text="Screenshot of the JavaHome entry in the details pane.":::
 
 3. Locate the bin\server folder in the following path:
 
     `C:\Program Files\Java\jre1.8.0_74`
 
-    ![Bin folder of JRE](./media/error-run-copy-activity-azure/folder-of-jre.png)
+    :::image type="content" source="media/error-run-copy-activity-azure/folder-of-jre.png" alt-text="Screenshot shows the location of the bin folder.":::
 
 4. Check whether this folder contains a jvm.dll file. If it does not, check for the file in the `bin\client` folder.
 
-   ![jvm.dll file location](./media/error-run-copy-activity-azure/file-location-image.png)  
+   :::image type="content" source="media/error-run-copy-activity-azure/file-location-image.png" alt-text="Screenshot to check the jvm.dll file in the bin folder.":::
   
 > [!NOTE]
 >

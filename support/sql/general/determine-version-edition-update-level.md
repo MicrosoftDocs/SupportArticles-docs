@@ -2,7 +2,7 @@
 title: Determine the version, edition, and update level
 description: This article lists various builds or updates that are available for different versions of  SQL Server and describe the procedures to determine the version of SQL Server that is running on a given system.
 ms.date: 05/28/2021
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
 ---
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 321185
   > The version information and edition information are in the same output string.
 
   > [!NOTE]
-  > For information about SQL Server Support lifecycle, check the [Microsoft SQL Server support lifecycle page](https://support.microsoft.com/lifecycle?c2=1044).
+  > For information about SQL Server Support lifecycle, see [SQL Server support lifecycle information](/lifecycle/products/?products=sql-server&preserve-view=true).
 
 ## Latest updates available for currently supported versions of SQL Server
 
@@ -33,8 +33,8 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest Service Pack|Latest GDR|Latest cumulative update|Complete version information|General Guidance|
   |---|---|---|---|---|---|
-  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU14 for 2019](https://support.microsoft.com/help/5007182) (15.0.4188.2 - November 2021)</br>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
-  |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/4583456) (14.0.2037.2 - January, 2021)|[CU27](https://support.microsoft.com/help/5006944) (14.0.3421.10 - October 2021)</br>[CU22 + GDR](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU15 for 2019](https://support.microsoft.com/help/5008996) (15.0.4198.2 - January 2022)</br>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/4583456) (14.0.2037.2 - January, 2021)|[CU28 for 2017](https://support.microsoft.com/help/5008084) (14.0.3430.2 - January 2022)</br>[CU22 + GDR](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2016|[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)</br>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)</br>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for SP2](https://support.microsoft.com/help/4583460) (13.0.5103.6 - January, 2021)</br>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July, 2019)</br>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January, 2018)|[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)</br>[CU15 + GDR for SP2](https://support.microsoft.com/help/4583461) (13.0.5865.1 - January 2021)</br>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)</br>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)</br>[CU14 for SP2](https://support.microsoft.com/help/4564903) (13.0.5830.85- August 2020)</br>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|[SQL Server 2016 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2014|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)</br>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)</br>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/4583463) (12.0.6164.21 - January, 2021)</br>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - January, 2019)</br>[GDR for SP1](https://support.microsoft.com/help/4032542) (August, 2017)</br>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/4583462) (12.0.6433.1 - January 2021)</br>[CU4 for SP3](https://support.microsoft.com/help/4500181) (12.0.6329.1 - July 2019)</br>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)</br>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|[SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sql-server-2014)|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
   |SQL Server 2012| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)</br>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)</br>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)</br>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.00 - November 2012|[GDR for SP4](https://support.microsoft.com/help/4583465) (11.0.7507.2 - January, 2021)</br>[GDR for SP3](https://support.microsoft.com/help/4057115) (January, 2018)</br>[MS 16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November, 2016)</br>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December, 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) (11.0.6607.3 - August 2017)</br>[CU16 for SP2](https://support.microsoft.com/help/3205054) (11.0.5678.0 - January 2017)</br>[CU16 for SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sql-server-2012)|[SQL Server 2012 Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
@@ -91,7 +91,7 @@ To determine the version of SQL Server, you can use any of the following methods
   > - SQL Server 2014 Service Pack 1 CU3 and later versions
   > - SQL Server 2012 Service Pack 2 CU7 and later versions
   >
-  >   :::image type="content" source="media/determine-version-edition-update-level/enhanced-output.png" alt-text="Screenshot of an example of enhanced output for SQL Server 2012 Service Pack 2 CU7. (SP2-CU7) is added in the first row.":::
+  >   :::image type="content" source="media/determine-version-edition-update-level/enhanced-output.svg" alt-text="Screenshot of an example of enhanced output for SQL Server 2012 Service Pack 2 CU7. (SP2-CU7) is added in the first row.":::
 
 - **Method 4:** Connect to the instance of SQL Server, and then run the following query in SQL Server Management Studio (SSMS):
 
@@ -126,7 +126,7 @@ To determine the version of SQL Server, you can use any of the following methods
 
   A snapshot of a sample report is as follows:
 
-  :::image type="content" source="media/determine-version-edition-update-level/sample-report.png" alt-text="Screenshot shows a sample SQL Server 2016 Setup Discovery report." border="false":::  
+  :::image type="content" source="media/determine-version-edition-update-level/sample-report.svg" alt-text="Screenshot shows a sample SQL Server 2016 Setup Discovery report." border="false":::  
 
 ## Determine the version of SQL Server Client tools
 
@@ -134,7 +134,7 @@ To determine the version of SQL Server, you can use any of the following methods
 
   To determine which versions of the client tools are installed on your system, start Management Studio, and then click **About** on the **Help** menu. (See the following screenshot.)
 
-  :::image type="content" source="media/determine-version-edition-update-level/ssms-about.png" alt-text="Screenshot of the About Microsoft SQL Server Management Studio window, which shows the versions of the client tools." border="false":::
+  :::image type="content" source="media/determine-version-edition-update-level/ssms-about.svg" alt-text="Screenshot of the About Microsoft SQL Server Management Studio window, which shows the versions of the client tools." border="false":::
 
   Starting with SQL Server 2016, SQL Server management studio is offered as a separate download. For additional information about various versions of the tool, review [Release notes for SQL Server Management Studio (SSMS)](/sql/ssms/release-notes-ssms).
 
@@ -423,6 +423,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|15.0.4198.2|None|CU15| [5008996](https://support.microsoft.com/help/5008996)|January 27, 2022|
 |15.0.4188.2|None|CU14| [5007182](https://support.microsoft.com/help/5007182)|November 22, 2021|
 |15.0.4178.1|None|CU13| [5005679](https://support.microsoft.com/help/5005679)|October 05, 2021|
 |15.0.4153.1|None|CU12| [5004524](https://support.microsoft.com/help/5004524)|August 04, 2021|
@@ -446,6 +447,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|14.0.3430.2|None| CU28| [5008084](https://support.microsoft.com/help/5008084)|January 13, 2022|
 |14.0.3421.10|None| CU27| [5006944](https://support.microsoft.com/help/5006944)|October 27, 2021|
 |14.0.3411.3|None| CU26| [5005226](https://support.microsoft.com/help/5005226)|September 14, 2021|
 |14.0.3401.7|None| CU25| [5003830](https://support.microsoft.com/help/5003830)|July 12, 2021|

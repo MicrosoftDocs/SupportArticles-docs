@@ -4,7 +4,7 @@ description: Provides several methods to resolve the issue in which you cannot s
 ms.date: 06/23/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -52,7 +52,7 @@ To change the [registry settings](#1), use [Group Policy Preferences](/previous-
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Location and Sensors** > **Windows Location Provider** > **Turn off Windows Location Provider**.
 2. Set the value of the **Turn off Windows Location Provider** setting to **Not Configured** as follows:
 
-    :::image type="content" source="media/cannot-set-timezone-automatically/turn-off-location-setting-group-policy.png" alt-text="Turn off location setting group policy":::
+    :::image type="content" source="media/cannot-set-timezone-automatically/turn-off-location-setting-group-policy.png" alt-text="Screenshot of the Not Configured option of Turn off Windows Location Provider value setting window.":::
 
 ## Use MDM policy
 

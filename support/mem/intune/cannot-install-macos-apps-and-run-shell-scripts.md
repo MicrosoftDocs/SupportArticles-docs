@@ -2,7 +2,7 @@
 title: App installation and shell script execution fail in macOS 11.2
 description: Resolves a known issue in which applications don't install and shell scripts don't run on devices that run macOS 11.2.x.
 ms.date: 06/16/2021
-ms.prod-support-area-path: App management
+ms.custom: sap:App management
 ms.reviewer: markstan
 author: simonxjx
 ms.author: v-six
@@ -51,8 +51,8 @@ When these issues occur, entries that resemble the following example are logged 
 
 ## Cause
 
-It's a known issue in macOS 11.2._x_.
+This is a known issue in macOS 11.2._x_.
 
-## Resolution
+## Solution
 
 To fix this issue, upgrade the device to macOS 11.3 or a later version.

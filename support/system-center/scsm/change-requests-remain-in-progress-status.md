@@ -2,7 +2,6 @@
 title: A change request remains in the In Progress status
 description: Fixes an issue where a change request in Service Manager remains with a status of In Progress and can't be closed.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: RPesenko
 ---
 # Service requests with circular relationships cannot be closed in System Center Service Manager

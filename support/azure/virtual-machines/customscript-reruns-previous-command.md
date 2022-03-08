@@ -2,7 +2,6 @@
 title: CustomScript reruns the previous command in Azure Linux
 description: Discusses an issue in which the last command in the Azure Linux CustomScript extension reruns the previous command. Provides a workaround.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: linux
@@ -23,7 +22,7 @@ Virtual machines that have Microsoft.Azure.Extensions.CustomScript 2.0.x instal
 To determine the script version, open the Azure portal, select the virtual machine, select **Extensions** > **Custom Script Extension**, and then select the extension to view its version properties.
 You can also query for the full version information by running the following command at a command prompt:
 
-```console
+```azurecli
 az vm get-instance-view -g resourceGroupName -n vmName --query "instanceView.extensions[?type == 'Microsoft.Azure.Extensions.CustomScript']"
 ```
 

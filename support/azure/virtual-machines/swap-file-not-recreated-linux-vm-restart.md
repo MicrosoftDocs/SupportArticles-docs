@@ -1,8 +1,7 @@
 ---
 title: Swap file is not re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
-ms.date: 10/25/2021
-ms.prod-support-area-path: 
+ms.date: 12/09/2021
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: srijangupta
@@ -29,29 +28,24 @@ When cloud-init is responsible for provisioning, the swap file must be configure
 
 To resolve this problem, follow these steps:
 
-1. Disable resource disk formatting, and then swap the configuration within the waagent configuration file: `/etc/waagent.conf`. To do this, follow the cloud-init method:
+1. Disable resource disk formatting and swap configuration within waagent configuration because this task is now handled by Cloud-Init. Set the parameters as follows:
 
     ```
-    vi /etc/waagent.conf
+    # Format if unformatted. If 'n', resource disk will not be mounted.
+    ResourceDisk.Format=n
 
-    # Format if unformatted. If 'n', resource disk will not be mounted. 
-    ResourceDisk.Format=n 
     # Create and use swapfile on resource disk.
     ResourceDisk.EnableSwap=n
-    ```
 
-2. Make sure that the Azure Linux Agent is not trying to mount the ephemeral disk. This is because the task is typically handled by cloud-init. Set the parameters as follows:
-
-    ```
-    #Mount point for the resource disk 
-    ResourceDisk.MountPoint=/mnt 
-
-    #Size of the swapfile. 
+    #Mount point for the resource disk
+    ResourceDisk.MountPoint=/mnt
+  
+    #Size of the swapfile.
     ResourceDisk.SwapSizeMB=0
     ```
 
-3. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
-4. Make sure that the VM is configured to create a swap file by using cloud-init:
+1. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
+1. Make sure that the VM is configured to create a swap file by using cloud-init:
   
     1. Add the following script to `/var/lib/cloud/scripts/per-boot`.
 
@@ -66,12 +60,18 @@ To resolve this problem, follow these steps:
         else
         swapon /mnt/swapfile; fi
         ```
+        
+        In some cases, the `fallocate` command won't create a swap file properly. If a swap file isn't created properly, you can use the alternate script below:
+        
+        ```
+        dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048
+        ```
 
-    2. Make the file executable by using the `# chmod +x create_swapfile.sh` command.
-    3. Stop and Start the VM or Redeploy it from the portal, and check for swap enablement.
+    1. Make the file executable by using the `# chmod +x create_swapfile.sh` command.
+    1. Stop and Start the VM or Redeploy it from the portal, and check for swap enablement.
         Here is an example of how to enable the swap capability: 
 
-        ```    
+        ``` 
         root@ub1804-ephemeral:/var/lib/cloud/scripts/per-boot# free -m 
         total used free shared buff/cache available 
         Mem: 7953 296 7384 0 272 7412 
@@ -112,7 +112,7 @@ fs_setup:
     filesystem: swap
 mounts:
   - ["ephemeral0.1", "/mnt"]
-  - ["ephemeral0.2", "none", "swap", "sw,nofail,x-systemd.requires=cloud-init.service", "0", "0"]
+  - ["ephemeral0.2", "none", "swap", "sw,nofail,x-systemd.requires=cloud-init.service,x-systemd.device-timeout=2", "0", "0"]
 ```
 
 The mount is created with the `nofail` option to ensure that the boot will continue even if the mount is not completed successfully.

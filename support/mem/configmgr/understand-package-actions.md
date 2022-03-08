@@ -2,7 +2,6 @@
 title: Understanding package actions
 description: Describes the distribute, update, and redistribute package actions in content distribution.
 ms.date: 03/30/2020
-ms.prod-support-area-path: 
 ---
 # Package actions in content distribution
 

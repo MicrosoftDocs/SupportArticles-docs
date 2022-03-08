@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
-editor: na
 tags: ''
 ms.service: virtual-machines
 ms.collection: windows
@@ -253,7 +252,11 @@ To run the PerfInsights tool, follow these steps:
     ```console
     PerfInsights /run advanced xp /d 300 /AcceptDisclaimerAndShareDiagnostics
     ```
-
+    You can use the following example to run the benchmark scenario for 5 mins:
+    
+    ```console
+    PerfInsights /run benchmark /d 300 /AcceptDisclaimerAndShareDiagnostics
+    ```
     You can use the below example to run performance analysis scenario for 5 mins and upload the result zip file to the storage account:
     
     ```console

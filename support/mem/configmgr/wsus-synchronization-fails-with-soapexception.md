@@ -2,7 +2,6 @@
 title: WSUS synchronization fails with SoapException
 description: Fixes an issue in which WSUS synchronization fails because of a decommissioned endpoint.
 ms.date: 08/12/2020
-ms.prod-support-area-path:
 ---
 # WSUS synchronization fails with SoapException
 

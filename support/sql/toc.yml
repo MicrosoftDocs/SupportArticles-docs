@@ -163,6 +163,8 @@
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
       href: admin/manage-error-log.md
+    - name: Memory-optimized temppdb metadata out-of-memory errors
+      href: admin/memory-optimized-tempdb-out-of-memory.md
     - name: Non-yielding error if the lock pages in memory option is disabled
       href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
@@ -207,14 +209,36 @@
       href: connect/odbc-driver-uninstall-incomplete.md
   - name: Connection issues
     items:
-    - name: Can't connect remotely using TCP/IP
+    - name: Common Connection Issues
+      href: connect/resolve-connectivity-errors-overview.md
+    - name: Pre-reqs for connectivity troubleshooting
+      href: connect/resolve-connectivity-errors-checklist.md
+    - name: Cannot generate SSPI context
+      href: connect/cannot-generate-sspi-context-error.md
+    - name: Existing connection forcibly closed
+      href: connect/tls-exist-connection-closed.md
+    - name: Login failed for user
+      href: connect/login-failed-for-user.md
+    - name: Network-related or instance-specific error
+      href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+    - name: Timeout expired errors
+      href: connect/timeout-expired-error.md
+    - name: Token-based server access validation failed
       href: connect/cannot-connect-remotely.md
-    - name: Kerberos Configuration Manager is available
-      href: connect/kerberos-configuration-manager-available.md
-    - name: Resolving connectivity errors
-      href: connect/resolving-connectivity-errors.md
     - name: Untrusted certificate authority error
       href: connect/error-message-when-you-connect.md
+    - name: Connectivity How Tos
+      items:
+      - name: Configuring firewalls
+        href: /sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context
+      - name: Dynamic vs Static ports
+        href: connect/static-or-dynamic-port-config.md
+      - name: Kerberos Configuration Manager
+        href: connect/using-kerberosmngr-sqlserver.md
+      - name: Testing using UDL file 
+        href: connect/test-oledb-connectivity-use-udl-file.md
+      - name: Using PortqryUI tool 
+        href: connect/using-portqrytool-sqlserver.md
   - name: Database Design and Development
     items:
     - name: Can't make a remote connection from a CLR trigger
@@ -249,6 +273,8 @@
         href: availability-groups/error-9002-transaction-log-large.md
       - name: AlwaysOn DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+      - name: Error 2767 on secondary replica
+        href: availability-groups/error-2767-query-secondary-replica-fails.md
       - name: Issues after changing the hostname 
         href: availability-groups/error-41041-change-hostname.md
       - name: Listener connection times out in multi-subnet
@@ -339,6 +365,8 @@
       href: install/error-upgrade-cluster-node.md
     - name: Warning about network binding order
       href: install/warning-about-network-binding.md
+    - name: Troubleshoot errors related to system disk sector size greater than 4 KB
+      href: admin/troubleshoot-os-4kb-disk-sector-size.md
   - name: Machine Learning Services (in database)
     items:
     - name: Inconsistent results in MKL computations
@@ -349,14 +377,16 @@
       href: performance/blocked-column-populated-latch-waits.md
     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+    - name: Decreased performance when using EFS to encrypt database files
+      href: performance/decreased-performance-use-efs.md
     - name: Decreased performance when querying view across linked servers
-      href: performance/decreased-performance-linkedserver-views.md      
+      href: performance/decreased-performance-linkedserver-views.md            
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
     - name: External modules and filter drivers cause performance issues
       href: performance/performance-consistency-issues-filter-drivers-modules.md
-    - name: High CPU use occurs in your queries
-      href: performance/high-cpu-use-occurs-queries.md
+    - name: High CPU or high memory grants with queries that use optimized nested loops
+      href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE
@@ -375,6 +405,8 @@
       href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
+    - name: Troubleshoot SQL Server slow performance caused by IO issues
+      href: performance/troubleshoot-sql-io-performance.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
     - name: Understand and resolve blocking problems
@@ -405,6 +437,8 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
+    - name: ASCII funtion returns different results
+      href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
     - name: CDC capture job fails when processing changes
@@ -608,6 +642,8 @@
     href: linux/core-dump-rhel-7-4-run-mssql-conf.md
   - name: Restore operation fails on Linux servers
     href: linux/database-restore-operation-fails-linux-server.md
+  - name: mssql-conf setup fails with python module error
+    href: linux/mssql-conf-setup-fails-with-python-module-error.md
 
 - name: Tools
   items:
@@ -637,6 +673,8 @@
       href: tools/error-message-when-you-open-configuration-manager.md
     - name: MSDB database grows
       href: tools/msdb-database-grows.md
+    - name: Description of the Replay Markup Language Utilities for SQL Server
+      href: tools/replay-markup-language-utility.md
     - name: New data isn't uploaded to MDW database after configuring collection set
       href: tools/data-collector-collection-set-upload-fail.md
     - name: PowerShell issue when RemoteSigned is not set
@@ -647,6 +685,8 @@
       href: tools/error-use-configuration-manager-restart-agent-service.md
     - name: The SQLDMO Application object failed to initialize when using Sqlmaint
       href: tools/error-you-run-sqlmaint-utility.md
+    - name: Troubleshoot Database Mail issues
+      href: tools/troubleshoot-database-mail-issues.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
     - name: Use SQLIOSim utility to simulate SQL Server disk activity

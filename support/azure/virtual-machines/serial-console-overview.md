@@ -5,14 +5,13 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 02/10/2020
+ms.date: 12/02/2021
 ms.author: genli
 ---
 
@@ -34,7 +33,7 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 - Classic deployments aren't supported. Your VM or virtual machine scale set instance must use the Azure Resource Manager deployment model.
 
 > [!NOTE]
-> Serial Console is currently incompatible with a managed boot diagnostics storage account. To use Serial Console, ensure that you are using a custom storage account that is accessible from all networks. You can find the setting in the **Networking** section of the storage account **Overview** page.
+> Serial Console is currently incompatible with a managed boot diagnostics storage account. To use Serial Console, ensure that you are using a custom storage account that is in the same region as your VM and accessible from all networks. You can find the setting in the **Networking** section of the storage account **Overview** page.
 
 ## Get started with the Serial Console
 

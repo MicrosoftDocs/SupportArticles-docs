@@ -2,7 +2,6 @@
 title: DPM is unable to enumerate SqlServerWriter
 description: Fixes an issue in which you receive error 3055 when creating a protection group for a SQL Server database in System Center Data Protection Manager 2010.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: dpmsee
 ---
 # Unable to protect a SQL Server database from System Center Data Protection Manager 2010

@@ -26,28 +26,28 @@
         topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
 
     - name: Browsers
-      tocHref: /troubleshoot/browsers/
-      topicHref: /troubleshoot/browsers/welcome-browsers
+      tocHref: /troubleshoot/developer/browsers/
+      topicHref: /troubleshoot/developer/browsers/welcome-browsers
 
     - name: BizTalk Server
-      tocHref: /troubleshoot/biztalk/
-      topicHref: /troubleshoot/biztalk/welcome-biztalk-server
+      tocHref: /troubleshoot/developer/biztalk/
+      topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
       
     - name: .NET
-      tocHref: /troubleshoot/dotnet/
-      topicHref: /troubleshoot/dotnet/welcome-dotnet
+      tocHref: /troubleshoot/developer/dotnet/
+      topicHref: /troubleshoot/developer/dotnet/welcome-dotnet
 
     - name: Host Integration Server
-      tocHref: /troubleshoot/host-integration-server/
-      topicHref: /troubleshoot/host-integration-server/welcome-host-integration-server
+      tocHref: /troubleshoot/developer/host-integration-server/
+      topicHref: /troubleshoot/developer/host-integration-server/welcome-host-integration-server
 
     - name: Visual Studio
-      tocHref: /troubleshoot/visualstudio/
-      topicHref: /troubleshoot/visualstudio/welcome-visual-studio
+      tocHref: /troubleshoot/developer/visualstudio/
+      topicHref: /troubleshoot/developer/visualstudio/welcome-visual-studio
 
     - name: Web Apps
-      tocHref: /troubleshoot/webapps/
-      topicHref: /troubleshoot/webapps/welcome-webapps
+      tocHref: /troubleshoot/developer/webapps/
+      topicHref: /troubleshoot/developer/webapps/welcome-webapps
 
     - name: SQL Server
       tocHref: /troubleshoot/sql/
@@ -95,6 +95,9 @@
       - name: Active Directory
         tocHref: /troubleshoot/azure/active-directory/
         topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+      - name: Azure Log Analytics
+        tocHref: /troubleshoot/azure/log-analytics/
+        topicHref: /troubleshoot/azure/log-analytics/welcome-log-analytics
       - name: Cloud Services
         tocHref: /troubleshoot/azure/cloud-services/
         topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services

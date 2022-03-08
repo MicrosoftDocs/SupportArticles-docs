@@ -4,7 +4,6 @@ description: Overview of the two debugging features for virtual machines in Azur
 services: virtual-machines
 author: Deland-Han
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 
 ms.service: virtual-machines
@@ -21,7 +20,7 @@ For Linux virtual machines, you can view the output of your console log from the
 
 You can select the **Boot diagnostics** option to view the log and the screenshot.
 
-![Resource Manager](./media/virtual-machines-common-boot-diagnostics/screenshot1.png)
+:::image type="content" source="media/virtual-machines-common-boot-diagnostics/screenshot-tab.png" alt-text="Screenshot of the Screenshot tab in the Boot diagnostics page of Azure Portal.":::
 
 ## Common boot errors
 
@@ -45,7 +44,7 @@ The following procedure is for a virtual machine created using the Resource Mana
 
 On the **Management** tab, in **Monitoring** section, make sure that **Boot diagnostics** is turned on. From the **Diagnostics storage account** drop-down list, select a storage account in which to place the diagnostic files.
  
-![Create VM](./media/virtual-machines-common-boot-diagnostics/enable-boot-diagnostics-vm.png)
+:::image type="content" source="media/virtual-machines-common-boot-diagnostics/enable-boot-diagnostics-vm.png" alt-text="Screenshot of the Monitoring section on the Management tab under Create a virtual machine page." border="false"::: 
 
 > [!NOTE]
 > The Boot diagnostics feature does not support premium storage account or Zone Redundant Storage Account Types. If you use the premium storage account for Boot diagnostics, you might receive the StorageAccountTypeNotSupported error when you start the VM.
@@ -86,7 +85,7 @@ To enable Boot diagnostics on an existing virtual machine, follow these steps:
 3. In **Boot diagnostics** settings, change the status to **On**, and from the **Storage account** drop-down list select a storage account. 
 4. Save the change.
 
-    ![Update Existing VM](./media/virtual-machines-common-boot-diagnostics/enable-for-existing-vm.png)
+    :::image type="content" source="media/virtual-machines-common-boot-diagnostics/enable-for-existing-vm.png" alt-text="Screenshot of the On option under the Status item and the Storage account field in the Boot diagnostics page." border="false":::
 
 ### Enable boot diagnostics using the Azure CLI
 
