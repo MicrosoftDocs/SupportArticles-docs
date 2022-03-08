@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot slow queries resulting from ASYNC_NETWORK_IO
-description: Provides resolutions to slow query issues that result from ASYNC_NETWORK_IO wait type.
+description: Provides resolutions for slow query issues that result from ASYNC_NETWORK_IO wait type.
 ms.date: 02/22/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
@@ -26,7 +26,7 @@ The following sections list the common causes for this wait type and the corresp
 
 ### Large result set
 
-Some application clients request thousands or millions of rows and then process the result by applying filters, sorting and aggregations. Large result sets may lead to unnecessary network utilization and client application processing.
+Some application clients request thousands or even millions of rows and then process the results by applying filters, sorting, and aggregations. Large result sets may lead to unnecessary network utilization and client application processing.
 
 **Resolution:** Application developers must carefully balance the processing between SQL Server and clients. Filtering or aggregations can be performed by SQL Server and the final result set can be small. Limit the result set that arrives to the clients. Any more computations over the data, presentation and formatting are more appropriate on the client side, once the data is received.  
 
@@ -48,7 +48,7 @@ To illustrate using ADO.NET, by default, [DataSet](/dotnet/framework/data/adonet
 
 Even if application code is developed to fetch results as fast as possible, system resource issues can cause the entire client process to be slow. For example:
 
-The application may not be able to quickly fetch results if the machine that runs the client application is constrained on resources as follows:
+The application may not quickly fetch results if the machine that runs the client application has resource constraints. For example:
 
 - 100% CPU utilization
 
@@ -56,7 +56,7 @@ The application may not be able to quickly fetch results if the machine that run
 
 - Slow I/O (perhaps the application writes results or logs)
 
-This resource constraint can also lead to slow processing of incoming results and cause the SQL Server to wait with `ASYNC_NETWORK_IO`.
+These resource constraints may lead to slow processing of incoming results and cause SQL Server to experience wait type `ASYNC_NETWORK_IO`.
 
 **Resolution:** To resolve this issue, use tools like [Performance Monitor](https://techcommunity.microsoft.com/t5/ask-the-performance-team/windows-performance-monitor-overview/ba-p/375481) to diagnose the system that runs the application, and then eliminate any resource constraints. One of the following methods may work for you:
 
@@ -68,11 +68,11 @@ This resource constraint can also lead to slow processing of incoming results an
 
 ### NIC/Network
 
-Slow network or Network Interface Cards (NIC) can cause delay in network traffic and will naturally delay fetching the results and communicating with SQL Server. Network delays are typically caused by the following issues:
+Slow network or Network Interface Cards (NIC) can cause delays in network traffic and will naturally delay fetching the results and communicating with SQL Server. Network delays are typically caused by the following issues:
 
 - Network adapter driver issues
 
-- Network filter drivers issues
+- Network filter driver issues
 
 - Misconfigured or faulty firewalls
 
@@ -80,7 +80,7 @@ Slow network or Network Interface Cards (NIC) can cause delay in network traffic
 
 - Overloaded networks due to traffic (less common)
 
-**Resolution:** To diagnose these issues, you can [collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and look for packet resets and retransmits. And then resolve the network-related issue to eliminate packet resets/retransmits.
+**Resolution:** To diagnose these issues, you can [collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and look for packet resets and retransmits. You can then resolve the network-related issue to eliminate packet resets/retransmits.
 
 ## See also
 
