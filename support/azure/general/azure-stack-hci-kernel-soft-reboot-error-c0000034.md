@@ -23,4 +23,4 @@ In this scenario, the following volmgr warning is logged as a system log in the 
 
 ## Solution
 
-This warning message is harmless, and you can safely ignore it. The warning message won't show in Azure Stack HCI, version 21H2 and later versions.
+This warning message is harmless, and you can safely ignore it. This warning message won't show in versions after Azure Stack HCI, version 21H2.
