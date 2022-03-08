@@ -1,5 +1,5 @@
 ---
-title: Unable to access on-premises public folders from Outlook for Mac
+title: Outlook for Mac users can't access on-premises public folders 
 description: Fixes an issue in which Outlook for Mac users receive the "Folders are temporarily unavailable because Outlook if not connected to the network" error when they access Exchange Server 2013 public folders in a hybrid deployment.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -20,18 +20,18 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Unable to access Exchange on-premises public folders by using Outlook for Mac
+# Outlook for Mac users can't access public folders on Exchange 2013
 
 ## Symptoms
 
 Consider the following scenario:
 
 - You have a hybrid deployment of Microsoft Exchange Online and Microsoft Exchange Server 2013.
-- You configured Exchange Online users to access public folders that are hosted at Exchange Server 2013.
+- You've configured Exchange Online users to access public folders that are hosted on Exchange Server 2013.
 
 In this scenario, when users use Outlook for Mac in Exchange Online to access the on-premises public folders, they get the following error message:
 
-> Folders are temporarily unavailable because Outlook if not connected to the network.
+> Folders are temporarily unavailable because Outlook is not connected to the network.
 
 :::image type="content" source="media/outlook-for-mac-unable-access-public-folders/error.png" alt-text="Screenshot of error message that indicates folders are temporarily unavailable because Outlook if not connected to the network.":::
 
@@ -42,42 +42,30 @@ at Microsoft.Exchange.Services.Core.Types.MailboxIdServerInfo.TryGetServerDataFo
 
 ## Cause
 
-In a hybrid deployment, an Exchange Online mailbox is matched with a remote mailbox in Exchange Server on-premises. This issue occurs if the on-premises remote mailbox isn't set to use the Exchange Online mailbox GUID.
+This issue occurs if the mailbox GUID of the Exchange Online mailbox isn't stamped on the associated on-premises remote mailbox.
 
 ## Resolution
 
 To resolve this issue, set the on-premises remote mailbox to use the Exchange Online mailbox GUID by following these steps:
 
-1. Open Exchange Management Shell, and then get the `ExchangeGUID` value of the affected remote mailbox by running the following cmdlet:
+1. Open [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) on the on-premises server, and then run the following command to check whether the `ExchangeGUID` property of the on-premises remote mailbox is set:
 
     ```powershell
     Get-RemoteMailbox <MailboxName> | fl ExchangeGUID
     ```
 
-    If the value of the `ExchangeGUID` property returns all zeros, it indicates that the on-premises remote mailbox GUID isn't updated.
+    If the `ExchangeGUID` property returns all zeros, the value isn't stamped on the on-premises remote mailbox.
 
-    Here's an example of the cmdlet:
-
-    :::image type="content" source="media/outlook-for-mac-unable-access-public-folders/get-guid.png" alt-text="Screenshot of the command output in which ExchangeGuid shows all zeros.":::
-
-2. Connect to Exchange Online PowerShell, and then get the `ExchangeGUID` value of the affected Exchange Online mailbox by running the following cmdlet:
+2. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), and then run the following command to retrieve the value of the `ExchangeGUID` property of the problematic Exchange Online mailbox.
 
     ```powershell
     Get-Mailbox <MailboxName> | Format-List ExchangeGUID
     ```
 
-    Here's an example of the cmdlet:
-
-    :::image type="content" source="media/outlook-for-mac-unable-access-public-folders/get-exo-mailbox-guid.png" alt-text="Screenshot of the command output in which ExchangeGuid of Exchange Online mailbox is highlighted.":::
-
-3. Go back to Exchange Management Shell, and then set the on-premises remote mailbox to use the `ExchangeGUID` value of the Exchange Online mailbox by running the following cmdlet:
+3. Run the following command in Exchange Management Shell to set the value of the `ExchangeGUID` property on the on-premises remote mailbox.
 
     ```powershell
     Set-RemoteMailbox <MailboxName> -ExchangeGUID "<ExchangeGUID>"
     ```
 
     **Note:** Replace \<ExchangeGUID> with the value that you get from the cmdlet output in step 2.
-
-    Here's an example of the cmdlet:
-
-    :::image type="content" source="media/outlook-for-mac-unable-access-public-folders/set-remote-mailbox.png" alt-text="Screenshot of the command that set the ExchangeGuid of the Exchange Online mailbox to the remote mailbox.":::
