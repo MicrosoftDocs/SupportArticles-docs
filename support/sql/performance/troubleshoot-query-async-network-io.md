@@ -42,9 +42,7 @@ To illustrate using ADO.NET, by default, [DataSet](/dotnet/framework/data/adonet
 
 - Wait for some time or for user input.
 
-**Resolution:** To resolve the issue, follow these steps:
-
-Fetch all results as fast as the client can by using a tight WHILE/FOR loop. That means, store results in memory and only then do more processing.
+**Resolution:** To resolve the issue, fetch all results as fast as the client can by using a tight WHILE/FOR loop. That means storing results in memory and only then doing more processing.
 
 ### Client application machine is under stress (I/O, memory, or CPU)
 
@@ -82,7 +80,7 @@ Slow network or Network Interface Cards (NIC) can cause delay in network traffic
 
 - Overloaded networks due to traffic (less common)
 
-**Resolution:** To diagnose and resolve these issues, you can [collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and look for packet resets and retransmits. Then resolve the network-related issue to eliminate packet resets/retransmits.
+**Resolution:** To diagnose these issues, you can [collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and look for packet resets and retransmits. And then resolve the network-related issue to eliminate packet resets/retransmits.
 
 ## See also
 
