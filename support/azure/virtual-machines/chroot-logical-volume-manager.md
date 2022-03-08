@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: vilibert
 manager: dcscontentpm
-editor: ''
 tags: Linux chroot LVM
 ms.service: virtual-machines
 ms.collection: linux

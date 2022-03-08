@@ -1,7 +1,7 @@
 ---
 title: Optimize performance with automatic proxy-configuration scripts
 description: This article describes how to optimize the performance of an automatic proxy-configuration script (PAC file, also known as Wpad.dat).
-ms.date: 9/10/2020
+ms.date: 2/17/2022
 ms.reviewer: heikom
 ms.technology: internet-explorer-connectivity-navigation
 ---
@@ -114,7 +114,7 @@ If the script contains any syntax error (for example, a missing ")" character in
 
 ## Testing with Autoprox.exe
 
-Sometimes, you have to test the PAC file even if you have no access to the website. To do this, you can use the [Autoprox.exe command line tool](https://ieee.azurewebsites.net/pierrelc/autoprox.exe).
+Sometimes, you have to test the PAC file even if you have no access to the website. To do this, you can use the [Autoprox.exe command line tool](https://ieee.azurewebsites.net/pierrelc/autoprox.zip).
 
 If you open the tool within a command without using additional parameters, the following output with the help is returned:
 
