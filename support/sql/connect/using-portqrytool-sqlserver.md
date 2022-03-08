@@ -1,7 +1,7 @@
 ---
 title: Using the PortQryUI tool with SQL Server
 description: PortQryUI is a UI tool for SQL Server that helps you view the open ports on a computer. It uses the command-line version, Portqry.exe.
-ms.date: 03/07/2022
+ms.date: 03/08/2022
 author: ramakoni1
 ms.author: v-jayaramanp
 ms.custom: sap:Connection Issues
