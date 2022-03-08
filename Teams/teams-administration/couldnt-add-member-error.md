@@ -19,17 +19,19 @@ ms.reviewer: scapero
 description: Describes a workaround for adding members to Teams if you see the We couldn't add member error.
 ---
 
-# Error "We couldn't add member" when adding users to Teams 
+# Error "We couldn't add member" when adding users to Teams
 
 ## Symptoms
 
-When you add an internal or external member to Teams, you see the following error: 
-"We couldn't add member. We ran into an issue. Please try again later." 
-However, members can be added directly to Office 365 groups.
+When you add an internal or external member to Teams, you see the following error:
+
+> "We couldn't add member. We ran into an issue. Please try again later."
+
+However, members can be added directly to Microsoft 365 groups.
 
 ## Workaround
 
-This issue occurs when the value **UsersPermissionToReadOtherUsersEnabled** is set to **False** in AAD. To correct the issue, change this setting to **True**.
+This issue occurs when the value **UsersPermissionToReadOtherUsersEnabled** is set to **False** in Azure AD. To correct the issue, change this setting to **True**.
 
 ## More information
 
