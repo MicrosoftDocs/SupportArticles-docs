@@ -18,7 +18,7 @@ ms.technology: windows-server-deployment
 
 This article provides a workaround to resolve the issue that occurs when a Standard user enables the Chinese keyboard layouts.
 
-## Error: Simplified Chinese IME dictionaries are not ready yet
+## Error: Chinese IME dictionaries are not ready yet
 
 In Windows Server 2022, when a Standard user enables a Chinese keyboard layout, like **Chinese (Simplified, China)**, **Chinese (Traditional, HongKong SAR)** or **Chinese (Traditional, Taiwan)**, the user can't input Chinese characters and sees an error message that resembles the following one:
 
