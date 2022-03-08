@@ -28,8 +28,6 @@
       href: finger3or4-touch-interaction-no-longer-works.md
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
-    - name: Chinese IME dictionaries are not ready yet
-      href: chinese-ime-dictionaries-not-ready.md
     - name: Desktop Bridge app fails to start when running as administrator
       href: desktop-bridge-app-fail-start-run-as-administrator.md
     - name: East Asian first character isn't recognized
