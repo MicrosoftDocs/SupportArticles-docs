@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 160578
-  - Exchange Online
+  - Exchange Hybrid
   - CSSTroubleshoot
 ms.reviewer: batre
 appliesto: 
@@ -37,7 +37,7 @@ In this scenario, when users use Outlook for Mac in Exchange Online to access th
 
 Additionally, if you check the server log in Exchange Server 2013 that hosts the public folder mailbox, you see the following error message in the log:
 
-> \<Date/Time>.965Z,\<MailboxId>,15,0,1497,30,{AC96A663-47F0-4A84-9B8F-5253CD2CAC7D},NTLM,true,User@contoso.com,contoso.com,MacOutlook/16.57.22011101 (Intelx64 Mac OS X 11.6.3 (Build 20G415)), ,Exch1,EXCH5.contoso.com,GetFolder,500,857,,ErrorInternalServerError,User@contoso.com,..,ServiceDiagnostics_ReportException=System.NullReferenceException: Object reference not set to an instance of an object.
+> \<Date/Time>.965Z,\<MailboxId>,15,0,1497,30,{AC96A663-47F0-4A84-9B8F-5253CD2CAC7D},NTLM,true,User@contoso.com,contoso.com,**MacOutlook/16.57.22011101 (Intelx64 Mac OS X 11.6.3 (Build 20G415))**, ,Exch1,EXCH5.contoso.com,**GetFolder,500**,857,,**ErrorInternalServerError**,User@contoso.com,..,ServiceDiagnostics_ReportException=System.NullReferenceException: **Object reference not set to an instance of an object.**
 at Microsoft.Exchange.Services.Core.Types.MailboxIdServerInfo.TryGetServerDataForMailbox(MailboxId mailboxId  Guid& mdbGuid  Int32& serverVersion  String& serverFQDN  Guid& mailboxGuid  String& cafeFQDN  Boolean& proxyToCafe)
 
 ## Cause
