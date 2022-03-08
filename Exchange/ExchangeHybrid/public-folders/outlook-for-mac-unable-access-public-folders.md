@@ -56,7 +56,7 @@ To resolve this issue, set the on-premises remote mailbox to use the Exchange On
 
     If the `ExchangeGUID` property returns all zeros, the value isn't stamped on the on-premises remote mailbox.
 
-2. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), and then run the following command to retrieve the value of the `ExchangeGUID` property of the problematic Exchange Online mailbox.
+2. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), and then get the `ExchangeGUID` value of the affected Exchange Online mailbox by running the following cmdlet:
 
     ```powershell
     Get-Mailbox <MailboxName> | Format-List ExchangeGUID
