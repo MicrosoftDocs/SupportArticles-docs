@@ -14,6 +14,10 @@ ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates
 
 This article discusses an issue in which you receive "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates.
