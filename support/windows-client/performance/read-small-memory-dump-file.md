@@ -14,6 +14,10 @@ ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # How to read the small memory dump file that is created by Windows if a crash occurs
 
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer crashed.
