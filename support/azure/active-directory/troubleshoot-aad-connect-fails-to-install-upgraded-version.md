@@ -19,8 +19,6 @@ This article describes how to troubleshoot problems that can occur when you upgr
 *Original product version:* Azure Active Directory  
 *Original KB number:* 4051210  
 
-To resolve other types of installation issues that involve Azure AD Connect, see [Troubleshoot Azure AD Connect installation issues](installation-issues.md).
-
 ## Symptoms
 
 Every time that you start the Azure AD Connect setup wizard, the program evaluates all the related products and Windows Installer packages (.msi) that are currently installed. To trace this activity, follow these steps:
