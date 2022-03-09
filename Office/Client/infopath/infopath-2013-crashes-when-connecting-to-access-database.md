@@ -6,13 +6,12 @@ ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
-appliesto:
-- InfoPath 2013
+appliesto: 
+  - InfoPath 2013
 ---
 
 # InfoPath 2013 crashes when you connect to an Access database

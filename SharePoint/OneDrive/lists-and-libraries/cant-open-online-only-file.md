@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 02/06/2020
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- OneDrive
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - OneDrive
 ms.custom: 
-- CI 113498
-- CSSTroubleshoot 
+  - CI 113498
+  - CSSTroubleshoot
 ms.reviewer: hdonald
-description: "Describes how to resolve an issue where you can't open a file in OneDrive."
+description: Describes how to resolve an issue where you can't open a file in OneDrive.
 ---
 
 # "Can't open online-only file" error when opening a file in OneDrive

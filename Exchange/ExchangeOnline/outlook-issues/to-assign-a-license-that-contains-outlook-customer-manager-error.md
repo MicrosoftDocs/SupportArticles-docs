@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook for Office 365
+appliesto: 
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # To assign a license that contains Outlook Customer Manager error when creating a new user

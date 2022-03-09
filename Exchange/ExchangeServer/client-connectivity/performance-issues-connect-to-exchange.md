@@ -6,19 +6,18 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: charw, marcn, genli
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Windows Server 2012 R2
-- Windows Server 2012
-- Windows Server 2008
-- Exchange Server 2013
+  - Exchange Server
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Windows Server 2012 R2
+  - Windows Server 2012
+  - Windows Server 2008
+  - Exchange Server 2013
 ---
 # Performance issues or delays when you connect to Exchange Server 2013 that is running in Windows Server
 

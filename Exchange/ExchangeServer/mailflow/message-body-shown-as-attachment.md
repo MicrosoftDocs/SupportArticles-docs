@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: deedi, ppawar
-appliesto:
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+search.appverid: MET150
 ---
 # The body of a message is shown incorrectly as an attachment when you send the message that has attachments in an Exchange Server environment
 

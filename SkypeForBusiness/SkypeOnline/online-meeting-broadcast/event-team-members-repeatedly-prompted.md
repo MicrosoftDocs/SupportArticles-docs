@@ -1,19 +1,18 @@
 ---
-title: Event Team members are repeatedly prompted for password 
+title: Event Team members are repeatedly prompted for password
 description: Discusses an issue that blocks a user who's enabled for Modern Authentication from joining a Skype Meeting Broadcast. A workaround is provided.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm,kristinw, kristinw, dougl, lynnroe, cbland, rischwen, leonarwo, msp
-appliesto:
-- Skype for Business Online
+appliesto: 
+  - Skype for Business Online
 ---
 
 # Event Team members are repeatedly prompted for a password when they try to join a Skype Meeting Broadcast

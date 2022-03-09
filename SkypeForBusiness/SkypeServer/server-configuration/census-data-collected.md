@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: corbinm, arianr, nsuter
-appliesto:
-- Lync 2013
-- Skype for Business 2015
-- Skype for Business 2016
+appliesto: 
+  - Lync 2013
+  - Skype for Business 2015
+  - Skype for Business 2016
 ---
 
 # Census data is now collected for all Lync 2013 (Skype for Business) and Skype for Business 2016 clients

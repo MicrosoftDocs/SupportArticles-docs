@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: benwinz, wduff, bradhugh
-appliesto:
-- Exchange Server 2010 Service Pack 2
+appliesto: 
+  - Exchange Server 2010 Service Pack 2
 search.appverid: MET150
 ---
 # A recipient cannot view an email message that is encoded by using S/MIME

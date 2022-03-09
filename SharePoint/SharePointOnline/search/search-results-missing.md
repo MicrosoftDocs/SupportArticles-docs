@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Search results missing in SharePoint Online
@@ -29,7 +28,7 @@ This issue may occur even though the site was crawled and indexed by the Search 
 
 ## Cause
 
-There are various reasons why expected results maybe be missing that are related to crawl latency or settings in SharePoint Online.
+There are various reasons why expected results may be missing that are related to crawl latency or settings in SharePoint Online.
 
 ## Solution
 

@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: mchen, aruiz, gregmans, tsimon, laurentc, amkanade, doakm, randyto, gbratton, bobcool, AlonB, LianWang
-appliesto:
-- Microsoft Outlook 2010
+appliesto: 
+  - Microsoft Outlook 2010
 search.appverid: MET150
 ---
 # The Contact Card in Outlook 2010 does not change when you try to customize it by using Group Policy or the Office Customization Tool (OCT)

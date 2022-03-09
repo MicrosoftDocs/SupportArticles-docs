@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: randw, edpeno, shravank, dahans, willfid
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
-- Skype for Business Server 2015
+appliesto: 
+  - Skype for Business Online
+  - Skype for Business Server 2015
 ---
 
 # "HostedMigration fault: Error =(506)" when you move users from Skype for Business Online to on-premises Skype for Business Server

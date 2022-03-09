@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: TAPANM, praveenh
-appliesto:
-- SharePoint Server 2010
-- SharePoint Server 2013
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+search.appverid: MET150
 ---
 # Automatically declaring items as records causes duplicates in SharePoint Server
 

@@ -7,13 +7,12 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
 search.appverid: 
-- MET150
-ms.prod: skype-for-business-itpro
+  - MET150
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.date: 04/17/2019
-appliesto:
-- Skype for Business
+appliesto: 
+  - Skype for Business
 ---
 
 # How to troubleshoot being unable to sign in to Skype for Business

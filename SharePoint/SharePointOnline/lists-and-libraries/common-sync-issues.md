@@ -6,16 +6,15 @@ manager: dcscontentpm
 ms.date: 09/24/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 157491
-- CSSTroubleshoot 
+  - CI 157491
+  - CSSTroubleshoot
 ms.reviewer: sharepoint_triage
 description: Resolutions for some common issues with syncing SharePoint lists offline.
 ---

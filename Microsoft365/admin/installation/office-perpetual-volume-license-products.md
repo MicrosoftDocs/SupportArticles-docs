@@ -5,16 +5,15 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.reviewer: v-katva, thdevine, Jenl, joselr, meerak
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office Professional Plus 2019
-- Office LTSC Professional Plus 2021
+  - MET150
+appliesto: 
+  - Office Professional Plus 2019
+  - Office LTSC Professional Plus 2021
 ---
 # Office LTSC 2021 and Office 2019 perpetual volume license products available as Click-to-Run
 

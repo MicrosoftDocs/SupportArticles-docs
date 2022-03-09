@@ -1,27 +1,26 @@
 ---
 title: Resolve sign-in errors in Teams
-description: Provides troubleshooting steps if you encounter errors when trying to sign in to Microsoft Teams. 
+description: Provides troubleshooting steps if you encounter errors when trying to sign in to Microsoft Teams.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 156289
-- CSSTroubleshoot
+  - CI 156289
+  - CSSTroubleshoot
 ms.reviewer: billkau; meerak
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Resolve sign-in errors in Teams
 
 > [!NOTE]
 > This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
-> 
+>
 If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem:
 
 1. Run the Teams Sign-in diagnostic:

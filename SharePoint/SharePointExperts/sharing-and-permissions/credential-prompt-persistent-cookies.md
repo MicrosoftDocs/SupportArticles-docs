@@ -5,16 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: spsexperts
+ms.custom: sap:spsexperts, CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: arhinesm
-appliesto:
-- Microsoft SharePoint
+appliesto: 
+  - Microsoft SharePoint
 ---
 
 # Additional credential prompts when opening Office documents from a web server by persistent cookies

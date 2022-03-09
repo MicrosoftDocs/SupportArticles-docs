@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: clayj 
+ms.reviewer: clayj
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Office Excel 2003
-- Microsoft Office Excel 2007
-- Excel 2010Excel 2013
+  - MET150
+appliesto: 
+  - Microsoft Office Excel 2003
+  - Microsoft Office Excel 2007
+  - Excel 2010Excel 2013
 ---
 
 # Wrap text does not adjust row height in Excel

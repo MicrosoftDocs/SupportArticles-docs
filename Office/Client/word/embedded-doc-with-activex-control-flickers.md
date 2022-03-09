@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 9/9/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Office
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Office
 ms.custom: 
-- CI 123056
-- CSSTroubleshoot 
+  - CI 123056
+  - CSSTroubleshoot
 ms.reviewer: sakris
-description: How to resolve a situation where an in-place edit of a Word document in another Office document which contains an ActiveX control causes the Word document to flicker. 
+description: How to resolve a situation where an in-place edit of a Word document in another Office document which contains an ActiveX control causes the Word document to flicker.
 ---
 
 # In-place edit of an embedded Word document that contains ActiveX control causes flicker

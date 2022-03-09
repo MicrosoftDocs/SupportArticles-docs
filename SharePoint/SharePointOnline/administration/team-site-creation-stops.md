@@ -6,17 +6,16 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.date: 06/04/2021
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 150328
+  - CSSTroubleshoot
+  - CI 150328
 ms.collection: SPO_Content
 ms.author: v-matthamer
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # Creating a team site from SharePoint Home doesn’t finish

@@ -4,14 +4,13 @@ description: This article lists Microsoft Teams related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.service: msteams
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- Microsoft Teams
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - Microsoft Teams
 ---
 
 # Teams troubleshooting

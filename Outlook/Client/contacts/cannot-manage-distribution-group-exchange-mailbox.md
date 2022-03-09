@@ -5,18 +5,17 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting 
-ms.prod: outlook
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 119623
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: matbyrd
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010
+  - MET150
+appliesto: 
+  - Exchange Server 2010
 ---
 # Can't manage distribution group from Outlook with Exchange Server mailbox
 

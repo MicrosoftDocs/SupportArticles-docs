@@ -6,14 +6,13 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- 'Associated content asset: 4555325'
+  - CSSTroubleshoot
+  - 'Associated content asset: 4555325'
 ms.reviewer: subansal, mhaque
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # Can't view items in Exchange Online archive mailbox by using Microsoft Outlook Web App

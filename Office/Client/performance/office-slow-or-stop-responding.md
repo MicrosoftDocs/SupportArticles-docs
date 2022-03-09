@@ -1,39 +1,38 @@
 ---
-title:  Office is slow or stops responding when you open file from network location
+title: Office is slow or stops responding when you open file from network location
 description: Fixes an issue in which Office is slow when you open files from network location.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Microsoft 365
-- Excel LTSC 2021
-- Excel 2019
-- Excel 2016
-- Excel 2013
-- Excel 2010
-- Microsoft Office Excel 2007
-- Microsoft Office Excel 2003
-- PowerPoint LTSC 2021
-- PowerPoint 2019
-- PowerPoint 2016
-- PowerPoint 2013
-- PowerPoint 2010
-- Microsoft Office PowerPoint 2007
-- Microsoft Office PowerPoint 2003
-- Publisher LTSC 2021
-- Publisher 2019
-- Publisher 2016
-- Publisher 2013
-- Publisher 2010
-- Microsoft Office Publisher 2007
-- Microsoft Office Publisher 2003
+appliesto: 
+  - Microsoft 365
+  - Excel LTSC 2021
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
+  - Excel 2010
+  - Microsoft Office Excel 2007
+  - Microsoft Office Excel 2003
+  - PowerPoint LTSC 2021
+  - PowerPoint 2019
+  - PowerPoint 2016
+  - PowerPoint 2013
+  - PowerPoint 2010
+  - Microsoft Office PowerPoint 2007
+  - Microsoft Office PowerPoint 2003
+  - Publisher LTSC 2021
+  - Publisher 2019
+  - Publisher 2016
+  - Publisher 2013
+  - Publisher 2010
+  - Microsoft Office Publisher 2007
+  - Microsoft Office Publisher 2003
 ---
 
 # An Office program is slow or may stop responding (hang) when you open a file from a network location

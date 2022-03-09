@@ -4,20 +4,19 @@ description: Provides a workaround for problems that occur when you work with th
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: sthorn, HeidiMu, Arykhus, kevinmil, barbway
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Visio Standard 2013
-- Visio Professional 2013
-- Visio Premium 2010
-- Visio Professional 2010
-- Visio Standard 2010
+  - MET150
+appliesto: 
+  - Visio Standard 2013
+  - Visio Professional 2013
+  - Visio Premium 2010
+  - Visio Professional 2010
+  - Visio Standard 2010
 ---
 
 # You cannot add the Microsoft Visio 2010 or 2013 drawing control to a Windows Form application in Visual Studio if you have the 64-bit version of Visio installed

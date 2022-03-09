@@ -6,16 +6,15 @@ ms.author: meshel
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- CI 122615
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - CI 122615
 ms.reviewer: meshel
-appliesto:
-- Exchange Online
-- Outlook for Microsoft 365
+appliesto: 
+  - Exchange Online
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ---
 

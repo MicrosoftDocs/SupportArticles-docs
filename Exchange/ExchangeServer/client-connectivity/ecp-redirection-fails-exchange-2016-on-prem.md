@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: helmutk
-appliesto:
-- Exchange Server 2016
-search.appverid: MET150 
+appliesto: 
+  - Exchange Server 2016
+search.appverid: MET150
 ---
 # Active Directory site redirection fails when accessing ECP from a remote site in Exchange Server 2016
 

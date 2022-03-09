@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: corbinm, arianr, nsuter
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business 2015
-- Lync Server 2013
+appliesto: 
+  - Skype for Business 2015
+  - Lync Server 2013
 ---
 
 # Conference creation, modification, or deletion fails for some application endpoints in Lync or Skype for Business

@@ -7,16 +7,15 @@ localization_priority: Normal
 ms.date: 4/15/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 ms.custom: 
-- CSSTroubleshoot
-- CI 149684
-search.appverid:
-- SPO160
-- MET150
+  - CSSTroubleshoot
+  - CI 149684
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 description: Describes a resolution to an issue where sharing options are not available or greyed out when using SharePointOnline or OneDrive for Business.
 ---
 

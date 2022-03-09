@@ -5,20 +5,19 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: v-raddis, akeeler
 ms.custom: 
-- CI 116037
-- CSSTroubleshoot
+  - CI 116037
+  - CSSTroubleshoot
 search.appverid: MET150
-appliesto:
-- Excel 2010
-- Excel 2013
-- Excel 2016
-- Excel 2019
-- Excel for Office 365
+appliesto: 
+  - Excel 2010
+  - Excel 2013
+  - Excel 2016
+  - Excel 2019
+  - Excel for Office 365
 ---
 # How to control the startup message about updating linked workbooks in Excel
 

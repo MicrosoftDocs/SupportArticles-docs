@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Online
-- Office 365
+appliesto: 
+  - SharePoint Online
+  - Office 365
 ---
 
 # Customizations to the Office 365 top navigation bar in SharePoint Online revert to the original settings

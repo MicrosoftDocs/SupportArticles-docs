@@ -5,18 +5,17 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: poyant, Arykhus, Kemille, barbway
-appliesto:
-- Visio Premium 2010
-- Visio Standard 2010
-- Visio Professional 2013
-- Visio Standard 2013
+appliesto: 
+  - Visio Premium 2010
+  - Visio Standard 2010
+  - Visio Professional 2013
+  - Visio Standard 2013
 ---
 
 # Text is not displayed in a Visio 2010 / 2013 drawing when you open the drawing in a browser

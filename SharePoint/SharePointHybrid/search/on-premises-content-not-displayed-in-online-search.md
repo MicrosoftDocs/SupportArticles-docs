@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Server 2013
-- SharePoint Online
+appliesto: 
+  - SharePoint Server 2013
+  - SharePoint Online
 ---
 
 # SharePoint on-premises content isn't displayed in SharePoint Online search results  

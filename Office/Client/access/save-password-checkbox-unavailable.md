@@ -4,19 +4,18 @@ description: Lists two possible causes and feasible workarounds to the issue tha
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: 
 search.appverid: 
-- MET150
-appliesto:
-- Access 2016
-- Access 2013
-- Access for Office 365
-- Access 2019
+  - MET150
+appliesto: 
+  - Access 2016
+  - Access 2013
+  - Access for Office 365
+  - Access 2019
 ---
 
 # Save Password check box is unavailable when you link ODBC tables

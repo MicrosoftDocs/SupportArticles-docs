@@ -4,15 +4,14 @@ description: Provides steps to fix an issue in which you cannot be opened error 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Office Starter 2010
+  - MET150
+appliesto: 
+  - Office Starter 2010
 ---
 
 # "Cannot be opened" error when you start an Office Starter 2010 program.

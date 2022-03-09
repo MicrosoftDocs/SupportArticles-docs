@@ -5,16 +5,15 @@ author: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CSSTroubleshoot
-- CI 150415
-appliesto:
-- SharePoint Online
+  - CSSTroubleshoot
+  - CI 150415
+appliesto: 
+  - SharePoint Online
 ---
 
 # Profile picture not showing in SharePoint Online

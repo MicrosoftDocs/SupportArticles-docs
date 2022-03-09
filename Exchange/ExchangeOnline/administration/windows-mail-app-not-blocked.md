@@ -6,15 +6,14 @@ ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 160116
-- CI 160572
+  - CSSTroubleshoot
+  - CI 160116
+  - CI 160572
 ms.reviewer: aruiz
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 

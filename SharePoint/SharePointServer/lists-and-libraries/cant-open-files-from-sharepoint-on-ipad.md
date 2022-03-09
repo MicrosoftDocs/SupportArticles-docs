@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Word for iPad, iPhone and iPod touch
-- PowerPoint for iPad, iPhone and iPod touch
+appliesto: 
+  - Word for iPad, iPhone and iPod touch
+  - PowerPoint for iPad, iPhone and iPod touch
 ---
 
 # Unable to open Office files from SharePoint 2010 on an iPad

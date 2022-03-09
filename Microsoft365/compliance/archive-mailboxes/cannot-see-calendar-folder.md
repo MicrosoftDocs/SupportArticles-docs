@@ -6,15 +6,13 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: alinastr, ninob
 appliesto: 
-- Exchange Online Archiving 
+  - Exchange Online Archiving
 search.appverid: MET150
-
 ---
 
 # Can't see the Calendar folder of an online archive mailbox by using Microsoft Outlook Web App

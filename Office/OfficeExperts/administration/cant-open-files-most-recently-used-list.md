@@ -5,16 +5,13 @@ author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
+ms.custom: sap:office-experts, CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
 ---
 
 # Office 365 can't open files from the most recently used document list (MRU)

@@ -6,20 +6,19 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
-search.appverid:
-- SPO160
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-description: "Describes how to resolve an 'Access Denied' error when a SharePoint 2010 workflow sends an email to a group"
-appliesto:
-- SharePoint Server 2019
-- SharePoint Server 2016
-- SharePoint Server 2013
-- SharePoint Server 2010
-- SharePoint Designer 2013
-- SharePoint Designer 2010
+description: Describes how to resolve an 'Access Denied' error when a SharePoint 2010 workflow sends an email to a group
+appliesto: 
+  - SharePoint Server 2019
+  - SharePoint Server 2016
+  - SharePoint Server 2013
+  - SharePoint Server 2010
+  - SharePoint Designer 2013
+  - SharePoint Designer 2010
 ---
 # "Access Denied" error when a SharePoint 2010 workflow sends an email to a group
 

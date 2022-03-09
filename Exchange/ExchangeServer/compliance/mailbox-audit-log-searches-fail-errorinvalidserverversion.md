@@ -1,24 +1,23 @@
 ---
 title: Mailbox Audit Log searches fail with exception ErrorInvalidServerVersion
-description: When you run Search-MailboxAuditLog or New-MailboxAuditLogSearch command to search Mailbox Audit Logs, it fails with exception "ErrorInvalidServerVersion". This article provides a resolution.
+description: When you run Search-MailboxAuditLog or New-MailboxAuditLogSearch command to search Mailbox Audit Logs, it fails with exception ErrorInvalidServerVersion. This article provides a resolution.
 author: simonxjx
 ms.author: cmcgurk
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: exchange-server-it-pro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 114938
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 114938
+  - CSSTroubleshoot
 ms.reviewer: cmcgurk
-appliesto:
-- Exchange Server 2016
-- Exchange Server 2013
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Exchange Server 2010
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Mailbox Audit Log searches fail with exception "ErrorInvalidServerVersion" in Exchange Server 2016, 2013, and 2010 coexistence environment

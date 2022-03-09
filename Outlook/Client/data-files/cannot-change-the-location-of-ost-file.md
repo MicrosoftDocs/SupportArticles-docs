@@ -6,18 +6,17 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: rakeshs
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Outlook for Office 365
-- Outlook LTSC 2021
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Office 365
+  - Outlook LTSC 2021
 search.appverid: MET150
 ---
 # You can't change the location of the offline Outlook Data File (.ost) in Microsoft Outlook

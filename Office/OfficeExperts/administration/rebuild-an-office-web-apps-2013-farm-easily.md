@@ -6,15 +6,12 @@ ms.author: brbering
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
-appliesto:
-- Office Web Apps
+ms.custom: sap:office-experts, CSSTroubleshoot
+appliesto: 
+  - Office Web Apps
 ---
 
 # Rebuild an Microsoft Office Web Apps server farm easily

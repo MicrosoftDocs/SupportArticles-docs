@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: thomno, gbratton
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Outlook for Office 365
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Formatting lost when editing the HtmlBody property of an Outlook item by using the Outlook object model

@@ -6,16 +6,15 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: skype-for-business-online
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: adam
-appliesto:
-- Skype for Business 2016
-- Skype for Business Online
-- Skype for Business
-search.appverid: MET150 
+appliesto: 
+  - Skype for Business 2016
+  - Skype for Business Online
+  - Skype for Business
+search.appverid: MET150
 ---
 # Troubleshoot Office 365 issues when signing in to Microsoft Skype for Business
 

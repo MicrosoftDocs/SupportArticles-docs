@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 search.appverid: MET150
 ---
 # ErrorItemNotFound error when Office add-ins make REST calls against an Outlook item ID

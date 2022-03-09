@@ -5,16 +5,15 @@ author: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 
-- CSSTroubleshoot
-- CI 150095
-appliesto:
-- SharePoint Online
+  - CSSTroubleshoot
+  - CI 150095
+appliesto: 
+  - SharePoint Online
 ---
 
 # @Mentions in SharePoint files don’t send email notifications to participants

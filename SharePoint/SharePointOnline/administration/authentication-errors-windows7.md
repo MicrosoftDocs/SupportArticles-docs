@@ -5,19 +5,18 @@ author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 148433
+  - CSSTroubleshoot
+  - CI 148433
 ms.collection: SPO_Content
 ms.author: v-matthamer
-appliesto:
-- SharePoint Online
-- Windows 7
-- Windows 8
+appliesto: 
+  - SharePoint Online
+  - Windows 7
+  - Windows 8
 ---
 
 # Authentication errors when connecting to SharePoint or OneDrive from Windows 7 or 8

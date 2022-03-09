@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: V-BARRYB
-appliesto:
-- Office 2007
-- Office 2003
+appliesto: 
+  - Office 2007
+  - Office 2003
 ---
 
 # "The Windows Installer service could not be accessed" when you try to install Office

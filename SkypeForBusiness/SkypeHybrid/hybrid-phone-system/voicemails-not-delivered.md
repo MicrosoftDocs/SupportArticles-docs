@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business
-- Microsoft Teams
+appliesto: 
+  - Skype for Business
+  - Microsoft Teams
 ---
 
 # Voicemail messages aren't delivered in Teams or Skype for Business client
@@ -55,6 +54,10 @@ If the Teams Voicemail test doesn't return any errors, but the Teams client isn'
 ### Exchange Client Access Rules
 
 Make sure that there are no [Exchange Client Access Rules](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules#client-access-rules-and-middle-tier-applications) that block access. 
+
+### Exchange Web Access Rules
+
+Make sure that there are no [Exchange Web Access Policies](/exchange/client-developer/exchange-web-services/how-to-control-access-to-ews-in-exchange) that block access. 
 
 ### Exchange Email Connector
 

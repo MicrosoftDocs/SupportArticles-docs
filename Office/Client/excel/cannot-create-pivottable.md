@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: xl15beta, diego
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2013
+  - MET150
+appliesto: 
+  - Excel 2013
 ---
 
 # You cannot create a PivotTable in Excel 2013 when field names in a source range contain similar characters

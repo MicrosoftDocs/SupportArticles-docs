@@ -1,21 +1,20 @@
 ---
 title: Multiple Send Connectors found for AddressSpace
-description: Fixes the HCW8011 error that occurs when you run the Hybrid Configuration wizard. 
+description: Fixes the HCW8011 error that occurs when you run the Hybrid Configuration wizard.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: timothyh
-appliesto:
-- Exchange Online
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
 # HCW8011 multiple Send Connectors found for AddressSpace when you run the HCW

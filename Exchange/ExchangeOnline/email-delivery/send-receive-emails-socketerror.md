@@ -6,18 +6,17 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- CI 144876
-- Exchange Online
-- CSSTroubleshoot
+ms.custom: 
+  - CI 144876
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: arindamt
-appliesto:
-- Exchange Server 2013
-- Exchange Server 2016
-- Exchange Server 2019
-- Exchange Online
+appliesto: 
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
 search.appverid: MET150
 ---
 # Can't send or receive email when using TLS 1.1 or TLS 1.0

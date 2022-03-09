@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- CI 111294
-- CSSTroubleshoot
+  - CI 111294
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-ms.reviewer: V-SHIRAP 
-appliesto:
-- Access 2007
+ms.reviewer: V-SHIRAP
+appliesto: 
+  - Access 2007
 ---
 
 # How to reset the page number on a group level in an Access report

@@ -4,18 +4,17 @@ description: This article provides information to an issue in which a chat creat
 author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 125835
-- CSSTroubleshoot
+  - CI 125835
+  - CSSTroubleshoot
 ms.reviewer: kellybos
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Error when sending messages to a group chat in Teams: Failed to send

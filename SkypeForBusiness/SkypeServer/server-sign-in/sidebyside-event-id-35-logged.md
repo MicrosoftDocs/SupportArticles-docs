@@ -6,24 +6,23 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: skype-for-business-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Skype for Business
-- Microsoft Lync 2013
-- Windows 7 Enterprise
-- Windows 7 Professional
-- Windows 7 Home Premium
-- Windows 7 Ultimate
-- Windows 7 Home Basic
-- Windows 7 Starter
-- Windows 8
-- Windows 8.1
-- Windows 10
-search.appverid: MET150 
+appliesto: 
+  - Skype for Business
+  - Microsoft Lync 2013
+  - Windows 7 Enterprise
+  - Windows 7 Professional
+  - Windows 7 Home Premium
+  - Windows 7 Ultimate
+  - Windows 7 Home Basic
+  - Windows 7 Starter
+  - Windows 8
+  - Windows 8.1
+  - Windows 10
+search.appverid: MET150
 ---
 # SideBySide event ID 35 is logged in the Application log when you start Skype for Business
 

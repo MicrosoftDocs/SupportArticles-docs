@@ -6,21 +6,20 @@ manager: dcscontentpm
 ms.date: 5/11/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online
-- SharePoint 2019
-- SharePoint 2016
-- SharePoint 2013
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
+  - SharePoint 2019
+  - SharePoint 2016
+  - SharePoint 2013
 ms.custom: 
-- CI 117077
-- CSSTroubleshoot 
+  - CI 117077
+  - CSSTroubleshoot
 ms.reviewer: paulpa
-description: Describes how to correctly delete a content type from a SharePoint Content Type hub and the result if not deleted correctly. 
+description: Describes how to correctly delete a content type from a SharePoint Content Type hub and the result if not deleted correctly.
 ---
 
 # Deleting a content type from the SharePoint Content Type Hub

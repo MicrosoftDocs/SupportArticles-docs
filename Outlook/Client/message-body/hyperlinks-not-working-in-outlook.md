@@ -6,20 +6,19 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Outlook 2003
-- Outlook 2007
-- Outlook 2010
-- Outlook 2013
-- Outlook 2016
-- Outlook 2019
-- Outlook for Microsoft 365
+  - Outlook for Windows
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Outlook 2003
+  - Outlook 2007
+  - Outlook 2010
+  - Outlook 2013
+  - Outlook 2016
+  - Outlook 2019
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ---
 # Hyperlinks are not working in Outlook

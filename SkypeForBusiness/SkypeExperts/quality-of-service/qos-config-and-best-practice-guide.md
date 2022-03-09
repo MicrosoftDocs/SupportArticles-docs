@@ -7,18 +7,14 @@ manager: dcscontentpm
 ms.date: 8/27/2019
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: skype-for-business-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- Skype for Business
-ms.custom: 
-- CI 103849
-- CSSTroubleshoot
-- sap: sfbexperts
+appliesto: 
+  - Skype for Business
+ms.custom: sap:sfbexperts, CSSTroubleshoot, CI 103849
 ms.reviewer: meerak
 ---
 

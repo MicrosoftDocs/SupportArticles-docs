@@ -6,19 +6,18 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: alinastr
-appliesto:
-- Exchange Online
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Outlook for Office 365
-- Outlook 2019
+appliesto: 
+  - Exchange Online
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Outlook for Office 365
+  - Outlook 2019
 search.appverid: MET150
 ---
 # Can't accept a meeting invitation for a room mailbox in Outlook if the delegate is a shared mailbox

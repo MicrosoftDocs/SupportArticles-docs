@@ -1,23 +1,22 @@
 ---
 title: Default Office Add-in icon is displayed in the Outlook Ribbon
-description: Describes an issue in which Office Add-in icon isn't displayed the actual icon in the Outlook Ribbon in Outlook 2013 or 2016. 
+description: Describes an issue in which Office Add-in icon isn't displayed the actual icon in the Outlook Ribbon in Outlook 2013 or 2016.
 author: helenclu
 ms.author: aruiz
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 118852
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 118852
+  - CSSTroubleshoot
 ms.reviewer: aruiz
-appliesto:
-- Outlook 2016
-- Outlook 2013
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Default Office Add-in image displayed in the Outlook Ribbon

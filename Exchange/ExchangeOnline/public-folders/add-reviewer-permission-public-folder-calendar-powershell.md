@@ -4,19 +4,18 @@ description: This article provides three workarounds that help you fix an issue 
 author: simonxjx
 ms.author: batre
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 114868
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 114868
+  - CSSTroubleshoot
 ms.reviewer: batre
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # "An item with the specified id wasn't found in the store" error when adding reviewer permission to public folder calendar

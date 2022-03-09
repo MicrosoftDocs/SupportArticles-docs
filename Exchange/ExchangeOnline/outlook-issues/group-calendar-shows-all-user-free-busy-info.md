@@ -6,17 +6,16 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: tasitae
-appliesto:
-- Outlook 2016
-- Outlook 2013
-- Outlook for Office 365
-- Outlook 2019  
+appliesto: 
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Office 365
+  - Outlook 2019
 search.appverid: MET150
 ---
 # All users' free/busy info shows in Office 365 modern group calendar

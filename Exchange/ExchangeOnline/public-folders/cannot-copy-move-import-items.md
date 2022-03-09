@@ -6,15 +6,14 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
-ms.custom:
-- CI 159185
-- Exchange Online
-- CSSTroubleshoot
+ms.custom: 
+  - CI 159185
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: haembab; meerak; batre
 appliesto: 
-- Exchange Online
+  - Exchange Online
 search.appverid: MET150
 ---
 

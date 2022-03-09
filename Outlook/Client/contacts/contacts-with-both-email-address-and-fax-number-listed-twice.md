@@ -6,20 +6,19 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: JEFFBE, TasitaE
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Microsoft Office Outlook 2003
-- Outlook for Office 365
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Microsoft Office Outlook 2003
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Contacts with both an e-mail address and a fax number are listed twice when you select an e-mail recipient in Outlook

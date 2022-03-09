@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: jennc, offspmna
 search.appverid: 
-- MET150
-appliesto:
-- Visio Professional 2013
-- Visio Standard 2013
+  - MET150
+appliesto: 
+  - Visio Professional 2013
+  - Visio Standard 2013
 ---
 
 # Legacy UML features are missing when you edit a UML or database diagram in Visio 2013

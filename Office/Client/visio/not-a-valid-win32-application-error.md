@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Visio Pro for Office 365
-- Project for Office 365
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Visio Pro for Office 365
+  - Project for Office 365
 ---
 
 # "This is not a valid win32 application" when you install Microsoft 365 Apps for enterprise, Visio Pro for Office 365, or Project for Office 365

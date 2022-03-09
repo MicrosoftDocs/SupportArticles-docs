@@ -1,22 +1,21 @@
 ---
 title: EWS isn't supported when accessing Teams data
-description: Describes an issue in which EWS isn't supported for accessing Teams data. It is only supported by using Microsoft Graph API. 
+description: Describes an issue in which EWS isn't supported for accessing Teams data. It is only supported by using Microsoft Graph API.
 author: simonxjx
 ms.author: danba
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 119824
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 119824
+  - CSSTroubleshoot
 ms.reviewer: danba
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # EWS isn't supported when accessing Teams data
 

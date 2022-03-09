@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: gregjo
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Workspace 2010
-- SharePoint 2010 For Internet Sites Enterprise
-- SharePoint 2010 For Internet Sites Standard
+appliesto: 
+  - SharePoint Workspace 2010
+  - SharePoint 2010 For Internet Sites Enterprise
+  - SharePoint 2010 For Internet Sites Standard
 ---
 
 # "Sync to SharePoint Workspace" is not available on any SharePoint 2010 sites

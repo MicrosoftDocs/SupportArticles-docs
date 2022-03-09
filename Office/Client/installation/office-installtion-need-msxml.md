@@ -5,14 +5,13 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Office 2010
+appliesto: 
+  - Office 2010
 ---
 
 # "The installation of Microsoft Office 2010 requires that MSXML version 6.10.1129.0 be installed on your computer" when you install Office 2010 on a Windows 7-based computer

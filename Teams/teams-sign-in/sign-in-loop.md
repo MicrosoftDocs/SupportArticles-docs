@@ -1,19 +1,18 @@
 ---
-title: Teams web client is stuck in a login loop 
-description: The Teams web client continually loops when you try to sign in. 
+title: Teams web client is stuck in a login loop
+description: Provides a fix for multiple browsers if the Teams web client continually loops when you try to sign in.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: msteams
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Microsoft Teams
-- Skype for Business Online
+appliesto: 
+  - Microsoft Teams
+  - Skype for Business Online
 ---
 
 # Teams web client is stuck in a login loop
@@ -29,7 +28,7 @@ Locate your browser among the following sections, and follow the provided steps.
 ## Microsoft Edge
 
 1. In the Edge **Settings** window, select **Cookies and site permissions** > **Cookies and data stored** > **Manage and delete cookies and site data**.
-2. Turn on **Allow sites to save and read cookie data (recommended)**, and make sure that **Block third-party cookies** is turned off. 
+2. Turn on **Allow sites to save and read cookie data (recommended)**, and make sure that **Block third-party cookies** is turned off.
 
    Or, iIf you have to keep third-party cookies blocked, do this instead in the same window:
 

@@ -1,24 +1,23 @@
 ---
-title: SharePoint on Windows Server 2019 search errors 
+title: SharePoint on Windows Server 2019 search errors
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 11/9/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Server
-- Windows Server 2019
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Server
+  - Windows Server 2019
 ms.custom: 
-- CI 125656
-- CSSTroubleshoot 
+  - CI 125656
+  - CSSTroubleshoot
 ms.reviewer: cesart
-description: Resolves an issue where Windows Server 2019 on SharePoint throws search errors. 
+description: Resolves an issue where Windows Server 2019 on SharePoint throws search errors.
 ---
 
 # SharePoint search errors on Windows Server 2019

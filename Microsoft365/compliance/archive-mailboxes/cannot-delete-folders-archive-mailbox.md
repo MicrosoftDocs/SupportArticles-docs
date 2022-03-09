@@ -6,13 +6,12 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".
-appliesto:
-- Exchange Online
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 

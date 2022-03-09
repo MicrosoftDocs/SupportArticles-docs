@@ -7,15 +7,14 @@ localization_priority: Normal
 ms.date: 8/1/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 ms.custom: CSSTroubleshoot
-search.appverid:
-- SPO160
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- SharePoint Server 
-description: Describes how to resolve the error "A response was returned that did not come from the Workflow Manager" in SharePoint Server 2016.
+appliesto: 
+  - SharePoint Server
+description: Describes how to resolve the error A response was returned that did not come from the Workflow Manager in SharePoint Server 2016.
 ---
 
 # "A response was returned that did not come from the Workflow Manager" error in SharePoint Server 2016

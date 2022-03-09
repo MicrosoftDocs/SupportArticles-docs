@@ -1,25 +1,24 @@
 ---
 title: Troubleshooting common eDiscovery issues
 description: Learn about basic troubleshooting steps you can take to resolve common issues in Office 365 eDiscovery.
-f1.keywords:
-- NOCSH
+f1.keywords: 
+  - NOCSH
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
-ms.custom:
-- CI 157398
-- CSSTroubleshoot
-- seo-marvel-apr2020
+ms.custom: 
+  - CI 157398
+  - CSSTroubleshoot
+  - seo-marvel-apr2020
 ms.collection: 
-- Strat_O365_IP
-- M365-security-compliance
+  - Strat_O365_IP
+  - M365-security-compliance
 search.appverid: 
-- MOE150
-- MET150
+  - MOE150
+  - MET150
 siblings_only: true
 ---
 # Resolve common eDiscovery issues
@@ -227,6 +226,43 @@ eDiscovery Case Hold Policy Sync Distribution error. The error reads:
    ```
 
 4. Contact Microsoft Support.
+
+## Error/issue: Holds stuck in PendingDeletion
+
+eDiscovery Case Hold Policies may be stuck in PendingDeletion and can't be removed.
+
+### Resolution
+
+1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. Try running the RetryDistribution parameter on the policy in question:
+
+   For eDiscovery case holds:
+
+   ```powershell
+   Set-CaseHoldPolicy <policyname> -RetryDistribution
+   ```
+
+   For retention policies:
+
+   ```powershell
+   Set-RetentionCompliancePolicy <policyname> -RetryDistribution
+   ```
+   
+2. Try to delete the policy using PowerShell and the `-ForceDeletion` parameter:
+   
+   For eDiscovery case holds, use the [Remove-CaseHoldPolicy](/powershell/module/exchange/remove-caseholdpolicy?view=exchange-ps&preserve-view=true) cmdlet:
+   
+   ```powershell
+   Remove-CaseHoldPolicy <policyname> -ForceDeletion
+   ```
+  
+   For retention policies, use the [Remove-RetentionCompliancePolicy](/powershell/module/exchange/remove-retentioncompliancepolicy?view=exchange-ps&preserve-view=true) cmdlet:
+  
+   ```powershell
+   Remove-RetentionCompliancePolicy <policyname> -ForceDeletion
+   ```  
+  
+3. Contact Microsoft Support.
 
 ## Error/issue: "The condition specified using HTTP conditional header(s) is not met"
 

@@ -5,17 +5,16 @@ author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.custom: 
-- CSSTroubleshoot
-- CI 158345
+  - CSSTroubleshoot
+  - CI 158345
 ms.topic: troubleshooting
 ms.author: v-matthamer
-appliesto:
-- Microsoft Excel
-- Microsoft PowerPoint
+appliesto: 
+  - Microsoft Excel
+  - Microsoft PowerPoint
 ---
 
 # Excel or PowerPoint error: “This file cannot be saved because some properties are missing or invalid”

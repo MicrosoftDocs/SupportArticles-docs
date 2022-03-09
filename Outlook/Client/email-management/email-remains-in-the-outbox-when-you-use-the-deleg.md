@@ -6,22 +6,21 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: gregmans, aruiz
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Microsoft Office Outlook 2003
-- Microsoft Business Productivity Online Dedicated
-- Microsoft Business Productivity Online Suite Federal
-- Outlook for Office 365
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Microsoft Office Outlook 2003
+  - Microsoft Business Productivity Online Dedicated
+  - Microsoft Business Productivity Online Suite Federal
+  - Outlook for Office 365
 search.appverid: MET150
 ---
 # Email remains in the Outbox when you use the DelegateSentItemsStyle registry value

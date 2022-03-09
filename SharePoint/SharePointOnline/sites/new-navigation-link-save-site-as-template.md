@@ -1,18 +1,17 @@
 ---
-title: Sorry, something went wrong" when you click error
+title: Sorry, something went wrong when you click error
 description: This article describes Sorry, something went wrong error when you click New Navigation Link or try to use the Save site as template option in SharePoint Online.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- SharePoint Online
+appliesto: 
+  - SharePoint Online
 ---
 
 # "Sorry, something went wrong" when you click "New Navigation Link" or use "Save site as template"

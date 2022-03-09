@@ -5,16 +5,15 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: carlsh, suetc, digvish, stankan, jackyfan
-appliesto:
-- Skype for Business 2015
-- Lync 2013
+appliesto: 
+  - Skype for Business 2015
+  - Lync 2013
 ---
 
 # Duplicated working numbers for contacts are displayed in call drop-down menu in Skype for Business 2015 (Lync 2013)

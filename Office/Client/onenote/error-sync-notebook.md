@@ -1,22 +1,21 @@
 ---
 title: Unable to sync a notebook from SharePoint
-description: Fixes an issue in which you cannot sync a notebook in OneNote and you receive error codes "0xE40200B4" and "0x800700DF."
+description: Fixes an issue in which you cannot sync a notebook in OneNote and you receive error codes 0xE40200B4 and 0x800700DF.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 114993
-- CSSTroubleshoot
+  - CI 114993
+  - CSSTroubleshoot
 ms.reviewer: subhbasu
-appliesto:
-- OneNote for Office 365
-- OneNote 2016
-- OneNote 2013
-- OneNote 2010
+appliesto: 
+  - OneNote for Office 365
+  - OneNote 2016
+  - OneNote 2013
+  - OneNote 2010
 search.appverid: MET150
 ---
 # "0xE40200B4" and "0x800700DF" errors when you sync a notebook in OneNote

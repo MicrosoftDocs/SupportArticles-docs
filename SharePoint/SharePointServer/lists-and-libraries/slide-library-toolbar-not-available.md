@@ -5,21 +5,20 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: adrianp, v-yilia
 ms.custom: CSSTroubleshoot
-appliesto:
-- PowerPoint 2013
-- Office Home and Business 2013
-- Office Home and Student 2013
-- Office Professional 2013
-- Office Professional Plus 2013
-- Office Standard 2013
-- Office Home and Student 2013 RT
+appliesto: 
+  - PowerPoint 2013
+  - Office Home and Business 2013
+  - Office Home and Student 2013
+  - Office Professional 2013
+  - Office Professional Plus 2013
+  - Office Standard 2013
+  - Office Home and Student 2013 RT
 ---
 
 # The Slide Library toolbar on a SharePoint Slide Library site is unavailable for certain Office 2013 installations

@@ -4,19 +4,18 @@ description: Fixes an issue in which you can't switch a tenant to Teams Only mod
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 145950
-- CSSTroubleshoot
+  - CI 145950
+  - CSSTroubleshoot
 ms.reviewer: v-johrob, nickbear, grtaylo
-appliesto:
-- Microsoft Teams
-- Skype for Business Online
+appliesto: 
+  - Microsoft Teams
+  - Skype for Business Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Error when switching a tenant to Teams Only mode
 

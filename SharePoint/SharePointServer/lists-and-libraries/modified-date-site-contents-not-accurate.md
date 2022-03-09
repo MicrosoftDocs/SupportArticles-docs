@@ -6,21 +6,20 @@ manager: dcscontentpm
 ms.date: 9/25/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online 
-- SharePoint Server 2019
-- SharePoint Server 2016
-- SharePoint Server 2013
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server 2019
+  - SharePoint Server 2016
+  - SharePoint Server 2013
 ms.custom: 
-- CI 108026
-- CSSTroubleshoot
+  - CI 108026
+  - CSSTroubleshoot
 ms.reviewer: lvaznis
-description: "Explains why the modified dates in a SharePoint site contents page do not reflect the correct dates."
+description: Explains why the modified dates in a SharePoint site contents page do not reflect the correct dates.
 ---
 
 # Modified dates on the SharePoint site contents page are not accurate

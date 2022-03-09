@@ -6,13 +6,12 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: conceptual
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- MET150
-ms.custom:
-- CI 147469
-- CSSTroubleshoot
+search.appverid: 
+  - MET150
+ms.custom: 
+  - CI 147469
+  - CSSTroubleshoot
 ---
 # Microsoft SharePoint troubleshooting content updates
 

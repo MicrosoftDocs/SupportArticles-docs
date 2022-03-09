@@ -6,21 +6,20 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 ms.reviewer: tmoore, gregmans
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Enterprise
-- Outlook 2013
-- Outlook 2010 
+  - MET150
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Enterprise
+  - Outlook 2013
+  - Outlook 2010
 ---
 # Error (too many recipients) when you update a meeting in a large Outlook distribution group
 

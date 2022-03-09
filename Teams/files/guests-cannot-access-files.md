@@ -4,18 +4,17 @@ description: Fixes an issue in which guest users can't use the Files tab to acce
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 157397
-- CSSTroubleshoot
+  - CI 157397
+  - CSSTroubleshoot
 ms.reviewer: prbalusu; meerak
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # "Attempted to perform an unauthorized operation" error when accessing Files tab in Teams

@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: laurentc
-appliesto:
-- Microsoft Office Outlook 2003
-- Microsoft Office Outlook 2007
-- Microsoft Outlook 2010
-- Exchange Online
+appliesto: 
+  - Microsoft Office Outlook 2003
+  - Microsoft Office Outlook 2007
+  - Microsoft Outlook 2010
+  - Exchange Online
 search.appverid: MET150
 ---
 # How to move Outlook meetings without losing the option to send update

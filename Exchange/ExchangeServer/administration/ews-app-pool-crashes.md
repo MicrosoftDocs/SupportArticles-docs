@@ -6,17 +6,16 @@ ms.author: Andreig
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
   - CI 122417
 ms.reviewer: Andreig
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 search.appverid: MET150
 ---
 

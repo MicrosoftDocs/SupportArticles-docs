@@ -5,17 +5,16 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: skype-for-business-online
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business Online
-- Lync for Mac 2011
-- Lync 2010
+appliesto: 
+  - Skype for Business Online
+  - Lync for Mac 2011
+  - Lync 2010
 ---
 
 # Users are unable to modify their contact lists in Lync 2010 and Lync for Mac 2011

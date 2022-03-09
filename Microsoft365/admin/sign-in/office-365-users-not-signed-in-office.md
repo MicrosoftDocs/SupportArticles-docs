@@ -5,14 +5,13 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Azure Active Directory
+  - MET150
+appliesto: 
+  - Azure Active Directory
 ---
 
 # Office 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out

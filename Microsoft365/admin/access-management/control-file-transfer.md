@@ -1,19 +1,18 @@
 ---
 title: Turn off file transfers in the Office app
-description: Describes how to restrict the use of the File Transfer feature by blocking URLs or IP addresses.  
+description: Describes how to restrict the use of the File Transfer feature by blocking URLs or IP addresses.
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: dcscontentpm 
-audience: ITPro 
+manager: dcscontentpm
+audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-admin
 localization_priority: Normal
 ms.custom: 
-- CI 115363
-- CSSTroubleshoot
+  - CI 115363
+  - CSSTroubleshoot
 ms.reviewer: vikkarti
-appliesto:
-- Office Mobile
+appliesto: 
+  - Office Mobile
 search.appverid: MET150
 ---
 # Control the File Transfer feature in the Office app

@@ -4,18 +4,17 @@ description: IgnoreLegalHold isn't available or functional for Disable-Mailbox, 
 author: MaryQiu1987
 ms.author: lindabr
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-compliance
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 121741
-- CSSTroubleshoot
+  - CI 121741
+  - CSSTroubleshoot
 ms.reviewer: lindabr
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150 
+  - MET150
 ---
 # IgnoreLegalHold isn't available or functional for Exchange Online user objects
 

@@ -6,21 +6,20 @@ manager: dcscontentpm
 ms.date: 1/12/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Excel M365
-- Excel 2019
-- Excel 2016
-- Excel 2013
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Excel M365
+  - Excel 2019
+  - Excel 2016
+  - Excel 2013
 ms.custom: 
-- CI 126342
-- CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: 'Describes how to resolve the "Class not registered" error when updating data in an Excel PowerPivot workbook.'
+  - CI 126342
+  - CSSTroubleshoot
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
+description: 'Describes how to resolve the Class not registered error when updating data in an Excel PowerPivot workbook.'
 ---
 
 # Error message: "Class not registered" when you update PowerPivot data

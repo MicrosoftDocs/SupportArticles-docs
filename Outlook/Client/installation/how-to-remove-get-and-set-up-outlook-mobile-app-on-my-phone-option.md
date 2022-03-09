@@ -6,17 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: tasitae, meerak
-appliesto:
-- Outlook 2019
-- Outlook 2016
-- Outlook for Microsoft 365
-- Exchange Online
+appliesto: 
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook for Microsoft 365
+  - Exchange Online
 search.appverid: MET150
 ---
 # How to remove the Get and set up Outlook mobile app on my phone option from Outlook and Outlook on the web

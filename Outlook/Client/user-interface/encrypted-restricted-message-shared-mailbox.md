@@ -5,21 +5,20 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: outlook
 ms.topic: troubleshooting
 ms.author: kellybos
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-- CI 124859
-appliesto:
-- Exchange Online
-- Outlook for Microsoft 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+  - CI 124859
+appliesto: 
+  - Exchange Online
+  - Outlook for Microsoft 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 # Can't read encrypted or restricted message sent to shared mailbox in Outlook
 

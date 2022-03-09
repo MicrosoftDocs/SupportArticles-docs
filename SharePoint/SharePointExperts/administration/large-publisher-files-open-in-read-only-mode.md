@@ -6,17 +6,14 @@ ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: spsexperts
-appliesto:
-- SharePoint Online
-- SharePoint Server 2013
-- Publisher 2013
+ms.custom: sap:spsexperts, CSSTroubleshoot
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server 2013
+  - Publisher 2013
 ---
 
 # Large Publisher files open in read-only mode

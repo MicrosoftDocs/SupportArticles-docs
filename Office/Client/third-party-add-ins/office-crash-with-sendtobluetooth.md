@@ -4,46 +4,45 @@ description: Describes problems that may occur with Office applications with the
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Word 2016
-- PowerPoint 2016
-- Excel 2016
-- Outlook 2016
-- Visio Professional 2016
-- Visio Standard 2016
-- Word 2013
-- PowerPoint 2013
-- Excel 2013
-- Visio Professional 2013
-- Outlook 2013
-- Microsoft Word 2010
-- PowerPoint 2010
-- Excel 2010
-- Visio Professional 2010
-- Microsoft Outlook 2010
-- Microsoft Office PowerPoint 2007
-- Microsoft Office Excel 2007
-- Microsoft Office Visio Standard 2007
-- Microsoft Office Visio Professional 2007
-- Microsoft Office Outlook 2007
-- Microsoft Office Word 2003
-- Microsoft Office PowerPoint 2003
-- Microsoft Office Excel 2003
-- Microsoft Office Visio Professional 200
-- 3Microsoft Office Outlook 2003
-- Microsoft Office OneNote 2003
-- Microsoft OneNote 2010
-- OneNote 2013
-- Microsoft Office Publisher 2003
-- Microsoft Office Publisher 2007
-- Publisher 2010Publisher 2013
+  - MET150
+appliesto: 
+  - Word 2016
+  - PowerPoint 2016
+  - Excel 2016
+  - Outlook 2016
+  - Visio Professional 2016
+  - Visio Standard 2016
+  - Word 2013
+  - PowerPoint 2013
+  - Excel 2013
+  - Visio Professional 2013
+  - Outlook 2013
+  - Microsoft Word 2010
+  - PowerPoint 2010
+  - Excel 2010
+  - Visio Professional 2010
+  - Microsoft Outlook 2010
+  - Microsoft Office PowerPoint 2007
+  - Microsoft Office Excel 2007
+  - Microsoft Office Visio Standard 2007
+  - Microsoft Office Visio Professional 2007
+  - Microsoft Office Outlook 2007
+  - Microsoft Office Word 2003
+  - Microsoft Office PowerPoint 2003
+  - Microsoft Office Excel 2003
+  - Microsoft Office Visio Professional 200
+  - 3Microsoft Office Outlook 2003
+  - Microsoft Office OneNote 2003
+  - Microsoft OneNote 2010
+  - OneNote 2013
+  - Microsoft Office Publisher 2003
+  - Microsoft Office Publisher 2007
+  - Publisher 2010Publisher 2013
 ---
 
 # Office programs may crash with the SendToBluetooth add-in installed

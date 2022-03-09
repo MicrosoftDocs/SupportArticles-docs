@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: jmartin, excontent, message
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # 403: Forbidden error when you try to view organization-wide free/busy information in Exchange

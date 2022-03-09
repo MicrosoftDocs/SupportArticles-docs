@@ -7,13 +7,12 @@ ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: CI-126689,CSSTroubleshoot,scenario:Direct-Routing-3
 ms.reviewer: mikebis
 ---

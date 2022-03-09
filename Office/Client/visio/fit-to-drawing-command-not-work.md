@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: timda, arykhus, kevinmil, barbway
 search.appverid: 
-- MET150
-appliesto:
-- Visio 2013
-- Visio 2010
+  - MET150
+appliesto: 
+  - Visio 2013
+  - Visio 2010
 ---
 
 # In Visio, the "Fit to Drawing" command does not resize the page to fit the drawing's dimensions

@@ -1,26 +1,25 @@
 ---
 title: Nullable object must have a value
-description: Provides a workaround for an issue in which you receive a "Nullable object must have a value" error message when you run the Hybrid Configuration wizard.
+description: Provides a workaround for an issue in which you receive a Nullable object must have a value error message when you run the Hybrid Configuration wizard.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
-ms.reviewer:
-appliesto:
-- Exchange Online
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Service Pack 3
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+  - Exchange Hybrid
+  - CSSTroubleshoot
+ms.reviewer: 
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2010 Service Pack 3
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
 # Nullable object must have a value when you run the Hybrid Configuration wizard

@@ -6,15 +6,12 @@ ms.author: remcgurk
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
-ms.custom:
-- CSSTroubleshoot
-- sap: spsexperts
-appliesto:
-- Microsoft SharePoint
+ms.custom: sap:spsexperts, CSSTroubleshoot
+appliesto: 
+  - Microsoft SharePoint
 ---
 
 # "We don't know what happened, but something went wrong." error in Excel Web Access Web Parts

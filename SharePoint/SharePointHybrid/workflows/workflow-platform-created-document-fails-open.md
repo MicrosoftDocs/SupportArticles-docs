@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Online
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Online
+  - SharePoint Server 2013
 ---
 
 # Document that was created through the SharePoint 2013 Workflow Platform doesn't open in SharePoint Online

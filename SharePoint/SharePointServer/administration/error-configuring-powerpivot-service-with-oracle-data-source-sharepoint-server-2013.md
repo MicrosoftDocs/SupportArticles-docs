@@ -7,13 +7,12 @@ ms.reviewer:
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.prod: sharepoint-server-itpro
-appliesto:
-- SharePoint Server 2013
+appliesto: 
+  - SharePoint Server 2013
 ---
 
 # Error when configuring a PowerPivot service with an Oracle data source in SharePoint Server 2013

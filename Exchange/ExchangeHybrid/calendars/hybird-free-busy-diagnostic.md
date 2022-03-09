@@ -6,14 +6,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 ms.reviewer: farshadt
-appliesto:
-- Exchange Online 
+appliesto: 
+  - Exchange Online
 search.appverid: MET150
 ---
 # Exchange Online Hybrid Free/Busy Diagnostic

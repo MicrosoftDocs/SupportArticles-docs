@@ -5,15 +5,14 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: skype-for-business-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
-appliesto:
-- Skype for Business 2016
-- Skype for Business 2015
+appliesto: 
+  - Skype for Business 2016
+  - Skype for Business 2015
 ---
 
 # Error 12029: "We couldn't connect you to this meeting" in Skype for Business 2016 or 2015

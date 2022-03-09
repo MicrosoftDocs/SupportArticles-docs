@@ -8,15 +8,14 @@ localization_priority: Normal
 ms.date: 02/01/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 ms.custom: CSSTroubleshoot
-search.appverid:
-- SPO160
-- MET150
+search.appverid: 
+  - SPO160
+  - MET150
 ms.assetid: 
-appliesto:
-- SharePoint Online
-- OneDrive for Business
+appliesto: 
+  - SharePoint Online
+  - OneDrive for Business
 ---
 
 # Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing OneDrive or Sharepoint

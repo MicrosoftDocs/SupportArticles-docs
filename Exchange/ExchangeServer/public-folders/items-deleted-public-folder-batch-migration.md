@@ -6,18 +6,17 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
-- CI 155655
-- Exchange Server
-- CSSTroubleshoot
+ms.custom: 
+  - CI 155655
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: gmuntean; meerak; batre
 appliesto: 
-- Exchange Online
-- Exchange Server 2013
-- Exchange Server 2016
-- Exchange Server 2019
+  - Exchange Online
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
 search.appverid: MET150
 ---
 # Items are deleted after a public folder batch migration

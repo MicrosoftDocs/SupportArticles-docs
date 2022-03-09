@@ -4,22 +4,21 @@ description: This article describes an issue in which a mailbox that exists in b
 author: simonxjx
 ms.author: benwinz
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Hybrid
-- CI 105380
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CI 105380
+  - CSSTroubleshoot
 ms.reviewer: benwinz, EXOL_Triage
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
+  - MET150
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 ---
 # How to recover when a mailbox exists in both Exchange Online and on-premises
 

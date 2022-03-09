@@ -4,17 +4,16 @@ description: Provides the resolution to fix the error that occurs when you open 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
-localization_priority: Normal 
+audience: ITPro
+ms.topic: troubleshooting
+localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project 2010
-- Office 2013
-- Visio 2013
+  - MET150
+appliesto: 
+  - Project 2010
+  - Office 2013
+  - Visio 2013
 ---
 
 # Error when opening a Visual Report in Project 2010 with Office 2013

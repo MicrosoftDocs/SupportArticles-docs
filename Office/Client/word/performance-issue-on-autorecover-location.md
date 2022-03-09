@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
-appliesto:
-- Word 2010
-- Word 2013
+appliesto: 
+  - Word 2010
+  - Word 2013
 ---
 
 # Performance issues with Auto-Recover location on network share

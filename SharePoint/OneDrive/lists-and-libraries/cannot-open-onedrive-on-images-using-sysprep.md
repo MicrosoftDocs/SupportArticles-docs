@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- OneDrive for Business
-search.appverid: MET150 
+appliesto: 
+  - OneDrive for Business
+search.appverid: MET150
 ---
 # Unable to open OneDrive on images using Sysprep
 

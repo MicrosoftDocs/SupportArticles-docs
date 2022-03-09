@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
+  - CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Foundation 2010
-- SharePoint Server 2010
+appliesto: 
+  - SharePoint Foundation 2010
+  - SharePoint Server 2010
 ---
 
 # Site slowness because of SharePoint STS certificate CRL checking  

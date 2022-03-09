@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2010 Service Pack 1
+  - MET150
+appliesto: 
+  - Exchange Server 2010 Service Pack 1
 ---
 # You can't change the ownership of a distribution group in Exchange Server 2010 SP1
 

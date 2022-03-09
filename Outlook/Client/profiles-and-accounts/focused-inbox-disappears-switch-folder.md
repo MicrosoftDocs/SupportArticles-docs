@@ -4,19 +4,18 @@ description: When you switch from the inbox to other folders, the Focused Inbox 
 author: helenclu
 ms.author: geob
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: outlook
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CI 114555
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CI 114555
+  - CSSTroubleshoot
 ms.reviewer: geob
-appliesto:
-- Outlook for Office 365
+appliesto: 
+  - Outlook for Office 365
 search.appverid: 
-- MET150
+  - MET150
 ---
 
 # Focused Inbox disappears when you switch folders in Outlook

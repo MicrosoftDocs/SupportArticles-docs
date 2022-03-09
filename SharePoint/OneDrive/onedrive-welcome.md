@@ -4,14 +4,13 @@ description: This article lists OneDrive for Business related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.service: one-drive
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-appliesto:
-- OneDrive for Business
+ms.custom: 
+  - CSSTroubleshoot
+appliesto: 
+  - OneDrive for Business
 ---
 
 # OneDrive for Business troubleshooting

@@ -4,24 +4,23 @@ description: Fixes an issue that causes Office 2016 and Office 2013 applications
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: genli, christys
 search.appverid: 
-- MET150
-appliesto:
-- Word 2013
-- PowerPoint 2013
-- Excel 2013
-- Outlook 2013
-- Outlook 2016
-- Visio 2016
-- Word 2016
-- PowerPoint 2016
-- Excel 2016
+  - MET150
+appliesto: 
+  - Word 2013
+  - PowerPoint 2013
+  - Excel 2013
+  - Outlook 2013
+  - Outlook 2016
+  - Visio 2016
+  - Word 2016
+  - PowerPoint 2016
+  - Excel 2016
 ---
 
 # Office applications crash when you open an IRM document if HTTPS proxy is enabled

@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: wbaer
-appliesto:
-- SharePoint Foundation 2013
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Essentials
-- Windows Server 2012 R2 Foundation
-- Windows Server 2012 R2 Preview
-- Windows Server 2012 R2 Standard
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Foundation 2013
+  - Windows Server 2012 R2 Datacenter
+  - Windows Server 2012 R2 Essentials
+  - Windows Server 2012 R2 Foundation
+  - Windows Server 2012 R2 Preview
+  - Windows Server 2012 R2 Standard
+search.appverid: MET150
 ---
 # SharePoint 2013 SP1 support in Windows Server 2012 R2
 

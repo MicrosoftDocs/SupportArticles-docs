@@ -6,20 +6,19 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: scottlan, deedi
-appliesto:
-- Exchange Server 2019
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2010 Standard
-- Exchange Server 2010 Enterprise
+appliesto: 
+  - Exchange Server 2019
+  - Exchange Server 2016 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2010 Standard
+  - Exchange Server 2010 Enterprise
 search.appverid: MET150
 ---
 # 454 4.7.0 Temporary authentication failure in Exchange Server

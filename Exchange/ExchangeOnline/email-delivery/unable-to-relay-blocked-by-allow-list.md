@@ -6,15 +6,14 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: romccart
-appliesto:
-- Exchange Online
-- Exchange Online Protection
+appliesto: 
+  - Exchange Online
+  - Exchange Online Protection
 search.appverid: MET150
 ---
 # Sender receives an NDR: 5.7.1 Unable to Relay: Blocked by Customer Allow List

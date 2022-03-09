@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: kemille
-appliesto:
-- Word 2010
-- Excel 2010
-- PowerPoint 2010
+appliesto: 
+  - Word 2010
+  - Excel 2010
+  - PowerPoint 2010
 ---
 
 # Cannot change the number of places to list in Recent Places in Word 2010, in Excel 2010, or in PowerPoint 2010

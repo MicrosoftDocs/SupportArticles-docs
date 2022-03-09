@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 7/9/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: one-drive
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- OneDrive for Business
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - OneDrive for Business
 ms.custom: 
-- CI 120653
-- CSSTroubleshoot 
+  - CI 120653
+  - CSSTroubleshoot
 ms.reviewer: dumitrim
-description: How to resolve an "Upload blocked" error in Office 365 when two different tenants sync files to OneDrive.
+description: How to resolve an Upload blocked error in Office 365 when two different tenants sync files to OneDrive.
 ---
 
 # (Upload blocked) error in Office 365 when users sync files with OneDrive from different tenants

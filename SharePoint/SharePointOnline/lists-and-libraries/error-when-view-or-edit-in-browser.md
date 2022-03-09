@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- SharePoint Server 2010
-- SharePoint Foundation 2010
-- Word for the web
-- PowerPoint for the web
+appliesto: 
+  - SharePoint Server 2010
+  - SharePoint Foundation 2010
+  - Word for the web
+  - PowerPoint for the web
 ---
 
 # Error when view or edit in browser for Word or PowerPoint Online  

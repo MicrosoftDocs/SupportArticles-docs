@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Access 2010
-- Access 2013
+  - MET150
+appliesto: 
+  - Access 2010
+  - Access 2013
 ---
 
 # Access: Errors during Import/Export to Excel xls

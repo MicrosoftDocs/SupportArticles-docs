@@ -6,16 +6,15 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
+  - Outlook for Windows
+  - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Microsoft Office Outlook 2003
+appliesto: 
+  - Microsoft Outlook 2010
+  - Microsoft Office Outlook 2007
+  - Microsoft Office Outlook 2003
 search.appverid: MET150
 ---
 # How to configure Outlook to block additional attachment file name extensions

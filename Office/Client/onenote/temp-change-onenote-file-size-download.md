@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 4/1/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.prod: office-perpetual-itpro
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- OneNote
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - OneNote
 ms.custom: 
-- CI 115970
-- CSSTroubleshoot 
-ms.reviewer: morales 
+  - CI 115970
+  - CSSTroubleshoot
+ms.reviewer: morales
 description: OneNote download sizes will be temporarily limited to 100 MB.
 ---
 

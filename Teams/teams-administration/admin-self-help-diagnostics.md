@@ -6,17 +6,16 @@ manager: dcscontentpm
 ms.date: 10/13/2020
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Teams
 ms.custom: 
-- CI 124054
-- CSSTroubleshoot 
-ms.reviewer: salarson 
+  - CI 124054
+  - CSSTroubleshoot
+ms.reviewer: salarson
 description: How to run self-help diagnostics in Microsoft Teams
 ---
 

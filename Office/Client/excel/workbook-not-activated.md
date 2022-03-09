@@ -5,16 +5,15 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: akeeler, prash, xlkbpre
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Office 2013 Service Pack 1
-- Excel 2013
+  - MET150
+appliesto: 
+  - Office 2013 Service Pack 1
+  - Excel 2013
 ---
 
 # Excel workbook is not activated when you run a macro that calls the Workbook.Activate method

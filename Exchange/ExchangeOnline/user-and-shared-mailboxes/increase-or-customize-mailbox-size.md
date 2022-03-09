@@ -7,12 +7,11 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: 
-- Exchange Online
+  - Exchange Online
 search.appverid: MET150
 ms.reviewer: meerak
 author: simonxjx
 ms.author: v-six
-ms.service: exchange-online
 ---
 
 # Increase or customize Exchange Online mailbox size

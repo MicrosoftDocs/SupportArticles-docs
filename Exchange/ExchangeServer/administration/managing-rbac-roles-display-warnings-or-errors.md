@@ -7,14 +7,13 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: ninob
-appliesto:
-- Exchange Server 2010
+appliesto: 
+  - Exchange Server 2010
 search.appverid: MET150
 ---
 # Managing RBAC roles might display warnings or errors if Exchange Server 2010 is partially deployed

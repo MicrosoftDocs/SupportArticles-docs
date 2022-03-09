@@ -5,15 +5,14 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
-appliesto:
-- Office Excel 2007
-- Office Excel 2003
+appliesto: 
+  - Office Excel 2007
+  - Office Excel 2003
 ---
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel

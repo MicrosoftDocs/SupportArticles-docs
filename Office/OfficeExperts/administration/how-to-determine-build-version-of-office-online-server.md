@@ -6,15 +6,12 @@ ms.author: thempel
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom:
-- CSSTroubleshoot
-- sap: office-experts
-ms.prod: office-perpetual-itpro
-appliesto:
-- Office Online Server
+ms.custom: sap:office-experts, CSSTroubleshoot
+appliesto: 
+  - Office Online Server
 ---
 
 # How to determine the build version of Office Online Server

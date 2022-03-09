@@ -1,22 +1,21 @@
 ---
-title: External federated contacts don't appear in Teams search 
+title: External federated contacts don't appear in Teams search
 description: Describes why external federated contacts might not appear in Teams searches.
 author: v-matthamer
 ms.author: v-matthamer
 manager: dcscontentpm
 editor: v-jesits
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: msteams
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 121615
-- CSSTroubleshoot
+  - CI 121615
+  - CSSTroubleshoot
 ms.reviewer: chunlli
-appliesto:
-- Microsoft Teams
+appliesto: 
+  - Microsoft Teams
 search.appverid: 
-- MET150 
+  - MET150
 ---
 
 # External federated contacts don't appear in Teams search

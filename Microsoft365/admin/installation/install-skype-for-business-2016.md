@@ -5,15 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: microsoft-365-admin
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Skype for Business 2016
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Skype for Business 2016
 ---
 
 # Install of Skype for Business 2016 from the Office 365 portal installs all the Microsoft 365 Apps for enterprise applications

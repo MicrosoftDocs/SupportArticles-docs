@@ -6,19 +6,18 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.reviewer: aruiz, batre
 ms.custom: 
-- Outlook for Windows
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Outlook for Office 365
-- Outlook 2019
-- Outlook 2016
-- Outlook 2013
+  - Outlook for Windows
+  - CSSTroubleshoot
+search.appverid: 
+  - MET150
+appliesto: 
+  - Outlook for Office 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
 ---
 # Error 0x80070057 and no Offline Address Book is downloaded in Outlook 2013 or later versions
 

@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto:
-- SharePoint Online
-search.appverid: MET150 
+appliesto: 
+  - SharePoint Online
+search.appverid: MET150
 ---
 # Recurring Calendar items can't be synchronized in Outlook
 

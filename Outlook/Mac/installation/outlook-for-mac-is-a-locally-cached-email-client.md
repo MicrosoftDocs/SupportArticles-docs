@@ -6,15 +6,14 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: outlook
 localization_priority: Normal
 ms.custom: 
-- Outlook for Mac
-- CSSTroubleshoot
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: tsimon, tasitae
-appliesto:
-- Outlook 2016 for Mac
-- Outlook for Mac for Office 365
+appliesto: 
+  - Outlook 2016 for Mac
+  - Outlook for Mac for Office 365
 search.appverid: MET150
 ---
 # Outlook for Mac is a locally cached email client

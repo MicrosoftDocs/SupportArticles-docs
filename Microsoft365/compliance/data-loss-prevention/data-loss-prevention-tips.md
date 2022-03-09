@@ -6,16 +6,15 @@ ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: microsoft-365-compliance
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: sathyana, camlat
 appliesto: 
-- Exchange Online
-- Exchange Online Protection
-- Office Professional Plus 2013
-- Microsoft 365 Apps for enterprise
+  - Exchange Online
+  - Exchange Online Protection
+  - Office Professional Plus 2013
+  - Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
 # How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Office 365

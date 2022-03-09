@@ -4,23 +4,22 @@ description: Describes how work and duration are calculated when you make resour
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: petewi 
+ms.reviewer: petewi
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Project Server 2013
-- Project 2013 Standard
-- Project Professional 2013
-- Project Server 2010
-- Project Standard 2010
-- Project Professional 2010
-- Microsoft Office Project Standard 2003
-- Microsoft Office Project Professional 2003
+  - MET150
+appliesto: 
+  - Project Server 2013
+  - Project 2013 Standard
+  - Project Professional 2013
+  - Project Server 2010
+  - Project Standard 2010
+  - Project Professional 2010
+  - Microsoft Office Project Standard 2003
+  - Microsoft Office Project Professional 2003
 ---
 
 # How work and duration are calculated with assignment changes

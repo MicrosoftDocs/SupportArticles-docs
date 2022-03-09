@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 9/4/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: microsoft-365-admin
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft 365 Apps
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft 365 Apps
 ms.custom: 
-- CI 122959
-- CSSTroubleshoot 
+  - CI 122959
+  - CSSTroubleshoot
 ms.reviewer: vikkarti
-description: 'Describes how to resolve the error "Your organization has disabled this device" when trying to activate Microsoft 365 Apps.'
+description: 'Describes how to resolve the error Your organization has disabled this device when trying to activate Microsoft 365 Apps.'
 ---
 
 # "Your organization has disabled this device" error when you try to activate Microsoft 365 Apps

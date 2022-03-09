@@ -4,17 +4,16 @@ description: Resolves an issue in which you cannot open an Office file from a UN
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-ms.reviewer: khutch; arykhus; kemille; richpo; debbiery 
+ms.reviewer: khutch; arykhus; kemille; richpo; debbiery
 search.appverid: 
-- MET150
-appliesto:
-- Office Web Apps Server 2013
-- Office Online Server
+  - MET150
+appliesto: 
+  - Office Web Apps Server 2013
+  - Office Online Server
 ---
 
 # "File not found" error when you try to open an Office file from a UNC share

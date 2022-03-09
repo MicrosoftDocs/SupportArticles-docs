@@ -4,17 +4,16 @@ description: Describes a problem in which information in Active Directory is not
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: microsoft-365-admin
+audience: ITPro
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: kellybos
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft Business Productivity Online Dedicated
-- Microsoft Exchange Online Dedicated
+  - MET150
+appliesto: 
+  - Microsoft Business Productivity Online Dedicated
+  - Microsoft Exchange Online Dedicated
 ---
 
 # Changed Active Directory object information is not updated in the address book in Office 365 dedicated/ITAR

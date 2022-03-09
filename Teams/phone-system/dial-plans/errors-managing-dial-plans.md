@@ -1,22 +1,21 @@
 ---
 title: Errors when trying to manage dial plans
-description: Describes errors that occur if you try to manage dial plans by using an unlicensed account. 
+description: Describes errors that occur if you try to manage dial plans by using an unlicensed account.
 ms.date: 4/30/2021
 author: meerak
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.service: msteams
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- Microsoft Teams
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
 ms.custom: 
-- CI 148559
-- CSSTroubleshoot 
+  - CI 148559
+  - CSSTroubleshoot
 ms.reviewer: Shea Caperoon
 ---
 

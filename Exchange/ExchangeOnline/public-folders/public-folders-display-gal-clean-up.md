@@ -4,19 +4,18 @@ description: Public folders remain on the global address list (GAL) even though 
 author: simonxjx
 ms.author: batre
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.service: exchange-online
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CI 116313
-- CSSTroubleshoot
+  - Exchange Online
+  - CI 116313
+  - CSSTroubleshoot
 ms.reviewer: batre
-appliesto:
-- Exchange Online
+appliesto: 
+  - Exchange Online
 search.appverid: 
-- MET150
+  - MET150
 ---
 # Public folders are displayed in GAL despite having been cleaned up
 

@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 10/18/2019
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- SharePoint Online 
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - SharePoint Online
 ms.custom: 
-- CI 108412
-- SSTroubleshoot
+  - CI 108412
+  - SSTroubleshoot
 ms.reviewer: snarra, anundlie, knutb
-description: Describes how to get search results to appear for a group owner after creating a new Office 365 group. 
+description: Describes how to get search results to appear for a group owner after creating a new Office 365 group.
 ---
 
 # Search results don't appear for group owners after creating a new Office 365 group

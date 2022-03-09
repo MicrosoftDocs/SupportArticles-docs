@@ -6,20 +6,19 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: marcn, nasira, brettan
 ms.custom: 
-- Exchange Server
-- CI 119623
-- CSSTroubleshoot
+  - Exchange Server
+  - CI 119623
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
+  - MET150
+appliesto: 
+  - Exchange Server 2013 Enterprise
+  - Exchange Server 2013 Standard Edition
+  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016 Standard Edition
 ---
 # Auto-installation of .NET Framework 4.6.1 for Windows Server 2012 R2 in Exchange Server 2013 or 2016
 

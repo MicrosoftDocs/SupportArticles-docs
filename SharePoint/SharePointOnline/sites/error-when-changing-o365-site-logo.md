@@ -6,18 +6,17 @@ manager: dcscontentpm
 ms.date: 4/16/2020
 audience: Admin
 ms.topic: troubleshooting
-ms.service: sharepoint-online
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MET150
-appliesto:
-- ADD PRODUCT
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - ADD PRODUCT
 ms.custom: 
-- CI 116548
-- CSSTroubleshoot 
-ms.reviewer: prbalusu 
-description: What to do if you get an error when trying to change an Office 365 site logo in SharePoint. 
+  - CI 116548
+  - CSSTroubleshoot
+ms.reviewer: prbalusu
+description: What to do if you get an error when trying to change an Office 365 site logo in SharePoint.
 ---
 
 # Error when trying to change site logo on O365 group SharePoint site

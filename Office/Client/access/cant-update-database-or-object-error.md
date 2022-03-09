@@ -4,19 +4,18 @@ description: Discusses that you receive a Cannot update. Database or object is r
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: troubleshooting 
-ms.prod: office-perpetual-itpro
+audience: ITPro
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Access 2016
-- Access 2010
-- Access 2013
-- Access for Office 365
-- Access 2019
+  - MET150
+appliesto: 
+  - Access 2016
+  - Access 2010
+  - Access 2013
+  - Access for Office 365
+  - Access 2019
 ---
 
 # "Cannot update. Database or object is read-only" error in linked SharePoint list in Access

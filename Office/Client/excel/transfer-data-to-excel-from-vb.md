@@ -5,17 +5,16 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: grege
 search.appverid: 
-- MET150
-appliesto:
-- Excel 2010
-- Office Excel 2007
-- Office Excel 2003
+  - MET150
+appliesto: 
+  - Excel 2010
+  - Office Excel 2007
+  - Office Excel 2003
 ---
 
 # Methods for transferring data to Excel from Visual Basic

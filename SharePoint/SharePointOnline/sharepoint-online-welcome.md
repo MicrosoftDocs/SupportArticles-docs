@@ -4,14 +4,13 @@ description: This article lists SharePoint Online related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.service: sharepoint-online
 ms.topic: landing-page
 ms.author: luche
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
-- SharePoint Online
+  - SharePoint Online
 ---
 
 # SharePoint Online troubleshooting

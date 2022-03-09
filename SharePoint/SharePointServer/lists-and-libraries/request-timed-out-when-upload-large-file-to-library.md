@@ -1,18 +1,17 @@
 ---
-title: Error "Request timed out" when you try to upload a large file to a document library on a Windows SharePoint Services 3.0 site
+title: Error Request timed out when you try to upload a large file to a document library on a Windows SharePoint Services 3.0 site
 description: Describes an issue that occurs when you try to upload a large file to a document library on a Windows SharePoint Services 3.0 site.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
-appliesto:
-- Windows SharePoint Services 3.0
+appliesto: 
+  - Windows SharePoint Services 3.0
 ---
 
 # "Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library
