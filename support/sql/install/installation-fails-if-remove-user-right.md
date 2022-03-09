@@ -11,6 +11,7 @@ ms.prod: sql
 
 This article helps you resolve a problem that may occur when you install or upgrade Microsoft SQL Server after tightening security.
 
+_Applies to_: SQL Server
 _Original KB number:_ &nbsp; 2000257
 
 ## Symptoms
@@ -49,14 +50,14 @@ In this scenario, if you either install or upgrade SQL Server, the installation 
     > 2009-01-02 13:00:20 Slp: Source: System.  
     > 2009-01-02 13:00:20 Slp: Message: Access is denied.  
 
-- **Scenario2:** A new installation of SQL Server fails.
+- **Scenario 2:** A new installation of SQL Server fails.
 
     You see the following error message when you try to install a new instance of SQL Server 2012 or SQL Server 2008 R2:
 
     > Rule "Setup account privileges" failed.  
     > The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
 
-- **Scenario 3** : Installing SQL Server 2012 or a later instance fails when you specify a network share (UNC path) for the Backup directory location. When this issue occurs, you receive the following error message:
+- **Scenario 3:** Installing SQL Server 2012 or a later instance fails when you specify a network share (UNC path) for the Backup directory location. When this issue occurs, you receive the following error message:
 
     > SQL Server setup account does not have the SeSecurityPrivilege on the specified file server in the path *\<UNC backup location>*. This privilege is required in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the "User Rights Assignments" section under Local Policies in the Local Security Policy console.
 
