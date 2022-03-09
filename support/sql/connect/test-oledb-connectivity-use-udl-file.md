@@ -45,13 +45,13 @@ To create a UDL file to test your OLE DB provider, follow these steps:
       Invoke-Expression ($env:temp + "\sqlconn.udl")
       ```
 
-## Test the connection by using a SQL Server OLE DB provider
+## Test the connection by using the SQL Server OLE DB provider
 
 [Microsoft OLE DB Provider for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) (SQLOLEDB) is the most common provider. It's built into Windows and can connect to any version of SQL Server that's not configured to require TLS 1.2 channel bindings.
 
 [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server#3-microsoft-ole-db-driver-for-sql-server-msoledbsql) (MSOLEDBSQL) is the latest SQL Server OLE DB provider. The provider has all the new features, such as TLS 1.2, [MultiSubnetFailover](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover), and Azure authentication options. We recommend this provider for newer SQL Server databases.
 
-To test the connection by using a SQL Server OLE DB provider, follow these steps:
+To test the connection by using the SQL Server OLE DB provider, follow these steps:
 
 1. Open the *.udl* file.
 
@@ -121,4 +121,4 @@ For each of the above methods, if one combination works and another fails, it co
 [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages)
 
 > [!NOTE]
-> If this article didn't resolve your issue, you can check [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md#common-connectivity-issues) for more help.
+> If this article hasn't resolved your issue, you can check [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md#common-connectivity-issues) for more help.
