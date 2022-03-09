@@ -8,7 +8,7 @@ ms.reviewer: arcrowe
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
-# OIDC-based SSO error AADSTS50011: The redirect URI specified in the request does not match the redirect URIs configured for the application
+# Error AADSTS50011: The redirect URI specified in the request does not match
 
 This article describes a problem in which error `AADSTS50011` is returned when trying to sign in to an application that uses OpenID Connect (OIDC) based single sign-on (SSO) with Azure Active Directory (Azure AD).
 
