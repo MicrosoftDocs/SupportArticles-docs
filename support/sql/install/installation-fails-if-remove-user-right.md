@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2000257
 
 ## Symptoms
 
-Consider the following scenario. To tighten security, you remove some default user rights to the local administrators group on a Windows operating system. To prepare for setting up SQL Server on this system, you add the Setup account to the local administrators group.
+Consider the following scenario. To tighten security, you remove some default user rights from the local administrators group on a Windows operating system. To prepare for setting up SQL Server on this system, you add the Setup account to the local administrators group.
 
 In this scenario, if you either install or upgrade SQL Server, the installation process may fail, and you may receive various error messages similar to those noted in the following sections.
 
@@ -78,11 +78,11 @@ This behavior is by design. In addition to adding the user account that's runnin
 > [!NOTE]
 > For more information about the permissions that are required to install SQL Server, see the "Prerequisites" section of the following articles:
 
-- [Planning a SQL Server Installation](/sql-server/install/planning-a-sql-server-installation)
+- [Planning a SQL Server Installation](../sql-server/install/planning-a-sql-server-installation)
 
-- [Install SQL Server from the Installation Wizard (Setup)](/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
+- [Install SQL Server from the Installation Wizard (Setup)](../sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
 
-Additionally, if SMB Fileshare is used as a storage option for data directory or any other directories (User database directory, user database log directory, TempDB directory, TempDB log directory or backup directory), the following additional permissions are required for the setup account on the SMB fileserver as documented in the following article:[Install SQL Server with SMB fileshare storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)
+Additionally, if SMB Fileshare is used as a storage option for data directory or any other directories (User database directory, user database log directory, TempDB directory, TempDB log directory or backup directory), the following additional permissions are required for the setup account on the SMB fileserver as documented in the following article:[Install SQL Server with SMB fileshare storage](../sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)
 
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
@@ -105,7 +105,7 @@ To add the rights to the setup account, follow these steps:
 
 ## More information
 
-- To check the list of privileges that are currently associated with the account that is used for Setup, you can use the AccessChk.exe tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
+- To check the list of privileges that are currently associated with the account that is used for Setup, you can use the *AccessChk.exe* tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
 
   **Usage**: accesschk.exe- a \<setup account> *
 
@@ -147,10 +147,10 @@ To add the rights to the setup account, follow these steps:
 - **Frequently asked questions**  
   - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the  UNC share?
 
-    This permission is required in order to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can perform a backup on the directory. Setup performs these checks for the default backup directory so that if backup is performed on the default backup directorypost-installation, the user doesn't encounter an error or issue (because of missing permissions) when you perform backup on the default directory.
+    This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can perform a backup on the directory. Setup performs these checks for the default backup directory so that if backup is performed on the default backup directorypost-installation, the user doesn't encounter an error or issue (because of missing permissions) when you  backup the default directory.
 
     > [!NOTE]
-    > **SeSecurityPrivilege** is required in order to change the get/set ACLs from the directories and subfolders. This is the case because even users who have FULL CONTROL permissions on the directories don't have permissions to get/set OWNER and Audit information from the directory.
+    > **SeSecurityPrivilege** is required to change the get/set ACLs from the directories and subfolders. This is the case because even users who have FULL CONTROL permissions on the directories don't have permissions to get/set OWNER and Audit information from the directory.
 
   - Why does the error that's described in Scenario 3 occur only in SQL Server 2012 and later versions of SQL Server?
 
