@@ -1,9 +1,9 @@
 ---
 title: Disable and enable Internet Explorer on Windows
 description: This article describes how to disable and enable any supported version of Internet Explorer on Windows.
-ms.date: 03/07/2022
+ms.date: 03/09/2022
 ms.custom: sap:installation
-ms.reviewer: haiyingyu
+ms.reviewer: heikom
 ms.topic: how-to
 ms.technology: internet-explorer-installation
 ---
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4013567
 
 Use one of the following methods to disable or enable Internet Explorer.
 
-If you remove Internet Explorer by using DISM, the iexplore.exe entry point is removed from the file system, but its rendering engine remains on the system. Therefore, you should continue to install security updates that apply to Internet Explorer even after you disable it, as applicable.
+If you remove Internet Explorer by using DISM, the *iexplore.exe* entry point is removed from the file system, but its rendering engine remains on the system. Therefore, you should continue to install security updates that apply to Internet Explorer even after you disable it, as applicable.
 
 To restore the program on your computer, we recommend that you use the same method that you used to disable it (Control Panel or DISM).
 
