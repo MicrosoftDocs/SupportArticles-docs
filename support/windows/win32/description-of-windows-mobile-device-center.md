@@ -4,6 +4,10 @@ description: This article describes the new application that replaces ActiveSync
 ms.date: 07/29/2021
 ms.topic: troubleshooting
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Description of Windows Mobile Device Center
 
 This article describes the new application that replaces ActiveSync in Windows Vista.
