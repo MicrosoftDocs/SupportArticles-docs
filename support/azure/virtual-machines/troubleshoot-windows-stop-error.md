@@ -14,6 +14,9 @@ ms.topic: troubleshooting
 ms.date: 06/26/2020
 ---
 
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Windows stop error - Status No Memory
 
 This article provides steps to resolve issues where Windows fails to start and displays the status or error code #0xC0000017, also known as "Status No Memory".

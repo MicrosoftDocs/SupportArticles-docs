@@ -13,6 +13,10 @@ ms.reviewer: kaushika, v-wanyi
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: windows-client-networking
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Can't access shared folders from File Explorer in Windows 10
 
 _Applies to:_ &nbsp; Windows 10
