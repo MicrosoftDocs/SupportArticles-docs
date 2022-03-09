@@ -3,7 +3,7 @@ title: Installation fails when you remove user rights
 description: This article helps you resolve a problem that may occur when you install or upgrade Microsoft SQL Server after tightening security.
 ms.date: 03/09/2022
 ms.custom: sap:Database Engine
-author:
+author: rielsql
 ms.author: v-jayaramanp
 ms.prod: sql
 ---
@@ -49,12 +49,14 @@ In this scenario, if you either install or upgrade SQL Server, the installation 
     > 2009-01-02 13:00:20 Slp: Source: System.  
     > 2009-01-02 13:00:20 Slp: Message: Access is denied.  
 
-- **Scenario2:** A new installation of SQL Server fails
+- **Scenario2:** A new installation of SQL Server fails.
 
     You see the following error message when you try to install a new instance of SQL Server 2012 or SQL Server 2008 R2:
 
     > Rule "Setup account privileges" failed.  
-    > The account that is running SQL Server Setup does not have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
+    > The account that is running SQL Server Setup does not have one or all of the following rights: 
+      - the right to back up files and directories
+      - the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
 
 - **Scenario 3** : Installing SQL Server 2012 or a later instance fails when you specify a network share (UNC path) for the Backup directory location. When this issue occurs, you receive the following error message:
 
