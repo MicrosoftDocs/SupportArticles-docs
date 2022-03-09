@@ -1,8 +1,10 @@
 ---
 title: Installation fails when you remove user rights
 description: This article helps you resolve a problem that may occur when you install or upgrade Microsoft SQL Server after tightening security.
-ms.date: 10/22/2020
+ms.date: 03/09/2022
 ms.custom: sap:Database Engine
+author:
+ms.author: v-jayaramanp
 ms.prod: sql
 ---
 # SQL Server installation fails if the Setup account doesn't have certain user rights
@@ -13,7 +15,7 @@ _Original KB number:_ &nbsp; 2000257
 
 ## Symptoms
 
-Consider the following scenario. To tighten security, you remove some default user rights to the local administrators group on a Windows operating system. In preparation for setting up SQL Server on this system, you add the Setup account to the local administrators group.
+Consider the following scenario. To tighten security, you remove some default user rights to the local administrators group on a Windows operating system. To prepare for setting up SQL Server on this system, you add the Setup account to the local administrators group.
 
 In this scenario, if you either install or upgrade SQL Server, the installation process may fail, and you may receive various error messages similar to those noted in the following sections.
 
@@ -21,7 +23,7 @@ In this scenario, if you either install or upgrade SQL Server, the installation 
 
     > Access is denied
     
-    Additionally, you may notice error messages that resemble the following in the Detail.txt file:
+    Additionally, you may notice error messages that resemble the following in the *Detail.txt* file:
     
     > 2009-01-02 13:00:17 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' to be created  
     > 2009-01-02 13:00:20 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' or sql process handle to be signaled  
