@@ -105,7 +105,7 @@ The `generateSPNss.cmd` file is created, and you can run this file at a command 
 
   :: Please contact Microsoft Support if Kerberos connection problem persists.
 
-  :: The file is intended to be run in domain <DomainName>.com"
+  :: The file is intended to be run in domain `<DomainName>.com`"
 
   :: Corrections for MSSQLSvc/<HostName>.<DomainName>.com **SetSPN -s MSSQLSvc/<HostName>. <DomainName>.com UserName** 
   ```
