@@ -1042,6 +1042,8 @@
       href: ./deployment/avoid-duplicate-guids-deploy-sms.md
     - name: Can't open EXE files
       href: ./deployment/cant-open-exe-files.md
+    - name: Chinese IME dictionaries are not ready yet
+      href: ./deployment/chinese-ime-dictionaries-not-ready.md
     - name: Chinese (Simplified) input method doesn't work
       href: ./deployment/chinese-simplified-input-method-not-working.md
     - name: Create an ISO image for UEFI platforms
@@ -1716,6 +1718,8 @@
       href: ./networking/direct-hosting-of-smb-over-tcpip.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
       href: ./networking/directaccess-clients-unable-connect-static-proxy-configured.md
+    - name: Disable HTTP proxy features
+      href: ./networking/disable-http-proxy-auth-features.md
     - name: Disable Media Sensing feature for TCP/IP
       href: ./networking/disable-media-sensing-feature-for-tcpip.md
     - name: Disable NetBIOS over TCP/IP by using DHCP server options

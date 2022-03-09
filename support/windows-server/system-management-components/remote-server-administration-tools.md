@@ -14,6 +14,10 @@ ms.custom: sap:server-manager, csstroubleshoot
 ms.technology: windows-server-system-management-components
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Remote Server Administration Tools (RSAT) for Windows
 
 RSAT enables IT administrators to remotely manage roles and features in Windows Server from a computer that is running Windows 10 and Windows 7 Service Pack 1.

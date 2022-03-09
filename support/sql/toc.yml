@@ -644,6 +644,8 @@
     href: linux/core-dump-rhel-7-4-run-mssql-conf.md
   - name: Restore operation fails on Linux servers
     href: linux/database-restore-operation-fails-linux-server.md
+  - name: mssql-conf setup fails with python module error
+    href: linux/mssql-conf-setup-fails-with-python-module-error.md
 
 - name: Tools
   items:
