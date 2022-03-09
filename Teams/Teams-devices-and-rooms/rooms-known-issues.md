@@ -56,7 +56,7 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 
 ## Limitations
 
-- Front row is currently labeled as Preview on the layout picker in the Front of Room display.
+- Front row is currently labeled as **Preview** on the layout picker in the Front of Room display.
 - Front row layout displays up to 4 video participants on a single Front of Room display and up to 9 video participants on dual Front of Room displays. These participants are chosen from the last active speakers.
 - Microsoft Teams Rooms doesn't support HDCP input, which has been observed to cause issues with High-Definition Multimedia Interface (HDMI) ingest functionality (video, audio). To avoid these issues, make sure that switches connected to Microsoft Teams Rooms have HDCP options turned off.
 
