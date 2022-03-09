@@ -40,12 +40,14 @@
   items:
   - name: Troubleshoot adding apps
     href: troubleshoot-adding-apps.md
-  - name: Troubleshoot sign-in to SAML-based SSO apps
+  - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS50003 - certificate or key not configured
         href: error-code-AADSTS50003-cert-or-key-not-configured.md
-      - name: Error AADSTS50011 - reply URL mismatch
+      - name: Error AADSTS50011 - reply URL mismatch (SAML)
         href: error-code-AADSTS50011-reply-url-mismatch.md
+      - name: Error AADSTS50011 - redirect URI mismatch (OIDC/OAuth2)
+        href: error-code-AADSTS50011-redirect-uri-mismatch.md
       - name: Error AADSTS50020 - guest sign-in to resource tenant fails
         href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS50105 - user not assigned a role
