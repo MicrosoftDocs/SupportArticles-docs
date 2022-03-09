@@ -54,13 +54,11 @@ In this scenario, if you either install or upgrade SQL Server, the installation 
     You see the following error message when you try to install a new instance of SQL Server 2012 or SQL Server 2008 R2:
 
     > Rule "Setup account privileges" failed.  
-    > The account that is running SQL Server Setup does not have one or all of the following rights: 
-      - the right to back up files and directories
-      - the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
+    > The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
 
 - **Scenario 3** : Installing SQL Server 2012 or a later instance fails when you specify a network share (UNC path) for the Backup directory location. When this issue occurs, you receive the following error message:
 
-    > SQL Server setup account does not have the SeSecurityPrivilege privilege on the specified file server in the path \<UNC backup location>. This privilege is needed in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the "User Rights Assignments" section under Local Policies in the Local Security Policy console.
+    > SQL Server setup account does not have the SeSecurityPrivilege on the specified file server in the path *\<UNC backup location>*. This privilege is required in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the "User Rights Assignments" section under Local Policies in the Local Security Policy console.
 
   > [!NOTE]
   > This issue occurs because the SQL Server Setup account doesn't have `SeSecurityPrivilege` permissions on the file server that hosts the network share.
@@ -100,7 +98,7 @@ To add the rights to the setup account, follow these steps:
 3. Double-click **Local Security Policy**.
 4. In the **Local Security Settings** dialog box, click **Local Policies**, double-click **User Rights Assignment**, and then double-click **Backup Files and Directories**.
 5. In the **Backup Files and Directories Properties** dialog box, click **Add User or Group**.
-6. In the **Select User or Groups** dialog box, type the user account that is being used for setup, and then click **OK** two times.
+6. In the **Select User or Groups** dialog box, type the user account that is being used for setup, and then click **OK** twice.
 7. Repeat the procedure for the other two policies that are mentioned in the [Cause](#cause) section.
 8. On the **File** menu, click **Exit** to close the **Local Security Settings** dialog box.
 
