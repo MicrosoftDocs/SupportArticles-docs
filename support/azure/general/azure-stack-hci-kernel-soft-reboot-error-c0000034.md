@@ -9,13 +9,16 @@ ms.reviewer: katpa, v-abhjoa
 ---
 # Error c0000034 when performing Kernel Soft Reboot
 
+This article provides information to an issue where you receive a warning message in Microsoft Azure Stack HCI, version 21H2 when performing Kernel Soft Reboot.
+
+Original product version: Azure Stack HCI, version 21H2
+
 ## Symptoms
 
-Consider the following scenario:
+When the Azure Stack HCI, version 21H2 operating system is installed on a system, consider the following scenario:
 
-- You have a server with the Azure Stack HCI, version 21H2 operating system installed.
-- You perform a [Kernel Soft Reboot (KSR)](/azure-stack/hci/manage/kernel-soft-reboot) by running the `ksrcmd.exe /Verbose /Self` command in Windows PowerShell on the server.
-- You perform the first reboot.
+- Perform a [Kernel Soft Reboot (KSR)](/azure-stack/hci/manage/kernel-soft-reboot) by running the `ksrcmd.exe /Verbose /Self` command in Windows PowerShell on the server.
+- Perform the first reboot.
 
 In this scenario, the following volmgr warning is logged as a system log in the Event Viewer:
 
@@ -23,4 +26,4 @@ In this scenario, the following volmgr warning is logged as a system log in the 
 
 ## Solution
 
-This warning message is harmless, and you can safely ignore it. The message won't appear in Azure Stack HCI versions later than 21H2.
+This warning message is spurious and you can safely ignore it. In later versions of Azure Stack HCI, version 21H2, the message will appear as an information event rather than warning.
