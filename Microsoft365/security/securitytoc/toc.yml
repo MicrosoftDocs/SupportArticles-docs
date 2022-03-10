@@ -29,6 +29,8 @@
     items:
     - name: Account security alert email message
       href: ../o365-security/account-security-alert-email.md
+    - name: Can't access application from iOS devices
+      href: ../o365-security/cannot-access-application-from-ios-device.md
     - name: Invalid Security Code when resetting password
       href: ../o365-security/invalid-security-code-office-365-azure.md
     - name: Issue with connect-MSOLService cmdlet
