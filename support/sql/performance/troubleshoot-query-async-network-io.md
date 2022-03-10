@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot slow queries resulting from ASYNC_NETWORK_IO
 description: Provides resolutions for slow query issues that result from ASYNC_NETWORK_IO wait type.
-ms.date: 02/22/2022
+ms.date: 03/10/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
