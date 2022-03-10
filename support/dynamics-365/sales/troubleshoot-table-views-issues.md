@@ -27,7 +27,7 @@ To resolve this issue, you must remove and add back the column that is causing t
 1. Go to **Settings** > **Customizations** > **Customize the System**.
 2. Select the **Entity** > **Views** and select the view that has this issue. In this example, we're selecting the table **Account** and view as **Accounts Being Followed**.
 
-    :::image type="content" source="media/troubleshoot-table-views-issues/column-entity-view-selection.png" alt-text="Choose a view from the table." border="false":::
+    :::image type="content" source="media/troubleshoot-table-views-issues/column-entity-view-selection.png" alt-text="Choose a view from the table." lightbox="media/troubleshoot-table-views-issues/column-entity-view-selection.png":::
 
 3. Select **More Actions** > **Edit**.
 
@@ -63,7 +63,7 @@ To resolve this issue, you must edit or remove filters for the view. This will e
 1. Go to **Settings** > **Customizations** > **Customize the System**.
 2. Select the **Entity** > **Views** and select the view that has this issue. In this example, we're selecting the table **Account** and view as **Accounts I Follow**.
 
-    :::image type="content" source="media/troubleshoot-table-views-issues/record-entity-view-selection.png" alt-text="Choose the view from the table." border="false":::
+    :::image type="content" source="media/troubleshoot-table-views-issues/record-entity-view-selection.png" alt-text="Choose the view from the table." lightbox="media/troubleshoot-table-views-issues/record-entity-view-selection.png":::
 
 3. Select **More Actions** > **Edit**.
 
