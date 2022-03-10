@@ -14,6 +14,10 @@ ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
 _Applies to:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7, Windows Server 2008 R2  
