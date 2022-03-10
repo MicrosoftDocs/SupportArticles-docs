@@ -1,7 +1,7 @@
 ---
 title: Installation fails when you remove user rights
 description: This article helps you resolve a problem that may occur when you install or upgrade Microsoft SQL Server after tightening security.
-ms.date: 03/09/2022
+ms.date: 03/10/2022
 ms.custom: sap:Database Engine
 author: rielsql
 ms.author: v-jayaramanp
@@ -82,7 +82,7 @@ This behavior is by design. In addition to adding the user account that's runnin
 
 - [Install SQL Server from the Installation Wizard (Setup)](../sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
 
-Additionally, if SMB Fileshare is used as a storage option for data directory or any other directories (User database directory, user database log directory, TempDB directory, TempDB log directory or backup directory), the following additional permissions are required for the setup account on the SMB fileserver as documented in the following article:[Install SQL Server with SMB fileshare storage](../sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)
+Additionally, if S MB Fileshare is used as a storage option for data directory or any other directories (User database directory, user database log directory, TempDB directory, TempDB log directory or backup directory), the following additional permissions are required for the setup account on the SMB fileserver as documented in the following article:[Install SQL Server with SMB fileshare storage](../sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)
 
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
