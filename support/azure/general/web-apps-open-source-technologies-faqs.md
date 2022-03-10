@@ -40,7 +40,20 @@ For more information, see [Enable WordPress error logs](/archive/blogs/azureossd
 
 ## How do I log Python application errors in apps that are hosted in App Service?
 
-[!INCLUDE [web-sites-python-troubleshooting-wsgi-error-log](../../includes/web-sites-python-troubleshooting-wsgi-error-log.md)]
+If Python encounters an error while starting your application, only a simple error page will be returned. For example,
+
+> The page cannot be displayed because an internal server error has occurred.
+
+To capture Python application errors, follow these steps:
+
+1. In the Azure portal, in your web app, select **Settings**.
+2. On the **Settings** tab, select **Application settings**.
+3. Under **App settings**, enter the following key/value pair:
+
+    - Key : WSGI_LOG
+    - Value : D:\home\site\wwwroot\logs.txt (enter your choice of file name)
+
+You should now see errors in the logs.txt file in the wwwroot folder.
 
 ## How do I change the version of the Node.js application that is hosted in App Service?
 
