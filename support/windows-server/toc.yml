@@ -1042,6 +1042,8 @@
       href: ./deployment/avoid-duplicate-guids-deploy-sms.md
     - name: Can't open EXE files
       href: ./deployment/cant-open-exe-files.md
+    - name: Chinese IME dictionaries are not ready yet
+      href: ./deployment/chinese-ime-dictionaries-not-ready.md
     - name: Chinese (Simplified) input method doesn't work
       href: ./deployment/chinese-simplified-input-method-not-working.md
     - name: Create an ISO image for UEFI platforms
