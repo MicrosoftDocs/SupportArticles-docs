@@ -82,7 +82,7 @@ This behavior is by design. In addition to adding the user account that's runnin
 
 - [Install SQL Server from the Installation Wizard (Setup)](/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
 
-Additionally, if SMB file share is used as a storage option for data directory or any other directories (User database directory, user database log directory, TempDB directory, TempDB log directory or backup directory), the following additional permissions are required for the setup account on the SMB fileserver as documented in the following article:[Install SQL Server with SMB fileshare storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)
+Additionally, if SMB file share is used as a storage option for data directory or any other directories (User database directory, user database log directory, TempDB directory, TempDB log directory or backup directory), the following additional permissions are required for the setup account on the SMB fileserver as documented in [Install SQL Server with SMB fileshare storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)
 
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
