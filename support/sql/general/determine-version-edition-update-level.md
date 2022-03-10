@@ -6,6 +6,10 @@ ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Determine the version, edition, and update level of SQL Server and its components
 
 This article lists various builds or updates that are available for different versions of  SQL Server and describe the procedures to determine the version of SQL Server that is running on a given system.

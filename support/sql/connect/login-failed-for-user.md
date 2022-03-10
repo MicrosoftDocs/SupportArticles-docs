@@ -4,7 +4,7 @@ description: Provides troubleshooting information for various "Login failed for 
 ms.date: 02/23/2022
 author: ramakoni1
 ms.author: v-jayaramanp
-ms.prod-support-area-path: Connection issues
+ms.custom: sap:Connection issues
 ms.prod: sql
 ---
 

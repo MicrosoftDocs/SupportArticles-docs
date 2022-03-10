@@ -5,7 +5,6 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
@@ -14,6 +13,9 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 06/26/2020
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
 
 # Windows stop error - Status No Memory
 

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot connectivity issues in SQL Server
-description: Provides overview of the common connectivity issues in SQL Server and how to use the tools to troubleshoot the issues.
+description: Provides an overview of common connectivity issues in SQL Server and describes the tools to troubleshoot the issues.
 ms.date: 11/14/2021
-ms.prod-support-area-path: Connection issues
+ms.custom: sap:Connection issues
 author: cobibi
 ms.author: v-yunhya
 ms.prod: sql
@@ -12,18 +12,18 @@ ms.prod: sql
 _Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 4009936
 
-You may experience connectivity issues in SQL Server because of various causes. This article series help you troubleshoot the most common SQL Server connectivity issues, and describes the tools and methods that you can use for troubleshooting.
+There are various causes for connectivity issues in SQL Server. This article series helps you troubleshoot the most common SQL Server connectivity issues and describes the tools and methods you can use for troubleshooting.
 
 > [!NOTE]
-> If multiple SQL Server instances in your environment are impacted or the issue is intermittent, it usually indicates that Windows policy or networking issue. Therefore, although these series of articles can provide some guidance, it may not effectively troubleshoot those scenarios.
+> If multiple SQL Server instances in your environment are impacted, or the issue is intermittent, it usually indicates Windows policy or networking issues. Although this series of articles provides guidance, it may not effectively troubleshoot some specific scenarios.
 
 ## Preparation
 
-Before you start troubleshooting, check [Recommended prerequisites and checklist for troubleshooting connectivity issues](resolve-connectivity-errors-checklist.md) for logs that you should collect to assist with troubleshooting and a list of quick actions you can take to avoid common connectivity errors when working with SQL Server.
+Before you start troubleshooting, check [Recommended prerequisites and checklist for troubleshooting connectivity issues](resolve-connectivity-errors-checklist.md) for logs that you should collect to assist with troubleshooting. There's also a list of quick actions to avoid common connectivity errors when working with SQL Server.
 
 ## Common connectivity issues
 
-Use the list below to navigate to the appropriate topic page for detailed troubleshooting steps for your scenario:
+Use the list below to navigate to the appropriate article page for detailed troubleshooting steps for your scenario:
 
 - [A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 
@@ -49,7 +49,7 @@ Use the list below to navigate to the appropriate topic page for detailed troubl
 
 ## Tools and methods that help you troubleshoot connectivity issues
 
-The following topics provide details on various tools and procedures that are used when troubleshooting various connectivity errors
+The following articles provide details for various tools and procedures to troubleshoot different connectivity errors:
 
 - [Configure firewalls to work with SQL Server](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context)
 
@@ -61,7 +61,7 @@ The following topics provide details on various tools and procedures that are us
 
 - [Use PortqryUI tool with SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md#named-instance-of-sql-server)
 
-  Describes how to use the PortqryUI tool, which is a graphical user interface (GUI) port scanner to help troubleshoot connectivity issues.
+  Describes how to use the PortqryUI tool (a graphical user interface (GUI) port scanner) to help troubleshoot connectivity issues.
 
 - [Check whether SQL Server is listening on dynamic or static ports](static-or-dynamic-port-config.md)
 
