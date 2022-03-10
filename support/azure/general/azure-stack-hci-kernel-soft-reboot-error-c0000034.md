@@ -9,7 +9,7 @@ ms.reviewer: katpa, v-abhjoa
 ---
 # Error c0000034 when performing Kernel Soft Reboot
 
-This article provides information to an issue where you receive a warning message in Microsoft Azure Stack HCI, version 21H2 when performing Kernel Soft Reboot.
+This article provides information on an issue where you receive a warning message in Microsoft Azure Stack HCI, version 21H2 when performing Kernel Soft Reboot.
 
 Original product version: Azure Stack HCI, version 21H2
 
@@ -26,4 +26,4 @@ In this scenario, the following volmgr warning is logged as a system log in the 
 
 ## Solution
 
-This warning message is spurious and you can safely ignore it. In later versions of Azure Stack HCI, version 21H2, the message will appear as an information event rather than warning.
+This warning message is unimportant and you can safely ignore it. In later versions of Azure Stack HCI, version 21H2, the message will appear as an information event rather than a warning.
