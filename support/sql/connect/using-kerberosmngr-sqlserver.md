@@ -3,7 +3,7 @@ title: Using Kerberos Configuration Manager for SQL Server
 description: Microsoft Kerberos Configuration Manager for SQL Server is a diagnostic tool that's used with SQL Server to troubleshoot Kerberos-related connectivity issues. 
 author: ramakoni1
 ms.author: v-jayaramanp
-ms.date: 03/08/2022
+ms.date: 03/10/2022
 ms.custom: sap:Connection Issues
 ms.prod: sql 
 ---
@@ -107,7 +107,7 @@ The `generateSPNss.cmd` file is created, and you can run this file at a command 
 
   :: The file is intended to be run in domain `<DomainName>.com`"
 
-  :: Corrections for MSSQLSvc/<HostName>.<DomainName>.com **SetSPN -s MSSQLSvc/<HostName>. <DomainName>.com UserName** 
+  :: Corrections for MSSQLSvc/`<HostName>.<DomainName>.com` **SetSPN -s MSSQLSvc/`<HostName>`. `<DomainName>`.com UserName** 
   ```
 
 - Use **SetSPN** to create an SPN under the service account for SQL Server.
