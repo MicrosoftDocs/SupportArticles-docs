@@ -2,7 +2,6 @@
 title: A federated user is prompted unexpectedly to enter their work or school account credentials
 description: Describes a scenario in which a federated user is prompted unexpectedly to enter their work or school account credentials when they access Office 365, Azure, or Microsoft Intune. Provides resolutions.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
@@ -92,7 +91,7 @@ Use Internet Explorer or a third-party web browser that supports integrated Wind
 
 ## Resolution 5: Verify connectivity to Active Directory
 
-Log off from the client computer and then log on as an Active Directory user. If logon is successful, verify the connectivity to Active Directory by using the Nltest command-line tool. To use the Nltest tool, you must have Windows Server 2003 Support Tools installed on the computer.
+Log off from the client computer and then log on as an Active Directory user. If logon is successful, verify the connectivity to Active Directory by using the Nltest command-line tool. Nltest.exe is included in the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 
 1. At a command prompt, type the following command, and then press Enter: `Nltest /dsgetdc:<FQDN Of Domain>`. If the settings are correct, you receive output that resembles the following:
 

@@ -1,7 +1,7 @@
 ---
 title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
-ms.date: 10/19/2020
+ms.date: 02/17/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -87,7 +87,7 @@ The dominant error string logged by Microsoft-Windows-Time-Service Event 142 is 
 
 4. Verify that the DC logging the 142 event can discovery a time server using `DCLocator`
 
-    >nltest /dsgetdc:\<dns domain> /timeserver /force  
+    >nltest /dsgetdc:\<dns domain> /timeserv /force  
     >nltest /dsgetdc:\<dns domain> /gtimeserv /force <- if a gtimesrv is configured in the environment
 
 5. Verify port and protocol connectivity to peer time servers
@@ -308,4 +308,4 @@ Recommendations from the Microsoft Windows time team to correct this environment
  [Configuring the Windows time service on the PDC emulator in the Forest root domain](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Configuring the Windows Time service for Windows Server 2008 and Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Running Domain Controllers in Hyper-V](https://go.microsoft.com/fwlink/?LinkID=139651)  
- [Configuring the Windows time service for Windows Server](http://msmvps.com/blogs/acefekay/archive/2009/09/18/configuring-the-windows-time-service-for-windows-server.aspx) - Ace Fekay's blog post  
+ [Configuring the Windows time service for Windows Server](https://blogs.msmvps.com/acefekay/2009/09/18/configuring-the-windows-time-service-for-windows-server/) - Ace Fekay's blog post  

@@ -14,6 +14,10 @@ ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # How to read the small memory dump file that is created by Windows if a crash occurs
 
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer crashed.
@@ -50,9 +54,9 @@ To configure startup and recovery options to use the small memory dump file, fol
 1. Click **Start**, and then click **Control Panel**.
 2. Double-click **System**, and then click **Advanced system settings**.
 3. Click the **Advanced** tab, and then click **Settings** under **Startup and Recovery**.
-4. In the **Write debugging information** list, click **Small memory dump (64k)**.
+4. In the **Write debugging information** list, click **Small memory dump (256k)**.
 
-    ![Startup and Recovery - Small Memory Dump dialog box](./media/read-small-memory-dump-file/small-memory-dump-option.png)  
+    :::image type="content" source="media/read-small-memory-dump-file/small-memory-dump-option.gif" alt-text="Screenshot of the Small memory dump (256k) option in the Write debugging information list in the Startup and Recovery window." border="false"::: 
 
 To change the folder location for the small memory dump files, type a new path in the **Dump File** box or in the **Small dump directory** box, depending on your version of Windows).
 

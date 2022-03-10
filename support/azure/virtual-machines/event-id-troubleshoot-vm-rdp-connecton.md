@@ -5,7 +5,6 @@ services: virtual-machines-windows
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
-editor: ''
 tags: ''
 
 ms.service: virtual-machines
@@ -170,7 +169,7 @@ If you can't renew the certificate, follow these steps to try to delete the cert
 
 6. Select **Finish**, and then select **OK**.
 
-   ![Select Computer](./media/event-id-troubleshoot-vm-rdp-connecton/select-computer.png)
+   :::image type="content" source="media/event-id-troubleshoot-vm-rdp-connecton/select-computer.png" alt-text="Screenshot of the Another computer option in the Select Computer dialog.":::
 
 7. Expand the certificates, go to the Remote Desktop\Certificates folder, right-click the certificate, and then select **Delete**.
 

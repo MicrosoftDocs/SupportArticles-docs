@@ -5,7 +5,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
@@ -80,7 +79,7 @@ To begin, connect to the [Serial Console and open a PowerShell instance](./seria
     1. Change the port:
 
         ```powershell
-        Set-ItemProperty -Path 'HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name PortNumber -value <Hexportnumber>
+        Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -name PortNumber -value <Hexportnumber>
 
         Stop-Service -Name Termservice -Force
 

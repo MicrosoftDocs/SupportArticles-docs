@@ -9,7 +9,7 @@ metadata:
   services: virtual-machines
   ms.service: virtual-machines #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: v-miegge  #Required; your GitHub user alias, with correct capitalization.
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: Travis.Maier #Required; microsoft alias of author; optional team alias.
   ms.date: 05/18/2021
 
@@ -44,13 +44,15 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Cloud-init-enabled VM takes a long time to start up
+            url: cloud-init-deployment-delay.md
           - text: Prepare a Windows VHD to upload to Azure
             url: /azure/virtual-machines/windows/prepare-for-upload-vhd-image
           - text: Create VM from a managed image in Azure
             url: /azure/virtual-machines/windows/create-vm-generalized-managed
           - text: Share VM images with Shared Galleries
             url: /azure/virtual-machines/shared-image-galleries
-          
+
   # Card (optional)
   - title: Troubleshoot Deployment Failures
     linkLists:

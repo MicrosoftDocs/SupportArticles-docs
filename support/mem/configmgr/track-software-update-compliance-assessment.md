@@ -2,7 +2,6 @@
 title: Track software update compliance assessment
 description: Describes how to track a software updates compliance assessment so that you can deploy only the updates that are required on the clients.
 ms.date: 09/16/2020
-ms.prod-support-area-path:
 ---
 # Track software update compliance assessment
 
@@ -304,11 +303,11 @@ StateMessage.log showing state message being recorded with **State ID 2** (missi
 
 For each update, an instance of the `CCM_UpdateStatus` class is created or updated, and this stores the current status of the update. The `CCM_UpdateStatus` class is located in the `ROOT\CCM\SoftwareUpdates\UpdatesStore` namespace.
 
-![Screenshot of an instance of the CCM_UpdateStatus class](./media/track-software-update-compliance-assessment/ccm_updatestatus.png)
+:::image type="content" source="media/track-software-update-compliance-assessment/ccm-updatestatus.png" alt-text="Screenshot of an instance of the CCM_UpdateStatus class." border="false":::
 
 Similarly, an instance of the `CCM_StateMsg` class is created or updated, and this stores the current state of the update. The `CCM_StateMsg` class is located in the `ROOT\CCM\StateMsg` namespace.
 
-![Screenshot of an instance of the CCM_StateMsg class](./media/track-software-update-compliance-assessment/ccm_statemsg.png)
+:::image type="content" source="media/track-software-update-compliance-assessment/ccm-statemsg.png" alt-text="Screenshot of an instance of the CCM_StateMsg class." border="false":::
 
 ### Step 6: State messages are sent to the management point
 

@@ -2,7 +2,6 @@
 title: Information about the localized code
 description: Describes additional code and functionality that is provided when you install the Australian localized version of Microsoft Great Plains. Also provides information about core features of Microsoft Great Plains that can be enabled for use in Australia.
 ms.reviewer: 
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Information about the localized code for the Australian version of Microsoft Great Plains
@@ -12,7 +11,7 @@ This article outlines the localized code that is added to a Microsoft Dynamics G
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 910128
 
-When you select Australia as your country during the installation of Microsoft Dynamics GP, the following additional code pieces are included together with the standard installation functionality:
+When you select Australia as your country/region during the installation of Microsoft Dynamics GP, the following additional code pieces are included together with the standard installation functionality:
 
 - Auerr.cnk file
 
@@ -31,7 +30,7 @@ When you select Australia as your country during the installation of Microsoft D
 
 - A4.cnk file
 
-  The A4.cnk file changes many of the standard Microsoft Dynamics report layouts in the Dynamics.dic file to fit reports on A4 paper instead of on U.S. Letter paper. The dimensions of US Letter paper are 8.5" x 11" or 216mm x 279mm, whereas the dimensions of A4 paper are 8.27" x 11.69" or 210mm x 297mm.
+  The A4.cnk file changes many of the standard Microsoft Dynamics report layouts in the Dynamics.dic file to fit reports on A4 paper instead of on U.S. Letter paper. The dimensions of US Letter paper are 8.5" x 11" or 216 mm x 279 mm, whereas the dimensions of A4 paper are 8.27" x 11.69" or 210 mm x 297 mm.
 
   The code modifications that are created by this chunk file are not required to use Microsoft Great Plains with an Australian company. However, if you try to print default graphical reports on A4 paper in Microsoft Dynamics GP without making these modifications, characters may be lost in the right margin of the paper, and additional white space will appear at the bottom of the page.
 

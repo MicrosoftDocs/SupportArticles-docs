@@ -5,7 +5,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
@@ -24,9 +23,9 @@ This article explains how to resolve a problem in which you cannot make a Remote
 
 You cannot make an RDP connection or any other type of connection to any other ports to a VM in Azure because the network interface in the VM is disabled.
 
-![Screenshot that shows a VM in which the network interface is disconnected.](./media/troubleshoot-rdp-nic-disabled/disconnected.png)
+:::image type="content" source="media/troubleshoot-rdp-nic-disabled/network-interface-disconnected.png" alt-text="Screenshot shows the network interface in the V M is disconnected.":::
 
-![Screenshot that shows a VM in which the network interface is disabled.](./media/troubleshoot-rdp-nic-disabled/disabled.png)
+:::image type="content" source="media/troubleshoot-rdp-nic-disabled/network-interface-disabled.png" alt-text="Screenshot shows the network interface in the V M is disabled.":::
 
 
 ## Solution

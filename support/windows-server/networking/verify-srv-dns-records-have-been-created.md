@@ -63,7 +63,7 @@ To use `Nslookup` to verify the SRV records, follow these steps:
 ```console
 Server: localhost
 Address: 127.0.0.1
-_ldap._tcp.dc._msdcs. Domain_Name
+_ldap._tcp.dc._msdcs.Domain_Name
 SRV service location:
 priority= 0
 weight= 100

@@ -2,7 +2,7 @@
 title: Restore or recovery may fail
 description: This article provides resolutions for the problem where restore or recovery may fail or take a long time if query notification is used in a database.
 ms.date: 01/20/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ---
 # Restore or recovery may fail or take a long time if query notification is used in a database
 

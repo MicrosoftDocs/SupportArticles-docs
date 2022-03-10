@@ -2,7 +2,6 @@
 title: Azure Hybrid Use Benefit images for EA subscriptions
 description: Describes that the Windows Server images that are pre-configured with Hybrid Use Benefit for EA subscriptions will be removed from the Azure Marketplace by August 31, 2017.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

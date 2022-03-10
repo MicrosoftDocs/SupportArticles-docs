@@ -23,8 +23,11 @@ _Original KB number:_ &nbsp; 2732377
 ## Symptoms
 
 When attempting to turn on BitLocker using a Startup Key as a protector and the system check option is accepted, BitLocker restarts the machine to complete the hardware test. If the USB drive holding the Startup Key is removed, or if USB ports are not enumerated correctly by the BIOS, then BitLocker isn't enabled on the volume and you may see following error message:
+>BitLocker could not be enabled.<br/>
+The BitLocker encryption key cannot be obtained. Verify that the Trusted Platform Module (TPM) is enabled and ownership has been taken. If this computer does not have a TPM, verify that the USB drive is inserted and available.<br/>
+C: was not encrypted.
 
-:::image type="content" source="./media/bitlocker-not-enabled-usb-drive-not-found/bitlocker-error.png" alt-text="Screenshot of error message.":::
+:::image type="content" source="media/bitlocker-not-enabled-usb-drive-not-found/bitlocker-error.png" alt-text="Screenshot of the BitLocker error message.":::
 
 ## Cause
 

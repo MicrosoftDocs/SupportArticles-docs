@@ -2,7 +2,7 @@
 title: Peer-to-peer replication fails
 description: This article helps you resolve the problem that occurs when you create a peer-to-peer publication from SQL scripts in Microsoft SQL Server.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: daleche, chrissk
 ms.prod: sql
 ---

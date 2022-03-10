@@ -26,7 +26,8 @@ Assume that you use System Center 2012 Configuration Manager or System Center 20
 > The Group Policy Client service failed the sign-in.  
 > The universal unique identifier (UUID) type is not supported.
 
-![A screenshot of the error message.](./media/first-logon-fails-deploy-image/error-box.png)
+:::image type="content" source="media/first-logon-fails-deploy-image/group-policy-client-service-failed-error.png" alt-text="Screenshot of the UUID type is not supported error message at the logon screen." border="false":::
+
 
 This error message appears at first user logon after initial deployment of the image. However, in some scenarios, later user logons also result in the error message.
 

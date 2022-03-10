@@ -2,7 +2,6 @@
 title: Features in Dynamics GP specific to Argentina
 description: Features in Microsoft Dynamics GP specific to Argentina.
 ms.reviewer: cwaswick
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Features in Microsoft Dynamics GP specific to Argentina
@@ -26,7 +25,7 @@ The below features for Microsoft Dynamics GP are specific to **Argentina**:
 - Tax Listing
 - Taxes on Returns
 
-These products are not available on a US or UK install. You must have a GP install with Argentina selected as the country in order to use these features. Also the documents below explain what other features must also be installed in order to use each feature.
+These products are not available on a US or UK install. You must have a GP install with Argentina selected as the country/region in order to use these features. Also the documents below explain what other features must also be installed in order to use each feature.
 
 ## References
 

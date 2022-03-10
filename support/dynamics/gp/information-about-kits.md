@@ -2,7 +2,6 @@
 title: Information about kits
 description: Discusses kits and how they're used in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: jchrist
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Information about kits in Microsoft Dynamics GP

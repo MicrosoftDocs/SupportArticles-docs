@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: azure
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # How to use Secure File Exchange to exchange files with Microsoft Support
@@ -42,7 +41,7 @@ If you sign in with a "work or school, or personal Microsoft account" that hasn'
 
 If you can't use that "work or school, or personal Microsoft account" to sign in, and you need to **view**, **download**, or **delete** files in your workspace, the Microsoft Support Professional assigned to your service request can provide you with a temporary "work or school Microsoft account" to sign in with.
 
-![Mircosoft Account sign in dialog](./media/secure-file-exchange-transfer-files/4493616_en_1.jpg)  
+:::image type="content" source="media/secure-file-exchange-transfer-files/sign-in-dialog.png" alt-text="Screenshot of the Microsoft Account sign in dialog." border="false":::
 
 #### Authentication (Have you signed in using a "work or school, or personal Microsoft account")
 
@@ -64,27 +63,27 @@ Below is an example of Secure File Exchange being used by a customer:
 - failovercollection.ps was uploaded by a Microsoft Support Professional (`user@microsoft.com`) for the customer to download.
 - Netlogon_netlogon.log was uploaded by the customer (`user@contoso.com`). It's selected and can be downloaded or deleted by the customer.  
 
-    ![Secure File Exchange](./media/secure-file-exchange-transfer-files/4012759_en_3.png)  
+    :::image type="content" source="media/secure-file-exchange-transfer-files/secure-file-exchange.png" alt-text="Screenshot shows an example of the Secure File Exchange page.":::
 
 ## The physical location of your files when you use Secure File Exchange
 
 All files are physically located in the location of the workspace. The location where a workspace is physically created is as follows.
 
-When you open a support case and the country that you specify is:
+When you open a support case and the country/region that you specify is:
 
 - In Europe, Secure File Exchange will physically create the workspace in Europe.
 - In the United States, Secure File Exchange will physically create the workspace in the United States.
-- In any other country, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace. And it's where the workspace will be physically created.  
+- In any other country/region, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace. And it's where the workspace will be physically created.  
 
 ## The endpoints that are required to be open on your intranet
 
 |Purpose|Endpoint|
 |---|---|
-|Secure File Exchange| [https://support.microsoft.com](https://support.microsoft.com) |
-|Personal Microsoft account sign-in| [https://login.live.com](https://login.live.com) |
-|Work or school Microsoft account sign-in| [https://login.microsoftonline.com](https://login.microsoftonline.com) |
-|Other| [https://api.dtmnebula.microsoft.com](https://api.dtmnebula.microsoft.com/) |
-|Other (Microsoft Cloud Deutschland) - For Germany only| [https://dtmbf​prodapi.azuretrafficmanager.de](https://dtmbfprodapi.azuretrafficmanager.de/) |
+|Secure File Exchange| `https://support.microsoft.com` |
+|Personal Microsoft account sign-in| `https://login.live.com` |
+|Work or school Microsoft account sign-in| `https://login.microsoftonline.com` |
+|Other| `https://api.dtmnebula.microsoft.com` |
+|Other (Microsoft Cloud Deutschland) - For Germany only| `https://dtmbfprodapi.azuretrafficmanager.de`|
 |||
 
 ## What happens when my case is closed?

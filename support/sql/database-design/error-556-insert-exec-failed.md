@@ -2,7 +2,7 @@
 title: Error 556 insert exec failed
 description: This article helps you work around the periodic failure of a stored procedure in a database that is using the Query Data Store feature.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Database Design and Development
+ms.custom: sap:Database Design and Development
 ms.reviewer: nathansc, dajiro
 ms.prod: sql
 ---

@@ -5,7 +5,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
@@ -130,7 +129,7 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
 
 6. Open **ProcMonTrace.PML** by using Process Monitor on the working VM. Then filter by **Result is ACCESS DENIED**, as shown in the following screenshot：
 
-    ![Filter by result in Process Monitor](./media/troubleshoot-remote-desktop-services-issues/process-monitor-access-denined.png)
+    :::image type="content" source="media/troubleshoot-rdp-dhcp-disabled/process-monitor-access-denined.png" alt-text="Screenshot of the Filter button in the ribbon of Process Monitor Filter dialog when you filter by Result is ACCESS DENIED." border="false":::
 
 7. Fix the registry keys, folders, or files that are on the output. Usually, this problem is caused when the sign-in account that's used on the service doesn't have ACL permission to access these objects. To determine the correct ACL permission for the sign-in account, you can check on a healthy VM.
 

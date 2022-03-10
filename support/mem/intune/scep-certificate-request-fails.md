@@ -1,16 +1,13 @@
 ---
 title: SCEP certificate request fails during verification
 description: Fixes an issue in which the SCEP certificate request fails during the verification phase on the certificate registration point.
-ms.date: 05/13/2020
-ms.prod-support-area-path: Configure certificates
+ms.date: 09/09/2021
+ms.custom: sap:Configure certificates
 ms.reviewer: joelste, intunecic, kolldhee
 ---
-# SCEP certificate request fails during the verification phase on the certificate registration point
+# SCEP certificate request fails during the verification phase on the CRP
 
-This article provides the methods to solve the failure issue of Simple Certificate Enrollment Protocol (SCEP) certificate request.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4487170
+This article gives two methods to help resolve when a Simple Certificate Enrollment Protocol (SCEP) certificate request fails during verification.
 
 ## Symptoms
 
@@ -19,11 +16,11 @@ The SCEP certificate request fails during the verification phase on the certific
 Additionally, you see error entries in CRP logs.
 
 > [!NOTE]
-> The default log file location is the following:
+> The default log file location is:
 >  
 > `C:\Program Files\Microsoft Intune\NDESConnectorSvc\Logs\Logs\CertificateRegistrationPoint_xx_xx.svclog`
 
-There are three instances of the error that specify Cryptography Exception, as shown in the following screenshot.
+Three log entries specify a Cryptography Exception error, as shown in the following image.
 
 :::image type="content" source="media/scep-certificate-request-fails/three-instances-of-error.png" alt-text="Screenshot of the three instances of the error.":::
 
@@ -61,9 +58,9 @@ This issue occurs because the registry keys that are responsible for verificatio
 
 :::image type="content" source="media/scep-certificate-request-fails/ndes-connector-registry.png" alt-text="Screenshot of NDES connector registry settings.":::
 
-## Resolution - Method 1
+## Solution 1
 
-Follow these steps:
+Complete these steps to restart the Intune Connector Service:
 
 1. On the connector-installed server, open the **Services** snap-in. To do this, open the **Start** menu, enter `services.msc`, and then select **Services** from the results list.
 2. In the **Services** snap-in, restart the Intune Connector Service.
@@ -71,11 +68,11 @@ Follow these steps:
 
     :::image type="content" source="media/scep-certificate-request-fails/ndes-connector-subkey.png" alt-text="Screenshot of the required NDESConnector registry subkey settings.":::
 
-If restarting the service or computer does not fix the issue, go to Method 2.
+If restarting the service or computer does not fix the issue, continue to Solution 2.
 
-## Resolution - Method 2
+## Solution 2
 
-Follow these steps:
+Complete these steps to clear and reset the template name:
 
 1. On the NDES computer, open the registry, and locate the following subkey:  
     `HKEY_LOCAL_Machine\Software\Microsoft\Cryptography\MSCEP`

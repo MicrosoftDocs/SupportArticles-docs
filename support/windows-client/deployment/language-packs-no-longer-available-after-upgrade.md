@@ -55,8 +55,9 @@ There are advanced language settings that may block the download of language pac
 4. Tap or click **Advanced settings**.
 5. Examine the **Override for Windows display language** and **Override for default input method** lists. Make sure that the **Use language list (recommended)**  option is selected for both lists (see Figure 1). Then, tap or click **Save**.
 
-    Figure 1: Advanced settings  
-    ![Advanced settings](./media/language-packs-no-longer-available-after-upgrade/advanced-settings.jpg)
+    Figure 1: Advanced settings
+
+    :::image type="content" source="media/language-packs-no-longer-available-after-upgrade/advanced-settings.png" alt-text="Select the Use language list (recommended) options in Advanced settings.":::
 
 6. After you save the settings, you are returned to the standard language settings. In the list of previously installed languages, click **Options** next to the language you want to install.
 7. Click the download link to install the language pack (see Figure 2).
@@ -65,10 +66,11 @@ There are advanced language settings that may block the download of language pac
     > After the installation is finished, you are prompted to restart the computer.
 
     Figure 2: Start the download
-    ![Start the download](./media/language-packs-no-longer-available-after-upgrade/start-the-download.jpg)
+
+    :::image type="content" source="media/language-packs-no-longer-available-after-upgrade/start-the-download.png" alt-text="Select the download link to install the language pack.":::
 
 ## More information
 
 During the upgrade from Windows 8 to Windows 8.1, Windows Setup detects whether the display language is the localized language of the operating system. It then displays the following message window to indicate that you might have to reinstall any language packs that were previously installed.
 
-![attention screenshot](./media/language-packs-no-longer-available-after-upgrade/attention.jpg)
+:::image type="content" source="media/language-packs-no-longer-available-after-upgrade/what-needs-your-attention.png" alt-text="The message window indicates that you might have to reinstall any language packs that were previously installed." border="false":::

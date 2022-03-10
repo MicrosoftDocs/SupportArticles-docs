@@ -2,7 +2,7 @@
 title: Support policy for clustered configurations
 description: This article describes the Microsoft support policy for clustered configurations of SQL Server with Windows Server.
 ms.date: 11/09/2020
-ms.prod-support-area-path: High Availability and Disaster Recovery Features
+ms.custom: sap:High Availability and Disaster Recovery Features
 ms.reviewer: UTTAMKP
 ms.prod: sql
 ---

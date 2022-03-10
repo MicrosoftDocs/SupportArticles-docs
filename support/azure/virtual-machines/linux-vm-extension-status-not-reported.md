@@ -2,7 +2,6 @@
 title: Linux VM extension status isn't reported after Azure Linux Agent 2.2.19 update
 description: Discusses a problem in which the Linux VM extension status is not reported after an Azure Linux Agent update to version 2.2.19.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: danis, danis
 ms.service: virtual-machines
 ms.collection: linux
@@ -29,7 +28,7 @@ Microsoft is taking steps to automatically resolve this problem. For VMs that ha
 - **Extension publisher:** Microsoft.CPlat.Core
 - **Extension type:** RunCommandLinux
 
-You can use [Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true)  to query the extensions that are assigned to a VM. To do this, run the following command:
+You can use [Azure CLI](/cli/azure/install-azure-cli)  to query the extensions that are assigned to a VM. To do this, run the following command:
 
 ```Azure CLI
 az vm extension list --vm-name <vmName> -g <resGroupName>

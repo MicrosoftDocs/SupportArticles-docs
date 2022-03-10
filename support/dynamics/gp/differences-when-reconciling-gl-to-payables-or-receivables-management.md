@@ -2,7 +2,6 @@
 title: Differences when reconciling GL to Payables or Receivables
 description: Discusses why the accounts payables balance or accounts receivables balance in General Ledger differs from the balance on the Historical Aged Trial Balance report.
 ms.reviewer: lmuelle
-ms.topic: article
 ms.date: 04/22/2021
 ---
 # Information about differences when you reconcile General Ledger to Payables Management or to Receivables Management

@@ -45,12 +45,13 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
-    | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8 |
+    | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
     | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8                                    |
     | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2                               |
     | Ubuntu                     | 14.04, 16.04, 18.04, 20.04                               |
     | Debian                     | 8, 9, 10 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`]                                      |
+    | AlmaLinux                  | 8.4, 8.5                                               |
     |                            |                                                   |
 
 >[!Note]
@@ -123,7 +124,7 @@ A notification is displayed as performance diagnostics starts to install. After 
 After the analysis is complete, the following items are uploaded to Azure tables and a binary large object (BLOB) container in the specified storage account:
 
 * All the insights and related information about the run
-* An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip** ) on Windows and a tar ball file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
+* An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip** ) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
 * An HTML report
 
 After the upload, a new diagnostics report is listed in the Azure portal.
@@ -161,6 +162,10 @@ You can select an insight to view more details about the affected resources, sug
 ### Download and review the full performance diagnostics report
 
 You can use the **Download report** button to download an HTML report that contains additional rich diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report may contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
+
+> [!NOTE]
+> Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named azdiagextnresults. You can view the storage account information by using the **Settings** button on the toolbar.
+
 
 ## Manage performance diagnostics reports
 

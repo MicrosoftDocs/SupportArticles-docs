@@ -2,7 +2,6 @@
 title: Network properties show not connected
 description: Fixes an issue where the virtual machine network may show not connected in the App Controller portal website though the virtual machine is connected.
 ms.date: 08/18/2020
-ms.prod-support-area-path:
 ---
 # Virtual machine network shows Not connected in the App Controller portal website
 

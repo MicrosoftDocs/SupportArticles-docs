@@ -2,9 +2,12 @@
 title: Description of Windows Mobile Device Center
 description: This article describes the new application that replaces ActiveSync in Windows Vista.
 ms.date: 07/29/2021
-ms.prod-support-area-path: 
 ms.topic: troubleshooting
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Description of Windows Mobile Device Center
 
 This article describes the new application that replaces ActiveSync in Windows Vista.
@@ -54,7 +57,8 @@ If your phone has a touch screen, tap **Start**, tap the **System** tab, and the
 
 - Robust synchronization
 
-  ![Robust synchronization](./media/description-windows-mobile-device-center/windows-mobile-device-center.jpg)  
+  :::image type="content" source="media/description-windows-mobile-device-center/windows-mobile-device-center.png" alt-text="Screenshot of the Windows Mobile Device Center window." border="false":::
+  
 
 - Photo management
 

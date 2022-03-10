@@ -2,7 +2,6 @@
 title: Regular expression support in Operations Manager
 description: This article describes regular expression matching in discoveries and groups when you author management packs in System Center Operations Manager.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ---
 # Regular expression support in System Center Operations Manager
 
@@ -86,6 +85,20 @@ Search for any matches to folders located recursively under the two folder paths
 
 ```perl
 ^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$
+```
+
+### Example 4
+
+Search for any matches that contain either of the two strings, `Agent1.contoso.com` or `Agent2.contoso.com` (case insensitive):
+
+```perl
+^(?i)(agent1.contoso.com)|(?i)(agent2.contoso.com)$
+```
+
+Search for any matches that contain `Agent` (case insensitive):
+
+```perl
+^(?i)(agent.*)$
 ```
 
 ## Regular expressions via SDK

@@ -2,7 +2,7 @@
 title: Test agent configuration fails
 description: This article provides resolutions for the error that occurs when you try to configure the test agent to talk to the controller service.
 ms.date: 08/17/2020
-ms.prod-support-area-path: Test Plans
+ms.custom: sap:Test Plans
 ms.reviewer: georgea
 ms.service: az-devops-project
 ---

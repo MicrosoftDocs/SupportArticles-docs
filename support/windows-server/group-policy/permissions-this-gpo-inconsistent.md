@@ -50,9 +50,9 @@ If you still receive the message, follow these steps:
 
 2. Check whether the List object permission is set for the Authenticated Users group and whether the Authenticated Users group is missing from the **Delegation** tab of the Group Policy Object.
 
-    :::image type="content" source="./media/permissions-this-gpo-inconsistent/authenticated-users.png" alt-text="Check whether the Authenticated Users group is missing.":::
+    :::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users.png" alt-text="Check whether the Authenticated Users group is missing.":::
 
-    :::image type="content" source="./media/permissions-this-gpo-inconsistent/delegation.png" alt-text="Check whether the List object permission is set for the Authenticated Users group.":::
+    :::image type="content" source="media/permissions-this-gpo-inconsistent/delegation-tab.png" alt-text="Check whether the List object permission is set for the Authenticated Users group." border="false":::
 
 If these conditions are true, take one of the following actions:
 

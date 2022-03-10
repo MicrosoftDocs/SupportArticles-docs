@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: ''
 ms.service: virtual-machines
 ms.collection: windows
@@ -36,7 +35,7 @@ The RDP rule is not set up to allow the RDP traffic.
 
 The guest system firewall profiles are set up to block all inbound connections, including the RDP traffic.
 
-![Firewall setting](./media/guest-os-firewall-blocking-inbound-traffic/firewall-advanced-setting.png)
+:::image type="content" source="media/guest-os-firewall-blocking-inbound-traffic/firewall-advanced-setting.png" alt-text="Screenshot of the block all inbound connections option under the Domain Profile tab of the firewall setting window." border="false":::
 
 ## Solution
 
@@ -105,7 +104,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     netsh advfirewall show allprofiles | more
     ```
 
-    ![Allprofiles](./media/guest-os-firewall-blocking-inbound-traffic/firewall-profiles.png)
+    :::image type="content" source="media/guest-os-firewall-blocking-inbound-traffic/firewall-profiles.png" alt-text="Screenshot of the query result of the inbound firewall profiles which contains BlockInboundAlways." border="false":::
 
     > [!Note]
     > The following guidelines apply to the firewall policy, depending on how it’s set up:

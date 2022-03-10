@@ -5,7 +5,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
@@ -22,7 +21,7 @@ This article describes the reboot loop you may experience on a Windows Virtual M
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to get the screenshots of a VM, you find the virtual machine is booting but the boot process is getting interrupted and the process is starting over.
 
-![Start screen 1](./media/troubleshoot-reboot-loop/start-screen-1.png)
+:::image type="content" source="media/troubleshoot-reboot-loop/vm-boot-process.png" alt-text="Screenshot shows the virtual machine is booting.":::
 
 ## Cause
 

@@ -2,7 +2,6 @@
 title: Error 2931 deploying virtual machines
 description: Describes an issue in which you receive error 2931 when you deploy virtual machines to a new Hyper-V cluster.
 ms.date: 04/29/2020
-ms.prod-support-area-path:
 ---
 # Error 2931 when you deploy virtual machines in System Center Virtual Machine Manager
 

@@ -2,7 +2,7 @@
 title: Error when you try to run an SSIS package
 description: This article provides resolutions for the problem that occurs when you try to run an SSIS package on systems where User Account Control (UAC) is enabled.
 ms.date: 09/15/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.prod: sql
 ---
 # Unable to prepare the SSIS bulk insert for data insertion on UAC enabled systems
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2009672
 
 Consider the following scenario:
 
-- You create an SQL Server Integration Services (SSIS) package that has an SQL Server Destination component within a Dataflow Task.
+- You create a SQL Server Integration Services (SSIS) package that has a SQL Server Destination component within a Dataflow Task.
 - You try to run this package on systems where User Account Control (UAC) is enabled (for example Vista or Windows 7) using one of the following methods：
 
   - Business Intelligence Development Studio (BIDS)

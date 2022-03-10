@@ -3,9 +3,8 @@ title: OS start-up – Computer restarted unexpectedly or encountered an unexpec
 description: This article provides steps to resolve issues where the VM experiences an unexpected restart or error while installing Windows.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: v-miegge
+author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
@@ -25,9 +24,9 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 **The computer restarted unexpectedly or encountered an unexpected error. Windows installation cannot proceed. To install Windows, click "OK" to restart the computer, and then restart the installation.**
 
-![Error while Windows Installation is in progress: The computer restarted unexpectedly or encountered an unexpected error. Windows installation cannot proceed. To install Windows, click "OK" to restart the computer, and then restart the installation.](./media/unexpected-restart-error-during-vm-boot/1.png)
+:::image type="content" source="media/unexpected-restart-error-during-vm-boot/error-installation-in-progress.png" alt-text="Screenshot of the error while Windows Installation is in progress.":::
  
-![Error when Windows Installation setup is starting services: The computer restarted unexpectedly or encountered an unexpected error. Windows installation cannot proceed. To install Windows, click "OK" to restart the computer, and then restart the installation.](./media/unexpected-restart-error-during-vm-boot/2.png)
+:::image type="content" source="media/unexpected-restart-error-during-vm-boot/error-installation-setup.png" alt-text="Screenshot of the error when Windows Installation setup is starting services.":::
 
 ## Cause
 
@@ -62,4 +61,4 @@ You may also use the **System Preparation tool GUI** to accomplish the same task
 - Generalize
 - Shutdown
  
-![System Preparation tool window with OOBE, Generalize, and Shutdown options selected.](./media/unexpected-restart-error-during-vm-boot/3.png)
+:::image type="content" source="media/unexpected-restart-error-during-vm-boot/system-preparation-tool.png" alt-text="Screenshot of the System Preparation Tool window with O O B E, Generalize, and Shutdown options selected.":::

@@ -2,7 +2,6 @@
 title: iSCSI initiator shows incorrect MPIO path state
 description: This article provides a resolution for the problem that occurs when you use storage arrays that support asymmetric logical unit access (ALUA).
 ms.date: 09/02/2020
-ms.prod-support-area-path: 
 ms.reviewer: seijit
 ms.technology: windows-hardware-storage-driver
 ---

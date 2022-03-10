@@ -2,7 +2,6 @@
 title: Causes of labor variance that occurs on a manufacturing order
 description: Describes the causes of labor variance that occurs on a manufacturing order.
 ms.reviewer: beckyber
-ms.topic: article
 ms.date: 03/31/2021
 ---
 # Description of the causes of labor variance when you enter standard cost manufacturing orders and when all labor is backflushed in Manufacturing in Microsoft Dynamics GP

@@ -1,17 +1,14 @@
 ---
 title: Things to try before calling Intune support
 description: Describes methods to try before you call Microsoft Intune support to resolve issues.
-ms.date: 06/22/2020
-ms.prod-support-area-path: General guidance or advisory
+ms.date: 12/20/2021
+ms.custom: sap:General guidance or advisory
 ---
 # Make your Intune support call more effective
 
 This article describes things to try before you call Microsoft Intune support to resolve issues that affect Intune.
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4089532
-
-When you [contact Microsoft Support](/mem/intune/fundamentals/get-support) about issues that affect Microsoft Intune, Enterprise Mobility Suite (EMS), Mobile Device Management (MDM), or Mobile Application Management (MAM), there are several things that you can do to help us resolve your incident more quickly. Providing us with this information up front is a great way to work toward a resolution.
+When you [contact Microsoft Support](/mem/intune/fundamentals/get-support) about issues that affect Microsoft Intune, Enterprise Mobility Suite (EMS), mobile device management (MDM), or app protection policies (APP, also referred to as MAM), there are several things that you can do to help us resolve your incident more quickly. Providing us with this information up front is a great way to work toward a resolution.
 
 ## Issue description
 
@@ -41,9 +38,9 @@ We will always require the following information:
 
     - [What is Microsoft Intune device management?](/mem/intune/remote-actions/device-management)
 
-  - **Application management**
+  - **App protection policies (application management)**
 
     - Is the application updated to the latest version?
-    - Is this ticket for MAM without enrollment, or for enrolled devices?
+    - Is this ticket for APP without enrollment, or for enrolled devices?
     - Which applications are affected?
     - On what kind of device are you seeing the issue occur?

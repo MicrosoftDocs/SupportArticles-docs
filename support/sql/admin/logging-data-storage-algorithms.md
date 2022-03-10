@@ -2,7 +2,7 @@
 title: Logging and data storage algorithms
 description: This article discusses how SQL Server logging and data storage algorithms extend data reliability.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: rdorr, bobward
 ms.prod: sql
 ---
@@ -14,7 +14,7 @@ This article discusses how Microsoft SQL Server logging and data algorithms exte
 
 To learn more about the underlying concepts of the engines and about ARIES (Algorithm for Recovery and Isolation Exploiting Semantics), see the following ACM Transactions on Database Systems document (under Volume 17, Number 1, March 1992):
 
-[ARIES: A Transaction Recovery method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](https://dblp.uni-trier.de/db/journals/tods/tods17.html#mohanhlps92)
+External link: [ARIES: A Transaction Recovery method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](https://dl.acm.org/doi/10.1145/128765.128770)
 
 The lead writer of this document is C. Mohan. The document addresses the SQL Server techniques to extend data reliability and integrity as related to failures.
 
@@ -26,7 +26,6 @@ We recommend that you read the following articles in the Microsoft Knowledge Bas
 
 _Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
 _Original KB number:_ &nbsp; 230785
-
 
 ## More information
 

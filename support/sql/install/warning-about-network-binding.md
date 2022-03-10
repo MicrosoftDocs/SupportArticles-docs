@@ -2,7 +2,7 @@
 title: Warning about network binding order
 description: This article provides a resolution for the problem that occurs when you install SQL Server 2008 in a failover cluster.
 ms.date: 11/04/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade (Failover Cluster)
+ms.custom: sap:Installation, Patching and Upgrade (Failover Cluster)
 ms.reviewer: russg
 ms.prod: sql
 ---

@@ -5,7 +5,6 @@ services: azure-service-management
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue,azure-resource-manager,azure-service-management
 
 ms.service: virtual-machines
@@ -34,7 +33,7 @@ Two common failure scenarios are related to affinity groups. In the past, an aff
 
 The following Diagram presents the taxonomy of the (pinned) allocation scenarios. 
 
-![Pinned Allocation Taxonomy](./media/virtual-machines-common-allocation-failure/Allocation3.png)
+:::image type="content" source="media/virtual-machines-common-allocation-failure/Allocation3.png" alt-text="Diagram presents the taxonomy of the (pinned) allocation scenarios."::: 
 
 ## Resize a VM or add VMs or role instances to an existing cloud service
 **Error**

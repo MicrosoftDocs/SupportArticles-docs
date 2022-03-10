@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 3.5 installation errors
 description: This article describes a problem where you receive an 0x800F0906, 0x800F081F, or 0x800F0907 error code when you try to install the .NET Framework 3.5 in Windows.
-ms.date: 09/08/2020
+ms.date: 12/16/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -14,6 +14,10 @@ ms.custom: sap:.net-framework-installation, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # .NET Framework 3.5 installation errors: 0x800F0906, 0x800F081F, 0x800F0907, 0x800F0922
 
 This article helps fix Microsoft .NET Framework 3.5 installation errors.
@@ -23,6 +27,7 @@ _Original KB number:_ &nbsp; 2734782
 
 > [!NOTE]
 > Installation of the .NET Framework may throw errors that are not listed in this article, but you might be able to try the following steps to fix those errors as well.
+> Microsoft is releasing Out-of-band (OOB) updates for .NET Framework. [.NET Framework Out-of-band update to address issues after installing the January 11, 2022 Windows update](/windows/release-health/windows-message-center#359)
 
 ## Resolutions for Windows Server
 
@@ -56,11 +61,11 @@ To configure the Group Policy setting, follow these steps:
 
 2. Expand **Computer Configuration**, expand **Administrative Templates**, and then select **System**. The screenshot for this step is listed below.
 
-    :::image type="content" source="./media/dotnet-framework-35-installation-error/system-option.jpg" alt-text="Screenshot for System option.":::
+    :::image type="content" source="media/dotnet-framework-35-installation-error/system-option.svg" alt-text="Screenshot of the System group policy setting window." border="false":::
 
 3. Open the **Specify settings for optional component installation and component repair** Group Policy setting, and then select **Enabled**. The screenshot for this step is listed below.
 
-    :::image type="content" source="./media/dotnet-framework-35-installation-error/enabled-option.jpg" alt-text="Screenshot for Enabled option.":::
+    :::image type="content" source="media/dotnet-framework-35-installation-error/enabled-option.svg" alt-text="Screenshot of the Enabled option of the Specify settings for optional component installation and component repair item." border="false":::
 
 4. If you want to specify an alternative source file, in the **Alternate source file path** box, specify a fully qualified path of a shared folder that contains the contents of the `\sources\sxs` folder from the installation media.  
 
@@ -123,11 +128,11 @@ To use the **Add Roles and Features Wizard**, follow these steps:
 3. On the **Select features** page, select the **.NET Framework 3.5 Features** check box, and then click **Next**.
 4. On the **Confirm installation selections** page, click the **Specify an alternate source path** link. The screenshot for this step is listed below.
 
-    ![Specify an alternate source path](./media/dotnet-framework-35-installation-error/specify-alternate-source-path.png)  
+    :::image type="content" source="media/dotnet-framework-35-installation-error/specify-alternate-source-path.svg" alt-text="Screenshot of the Specify an alternate source path link on the Conform installation selections page." border="false":::  
 
 5. On the **Specify Alternate Source Path** page, type the path of the *SxS* folder as a local path or as a network share path. The screenshot for this step is listed below.
 
-    ![Path of the SxS folder](./media/dotnet-framework-35-installation-error/path-of-the-sxs-folder.png)  
+    :::image type="content" source="media/dotnet-framework-35-installation-error/path-of-sxs-folder.svg" alt-text="Screenshot of the Specify Alternate Source Path page." border="false":::  
 
 6. Click **OK**.
 7. Click **Install** to finish the wizard.
@@ -244,6 +249,6 @@ When you install .NET Framework 3.5, you may encounter other error codes that ar
 
 - [Net Framework 3.5 and 4.5 error 0x80070002](https://social.msdn.microsoft.com/Forums/b3175c1d-1eae-414d-91c5-93bfbeba7bb7/net-framework-35-and-45-error-0x80070002?forum=netfxsetup)
 
-- [Install the .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows-10)
+- [Install the .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows)
 
 - [Microsoft .NET Framework 3.5 Deployment Considerations](/previous-versions/windows/it-pro/windows-8.1-and-8/dn482066(v=win.10))

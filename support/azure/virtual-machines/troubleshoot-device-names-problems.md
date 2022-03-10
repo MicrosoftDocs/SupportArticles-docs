@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: ''
 ms.service: virtual-machines
 ms.collection: linux
