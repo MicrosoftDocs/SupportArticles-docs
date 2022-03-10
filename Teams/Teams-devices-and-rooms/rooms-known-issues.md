@@ -1,6 +1,6 @@
 ---
 title: Known issues in Rooms
-description: Admin can learn about a list of known issues for Microsoft Teams Rooms, including update, user interface, hardware, and limitations and expected behaviors.
+description: Admin can learn about a list of known issues for various features of Microsoft Teams Rooms, including update, user interface, hardware, limitations, and expected behavior.
 ms.author: luche
 author: helenclu
 ms.reviewer: sohailta, garyanselme, czawideh
@@ -31,20 +31,20 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 
 | Issue  |  Description | Workaround |
 |  ---        |      ---             |   ---            |
-|Whiteboard or Content Camera fails to enhance content when edges are not detected|After updating to version [4.11.12.0](/microsoftteams/rooms/rooms-release-note#411120-1242022), when there are no whiteboard edges in the content camera view, the camera doesn't enhance or overlay all content in the camera view.|The fix for this issue is available in the application version [4.11.17.0](/microsoftteams/rooms/rooms-release-note#411170-332022).|
-|Edge browser automatically launching|The Edge browser before build 97.0.1072.62 launches automatically alongside the Microsoft Teams Rooms app when the device starts.|This issue should be resolved automatically, with no user interaction required, on or before Monday, January 17, 2022. If a faster resolution is required: when Edge launches alongside the Microsoft Teams Rooms, visit the URL edge://settings/help in Edge, and an update should automatically download and apply. In the browser, select **Restart** once the update has finished applying. Close Azure IoT Edge, reboot the system, and then the issue should be resolved.|
-|Split gallery participant videos|When there's no shared content in a meeting with more than 9 remote participants, and the meeting is in the dual Front of Room displays, videos on a Front of Room display with the self-preview feature might appear as audio. Also, a smaller number of audio participants than the actual number of audio participants shows up on the dual Front of Room displays.|There is no workaround currently.|
-| Application not launching |  After updating to application version 4.4.41.0, the system boots to black screen, or go to the logon screen after few minutes. | Follow the steps in [Microsoft Teams Rooms application does not start after update to version 4.4.41.0](https://support.microsoft.com/topic/microsoft-teams-rooms-application-does-not-start-after-you-update-to-version-4-4-41-0-or-later-387eff45-3905-d768-a5df-a0c716c9b757) to fix this issue.  |
-|Low meeting volume after content sharing|Microsoft Teams Rooms devices on Windows 10 20H2 experience decreased media and meeting volume after sharing content through in-room HDMI. This issue is caused by an audio issue in Windows 10 20H2.|The fix for this issue is available in the application version [4.9.12.0](/microsoftteams/rooms/rooms-release-note#49120-7282021)|
+|Whiteboard or Content Camera doesn't enhance content when edges are not detected|After you update to version [4.11.12.0](/microsoftteams/rooms/rooms-release-note#411120-1242022), the camera doesn't enhance or overlay all content in the camera view if there are no whiteboard edges in the content camera view.|The fix for this issue is available in application version [4.11.17.0](/microsoftteams/rooms/rooms-release-note#411170-332022).|
+|Edge browser starts automatically|Edge browser versions that are earlier than build 97.0.1072.62 start automatically together with the Microsoft Teams Rooms app when the device starts.|This issue should be resolved automatically (no user interaction required) on or before Monday, January 17, 2022. If a faster resolution is required when this issue occurs, go to edge://settings/help in Edge. An update should automatically download and install. In the browser, select **Restart** after the installation finishes. Close Azure IoT Edge, and then restart the system. The issue should now be resolved.|
+|Split gallery participant videos|When there's no shared content in a meeting that includes more than nine remote participants, and the meeting is presented in dual front-of-room displays, videos on a front-of-room display that have the self-preview feature might appear as audio. Also, a smaller number of audio participants than the actual number of audio participants appears on the dual front-of-room displays.|Currently, there is no workaround.|
+| Application doesn't start |  After you update to application version 4.4.41.0, the system starts to a black screen, or it goes to the logon screen after a few minutes. | To fix this issue, follow the steps in [Microsoft Teams Rooms application does not start after update to version 4.4.41.0](https://support.microsoft.com/topic/microsoft-teams-rooms-application-does-not-start-after-you-update-to-version-4-4-41-0-or-later-387eff45-3905-d768-a5df-a0c716c9b757).  |
+|Low meeting volume after content sharing|Microsoft Teams Rooms devices on Windows 10 20H2 experience decreased media and meeting volume after you share content through in-room HDMI. This issue is caused by an audio condition in Windows 10 20H2.|The fix for this issue is available in application version [4.9.12.0](/microsoftteams/rooms/rooms-release-note#49120-7282021)|
 |  App out of date         |    The Microsoft Teams Rooms console shows a "system config out of date" error.                |   [Use the Microsoft Teams Rooms recovery tool](/MicrosoftTeams/rooms/recovery-tool)             |
-|  Device updated to unsupported version of Windows 10   |    Windows 10 device updated from version 1803 to version 1809, which is not supported. The supported version is 1903. |   This issue can happen if the [Group Policy or MDM setting for DeferFeatureUpdatesPeriodinDays](/windows/deployment/update/waas-configure-wufb) setting, which lets you defer feature updates for a specified number of days, is set to the maximum of 365 days. <br><br> Windows 10 version 1809 isn't supported with Microsoft Teams Rooms, while version 1903 is supported. However, as of March 27, 2020, version 1809 is over 365 days old. If this setting isn't changed, Windows attempts to install version 1809, which may cause issues with Microsoft Teams Rooms.<br><br>To avoid this situation, remove any Group Policy or MDM setting for deferring updates. This allows Windows to update to the latest, supported OS version. <br><br>**Important** The Group Policy or MDM setting must be removed (left unconfigured) and not set to **0**. If the policy is set to **0**, Windows takes the latest available version which may not be supported. |
+|  Device updated to unsupported version of Windows 10   |    A Windows 10 device was updated from version 1803 to version 1809. Version 1809 is not supported. The supported version is 1903. |   This issue can occur if the [Group Policy or MDM setting for DeferFeatureUpdatesPeriodinDays](/windows/deployment/update/waas-configure-wufb) setting is set to the maximum of 365 days. This setting lets you defer feature updates for a specified number of days.<br><br> Windows 10, version 1809 isn't supported for Microsoft Teams Rooms. Version 1903 is supported. However, as of March 27, 2020, version 1809 is more than 365 days old. If this setting isn't changed, Windows tries to install version 1809. That version might cause issues that affect Microsoft Teams Rooms.<br><br>To avoid this situation, remove any Group Policy or MDM setting for deferring updates. This lets Windows update to the latest supported OS version. <br><br>**Important** The Group Policy or MDM setting must be removed (left unconfigured) and not set to **0**. If the policy is set to **0**, Windows takes the latest available version. That version might not be supported. |
 ||||
 
 ## User interface
 
 | Issue  |  Description | Workaround |
 |  ---        |      ---             |   ---            |
-|Virtual keyboard missing   | The virtual keyboard doesn't appear when you need to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install 2020-04 Cumulative Update for Windows 10, version 1903 for x64-based Systems through Windows Updates.  |
+|Virtual keyboard missing   | The virtual keyboard doesn't appear when you have to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install the April 2020 Cumulative Update for Windows 10, version 1903 for x64-based systems through Windows Updates.  |
 ||||
 
 ## Hardware
@@ -56,20 +56,22 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 
 ## Limitations
 
-- Front row is currently labeled as **Preview** on the layout picker in the Front of Room display.
-- Front row layout displays up to 4 video participants on a single Front of Room display and up to 9 video participants on dual Front of Room displays. These participants are chosen from the last active speakers.
-- Microsoft Teams Rooms doesn't support HDCP input, which has been observed to cause issues with High-Definition Multimedia Interface (HDMI) ingest functionality (video, audio). To avoid these issues, make sure that switches connected to Microsoft Teams Rooms have HDCP options turned off.
+- Front row is currently labeled as **Preview** on the layout picker in the front-of-room display.
+- Front row layout displays up to four video participants on a single front-of-room display and up to nine video participants on dual front-of-room displays. These participants are chosen from the last active speakers.
+- Microsoft Teams Rooms doesn't support HDCP input. HDCP input has been observed to cause issues that affect High-Definition Multimedia Interface (HDMI) ingest functionality (video, audio). To avoid these issues, make sure that switches that are connected to Microsoft Teams Rooms have HDCP options turned off.
 
-## Expected behaviors
+## Expected behavior
 
-- If your Microsoft Teams Rooms device loses trust with the domain, you won't be able to authenticate into the device and open settings. For example, if you remove Microsoft Teams Rooms from the domain after it's domain joined, trust is lost. In this situation, sign in to the device with a local administrator account.
+- If your Microsoft Teams Rooms device loses trust with the domain, you won't be able to authenticate into the device and open settings. For example, if you remove Microsoft Teams Rooms from the domain after it gets domain joined, trust is lost. In this situation, sign in to the device by using a local administrator account.
 
-- A consumer TV used as the Front of Room display may cause stability issues with Microsoft Teams Rooms for the following reasons:
-  - Inconsistent implementation of standby modes.
-  - Active video source selection.
-  - Incorrect EDID information is communicated to the Microsoft Teams Rooms device.
+- A consumer TV that's used as the front-of-room display might cause stability issues in Microsoft Teams Rooms for the following reasons:
+  - Inconsistent implementation of standby modes
+  - Active video source selection
+  - Incorrect EDID information that's communicated to the Microsoft Teams Rooms device
 
-  Known symptoms include a black or gray screen on the Front of Room display, or the Microsoft Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when using consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-201-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/dr-edid-manager-learner/category_pathway-143) from FSR Video Products Group.
+  Known symptoms include a black or gray screen on the front-of-room display, or the Microsoft Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when you use consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-201-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/dr-edid-manager-learner/category_pathway-143) from FSR Video Products Group.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
 
 ## See also
 
