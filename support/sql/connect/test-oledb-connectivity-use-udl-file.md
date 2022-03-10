@@ -1,6 +1,6 @@
 ---
 title: Test OLE DB connectivity to SQL Server by using a UDL file
-description: Describes how to create UDL file, and use the file to test OLE DB connectivity to SQL Server.
+description: Describes how to create a UDL file and use it to test OLE DB connectivity to SQL Server.
 ms.date: 11/27/2021
 ms.custom: sap:Connection issues
 author: cobibi
@@ -14,18 +14,18 @@ _Applies to:_ &nbsp; SQL Server
 > [!NOTE]
 > Before you start troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
 
-This article describes how to create a UDL file and how to use different providers to test connection to a SQL Server instance through the file.
+This article describes how to create a Universal Data Link (UDL) file and use different providers to test the connection to a SQL Server instance through the file.
 
 ## Create a UDL file
 
 > [!NOTE]
-> A Universal Data Link (UDL) file enables you to test Object Linking and Embedding Database (OLE DB) providers connectivity to any backend database independent of a full application. Saving a UDL file generates a well-formed connection string, which you can use to help build an application's connection string or check how to set different properties. To get the string, open the file in Notepad.
+> A UDL file enables you to test Object Linking and Embedding Database (OLE DB) providers connectivity to any backend database independent of a full application. Saving a UDL file generates a well-formed connection string, which you can use to help build an application's connection string or check how to set different properties. To get the string, open the file in Notepad.
 
 To create a UDL file to test your OLE DB provider, follow these steps:
 
-1. To show file extensions in File Explore, follow these steps:
+1. To show file extensions in File Explorer, follow these steps:
 
-    1. Select the **Start** button, type *File Explorer Options*, and then press **Enter**.
+    1. Select **Start**, and enter *File Explorer Options*.
 
     1. Select the **View** tab, uncheck the **Hide extensions for known file types** option, and then select **OK**.
 
@@ -33,7 +33,7 @@ To create a UDL file to test your OLE DB provider, follow these steps:
 
 1. Create a new text file (such as *sqlconn.txt*), and then rename the extension from *.txt* to *.udl*. (Select **Yes** to the warning message about changing the file name extension.)
 
-    You can also use following PowerShell script to create *sqlconn.udl* in your *%temp%* folder.
+    You can also use the following PowerShell script to create *sqlconn.udl* in your *%temp%* folder.
 
       ```Powershell
       clear
@@ -45,13 +45,13 @@ To create a UDL file to test your OLE DB provider, follow these steps:
       Invoke-Expression ($env:temp + "\sqlconn.udl")
       ```
 
-## Test connection by using SQL Server OLE DB provider
+## Test the connection by using the SQL Server OLE DB provider
 
 [Microsoft OLE DB Provider for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) (SQLOLEDB) is the most common provider. It's built into Windows and can connect to any version of SQL Server that's not configured to require TLS 1.2 channel bindings.
 
-[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server#3-microsoft-ole-db-driver-for-sql-server-msoledbsql) (MSOLEDBSQL) is the latest SQL Server OLE DB provider. The provider has all the new features, such as TLS 1.2, [MultiSubnetFailover](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover), and Azure authentication options. We recommend the provider for newer SQL Server databases.
+[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server#3-microsoft-ole-db-driver-for-sql-server-msoledbsql) (MSOLEDBSQL) is the latest SQL Server OLE DB provider. The provider has all the new features, such as TLS 1.2, [MultiSubnetFailover](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover), and Azure authentication options. We recommend this provider for newer SQL Server databases.
 
-To test connection by using SQL Server OLE DB provider, follow these steps:
+To test the connection by using the SQL Server OLE DB provider, follow these steps:
 
 1. Open the *.udl* file.
 
@@ -89,7 +89,7 @@ To test Open Database Connectivity (ODBC) drivers by using Microsoft OLE DB Prov
 
 ## Test 32-bit providers on 64-bit machines
 
-To test connection of 32-bit providers in 64-bit operation systems, follow these steps:
+To test the connection of 32-bit providers in 64-bit operation systems, follow these steps:
 
 1. In the **Command Prompt** window, run the following command to open the 32-bit **Command Prompt**:
 
@@ -103,22 +103,22 @@ To test connection of 32-bit providers in 64-bit operation systems, follow these
     c:\temp\test.udl
     ```
 
-1. If you can see **Microsoft Jet 4.0 OLE DB Provider** on the **Provider** tab, that means you're successful in loading the 32-bit dialog. And then select the 32-bit provider to test connection.
+1. If you can see **Microsoft Jet 4.0 OLE DB Provider** on the **Provider** tab, that means you successfully loaded the 32-bit dialog and can now select the 32-bit provider to test the connection.
 
 ## Tips to troubleshoot connection issues
 
 You can use the following methods to check why the connection fails.
 
 - Change the provider.
-- Change the protocol, like `tcp:`, `np:`, and `lpc:`.
-- Test the connection with or without the full domain suffix or just using the IP address.
+- Change the protocol. For example, `tcp:`, `np:`, or `lpc:`.
+- Test the connection with or without the full domain suffix or with just the IP address.
 - Remove the port number and use the instance name to test the SQL Server Browser service.
 
-For each of the above methods, if one combination works and another fails, it could give a clue as to the problem. For example, when you use the second method, if the `lpc:` works and the `tcp:` doesn't work, try to enable the TCP protocol in [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager).
+For each of the above methods, if one combination works and another fails, it could give a clue as to the problem. For example, when you use the second method, if the `lpc:` works and the `tcp:` doesn't, try to enable the TCP protocol in [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager).
 
 ## See also
 
 [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages)
 
 > [!NOTE]
-> If this article has not resolved your issue, you can check if the [common connectivity issues articles](resolve-connectivity-errors-overview.md#common-connectivity-issues) can help.
+> If this article hasn't resolved your issue, you can check [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md#common-connectivity-issues) for more help.
