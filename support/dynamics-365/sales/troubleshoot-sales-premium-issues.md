@@ -39,6 +39,6 @@ To solve this issue, enable the Sales Insights processes that are disabled. Foll
 
 4. Verify that the statuses of all Sales Insights processes are in **Activated** state. In this example, you can see that the **Sales Insights ActionCard stat aggregator**, **Sales Insights CES API Handler**, and **Sales Insights create similar opportunity prediction model** processes are in draft state.
 
-    :::image type="content" source="media/troubleshoot-sales-premium-issues/sales-insights-processes.png" alt-text="View all Sales Insights processes.":::
+    :::image type="content" source="media/troubleshoot-sales-premium-issues/sales-insights-processes.png" alt-text="View all Sales Insights processes." lightbox="media/troubleshoot-sales-premium-issues/sales-insights-processes.png":::
 
 5. Select the processes that are in **Draft** state and activate.

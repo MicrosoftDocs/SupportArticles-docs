@@ -18,7 +18,7 @@ The **In Context Form** is used for displaying and customizing the side panel in
 
 If your environment has any customization that sets the **formActivationState** to **Active** for these tables, the **In Context Form** appears in the form selector dropdown and lets users select this form for viewing the record details.
 
-:::image type="content" source="media/troubleshoot-multiple-tables-issues/form-selector-dropdown.png" alt-text="Form selector dropdown showing the In Context Form.":::
+:::image type="content" source="media/troubleshoot-multiple-tables-issues/form-selector-dropdown.png" alt-text="Form selector dropdown showing the In Context Form option.":::
 
 ### Resolution
 
@@ -57,7 +57,7 @@ You must verify the improper customizations and resolve them. Perform the follow
 
 3. Select the **Filter** icon, select the column **Primary Object Type Code (Sdk Message Filter)**, and then select the table for which the error is occurring.
 
-    :::image type="content" source="media/troubleshoot-multiple-tables-issues/go-to-custom-plugin-list.png" alt-text="Go to the custom plug-in list.":::
+    :::image type="content" source="media/troubleshoot-multiple-tables-issues/go-to-custom-plugin-list.png" alt-text="Go to the custom plug-in list to select the table for which the error is occurring." lightbox="media/troubleshoot-multiple-tables-issues/go-to-custom-plugin-list.png":::
 
 4. Select the SDK message processing steps that are coming from the solutions owned by you.
 
@@ -71,7 +71,7 @@ You must verify the improper customizations and resolve them. Perform the follow
 5. Select **Deactivate**.
 6. Publish the customizations.
 
-    :::image type="content" source="media/troubleshoot-multiple-tables-issues/deactivate-unmanaged-custom-plugin.png" alt-text="Choose and deactivate unmanaged custom plug-ins.":::
+    :::image type="content" source="media/troubleshoot-multiple-tables-issues/deactivate-unmanaged-custom-plugin.png" alt-text="Choose and deactivate unmanaged custom plug-ins." lightbox="media/troubleshoot-multiple-tables-issues/deactivate-unmanaged-custom-plugin.png":::
 
 7. Verify the issue and if it doesn't occur, the issue is with the custom SDK message processing steps. Resolve the issue.
 
@@ -82,7 +82,7 @@ You must verify the improper customizations and resolve them. Perform the follow
 
 1. Open the form editor of the table in which the error is occurring. In this example, we're selecting the table as Opportunities and the default solution form.
 
-    :::image type="content" source="media/troubleshoot-multiple-tables-issues/javascript-form-editor.png" alt-text="Open form editor." border="false":::
+    :::image type="content" source="media/troubleshoot-multiple-tables-issues/javascript-form-editor.png" alt-text="Open form editor." lightbox="media/troubleshoot-multiple-tables-issues/javascript-form-editor.png":::
 
 2. Select **Form Properties** on the form editor.
 
@@ -103,7 +103,7 @@ You must verify the improper customizations and resolve them. Perform the follow
    > 2. Select **WebResources**. Verify the values are selected as: **Component Type** to **WebResources** and **View** to **All**.
    > 3. Select **Filter** icon to enable filter options for columns. Select **Type** and set the filter as **Script (JScript)**.
    >
-   > :::image type="content" source="media/troubleshoot-multiple-tables-issues/javascript-view-javascript-filter.png" alt-text="Select type filter as script.":::
+   > :::image type="content" source="media/troubleshoot-multiple-tables-issues/javascript-view-javascript-filter.png" alt-text="Select Type and set the filter as Script (JScript).":::
 
 5. Select **Edit**. In this example, we have selected the custom JavaScript file **eg_opportunity** to edit.
 
@@ -129,7 +129,7 @@ You must verify the improper customizations and resolve them. Perform the follow
 
 3. Select the **Filter** icon, select the column **Primary Entity**, and then select the table for which the error is occurring.
 
-    :::image type="content" source="media/troubleshoot-multiple-tables-issues/custom-process-workflow-list.png" alt-text="Go to the custom process workflow list." border="false":::
+    :::image type="content" source="media/troubleshoot-multiple-tables-issues/custom-process-workflow-list.png" alt-text="Go to the custom process workflow list to select the table for which the error is occurring." lightbox="media/troubleshoot-multiple-tables-issues/custom-process-workflow-list.png":::
 
 4. Choose the processes that are coming from the solutions owned by you.
 
@@ -142,7 +142,7 @@ You must verify the improper customizations and resolve them. Perform the follow
 5. Select **Deactivate**.
 6. Publish the customizations.
 
-   :::image type="content" source="media/troubleshoot-multiple-tables-issues/deactivate-unmanaged-custom-process-workflow.png" alt-text="Choose and deactivate unmanaged process workflows.":::
+   :::image type="content" source="media/troubleshoot-multiple-tables-issues/deactivate-unmanaged-custom-process-workflow.png" alt-text="Choose and deactivate unmanaged process workflows." lightbox="media/troubleshoot-multiple-tables-issues/deactivate-unmanaged-custom-process-workflow.png":::
 
 7. Verify the issue and if it doesn't occur, the issue is with the custom processes. Resolve the issue.
 
