@@ -9,9 +9,9 @@ ms.service: az-devops-project
 ---
 # Antivirus exclusions for Azure DevOps
 
-This article provides information about the processes and folders that may have to be excluded from antivirus scanning on computers that are running Team Foundation Server (TFS), Azure DevOps Server or Azure DevOps Services. It also provides links to Microsoft knowledge base articles that cover antivirus exclusions that may be defined on servers that are running deployments of Microsoft SQL Server and SharePoint Server that have been integrated with Azure DevOps Server.
+This article provides information about the processes and folders that may have to be excluded from antivirus scanning on computers that are running Team Foundation Server (TFS), Azure DevOps Server or self-hosted agents of Azure DevOps Services. It also provides links to Microsoft knowledge base articles that cover antivirus exclusions that may be defined on servers that are running deployments of Microsoft SQL Server and SharePoint Server that have been integrated with Azure DevOps Server.
 
-_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server, Azure DevOps Services   
+_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server   
 _Original KB number:_ &nbsp; 2636507
 
 ## Symptoms
@@ -28,15 +28,14 @@ Target files will be locked when the antivirus software is scanning. Builds may 
    >TF400850: The request context was not disposed by the caller  
     Exception Message: Cannot access a disposed object.
 
-- The following application domain reload event occurs:
-
-  > The application is being shut down for the following reason: BinDirChangeOrDirectoryRename.
-
 ## Exclusion list
+
+> [!WARNING]
+> This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
 If you encounter the issue described above, you may have to configure your antivirus software to exclude the following processes, folders and their sub-folders from antivirus scanning.
 
-TFS/Azure DevOps Server:
+TFS, Azure DevOps Server:
 
 - _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>_
 - _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>\Application Tier\TFSJobAgent_
@@ -49,7 +48,7 @@ TFS/Azure DevOps Server:
   - On the client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
 - `TFSJobAgent.exe` process that is typically located at _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_
 
-Azure DevOps Server/Azure DevOps Services:
+Azure DevOps Server, Azure DevOps Services (self-hosted agents):
 
 - Pipeline agent folders
 - `TFSbuildServicehost.exe` process for XAML builds
