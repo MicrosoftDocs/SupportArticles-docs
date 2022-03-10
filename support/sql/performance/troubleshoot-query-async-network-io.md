@@ -5,6 +5,7 @@ ms.date: 03/10/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
+ms.author: jopilov
 author: pijocoder 
 ---
 
@@ -12,7 +13,7 @@ author: pijocoder
 
 ## Symptoms
 
-When SQL Server produces result sets and sends them to a client application by putting the results in an output buffer, the client application fetches them from the output buffer. If the client application stops or doesn't fetch the results fast enough, SQL Server has to wait for acknowledgment that the client application has received all the results before sending more results. This wait will show up as `ASYNC_NETWORK_IO`. For more information, see the [video](/shows/SQL-Workshops/Understanding-ASYNCNETWORKIO-Waits-in-SQL-Server).
+When SQL Server produces result sets and sends them to a client application by putting the results in an output buffer, the client application fetches them from the output buffer. If the client application stops or doesn't fetch the results fast enough, SQL Server has to wait for acknowledgment that the client application has received all the results before sending more results. This wait will show up as `ASYNC_NETWORK_IO`. For more information, see the video at [Understanding ASYNC_NETWORK_IO Waits in SQL Server](/shows/SQL-Workshops/Understanding-ASYNCNETWORKIO-Waits-in-SQL-Server).
 
 Excessive ASYNC_NETWORK_IO waits can cause two issues:
 
