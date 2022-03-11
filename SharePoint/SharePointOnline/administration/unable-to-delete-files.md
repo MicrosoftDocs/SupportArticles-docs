@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Online
 ms.custom: 
   - CI 113501
+  - CI 161519
   - CSSTroubleshoot
 ms.reviewer: prbalusu
 description: If you're unable to delete files from SharePoint or OneDrive, this article lists ways you might be able to resolve the issue.
@@ -36,12 +37,5 @@ There are several reasons why you may be unable to delete a file. Try each of th
    **Note** Folder deletion can be prevented due to retention policies. In this situation, first move or delete any files in the folder that are subject to retention.   
 - The site might have exceeded its storage limit. [Increase the site quota](/powershell/module/sharepoint-online/set-sposite) and delete the item.
 - Administrators can use [SharePoint Patterns and Practices](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets#installation) (PnP), which contains a library of PowerShell commands that allows you to perform complex management actions such as force the deletion of items you cannot otherwise delete.
-
-For more information on PowerShell commands, see the following articles:
-   - [Remove PNP File](/powershell/module/sharepoint-pnp/remove-pnpfile)
-   - [Remove PNP Folder](/powershell/module/sharepoint-pnp/remove-pnpfolder)
-   - [Remove PNP List Item](/powershell/module/sharepoint-pnp/remove-pnplistitem)
-   - [Remove PNP List](/powershell/module/sharepoint-pnp/remove-pnplist)
-   - [Remove PNP Field (Column)](/powershell/module/sharepoint-pnp/remove-pnpfield)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
