@@ -16,11 +16,11 @@ _Original KB number:_ &nbsp; 2000257
 
 ## Symptoms
 
-Consider the following scenario. To tighten security, you remove some default user rights from the local administrators group on a Windows operating system. To prepare for setting up SQL Server on this system, you add the Setup account to the local administrators group.
+Consider the scenario where you remove some default user rights from the local administrators group on a Windows operating system to tighten security. To set up SQL Server on your system, you add the Setup account to the local administrators group.
 
-In this scenario, if you either install or upgrade SQL Server, the installation process may fail, and you may receive various error messages similar to those noted in the following sections.
+If you try to install or upgrade SQL Server, the installation process may fail and you may receive one of the error messages similar to the errors messages in the following sections.
 
-- **Scenario 1:** For a new installation, the Setup program fails, and you receive the following error message:
+- **Scenario 1:** If  a new installation fails, you may see the following error message:
 
     > Access is denied
     
