@@ -99,6 +99,19 @@ To add the rights to the setup account, follow these steps:
 7. Follow the same procedure for *Debug Programs* and *Manage auditing and security log* policies to add the user account.
 8. On the **File** menu in the **Local Security Settings** dialog box, select **Exit** to close.
 
+## Frequently asked questions
+
+  - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the UNC share?
+
+    This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can perform a backup on the directory. The Setup program performs these checks for the default backup directory so that if a backup is performed post-installation, you won't face an error or issue (because of missing permissions) when you back up the default directory.
+
+    > [!NOTE]
+    > **SeSecurityPrivilege** is required to change the `get/set ACLs` from the directories and subfolders. This is the case where even users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and Audit information from the directory.
+
+  - Why does the error that's described in Scenario 3 occur only in SQL Server 2012 and later versions?
+
+    In SQL Server 2012 and later versions, Microsoft has started supporting data and log files on the SMB file share. As part of this improvement, the setup experience was further enhanced to tighten the checks so that customers don't encounter errors or issues because of insufficient permission post-installation. In the pre-SQL Server 2012 versions, customers can still set up the network share path for the Backup directory when the SQL Service account doesn't have permissions to perform backup. However, they will encounter an error post-installation in this situation. These scenarios are now prevented when you start the SQL 2012 setup check on a network share.
+
 ## More information
 
 - To check the list of privileges that are currently associated with the Setup account, use the *AccessChk.exe* tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
@@ -137,5 +150,4 @@ To add the rights to the setup account, follow these steps:
             SeBatchLogonRight
             SeRemoteInteractiveLogonRight
   ```
-
 - [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)
