@@ -95,7 +95,7 @@ Additionally, if SMB file share is used as a storage option for data directory o
 To add the rights to the setup account, follow these steps:
 
 1. Log on to the computer as a user who has administrative credentials.
-2. Select **Start**, select **Run**, type *Control admintools*, and then select **OK**.
+2. Select **Start**, select **Run**, type `Control admintools`, and then select **OK**.
 3. Double-click **Local Security Policy**.
 4. In the **Local Security Settings** dialog box, click **Local Policies**, double-click **User Rights Assignment**, and then double-click **Backup Files and Directories**.
 5. In the **Backup Files and Directories Properties** dialog box, click **Add User or Group**.
@@ -150,7 +150,7 @@ To add the rights to the setup account, follow these steps:
     This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can perform a backup on the directory. Setup performs these checks for the default backup directory so that if backup is performed post-installation, the user won't face an error or issue (because of missing permissions) when you back up the default directory.
 
     > [!NOTE]
-    > **SeSecurityPrivilege** is required to change the `get/set ACLs` from the directories and subfolders. This is the case where even users who have full control permissions on the directories don't have permissions to `get/set OWNER` and Audit information from the directory.
+    > **SeSecurityPrivilege** is required to change the `get/set ACLs` from the directories and subfolders. This is the case where even users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and Audit information from the directory.
 
   - Why does the error that's described in Scenario 3 occur only in SQL Server 2012 and later versions?
 
