@@ -41,7 +41,7 @@ To fix the issue, follow these steps:
 1. Wait a few minutes, and then send the log-in request again. You should now be able to sign in to the application.
 
 >[!Note]
->The redirect URI is also known as the _reply URL_. These values depend on which protocol is used. OIDC and OAuth2 protocols refer to this value as a redirect URI.
+>The redirect URI is also known as the reply URL. These values depend on which protocol is used. OIDC and OAuth2 protocols refer to this value as a redirect URI.
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
