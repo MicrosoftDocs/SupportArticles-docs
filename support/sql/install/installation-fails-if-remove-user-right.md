@@ -1,26 +1,30 @@
 ---
-title: Installation fails when you remove user rights
-description: This article helps you resolve a problem that may occur when you install or upgrade Microsoft SQL Server after tightening security.
+title: Installation fails after you remove user rights
+description: This article helps you resolve a problem that occurs when you install or upgrade Microsoft SQL Server after tightening security.
 ms.date: 03/11/2022
 ms.custom: sap:Database Engine
 author: rielsql
 ms.author: v-jayaramanp
 ms.prod: sql
 ---
-# SQL Server installation fails if the Setup account doesn't have certain user rights
+# SQL Server installation fails after default user rights are removed
 
-This article helps you resolve a problem that may occur when you install or upgrade Microsoft SQL Server after tightening security.
+This article helps you resolve a problem that occurs when you install or upgrade Microsoft SQL Server after you tighten security.
 
 _Applies to_: SQL Server
 _Original KB number:_ &nbsp; 2000257
 
 ## Symptoms
 
-Consider the scenario where you remove some default user rights from the local administrators group on a Windows operating system to tighten security. To set up SQL Server on your system, you add the Setup account to the local administrators group.
+Consider the following scenario:
 
-If you try to install or upgrade SQL Server, the installation process may fail and you may receive one of the error messages similar to the errors messages provided in the following sections.
+- You're running Microsoft SQL Server in Windows.
+- To tighten security, you remove some default user rights from the local administrators group.
+- To set up SQL Server on the system, you add the Setup account to the local administrators group.
 
-- **Scenario 1:** If  a new installation fails, you may see the following error message:
+In this secnario, if you try to install or upgrade SQL Server, the installation process fails, and you may receive an error message that resembles one of the messages that are listed in the following sections.
+
+- **Scenario 1:** If a new installation fails, you receive one of the following error messages:
 
     > Access is denied
     
@@ -50,12 +54,12 @@ If you try to install or upgrade SQL Server, the installation process may fail a
     > 2009-01-02 13:00:20 Slp: Source: System.  
     > 2009-01-02 13:00:20 Slp: Message: Access is denied.  
 
-- **Scenario 2:**  If a new installation of SQL Server 2012 or SQL Server 2008 R2 fails, you may see the following error message:
+- **Scenario 2:**  If a new installation of Microsoft SQL Server 2012 or Microsoft SQL Server 2008 R2 fails, you receive one of the following error messages:
 
     > Rule "Setup account privileges" failed.  
     > The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
 
-- **Scenario 3:** If the installation of SQL Server 2012 or a later version fails when you specify a network share (UNC path) for the Backup directory location, you may see the following error message:
+- **Scenario 3:** If the installation of SQL Server 2012 or a later version fails when you specify a network share (UNC path) for the Backup directory location, you receive one of the following error messages:
 
     > SQL Server setup account does not have the SeSecurityPrivilege on the specified file server in the path *\<UNC backup location>*. This privilege is required in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the "User Rights Assignments" section under Local Policies in the Local Security Policy console.
 
@@ -64,9 +68,9 @@ If you try to install or upgrade SQL Server, the installation process may fail a
 
 ## Cause
 
-If a user account is running Setup as a local administrator, the user account requires the following user rights for setup to be completed successfully.
+If a user account is running Setup as a local administrator, the user account requires the following user rights in order for Setup to run successfully:
 
-|Local Policy Object Display Name|User Right|
+|Local Group Policy Object display name|User right|
 |---|---|
 |Backup files and directories|SeBackupPrivilege|
 |Debug Programs|SeDebugPrivilege|
@@ -74,11 +78,11 @@ If a user account is running Setup as a local administrator, the user account re
 |||
 
 > [!NOTE]
-> For more information about the permissions which are required to install SQL Server, review the "Prerequisites" section in the following articles:
+> For more information about the permissions that are required to install SQL Server, see the "Prerequisites" section in the following articles:
 > - [Planning a SQL Server Installation](/sql/sql-server/install/planning-a-sql-server-installation)
 > - [Install SQL Server from the Installation Wizard (Setup)](/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
 
-If a storage option for data directory or other directories (user database directory, user database log directory, TempDB directory, TempDB log directory or backup directory) uses SMB file share, the setup account requires the following additional permissions on the SMB file server as described in [Install SQL Server with SMB fileshare storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
+If a storage option for data directory or other directories (user database directory, user database log directory, TempDB directory, TempDB log directory, or backup directory) uses SMB file share, the Setup account requires the following additional permissions on the SMB file server as described in [Install SQL Server with SMB fileshare storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
 
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
@@ -88,29 +92,29 @@ If a storage option for data directory or other directories (user database direc
 
 ## Resolution
 
-To add the rights to the setup account, follow these steps:
+To add the rights to the Setup account, follow these steps:
 
-1. Log on to the computer as an Administrator.
-2. Select **Start** > **Run**. Enter *Control admintools*, and then select **OK**.
+1. Log on to the computer as an administrator.
+2. Select **Start** > **Run**, enter *Control admintools*, and then select **OK**.
 3. Double-click **Local Security Policy**.
 4. In the **Local Security Settings** dialog box, select **Local Policies**, open **User Rights Assignment**, and then double-click **Backup Files and Directories**.
 5. In the **Backup Files and Directories Properties** dialog box, select **Add User or Group**.
-6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** twice.
+6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times.
 7. Follow the same procedure for *Debug Programs* and *Manage auditing and security log* policies to add the user account.
-8. On the **File** menu in the **Local Security Settings** dialog box, select **Exit** to close.
+8. On the **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
 
-## Frequently asked questions
+## Frequently asked questions (FAQ)
 
   - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the UNC share?
 
-    This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can perform a backup on the directory. The Setup program performs these checks for the default backup directory so that if a backup is performed post-installation, you won't face an error or issue (because of missing permissions) when you back up the default directory.
+    This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can run a backup of the directory. The Setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions) when you back up the default directory.
 
     > [!NOTE]
-    > **SeSecurityPrivilege** is required to change the `get/set ACLs` from the directories and subfolders. This is the case where even users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and Audit information from the directory.
+    > **SeSecurityPrivilege** is required to change the `get/set ACLs` from the directories and subfolders. This is true even if users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and audit information from the directory.
 
-  - Why does the error that's described in Scenario 3 occur only in SQL Server 2012 and later versions?
+  - Why does the error that's described in Scenario 3 occur only in Microsoft SQL Server 2012 and later versions?
 
-    In SQL Server 2012 and later versions, Microsoft has started supporting data and log files on the SMB file share. As part of this improvement, the setup experience was further enhanced to tighten the checks so that customers don't encounter errors or issues because of insufficient permission post-installation. In the pre-SQL Server 2012 versions, customers can still set up the network share path for the Backup directory when the SQL Service account doesn't have permissions to perform backup. However, they will encounter an error post-installation in this situation. These scenarios are now prevented when you start the SQL 2012 setup check on a network share.
+    Starting in SQL Server 2012, Microsoft provides support for data and log files on the SMB file share. As part of this improvement, the setup experience is further enhanced to tighten the security checks so that customers don't encounter errors or issues because of insufficient permissions post-installation. In pre-SQL Server 2012 versions, users can still set up the network share path for the Backup directory if the SQL Service account doesn't have permissions to run backups. However, those users will experience an error post-installation in this situation. These scenarios are now prevented when you start the SQL 2012 Setup check on a network share.
 
 ## More information
 
