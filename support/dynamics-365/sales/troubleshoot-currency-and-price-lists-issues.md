@@ -57,7 +57,7 @@ You can change the currency and price list for the entities in the following sta
 
 2. For an opportunity: go to the **Product Line Items** tab, and then delete the products from the list.
 
-    :::image type="content" source="media/troubleshoot-currency-and-price-lists-issues/currency-opportunity-product-list.png" alt-text="Delete products from the product list in an opportunity form." border="false":::
+    :::image type="content" source="media/troubleshoot-currency-and-price-lists-issues/currency-opportunity-product-list.png" alt-text="Delete products from the product list in an opportunity form.":::
 
     For a quote, order, or invoice: On the **Summary** tab, go to the **PRODUCTS** section, and delete the products from the list.
 
