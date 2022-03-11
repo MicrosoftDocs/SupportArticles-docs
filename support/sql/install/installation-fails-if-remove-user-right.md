@@ -138,7 +138,7 @@ To add the rights to the setup account, follow these steps:
             SeRemoteInteractiveLogonRight
   ```
 
-- [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)
+- [Configure Windows Service Accounts and Permissions](../sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)
 
 - **Frequently asked questions**  
   - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the UNC share?
