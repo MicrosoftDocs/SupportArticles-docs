@@ -64,7 +64,7 @@ If you try to install or upgrade SQL Server, the installation process may fail a
 
 ## Cause
 
-This behavior is by design. In addition to adding the user account that's running Setup as a local administrator, the Setup user account requires the following default user rights for setup to be completed successfully.
+If a user account is running Setup as a local administrator, the user account requires the following user rights for setup to be completed successfully.
 
 |Local Policy Object Display Name|User Right|
 |---|---|
@@ -74,11 +74,11 @@ This behavior is by design. In addition to adding the user account that's runnin
 |||
 
 > [!NOTE]
-> For more information about the permissions that are required to install SQL Server, see the "Prerequisites" section in the following articles:
+> For more information about the permissions which are required to install SQL Server, review the "Prerequisites" section in the following articles:
 > - [Planning a SQL Server Installation](sql/sql-server/install/planning-a-sql-server-installation?view=sql-server-ver15&preserve-view=true)
 > - [Install SQL Server from the Installation Wizard (Setup)](sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup?view=sql-server-ver15&preserve-view=true)
 
-Additionally, if SMB file share is used as a storage option for data directory or any other directories (user database directory, user database log directory, TempDB directory, TempDB log directory or backup directory), the following additional permissions are required for the setup account on the SMB fileserver as documented in [Install SQL Server with SMB fileshare storage](sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option?view=sql-server-ver15&preserve-view=true)
+If a storage option for data directory or other directories (user database directory, user database log directory, TempDB directory, TempDB log directory or backup directory) uses SMB file share, the setup account requires the following additional permissions on the SMB file server as described in [Install SQL Server with SMB fileshare storage](sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option?view=sql-server-ver15&preserve-view=true).
 
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
@@ -90,14 +90,14 @@ Additionally, if SMB file share is used as a storage option for data directory o
 
 To add the rights to the setup account, follow these steps:
 
-1. Log on to the computer as a user who has administrative credentials.
-2. Select **Start**, select **Run**, type `Control admintools`, and then select **OK**.
+1. Log on to the computer as an Administrator.
+2. Select **Start** > **Run**. Enter *Control admintools*, and then select **OK**.
 3. Double-click **Local Security Policy**.
-4. In the **Local Security Settings** dialog box, click **Local Policies**, double-click **User Rights Assignment**, and then double-click **Backup Files and Directories**.
-5. In the **Backup Files and Directories Properties** dialog box, click **Add User or Group**.
-6. In the **Select User or Groups** dialog box, type the user account that is being used for setup, and then select **OK** twice.
-7. Repeat the procedure for the other two policies that are mentioned in the [Cause](#cause) section.
-8. On the **File** menu, select **Exit** to close the **Local Security Settings** dialog box.
+4. In the **Local Security Settings** dialog box, select **Local Policies**, open **User Rights Assignment**, and then double-click **Backup Files and Directories**.
+5. In the **Backup Files and Directories Properties** dialog box, select **Add User or Group**.
+6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** twice.
+7. Follow the same procedure for *Debug Programs* and *Manage auditing and security log* policies to add the user account.
+8. On the **File** menu in the **Local Security Settings** dialog box, select **Exit** to close.
 
 ## More information
 
