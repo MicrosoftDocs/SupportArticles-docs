@@ -31,7 +31,7 @@ Target files will be locked when the antivirus software is scanning. Builds may 
 ## Exclusion list
 
 > [!WARNING]
-> This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
+> Excluding a file or process from antivirus scanning could make your device or data more vulnerable. You should evaluate the risks and use discretion when implementing exclusions, and only exclude files that you're confident are safe.
 
 If you encounter the issue described above, you may have to configure your antivirus software to exclude the following processes, folders and their sub-folders from antivirus scanning.
 
