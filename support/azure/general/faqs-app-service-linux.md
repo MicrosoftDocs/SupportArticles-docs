@@ -33,17 +33,16 @@ These commands or scripts are executed after the built-in Docker container is st
 
 ## Management
 
-### What happens when I press the restart button in the Azure portal?**
+### What happens when I press the restart button in the Azure portal?
 
 This action is the same as a Docker restart.
 
-### Can I use Secure Shell (SSH) to connect to the app container virtual machine (VM)?**
+### Can I use Secure Shell (SSH) to connect to the app container virtual machine (VM)?
 
 Yes, you can do that through the source control management (SCM) site.
 
 > [!NOTE]
 > You can also connect to the app container directly from your local development machine using SSH, SFTP, or Visual Studio Code (for live debugging Node.js apps). For more information, see [Remote debugging and SSH in App Service on Linux](https://azure.github.io/AppService/2018/05/07/New-SSH-Experience-and-Remote-Debugging-for-Linux-Web-Apps.html).
->
 
 ### How can I create a Linux App Service plan through an SDK or an Azure Resource Manager template?
 
@@ -113,7 +112,7 @@ Provide the full registry URL, including `http://` or `https://`.
 
 ### What is the format for the image name in the private registry option?
 
-Add the full image name, including the private registry URL (for example, myacr.azurecr.io/dotnet:latest). Image names that use a custom port [cannot be entered through the portal](https://feedback.azure.com/forums/169385-web-apps/suggestions/31304650). To set `docker-custom-image-name`, use the [az command-line tool](/cli/azure/webapp/config/container#az-webapp-config-container-set).
+Add the full image name, including the private registry URL (for example, myacr.azurecr.io/dotnet:latest). Image names that use a custom port cannot be entered through the portal. To set `docker-custom-image-name`, use the [az command-line tool](/cli/azure/webapp/config/container#az-webapp-config-container-set).
 
 ### Can I expose more than one port on my custom container image?
 
@@ -121,7 +120,7 @@ We don't support exposing more than one port.
 
 ### Can I bring my own storage?
 
-Yes, [bring your own storage](/azure/app-service/configure-connect-to-azure-storage) is in preview.
+Yes, [bringing your own storage](/azure/app-service/configure-connect-to-azure-storage) is in preview.
 
 ### Why can't I browse my custom container's file system or running processes from the SCM site?
 
@@ -144,7 +143,7 @@ In order to use ACR with multi-container, **all container images** need to be ho
 Create the following application settings:
 
 - DOCKER_REGISTRY_SERVER_USERNAME
-- DOCKER_REGISTRY_SERVER_URL (full URL, ex: `https://<server-name>.azurecr.io`)
+- DOCKER_REGISTRY_SERVER_URL (full URL, for example: `https://<server-name>.azurecr.io`)
 - DOCKER_REGISTRY_SERVER_PASSWORD (enable admin access in ACR settings)
 
 Within the configuration file, reference your ACR image like the following example:

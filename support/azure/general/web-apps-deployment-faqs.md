@@ -80,7 +80,7 @@ You have two options for using continuous deployment with Azure DevOps:
 
 Continuous code deployment for both these options depends on existing developer workflows and check-in procedures. For more information, see these articles:
 
-- [Implement continuous deployment of your app to an Azure website](https://www.visualstudio.com/docs/release/examples/azure/azure-web-apps-from-build-and-release-hubs)
+- [Implement continuous deployment of your app to an Azure website](/azure/devops/pipelines/?view=azure-devops)
 - [Set up an Azure DevOps organization so it can deploy to a web app](https://github.com/projectkudu/kudu/wiki/Setting-up-a-VSTS-account-so-it-can-deploy-to-a-Web-App)
 
 ## How do I use FTP or FTPS to deploy my app to App Service?

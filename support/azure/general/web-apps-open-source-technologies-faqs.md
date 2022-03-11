@@ -137,9 +137,7 @@ For portal **App settings** deployments:
 
 You might see the following message in your Tomcat logs:
 
-```output
-The web application[ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak,the JDBC Driver has been forcibly unregistered
-```
+> The web application[ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak,the JDBC Driver has been forcibly unregistered
 
 To resolve the error, follow these steps:
 
