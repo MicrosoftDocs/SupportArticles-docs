@@ -6,7 +6,8 @@ ms.date: 02/15/2022
 ms.author: genli
 author: genlin
 ms.reviewer: katpa, v-abhjoa
-appliesto: Azure Stack HCI, version 21H2
+appliesto:
+- Azure Stack HCI, version 21H2
 ---
 # Error c0000034 when performing Kernel Soft Reboot
 
