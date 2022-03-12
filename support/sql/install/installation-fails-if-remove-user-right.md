@@ -107,7 +107,7 @@ To add the rights to the Setup account, follow these steps:
 
   - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the UNC share?
 
-    This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can run a backup of the directory. The Setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions) when you back up the default directory.
+    This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that the Service account can run a backup of the directory. The Setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions) when you back up the default directory.
 
     > [!NOTE]
     > **SeSecurityPrivilege** is required to change the `get/set ACLs` from the directories and subfolders. This is true even if users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and audit information from the directory.
