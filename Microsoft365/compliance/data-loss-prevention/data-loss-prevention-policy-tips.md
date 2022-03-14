@@ -40,7 +40,7 @@ Policy is configured by using **User notifications**, but the status of the poli
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/user-notifications.png" alt-text="Screenshot of user notifications.":::
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot of the option where test or turn on policy that you want to select.":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot of the window titled Test or turn on the policy. The status titled Test it out first is highlighted in the policy status.":::
 
 A policy configuration error might also occur if the policy is configured by using two or more rules that detect the same sensitive data types that have the same **Instance count** value and confidence level.
 
@@ -102,7 +102,7 @@ If DLP policy tips don't work as expected, Fiddler is a useful tool to help you 
 
    :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/response.png" alt-text="A screenshot of Response in which the DetectedClassificationIds value is highlighted.":::
 
-If you don't find the `GetDLPPolicyTip` call, and if the `DetectedClassificationIds` value is empty in the response, follow these steps to resolve this issue:
+If you don't find the `GetDLPPolicyTip` call, and if the `DetectedClassificationIds` value field is empty in the response, follow these steps to resolve this issue:
 
 1. Check whether the DLP policy is enabled and configured correctly.
 2. Check whether your users enter the correct sensitive information and valid recipients or senders to trigger the policy.
