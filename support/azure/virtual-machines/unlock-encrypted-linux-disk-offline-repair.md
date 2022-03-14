@@ -17,6 +17,12 @@ ms.author: diambroi
 
 This article describes how to unlock an Azure Disk Encryption (ADE)-enabled OS disk for offline repair.
 
+Azure Disk Encryption can be applied to Microsoft endorsed Linux virtual machines (VMs). Here are some basic requirements to enable Azure Disk Encryption in Linux VMs:
+
+- Azure Key Vault 
+- Azure CLI or Windows PowerShell cmdlets 
+- [Device-mapper (DM)-Crypt](https://gitlab.com/cryptsetup/cryptsetup/-/wikis/DMCrypt)
+
 ## Symptoms
 
 If ADE is enabled on the OS disk, you might receive the following error messages after you try to mount the disk on a repair VM:  
@@ -95,7 +101,7 @@ Choose one of the following methods to unlock the encrypted disk:
 
 ## <a name="method1"></a> Method 1: Unlock the encrypted disk automatically by using az vm repair command
 
-This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the OS disk of the failed Linux VM to that repair VM, and then unlock the disk if it's encrypted. This method requires using a public IP address for the repair VM, and it unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped by using a key encryption key (KEK).  
+This method relies on [az vm repair](/cli/azure/vm/repair) commands to automatically create a repair VM, attach the OS disk of the failed Linux VM to that repair VM, and then unlock the disk if it's encrypted. This method requires using a public IP address for the repair VM, and it unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped by using a key encryption key (KEK).  
 
 To repair the VM by using this automated method, follow the steps in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
@@ -197,6 +203,8 @@ You must have both the key file and the header file to unlock the encrypted disk
     -rwxr-xr-x 1 root root 148 Aug  4 01:04 CRITICAL_DATA_WARNING_README.txt 
     -r-xr-xr-x 1 root root 172 Aug  4 01:04 LinuxPassPhraseFileName
     ```
+  
+   You may see multiple "LinuxPassPhraseFileName" if more than one disk is attached to the encrypted VM. The "LinuxPassPhraseFileName" will be enumerated according to the number of disks in the same order as their Logical Unit Numbers (LUNs).
   
 ### Identify the header file
 

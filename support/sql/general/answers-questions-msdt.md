@@ -2,7 +2,6 @@
 title: Answers questions about the MSDT
 description: This article provides the answers and questions about the Microsoft Support Diagnostics Tool.
 ms.date: 01/20/2021
-ms.prod-support-area-path: 
 ms.reviewer: kaushika
 ---
 # Frequently asked questions about the Microsoft Support Diagnostic Tool

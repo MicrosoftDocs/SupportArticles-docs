@@ -2,7 +2,6 @@
 title: Upgrade System Center 2012 Configuration Manager to SP1
 description: Describes steps to upgrade System Center 2012 Configuration Manager to System Center 2012 Configuration Manager Service Pack 1.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: erinwi
 ---
 # How to upgrade System Center 2012 Configuration Manager to SP1

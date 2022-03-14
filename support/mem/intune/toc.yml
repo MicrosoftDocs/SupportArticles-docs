@@ -1,6 +1,8 @@
 items:
 - name: Welcome
   href: welcome-intune.yml
+- name: Known issues with Intune
+  href: known-issues.md
 - name: App management
   items:
   - name: App management overview
@@ -235,6 +237,8 @@ items:
       href: troubleshoot-windows-enrollment-errors.md
     - name: Windows user not authorized to enroll
       href: windows-user-cannot-enroll.md
+    - name: '"Set up for work or school" enrollment is blocked'
+      href: troubleshoot-windows-work-school.md
     - name: Troubleshoot Windows 10 group policy-based auto-enrollment
       href: troubleshoot-windows-auto-enrollment.md
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
@@ -273,8 +277,6 @@ items:
       href: troubleshoot-exchange-connector.md
     - name: Common errors with the Exchange Connector
       href: troubleshoot-exchange-connector-common-errors.md
-    - name: Can't move an Intune Exchange connector
-      href: fails-moving-intune-exchange-connector.md
     - name: Could not retrieve access token for Graph API
       href: could-not-retrieve-access-token.md
     - name: Troubleshoot Jamf Pro integration
@@ -297,7 +299,7 @@ items:
     href: error-deploying-password-policy.md
   - name: Users are prompted to enroll when accessing Microsoft 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
-- name: General guidance
+- name: Additional guidance
   items:
   - name: Attributes synced from AD DS to Intune
     href: intune-synced-attributes-list.md
@@ -313,6 +315,8 @@ items:
     href: error-query-intune-data-warehouse.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
+  - name: Troubleshoot 503 errors for Intune NAC integration
+    href: nac-integration-errors.md
 - name: Getting support
   items:
   - name: Things to try before calling Intune support

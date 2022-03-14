@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: mimckitt
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: linux

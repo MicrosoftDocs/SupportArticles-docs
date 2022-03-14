@@ -2,7 +2,6 @@
 title: How to start Azure Windows VM with Last Known Good Configuration
 description: Describes how to start a VM that fails to boot by using the Last Known Good Configuration feature.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

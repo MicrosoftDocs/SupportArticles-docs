@@ -5,7 +5,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
@@ -79,6 +78,7 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
     ```powershell
 	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\services\termservice' -name "ObjectName" "NT Authority\NetworkService" -Type String -force
    ```
+ 1. Restart VM to make the registry changes take effect.
 
 ## Need help?
 

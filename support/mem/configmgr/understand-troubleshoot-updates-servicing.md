@@ -2,7 +2,6 @@
 title: Understand and troubleshoot Updates and Servicing
 description: This article helps administrators understand Updates and Servicing and troubleshoot some common issues in Configuration Manager.
 ms.date: 05/25/2020
-ms.prod-support-area-path:
 ---
 # Understand and troubleshoot Updates and Servicing in Configuration Manager
 
@@ -514,7 +513,7 @@ The following steps explain the process of extracting the update to run prerequi
 
 ### Step 1: Notification
 
-After you select the update package and select **Run prerequisite check**, the following entries are logged in Ssmsdbmon.log:
+After you select the update package and select **Run prerequisite check**, the following entries are logged in smsdbmon.log:
 
 > RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2 ][1009663]  
 > Modified trigger definition for Hierarchy Manager (CFD)[CM_UpdatePackages_UPD_HMAN]: table CM_UpdatePackages(State) on update, file ESC in dir C:\Program Files\Microsoft Configuration Manager  

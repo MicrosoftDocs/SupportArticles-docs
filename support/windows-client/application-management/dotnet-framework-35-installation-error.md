@@ -14,6 +14,10 @@ ms.custom: sap:.net-framework-installation, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # .NET Framework 3.5 installation errors: 0x800F0906, 0x800F081F, 0x800F0907, 0x800F0922
 
 This article helps fix Microsoft .NET Framework 3.5 installation errors.
@@ -23,6 +27,7 @@ _Original KB number:_ &nbsp; 2734782
 
 > [!NOTE]
 > Installation of the .NET Framework may throw errors that are not listed in this article, but you might be able to try the following steps to fix those errors as well.
+> Microsoft is releasing Out-of-band (OOB) updates for .NET Framework. [.NET Framework Out-of-band update to address issues after installing the January 11, 2022 Windows update](/windows/release-health/windows-message-center#359)
 
 ## Resolutions for Windows Server
 

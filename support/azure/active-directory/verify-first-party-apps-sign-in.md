@@ -1,8 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 04/02/2021
-ms.prod-support-area-path: 
+ms.date: 02/09/2022
 ms.reviewer: jafritts
 ms.service: active-directory
 ms.subservice: compliance
@@ -67,14 +66,15 @@ The following table lists some, but not all, first party Microsoft applications.
 |Application Name|Application IDs|
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
+|Azure Advanced Threat Protection|7b7531ad-5926-4f2d-8a1d-38495ad33e17|
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
 |Azure Lab Services Portal|835b2a73-6e10-4aa5-a979-21dfda45231c|
 |Azure Portal|c44b4083-3bb0-49c1-b47d-974e53cbdf3c|
 |AzureSupportCenter|37182072-3c9c-4f6a-a4b3-b3f91cacffce|
 |Bing|9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7|
-|Common Data Service|00000007-0000-0000-c000-000000000000|
 |CPIM Service|bb2a2e3a-c5e7-4f0a-88e0-8e01fd3fc1f4|
 |CRM Power BI Integration|e64aa8bc-8eb4-40e2-898b-cf261a25954f|
+|Dataverse|00000007-0000-0000-c000-000000000000|
 |Enterprise Roaming and Backup|60c8bde5-3167-4f92-8fdb-059f6176dc0f|
 |IAM Supportability|a57aca87-cbc0-4f3c-8b9e-dc095fdc8978|
 |IrisSelectionFrontDoor|16aeb910-ce68-41d1-9ac3-9e1673ac9575|

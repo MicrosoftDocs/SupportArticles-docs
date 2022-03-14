@@ -5,7 +5,7 @@ ms.date: 12/29/2021
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 manager: dcscontentpm
-ms.prod-support-area-path: Desktop app UI development
+ms.custom: sap:Desktop app UI development
 ms.reviewer: hihayak
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---

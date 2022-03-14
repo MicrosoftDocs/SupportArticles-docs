@@ -6,7 +6,6 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
@@ -105,7 +104,7 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
 1. Once downloaded, use either Command Prompt or PowerShell to enter the `az login` command and then sign in with your account credentials.
 1. Once logged in, enter the following commands:
 
-   ```powershell
+   ```azurecli
    az vm image list-publishers --location "<LOCATION>"
    az vm image list-offers --location "West US" --publisher "<PUBLISHER NAME>"
    az vm image list-skus --location "West US" --publisher "<PUBLISHER NAME>" --offer "<OFFER NAME>"
@@ -116,7 +115,7 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
 
   See the following example:
 
-  ```powershell
+  ```azurecli
   az vm image list-publishers --location "West US"
   az vm image list-offers --location "West US" --publisher "MicrosoftWindowsServer"
   az vm image list-skus --location "West US" --publisher "MicrosoftWindowsServer" --offer "WindowsServer"

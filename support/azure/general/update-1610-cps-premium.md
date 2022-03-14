@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.prod-support-area-path: 
 ms.reviewer: ashtons
 ---
 # Update 1610 for Cloud Platform System (CPS) Premium
@@ -41,7 +40,7 @@ A new AFM firmware update was released for Update 1609. If you applied the netwo
 
 Follow the steps in the "Update network switch firmware" section of the "1609" version of the CPS Premium Administrators Guide that was provided by your account team. Do not use the instructions from an earlier version of the Administrators Guide.
 
-For the download location of the AFM files for Update 1610, see [http://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/](http://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/).
+For the download location of the AFM files for Update 1610, see [https://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/](https://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/).
 
 AFM will be updated to version 2.1(0.0)P2. The following table lists the recommended firmware versions that switches should run after the update.
 

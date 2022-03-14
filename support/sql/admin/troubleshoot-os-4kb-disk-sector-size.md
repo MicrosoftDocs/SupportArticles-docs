@@ -2,7 +2,7 @@
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4 KB sector size.
 ms.date: 12/22/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth 
 ms.prod: sql
 author: WilliamDAssafMSFT
@@ -106,7 +106,7 @@ Consider _one_ of the following solutions:
   
     1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
     1. On the **Edit** menu, point to **New**, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
-    1. Modify the new value, type in `4095`. Click **OK** and close the Registry editor.
+    1. Modify the new value, type in `* 4095`. Click **OK** and close the Registry editor.
   
     **Command Prompt as Administrator**
     

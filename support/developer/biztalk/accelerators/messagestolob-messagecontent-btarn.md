@@ -2,7 +2,7 @@
 title: MessagesToLOB and MessageContent in BTARN
 description: MessagesToLOB table in the BTARNDATA SQL Server database contains messages generated during private processing. MessageContent table in the BTARNARCHIVE SQL Server database contains processed message content (both for successful or failed messages). These two tables continue to grow as messages are processed.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ---
 # Maintaining the MessagesToLOB and MessageContent Tables in BTARN
 

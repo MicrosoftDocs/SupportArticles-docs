@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
-editor: na
 tags: ''
 ms.service: virtual-machines
 ms.collection: linux
@@ -187,13 +186,13 @@ The following categories of rules are currently supported:
 
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
-    | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8 |
+    | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
     | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8                                    |
     | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2                               |
     | Ubuntu                     | 14.04, 16.04, 18.04, 20.04                               |
     | Debian                     | 8, 9, 10 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`]                                      |
-    | AlmaLinux                  | 8.4                                               |
+    | AlmaLinux                  | 8.4, 8.5                                               |
     |                            |                                                   |
 
 >[!Note]
