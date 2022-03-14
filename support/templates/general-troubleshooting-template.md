@@ -1,7 +1,7 @@
 ---
-title: #Required; this page title is displayed in search results. Alwaysinclude the word "troubleshoot" in this line.
+title: #Required; this page title is displayed in search results; Always include the word "troubleshoot" in this line.
 description: #Required; this article description is displayed in search results.
-author: #Required; your GitHub user alias —correct capitalization is needed.
+author: #Required; your GitHub user alias — correct capitalization is needed.
 ms.author: #Required; Microsoft alias of the author.
 ms.topic: troubleshooting #Required.
 ms.date: #Required; enter the date in the mm/dd/yyyy format.
