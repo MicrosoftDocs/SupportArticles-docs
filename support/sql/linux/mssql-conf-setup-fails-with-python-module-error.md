@@ -1,30 +1,30 @@
 ---
 title: mssql-conf setup fails with Python module error
-description: This article helps you resolve the `mssql-conf` setup fails with Python module error. 
-ms.date: 03/04/2022
+description: This article helps you resolve the mssql-conf setup fails with Python module error. 
+ms.date: 03/14/2022
 ms.custom: sap:SQL Server 2019 on Linux 
-ms.technology: 
-ms.reviewer: 
-ms.topic: article
-ms.prod: sql 
+author: ronking-zhu
+ms.author: v-jayaramanp
+ms.reviewer: rl-msft
+ms.prod: sql
+ms.topic: troubleshooting
 ---
 
-# "Module object has no attribute 'run'" error in `mssql-conf` Setup using Python module
+# "Module object has no attribute run" error in mssql-conf setup using Python module
 
-This article helps you to resolve an error that occurs when you try to run `mssql-conf` Setup by using the Python module. This article also describes the Python requirements for Microsoft SQL Server on Linux, and provides a workaround if you're using an early Python version when you try to configure SQL Server on Linux.
+This article helps you to resolve an error that occurs when you try to run `mssql-conf` setup by using the Python module. This article also describes the Python requirements for Microsoft SQL Server on Linux, and provides a workaround if you're using an early Python version when you try to configure SQL Server on Linux.
 
-_Applies to: SQL Server 2019 on Linux  
-_Original KB number:
+_Applies to_: SQL Server 2019 on Linux  
 
 ## Symptoms
 
-When you try to run `mssql-conf` Setup after you install Microsoft SQL Server 2019, you receive a "module object has no attribute 'run'" error message if you're using a Python version that's earlier than 3.5.
+When you try to run `mssql-conf` setup after you install Microsoft SQL Server 2019, you receive a "module object has no attribute run" error message if you're using a Python version that's earlier than 3.5.
 
 Consider the following scenarios:
 
 - You install SQL Server on Linux by following the steps in [Installation guidance for SQL Server on Linux](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true).  
 
-- You try to run `/opt/mssql/bin/mssql-conf` Setup. However, you experience a module dependency:
+- You try to run `/opt/mssql/bin/mssql-conf` setup. However, you experience a module dependency:
 
 ``` bash
 testslesvm2:~ # /opt/mssql/bin/mssql-conf setup
@@ -62,7 +62,7 @@ AttributeError: 'module' object has no attribute 'run'
 ```
 
 > [!NOTE]
-> The `mssql-conf` Setup error can occur on systems on which the Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) includes Python 3 or another version that is earlier than 3.5. For more information about SQL Server on Linux-supported platforms, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true#supportedplatforms).
+> The `mssql-conf` setup error can occur on systems on which the Microsoft SQL Server on Linux supported platform (RHEL, SLES, Ubuntu) includes Python 3 or another version that is earlier than 3.5. For more information about SQL Server on Linux-supported platforms, see [Supported platform](/sql/linux/sql-server-linux-setup?view=sql-server-ver15&preserve-view=true#supportedplatforms).
 
 ## Cause
 
@@ -80,7 +80,7 @@ You have two options to work around this issue:
 
 ## Create symlink (soft link) of Python 3
 
-Follow these steps to create a session-specific symlink in which Python 3 points to Python 3.5 or a later version, and then run the `mssql-conf` Setup.
+Follow these steps to create a session-specific symlink in which Python 3 points to Python 3.5 or a later version, and then run the `mssql-conf` setup.
 
 1. Install Python 3.5 or a later version. In this example, install Python 3.6:
 
@@ -88,7 +88,7 @@ Follow these steps to create a session-specific symlink in which Python 3 points
     zypper in python36
     ```
 
-1. Install SQL Server:
+1. Install SQL Server.
 
     ```bash
     sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
@@ -114,7 +114,7 @@ Follow these steps to create a session-specific symlink in which Python 3 points
     Python 3.6.15
     ```
 
-1. Run the `mssql-conf` Setup or any other `mssql-conf`-based commands:
+1. Run the `mssql-conf` setup or any other `mssql-conf`-based commands:
 
      ```bash
      /opt/mssql/bin/mssql-conf setup
