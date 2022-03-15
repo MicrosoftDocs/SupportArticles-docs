@@ -17,7 +17,7 @@ Check the error message that you received during the upgrade process and follow 
 
 This article requires Azure CLI version 2.0.65 or later. Run `az --version` to find the version. If you need to install or upgrade Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
-For detail upgrade process, see [What happens during AKS cluster upgrade](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
+For detail upgrade process, see [What happens during AKS cluster upgrade](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
 ## Error code: PodDrainFailure
 
@@ -25,7 +25,7 @@ For detail upgrade process, see [What happens during AKS cluster upgrade](https:
 
 The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy and refuse to be drained.
 
-Run `kubelect get pda -A`, check if **Allowed Disruption** is 1 or a greater number.  For more information, see [Plan for availability using pod disruption budgets]( https://docs.microsoft.com/ azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+Run `kubelect get pda -A`, check if **Allowed Disruption** is 1 or a greater number.  For more information, see [Plan for availability using pod disruption budgets](azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
 If **Allowed Disruption** is 0, the node drain will fail during the upgrade process.
 
@@ -96,10 +96,9 @@ For more informaiton see [Plan IP addressing for the cluster](/azure/aks/configu
 
 ### Workaround
 
-To work around the issue, use of the following methods:
+To work around the issue, Reduce the cluster nodes to allow enough IPs to be available for the upgrade.
 
--  Reduce the cluster nodes to allow enough IPs to be available for the upgrade.
-- If scaling down is not an option, and your virtual network CIDR has enough IP addresses, try to add a node pool with a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
+If scaling down is not an option, and your virtual network CIDR has enough IP addresses, try to add a node pool with a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
 - 
 1. Add a new user node pool in the virtual network on a larger subnet.
 1. Switch the original node pool to one of type system
