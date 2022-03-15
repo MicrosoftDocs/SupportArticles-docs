@@ -99,7 +99,7 @@ For more information, see [Plan IP addressing for the cluster](/azure/aks/config
 To work around the issue, reduce the cluster nodes to allow enough IP addresses to be available for the upgrade.
 
 If scaling down is not an option, and your virtual network CIDR has enough IP addresses, try to add a node pool with a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
-- 
+
 1. Add a new user node pool in the virtual network on a larger subnet.
 1. Switch the original node pool to one of type system.
 1. Scale up the user node pool.
