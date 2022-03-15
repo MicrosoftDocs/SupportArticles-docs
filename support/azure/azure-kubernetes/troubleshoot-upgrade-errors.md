@@ -9,23 +9,27 @@ ms.service: container-service
 ---
 # Troubleshooting Azure Kubernetes Service cluster upgrade errors
 
-This article provides guidance for troubleshooting the most common errors when you upgrade an Azure Kubernetes Service cluster .
+This article provides guidance for troubleshooting the most common errors that occur when you upgrade an Azure Kubernetes Service (AKS) cluster. 
 
 ## Before you begin
 
-Check the error message that you received during the upgrade process and follow the scenarios below. This article requires Azure CLI version 2.0.65 or later. Run `az --version` to find the version. If you need to install or upgrade Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli)
+Check the error message that you received during the upgrade process and follow the appropriate steps below.
+
+This article requires Azure CLI version 2.0.65 or later. Run `az --version` to find the version. If you need to install or upgrade Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
+
+For detail upgrade process, see [What happens during AKS cluster upgrade](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
 ## Error code: PodDrainFailure
 
-## Cause
+### Cause
 
-The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy and refuse to be drained. 
+The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy and refuse to be drained.
 
 Run `kubelect get pda -A`, check if **Allowed Disruption** is 1 or a greater number.  For more information, see [Plan for availability using pod disruption budgets]( https://docs.microsoft.com/ azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
-If the Allowed Disruption is 0, the node drain will fail during the upgrade process.
+If **Allowed Disruption** is 0, the node drain will fail during the upgrade process.
 
-## Workaround
+### Workaround
 
  Use one of the following methods to work around the issues:
 
@@ -42,7 +46,7 @@ az aks upgrade --resource-group myResourceGroup --name myAKSCluster --kubernetes
 
 ### Cause
 
-The error might occur if you reached the maximum number of public IP addresses that are allowed for your subscription. 
+The error might occur if you reached the maximum number of public IP addresses that are allowed for your subscription.
 
 ### Resolution
 
@@ -77,7 +81,8 @@ In this case, you need to submit a support ticket to increase the quote for Comp
 Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'. Error: VMSSAgentPoolReconciler retry failed: Code='SubnetIsFull' Message=’\<SUBNET NAME>\ with address prefix \<PREFIX>\ does not have enough capacity for XXX IP addresses.' Details=[]
 
 ### Cause
-This error occurs if your cluster doesn’t have enough IPs to create a new buffer node. For more information about the upgrade process, see https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster
+
+This error occurs if your cluster doesn’t have enough IP addresses to create a new buffer node. 
 
 The number of IP addresses required should include considerations for upgrade and scaling operations. If you set the IP address range to only support a fixed number of nodes, you cannot upgrade or scale your cluster.
 
@@ -101,7 +106,7 @@ To work around the issue, use of the following methods:
 1. Scale up the user node pool.
 1. Scale down the original node pool.
 
-## The upgrade fails due to NSG rules (for public cluster)
+## Upgrade fails due to NSG rules (for public cluster)
 
 ### Cause
 
