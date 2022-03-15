@@ -19,6 +19,29 @@ This article requires Azure CLI version 2.0.65 or later. Run `az --version` to f
 
 For detail upgrade process, see [What happens during AKS cluster upgrade](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
+## Upgrade fails due to NSG rules (for public cluster)
+
+### Cause
+
+A NSG rule is blocking the cluster to download required resources from Internet.
+
+### Resolution
+
+To resolve this issue, follow these steps:
+
+1. Run `az network nsg list -o table`, and then locate the NSG that linked to your cluster. The NSG is placed in a resource group named `MC_<RG name>_<your AKS cluster name>`.
+
+1. View the rules of the NSG:
+
+    ```
+    az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
+    ```
+    The following is the default rules:
+
+    :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="The screenshot of the default NSG rules":::
+
+1. If you have the default rules, skip this step. if not, revise and remove the rules that are blocking the internet traffic.
+
 ## Error code: PodDrainFailure
 
 ### Cause
@@ -39,7 +62,7 @@ If **Allowed Disruption** is 0, the node drain will fail during the upgrade proc
 After that, try to upgrade the cluster to the same version that failed before. This process will trigger a reconciliation.
 
 ```
-az aks upgrade --resource-group myResourceGroup --name myAKSCluster --kubernetes-version <KUBERNETES_VERSION>
+az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
 
 ## Error code: PublicIPCountLimitReached
@@ -52,10 +75,10 @@ The error occurs if you reached the maximum number of public IP addresses that a
 
 To raise the limit or quota for your subscription, go to the [Azure portal]( https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest), file a **Service and subscription limits (quotas)** support ticket, and set the quota type to **Networking**.
 
-After the quota change takes effect , try to upgrade the cluster to the same version that failed before. This process will trigger a reconciliation.
+After the quota change takes effect, try to upgrade the cluster to the same version that failed before. This process will trigger a reconciliation.
 
 ```
-az aks upgrade --resource-group myResourceGroup --name myAKSCluster --kubernetes-version <KUBERNETES_VERSION>
+az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
  
 ## Error code: Quotaexceeded
@@ -88,9 +111,9 @@ The number of IP addresses required should include considerations for upgrade an
 
 - When you upgrade your AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node, and an older node is removed from the cluster. This rolling upgrade process requires a minimum of one extra block of IP addresses to be available. Your node count is then n + 1.
 
-- This consideration is particularly important when you use Windows Server node pools. Windows Server nodes in AKS do not automatically apply Windows Updates, instead you perform an upgrade on the node pool. This upgrade deploys new nodes with the latest Window Server 2019 base node image and security patches. For more information on upgrading a Windows Server node pool, see Upgrade a node pool in AKS.
+- This consideration is important when you use Windows Server node pools. Windows Server nodes in AKS do not automatically apply Windows Updates, instead you perform an upgrade on the node pool. This upgrade deploys new nodes with the latest Window Server 2019 base node image and security patches. For more information on upgrading a Windows Server node pool, see Upgrade a node pool in AKS.
 
-- When you scale an AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node. Your IP address range needs to take into consideration how you may want to scale up the number of nodes and pods your cluster can support. One additional node for upgrade operations should also be included. Your node count is then n + number-of-additional-scaled-nodes-you-anticipate + 1.
+- When you scale an AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node. Your IP address range needs to take into consideration: how you may want to scale up the number of nodes and pods your cluster can support. One additional node for upgrade operations should also be included. Your node count should be `n + <number-of-additional-scaled-nodes-you-anticipate> + 1`.
 
 For more information, see [Plan IP addressing for the cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-)
 
@@ -104,26 +127,3 @@ If scaling down is not an option, and your virtual network CIDR has enough IP ad
 1. Switch the original node pool to one of type system.
 1. Scale up the user node pool.
 1. Scale down the original node pool.
-
-## Upgrade fails due to NSG rules (for public cluster)
-
-### Cause
-
-A NSG rule is blocking the cluster to download required resources from Internet.
-
-### Resolution
-
-To resolve this issue, follow these steps:
-
-1. Run `az network nsg list -o table`, and then locate the NSG that linked to your cluster. The NSG is placed in a resource group named `MC_<RG name>_<your AKS cluster name>`.
-
-1. View the rules of the NSG:
-
-    ```
-    az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
-    ```
-    The following is the default rules:
-
-    :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="The screenshot of the default NSG rules":::
-
-1. If you have default rules, the problem should not caused by the NSG rules. if not, revise and remove the rules that are blocking the internet traffic.
