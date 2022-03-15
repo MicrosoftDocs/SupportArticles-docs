@@ -248,6 +248,8 @@
     href: unable-communicate-windows-service.md
   - name: Logon failure with 1789 error
     href: error-code-1789-configuration-wizard.md
+  - name: Model database corruption in SQLLocalDB
+    href: resolve-model-database-corruption-sqllocaldb.md
   - name: Must join domain error when installing sync tool
     href: computer-must-joined-domain.md
   - name: Number is added to username
