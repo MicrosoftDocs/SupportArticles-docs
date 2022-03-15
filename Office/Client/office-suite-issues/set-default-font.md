@@ -47,7 +47,7 @@ For more information, see [Change the default settings for new documents](https:
   1. Create a font policy from [Policy Management](https://config.office.com/officeSettings/officepolicies).
   2. Apply the cloud policy to a security group that target users are members of.
 
-     :::image type="content" source="media/set-default-font/policy-management.png" alt-text="Screenshot to edit policy configuration in Policy Management.":::
+     :::image type="content" source="media/set-default-font/policy-management.svg" alt-text="Screenshot to edit policy configuration in Policy Management.":::
 
 - **Set a GPO (for Excel 2016):**
 
@@ -55,7 +55,7 @@ For more information, see [Change the default settings for new documents](https:
   |---|---|---|---|---|---|---|---|---|---|---|
   |excel16.admx|Font|User|Microsoft Excel 2016\Excel Options\General|General|`HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\excel\options\font`|Name, Size<br/>Arial, 10||[ ]|At least Windows Server 2008 R2 or Windows 7|Specifies the "Standard font" font name and size.|
 
-  :::image type="content" source="media/set-default-font/gpo-font.png" alt-text="Screenshot to set Font Group Policy Object in Excel 2016.":::
+  :::image type="content" source="media/set-default-font/gpo-font.svg" alt-text="Screenshot to set Font Group Policy Object in Excel 2016.":::
 
 ## Set the default font for PowerPoint (for both Office 365 and Office 2016)
 
@@ -81,6 +81,6 @@ To set the default theme, follow these steps:
 7. Enter the name "**Default Theme**" to manually name the file, and then save it. If a Default Theme.potx file exists, you can also select the Default Theme.potx file, and then select **Save** to overwrite it.
 8. Close PowerPoint, and then select **File** > **New**. Now, you see the default template that's displayed as an option. 
 
-   :::image type="content" source="media/set-default-font/default-template.png" alt-text="Screenshot shows the Default Theme that's displayed as an option." border="false":::
+   :::image type="content" source="media/set-default-font/default-template.svg" alt-text="Screenshot shows the Default Theme that's displayed as an option." border="false":::
 
 For more information, see [Change the default font in PowerPoint](https://support.office.com/article/Change-the-default-font-in-PowerPoint-8e93c947-c160-4310-8070-afea7da78c33).
