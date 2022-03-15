@@ -23,9 +23,9 @@ For detail upgrade process, see [What happens during AKS cluster upgrade](/azure
 
 ### Cause
 
-The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy and refuse to be drained.
+The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. So it refuses to be drained.
 
-Run `kubelect get pda -A`, check if **Allowed Disruption** is 1 or a greater number.  For more information, see [Plan for availability using pod disruption budgets](azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+Run `kubelect get pda -A`, check if **Allowed Disruption** is 1 or a greater number.  For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
 If **Allowed Disruption** is 0, the node drain will fail during the upgrade process.
 
@@ -46,7 +46,7 @@ az aks upgrade --resource-group myResourceGroup --name myAKSCluster --kubernetes
 
 ### Cause
 
-The error might occur if you reached the maximum number of public IP addresses that are allowed for your subscription.
+The error occurs if you reached the maximum number of public IP addresses that are allowed for your subscription.
 
 ### Resolution
 
@@ -62,7 +62,7 @@ az aks upgrade --resource-group myResourceGroup --name myAKSCluster --kubernetes
 
 ### Cause
 
-The issue occurs if the quota is reached and your subscription doesn’t have available resources that required for the cluster upgrade operation.
+The issue occurs if the quota is reached. Your subscription doesn’t have available resources that required for upgrading.
 
 ### Resolution
 
@@ -82,26 +82,26 @@ Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'.
 
 ### Cause
 
-This error occurs if your cluster doesn’t have enough IP addresses to create a new buffer node. 
+This error occurs if your cluster doesn’t have enough IP addresses to create a new node.
 
 The number of IP addresses required should include considerations for upgrade and scaling operations. If you set the IP address range to only support a fixed number of nodes, you cannot upgrade or scale your cluster.
 
-- When you upgrade your AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node, and an older node is removed from the cluster. This rolling upgrade process requires a minimum of one additional block of IP addresses to be available. Your node count is then n + 1.
+- When you upgrade your AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node, and an older node is removed from the cluster. This rolling upgrade process requires a minimum of one extra block of IP addresses to be available. Your node count is then n + 1.
 
 - This consideration is particularly important when you use Windows Server node pools. Windows Server nodes in AKS do not automatically apply Windows Updates, instead you perform an upgrade on the node pool. This upgrade deploys new nodes with the latest Window Server 2019 base node image and security patches. For more information on upgrading a Windows Server node pool, see Upgrade a node pool in AKS.
 
 - When you scale an AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node. Your IP address range needs to take into consideration how you may want to scale up the number of nodes and pods your cluster can support. One additional node for upgrade operations should also be included. Your node count is then n + number-of-additional-scaled-nodes-you-anticipate + 1.
 
-For more informaiton see [Plan IP addressing for the cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-)
+For more information, see [Plan IP addressing for the cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-)
 
 ### Workaround
 
-To work around the issue, Reduce the cluster nodes to allow enough IPs to be available for the upgrade.
+To work around the issue, reduce the cluster nodes to allow enough IP addresses to be available for the upgrade.
 
 If scaling down is not an option, and your virtual network CIDR has enough IP addresses, try to add a node pool with a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
 - 
 1. Add a new user node pool in the virtual network on a larger subnet.
-1. Switch the original node pool to one of type system
+1. Switch the original node pool to one of type system.
 1. Scale up the user node pool.
 1. Scale down the original node pool.
 
