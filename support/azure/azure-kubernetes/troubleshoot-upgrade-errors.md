@@ -59,7 +59,7 @@ If **Allowed Disruption** is 0, the node drain will fail during the upgrade proc
 - Delete the pod that cause the problem, and then do a reconciliation.
 - Fix the PDB, and then do a reconciliation.
 
-After that, try to upgrade the cluster to the same version that failed before. This process will trigger a reconciliation.
+After that, try to upgrade the AKS cluster to the same version that you used to upgrade. This process will trigger a reconciliation.
 
 ```
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
@@ -75,7 +75,7 @@ The error occurs if you reached the maximum number of public IP addresses that a
 
 To raise the limit or quota for your subscription, go to the [Azure portal]( https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest), file a **Service and subscription limits (quotas)** support ticket, and set the quota type to **Networking**.
 
-After the quota change takes effect, try to upgrade the cluster to the same version that failed before. This process will trigger a reconciliation.
+After the quota change takes effect, try to upgrade the cluster to the same version that you used to upgrade. This process will trigger a reconciliation.
 
 ```
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
