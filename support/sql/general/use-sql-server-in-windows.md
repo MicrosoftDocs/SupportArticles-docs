@@ -6,6 +6,10 @@ ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Using SQL Server in Windows
 
 This article contains guidance about how to use different versions of Microsoft SQL Server on a computer that is running Windows operating system.
