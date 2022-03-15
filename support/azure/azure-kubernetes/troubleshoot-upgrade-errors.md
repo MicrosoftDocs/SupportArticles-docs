@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot errors when you upgrade Azure Kubernetes Service cluster
+title: Unable to upgrade Azure Kubernetes Service cluster
 description: This article helps you troubleshoot the most common errors when you upgrade an Azure Kubernetes Service cluster.
 ms.date: 03/15/2022
 author: genlin
