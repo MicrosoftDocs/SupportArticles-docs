@@ -9,7 +9,7 @@ ms.service: container-service
 ---
 # Troubleshooting Azure Kubernetes Service cluster upgrade errors
 
-This article provides guidance for troubleshooting the most common errors that occur when you upgrade an Azure Kubernetes Service (AKS) cluster. 
+This article provides guidance for troubleshooting the most common errors that occur when you upgrade an Azure Kubernetes Service (AKS) cluster.
 
 ## Before you begin
 
@@ -36,7 +36,7 @@ To resolve this issue, follow these steps:
     ```
     az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
     ```
-    The following is the default rules:
+    The following picture shows the default rules:
 
     :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="The screenshot of the default NSG rules":::
 
@@ -48,7 +48,7 @@ To resolve this issue, follow these steps:
 
 The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. So it refuses to be drained.
 
-Run `kubelect get pda -A`, check if **Allowed Disruption** is 1 or a greater number.  For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+Run `kubelect get pda -A`, the **Allowed Disruption** value should be 1 or a greater number. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
 If **Allowed Disruption** is 0, the node drain will fail during the upgrade process.
 
@@ -97,7 +97,7 @@ The following is a sample of the error message:
 
 In this case, you need to submit a support ticket to increase the quote for Compute cores.
 
-## Error code: subnetisfull 
+## Error code: subnetisfull
 
 ### Error message
 
