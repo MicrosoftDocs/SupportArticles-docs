@@ -47,7 +47,7 @@ For more information, see [Change the default settings for new documents](https:
   1. Create a font policy from [Policy Management](https://config.office.com/officeSettings/officepolicies).
   2. Apply the cloud policy to a security group that target users are members of.
 
-     :::image type="content" source="media/set-default-font/policy-management.svg" alt-text="Screenshot to edit policy configuration in Policy Management.":::
+     :::image type="content" source="media/set-default-font/policy-management.svg" alt-text="Screenshot to edit policy configuration in Policy Management." border="false":::
 
 - **Set a GPO (for Excel 2016):**
 
@@ -55,7 +55,7 @@ For more information, see [Change the default settings for new documents](https:
   |---|---|---|---|---|---|---|---|---|---|---|
   |excel16.admx|Font|User|Microsoft Excel 2016\Excel Options\General|General|`HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\excel\options\font`|Name, Size<br/>Arial, 10||[ ]|At least Windows Server 2008 R2 or Windows 7|Specifies the "Standard font" font name and size.|
 
-  :::image type="content" source="media/set-default-font/gpo-font.svg" alt-text="Screenshot to set Font Group Policy Object in Excel 2016.":::
+  :::image type="content" source="media/set-default-font/gpo-font.svg" alt-text="Screenshot to set Font Group Policy Object in Excel 2016." border="false":::
 
 ## Set the default font for PowerPoint (for both Office 365 and Office 2016)
 
