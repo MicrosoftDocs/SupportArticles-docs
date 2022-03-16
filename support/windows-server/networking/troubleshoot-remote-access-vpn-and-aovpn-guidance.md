@@ -63,7 +63,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisite
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
 2. We recommend the local machine RemoteSigned PowerShell execution policy.
 
 > [!NOTE]
@@ -76,16 +76,16 @@ Before contacting Microsoft support, you can gather information about your issue
 ### Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open an elevated version of PowerShell, and move it to the *C:\\tss_tool* folder.
+2. Open an elevated PowerShell command prompt, and move it to the *C:\\tss_tool* folder.
 3. Start the traces on the client and the server by using the following cmdlets:
 
-    - DA Client:  
+    - DA client:  
 
         ```powershell
         TSSv2.ps1 -Start -Scenario NET_VPN
         ```
 
-    - DA Server:  
+    - DA server:  
 
         ```powershell
         TSSv2.ps1 -Start -Scenario NET_RAS
