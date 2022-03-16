@@ -6,17 +6,17 @@ ms.reviewer: jarrettr, brianhun, payur
 ---
 # Domain name of resource is changed after installing January 2022 Windows updates
 
-This article describes how to identify and resolve an issue in which resource domain is changed after installing January 2022 Windows updates.
+This article describes how to identify and resolve an issue in which resource domain is changed after you install January 2022 Windows updates.
 
 _Applies to:_ &nbsp; Configuration Manager (current branch)
 
 ## Symptoms
 
-After you install January 2022 or later Windows updates on a Configuration Manager site server, the domain name associated with users, groups, or devices may be changed. This issue occurs when the NetBIOS domain name is different than the first element of the fully qualified domain name (FQDN).
+After you install January 2022 or later Windows updates on a Configuration Manager site server, the domain name associated with users, groups, or devices may be changed. This issue occurs when the NetBIOS domain name is different from the first element of the fully qualified domain name (FQDN).
 
 For example, a resource is in a domain with the NetBIOS domain name `AAA`, but with the FQDN `BBB.contoso.com`. This scenario is known as a disjoint namespace. The resource is discovered as `AAA\User1` or `AAA\Computer1`. After you install January 2022 Windows updates and discovery runs, the resource name may be changed to `BBB\User1` or `BBB\Computer1`.
 
-The domain name of the resource may alternate between `AAA` and `BBB`, which has the effect of removing or adding devices to collections that have rules based on a domain membership.
+The domain name of the resource may alternate between `AAA` and `BBB`, which removes or adds devices to collections that have rules based on a domain membership.
 
 ## Cause
 
