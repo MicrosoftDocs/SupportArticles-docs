@@ -165,7 +165,7 @@ Before contacting Microsoft support, you can gather information about your issue
     TSSv2.ps1 -Start -Scenario NET_SdnNC
     ```
 
-4. Accept the EULA if the traces are run for the first time on the server or the client.
+4. Accept the EULA if the traces are run for the first time on the computer.
 5. Allow recording (PSR or video).
 6. Reproduce the issue before entering *Y*.
 
