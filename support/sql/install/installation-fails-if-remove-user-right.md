@@ -82,7 +82,7 @@ If a user account is running Setup as a local administrator, the user account re
 > - [Planning a SQL Server Installation](/sql/sql-server/install/planning-a-sql-server-installation)
 > - [Install SQL Server from the Installation Wizard (Setup)](/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
 
-If a storage option for data directory or other directories (user database directory, user database log directory, TempDB directory, TempDB log directory, or backup directory) uses SMB file share, the Setup account requires the following additional permissions on the SMB file server as described in [Install SQL Server with SMB fileshare storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
+If a storage option for data directory or other directories (user database directory, user database log directory, TempDB directory, TempDB log directory, or backup directory) uses SMB file share, the Setup account requires the following additional permissions on the SMB file server as described in [Install SQL Server with SMB file share storage](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
 
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
