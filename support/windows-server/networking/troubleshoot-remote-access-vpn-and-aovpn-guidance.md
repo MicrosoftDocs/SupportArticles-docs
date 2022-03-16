@@ -57,6 +57,51 @@ The listed resources in this article can help you resolve issues that you experi
 
 - [Unable to delete the certificate from the VPN connectivity blade](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#unable-to-delete-the-certificate-from-the-vpn-connectivity-blade) - Certificates on the VPN connectivity blade cannot be deleted. (Azure AD Conditional Access connection issues.)
 
+## Data collection
+
+Before contacting Microsoft support, you can gather information about your issue.
+
+### Prerequisite
+
+1. TSSv2 must be run by accounts with administrator privileges on the local system and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+2. We recommend the local machine RemoteSigned PowerShell execution policy.
+
+> [!NOTE]
+> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+>
+> - Set the RemoteSigned execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+
+### Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
+2. Open an elevated version of PowerShell, and move it to the *C:\\tss_tool* folder.
+3. Start the traces on the client and the server by using the following cmdlets:
+
+    - DA Client:  
+
+        ```powershell
+        TSSv2.ps1 -Start -Scenario NET_VPN
+        ```
+
+    - DA Server:  
+
+        ```powershell
+        TSSv2.ps1 -Start -Scenario NET_RAS
+        ```
+
+4. Accept the EULA if the traces are run for the first time on the server or the client.
+5. Allow recording (PSR or video).
+6. Reproduce the issue before entering *Y*.
+
+     > [!NOTE]
+     > If you collect logs on both the client and the server, wait for this message on both nodes before reproducing the issue.
+
+7. Enter *Y* to finish the log collection.
+
+The traces will be stored in a zip file in the *C:\\MSDATA* folder that can be uploaded to the workspace for analysis.
+
 ## Reference
 
 - [Always On VPN Deployment for Windows Server 2016 and Windows 10](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy) - Provides instructions about how to deploy Remote Access as a single tenant VPN RAS gateway for point-to-site VPN connections that let your remote employees to connect to your organization network by using AOVPN connections. We recommend that you review the design and deployment guides for each of the technologies that are used in this deployment.
