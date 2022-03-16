@@ -11,6 +11,44 @@
     href: config-file-is-not-available-when-connecting.md
   - name: User can't get cluster resources
     href: user-cannot-get-cluster-resources.md
+
+- name: Cluster creation and deployment issues
+  items:
+  - name: General troubleshooting
+    href: troubleshoot-aks-cluster-creation-issues.md
+  - name: InvalidParameter error code
+    href: error-code-invalidparameter.md
+  - name: InvalidResourceReference error code
+    href: error-code-invalidresourcereference.md
+  - name: K8SAPIServerConnFailVMExtensionError error code (51)
+    href: error-code-k8sapiserverconnfailvmextensionerror.md
+  - name: K8SAPIServerDNSLookupFailVMExtensionError error code (52)
+    href: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+  - name: LinkedAuthorizationFailed error code
+    href: error-code-linkedauthorizationfailed.md
+  - name: MissingSubscriptionRegistration error code
+    href: error-code-missingsubscriptionregistration.md
+  - name: OperationNotAllowed or PublicIPCountLimitReached error code
+    href: error-code-operationnotallowed-publicipcountlimitreached.md
+  - name: OperationPreempted error code
+    href: error-code-operationpreempted.md
+  - name: OutboundConnFailVMExtensionError error code (50)
+    href: error-code-outboundconnfailvmextensionerror.md
+  - name: RequestDisallowedByPolicy error code
+    href: error-code-requestdisallowedbypolicy.md
+  - name: ReservedResourceName error code
+    href: error-code-reservedresourcename.md
+  - name: ServicePrincipalValidationClientError error code
+    href: error-code-serviceprincipalvalidationclienterror.md
+  - name: SubnetIsFull error code
+    href: error-code-subnetisfull.md
+  - name: SubscriptionRequestsThrottled error code (429)
+    href: error-code-subscriptionrequeststhrottled.md
+  - name: VMExtensionProvisioningTimeout error code
+    href: error-code-vmextensionprovisioningtimeout.md
+  - name: ZonalAllocationFailed or AllocationFailed error code
+    href: error-code-zonalallocationfailed-allocationfailed.md
+
 - name: Data collection guide
   items:
   - name: Capture TCP dump from Linux node
@@ -19,9 +57,11 @@
     href: capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
     href: packet-capture-pod-level.md
+
 - name: Troubleshoot performance issues
   items:
   - name: Identify high CPU consuming containers
     href: identify-high-cpu-consuming-containers-aks.md
+
 - name: Errors when pulling images from ACR to AKS cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
