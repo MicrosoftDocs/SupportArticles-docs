@@ -53,7 +53,8 @@ Here's how to check logs and identify the issue:
 1. Check the following lines. You'll find a group and its member are from different domains.
 
    ```output
-   INFO: DDR was written for group 'contoso\DSCrackNamesW' - C:\ConfigMgr\inboxes\auth\ddm.box\userddrsonly\asg1607o.DDR at <Date Time>.~ VERBOSE: group has 1 members~
+   INFO: DDR was written for group 'contoso\DSCrackNamesW' - C:\ConfigMgr\inboxes\auth\ddm.box\userddrsonly\asg1607o.DDR at <Date Time>.~ 
+   VERBOSE: group has 1 members~
    …
    VERBOSE: Domain controller name for the SID is: \\CM-UDC.fourthcoffee.local
    VERBOSE: full ADs path of member: LDAP://CM-UDC.fourthcoffee.local/CN=UTCGroup5,CN=Users,DC=fourthcoffee,DC=local~
