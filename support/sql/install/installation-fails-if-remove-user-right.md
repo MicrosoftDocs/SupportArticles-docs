@@ -22,7 +22,7 @@ Consider the following scenario:
 - To tighten security, you remove some default user rights from the local administrators group.
 - To set up SQL Server on the system, you add the Setup account to the local administrators group.
 
-In this secnario, if you try to install or upgrade SQL Server, the installation process fails, and you may receive an error message that resembles one of the messages that are listed in the following sections.
+In this scenario, if you try to install or upgrade SQL Server, the installation process fails, and you may receive an error message that resembles one of the messages that are listed in the following sections.
 
 - **Scenario 1:** If a new installation fails, you receive one of the following error messages:
 
