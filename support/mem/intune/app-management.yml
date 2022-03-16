@@ -89,7 +89,5 @@ landingContent:
         links:
           - text: Save application failed error
             url: save-application-failed-error.md
-          - text: Build software inventory using Power BI
-            url: build-software-inventory-power-bi.md
           - text: Can't sync Microsoft Store for Business apps to Intune
             url: apps-fail-sync-to-intune.md
