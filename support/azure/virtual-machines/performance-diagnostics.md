@@ -30,12 +30,14 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 ### Windows
 
+* Windows server 2022 
 * Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
 * Windows 10
+* Windows 11
 * Windows 8.1
 * Windows 8
 
