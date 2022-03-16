@@ -120,7 +120,7 @@ To add the rights to the Setup account, follow these steps:
 
 - To check the list of privileges that are currently associated with the Setup account, use the *AccessChk.exe* tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
 
-  **Usage**: accesschk.exe- a \<setup account> *
+  **Usage**: `accesschk.exe- a \<setup account> *`
 
     For example:
     `c:\tools\accesschk.exe -a testdc\setupaccount *`
