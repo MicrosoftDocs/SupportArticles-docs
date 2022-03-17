@@ -187,7 +187,7 @@ Before contacting Microsoft support, you can gather information about your issue
 4. Respond to the EULA prompt.
 5. Wait until the automated scripts finish collecting the required data.
 
-The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA\\* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 
