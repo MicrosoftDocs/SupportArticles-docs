@@ -23,7 +23,7 @@ You're running Microsoft SQL Server in Windows. To tighten security, you remove 
 
 In this scenario, if you try to install or upgrade SQL Server, the installation process fails, and you might receive an error message that resembles one of the messages that are listed as follows:
 
-- **Scenario 1:** If a new installation fails, you receive one of the following error messages:
+- **Scenario 1:** If a new installation fails, you receive the following error message:
 
     ```output
     Access is denied
@@ -65,12 +65,14 @@ In this scenario, if you try to install or upgrade SQL Server, the installation 
     The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
     ```
 
-- **Scenario 3:** If the installation of SQL Server 2012 or a later version fails when you specify a network share (UNC path) for the backup directory location, you receive one of the following error messages:
+- **Scenario 3:** If the installation of SQL Server 2012 or a lat`er version fails when you specify a network share (UNC path) for the backup directory location, you receive the following error message:
 
-    > SQL Server setup account does not have the SeSecurityPrivilege on the specified file server in the path *\<UNC backup location>*. This privilege is required in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the "User Rights Assignments" section under Local Policies in the Local Security Policy console.
+   ```output
+   SQL Server setup account does not have the `SeSecurityPrivilege` on the specified file server in the path *\<UNC backup location>*. This privilege is required in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the "User Rights Assignments" section under Local Policies in the Local Security Policy console.
+   ```
 
   > [!NOTE]
-  > This issue occurs because the SQL Server setup account doesn't have `SeSecurityPrivilege` permissions on the file server that hosts the network share.
+  > This issue occurs because the SQL Server setup account doesn't have the `SeSecurityPrivilege` permissions on the file server that hosts the network share.
 
 ## Cause
 
@@ -100,23 +102,23 @@ If a storage option for data directory or other directories (user database direc
 
 To add the rights to the Setup account, follow these steps:
 
-1. Log on to the computer as an administrator.
-2. Select **Start** > **Run**, enter *Control admintools*, and then select **OK**.
+1. Log on as an administrator.
+2. Select **Start** > **Run**, type *Control admintools*, and then select **OK**.
 3. Double-click **Local Security Policy**.
 4. In the **Local Security Settings** dialog box, select **Local Policies**, open **User Rights Assignment**, and then double-click **Backup Files and Directories**.
 5. In the **Backup Files and Directories Properties** dialog box, select **Add User or Group**.
 6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times.
-7. Follow the same procedure for *Debug Programs* and *Manage auditing and security log* policies to add the user account.
+7. To add the Follow the same procedure for *Debug Programs* and *Manage auditing and security log* policies to add the user account.
 8. On the **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
 
-## Frequently asked questions (FAQ)
+## Frequently asked questions (FAQs)
 
-  - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the UNC share?
+  - Why is **SeSecurityPrivilege** required on the file server for the backup directory on the UNC share?
 
-    This permission is required to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that the Service account can run a backup of the directory. The Setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions) when you back up the default directory.
+    This permission is required to retrieve Access Control Lists (ACLs) on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL service account so that the service account can run a backup of the directory. The Setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions) when you back up the default directory.
 
     > [!NOTE]
-    > **SeSecurityPrivilege** is required to change the `get/set ACLs` from the directories and subfolders. This is true even if users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and audit information from the directory.
+    > `SeSecurityPrivilege` is required to change the `get/set ACLs` from the directories and subfolders. This is true even if users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and audit information from the directory.
 
   - Why does the error that's described in Scenario 3 occur only in Microsoft SQL Server 2012 and later versions?
 
