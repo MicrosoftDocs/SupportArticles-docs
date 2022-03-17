@@ -17,7 +17,7 @@ _Applies to_: SQL Server
 
 ## Symptoms
 
-Consider the scenario where you're running Microsoft SQL Server in Windows. To tighten security, you remove some default user rights from the local administrators group. To set up SQL Server on the system, you add the Setup account to the local administrators group.
+Consider the scenario where you're running Microsoft SQL Server in Windows. To tighten security, you remove some default user rights from the local administrators group. To set up SQL Server on the system, you add the setup account to the local administrators group.
 
 In this scenario, if you try to install or upgrade SQL Server, the installation process fails, and you might receive an error message that resembles one of the messages that are listed as follows:
 
@@ -161,4 +161,4 @@ Starting in SQL Server 2012, Microsoft provides support for data and log files o
             SeBatchLogonRight
             SeRemoteInteractiveLogonRight
   ```
-- [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)
+- For more information, see [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
