@@ -107,14 +107,14 @@ To add the rights to the setup account, follow these steps:
 5. In the **Backup Files and Directories Properties** dialog box, select **Add User or Group**.
 6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times. 
    > [!NOTE]
-   > Follow steps 1-6 for the **Debug Programs** and **Manage auditing and security log** policies to add the user account
+   > To add the user account, perform steps 1-6 for the **Debug Programs** and **Manage auditing and security log** policies.
 7. On the **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
 
 ## Frequently asked questions (FAQs)
 
 ### Why is `SeSecurityPrivilege` required on the file server for the backup directory on the UNC share?
 
-This permission is required to retrieve Access Control Lists (ACLs) on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL service account so that the service account can run a backup of the directory. The Setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions) when you back up the default directory.
+This permission is required to retrieve Access Control Lists (ACLs) on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL service account so that a backup of the directory can be run. The setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions).
 
  > [!NOTE]
  > `SeSecurityPrivilege` is required to change the `get/set ACLs` from the directories and subfolders. This is true even if users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and audit information from the directory.
