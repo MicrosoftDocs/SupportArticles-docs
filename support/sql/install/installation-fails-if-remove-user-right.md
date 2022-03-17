@@ -63,7 +63,7 @@ In this scenario, if you try to install or upgrade SQL Server, the installation 
     The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
     ```
 
-- **Scenario 3:** If the installation of SQL Server 2012 or a lat`er version fails when you specify a network share (UNC path) for the backup directory location, you receive the following error message:
+- **Scenario 3:** If the installation of SQL Server 2012 or a later version fails when you specify a network share (UNC path) for the backup directory location, you receive the following error message:
 
    ```output
    SQL Server setup account does not have the `SeSecurityPrivilege` on the specified file server in the path *\<UNC backup location>*. This privilege is required in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the **User Rights Assignments** section under Local Policies in the Local Security Policy console.
