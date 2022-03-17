@@ -39,6 +39,9 @@ However, you can connect to the VM normally by using an administrative session:
 mstsc /v:<Server>[:<Port>] /admin
 ```
 
+> [!NOTE]
+> Another way to connect using an administrative session is to open the VM Overview page then select `Connect`. Select `Download RDP File` to download a connection file that has the admin session flag. Once you have connected to the VM proceed to resolve the licensing issue with steps below.
+
 ## Cause
 
 This problem occurs if a Remote Desktop license server is unavailable to provide a license to start a remote session. It can be caused by several scenarios, even though a Remote Desktop Session Host role was set up on the VM:
@@ -58,6 +61,8 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
    ```
    mstsc /v:<Server>[:<Port>] /admin
    ```
+   > [!NOTE]
+   > Another way to connect using an administrative session is to open the VM Overview page then select `Connect`. Select `Download RDP File` to download a connection file that has the admin session flag. Once you have connected to the VM proceed to resolve the licensing issue with steps below.
 
     If you can't connect to the VM by using an administrative session, you can use the [Virtual Machine Serial Console on Azure](serial-console-windows.md) to access the VM as follows:
 
