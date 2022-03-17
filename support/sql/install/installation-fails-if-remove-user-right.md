@@ -112,14 +112,14 @@ To add the rights to the setup account, follow these steps:
 
 ## Frequently asked questions (FAQs)
 
-### Why is **SeSecurityPrivilege** required on the file server for the backup directory on the UNC share?
+### Why is `SeSecurityPrivilege` required on the file server for the backup directory on the UNC share?
 
 This permission is required to retrieve Access Control Lists (ACLs) on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL service account so that the service account can run a backup of the directory. The Setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions) when you back up the default directory.
 
  > [!NOTE]
  > `SeSecurityPrivilege` is required to change the `get/set ACLs` from the directories and subfolders. This is true even if users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and audit information from the directory.
 
-### Why does the error that's described in Scenario 3 occur only in Microsoft SQL Server 2012 and later versions?
+### Why does the error that's described in scenario 3 occur only in Microsoft SQL Server 2012 and later versions?
 
 Starting in SQL Server 2012, Microsoft provides support for data and log files on the SMB file share. As part of this improvement, the setup experience is further enhanced to tighten the security checks so that customers don't encounter errors or issues because of insufficient permissions post-installation. In pre-SQL Server 2012 versions, users can still set up the network share path for the backup directory if the SQL Service account doesn't have permissions to run a backup. However, those users will experience an error post-installation in this situation. These scenarios are now prevented when you start the SQL 2012 setup check on a network share.
 
