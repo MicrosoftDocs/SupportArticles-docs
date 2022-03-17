@@ -12,15 +12,15 @@ _Applies to:_ &nbsp; Configuration Manager (current branch)
 
 ## Symptoms
 
-After you install January 2022 or later Windows updates on a Configuration Manager site server, the domain name associated with users, groups, or devices may be changed. This issue occurs when the NetBIOS domain name is different from the first element of the fully qualified domain name (FQDN).
+After you install January 2022 or later Windows updates on a Configuration Manager site server, the domain name that is associated with users, groups, or devices may be changed. This issue occurs when the NetBIOS domain name is different from the first element of the fully qualified domain name (FQDN).
 
-For example, a resource is in a domain with the NetBIOS domain name `AAA`, but with the FQDN `BBB.contoso.com`. This scenario is known as a disjoint namespace. The resource is discovered as `AAA\User1` or `AAA\Computer1`. After you install January 2022 Windows updates and discovery runs, the resource name may be changed to `BBB\User1` or `BBB\Computer1`.
+For example, a resource is in a domain with the NetBIOS domain name `AAA`, but with the FQDN `BBB.contoso.com`. This scenario is known as a disjoint namespace. The resource is discovered as `AAA\User1` or `AAA\Computer1`. After you install January 2022 Windows updates and the discovery runs, the resource name may be changed to `BBB\User1` or `BBB\Computer1`.
 
 The domain name of the resource may alternate between `AAA` and `BBB`, which removes or adds devices to collections that have rules based on a domain membership.
 
 ## Cause
 
-January 2022 Windows updates introduced an NTLM fallback that may [block NTLM authentication if Kerberos authentication isn't successful](https://support.microsoft.com/topic/dd415f99-a30c-4664-ba37-83d33fb071f4), which changes the behavior in Configuration Manager current branch versions earlier than 2203.
+January 2022 Windows updates introduced an NTLM fallback that may [block NTLM authentication if Kerberos authentication isn't successful](https://support.microsoft.com/topic/dd415f99-a30c-4664-ba37-83d33fb071f4), which changes the behavior in Configuration Manager current branch whose versions are earlier than 2203.
 
 ## Resolution
 
@@ -32,13 +32,13 @@ To work around this issue, change collection rules to include both the NetBIOS d
 
 ## Steps to check logs and identify the issue
 
-Here's how to check logs and identify the issue:
+Here're the steps to check logs and identify the issue:
 
-1. Increase the size of the _ADSgDis.log_ file to 100 megabytes (MB). Under the following registry key, change the `MaxFileSize` registry value to `104857600` (default value is `2621440`).
+1. Increase the size of the _ADSgDis.log_ file to 100 megabytes (MB). Under the following registry key, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_SECURITY_GROUP_DISCOVERY_AGENT`
 
-1. Enable verbose logging for the _ADSgDis.log_ file. Under the following registry key, change the `Verbose Logs` registry value to `1` (default value is `0`).
+1. Enable verbose logging for the _ADSgDis.log_ file. Under the following registry key, change the `Verbose Logs` registry value to `1` (the default value is `0`).
 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_SECURITY_GROUP_DISCOVERY_AGENT`
 
@@ -63,7 +63,7 @@ Here's how to check logs and identify the issue:
    VERBOSE: ParentGroup: "contoso\DSCrackNamesW" ChildGroup: "fourthcoffee\UTCGroup5"
    ```
 
-1. Check the Windows event logs for the time-correlated event ID 40970 as follows. You'll find the domain controller of the Service Principal Name (SPN) and the realm are from different domains. This issue may occur if the Kerberos authentication attempt is cached.
+1. Check the Windows event logs of the time-correlated event ID 40970 as follows. You'll find the domain controller of the Service Principal Name (SPN) and the realm are from different domains. This issue may occur if the Kerberos authentication attempt is cached.
 
    ```output
    The Security System has detected a downgrade attempt when contacting the 3-part SPN LDAP/CMCB-DC.contoso.local/fourthcoffee.LOCAL with error code "The SAM database on the Windows Server does not have a computer account for this workstation trust relationship. (0xc000018b)".
