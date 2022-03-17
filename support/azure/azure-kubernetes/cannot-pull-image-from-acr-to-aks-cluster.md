@@ -149,17 +149,17 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 
 - [Create a virtual network link to the specified Private DNS zone by using Azure CLI](/cli/azure/network/private-dns/link/vnet#az-network-private-dns-link-vnet-create).
 
-#### Solution 2: Add AKS load balancer's public IP address to allowed IP address range of ACR
+#### Solution 2: Add AKS Load Balancer's public IP address to allowed IP address range of ACR
 
-If the AKS cluster connects publicly to the ACR (NOT through a private link or endpoint) and the public network access of the ACR is limited to selected networks, add AKS load balancer's public IP address to the allowed IP address range of the ACR:
+If the AKS cluster connects publicly to the ACR (NOT through a private link or endpoint) and the public network access of the ACR is limited to selected networks, add AKS Load Balancer's public IP address to the allowed IP address range of the ACR:
 
 1. Confirm that the public network access is limited to selected networks.
 
     In the Azure portal, navigate to the ACR. Under **Settings**, select **Networking**. On the **Public access** tab, **Public network access** is set to **Selected networks** or **Disabled**.
 
-2. Obtain the AKS load balancer's public IP address by using one of the following ways:
+2. Obtain the AKS Load Balancer's public IP address by using one of the following ways:
 
-    - In the Azure portal, navigate to the AKS cluster. Under **Settings**, select **Properties**, select one of the virtual machine scale sets in the infrastructure resource group, check the public IP address of the AKS load balancer.
+    - In the Azure portal, navigate to the AKS cluster. Under **Settings**, select **Properties**, select one of the virtual machine scale sets in the infrastructure resource group, check the public IP address of the AKS Load Balancer.
 
     - Run the following command:
 
@@ -167,7 +167,7 @@ If the AKS cluster connects publicly to the ACR (NOT through a private link or e
         az network public-ip show --resource-group <infrastructure-resource-group> --name <public-IP-name> --query ipAddress -o tsv
         ```
 
-3. Allow access from the AKS load balancer's public IP address by using one of the following ways:
+3. Allow access from the AKS Load Balancer's public IP address by using one of the following ways:
 
     - Run `az acr network-rule add` command as follows:
 
@@ -177,12 +177,12 @@ If the AKS cluster connects publicly to the ACR (NOT through a private link or e
 
         For more information, see [Add network rule to registry](/azure/container-registry/container-registry-access-selected-networks#add-network-rule-to-registry).
 
-    - In the Azure portal, navigate to the ACR. Under **Settings**, select **Networking**. On the **Public network access** tab, under **Firewall**, add the AKS load balancer's public IP address to **Address range**. Select **Save**. For more information, see [Access from selected public network - portal](/azure/container-registry/container-registry-access-selected-networks#access-from-selected-public-network---portal).
+    - In the Azure portal, navigate to the ACR. Under **Settings**, select **Networking**. On the **Public network access** tab, under **Firewall**, add the AKS Load Balancer's public IP address to **Address range**. Select **Save**. For more information, see [Access from selected public network - portal](/azure/container-registry/container-registry-access-selected-networks#access-from-selected-public-network---portal).
 
         > [!NOTE]
         > If **Public network access** is set to **Disabled**, switch it to **Selected networks** first.
 
-        :::image type="content" source="./media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot about how to add AKS load balancer's public IP address to Address range":::
+        :::image type="content" source="./media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot about how to add AKS Load Balancer's public IP address to Address range":::
 
 ### <a id="443timeouterror"></a>443 timeout error
 
