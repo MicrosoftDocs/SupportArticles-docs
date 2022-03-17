@@ -34,7 +34,7 @@ To work around this issue, change collection rules to include both the NetBIOS d
 
 Here are the steps to check logs and identify the issue:
 
-1. Increase the size of the _ADSgDis.log_ file to 100 megabytes (MB), or more to accommodate a full Active Directory group discovery. Under the following registry key, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
+1. Increase the size of the _ADSgDis.log_ file to 100 megabytes (MB) or more to accommodate a full Active Directory group discovery. Under the following registry key, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_SECURITY_GROUP_DISCOVERY_AGENT`
 
