@@ -22,12 +22,13 @@ This issue occurs when the Management Configuration service fails because the in
 
 To fix this issue, follow these steps to modify the batch size settings for the Management Configuration service on the management server:
 
-1. Make a backup of the Program Files\System Center 2012\Operations Manager\Server\ConfigService.Config file.
+1. Make a backup of the `..\Program Files\System Center 2012\Operations Manager\Server\ConfigService.Config` file.
 1. Edit the ConfigService.config file, and then modify the settings as follows:
-
-    > \<Setting Name="SnapshotSyncManagedEntityBatchSize" Value="10000" />  
-    > \<Setting Name="SnapshotSyncRelationshipBatchSize" Value="10000" />  
-    > \<Setting Name="SnapshotSyncTypedManagedEntityBatchSize" Value="20000" />
+    ```
+    <Setting Name="SnapshotSyncManagedEntityBatchSize" Value="10000" />  
+    <Setting Name="SnapshotSyncRelationshipBatchSize" Value="10000" />  
+    <Setting Name="SnapshotSyncTypedManagedEntityBatchSize" Value="20000" />
+    ```
 
 1. Restart the Configuration service.
 
@@ -39,4 +40,15 @@ To determine whether you are experiencing this issue, run the following SQL quer
 select * from cs.WorkItem where workitemname like '%snapshot%' order by StartedDateTimeUtc desc
 ```
 
-In the scenario that's described in the Symptoms section, the `workitemstateid` is always **10** (failed) instead of **20** (successful).
+In the scenario that's described in the Symptoms section, the `WorkItemStateId` is always **10** (failed) instead of **20** (successful).
+
+|WorkItemStateId |State Definition |
+|----------------|------------------|
+|1 |Running |
+|10 |Failed |
+|12 |Abandoned |
+|15 |Timed out |
+|20 |Successful |
+
+>[!NOTE]
+>You may also see experience this error if you have high latency from your Management Servers to your Operations Manager SQL Databases.
