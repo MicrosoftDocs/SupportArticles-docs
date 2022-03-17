@@ -32,7 +32,7 @@ To work around this issue, change collection rules to include both the NetBIOS d
 
 ## Steps to check logs and identify the issue
 
-Here're the steps to check logs and identify the issue:
+Here are the steps to check logs and identify the issue:
 
 1. Increase the size of the _ADSgDis.log_ file to 100 megabytes (MB). Under the following registry key, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
 
