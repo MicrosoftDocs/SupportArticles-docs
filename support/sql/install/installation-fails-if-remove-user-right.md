@@ -93,21 +93,23 @@ If a storage option for data directory or other directories (user database direc
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
 | SMB Network share folder| FULL CONTROL| SQL Server and SQL Server Agent Service account |
-| SMB Fileserver| SeSecurityPrivilege| SQL Setup account |
+| SMB Fileserver| `SeSecurityPrivilege`| SQL Setup account |
 ||||
 
 ## Resolution
 
-To add the rights to the Setup account, follow these steps:
+To add the rights to the setup account, follow these steps:
 
 1. Log on as an administrator.
 2. Select **Start** > **Run**, type *Control admintools*, and then select **OK**.
 3. Double-click **Local Security Policy**.
 4. In the **Local Security Settings** dialog box, select **Local Policies**, open **User Rights Assignment**, and then double-click **Backup Files and Directories**.
 5. In the **Backup Files and Directories Properties** dialog box, select **Add User or Group**.
-6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times.
-7. To add the Follow the same procedure for *Debug Programs* and *Manage auditing and security log* policies to add the user account.
-8. On the **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
+6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times. 
+7. On the **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
+
+> Note:
+> Follow the preceding procedure for the **Debug Programs** and **Manage auditing and security log** policies to add the user account. 
 
 ## Frequently asked questions (FAQs)
 
@@ -120,11 +122,11 @@ To add the rights to the Setup account, follow these steps:
 
   - Why does the error that's described in Scenario 3 occur only in Microsoft SQL Server 2012 and later versions?
 
-    Starting in SQL Server 2012, Microsoft provides support for data and log files on the SMB file share. As part of this improvement, the setup experience is further enhanced to tighten the security checks so that customers don't encounter errors or issues because of insufficient permissions post-installation. In pre-SQL Server 2012 versions, users can still set up the network share path for the Backup directory if the SQL Service account doesn't have permissions to run backups. However, those users will experience an error post-installation in this situation. These scenarios are now prevented when you start the SQL 2012 Setup check on a network share.
+    Starting in SQL Server 2012, Microsoft provides support for data and log files on the SMB file share. As part of this improvement, the setup experience is further enhanced to tighten the security checks so that customers don't encounter errors or issues because of insufficient permissions post-installation. In pre-SQL Server 2012 versions, users can still set up the network share path for the backup directory if the SQL Service account doesn't have permissions to run a backup. However, those users will experience an error post-installation in this situation. These scenarios are now prevented when you start the SQL 2012 setup check on a network share.
 
 ## More information
 
-- To check the list of privileges that are currently associated with the Setup account, use the *AccessChk.exe* tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
+- To check the list of privileges that are currently associated with the setup account, use the *AccessChk.exe* tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
 
   **Usage**: `accesschk.exe- a \<setup account> *`
 
