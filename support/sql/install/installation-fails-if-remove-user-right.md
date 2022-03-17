@@ -93,7 +93,7 @@ If a storage option for data directory or other directories (user database direc
 | SMB Network share folder| FULL CONTROL| SQL Setup account |
 |---|---|---|
 | SMB Network share folder| FULL CONTROL| SQL Server and SQL Server Agent Service account |
-| SMB Fileserver| `SeSecurityPrivilege`| SQL Setup account |
+| SMB File server| `SeSecurityPrivilege`| SQL setup account |
 ||||
 
 ## Resolution
