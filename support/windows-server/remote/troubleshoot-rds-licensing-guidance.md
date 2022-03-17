@@ -150,7 +150,7 @@ This issue is fixed in update [KB 4457127](https://support.microsoft.com/topic/s
 
 Before contacting Microsoft support, you can gather information about your issue.
 
-### Prerequisite
+### Prerequisites
 
 1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
 2. We recommend the local machine RemoteSigned PowerShell execution policy.
@@ -165,7 +165,7 @@ Before contacting Microsoft support, you can gather information about your issue
 ### Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open an elevated PowerShell command prompt, and move it to the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
     > [!NOTE]
     > Run these traces simultaneously on the client, Session Host server(s) and licensing server(s).
@@ -185,10 +185,10 @@ Before contacting Microsoft support, you can gather information about your issue
     If you get many security warnings related to the execution policy while running the script, run the `Set-ExecutionPolicy -ExecutionPolicy Bypass -force -Scope Process` cmdlet to bypass those warnings.
 4. Respond to the EULA prompt.
 5. Allow recording (Video), and enter *Y*.
-6. When the script displays **Reproduce the issue and enter 'Y' key AFTER finishing the repro** on both the client and the server(s), start reproducing the issue.
-7. After the reproducing completes, enter *Y* to finish the log collection.
+6. When the script displays `Reproduce the issue and enter 'Y' key AFTER finishing the repro` on both the client and the server(s), start reproducing the issue.
+7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder that can be uploaded to the Microsoft workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the Microsoft workspace for analysis.
 
 ## Reference
 

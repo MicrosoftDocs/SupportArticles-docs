@@ -53,7 +53,7 @@ For more information about the common issues and solutions for virtual machine l
 
 Before contacting Microsoft support, you can gather information about your issue.
 
-### Prerequisite
+### Prerequisites
 
 1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
 2. We recommend the local machine RemoteSigned PowerShell execution policy.
@@ -68,7 +68,7 @@ Before contacting Microsoft support, you can gather information about your issue
 ### Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open an elevated PowerShell command prompt, and move it to the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
 3. Run the SDP tool to collect the logs from the source and destination nodes.
 4. Unzip the file and run the following cmdlet on both nodes:
 

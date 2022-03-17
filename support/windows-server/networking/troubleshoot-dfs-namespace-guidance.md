@@ -57,7 +57,7 @@ Look for the DFS client to resolve DNS (assuming it isn't cached) and make a con
 
 Before contacting Microsoft support, you can gather information about your issue.
 
-### Prerequisite
+### Prerequisites
 
 1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
 2. We recommend the local machine RemoteSigned PowerShell execution policy.
@@ -72,7 +72,7 @@ Before contacting Microsoft support, you can gather information about your issue
 ### Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open an elevated PowerShell command prompt, and move it to the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
 
     - Client:  
@@ -94,9 +94,9 @@ Before contacting Microsoft support, you can gather information about your issue
      > [!NOTE]
      > If you collect logs on both the client and the server, wait for this message on both nodes before reproducing the issue.
 
-7. Enter *Y* to finish the log collection.
+7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder that can be uploaded to the workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 
