@@ -6,13 +6,14 @@ ms.custom: sap:Database Engine
 author: rielsql
 ms.author: v-jayaramanp
 ms.prod: sql
+ms.topic: troubleshooting
 ---
+
 # SQL Server installation fails after default user rights are removed
 
 This article helps you resolve a problem that occurs when you install or upgrade Microsoft SQL Server after you tighten security.
 
 _Applies to_: SQL Server
-_Original KB number:_ &nbsp; 2000257
 
 ## Symptoms
 
@@ -22,7 +23,7 @@ Consider the following scenario:
 - To tighten security, you remove some default user rights from the local administrators group.
 - To set up SQL Server on the system, you add the Setup account to the local administrators group.
 
-In this scenario, if you try to install or upgrade SQL Server, the installation process fails, and you may receive an error message that resembles one of the messages that are listed in the following sections.
+In this scenario, if you try to install or upgrade SQL Server, the installation process fails, and you might receive an error message that resembles one of the messages that are listed as follows:
 
 - **Scenario 1:** If a new installation fails, you receive one of the following error messages:
 
@@ -59,16 +60,16 @@ In this scenario, if you try to install or upgrade SQL Server, the installation 
     > Rule "Setup account privileges" failed.  
     > The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
 
-- **Scenario 3:** If the installation of SQL Server 2012 or a later version fails when you specify a network share (UNC path) for the Backup directory location, you receive one of the following error messages:
+- **Scenario 3:** If the installation of SQL Server 2012 or a later version fails when you specify a network share (UNC path) for the backup directory location, you receive one of the following error messages:
 
     > SQL Server setup account does not have the SeSecurityPrivilege on the specified file server in the path *\<UNC backup location>*. This privilege is required in folder security setting action of SQL Server setup program. To grant this privilege, use the Local Security Policy console on this file server to add SQL Server setup account to "Manage auditing and security log" policy. This setting is available in the "User Rights Assignments" section under Local Policies in the Local Security Policy console.
 
   > [!NOTE]
-  > This issue occurs because the SQL Server Setup account doesn't have `SeSecurityPrivilege` permissions on the file server that hosts the network share.
+  > This issue occurs because the SQL Server setup account doesn't have `SeSecurityPrivilege` permissions on the file server that hosts the network share.
 
 ## Cause
 
-If a user account is running Setup as a local administrator, the user account requires the following user rights in order for Setup to run successfully:
+If a user account is running the setup as a local administrator, the user account requires the following user rights for setup to run successfully:
 
 |Local Group Policy Object display name|User right|
 |---|---|
