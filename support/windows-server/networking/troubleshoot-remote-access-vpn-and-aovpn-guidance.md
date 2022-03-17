@@ -79,13 +79,13 @@ Before contacting Microsoft support, you can gather information about your issue
 2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
 
-    - DA client:  
+    - Client:  
 
         ```powershell
         TSSv2.ps1 -Start -Scenario NET_VPN
         ```
 
-    - DA server:  
+    - Server:  
 
         ```powershell
         TSSv2.ps1 -Start -Scenario NET_RAS

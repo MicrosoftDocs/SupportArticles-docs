@@ -178,22 +178,16 @@ Before contacting Microsoft support, you can gather information about your issue
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
 2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
-3. Start the traces by using the following cmdlet:
+3. Start the traces on the problem computer by using the following cmdlet:
 
     ```powershell
-    TSSv2.ps1 -Start -Scenario NET_SdnNC
+    TSSv2.ps1 -CollectLog DND_SetupReport
     ```
 
-4. Accept the EULA if the traces are run for the first time on the server or the client.
-5. Allow recording (PSR or video).
-6. Reproduce the issue before entering *Y*.
+4. Respond to the EULA prompt.
+5. Wait until the automated scripts finish collecting the required data.
 
-     > [!NOTE]
-     > If you collect logs on both the client and the server, wait for this message on both nodes before reproducing the issue.
-
-7. Enter *Y* to finish the log collection after the issue is reproduced.
-
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 

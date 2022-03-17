@@ -176,7 +176,7 @@ Before contacting Microsoft support, you can gather information about your issue
         TSSv2.ps1 -scenario Net_RDScli
         ```
 
-    - Server:  
+    - Server(s):  
 
         ```powershell
         TSSv2.ps1 -scenario Net_RDSsrv

@@ -99,7 +99,7 @@ Before contacting Microsoft support, you can gather information about your issue
         TSSv2.ps1 -scenario Net_RDScli
         ```
 
-    - Server:  
+    - Server(s):  
 
         ```powershell
         TSSv2.ps1 -scenario Net_RDSsrv
@@ -108,7 +108,7 @@ Before contacting Microsoft support, you can gather information about your issue
     If you get many security warnings related to the execution policy while running the script, run the `Set-ExecutionPolicy -ExecutionPolicy Bypass -force -Scope Process` cmdlet to bypass those warnings.
 4. Respond to the EULA prompt.
 5. Allow recording (Video), and enter *Y*.
-6. When the script displays **Reproduce the issue and enter 'Y' key AFTER finishing the repro** on both the client and the server(s), start reproducing the issue.
+6. When the script displays `Reproduce the issue and enter 'Y' key AFTER finishing the repro` on both the client and the server(s), start reproducing the issue.
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
 The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the Microsoft workspace for analysis.
