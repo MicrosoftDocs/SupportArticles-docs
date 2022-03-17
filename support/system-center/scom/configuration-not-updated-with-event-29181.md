@@ -19,7 +19,7 @@ In a System Center environment that has many clients, configuration changes are 
 This issue occurs when the Management Configuration service fails because the instance transfer can't perform a bulk insert. This issue typically occurs when the environment has a large number of clients, such as 2000 or more.
 
 >[!NOTE]
->You may also experience this error if you have high latency (greater than 10ms) from your Management Servers to your Operations Manager SQL Databases.
+>You may also experience this error if you have high latency (greater than 10ms) from your Management Server(s) to your Operations Manager SQL Server Instance(s).
 
 ## Resolution
 
