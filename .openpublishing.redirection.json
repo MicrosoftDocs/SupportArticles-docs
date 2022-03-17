@@ -2356,6 +2356,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/build-software-inventory-power-bi.md",
+      "redirect_url": "/mem/intune/fundamentals/reports#app-install-status-report-operational",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
       "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
       "redirect_document_id": false
