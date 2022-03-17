@@ -19,46 +19,51 @@ _Applies to_: SQL Server
 
 Consider the following scenario:
 
-- You're running Microsoft SQL Server in Windows.
-- To tighten security, you remove some default user rights from the local administrators group.
-- To set up SQL Server on the system, you add the Setup account to the local administrators group.
+You're running Microsoft SQL Server in Windows. To tighten security, you remove some default user rights from the local administrators group. To set up SQL Server on the system, you add the Setup account to the local administrators group.
 
 In this scenario, if you try to install or upgrade SQL Server, the installation process fails, and you might receive an error message that resembles one of the messages that are listed as follows:
 
 - **Scenario 1:** If a new installation fails, you receive one of the following error messages:
 
-    > Access is denied
+    ```output
+    Access is denied
+    ```
     
     You may also receive error messages that resemble the following in the *Detail.txt* file:
     
-    > 2009-01-02 13:00:17 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' to be created  
-    > 2009-01-02 13:00:20 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' or sql process handle to be signaled  
-    > 2009-01-02 13:00:20 Slp: Configuration action failed for feature SQL_Engine_Core_Inst during timing ConfigRC and scenario ConfigRC.  
-    > 2009-01-02 13:00:20 Slp: Access is denied  
-    > 2009-01-02 13:00:20 Slp: Configuration action failed for feature SQL_Engine_Core_Inst during timing ConfigRC and scenario ConfigRC.  
-    > 2009-01-02 13:00:20 Slp: System.ComponentModel.Win32Exception: Access is denied  
-    > 2009-01-02 13:00:20 Slp:    at System.Diagnostics.ProcessManager.OpenProcess(Int32 processId, Int32 access, Boolean throwIfExited)  
-    > 2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.GetProcessHandle(Int32 access, Boolean throwIfExited)  
-    > 2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.OpenProcessHandle()  
-    > 2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.get_Handle()  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceBase.WaitSqlServerStart(Process processSql)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceSCM.StartSqlServer(String[] parameters)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerStartup.StartSQLServerForInstall(String sqlCollation, String masterFullPath, Boolean isConfiguringTemplateDBs)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.ConfigSQLServerSystemDatabases(EffectiveProperties properties, Boolean isConfiguringTemplateDBs, Boolean useInstallInputs)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.DoCommonDBStartConfig(ConfigActionTiming timing)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.Install(ConfigActionTiming timing, Dictionary<string, string> actionData, PublicConfigurationBase spcb)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.PrivateConfigurationBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary<string, string> actionData, PublicConfigurationBase spcbCurrent)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SqlFeatureConfigBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary<string, string> actionData, PublicConfigurationBase spcbCurrent)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.ExecuteAction(String actionId)  
-    > 2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.Execute(String actionId, TextWriter errorStream)  
-    > 2009-01-02 13:00:20 Slp: Exception: System.ComponentModel.Win32Exception.  
-    > 2009-01-02 13:00:20 Slp: Source: System.  
-    > 2009-01-02 13:00:20 Slp: Message: Access is denied.  
+    ```output
+    2009-01-02 13:00:17 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' to be created  
+    2009-01-02 13:00:20 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' or sql process handle to be signaled  
+    2009-01-02 13:00:20 Slp: Configuration action failed for feature SQL_Engine_Core_Inst during timing ConfigRC and scenario ConfigRC.  
+    2009-01-02 13:00:20 Slp: Access is denied  
+    2009-01-02 13:00:20 Slp: Configuration action failed for feature SQL_Engine_Core_Inst during timing ConfigRC and scenario ConfigRC.  
+    2009-01-02 13:00:20 Slp: System.ComponentModel.Win32Exception: Access is denied  
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.ProcessManager.OpenProcess(Int32 processId, Int32 access, Boolean throwIfExited)  
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.GetProcessHandle(Int32 access, Boolean throwIfExited)  
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.OpenProcessHandle()  
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.get_Handle()  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceBase.WaitSqlServerStart(Process processSql)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceSCM.StartSqlServer(String[] parameters)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerStartup.StartSQLServerForInstall(String sqlCollation, String masterFullPath, Boolean isConfiguringTemplateDBs)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.ConfigSQLServerSystemDatabases(EffectiveProperties properties, Boolean isConfiguringTemplateDBs, Boolean useInstallInputs)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.DoCommonDBStartConfig(ConfigActionTiming timing)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.Install(ConfigActionTiming timing, Dictionary<string, string> actionData, PublicConfigurationBase spcb)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.PrivateConfigurationBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary<string, string> actionData, PublicConfigurationBase spcbCurrent)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SqlFeatureConfigBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary<string, string> actionData, PublicConfigurationBase spcbCurrent)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.ExecuteAction(String actionId)  
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.Execute(String actionId, TextWriter errorStream)  
+    2009-01-02 13:00:20 Slp: Exception: System.ComponentModel.Win32Exception.  
+    2009-01-02 13:00:20 Slp: Source: System.  
+    2009-01-02 13:00:20 Slp: Message: Access is denied.  
+    ```
 
 - **Scenario 2:**  If a new installation of Microsoft SQL Server 2012 or Microsoft SQL Server 2008 R2 fails, you receive one of the following error messages:
 
-    > Rule "Setup account privileges" failed.  
-    > The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
+    ```output
+    Rule "Setup account privileges" failed.  
+    
+    The account that is running SQL Server Setup doesn't have one or all of the following rights: the right to back up files and directories, the right to manage auditing and the security log and the right to debug programs. To continue, use an account with both of these rights.
+    ```
 
 - **Scenario 3:** If the installation of SQL Server 2012 or a later version fails when you specify a network share (UNC path) for the backup directory location, you receive one of the following error messages:
 
