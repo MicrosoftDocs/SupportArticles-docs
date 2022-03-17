@@ -177,7 +177,7 @@ If the AKS cluster connects publicly to the ACR (NOT through a private link or e
 
         For more information, see [Add network rule to registry](/azure/container-registry/container-registry-access-selected-networks#add-network-rule-to-registry).
 
-    - In the Azure portal, navigate to the ACR. Under **Settings**, select **Networking**. On the **Public network access** tab, under **Firewall**, add the AKS load balancer's public IP address to **Address range**. Select **Save**. For more information, see [Access from selected public network - portal](/azure/container-registry/container-registry-access-selected-networks#access-from-selected-public-network---portal)
+    - In the Azure portal, navigate to the ACR. Under **Settings**, select **Networking**. On the **Public network access** tab, under **Firewall**, add the AKS load balancer's public IP address to **Address range**. Select **Save**. For more information, see [Access from selected public network - portal](/azure/container-registry/container-registry-access-selected-networks#access-from-selected-public-network---portal).
 
         > [!NOTE]
         > If **Public network access** is set to **Disabled**, switch it to **Selected networks** first.
