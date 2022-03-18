@@ -111,7 +111,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
     3. After you make any changes to the registry, restart the VM.
 
-    4. If you don't have CALs, remove the Remote Desktop Session Host role. Then the RDP will be set back to normal. It only allows two concurrent RDP connections to the VM:
+    4. If you don't have CALs or you do not need more than 2 concurrent users, remove the Remote Desktop Session Host role. Then RDP will be set back to only allow two concurrent RDP connections to the VM:
 
         ```
        dism /ONLINE /Disable-feature /FeatureName:Remote-Desktop-Services
