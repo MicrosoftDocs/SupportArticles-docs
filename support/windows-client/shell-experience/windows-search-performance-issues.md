@@ -86,7 +86,7 @@ To control how the indexer treats specific file types, open **Indexing Options**
 You can use this approach to reclaim empty space within the index database. Open an administrative Command Prompt window, and then run the following commands in the given order: 
 
 ```console
-Sc config wsearch start=disable
+Sc config wsearch start=disabled
 Net stop wsearch
 EsentUtl.exe /d %AllUsersProfile%\Microsoft\Search\Data\Applications\Windows\Windows.edb
 Sc config wsearch start=delayed-auto
