@@ -48,6 +48,7 @@ This problem occurs if a Remote Desktop license server is unavailable to provide
 
 - There was never a Remote Desktop licensing role in the environment, and the grace period, 180 days, is over.
 - A Remote Desktop license was installed in the environment, but it's never activated.
+- A Remote Desktop license has CALs, and it was activated. However, there are more active users than CALs available.
 - A Remote Desktop license in the environment doesn't have Client Access Licenses (CALs) injected to set up the connection.
 - A Remote Desktop license was installed in the environment. There are available CALs, but they weren't configured properly.
 - A Remote Desktop license has CALs, and it was activated. However, some other issues on the Remote Desktop license server prevent it from providing licenses in the environment.
