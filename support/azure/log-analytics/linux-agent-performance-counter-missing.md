@@ -3,7 +3,7 @@ title: Linux performance counters missing in Log Analytics workspace
 description: Helps troubleshoot an issue where performance counters are missing in a Linux agent connected workspace.
 ms.date: 03/15/2022
 author: genlin
-ms.author: genlin
+ms.author: genli
 ms.reviewer: irfanr
 ms.service: log-analytics
 ---
