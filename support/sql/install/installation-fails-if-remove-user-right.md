@@ -78,9 +78,9 @@ If you are running the setup as a local administrator, you require the following
 
 |Local Group Policy Object display name|User right|
 |---|---|
-|Backup files and directories|`SeBackupPrivilege`|
-|Debug Programs|`SeDebugPrivilege`|
-|Manage auditing and security log|`SeSecurityPrivilege`|
+|**Backup files and directories**|`SeBackupPrivilege`|
+|**Debug Programs**|`SeDebugPrivilege`|
+|**Manage auditing and security log**|`SeSecurityPrivilege`|
 |||
 
 > [!NOTE]
