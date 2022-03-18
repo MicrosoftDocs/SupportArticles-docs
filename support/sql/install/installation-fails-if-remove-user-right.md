@@ -74,7 +74,7 @@ In this scenario, if you try to install or upgrade SQL Server, the installation 
 
 ## Cause
 
-If a user account is running the setup as a local administrator, the user account requires the following user rights for setup to run successfully:
+If you are running the setup as a local administrator, you require the following user rights for setup to run successfully:
 
 |Local Group Policy Object display name|User right|
 |---|---|
@@ -114,7 +114,7 @@ To add the rights to the setup account, follow these steps:
 
 ### Why is `SeSecurityPrivilege` required on the file server for the backup directory on the UNC share?
 
-This permission is required to retrieve Access Control Lists (ACLs) on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL service account so that a backup of the directory can be run. The setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions).
+This permission is required to retrieve Access Control Lists (ACLs) on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. The service account also sets the ACLs if permissions are missing for the SQL service account so that a backup of the directory can be run. The setup program runs these checks for the default backup directory so that if a backup is performed post-installation, you won't experience an error (because of missing permissions).
 
  > [!NOTE]
  > `SeSecurityPrivilege` is required to change the `get/set ACLs` from the directories and subfolders. This is true even if users who have FULL CONTROL permissions on the directories don't have permissions to `get/set OWNER` and audit information from the directory.
