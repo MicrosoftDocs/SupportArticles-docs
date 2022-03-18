@@ -66,58 +66,16 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 
 ## Steps to avoid these issues
 
-1. Verify changes in the [Test configuration setup](#test-configuration-setup) section to test what occurs with the removal of the "G1" from the CTL before the release date of the update.
-2. After you use the [test configuration setup](#test-configuration-setup) section to verify that all relevant scenarios work, follow the steps in the "[Production configuration setup](#production-configuration-setup)" section in your production configuration.
-3. If you experience outages that are caused by the removal of the "G1" root certificates, manually download the "G2" root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
+To be proactive, or if you are experiencing outages, manually download the "G2" root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
 > [!Note]
 > Application-as-service scenarios such as Azure SQL or Azure App Service that chain to the "G1" root certificate will fail after the "G1" root certificate is removed.
 
-### Test configuration setup
-
-Before the release of the update, administrators can use the following steps to directly configure the Windows registry to a prerelease or staged location of the latest certificate update. You can also configure the settings by using Group Policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
-
-1. Open _regedit_, and then navigate to the following registry subkey:  
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
-
-2. Add or modify the following registry values:
-   - Set **RootDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/test`.
-   - Set **SyncFromDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/test`.
-
-3. Delete the following registry values:
-   - **EncodedCtl**
-   - **LastSyncTime**
-
-4. Delete the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` subkey. This step deletes all stored root certificates.
-
-   > [!Note]
-   > By deleting all stored root certificates from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`, you can make sure that all stored root certificates are removed. This operation forces Windows to download new root certificates if associated public key infrastructure (PKI) chains are used that have new properties (if modified). Because the "G1" root certificate is being removed, this root certificate will not be downloaded.
-
-5. Verify all scenarios that chain to the "G1" root certificate, including those that are listed in [Potential issues](#potential-issues).
-
-> [!Note]
-> The link to the test site never changes. However, the changes that are staged on the test site change from month to month. As of February 24, 2022, this testing URL is staged with 20 continuous deprecation changes that don't currently include removing the "G1" root certificate. That change will be staged in March 2022. This article will be updated noting when the removal of the "G1" root certificate has been staged on the test site.
-
-### Production configuration setup
-
-The following steps directly configure the Windows registry to use the production version of the CTL if the testing URL from the previous section is used:
-
-1. Open _regedit_, and then navigate to the following registry subkey:
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
-
-2. Add or modify the following registry values:
-   - Set **RootDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en`.
-   - Set **SyncFromDirUrl** to `http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en`.
-
-3. Delete the following registry values:
-   - **EncodedCtl**
-   - **LastSyncTime**
-
-4. Delete the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` registry subkey. This step deletes all stored root certificates.
-
 ### Configure the "G2" root certificate
 
 Administrators should configure the "G2" root certificate per the following instructions before the "G1" root certificate is removed by the out-of-band (OOB) root certificate update.
+
+G2 root certificate is NOT trusted by Microsoft. By adding this root CA, you are implicitly trusting the G2 root certificate.
 
 1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the "G2" root certificate on all Windows workgroup, member, and domain controller computers.
 2. There are multiple ways to deploy the root store to enterprise devices. See the "Microsoft Solutions" section in [Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
