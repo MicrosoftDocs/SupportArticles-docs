@@ -163,7 +163,7 @@ To apply the solution, SQLLocalDB service must be in a running state. Before you
     GO
     ````
 
-1. Confirm that the recovery mode has been fixed by repeating step 5. The `dbi_status` should show the correct value of 0x40010008.
+1. Confirm that the recovery mode has been fixed by repeating step 6. The `dbi_status` should show the correct value of 0x40010008.
 
     ```output
     dbi_status
