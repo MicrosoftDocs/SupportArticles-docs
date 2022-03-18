@@ -151,7 +151,7 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
 
 #### Solution 2: Add AKS Load Balancer's public IP address to allowed IP address range of ACR
 
-If the AKS cluster connects publicly to the ACR (NOT through a private link or endpoint) and the public network access of the ACR is limited to selected networks, add AKS Load Balancer's public IP address to the allowed IP address range of the ACR:
+If the AKS cluster connects publicly to the ACR (NOT through a private link or an endpoint) and the public network access of the ACR is limited to selected networks, add AKS Load Balancer's public IP address to the allowed IP address range of the ACR:
 
 1. Confirm that the public network access is limited to selected networks.
 
@@ -159,7 +159,7 @@ If the AKS cluster connects publicly to the ACR (NOT through a private link or e
 
 2. Obtain the AKS Load Balancer's public IP address by using one of the following ways:
 
-    - In the Azure portal, navigate to the AKS cluster. Under **Settings**, select **Properties**, select one of the virtual machine scale sets in the infrastructure resource group, check the public IP address of the AKS Load Balancer.
+    - In the Azure portal, navigate to the AKS cluster. Under **Settings**, select **Properties**, select one of the virtual machine scale sets in the infrastructure resource group, and check the public IP address of the AKS Load Balancer.
 
     - Run the following command:
 
