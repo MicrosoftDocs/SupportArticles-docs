@@ -33,14 +33,12 @@ The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that 
 |Certificate name|SHA1 thumbprint|
 |---|---|
 |Federal Common Policy CA|905F942FD9F28F679B378180FD4F846347F645C1|
-|||
 
 Applications and operations that depend on the "G1" root certificate will fail one to seven days after they receive the root certificate update. Administrators should migrate from the existing "G1" root certificate to the replacement "G2" root certificate listed below as your agency's federal trust anchor.
 
 |Certificate name|SHA1 thumbprint|
 |---|---|
 |Federal Common Policy CA G2|99B4251E2EEE05D8292E8397A90165293D116028|
-|||
 
 > [!Note]
 > The "G2" root certificate can be downloaded directly from ["G2" root certificate crt file download](http://repo.fpki.gov/fcpca/fcpcag2.crt).
@@ -66,7 +64,7 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 
 ## Steps to avoid these issues
 
-To be proactive, or if you are experiencing outages, manually download the "G2" root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
+To proactively avoid these issues, or if you are experiencing outages, manually download the "G2" root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
 > [!Note]
 > Application-as-service scenarios such as Azure SQL or Azure App Service that chain to the "G1" root certificate will fail after the "G1" root certificate is removed.
@@ -75,7 +73,8 @@ To be proactive, or if you are experiencing outages, manually download the "G2" 
 
 Administrators should configure the "G2" root certificate per the following instructions before the "G1" root certificate is removed by the out-of-band (OOB) root certificate update.
 
-G2 root certificate is NOT trusted by Microsoft. By adding this root CA, you are implicitly trusting the G2 root certificate.
+> [!Note]
+> The "G2" root certificate is not trusted by Microsoft. By adding this root certificate, you are implicitly trusting the "G2" root certificate.
 
 1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the "G2" root certificate on all Windows workgroup, member, and domain controller computers.
 2. There are multiple ways to deploy the root store to enterprise devices. See the "Microsoft Solutions" section in [Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
