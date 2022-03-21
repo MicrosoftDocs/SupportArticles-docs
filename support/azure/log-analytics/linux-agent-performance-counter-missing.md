@@ -53,7 +53,7 @@ If the computer with the faulty agent installed is displayed in the query result
 
 The workspace configuration tells an agent what data to collect and send to the workspace. Check the current configuration of the faulty Linux agent by using the omsagent log. The log can be found in */var/opt/microsoft/omsagent/\<workspaceid>/log/*. You also can get it through the collected logs in Step 1.
 
-Open the log file, search the string `[info]: using configuration file: <ROOT>` from the bottom up to get the most recent time when the Linux agent gets configuration data from the workspace.
+Open the log file, search the `[info]: using configuration file: <ROOT>` string from the bottom up to get the most recent time when the Linux agent gets configuration data from the workspace.
 
 If some performance counters entries between the `<Root>` tags look like the following samples, check if the entries match up to what is shown in the **Advanced Settings** > **Data** > **Linux Performance Counters**.
 
@@ -68,11 +68,11 @@ type oms_omi object_name Process instance_regex .* counter_name_regex (Used Memo
 
 :::image type="content" source="./media/linux-agent-performance-counter-missing/screenshot-collected-linux-performance-counters.png" alt-text="Screenshot of collected linux performance counters data":::
 
-If there's no such performance counters entry in the log file, check the time stamp for the `[info]: using configuration file:` entry. If the time stamp predates the time when performance counters are configured to collect, the Linux agent doesn't receive the current configuration from the workspace. To resolve this issue, force the Linux agent to pull the current configuration from the workspace.
+If there's no such performance counter entry in the log file, check the time stamp for the `[info]: using configuration file:` entry. If the time stamp predates the time when performance counters are configured to collect, the Linux agent doesn't receive the current configuration from the workspace. To resolve this issue, force the Linux agent to pull the current configuration from the workspace.
 
 ### Force Linux agent to pull current configuration from workspace
 
-Run the following command to force a Linux agent to pull the current configuration from a workspace:
+To force a Linux agent to pull the current configuration from a workspace, run the following command:
 
 ```python
 sudo -u omsagent python /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py
@@ -85,11 +85,11 @@ The following output is returned if it works:
 Operation PerformRequiredConfigurationChecks completed successfully. Operation was successful.
 ```
 
-If the result isn't expected, run the following command to stop and start the Linux agent by using a Linux command prompt:
+If the result isn't expected, run the following command to stop and start the Linux agent by using a Linux terminal window:
 
 ```bash
-/opt/microsoft/omsagent/bin/service_control stop
-/opt/microsoft/omsagent/bin/service_control start
+sudo /opt/microsoft/omsagent/bin/service_control stop
+sudo /opt/microsoft/omsagent/bin/service_control start
 ```
 
 After this command runs, the Linux agent will pull new configuration from the workspace. Once the agent starts again, check if a performance counter entry is displayed in the omsagent log.
@@ -100,4 +100,4 @@ If a performance counter entry is displayed, go to the Azure portal and run the 
 Perf | summarize arg_max(TimeGenerated, *) by Computer | order by TimeGenerated desc
 ```
 
-If the Linux agent appears, this issue is resolved. If the Linux agent doesn't appears, consider that there are different issues with it.
+If the Linux agent appears, this issue is resolved. If the Linux agent doesn't appear, consider that there are different issues with it.
