@@ -13,7 +13,7 @@
     {
       "source_path": "support/azure/active-directory/installation-issues.md",
       "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
