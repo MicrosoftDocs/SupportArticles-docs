@@ -23,7 +23,7 @@ For detail upgrade process, see [What happens during AKS cluster upgrade](/azure
 
 ### Cause
 
-A NSG rule is blocking the cluster to download required resources from Internet.
+A NSG rule is blocking the cluster to download required resources.
 
 ### Resolution
 
@@ -33,7 +33,7 @@ To resolve this issue, follow these steps:
 
 1. View the rules of the NSG:
 
-    ```
+    ```cli
     az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
     ```
     The following picture shows the default rules:
@@ -44,7 +44,7 @@ To resolve this issue, follow these steps:
 
 After that, try to upgrade the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation.
 
-```
+```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
 
@@ -54,9 +54,9 @@ az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --ku
 
 The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. So it refuses to be drained.
 
-Run `kubelect get pdb -A`, the **Allowed Disruption** value should be 1 or a greater number. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+Run `kubelect get pdb -A`, check the **Allowed Disruption** value. It should be 1 or a greater number. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
-If **Allowed Disruption** is 0, the node drain will fail during the upgrade process.
+If **Allowed Disruption** value is 0, the node drain will fail during the upgrade process.
 
 ### Workaround
 
@@ -64,11 +64,11 @@ If **Allowed Disruption** is 0, the node drain will fail during the upgrade proc
 
 - Adjust the PDB to allow pods draining. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods/Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` in a way that the Allowed Disruption will be 1 or higher.
 - Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is completed, you can re-deploy the PDB `kubectl apply -f pdb_backup.yaml`.
-- The third option is to delete the pod(s) that can’t be drained. Note that if the pods were created by a deployment,statefulset etc., they will be controlled by a replicaset. So, you may need to delete the deployment, statefulset etc. Before that, we recommend to take a backup (`kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`).
+- The third option is to delete the pod(s) that can’t be drained. Note that if the pods were created by a deployment,statefulset etc., they will be controlled by a replicaset. So, you may need to delete the deployment, statefulset etc. Before that, we recommend to take a backup `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
 After one of the above methods were applied, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
 
-```
+```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
 
@@ -84,7 +84,7 @@ To raise the limit or quota for your subscription, go to the [Azure portal]( htt
 
 After the quota change takes effect, try to upgrade the cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation.
 
-```
+```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
 ## Error code: Quotaexceeded
