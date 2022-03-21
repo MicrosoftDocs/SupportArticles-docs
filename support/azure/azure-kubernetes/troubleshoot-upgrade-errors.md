@@ -64,9 +64,9 @@ If **Allowed Disruption** value is 0, the node drain will fail during the upgrad
 
 - Adjust the PDB to allow pods draining. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods/Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` in a way that the Allowed Disruption will be 1 or higher.
 - Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is completed, you can re-deploy the PDB `kubectl apply -f pdb_backup.yaml`.
-- The third option is to delete the pods that can’t be drained. Note that if the pods were created by a deployment or StatefulSet, they will be controlled by a ReplicaSet. So, you may need to delete the deployment or StatefulSet. Before that, we recommend that you take a backup `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
+- The third option is to delete the pods that can’t be drained. Note that if the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. So, you may need to delete the deployment or StatefulSet. Before that, we recommend that you take a backup `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
-After one of the above methods were applied, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
+After one of the above methods was applied, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
 
 ```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
@@ -107,17 +107,17 @@ In this case, you need to submit a support ticket to increase the quote for Comp
 
 ### Error message
 
-Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'. Error: VMSSAgentPoolReconciler retry failed: Code='SubnetIsFull' Message=’\<SUBNET NAME>\ with address prefix \<PREFIX>\ does not have enough capacity for XXX IP addresses.' Details=[]
+Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'. Error: VMSSAgentPoolReconciler retry failed: Code='SubnetIsFull' Message=’\<SUBNET NAME>\ with address prefix \<PREFIX>\ doesn't have enough capacity for XXX IP addresses.' Details=[]
 
 ### Cause
 
 This error occurs if your cluster doesn’t have enough IP addresses to create a new node.
 
-When you plan to perform a upgrade or scaling operation, the number of the required IP addresses should considered. If the IP address range that you configured in the cluster only supports a fixed number of nodes, the upgrade or scaling operation will fail.
+When you plan to perform an upgrade or scaling operation, the number of the required IP addresses should be considered. If the IP address range that you configured in the cluster only supports a fixed number of nodes, the upgrade or scaling operation will fail.
 
 - When you upgrade your AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node, and an older node is removed from the cluster. This rolling upgrade process requires a minimum of one extra block of IP addresses to be available. Your node count is then n + 1.
 
-- This consideration is important when you use Windows Server node pools. Windows Server nodes in AKS do not automatically apply Windows Updates, instead you perform an upgrade on the node pool. This upgrade deploys new nodes with the latest Window Server 2019 base node image and security patches. For more information on upgrading a Windows Server node pool, see [Upgrade a node pool in AKS](/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
+- This consideration is important when you use Windows Server node pools. Windows Server nodes in AKS don't automatically apply Windows Updates, instead you perform an upgrade on the node pool. This upgrade deploys new nodes with the latest Window Server 2019 base node image and security patches. For more information on upgrading a Windows Server node pool, see [Upgrade a node pool in AKS](/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
 
 - When you scale an AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node. Your IP address range needs to take into consideration: how you may want to scale up the number of nodes and pods your cluster can support. One additional node for upgrade operations should also be included. Your node count should be `n + <number-of-additional-scaled-nodes-you-anticipate> + 1`.
 
@@ -127,7 +127,7 @@ For more information, see [Plan IP addressing for the cluster](/azure/aks/config
 
 To work around the issue, reduce the cluster nodes to reserve IP addresses for the upgrade.
 
-If scaling down is not an option, and your virtual network CIDR has enough IP addresses, try to add a node pool with a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
+If scaling down isn't an option, and your virtual network CIDR has enough IP addresses, try to add a node pool with a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
 
 1. Add a new user node pool in the virtual network on a larger subnet.
 1. Switch the original node pool to one of type system.
