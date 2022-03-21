@@ -19,7 +19,7 @@ This article requires Azure CLI version 2.0.65 or later. Run `az --version` to f
 
 For detail upgrade process, see [What happens during AKS cluster upgrade](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
-## Upgrade fails due to NSG rules (for public cluster)
+## Upgrade fails due to NSG rules
 
 ### Cause
 
@@ -42,24 +42,31 @@ To resolve this issue, follow these steps:
 
 1. If you have the default rules, skip this step. if not, revise and remove the rules that are blocking the internet traffic.
 
+After that, try to upgrade the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation.
+
+```
+az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
+```
+
 ## Error code: PodDrainFailure
 
 ### Cause
 
 The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. So it refuses to be drained.
 
-Run `kubelect get pda -A`, the **Allowed Disruption** value should be 1 or a greater number. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+Run `kubelect get pdb -A`, the **Allowed Disruption** value should be 1 or a greater number. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
 If **Allowed Disruption** is 0, the node drain will fail during the upgrade process.
 
 ### Workaround
 
- Use one of the following methods to work around the issues:
+ To work around this issue, use one of the following methods:
 
-- Delete the pod that cause the problem, and then do a reconciliation.
-- Fix the PDB, and then do a reconciliation.
+- Adjust the PDB to allow pods draining. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods/Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` in a way that the Allowed Disruption will be 1 or higher.
+- Take a backup of the PDB: `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB (`kubectl delete pdb <pdb-name> -n /<pdb-namespace>`). After the upgrade is completed, you can re-deploy the PDB (`kubectl apply -f pdb_backup.yaml`).
+- The third option is to delete the pod(s) that can’t be drained. Note that if the pods were created by a deployment,statefulset etc., they will be controlled by a replicaset. So, you may need to delete the deployment, statefulset etc. Before that, we recommend to take a backup (kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml).
 
-After that, try to upgrade the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation.
+After one of the above methods were applied, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
 
 ```
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
