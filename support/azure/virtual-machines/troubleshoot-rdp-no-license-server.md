@@ -50,12 +50,12 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
 1. Connect to the VM by using an administrative session. To do this, use one of the following ways:
 
-  - Run the following command:
+    - Run the following command:
 
-    ```
-    mstsc /v:<Server>[:<Port>] /admin
-    ```
-  - In the Azure portal, go to the VM, select **Connect** under **Settings**. In the right panel, select **Download RDP File** to download a connection file.
+      ```
+      mstsc /v:<Server>[:<Port>] /admin
+      ```
+    - In the Azure portal, go to the VM, select **Connect** under **Settings**. In the right panel, select **Download RDP File** to download a connection file.
 
     If you can't connect to the VM by using an administrative session, you can use the [Virtual Machine Serial Console on Azure](serial-console-windows.md) to access the VM as follows:
 
