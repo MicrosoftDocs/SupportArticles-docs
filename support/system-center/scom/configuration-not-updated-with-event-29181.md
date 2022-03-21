@@ -18,8 +18,8 @@ In a System Center environment that has many clients, configuration changes are 
 
 This issue occurs when the Management Configuration service fails because the instance transfer can't perform a bulk insert. This issue typically occurs when the environment has a large number of clients, such as 2000 or more.
 
->[!NOTE]
->You may also experience this error if you have high latency (greater than 10ms) from your Management Server(s) to your Operations Manager SQL Server Instance(s).
+> [!NOTE]
+> You may also encounter this error if the latency from the management server(s) to the Operations Manager SQL Server instance(s) is high (greater than 10ms). 
 
 ## Resolution
 
@@ -27,7 +27,8 @@ To fix this issue, follow these steps to modify the batch size settings for the 
 
 1. Make a backup of the `..\Program Files\System Center 2012\Operations Manager\Server\ConfigService.Config` file.
 1. Edit the ConfigService.config file, and then modify the settings as follows:
-    ```
+    
+    ```xml
     <Setting Name="SnapshotSyncManagedEntityBatchSize" Value="10000" />  
     <Setting Name="SnapshotSyncRelationshipBatchSize" Value="10000" />  
     <Setting Name="SnapshotSyncTypedManagedEntityBatchSize" Value="20000" />
