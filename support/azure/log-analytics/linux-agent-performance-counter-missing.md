@@ -87,7 +87,7 @@ Operation PerformRequiredConfigurationChecks completed successfully. Operation w
 
 If the result isn't expected, run the following command to stop and start the Linux agent by using a Linux terminal window:
 
-```bash
+```
 sudo /opt/microsoft/omsagent/bin/service_control stop
 sudo /opt/microsoft/omsagent/bin/service_control start
 ```
