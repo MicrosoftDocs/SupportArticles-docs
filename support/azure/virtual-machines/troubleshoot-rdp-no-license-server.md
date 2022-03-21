@@ -33,23 +33,14 @@ When you try to connect to a virtual machine (VM), you experience the following 
 
 - The RDP connection appears to be stuck in the Configuring remote session status.
 
-However, you can connect to the VM normally by using an administrative session:
-
-```
-mstsc /v:<Server>[:<Port>] /admin
-```
-
-> [!NOTE]
-> Another way to connect using an administrative session is to open the VM Overview page then select `Connect`. Select `Download RDP File` to download a connection file that has the admin session flag. Once you have connected to the VM proceed to resolve the licensing issue with steps below.
-
 ## Cause
 
 This problem occurs if a Remote Desktop license server is unavailable to provide a license to start a remote session. It can be caused by several scenarios, even though a Remote Desktop Session Host role was set up on the VM:
 
 - There was never a Remote Desktop licensing role in the environment, and the grace period, 180 days, is over.
 - A Remote Desktop license was installed in the environment, but it's never activated.
-- A Remote Desktop license has CALs, and it was activated. However, there are more active users than CALs available.
-- A Remote Desktop license in the environment doesn't have Client Access Licenses (CALs) injected to set up the connection.
+- A Remote Desktop license has lient Access Licenses (CALs), and it was activated. However, there are more active users than available CALs.
+- A Remote Desktop license in the environment doesn't have CALs injected to set up the connection.
 - A Remote Desktop license was installed in the environment. There are available CALs, but they weren't configured properly.
 - A Remote Desktop license has CALs, and it was activated. However, some other issues on the Remote Desktop license server prevent it from providing licenses in the environment.
 
@@ -57,13 +48,14 @@ This problem occurs if a Remote Desktop license server is unavailable to provide
 
 To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk) and follow these steps:
 
-1. Connect to the VM by using an administrative session:
+1. Connect to the VM by using an administrative session. To do this, use one of the following ways:
 
-   ```
-   mstsc /v:<Server>[:<Port>] /admin
-   ```
-   > [!NOTE]
-   > Another way to connect using an administrative session is to open the VM Overview page then select `Connect`. Select `Download RDP File` to download a connection file that has the admin session flag. Once you have connected to the VM proceed to resolve the licensing issue with steps below.
+  - Run the following command:
+
+    ```
+    mstsc /v:<Server>[:<Port>] /admin
+    ```
+  - In the Azure portal, go to the VM, select **Connect** under **Settings**. In the right panel, select **Download RDP File** to download a connection file.
 
     If you can't connect to the VM by using an administrative session, you can use the [Virtual Machine Serial Console on Azure](serial-console-windows.md) to access the VM as follows:
 
@@ -111,17 +103,17 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
     3. After you make any changes to the registry, restart the VM.
 
-    4. If you don't have CALs or you do not need more than 2 concurrent users, remove the Remote Desktop Session Host role. Then RDP will be set back to only allow two concurrent RDP connections to the VM:
+    4. If you don't have CALs or you don't need more than 2 concurrent users, remove the Remote Desktop Session Host role. Then RDP will be set back to only allow two concurrent RDP connections to the VM:
 
         ```
-       dism /ONLINE /Disable-feature /FeatureName:Remote-Desktop-Services
+        dism /ONLINE /Disable-feature /FeatureName:Remote-Desktop-Services
         ```
 
         If the VM has the Remote Desktop licensing role and it isn't used, you can also remove that role:
 
-       ```
+        ```
         dism /ONLINE /Disable-feature /FeatureName:Licensing
-       ```
+        ```
 
     5. Make sure that the VM can connect to the Remote Desktop license server. You can test the connectivity to the port 135 between the VM and the license server: 
 
