@@ -56,7 +56,7 @@ The error might occur if a pod is protected by the Pod Disruption Budget (PDB) p
 
 Run `kubelect get pdb -A`, check the **Allowed Disruption** value. It should be 1 or a greater number. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
-If **Allowed Disruption** value is 0, the node drain will fail during the upgrade process.
+If the **Allowed Disruption** value is 0, the node drain will fail during the upgrade process.
 
 ### Workaround
 
@@ -67,10 +67,6 @@ If **Allowed Disruption** value is 0, the node drain will fail during the upgrad
 - The third option is to delete the pods that can’t be drained. Note that if the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. So, you may need to delete the deployment or StatefulSet. Before that, we recommend that you take a backup `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
 After one of the above methods was applied, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
-
-```cli
-az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
-```
 
 ## Error code: PublicIPCountLimitReached
 
