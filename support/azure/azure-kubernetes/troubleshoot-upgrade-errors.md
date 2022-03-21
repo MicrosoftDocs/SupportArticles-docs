@@ -63,8 +63,8 @@ If **Allowed Disruption** is 0, the node drain will fail during the upgrade proc
  To work around this issue, use one of the following methods:
 
 - Adjust the PDB to allow pods draining. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods/Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` in a way that the Allowed Disruption will be 1 or higher.
-- Take a backup of the PDB: `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB (`kubectl delete pdb <pdb-name> -n /<pdb-namespace>`). After the upgrade is completed, you can re-deploy the PDB (`kubectl apply -f pdb_backup.yaml`).
-- The third option is to delete the pod(s) that can’t be drained. Note that if the pods were created by a deployment,statefulset etc., they will be controlled by a replicaset. So, you may need to delete the deployment, statefulset etc. Before that, we recommend to take a backup (kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml).
+- Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is completed, you can re-deploy the PDB `kubectl apply -f pdb_backup.yaml`.
+- The third option is to delete the pod(s) that can’t be drained. Note that if the pods were created by a deployment,statefulset etc., they will be controlled by a replicaset. So, you may need to delete the deployment, statefulset etc. Before that, we recommend to take a backup (`kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`).
 
 After one of the above methods were applied, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
 
