@@ -11,6 +11,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/active-directory/installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/active-directory",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
