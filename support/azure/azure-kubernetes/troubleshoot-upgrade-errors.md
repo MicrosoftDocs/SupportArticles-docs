@@ -40,7 +40,7 @@ To resolve this issue, follow these steps:
 
     :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="Screenshot of the default NSG rules.":::
 
-1. If you have the default rules, skip this step. Otherwise, revise and remove the rules that are blocking the internet traffic. Then, try to upgrade the AKS cluster to the same version that you previously tried to upgrade. This process will trigger a reconciliation.
+1. If you have the default rules, skip this step. Otherwise, revise and remove the rules that are blocking the internet traffic. Then, try to upgrade the AKS cluster to the same version that you previously tried to upgrade to. This process will trigger a reconciliation.
 
 ```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
@@ -60,7 +60,7 @@ If the **Allowed Disruption** value is **0**, the node drain will fail during th
 
  To work around this issue, use one of the following methods:
 
-- Adjust the PDB to enable pods drainage. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods / Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` to push the Allowed Disruption value to **1** or greater.
+- Adjust the PDB to enable pods draining. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods / Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` to push the Allowed Disruption value to **1** or greater.
 - Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is completed, you can re-deploy the PDB `kubectl apply -f pdb_backup.yaml`.
 - Delete the pods that can’t be drained. Note that if the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. So, you may have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
@@ -76,7 +76,7 @@ The error occurs if you reached the maximum number of public IP addresses that a
 
 To raise the limit or quota for your subscription, go to the [Azure portal]( https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest), file a **Service and subscription limits (quotas)** support ticket, and set the quota type to **Networking**.
 
-After the quota change takes effect, try to upgrade the cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation.
+After the quota change takes effect, try to upgrade the cluster to the same version that you previously tried to upgrade to. This process will trigger a reconciliation.
 
 ```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
