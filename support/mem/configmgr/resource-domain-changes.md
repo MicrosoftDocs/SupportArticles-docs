@@ -42,7 +42,7 @@ Here are the steps to check logs and identify the issue:
 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_SECURITY_GROUP_DISCOVERY_AGENT`
 
-1. Run a full Active Directory group discovery and make sure the following message is logged in the _ADSgDis.log_ file upon the completion.
+1. Run a full Active Directory group discovery and make sure the following message is logged in the _ADSgDis.log_ file upon completion.
 
    `INFO: Succeeded running full sync stored procedure`
 
@@ -50,7 +50,7 @@ Here are the steps to check logs and identify the issue:
 
    `VERBOSE : Could not get Domain Name using DSCrackNames, will parse ADs Path to get it`
 
-1. Check the following lines around. You'll find a group and its member are from different domains.
+1. Check the following lines. You'll find a group and its member are from different domains.
 
    ```output
    INFO: DDR was written for group 'contoso\ParentGroup' - C:\ConfigMgr\inboxes\auth\ddm.box\userddrsonly\asg1607o.DDR at <Date Time>.~ 
