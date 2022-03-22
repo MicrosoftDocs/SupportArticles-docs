@@ -20,11 +20,11 @@ The domain name of the resource may alternate between `AAA` and `BBB`, which rem
 
 ## Cause
 
-January 2022 Windows updates introduced an NTLM fallback that may [block NTLM authentication if Kerberos authentication isn't successful](https://support.microsoft.com/topic/dd415f99-a30c-4664-ba37-83d33fb071f4), which changes the behavior in Configuration Manager current branch whose versions are earlier than 2203.
+January 2022 Windows updates introduced an NTLM fallback that may [block NTLM authentication if Kerberos authentication isn't successful](https://support.microsoft.com/topic/dd415f99-a30c-4664-ba37-83d33fb071f4), which changes the behavior in Configuration Manager current branch.
 
 ## Resolution
 
-This issue is fixed in [Configuration Manager current branch, version 2203](/mem/configmgr/core/servers/manage/updates).
+This issue is under investigation and will be resolved in a future release of Configuration Manager current branch.
 
 ## Workaround
 
