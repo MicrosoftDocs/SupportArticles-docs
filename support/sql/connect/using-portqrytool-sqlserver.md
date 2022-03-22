@@ -1,7 +1,7 @@
 ---
 title: Using the PortQryUI tool with SQL Server
-description: PortQryUI is a UI tool for SQL Server that helps you view the open ports on a computer. It uses the command-line version, *Portqry.exe*.
-ms.date: 02/23/2022
+description: PortQryUI is a UI tool for SQL Server that helps you view the open ports on a computer that uses the command-line version, Portqry.exe.
+ms.date: 03/09/2022
 author: ramakoni1
 ms.author: v-jayaramanp
 ms.custom: sap:Connection Issues
@@ -12,14 +12,14 @@ ms.prod: sql
 
 PortQry is a command-line tool that you can use to help troubleshoot TCP/IP connectivity issues. The tool reports the status of target TCP and User Datagram Protocol (UDP) ports on a local or remote computer. *PortQryUI.exe* enables you to use the UI instead of the command line for PortQry.
 
-This article discusses how to use the PortQryUI tool when you troubleshoot connectivity issues that affect Microsoft SQL Server. For more information about the PortQry command-line tool, see [Using the PortQry command-line tool - Windows Server | Microsoft Docs](../../windows-server/networking/portqry-command-line-port-scanner-v2.md).
+This article discusses how to use the PortQryUI tool when you troubleshoot connectivity issues that affect Microsoft SQL Server. For more information about the PortQry command-line tool, see [Using the PortQry command-line tool](../../windows-server/networking/portqry-command-line-port-scanner-v2.md).
 
 > [!NOTE]
-> Because PortQryUI is intended to be used as a troubleshooting tool, you should have sufficient knowledge of your computing environment to be able to use the tool effectively.
+> Since PortQryUI is intended to be used as a troubleshooting tool, you should have sufficient knowledge of your computing environment to be able to use the tool effectively.
 
 ## About the PortQryUI tool
 
-The PortQryUI tool helps you to do the following tasks:
+The PortQryUI tool helps you to perform the following tasks:
 
 - Resolve TCP/IP connectivity issues.
 - Show the status of the TCP and UDP ports on a local or remote computer.
@@ -70,7 +70,7 @@ To resolve connectivity issues on your computer or a remote computer, follow the
 - Make sure that SQL Server has started.
 - Make sure that TCP/IP is enabled for your server instance in the SQL Server network configuration.
 - Check the SQL Server error log for the port number. Use that in your connection strings in the *servername\portnumber* format.
-- Contact your network or Windows administrator to make sure that TCP port 1433 (or the currently configured SQL Server port) isn't blocked by a firewall on the network or by the Windows firewall on the SQL Server system. To configure Windows firewall to work together with the SQL Server instance, review [Configure Windows Firewall - SQL Server | Microsoft Docs](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver15&preserve-view=true).
+- Contact your network or Windows administrator to make sure that TCP port 1433 (or the currently configured SQL Server port) isn't blocked by a firewall on the network or by the Windows firewall on the SQL Server system. To configure Windows firewall to work together with the SQL Server instance, review [Configure Windows Firewall](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver15&preserve-view=true).
   
 **Type of instance**: Default instance
 
@@ -99,7 +99,7 @@ To resolve connectivity issues on your computer or a remote computer, follow the
 
 - Start your SQL Server named instance.
 - Try to start the SQL Server browser service.
-- Work with your network or Windows administrator to make sure that UDP port 1434 isn't blocked by a firewall on the network or by the Windows firewall on the SQL Server system. To configure Windows firewall to work together with SQL Server, see [Configure Windows Firewall - SQL Server | Microsoft Docs](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver15&preserve-view=true).
+- Work with your network or Windows administrator to make sure that UDP port 1434 isn't blocked by a firewall on the network or by the Windows firewall on the SQL Server system. To configure Windows firewall to work together with SQL Server, see [Configure Windows Firewall](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver15&preserve-view=true).
 - If UDP 1434 can't be opened on your firewalls, you should configure your SQL Server named instance to listen on a static port, and use *servername\portnumber* in your connection strings.
 
 **Type of instance**: Named instance

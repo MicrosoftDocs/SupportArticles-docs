@@ -407,6 +407,8 @@
       href: performance/troubleshoot-slow-running-queries.md
     - name: Troubleshoot SQL Server slow performance caused by IO issues
       href: performance/troubleshoot-sql-io-performance.md
+    - name: Troubleshoot ASYNC_NETWORK_IO issues
+      href: performance/troubleshoot-query-async-network-io.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
     - name: Understand and resolve blocking problems

@@ -6,6 +6,10 @@ ms.reviewer:
 ms.service: virtual-machines
 ms.collection: windows
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Error when you try to RDP to a Windows VM in Azure: CredSSP encryption oracle remediation
 
 This article provides a solution to an issue in which you are not able to connect to a virtual machine (VM) using RDP with error: CredSSP encryption oracle remediation.

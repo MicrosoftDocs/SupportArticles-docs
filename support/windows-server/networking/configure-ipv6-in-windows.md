@@ -14,6 +14,10 @@ ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Guidance for configuring IPv6 in Windows for advanced users
 
 Windows Vista, Windows Server 2008, and later versions of Windows implement RFC 3484 and use a prefix table to determine which address to use when multiple addresses are available for a Domain Name System (DNS) name.
@@ -64,7 +68,7 @@ The IPv6 functionality can be configured by modifying the following registry key
 > - You must restart your computer for these changes to take effect.
 > - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
 
-By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn’t in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn’t desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
+By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn't in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn't desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
 
 You can also follow these steps to modify the registry key:
 

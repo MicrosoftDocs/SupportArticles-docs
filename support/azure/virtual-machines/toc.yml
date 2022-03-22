@@ -436,6 +436,8 @@
 - name: Remote troubleshooting tools
   href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
+  - name: Debug scripts run by Custom Script Extension or Run Command
+    href: debug-customscriptextension-runcommand-scripts.md
   - name: VM Inspector for Azure Virtual Machines
     href: vm-inspector-azure-virtual-machines.md
   - name: VM Inspector error messages

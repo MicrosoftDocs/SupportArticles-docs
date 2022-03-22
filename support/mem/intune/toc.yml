@@ -69,8 +69,6 @@ items:
     items:
     - name: Save application failed error
       href: save-application-failed-error.md
-    - name: Build software inventory using Power BI
-      href: build-software-inventory-power-bi.md
     - name: Can't sync Microsoft Store for Business apps to Intune
       href: apps-fail-sync-to-intune.md
 - name: App protection policies (APP)
