@@ -46,7 +46,7 @@ Follow the link for the appropriate troubleshooting step listed below:
 | -------------------- | -------------- |
 | Check whether the SKU is available | [Resolve errors for SKU not available](/azure/azure-resource-manager/troubleshooting/error-sku-not-available) |
 | Verify that the service principal is valid | [Service principals with AKS](/azure/aks/kubernetes-service-principal) |
-| Verify that any commands that were used to create the cluster are valid | [az aks](/cli/azure/aks#az_aks_create) (Azure CLI reference) |
+| Verify that any commands that were used to create the cluster are valid | [az aks](/cli/azure/aks#az-aks-create) (Azure CLI reference) |
 | Verify that any custom network resources that were used to create the cluster are valid | [Configure Azure CNI networking in AKS](/azure/aks/configure-azure-cni) and [Customize cluster egress with a user-defined route](/azure/aks/egress-outboundtype) |
 
 ## More information

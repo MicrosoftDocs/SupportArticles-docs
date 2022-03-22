@@ -32,7 +32,7 @@ aks-agentpool-34796016-vmss000002   Ready    agent   45h   v1.20.9   10.240.2.47
 
 The next step is to establish a connection to the AKS cluster node that you want to capture the network trace from. [Create an SSH connection to the Linux node](/azure/aks/ssh).
 
-If you're using a Linux virtual machine scale set but don't have your SSH key, reset the SSH key by running the [az vmss extension set](/cli/azure/vmss/extension#az_vmss_extension_set) and [az vmss update-instances](/cli/azure/vmss#az_vmss_update_instances) commands in Azure CLI:
+If you're using a Linux virtual machine scale set but don't have your SSH key, reset the SSH key by running the [az vmss extension set](/cli/azure/vmss/extension#az-vmss-extension-set) and [az vmss update-instances](/cli/azure/vmss#az-vmss-update-instances) commands in Azure CLI:
 
 ```azurecli-interactive
 CLUSTER_RESOURCE_GROUP=  # Specify the cluster resource group.
