@@ -1,6 +1,6 @@
 ---
 title: Unable to upgrade Azure Kubernetes Service cluster
-description: This article helps you troubleshoot the most common errors when you upgrade an Azure Kubernetes Service cluster.
+description: This article helps you troubleshoot the most common errors that occur when you upgrade an Azure Kubernetes Service cluster.
 ms.date: 03/15/2022
 author: genlin
 ms.author: genli
@@ -13,36 +13,34 @@ This article provides guidance for troubleshooting the most common errors that o
 
 ## Before you begin
 
-Check the error message that you received during the upgrade process and follow the appropriate steps below.
+Check the error message that you received during the upgrade process, and follow the appropriate steps in the "Resolution" section.
 
-This article requires Azure CLI version 2.0.65 or later. Run `az --version` to find the version. If you need to install or upgrade Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
+This article requires Azure CLI version 2.0.65 or a later version. To find the version number, run `az --version`. If you have to install or upgrade Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
-For detail upgrade process, see [What happens during AKS cluster upgrade](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
+For a detailed upgrade process, see [What happens during AKS cluster upgrade](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
-## Upgrade fails due to NSG rules
+## Upgrade fails because of NSG rules
 
 ### Cause
 
-A NSG rule is blocking the cluster to download required resources.
+An NSG rule is blocking the cluster from downloading required resources.
 
 ### Resolution
 
 To resolve this issue, follow these steps:
 
-1. Run `az network nsg list -o table`, and then locate the NSG that linked to your cluster. The NSG is placed in a resource group named `MC_<RG name>_<your AKS cluster name>`.
+1. Run `az network nsg list -o table`, and then locate the NSG that's linked to your cluster. The NSG is lopcated in a resource group that's named `MC_<RG name>_<your AKS cluster name>`.
 
 1. View the rules of the NSG:
 
     ```cli
     az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
     ```
-    The following picture shows the default rules:
+    The following screenshpt shows the default rules:
 
-    :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="The screenshot of the default NSG rules":::
+    :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="Screenshot of the default NSG rules.":::
 
-1. If you have the default rules, skip this step. if not, revise and remove the rules that are blocking the internet traffic.
-
-After that, try to upgrade the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation.
+1. If you have the default rules, skip this step. Otherwise, revise and remove the rules that are blocking the internet traffic. Then, try to upgrade the AKS cluster to the same version that you previously tried to upgrade. This process will trigger a reconciliation.
 
 ```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
@@ -52,21 +50,21 @@ az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --ku
 
 ### Cause
 
-The error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. So it refuses to be drained.
+This error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. In this situation, the pod resists being drained.
 
-Run `kubelect get pdb -A`, check the **Allowed Disruption** value. It should be 1 or a greater number. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+To test this, run `kubelect get pdb -A`, and then check the **Allowed Disruption** value. The value should be **1** or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
-If the **Allowed Disruption** value is 0, the node drain will fail during the upgrade process.
+If the **Allowed Disruption** value is **0**, the node drain will fail during the upgrade process.
 
 ### Workaround
 
  To work around this issue, use one of the following methods:
 
-- Adjust the PDB to allow pods draining. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods/Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` in a way that the Allowed Disruption will be 1 or higher.
+- Adjust the PDB to enable pods drainage. Generally, The Allowed Disruption is the result of `Min Available / Max unavailable` or `Running pods / Replicas`. You can modify the `Min Available / Max unavailable` parameter at PDB level or increase the number of `Running pods / Replicas` to push the Allowed Disruption value to **1** or greater.
 - Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is completed, you can re-deploy the PDB `kubectl apply -f pdb_backup.yaml`.
-- The third option is to delete the pods that can’t be drained. Note that if the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. So, you may need to delete the deployment or StatefulSet. Before that, we recommend that you take a backup `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
+- Delete the pods that can’t be drained. Note that if the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. So, you may have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
-After one of the above methods was applied, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
+After you apply one of these methods, re-initiate the upgrade operation for the AKS cluster to the same version that you tried to upgrade previously. This process will trigger a reconciliation that will try to re-upgrade the AKS nodes.
 
 ## Error code: PublicIPCountLimitReached
 
@@ -87,7 +85,7 @@ az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --ku
 
 ### Cause
 
-The issue occurs if the quota is reached. Your subscription doesn’t have available resources that required for upgrading.
+The issue occurs if the quota is reached. Your subscription doesn’t have available resources that are required for upgrading.
 
 ### Resolution
 
@@ -97,7 +95,7 @@ The following is a sample of the error message:
 
 >Operation results in exceeding quota limits of Core. Maximum allowed: X, Current in use: X, Additional requested: X
 
-In this case, you need to submit a support ticket to increase the quote for Compute cores.
+In this case, you have to submit a support ticket to increase the quote for Compute cores.
 
 ## Error code: Subnetisfull
 
@@ -123,7 +121,7 @@ For more information, see [Plan IP addressing for the cluster](/azure/aks/config
 
 To work around the issue, reduce the cluster nodes to reserve IP addresses for the upgrade.
 
-If scaling down isn't an option, and your virtual network CIDR has enough IP addresses, try to add a node pool with a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
+If scaling down isn't an option, and your virtual network CIDR has enough IP addresses, try to add a node pool that has a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
 
 1. Add a new user node pool in the virtual network on a larger subnet.
 1. Switch the original node pool to one of type system.
