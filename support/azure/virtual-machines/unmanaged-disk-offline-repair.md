@@ -158,7 +158,7 @@ After you finish repairing the disk, follow these steps:
 
     **Azure CLI**
 
-    Use the [az vm unmanaged-disk detach](/cli/azure/vm/unmanaged-disk#az_vm_unmanaged_disk_detach) command, as in the following example:
+    Use the [az vm unmanaged-disk detach](/cli/azure/vm/unmanaged-disk#az-vm-unmanaged-disk-detach) command, as in the following example:
 
     ```azurecli
     az vm unmanaged-disk detach -g MyResourceGroup --vm-name MyVm -n disk_name
