@@ -107,8 +107,8 @@ To add the rights to the setup account, follow these steps:
 5. In the **Backup Files and Directories Properties** dialog box, select **Add User or Group**.
 6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times. 
    > [!NOTE]
-   > To add the user account, perform steps 1-6 for the **Debug Programs** and **Manage auditing and security log** policies.
-7. On the **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
+   > To add the user account for the **Debug Programs** and **Manage auditing and security log** policies, perform steps 1 through 6 .
+7. From **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
 
 ## Frequently asked questions (FAQs)
 
