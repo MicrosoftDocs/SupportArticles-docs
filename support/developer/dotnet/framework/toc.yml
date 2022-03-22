@@ -1,6 +1,6 @@
 - name: General
   items:
-    - name: Printing a range of pages may fail when you use a WPF application
+  - name: Printing a range of pages may fail when you use a WPF application
     href: ./general/Printing-process-fails-using-WPF-application-Win10.md
   - name: 501 syntax error when you use FtpWebRequest
     href: ./general/ftpwebrequest-behavior.md
