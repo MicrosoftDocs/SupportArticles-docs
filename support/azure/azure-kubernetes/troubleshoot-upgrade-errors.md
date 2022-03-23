@@ -115,7 +115,7 @@ When you plan to perform an upgrade or scaling operation, the number of the requ
 
 - When you scale an AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node. Your IP address range needs to take into consideration: how you may want to scale up the number of nodes and pods your cluster can support. One additional node for upgrade operations should also be included. Your node count should be `n + <number-of-additional-scaled-nodes-you-anticipate> + 1`.
 
-For more information, see [Plan IP addressing for the cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-)
+For more information, see [Plan IP addressing for the cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster).
 
 ### Workaround
 
