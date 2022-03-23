@@ -101,13 +101,13 @@ When you evaluate effective access to resources, consider the following factors:
 
 - **Permissions**
 
-  - **Authorization on the remote server**
+  - **Authorization on the remote server**  
   To evaluate effective permissions for a resource on a remote server, a user has to belong to the **Access Control Assistance Operators** group. This built-in group makes it easier to delegate access to people who do not have administrative access to resource servers. Otherwise, users have to have administrative access to both the remote server and the share or other resource.
 
-  - **Permissions to retrieve security descriptor for the share**
+  - **Permissions to retrieve security descriptor for the share**  
   The user may also require administrative access to the SMB share security descriptors. Many in-market operating system versions do not grant such access by default. To receive an update that provides this capability, contact Microsoft Support. The solution for in-market operating system versions is not publicly available.
 
-- **How the server is accessed (if the resource uses share-level access control)**
+- **How the server is accessed (if the resource uses share-level access control)**  
   To evaluate the effective permissions for a resource on a remote server that uses share-level access control, you have to access use a UNC share path to access the resource. Do not try to use a mapped drive letter to access the resource. This consideration does not apply if you exclusively use file system-based access control. For example, use a path that resembles the following:
 
   ```console
