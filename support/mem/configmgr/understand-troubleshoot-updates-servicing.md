@@ -514,7 +514,7 @@ The following steps explain the process of extracting the update to run prerequi
 
 After you select the update package and select **Run prerequisite check**, the following entries are logged in smsdbmon.log:
 
-> RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2 ][1009663]  
+> RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN \[2 ][1009663]  
 > Modified trigger definition for Hierarchy Manager \[CFD](CM_UpdatePackages_UPD_HMAN): table CM_UpdatePackages(State) on update, file ESC in dir C:\Program Files\Microsoft Configuration Manager  
 > \inboxes\hman.box\CFD\  
 > SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\2.ESC [1009663]

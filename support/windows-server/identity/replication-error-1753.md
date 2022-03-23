@@ -200,7 +200,7 @@ c:\>nslookup -type=cname \<fully qualified cname of source DC> <destination DCs 
 
 Verify that the IP address returned by `NSLOOKUP` "owns" the host name / security identity of the source DC.
 
-a) C:\\>NBTSTAT -A \\<IP address _returned_ by NSLOOKUP in the step above>
+a) `C:\\>NBTSTAT -A \\<IP address _returned_ by NSLOOKUP in the step above>`
 
 OR
 
