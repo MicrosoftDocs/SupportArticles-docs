@@ -35,17 +35,15 @@ _Original KB number:_ &nbsp; 970112
     |---|---|---|---|
     |PURCH|000-1300-01|100.00||
     |PAY|000-2100-00||100.00|
-    |||||
 
-    **Credit card payment example**
+      **Credit card payment example**
 
     |Distribution Type|Account Number|Debit Amount|Credit Amount|
     |---|---|---|---|
     |PAY|000-2100-00|100.00||
     |CASH|xxx-xxxx-xx||100.00|
-    |||||
 
-    > [!NOTE]
+      > [!NOTE]
     > xxx-xxxx-xx is the accounts payable account of the credit card vendor.
 
 4. The account for the **CASH** distribution record defaults from the Vendor Account Maintenance window of the credit card vendor. If there's no default account set up, the account must be manually entered in the Payables Transaction Entry Distribution window.
@@ -67,9 +65,8 @@ _Original KB number:_ &nbsp; 970112
     |PAY|000-2100-00||100.00|
     |PAY|000-2100-00|100.00||
     |CASH|xxx-xxxx-xx||100.00|
-    |||||
 
-    > [!NOTE]
+      > [!NOTE]
     > xxx-xxxx-xx is the accounts payable account of the credit card vendor.
 
 6. If you want to void the credit card payment (for example, a different invoice should have been paid instead), both the credit card payment and the credit card invoice should be voided.

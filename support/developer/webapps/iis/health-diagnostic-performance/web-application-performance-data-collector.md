@@ -59,7 +59,7 @@ After collecting the PERFVIEW traces, the SDP starts compressing all the data th
 
 ## Information collected
 
-- *Operating System*  
+- _Operating System_  
 
     | Description |
     |---|
@@ -72,7 +72,7 @@ After collecting the PERFVIEW traces, the SDP starts compressing all the data th
     |Username|
     ||
 
-- *Computer System*  
+- _Computer System_  
 
     | Description |
     |---|
@@ -83,7 +83,7 @@ After collecting the PERFVIEW traces, the SDP starts compressing all the data th
     |RAM (physical)|
     ||
 
-- *Diagnostic Logs*  
+- _Diagnostic Logs_  
 
     | Description| File Name |
     |---|---|
@@ -93,23 +93,20 @@ After collecting the PERFVIEW traces, the SDP starts compressing all the data th
     |Perfmon Logs|{Computername}_IISPerfmonLogFiles.cab|
     |NETMON Logs|{Computername}_IISNetmonLogFiles.cab|
     |Perfview Logs|{Computername}_ PerfViewLogFiles.cab|
-    |||
 
-- *IIS Log Files*  
+- _IIS Log Files_  
 
     | Description| File Name |
     |---|---|
     |Http Error Logs|{Computername}_HttpErrorLogs.zip|
     |IIS Log Files|{Computername}_IISLogs.zip|
-    |||
 
-- *Networking Information*  
+- _Networking Information_  
 
     | Description| File Name |
     |---|---|
     |TCP/IP Basic Information|{Computername}_TcpIp-Info.txt|
     |SMB Basic Information|{Computername}_SMB-Info.txt|
-    |||
 
 In addition to collecting the information that is described above, this diagnostic package can detect one or more of the following symptoms:
 
@@ -126,7 +123,7 @@ In addition to collecting the information that is described above, this diagnost
     ```
 
 - Hit `CTRL+C` in the command window for the network monitor capture to stop the Network Monitor trace.
-- Stop the perfmon logging by opening Performance Monitor from Administrative tools and stop the Data Collector set named *IIS_SDP_HANG* under the User-Defined node below the Data Collector Sets.
+- Stop the perfmon logging by opening Performance Monitor from Administrative tools and stop the Data Collector set named _IIS_SDP_HANG_ under the User-Defined node below the Data Collector Sets.
 
 ### References
 

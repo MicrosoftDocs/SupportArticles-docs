@@ -38,7 +38,6 @@ The tax amounts for fields **G9** (GST on Sales) and **G20** (GST on Purchases) 
 > ||10% / (100% + 10%)|
 > ||10% / (110%)|
 > ||1 / 11|
-> |||
 
 To display the GST Calculation Sheet, follow these steps:
 

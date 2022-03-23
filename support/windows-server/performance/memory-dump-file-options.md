@@ -27,7 +27,7 @@ You can configure the following operating systems to write debugging information
 - Windows 7
 - Windows Server 2012 R2
 
-The debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a *blue screen*, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
+The debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a _blue screen_, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
 
 Windows can generate any one of the following memory dump file types:
 
@@ -160,7 +160,6 @@ Maximum paging file size is limited as follows:
 |Maximum size of a paging file|4 gigabytes (non-PAE)<br/>16 terabytes (PAE)|16 terabytes|32 terabytes|
 |Maximum number of paging files|16|16|16|
 |Total paging file size|64 gigabytes (non-PAE)<br/>256 terabytes (PAE)|256 terabytes|512 terabytes|
-|||||
 
 ## Technical support for x64-based versions of Windows
 

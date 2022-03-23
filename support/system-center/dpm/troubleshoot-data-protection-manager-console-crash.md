@@ -67,8 +67,7 @@ The only services that might be running with an account other than SYSTEM are th
 |DPM Writer|SYSTEM|Automatic|Yes|
 |DPMLA|SYSTEM|Manual|No|
 |DPM VMM Helper Service|SYSTEM|Manual|No|
-|||||
-
+  
 ## Check if the database is in recovery mode
 
 If the database is in recovery mode, it can cause problems when services attempt to connect to it. The database is put into recovery mode due to a DPMSync failure or crash. To check whether this is the case, run the following SQL query against the DPMDB:

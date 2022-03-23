@@ -50,7 +50,6 @@ In this article, we will look at two common scenarios for integrating GL Transac
         |999-9999-01|AA Test Account 1|Cash|
         |999-9999-02|AA Test Account 2|Cash|
         |999-9999-03|AA Test Account 3|Cash|
-        ||||
 
     3. Accept all other defaults.
 
@@ -69,22 +68,22 @@ In this article, we will look at two common scenarios for integrating GL Transac
 
     1. In Microsoft Dynamics GP, click on **Cards**, point to **Financial**, point to **Analytical Accounting**, and click **Transaction Dimension**.
     2. Choose the **Dimension ELECTRONICS**.
-    3. Enter *XBOX* for the Trx Dimension Code.
-    4. Enter *XBOX Hardware/Accessories* for the Description.
+    3. Enter _XBOX_ for the Trx Dimension Code.
+    4. Enter _XBOX Hardware/Accessories_ for the Description.
     5. Select the **Lookup** and choose **ELECTRONICS** for the **Linked to Node**.
 
         :::image type="content" source="media/set-up-gl-transaction-integration-with-analytical-accounting/select-electronics-for-linked-to-node.png" alt-text="Screenshot of Transaction Dimension Code Maintenance window after you complete the step e.":::
 
     6. Click **Save**.
-    7. Keep the window open, now enter *TV* for the Trx Dimension Code.
-    8. Enter *Televisions* for **Description 1**.
+    7. Keep the window open, now enter _TV_ for the Trx Dimension Code.
+    8. Enter _Televisions_ for **Description 1**.
     9. Select the Lookup and choose **ELECTRONICS** for the **Linked to Node**.
 
         :::image type="content" source="media/set-up-gl-transaction-integration-with-analytical-accounting/select-electronics-for-linked-to-node-again.png" alt-text="Screenshot of Transaction Dimension Code Maintenance window after you complete the step i.":::
 
     10. Click **Save**.
-    11. Enter *STEREO* for the Trx Dimension Code.
-    12. Enter *Stereo Equipment* for Description 1.
+    11. Enter _STEREO_ for the Trx Dimension Code.
+    12. Enter _Stereo Equipment_ for Description 1.
     13. Select the **Lookup** and choose **ELECTRONICS** for the **Linked to Node**.
 
         :::image type="content" source="media/set-up-gl-transaction-integration-with-analytical-accounting/select-electronics.png" alt-text="Screenshot of Transaction Dimension Code Maintenance window after you complete the step m.":::
@@ -103,8 +102,8 @@ In this article, we will look at two common scenarios for integrating GL Transac
 5. Create the Accounting Class to link our test accounts we created to the AA Dimensions:
 
     1. In Microsoft Dynamics GP, click on **Cards**, point to **Financial**, point to **Analytical Accounting** and click **Accounting Class**.
-    2. Enter the Class ID *ELECTR_CLASS*.
-    3. Enter *Electronics Account Class* for the **Description 1** field.
+    2. Enter the Class ID _ELECTR_CLASS_.
+    3. Enter _Electronics Account Class_ for the **Description 1** field.
     4. In the Grid, you should see the **ELECTRONICS** Trx Dimension. Change the **Analysis Type** to **Optional**.
 
         :::image type="content" source="media/set-up-gl-transaction-integration-with-analytical-accounting/create-accounting-class-to-link-test-accounts.png" alt-text="Screenshot of Accounting Class Maintenance window after you complete the step d.":::
@@ -141,7 +140,6 @@ Furthermore, since the distribution amount for a single line is being split out 
     |10001|4/12/2017|000-1100-00|-16200|1000|
     |10001|4/12/2017|999-9999-01|2000|1500|
     |10001|4/12/2017|000-1200-00|-2000|2000|
-    ||||||
 
 2. Save the file as a Tab Delimited text file (*.TXT). For this example, name the file "AA GLTrx-with Seq.txt".
 
@@ -155,7 +153,6 @@ Furthermore, since the distribution amount for a single line is being split out 
     |10001|999-9999-01|2000|ELECTRONICS|XBOX|1100|1|1500|
     |10001|999-9999-01|2000|ELECTRONICS|TV|600|2|1500|
     |10001|999-9999-01|2000|ELECTRONICS|STEREO|300|3|1500|
-    |||||||||
 
     > [!NOTE]
     > The AAssignID value will be used since we are splitting the distribution amount across multiple Dimension codes. The Sequence value is required because the distribution account 999-9999-01 appears on more than one distribution line, therefore the Sequence value is required to link the AA information to the correct distribution line.
@@ -243,7 +240,7 @@ Furthermore, since the distribution amount for a single line is being split out 
 
         1. Double-click on **Destination Mapping** to open the field mapping window.
 
-        2. For GL Transactions with AA information, the Journal Entry # is *REQUIRED*. This field cannot be defaulted in! Some advanced users will use a VBScript on the Journal Entry# field to get the next number, but it does have to be supplied in the mapping otherwise the AA information cannot be linked to the transaction correctly.
+        2. For GL Transactions with AA information, the Journal Entry # is _REQUIRED_. This field cannot be defaulted in! Some advanced users will use a VBScript on the Journal Entry# field to get the next number, but it does have to be supplied in the mapping otherwise the AA information cannot be linked to the transaction correctly.
 
         3. Provide a constant for the Batch ID and Reference fields.
 
@@ -310,7 +307,6 @@ The Analytical Accounting enabled accounts do NOT appear more than once in the d
     |10005|4/12/2017|999-9999-02|600|ELECTRONICS|TV|
     |10005|4/12/2017|999-9999-03|300|ELECTRONICS|STEREO|
     |10005|4/12/2017|000-1100-00|-2000|||
-    |||||||
 
 2. Save the file as a Tab Delimited text file (*.TXT). For this example, name the file "AA GLTrx-No Seq.txt".
 
@@ -411,7 +407,7 @@ The Analytical Accounting enabled accounts do NOT appear more than once in the d
 
 10. Define the field mappings.
     1. Double-click on **Destination Mappings** to open the field mapping window.
-    2. For GL Transactions with AA information, the **Journal Entry#** is *REQUIRED*. This field cannot be defaulted in! Some advanced users with use a VBScript on the **Journal Entry#** field to get the next number, but it does have to be supplied in the mapping otherwise the AA information cannot be linked to the transaction correctly.
+    2. For GL Transactions with AA information, the **Journal Entry#** is _REQUIRED_. This field cannot be defaulted in! Some advanced users with use a VBScript on the **Journal Entry#** field to get the next number, but it does have to be supplied in the mapping otherwise the AA information cannot be linked to the transaction correctly.
     3. Provide a constant for the **Batch ID** and **Reference** fields.
 
         :::image type="content" source="media/set-up-gl-transaction-integration-with-analytical-accounting/provide-a-constant-for-batch-id-and-reference-fields.png" alt-text="Screenshot of Integration Mapping - GL Transaction - AA without Sequence window after you complete step c.":::

@@ -113,8 +113,7 @@ If the BITS service fails to start, look in the event log for any BITS-related e
 |ERROR_PATH_NOT_FOUND| 0x80070003|Pre-Windows Vista: %ALLUSERSPROFILE%\Microsoft\Network doesn't exist|
 |ERROR_FILE_NOT_FOUND| 0x80070002|The **Parameters** key is missing. Ensure that the following keys and values exist:<br/>`HKLM\SYSTEM\CurrentControlSet\Services\BITS\Parameters\ServiceDll`= `%SystemRoot%\System32\qmgr.dll`<br/><br/>|
 |REGDB_E_CLASSNOTREG, EVENT_E_INTERNALERROR|0x80040154, 0x80040206|BITS for Windows 2000 is dependent on SENS and EventSystem services. If the COM+ catalog is corrupted, BITS may fail with this error code.|
-||||
-
+  
 ### BITS jobs are failing
 
 If the client is properly configured to receive updates, BITS is configured correctly, and BITS appears to start and run properly, you may be experiencing an issue where BITS jobs themselves are failing. To verify it, look in the event log for any BITS-related errors. You can use the following table to diagnose the cause of these errors.
@@ -128,8 +127,7 @@ If the client is properly configured to receive updates, BITS is configured corr
 | BG_E_MISSING_FILE_SIZE| 0x80200011|When BITS sends a HEAD request and the server/proxy doesn't return Content-Length header in the response, BITS puts the job in ERROR state with this error. Check the proxy server and WSUS server to ensure that they are configured correctly. Some versions of the Apache 2.0 proxy server are known to exhibit this behavior.|
 | BG_E_HTTP_ERROR_403| 0x80190193|When the server returns HTTP 403 response in any of the requests, BITS puts the job in ERROR state with this error code. HTTP 403 corresponds to **Forbidden: Access is denied**. Check access permissions for the account running the job.|
 | ERROR_NOT_LOGGED_ON| 0x800704dd|The SENS service isn't receiving user logon notifications. BITS (version 2.0 and later) depends on logon notifications from Service Control Manager, which in turn depends on the SENS service. Ensure that the SENS service is started and running correctly.|
-||||
-
+  
 ### Repair a corrupted BITS configuration
 
 To repair corrupted BITS service configuration, you can enter the BITS service configuration manually.

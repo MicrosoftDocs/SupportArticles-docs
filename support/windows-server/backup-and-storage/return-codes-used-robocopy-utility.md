@@ -34,8 +34,7 @@ The following table lists and describes the return codes that are used by the Ro
 |6|Additional files and mismatched files exist. No files were copied and no failures were met. Which means that the files already exist in the destination directory.|
 |7|Files were copied, a file mismatch was present, and additional files were present.|
 |8|Several files didn't copy.|
-|||
-
+  
 > [!NOTE]
 > Any value greater than 8 indicates that there was at least one failure during the copy operation.
 

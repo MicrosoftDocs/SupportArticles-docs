@@ -23,7 +23,6 @@ The article also describes two other methods to generate dump files:
 - The attached [Powershell script](#how-to-use-a-powershell-script-to-generate-a-dump-file-with-sqldumper) automates SQLDumper.exe command line options.
 - [DBCC STACKDUMP](#how-to-use-dbcc-stackdump) Transact-SQL (T-SQL) command can be used to generate a dump file in SQL Server.
 
-
 ## How to run the Sqldumper.exe utility manually
 
 Run the Sqldumper.exe utility under the context of the folder where SQL Server originally installed the utility. By default, the installation path of the Sqldumper.exe utility is as follows:
@@ -50,8 +49,8 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
     > - 100 for SQL Server 2008
     > - 90 for SQL Server 2005
 
-2. Make sure that the *Dbghelp.dll* file is in this folder.
-3. Select **Start** > **Run**, type *cmd*, and then select **OK**.
+2. Make sure that the _Dbghelp.dll_ file is in this folder.
+3. Select **Start** > **Run**, type _cmd_, and then select **OK**.
 4. At the command prompt, type the following command, and then press **Enter**:
 
     ```dos
@@ -104,7 +103,7 @@ To generate a dump file by using the Sqldumper.exe utility, you must have the pr
 2. In the **Windows Task Manager** dialog box, select the **Processes** tab.
 3. On the **View** menu, select **Select Columns**.
 4. In the **Select Columns** dialog box, click to select the **PID (Process Identifier)** check box, and select **OK**.
-5. Take note of the process identifier of the Windows application you want to generate a dump file for. For the SQL Server application, take note of the process identifier of the *Sqlservr.exe* process.
+5. Take note of the process identifier of the Windows application you want to generate a dump file for. For the SQL Server application, take note of the process identifier of the _Sqlservr.exe_ process.
 6. Close the **Task Manager**.
 
 Alternatively, use the SQL Server error log file to obtain the process identifier of the SQL Server application running on your computer. A part of the SQL Server error log file resembles this:
@@ -124,9 +123,10 @@ The number that appears after `Server process ID` is the process identifier for 
 
 ## Output path for memory dumps
 
-SQLDumper.exe exists primarily to generate memory dumps for the SQL Server process in scenarios where a memory dump is needed to resolve specific problems (exceptions, asserts, non-yielding schedulers, etc.). In such cases, SQL Server invokes the SQLDumper.exe to generate a memory dump of its process. The memory dump is stored in the SQL instance *MSSQL\LOG\\* directory by default. 
+SQLDumper.exe exists primarily to generate memory dumps for the SQL Server process in scenarios where a memory dump is needed to resolve specific problems (exceptions, asserts, non-yielding schedulers, etc.). In such cases, SQL Server invokes the SQLDumper.exe to generate a memory dump of its process. The memory dump is stored in the SQL instance *MSSQL\LOG\\* directory by default.
 
 ### How to change the default path
+
 If in some cases the dump size is too large, for example, you can modify the path by doing the following:
 
 1. Open **SQL Server Configuration Manager**.  
@@ -141,7 +141,7 @@ When the Sqldumper.exe utility is used manually to generate a dump file for any 
 
 You can specify the directory where you want the Sqldumper.exe utility to write the dump file. The directory must already exist before you run the Sqldumper.exe utility. Otherwise, the Sqldumper.exe utility will fail. Do not use a UNC path as a location for the dump file. The following is an example of how to specify the dump file location of the mini-dump file:
 
-1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
+1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
 2. At the command prompt, type the following command, and then press **Enter**:
 
     ```dos
@@ -171,9 +171,9 @@ To run the Sqldumper.exe utility, you must log on to Windows by using one of the
 - Use an account that is a member of the administrator's group on the computer.
 - Use the same user account under which the SQL Server service is running.
 
-For the Sqldumper.exe utility to work successfully through Remote Desktop or through Terminal Services, you must start Remote Desktop or Terminal Services in console mode. For example, to start Remote Desktop in console mode, select **Start** > **Run**, type *mstsc /console*, and then select **OK**. If the target server runs Windows 2000, the **/console** option is silently ignored. You can connect to the server through Remote Desktop. But you will not be using the console session.
+For the Sqldumper.exe utility to work successfully through Remote Desktop or through Terminal Services, you must start Remote Desktop or Terminal Services in console mode. For example, to start Remote Desktop in console mode, select **Start** > **Run**, type _mstsc /console_, and then select **OK**. If the target server runs Windows 2000, the **/console** option is silently ignored. You can connect to the server through Remote Desktop. But you will not be using the console session.
 
-If you notice that no dump file has been generated in the current folder after you run the Sqldumper.exe utility, review the information that the utility has generated at the command line to try to determine the possible cause of the failure. This information is also logged in the *Sqldumper_errorlog.log* file in current directory. The following are two possible error messages and their causes:
+If you notice that no dump file has been generated in the current folder after you run the Sqldumper.exe utility, review the information that the utility has generated at the command line to try to determine the possible cause of the failure. This information is also logged in the _Sqldumper_errorlog.log_ file in current directory. The following are two possible error messages and their causes:
 
 - Message 1
 
@@ -204,7 +204,7 @@ As can be derived from the previous statement, the duration of the freeze is the
 - The **size of SQL Server process in memory**, which in the case of a single active instance running default parameters is often close to the **total physical RAM of the server**.
 - The performance of the disk used as a target for the dump.
 
-Furthermore, the **size of the dump file** on disk should be planned for, especially if multiple dumps are a possibility and if large, non-default dump types are selected. Make sure you review the [Dump types](#dump-types) to know what to expect. By default, some dump methods will create the dump in SQL Server Instance's *\Log* folder, which, in default simple configuration would also be system disk and data+log disk for SQL Server. Bringing that disk to saturation will have severe impact on SQL Server and/or system availability.
+Furthermore, the **size of the dump file** on disk should be planned for, especially if multiple dumps are a possibility and if large, non-default dump types are selected. Make sure you review the [Dump types](#dump-types) to know what to expect. By default, some dump methods will create the dump in SQL Server Instance's _\Log_ folder, which, in default simple configuration would also be system disk and data+log disk for SQL Server. Bringing that disk to saturation will have severe impact on SQL Server and/or system availability.
 
 ## Manage the impact on clustered systems
 
@@ -212,14 +212,14 @@ The process is suspended temporarily during the dump generation. This might affe
 
 When capturing a SQL Server process dump file (especially a filtered dump file or a full dump file) on a clustered SQL Server or a SQL Server hosting an Always On availability group (AG) instance, the clustered SQL Server or AG might fail over to another node if the dump file takes too long to be completed. To prevent failover, use the following settings before capturing the dump file. The change can be reverted after a dump file is taken:
 
-- For failover clustered instance (FCI): 
+- For failover clustered instance (FCI):
   - Right-click SQL Server resource in **Cluster Administrator**, select **If resource fails, do not restart** on the **Policies** tab.
   - On the **Properties** tab, increase the **HealthCheck Timeout**. For example, set the property value to 180 seconds or higher. If this timeout is reached, the policy **If resource fails, do not restart** will be ignored and the resource will be restarted anyway.
   - Also on the **Properties** tab, change the **FailureConditionLevel** value to zero.
 - For AG, apply all the following settings:
-  - Increase session-timeout, for example, 120 seconds for all replicas. In SQL Server Management Studio (SSMS), right-click the replica to be configured, and then select **Properties**. Change the **Session timeout (seconds)** field to *120* seconds. For more information, see [Change the Session-Timeout Period for an Availability Replica (SQL Server)](/sql/database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server).
+  - Increase session-timeout, for example, 120 seconds for all replicas. In SQL Server Management Studio (SSMS), right-click the replica to be configured, and then select **Properties**. Change the **Session timeout (seconds)** field to _120_ seconds. For more information, see [Change the Session-Timeout Period for an Availability Replica (SQL Server)](/sql/database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server).
   - Change the auto failover of all replicas to manual failover. In SSMS, right-click replica, select **Properties** and change the **auto failover** of all replicas to manual failover on the **Properties** tab. For more information, see [Change the Failover Mode of an Availability Replica (SQL Server)](/sql/database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server).
-  - Increase the **LeaseTimeout** to *60,000* ms (60 seconds) and change **HealthCheckTimeout** to *90,000* ms (90 seconds). In **Cluster Administrator**, right-click AG resource, select **Properties**, and then switch to the **Properties** tab to modify both settings. For more information, see [Configure HealthCheckTimeout Property Settings](/sql/sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings).
+  - Increase the **LeaseTimeout** to _60,000_ ms (60 seconds) and change **HealthCheckTimeout** to _90,000_ ms (90 seconds). In **Cluster Administrator**, right-click AG resource, select **Properties**, and then switch to the **Properties** tab to modify both settings. For more information, see [Configure HealthCheckTimeout Property Settings](/sql/sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings).
 
 ## Product improvements to reduce the impact on SQL Server
 
@@ -342,7 +342,7 @@ Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Get-ClusterParameter
 
 To set the Sqldumper.exe utility properties for cluster failover, follow these steps:
 
-1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
+1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
 2. For each property, type the corresponding command at the command prompt, and then press **Enter**:
    - The `SqlDumperDumpFlags` property
 To set the `SqlDumperDumpFlags` property for a specific kind of dump file, type the corresponding command at the command prompt, and then press **Enter**:
@@ -415,7 +415,7 @@ cluster resource "SQL Server" /priv "
 
 To remove the Sqldumper.exe utility properties for cluster failover, follow these steps:
 
-1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
+1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
 2. For a specific property, type the corresponding command at the command prompt, and then press **Enter**:
    - The `SqlDumperDumpFlags` property
      - Default instance
@@ -496,9 +496,8 @@ An empty result set indicates no trace flag is active. Conversely, if 2551 is st
 |TraceFlag|Status| Global| Session|
 |---|---|---|---|
 |2551|      1|      1|      0|
-||||
-
-> [!NOTE]
+  
+  > [!NOTE]
 > The `traceflag` enabled by `DBCC TRACEON` are reset (removed) after a service restart.
 
 #### Extended DBCC STACKDUMP functionality introduced in SQL Server 2019
@@ -519,7 +518,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
 
 ## How to use a PowerShell script to generate a dump file with SQLDumper
 
-- Save the following code as a ps1 file, for example *SQLDumpHelper.ps1*:
+- Save the following code as a ps1 file, for example _SQLDumpHelper.ps1_:
 
     Code details
 

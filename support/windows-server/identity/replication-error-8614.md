@@ -75,7 +75,6 @@ _Original KB number:_ &nbsp; 2020053
     | Event source| ID| Event string |
     |---|---|---|
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
-    ||||
 
 4. NTDS Replication Event 2042 may be logged in the Directory Service event log:
 
@@ -140,11 +139,11 @@ Root causes for error 8614 and NTDS Replication Event 2042 include:
 
 1. The destination DC that logs the 8614 error failed to inbound-replicate a directory partition from one or more source DCs for tombstone lifetime number of days.
 
-2. System time on the destination DC moved, or jumped, tombstone lifetime one or more numbers of days in the future since the last successful replication. It gives the *appearance* to the replication engine that the destination DC failed to inbound-replicate a directory partition for tombstone lifetime elapsed number of days.
+2. System time on the destination DC moved, or jumped, tombstone lifetime one or more numbers of days in the future since the last successful replication. It gives the _appearance_ to the replication engine that the destination DC failed to inbound-replicate a directory partition for tombstone lifetime elapsed number of days.
 
     Time jumps can occur when the following conditions are true:
 
-    - A destination DC successfully inbound-replicates, adopts *bad* system time TSL or more number of days in the future.
+    - A destination DC successfully inbound-replicates, adopts _bad_ system time TSL or more number of days in the future.
     - The destination DC then tries to inbound-replicate from a source that was last replicated from TSL or more number of days in the past.
 
     Or
@@ -172,7 +171,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
     If the attribute isn't present in the `showattr` output, an internal default value is being used.
 
-2. Check for DCs that failed inbound replication for TSL number of days. 
+2. Check for DCs that failed inbound replication for TSL number of days.
 
     Run `repadmin /showrepl * /csv` parsed by using Excel as specified in the [Verify successful replication to a domain controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794749(v=ws.10)) section. Sort the replsum output in Excel on the last replication success column in the order from least current to the most current date and time.
 
@@ -182,7 +181,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
 4. Check for time jumps.
 
-    To determine whether a time *jump* occurred, check event and diagnostic logs (`repadmin /showreps`, dcdiag logs) on destination DCs that are logging 8614 errors for the following timestamps:
+    To determine whether a time _jump_ occurred, check event and diagnostic logs (`repadmin /showreps`, dcdiag logs) on destination DCs that are logging 8614 errors for the following timestamps:
 
     - Date stamps that predate the release of an operating system. For example, date stamps from Windows Server 2003 for an OS released in Windows Server 2008.
     - Date stamps that predate the installation of the operating system in your forest.
@@ -218,7 +217,6 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     |Syntax|Online help (Windows Server 2008 and later)|
     |---|---|
     |`c:\>repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/advisory_mode]`| `c:\>repadmin /help:removelingeringobject` |
-    |||
 
 6. Evaluate setting strict replication on destination DCs.
 
@@ -236,7 +234,6 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     | Syntax| Online help (Windows Server 2008 and later)|Enable on a single DC|Enable on all DCs in forest|Enable on all GCs in forest|
     |---|---|---|---|---|
     | `repadmin /regkey <DSA_LIST> <{+|-}key> [value [/reg_sz]`]| `Repadmin /help:regkey` | `repadmin /regkey <fully qualified computer name> +strict` | `repadmin /regkey * +strict` | `repadmin /regkey gc: +strict` |
-    ||||||
 
 7. Set **Allow replication with divergent and corrupt partner** to 1 on the 8614 DC.
 
@@ -253,14 +250,13 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     | Syntax| Online help (Windows Server 2008 and later)|Enable on a single DC|Enable on all DCs in forest|Enable on all GCs in forest|
     |---|---|---|---|---|
     |`repadmin /regkey <DSA_LIST> <{+|-}key> [value [/reg_sz]`] | `Repadmin /help:regkey` |`repadmin /regkey dc01.contoso.com +allowDivergent` |`repadmin /regkey * +allowDivergent` |`repadmin /regkey GC: +allowDivergent` |
-    ||||||
 
 8. Resolve AD replication failures if they're present.
 
     When the 8614 error status is logged on a destination DC, prior replication errors that were logged in the previous TSL number of days are masked.
 
     The fact that the 8614 error was reported by the destination DC doesn't mean that the replication fault resides on the destination DC. Instead, the source of the replication failure could lie with the network or DNS name resolution. Or, there could be a problem with one of the following items:
-    
+
     - authentication
     - jet database
     - topology

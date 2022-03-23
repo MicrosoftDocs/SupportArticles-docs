@@ -51,8 +51,7 @@ Wired or Ethernet networks can transfer data from 10 Mbps to 1000 Mbps, dependin
 |Ethernet router (only needed if you want to connect more than two devices that share an Internet connection)<br/>A router helps you share a single Internet connection among several devices. You don't require a router to set up a wired network, but you should use one if you want multiple devices to share an Internet connection.|One. You might need an extra hub or switch if your router doesn't have enough ports for all of your devices.|
 |Modem<br/>Devices use modems to send and receive information over telephone or cable lines. You need a modem if you want to connect to the Internet.|One.|
 |Ethernet cables<br/>Network cables connect devices to one another and to other related hardware, such as hubs, routers, and external network adapters.|One for each device that needs to connect to the network hub or switch. 10/100/1000 Cat 6 cables are best, but not required.|
-|||
-
+  
 ### Wireless networks
 
 Wireless networks can transfer data anywhere from 10-600 megabytes per second (Mbps) depending on the type of wireless standard that your modem uses.
@@ -75,8 +74,7 @@ Wireless networks can transfer data anywhere from 10-600 megabytes per second (M
 |---|---|
 |Wireless network adapter<br/>An adapter connects devices to a network so that they can communicate.|One for each device on your network. Portable devices usually have them built in.|
 |Wireless router<br/>A router helps you share a single Internet connection among several devices. You don't require a router to set up a wired network, but you should use one if you want multiple devices to share an Internet connection.|One.|
-|||
-
+  
 If your device has built-in wireless capabilities, then you don't need a wireless network adapter.
 
 ### Hybrid networks
@@ -90,8 +88,7 @@ A hybrid wired/wireless network seems to offer the best of both worlds in speed,
 |Network adapter<br/>An adapter connects devices to a network so that they can communicate.|One for each device on your network. Both desktops and portable devices usually have these adapters built in.|
 |hybrid router<br/>A router helps you share a single Internet connection among several devices. You don't require a router to set up a wired network, but you should use one if you want multiple devices to share an Internet connection.|At least one. If you need to connect more than four wired devices, add an extra wired router.|
 |Ethernet cables<br/>Network cables connect devices to one another and to other related hardware, such as hubs, routers, and external network adapters.|One for each device connected to the network hub or switch. 10/100/1000 Cat 6 cables are best, but not required.|
-|||
-
+  
 ## Install a wired network
 
 Wired networks are faster, more secure, and reliable than wireless networks. They also reduce the chance of outside interference. At the same time, they require a bit more work to set up and the hardware is more expensive.
@@ -111,7 +108,7 @@ To check whether your device has a network adapter, follow the instructions.
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
-3. Type *device manager* in the Search box.
+3. Type _device manager_ in the Search box.
 4. Tap or click **Settings**.
 5. Tap or click **Device Manager** on the left side of your screen.
 6. To see a list of installed network adapters, expand Network adapter(s).
@@ -134,7 +131,7 @@ To connect your router to the Internet, follow the instructions.
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
 3. Tap or click the down arrow next to **Everywhere** above the Search box, and tap or click **Settings**.
-4. Type *network and sharing center* in the Search box.
+4. Type _network and sharing center_ in the Search box.
 5. Tap or click **Network and Sharing Center** from the search result.
 6. Tap or click Set up a new **connection or network**.
 7. Tap or click **Connect to the Internet**.
@@ -160,7 +157,7 @@ Follow the instructions to Connect the modem to the Internet.
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
 3. Tap or click the down arrow next to **Everywhere** above the Search box, and tap or click **Settings**.
-4. Type *network and sharing center* in the Search box.
+4. Type _network and sharing center_ in the Search box.
 5. Tap or click **Network and Sharing Center** from the search result.
 6. Tap or click **Set up a new connection or network**.
 7. Tap or click **Connect to the Internet**.
@@ -175,7 +172,7 @@ To set up a firewall, follow the instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
-3. Type *firewall* in the Search box.
+3. Type _firewall_ in the Search box.
 4. Tap or click **Settings**.
 5. Tap or click **Windows Firewall** on the left side of your screen.
 6. In the left pane, tap or click **Turn Windows Firewall on or off**.
@@ -648,7 +645,7 @@ To complete the modem and router setup, follow the instructions to complete set 
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
-3. Type *network and sharing center* in the Search box.
+3. Type _network and sharing center_ in the Search box.
 4. Tap or click **Settings**.
 5. Tap or click **Network and Sharing Center** on the left side of your screen.
 6. Tap or click **Set up a new connection or network**.
@@ -701,13 +698,13 @@ To set up a firewall, follow the instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
-3. Type *firewall* in the Search box.
+3. Type _firewall_ in the Search box.
 4. Tap or click **Settings**.
 5. Tap or click **Windows Firewall** on the left side of your screen.
 6. In the left pane, tap or click **Turn Windows Firewall on or off**.
 7. Tap or click **Turn on Windows Firewall** under each type of network that you want to help protect, and then tap or click **OK**.
    > [!Note]
-   > You might be asked for an administrator password or to confirm your choice. 
+   > You might be asked for an administrator password or to confirm your choice.
 
 ### Enable file and printer sharing with a firewall
 
@@ -990,7 +987,7 @@ A network adapter connects your device to a network. To connect to a wireless ne
 To check whether your device has a wireless network adapter, follow the instructions.
 
 1. Click **Start**.
-2. Type *network* in the Search box.
+2. Type _network_ in the Search box.
 3. Click **Device Manager**.
 4. Next to **Network adapters**, click the plus sign (+).
 5. Look for a network adapter that includes "wireless" in the name.
@@ -1029,7 +1026,7 @@ To set up a firewall, follow the instructions:
 5. Click **Turn Windows Firewall on or off**.
 6. Click **On** (recommended), and then click **OK**.
    > [!Note]
-   > You might be asked for an administrator password or to confirm your choice. 
+   > You might be asked for an administrator password or to confirm your choice.
 
 ### Enable file and printer sharing with a firewall
 
@@ -1270,7 +1267,7 @@ To find a workgroup name, follow the instructions.
 3. Type system in the Search box.
 4. Tap or click **Settings**.
 5. Tap or click **System** on the left side of your screen.
-6. The workgroup name appears under **Device name, domain, and workgroup settings.** 
+6. The workgroup name appears under **Device name, domain, and workgroup settings.**
 
 ### Join or create a workgroup
 
@@ -1278,7 +1275,7 @@ To join or create a workgroup, follow the instructions.
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
-3. Type system in the *Search* box.
+3. Type system in the _Search_ box.
 4. Tap or click **Settings**.
 5. Tap or click **System** on the left side of your screen.
 6. Under **Device name, domain, and workgroup settings**, tap or click **Change settings**.
@@ -1296,7 +1293,7 @@ If you want to change a workgroup name, follow these instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
-3. Type *System* in the Search box.
+3. Type _System_ in the Search box.
 4. Tap or click **Settings**.
 5. Tap or click **System** on the left side of your screen.
 6. Under **Device name, domain, and workgroup settings**, tap or click **Change settings**.
@@ -1439,7 +1436,7 @@ To manually activate network discovery, follow the instructions.
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or click **Search**.
-3. Type *network and sharing center* in the Search box.
+3. Type _network and sharing center_ in the Search box.
 4. Tap or click **Settings**.
 5. Tap or click **Network and Sharing Center** on the left side of your screen.
 6. Tap or click **Change Advanced sharing settings** on the left pane.
@@ -1466,6 +1463,7 @@ The first time you connect to a network, you'll be asked if you want to turn on 
    **No, don't turn on sharing or connect to devices.** Use this option for networks in public places (such as coffee shops or airports), or when you don't know or trust the people and devices on the network.
 
 > [!Note]
+>
 > - Network sharing is only available for Wi-Fi, Ethernet, VPN (non-domain), and dial-up (non-domain) connections. It's unavailable for domain networks. On VPN or dial-up connections, you must connect to the network first, then press and hold or right-click the network name.
 > - Turning on sharing changes your firewall settings to enable some communication, which can be a security risk. If you know you won't need to share files or printers, the safest choice is **No, don't sharing or connect to devices**.
 > - Choosing **No, don't turn on sharing or connect to devices** blocks the following apps and services from working:
@@ -1510,7 +1508,7 @@ To activate password-protected sharing, follow the instructions.
 3. Type **control panel** in the Search box.
 4. Tap or click **Apps**.
 5. Tap or click **Control Panel** on the left side of your screen.
-6. Type *Network and Sharing Center* in the search Control panel box.
+6. Type _Network and Sharing Center_ in the search Control panel box.
 7. Tap or click **Network and Sharing Center**.
 8. Tap or click **Change advanced sharing settings** on the left pane.
 9. Tap or click the arrow to expand your **All Network** profile.
@@ -1580,7 +1578,7 @@ For your small business network, make sure that the network location type is set
 
 1. Click **Start**.
 2. Click **Control Panel**.
-3. Type *network* in the Search box.
+3. Type _network_ in the Search box.
 4. Click **Network and Sharing Center**.
 5. In the left pane, click **Work network, Home network**, or **Public network**.
 6. Click the network location that you want.
@@ -1779,4 +1777,4 @@ The network map is a graphical view of the devices and devices on your network. 
 
 If you want a device running Windows XP to appear on the network map, you might have to install the Link-Layer Topology Discovery (LLTD) protocol on that device.
 
-If Windows XP devices still don't appear on the network map even after you install the LLTD protocol, check your Windows firewall settings and make sure that file and printer sharing is enabled. "To learn more about this issue, open **Help and Support** and search for *Enable file and printer sharing*". If you're using another firewall, see the information that was included with your firewall.
+If Windows XP devices still don't appear on the network map even after you install the LLTD protocol, check your Windows firewall settings and make sure that file and printer sharing is enabled. "To learn more about this issue, open **Help and Support** and search for _Enable file and printer sharing_". If you're using another firewall, see the information that was included with your firewall.
