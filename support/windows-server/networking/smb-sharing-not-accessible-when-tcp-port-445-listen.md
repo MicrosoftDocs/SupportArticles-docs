@@ -30,7 +30,7 @@ You can't access a Server Message Block (SMB) shared resource even when the shar
 |Client|SERVER|TCP|TCP:[**SynReTransmit** #600]Flags=......S., SrcPort=62535, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4085616235, Ack=0, Win=8192 (Negotiating scale factor 0x8) = 8192|
 |Client|SERVER|TCP|TCP:[**SynReTransmit** #600]Flags=......S., SrcPort=62535, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4085616235, Ack=0, Win=8192 (Negotiating scale factor 0x8) = 8192|
   
-  After you enable the [auditing](/windows/desktop/FWP/auditing-and-logging) of Filtering Platform Policy Change events by using the following command, you may experience some events (such as event ID 5152) that indicate blocking.
+After you enable the [auditing](/windows/desktop/FWP/auditing-and-logging) of Filtering Platform Policy Change events by using the following command, you may experience some events (such as event ID 5152) that indicate blocking.
 
 ```console
 auditpol /set /subcategory:"Filtering Platform Packet Drop" /success:enable /failure:enable

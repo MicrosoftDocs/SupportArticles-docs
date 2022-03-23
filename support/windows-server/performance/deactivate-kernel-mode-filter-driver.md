@@ -114,4 +114,4 @@ The following table lists valid settings and their description for the driver's 
 |Type|2 = SERVICE_FILE_SYSTEM_DRIVER|Kernel-mode file system driver.|
 |Type|8 = SERVICE_RECOGNIZER_DRIVER|File system recognizer driver.|
   
-  [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

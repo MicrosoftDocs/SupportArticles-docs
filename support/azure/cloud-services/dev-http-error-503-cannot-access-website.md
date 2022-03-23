@@ -49,8 +49,8 @@ If you see the above log, HTTP 503 is thrown from HTTP.sys level and the client 
 |IP Address| Port| Host Header|
 |---|---|---|
 | 10.1.2.5| 80| `www.cloudservicelabs.com` |
-  
-  Websites are accessed by every client using bindings. A typical binding for Websites is in the form of IP:Port:HostHeader. It is a mechanism that tells the server how this site can be reached. The next question that will come to your mind is that from where does this custom hostname came from.
+
+Websites are accessed by every client using bindings. A typical binding for Websites is in the form of IP:Port:HostHeader. It is a mechanism that tells the server how this site can be reached. The next question that will come to your mind is that from where does this custom hostname came from.
 
 ServiceDefinition.csdef is the place where you can configure the bindings for your web role, and here is what you might see for your application:
 

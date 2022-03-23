@@ -74,7 +74,7 @@ The following table lists PAE and 3 GB supportability for different versions of 
 |BizTalk Server 2006 R2|Yes|Yes|
 |BizTalk Server 2009|Yes|Yes|
   
-  If you must enable the **/3GB switch** to meet the performance requirements of a computer that is running BizTalk Server, you may want to consider adding servers to the BizTalk group. This enables you to scale out the memory-intensive host instances.
+If you must enable the **/3GB switch** to meet the performance requirements of a computer that is running BizTalk Server, you may want to consider adding servers to the BizTalk group. This enables you to scale out the memory-intensive host instances.
 
 BizTalk components that run inside an Internet Information Services (IIS) process may also benefit when the **/3GB switch** is enabled.
 

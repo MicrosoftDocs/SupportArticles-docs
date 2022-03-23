@@ -271,7 +271,7 @@ The typical **UserAccountControl** attribute value for a _writeable_ (_full_) DC
 | **TRUSTED_FOR_DELEGATION**| 0x80000| 524288 |
 | **UserAccountControl Value**| 0x82000| 532480 |
   
-  The typical **UserAccountControl** attribute value for a read-only domain controller computer account is 83890176 decimal or 5001000 hex.
+The typical **UserAccountControl** attribute value for a read-only domain controller computer account is 83890176 decimal or 5001000 hex.
 
 | Property flag| Hex value| Decimal value |
 |---|---|---|

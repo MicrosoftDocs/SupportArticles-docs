@@ -39,7 +39,7 @@ where 0x3a maps to:
 |---|---|---|---|
 |The specified server cannot perform the operation|ERROR_BAD_NET_RESP|0x3a|58|
   
-  Cases where the "Changing the Primary Domain DNS name.." error appears in conjunction with extended errors other than "the specified server cannot perform the required operation", including those listed in the table below, are NOT related to the symptom, cause, or resolution text discussed in this article.
+Cases where the "Changing the Primary Domain DNS name.." error appears in conjunction with extended errors other than "the specified server cannot perform the required operation", including those listed in the table below, are NOT related to the symptom, cause, or resolution text discussed in this article.
 
 The Extended errors that make the "Changing the Primary DNS name..." error unrelated to this KB include:
 

@@ -40,7 +40,7 @@ Basic configuration
 |Snapshots per virtual disk|512|Enforced|There is a limit of 512 snapshots per independent iSCSI application volume and 64 snapshots for file share volumes. If the iSCSI virtual disks and file shares are on a common volume, the iSCSI snapshot limit is 448 (512 - 64).|
 |Locally mounted virtual disks or snapshots per appliance|32 (on stand-alone or snapshots per appliance)|Enforced||
   
-  Fault Tolerance
+Fault Tolerance
 
 | Item| Limit| Enforced| Comment |
 |---|---|---|---|
@@ -54,7 +54,7 @@ Basic configuration
 |Virtual disks over MPIO per initiator on a clustered application server|32|Not Enforced||
 |Converting stand-alone iSCSI Software Target to failover cluster or vice versa|Supported|N/A|No VHD or target will be preserved.|
   
-  Network
+Network
 
 | Item| Limit| Enforced| Comment |
 |---|---|---|---|
@@ -67,7 +67,7 @@ Basic configuration
 |Jumbo Frames|Supported|||
 |IPsec|Supported|||
   
-  iSCSI virtual disks
+iSCSI virtual disks
 
 | Item| Limit| Enforced |
 |---|---|---|
@@ -90,7 +90,7 @@ Basic configuration
 |LUN shrink|Not supported|N/A|
 |LUN cloning|Not supported|N/A|
   
-  Windows operating systems on which the VDS and VSS hardware providers are supported
+Windows operating systems on which the VDS and VSS hardware providers are supported
 
 | Operating System| Limit| Enforced |
 |---|---|---|
@@ -104,7 +104,7 @@ Basic configuration
 |Windows Storage Server 2008 R2 x64|Supported|Enforced|
 |All client operating systems (Windows XP, Windows Vista, Windows 7)|Not supported|Enforced|
   
-  iSCSI Software Target provider interoperability  
+iSCSI Software Target provider interoperability  
 
 | iSCSI target version| iSCSI provider version| Supported |
 |---|---|---|
@@ -116,7 +116,7 @@ Basic configuration
 |3.2|3.3|Supported|
 |3.3|3.3|Supported|
   
-  Note: In-place upgrades from Microsoft iSCSI Software Target 3.1 to Microsoft iSCSI Software Target 3.3 are not supported. To upgrade to Microsoft iSCSI Software Target 3.3, you must first uninstall Microsoft iSCSI Software Target 3.1.
+Note: In-place upgrades from Microsoft iSCSI Software Target 3.1 to Microsoft iSCSI Software Target 3.3 are not supported. To upgrade to Microsoft iSCSI Software Target 3.3, you must first uninstall Microsoft iSCSI Software Target 3.1.
 
 iSCSI Software Target virtual disk compatibility
 
@@ -128,7 +128,7 @@ iSCSI Software Target virtual disk compatibility
 |3.1|3.3|Supported|
 |3.2|3.3|Supported|
   
-  Microsoft iSCSI Software Target snap-in interoperability  
+Microsoft iSCSI Software Target snap-in interoperability  
 
 | Snap-in installed on| Managing iSCSI target on| Supported |
 |---|---|---|
@@ -136,7 +136,7 @@ iSCSI Software Target virtual disk compatibility
 |Windows Storage Server 2008 R2, stand-alone server|Windows Storage Server 2008 R2, failover cluster node|Supported|
 |Windows Storage Server 2008 R2, failover cluster node|Windows Storage Server 2008 R2, stand-alone server|Supported|
   
-  Miscellaneous
+Miscellaneous
 
 | Item| Supported |
 |---|---|

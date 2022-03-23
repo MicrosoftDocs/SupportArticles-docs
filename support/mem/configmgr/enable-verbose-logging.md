@@ -65,7 +65,7 @@ To enable verbose logging, create the following registry subkey with two values:
 |Flags|REG_DWORD|00000007|
 |Level|REG_DWORD|00000004|
   
-  This subkey turns on an extended tracing to the %systemroot%\Windowsupdate.log file, it also turns on an extended tracing to any attached debuggers.
+This subkey turns on an extended tracing to the %systemroot%\Windowsupdate.log file, it also turns on an extended tracing to any attached debuggers.
 
 > [!NOTE]
 > Extended verbose logging can be enabled by setting the value of **Flags** to **17** instead of 7. However, it will significantly increase the size of WindowsUpdate.log.

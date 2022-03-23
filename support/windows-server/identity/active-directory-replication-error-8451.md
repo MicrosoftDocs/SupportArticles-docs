@@ -112,7 +112,7 @@ You might experience one of more of the following symptoms:
     |NTDS ISAM|474 with error-1018|The database page read from the file 'E:\NTDS\Data\ntds.dit' at offset 3846455296 (0x00000000e5444000) for 8192 (0x00002000) bytes failed verification due to a page checksum mismatch.  The expected checksum was 323677604 (0x134aeda4) and the actual checksum was 2081515684 (0x7c1168a4).  The read operation will fail with error -1018 (0xfffffc06).  If this condition persists, restore the database from a previous backup.  This problem is likely due to faulty hardware. Contact your hardware vendor for further assistance diagnosing the problem.|
     |NTDS ISAM|488|NTDS (396) NTDSA: Data inconsistency detected in table datatable of database C:\WINDOWS\NTDS\ntds.dit (4621,7905).|
 
-  - When you run the Dcdiag.exe utility, it produces output that resembles as:  
+- When you run the Dcdiag.exe utility, it produces output that resembles as:  
 
     >Starting test: Replications
     >

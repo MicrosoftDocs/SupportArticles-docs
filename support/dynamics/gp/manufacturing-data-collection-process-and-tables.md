@@ -55,7 +55,7 @@ Below is some information on what tables get updated during our data collection 
 |STARTS: </br></br>SF010600 (Summary)</br></br>SF010601 (Detail)</br></br> Posts to the following tables and clears out of the ones above||STARTS: </br></br>SF010500 (Starts here for a second)</br></br>Moves to:</br></br>SF010501 Immediately after saving.</br></br> On record for Start</br>One record for End</br></br> When Match is found, it removes from the SF010501 and ends up below |
 |ENDS: </br></br>SF010014 (Totals- Summary)</br></br>SF010115 (Detail)</br></br>|STARTS/ENDS:</br></br> SF010014 (Totals- Summary)</br></br>SF010115 (Detail)</br></br> SF010200 when DC Transaction Posts|ENDS:</br></br> SF010014 (Totals- Summary)</br>SF010115 (Detail)|
   
-  > [!NOTE]
+> [!NOTE]
 > All 3 options have the same resting place when completed. SF010014 and SF010115
 
 All three options once processed will sit in DC Transactions window waiting for you to post to Payroll (**Manufacturing** > **Transactions** > **WIP** > **DC Transactions**)

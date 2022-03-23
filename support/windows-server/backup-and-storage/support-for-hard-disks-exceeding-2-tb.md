@@ -94,7 +94,7 @@ The following tables list Microsoft support for the various concepts that are di
 |Windows Vista|Supported|Not Supported|Supported|
 |Windows XP|Supported|Not Supported|Not Supported|
   
-  Hybrid-MBR is an alternative style of partitioning that isn't supported by any version of Windows.
+Hybrid-MBR is an alternative style of partitioning that isn't supported by any version of Windows.
 
 ### Table 2: Windows support for system firmware
 

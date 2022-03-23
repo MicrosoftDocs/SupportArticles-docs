@@ -42,7 +42,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     |<br/>NTDS Replication|1173 with error status 1818|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010002 Parameter: 0 Additional Data Error value: 1818 Internal ID: 5000ede|
     |NTDS Replication|1085 with error status 1818|Internal event: Active Directory could not synchronize the following directory partition with the domain controller at the following network address.<br/>Directory partition: \<NC><br/>Network address: \<GUID-based DC name><br/>If this error continues, the Knowledge Consistency Checker (KCC) will reconfigure the replication links and bypass the domain controller.<br/>User Action<br/>Verify that the network address can be resolved with a DNS query.<br/>Additional Data Error value: 1818 The remote procedure call was cancelled.|
 
-      . `Repadmin /showreps` displays the following error message
+    . `Repadmin /showreps` displays the following error message
 
     > _DC=Contoso,DC=com_  
     >

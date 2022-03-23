@@ -500,7 +500,7 @@ The answer is that you probably could, but I wouldn't. If my coworker across the
 |3:00 AM|Tier1-Cleanup|Tier2 Reindex|
 |4:00 AM|Tier1 Reindex| |
   
-  > [!NOTE]
+> [!NOTE]
 > If you're using Configuration Manager current branch version 1906 or a later version to perform WSUS Maintenance, Configuration Manager performs the cleanup after synchronization using the top-down approach. In this scenario, you can schedule the WSUS database backup and reindexing jobs to run before the configured sync schedule without worrying about any of the other steps, because Configuration Manager will handle everything else.
 
 For more information about SUP maintenance in Configuration Manager, see the following articles:

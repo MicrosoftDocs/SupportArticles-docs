@@ -115,7 +115,7 @@ Steps to repro:
     | 0x0077006800650074006800650072|whether|2|1|
     | 0xFF|END OF FILE|2|1|
 
-      These display terms appear to be restrict to:
+    These display terms appear to be restrict to:
 
     - Node values, regardless of how deeply they are nested within the XML document.
     - Attribute values only for the top node and not from any of the inner nodes that would be expected.

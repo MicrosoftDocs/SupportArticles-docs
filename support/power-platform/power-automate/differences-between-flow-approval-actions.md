@@ -24,7 +24,7 @@ The primary difference s between using Start and Wait for an Approval and Create
 | Responses/comments available as outputs | Yes | No, use Wait for an Approval to use these in the Flow. |
 | Step outputs an adaptive card that can be posted to Microsoft Teams | No, the approval is already complete after this step completes. | Yes |
   
-  If you:
+If you:
 
 Want to store extra data in SQL, CDS, and so on, that contains approver information at the time of the request?
 

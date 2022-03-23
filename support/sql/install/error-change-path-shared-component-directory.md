@@ -51,7 +51,7 @@ When you install SQL Server 2008 on a computer that is running a 64-bit version 
 | INSTALLSHAREDDIR|`Program Files\Microsoft SQL Server`|64-bit shared component files|
 | INSTALLSHAREDWOWDIR|`Program Files(x86)\Microsoft SQL Server`|32-bit shared component files|
   
-  For more information about these and other setup parameters for the SQL Server installation, see the SQL Server Setup Help (_S10ch_setup.chm_) file. The *S10ch_setup.chm* Help file is located in the folder of the SQL Server 2008 DVD: `drive:\IA64\Help\1033`.
+For more information about these and other setup parameters for the SQL Server installation, see the SQL Server Setup Help (_S10ch_setup.chm_) file. The _S10ch_setup.chm_ Help file is located in the folder of the SQL Server 2008 DVD: `drive:\IA64\Help\1033`.
 
 > [!NOTE]
 > The drive placeholder is the drive designation of your DVD drive.

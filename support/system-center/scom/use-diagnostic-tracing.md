@@ -106,7 +106,7 @@ On a typical management server installation, three trace sessions begin when the
 |`windows\logs\OpsMgrTrace`|TracingGuidsNative.etl|Trace output for native code components|
 |`windows\logs\OpsMgrTrace`|TracingGuidsUI.etl|Trace output for managed code user interface (OpsMgr UI)|
   
-  Each session is enabled with circular tracing and has a maximum file size of 100 megabytes (MB). The typical .etl file size for a newly created .etl file is 16 kilobytes (KB).
+Each session is enabled with circular tracing and has a maximum file size of 100 megabytes (MB). The typical .etl file size for a newly created .etl file is 16 kilobytes (KB).
 
 > [!NOTE]
 > Although an Operations Manager role, such as an Agent role, doesn't contain managed or user interface tracing messages, the three default trace .etl files will be created by default when the HealthService service is started. By default, no trace sessions are started on a user interface only role.

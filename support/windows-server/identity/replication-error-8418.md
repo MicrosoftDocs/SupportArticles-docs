@@ -140,7 +140,7 @@ Known Issues
 |824873|Event 1791 is logged when information is replicated from Windows 2000 to Windows Server 2003|Event ID 1791 Error 8418<br/><br/>Event ID 1481 DSID 3151030|
 |2001769|Error While Propagating Permissions: "Unable to save permission ...|Event ID 1450 DSID 3150dbe|
   
-  Other Blocking Issues  
+Other Blocking Issues  
 
 |Topic|KB|Key Data|
 |---|---|---|
@@ -235,7 +235,7 @@ In the event that the resolution above is not applicable or is unsuccessful incr
 |24 Schema|DWORD|5|
 |7 Internal Configuration|DWORD|5|
   
-  This will log additional information to the Directory Services event log that will assist in diagnosing the issue
+This will log additional information to the Directory Services event log that will assist in diagnosing the issue
 
 Trigger the scenario that raises the Schema Mismatch err and review the event log data collected to try to identify:
 

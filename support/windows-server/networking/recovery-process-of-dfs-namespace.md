@@ -63,7 +63,7 @@ The following chart details how the data (Active Directory or registry of a DFS 
 |<br/><br/>Standalone<br/>|<br/><br/>Standalone Root/Link<br/>|<br/><br/>Registry<br/>|
 |<br/><br/>Domain/Standalone<br/>|<br/><br/>Shared folders<br/>|<br/><br/>File System, Registry<br/>|
   
-  Utilize the dfsutil.exe utility to view the contents of the DFS configuration. Dfsutil is available within the Windows Server 2003 and the Windows XP Support Tools package, and it is included with Windows Server 2008 once the Distributed File System Role Service is installed via Server Manager. The following data lists the configuration for the DFS namespace/root named "DATA" after running the commands `dfsutil /root:\\contoso.com\DATA /view` (on 2003) or `dfsutil root \\contoso.com\DATA` (on 2008):
+Utilize the dfsutil.exe utility to view the contents of the DFS configuration. Dfsutil is available within the Windows Server 2003 and the Windows XP Support Tools package, and it is included with Windows Server 2008 once the Distributed File System Role Service is installed via Server Manager. The following data lists the configuration for the DFS namespace/root named "DATA" after running the commands `dfsutil /root:\\contoso.com\DATA /view` (on 2003) or `dfsutil root \\contoso.com\DATA` (on 2008):
 
 > DFS Utility Version 5.2 (built on 5.2.3790.3959)
 >

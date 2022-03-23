@@ -32,7 +32,7 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 |RID master|Domain-wide|DC=\<domain>|
 |Infrastructure master|Domain-wide|DC=\<domain>|
   
-  For more information about the FSMO role holders and recommendations for placing the roles, see [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346).
+For more information about the FSMO role holders and recommendations for placing the roles, see [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346).
 
 > [!NOTE]
 > Active Directory Application partitions that include DNS application partitions have FSMO role links. If a DNS application partition defines an owner for the infrastructure master role, you cannot use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](https://support.microsoft.com/help/2694933).

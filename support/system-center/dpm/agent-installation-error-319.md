@@ -79,7 +79,7 @@ The following ports are required for the DPM agent installation. Again, be aware
 |TCP|5718|%ProgramFiles%\Microsoft Data Protection Manager\DPM\bin\DPMRA.exe|
 |TCP|RPC Dynamic|%ProgramFiles%\Microsoft Data Protection Manager\DPM\bin\DPMRA.exe|
   
-  For a list of all required ports that are used for DPM, see [Configure firewall settings for DPM](/previous-versions/system-center/system-center-2012-R2/hh757794(v=sc.12)?redirectedfrom=MSDN).  
+For a list of all required ports that are used for DPM, see [Configure firewall settings for DPM](/previous-versions/system-center/system-center-2012-R2/hh757794(v=sc.12)?redirectedfrom=MSDN).  
 
 Enabling Windows Firewall logging (default location: `%windir%\System32\LogFiles\Firewall`) may list no blocked packets.
 

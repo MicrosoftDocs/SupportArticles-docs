@@ -152,7 +152,7 @@ If you make any changes to match the settings above, restart the machine. Verify
 | ncacn_np| REG_SZ| rpcrt4.dll|
 | ncacn_ip_udp| REG_SZ| rpcrt4.dll|
   
-  If the **ClientProtocols** key or any of the four default values are missing, import the key from a known good server.
+If the **ClientProtocols** key or any of the four default values are missing, import the key from a known good server.
 
 ### Verify DNS is working
 
@@ -325,7 +325,7 @@ The endpoint mapper (listening on port 135) tells the client which randomly assi
 |RPC|TCP|135|
 |RPC randomly allocated high TCP ports¹|TCP|1024 - 5000<br/>49152 - 65535*|
   
-  `*` This is the range in Windows Server 2008, Windows Vista, Windows 7, and Windows 2008 R2.
+`*` This is the range in Windows Server 2008, Windows Vista, Windows 7, and Windows 2008 R2.
 
 Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).
 

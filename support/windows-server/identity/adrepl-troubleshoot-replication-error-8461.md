@@ -565,7 +565,7 @@ Data AnalysisKey AD Replication specific Performance Counters
 |DirectoryServices\DRA Pending Replication Synchronizations|Indicates the number of directory synchronizations that are queued for this server. This counter helps identify replication backlogs-the higher the number, the larger the backlog.|This counter should be as low as possible. If it is not, the server hardware is probably slowing replication.|
 |---|---|---|
   
-  Use this counter to determine the replication queue.  Repadmin /queue _DCName_ also reports this information.
+Use this counter to determine the replication queue.  Repadmin /queue _DCName_ also reports this information.
 
 Gauging Current Performance:  
 
@@ -582,7 +582,7 @@ Server Performance:
 |DirectoryServices\DRA Inbound Object Updates Remaining in Packet|Indicates the number of object updates received in the most recent directory replication update packet that have not yet been applied to the local server.|This counter indicates that the monitored server is receiving changes, but it is taking a long time to apply them to the database. This counter should be as low as possible. If it is not, it usually indicates that server hardware is slowing replication.|
 |---|---|---|
   
-  Network:  
+Network:  
 
 |Object\counter|Description|Guidelines|
 |---|---|---|

@@ -285,7 +285,7 @@ select * from SC_Component_Property where ComponentID in (select ID from SC_Comp
 |Resync Check Interval|||15|
 |Retry Config|REG_SZ|\<Config>\<Retry PatternID="0"  RetryQueue="0">7200,28800,86400\</Retry>\</Config>|0|
   
-  > [!NOTE]
+> [!NOTE]
 >
 > - **Resync Check Interval** is set to **60** minutes. This is the schedule for checking systems that require state message resyncs.
 > - **Min Missing Message Age** is set to **2880**. This is how long a message must be missing before a resync is requested.

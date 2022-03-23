@@ -38,7 +38,7 @@ On Linux, Solaris, and AIX, the installation program accepts the [core collector
 |`--defaultcert`||Install the default BlueStripe self-signed certificate.<br/><br/>Required if no custom certificate is specified, but optional otherwise.||
 |`--check`||Checks permissions and operating system but doesn't install the collector.||
   
-  If the `-s (silent)` flag isn't given, the user will be prompted to accept the EULA before continuing even if all the other configuration options are defined on the command line.
+If the `-s (silent)` flag isn't given, the user will be prompted to accept the EULA before continuing even if all the other configuration options are defined on the command line.
 
 ## Transaction plugin options
 
@@ -55,7 +55,7 @@ Since the Windows Collector requires a reboot to active, the web server is resta
 |`--weblogic=`|auto<br/><br/>manual<br/><br/>off|If set to **manual**, the transaction plugin is installed but the user must restart WebLogic.<br/><br/>If set to **off**, the transaction plugin isn't installed.|manual|
 |`--weblogic-flags=`|"_options_"|Optional flags must be inside single or double quotes.||
   
-  During an upgrade of the collector, any web/app servers with the transaction plugin installed will be gracefully restarted regardless of which mode is selected. It's necessary to completely shut down the Collector and to ensure a successful upgrade.
+During an upgrade of the collector, any web/app servers with the transaction plugin installed will be gracefully restarted regardless of which mode is selected. It's necessary to completely shut down the Collector and to ensure a successful upgrade.
 
 ## Collector initiated connections
 

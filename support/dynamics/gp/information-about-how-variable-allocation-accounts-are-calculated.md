@@ -24,7 +24,7 @@ The following tables provide an example of how Microsoft Dynamics GP calculates 
 |300-6180-00|300-9010-00|$400 debit|
 |400-6180-00|400-9010-00|$200 credit|
   
-  If you post a $10,000 debit to the variable allocation account, Microsoft Dynamics GP uses the absolute values of the breakdown accounts to determine the breakdown account balances. If you add the absolute values, the total of all the breakdown accounts is $1,000.
+If you post a $10,000 debit to the variable allocation account, Microsoft Dynamics GP uses the absolute values of the breakdown accounts to determine the breakdown account balances. If you add the absolute values, the total of all the breakdown accounts is $1,000.
 
 |Breakdown accounts|Total|
 |---|---|

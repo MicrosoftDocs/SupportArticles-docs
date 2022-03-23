@@ -35,7 +35,7 @@ There are three drive types that we'll discuss here. Because Microsoft support p
 |Advance Format, AF, 4K Native, 4Kn|4 KB|4 KB|All Windows versions from Windows 8 and later versions. All Server versions from Server 2012 and later versions.|
 |Other|Not 4 KB or 512 bytes|Not 4 KB or 512 bytes|Not Supported|
   
-  To verify the kind of drive that you have, follow these steps:
+To verify the kind of drive that you have, follow these steps:
 
 1. Install [KB 982018](https://support.microsoft.com/help/982018).
 2. Run the following command from elevated command prompt:

@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 306572
     |2|Scott|Bishop|
     |3|Katie|Jordan|
 
-      > [!NOTE]
+    > [!NOTE]
     > Although the data starts with cell A1 in this example, you can add this data to any adjacent cells within the worksheet.
 
 3. Highlight the rows and columns where the data is.
@@ -122,7 +122,7 @@ String sConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +
 As the comments indicate, you must modify the path information for the specific Excel worksheet. In addition, you must also set the value of the `Extended Properties` parameter to properly connect to the file.
 
 > [!NOTE]
-> The connection string uses the `Server.MapPath` function. This function takes a path that is relative to Microsoft Internet Information Services (IIS) to a file and returns a hard disk path to that file. For example, in the [Create sample Excel worksheet](#create-a-sample-excel-worksheet) section, you create _ExcelData.xls_ in the Web root directory, which is typically located at `C:\Inetpub\Wwwroot`. This also creates a subfolder named _ExcelCSTest_ within the _Wwwroot_ folder and a file named _WebForm1_.aspx within the *ExcelCSTest*folder.
+> The connection string uses the `Server.MapPath` function. This function takes a path that is relative to Microsoft Internet Information Services (IIS) to a file and returns a hard disk path to that file. For example, in the [Create sample Excel worksheet](#create-a-sample-excel-worksheet) section, you create _ExcelData.xls_ in the Web root directory, which is typically located at `C:\Inetpub\Wwwroot`. This also creates a subfolder named _ExcelCSTest_ within the _Wwwroot_ folder and a file named _WebForm1_.aspx within the _ExcelCSTest_folder.
 
 In this example, the file path on the hard disk is like `C:\Inetpub\Wwwroot\ExcelCSTest`. _Wwwroot_ contains _ExcelData.xls_, _ExcelCSTest_ contains _WebForm1.aspx_.
 

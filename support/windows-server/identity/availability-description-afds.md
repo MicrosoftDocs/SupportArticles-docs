@@ -115,7 +115,7 @@ The following files are available for download from the Microsoft Download Cente
 |AdfsSetup.exe|Windows Server 2008 SP2|x64|42.64 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x86|38.66 MB|
   
-  For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
+For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 

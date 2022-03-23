@@ -497,7 +497,7 @@ An empty result set indicates no trace flag is active. Conversely, if 2551 is st
 |---|---|---|---|
 |2551|      1|      1|      0|
   
-  > [!NOTE]
+> [!NOTE]
 > The `traceflag` enabled by `DBCC TRACEON` are reset (removed) after a service restart.
 
 #### Extended DBCC STACKDUMP functionality introduced in SQL Server 2019

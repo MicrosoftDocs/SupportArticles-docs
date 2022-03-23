@@ -172,7 +172,7 @@ System service name: **CertSvc**
 |SMB|TCP|445, 139|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -215,7 +215,7 @@ System service name: **Browser**
 |NetBIOS Name Resolution|UDP|137|
 |NetBIOS Session Service|TCP|139|
   
-  The Browser service uses RPC over Named Pipes to compile.
+The Browser service uses RPC over Named Pipes to compile.
 
 ### Dynamic Host Configuration Protocol (DHCP) Server
 
@@ -338,7 +338,7 @@ System service name: **Fax**
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -700,7 +700,7 @@ System service name: **Remote_Storage_User_Link**
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -715,7 +715,7 @@ System service name: **Remote_Storage_Server**
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 

@@ -180,7 +180,7 @@ The following accounts are used when the RMA Receiving process creates and then 
 |Inventory|Yes||Inventory account from the Item Account Maintenance window</br>Inventory account from the Posting Accounts Setup window|
 |Cost of Goods Sold||Yes|Cost of Goods Sold account from the Item Account Maintenance window</br>Cost of Goods Sold account from the Posting Accounts Setup window|
   
-  If the return item number is changed during the RMA Receiving process and if the RMA transaction originated from a service call return line, an inventory decrease adjustment is posted for the original item number. Additionally, an increase adjustment is posted for the return item number. In this situation, the following accounts are updated.
+If the return item number is changed during the RMA Receiving process and if the RMA transaction originated from a service call return line, an inventory decrease adjustment is posted for the original item number. Additionally, an increase adjustment is posted for the return item number. In this situation, the following accounts are updated.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
@@ -189,7 +189,7 @@ The following accounts are used when the RMA Receiving process creates and then 
 |Inventory|Yes||Inventory account from the Item Account Maintenance window or from the Customer Account Maintenance window</br>Inventory account from the Posting Accounts Setup window</br>|
 |Inventory Offset||Yes|Cost of Goods Sold account from the Item Account Maintenance window or from the Customer Account Maintenance window</br>Cost of Goods Sold account from the Posting Accounts Setup window|
   
-  When the Sales Order Processing (SOP) Return document is created, the line item is flagged as a drop ship item to suppress any adjustments to the inventory. The following accounts are used on the SOP Return document.
+When the Sales Order Processing (SOP) Return document is created, the line item is flagged as a drop ship item to suppress any adjustments to the inventory. The following accounts are used on the SOP Return document.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
@@ -214,7 +214,7 @@ If amounts exist in the cost fields on the RTV line, the following accounts are 
 |Purchases|Yes||Cost account from the RTV Type Accounts window</br>Purchases account from the Vendor Account Maintenance window</br>Purchases account from the Posting Accounts Setup window|
 |Accounts Payable||Yes|Accounts Payable account from the Vendor Account Maintenance window</br>Accounts Payable account from the Posting Accounts Setup window|
   
-  If amounts exist in the **Reimbursement** section, the following accounts are used. The amount recorded is the sum of all the reimbursement costs for parts, for labor, for expenses, and for travel.
+If amounts exist in the **Reimbursement** section, the following accounts are used. The amount recorded is the sum of all the reimbursement costs for parts, for labor, for expenses, and for travel.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
@@ -230,7 +230,7 @@ The following accounts are used when the RTV Shipping process creates and then p
 |Inventory||Yes|Inventory account from the Item Account Maintenance window</br>Inventory account from the Posting Accounts Setup window|
 |Inventory Offset|Yes||Purchases account from Vendor Account Maintenance window</br>Purchases account from the Posting Accounts Setup window|
   
-  When you run the RTV Shipping process, a credit voucher is created in Payables Management for all the RTV types in which the inventory is decreased. When the credit voucher is posted, the following accounts are used.
+When you run the RTV Shipping process, a credit voucher is created in Payables Management for all the RTV types in which the inventory is decreased. When the credit voucher is posted, the following accounts are used.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
@@ -246,7 +246,7 @@ The following accounts are used when the RTV Receiving process creates a decreas
 |Inventory||Yes|Inventory account from the Item Account Maintenance window for item in the **Out-Item** field</br>Inventory account from the Posting Accounts Setup window</br>|
 |Cost of Goods Sold|Yes||Cost of Goods Sold account from the Item Account Maintenance window for the item in the **Out-Item** field</br>Cost of Goods Sold account from the Posting Accounts Setup window</br>|
   
-  The following accounts are used when the RTV Receiving process creates an increase adjustment.
+The following accounts are used when the RTV Receiving process creates an increase adjustment.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
@@ -262,7 +262,7 @@ When you run the RTV Closing process, a credit voucher is created in Payable Man
 |Purchases||Yes|Purchases account from the Vendor Account Maintenance window</br>Purchases account from the Posting Accounts Setup window|
 |Accounts Payable|Yes||Accounts Payable account from the Vendor Account Maintenance window</br>Accounts Payable account from the Posting Accounts Setup window|
   
-  When you run the RTV Closing process, an invoice is created in Payables Management for the sum of the cost amounts. When the invoice is posted, the following accounts are used.
+When you run the RTV Closing process, an invoice is created in Payables Management for the sum of the cost amounts. When the invoice is posted, the following accounts are used.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
@@ -278,7 +278,7 @@ When the quantity for a part is entered, an inventory adjustment is created. Whe
 |WIP Parts|Yes||WIP Inventory account from the Work Order Type Maintenance window|
 |Inventory||Yes|Inventory account from the Item Account Maintenance window</br>Inventory account from the Posting Accounts Setup window|
   
-  When a labor entry is posted against a work order, the following accounts are used.
+When a labor entry is posted against a work order, the following accounts are used.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
@@ -296,14 +296,14 @@ WIP Material
 |Inventory Offset|Yes||Inventory Offset account from the Item Account Maintenance window</br>Inventory Offset account from the Posting Accounts Setup window|
 |WIP Parts||Yes|WIP Inventory account from the Work Order Type Maintenance window|
   
-  WIP Labor
+WIP Labor
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
 |Inventory Offset|Yes||Inventory Offset account from the Item Account Maintenance window</br>Inventory Offset account from the Posting Accounts Setup window|
 |WIP Parts||Yes|WIP Inventory account from the Work Order Type Maintenance window|
   
-  When you post a work order in the Work Order Completion window, an inventory adjustment is created to remove the item from the inventory. Additionally, the inventory adjustment adjusts the item back into the inventory.
+When you post a work order in the Work Order Completion window, an inventory adjustment is created to remove the item from the inventory. Additionally, the inventory adjustment adjusts the item back into the inventory.
 
 If the work order type isn't flagged to expense the repair cost, the item is adjusted back into the inventory at the repair cost from the item extension. Additionally, the work order cost is added. If the **Returned Item Cost** field in the Item Extensions window is empty, the appropriate cost is used depending on the valuation method of the item. The appropriate cost may be the standard cost or the current cost. This adjustment doesn't update the cost fields in the Item Maintenance window.
 
@@ -314,14 +314,14 @@ The following accounts are used when an inventory adjustment removes items from 
 |Inventory Offset|Yes||Inventory Offset account from the Item Account Maintenance window</br>Inventory Offset account from the Posting Accounts Setup window|
 |Inventory||Yes|Inventory account from the Item Account Maintenance window</br>Inventory account from the Posting Accounts Setup window|
   
-  The following accounts are used when an inventory adjustment adjusts items back into the inventory at the repair cost and at the work order cost.
+The following accounts are used when an inventory adjustment adjusts items back into the inventory at the repair cost and at the work order cost.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
 |Inventory|Yes||Inventory account from the Item Account Maintenance window</br>Inventory account from the Posting Accounts Setup window|
 |Inventory Offset||Yes|Inventory Offset account from the Item Account Maintenance window</br>Inventory Offset account from the Posting Accounts Setup window|
   
-  If the work order type is flagged to expense the repair cost, the Work Order Completion process posts a general journal to clear the following WIP accounts.
+If the work order type is flagged to expense the repair cost, the Work Order Completion process posts a general journal to clear the following WIP accounts.
 
 WIP Material
 
@@ -330,14 +330,14 @@ WIP Material
 |Inventory Offset|Yes||Expense Cost account from the Work Order Type Maintenance window|
 |WIP Labor||Yes|WIP Labor account from the Work Order Type Maintenance window|
   
-  WIP Labor
+WIP Labor
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|
 |Inventory Offset|Yes||Expense Cost account from the Work Order Type Maintenance window|
 |WIP Labor||Yes|WIP Labor account from the Work Order Type Maintenance window|
   
-  If the **Repair Cost** field in the Item Extensions window is empty, the appropriate cost is used depending on the valuation method of the item. The appropriate cost may be the standard cost or the current cost. This adjustment does not update the cost fields in the Item Maintenance window.
+If the **Repair Cost** field in the Item Extensions window is empty, the appropriate cost is used depending on the valuation method of the item. The appropriate cost may be the standard cost or the current cost. This adjustment does not update the cost fields in the Item Maintenance window.
 
 The following accounts are used when an inventory adjustment removes items from the inventory at cost.
 
@@ -346,7 +346,7 @@ The following accounts are used when an inventory adjustment removes items from 
 |Inventory Offset|Yes||Inventory Offset account from the Item Account Maintenance window</br>Inventory Offset account from the Posting Accounts Setup window|
 |Inventory||Yes|Inventory account from the Item Account Maintenance window</br>Inventory account from the Posting Accounts Setup window|
   
-  The following accounts are used when an inventory adjustment adjusts items back into the inventory at the repair cost and at the work order cost.
+The following accounts are used when an inventory adjustment adjusts items back into the inventory at the repair cost and at the work order cost.
 
 |Account|Debit|Credit|Account Source|
 |---|---|---|---|

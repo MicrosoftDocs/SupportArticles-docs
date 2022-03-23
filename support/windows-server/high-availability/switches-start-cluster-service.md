@@ -49,14 +49,14 @@ Valid option switches include the following:
 | LogLevel N|Sets the log level for debug mode.||
 | DebugResMon|The Cluster service waits for a debugger to be attached to all Resource Monitor processes at their start.|DR|
   
-  Windows 2000 and later only switches include the following.
+Windows 2000 and later only switches include the following.
 
 |Switch|Function|Windows 2003 Abbreviation|
 |---|---|---|
 | ResetQuorumLog|Dynamically re-creates the quorum log and checkpoint files (this functionality is automatic in Microsoft Windows NT 4.0).|RQ|
 | NoRepEvtLogging|No replication of Event Log entries.||
   
-  Windows Server 2003 and later only switches include the following.
+Windows Server 2003 and later only switches include the following.
 
 |Switch|Function|Windows 2003 Abbreviation|
 |---|---|---|

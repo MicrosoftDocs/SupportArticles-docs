@@ -128,7 +128,7 @@ The following tables illustrate the mapping between the Download File Name on th
 |LocalDB|2012_RTM_LocalDB_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_LocalDB_CUxx_KBxxxxx_11_00_xxxx_arch<br/><br/><br/>|_SqlLocalDB.msi_|
 |Transact-SQL Language Service|2012_RTM_TSQLLAN_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_TSQLLAN_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|_TSqlLanguageService.msi_|
   
-  Best practices As a best practice, consider providing a name that you can use to easily identify packages during downloads.
+Best practices As a best practice, consider providing a name that you can use to easily identify packages during downloads.
 
 ## Package descriptions
 

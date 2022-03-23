@@ -116,7 +116,7 @@ To resolve this problem, follow these steps:
     |Creator Owner|Full Control|Subfolders and Files only|
     |Local Service|Create Folders / Append Data|This folder and subfolders|
 
-      **Windows 2000**
+    **Windows 2000**
 
     | Account| Permissions| Inheritance |
     |---|---|---|

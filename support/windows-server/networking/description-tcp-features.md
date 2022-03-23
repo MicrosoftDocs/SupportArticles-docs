@@ -196,7 +196,7 @@ It means that the first data packet sent after the three-way handshake is the ac
 |13|8192|65535|536,862,720|
 |14|16384|65535|1,073,725,440|
   
-  For example:
+For example:
 
 If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the three-way handshake is 13. A scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
 
@@ -243,7 +243,7 @@ TCP Timestamps Option (TSopt):
 |---|---|---|---|
 |1 byte|1 byte|4 bytes|4 bytes|
   
-  The timestamp option field can be viewed in a Network Monitor trace by expanding the TCP options field, as shown below:  
+The timestamp option field can be viewed in a Network Monitor trace by expanding the TCP options field, as shown below:  
 
 ```output
 TCP: Timestamps Option  
