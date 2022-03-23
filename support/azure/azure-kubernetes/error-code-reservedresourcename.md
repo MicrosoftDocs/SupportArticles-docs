@@ -10,12 +10,12 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the ReservedResourceName error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the ReservedResourceName error code
-
-This article describes how to identify and resolve the `ReservedResourceName` error, which might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+ 
+This article discusses how to identify and resolve the `ReservedResourceName` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
-When you try to deploy the cluster, you receive the following error message:
+When you try to deploy an AKS cluster, you receive the following error message:
 
 > Either resource name or resource group name is using an Azure reserved name. Check details: autorest/azure: Service returned an error.
 >
@@ -29,7 +29,7 @@ The resource name that was used to create the cluster or resource group is marke
 
 ## Solution
 
-Redeploy the cluster with a new resource group or cluster name.
+Redeploy the cluster by using a different resource group or cluster name.
 
 ## More information
 
