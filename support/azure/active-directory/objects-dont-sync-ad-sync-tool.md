@@ -101,7 +101,7 @@ To determine attribute conflicts caused by user objects that were created by usi
         |proxyAddresses|proxyAddresses (3): x500:/o=Exchange/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=1ae75fca0d3a4303802cea9ca50fcd4f-7628376; smtp:`7628376@service.contoso.com`; SMTP:`7628376@contoso.com`;|<br/> 1. The number that's displayed in parentheses next to the attribute label indicates the number of proxy address values in the multivalue attribute.<br/><br/> 2. Each distinct proxy address value is indicated by a semicolon (;).<br/><br/>3. The primary SMTP proxy address value is indicated by uppercase "SMTP:"|
         |userPrincipalName|`7628376@contoso.com`||
 
-          > [!NOTE]
+        > [!NOTE]
         > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the Support Tools, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
 2. Connect to Azure AD by using the Azure Active Directory Module for Windows PowerShell. For more info, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).

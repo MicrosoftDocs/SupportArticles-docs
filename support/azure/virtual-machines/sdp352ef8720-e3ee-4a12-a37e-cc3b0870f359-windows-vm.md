@@ -30,7 +30,7 @@ You will be prompted by IE to Add a trusted website.
     [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\microsoft.com\*.support]
     ```
 
-If you receive an IE Security Alert saying `Your current security settings do not allow this file to be downloaded.`, then you did not add <https://*.support.microsoft.com> to the list of trusted sites.
+If you receive an IE Security Alert saying `Your current security settings do not allow this file to be downloaded.`, then you did not add `https://*.support.microsoft.com` to the list of trusted sites.
 
 ### Information collected
 
