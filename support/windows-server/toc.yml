@@ -2918,7 +2918,7 @@
     items:
     - name: .bak log files are deleted and lost
       href: ./windows-security/bak-log-files-deleted-lost.md
-    - name: Access checks using Windows APIs return incorrect results
+    - name: Evaluating effective permissions for remote resources
       href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
       href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
