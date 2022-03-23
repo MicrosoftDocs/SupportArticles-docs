@@ -13,7 +13,7 @@ ms.date: #Required; enter the date in the mm/dd/yyyy format.
 
 <!--- Recommended: Remove all the comments in this template before you sign-off or merge to main branch.--->
 
-# Troubleshoot \<some feature>
+# Troubleshoot \<issues with a feature>
 
 <!---Required: Include the word "troubleshoot" --->
 
