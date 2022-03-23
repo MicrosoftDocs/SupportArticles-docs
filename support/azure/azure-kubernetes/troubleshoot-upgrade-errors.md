@@ -107,15 +107,7 @@ Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'.
 
 This error occurs if your cluster doesn’t have enough IP addresses to create a new node.
 
-When you plan to perform an upgrade or scaling operation, the number of the required IP addresses should be considered. If the IP address range that you configured in the cluster only supports a fixed number of nodes, the upgrade or scaling operation will fail.
-
-- When you upgrade your AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node, and an older node is removed from the cluster. This rolling upgrade process requires a minimum of one extra block of IP addresses to be available. Your node count is then n + 1.
-
-- This consideration is important when you use Windows Server node pools. Windows Server nodes in AKS don't automatically apply Windows Updates, instead you perform an upgrade on the node pool. This upgrade deploys new nodes with the latest Window Server 2019 base node image and security patches. For more information on upgrading a Windows Server node pool, see [Upgrade a node pool in AKS](/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
-
-- When you scale an AKS cluster, a new node is deployed into the cluster. Services and workloads begin to run on the new node. Your IP address range needs to take into consideration: how you may want to scale up the number of nodes and pods your cluster can support. One additional node for upgrade operations should also be included. Your node count should be `n + <number-of-additional-scaled-nodes-you-anticipate> + 1`.
-
-For more information, see [Plan IP addressing for the cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster).
+When you plan to perform an upgrade or scaling operation, the number of the required IP addresses should be considered. If the IP address range that you configured in the cluster only supports a fixed number of nodes, the upgrade or scaling operation will fail. For more information, see [Plan IP addressing for the cluster](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster).
 
 ### Workaround
 
