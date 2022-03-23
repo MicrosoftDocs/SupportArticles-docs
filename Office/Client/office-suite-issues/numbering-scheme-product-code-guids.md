@@ -108,7 +108,7 @@ The release version values specify the level of the release, such as a beta vers
 The release type specifies the audience for a 2013 Office suite, such as enterprise or retail. The following table contains more information about the 2013 Office suite release types. 
 
 |Value|Release type|
-|--|--||
+|--|--|
 |0|Volume license|
 |1|Retail/OEM|
 |2|Trial|

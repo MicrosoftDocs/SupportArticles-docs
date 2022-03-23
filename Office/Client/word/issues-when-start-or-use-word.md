@@ -218,12 +218,10 @@ Try the following options to help determine the root cause of your problem in Wo
 | Windows 10, Windows 8.1, Windows 8, Windows 7, or Windows Vista |
 |---|
 | %userprofile%\AppData\Roaming\Microsoft\Word\Startup |
-||
 
 | Windows XP |
 |---|
 | %userprofile%\Application Data\Microsoft\Word\Startup |
-||
 
 </li>
 <li>Repeat steps 3 through 6 for each file in this Startup folder.</li>

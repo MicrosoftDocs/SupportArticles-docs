@@ -38,7 +38,6 @@ The following Intel graphics driver versions cause this problem.
 |26.20.100.6999|
 |26.20.100.7000|
 |26.20.100.7063|
-||
 
 ## Resolution
 
