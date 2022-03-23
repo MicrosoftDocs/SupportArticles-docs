@@ -42,7 +42,7 @@ You might experience one of more of the following symptoms:
     |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found.|
     |-1603|0xfffff9b|JET_errNoCurrentRecord|Currency not on a record.|
 
-  - Dcpromo.exe fails and generates error 8451.  
+- Dcpromo.exe fails and generates error 8451.  
     The user interface displays the following message:  
     >The operation failed because:
     >

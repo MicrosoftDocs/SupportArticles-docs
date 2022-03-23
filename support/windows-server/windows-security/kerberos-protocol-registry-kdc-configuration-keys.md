@@ -171,7 +171,7 @@ The registry entries that are listed in this section must be added to the follow
     |DEB_TRACE_LOCKS|0x01000000| |
     |DEB_USE_LOG_FILE|0x02000000|Not implemented|
 
-  - Entry: MaxTokenSize
+- Entry: MaxTokenSize
 
   - Type: REG_DWORD
   - Default Value: 12000 (Decimal). Starting Windows Server 2012 and Windows 8, the default value is 48000.

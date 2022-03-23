@@ -39,7 +39,7 @@ Specifically, assume that you configure the following HTTP and HTTPS bindings:
 |HTT|\<_specific IP address_>|80||
 |HTTPS|\<_specific IP address_>|443||
   
-  In the above bindings, host name is left blank.
+In the above bindings, host name is left blank.
 
 In this scenario, you also must configure the following two bindings:
 
@@ -48,7 +48,7 @@ In this scenario, you also must configure the following two bindings:
 |HTTP|[::1]|80||
 |HTTPS|[::1]|443||
   
-  > [!NOTE]
+> [!NOTE]
 > Recent Windows versions use `[::1]` for the loopback address by default. If you have disabled IPv6 by using the `DisabledComponents` registry value, use _127.0.0.1_ in the binding.
 
 Additionally, assume that you configure the following HTTP and HTTPS bindings:
@@ -58,7 +58,7 @@ Additionally, assume that you configure the following HTTP and HTTPS bindings:
 |HTTP|All unassigned|80|\<_host name_>|
 |HTTPS|All unassigned|443|\<_host name_>|
   
-  In the above bindings, \<_host name_> is the DNS name of the web server.
+In the above bindings, \<_host name_> is the DNS name of the web server.
 
 In this scenario, you also must configure the following two bindings:
 

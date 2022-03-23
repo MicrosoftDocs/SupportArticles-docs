@@ -56,7 +56,7 @@ This issue occurs for one of the following reasons:
     ||sAMAccountName|Is not present|
     ||isCriticalSystemObject|Is set to "True"|
 
-  - The user principal name (UPN) was changed after the initial synchronization and must be updated manually.
+- The user principal name (UPN) was changed after the initial synchronization and must be updated manually.
 - Exchange Online Simple Mail Transfer Protocol (SMTP) addresses of synced users aren't populated appropriately in the on-premises Active Directory schema.
 
 ## Resolution

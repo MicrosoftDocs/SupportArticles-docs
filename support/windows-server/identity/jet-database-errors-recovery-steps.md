@@ -243,7 +243,7 @@ You can use these methods to troubleshoot Jet database errors:
     | Creator Owner| Full Control| Subfolders and Files only |
     | Local Service| Create Folders / Append Data| This folder and subfolders |
 
-      - The root of the volume that is hosting the NTDS.DIT and NTDS log files (system requires fully control)
+    - The root of the volume that is hosting the NTDS.DIT and NTDS log files (system requires fully control)
     - The %windir% folder (i.e., c:\\windows or c:\\winnnt) (system requires fully control)
     - The folder that hosts the NTDS.DIT and NTDS log files (see permissions table below)
     - The NTDS Log files themselves (see perms table below)

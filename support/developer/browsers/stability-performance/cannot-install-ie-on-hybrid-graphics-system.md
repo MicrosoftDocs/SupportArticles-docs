@@ -68,7 +68,7 @@ The following tables list the known computer models that are affected and includ
 |Sony VPCCA1x<br/>Sony VPCCA2x<br/>Sony VPCCA3x<br/>Sony VPCCA4x<br/>Sony VPCCB1x<br/>Sony VPCCB2x<br/>Sony VPCCB3x<br/>Sony VPCCB4x|AMD Radeon HD 6630M|None|
 |Sony VPCJ2x|AMD Radeon HD 6470M|None|
   
-  > [!NOTE]
+> [!NOTE]
 > For computers for which **None** is listed in the **Latest compatible drivers** column, Microsoft is currently working with AMD to find the cause of the problem and determine the appropriate fix. If you have platform update KB 2670838 for Windows 7 installed on this computer, we recommend that you uninstall the update.
 
 ## Status

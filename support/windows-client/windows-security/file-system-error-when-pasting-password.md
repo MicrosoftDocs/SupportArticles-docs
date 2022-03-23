@@ -40,7 +40,7 @@ During investigation, you notice that Consent.exe crashes when the issue occurs.
 |---|---|---|---|
 |Hex: 0xc000027b<br />Dec: -1073741189|STATUS_STOWED_EXCEPTION|An application-internal exception has occurred.|ntstatus.h|
   
-  > [!Note]
+> [!Note]
 > If you right-click the password box, a shortcut menu does not open.  
 
 ## Cause

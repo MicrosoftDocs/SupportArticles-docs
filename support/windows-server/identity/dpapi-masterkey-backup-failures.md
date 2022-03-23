@@ -99,7 +99,7 @@ _Original KB number:_ &nbsp; 3205778
         | 0xc000006a|-1073741718|STATUS_WRONG_PASSWORD|When trying to update a password, this return status indicates that the value provided as the current password is not correct.|
         | 0xc000006d|-1073741715|STATUS_LOGON_FAILURE|The attempted logon is invalid. This is either due to a bad user name or authentication information.|
 
-      - In all cases, the NETLOGON.LOG shows DsGetDcName request making calls for writable domain controllers:
+    - In all cases, the NETLOGON.LOG shows DsGetDcName request making calls for writable domain controllers:
 
         > [MISC] [3736] DsGetDcName function called: client PID=568, Dom:VS Acct:(null) Flags: DS WRITABLE NETBIOS RET_DNS  
         [CRITICAL] [3736] NetpDcMatchResponse: CON-DC4: `CONTOSO.COM`.: Responder is not a writable server.  

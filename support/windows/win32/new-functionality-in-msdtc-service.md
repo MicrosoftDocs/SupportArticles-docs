@@ -249,7 +249,7 @@ The following table describes the registry entries that are changed since Window
 |FallbackToUnsecureRPCIfNecessary|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|0|0 or 1|
 |TurnOffRpcSecurity|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|0|0 or 1|
   
-  > [!NOTE]
+> [!NOTE]
 > These changes appear in the shared cluster registry on a Windows Server 2003 SP1-based server cluster.
 
 ## Error codes that are associated with the DTC service changes

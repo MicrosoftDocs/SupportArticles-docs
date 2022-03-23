@@ -221,7 +221,7 @@ Table: QuickBooks general ledger account setup in Store Operations
 |Dept. **xxxx: Sales||Sales|The sales amount not including taxes for the department. If you post this account, do not post Sales: Total + Tax or Sales: Total Account to avoid redundant posting. Set up this account if you want to track sales and taxes for each department separately. If you want to track this value as a total, leave these accounts blank and enter your account numbers in the Sales: Total + Tax or Sales: Total.|
 |Department Tax Rounding||Cash|A rounding error may occur when you calculate the tax per department in a VAT system. Use this option if you use VAT.|
   
-  > [!TIP]
+> [!TIP]
 > For the tender amounts to post correctly to your accounting system, type opening and closing amounts in the point of sale for each batch.
 >
 > If you are using Tender Received Amount but not Tender Opening Amount or Tender Closing Amount, you must take the following actions:

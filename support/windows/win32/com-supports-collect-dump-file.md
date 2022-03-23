@@ -60,7 +60,7 @@ The system can be configured to perform one or both of the following actions whe
     |`DumpType`|`REG_DWORD`|0 = Generate a full dump file; 1 = Generate a minidump file; 2 = No dump file|**0**|
     |`Terminate`|`REG_DWORD`|0 = Process will continue; 1 = Process will be terminated|**0**|
 
-  - To globally define actions for all COM+ components on the computer, add the configuration values under the following registry key:  
+- To globally define actions for all COM+ components on the computer, add the configuration values under the following registry key:  
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\COM3\AutoDump`
 
 - To define actions to be taken for a specific COM+ component regardless of the global settings, add the configuration values under the following registry key:  

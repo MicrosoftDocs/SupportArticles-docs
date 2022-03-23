@@ -170,7 +170,7 @@ For all management servers including the RMS emulator, there are a few more regi
 |`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HealthService\Parameters\Persistence Checkpoint Depth Maximum`|DWORD|06400000|
 |`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HealthService\Parameters\State Queue Items`|DWORD|00005000|Allows more data be allowed to store in the Health Service's data store on the local system.|
   
-  > [!NOTE]
+> [!NOTE]
 > These updates don't apply to gateway servers.
 
 ### Operations Manager data warehouse (if applicable)

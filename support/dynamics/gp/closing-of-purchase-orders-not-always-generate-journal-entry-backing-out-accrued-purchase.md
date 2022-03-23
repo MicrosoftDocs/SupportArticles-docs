@@ -57,7 +57,7 @@ Vendor: ABC
     | Accrued Purchases|$960.00| |
     | Accounts Payable||$960.00|
 
-      > [!NOTE]
+    > [!NOTE]
     > This creates a payables invoice in Payables Management for $960.
 
 3. Close the PO in the Edit PO transaction window (Transactions > Purchasing > Edit Purchase Orders).

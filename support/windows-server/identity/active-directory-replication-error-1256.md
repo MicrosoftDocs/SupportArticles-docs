@@ -67,7 +67,7 @@ _Original KB number:_ &nbsp; 2200187
     | NTDS Replication ActiveDirectory_DomainService| 1085 *| Internal event: Active Directory Domain Services could not synchronize the following directory partition with the directory service at the following network address. |
     | NTDS KCC ActiveDirectory_DomainService| 1308| The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed. The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed. |
 
-      > [!NOTE]
+    > [!NOTE]
     > Event 1085 is only logged if the NTDS Diagnostics value **5 Replication Events** has been set to a value of 1 or higher.
 
 ## Cause

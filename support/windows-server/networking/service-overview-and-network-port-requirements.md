@@ -116,7 +116,7 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 |RPC randomly allocated high TCP ports¹|TCP|1024 - 5000<br/>49152 - 65535²|
 |SMB|TCP|445|
   
-  ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section. This section also includes remote WMI and DCOM communications first used in Windows Server 2012 domain controller promotion during prerequisite validation and with the Server Manager tool.
+¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section. This section also includes remote WMI and DCOM communications first used in Windows Server 2012 domain controller promotion during prerequisite validation and with the Server Manager tool.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -192,7 +192,7 @@ System service name: **ClusSvc**
 |Cluster Administrator|UDP|137|
 |Randomly allocated high UDP ports²|UDP|Random port number between 1024 and 65535<br/>Random port number between 49152 and 65535³|
   
-  > [!NOTE]
+> [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.
 >
 > ¹ Cluster Service UDP traffic over port 3343 requires the Datagram Transport Layer Security (DTLS) protocol, version 1.0 or version 1.2. By default, DTLS is enabled. For more information, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
@@ -245,7 +245,7 @@ System service name: `Dfs`
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -263,7 +263,7 @@ System service name: **DFSR**
 |RPC|TCP|5722³|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Distributed File Replication Service in the [References](#references) section.
+¹ For more information about how to customize this port, see Distributed File Replication Service in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 ³ Port 5722 is only used on a Windows Server 2008 domain controller or on a Windows Server 2008 R2 domain controller. It is not used on a Windows Server 2012 domain controller.
@@ -279,7 +279,7 @@ System service name: **TrkSvr**
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -294,7 +294,7 @@ System service name: **MSDTC**
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 5000**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Distributed Transaction Coordinator in the [References](#references) section.
+¹ For more information about how to customize this port, see Distributed Transaction Coordinator in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -322,7 +322,7 @@ System service name: **Eventlog**
 |RPC/NP|UDP|137|
 |RPC/NP|UDP|138|
   
-  > [!NOTE]
+> [!NOTE]
 > The Event Log service uses RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
 
 ### Fax Service
@@ -353,7 +353,7 @@ System service name: **NtFrs**
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see File Replication Service in the [References](#references) section.
+¹ For more information about how to customize this port, see File Replication Service in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -369,7 +369,7 @@ System service name: **MSFTPSVC**
 |FTP default data|TCP|20|
 |Randomly allocated high TCP ports|TCP| **random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535¹** |
   
-  ¹ It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+¹ It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Group Policy
 
@@ -387,7 +387,7 @@ System service name: **Group Policy**
 |SMB|TCP|445|
 |RPC¹|TCP|135<br/>**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
+¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -419,7 +419,7 @@ Hyper-V replica
 |Kerberos authentication (HTTP)|TCP|80|
 |Certificate-based authentication (HTTPS)|TCP|443|
   
-  Hyper-V live migration
+Hyper-V live migration
 
 |Application protocol|Protocol| Port|
 |---|---|---|
@@ -477,7 +477,7 @@ The IPAM client UI communicates with the IPAM server to perform remote managemen
 |Web Management|TCP|2175 (note 1, 4)|
 |Web Proxy Client|TCP|8080 (note 5)|
   
-  > [!NOTE]
+> [!NOTE]
 >
 > 1. This port is not used with ISA 2000.
 > 2. FWC application transport and protocols are negotiated within the FWC control channel.
@@ -513,7 +513,7 @@ System service name: **LicenseService**
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
   
-  > [!NOTE]
+> [!NOTE]
 > The License Logging service uses RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
 
 ### Message Queuing
@@ -568,7 +568,7 @@ System service name: `Netlogon`
 |LDAP|UDP|389|
 |RPC¹|TCP|135, **random port number between 1024 - 65535**<br/>135, **random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
+¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -640,7 +640,7 @@ System service name: **Spooler**
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
   
-  > [!NOTE]
+> [!NOTE]
 > The Print Spooler service uses RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
 
 ### Remote Installation
@@ -668,7 +668,7 @@ System service name: **RpcSs**
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
   
-  > [!NOTE]
+> [!NOTE]
 >
 > - RPC does not use only the hard-coded ports that are listed in the table. Ephemeral range ports that are used by Active Directory and other components occur over RPC in the ephemeral port range. The ephemeral port range depends on the server operating system that the client operating system is connected to.  
 > - The RPC Endpoint Mapper also offers its services by using named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
@@ -686,7 +686,7 @@ System service name: **RpcLocator**
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
   
-  > [!NOTE]
+> [!NOTE]
 > The RPC Locator service offers its services by using RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
 
 ### Remote Storage Notification
@@ -883,7 +883,7 @@ System service name: **TermServLicensing**
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -901,7 +901,7 @@ System service name: **Tssdis**
 |RPC|TCP|135|
 |Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
   
-  ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -976,7 +976,7 @@ System service name: **WinRM**
 |WinRM 1.1 and earlier|TP|The default HTTP port is TCP 80, and the default HTTPS port is TCP 443.|
 |WinRM 2.0|TP|The default HTTP port is TCP 5985, and the default HTTPS port is TCP 5986.|
   
-  For more information, see [Installation and Configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+For more information, see [Installation and Configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### Windows Time
 

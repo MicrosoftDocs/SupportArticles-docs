@@ -103,7 +103,7 @@ To fix the issue, follow these steps:
     |---|---|---|---|
     |`HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters`|SessTimeout|REG_DWORD|1200|
 
-      > [!NOTE]
+    > [!NOTE]
     > The 1,200 seconds (20 minutes) time-out is a recommended value. Adjust the value as appropriate. You can review the Resilient File System (ReFS) event logs on the DPM or Azure Backup Server server to find any suspected I/O latency.
 
 2. Restart the protected server.

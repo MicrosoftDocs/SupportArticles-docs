@@ -32,7 +32,7 @@ Consider the following scenario:
     |Debian|8|< 4.9|
     |CoreOS|Any|< 4.9|
 
-  - The virtual machine restarts, or a new virtual machine provisioning request is made.
+- The virtual machine restarts, or a new virtual machine provisioning request is made.
 
 In this scenario, the virtual machine becomes unresponsive or provisioning times out. When this problem occurs, an entry that resembles the following is logged in the [Linux serial log](/azure/virtual-machines/linux/boot-diagnostics):  
 

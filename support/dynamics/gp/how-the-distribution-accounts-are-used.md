@@ -33,7 +33,7 @@ When the quantity that is sold on the C line or on the I line of a service call 
 |Drop Ship||Yes|Drop Ship Items account from the Item Account Maintenance window</br>Drop Ship Items account from the Posting Account Setup window</br>Inventory account from the Item Account Maintenance window</br>Inventory Control account from the Posting Account Setup window|
 |Cost of Goods Sold|Yes||Part Cost of Goods Sold account from the Service Type Account window</br>Cost of Goods Sold account from the Customer Account Maintenance window or from the Item Account Maintenance window</br>Cost of Goods Sold account from the Posting Accounts Setup window|
   
-  > [!NOTE]
+> [!NOTE]
 > You can specify whether you want the posting accounts that are selected for the customer or for the item to appear as the default entries when you enter a transaction. To do it, enable the **Customer** option or the **Item** option under **Posting Accounts From** in the Sales Order Processing Setup window.
 
 When the quantity that is sold on the R line of a service call is updated, an inventory increase adjustment is created. Then, this inventory increase adjustment is posted. This inventory increase adjustment updates the following general ledger accounts.
@@ -50,7 +50,7 @@ When the quantity that is sold on the R line of a service call is updated, an in
 |Sales|Yes||Part Sales account from the Service Type Account window</br>Sales account from the Item Account Maintenance window or from the Customer Account Maintenance window</br>Sales account from the Posting Accounts Setup window|
 |Accounts Receivable||Yes|Accounts Receivable account from the Customer Account Maintenance window</br>Accounts Receivable account from the Posting Accounts Setup window|
   
-  > [!NOTE]
+> [!NOTE]
 > You can specify whether you want the posting accounts that are selected for the customer or for the item to appear as the default entries when you enter a transaction. To do it, enable the **Customer** option or the **Item** option under **Posting Accounts From** in the Sales Order Processing Setup window.
 
 ## Contract Administration in Microsoft Dynamics GP
@@ -353,5 +353,5 @@ The following accounts are used when an inventory adjustment removes items from 
 |Inventory|Yes||Inventory account from the Item Account Maintenance window</br>Inventory account from the Posting Accounts Setup window|
 |Inventory Offset||Yes|Inventory Offset account from the Item Account Maintenance window</br>Inventory Offset account from the Posting Accounts Setup window|
   
-  > [!NOTE]
+> [!NOTE]
 > For work orders in which the **Customer Owned** check box is selected, no final inventory adjustments occur. Additionally, the WIP accounts are cleared as expected.

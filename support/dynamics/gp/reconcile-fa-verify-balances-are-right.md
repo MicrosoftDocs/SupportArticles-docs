@@ -47,7 +47,7 @@ The following tables describe the accounts that are used when you post an invoic
 |Fixed Assets|DR|Cost account|000-1500-00|
 |Fixed Assets|CR|Clearing account|000-1590-00|
   
-  > [!NOTE]
+> [!NOTE]
 > The 000-1500-00 Fixed Assets account would be debited two times. To prevent it, the clearing account should be the Fixed Assets account. This setup would result in a debit entry and a credit entry to the Fixed Assets account when the asset is added in Fixed Assets. So the Fixed Assets account is only debited one time. Consider the following example.
 
 |Module|DR/CR|Account Type|Account Number|
