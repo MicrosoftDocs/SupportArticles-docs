@@ -43,7 +43,7 @@ This problem occurs when one of the following conditions is met:
 
 For a sample scenario, see [More information](#more-information).
 
-For details about how to resolve these issues, see [Remote resources including SMB](#remote-resource-including-smb).
+For details about how to resolve these issues, see [Remote resources including SMB](#remote-resources-including-smb).
 
 ## Cause
 
