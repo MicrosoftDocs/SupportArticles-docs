@@ -1,6 +1,6 @@
 ---
-title: The Remote Desktop license server isn't available when you connect to an Azure Virtual Machine | Microsoft Docs
-description: Learn how to troubleshoot RDP fail issues that occur because no Remote Desktop license server is available | Microsoft Docs
+title: The Remote Desktop license server isn't available when you connect to an Azure VM | Microsoft Docs
+description: Learn how to troubleshoot RDP fail issues because no Remote Desktop license server is available | Microsoft Docs
 services: virtual-machines
 documentationCenter: ''
 author: genlin
@@ -14,7 +14,7 @@ ms.date: 10/23/2018
 ms.author: genli
 ---
 
-# The Remote Desktop license server isn't available when you connect to an Azure Virtual Machine
+# The Remote Desktop license server isn't available when you connect to an Azure VM
 
 This article helps resolve the issue when you can't connect to an Azure virtual machine (VM) because no Remote Desktop license server is available to provide a license.
 
@@ -37,18 +37,18 @@ When you try to connect to a VM, you may encounter the following scenarios:
 
 This problem occurs if a Remote Desktop license server is unavailable to provide a license to start a remote session. It can be caused by several scenarios, even though a Remote Desktop Session Host role was set up on the VM:
 
-- There was never a Remote Desktop licensing role in the environment, and the grace period of 180 days is over.
-- A Remote Desktop license was installed in the environment, but it has never been activated.
+- There was never a Remote Desktop licensing role in the environment, and the grace period, 180 days, is over.
+- A Remote Desktop license was installed in the environment, but it's never activated.
 - A Remote Desktop license has Client Access Licenses (CALs), and it was activated. However, there are more active users than available CALs.
 - A Remote Desktop license in the environment doesn't have CALs injected to set up the connection.
-- A Remote Desktop license is installed in the environment. There are available CALs, but they aren't configured properly.
-- A Remote Desktop license has CALs, and it is activated. However, some other issues on the Remote Desktop license server prevent it from providing licenses in the environment.
+- A Remote Desktop license was installed in the environment. There are available CALs, but they weren't configured properly.
+- A Remote Desktop license has CALs, and it was activated. However, some other issues on the Remote Desktop license server prevent it from providing licenses in the environment.
 
 ## Solution
 
 To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk) and follow these steps:
 
-1. Connect to the VM by using an administrative session. To do this, use one of the following methods:
+1. Connect to the VM by using an administrative session. To do this, use one of the following ways:
 
     - Run the following command:
 
@@ -63,13 +63,13 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
     2. Create a new channel for a CMD instance. Enter **CMD** to start the channel and get the channel name.
 
-    3. Switch to the channel that runs the CMD instance. In this case, it should be "channel 1":
+    3. Switch to the channel that runs the CMD instance. In this case, it should be channel 1:
 
        ```
        ch -si 1
        ```
 
-    4. Select **Enter** again and enter a valid username and password and a local or domain ID for the VM.
+    4. Select **Enter** again and enter a valid username and password, local or domain ID, for the VM.
 
 2. Check whether the VM has a Remote Desktop Session Host role enabled. If the role is enabled, make sure that it's functioning properly. Open an elevated CMD instance and follow these steps:
 
@@ -79,7 +79,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
         reg query "HKLM\SOFTWARE\Microsoft\ServerManager\ServicingStorage\ServerComponentCache\RDS-RD-Server" /v InstallState
         ```
 
-        If this command returns a value of 0, the role is disabled, and you can go to step 3.
+        If this command returns a value of 0, it means that the role is disabled, and you can go to step 3.
 
     2. Use the following command to check the policies and reconfigure as needed:
 
@@ -89,7 +89,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
         reg query "HKLM\SYSTEM\CurrentControlSet\Services\TermService\Parameters" /v SpecifiedLicenseServers
        ```
 
-        If the **LicensingMode** value is set to any value other than four per user, then set the value to *4*:
+        If the **LicensingMode** value is set to any value other than 4, per user, then set the value to 4:
 
          ```
         reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\Licensing Core" /v LicensingMode /t REG_DWORD /d 4
@@ -115,7 +115,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
         dism /ONLINE /Disable-feature /FeatureName:Licensing
         ```
 
-    5. Make sure that the VM can connect to the Remote Desktop license server. You can test the connectivity to port 135 between the VM and the license server with the following command: 
+    5. Make sure that the VM can connect to the Remote Desktop license server. You can test the connectivity to the port 135 between the VM and the license server: 
 
        ```
        telnet <FQDN / IP License Server> 135
