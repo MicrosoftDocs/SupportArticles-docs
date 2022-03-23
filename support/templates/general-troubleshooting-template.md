@@ -35,12 +35,12 @@ Introductory paragraph.
 
 <!---Optional: An issue might be able to be temporarily resolved with a quick fix. If known, list any workarounds that can be implemented quickly to resolve the issue. Link to information about  longer-term solutions in the Solution section.--->
 
-### Workaround 1: \<Summarzied key info in the workaround>
+### Workaround 1: \<summarized key info in the workaround>
 
 1. Step 1.
 2. Step 2.
 
-### Workaround 2: \<Summarzied key info in the workaround>
+### Workaround 2: \<summarized key info in the workaround>
 
 1. Step 1.
 2. Step 2.
@@ -54,40 +54,40 @@ Introductory paragraph.
 
 ### Step 3
 
-## Cause 1: \<Summarzied key info of the cause>
+## Cause 1: \<summarized key info of the cause>
 
 <!--- Provide a descriptive H2 for each root cause. H2 is helpful for SEO and the right-side navigation. To identify the issue and how to prevent it from happening again, the cause of the issue should be defined if known. --->
 
 Description of the cause.
 
-### Solution 1: \<Summarzied key info of the solution>
+### Solution 1: \<summarized key info of the solution>
 
 <!---  Make sure that the H3 headings clearly state the intention of the Solution section. Each Solution section should have a short sentence that describes the steps that are about to be taken.--->
 
 1. Step 1.
 2. Step 2.
 
-### Solution 2: \<Summarzied key info of the solution>
+### Solution 2: \<summarized key info of the solution>
 
 <!---  Make sure that the H3 headings clearly state the intention of the Solution section. Each Solution section should have a short sentence that describes the steps that are about to be taken.--->
 
 1. Step 1.
 2. Step 2.
 
-## Cause 2: \<Summarzied key info of the cause>
+## Cause 2: \<summarized key info of the cause>
 
 <!--- Provide the descriptive H2 for each root cause, H2 is helpful for SEO and the right-side navigation. To be able to identify the issue and how to prevent it from happening again, the cause of the issue should be defined if known.--->
 
 Description of the cause.
 
-### Solution 1: \<Summarzied key info of the solution>
+### Solution 1: \<summarized key info of the solution>
 
 <!--- Make sure that the H3 headings clearly state the intention of the Solution section. Each Solution section should have a short sentence that describes the steps that are about to be taken.--->
 
 1. Step 1.
 2. Step 2.
 
-### Solution 2: \<Summarzied key info of the solution>
+### Solution 2: \<summarized key info of the solution>
 
 <!--- Make sure that the H3 headings clearly state the intention of the Solution section. Each Solution section should have a short sentence that describes the steps that are about to be taken.--->
 
