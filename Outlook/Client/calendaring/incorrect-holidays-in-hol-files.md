@@ -32,7 +32,6 @@ Here is an example of two holidays which are displayed incorrectly.
 |Whit Sunday|2015/5/28|2015/5/24|
 |Pfingstmontag|2015/5/29|2015/5/25|
 |Whit Monday|2015/5/29|2015/5/25|
-||||
 
 ## Workaround
 

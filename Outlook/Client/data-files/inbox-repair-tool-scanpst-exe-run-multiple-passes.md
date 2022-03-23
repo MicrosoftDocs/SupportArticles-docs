@@ -74,4 +74,3 @@ Earlier versions of the Scanpst tool run only eight phases. When you use the **-
 |-force| Do not require the user to select any UI options before running or closing the scan or repair| UI is displayed without user interaction, also known as Immediate mode.| Normal mode|
 |-silent|Do not show any UI| User must monitor the process to know when it ends. For example, by looking at the .log file (if any), the creation of the .bak file (if backup option is being used), or checking for Scanpst.exe in Task Manager.|Normal mode|
 |-file|File to be scanned|Path to `.pst` or `.ost` file||
-|||||
