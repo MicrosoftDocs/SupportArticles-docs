@@ -42,7 +42,6 @@ The symptoms listed above have been seen with the following versions of AppSense
 |---|---|---|
 |Pvc.dll|8.2.125.0|8.2.125.0|
 |LockDownMgr.dll|8.1.591.0|8.1.591.0|
-||||
 
 ## Resolution
 
@@ -52,7 +51,6 @@ If you are experiencing one or more of the above symptoms in a Citrix environmen
 |---|---|---|---|
 |Pvc.dll|8.2.125.0|8.2.125.0|8.4.309.0|
 |LockDownMgr.dll|8.1.591.0|8.1.591.0|8.2.206.0|
-|||||
 
 If your version is lower than the version listed under Fixed EM version in the above table, see [AppSense Web site](https://www.citrix.com/) (registration required) to install the latest available version of the AppSense Environment Manager.
 

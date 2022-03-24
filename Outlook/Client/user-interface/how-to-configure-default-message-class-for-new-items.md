@@ -44,7 +44,6 @@ The following table lists the main default folders in Outlook in which custom me
 |Calendar|IPM.Appointment|
 |Contacts|IPM.Contact|
 |Tasks|IPM.Task|
-|||
 
 To determine the currently configured default message class for new items on a folder, follow these steps:
 

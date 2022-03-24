@@ -38,21 +38,18 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 |Low meeting volume after content sharing|Microsoft Teams Rooms devices on Windows 10 20H2 experience decreased media and meeting volume after you share content through in-room HDMI. This issue is caused by an audio condition in Windows 10 20H2.|The fix for this issue is available in application version [4.9.12.0](/microsoftteams/rooms/rooms-release-note#49120-7282021)|
 |  App out of date         |    The Microsoft Teams Rooms console shows a "system config out of date" error.                |   [Use the Microsoft Teams Rooms recovery tool](/MicrosoftTeams/rooms/recovery-tool)             |
 |  Device updated to unsupported version of Windows 10   |    A Windows 10 device was updated from version 1803 to version 1809. Version 1809 is not supported. The supported version is 1903. |   This issue can occur if the [Group Policy or MDM setting for DeferFeatureUpdatesPeriodinDays](/windows/deployment/update/waas-configure-wufb) setting is set to the maximum of 365 days. This setting lets you defer feature updates for a specified number of days.<br><br> Windows 10, version 1809 isn't supported for Microsoft Teams Rooms. Version 1903 is supported. However, as of March 27, 2020, version 1809 is more than 365 days old. If this setting isn't changed, Windows tries to install version 1809. That version might cause issues that affect Microsoft Teams Rooms.<br><br>To avoid this situation, remove any Group Policy or MDM setting for deferring updates. This lets Windows update to the latest supported OS version. <br><br>**Important** The Group Policy or MDM setting must be removed (left unconfigured) and not set to **0**. If the policy is set to **0**, Windows takes the latest available version. That version might not be supported. |
-||||
 
 ## User interface
 
 | Issue  |  Description | Workaround |
 |  ---        |      ---             |   ---            |
 |Virtual keyboard missing   | The virtual keyboard doesn't appear when you have to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install the April 2020 Cumulative Update for Windows 10, version 1903 for x64-based systems through Windows Updates.  |
-||||
 
 ## Hardware
 
 | Issue |  Description | Workaround |
 |  ---        |      ---             |   ---            |
 | Monitors not detected | When you run Microsoft Teams Rooms on a Surface Pro (Model 2017) device, monitors are not detected. |  Hold down the Surface Pro power button for 20 or more seconds. When you do this, the device restarts and clears the graphics cache. |
-||||
 
 ## Limitations
 

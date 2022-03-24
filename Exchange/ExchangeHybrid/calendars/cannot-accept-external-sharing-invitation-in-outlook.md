@@ -59,7 +59,6 @@ After this fix is released, Outlook clients that cannot accept cross-premises sh
 | Desktop C2R Monthly| ✖ Accept button shown but does not work| ✔ Accept button shown & working |
 | Outlook for Web| ✔ No accept button shown (cannot accept)| ✔ Accept button shown & working |
 | Outlook for Mac, iOS, Android| ✔ No accept button shown (cannot accept)| ✔ No accept button shown (cannot accept) |
-||||
 
 #### State after the Windows client fix (no ETA yet)
 
@@ -70,6 +69,5 @@ After this fix is released, Outlook clients that cannot accept cross-premises sh
 | Desktop C2R Monthly| ✔ Accept button shown & working| ✔ Accept button shown & working |
 | Outlook for Web| ✔ No accept button shown (cannot accept)| ✔ Accept button shown & working |
 | Outlook for Mac, iOS, Android| ✔ No accept button shown (cannot accept)| ✔ No accept button shown (cannot accept) |
-||||
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

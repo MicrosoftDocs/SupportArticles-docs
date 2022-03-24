@@ -34,7 +34,6 @@ _Original KB number:_ &nbsp; 2925203
 |---|---|---|---|
 |10023|Search|Gatherer|The protocol host process \<PID> did not respond and is being forcibly terminated {filter host process 6104|
 |10024|Search|Gatherer|The filter host process \<PID> did not respond and is being forcibly terminated.|
-|||||
 
 ## Cause
 

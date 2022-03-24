@@ -48,7 +48,6 @@ To resolve the problem, make sure that the `DefaultIMApp` string value is set to
 |Microsoft Lync 2013 (Skype for Business)| Lync |
 |Skype for Business 2016<br/>Skype (Consumer)| Lync<br/>Skype |
 |Microsoft Teams| Teams |
-|||
 
 To do this, follow these steps:
 

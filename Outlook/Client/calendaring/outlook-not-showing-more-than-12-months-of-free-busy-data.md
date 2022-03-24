@@ -52,7 +52,6 @@ To change the number of months for which Calendar free/busy information is publi
     > | **Registry subkey**| **Type**| **Value** |
     > |---|---|---|
     > |HKCU\Software\Microsoft\Office\16.0\Outlook\Options\Calendar\ShowLegacySharingUX|REG_DWORD|1|
-    > ||||
 
     1. If the **Publish at location** check box is not selected, select it. This makes the option active in the next step to set the number of months to publish.
     2. Enter the number of months that you want in the **Publish \<months> of Calendar free/busy information** box.

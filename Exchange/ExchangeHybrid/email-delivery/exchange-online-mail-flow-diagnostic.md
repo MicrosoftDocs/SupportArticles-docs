@@ -40,14 +40,12 @@ The Microsoft Exchange Online Mail Flow Diagnostic tool Support Diagnostics Plat
 | `Get-OutboundConnector` cmdlet output for the Exchange Online environment|OutboundConnector.txt|
 | `Get-SendConnector` cmdlet output for the Exchange on-premises environment|SendConnector.txt|
 | `Get-ReceiveConnector` cmdlet output for the Exchange on-premises environment|ReceiveConnector.txt|
-|||
 
 ### Data-collection log
 
 | Description| File name |
 |---|---|
 |Log of all cmdlet output in a single text file|Data_Collection.log|
-|||
 
 ### On-premises recipient detail
 
@@ -56,7 +54,6 @@ The Microsoft Exchange Online Mail Flow Diagnostic tool Support Diagnostics Plat
 | `Get-AcceptedDomain` cmdlet output for the Exchange Online environment|Cloud_AcceptedDomain.txt|
 | `Get-RemoteDomain` cmdlet output for the Exchange Online environment|Cloud_RemoteDomain.txt|
 | `Get-Recipient` cmdlet output for the affected Exchange Online user|Cloud_Recipient.txt|
-|||
 
 ### Exchange Online user detail
 
@@ -65,7 +62,6 @@ The Microsoft Exchange Online Mail Flow Diagnostic tool Support Diagnostics Plat
 | `Get-AcceptedDomain` cmdlet output for the on-premises Exchange environment|OnPrem_AcceptedDomain.txt|
 | `Get-RemoteDomain` cmdlet output for the on-premises Exchange environment|OnPrem_RemoteDomain.txt|
 | `Get-Recipient` cmdlet output for the affected on-premises Exchange user|OnPrem_Recipient.txt|
-|||
 
 ## References
 
