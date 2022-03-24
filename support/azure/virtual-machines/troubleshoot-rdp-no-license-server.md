@@ -14,7 +14,7 @@ ms.date: 10/23/2018
 ms.author: genli
 ---
 
-# The Remote Desktop license server isn't available when you connect to an Azure VM
+# Remote Desktop license server isn't available when you connect to an Azure VM
 
 This article helps resolve the issue when you can't connect to an Azure virtual machine (VM) because no Remote Desktop license server is available to provide a license.
 
@@ -101,7 +101,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
         reg add "HKLM\SYSTEM\CurrentControlSet\Services\TermService\Parameters" /v SpecifiedLicenseServers /t REG_MULTI_SZ /d "<FQDN / IP License server>"
        ```
 
-    3. After you make changes to the registry, restart the VM.
+    3. After you make any changes to the registry, restart the VM.
 
     4. If you don't have CALs or you don't need more than two concurrent users, remove the Remote Desktop Session Host role. Then RDP will be set back to allow only two concurrent RDP connections to the VM:
 
