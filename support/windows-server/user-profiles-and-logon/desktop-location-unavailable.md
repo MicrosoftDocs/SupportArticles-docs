@@ -89,7 +89,6 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 |Application|Service Control Manager|7024| **The SQL Server (MSSQLSERVER) service terminated with service-specific error 2148081668 (0x80092004).** |
 |Application|Userenv|1500| **Windows cannot log you on because your profile cannot be loaded. Check that you are connected to the network, or that your network is functioning correctly. If this problem persists, contact your network administrator. DETAIL - The system cannot find the file specified.** |
 |Application|Userenv|1502| **Windows cannot load the locally stored profile. Possible causes of this error include insufficient security rights or a corrupt local profile. If this problem persists, contact your network administrator.** |
-|||||
 
 ### Details of the failure that are displayed in Process Monitor
 

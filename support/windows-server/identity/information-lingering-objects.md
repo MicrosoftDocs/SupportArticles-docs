@@ -41,7 +41,7 @@ The default value of the TSL depends on the version of the operating system that
 |Windows 2000|60 days|
 |Windows Server 2003|60 days|
 |Windows Server 2003 with Service Pack 1|180 days|
-|||
+
 > [!NOTE]
 > The existing TSL value does not change when a domain controller is upgraded to Windows Server 2003 with Service Pack 1 (SP1). The existing TSL value is maintained until you manually change it.
 
@@ -97,7 +97,6 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |1864|The local domain controller has not recently received replication information from several domain controllers (summary).|
 |1311|The Knowledge Consistency Checker (KCC) was not able to build a spanning tree topology.|
 |2042|It has been too long since this server last replicated with the named source server.|
-|||
 
 #### Events that indicate that lingering objects are present in the forest
 
@@ -106,7 +105,7 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |1084|There is no such object on the server.|
 |1388|This destination system received an update for an object that should have been present locally but was not.|
 |1311|Another domain controller replicated an object not present on this domain controller.|
-|||
+
 > [!NOTE]
 > Lingering objects are not present on domain controllers that log Event ID 1988. The source domain controller contains the lingering object.
 
@@ -116,7 +115,6 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |---|---|
 |8240|There is no such object on the server.|
 |8606|Insufficient attributes were given to create an object.|
-|||
 
 ### Other indications that lingering objects are present in the forest
 

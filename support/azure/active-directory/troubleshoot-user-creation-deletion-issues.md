@@ -92,7 +92,7 @@ New-AzureADUser -AccountEnabled $true `
 
 ## [Azure CLI](#tab/azure-cli)
 
-To add a user in Azure CLI, run the [az ad user create](/cli/azure/ad/user#az_ad_user_create) command:
+To add a user in Azure CLI, run the [az ad user create](/cli/azure/ad/user#az-ad-user-create) command:
 
 ```azurecli-interactive
 az ad user create --display-name "<New User>" \
@@ -151,7 +151,7 @@ Remove-AzureADUser -ObjectId "<NewUser@contoso.onmicrosoft.com>"
 
 ## [Azure CLI](#tab/azure-cli)
 
-To delete a user in Azure CLI, run the [az ad user delete](/cli/azure/ad/user#az_ad_user_delete) command:
+To delete a user in Azure CLI, run the [az ad user delete](/cli/azure/ad/user#az-ad-user-delete) command:
 
 ```azurecli-interactive
 az ad user delete --id "<NewUser@contoso.onmicrosoft.com>"

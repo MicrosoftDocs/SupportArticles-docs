@@ -239,7 +239,7 @@ You can see the initramfs and kernel files in the example grub file (in the prev
 - Initramfs file
 
     `initrd /boot/initramfs-2.6.32-504.16.2.el6.x86_64.img`
-- Kernel file 
+- Kernel file
 
     `/boot/vmlinuz-2.6.32-504.16.2.el6.x86_64`
 
@@ -263,4 +263,4 @@ You can follow these steps to rebuild the initramfs file:
 |`dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img 2.6.32-504.12.2.el6.x86_64`<br/>`ls -ltr /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img`| `-rw---. 1 root root 19354168 Date\Time /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img` |
 |`cp /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 /mnt/troubleshootingdisk/boot/`<br/>`ls -ltr /mnt/troubleshootingdisk/boot/vmlinuz*`|`-rwxr-xr-x. 1 root root 4128368 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4128688 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.3.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4129872 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.17.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4131984 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.29.2.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4153008 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.8.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4152720 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.12.2.el6.x86_64`|
 |`vi /mnt/troubleshootingdisk/boot/grub/grub.conf`|title CentOS (2.6.32-504.12.2.el6.x86_64)<br/>root (hd0,0)<br/>`kernel /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 ro root=UUID=UUID rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 crashkernel=auto KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM rhgb quiet numa=off console=ttyS0 earlyprintk=ttyS0`<br/>initrd /boot/initramfs-2.6.32-504.12.2.el6.x86_64.img|
-|||
+  

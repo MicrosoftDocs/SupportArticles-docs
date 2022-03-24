@@ -46,8 +46,7 @@ Table 1:
 |SQL Server 2008 express (core)|2.0 SP2|No|No|
 |SQL Server 2008 on Windows Server 2003, (64-bit), IA-64|2.0 SP2|Yes|Yes|
 |SQL Server 2008 (all other Editions)|3.5 SP1|Yes|Yes|
-|||||
-
+  
 For SQL Server 2008 and for SQL Server 2008 R2 Failover Cluster and Express Edition installations, the Setup program does not install the .NET Framework 3.5 Service Pack 1 on systems that run Windows Server 2008 R2 Edition. For more information about how to enable the .NET Framework 3.5 SP1 on these systems, see the [How to install or enable .NET Framework 3.5 SP1 on Windows](#how-to-install-or-enable-net-framework-35-sp1-on-windows) section.
 
 ## .NET Frameworks for SQL Server on Windows Server 2008 R2 and earlier operating systems
@@ -60,7 +59,6 @@ Table 2:
 |---|---|---|---|---|---|---|
 |2.0|2.0.50727.42|Windows Server 2003 R2|None|Microsoft Visual Studio 2005| |No|
 |3.5 SP1|3.5.30729.1|Windows Server 2008 R2|None|None| [3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22)|Yes, for Windows Server 2008 R2|
-||||||||
 
 ## How to install or enable .NET Framework 3.5 SP1 on Windows
 

@@ -19,8 +19,7 @@ The ship-to address information in Microsoft Dynamics GP is located in the Purch
 |Standard|Pickup|The address that is contained in the vendor **Purchase Address ID** field in the purchase order line|
 |Drop-ship|Delivery|The address that is contained in the customer **Ship To Address ID** field in the purchase order line|
 |Drop-ship|Pickup|The address that is contained in the vendor **Purchase Address ID** field in the purchase order line|
-||||
-
+  
 > [!NOTE]
 >
 > - In Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0, different line items can specify different shipping methods and ship-to addresses.

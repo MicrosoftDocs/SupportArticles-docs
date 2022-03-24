@@ -39,8 +39,7 @@ Multiple root causes exist, and they're listed in the following table:
 |7|Timing issue caused when you change DNS server IP unless KB2520155 is installed.|A DNS client's DNS Host record is deleted after you change the DNS server IP address on the same client. |
 |8|Record registration failures make records vulnerable to the scavenging process.|DNS dynamic update protocol updates for existing records fail. So the records timestamp doesn't update. It makes the record vulnerable to deletion by a correctly configured DNS Scavenging process.|
 |9|DNS records are deleted when a given Windows client dynamic lease is changed to a reservation.|DNS records that are currently registered by a DHCP-enabled Windows client are deleted by the DHCP server. The deletion occurs when the client's dynamic lease is transitioned to a reservation, and the following settings are enabled:<ul><li>"Always dynamically update DNS A and PTR records" </li><li>"Discard A and PTR records when lease is deleted"</li><li>"Dynamically update DNS A and PTR records for DHCP clients that don't request update"</li></ul>Affected DNS records include the host "A," host "AAAA," and PTR records.|
-||||
-
+  
 ## Resolution
 
 ### Cause 1: DNS scavenging is misconfigured

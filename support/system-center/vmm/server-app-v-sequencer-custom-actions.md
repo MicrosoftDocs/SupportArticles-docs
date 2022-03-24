@@ -18,4 +18,3 @@ _Original KB number:_ &nbsp; 2704939
 |Server App-V Sequencer|`MUOptinRequired`|`MUOptinRequired`|This is an immediate custom action to check if MU option is required.|
 |Server App-V Sequencer|`OptinToMU`|`OptinToMU`|This is a deferred custom action to perform MU option. This custom action does not run in Sequencer.|
 |Server App-V Sequencer|`SetSSRSRealTlsAllocCountProperty`|N/A|This sets an MSI property that includes the number of TLS slots to allocate in SQL Server Reporting Services (SSRS) injector subsystem.|
-|||||

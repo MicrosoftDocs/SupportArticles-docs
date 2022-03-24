@@ -75,7 +75,7 @@ az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disk
 ]
 ```
 
-For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
+For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az-vm-encryption-show).
 
 >[!NOTE]
 >**Offline repair for unencrypted disks**

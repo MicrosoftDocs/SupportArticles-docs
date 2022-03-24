@@ -32,7 +32,6 @@ _Original KB number:_ &nbsp; 3205778
     |Hex|Decimal|Symbolic|Friendly|
     |---|---|---|---|
     |0x80090345|-2146892987|SEC_E_DELEGATION_REQUIRED|The requested operation cannot be completed. The computer must be trusted for delegation and the current user account must be configured to allow delegation.|
-    |||||
 
 2. Saving an RDP password fails with no apparent error.
 3. Password changes take longer than expected to complete.
@@ -78,7 +77,6 @@ _Original KB number:_ &nbsp; 3205778
         |---|---|---|---|
         |ADLDS|RODC|KerberosV5|AS Request Cname: ADLDSSvc Realm: CONTOSO Sname: krbtgt/contoso {TCP:375, IPv4:7}|
         |RODC|ADLDS|KerberosV5|KerberosV5:KRB_ERROR - KDC_ERR_PREAUTH_FAILED (24) {TCP:376, IPv4:7}|
-        |||||
 
     3. Event ID 4625 is logged in the Security log of the ADLDS server, as follows:
 
@@ -100,7 +98,6 @@ _Original KB number:_ &nbsp; 3205778
         |---|---|---|---|
         | 0xc000006a|-1073741718|STATUS_WRONG_PASSWORD|When trying to update a password, this return status indicates that the value provided as the current password is not correct.|
         | 0xc000006d|-1073741715|STATUS_LOGON_FAILURE|The attempted logon is invalid. This is either due to a bad user name or authentication information.|
-        |||||
 
     - In all cases, the NETLOGON.LOG shows DsGetDcName request making calls for writable domain controllers:
 
@@ -114,7 +111,6 @@ _Original KB number:_ &nbsp; 3205778
         | Hex| Decimal| Symbolic| Friendly |
         |---|---|---|---|
         | 0x54b|1355|ERROR_NO_SUCH_DOMAIN|The specified domain either does not exist or could not be contacted.|
-        |||||
 
 ## Cause
 
@@ -155,7 +151,6 @@ The problem occurs only if there's no MasterKey present and when the user has no
     | **Value**|1|
     | **OS restart requested**|Yes|
     | **Notes**|OS|
-    |||
 
 > [!Warning]
 > Don't use this registry key if domain users log on to more than one computer! Because the keys are backed up locally, any non-local password change may trigger a situation in which all DPAPI master keys are wrapped using the old password, and then domain recovery is not possible. This registry key should be set only in an environment in which data loss is acceptable.
@@ -168,4 +163,4 @@ The problem occurs only if there's no MasterKey present and when the user has no
 |RODC Placement Considerations| [RODC Placement Considerations](https://technet.microsoft.com/library/cc732632%28v=ws.10%29.aspx) |
 |Linked KB that changes the behavior/starts this issue.| [November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 (KB3000850)](https://support.microsoft.com/help/3000850) |
 |Backup Key Remote Protocol doc|[Appendix B: Product Behavior](https://msdn.microsoft.com/library/cc224192.aspx) <br/> [Performing Client-Side Wrapping of Secrets](https://msdn.microsoft.com/library/cc448618.aspx) <br/><br/>A BackupKey Remote Protocol server does not actually perform remote backup of secrets. Instead, the server wraps each secret and returns it to the client. The client is responsible for storing the secret until it is needed again, at which point the client can request the server to unwrap the secret<br/><br/>See 3.1.4.1.3 BACKUPKEY_RETRIEVE_BACKUP_KEY_GUID|
-|||
+  

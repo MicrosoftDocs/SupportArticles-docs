@@ -48,7 +48,6 @@ See this ASKDS [blog post](https://aka.ms/LingeringObjectLiquidator) for detaile
 
     |:::image type="content" source="media/lingering-object-liquidator-tool/rpc-firewall-rule.png" alt-text="Screenshot of the Remote Event Log Management (RPC) Properties window with the firewall rule enabled.":::<br/>|:::image type="content" source="media/lingering-object-liquidator-tool/rpc-exception.png" alt-text="Screenshot of the Lingering Object Detection window showing the Exception: The RPC server is unavailable error.":::<br/>|
     |---|---|
-    |||
 
 - The liquidation of lingering objects in Active Directory Lightweight Directory Services (AD LDS / ADAM) environments isn't supported.  
 
@@ -65,7 +64,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
 1. In the Topology Detection section, select Fast.
 
-    Fast detection populates the Naming Context, Reference DC, and Target DC lists by querying the local DC. *Thorough* detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind  calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
+    Fast detection populates the Naming Context, Reference DC, and Target DC lists by querying the local DC. _Thorough_ detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind  calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
 
 2. The following are the fields on the Lingering Objects tab:
 
@@ -189,4 +188,3 @@ Access the [Troubleshooting Active Directory Lingering Objects](https://support.
 | Repldiag /removelingeringobjects|Per-partition removal<br/><br/>Leverages:<br/>- DRSReplicaVerifyObjects method|<br/>- Command line only<br/>- Automated method to remove lingering objects from all partitions<br/>- Built-in discovery through DRSReplicaVerifyObjects <br/>- Displays discovered objects in events on DCs<br/>- Doesn't remove lingering links. Doesn't remove lingering objects from RODCs (yet).|
 | LDAP RemoveLingeringObjects rootDSE primitive (most commonly executed using LDP.EXE or an LDIFDE import script)|Per-object removal|<br/>- Requires a separate discovery method<br/>- Removes a single object per execution unless scripted.|
 | Repadmin /removelingeringobjects|Per-partition removal<br/><br/>Leverages:<br/>- DRSReplicaVerifyObjects method|<br/>- Command line only<br/>- Built-in discovery through DRSReplicaVerifyObjects <br/>- Displays discovered objects in events on DCs<br/>- Requires many executions if a comprehensive (n * (n-1)) pairwise cleanup is required.<br/><br/>The repldiag tool and the Lingering Object Liquidator tool automate this task.<br/>|
-||||

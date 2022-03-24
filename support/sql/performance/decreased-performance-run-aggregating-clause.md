@@ -88,6 +88,5 @@ However, for a partitioned table, this is currently not the case, as the indexes
 |P1|1|1|
 |P1|2|1|
 |P1|3|15|
-||||
-
+  
 Because each index is partitioned, SQL Server cannot scan the index all at the same time to determine the maximum value. Instead, it scans each element of the table to determine the max value. In a table that has millions of rows, this process can be inefficient.

@@ -38,7 +38,6 @@ In this scenario, the following issues occur:
     |Decimal|Hex|Symbolic|Friendly|
     |---|---|---|---|
     |1314|0x522|ERROR_PRIVELEGE_NOT_HELD|A required privilege is not held by the client.|
-    |||||
 
 - Built-in and store applications can't start on Windows 8-based, Windows 8.1-based, or Windows 10-based computers.
 - Clicking the **Start** button does not open the **Start** menu on Windows 10-based computers.
