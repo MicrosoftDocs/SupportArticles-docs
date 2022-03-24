@@ -121,7 +121,7 @@ To apply the solution, SQLLocalDB service must be in a running state. Before you
     GO
    ```
 
-    The output should verify that the recovery_model_desc is `SIMPLE`:
+    The output should verify that the value of `recovery_model_desc` is `SIMPLE`:
 
     ```output
     recovery_model_desc
