@@ -30,16 +30,18 @@ Assume that you want to determine a user's effective access to a resource. You c
   - **AuthzAccessCheck**
   - **AuthzCachedAccessCheck**
 
-In either case, the results are inconsistent with the actual permissions to the resource. Specifically, some **Allow** permissions may be missing, or some **Deny** permissions may appear as **GrantedAccessMask** permissions. Additionally, if you are using the **Effective Access** tab, the tab may display errors or warnings:
+You may observe an issue when you use the **Effective Access** tab or when you use the API calls under either of the following conditions:
+
+- The application makes the calls remotely from the resource server.
+- The user account that is running the application isn't in the same domain as the resource.
+
+When the issue occurs, the effective access results are inconsistent with the actual permissions to the resource. Specifically, some **Allow** permissions may be missing, or some **Deny** permissions may appear as **GrantedAccessMask** permissions.
+
+Additionally, if you are using the **Effective Access** tab, the tab may display errors or warnings:
 
 ![Effective permissions error: You do not have permission to evaluate effective access rights for the remote resource](./media/access-checks-windows-apis-return-incorrect-results/error-insufficient-permissions.png)
 
 ![Effective permissions error: The share security information is unavailable and was not evaluated for effective access.](./media/access-checks-windows-apis-return-incorrect-results/error-information-unavailable.png)
-
-This problem occurs when one of the following conditions is met:
-
-- The application makes the calls remotely from the resource server.
-- The user account that is running the application isn't in the same domain as the resource.
 
 For a sample scenario, see [More information](#more-information).
 
@@ -51,6 +53,8 @@ AuthZ.dll uses a Kerberos Service for User (Kerberos S4U) transaction to obtain 
 
 - The resource is in a different domain than the administrative station or the administrative user.
 - The resource has permissions that are assigned to built-in groups. Built-in groups may be misused.
+
+Additionally, Windows Server 2012 R2 introduced changes to the way in which Windows evaluates effective permissions, especially for remote resources. For information about how to compensate for these changes, see [Remote resources including SMB](#remote-resources-including-smb).
 
 ## Resolution
 
@@ -73,10 +77,10 @@ Use one of the following methods to resolve this issue.
      > [!NOTE]  
      > When the value is **0** (the default value), Authz uses the Kerberos method. When the value is set to **1**, AuthZ uses AD LDAP and standalone server SAM queries.
   1. Close Registry Editor.
-     > [!NOTE]  
-     >- **UseGroupRecursion** won't be effective if you create the Authz context by using the **AUTHZ_REQUIRE_S4U_LOGON** flag.
-     >- The application user has to have **Read** permissions for the **TokenGroups** attribute and for the domain-local groups of the resource domain.
-     >- The application has to be able to use SAM RPC protocol when it calls the APIs. This is because server-local groups are retrieved by using SAM APIs. You can set an access control list (ACL) on the SAM RPC interface by using the **RestrictRemoteSAM** security policy.
+
+> [!NOTE]  
+>- **UseGroupRecursion** won't be effective if you create the Authz context by using the >- The application user has to have **Read** permissions for the **TokenGroups** attribute and for the domain-local groups of the resource domain.
+>- The application has to be able to use SAM RPC protocol when it calls the APIs. This is because server-local groups are retrieved by using SAM APIs. You can set an access control list (ACL) on the SAM RPC interface by using the **RestrictRemoteSAM** security policy.
 
 ## More information
 
@@ -108,7 +112,7 @@ When you evaluate effective access to resources, consider the following factors:
   The user may also require administrative access to the SMB share security descriptors. Many in-market operating system versions do not grant such access by default. To receive an update that provides this capability, contact Microsoft Support. The solution for in-market operating system versions is not publicly available.
 
 - **How the server is accessed (if the resource uses share-level access control)**  
-  To evaluate the effective permissions for a resource on a remote server that uses share-level access control, you have to access use a UNC share path to access the resource. Do not try to use a mapped drive letter to access the resource. This consideration does not apply if you exclusively use file system-based access control. For example, use a path that resembles the following:
+  To evaluate the effective permissions for a resource on a remote server that uses share-level access control, you have to use a UNC share path to access the resource. Do not try to use a mapped drive letter to access the resource. For example, use a path that resembles the following:
 
   ```console
   \\fileserver01.contoso.com\finance-data\year2022\quarter2\
@@ -121,3 +125,5 @@ When you evaluate effective access to resources, consider the following factors:
   ```
 
   (in this example, `f:` maps to `\\fileserver01.contoso.com\finance-data`).
+
+If you aren't using share permissions to restrict users, you can ignore the share permissions warning.
