@@ -31,4 +31,3 @@ The following table lists the Visual Studio 2012 updates that are released.
 | [2835600](https://support.microsoft.com/help/2835600)|June 26, 2013|Visual Studio 2012 Update 3 is available|
 | [2797912](https://support.microsoft.com/help/2797912)|April 4, 2013|Visual Studio 2012 Update 2 is available|
 | [2797915](https://support.microsoft.com/help/2797915)|November 26, 2012|Visual Studio 2012 Update 1 is available|
-||||

@@ -22,8 +22,7 @@ PerfView is a performance analysis tool. It focuses on Event Tracing for Windows
 |Event Tracing for Windows (ETL file extension) along with symbol info.|{ApplicationName}{TimeStamp}{Mode}.etl|
 |Available symbols for the application and dependent modules|*.pdb|
 |PerfView Activity log|PerfViewLogFile.txt|
-|||
-
+  
 ## Other situations that PerfView can detect
 
 In additional to the files collected and listed above, this troubleshooter can detect one or more of the following situations:

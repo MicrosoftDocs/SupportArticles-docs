@@ -36,8 +36,7 @@ To fix the issue, install the latest Cumulative Update for your SQL Server versi
 |SQL Server 2014 Service Pack 1| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=51186)|
 |SQL Server 2014 Service Pack 2| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53592)|
 |SQL Server 2016 RTM| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53338) or [Install SQL Server 2016 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)|
-|||
-
+  
 ## More information
 
 For more information about the fixes for this issue, see the following articles:

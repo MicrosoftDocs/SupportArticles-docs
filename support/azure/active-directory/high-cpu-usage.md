@@ -33,8 +33,7 @@ The following .NET Framework update would cause the high CPU issue by the monito
 | KB4054542| Windows Server 2012 |
 | KB4054566| Windows Server 2012 R2 |
 | KB4054590 KB4338814 KB4338419 KB4338605 KB4345418| General |
-|||
-
+  
 ## Resolution
 
 ### For Connect Health for AD DS and AD FS

@@ -60,8 +60,7 @@ The IPv6 functionality can be configured by modifying the following registry key
 |Re-enable IPv6 on all nontunnel interfaces|Binary xxx0 xxxx|
 |Re-enable IPv6 on all tunnel interfaces|Binary xxx xxx0|
 |Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces|Binary xxx0 xxx0|
-|||
-
+  
 > [!NOTE]
 >
 > - Administrators must create an .admx file to expose the registry settings of below table in a Group Policy setting.
@@ -98,8 +97,7 @@ To learn which component each bit (from low to high) controls, refer to the foll
 |PreferIpv4|Prefer IPv4 in default prefix policy|
 |TunnelCp|Disable CP interfaces|
 |TunnelIpTls|Disable IP-TLS interfaces|
-|||
-
+  
 For each bit, **0** means false and **1** means true. Refer to the following table for an example.
 
 |Setting|Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
@@ -114,7 +112,6 @@ For each bit, **0** means false and **1** means true. Refer to the following tab
 |Disable IP-TLS interfaces|0|0|0|0|
 |Binary|0010 0000|0001 0000|0000 0001|0001 0001|
 |Hexadecimal|0x20|0x10|0x01|0x11|
-||||||
 
 ### Using the network properties GUI to disable IPv6 is not supported
 

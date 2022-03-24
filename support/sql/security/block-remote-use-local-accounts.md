@@ -43,9 +43,8 @@ Although we could keep the guidance unchanged and add a "special case" footnote 
 | **Policy Name**| Deny access to this computer from the network |
 | **Original Value**| Guests, Local account* |
 | **New Value**| Guests, Local account, and members of Administrators group* |
-|||
-
-* This guidance also recommends that you add Domain Administrators (DA) and Enterprise Administrators (EA) to these restrictions. The exception is on domain controllers and dedicated administration workstations. DA and EA are domain-specific and can't be specified in generic Group Policy Object (GPO) baselines.
+  
+- This guidance also recommends that you add Domain Administrators (DA) and Enterprise Administrators (EA) to these restrictions. The exception is on domain controllers and dedicated administration workstations. DA and EA are domain-specific and can't be specified in generic Group Policy Object (GPO) baselines.
 
 > [!NOTE]
 >

@@ -68,7 +68,6 @@ Stored procedure recompilation is one explanation for compile locks on a stored 
     |sql_batch_starting|mystoredproc|
     |sp_cache_hit|mystoredproc|
     |...|...|
-    |||
 
    `sp_cache_miss` occurs when the cache lookup by name fails, but then a matching cached plan was ultimately found in cache after the ambiguous object name was resolved to an object ID and there is a `sp_cache_hit` event.
 

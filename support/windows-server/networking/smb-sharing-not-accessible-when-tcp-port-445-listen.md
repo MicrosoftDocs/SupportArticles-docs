@@ -29,8 +29,7 @@ You can't access a Server Message Block (SMB) shared resource even when the shar
 |Client|SERVER|TCP|TCP:Flags=......S., SrcPort=62535, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4085616235, Ack=0, Win=8192 (Negotiating scale factor 0x8) = 8192|
 |Client|SERVER|TCP|TCP:[**SynReTransmit** #600]Flags=......S., SrcPort=62535, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4085616235, Ack=0, Win=8192 (Negotiating scale factor 0x8) = 8192|
 |Client|SERVER|TCP|TCP:[**SynReTransmit** #600]Flags=......S., SrcPort=62535, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4085616235, Ack=0, Win=8192 (Negotiating scale factor 0x8) = 8192|
-|||||
-
+  
 After you enable the [auditing](/windows/desktop/FWP/auditing-and-logging) of Filtering Platform Policy Change events by using the following command, you may experience some events (such as event ID 5152) that indicate blocking.
 
 ```console
@@ -42,11 +41,10 @@ auditpol /set /subcategory:"Filtering Platform Packet Drop" /success:enable /fai
 |Event log|Event source|Event ID|Message text|
 |---|---|---|---|
 |Security|Microsoft-Windows-Security-Auditing|5152|Description:<br/>The Windows Filtering Platform has blocked a packet.<br/><br/>Application Information:<br/>Process ID: 0<br/>Application Name: -<br/>Network Information:<br/>Direction: Inbound<br/>Source Address: 192.168.88.50<br/>Source Port: 52017<br/>Destination Address: 192.168.88.53<br/>Destination Port: 445<br/>Protocol: 6Filter Information:<br/>Filter Run-Time ID: 67017<br/>Layer Name: Transport<br/>Layer Run-Time ID: 12|
-|||||
-
+  
 ## Cause
 
-This issue occurs because the Adylkuzz malware that leverages the same SMBv1 vulnerability as Wannacrypt adds an IPSec policy that's named *NETBC* that blocks incoming traffic on the SMB server that's using TCP port 445. Some Adylkuzz-cleanup tools can remove the malware but fail to delete the IPSec policy. For details, see [Win32/Adylkuzz.B](https://www.microsoft.com/en-US/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Adylkuzz.B).
+This issue occurs because the Adylkuzz malware that leverages the same SMBv1 vulnerability as Wannacrypt adds an IPSec policy that's named _NETBC_ that blocks incoming traffic on the SMB server that's using TCP port 445. Some Adylkuzz-cleanup tools can remove the malware but fail to delete the IPSec policy. For details, see [Win32/Adylkuzz.B](https://www.microsoft.com/en-US/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Adylkuzz.B).
 
 ## Resolution
 

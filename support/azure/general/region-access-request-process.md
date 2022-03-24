@@ -59,7 +59,6 @@ The process to request access is relatively straight forward, you can initiate t
     | Planned Storage usage in TB| 10 |
     | Planned SQL Database SKU| For example, S0 |
     | Planned No. of Databases per DB SKU (20 DB limit per SKU)| |
-    |||  
 
     You can also include the following additional resource needs in your support request, or submit via a separate support request at another time:
 
@@ -74,7 +73,6 @@ The process to request access is relatively straight forward, you can initiate t
     | Region: Name of the region| \<insert the Azure region you are requesting access to\> |
     | VM Series: (Example Dv2)| |
     | Planned usage in Cores| |
-    |||
 
     > [!NOTE]
     > Once access is confirmed for Reserved Instances, you can make the Reserved Instance purchase.
@@ -87,7 +85,6 @@ The process to request access is relatively straight forward, you can initiate t
     |---|---|
     | Subscription GUID| Only needed if submitting as a standalone request |
     | Region| \<insert the Azure region you are requesting access to> |
-    ||
 
 5. Select **Next**.
 

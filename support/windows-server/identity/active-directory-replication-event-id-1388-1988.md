@@ -126,7 +126,6 @@ Requirements:
     |---|---|
     |`/showrepl`|Displays the replication status, including when the domain controller that is specified by \<ServerName> last attempted inbound replication of Active Directory partitions. Also displays the GUID of the specified domain controller.|
     |\<ServerName>|The name of the domain controller whose GUID you want to display.|
-    |||
 
 2. In the first section of the output, locate the **objectGuid** entry. Select and copy the GUID value into a text file so that you can use it elsewhere.
 
@@ -157,7 +156,6 @@ Requirements:
     |\<ServerGUID>|The GUID of a domain controller that has an up-to-date, writable replica of the directory partition that contains the lingering object.|
     |\<DirectoryPartition>|The distinguished name of the directory partition that is identified in the event message, for example:<ul><li>For the Sales domain directory partition in the `contoso.com` forest: DC=sales,DC=contoso,DC=com</li> <li>For the configuration directory partition in the `contoso.com` forest: CN=configuration,DC=contoso,DC=com</li> <li> For the schema directory partition in the `contoso.com` forest: CN=schema,CN=configuration,DC=contoso,DC=com</li> </ul>|
     |`/advisory_mode`|Logs the lingering objects that will be removed so that you can review them, but does not remove them.|
-    |||
 
 3. Repeat step 2 without `/advisory_mode` to delete the identified lingering objects from the directory partition.
 
@@ -193,7 +191,6 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
     |`/regkey`|Enables (+) and disables (-) the value for the **Strict Replication Consistency** registry entry in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.|
     |\<DC_LIST>|The name of a single domain controller, or * to apply the change to all domain controllers in the forest. For the domain controller name, you can use the DNS name, the distinguished name of the domain controller computer object, or the distinguished name of the domain controller server object, for example, the distinguished name CN=DC5,OU=Domain Controllers,DC=contoso,DC=com or the DNS name `DC5.contoso.com`.|
     |`+strict`|Enables the **Strict Replication Consistency** registry entry.|
-    |||
 
 3. If you do not use * to apply the change to all domain controllers, repeat step 2 for every domain controller on which you want to enable strict replication consistency.
 
@@ -220,7 +217,7 @@ Requirements:
 
 ##### Steps to use Regedit to enable strict replication consistency
 
-1. Open Regedit as an administrator: Click **Start** and then, in **Start Search**, type *regedit*. At the top of the **Start** menu, right-click **regedit.exe**, and then click **Run as administrator**. In the **User Account Control** dialog box, provide Domain Admins credentials, and then click **OK**.
+1. Open Regedit as an administrator: Click **Start** and then, in **Start Search**, type _regedit_. At the top of the **Start** menu, right-click **regedit.exe**, and then click **Run as administrator**. In the **User Account Control** dialog box, provide Domain Admins credentials, and then click **OK**.
 
 2. Navigate to the **Strict Replication Consistency** entry in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.
 3. Set the value in the **Strict Replication Consistency** entry to 1.
@@ -264,6 +261,5 @@ Membership in **Enterprise Admins**, or equivalent, is the minimum required to c
     |`-i`|Specifies the import mode. If the import mode is not specified, the default mode is export.|
     |`-f`|Identifies the import or export file name.|
     |\<Path>\\\<FileName>|The path and name of the import file that you created in step 1, for example, C:\\ldifde.txt.|
-    |||
 
     For information about using Ldifde, see [LDIFDE](/previous-versions/orphan-topics/ws.10/cc755456(v=ws.10)).

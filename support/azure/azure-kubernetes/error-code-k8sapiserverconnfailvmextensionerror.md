@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the K8SAPIServerConnFailVMExtensionError error code
 description: Learn how to troubleshoot the K8SAPIServerConnFailVMExtensionError error (51) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/10/2022
+ms.date: 3/22/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -10,16 +10,16 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerConnFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)
-
-This article describes how to identify and resolve the `K8SAPIServerConnFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51), which might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+ 
+This article discusses how to identify and resolve the `K8SAPIServerConnFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
-- The [Netcat](https://linuxcommandlibrary.com/man/netcat) (nc) command-line tool.
+- The [Netcat](https://linuxcommandlibrary.com/man/netcat) (nc) command-line tool
 
 ## Symptoms
 
-When you try to create the cluster, you receive the following error message:
+When you try to create an AKS cluster, you receive the following error message:
 
 > Unable to establish connection from agents to Kubernetes API server, please see <https://aka.ms/aks-required-ports-and-addresses> for more information.
 >
@@ -39,7 +39,7 @@ Your cluster nodes can't connect to your cluster API server pod.
 
 ## Solution
 
-Enter a Netcat command to verify that your nodes can resolve the cluster's fully qualified domain name (FQDN):
+Run a Netcat command to verify that your nodes can resolve the cluster's fully qualified domain name (FQDN):
 
 ```shell
 nc -vz <cluster-fqdn> 443
