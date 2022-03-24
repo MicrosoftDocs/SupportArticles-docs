@@ -235,7 +235,7 @@
       href: ./Teams-devices-and-rooms/collect-device-logs.md
     - name: Issues when using SIP devices
       href: ./Teams-devices-and-rooms/sip-gateway-issues.md
-    - name: Known issues in Rooms
+    - name: Known issues
       href: ./Teams-devices-and-rooms/rooms-known-issues.md
   - name: Teams on Linux
     items: 
