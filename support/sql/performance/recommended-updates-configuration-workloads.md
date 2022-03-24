@@ -60,7 +60,6 @@ Review the following table, and enable the trace flags in the **Trace flag** col
 |Frequent short transactions happen in tempdbYou notice increased CPU usage for these transactions Common Criteria Compliance is not enabled| T3427| SQL Server 2016 SP1 CU2 to SQL Server 2016 SP2 CU2| SQL Server 2017 RTM| [KB3216543 - FIX: Workloads that utilize many frequent, short transactions in SQL Server 2016 and 2017 may consume more CPU than in SQL Server 2014](https://support.microsoft.com/help/3216543) |
 |You are troubleshooting specific query performance issues Optimizer fixes are disabled by default <br/>| T4199| SQL Server 2016 RTM to current SP/CU SQL Server 2017 RTM to current SP/CU| None| [KB974006 - SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/kb/974006) <br/> **Note** Instead of the server level trace flag 4199, consider using database scoped option [QUERY_OPTIMIZER_HOTFIXES](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql) or query hint [ENABLE_QUERY_OPTIMIZER_HOTFIXES](/sql/t-sql/queries/hints-transact-sql-query). |
 |Statistics jobs take a long time to complete Cannot run multiple statistics update jobs in parallel| T7471| SQL Server 2016 RTM CU1 to current SP/CU SQL Server 2017 RTM to current SP/CU| None| [KB3156157 - Running multiple UPDATE STATISTICS for different statistics on a single table concurrently is available](https://support.microsoft.com/kb/3156157) <br/> [Boosting Update Statistics performance with SQL 2014 & SQL 2016](/archive/blogs/sql_server_team/boosting-update-statistics-performance-with-sql-2014-sp1cu6) |
-||||||  
 
 ## Table 2. General considerations and best practices for improving the performance of your SQL Server instance
 
@@ -91,9 +90,8 @@ Review the content in the **Knowledge Base article or Books Online Resource** co
 | [SQL Server 2016/2017: Availability group secondary replica redo model and performance](/archive/blogs/sql_server_team/sql-server-20162017-availability-group-secondary-replica-redo-model-and-performance)| If you experience too many waits (`PARALLEL_REDO_TRAN_TURN`, `DPT_ENTRY_LOCK` or `DIRTY_PAGE_TABLE_LOCK`), review this blog to take corrective actions (apply applicable fix, evaluate appropriate use of redo model) |
 | [KB2634571 - Improvements for the DBCC CHECKDB command may result in faster performance when you use the PHYSICAL_ONLY option](https://support.microsoft.com/help/2634571) Improvements for the DBCC CHECKDB command may increase performance when you use the PHYSICAL_ONLY optionT2566 details in [DBCC TRACEON - Trace Flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) [A faster CHECKDB - Part IV (SQL CLR UDTs)](/archive/blogs/psssql/a-faster-checkdb-part-iv-sql-clr-udts)|If you run DBCC CHECK commands on large databases (multiple TB sizes), consider using trace flags T2562, T2549, and T2566. Several checks are now located under the [EXTENDED_LOGICAL_CHECK](/archive/blogs/psssql/sql-2016-it-just-runs-faster-dbcc-extended-checks) option in SQL Server 2016. |
 | [Protect SQL Server from attacks on Spectre and Meltdown side-channel vulnerabilities](https://support.microsoft.com/help/4073225/)| Carefully evaluate the performance of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI), and Indirect Branch Prediction mitigation (IBP) on various SQL Server workloads in your environment. |
-|||  
 
-## Table 3. Important changes that are introduced in SQL Server 2017 and SQL Server 2016 
+## Table 3. Important changes that are introduced in SQL Server 2017 and SQL Server 2016
 
 SQL Server 2017 and SQL Server 2016 contains several improvements in the areas of scalability and performance. Various configuration changes and trace flags that are required in SQL Server 2014 and SQL Server 2012 became the default behavior in SQL Server 2017 and 2016.
 This table provides an overview of all changes that are implemented in SQL Server 2017 and SQL Server 2016.
@@ -132,7 +130,6 @@ This table provides an overview of all changes that are implemented in SQL Serve
 |Spatial|The native and TVP spatial improvements enable SQL Server to optimize index creation and tessellation of spatial data.| [SQL 2016 - It Just Runs Faster: Spatial Index Builds Faster](/archive/blogs/psssql/sql-2016-it-just-runs-faster-spatial-index-builds-faster) |
 |MSDTC|SQL Server 2016 dynamically starts MSDTC as needed allowing resources to be used for other activities until required.| [SQL 2016 - Leverages On Demand MSDTC Startup](/archive/blogs/psssql/sql-2016-leverages-on-demand-msdtc-startup) |
 |XEvent|Various changes are made to the XEvent Linq provider logic to reduce context switching, memory allocations, and other aspects for faster rendering of events.| [SQL 2016 - It Just Runs Faster: XEvent Linq Reader](/archive/blogs/psssql/sql-2016-it-just-runs-faster-xevent-linq-reader) |
-||||  
 
 ## Table 4. Important fixes that are included in a CU
 
@@ -178,7 +175,6 @@ Review the description in the **Symptoms** column and apply the required updates
 | SQL Server 2017| **Query Store**|Access violation occurs when Query Store collects runtime statistics| [Access violation when Query Store collects runtime statistics in SQL Server 2017](https://support.microsoft.com/help/4091063) <br/> Cumulative Update 5 for SQL Server 2017|
 | SQL Server 2016| **Query Store**|Query Store automatic data cleanup fails on editions other than Enterprise and Developer edition| [Query Store automatic data cleanup fails on editions other than Enterprise and Developer edition of SQL Server 2016](https://support.microsoft.com/help/3178297) <br/> Cumulative Update 1 for SQL Server 2016|
 |SQL Server 2016| **Query Store**|Slow performance of SQL Server when Query Store is enabled| [KB4340759 - FIX: Slow performance of SQL Server 2016 when Query Store is enabled](https://support.microsoft.com/help/4340759) <br/> Cumulative Update 2 for SQL Server 2016 SP2|
-|||||  
 
 ## Table 5: Recommended improvements, fixes, and configuration guidelines for SQL Server in a Linux environment
 
@@ -217,4 +213,4 @@ These recommendations do not require you to enable additional trace flags as sta
 | **AG** FIX: Pacemaker promotion of local replica to primary fails when using AlwaysOn AG| [KB4230542 - FIX: Pacemaker promotion of local replica to primary fails when using AlwaysOn AG in SQL Server 2017](https://support.microsoft.com/help/4230542) <br/> Cumulative Update 7 for SQL Server 2017|
 | **AG** FIX: Startup of a database that belongs to an availability group times out| [KB4316790 - FIX: Startup of a database that belongs to an availability group times out in SQL Server on Linux](https://support.microsoft.com/help/4316790) <br/> Cumulative Update 8 for SQL Server 2017|
 | **AG** FIX: Unnecessary failovers occur when a SQL Server Failover Cluster Instance or Always On AG is managed by Pacemaker| [KB4316793 - FIX: Unnecessary failovers occur when a SQL Server 2017 Failover Cluster Instance or Always On AG is managed by Pacemaker](https://support.microsoft.com/help/4316793) <br/> Cumulative Update 8 for SQL Server 2017|
-|||
+  

@@ -20,7 +20,7 @@ You have IIS 7.0 or a later version of IIS configured to use integrated pipeline
 
 ## Situations where this issue occurs
 
-When a client requests a specific URL (webpage), IIS may sometimes re-request the same URL or another URL on the server side. The client's original request is called the *parent request*, and the request that IIS executes is called the *child request*.
+When a client requests a specific URL (webpage), IIS may sometimes re-request the same URL or another URL on the server side. The client's original request is called the _parent request_, and the request that IIS executes is called the _child request_.
 
 For example, both of the following may execute a child request:
 
@@ -38,16 +38,14 @@ The following log entry shows client requests to /parent.aspx:
 |Event|Information|
 |---|---|
 |GENERAL_REQUEST_START|SiteId="1", AppPoolId="DefaultAppPool", ConnId="610612739", RawConnId="0", RequestURL="http://localhost:80/parent.aspx", RequestVerb="GET"|
-|||
-
+  
 The following log entry shows that a `BEGIN_REQUEST` notification in global.asax is triggered by a request to /parent.aspx. This is the first `BEGIN_REQUEST` notification:
 
 |Event|Information|
 |---|---|
 |NOTIFY_MODULE_START|ModuleName="global.asax", Notification="BEGIN_REQUEST", fIsPostNotification="false"|
 |AspNetStart|Data1="GET", Data2="/parent.aspx", Data3=""|
-|||
-
+  
 The following log entry shows that the native HTTP module (myhttpmodule.dll) runs and that it executes the child request, child.aspx:
 
 |Event|Information|
@@ -55,16 +53,14 @@ The following log entry shows that the native HTTP module (myhttpmodule.dll) run
 |NOTIFY_MODULE_START|ModuleName="myhttpmodule", Notification="MAP_PATH", fIsPostNotification="false"|
 |GENERAL_CHILD_REQUEST_START|SiteId="1", RequestURL="http://localhost:80/child.aspx", RequestVerb="GET", RecursiveLevel="1"|
 |GENERAL_REQUEST_START|SiteId="1", AppPoolId="DefaultAppPool", ConnId="1610612739", RawConnId="0", RequestURL="http://localhost:80/child.aspx", RequestVerb="GET"|
-|||
-
+  
 The following log entry shows that `BEGIN_REQUEST` notification in global.asax is triggered by a request to /child.aspx. This is the second `BEGIN_REQUEST` notification:
 
 |Event|Information|
 |---|---|
 |NOTIFY_MODULE_START|ModuleName="global.asax", Notification="BEGIN_REQUEST", fIsPostNotification="false"|
 |AspNetStart|Data1="GET", Data2="/child.aspx", Data3=""|
-|||
-
+  
 The following log entry shows that the `END_REQUEST` notification in global.asax is triggered by a request to /child.aspx. This is the first END_REQUEST notification:
 
 |Event|Information|
@@ -72,8 +68,7 @@ The following log entry shows that the `END_REQUEST` notification in global.asax
 |NOTIFY_MODULE_START|ModuleName="global.asax", Notification="END_REQUEST", fIsPostNotification="false"|
 |AspNetPipelineEnter|Data1="ASP.global_asax"|
 |AspNetPipelineLeave|Data1="ASP.global_asax"|
-|||
-
+  
 The following log entry shows that the child request finishes:
 
 |Event|Information|
@@ -82,8 +77,7 @@ The following log entry shows that the child request finishes:
 |GENERAL_CHILD_REQUEST_END|BytesSent="332", HttpStatus="200", HttpSubStatus="0"|
 |NOTIFY_MODULE_COMPLETION|ModuleName="myhttpmodule", Notification="MAP_PATH", fIsPostNotificationEvent="false", CompletionBytes="0", ErrorCode="The operation completed successfully. (0x0)"|
 |AspNetEnd||
-|||
-
+  
 The following log entry shows that `END_REQUEST` notification in global.asax is triggered by a request to /parent.aspx. This is the second `END_REQUEST` notification:
 
 |Event|Information|
@@ -91,15 +85,13 @@ The following log entry shows that `END_REQUEST` notification in global.asax is 
 |NOTIFY_MODULE_START|ModuleName="global.asax", Notification="END_REQUEST", fIsPostNotification="false"|
 |AspNetPipelineEnter|Data1="ASP.global_asax"|
 |AspNetPipelineLeave|Data1="ASP.global_asax"|
-|||
-
+  
 The following log entry shows that the parent request finishes:
 
 |Event|Information|
 |---|---|
 |GENERAL_REQUEST_END|BytesSent="332", BytesReceived="266", HttpStatus="200", HttpSubStatus="0"|
-|||
-
+  
 ## References
 
 For more information about how to call the `ExecuteRequest` method to execute the child request, see [IHttpContext::ExecuteRequest Method](/iis/web-development-reference/native-code-api-reference/ihttpcontext-executerequest-method).

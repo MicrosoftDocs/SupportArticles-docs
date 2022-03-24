@@ -74,12 +74,10 @@ To work around the issue, use one of the following methods as required:
         |Name|Updated|
         |-|-|
         |`<StatisticsName>`|\<DateTime>|
-        |||
 
         |All density|Average Length|Columns|
         |-|-|-|
         |0.5|4|`<ColumnName>`|
-        |||
 
     1. To drop the query-generated statistics in the table `<TableName>` on the primary replica, run the following command:
 

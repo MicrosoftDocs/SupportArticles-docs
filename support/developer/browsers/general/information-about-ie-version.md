@@ -32,8 +32,7 @@ This table shows possible Internet Explorer version numbers.
 |11.*****.17134.0|Internet Explorer 11 on Windows 10 version 1803|
 |11.*****.17763.0|Internet Explorer 11 on Windows 10 version 1809 and Windows Server 2019|
 |11.*****.18362.0|Internet Explorer 11 on Windows 10 version 1903 and Windows 10 version 1909|
-|||
-
+  
 Internet Explorer 11 will have a version number that starts with 11.0.9600.***** on:
 
 - Windows 7

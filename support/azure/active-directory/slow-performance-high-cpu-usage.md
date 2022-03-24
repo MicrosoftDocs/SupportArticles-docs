@@ -21,8 +21,8 @@ To see the high CPU usage, start Task Manager, and view the CPU usage of the **M
 
 ## Cause
 
-This issue occurs because the Azure AD Connect Health for Sync monitoring agent does not fully support .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2. 
- The following updates may cause high CPU usage of the monitoring agent. 
+This issue occurs because the Azure AD Connect Health for Sync monitoring agent does not fully support .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2.
+ The following updates may cause high CPU usage of the monitoring agent.
 
 | **.NET Framework** **update**| **Server version**| **Type of update** |
 |---|---|---|
@@ -38,8 +38,7 @@ This issue occurs because the Azure AD Connect Health for Sync monitoring agent 
 | [KB 4054590](https://support.microsoft.com/help/4054590)| Windows Server 2016| Nonsecurity |
 | [KB 4338814](https://support.microsoft.com/help/4338814)| Windows Server 2016 (build 14393.2363)| Nonsecurity |
 | [KB 4345418](https://support.microsoft.com/help/4345418)| Windows Server 2016 (build 14393.2368)| Nonsecurity |
-||||
-
+  
 ## Resolution
 
 To resolve this issue, install the update that is appropriate for your environment.

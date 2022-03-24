@@ -27,8 +27,7 @@ When you do an in-place upgrade on the following operating systems upgrade paths
 |---|---|
 |Windows Server 2012 or Windows Server 2012 R2|Windows Server 2016|
 |Windows 7, Windows 8, or Windows 8.1|Windows 10 Version 1607|
-|||
-
+  
 ### Affected roles
 
 After the in-place upgrade is completed, the following roles may be affected.

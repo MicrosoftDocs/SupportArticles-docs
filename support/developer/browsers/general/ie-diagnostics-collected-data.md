@@ -38,16 +38,14 @@ _Original KB number:_ &nbsp; 2547213
 |---|---|
 |Elevated User:|{Computername}_EnvironmentVariables_MSDT.txt|
 |Target User:|{Computername}_EnvironmentVariables_{Username}.txt|
-|||
-
+  
 ### Event Logs
 
 |Name|Value|
 |---|---|
 |Filtered Event Logs (.csv):|{Computername}_ApplicationLog.csv|
 |Filtered Event Logs (.csv):|{Computername}_SystemLog.csv|
-|||
-
+  
 ### Group Policy and IEAK
 
 |Name|Value|
@@ -68,15 +66,13 @@ _Original KB number:_ &nbsp; 2547213
 |GP User (.htm):|{Computername}_GPResult_User_{Username}.htm|
 |GP Computer (.txt):|{Computername}_GPResult_Computer.txt|
 |GP Computer (.htm):|{Computername}_GPResult_Computer.htm|
-|||
-
+  
 ### Internet Explorer Setup Log
 
 |Name|Value|
 |---|---|
 | Internet Explorer Setup Log (.log):| {Computername}_IE9_main.log|
-|||
-
+  
 ### Installed updates/hotfixes
 
 |Name|Value|
@@ -84,8 +80,7 @@ _Original KB number:_ &nbsp; 2547213
 |Update/Hotfix history:|{Computername}_Hotfixes.CSV|
 |Update/Hotfix history:|{Computername}_Hotfixes.htm|
 |Update/Hotfix history:|{Computername}_Hotfixes.TXT|
-|||
-
+  
 ### Internet Explorer Core
 
 |Name|Value|
@@ -99,15 +94,13 @@ _Original KB number:_ &nbsp; 2547213
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_FeatureControl.TXT|
 |HKLM:|{Computername}_reg_HKLM_InternetSettings.TXT|
 |HKLM:|{Computername}_reg_HKLM_FeatureControl.TXT|
-|||
-
+  
 ### Internet Explorer File Versions
 
 |Name|Value|
 |---|---|
 |Version Info:|{Computername}_IE_File_Version_Info.txt|
-|||
-
+  
 ### Internet Explorer Zones
 
 |Name|Value|
@@ -155,8 +148,7 @@ _Original KB number:_ &nbsp; 2547213
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_MedHigh.TXT|
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_Medium.TXT|
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_MedLow.TXT|
-|||
-
+  
 ### Networking Information
 
 |Name|Value|
@@ -164,8 +156,7 @@ _Original KB number:_ &nbsp; 2547213
 |Host File:|{Computername}_hosts|
 |TCP/IP Basic Information:|{Computername}_TcpIp-Info.txt|
 |SMB Basic Information:|{Computername}_SMB-Info.txt|
-|||
-
+  
 ### Operating System Registry
 
 |Name|Value|
@@ -191,8 +182,7 @@ _Original KB number:_ &nbsp; 2547213
 |HKLM:|{Computername}_reg_HKLM_SSL_Ciphers.TXT|
 |HKLM:|{Computername}_reg_HKLM_Code_Store_Database.TXT|
 |HKLM:|{Computername}_reg_HKLM_Ext_PreApproved.TXT|
-|||
-
+  
 ### REG Export
 
 |Name|Value|
@@ -208,25 +198,22 @@ _Original KB number:_ &nbsp; 2547213
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Internet_Settings.REG.txt|
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Policies.REG.txt|
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Classes.REG.txt|
-|||
-
+  
 ### Registry - IEAK
 
 |Name|Value|
 |---|---|
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_IEAK.TXT|
-|||
-
+  
 ### Windows Setup API Logs
 
 |Name|Value|
 |---|---|
 |Windows Setup API Log:|{Computername}_SetupAPI.app.Log|
-|||
-
+  
 ### Windows update log
 
 |Name|Value|
 |---|---|
 |Windows Update Log File:|{Computername}_WindowsUpdate.log|
-|||
+  

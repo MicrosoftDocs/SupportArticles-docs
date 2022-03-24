@@ -38,7 +38,6 @@ The Budget Detail Entry window opens. In the Budget Detail Entry window, the fol
 | **Forecast**| **begin date**| **end date** |
 | **Actual**| **begin date**| **end date** |
 
-
 Project Accounting uses the forecasted begin date and the forecasted end date to determine the begin date and the end date for the project.
 
 ## The Fee Schedule window

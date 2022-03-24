@@ -46,8 +46,7 @@ The IIS SSL Diagnostic tool for Support Diagnostic Platform (SDP) is designed to
 |--|--|
 |This file will contain the output of running the certutil -verify store command on the thumbprint of certificate assigned to each binding on the web site|{Computername}_CERTUTIL_VERFIYSTORE_CERT(n).TXT|
 |This file contains dumps the CRL URL cache of the OS (obtained by running the command certutil -url cache CRL)|{Computername}_CERTUTIL_CRL_CACHE.TXT|
-|||
-
+  
 ## Event log files
 
 |Description| File Name|
@@ -55,22 +54,19 @@ The IIS SSL Diagnostic tool for Support Diagnostic Platform (SDP) is designed to
 |Application Event Log|{Computername}_evt_Application.evtx|
 |System Event Log|{Computername}_evt_System.evtx|
 |Security Event Log|{Computername}_evt_Security.evtx|
-|||
-
+  
 ## IIS configuration
 
 |Description|File Name|
 |--|--|
 |IIS/ASP.NET Configuration Files|{Computername}_IISConfiguration.zip|
-|||
-
+  
 ## IIS log files
 
 |Description|File Name|
 |--|--|
 |If during execution the option to collect ETW traces is selected then this file will contain the ETW trace, which enables various IIS and SCHANNEL providers|{Computername}_IISSSLETWLOGFILES.zip|
-|||
-
+  
 ## IIS-SSL related registry setting
 
 |Description|File Name|
@@ -78,8 +74,7 @@ The IIS SSL Diagnostic tool for Support Diagnostic Platform (SDP) is designed to
 |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\HTTP`|{Computername}_REG_SERVICES_HTTP.TXT|
 |`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL`|{Computername}_REG_SCHANNEL.TXT|
 |`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults`|{Computername}_REG_CRYPTOGRAPHY.TXT|
-|||
-
+  
 ## Installed updates/hotfixes
 
 |Description|File Name|
@@ -87,34 +82,30 @@ The IIS SSL Diagnostic tool for Support Diagnostic Platform (SDP) is designed to
 |Update/Hotfix history|{Computername}_Hotfixes.CSV|
 |Update/Hotfix history|{Computername}_Hotfixes.htm|
 |Update/Hotfix history|{Computername}_Hotfixes.TXT|
-|||
-
+  
 ## Networking information
 
 | Description| File Name |
 |--|--|
 |TCP/IP Basic Information|{Computername}_TcpIp-Info.txt|
 |SMB Basic Information|{Computername}_SMB-Info.txt|
-|||
-
+  
 ## SSL settings report
 
 |Description|File Name|
 |--|--|
 |This file contains information about various metabase settings that are relevant for troubleshooting SSL issues, for example,  AccessSSLFlags, AccessSSL, AccessSSLNegotiateCert, AccessSSLRequireCert, IIS Client Certificate Mapping, AD Client Certificate authentication.<br/><br/>It also lists down the status of IIS services and provides details of each secure binding configured on the web site showing the details of the certificate bound to it.<br/><br/>Also if any of the SSL-related protocols is disabled on the server, this file will contain information about them.<br/><br/>If the policy for changing the Order of Cipher Suites, then the order specified will also be shown in this file.|{Computername}_SSLReport.htm|
-|||
-
+  
 ## Virtualization information
 
 |Description|File Name|
 |--|--|
 |Machine Virtualization Information in HTM format|{Computername}_Virtualization.htm|
 |Machine Virtualization Information in TXT format|{Computername}_Virtualization.txt|
-|||
-
+  
 ## More information
 
-If the user selects to collect an IIS ETW Log, the diagnostic will enable IIS ETW Trace named *IIS ETW SDP Trace*. The diagnostic will automatically stop this trace when the user is clicks **next** while the trace is running. If the user clicks **Cancel**, they should stop the trace with the following command from an Administrative command prompt:
+If the user selects to collect an IIS ETW Log, the diagnostic will enable IIS ETW Trace named _IIS ETW SDP Trace_. The diagnostic will automatically stop this trace when the user is clicks **next** while the trace is running. If the user clicks **Cancel**, they should stop the trace with the following command from an Administrative command prompt:
 
 ```console
 logman.exe stop "IIS ETW SDP Trace" -ets
