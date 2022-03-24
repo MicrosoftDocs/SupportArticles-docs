@@ -37,7 +37,7 @@ You may observe an issue when you use the **Effective Access** tab. You may also
 
 When the issue occurs, the effective access results are inconsistent with the actual permissions to the resource. Specifically, some **Allow** permissions may be missing, or some **Deny** permissions may appear as **GrantedAccessMask** permissions.
 
-Additionally, if you are using the **Effective Access** tab, the tab may display errors or warnings:
+Additionally, if you're using the **Effective Access** tab, the tab may display errors or warnings:
 
 ![Effective permissions error: You do not have permission to evaluate effective access rights for the remote resource](./media/access-checks-windows-apis-return-incorrect-results/error-insufficient-permissions.png)
 
@@ -49,7 +49,7 @@ For details about how to resolve these issues, see [Remote resources including S
 
 ## Cause
 
-AuthZ.dll uses a Kerberos Service for User (Kerberos S4U) transaction to obtain a token for the user. However, this token is relative to the administrative station or to the station where the server application executes. The token is not relative to the resource server. Therefore, when the resource meets one of the following conditions, the token doesn't include the domain-local groups of the computer that hosts the resource:
+AuthZ.dll uses a Kerberos Service for User (Kerberos S4U) transaction to obtain a token for the user. However, this token is relative to the administrative station or to the station where the server application executes. The token isn't relative to the resource server. Therefore, when the resource meets one of the following conditions, the token doesn't include the domain-local groups of the computer that hosts the resource:
 
 - The resource is in a different domain than the administrative station or the administrative user.
 - The resource has permissions that are assigned to built-in groups. Built-in groups may be misused.
@@ -60,7 +60,7 @@ Additionally, Windows Server 2012 R2 introduced changes to the way in which Wind
 
 Use one of the following methods to resolve this issue.
 
-- **API calls:** Use the **AuthzInitializeRemoteResourceManager** function use a handle to the remote resource when you  call the **AuthzInitializeContextFromSid** function.
+- **API calls:** Use the **AuthzInitializeRemoteResourceManager** function to include a handle to the remote resource when you  call the **AuthzInitializeContextFromSid** function.
 - **Local Authz context:**
 
   - If your configuration enables Kerberos S4U, make sure the administrative user account is in the same domain as the resource.
@@ -91,7 +91,7 @@ Here's a sample scenario:
 - The global group is a member of the domain-local group. The global group doesn't have direct access to the resource.
 - Using an Administrator-level user account and computer in domain A, you remotely retrieve the resource permissions of a user who is a member the global group.
 
-In the results that you retrieve, the user does not appear to have **Delete** permissions for the resource. In practice, however, the user does have **Delete** permissions.
+In the results that you retrieve, the user doesn't appear to have **Delete** permissions for the resource. In practice, however, the user does have **Delete** permissions.
 
 ### Remote resources including SMB
 
@@ -106,13 +106,13 @@ When you evaluate effective access to resources, consider the following factors:
 - **Permissions**
 
   - **Authorization on the remote server**  
-  To evaluate effective permissions for a resource on a remote server, a user has to belong to the **Access Control Assistance Operators** group. This built-in group makes it easier to delegate access to people who do not have administrative access to resource servers. Otherwise, users have to have administrative access to both the remote server and the share or other resource.
+  To evaluate effective permissions for a resource on a remote server, a user has to belong to the **Access Control Assistance Operators** group. This built-in group makes it easier to delegate access to people who don't have administrative access to resource servers. Otherwise, users have to have administrative access to both the remote server and the share or other resource.
 
   - **Permissions to retrieve security descriptor for the share**  
-  The user may also require administrative access to the SMB share security descriptors. Many in-market operating system versions do not grant such access by default. To receive an update that provides this capability, contact Microsoft Support. The solution for in-market operating system versions is not publicly available.
+  The user may also require administrative access to the SMB share security descriptors. Many in-market operating system versions don't grant such access by default. To receive an update that provides this capability, contact Microsoft Support. The solution for in-market operating system versions isn't publicly available.
 
 - **How the server is accessed (if the resource uses share-level access control)**  
-  To evaluate the effective permissions for a resource on a remote server that uses share-level access control, you have to use a UNC share path to access the resource. Do not try to use a mapped drive letter to access the resource. For example, use a path that resembles the following:
+  To evaluate the effective permissions for a resource on a remote server that uses share-level access control, you have to use a UNC share path to access the resource. Don't try to use a mapped drive letter to access the resource. For example, use a path that resembles the following:
 
   ```console
   \\fileserver01.contoso.com\finance-data\year2022\quarter2\
