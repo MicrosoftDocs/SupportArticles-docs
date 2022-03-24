@@ -25,7 +25,6 @@ If you installed Cross Platform Mobile Development features, you must use additi
 |Joyent Node.js|Download and manage dependent packages.|No|Yes|No|
 |Oracle Java Development Kit|Perform the build steps for Android.|No|Yes|No|
 |Websocket4Net|Enable debugging on Windows 7 computers.|No|Yes|No|
-||||||
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 

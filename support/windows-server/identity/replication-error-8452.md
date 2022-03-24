@@ -84,7 +84,6 @@ _Original KB number:_ &nbsp; 2023704
     |Event|Source|Event String|
     |---|---|---|
     |NTDS General|1586|The checkpoint with the PDC was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.|
-    ||||  
 
 ## Cause
 

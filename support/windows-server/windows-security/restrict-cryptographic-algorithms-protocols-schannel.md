@@ -41,7 +41,7 @@ This article contains the necessary information to configure the TLS/SSL Securit
 
 ## Cipher suites
 
-Both SSL 3.0 and TLS 1.0 (RFC2246) with INTERNET-DRAFT *56-bit Export Cipher Suites For TLS draft-ietf-tls-56-bit-ciphersuites-00.txt* provide options to use different cipher suites. Each cipher suite determines the key exchange, authentication, encryption, and MAC algorithms that are used in an SSL/TLS session. When you use RSA as both key exchange and authentication algorithms, the term **RSA** appears only one time in the corresponding cipher suite definitions.
+Both SSL 3.0 and TLS 1.0 (RFC2246) with INTERNET-DRAFT _56-bit Export Cipher Suites For TLS draft-ietf-tls-56-bit-ciphersuites-00.txt_ provide options to use different cipher suites. Each cipher suite determines the key exchange, authentication, encryption, and MAC algorithms that are used in an SSL/TLS session. When you use RSA as both key exchange and authentication algorithms, the term **RSA** appears only one time in the corresponding cipher suite definitions.
 
 The Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider supports the following SSL 3.0-defined CipherSuite when you use the Base Cryptographic Provider or the Enhanced Cryptographic Provider:
 
@@ -55,8 +55,7 @@ The Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider supports t
 |SSL_RSA_WITH_3DES_EDE_CBC_SHA|`{ 0x00,0x0A }`|
 |SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA|`{ 0x00,0x62 }`|
 |SSL_RSA_EXPORT1024_WITH_RC4_56_SHA|`{ 0x00,0x64 }`|
-|||
-
+  
 > [!NOTE]
 > Neither SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA nor SSL_RSA_EXPORT1024_WITH_RC4_56_SHA is defined in SSL 3.0 text. However, several SSL 3.0 vendors support them. This includes Microsoft.
 
@@ -72,8 +71,7 @@ Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider also supports 
 |TLS_RSA_WITH_3DES_EDE_CBC_SHA|`{ 0x00,0x0A }`|
 |TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA|`{ 0x00,0x62 }`|
 |TLS_RSA_EXPORT1024_WITH_RC4_56_SHA|`{ 0x00,0x64 }`|
-|||
-
+  
 > [!NOTE]
 > A cipher suite that is defined by using the first byte 0x00 is non-private and is used for open interoperable communications. Therefore, the Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider follows the procedures for using these cipher suites as specified in SSL 3.0 and TLS 1.0 to make sure of interoperability.
 

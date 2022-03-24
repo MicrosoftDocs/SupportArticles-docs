@@ -21,8 +21,7 @@ The following table lists the scenarios and supported Configuration Manager feat
 |---|---|
 |Use an existing on-premises Configuration Manager infrastructure to manage Azure Virtual Machines that are running Windows Server or Linux.|For Windows Server:<ul><li>Application Management</li><li>Compliance Settings</li><li>Endpoint Protection</li><li>Inventory - Software, Hardware, and Asset Intelligence</li><li>Network Access Protection</li><li>Software Updates Deployment</li><li>Software Metering</li><li>Remote Control</li><li>Reporting</li></ul>For Linux:<ul><li> Software Distribution</li><li>Endpoint Protection</li><li>Inventory - Hardware, Software</li><li>Reporting</li></ul>|
 |Set up a single stand-alone primary site in the Azure Virtual Machine environment to manage Azure Virtual Machines that are running Windows Server or Linux in the same virtual network.<br/><br/>The all-in-one, stand-alone primary site is a single Azure Virtual Machine that runs all required site system roles and Microsoft SQL Server locally without using any remote site systems or roles.|For Windows Server:<ul><li>Application Management</li><li>Compliance Settings</li><li>Endpoint Protection</li><li>Inventory - Software, Hardware, and Asset Intelligence</li><li>Software Updates Deployment</li><li>Software Metering</li><li>Remote Control</li><li>Reporting</li></ul>For Linux:<ul><li>Software Distribution</li><li>Endpoint Protection</li><li>Inventory - Hardware, Software</li><li>Reporting</li></ul>|
-|||
-
+  
 The following Linux distributions are endorsed for Microsoft Azure Virtual Machines in the supported scenarios:
 
 - Canonical Ubuntu 12.04

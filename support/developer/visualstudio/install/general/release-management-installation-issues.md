@@ -26,4 +26,3 @@ _Original KB number:_ &nbsp; 2905736
 | [2989108](https://support.microsoft.com/help/2989108)|Error (500 Internal Server Error) occurs when you link an Azure VM in create new vNext: Azure environment flow||
 | [2989109](https://support.microsoft.com/help/2989109)|Microsoft Deployment Agent 2013 auto-upgrade from Update 3 RC to Update 3 RTM does not succeed||
 | [2989110](https://support.microsoft.com/help/2989110)|Releases to Azure environments fails after you upgrade from Release Management 2013 Update 3 RC to Update 3 RTW||
-||||

@@ -19,18 +19,16 @@ This article describes the information that may be collected from a machine when
 |---|---|
 |System event logs|{ComputerName}_evt_System.*|
 |Application event Logs|{ComputerName}_evt_Application.*|
-|||
-
+  
 ## SilverLight information
 
 | Description| File name |
 |---|---|
 |Version information|Silverlight Wow6432 Version Information.txt|
-|||
-
+  
 ## System information - General
 
 | Description| File name |
 |---|---|
 |MSInfo|{ComputerName}_msinfo32.*|
-|||
+  
