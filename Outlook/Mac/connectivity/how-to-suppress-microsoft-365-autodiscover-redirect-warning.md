@@ -64,4 +64,3 @@ The TrustO365AutodiscoverRedirect preference can be configured to use the follow
 |true|Don't prompt for trusted Microsoft 365 endpoints. Outlook defines what URLs are trusted and this is not configurable.|
 |false|Outlook will use the default behavior that is to prompt when Autodiscover Redirects occur.|
 |if value is not present|Outlook will use the default behavior that is to prompt when Autodiscover Redirects occur.|
-|||

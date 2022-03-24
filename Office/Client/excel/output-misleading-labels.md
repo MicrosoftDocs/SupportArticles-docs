@@ -45,9 +45,7 @@ To illustrate the t-Test tools, create a blank Excel worksheet, copy the followi
 |170|190||
 |160|180||
 |150|170||
-||||
 |t-Test: Two-Sample Assuming Unequal Variances|||
-||||
 ||Variable 1|Variable 2|
 |Mean|175|195|
 |Variance|350|350|

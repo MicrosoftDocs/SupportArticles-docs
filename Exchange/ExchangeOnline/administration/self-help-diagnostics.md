@@ -51,6 +51,5 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |Retention policy diagnostics|Check retention policy settings.|[Run Tests: Retention Policy](https://aka.ms/PillarRetentionPolicy)|[Retention tags and retention policies in Exchange Online](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies)|
 |Enable Basic authentication in Exchange Online|Enable Basic authentication for legacy protocols in Exchange Online if previously disabled by Microsoft, or opt out of the disabling process if there is a need to use Basic authentication with specific legacy protocols.|[Run Tests: Basic Auth in EXO](https://aka.ms/PillarEXOBasicAuth)|[Basic Authentication and Exchange Online – June 2021 Update](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-june-2021-update/ba-p/2454827)|
 |DomainKeys Identified Mail (DKIM) diagnostics|Validate that DKIM signing is configured correctly and the correct DNS entries have been published.|[Run Tests: DKIM](https://aka.ms/diagdkim)|[Use DKIM to validate outbound email sent from your custom domain](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email)|
-|||||
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

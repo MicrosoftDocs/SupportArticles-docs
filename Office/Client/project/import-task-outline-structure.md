@@ -67,6 +67,5 @@ A comma-separated values (CSV) file contains the following text:
 |1| 2 Summary Task 3|
 |2| 2.1 Task E|
 |2| 2.2 Task F|
-|||
 
 **NOTE** The Outline Number and name indentation are shown to clearly illustrate the structure.

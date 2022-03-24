@@ -37,7 +37,6 @@ This problem occurs when you try to disable the following controls by using Grou
 |Prepare for Offline Use|20300|
 |Automatic Replies|5621|
 |Empty Deleted Items Folder|1671|
-|||
 
 ## Resolution
 
