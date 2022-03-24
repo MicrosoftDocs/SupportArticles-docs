@@ -117,9 +117,8 @@ The following are the default user permissions that are set after you grant acce
 |Microsoft Graph|Delegated|Read and write access to user mail|User consent|
 |Microsoft Graph|Delegated|Have full access to all files that users can access|User consent|
 |Microsoft Graph|Delegated|Have full access to user calendars|User consent|
-|||||
-
-If you select **Consent on behalf of your organization**, you will have the following permissions under **Admin consent**.
+  
+  If you select **Consent on behalf of your organization**, you will have the following permissions under **Admin consent**.
 
 |API Name|Type|Permission|Granted through|
 |---|---|---|---|
@@ -135,4 +134,3 @@ If you select **Consent on behalf of your organization**, you will have the foll
 |Microsoft Graph|Delegated|Read and write access to user mail|Admin consent|
 |Microsoft Graph|Delegated|Have full access to all files that users can access|Admin consent|
 |Microsoft Graph|Delegated|Have full access to user calendars|Admin consent|
-|||||

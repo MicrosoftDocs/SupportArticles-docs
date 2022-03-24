@@ -248,7 +248,7 @@ This article contains frequently asked questions about role-based security in Mi
     ```
 
     > [!NOTE]
-    > The *<Display_Name>* placeholder represents the actual display name. For example, the display name may be "Sales Transaction Entry."
+    > The _<Display_Name>_ placeholder represents the actual display name. For example, the display name may be "Sales Transaction Entry."
 
     The following table lists the result of the query for the Sales Transaction Entry object against a default installation.
 
@@ -258,7 +258,6 @@ This article contains frequently asked questions about role-based security in Mi
     |CUSTOMER SERVICE REP*|Customer Service Representative|TRX_SALES_001*|Enter SOP transactions|Microsoft Dynamics GP|Windows|Sales Transaction Entry|SOP_Entry|0|2|619|
     |OPERATIONS MANAGER*|Operations Manager|TRX_SALES_001*|Enter SOP transactions|Microsoft Dynamics GP|Windows|Sales Transaction Entry|SOP_Entry|0|2|619|
     |SHIPPING AND RECEIVING*|Shipping and Receiving|TRX_SALES_001*|Enter SOP transactions|Microsoft Dynamics GP|Windows|Sales Transaction Entry|SOP_Entry|0|2|619|
-    ||||||||||||
 
     If no security roles are assigned to the security tasks, the table is blank. If no security tasks are assigned to the operation, the table is also blank.
 

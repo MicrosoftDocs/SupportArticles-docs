@@ -47,8 +47,7 @@ The following table describes the 10 fields needed in the ADP Payroll Connect im
 | **Reference number 2**|This field isn't used in Microsoft Dynamics GP, but still must exist.|
 | **Reference number 3**|This field isn't used in Microsoft Dynamics GP, but still must exist.|
 | **Record Code**|This field is assigned by ADP but isn't used in Microsoft Dynamics GP.|
-|||
-
+  
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
 Here's a more detailed description of how to map each field listed above in the ADP tool:

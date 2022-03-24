@@ -27,7 +27,6 @@ To view and manage the updates, make sure that you have the [required permission
 |Database Notification Monitor|SMS_DATABASE_NOTIFICATION_MONITOR|SmsDbMon|Smsdbmon.dll|Watches the database for changes to certain tables, and creates files in the inboxes of components that are responsible for processing those changes|
 |DMP Download|SMS_DMP_DOWNLOADER|DmpDownloader|Dmpdownloader.dll|Responsible for downloading new servicing updates to top-level site server|
 |SMS Provider|SMS Provider|SMSProv|Smsprov.dll|Windows Management Instrumentation (WMI) Provider that assigns Read and Write access to the Configuration Manager database at a site|
-||||||
 
 ## Downloading updates
 
@@ -101,7 +100,7 @@ After the update is successfully downloaded, the following entries are logged in
 > INFO: File hash check successfully for DeviceClient_WinCE7.0_X86.CAB  
 > INFO: setupdl.exe: Finish
 
-To download the redistributable file, DMPDownloader reads from the Manifest.xml file that is located in the \<*InstallDir*>\Bin\x64 folder. For example:
+To download the redistributable file, DMPDownloader reads from the Manifest.xml file that is located in the \<_InstallDir_>\Bin\x64 folder. For example:
 
 > \<RedistManifestVersion>201702\</RedistManifestVersion>  
 > \<Redist ManifestUrl=[http://go.microsoft.com/fwlink/?LinkID=841450](https://go.microsoft.com/fwlink/?LinkID=841450)"/>  
@@ -490,7 +489,7 @@ To do so, follow these steps:
     PSComputerName   : 
     ```
 
-4. Review *Distmgr.log* to check whether the package replicates successfully.
+4. Review _Distmgr.log_ to check whether the package replicates successfully.
 
 ### Issue 1: Error "Failed to calculate hash SMS_HIERARCHY_MANAGER"
 
@@ -515,8 +514,8 @@ The following steps explain the process of extracting the update to run prerequi
 
 After you select the update package and select **Run prerequisite check**, the following entries are logged in smsdbmon.log:
 
-> RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2 ][1009663]  
-> Modified trigger definition for Hierarchy Manager (CFD)[CM_UpdatePackages_UPD_HMAN]: table CM_UpdatePackages(State) on update, file ESC in dir C:\Program Files\Microsoft Configuration Manager  
+> RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN \[2 ][1009663]  
+> Modified trigger definition for Hierarchy Manager \[CFD](CM_UpdatePackages_UPD_HMAN): table CM_UpdatePackages(State) on update, file ESC in dir C:\Program Files\Microsoft Configuration Manager  
 > \inboxes\hman.box\CFD\  
 > SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\2.ESC [1009663]
 

@@ -37,8 +37,7 @@ The downlevel phase is the Windows setup phase that is running within the previo
 |C:\$WINDOWS.~BT\Sources\Panther\setuperr.log|Contains information about setup errors during the installation.|
 |C:\$WINDOWS.~BT\Sources\Panther\miglog.xml|Contains information about the user directory structure. This information includes security identifiers (SIDs).|
 |C:\$WINDOWS.~BT\Sources\Panther\PreGatherPnPList.log|Contains information about the initial capture of devices that are on the system during the downlevel phase.|
-|||
-
+  
 ## Windows Preinstallation Environment phase
 
 The Windows Preinstallation Environment (Windows PE or WinPE) phase is the Windows setup phase that occurs after the restart at the end of the downlevel phase, or when you start the computer by using the Windows installation media. The following table lists important log files in this setup phase.
@@ -54,8 +53,7 @@ The Windows Preinstallation Environment (Windows PE or WinPE) phase is the Windo
 |C:\$WINDOWS.~BT\Sources\Panther\setuperr.log|Contains information about setup errors during the installation.|
 |C:\$WINDOWS.~BT\Sources\Panther\miglog.xml|Contains information about the user directory structure. This information includes security identifiers (SIDs).|
 |C:\$WINDOWS.~BT\Sources\Panther\PreGatherPnPList.log|Contains information about the initial capture of devices that are on the system during the downlevel phase.|
-|||
-
+  
 > [!NOTE]
 > You may also see a log file in the `X:\WINDOWS` directory. The Setupact.log file in this directory contains information about the progress of the initial options that are selected on the Windows installation screen. The Windows installation screen appears when you start the computer by using the Windows installation media. After you select **Install now** from the Windows installation screen, the Setup.exe file starts, and this log file is no longer used.
 
@@ -75,8 +73,7 @@ During this phase, basic hardware support is installed. If it's an upgrade insta
 |C:\WINDOWS\INF\setupapi.app.log|Contains information about application installation.|
 |C:\WINDOWS\Panther\PostGatherPnPList.log|Contains information about the capture of devices that are on the system after the online configuration phase.|
 |C:\WINDOWS\Panther\PreGatherPnPList.log|Contains information about the initial capture of devices that are on the system during the downlevel phase.|
-|||
-
+  
 ### Windows Welcome phase
 
 The Windows Welcome phase includes the following options and events:
@@ -97,8 +94,7 @@ The Windows Welcome phase is the final setup phase before a user signs in. The f
 |C:\WINDOWS\Panther\PostGatherPnPList.log|Contains information about the capture of devices that are on the system after the online configuration phase.|
 |C:\WINDOWS\Panther\PreGatherPnPList.log|Contains information about the initial capture of devices that are on the system during the downlevel phase.|
 |C:\WINDOWS\Performance\Winsat\winsat.log|Contains information about the Windows System Assessment Tool performance testing results.|
-|||
-
+  
 ## Rollback phase
 
 If a Windows upgrade installation fails, and you've successfully rolled back the installation to the previous operating system desktop, there are several log files that you can use for troubleshooting. The following table lists important log files in this phase.
@@ -111,4 +107,4 @@ If a Windows upgrade installation fails, and you've successfully rolled back the
 |C:\$WINDOWS.~BT\Sources\Panther\setupapi\setupapi.app.log|Contains information about application installation.|
 |C:\$WINDOWS.~BT\Sources\Panther\PreGatherPnPList.log|Contains information about the initial capture of devices that are on the system during the downlevel phase.|
 |C:\$WINDOWS.~BT\Sources\Panther\PostGatherPnPList.log|Contains information about the capture of devices that are on the system after the online configuration phase.|
-|||
+  

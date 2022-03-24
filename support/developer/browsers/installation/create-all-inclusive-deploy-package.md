@@ -26,12 +26,12 @@ Complete each section fully before you continue.
 
 ## Internet Explorer 11 prerequisite packages
 
-1. Create a temporary folder that is named *Temp* at the root of drive C, and make sure that at least 500 megabytes (MB) of disk space are available.
+1. Create a temporary folder that is named _Temp_ at the root of drive C, and make sure that at least 500 megabytes (MB) of disk space are available.
 
 2. By using [KB 2847882](https://support.microsoft.com/help/2847882) as a reference, download the individual packages for the appropriate Windows CPU platform (x64 or x86) on which Internet Explorer 11 will be deployed. Save these packages to the temporary directory that you created in step 1.
 
-3. In the *Temp* folder, create a new folder that is named `Cabfiles`.
-4. At an administrative command prompt, change to the *C:Temp* folder.
+3. In the _Temp_ folder, create a new folder that is named `Cabfiles`.
+4. At an administrative command prompt, change to the _C:Temp_ folder.
 5. Extract the contents of each prerequisite .msu package to the `Cabfiles` folder by using the following syntax:
 
     ```cmd
@@ -43,13 +43,13 @@ Complete each section fully before you continue.
 
 :::image type="content" source="media/create-all-inclusive-deploy-package/extract-prerequisites.png" alt-text="Screenshot shows the command output of extracting Internet Explorer 11 prerequisites updates.":::
 
-Repeat these steps to extract all the prerequisites for Internet Explorer 11, and save the *.cab* files in the `C:\Temp\Cabfiles` folder.
+Repeat these steps to extract all the prerequisites for Internet Explorer 11, and save the _.cab_ files in the `C:\Temp\Cabfiles` folder.
 
 ## Internet Explorer 11 core installation package
 
-1. Download the core Internet Explorer 11 installation packages that are needed for the target Windows platform, and save the packages to the *C:\Temp* folder.
+1. Download the core Internet Explorer 11 installation packages that are needed for the target Windows platform, and save the packages to the _C:\Temp_ folder.
 
-2. At an administrative command prompt, change to the *C:\Temp* folder.
+2. At an administrative command prompt, change to the _C:\Temp_ folder.
 3. Extract the contents of the core Internet Explorer 11 packages to the `Cabfiles` folder by using the following syntax:
 
     ```cmd
@@ -61,7 +61,7 @@ Repeat these steps to extract all the prerequisites for Internet Explorer 11, an
 >
 > :::image type="content" source="media/create-all-inclusive-deploy-package/extract-core-installation-package.png" alt-text="Screenshot shows the command to extract Internet Explorer 11 core installation package.":::
 >
-> *IE-Win7.cab* is the name of the .cab file that is extracted from the Internet Explorer 11 setup file (IE11-Windows6.1-x64-en-us.exe). It is saved in the `C:\Temp\Cabfiles` folder.
+> _IE-Win7.cab_ is the name of the .cab file that is extracted from the Internet Explorer 11 setup file (IE11-Windows6.1-x64-en-us.exe). It is saved in the `C:\Temp\Cabfiles` folder.
 
 ## Internet Explorer 11 language packs
 
@@ -70,8 +70,8 @@ Repeat these steps to extract all the prerequisites for Internet Explorer 11, an
 
 For Example, to install French Language pack for Internet Explorer 11, we must have French OS language pack already installed on the computer. For more information, see [Language packs for Windows](https://support.microsoft.com/help/14236).
 
-1. Download the Internet Explorer 11 language pack packages, and save them to the *C:\temp* folder.
-2. At an administrative command prompt, change to the *C:\Temp* folder.
+1. Download the Internet Explorer 11 language pack packages, and save them to the _C:\temp_ folder.
+2. At an administrative command prompt, change to the _C:\Temp_ folder.
 3. Extract the contents of the Internet Explorer 11 language pack packages to the `Cabfiles` folder by using the following syntax:
 
     ```cmd
@@ -90,7 +90,6 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 > |---|---|---|
 > |Language pack 1|Windows6.1-KB2841134-X64.cab|Windows6.1-KB2841134-X64-Af-za.cab|
 > |Language pack 2|Windows6.1-KB2841134-X64.cab|Windows6.1-KB2841134-X64-fr-fr.cab|
-> ||||
 >
 > : From 'Windows6.1-KB2841134-X64.cab' to 'Windows6.1-KB2841134-X64-Af-za.cab'  
 > : From 'Windows6.1-KB2841134-X64.cab' to 'Windows6.1-KB2841134-X64-fr-fr.cab'
@@ -101,8 +100,8 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 
 ## Internet Explorer 11 spelling dictionaries
 
-1. Download the Internet Explorer 11 Spelling Dictionary packages, and save them to the *C:\Temp* folder.
-2. At an administrative command prompt, change to the *C:\Temp* folder.
+1. Download the Internet Explorer 11 Spelling Dictionary packages, and save them to the _C:\Temp_ folder.
+2. At an administrative command prompt, change to the _C:\Temp_ folder.
 3. Extract the contents of the Spelling Dictionary packages to the `Cabfiles` folder by using the following syntax:
 
     ```cmd
@@ -116,8 +115,8 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 
 ## Internet Explorer 11 cumulative security update
 
-1. Download the latest Internet Explorer 11 Cumulative Security Update (CSU) packages, and save them to the *C:\Temp* folder.
-2. At an administrative command prompt, change to the *C:\Temp* folder.
+1. Download the latest Internet Explorer 11 Cumulative Security Update (CSU) packages, and save them to the _C:\Temp_ folder.
+2. At an administrative command prompt, change to the _C:\Temp_ folder.
 3. Extract the contents of the Internet Explorer 11 Cumulative Security Update packages to the `Cabfiles` folder by using the following syntax:
 
     ```cmd
@@ -140,17 +139,17 @@ Copy the following sample script to Notepad, and customize it based on the packa
 - Spelling Dictionary package
 - Cumulative security updates
 
-Then, save the script file as *SampleScript.bat* in the `C:\Temp\Cabfiles` folder so that it has access to all the files in that folder.
+Then, save the script file as _SampleScript.bat_ in the `C:\Temp\Cabfiles` folder so that it has access to all the files in that folder.
 
 For Example: `C:\Temp\Cabfiles\SampleScript.bat`
 
-As soon as you customize and save the script file, you should double-click *Samplescript.bat* to execute it. A command prompt window displays the commands that are being executed by the script. The output resembles the following:
+As soon as you customize and save the script file, you should double-click _Samplescript.bat_ to execute it. A command prompt window displays the commands that are being executed by the script. The output resembles the following:
 
 :::image type="content" source="media/create-all-inclusive-deploy-package/script-output.png" alt-text="Screenshot shows the Samplescript.bat script output.":::
 
 This script will install all the extracted .cab files without a prompt to restart. These files include prerequisites for Internet Explorer 11, the Internet Explorer 11 setup file, the Internet Explorer 11 language pack, the Internet Explorer 11 spelling package, and the Internet Explorer 11 cumulative security update.
 
-As soon as the *Samplescript.bat* file installs all the cab files, restart the computer manually.
+As soon as the _Samplescript.bat_ file installs all the cab files, restart the computer manually.
 
 ### Sample script to install the x64 version of the .cab files
 

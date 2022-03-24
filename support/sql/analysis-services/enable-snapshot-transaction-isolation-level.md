@@ -96,7 +96,6 @@ To test whether the snapshot transaction isolation level is enabled, follow thes
     |3|Repeatable|
     |4|Serializable|
     |5|Snapshot|
-    |||
 
 ## References
 
