@@ -17,8 +17,7 @@ Required heap space will depend on the average load per collector, and can vary 
 |Initial (0-50)|2 GB|1 GB|1 GB|
 |Medium (50-200)|2-4 GB|1-2 GB|2-4 GB|
 |Large (200+)|4-8 GB|2-4 GB|4-8 GB|
-|||||
-
+  
 ## Main heap space
 
 By default, this heap is 1 GB. In most cases, doubling this value to 2 GB is recommended. Deployments with lots of collectors (hundreds per management server), or systems that have extraordinarily high amounts of transactions may need more heap space to run optimally.

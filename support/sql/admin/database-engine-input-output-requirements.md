@@ -74,4 +74,4 @@ The following table provides links to additional information that is related to 
 | iSCSI| [Support for SQL Server on iSCSI technology components](https://support.microsoft.com/help/833770)|
 | Mirroring and AlwaysOn availability groups| <ul><li>[Prerequisites, Restrictions, and Recommendations for Always On availability groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) <li>Requirements for SQL Server to support remote mirroring of user databases<br/>Database Mirroring:<ul><li> [Database Mirroring in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc917680(v=technet.10)) </li><li> [Database Mirroring Best Practices and Performance Considerations](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/dbm_best_pract.doc) </li></ul></ul> These white papers also apply to Microsoft SQL Server 2008 and later versions of SQL Server.|
 |I/O affinity| [INF: Understanding How to Set the SQL Server I/O Affinity Option](https://support.microsoft.com/help/298402)|
-|||
+  

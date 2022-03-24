@@ -41,7 +41,7 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
 |event_0x003A| The time service has stopped advertising as a time source because there are no providers running. |
 |event_0x003B| The time service has stopped advertising as a good time source. |
 || The local clock is not synchronized |
-|||  
+
  >Event Xml:  
  \<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">  
    \<System>  
@@ -72,8 +72,7 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
 | The time service has stopped advertising as a time source because there are no providers running.|  The NTP client service has stopped or is non-responsive |
 | The time service has stopped advertising as a time source because there are no providers running.|  Time on the local computer has fallen out of sync with its peer |
 | The time service has stopped advertising as a good time source.|  The local DC is unable to locate a time server |
-|||
-
+  
 ## Resolution
 
 The dominant error string logged by Microsoft-Windows-Time-Service Event 142 is the third example:
@@ -100,7 +99,6 @@ The dominant error string logged by Microsoft-Windows-Time-Service Event 142 is 
     |---|---|
     |Microsoft-Windows-Time-Service event 37|\<note the protocol + source DC in event|
     |Microsoft-Windows-Kernel-General event 1.| The Microsoft-Windows-Kernel-General event 1 indicates that time has been changed in the VM. Every time W32time updates the clock, this event is logged. Every time Hyper-V Time Synch updates the clock, Microsoft-Windows-Kernel-General event 1 is logged. This event is not specific to VMs as it is also logged in physical machines when w32time updates the clock |
-    |||
 
 7. Other root causes
 

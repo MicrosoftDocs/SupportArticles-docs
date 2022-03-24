@@ -39,8 +39,7 @@ The following table outlines the criteria that is used by Windows to assign metr
 |Greater than 4 Mb, and less than or equal to 20 Mb|30|
 |Greater than 500 kilobits (Kb), and less than or equal to 4 Mb|40|
 |Less than or equal to 500 Kb|50|
-|||
-
+  
 The following table lists the link speeds and assigned metrics for computers that run Windows XP Service Pack 2 and newer versions of Windows operating systems.
 
 |Link Speed|Metric|
@@ -52,8 +51,7 @@ The following table lists the link speeds and assigned metrics for computers tha
 |Greater than 4 Mb, and less than or equal to 20 Mb|30|
 |Greater than 500 Kb, and less than or equal to 4 Mb|40|
 |Less than or equal to 500 Kb|50|
-|||
-
+  
 The following table lists the link speeds and assigned metrics for computers that run Windows 10 and newer versions of Windows operating systems:
 
 For interfaces with physical medium types NdisPhysicalMediumWirelessLan, NdisPhysicalMediumWirelessWan, NdisPhysicalMediumNative802_11:
@@ -73,8 +71,7 @@ For interfaces with physical medium types NdisPhysicalMediumWirelessLan, NdisPhy
 |Greater than or equal to 500 Kb and less than 2 Mb|75|
 |Greater than or equal to 200 Kb and less than 500 Kb|80|
 |Less than 200 Kb|85|
-|||
-
+  
 For other interfaces types:
 
 |Link Speed|Metric|
@@ -89,8 +86,7 @@ For other interfaces types:
 |Greater than or equal to 4 Mb and less than 20 Mb|55|
 |Greater than or equal to 500 Kb and less than 4 Mb|65|
 |Less than 500 Kb|75|
-|||
-
+  
 The Automatic Metric feature is configured independently for each network interface in the network. This feature is useful in situations where you have more than one network interface of the same speed, for example, when each network interface has been assigned a default gateway. In this situation, you may want to manually configure the metric on one network interface, and enable the Automatic Metric feature to configure the metric of the other network interface. This setup can enable you to control the network interface that is used first in the routing of IP traffic.
 
 In addition, the metric that's assigned to specific default gateways can be configured independently for each gateway. This setup enables a further level of control over the metric that's used for the local routes. For example, it's possible to enable the Automatic Metric feature to configure the routes that are assigned to the network interface. And at the same time you can manually configure the metric that's assigned to the default gateways.

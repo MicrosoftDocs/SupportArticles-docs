@@ -170,6 +170,8 @@
   items:
     - name: lastLogonTimestamp isn't updated as expected
       href: lastlogontimestamp-not-accurate.md
+    - name: Resource domain is changed after installing Windows updates
+      href: resource-domain-changes.md
 - name: Endpoint Protection
   items:
     - name: An incorrect Endpoint Definition status

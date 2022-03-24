@@ -89,7 +89,7 @@ This issue may occur if one or more of the following conditions are true:
         - If you're using Azure Active Directory Connect, look for **Microsoft Azure AD Sync**.
       - If the **Account is disabled** check box is already cleared, go to step 5.
 
-5. If the **Account is disabled**  check box is already cleared, it's possible that the password for the account was manually changed. To set a new password, open Active Directory Users and Computers, locate and right-click the account, and then select **Reset Password**  to reset the password. Note the password that you set because you'll have to use it in the next step. 
+5. If the **Account is disabled**  check box is already cleared, it's possible that the password for the account was manually changed. To set a new password, open Active Directory Users and Computers, locate and right-click the account, and then select **Reset Password**  to reset the password. Note the password that you set because you'll have to use it in the next step.
 6. Set the password on the logon account for the directory synchronization services:
 
     1. select **Start**, select **Run**, type Services.msc, and then select **OK**.
@@ -98,7 +98,6 @@ This issue may occur if one or more of the following conditions are true:
         |Azure Active Directory Synchronization client|Azure Active Directory Connect|
         |---|---|
         |<br/> Forefront Identity Manager Synchronization Service<br/>      SQL Server (MOSONLINE) (if present)<br/>      Azure Active Directory Sync Service|<br/>    Azure AD Sync|
-        |||
 
     3. Start the service or services for which you set the new password.
 

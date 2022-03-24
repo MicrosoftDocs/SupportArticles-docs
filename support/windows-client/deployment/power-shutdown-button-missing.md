@@ -35,7 +35,6 @@ The following table summarizes when the power/shutdown button should be present 
 |Slate|Yes|>=8.5"|No|Yes|
 |Slate|No|>=8.5"|Yes|Yes|
 |All other devices|Doesn't matter|All sizes|Yes|Yes|
-||||||
 
 > [!NOTE]
 > An entry of Slate in the **Device type** column means that the hardware reported a [Power_Platform_Role](/windows/win32/api/winnt/ne-winnt-power_platform_role) of **PlatformRoleSlate**. To determine what a system is reporting, run the `powercfg /energy` command, and then notice what is listed for **Platform Role** in the output.

@@ -59,8 +59,7 @@ The following table describes the registry configuration values.
 |EnableErrorLogging|A DWORD that you can set to TRUE to enable error logging or to FALSE to disable it. The default value is TRUE.|
 |ErrorLogFileTruncateSize|A DWORD that specifies the maximum size of an error log file, in bytes. The default value is 1 MB (0x100000).<br/><br/>The specified value can't be smaller than the default value.|
 |ErrorLoggingDir|A String that specifies the folder where the HTTP API puts its logging files.<br/><br/>The HTTP API creates a subfolder HTTPERR in the specified folder, and then stores the log files in the subfolder. This subfolder and the log files receive the same permission settings. The Administrator and Local System Accounts have full access. Other users don't have access. <br/><br/> The following example is the default folder when the folder isn't specified in the registry:<br/> `%SystemRoot%\System32\LogFiles`<br/><br/> The ErrorLoggingDir string value must be a fully qualified local path. However, it can contain `%SystemRoot%`. A network drive or network share can't be used.|
-|||
-
+  
 ## Format of the HTTP API error logs
 
 Generally, HTTP API error log files have the same format as W3C error logs, except that HTTP API error log files don't contain column headings. Each line of an HTTP API error log records one error. The fields appear in a specific order. A single space character (0x0020) separates each field from the previous field. In each field, plus signs (0x002B) replace space characters, tabs, and non-printable control characters.
@@ -82,8 +81,7 @@ The following table identifies the fields and the order of the fields in an erro
 |SiteId|Not used in this version of the HTTP API. A placeholder hyphen (0x002D) always appears in this field.|
 |Reason Phrase|This field contains a string that identifies the kind of error that is being logged. This field is never left empty.|
 |Queue Name|It's the request queue name.|
-|||
-
+  
 The following sample lines are from an HTTP API error log:
 
 ```console
@@ -148,4 +146,4 @@ The following list identifies the kinds of errors that the HTTP API logs:
 |URL_Length|A URL exceeded the maximum permitted size.|
 |Verb|A parse error occurred while processing a verb.|
 |Version_N/S|A version-not-supported error occurred (an HTTP error 505).|
-|||
+  

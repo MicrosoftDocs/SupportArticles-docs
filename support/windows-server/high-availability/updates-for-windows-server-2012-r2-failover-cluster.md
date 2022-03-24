@@ -47,7 +47,6 @@ These updates are considered to be important installations to ensure the highest
 |November 18, 2014| [3000850](https://support.microsoft.com/help/3000850)|November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2|Multiple|A cumulative update that includes the security updates and nonsecurity updates including Failover Clustering updates that were released between April 2014 and November 2014. Available from Windows Update and for individual download from Download Center. To apply this update, you must first install the update [2919355](https://support.microsoft.com/help/2919355) on Windows Server 2012 R2.|
 |April 8, 2014| [2919355](https://support.microsoft.com/help/2919355)|Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 Update April, 2014|Multiple|A cumulative update that includes the security updates and nonsecurity updates including Failover Clustering updates that were released before March 2014. Available from Windows Update and for individual download from Download Center.|
 |December 18, 2013| [976424](https://support.microsoft.com/help/976424)|Error code when the kpasswd protocol fails after you perform an authoritative restore: "KDC_ERROR_S_PRINCIPAL_UNKNOWN"|KDCSVC|Enables you to add a Windows Server 2012 failover cluster. Install on every domain controller that is running Windows Server 2008 Service Pack 2 (SP2) or Windows Server 2008 R2. Otherwise, Create Cluster may fail when you try to set the password for the cluster computer object, and you receive a **CreateClusterNameCOIfNotExists (6783): Unable to set password on \<ClusterName$>** error message. This hotfix is included in Windows Server 2008 R2 Service Pack 1 (SP1).|
-||||||
 
 ## Windows Server 2012 R2 Hyper-V clusters
 
@@ -57,7 +56,6 @@ In addition to the updates listed above, the following Microsoft Knowledge Base 
 |---|---|---|---|---|
 |June 21, 2017| [3145384](https://support.microsoft.com/help/3145384)|MinDiffAreaFileSize registry value limit is increased from 3 GB to 50 GB in Windows 8.1 or Windows Server 2012 R2|Volsnap.sys| Describes an update that increases the [MinDiffAreaFileSize](/windows/win32/backup/registry-keys-for-backup-and-restore#mindiffareafilesize) registry key value limit from 3 GB to 50 GB in Windows 8.1 and Windows Server 2012 R2. Before you install this update, see the "Prerequisites" section. Includes the fix from [3060678](https://support.microsoft.com/help/3060678). Available from Windows Update or for individual download from Microsoft Update Catalog. To apply this update, you must first install the update [2919355](https://support.microsoft.com/help/2919355) on Windows Server 2012 R2. |
 |September 15, 2015| [3063283](https://support.microsoft.com/help/3063283)|Update to improve the backup of Hyper-V Integrated components in Hyper-V Server 2012 R2|Hyper-V Integration Services|Increases the time-out to detect the volumes to shadow copy when the Guest OS has multiple volumes. Available for individual download. To apply this update, you must first install the update [2919355](https://support.microsoft.com/help/2919355) on Windows Server 2012 R2.|
-||||||
 
 ## References
 
