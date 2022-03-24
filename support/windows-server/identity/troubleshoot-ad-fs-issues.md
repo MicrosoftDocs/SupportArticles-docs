@@ -98,7 +98,6 @@ _Original KB number:_ &nbsp; 3079872
     |User name and password authentication|urn:oasis:names:tc:SAML:1.0:am:password|
     |SSL client authentication|urn:ietf:rfc:2246|
     |Windows-integrated authentication|urn:federation:authentication:windows|
-    |||
 
     Supported SAML authentication context classes
 
@@ -110,7 +109,6 @@ _Original KB number:_ &nbsp; 3079872
     |X.509 certificate|urn:oasis:names:tc:SAML:2.0:ac:classes:X509|
     |Integrated Windows authentication|urn:federation:authentication:windows|
     |Kerberos|urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos|
-    |||
 
     To make sure that the authentication method is supported at AD FS level, check the following.
 
@@ -210,7 +208,7 @@ _Original KB number:_ &nbsp; 3079872
 
     5. In a scenario, where you're using your email address as the login ID in Office 365, and you enter the same email address when you're redirected to AD FS for authentication, authentication may fail with a "NO_SUCH_USER" error in the Audit logs. To enable AD FS to find a user for authentication by using an attribute other than UPN or SAMaccountname, you must configure AD FS to support an alternate login ID. For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id).
 
-        *On AD FS 2012 R2*  
+        _On AD FS 2012 R2_  
 
         1. Install [Update 2919355](https://www.catalog.update.microsoft.com/Search.aspx?q=2919355).
         2. Update the AD FS configuration by running the following PowerShell cmdlet on any of the federation servers in your farm (if you have a WID farm, you must run this command on the primary AD FS server in your farm):
@@ -249,7 +247,7 @@ _Original KB number:_ &nbsp; 3079872
 
         For more information, see [AD FS 2.0: Continuously Prompted for Credentials While Using Fiddler Web Debugger](https://social.technet.microsoft.com/wiki/contents/articles/1426.ad-fs-2-0-continuously-prompted-for-credentials-while-using-fiddler-web-debugger.aspx).
 
-        *For AD FS 2012 R2*  
+        _For AD FS 2012 R2_  
 
         Run the following cmdlet to disable Extended protection:
 
@@ -344,4 +342,3 @@ _Original KB number:_ &nbsp; 3079872
     |AD FS 2.0|AD FS 2012 R2|
     |---|---|
     |<ul><li>[Description of Update Rollup 3 for Active Directory Federation Services (AD FS) 2.0](https://support.microsoft.com/help/2790338) <br/> </li> <li>[Update is available to fix several issues after you install security update 2843638 on an AD FS server](https://support.microsoft.com/help/2896713 )</li>|[December 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/help/3013769) |
-    |||

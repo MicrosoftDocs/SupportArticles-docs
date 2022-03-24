@@ -46,8 +46,7 @@ The following tables describe the accounts that are used when you post an invoic
 |Purchase Order Processing|CR|Accounts Payable|000-2100-00|
 |Fixed Assets|DR|Cost account|000-1500-00|
 |Fixed Assets|CR|Clearing account|000-1590-00|
-|||||
-
+  
 > [!NOTE]
 > The 000-1500-00 Fixed Assets account would be debited two times. To prevent it, the clearing account should be the Fixed Assets account. This setup would result in a debit entry and a credit entry to the Fixed Assets account when the asset is added in Fixed Assets. So the Fixed Assets account is only debited one time. Consider the following example.
 
@@ -57,7 +56,6 @@ The following tables describe the accounts that are used when you post an invoic
 |Purchase Order Processing|CR|Accounts Payable|000-2100-00|
 |Fixed Assets|DR|Cost account|000-1500-00|
 |Fixed Assets|CR|Clearing account|000-1500-00|
-|||||
-
+  
 - The FA-AP Post account is set up as one account, and the clearing account is set up as a different account. These two accounts should be the same account number. This account is frequently known as the trigger account.
 - There may have been adjustments made directly to a Fixed Asset account in the General Ledger. These adjustments aren't reflected in Fixed Assets.

@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4490414
 
 ## Capacity limits
 
-Although WSUS can support [100,000 clients](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939839(v=ws.10)) per server ([150,000 clients](/mem/configmgr/core/plan-design/configs/size-and-scale-numbers#software-update-point) when you use Configuration Manager), we don't recommend approaching this limit. 
+Although WSUS can support [100,000 clients](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939839(v=ws.10)) per server ([150,000 clients](/mem/configmgr/core/plan-design/configs/size-and-scale-numbers#software-update-point) when you use Configuration Manager), we don't recommend approaching this limit.
 
 Instead, consider using a configuration of 2-4 servers sharing the same SQL Server database. This way you have safety in numbers. If one server goes down, it won't immediately spoil your weekend because no client can update while you must be updated against the latest zero-day exploit.
 
@@ -46,8 +46,7 @@ Here's a summary of recommended changes, and a related screenshot. For more info
 |Ping Enabled|**False** (from default of True)|
 |Private Memory Limit (KB)|**0** (unlimited, up from the default of 1,843,200 KB)|
 |Regular Time Interval (minutes)|**0** (to prevent a recycle, and modified from the default of 1740)|
-|||
-
+  
 :::image type="content" source="media/windows-server-update-services-best-practices/advanced-settings.png" alt-text="Screenshot of the settings in the Advanced Settings window.":::
 
 In an environment that has around 17,000 updates cached, more than 24 GB of memory may be needed as the cache is built until it stabilizes (at around 14 GB).
@@ -144,9 +143,8 @@ The following table contains the list of Windows Monthly Rollups and Cumulative 
 |Windows 8.1 and Windows Server 2012 R2|[Windows 8.1 and Windows Server 2012 R2 update history](https://support.microsoft.com/help/4009470/windows-8-1-windows-server-2012-r2-update-history)|
 |Windows 10 and Windows Server 2016|[Windows 10 and Windows Server update history](https://support.microsoft.com/help/4043454/windows-10-windows-server-update-history)|
 |Windows Server 2019|[Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619)|
-|||
-
-Another point to consider is that not all updates are published so that they sync automatically to WSUS. For example, *C* and *D* week Cumulative Updates are preview updates and won't synchronize to WSUS, but must be manually imported instead. See the **Monthly quality updates** section of [Windows 10 update servicing cadence](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-10-update-servicing-cadence/ba-p/222376).
+  
+Another point to consider is that not all updates are published so that they sync automatically to WSUS. For example, _C_ and _D_ week Cumulative Updates are preview updates and won't synchronize to WSUS, but must be manually imported instead. See the **Monthly quality updates** section of [Windows 10 update servicing cadence](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-10-update-servicing-cadence/ba-p/222376).
 
 ## Using PowerShell to connect to a WSUS server
 

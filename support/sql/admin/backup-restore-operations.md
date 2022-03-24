@@ -49,7 +49,6 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
     | [304101 Backup program is unsuccessful when you back up a large system volume](https://support.microsoft.com/help/304101)||
     | [2455009 FIX: Slow performance when you recover a database if there are many VLFs inside the transaction log in SQL Server 2005, in SQL Server 2008 or in SQL Server 2008 R2](https://support.microsoft.com/help/2455009)|The presence of many virtual log files could affect the required time to restore a database. This is especially true during the recovery phase of the restore operation. For information about other possible issues that can be caused by the presence of many VLFs, see [Database operations take a long time to complete, or they trigger errors when the transaction log has numerous virtual log files](https://support.microsoft.com/help/2028436).|
     |A backup or restore operation to a network location is slow|Isolate the issue to the network by trying to copy a similarly sized file to the network location from the server that's running SQL Server. Verify the performance.|
-    |||
 
 2. Check for error messages in the SQL Server error log and Windows event log for more pointers about the cause of the problem.
 
@@ -70,7 +69,7 @@ Use the following method to copy a database that's hosted on a later version of 
 
 1. Download and install the latest version of [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) on both SQL_A and SQL_B.
 1. On SQL_A, follow these steps:
-   1. Right-click <*YourDatabase*> **Tasks** > **Generate Scripts**, and select the option to script the whole database and all database objects.
+   1. Right-click <_YourDatabase_> **Tasks** > **Generate Scripts**, and select the option to script the whole database and all database objects.
    1. On the **Set Scripting Options** screen, select **Advanced**, and then select the version of SQL_B under **General** > **Script for SQL Server Version**. Also, select the option that works best for you to save the generated scripts. Then, continue the wizard.
    1. Use the [bulk copy program utility (bcp)](/sql/tools/bcp-utility#examples) to copy data from different tables.
 1. On SQL_B, follow these steps:
@@ -108,7 +107,7 @@ If you receive error messages that indicate a file issue, this is symptomatic of
 
 These issues can occur because of issues that affect the underlying hardware (hard disks, network storage, and so on) or that are related to a virus or malware. Review Windows System event logs and hardware logs for reported errors, and take appropriate action (for example: upgrade firmware, or fix networking issues).
 
-To prevent these errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server). 
+To prevent these errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
 
 You can also enable trace flag 3023 to enable a checksum when you run backups by using backup tools. For more information, see [How to enable the CHECKSUM option if backup utilities do not expose the option](https://support.microsoft.com/topic/how-to-enable-the-checksum-option-if-backup-utilities-do-not-expose-the-option-0d5efb4c-5dfc-0122-c7e3-312a5dd5af3b).
 
@@ -164,7 +163,6 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
   |Third-party backups that are made by using VSS writer may fail and return 8229 errors.| [2987610 FIX: Error when you back up a database that has case-sensitive collation by using VSS in SQL Server 2012 SP2](https://support.microsoft.com/help/2987610) |
   | Understanding how VDI backup works |[How It Works: SQL Server - VDI (VSS) Backup Resources](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-vdi-vss-backup-resources/ba-p/315695) |
   |Azure Site recovery agent reports failure | [ASR Agent or other non-component VSS backup fails for a server hosting SQL Server 2008 R2](https://support.microsoft.com/help/4504103) |
-  |||
 
 ### More resources
 
@@ -177,8 +175,7 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 |Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following:<br/><br/>"Error: 3999, Severity: 17, State: 1. <br/><br/>\<Time Stamp\> spid \<spid\> Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for more information."<br/><br/><br/>|See the following Microsoft Knowledge Base articles:<ul><li> [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)</li><li> [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910) </li><li> [2522893 FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)</li><ul> |
 |Issues restoring backups of encrypted databases| [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server) |
 |Trying to restore a CRM backup from the Enterprise edition fails on a Standard edition| [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984) |
-|||
-
+  
 ## FAQ about SQL Server backup and restore operations
 
 #### How can I check the status of a backup operation?

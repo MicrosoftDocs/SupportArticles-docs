@@ -138,7 +138,6 @@ To resolve this problem, re-create the **Posting Definitions Master** table (SY0
             |Revenue Recognition|PA Revenue Recog Transactions|
             |Employee Expense|PA Employee Expense Transactions|
             |Billing Batches|PA Billing Transactions|
-            |||
 
         3. Repeat step 2 by selecting the next applicable table that is listed in that step. Repeat step 2 as many times as required to insert all the applicable tables. Then, click **OK**.
         4. In the **Report Destination** dialog box, click to select the **Screen** check box, and then click **OK**.

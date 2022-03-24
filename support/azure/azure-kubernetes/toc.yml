@@ -93,6 +93,8 @@
     href: error-code-vmextensionprovisioningtimeout.md
   - name: ZonalAllocationFailed or AllocationFailed error code
     href: error-code-zonalallocationfailed-allocationfailed.md
+  - name: Troubleshooting upgrade errors
+    href: troubleshoot-upgrade-errors.md
 
 - name: Data collection guide
   items:

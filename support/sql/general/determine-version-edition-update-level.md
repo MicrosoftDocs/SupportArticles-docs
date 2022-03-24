@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 321185
 
 ## Summary
 
-- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. **[Click to download this Excel file now](https://aka.ms/SQLServerbuilds)**. (File name: *SQL Server Builds V3.xlsx*)
+- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. **[Click to download this Excel file now](https://aka.ms/SQLServerbuilds)**. (File name: _SQL Server Builds V3.xlsx_)
 
 - To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the [SQL Server Complete Version](https://support.microsoft.com/help/321185/#completeversion) list tables.
 
@@ -54,7 +54,7 @@ To determine the version of SQL Server, you can use any of the following methods
 
 - **Method 1:** Connect to the server by using Object Explorer in SQL Server Management Studio. After Object Explorer is connected, it will show the version information in parentheses, together with the user name that is used to connect to the specific instance of SQL Server.
 
-- **Method 2:** Look at the first few lines of the Errorlog file for that instance. By default, the error log is located at `Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG` and *ERRORLOG.n* files. The entries may resemble the following:
+- **Method 2:** Look at the first few lines of the Errorlog file for that instance. By default, the error log is located at `Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG` and _ERRORLOG.n_ files. The entries may resemble the following:
 
   ```output
   2011-03-27 22:31:33.50 Server Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
@@ -113,10 +113,10 @@ To determine the version of SQL Server, you can use any of the following methods
   - The edition (for example, Enterprise)
 
   For example, the results resemble the following.
-
-  | 14.0.2027.2|RTM| Developer Edition (64-bit) |
+  
+  |product version|product level|edition|
   |---|---|---|
-  ||||  
+  | 14.0.2027.2|RTM| Developer Edition (64-bit) |
 
   > [!NOTE]
   >
@@ -169,7 +169,6 @@ To determine the version of SQL Server Analysis Services, use one of the followi
   |2016| `%ProgramFiles%\Microsoft SQL Server\MSAS13.InstanceName\OLAP\Bin\MSMDSrv.exe`|
   |2014| `%ProgramFiles%\Microsoft SQL Server\MSAS12.InstanceName\OLAP\Bin\MSMDSrv.exe`|
   |2012|`%ProgramFiles%\Microsoft SQL Server\MSAS11.InstanceName\OLAP\Bin\MSMDSrv.exe` |
-  |||
 
 - **Method 3:** Use the registry subkeys that are listed in the following table.
 
@@ -180,7 +179,6 @@ To determine the version of SQL Server Analysis Services, use one of the followi
   |2016|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS13.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS13.InstanceName \Setup Keys: PatchLevel , Version, Key Edition`|
   |2014|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS12.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS12.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`|
   |2012|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS11.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS11.InstanceName \Setup Keys: PatchLevel , Version, Key Edition` |
-  |||
 
   For more information about verifying Analysis Services build versions review [Verify Analysis Services cumulative update build version](/analysis-services/instances/analysis-services-component-version).
 
@@ -235,7 +233,7 @@ You can use one of the following methods to determine the version of the full-te
 
   In this example entry, the third line (Patchlevel) indicates the current build of full-text search component that is installed, and the fourth line (Version) usually shows the original version of full-text search that is installed. In this case, it is SQL Server 2008 R2.
 
-- **Method 3:** Use the *Summary.txt* file that is created during setup. For SQL Server 2008 R2 and later versions, this file is located in the following folder:
+- **Method 3:** Use the _Summary.txt_ file that is created during setup. For SQL Server 2008 R2 and later versions, this file is located in the following folder:
 
   `%ProgramFiles%\Microsoft SQL Server\<nnn>\Setup Bootstrap\LOG\Summary.txt`
 
@@ -277,7 +275,6 @@ To determine the version of SQL Server Native Client, use one of the following m
   |SQL Server 2012, SQL Server 2014 and SQL Server 2016/ SQL Server Native Client 11.0 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI11\CurrentVersion|
   |SQL Server 2008 & SQL Server 2008 R2/</br> SQL Server Native Client 10 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI10\CurrentVersion|
   |SQL Server 2005/</br>SQL Server Native Client 9|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Native Client\CurrentVersion|
-  |||
 
 ## SQL Server Browser
 
@@ -337,6 +334,7 @@ To find the version of PolyBase installed and its related features in RHEL, try 
 yum info mssql-server-polybase
 yum info mssql-server-polybase-hadoop
 ```
+
 ```bash
 yum list installed *polybase*
 ```
@@ -384,7 +382,6 @@ apt-get list --installed | --grep mssql
 |10.00.x.x|SQL Server 2008|
 |9.00.x.x|SQL Server 2005|
 |8.00.x.x|SQL Server 2000|
-|||  
 
 ## Frequently used terms and acronyms  
 
@@ -445,7 +442,6 @@ For more information, go to the following websites:
 |15.0.4003.23|None| CU1| [4527376](https://support.microsoft.com/help/4527376)|January 07, 2020|
 |15.0.2070.41|None| GDR1| [4517790](https://support.microsoft.com/help/4517790)|November 04, 2019|
 |15.0.2000.5|None| RTM|NA|November 04  2019|
-||||||
 
 ### SQL Server 2017
 
@@ -483,7 +479,6 @@ For more information, go to the following websites:
 |14.0.3015.40|None| CU3| [4052987](https://support.microsoft.com/help/4052987)|January 04, 2018|
 |14.0.3008.27|None| CU2| [4052574](https://support.microsoft.com/help/4052574)|November 28, 2017|
 |14.0.3006.16|None| CU1| [4038634](https://support.microsoft.com/help/4038634)|October 24, 2017|
-||||||
 
 ### SQL Server 2016
 
@@ -537,7 +532,6 @@ For more information, go to the following websites:
 |13.0.2186.6|RTM| CU3| [3205413](https://support.microsoft.com/help/3205413)|November 16, 2016|
 |13.0.2164.0|RTM| CU2| [3182270](https://support.microsoft.com/help/3182270)|September 22, 2016|
 |13.0.2149.0|RTM| CU1| [3164674](https://support.microsoft.com/help/3164674)|July 25, 2016|
-||||||
 
 ### SQL Server 2014
 
@@ -604,7 +598,6 @@ For more information, go to the following websites:
 |12.0.2269.0|RTM| MS15-058: GDR Security Update| [3045324](https://support.microsoft.com/help/3045324)|July 14, 2015|
 |12.0.2254.0|RTM| MS14-044: GDR Security Update| [2977315](https://support.microsoft.com/help/2977315)|August 12, 2014|
 |12.0.2000.8|RTM|||April 01, 2014|
-||||||
 
 ### SQL Server 2012
 
@@ -671,7 +664,6 @@ For more information, go to the following websites:
 |11.0.2316.00|RTM|CU1| [2679368](https://support.microsoft.com/help/2679368)|April 12, 2012|
 |11.0.2218.00|RTM| MS12-070: GDR Security Update| [2716442](https://support.microsoft.com/help/2716442)|October 9, 2012|
 |11.0.2100.60|RTM|||March 6, 2012|
-||||||
 
 ### SQL Server 2008 R2
 
@@ -727,7 +719,6 @@ For more information, go to the following websites:
 |10.50.1702.00|RTM|CU1| [981355](https://support.microsoft.com/help/981355)|May 18, 2010|
 |10.50.1617.00|RTM| MS11-049: GDR Security Update| [2494088](https://support.microsoft.com/help/2494088)|June 14, 2011|
 |10.50.1600.1|RTM|||May 10, 2010|
-||||||
 
 ### SQL Server 2008
 
@@ -792,7 +783,6 @@ For more information, go to the following websites:
 |10.00.1779.00|RTM|CU2| [958186](https://support.microsoft.com/help/958186)|November 19, 2008|
 |10.00.1763.00|RTM|CU1| [956717](https://support.microsoft.com/help/956717)|September 22, 2008|
 |10.00.1600.22|RTM|||August 6, 2008|
-||||||
 
 ### SQL Server 2005
 
@@ -819,7 +809,6 @@ For more information, go to the following websites:
 |9.00.3042| SP2|| [937137](https://support.microsoft.com/help/937137)| |
 |9.00.2047| SP1||| |
 |9.00.1399| RTM||| |
-||||||
 
 ### SQL Server 2000
 
@@ -839,7 +828,6 @@ For more information, go to the following websites:
 |8.00.534| SQL Server 2000 SP2 |
 |8.00.384| SQL Server 2000 SP1 |
 |8.00.194| SQL Server 2000 RTM or MSDE 2.0 |
-|||
 
 Older versions of SQL Server
 
@@ -854,7 +842,6 @@ Use the version number in the following table to identify the product or service
 |7.00.842|SQL Server 7.0 Service Pack 2|
 |7.00.699|SQL Server 7.0 Service Pack 1|
 |7.00.623|SQL Server 7.0 RTM|
-|||
 
 ### SQL Server 6.5
 
@@ -870,4 +857,3 @@ Use the version number in the following table to identify the product or service
 |6.50.240|SQL Server 6.5 Service Pack 2|
 |6.50.213|SQL Server 6.5 Service Pack 1|
 |6.50.201|SQL Server 6.5 RTM|
-|||

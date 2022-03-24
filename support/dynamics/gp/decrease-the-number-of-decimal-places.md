@@ -56,7 +56,6 @@ To resolve this issue, follow these steps.
     |3|4|
     |4|5|
     |5|6|
-    |||
 
 > [!NOTE]
 > If you are using SQL Server Desktop Engine (also known as MSDE 2000), use the Support Administrator Console. For more information about how to do this, contact Microsoft Business Solutions Technical Support at 1-888-477-7877.

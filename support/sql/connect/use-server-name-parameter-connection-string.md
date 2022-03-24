@@ -117,7 +117,6 @@ The following code samples demonstrate how to use the value of the server parame
     |ncacn_np|Named Pipes|
     |ncacn_ip_tcp|Transmission Control Protocol/Internet Protocol (TCP/IP)|
     |ncalrpc|Local procedure call|
-    |||
 
 - Shared Memory:
 

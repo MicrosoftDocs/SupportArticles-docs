@@ -92,8 +92,7 @@ Azure AD Connect implements the synchronization of **PwdLastSet** attribute by u
 |---|---|
 |In from AD|User Common Imports on-premises AD **PwdLastSet** attribute to Metaverse **PwdLastSet** attribute.|
 |Out of Azure AD|User Join Exports Metaverse PwdLastSet<br/>attribute to **Azure AD LastPasswordChangeTimestamp** attribute.|
-|||
-
+  
 In the following screen shot, you can see how the attribute flow is implemented in both synchronization rules by using the Azure AD Connect Synchronization Rules Editor.
 
 :::image type="content" source="media/federated-users-forced-sign-in/synchronization-rules.png" alt-text="Screenshot of the Azure AD Connect Synchronization Rules Editor.":::

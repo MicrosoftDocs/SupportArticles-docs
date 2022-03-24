@@ -18,7 +18,7 @@ productDirectory:
     summary: Troubleshooting articles for Power Automate
     url: power-automate/welcome-power-automate.yml
   - title: AI Builder
-    imageSrc: "../media/hub-landing/ai-builder.png"
+    imageSrc: "../media/hub-landing/ai-builder.svg"
     summary: Troubleshooting articles for AI Builder
     url: ai-builder/welcome-ai-builder.yml
 

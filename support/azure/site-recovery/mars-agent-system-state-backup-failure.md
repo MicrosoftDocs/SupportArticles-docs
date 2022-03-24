@@ -43,7 +43,7 @@ To make sure that the file specification is updated, follow these steps:
 
     > Error in backup of c:\windows\\systemroot\  during enumerate: Error [0x8007007b] The filename, directory name, or volume label syntax is incorrect.
 
-2. Run the following command at an elevated command prompt: 
+2. Run the following command at an elevated command prompt:
 
     ```console
     diskshadow /l Output_File_Path
@@ -86,5 +86,5 @@ To make sure that the file specification is updated, follow these steps:
     |Before change|After change|
     |---|---|
     |:::image type="content" source="media/mars-agent-system-state-backup-failure/imagepath-value-before.png" alt-text="Screenshot of the search results for the imagepath before change.":::<br/>|:::image type="content" source="media/mars-agent-system-state-backup-failure/imagepath-value-after.png" alt-text="Screenshot of the search results for the imagepath after change.":::<br/>|
-    |||
+
 10. Go back to the MARS Agent console and start a System State Backup by clicking **Back Up Now**.
