@@ -68,7 +68,7 @@ You can use the `az vm encryption show` command to check whether ADE is enabled 
 az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
 ```
 
-For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
+For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az-vm-encryption-show).
 
 > [!NOTE]
 > If ADE is not enabled on the disk, see the following article to learn how to attach a disk to a repair VM:

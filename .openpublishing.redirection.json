@@ -11,6 +11,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/active-directory/installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
@@ -2353,6 +2358,11 @@
     {
       "source_path": "support/sql/connect/resolving-connectivity-errors.md",
       "redirect_url": "/troubleshoot/sql/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/build-software-inventory-power-bi.md",
+      "redirect_url": "/mem/intune/fundamentals/reports#app-install-status-report-operational",
       "redirect_document_id": false
     },
     {

@@ -10,22 +10,22 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationPreempted error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the OperationPreempted error code
-
-This article describes how to identify and resolve the `OperationPreempted` error, which might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+ 
+This article discusses how to identify and resolve the `OperationPreempted` error that might occur when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
-When you try to deploy the cluster, you receive the following error message:
+When you try to deploy an AKS cluster, you receive the following error message:
 
 > This operation has been preempted by Deleting operation.
 
 ## Cause
 
-In most cases, this error occurs when an in-progress create operation was interrupted by a subsequent delete operation that was issued before the create cluster operation has completed.
+This error usually occurs when an in-progress create operation is interrupted by a subsequent delete operation that was issued before the create cluster operation is finished.
 
 ## Solution
 
-Retry the operation after the delete operation is completed.
+Retry the operation after the delete operation finishes.
 
 ## More information
 
