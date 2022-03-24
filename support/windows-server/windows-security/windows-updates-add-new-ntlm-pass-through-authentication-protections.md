@@ -76,7 +76,7 @@ If either Netlogon event ID 5832 or Netlogon event ID 5833 is logged and you nee
 
 When an error code is included in some of the failure related events, you need enable tracing for further investigations.
 
-## Improvements of Netlogon logging and LSA logging
+## Improvements to Netlogon logging and LSA logging
 
 Netlogon logging (*%windir%\\debug\\netlogon.log*) and LSA logging (*lsp.log*) are improved to support the improvements in the updates.
 
@@ -128,7 +128,7 @@ Netlogon logging (*%windir%\\debug\\netlogon.log*) and LSA logging (*lsp.log*) a
     reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /V LspDbgInfoLevel /t REG_DWORD /d 0x0 /f
     ```
 
-## Improvements of nltest.exe and netdom.exe tools
+## Improvements to nltest.exe and netdom.exe tools
 
 The *nltest.exe* and *netdom.exe* tools are improved to support the improvements in this update.
 
@@ -254,7 +254,7 @@ If authentications over an RODC secure channel trust fail, contact Microsoft sup
 
 If PDC trust scanner fails, the mitigation depends on specific context. For example, DCs in a trusted forest aren't granted LDAP query permissions on the Configuration naming context (NC) of the trusting forest. The mitigation is to grant the permissions.
 
-## References
+### References
 
 For more information about the specific technical details, see:
 
