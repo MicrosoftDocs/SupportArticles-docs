@@ -51,7 +51,6 @@ To resolve this issue, edit the CSV file to set the `ForceChangePassword` field 
 |EmailAddress|Password|ForceChangePassword|
 |---|---|---|
 |joe@contoso.com|<*Password*>|False|
-||||
 
 ## More information
 

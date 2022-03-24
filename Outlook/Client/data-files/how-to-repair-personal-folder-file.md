@@ -58,7 +58,6 @@ To start the Inbox Repair tool manually, locate one of the folders by using Micr
 | \<disk drive>:\Program Files\Common Files\System\MSMAPI\1033| Other typical location |
 | \<disk drive>:\Program Files\Common Files\System\Mapi\1033\NT| Other typical location (for Windows NT and Windows 2000) |
 | \<disk drive>:\Program Files\Common Files\System\Mapi\1033\95| Other typical location (for Windows 95 and Windows 98) |
-|||
 
 (Can't find the Inbox Repair tool?)
 

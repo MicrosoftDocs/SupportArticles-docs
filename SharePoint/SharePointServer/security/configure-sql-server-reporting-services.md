@@ -48,7 +48,6 @@ As a best practice Reporting Services should run under its own domain identity. 
 |---|---|
 |SharePoint Server Service| IIS App Pool Identity |
 |SQL Server Reporting Services|vmlab\svcRS2012|
-|||
 
 > [!NOTE]
 > You can optionally reuse a single domain account for multiple services. This configuration is not covered in the following sections.
@@ -78,7 +77,6 @@ In our example, the following delegation paths are defined:
 |---|---|
 |User|Vmlab\svcC2WTS|
 |User|vmlab\svcRS2012|
-|||
 
 To configure constrained delegation, follow these steps:
 

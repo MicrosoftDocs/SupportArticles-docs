@@ -71,7 +71,6 @@ The following table describes the characters of the GUID.
 |000|Reserved for future use, currently 0|0|
 |D|1 for debug, 0 for ship|0-1|
 |000000FF1CE|Office Family ID|0-9|
-|||
 
 To view the GUIDs for the Office 2013 suites and programs that are installed on a computer, follow these steps: 
 
@@ -109,7 +108,7 @@ The release version values specify the level of the release, such as a beta vers
 The release type specifies the audience for a 2013 Office suite, such as enterprise or retail. The following table contains more information about the 2013 Office suite release types. 
 
 |Value|Release type|
-|--|--||
+|--|--|
 |0|Volume license|
 |1|Retail/OEM|
 |2|Trial|

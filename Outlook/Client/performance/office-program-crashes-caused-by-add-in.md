@@ -130,4 +130,3 @@ Below is some additional information related to the `SendToBluetooth` add-in.
 | Internal Name|btmoffice.dll|
 | Legal Copyright|Copyright 2011 Motorola Solutions, Inc.|
 | Original Filename|btmoffice.dll|
-|||

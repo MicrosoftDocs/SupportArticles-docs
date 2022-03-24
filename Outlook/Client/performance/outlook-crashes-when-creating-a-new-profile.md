@@ -38,7 +38,6 @@ When you try to create a new Microsoft Outlook 2016 profile, Outlook crashes. Ad
 |outlook.exe|16.0.4288.1000|olmapi32.dll|16.0.4288.1000|0x00169596|
 |outlook.exe|16.0.4266.1001|olmapi32.dll|16.0.4266.1001|0x00000000001D9071|
 |outlook.exe|16.0.4288.1000|olmapi32.dll|16.0.4288.1000|0x00000000001DA66D|
-||||||
 
 ## Cause
 
