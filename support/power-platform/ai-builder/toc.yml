@@ -1,7 +1,32 @@
 - name: AI Builder Troubleshooting
   href: welcome-ai-builder.yml
   items:
-  - name: TO DO
+  - name: Administration
     items:
     - name: TO DO
       href: ""
+  - name: Licensing
+    items:
+    - name: TO DO
+      href: ""
+  - name: Models
+    items:
+    - name: TO DO
+      href: ""
+  - name: General troubleshooting
+    items:
+    - name: TO DO
+      href: ""
+  - name: Problem resolution
+    items:
+    - name: TO DO
+      href: ""
+  - name: Known issues
+    items:
+    - name: TO DO
+      href: ""
+  - name: Error code lists
+    items:
+    - name: TO DO
+      href: ""
+      
