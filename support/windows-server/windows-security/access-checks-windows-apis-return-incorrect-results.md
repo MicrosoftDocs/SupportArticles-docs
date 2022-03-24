@@ -30,7 +30,7 @@ Assume that you want to determine a user's effective access to a resource. You c
   - **AuthzAccessCheck**
   - **AuthzCachedAccessCheck**
 
-You may observe an issue when you use the **Effective Access** tab or when you use the API calls under either of the following conditions:
+You may observe an issue when you use the **Effective Access** tab. You may also observe the issue when you use the API calls under either of the following conditions:
 
 - The application makes the calls remotely from the resource server.
 - The user account that is running the application isn't in the same domain as the resource.
