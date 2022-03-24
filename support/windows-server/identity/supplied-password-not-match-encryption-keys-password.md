@@ -59,4 +59,3 @@ Whoami /groups output:
 | BUILTIN\Administrators| Alias| S-1-5-32-544| Group used for deny only |
 | BUILTIN\Users| Alias| S-1-5-32-545| Mandatory group, Enabled by default, Enabled group |
 | ....||| |
-|||||

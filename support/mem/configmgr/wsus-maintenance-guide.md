@@ -42,8 +42,8 @@ For more information about software update maintenance in Configuration Manager,
     :::image type="content" source="media/wsus-maintenance-guide/sync-schedule-setting.png" alt-text="Screenshot of the Enable synchronization on a schedule setting.":::
 
 1. If you have multiple SUPs of the primary site or central administration sit (CAS) which don't share the SUSDB, consider the WSUS server that syncs with the first SUP on the site as residing in a tier below the site. For example, my CAS site has two SUPs:
-   - The one named *New* syncs with Microsoft Update, it would be my top tier (Tier1).
-   - The server named *2012* syncs with *New*, and it would be considered in the second tier. It can be cleaned up at the same time I would do all my other Tier2 servers, such as my primary site's single SUP.
+   - The one named _New_ syncs with Microsoft Update, it would be my top tier (Tier1).
+   - The server named _2012_ syncs with _New_, and it would be considered in the second tier. It can be cleaned up at the same time I would do all my other Tier2 servers, such as my primary site's single SUP.
 
     :::image type="content" source="media/wsus-maintenance-guide/multiple-sups.png" alt-text="Screenshot of the two example SUPs.":::
 
@@ -168,7 +168,7 @@ If you are using Configuration Manager current branch version 1906 or a later ve
 
 When you use this option, you can see how many updates were declined by reviewing the WsyncMgr.log file after the synchronization process finishes. If you use this option, you don't need to use the script described later in this section (either by manually running it or by setting up as task to run it on a schedule).
 
-If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](decline-superseded-updates.md). Then, copy and save the script as a *Decline-SupersededUpdatesWithExclusionPeriod.ps1* script file.
+If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](decline-superseded-updates.md). Then, copy and save the script as a _Decline-SupersededUpdatesWithExclusionPeriod.ps1_ script file.
 
 > [!NOTE]
 > This script is provided as is. It should be fully tested in a lab before you use it in production. Microsoft makes no guarantees regarding the use of this script in any way. Always run the script with the `-SkipDecline` parameter first, to get a summary of how many superseded updates will be declined.
@@ -252,7 +252,7 @@ After superseded updates have been declined, for best performance, SUSDB should 
 
 ## Troubleshooting
 
-### HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out!
+### HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out
 
 There are two different options here:
 
@@ -292,7 +292,7 @@ DROP TABLE #results
 
 If errors occur when you attempt to use the PowerShell script to decline superseded updates, an alternative SQL script can be run against SUDB.
 
-1. If Configuration Manager is used along with WSUS, check **Software Update Point Component Properties** > **Supersedence Rules** to see how quickly superseded updates expire, such as immediately or after *X* months. Make a note of this setting.
+1. If Configuration Manager is used along with WSUS, check **Software Update Point Component Properties** > **Supersedence Rules** to see how quickly superseded updates expire, such as immediately or after _X_ months. Make a note of this setting.
 
     :::image type="content" source="media/wsus-maintenance-guide/supersedence-rule.png" alt-text="Screenshot of the Supersedence Rules.":::
 
@@ -419,7 +419,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
     :::image type="content" source="media/wsus-maintenance-guide/add-line.png" alt-text="Screenshot shows WSUS add a line of script to start the task.":::
 
 3. On the **Triggers** tab, set your schedule for once a month or on any schedule you want. Again, you must ensure that you don't sync your WSUS during the entire cleanup and reindex time.
-    
+
     :::image type="content" source="media/wsus-maintenance-guide/edit-trigger.png" alt-text="Screenshot shows Set the WSUS Edit Trigger for the task.":::
 
 4. Set any other conditions or settings you would like to tweak as well. When you save the task, you may be prompted for credentials of the **Run As** user.
@@ -428,7 +428,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 ### Setting up the SUSDB reindex for WID using SQLCMD and Task Scheduler
 
-1. Save the [Reindex the WSUS database script](reindex-the-wsus-database.md) as a .sql file (for example, *SUSDBMaint.sql*).
+1. Save the [Reindex the WSUS database script](reindex-the-wsus-database.md) as a .sql file (for example, _SUSDBMaint.sql_).
 2. Create a basic task and give it a name:
 
     :::image type="content" source="media/wsus-maintenance-guide/create-basic-task-wizard.png" alt-text="Screenshot of the WSUS Create Basic Task Wizard screen.":::
@@ -444,7 +444,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
     :::image type="content" source="media/wsus-maintenance-guide/script.png" alt-text="Screenshot shows how the script should look in the Create Basic Task Wizard.":::
 
 5. You'll get a warning, similar to the one you got when creating the cleanup task. Select **Yes** to accept the arguments, and then select **Finish** to apply:
-    
+
     :::image type="content" source="media/wsus-maintenance-guide/pop-up.png" alt-text="Screenshot of the Task Scheduler confirmation popup window." border="false":::
 
 6. You can test the script by forcing it to run and reviewing the log for errors. If you run into issues, the log will tell you why. Usually if it fails, the account running the task doesn't have appropriate permissions or the WID service isn't started.
@@ -486,7 +486,7 @@ These tasks may run faster or slower depending on the environment, and timing of
 
 Not syncing keeps the declines from accidentally flowing into my Tier3 replica WSUS servers from Tier2. I did give myself extra time between the Tier3 decline and the Tier3 cleanup since I definitely want to make sure the decline script finishes before running my cleanup.
 
-It brings up a common question: Since I'm not syncing, why shouldn't I run all of the cleanups and reindexes at the same time? 
+It brings up a common question: Since I'm not syncing, why shouldn't I run all of the cleanups and reindexes at the same time?
 
 The answer is that you probably could, but I wouldn't. If my coworker across the globe needs to run a sync, with this schedule I would minimize the risk of orphaned updates in WSUS. And I can schedule it to rerun to completion the next night.
 
@@ -499,8 +499,7 @@ The answer is that you probably could, but I wouldn't. If my coworker across the
 |2:00 AM|Tier3 Reindex|Tier2 WSUS Cleanup|
 |3:00 AM|Tier1-Cleanup|Tier2 Reindex|
 |4:00 AM|Tier1 Reindex| |
-||||
-
+  
 > [!NOTE]
 > If you're using Configuration Manager current branch version 1906 or a later version to perform WSUS Maintenance, Configuration Manager performs the cleanup after synchronization using the top-down approach. In this scenario, you can schedule the WSUS database backup and reindexing jobs to run before the configured sync schedule without worrying about any of the other steps, because Configuration Manager will handle everything else.
 

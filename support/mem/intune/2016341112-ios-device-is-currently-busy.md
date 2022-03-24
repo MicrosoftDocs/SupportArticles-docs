@@ -34,8 +34,7 @@ There are certain times when a device cannot do what the server requests. When t
 |Status value|Description|
 |---|---|
 |NotNow|The device received the command, but it cannot follow the command at this time. The device will poll the server again later.|
-|||
-
+  
 For more information about Apple's MDM protocol, see [Mobile Device Management Protocol Reference](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

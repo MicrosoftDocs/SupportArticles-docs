@@ -54,12 +54,11 @@ The following table defines common error codes. For more information about HTTP 
 |404|Not found: Missing Virtual directory or IIS configuration|
 |500|Service not available|
 |503|Busy: This can be caused by a WSUS application pool memory issue or just too many client connections. To fix the issue, increase the WSUS Application Pool Private memory limit to 4-8 GB. Some environments may require more than 8 GB; adjust this setting as needed. See [Configure an Application Pool to Recycle after Reaching Maximum Used Memory (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725749(v=ws.10)?redirectedfrom=MSDN).|
-|||
-
+  
 > [!NOTE]
 > Accessing most WSUS URLs in a browser will return a **403** error.  
 
-**503** errors in IIS may be accompanied by *xxxx2ee2* errors in the `c:\windows\windowsupdate.log` file on clients.
+**503** errors in IIS may be accompanied by _xxxx2ee2_ errors in the `c:\windows\windowsupdate.log` file on clients.
 
 To resolve **503** IIS errors, a client time-out, or a large number of roundtrip errors, see [The complete guide to WSUS and Configuration Manager SUP maintenance](./wsus-maintenance-guide.md).
 

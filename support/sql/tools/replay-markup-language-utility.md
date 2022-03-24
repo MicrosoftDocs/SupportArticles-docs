@@ -46,20 +46,19 @@ After you capture a trace for an instance of SQL Server, you can use RML Utiliti
 |9.01.0109| Is the previous web release that supports SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
 |9.00.0023| Is the previous web release that supports SQL Server 2005 and SQL Server 2000.|
 |8.10.0010| Is the initial web release that supports SQL Server 2000 and SQL Server 7.0.|
-|||
-
+  
 The current version of RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of RML Utilities for SQL Server before you install the current version. The current version of the tool suite contains important software updates, improved features (process .trc and .xel files) and reports, and performance and scalability improvements.
 
 ## Obtain the RML Utilities for SQL Server
 
 After you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090), you will find the RML tools (`ReadTrace` and `OStress`) present in the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
 
-If you're using the RML tools together with the [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) tool, you can obtain `ReadTrace` and `ostress` from https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097.
+If you're using the RML tools together with the [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) tool, you can obtain `ReadTrace` and `ostress` from <https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097>.
 
 RML Utilities for SQL Server is available for download from the [Microsoft Download Center](https://download.microsoft.com/download/7/A/D/7ADE5D8B-47AB-4E94-BAD0-5416D6B6D383/RMLSetup.msi).
 
 > [!NOTE]
-> Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) does not provide support or updates for the RML Utilities for SQL Server. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" topic in the Help file (*RML Help.pdf*). The Help file is included together with the RML Utilities for SQL Server.
+> Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) does not provide support or updates for the RML Utilities for SQL Server. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" topic in the Help file (_RML Help.pdf_). The Help file is included together with the RML Utilities for SQL Server.
 
 ## Benefits of RML Utilities for SQL Server
 
@@ -79,17 +78,21 @@ RML Utilities for SQL Server contains the following tools:
 For a complete description of every tool and sample usage, see the RML Help file that's included in RML Utilities for SQL Server.
 
 ## Dependencies for RML Utilities for SQL Server
+
 > [!IMPORTANT]
-> The applications that are provided as part of the RML tool suite require that several additional dependencies be available. 
-> 
+> The applications that are provided as part of the RML tool suite require that several additional dependencies be available.
+>
 ### Dependencies for Reporter
+
 You have to make sure that the Report Viewer controls are available either in the same folder as Reporter.exe or in the Global Assembly Cache (GAC). The DLLs that Reporter.exe requires are:
+
 - Microsoft.ReportViewer.Common.dll
 - Microsoft.ReportViewer.DataVisualization.dll
 - Microsoft.ReportViewer.ProcessingObjectModel.dll
 - Microsoft.ReportViewer.WinForms.dll
 
 You can download these DLLs by using the following PowerShell script:
+
 ```powershell
 Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
 Get-PackageSource
@@ -117,11 +120,11 @@ Make sure that the compression and decompression controls are available either i
 
 You can obtain these DLLs from the respective software packages of the vendors.
 
-- https://www.rarlab.com/rar/UnRARDLL.exe
+- <https://www.rarlab.com/rar/UnRARDLL.exe>
 
-- https://www.7-zip.org/a/7z1900-x64.exe
+- <https://www.7-zip.org/a/7z1900-x64.exe>
 
-- https://www.nuget.org/packages/Xceed.Products.Zip.Full/
+- <https://www.nuget.org/packages/Xceed.Products.Zip.Full/>
 
 ## Examples
 

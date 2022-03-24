@@ -74,8 +74,8 @@ To resolve this problem, follow these steps:
 2. When the BIOS information appears, press F8.
 3. Select **Directory Services Restore Mode**, and then press ENTER.
 4. Log on by using the Directory Services Restore Mode password.
-5. Click **Start**, select **Run**, type *cmd* in the **Open** box, and then click **OK**.
-6. At the command prompt, type *ntdsutil files info*.
+5. Click **Start**, select **Run**, type _cmd_ in the **Open** box, and then click **OK**.
+6. At the command prompt, type _ntdsutil files info_.
 
     Output that is similar to the following appears:
 
@@ -115,7 +115,6 @@ To resolve this problem, follow these steps:
     |Administrators|Full Control|This folder, subfolders, and files|
     |Creator Owner|Full Control|Subfolders and Files only|
     |Local Service|Create Folders / Append Data|This folder and subfolders|
-    ||||
 
     **Windows 2000**
 
@@ -123,7 +122,7 @@ To resolve this problem, follow these steps:
     |---|---|---|
     |Administrators|Full Control|This folder, subfolders, and files|
     |System|Full Control|This folder, subfolders, and files|
-    ||||
+
     > [!NOTE]
     > Additionally, the System account requires Full Control permissions on the following folders:
     >
@@ -131,7 +130,7 @@ To resolve this problem, follow these steps:
     > - The %WINDIR% folder
     >
     > In Windows Server 2003, the default location of the %WINDIR% folder is C:\WINDOWS. In Windows 2000, the default location of the %WINDIR% folder is C:\WINNT.
-9. Check the integrity of the Active Directory database. To do this, type *ntdsutil files integrity* at the command prompt.
+9. Check the integrity of the Active Directory database. To do this, type _ntdsutil files integrity_ at the command prompt.
 
     If the integrity check indicates no errors, restart the domain controller in normal mode. If the integrity check doesn't finish without errors, continue to the following steps.
 10. Perform a semantic database analysis. To do this, type the following command at the command prompt, including the quotation marks:
@@ -168,9 +167,9 @@ To resolve this problem, follow these steps:
 
     [Contact Microsoft Support](https://support.microsoft.com/contactus/)
 
-    On a Windows 2000 Server-based domain controller, use Ntdsutil to recover the Active Directory database. To do this, type *ntdsutil files repair* at a command prompt in Directory Service Restore Mode.
+    On a Windows 2000 Server-based domain controller, use Ntdsutil to recover the Active Directory database. To do this, type _ntdsutil files repair_ at a command prompt in Directory Service Restore Mode.
 
-    To perform a lossy repair of a Windows Server 2003-based domain controller, use the Esentutl.exe tool to recover the Active Directory database. To do this, type *esentutl /p* at a command prompt on the Windows Server 2003-based domain controller.
+    To perform a lossy repair of a Windows Server 2003-based domain controller, use the Esentutl.exe tool to recover the Active Directory database. To do this, type _esentutl /p_ at a command prompt on the Windows Server 2003-based domain controller.
 16. After the repair operation is complete, rename the .log files in the NTDS folder by using a different extension such as .bak, and try to start the domain controller in normal mode.
 17. If you can start the domain controller in normal mode after the repair, migrate relevant Active Directory objects to a new forest as soon as possible. Because this lossy repair method fixes corruption by deleting data, it can cause later problems that are extremely difficult to troubleshoot. At the first opportunity after the repair, you must rebuild the domain to bring Active Directory back to a supported configuration.
 

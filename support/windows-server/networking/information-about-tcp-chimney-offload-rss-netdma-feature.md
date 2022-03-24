@@ -78,8 +78,7 @@ When the TCP Chimney Offload technology offloads TCP/IP processing for a given T
 |Network Load Balancing (NLB) service|No|If you configure the NLB service on a server, the TCP/IP stack does not offload TCP connections.|
 |Cluster service|Yes|However, note that TCP connections using the Network Fault Tolerant driver (NetFT.sys) will not be offloaded. NetFT is used for fault-tolerant inter-node cluster communication.|
 |Network Address Translation (NAT) service (also known as the Internet Connection Sharing service)|No|If this service is installed and running, the TCP/IP stack does not offload connections.|
-||||
-
+  
 ## How to determine whether TCP Chimney Offload is working
 
 When TCP Chimney Offload is enabled in the operating system and in the network adapter, the TCP/IP stack tries to offload suitable TCP connections to the network adapter. To find out which of the currently established TCP connections on the system are offloaded, follow these steps:
@@ -132,15 +131,15 @@ Receive-Side Scaling State: enabled
 
 To enable or disable NetDMA, follow these steps:
 
-1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
+1. Click **Start**, click **Run**, type _regedit_, and then click **OK**.
 2. Locate the following registry subkey, and then click it:  
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 3. Double-click the **EnableTCPA** registry entry.
 
     > [!NOTE]
     > If this registry entry does not exist, right-click **Parameters**, point to **New**, click **DWORD Value**, type EnableTCPA , and then press ENTER.
-4. To enable NetDMA, type *1* in the **Value data** box, and then click **OK**.
-5. To disable NetDMA, type *0* in the **Value data** box, and then click **OK**.
+4. To enable NetDMA, type _1_ in the **Value data** box, and then click **OK**.
+5. To disable NetDMA, type _0_ in the **Value data** box, and then click **OK**.
 6. If the EnableTCPA registry entry does not exist, enable the NetDMA functionality.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)] 
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

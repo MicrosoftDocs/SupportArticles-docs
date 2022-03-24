@@ -34,7 +34,6 @@ The following tables list the EFT for Payables Management table mapping and the 
 |Core|cmEFTLog|ME234604|Company|CM90001|
 |Core|AddressEFT|ME27606 and ME147214|Company|SY06000|
 |Core|VAT Country Code MSTR|ME27622|Company|VAT10001|
-||||||
 
 ### EFT for Payables Management
 
@@ -46,7 +45,6 @@ The following tables list the EFT for Payables Management table mapping and the 
 |Core|ME_EFT_Log_DTL|ME234602|Company|Updated PM Elec flag in PM20000 and in PM30200|
 |Core|ME_EFT_Log_HDR|ME234603|Company|CM20203|
 |Core|ME_EFT_Log_Sent|ME234604|Company|CM90001|
-||||||
 
 ### EFT for Receivables Management
 
@@ -56,7 +54,6 @@ The following tables list the EFT for Payables Management table mapping and the 
 |Core|ME_RM_EFT_MSTR|ME147214|Company|SY06000|
 |Core|ME_RM_EFT_SETP|ME147215|Company|CM00101|
 |Core|ME_EFT_Countries|ME27622|System|VAT10001|
-||||||
 
 > [!NOTE]
 > The table mapping only displays EFT tables that were converted between versions. Any additional EFT tables for Microsoft Dynamics GP 9.0 and earlier versions that are not listed in these table mapping were not converted.

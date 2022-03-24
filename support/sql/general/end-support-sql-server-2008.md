@@ -52,8 +52,7 @@ The following table concerns products for SQL Server 2008 and SQL Server 2008 R2
 | Microsoft SQL Server 2008 Standard      | 7/9/2019 |
 | Microsoft SQL Server 2008 Web           | 7/9/2019 |
 | Microsoft SQL Server 2008 Workgroup     | 7/9/2019 |
-|||
-
+  
 We recommend that you migrate to Azure SQL DB, or upgrade to the current product versions. You should take action before the support end dates. Upgrading lets you take advantage of the latest product innovations, and ensures uninterrupted support from Microsoft.
 
 ## Resources
