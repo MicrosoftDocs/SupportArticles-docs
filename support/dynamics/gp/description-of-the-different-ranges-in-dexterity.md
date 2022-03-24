@@ -26,7 +26,7 @@ For more information about the Range Where clause, see [How to write "Passthroug
 
 For example, you can use an indexed range to find an invoice. An invoice contains information from a Header table and from a Line table. In this example, you might want to limit the lines that are visible from the Line table when a user examines a specific record from the Header table.
 
-A range is created on a single instance of a table buffer. For a range to function after you define the range, you must perform all table actions by using the same index on which the range was defined. If you need to use the same range in a function or in a procedure, you must pass the table buffer as an *inout* table parameter.
+A range is created on a single instance of a table buffer. For a range to function after you define the range, you must perform all table actions by using the same index on which the range was defined. If you need to use the same range in a function or in a procedure, you must pass the table buffer as an _inout_ table parameter.
 
 To create a range, follow these steps.
 
@@ -68,8 +68,7 @@ By default, ranges are exclusive in Microsoft SQL Server databases. Ranges are i
 |1|3|
 |2|1|
 |2|2|
-|||
-
+  
 You set up the following range on the Line table.
 
 - Start: Invoice Number = 1, Sequence Number = 1

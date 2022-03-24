@@ -26,9 +26,9 @@ In this scenario, if you try to install or upgrade SQL Server, the installation 
     ```output
     Access is denied
     ```
-    
-    You may also receive error messages that resemble the following in the *Detail.txt* file:
-    
+
+    You may also receive error messages that resemble the following in the _Detail.txt_ file:
+
     ```output
     2009-01-02 13:00:17 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' to be created  
     2009-01-02 13:00:20 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' or sql process handle to be signaled  
@@ -81,10 +81,10 @@ If you are running the setup as a local administrator, you require the following
 |**Backup files and directories**|`SeBackupPrivilege`|
 |**Debug Programs**|`SeDebugPrivilege`|
 |**Manage auditing and security log**|`SeSecurityPrivilege`|
-|||
-
+  
 > [!NOTE]
 > For more information about the permissions that are required to install SQL Server, see the "Prerequisites" section in the following articles:
+>
 > - [Planning a SQL Server Installation](/sql/sql-server/install/planning-a-sql-server-installation)
 > - [Install SQL Server from the Installation Wizard (Setup)](/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
 
@@ -94,18 +94,17 @@ If a storage option for data directory or other directories (user database direc
 |---|---|---|
 | SMB Network share folder| FULL CONTROL| SQL Server and SQL Server Agent Service account |
 | SMB File server| `SeSecurityPrivilege`| SQL setup account |
-||||
-
+  
 ## Resolution
 
 To add the rights to the setup account, follow these steps:
 
 1. Log on as an administrator.
-2. Select **Start** > **Run**, type *Control admintools*, and then select **OK**.
+2. Select **Start** > **Run**, type _Control admintools_, and then select **OK**.
 3. Double-click **Local Security Policy**.
 4. In the **Local Security Settings** dialog box, select **Local Policies**, open **User Rights Assignment**, and then double-click **Backup Files and Directories**.
 5. In the **Backup Files and Directories Properties** dialog box, select **Add User or Group**.
-6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times. 
+6. In the **Select User or Groups** dialog box, enter the user account that you want to use for setup, and then select **OK** two times.
    > [!NOTE]
    > To add the user account for the **Debug Programs** and **Manage auditing and security log** policies, perform steps 1 through 6 .
 7. From **File** menu, open the **Local Security Settings** dialog box, and then select **Exit** to close.
@@ -125,7 +124,7 @@ Starting in SQL Server 2012, Microsoft provides support for data and log files o
 
 ## More information
 
-- To check the list of privileges that are currently associated with the setup account, use the *AccessChk.exe* tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
+- To check the list of privileges that are currently associated with the setup account, use the _AccessChk.exe_ tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
 
   **Usage**: `accesschk.exe- a \<setup account> *`
 
@@ -161,4 +160,5 @@ Starting in SQL Server 2012, Microsoft provides support for data and log files o
             SeBatchLogonRight
             SeRemoteInteractiveLogonRight
   ```
+
 - For more information, see [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).

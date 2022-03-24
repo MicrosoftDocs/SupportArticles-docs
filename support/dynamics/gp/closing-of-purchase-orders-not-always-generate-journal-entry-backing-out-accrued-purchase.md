@@ -38,13 +38,12 @@ Vendor: ABC
 
 1. Receive all the items on the PO (Transactions | Purchasing | Receivings Transaction Entry - Type: Shipment)
 
-    *Gender Ledger Adjustment:*  
+    _Gender Ledger Adjustment:_  
 
     | Account Type| Debit| Credit |
     |---|---|---|
     |Inventory|$1200| |
     |Accrued Purchases||$1200|
-    ||||  
 
     > [!NOTE]
     > Posting a Shipment document for an inventory item creates a new line in the Inventory Purchase Receipts Work table (IV10200) for a quantity of 10 at a cost of $120 a piece.
@@ -57,7 +56,6 @@ Vendor: ABC
     |---|---|---|
     | Accrued Purchases|$960.00| |
     | Accounts Payable||$960.00|
-    ||||
 
     > [!NOTE]
     > This creates a payables invoice in Payables Management for $960.
@@ -68,13 +66,12 @@ Two things occur in this scenario when closing the PO:
 
 1. The accrued purchases account is reversed out for the remaining balance associated with the lines being closed. This is because you will no longer be invoicing the items in Purchase Order Processing. The system assumes the purchase order is being closed for a reason and the company will never need to pay the vendor for the two remaining items received on the shipment receipt. Essentially, you are receiving more, but paying less.  Closing the PO will also remove the purchase order from the "Received Not Invoiced" report which is typically used to tie accrued purchases to the General Ledger.
 
-    *Gender Ledger Adjustment:*  
+    _Gender Ledger Adjustment:_  
 
     | Account Type| Debit| Credit |
     |---|---|---|
     | Accrued Purchases|$240 (2*$120)| |
     | Inventory|| $240|
-    ||||  
 
 2. The purchase receipt cost in the IV10200 that was originally for $120 will now be updated to $96. The system is revaluing the layer because the purchase order was received at a quantity of 10, but only 8 needed to be paid for, therefore the cost of the item per unit is less. The IV10200 table gets updated automatically and the calculation to determine the cost of the layer is as follows:
 
@@ -116,7 +113,6 @@ Two things occur in this scenario when closing the PO:
     |---|---|---|
     |Inventory|$1200||
     |Accrued Purchases||$1200|
-    ||||  
 
 2. Close the PO in the Edit PO transaction window (Transactions | Purchasing | Edit Purchase Orders)
 

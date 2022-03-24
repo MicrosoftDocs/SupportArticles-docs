@@ -153,10 +153,10 @@ Many things can go wrong when a user gains access to files. The files may not ex
 1. Start Visual Studio .NET.
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. Under **Project Types**, click **Visual C++ Projects**. Under **Templates** section, click **Windows Forms Application (.NET)**.
-4. Type *KB307398* in the **Name** box, type `C:\` in the **Location** box, and then click **OK**.
-5. Open the *Form1* form in the Design view, and then press F4 to open the **Properties** window.
-6. In the **Properties** window, expand the **Size** folder. In the **Width** box, type *700*. In the **Height** box, type *320*.
-7. Add one ListBox control and six Button controls to *Form1*.
+4. Type _KB307398_ in the **Name** box, type `C:\` in the **Location** box, and then click **OK**.
+5. Open the _Form1_ form in the Design view, and then press F4 to open the **Properties** window.
+6. In the **Properties** window, expand the **Size** folder. In the **Width** box, type _700_. In the **Height** box, type _320_.
+7. Add one ListBox control and six Button controls to _Form1_.
 
     > [!NOTE]
     > To view the toolbox, click **Toolbox** on the **View** menu.
@@ -172,9 +172,8 @@ Many things can go wrong when a user gains access to files. The files may not ex
     |button5|500, 160|button5|112, 23|5|List Subfolders|
     |button6|500, 192|button6|112, 23|6|List Files|
     |listBox1|24, 24|listBox1|450, 200|0|listBox1|
-    |||||||
 
-9. Open the *Form1.h* file. In the `Form1` class declaration, declare one private `String` variable with the following code:
+9. Open the _Form1.h_ file. In the `Form1` class declaration, declare one private `String` variable with the following code:
 
     ```cpp
     private:
@@ -189,7 +188,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 11. To do file Input output operations, add the `System::IO` namespace.
 
-12. Press SHIFT+F7 to open *Form1* in Design view. Double-click the **Read Text File** button, and then paste the following code:
+12. Press SHIFT+F7 to open _Form1_ in Design view. Double-click the **Read Text File** button, and then paste the following code:
 
     ```cpp
     // How to read a text file:

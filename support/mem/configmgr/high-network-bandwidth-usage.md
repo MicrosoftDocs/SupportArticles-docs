@@ -32,8 +32,7 @@ To fix the issue, install the following updates, as applicable.
 |Windows 10, version 1703| [October 18, 2018-KB4462939 (OS Build 15063.1418)](https://support.microsoft.com/help/4462939) |
 |Windows 10, version 1607| [September 20, 2018-KB4457127 (OS Build 14393.2517)](https://support.microsoft.com/help/4457127) |
 |Windows 8.1| [October 18, 2018-KB4462921 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4462921) |
-|||
-
+  
 ## Mitigation
 
 Determine whether clients are using an affected version of the Microsoft Compatibility Appraiser. Check the modified date for the following binaries that are located in `C:\Windows\System32`, and verify that they are from February 2018 or a later date:
@@ -64,8 +63,7 @@ The following values indicate that the client has received the update.
 |Windows 10, version 1511|1799|
 |Windows 10, version 1507|1799|
 |Windows 8.1|1799|
-|||
-
+  
 `LastAttemptedRunDataVersion` is updated when CompatTelRunner.exe is executed. This generally runs daily as part of the Microsoft Compatibility Appraiser scheduled task. However, it can be run manually without arguments:
 
 ```console
@@ -89,4 +87,4 @@ The following Windows updates use newer versions of CompatTelRunner.exe and Appr
 |Windows 10, version 1703| [June 21, 2018-KB4284830 (OS Build 15063.1182)](https://support.microsoft.com/help/4284830) |
 |Windows 10, version 1607| [June 21, 2018-KB4284833 (OS Build 14393.2339)](https://support.microsoft.com/help/4284833) |
 |Windows 8.1| [Compatibility update for keeping Windows up-to-date in Windows 8.1](https://support.microsoft.com/help/2976978) |
-|||
+  

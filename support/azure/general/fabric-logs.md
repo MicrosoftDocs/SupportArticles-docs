@@ -28,4 +28,4 @@ The following log files and PerfCounter files are captured by Service Fabric and
 |Example|D:\SvcFab\Log\*.trace|
 |Service Fabric and Windows Perf Counters<br/>(recursively collected from log root)|{ServiceFabricLogsDirectory}\*.blg|
 |Example|D:\SvcFab\Log\*.blg|
-|||
+  

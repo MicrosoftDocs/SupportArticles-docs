@@ -87,8 +87,7 @@ Build a list of trusted sites to use during your investigation.
 |`Docs.microsoft.com`|For most IT Pro content for cloud-based products, includes break-fix content.|
 |Windows Health Release Dashboard @ [https://docs.microsoft.com/windows/release-information/status-windows-10-1909](/windows/release-information/status-windows-10-1909) <br/>|OS version specific information describing friction ranging from intentional hardening changes to unintended regressions introduced by quality updates and sometimes feature updates.<br/><br/>Also describes interop issues with 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software that may be caused by Windows updates or 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software.|
 |Known issue and release note text in the header Monthly Windows Update KB articles<br/><br/>See KB [4534310](https://support.microsoft.com/help/4534310/windows-7-update-kb4534310) as a recent example|Known issue text identifies friction including interop issues or regressions introduced by a given Windows update.<br/><br/>Release notes identify fixes resolved in that months update.<br/><br/>A fix that resolves an issue will generally use the same "known issue" or "release note" text across all affected OS versions.|
-|||
-
+  
 ## Other sites
 
 Don't overlook these valuable resources! Visit these sites and search using their own search engines.
@@ -121,4 +120,3 @@ If you want your case resolved as quickly as possible, follow this tips to avoid
 |Use the appropriate severity||The severity should accurately reflect the impact of the problem. Sev-A should be restricted to problems that completely block a user or service frequently and have no workarounds.|
 |Provide a meaningful title|**Bad examples**<br/>1. Operation X <br/>2. OS version Y <br/>3. Error message Z <br/>4. Operation X on Windows 10<br/><br/> **Better**<br/>1. Operation X fails on major / minor version Y with Error Z <br/>2. Operation W intermittently fails on major / minor version X with error Y due to triggering configuration Z |Remove ambiguity, and try to capture "what", "who" "how" and "when" context in your title.<br/><br/>Microsoft has released 10 versions of Windows 10 to date. Each version contains new capabilities and behavior changes and bug fixes.|
 |Provide a meaningful problem description and repro steps that allow Microsoft to understand the problem and reproduce it in-house if the customer is unable to collect data||The single biggest contributors to slow root cause determination are poor problem description and lack of steps to reproduce the issue.<br/>Having the right data often enables Microsoft to identify root cause within hours or days for many type of issues. Some issues (memory or kernel related, for example) may take longer.<br/>Include "IS \| DOES" and "IS \| DOES NOT" context in your problem statement|
-||||
