@@ -34,7 +34,7 @@ As new trust scanning behaviors are added by the updates, anything that blocks L
 - The PDC of the trusted forest also needs the **Access this computer from the network** user right to authenticate to the trusting domain DCs.  By default, "authenticated users" have this user right and this includes the trusted domain PDC.  
 - The PDC in the trusted domain must have sufficient read permissions on the trusting forest partitions container in the configuration NC and the children objects. By default, "authenticated users" have the access, which applies to the calling trusted domain PDC.
 
-When administrators of the problematic trusting forests allow the trust scanning, the trusted forest isn't at risk if not granted the permission to query trust information in the trusting forest. However, the trusting forest is potentially at risk if it isn't allowed to query this information.  
+If a trusting forest doesn't allow the trusted forest to query trust information, the trusting forest may be at risk of NTLM relay attacks.  
 
 For example, forest A trusts forest B, and forest C trusts forest B. If forest A refuses to allow authentication or LDAP activity from the root domain in forest B, then forest A is at risk of an NTLM relay attack from a malicious or compromised forest C.
 
@@ -201,7 +201,7 @@ The netdom.exe tool can initiate the new PDC trust scanner operations, and set a
 ## Investigating failed NTLM pass-through authentications
 
 > [!NOTE]
-> Before you follow these steps, make sure the permission is granted as described in the [Prerequisites](#prerequisites) section.
+> Before you follow these steps, make sure your configuration meets the requirements as described in the [Prerequisites](#prerequisites) section.
 
 Here are the basic steps:
   
@@ -223,7 +223,7 @@ Here are the basic steps:
 ## Investigating failed PDC trust scanner operations
 
 > [!NOTE]
-> Before you follow these steps, make sure the permission is granted as described in the [Prerequisites](#prerequisites) section.
+> Before you follow these steps, make sure your configuration meets the requirements as described in the [Prerequisites](#prerequisites) section.
 
 Here are the basic steps:
   
@@ -270,7 +270,7 @@ If PDC trust scanner fails, the mitigation depends on specific context. For exam
     A4: In general, the new behaviors can't be turned off. The RODC specific security validations can't be disabled. You can set a security check exemption flag for a domain trust case or a forest trust case.
 - Q5: Do I need to make any configuration changes before installing this update?
 
-    A5: Yes. For more information, see the [Prerequisites](#prerequisites) section.
+    A5: Maybe. Make sure your configuration meets the requirements as described in the [Prerequisites](#prerequisites) section.
 - Q6: Do I need to patch my DCs in any specific order for this update to take effect?
 
     A6:  All variations of patching order are supported. The new PDC trust scanner operation takes effect only after the PDC is patched. All patched DCs will immediately start enforcing the RODC restrictions. Patched non-PDCs won't enforce NTLM pass-through restrictions until the PDC is patched and starts creating new scanner records in the msDS-TrustForestTrustInfo attributes. Non-patched DCs (non-PDC) will ignore the new scanner records once present.
