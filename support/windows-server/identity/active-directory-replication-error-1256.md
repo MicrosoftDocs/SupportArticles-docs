@@ -66,7 +66,6 @@ _Original KB number:_ &nbsp; 2200187
     |---|---|---|
     | NTDS Replication ActiveDirectory_DomainService| 1085 *| Internal event: Active Directory Domain Services could not synchronize the following directory partition with the directory service at the following network address. |
     | NTDS KCC ActiveDirectory_DomainService| 1308| The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed. The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed. |
-    ||||
 
     > [!NOTE]
     > Event 1085 is only logged if the NTDS Diagnostics value **5 Replication Events** has been set to a value of 1 or higher.
@@ -81,7 +80,7 @@ In summary: 1256 is logged as the replication status per partition as a result o
 
 ## Resolution
 
-The win32 error 1256 should not be the focus of troubleshooting efforts, instead find the replication status that led to the RPC bind failure and then follow the corresponding *Troubleshooting Active Directory operations that fail with error...* article.
+The win32 error 1256 should not be the focus of troubleshooting efforts, instead find the replication status that led to the RPC bind failure and then follow the corresponding _Troubleshooting Active Directory operations that fail with error..._ article.
 
 [Diagnose Active Directory replication failures](/troubleshoot/windows-server/identity/diagnose-replication-failures).
 
@@ -110,7 +109,6 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
     | London| LONCONTOSODC| DC=corp,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
     | London| LONCONTOSODC| DC=EMEA,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:54| 1256 |
     | London| LONCONTOSODC| DC=apac,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
-    ||||||||||  
 
 3. Initiate a manual replication sync between source and destination DCs using repadmin.
 
@@ -133,7 +131,6 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
     | London| LONCONTOSODC| DC=corp,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
     | London| LONCONTOSODC| DC=EMEA,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:54| 1256 |
     | London| LONCONTOSODC| DC=apac,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
-    ||||||||||
 
 ## More information
 

@@ -42,7 +42,7 @@ If you have an SSH key, [create an SSH connection to the Windows node](/azure/ak
 
 ### [RDP](#tab/rdp)
 
-If you don't have an SSH key, connect using RDP and the Windows admin password. What if you don't have this password for your cluster? Then reset the password in Azure CLI by running the [az aks update](/cli/azure/aks#az_aks_update) command. Specify the resource group, cluster name, and the new password. The command displays the cluster details after it completes.
+If you don't have an SSH key, connect using RDP and the Windows admin password. What if you don't have this password for your cluster? Then reset the password in Azure CLI by running the [az aks update](/cli/azure/aks#az-aks-update) command. Specify the resource group, cluster name, and the new password. The command displays the cluster details after it completes.
 
 ```azurecli-interactive
 az aks update \

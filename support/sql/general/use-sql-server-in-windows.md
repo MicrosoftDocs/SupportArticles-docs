@@ -38,7 +38,6 @@ How to use this article:
     |Windows 8 |No |Yes  (RTM)  |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |[Additional information for Windows 8 environments](#minimum-sql-server-version-requirements-for-windows-server-2012-or-windows-8)|
     |Windows Server 2012 |No |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |[Additional information for Windows Server 2012 environments](#minimum-sql-server-version-requirements-for-windows-server-2012-or-windows-8)|
     |Hardware and Software Requirements page |[SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15) |[SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2014](/previous-versions/sql/2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110))  |[SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms143506%28v%3dsql.105%29)  |[SQL Server 2008](/previous-versions/sql/sql-server-2008/ms143506%28v%3dsql.100%29) |
-    |||||||||
 
 1. To find answers to the following questions, review the corresponding link under Hardware and Software Requirements page.
 
@@ -57,11 +56,11 @@ How to use this article:
     1. The **Hardware and Software Requirements** page for SQL 2016 confirms that SQL Server 2016 Developer edition is supported on Windows 10 Professional.
   
     1. The More Information/Limitations column for Windows Server 2016 do not call out any additional known issues for this configuration.
-    
+
 ## Minimum SQL Server version requirements for Windows Server 2022 and Windows 11
 
 This section describes the minimum version requirements to install SQL Server on a computer that is running Windows Server 2022 or Windows 11.
- 
+
 Before you install SQL Server on a computer that is running Windows Server 2022 or Windows 11, you must make sure that you fulfill the following minimum requirements, as appropriate for your situation.
 
 - **For SQL Server 2019 on Windows**
@@ -123,7 +122,7 @@ Before you install SQL Server on a computer that is running Windows 10 or Window
 
 - **For SQL Server 2019 on Windows**
 
-    The release is supported at the SQL Server 2019 on Windows RTM Release version. 
+    The release is supported at the SQL Server 2019 on Windows RTM Release version.
 
 - **For SQL Server 2017 on Windows**
 
@@ -317,7 +316,6 @@ The following table summarizes how versions of SQL Server work with some new fea
 |Mitigation of RAM Hardware Errors|LazyWriter|Checksum page sniffer|SQL Server 2012||When SQL Server 2012 is installed on a Windows 2012 operating system with hardware that supports bad memory diagnostics, you will notice new error messages like 854, 855, and 856 instead of the 832 errors that LazyWriter usually generates.|
 |Number of instances per cluster|High availability|Failover Clustering|SQL Server 2012|25 per failover cluster when you use drive letters and up to 50 if you are using SMB file share storage| |
 |Cluster Share Volumes (CSV's)||||Beginning in SQL Server 2014, AlwaysOn Failover Cluster Instances supports Clustered Shared Volumes (CSV) in both Windows Server 2008 R2 and Windows Server 2012. For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)). CSVs are not supported in versions prior to SQL Server 2014.| |
-|||||||
 
 ## SQL Server 2005 information
 

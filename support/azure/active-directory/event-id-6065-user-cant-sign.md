@@ -59,7 +59,6 @@ The tenant has not been provisioned with the RMSBASIC subscription. This happens
     |tenantname:AAD_PREMIUM|100|0|21|
     |tenantname:RIGHTSMANAGEMENT_ADHOC|1000|0|18|
     |tenantname: RMSBASIC|1000|0|18|
-    |||||
 
 4. If RMSBASIC is not present, as in the example output below, proceed with the steps in the next section.
 
@@ -70,7 +69,6 @@ The tenant has not been provisioned with the RMSBASIC subscription. This happens
     |tenantname:INTUNE_A|25|0|23|
     |tenantname:AAD_PREMIUM|100|0|21|
     |tenantname:RIGHTSMANAGEMENT_ADHOC|1000|0|18|
-    |||||
 
 ### Verify AllowAdHocSubscriptions is set to "True" on the tenant
 

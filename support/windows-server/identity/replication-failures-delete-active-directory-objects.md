@@ -47,9 +47,8 @@ The following conditions are the key indicators that this solution applies to th
     |Hex|Decimal|Symbolic|Friendly|
     |---|---|---|---|
     |000020D9|8409|ERROR_DS_DATABASE_ERROR|A database error has occurred|
-    |||||
 
-If the Active Directory recycle bin is enabled, the replication errors may not occur for 60 to 180 days (deleted object lifetime) after the object is deleted. The issues occur when the object transitions from the deleted status to the recycled status.
+  If the Active Directory recycle bin is enabled, the replication errors may not occur for 60 to 180 days (deleted object lifetime) after the object is deleted. The issues occur when the object transitions from the deleted status to the recycled status.
 
 ### Event log entries
 
