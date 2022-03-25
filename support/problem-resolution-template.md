@@ -19,23 +19,19 @@ ms.date: #Required;  enter the date in the mm/dd/yyyy format.
 
 Summary paragraph.
 
-<!---Required:
-Begin the article with a concise description of the problem the customer is trying to fix. Include as many keywords from the error message or symptoms as possible in the first sentences. The information in the Summary section should help the customer decide whether the article applies to the issue that they've come across. --->
+<!---Required: Begin the article with a concise description of the problem the customer is trying to fix. Include as many keywords from the error message or symptoms as possible in the first sentences. The information in the Summary section should help the customer decide whether the article applies to the issue that they've come across. --->
 
 ## Prerequisites (Optional)
 
-<!---Optional:
-If there are steps that the customer should complete or tools that they need to download first, describe them in this section.
---->
+<!---Optional: If there are steps that the customer should complete or tools that they need to download first, describe them in this section.--->
 
 ## Symptoms
 
-<!---Required:
-Precisely describe what the customer may  be experiencing when encountering the problem. If H1 doesn't adequately describe the scenario, expand on it here. If relevant general troubleshooting information is available, link to it from here.
---->
+<!---Required: Precisely describe what the customer may  be experiencing when encountering the problem. If H1 doesn't adequately describe the scenario, expand on it here. If relevant general troubleshooting information is available, link to it from here. --->
 
-<!---Scenario 1: The issue only has one cause, but several solutions are available to resolve it. List the cause and each solution as an H2 (**Cause** and **Solution #** where **#** is a successive number of possible solutions). Put the solutions in order of complexity from simplest to most complex and provide instructions on how to choose from among them.
---->
+Problem description
+
+<!---Scenario 1: The issue only has one cause, but several solutions are available to resolve it. List the cause and each solution as an H2 (**Cause** and **Solution #** where **#** is a successive number of possible solutions). Put the solutions in order of complexity from simplest to most complex and provide instructions on how to choose from among them. --->
 
 ## Cause
 
@@ -43,24 +39,17 @@ Description of the cause.
 
 ## Solution 1: \<summarize the key info of  the solution>
 
-<!---Required:
-List the steps that should be taken to resolve the problem. 
---->
+<!---Required: List the steps that should be taken to resolve the problem. --->
 
 ## Solution 2: \<summarize the key info of the solution>
 
-<!---Required:
-List the steps that should be taken to resolve the problem. 
---->
+<!---Required: List the steps that should be taken to resolve the problem. --->
 
-<!---Scenario 2: There are several causes and corresponding solutions for a problem. List  **Cause #** as an H2 and provide guidance and instructions to help the customer determine the cause of the issue if you deem it necessary.
---->
+<!---Scenario 2: There are several causes and corresponding solutions for a problem. List  **Cause #** as an H2 and provide guidance and instructions to help the customer determine the cause of the issue if you deem it necessary. --->
 
 ## Determine the cause of your problem (Optional)
 
-<!---Optional:
- Provide guidance and instructions to help the customer determine the cause of the issue.
---->
+<!---Optional:  Provide guidance and instructions to help the customer determine the cause of the issue. --->
 
 ## Cause 1: \<summarize the key info of the cause>
 
@@ -70,30 +59,24 @@ Description of Cause 1.
 
 ### Solution 1: \<summarize the key info of the solution>
 
-<!---Required:
-Simplest solution—list the steps of the solution/workaround.
---->
+<!---Required: Simplest solution—list the steps of the solution/workaround. --->
 
 ### Solution 2: \<summarize the key info of the solution>
 
-<!---Required:
-List the steps of the solution/workaround.--->
+<!---Required: List the steps of the solution/workaround.--->
 
-## Cause 2: < summarize the key info of the cause >
+## Cause 2: \<summarize the key info of the cause>
 
 Description of Cause 2.
 
 ### Solution 1: \<summarize the key info of the solution>
 
-<!---Required:
-Simplest solution—list the steps of the solution/workaround--->
+<!---Required: Simplest solution—list the steps of the solution/workaround--->
 
 ### Solution 2: \<summarize the key info of the solution>
 
-<!---Required:
-List the steps of the solution/workaround.--->
+<!---Required: List the steps of the solution/workaround.--->
 
 ## Next steps/More information
 
-<!--- Optional:
-Include this section if there are 1 -3 concrete, highly relevant next steps the user should take Otherwise, delete this section if there are no next steps. This section is not a place for a list of links. If you include links to next steps, include text that explains why the next steps are relevant or important. --->
+<!--- Optional: Include this section if there are 1 -3 concrete, highly relevant next steps the user should take Otherwise, delete this section if there are no next steps. This section is not a place for a list of links. If you include links to next steps, include text that explains why the next steps are relevant or important. --->
