@@ -13,9 +13,9 @@ ms.date: #Required;  enter the date in the mm/dd/yyyy format.
 <!---Problem resolution articles help customers quickly identify the cause of the problem or error message occurring with a service or feature and find the steps needed to resolve the problem.
 --->
 
-# \<H1, include the secondary keywords of the error message/problem description>
+# \<error message/problem description>
 
-<!---Required--->
+<!---Required: Expand the keywords of the error message/problem description by adding those that aren't in the page title--->
 
 Summary paragraph.
 
