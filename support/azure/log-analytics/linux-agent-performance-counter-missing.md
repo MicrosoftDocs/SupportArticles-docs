@@ -55,15 +55,41 @@ The workspace configuration tells an agent what data to collect and send to the 
 
 Open the log file, search the `[info]: using configuration file: <ROOT>` string from the bottom up to get the most recent time when the Linux agent gets configuration data from the workspace.
 
-If some performance counters entries between the `<Root>` tags look like the following samples, check if the entries match up to what is shown in the **Advanced Settings** > **Data** > **Linux Performance Counters**.
+If there are some of the sources like the following output in the log file, it means the agent is set to collect some performance counters. Check if the entries match up to what is shown in the **Advanced Settings** > **Data** > **Linux Performance Counters**.
 
 ```output
-type oms_omi object_name Logical Disk instance_regex .* counter_name_regex (% Used Inodes|Free Megabytes|% Used Space|Disk Transfers/sec|Disk Reads/sec|Disk Writes/sec) interval 10s omi_mapping_path /etc/opt/microsoft/omsagent/<workspaceid>/conf/omsagent.d/omi_mapping.json
-
-type oms_omi object_name Memory instance_regex .* counter_name_regex (Available MBytes Memory|% Used Memory|% Used Swap Space|% Available Memory) interval 10s omi_mapping_path /etc/opt/microsoft/omsagent/<workspaceid>/conf/omsagent.d/omi_mapping.json
-
-type oms_omi object_name Processor instance_regex .* counter_name_regex (% Processor Time|% Privileged Time) interval 10s omi_mapping_path /etc/opt/microsoft/omsagent/<Workspace ID>/conf/omsagent.d/omi_mapping.json
-type oms_omi object_name Process instance_regex .* counter_name_regex (Used Memory|Pct User Time|Pct Privileged Time) interval 10s omi_mapping_path /etc/opt/microsoft/omsagent/<workspaceid>/conf/omsagent.d/omi_mapping.json
+<source>
+    type oms_omi
+    object_name Logical Disk
+    instance_regex .*
+    counter_name_r egex (Free Megabytes|% Used Space|Disk Transfers/sec|Disk Reads/sec|Disk Writes/sec)
+    interval 90s
+    omi_mapping_path /etc/opt/microsoft/omsagent/<workspaceid>/conf/omsagent.d/omi_mapping.json
+</source>
+<source>
+    type oms_omi
+    object_name Processor
+    instance_regex .*
+    counter_name_regex (% Processor Time|% Privileged Time)
+    interval 90s
+    omi_mapping_path /etc/opt/microsoft/omsagent/<workspaceid>/conf/omsagent.d/omi_mapping.json
+</source>
+<source>
+    type oms_omi
+    object_name Memory
+    instance_regex .*
+    counter_name_regex (Available MBytes Memory|% Used Memory|% Used Swap Space)
+    interval 90s
+    omi_mapping_path /etc/opt/microsoft/omsagent/<workspaceid>/conf/omsagent.d/omi_mapping.json
+</source>
+<source>
+    type oms_omi
+    object_name Network
+    instance_regex .*
+    counter_name_regex (Total Bytes Transmitted|Total Bytes Received)
+    interval 90s
+    omi_mapping_path /etc/opt/microsoft/omsagent/<workspaceid>/conf/omsagent.d/omi_mapping.json
+</source>
 ```
 
 :::image type="content" source="./media/linux-agent-performance-counter-missing/screenshot-collected-linux-performance-counters.png" alt-text="Screenshot of collected linux performance counters data":::
