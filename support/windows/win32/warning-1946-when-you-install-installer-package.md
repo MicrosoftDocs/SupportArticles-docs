@@ -52,8 +52,7 @@ When you create a .msi package to run both in Windows 8 and in Windows 7, do not
 | {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 12|System.AppUserModel.NoPin|
 | {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 11|System.AppUserModel.IsDualMode|
 | {B725F130-47EF-101A-A5F1-02608C9EEBAC}, 23|System.ItemNameSortOverride|
-|||
-
+  
 ## References
 
 - For more information about the Windows Installer, see [Windows Installer](/windows/win32/msi/windows-installer-portal).

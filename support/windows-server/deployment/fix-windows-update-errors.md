@@ -33,7 +33,7 @@ This article is intended for Support agents and IT professionals. If you are hom
 
 To resolve this problem, use the inbox Deployment Image Servicing and Management (DISM) tool. Then, install the Windows update or service pack again.
 
-1. Open an elevated command prompt. To do this, open **Start** menu or **Start** screen, type *Command Prompt*, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
+1. Open an elevated command prompt. To do this, open **Start** menu or **Start** screen, type _Command Prompt_, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
 
 2. Type the following command, and then press Enter. It may take several minutes for the command operation to be completed.
 
@@ -49,7 +49,7 @@ To resolve this problem, use the inbox Deployment Image Servicing and Management
     ```
 
     > [!NOTE]
-    > Replace the *C:\RepairSource\Windows* placeholder with the location of your repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)).
+    > Replace the _C:\RepairSource\Windows_ placeholder with the location of your repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)).
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
@@ -133,8 +133,7 @@ The following table lists the possible error code with Windows Update for your r
 |0x800f0984|PSFX_E_MATCHING_BINARY_MISSING|Matching component directory exist but binary missing|
 |0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
 |0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
-||||
-
+  
 ## What does the System Update Readiness tool do
 
 ### Verify the integrity of resources

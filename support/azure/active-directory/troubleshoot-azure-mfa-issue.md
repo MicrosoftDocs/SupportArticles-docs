@@ -24,8 +24,7 @@ _Original KB number:_ &nbsp; 2937344
 |"Account verification system is having trouble" error message when you try to sign in by using a work or school account| [2834966](https://support.microsoft.com/help/2834966) |
 |Can't sign in to an Office app by using a work or school account| [2834958](https://support.microsoft.com/help/2834958) |
 |<br/>You can't sign in to Office 365, Azure, or Intune| [2412085](https://support.microsoft.com/help/2412085) |
-|||
-
+  
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread)  website.

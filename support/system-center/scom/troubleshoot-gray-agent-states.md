@@ -19,8 +19,7 @@ An agent, a management server, or a gateway can have one of the following states
 |Critical|Red check mark|There is a problem on the agent or management server.|
 |Unknown|Gray agent name, gray check mark|The health service watcher on the management server that is watching the health service on the monitored computer is not receiving heartbeats from the agent anymore. The health service watcher had received heartbeats previously and the state was reported as healthy. This also means that the management servers are no longer receiving any information from the agent.<br/><br/>This issue may occur if the computer that's running the agent isn't running or there are connectivity issues.|
 |Unknown|Green circle, no check mark|The status of the discovered item is unknown. There is no monitor available for this specific discovered item.|
-||||
-
+  
 ## Causes of a gray state
 
 An agent, a management server, or a gateway may become unavailable for any of the following reasons:
@@ -148,11 +147,11 @@ To resolve the issue in this scenario, follow these steps:
     > Event Source: ESE  
     > Event Category: Transaction Manager  
     > Event ID: 623  
-    > Description: HealthService (\<*PID*>) The version store for instance \<*instance*>("\<*name*>") has reached its maximum size of \<*value*> Mb. It is likely that a long-running transaction is preventing cleanup of the version store and causing it to build up in size. Updates will be rejected until the long-running transaction has been completely committed or rolled back. Possible long-running transaction:  
-    > SessionId: \<*value*>  
-    > Session-context: \<*value*>  
-    > Session-context ThreadId: \<*value*>.  
-    > Cleanup: \<*value*>
+    > Description: HealthService (\<_PID_>) The version store for instance \<_instance_>("\<_name_>") has reached its maximum size of \<_value_> Mb. It is likely that a long-running transaction is preventing cleanup of the version store and causing it to build up in size. Updates will be rejected until the long-running transaction has been completely committed or rolled back. Possible long-running transaction:  
+    > SessionId: \<_value_>  
+    > Session-context: \<_value_>  
+    > Session-context ThreadId: \<_value_>.  
+    > Cleanup: \<_value_>
 
 3. If you locate the following specific events, follow these guidelines:
 
