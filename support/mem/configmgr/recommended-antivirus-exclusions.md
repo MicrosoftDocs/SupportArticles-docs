@@ -90,7 +90,7 @@ We recommend that you add the following real-time protection exclusions to preve
 - *Client installation folder*\Logs
 - C:\Windows\Setup\Scripts
 - C:\Windows\SMSTSPostUpgrade
-- C:\Program Files\Microsoft Policy Platform\authorityDb
+- C:\Program Files\Microsoft Policy Platform\authorityDb\\*.sdf
 
 ### File exclusions for MPs
 
