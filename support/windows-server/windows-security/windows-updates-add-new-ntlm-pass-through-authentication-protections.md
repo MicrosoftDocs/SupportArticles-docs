@@ -254,14 +254,6 @@ If authentications over an RODC secure channel trust fail, contact Microsoft sup
 
 If PDC trust scanner fails, the mitigation depends on specific context. For example, DCs in a trusted forest aren't granted LDAP query permissions on the Configuration naming context (NC) of the trusting forest. The mitigation is to grant the permissions.
 
-### References
-
-For more information about the specific technical details, see:
-
-- [[MS-ADTS]: Active Directory Technical Specification](/openspecs/windows_protocols/ms-adts/d2435927-0999-4c62-8c6d-13ba31a52e1a)
-- [[MS-LSAD]: Local Security Authority (Domain Policy) Remote Protocol](/openspecs/windows_protocols/ms-lsad/1b5471ef-4c33-4a91-b079-dfcbb82f05cc)
-- [[MS-NRPC]: Netlogon Remote Protocol](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
-
 ## Frequently asked questions (FAQs)
 
 - Q1: Is the frequency of the PDC trust scanner configurable?
@@ -288,3 +280,11 @@ For more information about the specific technical details, see:
 - Q8: I don't control my trusting domains or forests, how can I ensure my forest is secure?
 
     A8: See the previous question. The security of your forest doesn't depend on the patching status of any trusting domains or forests. We recommend all customers patch their DCs. In addition, change the configuration described in the [Prerequisites](#prerequisites) section.
+
+## References
+
+For more information about the specific technical details, see:
+
+- [[MS-ADTS]: Active Directory Technical Specification](/openspecs/windows_protocols/ms-adts/d2435927-0999-4c62-8c6d-13ba31a52e1a)
+- [[MS-LSAD]: Local Security Authority (Domain Policy) Remote Protocol](/openspecs/windows_protocols/ms-lsad/1b5471ef-4c33-4a91-b079-dfcbb82f05cc)
+- [[MS-NRPC]: Netlogon Remote Protocol](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
