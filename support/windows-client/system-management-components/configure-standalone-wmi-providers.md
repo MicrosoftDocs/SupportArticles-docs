@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: system-management-components
+ms.technology: windows-client-system-management-components
 keywords: WMI standalone, quota overflow, wmiprvse.exe
 ---
 
