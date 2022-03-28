@@ -1,14 +1,14 @@
 ---
 title: Listener connection times out
-description: This article provides resolutions for the timeout error that occurs when you connect to a SQL Server 2012 AlwaysOn availability group listener in a multi-subnet environment.
+description: This article provides resolutions for the timeout error that occurs when you connect to a SQL Server AlwaysOn availability group listener in a multi-subnet environment.
 ms.date: 08/04/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
-# Timeout occurs when you connect to a SQL Server 2012 AlwaysOn availability group listener
+# Timeout occurs when you connect to an AlwaysOn listener in multi-subnet environment
 
-This article helps you resolve the problem that occurs when you connect to a SQL Server 2012 AlwaysOn availability group listener in a multi-subnet environment.
+This article helps you resolve the problem that occurs when you connect to a SQL Server AlwaysOn availability group listener in a multi-subnet environment.
 
 _Original product version:_ &nbsp; SQL Server 2012 Developer, SQL Server 2012 Enterprise, SQL Server 2012 Express, SQL Server 2012 Standard, SQL Server 2012 Web, SQL Server 2012 Enterprise Core  
 _Original KB number:_ &nbsp; 2792139
@@ -88,8 +88,6 @@ Because the DNS record contains all the IP addresses, a client that tries to con
 - [SqlClient Support for High Availability, Disaster Recovery](/previous-versions/dotnet/netframework-4.0/hh205662(v=vs.100))
 
 - [An update introduces support for the AlwaysOn features in SQL Server 2012 or a later version to the .NET Framework 3.5 SP1](https://support.microsoft.com/help/2654347)
-
-- [SQL Server 2012 release notes](/previous-versions/sql/sql-server-15/hh995351(v=sql.15))
 
 - [Create or Configure an Availability Group Listener (SQL Server)](/previous-versions/sql/sql-server-2012/hh213080(v=sql.110))
 
