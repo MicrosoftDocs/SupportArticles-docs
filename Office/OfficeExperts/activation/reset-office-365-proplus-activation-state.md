@@ -7,7 +7,12 @@ localization_priority: Normal
 search.appverid: MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:office-experts, CSSTroubleshoot, CI 114181, CI 115742
+ms.custom: 
+- sap:office-experts
+- CSSTroubleshoot
+- CI 114181
+- CI 115742
+- CI 162124
 ms.author: mattphil
 appliesto: 
   - Microsoft 365 Apps for enterprise
@@ -15,167 +20,158 @@ appliesto:
 
 # Reset Microsoft 365 Apps for enterprise activation state
 
-This article is written and maintained by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Support Escalation Engineer and [Matt Philipenko](https://social.technet.microsoft.com/profile/MattPhil+-+MSFT), Sr Premier Field Engineer.
+In some circumstances, previous activations for Microsoft 365 apps for enterprise must be cleared to remove previous licenses and cached Office account information to reset the application to a clean un-activated state. After that is done, you can then activate with a different Office account or move to a different license mode. Common changes that require this are if users switch devices, an enterprise adds or changes Microsoft 365 tenants, or you are switching an Office desktop client license mode on a device, such as moving to use Shared Computer Activation for a shared device.
 
-It's common for users to switch devices or for an enterprise to add or change M365 or O365 tenants. Another scenario is when enterprise organizations roam licenses or credentials to simplify the sign-in process. After a user is activated, multiple locations must be cleared to reset the application to a clean state.
+>[!NOTE]
+>To automatically perform all of the checks listed below and run the appropriate scripts needed to reset the activation state, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeActivation-Reset).
 
-> [!NOTE]
-> To automatically perform all of the checks listed below and run the appropriate scripts needed to reset the activation state, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-## Step 1: Remove Office 365 license for subscription-based installations
+In addition to the manual steps, there are also three scripts provided in this article to automate these steps. To get the best results we recommend that run all three scripts included in this article. If you aren't able to run the scripts, perform the manual steps for each section.
 
 > [!NOTE]
-> If Shared Computer Activation (SCA) is enabled and running, you shouldn't see any product keys installed during the procedure. If you're trying to set up SCA on a computer, make sure to clean up existing keys first.
+> - The steps below apply to other Microsoft 365 apps, such as Microsoft Project and Microsoft Visio.
+> - The steps and scripts in this article apply to Windows installations of Office apps. For Office for Mac installations, see [How to remove Office license files on a Mac](https://support.microsoft.com/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193).
+> - Close all Office applications prior to taking any of the following actions.
+> - We also recommend restarting the device after completing these steps or running the related scripts.
 
-You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vbs` script is located in the `Program Files\Microsoft Office\Office16` folder. If you installed the 32-bit version of Office on a 64-bit operating system, go to the `Program Files (x86)\Microsoft Office\Office16` folder.
+<h2 id="removeexisting">Remove existing Office activations and cached Office account information</h2>
 
-> [!IMPORTANT]
-> Before you run the ospp.vbs, make sure that:
->
-> - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer.
-> - The user account you will use is a member of the Administrators group on the computer on which you run the script. 
-> - You run ospp.vbs script from an elevated command prompt. 
+To reset Office desktop client activations, make sure that previous activations, their related licenses, and cached Office account information are removed from the device. For example, with subscription versions of Office apps, activation is based on an Office user account that has been assigned a license for the desktop client. You must be able to successfully sign in with that licensed Office account.
 
-1. In an elevated command prompt, set the correct directory by using one of these commands, based on your Office installation location:
+To automate the steps in this section, download the [OLicenseCleanup.zip](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip) file, extract the OLicenseCleanup.vbs file, right-click OLicenseCleanup.vbs, and then select **Run as administrator**.
 
-   ```console
-   cd "C:\Program Files (x86)\Microsoft Office\Office16"
-   ```
+If you're unable to run the script, manually remove existing Office activations and cached Office account information use the following four steps in this section.
+<br>
+<br>
+<details>
+<summary><b>Step 1: Remove Office 365 license for subscription-based installations</b></summary>
 
-   or
+Check for and remove existing licenses on the device. Make sure to check all the noted locations for potential license types, which include vNext, Shared Computer Activation, and Legacy licenses.
 
-   ```console
-   cd "C:\Program Files\Microsoft Office\Office16"
-   ```
+1. Remove all license token files and folders if found in the following locations:
+      - For vNext license type:
+      `%localappdata%\Microsoft\Office\Licenses`
+      - For Shared Computer Activation license type:
+      `%localappdata%\Microsoft\Office\16.0\Licensing`
 
-1. Run the following command:
+1. Use the ospp.vbs script to check for and remove possible Legacy licensing.
 
-   ```vbs
-   cscript ospp.vbs /dstatus
-   ```
+   > [!IMPORTANT]
+   > Before you run the ospp.vbs script, make sure that:
+   > - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer.
+   > - The user account you use is a member of the Administrators group on the computer on which you run the script.
+   > - You run the ospp.vbs script from an elevated command prompt.
 
-   The `ospp.vbs` command generates a report of the licenses currently in use. The output is in this format:
+1. In an elevated command prompt, set the correct directory by using one of these commands based on your Office installation type:
+   - For a 64-bit Office installation on a 64-bit operating system:
+      `cd "C:\Program Files\Microsoft Office\Office16"`
+   - For a 32-bit Office installation on a 64-bit operating system.
+      `cd "C:\Program Files (x86)\Microsoft Office\Office16"`
 
-   :::image type="content" source="media/reset-office-365-proplus-activation-state/cscript-ospp-vbs-dstatus.png" alt-text="Screenshot of running the dstatus cscript command.":::
+1. Run the following command to get the licenses currently in use:
+    `cscript ospp.vbs /dstatus`
 
-   > [!NOTE]
-   > The report could include multiple licenses. If the output contains a "No installed Product Keys" message after you run `ospp.vbs /dstatus`, skip the section below and go to "[Step 2: Remove cached identities in HKCU registry](#step-2-remove-cached-identities-in-hkcu-registry)".
+    The ospp.vbs command displays license information for installed product keys. The output is in this format:
+    :::image type="content" source="media/reset-office-365-proplus-activation-state/capture1.png" alt-text="Output inclues Product ID, SKU ID, License Name, License Description, License Status, Error Code, and Last 5 characters of installed product key":::
 
-   Take note of the **Last 5 characters of the installed product key**.
+   >[!Note]
+   > The results of the command could include multiple licenses. If the output contains a "No installed product keys detected" message after you run `ospp.vbs /dstatus`, skip the `/unpkey` step below and go to <u><a href="#step2">Step 2: Remove cached Office account identities in HKCU registry</a></u>.
 
-1. If a partial product key is returned from `/dstatus`, run the following command:
+    If a partial product key is returned for the applications licenses you want to remove, take note of the **Last 5 characters of the installed product key** because you'll use it in the next step.
 
-   ```vbs
-   cscript ospp.vbs /unpkey:"Last 5 of installed product key"
-   ```
+1. Run the following command to remove the license for the applicable application:
+    `cscript ospp.vbs /unpkey:<last 5 characters of product key>`
+    For example:
+    `cscript ospp.vbs /unpkey:2WC2W`
+    
+    You should see the message “Product key uninstall successful” when the license is removed.
+    :::image type="content" source="media/reset-office-365-proplus-activation-state/capture3.png" alt-text="Output shows Uninstalling product key for Office 16, and the message Product key uninstall successful":::
 
-   For example:
+1. Repeat the `cscript ospp.vbs /dstatus` and `/unpkey` commands as needed to remove all keys for the applications you need to activate. When you have removed all the necessary product keys, close the Command Prompt window and continue to Step 2, below.
 
-   ```vbs
-   cscript ospp.vbs /unpkey:WB222
-   ```
+</details>
 
-   Repeat the command until all keys are removed.
-
-   :::image type="content" source="media/reset-office-365-proplus-activation-state/product-key-uninstall-successful.png" alt-text="Screenshot of product key uninstalled successful in the command result.":::
-
-   If the output contains the message "product key uninstall successful", close the Command Prompt window and go to Step 2.
-
-> [!NOTE]
-> For Shared Computer Activation (SCA), remove the tokens listed under %localappdata%\Microsoft\Office\16.0\Licensing.
-
-## Step 2: Remove cached identities in HKCU registry
+<div id="step2">
+<br>
+<details>
+<summary><b>Step 2: Remove cached Office account identities in HKCU registry</b></summary>
 
 > [!WARNING]
 > Follow this section's steps carefully. Incorrect registry entries can cause serious system issues. As a precaution, [back up the registry for restoration](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
 
-In Registry Editor, locate the following registry:
+1. In Registry Editor, locate the following registry entry:
 
-`HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity\Identities`
+    `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common`
 
-Remove all identities under the `Identities` registry entry.
+1. Delete the **Identity** registry value found under **Common**.
 
 > [!NOTE]
-> If you have Shared Computer Licensing enabled, remove the same identities from the registry `HKEY_USERS\The user's SID`.
+> If you have Shared Computer Activation enabled, remove the Identity registry key location from registry `HKEY_USERS\<The user's SID>\Software\Microsoft\Office\16.0\Common`. One way to get the currently signed in user’s SID is use the command `whoami /user` in a non-elevated command prompt.
 
-## Step 3: Remove the stored credentials in Credential Manager
+</details>
+
+<br>
+<details>
+<summary><b>Step 3: Remove stored Office credentials in Windows Credential Manager</b></summary>
 
 1. Open **Control Panel** > **Credential Manager**.
-1. Remove all Windows credentials listed for Office16 by selecting the drop-down arrow and Remove.
+1. Select **Windows Credentials**.
+1. Remove all credentials listed for Office by selecting the drop-down arrow next to each one, and select **Remove**.
 
-   :::image type="content" source="./media/reset-office-365-proplus-activation-state/remove-credentials.png" alt-text="Screenshot of removing stored credentials in the Credential Manager.":::
+    :::image type="content" source="media/reset-office-365-proplus-activation-state/credmanager.png" alt-text="Credential Manager example shows two entries for Office":::
 
-## Step 4: Clear persisted locations
+</details>
 
-Clear the following persisted locations if they exist:
+<br>
+<details>
+<summary><b>Step 4: Verify the following locations are cleared</b></summary>
 
-### Credential Manager
+> [!WARNING]
+> Follow this section's steps carefully. Incorrect registry entries can cause serious system issues. As a precaution, [back up the registry for restoration](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
+
+If files or values are found underneath the following locations, remove those items:
+
+**Credential Manager**
 
 - `%appdata%\Microsoft\Credentials`
 - `%localappdata%\Microsoft\Credentials`
 - `%appdata%\Microsoft\Protect`
 - `HKEY_CURRENT_USER\Software\Microsoft\Protected Storage System Provider`
 
-### Office 365 activation tokens and identities
+**Office  365 activation tokens and identities**
 
 - `%localappdata%\Microsoft\Office\16.0\Licensing`
-- `%localappdata%\Microsoft\Office\Licenses` (Microsoft 365 Apps for enterprise version 1909 or later)
+- `%localappdata%\Microsoft\Office\Licenses (Microsoft 365 Apps for enterprise version 1909 or later)`
 - `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity`
-- `HKEY_USERS\The user's SID\Software\Microsoft\Office\16.0\Common\Identity`
-
-## OLicenseCleanup.vbs
-
-The four steps above can be automated using [OLicenseCleanup.vbs](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip). Simply download and run the script with elevated privileges.
-
-## Clear Office credentials and activation state for managed devices
-
-The above steps reset the Office activation for unmanaged devices (Domain Joined aka DJ). In a managed environment, more locations store credentials.
-
-Devices are considered managed if they're Azure AD Joined (AADJ), Hybrid Azure AD Joined (HAADJ), or Workplace Joined (WPJ). These configurations use Web Account Management (WAM), which stores credentials in different locations.
-
-Here's how to find out if a device is DJ, AADJ, HAADJ, or WPJ:
-
-1. Open a command prompt as an administrator.
-2. Type `dsregcmd /status`.
-
-   Domain Joined (DJ):
-
-   :::image type="content" source="./media/reset-office-365-proplus-activation-state/domain-joined-state.png" alt-text="Command output of the Domain Joined status of the device.":::
-
-   Azure AD Joined (AADJ):
-
-   :::image type="content" source="./media/reset-office-365-proplus-activation-state/azure-ad-joined-state.png" alt-text="Command output of the Azure AD Joined status of the device.":::
-
-   Hybrid Azure AD Joined (HAADJ):
-
-   :::image type="content" source="./media/reset-office-365-proplus-activation-state/hybrid-azure-ad-joined-state.png" alt-text="Command output of the Hybrid Azure AD Joined status of the device.":::
-
-   Workplace Joined (WPJ):
-
-   :::image type="content" source="./media/reset-office-365-proplus-activation-state/workplace-joined-state.png" alt-text="Command output of the Workplace Joined status of the device.":::
-
-In scenarios where all stored credentials (such as domain/tenant migration) must be cleared, clear the additional WAM locations.
-
-To clear all WAM accounts associated with Office on the device, download and run the [signoutofwamaccounts.ps1](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) script with elevated privileges.
+- `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Licensing`
+- `HKEY_USERS\<The user's SID>\Software\Microsoft\Office\16.0\Common\Identity`
 
 > [!NOTE]
->
-> - This script will remove tokens and accounts associated with Office, this is a safe operation. Single sign-on (SSO) of other applications will remain untouched, as well as the device state.
-> - This script is only compatible with Windows 10 version 1803 and later. If the OS isn't compatible, you'll receive a message saying the tool isn't supported on that version of Windows.
-> - Signoutofwamaccounts.ps1 can be ran separately or in conjuction with OLicenseCleanup.vbs. If you place signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, running only OLicenseCleanup.vbs will also execute Signoutofwamaccounts.ps1.
+> If you have roaming data, for example non-persistent VDIs, do not roam the Identity registry locations noted above. For Microsoft’s guidance around device identity and non-persistent VDIs, see [Device identity and desktop virtualization](/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#microsofts-guidance).
 
-## Clear credentials from Workplace Join
+</details>
 
-To manually clear Workplace Joined accounts, go to **Access Work or School** on the device and select **Disconnect** to remove the device from WPJ.
+## Clear cached Office credentials for managed devices
 
-:::image type="content" source="./media/reset-office-365-proplus-activation-state/disconnect-to-work-or-school.png" alt-text="Select Disconnect in Access Work or School.":::
+For managed devices, there are additional locations to remove cached Office credentials. Devices are considered managed if they are Azure AD Joined (AADJ), Hybrid Azure AD Joined (HAADJ), or Workplace Joined (WPJ). These configurations use Web Account Management (WAM), which stores credentials in different locations.
 
-To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip), extract the folder, and run WPJCleanUp.cmd.
+If you wish to learn a device’s managed state, see the section <a href="#checkmanaged">Check a device managed state</a>.
+
+To clear WAM accounts associated with Office on the device for AADJ and HAADJ, download the [signoutofwamaccounts.zip](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) file, extract, and run the **signoutofwamaccounts.ps1** script as administrator. To clear Workplace Joined accounts, see the following section <a href="#clearwpj">Clear Workplace Joined accounts</a>.
 
 > [!NOTE]
-> This tool removes all SSO accounts in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
+> - This script will remove tokens and accounts associated with Office; this is a safe operation. Single sign-on (SSO) of other applications will remain untouched, as well as the device state.
+> - It is recommended that you run Signoutofwamaccounts.ps1 in addition to the OLicenseCleanup.vbs script mentioned in <a href="#removeexisting"><u>Remove existing Office activations and cached Office account information</u></a>. Signoutofwamaccounts.ps1 can be run separately or in conjunction with OLicenseCleanup.vbs. If you place signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, running OLicenseCleanup.vbs will also execute Signoutofwamaccounts.ps1.
+> - This script is only compatible with Windows 10 version 1803 and later. If the operating system isn't compatible, you'll receive a message saying the tool is not supported on that version of Windows.
 
-### Prevent Workplace Join on your device
+<h2 id="clearwpj">Clear credentials from Workplace Join</h2>
+
+To clear existing Workplace Joined (WPJ) accounts use the automated WPJCleanUp tool or the manual steps below. Removing WPJ accounts will remove Single Sign-On (SSO) behavior in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
+
+To automate Workplace Joined accounts removal, download [WPJCleanUp.zip](https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip), extract the **WPJCleanUp** folder, and run **WPJCleanUp.cmd**.
+
+If you can't run the script, manually clear Workplace Joined accounts by going to Windows Settings on the device, selecting **Access Work or School**, selecting the Work or school account to be removed, and then selecting **Disconnect**.
+
+### Prevent Workplace Join on your device if needed
 
 After Office successfully authenticates and activates, the **Stay signed in to all your apps** dialog pops up. By default, the **Allow my organization to manage the devices** checkbox is selected. This registers your device in Azure AD while adding your account to Workplace Join.
 
@@ -183,11 +179,40 @@ To prevent your device from being Azure AD registered, clear **Allow my organiza
 
 :::image type="content" source="media/reset-office-365-proplus-activation-state/prevent-azure-join.png" alt-text="Clear the Allow my organization to manage my device option to prevent Azure AD registration." border="false":::
 
-To automate this configuration, add the following registry value to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin`:
+If there is a need to block the Workplace Join in the future, such as if Office is installed on a non-persistent VDI, add the following registry value to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin`:
 
-"BlockAADWorkplaceJoin"=dword:00000001
+`"BlockAADWorkplaceJoin"=dword:00000001`
 
 For more information, see the following articles:
 
 - [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
 - [Device identity and desktop virtualization](/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#non-persistent-vdi)
+
+<h2 id="checkmanaged">Check a device managed state</h2>
+
+Though not necessary as part of the process to reset Office activation, you can check if a device is Azure AD Joined (AADJ), Hybrid Azure AD Joined (HAADJ), or Workplace Joined (WPJ) by running the following command in an elevated command prompt:
+    `dsregcmd /status`
+
+For additional information on dsregcmd see [Troubleshoot devices by using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+
+Look for the following under the “Device State” section in the `dsregcmd /status` output:
+
+| AzureAdJoined | EnterpriseJoined | DomainJoined | Device state |
+| ---------------- | ---------------- | ---------------- | ---------------- |
+| YES | NO | NO | Azure AD Joined (AADJ) |
+| NO | NO | YES | Domain Joined (DJ) |
+| YES | NO | YES | Hybrid AD Joined (HAADJ) |
+
+For more information, see [What is device identity in Azure Active Directory (AD)?](/azure/active-directory/devices/overview)
+
+Workplace Joined (WPJ) (Azure AD registered) state is displayed in the **User state** section of the status output. If it states **YES**, the device is Workplace Joined.
+
+## References
+
+- [Account or subscription verification errors activating Microsoft 365 Apps](../../Client/activation/account-or-subscription-errors.md)
+- [Sign in issues when activating Microsoft 365 Apps](../../Client/activation/sign-in-issues.md)
+- [Microsoft 365 Apps activation network connection issues](../../Client/activation/network-connection-issues.md)
+- [Microsoft 365 Apps activation error: “Your organization has disabled this device”](../../Client/activation/your-organization-disabled-this-device.md)
+- [Microsoft 365 Apps activation error “There’s a problem with your account”](../../Client/activation/problem-with-your-account.md)
+- ["We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise](../../Client/activation/issue-when-activate-office-365-proplus.md)
+- [Troubleshoot issues with shared computer activation for Microsoft 365 Apps](../../Client/activation/shared-computer-activation.md)
