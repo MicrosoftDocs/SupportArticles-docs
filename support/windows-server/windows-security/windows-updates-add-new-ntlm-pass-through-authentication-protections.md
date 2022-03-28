@@ -30,9 +30,9 @@ To support the domain and forest trust validations, the Primary Domain Controlle
 As new trust scanning behaviors are added by the updates, anything that blocks LDAP activity traffic, authentication and authorization from a trusted forest's PDC to the trusting forest will cause a problem:
 
 - If firewalls are used, TCP and UDP ports 389 need to be allowed between the trusted PDC and trusting domain DCs, as well as the communication to operate the trust (name resolution, RPC for NTLM and port 88 for Kerberos).  
-- When selective authentication is enabled, the PDC in the trusted forest must be granted the **Allowed to authenticate** permission to the trusting forest DC computer accounts to protect the trusting forests.  
 - The PDC of the trusted forest also needs the **Access this computer from the network** user right to authenticate to the trusting domain DCs.  By default, "authenticated users" have this user right and this includes the trusted domain PDC.  
 - The PDC in the trusted domain must have sufficient read permissions on the trusting forest partitions container in the configuration NC and the children objects. By default, "authenticated users" have the access, which applies to the calling trusted domain PDC.
+- When selective authentication is enabled, the PDC in the trusted forest must be granted the **Allowed to authenticate** permission to the trusting forest DC computer accounts to protect the trusting forests.
 
 If a trusting forest doesn't allow the trusted forest to query trust information, the trusting forest may be at risk of NTLM relay attacks.  
 
@@ -78,7 +78,7 @@ When an error code is included in some of the failure related events, you need e
 
 ## Improvements to Netlogon logging and LSA logging
 
-Netlogon logging (*%windir%\\debug\\netlogon.log*) and LSA logging (*lsp.log*) are improved to support the improvements in the updates.
+Netlogon logging (*%windir%\\debug\\netlogon.log*) and LSA logging (*lsp.log*) are updated to support the improvements in the updates.
 
 ### Enable and disable Netlogon logging (netlogon.log)
 
@@ -130,7 +130,7 @@ Netlogon logging (*%windir%\\debug\\netlogon.log*) and LSA logging (*lsp.log*) a
 
 ## Improvements to nltest.exe and netdom.exe tools
 
-The *nltest.exe* and *netdom.exe* tools are improved to support the improvements in this update.
+The *nltest.exe* and *netdom.exe* tools are updated to support the improvements in this update.
 
 ### Nltest.exe improvements
 
