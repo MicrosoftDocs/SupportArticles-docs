@@ -15,7 +15,7 @@ ms.date: #Required;  enter the date in the mm/dd/yyyy format.
 
 # \<error message/problem description>
 
-<!---Required: Expand the keywords of the error message/problem description by adding those that aren't in the page title--->
+<!---Required: H1, expand the keywords of the error message/problem description by adding those that aren't in the page title--->
 
 Summary paragraph.
 
@@ -27,7 +27,7 @@ Summary paragraph.
 
 ## Symptoms
 
-<!---Required: Precisely describe what the customer may  be experiencing when encountering the problem. If H1 doesn't adequately describe the scenario, expand on it here. If relevant general troubleshooting information is available, link to it from here. --->
+<!---Optional: If there is no additional info than the info provided in H1, you don't need this Symptoms section. If H1 doesn't adequately describe the scenario, expand on it here. Precisely describe what the customer may be experiencing when encountering the problem. If relevant general troubleshooting information is available, link to it from here. --->
 
 Problem description
 
@@ -77,6 +77,6 @@ Description of Cause 2.
 
 <!---Required: List the steps of the solution/workaround.--->
 
-## Next steps/More information
+## Next steps/More information/Reference
 
-<!--- Optional: Include this section if there are 1 -3 concrete, highly relevant next steps the user should take. Otherwise, delete this section if there are no next steps. This section is not a place for a list of links. If you include links to next steps, include text that explains why the next steps are relevant or important. --->
+<!--- Optional: Include this section if there are 1 -3 concrete, highly relevant next steps the user should take. Otherwise, delete this section if there are no next steps. This section is not a place for a list of links. If you include links to next steps, include text that explains why the next steps are relevant or important. If you do want to provide some links for more information or reference, provide the links with context to help the customers determine which one is relevant and helpful.--->
