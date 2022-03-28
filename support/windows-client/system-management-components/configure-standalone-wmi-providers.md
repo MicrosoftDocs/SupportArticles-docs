@@ -20,28 +20,28 @@ _Applies to:_ &nbsp; Windows 11
 
 ## Symptoms
 
-You experience a Windows Management Instrumentation (WMI) shared provider host process (wmiprvse.exe) quota overflow error.
+You experience a quota overflow error in a Windows Management Instrumentation (WMI) shared provider host process (wmiprvse.exe).
 
 ## Resolution
 
 The typical resolution for a WMIPrvSE.exe quota overflow is to configure standalone WMI providers. This custom configuration doesn't require administrative permissions.
 
-In the past, you had to manually configure the providers. However, this article describes a way to script these changes.
+In the past, you had to manually configure the providers. However, this article discusses a way to script these changes.
 
 ### Previous resolution: Manually configure providers
 
-In the past, configuring standalone providers required the following manual steps. These steps include commands that run in a Windows PowerShell script or at a PowerShell command prompt.
+To configure standalone providers, you previously had to run the following manual steps by using a Windows PowerShell script or command prompt:
 
-1. Stop the existing suspect WMIPrvSE.exe process to clean the memory set in the proportional set size (PSS). To do this, run the following command:
+1. Stop the existing suspect WMIPrvSE.exe process to clean the memory that's set in the proportional set size (PSS). To do this, run the following command:
 
    ```powershell
    kill -f <pid of suspect wmiprvse.exe process>
    ```
 
    > [!NOTE]  
-   > In this command, \<*pid of suspect wmiprvse process*> represents the process ID (PID) of the wmiprvse.exe process that generated the issue.
+   > In this command, \<*pid of suspect wmiprvse process*> represents the process ID (PID) of the Wmiprvse.exe process that generated the issue.
 
-1. Use the `OWN` HostingmodelGroup to move the target working provider away from the suspect provider host (a WMIPrvSE.exe share, which is typically set as `HostingModel='NetworkserviceHost'`). To do this, run the following command:
+1. Use the `OWN` HostingmodelGroup to move the target working provider away from the suspect provider host. (This was a WMIPrvSE.exe share that was typically set as `HostingModel='NetworkserviceHost'`). To do this, run the following command:
 
    ```powershell
    $prv = gcim -namespace root/standardcimv2 __win32provider -filter "name=<providername>"
@@ -59,7 +59,7 @@ In the past, configuring standalone providers required the following manual step
 
 ## New resolution
 
-The new method for resolving this issue resembles the method described in [Registry Keys and Values for Controlling Provider Security](/win32/wmisdk/registry-keys-for-controlling-provider-security). This method involves creating a new registry subkey that contains entries that represent a list of the providers that require standalone hosting.
+The new method for resolving this issue resembles the method that's discussed in [Registry Keys and Values for Controlling Provider Security](/windows/win32/wmisdk/registry-keys-for-controlling-provider-security). This method involves creating a new registry subkey that contains entries that represent a list of the providers that require standalone hosting.
 
 > [!IMPORTANT]  
 > If you have configured the provider security registry entries to run in secure or compatible mode, Windows ignores the **StandaloneProvider** entries.
@@ -77,7 +77,7 @@ The registry information uses the following structure:
 
 You can use Registry Editor to manually configure the registry, or you can use a PowerShell script.
 
-The following example script configures the registry information for the **StorageWMI** provider and assigns it the index value **50**.
+The following example script configures the registry information for the **StorageWMI** provider, and assigns the information the index value **50**.
 
 ```powershell
 $registryPath = "HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM\StandaloneProviders"
@@ -94,12 +94,12 @@ ELSE
 }
 ```
 
-This script checks to see whether the subkey exists, and if it doesn't, creates it. Then the script creates the subordinate entry for StorageWMI. After this change, the provider runs in the standalone configuration and the provider's hosting group information includes a string that resembles the following:
+This script checks whether the subkey exists. If the subkey doesn't exist, the script creates it. Then, it creates the subordinate entry for StorageWMI. After it makes this change, the provider runs in the standalone configuration, and the provider's hosting group information includes a string that resembles the following text:
 
 ```console
 :OWNStorageWMI50
 ```
 
-The following image shows how this listing appears in a list of providers:
+The following image shows how this listing appears in a list of providers.
 
   ![Provider listing](media/configure-standalone-wmi-providers/wmi-provider-listing.png)
