@@ -24,7 +24,7 @@ You experience a Windows Management Instrumentation (WMI) shared provider host p
 
 ## Resolution
 
-The typical resolution for a WMIPrvSE.exe quota overflow is to configure standalone WMI providers. This custom configuration does not require administrative permissions.
+The typical resolution for a WMIPrvSE.exe quota overflow is to configure standalone WMI providers. This custom configuration doesn't require administrative permissions.
 
 In the past, you had to manually configure the providers. However, this article describes a way to script these changes.
 
@@ -77,7 +77,7 @@ The registry information uses the following structure:
 
 You can use Registry Editor to manually configure the registry, or you can use a PowerShell script.
 
-The following example script configures the registry information for the **StorageWMI** provider and assigns it the index value **1**.
+The following example script configures the registry information for the **StorageWMI** provider and assigns it the index value **50**.
 
 ```powershell
 $registryPath = "HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM\StandaloneProviders"
@@ -94,7 +94,7 @@ ELSE
 }
 ```
 
-This script checks to see whether the subkey exists, and if it does not, creates it. Then the script creates the subordinate entry for StorageWMI. After this change, the provider runs in the standalone configuration and the provider's hosting group information includes a string that resembles the following:
+This script checks to see whether the subkey exists, and if it doesn't, creates it. Then the script creates the subordinate entry for StorageWMI. After this change, the provider runs in the standalone configuration and the provider's hosting group information includes a string that resembles the following:
 
 ```console
 :OWNStorageWMI50
