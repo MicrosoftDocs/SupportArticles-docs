@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4532436
 
 Consider the following scenario:
 
-- On a computer that's running any Windows 10 version from Windows 10, version 1709 through Windows 10, version 21H1, you enable Fast Startup.
+- On a computer that's running any Windows 10 version from Windows 10, version 1709 through Windows 10, version 21H2, you enable Fast Startup.
 - On a Thunderbolt Dock, several devices are attached. For example, a keyboard, mouse, and USB encryption key are attached.
 - You repeatedly do the following steps:
   - You connect the Thunderbolt Dock to the computer so that devices on the Thunderbolt Dock are enumerated.
