@@ -586,6 +586,9 @@ System service name: **mnmsrvc**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |Terminal Services|TCP|3389|
+|---|---|---|
+|---|UDP|3389|
+
   
 ### Network News Transfer Protocol (NNTP)
 
