@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 160145
+  - CI 161474
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: haembab, batre
@@ -36,13 +37,64 @@ In a public folder migration, you may experience one of the following issues:
 
     > An item with the same key has already been added.
 
+    > Multiple mailbox users match identity "Mailbox1". Specify a unique value.
+
+- **Public folder migration failed**
+
+  When you analyze the migration report for the failed public folder mailbox migration requests, you see the following error message:
+
+  > Multiple mailbox users match identity "Mailbox1". Specify a unique value.
+
 ## Cause
 
-These issues occur if either the primary public folder mailbox or the secondary public folder mailbox has an orphaned CNF (conflict) object.
+This issue occurs if one or both of the following conditions are true:
 
-## Resolution
+- Public folder mailboxes that are soft deleted have the same names as active mailboxes.
+- Either the primary public folder mailbox or the secondary public folder mailbox has an orphaned CNF (conflict) object.
 
-To resolve this issue, find and remove all existing orphaned public folder mailboxes. To do this, follow these steps:
+To resolve this issue, follow these steps:
+
+## Resolution step 1: Remove soft-deleted public folder mailboxes with the same names as active mailboxes
+
+To find and remove soft-deleted public folder mailboxes that have the same names as active mailboxes, follow these steps:
+
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+2. Get the mailboxes including soft-deleted public folder mailboxes by running the following cmdlet:
+
+   ```powershell
+   Get-Recipient  -IncludeSoftDeletedRecipients -RecipientTypeDetails publicfoldermailbox |fl Name, OrganizationalUnit, DistinguishedName, ExchangeGuid
+   ```
+
+   In the output, search by using the "Soft Deleted Objects" keywords, and then check if the corresponding soft-deleted mailbox name is same as the name of any active mailbox.
+
+   Here's an example of the output:
+
+   > Name: Mailbox1
+   > OrganizationalUnit: eurpr05a008.prod.outlook.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com/**Soft Deleted Objects**
+   > DistinguishedName: CN=**Mailbox1**,OU=**Soft Deleted Objects**,OU=contoso.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=EURPR05A008,DC=PROD,DC=OUTLOOK,DC=COM
+   > ExchangeGuid: \<Guid_number>
+   >
+   > Name: Mailbox1
+   > OrganizationalUnit: eurpr05a008.prod.outlook.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com
+   > DistinguishedName: CN=**Mailbox1**,OU= contoso.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=EURPR05A008,DC=PROD,DC=OUTLOOK,DC=COM
+   > ExchangeGuid: \<Guid_number>
+
+   **Note:** If no soft-deleted public folder mailboxes are found in the output, follow Step 2: Find and remove all existing orphaned public folder mailboxes.
+
+3. Remove the soft-deleted public folder mailbox by running the following cmdlet:
+
+   ```powershell
+   Remove-Mailbox -PublicFolder "<ExchangeGuid>" -PermanentlyDelete
+   ```
+
+   **Notes:**
+
+   - Replace \<ExchangeGuid> with the GUID number you get from the cmdlet output in the above step.
+   - Repeat this cmdlet until all soft-deleted public folder mailboxes are hard deleted.
+
+## Resolution step 2: Remove all existing orphaned public folder mailboxes
+
+To find and remove all existing orphaned public folder mailboxes, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Find orphaned CNF public folder mailboxes by running the following cmdlets:
