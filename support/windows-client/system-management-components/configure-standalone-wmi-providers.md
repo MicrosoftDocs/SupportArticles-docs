@@ -59,7 +59,7 @@ In the past, configuring standalone providers required the following manual step
 
 ## New resolution
 
-The new method for resolving this issue resembles the method described in [Registry Keys and Values for Controlling Provider Security](./win32/wmisdk/registry-keys-for-controlling-provider-security.md). This method involves creating a new registry subkey that contains entries that represent a list of the providers that require standalone hosting.
+The new method for resolving this issue resembles the method described in [Registry Keys and Values for Controlling Provider Security](/win32/wmisdk/registry-keys-for-controlling-provider-security). This method involves creating a new registry subkey that contains entries that represent a list of the providers that require standalone hosting.
 
 > [!IMPORTANT]  
 > If you have configured the provider security registry entries to run in secure or compatible mode, Windows ignores the **StandaloneProvider** entries.
