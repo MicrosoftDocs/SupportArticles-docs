@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; Configuration Manager (current branch)
 
 ## Symptoms
 
-When you try to capture a Windows 11 image by using capture media in Configuration Manager, one or more of the following errors might occur:
+When you try to capture a Windows 11 image by using capture media in Configuration Manager, you may experience one or more of the following errors:
 
 - [VCRUNTIME140_1.dll was not found](#vcruntime140dllwasnotfound)
 - [Package \<package name> was installed for a user, but not provisioned for all users](#packagenotprovisionedforallusers)
@@ -25,21 +25,22 @@ See the following sections for error details, causes and solutions.
 
 ## <a id="vcruntime140dllwasnotfound"></a>VCRUNTIME140_1.dll was not found
 
-When you start the capture process by using TSMBAutoRun.exe, you receive the following error message:
+When you start the capture process by using *TSMBAutoRun.exe*, you receive the following error message:
 
-:::image type="content" source="./media/windows-11-image-capture-fail/vcruntime140-1-dll-not-found.png" alt-text="Screenshot of the VCRUNTIME140_1.dll was not found error.":::
+> OsdCaptureCD.exe – System Error  
+> The code execution cannot proceed because VCRUNTIME140_1.dll was not found. Reinstalling the program may fix this problem.
 
 Default Visual C++ Runtime components are installed as a prerequisite during the Configuration Manager Client Agent installation. If your reference installation is disconnected from your Configuration Manager environment, these Visual C++ Runtime components will be missing.
 
 ### Solution: Install vcredist_x64.exe
 
-To resolve this issue, install vcredist_x64.exe. The installed version has to match the version that's available in the *\\\\\<SCCM-Server>\\<SMS_SiteCode>\Client\x64* share folder.
+To resolve this issue, install *vcredist_x64.exe*, and make sure that the installed version matches the version that's available in the *\\\\\<SCCM-Server>\\<SMS_SiteCode>\Client\x64* share folder.
 
-Restart the capture process after vcredist_x64.exe is installed.
+After *vcredist_x64.exe* is installed, restart the capture process.
 
-## <a id="packagenotprovisionedforallusers"></a>Package \<package name> not provisioned for all users
+## <a id="packagenotprovisionedforallusers"></a>Package \<package name> was installed for a user, but not provisioned for all users
 
-Check the setupact.log in *C:\Windows\System32\Sysprep\Panther*. If some applications are blocking the capture process, the "Package \<Package name> was installed for a user, but not provisioned for all users" error will be displayed in the setupact.log like the following output:
+Check the *setupact.log* file in the *C:\Windows\System32\Sysprep\Panther* folder. If some applications are blocking the capture process, the "Package \<Package name> was installed for a user, but not provisioned for all users" error will be displayed in the *setupact.log* like the following output:
 
 ```output
 02-07-2022 15:18:02.000 SYSPRP Entering SysprepGeneralizeValidate (Appx) - validating whether all apps are also provisioned.
@@ -55,7 +56,7 @@ Check the setupact.log in *C:\Windows\System32\Sysprep\Panther*. If some applica
 
 ### Solution: Remove package for current user
 
-To resolve this issue, remove the package by running the `Remove-AppxPackage -Package <package name>` command. For example,
+To resolve this issue, remove the package by running the `Remove-AppxPackage -Package <package name>` cmdlet. For example,
 
 ```powershell
 Remove-AppxPackage -Package Microsoft.OneDriveSync_21220.1024.5.0_neutral__8wekyb3d8bbwe
@@ -65,7 +66,7 @@ After the package is removed, restart the capture process and monitor other pack
 
 ## <a id="updateisinprocess"></a>An update or servicing operation may be using reserved storage
 
-Check the setupact.log in *C:\Windows\System32\Sysprep\Panther*. If some updates are being installed on the computer, the "An update or servicing operation may be using reserved storage" error is displayed in the setupact.log like the following output:
+Check the *setupact.log* file in the *C:\Windows\System32\Sysprep\Panther* folder. If some updates are being installed on the computer, the "An update or servicing operation may be using reserved storage" error is displayed in the *setupact.log* file like the following output:
 
 ```output
 02-07-2022 14:24:15.000 SYSPRP Sysprep_Clean_Validate_Opk: Audit mode cannot be turned on if reserved storage is in use. An update or servicing operation may be using reserved storage.; hr = 0x800F0975
@@ -80,11 +81,11 @@ Check the setupact.log in *C:\Windows\System32\Sysprep\Panther*. If some updates
 
 To resolve this issue, install updates on the computer until no updates are available.
 
-Restart the capture process after the computer is up to date and restarted.
+After the computer is up to date and restarted, restart the capture process.
 
 ## <a id="volumenotfound"></a>Volume '\\\\?\Volume{GUID}\' not found
 
-When you boot into Windows PE (WinPE) and capture the Windows image (.WIM) file, the "Volume '\\\\?\Volume{GUID}\' not found" error is displayed in the SMSTS.log like the following output:
+When you boot the computer into Windows PE (WinPE) and capture the Windows image (.WIM) file, the "Volume '\\\\?\Volume{GUID}\' not found" error is displayed in the *SMSTS.log* file like the following output:
 
 ```output
 02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) RAM Disk Boot Path: MULTI(0)DISK(0)RDISK(0)PARTITION(3)\_SMSTASKSEQUENCE\WINPE\SOURCES\BOOT.WIM
@@ -95,13 +96,13 @@ When you boot into Windows PE (WinPE) and capture the Windows image (.WIM) file,
 02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) ConvertBootToLogicalPath failed to convert 'MULTI(0)DISK(0)RDISK(0)PARTITION(3)\_SMSTASKSEQUENCE\WINPE\SOURCES\BOOT.WIM' (0x80070490). Retrying (0)...
 ```
 
-The cause for this error is that there's no drive letter for the C drive in WinPE and the **No Default Drive Letter** attribute is set to **Yes**.
+This issue occurs because there's no drive letter for the C drive in WinPE and the **No Default Drive Letter** attribute is set to **Yes**. See the following screenshot for an example:
 
 :::image type="content" source="./media/windows-11-image-capture-fail/no-default-drive-letter-attribute.png" alt-text="Screenshot of No Default Drive Letter attribute with Yes value.":::
 
 ### Solution: Assign drive letter for C drive
 
-To resolve this issue, restart the computer and then assign the drive letter for C drive by running the following command:
+To resolve this issue, restart the computer and then assign the drive letter for the C drive by running the following commands:
 
 ```cmd
 diskpart
@@ -111,8 +112,11 @@ GPT attributes=0x0000000000000000
 Exit
 ```
 
-The selected partition should be the partition where the operating system is installed. You can confirm it by using the `list partition` command.
+The selected partition should be the partition where the operating system is installed. You can confirm it by using the `list partition` command as follows.
 
 :::image type="content" source="./media/windows-11-image-capture-fail/list-partition-command.png" alt-text="Screenshot of running list partition command.":::
 
-After the assignment is completed, restart the capture process. It's unnecessary to restart the computer before the capture.
+After the assignment is completed, restart the capture process.
+
+> [!IMPORTANT]
+> Don't restart the computer before the capture.
