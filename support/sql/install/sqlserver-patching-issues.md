@@ -68,7 +68,7 @@ The following errors are some of the common causes of upgrade script failures an
       1. Back up your **msdb** database.
       1. Make a list of users (if any) who are currently part of this role.
       1. Drop the *TargetServersRole* role by using the following statement:
-         ```EXECUTE msdb.dbo.sp_droprole @rolename = N'TargetServersRole'```
+         `EXECUTE msdb.dbo.sp_droprole @rolename = N'TargetServersRole'`
       1. Restart the SQL Server instance without using trace flag `902` to check whether the issue is resolved.
       1. Restore the users from step 2 to *TargetServersRole*.
 
