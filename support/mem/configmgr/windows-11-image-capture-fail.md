@@ -89,7 +89,7 @@ When you boot the computer into Windows PE (WinPE) and capture the Windows image
 
 ```output
 02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) RAM Disk Boot Path: MULTI(0)DISK(0)RDISK(0)PARTITION(3)\_SMSTASKSEQUENCE\WINPE\SOURCES\BOOT.WIM
-02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) Volume '\\?\Volume{8c56dc0b-b563-434b-854d-cce57b676849}\' not found
+02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) Volume '\\?\Volume{GUID}\' not found
 02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) GetVolumePathForVolumeName(szDeviceVolumeId, rsWin32Path), HRESULT=80070490 (X:\bt\1204713\repo\src\Framework\TSCore\devicepath.cpp,167)
 02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) DevicePath::DeviceNamespaceWin32Path(sDevicePath, rsWin32Path), HRESULT=80070490 (X:\bt\1204713\repo\src\Framework\TSCore\devicepath.cpp,120)
 02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) DevicePath::ArcToWin32Path(pszBootPath, rsLogicalPath), HRESULT=80070490 (X:\bt\1204713\repo\src\Framework\TSCore\bootsystem.cpp,117)
