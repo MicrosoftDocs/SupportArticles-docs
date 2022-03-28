@@ -25,7 +25,7 @@ See the following sections for error details, causes and solutions.
 
 When you start the capture process by using TSMBAutoRun.exe, you receive the following error message:
 
-:::image type="content" source="media/windows-11-image-capture-fail/vcruntime140-1-dll-not-found.png" alt-text="Screenshot of the VCRUNTIME140_1.dll was not found error.":::
+:::image type="content" source="./media/windows-11-image-capture-fail/vcruntime140-1-dll-not-found.png" alt-text="Screenshot of the VCRUNTIME140_1.dll was not found error.":::
 
 Default Visual C++ Runtime components are installed as a prerequisite during the Configuration Manager Client Agent installation. If your reference installation is disconnected from your Configuration Manager environment, these Visual C++ Runtime components will be missing.
 
@@ -95,7 +95,7 @@ When you boot into Windows PE (WinPE) and capture the Windows image (.WIM) file,
 
 The cause for this error is that there's no drive letter for the C drive in WinPE and the **No Default Drive Letter** attribute is set to **Yes**.
 
-:::image type="content" source="media/windows-11-image-capture-fail/no-default-drive-letter-attribute.png" alt-text="Screenshot of "No Default Drive Letter" attribute with "Yes" value.":::
+:::image type="content" source="./media/windows-11-image-capture-fail/no-default-drive-letter-attribute.png" alt-text="Screenshot of No Default Drive Letter attribute with Yes value.":::
 
 ### Solution: Assign drive letter for C drive
 
@@ -111,6 +111,6 @@ Exit
 
 The selected partition should be the partition where the operating system is installed. You can confirm it by using the `list partition` command.
 
-:::image type="content" source="media/windows-11-image-capture-fail/list-partition-command.png" alt-text="Screenshot of running list partition command.":::
+:::image type="content" source="./media/windows-11-image-capture-fail/list-partition-command.png" alt-text="Screenshot of running list partition command.":::
 
 After the assignment is completed, restart the capture process. It's unnecessary to restart the computer before the capture.
