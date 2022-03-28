@@ -10,7 +10,7 @@ ms.technology: iis-www-authentication-authorization
 
 This article resolves the problem where an unexpected 401.1 status is returned with Pre-Authentication headers. It occurs when you use Internet Explorer to browser to a web application hosted on Internet Information Services (IIS).
 
-_Original product version:_ &nbsp; Internet Information Services 8.0, Internet Explorer 10, 9  
+_Original product version:_ &nbsp; Internet Information Services, Internet Explorer 11, 10, 9  
 _Original KB number:_ &nbsp; 2749007
 
 ## Symptoms
