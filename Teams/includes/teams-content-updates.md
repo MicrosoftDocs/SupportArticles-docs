@@ -2,6 +2,14 @@
 
 
 
+## Week of March 21, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/23/2022 | [Known issues in Rooms](/microsoftteams/troubleshoot/teams-devices-and-rooms/rooms-known-issues) | modified |
+
+
 ## Week of March 14, 2022
 
 
